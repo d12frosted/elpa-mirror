@@ -3,8 +3,8 @@
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
 ;; Version: 1.1
-;; Package-Version: 20220422.1957
-;; Package-Commit: 72ab1f43f1385a3ca65ffaaf78222fb3c18a940d
+;; Package-Version: 20220424.306
+;; Package-Commit: 5d1f720baf13d211ae46e2242d1f5ae881ff9aa3
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -271,7 +271,7 @@ The arguments NORECORD and FORCE-SAME-WINDOW are passed to `switch-to-buffer'."
   (switch-to-buffer buffer norecord force-same-window))
 
 (defun tabspaces-clear-buffers (&optional frame)
-  "Clear the frame's buffer list, except for the current buffer.
+  "Clear the tabspace's buffer list, except for the current buffer.
 If FRAME is nil, use the current frame."
   (interactive)
   (set-frame-parameter frame 'buffer-list

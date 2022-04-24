@@ -11,15 +11,15 @@
 ;;          |_|                      ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Copyright (C) 2018-2021 Benjamin Slade
+;; Copyright (C) 2018-2022 Benjamin Slade
 
 ;; Author: Benjamin Slade <slade@lambda-y.net>
 ;; Maintainer: Benjamin Slade <slade@lambda-y.net>
 ;; URL: https://gitlab.com/emacsomancer/equake
-;; Package-Commit: 4d6ef75a4d91ded22caad220909518ccb67b7b87
-;; Package-Version: 20210913.145
-;; Package-X-Original-Version: 0.985
-;; Version: 0.985
+;; Package-Commit: ea5c0570f58b8e62249e001ed434a1056a50abe7
+;; Package-Version: 20220424.350
+;; Package-X-Original-Version: 0.986
+;; Version: 0.986
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1"))
 ;; Created: 2018-12-12
 ;; Keywords: convenience, frames, terminals, tools, window-system
@@ -179,8 +179,23 @@
 ;; In awesomewm, probably adding to your 'Rules' something
 ;; like this:
 ;;
-;; { rule = { instance = "*EQUAKE*", class = "Emacs" },
-;;    properties = { titlebars_enabled = false } },
+;;  { rule = { name = "\\*EQUAKE\\*.*",
+;;     properties = { titlebars_enabled = false, floating = true, ontop = true } },
+;;
+;; Or, if you're using a [[https://fennel-lang.org/][Fennel]] configuration, add:
+;;      {:rule_any {
+;;                  :name [
+;;                   "\\*EQUAKE\\*.*"
+;;                    ]}
+;;          :properties {:floating true 
+;;                       :titlebars_enabled false
+;;                       :ontop true}}
+;; *And*, importantly, you need to set equake-restore-frame-use-offset (otherwise, for some reason the Equake frame gradually creeps up and to left as you hide and unhide it) to t and set a horizontal and/or vertical offset in equake-restore-frame-x-offset and/or equake-restore-frame-y-offset in order to reposition the unhidden Equake frame, i.e. include in your init.el something like:
+;;
+;; (setq equake-restore-frame-use-offset t)
+;; (setq equake-restore-frame-y-offset 20)
+;; or else use customize to set "Equake Restore Frame Use Offset" to "t" and "Equake Restore Frame Y Offset" to "20" (or whatever offset value).
+;;
 ;;
 ;;; Advice:
 ;; add (advice-add #'save-buffers-kill-terminal :before-while #'equake-kill-emacs-advice)
@@ -361,6 +376,21 @@ environment variable."
   :type 'boolean
   :group 'equake)
 
+(defcustom equake-restore-frame-use-offset 'nil
+  "Enable applying offset when restoring hidden frames (hack for AwesomeWM)."
+  :type 'boolean
+  :group 'equake)
+
+(defcustom equake-restore-frame-x-offset 0
+  "Horizontal offset for restoring hidden frames (hack for AwesomeWM)."
+  :type 'integer
+  :group 'equake)
+
+(defcustom equake-restore-frame-y-offset 0
+  "Vertical offset for restoring hidden frames (hack for AwesomeWM)."
+  :type 'integer
+  :group 'equake)
+
 (defcustom equake-display-guess-list
   '(":0" ":1" "w32")
   "A list of displays to try to connect to, when the actual DISPLAY is not yet known."
@@ -456,8 +486,7 @@ Intended as `:before-while' advice for
 
 (setq display-buffer-alist
       (append display-buffer-alist
-      '((equake--open-in-new-frame . ((display-buffer-reuse-window display-buffer-pop-up-frame) . ((reusable-frames . 0)))
-))))
+      '((equake--open-in-new-frame . ((display-buffer-reuse-window display-buffer-pop-up-frame) . ((reusable-frames . 0)))))))
 
 (defun equake-invoke ()
   "Toggle Equake frames.
@@ -469,7 +498,11 @@ Run with \"emacsclient -n -e '(equake-invoke)'\"."
     (if (frame-live-p current-equake-frame)
         (if (frame-visible-p current-equake-frame)
             (equake--hide-or-destroy-frame current-equake-frame)
-          (raise-frame current-equake-frame))
+          (raise-frame current-equake-frame)
+          (when equake-restore-frame-use-offset
+            (set-frame-position current-equake-frame
+                                equake-restore-frame-x-offset
+                                equake-restore-frame-y-offset)))
       (equake--set-up-new-frame))))
 
 ;;; Tabs

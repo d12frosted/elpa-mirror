@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 79690579496b0df85a1c94199aca968371b58b3c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/go/
-  to /tmp/goS9K1pN/go-20220414.1956
+  to /tmp/go7KQVqk/go-20220414.1956
     go-api.el -> go-api.el
     go-board-faces.el -> go-board-faces.el
     go-board.el -> go-board.el
@@ -33,135 +33,135 @@ Created go-20220414.1956.tar containing:
   go-20220414.1956/go.el
   go-20220414.1956/list-buffer.el
   go-20220414.1956/stone.wav
-Built go in 8.556s, finished at 2022-04-24T00:25:57+0000
+Built go in 6.331s, finished at 2022-04-24T04:34:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  398 Apr 24 00:25 packages/go-20220414.1956.entry
-120K -rw-r--r-- 1 root root 120K Apr 24 00:25 packages/go-20220414.1956.tar
-8.0K -rw-r--r-- 1 root root 6.2K Apr 24 00:25 packages/go-add-tags-20161123.1227.el
-4.0K -rw-r--r-- 1 root root  386 Apr 23 20:16 packages/go-add-tags-20161123.1227.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-add-tags-badge.svg
+4.0K -rw-r--r-- 1 root root  398 Apr 24 04:34 packages/go-20220414.1956.entry
+120K -rw-r--r-- 1 root root 120K Apr 24 04:34 packages/go-20220414.1956.tar
+8.0K -rw-r--r-- 1 root root 6.1K Apr 24 04:34 packages/go-add-tags-20161123.1227.el
+4.0K -rw-r--r-- 1 root root  386 Apr 24 00:25 packages/go-add-tags-20161123.1227.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:25 packages/go-add-tags-badge.svg
 4.0K -rw-r--r-- 1 root root  121 Apr 24 00:25 packages/go-add-tags-readme.txt
-4.0K -rw-r--r-- 1 root root  223 Apr 24 00:25 packages/go-add-tags.log
+4.0K -rw-r--r-- 1 root root  223 Apr 24 04:34 packages/go-add-tags.log
 8.0K -rw-r--r-- 1 root root 7.1K Apr 24 00:25 packages/go-autocomplete-20170626.1023.el
-4.0K -rw-r--r-- 1 root root  322 Apr 23 20:16 packages/go-autocomplete-20170626.1023.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-autocomplete-badge.svg
+4.0K -rw-r--r-- 1 root root  322 Apr 24 00:25 packages/go-autocomplete-20170626.1023.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:25 packages/go-autocomplete-badge.svg
 4.0K -rw-r--r-- 1 root root  288 Apr 24 00:25 packages/go-autocomplete-readme.txt
-4.0K -rw-r--r-- 1 root root  231 Apr 24 00:25 packages/go-autocomplete.log
-4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:25 packages/go-badge.svg
-8.0K -rw-r--r-- 1 root root 4.5K Apr 23 20:16 packages/go-complete-20190409.516.el
-4.0K -rw-r--r-- 1 root root  421 Apr 23 20:16 packages/go-complete-20190409.516.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-complete-badge.svg
-4.0K -rw-r--r-- 1 root root  303 Apr 23 20:16 packages/go-complete-readme.txt
-4.0K -rw-r--r-- 1 root root  137 Apr 24 00:25 packages/go-complete.log
- 24K -rw-r--r-- 1 root root  22K Apr 23 20:16 packages/go-direx-20150316.143.el
-4.0K -rw-r--r-- 1 root root  383 Apr 23 20:16 packages/go-direx-20150316.143.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-direx-badge.svg
-4.0K -rw-r--r-- 1 root root  249 Apr 23 20:16 packages/go-direx-readme.txt
-4.0K -rw-r--r-- 1 root root  135 Apr 24 00:25 packages/go-direx.log
- 12K -rw-r--r-- 1 root root 8.3K Apr 23 20:16 packages/go-dlv-20220126.1436.el
-4.0K -rw-r--r-- 1 root root  411 Apr 23 20:16 packages/go-dlv-20220126.1436.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-dlv-badge.svg
-   0 -rw-r--r-- 1 root root    0 Apr 24 00:25 packages/go-dlv.log
- 16K -rw-r--r-- 1 root root  16K Apr 23 20:16 packages/go-eldoc-20170305.1427.el
-4.0K -rw-r--r-- 1 root root  358 Apr 23 20:16 packages/go-eldoc-20170305.1427.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-eldoc-badge.svg
-4.0K -rw-r--r-- 1 root root  280 Apr 23 20:16 packages/go-eldoc-readme.txt
-   0 -rw-r--r-- 1 root root    0 Apr 24 00:25 packages/go-eldoc.log
-8.0K -rw-r--r-- 1 root root 4.4K Apr 23 20:16 packages/go-errcheck-20160723.43.el
-4.0K -rw-r--r-- 1 root root  288 Apr 23 20:16 packages/go-errcheck-20160723.43.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-errcheck-badge.svg
-   0 -rw-r--r-- 1 root root    0 Apr 24 00:25 packages/go-errcheck.log
-8.0K -rw-r--r-- 1 root root 4.9K Apr 23 20:16 packages/go-expr-completion-20200817.1750.el
-4.0K -rw-r--r-- 1 root root  406 Apr 23 20:16 packages/go-expr-completion-20200817.1750.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-expr-completion-badge.svg
-4.0K -rw-r--r-- 1 root root  521 Apr 23 20:16 packages/go-expr-completion-readme.txt
-4.0K -rw-r--r-- 1 root root  689 Apr 23 20:16 packages/go-expr-completion.log
-4.0K -rw-r--r-- 1 root root 2.9K Apr 23 20:16 packages/go-fill-struct-20171225.331.el
-4.0K -rw-r--r-- 1 root root  351 Apr 23 20:16 packages/go-fill-struct-20171225.331.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-fill-struct-badge.svg
-4.0K -rw-r--r-- 1 root root  120 Apr 23 20:16 packages/go-fill-struct-readme.txt
-4.0K -rw-r--r-- 1 root root  647 Apr 23 20:16 packages/go-fill-struct.log
-8.0K -rw-r--r-- 1 root root 5.3K Apr 23 20:16 packages/go-gen-test-20210816.1215.el
-4.0K -rw-r--r-- 1 root root  415 Apr 23 20:16 packages/go-gen-test-20210816.1215.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-gen-test-badge.svg
-4.0K -rw-r--r-- 1 root root  110 Apr 23 20:16 packages/go-gen-test-readme.txt
-4.0K -rw-r--r-- 1 root root  625 Apr 23 20:16 packages/go-gen-test.log
-4.0K -rw-r--r-- 1 root root 2.8K Apr 23 20:16 packages/go-gopath-20160705.1034.el
-4.0K -rw-r--r-- 1 root root  391 Apr 23 20:16 packages/go-gopath-20160705.1034.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-gopath-badge.svg
-4.0K -rw-r--r-- 1 root root  527 Apr 23 20:16 packages/go-gopath.log
- 20K -rw-r--r-- 1 root root  20K Apr 23 20:16 packages/go-guru-20181012.330.el
-4.0K -rw-r--r-- 1 root root  234 Apr 23 20:16 packages/go-guru-20181012.330.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-guru-badge.svg
-4.0K -rw-r--r-- 1 root root  936 Apr 23 20:16 packages/go-guru-readme.txt
-4.0K -rw-r--r-- 1 root root  592 Apr 23 20:16 packages/go-guru.log
-8.0K -rw-r--r-- 1 root root 6.2K Apr 23 20:16 packages/go-imenu-20181029.1029.el
-4.0K -rw-r--r-- 1 root root  356 Apr 23 20:16 packages/go-imenu-20181029.1029.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-imenu-badge.svg
-4.0K -rw-r--r-- 1 root root  177 Apr 23 20:16 packages/go-imenu-readme.txt
-4.0K -rw-r--r-- 1 root root  601 Apr 23 20:16 packages/go-imenu.log
-8.0K -rw-r--r-- 1 root root 6.6K Apr 23 20:16 packages/go-impl-20210621.743.el
-4.0K -rw-r--r-- 1 root root  355 Apr 23 20:16 packages/go-impl-20210621.743.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-impl-badge.svg
-4.0K -rw-r--r-- 1 root root   59 Apr 23 20:16 packages/go-impl-readme.txt
-4.0K -rw-r--r-- 1 root root  595 Apr 23 20:16 packages/go-impl.log
-4.0K -rw-r--r-- 1 root root  339 Apr 23 20:16 packages/go-imports-20190715.1647.entry
- 20K -rw-r--r-- 1 root root  20K Apr 23 20:16 packages/go-imports-20190715.1647.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-imports-badge.svg
-4.0K -rw-r--r-- 1 root root  929 Apr 23 20:16 packages/go-imports-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Apr 23 20:16 packages/go-imports.log
-112K -rw-r--r-- 1 root root 110K Apr 23 20:16 packages/go-mode-20220114.2239.el
-4.0K -rw-r--r-- 1 root root  343 Apr 23 20:16 packages/go-mode-20220114.2239.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  339 Apr 23 20:16 packages/go-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  594 Apr 23 20:16 packages/go-mode.log
-8.0K -rw-r--r-- 1 root root 6.1K Apr 23 20:16 packages/go-noisegate-20200502.703.el
-4.0K -rw-r--r-- 1 root root  367 Apr 23 20:16 packages/go-noisegate-20200502.703.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-noisegate-badge.svg
-4.0K -rw-r--r-- 1 root root  249 Apr 23 20:16 packages/go-noisegate-readme.txt
-4.0K -rw-r--r-- 1 root root  636 Apr 23 20:16 packages/go-noisegate.log
-8.0K -rw-r--r-- 1 root root 7.7K Apr 23 20:16 packages/go-playground-20220106.1618.el
-4.0K -rw-r--r-- 1 root root  436 Apr 23 20:16 packages/go-playground-20220106.1618.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-playground-badge.svg
-4.0K -rw-r--r-- 1 root root 3.6K Apr 23 20:16 packages/go-playground-cli-20160503.914.el
-4.0K -rw-r--r-- 1 root root  615 Apr 23 20:16 packages/go-playground-cli-20160503.914.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-playground-cli-badge.svg
-4.0K -rw-r--r-- 1 root root  139 Apr 23 20:16 packages/go-playground-cli-readme.txt
-4.0K -rw-r--r-- 1 root root  669 Apr 23 20:16 packages/go-playground-cli.log
-4.0K -rw-r--r-- 1 root root  483 Apr 23 20:16 packages/go-playground-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Apr 23 20:16 packages/go-playground.log
- 16K -rw-r--r-- 1 root root  13K Apr 23 20:16 packages/go-projectile-20200609.131.el
-4.0K -rw-r--r-- 1 root root  489 Apr 23 20:16 packages/go-projectile-20200609.131.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-projectile-badge.svg
-4.0K -rw-r--r-- 1 root root  155 Apr 23 20:16 packages/go-projectile-readme.txt
-4.0K -rw-r--r-- 1 root root  634 Apr 23 20:16 packages/go-projectile.log
-4.0K -rw-r--r-- 1 root root  287 Apr 24 00:25 packages/go-readme.txt
-8.0K -rw-r--r-- 1 root root 4.1K Apr 23 20:16 packages/go-rename-20190805.2101.el
-4.0K -rw-r--r-- 1 root root  217 Apr 23 20:16 packages/go-rename-20190805.2101.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:17 packages/go-rename-badge.svg
-4.0K -rw-r--r-- 1 root root  266 Apr 23 20:16 packages/go-rename-readme.txt
-4.0K -rw-r--r-- 1 root root  608 Apr 23 20:17 packages/go-rename.log
-8.0K -rw-r--r-- 1 root root 4.1K Apr 23 20:16 packages/go-scratch-20150810.440.el
-4.0K -rw-r--r-- 1 root root  374 Apr 23 20:16 packages/go-scratch-20150810.440.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:17 packages/go-scratch-badge.svg
-4.0K -rw-r--r-- 1 root root   62 Apr 23 20:16 packages/go-scratch-readme.txt
-4.0K -rw-r--r-- 1 root root  614 Apr 23 20:17 packages/go-scratch.log
-4.0K -rw-r--r-- 1 root root  196 Apr 23 20:16 packages/go-snippets-20180113.611.entry
- 32K -rw-r--r-- 1 root root  30K Apr 23 20:16 packages/go-snippets-20180113.611.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:16 packages/go-snippets-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Apr 23 20:16 packages/go-snippets.log
-4.0K -rw-r--r-- 1 root root 3.9K Apr 23 20:17 packages/go-stacktracer-20150430.2142.el
-4.0K -rw-r--r-- 1 root root  341 Apr 23 20:17 packages/go-stacktracer-20150430.2142.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:17 packages/go-stacktracer-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Apr 23 20:17 packages/go-stacktracer-readme.txt
-4.0K -rw-r--r-- 1 root root  649 Apr 23 20:17 packages/go-stacktracer.log
- 12K -rw-r--r-- 1 root root 9.1K Apr 23 20:17 packages/go-tag-20180227.411.el
-4.0K -rw-r--r-- 1 root root  358 Apr 23 20:17 packages/go-tag-20180227.411.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:17 packages/go-tag-badge.svg
-4.0K -rw-r--r-- 1 root root  279 Apr 23 20:17 packages/go-tag-readme.txt
-4.0K -rw-r--r-- 1 root root  586 Apr 23 20:17 packages/go-tag.log
-4.0K -rw-r--r-- 1 root root  397 Apr 23 20:17 packages/go-translate-20220404.1240.entry
-112K -rw-r--r-- 1 root root 110K Apr 23 20:17 packages/go-translate-20220404.1240.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 20:17 packages/go-translate-badge.svg
-4.0K -rw-r--r-- 1 root root  575 Apr 23 20:17 packages/go-translate-readme.txt
-4.0K -rw-r--r-- 1 root root 1.6K Apr 23 20:17 packages/go-translate.log
+4.0K -rw-r--r-- 1 root root  231 Apr 24 04:34 packages/go-autocomplete.log
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 04:34 packages/go-badge.svg
+8.0K -rw-r--r-- 1 root root 4.5K Apr 24 00:26 packages/go-complete-20190409.516.el
+4.0K -rw-r--r-- 1 root root  421 Apr 24 00:26 packages/go-complete-20190409.516.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-complete-badge.svg
+4.0K -rw-r--r-- 1 root root  303 Apr 24 00:26 packages/go-complete-readme.txt
+4.0K -rw-r--r-- 1 root root  216 Apr 24 04:34 packages/go-complete.log
+ 24K -rw-r--r-- 1 root root  22K Apr 24 00:26 packages/go-direx-20150316.143.el
+4.0K -rw-r--r-- 1 root root  383 Apr 24 00:26 packages/go-direx-20150316.143.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-direx-badge.svg
+4.0K -rw-r--r-- 1 root root  249 Apr 24 00:26 packages/go-direx-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Apr 24 04:34 packages/go-direx.log
+ 12K -rw-r--r-- 1 root root 8.3K Apr 24 00:26 packages/go-dlv-20220126.1436.el
+4.0K -rw-r--r-- 1 root root  411 Apr 24 00:26 packages/go-dlv-20220126.1436.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-dlv-badge.svg
+4.0K -rw-r--r-- 1 root root  123 Apr 24 04:34 packages/go-dlv.log
+ 16K -rw-r--r-- 1 root root  16K Apr 24 00:26 packages/go-eldoc-20170305.1427.el
+4.0K -rw-r--r-- 1 root root  358 Apr 24 00:26 packages/go-eldoc-20170305.1427.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-eldoc-badge.svg
+4.0K -rw-r--r-- 1 root root  280 Apr 24 00:26 packages/go-eldoc-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Apr 24 04:34 packages/go-eldoc.log
+8.0K -rw-r--r-- 1 root root 4.4K Apr 24 00:26 packages/go-errcheck-20160723.43.el
+4.0K -rw-r--r-- 1 root root  288 Apr 24 00:26 packages/go-errcheck-20160723.43.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-errcheck-badge.svg
+   0 -rw-r--r-- 1 root root    0 Apr 24 04:34 packages/go-errcheck.log
+8.0K -rw-r--r-- 1 root root 4.9K Apr 24 00:26 packages/go-expr-completion-20200817.1750.el
+4.0K -rw-r--r-- 1 root root  406 Apr 24 00:26 packages/go-expr-completion-20200817.1750.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-expr-completion-badge.svg
+4.0K -rw-r--r-- 1 root root  521 Apr 24 00:26 packages/go-expr-completion-readme.txt
+4.0K -rw-r--r-- 1 root root  690 Apr 24 00:26 packages/go-expr-completion.log
+4.0K -rw-r--r-- 1 root root 2.9K Apr 24 00:26 packages/go-fill-struct-20171225.331.el
+4.0K -rw-r--r-- 1 root root  351 Apr 24 00:26 packages/go-fill-struct-20171225.331.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-fill-struct-badge.svg
+4.0K -rw-r--r-- 1 root root  120 Apr 24 00:26 packages/go-fill-struct-readme.txt
+4.0K -rw-r--r-- 1 root root  648 Apr 24 00:26 packages/go-fill-struct.log
+8.0K -rw-r--r-- 1 root root 5.3K Apr 24 00:26 packages/go-gen-test-20210816.1215.el
+4.0K -rw-r--r-- 1 root root  415 Apr 24 00:26 packages/go-gen-test-20210816.1215.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-gen-test-badge.svg
+4.0K -rw-r--r-- 1 root root  110 Apr 24 00:26 packages/go-gen-test-readme.txt
+4.0K -rw-r--r-- 1 root root  626 Apr 24 00:26 packages/go-gen-test.log
+4.0K -rw-r--r-- 1 root root 2.8K Apr 24 00:26 packages/go-gopath-20160705.1034.el
+4.0K -rw-r--r-- 1 root root  391 Apr 24 00:26 packages/go-gopath-20160705.1034.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-gopath-badge.svg
+4.0K -rw-r--r-- 1 root root  528 Apr 24 00:26 packages/go-gopath.log
+ 20K -rw-r--r-- 1 root root  20K Apr 24 00:26 packages/go-guru-20181012.330.el
+4.0K -rw-r--r-- 1 root root  234 Apr 24 00:26 packages/go-guru-20181012.330.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-guru-badge.svg
+4.0K -rw-r--r-- 1 root root  936 Apr 24 00:26 packages/go-guru-readme.txt
+4.0K -rw-r--r-- 1 root root  593 Apr 24 00:26 packages/go-guru.log
+8.0K -rw-r--r-- 1 root root 6.2K Apr 24 00:26 packages/go-imenu-20181029.1029.el
+4.0K -rw-r--r-- 1 root root  356 Apr 24 00:26 packages/go-imenu-20181029.1029.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-imenu-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Apr 24 00:26 packages/go-imenu-readme.txt
+4.0K -rw-r--r-- 1 root root  601 Apr 24 00:26 packages/go-imenu.log
+8.0K -rw-r--r-- 1 root root 6.6K Apr 24 00:26 packages/go-impl-20210621.743.el
+4.0K -rw-r--r-- 1 root root  355 Apr 24 00:26 packages/go-impl-20210621.743.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-impl-badge.svg
+4.0K -rw-r--r-- 1 root root   59 Apr 24 00:26 packages/go-impl-readme.txt
+4.0K -rw-r--r-- 1 root root  595 Apr 24 00:26 packages/go-impl.log
+4.0K -rw-r--r-- 1 root root  339 Apr 24 00:26 packages/go-imports-20190715.1647.entry
+ 20K -rw-r--r-- 1 root root  20K Apr 24 00:26 packages/go-imports-20190715.1647.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-imports-badge.svg
+4.0K -rw-r--r-- 1 root root  929 Apr 24 00:26 packages/go-imports-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Apr 24 00:26 packages/go-imports.log
+112K -rw-r--r-- 1 root root 110K Apr 24 00:26 packages/go-mode-20220114.2239.el
+4.0K -rw-r--r-- 1 root root  343 Apr 24 00:26 packages/go-mode-20220114.2239.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  339 Apr 24 00:26 packages/go-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  594 Apr 24 00:26 packages/go-mode.log
+8.0K -rw-r--r-- 1 root root 6.1K Apr 24 00:26 packages/go-noisegate-20200502.703.el
+4.0K -rw-r--r-- 1 root root  367 Apr 24 00:26 packages/go-noisegate-20200502.703.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-noisegate-badge.svg
+4.0K -rw-r--r-- 1 root root  249 Apr 24 00:26 packages/go-noisegate-readme.txt
+4.0K -rw-r--r-- 1 root root  636 Apr 24 00:26 packages/go-noisegate.log
+8.0K -rw-r--r-- 1 root root 7.7K Apr 24 00:26 packages/go-playground-20220106.1618.el
+4.0K -rw-r--r-- 1 root root  436 Apr 24 00:26 packages/go-playground-20220106.1618.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-playground-badge.svg
+4.0K -rw-r--r-- 1 root root 3.6K Apr 24 00:26 packages/go-playground-cli-20160503.914.el
+4.0K -rw-r--r-- 1 root root  615 Apr 24 00:26 packages/go-playground-cli-20160503.914.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-playground-cli-badge.svg
+4.0K -rw-r--r-- 1 root root  139 Apr 24 00:26 packages/go-playground-cli-readme.txt
+4.0K -rw-r--r-- 1 root root  669 Apr 24 00:26 packages/go-playground-cli.log
+4.0K -rw-r--r-- 1 root root  483 Apr 24 00:26 packages/go-playground-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Apr 24 00:26 packages/go-playground.log
+ 16K -rw-r--r-- 1 root root  13K Apr 24 00:26 packages/go-projectile-20200609.131.el
+4.0K -rw-r--r-- 1 root root  489 Apr 24 00:26 packages/go-projectile-20200609.131.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-projectile-badge.svg
+4.0K -rw-r--r-- 1 root root  155 Apr 24 00:26 packages/go-projectile-readme.txt
+4.0K -rw-r--r-- 1 root root  635 Apr 24 00:26 packages/go-projectile.log
+4.0K -rw-r--r-- 1 root root  287 Apr 24 04:34 packages/go-readme.txt
+8.0K -rw-r--r-- 1 root root 4.1K Apr 24 00:26 packages/go-rename-20190805.2101.el
+4.0K -rw-r--r-- 1 root root  217 Apr 24 00:26 packages/go-rename-20190805.2101.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-rename-badge.svg
+4.0K -rw-r--r-- 1 root root  266 Apr 24 00:26 packages/go-rename-readme.txt
+4.0K -rw-r--r-- 1 root root  609 Apr 24 00:26 packages/go-rename.log
+8.0K -rw-r--r-- 1 root root 4.1K Apr 24 00:26 packages/go-scratch-20150810.440.el
+4.0K -rw-r--r-- 1 root root  374 Apr 24 00:26 packages/go-scratch-20150810.440.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-scratch-badge.svg
+4.0K -rw-r--r-- 1 root root   62 Apr 24 00:26 packages/go-scratch-readme.txt
+4.0K -rw-r--r-- 1 root root  615 Apr 24 00:26 packages/go-scratch.log
+4.0K -rw-r--r-- 1 root root  196 Apr 24 00:26 packages/go-snippets-20180113.611.entry
+ 32K -rw-r--r-- 1 root root  30K Apr 24 00:26 packages/go-snippets-20180113.611.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Apr 24 00:26 packages/go-snippets.log
+4.0K -rw-r--r-- 1 root root 3.9K Apr 24 00:26 packages/go-stacktracer-20150430.2142.el
+4.0K -rw-r--r-- 1 root root  341 Apr 24 00:26 packages/go-stacktracer-20150430.2142.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-stacktracer-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Apr 24 00:26 packages/go-stacktracer-readme.txt
+4.0K -rw-r--r-- 1 root root  650 Apr 24 00:26 packages/go-stacktracer.log
+ 12K -rw-r--r-- 1 root root 9.1K Apr 24 00:26 packages/go-tag-20180227.411.el
+4.0K -rw-r--r-- 1 root root  358 Apr 24 00:26 packages/go-tag-20180227.411.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-tag-badge.svg
+4.0K -rw-r--r-- 1 root root  279 Apr 24 00:26 packages/go-tag-readme.txt
+4.0K -rw-r--r-- 1 root root  587 Apr 24 00:26 packages/go-tag.log
+4.0K -rw-r--r-- 1 root root  397 Apr 24 00:26 packages/go-translate-20220404.1240.entry
+112K -rw-r--r-- 1 root root 110K Apr 24 00:26 packages/go-translate-20220404.1240.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:26 packages/go-translate-badge.svg
+4.0K -rw-r--r-- 1 root root  575 Apr 24 00:26 packages/go-translate-readme.txt
+4.0K -rw-r--r-- 1 root root 1.6K Apr 24 00:26 packages/go-translate.log
