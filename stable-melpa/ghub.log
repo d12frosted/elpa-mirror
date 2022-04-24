@@ -4,10 +4,10 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out 5eed205902b02c01cf16057ef50887b117718cf6
+Checking out 5135058a78a2bea112f9e591500790c1e3b731fd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubhngsDg/ghub-20220423.2114
+  to /tmp/ghubnqP2xL/ghub-20220424.947
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
   ! lisp/ghub-pkg.el -> ghub-pkg.el
@@ -18,23 +18,25 @@ Copying files (->) and directories (=>)
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
     .dir-locals.el -> .dir-locals.el
-Generating /tmp/ghubhngsDg/ghub-20220423.2114/ghub.info
-Created ghub-20220423.2114.tar containing:
-  ghub-20220423.2114/
-  ghub-20220423.2114/.dir-locals.el
-  ghub-20220423.2114/buck.el
-  ghub-20220423.2114/dir
-  ghub-20220423.2114/ghub-graphql.el
-  ghub-20220423.2114/ghub-pkg.el
-  ghub-20220423.2114/ghub.el
-  ghub-20220423.2114/ghub.info
-  ghub-20220423.2114/glab.el
-  ghub-20220423.2114/gogs.el
-  ghub-20220423.2114/gsexp.el
-  ghub-20220423.2114/gtea.el
-Built ghub in 14.172s, finished at 2022-04-24T04:32:40+0000
+Generating /tmp/ghubnqP2xL/ghub-20220424.947/ghub.info
+Created ghub-20220424.947.tar containing:
+  ghub-20220424.947/
+  ghub-20220424.947/.dir-locals.el
+  ghub-20220424.947/buck.el
+  ghub-20220424.947/dir
+  ghub-20220424.947/ghub-graphql.el
+  ghub-20220424.947/ghub-pkg.el
+  ghub-20220424.947/ghub.el
+  ghub-20220424.947/ghub.info
+  ghub-20220424.947/glab.el
+  ghub-20220424.947/gogs.el
+  ghub-20220424.947/gsexp.el
+  ghub-20220424.947/gtea.el
+Built ghub in 15.155s, finished at 2022-04-24T12:42:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  414 Apr 24 04:32 packages/ghub-20220423.2114.entry
-160K -rw-r--r-- 1 root root 160K Apr 24 04:32 packages/ghub-20220423.2114.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 24 04:32 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Apr 24 04:32 packages/ghub-readme.txt
+4.0K -rw-r--r-- 1 root root  414 Apr 24 08:36 packages/ghub-20220423.2114.entry
+160K -rw-r--r-- 1 root root 160K Apr 24 08:36 packages/ghub-20220423.2114.tar
+4.0K -rw-r--r-- 1 root root  413 Apr 24 12:42 packages/ghub-20220424.947.entry
+160K -rw-r--r-- 1 root root 160K Apr 24 12:42 packages/ghub-20220424.947.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 12:42 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Apr 24 12:42 packages/ghub-readme.txt
