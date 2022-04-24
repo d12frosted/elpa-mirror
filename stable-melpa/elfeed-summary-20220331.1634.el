@@ -6,7 +6,7 @@
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.0
 ;; Package-Version: 20220331.1634
-;; Package-Commit: 517cea6cb6fbf95ef3cb062591364bb7bda8c251
+;; Package-Commit: 6357eb8b1ece47451f4c5eff46c0ee42081c38a8
 ;; Package-Requires: ((emacs "27.1") (magit-section "3.3.0") (elfeed "3.4.1"))
 ;; Homepage: https://github.com/SqrtMinusOne/elfeed-summary.el
 

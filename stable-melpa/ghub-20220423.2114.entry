@@ -1,0 +1,17 @@
+(ghub .
+      [(20220423 2114)
+       ((emacs
+	 (25 1))
+	(compat
+	 (28 1 1 0))
+	(let-alist
+	    (1 0 6))
+	(treepy
+	 (0 1 1)))
+       "Client libraries for Git forge APIs." tar
+       ((:commit . "5eed205902b02c01cf16057ef50887b117718cf6")
+	(:authors
+	 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	(:keywords "tools")
+	(:url . "https://github.com/magit/ghub"))])

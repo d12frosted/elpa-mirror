@@ -4,34 +4,36 @@ Source:  https://github.com/dickmao/nnreddit.git
 
 Updating /mnt/store/melpa/working/nnreddit/
 Checking out origin/HEAD
-Checking out ddb59e309018416d1f867b6dddca44f17a1b6bb9
+Checking out 8f247dce12bd10de37f0903f3027a1ddbc318eff
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nnreddit/
-  to /tmp/nnredditxCwcS8/nnreddit-20220124.351
+  to /tmp/nnredditPXHAZR/nnreddit-20220423.2302
   ! lisp/nnreddit-pkg.el -> nnreddit-pkg.el
   ! lisp/nnreddit.el -> nnreddit.el
     setup.py -> setup.py
     requirements.txt -> requirements.txt
     nnreddit => nnreddit
-Created nnreddit-20220124.351.tar containing:
-  nnreddit-20220124.351/
-  nnreddit-20220124.351/nnreddit-pkg.el
-  nnreddit-20220124.351/nnreddit.el
-  nnreddit-20220124.351/nnreddit/
-  nnreddit-20220124.351/nnreddit/VERSION
-  nnreddit-20220124.351/nnreddit/__init__.py
-  nnreddit-20220124.351/nnreddit/__main__.py
-  nnreddit-20220124.351/nnreddit/authenticated_reddit.py
-  nnreddit-20220124.351/nnreddit/pylintrc
-  nnreddit-20220124.351/nnreddit/templates/
-  nnreddit-20220124.351/nnreddit/templates/index.html
-  nnreddit-20220124.351/nnreddit/templates/mailcap
-  nnreddit-20220124.351/nnreddit/templates/rtv.cfg
-  nnreddit-20220124.351/requirements.txt
-  nnreddit-20220124.351/setup.py
-Built nnreddit in 7.575s, finished at 2022-04-23T08:20:21+0000
+Created nnreddit-20220423.2302.tar containing:
+  nnreddit-20220423.2302/
+  nnreddit-20220423.2302/nnreddit-pkg.el
+  nnreddit-20220423.2302/nnreddit.el
+  nnreddit-20220423.2302/nnreddit/
+  nnreddit-20220423.2302/nnreddit/VERSION
+  nnreddit-20220423.2302/nnreddit/__init__.py
+  nnreddit-20220423.2302/nnreddit/__main__.py
+  nnreddit-20220423.2302/nnreddit/authenticated_reddit.py
+  nnreddit-20220423.2302/nnreddit/pylintrc
+  nnreddit-20220423.2302/nnreddit/templates/
+  nnreddit-20220423.2302/nnreddit/templates/index.html
+  nnreddit-20220423.2302/nnreddit/templates/mailcap
+  nnreddit-20220423.2302/nnreddit/templates/rtv.cfg
+  nnreddit-20220423.2302/requirements.txt
+  nnreddit-20220423.2302/setup.py
+Built nnreddit in 6.604s, finished at 2022-04-24T00:54:24+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  412 Apr 23 08:20 packages/nnreddit-20220124.351.entry
-120K -rw-r--r-- 1 root root 120K Apr 23 08:20 packages/nnreddit-20220124.351.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 23 08:20 packages/nnreddit-badge.svg
-4.0K -rw-r--r-- 1 root root   27 Apr 23 08:20 packages/nnreddit-readme.txt
+4.0K -rw-r--r-- 1 root root  412 Apr 23 20:44 packages/nnreddit-20220124.351.entry
+120K -rw-r--r-- 1 root root 120K Apr 23 20:44 packages/nnreddit-20220124.351.tar
+4.0K -rw-r--r-- 1 root root  413 Apr 24 00:54 packages/nnreddit-20220423.2302.entry
+120K -rw-r--r-- 1 root root 120K Apr 24 00:54 packages/nnreddit-20220423.2302.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 24 00:54 packages/nnreddit-badge.svg
+4.0K -rw-r--r-- 1 root root   27 Apr 24 00:54 packages/nnreddit-readme.txt

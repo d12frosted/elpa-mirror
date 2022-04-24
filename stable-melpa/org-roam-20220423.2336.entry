@@ -1,0 +1,21 @@
+(org-roam .
+	  [(20220423 2336)
+	   ((emacs
+	     (26 1))
+	    (dash
+	     (2 13))
+	    (org
+	     (9 4))
+	    (emacsql
+	     (3 0 0))
+	    (emacsql-sqlite
+	     (1 0 0))
+	    (magit-section
+	     (3 0 0)))
+	   "A database abstraction layer for Org-mode" tar
+	   ((:commit . "a073bcff5caba6241e8931c8576cef4d6e2f093e")
+	    (:authors
+	     ("Jethro Kuan" . "jethrokuan95@gmail.com"))
+	    (:maintainer "Jethro Kuan" . "jethrokuan95@gmail.com")
+	    (:keywords "org-mode" "roam" "convenience")
+	    (:url . "https://github.com/org-roam/org-roam"))])
