@@ -1,0 +1,17 @@
+(epkg-marginalia .
+		 [(20220424 2211)
+		  ((emacs
+		    (26))
+		   (compat
+		    (28 1 1 0))
+		   (epkg
+		    (3 3 1))
+		   (marginalia
+		    (0 12)))
+		  "Show Epkg information in completion annotations" single
+		  ((:commit . "73519c62db12c17804bfbcdfb0a6028389374bec")
+		   (:authors
+		    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		   (:keywords "tools")
+		   (:url . "https://github.com/emacscollective/epkg-marginalia"))])

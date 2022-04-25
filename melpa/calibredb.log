@@ -4,11 +4,12 @@ Source:  https://github.com/chenyanming/calibredb.el.git
 
 Updating /mnt/store/melpa/working/calibredb/
 Checking out origin/HEAD
-Checking out 8432243b402bab499ca730be270944b4e1196dcd
+Checking out 8a6148a264e5e57e11824a238ae7b92bb3b6c9ab
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/calibredb/
-  to /tmp/calibredbe1ZWjt/calibredb-20220423.754
+  to /tmp/calibredbECDlxO/calibredb-20220424.1610
     calibredb-annotation.el -> calibredb-annotation.el
+    calibredb-consult.el -> calibredb-consult.el
     calibredb-core.el -> calibredb-core.el
     calibredb-faces.el -> calibredb-faces.el
     calibredb-helm.el -> calibredb-helm.el
@@ -21,25 +22,26 @@ Copying files (->) and directories (=>)
     calibredb-transient.el -> calibredb-transient.el
     calibredb-utils.el -> calibredb-utils.el
     calibredb.el -> calibredb.el
-Created calibredb-20220423.754.tar containing:
-  calibredb-20220423.754/
-  calibredb-20220423.754/calibredb-annotation.el
-  calibredb-20220423.754/calibredb-core.el
-  calibredb-20220423.754/calibredb-faces.el
-  calibredb-20220423.754/calibredb-helm.el
-  calibredb-20220423.754/calibredb-ivy.el
-  calibredb-20220423.754/calibredb-library.el
-  calibredb-20220423.754/calibredb-opds.el
-  calibredb-20220423.754/calibredb-org.el
-  calibredb-20220423.754/calibredb-pkg.el
-  calibredb-20220423.754/calibredb-search.el
-  calibredb-20220423.754/calibredb-show.el
-  calibredb-20220423.754/calibredb-transient.el
-  calibredb-20220423.754/calibredb-utils.el
-  calibredb-20220423.754/calibredb.el
-Built calibredb in 7.165s, finished at 2022-04-24T12:12:48+0000
+Created calibredb-20220424.1610.tar containing:
+  calibredb-20220424.1610/
+  calibredb-20220424.1610/calibredb-annotation.el
+  calibredb-20220424.1610/calibredb-consult.el
+  calibredb-20220424.1610/calibredb-core.el
+  calibredb-20220424.1610/calibredb-faces.el
+  calibredb-20220424.1610/calibredb-helm.el
+  calibredb-20220424.1610/calibredb-ivy.el
+  calibredb-20220424.1610/calibredb-library.el
+  calibredb-20220424.1610/calibredb-opds.el
+  calibredb-20220424.1610/calibredb-org.el
+  calibredb-20220424.1610/calibredb-pkg.el
+  calibredb-20220424.1610/calibredb-search.el
+  calibredb-20220424.1610/calibredb-show.el
+  calibredb-20220424.1610/calibredb-transient.el
+  calibredb-20220424.1610/calibredb-utils.el
+  calibredb-20220424.1610/calibredb.el
+Built calibredb in 5.926s, finished at 2022-04-25T00:34:48+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  542 Apr 24 12:12 packages/calibredb-20220423.754.entry
-220K -rw-r--r-- 1 root root 220K Apr 24 12:12 packages/calibredb-20220423.754.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 24 12:12 packages/calibredb-badge.svg
-4.0K -rw-r--r-- 1 root root  381 Apr 24 12:12 packages/calibredb-readme.txt
+4.0K -rw-r--r-- 1 root root  543 Apr 25 00:34 packages/calibredb-20220424.1610.entry
+232K -rw-r--r-- 1 root root 230K Apr 25 00:34 packages/calibredb-20220424.1610.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 25 00:34 packages/calibredb-badge.svg
+4.0K -rw-r--r-- 1 root root  381 Apr 25 00:34 packages/calibredb-readme.txt
