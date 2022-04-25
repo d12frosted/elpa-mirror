@@ -3236,7 +3236,7 @@
 	(:maintainer "Andrey Kotlarski" . "m00naticus@gmail.com")
 	(:keywords "large files" "utilities"))])
  (vundo .
-	[(1 0 0)
+	[(2 0 0)
 	 ((emacs
 	   (28 1)))
 	 "Visual undo tree" tar
@@ -3245,7 +3245,7 @@
 	  (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	  (:authors
 	   ("Yuan Fu" . "casouri@gmail.com"))
-	  (:commit . "0e3af84944c2c69ddaf5364868fe77c31f62527e"))])
+	  (:commit . "10d5debe317b2244d19085151040f955dda4a9ab"))])
  (wcheck-mode .
 	      [(2021)
 	       nil "General interface for text checkers" tar
