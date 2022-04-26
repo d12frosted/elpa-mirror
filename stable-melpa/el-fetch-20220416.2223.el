@@ -24,7 +24,7 @@
 ;; Homepage: https://gitlab.com/xgqt/emacs-el-fetch
 ;; Version: 1.1.0
 ;; Package-Version: 20220416.2223
-;; Package-Commit: c6dbf743e8c5bf8a58a86c72ada1a6e877a81291
+;; Package-Commit: 4dfe8a1297034314fb5d1fe10e85435da0ccbdc7
 ;; Package-Requires: ((emacs "25.1"))
 
 

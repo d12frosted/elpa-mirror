@@ -306,10 +306,12 @@
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
 	   (:commit . "ab75cffa4572115c3d6b17348b6bfa2f746f4798"))])
  (evil .
-       [(1 14 0)
+       [(1 15 0)
 	nil "extensible vi layer" tar
 	((:url . "https://github.com/emacs-evil/evil")
-	 (:keywords "emulation" "vim"))])
+	 (:keywords "emulation" "vim")
+	 (:maintainer "Tom Dalziel" . "tom.dalziel@gmail.com")
+	 (:commit . "008a6cdb12f15e748979a7d1c2f26c34c84dedbf"))])
  (evil-anzu .
 	    [(0 2)
 	     ((evil
@@ -1585,16 +1587,16 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(17 5 20220416101054)
+	       [(17 6 20220426002628)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/ergoemacs_vi_mode.html")
 		 (:keywords "convenience" "emulations" "vim" "ergoemacs")
-		 (:maintainer "Xah Lee ( http://xahlee.info/ )")
+		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "cb2b27ed7566b7863ad3e9adf67d75945d4118b0"))])
+		 (:commit . "437da97c5eea9bf9f81c2280a26a8818e99a0efa"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar
