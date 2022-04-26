@@ -2,7 +2,7 @@
 
 ;; Keywords: c, tools
 ;; Package-Version: 20220210.1659
-;; Package-Commit: 629edc1ca95113f882e0c136d155a0f2e2e952bb
+;; Package-Commit: 2eb7e16647b16cf6879d47c9b96cedb6b3d3983a
 
 ;; google-c-style.el is Copyright (C) 2008 Google Inc. All Rights Reserved.
 ;;
