@@ -159,6 +159,12 @@ Describe a variable, move cursor to the local/global value form, press <kbd>C-c 
 
 Don't get stuck in minibuffer, press <kbd>C-c '</kbd> to open a edit buffer.
 
+### Edit in vterm
+
+Make sure the the vterm [Directory tracking and Prompt tracking](https://github.com/akermu/emacs-libvterm#directory-tracking-and-prompt-tracking) is set correctolly.
+
+Then put the cursor after prompt, press <kbd>C-c '</kbd> to start a new edit, or <kbd>C-p C-c '</kbd> to edit previous command.
+
 ## Customization
 
 ### Change key bindings in edit buffer
@@ -281,7 +287,7 @@ You may also like to enable `auto-fill-mode` in edit buffer:
         (separedit-inhibit-edit-window-p t))
     (with-current-buffer (separedit)
       (unwind-protect (call-interactively #'eval-last-sexp)
-        (edit-indirect-abort)))))
+        (separedit-abort)))))
 
 (define-key emacs-lisp-mode-map (kbd "C-x C-e")
   (lambda ()
