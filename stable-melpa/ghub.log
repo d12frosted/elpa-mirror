@@ -4,13 +4,12 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out b17ae4a3edbecc854564ea77d5aa4173f3a28ccb
+Checking out d86128db0e0cd2625e6189fbaaef97d97770914f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghub6zz9aT/ghub-20220424.1655
+  to /tmp/ghub2vujrQ/ghub-20220427.954
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
-  ! lisp/ghub-pkg.el -> ghub-pkg.el
   ! lisp/ghub.el -> ghub.el
   ! lisp/glab.el -> glab.el
   ! lisp/gogs.el -> gogs.el
@@ -18,23 +17,26 @@ Copying files (->) and directories (=>)
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
     .dir-locals.el -> .dir-locals.el
-Generating /tmp/ghub6zz9aT/ghub-20220424.1655/ghub.info
-Created ghub-20220424.1655.tar containing:
-  ghub-20220424.1655/
-  ghub-20220424.1655/.dir-locals.el
-  ghub-20220424.1655/buck.el
-  ghub-20220424.1655/dir
-  ghub-20220424.1655/ghub-graphql.el
-  ghub-20220424.1655/ghub-pkg.el
-  ghub-20220424.1655/ghub.el
-  ghub-20220424.1655/ghub.info
-  ghub-20220424.1655/glab.el
-  ghub-20220424.1655/gogs.el
-  ghub-20220424.1655/gsexp.el
-  ghub-20220424.1655/gtea.el
-Built ghub in 12.578s, finished at 2022-04-27T06:21:06+0000
+    ghub-pkg.el -> ghub-pkg.el
+Generating /tmp/ghub2vujrQ/ghub-20220427.954/ghub.info
+Created ghub-20220427.954.tar containing:
+  ghub-20220427.954/
+  ghub-20220427.954/.dir-locals.el
+  ghub-20220427.954/buck.el
+  ghub-20220427.954/dir
+  ghub-20220427.954/ghub-graphql.el
+  ghub-20220427.954/ghub-pkg.el
+  ghub-20220427.954/ghub.el
+  ghub-20220427.954/ghub.info
+  ghub-20220427.954/glab.el
+  ghub-20220427.954/gogs.el
+  ghub-20220427.954/gsexp.el
+  ghub-20220427.954/gtea.el
+Built ghub in 14.155s, finished at 2022-04-27T10:25:30+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  414 Apr 27 06:21 packages/ghub-20220424.1655.entry
 160K -rw-r--r-- 1 root root 160K Apr 27 06:21 packages/ghub-20220424.1655.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 27 06:21 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Apr 27 06:21 packages/ghub-readme.txt
+4.0K -rw-r--r-- 1 root root  413 Apr 27 10:25 packages/ghub-20220427.954.entry
+160K -rw-r--r-- 1 root root 160K Apr 27 10:25 packages/ghub-20220427.954.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 27 10:25 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Apr 27 10:25 packages/ghub-readme.txt
