@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out b63ff2a7bbd888128939b8ae88c3f62c0d529945
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-roam/
-  to /tmp/org-roamVAMIcL/org-roam-20220425.12
+  to /tmp/org-roamiyp04j/org-roam-20220425.12
     org-roam-capture.el -> org-roam-capture.el
     org-roam-compat.el -> org-roam-compat.el
     org-roam-db.el -> org-roam-db.el
@@ -24,7 +24,7 @@ Copying files (->) and directories (=>)
   ! extensions/org-roam-graph.el -> org-roam-graph.el
   ! extensions/org-roam-overlay.el -> org-roam-overlay.el
   ! extensions/org-roam-protocol.el -> org-roam-protocol.el
-Generating /tmp/org-roamVAMIcL/org-roam-20220425.12/org-roam.info
+Generating /tmp/org-roamiyp04j/org-roam-20220425.12/org-roam.info
 Created org-roam-20220425.12.tar containing:
   org-roam-20220425.12/
   org-roam-20220425.12/dir
@@ -45,24 +45,24 @@ Created org-roam-20220425.12.tar containing:
   org-roam-20220425.12/org-roam-utils.el
   org-roam-20220425.12/org-roam.el
   org-roam-20220425.12/org-roam.info
-Built org-roam in 14.507s, finished at 2022-04-26T10:42:36+0000
+Built org-roam in 15.725s, finished at 2022-04-27T02:55:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  547 Apr 26 10:42 packages/org-roam-20220425.12.entry
-360K -rw-r--r-- 1 root root 360K Apr 26 10:42 packages/org-roam-20220425.12.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 26 10:42 packages/org-roam-badge.svg
-4.0K -rw-r--r-- 1 root root  521 Apr 26 10:42 packages/org-roam-bibtex-20220213.1609.entry
-200K -rw-r--r-- 1 root root 200K Apr 26 10:42 packages/org-roam-bibtex-20220213.1609.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 26 10:42 packages/org-roam-bibtex-badge.svg
-4.0K -rw-r--r-- 1 root root  893 Apr 26 10:42 packages/org-roam-bibtex-readme.txt
-4.0K -rw-r--r-- 1 root root 1.7K Apr 26 10:42 packages/org-roam-bibtex.log
-4.0K -rw-r--r-- 1 root root 2.1K Apr 26 10:42 packages/org-roam-readme.txt
- 12K -rw-r--r-- 1 root root 9.8K Apr 26 10:42 packages/org-roam-timestamps-20220111.1755.el
-4.0K -rw-r--r-- 1 root root  505 Apr 26 10:42 packages/org-roam-timestamps-20220111.1755.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 26 10:42 packages/org-roam-timestamps-badge.svg
-4.0K -rw-r--r-- 1 root root  309 Apr 26 10:42 packages/org-roam-timestamps-readme.txt
-4.0K -rw-r--r-- 1 root root  692 Apr 26 10:42 packages/org-roam-timestamps.log
-4.0K -rw-r--r-- 1 root root  475 Apr 26 10:42 packages/org-roam-ui-20220225.2151.entry
-5.3M -rw-r--r-- 1 root root 5.3M Apr 26 10:42 packages/org-roam-ui-20220225.2151.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 26 10:42 packages/org-roam-ui-badge.svg
-4.0K -rw-r--r-- 1 root root   93 Apr 26 10:42 packages/org-roam-ui-readme.txt
- 12K -rw-r--r-- 1 root root 9.9K Apr 26 10:42 packages/org-roam-ui.log
+4.0K -rw-r--r-- 1 root root  547 Apr 27 02:55 packages/org-roam-20220425.12.entry
+360K -rw-r--r-- 1 root root 360K Apr 27 02:55 packages/org-roam-20220425.12.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 27 02:55 packages/org-roam-badge.svg
+4.0K -rw-r--r-- 1 root root  521 Apr 27 02:55 packages/org-roam-bibtex-20220213.1609.entry
+200K -rw-r--r-- 1 root root 200K Apr 27 02:55 packages/org-roam-bibtex-20220213.1609.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 27 02:55 packages/org-roam-bibtex-badge.svg
+4.0K -rw-r--r-- 1 root root  893 Apr 27 02:55 packages/org-roam-bibtex-readme.txt
+4.0K -rw-r--r-- 1 root root 1.7K Apr 27 02:55 packages/org-roam-bibtex.log
+4.0K -rw-r--r-- 1 root root 2.1K Apr 27 02:55 packages/org-roam-readme.txt
+ 12K -rw-r--r-- 1 root root 9.8K Apr 27 02:55 packages/org-roam-timestamps-20220111.1755.el
+4.0K -rw-r--r-- 1 root root  505 Apr 27 02:55 packages/org-roam-timestamps-20220111.1755.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 27 02:55 packages/org-roam-timestamps-badge.svg
+4.0K -rw-r--r-- 1 root root  309 Apr 27 02:55 packages/org-roam-timestamps-readme.txt
+4.0K -rw-r--r-- 1 root root  692 Apr 27 02:55 packages/org-roam-timestamps.log
+4.0K -rw-r--r-- 1 root root  475 Apr 27 02:55 packages/org-roam-ui-20220225.2151.entry
+5.3M -rw-r--r-- 1 root root 5.3M Apr 27 02:55 packages/org-roam-ui-20220225.2151.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 27 02:55 packages/org-roam-ui-badge.svg
+4.0K -rw-r--r-- 1 root root   93 Apr 27 02:55 packages/org-roam-ui-readme.txt
+ 12K -rw-r--r-- 1 root root 9.9K Apr 27 02:55 packages/org-roam-ui.log
