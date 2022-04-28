@@ -4,8 +4,8 @@
 
 ;; Author: Yasushi SHOJI <yasushi.shoji@gmail.com>
 ;; URL: https://github.com/yashi/org-asciidoc
-;; Package-Version: 20211224.538
-;; Package-Commit: 27bf9a3e900c782bd57719c81c0aa68d9a1e3b46
+;; Package-Version: 20220428.740
+;; Package-Commit: c8bc184f9088b76fdf1ce20e6e5d0a1588e1b327
 ;; Package-Requires: ((org "8.1"))
 ;; Keywords: org, asciidoc
 
@@ -195,7 +195,7 @@ contextual information."
   '((unordered . ?*)
     (ordered . ?.)))
 
-(defun org-asciidoc-list-item-delimiter (item)
+(defun org-asciidoc-list-item-delimiter (item info)
   (let* ((plain-list (org-export-get-parent item))
 	 (type (org-element-property :type plain-list))
 	 (depth (org-asciidoc-item-list-depth item))
@@ -211,7 +211,7 @@ CONTENTS holds the contents of the item.  INFO is a plist holding
 contextual information."
   (let ((lines (split-string (replace-regexp-in-string "\n\\'" "" contents) "\n")))
     (format "%s %s"
-            (org-asciidoc-list-item-delimiter item)
+            (org-asciidoc-list-item-delimiter item info)
             (mapconcat (lambda (line)
                          (if (string= "" line) "+" line))
                        lines
