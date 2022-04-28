@@ -6,7 +6,7 @@
 ;; Maintainer: Paul Pogonyshev <pogonyshev@gmail.com>
 ;; Version:    1.1
 ;; Package-Version: 20211119.1718
-;; Package-Commit: 077684feec98ce6d5e283a13f056c083986628a2
+;; Package-Commit: f82bd78f5bc89548ee70c1713f6f882526debbdb
 ;; Keywords:   elisp, extensions
 ;; Homepage:   https://github.com/doublep/iter2
 ;; Package-Requires: ((emacs "25.1"))

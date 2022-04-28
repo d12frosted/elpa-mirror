@@ -6,6 +6,7 @@ workspace). The package assumes project.el and tab-bar.el are both present
 
 This file is not part of GNU Emacs.
 
+; Acknowledgements
 Much of the package code is inspired by:
 
 - https://github.com/kaz-yos/emacs

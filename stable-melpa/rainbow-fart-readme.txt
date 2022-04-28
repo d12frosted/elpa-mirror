@@ -1,3 +1,3 @@
 
 Usage:
-(add-hook 'prog-mode-hook #'rainbow-fart-mode)
+(add-hook 'after-init-hook #'rainbow-fart-mode)
