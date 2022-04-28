@@ -2,8 +2,8 @@
 
 ;; Copyright (c) 2019 John Louis Del Rosario
 ;; Package-Requires: ((emacs "24") (groovy-mode "2.0"))
-;; Package-Commit: 169f7a9aaabe5e0763b53f07e60c20f5d64741c7
-;; Package-Version: 20220414.542
+;; Package-Commit: fa5545be1329df3067dcfd81749bbd99df070d6b
+;; Package-Version: 20220428.1113
 ;; Package-X-Original-Version: 0.0.1
 ;; Homepage: https://github.com/john2x/jenkinsfile-mode
 ;;
@@ -297,7 +297,7 @@ Run this manually when editing this file to get an updated the list of keywords.
   (add-hook 'completion-at-point-functions 'jenkinsfile-mode--option-compeletion-at-point nil 'local)
   (add-hook 'completion-at-point-functions 'jenkinsfile-mode--pipeline-step-compeletion-at-point nil 'local)
   (add-hook 'completion-at-point-functions 'jenkinsfile-mode--core-step-compeletion-at-point nil 'local)
-  (with-eval-after-load 'company-keywords)
+  (with-eval-after-load 'company-keywords
     (add-to-list 'company-keywords-alist
                  `(jenkinsfile-mode . ,(append jenkinsfile-mode--file-section-keywords
                                                jenkinsfile-mode--directive-keywords

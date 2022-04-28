@@ -3,8 +3,8 @@
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
 ;; Version: 1.2
-;; Package-Version: 20220427.1457
-;; Package-Commit: b099766ebf1876d15cb8722427abb997fc33b8b3
+;; Package-Version: 20220428.533
+;; Package-Commit: b7db8720ad136555342cc87912ea539098dccc4e
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -306,8 +306,7 @@ If PROJECT does not exist, create it, along with a `project.todo' file."
          (ignore-errors (mkdir project t))
          (if (featurep 'magit)
              (magit-init project)
-           (progn
-             (call-interactively #'vc-create-repo)))
+           (call-interactively #'vc-create-repo))
          (delete-other-windows)
          (with-temp-buffer (write-file "project-todo.org"))
          (if (featurep 'magit)

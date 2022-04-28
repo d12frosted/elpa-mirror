@@ -7,8 +7,8 @@
 ;; Created: September 20, 2020
 ;; Modified: October 17, 2020
 ;; Version: 0.0.1
-;; Package-Version: 20211214.1851
-;; Package-Commit: 78a811f02c7104a39b908f9e4c8436abde4b9620
+;; Package-Version: 20220426.1905
+;; Package-Commit: c28a4f42829ed1f96a17abb63a8616216db913a5
 ;; Keywords: convenience mail
 ;; Homepage: https://git.sr.ht/~zetagon/el-secretario
 ;; Package-Requires: ((emacs "27.1") (el-secretario "0.0.1") (notmuch "0.3.1"))
@@ -73,6 +73,18 @@ OBJ BACKWARDS."
 (cl-defmethod el-secretario-source-previous-item ((_obj el-secretario-notmuch-source))
   "See `el-secretario-source.el'."
   (el-secretario-notmuch-show-next-thread t))
+
+(defun el-secretario-notmuch-advance-and-archive ()
+  "Advance through thread and archive.
+Like `notmuch-show-advance-and-archive', but adapted to el-secretario.
+
+Instead of using `notmuch-show-archive-thread-then-next' it's
+using `el-secretario-notmuch-show-next-thread' so that it
+properly goes to the next source when there are no more messages."
+  (interactive)
+  (when (notmuch-show-advance)
+    (notmuch-show-archive-thread)
+    (el-secretario-next-item)))
 
 ;;
 ;; The logic for detecting when to call next-source or previous-source is quite

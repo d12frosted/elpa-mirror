@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://gitlab.com/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20220411.525
-;; Package-Commit: d46983d69d75d8db6284ad297b17eedc495be2eb
+;; Package-Version: 20220428.1039
+;; Package-Commit: f2217357bc446b27292d1c0ad6cfe2e331ccec14
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -142,7 +142,7 @@
     ;; white-space.
     `(whitespace-trailing ((nil (:background ,ob-aluminium4 :foreground nil))))
     `(whitespace-space ((nil (:background nil :foreground ,ob-aluminium4))))
-    `(whitespace-tab ((nil (:background nil :foreground ,ob-aluminium4))))
+    `(whitespace-tab ((nil (:background ,ob-aluminium6+5 :foreground ,ob-aluminium4))))
 
     ;; xref mode.
     `(xref-line-number ((t (:background ,ob-aluminium6+16 :foreground ,ob-aluminium4))))

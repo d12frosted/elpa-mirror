@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.8.0
-;; Package-Version: 20220411.222
-;; Package-Commit: 4b6123ac7850ca083ec791f50857341635a813aa
+;; Package-Version: 20220428.822
+;; Package-Commit: 7d5a04b6beffcc96572d74304d58372a413a0076
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -1505,7 +1505,8 @@ If the buffer is killed, return \"--\"."
 
 (defun all-the-icons-ivy-rich-library-path (cand)
   "Return library path for CAND."
-  (abbreviate-file-name (find-library-name cand)))
+  (abbreviate-file-name
+   (or (ignore-errors (find-library-name cand)) "")))
 
 ;; Support `counsel-world-clock'
 (defun all-the-icons-ivy-rich-world-clock (cand)
