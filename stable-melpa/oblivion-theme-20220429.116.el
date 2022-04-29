@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://gitlab.com/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20220428.1039
-;; Package-Commit: f2217357bc446b27292d1c0ad6cfe2e331ccec14
+;; Package-Version: 20220429.116
+;; Package-Commit: 37e562b92cebafbc38ea817ac7bdf7b41576eeca
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -355,7 +355,11 @@
 
     ;; visual-indentation-mode (stand alone package).
     `(visual-indentation-light-face ((t (:background ,ob-aluminium6+16))))
-    `(visual-indentation-dark-face ((t (:background ,ob-aluminium6+5))))))
+    `(visual-indentation-dark-face ((t (:background ,ob-aluminium6+5))))
+
+    ;; swiper (melpa).
+    ;; NOTE: This color is needed as a more subtle tone that doesn't make comments unreadable.
+    `(swiper-line-face ((t (:background ,ob-aluminium6+5 :extend t))))))
 
 ;;;###autoload
 (when load-file-name
