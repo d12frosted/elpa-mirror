@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 4ec2aa32b1772e629a6a2b47b84048e1990d6728
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/haskell-mode/
-  to /tmp/haskell-mode17PSVP/haskell-mode-20220331.1645
+  to /tmp/haskell-modex2Bsot/haskell-mode-20220331.1645
     ghc-core.el -> ghc-core.el
     ghci-script-mode.el -> ghci-script-mode.el
     haskell-align-imports.el -> haskell-align-imports.el
@@ -53,4 +53,58 @@ Copying files (->) and directories (=>)
   ! doc/haskell-mode.texi -> haskell-mode.texi
     NEWS -> NEWS
     logo.svg -> logo.svg
-Generating /tmp/haskell-mode17PSVP/haskell-mode-20220331.1645/haskell-mode.info
+Generating /tmp/haskell-modex2Bsot/haskell-mode-20220331.1645/haskell-mode.info
+Created haskell-mode-20220331.1645.tar containing:
+  haskell-mode-20220331.1645/
+  haskell-mode-20220331.1645/NEWS
+  haskell-mode-20220331.1645/dir
+  haskell-mode-20220331.1645/ghc-core.el
+  haskell-mode-20220331.1645/ghci-script-mode.el
+  haskell-mode-20220331.1645/haskell-align-imports.el
+  haskell-mode-20220331.1645/haskell-c2hs.el
+  haskell-mode-20220331.1645/haskell-cabal.el
+  haskell-mode-20220331.1645/haskell-collapse.el
+  haskell-mode-20220331.1645/haskell-commands.el
+  haskell-mode-20220331.1645/haskell-compile.el
+  haskell-mode-20220331.1645/haskell-complete-module.el
+  haskell-mode-20220331.1645/haskell-completions.el
+  haskell-mode-20220331.1645/haskell-customize.el
+  haskell-mode-20220331.1645/haskell-debug.el
+  haskell-mode-20220331.1645/haskell-decl-scan.el
+  haskell-mode-20220331.1645/haskell-doc.el
+  haskell-mode-20220331.1645/haskell-font-lock.el
+  haskell-mode-20220331.1645/haskell-ghc-support.el
+  haskell-mode-20220331.1645/haskell-hoogle.el
+  haskell-mode-20220331.1645/haskell-indent.el
+  haskell-mode-20220331.1645/haskell-indentation.el
+  haskell-mode-20220331.1645/haskell-interactive-mode.el
+  haskell-mode-20220331.1645/haskell-lexeme.el
+  haskell-mode-20220331.1645/haskell-load.el
+  haskell-mode-20220331.1645/haskell-menu.el
+  haskell-mode-20220331.1645/haskell-mode-pkg.el
+  haskell-mode-20220331.1645/haskell-mode.el
+  haskell-mode-20220331.1645/haskell-mode.info
+  haskell-mode-20220331.1645/haskell-modules.el
+  haskell-mode-20220331.1645/haskell-move-nested.el
+  haskell-mode-20220331.1645/haskell-navigate-imports.el
+  haskell-mode-20220331.1645/haskell-presentation-mode.el
+  haskell-mode-20220331.1645/haskell-process.el
+  haskell-mode-20220331.1645/haskell-repl.el
+  haskell-mode-20220331.1645/haskell-sandbox.el
+  haskell-mode-20220331.1645/haskell-session.el
+  haskell-mode-20220331.1645/haskell-sort-imports.el
+  haskell-mode-20220331.1645/haskell-string.el
+  haskell-mode-20220331.1645/haskell-svg.el
+  haskell-mode-20220331.1645/haskell-unicode-input-method.el
+  haskell-mode-20220331.1645/haskell-utils.el
+  haskell-mode-20220331.1645/haskell.el
+  haskell-mode-20220331.1645/highlight-uses-mode.el
+  haskell-mode-20220331.1645/inf-haskell.el
+  haskell-mode-20220331.1645/logo.svg
+  haskell-mode-20220331.1645/w3m-haddock.el
+Built haskell-mode in 29.189s, finished at 2022-04-29T16:03:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  560 Apr 29 16:03 packages/haskell-mode-20220331.1645.entry
+920K -rw-r--r-- 1 root root 920K Apr 29 16:03 packages/haskell-mode-20220331.1645.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 29 16:03 packages/haskell-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  588 Apr 29 16:03 packages/haskell-mode-readme.txt
