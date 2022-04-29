@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 5 3)
+	   [(1 5 4)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "e694b977cc82887ce722912a2634ae4b0bc4f5ea"))])
+	     (:commit . "c00b6f49f779dc5caac7b37d1e35f87891e015d4"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar

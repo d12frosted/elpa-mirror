@@ -1,5 +1,5 @@
 			 ━━━━━━━━━━━━━━━━━━━━━━
-			    TMR MUST RECCUR
+			      TMR MAY RING
 
 			  Protesilaos Stavrou
 			  info@protesilaos.com
@@ -26,10 +26,12 @@ Table of Contents
 1. COPYING
 2. Overview
 3. Installation
-.. 1. Manual installation
+.. 1. GNU ELPA package
+.. 2. Manual installation
 4. Sample configuration
-5. GNU Free Documentation License
-6. Indices
+5. Acknowledgements
+6. GNU Free Documentation License
+7. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -77,6 +79,10 @@ Table of Contents
   `tmr-descriptions-list', though any arbitrary input is acceptable at
   the minibuffer prompt.
 
+  An alternative to the `tmr' command is `tmr-with-description'.  The
+  difference between the two is that the latter always prompts for a
+  description.
+
   When the timer is set, a message is sent to the echo area recording
   the current time and the point in the future when the timer elapses.
   Echo area messages can be reviewed with the `view-echo-area-messages'
@@ -91,6 +97,9 @@ Table of Contents
   notification can be set through the `tmr-notification-urgency' option.
   Note that it is up to the desktop environment or notification daemon
   to decide how to handle the urgency value.
+
+  If the `tmr-sound-file' is nil, or the file is not found, no sound
+  will be played.
 
   The `tmr-cancel' command is used to cancel running timers (as set by
   the `tmr' command).  If there is only one timer, it cancels it
@@ -107,7 +116,21 @@ Table of Contents
 
 
 
-3.1 Manual installation
+3.1 GNU ELPA package
+────────────────────
+
+  The package is available as `tmr'.  Simply do:
+
+  ┌────
+  │ M-x package-refresh-contents
+  │ M-x package-install
+  └────
+
+
+  And search for it.
+
+
+3.2 Manual installation
 ───────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
@@ -143,31 +166,47 @@ Table of Contents
   │ ;; Load the `tmr' library
   │ (require 'tmr)
   │ 
+  │ ;; set to nil to disable the sound
+  │ (setq tmr-sound-file
+  │       "/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga")
+  │ 
   │ ;; OPTIONALLY set global key bindings:
   │ (let ((map global-map))
-  │   (define-key map (kbd "C-c t t") #'tmr)
+  │   (define-key map (kbd "C-c t t") #'tmr) ; or use the command `tmr-with-description'
   │   (define-key map (kbd "C-c t e") #'tmr-view-echo-area-messages) ; "e" to remind of C-h e
   │   (define-key map (kbd "C-c t c") #'tmr-cancel))
   │ 
-  │ ;; Also check the user options `tmr-sound-file',
-  │ ;; `tmr-notification-urgency' `tmr-descriptions-list'.
+  │ ;; Also check the user options `tmr-notification-urgency'
+  │ ;; `tmr-descriptions-list'.
   └────
 
 
-5 GNU Free Documentation License
+5 Acknowledgements
+══════════════════
+
+  TMR is meant to be a collective effort.  Every bit of help matters.
+
+  Author/maintainer
+        Protesilaos Stavrou.
+
+  Contributions to the code or manual
+        Christian Tietze, Damien Cassou.
+
+
+6 GNU Free Documentation License
 ════════════════════════════════
 
 
-6 Indices
+7 Indices
 ═════════
 
-6.1 Function index
+7.1 Function index
 ──────────────────
 
 
-6.2 Variable index
+7.2 Variable index
 ──────────────────
 
 
-6.3 Concept index
+7.3 Concept index
 ─────────────────
