@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/raghavgautam/osx-lib.git
 
 Updating /mnt/store/melpa/working/osx-lib/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/raghavgautam/osx-lib.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7afdb57edd5725e8a66f841a90fa571a4cbb81e7
+Built osx-lib in 8.867s, finished at 2022-04-29T00:43:16+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Apr 29 00:43 packages/osx-lib-20211206.619.el
+4.0K -rw-r--r-- 1 root root  425 Apr 29 00:43 packages/osx-lib-20211206.619.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 29 00:43 packages/osx-lib-badge.svg
+4.0K -rw-r--r-- 1 root root  795 Apr 29 00:43 packages/osx-lib-readme.txt

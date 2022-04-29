@@ -7,7 +7,7 @@
 ;; Homepage: https://git.sr.ht/~tarsius/notmuch-maildir
 ;; Keywords: mail
 ;; Package-Version: 20220422.1621
-;; Package-Commit: cb404064313145b7225a76694ceb06fe12078251
+;; Package-Commit: f0dcfd755fe9e58652f0569e3c8641d38cd6dd4c
 
 ;; Package-Requires: ((emacs "26.1") (compat "28.1.1.0") (notmuch "0.30"))
 
