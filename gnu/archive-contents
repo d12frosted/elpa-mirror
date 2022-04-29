@@ -1137,7 +1137,7 @@
 		      (:authors
 		       ("Manuel Uberti" . "manuel.uberti@inventati.org")))])
  (fontaine .
-	   [(0 1 0)
+	   [(0 1 1)
 	    ((emacs
 	      (27 1)))
 	    "Set font configurations using presets" tar
@@ -1145,7 +1145,7 @@
 	     (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	     (:authors
 	      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	     (:commit . "7896f2cdf5b2b71c718a580eec44677a0da48234"))])
+	     (:commit . "e8e25d681854a97483a5ca3a0c39f04aaa19b1a0"))])
  (frame-tabs .
 	     [(1 1)
 	      nil "show buffer tabs in side window" single
@@ -2991,7 +2991,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "7157ec61c451e3b97ba6117688d0de52bf294bea"))])
  (tramp .
-	[(2 5 2 3)
+	[(2 5 2 4)
 	 ((emacs
 	   (25 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -3000,7 +3000,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "ad1b28dca70c70cd4c317dcb606c92dfb436ccee"))])
+	  (:commit . "8f2578d043d2d633c20a74a8b836920b7d0a3fa0"))])
  (tramp-nspawn .
 	       [(1 0)
 		((emacs

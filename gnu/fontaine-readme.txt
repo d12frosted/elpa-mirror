@@ -12,7 +12,7 @@ options for `fontaine' (or `fontaine.el'), and provides every other
 piece of information pertinent to it.
 
 The documentation furnished herein corresponds to stable version 0.1.0,
-released on 2022-04-26.  Any reference to a newer feature which does not
+released on 2022-04-28.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
 Current development target is 0.2.0-dev.
@@ -27,10 +27,12 @@ Table of Contents
 1. COPYING
 2. Overview
 3. Installation
-.. 1. Manual installation
+.. 1. GNU ELPA package
+.. 2. Manual installation
 4. Sample configuration
-5. GNU Free Documentation License
-6. Indices
+5. Acknowledgements
+6. GNU Free Documentation License
+7. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -86,8 +88,9 @@ Table of Contents
   │  :line-spacing 1)
   └────
 
-  The doc string of `fontaine-presets' explains all properties in
-  detail.
+  The doc string of `fontaine-presets' explains all properties in detail
+  and documents some important caveats or information about font
+  settings in Emacs.
 
   The command `fontaine-set-preset' applies the desired preset.  If
   there is only one available, it implements it outright.  Otherwise it
@@ -101,18 +104,29 @@ Table of Contents
 
   The command `fontaine-set-face-font' prompts with completion for a
   face and then asks the user to specify the value of the relevant
-  properties.  The list of faces to choose from is the same as that
-  implied by the `fontaine-presets'.  Properties to change and their
-  respective values will depend on the face.  For example, the `default'
-  face requires a natural number for its height attribute, whereas every
-  other face needs a floating point (understood as a multiple of the
-  default height).  This command is for interactive use only and is
-  supposed to be used for previewing certain styles before eventually
-  codifying them as presets.
+  properties.  Preferred font families can be defined in the user option
+  `fontaine-font-families', otherwise Fontaine will try to find suitable
+  options among the fonts installed on the system (not always reliable,
+  depending on the Emacs build and environment it runs in).  The list of
+  faces to choose from is the same as that implied by the
+  `fontaine-presets'.  Properties to change and their respective values
+  will depend on the face.  For example, the `default' face requires a
+  natural number for its height attribute, whereas every other face
+  needs a floating point (understood as a multiple of the default
+  height).  This command is for interactive use only and is supposed to
+  be used for previewing certain styles before eventually codifying them
+  as presets.
 
   Changing the `bold' and `italic' faces only has a noticeable effect if
-  the underlying does not hardcode a weight and slant but inherits from
-  those faces instead (e.g. the `modus-themes').
+  the underlying theme does not hardcode a weight and slant but inherits
+  from those faces instead (e.g. the `modus-themes').
+
+  The latest value of `fontaine-set-preset' is stored in a file whose
+  location is defined in `fontaine-latest-state-file'.  Saving is done
+  by the `fontaine-store-latest-preset' function, which should be
+  assigned to a hook (e.g. `kill-emacs-hook').  To restore that value,
+  the user can call the function `fontaine-restore-latest-preset' (such
+  as by adding it to their init file).
 
   As for the name of this package, it is the French word for “fountain”
   which, in turn, is what the font or source is.  However, I will not
@@ -126,7 +140,21 @@ Table of Contents
 
 
 
-3.1 Manual installation
+3.1 GNU ELPA package
+────────────────────
+
+  The package is available as `fontaine'.  Simply do:
+
+  ┌────
+  │ M-x package-refresh-contents
+  │ M-x package-install
+  └────
+
+
+  And search for it.
+
+
+3.2 Manual installation
 ───────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
@@ -163,6 +191,9 @@ Table of Contents
   ┌────
   │ (require 'fontaine)
   │ 
+  │ (setq fontaine-latest-state-file
+  │       (locate-user-emacs-file "fontaine-latest-state.eld"))
+  │ 
   │ (setq fontaine-presets
   │       '((regular
   │ 	 :default-family "Hack"
@@ -195,28 +226,53 @@ Table of Contents
   │ 	 :italic-slant italic
   │ 	 :line-spacing 1)))
   │ 
+  │ (fontaine-restore-latest-preset)
+  │ 
+  │ ;; Use `fontaine-recovered-preset' if available, else fall back to the
+  │ ;; desired style from `fontaine-presets'.
+  │ (if-let ((state fontaine-recovered-preset))
+  │     (fontaine-set-preset state)
+  │   (fontaine-set-preset 'regular))
+  │ 
+  │ ;; The other side of `fontaine-restore-latest-preset'.
+  │ (add-hook 'kill-emacs-hook #'fontaine-store-latest-preset)
+  │ 
   │ ;; fontaine does not define any key bindings.  This is just a sample that
   │ ;; respects the key binding conventions.  Evaluate:
   │ ;;
   │ ;;     (info "(elisp) Key Binding Conventions")
-  │ (define-key global-map (kbd "C-c p") #'fontaine-set-preset)
+  │ (define-key global-map (kbd "C-c f") #'fontaine-set-preset)
+  │ (define-key global-map (kbd "C-c F") #'fontaine-set-face-font)
   └────
 
 
-5 GNU Free Documentation License
+5 Acknowledgements
+══════════════════
+
+  Fontaine is meant to be a collective effort.  Every bit of help
+  matters.
+
+  Author/maintainer
+        Protesilaos Stavrou.
+
+  Contributions to the code or manual
+        Eli Zaretskii.
+
+
+6 GNU Free Documentation License
 ════════════════════════════════
 
 
-6 Indices
+7 Indices
 ═════════
 
-6.1 Function index
+7.1 Function index
 ──────────────────
 
 
-6.2 Variable index
+7.2 Variable index
 ──────────────────
 
 
-6.3 Concept index
+7.3 Concept index
 ─────────────────
