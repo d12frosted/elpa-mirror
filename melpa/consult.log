@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 9d7282c2b3cce2753b8093b722e320d171c4a20e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/consult/
-  to /tmp/consult3rKNhl/consult-20220429.800
+  to /tmp/consultkFQN8K/consult-20220429.800
     consult-compile.el -> consult-compile.el
     consult-flymake.el -> consult-flymake.el
     consult-icomplete.el -> consult-icomplete.el
@@ -31,84 +31,84 @@ Created consult-20220429.800.tar containing:
   consult-20220429.800/consult-vertico.el
   consult-20220429.800/consult-xref.el
   consult-20220429.800/consult.el
-Built consult in 5.212s, finished at 2022-04-30T11:09:43+0000
+Built consult in 5.835s, finished at 2022-04-30T15:04:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  326 Apr 30 11:09 packages/consult-20220429.800.entry
-272K -rw-r--r-- 1 root root 270K Apr 30 11:09 packages/consult-20220429.800.tar
-4.0K -rw-r--r-- 1 root root 3.1K Apr 30 07:18 packages/consult-ag-20220419.1721.el
-4.0K -rw-r--r-- 1 root root  409 Apr 30 07:18 packages/consult-ag-20220419.1721.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-ag-badge.svg
-4.0K -rw-r--r-- 1 root root  139 Apr 30 07:18 packages/consult-ag-readme.txt
-4.0K -rw-r--r-- 1 root root  160 Apr 30 11:09 packages/consult-ag.log
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-badge.svg
-8.0K -rw-r--r-- 1 root root 5.0K Apr 30 07:18 packages/consult-company-20211021.1152.el
-4.0K -rw-r--r-- 1 root root  405 Apr 30 07:18 packages/consult-company-20211021.1152.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-company-badge.svg
-4.0K -rw-r--r-- 1 root root  343 Apr 30 07:18 packages/consult-company-readme.txt
-4.0K -rw-r--r-- 1 root root  149 Apr 30 11:09 packages/consult-company.log
- 12K -rw-r--r-- 1 root root  12K Apr 30 07:18 packages/consult-dir-20211007.2352.el
-4.0K -rw-r--r-- 1 root root  456 Apr 30 07:18 packages/consult-dir-20211007.2352.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-dir-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Apr 30 07:18 packages/consult-dir-readme.txt
-4.0K -rw-r--r-- 1 root root   91 Apr 30 11:09 packages/consult-dir.log
- 12K -rw-r--r-- 1 root root 8.4K Apr 30 07:18 packages/consult-eglot-20220409.1238.el
-4.0K -rw-r--r-- 1 root root  434 Apr 30 07:18 packages/consult-eglot-20220409.1238.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-eglot-badge.svg
-4.0K -rw-r--r-- 1 root root  517 Apr 30 07:18 packages/consult-eglot-readme.txt
-   0 -rw-r--r-- 1 root root    0 Apr 30 11:09 packages/consult-eglot.log
-8.0K -rw-r--r-- 1 root root 4.7K Apr 30 07:18 packages/consult-flycheck-20220403.1810.el
-4.0K -rw-r--r-- 1 root root  429 Apr 30 07:18 packages/consult-flycheck-20220403.1810.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  135 Apr 30 07:18 packages/consult-flycheck-readme.txt
-   0 -rw-r--r-- 1 root root    0 Apr 30 11:09 packages/consult-flycheck.log
-8.0K -rw-r--r-- 1 root root 4.5K Apr 30 07:18 packages/consult-flyspell-20220419.2044.el
-4.0K -rw-r--r-- 1 root root  386 Apr 30 07:18 packages/consult-flyspell-20220419.2044.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-flyspell-badge.svg
-4.0K -rw-r--r-- 1 root root  537 Apr 30 07:18 packages/consult-flyspell-readme.txt
-   0 -rw-r--r-- 1 root root    0 Apr 30 11:09 packages/consult-flyspell.log
-4.0K -rw-r--r-- 1 root root 3.1K Apr 30 07:18 packages/consult-ghq-20210606.2047.el
-4.0K -rw-r--r-- 1 root root  467 Apr 30 07:18 packages/consult-ghq-20210606.2047.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-ghq-badge.svg
-4.0K -rw-r--r-- 1 root root  291 Apr 30 07:18 packages/consult-ghq-readme.txt
-4.0K -rw-r--r-- 1 root root  621 Apr 30 07:18 packages/consult-ghq.log
- 24K -rw-r--r-- 1 root root  23K Apr 30 07:18 packages/consult-lsp-20220409.1107.el
-4.0K -rw-r--r-- 1 root root  434 Apr 30 07:18 packages/consult-lsp-20220409.1107.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-lsp-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Apr 30 07:18 packages/consult-lsp-readme.txt
-4.0K -rw-r--r-- 1 root root  620 Apr 30 07:18 packages/consult-lsp.log
- 16K -rw-r--r-- 1 root root  14K Apr 30 07:18 packages/consult-notmuch-20220421.717.el
-4.0K -rw-r--r-- 1 root root  407 Apr 30 07:18 packages/consult-notmuch-20220421.717.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-notmuch-badge.svg
-4.0K -rw-r--r-- 1 root root  489 Apr 30 07:18 packages/consult-notmuch-readme.txt
-4.0K -rw-r--r-- 1 root root  647 Apr 30 07:18 packages/consult-notmuch.log
- 12K -rw-r--r-- 1 root root 8.8K Apr 30 07:18 packages/consult-org-roam-20220426.1628.el
-4.0K -rw-r--r-- 1 root root  413 Apr 30 07:18 packages/consult-org-roam-20220426.1628.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-org-roam-badge.svg
-4.0K -rw-r--r-- 1 root root  285 Apr 30 07:18 packages/consult-org-roam-readme.txt
-4.0K -rw-r--r-- 1 root root  659 Apr 30 07:18 packages/consult-org-roam.log
-8.0K -rw-r--r-- 1 root root 6.1K Apr 30 07:18 packages/consult-project-extra-20220424.1815.el
-4.0K -rw-r--r-- 1 root root  452 Apr 30 07:18 packages/consult-project-extra-20220424.1815.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-project-extra-badge.svg
-4.0K -rw-r--r-- 1 root root  586 Apr 30 07:18 packages/consult-project-extra-readme.txt
-4.0K -rw-r--r-- 1 root root  703 Apr 30 07:18 packages/consult-project-extra.log
- 12K -rw-r--r-- 1 root root 8.9K Apr 30 07:18 packages/consult-projectile-20220414.738.el
-4.0K -rw-r--r-- 1 root root  453 Apr 30 07:18 packages/consult-projectile-20220414.738.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-projectile-badge.svg
-4.0K -rw-r--r-- 1 root root  765 Apr 30 07:18 packages/consult-projectile-readme.txt
-4.0K -rw-r--r-- 1 root root  741 Apr 30 07:18 packages/consult-projectile.log
-4.0K -rw-r--r-- 1 root root  851 Apr 30 11:09 packages/consult-readme.txt
-8.0K -rw-r--r-- 1 root root 5.1K Apr 30 07:18 packages/consult-recoll-20220227.2050.el
-4.0K -rw-r--r-- 1 root root  380 Apr 30 07:18 packages/consult-recoll-20220227.2050.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-recoll-badge.svg
-4.0K -rw-r--r-- 1 root root  219 Apr 30 07:18 packages/consult-recoll-readme.txt
-4.0K -rw-r--r-- 1 root root  641 Apr 30 07:18 packages/consult-recoll.log
-8.0K -rw-r--r-- 1 root root 4.8K Apr 30 07:18 packages/consult-spotify-20211114.2258.el
-4.0K -rw-r--r-- 1 root root  408 Apr 30 07:18 packages/consult-spotify-20211114.2258.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-spotify-badge.svg
-4.0K -rw-r--r-- 1 root root  652 Apr 30 07:18 packages/consult-spotify-readme.txt
-4.0K -rw-r--r-- 1 root root  638 Apr 30 07:18 packages/consult-spotify.log
-8.0K -rw-r--r-- 1 root root 7.0K Apr 30 07:18 packages/consult-yasnippet-20220409.1209.el
-4.0K -rw-r--r-- 1 root root  452 Apr 30 07:18 packages/consult-yasnippet-20220409.1209.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 30 07:18 packages/consult-yasnippet-badge.svg
-4.0K -rw-r--r-- 1 root root   90 Apr 30 07:18 packages/consult-yasnippet-readme.txt
-4.0K -rw-r--r-- 1 root root  670 Apr 30 07:18 packages/consult-yasnippet.log
+4.0K -rw-r--r-- 1 root root  326 Apr 30 15:04 packages/consult-20220429.800.entry
+272K -rw-r--r-- 1 root root 270K Apr 30 15:04 packages/consult-20220429.800.tar
+4.0K -rw-r--r-- 1 root root 3.1K Apr 30 15:04 packages/consult-ag-20220419.1721.el
+4.0K -rw-r--r-- 1 root root  409 Apr 30 15:04 packages/consult-ag-20220419.1721.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-ag-badge.svg
+4.0K -rw-r--r-- 1 root root  139 Apr 30 15:04 packages/consult-ag-readme.txt
+4.0K -rw-r--r-- 1 root root  214 Apr 30 15:04 packages/consult-ag.log
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 15:04 packages/consult-badge.svg
+8.0K -rw-r--r-- 1 root root 5.0K Apr 30 11:09 packages/consult-company-20211021.1152.el
+4.0K -rw-r--r-- 1 root root  405 Apr 30 11:09 packages/consult-company-20211021.1152.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-company-badge.svg
+4.0K -rw-r--r-- 1 root root  343 Apr 30 11:09 packages/consult-company-readme.txt
+4.0K -rw-r--r-- 1 root root  228 Apr 30 15:04 packages/consult-company.log
+ 12K -rw-r--r-- 1 root root  12K Apr 30 11:09 packages/consult-dir-20211007.2352.el
+4.0K -rw-r--r-- 1 root root  456 Apr 30 11:09 packages/consult-dir-20211007.2352.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-dir-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Apr 30 11:09 packages/consult-dir-readme.txt
+4.0K -rw-r--r-- 1 root root  217 Apr 30 15:04 packages/consult-dir.log
+ 12K -rw-r--r-- 1 root root 8.4K Apr 30 11:09 packages/consult-eglot-20220409.1238.el
+4.0K -rw-r--r-- 1 root root  434 Apr 30 11:09 packages/consult-eglot-20220409.1238.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-eglot-badge.svg
+4.0K -rw-r--r-- 1 root root  517 Apr 30 11:09 packages/consult-eglot-readme.txt
+4.0K -rw-r--r-- 1 root root  222 Apr 30 15:04 packages/consult-eglot.log
+8.0K -rw-r--r-- 1 root root 4.7K Apr 30 11:09 packages/consult-flycheck-20220403.1810.el
+4.0K -rw-r--r-- 1 root root  429 Apr 30 11:09 packages/consult-flycheck-20220403.1810.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  135 Apr 30 11:09 packages/consult-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  229 Apr 30 15:04 packages/consult-flycheck.log
+8.0K -rw-r--r-- 1 root root 4.5K Apr 30 11:09 packages/consult-flyspell-20220419.2044.el
+4.0K -rw-r--r-- 1 root root  386 Apr 30 11:09 packages/consult-flyspell-20220419.2044.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-flyspell-badge.svg
+4.0K -rw-r--r-- 1 root root  537 Apr 30 11:09 packages/consult-flyspell-readme.txt
+4.0K -rw-r--r-- 1 root root  175 Apr 30 15:04 packages/consult-flyspell.log
+4.0K -rw-r--r-- 1 root root 3.1K Apr 30 11:09 packages/consult-ghq-20210606.2047.el
+4.0K -rw-r--r-- 1 root root  467 Apr 30 11:09 packages/consult-ghq-20210606.2047.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-ghq-badge.svg
+4.0K -rw-r--r-- 1 root root  291 Apr 30 11:09 packages/consult-ghq-readme.txt
+   0 -rw-r--r-- 1 root root    0 Apr 30 15:04 packages/consult-ghq.log
+ 24K -rw-r--r-- 1 root root  23K Apr 30 11:09 packages/consult-lsp-20220409.1107.el
+4.0K -rw-r--r-- 1 root root  434 Apr 30 11:09 packages/consult-lsp-20220409.1107.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-lsp-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Apr 30 11:09 packages/consult-lsp-readme.txt
+4.0K -rw-r--r-- 1 root root  620 Apr 30 11:09 packages/consult-lsp.log
+ 16K -rw-r--r-- 1 root root  14K Apr 30 11:09 packages/consult-notmuch-20220421.717.el
+4.0K -rw-r--r-- 1 root root  407 Apr 30 11:09 packages/consult-notmuch-20220421.717.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-notmuch-badge.svg
+4.0K -rw-r--r-- 1 root root  489 Apr 30 11:09 packages/consult-notmuch-readme.txt
+4.0K -rw-r--r-- 1 root root  647 Apr 30 11:09 packages/consult-notmuch.log
+ 12K -rw-r--r-- 1 root root 8.8K Apr 30 11:09 packages/consult-org-roam-20220426.1628.el
+4.0K -rw-r--r-- 1 root root  413 Apr 30 11:09 packages/consult-org-roam-20220426.1628.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-org-roam-badge.svg
+4.0K -rw-r--r-- 1 root root  285 Apr 30 11:09 packages/consult-org-roam-readme.txt
+4.0K -rw-r--r-- 1 root root  659 Apr 30 11:09 packages/consult-org-roam.log
+8.0K -rw-r--r-- 1 root root 6.1K Apr 30 11:09 packages/consult-project-extra-20220424.1815.el
+4.0K -rw-r--r-- 1 root root  452 Apr 30 11:09 packages/consult-project-extra-20220424.1815.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-project-extra-badge.svg
+4.0K -rw-r--r-- 1 root root  586 Apr 30 11:09 packages/consult-project-extra-readme.txt
+4.0K -rw-r--r-- 1 root root  703 Apr 30 11:09 packages/consult-project-extra.log
+ 12K -rw-r--r-- 1 root root 8.9K Apr 30 11:09 packages/consult-projectile-20220414.738.el
+4.0K -rw-r--r-- 1 root root  453 Apr 30 11:09 packages/consult-projectile-20220414.738.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-projectile-badge.svg
+4.0K -rw-r--r-- 1 root root  765 Apr 30 11:09 packages/consult-projectile-readme.txt
+4.0K -rw-r--r-- 1 root root  741 Apr 30 11:09 packages/consult-projectile.log
+4.0K -rw-r--r-- 1 root root  851 Apr 30 15:04 packages/consult-readme.txt
+8.0K -rw-r--r-- 1 root root 5.1K Apr 30 11:09 packages/consult-recoll-20220227.2050.el
+4.0K -rw-r--r-- 1 root root  380 Apr 30 11:09 packages/consult-recoll-20220227.2050.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-recoll-badge.svg
+4.0K -rw-r--r-- 1 root root  219 Apr 30 11:09 packages/consult-recoll-readme.txt
+4.0K -rw-r--r-- 1 root root  641 Apr 30 11:09 packages/consult-recoll.log
+8.0K -rw-r--r-- 1 root root 4.8K Apr 30 11:09 packages/consult-spotify-20211114.2258.el
+4.0K -rw-r--r-- 1 root root  408 Apr 30 11:09 packages/consult-spotify-20211114.2258.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-spotify-badge.svg
+4.0K -rw-r--r-- 1 root root  652 Apr 30 11:09 packages/consult-spotify-readme.txt
+4.0K -rw-r--r-- 1 root root  638 Apr 30 11:10 packages/consult-spotify.log
+8.0K -rw-r--r-- 1 root root 7.0K Apr 30 11:09 packages/consult-yasnippet-20220409.1209.el
+4.0K -rw-r--r-- 1 root root  452 Apr 30 11:09 packages/consult-yasnippet-20220409.1209.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 11:09 packages/consult-yasnippet-badge.svg
+4.0K -rw-r--r-- 1 root root   90 Apr 30 11:09 packages/consult-yasnippet-readme.txt
+4.0K -rw-r--r-- 1 root root  670 Apr 30 11:09 packages/consult-yasnippet.log

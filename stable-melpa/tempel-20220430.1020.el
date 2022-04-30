@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.3
-;; Package-Version: 20220430.339
-;; Package-Commit: e4bcf5b08d7e15f7b606bf1976f9e18f74b3d5f2
+;; Package-Version: 20220430.1020
+;; Package-Commit: 1ce581e30455b113d9c8358e79952134ca2e0356
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/tempel
 
@@ -142,6 +142,7 @@ may be named with `tempel--name' or carry an evaluatable Lisp expression
     (define-key map [remap backward-paragraph] #'tempel-previous)
     (define-key map [remap forward-paragraph] #'tempel-next)
     ;; Use concrete keys because of org mode
+    (define-key map "\M-\r" #'tempel-done)
     (define-key map "\M-{" #'tempel-previous)
     (define-key map "\M-}" #'tempel-next)
     (define-key map [M-up] #'tempel-previous)

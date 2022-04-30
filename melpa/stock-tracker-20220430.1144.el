@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20220427.253
-;; Package-Commit: ebba90fa4285b49027c3725041017093d2b70379
+;; Package-Version: 20220430.1144
+;; Package-Commit: 95b0252eec3fa1d3a6f3f1a69bd70b7596783938
 ;; Version: 0.1.6
 ;; Created: 2019-08-18
 ;; Keywords: convenience, stock, finance
@@ -50,6 +50,7 @@
 ;;       Disable logging by default
 ;; 0.1.6 Add stock-tracker-stop-refresh
 ;;       Add refresh state
+;;       Add stock-tracker-up-red-down-green to config color
 
 ;;; Code:
 
@@ -90,6 +91,11 @@
 
 (defcustom stock-tracker-enable-log nil
   "Display log messages."
+  :type 'boolean
+  :group 'stock-tracker)
+
+(defcustom stock-tracker-up-red-down-green t
+  "Display up as red, down as green, set nil to reverse this."
   :type 'boolean
   :group 'stock-tracker)
 
@@ -341,7 +347,9 @@ It defaults to a comma."
     (and (stringp updown)    (setq updown (string-to-number updown)))
 
     ;; color setting
-    (if (> updown 0) (setq color "red") (setq color "green"))
+    (if stock-tracker-up-red-down-green
+        (if (> updown 0) (setq color "red") (setq color "green"))
+      (if (> updown 0) (setq color "green") (setq color "red")))
 
     ;; some extra handling
     (and (cl-typep tag 'stock-tracker--chn-symbol) (setq percent (* 100 percent)))
