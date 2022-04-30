@@ -8,7 +8,7 @@
 ;; Keyword: character navigation
 ;; Version: 0.1.0
 ;; Package-Version: 20210323.332
-;; Package-Commit: c3665ff4aa03f6566deeac7456280820d649de60
+;; Package-Commit: ea845966423ce90526d717bb27d0022101c75796
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/jcs-elpa/goto-char-preview
 

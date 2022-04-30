@@ -1,0 +1,10 @@
+(default-font-presets .
+  [(20220430 135)
+   ((emacs
+     (26 1)))
+   "Support selecting fonts from a list of presets" single
+   ((:commit . "ea79012408f99bd1ee952f22bee59c22c124fdd6")
+    (:authors
+     ("Campbell Barton" . "ideasman42@gmail.com"))
+    (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+    (:url . "https://gitlab.com/ideasman42/emacs-default-font-presets"))])

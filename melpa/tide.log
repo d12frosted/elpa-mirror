@@ -4,93 +4,93 @@ Source:  https://github.com/ananthakumaran/tide.git
 
 Updating /mnt/store/melpa/working/tide/
 Checking out origin/HEAD
-Checking out bc2c74fdcf920a258bbdb78c0534078489aaa8cc
+Checking out 83c34c636f47cb0c10c7d1a728fa308bfec40890
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tide/
-  to /tmp/tide8lPzGk/tide-20220314.930
+  to /tmp/tideAY0fPQ/tide-20220429.1501
     tide-lv.el -> tide-lv.el
     tide.el -> tide.el
     tsserver => tsserver
-Created tide-20220314.930.tar containing:
-  tide-20220314.930/
-  tide-20220314.930/tide-lv.el
-  tide-20220314.930/tide-pkg.el
-  tide-20220314.930/tide.el
-  tide-20220314.930/tsserver/
-  tide-20220314.930/tsserver/lib.core.d.ts
-  tide-20220314.930/tsserver/lib.core.es6.d.ts
-  tide-20220314.930/tsserver/lib.d.ts
-  tide-20220314.930/tsserver/lib.dom.d.ts
-  tide-20220314.930/tsserver/lib.dom.iterable.d.ts
-  tide-20220314.930/tsserver/lib.es2015.collection.d.ts
-  tide-20220314.930/tsserver/lib.es2015.core.d.ts
-  tide-20220314.930/tsserver/lib.es2015.d.ts
-  tide-20220314.930/tsserver/lib.es2015.generator.d.ts
-  tide-20220314.930/tsserver/lib.es2015.iterable.d.ts
-  tide-20220314.930/tsserver/lib.es2015.promise.d.ts
-  tide-20220314.930/tsserver/lib.es2015.proxy.d.ts
-  tide-20220314.930/tsserver/lib.es2015.reflect.d.ts
-  tide-20220314.930/tsserver/lib.es2015.symbol.d.ts
-  tide-20220314.930/tsserver/lib.es2015.symbol.wellknown.d.ts
-  tide-20220314.930/tsserver/lib.es2016.array.include.d.ts
-  tide-20220314.930/tsserver/lib.es2016.d.ts
-  tide-20220314.930/tsserver/lib.es2016.full.d.ts
-  tide-20220314.930/tsserver/lib.es2017.d.ts
-  tide-20220314.930/tsserver/lib.es2017.full.d.ts
-  tide-20220314.930/tsserver/lib.es2017.intl.d.ts
-  tide-20220314.930/tsserver/lib.es2017.object.d.ts
-  tide-20220314.930/tsserver/lib.es2017.sharedmemory.d.ts
-  tide-20220314.930/tsserver/lib.es2017.string.d.ts
-  tide-20220314.930/tsserver/lib.es2017.typedarrays.d.ts
-  tide-20220314.930/tsserver/lib.es2018.asyncgenerator.d.ts
-  tide-20220314.930/tsserver/lib.es2018.asynciterable.d.ts
-  tide-20220314.930/tsserver/lib.es2018.d.ts
-  tide-20220314.930/tsserver/lib.es2018.full.d.ts
-  tide-20220314.930/tsserver/lib.es2018.intl.d.ts
-  tide-20220314.930/tsserver/lib.es2018.promise.d.ts
-  tide-20220314.930/tsserver/lib.es2018.regexp.d.ts
-  tide-20220314.930/tsserver/lib.es2019.array.d.ts
-  tide-20220314.930/tsserver/lib.es2019.d.ts
-  tide-20220314.930/tsserver/lib.es2019.full.d.ts
-  tide-20220314.930/tsserver/lib.es2019.object.d.ts
-  tide-20220314.930/tsserver/lib.es2019.string.d.ts
-  tide-20220314.930/tsserver/lib.es2019.symbol.d.ts
-  tide-20220314.930/tsserver/lib.es2020.bigint.d.ts
-  tide-20220314.930/tsserver/lib.es2020.d.ts
-  tide-20220314.930/tsserver/lib.es2020.full.d.ts
-  tide-20220314.930/tsserver/lib.es2020.intl.d.ts
-  tide-20220314.930/tsserver/lib.es2020.promise.d.ts
-  tide-20220314.930/tsserver/lib.es2020.sharedmemory.d.ts
-  tide-20220314.930/tsserver/lib.es2020.string.d.ts
-  tide-20220314.930/tsserver/lib.es2020.symbol.wellknown.d.ts
-  tide-20220314.930/tsserver/lib.es2021.d.ts
-  tide-20220314.930/tsserver/lib.es2021.full.d.ts
-  tide-20220314.930/tsserver/lib.es2021.intl.d.ts
-  tide-20220314.930/tsserver/lib.es2021.promise.d.ts
-  tide-20220314.930/tsserver/lib.es2021.string.d.ts
-  tide-20220314.930/tsserver/lib.es2021.weakref.d.ts
-  tide-20220314.930/tsserver/lib.es5.d.ts
-  tide-20220314.930/tsserver/lib.es6.d.ts
-  tide-20220314.930/tsserver/lib.esnext.array.d.ts
-  tide-20220314.930/tsserver/lib.esnext.asynciterable.d.ts
-  tide-20220314.930/tsserver/lib.esnext.bigint.d.ts
-  tide-20220314.930/tsserver/lib.esnext.d.ts
-  tide-20220314.930/tsserver/lib.esnext.full.d.ts
-  tide-20220314.930/tsserver/lib.esnext.intl.d.ts
-  tide-20220314.930/tsserver/lib.esnext.promise.d.ts
-  tide-20220314.930/tsserver/lib.esnext.string.d.ts
-  tide-20220314.930/tsserver/lib.esnext.symbol.d.ts
-  tide-20220314.930/tsserver/lib.esnext.weakref.d.ts
-  tide-20220314.930/tsserver/lib.scripthost.d.ts
-  tide-20220314.930/tsserver/lib.webworker.d.ts
-  tide-20220314.930/tsserver/lib.webworker.importscripts.d.ts
-  tide-20220314.930/tsserver/lib.webworker.iterable.d.ts
-  tide-20220314.930/tsserver/tsconfig.json
-  tide-20220314.930/tsserver/tsserver.js
-  tide-20220314.930/tsserver/typingsInstaller.js
-Built tide in 9.847s, finished at 2022-04-29T12:54:11+0000
+Created tide-20220429.1501.tar containing:
+  tide-20220429.1501/
+  tide-20220429.1501/tide-lv.el
+  tide-20220429.1501/tide-pkg.el
+  tide-20220429.1501/tide.el
+  tide-20220429.1501/tsserver/
+  tide-20220429.1501/tsserver/lib.core.d.ts
+  tide-20220429.1501/tsserver/lib.core.es6.d.ts
+  tide-20220429.1501/tsserver/lib.d.ts
+  tide-20220429.1501/tsserver/lib.dom.d.ts
+  tide-20220429.1501/tsserver/lib.dom.iterable.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.collection.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.core.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.generator.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.iterable.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.promise.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.proxy.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.reflect.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.symbol.d.ts
+  tide-20220429.1501/tsserver/lib.es2015.symbol.wellknown.d.ts
+  tide-20220429.1501/tsserver/lib.es2016.array.include.d.ts
+  tide-20220429.1501/tsserver/lib.es2016.d.ts
+  tide-20220429.1501/tsserver/lib.es2016.full.d.ts
+  tide-20220429.1501/tsserver/lib.es2017.d.ts
+  tide-20220429.1501/tsserver/lib.es2017.full.d.ts
+  tide-20220429.1501/tsserver/lib.es2017.intl.d.ts
+  tide-20220429.1501/tsserver/lib.es2017.object.d.ts
+  tide-20220429.1501/tsserver/lib.es2017.sharedmemory.d.ts
+  tide-20220429.1501/tsserver/lib.es2017.string.d.ts
+  tide-20220429.1501/tsserver/lib.es2017.typedarrays.d.ts
+  tide-20220429.1501/tsserver/lib.es2018.asyncgenerator.d.ts
+  tide-20220429.1501/tsserver/lib.es2018.asynciterable.d.ts
+  tide-20220429.1501/tsserver/lib.es2018.d.ts
+  tide-20220429.1501/tsserver/lib.es2018.full.d.ts
+  tide-20220429.1501/tsserver/lib.es2018.intl.d.ts
+  tide-20220429.1501/tsserver/lib.es2018.promise.d.ts
+  tide-20220429.1501/tsserver/lib.es2018.regexp.d.ts
+  tide-20220429.1501/tsserver/lib.es2019.array.d.ts
+  tide-20220429.1501/tsserver/lib.es2019.d.ts
+  tide-20220429.1501/tsserver/lib.es2019.full.d.ts
+  tide-20220429.1501/tsserver/lib.es2019.object.d.ts
+  tide-20220429.1501/tsserver/lib.es2019.string.d.ts
+  tide-20220429.1501/tsserver/lib.es2019.symbol.d.ts
+  tide-20220429.1501/tsserver/lib.es2020.bigint.d.ts
+  tide-20220429.1501/tsserver/lib.es2020.d.ts
+  tide-20220429.1501/tsserver/lib.es2020.full.d.ts
+  tide-20220429.1501/tsserver/lib.es2020.intl.d.ts
+  tide-20220429.1501/tsserver/lib.es2020.promise.d.ts
+  tide-20220429.1501/tsserver/lib.es2020.sharedmemory.d.ts
+  tide-20220429.1501/tsserver/lib.es2020.string.d.ts
+  tide-20220429.1501/tsserver/lib.es2020.symbol.wellknown.d.ts
+  tide-20220429.1501/tsserver/lib.es2021.d.ts
+  tide-20220429.1501/tsserver/lib.es2021.full.d.ts
+  tide-20220429.1501/tsserver/lib.es2021.intl.d.ts
+  tide-20220429.1501/tsserver/lib.es2021.promise.d.ts
+  tide-20220429.1501/tsserver/lib.es2021.string.d.ts
+  tide-20220429.1501/tsserver/lib.es2021.weakref.d.ts
+  tide-20220429.1501/tsserver/lib.es5.d.ts
+  tide-20220429.1501/tsserver/lib.es6.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.array.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.asynciterable.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.bigint.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.full.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.intl.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.promise.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.string.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.symbol.d.ts
+  tide-20220429.1501/tsserver/lib.esnext.weakref.d.ts
+  tide-20220429.1501/tsserver/lib.scripthost.d.ts
+  tide-20220429.1501/tsserver/lib.webworker.d.ts
+  tide-20220429.1501/tsserver/lib.webworker.importscripts.d.ts
+  tide-20220429.1501/tsserver/lib.webworker.iterable.d.ts
+  tide-20220429.1501/tsserver/tsconfig.json
+  tide-20220429.1501/tsserver/tsserver.js
+  tide-20220429.1501/tsserver/typingsInstaller.js
+Built tide in 9.368s, finished at 2022-04-30T08:36:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  482 Apr 29 12:54 packages/tide-20220314.930.entry
- 20M -rw-r--r-- 1 root root  20M Apr 29 12:54 packages/tide-20220314.930.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 29 12:54 packages/tide-badge.svg
-   0 -rw-r--r-- 1 root root    0 Apr 29 12:54 packages/tide-readme.txt
+4.0K -rw-r--r-- 1 root root  483 Apr 30 08:36 packages/tide-20220429.1501.entry
+ 20M -rw-r--r-- 1 root root  20M Apr 30 08:36 packages/tide-20220429.1501.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 30 08:36 packages/tide-badge.svg
+   0 -rw-r--r-- 1 root root    0 Apr 30 08:36 packages/tide-readme.txt

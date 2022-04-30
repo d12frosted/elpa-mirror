@@ -3,6 +3,7 @@ backends in the form of Capfs (completion-at-point-functions).
 
 cape-dabbrev: Complete word from current buffers
 cape-file: Complete file name
+cape-history: Complete from Eshell, Comint or minibuffer history
 cape-keyword: Complete programming language keyword
 cape-symbol: Complete Elisp symbol
 cape-abbrev: Complete abbreviation (add-global-abbrev, add-mode-abbrev)

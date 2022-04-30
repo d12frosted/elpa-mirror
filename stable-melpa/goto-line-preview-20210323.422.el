@@ -8,7 +8,7 @@
 ;; Keyword: line navigation
 ;; Version: 0.1.1
 ;; Package-Version: 20210323.422
-;; Package-Commit: a6446bc11f8d72b0f0b06df927e2c3ebb7cdb5f8
+;; Package-Commit: d4db955860de830ebc067b065cba16a776717e76
 ;; Package-Requires: ((emacs "25"))
 ;; URL: https://github.com/jcs-elpa/goto-line-preview
 

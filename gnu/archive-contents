@@ -1923,14 +1923,14 @@
 		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
 		  (:commit . "1c743a9dbe72a1bdc2196ad43a217060e163c929"))])
  (nano-theme .
-	     [(0 3 0)
+	     [(0 3 1)
 	      ((emacs
 		(27 1)))
 	      "N Λ N O theme" tar
 	      ((:url . "https://github.com/rougier/nano-theme")
 	       (:keywords "theme" "dark" "light")
 	       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-	       (:commit . "11362f22ba631d84ae300fd3c4bd6db128ba5960"))])
+	       (:commit . "c4f296d349cf5ef2efd88d68535a4dbf577b9a87"))])
  (nhexl-mode .
 	     [(1 5)
 	      ((emacs

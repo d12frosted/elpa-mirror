@@ -8,7 +8,7 @@
 ;; Keyword: automatic truncate visual lines
 ;; Version: 0.1.5
 ;; Package-Version: 20210731.609
-;; Package-Commit: 695c79194bdd151d9057a91b8dd141933f748951
+;; Package-Commit: e0d11744d9b2bca780322b1b282fb5ffb18cfd75
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/jcs-elpa/atl-markup
 
