@@ -7,7 +7,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-utimeclock
 ;; Package-Version: 20220211.548
-;; Package-Commit: 0e36664ffe9f278bb008107d1b743edfcfba60f1
+;; Package-Commit: 770305ffba2e74e6df5beadd204a1c8442b88299
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 
