@@ -1,0 +1,31 @@
+Package: macports
+Fetcher: github
+Source:  https://github.com/amake/macports.el.git
+
+Updating /mnt/store/melpa/working/macports/
+Checking out origin/HEAD
+Checking out b57d1bea51a1fea0fd64c71348fb3ca26993c892
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/macports/
+  to /tmp/macports73J4M9/macports-20220428.44
+    macports-core.el -> macports-core.el
+    macports-describe.el -> macports-describe.el
+    macports-installed.el -> macports-installed.el
+    macports-outdated.el -> macports-outdated.el
+    macports-select.el -> macports-select.el
+    macports.el -> macports.el
+Created macports-20220428.44.tar containing:
+  macports-20220428.44/
+  macports-20220428.44/macports-core.el
+  macports-20220428.44/macports-describe.el
+  macports-20220428.44/macports-installed.el
+  macports-20220428.44/macports-outdated.el
+  macports-20220428.44/macports-pkg.el
+  macports-20220428.44/macports-select.el
+  macports-20220428.44/macports.el
+Built macports in 5.325s, finished at 2022-05-02T02:38:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  351 May  2 02:38 packages/macports-20220428.44.entry
+ 40K -rw-r--r-- 1 root root  40K May  2 02:38 packages/macports-20220428.44.tar
+4.0K -rw-r--r-- 1 root root 1.2K May  2 02:38 packages/macports-badge.svg
+4.0K -rw-r--r-- 1 root root   25 May  2 02:38 packages/macports-readme.txt

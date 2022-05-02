@@ -2,7 +2,7 @@
 
 ;; Version: 1.0
 ;; Package-Version: 20220307.2312
-;; Package-Commit: 7cf64944ab3a25ea5d6f8d5e0cd33124182df991
+;; Package-Commit: daa51072e1718ca075987901fccbbc2357bca1fc
 ;; Package-Requires: ((emacs "24.3") (lsp-mode "3.0"))
 ;; Keywords: haskell
 ;; URL: https://github.com/emacs-lsp/lsp-haskell

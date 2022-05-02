@@ -1,0 +1,13 @@
+(consult-ls-git .
+		[(20220501 1823)
+		 ((emacs
+		   (27 1))
+		  (consult
+		   (0 16)))
+		 "Consult integration for git" single
+		 ((:commit . "f2398b354994e583ad22af324a129cf94d06009e")
+		  (:authors
+		   ("Robin Joy"))
+		  (:maintainer "Robin Joy")
+		  (:keywords "convenience")
+		  (:url . "https://github.com/rcj/consult-ls-git"))])
