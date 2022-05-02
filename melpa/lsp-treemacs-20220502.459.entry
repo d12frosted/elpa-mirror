@@ -1,0 +1,21 @@
+(lsp-treemacs .
+	      [(20220502 459)
+	       ((emacs
+		 (26 1))
+		(dash
+		 (2 18 0))
+		(f
+		 (0 20 0))
+		(ht
+		 (2 0))
+		(treemacs
+		 (2 5))
+		(lsp-mode
+		 (6 0)))
+	       "LSP treemacs" tar
+	       ((:commit . "9859326df6b8e8c954a3c227e53b6878e54aaae8")
+		(:authors
+		 ("Ivan Yonchovski"))
+		(:maintainer "Ivan Yonchovski")
+		(:keywords "languages")
+		(:url . "https://github.com/emacs-lsp/lsp-treemacs"))])

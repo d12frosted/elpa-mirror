@@ -1,0 +1,11 @@
+(py-autopep8 .
+	     [(20220502 310)
+	      ((emacs
+		(26 1)))
+	      "Use autopep8 to beautify a Python buffer" single
+	      ((:commit . "026e74bbf52d24126d12187d523390b85e2ac638")
+	       (:authors
+		("Friedrich Paetzk" . "f.paetzke@gmail.com"))
+	       (:maintainer "Friedrich Paetzk" . "f.paetzke@gmail.com")
+	       (:keywords "convenience")
+	       (:url . "https://github.com/ideasman42/emacs-py-autopep8"))])

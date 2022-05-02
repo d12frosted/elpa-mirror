@@ -1,704 +1,477 @@
-		       ━━━━━━━━━━━━━━━━━━━━━━━━━━
-			DTACHE.EL - DETACH EMACS
-		       ━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. Introduction
-.. 1. Features
-..... 1. Output
-..... 2. Notifications
-..... 3. Metadata
-..... 4. Annotations
-..... 5. Remote
-..... 6. Actions
-..... 7. Persistent
-2. Installation
-3. Configuration
-.. 1. Use-package example
-4. Commands
-.. 1. Creating a session
-.. 2. Interacting with a session
-5. Extensions
-.. 1. Shell
-.. 2. Eshell
-.. 3. Compile
-.. 4. Org
-.. 5. Consult
-6. Customization
-.. 1. Customizable variables
-.. 2. Remote support
-.. 3. Completion annotations
-.. 4. Status deduction
-.. 5. Metadata annotators
-.. 6. Nonattachable commands
-7. Tips & Tricks
-.. 1. 3rd party extensions
-..... 1. Embark
-..... 2. Alert
-..... 3. Projectile
-8. Versions
-9. Support
-10. Contributions
-11. Credits
+# Detach Emacs
 
+<a href="http://elpa.gnu.org/packages/dtache.html"><img alt="GNU ELPA" src="https://elpa.gnu.org/packages/dtache.svg"/></a>
+<a href="http://elpa.gnu.org/devel/dtache.html"><img alt="GNU-devel ELPA" src="https://elpa.gnu.org/devel/dtache.svg"/></a>
+<a href="https://melpa.org/#/dtache"><img alt="MELPA" src="https://melpa.org/packages/dtache-badge.svg"/></a>
+<a href="https://stable.melpa.org/#/dtache"><img alt="MELPA Stable" src="https://stable.melpa.org/packages/dtache-badge.svg"/></a>
+<a href="https://builds.sr.ht/~niklaseklund/dtache/commits/main/.build.yml"><img alt="Build" src="https://builds.sr.ht/~niklaseklund/dtache/commits/main/.build.yml.svg"/></a>
 
+# Introduction
 
+Dtache is a package to run, and interact with, shell commands that are completely detached from Emacs itself. The package achieves this functionality by launching the commands with the program [dtach](https://github.com/crigler/dtach). Even though the commands are run decoupled, the package makes sure the integration to Emacs is seamless. The advantage is that the processes are insensitive to Emacs being killed, and this holds true for remote hosts as well, essentially making `dtache` a lightweight alternative to [Tmux](https://github.com/tmux/tmux) or [GNU Screen](https://www.gnu.org/software/screen/).
 
+Another advantage of `dtache` is that in order to implement the detached feature it actually represents the processes as text inside of Emacs. This enables features such as history of all session outputs, possibility to diff session outputs etc.
 
-1 Introduction
-══════════════
+The following videos about `dtache`. They are currently a bit outdated but the core concept is still true.
 
-  Dtache is a package to run, and interact with, shell commands that are
-  completely detached from Emacs itself. The package achieves this
-  functionality by launching the commands with the program [dtach]. Even
-  though the commands are run decoupled, the package makes sure the
-  integration to Emacs is seamless. The advantage is that the processes
-  are insensitive to Emacs being killed, and this holds true for remote
-  hosts as well, essentially making `dtache' a lightweight alternative
-  to [Tmux] or [GNU Screen].
+- [Dtache - An Emacs package that provides detachable shell commands](https://www.youtube.com/watch?v=if1W58SrClk)
+- [Dtache - Version 0.2](https://www.youtube.com/watch?v=De5oXdnY5hY)
 
-  Another advantage of `dtache' is that in order to implement the
-  detached feature it actually represents the processes as text inside
-  of Emacs. This enables features such as history of all session
-  outputs, possibility to diff session outputs etc.
+## Features
 
-  The following videos about `dtache'. They are currently a bit outdated
-  but the core concept is still true.
-  • [Dtache - An Emacs package that provides detachable shell commands]
-  • [Dtache - Version 0.2]
+The way `dtache` is designed with its `dtache-session` objects opens up the possibilities for the following features.
 
+### Output
 
-[dtach] <https://github.com/crigler/dtach>
+The user always have access to the session's output. The user never needs to fear that the output history of the terminal is not enough to capture all of its output. Also its pretty handy to be able to go back in time and see the output from a session you ran earlier today. Having access to the output as well as the other information from the session makes it possible to compile a session using Emacs built in functionality. This enables navigation between errors in the output as well as proper syntax highlighting. This is something `dtache` will do automatically if it detects that you are opening the output of a session with status `failure`.
 
-[Tmux] <https://github.com/tmux/tmux>
+### Notifications
 
-[GNU Screen] <https://www.gnu.org/software/screen/>
+Start a session and then focus on something else. `Dtache` will notify you when the session has become inactive.
 
-[Dtache - An Emacs package that provides detachable shell commands]
-<https://www.youtube.com/watch?v=if1W58SrClk>
+### Metadata
 
-[Dtache - Version 0.2] <https://www.youtube.com/watch?v=De5oXdnY5hY>
+The session always contain metadata, such as when the session was started, for how long it has been running (if it is active), how long it ran (if it is inactive).
 
-1.1 Features
-────────────
+### Annotations
 
-  The way `dtache' is designed with its `dtache-session' objects opens
-  up the possibilities for the following features.
+Arbitrary metadata can be captured when a session is started. An example further down is how to leverage this feature to capture the git branch for a session.
 
+### Remote
 
-1.1.1 Output
-╌╌╌╌╌╌╌╌╌╌╌╌
+Proper support for running session on a remote host. See the `Remote suppport` section of the README for further details on how to configure `dtache` to work for a remote host.
 
-  The user always have access to the session's output. The user never
-  needs to fear that the output history of the terminal is not enough to
-  capture all of its output. Also its pretty handy to be able to go back
-  in time and see the output from a session you ran earlier
-  today. Having access to the output as well as the other information
-  from the session makes it possible to compile a session using Emacs
-  built in functionality. This enables navigation between errors in the
-  output as well as proper syntax highlighting. This is something
-  `dtache' will do automatically if it detects that you are opening the
-  output of a session with status `failure'.
+### Actions
 
+The package provides commands that can act on a session. There is the functionality to `kill` an active session, to `rerun` a session, or `diff` two sessions.
 
-1.1.2 Notifications
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+### Persistent
 
-  Start a session and then focus on something else. `Dtache' will notify
-  you when the session has become inactive.
+The sessions are made persistent by writing the `dtache-session` objects to file. This makes it possible for Emacs to resume the knowledge of prior sessions when Emacs is restarted.
 
+# Installation
 
-1.1.3 Metadata
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+The package is available on [GNU ELPA](https://elpa.gnu.org) and [MELPA](https://melpa.org/), and for users of the [GNU Guix package manager](https://guix.gnu.org/) there is a guix package.
 
-  The session always contain metadata, such as when the session was
-  started, for how long it has been running (if it is active), how long
-  it ran (if it is inactive).
+# Configuration
 
+The prerequisite for `dtache` is that the user has the program `dtach` installed.
 
-1.1.4 Annotations
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+## Use-package example
 
-  Arbitrary metadata can be captured when a session is started. An
-  example further down is how to leverage this feature to capture the
-  git branch for a session.
+A minimal configuration for `dtache`.
 
+``` emacs-lisp
+(use-package dtache
+  :hook (after-init . dtache-setup)
+  :bind (([remap async-shell-command] . dtache-shell-command)))
+```
 
-1.1.5 Remote
-╌╌╌╌╌╌╌╌╌╌╌╌
+# Commands
 
-  Proper support for running session on a remote host. See the `Remote
-  suppport' section of the README for further details on how to
-  configure `dtache' to work for a remote host.
+## Creating a session
 
+There are tree different ways to create a dtache session.
 
-1.1.6 Actions
-╌╌╌╌╌╌╌╌╌╌╌╌╌
+| Function                   | Description                   |
+|----------------------------|-------------------------------|
+| `dtache-shell-command`     | Called from M-x               |
+| `dtache-shell-send-input`  | Called from inside M-x shell  |
+| `dtache-eshell-send-input` | Called from inside eshell     |
+| `dtache-compile`           | Called from M-x               |
+| `dtache-org`               | Used in org-babel src blocks  |
+| `dtache-start-session`     | Called from within a function |
 
-  The package provides commands that can act on a session. There is the
-  functionality to `kill' an active session, to `rerun' a session, or
-  `diff' two sessions.
+The `dtache-shell-command` is for the Emacs users that are accustomed to running shell commands from `M-x shell-command` or `M-x async-shell-command`. The `dtache-shell-send-input` is for those that want to run a command through `dtache` when inside a `shell` buffer. The `dtache-eshell-send-input` is the equivalent for `eshell`. The `dtache-compile` is supposed to be used as a replacement for `compile`. The `dtache-org` provides integration with `org-babel` in order to execute shell source code blocks with `dtache`. Last there is the `dtache-start-session` function, which users can utilize in their own custom commands.
 
+To detach from a `dtache` session you should use the universal `dtache-detach-session` command. The keybinding for this command is defined by the `dtache-detach-key` variable, which by default has the value `C-c C-d`.
 
-1.1.7 Persistent
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+## Interacting with a session
 
-  The sessions are made persistent by writing the `dtache-session'
-  objects to file. This makes it possible for Emacs to resume the
-  knowledge of prior sessions when Emacs is restarted.
+To interact with a session `dtache` provides the command `dtache-open-session`. This provides a convenient completion interface, enriched with annotations to provide useful information about the sessions. The `dtache-open-session` command is implemented as a do what I mean command. This results in `dtache` performing different actions depending on the state of a session. The actions can be configured based on the `origin` of the session. The user can have one set of configurations for sessions started in `shell` which is different from those started in `compile`.
 
+The actions are controlled by the customizable variables named `dtache-.*-session-action`. They come preconfigured but if you don't like the behavior of `dtache-open-session` these variables allows for tweaking the experience.
 
-2 Installation
-══════════════
+- If the session is `active`, call the sessions `attach` function
+- If the session is `inactive` call the sessions `view` function, which by default performs a post-compile on the session if its status is `failure` otherwise the sessions raw output is opened.
+    
+The package also provides additional commands to interact with a session.
 
-  The package is available on [GNU ELPA] and [MELPA], and for users of
-  the [GNU Guix package manager] there is a guix package.
+| Command (Keybinding)              | Description                                 |
+|-----------------------------------|---------------------------------------------|
+| dtache-view-session (v)           | View a session's output                     |
+| dtache-attach-session (a)         | Attach to a session                         |
+| dtache-tail-session  (t)          | Tail the output of an active session        |
+| dtache-diff-session (=)           | Diff a session with another session         |
+| dtache-compile-session (c)        | Open the session output in compilation mode |
+| dtache-rerun-session (r)          | Rerun a session                             |
+| dtache-insert-session-command (i) | Insert the session's command at point       |
+| dtache-copy-session-command (w)   | Copy the session's shell command            |
+| dtache-copy-session (W)           | Copy the session's output                   |
+| dtache-kill-session (k)           | Kill an active session                      |
+| dtache-delete-session (d)         | Delete an inactive session                  |
 
+These commands are available through the `dtache-action-map`. The user can bind the action map to a keybinding of choice. For example
 
-[GNU ELPA] <https://elpa.gnu.org>
+``` emacs-lisp
+(global-set-key (kbd "C-c d") dtache-action-map)
+```
 
-[MELPA] <https://melpa.org/>
+Then upon invocation the user can choose an action, keybindings listed in the table above, and then choose a session to perform the action upon. See further down in the document how to integrate these bindings with `embark`.
 
-[GNU Guix package manager] <https://guix.gnu.org/>
+# Extensions
 
+## Shell
 
-3 Configuration
-═══════════════
+A `use-package` configuration of the `dtache-shell` extension, which provides the integration with `M-x shell`.
 
-  The prerequisite for `dtache' is that the user has the program `dtach'
-  installed.
+``` emacs-lisp
+(use-package dtache-shell
+  :after dtache
+  :config
+  (dtache-shell-setup)
+  (setq dtache-shell-history-file "~/.bash_history"))
+```
 
+A minor mode named `dtache-shell-mode` is provided, and will be enabled in `shell`. The commands that are implemented are:
 
-3.1 Use-package example
-───────────────────────
+| Command                     | Description                  | Keybinding        |
+|-----------------------------|------------------------------|-------------------|
+| dtache-shell-send-input     | Run command with dtache      | <S-return>        |
+| dtache-shell-attach-session | Attach to a dtache session   | <C-return>        |
+| dtache-detach-session       | Detach from a dtache session | dtache-detach-key |
 
-  A minimal configuration for `dtache'.
+## Eshell
 
-  ┌────
-  │ (use-package dtache
-  │   :hook (after-init . dtache-setup)
-  │   :bind (([remap async-shell-command] . dtache-shell-command)))
-  └────
+A `use-package` configuration of the `dtache-eshell` extension, which provides the integration with `eshell`.
+
+``` emacs-lisp
+(use-package dtache-eshell
+  :after (eshell dtache)
+  :config
+  (dtache-eshell-setup))
+```
+
+A minor mode named `dtache-eshell-mode` is provided, and will be enabled in `eshell`. The commands that are implemented are:
+
+| Command                      | Description                  | Keybinding        |
+|------------------------------|------------------------------|-------------------|
+| dtache-eshell-send-input     | Run command with dtache      | <S-return>        |
+| dtache-eshell-attach-session | Attach to a dtache session   | <C-return>        |
+| dtache-detach-session        | Detach from a dtache session | dtache-detach-key |
+
+In this [blog post](https://niklaseklund.gitlab.io/blog/posts/dtache_eshell/) there are examples and more information about the extension.
 
+## Compile
+
+A `use-package` configuration of the `dtache-compile` extension, which provides the integration with `compile`.
+
+``` emacs-lisp
+    (use-package dtache-compile
+      :hook (after-init . dtache-compile-setup)
+      :bind (([remap compile] . dtache-compile)
+             ([remap recompile] . dtache-compile-recompile)))
+```
+
+The package implements the commands `dtache-compile` and `dtache-compile-recompile`, which are thin wrappers around the original `compile` and `recompile` commands. The users should be able to use the former as replacements for the latter without noticing any difference except from the possibility to `detach`.
+
+
+## Org
 
-4 Commands
-══════════
+A `use-package` configuration of the `dtache-org` extension, which provides the integration with `org-babel`.
+
+``` emacs-lisp
+(use-package dtache-org
+  :after (dtache org)
+  :config
+  (dtache-org-setup))
+```
+
+The package implements an additional header argument for `ob-shell`. The header argument is `:dtache t`. When provided it will enable the code inside a src block to be run with `dtache`. Since org is not providing any live updates on the output the session is created with `dtache-sesion-mode` set to `create`. This means that if you want to access the output of the session you do that the same way you would for any other type of session. The `dtache-org` works both with and without the `:session` header argument.
+
+``` emacs-lisp
+#+begin_src sh :dtache t
+    cd ~/code
+    ls -la
+#+end_src
+
+#+RESULTS:
+: [detached]
+```
+
+## Consult
+
+A `use-package` configuration of the `dtache-consult` extension, which provides the integration with the [consult](https://github.com/minad/consult) package.
 
-4.1 Creating a session
-──────────────────────
+``` emacs-lisp
+(use-package dtache-consult
+  :after dtache
+  :bind ([remap dtache-open-session] . dtache-consult-session))
+```
+
+The command `dtache-consult-session` is a replacement for `dtache-open-session`. The difference is that the consult command provides multiple session sources, which is defined in the `dtache-consult-sources` variable. Users can customize which sources to use, as well as use individual sources in other `consult` commands, such as `consult-buffer`. The users can also narrow the list of sessions by entering a key. The list of supported keys are:
+
+| Type                  | Key |
+|-----------------------+-----|
+| Active sessions       | a   |
+| Inactive sessions     | i   |
+| Successful sessions   | s   |
+| Failed sessions       | f   |
+| Local host sessions   | l   |
+| Remote host sessions  | r   |
+| Current host sessions | c   |
+
+Examples of the different sources are featured in this [blog post](https://niklaseklund.gitlab.io/blog/posts/dtache_consult/).
+
+# Customization
+
+## Customizable variables
 
-  There are tree different ways to create a dtache session.
+The package provides the following customizable variables.
+
+| Name                               | Description                                                            |
+|------------------------------------|------------------------------------------------------------------------|
+| dtache-session-directory           | A host specific directory to store sessions in                         |
+| dtache-db-directory                | A localhost specific directory to store the database                   |
+| dtache-dtach-program               | Name or path to the `dtach` program                                    |
+| dtache-shell-program               | Name or path to the `shell` that `dtache` should use                   |
+| dtache-timer-configuration         | Configuration of the timer that runs on remote hosts                   |
+| dtache-env                         | Name or path to the `dtache-env` script                                |
+| dtache-annotation-format           | A list of annotations that should be present in completion             |
+| dtache-max-command-length          | How many characters should be used when displaying a command           |
+| dtache-tail-interval               | How often `dtache` should refresh the output when tailing              |
+| dtache-nonattachable-commands      | A list of commands that should be considered nonattachable             |
+| dtache-notification-function       | Specifies which function to issue notifications with                   |
+| dtache-detach-key                  | Specifies which keybinding to use to detach from a session             |
+| dtache-shell-command-initial-input | Enables latest value in history to be used as initial input            |
+| dtache-filter-ansi-sequences       | Specifies if dtache will use ansi-color to filter out escape sequences |
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Function                    Description                   
-  ───────────────────────────────────────────────────────────
-   `dtache-shell-command'      Called from M-x               
-   `dtache-shell-send-input'   Called from inside M-x shell  
-   `dtache-eshell-send-input'  Called from inside eshell     
-   `dtache-compile'            Called from M-x               
-   `dtache-org'                Used in org-babel src blocks  
-   `dtache-start-session'      Called from within a function 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Apart from those variables there is also the different `action` variables, which can be configured differently depending on the origin of the session.
 
-  The `dtache-shell-command' is for the Emacs users that are accustomed
-  to running shell commands from `M-x shell-command' or `M-x
-  async-shell-command'. The `dtache-shell-send-input' is for those that
-  want to run a command through `dtache' when inside a `shell'
-  buffer. The `dtache-eshell-send-input' is the equivalent for
-  `eshell'. The `dtache-compile' is supposed to be used as a replacement
-  for `compile'. The `dtache-org' provides integration with `org-babel'
-  in order to execute shell source code blocks with `dtache'. Last there
-  is the `dtache-start-session' function, which users can utilize in
-  their own custom commands.
+| Name                                | Description                                                   |
+|-------------------------------------|---------------------------------------------------------------|
+| dtache-shell-command-session-action | Actions for sessions launched with `dtache-shell-command`     |
+| dtache-eshell-session-action        | Actions for sessions launched with `dtache-eshell-send-input` |
+| dtache-shell-session-action         | Actions for sessions launched with `dtache-shell-send-input`  |
+| dtache-compile-session-action       | Actions for sessions launched with `dtache-compile`           |
+| dtache-org-session-action           | Actions for sessions launched with `dtache-org`               |
 
-  To detach from a `dtache' session you should use the universal
-  `dtache-detach-session' command. The keybinding for this command is
-  defined by the `dtache-detach-key' variable, which by default has the
-  value `C-c C-d'.
+## Remote support
 
+The `dtache` package supports [Connection Local Variables](https://www.gnu.org/software/emacs/manual/html_node/elisp/Connection-Local-Variables.html) which allows the user to customize the variables used by `dtache` when running on a remote host. This example shows how the following variables are customized for all remote hosts.
 
-4.2 Interacting with a session
-──────────────────────────────
+``` emacs-lisp
+(connection-local-set-profile-variables
+ 'remote-dtache
+ '((dtache-env . "~/bin/dtache-env")
+   (dtache-shell-program . "/bin/bash")
+   (dtache-shell-history-file . "~/.bash_history")
+   (dtache-session-directory . "~/tmp")
+   (dtache-dtach-program . "/home/user/.local/bin/dtach")))
 
-  To interact with a session `dtache' provides the command
-  `dtache-open-session'. This provides a convenient completion
-  interface, enriched with annotations to provide useful information
-  about the sessions. The `dtache-open-session' command is implemented
-  as a do what I mean command. This results in `dtache' performing
-  different actions depending on the state of a session. The actions can
-  be configured based on the `origin' of the session. The user can have
-  one set of configurations for sessions started in `shell' which is
-  different from those started in `compile'.
+(connection-local-set-profiles
+ '(:application tramp :protocol "ssh") 'remote-dtache)
+```
 
-  The actions are controlled by the customizable variables named
-  `dtache-.*-session-action'. They come preconfigured but if you don't
-  like the behavior of `dtache-open-session' these variables allows for
-  tweaking the experience.
+## Completion annotations
 
-  • If the session is `active', call the sessions `attach' function
-  • If the session is `inactive' call the sessions `view' function,
-    which by default performs a post-compile on the session if its
-    status is `failure' otherwise the sessions raw output is opened.
+Users can customize the appearance of annotations in `dtache-open-session` by modifying the `dtache-annotation-format`. The default annotation format is the following.
 
-    The package also provides additional commands to interact with a
-    session.
+``` emacs-lisp
+(defvar dtache-annotation-format
+  `((:width 3 :function dtache--state-str :face dtache-state-face)
+    (:width 3 :function dtache--status-str :face dtache-failure-face)
+    (:width 10 :function dtache--host-str :face dtache-host-face)
+    (:width 40 :function dtache--working-dir-str :face dtache-working-dir-face)
+    (:width 30 :function dtache--metadata-str :face dtache-metadata-face)
+    (:width 10 :function dtache--duration-str :face dtache-duration-face)
+    (:width 8 :function dtache--size-str :face dtache-size-face)
+    (:width 12 :function dtache--creation-str :face dtache-creation-face))
+  "The format of the annotations.")
+```
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Command (Keybinding)               Description                                 
-  ────────────────────────────────────────────────────────────────────────────────
-   dtache-view-session (v)            View a session's output                     
-   dtache-attach-session (a)          Attach to a session                         
-   dtache-tail-session  (t)           Tail the output of an active session        
-   dtache-diff-session (=)            Diff a session with another session         
-   dtache-compile-session (c)         Open the session output in compilation mode 
-   dtache-rerun-session (r)           Rerun a session                             
-   dtache-insert-session-command (i)  Insert the session's command at point       
-   dtache-copy-session-command (w)    Copy the session's shell command            
-   dtache-copy-session (W)            Copy the session's output                   
-   dtache-kill-session (k)            Kill an active session                      
-   dtache-delete-session (d)          Delete an inactive session                  
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## Status deduction
 
-  These commands are available through the `dtache-action-map'. The user
-  can bind the action map to a keybinding of choice. For example
+Users are encouraged to define the `dtache-env` variable. It should point to the `dtache-env` script, which is provided in the repository. This script allows sessions to communicate the status of a session when it transitions to inactive. When configured properly `dtache` will be able to set the status of a session to either `success` or `failure`.
 
-  ┌────
-  │ (global-set-key (kbd "C-c d") dtache-action-map)
-  └────
+``` emacs-lisp
+(setq dtache-env "/path/to/repo/dtache-env")
+```
 
-  Then upon invocation the user can choose an action, keybindings listed
-  in the table above, and then choose a session to perform the action
-  upon. See further down in the document how to integrate these bindings
-  with `embark'.
+## Metadata annotators
+
+The user can configure any number of annotators to run upon creation of a session. Here is an example of an annotator which captures the git branch name, if the session is started in a git repository.
+
+``` emacs-lisp
+(defun my/dtache--session-git-branch ()
+  "Return current git branch."
+  (let ((git-directory (locate-dominating-file "." ".git")))
+    (when git-directory
+      (let ((args '("name-rev" "--name-only" "HEAD")))
+        (with-temp-buffer
+          (apply #'process-file `("git" nil t nil ,@args))
+          (string-trim (buffer-string)))))))
+```
+
+Next add the annotation function to the `dtache-metadata-annotators-alist` together with a symbol describing the property.
+
+``` emacs-lisp
+(setq dtache-metadata-annotators-alist '((branch . my/dtache--session-git-branch))
+```
+
+## Nonattachable commands
+
+To be able to both attach to a dtach session as well as logging its output `dtache` relies on the usage of `tee`. However it is possible that the user tries to run a command which involves a program that doesn't integrate well with tee. In those situations the output could be delayed until the session ends, which is not preferable.
+
+For these situations `dtache` provides the `dtache-nonattachable-commands` variable. This is a list of regular expressions. Any command that matches any of the strings will be getting the property `attachable` set to false.
+
+``` emacs-lisp
+(setq dtache-nonattachable-commands '("^ls"))
+```
+
+Here a command beginning with `ls` would from now on be considered nonattachable.
+
+# Tips & Tricks
+
+## 3rd party extensions
+
+### Embark
+
+The user have the possibility to integrate `dtache` with the package [embark](https://github.com/oantolin/embark/). The `dtache-action-map` can be reused for this purpose, so the user doesn't need to bind it to any key. Instead the user simply adds the following to their `dtache` configuration in order to get embark actions for `dtache-open-session`.
+
+``` emacs-lisp
+(defvar embark-dtache-map (make-composed-keymap dtache-action-map embark-general-map))
+(add-to-list 'embark-keymap-alist '(dtache . embark-dtache-map))
+```
+
+### Alert
+
+By default `dtache` uses the built in `notifications` library to issue a notification. This solution uses `dbus` but if that doesn't work for the user there is the possibility to set the `dtache-notification-function` to `dtache-state-transitionion-echo-message` to use the echo area instead. If that doesn't suffice there is the possibility to use the [alert](https://github.com/jwiegley/alert) package to get a system notification instead.
+
+``` emacs-lisp
+(defun my/dtache-state-transition-alert-notification (session)
+  "Send an `alert' notification when SESSION becomes inactive."
+  (let ((status (car (dtache--session-status session)))
+        (host (car (dtache--session-host session))))
+    (alert (dtache--session-command session)
+           :title (pcase status
+                    ('success (format "Dtache finished [%s]" host))
+                    ('failure (format "Dtache failed [%s]" host)))
+           :severity (pcase status
+                       ('success 'moderate)
+                       ('failure 'high)))))
+
+(setq dtache-notification-function #'my/dtache-state-transition-alert-notification)
+```
 
+### Projectile
 
-5 Extensions
-════════════
+The package can be integrated with [projectile](https://github.com/bbatsov/projectile), by overriding its compilation command in the following fashion.
 
-5.1 Shell
-─────────
+``` emacs-lisp
+(defun my/dtache-projectile-run-compilation (cmd &optional use-comint-mode)
+  "If CMD is a string execute it with `dtache-compile', optionally USE-COMINT-MODE."
+  (if (functionp cmd)
+      (funcall cmd)
+    (let ((dtache-session-origin 'projectile))
+      (dtache-compile cmd use-comint-mode))))
 
-  A `use-package' configuration of the `dtache-shell' extension, which
-  provides the integration with `M-x shell'.
+(advice-add 'projectile-run-compilation :override #'my/dtache-projectile-run-compilation)
+```
 
-  ┌────
-  │ (use-package dtache-shell
-  │   :after dtache
-  │   :config
-  │   (dtache-shell-setup)
-  │   (setq dtache-shell-history-file "~/.bash_history"))
-  └────
+### Vterm
 
-  A minor mode named `dtache-shell-mode' is provided, and will be
-  enabled in `shell'. The commands that are implemented are:
+The package can be integrated with the [vterm](https://github.com/akermu/emacs-libvterm) package. This is for users that want `dtache` to run in a terminal emulator.
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Command                      Description                   Keybinding        
-  ──────────────────────────────────────────────────────────────────────────────
-   dtache-shell-send-input      Run command with dtache       <S-return>        
-   dtache-shell-attach-session  Attach to a dtache session    <C-return>        
-   dtache-detach-session        Detach from a dtache session  dtache-detach-key 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+``` emacs-lisp
+(use-package vterm
+  :defer t
+  :bind (:map vterm-mode-map
+              ("<S-return>" . #'dtache-vterm-send-input)
+              ("<C-return>" . #'dtache-vterm-attach)
+              ("C-c C-d" . #'dtache-vterm-detach))
+  :config
 
+  (defun dtache-vterm-send-input (&optional detach)
+    "Create a `dtache' session."
+    (interactive)
+    (vterm-send-C-a)
+    (let* ((input (buffer-substring-no-properties (point) (vterm-end-of-line)))
+           (dtache-session-origin 'vterm)
+           (dtache-session-action
+            '(:attach dtache-shell-command-attach-session
+                      :view dtache-view-dwim
+                      :run dtache-shell-command))
+           (dtache-session-mode
+            (if detach 'create 'create-and-attach)))
+      (vterm-send-C-k)
+      (process-send-string vterm--process (dtache-dtach-command input t))
+      (vterm-send-C-e)
+      (vterm-send-return)))
 
-5.2 Eshell
-──────────
+  (defun dtache-vterm-attach (session)
+    "Attach to an active `dtache' session."
+    (interactive
+     (list
+      (let* ((host-name (car (dtache--host)))
+             (sessions
+              (thread-last (dtache-get-sessions)
+                           (seq-filter (lambda (it)
+                                         (string= (car (dtache--session-host it)) host-name)))
+                           (seq-filter (lambda (it) (eq 'active (dtache--determine-session-state it)))))))
+        (dtache-completing-read sessions))))
+    (let ((dtache-session-mode 'attach))
+      (process-send-string vterm--process (dtache-dtach-command session t))
+      (vterm-send-return)))
 
-  A `use-package' configuration of the `dtache-eshell' extension, which
-  provides the integration with `eshell'.
+  (defun dtache-vterm-detach ()
+    "Detach from a `dtache' session."
+    (interactive)
+    (process-send-string vterm--process dtache--dtach-detach-character)))
+```
 
-  ┌────
-  │ (use-package dtache-eshell
-  │   :hook (eshell-mode . dtache-eshell-mode))
-  └────
+### Dired-rsync
 
-  A minor mode named `dtache-eshell-mode' is provided, and will be
-  enabled in `eshell'. The commands that are implemented are:
+The [dired-rsync](https://github.com/stsquad/dired-rsync) is a package to run [rsync](https://linux.die.net/man/1/rsync) commands from within `dired`. Its a perfect package to integrate with `dtache` since it typically requires some time to run and you don't want to have your Emacs limited by that process.
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Command                       Description                   Keybinding        
-  ───────────────────────────────────────────────────────────────────────────────
-   dtache-eshell-send-input      Run command with dtache       <S-return>        
-   dtache-eshell-attach-session  Attach to a dtache session    <C-return>        
-   dtache-detach-session         Detach from a dtache session  dtache-detach-key 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+``` emacs-lisp
+(defun my/dtache-dired-rsync (command _details)
+  "Run COMMAND with `dtache'."
+  (let ((dtache-local-session t)
+        (dtache-session-origin 'rsync))
+    (dtache-start-session command t)))
 
-  In this [blog post] there are examples and more information about the
-  extension.
+(advice-add #'dired-rsync--do-run :override #'my/dtache-dired-rsync)
+```
 
+The above code block shows how to make `dired-rsync` use `dtache`.
 
-[blog post] <https://niklaseklund.gitlab.io/blog/posts/dtache_eshell/>
+# Versions
 
+Information about larger changes that has been made between versions can be found in the `CHANGELOG.org`
 
-5.3 Compile
-───────────
+# Support
 
-  A `use-package' configuration of the `dtache-compile' extension, which
-  provides the integration with `compile'.
+The `dtache` package should work on `Linux` and `macOS`. It is regularly tested on `Ubuntu` and `GNU Guix System`.
 
-  ┌────
-  │ (use-package dtache-compile
-  │   :hook (after-init . dtache-compile-setup)
-  │   :bind (([remap compile] . dtache-compile)
-  │ 	 ([remap recompile] . dtache-compile-recompile)))
-  └────
+# Contributions
 
-  The package implements the commands `dtache-compile' and
-  `dtache-compile-recompile', which are thin wrappers around the
-  original `compile' and `recompile' commands. The users should be able
-  to use the former as replacements for the latter without noticing any
-  difference except from the possibility to `detach'.
+The package is part of [ELPA](https://elpa.gnu.org/) which means that if you want to contribute you must have a [copyright assignment](https://www.gnu.org/software/emacs/manual/html_node/emacs/Copyright-Assignment.html).
 
 
-5.4 Org
-───────
+# Acknowledgments
 
-  A `use-package' configuration of the `dtache-org' extension, which
-  provides the integration with `org-babel'.
+This package wouldn't have been were it is today without these contributors.
 
-  ┌────
-  │ (use-package dtache-org
-  │   :after (dtache org)
-  │   :config
-  │   (dtache-org-setup))
-  └────
 
-  The package implements an additional header argument for
-  `ob-shell'. The header argument is `:dtache t'. When provided it will
-  enable the code inside a src block to be run with `dtache'. Since org
-  is not providing any live updates on the output the session is created
-  with `dtache-sesion-mode' set to `create'. This means that if you want
-  to access the output of the session you do that the same way you would
-  for any other type of session. The `dtache-org' works both with and
-  without the `:session' header argument.
+## Code contributors
 
-  ┌────
-  │ #+begin_src sh :dtache t
-  │   cd ~/code
-  │   ls -la
-  │ #+end_src
-  │ 
-  │ #+RESULTS:
-  │ : [detached]
-  └────
+- [rosetail](https://gitlab.com/rosetail)
+- [protesilaos](https://lists.sr.ht/~protesilaos)
 
+## Idea contributors
 
-5.5 Consult
-───────────
-
-  A `use-package' configuration of the `dtache-consult' extension, which
-  provides the integration with the [consult] package.
-
-  ┌────
-  │ (use-package dtache-consult
-  │   :after dtache
-  │   :bind ([remap dtache-open-session] . dtache-consult-session))
-  └────
-
-  The command `dtache-consult-session' is a replacement for
-  `dtache-open-session'. The difference is that the consult command
-  provides multiple session sources, which is defined in the
-  `dtache-consult-sources' variable. Users can customize which sources
-  to use, as well as use individual sources in other `consult' commands,
-  such as `consult-buffer'. The users can also narrow the list of
-  sessions by entering a key. The list of supported keys are:
-
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Type                   Key 
-  ────────────────────────────
-   Active sessions        a   
-   Inactive sessions      i   
-   Successful sessions    s   
-   Failed sessions        f   
-   Local host sessions    l   
-   Remote host sessions   r   
-   Current host sessions  c   
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  Examples of the different sources are featured in this [blog post].
-
-
-[consult] <https://github.com/minad/consult>
-
-[blog post] <https://niklaseklund.gitlab.io/blog/posts/dtache_consult/>
-
-
-6 Customization
-═══════════════
-
-6.1 Customizable variables
-──────────────────────────
-
-  The package provides the following customizable variables.
-
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Name                           Description                                                  
-  ─────────────────────────────────────────────────────────────────────────────────────────────
-   dtache-session-directory       A host specific directory to store sessions in               
-   dtache-db-directory            A localhost specific directory to store the database         
-   dtache-dtach-program           Name or path to the `dtach' program                          
-   dtache-shell-program           Name or path to the `shell' that `dtache' should use         
-   dtache-timer-configuration     Configuration of the timer that runs on remote hosts         
-   dtache-env                     Name or path to the `dtache-env' script                      
-   dtache-annotation-format       A list of annotations that should be present in completion   
-   dtache-max-command-length      How many characters should be used when displaying a command 
-   dtache-tail-interval           How often `dtache' should refresh the output when tailing    
-   dtache-nonattachable-commands  A list of commands that should be considered nonattachable   
-   dtache-notification-function   Specifies which function to issue notifications with         
-   dtache-detach-key              Specifies which keybinding to use to detach from a session   
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  Apart from those variables there is also the different `action'
-  variables, which can be configured differently depending on the origin
-  of the session.
-
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Name                                 Description                                                   
-  ────────────────────────────────────────────────────────────────────────────────────────────────────
-   dtache-shell-command-session-action  Actions for sessions launched with `dtache-shell-command'     
-   dtache-eshell-session-action         Actions for sessions launched with `dtache-eshell-send-input' 
-   dtache-shell-session-action          Actions for sessions launched with `dtache-shell-send-input'  
-   dtache-compile-session-action        Actions for sessions launched with `dtache-compile'           
-   dtache-org-session-action            Actions for sessions launched with `dtache-org'               
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-6.2 Remote support
-──────────────────
-
-  The `dtache' package supports [Connection Local Variables] which
-  allows the user to customize the variables used by `dtache' when
-  running on a remote host. This example shows how the following
-  variables are customized for all remote hosts.
-
-  ┌────
-  │ (connection-local-set-profile-variables
-  │  'remote-dtache
-  │  '((dtache-env . "~/bin/dtache-env")
-  │    (dtache-shell-program . "/bin/bash")
-  │    (dtache-shell-history-file . "~/.bash_history")
-  │    (dtache-session-directory . "~/tmp")
-  │    (dtache-dtach-program . "/home/user/.local/bin/dtach")))
-  │ 
-  │ (connection-local-set-profiles
-  │  '(:application tramp :protocol "ssh") 'remote-dtache)
-  └────
-
-
-[Connection Local Variables]
-<https://www.gnu.org/software/emacs/manual/html_node/elisp/Connection-Local-Variables.html>
-
-
-6.3 Completion annotations
-──────────────────────────
-
-  Users can customize the appearance of annotations in
-  `dtache-open-session' by modifying the `dtache-annotation-format'. The
-  default annotation format is the following.
-
-  ┌────
-  │ (defvar dtache-annotation-format
-  │   `((:width 3 :function dtache--state-str :face dtache-state-face)
-  │     (:width 3 :function dtache--status-str :face dtache-failure-face)
-  │     (:width 10 :function dtache--host-str :face dtache-host-face)
-  │     (:width 40 :function dtache--working-dir-str :face dtache-working-dir-face)
-  │     (:width 30 :function dtache--metadata-str :face dtache-metadata-face)
-  │     (:width 10 :function dtache--duration-str :face dtache-duration-face)
-  │     (:width 8 :function dtache--size-str :face dtache-size-face)
-  │     (:width 12 :function dtache--creation-str :face dtache-creation-face))
-  │   "The format of the annotations.")
-  └────
-
-
-6.4 Status deduction
-────────────────────
-
-  Users are encouraged to define the `dtache-env' variable. It should
-  point to the `dtache-env' script, which is provided in the
-  repository. This script allows sessions to communicate the status of a
-  session when it transitions to inactive. When configured properly
-  `dtache' will be able to set the status of a session to either
-  `success' or `failure'.
-
-  ┌────
-  │ (setq dtache-env "/path/to/repo/dtache-env")
-  └────
-
-
-6.5 Metadata annotators
-───────────────────────
-
-  The user can configure any number of annotators to run upon creation
-  of a session. Here is an example of an annotator which captures the
-  git branch name, if the session is started in a git repository.
-
-  ┌────
-  │ (defun my/dtache--session-git-branch ()
-  │   "Return current git branch."
-  │   (let ((git-directory (locate-dominating-file "." ".git")))
-  │     (when git-directory
-  │       (let ((args '("name-rev" "--name-only" "HEAD")))
-  │ 	(with-temp-buffer
-  │ 	  (apply #'process-file `("git" nil t nil ,@args))
-  │ 	  (string-trim (buffer-string)))))))
-  └────
-
-  Next add the annotation function to the
-  `dtache-metadata-annotators-alist' together with a symbol describing
-  the property.
-
-  ┌────
-  │ (setq dtache-metadata-annotators-alist '((branch . my/dtache--session-git-branch))
-  └────
-
-
-6.6 Nonattachable commands
-──────────────────────────
-
-  To be able to both attach to a dtach session as well as logging its
-  output `dtache' relies on the usage of `tee'. However it is possible
-  that the user tries to run a command which involves a program that
-  doesn't integrate well with tee. In those situations the output could
-  be delayed until the session ends, which is not preferable.
-
-  For these situations `dtache' provides the
-  `dtache-nonattachable-commands' variable. This is a list of regular
-  expressions. Any command that matches any of the strings will be
-  getting the property `attachable' set to false.
-
-  ┌────
-  │ (setq dtache-nonattachable-commands '("^ls"))
-  └────
-
-  Here a command beginning with `ls' would from now on be considered
-  nonattachable.
-
-
-7 Tips & Tricks
-═══════════════
-
-7.1 3rd party extensions
-────────────────────────
-
-7.1.1 Embark
-╌╌╌╌╌╌╌╌╌╌╌╌
-
-  The user have the possibility to integrate `dtache' with the package
-  [embark]. The `dtache-action-map' can be reused for this purpose, so
-  the user doesn't need to bind it to any key. Instead the user simply
-  adds the following to their `dtache' configuration in order to get
-  embark actions for `dtache-open-session'.
-
-  ┌────
-  │ (defvar embark-dtache-map (make-composed-keymap dtache-action-map embark-general-map))
-  │ (add-to-list 'embark-keymap-alist '(dtache . embark-dtache-map))
-  └────
-
-
-[embark] <https://github.com/oantolin/embark/>
-
-
-7.1.2 Alert
-╌╌╌╌╌╌╌╌╌╌╌
-
-  By default `dtache' uses the built in `notifications' library to issue
-  a notification. This solution uses `dbus' but if that doesn't work for
-  the user there is the possibility to set the
-  `dtache-notification-function' to
-  `dtache-state-transitionion-echo-message' to use the echo area
-  instead. If that doesn't suffice there is the possibility to use the
-  [alert] package to get a system notification instead.
-
-  ┌────
-  │ (defun my/dtache-state-transition-alert-notification (session)
-  │   "Send an `alert' notification when SESSION becomes inactive."
-  │   (let ((status (car (dtache--session-status session)))
-  │ 	(host (car (dtache--session-host session))))
-  │     (alert (dtache--session-command session)
-  │      :title (pcase status
-  │ 	      ('success (format "Dtache finished [%s]" host))
-  │ 	      ('failure (format "Dtache failed [%s]" host)))
-  │      :severity (pcase status
-  │ 		('success 'moderate)
-  │ 		('failure 'high)))))
-  │ 
-  │ (setq dtache-notification-function #'my/dtache-state-transition-alert-notification)
-  └────
-
-
-[alert] <https://github.com/jwiegley/alert>
-
-
-7.1.3 Projectile
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-
-  The package can be integrated with [projectile], by overriding its
-  compilation command in the following fashion.
-
-  ┌────
-  │ (defun my/dtache-projectile-run-compilation (cmd &optional use-comint-mode)
-  │   "If CMD is a string execute it with `dtache-compile', optionally USE-COMINT-MODE."
-  │   (if (functionp cmd)
-  │       (funcall cmd)
-  │     (dtache-compile cmd use-comint-mode)))
-  │ 
-  │ (advice-add 'projectile-run-compilation :override #'my/dtache-projectile-run-compilation)
-  └────
-
-
-[projectile] <https://github.com/bbatsov/projectile>
-
-
-8 Versions
-══════════
-
-  Information about larger changes that has been made between versions
-  can be found in the `CHANGELOG.org'
-
-
-9 Support
-═════════
-
-  The `dtache' package should work on `Linux' and `macOS'. It is
-  regularly tested on `Ubuntu' and `GNU Guix System'.
-
-
-10 Contributions
-════════════════
-
-  The package is part of [ELPA] which means that if you want to
-  contribute you must have a [copyright assignment].
-
-
-[ELPA] <https://elpa.gnu.org/>
-
-[copyright assignment]
-<https://www.gnu.org/software/emacs/manual/html_node/emacs/Copyright-Assignment.html>
-
-
-11 Credits
-══════════
-
-  I got inspired when reading about `Ambrevar's' pursuits on [using
-  eshell as his main shell]. I discovered his [package-eshell-detach]
-  which got me into the idea of using `dtach' as a base for detached
-  shell commands.
-
-  [Troy de Freitas] for solving the problem of getting `dtache' to work
-  with `filenotify' on macOS.
-
-  [Daniel Mendler] for helping out in improving `dtache', among other
-  things integration with other packages such as `embark' and `consult'.
-
-
-[using eshell as his main shell] <https://ambrevar.xyz/emacs-eshell/>
-
-[package-eshell-detach]
-<https://github.com/Ambrevar/dotfiles/blob/master/.emacs.d/lisp/package-eshell-detach.el>
-
-[Troy de Freitas] <https://gitlab.com/ntdef>
-
-[Daniel Mendler] <https://gitlab.com/minad>
+- [rosetail](https://gitlab.com/rosetail) for all great ideas and improvements to the package.
+- [Troy de Freitas](https://gitlab.com/ntdef) for solving the problem of getting `dtache` to work with `filenotify` on macOS.
+- [Daniel Mendler](https://gitlab.com/minad) for helping out in improving `dtache`, among other things integration with other packages such as `embark` and `consult`.
+- [Ambrevar](https://gitlab.com/ambrevar) who indirectly contributed by inspiring me with his [yes eshell is my main shell](https://www.reddit.com/r/emacs/comments/6y3q4k/yes_eshell_is_my_main_shell/). It was through that I discovered his [package-eshell-detach](https://github.com/Ambrevar/dotfiles/blob/master/.emacs.d/lisp/package-eshell-detach.el) which got me into the idea of using `dtach` as a base for detached shell commands.
