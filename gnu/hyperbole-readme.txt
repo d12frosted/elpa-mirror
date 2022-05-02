@@ -3,8 +3,9 @@
 # Author:       Bob Weiner
 #
 # Orig-Date:    19-Oct-91 at 03:27:47
+# Last-Mod:     24-Jan-22 at 00:19:12 by Bob Weiner
 #
-# Copyright (C) 1989-2016  Free Software Foundation, Inc.
+# Copyright (C) 1989-2021  Free Software Foundation, Inc.
 # See the "HY-COPY" file for license information.
 #
 # This file is part of GNU Hyperbole.
@@ -26,14 +27,50 @@ written by Bob Weiner.  It is maintained by him and Mats Lidell.
 *			   Summary
 ===========================================================================
 
-GNU Hyperbole (pronounced Ga-new Hi-per-bo-lee), or just Hyperbole, is an
-easy-to-use, yet powerful and programmable hypertextual information
-management system implemented as a GNU Emacs package.  It offers rapid views
-and interlinking of all kinds of textual information, utilizing Emacs for
-editing.  It can dramatically increase your productivity and greatly reduce
-the number of keyboard/mouse keys you'll need to work efficiently.
+GNU Hyperbole (pronounced Ga-new Hi-per-bo-lee), or just Hyperbole, is like
+Markdown for hypertext.  Hyperbole automatically recognizes dozens of
+common, pre-existing patterns in any buffer regardless of mode and can
+instantly activate them as hyperbuttons with a single key: email addresses,
+URLs, grep -n outputs, programming backtraces, sequences of Emacs keys,
+programming identifiers, Texinfo and Info cross-references, Org links,
+Markdown links and on and on.  All you do is load Hyperbole and then your
+text comes to life with no extra effort or complex formatting.
 
-Hyperbole lets you:
+Hyperbole includes easy-to-use, powerful hypertextual button types without
+the need to learn a markup language.  Hyperbole's button types are written
+in Lisp and can be wholly independent of the web, i.e. web links are one
+type of Hyperbole link, not fundamental to its link architecture.  However,
+Hyperbole is a great assistant when editing HTML or Javascript or when
+browsing web pages and links.
+
+Hyperbole comes pre-built with most of the implicit button types you will
+need but with a little extra effort and a few lines of code (or even just a
+few words), you can define your own implicit button types to recognize your
+specific buttons and then activate them anywhere in Emacs.  You press a
+single key, {M-RET} by default, on any kind of Hyperbole button to activate
+it, so you can rely on your muscle memory and let the computer do the hard
+work of figuring out what to do.  {C-u M-RET} shows you what any button will
+do in any context before you activate it, so you can always be sure of what
+you are doing when needed or if some emails you a button (you can do that
+too).
+
+Hyperbole is something to be experienced and interacted with, not understood
+from reading alone.  It installs normally as a single Emacs package with no
+dependencies outside of standard Emacs libraries.  Most of Hyperbole is a
+single global minor mode that you can activate and deactivate at will.  And
+it can be uninstalled quickly as well if need be, so there is no risk to
+giving it a spin.
+
+Once you have it installed and activated {C-u M-x hyperbole-mode RET}, try
+the interactive demo with {C-h h d d}.  In fact, if you have Hyperbole
+loaded, you can press {M-RET} inside any of the brace delimited series of
+keys you see in this document and it will execute them on-the-fly (easy
+keyboard-macro style buttons in any text).
+
+Hyperbole can dramatically increase your productivity and greatly reduce the
+number of keyboard/mouse keys you'll need to work efficiently.
+
+In short, Hyperbole lets you:
 
 1. Quickly create hyperlink buttons either from the keyboard or by dragging
 between a source and destination window with a mouse button depressed.
@@ -79,7 +116,7 @@ Hyperbole home page: https://www.gnu.org/software/hyperbole.  If you have
 already downloaded Hyperbole, see the "HY-ABOUT" file for a longer
 description and overview of Hyperbole.
 
-See "DEMO" for a demonstration of standard Hyperbole button capabilities.
+See "FAST-DEMO" for a demonstration of standard Hyperbole button capabilities.
 This is the best way to initially interactively learn about Hyperbole after
 installing it.
 
@@ -107,8 +144,8 @@ Various forms of the reference manual for Hyperbole are below the
 
 "MANIFEST" summarizes most of the files in the distribution.
 
-See "DEMO" for a demonstration of standard Hyperbole button capabilities.
-This is the best way to initially interactively learn about Hyperbole.
+See "DEMO" for a lengthier tutorial of standard Hyperbole button
+capabilities.  This is the best way to go deeper into all of Hyperbole.
 The Hyperbole Manual is a reference manual, not a simple introduction.
 
 Naming conventions:
@@ -116,7 +153,7 @@ Naming conventions:
   - All Hyperbole-specific code files begin with an 'h', aside from the
     Koutliner files which are in the kotl/ subdirectory and begin with a 'k'.
 
-  - Hyperbole user-interface files begin with 'hui-' or 'hmous'.
+  - Hyperbole user-interface files begin with 'hui-' or 'hmouse-'.
 
   - Files that define implicit button types begin with 'hib'.
 
@@ -148,6 +185,18 @@ Hyperbole key bindings (Smart Keys).
 
 	   				-- Bob Glickstein
 					   Z-Code Software Corporation
+
+-------
+
+  GNU Hyperbole is a game-changer for your mental model of information
+  management and personal productivity.  Even if you don't use it you should
+  study one or two of the modules and compare them to how you solve the same
+  problem with your preferred tool of choice.  It is subtle, and subtle is one
+  of the hardest and post powerful things to reside in your mental landscape
+  these days.
+
+                                       -- Grant Rettke
+                                          Org2Blog Maintainer
 
 -------
 
@@ -328,6 +377,6 @@ tired of trying to manage our own distributed information pools with standard
 UNIX tools.  And so Hyperbole was conceived and raved about until it
 got its name.
 
-Since then Hyperbole has proved indispensible at improving information
+Since then Hyperbole has proved indispensable at improving information
 access and organization in daily use over many years.  Why not start
 improving your information handling efficiency today?

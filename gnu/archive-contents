@@ -1382,15 +1382,16 @@
 	   ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	  (:keywords "bindings"))])
  (hyperbole .
-	    [(7 1 3)
+	    [(8 0 0)
 	     ((emacs
-	       (27 1)))
+	       (27 0)))
 	     "GNU Hyperbole: The Everyday Hypertextual Information Manager" tar
 	     ((:url . "http://www.gnu.org/software/hyperbole")
+	      (:keywords "comm" "convenience" "files" "frames" "hypermedia" "languages" "mail" "matching" "mouse" "multimedia" "outlines" "tools" "wp")
 	      (:maintainer "Bob Weiner <rsw@gnu.org>, Mats Lidell" . "matsl@gnu.org")
 	      (:authors
 	       ("Bob Weiner"))
-	      (:keywords "comm" "convenience" "files" "frames" "hypermedia" "languages" "mail" "matching" "mouse" "multimedia" "outlines" "tools" "wp"))])
+	      (:commit . "4214716e06920a3e10db5811bd22a343ad6435d9"))])
  (ilist .
 	[(0 1)
 	 nil "Display a list in an ibuffer way." tar
@@ -2356,13 +2357,14 @@
 	  (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	  (:url . "http://www.dr-qubit.org/emacs.php"))])
  (rainbow-mode .
-	       [(1 0 5)
-		nil "Colorize color names in buffers" single
-		((:url . "http://elpa.gnu.org/packages/rainbow-mode.html")
-		 (:keywords "faces")
+	       [(1 0 6)
+		nil "Colorize color names in buffers" tar
+		((:keywords "faces")
+		 (:maintainer "Julien Danjou" . "julien@danjou.info")
 		 (:authors
 		  ("Julien Danjou" . "julien@danjou.info"))
-		 (:maintainer "Julien Danjou" . "julien@danjou.info"))])
+		 (:url . "https://elpa.gnu.org/packages/rainbow-mode.html")
+		 (:commit . "ac68593018ef3555e64ea592d72334f4e3e39209"))])
  (rbit .
        [(0 1)
 	nil "Red-black persistent interval trees" single
