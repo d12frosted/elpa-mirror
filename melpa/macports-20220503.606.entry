@@ -1,0 +1,13 @@
+(macports .
+	  [(20220503 606)
+	   ((emacs
+	     (25 1))
+	    (transient
+	     (0 1 0)))
+	   "A porcelain for MacPorts" tar
+	   ((:commit . "c0d74a5a820742400e05859c1f56443c1aabd25b")
+	    (:authors
+	     ("Aaron Madlon-Kay"))
+	    (:maintainer "Aaron Madlon-Kay")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/amake/macports.el"))])
