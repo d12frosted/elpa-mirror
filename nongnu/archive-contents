@@ -150,11 +150,11 @@
 	  ("Damien Doligez" . "damien.doligez@inria.fr"))
 	 (:keywords "ocaml"))])
  (cider .
-	[(1 3 0)
+	[(1 4 0)
 	 ((emacs
 	   (26))
 	  (clojure-mode
-	   (5 12))
+	   (5 14))
 	  (parseedn
 	   (1 0 6))
 	  (queue
@@ -176,7 +176,7 @@
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
 	   ("Steve Purcell" . "steve@sanityinc.com"))
-	  (:commit . "6ddccef1d8cf48515b1cfa0addc1dd41e57e840a"))])
+	  (:commit . "b2cee7fc301735b403920583cc2c23dcf70990a3"))])
  (clojure-mode .
 	       [(5 14 0)
 		((emacs

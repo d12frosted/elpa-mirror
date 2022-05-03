@@ -1313,6 +1313,17 @@
 	     (:authors
 	      ("Michael R. Mauger" . "michael@mauger.com"))
 	     (:maintainer "Michael R. Mauger" . "michael@mauger.com"))])
+ (gtags-mode .
+	     [(1 0)
+	      ((emacs
+		(28)))
+	      "GNU Global integration with xref, project and imenu." tar
+	      ((:url . "https://github.com/Ergus/gtags-mode")
+	       (:keywords "xref" "project" "imenu" "gtags" "global")
+	       (:maintainer "Jimmy Aguilar Mena")
+	       (:authors
+		("Jimmy Aguilar Mena"))
+	       (:commit . "f108a46c6c03eb5e18c73a908c655071aa153a14"))])
  (guess-language .
 		 [(0 0 1)
 		  ((cl-lib
