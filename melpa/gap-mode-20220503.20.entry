@@ -1,0 +1,12 @@
+(gap-mode .
+	  [(20220503 20)
+	   nil "Major mode for editing files in the GAP programing language." tar
+	   ((:commit . "b217b94bcfae5657b86424c56d8b053973b92e1f")
+	    (:authors
+	     ("Michael Smith" . "smith@pell.anu.edu.au")
+	     ("Gary Zablackis")
+	     ("Goetz Pfeiffer")
+	     ("Ivan Andrus" . "darthandrus@gmail.com"))
+	    (:maintainer "Ivan Andrus" . "darthandrus@gmail.com")
+	    (:keywords "gap")
+	    (:url . "https://gitlab.com/gvol/gap-mode"))])

@@ -26,14 +26,6 @@ about mode configuration.
 - Run ASP program from within Emacs and get the compilation output
 - Auto-load mode when a *.lp file is opened
 
-; Todo
-
-- Smart indentation based on nesting depth
-- Refactoring of predicates/variables (complete buffer and #program parts)
-- Color compilation output
-- Smart rearrange of compilation output (predicates separated, table...)
-- yas-snippet for rules; constraints; soft constraints; generation?
-
 ; Keybindings
 
 "C-c C-e" - Call clingo with current buffer and an instance file
