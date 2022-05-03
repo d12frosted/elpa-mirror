@@ -5,8 +5,8 @@
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.0
-;; Package-Version: 20220331.1634
-;; Package-Commit: 6357eb8b1ece47451f4c5eff46c0ee42081c38a8
+;; Package-Version: 20220503.718
+;; Package-Commit: 6254cb424edde85fedae35babe8d97c28fb020b8
 ;; Package-Requires: ((emacs "27.1") (magit-section "3.3.0") (elfeed "3.4.1"))
 ;; Homepage: https://github.com/SqrtMinusOne/elfeed-summary.el
 
@@ -1074,10 +1074,12 @@ summary buffer."
   ;; been updated.  But it seems impossible to override this hook with
   ;; lexical binding.
   ;; Thus, this function pushes a closure to the hook and cleans it up
-  ;; afterwards.
+  ;; afterwards.  Also, a closure is occasionally byte-compiled, so
+  ;; this is checked by `byte-code-function-p'.
   (setq elfeed-update-hooks
         (seq-filter (lambda (hook)
-                      (not (and (listp hook) (eq (car hook) 'closure))))
+                      (not (or (and (listp hook) (eq (car hook) 'closure))
+                               (byte-code-function-p hook))))
                     elfeed-update-hooks))
   (let* ((elfeed--inhibit-update-init-hooks t)
          (remaining-feeds (elfeed-feed-list))
@@ -1097,7 +1099,8 @@ summary buffer."
             (when (seq-empty-p remaining-feeds)
               (setq elfeed-update-hooks
                     (seq-filter (lambda (hook)
-                                  (not (and (listp hook) (eq (car hook) 'closure))))
+                                  (not (or (and (listp hook) (eq (car hook) 'closure))
+                                           (byte-code-function-p hook))))
                                 elfeed-update-hooks)))
             (when (or (seq-empty-p remaining-feeds)
                       elfeed-summary-refresh-on-each-update)
