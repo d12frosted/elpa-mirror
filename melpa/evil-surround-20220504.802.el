@@ -11,8 +11,8 @@
 ;; Current Maintainer: ninrod (github.com/ninrod)
 ;; Created: July 23 2011
 ;; Version: 1.0.3
-;; Package-Version: 20220503.953
-;; Package-Commit: 123b30135bcb181d00e351d714263eaa137ae10b
+;; Package-Version: 20220504.802
+;; Package-Commit: c9e1449bf3f740b5e9b99e7820df4eca7fc7cf02
 ;; Package-Requires: ((evil "1.2.12"))
 ;; Mailing list: <implementations-list at lists.ourproject.org>
 ;;      Subscribe: http://tinyurl.com/implementations-list
@@ -495,7 +495,7 @@ Becomes this:
 ;;;###autoload
 (define-globalized-minor-mode global-evil-surround-mode
   evil-surround-mode turn-on-evil-surround-mode
-  :predicate '(text-mode prog-mode comint-mode))
+  "Global minor mode to emulate surround.vim.")
 
 (evil-define-key 'operator evil-surround-mode-map "s" 'evil-surround-edit)
 (evil-define-key 'operator evil-surround-mode-map "S" 'evil-Surround-edit)

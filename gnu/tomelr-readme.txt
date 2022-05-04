@@ -8,52 +8,55 @@ Table of Contents
 ─────────────────
 
 1. Installation
-2. Credit
-3. API
+2. How to develop using this library
 .. 1. Example
 ..... 1. Alist data
 ..... 2. Plist data
 ..... 3. TOML Output
-4. Limitation
-.. 1. Correct Example
-.. 2. Wrong Example
-5. Specification and Conversion Examples
-.. 1. Library Completion Status [7/7]
-.. 2. Scalars
+3. Limitations
+.. 1. Correct Use Example
+.. 2. Incorrect Use Example
+4. Specification and Conversion Examples
+.. 1. Scalars
 ..... 1. DONE Boolean
 ..... 2. DONE Integer
 ..... 3. DONE Float
 ..... 4. DONE String
 ..... 5. DONE Date
 ..... 6. DONE Date + Time with Offset
-.. 3. DONE Nil
-.. 4. TOML Arrays: Lists
+.. 2. DONE Nil
+.. 3. TOML Arrays: Lists
 ..... 1. DONE Plain Arrays
 ..... 2. DONE Array of Arrays
-.. 5. TOML Tables: Maps or Dictionaries or Hash Tables
+.. 4. TOML Tables: Maps or Dictionaries or Hash Tables
 ..... 1. DONE Basic TOML Tables
 ..... 2. DONE Nested TOML Tables
-.. 6. TOML Array of Tables: Lists of Maps
+.. 5. TOML Array of Tables: Lists of Maps
 ..... 1. DONE Basic Array of Tables
 ..... 2. DONE Nested Array of Tables
-.. 7. DONE Combinations of all of the above
+.. 6. DONE Combinations of all of the above
 ..... 1. S-expression
 ..... 2. TOML
 ..... 3. JSON Reference
-.. 8. DONE P-lists
-6. Development
+.. 7. DONE P-lists
+5. Development
 .. 1. Running Tests
 ..... 1. Run all tests
 ..... 2. Run tests matching a specific string
+6. Credit
 7. References
 
 
 [https://github.com/kaushalmodi/tomelr/actions/workflows/test.yml/badge.svg]
+[https://elpa.gnu.org/packages/tomelr.svg]
 [https://img.shields.io/badge/License-GPL%20v3-blue.svg]
 
 
 [https://github.com/kaushalmodi/tomelr/actions/workflows/test.yml/badge.svg]
 <https://github.com/kaushalmodi/tomelr/actions>
+
+[https://elpa.gnu.org/packages/tomelr.svg]
+<https://elpa.gnu.org/packages/tomelr.html>
 
 [https://img.shields.io/badge/License-GPL%20v3-blue.svg]
 <https://www.gnu.org/licenses/gpl-3.0>
@@ -62,40 +65,45 @@ Table of Contents
 1 Installation
 ══════════════
 
-  Clone this repo, have `tomelr.el' in the `load-path' and `(require
-  'tomelr)'.
+  `tomelr' is a library that will typically be auto-installed via
+  another package requiring it.
+
+  If you are developing a package and want to use this library, you can
+  install it locally using Emacs `package.el' as follows as it's
+  available via GNU ELPA:
+
+  *M-x* `package-install' *RET* `tomelr' *RET*
 
 
-2 Credit
-════════
+2 How to develop using this library
+═══════════════════════════════════
 
-  This library started off by extracting the JSON Encoding pieces from
-  the Emacs core library [*json.el*].
-
-  It was then refactored to meet the specification defined below.
-
-
-[*json.el*]
-<https://git.savannah.gnu.org/cgit/emacs.git/tree/lisp/json.el>
-
-
-3 API
-═════
-
-  This library has only one entry point for simplicity: `tomelr-encode'.
-
-  Input
-        Lisp data expression in Alist or Plist format
-  Output
-        TOML string
+  1. Add this library in the /Package-Requires/ header. Here's an
+     example from [`ox-hugo']:
+     ┌────
+     │ ;; Package-Requires: ((emacs "24.4") (org "9.0") tomelr))
+     └────
+  2. Require it.
+     ┌────
+     │ (require 'tomelr)
+     └────
+  3. Use the `tomelr-encode' function.
+     Input
+           Lisp data expression in Alist or Plist format
+     Output
+           TOML string
 
 
-3.1 Example
+[`ox-hugo'] <https://ox-hugo.scripter.co>
+
+2.1 Example
 ───────────
 
-3.1.1 Alist data
+2.1.1 Alist data
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
+  Here's an example of input *alist* that can be processed by
+  `tomelr-encode'.
   ┌────
   │ '((title . "Some Title") ;String
   │   (author . ("fn ln"))   ;List
@@ -113,9 +121,11 @@ Table of Contents
   └────
 
 
-3.1.2 Plist data
+2.1.2 Plist data
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
+  Here's an example of input *plist* that can be processed by
+  `tomelr-encode'.
   ┌────
   │ '(:title "Some Title" ;String
   │   :author ("fn ln")   ;List
@@ -133,10 +143,10 @@ Table of Contents
   └────
 
 
-3.1.3 TOML Output
+2.1.3 TOML Output
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  You will get the below TOML output for either of the above input data.
+  You will get the below TOML output for either of the above input data:
   ┌────
   │ title = "Some Title"
   │ author = ["fn ln"]
@@ -164,8 +174,8 @@ Table of Contents
   └────
 
 
-4 Limitation
-════════════
+3 Limitations
+═════════════
 
   Right now, the scalars and tables/array of tables does not get ordered
   in the right order automatically. So the user needs to ensure that the
@@ -173,8 +183,8 @@ Table of Contents
   TOML tables and arrays of tables.
 
 
-4.1 Correct Example
-───────────────────
+3.1 Correct Use Example
+───────────────────────
 
 ​:white_check_mark: Put the scalars first and then maps or tables.
   ┌────
@@ -190,8 +200,8 @@ Table of Contents
   └────
 
 
-4.2 Wrong Example
-─────────────────
+3.2 Incorrect Use Example
+─────────────────────────
 
 ​:x: *Don't do this!*: Map or table first and then scalar.
   ┌────
@@ -210,49 +220,27 @@ Table of Contents
   └────
 
 
-5 Specification and Conversion Examples
+4 Specification and Conversion Examples
 ═══════════════════════════════════════
 
   [Companion blog post]
 
-  Below examples are shown on how S-expressions get translated to
-  various TOML object types.
+  Following examples shown how S-expressions get translated to various
+  TOML object types.
 
 
 [Companion blog post] <https://scripter.co/defining-tomelr/>
 
-5.1 Library Completion Status [7/7]
-───────────────────────────────────
-
-  • ☑ Scalar
-    • ☑ Boolean
-    • ☑ Integer
-    • ☑ Float
-    • ☑ String
-    • ☑ Date
-    • ☑ Date + Time with Offset
-  • ☑ Nil
-  • ☑ Arrays
-  • ☑ Array of Arrays
-  • ☑ Tables
-    • ☑ Basic Tables
-    • ☑ Nested Tables
-  • ☑ Array of Tables
-    • ☑ Basic Array of Tables
-    • ☑ Nested Array of Tables
-  • ☑ Property Lists
-
-
-5.2 Scalars
+4.1 Scalars
 ───────────
 
-5.2.1 DONE Boolean
+4.1.1 DONE Boolean
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   <https://toml.io/en/v1.0.0#boolean>
 
 
-◊ 5.2.1.1 S-expression
+◊ 4.1.1.1 S-expression
 
   ┌────
   │ '((bool1 . t)
@@ -260,7 +248,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.1.2 TOML
+◊ 4.1.1.2 TOML
 
   ┌────
   │ bool1 = true
@@ -268,7 +256,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.1.3 JSON Reference
+◊ 4.1.1.3 JSON Reference
 
   ┌────
   │ {
@@ -278,13 +266,13 @@ Table of Contents
   └────
 
 
-5.2.2 DONE Integer
+4.1.2 DONE Integer
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   <https://toml.io/en/v1.0.0#integer>
 
 
-◊ 5.2.2.1 S-expression
+◊ 4.1.2.1 S-expression
 
   ┌────
   │ '((int1 . +99)
@@ -294,7 +282,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.2.2 TOML
+◊ 4.1.2.2 TOML
 
   ┌────
   │ int1 = 99
@@ -304,7 +292,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.2.3 JSON Reference
+◊ 4.1.2.3 JSON Reference
 
   ┌────
   │ {
@@ -316,13 +304,13 @@ Table of Contents
   └────
 
 
-5.2.3 DONE Float
+4.1.3 DONE Float
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   <https://toml.io/en/v1.0.0#float>
 
 
-◊ 5.2.3.1 S-expression
+◊ 4.1.3.1 S-expression
 
   ┌────
   │ '((flt1 . +1.0)
@@ -335,7 +323,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.3.2 TOML
+◊ 4.1.3.2 TOML
 
   ┌────
   │ flt1 = 1.0
@@ -348,7 +336,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.3.3 JSON Reference
+◊ 4.1.3.3 JSON Reference
 
   ┌────
   │ {
@@ -363,13 +351,13 @@ Table of Contents
   └────
 
 
-5.2.4 DONE String
+4.1.4 DONE String
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   <https://toml.io/en/v1.0.0#string>
 
 
-◊ 5.2.4.1 S-expression
+◊ 4.1.4.1 S-expression
 
   ┌────
   │ '((str1 . "Roses are red")
@@ -377,7 +365,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.4.2 TOML
+◊ 4.1.4.2 TOML
 
   ┌────
   │ str1 = "Roses are red"
@@ -387,7 +375,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.4.3 JSON Reference
+◊ 4.1.4.3 JSON Reference
 
   ┌────
   │ {
@@ -397,27 +385,27 @@ Table of Contents
   └────
 
 
-5.2.5 DONE Date
+4.1.5 DONE Date
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   <https://toml.io/en/v1.0.0#local-date>
 
 
-◊ 5.2.5.1 S-expression
+◊ 4.1.5.1 S-expression
 
   ┌────
   │ '((ld1 . "1979-05-27"))
   └────
 
 
-◊ 5.2.5.2 TOML
+◊ 4.1.5.2 TOML
 
   ┌────
   │ ld1 = 1979-05-27
   └────
 
 
-◊ 5.2.5.3 JSON Reference
+◊ 4.1.5.3 JSON Reference
 
   ┌────
   │ {
@@ -426,13 +414,13 @@ Table of Contents
   └────
 
 
-5.2.6 DONE Date + Time with Offset
+4.1.6 DONE Date + Time with Offset
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   <https://toml.io/en/v1.0.0#offset-date-time>
 
 
-◊ 5.2.6.1 S-expression
+◊ 4.1.6.1 S-expression
 
   ┌────
   │ '((odt1 . "1979-05-27T07:32:00Z")
@@ -441,7 +429,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.6.2 TOML
+◊ 4.1.6.2 TOML
 
   ┌────
   │ odt1 = 1979-05-27T07:32:00Z
@@ -450,7 +438,7 @@ Table of Contents
   └────
 
 
-◊ 5.2.6.3 JSON Reference
+◊ 4.1.6.3 JSON Reference
 
   ┌────
   │ {
@@ -461,10 +449,10 @@ Table of Contents
   └────
 
 
-5.3 DONE Nil
+4.2 DONE Nil
 ────────────
 
-◊ 5.3.0.1 S-expression
+◊ 4.2.0.1 S-expression
 
   ┌────
   │ '((key1 . 123)
@@ -475,7 +463,7 @@ Table of Contents
   └────
 
 
-◊ 5.3.0.2 TOML
+◊ 4.2.0.2 TOML
 
   ┌────
   │ key1 = 123
@@ -485,7 +473,7 @@ Table of Contents
   └────
 
 
-◊ 5.3.0.3 JSON Reference
+◊ 4.2.0.3 JSON Reference
 
   ┌────
   │ {
@@ -498,16 +486,16 @@ Table of Contents
   └────
 
 
-5.4 TOML Arrays: Lists
+4.3 TOML Arrays: Lists
 ──────────────────────
 
   <https://toml.io/en/v1.0.0#array>
 
 
-5.4.1 DONE Plain Arrays
+4.3.1 DONE Plain Arrays
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-◊ 5.4.1.1 S-expression
+◊ 4.3.1.1 S-expression
 
   ┌────
   │ '((integers . (1 2 3))
@@ -518,7 +506,7 @@ Table of Contents
   └────
 
 
-◊ 5.4.1.2 TOML
+◊ 4.3.1.2 TOML
 
   ┌────
   │ integers = [1, 2, 3]
@@ -528,7 +516,7 @@ Table of Contents
   └────
 
 
-◊ 5.4.1.3 JSON Reference
+◊ 4.3.1.3 JSON Reference
 
   ┌────
   │ {
@@ -559,10 +547,10 @@ Table of Contents
   └────
 
 
-5.4.2 DONE Array of Arrays
+4.3.2 DONE Array of Arrays
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-◊ 5.4.2.1 S-expression
+◊ 4.3.2.1 S-expression
 
   ┌────
   │ '((nested_arrays_of_ints . [(1 2) (3 4 5)])
@@ -570,7 +558,7 @@ Table of Contents
   └────
 
 
-◊ 5.4.2.2 TOML
+◊ 4.3.2.2 TOML
 
   ┌────
   │ nested_arrays_of_ints = [[1, 2], [3, 4, 5]]
@@ -578,7 +566,7 @@ Table of Contents
   └────
 
 
-◊ 5.4.2.3 JSON Reference
+◊ 4.3.2.3 JSON Reference
 
   ┌────
   │ {
@@ -608,16 +596,16 @@ Table of Contents
   └────
 
 
-5.5 TOML Tables: Maps or Dictionaries or Hash Tables
+4.4 TOML Tables: Maps or Dictionaries or Hash Tables
 ────────────────────────────────────────────────────
 
   <https://toml.io/en/v1.0.0#table>
 
 
-5.5.1 DONE Basic TOML Tables
+4.4.1 DONE Basic TOML Tables
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-◊ 5.5.1.1 S-expression
+◊ 4.4.1.1 S-expression
 
   ┌────
   │ '((table-1 . ((key1 . "some string")
@@ -627,7 +615,7 @@ Table of Contents
   └────
 
 
-◊ 5.5.1.2 TOML
+◊ 4.4.1.2 TOML
 
   ┌────
   │ [table-1]
@@ -639,7 +627,7 @@ Table of Contents
   └────
 
 
-◊ 5.5.1.3 JSON Reference
+◊ 4.4.1.3 JSON Reference
 
   ┌────
   │ {
@@ -655,10 +643,10 @@ Table of Contents
   └────
 
 
-5.5.2 DONE Nested TOML Tables
+4.4.2 DONE Nested TOML Tables
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-◊ 5.5.2.1 S-expression
+◊ 4.4.2.1 S-expression
 
   ┌────
   │ '((table-1 . ((table-1a . ((key1 . "some string")
@@ -670,7 +658,7 @@ Table of Contents
   └────
 
 
-◊ 5.5.2.2 TOML
+◊ 4.4.2.2 TOML
 
   ┌────
   │ [table-1]
@@ -687,7 +675,7 @@ Table of Contents
   └────
 
 
-◊ 5.5.2.3 JSON Reference
+◊ 4.4.2.3 JSON Reference
 
   ┌────
   │ {
@@ -711,16 +699,16 @@ Table of Contents
   └────
 
 
-5.6 TOML Array of Tables: Lists of Maps
+4.5 TOML Array of Tables: Lists of Maps
 ───────────────────────────────────────
 
   <https://toml.io/en/v1.0.0#array-of-tables>
 
 
-5.6.1 DONE Basic Array of Tables
+4.5.1 DONE Basic Array of Tables
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-◊ 5.6.1.1 S-expression
+◊ 4.5.1.1 S-expression
 
   ┌────
   │ '((products . (((name . "Hammer")
@@ -738,7 +726,7 @@ Table of Contents
   └────
 
 
-◊ 5.6.1.2 TOML
+◊ 4.5.1.2 TOML
 
   ┌────
   │ [[products]]
@@ -763,7 +751,7 @@ Table of Contents
   └────
 
 
-◊ 5.6.1.3 JSON Reference
+◊ 4.5.1.3 JSON Reference
 
   ┌────
   │ {
@@ -797,10 +785,10 @@ Table of Contents
   └────
 
 
-5.6.2 DONE Nested Array of Tables
+4.5.2 DONE Nested Array of Tables
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-◊ 5.6.2.1 S-expression
+◊ 4.5.2.1 S-expression
 
   ┌────
   │ '((fruits . (((name . "apple")
@@ -813,7 +801,7 @@ Table of Contents
   └────
 
 
-◊ 5.6.2.2 TOML
+◊ 4.5.2.2 TOML
 
   ┌────
   │ [[fruits]]
@@ -832,7 +820,7 @@ Table of Contents
   └────
 
 
-◊ 5.6.2.3 JSON Reference
+◊ 4.5.2.3 JSON Reference
 
   ┌────
   │ {
@@ -865,10 +853,10 @@ Table of Contents
   └────
 
 
-5.7 DONE Combinations of all of the above
+4.6 DONE Combinations of all of the above
 ─────────────────────────────────────────
 
-5.7.1 S-expression
+4.6.1 S-expression
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ┌────
@@ -927,7 +915,7 @@ Table of Contents
   └────
 
 
-5.7.2 TOML
+4.6.2 TOML
 ╌╌╌╌╌╌╌╌╌╌
 
   ┌────
@@ -995,7 +983,7 @@ Table of Contents
   └────
 
 
-5.7.3 JSON Reference
+4.6.3 JSON Reference
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ┌────
@@ -1174,10 +1162,10 @@ Table of Contents
   └────
 
 
-5.8 DONE P-lists
+4.7 DONE P-lists
 ────────────────
 
-◊ 5.8.0.1 S-expression
+◊ 4.7.0.1 S-expression
 
   ┌────
   │ '(:int 123
@@ -1198,7 +1186,7 @@ Table of Contents
   └────
 
 
-◊ 5.8.0.2 TOML
+◊ 4.7.0.2 TOML
 
   ┌────
   │ int = 123
@@ -1221,7 +1209,7 @@ Table of Contents
   └────
 
 
-◊ 5.8.0.3 JSON Reference
+◊ 4.7.0.3 JSON Reference
 
   ┌────
   │ {
@@ -1275,13 +1263,13 @@ Table of Contents
   └────
 
 
-6 Development
+5 Development
 ═════════════
 
-6.1 Running Tests
+5.1 Running Tests
 ─────────────────
 
-6.1.1 Run all tests
+5.1.1 Run all tests
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ┌────
@@ -1289,7 +1277,7 @@ Table of Contents
   └────
 
 
-6.1.2 Run tests matching a specific string
+5.1.2 Run tests matching a specific string
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Run `make test MATCH=<string>'. For example, to run all tests where
@@ -1298,6 +1286,19 @@ Table of Contents
   ┌────
   │ make test MATCH=scalar
   └────
+
+
+6 Credit
+════════
+
+  This library started off by extracting the JSON Encoding pieces from
+  the Emacs core library [*json.el*].
+
+  It was then refactored to meet the specification defined below.
+
+
+[*json.el*]
+<https://git.savannah.gnu.org/cgit/emacs.git/tree/lisp/json.el>
 
 
 7 References

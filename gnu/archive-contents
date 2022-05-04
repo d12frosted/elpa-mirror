@@ -3006,7 +3006,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "7157ec61c451e3b97ba6117688d0de52bf294bea"))])
  (tomelr .
-	 [(0 2 2)
+	 [(0 2 4)
 	  ((emacs
 	    (26 3)))
 	  "Convert S-expressions to TOML" tar
@@ -3015,7 +3015,7 @@
 	   (:maintainer "Kaushal Modi" . "kaushal.modi@gmail.com")
 	   (:authors
 	    ("Kaushal Modi" . "kaushal.modi@gmail.com"))
-	   (:commit . "4e2edfe073d2a057a37b159d4e67282aa132f596"))])
+	   (:commit . "867c82c9e230309c748de59bf8c0937b10d6fc64"))])
  (tramp .
 	[(2 5 2 4)
 	 ((emacs
