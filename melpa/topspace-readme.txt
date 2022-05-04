@@ -2,7 +2,7 @@ TopSpace allows you to scroll down and recenter top lines
 by automatically drawing an upper margin/padding above the top line
 as you scroll down or recenter top text.
 
-TopSpace is:
+Features:
 
 - Easier on the eyes: Recenter or scroll down top text to a more
   comfortable eye level for reading, especially when in full-screen

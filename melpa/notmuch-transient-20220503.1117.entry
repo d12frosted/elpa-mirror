@@ -1,0 +1,15 @@
+(notmuch-transient .
+		   [(20220503 1117)
+		    ((emacs
+		      (27 1))
+		     (compat
+		      (28 1 1 0))
+		     (notmuch
+		      (0 31 4)))
+		    "Command dispatchers for Notmuch" single
+		    ((:commit . "341fe7f05efe68460451bd5cb7151ca6d8b8cfc8")
+		     (:authors
+		      ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		     (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		     (:keywords "mail")
+		     (:url . "https://git.sr.ht/~tarsius/notmuch-transient"))])
