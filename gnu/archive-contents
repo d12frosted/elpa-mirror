@@ -2565,14 +2565,14 @@
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (rt-liberation .
-		[(4)
+		[(5)
 		 nil "Emacs interface to RT" tar
 		 ((:url . "http://www.nongnu.org/rtliber/")
 		  (:keywords "rt" "tickets")
 		  (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 		  (:authors
 		   ("Yoni Rabkin" . "yrk@gnu.org"))
-		  (:commit . "f9dbe356479c10c32a8f420e4f3d2c7a99edf9ce"))])
+		  (:commit . "b76ae2828b12efc5f45f51ba873489e049a70924"))])
  (rudel .
 	[(0 3 2)
 	 ((emacs
@@ -2806,14 +2806,16 @@
 		 ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
 		(:url . "https://elpa.gnu.org/packages/sql-beeline.html"))])
  (sql-cassandra .
-		[(0 1)
-		 nil "Cassandra support for sql.el" tar
+		[(0 2)
+		 ((emacs
+		   (29)))
+		 "Cassandra support for sql.el" tar
 		 ((:keywords "sql" "cassandra" "cql" "cqlsh")
 		  (:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm")
 		  (:authors
 		   ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
 		  (:url . "https://elpa.gnu.org/packages/sql-cassandra.html")
-		  (:commit . "19a9bf54120c816f9635ed144b5be67bb11a31ea"))])
+		  (:commit . "f0daf06e1933cf207449538adc455412998acd02"))])
  (sql-indent .
 	     [(1 6)
 	      ((cl-lib
@@ -3003,6 +3005,17 @@
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "7157ec61c451e3b97ba6117688d0de52bf294bea"))])
+ (tomelr .
+	 [(0 2 2)
+	  ((emacs
+	    (26 3)))
+	  "Convert S-expressions to TOML" tar
+	  ((:url . "https://github.com/kaushalmodi/tomelr/")
+	   (:keywords "data" "tools" "toml" "serialization" "config")
+	   (:maintainer "Kaushal Modi" . "kaushal.modi@gmail.com")
+	   (:authors
+	    ("Kaushal Modi" . "kaushal.modi@gmail.com"))
+	   (:commit . "4e2edfe073d2a057a37b159d4e67282aa132f596"))])
  (tramp .
 	[(2 5 2 4)
 	 ((emacs
