@@ -4,28 +4,30 @@ Source:  https://github.com/amake/macports.el.git
 
 Updating /mnt/store/melpa/working/macports/
 Checking out origin/HEAD
-Checking out 32f78a4dde9abe2f177244a5d004fe79b6a60dd4
+Checking out f3b42ef6be07c72d0d678ecbca51bd3d42646f21
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/macports/
-  to /tmp/macportsuYOWOn/macports-20220503.606
+  to /tmp/macports2BseMj/macports-20220505.1059
     macports-core.el -> macports-core.el
     macports-describe.el -> macports-describe.el
     macports-installed.el -> macports-installed.el
     macports-outdated.el -> macports-outdated.el
     macports-select.el -> macports-select.el
     macports.el -> macports.el
-Created macports-20220503.606.tar containing:
-  macports-20220503.606/
-  macports-20220503.606/macports-core.el
-  macports-20220503.606/macports-describe.el
-  macports-20220503.606/macports-installed.el
-  macports-20220503.606/macports-outdated.el
-  macports-20220503.606/macports-pkg.el
-  macports-20220503.606/macports-select.el
-  macports-20220503.606/macports.el
-Built macports in 4.749s, finished at 2022-05-05T10:54:40+0000
+Created macports-20220505.1059.tar containing:
+  macports-20220505.1059/
+  macports-20220505.1059/macports-core.el
+  macports-20220505.1059/macports-describe.el
+  macports-20220505.1059/macports-installed.el
+  macports-20220505.1059/macports-outdated.el
+  macports-20220505.1059/macports-pkg.el
+  macports-20220505.1059/macports-select.el
+  macports-20220505.1059/macports.el
+Built macports in 3.791s, finished at 2022-05-05T14:44:37+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  352 May  5 10:54 packages/macports-20220503.606.entry
  40K -rw-r--r-- 1 root root  40K May  5 10:54 packages/macports-20220503.606.tar
-4.0K -rw-r--r-- 1 root root 1.2K May  5 10:54 packages/macports-badge.svg
-4.0K -rw-r--r-- 1 root root   25 May  5 10:54 packages/macports-readme.txt
+4.0K -rw-r--r-- 1 root root  353 May  5 14:44 packages/macports-20220505.1059.entry
+ 40K -rw-r--r-- 1 root root  40K May  5 14:44 packages/macports-20220505.1059.tar
+4.0K -rw-r--r-- 1 root root 1.2K May  5 14:44 packages/macports-badge.svg
+4.0K -rw-r--r-- 1 root root   25 May  5 14:44 packages/macports-readme.txt

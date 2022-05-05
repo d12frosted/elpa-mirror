@@ -1,0 +1,15 @@
+(consult-dir .
+	     [(20220505 1037)
+	      ((emacs
+		(26 1))
+	       (consult
+		(0 9))
+	       (project
+		(0 6 0)))
+	      "Insert paths into the minibuffer prompt" single
+	      ((:commit . "eee5beb13112d315fd283573006277d1b7a27843")
+	       (:authors
+		("Karthik Chikmagalur"))
+	       (:maintainer "Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com")
+	       (:keywords "convenience")
+	       (:url . "https://github.com/karthink/consult-dir"))])
