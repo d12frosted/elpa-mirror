@@ -2806,7 +2806,7 @@
 		 ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
 		(:url . "https://elpa.gnu.org/packages/sql-beeline.html"))])
  (sql-cassandra .
-		[(0 2)
+		[(0 2 1)
 		 ((emacs
 		   (29)))
 		 "Cassandra support for sql.el" tar
@@ -2815,7 +2815,7 @@
 		  (:authors
 		   ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
 		  (:url . "https://elpa.gnu.org/packages/sql-cassandra.html")
-		  (:commit . "f0daf06e1933cf207449538adc455412998acd02"))])
+		  (:commit . "2920f8c64e937904087f3636696501fb1cfe7acc"))])
  (sql-indent .
 	     [(1 6)
 	      ((cl-lib
@@ -3006,7 +3006,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "7157ec61c451e3b97ba6117688d0de52bf294bea"))])
  (tomelr .
-	 [(0 2 4)
+	 [(0 2 5)
 	  ((emacs
 	    (26 3)))
 	  "Convert S-expressions to TOML" tar
@@ -3015,7 +3015,7 @@
 	   (:maintainer "Kaushal Modi" . "kaushal.modi@gmail.com")
 	   (:authors
 	    ("Kaushal Modi" . "kaushal.modi@gmail.com"))
-	   (:commit . "867c82c9e230309c748de59bf8c0937b10d6fc64"))])
+	   (:commit . "8fc2257ec072a3fc3316c7f311722db50b37558e"))])
  (tramp .
 	[(2 5 2 4)
 	 ((emacs
