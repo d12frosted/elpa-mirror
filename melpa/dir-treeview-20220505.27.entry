@@ -1,0 +1,13 @@
+(dir-treeview .
+	      [(20220505 27)
+	       ((emacs
+		 (24 4))
+		(treeview
+		 (1 1 0)))
+	       "A directory tree browser and simple file manager" tar
+	       ((:commit . "fa0b795b36740755ec37f5b41c3a734ad702e5a1")
+		(:authors
+		 ("Tilman Rassy" . "tilman.rassy@googlemail.com"))
+		(:maintainer "Tilman Rassy" . "tilman.rassy@googlemail.com")
+		(:keywords "tools" "convenience" "files")
+		(:url . "https://github.com/tilmanrassy/emacs-dir-treeview"))])
