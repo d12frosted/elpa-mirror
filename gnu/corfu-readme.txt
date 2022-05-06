@@ -109,8 +109,8 @@ Table of Contents
   Corfu is highly flexible and customizable via `corfu-*' customization
   variables, such that you can adapt it precisely to your
   requirements. However in order to quickly try out the Corfu completion
-  package, it should be sufficient to activate `global-corfu-mode'. Then
-  you experiment with manual completion for example in an Elisp buffer
+  package, it should be sufficient to activate `global-corfu-mode'. You
+  can experiment with manual completion for example in an Elisp buffer
   or in an Eshell or Shell buffer. For auto completion, set
   `corfu-auto=t' before turning on `global-corfu-mode'.
 
@@ -131,21 +131,16 @@ Table of Contents
   │   ;; (corfu-echo-documentation nil) ;; Disable documentation in the echo area
   │   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
   │ 
-  │   ;; You may want to enable Corfu only for certain modes.
+  │   ;; Enable Corfu only for certain modes.
   │   ;; :hook ((prog-mode . corfu-mode)
   │   ;;        (shell-mode . corfu-mode)
   │   ;;        (eshell-mode . corfu-mode))
   │ 
   │   ;; Recommended: Enable Corfu globally.
-  │   ;; This is recommended since dabbrev can be used globally (M-/).
+  │   ;; This is recommended since Dabbrev can be used globally (M-/).
+  │   ;; See also `corfu-excluded-modes'.
   │   :init
   │   (global-corfu-mode))
-  │ 
-  │ ;; Use dabbrev with Corfu!
-  │ (use-package dabbrev
-  │   ;; Swap M-/ and C-M-/
-  │   :bind (("M-/" . dabbrev-completion)
-  │ 	 ("C-M-/" . dabbrev-expand)))
   │ 
   │ ;; A few more useful configurations...
   │ (use-package emacs
@@ -161,6 +156,23 @@ Table of Contents
   │   ;; Enable indentation+completion using the TAB key.
   │   ;; `completion-at-point' is often bound to M-TAB.
   │   (setq tab-always-indent 'complete))
+  └────
+
+  Dabbrev completion is based on `completion-in-region' and can be used
+  with Corfu.  You may want to swap the `dabbrev-completion' with the
+  `dabbrev-expand' key for easier access, if you prefer completion. Also
+  take a look at the `cape-dabbrev' completion at point function
+  provided by my [Cape] package.
+
+  ┌────
+  │ ;; Use Dabbrev with Corfu!
+  │ (use-package dabbrev
+  │   ;; Swap M-/ and C-M-/
+  │   :bind (("M-/" . dabbrev-completion)
+  │ 	 ("C-M-/" . dabbrev-expand))
+  │   ;; Other useful Dabbrev configurations.
+  │   :custom
+  │   (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))
   └────
 
   If you start to configure the package more deeply, I recommend to give
@@ -200,6 +212,8 @@ Table of Contents
 
 
 [GNU ELPA] <http://elpa.gnu.org/packages/corfu.html>
+
+[Cape] <https://github.com/minad/cape>
 
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
@@ -538,14 +552,13 @@ Table of Contents
     expressions are separated by spaces or another character (see
     `corfu-separator').
 
-  • [Cape]: I collect additional Capf backends and
-    `completion-in-region' commands in my [Cape] package. The package
-    provides a file path, a dabbrev completion backend and a backend
-    which allows you to enter unicode characters in the form of TeX
-    commands. Cape provides an adapter to reuse Company backends in
-    Corfu. Furthermore the function `cape-super-capf' can merge/groups
-    multiple Capfs, such that the candidates of multiple Capfs are
-    displayed together at the same time.
+  • [Cape]: Additional Capf backends and `completion-in-region' commands
+    are provided by the [Cape] package. Among others, the package
+    supplies a file path and a dabbrev completion backend. Cape provides
+    the `cape-company-to-capf' adapter to reuse Company backends in
+    Corfu. Furthermore the function `cape-super-capf' can merge multiple
+    Capfs, such that the candidates of multiple Capfs are displayed
+    together at the same time.
 
   • [kind-icon]: Icons are supported by Corfu via an external
     package. For example the [kind-icon] package provides beautifully
@@ -591,15 +604,14 @@ Table of Contents
     which implements a similar interaction model and popup UI as
     Corfu. While Corfu relies exclusively on the standard Emacs
     completion API (Capfs), Company defines its own API for the
-    backends. Furthermore Company includes its completion backends,
-    which are incompatible with the Emacs completion infrastructure. As
-    a result of this design, Company is a more complex package than
-    Corfu. Company by default uses overlays to display the popup in
-    contrast to the child frames used by Corfu. Overall both packages
-    work well. Company is more mature but the integration into Emacs is
-    a bit less tight, since for example the `completion-at-point'
-    command (or the `completion-in-region' function) does not invoke
-    Company.
+    backends. Company includes its completion backends, which are
+    incompatible with the Emacs completion infrastructure. As a result
+    of this design, Company is a more complex package than
+    Corfu. Company by default uses overlays for the popup in contrast to
+    the child frames used by Corfu. Overall both packages work well, but
+    Company integrates less tightly with Emacs. The `completion-styles'
+    support is more limited and the `completion-at-point' command and
+    the `completion-in-region' function do not invoke Company.
 
   • [Mct]: Protesilaos' Minibuffer Confines Transcended package supports
     both minibuffer completion and completion in region. It reuses the

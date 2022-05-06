@@ -3,23 +3,11 @@ Fetcher: github
 Source:  https://github.com/jhradilek/emacs-mallard-mode.git
 
 Updating /mnt/store/melpa/working/mallard-mode/
-Checking out origin/HEAD
-Checking out c48170c1ace4959abcc5fb1df0d4cb149cff44c1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/mallard-mode/
-  to /tmp/mallard-modeaXshJv/mallard-mode-20131204.425
-    mallard-mode.el -> mallard-mode.el
-    schema => schema
-Created mallard-mode-20131204.425.tar containing:
-  mallard-mode-20131204.425/
-  mallard-mode-20131204.425/mallard-mode-pkg.el
-  mallard-mode-20131204.425/mallard-mode.el
-  mallard-mode-20131204.425/schema/
-  mallard-mode-20131204.425/schema/mallard-1.0.rnc
-  mallard-mode-20131204.425/schema/schemas.xml
-Built mallard-mode in 3.663s, finished at 2022-05-06T05:45:13+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  372 May  6 05:45 packages/mallard-mode-20131204.425.entry
- 40K -rw-r--r-- 1 root root  40K May  6 05:45 packages/mallard-mode-20131204.425.tar
-4.0K -rw-r--r-- 1 root root 1.2K May  6 05:45 packages/mallard-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   40 May  6 05:45 packages/mallard-mode-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/jhradilek/emacs-mallard-mode.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
