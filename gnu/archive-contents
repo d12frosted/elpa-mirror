@@ -3006,16 +3006,20 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "7157ec61c451e3b97ba6117688d0de52bf294bea"))])
  (tomelr .
-	 [(0 2 5)
+	 [(0 3 0)
 	  ((emacs
-	    (26 3)))
+	    (26 3))
+	   (map
+	    (3 2 1))
+	   (seq
+	    (2 23)))
 	  "Convert S-expressions to TOML" tar
 	  ((:url . "https://github.com/kaushalmodi/tomelr/")
 	   (:keywords "data" "tools" "toml" "serialization" "config")
 	   (:maintainer "Kaushal Modi" . "kaushal.modi@gmail.com")
 	   (:authors
 	    ("Kaushal Modi" . "kaushal.modi@gmail.com"))
-	   (:commit . "8fc2257ec072a3fc3316c7f311722db50b37558e"))])
+	   (:commit . "ede27810243a3bf0872d4d30bb02a51ba9e8166f"))])
  (tramp .
 	[(2 5 2 4)
 	 ((emacs
