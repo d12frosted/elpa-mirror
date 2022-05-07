@@ -7,7 +7,7 @@ Table of Contents
 ..... 1. Using ELPA
 ..... 2. From a repository checkout
 4. Basic configuration
-.. 1. Completion with company-mode
+.. 1. Completion at point
 .. 2. Macro expansion with macrostep-geiser
 5. Quick key reference
 .. 1. In Scheme buffers:
@@ -154,20 +154,24 @@ Table of Contents
   To start a REPL, run `M-x geiser'.
 
 
-4.1 Completion with company-mode
-────────────────────────────────
+4.1 Completion at point
+───────────────────────
 
   Geiser offers identifier and module name completion, bound to `M-TAB'
   and `M-`' respectively. Only names visible in the current module are
   offered.
 
   While that is cool and all, things are even better: if you have
-  [company mode] installed, Geiser's completion will use it. Just
-  require company-mode and, from then on, any new scheme buffer or REPL
-  will use it.
+  [Company] or [Corfu] installed, Geiser's completion will integrate
+  with it. Just enable global-company-mode/corfu-global-mode and, from
+  then on, any new scheme buffer or REPL will use it. Alternatively you
+  can activate company-mode or corfu-mode individually only in some
+  buffers.
 
 
-[company mode] <http://company-mode.github.io/>
+[Company] <http://company-mode.github.io/>
+
+[Corfu] <https://github.com/minad/corfu>
 
 
 4.2 Macro expansion with macrostep-geiser
