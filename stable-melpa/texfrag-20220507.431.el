@@ -4,8 +4,8 @@
 
 ;; Author: Tobias Zawada <i@tn-home.de>
 ;; Keywords: tex, languages, wp
-;; Package-Commit: a5f59e0c5f43578f139a2943bd08e5b3140f4c2b
-;; Package-Version: 20200716.1331
+;; Package-Commit: ec99cba30602b65dc0c7ad7f6d440c9e30856985
+;; Package-Version: 20220507.431
 ;; Package-X-Original-Version: 1.0.1
 ;; URL: https://github.com/TobiasZawada/texfrag
 ;; Package-Requires: ((emacs "25") (auctex "11.90.2"))
@@ -138,7 +138,8 @@
     (texfrag-prog prog-mode)
     (texfrag-trac-wiki trac-wiki-mode)
     (texfrag-markdown markdown-mode)
-    (texfrag-org org-mode))
+    (texfrag-org org-mode)
+    (texfrag-adoc adoc-mode))
   "Alist that maps texfrag setup functions to lists of major modes.
 Each element is a `cons'.
 The `car' of the cons is the symbol of the texfrag setup function
@@ -275,11 +276,11 @@ Defaults to the empty string.  Should include the enclosing brackets."
 (require 'tex-site nil t)
 (require 'preview nil t)
 (require 'cl-lib)
+(require 'shr) ;;< parsing html images
 (require 'tex-site)
 (require 'tex)
 (require 'subr-x)
 (require 'face-remap) ;;< `text-scale-mode'
-(require 'seq)
 
 (defvar-local texfrag-header-function #'texfrag-header-default
   "Function that collects all LaTeX header contents from the current buffer.")
@@ -301,7 +302,7 @@ b: beginning of equation region
 e: end of equation region
 eqn: equation text inclusive delimiters, e.g.,
      $ or \\begin{align*}...\\end{align*}
-     (it is not necessarily equal to (buffer-substring b e))
+     Clearly, it may differ from (buffer-substring b e).
 match: entry from `texfrag-frag-alist' associated with the match")
 
 (defvar-local texfrag-previous-frag-function #'texfrag-previous-frag-default
@@ -358,7 +359,16 @@ into newlines by `texfrag-fix-display-math'.
 :generator (default: nil)
 May be nil or a generator function to be called with the transformed match as argument.
 The generator should return the image or a file name to the image to be displayed.
-")
+
+:filter (default: nil)
+May be nil or a filter function to be called with the original match as argument.
+Returns the transformed match to be inserted in the auxiliary LaTeX file
+
+:begin-group-number (default: 0)
+:end-group-number (default: 0)
+Number of the regexp group in the begin regexp and the end regexp, respectively,
+that really delimit the begin marker and the end marker in the source file.
+.")
 
 (defvar-local texfrag-equation-filter #'identity
   "Filter function transforming the equation text from the original buffer into the equation text in the LaTeX buffer.")
@@ -425,7 +435,12 @@ returns the result of
 	     (match-data (cadr args))
 	     (str-length (length str)))
 	(setq ret (append ret
-			  (mapcar (lambda (i) (+ i offset)) match-data))
+			  (mapcar
+			   (lambda (i)
+			     ;; match-beginnin/end of non-matching optional groups can give nil:
+			     (and (number-or-marker-p i)
+				  (+ i offset)))
+			   match-data))
 	      offset (+ offset str-length)
 	      args (cddr args))))
     (cons 0 (cons offset ret))))
@@ -449,33 +464,48 @@ for further details about the argument and the return value."
     (while (and (null found)
 		(re-search-forward re-b bound t))
       (let* ((bOuter (match-beginning 0))
-             (bInner (point))
-             (bStr (match-string 0))
-             (matchList (cl-assoc bStr texfrag-frag-alist
+             (bStrMatch (match-string 0))
+	     bRegexp
+             (matchList (cl-assoc bStrMatch texfrag-frag-alist
 				  :test
 				  (lambda (key candidate)
 				    (string-match
-				     (texfrag-regexp-begin candidate)
-				     key)))))
+				     (setq bRegexp (texfrag-regexp-begin candidate))
+				     key))))
+	     (bMatches (match-data))
+	     (matchList-plist (nthcdr 4 matchList))
+	     (equation-filter (plist-get matchList-plist :filter))
+	     (bGroup (or (plist-get matchList-plist :begin-group-number) 0))
+	     (eGroup (or (plist-get matchList-plist :end-group-number) 0))
+	     bInner
+	     bStr)
+	(save-excursion
+	  (goto-char bOuter)
+	  ;; Correction of the match-data to make bGroup work:
+	  (cl-assert (looking-at bRegexp) "Selected regexp %s for TeX fragment candidate not matching" bRegexp)
+	  (setq bInner (match-end bGroup)
+		bStr (match-string bGroup))
+	  )
 	(when (or (stringp (car matchList))
 		  (funcall (cadar matchList)))
 	  (setq found
 		(let*
-		    ((bMatches (match-data))
-		     (e-re (texfrag-combine-regexps (nth 1 matchList) bMatches bStr))
-		     (eOuter (re-search-forward e-re nil t))
-		     (eInner (match-beginning 0))
-		     (eStr (match-string 0)) ;; for consistency
-		     (eMatches (progn (string-match e-re eStr) (match-data))) ;; for consistency
-		     (cStr (concat bStr eStr)) ;; combined string
-		     (cMatches (texfrag-combine-match-data bStr bMatches eStr eMatches))
+		    ((e-re (texfrag-combine-regexps (nth 1 matchList) bMatches bStrMatch))
+		     (eOuter (progn (re-search-forward e-re nil t)
+				    (match-end eGroup)))
+		     (eInner (match-beginning eGroup))
+		     (eStr (match-string 0))
+		     (eMatches (when (string-match e-re eStr) (match-data))) ;; for consistency
+		     (cStr (concat bStrMatch eStr)) ;; combined string
+		     (cMatches (texfrag-combine-match-data bStrMatch bMatches eStr eMatches))
 		     )
 		  (unless eOuter
 		    (user-error "LaTeX fragment beginning at %s with %s in buffer %s not closed" bOuter bStr (current-buffer))) ;; Changed %d for bOuter to %s to handle case bOuter==nil.
 		  (set-match-data cMatches)
 		  (list bOuter eOuter
 			(concat (replace-match (nth 2 matchList) nil nil cStr)
-				(funcall texfrag-equation-filter (buffer-substring-no-properties bInner eInner))
+				(save-match-data
+				  (funcall (or equation-filter texfrag-equation-filter) (buffer-substring-no-properties bInner eInner)))
 				(replace-match (nth 3 matchList) nil nil cStr))
 			matchList))))))
     found))
@@ -490,6 +520,8 @@ for further details about the argument and the return value."
              (eOuter (match-end 0))
              (eStr (match-string 0))
              (matchList (cl-rassoc eStr texfrag-frag-alist :test (lambda (key candidate) (string-match (car candidate) key))))
+	     (matchList-plist (nthcdr 4 matchList))
+	     (equation-filter (plist-get matchList-plist :filter))
 	     (eMatches (match-data))
              (bOuter (re-search-backward (texfrag-regexp-begin matchList) nil t))
              (bInner (match-end 0))
@@ -503,7 +535,7 @@ for further details about the argument and the return value."
 	(set-match-data cMatches)
         (list bOuter eOuter
               (concat (replace-match (nth 2 matchList) nil nil cStr)
-                      (funcall texfrag-equation-filter (buffer-substring-no-properties bInner eInner))
+                      (funcall (or equation-filter texfrag-equation-filter) (buffer-substring-no-properties bInner eInner))
                       (replace-match (nth 3 matchList) nil nil cStr))
 	      matchList)))))
 
@@ -750,6 +782,41 @@ This variable is the link back from the LaTeX-buffer to the source buffer.")
 A non-nil value indicates that `preview-region' is running in the LaTeX target buffer.
 The actual value is the LaTeX target buffer.")
 
+(defvar-local texfrag-permanent-image-dir nil
+  "Permanent image directory.
+Either nil or a relative directory where
+the images of texfrag are stored.
+
+If `texfrag-image-dir' is nil the images are stored
+in the preview directory and can be deleted any time by AucTeX preview.")
+
+(defun texfrag-permanent-file-name (file)
+  "Create permanent file name from FILE.
+See variable `texfrag-permanent-image-dir'."
+  (expand-file-name (file-name-nondirectory file) texfrag-permanent-image-dir))
+
+(defun texfrag-move-image (ol)
+  "If `texfrag-permanent-image-dir' is a directory replace OL with an image.
+Place an overlay with property 'texfrag and 'display
+in the source buffer instead of the preview overlay OL."
+  ;; file name structure from `preview-delete' and `preview-make-filename'
+  (when-let (((stringp texfrag-permanent-image-dir))
+	     (b-src (overlay-start ol))
+	     (e-src (overlay-end ol))
+	     (d (overlay-get ol 'display))
+	     ((eq (car d) 'image))
+	     (image-props (cdr d))
+	     (old-filename (plist-get image-props :file))
+	     (new-filename (texfrag-permanent-file-name old-filename))
+	     (new-ol (make-overlay b-src e-src)))
+    (mkdir texfrag-permanent-image-dir t)
+    (rename-file old-filename new-filename t)
+    (setq image-props (plist-put image-props :file new-filename)
+	  d (cons 'image image-props))
+    (overlay-put new-ol 'display d)
+    (overlay-put new-ol 'preview-image (list d))
+    (preview-delete ol)))
+
 (defun texfrag-after-tex ()
   "Buffer-local hook function for `texfrag-after-preview-hook'.
 It is used in LaTeX buffers generated by texfrag."
@@ -800,6 +867,9 @@ Delete also the corresponding output buffer."
 	       "Texfrag-tex-buffer %s still live." texfrag-tex-buffer)
     (setq texfrag-tex-buffer nil)))
 
+(defvar texfrag-before-preview-hook nil
+  "Buffer-local hook run at the beginning of `texfrag-region'.")
+
 (defvar texfrag-after-preview-hook nil
   "Buffer-local hook run after the preview images have been created.
 \(i.e., after `preview-parse-messages').
@@ -832,18 +902,30 @@ or the string itself."
 	      (user-error "Unrecognized format of %s: %s" (quote ,fun) ,fun)
 	      )))))
 
+(defun texfrag-image-p (img)
+  "Test whether IMG is an image."
+  ;; See (info "(elisp)Image Descriptors")
+  (and
+   (eq (car img) 'image)
+   (plist-get (cdr img) :type)))
+
 (defun texfrag-generator-place-preview (ov img _box &optional _counters _tempdir &rest _place-opts)
   "Call me like `preview-gs-place'.
 Return OV after setting 'preview-image to a cons (IMG . IMG)
 assuming that img is already an image."
-  (when (stringp img)
+  (cond
+   ((stringp img)
     (setq img (expand-file-name img))
     (if	(and (file-readable-p img)
 	     (null (file-directory-p img)))
-      (progn
-	(setq img (create-image img))
-	(overlay-put ov 'preview-image (cons img img)))
+	(progn
+	  (setq img (create-image img))
+	  (overlay-put ov 'preview-image (cons img img)))
       (warn "Cannot find image file %S" img)))
+   ((texfrag-image-p img)
+    (overlay-put ov 'preview-image (cons img img)))
+   (t
+    (error "Unknown image format")))
   ov)
 
 (defun texfrag-scale-from-face ()
@@ -876,6 +958,7 @@ which runs after `preview-document'.
 from the LaTeX target file buffer to the source buffer.
 B defaults to `point-min' and E defaults to `point-max'."
   (interactive "r")
+  (run-hooks 'texfrag-before-preview-hook)
   (unless b (setq b (point-min)))
   (unless e (setq e (point-max)))
   (let ((make-backup-files nil)
@@ -886,12 +969,16 @@ B defaults to `point-min' and E defaults to `point-max'."
 					 (replace-regexp-in-string
 					  "-with-signature" ""
 					  (symbol-name (or coding-system-for-write buffer-file-coding-system)))))
-		tex-buf
-		found
-		found-str
-		(texfrag--scale texfrag-scale)
-		(texfrag--preview-scale-function preview-scale-function)
-		(texfrag--text-scale-mode-amount text-scale-mode-amount))
+	tex-buf
+	found
+	found-str
+	(texfrag--permanent-image-dir texfrag-permanent-image-dir)
+	(texfrag--scale texfrag-scale)
+	(texfrag--preview-scale-function preview-scale-function)
+	(texfrag--preview-image-type preview-image-type)
+	(texfrag--text-scale-mode text-scale-mode)
+	(texfrag--text-scale-mode-step text-scale-mode-step)
+	(texfrag--text-scale-mode-amount text-scale-mode-amount))
     (let (auto-insert-alist auto-insert)
       (setq tex-buf (find-file-noselect tex-path)
             texfrag-tex-buffer tex-buf))
@@ -940,9 +1027,14 @@ B defaults to `point-min' and E defaults to `point-max'."
 	      (with-current-buffer src-buf
 		(setq texfrag-running tex-buf))
 	      (let ((preview-auto-cache-preamble t))
+		(when texfrag--text-scale-mode
+		  (setq text-scale-mode-amount texfrag--text-scale-mode-amount
+			text-scale-mode-step texfrag--text-scale-mode-step))
+		(text-scale-mode (if texfrag--text-scale-mode 1 -1))
 		(setq texfrag-scale texfrag--scale
-		      preview-scale-function texfrag--preview-scale-function
-		      text-scale-mode-amount texfrag--text-scale-mode-amount)
+		      preview-scale-function texfrag--preview-scale-function)
+		(setq texfrag-permanent-image-dir texfrag--permanent-image-dir)
+		(setq-local preview-image-type texfrag--preview-image-type)
 		(preview-document)
 		))))
       (setq texfrag-running nil))))
@@ -1008,6 +1100,7 @@ read-only-mode: nil
 End:
 -->8------------------------------------------------------------------"
   (interactive "r")
+  ;; Note: Setting the variable `TeX-process-asynchronous' to nil leads to errors.
   (texfrag-region b e)
   (when (texfrag-while-not-quit-and texfrag-running texfrag-poll-time)
     (keyboard-quit))
@@ -1016,7 +1109,13 @@ End:
   ;; to convert the ps file into png images
   ;; We can only check whether the images are prepared.
   (when (texfrag-while-not-quit-and (null (texfrag-ready-p b e)) texfrag-poll-time)
-    (keyboard-quit)))
+    (keyboard-quit))
+  ;; The images are ready and we can move them.
+  (when (stringp texfrag-permanent-image-dir)
+    (cl-loop for ol being the overlays from b to e
+	     when (overlay-get ol 'preview-state)
+	     do (texfrag-move-image ol))
+    ))
 
 (defvar-local texfrag-preview-region-function nil
   "A function registered here will override the behavior of `preview-region'.
@@ -1275,6 +1374,9 @@ Formulas can be LaTeX fragments or LaTeX environments."
 
 (defvar org-html-with-latex)
 
+(defvar texfrag-org-html-inhibit-equation-labels nil
+  "Inhibit Org-generated equation labels during Org HTML export.")
+
 (defun texfrag-org ()
   "Texfrag setup for `org-mode'."
   (setq texfrag-frag-alist
@@ -1282,10 +1384,16 @@ Formulas can be LaTeX fragments or LaTeX environments."
 	  (("\\$" texfrag-org-latex-p) "\\$" "$" "$")
           (("\\\\(" texfrag-org-latex-p) "\\\\)" "$" "$")
 	  (("\\\\\\[" texfrag-org-latex-p) "\\\\\\]" "\\\\[" "\\\\]" :display t)
-          (("\\\\begin{\\([a-z*]+\\)}" texfrag-org-latex-p) "\\\\end{\\1}" "\\\\begin{\\2}" "\\\\end{\\2}" :display t))
+          (("\\\\begin{\\([a-z*]+\\)}" texfrag-org-latex-p) "\\\\end{\\1}" "\\\\begin{\\2}" "\\\\end{\\2}" :display t)
+	  ("^[[:space:]]*#\\+begin_export[[:space:]]+latex" "^[[:space:]]*#\\+end_export" "\\\\begin{preview}" "\\\\end{preview}"))
 	texfrag-comments-only nil
-        texfrag-header-function #'texfrag-org-header
-        org-html-with-latex 'dvipng) ;; Export of LaTeX formulas as embedded formulas only works this way.
+        texfrag-header-function #'texfrag-org-header)
+  (if texfrag-mode
+      (progn
+	(setq-local org-html-with-latex 'dvipng) ;; Export of LaTeX formulas as embedded formulas only works this way.
+	(setq-local texfrag-org-html-inhibit-equation-labels t))
+    (setq-local org-html-with-latex (default-value 'org-html-with-latex))
+    (setq-local texfrag-org-html-inhibit-equation-labels nil))
   )
 
 (defcustom texfrag-org-keep-minor-modes 'texfrag
@@ -1316,6 +1424,133 @@ nil: dont preserve any minor modes"
 	(funcall minor-mode)))))
 
 (advice-add 'org-mode-restart :around #'texfrag-org-keep-minor-modes)
+
+(defun texfrag-org-html-inhibit-equation-labels-filter-args (args)
+  "Avoid equation labels in Org exported HTML.
+Do so only if `texfrag-org-html-inhibit-equation-labels' is non-nil.
+Filter ARGS advice for `org-html--wrap-latex-environment'."
+  (if (and (>= (length args) 3)
+	   texfrag-org-html-inhibit-equation-labels)
+      (let ((args (copy-seq args)))
+	;; Arguments of `org-html--wrap-latex-environment':
+	;; (CONTENTS _ &optional CAPTION LABEL)
+	(setf (nth 2 args) ;; CAPTION
+	      "")
+	args)
+    args))
+
+(with-eval-after-load "ox-html"
+  (advice-add 'org-html--wrap-latex-environment :filter-args #'texfrag-org-html-inhibit-equation-labels-filter-args))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; adoc-mode
+
+(defun texfrag-adoc-comment-forward (&optional count empty-line-stop)
+  "Skip forward over COUNT comments.
+If EMPTY-LINE-STOP is non-nil stop at empty lines.
+If COUNT comments are skipped as requested return t else return nil."
+  (unless count (setq count 1))
+  (let ((found t)
+	(skip (if empty-line-stop "[:blank:]" "[:space:]\n")))
+    (while (and found
+		(>=  (decf count) 0))
+      (skip-chars-forward skip)
+      (cond
+       ((looking-at "\n[[:blank:]]*\n")
+	(forward-line)
+	(setq found nil))
+       ((looking-at "\n")
+	(forward-line))
+       ((looking-at "//[^/]")
+	(forward-line 1))
+       ((looking-at "^////$")
+	(forward-line)
+	(re-search-forward "^////$")
+	(forward-line))
+       ((looking-at "^\\[comment\\]$")
+	(forward-line)
+	(let ((end-re (if (looking-at "--+$") (format "^%s" (match-string 0)) "^$")))
+	  (forward-line)
+	  (re-search-forward  end-re))
+	(forward-line))
+       (t
+	(setq found nil))))))
+
+(defmacro texfrag-with-wide-buffer (&rest body)
+  "Execute BODY in temporarily wide buffer, also save excursion."
+  (declare (debug (body)))
+  `(save-excursion
+     (save-restriction
+       (widen)
+       ,@body)))
+
+;; https://docs.asciidoctor.org/asciidoc/latest/attributes/names-and-values/#user-defined
+(defconst texfrag-adoc-attr-regexp "[[:alnum:]_][[:alnum:]_-]+"
+  "Regexp matching attribute names.")
+
+(defvar texfrag-adoc-header-attr-alist nil
+  "Alist of the header attributes of the adoc document.
+Each entry is a cons with the attribute name string as car
+and the value string as cdr.
+The attributes can be parsed by `texfrag-adoc-read-header'.")
+
+(cl-defun texfrag-adoc-read-header (&key (var 'texfrag-adoc-header-attr-alist))
+  "Read header attributes from adoc file.
+Returns alist mapping header attributes to values (as strings)
+and binds the value to symbol VAR defaulting to `texfrag-adoc-header-attribute-alist'."
+  (texfrag-with-wide-buffer
+   (goto-char (point-min))
+   ;; find beginning of header:
+   (texfrag-adoc-comment-forward most-positive-fixnum)
+   (let* ((attr-re (format "^:\\(%s\\):[[:blank:]]*" texfrag-adoc-attr-regexp))
+	  (attr-re-or-blank-line (concat attr-re "\\|^[[:blank:]]*$"))
+	  ret)
+     (while
+	 (progn
+	   (texfrag-adoc-comment-forward most-positive-fixnum t)
+	   (and
+	    (null (looking-at "^[[:blank:]]*$"))
+	    (cond
+	     ((looking-at attr-re)
+	      (push (cons (match-string-no-properties 1) (buffer-substring-no-properties (match-end 0) (line-end-position))) ret)
+	      (forward-line)
+	      t)
+	     ((looking-at "^=[[:space:]]")
+	      (push (cons "title" (buffer-substring-no-properties (match-end 0) (line-end-position))) ret)
+	      ;; author lines and revision lines:
+	      (while (progn
+		       (forward-line)
+		       (texfrag-adoc-comment-forward most-positive-fixnum t)
+		       (null (looking-at attr-re-or-blank-line))))
+	      t)
+	     ))))
+     (setq ret (nreverse ret))
+     (when (symbolp var)
+       (set var ret))
+     ret)))
+
+(defun texfrag-adoc-inline-filter (equation)
+  "Filter escape characters ?\\ out of EQUATION."
+  (replace-regexp-in-string "\\(\\(?:\\`\\|[^\\\\]\\)\\(\\\\\\\\\\)*\\)\\\\]" "\\1]" equation))
+
+(defun texfrag-adoc-image-generator (file)
+  "Transforms FILE name into an absolute path considering :imagesdir:."
+  (unless (file-name-absolute-p file)
+    (let ((imagesdir (alist-get "imagesdir" texfrag-adoc-header-attr-alist default-directory nil #'string-equal)))
+      (setq file (expand-file-name file imagesdir))))
+  file)
+
+(defun texfrag-adoc ()
+  "Setup for adoc support for `texfrag'."
+  (setq texfrag-frag-alist
+	(list
+	 '("\\<latexmath:\\[" "\\([^\\\\]\\(?:\\\\\\\\\\)*\\)\\(\\]\\)" "\\\\(" "\\\\)" :filter texfrag-adoc-inline-filter :end-group-number 2)
+	 '("^\\[latexmath\\]\n\\(\\+\\++$\\)" "^\\1" "\\\\[" "\\\\]" :display t)
+	 '("\\(image::?\\)[^[:space:]]" "[^[:space:]]\\(\\)\\[" "" "" :begin-group-number 1 :end-group-number 1 :generator texfrag-adoc-image-generator))
+	texfrag-comments-only nil
+	)
+  (add-hook 'texfrag-before-preview-hook #'texfrag-adoc-read-header nil t)
+  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; trac-wiki-mode
@@ -1349,9 +1584,30 @@ nil: dont preserve any minor modes"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; html-mode
 
+;; Copy of `shr-image-from-data', modified to also allow newlines:
+(defun texfrag-image-from-data (data)
+  "Return an image from the data: URI content DATA."
+  (when (string-match
+	 "\\(\\([^/;,]+\\(/[^;,]+\\)?\\)\\(;[^;,]+\\)*\\)?,\\(\\(.\\|\n\\)*\\)"
+	 data)
+    (let ((param (match-string 4 data))
+	  (payload (url-unhex-string (match-string 5 data))))
+      (when (and param
+                 (string-match "^.*\\(;[ \t]*base64\\)$" param))
+	(setq payload (ignore-errors
+                        (base64-decode-string payload))))
+      payload)))
+
+(defun texfrag-html-image-generator (path)
+  "Return the image if PATH describes an image data url and PATH otherwise."
+  (let ((img (texfrag-image-from-data path)))
+    (if img
+	(create-image img nil t)
+      path)))
+
 (defcustom texfrag-html-frag-alist
   (append texfrag-LaTeX-frag-alist
-	  '(("<img[[:space:]]+src=\"" "\"[^>]*>" "" "" :generator identity)))
+	  '(("<img[[:space:]]+src=\"" "\"[^>]*>" "" "" :generator texfrag-html-image-generator)))
   "Regular expression for TeX fragments in HTML pages."
   :group 'texfrag
   :type texfrag-frag-alist-type)
@@ -1536,6 +1792,15 @@ This is an around advice for `preview-disabled-string' as FUN with arg OV."
 
 (add-hook 'LaTeX-mode-hook #'texfrag-show-last--preview-menu)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Allow file-local setting of `preview-image-type':
+(defun texfrag--preview-call-hook-buffer-with-local-image-type (&rest _args)
+  "Use `preview-image-type' from `TeX-command-buffer' for `preview-call-hook'.
+This can be used as a :before advice for `preview-call-hook'."
+  (when (buffer-live-p TeX-command-buffer) ;; generators in `texfrag-frag-alist' don't need TeX
+    (setq-local preview-image-type (with-current-buffer TeX-command-buffer preview-image-type))))
+
+(advice-add 'preview-call-hook :before #'texfrag--preview-call-hook-buffer-with-local-image-type)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (provide 'texfrag)
