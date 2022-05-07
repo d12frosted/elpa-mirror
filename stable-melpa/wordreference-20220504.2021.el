@@ -5,7 +5,7 @@
 ;;
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
 ;; Package-Version: 20220504.2021
-;; Package-Commit: 30d2ddb9a0a4ad0223bae81ba56d65b620dccf0b
+;; Package-Commit: 785a5d3245efdc3f32ce61fad1c7596230682f3a
 ;; Keywords: convenience, translate
 ;; URL: https://codeberg.org/martianh/wordreference.el
 ;; Version: 0.2

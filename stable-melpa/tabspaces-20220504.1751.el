@@ -4,7 +4,7 @@
 ;; Maintainer: Colin McLear
 ;; Version: 1.2
 ;; Package-Version: 20220504.1751
-;; Package-Commit: d8c9e06b4260c970b5a26e14c11d5e396dfc1de1
+;; Package-Commit: 86ab30106d2aeb850519ec09c591e5d2180320b5
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
