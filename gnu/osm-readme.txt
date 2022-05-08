@@ -18,6 +18,15 @@ Table of Contents
 data is © [OpenStreetMap] contributors, licensed under the [ODbL] The
 map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
 
+Osm.el is a tile-based map viewer, with a responsive moveable and
+zoomable display. The map can be controlled with the keyboard or with
+the mouse. The viewer fetches the map tiles in parallel from tile
+servers via the `curl' program.  The package comes with a list of
+multiple preconfigured tile servers. You can bookmark your favorite
+locations using regular Emacs bookmarks or create links from Org files
+to locations. Furthermore the package provides commands to search for
+locations by name and to open and display GPX tracks.
+
 
 [OpenStreetMap] <https://www.openstreetmap.org/copyright>
 
@@ -31,7 +40,7 @@ map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
 1 Features
 ══════════
 
-  • Zoomable and moveable map display
+  • Responsive, zoomable and moveable map display
   • Display of tracks and POIs from GPX file
   • Parallel fetching of tiles with curl
   • Moving in large and small steps
@@ -100,6 +109,7 @@ map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
   • 
   • 
   • 
+  • Address link: <osm:Tour Eiffel, Av. Gustave Eiffel, Paris>
 
 
 ◊ 3.0.0.2 Elisp link examples
@@ -115,6 +125,7 @@ map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
   │ (osm 55.686875 12.569733 12 cyclosm "København, Københavns Kommune, Region Hovedstaden, 1357, Danmark")
   │ (osm 40.729568 -73.979187 12 stamen-watercolor "New York County, New York, United States")
   │ (osm 27.961656 86.892242 13 opentopomap "Khumjung, Khumbupasanglahmu, सोलुखुम्बु, Province #1, Nepal")
+  │ (osm "Tour Eiffel, Av. Gustave Eiffel, Paris") ;; Address link
   └────
 
 
@@ -134,26 +145,27 @@ map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
   • `C-<arrow>', `M-<arrow>': Large step scrolling
   • `+', `SPC': `osm-zoom-in' - Zoom in
   • `-', `S-SPC': `osm-zoom-out' - Zoom out
-  • `<mouse-1>': `osm-center-click' - Center to point
+  • `<mouse-1>': `osm-transient-click' - Place transient pin at point
   • `<mouse-2>': `osm-org-link-click' - Store point as Org link
   • `<mouse-3>': `osm-bookmark-set-click' - Store point as bookmark
   • `<osm-bookmark mouse-*>': `osm-bookmark-delete-click' - Click on
     bookmark at point to delete
   • `<down-mouse-*>': `osm-mouse-drag' - Drag the map with the mouse
   • `d', `DEL': `osm-bookmark-delete' - Delete selected bookmark
-  • `n': `osm-bookmark-rename' - Rename selected bookmark
   • `t': `osm-goto' - Go to location
+  • `c': `osm-center' - Center to currently marked pin
   • `h': `osm-home' - Go to home location
   • `s': `osm-search' - Search for location
   • `v': `osm-server' - Select tile server
   • `x': `osm-gpx-show' - Show tracks and POIs from GPX file
   • `X': `osm-gpx-hide' - Hide overlays from GPX file
-  • `l': `org-store-link' - Store org link
+  • `l': `org-store-link' - Store Org link
   • `e': `osm-elisp-link' - Store Elisp link in the kill ring
   • `b': `osm-bookmark-set' - Set bookmark
+  • `n': `osm-bookmark-rename' - Rename selected bookmark
   • `j': `osm-bookmark-jump' - Jump to bookmark
   • `q': `quit-window' - Close buffer and window
-  • `c': `clone-buffer' - Clone buffer
+  • `o': `clone-buffer' - Clone buffer
 
 
 5 Related projects
