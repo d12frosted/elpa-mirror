@@ -1,13 +1,15 @@
 Package: idle-highlight-mode
-Fetcher: gitlab
-Source:  https://gitlab.com/ideasman42/emacs-idle-highlight-mode.git
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git
 
-Updating /mnt/store/melpa/working/idle-highlight-mode/
+Cloning https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git to /mnt/store/melpa/working/idle-highlight-mode/
 Checking out origin/HEAD
-Checking out 1ccacea86ed7aff1c94750a399cff2a623fe3771
-Built idle-highlight-mode in 4.538s, finished at 2022-05-08T11:27:12+0000
+Checking out 5418252a11b00377a59295e50b7436f53afe68bb
+Built idle-highlight-mode in 5.925s, finished at 2022-05-08T14:25:43+0000
  ✓ Success:
  16K -rwxr-xr-x 1 root root  16K May  8 11:27 packages/idle-highlight-mode-20220211.548.el
 4.0K -rw-r--r-- 1 root root  452 May  8 11:27 packages/idle-highlight-mode-20220211.548.entry
-4.0K -rw-r--r-- 1 root root 1.2K May  8 11:27 packages/idle-highlight-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  340 May  8 11:27 packages/idle-highlight-mode-readme.txt
+ 16K -rwxr-xr-x 1 root root  16K May  8 14:25 packages/idle-highlight-mode-20220507.1118.el
+4.0K -rw-r--r-- 1 root root  455 May  8 14:25 packages/idle-highlight-mode-20220507.1118.entry
+4.0K -rw-r--r-- 1 root root 1.2K May  8 14:25 packages/idle-highlight-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  340 May  8 14:25 packages/idle-highlight-mode-readme.txt

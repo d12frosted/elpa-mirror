@@ -8,7 +8,7 @@
 
 ;; URL: https://github.com/ideasman42/emacs-py-autopep8
 ;; Package-Version: 20220502.310
-;; Package-Commit: ef75a197a5333c500c9a432a286f9e4088fe9894
+;; Package-Commit: 89c9ed8de2deab6bb891ae25c85cc6498e60b90a
 ;; Keywords: convenience
 ;; Version: 2016.1
 ;; Package-Requires: ((emacs "26.1"))

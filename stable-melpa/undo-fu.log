@@ -1,18 +1,21 @@
 Package: undo-fu
-Fetcher: gitlab
-Source:  https://gitlab.com/ideasman42/emacs-undo-fu.git
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-undo-fu.git
 
-Updating /mnt/store/melpa/working/undo-fu/
+Cloning https://codeberg.org/ideasman42/emacs-undo-fu.git to /mnt/store/melpa/working/undo-fu/
 Checking out origin/HEAD
-Checking out b50b283a073b9b3216fccf38649320a529ca1517
-Built undo-fu in 4.345s, finished at 2022-05-08T11:59:02+0000
+Checking out 08a9f1494957ca6513bdf8be5de6801b33e3ee59
+Built undo-fu in 5.587s, finished at 2022-05-08T14:58:25+0000
  ✓ Success:
  16K -rw-r--r-- 1 root root  15K May  8 11:59 packages/undo-fu-20220412.2337.el
 4.0K -rw-r--r-- 1 root root  336 May  8 11:59 packages/undo-fu-20220412.2337.entry
-4.0K -rw-r--r-- 1 root root 1.2K May  8 11:59 packages/undo-fu-badge.svg
-4.0K -rw-r--r-- 1 root root  553 May  8 11:59 packages/undo-fu-readme.txt
- 28K -rwxr-xr-x 1 root root  26K May  8 09:00 packages/undo-fu-session-20220428.200.el
-4.0K -rw-r--r-- 1 root root  413 May  8 09:00 packages/undo-fu-session-20220428.200.entry
-4.0K -rw-r--r-- 1 root root 1.2K May  8 09:00 packages/undo-fu-session-badge.svg
-4.0K -rw-r--r-- 1 root root  531 May  8 09:00 packages/undo-fu-session-readme.txt
-4.0K -rw-r--r-- 1 root root  158 May  8 11:59 packages/undo-fu-session.log
+ 16K -rw-r--r-- 1 root root  15K May  8 14:58 packages/undo-fu-20220507.1118.el
+4.0K -rw-r--r-- 1 root root  338 May  8 14:58 packages/undo-fu-20220507.1118.entry
+4.0K -rw-r--r-- 1 root root 1.2K May  8 14:58 packages/undo-fu-badge.svg
+4.0K -rw-r--r-- 1 root root  553 May  8 14:58 packages/undo-fu-readme.txt
+ 28K -rwxr-xr-x 1 root root  26K May  8 11:59 packages/undo-fu-session-20220428.200.el
+4.0K -rw-r--r-- 1 root root  413 May  8 11:59 packages/undo-fu-session-20220428.200.entry
+ 28K -rwxr-xr-x 1 root root  26K May  8 14:58 packages/undo-fu-session-20220507.1118.el
+4.0K -rw-r--r-- 1 root root 1.2K May  8 11:59 packages/undo-fu-session-badge.svg
+4.0K -rw-r--r-- 1 root root  531 May  8 14:58 packages/undo-fu-session-readme.txt
+4.0K -rw-r--r-- 1 root root  296 May  8 14:58 packages/undo-fu-session.log

@@ -1,13 +1,15 @@
 Package: spell-fu
-Fetcher: gitlab
-Source:  https://gitlab.com/ideasman42/emacs-spell-fu.git
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-spell-fu.git
 
-Updating /mnt/store/melpa/working/spell-fu/
+Cloning https://codeberg.org/ideasman42/emacs-spell-fu.git to /mnt/store/melpa/working/spell-fu/
 Checking out origin/HEAD
-Checking out 32d7014730672aa68f6c079369840c1748bbf4a9
-Built spell-fu in 4.851s, finished at 2022-05-08T11:54:33+0000
+Checking out 2f2fd6de0003edb1038b7c639cf23264d1406993
+Built spell-fu in 6.372s, finished at 2022-05-08T14:53:53+0000
  ✓ Success:
  56K -rw-r--r-- 1 root root  56K May  8 11:54 packages/spell-fu-20220213.1215.el
 4.0K -rw-r--r-- 1 root root  390 May  8 11:54 packages/spell-fu-20220213.1215.entry
-4.0K -rw-r--r-- 1 root root 1.2K May  8 11:54 packages/spell-fu-badge.svg
-4.0K -rw-r--r-- 1 root root  531 May  8 11:54 packages/spell-fu-readme.txt
+ 56K -rw-r--r-- 1 root root  56K May  8 14:53 packages/spell-fu-20220507.1118.el
+4.0K -rw-r--r-- 1 root root  392 May  8 14:53 packages/spell-fu-20220507.1118.entry
+4.0K -rw-r--r-- 1 root root 1.2K May  8 14:53 packages/spell-fu-badge.svg
+4.0K -rw-r--r-- 1 root root  531 May  8 14:53 packages/spell-fu-readme.txt

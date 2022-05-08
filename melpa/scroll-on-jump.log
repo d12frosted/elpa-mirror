@@ -1,13 +1,15 @@
 Package: scroll-on-jump
-Fetcher: gitlab
-Source:  https://gitlab.com/ideasman42/emacs-scroll-on-jump.git
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-scroll-on-jump.git
 
-Updating /mnt/store/melpa/working/scroll-on-jump/
+Cloning https://codeberg.org/ideasman42/emacs-scroll-on-jump.git to /mnt/store/melpa/working/scroll-on-jump/
 Checking out origin/HEAD
-Checking out 1ea1961b4064cf7f8718e7c4e36e27d3c8f7b1b2
-Built scroll-on-jump in 3.580s, finished at 2022-05-08T11:51:44+0000
+Checking out 1cfa3e8a91427ef4066e5e62b035dda09cd6a7ae
+Built scroll-on-jump in 8.208s, finished at 2022-05-08T14:50:48+0000
  ✓ Success:
  24K -rw-r--r-- 1 root root  23K May  8 11:51 packages/scroll-on-jump-20220211.548.el
 4.0K -rw-r--r-- 1 root root  362 May  8 11:51 packages/scroll-on-jump-20220211.548.entry
-4.0K -rw-r--r-- 1 root root 1.2K May  8 11:51 packages/scroll-on-jump-badge.svg
-4.0K -rw-r--r-- 1 root root  218 May  8 11:51 packages/scroll-on-jump-readme.txt
+ 24K -rw-r--r-- 1 root root  23K May  8 14:50 packages/scroll-on-jump-20220507.1118.el
+4.0K -rw-r--r-- 1 root root  365 May  8 14:50 packages/scroll-on-jump-20220507.1118.entry
+4.0K -rw-r--r-- 1 root root 1.2K May  8 14:50 packages/scroll-on-jump-badge.svg
+4.0K -rw-r--r-- 1 root root  218 May  8 14:50 packages/scroll-on-jump-readme.txt

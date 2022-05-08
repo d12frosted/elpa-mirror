@@ -1,13 +1,15 @@
 Package: hl-block-mode
-Fetcher: gitlab
-Source:  https://gitlab.com/ideasman42/emacs-hl-block-mode.git
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-hl-block-mode.git
 
-Updating /mnt/store/melpa/working/hl-block-mode/
+Cloning https://codeberg.org/ideasman42/emacs-hl-block-mode.git to /mnt/store/melpa/working/hl-block-mode/
 Checking out origin/HEAD
-Checking out 17d5136bc6a2327d8710001ef930e8377160c996
-Built hl-block-mode in 6.129s, finished at 2022-05-08T11:26:09+0000
+Checking out 7e0452c768a4e309d1cdc15025683ebfe71e626f
+Built hl-block-mode in 6.535s, finished at 2022-05-08T14:24:53+0000
  ✓ Success:
  16K -rw-r--r-- 1 root root  15K May  8 11:26 packages/hl-block-mode-20220211.548.el
 4.0K -rw-r--r-- 1 root root  350 May  8 11:26 packages/hl-block-mode-20220211.548.entry
-4.0K -rw-r--r-- 1 root root 1.2K May  8 11:26 packages/hl-block-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  168 May  8 11:26 packages/hl-block-mode-readme.txt
+ 16K -rw-r--r-- 1 root root  15K May  8 14:24 packages/hl-block-mode-20220507.1118.el
+4.0K -rw-r--r-- 1 root root  353 May  8 14:24 packages/hl-block-mode-20220507.1118.entry
+4.0K -rw-r--r-- 1 root root 1.2K May  8 14:24 packages/hl-block-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  168 May  8 14:24 packages/hl-block-mode-readme.txt

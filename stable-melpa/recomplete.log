@@ -1,13 +1,15 @@
 Package: recomplete
-Fetcher: gitlab
-Source:  https://gitlab.com/ideasman42/emacs-recomplete.git
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-recomplete.git
 
-Updating /mnt/store/melpa/working/recomplete/
+Cloning https://codeberg.org/ideasman42/emacs-recomplete.git to /mnt/store/melpa/working/recomplete/
 Checking out origin/HEAD
-Checking out d014f738c2be84feb451e6d4da6f7c2960730ffb
-Built recomplete in 5.823s, finished at 2022-05-08T11:49:38+0000
+Checking out 021ca9b047caadd4903aa6f417890d6497ae437a
+Built recomplete in 5.709s, finished at 2022-05-08T14:48:48+0000
  ✓ Success:
  24K -rw-r--r-- 1 root root  22K May  8 11:49 packages/recomplete-20220211.548.el
 4.0K -rw-r--r-- 1 root root  379 May  8 11:49 packages/recomplete-20220211.548.entry
-4.0K -rw-r--r-- 1 root root 1.2K May  8 11:49 packages/recomplete-badge.svg
-4.0K -rw-r--r-- 1 root root  430 May  8 11:49 packages/recomplete-readme.txt
+ 24K -rw-r--r-- 1 root root  22K May  8 14:48 packages/recomplete-20220507.1118.el
+4.0K -rw-r--r-- 1 root root  382 May  8 14:48 packages/recomplete-20220507.1118.entry
+4.0K -rw-r--r-- 1 root root 1.2K May  8 14:48 packages/recomplete-badge.svg
+4.0K -rw-r--r-- 1 root root  430 May  8 14:48 packages/recomplete-readme.txt

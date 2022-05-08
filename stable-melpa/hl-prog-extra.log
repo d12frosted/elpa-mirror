@@ -1,29 +1,31 @@
 Package: hl-prog-extra
-Fetcher: gitlab
-Source:  https://gitlab.com/ideasman42/emacs-hl-prog-extra.git
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-hl-prog-extra.git
 
-Updating /mnt/store/melpa/working/hl-prog-extra/
+Cloning https://codeberg.org/ideasman42/emacs-hl-prog-extra.git to /mnt/store/melpa/working/hl-prog-extra/
 Checking out origin/HEAD
-Checking out f0e2a26787b841d45a4e41204919f098d82d5de3
+Checking out a8e2ee5d43ce70c59e57d2ab90b39a6cf9e7b851
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hl-prog-extra/
-  to /tmp/hl-prog-extraRTkEkT/hl-prog-extra-20220504.607
+  to /tmp/hl-prog-extraMIT3Pn/hl-prog-extra-20220507.1118
     hl-prog-extra-preset-c++-mode.el -> hl-prog-extra-preset-c++-mode.el
     hl-prog-extra-preset-c-mode.el -> hl-prog-extra-preset-c-mode.el
     hl-prog-extra-preset-lua-mode.el -> hl-prog-extra-preset-lua-mode.el
     hl-prog-extra-preset-python-mode.el -> hl-prog-extra-preset-python-mode.el
     hl-prog-extra.el -> hl-prog-extra.el
-Created hl-prog-extra-20220504.607.tar containing:
-  hl-prog-extra-20220504.607/
-  hl-prog-extra-20220504.607/hl-prog-extra-pkg.el
-  hl-prog-extra-20220504.607/hl-prog-extra-preset-c++-mode.el
-  hl-prog-extra-20220504.607/hl-prog-extra-preset-c-mode.el
-  hl-prog-extra-20220504.607/hl-prog-extra-preset-lua-mode.el
-  hl-prog-extra-20220504.607/hl-prog-extra-preset-python-mode.el
-  hl-prog-extra-20220504.607/hl-prog-extra.el
-Built hl-prog-extra in 4.836s, finished at 2022-05-08T11:26:14+0000
+Created hl-prog-extra-20220507.1118.tar containing:
+  hl-prog-extra-20220507.1118/
+  hl-prog-extra-20220507.1118/hl-prog-extra-pkg.el
+  hl-prog-extra-20220507.1118/hl-prog-extra-preset-c++-mode.el
+  hl-prog-extra-20220507.1118/hl-prog-extra-preset-c-mode.el
+  hl-prog-extra-20220507.1118/hl-prog-extra-preset-lua-mode.el
+  hl-prog-extra-20220507.1118/hl-prog-extra-preset-python-mode.el
+  hl-prog-extra-20220507.1118/hl-prog-extra.el
+Built hl-prog-extra in 5.314s, finished at 2022-05-08T14:24:53+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  391 May  8 11:26 packages/hl-prog-extra-20220504.607.entry
  40K -rw-r--r-- 1 root root  40K May  8 11:26 packages/hl-prog-extra-20220504.607.tar
-4.0K -rw-r--r-- 1 root root 1.2K May  8 11:26 packages/hl-prog-extra-badge.svg
-4.0K -rw-r--r-- 1 root root  580 May  8 11:26 packages/hl-prog-extra-readme.txt
+4.0K -rw-r--r-- 1 root root  394 May  8 14:24 packages/hl-prog-extra-20220507.1118.entry
+ 40K -rw-r--r-- 1 root root  40K May  8 14:24 packages/hl-prog-extra-20220507.1118.tar
+4.0K -rw-r--r-- 1 root root 1.2K May  8 14:24 packages/hl-prog-extra-badge.svg
+4.0K -rw-r--r-- 1 root root  580 May  8 14:24 packages/hl-prog-extra-readme.txt

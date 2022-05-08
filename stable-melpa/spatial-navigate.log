@@ -1,13 +1,15 @@
 Package: spatial-navigate
-Fetcher: gitlab
-Source:  https://gitlab.com/ideasman42/emacs-spatial-navigate.git
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-spatial-navigate.git
 
-Updating /mnt/store/melpa/working/spatial-navigate/
+Cloning https://codeberg.org/ideasman42/emacs-spatial-navigate.git to /mnt/store/melpa/working/spatial-navigate/
 Checking out origin/HEAD
-Checking out b85886fe2dff8e8896f57ec53d500b234d36d946
-Built spatial-navigate in 4.005s, finished at 2022-05-08T11:54:27+0000
+Checking out 09ebd2ba7779998c31296bf8b6ffebf854f3eb73
+Built spatial-navigate in 5.559s, finished at 2022-05-08T14:53:48+0000
  ✓ Success:
  12K -rw-r--r-- 1 root root  12K May  8 11:54 packages/spatial-navigate-20220211.548.el
 4.0K -rw-r--r-- 1 root root  399 May  8 11:54 packages/spatial-navigate-20220211.548.entry
-4.0K -rw-r--r-- 1 root root 1.2K May  8 11:54 packages/spatial-navigate-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K May  8 11:54 packages/spatial-navigate-readme.txt
+ 12K -rw-r--r-- 1 root root  12K May  8 14:53 packages/spatial-navigate-20220507.1118.el
+4.0K -rw-r--r-- 1 root root  402 May  8 14:53 packages/spatial-navigate-20220507.1118.entry
+4.0K -rw-r--r-- 1 root root 1.2K May  8 14:53 packages/spatial-navigate-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K May  8 14:53 packages/spatial-navigate-readme.txt

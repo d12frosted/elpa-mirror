@@ -1,13 +1,15 @@
 Package: default-font-presets
-Fetcher: gitlab
-Source:  https://gitlab.com/ideasman42/emacs-default-font-presets.git
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-default-font-presets.git
 
-Updating /mnt/store/melpa/working/default-font-presets/
+Cloning https://codeberg.org/ideasman42/emacs-default-font-presets.git to /mnt/store/melpa/working/default-font-presets/
 Checking out origin/HEAD
-Checking out 700d7518f613f9fd03074c52820690e65a01eeac
-Built default-font-presets in 4.201s, finished at 2022-05-08T11:06:40+0000
+Checking out 7117ddadafcf0264c19b7a6bb912d52efe5553f9
+Built default-font-presets in 6.121s, finished at 2022-05-08T14:05:54+0000
  ✓ Success:
  16K -rw-r--r-- 1 root root  13K May  8 11:06 packages/default-font-presets-20220430.135.el
 4.0K -rw-r--r-- 1 root root  386 May  8 11:06 packages/default-font-presets-20220430.135.entry
-4.0K -rw-r--r-- 1 root root 1.2K May  8 11:06 packages/default-font-presets-badge.svg
-4.0K -rw-r--r-- 1 root root  309 May  8 11:06 packages/default-font-presets-readme.txt
+ 16K -rw-r--r-- 1 root root  13K May  8 14:05 packages/default-font-presets-20220507.1118.el
+4.0K -rw-r--r-- 1 root root  389 May  8 14:05 packages/default-font-presets-20220507.1118.entry
+4.0K -rw-r--r-- 1 root root 1.2K May  8 14:05 packages/default-font-presets-badge.svg
+4.0K -rw-r--r-- 1 root root  309 May  8 14:05 packages/default-font-presets-readme.txt
