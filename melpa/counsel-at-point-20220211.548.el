@@ -7,7 +7,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-counsel-at-point
 ;; Package-Version: 20220211.548
-;; Package-Commit: 28b26ecac676d6a3942f1b96d2916f4c23d9b3ab
+;; Package-Commit: 9280e463a6d17b18b446440c88d9fb8e24cd9341
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2") (counsel "0.13.0"))

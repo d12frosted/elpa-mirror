@@ -4,21 +4,23 @@ Source:  https://github.com/dougm/vagrant-tramp.git
 
 Updating /mnt/store/melpa/working/vagrant-tramp/
 Checking out origin/HEAD
-Checking out 5f00b42a0c023c461cef7af4de7652d90c788b4d
+Checking out 2b7a4fabd328961384da06e0e302250cd97edc47
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vagrant-tramp/
-  to /tmp/vagrant-trampRZ7lOX/vagrant-tramp-20210217.704
+  to /tmp/vagrant-tramphw5Kkf/vagrant-tramp-20220508.52
     vagrant-tramp.el -> vagrant-tramp.el
     bin => bin
-Created vagrant-tramp-20210217.704.tar containing:
-  vagrant-tramp-20210217.704/
-  vagrant-tramp-20210217.704/bin/
-  vagrant-tramp-20210217.704/bin/vagrant-tramp-ssh
-  vagrant-tramp-20210217.704/vagrant-tramp-pkg.el
-  vagrant-tramp-20210217.704/vagrant-tramp.el
-Built vagrant-tramp in 3.738s, finished at 2022-05-07T06:10:32+0000
+Created vagrant-tramp-20220508.52.tar containing:
+  vagrant-tramp-20220508.52/
+  vagrant-tramp-20220508.52/bin/
+  vagrant-tramp-20220508.52/bin/vagrant-tramp-ssh
+  vagrant-tramp-20220508.52/vagrant-tramp-pkg.el
+  vagrant-tramp-20220508.52/vagrant-tramp.el
+Built vagrant-tramp in 3.632s, finished at 2022-05-08T02:59:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  400 May  7 06:10 packages/vagrant-tramp-20210217.704.entry
- 20K -rw-r--r-- 1 root root  20K May  7 06:10 packages/vagrant-tramp-20210217.704.tar
-4.0K -rw-r--r-- 1 root root 1.2K May  7 06:10 packages/vagrant-tramp-badge.svg
-4.0K -rw-r--r-- 1 root root   52 May  7 06:10 packages/vagrant-tramp-readme.txt
+4.0K -rw-r--r-- 1 root root  401 May  8 00:02 packages/vagrant-tramp-20220507.2152.entry
+ 20K -rw-r--r-- 1 root root  20K May  8 00:02 packages/vagrant-tramp-20220507.2152.tar
+4.0K -rw-r--r-- 1 root root  399 May  8 02:59 packages/vagrant-tramp-20220508.52.entry
+ 20K -rw-r--r-- 1 root root  20K May  8 02:59 packages/vagrant-tramp-20220508.52.tar
+4.0K -rw-r--r-- 1 root root 1.2K May  8 02:59 packages/vagrant-tramp-badge.svg
+4.0K -rw-r--r-- 1 root root   52 May  8 02:59 packages/vagrant-tramp-readme.txt

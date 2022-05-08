@@ -7,7 +7,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-buffer-revert-all
 ;; Package-Version: 20220211.548
-;; Package-Commit: 0343c04a4408ff6cb3c8a9dff7d1ffee8256aa70
+;; Package-Commit: 3c989040e3804f21a40b3eed79675ab32bc3e24a
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.3"))
 

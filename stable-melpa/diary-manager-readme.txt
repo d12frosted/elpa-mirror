@@ -4,5 +4,5 @@ implementation is in Python and is designed to be used from the
 command line. diary-manager.el provides an alternative Emacs
 interface.
 
-Please see https://github.com/raxod502/diary-manager for more
-information.
+Please see https://github.com/radian-software/diary-manager for
+more information.

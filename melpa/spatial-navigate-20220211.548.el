@@ -7,7 +7,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-spatial-navigate
 ;; Package-Version: 20220211.548
-;; Package-Commit: 0365544483f957db79b8e617fb0bd8160134a655
+;; Package-Commit: b85886fe2dff8e8896f57ec53d500b234d36d946
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 

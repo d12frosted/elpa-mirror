@@ -7,7 +7,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-diff-ansi
 ;; Package-Version: 20220422.647
-;; Package-Commit: f47e62503d77dbcadb36e9d3d0ede9242536fa89
+;; Package-Commit: 67dfebe769a4a7cc74d2b2d97e50ac19a00dc7dd
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
 

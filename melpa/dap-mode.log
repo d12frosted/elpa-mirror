@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-lsp/dap-mode.git
 
 Updating /mnt/store/melpa/working/dap-mode/
 Checking out origin/HEAD
-Checking out 675d5a8e959ab0f2d1f8261a7cf99e6d8f169118
+Checking out d534b4a2f9ec3f9e4d804a660830764bed062e15
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dap-mode/
-  to /tmp/dap-mode6qGuwF/dap-mode-20220504.1410
+  to /tmp/dap-modeSWraKU/dap-mode-20220507.1711
     dap-chrome.el -> dap-chrome.el
     dap-codelldb.el -> dap-codelldb.el
     dap-cpptools.el -> dap-cpptools.el
@@ -38,76 +38,76 @@ Copying files (->) and directories (=>)
     dap-variables.el -> dap-variables.el
     dapui.el -> dapui.el
     icons => icons
-Created dap-mode-20220504.1410.tar containing:
-  dap-mode-20220504.1410/
-  dap-mode-20220504.1410/dap-chrome.el
-  dap-mode-20220504.1410/dap-codelldb.el
-  dap-mode-20220504.1410/dap-cpptools.el
-  dap-mode-20220504.1410/dap-dlv-go.el
-  dap-mode-20220504.1410/dap-edge.el
-  dap-mode-20220504.1410/dap-elixir.el
-  dap-mode-20220504.1410/dap-erlang.el
-  dap-mode-20220504.1410/dap-firefox.el
-  dap-mode-20220504.1410/dap-gdb-lldb.el
-  dap-mode-20220504.1410/dap-go.el
-  dap-mode-20220504.1410/dap-hydra.el
-  dap-mode-20220504.1410/dap-kotlin.el
-  dap-mode-20220504.1410/dap-launch.el
-  dap-mode-20220504.1410/dap-lldb.el
-  dap-mode-20220504.1410/dap-mode-pkg.el
-  dap-mode-20220504.1410/dap-mode.el
-  dap-mode-20220504.1410/dap-mouse.el
-  dap-mode-20220504.1410/dap-netcore.el
-  dap-mode-20220504.1410/dap-node.el
-  dap-mode-20220504.1410/dap-overlays.el
-  dap-mode-20220504.1410/dap-php.el
-  dap-mode-20220504.1410/dap-pwsh.el
-  dap-mode-20220504.1410/dap-python.el
-  dap-mode-20220504.1410/dap-ruby.el
-  dap-mode-20220504.1410/dap-swi-prolog.el
-  dap-mode-20220504.1410/dap-ui.el
-  dap-mode-20220504.1410/dap-unity.el
-  dap-mode-20220504.1410/dap-utils.el
-  dap-mode-20220504.1410/dap-variables.el
-  dap-mode-20220504.1410/dapui.el
-  dap-mode-20220504.1410/icons/
-  dap-mode-20220504.1410/icons/eclipse/
-  dap-mode-20220504.1410/icons/eclipse/collapsed.png
-  dap-mode-20220504.1410/icons/eclipse/expanded.png
-  dap-mode-20220504.1410/icons/eclipse/inspect.png
-  dap-mode-20220504.1410/icons/eclipse/project-running.png
-  dap-mode-20220504.1410/icons/eclipse/project-stopped.png
-  dap-mode-20220504.1410/icons/eclipse/scope.png
-  dap-mode-20220504.1410/icons/eclipse/stack-frame-running.png
-  dap-mode-20220504.1410/icons/eclipse/stack-frame-stopped.png
-  dap-mode-20220504.1410/icons/eclipse/thread-running.png
-  dap-mode-20220504.1410/icons/eclipse/thread-stopped.png
-  dap-mode-20220504.1410/icons/eclipse/variable.png
-  dap-mode-20220504.1410/icons/vscode/
-  dap-mode-20220504.1410/icons/vscode/close-all.png
-  dap-mode-20220504.1410/icons/vscode/continue-disabled.png
-  dap-mode-20220504.1410/icons/vscode/continue.png
-  dap-mode-20220504.1410/icons/vscode/disconnect-disabled.png
-  dap-mode-20220504.1410/icons/vscode/disconnect.png
-  dap-mode-20220504.1410/icons/vscode/pause-disabled.png
-  dap-mode-20220504.1410/icons/vscode/pause.png
-  dap-mode-20220504.1410/icons/vscode/restart-disabled.png
-  dap-mode-20220504.1410/icons/vscode/restart.png
-  dap-mode-20220504.1410/icons/vscode/reverse-continue.png
-  dap-mode-20220504.1410/icons/vscode/start.png
-  dap-mode-20220504.1410/icons/vscode/step-back.png
-  dap-mode-20220504.1410/icons/vscode/step-into-disabled.png
-  dap-mode-20220504.1410/icons/vscode/step-into.png
-  dap-mode-20220504.1410/icons/vscode/step-out-disabled.png
-  dap-mode-20220504.1410/icons/vscode/step-out.png
-  dap-mode-20220504.1410/icons/vscode/step-over-disabled.png
-  dap-mode-20220504.1410/icons/vscode/step-over.png
-  dap-mode-20220504.1410/icons/vscode/stop-disabled.png
-  dap-mode-20220504.1410/icons/vscode/stop.png
-  dap-mode-20220504.1410/icons/vscode/toggle-breakpoints.png
-Built dap-mode in 5.260s, finished at 2022-05-07T05:16:07+0000
+Created dap-mode-20220507.1711.tar containing:
+  dap-mode-20220507.1711/
+  dap-mode-20220507.1711/dap-chrome.el
+  dap-mode-20220507.1711/dap-codelldb.el
+  dap-mode-20220507.1711/dap-cpptools.el
+  dap-mode-20220507.1711/dap-dlv-go.el
+  dap-mode-20220507.1711/dap-edge.el
+  dap-mode-20220507.1711/dap-elixir.el
+  dap-mode-20220507.1711/dap-erlang.el
+  dap-mode-20220507.1711/dap-firefox.el
+  dap-mode-20220507.1711/dap-gdb-lldb.el
+  dap-mode-20220507.1711/dap-go.el
+  dap-mode-20220507.1711/dap-hydra.el
+  dap-mode-20220507.1711/dap-kotlin.el
+  dap-mode-20220507.1711/dap-launch.el
+  dap-mode-20220507.1711/dap-lldb.el
+  dap-mode-20220507.1711/dap-mode-pkg.el
+  dap-mode-20220507.1711/dap-mode.el
+  dap-mode-20220507.1711/dap-mouse.el
+  dap-mode-20220507.1711/dap-netcore.el
+  dap-mode-20220507.1711/dap-node.el
+  dap-mode-20220507.1711/dap-overlays.el
+  dap-mode-20220507.1711/dap-php.el
+  dap-mode-20220507.1711/dap-pwsh.el
+  dap-mode-20220507.1711/dap-python.el
+  dap-mode-20220507.1711/dap-ruby.el
+  dap-mode-20220507.1711/dap-swi-prolog.el
+  dap-mode-20220507.1711/dap-ui.el
+  dap-mode-20220507.1711/dap-unity.el
+  dap-mode-20220507.1711/dap-utils.el
+  dap-mode-20220507.1711/dap-variables.el
+  dap-mode-20220507.1711/dapui.el
+  dap-mode-20220507.1711/icons/
+  dap-mode-20220507.1711/icons/eclipse/
+  dap-mode-20220507.1711/icons/eclipse/collapsed.png
+  dap-mode-20220507.1711/icons/eclipse/expanded.png
+  dap-mode-20220507.1711/icons/eclipse/inspect.png
+  dap-mode-20220507.1711/icons/eclipse/project-running.png
+  dap-mode-20220507.1711/icons/eclipse/project-stopped.png
+  dap-mode-20220507.1711/icons/eclipse/scope.png
+  dap-mode-20220507.1711/icons/eclipse/stack-frame-running.png
+  dap-mode-20220507.1711/icons/eclipse/stack-frame-stopped.png
+  dap-mode-20220507.1711/icons/eclipse/thread-running.png
+  dap-mode-20220507.1711/icons/eclipse/thread-stopped.png
+  dap-mode-20220507.1711/icons/eclipse/variable.png
+  dap-mode-20220507.1711/icons/vscode/
+  dap-mode-20220507.1711/icons/vscode/close-all.png
+  dap-mode-20220507.1711/icons/vscode/continue-disabled.png
+  dap-mode-20220507.1711/icons/vscode/continue.png
+  dap-mode-20220507.1711/icons/vscode/disconnect-disabled.png
+  dap-mode-20220507.1711/icons/vscode/disconnect.png
+  dap-mode-20220507.1711/icons/vscode/pause-disabled.png
+  dap-mode-20220507.1711/icons/vscode/pause.png
+  dap-mode-20220507.1711/icons/vscode/restart-disabled.png
+  dap-mode-20220507.1711/icons/vscode/restart.png
+  dap-mode-20220507.1711/icons/vscode/reverse-continue.png
+  dap-mode-20220507.1711/icons/vscode/start.png
+  dap-mode-20220507.1711/icons/vscode/step-back.png
+  dap-mode-20220507.1711/icons/vscode/step-into-disabled.png
+  dap-mode-20220507.1711/icons/vscode/step-into.png
+  dap-mode-20220507.1711/icons/vscode/step-out-disabled.png
+  dap-mode-20220507.1711/icons/vscode/step-out.png
+  dap-mode-20220507.1711/icons/vscode/step-over-disabled.png
+  dap-mode-20220507.1711/icons/vscode/step-over.png
+  dap-mode-20220507.1711/icons/vscode/stop-disabled.png
+  dap-mode-20220507.1711/icons/vscode/stop.png
+  dap-mode-20220507.1711/icons/vscode/toggle-breakpoints.png
+Built dap-mode in 7.145s, finished at 2022-05-08T02:06:13+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  586 May  7 05:16 packages/dap-mode-20220504.1410.entry
-352K -rw-r--r-- 1 root root 350K May  7 05:16 packages/dap-mode-20220504.1410.tar
-4.0K -rw-r--r-- 1 root root 1.2K May  7 05:16 packages/dap-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   41 May  7 05:16 packages/dap-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  586 May  8 02:06 packages/dap-mode-20220507.1711.entry
+352K -rw-r--r-- 1 root root 350K May  8 02:06 packages/dap-mode-20220507.1711.tar
+4.0K -rw-r--r-- 1 root root 1.2K May  8 02:06 packages/dap-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   41 May  8 02:06 packages/dap-mode-readme.txt

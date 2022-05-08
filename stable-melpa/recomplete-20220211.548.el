@@ -7,7 +7,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-recomplete
 ;; Package-Version: 20220211.548
-;; Package-Commit: d0d380929460ff35534900e34ababad43d23c966
+;; Package-Commit: d014f738c2be84feb451e6d4da6f7c2960730ffb
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "26.1"))
 

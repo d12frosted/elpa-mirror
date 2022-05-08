@@ -7,7 +7,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-scroll-on-jump
 ;; Package-Version: 20220211.548
-;; Package-Commit: 99386fc01b3c7bc2e75458efca408a23220a5f87
+;; Package-Commit: 1ea1961b4064cf7f8718e7c4e36e27d3c8f7b1b2
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
