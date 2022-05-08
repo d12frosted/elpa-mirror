@@ -6,3 +6,7 @@ multiple preconfigured tile servers. You can bookmark your favorite
 locations using regular Emacs bookmarks or create links from Org
 files to locations. Furthermore the package provides commands to
 search for locations by name and to open and display GPX tracks.
+
+osm.el requires Emacs 27 and depends on the external `curl' program.
+Emacs must be built with libxml, libjansson, librsvg, libjpeg and
+libpng support.

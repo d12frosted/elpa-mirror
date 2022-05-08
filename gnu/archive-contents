@@ -1002,15 +1002,16 @@
 	  ("Jorgen Schäfer" . "forcer@forcix.cx"))
 	 (:commit . "6afe1b26d679357586380ecd69c9795985231013"))])
  (engrave-faces .
-		[(0 2 0)
+		[(0 3 0)
 		 ((emacs
 		   (27 1)))
 		 "Convert font-lock faces to other formats" tar
 		 ((:url . "https://github.com/tecosaur/engrave-faces")
+		  (:keywords "faces")
 		  (:maintainer "TEC" . "tec@tecosaur.com")
 		  (:authors
 		   ("TEC <https://github/tecosaur>"))
-		  (:keywords "faces"))])
+		  (:commit . "3739d9f690412beb5bf717b11bc828fe39ade231"))])
  (enwc .
        [(2 0)
 	((emacs
