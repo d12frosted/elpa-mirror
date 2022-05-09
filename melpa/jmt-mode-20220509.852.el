@@ -4,8 +4,8 @@
 ;;
 ;; Author: Michael Allan <mike@reluk.ca>
 ;; Version: 0-snapshot
-;; Package-Version: 20220312.1945
-;; Package-Commit: 44280538a2b780536c56ee2a51b7a5b03d376a2e
+;; Package-Version: 20220509.852
+;; Package-Commit: f6767f5d0c4cf104ae124669f9b152a4d0f5c2c8
 ;; SPDX-License-Identifier: MIT
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: c, languages
@@ -2118,14 +2118,14 @@ For more information, see URL ‘http://reluk.ca/project/Java/Emacs/’."
   (unless jmt--late-initialization-was-begun
     (set 'jmt--late-initialization-was-begun t)
 
-  ;; Verify assumptions
-  ;; ──────────────────
+    ;; Verify assumptions
+    ;; ──────────────────
     (cl-assert (= ?> (char-syntax ?\n))); Newlines have endcomment syntax.
       ;;; (Consequently they have no whitespace syntax.)
     (cl-assert parse-sexp-ignore-comments)
 
-  ;; Tell Java Mode of additional faces I
-  ;; ────────────────────────────────────
+    ;; Tell Java Mode of additional faces I
+    ;; ────────────────────────────────────
     (set 'c-literal-faces
          (append c-literal-faces; [LF]
                  '(jmt-annotation-string

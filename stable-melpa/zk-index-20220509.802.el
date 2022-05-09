@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.4
-;; Package-Version: 20220505.1403
-;; Package-Commit: d6d7713cfac073940dcd96b55c18830a64d4ccca
+;; Package-Version: 20220509.802
+;; Package-Commit: cdffbfbe69a56a526729bca161ad39776b198186
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "26.1")(zk "0.3"))
@@ -278,7 +278,8 @@ FILES must be a list of filepaths. If nil, all files in
   (interactive)
   (setq zk-index-last-format-function format-fn)
   (setq zk-index-last-sort-function sort-fn)
-  (let ((buffer "*ZK-Index*")
+  (let ((inhibit-message t)
+        (buffer "*ZK-Index*")
         (list (if files files
                 (zk--directory-files t))))
     (unless (get-buffer buffer)
@@ -302,7 +303,8 @@ FILES must be a list of filepaths. If nil, all files in
   "Refresh the index.
 Optionally refresh with FILES, using FORMAT-FN and SORT-FN."
   (interactive)
-  (let ((files (if files files
+  (let ((inhibit-message t)
+        (files (if files files
                  (zk--directory-files t)))
         (sort-fn (if sort-fn sort-fn
                    (setq zk-index-last-sort-function nil)))
@@ -313,6 +315,8 @@ Optionally refresh with FILES, using FORMAT-FN and SORT-FN."
       (erase-buffer)
       (zk-index--sort files format-fn sort-fn)
       (goto-char (point-min))
+      (setq zk-index-mode t)
+      (toggle-truncate-lines 1)
       (unless (zk-index-narrowed-p)
         (progn
           (zk-index--clear-query-mode-line)
@@ -854,8 +858,12 @@ at point."
 (defun zk-index-switch-to-index ()
   "Switch to ZK-Index buffer."
   (interactive)
-  (when (get-buffer "*ZK-Index*")
-    (switch-to-buffer "*ZK-Index*")))
+  (let ((buffer "*ZK-Index*"))
+    (unless (get-buffer buffer)
+      (progn
+        (generate-new-buffer buffer)
+        (zk-index-refresh)))
+    (switch-to-buffer buffer)))
 
 ;;;###autoload
 (defun zk-index-switch-to-desktop ()

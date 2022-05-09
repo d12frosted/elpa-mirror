@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20220423.944
-;; Package-Commit: d6d7713cfac073940dcd96b55c18830a64d4ccca
+;; Package-Version: 20220509.749
+;; Package-Commit: cdffbfbe69a56a526729bca161ad39776b198186
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -567,7 +567,8 @@ Adds 'zk-make-link-buttons' to 'find-file-hook.'"
                    (zk-file-p))
               (and (eq zk-new-note-link-insert 'ask)
                    (y-or-n-p "Insert link at point? ")))
-      (zk-insert-link new-id title))
+      (unless buffer-read-only
+        (zk-insert-link new-id title)))
     (when buffer-file-name
       (save-buffer))
     (find-file file-name)
