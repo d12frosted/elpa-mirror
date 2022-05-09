@@ -1,0 +1,11 @@
+(cue-mode .
+	  [(20220507 1728)
+	   ((emacs
+	     (25 1)))
+	   "Major mode for CUE language files" single
+	   ((:commit . "598c9b33b888e067e7472710a5f159cee98a0307")
+	    (:authors
+	     ("Russell Sim" . "russell.sim@gmail.com"))
+	    (:maintainer "Russell Sim" . "russell.sim@gmail.com")
+	    (:keywords "data" "languages")
+	    (:url . "https://github.com/russell/cue-mode"))])
