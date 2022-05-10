@@ -926,7 +926,7 @@
 	      (:keywords "lisp")
 	      (:url . "http://elpa.gnu.org/packages/el-search.html"))])
  (eldoc .
-	[(1 11 1)
+	[(1 12 0)
 	 ((emacs
 	   (26 3)))
 	 "Show function arglist or variable docstring in echo area" tar
@@ -935,7 +935,7 @@
 	  (:authors
 	   ("Noah Friedman" . "friedman@splode.com"))
 	  (:url . "https://elpa.gnu.org/packages/eldoc.html")
-	  (:commit . "45978f97be89ae989ecf9e7129b88592e70a1f24"))])
+	  (:commit . "d377b396432412b06647eef01f837126982f3e6d"))])
  (eldoc-eval .
 	     [(0 2)
 	      nil "Enable eldoc support when minibuffer is in use." tar
