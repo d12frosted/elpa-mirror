@@ -6,7 +6,7 @@
 ;; Homepage: https://git.sr.ht/~tarsius/l
 ;; Keywords: extensions
 ;; Package-Version: 20220422.1612
-;; Package-Commit: c2466e52702a189fcc1ecad25cc1ad9f203f6627
+;; Package-Commit: 3ab31ef28596ac2f95be4c4280cd86489232da97
 
 ;; Package-Requires: ((seq "2.20"))
 

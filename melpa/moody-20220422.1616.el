@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/moody
 ;; Keywords: faces
 ;; Package-Version: 20220422.1616
-;; Package-Commit: ac647781d2d66d57c84a64dfd33b463b4a99b257
+;; Package-Commit: d56a70bc71cdf90cfd5cf4d8517aa1d808659241
 
 ;; Package-Requires: ((emacs "25.3") (compat "28.1.1.0"))
 

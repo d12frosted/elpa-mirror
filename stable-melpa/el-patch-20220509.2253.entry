@@ -1,0 +1,11 @@
+(el-patch .
+	  [(20220509 2253)
+	   ((emacs
+	     (26)))
+	   "Future-proof your Elisp" tar
+	   ((:commit . "156c61b72c1c9c61bd886b5931b8a382153f52fa")
+	    (:authors
+	     ("Radian LLC" . "contact+el-patch@radian.codes"))
+	    (:maintainer "Radian LLC" . "contact+el-patch@radian.codes")
+	    (:keywords "extensions")
+	    (:url . "https://github.com/radian-software/el-patch"))])

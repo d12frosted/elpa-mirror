@@ -7,7 +7,7 @@
 ;; Homepage: https://git.sr.ht/~tarsius/notmuch-addr
 ;; Keywords: mail
 ;; Package-Version: 20220422.1618
-;; Package-Commit: 2e479851b5cb2d25c31f21b400cfd34777348874
+;; Package-Commit: dd852b09415e755cef6a345a2ee454a6cf1e1d06
 
 ;; Package-Requires: ((emacs "27.1") (compat "28.1.1.0") (notmuch "0.32"))
 

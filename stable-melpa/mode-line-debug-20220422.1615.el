@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/mode-line-debug
 ;; Keywords: convenience lisp
 ;; Package-Version: 20220422.1615
-;; Package-Commit: d33e76efac6978c755bb5e0ced061b0063a6dff9
+;; Package-Commit: e8e17b96df1b9fdc448bfc5367a24c2917de88d4
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 

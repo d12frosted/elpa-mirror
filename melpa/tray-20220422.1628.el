@@ -6,7 +6,7 @@
 ;; Homepage: https://git.sr.ht/~tarsius/tray
 ;; Keywords: convenience
 ;; Package-Version: 20220422.1628
-;; Package-Commit: 7c70d499d08321337f860a3cd59cba7296cfcace
+;; Package-Commit: 1292530acd05956a2f1bd19c94ef6ab59f05ad8a
 
 ;; Package-Requires: ((emacs "27.1") (compat "28.1.1.0") (transient "0.3.0"))
 

@@ -7,7 +7,7 @@
 ;; Homepage: https://github.com/tarsius/orglink
 ;; Keywords: hypermedia
 ;; Package-Version: 20220422.1626
-;; Package-Commit: 36129691e60e992f31065be4c26d58645b83b033
+;; Package-Commit: 59bec36eb91e78d508e290b69c4383b27466513f
 
 ;; Package-Requires: (
 ;;     (emacs "25.1")

@@ -4,7 +4,7 @@
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
 ;; Package-Version: 20220504.1101
-;; Package-Commit: b61fd8324b457cd75494d706a92af89bbf9a4e71
+;; Package-Commit: cd0b42e5026426af2bfad57b692760bcb5d05dbb
 ;; Package-Requires: ((emacs "26.1") (org "9.0") (request "0.3.0") (s "1.10.0"))
 ;; Homepage: https://github.com/teeann/scholar-import
 

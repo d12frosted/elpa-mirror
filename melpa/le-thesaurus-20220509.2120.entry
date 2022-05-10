@@ -1,0 +1,9 @@
+(le-thesaurus .
+	      [(20220509 2120)
+	       ((request
+		 (0 3 2))
+		(emacs
+		 (24 4)))
+	       "Query thesaurus.com for synonyms of a given word" single
+	       ((:commit . "2af1ab37097cdd17044ab217e9aa6839add98626")
+		(:url . "https://github.com/AnselmC/le-thesaurus"))])

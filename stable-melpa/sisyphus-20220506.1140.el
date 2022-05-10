@@ -5,7 +5,7 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/magit/sisyphus
 ;; Keywords: git tools vc
-;; Package-Commit: 2af8cec83790980a9a96c15ee3655a179aa3ddb1
+;; Package-Commit: 9626d9d26dc9f3cc57d41fa119a74e0cb1c4aab9
 
 ;; Package-Version: 20220506.1140
 ;; Package-X-Original-Version: 0.1.0-git

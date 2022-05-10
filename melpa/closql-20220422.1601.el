@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/emacscollective/closql
 ;; Keywords: extensions
 ;; Package-Version: 20220422.1601
-;; Package-Commit: 6f4af0fc87fa0a1734480d6a4b72797c0916bc12
+;; Package-Commit: 87d2edae8bc3d390bcfc5e909e9c13ff9fce994a
 
 ;; Package-Requires: (
 ;;     (emacs "25.1")

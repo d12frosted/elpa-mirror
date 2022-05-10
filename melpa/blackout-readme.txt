@@ -33,4 +33,4 @@ Usage with use-package:
       :blackout ((foo-mode . " Foo")
                  (bar-mode . " Bar")))
 
-Please see https://github.com/raxod502/blackout for more information.
+Please see https://github.com/radian-software/blackout for more information.

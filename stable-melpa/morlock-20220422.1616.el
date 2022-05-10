@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/morlock
 ;; Keywords: convenience
 ;; Package-Version: 20220422.1616
-;; Package-Commit: b699497363c60bddc18393f68e3c9185e5fbb589
+;; Package-Commit: 3b3716e3f865dd71e3acc3f54a0a9f7e2445695a
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 

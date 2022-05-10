@@ -3,6 +3,8 @@
 ;; Filename: lush-theme.el
 ;; Author: Andre Richter <andre.o.richter@gmail.com>
 ;; Version: 0.1
+;; Package-Version: 20180816.2200
+;; Package-Commit: 645e1959143532df8f7ef90e1184e9556df18af7
 ;; URL: https://github.com/andre-richter/emacs-lush-theme
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: theme, dark, strong colors

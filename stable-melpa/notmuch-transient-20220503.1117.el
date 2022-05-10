@@ -7,7 +7,7 @@
 ;; Homepage: https://git.sr.ht/~tarsius/notmuch-transient
 ;; Keywords: mail
 ;; Package-Version: 20220503.1117
-;; Package-Commit: 341fe7f05efe68460451bd5cb7151ca6d8b8cfc8
+;; Package-Commit: 4f64de401b8d955dce528f76575142edd9815dc7
 
 ;; Package-Requires: ((emacs "27.1") (compat "28.1.1.0") (notmuch "0.31.4"))
 

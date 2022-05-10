@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/imake
 ;; Keywords: convenience
 ;; Package-Version: 20220422.1611
-;; Package-Commit: 51aeac9f3a24f23d063f591066675d1d70dcea09
+;; Package-Commit: 4dbc59789835396fdc76bfde4ae4971c8a9ceaed
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 

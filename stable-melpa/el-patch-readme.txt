@@ -22,5 +22,5 @@ function, but you will still be notified of updates to the original
 definition by el-patch so you will know when to update your copy of
 the definition.
 
-Please see https://github.com/raxod502/el-patch for more
+Please see https://github.com/radian-software/el-patch for more
 information.

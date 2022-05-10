@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/emacscollective/epkg-marginalia
 ;; Keywords: tools
 ;; Package-Version: 20220424.2211
-;; Package-Commit: 73519c62db12c17804bfbcdfb0a6028389374bec
+;; Package-Commit: ac43d5797300ac478e8dc862ec572b67ae4d5d86
 
 ;; Package-Requires: (
 ;;     (emacs "26")
