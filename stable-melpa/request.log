@@ -3,16 +3,10 @@ Fetcher: github
 Source:  https://github.com/tkf/emacs-request.git
 
 Updating /mnt/store/melpa/working/request/
-Checking out origin/HEAD
-Checking out c769cf33f2ac0a1a9798b508935c4b260e856ab5
-Built request in 6.596s, finished at 2022-05-10T07:03:24+0000
- ✓ Success:
- 56K -rw-r--r-- 1 root root  53K May 10 07:03 packages/request-20211107.1907.el
-4.0K -rw-r--r-- 1 root root  338 May 10 07:03 packages/request-20211107.1907.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 10 07:03 packages/request-badge.svg
-4.0K -rw-r--r-- 1 root root 2.5K May 10 07:03 packages/request-deferred-20210214.37.el
-4.0K -rw-r--r-- 1 root root  420 May 10 07:03 packages/request-deferred-20210214.37.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 10 07:03 packages/request-deferred-badge.svg
-4.0K -rw-r--r-- 1 root root   70 May 10 07:03 packages/request-deferred-readme.txt
-4.0K -rw-r--r-- 1 root root  651 May 10 07:03 packages/request-deferred.log
-4.0K -rw-r--r-- 1 root root  207 May 10 07:03 packages/request-readme.txt
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/tkf/emacs-request.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

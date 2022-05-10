@@ -4,10 +4,10 @@ Source:  https://github.com/Fuco1/smartparens.git
 
 Updating /mnt/store/melpa/working/smartparens/
 Checking out origin/HEAD
-Checking out 37f77bf2e2199be9fe27e981317b02cfd0e8c70e
+Checking out ec15aaa748b21c9b8453dd95604ccc95fc1138cf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/smartparens/
-  to /tmp/smartparens6sTX98/smartparens-20220204.1134
+  to /tmp/smartparensohRWF7/smartparens-20220510.934
     smartparens-c.el -> smartparens-c.el
     smartparens-clojure.el -> smartparens-clojure.el
     smartparens-config.el -> smartparens-config.el
@@ -29,38 +29,42 @@ Copying files (->) and directories (=>)
     smartparens-ruby.el -> smartparens-ruby.el
     smartparens-rust.el -> smartparens-rust.el
     smartparens-scala.el -> smartparens-scala.el
+    smartparens-swift.el -> smartparens-swift.el
     smartparens-text.el -> smartparens-text.el
     smartparens.el -> smartparens.el
     sp-sublimetext-like.el -> sp-sublimetext-like.el
-Created smartparens-20220204.1134.tar containing:
-  smartparens-20220204.1134/
-  smartparens-20220204.1134/smartparens-c.el
-  smartparens-20220204.1134/smartparens-clojure.el
-  smartparens-20220204.1134/smartparens-config.el
-  smartparens-20220204.1134/smartparens-crystal.el
-  smartparens-20220204.1134/smartparens-elixir.el
-  smartparens-20220204.1134/smartparens-ess.el
-  smartparens-20220204.1134/smartparens-haskell.el
-  smartparens-20220204.1134/smartparens-html.el
-  smartparens-20220204.1134/smartparens-javascript.el
-  smartparens-20220204.1134/smartparens-latex.el
-  smartparens-20220204.1134/smartparens-lua.el
-  smartparens-20220204.1134/smartparens-markdown.el
-  smartparens-20220204.1134/smartparens-ml.el
-  smartparens-20220204.1134/smartparens-org.el
-  smartparens-20220204.1134/smartparens-pkg.el
-  smartparens-20220204.1134/smartparens-python.el
-  smartparens-20220204.1134/smartparens-racket.el
-  smartparens-20220204.1134/smartparens-rst.el
-  smartparens-20220204.1134/smartparens-ruby.el
-  smartparens-20220204.1134/smartparens-rust.el
-  smartparens-20220204.1134/smartparens-scala.el
-  smartparens-20220204.1134/smartparens-text.el
-  smartparens-20220204.1134/smartparens.el
-  smartparens-20220204.1134/sp-sublimetext-like.el
-Built smartparens in 5.780s, finished at 2022-05-10T07:07:20+0000
+Created smartparens-20220510.934.tar containing:
+  smartparens-20220510.934/
+  smartparens-20220510.934/smartparens-c.el
+  smartparens-20220510.934/smartparens-clojure.el
+  smartparens-20220510.934/smartparens-config.el
+  smartparens-20220510.934/smartparens-crystal.el
+  smartparens-20220510.934/smartparens-elixir.el
+  smartparens-20220510.934/smartparens-ess.el
+  smartparens-20220510.934/smartparens-haskell.el
+  smartparens-20220510.934/smartparens-html.el
+  smartparens-20220510.934/smartparens-javascript.el
+  smartparens-20220510.934/smartparens-latex.el
+  smartparens-20220510.934/smartparens-lua.el
+  smartparens-20220510.934/smartparens-markdown.el
+  smartparens-20220510.934/smartparens-ml.el
+  smartparens-20220510.934/smartparens-org.el
+  smartparens-20220510.934/smartparens-pkg.el
+  smartparens-20220510.934/smartparens-python.el
+  smartparens-20220510.934/smartparens-racket.el
+  smartparens-20220510.934/smartparens-rst.el
+  smartparens-20220510.934/smartparens-ruby.el
+  smartparens-20220510.934/smartparens-rust.el
+  smartparens-20220510.934/smartparens-scala.el
+  smartparens-20220510.934/smartparens-swift.el
+  smartparens-20220510.934/smartparens-text.el
+  smartparens-20220510.934/smartparens.el
+  smartparens-20220510.934/sp-sublimetext-like.el
+Built smartparens in 4.977s, finished at 2022-05-10T10:17:25+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  490 May 10 07:07 packages/smartparens-20220204.1134.entry
 512K -rw-r--r-- 1 root root 510K May 10 07:07 packages/smartparens-20220204.1134.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 10 07:07 packages/smartparens-badge.svg
-4.0K -rw-r--r-- 1 root root  836 May 10 07:07 packages/smartparens-readme.txt
+4.0K -rw-r--r-- 1 root root  489 May 10 10:17 packages/smartparens-20220510.934.entry
+512K -rw-r--r-- 1 root root 510K May 10 10:17 packages/smartparens-20220510.934.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 10 10:17 packages/smartparens-badge.svg
+4.0K -rw-r--r-- 1 root root  836 May 10 10:17 packages/smartparens-readme.txt

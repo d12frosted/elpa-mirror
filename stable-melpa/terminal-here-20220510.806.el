@@ -4,8 +4,8 @@
 
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 2.0
-;; Package-Version: 20210605.1453
-;; Package-Commit: e0e89344624fadf080f6770132ebdd7991355fdd
+;; Package-Version: 20220510.806
+;; Package-Commit: 24cb30dea30195108f85aceea28f086a84d47e5e
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools, frames
 ;; URL: https://github.com/davidshepherd7/terminal-here
@@ -73,6 +73,7 @@ Common settings:
     xfce4-terminal
     terminator
     xterm
+    sakura
     urxvt
     st
     alacritty
@@ -210,6 +211,7 @@ buffer is not in a project."
    (cons 'st                  #'terminal-here--find-and-run-st)
    (cons 'konsole             (list "konsole"))
    (cons 'xterm               (list "xterm"))
+   (cons 'sakura              (list "sakura"))
    (cons 'xfce4-terminal      (list "xfce4-terminal"))
    (cons 'terminator          (list "terminator"))
    (cons 'tilix               (list "tilix"))
@@ -249,6 +251,7 @@ terminal-here with tramp files to create ssh connections."
    (cons 'st             "-e")
    (cons 'konsole        "-e") ;; ssh seems to immediately exit with konsole
    (cons 'xterm          "-e")
+   (cons 'sakura         "-e")
    (cons 'xfce4-terminal "-x")
    (cons 'terminator     "-x")
    (cons 'tilix          "-e")
