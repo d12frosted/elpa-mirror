@@ -7,15 +7,15 @@ Checking out origin/HEAD
 Checking out f695c38c551f72f6ac5e1a82badc540c80d3b33b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clmemo/
-  to /tmp/clmemocedZep/clmemo-20220204.1345
+  to /tmp/clmemoS93gk2/clmemo-20220204.1345
     clmemo.el -> clmemo.el
   ! doc/clmemo.texi -> clmemo.texi
   ! doc/install.texi -> install.texi
   ! doc/news.texi -> news.texi
-Generating /tmp/clmemocedZep/clmemo-20220204.1345/clmemo.info
-Generating /tmp/clmemocedZep/clmemo-20220204.1345/install.info
+Generating /tmp/clmemoS93gk2/clmemo-20220204.1345/clmemo.info
+Generating /tmp/clmemoS93gk2/clmemo-20220204.1345/install.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemocedZep/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemoS93gk2/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -30,7 +30,7 @@ HEAD is now at f695c38 Update face name
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/clmemocedZep/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/clmemoS93gk2/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -42,10 +42,10 @@ HEAD is now at f695c38 Update face name
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Next reference to nonexistent `input memo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Prev reference to nonexistent `clmemo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Up reference to nonexistent `clmemo'
-install-info: No such file or directory for /tmp/clmemocedZep/clmemo-20220204.1345/install.info
+install-info: No such file or directory for /tmp/clmemoS93gk2/clmemo-20220204.1345/install.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/clmemocedZep/clmemo-20220204.1345/news.info
+Generating /tmp/clmemoS93gk2/clmemo-20220204.1345/news.info
 Created clmemo-20220204.1345.tar containing:
   clmemo-20220204.1345/
   clmemo-20220204.1345/clmemo-pkg.el
@@ -53,9 +53,9 @@ Created clmemo-20220204.1345.tar containing:
   clmemo-20220204.1345/clmemo.info
   clmemo-20220204.1345/dir
   clmemo-20220204.1345/news.info
-Built clmemo in 11.875s, finished at 2022-05-11T11:05:52+0000
+Built clmemo in 14.228s, finished at 2022-05-11T14:15:13+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  321 May 11 11:05 packages/clmemo-20220204.1345.entry
-132K -rw-r--r-- 1 root root 130K May 11 11:05 packages/clmemo-20220204.1345.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 11 11:05 packages/clmemo-badge.svg
-4.0K -rw-r--r-- 1 root root 2.9K May 11 11:05 packages/clmemo-readme.txt
+4.0K -rw-r--r-- 1 root root  321 May 11 14:15 packages/clmemo-20220204.1345.entry
+132K -rw-r--r-- 1 root root 130K May 11 14:15 packages/clmemo-20220204.1345.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 11 14:15 packages/clmemo-badge.svg
+4.0K -rw-r--r-- 1 root root 2.9K May 11 14:15 packages/clmemo-readme.txt
