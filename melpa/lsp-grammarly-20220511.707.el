@@ -7,8 +7,8 @@
 ;; Description: LSP Clients for Grammarly.
 ;; Keyword: lsp grammarly checker
 ;; Version: 0.3.0
-;; Package-Version: 20220509.823
-;; Package-Commit: 3fe46f0cc7c757582e7ba14c1d29e084cc0d5357
+;; Package-Version: 20220511.707
+;; Package-Commit: 709c522df7a68e2724dbfb5bd210199dff5a2264
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "6.1") (grammarly "0.3.0") (request "0.3.0") (s "1.12.0") (ht "2.3"))
 ;; URL: https://github.com/emacs-grammarly/lsp-grammarly
 
@@ -419,6 +419,9 @@ For argument CALLBACK, see object `lsp--client' description."
 ;; (@* "Server" )
 ;;
 
+(defconst lsp-grammarly-client-id "client_BaDkMgx4X19X9UxxYRCXZo"
+  "Client ID is required for language server's activation.")
+
 (defun lsp-grammarly--server-command ()
   "Generate startup command for Grammarly language server."
   (or (and lsp-grammarly-server-path
@@ -469,6 +472,9 @@ For argument CALLBACK, see object `lsp--client' description."
 (lsp-register-client
  (make-lsp-client
   :new-connection (lsp-stdio-connection #'lsp-grammarly--server-command)
+  :initialization-options
+  `((clientId . ,lsp-grammarly-client-id)
+    (name . "Grammarly"))
   :activation-fn (lambda (&rest _) (apply #'derived-mode-p lsp-grammarly-active-modes))
   :priority -1
   :add-on? t

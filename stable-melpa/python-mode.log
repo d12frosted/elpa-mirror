@@ -4,23 +4,25 @@ Source:  https://gitlab.com/python-mode-devs/python-mode.git
 
 Updating /mnt/store/melpa/working/python-mode/
 Checking out origin/HEAD
-Checking out 7a4ae914924e17a4e4623ec60238820cb06b0ffb
+Checking out 6cdb8fd64cc2c3fe519880ddc27ca0f2b480ba69
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/python-mode/
-  to /tmp/python-modeAHcZlH/python-mode-20220510.1653
+  to /tmp/python-modeoXW5KJ/python-mode-20220511.949
     python-mode.el -> python-mode.el
     completion/pycomplete.el -> completion/pycomplete.el
     completion/pycomplete.py -> completion/pycomplete.py
-Created python-mode-20220510.1653.tar containing:
-  python-mode-20220510.1653/
-  python-mode-20220510.1653/completion/
-  python-mode-20220510.1653/completion/pycomplete.el
-  python-mode-20220510.1653/completion/pycomplete.py
-  python-mode-20220510.1653/python-mode-pkg.el
-  python-mode-20220510.1653/python-mode.el
-Built python-mode in 5.739s, finished at 2022-05-11T05:34:35+0000
+Created python-mode-20220511.949.tar containing:
+  python-mode-20220511.949/
+  python-mode-20220511.949/completion/
+  python-mode-20220511.949/completion/pycomplete.el
+  python-mode-20220511.949/completion/pycomplete.py
+  python-mode-20220511.949/python-mode-pkg.el
+  python-mode-20220511.949/python-mode.el
+Built python-mode in 8.304s, finished at 2022-05-11T11:51:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  500 May 11 05:34 packages/python-mode-20220510.1653.entry
-1.1M -rw-r--r-- 1 root root 1.1M May 11 05:34 packages/python-mode-20220510.1653.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 11 05:34 packages/python-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  941 May 11 05:34 packages/python-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  499 May 11 08:50 packages/python-mode-20220511.815.entry
+1.1M -rw-r--r-- 1 root root 1.1M May 11 08:50 packages/python-mode-20220511.815.tar
+4.0K -rw-r--r-- 1 root root  499 May 11 11:51 packages/python-mode-20220511.949.entry
+1.1M -rw-r--r-- 1 root root 1.1M May 11 11:51 packages/python-mode-20220511.949.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 11 11:51 packages/python-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  941 May 11 11:51 packages/python-mode-readme.txt

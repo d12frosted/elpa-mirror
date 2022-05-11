@@ -4,7 +4,7 @@
 
 ;;; Version: 1.2.6
 ;; Package-Version: 20220508.929
-;; Package-Commit: 1c80df0f2c542f54920f18aa4eb837f0a51c7676
+;; Package-Commit: 61d7211469ea3e2c429937869c5a29584103361a
 
 ;;; Commentary:
 ;;
