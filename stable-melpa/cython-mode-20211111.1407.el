@@ -1,6 +1,6 @@
 ;;; cython-mode.el --- Major mode for editing Cython files
 ;; Package-Version: 20211111.1407
-;; Package-Commit: 812585935131125f8988c38417bb73bfd5a81c05
+;; Package-Commit: 6bf9d441c5f2c46ae72b6bb3e4ac6175d3a3474b
 
 ;; License: Apache-2.0
 

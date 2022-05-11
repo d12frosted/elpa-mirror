@@ -4,40 +4,40 @@ Source:  https://github.com/nnicandro/emacs-zmq.git
 
 Updating /mnt/store/melpa/working/zmq/
 Checking out origin/HEAD
-Checking out 38dc6c4119aee57666caf8f97c8a3d7f678823e0
+Checking out af5299d80715b1083a18145e9c84ef9563020676
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/zmq/
-  to /tmp/zmqc3FLw9/zmq-20210613.343
+  to /tmp/zmqkVxyu4/zmq-20220510.1820
     zmq.el -> zmq.el
     Makefile -> Makefile
     src => src
-Created zmq-20210613.343.tar containing:
-  zmq-20210613.343/
-  zmq-20210613.343/Makefile
-  zmq-20210613.343/src/
-  zmq-20210613.343/src/Makefile.am
-  zmq-20210613.343/src/configure.ac
-  zmq-20210613.343/src/constants.c
-  zmq-20210613.343/src/context.c
-  zmq-20210613.343/src/context.h
-  zmq-20210613.343/src/core.c
-  zmq-20210613.343/src/core.h
-  zmq-20210613.343/src/emacs-module.h
-  zmq-20210613.343/src/emacs-zmq.c
-  zmq-20210613.343/src/emacs-zmq.h
-  zmq-20210613.343/src/msg.c
-  zmq-20210613.343/src/msg.h
-  zmq-20210613.343/src/poll.c
-  zmq-20210613.343/src/poll.h
-  zmq-20210613.343/src/socket.c
-  zmq-20210613.343/src/socket.h
-  zmq-20210613.343/src/util.c
-  zmq-20210613.343/src/util.h
-  zmq-20210613.343/zmq-pkg.el
-  zmq-20210613.343/zmq.el
-Built zmq in 4.171s, finished at 2022-05-10T10:27:35+0000
+Created zmq-20220510.1820.tar containing:
+  zmq-20220510.1820/
+  zmq-20220510.1820/Makefile
+  zmq-20220510.1820/src/
+  zmq-20220510.1820/src/Makefile.am
+  zmq-20220510.1820/src/configure.ac
+  zmq-20220510.1820/src/constants.c
+  zmq-20220510.1820/src/context.c
+  zmq-20220510.1820/src/context.h
+  zmq-20220510.1820/src/core.c
+  zmq-20220510.1820/src/core.h
+  zmq-20220510.1820/src/emacs-module.h
+  zmq-20220510.1820/src/emacs-zmq.c
+  zmq-20220510.1820/src/emacs-zmq.h
+  zmq-20220510.1820/src/msg.c
+  zmq-20220510.1820/src/msg.h
+  zmq-20220510.1820/src/poll.c
+  zmq-20220510.1820/src/poll.h
+  zmq-20220510.1820/src/socket.c
+  zmq-20220510.1820/src/socket.h
+  zmq-20220510.1820/src/util.c
+  zmq-20220510.1820/src/util.h
+  zmq-20220510.1820/zmq-pkg.el
+  zmq-20220510.1820/zmq.el
+Built zmq in 4.090s, finished at 2022-05-11T02:40:51+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  403 May 10 10:27 packages/zmq-20210613.343.entry
-152K -rw-r--r-- 1 root root 150K May 10 10:27 packages/zmq-20210613.343.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 10 10:27 packages/zmq-badge.svg
-4.0K -rw-r--r-- 1 root root   60 May 10 10:27 packages/zmq-readme.txt
+4.0K -rw-r--r-- 1 root root  404 May 11 02:40 packages/zmq-20220510.1820.entry
+152K -rw-r--r-- 1 root root 150K May 11 02:40 packages/zmq-20220510.1820.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 11 02:40 packages/zmq-badge.svg
+4.0K -rw-r--r-- 1 root root   60 May 11 02:40 packages/zmq-readme.txt

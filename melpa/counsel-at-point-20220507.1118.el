@@ -7,7 +7,7 @@
 
 ;; URL: https://codeberg.com/ideasman42/emacs-counsel-at-point
 ;; Package-Version: 20220507.1118
-;; Package-Commit: f618411fc8f607e4c93b5efa98584fd461c53ac6
+;; Package-Commit: 3e731889dd4519d16c38d5ad20f4ecdea0c95475
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2") (counsel "0.13.0"))

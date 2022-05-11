@@ -6,7 +6,7 @@
 ;; Homepage: https://git.sr.ht/~tarsius/llama
 ;; Keywords: extensions
 ;; Package-Version: 20220428.1405
-;; Package-Commit: adc5d169fad53d6d11000a72dc95f8489a8c7534
+;; Package-Commit: 3dd1d99ebc99aa39b165569b3d02a87368d4849a
 
 ;; Package-Requires: ((seq "2.20"))
 

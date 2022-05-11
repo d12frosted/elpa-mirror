@@ -1,0 +1,17 @@
+(org-kanban .
+	    [(20220510 2150)
+	     ((s
+	       (0))
+	      (dash
+	       (2 17 0))
+	      (emacs
+	       (24 4))
+	      (org
+	       (9 1)))
+	     "kanban dynamic block for org-mode." single
+	     ((:commit . "1d3234359fa52fce5ac1006e2c51f14c760d275e")
+	      (:authors
+	       ("Christian Köstlin" . "christian.koestlin@gmail.com"))
+	      (:maintainer "Christian Köstlin" . "christian.koestlin@gmail.com")
+	      (:keywords "org-mode" "org" "kanban" "tools")
+	      (:url . "http://github.com/gizmomogwai/org-kanban"))])
