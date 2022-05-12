@@ -1,3 +1,4 @@
+
 This file is for lazy people wanting to swap buffers without
 typing C-x b on each window. This is useful when you have :
 

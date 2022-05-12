@@ -7,39 +7,39 @@ Checking out origin/HEAD
 Checking out 7fd71338dce041b352f84e7939f6966f4d379459
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dash/
-  to /tmp/dashoZnaU9/dash-20220417.2250
+  to /tmp/dashnL0Di5/dash-20220417.2250
     dash.el -> dash.el
     dash.texi -> dash.texi
-Generating /tmp/dashoZnaU9/dash-20220417.2250/dash.info
+Generating /tmp/dashnL0Di5/dash-20220417.2250/dash.info
 Created dash-20220417.2250.tar containing:
   dash-20220417.2250/
   dash-20220417.2250/dash-pkg.el
   dash-20220417.2250/dash.el
   dash-20220417.2250/dash.info
   dash-20220417.2250/dir
-Built dash in 14.879s, finished at 2022-05-12T03:19:44+0000
+Built dash in 17.962s, finished at 2022-05-12T10:03:13+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  351 May 12 03:19 packages/dash-20220417.2250.entry
-320K -rw-r--r-- 1 root root 320K May 12 03:19 packages/dash-20220417.2250.tar
-8.0K -rw-r--r-- 1 root root 5.2K May 12 03:19 packages/dash-alfred-20191024.450.el
-4.0K -rw-r--r-- 1 root root  360 May 12 03:19 packages/dash-alfred-20191024.450.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 03:19 packages/dash-alfred-badge.svg
-4.0K -rw-r--r-- 1 root root  112 May 12 03:19 packages/dash-alfred-readme.txt
-4.0K -rw-r--r-- 1 root root  626 May 12 03:19 packages/dash-alfred.log
- 12K -rw-r--r-- 1 root root 9.9K May 12 03:19 packages/dash-at-point-20211023.104.el
-4.0K -rw-r--r-- 1 root root  332 May 12 03:19 packages/dash-at-point-20211023.104.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 03:19 packages/dash-at-point-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K May 12 03:19 packages/dash-at-point-readme.txt
-4.0K -rw-r--r-- 1 root root  636 May 12 03:19 packages/dash-at-point.log
-4.0K -rw-r--r-- 1 root root 1.2K May 12 03:19 packages/dash-badge.svg
-4.0K -rw-r--r-- 1 root root  534 May 12 03:19 packages/dash-docs-20210830.926.entry
- 40K -rw-r--r-- 1 root root  40K May 12 03:19 packages/dash-docs-20210830.926.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 12 03:19 packages/dash-docs-badge.svg
-4.0K -rw-r--r-- 1 root root  143 May 12 03:19 packages/dash-docs-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K May 12 03:19 packages/dash-docs.log
-4.0K -rw-r--r-- 1 root root 2.1K May 12 03:19 packages/dash-functional-20210210.1449.el
-4.0K -rw-r--r-- 1 root root  451 May 12 03:19 packages/dash-functional-20210210.1449.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 03:19 packages/dash-functional-badge.svg
-4.0K -rw-r--r-- 1 root root  614 May 12 03:19 packages/dash-functional-readme.txt
-4.0K -rw-r--r-- 1 root root  646 May 12 03:19 packages/dash-functional.log
-4.0K -rw-r--r-- 1 root root   96 May 12 03:19 packages/dash-readme.txt
+4.0K -rw-r--r-- 1 root root  351 May 12 10:03 packages/dash-20220417.2250.entry
+320K -rw-r--r-- 1 root root 320K May 12 10:03 packages/dash-20220417.2250.tar
+8.0K -rw-r--r-- 1 root root 5.2K May 12 10:02 packages/dash-alfred-20191024.450.el
+4.0K -rw-r--r-- 1 root root  360 May 12 10:02 packages/dash-alfred-20191024.450.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 10:02 packages/dash-alfred-badge.svg
+4.0K -rw-r--r-- 1 root root  112 May 12 10:02 packages/dash-alfred-readme.txt
+4.0K -rw-r--r-- 1 root root  626 May 12 10:03 packages/dash-alfred.log
+ 12K -rw-r--r-- 1 root root 9.9K May 12 10:03 packages/dash-at-point-20211023.104.el
+4.0K -rw-r--r-- 1 root root  332 May 12 10:03 packages/dash-at-point-20211023.104.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 10:03 packages/dash-at-point-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K May 12 10:03 packages/dash-at-point-readme.txt
+4.0K -rw-r--r-- 1 root root  636 May 12 10:03 packages/dash-at-point.log
+4.0K -rw-r--r-- 1 root root 1.2K May 12 10:03 packages/dash-badge.svg
+4.0K -rw-r--r-- 1 root root  534 May 12 10:03 packages/dash-docs-20210830.926.entry
+ 40K -rw-r--r-- 1 root root  40K May 12 10:03 packages/dash-docs-20210830.926.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 12 10:03 packages/dash-docs-badge.svg
+4.0K -rw-r--r-- 1 root root  143 May 12 10:03 packages/dash-docs-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K May 12 10:03 packages/dash-docs.log
+4.0K -rw-r--r-- 1 root root 2.1K May 12 10:03 packages/dash-functional-20210210.1449.el
+4.0K -rw-r--r-- 1 root root  451 May 12 10:03 packages/dash-functional-20210210.1449.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 10:03 packages/dash-functional-badge.svg
+4.0K -rw-r--r-- 1 root root  614 May 12 10:03 packages/dash-functional-readme.txt
+4.0K -rw-r--r-- 1 root root  646 May 12 10:03 packages/dash-functional.log
+4.0K -rw-r--r-- 1 root root   96 May 12 10:03 packages/dash-readme.txt
