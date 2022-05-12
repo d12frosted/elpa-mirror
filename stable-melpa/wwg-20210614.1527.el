@@ -5,7 +5,7 @@
 ;; Author: Andrea andrea-dev@hotmail.com>
 ;; Version: 0.1.1
 ;; Package-Version: 20210614.1527
-;; Package-Commit: 46c8a7c71275ced2c662c1222d4b85319f80dd83
+;; Package-Commit: cf29c6ae6f8d92f012feecec1dccb23b7e93c86f
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: wp
 ;; Homepage: https://github.com/ag91/writer-word-goals

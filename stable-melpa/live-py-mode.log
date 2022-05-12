@@ -4,31 +4,31 @@ Source:  https://github.com/donkirkby/live-py-plugin.git
 
 Updating /mnt/store/melpa/working/live-py-mode/
 Checking out origin/HEAD
-Checking out b466460b6783caacf1ea3fcfa28752cb73fd0805
+Checking out 7eaf6dc55caaaa65c5d6937b25e1748df75dbdb3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/live-py-mode/
-  to /tmp/live-py-modeUlTqzO/live-py-mode-20220404.0
+  to /tmp/live-py-modeXXyDQg/live-py-mode-20220512.34
   ! emacs-live-py-mode/live-py-mode.el -> live-py-mode.el
   ! plugin/PySrc/space_tracer => space_tracer
-Created live-py-mode-20220404.0.tar containing:
-  live-py-mode-20220404.0/
-  live-py-mode-20220404.0/live-py-mode-pkg.el
-  live-py-mode-20220404.0/live-py-mode.el
-  live-py-mode-20220404.0/space_tracer/
-  live-py-mode-20220404.0/space_tracer/__init__.py
-  live-py-mode-20220404.0/space_tracer/__main__.py
-  live-py-mode-20220404.0/space_tracer/about.py
-  live-py-mode-20220404.0/space_tracer/canvas.py
-  live-py-mode-20220404.0/space_tracer/code_tracer.py
-  live-py-mode-20220404.0/space_tracer/live_image.py
-  live-py-mode-20220404.0/space_tracer/main.py
-  live-py-mode-20220404.0/space_tracer/mock_turtle.py
-  live-py-mode-20220404.0/space_tracer/module_importers.py
-  live-py-mode-20220404.0/space_tracer/report_builder.py
-  live-py-mode-20220404.0/space_tracer/traced_finder.py
-Built live-py-mode in 7.642s, finished at 2022-05-11T14:50:57+0000
+Created live-py-mode-20220512.34.tar containing:
+  live-py-mode-20220512.34/
+  live-py-mode-20220512.34/live-py-mode-pkg.el
+  live-py-mode-20220512.34/live-py-mode.el
+  live-py-mode-20220512.34/space_tracer/
+  live-py-mode-20220512.34/space_tracer/__init__.py
+  live-py-mode-20220512.34/space_tracer/__main__.py
+  live-py-mode-20220512.34/space_tracer/about.py
+  live-py-mode-20220512.34/space_tracer/canvas.py
+  live-py-mode-20220512.34/space_tracer/code_tracer.py
+  live-py-mode-20220512.34/space_tracer/live_image.py
+  live-py-mode-20220512.34/space_tracer/main.py
+  live-py-mode-20220512.34/space_tracer/mock_turtle.py
+  live-py-mode-20220512.34/space_tracer/module_importers.py
+  live-py-mode-20220512.34/space_tracer/report_builder.py
+  live-py-mode-20220512.34/space_tracer/traced_finder.py
+Built live-py-mode in 6.511s, finished at 2022-05-12T03:49:21+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  368 May 11 14:50 packages/live-py-mode-20220404.0.entry
-180K -rw-r--r-- 1 root root 180K May 11 14:50 packages/live-py-mode-20220404.0.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 11 14:50 packages/live-py-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  156 May 11 14:50 packages/live-py-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  369 May 12 03:49 packages/live-py-mode-20220512.34.entry
+180K -rw-r--r-- 1 root root 180K May 12 03:49 packages/live-py-mode-20220512.34.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 12 03:49 packages/live-py-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  156 May 12 03:49 packages/live-py-mode-readme.txt
