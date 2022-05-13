@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 8bf8027e4bd8c093bddb76a813952d2a0dcbf21d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ivy/
-  to /tmp/ivyih4uTj/ivy-20220406.1052
+  to /tmp/ivynSmUVb/ivy-20220406.1052
     colir.el -> colir.el
     elpa.el -> elpa.el
     ivy-faces.el -> ivy-faces.el
@@ -15,7 +15,7 @@ Copying files (->) and directories (=>)
     ivy.el -> ivy.el
   ! doc/ivy.texi -> ivy.texi
   ! doc/ivy-help.org -> ivy-help.org
-Generating /tmp/ivyih4uTj/ivy-20220406.1052/ivy.info
+Generating /tmp/ivynSmUVb/ivy-20220406.1052/ivy.info
 Created ivy-20220406.1052.tar containing:
   ivy-20220406.1052/
   ivy-20220406.1052/colir.el
@@ -27,174 +27,174 @@ Created ivy-20220406.1052.tar containing:
   ivy-20220406.1052/ivy-pkg.el
   ivy-20220406.1052/ivy.el
   ivy-20220406.1052/ivy.info
-Built ivy in 9.060s, finished at 2022-05-12T10:28:34+0000
+Built ivy in 9.528s, finished at 2022-05-13T02:52:36+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  362 May 12 10:28 packages/ivy-20220406.1052.entry
-312K -rw-r--r-- 1 root root 310K May 12 10:28 packages/ivy-20220406.1052.tar
-4.0K -rw-r--r-- 1 root root 3.9K May 12 10:28 packages/ivy-avy-20211021.1602.el
-4.0K -rw-r--r-- 1 root root  395 May 12 10:28 packages/ivy-avy-20211021.1602.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 10:28 packages/ivy-avy-badge.svg
-4.0K -rw-r--r-- 1 root root   68 May 12 10:28 packages/ivy-avy-readme.txt
-4.0K -rw-r--r-- 1 root root  589 May 12 10:28 packages/ivy-avy.log
-4.0K -rw-r--r-- 1 root root 1.2K May 12 10:28 packages/ivy-badge.svg
- 12K -rw-r--r-- 1 root root 9.2K May 12 10:28 packages/ivy-bibtex-20210927.1205.el
-4.0K -rw-r--r-- 1 root root  451 May 12 10:28 packages/ivy-bibtex-20210927.1205.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 10:28 packages/ivy-bibtex-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K May 12 10:28 packages/ivy-bibtex-readme.txt
-4.0K -rw-r--r-- 1 root root  617 May 12 10:28 packages/ivy-bibtex.log
-8.0K -rw-r--r-- 1 root root 6.0K May 12 10:28 packages/ivy-clipmenu-20220202.2122.el
-4.0K -rw-r--r-- 1 root root  423 May 12 10:28 packages/ivy-clipmenu-20220202.2122.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 10:28 packages/ivy-clipmenu-badge.svg
-4.0K -rw-r--r-- 1 root root 1017 May 12 10:28 packages/ivy-clipmenu-readme.txt
-4.0K -rw-r--r-- 1 root root  633 May 12 10:28 packages/ivy-clipmenu.log
-8.0K -rw-r--r-- 1 root root 5.4K May 12 10:28 packages/ivy-clojuredocs-20201129.2355.el
-4.0K -rw-r--r-- 1 root root  465 May 12 10:28 packages/ivy-clojuredocs-20201129.2355.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 10:28 packages/ivy-clojuredocs-badge.svg
-4.0K -rw-r--r-- 1 root root  172 May 12 10:28 packages/ivy-clojuredocs-readme.txt
-4.0K -rw-r--r-- 1 root root  665 May 12 10:28 packages/ivy-clojuredocs.log
- 12K -rw-r--r-- 1 root root  11K May 12 10:28 packages/ivy-dired-history-20210715.48.el
-4.0K -rw-r--r-- 1 root root  426 May 12 10:28 packages/ivy-dired-history-20210715.48.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 10:28 packages/ivy-dired-history-badge.svg
-4.0K -rw-r--r-- 1 root root  704 May 12 10:28 packages/ivy-dired-history-readme.txt
-4.0K -rw-r--r-- 1 root root  665 May 12 10:28 packages/ivy-dired-history.log
-8.0K -rw-r--r-- 1 root root 5.3K May 12 10:28 packages/ivy-emms-20210817.1300.el
-4.0K -rw-r--r-- 1 root root  432 May 12 10:28 packages/ivy-emms-20210817.1300.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 10:28 packages/ivy-emms-badge.svg
-4.0K -rw-r--r-- 1 root root  345 May 12 10:28 packages/ivy-emms-readme.txt
-4.0K -rw-r--r-- 1 root root  603 May 12 10:28 packages/ivy-emms.log
-4.0K -rw-r--r-- 1 root root 3.8K May 12 10:28 packages/ivy-emoji-20200316.2351.el
-4.0K -rw-r--r-- 1 root root  433 May 12 07:04 packages/ivy-emoji-20200316.2351.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-emoji-badge.svg
-4.0K -rw-r--r-- 1 root root  410 May 12 07:04 packages/ivy-emoji-readme.txt
-4.0K -rw-r--r-- 1 root root  211 May 12 10:28 packages/ivy-emoji.log
-4.0K -rw-r--r-- 1 root root  514 May 12 07:04 packages/ivy-erlang-complete-20211019.447.entry
- 72K -rw-r--r-- 1 root root  70K May 12 07:04 packages/ivy-erlang-complete-20211019.447.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-erlang-complete-badge.svg
-4.0K -rw-r--r-- 1 root root   93 May 12 07:04 packages/ivy-erlang-complete-readme.txt
-4.0K -rw-r--r-- 1 root root  243 May 12 10:28 packages/ivy-erlang-complete.log
- 32K -rw-r--r-- 1 root root  30K May 12 07:04 packages/ivy-explorer-20190909.1921.el
-4.0K -rw-r--r-- 1 root root  431 May 12 07:04 packages/ivy-explorer-20190909.1921.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-explorer-badge.svg
-4.0K -rw-r--r-- 1 root root  605 May 12 07:04 packages/ivy-explorer-readme.txt
-4.0K -rw-r--r-- 1 root root  165 May 12 10:28 packages/ivy-explorer.log
- 16K -rw-r--r-- 1 root root  16K May 12 07:04 packages/ivy-file-preview-20210124.1639.el
-4.0K -rw-r--r-- 1 root root  458 May 12 07:04 packages/ivy-file-preview-20210124.1639.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-file-preview-badge.svg
-4.0K -rw-r--r-- 1 root root  443 May 12 07:04 packages/ivy-file-preview-readme.txt
-4.0K -rw-r--r-- 1 root root  153 May 12 10:28 packages/ivy-file-preview.log
-8.0K -rw-r--r-- 1 root root 4.8K May 12 07:04 packages/ivy-fuz-20191222.946.el
-4.0K -rw-r--r-- 1 root root  416 May 12 07:04 packages/ivy-fuz-20191222.946.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-fuz-badge.svg
-4.0K -rw-r--r-- 1 root root   33 May 12 07:04 packages/ivy-fuz-readme.txt
-4.0K -rw-r--r-- 1 root root  151 May 12 10:28 packages/ivy-fuz.log
-8.0K -rw-r--r-- 1 root root 6.3K May 12 07:04 packages/ivy-gitlab-20181228.826.el
-4.0K -rw-r--r-- 1 root root  504 May 12 07:04 packages/ivy-gitlab-20181228.826.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-gitlab-badge.svg
-4.0K -rw-r--r-- 1 root root   36 May 12 07:04 packages/ivy-gitlab-readme.txt
-4.0K -rw-r--r-- 1 root root  139 May 12 10:28 packages/ivy-gitlab.log
-8.0K -rw-r--r-- 1 root root 4.5K May 12 07:04 packages/ivy-historian-20210714.56.el
-4.0K -rw-r--r-- 1 root root  465 May 12 07:04 packages/ivy-historian-20210714.56.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-historian-badge.svg
-4.0K -rw-r--r-- 1 root root   48 May 12 07:04 packages/ivy-historian-readme.txt
-4.0K -rw-r--r-- 1 root root  144 May 12 10:28 packages/ivy-historian.log
-8.0K -rw-r--r-- 1 root root 6.4K May 12 07:04 packages/ivy-hydra-20220402.1348.el
-4.0K -rw-r--r-- 1 root root  436 May 12 07:04 packages/ivy-hydra-20220402.1348.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-hydra-badge.svg
-4.0K -rw-r--r-- 1 root root  178 May 12 07:04 packages/ivy-hydra-readme.txt
-4.0K -rw-r--r-- 1 root root  603 May 12 07:04 packages/ivy-hydra.log
-8.0K -rw-r--r-- 1 root root 4.3K May 12 07:04 packages/ivy-lobsters-20200818.1406.el
-4.0K -rw-r--r-- 1 root root  392 May 12 07:04 packages/ivy-lobsters-20200818.1406.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-lobsters-badge.svg
-4.0K -rw-r--r-- 1 root root   48 May 12 07:04 packages/ivy-lobsters-readme.txt
-4.0K -rw-r--r-- 1 root root  631 May 12 07:04 packages/ivy-lobsters.log
- 16K -rw-r--r-- 1 root root  16K May 12 07:04 packages/ivy-migemo-20220309.605.el
-4.0K -rw-r--r-- 1 root root  466 May 12 07:04 packages/ivy-migemo-20220309.605.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-migemo-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K May 12 07:04 packages/ivy-migemo-readme.txt
-4.0K -rw-r--r-- 1 root root  614 May 12 07:04 packages/ivy-migemo.log
-8.0K -rw-r--r-- 1 root root 4.2K May 12 07:04 packages/ivy-mpdel-20190428.920.el
-4.0K -rw-r--r-- 1 root root  468 May 12 07:04 packages/ivy-mpdel-20190428.920.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-mpdel-badge.svg
-4.0K -rw-r--r-- 1 root root  268 May 12 07:04 packages/ivy-mpdel-readme.txt
-4.0K -rw-r--r-- 1 root root  602 May 12 07:04 packages/ivy-mpdel.log
- 20K -rw-r--r-- 1 root root  17K May 12 07:04 packages/ivy-omni-org-20200810.1050.el
-4.0K -rw-r--r-- 1 root root  420 May 12 07:04 packages/ivy-omni-org-20200810.1050.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-omni-org-badge.svg
-4.0K -rw-r--r-- 1 root root  126 May 12 07:04 packages/ivy-omni-org-readme.txt
-4.0K -rw-r--r-- 1 root root  629 May 12 07:04 packages/ivy-omni-org.log
-4.0K -rw-r--r-- 1 root root 2.6K May 12 07:04 packages/ivy-pass-20170812.1955.el
-4.0K -rw-r--r-- 1 root root  389 May 12 07:04 packages/ivy-pass-20170812.1955.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-pass-badge.svg
-4.0K -rw-r--r-- 1 root root  322 May 12 07:04 packages/ivy-pass-readme.txt
-4.0K -rw-r--r-- 1 root root  598 May 12 07:04 packages/ivy-pass.log
-8.0K -rw-r--r-- 1 root root 5.5K May 12 07:04 packages/ivy-phpunit-20180219.915.el
-4.0K -rw-r--r-- 1 root root  405 May 12 07:04 packages/ivy-phpunit-20180219.915.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-phpunit-badge.svg
-4.0K -rw-r--r-- 1 root root  442 May 12 07:04 packages/ivy-phpunit-readme.txt
-4.0K -rw-r--r-- 1 root root  617 May 12 07:04 packages/ivy-phpunit.log
- 28K -rw-r--r-- 1 root root  25K May 12 07:04 packages/ivy-posframe-20211217.234.el
-4.0K -rw-r--r-- 1 root root  469 May 12 07:04 packages/ivy-posframe-20211217.234.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-posframe-badge.svg
-8.0K -rw-r--r-- 1 root root 4.2K May 12 07:04 packages/ivy-posframe-readme.txt
-4.0K -rw-r--r-- 1 root root  628 May 12 07:04 packages/ivy-posframe.log
- 12K -rw-r--r-- 1 root root  11K May 12 07:04 packages/ivy-prescient-20220509.2300.el
-4.0K -rw-r--r-- 1 root root  419 May 12 07:04 packages/ivy-prescient-20220509.2300.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-prescient-badge.svg
-4.0K -rw-r--r-- 1 root root  269 May 12 07:04 packages/ivy-prescient-readme.txt
-4.0K -rw-r--r-- 1 root root  638 May 12 07:04 packages/ivy-prescient.log
-4.0K -rw-r--r-- 1 root root 3.7K May 12 07:04 packages/ivy-purpose-20160724.1003.el
-4.0K -rw-r--r-- 1 root root  363 May 12 07:04 packages/ivy-purpose-20160724.1003.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-purpose-badge.svg
-4.0K -rw-r--r-- 1 root root  857 May 12 07:04 packages/ivy-purpose-readme.txt
-4.0K -rw-r--r-- 1 root root  619 May 12 07:04 packages/ivy-purpose.log
-4.0K -rw-r--r-- 1 root root  396 May 12 10:28 packages/ivy-readme.txt
- 28K -rw-r--r-- 1 root root  27K May 12 07:04 packages/ivy-rich-20210409.931.el
-4.0K -rw-r--r-- 1 root root  420 May 12 07:04 packages/ivy-rich-20210409.931.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-rich-badge.svg
-4.0K -rw-r--r-- 1 root root  159 May 12 07:04 packages/ivy-rich-readme.txt
-4.0K -rw-r--r-- 1 root root  653 May 12 07:04 packages/ivy-rich.log
-8.0K -rw-r--r-- 1 root root 4.8K May 12 07:04 packages/ivy-rtags-20191222.920.el
-4.0K -rw-r--r-- 1 root root  434 May 12 07:04 packages/ivy-rtags-20191222.920.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-rtags-badge.svg
-   0 -rw-r--r-- 1 root root    0 May 12 07:04 packages/ivy-rtags-readme.txt
-4.0K -rw-r--r-- 1 root root  605 May 12 07:04 packages/ivy-rtags.log
- 16K -rw-r--r-- 1 root root  16K May 12 07:04 packages/ivy-searcher-20210221.923.el
-4.0K -rw-r--r-- 1 root root  432 May 12 07:04 packages/ivy-searcher-20210221.923.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-searcher-badge.svg
-4.0K -rw-r--r-- 1 root root   32 May 12 07:04 packages/ivy-searcher-readme.txt
-4.0K -rw-r--r-- 1 root root  629 May 12 07:04 packages/ivy-searcher.log
-8.0K -rw-r--r-- 1 root root 4.5K May 12 07:04 packages/ivy-spotify-20210329.312.el
-4.0K -rw-r--r-- 1 root root  410 May 12 07:04 packages/ivy-spotify-20210329.312.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-spotify-badge.svg
-4.0K -rw-r--r-- 1 root root  895 May 12 07:04 packages/ivy-spotify-readme.txt
-4.0K -rw-r--r-- 1 root root  612 May 12 07:04 packages/ivy-spotify.log
- 12K -rw-r--r-- 1 root root 9.3K May 12 07:04 packages/ivy-todo-20200323.2005.el
-4.0K -rw-r--r-- 1 root root  412 May 12 07:04 packages/ivy-todo-20200323.2005.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-todo-badge.svg
-4.0K -rw-r--r-- 1 root root  290 May 12 07:04 packages/ivy-todo-readme.txt
-4.0K -rw-r--r-- 1 root root  601 May 12 07:04 packages/ivy-todo.log
-8.0K -rw-r--r-- 1 root root 6.3K May 12 07:04 packages/ivy-xcdoc-20160917.1055.el
-4.0K -rw-r--r-- 1 root root  427 May 12 07:04 packages/ivy-xcdoc-20160917.1055.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-xcdoc-badge.svg
-4.0K -rw-r--r-- 1 root root  719 May 12 07:04 packages/ivy-xcdoc-readme.txt
-4.0K -rw-r--r-- 1 root root  612 May 12 07:04 packages/ivy-xcdoc.log
-8.0K -rw-r--r-- 1 root root 5.4K May 12 07:04 packages/ivy-xref-20211008.1103.el
-4.0K -rw-r--r-- 1 root root  370 May 12 07:04 packages/ivy-xref-20211008.1103.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-xref-badge.svg
-4.0K -rw-r--r-- 1 root root  195 May 12 07:04 packages/ivy-xref-readme.txt
-4.0K -rw-r--r-- 1 root root  601 May 12 07:04 packages/ivy-xref.log
- 12K -rw-r--r-- 1 root root 8.9K May 12 07:04 packages/ivy-yasnippet-20200704.700.el
-4.0K -rw-r--r-- 1 root root  466 May 12 07:04 packages/ivy-yasnippet-20200704.700.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-yasnippet-badge.svg
-4.0K -rw-r--r-- 1 root root  278 May 12 07:04 packages/ivy-yasnippet-readme.txt
-4.0K -rw-r--r-- 1 root root  634 May 12 07:04 packages/ivy-yasnippet.log
-4.0K -rw-r--r-- 1 root root 2.8K May 12 07:04 packages/ivy-ycmd-20180909.1225.el
-4.0K -rw-r--r-- 1 root root  451 May 12 07:04 packages/ivy-ycmd-20180909.1225.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-ycmd-badge.svg
-4.0K -rw-r--r-- 1 root root  147 May 12 07:04 packages/ivy-ycmd-readme.txt
-4.0K -rw-r--r-- 1 root root  605 May 12 07:04 packages/ivy-ycmd.log
-8.0K -rw-r--r-- 1 root root 6.9K May 12 07:04 packages/ivy-youtube-20181126.1039.el
-4.0K -rw-r--r-- 1 root root  442 May 12 07:04 packages/ivy-youtube-20181126.1039.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 07:04 packages/ivy-youtube-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K May 12 07:04 packages/ivy-youtube-readme.txt
-4.0K -rw-r--r-- 1 root root  622 May 12 07:04 packages/ivy-youtube.log
+4.0K -rw-r--r-- 1 root root  362 May 13 02:52 packages/ivy-20220406.1052.entry
+312K -rw-r--r-- 1 root root 310K May 13 02:52 packages/ivy-20220406.1052.tar
+4.0K -rw-r--r-- 1 root root 3.9K May 13 02:52 packages/ivy-avy-20211021.1602.el
+4.0K -rw-r--r-- 1 root root  395 May 13 02:52 packages/ivy-avy-20211021.1602.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 13 02:52 packages/ivy-avy-badge.svg
+4.0K -rw-r--r-- 1 root root   68 May 13 02:52 packages/ivy-avy-readme.txt
+4.0K -rw-r--r-- 1 root root  589 May 13 02:52 packages/ivy-avy.log
+4.0K -rw-r--r-- 1 root root 1.2K May 13 02:52 packages/ivy-badge.svg
+ 12K -rw-r--r-- 1 root root 9.2K May 13 02:52 packages/ivy-bibtex-20210927.1205.el
+4.0K -rw-r--r-- 1 root root  451 May 13 02:52 packages/ivy-bibtex-20210927.1205.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 13 02:52 packages/ivy-bibtex-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K May 13 02:52 packages/ivy-bibtex-readme.txt
+4.0K -rw-r--r-- 1 root root  617 May 13 02:52 packages/ivy-bibtex.log
+8.0K -rw-r--r-- 1 root root 6.0K May 13 02:52 packages/ivy-clipmenu-20220202.2122.el
+4.0K -rw-r--r-- 1 root root  423 May 13 02:52 packages/ivy-clipmenu-20220202.2122.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 13 02:52 packages/ivy-clipmenu-badge.svg
+4.0K -rw-r--r-- 1 root root 1017 May 13 02:52 packages/ivy-clipmenu-readme.txt
+4.0K -rw-r--r-- 1 root root  633 May 13 02:52 packages/ivy-clipmenu.log
+8.0K -rw-r--r-- 1 root root 5.4K May 13 02:52 packages/ivy-clojuredocs-20201129.2355.el
+4.0K -rw-r--r-- 1 root root  465 May 13 02:52 packages/ivy-clojuredocs-20201129.2355.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 13 02:52 packages/ivy-clojuredocs-badge.svg
+4.0K -rw-r--r-- 1 root root  172 May 13 02:52 packages/ivy-clojuredocs-readme.txt
+4.0K -rw-r--r-- 1 root root  665 May 13 02:52 packages/ivy-clojuredocs.log
+ 12K -rw-r--r-- 1 root root  11K May 13 02:52 packages/ivy-dired-history-20210715.48.el
+4.0K -rw-r--r-- 1 root root  426 May 13 02:52 packages/ivy-dired-history-20210715.48.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 13 02:52 packages/ivy-dired-history-badge.svg
+4.0K -rw-r--r-- 1 root root  704 May 13 02:52 packages/ivy-dired-history-readme.txt
+4.0K -rw-r--r-- 1 root root  665 May 13 02:52 packages/ivy-dired-history.log
+8.0K -rw-r--r-- 1 root root 5.3K May 13 02:52 packages/ivy-emms-20210817.1300.el
+4.0K -rw-r--r-- 1 root root  432 May 13 02:52 packages/ivy-emms-20210817.1300.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 13 02:52 packages/ivy-emms-badge.svg
+4.0K -rw-r--r-- 1 root root  345 May 13 02:52 packages/ivy-emms-readme.txt
+4.0K -rw-r--r-- 1 root root  603 May 13 02:52 packages/ivy-emms.log
+4.0K -rw-r--r-- 1 root root 3.9K May 13 02:52 packages/ivy-emoji-20200316.2351.el
+4.0K -rw-r--r-- 1 root root  433 May 13 02:52 packages/ivy-emoji-20200316.2351.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 13 02:52 packages/ivy-emoji-badge.svg
+4.0K -rw-r--r-- 1 root root  410 May 13 02:52 packages/ivy-emoji-readme.txt
+4.0K -rw-r--r-- 1 root root  289 May 13 02:52 packages/ivy-emoji.log
+4.0K -rw-r--r-- 1 root root  514 May 12 23:35 packages/ivy-erlang-complete-20211019.447.entry
+ 72K -rw-r--r-- 1 root root  70K May 12 23:35 packages/ivy-erlang-complete-20211019.447.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-erlang-complete-badge.svg
+4.0K -rw-r--r-- 1 root root   93 May 12 23:35 packages/ivy-erlang-complete-readme.txt
+4.0K -rw-r--r-- 1 root root  243 May 13 02:52 packages/ivy-erlang-complete.log
+ 32K -rw-r--r-- 1 root root  30K May 12 23:35 packages/ivy-explorer-20190909.1921.el
+4.0K -rw-r--r-- 1 root root  431 May 12 23:35 packages/ivy-explorer-20190909.1921.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-explorer-badge.svg
+4.0K -rw-r--r-- 1 root root  605 May 12 23:35 packages/ivy-explorer-readme.txt
+4.0K -rw-r--r-- 1 root root  165 May 13 02:52 packages/ivy-explorer.log
+ 16K -rw-r--r-- 1 root root  16K May 12 23:35 packages/ivy-file-preview-20210124.1639.el
+4.0K -rw-r--r-- 1 root root  458 May 12 23:35 packages/ivy-file-preview-20210124.1639.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-file-preview-badge.svg
+4.0K -rw-r--r-- 1 root root  443 May 12 23:35 packages/ivy-file-preview-readme.txt
+4.0K -rw-r--r-- 1 root root  178 May 13 02:52 packages/ivy-file-preview.log
+8.0K -rw-r--r-- 1 root root 4.8K May 12 23:35 packages/ivy-fuz-20191222.946.el
+4.0K -rw-r--r-- 1 root root  416 May 12 23:35 packages/ivy-fuz-20191222.946.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-fuz-badge.svg
+4.0K -rw-r--r-- 1 root root   33 May 12 23:35 packages/ivy-fuz-readme.txt
+4.0K -rw-r--r-- 1 root root  151 May 13 02:52 packages/ivy-fuz.log
+8.0K -rw-r--r-- 1 root root 6.3K May 12 23:35 packages/ivy-gitlab-20181228.826.el
+4.0K -rw-r--r-- 1 root root  504 May 12 23:35 packages/ivy-gitlab-20181228.826.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-gitlab-badge.svg
+4.0K -rw-r--r-- 1 root root   36 May 12 23:35 packages/ivy-gitlab-readme.txt
+4.0K -rw-r--r-- 1 root root  164 May 13 02:52 packages/ivy-gitlab.log
+8.0K -rw-r--r-- 1 root root 4.5K May 12 23:35 packages/ivy-historian-20210714.56.el
+4.0K -rw-r--r-- 1 root root  465 May 12 23:35 packages/ivy-historian-20210714.56.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-historian-badge.svg
+4.0K -rw-r--r-- 1 root root   48 May 12 23:35 packages/ivy-historian-readme.txt
+4.0K -rw-r--r-- 1 root root  144 May 13 02:52 packages/ivy-historian.log
+8.0K -rw-r--r-- 1 root root 6.4K May 12 23:35 packages/ivy-hydra-20220402.1348.el
+4.0K -rw-r--r-- 1 root root  436 May 12 23:35 packages/ivy-hydra-20220402.1348.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-hydra-badge.svg
+4.0K -rw-r--r-- 1 root root  178 May 12 23:35 packages/ivy-hydra-readme.txt
+4.0K -rw-r--r-- 1 root root  603 May 12 23:35 packages/ivy-hydra.log
+8.0K -rw-r--r-- 1 root root 4.3K May 12 23:35 packages/ivy-lobsters-20200818.1406.el
+4.0K -rw-r--r-- 1 root root  392 May 12 23:35 packages/ivy-lobsters-20200818.1406.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-lobsters-badge.svg
+4.0K -rw-r--r-- 1 root root   48 May 12 23:35 packages/ivy-lobsters-readme.txt
+4.0K -rw-r--r-- 1 root root  631 May 12 23:35 packages/ivy-lobsters.log
+ 16K -rw-r--r-- 1 root root  16K May 12 23:35 packages/ivy-migemo-20220309.605.el
+4.0K -rw-r--r-- 1 root root  466 May 12 23:35 packages/ivy-migemo-20220309.605.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-migemo-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K May 12 23:35 packages/ivy-migemo-readme.txt
+4.0K -rw-r--r-- 1 root root  614 May 12 23:35 packages/ivy-migemo.log
+8.0K -rw-r--r-- 1 root root 4.2K May 12 23:35 packages/ivy-mpdel-20190428.920.el
+4.0K -rw-r--r-- 1 root root  468 May 12 23:35 packages/ivy-mpdel-20190428.920.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-mpdel-badge.svg
+4.0K -rw-r--r-- 1 root root  268 May 12 23:35 packages/ivy-mpdel-readme.txt
+4.0K -rw-r--r-- 1 root root  602 May 12 23:35 packages/ivy-mpdel.log
+ 20K -rw-r--r-- 1 root root  17K May 12 23:35 packages/ivy-omni-org-20200810.1050.el
+4.0K -rw-r--r-- 1 root root  420 May 12 23:35 packages/ivy-omni-org-20200810.1050.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-omni-org-badge.svg
+4.0K -rw-r--r-- 1 root root  126 May 12 23:35 packages/ivy-omni-org-readme.txt
+4.0K -rw-r--r-- 1 root root  629 May 12 23:35 packages/ivy-omni-org.log
+4.0K -rw-r--r-- 1 root root 2.6K May 12 23:35 packages/ivy-pass-20170812.1955.el
+4.0K -rw-r--r-- 1 root root  389 May 12 23:35 packages/ivy-pass-20170812.1955.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-pass-badge.svg
+4.0K -rw-r--r-- 1 root root  322 May 12 23:35 packages/ivy-pass-readme.txt
+4.0K -rw-r--r-- 1 root root  598 May 12 23:35 packages/ivy-pass.log
+8.0K -rw-r--r-- 1 root root 5.5K May 12 23:35 packages/ivy-phpunit-20180219.915.el
+4.0K -rw-r--r-- 1 root root  405 May 12 23:35 packages/ivy-phpunit-20180219.915.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-phpunit-badge.svg
+4.0K -rw-r--r-- 1 root root  442 May 12 23:35 packages/ivy-phpunit-readme.txt
+4.0K -rw-r--r-- 1 root root  617 May 12 23:35 packages/ivy-phpunit.log
+ 28K -rw-r--r-- 1 root root  25K May 12 23:35 packages/ivy-posframe-20211217.234.el
+4.0K -rw-r--r-- 1 root root  469 May 12 23:35 packages/ivy-posframe-20211217.234.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-posframe-badge.svg
+8.0K -rw-r--r-- 1 root root 4.2K May 12 23:35 packages/ivy-posframe-readme.txt
+4.0K -rw-r--r-- 1 root root  628 May 12 23:35 packages/ivy-posframe.log
+ 12K -rw-r--r-- 1 root root  11K May 12 23:35 packages/ivy-prescient-20220509.2300.el
+4.0K -rw-r--r-- 1 root root  419 May 12 23:35 packages/ivy-prescient-20220509.2300.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-prescient-badge.svg
+4.0K -rw-r--r-- 1 root root  269 May 12 23:35 packages/ivy-prescient-readme.txt
+4.0K -rw-r--r-- 1 root root  645 May 12 23:35 packages/ivy-prescient.log
+4.0K -rw-r--r-- 1 root root 3.7K May 12 23:35 packages/ivy-purpose-20160724.1003.el
+4.0K -rw-r--r-- 1 root root  363 May 12 23:35 packages/ivy-purpose-20160724.1003.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-purpose-badge.svg
+4.0K -rw-r--r-- 1 root root  857 May 12 23:35 packages/ivy-purpose-readme.txt
+4.0K -rw-r--r-- 1 root root  619 May 12 23:35 packages/ivy-purpose.log
+4.0K -rw-r--r-- 1 root root  396 May 13 02:52 packages/ivy-readme.txt
+ 28K -rw-r--r-- 1 root root  27K May 12 23:35 packages/ivy-rich-20210409.931.el
+4.0K -rw-r--r-- 1 root root  420 May 12 23:35 packages/ivy-rich-20210409.931.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-rich-badge.svg
+4.0K -rw-r--r-- 1 root root  159 May 12 23:35 packages/ivy-rich-readme.txt
+4.0K -rw-r--r-- 1 root root  653 May 12 23:35 packages/ivy-rich.log
+8.0K -rw-r--r-- 1 root root 4.8K May 12 23:35 packages/ivy-rtags-20191222.920.el
+4.0K -rw-r--r-- 1 root root  434 May 12 23:35 packages/ivy-rtags-20191222.920.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-rtags-badge.svg
+   0 -rw-r--r-- 1 root root    0 May 12 23:35 packages/ivy-rtags-readme.txt
+4.0K -rw-r--r-- 1 root root  605 May 12 23:35 packages/ivy-rtags.log
+ 16K -rw-r--r-- 1 root root  16K May 12 23:35 packages/ivy-searcher-20210221.923.el
+4.0K -rw-r--r-- 1 root root  432 May 12 23:35 packages/ivy-searcher-20210221.923.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-searcher-badge.svg
+4.0K -rw-r--r-- 1 root root   32 May 12 23:35 packages/ivy-searcher-readme.txt
+4.0K -rw-r--r-- 1 root root  629 May 12 23:35 packages/ivy-searcher.log
+8.0K -rw-r--r-- 1 root root 4.5K May 12 23:35 packages/ivy-spotify-20210329.312.el
+4.0K -rw-r--r-- 1 root root  410 May 12 23:35 packages/ivy-spotify-20210329.312.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-spotify-badge.svg
+4.0K -rw-r--r-- 1 root root  895 May 12 23:35 packages/ivy-spotify-readme.txt
+4.0K -rw-r--r-- 1 root root  612 May 12 23:35 packages/ivy-spotify.log
+ 12K -rw-r--r-- 1 root root 9.3K May 12 23:35 packages/ivy-todo-20200323.2005.el
+4.0K -rw-r--r-- 1 root root  412 May 12 23:35 packages/ivy-todo-20200323.2005.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-todo-badge.svg
+4.0K -rw-r--r-- 1 root root  290 May 12 23:35 packages/ivy-todo-readme.txt
+4.0K -rw-r--r-- 1 root root  601 May 12 23:35 packages/ivy-todo.log
+8.0K -rw-r--r-- 1 root root 6.3K May 12 23:35 packages/ivy-xcdoc-20160917.1055.el
+4.0K -rw-r--r-- 1 root root  427 May 12 23:35 packages/ivy-xcdoc-20160917.1055.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-xcdoc-badge.svg
+4.0K -rw-r--r-- 1 root root  719 May 12 23:35 packages/ivy-xcdoc-readme.txt
+4.0K -rw-r--r-- 1 root root  612 May 12 23:35 packages/ivy-xcdoc.log
+8.0K -rw-r--r-- 1 root root 5.4K May 12 23:35 packages/ivy-xref-20211008.1103.el
+4.0K -rw-r--r-- 1 root root  370 May 12 23:35 packages/ivy-xref-20211008.1103.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-xref-badge.svg
+4.0K -rw-r--r-- 1 root root  195 May 12 23:35 packages/ivy-xref-readme.txt
+4.0K -rw-r--r-- 1 root root  601 May 12 23:35 packages/ivy-xref.log
+ 12K -rw-r--r-- 1 root root 8.9K May 12 23:35 packages/ivy-yasnippet-20200704.700.el
+4.0K -rw-r--r-- 1 root root  466 May 12 23:35 packages/ivy-yasnippet-20200704.700.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:35 packages/ivy-yasnippet-badge.svg
+4.0K -rw-r--r-- 1 root root  278 May 12 23:35 packages/ivy-yasnippet-readme.txt
+4.0K -rw-r--r-- 1 root root  634 May 12 23:35 packages/ivy-yasnippet.log
+4.0K -rw-r--r-- 1 root root 2.8K May 12 23:36 packages/ivy-ycmd-20180909.1225.el
+4.0K -rw-r--r-- 1 root root  451 May 12 23:36 packages/ivy-ycmd-20180909.1225.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:36 packages/ivy-ycmd-badge.svg
+4.0K -rw-r--r-- 1 root root  147 May 12 23:36 packages/ivy-ycmd-readme.txt
+4.0K -rw-r--r-- 1 root root  605 May 12 23:36 packages/ivy-ycmd.log
+8.0K -rw-r--r-- 1 root root 6.9K May 12 23:36 packages/ivy-youtube-20181126.1039.el
+4.0K -rw-r--r-- 1 root root  442 May 12 23:36 packages/ivy-youtube-20181126.1039.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:36 packages/ivy-youtube-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K May 12 23:36 packages/ivy-youtube-readme.txt
+4.0K -rw-r--r-- 1 root root  622 May 12 23:36 packages/ivy-youtube.log

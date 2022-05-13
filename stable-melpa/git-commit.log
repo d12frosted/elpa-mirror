@@ -4,24 +4,24 @@ Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/git-commit/
 Checking out origin/HEAD
-Checking out 71f7d1df1d715a866269f33ed5c3836ed0839571
+Checking out 12272c825d216148454b7cfa57fef202cdfe0c7d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/git-commit/
-  to /tmp/git-commitDTXm82/git-commit-20220506.1936
+  to /tmp/git-commitCplUMd/git-commit-20220506.1936
   ! lisp/git-commit.el -> git-commit.el
   ! lisp/git-commit-pkg.el -> git-commit-pkg.el
 Created git-commit-20220506.1936.tar containing:
   git-commit-20220506.1936/
   git-commit-20220506.1936/git-commit-pkg.el
   git-commit-20220506.1936/git-commit.el
-Built git-commit in 5.793s, finished at 2022-05-12T10:19:04+0000
+Built git-commit in 5.304s, finished at 2022-05-13T02:43:37+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  655 May 12 10:19 packages/git-commit-20220506.1936.entry
- 52K -rw-r--r-- 1 root root  50K May 12 10:19 packages/git-commit-20220506.1936.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 12 10:19 packages/git-commit-badge.svg
- 16K -rw-r--r-- 1 root root  14K May 12 10:19 packages/git-commit-insert-issue-20210107.2018.el
-4.0K -rw-r--r-- 1 root root  517 May 12 10:19 packages/git-commit-insert-issue-20210107.2018.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 12 10:19 packages/git-commit-insert-issue-badge.svg
-4.0K -rw-r--r-- 1 root root  171 May 12 10:19 packages/git-commit-insert-issue-readme.txt
-4.0K -rw-r--r-- 1 root root  722 May 12 10:19 packages/git-commit-insert-issue.log
-4.0K -rw-r--r-- 1 root root 3.5K May 12 10:19 packages/git-commit-readme.txt
+4.0K -rw-r--r-- 1 root root  655 May 13 02:43 packages/git-commit-20220506.1936.entry
+ 52K -rw-r--r-- 1 root root  50K May 13 02:43 packages/git-commit-20220506.1936.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 13 02:43 packages/git-commit-badge.svg
+ 16K -rw-r--r-- 1 root root  14K May 13 02:43 packages/git-commit-insert-issue-20210107.2018.el
+4.0K -rw-r--r-- 1 root root  517 May 13 02:43 packages/git-commit-insert-issue-20210107.2018.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 12 23:26 packages/git-commit-insert-issue-badge.svg
+4.0K -rw-r--r-- 1 root root  171 May 13 02:43 packages/git-commit-insert-issue-readme.txt
+4.0K -rw-r--r-- 1 root root  256 May 13 02:43 packages/git-commit-insert-issue.log
+4.0K -rw-r--r-- 1 root root 3.5K May 13 02:43 packages/git-commit-readme.txt

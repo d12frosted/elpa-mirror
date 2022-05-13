@@ -1,3 +1,11 @@
+--------------------------------------------------------------------
+IMPORTANT: This package is DEPRECATED and no further development
+will take place.  It has been replaced by the Frimacs package
+(http://github.com/pdo/frimacs).  To switch, first uninstall the
+axiom-environment, company-axiom and ob-axiom packages, then
+install Frimacs (also available on MELPA).
+--------------------------------------------------------------------
+
 The `axiom-environment' package is intended to make it easier to
 work with, and understand, the Axiom, OpenAxiom and FriCAS computer
 algebra systems.  It implements four different major modes for the
