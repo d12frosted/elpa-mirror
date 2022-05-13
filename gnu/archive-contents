@@ -1003,7 +1003,7 @@
 	  ("Jorgen Schäfer" . "forcer@forcix.cx"))
 	 (:commit . "6afe1b26d679357586380ecd69c9795985231013"))])
  (engrave-faces .
-		[(0 3 0)
+		[(0 3 1)
 		 ((emacs
 		   (27 1)))
 		 "Convert font-lock faces to other formats" tar
@@ -1012,7 +1012,7 @@
 		  (:maintainer "TEC" . "tec@tecosaur.com")
 		  (:authors
 		   ("TEC <https://github/tecosaur>"))
-		  (:commit . "3739d9f690412beb5bf717b11bc828fe39ade231"))])
+		  (:commit . "fe29d9b593a0f7ada4df3f52dfb9f7f8c1bdaaa7"))])
  (enwc .
        [(2 0)
 	((emacs
@@ -1937,14 +1937,14 @@
 		(:keywords "convenience" "org-mode" "org-agenda")
 		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nano-modeline .
-		[(0 6)
+		[(0 7)
 		 ((emacs
 		   (27 1)))
 		 "N Λ N O modeline" tar
 		 ((:url . "https://github.com/rougier/nano-modeline")
 		  (:keywords "convenience" "mode-line" "header-line")
 		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-		  (:commit . "1c743a9dbe72a1bdc2196ad43a217060e163c929"))])
+		  (:commit . "960ff4f01aa1273b4395d9985b5bda2d96af0cab"))])
  (nano-theme .
 	     [(0 3 1)
 	      ((emacs
@@ -2269,6 +2269,17 @@
 	     (:authors
 	      ("Daiki Ueno" . "ueno@gnu.org"))
 	     (:maintainer "Daiki Ueno" . "ueno@gnu.org"))])
+ (plz .
+      [(0 1)
+       ((emacs
+	 (26 3)))
+       "HTTP library" tar
+       ((:url . "https://github.com/alphapapa/plz.el")
+	(:keywords "comm" "network" "http")
+	(:maintainer "Adam Porter" . "adam@alphapapa.net")
+	(:authors
+	 ("Adam Porter" . "adam@alphapapa.net"))
+	(:commit . "9156de9c59c1836139db1b600f4056454b42dfd2"))])
  (poker .
 	[(0 2)
 	 nil "Texas hold 'em poker" single
