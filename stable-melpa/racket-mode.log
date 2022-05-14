@@ -4,10 +4,10 @@ Source:  https://github.com/greghendershott/racket-mode.git
 
 Updating /mnt/store/melpa/working/racket-mode/
 Checking out origin/HEAD
-Checking out 3b351fbb0d3e81bf260cb3fc7b623f1b782550cc
+Checking out 47d3dd954dc997198af468b6bbee06c80aa86264
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/racket-mode/
-  to /tmp/racket-mode2EGzDA/racket-mode-20220512.1447
+  to /tmp/racket-modeXL8qHF/racket-mode-20220514.1259
     racket-back-end.el -> racket-back-end.el
     racket-browse-url.el -> racket-browse-url.el
     racket-bug-report.el -> racket-bug-report.el
@@ -69,83 +69,85 @@ Copying files (->) and directories (=>)
     racket/stack-checkpoint.rkt -> racket/stack-checkpoint.rkt
     racket/syntax.rkt -> racket/syntax.rkt
     racket/util.rkt -> racket/util.rkt
-Generating /tmp/racket-mode2EGzDA/racket-mode-20220512.1447/racket-mode.info
-Created racket-mode-20220512.1447.tar containing:
-  racket-mode-20220512.1447/
-  racket-mode-20220512.1447/dir
-  racket-mode-20220512.1447/racket-back-end.el
-  racket-mode-20220512.1447/racket-browse-url.el
-  racket-mode-20220512.1447/racket-bug-report.el
-  racket-mode-20220512.1447/racket-cmd.el
-  racket-mode-20220512.1447/racket-collection.el
-  racket-mode-20220512.1447/racket-common.el
-  racket-mode-20220512.1447/racket-company-doc.el
-  racket-mode-20220512.1447/racket-complete.el
-  racket-mode-20220512.1447/racket-custom.el
-  racket-mode-20220512.1447/racket-debug.el
-  racket-mode-20220512.1447/racket-describe.el
-  racket-mode-20220512.1447/racket-doc.el
-  racket-mode-20220512.1447/racket-edit.el
-  racket-mode-20220512.1447/racket-eldoc.el
-  racket-mode-20220512.1447/racket-font-lock.el
-  racket-mode-20220512.1447/racket-imenu.el
-  racket-mode-20220512.1447/racket-indent.el
-  racket-mode-20220512.1447/racket-keywords-and-builtins.el
-  racket-mode-20220512.1447/racket-logger.el
-  racket-mode-20220512.1447/racket-mode-pkg.el
-  racket-mode-20220512.1447/racket-mode.el
-  racket-mode-20220512.1447/racket-mode.info
-  racket-mode-20220512.1447/racket-parens.el
-  racket-mode-20220512.1447/racket-ppss.el
-  racket-mode-20220512.1447/racket-profile.el
-  racket-mode-20220512.1447/racket-repl-buffer-name.el
-  racket-mode-20220512.1447/racket-repl.el
-  racket-mode-20220512.1447/racket-scribble.el
-  racket-mode-20220512.1447/racket-show.el
-  racket-mode-20220512.1447/racket-smart-open.el
-  racket-mode-20220512.1447/racket-stepper.el
-  racket-mode-20220512.1447/racket-unicode-input-method.el
-  racket-mode-20220512.1447/racket-util.el
-  racket-mode-20220512.1447/racket-visit.el
-  racket-mode-20220512.1447/racket-wsl.el
-  racket-mode-20220512.1447/racket-xp-complete.el
-  racket-mode-20220512.1447/racket-xp.el
-  racket-mode-20220512.1447/racket/
-  racket-mode-20220512.1447/racket/command-server.rkt
-  racket-mode-20220512.1447/racket/commands/
-  racket-mode-20220512.1447/racket/commands/check-syntax.rkt
-  racket-mode-20220512.1447/racket/commands/describe.rkt
-  racket-mode-20220512.1447/racket/commands/find-module.rkt
-  racket-mode-20220512.1447/racket/commands/help.rkt
-  racket-mode-20220512.1447/racket/commands/macro.rkt
-  racket-mode-20220512.1447/racket/commands/module-names.rkt
-  racket-mode-20220512.1447/racket/commands/requires.rkt
-  racket-mode-20220512.1447/racket/debug-annotator.rkt
-  racket-mode-20220512.1447/racket/debug.rkt
-  racket-mode-20220512.1447/racket/elisp.rkt
-  racket-mode-20220512.1447/racket/error.rkt
-  racket-mode-20220512.1447/racket/find-module-path-completions.rkt
-  racket-mode-20220512.1447/racket/find.rkt
-  racket-mode-20220512.1447/racket/gui.rkt
-  racket-mode-20220512.1447/racket/identifier.rkt
-  racket-mode-20220512.1447/racket/image.rkt
-  racket-mode-20220512.1447/racket/imports.rkt
-  racket-mode-20220512.1447/racket/instrument.rkt
-  racket-mode-20220512.1447/racket/interactions.rkt
-  racket-mode-20220512.1447/racket/keywords.rkt
-  racket-mode-20220512.1447/racket/logger.rkt
-  racket-mode-20220512.1447/racket/main.rkt
-  racket-mode-20220512.1447/racket/online-check-syntax.rkt
-  racket-mode-20220512.1447/racket/print.rkt
-  racket-mode-20220512.1447/racket/repl-session.rkt
-  racket-mode-20220512.1447/racket/repl.rkt
-  racket-mode-20220512.1447/racket/scribble.rkt
-  racket-mode-20220512.1447/racket/stack-checkpoint.rkt
-  racket-mode-20220512.1447/racket/syntax.rkt
-  racket-mode-20220512.1447/racket/util.rkt
-Built racket-mode in 12.451s, finished at 2022-05-14T07:36:44+0000
+Generating /tmp/racket-modeXL8qHF/racket-mode-20220514.1259/racket-mode.info
+Created racket-mode-20220514.1259.tar containing:
+  racket-mode-20220514.1259/
+  racket-mode-20220514.1259/dir
+  racket-mode-20220514.1259/racket-back-end.el
+  racket-mode-20220514.1259/racket-browse-url.el
+  racket-mode-20220514.1259/racket-bug-report.el
+  racket-mode-20220514.1259/racket-cmd.el
+  racket-mode-20220514.1259/racket-collection.el
+  racket-mode-20220514.1259/racket-common.el
+  racket-mode-20220514.1259/racket-company-doc.el
+  racket-mode-20220514.1259/racket-complete.el
+  racket-mode-20220514.1259/racket-custom.el
+  racket-mode-20220514.1259/racket-debug.el
+  racket-mode-20220514.1259/racket-describe.el
+  racket-mode-20220514.1259/racket-doc.el
+  racket-mode-20220514.1259/racket-edit.el
+  racket-mode-20220514.1259/racket-eldoc.el
+  racket-mode-20220514.1259/racket-font-lock.el
+  racket-mode-20220514.1259/racket-imenu.el
+  racket-mode-20220514.1259/racket-indent.el
+  racket-mode-20220514.1259/racket-keywords-and-builtins.el
+  racket-mode-20220514.1259/racket-logger.el
+  racket-mode-20220514.1259/racket-mode-pkg.el
+  racket-mode-20220514.1259/racket-mode.el
+  racket-mode-20220514.1259/racket-mode.info
+  racket-mode-20220514.1259/racket-parens.el
+  racket-mode-20220514.1259/racket-ppss.el
+  racket-mode-20220514.1259/racket-profile.el
+  racket-mode-20220514.1259/racket-repl-buffer-name.el
+  racket-mode-20220514.1259/racket-repl.el
+  racket-mode-20220514.1259/racket-scribble.el
+  racket-mode-20220514.1259/racket-show.el
+  racket-mode-20220514.1259/racket-smart-open.el
+  racket-mode-20220514.1259/racket-stepper.el
+  racket-mode-20220514.1259/racket-unicode-input-method.el
+  racket-mode-20220514.1259/racket-util.el
+  racket-mode-20220514.1259/racket-visit.el
+  racket-mode-20220514.1259/racket-wsl.el
+  racket-mode-20220514.1259/racket-xp-complete.el
+  racket-mode-20220514.1259/racket-xp.el
+  racket-mode-20220514.1259/racket/
+  racket-mode-20220514.1259/racket/command-server.rkt
+  racket-mode-20220514.1259/racket/commands/
+  racket-mode-20220514.1259/racket/commands/check-syntax.rkt
+  racket-mode-20220514.1259/racket/commands/describe.rkt
+  racket-mode-20220514.1259/racket/commands/find-module.rkt
+  racket-mode-20220514.1259/racket/commands/help.rkt
+  racket-mode-20220514.1259/racket/commands/macro.rkt
+  racket-mode-20220514.1259/racket/commands/module-names.rkt
+  racket-mode-20220514.1259/racket/commands/requires.rkt
+  racket-mode-20220514.1259/racket/debug-annotator.rkt
+  racket-mode-20220514.1259/racket/debug.rkt
+  racket-mode-20220514.1259/racket/elisp.rkt
+  racket-mode-20220514.1259/racket/error.rkt
+  racket-mode-20220514.1259/racket/find-module-path-completions.rkt
+  racket-mode-20220514.1259/racket/find.rkt
+  racket-mode-20220514.1259/racket/gui.rkt
+  racket-mode-20220514.1259/racket/identifier.rkt
+  racket-mode-20220514.1259/racket/image.rkt
+  racket-mode-20220514.1259/racket/imports.rkt
+  racket-mode-20220514.1259/racket/instrument.rkt
+  racket-mode-20220514.1259/racket/interactions.rkt
+  racket-mode-20220514.1259/racket/keywords.rkt
+  racket-mode-20220514.1259/racket/logger.rkt
+  racket-mode-20220514.1259/racket/main.rkt
+  racket-mode-20220514.1259/racket/online-check-syntax.rkt
+  racket-mode-20220514.1259/racket/print.rkt
+  racket-mode-20220514.1259/racket/repl-session.rkt
+  racket-mode-20220514.1259/racket/repl.rkt
+  racket-mode-20220514.1259/racket/scribble.rkt
+  racket-mode-20220514.1259/racket/stack-checkpoint.rkt
+  racket-mode-20220514.1259/racket/syntax.rkt
+  racket-mode-20220514.1259/racket/util.rkt
+Built racket-mode in 11.083s, finished at 2022-05-14T13:44:42+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  305 May 14 07:36 packages/racket-mode-20220512.1447.entry
-892K -rw-r--r-- 1 root root 890K May 14 07:36 packages/racket-mode-20220512.1447.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 14 07:36 packages/racket-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  213 May 14 07:36 packages/racket-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  305 May 14 10:41 packages/racket-mode-20220512.1447.entry
+892K -rw-r--r-- 1 root root 890K May 14 10:41 packages/racket-mode-20220512.1447.tar
+4.0K -rw-r--r-- 1 root root  305 May 14 13:44 packages/racket-mode-20220514.1259.entry
+892K -rw-r--r-- 1 root root 890K May 14 13:44 packages/racket-mode-20220514.1259.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 14 13:44 packages/racket-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  213 May 14 13:44 packages/racket-mode-readme.txt
