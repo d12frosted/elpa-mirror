@@ -511,7 +511,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 23)
+	[(0 24)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -519,7 +519,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "bf9bb725f70fb3165e2831c5926217bd6a8bc68d"))])
+	  (:commit . "dc4623b45947dc4fa270a9fcf8ba998e70b36c1b"))])
  (coterm .
 	 [(1 5)
 	  ((emacs
@@ -591,9 +591,9 @@
 		(:authors
 		 ("Theodor Thornhill" . "theo@thornhill.no")))])
  (csv-mode .
-	   [(1 19)
+	   [(1 20)
 	    ((emacs
-	      (24 1))
+	      (27 1))
 	     (cl-lib
 	      (0 5)))
 	    "Major mode for editing comma/char separated values" tar
@@ -602,7 +602,7 @@
 	     (:authors
 	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
-	     (:commit . "5c19624398bfd6b976cc9876db582e3e23611601"))])
+	     (:commit . "51580d5bf7095eff429029cd8d4b79214faf6b48"))])
  (cursory .
 	  [(0 1 4)
 	   ((emacs
@@ -2164,7 +2164,7 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(0 7)
+      [(0 8)
        ((emacs
 	 (27 1)))
        "OpenStreetMap viewer" tar
@@ -2172,7 +2172,7 @@
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "e3ea969ce1bf84343f357efa2de97e1dd857f481"))])
+	(:commit . "563d9646b1f8df37cefcec5d51d20249eba407da"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs
@@ -2215,7 +2215,7 @@
 	    ("Junpeng Qiu" . "qjpchmail@gmail.com"))
 	   (:keywords "extensions"))])
  (parser-generator .
-		   [(0 1 5)
+		   [(0 1 6)
 		    ((emacs
 		      (26)))
 		    "Parser Generator library" tar
@@ -2224,7 +2224,7 @@
 		     (:maintainer "Christian Johansson" . "christian@cvj.se")
 		     (:authors
 		      ("Christian Johansson" . "christian@cvj.se"))
-		     (:commit . "bf7229332f7040d49fdac56e54da13d73752395d"))])
+		     (:commit . "db91a5f203ac39bcdfcd5276d3488394361c7f90"))])
  (path-iterator .
 		[(1 0)
 		 ((emacs

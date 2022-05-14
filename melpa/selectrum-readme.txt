@@ -11,5 +11,5 @@ Getting started: Selectrum provides a global minor mode,
 `selectrum-mode', which enhances `completing-read' and all related
 functions automatically without the need for further configuration.
 
-Please see https://github.com/raxod502/selectrum for more
+Please see https://github.com/radian-software/selectrum for more
 information.
