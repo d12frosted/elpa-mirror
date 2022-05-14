@@ -4,10 +4,10 @@
 
 ;; Author: Paul Walsh <paulywalsh@gmail.com>
 ;; URL: https://github.com/pwalsh/pipenv.el
-;; Package-Version: 20210127.1444
-;; Package-Commit: 8f50c68d415307a2cbc65cc4df20df18e1776e9b
+;; Package-Version: 20220514.123
+;; Package-Commit: 3af159749824c03f59176aff7f66ddd6a5785a10
 ;; Version: 0.0.1-beta
-;; Package-Requires: ((emacs "25.1") (s "1.12.0") (pyvenv "1.20"))
+;; Package-Requires: ((emacs "25.1") (s "1.12.0") (pyvenv "1.20") (load-env-vars "0.0.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -339,12 +339,16 @@ to latest compatible versions."
 ;; High-level interactive commands enabled by the Pipenv interface.
 ;;
 
+
 (defun pipenv-activate ()
   "Activate the Python version from Pipenv.  Return nil if no project."
   (interactive)
-  (when (pipenv-project?)
+  (when-let ((root (pipenv-project?)))
     (pipenv--force-wait (pipenv-venv))
     (pyvenv-activate (directory-file-name python-shell-virtualenv-root))
+    (let ((env-file (expand-file-name ".env" root)))
+      (when (file-exists-p env-file)
+        (load-env-vars env-file)))
     (when (and (featurep 'flycheck) pipenv-with-flycheck)
       (pipenv-activate-flycheck))
     t))

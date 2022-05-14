@@ -6,13 +6,13 @@
 ;; Maintainer: 7696122
 ;; Created: Sat Nov  2 12:17:13 2013 (+0900)
 ;; Version: 0.0.4
-;; Package-Commit: 69d562932f9ab9869ab1ed923e9789cbfa0ff14c
-;; Package-Version: 20220422.255
+;; Package-Commit: 81ede5cfa5d8944aa4777987c846a27e28457266
+;; Package-Version: 20220514.258
 ;; Package-X-Original-Version: 20150819.907
-;; Package-Requires: ((evil "1.0.8"))
-;; Last-Updated: Wed Aug 26 23:21:36 2015 (+0900)
+;; Package-Requires: ()
+;; Last-Updated: Sat May 14 11:56:23 2022 (+0900)
 ;;           By: 7696122
-;;     Update #: 390
+;;     Update #: 392
 ;; URL: https://github.com/7696122/evil-terminal-cursor-changer
 ;; Doc URL: https://github.com/7696122/evil-terminal-cursor-changer/blob/master/README.md
 ;; Keywords: evil, terminal, cursor
@@ -86,7 +86,6 @@
 ;;
 ;;; Code:
 
-(require 'evil)
 (require 'color)
 
 (defgroup evil-terminal-cursor-changer nil
@@ -170,12 +169,12 @@ echo -n $TERM_PROFILE"))
   (apply 'color-rgb-to-hex (color-name-to-rgb color)))
 
 (defun etcc--make-tmux-seq (seq)
-  "Make escape sequence for tmux."
-  ;; (let ((prefix "\ePtmux;\e")
-  ;;       (suffix "\e\\"))
-  ;;   (concat prefix seq suffix))
-  seq
-  )
+  "Make escape sequence for tumx."
+  (let ((prefix "\ePtmux;\e")
+        (suffix "\e\\"))
+    (concat prefix seq suffix)
+    (concat prefix seq suffix)
+    (concat prefix seq suffix)))
 
 (defun etcc--make-konsole-cursor-shape-seq (shape)
   "Make escape sequence for konsole."
@@ -222,8 +221,7 @@ echo -n $TERM_PROFILE"))
         (hbar-blink  "3")
         (hbar        "4")
         (bar-blink   "5")
-        (bar         "6")
-        (seq        nil))
+        (bar         "6"))
     (unless (member shape '(box bar hbar))
       (setq shape 'box))
     (cond ((eq shape 'box)
@@ -232,9 +230,7 @@ echo -n $TERM_PROFILE"))
            (setq seq (concat prefix (if (and etcc-use-blink blink-cursor-mode) bar-blink bar) suffix)))
           ((eq shape 'hbar)
            (setq seq (concat prefix (if (and etcc-use-blink blink-cursor-mode) hbar-blink hbar) suffix))))
-    (if (etcc--in-tmux?)
-        (etcc--make-tmux-seq seq)
-        seq)))
+    (if (etcc--in-tmux?) (etcc--make-tmux-seq seq) seq)))
 
 (defun etcc--make-cursor-shape-seq (shape)
   "Make escape sequence for cursor shape."
@@ -274,13 +270,13 @@ echo -n $TERM_PROFILE"))
              (not (display-graphic-p)))
     (send-string-to-terminal seq)))
 
-(defun etcc--evil-set-cursor-color (color &rest _)
+(defun etcc--evil-set-cursor-color (color)
   "Set cursor color."
   (etcc--apply-to-terminal (etcc--make-cursor-color-seq color)))
 
-(defun etcc--evil-set-cursor (&rest _)
+(defun etcc--evil-set-cursor ()
   "Set cursor color type."
-  (unless (or (display-graphic-p) noninteractive)
+  (unless (display-graphic-p)
     (if (symbolp cursor-type)
         (etcc--apply-to-terminal (etcc--make-cursor-shape-seq cursor-type))
       (if (listp cursor-type)
@@ -299,9 +295,8 @@ echo -n $TERM_PROFILE"))
   "Enable evil terminal cursor changer."
   (interactive)
   (if etcc-use-blink (add-hook 'blink-cursor-mode-hook #'etcc--evil-set-cursor))
-  (advice-add 'evil-set-cursor :after #'etcc--evil-set-cursor)
-  (advice-add 'evil-set-cursor-color :after #'etcc--evil-set-cursor-color)
-  )
+  (add-hook 'pre-command-hook 'etcc--evil-set-cursor)
+  (add-hook 'post-command-hook 'etcc--evil-set-cursor))
 
 ;;;###autoload
 (defalias 'etcc-on 'evil-terminal-cursor-changer-activate)
@@ -311,23 +306,12 @@ echo -n $TERM_PROFILE"))
   "Disable evil terminal cursor changer."
   (interactive)
   (if etcc-use-blink (remove-hook 'blink-cursor-mode-hook 'etcc--evil-set-cursor))
-  (advice-remove 'evil-set-cursor #'etcc--evil-set-cursor)
-  (advice-remove 'evil-set-cursor-color #'etcc--evil-set-cursor-color)
-  )
+  (remove-hook 'pre-command-hook 'etcc--evil-set-cursor)
+  (remove-hook 'post-command-hook 'etcc--evil-set-cursor))
 
 ;;;###autoload
 (defalias 'etcc-off 'evil-terminal-cursor-changer-deactivate)
 
-;;;###autoload
-(define-minor-mode etcc-mode
-  "Minor mode for changing cursor by mode for evil on terminal."
-  :global t
-  :lighter " etcc"
-  (if etcc-mode
-      (etcc-on)
-    (etcc-off)))
-
 (provide 'evil-terminal-cursor-changer)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; evil-terminal-cursor-changer.el ends here
