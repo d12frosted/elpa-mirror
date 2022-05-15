@@ -387,10 +387,8 @@
 		    (:authors
 		     ("Sylvain Benner" . "sylvain.benner@gmail.com")))])
  (evil-matchit .
-	       [(2 4 4)
-		((evil
-		  (1 14 0))
-		 (emacs
+	       [(3 0 0)
+		((emacs
 		  (25 1)))
 		"Vim matchit ported to Evil" tar
 		((:url . "http://github.com/redguardtoo/evil-matchit")
@@ -398,7 +396,7 @@
 		 (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 		 (:authors
 		  ("Chen Bin" . "chenbin.sh@gmail.com"))
-		 (:commit . "b314e816bacfc01bb7df9b19a06b18638af5cdbe"))])
+		 (:commit . "7a2a7384b6e752a805d6fbb78cf9425e54c2b18b"))])
  (evil-nerd-commenter .
 		      [(3 5 7)
 		       ((emacs

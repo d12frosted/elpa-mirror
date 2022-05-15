@@ -7,7 +7,7 @@
 ;; Created: April 1, 2022
 ;; Version: 0.2
 ;; Package-Version: 20220422.2234
-;; Package-Commit: 181021cd881eecd604a546d4a717866a81c7a511
+;; Package-Commit: 08db7ef62b3bcab5e1e1abf0a427d478db04420b
 ;; Homepage: https://github.com/nagy/tokei.el
 ;; Package-Requires: ((emacs "27.1") (magit-section "3.3.0"))
 ;;

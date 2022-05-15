@@ -5,7 +5,11 @@ Table of Contents
 2. Why use evil-matchit
 3. Install
 4. Set up
+.. 1. EVIL is used
+.. 2. EVIL is not used
 5. Usage
+.. 1. EVIL is used
+.. 2. EVIL is not used
 6. Advanced tips
 .. 1. Support new major modes
 .. 2. Use evilmi-select-items instead press "%" in evil-visual-state
@@ -17,7 +21,7 @@ Table of Contents
 7. Developer guide
 .. 1. Quick start to support new language
 .. 2. Use SDK
-..... 1. Support languages using indentation to indentify a block of code
+..... 1. Support languages using indentation to identify a block of code
 .. 3. APIs
 8. Contact me
 
@@ -32,10 +36,10 @@ Table of Contents
 
   Vim [matchit.vim] by Benji Fisher is ported into Emacs.
 
-  Press "%" to jump between matched tags in Emacs. For example, in HTML
-  "<div>" and "</div>" are a pair of tags.
+  Press "%" to jump between matched tags ("<div>" and "</div>" in html,
+  etc).
 
-  Supported programming languages and major modes:
+  Built-in supported languages and documents:
   • HTML
   • Python
   • Java
@@ -45,14 +49,14 @@ Table of Contents
   • React JSX (rjsx-mode, react-mode)
   • JSON
   • OCaml
-  • Markdown
   • Perl
   • Yaml
   • Latex
   • MATLAB/Octave
   • CMake
-  • Org-mode (match tag of org-mode and tags of other languages embedded
-    in org file)
+  • Markdown
+  • Org (matching tags of other languages embedded in org file is also
+    supported!)
   • Ruby
   • Elixir
   • Bash
@@ -68,7 +72,10 @@ Table of Contents
   • Emacs email (message-mode)
   • VCS (Git/Subversion/Perforce …) merge conflicts
 
-  This package uses Evil as its vi layer!
+  If [EVIL] is installed, this package use EVIL as its vi layer.
+
+  If EVIL is not installed, most commands still work. So *EVIL is only
+  optional dependency*.
 
   Tested on Emacs 25, 26, 27, 28
 
@@ -87,13 +94,12 @@ Table of Contents
 
 [matchit.vim] <http://www.vim.org/scripts/script.php?script_id=39>
 
+[EVIL] <https://www.emacswiki.org/emacs/Evil>
+
 
 2 Why use evil-matchit
 ══════════════════════
 
-  • No learning curve. Press "%" to jump. That's all!
-  • Stable
-  • Perfect integration with Evil
   • Support any modern languages
     (html/java/c/c++/python/latex/javascript …)
   • Powerful. If you mix jsp, freemarker, html, jquery template or any
@@ -112,9 +118,11 @@ Table of Contents
 4 Set up
 ════════
 
-  Insert below code into `~/.emacs':
+4.1 EVIL is used
+────────────────
+
+  Insert below code into `~/.emacs' to setup key bindings:
   ┌────
-  │ (require 'evil-matchit)
   │ (global-evil-matchit-mode 1)
   └────
 
@@ -122,12 +130,24 @@ Table of Contents
   by adding `turn-on-evil-matchit-mode' to the mode hook.
 
 
+4.2 EVIL is not used
+────────────────────
+
+  No setup is required.
+
+
 5 Usage
 ═══════
 
-  Press "%" to jump inside between tag pair in normal mode or visual
-  mode (you press "v" to switch to visual mode). Please note
-  evil-matchit is smart enough to *detect the tag automatically*.
+5.1 EVIL is used
+────────────────
+
+  You can press "%" or `M-x evilmi-jump-items' to jump between tag pair
+  in normal mode or visual mode (you press "v" to switch to visual
+  mode).
+
+  Please note evil-matchit is smart enough to *detect the tag
+  automatically*.
 
   Tag pair could be open/closed html tag, or character pair like "{}"
   "[]" "()", or the single/double quote(s) at the two ends of the
@@ -154,6 +174,16 @@ Table of Contents
 
   This is actually an advantage of Emacs, you can tweak the select
   region without go into visual state at all.
+
+
+5.2 EVIL is not used
+────────────────────
+
+  Use `evilmi-jump-items-native' to replace `evilmi-jump-items'. Evil
+  text object "%" is de-activated.
+
+  But all the other commands like `evilmi-delete-items' and
+  `evilmi-select-items' still work.
 
 
 6 Advanced tips
@@ -357,8 +387,8 @@ Table of Contents
   └────
 
 
-7.2.1 Support languages using indentation to indentify a block of code
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+7.2.1 Support languages using indentation to identify a block of code
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   It's easy to support such language (Python, Yaml, …).
 
