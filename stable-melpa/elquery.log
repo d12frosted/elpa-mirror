@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/AdamNiederer/elquery.git
 
 Updating /mnt/store/melpa/working/elquery/
-Checking out origin/HEAD
-Checking out 38f3bd41096cb270919b06095da0b9ac1add4598
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elquery/
-  to /tmp/elquery5vjFV7/elquery-20220331.143
-    elquery.el -> elquery.el
-    elquery.texi -> elquery.texi
-Generating /tmp/elquery5vjFV7/elquery-20220331.143/elquery.info
-Created elquery-20220331.143.tar containing:
-  elquery-20220331.143/
-  elquery-20220331.143/dir
-  elquery-20220331.143/elquery-pkg.el
-  elquery-20220331.143/elquery.el
-  elquery-20220331.143/elquery.info
-Built elquery in 6.542s, finished at 2022-05-15T10:26:24+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  359 May 15 10:26 packages/elquery-20220331.143.entry
- 52K -rw-r--r-- 1 root root  50K May 15 10:26 packages/elquery-20220331.143.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 15 10:26 packages/elquery-badge.svg
-4.0K -rw-r--r-- 1 root root  223 May 15 10:26 packages/elquery-readme.txt
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/AdamNiederer/elquery.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

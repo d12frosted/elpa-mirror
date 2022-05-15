@@ -4,9 +4,9 @@
 
 ;; Author: Akib Azmain Turja <akib@disroot.org>
 ;; Version: 1.0
-;; Package-Version: 20220501.1500
-;; Package-Commit: 001fe2777f49ac73b6ab24401094a1c3c5efc887
-;; Package-Requires: ((emacs "27.2"))
+;; Package-Version: 20220515.1259
+;; Package-Commit: 94700152e562478f4a7c91d71143e0bec2a99c68
+;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools, convenience
 ;; URL: https://codeberg.org/akib/emacs-workroom
 

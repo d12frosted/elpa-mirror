@@ -4,9 +4,9 @@
 
 ;; Author: Akib Azmain Turja <akib@disroot.org>
 ;; Version: 1.0
-;; Package-Version: 20220330.422
-;; Package-Commit: cd5dc79ac65c24e9e775bd2582ad620e316f2182
-;; Package-Requires: ((emacs "27.2"))
+;; Package-Version: 20220515.1234
+;; Package-Commit: 95ffb0e043bebcdd10fd7412b24d22ad9f6e3454
+;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools, c
 ;; URL: https://codeberg.org/akib/emacs-gnu-indent
 
