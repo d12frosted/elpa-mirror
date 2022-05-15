@@ -1,0 +1,11 @@
+(sql-trino .
+	   [(20220502 851)
+	    ((emacs
+	      (24 4)))
+	    "Adds Trino support to SQLi mode" single
+	    ((:commit . "bad7be0bf2f6d2d653a787a4b5bc6a281a8bea88")
+	     (:authors
+	      ("Filipe Regadas" . "oss@regadas.email"))
+	     (:maintainer "Filipe Regadas" . "oss@regadas.email")
+	     (:keywords "tools")
+	     (:url . "https://github.com/regadas/sql-trino"))])

@@ -1,0 +1,15 @@
+(org-edit-indirect .
+		   [(20220508 2141)
+		    ((emacs
+		      (25 1))
+		     (edit-indirect
+		      (0 1 6))
+		     (org
+		      (9 0)))
+		    "Edit anything, not just source blocks" single
+		    ((:commit . "f146d1b406308298b4004a28aaa11124b02d015b")
+		     (:authors
+		      ("Ag Ibragimomv <https://github.com/agzam>"))
+		     (:maintainer "Ag Ibragimomv" . "agzam.ibragimov@gmail.com")
+		     (:keywords "convenience" "extensions" "outlines")
+		     (:url . "https://github.com/agzam/org-edit-indirect.el"))])
