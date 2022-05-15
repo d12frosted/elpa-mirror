@@ -4,14 +4,15 @@ Source:  https://github.com/redguardtoo/evil-matchit.git
 
 Updating /mnt/store/melpa/working/evil-matchit/
 Checking out origin/HEAD
-Checking out ec7a8479fec4c9249b52be9fd8e201bb0f3206f2
+Checking out 7a2a7384b6e752a805d6fbb78cf9425e54c2b18b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil-matchit/
-  to /tmp/evil-matchit0Wykys/evil-matchit-20220513.1221
+  to /tmp/evil-matchitodbhEz/evil-matchit-20220515.349
     evil-matchit-c.el -> evil-matchit-c.el
     evil-matchit-cmake.el -> evil-matchit-cmake.el
     evil-matchit-diff.el -> evil-matchit-diff.el
     evil-matchit-elixir.el -> evil-matchit-elixir.el
+    evil-matchit-evil-setup.el -> evil-matchit-evil-setup.el
     evil-matchit-fortran.el -> evil-matchit-fortran.el
     evil-matchit-html.el -> evil-matchit-html.el
     evil-matchit-indent.el -> evil-matchit-indent.el
@@ -34,38 +35,39 @@ Copying files (->) and directories (=>)
     evil-matchit-verilog.el -> evil-matchit-verilog.el
     evil-matchit-yaml.el -> evil-matchit-yaml.el
     evil-matchit.el -> evil-matchit.el
-Created evil-matchit-20220513.1221.tar containing:
-  evil-matchit-20220513.1221/
-  evil-matchit-20220513.1221/evil-matchit-c.el
-  evil-matchit-20220513.1221/evil-matchit-cmake.el
-  evil-matchit-20220513.1221/evil-matchit-diff.el
-  evil-matchit-20220513.1221/evil-matchit-elixir.el
-  evil-matchit-20220513.1221/evil-matchit-fortran.el
-  evil-matchit-20220513.1221/evil-matchit-html.el
-  evil-matchit-20220513.1221/evil-matchit-indent.el
-  evil-matchit-20220513.1221/evil-matchit-javascript.el
-  evil-matchit-20220513.1221/evil-matchit-latex.el
-  evil-matchit-20220513.1221/evil-matchit-markdown.el
-  evil-matchit-20220513.1221/evil-matchit-ocaml.el
-  evil-matchit-20220513.1221/evil-matchit-octave.el
-  evil-matchit-20220513.1221/evil-matchit-org.el
-  evil-matchit-20220513.1221/evil-matchit-pkg.el
-  evil-matchit-20220513.1221/evil-matchit-prog.el
-  evil-matchit-20220513.1221/evil-matchit-python.el
-  evil-matchit-20220513.1221/evil-matchit-ruby.el
-  evil-matchit-20220513.1221/evil-matchit-script.el
-  evil-matchit-20220513.1221/evil-matchit-sdk.el
-  evil-matchit-20220513.1221/evil-matchit-sh.el
-  evil-matchit-20220513.1221/evil-matchit-simple.el
-  evil-matchit-20220513.1221/evil-matchit-sql.el
-  evil-matchit-20220513.1221/evil-matchit-template.el
-  evil-matchit-20220513.1221/evil-matchit-terminal.el
-  evil-matchit-20220513.1221/evil-matchit-verilog.el
-  evil-matchit-20220513.1221/evil-matchit-yaml.el
-  evil-matchit-20220513.1221/evil-matchit.el
-Built evil-matchit in 4.686s, finished at 2022-05-15T01:20:34+0000
+Created evil-matchit-20220515.349.tar containing:
+  evil-matchit-20220515.349/
+  evil-matchit-20220515.349/evil-matchit-c.el
+  evil-matchit-20220515.349/evil-matchit-cmake.el
+  evil-matchit-20220515.349/evil-matchit-diff.el
+  evil-matchit-20220515.349/evil-matchit-elixir.el
+  evil-matchit-20220515.349/evil-matchit-evil-setup.el
+  evil-matchit-20220515.349/evil-matchit-fortran.el
+  evil-matchit-20220515.349/evil-matchit-html.el
+  evil-matchit-20220515.349/evil-matchit-indent.el
+  evil-matchit-20220515.349/evil-matchit-javascript.el
+  evil-matchit-20220515.349/evil-matchit-latex.el
+  evil-matchit-20220515.349/evil-matchit-markdown.el
+  evil-matchit-20220515.349/evil-matchit-ocaml.el
+  evil-matchit-20220515.349/evil-matchit-octave.el
+  evil-matchit-20220515.349/evil-matchit-org.el
+  evil-matchit-20220515.349/evil-matchit-pkg.el
+  evil-matchit-20220515.349/evil-matchit-prog.el
+  evil-matchit-20220515.349/evil-matchit-python.el
+  evil-matchit-20220515.349/evil-matchit-ruby.el
+  evil-matchit-20220515.349/evil-matchit-script.el
+  evil-matchit-20220515.349/evil-matchit-sdk.el
+  evil-matchit-20220515.349/evil-matchit-sh.el
+  evil-matchit-20220515.349/evil-matchit-simple.el
+  evil-matchit-20220515.349/evil-matchit-sql.el
+  evil-matchit-20220515.349/evil-matchit-template.el
+  evil-matchit-20220515.349/evil-matchit-terminal.el
+  evil-matchit-20220515.349/evil-matchit-verilog.el
+  evil-matchit-20220515.349/evil-matchit-yaml.el
+  evil-matchit-20220515.349/evil-matchit.el
+Built evil-matchit in 4.717s, finished at 2022-05-15T07:24:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  396 May 15 01:20 packages/evil-matchit-20220513.1221.entry
-140K -rw-r--r-- 1 root root 140K May 15 01:20 packages/evil-matchit-20220513.1221.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 15 01:20 packages/evil-matchit-badge.svg
-4.0K -rw-r--r-- 1 root root  577 May 15 01:20 packages/evil-matchit-readme.txt
+4.0K -rw-r--r-- 1 root root  374 May 15 07:24 packages/evil-matchit-20220515.349.entry
+140K -rw-r--r-- 1 root root 140K May 15 07:24 packages/evil-matchit-20220515.349.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 15 07:24 packages/evil-matchit-badge.svg
+4.0K -rw-r--r-- 1 root root  874 May 15 07:24 packages/evil-matchit-readme.txt

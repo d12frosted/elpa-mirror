@@ -80,7 +80,7 @@ For example, below code renders text between "#" in red color from html,
                 (replace-match "<span style=\"color:red\">\\1</span>"))))
 
 3. The quoted mail uses Gmail's style, so mail replies looks clean and modern.
-If you prefer the old style, please set `org-mime-beautify-quoted-mail' to nil.
+If you prefer the old style, please set `org-mime-beautify-quoted-mail-p' to nil.
 
 4. Please note this program can only embed exported HTML into mail.
    Org-mode is responsible for rendering HTML.
