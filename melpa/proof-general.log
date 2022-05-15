@@ -7,7 +7,7 @@ Checking out origin/master
 Checking out 2a8701209b273db5a35f15145ec62f32799e03b1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/proof-general/
-  to /tmp/proof-generalv6tp7Y/proof-general-20220329.655
+  to /tmp/proof-generalq13npU/proof-general-20220329.655
     proof-general.el -> proof-general.el
   ! doc/dir -> dir
   ! doc/PG-adapting.texi -> PG-adapting.texi
@@ -39,8 +39,8 @@ Copying files (->) and directories (=>)
     pghaskell => pghaskell
     pgocaml => pgocaml
     pgshell => pgshell
-Generating /tmp/proof-generalv6tp7Y/proof-general-20220329.655/PG-adapting.info
-Generating /tmp/proof-generalv6tp7Y/proof-general-20220329.655/ProofGeneral.info
+Generating /tmp/proof-generalq13npU/proof-general-20220329.655/PG-adapting.info
+Generating /tmp/proof-generalq13npU/proof-general-20220329.655/ProofGeneral.info
 Created proof-general-20220329.655.tar containing:
   proof-general-20220329.655/
   proof-general-20220329.655/AUTHORS
@@ -176,9 +176,9 @@ Created proof-general-20220329.655.tar containing:
   proof-general-20220329.655/qrhl/
   proof-general-20220329.655/qrhl/qrhl-input.el
   proof-general-20220329.655/qrhl/qrhl.el
-Built proof-general in 16.613s, finished at 2022-05-14T22:55:43+0000
+Built proof-general in 20.074s, finished at 2022-05-15T01:53:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  226 May 14 22:55 packages/proof-general-20220329.655.entry
-2.6M -rw-r--r-- 1 root root 2.6M May 14 22:55 packages/proof-general-20220329.655.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 14 22:55 packages/proof-general-badge.svg
-4.0K -rw-r--r-- 1 root root  496 May 14 22:55 packages/proof-general-readme.txt
+4.0K -rw-r--r-- 1 root root  226 May 15 01:53 packages/proof-general-20220329.655.entry
+2.6M -rw-r--r-- 1 root root 2.6M May 15 01:53 packages/proof-general-20220329.655.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 15 01:53 packages/proof-general-badge.svg
+4.0K -rw-r--r-- 1 root root  496 May 15 01:53 packages/proof-general-readme.txt

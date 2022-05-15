@@ -7,8 +7,6 @@
 ;; Description: Wrap the beginning and the end of buffer.
 ;; Keyword: buffer tool wrap
 ;; Version: 0.1.5
-;; Package-Version: 20200924.345
-;; Package-Commit: b918ba023212b0e223a7ca7df3a2ec12a7c54206
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/buffer-wrap
 

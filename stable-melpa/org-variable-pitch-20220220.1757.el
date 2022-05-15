@@ -5,7 +5,7 @@
 ;; Author: Göktuğ Kayaalp <self@gkayaalp.com>
 ;; Keywords: faces
 ;; Package-Version: 20220220.1757
-;; Package-Commit: 2f38f3583295e05c9ea491b7d1f6b4791169ba86
+;; Package-Commit: d7dd4fb11178fc4404e52621d451f794a84e46ae
 ;; Version: 2.1
 ;; URL: https://dev.gkayaalp.com/elisp/index.html#ovp
 ;; Package-Requires: ((emacs "25"))
