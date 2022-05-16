@@ -3,7 +3,7 @@
 ;; Author: Derek Feichtinger <dfeich@gmail.com>
 ;; Keywords: convenience
 ;; Package-Version: 20210706.1741
-;; Package-Commit: 075e0e6d36eb50406a608bc8a2f0dd359ec63938
+;; Package-Commit: d2f4b9e8f1c7c9b495f71deeaa77e4f6f47bc7bf
 ;; Package-Requires: ((seq "2.3") (emacs "26.1"))
 ;; Homepage: https://github.com/dfeich/org-listcruncher
 ;; Version: 1.4

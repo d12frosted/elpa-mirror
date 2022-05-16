@@ -1,0 +1,13 @@
+(noaa .
+      [(20220515 2359)
+       ((emacs
+	 (27 1))
+	(request
+	 (0 2 0)))
+       "Get NOAA weather data" single
+       ((:commit . "1ebacdfbaa996319adf88a49258814c28ba49b1b")
+	(:authors
+	 ("David Thompson"))
+	(:maintainer "David Thompson")
+	(:keywords "calendar")
+	(:url . "https://github.com/thomp/noaa"))])
