@@ -4,8 +4,8 @@
 
 ;; Author:  Hayato KAJIYAMA <kaji1216@gmail.com>
 ;; URL: https://github.com/hyakt/emacs-dashboard-hackernews
-;; Package-Version: 20190109.205
-;; Package-Commit: b71814716d8f78181b9d1990f06072460de0797e
+;; Package-Version: 20220516.243
+;; Package-Commit: 5a0c83aa2e048ef8e5384c8a1051dd4bc8aa8969
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24") (dashboard "1.2.5") (request "0.3.0"))
 
@@ -94,7 +94,7 @@
        (dashboard-hackernews-get-item
         (elt ids i) (lambda (item) (push item dashboard-hackernews-items))))))
   (dashboard-hackernews-insert-list "Hackernews:"
-                                    (dashboard-subseq dashboard-hackernews-items 0 list-size)))
+                                    (dashboard-subseq dashboard-hackernews-items list-size)))
 
 (provide 'dashboard-hackernews)
 ;;; dashboard-hackernews.el ends here

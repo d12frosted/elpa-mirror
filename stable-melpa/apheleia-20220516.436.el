@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20220513.1623
-;; Package-Commit: 363d634c5c3d79983fb44d2238fcfdf24fbf81b2
+;; Package-Version: 20220516.436
+;; Package-Commit: cececba08fa7cb39a24d0f2c97aebf3dfd70a2cf
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 2.0
@@ -932,6 +932,7 @@ being run, for diagnostic purposes."
     (ktlint . ("ktlint" "--stdin" "-F"))
     (latexindent . ("latexindent" "--logfile=/dev/null"))
     (mix-format . ("mix" "format" "-"))
+    (nixfmt . ("nixfmt"))
     (ocamlformat . ("ocamlformat" "-" "--name" filepath
                     "--enable-outside-detected-project"))
     (phpcs . ("apheleia-phpcs"))
@@ -1065,6 +1066,7 @@ function: %s" command)))
     (kotlin-mode . ktlint)
     (latex-mode . latexindent)
     (LaTeX-mode . latexindent)
+    (nix-mode . nixfmt)
     (python-mode . black)
     (ruby-mode . prettier)
     (rustic-mode . rustfmt)
