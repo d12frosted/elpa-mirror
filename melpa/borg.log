@@ -7,23 +7,10 @@ Checking out origin/HEAD
 Checking out 04df5cac8c3ba8981833feabd15a87af319f734b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/borg/
-  to /tmp/borgiyUnPg/borg-20220514.1916
+  to /tmp/borghmc8vM/borg-20220514.1916
     borg-elpa.el -> borg-elpa.el
     borg.el -> borg.el
+  ! docs/borg.texi -> borg.texi
     borg.mk -> borg.mk
   ! docs/borg.texi -> borg.texi
-Generating /tmp/borgiyUnPg/borg-20220514.1916/borg.info
-Created borg-20220514.1916.tar containing:
-  borg-20220514.1916/
-  borg-20220514.1916/borg-elpa.el
-  borg-20220514.1916/borg-pkg.el
-  borg-20220514.1916/borg.el
-  borg-20220514.1916/borg.info
-  borg-20220514.1916/borg.mk
-  borg-20220514.1916/dir
-Built borg in 14.902s, finished at 2022-05-16T07:22:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  397 May 16 07:22 packages/borg-20220514.1916.entry
-120K -rw-r--r-- 1 root root 120K May 16 07:22 packages/borg-20220514.1916.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 16 07:22 packages/borg-badge.svg
-4.0K -rw-r--r-- 1 root root  462 May 16 07:22 packages/borg-readme.txt
+File already exists: /tmp/borghmc8vM/borg-20220514.1916/borg.texi

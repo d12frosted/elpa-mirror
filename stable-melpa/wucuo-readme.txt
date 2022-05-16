@@ -55,3 +55,6 @@ This program assumes Flyspell is already set up properly.
 If you have problems on Flyspell configuration, check wucuo's README.
 
 To ignore specific typo, you can set `wucuo-extra-predicate'.
+
+This program can be run in Linux terminal as batch script.
+See README for more details.
