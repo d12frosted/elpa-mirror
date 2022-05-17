@@ -2821,13 +2821,14 @@
 	     ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	    (:keywords "processes" "mode-line"))])
  (sql-beeline .
-	      [(0 1)
+	      [(0 2)
 	       nil "Beeline support for sql.el" tar
-	       ((:keywords "sql" "hive" "beeline" "hiveserver2")
+	       ((:keywords "sql" "hive" "beeline" "hiveserver2" "impala")
 		(:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm")
 		(:authors
 		 ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
-		(:url . "https://elpa.gnu.org/packages/sql-beeline.html"))])
+		(:url . "https://elpa.gnu.org/packages/sql-beeline.html")
+		(:commit . "b7ffff9404d93f569e3c2bc59db1be6e848c894f"))])
  (sql-cassandra .
 		[(0 2 1)
 		 ((emacs
