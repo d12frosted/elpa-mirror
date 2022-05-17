@@ -4,8 +4,8 @@
 
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 2.0
-;; Package-Version: 20220510.806
-;; Package-Commit: 24cb30dea30195108f85aceea28f086a84d47e5e
+;; Package-Version: 20220517.655
+;; Package-Commit: 54fcbc50fd58fe2c1b756ea6c21bd95f5e5f9d22
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools, frames
 ;; URL: https://github.com/davidshepherd7/terminal-here
@@ -249,7 +249,7 @@ terminal-here with tramp files to create ssh connections."
    (cons 'gnome-terminal "-x")
    (cons 'alacritty      "-e")
    (cons 'st             "-e")
-   (cons 'konsole        "-e") ;; ssh seems to immediately exit with konsole
+   (cons 'konsole        "-e") ; ssh seems to immediately exit with konsole
    (cons 'xterm          "-e")
    (cons 'sakura         "-e")
    (cons 'xfce4-terminal "-x")
