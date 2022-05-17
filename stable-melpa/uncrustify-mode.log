@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/koko1000ban/emacs-uncrustify-mode.git
 
 Updating /mnt/store/melpa/working/uncrustify-mode/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/koko1000ban/emacs-uncrustify-mode.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 73893d000361e95784911e5ec268ad0ab2a1473c
+Built uncrustify-mode in 4.824s, finished at 2022-05-17T02:13:32+0000
+ ✓ Success:
+8.0K -rwxr-xr-x 1 root root 5.5K May 17 02:13 packages/uncrustify-mode-20130707.1359.el
+4.0K -rw-r--r-- 1 root root  316 May 17 02:13 packages/uncrustify-mode-20130707.1359.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 17 02:13 packages/uncrustify-mode-badge.svg

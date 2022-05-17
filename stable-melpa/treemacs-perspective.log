@@ -3,12 +3,11 @@ Fetcher: github
 Source:  https://github.com/Alexander-Miller/treemacs.git
 
 Updating /mnt/store/melpa/working/treemacs-perspective/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-From https://github.com/Alexander-Miller/treemacs
-   dca83bd..96a5318  master     -> origin/master
-fatal: unable to access 'https://github.com/Alexander-Miller/treemacs.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 96a53189f51f3c75db8dcf3bf54bf82e927cf980
+Built treemacs-perspective in 6.263s, finished at 2022-05-17T02:12:54+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K May 17 02:12 packages/treemacs-perspective-20220209.2117.el
+4.0K -rw-r--r-- 1 root root  495 May 17 02:12 packages/treemacs-perspective-20220209.2117.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 17 02:12 packages/treemacs-perspective-badge.svg
+4.0K -rw-r--r-- 1 root root   73 May 17 02:12 packages/treemacs-perspective-readme.txt
