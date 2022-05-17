@@ -8,7 +8,7 @@
 ;; Modified: 23 Jun 2021
 ;; Version: 0.0.1
 ;; Package-Version: 20220302.522
-;; Package-Commit: 227a92cec6225183291c1b3c4b1e0c3639957135
+;; Package-Commit: 41c090402816b15eb226ff9368f0ca40c7244f92
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: converience matching
 ;; URL: https://gitlab.com/Vonfry/zoxide.el
