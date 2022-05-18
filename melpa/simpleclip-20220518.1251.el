@@ -5,8 +5,8 @@
 ;; Author: Roland Walker <walker@pobox.com>
 ;; Homepage: http://github.com/rolandwalker/simpleclip
 ;; URL: http://raw.githubusercontent.com/rolandwalker/simpleclip/master/simpleclip.el
-;; Package-Version: 20210406.1221
-;; Package-Commit: 67c8c17adbbe6d9407a5ce4159d097a8b8bf6adb
+;; Package-Version: 20220518.1251
+;; Package-Commit: 023f239275115169c3a3637ad95fae4a036c005e
 ;; Version: 1.0.10
 ;; Last-Updated: 10 Feb 2020
 ;; Keywords: convenience
@@ -342,10 +342,10 @@ in GNU Emacs 24.1 or higher."
             (x-get-selection 'CLIPBOARD 'NSStringPboardType))
           ;; todo, this should try more than one request type, as in gui--selection-value-internal
           (and (fboundp 'gui-get-selection)
-            (gui-get-selection 'CLIPBOARD (or x-select-request-type 'UTF8_STRING)))
+            (gui-get-selection 'CLIPBOARD (car x-select-request-type)))
           ;; todo, this should try more than one request type, as in gui--selection-value-internal
           (and (fboundp 'x-get-selection)
-            (x-get-selection 'CLIPBOARD (or x-select-request-type 'UTF8_STRING))))))
+            (x-get-selection 'CLIPBOARD (car x-select-request-type))))))
        (t
         (error "Clipboard support not available")))
     (error

@@ -4,8 +4,8 @@
 
 ;; Author: Zachary Romero <zkry@posteo.org>
 ;; Version: 0.1.0
-;; Package-Version: 20220518.54
-;; Package-Commit: 01ab8d19100831697c9d20035ce200084682b577
+;; Package-Version: 20220518.1229
+;; Package-Commit: adb3e52a214a5154267085639f95a3ffae1ec2d3
 ;; Homepage: https://github.com/zkry/yaml.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools
@@ -2802,10 +2802,10 @@ auto-detecting the indentation"
                         (insert (make-string (- indent curr-indent) ?\s)  "- "))
                     (insert "\n" indent-string "- "))
                   (setq first nil))
-                (yaml--encode-object object indent
-                                     (or
-                                      (hash-table-p object)
-                                      (yaml--alist-to-hash-table object))))
+                (if (or (hash-table-p object)
+                        (yaml--alist-to-hash-table object))
+                    (yaml--encode-object object indent t)
+                  (yaml--encode-object object (+ indent 2) nil)))
               l))))))
 
 (defun yaml--encode-auto-detect-indent ()
