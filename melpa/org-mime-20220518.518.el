@@ -5,8 +5,8 @@
 ;; Author: Eric Schulte
 ;; Maintainer: Chen Bin <chenbin.sh@gmail.com>
 ;; Keywords: mime, mail, email, html
-;; Package-Version: 20220518.103
-;; Package-Commit: 1efae43c252db3d1eb3f35ea8a70ada3705121ee
+;; Package-Version: 20220518.518
+;; Package-Commit: 79de0b6cee5e289370d559614d30ec74fbcbbbcc
 ;; Homepage: http://github.com/org-mime/org-mime
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -129,6 +129,7 @@
 (require 'org)
 (require 'ox-org)
 (require 'message)
+(require 'sendmail)
 
 (defcustom org-mime-use-property-inheritance nil
   "Non-nil means al MAIL_ properties apply also for sub-levels."
