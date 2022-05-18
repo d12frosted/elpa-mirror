@@ -5,8 +5,6 @@
 ;; Author: D. Williams <d.williams@posteo.net>
 ;; Maintainer: D. Williams <d.williams@posteo.net>
 ;; Keywords: convenience, games
-;; Package-Version: 20210331.2246
-;; Package-Commit: 61c5718ba64ace4c9e29de18aa2690ecc3f0f258
 ;; Version: 1.1.0
 ;; Homepage: https://github.com/integral-dw/dw-passphrase-generator
 ;; Package-Requires: ((emacs "25.1"))
