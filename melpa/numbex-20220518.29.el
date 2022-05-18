@@ -5,9 +5,9 @@
 ;; Author: Enrico Flor <enrico@eflor.net>
 ;; Maintainer: Enrico Flor <enrico@eflor.net>
 ;; URL: https://github.com/enricoflor/numbex
-;; Package-Version: 20220504.1329
-;; Package-Commit: 55d4977c74ca33d1ad4c10fea7369f4bcdfd3f86
-;; Version: 0.4.1
+;; Package-Version: 20220518.29
+;; Package-Commit: aa3903f190946e54f41601dd7831f3aa973a8be7
+;; Version: 0.5.0
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -42,6 +42,7 @@
 ;;; Code:
 
 (require 'subr-x)
+(require 'outline)
 
 (defvar numbex-mode)
 
@@ -57,27 +58,27 @@
 
 (defvar-local numbex--automatic-refresh t
   "If t, evaluate 'numbex-refresh' on idle timer and with other commands.
-Specifically, with 'numbex-toggle-display' and 'numbex-do'.  Even
+Specifically, with 'numbex-toggle-visibility' and 'numbex-dwim'.  Even
 if nil, 'numbex-refresh will be added to 'auto-save-hook' and
 'before-save-hook'.")
 
 (defvar-local numbex--hidden-labels t
-  "If t, numbex items have a numerical overlay.")
+  "If t, numbex items are hidden under a numerical text property.")
 
 (defcustom numbex-highlight-unlabeled t
   "If t, items that are missing a label are highlighted.
-Blank strings (containing only white space) count as no label.
-Unlabeled items have the appearance specified by
+Blank strings (containing only white space) do not count as a
+label.  Unlabeled items have the appearance specified by
 'font-lock-comment-face'."
   :type 'boolean
   :group 'numbex)
 
 (defcustom numbex-highlight-duplicates t
-  "If t, items that have an ambiguous label are highlighted.
-A label is ambiguous if it not a blank string (it doesn't just
-contain white space) and is used as a label of more than one
-example item.  Items with non-unique labels have the appearance
-specified by 'font-lock-warning-face'."
+  "If t, items that have a non unique label are highlighted.
+A label is non unique if it not a blank string (it doesn't just
+contain white space) and more than one example item in the buffer
+use it as a label.  Items with non-unique labels have the
+appearance specified by 'font-lock-warning-face'."
   :type 'boolean
   :group 'numbex)
 
@@ -126,13 +127,16 @@ Thus, when point is on an item:
   "Hash table mapping labels of examples to the number assigned.")
 
 (defvar-local numbex--label-line nil
-  "Hash table a label to the line of the corresponding example.")
+  "Hash table mapping labels to context of the example.
+The keys of the hash tables are non-empty labels and the values
+are the line of the buffer that contains the corresponding
+example.")
 
 (defvar-local numbex--duplicates nil
-  "A list of non-empty labels that are not unique in the buffer.")
+  "List of non-empty labels that are not unique in the buffer.")
 
 (defvar-local numbex--existing-labels nil
-  "A list of non-empty labels that are used in the buffer.")
+  "List of non-empty labels currently used in the buffer.")
 
 ;; An example is the best way to explain what this variable is for.
 ;; Suppose there are five examples in the buffer: three in the first
@@ -143,30 +147,29 @@ Thus, when point is on an item:
 ;; t, the examples will be numbered in loop by popping values out of
 ;; this list.
 (defvar-local numbex--numbers-list nil
-  "A list of strings with to the relative numbering in the buffer.")
+  "List of strings corresponding to the numbers in the buffer.
+The first item in the list is the string that is displayed over
+the first example item in the buffer (if 'numbex--hidden-labels'
+is t), the second item is the string over the second example
+item, and so on.")
 
-(defcustom numbex-relative-numbering t
+(defcustom numbex-numbering-reset t
   "If nil, the numbering never restarts in the buffer.
 If t, numbering restart at \"(1)\" at every regexp specified in
 'numbex-numbering-reset-regexps'.  This variable is made
 buffer-local its value can be toggled interactively with
-'numbex-toggle-relative-numbering'."
+'numbex-toggle-numbering-reset'."
   :type 'boolean
   :group 'numbex)
 
-(make-variable-buffer-local 'numbex-relative-numbering)
+(make-variable-buffer-local 'numbex-numbering-reset)
 
 (defcustom numbex-numbering-reset-regexps
   '("")
   "List of regexps at which numbering restarts.
-If the buffer-local value of 'numbex-relative-numbering' is t,
+If the buffer-local value of 'numbex-numbering-reset' is t,
 numbering restarts at \"(1)\" at each of the regexp in this list.
 The default value is the form-feed character (\"\f\" or \"\").
-
-Other good values to add would be org headings.  If you want the
-numbering to restart at each form feed character and at every
-level 1st and 2nd 'org-mode' heading you can add this regexp to
-the list: \"^\\*\\*? \".
 
 This variable is made buffer-local, and can be specified as a
 file-local variable (for example, with
@@ -184,28 +187,29 @@ disabled at a certain point.")
 
 (defcustom numbex-delimiters '("(" . ")")
   "Opening and closing characters used around numbers.
-Set two empty strings if you just want the number."
+Set two empty strings if you just want the number.
+
+This variable is made buffer-local, and can be specified as a
+file-local variable (for example, with
+'add-file-local-variable')."
   :type '(cons string string)
   :group 'numbex)
 
 (make-variable-buffer-local 'numbex-delimiters)
 
 (defvar-local numbex--items-list nil
-  "List of all items and reset regexps in the buffer.
-Updated by 'numbex--scan-buffer'.")
+  "List of all items and reset regexps currently in the buffer.")
 
 (defvar-local numbex--annotation-alist '()
   "Alist mapping labels to strings of number and context.")
 
 (defun numbex--scan-buffer ()
   "Collect information relevant for numbex from the buffer.
-Remove all whitespace from items.  Reset the values for the
-buffer-local variables.  The information is collected in a
-widened indirect buffer, so that even if the current buffer is
-narrowed, numbex will behave taking into consideration the entire
-buffer.  This reduces the risk of working on a narrowed buffer
-and ending up with many duplicate labels or mistaken references
-once the buffer is widened again."
+Remove all whitespace from items.
+
+The information is collected in a widened indirect buffer, so
+that even if the current buffer is narrowed, numbex will behave
+taking into consideration the entire buffer."
   ;; Recreate the two hash tables with the size of the last value of
   ;; 'numbex--existing-labels'
   (let* ((old-number-labels (length numbex--existing-labels))
@@ -243,8 +247,8 @@ once the buffer is widened again."
         (if (save-match-data
               (string-match delimiters-re (match-string-no-properties 0)))
             ;; We hit a delimiter character: If
-            ;; 'numbex-relative-numbering' is t, reset the counter to 1
-            (when numbex-relative-numbering (setq counter 1))
+            ;; 'numbex-numbering-reset' is t, reset the counter to 1
+            (when numbex-numbering-reset (setq counter 1))
           ;; We hit an item: first thing we do is removing whitespace.
           (let ((clean-label
                  (if (string-match "[[:space:]]"
@@ -269,7 +273,7 @@ once the buffer is widened again."
             ;; it won't reset again at the next match.
             (when (equal type "ex")
               (when (and (not point-in-narrowing)
-                         numbex-relative-numbering
+                         numbex-numbering-reset
                          narrowed
                          (> (point) start-of-buffer))
                 (setq point-in-narrowing t
@@ -325,9 +329,7 @@ once the buffer is widened again."
   "Add face text properties to substring between B and E.
 Do so according to the values of 'numbex-highlight-duplicates'
 and 'numbex-highglight-unlabeled'.  LAB is the label of the item
-and TYPE its type.  This function is called by
-'numbex--remove-numbering' (when evaluated with optional argument
-nil) and by 'numbex--add-numbering'."
+and TYPE its type."
   (cond ((and (member lab numbex--duplicates)
               numbex-highlight-duplicates)
          (add-text-properties b e '(font-lock-face 'font-lock-warning-face))
@@ -373,7 +375,7 @@ Does not mark the buffer as modified."
   (let ((buffer-was-modified (buffer-modified-p)))
     (setq numbex--total-number-of-items 0)
     ;; First, let's number the examples.  If the buffer is narrowed
-    ;; and 'numbex-relative-numbering' is t, we just need to number
+    ;; and 'numbex-numbering-reset' is t, we just need to number
     ;; the examples in the buffer.
     (with-current-buffer (clone-indirect-buffer nil nil t)
       (widen)
@@ -440,16 +442,16 @@ Does not mark the buffer as modified."
     (setq numbex--hidden-labels t)
     (unless buffer-was-modified (set-buffer-modified-p nil))))
 
-(defun numbex-toggle-relative-numbering ()
-  "Toggle value of 'numbex-relative-numbering' (buffer-local)."
+(defun numbex-toggle-numbering-reset ()
+  "Toggle value of 'numbex-numbering-reset' (buffer-local)."
   (interactive)
-  (if numbex-relative-numbering
-      (progn (setq numbex-relative-numbering nil)
+  (if numbex-numbering-reset
+      (progn (setq numbex-numbering-reset nil)
              (message "Relative numbering deactivated"))
-    (setq numbex-relative-numbering t)
+    (setq numbex-numbering-reset t)
     (message "Relative numbering activated")))
 
-(defun numbex-toggle-display ()
+(defun numbex-toggle-visibility ()
   "Remove numbers if they are present, add them otherwise."
   (interactive)
   (when numbex--automatic-refresh
@@ -489,7 +491,7 @@ Allow the user to return a uniquified string by calling
       (concat "  -- " candidate))))
 
 (defun numbex-edit ()
-  "With ITEM the output of 'numbex--item-at-point', change label."
+  "If point is on a numbex item, let user edit its label."
   (interactive)
   (unless (numbex--item-at-point)
     (user-error "Not on a numbex item"))
@@ -540,7 +542,9 @@ Allow the user to return a uniquified string by calling
         (replace-match "{[rex" t)))))
 
 (defun numbex-new-example ()
-  "Insert a new example item."
+  "Insert a new example item.
+
+Do nothing if point is currently on a numbex item."
   (interactive)
   (when (numbex--item-at-point)
     (user-error "Point is on an existing numbex item"))
@@ -616,7 +620,7 @@ Do nothing if point is currently on a numbex item."
            (insert "{[pex:]}")))
     (insert " ")))
 
-(defun numbex-do ()
+(defun numbex-dwim ()
   "Insert a new item or edit the existing one at point."
   (interactive)
   (let ((hidden numbex--hidden-labels))
@@ -629,44 +633,90 @@ Do nothing if point is currently on a numbex item."
         (numbex--add-numbering)
       (numbex--remove-numbering))))
 
-(defun numbex-previous-example (&optional arg)
-  "Move point to previous example item.
-Always skip the first example item if it is on the same line as
-point.  Optional prefix ARG specifies how many examples backwards
-to jump to.  Do nothing if there is no previous example item in
-the accessible portion of the buffer."
-  (interactive "p")
-  (save-excursion
-    (beginning-of-line)
-    (unless (re-search-backward numbex--example-re nil t arg)
-      (if (> arg 1)
-          (user-error (format "No %s previous examples" arg))
-        (user-error "No previous example"))))
-  (beginning-of-line)
-  (unless (re-search-backward numbex--example-re nil t arg)
-    (message "No previous example")))
-
-(defun numbex-next-example (&optional arg)
+(defun numbex-forward-example (&optional count)
   "Move point to next example item.
-Optional prefix ARG specifies how many examples forwards to jump
-to.  Do nothing if there is no next example item in the
-accessible portion of the buffer."
-  (interactive "p")
-  (let ((item-at-point (numbex--item-at-point)))
-    (save-excursion
-      (when (string-equal "ex" (cdr item-at-point))
-        (goto-char (cdar item-at-point)))
-      (unless (re-search-forward numbex--example-re nil t arg)
-        (if (> arg 1)
-            (user-error (format "No %s next examples" arg))
-          (user-error "No next example"))))
-    (when (string-equal "ex" (cdr item-at-point))
-      (goto-char (cdar item-at-point)))
-    (if (re-search-forward numbex--example-re nil t arg)
-        (goto-char (match-beginning 0))
-      (message "No previous example"))))
+Optional prefix COUNT specifies how many examples forwards to jump
+to.
 
-(defun numbex-search ()
+Do nothing if there is no next example item in the accessible
+portion of the buffer."
+  (interactive "p")
+  (let ((count (or count 1))
+        (pos (if (equal (cdr (numbex--item-at-point)) "ex")
+                 (caar (numbex--item-at-point))
+               nil)))
+    (if (eq count 0) (user-error nil)
+      (funcall #'numbex--jump-to-example count pos))))
+
+(defun numbex-backward-example (&optional count)
+  "Move point to previous example item.
+Always skip an example item that is on the same line as point.
+Optional prefix COUNT specifies how many examples backwards to jump
+to.
+
+Do nothing if there is no previous example item in the accessible
+portion of the buffer."
+  (interactive "p")
+  (let ((count (or count 1))
+        (pos (if (equal (cdr (numbex--item-at-point)) "ex")
+                 (caar (numbex--item-at-point))
+               nil)))
+    (if (eq count 0) (user-error nil)
+      (funcall #'numbex--jump-to-example (- count (* 2 count)) pos))))
+
+;; When moving to an example item that is hidden (e.g. under a folded
+;; org-mode heading), the value of this variable is set to the buffer
+;; position corresponding to the end of the example item (i.e. the end
+;; of the matched string).  This way, if you move further down or up
+;; in the buffer, the section that was opened just because you
+;; searched for an example item into it will be hidden again.  Every
+;; time a new movement "chain" is initiated this variable is reset to
+;; nil.
+(defvar-local numbex--previous-movement-invisible nil)
+
+(defun numbex--jump-to-example (count pos)
+  "Jump to n example items forward or backward, where n is COUNT.
+
+POS is nil if point is not on a numbex example already, otherwise
+it is the buffer position of the beginning of the label of the
+example item at point."
+  ;; First let's check that there are enough example items to jump to.
+  (save-excursion
+    ;; Go to the middle of the example item at point so that the search
+    ;; can work in the first place.
+    (when pos (goto-char pos))
+    (unless (re-search-forward numbex--example-re nil t count)
+      (let ((errormessage (cond ((< count -1)
+                                 (format "No %s previous examples" count))
+                                ((= count -1) "No previous example")
+                                ((= count 1) "No next example")
+                                ((> count 1)
+                                 (format "No %s next examples" count)))))
+        (setq numbex--previous-movement-invisible nil)
+        (user-error errormessage))))
+  (when pos (goto-char pos))
+  (re-search-forward numbex--example-re nil t count)
+  (let* ((target-beginning (match-beginning 0))
+         (target-end (match-end 0))
+         (chain (or (eq last-command 'numbex-forward-example)
+                    (eq last-command 'numbex-backward-example))))
+    ;; Don't bother making anything invisible if the previous command
+    ;; was not a movement command.
+    (unless chain (setq numbex--previous-movement-invisible nil))
+    (when numbex--previous-movement-invisible
+      ;; Go to the example you had jumped right before getting here
+      ;; and close the subtree
+      (goto-char numbex--previous-movement-invisible)
+      (outline-hide-subtree))
+    (goto-char target-beginning)
+    ;; Now that you are back to the actual target, if it is invisible
+    ;; open up the subtree and add this location to the record so that
+    ;; it will be made invisible again if you move further up or down.
+    (when (outline-invisible-p target-end)
+      (setq numbex--previous-movement-invisible target-end)
+      (outline-show-subtree))))
+
+(defun numbex-list ()
   "Find items in the buffer through 'occur'.
 
 + \"a\" to return all items
@@ -768,7 +818,9 @@ echo area.  If point is not on an item, evaluate
 appearance of the buffer is kept up to date as far as numbex is
 concerned."
   (when (and numbex-mode numbex--hidden-labels)
-    (let ((item (numbex--item-at-point)))
+    (let ((item (numbex--item-at-point))
+          ;; Let's not fill *Messages* with useless stuff
+          (message-log-max nil))
       (if item
           ;; Point is on an item: show the underlying label.  If the
           ;; item is a reference, show the context of the
@@ -798,18 +850,35 @@ concerned."
           ;; on auto-save and before-save-hook.
           (numbex-refresh t))))))
 
-(defun numbex-write-out-numbers ()
-  "Write buffer to new file replacing numbex items with numbers."
-  (interactive)
+(defun numbex-write-out-numbers (&optional choose-mode)
+  "Replace items in current buffer with actual numbers in new buffer.
+Visit the new buffer in another window.
+
+If the region is active, the ouptut in the new buffer is
+restricted to the marked portion of the current buffer.
+
+If called with prefix argument CHOOSE-MODE, let the user choose
+the major mode for the new buffer; otherwise, the new buffer will
+be in the same major mode as the current buffer."
+  (interactive "P")
   (numbex--scan-buffer)
   (numbex--add-numbering)
   (let* ((original-buffer (current-buffer))
-         (new-buffer-name (concat "nb-" (format "%s" original-buffer)))
-         (unique-new-name (if (file-exists-p new-buffer-name)
-                              (generate-new-buffer-name new-buffer-name)
-                            new-buffer-name)))
-    (with-current-buffer (get-buffer-create unique-new-name)
-      (insert-buffer-substring-as-yank original-buffer)
+         (maj-mode (if choose-mode
+                       (intern (completing-read
+                                "Major Mode: "
+                                (mapcar 'cdr auto-mode-alist)
+                                nil t "" nil nil "text-mode"))
+                     major-mode))
+         (beg-end (if (region-active-p)
+                      (cons (region-beginning) (region-end))
+                    (cons (point-min) (point-max))))
+         (new-buffer-name (generate-new-buffer-name
+                           (concat "nb-" (format "%s" original-buffer)))))
+    (get-buffer-create new-buffer-name)
+    (with-current-buffer new-buffer-name (funcall maj-mode))
+    (insert-into-buffer new-buffer-name (car beg-end) (cdr beg-end))
+    (with-current-buffer new-buffer-name
       (goto-char (point-min))
       (while (re-search-forward numbex--item-re nil t)
         (let* ((b (match-beginning 0))
@@ -822,13 +891,12 @@ concerned."
                                     "[\\.\\?]+"
                                     (cdr numbex-delimiters)))
             (delete-region (match-beginning 0) (match-end 0)))
-          (insert number)))
-      (write-file unique-new-name)
-      (kill-current-buffer))))
+          (insert number))))
+    (switch-to-buffer-other-window new-buffer-name)))
 
 (defun numbex--count-and-ask ()
-  "With more than 1000 items, ask whether to automatically refresh.
-1000 is the default value of 'numbex--safe-number-items'."
+  "With too many items in the buffer, ask whether to automatically refresh.
+\"Too many\" means more than 'numbex--safe-number-items'."
   (save-excursion
     (goto-char (point-min))
     (setq numbex--total-number-of-items 0)
