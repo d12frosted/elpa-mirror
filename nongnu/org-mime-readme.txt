@@ -196,9 +196,7 @@ Table of Contents
 4.3 Beautify quoted mail when replying
 ──────────────────────────────────────
 
-  It already works out of box. Currently it emulates Gmail's style. You
-  can go back the old style by `(setq org-mime-beautify-quoted-mail
-  nil)'.
+  It already works out of box. Currently it emulates Gmail's style.
 
 
 4.4 Export options

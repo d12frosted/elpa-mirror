@@ -1,0 +1,11 @@
+(org-mime .
+	  [(20220517 1644)
+	   ((emacs
+	     (25 1)))
+	   "org html export for text/html MIME emails" single
+	   ((:commit . "2eede712acc51aaf495984ec457431dbb520038c")
+	    (:authors
+	     ("Eric Schulte"))
+	    (:maintainer "Chen Bin (redguardtoo)")
+	    (:keywords "mime" "mail" "email" "html")
+	    (:url . "http://github.com/org-mime/org-mime"))])

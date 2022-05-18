@@ -4,7 +4,7 @@
 ;; Maintaner: Vidianos Giannitsis <vidianosgiannitsis@gmail.com>
 ;; URL: https://github.com/Vidianos-Giannitsis/zetteldesk.el
 ;; Package-Version: 20220512.1736
-;; Package-Commit: 0237a5a0f9cc40dc543c9713c37bbb34d548de50
+;; Package-Commit: fe6fc48c0a625f0a8c5e4cf219f98d60dba28e03
 ;; Package-Requires: ((emacs "27.1") (org-roam "2.0"))
 ;; Tested on Emacs 27.2 and org-roam v2.2
 ;; Created: 6th February 2022
