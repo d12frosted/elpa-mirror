@@ -4,7 +4,9 @@
 
 ;; Author: Nick Lanham
 ;; URL: https://github.com/mgyucht/jsonnet-mode
-;; Package-Version: 0.0.1
+;; Package-Commit: 7c9961b084b1ea352555317076bc27a512dd341f
+;; Package-Version: 20220121.2109
+;; Package-X-Original-Version: 0.0.1
 ;; Keywords: languages
 ;; Package-Requires: ((emacs "24") (dash "2.17.0"))
 

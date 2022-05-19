@@ -3,11 +3,11 @@ Fetcher: git
 Source:  https://depp.brause.cc/jammer.git
 
 Updating /mnt/store/melpa/working/jammer/
-Checking out origin/HEAD
-Checking out a780e4c2adb2e85a4daadcefd1a2b189d761872f
-Built jammer in 5.472s, finished at 2022-05-18T16:01:53+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K May 18 16:01 packages/jammer-20210508.1633.el
-4.0K -rw-r--r-- 1 root root  361 May 18 16:01 packages/jammer-20210508.1633.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 18 16:01 packages/jammer-badge.svg
-4.0K -rw-r--r-- 1 root root  145 May 18 16:01 packages/jammer-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://depp.brause.cc/jammer.git/': Failed to connect to depp.brause.cc port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
