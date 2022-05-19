@@ -4,8 +4,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "24.3") (cl-lib "0.6.1"))
-;; Package-Commit: a3358645582148e81bff54e18877451b747173bb
-;; Package-Version: 20220210.1354
+;; Package-Commit: 21f3cf796c08625cf70d534a990f4ae2273a5d4f
+;; Package-Version: 20220519.45
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: wp
 ;; homepage: https://repo.or.cz/amread-mode.git
@@ -35,8 +35,14 @@
 (require 'cl-lib)
 
 
-(defcustom amread-speed 3.0
+(defcustom amread-word-speed 3.0
   "Read words per second."
+  :type 'float
+  :safe #'floatp
+  :group 'amread-mode)
+
+(defcustom amread-line-speed 4.0
+  "Read one line using N seconds in average."
   :type 'float
   :safe #'floatp
   :group 'amread-mode)
@@ -96,19 +102,31 @@
 
 (defun amread--update ()
   "Update and scroll forward under Emacs timer."
-  (if (eq amread-scroll-style 'word)
-      (amread--word-update)
-    (amread--line-update)))
+  (cl-case amread-scroll-style
+    ('word
+     (amread--word-update))
+    ('line
+     (amread--line-update)
+     ;; Auto modify the running timer REPEAT seconds based on next line words length.
+     (let* ((next-line-words (amread--get-next-line-words)) ; for English
+            ;; TODO: Add Chinese text logic.
+            ;; (next-line-length (amread--get-next-line-length)) ; for Chinese
+            (amread--next-line-pause-secs (truncate (/ next-line-words amread-word-speed))))
+       (when (> amread--next-line-pause-secs 0)
+         (setf (timer--repeat-delay amread--timer) amread--next-line-pause-secs))))
+    (t (user-error "Seems amread-mode is not normally started or not running."))))
 
 (defun amread--scroll-style-ask ()
   "Ask which scroll style to use."
   (let ((style (intern (completing-read "amread-mode scroll style: " '("word" "line")))))
-    (setq amread-scroll-style style)))
+    (setq amread-scroll-style style)
+    style))
 
 (defun amread--get-line-words (&optional pos)
   "Get the line words of position."
   (save-excursion
     (and pos (goto-char pos))
+    (beginning-of-line)
     (count-words (line-end-position) (line-beginning-position))))
 
 (defun amread--get-next-line-words ()
@@ -130,23 +148,25 @@
   "Start / resume amread."
   (interactive)
   (read-only-mode 1)
+  ;; if quit `amread--scroll-style-ask', then don't enable `amread-mode'.
   (or amread-scroll-style (amread--scroll-style-ask))
-  ;; resume from paused position
-  (cl-case amread-scroll-style
-    (word
-     (when amread--current-position
-       (goto-char amread--current-position))
-     (setq amread--timer
-           (run-with-timer 0 (/ 1.0 amread-speed) #'amread--update)))
-    (line
-     (when amread--current-position
-       (goto-char (point-min))
-       (forward-line amread--current-position))
-     (let* ((next-line-words (amread--get-next-line-words)) ; for English
-            (amread--stick-secs (/ next-line-words amread-speed)))
+  (if (null amread-scroll-style)
+      (user-error "User quited entering amread-mode.")
+    ;; resume from paused position
+    (cl-case amread-scroll-style
+      (word
+       (when amread--current-position
+         (goto-char amread--current-position))
        (setq amread--timer
-             (run-with-timer amread--stick-secs nil #'amread--update)))))
-  (message "I start reading..."))
+             (run-with-timer 0 (/ 1.0 amread-word-speed) #'amread--update)))
+      (line
+       (when amread--current-position
+         (goto-char (point-min))
+         (forward-line amread--current-position))
+       (setq amread--timer
+             (run-with-timer 1 amread-line-speed #'amread--update)))
+      (t (user-error "Seems amread-mode is not normally started because of not selecting scroll style OR just not running.")))
+    (message "The amread-mode start reading...")))
 
 ;;;###autoload
 (defun amread-stop ()
@@ -159,7 +179,7 @@
       (delete-overlay amread--overlay)))
   (setq amread-scroll-style nil)
   (read-only-mode -1)
-  (message "I stopped reading."))
+  (message "The amread-mode stopped reading."))
 
 (defun amread-pause-or-resume ()
   "Pause or resume amread."
@@ -176,12 +196,12 @@
 (defun amread-speed-up ()
   "Speed up `amread-mode'."
   (interactive)
-  (setq amread-speed (cl-incf amread-speed 0.2)))
+  (setq amread-word-speed (cl-incf amread-word-speed 0.2)))
 
 (defun amread-speed-down ()
   "Speed down `amread-mode'."
   (interactive)
-  (setq amread-speed (cl-decf amread-speed 0.2)))
+  (setq amread-word-speed (cl-decf amread-word-speed 0.2)))
 
 (defvar amread-mode-map
   (let ((map (make-sparse-keymap)))

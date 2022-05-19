@@ -4,8 +4,8 @@
 
 ;; Author: Otávio Schwanck <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
-;; Package-Version: 20220402.446
-;; Package-Commit: a23571eaab94fb2da0569ed5ab3c1b469f123b97
+;; Package-Version: 20220519.43
+;; Package-Commit: 6090566482a71aa024998935316e00ff1bf8f0fe
 ;; Homepage: https://github.com/otavioschwanck/harpoon.el
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "27.2") (f "0.20.0") (hydra "0.14.0") (project "0.8.1"))
@@ -138,6 +138,7 @@
     (make-directory harpoon-cache-file)))
 
 
+;;;###autoload
 (defun harpoon--file-name ()
   "File name for harpoon on current project."
   (concat harpoon-cache-file (harpoon--cache-key)))
