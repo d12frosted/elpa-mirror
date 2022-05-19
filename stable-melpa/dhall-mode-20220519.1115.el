@@ -5,8 +5,8 @@
 ;; Author: Sibi Prabakaran <sibi@psibi.in>
 ;; Maintainer: Sibi Prabakaran <sibi@psibi.in>
 ;; Keywords: languages
-;; Package-Version: 20200822.258
-;; Package-Commit: ad259c8a2292fb398dff1ce7d25c686edb02945d
+;; Package-Version: 20220519.1115
+;; Package-Commit: c77f1c1e75b6d2725019c5275fc102ae98d25628
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "24.4") (reformatter "0.3"))
 ;; URL: https://github.com/psibi/dhall-mode
@@ -56,7 +56,7 @@
   "Keymap for using `dhall-mode'.")
 
 (defgroup dhall nil
-  "Major mode for editing dhall files"
+  "Major mode for editing dhall files."
   :group 'languages
   :prefix "dhall-"
   :link '(url-link :tag "Site" "https://github.com/psibi/dhall-mode")
@@ -146,6 +146,18 @@ If specified, this should be the complete path to your dhall-format executable,
   :group 'dhall
   :safe 'listp)
 
+(defcustom dhall-freeze-arguments nil
+  "Provide a list of arguments for freeze e.g. '(\"--transitive\")."
+  :type 'list
+  :group 'dhall
+  :safe 'listp)
+
+(defcustom dhall-lint-arguments nil
+  "Provide a list of arguments for the linter e.g. '(\"--transitive\")."
+  :type 'list
+  :group 'dhall
+  :safe 'listp)
+
 (defcustom dhall-type-check-inactivity-timeout 1
   "Wait for this period of inactivity before refreshing the buffer type.
 You can try increasing this if type checking is slowing things
@@ -189,13 +201,13 @@ down.  You can also disable type-checking entirely by setting
 
 (reformatter-define dhall-freeze
   :program dhall-command
-  :args '("freeze")
+  :args (append '("freeze") dhall-freeze-arguments)
   :group 'dhall
   :lighter " DhFreeze")
 
 (reformatter-define dhall-lint
   :program dhall-command
-  :args '("lint")
+  :args (append '("lint") dhall-lint-arguments)
   :group 'dhall
   :lighter " DhLint")
 

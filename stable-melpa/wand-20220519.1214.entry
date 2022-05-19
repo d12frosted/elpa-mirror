@@ -1,11 +1,7 @@
 (wand .
-      [(20210511 725)
-       ((dash
-	 (2 15 0))
-	(s
-	 (0 1 1)))
-       "Magic wand for Emacs - Select and execute" tar
-       ((:commit . "08c3d9156517a31dd98ea64bfc269fae730b643c")
+      [(20220519 1214)
+       nil "Magic wand for Emacs - Select and execute" tar
+       ((:commit . "e4afc0469c818e7ce73ef31c38d911477947d72e")
 	(:authors
 	 ("Ha-Duong Nguyen <cmpitgATgmail>"))
 	(:maintainer "Ha-Duong Nguyen <cmpitgATgmail>")

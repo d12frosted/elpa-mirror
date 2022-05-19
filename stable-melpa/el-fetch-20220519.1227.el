@@ -22,9 +22,9 @@
 
 ;; Author: Maciej Barć <xgqt@riseup.net>
 ;; Homepage: https://gitlab.com/xgqt/emacs-el-fetch
-;; Version: 2.0.0
-;; Package-Version: 20220510.1536
-;; Package-Commit: 3aa9594e807cb03af228c13224b381ecdd7ba2e3
+;; Version: 3.0.0
+;; Package-Version: 20220519.1227
+;; Package-Commit: 6e5c49114dcc93d8ead5b8f29c4eb284a0560b70
 ;; Package-Requires: ((emacs "25.1"))
 
 
@@ -62,6 +62,7 @@
 
 
 (require 'package)
+(require 'seq)
 
 
 ;; Helper functions
@@ -163,12 +164,6 @@ Get GNU Emacs version and the version of GUI toolkit Emacs was built to use."
                 (concat " with Motif " motif-version-string))
              "")))
 
-(defun el-fetch--info-emacs-pkgs ()
-  "El-Fetch: packages part.
-Get installed Emacs Lisp packages the time that was taken to load them."
-  (format "%d pkgs (loaded in %s)"
-          (length package-activated-list) (emacs-init-time)))
-
 (defun el-fetch--info-emacs-user-dir ()
   "El-Fetch: directory part.
 Get path and size of user's Emacs directory."
@@ -179,19 +174,44 @@ Get path and size of user's Emacs directory."
                (directory-files-recursively user-emacs-directory ".*" nil))
             0)))
 
+(defun el-fetch--info-emacs-pkgs ()
+  "El-Fetch: packages part.
+Get installed Emacs Lisp packages the time that was taken to load them."
+  (format "%d pkgs (loaded in %s)"
+          (length package-activated-list) (emacs-init-time)))
+
+(defun el-fetch--info-emacs-load-path ()
+  "El-Fetch: load-path part.
+Get the number of directories and nonexistent paths in the `load-path'."
+  (let ((nonexistent
+         (seq-filter (lambda (path) (not (file-exists-p path))) load-path)))
+    (concat (format "%d directories" (length load-path))
+            (when nonexistent
+              (format ", %d nonexistent" (length nonexistent))))))
+
 (defun el-fetch--info-emacs-theme ()
   "El-Fetch: Emacs theme part.
 Get loaded themes."
   (if custom-enabled-themes
       (apply #'concat (mapcar (lambda (sym) (concat (symbol-name sym) " "))
-                              custom-enabled-themes)))
-  "N/A")
+                              custom-enabled-themes))
+    "N/A"))
 
 (defun el-fetch--info-emacs-frame ()
   "El-Fetch: Emacs frame part.
 Get width and height of current frame."
   (format "%d lines / %d columns"
           (frame-parameter nil 'width) (frame-parameter nil 'height)))
+
+(defun el-fetch--info-emacs-buffers ()
+  "El-Fetch: open Emacs buffers part.
+Get number of open buffers."
+  (format "%d open" (length (buffer-list))))
+
+(defun el-fetch--info-emacs-processes ()
+  "El-Fetch: Emacs processes part.
+Get number of running processes."
+  (format "%d running" (length (process-list))))
 
 (defun el-fetch--info-emacs-uptime ()
   "El-Fetch: uptime part.
@@ -206,21 +226,24 @@ Get how long the Emacs process is running."
   (let ((el-fetch-header (concat (user-real-login-name) "@" (system-name))))
     (concat
      el-fetch-header  "\n"
-     (make-string (string-width el-fetch-header) ?-)  "\n"
+     (make-string (string-width el-fetch-header) ?-)   "\n"
      ;; Host
-     "CPU      : "  (el-fetch--info-cpu)              "\n"
-     "Memory   : "  (el-fetch--info-memory)           "\n"
-     "Device   : "  (el-fetch--info-device)           "\n"
-     "Distro   : "  (el-fetch--info-distro)           "\n"
-     "Kernel   : "  (el-fetch--info-kernel)           "\n"
-     "Shell    : "  (el-fetch--info-shell)            "\n"
+     "CPU       : "  (el-fetch--info-cpu)              "\n"
+     "Memory    : "  (el-fetch--info-memory)           "\n"
+     "Device    : "  (el-fetch--info-device)           "\n"
+     "Distro    : "  (el-fetch--info-distro)           "\n"
+     "Kernel    : "  (el-fetch--info-kernel)           "\n"
+     "Shell     : "  (el-fetch--info-shell)            "\n"
      ;; GNU Emacs
-     "Emacs    : "  (el-fetch--info-emacs-version)    "\n"
-     "Packages : "  (el-fetch--info-emacs-pkgs)       "\n"
-     "User Dir : "  (el-fetch--info-emacs-user-dir)   "\n"
-     "Theme    : "  (el-fetch--info-emacs-theme)      "\n"
-     "Size     : "  (el-fetch--info-emacs-frame)      "\n"
-     "Uptime   : "  (el-fetch--info-emacs-uptime))))
+     "Emacs     : "  (el-fetch--info-emacs-version)    "\n"
+     "User Dir  : "  (el-fetch--info-emacs-user-dir)   "\n"
+     "Packages  : "  (el-fetch--info-emacs-pkgs)       "\n"
+     "Load Path : "  (el-fetch--info-emacs-load-path)  "\n"
+     "Theme     : "  (el-fetch--info-emacs-theme)      "\n"
+     "Size      : "  (el-fetch--info-emacs-frame)      "\n"
+     "Buffers   : "  (el-fetch--info-emacs-buffers)    "\n"
+     "Processes : "  (el-fetch--info-emacs-processes)  "\n"
+     "Uptime    : "  (el-fetch--info-emacs-uptime))))
 
 
 ;; Mode

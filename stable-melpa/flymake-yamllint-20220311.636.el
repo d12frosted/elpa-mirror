@@ -6,7 +6,7 @@
 ;; Created: 26 November 2021
 ;; Version: 0.1.2
 ;; Package-Version: 20220311.636
-;; Package-Commit: a93bf9a6697566f0e29fb51a87c5cc7b2a972d2d
+;; Package-Commit: 6a9346d7a7cd9615a7179dbc22593588f7de9c2d
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/shaohme/flymake-yamllint
 ;;; Commentary:
