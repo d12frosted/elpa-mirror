@@ -3,11 +3,23 @@ Fetcher: git
 Source:  https://depp.brause.cc/punpun-theme.git
 
 Updating /mnt/store/melpa/working/punpun-theme/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://depp.brause.cc/punpun-theme.git/': Failed to connect to depp.brause.cc port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7026684cd568cb691af3ced5de14c375fe6f5a1a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/punpun-theme/
+  to /tmp/punpun-themefzvPGW/punpun-theme-20210508.1635
+    punpun-common.el -> punpun-common.el
+    punpun-dark-theme.el -> punpun-dark-theme.el
+    punpun-light-theme.el -> punpun-light-theme.el
+    punpun-theme-pkg.el -> punpun-theme-pkg.el
+Created punpun-theme-20210508.1635.tar containing:
+  punpun-theme-20210508.1635/
+  punpun-theme-20210508.1635/punpun-common.el
+  punpun-theme-20210508.1635/punpun-dark-theme.el
+  punpun-theme-20210508.1635/punpun-light-theme.el
+  punpun-theme-20210508.1635/punpun-theme-pkg.el
+Built punpun-theme in 5.494s, finished at 2022-05-19T10:02:59+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  163 May 19 10:02 packages/punpun-theme-20210508.1635.entry
+ 20K -rw-r--r-- 1 root root  20K May 19 10:02 packages/punpun-theme-20210508.1635.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 19 10:02 packages/punpun-theme-badge.svg

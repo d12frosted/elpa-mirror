@@ -1,11 +1,11 @@
 ;;; org-anki.el --- Synchronize org-mode entries to Anki -*- lexical-binding: t -*-
 ;;
-;; Copyright (C) 2021 Markus Läll
+;; Copyright (C) 2022 Markus Läll
 ;;
 ;; URL: https://github.com/eyeinsky/org-anki
-;; Package-Version: 20220518.1132
-;; Package-Commit: 9bd24635e54328401e91bdd06847631a5630064d
-;; Version: 0.0.10
+;; Package-Version: 20220519.658
+;; Package-Commit: 1e2269b826b5749604e124f0b89c08a96281f879
+;; Version: 0.0.11
 ;; Author: Markus Läll <markus.l2ll@gmail.com>
 ;; Keywords: outlines, flashcards, memory
 ;; Package-Requires: ((emacs "27.1") (request "0.3.2") (dash "2.17") (promise "1.1"))
@@ -76,7 +76,8 @@ property"
   '(("Basic" "Front" "Back")
     ("Basic (and reversed card)" "Front" "Back")
     ("Basic (optional reversed card)" "Front" "Back")
-    ("Cloze" "Text" "Extra"))
+    ("NameDescr" "Name" "Descr")
+    ("Cloze" "Text"))
   "Default fields for note types."
   :type '(repeat (list (repeat string)))
   :group 'org-anki)
@@ -598,6 +599,96 @@ syntax."
           the-error)
          )))
      (t (message "org-anki: no note id here")))))
+
+;;;###autoload
+(defun org-anki-import-deck (name &optional buffer)
+  "Import deck with NAME to current buffer, or to BUFFER when provided.
+
+This is a best-effort command which doesn't support all of Anki's features. Its use case is to import a deck to an .org which from then on will be used as source-of-truth for the notes.
+
+Pandoc is required to be installed."
+
+  (interactive "sDeck name: ")
+  (org-anki-connect-request
+   (org-anki--body
+    "findNotes"
+    `(("query" . ,(concat "deck:" name))))
+   (lambda (ids)
+     (org-anki-connect-request
+      (org-anki--body "notesInfo" `(("notes" . ,ids)))
+      (lambda (the-result)
+        (insert (format "\n#+%s: %s\n\n" org-anki-prop-deck name))
+        (mapc
+         (lambda (json)
+           (org-anki--write-note (org-anki--parse-note json)))
+         the-result))
+      (lambda (the-error)
+        (org-anki--report-error "Get deck error, received: %s" the-error))))
+   (lambda (the-error)
+     (org-anki--report-error "Get deck error, received: %s" the-error))))
+
+(defun org-anki--parse-note (note-json)
+  (cl-flet ((field (lambda (symbol &optional assoc-list)
+                     (cdr (assoc symbol (or assoc-list note-json))))))
+    (let*
+        ((type (field 'modelName))
+         (fields (field 'fields))
+         (front-back
+          (cond
+           ((equal type "Cloze")
+            `( ,(cdr (assoc 'value (cdr (assoc 'Text fields))))
+             . nil
+             ))
+           ((equal type "NameDescr")
+            `( ,(cdr (assoc 'value (cdr (assoc 'Name  fields))))
+             . ,(cdr (assoc 'value (cdr (assoc 'Descr fields))))))
+           ((member type '("Basic" "Basic (and reversed card)" "Basic (optional reversed card)"))
+            `( ,(cdr (assoc 'value (cdr (assoc 'Front  fields))))
+               . ,(cdr (assoc 'value (cdr (assoc 'Back   fields))))))
+           (t
+            (org-anki--report-error "Unsupported note type: %s" type)))))
+
+    (make-org-anki--note
+     :maybe-id (field 'noteId)
+     :front    (org-anki--html-to-org (car front-back))
+     :back     (org-anki--html-to-org (cdr front-back))
+     :tags     (append (field 'tags) nil)
+     ;; :deck     deck
+     :type     type
+     :point    nil))))
+
+
+(defun org-anki--html-to-org (html)
+  (if html
+      (replace-regexp-in-string
+       "\n+$" ""
+       (shell-command-to-string
+        (format "pandoc --wrap=none --from=html --to=org <<< '%s'" html)))
+    ""))
+
+(defun org-anki--write-note (note)
+  ;; Add title
+  (insert "* ")
+  (insert (org-anki--note-front note))
+
+  ;; Add tags if any
+  (let ((tags (org-anki--note-tags note)))
+    (if tags (insert (concat " :" (mapconcat 'identity tags ":") ":"))))
+
+  (insert "\n\n")
+  (org-entry-put nil org-anki-prop-note-id (number-to-string (org-anki--note-maybe-id note)))
+
+  ;; Add type if not basic:
+  (let ((type (org-anki--note-type note)))
+    (if (not (equal type "Basic"))
+      (org-entry-put nil org-anki-note-type type)))
+
+  ;; Add content
+  (let ((content (org-anki--note-back note)))
+    (if content
+        (progn
+          (insert content)
+          (insert "\n")))))
 
 (provide 'org-anki)
 ;;; org-anki.el ends here

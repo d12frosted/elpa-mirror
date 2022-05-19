@@ -3,11 +3,11 @@ Fetcher: git
 Source:  https://depp.brause.cc/zone-nyan.git
 
 Updating /mnt/store/melpa/working/zone-nyan/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://depp.brause.cc/zone-nyan.git/': Failed to connect to depp.brause.cc port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 38b6e9f1f5871e9166b00a1db44680caa56773be
+Built zone-nyan in 5.492s, finished at 2022-05-19T10:22:09+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  24K May 19 10:22 packages/zone-nyan-20210508.1642.el
+4.0K -rw-r--r-- 1 root root  403 May 19 10:22 packages/zone-nyan-20210508.1642.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 19 10:22 packages/zone-nyan-badge.svg
+4.0K -rw-r--r-- 1 root root  184 May 19 10:22 packages/zone-nyan-readme.txt

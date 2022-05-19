@@ -3,11 +3,11 @@ Fetcher: git
 Source:  https://depp.brause.cc/xbm-life.git
 
 Updating /mnt/store/melpa/working/xbm-life/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://depp.brause.cc/xbm-life.git/': Failed to connect to depp.brause.cc port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ec6abb0182068294a379cb49ad5346b1d757457d
+Built xbm-life in 6.203s, finished at 2022-05-19T10:20:47+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  28K May 19 10:20 packages/xbm-life-20210508.1640.el
+4.0K -rw-r--r-- 1 root root  378 May 19 10:20 packages/xbm-life-20210508.1640.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 19 10:20 packages/xbm-life-badge.svg
+4.0K -rw-r--r-- 1 root root   40 May 19 10:20 packages/xbm-life-readme.txt

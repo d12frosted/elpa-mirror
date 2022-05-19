@@ -5,7 +5,7 @@
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 2.0
 ;; Package-Version: 20220519.552
-;; Package-Commit: ae5974712563d21fb1d3f8e456f579e2ff2da84d
+;; Package-Commit: c16a500926416c09cd2faee6ab9541686b51e34f
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools, frames
 ;; URL: https://github.com/davidshepherd7/terminal-here

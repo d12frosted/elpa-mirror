@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220509.1904
-;; Package-Commit: d5e335f299216bdf3fe4b0d71fb6e24596a35a6a
+;; Package-Version: 20220519.900
+;; Package-Commit: 2b87b06d9ef15e7c39d87fd5a4375b6deaa7e322
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -1998,7 +1998,11 @@ COMMAND is a symbol naming the command."
                                              collect it)))
                           `((face . ,faces))))))
            into diags
-           finally (cond (eglot--current-flymake-report-fn
+           finally (cond ((and
+                           ;; only add to current report if Flymake
+                           ;; starts on idle-timer (github#958)
+                           (not (null flymake-no-changes-timeout))
+                           eglot--current-flymake-report-fn)
                           (eglot--report-to-flymake diags))
                          (t
                           (setq eglot--diagnostics diags)))))
