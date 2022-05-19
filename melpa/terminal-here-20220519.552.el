@@ -4,8 +4,8 @@
 
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 2.0
-;; Package-Version: 20220517.655
-;; Package-Commit: 54fcbc50fd58fe2c1b756ea6c21bd95f5e5f9d22
+;; Package-Version: 20220519.552
+;; Package-Commit: ae5974712563d21fb1d3f8e456f579e2ff2da84d
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools, frames
 ;; URL: https://github.com/davidshepherd7/terminal-here
@@ -75,6 +75,7 @@ Common settings:
     xterm
     sakura
     urxvt
+    xst
     st
     alacritty
     kitty
@@ -208,6 +209,7 @@ buffer is not in a project."
    (cons 'urxvt               (list "urxvt"))
    (cons 'gnome-terminal      (list "gnome-terminal"))
    (cons 'alacritty           (list "alacritty"))
+   (cons 'xst                 (list "xst"))
    (cons 'st                  #'terminal-here--find-and-run-st)
    (cons 'konsole             (list "konsole"))
    (cons 'xterm               (list "xterm"))
@@ -248,6 +250,7 @@ terminal-here with tramp files to create ssh connections."
    (cons 'urxvt          "-e")
    (cons 'gnome-terminal "-x")
    (cons 'alacritty      "-e")
+   (cons 'xst            "-e") ; popular st fork
    (cons 'st             "-e")
    (cons 'konsole        "-e") ; ssh seems to immediately exit with konsole
    (cons 'xterm          "-e")

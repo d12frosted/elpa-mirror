@@ -4,8 +4,8 @@
 
 ;; Author: Otávio Schwanck <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
-;; Package-Version: 20220519.43
-;; Package-Commit: 6090566482a71aa024998935316e00ff1bf8f0fe
+;; Package-Version: 20220519.252
+;; Package-Commit: 902aff3f978adfe65da130aedac698d084355735
 ;; Homepage: https://github.com/otavioschwanck/harpoon.el
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "27.2") (f "0.20.0") (hydra "0.14.0") (project "0.8.1"))
@@ -102,8 +102,8 @@
 (defun harpoon--get-project-name ()
   "Get the harpoon project name."
   (condition-case nil (cond
-   ((eq harpoon-project-package 'projectile) (when (fboundp 'projectile-project-name) (projectile-project-name)))
-   ((eq harpoon-project-package 'project) (harpoon--get-project-name-for-project)))
+                       ((eq harpoon-project-package 'projectile) (when (fboundp 'projectile-project-name) (projectile-project-name)))
+                       ((eq harpoon-project-package 'project) (harpoon--get-project-name-for-project)))
     (error nil)))
 
 (defun harpoon-project-name-function ()
@@ -126,10 +126,10 @@
 (defun harpoon--cache-key ()
   "Key to save current file on cache."
   (if (harpoon--has-project) (if harpoon-separate-by-branch
-      (concat (harpoon--sanitize (harpoon-project-name-function))
-              "#"
-              (harpoon--sanitize (harpoon--get-branch-name)))
-    (harpoon--sanitize (harpoon-project-name-function)))
+                                 (concat (harpoon--sanitize (harpoon-project-name-function))
+                                         "#"
+                                         (harpoon--sanitize (harpoon--get-branch-name)))
+                               (harpoon--sanitize (harpoon-project-name-function)))
     (harpoon--sanitize (harpoon-project-name-function))))
 
 (defun harpoon--create-directory ()
@@ -137,8 +137,6 @@
   (unless (f-directory? harpoon-cache-file)
     (make-directory harpoon-cache-file)))
 
-
-;;;###autoload
 (defun harpoon--file-name ()
   "File name for harpoon on current project."
   (concat harpoon-cache-file (harpoon--cache-key)))
@@ -155,11 +153,16 @@
 (defun harpoon-go-to (line-number)
   "Go to specific file on harpoon (by line order). LINE-NUMBER: Line to go."
   (require 'project)
+
   (let* ((file-name (s-replace-regexp "\n" ""
-                                      (shell-command-to-string
-                                       (format "head -n %s < %s | tail -n 1"
-                                               line-number
-                                               (if (eq major-mode 'harpoon-mode) (file-truename (buffer-file-name)) (harpoon--file-name))))))
+                                      (with-temp-buffer
+                                        (insert-file-contents-literally
+                                         (if (eq major-mode 'harpoon-mode)
+                                             (file-truename (buffer-file-name))
+                                           (harpoon--file-name)))
+                                        (goto-char (point-min))
+                                        (forward-line (- line-number 1))
+                                        (buffer-substring-no-properties (line-beginning-position) (line-end-position)))))
          (full-file-name (if (and (fboundp 'project-root) (harpoon--has-project)) (concat (or harpoon--project-path (harpoon-project-root-function)) file-name) file-name)))
     (if (file-exists-p full-file-name)
         (find-file full-file-name)
@@ -303,7 +306,7 @@
   (require 'hydra)
   (let ((candidates (harpoon--hydra-candidates "harpoon-go-to-")))
     (eval `(defhydra harpoon-hydra (:exit t :column 1)
-"
+             "
 
         ██╗  ██╗ █████╗ ██████╗ ██████╗  ██████╗  ██████╗ ███╗   ██╗
         ██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔═══██╗████╗  ██║
