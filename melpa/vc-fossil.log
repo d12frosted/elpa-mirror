@@ -3,11 +3,10 @@ Fetcher: github
 Source:  https://github.com/venks1/emacs-fossil.git
 
 Updating /mnt/store/melpa/working/vc-fossil/
-Checking out origin/HEAD
-Checking out 7815c30d739a01e1100961abb3f2b93e0ea9920f
-Built vc-fossil in 4.582s, finished at 2022-05-20T03:22:48+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root  22K May 20 03:22 packages/vc-fossil-20210928.737.el
-4.0K -rw-r--r-- 1 root root  297 May 20 03:22 packages/vc-fossil-20210928.737.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 20 03:22 packages/vc-fossil-badge.svg
-4.0K -rw-r--r-- 1 root root   71 May 20 03:22 packages/vc-fossil-readme.txt
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/venks1/emacs-fossil.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/md-arif-shaikh/tzc
 ;; Version: 0.0.1
 ;; Package-Version: 20220513.434
-;; Package-Commit: 8fa2aa5636448a3c3e7b59ea3fe38e80a268537a
+;; Package-Commit: f4e2273b65ace1ea56c9824c3bdb97925c98c8ba
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: convenience
 
