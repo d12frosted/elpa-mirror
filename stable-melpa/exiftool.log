@@ -3,11 +3,11 @@ Fetcher: git
 Source:  https://git.systemreboot.net/exiftool.el/
 
 Updating /mnt/store/melpa/working/exiftool/
-Checking out origin/HEAD
-Checking out fc6713e753380f3034d8df55b7af3a737ea52ab4
-Built exiftool in 8.004s, finished at 2022-05-19T23:07:57+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K May 19 23:07 packages/exiftool-20190520.1106.el
-4.0K -rw-r--r-- 1 root root  367 May 19 23:07 packages/exiftool-20190520.1106.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 19 23:07 packages/exiftool-badge.svg
-4.0K -rw-r--r-- 1 root root  438 May 19 23:07 packages/exiftool-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.systemreboot.net/exiftool.el/': Could not resolve host: git.systemreboot.net
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
