@@ -3,11 +3,11 @@ Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/gemini.el.git
 
 Updating /mnt/store/melpa/working/gemini-mode/
-Checking out origin/HEAD
-Checking out 60bd07b3a1e532c950c132673777ceb635c9960d
-Built gemini-mode in 9.788s, finished at 2022-05-20T05:58:59+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.0K May 20 05:58 packages/gemini-mode-20210909.1442.el
-4.0K -rw-r--r-- 1 root root  552 May 20 05:58 packages/gemini-mode-20210909.1442.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 20 05:58 packages/gemini-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  795 May 20 05:58 packages/gemini-mode-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.carcosa.net/jmcbray/gemini.el.git/': server certificate verification failed. CAfile: none CRLfile: none
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

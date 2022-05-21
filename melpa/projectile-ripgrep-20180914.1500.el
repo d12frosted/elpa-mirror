@@ -5,7 +5,7 @@
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; Version: 0.4.0
 ;; Package-Version: 20180914.1500
-;; Package-Commit: 4ed5c741233a81d96115f556784269042070901e
+;; Package-Commit: 872e250e8f93b8bb0a8a1de8bde17fd9bd116e31
 ;; Keywords : ripgrep projectile
 ;; Homepage: https://github.com/nlamirault/ripgrep.el
 ;; Package-Requires: ((ripgrep "0.3.0") (projectile "0.14.0"))

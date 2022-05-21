@@ -3,7 +3,7 @@
 ;; Author: INA Lintaro <tarao.gnn at gmail.com>
 ;; URL: http://github.com/tarao/term+-el
 ;; Package-Version: 20140211.750
-;; Package-Commit: fd0771fd66b8c7a909aaac972194485c79ba48c4
+;; Package-Commit: 2d98e976877a5ca71500ab57377b6e5a129fa2f3
 ;; Version: 0.1
 ;; Keywords: terminal, emulation
 ;; Package-Requires: ((term+ "0.1") (key-intercept "0.1"))
