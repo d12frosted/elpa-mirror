@@ -5,8 +5,8 @@
 ;; Author: Daniel Szmulewicz <daniel.szmulewicz@gmail.com>
 ;; Created: 2020-02-11
 ;; URL: https://github.com/danielsz/meyvn-el
-;; Package-Version: 20211025.106
-;; Package-Commit: 80ece19a6ce6fd3dac374911edb9734286978450
+;; Package-Version: 20220521.17
+;; Package-Commit: ae02f9e3b93730672f2f0a476a4e32bf1a024937
 ;; Version: 1.1
 ;; Package-Requires: ((emacs "25.1") (cider "0.23") (projectile "2.1") (s "1.12") (dash "2.17") (parseedn "0.1.0") (geiser "0.12"))
 
@@ -214,6 +214,15 @@ supplied."
   (cider-ensure-connected)
   (cider-ensure-op-supported "meyvn-portal")
   (let ((resp (nrepl-send-sync-request '("op" "meyvn-portal") (cider-current-connection))))
+    (s-split "\n" (nrepl-dict-get resp "value"))))
+
+(defun meyvn-virgil-dependants ()
+  "Show dependants in Portal."
+  (interactive)
+  (cider-ensure-connected)
+  (cider-ensure-op-supported "meyvn-virgil-dependants")
+  (let* ((query (file-name-nondirectory (buffer-file-name)))
+         (resp (nrepl-send-sync-request `("op" "meyvn-virgil-dependants" "query" ,query) (cider-current-connection))))
     (s-split "\n" (nrepl-dict-get resp "value"))))
 
 (defun meyvn-kawa (arg)

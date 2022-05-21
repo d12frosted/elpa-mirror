@@ -3,11 +3,10 @@ Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/emacs-instapaper.git
 
 Updating /mnt/store/melpa/working/instapaper/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.carcosa.net/jmcbray/emacs-instapaper.git/': server certificate verification failed. CAfile: none CRLfile: none
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f21531bcb935e7e9b9e8df83dd0e0838adbf9b1b
+Built instapaper in 6.120s, finished at 2022-05-21T00:50:27+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K May 21 00:50 packages/instapaper-20110419.1355.el
+4.0K -rw-r--r-- 1 root root  343 May 21 00:50 packages/instapaper-20110419.1355.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 21 00:50 packages/instapaper-badge.svg
