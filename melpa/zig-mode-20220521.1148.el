@@ -1,8 +1,8 @@
 ;;; zig-mode.el --- A major mode for the Zig programming language -*- lexical-binding: t -*-
 
 ;; Version: 0.0.8
-;; Package-Version: 20220518.1715
-;; Package-Commit: 905917322b8b5f191593c66b5f26dd347fe1290d
+;; Package-Version: 20220521.1148
+;; Package-Commit: dbc648f5bca8f3b9ca2cc7827f326f5530115144
 ;; Author: Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>
 ;; Keywords: zig, languages
 ;; Package-Requires: ((emacs "24.3"))
@@ -553,14 +553,15 @@ This is written mainly to be used as `end-of-defun-function' for Zig."
   (when zig-format-on-save
 	(zig-format-buffer)))
 
-(defun colorize-compilation-buffer ()
-  (read-only-mode 0)
-  (ansi-color-apply-on-region compilation-filter-start (point))
-  (read-only-mode 1))
-
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-mode))
-(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+(if (>= emacs-major-version 28)
+    (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
+  (progn
+    (defun colorize-compilation-buffer ()
+      (let ((inhibit-read-only t))
+        (ansi-color-apply-on-region compilation-filter-start (point))))
+    (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)))
 
 (provide 'zig-mode)
 ;;; zig-mode.el ends here

@@ -677,6 +677,17 @@
 	     ("Phil Sainty" . "psainty@orcon.net.nz"))
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
+ (detached .
+	   [(0 7)
+	    ((emacs
+	      (27 1)))
+	    "A package to launch, and manage, detached processes" tar
+	    ((:url . "https://sr.ht/~niklaseklund/detached.el/")
+	     (:keywords "convenience" "processes")
+	     (:maintainer "Niklas Eklund" . "niklas.eklund@posteo.net")
+	     (:authors
+	      ("Niklas Eklund" . "niklas.eklund@posteo.net"))
+	     (:commit . "8402e7ef4574c719f114b15f89b4aecdddea1e1e"))])
  (devdocs .
 	  [(0 4)
 	   ((emacs
@@ -2251,7 +2262,7 @@
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "http://elpa.gnu.org/packages/persist.html"))])
  (phps-mode .
-	    [(0 4 20)
+	    [(0 4 21)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2260,7 +2271,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "3a09d15aa143b175235674f4cd45f92b0b0a6c36"))])
+	      (:commit . "a3a81f9a174cb321ec2ed0c60c7cfaf5dbd6102d"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single

@@ -4,58 +4,60 @@ Source:  https://github.com/domtronn/all-the-icons.el.git
 
 Updating /mnt/store/melpa/working/all-the-icons/
 Checking out origin/HEAD
-Checking out 68365b48f142d75ef4bdc3a274256d97752e3b65
+Checking out ca1ef30004d3fb76aaa70bd47cb83e9fe017a7f7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/all-the-icons/
-  to /tmp/all-the-icons8xIAq8/all-the-icons-20220427.1911
+  to /tmp/all-the-iconsYustON/all-the-icons-20220521.816
     all-the-icons-faces.el -> all-the-icons-faces.el
     all-the-icons.el -> all-the-icons.el
     data => data
-Created all-the-icons-20220427.1911.tar containing:
-  all-the-icons-20220427.1911/
-  all-the-icons-20220427.1911/all-the-icons-faces.el
-  all-the-icons-20220427.1911/all-the-icons-pkg.el
-  all-the-icons-20220427.1911/all-the-icons.el
-  all-the-icons-20220427.1911/data/
-  all-the-icons-20220427.1911/data/data-alltheicons.el
-  all-the-icons-20220427.1911/data/data-faicons.el
-  all-the-icons-20220427.1911/data/data-fileicons.el
-  all-the-icons-20220427.1911/data/data-material.el
-  all-the-icons-20220427.1911/data/data-octicons.el
-  all-the-icons-20220427.1911/data/data-weathericons.el
-Built all-the-icons in 5.383s, finished at 2022-05-21T07:02:26+0000
+Created all-the-icons-20220521.816.tar containing:
+  all-the-icons-20220521.816/
+  all-the-icons-20220521.816/all-the-icons-faces.el
+  all-the-icons-20220521.816/all-the-icons-pkg.el
+  all-the-icons-20220521.816/all-the-icons.el
+  all-the-icons-20220521.816/data/
+  all-the-icons-20220521.816/data/data-alltheicons.el
+  all-the-icons-20220521.816/data/data-faicons.el
+  all-the-icons-20220521.816/data/data-fileicons.el
+  all-the-icons-20220521.816/data/data-material.el
+  all-the-icons-20220521.816/data/data-octicons.el
+  all-the-icons-20220521.816/data/data-weathericons.el
+Built all-the-icons in 5.605s, finished at 2022-05-21T10:35:17+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  393 May 21 07:02 packages/all-the-icons-20220427.1911.entry
 200K -rw-r--r-- 1 root root 200K May 21 07:02 packages/all-the-icons-20220427.1911.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 21 07:02 packages/all-the-icons-badge.svg
-8.0K -rw-r--r-- 1 root root 5.6K May 21 07:02 packages/all-the-icons-completion-20220409.1204.el
-4.0K -rw-r--r-- 1 root root  475 May 21 07:02 packages/all-the-icons-completion-20220409.1204.entry
+4.0K -rw-r--r-- 1 root root  392 May 21 10:35 packages/all-the-icons-20220521.816.entry
+200K -rw-r--r-- 1 root root 200K May 21 10:35 packages/all-the-icons-20220521.816.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 21 10:35 packages/all-the-icons-badge.svg
+8.0K -rw-r--r-- 1 root root 5.6K May 21 10:35 packages/all-the-icons-completion-20220409.1204.el
+4.0K -rw-r--r-- 1 root root  475 May 21 10:35 packages/all-the-icons-completion-20220409.1204.entry
 4.0K -rw-r--r-- 1 root root 1.2K May 21 07:02 packages/all-the-icons-completion-badge.svg
-4.0K -rw-r--r-- 1 root root   38 May 21 07:02 packages/all-the-icons-completion-readme.txt
-4.0K -rw-r--r-- 1 root root  334 May 21 07:02 packages/all-the-icons-completion.log
-8.0K -rw-r--r-- 1 root root 6.6K May 21 07:02 packages/all-the-icons-dired-20220304.1638.el
+4.0K -rw-r--r-- 1 root root   38 May 21 10:35 packages/all-the-icons-completion-readme.txt
+4.0K -rw-r--r-- 1 root root  255 May 21 10:35 packages/all-the-icons-completion.log
+8.0K -rw-r--r-- 1 root root 6.5K May 21 10:35 packages/all-the-icons-dired-20220304.1638.el
 4.0K -rw-r--r-- 1 root root  447 May 21 07:02 packages/all-the-icons-dired-20220304.1638.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 21 03:36 packages/all-the-icons-dired-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K May 21 07:02 packages/all-the-icons-dired-badge.svg
 4.0K -rw-r--r-- 1 root root  290 May 21 07:02 packages/all-the-icons-dired-readme.txt
-4.0K -rw-r--r-- 1 root root  240 May 21 07:02 packages/all-the-icons-dired.log
-8.0K -rw-r--r-- 1 root root 7.5K May 21 03:36 packages/all-the-icons-gnus-20180511.654.el
-4.0K -rw-r--r-- 1 root root  448 May 21 03:36 packages/all-the-icons-gnus-20180511.654.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 21 03:36 packages/all-the-icons-gnus-badge.svg
-4.0K -rw-r--r-- 1 root root   82 May 21 03:36 packages/all-the-icons-gnus-readme.txt
-4.0K -rw-r--r-- 1 root root  186 May 21 07:02 packages/all-the-icons-gnus.log
- 12K -rw-r--r-- 1 root root  11K May 21 03:36 packages/all-the-icons-ibuffer-20220424.1027.el
-4.0K -rw-r--r-- 1 root root  461 May 21 03:36 packages/all-the-icons-ibuffer-20220424.1027.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 21 03:36 packages/all-the-icons-ibuffer-badge.svg
-4.0K -rw-r--r-- 1 root root  279 May 21 03:36 packages/all-the-icons-ibuffer-readme.txt
-4.0K -rw-r--r-- 1 root root  170 May 21 07:02 packages/all-the-icons-ibuffer.log
-8.0K -rw-r--r-- 1 root root 5.6K May 21 03:36 packages/all-the-icons-ivy-20190508.1803.el
-4.0K -rw-r--r-- 1 root root  352 May 21 03:36 packages/all-the-icons-ivy-20190508.1803.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 21 03:36 packages/all-the-icons-ivy-badge.svg
-4.0K -rw-r--r-- 1 root root  241 May 21 03:36 packages/all-the-icons-ivy-readme.txt
- 80K -rw-r--r-- 1 root root  77K May 21 03:36 packages/all-the-icons-ivy-rich-20220510.752.el
-4.0K -rw-r--r-- 1 root root  489 May 21 03:36 packages/all-the-icons-ivy-rich-20220510.752.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 21 03:36 packages/all-the-icons-ivy-rich-badge.svg
-4.0K -rw-r--r-- 1 root root  243 May 21 03:36 packages/all-the-icons-ivy-rich-readme.txt
-   0 -rw-r--r-- 1 root root    0 May 21 07:02 packages/all-the-icons-ivy-rich.log
-   0 -rw-r--r-- 1 root root    0 May 21 07:02 packages/all-the-icons-ivy.log
-4.0K -rw-r--r-- 1 root root 1010 May 21 07:02 packages/all-the-icons-readme.txt
+4.0K -rw-r--r-- 1 root root  240 May 21 10:35 packages/all-the-icons-dired.log
+8.0K -rw-r--r-- 1 root root 7.5K May 21 07:02 packages/all-the-icons-gnus-20180511.654.el
+4.0K -rw-r--r-- 1 root root  448 May 21 07:02 packages/all-the-icons-gnus-20180511.654.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 21 07:02 packages/all-the-icons-gnus-badge.svg
+4.0K -rw-r--r-- 1 root root   82 May 21 07:02 packages/all-the-icons-gnus-readme.txt
+4.0K -rw-r--r-- 1 root root  161 May 21 10:35 packages/all-the-icons-gnus.log
+ 12K -rw-r--r-- 1 root root  11K May 21 07:02 packages/all-the-icons-ibuffer-20220424.1027.el
+4.0K -rw-r--r-- 1 root root  461 May 21 07:02 packages/all-the-icons-ibuffer-20220424.1027.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 21 07:02 packages/all-the-icons-ibuffer-badge.svg
+4.0K -rw-r--r-- 1 root root  279 May 21 07:02 packages/all-the-icons-ibuffer-readme.txt
+4.0K -rw-r--r-- 1 root root  170 May 21 10:35 packages/all-the-icons-ibuffer.log
+8.0K -rw-r--r-- 1 root root 5.6K May 21 07:02 packages/all-the-icons-ivy-20190508.1803.el
+4.0K -rw-r--r-- 1 root root  352 May 21 07:02 packages/all-the-icons-ivy-20190508.1803.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 21 07:02 packages/all-the-icons-ivy-badge.svg
+4.0K -rw-r--r-- 1 root root  241 May 21 07:02 packages/all-the-icons-ivy-readme.txt
+ 80K -rw-r--r-- 1 root root  77K May 21 07:02 packages/all-the-icons-ivy-rich-20220510.752.el
+4.0K -rw-r--r-- 1 root root  489 May 21 07:02 packages/all-the-icons-ivy-rich-20220510.752.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 21 07:02 packages/all-the-icons-ivy-rich-badge.svg
+4.0K -rw-r--r-- 1 root root  243 May 21 07:02 packages/all-the-icons-ivy-rich-readme.txt
+   0 -rw-r--r-- 1 root root    0 May 21 10:35 packages/all-the-icons-ivy-rich.log
+   0 -rw-r--r-- 1 root root    0 May 21 10:35 packages/all-the-icons-ivy.log
+4.0K -rw-r--r-- 1 root root 1010 May 21 10:35 packages/all-the-icons-readme.txt

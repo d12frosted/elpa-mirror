@@ -9,7 +9,7 @@ Please note,
 
 Usage,
   - Set `shenshou-login-user-name' and `shenshou-login-password'.
-  - Run `shenshou-download-subtitle' in dired buffer or anywhere.
+  - Run `shenshou-download-subtitle' in Dired buffer or anywhere.
   - Run `shenshou-logout-now' to logout.
 
  Tips,
