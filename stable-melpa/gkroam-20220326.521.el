@@ -3,6 +3,8 @@
 ;; Copyright (C) 2020 Kinney Zhang
 ;;
 ;; Version: 2.4.3
+;; Package-Version: 20220326.521
+;; Package-Commit: 38f517ac2894b16e6cf983b93ee96762fffa152a
 ;; Keywords: org, convenience
 ;; Author: Kinney Zhang <kinneyzhang666@gmail.com>
 ;; URL: https://github.com/Kinneyzhang/gkroam

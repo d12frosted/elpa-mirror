@@ -4,6 +4,8 @@
 
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 1.0.0
+;; Package-Version: 20210107.918
+;; Package-Commit: d3f6647c484656ddabdac5d18546599a03823cd4
 ;; Package-Requires: ((emacs "24.4") (dash "2.13.0") (s "1.11.0"))
 ;; Keywords: frames, windows
 ;; URL: https://github.com/davidshepherd7/frames-only-mode
@@ -274,13 +276,6 @@ This modification makes it always kill the frame after quitting a magit status b
   (if frames-only-mode
       (add-hook 'minibuffer-exit-hook #'frames-only-mode-bury-completions)
     (remove-hook 'minibuffer-exit-hook #'frames-only-mode-bury-completions)))
-
-
-
-(provide 'frames-only-mode)
-
-;;; frames-only-mode.el ends here
--mode-bury-completions)))
 
 
 
