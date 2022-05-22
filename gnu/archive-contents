@@ -806,16 +806,18 @@
 	     ("Chong Yidong" . "cyd@gnu.org"))
 	    (:maintainer "Chong Yidong" . "cyd@gnu.org"))])
  (dtache .
-	 [(0 6)
+	 [(0 7)
 	  ((emacs
-	    (27 1)))
-	  "Run and interact with detached shell commands" tar
-	  ((:url . "https://www.gitlab.com/niklaseklund/dtache.git")
+	    (27 1))
+	   (detached
+	    (0 7)))
+	  "A package to launch, and manage, dtache processes" tar
+	  ((:url . "https://sr.ht/~niklaseklund/dtache.el/")
 	   (:keywords "convenience" "processes")
 	   (:maintainer "Niklas Eklund" . "niklas.eklund@posteo.net")
 	   (:authors
 	    ("Niklas Eklund" . "niklas.eklund@posteo.net"))
-	   (:commit . "4ecda689e4ccddc23805a22484c95c4f3f65e3bb"))])
+	   (:commit . "b194f96af4e6298fe086a844115ea23300be7166"))])
  (dts-mode .
 	   [(1 0)
 	    ((emacs
