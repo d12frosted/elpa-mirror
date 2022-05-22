@@ -4,24 +4,26 @@ Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
 Checking out origin/HEAD
-Checking out 32a66832e376cfc918b63bd9a67b1c8cae23662a
+Checking out 710e538ad1d104f4059b5cf7edad4c91e9ad4c83
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-build/
-  to /tmp/package-buildNRoHBp/package-build-20220516.1125
+  to /tmp/package-buildBSxy62/package-build-20220522.1411
     package-build-badges.el -> package-build-badges.el
     package-build.el -> package-build.el
     package-recipe-mode.el -> package-recipe-mode.el
     package-recipe.el -> package-recipe.el
-Created package-build-20220516.1125.tar containing:
-  package-build-20220516.1125/
-  package-build-20220516.1125/package-build-badges.el
-  package-build-20220516.1125/package-build-pkg.el
-  package-build-20220516.1125/package-build.el
-  package-build-20220516.1125/package-recipe-mode.el
-  package-build-20220516.1125/package-recipe.el
-Built package-build in 5.034s, finished at 2022-05-22T07:30:29+0000
+Created package-build-20220522.1411.tar containing:
+  package-build-20220522.1411/
+  package-build-20220522.1411/package-build-badges.el
+  package-build-20220522.1411/package-build-pkg.el
+  package-build-20220522.1411/package-build.el
+  package-build-20220522.1411/package-recipe-mode.el
+  package-build-20220522.1411/package-recipe.el
+Built package-build in 6.416s, finished at 2022-05-22T14:14:03+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  530 May 22 07:30 packages/package-build-20220516.1125.entry
- 72K -rw-r--r-- 1 root root  70K May 22 07:30 packages/package-build-20220516.1125.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 22 07:30 packages/package-build-badge.svg
-4.0K -rw-r--r-- 1 root root  309 May 22 07:30 packages/package-build-readme.txt
+4.0K -rw-r--r-- 1 root root  530 May 22 10:53 packages/package-build-20220516.1125.entry
+ 72K -rw-r--r-- 1 root root  70K May 22 10:53 packages/package-build-20220516.1125.tar
+4.0K -rw-r--r-- 1 root root  530 May 22 14:14 packages/package-build-20220522.1411.entry
+ 72K -rw-r--r-- 1 root root  70K May 22 14:14 packages/package-build-20220522.1411.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 22 14:14 packages/package-build-badge.svg
+4.0K -rw-r--r-- 1 root root  309 May 22 14:14 packages/package-build-readme.txt
