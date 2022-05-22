@@ -1,0 +1,15 @@
+(evil-collection .
+		 [(20220521 1924)
+		  ((emacs
+		    (25 1))
+		   (evil
+		    (1 2 13))
+		   (annalist
+		    (1 0)))
+		  "A set of keybindings for Evil mode" tar
+		  ((:commit . "8a85b46b60fdc4678c9519d04d30339c0bcdae9b")
+		   (:authors
+		    ("James Nguyen" . "james@jojojames.com"))
+		   (:maintainer "James Nguyen" . "james@jojojames.com")
+		   (:keywords "evil" "tools")
+		   (:url . "https://github.com/emacs-evil/evil-collection"))])

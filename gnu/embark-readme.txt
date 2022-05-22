@@ -11,6 +11,7 @@ Table of Contents
 .. 1. Acting on targets
 .. 2. The default action on a target
 .. 3. Working with sets of possible targets
+..... 1. `embark-live' a live-updating variant of `embark-collect'
 .. 4. Switching to a different command without losing what you've typed
 2. Quick start
 3. Advanced configuration
@@ -26,6 +27,8 @@ Table of Contents
 4. How does Embark call the actions?
 .. 1. Non-interactive functions as actions
 5. Embark, Marginalia and Consult
+.. 1. Marginalia
+.. 2. Consult
 6. Resources
 7. Contributions
 8. Acknowledgments
@@ -37,13 +40,31 @@ Table of Contents
 1 Overview
 ══════════
 
+  Embark makes it easy to choose a command to run based on what is near
+  point, both during a minibuffer completion session (in a way familiar
+  to Helm or Counsel users) and in normal buffers. Bind the command
+  `embark-act' to a key and it acts like prefix-key for a keymap of
+  /actions/ (commands) relevant to the /target/ around point. With point
+  on an URL in a buffer you can open the URL in a browser or eww or
+  download the file it points to. If while switching buffers you spot an
+  old one, you can kill it right there and continue to select another.
+  Embark comes preconfigured with over a hundred actions for common
+  types of targets such as files, buffers, identifiers, s-expressions,
+  sentences; and it is easy to add more actions and more target types.
+  Embark can also collect all the candidates in a minibuffer to an
+  occur-like buffer or export them to a buffer in a major-mode specific
+  to the type of candidates, such as dired for a set of files, ibuffer
+  for a set of buffers, or customize for a set of variables.
+
+
 1.1 Acting on targets
 ─────────────────────
 
-  This package provides a sort of right-click contextual menu for Emacs,
-  accessed through the `embark-act' command (which you should bind to a
-  convenient key), offering you relevant /actions/ to use on a /target/
-  determined by the context:
+  You can think of `embark-act' as a keyboard-based version of a
+  right-click contextual menu. The `embark-act' command (which you
+  should bind to a convenient key), acts as a prefix for a keymap
+  offering you relevant /actions/ to use on a /target/ determined by the
+  context:
 
   • In the minibuffer, the target is the current top completion
     candidate.
@@ -194,10 +215,17 @@ Table of Contents
     uses of `embark-act-all'; you can turn this off by setting the user
     option `embark-confirm-act-all' to `nil'.)
 
-  • The `embark-collect-snapshot' command produces a buffer listing all
-    the current candidates, for you to peruse and run actions on at your
-    leisure. The candidates can be viewed in a grid or as a list showing
-    additional annotations.
+  • The `embark-collect' command produces a buffer listing all the
+    current candidates, for you to peruse and run actions on at your
+    leisure.  The candidates are displayed as a list showing additional
+    annotations.
+
+    The Embark Collect buffer is "dired-like": you can mark and unmark
+    candidates with `m' and `u', you can unmark all marked candidates
+    with `U' or toggle the marks with `t'. In an Embark Collect buffer
+    `embark-act-all' is bound to `A' and will act on all currently
+    marked candidates if there any, and will act on all candidates if
+    none are marked.
 
   • The `embark-export' command tries to open a buffer in an appropriate
     major mode for the set of candidates. If the candidates are files
@@ -216,37 +244,54 @@ Table of Contents
   a special major mode is available for a given type of target, it will
   be more featureful than an Embark collect buffer, and if no such
   exporter is configured the `embark-export' command falls back to the
-  generic `embark-collect-snapshot'.
+  generic `embark-collect'.
 
   These commands are always available as "actions" (although they do not
   act on just the current target but on all candidates) for `embark-act'
-  and are bound to `A', `S', and `E', respectively, in
-  `embark-general-map'.  This means that you do not have to bind your
-  own key bindings for these (although you can, of course!), just a key
+  and are bound to `A', `S' (for "snapshot"), and `E', respectively, in
+  `embark-general-map'. This means that you do not have to bind your own
+  key bindings for these (although you can, of course!), just a key
   binding for `embark-act'.
 
-  There is also the `embark-collect-live' variant of
-  `embark-collect-snapshot' which produces "live" Embark Collect
-  buffers, meaning they auto-update as the set of candidates
-  changes. Most users of visual completion UIs such as Vertico,
-  Icomplete, Selectrum or Ivy will probably either not want to use this
-  from the minibuffer, to avoid seeing double (the list of candidates is
-  displayed both by Embark and by the completion UI), or to configure
-  their completion UI to hide while using `embark-collect-live'. See the
-  Embark wiki for [sample configuration for Selectrum]. This command can
-  also be used outside the minibuffer if you have a relevant candidate
-  collector registered in `embark-candidate-collectors'. Users of the
-  `embark-consult' package, for example, get such a candidate collector
-  registered for them, and can produce a live-updating table of contents
-  for any buffer, whose items are the lines matching `outline-regexp'.
+  Reverting an Embark Collect or Embark Export buffer has slightly
+  unusual behavior if the buffer was obtained by running
+  `embark-collect' or `embark-export' from within a minibuffer
+  completion session. In that case reverting just restarts the
+  completion session, that is, the command that opened the minibuffer is
+  run again and the minibuffer contents restored. You can then interact
+  normally with the command, perhaps editing the minibuffer contents,
+  and, if you wish, you can rerun `embark-collect' or `embark-export' to
+  get an updated buffer.
 
 
 [Consult] <https://github.com/minad/consult/>
 
 [wgrep] <https://github.com/mhayashi1120/Emacs-wgrep>
 
-[sample configuration for Selectrum]
-<https://github.com/oantolin/embark/wiki/Additional-Configuration#pause-selectrum-while-using-embark-collect-live>
+1.3.1 `embark-live' a live-updating variant of `embark-collect'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Finally, there is also an `embark-live' variant of the
+  `embark-collect' command which automatically updates the collection
+  after each change in the source buffer. Users of a completion UI that
+  automatically updates and displays the candidate list (such as
+  Vertico, Icomplete, Selectrum, Fido-mode, or MCT) will probably not
+  want to use `embark-live' from the minibuffer as they will then have
+  two live updating displays of the completion candidates!
+
+  A more likely use of `embark-live' is to be called from a regular
+  buffer to display a sort of live updating "table of contents" for the
+  buffer.  This depends on having appropriate candidate collectors
+  configured in `embark-candidate-collectors'. There are not many in
+  Embark's default configuration, but you can try this experiment: open
+  a dired buffer in a directory that has very many files, mark a few,
+  and run `embark-live'.  You'll get an Embark Collect buffer containing
+  only the marked files, which updates as you mark or unmark files in
+  dired. To make `embark-live' genuinely useful other candidate
+  collectors are required.  The `embark-consult' package (documented
+  near the end of this manual) contains a few: one for imenu items and
+  one for outline headings as used by `outline-minor-mode'. Those
+  collectors really do give `embark-live' a table-of-contents feel.
 
 
 1.4 Switching to a different command without losing what you've typed
@@ -338,12 +383,30 @@ Table of Contents
   │   (embark-collect-mode . consult-preview-at-point-mode))
   └────
 
-  Other Embark commands such as `mbark-act-all', `embark-become',
-  `embark-collect-snapshot', `embark-collect-live', `embark-export' can
-  be run through `embark-act' as actions bound to `A', `B', `S', `L',
-  `E' respectively, and thus don't really need a dedicated key binding,
-  but feel free to bind them directly if you so wish. If you do choose
-  to bind them directly, you'll probably want to bind them in
+  About the suggested key bindings for `embark-act' and `embark-dwim':
+  • Those key bindings are unlikely to work in the terminal, but
+    terminal users are probably well aware of this and will know to
+    select different bindings.
+  • The suggested `C-.' binding is used by default in (at least some
+    installations of) GNOME to input emojis, and Emacs doesn't even get
+    a chance to respond to the binding. You can select a different key
+    binding for `embark-act' or use `ibus-setup' to change the shortcut
+    for emoji insertion (Emacs uses `C-x 8 e e', in case you want to set
+    the same one system-wide).
+  • The suggested alternative of `M-.' for `embark-dwim' is bound by
+    default to `xref-find-definitions'. That is a very useful command
+    but overwriting it with `embark-dwim' is sensible since in Embark's
+    default configuration, `embark-dwim' will also find the definition
+    of the identifier at point. (Note that `xref-find-definitions' with
+    a prefix argument prompts you for an identifier, `embark-dwim' does
+    not cover this case).
+
+  Other Embark commands such as `embark-act-all', `embark-become',
+  `embark-collect', and `embark-export' can be run through `embark-act'
+  as actions bound to `A', `B', `S' (for "snapshot"), and `E'
+  respectively, and thus don't really need a dedicated key binding, but
+  feel free to bind them directly if you so wish. If you do choose to
+  bind them directly, you'll probably want to bind them in
   `minibuffer-local-map', since they are most useful in the minibuffer
   (in fact, `embark-become' only works in the minibuffer).
 
@@ -650,6 +713,12 @@ Table of Contents
         able to come back to where you were using
         `xref-pop-marker-stack'. This is used by default for
         `find-library'.
+
+  `embark--cd'
+        Run the action with `default-directory' set to the directory
+        associated to the current target. The target should be of type
+        `file', `buffer', `bookmark' or `library', and the associated
+        directory is what you'd expect in each case.
 
   For post-action hooks:
 
@@ -984,8 +1053,21 @@ Table of Contents
 ════════════════════════════════
 
   Embark cooperates well with the [Marginalia] and [Consult] packages.
-  Neither of those packages is a dependency of Embark, but Marginalia is
-  highly recommended, for reasons explained in the rest of this section.
+  Neither of those packages is a dependency of Embark, but both are
+  highly recommended companions to Embark, for opposite reasons:
+  Marginalia greatly enhances Embark's usefulness, while Embark can help
+  enhance Consult.
+
+  In the remainder of this section I'll explain what exactly Marginalia
+  does for Embark, and what Embark can do for Consult.
+
+
+[Marginalia] <https://github.com/minad/marginalia>
+
+[Consult] <https://github.com/minad/consult>
+
+5.1 Marginalia
+──────────────
 
   Embark comes with actions for symbols (commands, functions, variables
   with actions such as finding the definition, looking up the
@@ -1005,35 +1087,98 @@ Table of Contents
   Simply activating `marginalia-mode' allows Embark to offer you the
   package and symbol actions when appropriate again. Candidate
   annotations in the Embark collect buffer are also provided by the
-  Marginalia package.
+  Marginalia package:
 
-  • If you install Marginalia and activate `marginalia-mode', the list
-    view in Embark Collect buffers will use the Marginalia annotations
-    automatically.
+  • If you install Marginalia and activate `marginalia-mode', Embark
+    Collect buffers will use the Marginalia annotations automatically.
 
   • If you don't install Marginalia, you will see only the annotations
     that come with Emacs (such as key bindings in `M-x', or the unicode
     characters in `C-x 8 RET').
 
-  • If you have Consult installed and call `embark-collect-snapshot'
-    from `consult-line', `consult-mark' or `consult-outline', you will
-    notice the Embark Collect buffer starts in list view by
-    default. Similarly, you'll notice that the `consult-yank' family of
-    commands start out in list view with zebra stripes, so you can
-    easily tell where multi-line kill-ring entries start and end.
 
-  • The function `embark-open-externally' has been removed following the
-    policy of avoiding overlap with Consult. If you used that action,
-    add [the small function] to your configuration or install Consult
-    and use `consult-file-externally'.
+5.2 Consult
+───────────
+
+  The excellent Consult package provides many commands that use
+  minibuffer completion, via the `completing-read' function; plenty of
+  its commands can be considered enhanced versions of built-in Emacs
+  commands, and some are completely new functionality. One common
+  enhancement provided in all commands for which it makes sense is
+  preview functionality, for example `consult-buffer' will show you a
+  quick preview of a buffer before you actually switch to it.
+
+  If you use both Consult and Embark you should absolutely install the
+  `embark-consult' package which provides integration between the
+  two. It provides exporters for several Consult commands and also
+  tweaks the behavior of many Consult commands when used as actions with
+  `embark-act' in subtle ways that you may not even notice, but make for
+  a smoother experience.
+
+  The `embark-consult' package provides the following exporters:
+
+  • You can use `embark-export' from `consult-line', `consult-outline',
+    or `consult-mark' to obtain an `occur-mode' buffer. As with the
+    built-in `occur' command you use that buffer to jump to a match and
+    after that, you can then use `next-error' and `previous-error' to
+    navigate to other matches. You can also press `e' to activate
+    `occur-edit-mode' and edit the matches in place!
+
+  • You can export from any of the Consult asynchronous search commands,
+    `consult-grep', `consult-git-grep', or `consult-ripgrep' to get a
+    `grep-mode' buffer. Here too you can use `next-error' and
+    `previous-error' to navigate among matches, and, if you install the
+    [wgrep] package, you can use it to edit the matches in place.
+
+  In both cases, pressing `g' to revert the exported buffer will rerun
+  the Consult command you had exported from and re-enter the input you
+  had typed. You can then proceed to re-export if that's what you want,
+  but you can also edit the input changing the search terms or simply
+  cancel if you see you are done with that search.
+
+  The `embark-consult' also contains some candidates collectors that
+  allow you to run `embark-live' to get a live-updating table of
+  contents for your buffer:
+
+  • `embark-consult-outline-candidates' produces the outline headings of
+    the current buffer, using `consult-outline'.
+  • `embark-consult-imenu-candidates' produces the imenu items of the
+    current buffer, using `consult-imenu'.
+  • `embark-consult-imenu-or-outline-candidates' is a simple combination
+    of the two previous functions: it produces imenu items in buffers
+    deriving from `prog-mode' and otherwise outline headings.
+
+  The way to configure `embark-live' (or `embark-collect' and
+  `embark-export' for that matter) to use one of these function is to
+  add it at the end of the `embark-candidate-collectors' list. The
+  `embark-consult' package by default adds the last one, which seems to
+  be the most sensible default.
+
+  Besides those exporters and candidate collectors, the `embark-consult'
+  package provides many subtle tweaks and small integrations between
+  Embark and Consult. For example, if you run `embark-collect' from any
+  of the the `consult-yank' family of commands, you'll see the Embark
+  Collect buffers has full multi-line kill-ring entries with zebra
+  stripes, so you can easily tell where they start and end.
+
+  Some examples of little tweaks provided by `embark-consult' to the
+  behavior of Consult commands when used as Embark actions are:
+
+  • The asynchronous search commands will start in the directory
+    associated to the Embark target if that target is a file, buffer,
+    bookmark or Emacs Lisp library.
+
+    • For all other target types, a Consult search command (asynchronous
+      or not) will search for the text of the target but leave the
+      minibuffer open so you can interact with the Consult command.
+
+  • `consult-imenu' will search for the target and take you directly to
+    the location if it matches a unique imenu entry, otherwise it will
+    leave the minibuffer open so you can navigate among the matches.
 
 
-[Marginalia] <https://github.com/minad/marginalia>
-
-[Consult] <https://github.com/minad/consult>
-
-[the small function]
-<https://github.com/minad/consult/blob/373498acb76b9395e5e590fb8e39f671a9363cd7/consult.el#L707>
+[wgrep] <http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep.el
+>
 
 
 6 Resources
