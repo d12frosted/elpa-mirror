@@ -6,8 +6,8 @@
 
 ;; Author: Natalie Weizenbaum <nex342@gmail.com>
 ;; URL: http://github.com/nex3/perspective-el
-;; Package-Version: 20220420.1550
-;; Package-Commit: 4e38680793585a907ae46b148697030c2b552a00
+;; Package-Version: 20220521.2138
+;; Package-Commit: 794afdbc5188ef6f2d78d26302cd78903ce618fa
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.5"))
 ;; Version: 2.17
 ;; Created: 2008-03-05
@@ -2210,16 +2210,23 @@ were merged in from a previous call to `persp-merge'."
 ;; xref is not available in Emacs 24, so be careful:
 (with-eval-after-load 'xref
   (defvar persp--xref-marker-ring (make-hash-table :test 'equal))
-
-  (defun persp--set-xref-marker-ring ()
-    "Set xref--marker-ring per persp."
-    (defvar xref-marker-ring-length)
-    (defvar xref--marker-ring)
-    (let ((persp-curr-name (persp-name (persp-curr))))
-      (unless (gethash persp-curr-name persp--xref-marker-ring)
-        (puthash persp-curr-name (make-ring xref-marker-ring-length)
-                 persp--xref-marker-ring))
-      (setq xref--marker-ring (gethash persp-curr-name persp--xref-marker-ring)))))
+  (if (boundp 'xref--history)
+      ;; Emacs 29:
+      (defun persp--set-xref-marker-ring ()
+        "Set xref--history per persp."
+        (let ((persp-curr-name (persp-name (persp-curr))))
+          (unless (gethash persp-curr-name persp--xref-marker-ring)
+            (puthash persp-curr-name (cons nil nil)
+                     persp--xref-marker-ring))
+          (setq xref--history (gethash persp-curr-name persp--xref-marker-ring))))
+    ;; Emacs 28 and earlier:
+    (defun persp--set-xref-marker-ring ()
+      "Set xref--marker-ring per persp."
+      (let ((persp-curr-name (persp-name (persp-curr))))
+        (unless (gethash persp-curr-name persp--xref-marker-ring)
+          (puthash persp-curr-name (make-ring xref-marker-ring-length)
+                   persp--xref-marker-ring))
+        (setq xref--marker-ring (gethash persp-curr-name persp--xref-marker-ring))))))
 
 
 ;;; --- done
