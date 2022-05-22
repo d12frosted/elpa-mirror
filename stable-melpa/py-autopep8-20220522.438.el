@@ -7,8 +7,8 @@
 ;; Author: Friedrich Paetzk <f.paetzke@gmail.com>
 
 ;; URL: https://github.com/ideasman42/emacs-py-autopep8
-;; Package-Version: 20220519.2330
-;; Package-Commit: c303dc2ace27acac41c9ed172a2b23f1661fb668
+;; Package-Version: 20220522.438
+;; Package-Commit: c626bf5a18d9d3d7ec04cd06ae0cb4a8c488a168
 ;; Keywords: convenience
 ;; Version: 2016.1
 ;; Package-Requires: ((emacs "26.1"))
@@ -232,7 +232,7 @@ Return non-nil when a the buffer was modified."
   (add-hook 'before-save-hook #'py-autopep8--buffer-format-for-save-hook nil t))
 
 (defun py-autopep8---disable ()
-  "Enable the hooks associated with `py-autopep8-mode'."
+  "Disable the hooks associated with `py-autopep8-mode'."
   (remove-hook 'before-save-hook #'py-autopep8--buffer-format-for-save-hook t))
 
 

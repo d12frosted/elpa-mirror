@@ -5,6 +5,8 @@
 ;; Author: Nicolas Petton <petton.nicolas@gmail.com>
 ;;         Damien Cassou <damien@cassou.me>
 ;; Version: 2.0
+;; Package-Version: 20210203.810
+;; Package-Commit: 5651da53137db9adcb125b4897c2fe27eeb4368d
 ;; GIT: https://github.com/NicolasPetton/pass
 ;; Package-Requires: ((emacs "25") (password-store "2.1.0") (password-store-otp "0.1.5") (f "0.17"))
 ;; Created: 09 Jun 2015

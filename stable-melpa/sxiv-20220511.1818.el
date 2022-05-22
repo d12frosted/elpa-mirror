@@ -1,11 +1,11 @@
-;;; sxiv.el --- Run the sxiv image viewer -*- lexical-binding: t; -*-
+;;; sxiv.el --- Run the Simple X Image Viewer, with Dired integration -*- lexical-binding: t; -*-
 
 ;; Author: contrapunctus <xmpp:contrapunctus@jabber.fr>
 ;; Maintainer: contrapunctus <xmpp:contrapunctus@jabber.fr>
 ;; Keywords: multimedia
-;; Package-Version: 20210514.918
-;; Package-Commit: 028409c3a9ff7ba33a1cc2158abfc1793ed50717
-;; Homepage: https://gitlab.com/contrapunctus/sxiv.el
+;; Package-Version: 20220511.1818
+;; Package-Commit: 0449244925cb7b74956736611c30cea1f4d0672c
+;; Homepage: https://tildegit.org/contrapunctus/sxiv
 ;; Package-Requires: ((dash "2.16.0") (emacs "25.1"))
 ;; Version: 0.4.1
 
@@ -19,7 +19,15 @@
 ;; For more information, please refer to <https://unlicense.org>
 
 ;;; Commentary:
-;; The sole command and primary entry point is `sxiv'.
+;; The main (and only) command is `M-x sxiv`.
+;;
+;; If it is run in a Dired buffer containing images, files marked in
+;; sxiv (mark/unmark with `m`) will be marked in Dired. If the Dired
+;; buffer has marked files, open only those files. With prefix
+;; argument, or when only provided directories, run recursively.
+;;
+;; It can also be run from a text file containing one file name per
+;; line.
 ;;
 ;; `sxiv-filter' is the process filter, to insert subdirectories (via
 ;; `sxiv-insert-subdirs') and mark files marked in sxiv (via
@@ -82,8 +90,9 @@ Return PATHS unchanged."
   "Open a `dired' buffer and mark any files marked by the user in `sxiv'."
   (find-file sxiv--directory)
   (let ((files (--> (split-string output "\n")
-                 (-drop-last 1 it)
-                 (sxiv-insert-subdirs it))))
+                    (-drop-last 1 it)
+                    (mapcar #'file-relative-name it)
+                    (sxiv-insert-subdirs it))))
     (dired-mark-if
      (and (not (looking-at-p dired-re-dot))
           (not (eolp))
@@ -97,24 +106,31 @@ OUTPUT is the output of the sxiv process as a string."
   (run-hook-with-args 'sxiv-after-exit-functions process output))
 
 (defun sxiv-paths-raw ()
-  (cond ((sxiv-dired-marked-files-p)
-         (dired-get-marked-files))
+  "Return a list of strings containing absolute paths to files."
+  (cond ((derived-mode-p 'dired-mode)
+         (if (sxiv-dired-marked-files-p)
+             (dired-get-marked-files)
+           (let (list)
+             (dired-map-dired-file-lines
+              (lambda (name)
+                (setq list (cons name list))))
+             (reverse list))))
         ((derived-mode-p 'text-mode)
          (split-string
           (buffer-substring-no-properties (point-min) (point-max))
           "\n"))
-        (t (directory-files default-directory))))
+        (t (user-error "sxiv: this is not a dired or text buffer"))))
 
 (defun sxiv-file-at-point-index (&optional paths)
   "Return index of file at point.
 PATHS should be a list of relative file names as strings, and is
-required for dired-mode buffers."
+required for `dired-mode' buffers."
   (cond ((derived-mode-p 'dired-mode)
          (let* ((path-at-point (dired-file-name-at-point))
                 (image-at-point (and path-at-point
                                      ;; REVIEW - also check if file is an image?
                                      (file-regular-p path-at-point)
-                                     (file-relative-name path-at-point)))
+                                     path-at-point))
                 (index (when image-at-point
                          (--find-index (equal image-at-point it) paths))))
            (when index (1+ index))))
@@ -123,10 +139,10 @@ required for dired-mode buffers."
 
 (defun sxiv (&optional prefix)
   "Run sxiv(1), the Simple X Image Viewer.
-By default, when run in a Dired buffer, open all files in the
-current directory. Files marked in sxiv will be marked in Dired.
+When run in a Dired buffer, open all files in the current
+directory. Files marked in sxiv will be marked in Dired.
 
-If run from a Dired buffer with marked files, open only those
+When run from a Dired buffer with marked files, open only those
 files.
 
 With prefix argument PREFIX, or when only provided directories,
@@ -144,9 +160,12 @@ the files listed."
                                        sxiv-exclude-strings))
                             (sxiv-paths-raw)))
          ;; recurse with prefix arg, or if every path is a directory
-         (recurse (or prefix (-every? #'file-directory-p paths)))
+         (recurse (or prefix
+                      (-every? #'file-directory-p paths)))
          ;; remove directories if not running recursively
-         (paths   (if recurse paths (seq-remove #'file-directory-p paths)))
+         (paths   (if recurse
+                      paths
+                    (seq-remove #'file-directory-p paths)))
          (index   (sxiv-file-at-point-index paths))
          (index   (when index (number-to-string index)))
          (recurse (if recurse "-r" "")))

@@ -5,6 +5,8 @@
 ;; Author: Peter Jones <pjones@devalot.com>
 ;; Homepage: https://github.com/pjones/passmm
 ;; Package-Requires: ((emacs "24.4") (password-store "0"))
+;; Package-Version: 20210109.8
+;; Package-Commit: d78d1bf4f397180d2256248df589f33aafb4c8b4
 ;; Version: 0.4.2
 ;;
 ;; This file is not part of GNU Emacs.
