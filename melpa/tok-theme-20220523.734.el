@@ -4,8 +4,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20220517.1916
-;; Package-Commit: 5933f36f847a4cc2775f75c6686b28355e448d7d
+;; Package-Version: 20220523.734
+;; Package-Commit: 9ec3c2750525457eb90a879ed9f44422debb7779
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -39,7 +39,7 @@
        (sun-3 "#ffe699") (sun-4 "#fff3cc") (sun-5 "#fffbf5")
        (earth-0 "#8b572a") (earth-1 "#bf8f00")
        (grey-0 "#151515") (grey-1 "#252525") (grey-2 "#353535")
-       (fg "#eaeaea") (bg "#101010")
+       (fg "#ffffff") (bg "#000000")
        (error "Red1") (warning "DarkOrange2") (success "ForestGreen"))
   (custom-theme-set-faces
    'tok

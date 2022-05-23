@@ -3,11 +3,10 @@ Fetcher: github
 Source:  https://github.com/akirak/emacs-playground.git
 
 Updating /mnt/store/melpa/working/playground/
-Checking out origin/HEAD
-Checking out 77d2faab0bc3f6e1f2c65c66644c52167304610d
-Built playground in 5.918s, finished at 2022-05-23T04:04:33+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root  19K May 23 04:04 packages/playground-20200812.1336.el
-4.0K -rw-r--r-- 1 root root  424 May 23 04:04 packages/playground-20200812.1336.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 04:04 packages/playground-badge.svg
-4.0K -rw-r--r-- 1 root root  512 May 23 04:04 packages/playground-readme.txt
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/akirak/emacs-playground.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128
