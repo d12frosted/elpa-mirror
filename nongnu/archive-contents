@@ -207,21 +207,6 @@
 			   (:maintainer "Julien Barnier")
 			   (:authors
 			    ("Julien Barnier")))])
- (corfu-popup .
-	      [(0 1)
-	       ((emacs
-		 (26 1))
-		(corfu
-		 (0 23))
-		(popon
-		 (0)))
-	       "Corfu popup on terminal" tar
-	       ((:url . "https://codeberg.org/akib/emacs-corfu-terminal")
-		(:keywords "convenience")
-		(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
-		(:authors
-		 ("Akib Azmain Turja" . "akib@disroot.org"))
-		(:commit . "eb4106aa5a103e2ad52b8dd2f2803f5dacecf850"))])
  (corfu-terminal .
 		 [(0 1)
 		  ((emacs
