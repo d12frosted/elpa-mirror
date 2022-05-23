@@ -4,10 +4,10 @@ Source:  https://github.com/ledger/ledger-mode.git
 
 Updating /mnt/store/melpa/working/ledger-mode/
 Checking out origin/HEAD
-Checking out 820e1de9c9230bffe338d401524445ecd18d61f4
+Checking out d28a46ab185c9a9123126dc1d2eb4d2e1a1f24be
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ledger-mode/
-  to /tmp/ledger-modevWcWwS/ledger-mode-20220522.2054
+  to /tmp/ledger-modecIxTPb/ledger-mode-20220523.803
     ledger-check.el -> ledger-check.el
     ledger-commodities.el -> ledger-commodities.el
     ledger-complete.el -> ledger-complete.el
@@ -31,37 +31,39 @@ Copying files (->) and directories (=>)
     ledger-xact.el -> ledger-xact.el
   ! doc/ledger-mode.texi -> ledger-mode.texi
     ledger-test.el -> ledger-test.el
-Generating /tmp/ledger-modevWcWwS/ledger-mode-20220522.2054/ledger-mode.info
-Created ledger-mode-20220522.2054.tar containing:
-  ledger-mode-20220522.2054/
-  ledger-mode-20220522.2054/dir
-  ledger-mode-20220522.2054/ledger-check.el
-  ledger-mode-20220522.2054/ledger-commodities.el
-  ledger-mode-20220522.2054/ledger-complete.el
-  ledger-mode-20220522.2054/ledger-context.el
-  ledger-mode-20220522.2054/ledger-exec.el
-  ledger-mode-20220522.2054/ledger-flymake.el
-  ledger-mode-20220522.2054/ledger-fontify.el
-  ledger-mode-20220522.2054/ledger-fonts.el
-  ledger-mode-20220522.2054/ledger-init.el
-  ledger-mode-20220522.2054/ledger-mode-pkg.el
-  ledger-mode-20220522.2054/ledger-mode.el
-  ledger-mode-20220522.2054/ledger-mode.info
-  ledger-mode-20220522.2054/ledger-navigate.el
-  ledger-mode-20220522.2054/ledger-occur.el
-  ledger-mode-20220522.2054/ledger-post.el
-  ledger-mode-20220522.2054/ledger-reconcile.el
-  ledger-mode-20220522.2054/ledger-regex.el
-  ledger-mode-20220522.2054/ledger-report.el
-  ledger-mode-20220522.2054/ledger-schedule.el
-  ledger-mode-20220522.2054/ledger-sort.el
-  ledger-mode-20220522.2054/ledger-state.el
-  ledger-mode-20220522.2054/ledger-test.el
-  ledger-mode-20220522.2054/ledger-texi.el
-  ledger-mode-20220522.2054/ledger-xact.el
-Built ledger-mode in 10.327s, finished at 2022-05-23T07:20:02+0000
+Generating /tmp/ledger-modecIxTPb/ledger-mode-20220523.803/ledger-mode.info
+Created ledger-mode-20220523.803.tar containing:
+  ledger-mode-20220523.803/
+  ledger-mode-20220523.803/dir
+  ledger-mode-20220523.803/ledger-check.el
+  ledger-mode-20220523.803/ledger-commodities.el
+  ledger-mode-20220523.803/ledger-complete.el
+  ledger-mode-20220523.803/ledger-context.el
+  ledger-mode-20220523.803/ledger-exec.el
+  ledger-mode-20220523.803/ledger-flymake.el
+  ledger-mode-20220523.803/ledger-fontify.el
+  ledger-mode-20220523.803/ledger-fonts.el
+  ledger-mode-20220523.803/ledger-init.el
+  ledger-mode-20220523.803/ledger-mode-pkg.el
+  ledger-mode-20220523.803/ledger-mode.el
+  ledger-mode-20220523.803/ledger-mode.info
+  ledger-mode-20220523.803/ledger-navigate.el
+  ledger-mode-20220523.803/ledger-occur.el
+  ledger-mode-20220523.803/ledger-post.el
+  ledger-mode-20220523.803/ledger-reconcile.el
+  ledger-mode-20220523.803/ledger-regex.el
+  ledger-mode-20220523.803/ledger-report.el
+  ledger-mode-20220523.803/ledger-schedule.el
+  ledger-mode-20220523.803/ledger-sort.el
+  ledger-mode-20220523.803/ledger-state.el
+  ledger-mode-20220523.803/ledger-test.el
+  ledger-mode-20220523.803/ledger-texi.el
+  ledger-mode-20220523.803/ledger-xact.el
+Built ledger-mode in 9.368s, finished at 2022-05-23T10:53:38+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  201 May 23 07:20 packages/ledger-mode-20220522.2054.entry
 320K -rw-r--r-- 1 root root 320K May 23 07:20 packages/ledger-mode-20220522.2054.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 23 07:20 packages/ledger-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   46 May 23 07:20 packages/ledger-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  200 May 23 10:53 packages/ledger-mode-20220523.803.entry
+320K -rw-r--r-- 1 root root 320K May 23 10:53 packages/ledger-mode-20220523.803.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:53 packages/ledger-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   46 May 23 10:53 packages/ledger-mode-readme.txt

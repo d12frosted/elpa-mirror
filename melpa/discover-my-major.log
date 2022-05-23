@@ -3,11 +3,11 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/discover-my-major.git
 
 Updating /mnt/store/melpa/working/discover-my-major/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://framagit.org/steckerhalter/discover-my-major.git/': Failed to connect to framagit.org port 443: Connection refused
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out c592e5e67454f0d1b68669ac0c270073164b16b3
+Built discover-my-major in 5.563s, finished at 2022-05-23T10:24:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.5K May 23 10:24 packages/discover-my-major-20180606.511.el
+4.0K -rw-r--r-- 1 root root  434 May 23 10:24 packages/discover-my-major-20180606.511.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:24 packages/discover-my-major-badge.svg
+4.0K -rw-r--r-- 1 root root   73 May 23 10:24 packages/discover-my-major-readme.txt
