@@ -3,3 +3,36 @@ Fetcher: github
 Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
+Checking out origin/HEAD
+Checking out f14c1bc84135fe149c42348dce6eaa23ba610224
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ghub/
+  to /tmp/ghubnEqLEi/ghub-20220429.1708
+    ghub-pkg.el -> ghub-pkg.el
+  ! lisp/buck.el -> buck.el
+  ! lisp/ghub-graphql.el -> ghub-graphql.el
+  ! lisp/ghub.el -> ghub.el
+  ! lisp/glab.el -> glab.el
+  ! lisp/gogs.el -> gogs.el
+  ! lisp/gsexp.el -> gsexp.el
+  ! lisp/gtea.el -> gtea.el
+  ! docs/ghub.texi -> ghub.texi
+Generating /tmp/ghubnEqLEi/ghub-20220429.1708/ghub.info
+Created ghub-20220429.1708.tar containing:
+  ghub-20220429.1708/
+  ghub-20220429.1708/buck.el
+  ghub-20220429.1708/dir
+  ghub-20220429.1708/ghub-graphql.el
+  ghub-20220429.1708/ghub-pkg.el
+  ghub-20220429.1708/ghub.el
+  ghub-20220429.1708/ghub.info
+  ghub-20220429.1708/glab.el
+  ghub-20220429.1708/gogs.el
+  ghub-20220429.1708/gsexp.el
+  ghub-20220429.1708/gtea.el
+Built ghub in 17.806s, finished at 2022-05-23T03:32:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  414 May 23 03:32 packages/ghub-20220429.1708.entry
+160K -rw-r--r-- 1 root root 160K May 23 03:32 packages/ghub-20220429.1708.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 23 03:32 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K May 23 03:32 packages/ghub-readme.txt
