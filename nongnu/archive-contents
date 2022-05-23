@@ -207,6 +207,21 @@
 			   (:maintainer "Julien Barnier")
 			   (:authors
 			    ("Julien Barnier")))])
+ (corfu-popup .
+	      [(0 1)
+	       ((emacs
+		 (26 1))
+		(corfu
+		 (0 23))
+		(popon
+		 (0)))
+	       "Corfu popup on terminal" tar
+	       ((:url . "https://codeberg.org/akib/emacs-corfu-terminal")
+		(:keywords "convenience")
+		(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+		(:authors
+		 ("Akib Azmain Turja" . "akib@disroot.org"))
+		(:commit . "eb4106aa5a103e2ad52b8dd2f2803f5dacecf850"))])
  (crux .
        [(0 4 0)
 	((seq
@@ -439,6 +454,23 @@
 		   (:maintainer "https://turbocafe.keybase.pub")
 		   (:authors
 		    ("https://turbocafe.keybase.pub")))])
+ (flymake-popon .
+		[(0 1)
+		 ((emacs
+		   (26 1))
+		  (flymake
+		   (0))
+		  (popon
+		   (0))
+		  (posframe
+		   (0)))
+		 "Flymake diagnostics on cursor hover" tar
+		 ((:url . "https://codeberg.org/akib/emacs-flymake-popon")
+		  (:keywords "convenience")
+		  (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+		  (:authors
+		   ("Akib Azmain Turja" . "akib@disroot.org"))
+		  (:commit . "df877f3656bce86cbee33aa6c4eedd42b37647e7"))])
  (forth-mode .
 	     [(0 2)
 	      nil "Programming language mode for Forth" tar
@@ -1203,6 +1235,17 @@
 	     (:authors
 	      ("Eric James Michael Ritz"))
 	     (:keywords "languages" "php"))])
+ (popon .
+	[(0 1)
+	 ((emacs
+	   (25 1)))
+	 "\"Pop\" floating text \"on\" a window" tar
+	 ((:url . "https://codeberg.org/akib/emacs-popon")
+	  (:keywords "lisp" "extensions" "frames")
+	  (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	  (:authors
+	   ("Akib Azmain Turja" . "akib@disroot.org"))
+	  (:commit . "240fb286d8e8f8333c5d20da5fe8b32c277cd6eb"))])
  (popup .
 	[(0 5 9)
 	 ((emacs

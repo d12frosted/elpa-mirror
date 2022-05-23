@@ -1,0 +1,39 @@
+Package: detached
+Fetcher: git
+Source:  https://git.sr.ht/~niklaseklund/detached.el
+
+Updating /mnt/store/melpa/working/detached/
+Checking out origin/HEAD
+Checking out 1e17ad996559507f50a80555e1f731bef159073b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/detached/
+  to /tmp/detachedOEqAyN/detached-20220522.910
+    detached-compile.el -> detached-compile.el
+    detached-consult.el -> detached-consult.el
+    detached-dired.el -> detached-dired.el
+    detached-eshell.el -> detached-eshell.el
+    detached-extra.el -> detached-extra.el
+    detached-init.el -> detached-init.el
+    detached-org.el -> detached-org.el
+    detached-shell.el -> detached-shell.el
+    detached-vterm.el -> detached-vterm.el
+    detached.el -> detached.el
+Created detached-20220522.910.tar containing:
+  detached-20220522.910/
+  detached-20220522.910/detached-compile.el
+  detached-20220522.910/detached-consult.el
+  detached-20220522.910/detached-dired.el
+  detached-20220522.910/detached-eshell.el
+  detached-20220522.910/detached-extra.el
+  detached-20220522.910/detached-init.el
+  detached-20220522.910/detached-org.el
+  detached-20220522.910/detached-pkg.el
+  detached-20220522.910/detached-shell.el
+  detached-20220522.910/detached-vterm.el
+  detached-20220522.910/detached.el
+Built detached in 6.748s, finished at 2022-05-22T23:49:59+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  416 May 22 23:49 packages/detached-20220522.910.entry
+112K -rw-r--r-- 1 root root 110K May 22 23:49 packages/detached-20220522.910.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 22 23:49 packages/detached-badge.svg
+4.0K -rw-r--r-- 1 root root  605 May 22 23:49 packages/detached-readme.txt
