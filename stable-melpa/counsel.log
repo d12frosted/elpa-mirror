@@ -5,134 +5,134 @@ Source:  https://github.com/abo-abo/swiper.git
 Updating /mnt/store/melpa/working/counsel/
 Checking out origin/HEAD
 Checking out 8bf8027e4bd8c093bddb76a813952d2a0dcbf21d
-Built counsel in 5.770s, finished at 2022-05-23T10:20:32+0000
+Built counsel in 5.430s, finished at 2022-05-23T13:48:16+0000
  ✓ Success:
-268K -rw-r--r-- 1 root root 267K May 23 10:20 packages/counsel-20220402.953.el
-4.0K -rw-r--r-- 1 root root  432 May 23 10:20 packages/counsel-20220402.953.entry
-8.0K -rw-r--r-- 1 root root 7.8K May 23 10:20 packages/counsel-ag-popup-20210121.805.el
+268K -rw-r--r-- 1 root root 267K May 23 13:48 packages/counsel-20220402.953.el
+4.0K -rw-r--r-- 1 root root  432 May 23 13:48 packages/counsel-20220402.953.entry
+8.0K -rw-r--r-- 1 root root 7.7K May 23 13:48 packages/counsel-ag-popup-20210121.805.el
 4.0K -rw-r--r-- 1 root root  491 May 23 10:20 packages/counsel-ag-popup-20210121.805.entry
 4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-ag-popup-badge.svg
 4.0K -rw-r--r-- 1 root root   97 May 23 10:20 packages/counsel-ag-popup-readme.txt
-4.0K -rw-r--r-- 1 root root  662 May 23 10:20 packages/counsel-ag-popup.log
+4.0K -rw-r--r-- 1 root root  233 May 23 13:48 packages/counsel-ag-popup.log
  12K -rw-r--r-- 1 root root 9.7K May 23 10:20 packages/counsel-at-point-20220507.1118.el
 4.0K -rw-r--r-- 1 root root  449 May 23 10:20 packages/counsel-at-point-20220507.1118.entry
 4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-at-point-badge.svg
 4.0K -rw-r--r-- 1 root root  202 May 23 10:20 packages/counsel-at-point-readme.txt
-4.0K -rw-r--r-- 1 root root  324 May 23 10:20 packages/counsel-at-point.log
-4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-badge.svg
-8.0K -rw-r--r-- 1 root root 7.8K May 23 06:44 packages/counsel-bbdb-20181128.1320.el
-4.0K -rw-r--r-- 1 root root  428 May 23 06:44 packages/counsel-bbdb-20181128.1320.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-bbdb-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K May 23 06:44 packages/counsel-bbdb-readme.txt
-4.0K -rw-r--r-- 1 root root  144 May 23 10:20 packages/counsel-bbdb.log
- 24K -rw-r--r-- 1 root root  22K May 23 06:44 packages/counsel-chrome-bm-20211022.1427.el
-4.0K -rw-r--r-- 1 root root  485 May 23 06:44 packages/counsel-chrome-bm-20211022.1427.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-chrome-bm-badge.svg
-4.0K -rw-r--r-- 1 root root 1015 May 23 06:44 packages/counsel-chrome-bm-readme.txt
-4.0K -rw-r--r-- 1 root root  159 May 23 10:20 packages/counsel-chrome-bm.log
-4.0K -rw-r--r-- 1 root root 3.9K May 23 06:44 packages/counsel-codesearch-20180925.803.el
-4.0K -rw-r--r-- 1 root root  539 May 23 06:44 packages/counsel-codesearch-20180925.803.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-codesearch-badge.svg
-4.0K -rw-r--r-- 1 root root  406 May 23 06:44 packages/counsel-codesearch-readme.txt
-   0 -rw-r--r-- 1 root root    0 May 23 10:20 packages/counsel-codesearch.log
- 12K -rw-r--r-- 1 root root 8.5K May 23 06:44 packages/counsel-css-20211115.1755.el
-4.0K -rw-r--r-- 1 root root  515 May 23 06:44 packages/counsel-css-20211115.1755.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-css-badge.svg
-4.0K -rw-r--r-- 1 root root  142 May 23 06:44 packages/counsel-css-readme.txt
-   0 -rw-r--r-- 1 root root    0 May 23 10:20 packages/counsel-css.log
-4.0K -rw-r--r-- 1 root root 3.8K May 23 06:44 packages/counsel-dash-20200103.1411.el
-4.0K -rw-r--r-- 1 root root  444 May 23 06:44 packages/counsel-dash-20200103.1411.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-dash-badge.svg
-4.0K -rw-r--r-- 1 root root  126 May 23 06:44 packages/counsel-dash-readme.txt
-   0 -rw-r--r-- 1 root root    0 May 23 10:20 packages/counsel-dash.log
- 48K -rw-r--r-- 1 root root  48K May 23 06:44 packages/counsel-edit-mode-20210824.1504.el
-4.0K -rw-r--r-- 1 root root  472 May 23 06:44 packages/counsel-edit-mode-20210824.1504.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-edit-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  128 May 23 06:44 packages/counsel-edit-mode-readme.txt
-   0 -rw-r--r-- 1 root root    0 May 23 10:20 packages/counsel-edit-mode.log
- 76K -rw-r--r-- 1 root root  73K May 23 06:44 packages/counsel-etags-20220516.1309.el
-4.0K -rw-r--r-- 1 root root  434 May 23 06:44 packages/counsel-etags-20220516.1309.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-etags-badge.svg
-8.0K -rw-r--r-- 1 root root 5.3K May 23 06:44 packages/counsel-etags-readme.txt
-4.0K -rw-r--r-- 1 root root  642 May 23 06:44 packages/counsel-etags.log
-4.0K -rw-r--r-- 1 root root 3.0K May 23 06:44 packages/counsel-fd-20220514.2227.el
-4.0K -rw-r--r-- 1 root root  264 May 23 06:44 packages/counsel-fd-20220514.2227.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-fd-badge.svg
-4.0K -rw-r--r-- 1 root root   26 May 23 06:44 packages/counsel-fd-readme.txt
-4.0K -rw-r--r-- 1 root root  619 May 23 06:44 packages/counsel-fd.log
- 12K -rw-r--r-- 1 root root 9.7K May 23 06:44 packages/counsel-ffdata-20191017.1237.el
-4.0K -rw-r--r-- 1 root root  440 May 23 06:44 packages/counsel-ffdata-20191017.1237.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-ffdata-badge.svg
-4.0K -rw-r--r-- 1 root root  162 May 23 06:44 packages/counsel-ffdata-readme.txt
-4.0K -rw-r--r-- 1 root root  644 May 23 06:44 packages/counsel-ffdata.log
- 28K -rw-r--r-- 1 root root  28K May 23 06:44 packages/counsel-gtags-20210222.1803.el
-4.0K -rw-r--r-- 1 root root  474 May 23 06:44 packages/counsel-gtags-20210222.1803.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-gtags-badge.svg
-4.0K -rw-r--r-- 1 root root   59 May 23 06:44 packages/counsel-gtags-readme.txt
-4.0K -rw-r--r-- 1 root root  647 May 23 06:44 packages/counsel-gtags.log
-4.0K -rw-r--r-- 1 root root 2.4K May 23 06:44 packages/counsel-jq-20210329.749.el
-4.0K -rw-r--r-- 1 root root  483 May 23 06:44 packages/counsel-jq-20210329.749.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-jq-badge.svg
-4.0K -rw-r--r-- 1 root root   37 May 23 06:44 packages/counsel-jq-readme.txt
-4.0K -rw-r--r-- 1 root root  613 May 23 06:44 packages/counsel-jq.log
- 24K -rw-r--r-- 1 root root  21K May 23 06:44 packages/counsel-mairix-20210422.649.el
-4.0K -rw-r--r-- 1 root root  368 May 23 06:44 packages/counsel-mairix-20210422.649.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-mairix-badge.svg
-4.0K -rw-r--r-- 1 root root  738 May 23 06:44 packages/counsel-mairix-readme.txt
-4.0K -rw-r--r-- 1 root root  633 May 23 06:44 packages/counsel-mairix.log
-8.0K -rw-r--r-- 1 root root 5.0K May 23 06:44 packages/counsel-notmuch-20181203.935.el
-4.0K -rw-r--r-- 1 root root  490 May 23 06:44 packages/counsel-notmuch-20181203.935.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-notmuch-badge.svg
-4.0K -rw-r--r-- 1 root root  190 May 23 06:44 packages/counsel-notmuch-readme.txt
-4.0K -rw-r--r-- 1 root root  658 May 23 06:44 packages/counsel-notmuch.log
- 12K -rw-r--r-- 1 root root  11K May 23 06:44 packages/counsel-org-capture-string-20200810.1114.el
-4.0K -rw-r--r-- 1 root root  488 May 23 06:44 packages/counsel-org-capture-string-20200810.1114.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-org-capture-string-badge.svg
-4.0K -rw-r--r-- 1 root root  256 May 23 06:44 packages/counsel-org-capture-string-readme.txt
-4.0K -rw-r--r-- 1 root root  741 May 23 06:44 packages/counsel-org-capture-string.log
- 24K -rw-r--r-- 1 root root  23K May 23 06:44 packages/counsel-org-clock-20200810.1109.el
-4.0K -rw-r--r-- 1 root root  446 May 23 06:44 packages/counsel-org-clock-20200810.1109.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-org-clock-badge.svg
-4.0K -rw-r--r-- 1 root root  367 May 23 06:44 packages/counsel-org-clock-readme.txt
-4.0K -rw-r--r-- 1 root root  669 May 23 06:44 packages/counsel-org-clock.log
-8.0K -rw-r--r-- 1 root root 4.7K May 23 06:44 packages/counsel-osx-app-20160821.809.el
-4.0K -rw-r--r-- 1 root root  393 May 23 06:44 packages/counsel-osx-app-20160821.809.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-osx-app-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K May 23 06:44 packages/counsel-osx-app-readme.txt
-4.0K -rw-r--r-- 1 root root  655 May 23 06:44 packages/counsel-osx-app.log
- 76K -rw-r--r-- 1 root root  73K May 23 06:44 packages/counsel-projectile-20211004.2003.el
-4.0K -rw-r--r-- 1 root root  422 May 23 06:44 packages/counsel-projectile-20211004.2003.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-projectile-badge.svg
-4.0K -rw-r--r-- 1 root root  538 May 23 06:44 packages/counsel-projectile-readme.txt
-4.0K -rw-r--r-- 1 root root  680 May 23 06:44 packages/counsel-projectile.log
-4.0K -rw-r--r-- 1 root root 2.2K May 23 06:44 packages/counsel-pydoc-20171018.2042.el
-4.0K -rw-r--r-- 1 root root  388 May 23 06:44 packages/counsel-pydoc-20171018.2042.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-pydoc-badge.svg
-4.0K -rw-r--r-- 1 root root  472 May 23 06:44 packages/counsel-pydoc-readme.txt
-4.0K -rw-r--r-- 1 root root  634 May 23 06:44 packages/counsel-pydoc.log
-4.0K -rw-r--r-- 1 root root  535 May 23 10:20 packages/counsel-readme.txt
-4.0K -rw-r--r-- 1 root root  431 May 23 06:44 packages/counsel-spotify-20200818.2055.entry
- 32K -rw-r--r-- 1 root root  30K May 23 06:44 packages/counsel-spotify-20200818.2055.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-spotify-badge.svg
-4.0K -rw-r--r-- 1 root root   50 May 23 06:44 packages/counsel-spotify-readme.txt
-4.0K -rw-r--r-- 1 root root 1.6K May 23 06:44 packages/counsel-spotify.log
-4.0K -rw-r--r-- 1 root root  338 May 23 06:44 packages/counsel-test-20190819.1920.entry
- 20K -rw-r--r-- 1 root root  20K May 23 06:44 packages/counsel-test-20190819.1920.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:44 packages/counsel-test-badge.svg
-4.0K -rw-r--r-- 1 root root  212 May 23 06:44 packages/counsel-test-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K May 23 06:44 packages/counsel-test.log
- 12K -rw-r--r-- 1 root root 8.1K May 23 06:44 packages/counsel-tramp-20210518.1153.el
-4.0K -rw-r--r-- 1 root root  344 May 23 06:44 packages/counsel-tramp-20210518.1153.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:45 packages/counsel-tramp-badge.svg
-4.0K -rw-r--r-- 1 root root  259 May 23 06:44 packages/counsel-tramp-readme.txt
-4.0K -rw-r--r-- 1 root root  644 May 23 06:45 packages/counsel-tramp.log
- 12K -rw-r--r-- 1 root root  12K May 23 06:45 packages/counsel-web-20210609.2156.el
-4.0K -rw-r--r-- 1 root root  472 May 23 06:45 packages/counsel-web-20210609.2156.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:45 packages/counsel-web-badge.svg
-4.0K -rw-r--r-- 1 root root  105 May 23 06:45 packages/counsel-web-readme.txt
-4.0K -rw-r--r-- 1 root root  620 May 23 06:45 packages/counsel-web.log
- 16K -rw-r--r-- 1 root root  14K May 23 06:45 packages/counsel-world-clock-20190709.2211.el
-4.0K -rw-r--r-- 1 root root  414 May 23 06:45 packages/counsel-world-clock-20190709.2211.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 23 06:45 packages/counsel-world-clock-badge.svg
-4.0K -rw-r--r-- 1 root root   56 May 23 06:45 packages/counsel-world-clock-readme.txt
-4.0K -rw-r--r-- 1 root root  687 May 23 06:45 packages/counsel-world-clock.log
+4.0K -rw-r--r-- 1 root root  185 May 23 13:48 packages/counsel-at-point.log
+4.0K -rw-r--r-- 1 root root 1.2K May 23 13:48 packages/counsel-badge.svg
+8.0K -rw-r--r-- 1 root root 7.8K May 23 10:20 packages/counsel-bbdb-20181128.1320.el
+4.0K -rw-r--r-- 1 root root  428 May 23 10:20 packages/counsel-bbdb-20181128.1320.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-bbdb-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K May 23 10:20 packages/counsel-bbdb-readme.txt
+4.0K -rw-r--r-- 1 root root  144 May 23 13:48 packages/counsel-bbdb.log
+ 24K -rw-r--r-- 1 root root  22K May 23 10:20 packages/counsel-chrome-bm-20211022.1427.el
+4.0K -rw-r--r-- 1 root root  485 May 23 10:20 packages/counsel-chrome-bm-20211022.1427.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-chrome-bm-badge.svg
+4.0K -rw-r--r-- 1 root root 1015 May 23 10:20 packages/counsel-chrome-bm-readme.txt
+4.0K -rw-r--r-- 1 root root  159 May 23 13:48 packages/counsel-chrome-bm.log
+4.0K -rw-r--r-- 1 root root 3.9K May 23 10:20 packages/counsel-codesearch-20180925.803.el
+4.0K -rw-r--r-- 1 root root  539 May 23 10:20 packages/counsel-codesearch-20180925.803.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-codesearch-badge.svg
+4.0K -rw-r--r-- 1 root root  406 May 23 10:20 packages/counsel-codesearch-readme.txt
+4.0K -rw-r--r-- 1 root root  165 May 23 13:48 packages/counsel-codesearch.log
+ 12K -rw-r--r-- 1 root root 8.5K May 23 10:20 packages/counsel-css-20211115.1755.el
+4.0K -rw-r--r-- 1 root root  515 May 23 10:20 packages/counsel-css-20211115.1755.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-css-badge.svg
+4.0K -rw-r--r-- 1 root root  142 May 23 10:20 packages/counsel-css-readme.txt
+4.0K -rw-r--r-- 1 root root  144 May 23 13:48 packages/counsel-css.log
+4.0K -rw-r--r-- 1 root root 3.8K May 23 10:20 packages/counsel-dash-20200103.1411.el
+4.0K -rw-r--r-- 1 root root  444 May 23 10:20 packages/counsel-dash-20200103.1411.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-dash-badge.svg
+4.0K -rw-r--r-- 1 root root  126 May 23 10:20 packages/counsel-dash-readme.txt
+   0 -rw-r--r-- 1 root root    0 May 23 13:48 packages/counsel-dash.log
+ 48K -rw-r--r-- 1 root root  48K May 23 10:20 packages/counsel-edit-mode-20210824.1504.el
+4.0K -rw-r--r-- 1 root root  472 May 23 10:20 packages/counsel-edit-mode-20210824.1504.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-edit-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  128 May 23 10:20 packages/counsel-edit-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  674 May 23 10:20 packages/counsel-edit-mode.log
+ 76K -rw-r--r-- 1 root root  73K May 23 10:20 packages/counsel-etags-20220516.1309.el
+4.0K -rw-r--r-- 1 root root  434 May 23 10:20 packages/counsel-etags-20220516.1309.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-etags-badge.svg
+8.0K -rw-r--r-- 1 root root 5.3K May 23 10:20 packages/counsel-etags-readme.txt
+4.0K -rw-r--r-- 1 root root  642 May 23 10:20 packages/counsel-etags.log
+4.0K -rw-r--r-- 1 root root 3.0K May 23 10:20 packages/counsel-fd-20220514.2227.el
+4.0K -rw-r--r-- 1 root root  264 May 23 10:20 packages/counsel-fd-20220514.2227.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-fd-badge.svg
+4.0K -rw-r--r-- 1 root root   26 May 23 10:20 packages/counsel-fd-readme.txt
+4.0K -rw-r--r-- 1 root root  619 May 23 10:20 packages/counsel-fd.log
+ 12K -rw-r--r-- 1 root root 9.7K May 23 10:20 packages/counsel-ffdata-20191017.1237.el
+4.0K -rw-r--r-- 1 root root  440 May 23 10:20 packages/counsel-ffdata-20191017.1237.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-ffdata-badge.svg
+4.0K -rw-r--r-- 1 root root  162 May 23 10:20 packages/counsel-ffdata-readme.txt
+4.0K -rw-r--r-- 1 root root  644 May 23 10:20 packages/counsel-ffdata.log
+ 28K -rw-r--r-- 1 root root  28K May 23 10:20 packages/counsel-gtags-20210222.1803.el
+4.0K -rw-r--r-- 1 root root  474 May 23 10:20 packages/counsel-gtags-20210222.1803.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-gtags-badge.svg
+4.0K -rw-r--r-- 1 root root   59 May 23 10:20 packages/counsel-gtags-readme.txt
+4.0K -rw-r--r-- 1 root root  647 May 23 10:20 packages/counsel-gtags.log
+4.0K -rw-r--r-- 1 root root 2.4K May 23 10:20 packages/counsel-jq-20210329.749.el
+4.0K -rw-r--r-- 1 root root  483 May 23 10:20 packages/counsel-jq-20210329.749.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-jq-badge.svg
+4.0K -rw-r--r-- 1 root root   37 May 23 10:20 packages/counsel-jq-readme.txt
+4.0K -rw-r--r-- 1 root root  613 May 23 10:20 packages/counsel-jq.log
+ 24K -rw-r--r-- 1 root root  21K May 23 10:20 packages/counsel-mairix-20210422.649.el
+4.0K -rw-r--r-- 1 root root  368 May 23 10:20 packages/counsel-mairix-20210422.649.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-mairix-badge.svg
+4.0K -rw-r--r-- 1 root root  738 May 23 10:20 packages/counsel-mairix-readme.txt
+4.0K -rw-r--r-- 1 root root  633 May 23 10:20 packages/counsel-mairix.log
+8.0K -rw-r--r-- 1 root root 5.0K May 23 10:20 packages/counsel-notmuch-20181203.935.el
+4.0K -rw-r--r-- 1 root root  490 May 23 10:20 packages/counsel-notmuch-20181203.935.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-notmuch-badge.svg
+4.0K -rw-r--r-- 1 root root  190 May 23 10:20 packages/counsel-notmuch-readme.txt
+4.0K -rw-r--r-- 1 root root  658 May 23 10:20 packages/counsel-notmuch.log
+ 12K -rw-r--r-- 1 root root  11K May 23 10:20 packages/counsel-org-capture-string-20200810.1114.el
+4.0K -rw-r--r-- 1 root root  488 May 23 10:20 packages/counsel-org-capture-string-20200810.1114.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-org-capture-string-badge.svg
+4.0K -rw-r--r-- 1 root root  256 May 23 10:20 packages/counsel-org-capture-string-readme.txt
+4.0K -rw-r--r-- 1 root root  741 May 23 10:20 packages/counsel-org-capture-string.log
+ 24K -rw-r--r-- 1 root root  23K May 23 10:20 packages/counsel-org-clock-20200810.1109.el
+4.0K -rw-r--r-- 1 root root  446 May 23 10:20 packages/counsel-org-clock-20200810.1109.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-org-clock-badge.svg
+4.0K -rw-r--r-- 1 root root  367 May 23 10:20 packages/counsel-org-clock-readme.txt
+4.0K -rw-r--r-- 1 root root  669 May 23 10:20 packages/counsel-org-clock.log
+8.0K -rw-r--r-- 1 root root 4.7K May 23 10:20 packages/counsel-osx-app-20160821.809.el
+4.0K -rw-r--r-- 1 root root  393 May 23 10:20 packages/counsel-osx-app-20160821.809.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-osx-app-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K May 23 10:20 packages/counsel-osx-app-readme.txt
+4.0K -rw-r--r-- 1 root root  655 May 23 10:20 packages/counsel-osx-app.log
+ 76K -rw-r--r-- 1 root root  73K May 23 10:20 packages/counsel-projectile-20211004.2003.el
+4.0K -rw-r--r-- 1 root root  422 May 23 10:20 packages/counsel-projectile-20211004.2003.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-projectile-badge.svg
+4.0K -rw-r--r-- 1 root root  538 May 23 10:20 packages/counsel-projectile-readme.txt
+4.0K -rw-r--r-- 1 root root  680 May 23 10:20 packages/counsel-projectile.log
+4.0K -rw-r--r-- 1 root root 2.2K May 23 10:20 packages/counsel-pydoc-20171018.2042.el
+4.0K -rw-r--r-- 1 root root  388 May 23 10:20 packages/counsel-pydoc-20171018.2042.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-pydoc-badge.svg
+4.0K -rw-r--r-- 1 root root  472 May 23 10:20 packages/counsel-pydoc-readme.txt
+4.0K -rw-r--r-- 1 root root  634 May 23 10:20 packages/counsel-pydoc.log
+4.0K -rw-r--r-- 1 root root  535 May 23 13:48 packages/counsel-readme.txt
+4.0K -rw-r--r-- 1 root root  431 May 23 10:20 packages/counsel-spotify-20200818.2055.entry
+ 32K -rw-r--r-- 1 root root  30K May 23 10:20 packages/counsel-spotify-20200818.2055.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-spotify-badge.svg
+4.0K -rw-r--r-- 1 root root   50 May 23 10:20 packages/counsel-spotify-readme.txt
+4.0K -rw-r--r-- 1 root root 1.6K May 23 10:20 packages/counsel-spotify.log
+4.0K -rw-r--r-- 1 root root  338 May 23 10:20 packages/counsel-test-20190819.1920.entry
+ 20K -rw-r--r-- 1 root root  20K May 23 10:20 packages/counsel-test-20190819.1920.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-test-badge.svg
+4.0K -rw-r--r-- 1 root root  212 May 23 10:20 packages/counsel-test-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K May 23 10:20 packages/counsel-test.log
+ 12K -rw-r--r-- 1 root root 8.1K May 23 10:20 packages/counsel-tramp-20210518.1153.el
+4.0K -rw-r--r-- 1 root root  344 May 23 10:20 packages/counsel-tramp-20210518.1153.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-tramp-badge.svg
+4.0K -rw-r--r-- 1 root root  259 May 23 10:20 packages/counsel-tramp-readme.txt
+4.0K -rw-r--r-- 1 root root  644 May 23 10:20 packages/counsel-tramp.log
+ 12K -rw-r--r-- 1 root root  12K May 23 10:20 packages/counsel-web-20210609.2156.el
+4.0K -rw-r--r-- 1 root root  472 May 23 10:20 packages/counsel-web-20210609.2156.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-web-badge.svg
+4.0K -rw-r--r-- 1 root root  105 May 23 10:20 packages/counsel-web-readme.txt
+4.0K -rw-r--r-- 1 root root  620 May 23 10:20 packages/counsel-web.log
+ 16K -rw-r--r-- 1 root root  14K May 23 10:20 packages/counsel-world-clock-20190709.2211.el
+4.0K -rw-r--r-- 1 root root  414 May 23 10:20 packages/counsel-world-clock-20190709.2211.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 23 10:20 packages/counsel-world-clock-badge.svg
+4.0K -rw-r--r-- 1 root root   56 May 23 10:20 packages/counsel-world-clock-readme.txt
+4.0K -rw-r--r-- 1 root root  687 May 23 10:20 packages/counsel-world-clock.log
