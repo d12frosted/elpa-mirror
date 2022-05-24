@@ -4,8 +4,6 @@
 
 ;; Author: YiGeeker <zyfchinese@yeah.net>
 ;; Version: 1.0.0
-;; Package-Version: 20200308.1450
-;; Package-Commit: 626b9255c2bb967a53d1d50be0b98a1bcae3250c
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: languages
 ;; URL: https://github.com/YiGeeker/masm-mode

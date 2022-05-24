@@ -5,7 +5,7 @@
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/emacs-reddigg
 ;; Package-Version: 20220312.1339
-;; Package-Commit: 911a1c6310b42226392fd03dc1746a4c6fc4eb95
+;; Package-Commit: c00407087e155c4fb672e5544e2ef3cb33f1f7eb
 ;; Package-Requires: ((emacs "26.3") (promise "1.1") (ht "2.3") (request "0.3.0") (org "9.2"))
 ;; Version: 0.3
 

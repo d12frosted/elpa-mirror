@@ -5,8 +5,8 @@
 ;; Author: Jingtao Xu <jingtaozf@gmail.com>
 ;; Created: 6 Dec 2018
 ;; Version: 0.1
-;; Package-Version: 20220322.133
-;; Package-Commit: dc4f9d64a8483aa6e394178087c589cdefc571e2
+;; Package-Version: 20220524.217
+;; Package-Commit: 4bfc686f5ee5d781f99d6d4d9b7dd057054c8b1c
 ;; Keywords: lisp docs extensions tools
 ;; URL: https://github.com/jingtaozf/literate-elisp
 ;; Package-Requires: ((emacs "26.1"))
@@ -578,7 +578,7 @@ Argument SOURCE-FILE the path of source file."
                            (setf toplevel-name (string-trim (symbol-name (symbol-at-point)) ":")))
                          (forward-sexp 1)
                          (setf items (nconc items (list (list toplevel-type toplevel-name
-                                                              (buffer-substring-no-properties start (point))))))))))))
+                                                              (buffer-substring-no-properties start (line-end-position))))))))))))
 
 (defun literate-elisp-import-lisp-file ()
   "Insert the Lisp source file into current section."

@@ -3,8 +3,8 @@
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
 ;; Version: 1.2
-;; Package-Version: 20220507.607
-;; Package-Commit: 24266c6c9a766261a8c8620692dfa4000f3e1d5d
+;; Package-Version: 20220524.257
+;; Package-Commit: ca6eef8dccd8dd0676cc82825ef0b7f205d088dc
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -294,13 +294,15 @@ If FRAME is nil, use the current frame."
 
 ;;;;; Open or Create Project in Workspace
 ;;;###autoload
-(defun tabspaces-open-or-create-project-and-workspace (project)
+(defun tabspaces-open-or-create-project-and-workspace (&optional project)
   "Open PROJECT from `project--list' in its own workspace.
 If PROJECT is already open in its own workspace, switch to that workspace.
 If PROJECT does not exist, create it, along with a `project.todo' file, in its own workspace."
   (interactive
-   (list
-    (completing-read "Project Name: " project--list)))
+   (if (eq project--list 'unset)
+       (call-interactively #'project-switch-project)
+     (list
+      (completing-read "Project Name: " project--list))))
   (cond ((member (list project) project--list)
          (if (member (file-name-nondirectory (directory-file-name project)) (tabspaces--list-tabspaces))
              (tabspaces-switch-or-create-workspace (file-name-nondirectory (directory-file-name project)))
