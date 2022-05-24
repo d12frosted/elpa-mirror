@@ -1967,6 +1967,17 @@
 	       (:keywords "theme" "dark" "light")
 	       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
 	       (:commit . "c4f296d349cf5ef2efd88d68535a4dbf577b9a87"))])
+ (nftables-mode .
+		[(1 1)
+		 ((emacs
+		   (25 1)))
+		 "Major mode for editing nftables" tar
+		 ((:keywords "convenience")
+		  (:maintainer nil . "emacs-devel@gnu.org")
+		  (:authors
+		   ("Trent W. Buck" . "trentbuck@gmail.com"))
+		  (:url . "https://elpa.gnu.org/packages/nftables-mode.html")
+		  (:commit . "05600129ee8ea0774c6ac446a2bd18fc1dde54eb"))])
  (nhexl-mode .
 	     [(1 5)
 	      ((emacs
@@ -2264,7 +2275,7 @@
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "http://elpa.gnu.org/packages/persist.html"))])
  (phps-mode .
-	    [(0 4 21)
+	    [(0 4 22)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2273,7 +2284,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "a3a81f9a174cb321ec2ed0c60c7cfaf5dbd6102d"))])
+	      (:commit . "69d4de374b1696bebf1fda5c9f8e1652b1b0fe2b"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single

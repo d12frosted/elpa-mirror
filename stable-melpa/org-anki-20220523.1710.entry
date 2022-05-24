@@ -1,0 +1,17 @@
+(org-anki .
+	  [(20220523 1710)
+	   ((emacs
+	     (27 1))
+	    (request
+	     (0 3 2))
+	    (dash
+	     (2 17))
+	    (promise
+	     (1 1)))
+	   "Synchronize org-mode entries to Anki" single
+	   ((:commit . "0731b1cee6de12fafc5a8b652d93de899657d8b5")
+	    (:authors
+	     ("Markus Läll" . "markus.l2ll@gmail.com"))
+	    (:maintainer "Markus Läll" . "markus.l2ll@gmail.com")
+	    (:keywords "outlines" "flashcards" "memory")
+	    (:url . "https://github.com/eyeinsky/org-anki"))])

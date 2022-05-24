@@ -5,7 +5,7 @@
 ;; Author: Damien Cassou <damien.cassou@gmail.com>
 ;; Url: https://github.com/DamienCassou/unify-opening
 ;; Package-Version: 20220521.911
-;; Package-Commit: 4c6e3447e203a51af116a2117e88d41114950205
+;; Package-Commit: 9d537094220f5ec329b196e269e18b45dbdd1fa2
 ;; GIT: https://github.com/DamienCassou/unify-opening
 ;; Version: 2.2.0
 ;; Package-Requires: ((emacs "24.4"))
