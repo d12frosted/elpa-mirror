@@ -6,10 +6,10 @@
 ;; Maintainer: Shigeaki Nishina
 ;; Created: March 11, 2020
 ;; URL: https://github.com/shg/julia-vterm.el
-;; Package-Version: 20220510.2259
-;; Package-Commit: 5374776991232de966efca245f9ce24c59728588
+;; Package-Version: 20220524.1328
+;; Package-Commit: c5f67a372777bb6a855ba2a89228a713c8dda957
 ;; Package-Requires: ((emacs "25.1") (vterm "0.0.1"))
-;; Version: 0.16
+;; Version: 0.17
 ;; Keywords: languages, julia
 
 ;; This file is not part of GNU Emacs.
@@ -140,7 +140,10 @@ If there's already one with the process alive, just open it."
     (if script-buffer
 	(with-current-buffer script-buffer
 	  (setq julia-vterm-fellow-repl-buffer repl-buffer)
-	  (switch-to-buffer-other-window script-buffer)))))
+	  (let ((display-buffer-alist '((".*"
+					 (display-buffer-reuse-window)
+					 (reusable-frames . visible)))))
+	    (switch-to-buffer-other-window script-buffer))))))
 
 (defun julia-vterm-repl-clear-buffer ()
   "Clear the content of the Julia REPL buffer."
@@ -228,19 +231,22 @@ If there's already one with the process alive, just open it."
 	julia-vterm-fellow-repl-buffer
       (julia-vterm-repl-buffer))))
 
-(defun julia-vterm-switch-to-repl-buffer (&optional prefix)
+(defun julia-vterm-switch-to-repl-buffer (&optional arg)
   "Switch to the paired REPL buffer or to the one with a specified session name.
-With PREFIX, prompt for session name."
+With prefix ARG, prompt for session name."
   (interactive "P")
   (let* ((session-name
-	  (cond ((null prefix) nil)
+	  (cond ((null arg) nil)
 		(t (read-from-minibuffer "Session name: "))))
 	 (script-buffer (current-buffer))
 	 (repl-buffer (julia-vterm-fellow-repl-buffer session-name)))
     (setq julia-vterm-fellow-repl-buffer repl-buffer )
     (with-current-buffer repl-buffer
       (setq julia-vterm-repl-script-buffer script-buffer)
-      (switch-to-buffer-other-window repl-buffer))))
+      (let ((display-buffer-alist '((".*"
+				     (display-buffer-reuse-window display-buffer-reuse-mode-window)
+				     (reusable-frames . visible)))))
+	(switch-to-buffer-other-window repl-buffer)))))
 
 (defun julia-vterm-send-return-key ()
   "Send a return key to the Julia REPL."
@@ -289,7 +295,7 @@ script buffer."
 
 (defun julia-vterm-send-include-buffer-file (&optional arg)
   "Send a line to evaluate the buffer's file using include() to the Julia REPL.
-With a prefix argument ARG (or interactively C-u), use Revise.includet() instead."
+With prefix ARG, use Revise.includet() instead."
   (interactive "P")
   (let ((fmt (if arg "Revise.includet(\"%s\")\n" "include(\"%s\")\n")))
     (if (and buffer-file-name
