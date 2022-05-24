@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.com/ideasman42/emacs-diff-ansi
-;; Package-Version: 20220507.1118
-;; Package-Commit: bfcce7f609a95b4b5e11c384c75fef8c7c972b95
+;; Package-Version: 20220524.18
+;; Package-Commit: 7e493019234d468354758f7e60032a1fb379de44
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
 
