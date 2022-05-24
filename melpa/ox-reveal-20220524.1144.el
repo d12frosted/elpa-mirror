@@ -5,8 +5,8 @@
 ;; Author: Yujie Wen <yjwen.ty at gmail dot com>
 ;; Created: 2013-04-27
 ;; Version: 1.0
-;; Package-Version: 20220523.1259
-;; Package-Commit: bb3e4dbed9ef0feb41e9c6c5acfd75975ecafce5
+;; Package-Version: 20220524.1144
+;; Package-Commit: 43ebe238ef747985b336880305ae5065da67235c
 ;; Package-Requires: ((org "8.3"))
 ;; Keywords: outlines, hypermedia, slideshow, presentation
 
@@ -811,7 +811,7 @@ custom variable `org-reveal-root'."
            (multiplex-statement
             ;; multiplexing - depends on defvar 'client-multiplex'
             (let ((multiplex-id (plist-get info :reveal-multiplex-id)))
-              (when multiplex-id        ;Multiplex setup found
+              (when (not (string-empty-p multiplex-id))        ;Multiplex setup found
                 (concat
                  (format "multiplex: {
     secret: %s, // null if client

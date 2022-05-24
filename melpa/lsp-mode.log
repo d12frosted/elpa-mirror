@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-lsp/lsp-mode.git
 
 Updating /mnt/store/melpa/working/lsp-mode/
 Checking out origin/HEAD
-Checking out eac730f19a9255fa320f199b62a301a44869173b
+Checking out 57fb2db71101e580ff2d222212dfae209bfc9c24
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-mode/
-  to /tmp/lsp-modeGOvO7M/lsp-mode-20220522.1526
+  to /tmp/lsp-mode6DtaXI/lsp-mode-20220524.622
     lsp-completion.el -> lsp-completion.el
     lsp-diagnostics.el -> lsp-diagnostics.el
     lsp-dired.el -> lsp-dired.el
@@ -95,99 +95,99 @@ Copying files (->) and directories (=>)
   ! clients/lsp-xml.el -> lsp-xml.el
   ! clients/lsp-yaml.el -> lsp-yaml.el
   ! clients/lsp-zig.el -> lsp-zig.el
-Created lsp-mode-20220522.1526.tar containing:
-  lsp-mode-20220522.1526/
-  lsp-mode-20220522.1526/lsp-actionscript.el
-  lsp-mode-20220522.1526/lsp-ada.el
-  lsp-mode-20220522.1526/lsp-angular.el
-  lsp-mode-20220522.1526/lsp-ansible.el
-  lsp-mode-20220522.1526/lsp-bash.el
-  lsp-mode-20220522.1526/lsp-beancount.el
-  lsp-mode-20220522.1526/lsp-clangd.el
-  lsp-mode-20220522.1526/lsp-clojure.el
-  lsp-mode-20220522.1526/lsp-cmake.el
-  lsp-mode-20220522.1526/lsp-completion.el
-  lsp-mode-20220522.1526/lsp-crystal.el
-  lsp-mode-20220522.1526/lsp-csharp.el
-  lsp-mode-20220522.1526/lsp-css.el
-  lsp-mode-20220522.1526/lsp-d.el
-  lsp-mode-20220522.1526/lsp-dhall.el
-  lsp-mode-20220522.1526/lsp-diagnostics.el
-  lsp-mode-20220522.1526/lsp-dired.el
-  lsp-mode-20220522.1526/lsp-dockerfile.el
-  lsp-mode-20220522.1526/lsp-elixir.el
-  lsp-mode-20220522.1526/lsp-elm.el
-  lsp-mode-20220522.1526/lsp-emmet.el
-  lsp-mode-20220522.1526/lsp-erlang.el
-  lsp-mode-20220522.1526/lsp-eslint.el
-  lsp-mode-20220522.1526/lsp-fortran.el
-  lsp-mode-20220522.1526/lsp-fsharp.el
-  lsp-mode-20220522.1526/lsp-gdscript.el
-  lsp-mode-20220522.1526/lsp-go.el
-  lsp-mode-20220522.1526/lsp-graphql.el
-  lsp-mode-20220522.1526/lsp-groovy.el
-  lsp-mode-20220522.1526/lsp-hack.el
-  lsp-mode-20220522.1526/lsp-haxe.el
-  lsp-mode-20220522.1526/lsp-headerline.el
-  lsp-mode-20220522.1526/lsp-html.el
-  lsp-mode-20220522.1526/lsp-icons.el
-  lsp-mode-20220522.1526/lsp-ido.el
-  lsp-mode-20220522.1526/lsp-idris.el
-  lsp-mode-20220522.1526/lsp-iedit.el
-  lsp-mode-20220522.1526/lsp-javascript.el
-  lsp-mode-20220522.1526/lsp-json.el
-  lsp-mode-20220522.1526/lsp-kotlin.el
-  lsp-mode-20220522.1526/lsp-lens.el
-  lsp-mode-20220522.1526/lsp-lua.el
-  lsp-mode-20220522.1526/lsp-magik.el
-  lsp-mode-20220522.1526/lsp-markdown.el
-  lsp-mode-20220522.1526/lsp-mode-pkg.el
-  lsp-mode-20220522.1526/lsp-mode.el
-  lsp-mode-20220522.1526/lsp-modeline.el
-  lsp-mode-20220522.1526/lsp-nginx.el
-  lsp-mode-20220522.1526/lsp-nim.el
-  lsp-mode-20220522.1526/lsp-nix.el
-  lsp-mode-20220522.1526/lsp-ocaml.el
-  lsp-mode-20220522.1526/lsp-openscad.el
-  lsp-mode-20220522.1526/lsp-perl.el
-  lsp-mode-20220522.1526/lsp-perlnavigator.el
-  lsp-mode-20220522.1526/lsp-php.el
-  lsp-mode-20220522.1526/lsp-prolog.el
-  lsp-mode-20220522.1526/lsp-protocol.el
-  lsp-mode-20220522.1526/lsp-purescript.el
-  lsp-mode-20220522.1526/lsp-pwsh.el
-  lsp-mode-20220522.1526/lsp-pyls.el
-  lsp-mode-20220522.1526/lsp-pylsp.el
-  lsp-mode-20220522.1526/lsp-r.el
-  lsp-mode-20220522.1526/lsp-racket.el
-  lsp-mode-20220522.1526/lsp-remark.el
-  lsp-mode-20220522.1526/lsp-rf.el
-  lsp-mode-20220522.1526/lsp-rust.el
-  lsp-mode-20220522.1526/lsp-semantic-tokens.el
-  lsp-mode-20220522.1526/lsp-solargraph.el
-  lsp-mode-20220522.1526/lsp-sorbet.el
-  lsp-mode-20220522.1526/lsp-sqls.el
-  lsp-mode-20220522.1526/lsp-steep.el
-  lsp-mode-20220522.1526/lsp-svelte.el
-  lsp-mode-20220522.1526/lsp-terraform.el
-  lsp-mode-20220522.1526/lsp-tex.el
-  lsp-mode-20220522.1526/lsp-toml.el
-  lsp-mode-20220522.1526/lsp-ttcn3.el
-  lsp-mode-20220522.1526/lsp-typeprof.el
-  lsp-mode-20220522.1526/lsp-v.el
-  lsp-mode-20220522.1526/lsp-vala.el
-  lsp-mode-20220522.1526/lsp-verilog.el
-  lsp-mode-20220522.1526/lsp-vetur.el
-  lsp-mode-20220522.1526/lsp-vhdl.el
-  lsp-mode-20220522.1526/lsp-vimscript.el
-  lsp-mode-20220522.1526/lsp-volar.el
-  lsp-mode-20220522.1526/lsp-xml.el
-  lsp-mode-20220522.1526/lsp-yaml.el
-  lsp-mode-20220522.1526/lsp-zig.el
-  lsp-mode-20220522.1526/lsp.el
-Built lsp-mode in 7.057s, finished at 2022-05-24T04:23:18+0000
+Created lsp-mode-20220524.622.tar containing:
+  lsp-mode-20220524.622/
+  lsp-mode-20220524.622/lsp-actionscript.el
+  lsp-mode-20220524.622/lsp-ada.el
+  lsp-mode-20220524.622/lsp-angular.el
+  lsp-mode-20220524.622/lsp-ansible.el
+  lsp-mode-20220524.622/lsp-bash.el
+  lsp-mode-20220524.622/lsp-beancount.el
+  lsp-mode-20220524.622/lsp-clangd.el
+  lsp-mode-20220524.622/lsp-clojure.el
+  lsp-mode-20220524.622/lsp-cmake.el
+  lsp-mode-20220524.622/lsp-completion.el
+  lsp-mode-20220524.622/lsp-crystal.el
+  lsp-mode-20220524.622/lsp-csharp.el
+  lsp-mode-20220524.622/lsp-css.el
+  lsp-mode-20220524.622/lsp-d.el
+  lsp-mode-20220524.622/lsp-dhall.el
+  lsp-mode-20220524.622/lsp-diagnostics.el
+  lsp-mode-20220524.622/lsp-dired.el
+  lsp-mode-20220524.622/lsp-dockerfile.el
+  lsp-mode-20220524.622/lsp-elixir.el
+  lsp-mode-20220524.622/lsp-elm.el
+  lsp-mode-20220524.622/lsp-emmet.el
+  lsp-mode-20220524.622/lsp-erlang.el
+  lsp-mode-20220524.622/lsp-eslint.el
+  lsp-mode-20220524.622/lsp-fortran.el
+  lsp-mode-20220524.622/lsp-fsharp.el
+  lsp-mode-20220524.622/lsp-gdscript.el
+  lsp-mode-20220524.622/lsp-go.el
+  lsp-mode-20220524.622/lsp-graphql.el
+  lsp-mode-20220524.622/lsp-groovy.el
+  lsp-mode-20220524.622/lsp-hack.el
+  lsp-mode-20220524.622/lsp-haxe.el
+  lsp-mode-20220524.622/lsp-headerline.el
+  lsp-mode-20220524.622/lsp-html.el
+  lsp-mode-20220524.622/lsp-icons.el
+  lsp-mode-20220524.622/lsp-ido.el
+  lsp-mode-20220524.622/lsp-idris.el
+  lsp-mode-20220524.622/lsp-iedit.el
+  lsp-mode-20220524.622/lsp-javascript.el
+  lsp-mode-20220524.622/lsp-json.el
+  lsp-mode-20220524.622/lsp-kotlin.el
+  lsp-mode-20220524.622/lsp-lens.el
+  lsp-mode-20220524.622/lsp-lua.el
+  lsp-mode-20220524.622/lsp-magik.el
+  lsp-mode-20220524.622/lsp-markdown.el
+  lsp-mode-20220524.622/lsp-mode-pkg.el
+  lsp-mode-20220524.622/lsp-mode.el
+  lsp-mode-20220524.622/lsp-modeline.el
+  lsp-mode-20220524.622/lsp-nginx.el
+  lsp-mode-20220524.622/lsp-nim.el
+  lsp-mode-20220524.622/lsp-nix.el
+  lsp-mode-20220524.622/lsp-ocaml.el
+  lsp-mode-20220524.622/lsp-openscad.el
+  lsp-mode-20220524.622/lsp-perl.el
+  lsp-mode-20220524.622/lsp-perlnavigator.el
+  lsp-mode-20220524.622/lsp-php.el
+  lsp-mode-20220524.622/lsp-prolog.el
+  lsp-mode-20220524.622/lsp-protocol.el
+  lsp-mode-20220524.622/lsp-purescript.el
+  lsp-mode-20220524.622/lsp-pwsh.el
+  lsp-mode-20220524.622/lsp-pyls.el
+  lsp-mode-20220524.622/lsp-pylsp.el
+  lsp-mode-20220524.622/lsp-r.el
+  lsp-mode-20220524.622/lsp-racket.el
+  lsp-mode-20220524.622/lsp-remark.el
+  lsp-mode-20220524.622/lsp-rf.el
+  lsp-mode-20220524.622/lsp-rust.el
+  lsp-mode-20220524.622/lsp-semantic-tokens.el
+  lsp-mode-20220524.622/lsp-solargraph.el
+  lsp-mode-20220524.622/lsp-sorbet.el
+  lsp-mode-20220524.622/lsp-sqls.el
+  lsp-mode-20220524.622/lsp-steep.el
+  lsp-mode-20220524.622/lsp-svelte.el
+  lsp-mode-20220524.622/lsp-terraform.el
+  lsp-mode-20220524.622/lsp-tex.el
+  lsp-mode-20220524.622/lsp-toml.el
+  lsp-mode-20220524.622/lsp-ttcn3.el
+  lsp-mode-20220524.622/lsp-typeprof.el
+  lsp-mode-20220524.622/lsp-v.el
+  lsp-mode-20220524.622/lsp-vala.el
+  lsp-mode-20220524.622/lsp-verilog.el
+  lsp-mode-20220524.622/lsp-vetur.el
+  lsp-mode-20220524.622/lsp-vhdl.el
+  lsp-mode-20220524.622/lsp-vimscript.el
+  lsp-mode-20220524.622/lsp-volar.el
+  lsp-mode-20220524.622/lsp-xml.el
+  lsp-mode-20220524.622/lsp-yaml.el
+  lsp-mode-20220524.622/lsp-zig.el
+  lsp-mode-20220524.622/lsp.el
+Built lsp-mode in 9.546s, finished at 2022-05-24T11:39:47+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  512 May 24 04:23 packages/lsp-mode-20220522.1526.entry
-1.2M -rw-r--r-- 1 root root 1.2M May 24 04:23 packages/lsp-mode-20220522.1526.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 24 04:23 packages/lsp-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   54 May 24 04:23 packages/lsp-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  511 May 24 11:39 packages/lsp-mode-20220524.622.entry
+1.2M -rw-r--r-- 1 root root 1.2M May 24 11:39 packages/lsp-mode-20220524.622.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 24 11:39 packages/lsp-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   54 May 24 11:39 packages/lsp-mode-readme.txt

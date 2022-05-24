@@ -3,3 +3,107 @@ Fetcher: git
 Source:  https://git.code.sf.net/p/matlab-emacs/src
 
 Updating /mnt/store/melpa/working/matlab-mode/
+Checking out origin/HEAD
+Checking out 5069e3ca0034e0da64eb9b3cd426f52992938d06
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/matlab-mode/
+  to /tmp/matlab-modeoVKd6q/matlab-mode-20220412.913
+    cedet-matlab.el -> cedet-matlab.el
+    company-matlab-shell.el -> company-matlab-shell.el
+    linemark.el -> linemark.el
+    matlab-cgen.el -> matlab-cgen.el
+    matlab-compat.el -> matlab-compat.el
+    matlab-complete.el -> matlab-complete.el
+    matlab-load.el -> matlab-load.el
+    matlab-maint.el -> matlab-maint.el
+    matlab-mode-pkg.el -> matlab-mode-pkg.el
+    matlab-netshell.el -> matlab-netshell.el
+    matlab-publish.el -> matlab-publish.el
+    matlab-scan.el -> matlab-scan.el
+    matlab-shell-gud.el -> matlab-shell-gud.el
+    matlab-shell.el -> matlab-shell.el
+    matlab-syntax.el -> matlab-syntax.el
+    matlab-topic.el -> matlab-topic.el
+    matlab.el -> matlab.el
+    mlgud.el -> mlgud.el
+    mlint.el -> mlint.el
+    semantic-matlab.el -> semantic-matlab.el
+    semanticdb-matlab.el -> semanticdb-matlab.el
+    srecode-matlab.el -> srecode-matlab.el
+    tlc.el -> tlc.el
+    dl_emacs_support.m -> dl_emacs_support.m
+    toolbox/dbhotlink.m -> toolbox/dbhotlink.m
+    toolbox/ebclear.m -> toolbox/ebclear.m
+    toolbox/ebstack.m -> toolbox/ebstack.m
+    toolbox/ebstatus.m -> toolbox/ebstatus.m
+    toolbox/ebstop.m -> toolbox/ebstop.m
+    toolbox/emacscd.m -> toolbox/emacscd.m
+    toolbox/emacsdocomplete.m -> toolbox/emacsdocomplete.m
+    toolbox/emacsinit.m -> toolbox/emacsinit.m
+    toolbox/emacsnetshell.m -> toolbox/emacsnetshell.m
+    toolbox/emacsrun.m -> toolbox/emacsrun.m
+    toolbox/emacsrunregion.m -> toolbox/emacsrunregion.m
+    toolbox/emacstipstring.m -> toolbox/emacstipstring.m
+    toolbox/help.m -> toolbox/help.m
+    toolbox/opentoline.m -> toolbox/opentoline.m
+    toolbox/+emacs/set.m -> toolbox/+emacs/set.m
+    toolbox/+emacs/@Breakpoints/Breakpoints.m -> toolbox/+emacs/@Breakpoints/Breakpoints.m
+    toolbox/+emacs/@EmacsServer/EmacsServer.m -> toolbox/+emacs/@EmacsServer/EmacsServer.m
+    toolbox/+emacs/@Stack/Stack.m -> toolbox/+emacs/@Stack/Stack.m
+    templates/srecode-matlab.srt -> templates/srecode-matlab.srt
+Created matlab-mode-20220412.913.tar containing:
+  matlab-mode-20220412.913/
+  matlab-mode-20220412.913/cedet-matlab.el
+  matlab-mode-20220412.913/company-matlab-shell.el
+  matlab-mode-20220412.913/dl_emacs_support.m
+  matlab-mode-20220412.913/linemark.el
+  matlab-mode-20220412.913/matlab-cgen.el
+  matlab-mode-20220412.913/matlab-compat.el
+  matlab-mode-20220412.913/matlab-complete.el
+  matlab-mode-20220412.913/matlab-load.el
+  matlab-mode-20220412.913/matlab-maint.el
+  matlab-mode-20220412.913/matlab-mode-pkg.el
+  matlab-mode-20220412.913/matlab-netshell.el
+  matlab-mode-20220412.913/matlab-publish.el
+  matlab-mode-20220412.913/matlab-scan.el
+  matlab-mode-20220412.913/matlab-shell-gud.el
+  matlab-mode-20220412.913/matlab-shell.el
+  matlab-mode-20220412.913/matlab-syntax.el
+  matlab-mode-20220412.913/matlab-topic.el
+  matlab-mode-20220412.913/matlab.el
+  matlab-mode-20220412.913/mlgud.el
+  matlab-mode-20220412.913/mlint.el
+  matlab-mode-20220412.913/semantic-matlab.el
+  matlab-mode-20220412.913/semanticdb-matlab.el
+  matlab-mode-20220412.913/srecode-matlab.el
+  matlab-mode-20220412.913/templates/
+  matlab-mode-20220412.913/templates/srecode-matlab.srt
+  matlab-mode-20220412.913/tlc.el
+  matlab-mode-20220412.913/toolbox/
+  matlab-mode-20220412.913/toolbox/+emacs/
+  matlab-mode-20220412.913/toolbox/+emacs/@Breakpoints/
+  matlab-mode-20220412.913/toolbox/+emacs/@Breakpoints/Breakpoints.m
+  matlab-mode-20220412.913/toolbox/+emacs/@EmacsServer/
+  matlab-mode-20220412.913/toolbox/+emacs/@EmacsServer/EmacsServer.m
+  matlab-mode-20220412.913/toolbox/+emacs/@Stack/
+  matlab-mode-20220412.913/toolbox/+emacs/@Stack/Stack.m
+  matlab-mode-20220412.913/toolbox/+emacs/set.m
+  matlab-mode-20220412.913/toolbox/dbhotlink.m
+  matlab-mode-20220412.913/toolbox/ebclear.m
+  matlab-mode-20220412.913/toolbox/ebstack.m
+  matlab-mode-20220412.913/toolbox/ebstatus.m
+  matlab-mode-20220412.913/toolbox/ebstop.m
+  matlab-mode-20220412.913/toolbox/emacscd.m
+  matlab-mode-20220412.913/toolbox/emacsdocomplete.m
+  matlab-mode-20220412.913/toolbox/emacsinit.m
+  matlab-mode-20220412.913/toolbox/emacsnetshell.m
+  matlab-mode-20220412.913/toolbox/emacsrun.m
+  matlab-mode-20220412.913/toolbox/emacsrunregion.m
+  matlab-mode-20220412.913/toolbox/emacstipstring.m
+  matlab-mode-20220412.913/toolbox/help.m
+  matlab-mode-20220412.913/toolbox/opentoline.m
+Built matlab-mode in 5.174s, finished at 2022-05-24T11:41:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  157 May 24 11:41 packages/matlab-mode-20220412.913.entry
+660K -rw-r--r-- 1 root root 660K May 24 11:41 packages/matlab-mode-20220412.913.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 24 11:41 packages/matlab-mode-badge.svg
