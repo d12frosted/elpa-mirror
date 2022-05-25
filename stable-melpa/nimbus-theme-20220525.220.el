@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.1.0
-;; Package-Version: 20220513.240
-;; Package-Commit: 958a92a979c88bee909d03a78b2faf6726d0069b
+;; Package-Version: 20220525.220
+;; Package-Commit: 92f96b83fab2649d224115bb71324cefe139ffc5
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -789,7 +789,8 @@
 
    `(magit-diff-hunk-heading ((t (:inherit default :background ,dark-teal-bg))))
    `(magit-section-highlight ((t (:background ,hl-line))))
-   `(magit-diff-context-highlight ((t (:background ,gray-bg))))
+   `(magit-diff-context ((t (:foreground ,light-gray))))
+   `(magit-diff-context-highlight ((t (:foreground ,light-gray :background ,gray-bg))))
    `(magit-diff-file-heading-highlight ((t (:background ,hl-line :slant normal :underline nil))))
    `(magit-diff-hunk-heading-highlight ((t (:background ,teal-bg))))
    `(magit-diff-added-highlight ((t (:foreground ,diff-added :background ,darkest-gray))))
