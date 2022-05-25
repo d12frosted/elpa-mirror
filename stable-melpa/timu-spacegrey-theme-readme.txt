@@ -19,11 +19,28 @@ I. Installation
         (load-theme 'timu-spacegrey t))
 
 II. Configuration
-  There is a light version now included as well.
-  By default the theme is `dark', to setup the `light' flavour:
+  A. Dark and light fravour
+    By default the theme is `dark', to setup the `light' flavour:
 
-  A. Change the variable `timu-spacegrey-flavour' in the Customization Interface.
-     M-x customize RET. Then Search for `timu'.
+    - Change the variable `timu-spacegrey-flavour' in the Customization Interface.
+      M-x customize RET. Then Search for `timu'.
 
-  B. add the following to your `~/.emacs.d/init.el' or `~/.emacs'
-    (setq timu-spacegrey-flavour "light")
+    or
+
+    - add the following to your `~/.emacs.d/init.el' or `~/.emacs'
+      (setq timu-spacegrey-flavour "light")
+
+  B. Scale selected faces
+    You can now scale (up) some faces (in `org-mode' for now):
+
+    - `org-document-info'
+    - `org-document-title'
+    - `org-level-1'
+    - `org-level-2'
+    - `org-level-3'
+
+    More to follow in the future.
+
+    By default the scaling is turned off.
+    To setup the scaling add the following to your `~/.emacs.d/init.el' or `~/.emacs':
+      (customize-set-variable 'timu-spacegrey-scale-faces t)

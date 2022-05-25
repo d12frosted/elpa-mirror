@@ -17,3 +17,18 @@ I. Installation
         :ensure t
         :config
         (load-theme 'timu-rouge t))
+
+II. Configuration
+  You can now scale (up) some faces (in `org-mode' for now):
+
+  - `org-document-info'
+  - `org-document-title'
+  - `org-level-1'
+  - `org-level-2'
+  - `org-level-3'
+
+  More to follow in the future.
+
+  By default the scaling is turned off.
+  To setup the scaling add the following to your `~/.emacs.d/init.el' or `~/.emacs':
+    (customize-set-variable 'timu-rouge-scale-faces t)
