@@ -1455,6 +1455,17 @@
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
 		("Arthur Evstifeev" . "lod@pisem.net")))])
+ (swsw .
+       [(2 1 1)
+	((emacs
+	  (27 1)))
+	"Simple window switching" tar
+	((:url . "https://dsemy.com/projects/swsw")
+	 (:keywords "convenience")
+	 (:maintainer "swsw Mailing List" . "~dsemy/swsw-devel@lists.sr.ht")
+	 (:authors
+	  ("Daniel Semyonov" . "daniel@dsemy.com"))
+	 (:commit . "bbe31e347c794df2753f67520060182745c8f19f"))])
  (systemd .
 	  [(1 6)
 	   ((emacs
