@@ -1555,6 +1555,17 @@
 	      (:authors
 	       ("Venkat Iyer" . "venkat@comit.com"))
 	      (:url . "https://elpa.nongnu.org/nongnu/vc-fossil.html"))])
+ (vcomplete .
+	    [(1 2 1)
+	     ((emacs
+	       (25 1)))
+	     "Visual completions" tar
+	     ((:url . "https://dsemy.com/projects/vcomplete")
+	      (:keywords "convenience" "matching")
+	      (:maintainer "Vcomplete Mailing List" . "~dsemy/vcomplete-devel@lists.sr.ht")
+	      (:authors
+	       ("Daniel Semyonov" . "daniel@dsemy.com"))
+	      (:commit . "8450b1befd46ac9754d57e2f98f150f33bb317ce"))])
  (visual-fill-column .
 		     [(2 5)
 		      ((emacs
@@ -1566,7 +1577,7 @@
 			("Joost Kremers" . "joostkremers@fastmail.fm"))
 		       (:commit . "afaad5ac6b15cdf9f362662538e35d48578e218a"))])
  (web-mode .
-	   [(17 2 0)
+	   [(17 2 1)
 	    ((emacs
 	      (23 1)))
 	    "major mode for editing web templates" tar
@@ -1575,7 +1586,7 @@
 	     (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
 	     (:authors
 	      ("François-Xavier Bois"))
-	     (:commit . "f70277774a725e177774cc81ecbd228792cd6656"))])
+	     (:commit . "036da1327e3ec0749868d078cbc64e207f4c4aba"))])
  (webpaste .
 	   [(3 2 2)
 	    ((emacs
