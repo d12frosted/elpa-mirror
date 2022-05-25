@@ -4,10 +4,10 @@ Source:  https://github.com/tumashu/pyim.git
 
 Updating /mnt/store/melpa/working/pyim/
 Checking out origin/HEAD
-Checking out f045cc9d4916174dae8c5bdc41889726f2be5e35
+Checking out 556718aef9ef3ce27a87c50055614b346ec6baff
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pyim/
-  to /tmp/pyimNp7SSK/pyim-20220524.1134
+  to /tmp/pyimnQFLrd/pyim-20220524.2141
     pyim-autoselector.el -> pyim-autoselector.el
     pyim-candidates.el -> pyim-candidates.el
     pyim-cloudim.el -> pyim-cloudim.el
@@ -34,58 +34,36 @@ Copying files (->) and directories (=>)
     pyim-pymap.el -> pyim-pymap.el
     pyim-scheme.el -> pyim-scheme.el
     pyim.el -> pyim.el
-Created pyim-20220524.1134.tar containing:
-  pyim-20220524.1134/
-  pyim-20220524.1134/pyim-autoselector.el
-  pyim-20220524.1134/pyim-candidates.el
-  pyim-20220524.1134/pyim-cloudim.el
-  pyim-20220524.1134/pyim-codes.el
-  pyim-20220524.1134/pyim-common.el
-  pyim-20220524.1134/pyim-cregexp.el
-  pyim-20220524.1134/pyim-cstring.el
-  pyim-20220524.1134/pyim-dcache.el
-  pyim-20220524.1134/pyim-dhashcache.el
-  pyim-20220524.1134/pyim-dict.el
-  pyim-20220524.1134/pyim-dregcache.el
-  pyim-20220524.1134/pyim-entered.el
-  pyim-20220524.1134/pyim-hacks.el
-  pyim-20220524.1134/pyim-imobjs.el
-  pyim-20220524.1134/pyim-indicator.el
-  pyim-20220524.1134/pyim-liberime.el
-  pyim-20220524.1134/pyim-outcome.el
-  pyim-20220524.1134/pyim-page.el
-  pyim-20220524.1134/pyim-pinyin.el
-  pyim-20220524.1134/pyim-pkg.el
-  pyim-20220524.1134/pyim-preview.el
-  pyim-20220524.1134/pyim-probe.el
-  pyim-20220524.1134/pyim-process.el
-  pyim-20220524.1134/pyim-punctuation.el
-  pyim-20220524.1134/pyim-pymap.el
-  pyim-20220524.1134/pyim-scheme.el
-  pyim-20220524.1134/pyim.el
-Built pyim in 5.720s, finished at 2022-05-24T15:35:31+0000
+Created pyim-20220524.2141.tar containing:
+  pyim-20220524.2141/
+  pyim-20220524.2141/pyim-autoselector.el
+  pyim-20220524.2141/pyim-candidates.el
+  pyim-20220524.2141/pyim-cloudim.el
+  pyim-20220524.2141/pyim-codes.el
+  pyim-20220524.2141/pyim-common.el
+  pyim-20220524.2141/pyim-cregexp.el
+  pyim-20220524.2141/pyim-cstring.el
+  pyim-20220524.2141/pyim-dcache.el
+  pyim-20220524.2141/pyim-dhashcache.el
+  pyim-20220524.2141/pyim-dict.el
+  pyim-20220524.2141/pyim-dregcache.el
+  pyim-20220524.2141/pyim-entered.el
+  pyim-20220524.2141/pyim-hacks.el
+  pyim-20220524.2141/pyim-imobjs.el
+  pyim-20220524.2141/pyim-indicator.el
+  pyim-20220524.2141/pyim-liberime.el
+  pyim-20220524.2141/pyim-outcome.el
+  pyim-20220524.2141/pyim-page.el
+  pyim-20220524.2141/pyim-pinyin.el
+  pyim-20220524.2141/pyim-pkg.el
+  pyim-20220524.2141/pyim-preview.el
+  pyim-20220524.2141/pyim-probe.el
+  pyim-20220524.2141/pyim-process.el
+  pyim-20220524.2141/pyim-punctuation.el
+  pyim-20220524.2141/pyim-pymap.el
+  pyim-20220524.2141/pyim-scheme.el
+  pyim-20220524.2141/pyim.el
+Built pyim in 8.232s, finished at 2022-05-25T02:09:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  478 May 24 15:35 packages/pyim-20220524.1134.entry
-460K -rw-r--r-- 1 root root 460K May 24 15:35 packages/pyim-20220524.1134.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 24 15:35 packages/pyim-badge.svg
-4.0K -rw-r--r-- 1 root root  373 May 24 15:35 packages/pyim-basedict-20210517.43.entry
-2.7M -rw-r--r-- 1 root root 2.7M May 24 15:35 packages/pyim-basedict-20210517.43.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 24 11:58 packages/pyim-basedict-badge.svg
-4.0K -rw-r--r-- 1 root root  719 May 24 15:35 packages/pyim-basedict-readme.txt
-4.0K -rw-r--r-- 1 root root  671 May 24 15:35 packages/pyim-basedict.log
-4.0K -rw-r--r-- 1 root root  436 May 24 11:58 packages/pyim-cangjiedict-20210617.934.entry
-5.0M -rw-r--r-- 1 root root 5.0M May 24 11:58 packages/pyim-cangjiedict-20210617.934.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 24 11:58 packages/pyim-cangjiedict-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K May 24 11:58 packages/pyim-cangjiedict-readme.txt
-4.0K -rw-r--r-- 1 root root  152 May 24 15:35 packages/pyim-cangjiedict.log
-   0 -rw-r--r-- 1 root root    0 May 24 15:35 packages/pyim-readme.txt
-4.0K -rw-r--r-- 1 root root  357 May 24 11:58 packages/pyim-smzmdict-20210505.1445.entry
-120K -rw-r--r-- 1 root root 120K May 24 11:58 packages/pyim-smzmdict-20210505.1445.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 24 11:58 packages/pyim-smzmdict-badge.svg
-4.0K -rw-r--r-- 1 root root  765 May 24 11:58 packages/pyim-smzmdict-readme.txt
-4.0K -rw-r--r-- 1 root root  143 May 24 15:35 packages/pyim-smzmdict.log
-4.0K -rw-r--r-- 1 root root  410 May 24 11:58 packages/pyim-wbdict-20210902.1714.entry
-5.6M -rw-r--r-- 1 root root 5.6M May 24 11:58 packages/pyim-wbdict-20210902.1714.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 24 11:58 packages/pyim-wbdict-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K May 24 11:58 packages/pyim-wbdict-readme.txt
-4.0K -rw-r--r-- 1 root root  137 May 24 15:35 packages/pyim-wbdict.log
+4.0K -rw-r--r-- 1 root root  478 May 25 02:09 packages/pyim-20220524.2141.entry
+460K -rw-r--r-- 1 root root 460K May 25 02:09 packages/pyim-20220524.2141.tar
