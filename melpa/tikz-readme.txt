@@ -24,15 +24,15 @@ M-x tikz-mode
 
 ** Screenshot
 
-On the left side, Emacs with a LaTeX buffer with minor mode TikZ. On
+On the left side, Emacs with a LaTeX buffer with minor mode TikZ.  On
 the right side, Zathura viewing the pdf.
 
 [[file:graphics/tikzscreenshot.png]]
 
 ** Configuration
 
-- You can select another pdf viewer. Modify =tikz-zathura= with your chosen viewer.
-- You can modify the idle timer to update the pdf. Modify =tikz-resume-timer=.
+- You can select another pdf viewer.  Modify =tikz-zathura= with your chosen viewer.
+- You can modify the idle timer to update the pdf.  Modify =tikz-resume-timer=.
 
 
 ** How it works
@@ -42,7 +42,7 @@ the right side, Zathura viewing the pdf.
 - Pdftex the temp file.
 - It uses Zathura to view the pdf.
 - In idle time, copy the current buffer to the temp file and compile
-  it. Zathura automatically refreshes the view.
+  it.  Zathura automatically refreshes the view.
 
 ** Alternatives
 - QtikZ

@@ -50,10 +50,10 @@ In the `*Ebuku*' buffer, the following bindings are available:
 * `C' - Copy the URL of the bookmark at point to the kill ring
   (`ebuku-copy-url').
 
-* `T` - Copy the title of the bookmark at point to the kill ring
+* `T' - Copy the title of the bookmark at point to the kill ring
   (`ebuku-copy-title').
 
-* `I` - Copy the index of the bookmark at point to the kill ring
+* `I' - Copy the index of the bookmark at point to the kill ring
   (`ebuku-copy-index').
 
 * `q' - Quit Ebuku.

@@ -6,8 +6,8 @@
 ;; Maintainer: Alexis <flexibeast@gmail.com>
 ;; Created: 2019-11-07
 ;; URL: https://github.com/flexibeast/ebuku
-;; Package-Version: 20220521.1416
-;; Package-Commit: 92bbcd537123416b9296332e4bf8cb790657794e
+;; Package-Version: 20220526.331
+;; Package-Commit: fbd9e36c701e945c12fea7037452cefbf4d0eae3
 ;; Keywords: bookmarks,buku,data,web,www
 ;; Version: 0
 ;; Package-Requires: ((emacs "25.1"))
@@ -84,10 +84,10 @@
 ;; * `C' - Copy the URL of the bookmark at point to the kill ring
 ;;   (`ebuku-copy-url').
 
-;; * `T` - Copy the title of the bookmark at point to the kill ring
+;; * `T' - Copy the title of the bookmark at point to the kill ring
 ;;   (`ebuku-copy-title').
 
-;; * `I` - Copy the index of the bookmark at point to the kill ring
+;; * `I' - Copy the index of the bookmark at point to the kill ring
 ;;   (`ebuku-copy-index').
 
 ;; * `q' - Quit Ebuku.
@@ -468,6 +468,14 @@ Argument EVENT is the event received from that process."
             "0"))
       (error "Failed to get bookmark count"))))
 
+(defun ebuku--goto-line (n)
+  "Internal function to move to line N in buffer.
+
+The docstring for `goto-line' states that it's for interactive use only,
+and suggests instead using the code in the body of this function."
+  (goto-char (point-min))
+  (forward-line (1- n)))
+
 (defun ebuku--search-helper (type prompt &optional term exclude)
   "Internal function to call `buku' with appropriate search arguments.
 
@@ -523,7 +531,7 @@ Argument EXCLUDE is a string: keywords to exclude from search results."
       (goto-char (point-min))
       (with-current-buffer "*Ebuku*"
         (let ((inhibit-read-only t))
-          (goto-line ebuku--results-start)
+          (ebuku--goto-line ebuku--results-start)
           (beginning-of-line)
           (kill-region (point) (point-max))
           (cond
@@ -655,7 +663,7 @@ Argument EXCLUDE is a string: keywords to exclude from search results."
           (setq comment ""
                 tags ""))
         (with-current-buffer "*Ebuku*"
-          (goto-line ebuku--results-start)
+          (ebuku--goto-line ebuku--results-start)
           (beginning-of-line)
           (forward-line 2))))))
 
@@ -905,8 +913,8 @@ The bookmarks are fetched from buku with the following arguments:
             (progn
               (goto-char (point-min))
               (if (not (text-property-search-forward 'buku-index index))
-                  (goto-line ebuku--results-start)))
-          (goto-line line)))))
+                  (ebuku--goto-line ebuku--results-start)))
+          (ebuku--goto-line line)))))
 
 (defun ebuku-search (char)
   "Search the buku database for bookmarks.
@@ -1026,7 +1034,7 @@ If an argument is excluded, get it from `ebuku-cache-default-args'."
           (ebuku-search-on-recent))
          ((eq nil ebuku-display-on-startup)
           (insert "  [ Please specify a search, or press 'r' for recent additions. ]")))
-        (goto-line ebuku--results-start)
+        (ebuku--goto-line ebuku--results-start)
         (add-text-properties (point-min) (point)
                              '(read-only t intangible t))
         (ebuku--create-mode-menu)
