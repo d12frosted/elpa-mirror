@@ -4,13 +4,24 @@ Source:  https://github.com/emacscollective/borg.git
 
 Updating /mnt/store/melpa/working/borg/
 Checking out origin/HEAD
-Checking out 2b962729336a53ada638215485913bfd75fc7102
+Checking out 9917084fb806796f91025dbec9f946f4415059ed
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/borg/
-  to /tmp/borgiPQQ6H/borg-20220522.1216
+  to /tmp/borgt4C6qk/borg-20220525.1545
     borg-elpa.el -> borg-elpa.el
     borg.el -> borg.el
   ! docs/borg.texi -> borg.texi
     borg.mk -> borg.mk
-  ! docs/borg.texi -> borg.texi
-File already exists: /tmp/borgiPQQ6H/borg-20220522.1216/borg.texi
+Generating /tmp/borgt4C6qk/borg-20220525.1545/borg.info
+Created borg-20220525.1545.tar containing:
+  borg-20220525.1545/
+  borg-20220525.1545/borg-elpa.el
+  borg-20220525.1545/borg-pkg.el
+  borg-20220525.1545/borg.el
+  borg-20220525.1545/borg.info
+  borg-20220525.1545/borg.mk
+  borg-20220525.1545/dir
+Built borg in 19.304s, finished at 2022-05-25T22:38:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  397 May 25 22:38 packages/borg-20220525.1545.entry
+120K -rw-r--r-- 1 root root 120K May 25 22:38 packages/borg-20220525.1545.tar

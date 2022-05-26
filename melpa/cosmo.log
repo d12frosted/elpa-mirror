@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/montanari/cosmo-el.git
 
 Updating /mnt/store/melpa/working/cosmo/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-error: RPC failed; HTTP 524 curl 22 The requested URL returned error: 524
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out dd83b09a49a2843606b28279b674b2207040b36b
+Built cosmo in 8.140s, finished at 2022-05-25T22:44:34+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K May 25 22:44 packages/cosmo-20170922.744.el
+4.0K -rw-r--r-- 1 root root 336 May 25 22:44 packages/cosmo-20170922.744.entry

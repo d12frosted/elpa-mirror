@@ -150,7 +150,7 @@
 	  ("Damien Doligez" . "damien.doligez@inria.fr"))
 	 (:keywords "ocaml"))])
  (cider .
-	[(1 4 0)
+	[(1 4 1)
 	 ((emacs
 	   (26))
 	  (clojure-mode
@@ -176,7 +176,7 @@
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
 	   ("Steve Purcell" . "steve@sanityinc.com"))
-	  (:commit . "b2cee7fc301735b403920583cc2c23dcf70990a3"))])
+	  (:commit . "11156e7b0cab470f4aab39d3af5ee3cb1e0b09d0"))])
  (clojure-mode .
 	       [(5 14 0)
 		((emacs
@@ -208,20 +208,20 @@
 			   (:authors
 			    ("Julien Barnier")))])
  (corfu-terminal .
-		 [(0 1)
+		 [(0 2)
 		  ((emacs
 		    (26 1))
 		   (corfu
 		    (0 24))
 		   (popon
-		    (0)))
+		    (0 1)))
 		  "Corfu popup on terminal" tar
 		  ((:url . "https://codeberg.org/akib/emacs-corfu-terminal")
 		   (:keywords "convenience")
 		   (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 		   (:authors
 		    ("Akib Azmain Turja" . "akib@disroot.org"))
-		   (:commit . "cca92ac666f6edf3ec2a5dbf2fc1a577fd15cb61"))])
+		   (:commit . "15c1b149cf1bda0f928b706be4b5050afa1699e0"))])
  (crux .
        [(0 4 0)
 	((seq
@@ -884,7 +884,7 @@
 	     ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	    (:commit . "98c2dda1a2ca0fc95f7425847a36abad5b31a4c7"))])
  (kotlin-mode .
-	      [(1 0 0)
+	      [(2 0 0)
 	       ((emacs
 		 (24 3)))
 	       "Major mode for kotlin" tar
@@ -893,7 +893,7 @@
 		(:authors
 		 ("Shodai Yokoyama" . "quantumcars@gmail.com"))
 		(:url . "https://elpa.nongnu.org/nongnu/kotlin-mode.html")
-		(:commit . "b9d03a769b91c6b15e99a9cadb8b1618e5205595"))])
+		(:commit . "d92c3b773473e9fe15f61f6177e4fbf097aadd05"))])
  (lua-mode .
 	   [(20210802)
 	    ((emacs
