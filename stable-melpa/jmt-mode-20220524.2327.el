@@ -4,8 +4,8 @@
 ;;
 ;; Author: Michael Allan <mike@reluk.ca>
 ;; Version: 0-snapshot
-;; Package-Version: 20220510.430
-;; Package-Commit: f968413df2c2bd1e00c5b6c61c53bdd208b90ee3
+;; Package-Version: 20220524.2327
+;; Package-Commit: 5e8eb048dd398597378eaf20842e410398bd5b55
 ;; SPDX-License-Identifier: MIT
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: c, languages
@@ -2308,7 +2308,7 @@ For more information, see URL ‘http://reluk.ca/project/Java/Emacs/’."
 ;;  ↑A ·· Code that must execute after section *Annotation*.
 ;;
 ;;   AM · This marks misfacings that likely are related.  See the *assert keyword* section
-;;        at `http://reluk.ca/project/Java/Emacs/notepad.brec`.
+;;        at `http://reluk.ca/project/Java/Emacs/notepad.brec.xht`.
 ;;
 ;;   AST  At-sign as a token.  ‘It is possible to put whitespace between it and the TypeName,
 ;;        but this is discouraged as a matter of style.’
@@ -2482,7 +2482,7 @@ For more information, see URL ‘http://reluk.ca/project/Java/Emacs/’."
 ;;   TB · Text blocks.  https://docs.oracle.com/javase/specs/jls/se15/html/jls-3.html#jls-3.10.6
 ;;
 ;;        Java Mode stopped facing text blocks as strings sometime between Emacs 26.3 and 27.1. [BUG]
-;;        Repair would likely be difficult.  http://reluk.ca/project/Java/Emacs/notepad.brec
+;;        Repair would likely be difficult.  http://reluk.ca/project/Java/Emacs/notepad.brec.xht
 ;;
 ;;   TP · See `TypeParameter`.  https://docs.oracle.com/javase/specs/jls/se15/html/jls-4.html#jls-4.4
 ;;

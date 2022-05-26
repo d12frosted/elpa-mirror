@@ -491,15 +491,17 @@
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
 	   (:commit . "5f1f156d8048c44e727cf3dd9a55422822562c3e"))])
  (consult .
-	  [(0 17)
+	  [(0 18)
 	   ((emacs
-	     (27 1)))
+	     (27 1))
+	    (compat
+	     (28 1)))
 	   "Consulting completing-read" tar
 	   ((:url . "https://github.com/minad/consult")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "f517b70dd8a3be0b8c883633f2a7721448b40f0f"))])
+	    (:commit . "0f55ad146b327d82a4a6dfa674349bfbbf3820e4"))])
  (context-coloring .
 		   [(8 1 0)
 		    ((emacs
@@ -511,7 +513,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 24)
+	[(0 25)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -519,7 +521,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "dc4623b45947dc4fa270a9fcf8ba998e70b36c1b"))])
+	  (:commit . "8b9d37413639a1c92f0c74f1230bddbe45e79c59"))])
  (coterm .
 	 [(1 5)
 	  ((emacs
@@ -3289,7 +3291,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "86f08fb377e2b8f2df0614c48783bdce347f3758"))])
  (vertico .
-	  [(0 23)
+	  [(0 24)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
@@ -3297,7 +3299,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "68bb4d67e295bd75b8ef1a6d5ddda26849510fa6"))])
+	    (:commit . "e5935b5bbfc0d820c54ed1ad52e36e8c48248fd7"))])
  (vertico-posframe .
 		   [(0 5 4)
 		    ((emacs

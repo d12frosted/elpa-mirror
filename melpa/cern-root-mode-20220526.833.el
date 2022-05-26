@@ -4,8 +4,8 @@
 
 ;; Author: Jay Morgan <jay@morganwastaken.com>
 ;; Keywords: languages, tools
-;; Package-Version: 20220520.1817
-;; Package-Commit: 42600b2a35edbf051bac911dc778c3a7169d3c19
+;; Package-Version: 20220526.833
+;; Package-Commit: 5c49421e8674ac3519b9d168c880a3131494b095
 ;; Version: 0.1.4
 ;; Homepage: https://github.com/jaypmorgan/cern-root-mode
 ;; Package-Requires: ((emacs "26.1"))
@@ -362,7 +362,7 @@ rcfiles."
 (add-to-list 'org-src-lang-modes '("cern-root" . c++))
 
 ;;;###autoload
-(defun org-babel-execute:root (body params)
+(defun org-babel-execute:cern-root (body params)
   "Execute a C++ `org-mode' source code block (BODY) with PARAMS in ROOT REPL."
   (message "Executing C++ source code block with ROOT")
   (print params)

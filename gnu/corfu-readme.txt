@@ -48,9 +48,9 @@ Table of Contents
 
   *NOTE*: Corfu uses child frames to show the popup and falls back to
   the default setting of the `completion-in-region-function' on
-  non-graphical displays. There is a [package in the works] which uses
-  overlays for the popup such that Corfu can be used when Emacs is
-  running in a terminal.
+  non-graphical displays. If you want to use Corfu in the terminal,
+  install the package [corfu-terminal], which provides an alternative
+  overlay-based display.
 
   <https://github.com/minad/corfu/blob/screenshots/light.png?raw=true>
 
@@ -65,7 +65,7 @@ Table of Contents
 
 [Cape] <https://github.com/minad/cape>
 
-[package in the works] <https://codeberg.org/akib/emacs-corfu-popup>
+[corfu-terminal] <https://codeberg.org/akib/emacs-corfu-terminal>
 
 
 2 Features
@@ -519,9 +519,11 @@ Table of Contents
     candidates and to improve sorting.
   • [corfu-indexed]: `corfu-indexed-mode' to select indexed candidates
     with prefix arguments.
-  • [corfu-info]: Candidate actions to access the candidate location and
+  • [corfu-info]: Actions to access the candidate location and
     documentation.
   • [corfu-quick]: Commands to select using Avy-style quick keys.
+
+  See the Commentary of those files for configuration details.
 
 
 [extensions/] <https://github.com/minad/corfu/tree/main/extensions>
@@ -547,6 +549,14 @@ Table of Contents
   already provide a Capf out of the box. Nevertheless you may want to
   look into complementary packages to enhance your setup.
 
+  • [corfu-terminal]: The corfu-terminal package provides an
+    overlay-based display for Corfu, such that you can use Corfu in
+    terminal Emacs.
+
+  • [corfu-doc]: The corfu-doc package displays the candidate
+    documentation in a popup next to the Corfu popup, similar to
+    `company-quickhelp'.
+
   • [Orderless]: Corfu supports completion styles, including the
     advanced [Orderless] completion style, where the filtering
     expressions are separated by spaces or another character (see
@@ -565,10 +575,6 @@ Table of Contents
     styled SVG icons based on monochromatic icon sets like material
     design.
 
-  • [corfu-doc]: The corfu-doc package displays the candidate
-    documentation in a popup next to the Corfu popup, similar to
-    `company-quickhelp'.
-
   • [pcmpl-args]: Extend the Eshell/Shell Pcomplete mechanism with
     support for many more commands. Similar to the Fish shell, Pcomplete
     uses man page parsing to dynamically retrieve the completions and
@@ -582,13 +588,15 @@ Table of Contents
     package. Vertico is the minibuffer completion counterpart of Corfu.
 
 
+[corfu-terminal] <https://codeberg.org/akib/emacs-corfu-terminal>
+
+[corfu-doc] <https://github.com/galeo/corfu-doc>
+
 [Orderless] <https://github.com/oantolin/orderless>
 
 [Cape] <https://github.com/minad/cape>
 
 [kind-icon] <https://github.com/jdtsmith/kind-icon>
-
-[corfu-doc] <https://github.com/galeo/corfu-doc>
 
 [pcmpl-args] <https://github.com/JonWaltman/pcmpl-args.el>
 

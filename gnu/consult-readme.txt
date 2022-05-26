@@ -138,6 +138,8 @@ Table of Contents
     files. Press `SPC' to show ephemeral buffers.  Supported narrowing
     keys:
     • b Buffers
+    • SPC Hidden buffers
+    • * Modified buffers
     • f Files (Requires `recentf-mode')
     • m Bookmarks
     • p Project
@@ -299,12 +301,8 @@ Table of Contents
     and recursive editing. The command supports narrowing. Press `e
     SPC', `w SPC', `n SPC' to only show errors, warnings and notes
     respectively.
-  • `consult-flycheck': Jump to flycheck error, similar to
-    `consult-flymake'. This command requires the installation of the
-    additional `consult-flycheck' package since the main `consult'
-    package only depends on Emacs core components.
   • `consult-xref': Integration with xref. This function can be set as
-    as `xref-show-xrefs-function' and `xref-show-definitions-function'.
+    `xref-show-xrefs-function' and `xref-show-definitions-function'.
 
 
 2.8 Histories
@@ -314,16 +312,21 @@ Table of Contents
     `command-history'. This command is a `completing-read' version of
     `repeat-complex-command' and is also a replacement for the
     `command-history' command from chistory.el.
-  • `consult-history': Insert a string from the current buffer
-    history. You can invoke this command from the minibuffer. In that
-    case `consult-history' uses the history stored in the
-    `minibuffer-history-variable'.
+  • `consult-history': Insert a string from the current buffer history,
+    for example the Eshell or Comint history. You can also invoke this
+    command from the minibuffer. In that case `consult-history' uses the
+    history stored in the `minibuffer-history-variable'. If you prefer
+    `completion-at-point', take a look at `cape-history' from the [Cape]
+    package.
   • `consult-isearch-history': During an Isearch session, this command
     picks a search string from history and continues the search with the
     newly selected string. Outside of Isearch, the command allows you to
     pick a string from the history and starts a new
     Isearch. `consult-isearch-history' acts as a drop-in replacement for
     `isearch-edit-string'.
+
+
+[Cape] <https://github.com/minad/cape>
 
 
 2.9 Modes
@@ -370,9 +373,9 @@ Table of Contents
     your in-buffer completion UI, this function can be set as
     `completion-in-region-function'. Then your minibuffer completion UI
     (e.g., Vertico or Icomplete) will be used for
-    `completion-at-point'. Note that Selectrum provides its own function
-    similar to `consult-completion-in-region'. If you use Mct, you may
-    want to use the `mct-region-mode' instead.
+    `completion-at-point'. Note that Selectrum provides its own variant
+    of `consult-completion-in-region'. If you use Mct, you may want to
+    try `mct-region-mode' instead.
     ┌────
     │ ;; Use `consult-completion-in-region' if Vertico is enabled.
     │ ;; Otherwise use the default `completion--in-region' function.
@@ -386,18 +389,13 @@ Table of Contents
     Instead of `consult-completion-in-region', you may prefer to see the
     completions directly in the buffer as a small popup. In that case, I
     recommend either the [Corfu] or the [Company] package. There is a
-    technical caveat of `consult-completion-in-region' in combination
-    with Lsp-mode or Eglot.  The Lsp server relies on the input at
-    point, in order to generate refined candidate strings. Since the
-    completion is transferred from the original buffer to the
-    minibuffer, the server does not receive the updated input. Lsp
-    completion should work with Corfu or Company though, which perform
-    the completion directly in the original buffer.
-  • `consult-completing-read-multiple': Enhanced drop-in replacement for
-    `completing-read-multiple' which works better for long
-    candidates. You can select/deselect multiple candidates by pressing
-    `RET'. Afterwards the selections are confirmed by pressing `RET'
-    again.
+    technical limitation of `consult-completion-in-region' in
+    combination with Lsp-mode or Eglot. The Lsp server relies on the
+    input at point, in order to generate refined candidate
+    strings. Since the completion is transferred from the original
+    buffer to the minibuffer, the server does not receive the updated
+    input. LSP completion works with Corfu or Company though, which
+    perform the completion directly in the original buffer.
 
 
 [Mct] <https://git.sr.ht/~protesilaos/mct>
@@ -880,9 +878,6 @@ Table of Contents
   │   ;; This adds thin lines, sorting and hides the mode line of the window.
   │   (advice-add #'register-preview :override #'consult-register-window)
   │ 
-  │   ;; Optionally replace `completing-read-multiple' with an enhanced version.
-  │   (advice-add #'completing-read-multiple :override #'consult-completing-read-multiple)
-  │ 
   │   ;; Use Consult to select xref locations with preview
   │   (setq xref-show-xrefs-function #'consult-xref
   │ 	xref-show-definitions-function #'consult-xref)
@@ -956,7 +951,6 @@ Table of Contents
    consult-bookmark-narrow           Narrowing configuration for `consult-bookmark'        
    consult-buffer-filter             Filter for `consult-buffer'                           
    consult-buffer-sources            List of virtual buffer sources                        
-   consult-crm-prefix                Prefix string for CRM candidates                      
    consult-find-args                 Command line arguments for find                       
    consult-fontify-max-size          Buffers larger than this limit are not fontified      
    consult-fontify-preserve          Preserve fontification for line-based commands.       
@@ -1095,25 +1089,27 @@ Table of Contents
   packages in the wider Emacs ecosystem. You may want to install some of
   theses packages depending on your preferences and requirements.
 
-  • [consult-company]: Completion at point using the company backends.
+  • [consult-ag]: Support for the [Silver Searcher] in the style of
+    `consult-grep'.
+  • [consult-company]: Completion at point using the [Company] backends.
   • [consult-dir]: Directory jumper using Consult multi sources.
-  • [consult-eglot]: Integration with eglot (lsp client).
-  • [consult-flycheck]: Provides the `consult-flycheck' command.
+  • [consult-eglot]: Integration with Eglot (LSP client).
+  • [consult-flycheck]: Additional Flycheck integration.
   • [consult-flyspell]: Additional Flyspell integration.
-  • [consult-lsp]: Integration with lsp-mode (lsp client).
+  • [consult-ls-git]: List files from git via Consult.
+  • [consult-lsp]: Integration with Lsp-mode (LSP client).
   • [consult-notmuch]: Access the [Notmuch] email system using Consult.
-  • [consult-org-roam]: Integration with org-roam.
-  • [consult-spotify]: Access the Spotify API and control your local
-    music player.
+  • [consult-org-roam]: Integration with [Org-roam].
   • [consult-project-extra]: Additional project.el extras and buffer
     sources.
-  • [consult-projectile]: Additional Projectile integration and buffer
+  • [consult-projectile]: Additional [Projectile] integration and buffer
     sources.
   • [consult-recoll]: Access the [Recoll] desktop full-text search using
     Consult.
-  • [consult-yasnippet]: Integration with yasnippet.
-  • [affe]: Asynchronous Fuzzy Finder for Emacs (uses Consult under the
-    hood).
+  • [consult-spotify]: Access the Spotify API and control your local
+    music player.
+  • [consult-yasnippet]: Integration with Yasnippet.
+  • [affe]: Asynchronous Fuzzy Finder for Emacs based on Consult.
 
   Not directly related to Consult, but maybe still of interest are the
   following packages. These packages should work well with Consult,
@@ -1121,14 +1117,14 @@ Table of Contents
   `completing-read'.
 
   • [corfu]: Completion systems for `completion-at-point' using small
-    popups (Alternative to [company]).
+    popups (Alternative to [Company]).
   • [cape]: Completion At Point Extensions, which can be used with
     `consult-completion-in-region' and [Corfu].
   • [bookmark-view]: Store window configuration as bookmarks, possible
     integration with `consult-buffer'.
   • [citar]: Versatile package for citation insertion and bibliography
     management.
-  • [devdocs]: Emacs viewer for DevDocs with a convenient completion
+  • [devdocs]: Emacs viewer for [DevDocs] with a convenient completion
     interface.
   • [flyspell-correct]: Apply spelling corrections by selecting via
     `completing-read'.
@@ -1143,8 +1139,8 @@ Table of Contents
   mix. For example you can omit Marginalia if you don't need
   annotations. I highly recommend the Embark package, but in order to
   familarize yourself with the other components, you can first start
-  without it - or you could even start with Embark right away and add
-  the other components later on.
+  without it - or you could use with Embark right away and add the other
+  components later on.
 
 
 [vertico] <https://github.com/minad/vertico>
@@ -1162,7 +1158,13 @@ Table of Contents
 [icomplete-vertical by Omar Antolín Camarena]
 <https://github.com/oantolin/icomplete-vertical>
 
+[consult-ag] <https://github.com/yadex205/consult-ag>
+
+[Silver Searcher] <https://github.com/ggreer/the_silver_searcher>
+
 [consult-company] <https://github.com/mohkale/consult-company>
+
+[Company] <https://github.com/company-mode/company-mode>
 
 [consult-dir] <https://github.com/karthink/consult-dir>
 
@@ -1172,6 +1174,8 @@ Table of Contents
 
 [consult-flyspell] <https://gitlab.com/OlMon/consult-flyspell>
 
+[consult-ls-git] <https://github.com/rcj/consult-ls-git>
+
 [consult-lsp] <https://github.com/gagbo/consult-lsp>
 
 [consult-notmuch] <https://codeberg.org/jao/consult-notmuch>
@@ -1180,24 +1184,26 @@ Table of Contents
 
 [consult-org-roam] <https://github.com/jgru/consult-org-roam>
 
-[consult-spotify] <https://codeberg.org/jao/espotify>
+[Org-roam] <https://github.com/org-roam/org-roam>
 
 [consult-project-extra]
 <https://github.com/Qkessler/consult-project-extra/>
 
 [consult-projectile] <https://gitlab.com/OlMon/consult-projectile/>
 
+[Projectile] <https://github.com/bbatsov/projectile>
+
 [consult-recoll] <https://codeberg.org/jao/consult-recoll>
 
 [Recoll] <https://www.lesbonscomptes.com/recoll/>
+
+[consult-spotify] <https://codeberg.org/jao/espotify>
 
 [consult-yasnippet] <https://github.com/mohkale/consult-yasnippet>
 
 [affe] <https://github.com/minad/affe>
 
 [corfu] <https://github.com/minad/corfu>
-
-[company] <https://github.com/company-mode/company-mode>
 
 [cape] <https://github.com/minad/cape>
 
@@ -1208,6 +1214,8 @@ Table of Contents
 [citar] <https://github.com/bdarcus/citar>
 
 [devdocs] <https://github.com/astoff/devdocs.el>
+
+[DevDocs] <https://devdocs.io/>
 
 [flyspell-correct] <https://github.com/d12frosted/flyspell-correct>
 
@@ -1228,8 +1236,8 @@ Table of Contents
      Embark and Orderless.
   2. Either use the default completion UI or ensure that exactly one of
      `vertico-mode', `mct-mode', `selectrum-mode', or `icomplete-mode'
-     is enabled.  Furthermore `ivy-mode' and `helm-mode' must be
-     disabled.
+     is enabled.  The unsupported modes `ivy-mode', `helm-mode' and
+     `ido-ubiquitous-mode' must be disabled.
   3. Ensure that the `completion-styles' variable is properly
      configured. Try to set `completion-styles' to a list including
      `substring' or `orderless'.
@@ -1262,7 +1270,7 @@ Table of Contents
   • The minimal configuration snippet used to reproduce the issue.
   • Your completion UI (Default completion, Vertico, Mct, Selectrum or
     Icomplete).
-  • The full stack trace in case the bug triggers an exception.
+  • A stack trace in case the bug triggers an exception.
   • Your Emacs version, since bugs may be fixed or introduced in newer
     versions.
   • Your operating system, since Emacs behavior varies between Linux,
@@ -1271,14 +1279,16 @@ Table of Contents
     install the Emacs packages, in order to exclude update issues. Did
     you install Consult as part of the Doom or Spacemacs Emacs
     distributions?
-  • If you are using Evil or other packages which change Emacs
-    fundamentally, since Consult does not provide Evil integration out
-    of the box.
+  • Do you use Evil or other packages which apply deep changes?  Consult
+    does not provide Evil integration out of the box, but there is some
+    support in [evil-collection].
 
   When evaluating Consult-related code snippets you should enable
   [lexical binding].  Consult often relies on lambdas and lexical
   closures.
 
+
+[evil-collection] <https://github.com/emacs-evil/evil-collection>
 
 [lexical binding]
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Lexical-Binding.html>
@@ -1361,6 +1371,8 @@ Table of Contents
   • [Marco Pawłowski] ([consult-flyspell], [consult-projectile])
   • [Enrique Kessler Martínez] ([consult-project-extra])
   • [Jan Gru] ([consult-org-roam])
+  • [Kanon Kakuno] ([consult-ag])
+  • [Robin Joy] ([consult-ls-git])
 
 
 [Counsel] <https://github.com/abo-abo/swiper#counsel>
@@ -1454,6 +1466,14 @@ Table of Contents
 [Jan Gru] <https://github.com/jgru>
 
 [consult-org-roam] <https://github.com/jgru/consult-org-roam>
+
+[Kanon Kakuno] <https://github.com/yadex205>
+
+[consult-ag] <https://github.com/yadex205/consult-ag>
+
+[Robin Joy] <https://github.com/rcj>
+
+[consult-ls-git] <https://github.com/rcj/consult-ls-git>
 
 
 9 Indices
