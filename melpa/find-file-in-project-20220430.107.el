@@ -5,7 +5,7 @@
 ;;
 ;; Version: 6.2.0
 ;; Package-Version: 20220430.107
-;; Package-Commit: 116b976b526680c038109882d5cd2d9f218b62a5
+;; Package-Commit: 6aaf0b2b9ee4990911d24450550cac90e64c6485
 ;; Author: Phil Hagelberg, Doug Alcorn, and Will Farrington
 ;; Maintainer: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/redguardtoo/find-file-in-project
