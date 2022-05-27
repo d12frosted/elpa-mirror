@@ -11,12 +11,16 @@ Table of Contents
 1 shellcop
 ══════════
 
+  [https://github.com/redguardtoo/shellcop/actions/workflows/test.yml/badge.svg]
   [file:https://elpa.nongnu.org/nongnu/shellcop.svg]
   [file:http://melpa.org/packages/shellcop-badge.svg]
   [file:http://stable.melpa.org/packages/shellcop-badge.svg]
 
   Analyze info&error in shell-mode.
 
+
+[https://github.com/redguardtoo/shellcop/actions/workflows/test.yml/badge.svg]
+<https://github.com/redguardtoo/shellcop/actions/workflows/test.yml>
 
 [file:https://elpa.nongnu.org/nongnu/shellcop.svg]
 <https://elpa.nongnu.org/nongnu/shellcop.html>

@@ -1356,7 +1356,7 @@
 	   (:authors
 	    ("Vitalie Spinu")))])
  (shellcop .
-	   [(0 0 9)
+	   [(0 1 0)
 	    ((emacs
 	      (25 1)))
 	    "Analyze info&error in shell-mode" tar
@@ -1365,7 +1365,7 @@
 	     (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 	     (:authors
 	      ("Chen Bin" . "chenbin.sh@gmail.com"))
-	     (:commit . "327f5ac43e5d543149a772aef06cdb616477eb43"))])
+	     (:commit . "4e71f5b9199a0ad10017104a6b2bf5ef5f207dfc"))])
  (slime .
 	[(2 26 1)
 	 ((cl-lib
