@@ -4,21 +4,23 @@ Source:  https://gitlab.com/python-mode-devs/python-mode.git
 
 Updating /mnt/store/melpa/working/python-mode/
 Checking out origin/HEAD
-Checking out 11e7bacc02efb23dbda8415692a648f5a067a699
+Checking out 31c6696c2b11d20a6832d009137575f75f49578c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/python-mode/
-  to /tmp/python-modeYOwyS2/python-mode-20220526.1953
+  to /tmp/python-modePEat7z/python-mode-20220527.926
     python-mode.el -> python-mode.el
     completion/pycomplete.el -> completion/pycomplete.el
     completion/pycomplete.py -> completion/pycomplete.py
-Created python-mode-20220526.1953.tar containing:
-  python-mode-20220526.1953/
-  python-mode-20220526.1953/completion/
-  python-mode-20220526.1953/completion/pycomplete.el
-  python-mode-20220526.1953/completion/pycomplete.py
-  python-mode-20220526.1953/python-mode-pkg.el
-  python-mode-20220526.1953/python-mode.el
-Built python-mode in 6.307s, finished at 2022-05-27T06:38:07+0000
+Created python-mode-20220527.926.tar containing:
+  python-mode-20220527.926/
+  python-mode-20220527.926/completion/
+  python-mode-20220527.926/completion/pycomplete.el
+  python-mode-20220527.926/completion/pycomplete.py
+  python-mode-20220527.926/python-mode-pkg.el
+  python-mode-20220527.926/python-mode.el
+Built python-mode in 7.671s, finished at 2022-05-27T10:11:41+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  500 May 27 06:38 packages/python-mode-20220526.1953.entry
 1.1M -rw-r--r-- 1 root root 1.1M May 27 06:38 packages/python-mode-20220526.1953.tar
+4.0K -rw-r--r-- 1 root root  499 May 27 10:11 packages/python-mode-20220527.926.entry
+1.1M -rw-r--r-- 1 root root 1.1M May 27 10:11 packages/python-mode-20220527.926.tar

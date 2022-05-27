@@ -4,19 +4,21 @@ Source:  https://github.com/nbarrientos/archive-rpm.git
 
 Updating /mnt/store/melpa/working/archive-rpm/
 Checking out origin/HEAD
-Checking out 515d2230352fffcc982ae2e322d95cbee6aca760
+Checking out cb48fee04cb0cbb26f760a3b95649f7dac78c6ec
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/archive-rpm/
-  to /tmp/archive-rpmeHvSTl/archive-rpm-20220314.1647
+  to /tmp/archive-rpmbOnHU5/archive-rpm-20220527.632
     archive-cpio.el -> archive-cpio.el
     archive-rpm-pkg.el -> archive-rpm-pkg.el
     archive-rpm.el -> archive-rpm.el
-Created archive-rpm-20220314.1647.tar containing:
-  archive-rpm-20220314.1647/
-  archive-rpm-20220314.1647/archive-cpio.el
-  archive-rpm-20220314.1647/archive-rpm-pkg.el
-  archive-rpm-20220314.1647/archive-rpm.el
-Built archive-rpm in 4.963s, finished at 2022-05-27T05:34:39+0000
+Created archive-rpm-20220527.632.tar containing:
+  archive-rpm-20220527.632/
+  archive-rpm-20220527.632/archive-cpio.el
+  archive-rpm-20220527.632/archive-rpm-pkg.el
+  archive-rpm-20220527.632/archive-rpm.el
+Built archive-rpm in 5.187s, finished at 2022-05-27T09:10:35+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 342 May 27 05:34 packages/archive-rpm-20220314.1647.entry
  32K -rw-r--r-- 1 root root 30K May 27 05:34 packages/archive-rpm-20220314.1647.tar
+4.0K -rw-r--r-- 1 root root 341 May 27 09:10 packages/archive-rpm-20220527.632.entry
+ 32K -rw-r--r-- 1 root root 30K May 27 09:10 packages/archive-rpm-20220527.632.tar
