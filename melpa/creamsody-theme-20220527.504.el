@@ -4,9 +4,9 @@
 
 ;; Authors: Jason Milkins <jasonm23@gmail.com>
 ;; URL: http://github.com/emacsfodder/emacs-theme-creamsody
-;; Package-Version: 20220516.1515
-;; Package-Commit: fdf66a8e47ebd71f7bb6509d4ad6044bc0ac02db
-;; Version: 0.3.7
+;; Package-Version: 20220527.504
+;; Package-Commit: c685648979963c3051a0bf70ed3f02bdc5caa15c
+;; Version: 0.3.9
 ;; Package-Requires: ((autothemer "0.2"))
 
 ;;; Commentary:
@@ -128,6 +128,7 @@
   (creamsody-turquoise4           "#61ACBB" "turquoise4"))
 
  ((default                                   (:foreground creamsody-foreground0 :background creamsody-background0))
+  (highlight                                 (:foreground creamsody-foreground0 :background creamsody-background2))
   (cursor                                    (:background creamsody-neutral_green))
   (link                                      (:foreground creamsody-bright_blue :underline t))
   (link-visited                              (:foreground creamsody-bright_blue :underline nil))
