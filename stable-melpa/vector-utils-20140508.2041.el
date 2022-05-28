@@ -5,6 +5,8 @@
 ;; Author: Roland Walker <walker@pobox.com>
 ;; Homepage: http://github.com/rolandwalker/vector-utils
 ;; URL: http://raw.githubusercontent.com/rolandwalker/vector-utils/master/vector-utils.el
+;; Package-Version: 20140508.2041
+;; Package-Commit: c38ca1c6a23b2b51a6ac36c2c64e50e21cbe9d21
 ;; Version: 0.1.2
 ;; Last-Updated: 24 Oct 2013
 ;; EmacsWiki: VectorUtils
