@@ -5,7 +5,7 @@
 ;; Author: Axel Forsman <axelsfor@gmail.com>
 ;; Version: 0.1
 ;; Package-Version: 20220527.853
-;; Package-Commit: 21fe545d5ff110aebc9ea157548614d2640cb863
+;; Package-Commit: 7baf5a0c34d69a8be689a8fa7e5d8d351667f204
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/axelf4/hotfuzz
