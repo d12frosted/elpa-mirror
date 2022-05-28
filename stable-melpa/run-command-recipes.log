@@ -4,34 +4,40 @@ Source:  https://github.com/semenInRussia/emacs-run-command-recipes.git
 
 Updating /mnt/store/melpa/working/run-command-recipes/
 Checking out origin/HEAD
-Checking out 9dca87b2e162cc3ecfedca9203e7ec6654ac2e10
+Checking out af6b6f4f34f471b43859cc13afc550892e08aca8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/run-command-recipes/
-  to /tmp/run-command-recipesPzJdjJ/run-command-recipes-20220526.1930
+  to /tmp/run-command-recipeseMfL61/run-command-recipes-20220528.1245
+    run-command-recipes-c.el -> run-command-recipes-c.el
     run-command-recipes-elisp.el -> run-command-recipes-elisp.el
     run-command-recipes-hashtables.el -> run-command-recipes-hashtables.el
     run-command-recipes-haskell.el -> run-command-recipes-haskell.el
     run-command-recipes-latex.el -> run-command-recipes-latex.el
+    run-command-recipes-lib.el -> run-command-recipes-lib.el
     run-command-recipes-pandoc.el -> run-command-recipes-pandoc.el
     run-command-recipes-project.el -> run-command-recipes-project.el
     run-command-recipes-python.el -> run-command-recipes-python.el
     run-command-recipes-rust.el -> run-command-recipes-rust.el
     run-command-recipes-template.el -> run-command-recipes-template.el
     run-command-recipes.el -> run-command-recipes.el
-Created run-command-recipes-20220526.1930.tar containing:
-  run-command-recipes-20220526.1930/
-  run-command-recipes-20220526.1930/run-command-recipes-elisp.el
-  run-command-recipes-20220526.1930/run-command-recipes-hashtables.el
-  run-command-recipes-20220526.1930/run-command-recipes-haskell.el
-  run-command-recipes-20220526.1930/run-command-recipes-latex.el
-  run-command-recipes-20220526.1930/run-command-recipes-pandoc.el
-  run-command-recipes-20220526.1930/run-command-recipes-pkg.el
-  run-command-recipes-20220526.1930/run-command-recipes-project.el
-  run-command-recipes-20220526.1930/run-command-recipes-python.el
-  run-command-recipes-20220526.1930/run-command-recipes-rust.el
-  run-command-recipes-20220526.1930/run-command-recipes-template.el
-  run-command-recipes-20220526.1930/run-command-recipes.el
-Built run-command-recipes in 4.811s, finished at 2022-05-28T10:23:02+0000
+Created run-command-recipes-20220528.1245.tar containing:
+  run-command-recipes-20220528.1245/
+  run-command-recipes-20220528.1245/run-command-recipes-c.el
+  run-command-recipes-20220528.1245/run-command-recipes-elisp.el
+  run-command-recipes-20220528.1245/run-command-recipes-hashtables.el
+  run-command-recipes-20220528.1245/run-command-recipes-haskell.el
+  run-command-recipes-20220528.1245/run-command-recipes-latex.el
+  run-command-recipes-20220528.1245/run-command-recipes-lib.el
+  run-command-recipes-20220528.1245/run-command-recipes-pandoc.el
+  run-command-recipes-20220528.1245/run-command-recipes-pkg.el
+  run-command-recipes-20220528.1245/run-command-recipes-project.el
+  run-command-recipes-20220528.1245/run-command-recipes-python.el
+  run-command-recipes-20220528.1245/run-command-recipes-rust.el
+  run-command-recipes-20220528.1245/run-command-recipes-template.el
+  run-command-recipes-20220528.1245/run-command-recipes.el
+Built run-command-recipes in 5.267s, finished at 2022-05-28T13:44:50+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 568 May 28 10:23 packages/run-command-recipes-20220526.1930.entry
  52K -rw-r--r-- 1 root root 50K May 28 10:23 packages/run-command-recipes-20220526.1930.tar
+4.0K -rw-r--r-- 1 root root 568 May 28 13:44 packages/run-command-recipes-20220528.1245.entry
+ 60K -rw-r--r-- 1 root root 60K May 28 13:44 packages/run-command-recipes-20220528.1245.tar

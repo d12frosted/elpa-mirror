@@ -4,10 +4,10 @@ Source:  https://github.com/magnars/multiple-cursors.el.git
 
 Updating /mnt/store/melpa/working/multiple-cursors/
 Checking out origin/HEAD
-Checking out 2f003612b7e5a37d6cf2b26a9be455f727814966
+Checking out fd8441bfc8738d463601823e5a3d9c2d7123bfbf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/multiple-cursors/
-  to /tmp/multiple-cursorsKA6sqi/multiple-cursors-20220328.1724
+  to /tmp/multiple-cursorsxAcfiz/multiple-cursors-20220528.1215
     mc-cycle-cursors.el -> mc-cycle-cursors.el
     mc-edit-lines.el -> mc-edit-lines.el
     mc-hide-unmatched-lines-mode.el -> mc-hide-unmatched-lines-mode.el
@@ -18,19 +18,21 @@ Copying files (->) and directories (=>)
     multiple-cursors-pkg.el -> multiple-cursors-pkg.el
     multiple-cursors.el -> multiple-cursors.el
     rectangular-region-mode.el -> rectangular-region-mode.el
-Created multiple-cursors-20220328.1724.tar containing:
-  multiple-cursors-20220328.1724/
-  multiple-cursors-20220328.1724/mc-cycle-cursors.el
-  multiple-cursors-20220328.1724/mc-edit-lines.el
-  multiple-cursors-20220328.1724/mc-hide-unmatched-lines-mode.el
-  multiple-cursors-20220328.1724/mc-mark-more.el
-  multiple-cursors-20220328.1724/mc-mark-pop.el
-  multiple-cursors-20220328.1724/mc-separate-operations.el
-  multiple-cursors-20220328.1724/multiple-cursors-core.el
-  multiple-cursors-20220328.1724/multiple-cursors-pkg.el
-  multiple-cursors-20220328.1724/multiple-cursors.el
-  multiple-cursors-20220328.1724/rectangular-region-mode.el
-Built multiple-cursors in 5.232s, finished at 2022-05-28T10:06:48+0000
+Created multiple-cursors-20220528.1215.tar containing:
+  multiple-cursors-20220528.1215/
+  multiple-cursors-20220528.1215/mc-cycle-cursors.el
+  multiple-cursors-20220528.1215/mc-edit-lines.el
+  multiple-cursors-20220528.1215/mc-hide-unmatched-lines-mode.el
+  multiple-cursors-20220528.1215/mc-mark-more.el
+  multiple-cursors-20220528.1215/mc-mark-pop.el
+  multiple-cursors-20220528.1215/mc-separate-operations.el
+  multiple-cursors-20220528.1215/multiple-cursors-core.el
+  multiple-cursors-20220528.1215/multiple-cursors-pkg.el
+  multiple-cursors-20220528.1215/multiple-cursors.el
+  multiple-cursors-20220528.1215/rectangular-region-mode.el
+Built multiple-cursors in 5.345s, finished at 2022-05-28T13:27:44+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  395 May 28 10:06 packages/multiple-cursors-20220328.1724.entry
 112K -rw-r--r-- 1 root root 110K May 28 10:06 packages/multiple-cursors-20220328.1724.tar
+4.0K -rw-r--r-- 1 root root  395 May 28 13:27 packages/multiple-cursors-20220528.1215.entry
+112K -rw-r--r-- 1 root root 110K May 28 13:27 packages/multiple-cursors-20220528.1215.tar

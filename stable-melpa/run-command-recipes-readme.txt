@@ -17,3 +17,4 @@ Also Instead of LaTeX and pandoc you can use something from this:
 - elisp
 - rust
 - python
+- c

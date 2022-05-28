@@ -4,7 +4,7 @@
 
 ;; Version: 1.8
 ;; Package-Version: 20220519.900
-;; Package-Commit: 2b87b06d9ef15e7c39d87fd5a4375b6deaa7e322
+;; Package-Commit: aa50b4bb9e52d15472c7a4f9c6101506dfa4f8b4
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
