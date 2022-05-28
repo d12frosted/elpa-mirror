@@ -15,4 +15,3 @@ Usage,
  Tips,
   - See `shenshou-curl-extra-options' on how to set SOCKS5 or HTTP proxy
   - This program gives you the freedom to select the right subtitle.
-    For example, a DVD ripped video might match the DVD ripped subtitle.
