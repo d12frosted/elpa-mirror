@@ -1,0 +1,11 @@
+(adoc-mode .
+	   [(20220529 551)
+	    ((markup-faces
+	      (1 0 0)))
+	    "a major-mode for editing AsciiDoc files in Emacs" single
+	    ((:commit . "02f53a301b8e5b6e4934b47ab326892f70719c32")
+	     (:authors
+	      ("Florian Kaufmann" . "sensorflo@gmail.com"))
+	     (:maintainer "Florian Kaufmann" . "sensorflo@gmail.com")
+	     (:keywords "wp" "asciidoc")
+	     (:url . "https://github.com/sensorflo/adoc-mode/wiki"))])

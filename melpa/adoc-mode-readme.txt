@@ -66,10 +66,12 @@ packages library is already included. adoc-mode is on the
 
 Each of the following is optional
 
-* According to AsciiDoc manual, .txt is the standard file extension of
+* According to an old AsciiDoc manual, .txt is the standard file extension of
   AsciiDoc files. Add the following to your initialization file to open all
   .txt files with adoc-mode as major mode automatically: `(add-to-list
-  'auto-mode-alist (cons "\\.txt\\'" 'adoc-mode))`
+  'auto-mode-alist (cons "\\.txt\\'" 'adoc-mode))`.
+  More recent conventions for AsciiDoc file extensions include `.adoc` and
+  `.asciidoc`, these are associated automatically.
 
 * If your default face is a fixed pitch (monospace) face, but in AsciiDoc
   files you liked to have normal text with a variable pitch face,
