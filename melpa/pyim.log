@@ -4,19 +4,22 @@ Source:  https://github.com/tumashu/pyim.git
 
 Updating /mnt/store/melpa/working/pyim/
 Checking out origin/HEAD
-Checking out c982b3fc3f51324eb7b451ce4684d14361b88e40
+Checking out 01a924ba8c3b523f8b3e5682a5ad521adf1d16cd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pyim/
-  to /tmp/pyimZYVPYD/pyim-20220528.343
+  to /tmp/pyimTtFuct/pyim-20220528.2307
     pyim-autoselector.el -> pyim-autoselector.el
     pyim-candidates.el -> pyim-candidates.el
     pyim-cloudim.el -> pyim-cloudim.el
     pyim-codes.el -> pyim-codes.el
     pyim-common.el -> pyim-common.el
+    pyim-cregexp-utils.el -> pyim-cregexp-utils.el
     pyim-cregexp.el -> pyim-cregexp.el
+    pyim-cstring-utils.el -> pyim-cstring-utils.el
     pyim-cstring.el -> pyim-cstring.el
     pyim-dcache.el -> pyim-dcache.el
     pyim-dhashcache.el -> pyim-dhashcache.el
+    pyim-dict-manager.el -> pyim-dict-manager.el
     pyim-dict.el -> pyim-dict.el
     pyim-dregcache.el -> pyim-dregcache.el
     pyim-entered.el -> pyim-entered.el
@@ -34,36 +37,39 @@ Copying files (->) and directories (=>)
     pyim-pymap.el -> pyim-pymap.el
     pyim-scheme.el -> pyim-scheme.el
     pyim.el -> pyim.el
-Created pyim-20220528.343.tar containing:
-  pyim-20220528.343/
-  pyim-20220528.343/pyim-autoselector.el
-  pyim-20220528.343/pyim-candidates.el
-  pyim-20220528.343/pyim-cloudim.el
-  pyim-20220528.343/pyim-codes.el
-  pyim-20220528.343/pyim-common.el
-  pyim-20220528.343/pyim-cregexp.el
-  pyim-20220528.343/pyim-cstring.el
-  pyim-20220528.343/pyim-dcache.el
-  pyim-20220528.343/pyim-dhashcache.el
-  pyim-20220528.343/pyim-dict.el
-  pyim-20220528.343/pyim-dregcache.el
-  pyim-20220528.343/pyim-entered.el
-  pyim-20220528.343/pyim-imobjs.el
-  pyim-20220528.343/pyim-indicator.el
-  pyim-20220528.343/pyim-liberime.el
-  pyim-20220528.343/pyim-outcome.el
-  pyim-20220528.343/pyim-page.el
-  pyim-20220528.343/pyim-pinyin.el
-  pyim-20220528.343/pyim-pkg.el
-  pyim-20220528.343/pyim-preview.el
-  pyim-20220528.343/pyim-probe.el
-  pyim-20220528.343/pyim-process.el
-  pyim-20220528.343/pyim-punctuation.el
-  pyim-20220528.343/pyim-pymap-utils.el
-  pyim-20220528.343/pyim-pymap.el
-  pyim-20220528.343/pyim-scheme.el
-  pyim-20220528.343/pyim.el
-Built pyim in 10.645s, finished at 2022-05-28T20:44:33+0000
+Created pyim-20220528.2307.tar containing:
+  pyim-20220528.2307/
+  pyim-20220528.2307/pyim-autoselector.el
+  pyim-20220528.2307/pyim-candidates.el
+  pyim-20220528.2307/pyim-cloudim.el
+  pyim-20220528.2307/pyim-codes.el
+  pyim-20220528.2307/pyim-common.el
+  pyim-20220528.2307/pyim-cregexp-utils.el
+  pyim-20220528.2307/pyim-cregexp.el
+  pyim-20220528.2307/pyim-cstring-utils.el
+  pyim-20220528.2307/pyim-cstring.el
+  pyim-20220528.2307/pyim-dcache.el
+  pyim-20220528.2307/pyim-dhashcache.el
+  pyim-20220528.2307/pyim-dict-manager.el
+  pyim-20220528.2307/pyim-dict.el
+  pyim-20220528.2307/pyim-dregcache.el
+  pyim-20220528.2307/pyim-entered.el
+  pyim-20220528.2307/pyim-imobjs.el
+  pyim-20220528.2307/pyim-indicator.el
+  pyim-20220528.2307/pyim-liberime.el
+  pyim-20220528.2307/pyim-outcome.el
+  pyim-20220528.2307/pyim-page.el
+  pyim-20220528.2307/pyim-pinyin.el
+  pyim-20220528.2307/pyim-pkg.el
+  pyim-20220528.2307/pyim-preview.el
+  pyim-20220528.2307/pyim-probe.el
+  pyim-20220528.2307/pyim-process.el
+  pyim-20220528.2307/pyim-punctuation.el
+  pyim-20220528.2307/pyim-pymap-utils.el
+  pyim-20220528.2307/pyim-pymap.el
+  pyim-20220528.2307/pyim-scheme.el
+  pyim-20220528.2307/pyim.el
+Built pyim in 5.403s, finished at 2022-05-29T03:32:02+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  477 May 28 20:44 packages/pyim-20220528.343.entry
-460K -rw-r--r-- 1 root root 460K May 28 20:44 packages/pyim-20220528.343.tar
+4.0K -rw-r--r-- 1 root root  478 May 29 03:32 packages/pyim-20220528.2307.entry
+472K -rw-r--r-- 1 root root 470K May 29 03:32 packages/pyim-20220528.2307.tar
