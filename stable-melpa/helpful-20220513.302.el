@@ -5,7 +5,7 @@
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/helpful
 ;; Package-Version: 20220513.302
-;; Package-Commit: 2f91e7992dae078a9cbc0d7f8e603e02d0abfcb0
+;; Package-Commit: 209971ba9f576ba080352642cfbf25df5692b1d7
 ;; Keywords: help, lisp
 ;; Version: 0.20
 ;; Package-Requires: ((emacs "25") (dash "2.18.0") (s "1.11.0") (f "0.20.0") (elisp-refs "1.2"))

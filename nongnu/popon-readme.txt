@@ -6,7 +6,12 @@
 Table of Contents
 ─────────────────
 
-1. Usage
+1. Installation
+.. 1. Package
+.. 2. Quelpa
+.. 3. Straight.el
+.. 4. Manual
+2. Usage
 
 
 Popon allows you to pop text on a window, what we call a popon.  Popons
@@ -14,11 +19,44 @@ are window-local and sticky, they don't move while scrolling, and they
 even don't go away when switching buffer, but you can bind a popon to a
 specific buffer to only show on that buffer.
 
-If some popons annoying you and you can't kill them, do `M-x
+If some popons are annoying you and you can't kill them, do `M-x
 popon-kill-all' to kill all popons.
 
 
-1 Usage
+1 Installation
+══════════════
+
+1.1 Package
+───────────
+
+  Install from NonGNU ELPA.
+
+
+1.2 Quelpa
+──────────
+
+  ┌────
+  │ (quelpa '(popon :fetcher git
+  │ 		:url "https://codeberg.org/akib/emacs-popon.git"))
+  └────
+
+
+1.3 Straight.el
+───────────────
+
+  ┌────
+  │ (straight-use-package
+  │  '(popon :type git :repo "https://codeberg.org/akib/emacs-popon.git"))
+  └────
+
+
+1.4 Manual
+──────────
+
+  Download `popon.el' and put it in your `load-path'.
+
+
+2 Usage
 ═══════
 
   The main entry point is `popon-create', which creates a popon and

@@ -1,5 +1,5 @@
-This file contains a VC backend for the Game of Trees (got) version
-control system.
+vc-got is a VC backend for the Game of Trees (got) version control
+system.
 
 Backend implementation status
 
@@ -91,13 +91,3 @@ MISCELLANEOUS                        NOT IMPLEMENTED
 - extra-dir-menu                     NOT IMPLEMENTED, same as above
 - conflicted-files                   DONE
 - repository-url                     DONE
-
-TODO: vc-git has most function that starts with:
-
-   (let* ((root (vc-git-root default-directory))
-          (buffer (format "*vc-git : %s*" (expand-file-name root)))
-          ...)
-     ...)
-
-we should 1) investigate if also other backends do something like
-this (or if there is a better way) and 2) try to do the same.

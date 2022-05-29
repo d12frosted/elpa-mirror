@@ -3241,17 +3241,17 @@
 	      (:authors
 	       ("Philip Kaludercic" . "philipk@posteo.net")))])
  (vc-got .
-	 [(1 1)
+	 [(1 1 1)
 	  ((emacs
 	    (25 1)))
 	  "VC backend for Game of Trees VCS" tar
-	  ((:url . "https://git.omarpolo.com/vc-got/")
+	  ((:url . "https://projects.omarpolo.com/vc-got.html")
 	   (:keywords "vc" "tools")
 	   (:maintainer "Omar Polo" . "op@omarpolo.com")
 	   (:authors
 	    ("Omar Polo" . "op@omarpolo.com")
 	    ("Timo Myyrä" . "timo.myyra@bittivirhe.fi"))
-	   (:commit . "86d9909a7e54c02179e40afd05693c00f6689edc"))])
+	   (:commit . "18cc42ab3c12d124fb013923f4583dd25ffe5dcd"))])
  (vc-hgcmd .
 	   [(1 14 1)
 	    ((emacs
