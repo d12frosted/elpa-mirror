@@ -4,9 +4,9 @@
 
 ;; Author: Yuwei Tian <ibluefocus@NOSPAM.gmail.com>
 ;; URL: https://github.com/galeo/corfu-doc
-;; Package-Version: 20220529.1726
-;; Package-Commit: d89012ed6a9661fb328f8e96991f952dfdfb6ceb
-;; Version: 0.6.1
+;; Package-Version: 20220530.908
+;; Package-Commit: d7d7c27703cdbe8b42497b300e82706c6edce96e
+;; Version: 0.6.2
 ;; Keywords: corfu popup documentation convenience
 ;; Package-Requires: ((emacs "26.0")(corfu "0.16.0"))
 
@@ -385,7 +385,7 @@ FWIDTH and FHEIGHT."
   (unless (corfu-doc--popup-visible-p)
     (make-frame-visible corfu-doc--frame))
   (when (corfu-doc--cf-popup-edges-changed-p)
-    (apply #'corfu--set-frame-position
+    (apply #'corfu-doc--set-frame-position
            corfu-doc--frame
            (corfu-doc--calculate-doc-frame-position
             (frame-pixel-width corfu-doc--frame)

@@ -1,13 +1,13 @@
 ;;; super-save.el --- Auto-save buffers, based on your activity. -*- lexical-binding: t -*-
 
-;; Copyright © 2015-2020 Bozhidar Batsov <bozhidar@batsov.com>
+;; Copyright © 2015-2022 Bozhidar Batsov <bozhidar@batsov.com>
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/super-save
-;; Package-Version: 20220426.1056
-;; Package-Commit: 71c26cbd47d993fff37e572523ea79c9c49f5caf
+;; Package-Version: 20220530.647
+;; Package-Commit: e1ef852f6ff91bdbd137d7cc89c670343153fe4f
 ;; Keywords: convenience
-;; Version: 0.3.0
+;; Version: 0.4.0-snapshot
 ;; Package-Requires: ((emacs "24.4"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -82,8 +82,10 @@ When a buffer-file-name matches any of the regexps it is ignored."
   :type '(repeat (choice regexp))
   :package-version '(super-save . "0.4.0"))
 
-(defcustom super-save-max-buffer-size 10000
-  "Maximal Size of buffer, for which super-save work."
+(defcustom super-save-max-buffer-size nil
+  "Maximal size of buffer (in characters), for which super-save work.
+Exists mostly because saving constantly huge buffers can be slow in some cases.
+Set to 0 or nil to disable."
   :group 'super-save
   :type 'integer
   :package-version '(super-save . "0.4.0"))
@@ -92,13 +94,13 @@ When a buffer-file-name matches any of the regexps it is ignored."
   '((lambda () buffer-file-name)
     (lambda () (buffer-modified-p (current-buffer)))
     (lambda () (file-writable-p buffer-file-name))
-    (lambda () (< (buffer-size) super-save-max-buffer-size))
+    (lambda () (and super-save-max-buffer-size (> super-save-max-buffer-size 0) (< (buffer-size) super-save-max-buffer-size)))
     (lambda ()
       (if (file-remote-p buffer-file-name) super-save-remote-files t))
     (lambda () (super-save-include-p buffer-file-name)))
-  "Predicates, which return nil, when current buffer dont't need to save.
-Predicates not take arguments, if predicate.  If predicate don't know about
-need this buffer to super-save or not, then its must return t."
+  "Predicates, which return nil, when current buffer doesn't need to be saved.
+Predicate functions don't take any arguments.  If a predicate doesn't know
+whether this buffer needs to be super-saved or not, then it must return t."
   :group 'super-save
   :type 'integer
   :package-version '(super-save . "0.4.0"))
@@ -117,8 +119,10 @@ need this buffer to super-save or not, then its must return t."
     keepit))
 
 (defun super-save-p ()
-  "Return nil, when current buffer not need to save.
-Otherwise return t.  This function use variable `super-save-predicates'"
+  "Return t when current buffer should be saved..
+Otherwise return nil.
+
+This function relies on the variable `super-save-predicates'."
   (let ((preds super-save-predicates)
         (save-flag t)
         current-pred)

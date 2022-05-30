@@ -5,9 +5,10 @@ Source:  https://github.com/alezost/guix.el.git
 Updating /mnt/store/melpa/working/guix/
 Checking out origin/HEAD
 Checking out c9aef52121b458297e70bb50f49f7276b4a8d759
+Checking out c9aef52121b458297e70bb50f49f7276b4a8d759
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/guix/
-  to /tmp/guixXpm83j/guix-20210608.1653
+  to /tmp/guixp551RR/guix-20210608.1653
   ! elisp/guix-about.el -> guix-about.el
   ! elisp/guix-auto-mode.el -> guix-auto-mode.el
   ! elisp/guix-build-log.el -> guix-build-log.el
@@ -55,7 +56,7 @@ Copying files (->) and directories (=>)
     images/guix-logo.svg -> images/guix-logo.svg
     scheme/emacs-guix => scheme/emacs-guix
     scheme/emacs-guix.scm -> scheme/emacs-guix.scm
-Generating /tmp/guixXpm83j/guix-20210608.1653/emacs-guix.info
+Generating /tmp/guixp551RR/guix-20210608.1653/emacs-guix.info
 Created guix-20210608.1653.tar containing:
   guix-20210608.1653/
   guix-20210608.1653/dir
@@ -126,7 +127,7 @@ Created guix-20210608.1653.tar containing:
   guix-20210608.1653/scheme/emacs-guix/system-generations.scm
   guix-20210608.1653/scheme/emacs-guix/system.scm
   guix-20210608.1653/scheme/emacs-guix/utils.scm
-Built guix in 14.934s, finished at 2022-05-30T04:33:09+0000
+Built guix in 10.934s, finished at 2022-05-30T11:40:37+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  435 May 30 04:33 packages/guix-20210608.1653.entry
-752K -rw-r--r-- 1 root root 750K May 30 04:33 packages/guix-20210608.1653.tar
+4.0K -rw-r--r-- 1 root root  435 May 30 11:40 packages/guix-20210608.1653.entry
+752K -rw-r--r-- 1 root root 750K May 30 11:40 packages/guix-20210608.1653.tar
