@@ -11,6 +11,11 @@ This package lets you run and kill SSH tunnels.  To use it:
            :type "-R"
            :local-port 1234
            :remote-port 3306
+           :login "me@host")
+          (:name "my local socket tunnel"
+           :type "-L"
+           :local-socket "/tmp/socket"
+           :remote-socket "/tmp/socket"
            :login "me@host")))
 
 - Type M-x ssh-tunnels RET

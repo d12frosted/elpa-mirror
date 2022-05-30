@@ -3,8 +3,8 @@
 ;; Author: contrapunctus <xmpp:contrapunctus@jabber.fr>
 ;; Maintainer: contrapunctus <xmpp:contrapunctus@jabber.fr>
 ;; Keywords: multimedia
-;; Package-Version: 20220511.1818
-;; Package-Commit: 0449244925cb7b74956736611c30cea1f4d0672c
+;; Package-Version: 20220530.14
+;; Package-Commit: 47f5b2fbb94c569dc5e71cbe4de9c6eabbbc69e8
 ;; Homepage: https://tildegit.org/contrapunctus/sxiv
 ;; Package-Requires: ((dash "2.16.0") (emacs "25.1"))
 ;; Version: 0.4.1
@@ -105,13 +105,26 @@ Return PATHS unchanged."
 OUTPUT is the output of the sxiv process as a string."
   (run-hook-with-args 'sxiv-after-exit-functions process output))
 
+(defun sxiv-dired-map-files (fun)
+  "Like `dired-map-dired-file-lines', but include directories too."
+  (save-excursion
+    (let (file buffer-read-only)
+      (goto-char (point-min))
+      (while (not (eobp))
+	(save-excursion
+	  (and (not (eolp))
+	       (setq file (dired-get-filename nil t))
+	       (progn (end-of-line)
+		      (funcall fun file))))
+	(forward-line 1)))))
+
 (defun sxiv-paths-raw ()
   "Return a list of strings containing absolute paths to files."
   (cond ((derived-mode-p 'dired-mode)
          (if (sxiv-dired-marked-files-p)
              (dired-get-marked-files)
            (let (list)
-             (dired-map-dired-file-lines
+             (sxiv-dired-map-files
               (lambda (name)
                 (setq list (cons name list))))
              (reverse list))))

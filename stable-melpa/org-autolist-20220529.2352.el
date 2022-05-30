@@ -1,13 +1,13 @@
 ;;; org-autolist.el --- Improved list management in org-mode
 
-;; Copyright (C) 2017 Calvin Young
+;; Copyright (C) 2022 Calvin Young
 
 ;; Author: Calvin Young
 ;; Keywords: lists, checklists, org-mode
-;; Package-Version: 20211225.658
-;; Package-Commit: 48666001f9ae1fdf9e295410d5a494e79284e2f7
+;; Package-Version: 20220529.2352
+;; Package-Commit: ce66b32de2fbf9e77583cefba89820f58fab6856
 ;; Homepage: https://github.com/calvinwyoung/org-autolist
-;; Version: 0.14
+;; Version: 0.15
 
 ;; This file is not part of GNU Emacs.
 
@@ -127,7 +127,9 @@ automatically insert new list items.
     (if (and is-listitem
           (not
             (and org-return-follows-link
-              (eq 'org-link (get-text-property (point) 'face)))))
+                 (member (car (org-element-context))
+                         '( link citation footnote-reference citation-reference
+                            timestamp)))))
       ;; If we're at the beginning of an empty list item, then try to outdent
       ;; it. If it can't be outdented (b/c it's already at the outermost
       ;; indentation level), then delete it.
