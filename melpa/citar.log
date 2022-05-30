@@ -2,12 +2,12 @@ Package: citar
 Fetcher: github
 Source:  https://github.com/emacs-citar/citar.git
 
-Cloning https://github.com/emacs-citar/citar.git to /mnt/store/melpa/working/citar/
+Updating /mnt/store/melpa/working/citar/
 Checking out origin/HEAD
-Checking out 58da24d8316b0ac7f76067ec45d6074747e49245
+Checking out 56477158e7fd350c0a3a0f11bc3008a0041c415f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citar/
-  to /tmp/citarvGvoEN/citar-20220529.1024
+  to /tmp/citaryfK305/citar-20220529.1832
     citar-citeproc.el -> citar-citeproc.el
     citar-file.el -> citar-file.el
     citar-filenotify.el -> citar-filenotify.el
@@ -15,19 +15,19 @@ Copying files (->) and directories (=>)
     citar-markdown.el -> citar-markdown.el
     citar-org.el -> citar-org.el
     citar.el -> citar.el
-Created citar-20220529.1024.tar containing:
-  citar-20220529.1024/
-  citar-20220529.1024/citar-citeproc.el
-  citar-20220529.1024/citar-file.el
-  citar-20220529.1024/citar-filenotify.el
-  citar-20220529.1024/citar-latex.el
-  citar-20220529.1024/citar-markdown.el
-  citar-20220529.1024/citar-org.el
-  citar-20220529.1024/citar-pkg.el
-  citar-20220529.1024/citar.el
-Built citar in 10.449s, finished at 2022-05-29T13:05:23+0000
+Created citar-20220529.1832.tar containing:
+  citar-20220529.1832/
+  citar-20220529.1832/citar-citeproc.el
+  citar-20220529.1832/citar-file.el
+  citar-20220529.1832/citar-filenotify.el
+  citar-20220529.1832/citar-latex.el
+  citar-20220529.1832/citar-markdown.el
+  citar-20220529.1832/citar-org.el
+  citar-20220529.1832/citar-pkg.el
+  citar-20220529.1832/citar.el
+Built citar in 5.561s, finished at 2022-05-29T20:34:54+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  403 May 29 09:37 packages/citar-20220528.2331.entry
-120K -rw-r--r-- 1 root root 120K May 29 09:37 packages/citar-20220528.2331.tar
-4.0K -rw-r--r-- 1 root root  403 May 29 13:05 packages/citar-20220529.1024.entry
-120K -rw-r--r-- 1 root root 120K May 29 13:05 packages/citar-20220529.1024.tar
+4.0K -rw-r--r-- 1 root root  403 May 29 16:38 packages/citar-20220529.1024.entry
+120K -rw-r--r-- 1 root root 120K May 29 16:38 packages/citar-20220529.1024.tar
+4.0K -rw-r--r-- 1 root root  403 May 29 20:34 packages/citar-20220529.1832.entry
+120K -rw-r--r-- 1 root root 120K May 29 20:34 packages/citar-20220529.1832.tar

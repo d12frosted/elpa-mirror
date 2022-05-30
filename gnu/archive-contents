@@ -3338,15 +3338,16 @@
 	     (:maintainer "Ian Dunn" . "dunni@gnu.org")
 	     (:url . "https://elpa.gnu.org/packages/vigenere.html"))])
  (visual-filename-abbrev .
-			 [(1 1)
+			 [(1 2)
 			  ((emacs
 			    (26 1)))
 			  "Visually abbreviate filenames" tar
-			  ((:maintainer "Tassilo Horn" . "tsdh@gnu.org")
+			  ((:keywords "tools")
+			   (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
 			   (:authors
 			    ("Tassilo Horn" . "tsdh@gnu.org"))
-			   (:keywords "tools")
-			   (:url . "https://elpa.gnu.org/packages/visual-filename-abbrev.html"))])
+			   (:url . "https://elpa.gnu.org/packages/visual-filename-abbrev.html")
+			   (:commit . "3c1a54e2cec935126a74e40920f2cb7929fa4e75"))])
  (visual-fill .
 	      [(0 1)
 	       nil "Auto-refill paragraphs without modifying the buffer" single

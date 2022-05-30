@@ -208,7 +208,7 @@
 			   (:authors
 			    ("Julien Barnier")))])
  (corfu-terminal .
-		 [(0 2)
+		 [(0 3)
 		  ((emacs
 		    (26 1))
 		   (corfu
@@ -221,7 +221,7 @@
 		   (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 		   (:authors
 		    ("Akib Azmain Turja" . "akib@disroot.org"))
-		   (:commit . "15c1b149cf1bda0f928b706be4b5050afa1699e0"))])
+		   (:commit . "e9cae1b23a252ae497f3564b9f588be807337b35"))])
  (crux .
        [(0 4 0)
 	((seq

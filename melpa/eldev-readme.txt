@@ -1,4 +1,4 @@
-Eldev (Elisp Development Tool) is an Emacs-based build system,
+Eldev (Elisp development tool) is an Emacs-based build system,
 targeted solely at Elisp projects.  It is an alternative to Cask.
 Unlike Cask, Eldev itself is fully written in Elisp and its
 configuration files are also Elisp programs.  If you are familiar
