@@ -3,3 +3,21 @@ Fetcher: github
 Source:  https://github.com/ocaml/dune.git
 
 Updating /mnt/store/melpa/working/dune/
+Checking out origin/HEAD
+Checking out 74fb788b2a4936b82d584ae42fbd2f728b560c99
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dune/
+  to /tmp/duneNjG381/dune-20210909.1010
+  ! editor-integration/emacs/dune-flymake.el -> dune-flymake.el
+  ! editor-integration/emacs/dune-watch.el -> dune-watch.el
+  ! editor-integration/emacs/dune.el -> dune.el
+Created dune-20210909.1010.tar containing:
+  dune-20210909.1010/
+  dune-20210909.1010/dune-flymake.el
+  dune-20210909.1010/dune-pkg.el
+  dune-20210909.1010/dune-watch.el
+  dune-20210909.1010/dune.el
+Built dune in 14.495s, finished at 2022-05-30T07:58:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 195 May 30 07:58 packages/dune-20210909.1010.entry
+ 40K -rw-r--r-- 1 root root 40K May 30 07:58 packages/dune-20210909.1010.tar

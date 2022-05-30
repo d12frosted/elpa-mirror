@@ -1,13 +1,13 @@
 ;;; ebuku.el --- Interface to the buku Web bookmark manager -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2021  Alexis <flexibeast@gmail.com>, Erik Sjöstrand <sjostrand.erik@gmail.com>, Junji Zhi [https://github.com/junjizhi]
+;; Copyright (C) 2019-2022  Alexis <flexibeast@gmail.com>, Erik Sjöstrand <sjostrand.erik@gmail.com>, Junji Zhi [https://github.com/junjizhi]
 
 ;; Author: Alexis <flexibeast@gmail.com>, Erik Sjöstrand <sjostrand.erik@gmail.com>, Junji Zhi [https://github.com/junjizhi]
 ;; Maintainer: Alexis <flexibeast@gmail.com>
 ;; Created: 2019-11-07
 ;; URL: https://github.com/flexibeast/ebuku
-;; Package-Version: 20220526.331
-;; Package-Commit: fbd9e36c701e945c12fea7037452cefbf4d0eae3
+;; Package-Version: 20220530.453
+;; Package-Commit: 83ec048a6d9b5376b4416ec8a07c14f243a1b45f
 ;; Keywords: bookmarks,buku,data,web,www
 ;; Version: 0
 ;; Package-Requires: ((emacs "25.1"))
@@ -223,6 +223,12 @@ Set this variable to 0 for no maximum."
   :type 'integer
   :group 'ebuku)
 
+(defcustom ebuku-post-deletion-point-location 'previous
+  "Bookmark to which point should be moved after a deletion."
+  :type '(radio (const :tag "Previous" previous)
+                (const :tag "Next" next))
+  :group 'ebuku)
+
 (defcustom ebuku-retrieve-url-metadata t
   "Whether to automatically retrieve URL metadata when adding a bookmark."
   :type 'boolean
@@ -317,6 +323,9 @@ Set this variable to 0 for no maximum."
 
 (defvar ebuku--last-results-limit 0
   "Internal variable for use by `ebuku-toggle-results-limit'.")
+
+(defvar ebuku--new-index nil
+  "Internal variable containing the index of the newly-added bookmark.")
 
 (defvar ebuku--results-start nil
   "Internal variable containing buffer line of start of search results.")
@@ -511,7 +520,23 @@ Argument EXCLUDE is a string: keywords to exclude from search results."
          (index "")
          (url "")
          (comment "")
-         (tags ""))
+         (tags "")
+         (current-index (or ebuku--new-index
+                            (ebuku--get-index-at-point)))
+         (previous-index (let ((pos (previous-single-property-change
+                                     (point)
+                                     'buku-index)))
+                           (if pos
+                               (get-char-property (- pos 2) 'buku-index)
+                             nil)))
+         (next-index (let ((pos (next-single-property-change
+                                 (point)
+                                 'buku-index)))
+                       (if pos
+                           (get-char-property (1+ pos) 'buku-index)
+                         nil)))
+         (first-result-line (+ ebuku--results-start 2)))
+    (setq ebuku--new-index nil)
     (with-temp-buffer
       (if (string= "" exclude)
           (ebuku--call-buku `(,type ,term))
@@ -663,9 +688,40 @@ Argument EXCLUDE is a string: keywords to exclude from search results."
           (setq comment ""
                 tags ""))
         (with-current-buffer "*Ebuku*"
-          (ebuku--goto-line ebuku--results-start)
-          (beginning-of-line)
-          (forward-line 2))))))
+          (progn
+            (if current-index
+                (progn
+                  (goto-char (point-min))
+                  (let ((prop-match
+                         (text-property-search-forward
+                          'buku-index
+                          current-index
+                          t)))
+                    (if prop-match
+                        (goto-char (prop-match-beginning prop-match))
+                      (cond
+                       ((eq ebuku-post-deletion-point-location 'previous)
+                        (if (and previous-index
+                                 (setq prop-match
+                                       (text-property-search-forward
+                                        'buku-index
+                                        previous-index
+                                        t)))
+                            (goto-char (prop-match-beginning prop-match))
+                          (ebuku--goto-line first-result-line)))
+                       ((eq ebuku-post-deletion-point-location 'next)
+                        (if (and next-index
+                                 (setq prop-match
+                                       (text-property-search-forward
+                                        'buku-index
+                                        next-index
+                                        t)))
+                            (goto-char (prop-match-beginning prop-match))
+                          (ebuku--goto-line first-result-line)))))))
+              (ebuku--goto-line first-result-line))
+            (if (eq (window-buffer) (current-buffer))
+                (recenter))))))))
+
 
 ;;
 ;; User-facing variables.
@@ -726,24 +782,35 @@ This cache is populated by the `ebuku-update-tags-cache' command.")
     (setq tags (read-from-minibuffer "Bookmark tag(s)? " tags))
     (setq comment (read-from-minibuffer "Bookmark comment? " comment))
     (if ebuku-retrieve-url-metadata
-        (with-temp-buffer
-          (if (ebuku--call-buku `("--update" ,index
-                                  "--title" ,title
-                                  "--comment" ,comment
-                                  "--tag" ,tags))
+        (progn
+          (with-temp-buffer
+            (if (not (ebuku--call-buku `("--update" ,index
+                                         "--title" ,title
+                                         "--comment" ,comment
+                                         "--tag" ,tags)))
+                (error "Failed to modify bookmark metadata")
               (progn
-                (ebuku-refresh)
-                (message "Bookmark added."))
-            (error "Failed to modify bookmark metadata")))
-      (with-temp-buffer
-        (if (ebuku--call-buku `("--add" ,url
-                                "--title" ,title
-                                "--tag" ,tags
-                                "--comment" ,comment))
+                (goto-char (point-min))
+                (re-search-forward "^\\([[:digit:]]+\\)\\.")
+                (setq ebuku--new-index (match-string 1)))))
+          (progn
+            (ebuku-refresh)
+            (message "Bookmark added.")))
+      (progn
+        (with-temp-buffer
+          (if (not (ebuku--call-buku `("--add" ,url
+                                       "--title" ,title
+                                       "--tag" ,tags
+                                       "--comment" ,comment)))
+              (error "Failed to add bookmark")
             (progn
-              (ebuku-refresh)
-              (message "Bookmark added."))
-          (error "Failed to add bookmark"))))))
+              (goto-char (point-min))
+              (re-search-forward "^\\([[:digit:]]+\\)\\.")
+              (setq ebuku--new-index (match-string 1))))
+          (progn
+            (ebuku-refresh)
+            (message "Bookmark added.")))))))
+
 
 (defun ebuku-copy-index ()
   "Copy the index of the bookmark at point to the kill ring."
@@ -800,15 +867,14 @@ otherwise, ask for the index of the bookmark to edit."
                             "Comment? "
                             (cdr (assoc 'comment bookmark)))))
               (with-temp-buffer
-                (if (ebuku--call-buku `("--update" ,index
-                                        "--title" ,title
-                                        "--url" ,url
-                                        "--comment" ,comment
-                                        "--tag" ,tags))
-                    (progn
-                      (ebuku-refresh)
-                      (message "Bookmark updated."))
-                  (error "Failed to update bookmark"))))
+                (if (not (ebuku--call-buku `("--update" ,index
+                                             "--title" ,title
+                                             "--url" ,url
+                                             "--comment" ,comment
+                                             "--tag" ,tags)))
+                    (error "Failed to update bookmark")))
+              (ebuku-refresh)
+              (message "Bookmark updated."))
           (error (concat "Failed to get bookmark data for index " index)))))))
 
 (defun ebuku-gather-bookmarks (&optional type term exclude)
@@ -890,16 +956,7 @@ The bookmarks are fetched from buku with the following arguments:
   "Refresh the list of search results, based on last search."
   (interactive)
   (if ebuku--last-search
-      (let* ((term (nth 2 ebuku--last-search))
-             (index (get-char-property (point) 'buku-index))
-             (line (if (not index)
-                       (if (< (line-number-at-pos) (+ ebuku--results-start 2))
-                           (line-number-at-pos)
-                         (if (not (text-property-search-backward 'buku-index))
-                             (progn
-                               (text-property-search-forward 'buku-index)
-                               (line-number-at-pos))
-                           (line-number-at-pos))))))
+      (let* ((term (nth 2 ebuku--last-search)))
         (if (and (not (string= "[recent]" (nth 1 ebuku--last-search)))
                  (string-match "^-\\([[:digit:]]+\\)$" term))
             (let ((count (string-to-number (match-string 1 term))))
@@ -908,13 +965,8 @@ The bookmarks are fetched from buku with the following arguments:
                         (concat "-"
                                 (number-to-string ebuku-results-limit))))
               (apply #'ebuku--search-helper ebuku--last-search))
-          (apply #'ebuku--search-helper ebuku--last-search))
-        (if index
-            (progn
-              (goto-char (point-min))
-              (if (not (text-property-search-forward 'buku-index index))
-                  (ebuku--goto-line ebuku--results-start)))
-          (ebuku--goto-line line)))))
+          (apply #'ebuku--search-helper ebuku--last-search)))))
+
 
 (defun ebuku-search (char)
   "Search the buku database for bookmarks.
@@ -939,13 +991,14 @@ the type of search to be performed."
   (ebuku--search-helper "--sany" "Keyword? "))
 
 (defun ebuku-search-on-recent ()
-  "Do a `buku' search for recently-added bookmarks."
-  (interactive)
-  (ebuku--search-helper "--print"
-                        "[recent]" ; Dummy prompt to indicate prefab 'search'
-                        (concat "-"
-                                (number-to-string ebuku-recent-count))
-                        ""))
+"Do a `buku' search for recently-added bookmarks."
+(interactive)
+(ebuku--search-helper "--print"
+                      "[recent]" ; Dummy prompt to indicate prefab 'search'
+                      (concat
+                       "-"
+                       (number-to-string ebuku-recent-count))
+                      ""))
 
 (defun ebuku-search-on-reg ()
   "Do a `buku' search using '--sreg'."
@@ -1037,6 +1090,7 @@ If an argument is excluded, get it from `ebuku-cache-default-args'."
         (ebuku--goto-line ebuku--results-start)
         (add-text-properties (point-min) (point)
                              '(read-only t intangible t))
+        (forward-line 2)
         (ebuku--create-mode-menu)
         (setq header-line-format nil)
         (ebuku-mode))

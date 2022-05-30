@@ -4,10 +4,10 @@ Source:  https://github.com/Silex/docker.el.git
 
 Updating /mnt/store/melpa/working/docker/
 Checking out origin/HEAD
-Checking out 5283a4203a3359877c2a3241d651db042a5f9632
+Checking out 44f0bbec9b3deb027d17f4c10d8ec4106ed89dfb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker/
-  to /tmp/dockerAUk2cb/docker-20220525.1508
+  to /tmp/dockerbvUpGM/docker-20220530.603
     docker-compose.el -> docker-compose.el
     docker-container.el -> docker-container.el
     docker-core.el -> docker-core.el
@@ -19,21 +19,23 @@ Copying files (->) and directories (=>)
     docker-utils.el -> docker-utils.el
     docker-volume.el -> docker-volume.el
     docker.el -> docker.el
-Created docker-20220525.1508.tar containing:
-  docker-20220525.1508/
-  docker-20220525.1508/docker-compose.el
-  docker-20220525.1508/docker-container.el
-  docker-20220525.1508/docker-core.el
-  docker-20220525.1508/docker-faces.el
-  docker-20220525.1508/docker-group.el
-  docker-20220525.1508/docker-image.el
-  docker-20220525.1508/docker-network.el
-  docker-20220525.1508/docker-pkg.el
-  docker-20220525.1508/docker-process.el
-  docker-20220525.1508/docker-utils.el
-  docker-20220525.1508/docker-volume.el
-  docker-20220525.1508/docker.el
-Built docker in 7.289s, finished at 2022-05-30T04:13:39+0000
+Created docker-20220530.603.tar containing:
+  docker-20220530.603/
+  docker-20220530.603/docker-compose.el
+  docker-20220530.603/docker-container.el
+  docker-20220530.603/docker-core.el
+  docker-20220530.603/docker-faces.el
+  docker-20220530.603/docker-group.el
+  docker-20220530.603/docker-image.el
+  docker-20220530.603/docker-network.el
+  docker-20220530.603/docker-pkg.el
+  docker-20220530.603/docker-process.el
+  docker-20220530.603/docker-utils.el
+  docker-20220530.603/docker-volume.el
+  docker-20220530.603/docker.el
+Built docker in 6.091s, finished at 2022-05-30T07:57:46+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  533 May 30 04:13 packages/docker-20220525.1508.entry
 100K -rw-r--r-- 1 root root 100K May 30 04:13 packages/docker-20220525.1508.tar
+4.0K -rw-r--r-- 1 root root  532 May 30 07:57 packages/docker-20220530.603.entry
+100K -rw-r--r-- 1 root root 100K May 30 07:57 packages/docker-20220530.603.tar
