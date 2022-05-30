@@ -4,11 +4,11 @@ Source:  https://git.sr.ht/~niklaseklund/detached.el
 
 Updating /mnt/store/melpa/working/detached/
 Checking out origin/HEAD
-Checking out f08110df5761c5803197ecce8b70eeb1c05e61db
-Checking out f08110df5761c5803197ecce8b70eeb1c05e61db
+Checking out bae90a13ddff90fcbfa581a1e8556072e01fd09b
+Checking out bae90a13ddff90fcbfa581a1e8556072e01fd09b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/detached/
-  to /tmp/detachedG19222/detached-20220527.1048
+  to /tmp/detachedDc4ab2/detached-20220530.1429
     detached-compile.el -> detached-compile.el
     detached-consult.el -> detached-consult.el
     detached-dired.el -> detached-dired.el
@@ -19,20 +19,22 @@ Copying files (->) and directories (=>)
     detached-shell.el -> detached-shell.el
     detached-vterm.el -> detached-vterm.el
     detached.el -> detached.el
-Created detached-20220527.1048.tar containing:
-  detached-20220527.1048/
-  detached-20220527.1048/detached-compile.el
-  detached-20220527.1048/detached-consult.el
-  detached-20220527.1048/detached-dired.el
-  detached-20220527.1048/detached-eshell.el
-  detached-20220527.1048/detached-extra.el
-  detached-20220527.1048/detached-init.el
-  detached-20220527.1048/detached-org.el
-  detached-20220527.1048/detached-pkg.el
-  detached-20220527.1048/detached-shell.el
-  detached-20220527.1048/detached-vterm.el
-  detached-20220527.1048/detached.el
-Built detached in 6.762s, finished at 2022-05-30T11:22:09+0000
+Created detached-20220530.1429.tar containing:
+  detached-20220530.1429/
+  detached-20220530.1429/detached-compile.el
+  detached-20220530.1429/detached-consult.el
+  detached-20220530.1429/detached-dired.el
+  detached-20220530.1429/detached-eshell.el
+  detached-20220530.1429/detached-extra.el
+  detached-20220530.1429/detached-init.el
+  detached-20220530.1429/detached-org.el
+  detached-20220530.1429/detached-pkg.el
+  detached-20220530.1429/detached-shell.el
+  detached-20220530.1429/detached-vterm.el
+  detached-20220530.1429/detached.el
+Built detached in 5.871s, finished at 2022-05-30T14:50:38+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  417 May 30 11:22 packages/detached-20220527.1048.entry
 112K -rw-r--r-- 1 root root 110K May 30 11:22 packages/detached-20220527.1048.tar
+4.0K -rw-r--r-- 1 root root  417 May 30 14:50 packages/detached-20220530.1429.entry
+112K -rw-r--r-- 1 root root 110K May 30 14:50 packages/detached-20220530.1429.tar
