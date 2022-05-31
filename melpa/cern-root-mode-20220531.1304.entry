@@ -1,0 +1,11 @@
+(cern-root-mode .
+		[(20220531 1304)
+		 ((emacs
+		   (26 1)))
+		 "Major-mode for running C++ code with ROOT" single
+		 ((:commit . "088c0817339ee317f879b2844349a7f53e4b9254")
+		  (:authors
+		   ("Jay Morgan" . "jay@morganwastaken.com"))
+		  (:maintainer "Jay Morgan" . "jay@morganwastaken.com")
+		  (:keywords "languages" "tools")
+		  (:url . "https://github.com/jaypmorgan/cern-root-mode"))])
