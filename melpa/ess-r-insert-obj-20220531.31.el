@@ -5,8 +5,8 @@
 ;; Author: Shuguang Sun <shuguang79@qq.com>
 ;; Created: 2019/04/06
 ;; Version: 1.0
-;; Package-Version: 20211209.812
-;; Package-Commit: dd367cb918c90ec6d3824da869f7a75bb1ca49b6
+;; Package-Version: 20220531.31
+;; Package-Commit: 105a8edf97cc1e82ce1e959e7b7bd049851a255a
 ;; URL: https://github.com/ShuguangSun/ess-r-insert-obj
 ;; Package-Requires: ((emacs "26.1") (ess "18.10.1"))
 ;; Keywords: tools
@@ -74,8 +74,8 @@
 
 From R data to Emacs list."
   :type `(choice ,@(mapcar (lambda (x)
-			                 `(const :tag ,(symbol-name x) ,x))
-			               ess-r-insert-obj-complete-backend-list)
+                             `(const :tag ,(symbol-name x) ,x))
+                           ess-r-insert-obj-complete-backend-list)
                  (symbol :tag "Other"))
   :group 'ess-r-insert-obj)
 
@@ -118,10 +118,10 @@ Argument STR R script to run.")
 Optional argument DATAFRAME name of data.frame-like object."
   (let ((cmd
          (concat
-           "jsonlite::toJSON("
-           (format "c(list(%1$s = names(%1$s)), lapply(%1$s, function(x) as.character(unique(x))))"
-                   (or dataframe ess-r-insert-obj-object))
-           ")\n")))
+          "jsonlite::toJSON("
+          (format "c(list(%1$s = names(%1$s)), lapply(%1$s, function(x) as.character(unique(x))))"
+                  (or dataframe ess-r-insert-obj-object))
+          ")\n")))
     (json-read-from-string (ess-string-command cmd))))
 
 
@@ -252,14 +252,14 @@ prompt for a data.frame-like object to search in."
                                    (format "Column (%s), C-j to finish"
                                            (mapconcat 'identity
                                                       (setq objs2 (nreverse objs2))
-                                                      ","))
+                                                      ", "))
                                    objs))
                 (unless (equal obj "")
                   (setq objs (delete obj objs))
                   (cl-pushnew obj obj-list)
                   (cl-pushnew obj objs2)))
               (unless (null obj-list)
-                (insert (propertize (mapconcat 'identity (delete-dups (nreverse obj-list)) ",")
+                (insert (propertize (mapconcat 'identity (delete-dups (nreverse obj-list)) ", ")
                                     'dt-insert dt-insert))))
           (let* ((possible-completions (ess-r-get-rcompletions))
                  (token-string (or (car possible-completions) ""))
@@ -293,34 +293,34 @@ prompt for a data.frame-like object to search in."
          dt-insert)
 
     (when (or (equal current-prefix-arg '(16))
-            (null (save-excursion
-                    (save-restriction
-                      (setq dt-insert (ess-r-insert-obj--previous-complete-object 'dt-insert))))))
+              (null (save-excursion
+                      (save-restriction
+                        (setq dt-insert (ess-r-insert-obj--previous-complete-object 'dt-insert))))))
       ;; force refresh
       (let ((objs (ess-r-insert-obj-get-objects)))
-            (setq ess-r-insert-obj-object
-                  (funcall ess-r-insert-obj-read-string
-                           "data.frame: " objs
-                           nil t))
-            (when (and proc-name proc
-                       (not (process-get proc 'busy)))
-              (setq ess-r-insert-obj-candidate
-                    (ess-r-insert-obj-do-complete-data ess-r-insert-obj-current-complete-backend))))
+        (setq ess-r-insert-obj-object
+              (funcall ess-r-insert-obj-read-string
+                       "data.frame: " objs
+                       nil t))
+        (when (and proc-name proc
+                   (not (process-get proc 'busy)))
+          (setq ess-r-insert-obj-candidate
+                (ess-r-insert-obj-do-complete-data ess-r-insert-obj-current-complete-backend))))
       (setq dt-insert ess-r-insert-obj-object))
 
     (when dt-insert
-        (let* ((obj-list (append
-                          (if (assq (intern ess-r-insert-obj-object)
-                                    ess-r-insert-obj-candidate)
-                              (alist-get (intern ess-r-insert-obj-object)
-                                         ess-r-insert-obj-candidate)
-                            (alist-get (intern (replace-regexp-in-string
-                                                "`" "" ess-r-insert-obj-object))
-                                       ess-r-insert-obj-candidate))
-                          nil)))
-          (insert (propertize (mapconcat 'identity
-                                          (delete-dups obj-list) ",")
-                               'dt-insert dt-insert))))))
+      (let* ((obj-list (append
+                        (if (assq (intern ess-r-insert-obj-object)
+                                  ess-r-insert-obj-candidate)
+                            (alist-get (intern ess-r-insert-obj-object)
+                                       ess-r-insert-obj-candidate)
+                          (alist-get (intern (replace-regexp-in-string
+                                              "`" "" ess-r-insert-obj-object))
+                                     ess-r-insert-obj-candidate))
+                        nil)))
+        (insert (propertize (mapconcat 'identity
+                                       (delete-dups obj-list) ", ")
+                            'dt-insert dt-insert))))))
 
 ;;;###autoload
 (defun ess-r-insert-obj-value ()
@@ -346,8 +346,8 @@ prompt for a data.frame-like object to search in."
 
     (when (or (equal current-prefix-arg '(16))
               (null (save-excursion
-                     (save-restriction
-                       (setq dt-insert (ess-r-insert-obj--previous-complete-object 'dt-insert))))))
+                      (save-restriction
+                        (setq dt-insert (ess-r-insert-obj--previous-complete-object 'dt-insert))))))
       (let* ((objs (ess-r-insert-obj-get-objects)))
         (setq ess-r-insert-obj-object
               (funcall ess-r-insert-obj-read-string
@@ -379,28 +379,28 @@ prompt for a data.frame-like object to search in."
                      nil t)))
 
     (when (and dt-insert col-insert)
-          (let* ((possible-completions (ess-r-get-rcompletions))
-                 (token-string (or (car possible-completions) ""))
-                 (start (- (point) (length token-string)))
-                 (end (point))
-                 com)
-            (setq com
-                  (funcall ess-r-insert-obj-read-string
-                           "Value: "
-                           (delq nil (delete-dups (append
-                            (if (assq (intern col-insert)
-                                      ess-r-insert-obj-candidate)
-                                (alist-get (intern col-insert)
-                                           ess-r-insert-obj-candidate)
-                              (alist-get (intern (replace-regexp-in-string
-                                                  "`" "" col-insert))
-                                         ess-r-insert-obj-candidate))
-                            nil)))
-                           nil t token-string))
-            (delete-region start end)
-            (insert (propertize (format "\"%s\"" com)
-                                'dt-insert dt-insert
-                                'col-insert col-insert))))))
+      (let* ((possible-completions (ess-r-get-rcompletions))
+             (token-string (or (car possible-completions) ""))
+             (start (- (point) (length token-string)))
+             (end (point))
+             com)
+        (setq com
+              (funcall ess-r-insert-obj-read-string
+                       "Value: "
+                       (delq nil (delete-dups (append
+                                               (if (assq (intern col-insert)
+                                                         ess-r-insert-obj-candidate)
+                                                   (alist-get (intern col-insert)
+                                                              ess-r-insert-obj-candidate)
+                                                 (alist-get (intern (replace-regexp-in-string
+                                                                     "`" "" col-insert))
+                                                            ess-r-insert-obj-candidate))
+                                               nil)))
+                       nil t token-string))
+        (delete-region start end)
+        (insert (propertize (format "\"%s\"" com)
+                            'dt-insert dt-insert
+                            'col-insert col-insert))))))
 
 ;;;###autoload
 (defun ess-r-insert-obj-value-all ()
@@ -426,8 +426,8 @@ prompt for a data.frame-like object to search in."
 
     (when (or (equal current-prefix-arg '(16))
               (null (save-excursion
-                     (save-restriction
-                       (setq dt-insert (ess-r-insert-obj--previous-complete-object 'dt-insert))))))
+                      (save-restriction
+                        (setq dt-insert (ess-r-insert-obj--previous-complete-object 'dt-insert))))))
       (let* ((objs (ess-r-insert-obj-get-objects)))
         (setq ess-r-insert-obj-object
               (funcall ess-r-insert-obj-read-string
@@ -469,7 +469,7 @@ prompt for a data.frame-like object to search in."
                                      ess-r-insert-obj-candidate))
                         nil)))
         (insert (propertize (mapconcat 'identity
-                                       (delete-dups obj-list) ",")
+                                       (delete-dups obj-list) ", ")
                             'dt-insert dt-insert
                             'col-insert col-insert))))))
 

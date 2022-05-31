@@ -3,9 +3,9 @@
 ;; Copyright (C) 2016-2020 Rami Chowdhury
 ;; Author: Rami Chowdhury <rami.chowdhury@gmail.com>
 ;; URL: http://github.com/necaris/conda.el
-;; Package-Commit: 9c28d7a853b4b4bd00215cf7f07856c1563f2ad7
+;; Package-Commit: bb36ff70c56a9851cd5220700de51b2ac80d807e
 ;; Version: 0.4
-;; Package-Version: 20220315.1533
+;; Package-Version: 20220530.2154
 ;; Package-X-Original-Version: 0.4
 ;; Keywords: python, environment, conda
 ;; Package-Requires: ((emacs "24.4") (pythonic "0.1.0") (dash "2.13.0") (s "1.11.0") (f "0.18.2"))
@@ -33,12 +33,23 @@
   "Conda (environment) manager for Emacs."
   :group 'python)
 
-(defcustom conda-anaconda-home
-  (expand-file-name (or (getenv "ANACONDA_HOME") "~/.anaconda3/"))
-  "Location of your Anaconda installation.
+(defcustom conda-home-candidates
+  '("~/.anaconda3" "~/miniconda3" "~/mambaforge" "~/anaconda" "~/miniconda" "~/mamba")
+  "Location of possible candidates for conda environment directory"
+  :type '(list string)
+  :group 'conda)
 
-The default location is ~/.anaconda3/, or read from the ANACONDA_HOME
-environment variable."
+(defcustom conda-anaconda-home
+  (expand-file-name (or (getenv "ANACONDA_HOME")
+                        (catch 'conda-catched-home
+                          (dolist (candidate conda-home-candidates)
+                            (when (f-dir? (expand-file-name candidate))
+                              (throw 'conda-catched-home candidate))))))
+  "Location of your conda installation.
+
+Iterate over default locations in CONDA-HOME-CANDIDATES, or read from the
+ANACONDA_HOME environment variable.
+TODO: raise error if no environment found ?? "
   :type 'directory
   :group 'conda)
 
