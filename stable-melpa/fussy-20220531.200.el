@@ -4,8 +4,8 @@
 
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 0.1
-;; Package-Version: 20220530.121
-;; Package-Commit: 0272bb4632a4a0017c34e5696e1ff74c1129b706
+;; Package-Version: 20220531.200
+;; Package-Commit: e5b6608e0f98c689043f1de11e1eb79a33112427
 ;; Package-Requires: ((emacs "27.1") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
@@ -33,6 +33,7 @@
 ;; To speed up `flx' matching, use https://github.com/jcs-elpa/flx-rs.
 
 (require 'flx)
+(eval-when-compile (require 'subr-x))
 
 ;;; Code:
 
