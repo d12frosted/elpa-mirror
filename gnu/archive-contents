@@ -896,7 +896,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20220518)
+      [(20220531)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -905,7 +905,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "9019554599f37803fac0bfeb4efad77f024209ef"))])
+	(:commit . "23aad4691ccb9fdf9953b35048a6f59590d3b5ab"))])
  (eglot .
 	[(1 8)
 	 ((emacs
@@ -2390,14 +2390,14 @@
 	  ("Feng Shu" . "tumashu@163.com"))
 	 (:commit . "6b4cea1b541f5efd18067d4cafa1ca4b059a0c63"))])
  (pyim-basedict .
-		[(0 5 2)
+		[(0 5 3)
 		 nil "The default pinyin dict of pyim" tar
 		 ((:url . "https://github.com/tumashu/pyim-basedict")
 		  (:keywords "convenience" "chinese" "pinyin" "input-method" "complete")
 		  (:maintainer "Feng Shu" . "tumashu@163.com")
 		  (:authors
 		   ("Feng Shu" . "tumashu@163.com"))
-		  (:commit . "c606c34101b2c07352ee6bf16f90abeac26a2f2c"))])
+		  (:commit . "4aa30ff9f83cf6435230a987d323e48230f1f40e"))])
  (python .
 	 [(0 28)
 	  ((emacs

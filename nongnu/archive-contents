@@ -208,7 +208,7 @@
 			   (:authors
 			    ("Julien Barnier")))])
  (corfu-terminal .
-		 [(0 3)
+		 [(0 4)
 		  ((emacs
 		    (26 1))
 		   (corfu
@@ -221,7 +221,7 @@
 		   (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 		   (:authors
 		    ("Akib Azmain Turja" . "akib@disroot.org"))
-		   (:commit . "e9cae1b23a252ae497f3564b9f588be807337b35"))])
+		   (:commit . "7c5a8a1c07b6c1a41b358b083d5bf7773701d26b"))])
  (crux .
        [(0 4 0)
 	((seq
@@ -1589,7 +1589,7 @@
 			("Joost Kremers" . "joostkremers@fastmail.fm"))
 		       (:commit . "afaad5ac6b15cdf9f362662538e35d48578e218a"))])
  (web-mode .
-	   [(17 2 1)
+	   [(17 2 2)
 	    ((emacs
 	      (23 1)))
 	    "major mode for editing web templates" tar
@@ -1598,7 +1598,7 @@
 	     (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
 	     (:authors
 	      ("François-Xavier Bois"))
-	     (:commit . "036da1327e3ec0749868d078cbc64e207f4c4aba"))])
+	     (:commit . "cdbd74b5e71d78ca7cb0768771f38e7b764fa0ac"))])
  (webpaste .
 	   [(3 2 2)
 	    ((emacs

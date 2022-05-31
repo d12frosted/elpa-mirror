@@ -12,6 +12,7 @@ Table of Contents
 .. 3. Straight.el
 .. 4. Manual
 2. Usage
+3. Complementary Packages
 
 
 Corfu uses child frames to display candidates.  This makes Corfu
@@ -77,3 +78,22 @@ Corfu faces/ /were modified to make the popup/popon visible on TTY./
   │ (unless (display-graphic-p)
   │   (corfu-terminal-mode +1))
   └────
+
+
+3 Complementary Packages
+════════════════════════
+
+  • [`kind-icon']: `kind-icon' adds an icon in front of each candidate
+    describing the kind of the candidate.
+  • [`corfu-doc'] and [`corfu-doc-terminal']: `corfu-doc' show a
+    documentation popup for the current candidate.  `corfu-doc-terminal'
+    provides a Popon (overlay) based display, so that you can use it on
+    terminal.
+
+
+[`kind-icon'] <https://github.com/jdtsmith/kind-icon>
+
+[`corfu-doc'] <https://github.com/galeo/corfu-doc>
+
+[`corfu-doc-terminal']
+<https://codeberg.org/akib/emacs-corfu-doc-terminal>
