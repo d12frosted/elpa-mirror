@@ -7,7 +7,7 @@
 ;; Created: 5 October 2020
 ;; Version: 0.7.6
 ;; Package-Version: 20210520.2034
-;; Package-Commit: ce5fd160c193e387d9e2bacdba4065c4b4262cb1
+;; Package-Commit: 1334f44725bd80a265de858d652f3fde4ae401fa
 ;; Keywords: languages,tools,convenience
 ;; URL: https://gitlab.com/sasanidas/maxima
 ;; Package-Requires: ((emacs "25.1")(maxima "0.6.1")(seq "2.20")(company "0.9.13"))
