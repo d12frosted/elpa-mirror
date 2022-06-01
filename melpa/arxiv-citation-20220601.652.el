@@ -4,8 +4,8 @@
 ;;
 ;; Author: Tony Zorman <soliditsallgood@mailbox.org>
 ;; Keywords: convenience
-;; Package-Version: 20220522.1245
-;; Package-Commit: fef3501ba9d7b9903aa5b21f495fa8d53bc19bf4
+;; Package-Version: 20220601.652
+;; Package-Commit: 83fcb4bfac29076ce20c0b084f83db3bcc11658b
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25.1") (dash "2.19.1") (s "1.12.0"))
 ;; Homepage: https://gitlab.com/slotThe/arXiv-citation
@@ -147,9 +147,8 @@ The output name is of the following form:
                              "-"))
            (title (->> (plist-get info :title)
                        downcase
-                       (s-replace-all '(("_" . "-") (" " . "-")
-                                        ("$" . "") ("," . "") ("\\" . "")
-                                        ("{" . "") ("}" . "")))
+                       (s-replace-regexp "[]$(),[\\{}]" "") ; just kill these
+                       (s-replace-all '(("_" . "-") (" " . "-")))
                        ;; At least citar treats these chars special:
                        ;; https://github.com/bdarcus/citar/issues/599
                        (s-split "\\(:\\|?\\|;\\)")
