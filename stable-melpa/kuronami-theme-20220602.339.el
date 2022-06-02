@@ -1,12 +1,12 @@
 ;;; kuronami-theme.el --- A deep blue theme with cool autumnal colors -*- lexical-binding: t; -*-
 
 ;; Author: Eric Chung <>
-;; Version: 1.0.0
-;; Package-Version: 20220309.604
-;; Package-Commit: 9f09ef8159f4c0cdffe7ce020c79d1bd17d3f09d
+;; Version: 1.0.1
+;; Package-Version: 20220602.339
+;; Package-Commit: a51d5ff3883bd94d0a181bb5d60f747190eda4f6
 ;; Filename: kuronami-theme.el
 ;; Package-Requires: ((emacs "24.1"))
-;; URL: https://github.com/super3ggo/kuronami
+;; URL: https://github.com/inj0h/kuronami
 ;; License: GPL-3+
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
