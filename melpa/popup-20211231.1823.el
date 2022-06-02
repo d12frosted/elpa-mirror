@@ -7,7 +7,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/auto-complete/popup-el
 ;; Package-Version: 20211231.1823
-;; Package-Commit: 114d646f0f4dd49de19dfedd78630018f71470e5
+;; Package-Commit: 0dc164b9036533fbae9372194b511da1140a00fe
 ;; Keywords: lisp
 ;; Version: 0.5.9
 ;; Package-Requires: ((emacs "24.3"))

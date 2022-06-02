@@ -4,7 +4,7 @@
 
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-sound-wav
-;; Package-Commit: 112450888f3f90f0f2a0e43e49eb5a7e49b1b6db
+;; Package-Commit: a03392380414beab70d57bd7d24fa83c1f424b08
 ;; Package-Version: 20200323.728
 ;; Package-X-Original-Version: 20160725.1424
 ;; Version: 0.02

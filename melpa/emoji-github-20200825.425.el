@@ -8,7 +8,7 @@
 ;; Keyword: list github emoji display handy
 ;; Version: 0.2.3
 ;; Package-Version: 20200825.425
-;; Package-Commit: 434ccc9df8eb884f248d5934e7d465348bb203a4
+;; Package-Commit: ee294f3bd990eabd8e310dd7801f57954205acb0
 ;; Package-Requires: ((emacs "24.4") (emojify "1.0") (request "0.3.0"))
 ;; URL: https://github.com/jcs-elpa/emoji-github
 

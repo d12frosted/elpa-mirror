@@ -1438,7 +1438,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 2)
+	    [(0 3)
 	     ((emacs
 	       (25)))
 	     "Tool for inspection of Emacs Lisp objects." tar
@@ -1447,7 +1447,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "4769535e4575f463e92b3706bef0aa4966d3214c"))])
+	      (:commit . "8c555dfadb737bf2f05ff2786dbab2ac985775ef"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
@@ -1865,16 +1865,16 @@
 			  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 			 (:keywords "faces" "theme" "accessibility"))])
  (modus-themes .
-	       [(2 3 0)
+	       [(2 4 1)
 		((emacs
 		  (27 1)))
 		"Elegant, highly legible and customizable themes" tar
-		((:url . "https://gitlab.com/protesilaos/modus-themes")
+		((:url . "https://git.sr.ht/~protesilaos/modus-themes")
 		 (:keywords "faces" "theme" "accessibility")
 		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "7b08e3a8e41db1483322f48305f837e705540249"))])
+		 (:commit . "e3ec91232fcdd4d7fe2c48fcdb78b4ac7c6356d5"))])
  (modus-vivendi-theme .
 		      [(0 13 2)
 		       ((emacs

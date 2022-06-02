@@ -18,7 +18,7 @@
 ;; Author: Henrik Jürges <juerges.henrik@gmail.com>
 ;; URL: https://github.com/santifa/clockodo-el
 ;; Package-Version: 20220516.1310
-;; Package-Commit: 02ade55427c42dfcac615a8340672af468ae9dfc
+;; Package-Commit: d6539479097fa9dc99c1a31bd9d449da4afbfe1f
 ;; Version: 0.7
 ;; Package-Requires: ((emacs "26.1") (request "0.3.2") (ts "0.2.2") (org "8"))
 ;; Keywords: tools, clockodo

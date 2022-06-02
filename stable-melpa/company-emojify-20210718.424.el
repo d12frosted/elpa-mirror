@@ -8,7 +8,7 @@
 ;; Keyword: emoji company emojify
 ;; Version: 0.1.0
 ;; Package-Version: 20210718.424
-;; Package-Commit: 6f095b419468b0443e1dcd8537ef4b84092f155c
+;; Package-Commit: 2a53d688ecfebd2fb07d7d7a4d3545dbd31d0173
 ;; Package-Requires: ((emacs "26.1") (company "0.8.0") (emojify "1.2.1") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-emojify
 

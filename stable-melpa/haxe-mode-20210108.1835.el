@@ -7,7 +7,7 @@
 ;; Maintainer: Jen-Chieh Shen <jcs090218@gmail.com>
 ;; URL: https://github.com/emacsorphanage/haxe-mode
 ;; Package-Version: 20210108.1835
-;; Package-Commit: 6641a0d7c00ce633887baf3f8c594d9a8a504e9b
+;; Package-Commit: df40ee200cb0f7ca590dfc66d1396ec3732abb78
 ;; Version: 0.3.3
 
 ;; This file is NOT part of GNU Emacs.

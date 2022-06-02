@@ -4,16 +4,17 @@ Source:  https://github.com/semenInRussia/emacs-run-command-recipes.git
 
 Updating /mnt/store/melpa/working/run-command-recipes/
 Checking out origin/HEAD
-Checking out 59586a22d3924d3713874f68c94a481949cffa00
-Checking out 59586a22d3924d3713874f68c94a481949cffa00
+Checking out f6cb05e9528bb69c825e464b1ab7abd31494f5c7
+Checking out f6cb05e9528bb69c825e464b1ab7abd31494f5c7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/run-command-recipes/
-  to /tmp/run-command-recipesFm4WsY/run-command-recipes-20220531.2148
+  to /tmp/run-command-recipes41HdTJ/run-command-recipes-20220601.2006
     run-command-recipes-c.el -> run-command-recipes-c.el
     run-command-recipes-cpp.el -> run-command-recipes-cpp.el
     run-command-recipes-csharp.el -> run-command-recipes-csharp.el
     run-command-recipes-elisp.el -> run-command-recipes-elisp.el
     run-command-recipes-haskell.el -> run-command-recipes-haskell.el
+    run-command-recipes-java.el -> run-command-recipes-java.el
     run-command-recipes-latex.el -> run-command-recipes-latex.el
     run-command-recipes-lib.el -> run-command-recipes-lib.el
     run-command-recipes-pandoc.el -> run-command-recipes-pandoc.el
@@ -22,23 +23,26 @@ Copying files (->) and directories (=>)
     run-command-recipes-rust.el -> run-command-recipes-rust.el
     run-command-recipes-template.el -> run-command-recipes-template.el
     run-command-recipes.el -> run-command-recipes.el
-Created run-command-recipes-20220531.2148.tar containing:
-  run-command-recipes-20220531.2148/
-  run-command-recipes-20220531.2148/run-command-recipes-c.el
-  run-command-recipes-20220531.2148/run-command-recipes-cpp.el
-  run-command-recipes-20220531.2148/run-command-recipes-csharp.el
-  run-command-recipes-20220531.2148/run-command-recipes-elisp.el
-  run-command-recipes-20220531.2148/run-command-recipes-haskell.el
-  run-command-recipes-20220531.2148/run-command-recipes-latex.el
-  run-command-recipes-20220531.2148/run-command-recipes-lib.el
-  run-command-recipes-20220531.2148/run-command-recipes-pandoc.el
-  run-command-recipes-20220531.2148/run-command-recipes-pkg.el
-  run-command-recipes-20220531.2148/run-command-recipes-project.el
-  run-command-recipes-20220531.2148/run-command-recipes-python.el
-  run-command-recipes-20220531.2148/run-command-recipes-rust.el
-  run-command-recipes-20220531.2148/run-command-recipes-template.el
-  run-command-recipes-20220531.2148/run-command-recipes.el
-Built run-command-recipes in 5.709s, finished at 2022-06-01T10:48:44+0000
+Created run-command-recipes-20220601.2006.tar containing:
+  run-command-recipes-20220601.2006/
+  run-command-recipes-20220601.2006/run-command-recipes-c.el
+  run-command-recipes-20220601.2006/run-command-recipes-cpp.el
+  run-command-recipes-20220601.2006/run-command-recipes-csharp.el
+  run-command-recipes-20220601.2006/run-command-recipes-elisp.el
+  run-command-recipes-20220601.2006/run-command-recipes-haskell.el
+  run-command-recipes-20220601.2006/run-command-recipes-java.el
+  run-command-recipes-20220601.2006/run-command-recipes-latex.el
+  run-command-recipes-20220601.2006/run-command-recipes-lib.el
+  run-command-recipes-20220601.2006/run-command-recipes-pandoc.el
+  run-command-recipes-20220601.2006/run-command-recipes-pkg.el
+  run-command-recipes-20220601.2006/run-command-recipes-project.el
+  run-command-recipes-20220601.2006/run-command-recipes-python.el
+  run-command-recipes-20220601.2006/run-command-recipes-rust.el
+  run-command-recipes-20220601.2006/run-command-recipes-template.el
+  run-command-recipes-20220601.2006/run-command-recipes.el
+Built run-command-recipes in 6.685s, finished at 2022-06-01T21:48:36+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 591 Jun  1 10:48 packages/run-command-recipes-20220531.2148.entry
- 60K -rw-r--r-- 1 root root 60K Jun  1 10:48 packages/run-command-recipes-20220531.2148.tar
+4.0K -rw-r--r-- 1 root root 591 Jun  1 18:10 packages/run-command-recipes-20220601.1732.entry
+ 72K -rw-r--r-- 1 root root 70K Jun  1 18:10 packages/run-command-recipes-20220601.1732.tar
+4.0K -rw-r--r-- 1 root root 591 Jun  1 21:48 packages/run-command-recipes-20220601.2006.entry
+ 72K -rw-r--r-- 1 root root 70K Jun  1 21:48 packages/run-command-recipes-20220601.2006.tar

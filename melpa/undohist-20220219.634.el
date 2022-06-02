@@ -5,7 +5,7 @@
 ;; Author: MATSUYAMA Tomohiro <m2ym.pub@gmail.com>
 ;; Package-Requires: ((cl-lib "1.0"))
 ;; Package-Version: 20220219.634
-;; Package-Commit: ec95d5038425bca375865803701c971a9c748114
+;; Package-Commit: 17064c636b70e57af3179212806422d905ddf1ce
 ;; Keywords: convenience
 ;; Version: 0.2.1
 

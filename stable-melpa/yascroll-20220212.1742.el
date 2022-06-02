@@ -7,7 +7,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Keywords: convenience
 ;; Package-Version: 20220212.1742
-;; Package-Commit: 25f6bf7415f6821a4097037a8decd03813d08722
+;; Package-Commit: 89422e4a22e2343e7823149b850657e9d091c37c
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/emacsorphanage/yascroll

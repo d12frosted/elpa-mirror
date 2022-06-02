@@ -8,7 +8,7 @@
 ;; Keyword: scrolling scroll window better improvement
 ;; Version: 0.1.4
 ;; Package-Version: 20210715.1004
-;; Package-Commit: ab0472acfab3e710ee2c94e64c46d0fc0ca4bc65
+;; Package-Commit: ef6a730da16332a588ce27318b19689de4006c26
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/jcs-elpa/better-scroll
 

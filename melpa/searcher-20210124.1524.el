@@ -8,7 +8,7 @@
 ;; Keyword: search searcher project file text string
 ;; Version: 0.4.1
 ;; Package-Version: 20210124.1524
-;; Package-Commit: 26ecae6a6d028fcbffc576a69ef8f787646bc12a
+;; Package-Commit: beecefa513ff5d394aa105c60e8bfb0776c62594
 ;; Package-Requires: ((emacs "25.1") (dash "2.10") (f "0.20.0"))
 ;; URL: https://github.com/jcs-elpa/searcher
 

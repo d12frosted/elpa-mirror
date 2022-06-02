@@ -9,7 +9,7 @@
 ;; Created:  March 2007
 ;; Version:  202003130913
 ;; Package-Version: 20210119.1853
-;; Package-Commit: 199743df55c6bfce3cdb08405bd8519768c8dfa9
+;; Package-Commit: 3be0aabc4f9fbef7fbfb0e3cfa995671fb780191
 ;; Keywords:  D programming language emacs cc-mode
 ;; Package-Requires: ((emacs "25.1"))
 

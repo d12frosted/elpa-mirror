@@ -5,7 +5,7 @@
 ;; Author: Akiha Senda
 ;; URL: https://github.com/senda-akiha/flymake-phpcs/
 ;; Package-Version: 20140713.631
-;; Package-Commit: 10d3e7e1c31c104e3da694b2b52cd34df61efa5e
+;; Package-Commit: 22cf326da9879e759e2ee7f000686d40ffd40679
 ;; Version: 1.1
 ;; Keywords: flymake, phpcs, php
 ;; Package-Requires: ((flymake-easy "0.9"))
