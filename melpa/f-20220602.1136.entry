@@ -1,13 +1,13 @@
 (f .
-   [(20220531 2234)
+   [(20220602 1136)
     ((s
       (1 7 0))
      (dash
       (2 2 0)))
     "Modern API for working with files and directories" tar
-    ((:commit . "feb6c2cb9f8e19ebdfdfde0d89edbdd5d7f51a96")
+    ((:commit . "185bed4c00cdce9938eb905d63ff96d489ed6ae6")
      (:authors
       ("Johan Andersson" . "johan.rejeep@gmail.com"))
-     (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")
+     (:maintainer "Lucien Cartier-Tilet" . "lucien@phundrak.com")
      (:keywords "files" "directories")
      (:url . "http://github.com/rejeep/f.el"))])

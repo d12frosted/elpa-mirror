@@ -4,10 +4,10 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: processes, tools
-;; Package-Commit: 4730b31ff1479b6d822ccc7517251dcb52de45b3
+;; Package-Commit: 8ba78ec70dabb5d96756087b4bd12d71cd8c88c1
 ;; Homepage: https://github.com/purcell/envrc
 ;; Package-Requires: ((seq "2") (emacs "24.4") (inheritenv "0.1"))
-;; Package-Version: 20220218.1627
+;; Package-Version: 20220602.1020
 ;; Package-X-Original-Version: 0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -400,7 +400,7 @@ in a temp buffer.  ARGS is as for ORIG."
   '("MANPATH_add" "PATH_add" "direnv_layout_dir" "direnv_load" "dotenv"
     "expand_path" "find_up" "has" "join_args" "layout" "load_prefix"
     "log_error" "log_status" "path_add" "rvm" "source_env" "source_up"
-    "use" "use_guix" "use_nix" "user_rel_path" "watch_file")
+    "use" "use_guix" "use_flake" "use_nix" "user_rel_path" "watch_file")
   "Useful direnv keywords to be highlighted.")
 
 ;;;###autoload
