@@ -8,7 +8,7 @@
 ;; Keyword: alt codes insertion meta
 ;; Version: 0.0.5
 ;; Package-Version: 20220212.1526
-;; Package-Commit: dfc46d669ed7fb62aa8af2d5c63c1fa55068a6ed
+;; Package-Commit: e79c3762130749b02689d1274adce8b93aac9b7a
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/jcs-elpa/alt-codes
 

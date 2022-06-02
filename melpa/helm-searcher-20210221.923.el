@@ -8,7 +8,7 @@
 ;; Keyword: helm interface searcher search replace grep ag rg
 ;; Version: 0.2.5
 ;; Package-Version: 20210221.923
-;; Package-Commit: 00fa8ef6ecc5f90f491fe258589920e4db2c7ab1
+;; Package-Commit: 6409eef130d3561e024813f3af82a61f73c9ae5b
 ;; Package-Requires: ((emacs "25.1") (helm "2.0") (searcher "0.1.8") (s "1.12.0") (f "0.20.0"))
 ;; URL: https://github.com/emacs-helm/helm-searcher
 

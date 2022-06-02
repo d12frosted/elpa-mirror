@@ -8,7 +8,7 @@
 ;; Keyword: fuzzy helm matching source
 ;; Version: 0.1.6
 ;; Package-Version: 20200927.532
-;; Package-Commit: 62535f9b353e4c655c62461e1323d7677c4ccb0a
+;; Package-Commit: 99bb20cd7ec89ac1e2ae6eaecd9ac4b30f570bee
 ;; Package-Requires: ((emacs "24.4") (helm "1.7.9") (flx "0.5"))
 ;; URL: https://github.com/jcs-elpa/helm-fuzzy
 

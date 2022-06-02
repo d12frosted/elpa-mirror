@@ -8,7 +8,7 @@
 ;; Keyword: video ffmpeg buffering images
 ;; Version: 0.2.1
 ;; Package-Version: 20200720.1028
-;; Package-Commit: 6d6dfc3949602c126189ec2fa5f1b731c322ffbb
+;; Package-Commit: cab1b591a541f2a5ee25529572c6895e7f78cc4f
 ;; Package-Requires: ((emacs "24.4") (s "1.12.0") (f "0.20.0"))
 ;; URL: https://github.com/jcs-elpa/ffmpeg-player
 
