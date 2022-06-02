@@ -8,8 +8,8 @@
 ;;              Vladimir Panteleev <vladimir@thecybershadow.net>
 ;; Created:  March 2007
 ;; Version:  202003130913
-;; Package-Version: 20210119.1853
-;; Package-Commit: 3be0aabc4f9fbef7fbfb0e3cfa995671fb780191
+;; Package-Version: 20220601.1949
+;; Package-Commit: 024aca97d07e72bf3500fb6bf0cdf50c4992a741
 ;; Keywords:  D programming language emacs cc-mode
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -163,6 +163,22 @@
 (c-lang-defconst c-multiline-string-start-char
   ;; Set to true to indicate that D doesn't mind raw embedded newlines in strings
   d t)
+
+;; Configure cc-mode multiline support (this overrides
+;; c-multiline-string-start-char)
+(c-lang-defconst c-ml-string-opener-re
+  ;; " opens multiline strings in D
+  d "\\(\\(\"\\)\\)")
+
+(c-lang-defconst c-ml-string-max-opener-len
+  d 1)
+
+(c-lang-defconst c-ml-string-any-closer-re
+  ;; Unescaped " closes the string
+  d "\\(?:\\=\\|[^\\]\\)\\(\\(\"\\)\\)")
+
+(c-lang-defconst c-ml-string-max-closer-len
+  d 1)
 
 (c-lang-defconst c-opt-cpp-prefix
   ;; Preprocessor directive recognizer.  D doesn't have cpp, but it has #line

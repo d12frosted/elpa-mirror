@@ -5,7 +5,7 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-helm-gtags
 ;; Package-Version: 20200602.1610
-;; Package-Commit: 59587784deb5a2019b311215265eed17b3cac8d7
+;; Package-Commit: c97a2fe68632938c2414249abbc9c7004eed3255
 ;; Version: 1.5.7
 ;; Package-Requires: ((emacs "24.4") (helm "2.0"))
 

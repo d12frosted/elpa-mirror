@@ -14,7 +14,7 @@
 ;; Author: sakito <sakito@users.sourceforge.jp>
 ;; URL: https://github.com/emacsorphanage/applescript-mode
 ;; Package-Version: 20210802.1715
-;; Package-Commit: 30f845b67fc795fd206a1ef66d2a36a6af62a9fa
+;; Package-Commit: 9b84a7cb74d687745df37ba15113933fc6256274
 ;; Keywords: languages, tools
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.3"))

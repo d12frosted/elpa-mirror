@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20220521.1149
-;; Package-Commit: 9e1863875f0deb98acd9a2872bc707d2ff8c268d
+;; Package-Version: 20220602.940
+;; Package-Commit: 481f44aa4067b287e0c724c6d5e1185c62d1560c
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -49,7 +49,7 @@
   :type 'string
   :safe #'stringp)
 
-(defcustom org-tag-beautify-icon-height (* (default-font-height) 2)
+(defcustom org-tag-beautify-icon-height (* (default-font-height) 1)
   "Specify the tag icon height."
   :type 'number
   :safe #'numberp)
