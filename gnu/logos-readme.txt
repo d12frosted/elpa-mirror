@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `logos' (or `logos.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.3.0,
-released on 2022-03-30.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.4.0,
+released on 2022-06-02.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.4.0-dev.
+Current development target is 0.5.0-dev.
 
 ⁃ Homepage: <https://protesilaos.com/emacs/logos>.
 ⁃ Git repository: <https://git.sr.ht/~protesilaos/logos>.
@@ -35,6 +35,8 @@ Table of Contents
 .. 2. Automatically reveal Org or Outline subtree
 .. 3. Recenter at the top upon page motion
 .. 4. Use outlines and page breaks
+.. 5. Leverage logos-focus-mode-extra-functions
+..... 1. Conditionally toggle org-indent-mode
 6. Acknowledgements
 7. GNU Free Documentation License
 8. Indices
@@ -99,9 +101,10 @@ Table of Contents
   indicators (`indicate-buffer-boundaries'), enable `scroll-lock-mode'
   (`logos-scroll-lock'), use `variable-pitch-mode' in non-programming
   buffers (`logos-variable-pitch'), make the buffer read-only
-  (`logos-buffer-read-only'), and center the buffer in its window if the
-  `olivetti' package is installed (`logos-olivetti').  All these
-  variables are buffer-local.
+  (`logos-buffer-read-only'), center the buffer in its window if the
+  `olivetti' package is installed (`logos-olivetti'), and hide the
+  `fringe' face (`logos-hide-fringe').  All these variables are
+  buffer-local.
 
   Logos is the familiar word derived from Greek (watch my presentation
   on philosophy about Cosmos, Logos, and the living universe:
@@ -131,6 +134,12 @@ Table of Contents
 
 
   And search for it.
+
+  GNU ELPA provides the latest stable release.  Those who prefer to
+  follow the development process in order to report bugs or suggest
+  changes, can use the version of the package from the GNU-devel ELPA
+  archive.  Read:
+  <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
 3.2 Manual installation
@@ -178,7 +187,7 @@ Table of Contents
   ⁃ To have quick access to `logos-focus-mode', bind it to a key.  This
     mode checks the variables `logos-hide-mode-line',
     `logos-scroll-lock', `logos-variable-pitch',
-    `logos-indicate-buffer-boundaries', `logos-buffer-read-only',
+    `logos-hide-buffer-boundaries', `logos-buffer-read-only',
     `logos-olivetti' (requires `olivetti' package) and applies their
     effects if they are non-nil.  Note that everything is buffer-local,
     so it is possible to use file variables as described in the Emacs
@@ -192,16 +201,21 @@ Table of Contents
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . "^;;;+ ")
   │ 	(org-mode . "^\\*+ +")
+  │ 	(markdown-mode . "^\\#+ +")
   │ 	(t . ,(or outline-regexp logos--page-delimiter))))
   │ 
   │ ;; These apply when `logos-focus-mode' is enabled.  Their value is
   │ ;; buffer-local.
-  │ (setq-default logos-hide-mode-line nil
-  │ 	      logos-scroll-lock nil
+  │ (setq-default logos-hide-mode-line t
+  │ 	      logos-hide-buffer-boundaries t
+  │ 	      logos-hide-fringe t
   │ 	      logos-variable-pitch nil
-  │ 	      logos-indicate-buffer-boundaries nil
   │ 	      logos-buffer-read-only nil
+  │ 	      logos-scroll-lock nil
   │ 	      logos-olivetti nil)
+  │ 
+  │ ;; Also check this manual for `logos-focus-mode-extra-functions'.  It is
+  │ ;; a hook that lets you extend `logos-focus-mode'.
   │ 
   │ (let ((map global-map))
   │   (define-key map [remap narrow-to-region] #'logos-narrow-dwim)
@@ -389,6 +403,47 @@ Table of Contents
   └────
 
 
+5.5 Leverage logos-focus-mode-extra-functions
+─────────────────────────────────────────────
+
+  The `logos-focus-mode-extra-functions' is a normal hook that runs when
+  `logos-focus-mode' is enabled.  It gives users the power to write
+  their own extensions that change how the buffer works when that mode
+  is toggled on/off.
+
+  The hook is designed to call functions without an argument.  An
+  example function that sets a variable is `logos--buffer-read-only';
+  one that sets a mode is `logos--scroll-lock'; another that sets the
+  mode of an external package is `logos--olivetti'; while
+  `logos--hide-fringe' provides yet another useful sample.
+
+
+5.5.1 Conditionally toggle org-indent-mode
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Here is a snippet that relies on `logos-focus-mode-extra-functions' to
+  extend the functionality of `logos-focus-mode' at the user level
+  ([Leverage logos-focus-mode-extra-functions]).
+
+  ┌────
+  │ (defvar my-logos-org-indent nil
+  │   "When t, disable `org-indent-mode' during `logos-focus-mode'.")
+  │ 
+  │ (defun my-logos-org-indent ()
+  │   "Set `my-logos-org-indent' in `logos-focus-mode'."
+  │   (when my-logos-org-indent
+  │     ;; Disable `org-indent-mode' when `logos-focus-mode' is enabled and
+  │     ;; restore it when `logos-focus-mode' is disabled.  The
+  │     ;; `logos--mode' function takes care of the technicalities.
+  │     (logos--mode 'org-indent-mode -1)))
+  │ 
+  │ (add-hook 'logos-focus-mode-extra-functions #'my-logos-org-indent)
+  └────
+
+
+[Leverage logos-focus-mode-extra-functions] See section 5.5
+
+
 6 Acknowledgements
 ══════════════════
 
@@ -401,8 +456,8 @@ Table of Contents
         Daniel Mendler, Omar Antolín Camarena, Philip Kaludercic, Remco
         van ’t Veer, and user Ypot.
 
-  Ideas and user feedback
-        Daniel Mendler.
+  Ideas and/or user feedback
+        Daniel Mendler, Ypot.
 
 
 7 GNU Free Documentation License

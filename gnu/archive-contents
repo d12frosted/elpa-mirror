@@ -1438,16 +1438,16 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 3)
+	    [(0 4)
 	     ((emacs
-	       (25)))
+	       (27)))
 	     "Tool for inspection of Emacs Lisp objects." tar
 	     ((:url . "https://github.com/mmontone/emacs-inspector")
 	      (:keywords "debugging" "tool" "emacs-lisp" "development")
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "8c555dfadb737bf2f05ff2786dbab2ac985775ef"))])
+	      (:commit . "aaefa1b530337b7d62d4affadc64d52c9bbbede9"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
@@ -1732,7 +1732,7 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (logos .
-	[(0 3 2)
+	[(0 4 0)
 	 ((emacs
 	   (27 1)))
 	 "Simple focus mode and extras" tar
@@ -1741,7 +1741,7 @@
 	  (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	  (:commit . "dd25e36b64320f2ba9400a3929443aa81085e697"))])
+	  (:commit . "388bfbd9d8c880898d1832e888d5b41582dd1a85"))])
  (map .
       [(3 2 1)
        ((emacs

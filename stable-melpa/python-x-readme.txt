@@ -4,7 +4,7 @@ to interactive code evaluation with an inferior Python process.
 
 Quick overview:
 
-Use `python-x-setup' in your emacs startup:
+Use `python-x-setup' in your Emacs startup:
 
   (python-x-setup)
 
