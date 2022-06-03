@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.6-dev
-;; Package-Version: 20220513.1453
-;; Package-Commit: 4477f381de0068a04b55e198c32614793f67b38a
+;; Package-Version: 20220603.300
+;; Package-Commit: 1f709778ac7990f4a07fdf11fe37bc6541810b29
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -2239,6 +2239,11 @@ Depending on your font, some reasonable choices are:
 
 ;;; Compatibility =============================================================
 
+(defun markdown--pandoc-reference-p ()
+  (let ((bounds (bounds-of-thing-at-point 'word)))
+    (when (and bounds (char-before (car bounds)))
+      (= (char-before (car bounds)) ?@))))
+
 (defun markdown-flyspell-check-word-p ()
   "Return t if `flyspell' should check word just before point.
 Used for `flyspell-generic-check-word-predicate'."
@@ -2254,7 +2259,8 @@ Used for `flyspell-generic-check-word-predicate'."
                                         markdown-markup-face
                                         markdown-plain-url-face
                                         markdown-inline-code-face
-                                        markdown-url-face)))
+                                        markdown-url-face))
+            (markdown--pandoc-reference-p))
         (prog1 nil
           ;; If flyspell overlay is put, then remove it
           (let ((bounds (bounds-of-thing-at-point 'word)))

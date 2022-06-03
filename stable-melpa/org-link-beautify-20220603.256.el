@@ -1,9 +1,9 @@
 ;;; org-link-beautify.el --- Beautify Org Links -*- lexical-binding: t; -*-
 
 ;; Authors: stardiviner <numbchild@gmail.com>
-;; Package-Requires: ((emacs "27.1") (all-the-icons "4.0.0"))
-;; Package-Version: 20220602.1041
-;; Package-Commit: 42af79242096e81ac163eaad41c20c230b4a4d7d
+;; Package-Requires: ((emacs "27.1") (all-the-icons "5.0.0"))
+;; Package-Version: 20220603.256
+;; Package-Commit: e61eaa7d1a7a5f1678acc7eab12149101a0f23d8
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -31,9 +31,12 @@
 ;;; Code:
 
 (require 'ol)
+(require 'org)
 (require 'org-element)
 (require 'org-crypt)
 (require 'all-the-icons)
+(require 'color)
+(require 'cl-lib)
 
 (defgroup org-link-beautify nil
   "Customize group of org-link-beautify-mode."
@@ -218,7 +221,7 @@ EPUB preview."
     (make-directory thumbnails-dir)))
 
 (defun org-link-beautify--display-thumbnail (thumbnail thumbnail-size start end)
-  "Display THUMBNAIL between START and END in size of THUMBNAIL-SIZE only when it exist."
+  "Display THUMBNAIL between START and END with size THUMBNAIL-SIZE when exist."
   (when (file-exists-p thumbnail)
     (put-text-property
      start end
@@ -475,7 +478,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     (org-link-beautify--display-thumbnail thumbnail thumbnail-size start end)))
 
 (defun org-link-beautify--preview-audio (path start end)
-  "Preview audio file PATH and display wave form image on link between START and END."
+  "Preview audio PATH with wave form image on link between START and END."
   (let* ((audio-file (expand-file-name (org-link-unescape path)))
          (thumbnails-dir (pcase org-link-beautify-thumbnails-dir
                            ('source-path
@@ -520,7 +523,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     (org-link-beautify--display-thumbnail thumbnail thumbnail-size start end)))
 
 (defun org-link-beautify--return-icon (type path extension &optional link-element)
-  "Return the corresponding icon for link PATH smartly based on TYPE, EXTENSION, etc."
+  "Return icon for the link PATH smartly based on TYPE, EXTENSION, etc."
   ;; (message "DEBUG: (type) %s" type)
   ;; (message "DEBUG: (path) %s" path)
   ;; (message "DEBUG: (link-element) %s" link-element)
@@ -760,13 +763,13 @@ Or clear org-link-beautify if headline STATE is folded."
 (defun org-link-beautify--add-more-icons-support ()
   "Add more icons for file types."
   (dolist (icon-spec org-link-beautify--icon-spec-list)
-    (add-to-list 'all-the-icons-icon-alist icon-spec)))
+    (add-to-list 'all-the-icons-regexp-icon-alist icon-spec)))
 
 (defun org-link-beautify--remove-more-icons-support ()
   "Remove added extra icons support for file types from `org-link-beautify'."
   (dolist (icon-spec org-link-beautify--icon-spec-list)
-    (setq all-the-icons-icon-alist
-          (delete icon-spec all-the-icons-icon-alist))))
+    (setq all-the-icons-regexp-icon-alist
+          (delete icon-spec all-the-icons-regexp-icon-alist))))
 
 (defvar org-link-beautify-keymap (make-sparse-keymap))
 
@@ -800,7 +803,7 @@ Or clear org-link-beautify if headline STATE is folded."
 
 ;;;###autoload
 (define-minor-mode org-link-beautify-mode
-  "A minor mode that beautify Org-mode buffer links with colors, icons, and inline preview."
+  "A minor mode to beautify Org Mode links with icons, and inline preview etc."
   :group 'org-link-beautify
   :global nil
   :init-value nil
@@ -826,7 +829,7 @@ Or clear org-link-beautify if headline STATE is folded."
   org-link-beautify-mode org-link-beautify-mode-enable
   (message "global-org-link-beautify-mode toggled for all Org-mode buffers.")
   :require 'org-link-beautify-mode
-  :predicate (not (some 'null (mapcar 'funcall org-link-beautify-condition-functions)))
+  :predicate (not (cl-some 'null (mapcar 'funcall org-link-beautify-condition-functions)))
   :lighter nil
   :group 'org-link-beautify)
 

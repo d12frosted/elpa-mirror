@@ -4,8 +4,8 @@
 
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 0.1
-;; Package-Version: 20220602.2222
-;; Package-Commit: ed20aa4d712eca435842992421f5ff7028b9463b
+;; Package-Version: 20220603.140
+;; Package-Commit: 8a0f38df1956fc4c36f4391397b3ad4f77e1a0a2
 ;; Package-Requires: ((emacs "27.1") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
@@ -575,6 +575,8 @@ SCORE of nil means to clear the properties."
    (lambda (c1 c2)
      (let ((s1 (or (get-text-property 0 'completion-score c1) 0))
            (s2 (or (get-text-property 0 'completion-score c2) 0)))
+       ;; (message (format "c1: %s score: %d" c1 s1))
+       ;; (message (format "c2: %s score: %d" c2 s2))
        (if (and (= s1 s2)
                 fussy-compare-same-score-fn)
            (funcall fussy-compare-same-score-fn c1 c2)
@@ -652,11 +654,23 @@ See `fussy-remove-bad-char-fn'."
                        (encode-coding-char ch 'utf-8 'unicode))
                      string))))
 
+(defconst fussy--consult--tofu-char #x200000
+  "Special character used to encode line prefixes for disambiguation.
+We use invalid characters outside the Unicode range.")
+
+(defconst fussy--consult--tofu-range #x100000
+  "Special character range.")
+
+(defsubst fussy--consult--tofu-p (char)
+  "Return non-nil if CHAR is a tofu."
+  (<= fussy--consult--tofu-char char
+      (+ fussy--consult--tofu-char fussy--consult--tofu-range -1)))
+
 (defun fussy-without-tofu-char (string)
   "Strip unencodeable char from STRING.
 
 See `fussy-remove-bad-char-fn'."
-  (if (multibyte-string-p string)
+  (if (fussy--consult--tofu-p (aref string (- (length string) 1)))
       (substring string 0 (- (length string) 1))
     string))
 
