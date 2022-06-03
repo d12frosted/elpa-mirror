@@ -5,7 +5,7 @@
 ;; Author: Tony Zorman <soliditsallgood@mailbox.org>
 ;; Keywords: convenience
 ;; Package-Version: 20220601.652
-;; Package-Commit: 83fcb4bfac29076ce20c0b084f83db3bcc11658b
+;; Package-Commit: ce4bf6958109b3b15bfc3f808ba4882b41fcb3ff
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25.1") (dash "2.19.1") (s "1.12.0"))
 ;; Homepage: https://gitlab.com/slotThe/arXiv-citation

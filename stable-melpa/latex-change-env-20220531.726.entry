@@ -1,0 +1,13 @@
+(latex-change-env .
+		  [(20220531 726)
+		   ((emacs
+		     (27 1))
+		    (auctex
+		     (13 1)))
+		   "Change in and out of LaTeX environments" single
+		   ((:commit . "b5c31c9551bea70835762360a57407fba6e37b4e")
+		    (:authors
+		     ("Tony Zorman" . "soliditsallgood@mailbox.org"))
+		    (:maintainer "Tony Zorman" . "soliditsallgood@mailbox.org")
+		    (:keywords "convenience" "tex")
+		    (:url . "https://gitlab.com/slotThe/change-env"))])

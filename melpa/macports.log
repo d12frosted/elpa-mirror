@@ -4,27 +4,29 @@ Source:  https://github.com/amake/macports.el.git
 
 Updating /mnt/store/melpa/working/macports/
 Checking out origin/HEAD
-Checking out 4774c1a47cd8d72626313949dc5da91b64b00eb9
-Checking out 4774c1a47cd8d72626313949dc5da91b64b00eb9
+Checking out 6795b5c833c3d144eee80cf97e1599bb23b79efe
+Checking out 6795b5c833c3d144eee80cf97e1599bb23b79efe
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/macports/
-  to /tmp/macportsD0T2r7/macports-20220530.2344
+  to /tmp/macportstUe7ca/macports-20220603.739
     macports-core.el -> macports-core.el
     macports-describe.el -> macports-describe.el
     macports-installed.el -> macports-installed.el
     macports-outdated.el -> macports-outdated.el
     macports-select.el -> macports-select.el
     macports.el -> macports.el
-Created macports-20220530.2344.tar containing:
-  macports-20220530.2344/
-  macports-20220530.2344/macports-core.el
-  macports-20220530.2344/macports-describe.el
-  macports-20220530.2344/macports-installed.el
-  macports-20220530.2344/macports-outdated.el
-  macports-20220530.2344/macports-pkg.el
-  macports-20220530.2344/macports-select.el
-  macports-20220530.2344/macports.el
-Built macports in 4.767s, finished at 2022-06-03T07:30:02+0000
+Created macports-20220603.739.tar containing:
+  macports-20220603.739/
+  macports-20220603.739/macports-core.el
+  macports-20220603.739/macports-describe.el
+  macports-20220603.739/macports-installed.el
+  macports-20220603.739/macports-outdated.el
+  macports-20220603.739/macports-pkg.el
+  macports-20220603.739/macports-select.el
+  macports-20220603.739/macports.el
+Built macports in 5.229s, finished at 2022-06-03T10:33:26+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 353 Jun  3 07:30 packages/macports-20220530.2344.entry
  52K -rw-r--r-- 1 root root 50K Jun  3 07:30 packages/macports-20220530.2344.tar
+4.0K -rw-r--r-- 1 root root 352 Jun  3 10:33 packages/macports-20220603.739.entry
+ 52K -rw-r--r-- 1 root root 50K Jun  3 10:33 packages/macports-20220603.739.tar
