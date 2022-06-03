@@ -17,8 +17,8 @@
 
 ;; Author: Henrik Jürges <juerges.henrik@gmail.com>
 ;; URL: https://github.com/santifa/clockodo-el
-;; Package-Version: 20220516.1310
-;; Package-Commit: d6539479097fa9dc99c1a31bd9d449da4afbfe1f
+;; Package-Version: 20220602.2159
+;; Package-Commit: 2ac2e443818869df6026bfb5a314b9a8a64e357c
 ;; Version: 0.7
 ;; Package-Requires: ((emacs "26.1") (request "0.3.2") (ts "0.2.2") (org "8"))
 ;; Keywords: tools, clockodo
@@ -173,9 +173,15 @@ Only 7 days and 5 days are supported."
   :type 'number
   :group 'clockodo)
 
+(defcustom clockodo-service-id nil
+  "Set this to the service id which is taken as default.
+If set to nil the company default service id is requested and taken."
+  :type 'number
+  :group 'clockodo)
+
 ;; Mode and API variables
 
-(defvar clockodo-debug nil
+(defvar clockodo-debug t
   "Shows more information in the message buffer.")
 
 (defvar clockodo-user-id nil
@@ -441,14 +447,15 @@ DATA The data for the post request."
       :error (cl-function (lambda (&rest args &key error-thrown &allow-other-keys)
                             (message "Got error: %S" error-thrown))))))
 
-(defun clockodo--start-clock (user token)
+(defun clockodo--start-clock (user token service-id)
   "This function start the clockodo clock with default values and service.
 
 USER The username used for the api request.
-TOKEN The clockodo api token for the user."
+TOKEN The clockodo api token for the user.
+SERVICE-ID The service id for the time tracked."
   (clockodo--post-request user token "/v2/clock"
                           `(("customers_id" .  ,clockodo-default-customer-id)
-                            ("services_id" . ,clockodo-default-service-id))))
+                            ("services_id" . ,service-id))))
 
 (defun clockodo--get-request(user token url-part)
   "This function abstracts a simple get request to the clockodo api.
@@ -607,7 +614,7 @@ API-PART The api request which to show prettyfied.
 &NAME Optional the name of the temp buffer."
   (with-output-to-temp-buffer (or  name "*clockodo*")
     (let* ((credentials (clockodo-get-credentials))
-           (response (funcall (intern api-part) (nth 0 credentials) (nth 1 credentials) nil nil "911541"))
+           (response (funcall (intern api-part) (nth 0 credentials) (nth 1 credentials)))
            (data (request-response-data response)))
       (princ (format "%s:\n%s"
                      api-part
@@ -990,10 +997,11 @@ If the clock is already started the function sets the current id
 for being able to stop the clock later."
   (let* ((creds (clockodo-get-credentials))
          (response (clockodo--get-clock (nth 0 creds) (nth 1 creds)))
-         (data (request-response-data response)))
+         (data (request-response-data response))
+         (service-id (or clockodo-service-id clockodo-default-service-id)))
     (let-alist data
       (if (null .running.id)
-          (let* ((post-resp (clockodo--start-clock (nth 0 creds) (nth 1 creds)))
+          (let* ((post-resp (clockodo--start-clock (nth 0 creds) (nth 1 creds) service-id))
                  (post-data (request-response-data post-resp)))
             (let-alist post-data
               (setq clockodo-timer-id .running.id)
