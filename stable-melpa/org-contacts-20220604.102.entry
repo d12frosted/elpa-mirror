@@ -1,0 +1,16 @@
+(org-contacts .
+	      [(20220604 102)
+	       ((emacs
+		 (28 1))
+		(cl-lib
+		 (1 0))
+		(org
+		 (9 3 4))
+		(gnus
+		 (5 13)))
+	       "Contacts management system for Org Mode." single
+	       ((:commit . "c1c4cadf3f7890a07d03c531ef823e1fb5f3ef2f")
+		(:authors
+		 ("Julien Danjou" . "julien@danjou.info"))
+		(:maintainer "stardiviner" . "numbchild@gmail.com")
+		(:keywords "contacts" "org-mode" "outlines" "hypermedia" "calendar"))])

@@ -5,7 +5,7 @@
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 0.1
 ;; Package-Version: 20220603.140
-;; Package-Commit: 8a0f38df1956fc4c36f4391397b3ad4f77e1a0a2
+;; Package-Commit: f718db201b04f035e872b420e0302c53872666d1
 ;; Package-Requires: ((emacs "27.1") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
