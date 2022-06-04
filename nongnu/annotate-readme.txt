@@ -67,17 +67,45 @@
   the aforementioned variable (`annotate-file').  This means than no
   more than a single database can be active for each Emacs session.
 
-  To use multiple database in the same Emacs session `annotate-file'
-  should be made [buffer-local], see: [this thread] and, in particular
-  [this message].
-
   If an empty annotation database (in memory) is saved the database file
   is deleted instead, if `annotate-database-confirm-deletion' is non nil
   (the default) a confirmation action is asked to the user before
   actually remove the file from the file system.
 
-  Users of [no-littering] can take advantage of its packages generated
-  files management.
+
+◊ 2.2.0.1 related customizable variable
+
+  • `annotate-file'
+  • `annotate-warn-if-hash-mismatch'
+  • `annotate-database-confirm-deletion'
+
+
+2.2.1 Non centralized database
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  To use multiple database in the same Emacs session `annotate-file'
+  should be made [buffer-local], see: [this thread] and, in particular
+  [this message].
+
+  Finally, if the customizable variable `annotate-file-buffer-local' is
+  non-nil (default `nil'), for each annotated file an annotation
+  database is saved under the same directory that contains the annotated
+  file.
+
+  The name of the annotation database is built concatenating the name of
+  the annotated file without the optional extension and the string value
+  bound to the customizable variable
+  `annotate-buffer-local-database-extension' (default: `notes'), example
+  follows:
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   annotated file    annotations file     
+  ────────────────────────────────────────
+   /home/user/foo.c  /home/user/foo.notes 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Important note: if `/home/user/foo.notes' exists, *will be
+  overwritten*.
 
 
 [buffer-local]
@@ -88,13 +116,20 @@
 [this message]
 <https://github.com/bastibe/annotate.el/issues/68#issuecomment-728218022>
 
+◊ 2.2.1.1 related customizable variable
+
+  • `annotate-file-buffer-local'
+  • `annotate-buffer-local-database-extension'
+
+
+2.2.2 Uninstalling
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Users of [no-littering] can take advantage of its packages generated
+  files management.
+
+
 [no-littering] <https://github.com/emacscollective/no-littering>
-
-◊ 2.2.0.1 related customizable variable
-
-  • `annotate-file'
-  • `annotate-warn-if-hash-mismatch'
-  • `annotate-database-confirm-deletion'
 
 
 2.3 keybindings
