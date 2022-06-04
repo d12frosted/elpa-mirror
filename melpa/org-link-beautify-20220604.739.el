@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20220604.650
-;; Package-Commit: 54457ccb2064326d0d4b0553236dcb5d465055ec
+;; Package-Version: 20220604.739
+;; Package-Commit: ecdd22e80915eb41c4905614486edc197ffcd464
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -386,17 +386,26 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
           ;; the inserted text from known formats by calling format-decode,
           ;; which see.
           (insert-file-contents file)
-          (format "%s\n"
-                  (mapconcat
-                   'concat
-                   ;; extract lines of file contents
-                   (cl-loop repeat lines
-                            unless (eobp)
-                            collect (prog1 (buffer-substring-no-properties
-                                            (line-beginning-position)
-                                            (line-end-position))
-                                      (forward-line 1)))
-                   "\n")))
+          (format
+           "
+┏━§ ✂ %s
+%s
+┗━§ ✂ %s
+\n"
+           (make-string (- fill-column 6) ?━)
+           (mapconcat
+            (lambda (line)
+              (concat "┃" line))
+            ;; This `cl-loop' extract a LIST of string lines from the file content.
+            (cl-loop repeat lines
+                     unless (eobp)
+                     collect (prog1 (buffer-substring-no-properties
+                                     (line-beginning-position)
+                                     (line-end-position))
+                               (forward-line 1)))
+            "\n")
+           (make-string (- fill-column 6) ?━)
+           ))
       (file-error
        (funcall (if org-link-beautify--preview-text--noerror #'message #'user-error)
 		        "Unable to read file %S"
@@ -406,7 +415,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
 ;;; test
 ;; (org-link-beautify--preview-text-file
 ;;  (expand-file-name "~/Code/Emacs/org-link-beautify/README.org")
-;;  20)
+;;  3)
 
 (defun org-link-beautify--preview-text (path start end &optional lines)
   "Preview LINES of TEXT file PATH and display on link between START and END."
@@ -416,11 +425,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     (org-link-beautify--add-overlay-marker (1+ end) (+ end 2))
     (org-link-beautify--add-keymap (1+ end) (+ end 2))
     (put-text-property (1+ end) (+ end 2) 'display (propertize preview-content))
-    (put-text-property
-     (1+ end) (+ end 2)
-     'face '(:inherit nil :slant 'italic
-                      :foreground nil
-                      :background (color-darken-name (face-background 'default) 5))))
+    (put-text-property (1+ end) (+ end 2) 'face '(:inherit org-block)))
   ;; Fix elisp compiler warning: Unused lexical argument `start'.
   (ignore start))
 

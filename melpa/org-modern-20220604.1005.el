@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.3
-;; Package-Version: 20220604.656
-;; Package-Commit: c07a8a245e73ad3bbbfc4548963b2c863b29ba25
+;; Package-Version: 20220604.1005
+;; Package-Commit: 4982a63926aae047d24c22f089314731ad84839d
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
@@ -571,15 +571,19 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
       (when org-modern-internal-link
         `(("\\(<<\\)\\([^<][^\n]*?\\)\\(>>\\)"
            (0 '(face org-modern-internal-link) t)
-           (1 '(face nil display ,(car org-modern-internal-link)))
-           (3 '(face nil display ,(caddr org-modern-internal-link)))
+           (1 '(face nil display ,(propertize (car org-modern-internal-link)
+                                              'face 'org-modern-symbol)))
+           (3 '(face nil display ,(propertize (caddr org-modern-internal-link)
+                                              'face 'org-modern-symbol)))
            ,@(unless (cadr org-modern-internal-link)
                '((2 '(face nil invisible t)))))))
       (when org-modern-radio-link
         `(("\\(<<<\\)\\([^\n]+?\\)\\(>>>\\)"
            (0 '(face org-modern-radio-link) t)
-           (1 '(face nil display ,(car org-modern-radio-link)))
-           (3 '(face nil display ,(caddr org-modern-radio-link)))
+           (1 '(face nil display ,(propertize (car org-modern-radio-link)
+                                              'face 'org-modern-symbol)))
+           (3 '(face nil display ,(propertize (caddr org-modern-radio-link)
+                                              'face 'org-modern-symbol)))
            ,@(unless (cadr org-modern-radio-link)
                '((2 '(face nil invisible t)))))))
       (when org-modern-timestamp

@@ -5,8 +5,8 @@
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.0
-;; Package-Version: 20220506.720
-;; Package-Commit: 641a453cfd03e098b5e6376e035eafd080b08781
+;; Package-Version: 20220604.850
+;; Package-Commit: 1cf73acae8b791e214dc347c2adf7ec17e8ff41a
 ;; Package-Requires: ((emacs "27.1") (magit-section "3.3.0") (elfeed "3.4.1"))
 ;; Homepage: https://github.com/SqrtMinusOne/elfeed-summary.el
 
@@ -556,9 +556,8 @@ PARAMS is a form as described in `elfeed-summary-settings'."
 (defun elfeed-summary--ensure ()
   "Ensure that elfeed database is loaded and feeds are set up."
   (elfeed-db-ensure)
-  (when (and (not elfeed-feeds)
-             (fboundp #'rmh-elfeed-org-process)
-             ;; To shut up the byte compiler
+  (when (and (fboundp #'rmh-elfeed-org-process)
+             ;; To silence the byte compiler
              (boundp 'rmh-elfeed-org-files)
              (boundp 'rmh-elfeed-org-tree-id))
     (rmh-elfeed-org-process rmh-elfeed-org-files rmh-elfeed-org-tree-id)))
