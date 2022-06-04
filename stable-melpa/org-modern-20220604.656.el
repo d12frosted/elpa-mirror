@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.3
-;; Package-Version: 20220603.1849
-;; Package-Commit: 0da8a79c64d8b9e1e7b9ad7de455d7a7013989e4
+;; Package-Version: 20220604.656
+;; Package-Commit: c07a8a245e73ad3bbbfc4548963b2c863b29ba25
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
@@ -177,7 +177,11 @@ used as replacement for \"#+keyword:\", with t the default key."
                                             (const :tag "Hide prefix" t)))))
 
 (defcustom org-modern-internal-link '(" ↪ " t " ")
-  "Prettify internal links, e.g., <<introduction>>."
+  "Prettify internal link targets, e.g., <<introduction>>."
+  :type '(choice (const nil) (list string boolean string)))
+
+(defcustom org-modern-radio-link '(" ⛯ " t " ")
+  "Prettify radio link targets, e.g., <<<radio>>>."
   :type '(choice (const nil) (list string boolean string)))
 
 (defcustom org-modern-statistics t
@@ -221,7 +225,11 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
 
 (defface org-modern-internal-link
   '((t :inherit org-modern-done))
-  "Face used for internal link.")
+  "Face used for internal link targets.")
+
+(defface org-modern-radio-link
+  '((t :inherit org-modern-done))
+  "Face used for radio link targets.")
 
 (defface org-modern-done
   '((default :inherit org-modern-label)
@@ -561,12 +569,19 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
         `((,(concat "^\\*+.*?\\( \\)\\(:\\(?:" org-tag-re ":\\)+\\)[ \t]*$")
            (0 (org-modern--tag)))))
       (when org-modern-internal-link
-        `(("\\(<<\\)\\(.+?\\)\\(>>\\)"
+        `(("\\(<<\\)\\([^<][^\n]*?\\)\\(>>\\)"
            (0 '(face org-modern-internal-link) t)
            (1 '(face nil display ,(car org-modern-internal-link)))
            (3 '(face nil display ,(caddr org-modern-internal-link)))
            ,@(unless (cadr org-modern-internal-link)
-              '((2 '(face nil invisible t)))))))
+               '((2 '(face nil invisible t)))))))
+      (when org-modern-radio-link
+        `(("\\(<<<\\)\\([^\n]+?\\)\\(>>>\\)"
+           (0 '(face org-modern-radio-link) t)
+           (1 '(face nil display ,(car org-modern-radio-link)))
+           (3 '(face nil display ,(caddr org-modern-radio-link)))
+           ,@(unless (cadr org-modern-radio-link)
+               '((2 '(face nil invisible t)))))))
       (when org-modern-timestamp
         '(("\\(?:<\\|\\[\\)\\([0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}\\(?: [[:word:]]+\\)?\\(?: [.+-]+[0-9ymwdh/]+\\)*\\)\\(\\(?: [0-9:-]+\\)?\\(?: [.+-]+[0-9ymwdh/]+\\)*\\)\\(?:>\\|\\]\\)"
            (0 (org-modern--timestamp)))

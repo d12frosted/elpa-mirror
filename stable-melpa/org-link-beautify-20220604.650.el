@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20220603.256
-;; Package-Commit: e61eaa7d1a7a5f1678acc7eab12149101a0f23d8
+;; Package-Version: 20220604.650
+;; Package-Commit: 54457ccb2064326d0d4b0553236dcb5d465055ec
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -372,33 +372,41 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
         (org-link-beautify--add-keymap start end)
         (org-link-beautify--display-thumbnail thumbnail thumbnail-size start end))))
 
+(defvar org-link-beautify--preview-text--noerror)
+
 (defun org-link-beautify--preview-text-file (file lines)
   "Return first LINES of FILE."
   (with-temp-buffer
     (condition-case nil
         (progn
-          (insert-file-contents-literally file)
-          (format
-           (mapconcat
-            'concat
-            ;; extract lines of file contents
-            (cl-loop repeat lines
-                     unless (eobp)
-                     collect (prog1 (buffer-substring-no-properties
-                                     (line-beginning-position)
-                                     (line-end-position))
-                               (forward-line 1)))
-            "\n")))
+          ;; I originally use `insert-file-contents-literally', so Emacs doesn't
+          ;; decode the non-ASCII characters it reads from the file, i.e. it
+          ;; doesn't interpret the byte sequences as Chinese characters. Use
+          ;; `insert-file-contents' instead. In addition, this function decodes
+          ;; the inserted text from known formats by calling format-decode,
+          ;; which see.
+          (insert-file-contents file)
+          (format "%s\n"
+                  (mapconcat
+                   'concat
+                   ;; extract lines of file contents
+                   (cl-loop repeat lines
+                            unless (eobp)
+                            collect (prog1 (buffer-substring-no-properties
+                                            (line-beginning-position)
+                                            (line-end-position))
+                                      (forward-line 1)))
+                   "\n")))
       (file-error
-       (funcall (if noerror #'message #'user-error)
+       (funcall (if org-link-beautify--preview-text--noerror #'message #'user-error)
 		        "Unable to read file %S"
 		        file)
 	   nil))))
 
 ;;; test
 ;; (org-link-beautify--preview-text-file
-;;  (expand-file-name "~/Code/Emacs/org-link-beautify/org-link-beautify.el")
-;;  3)
+;;  (expand-file-name "~/Code/Emacs/org-link-beautify/README.org")
+;;  20)
 
 (defun org-link-beautify--preview-text (path start end &optional lines)
   "Preview LINES of TEXT file PATH and display on link between START and END."
@@ -412,7 +420,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
      (1+ end) (+ end 2)
      'face '(:inherit nil :slant 'italic
                       :foreground nil
-                      :background (color-darken-name (face-background 'default) 5)))))
+                      :background (color-darken-name (face-background 'default) 5))))
+  ;; Fix elisp compiler warning: Unused lexical argument `start'.
+  (ignore start))
 
 (defun org-link-beautify--preview-video (path start end)
   "Preview video file PATH and display on link between START and END."
@@ -597,7 +607,10 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     ;; (_
     ;;  ;; DEBUG
     ;;  (message "[org-link-beautify] link-element: %s" link-element))
-    ))
+    )
+  
+  ;; Fix elisp compiler warning: Unused lexical argument `link-element'.
+  (ignore link-element))
 
 (defun org-link-beautify--display-icon (start end description icon)
   "Display ICON for link on START and END with DESCRIPTION."
