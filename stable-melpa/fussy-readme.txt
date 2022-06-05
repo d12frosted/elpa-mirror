@@ -21,10 +21,15 @@ To use this style, prepend `fussy' to `completion-styles'.
 For improved performance,`fussy-filter-fn' and `fussy-score-fn' for filtering
 and scoring matches are good initial starting points for customization.
 
-The various available matching algorithms in `fussy-score-fn' have varying
+The various available scoring backends in `fussy-score-fn' have varying
 levels of performance and match quality.
 For a faster version that implements the same matching as `flx', use
 https://github.com/jcs-elpa/flx-rs which is a native module written in Rust.
 
-For other matching algorithms, take a look at
+Other notable scoring backends supported by this package:
+flx: https://github.com/lewang/flx
+fzf: https://github.com/junegunn/fzf
+skim: https://github.com/lotabout/fuzzy-matcher
+
+For an exhaustive list of scoring backends, take a look at
 https://github.com/jojojames/fussy#scoring-backends
