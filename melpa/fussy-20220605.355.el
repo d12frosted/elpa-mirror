@@ -4,8 +4,8 @@
 
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 1.0
-;; Package-Version: 20220604.2002
-;; Package-Commit: dab1dfef491de03461507719ea74d3e6e452fc27
+;; Package-Version: 20220605.355
+;; Package-Commit: 0571ed71d85ae882ad10d9c87ab2fa4d7dd3f2b2
 ;; Package-Requires: ((emacs "27.2") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
@@ -121,7 +121,7 @@ highlighting with `completion-pcm--hilit-commonality'."
   :type 'integer)
 
 (defcustom fussy-propertize-fn
-  #'fussy--propertize-common-part
+  #'fussy-propertize-common-part
   "Function used to propertize matches.
 
 Takes OBJ \(to be propertized\) and
@@ -133,7 +133,7 @@ e.g. `fussy-filter-orderless' can also be used for highlighting matches."
   :type `(choice
           (const :tag "No highlighting" nil)
           (const :tag "By completions-common face."
-                 ,#'fussy--propertize-common-part)
+                 ,#'fussy-propertize-common-part)
           (const :tag "By flx propertization." ,'flx-propertize)
           (function :tag "Custom function"))
   :group 'fussy)
@@ -200,7 +200,9 @@ If using `fussy-filter-fast', `fussy-fast-regex-fn' can be configured."
                  ,#'fussy-filter-flex)
           (const :tag "Built in Faster Flex Filtering in C"
                  ,#'fussy-filter-fast)
-          (const :tag "Orderless Filtering"
+          (const :tag "Orderless Flex Filtering"
+                 ,#'fussy-filter-orderless-flex)
+          (const :tag "Orderless"
                  ,#'fussy-filter-orderless)
           (function :tag "Custom function"))
   :group 'fussy)
@@ -455,7 +457,7 @@ Set a text-property \='completion-score on candidates with their score.
                              x string
                              cache)))
          ;; (message
-         ;;  (format "candidate: %s query: %s score %s" x string (car score)))
+         ;;  (format "candidate: %s query: %s score %s" x string score))
          (if (not score)
              (put-text-property 0 1 'completion-score 0 x)
            (put-text-property 0 1 'completion-score (car score) x)
@@ -498,19 +500,19 @@ Only highlight if `fussy--using-pcm-highlight-p' is t."
 pcm-style refers to using `completion-pcm--hilit-commonality' for highlighting."
   (completion-pcm--hilit-commonality pattern collection))
 
-(defun fussy--propertize-common-part (obj score)
+(defun fussy-propertize-common-part (obj score)
   "Return propertized copy of OBJ according to score.
 
 SCORE of nil means to clear the properties."
-  (let ((block-started (cadr score))
-        (last-char nil)
-        ;; Originally we used `substring-no-properties' when setting str but
-        ;; that strips text properties that other packages may set.
-        ;; One example is `consult', which sprinkles text properties onto
-        ;; the candidate. e.g. `consult--line-prefix' will check for
-        ;; 'consult-location on str candidate.
-        (str (if (consp obj) (car obj) obj)))
-    (when score
+  (when (> (length score) 1) ;; Has a score and an index to highlight.
+    (let ((block-started (cadr score))
+          (last-char nil)
+          ;; Originally we used `substring-no-properties' when setting str but
+          ;; that strips text properties that other packages may set.
+          ;; One example is `consult', which sprinkles text properties onto
+          ;; the candidate. e.g. `consult--line-prefix' will check for
+          ;; 'consult-location on str candidate.
+          (str (if (consp obj) (car obj) obj)))
       (dolist (char (cdr score))
         (when (and last-char
                    (not (= (1+ last-char) char)))
@@ -526,10 +528,10 @@ SCORE of nil means to clear the properties."
         (add-face-text-property (1+ last-char) (+ 2 last-char)
                                 'completions-first-difference
                                 nil
-                                str)))
-    (if (consp obj)
-        (cons str (cdr obj))
-      str)))
+                                str))
+      (if (consp obj)
+          (cons str (cdr obj))
+        str))))
 
 ;;
 ;; (@* "Bootstrap" )
@@ -624,7 +626,8 @@ Check C1 and C2 in `minibuffer-history-variable'."
 
 (defun fussy--orderless-p ()
   "Return whether or not we're using `orderless' for filtering."
-  (eq fussy-filter-fn 'fussy-filter-orderless))
+  (or (eq fussy-filter-fn 'fussy-filter-orderless)
+      (eq fussy-filter-fn 'fussy-filter-orderless-flex)))
 
 (defun fussy--using-pcm-highlight-p ()
   "Check if highlighting should use `completion-pcm--hilit-commonality'.
@@ -688,6 +691,31 @@ See `fussy-remove-bad-char-fn'."
 ;; `orderless-matching-styles'.
 (defvar orderless-matching-styles)
 
+(defun fussy-filter-orderless-flex (string table pred _point)
+  "Match STRING to the entries in TABLE.
+
+Use `orderless' for filtering by passing STRING, TABLE and PRED to
+
+`orderless-filter'.  _POINT is not used. This version sets up `orderless'
+to only use the `orderless-flex' pattern."
+  (require 'orderless)
+  (when (and (fboundp 'orderless-filter)
+             (fboundp 'orderless-highlight-matches)
+             (fboundp 'orderless--prefix+pattern))
+    (let* ((orderless-matching-styles '(orderless-flex))
+           (completions (orderless-filter string table pred)))
+      (when completions
+        (pcase-let* ((`(,prefix . ,pattern)
+                      (orderless--prefix+pattern string table pred))
+                     (skip-highlighting
+                      (if (functionp orderless-skip-highlighting)
+                          (funcall orderless-skip-highlighting)
+                        orderless-skip-highlighting)))
+          (if skip-highlighting
+              (list completions pattern prefix)
+            (list (orderless-highlight-matches pattern completions)
+                  pattern prefix)))))))
+
 (defun fussy-filter-orderless (string table pred _point)
   "Match STRING to the entries in TABLE.
 
@@ -698,8 +726,7 @@ Use `orderless' for filtering by passing STRING, TABLE and PRED to
   (when (and (fboundp 'orderless-filter)
              (fboundp 'orderless-highlight-matches)
              (fboundp 'orderless--prefix+pattern))
-    (let* ((orderless-matching-styles '(orderless-flex))
-           (completions (orderless-filter string table pred)))
+    (let* ((completions (orderless-filter string table pred)))
       (when completions
         (pcase-let* ((`(,prefix . ,pattern)
                       (orderless--prefix+pattern string table pred))
@@ -783,10 +810,8 @@ that's written in C for faster filtering."
                               (cons 'prefix basic-pattern))))
               (completion-pcm--optimize-pattern
                (completion-flex--make-flex-pattern pattern))))))
-    ;; (progn
-    ;;   (message (format "prefix: %s infix: %s regexp: %s pattern %s"
-    ;;                    prefix infix regexp pattern))
-    ;;   (princ completions))
+    ;; (message (format "prefix: %s infix: %s regexp: %s pattern %s completions %s"
+    ;;                  prefix infix regexp pattern completions))
     (list completions pattern prefix)))
 
 ;;
@@ -876,12 +901,12 @@ for more speed."
          ;; Assume query can just be passed in as a unibyte string.
          (fussy-encode-coding-string query)))
     (if fussy-fuz-use-skim-p
-        (if (eq fussy-filter-fn 'fussy-filter-orderless)
+        (if (fussy--orderless-p)
             (when (fboundp 'fuz-calc-score-skim)
               (list (fuz-calc-score-skim query str)))
           (when (fboundp 'fuz-fuzzy-match-skim)
             (fuz-fuzzy-match-skim query str)))
-      (if (eq fussy-filter-fn 'fussy-filter-orderless)
+      (if (fussy--orderless-p)
           (when (fboundp 'fuz-calc-score-clangd)
             (list (fuz-calc-score-clangd query str)))
         (when (fboundp 'fuz-fuzzy-match-clangd)
@@ -908,12 +933,12 @@ for more speed."
          (fussy-encode-coding-string query)))
     ;; (message (format "after: str: %s query: %s" str query))
     (if fussy-fuz-use-skim-p
-        (if (eq fussy-filter-fn 'fussy-filter-orderless)
+        (if (fussy--orderless-p)
             (when (fboundp 'fuz-bin-dyn-score-skim)
               (list (fuz-bin-dyn-score-skim query str)))
           (when (fboundp 'fuz-bin-score-skim)
             (fuz-bin-score-skim query str)))
-      (if (eq fussy-filter-fn 'fussy-filter-orderless)
+      (if (fussy--orderless-p)
           (when (fboundp 'fuz-bin-dyn-score-clangd)
             (list (fuz-bin-dyn-score-clangd query str)))
         (when (fboundp 'fuz-bin-score-clangd)

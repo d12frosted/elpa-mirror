@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20220601.1737
-;; Package-Commit: b25256f1b014ee02887c7882a789f95dc87d061b
+;; Package-Version: 20220604.2239
+;; Package-Commit: 67853e98b190cc735a8ad31bd1de64f76f2990c4
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.0
@@ -937,7 +937,7 @@ being run, for diagnostic purposes."
                     "--enable-outside-detected-project"))
     (phpcs . ("apheleia-phpcs"))
     (prettier . (npx "prettier" "--stdin-filepath" filepath))
-    (shfmt . ("shfmt"))
+    (shfmt . ("shfmt" "-i" "4"))
     (rustfmt . ("rustfmt" "--quiet" "--emit" "stdout"))
     (terraform . ("terraform" "fmt" "-")))
   "Alist of code formatting commands.
