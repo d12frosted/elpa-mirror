@@ -3,8 +3,8 @@
 ;; Author: Laurence Warne
 ;; Maintainer: Laurence Warne
 ;; Version: 0.1
-;; Package-Version: 20220605.724
-;; Package-Commit: f5e7bd129377d6256c0d3306080837695d62fe68
+;; Package-Version: 20220605.1310
+;; Package-Commit: 5ca61a420d8de5e3707a5c2f01153f4ab2ea3ec1
 ;; URL: https://github.com/laurencewarne/prefab.el
 ;; Package-Requires: ((emacs "27.1") (f "0.2.0") (transient "0.3.7"))
 
@@ -282,6 +282,20 @@ original suffix."
     (put 'prefab--uri 'prefab-template resolved-template)
     (prefab--uri)))
 
+(defun prefab--ask-for-template (project-src)
+  "Prompt the user for template using PROJECT-SRC to get choices."
+  (let* ((templates (prefab-templates project-src))
+         (alist
+          (mapcar (lambda (p)
+                    (cons (prefab-template-display-string project-src p) p))
+                  templates))
+         (template-choice
+          (completing-read "Template: "
+                           (or (mapcar #'f-filename templates)
+                               (mapcan #'cdr prefab-default-templates)))))
+    (or (alist-get template-choice alist nil nil #'string=)
+        template-choice)))
+
 (defun prefab--run (args)
   "Run cookiecutter using ARGS."
   (interactive (list (transient-args transient-current-command)))
@@ -424,22 +438,16 @@ CONTEXT is an alist with string keys (template attributes) and values
 
 ;;; Commands
 
-(defun prefab ()
-  "Generate a project from a template."
+(defun prefab (&optional template)
+  "Generate a project from TEMPLATE if passed, else prompting for one."
   (interactive)
   (if (executable-find "cookiecutter")
       (let* ((project-src (prefab-cookiecutter-source))
-             (templates (prefab-templates project-src))
-             (alist (mapcar (lambda (p)
-                              (cons (prefab-template-display-string project-src p) p))
-                            templates))
              (template-str
-              (completing-read "Template: "
-                               (or (mapcar #'f-filename templates)
-                                   (mapcan #'cdr prefab-default-templates)))))
+              (or template (prefab--ask-for-template project-src))))
         (prefab--transient-set-value
          project-src
-         (or (alist-get template-str alist nil nil #'string=) template-str)
+         template-str
          prefab-cookiecutter-get-context-from-replay))
     (error prefab--cookiecutter-not-found-err-msg)))
 

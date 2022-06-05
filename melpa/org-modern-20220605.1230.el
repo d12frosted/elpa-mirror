@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.3
-;; Package-Version: 20220605.958
-;; Package-Commit: dfb42f4f7d86d70291310ac34e8f4b0f858edab3
+;; Package-Version: 20220605.1230
+;; Package-Commit: 2afcb38b0680c8d5b37af30ef68432b45911b75a
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
@@ -176,15 +176,17 @@ used as replacement for \"#+keyword:\", with t the default key."
                         :value-type (choice (string :tag "Replacement")
                                             (const :tag "Hide prefix" t)))))
 
-(defcustom org-modern-footnote '((height 0.7) (raise 0.3))
-  "Prettify footnotes."
-  :type '(choice (const nil) sexp))
+(defcustom org-modern-footnote (cons nil (cadr org-script-display))
+  "Prettify footnotes.
+The car corresponds to display specification for definitions, the cdr for
+references."
+  :type '(choice (const nil) (cons sexp sexp)))
 
-(defcustom org-modern-internal-link '(" ↪ " t " ")
+(defcustom org-modern-internal-target '(" ↪ " t " ")
   "Prettify internal link targets, e.g., <<introduction>>."
   :type '(choice (const nil) (list string boolean string)))
 
-(defcustom org-modern-radio-link '(" ⛯ " t " ")
+(defcustom org-modern-radio-target '(" ⛯ " t " ")
   "Prettify radio link targets, e.g., <<<radio>>>."
   :type '(choice (const nil) (list string boolean string)))
 
@@ -227,11 +229,11 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
     (t :foreground "white"))
   "Face used for tag labels.")
 
-(defface org-modern-internal-link
+(defface org-modern-internal-target
   '((t :inherit org-modern-done))
   "Face used for internal link targets.")
 
-(defface org-modern-radio-link
+(defface org-modern-radio-target
   '((t :inherit org-modern-done))
   "Face used for radio link targets.")
 
@@ -558,7 +560,7 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
            ,@(and (eq org-modern-hide-stars 'leading) '((1 '(face nil invisible t))))
            ,@(and (eq org-modern-hide-stars t) '((0 '(face nil invisible t)))))))
       (when org-modern-horizontal-rule
-        '(("^-\\{5,\\}$" 0 '(face org-modern-horizontal-rule display (space :width text)))))
+        '(("^[ \t]*-\\{5,\\}$" 0 '(face org-modern-horizontal-rule display (space :width text)))))
       (when org-modern-table
         '(("^[ \t]*\\(|.*|\\)[ \t]*$" (0 (org-modern--table)))))
       (when org-modern-block
@@ -573,26 +575,33 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
         `((,(concat "^\\*+.*?\\( \\)\\(:\\(?:" org-tag-re ":\\)+\\)[ \t]*$")
            (0 (org-modern--tag)))))
       (when org-modern-footnote
-        `(("\\(\\[fn:\\)[^]]+\\]"
-           (0 '(face nil display ,org-modern-footnote))
-           (1 '(face nil display ,(propertize "[" 'display org-modern-footnote))))))
-      (when org-modern-internal-link
+        `(("^\\(\\[fn:\\)[[:word:]-_]+\\]" ;; Definition
+           ,@(if-let (x (car org-modern-footnote))
+                 `((0 '(face nil display ,x))
+                   (1 '(face nil display ,(propertize "[" 'display x))))
+               '((1 '(face nil display "[")))))
+          ("[^\n]\\(\\(\\[fn:\\)[[:word:]-_]+\\]\\)" ;; Reference
+           ,@(if-let (x (cdr org-modern-footnote))
+                 `((1 '(face nil display ,x))
+                   (2 '(face nil display ,(propertize "[" 'display x))))
+               '((2 '(face nil display "[")))))))
+      (when org-modern-internal-target
         `(("\\(<<\\)\\([^<][^\n]*?\\)\\(>>\\)"
-           (0 '(face org-modern-internal-link) t)
-           (1 '(face nil display ,(propertize (car org-modern-internal-link)
+           (0 '(face org-modern-internal-target) t)
+           (1 '(face nil display ,(propertize (car org-modern-internal-target)
                                               'face 'org-modern-symbol)))
-           (3 '(face nil display ,(propertize (caddr org-modern-internal-link)
+           (3 '(face nil display ,(propertize (caddr org-modern-internal-target)
                                               'face 'org-modern-symbol)))
-           ,@(unless (cadr org-modern-internal-link)
+           ,@(unless (cadr org-modern-internal-target)
                '((2 '(face nil invisible t)))))))
-      (when org-modern-radio-link
+      (when org-modern-radio-target
         `(("\\(<<<\\)\\([^\n]+?\\)\\(>>>\\)"
-           (0 '(face org-modern-radio-link) t)
-           (1 '(face nil display ,(propertize (car org-modern-radio-link)
+           (0 '(face org-modern-radio-target) t)
+           (1 '(face nil display ,(propertize (car org-modern-radio-target)
                                               'face 'org-modern-symbol)))
-           (3 '(face nil display ,(propertize (caddr org-modern-radio-link)
+           (3 '(face nil display ,(propertize (caddr org-modern-radio-target)
                                               'face 'org-modern-symbol)))
-           ,@(unless (cadr org-modern-radio-link)
+           ,@(unless (cadr org-modern-radio-target)
                '((2 '(face nil invisible t)))))))
       (when org-modern-timestamp
         '(("\\(?:<\\|\\[\\)\\([0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}\\(?: [[:word:]]+\\)?\\(?: [.+-]+[0-9ymwdh/]+\\)*\\)\\(\\(?: [0-9:-]+\\)?\\(?: [.+-]+[0-9ymwdh/]+\\)*\\)\\(?:>\\|\\]\\)"
@@ -628,6 +637,7 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
   "Finalize Org agenda highlighting."
   (save-excursion
     (save-match-data
+      ;; Todo keywords
       (goto-char (point-min))
       (let ((re (format ": +%s "
                         (regexp-opt
@@ -635,7 +645,20 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
                                  org-done-keywords-for-agenda) t)))
             (org-done-keywords org-done-keywords-for-agenda))
         (while (re-search-forward re nil 'noerror)
-          (org-modern--todo))))))
+          (org-modern--todo)))
+      ;; Tags
+      (goto-char (point-min))
+      (let ((re (concat "\\( \\)\\(:\\(?:" org-tag-re ":\\)+\\)[ \t]*$")))
+        (while (re-search-forward re nil 'noerror)
+          (org-modern--tag)))
+      ;; Priorities
+      (goto-char (point-min))
+      (while (re-search-forward "\\(\\[\\)#.\\(\\]\\)" nil 'noerror)
+        ;; For some reason the org-agenda-fontify-priorities adds overlays?!
+        (when-let (ov (overlays-at (match-beginning 0))) (overlay-put (car ov) 'face nil))
+        (put-text-property (match-beginning 0) (match-end 0) 'face 'org-modern-priority)
+        (put-text-property (match-beginning 1) (match-end 1) 'display " ")
+        (put-text-property (match-beginning 2) (match-end 2) 'display " ")))))
 
 ;;;###autoload
 (define-globalized-minor-mode global-org-modern-mode

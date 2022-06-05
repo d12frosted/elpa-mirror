@@ -7,9 +7,7 @@
 ;; Created: 12 November 2018
 
 ;; Version: 0.4.1
-;; Package-Commit: fcf8e1e500d953364e97e7ebc5708a2c00fa3cd2
-;; Package-Version: 20190428.1812
-;; Package-X-Original-Version: 0.4.1
+;; Package-Version: 0.4.1
 ;; Keywords: data
 ;; URL: http://github.com/lashtear/gn-mode
 ;; Homepage: http://github.com/lashtear/gn-mode

@@ -1,11 +1,11 @@
 ;;; eglot-fsharp.el --- fsharp-mode eglot integration                     -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2021  Jürgen Hötzel
+;; Copyright (C) 2019-2022  Jürgen Hötzel
 
-;; Author: Jürgen Hötzel <juergen@archlinux.org>
+;; Author: Jürgen Hötzel <juergen@hoetzel.info>
 ;; Package-Requires: ((emacs "27.1") (eglot "1.4") (fsharp-mode "1.10") (jsonrpc "1.0.14"))
-;; Package-Version: 20220604.1309
-;; Package-Commit: faf021ac31eed962d0a45ebfee3fe117f80c6697
+;; Package-Version: 20220605.1329
+;; Package-Commit: c7842fe63b8bae5aa8bd6a9891036c5ce04e4030
 ;; Version: 1.10
 ;; Keywords: languages
 ;; URL: https://github.com/fsharp/emacs-fsharp-mode
@@ -110,18 +110,18 @@
                    (version<= emacs-version "26.2"))
               "NORMAL:-VERS-TLS1.3"
             gnutls-algorithm-priority))))
-      (unless (eglot-fsharp-current-version-p version)
-      (url-copy-file url zip t)
-      ;; FIXME: Windows (unzip preinstalled?)
-      (let ((default-directory (file-name-directory (eglot-fsharp--path-to-server))))
-        (unless (zerop (call-process "unzip" nil nil nil "-o" zip))
-          (error "Failed to unzip %s" zip))
-	(unless (eq system-type 'windows-nt)
-	  (dolist  (file (directory-files-recursively (file-name-directory (eglot-fsharp--path-to-server)) "." t))
-	    (if (file-directory-p file)
-		(chmod file #o755)
-	      (chmod file #o644)))))
-      (delete-file zip)))
+  (unless (eglot-fsharp-current-version-p version)
+    (url-copy-file url zip t)
+    ;; FIXME: Windows (unzip preinstalled?)
+    (let ((default-directory (file-name-directory (eglot-fsharp--path-to-server))))
+      (unless (zerop (call-process "unzip" nil nil nil "-o" zip))
+        (error "Failed to unzip %s" zip))
+      (unless (eq system-type 'windows-nt)
+	(dolist  (file (directory-files-recursively (file-name-directory (eglot-fsharp--path-to-server)) "." t))
+	  (if (file-directory-p file)
+	      (chmod file #o755)
+	    (chmod file #o644)))))
+    (delete-file zip)))
 
 
 (defun eglot-fsharp--process-tool-action (response)
@@ -171,7 +171,7 @@ Ensure FsAutoComplete is installed (when called INTERACTIVE)."
 			  (t `("mono" ,(eglot-fsharp--path-to-server)))))
 	  (arg-list (if eglot-fsharp-server-verbose
 			`("--background-service-enabled" "-v")
-            	        `("--background-service-enabled")
+            	      `("--background-service-enabled")
 		      )))
       (cons 'eglot-fsautocomplete (append cmd-list arg-list)))))
 
