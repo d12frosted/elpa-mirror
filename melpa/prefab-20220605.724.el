@@ -3,8 +3,8 @@
 ;; Author: Laurence Warne
 ;; Maintainer: Laurence Warne
 ;; Version: 0.1
-;; Package-Version: 20220403.1026
-;; Package-Commit: ffcf9c640c8c458a58b752ef2608e07a929a1104
+;; Package-Version: 20220605.724
+;; Package-Commit: f5e7bd129377d6256c0d3306080837695d62fe68
 ;; URL: https://github.com/laurencewarne/prefab.el
 ;; Package-Requires: ((emacs "27.1") (f "0.2.0") (transient "0.3.7"))
 
@@ -173,8 +173,8 @@ shell output:
 
 Check the string OUTPUT for errors.  If it is an error string signal
 an error starting with ERROR-MSG-PREFIX, else return OUTPUT."
-  (if (string-match-p "^Error:" output)
-      (error (concat error-msg-prefix output))
+  (if (string-match-p (rx bol (or "Error" "Traceback")) output)
+      (error "%s '%s'" error-msg-prefix output)
     output))
 
 (defun prefab--cookiecutter-conf ()
@@ -226,7 +226,7 @@ repo_dir, cleanup = determine_repo_dir(
     abbreviations=config_dict['abbreviations'],
     clone_to_dir=config_dict['cookiecutters_dir'],
     checkout=None,
-    no_input=False,
+    no_input=True,
     #password=password,
     #directory=directory,
 )
@@ -368,8 +368,8 @@ by `prefab-templates' or a remote URI.  A non-nil value for REPLAY indicates
 that context from a replay is preferred."
   (let* ((template-path
           (if (f-exists-p template) template
-            (progn (message "Downloading template %s" template)
-                   (prefab--cookiecutter-download-template template))))
+            (message "Downloading template %s" template)
+            (prefab--cookiecutter-download-template template)))
          (ctx-file (format "%s/cookiecutter.json" template-path))
          (truth (if replay "False" "True"))
          (template-name (prefab-template-display-string source template))

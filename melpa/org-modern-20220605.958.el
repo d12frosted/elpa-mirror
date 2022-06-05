@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.3
-;; Package-Version: 20220604.1005
-;; Package-Commit: 4982a63926aae047d24c22f089314731ad84839d
+;; Package-Version: 20220605.958
+;; Package-Commit: dfb42f4f7d86d70291310ac34e8f4b0f858edab3
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
@@ -175,6 +175,10 @@ used as replacement for \"#+keyword:\", with t the default key."
                                           (const :tag "Default" t))
                         :value-type (choice (string :tag "Replacement")
                                             (const :tag "Hide prefix" t)))))
+
+(defcustom org-modern-footnote '((height 0.7) (raise 0.3))
+  "Prettify footnotes."
+  :type '(choice (const nil) sexp))
 
 (defcustom org-modern-internal-link '(" ↪ " t " ")
   "Prettify internal link targets, e.g., <<introduction>>."
@@ -568,6 +572,10 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
       (when org-modern-tag
         `((,(concat "^\\*+.*?\\( \\)\\(:\\(?:" org-tag-re ":\\)+\\)[ \t]*$")
            (0 (org-modern--tag)))))
+      (when org-modern-footnote
+        `(("\\(\\[fn:\\)[^]]+\\]"
+           (0 '(face nil display ,org-modern-footnote))
+           (1 '(face nil display ,(propertize "[" 'display org-modern-footnote))))))
       (when org-modern-internal-link
         `(("\\(<<\\)\\([^<][^\n]*?\\)\\(>>\\)"
            (0 '(face org-modern-internal-link) t)

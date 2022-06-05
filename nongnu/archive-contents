@@ -1065,7 +1065,7 @@
 	     (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
 	     (:commit . "e4e604ae3ac91748c4e7d51a591cb9ee60961b7c"))])
  (org-contrib .
-	      [(0 3)
+	      [(0 4)
 	       ((emacs
 		 (25 1))
 		(org
@@ -1075,7 +1075,8 @@
 		(:keywords "org")
 		(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 		(:authors
-		 ("Bastien Guerry" . "bzg@gnu.org")))])
+		 ("Bastien Guerry" . "bzg@gnu.org"))
+		(:commit . "c6aef31ccfc7c4418c3b51e98f7c3bd8e255f5e6"))])
  (org-drill .
 	    [(2 7 0)
 	     ((emacs
