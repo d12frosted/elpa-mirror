@@ -1,10 +1,10 @@
 ;;; helm-ls-git.el --- list git files. -*- lexical-binding: t -*-
 
-;; Copyright (C) 2012 ~ 2015 Thierry Volpiatto <thierry.volpiatto@gmail.com>
+;; Copyright (C) 2012 ~ 2022 Thierry Volpiatto
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20220418.657
-;; Package-Commit: c6494a462e605d6fd16c9355e32685c3e0085589
+;; Package-Version: 20220605.434
+;; Package-Commit: 27a0fae5c8927c5980f49726bd29d0a7274af337
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -271,6 +271,10 @@ major-mode `helm-ls-git-commmit-mode' which provide following commands:
 |-------------+--------------|
 |\\[helm-ls-git-server-edit]|Exit when done
 |\\[helm-ls-git-server-edit-abort]|Abort
+
+If you want to specify another author, use a prefix arg when
+calling commit action, you will be prompted for author name and
+email.
 
 NOTE: This mode is based on diff-mode, this to show a colorized
 diff of your commit, you can use any regular emacs editing
@@ -1537,7 +1541,10 @@ context i.e. use it in helm actions."
                             (helm-ls-git-root-dir
                              (helm-default-directory))))
         (process-environment process-environment)
-        (bname (format "*helm-ls-git %s*" (car args))))
+        (bname (format "*helm-ls-git %s*" (car args)))
+        (alt-auth (and helm-current-prefix-arg
+                       (list (read-string "Author name: ")
+                             (read-string "Author email: ")))))
     ;; It seems git once it knows GIT_EDITOR reuse the same value
     ;; along its whole process e.g. when squashing in a rebase
     ;; process, so even if the env setting goes away after initial
@@ -1545,6 +1552,9 @@ context i.e. use it in helm actions."
     ;; commits.
     (when (get-buffer bname) (kill-buffer bname))
     (push "GIT_EDITOR=emacsclient $@" process-environment)
+    (when (and alt-auth (not (member "" alt-auth)))
+      (push (format "GIT_AUTHOR_NAME=%s" (car alt-auth)) process-environment)
+      (push (format "GIT_AUTHOR_EMAIL=%s" (cadr alt-auth)) process-environment))
     (unless (server-running-p)
       (server-start))
     (apply #'start-file-process "git" bname "git" args)))

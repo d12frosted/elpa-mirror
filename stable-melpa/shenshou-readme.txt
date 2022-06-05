@@ -8,10 +8,14 @@ Please note,
   See `shenshou-curl-program' and `shenshou-gzip-program'.
 
 Usage,
-  - Set `shenshou-login-user-name' and `shenshou-login-password'.
+  - Set `shenshou-login-user-name' and `shenshou-login-password' first.
   - Run `shenshou-download-subtitle' in Dired buffer or anywhere.
   - Run `shenshou-logout-now' to logout.
 
- Tips,
+Tips,
+  - Use `shenshou-language-code-list' to set up subtitle's language.
+    See https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes.
+     (setq shenshou-language-code-list "eng") # English
+     (setq shenshou-language-code-list "eng,chi") # English, Chinese
   - See `shenshou-curl-extra-options' on how to set SOCKS5 or HTTP proxy
   - This program gives you the freedom to select the right subtitle.

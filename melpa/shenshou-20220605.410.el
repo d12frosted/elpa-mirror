@@ -3,8 +3,8 @@
 ;; Copyright (C) 2021-2022 Chen Bin
 ;;
 ;; Version: 0.0.3
-;; Package-Version: 20220527.1332
-;; Package-Commit: 2942ae73d60f14081b5bb3a1b646f29f7c555340
+;; Package-Version: 20220605.410
+;; Package-Commit: 41b4539444ff0af1a3aabb77c7c99d2e9914ebbe
 
 ;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
 ;; URL: http://github.com/redguardtoo/shenshou
@@ -39,11 +39,15 @@
 ;;   See `shenshou-curl-program' and `shenshou-gzip-program'.
 ;;
 ;; Usage,
-;;   - Set `shenshou-login-user-name' and `shenshou-login-password'.
+;;   - Set `shenshou-login-user-name' and `shenshou-login-password' first.
 ;;   - Run `shenshou-download-subtitle' in Dired buffer or anywhere.
 ;;   - Run `shenshou-logout-now' to logout.
 ;;
-;;  Tips,
+;; Tips,
+;;   - Use `shenshou-language-code-list' to set up subtitle's language.
+;;     See https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes.
+;;      (setq shenshou-language-code-list "eng") # English
+;;      (setq shenshou-language-code-list "eng,chi") # English, Chinese
 ;;   - See `shenshou-curl-extra-options' on how to set SOCKS5 or HTTP proxy
 ;;   - This program gives you the freedom to select the right subtitle.
 

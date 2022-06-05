@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20220604.1551
-;; Package-Commit: 373accd31e7b0f7edc3eb6bb2bdc396bcf8d02c1
+;; Package-Version: 20220605.239
+;; Package-Commit: a7fe761d3ed0f64124ded26f2c776973b5e84f14
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -592,6 +592,8 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
 
 (defun org-link-beautify--return-icon (type path extension &optional link-element)
   "Return icon for the link PATH smartly based on TYPE, EXTENSION, etc."
+  ;; Fix elisp compiler warning: Unused lexical argument `link-element'.
+  (ignore link-element)
   ;; (message "DEBUG: (type) %s" type)
   ;; (message "DEBUG: (path) %s" path)
   ;; (message "DEBUG: (link-element) %s" link-element)
@@ -615,10 +617,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
        (all-the-icons-fileicon "markdownlint" :face '(:foreground "DimGray")))
       ((member (file-name-extension path) '("mm" "xmind"))
        (all-the-icons-fileicon "brain" :face '(:foreground "BlueViolet")))
-      (t (all-the-icons-icon-for-file   ; file
+      (t (all-the-icons-icon-for-file   ; other file types
           (format ".%s" extension)
-          :face (org-link-beautify--warning-face path)
-          :v-adjust 0))))
+          :face (org-link-beautify--warning-face path)))))
     ("file+sys" (all-the-icons-faicon "link"))
     ("file+emacs" (all-the-icons-icon-for-mode 'emacs-lisp-mode))
     ("http" (all-the-icons-icon-for-url (concat "http:" path) :v-adjust -0.05))
@@ -635,7 +636,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     ("man" (all-the-icons-faicon "info-circle" :v-adjust -0.05))
     ("info" (all-the-icons-faicon "info" :v-adjust -0.05))
     ("help" (all-the-icons-faicon "info" :v-adjust -0.05))
-    ;; external Org link types
+    ;; Org Mode external link types
     ("eaf" (all-the-icons-faicon "cubes" :v-adjust -0.05)) ; emacs-application-framework
     ("eww" (all-the-icons-icon-for-mode 'eww-mode))
     ("mu4e" (all-the-icons-faicon "envelope" :v-adjust -0.05))
@@ -665,10 +666,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     ;; (_
     ;;  ;; DEBUG
     ;;  (message "[org-link-beautify] link-element: %s" link-element))
-    )
-  
-  ;; Fix elisp compiler warning: Unused lexical argument `link-element'.
-  (ignore link-element))
+    ))
 
 (defun org-link-beautify--display-icon (start end description icon)
   "Display ICON for link on START and END with DESCRIPTION."
