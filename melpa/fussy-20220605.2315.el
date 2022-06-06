@@ -4,8 +4,8 @@
 
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 1.0
-;; Package-Version: 20220605.355
-;; Package-Commit: 0571ed71d85ae882ad10d9c87ab2fa4d7dd3f2b2
+;; Package-Version: 20220605.2315
+;; Package-Commit: 7240323da4665a6b54f31a64f98d8b04228423e6
 ;; Package-Requires: ((emacs "27.2") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
@@ -126,6 +126,9 @@ highlighting with `completion-pcm--hilit-commonality'."
 
 Takes OBJ \(to be propertized\) and
 SCORE \(list of indices of OBJ to be propertized\).
+
+This function is expected to return OBJ.
+
 If this is nil, don't propertize (e.g. highlight matches) at all.
 This can also be set to nil to assume highlighting from a different source.
 
@@ -139,7 +142,7 @@ e.g. `fussy-filter-orderless' can also be used for highlighting matches."
   :group 'fussy)
 
 (defcustom fussy-compare-same-score-fn
-  #'fussy-strlen<
+  #'fussy-histlen->strlen<
   "Function used to compare matches with the same 'completion-score.
 
 FN takes in and compares two candidate strings C1 and C2 and
@@ -344,6 +347,18 @@ https://lists.gnu.org/archive/html/help-gnu-emacs/2008-06/msg00087.html"
        result)))
 
 ;;
+;; (@* "Constants and Variables" )
+;;
+
+(defvar-local fussy--hist-hash nil
+  "Hash table representing `minibuffer-history-variable'.
+
+KEYs are values in the list.
+VALUES are positions of the values in the list.
+
+See `fussy--history-hash-table'.")
+
+;;
 ;; (@* "All Completions Interface/API" )
 ;;
 
@@ -357,6 +372,7 @@ Implement `try-completions' interface by using `completion-flex-try-completion'.
   "Get flex-completions of STRING in TABLE, given PRED and POINT.
 
 Implement `all-completions' interface with additional fuzzy / `flx' scoring."
+  (setf fussy--hist-hash (fussy--history-hash-table))
   (when fussy-ignore-case
     ;; `completion-ignore-case' is usually set up in `minibuffer-with-setup-hook'.
     ;; e.g. `read-file-name-default'
@@ -393,8 +409,10 @@ Implement `all-completions' interface with additional fuzzy / `flx' scoring."
              (`(,all ,pattern ,prefix)
               (funcall fussy-filter-fn
                        string table pred point)))
-          ;; (message (format "string: %s prefix: %s infix: %s"
-          ;;                  string prefix infix))
+          ;; (message (format
+          ;;           "fn: %S string: %s prefix: %s infix: %s all: %s"
+          ;;           'fussy-all-completions
+          ;;           string prefix infix all))
           (when all
             (nconc
              (if (or (> (length infix) fussy-max-query-length)
@@ -407,7 +425,7 @@ Implement `all-completions' interface with additional fuzzy / `flx' scoring."
                  (let ((unscored-candidates '())
                        (candidates-to-score '()))
                    ;; Pre-sort the candidates by length before partitioning.
-                   (setq unscored-candidates
+                   (setf unscored-candidates
                          (if fussy-max-limit-preferred-candidate-fn
                              (sort
                               all fussy-max-limit-preferred-candidate-fn)
@@ -433,7 +451,10 @@ Implement `all-completions' interface with additional fuzzy / `flx' scoring."
              (length prefix)))))
     ('nil nil)
     ('t nil)
-    (`,collection collection)))
+    (`,collection
+     ;; (message (format "fn: %S collection: %s"
+     ;;                  'fussy-all-completions collection))
+     collection)))
 
 ;;
 ;; (@* "Scoring & Highlighting" )
@@ -448,7 +469,7 @@ Set a text-property \='completion-score on candidates with their score.
 `completion--adjust-metadata' later uses this \='completion-score for sorting."
   (mapcar
    (lambda (x)
-     (setq x (copy-sequence x))
+     (setf x (copy-sequence x))
      (cond
       ((> (length x) fussy-max-word-length-to-score)
        (put-text-property 0 1 'completion-score 0 x))
@@ -457,7 +478,8 @@ Set a text-property \='completion-score on candidates with their score.
                              x string
                              cache)))
          ;; (message
-         ;;  (format "candidate: %s query: %s score %s" x string score))
+         ;;  (format "fn: %S candidate: %s query: %s score %s"
+         ;;          'fussy-score x string score))
          (if (not score)
              (put-text-property 0 1 'completion-score 0 x)
            (put-text-property 0 1 'completion-score (car score) x)
@@ -465,8 +487,10 @@ Set a text-property \='completion-score on candidates with their score.
            ;; string here. This is faster than the pcm highlight but doesn't
            ;; seem to work with `find-file'.
            (when (fussy--should-propertize-p)
-             (setq
+             (setf
               x (funcall fussy-propertize-fn x score)))))))
+     ;; (message (format "fn: %S returning x: %s"
+     ;;                  'fussy-score x))
      x)
    candidates))
 
@@ -489,6 +513,8 @@ If `fussy-propertize-fn' is nil, no highlighting should take place."
   "Highlight COLLECTION using PATTERN.
 
 Only highlight if `fussy--using-pcm-highlight-p' is t."
+  ;; (message (format "fn: %S collection: %s"
+  ;;                  'fussy--maybe-highlight collection))
   (if (fussy--using-pcm-highlight-p)
       (fussy--pcm-highlight pattern collection)
     ;; Assume that the collection's highlighting is handled elsewhere.
@@ -503,8 +529,11 @@ pcm-style refers to using `completion-pcm--hilit-commonality' for highlighting."
 (defun fussy-propertize-common-part (obj score)
   "Return propertized copy of OBJ according to score.
 
-SCORE of nil means to clear the properties."
-  (when (> (length score) 1) ;; Has a score and an index to highlight.
+If SCORE does not have indices to highlight, return OBJ unmodified."
+  (if (<= (length score) 1)
+      ;; Has only a score or nil.
+      obj
+    ;; Has a score and an index to highlight.
     (let ((block-started (cadr score))
           (last-char nil)
           ;; Originally we used `substring-no-properties' when setting str but
@@ -518,8 +547,8 @@ SCORE of nil means to clear the properties."
                    (not (= (1+ last-char) char)))
           (add-face-text-property block-started (1+ last-char)
                                   'completions-common-part nil str)
-          (setq block-started char))
-        (setq last-char char))
+          (setf block-started char))
+        (setf last-char char))
       (add-face-text-property block-started (1+ last-char)
                               'completions-common-part nil str)
       (when (and
@@ -596,29 +625,23 @@ SCORE of nil means to clear the properties."
 (defun fussy-histlen< (c1 c2)
   "Return t if C1 occurred more recently than C2.
 
-Check C1 and C2 in `minibuffer-history-variable'."
-  (let* ((hist (and (not (eq minibuffer-history-variable t))
-                    (symbol-value minibuffer-history-variable))))
-    (catch 'found
-      (dolist (h hist)
-        (when (string= c1 h)
-          (throw 'found t))
-        (when (string= c2 h)
-          (throw 'found nil))))))
+Check C1 and C2 in `minibuffer-history-variable' which is stored in
+`fussy--hist-hash'."
+  (if-let* ((hist fussy--hist-hash)
+            (c1-pos (or (gethash c1 hist) most-positive-fixnum))
+            (c2-pos (or (gethash c2 hist) most-positive-fixnum)))
+      (< c1-pos c2-pos)
+    nil))
 
 (defun fussy-histlen->strlen< (c1 c2)
   "Return t if C1 occurs more recently than C2 or is shorter than C2."
-  (let* ((hist (and (not (eq minibuffer-history-variable t))
-                    (symbol-value minibuffer-history-variable))))
-    (let ((result (catch 'found
-                    (dolist (h hist)
-                      (when (string= c1 h)
-                        (throw 'found 'c1))
-                      (when (string= c2 h)
-                        (throw 'found 'c2))))))
-      (if result
-          (eq result 'c1)
-        (fussy-strlen< c1 c2)))))
+  (if-let* ((hist fussy--hist-hash)
+            (c1-pos (or (gethash c1 hist) most-positive-fixnum))
+            (c2-pos (or (gethash c2 hist) most-positive-fixnum)))
+      (if (= c1-pos c2-pos)
+          (fussy-strlen< c1 c2)
+        (< c1-pos c2-pos))
+    (fussy-strlen< c1 c2)))
 
 ;;
 ;; (@* "Utils" )
@@ -642,6 +665,19 @@ Check if `orderless' is being used."
    ;; If we're using `orderless' to filter, don't use pcm highlights because
    ;; `orderless' does it on its own.
    (not (fussy--orderless-p))))
+
+(defun fussy--history-hash-table ()
+  "Return hash table representing `minibuffer-history-variable'.
+
+Key is the history string and Value is the history position."
+  (when-let* ((hist (and (not (eq minibuffer-history-variable t))
+                         (symbol-value minibuffer-history-variable)))
+              (table (make-hash-table :test 'equal
+                                      :size (length hist))))
+    (cl-loop for index from 0
+             for item in hist
+             do (puthash item index table))
+    table))
 
 (defun fussy-without-unencodeable-chars (string)
   "Strip invalid chars from STRING.
@@ -713,8 +749,12 @@ to only use the `orderless-flex' pattern."
                         orderless-skip-highlighting)))
           (if skip-highlighting
               (list completions pattern prefix)
-            (list (orderless-highlight-matches pattern completions)
-                  pattern prefix)))))))
+            (let ((result (list
+                           (orderless-highlight-matches pattern completions)
+                           pattern prefix)))
+              ;; (message "fn: %S result: %S"
+              ;;          'fussy-filter-orderless-flex result)
+              result)))))))
 
 (defun fussy-filter-orderless (string table pred _point)
   "Match STRING to the entries in TABLE.
@@ -765,7 +805,7 @@ that's written in C for faster filtering."
                  (substring afterpoint 0 (cdr bounds))))
          (regexp
           (funcall fussy-fast-regex-fn infix))
-         (completion-regexp-list (cons regexp completion-regexp-list))
+         (completion-regexp-list (append regexp completion-regexp-list))
          ;; Commentary on why we prefer prefix over infix.
          ;; For `find-file', if the prefix exists, we're in a different
          ;; directory, so should be retrieving candidates from that directory
@@ -784,6 +824,7 @@ that's written in C for faster filtering."
           ;; Is there an easier way to check if string is empty or nil?
           (if (= (length prefix) 0)
               ;; Use infix when prefix is empty or nil.
+              ;; If infix is used, searches will not be as exhaustive as prefix.
               (or
                (all-completions infix table pred)
                (all-completions prefix table pred))
@@ -810,8 +851,10 @@ that's written in C for faster filtering."
                               (cons 'prefix basic-pattern))))
               (completion-pcm--optimize-pattern
                (completion-flex--make-flex-pattern pattern))))))
-    ;; (message (format "prefix: %s infix: %s regexp: %s pattern %s completions %s"
-    ;;                  prefix infix regexp pattern completions))
+    ;; (message
+    ;;  (format
+    ;;   "prefix: %s infix: %s pattern %s completions %S regexp_list: %S"
+    ;;   prefix infix pattern completions completion-regexp-list))
     (list completions pattern prefix)))
 
 ;;
@@ -819,21 +862,22 @@ that's written in C for faster filtering."
 ;;
 ;; Random note:
 ;; These return something similar to what `orderless-pattern-compiler'
-;; would return if they were wrapped inside a list.
-;; e.g. \(list \(fussy-pattern-flex-1 "str"\)\)
+;; These can be applied where `orderless-pattern-compiler' can apply.
+;; e.g. They return \(list some-regex\).
 ;;
 
 (defun fussy-pattern-flex-1 (str)
   "Make STR flex pattern.
 
 This may be the fastest regex to use but is not exhaustive."
-  (concat "\\`"
-          (mapconcat
-           (lambda (x)
-             (setq x (string x))
-             (concat "[^" x "]*" (regexp-quote x)))
-           str
-           "")))
+  (list
+   (concat "\\`"
+           (mapconcat
+            (lambda (x)
+              (setf x (string x))
+              (concat "[^" x "]*" (regexp-quote x)))
+            str
+            ""))))
 
 (defun fussy-pattern-flex-2 (str)
   "Make STR flex pattern.
@@ -842,30 +886,34 @@ This is a copy of the `orderless-flex' pattern written without `rx'.
 
 This one may be slower than `fussy-pattern-flex-1' but is more
 exhaustive on matches."
-  (concat
-   (when (> (length str) 1)
-     "\\(?:")
-   (mapconcat
-    (lambda (x)
-      (format "\\(%c\\)" x))
-    str
-    ".*")
-   (when (> (length str) 1)
-     "\\)")))
+  (list
+   (concat
+    (when (> (length str) 1)
+      "\\(?:\\(?:")
+    (mapconcat
+     (lambda (x)
+       (format "\\(%c\\)" x))
+     str
+     ".*")
+    (when (> (length str) 1)
+      "\\)\\)"))))
 
 (defun fussy-pattern-flex-rx (str)
   "Make STR flex pattern using `rx'.
 
 This is a copy of the `orderless-flex' pattern."
   (require 'rx)
-  (rx-to-string
-   `(seq
-     ""
-     ,@(cl-loop
-        for (sexp . more) on (cl-loop for char across str collect char)
-        collect `(group ,sexp)
-        when more collect '(zero-or-more nonl))
-     "")))
+  (list
+   (rx-to-string
+    `(regexp
+      ,(rx-to-string
+        `(seq
+          ""
+          ,@(cl-loop
+             for (sexp . more) on (cl-loop for char across str collect char)
+             collect `(group ,sexp)
+             when more collect '(zero-or-more nonl))
+          ""))))))
 
 ;;
 ;; (@* "Integration with other Packages" )
