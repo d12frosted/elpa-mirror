@@ -1,0 +1,30 @@
+Package: macports
+Fetcher: github
+Source:  https://github.com/amake/macports.el.git
+
+Updating /mnt/store/melpa/working/macports/
+Checking out origin/HEAD
+Checking out bb5c789af7adaaf5b7c0a6013d0397b4cd801b10
+Checking out bb5c789af7adaaf5b7c0a6013d0397b4cd801b10
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/macports/
+  to /tmp/macportsLr9aGM/macports-20220606.34
+    macports-core.el -> macports-core.el
+    macports-describe.el -> macports-describe.el
+    macports-installed.el -> macports-installed.el
+    macports-outdated.el -> macports-outdated.el
+    macports-select.el -> macports-select.el
+    macports.el -> macports.el
+Created macports-20220606.34.tar containing:
+  macports-20220606.34/
+  macports-20220606.34/macports-core.el
+  macports-20220606.34/macports-describe.el
+  macports-20220606.34/macports-installed.el
+  macports-20220606.34/macports-outdated.el
+  macports-20220606.34/macports-pkg.el
+  macports-20220606.34/macports-select.el
+  macports-20220606.34/macports.el
+Built macports in 5.028s, finished at 2022-06-06T07:10:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 351 Jun  6 07:10 packages/macports-20220606.34.entry
+ 52K -rw-r--r-- 1 root root 50K Jun  6 07:10 packages/macports-20220606.34.tar

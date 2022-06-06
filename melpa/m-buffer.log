@@ -3,3 +3,24 @@ Fetcher: github
 Source:  https://github.com/phillord/m-buffer-el.git
 
 Updating /mnt/store/melpa/working/m-buffer/
+Checking out origin/HEAD
+Checking out 8681342aaffa187e5c54945ab91b812965a96d19
+Checking out 8681342aaffa187e5c54945ab91b812965a96d19
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/m-buffer/
+  to /tmp/m-buffer6u8OUc/m-buffer-20170407.2141
+    m-buffer-at.el -> m-buffer-at.el
+    m-buffer-macro.el -> m-buffer-macro.el
+    m-buffer.el -> m-buffer.el
+    m-buffer-doc.org -> m-buffer-doc.org
+Created m-buffer-20170407.2141.tar containing:
+  m-buffer-20170407.2141/
+  m-buffer-20170407.2141/m-buffer-at.el
+  m-buffer-20170407.2141/m-buffer-doc.org
+  m-buffer-20170407.2141/m-buffer-macro.el
+  m-buffer-20170407.2141/m-buffer-pkg.el
+  m-buffer-20170407.2141/m-buffer.el
+Built m-buffer in 4.279s, finished at 2022-06-06T07:10:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 310 Jun  6 07:10 packages/m-buffer-20170407.2141.entry
+ 52K -rw-r--r-- 1 root root 50K Jun  6 07:10 packages/m-buffer-20170407.2141.tar
