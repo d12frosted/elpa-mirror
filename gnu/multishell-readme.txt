@@ -2,37 +2,42 @@ Easily use and navigate multiple shell buffers, including remote shells.
 Fundamentally, multishell is the function `multishell-pop-to-shell' -
 a la `pop-to-buffer' - plus a keybinding. Together, they enable you to:
 
-* Get to the input point from wherever you are in a shell buffer,
-  ... or to any of your shell buffers, from anywhere inside emacs.
+* Easily get to the input point from wherever you are in a shell buffer,
+  or to any of your shell buffers, from anywhere inside emacs.
 
-* Use universal arguments to launch and choose among alternate shell buffers,
-  ... and change which is the current default.
+* Use universal arguments and name completion to launch a new or choose
+  among existing shell buffers, and change which is the current default.
 
-* Easily restart disconnected shells, or shells from prior sessions
-  ... the latter from Emacs builtin savehist minibuf history persistence
+* Easily restart exited shells, or shells from emacs prior sessions.
 
-* Append a path to a new shell name to launch a shell in that directory,
-  ... and use a path with Emacs tramp syntax to launch a remote shell -
-  for example:
+* Specify an initial path for the shell. By using Emacs tramp syntax you
+  can launch a sudo and/or remote shell.
 
-  * `#root/sudo:root@localhost:/etc` for a buffer named "*#root*" with a
-    root shell starting in /etc.
+  For example, specifying the following at the multishell buffer name
+  prompt will:
 
-  * `/ssh:example.net:` for a shell buffer in your homedir on example.net.
-    The buffer will be named "*example.net*".
+  * `#root/sudo:root@localhost:/etc` launch a shell in a buffer named
+    "*#root*" with a root shell starting in /etc.
 
-  * `#ex/ssh:example.net|sudo:root@example.net:/var/log` for a root shell
-    starting in /var/log on example.net named "*#ex*".
+  * `/ssh:example.net:` launch a shell buffer in your homedir on
+    example.net.  The buffer will be named "*example.net*".
 
-  * 'interior/ssh:gateway.corp.com|ssh:interior.corp.com:' to go via
-    gateway.corp.com to your homedir on interior.corp.com.  The buffer
-    will be named "*interior*". You could append a sudo hop, and so on.
+  * `#ex/ssh:example.net|sudo:root@example.net:/etc` launch a root
+    shell starting in /etc on example.net named "*#ex*".
 
-* Thanks to tramp, file visits from the shell will seamlessly be in
-  the auspices of the target account, and relative to the current
-  directory, on the host where the shell is running.
+  * `interior/ssh:gateway.corp.com|ssh:interior.corp.com:` via
+    gateway.corp.com launch a shell in your homedir on interior.corp.com.
+    The buffer will be named "*interior*". You could append a sudo hop,
+    and so on.
+
+* Thanks to tramp, file visits initiated in remote shell buffers will
+  seamlessly be on the hosts where the shells are running, in the auspices
+  of the account being used.
 
 * Manage your list of shells, current and past, as a collection.
+
+* Of course, emacs completion makes it easy to switch to an already
+  existing shell buffer, or one in your history roster, by name.
 
 See the `multishell-pop-to-shell' docstring for details.
 
@@ -47,6 +52,12 @@ repository for a bit more documentation.
 
 Change Log:
 
+* 2022-06-04 1.1.10 Ken Manheimer:
+  - Autoload customizations so customized multishell keybinding triggers
+    load of the package.
+  - Refine multishell features description.
+* 2021-08-02 1.1.10 Ken Manheimer:
+  - Get basic multishell command-key customization working.
 * 2020-10-30 1.1.9 Ken Manheimer:
   - Require cl-lib when compiling for cl-letf macro.
 * 2020-10-28 1.1.8 Ken Manheimer:

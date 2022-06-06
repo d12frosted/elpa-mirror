@@ -1896,15 +1896,16 @@
 	       (:authors
 		("Dave Love" . "fx@gnu.org")))])
  (multishell .
-	     [(1 1 9)
+	     [(1 1 10)
 	      ((cl-lib
 		(0 5)))
-	      "Easily use multiple shell buffers, local and remote" tar
+	      "Organize use of multiple shell buffers, local and remote" tar
 	      ((:url . "https://github.com/kenmanheimer/EmacsMultishell")
+	       (:keywords "processes")
 	       (:maintainer "Ken Manheimer" . "ken.manheimer@gmail.com")
 	       (:authors
 		("Ken Manheimer" . "ken.manheimer@gmail.com"))
-	       (:keywords "processes"))])
+	       (:commit . "aa1433b8df6d950e8592c7e878922b4ec5374569"))])
  (muse .
        [(3 20 2)
 	nil "Authoring and publishing tool for Emacs" tar
