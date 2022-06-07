@@ -1064,6 +1064,19 @@
 	     (:keywords "nix" "languages" "tools" "unix")
 	     (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
 	     (:commit . "e4e604ae3ac91748c4e7d51a591cb9ee60961b7c"))])
+ (org-auto-tangle .
+		  [(0 0 1)
+		   ((emacs
+		     (24 1))
+		    (async
+		     (1 9 3)))
+		   "Automatically and Asynchronously tangles org files on save" tar
+		   ((:url . "https://github.com/yilkalargaw/org-auto-tangle")
+		    (:keywords "outlines")
+		    (:maintainer "Yilkal Argaw")
+		    (:authors
+		     ("Yilkal Argaw"))
+		    (:commit . "109e39f3df2b2f864c5ab8346178d2955993553c"))])
  (org-contrib .
 	      [(0 4)
 	       ((emacs

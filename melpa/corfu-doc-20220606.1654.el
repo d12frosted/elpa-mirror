@@ -4,8 +4,8 @@
 
 ;; Author: Yuwei Tian <ibluefocus@NOSPAM.gmail.com>
 ;; URL: https://github.com/galeo/corfu-doc
-;; Package-Version: 20220606.1111
-;; Package-Commit: 7f7e25117334c9c13bbc5a925bd0a95a2b0965d8
+;; Package-Version: 20220606.1654
+;; Package-Commit: 616a2a9fc6fb3222ea2273435ddbc63eba72670d
 ;; Version: 0.7
 ;; Keywords: corfu popup documentation convenience
 ;; Package-Requires: ((emacs "27.1")(corfu "0.25"))
@@ -548,7 +548,7 @@ See `scroll-up' for details."
                    (get-buffer " *corfu-doc*"))))
     (with-selected-frame corfu-doc--frame
       (with-current-buffer cf-doc-buf
-        (apply #'scroll-up n)))))
+        (funcall #'scroll-up n)))))
 
 ;;;###autoload
 (defun corfu-doc-scroll-up (&optional n)

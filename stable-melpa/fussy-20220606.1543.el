@@ -4,8 +4,8 @@
 
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 1.0
-;; Package-Version: 20220606.1553
-;; Package-Commit: fa268de24ccd9ac99e0a9bbc849245696c600a35
+;; Package-Version: 20220606.1543
+;; Package-Commit: 1e77aa133b1bed8164a927b9090af839d0383774
 ;; Package-Requires: ((emacs "27.2") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
@@ -347,7 +347,7 @@ https://lists.gnu.org/archive/html/help-gnu-emacs/2008-06/msg00087.html"
        result)))
 
 ;;
-;; (@* "Constants, Variables and Inlined Functions" )
+;; (@* "Constants and Variables" )
 ;;
 
 (defvar-local fussy--hist-hash nil
@@ -357,25 +357,6 @@ KEYs are values in the list.
 VALUES are positions of the values in the list.
 
 See `fussy--history-hash-table'.")
-
-(defsubst fussy--orderless-p ()
-  "Return whether or not we're using `orderless' for filtering."
-  (or (eq fussy-filter-fn 'fussy-filter-orderless)
-      (eq fussy-filter-fn 'fussy-filter-orderless-flex)))
-
-(defsubst fussy--using-pcm-highlight-p ()
-  "Check if highlighting should use `completion-pcm--hilit-commonality'.
-
-Check if TABLE needs to be specially highlighted.
-Check if `fussy-score-fn' used doesn't return match indices.
-Check if `orderless' is being used."
-  (and
-   ;; These don't generate match indices to highlight at all so we should
-   ;; highlight with `completion-pcm--hilit-commonality'.
-   (memq fussy-score-fn fussy-score-fns-without-indices)
-   ;; If we're using `orderless' to filter, don't use pcm highlights because
-   ;; `orderless' does it on its own.
-   (not (fussy--orderless-p))))
 
 ;;
 ;; (@* "All Completions Interface/API" )
@@ -665,6 +646,25 @@ Check C1 and C2 in `minibuffer-history-variable' which is stored in
 ;;
 ;; (@* "Utils" )
 ;;
+
+(defun fussy--orderless-p ()
+  "Return whether or not we're using `orderless' for filtering."
+  (or (eq fussy-filter-fn 'fussy-filter-orderless)
+      (eq fussy-filter-fn 'fussy-filter-orderless-flex)))
+
+(defun fussy--using-pcm-highlight-p ()
+  "Check if highlighting should use `completion-pcm--hilit-commonality'.
+
+Check if TABLE needs to be specially highlighted.
+Check if `fussy-score-fn' used doesn't return match indices.
+Check if `orderless' is being used."
+  (and
+   ;; These don't generate match indices to highlight at all so we should
+   ;; highlight with `completion-pcm--hilit-commonality'.
+   (memq fussy-score-fn fussy-score-fns-without-indices)
+   ;; If we're using `orderless' to filter, don't use pcm highlights because
+   ;; `orderless' does it on its own.
+   (not (fussy--orderless-p))))
 
 (defun fussy--history-hash-table ()
   "Return hash table representing `minibuffer-history-variable'.
