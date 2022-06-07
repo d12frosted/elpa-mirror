@@ -2,9 +2,9 @@
 
 ;; Copyright (C) 2021-2022 Chen Bin
 ;;
-;; Version: 0.0.3
-;; Package-Version: 20220605.410
-;; Package-Commit: 41b4539444ff0af1a3aabb77c7c99d2e9914ebbe
+;; Version: 0.0.4
+;; Package-Version: 20220607.39
+;; Package-Commit: 317a87ca4b1a3f1860d9ce88aeabac154598a834
 
 ;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
 ;; URL: http://github.com/redguardtoo/shenshou
@@ -73,7 +73,7 @@
   :group 'shenshou)
 
 (defcustom shenshou-language-code-list "eng"
-  "Language codes to search for, divided by ',' (e.g. 'chi,rus,spa,eng').
+  "Language codes to search for, divided by \",\" (e.g. \"chi,rus,spa,eng\").
 See https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes for details."
   :type 'string
   :group 'shenshou)
@@ -140,6 +140,11 @@ If it's empty, user is required to provide password during login process."
 (defvar shenshou-movie-regex-1
   "\\(.*\\)[.\[( ]\\{1\\}\\(19[0-9]\\{2\\}\\|20[0-9]\\{2\\}\\)\\(.*\\)"
   "Regex to extract movie show information (name, year, team).")
+
+(defun shenshou-trim (string)
+  "Trim STRING."
+  (setq string (replace-regexp-in-string "^[ \t_-]+" "" string))
+  (setq string (replace-regexp-in-string "[ \t_-]+$" "" string)))
 
 (defun shenshou-value (beginning str)
   "Use eight bytes from BEGINNING of STR to get hash."
@@ -333,7 +338,8 @@ OpenSubtitles.org uses special hash function to match subtitles against videos."
 (defun shenshou-process-query (name)
   "Get query from video file NAME."
   (let ((query (match-string 1 name)))
-    (replace-regexp-in-string " *([^)]*$" "" query)))
+    (setq query (replace-regexp-in-string "[ \t-_]*([^)]*$" "" query))
+    (shenshou-trim query)))
 
 (defun shenshou-guess-video-info (name)
   "Guess information from NAME of video."
@@ -344,20 +350,20 @@ OpenSubtitles.org uses special hash function to match subtitles against videos."
       (setq video-info (plist-put video-info :query (shenshou-process-query name)))
       (setq video-info (plist-put video-info :season (match-string 2 name)))
       (setq video-info (plist-put video-info :episode (match-string 3 name)))
-      (setq video-info (plist-put video-info :team (match-string 4 name))))
+      (setq video-info (plist-put video-info :team (shenshou-trim (match-string 4 name)))))
 
      ((string-match shenshou-tvshow-regex-2 name)
       (setq video-info (plist-put video-info :moviekind "tv"))
       (setq video-info (plist-put video-info :query (shenshou-process-query name)))
       (setq video-info (plist-put video-info :season (match-string 2 name)))
       (setq video-info (plist-put video-info :episode (match-string 3 name)))
-      (setq video-info (plist-put video-info :team (match-string 4 name))))
+      (setq video-info (plist-put video-info :team (shenshou-trim (match-string 4 name)))))
 
      ((string-match shenshou-movie-regex-1 name)
       (setq video-info (plist-put video-info :moviekind "movie"))
       (setq video-info (plist-put video-info :query (shenshou-process-query name)))
       (setq video-info (plist-put video-info :movieyear (match-string 2 name)))
-      (setq video-info (plist-put video-info :team (match-string 3 name))))
+      (setq video-info (plist-put video-info :team (shenshou-trim (match-string 3 name)))))
 
      (t
       (setq video-info (plist-put video-info :moviekind "unknown"))
