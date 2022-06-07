@@ -4,8 +4,8 @@
 
 ;; Author: Jakob L. Kreuze <zerodaysfordays@sdf.lonestar.org>
 ;; Version: 0.1
-;; Package-Version: 20200202.229
-;; Package-Commit: f3c8fda6fee78f45a259e5d218a519dfd11c00c7
+;; Package-Version: 20220602.143
+;; Package-Commit: 4d585c51d5701b4d43c02db78c7032658cae47fd
 ;; Package-Requires: ((emacs "24.3") (org "9.0"))
 ;; Keywords: convenience hypermedia wp
 ;; URL: https://git.sr.ht/~jakob/ox-haunt
@@ -48,6 +48,7 @@
     (template . ox-haunt-template))
   :options-alist
   '((:tags "TAGS" nil nil)
+    (:haunt-metadata "HAUNT_METADATA" nil nil)
     (:haunt-base-dir "HAUNT_BASE_DIR" nil ox-haunt-base-dir)
     (:haunt-images-dir "HAUNT_IMAGES_DIR" nil ox-haunt-images-dir)))
 
@@ -61,6 +62,7 @@
 This can be specified on a per-file basis with the 'HAUNT_BASE_DIR' keyword."
   :type 'string)
 
+;; Notably, this excludes :haunt-metadata, which we handle separately.
 (defcustom ox-haunt-recognized-metadata '(:title :date :tags)
   "A list of keywords to include in the Haunt metadata section."
   :type '(list symbol))
@@ -150,6 +152,11 @@ INFO is the current state of the export process, as a plist."
          (insert (format "%s: %s\n"
                          (substring (symbol-name keyword) 1)
                          (ox-haunt--keyword-as-string info keyword)))))
+     ;; Handle :haunt-metadata, which we deliberately exclude from
+     ;; `ox-haunt-recognized-metadata'.
+     (when (plist-get info :haunt-metadata)
+       (dolist (p (read (ox-haunt--keyword-as-string info :haunt-metadata)))
+         (insert (format "%s: %s\n" (car p) (cdr p)))))
      (buffer-string))
    "---\n"
    ;; Output the article contents.

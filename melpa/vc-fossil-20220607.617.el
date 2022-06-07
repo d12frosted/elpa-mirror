@@ -1,10 +1,10 @@
-;;; vc-fossil.el --- VC backend for the fossil sofware configuraiton management system
+;;; vc-fossil.el --- VC backend for the fossil sofware configuraiton management system  -*- lexical-binding: t; -*-
 
 ;; Author: Venkat Iyer <venkat@comit.com>
 ;; Maintainer: Alfred M. Szmidt <ams@gnu.org>
-;; Version: 20220528
-;; Package-Version: 20220528.1544
-;; Package-Commit: 72538f815df3b4fc91a5dac9623bfc2524383aba
+;; Version: 20220707
+;; Package-Version: 20220607.617
+;; Package-Commit: 8ce6113aa272583130e5f929fefd67115c8f572a
 
 ;; vc-fossil.el free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published
@@ -112,8 +112,8 @@
 
 ;;; Code:
 
-(eval-when-compile
-  (require 'vc))
+(eval-when-compile (require 'vc))
+(eval-when-compile (require 'url-parse)) ;For url-user/passwd setters
 
 (autoload 'vc-switches "vc")
 
@@ -162,7 +162,7 @@
       (setq fossil-program (car args)
 	    command (cadr args)
 	    args (cddr args)))
-    (apply 'vc-do-async-command buffer root fossil-program command args)
+    (apply #'vc-do-async-command buffer root fossil-program command args)
     (with-current-buffer buffer
       (vc-run-delayed (vc-compilation-mode 'Fossil)))
     (vc-set-async-update buffer)))
@@ -170,7 +170,7 @@
 (defun vc-fossil--get-id (dir)
   (let* ((default-directory dir)
 	 (info (vc-fossil--run "info"))
-	 (pos (string-match "checkout: *\\([0-9a-fA-F]+\\)" info))
+	 (_pos (string-match "checkout: *\\([0-9a-fA-F]+\\)" info))
 	 (uid (match-string 1 info)))
     (substring uid 0 10)))
 
@@ -238,14 +238,12 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
   :type '(choice (const :tag "Unspecified" nil)
 		 (const :tag "None" t)
 		 (string :tag "Argument String")
-		 (repeat :tag "Argument List" :value ("") string))
-  :group 'vc-fossil)
+		 (repeat :tag "Argument List" :value ("") string)))
 
 (defcustom vc-fossil-extra-header-fields (list :repository :remote-url :checkout :tags)
   "A list of keywords denoting extra header fields to show in the vc-dir buffer."
   :type '(set (const :repository) (const :remote-url) (const :synchro)
-	      (const :checkout) (const :comment) (const :tags))
-  :group 'vc-fossil)
+	      (const :checkout) (const :comment) (const :tags)))
 
 ;; BACKEND PROPERTIES
 
@@ -255,7 +253,13 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
 
 ;; STATE-QUERYING FUNCTIONS
 
-;;;###autoload
+
+;;;###autoload (defun vc-fossil-registered (file)
+;;;###autoload   "Return non-nil if FILE is registered with Fossil."
+;;;###autoload   (if (vc-find-root file ".fslckout")       ; Short cut.
+;;;###autoload       (progn
+;;;###autoload         (load "vc-fossil" nil t)
+;;;###autoload         (vc-fossil-registered file))))
 (defun vc-fossil-registered (file)
   (with-temp-buffer
     (let* ((str (ignore-errors
@@ -281,10 +285,9 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
 
 (defun vc-fossil-dir-status-files (dir files update-function)
   (vc-fossil--classify-all-files dir)
-  (insert (apply 'vc-fossil--run "changes" "--classify" "--all"
+  (insert (apply #'vc-fossil--run "changes" "--classify" "--all"
 		 (or files (list dir))))
-  (let ((result '())
-	(root (vc-fossil-root dir)))
+  (let ((result '()))
     (goto-char (point-min))
     (while (not (eobp))
       (let* ((line (buffer-substring-no-properties (point) (line-end-position)))
@@ -296,13 +299,14 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
 	    ;; If 'fossil update' says file is UNCHANGED check to see
 	    ;; if it has been RENAMED.
 	    (when (or (not state) (eql state 'up-to-date))
-	      (setq state (vc-fossil--state-code (cdr (assoc file vc-fossil--file-classifications)))))
+	      (setq state (vc-fossil--state-code
+			   (cdr (assoc file vc-fossil--file-classifications)))))
 	    (when (not (eq state 'up-to-date))
 	      (push (list file state) result))))
 	(forward-line)))
     ;; Now collect untracked files.
     (delete-region (point-min) (point-max))
-    (insert (apply 'vc-fossil--run "extras" "--dotfiles" (list dir)))
+    (insert (apply #'vc-fossil--run "extras" "--dotfiles" (list dir)))
     (goto-char (point-min))
     (while (not (eobp))
       (let ((file (buffer-substring-no-properties (point) (line-end-position))))
@@ -310,7 +314,7 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
 	(forward-line)))
     (funcall update-function result nil)))
 
-(defun vc-fossil-dir-extra-headers (dir)
+(defun vc-fossil-dir-extra-headers (_dir)
   (let ((info (vc-fossil--run "info"))
 	(settings (vc-fossil--run "settings"))
 	(lines nil))
@@ -330,12 +334,13 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
 		    (autosync (and as-match (match-string 1 settings)))
 		    (dp-match (string-match "^dont-push +.+ +\\([[:graph:]]+\\)$" settings))
 		    (dontpush (and dp-match (match-string 1 settings))))
-	       (push (vc-fossil--propertize-header-line "Synchro    : "
-							(concat (and autosync "autosync=") autosync
-								(and dontpush " dont-push=") dontpush))
+	       (push (vc-fossil--propertize-header-line
+		      "Synchro    : "
+		      (concat (and autosync "autosync=") autosync
+			      (and dontpush " dont-push=") dontpush))
 		     lines)))
 	    ((eql field :checkout)
-	     (let* ((posco (string-match "checkout: *\\([0-9a-fA-F]+\\) \\([-0-9: ]+ UTC\\)" info))
+	     (let* ((_posco (string-match "checkout: *\\([0-9a-fA-F]+\\) \\([-0-9: ]+ UTC\\)" info))
 		    (coid (substring (match-string 1 info) 0 10))
 		    (cots (format-time-string "%Y-%m-%d %H:%M:%S %Z"
 					      (safe-date-to-time (match-string 2 info))))
@@ -364,7 +369,7 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
     (and line
 	 (cadr (split-string line)))))
 
-(defun vc-fossil-checkout-model (files) 'implicit)
+(defun vc-fossil-checkout-model (_files) 'implicit)
 
 ;; - mode-line-string (file)
 
@@ -373,7 +378,7 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
 (defun vc-fossil-create-repo ()
   (vc-fossil--command nil 0 nil "new"))
 
-(defun vc-fossil-register (files &optional rev comment)
+(defun vc-fossil-register (files &optional _rev _comment)
   ;; We ignore the comment.  There's no comment on add.
   (vc-fossil--command nil 0 files "add"))
 
@@ -385,8 +390,8 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
 (defun vc-fossil-unregister (file)
   (vc-fossil--command nil 0 file "rm"))
 
-(defun vc-fossil-checkin (files comment &optional rev)
-  (apply 'vc-fossil--command nil 0 files
+(defun vc-fossil-checkin (files comment &optional _rev)
+  (apply #'vc-fossil--command nil 0 files
 	 (nconc (list "commit" "-m")
 		(log-edit-extract-headers
 		 `(("Author" . "--user-override")
@@ -401,7 +406,7 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
 	  (unless (zerop (length rev)) (list "-r" rev))
 	  (vc-switches 'Fossil 'checkout))))
 
-(defun vc-fossil-checkout (file &optional editable rev)
+(defun vc-fossil-checkout (file &optional _editable rev)
   (apply #'vc-fossil--command nil 0 file
 	 "update"
 	 (nconc
@@ -444,7 +449,7 @@ This prompts for a branch to merge from."
 
 ;; - steal-lock (file &optional revision)
 
-(defun vc-fossil-modify-change-comment (files rev comment)
+(defun vc-fossil-modify-change-comment (_files rev comment)
   (vc-fossil--call t "amend" rev "-m" comment))
 
 ;; - mark-resolved (files)
@@ -453,7 +458,7 @@ This prompts for a branch to merge from."
 
 ;; HISTORY FUNCTIONS
 
-(defun vc-fossil-print-log (files buffer &optional shortlog start-revision limit)
+(defun vc-fossil-print-log (files buffer &optional _shortlog start-revision limit)
   ;; TODO: We actually already have short, start and limit, need to
   ;; add it into the code.
   (vc-setup-buffer buffer)
@@ -504,7 +509,7 @@ This prompts for a branch to merge from."
 
 ;; - update-changelog (files)
 
-(defun vc-fossil-diff (files &optional rev1 rev2 buffer async)
+(defun vc-fossil-diff (files &optional rev1 rev2 buffer _async)
   ;; TODO: Implement diff for directories.
   (let ((buf (or buffer "*vc-diff*"))
 	(root (and files (expand-file-name (vc-fossil-root (car files))))))
@@ -561,7 +566,7 @@ This prompts for a branch to merge from."
 						'("tag" "add"))
 					    ,name ,(vc-fossil--get-id dir)))))
 
-(defun vc-fossil-retrieve-tag (dir name update)
+(defun vc-fossil-retrieve-tag (dir name _update)
   (let ((default-directory dir))
     (vc-fossil--command nil 0 nil "checkout" name)))
 
@@ -650,8 +655,8 @@ This prompts for a branch to merge from."
 	   (setq file (match-string 1 l0)))
       file)))
 
-(defun vc-fossil-link (start end)
-  "Puts the current URL to a file in the kill ring."
+(defun vc-fossil-link (_start _end)
+  "Put the current URL to a file in the kill ring."
   (interactive "r")
   (let ((default-directory (file-name-directory (buffer-file-name (current-buffer)))))
     (unless (vc-fossil-registered (buffer-file-name))
@@ -660,20 +665,21 @@ This prompts for a branch to merge from."
 			    (vc-fossil-repository-url (buffer-file-name))))
 	   (file (vc-fossil--relative-file-name (buffer-file-name)))
 	   (tag (vc-fossil-working-revision (buffer-file-name (current-buffer))))
-	   (start (line-number-at-pos (region-beginning)))
-	   (end (line-number-at-pos (region-end))))
-      (if (= start end)
-	  (setq link (format "%s/file?ci=%s&name=%s&ln=%s"
-			     repository-url tag file start))
-	(setq link (format "%s/file?ci=%s&name=%s&ln=%s-%s"
-			   repository-url tag file start end)))
+   	   (start (line-number-at-pos (region-beginning)))
+   	   (end (line-number-at-pos (region-end)))
+           (link
+            (if (= start end)
+                (format "%s/file?ci=%s&name=%s&ln=%s"
+ 			repository-url tag file start)
+              (format "%s/file?ci=%s&name=%s&ln=%s-%s"
+ 		      repository-url tag file start end))))
       (kill-new link)
       (message "%s" link))))
 
-;;; This snippet enables the Fossil VC backend so it will work once
-;;; this file is loaded.  By also marking it for inclusion in the
-;;; autoloads file, installing packaged versions of this should work
-;;; without users having to monkey with their init files.
+;; This snippet enables the Fossil VC backend so it will work once
+;; this file is loaded.  By also marking it for inclusion in the
+;; autoloads file, installing packaged versions of this should work
+;; without users having to monkey with their init files.
 
 ;;;###autoload
 (add-to-list 'vc-handled-backends 'Fossil t)

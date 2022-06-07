@@ -4,8 +4,8 @@
 
 ;; Author: Dan Dee <monkeyjunglejuice@pm.me>
 ;; URL: https://github.com/monkeyjunglejuice/matrix-emacs-theme
-;; Package-Version: 20220503.1325
-;; Package-Commit: f2f69c3aa9c76dc3c27e9bf3c965e66f8b7f61cc
+;; Package-Version: 20220607.322
+;; Package-Commit: 403226efb0c38898a8a848c60b8da0f94470b055
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces, theme
@@ -57,38 +57,38 @@
    `(fringe ((t (:background ,color-bg))))
    `(vertical-border ((t (:foreground ,color-dark :background nil))))
    `(minibuffer-prompt ((t (:foreground ,color-bright :weight bold))))
-
-   `(font-lock-face ((t (:foreground ,color-middle))))
-   `(font-lock-builtin-face ((t (:foreground ,color-middle))))
-   `(font-lock-comment-face ((t (:foreground ,color-dark :inherit fixed-pitch-serif))))
-   `(font-lock-doc-face ((t (:foreground ,color-dark :slant italic :inherit fixed-pitch-serif))))
-   `(font-lock-constant-face ((t (:foreground ,color-fg))))
-   `(font-lock-function-name-face ((t (:foreground ,color-fg :weight bold :slant italic))))
-   `(font-lock-keyword-face ((t (:foreground ,color-bright))))
-   `(font-lock-string-face ((t (:inherit fixed-pitch-serif))))
-   `(font-lock-type-face ((t (:weight bold))))
-   `(font-lock-variable-name-face ((t (:foreground ,color-fg :slant italic))))
-   `(font-lock-warning-face ((t (:foreground ,color-red :slant italic))))
-   `(font-lock-regexp-grouping-construct ((t (:foreground ,color-bright))))
-   `(font-lock-regexp-grouping-backslash ((t (:foreground ,color-bright))))
-
    `(isearch ((t (:foreground ,color-hl :weight bold :underline t))))
    `(isearch-fail ((t (:inherit error))))
-   `(lazy-highlight ((t (:foreground ,color-hl :underline (:foreground ,color-hl)))))
-
+   `(lazy-highlight ((t (:foreground ,color-bright :underline (:color ,color-bright)))))
    `(link ((t (:foreground ,color-middle :underline t))))
    `(link-visited ((t (:foreground ,color-fg :underline t))))
    `(button ((t (:inherit link))))
    `(help-face-button ((t (:inherit button))))
+   `(help-key-binding ((t (:foreground ,color-middle :background ,color-bg-alt :box (:color ,color-dark) :inherit fixed-pitch-serif))))
    `(header-line ((t (:foreground ,color-dark :background ,color-bg-alt))))
    `(shadow ((t (:foreground ,color-dark))))
    `(show-paren-match ((t (:foreground ,color-hl :weight bold :underline t))))
    `(show-paren-mismatch ((t (:inherit error))))
    `(highlight ((t (:foreground ,color-hl :weight bold :underline (:color ,color-hl)))))
+   `(match ((t (:inherit highlight))))
    `(hl-line ((t (:underline (:color ,color-dark) :extend t))))
    `(widget-field ((t (:foreground ,color-bright :background ,color-bg-alt))))
    `(trailing-whitespace ((t (:background ,color-bg-red))))
    `(escape-glyph ((t (:inverse-video t))))
+
+   `(font-lock-face ((t (:foreground ,color-middle))))
+   `(font-lock-builtin-face ((t (:foreground ,color-middle))))
+   `(font-lock-comment-face ((t (:foreground ,color-dark :inherit fixed-pitch-serif))))
+   `(font-lock-constant-face ((t (:foreground ,color-fg))))
+   `(font-lock-doc-face ((t (:foreground ,color-dark :slant italic :inherit fixed-pitch-serif))))
+   `(font-lock-function-name-face ((t (:foreground ,color-fg :weight bold :slant italic))))
+   `(font-lock-keyword-face ((t (:foreground ,color-bright))))
+   `(font-lock-regexp-grouping-construct ((t (:foreground ,color-bright))))
+   `(font-lock-regexp-grouping-backslash ((t (:foreground ,color-bright))))
+   `(font-lock-string-face ((t (:inherit fixed-pitch-serif))))
+   `(font-lock-type-face ((t (:weight bold))))
+   `(font-lock-variable-name-face ((t (:foreground ,color-fg :slant italic))))
+   `(font-lock-warning-face ((t (:foreground ,color-red :slant italic))))
 
    ;; ansi colors
    `(ansi-color-names-vector [,color-bg ,color-red ,color-middle ,color-middle ,color-blue ,color-middle ,color-middle ,color-fg])
@@ -113,6 +113,7 @@
    ;; dired
    `(dired-header ((t (:foreground ,color-bright :slant italic))))
    `(dired-directory ((t (:weight bold))))
+   `(dired-broken-symlink ((t (:slant italic :inherit error))))
    `(dired-symlink ((t (:slant italic))))
    `(dired-mark ((t (:foreground ,color-hl :background ,color-darker))))
    `(dired-marked ((t (:foreground ,color-bright :background ,color-darker))))
@@ -129,8 +130,9 @@
    `(eshell-ls-directory ((t (:inherit dired-directory))))
    `(eshell-ls-archive ((t (:slant italic :inherit dired-directory))))
    `(eshell-ls-symlink ((t (:inherit dired-symlink))))
-   `(eshell-ls-executable ((t (:foreground ,color-middle))))
+   `(eshell-ls-executable ((t (:foreground ,color-bright))))
    `(eshell-ls-missing ((t (:inherit error))))
+   `(eshell-ls-product ((t (:foreground ,color-middle))))
    `(eshell-ls-readonly ((t (:inherit shadow))))
    `(eshell-ls-special ((t (:inherit dired-special))))
 
@@ -163,7 +165,7 @@
    `(custom-variable-obsolete ((t (:foreground ,color-dark :weight bold))))
    `(custom-documentation ((t (:inherit fixed-pitch-serif))))
    `(custom-visibility ((t (:inherit custom-documentation :underline t))))
-   `(custom-state ((t (:foreground ,color-red :slant italic))))
+   `(custom-state ((t (:foreground ,color-bright :slant italic))))
    `(custom-button ((t (:foreground ,color-bg :background ,color-fg))))
    `(custom-button-mouse ((t (:foreground ,color-hl :background ,color-dark))))
    `(custom-button-pressed ((t (:foreground ,color-hl :background ,color-darker))))
@@ -369,8 +371,16 @@
    `(slime-repl-output-mouseover-face ((t (:foreground ,color-bright :box nil))))
    `(slime-repl-input-face ((t (:inherit default))))
    `(slime-repl-prompt ((t (:inherit minibuffer-prompt))))
+   `(slime-highlight-edits-face ((t (:underline (:color ,color-darker)))))
+   `(slime-highlight-face ((t (:inherit highlight))))
+   `(slime-error-face ((t (:inherit error))))
+   `(slime-warning-face ((t (:inherit warning))))
+   `(slime-style-warning-face ((t (:inherit warning))))
    `(sldb-restartable-frame-line-face ((t (:inherit link))))
    `(sldb-section-face ((t (:foreground ,color-dark :weight bold))))
+
+   ;; geiser
+   `(geiser-font-lock-repl-output ((t (:foreground ,color-middle))))
 
    ;; cider
    `(cider-result-overlay-face ((t (:background ,color-bg-alt))))
@@ -397,7 +407,7 @@
    `(tuareg-font-lock-governing-face ((t (:foreground ,color-bright :weight bold))))
    `(tuareg-font-lock-label-face ((t (:inherit shadow))))
    `(tuareg-font-lock-line-number-face ((t (:inherit linum))))
-   `(tuareg-font-double-colon-face ((t (:inherit tuareg-font-lock-governing-face))))
+   `(tuareg-font-double-colon-face ((t (:inherit tuareg-font-lock-interactive-directive-face))))
    `(tuareg-font-lock-error-face ((t (:inherit error))))
 
    ;; merlin
@@ -443,15 +453,24 @@
    `(helm-ff-prefix ((t (:background nil))))
    `(helm-ff-dotted-directory ((t (:background nil :foreground ,color-middle))))
    `(helm-M-x-key ((t (:foreground ,color-bright))))
+   `(helm-M-x-short-doc ((t (:inherit font-lock-doc-face))))
    `(helm-buffer-file ((t (:foreground ,color-fg))))
-   `(helm-buffer-archive ((t (:inherit helm-buffer-file))))
+   `(helm-buffer-archive ((t (:inherit eshell-ls-archive))))
    `(helm-buffer-directory ((t (:inherit dired-directory))))
-   `(helm-buffer-not-saved ((t (:inherit helm-buffer-file :foreground unspecified :background ,color-middle))))
+   `(helm-buffer-not-saved ((t (:foreground ,color-red :underline (:color ,color-red :style wave)))))
    `(helm-buffer-saved-out ((t (:inherit helm-buffer-not-saved))))
-   `(helm-buffer-modified ((t (:foreground ,color-dark))))
+   `(helm-buffer-modified ((t (:foreground ,color-blue :underline (:color ,color-blue :style wave)))))
    `(helm-buffer-process ((t (:foreground ,color-dark))))
    `(helm-buffer-size ((t (:foreground ,color-dark))))
    `(helm-match ((t (:inherit completions-common-part))))
+   `(helm-bookmark-addressbook ((t (:inherit default))))
+   `(helm-bookmark-directory ((t (:inherit dired-directory))))
+   `(helm-bookmark-file ((t (:inherit default))))
+   `(helm-bookmark-file-not-found ((t (:inherit default :slant italic))))
+   `(helm-bookmark-gnus ((t (:inherit default))))
+   `(helm-bookmark-info ((t (:inherit default))))
+   `(helm-bookmark-man ((t (:inherit default))))
+   `(helm-bookmark-w3m ((t (:inherit default))))
 
    ;; adoc-mode
    `(markup-meta-hide-face ((t (:height 1.0 :foreground ,color-bright))))

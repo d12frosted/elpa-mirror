@@ -3,8 +3,8 @@
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
 ;; Version: 1.2
-;; Package-Version: 20220524.257
-;; Package-Commit: ca6eef8dccd8dd0676cc82825ef0b7f205d088dc
+;; Package-Version: 20220607.526
+;; Package-Commit: 0ce73ece84027939428ade3d46706cbd0a61ec3f
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -123,20 +123,20 @@ Only the current window buffers and buffers in
 
 ;;;; Filter Workspace Buffers
 
-(defun tabspaces-local-buffer-p (buffer)
+(defun tabspaces--local-buffer-p (buffer)
   "Return whether BUFFER is in the list of local buffers."
   (memq buffer (frame-parameter nil 'buffer-list)))
 
 (defun tabspaces--set-buffer-predicate (frame)
-  "Set the buffer predicate of FRAME to `tabspaces-local-buffer-p'."
-  (set-frame-parameter frame 'buffer-predicate #'tabspaces-local-buffer-p))
+  "Set the buffer predicate of FRAME to `tabspaces--local-buffer-p'."
+  (set-frame-parameter frame 'buffer-predicate #'tabspaces--local-buffer-p))
 
 (defun tabspaces--reset-buffer-predicate (frame)
-  "Reset the buffer predicate of FRAME if it is `tabspaces-local-buffer-p'."
-  (when (eq (frame-parameter frame 'buffer-predicate) #'tabspaces-local-buffer-p)
+  "Reset the buffer predicate of FRAME if it is `tabspaces--local-buffer-p'."
+  (when (eq (frame-parameter frame 'buffer-predicate) #'tabspaces--local-buffer-p)
     (set-frame-parameter frame 'buffer-predicate nil)))
 
-(defun tabspaces-buffer-list (&optional frame tabnum)
+(defun tabspaces--buffer-list (&optional frame tabnum)
   "Return a list of all live buffers associated with the current frame and tab.
 A non-nil value of FRAME selects a specific frame instead of the
 current one. If TABNUM is nil, the current tab is used. If it is
@@ -149,7 +149,7 @@ non-nil, then specify a tab index in the given frame."
                  (or
                   (cdr (assq 'wc-bl tab))
                   (mapcar 'get-buffer
-                          (car (cdr (assq #'tabspaces-buffer-list (assq 'ws tab))))))))
+                          (car (cdr (assq #'tabspaces--buffer-list (assq 'ws tab))))))))
            (frame-parameter frame 'buffer-list))))
     (seq-filter #'buffer-live-p list)))
 
@@ -220,7 +220,7 @@ default tabspace."
   (interactive
    (list
     (let ((blst (mapcar (lambda (b) (buffer-name b))
-                        (tabspaces-buffer-list))))
+                        (tabspaces--buffer-list))))
       ;; select buffer
       (read-buffer "Remove buffer from tabspace: " nil t
                    (lambda (b) (member (car b) blst))))))
@@ -257,7 +257,7 @@ This is the frame/tab-local equivilant to `switch-to-buffer'.
 The arguments NORECORD and FORCE-SAME-WINDOW are passed to `switch-to-buffer'."
   (interactive
    (list
-    (let ((blst (mapcar #'buffer-name (tabspaces-buffer-list))))
+    (let ((blst (mapcar #'buffer-name (tabspaces--buffer-list))))
       (read-buffer
        "Switch to local buffer: " blst nil
        (lambda (b) (member (if (stringp b) b (car b)) blst))))))
@@ -286,7 +286,7 @@ If FRAME is nil, use the current frame."
 (defun tabspaces-kill-buffers-close-workspace ()
   "Kill all buffers in the workspace and then close the workspace itself."
   (interactive)
-  (let ((buf (tabspaces-buffer-list)))
+  (let ((buf (tabspaces--buffer-list)))
     (unwind-protect
         (cl-loop for b in buf
                  do (kill-buffer b))
