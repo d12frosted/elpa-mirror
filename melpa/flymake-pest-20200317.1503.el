@@ -6,7 +6,7 @@
 ;;         Naoya Yamashita <conao3@gmail.com>
 ;; URL: https://github.com/ksqsf/pest-mode
 ;; Package-Version: 20200317.1503
-;; Package-Commit: 43447a2c70f98edd1139005e32f437d3f142442b
+;; Package-Commit: af677327f185113442e95b00986097b30cab650c
 ;; Keywords: languages flymake
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.3") (pest-mode "0.1"))

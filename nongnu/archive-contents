@@ -1574,13 +1574,13 @@
 		 (:authors
 		  ("Mark Tran" . "mark.tran@gmail.com")))])
  (vc-fossil .
-	    [(20220528)
+	    [(20220707)
 	     nil "VC backend for the fossil sofware configuraiton management system" tar
 	     ((:maintainer "Alfred M. Szmidt" . "ams@gnu.org")
 	      (:authors
 	       ("Venkat Iyer" . "venkat@comit.com"))
 	      (:url . "https://elpa.nongnu.org/nongnu/vc-fossil.html")
-	      (:commit . "88e2e164c0f547497b92b5b0b68ba214bff22c6a"))])
+	      (:commit . "8ce6113aa272583130e5f929fefd67115c8f572a"))])
  (vcomplete .
 	    [(1 2 1)
 	     ((emacs
