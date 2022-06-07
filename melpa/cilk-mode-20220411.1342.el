@@ -8,7 +8,7 @@
 ;; Modified: December 17, 2021
 ;; Version: 0.2.1
 ;; Package-Version: 20220411.1342
-;; Package-Commit: 794821e129ea47b04fdeedc61d9ccb3c4240c72d
+;; Package-Commit: 2f33f991c726d5214d6a17bbbd19836302a8e423
 ;; Keywords: c convenience faces languages
 ;; Homepage: https://github.com/ailiop/cilk-mode
 ;; Package-Requires: ((emacs "25.1") (flycheck "32-cvs"))
