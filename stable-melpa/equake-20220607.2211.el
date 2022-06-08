@@ -16,10 +16,10 @@
 ;; Author: Benjamin Slade <slade@lambda-y.net>
 ;; Maintainer: Benjamin Slade <slade@lambda-y.net>
 ;; URL: https://gitlab.com/emacsomancer/equake
-;; Package-Commit: ea5c0570f58b8e62249e001ed434a1056a50abe7
-;; Package-Version: 20220424.350
-;; Package-X-Original-Version: 0.986
-;; Version: 0.986
+;; Package-Commit: 1f1f269edd27ffce8b6ead5b317e49fa433b039f
+;; Package-Version: 20220607.2211
+;; Package-X-Original-Version: 0.99
+;; Version: 0.99
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1"))
 ;; Created: 2018-12-12
 ;; Keywords: convenience, frames, terminals, tools, window-system
@@ -75,6 +75,8 @@
 ;;
 ;; Equake is designed to work with multi-screen setups,
 ;; with a different set of tabs for each screen.
+;;
+;; Additional functionality when xprop and wmctrl are installed.
 ;;
 ;; You'll probably also want to configure your WM/DE to
 ;; ignore the window in the task manager etc and
@@ -155,6 +157,22 @@
 ;; And add an appropriate keybinding to your stumpwm init to toggle, e.g.:
 ;; (define-key *top-map* (kbd "F12") "invoke-equake")
 ;;
+;;; In GNOME Shell (Wayland):
+;; use the shell script =equake-invoke-wayland.sh=:
+;;
+;; #!/bin/sh
+
+;; equakestatus=$(emacsclient -n -e '(frame-live-p (alist-get (equake--get-monitor) equake--frame))')
+
+;; if [ "$equakestatus" = "nil" ]; then
+;;     emacsclient -c -e "(progn (select-frame-set-input-focus (selected-frame))
+;;                               (equake--transform-existing-frame-into-equake-frame)
+;;                               (goto-char (1- (point-max))))"
+;; else
+;;     emacsclient -n -e '(progn (setq equake-use-frame-hide nil)
+;;                               (equake-invoke))'
+;; fi
+;;
 ;;; In KDE Plasma 5:
 ;; systemsettings > Window Management > Window Rules:
 ;; Button: New
@@ -187,7 +205,7 @@
 ;;                  :name [
 ;;                   "\\*EQUAKE\\*.*"
 ;;                    ]}
-;;          :properties {:floating true 
+;;          :properties {:floating true
 ;;                       :titlebars_enabled false
 ;;                       :ontop true}}
 ;; *And*, importantly, you need to set equake-restore-frame-use-offset (otherwise, for some reason the Equake frame gradually creeps up and to left as you hide and unhide it) to t and set a horizontal and/or vertical offset in equake-restore-frame-x-offset and/or equake-restore-frame-y-offset in order to reposition the unhidden Equake frame, i.e. include in your init.el something like:
@@ -235,7 +253,7 @@
   :group 'shell)
 
 (defgroup equake-bindings ()
-  "Keybindings for Equake drop-down console. "
+  "Keybindings for Equake drop-down console."
   :group 'equake)
 
 (defcustom equake-inhibit-message-choice nil
@@ -355,7 +373,8 @@
   :group 'equake)
 
 (defcustom equake-default-shell 'eshell
-  "Default shell used by Equake, choices are `eshell', `vterm', `rash', `ansi-term', `term', `shell'."
+  "Default shell used by Equake, choices are
+`eshell', `vterm', `rash', `ansi-term', `term', `shell'."
   :type  'symbol
   :group 'equake)
 
@@ -366,15 +385,21 @@ environment variable."
   :type 'string
   :group 'equake)
 
-(defcustom equake-show-monitor-in-mode-line 'nil
+(defcustom equake-show-monitor-in-mode-line nil
   "Toggle to show monitor id string as part of Equake mode-line."
   :type 'boolean
   :group 'equake)
 
-(defcustom equake-use-frame-hide 't
+(defcustom equake-use-frame-hide t
   "Hide frames rather than destroying frames."
   :type 'boolean
   :group 'equake)
+
+
+(defcustom equake-close-frame-on-focus-loss nil
+  "When non-nil, close (hide or destroy) the frame when it loses focus."
+  :group 'equake
+  :type 'boolean)
 
 (defcustom equake-restore-frame-use-offset 'nil
   "Enable applying offset when restoring hidden frames (hack for AwesomeWM)."
@@ -393,11 +418,12 @@ environment variable."
 
 (defcustom equake-display-guess-list
   '(":0" ":1" "w32")
-  "A list of displays to try to connect to, when the actual DISPLAY is not yet known."
+  "A list of displays to try to connect to, when the actual DISPLAY is
+not yet known."
   :type 'list
   :group 'equake)
 
-(defcustom equake-close-frame-after-last-etab-closes 't
+(defcustom equake-close-frame-after-last-etab-closes t
   "Whether or not to close the Equake frame after the last etab is closed."
   :type 'boolean
   :group 'equake)
@@ -409,8 +435,8 @@ environment variable."
 
 (defface equake-buffer-face
   '((t (:inherit default)))
-  "Face used for internal Equake buffer text, including font typeface and
-background colour."
+  "Face used for internal Equake buffer text.
+Includes font typeface and background colour."
   :group 'equake-faces)
 
 (defface equake-tab-inactive
@@ -480,13 +506,16 @@ Intended as `:before-while' advice for
     (save-buffers-kill-terminal)))
 
 (defun equake--open-in-new-frame (buffer alist)
+  "A predicate indicating whether equake should open in a new frame.
+Called during processing of the 'display-buffer-alist'.  Both arguments
+BUFFER and ALIST are unused."
   (and (symbolp 'equake-mode)
        (symbol-value 'equake-mode)
        equake-open-non-terminal-in-new-frame))
 
 (setq display-buffer-alist
       (append display-buffer-alist
-      '((equake--open-in-new-frame . ((display-buffer-reuse-window display-buffer-pop-up-frame) . ((reusable-frames . 0)))))))
+              '((equake--open-in-new-frame . ((display-buffer-reuse-window display-buffer-pop-up-frame) . ((reusable-frames . 0)))))))
 
 (defun equake-invoke ()
   "Toggle Equake frames.
@@ -522,7 +551,7 @@ Needed to assign a new name for a new tab (e.g. its number)")
    (intern
     (message "%s"
              (ido-completing-read "Choose shell:"
-                                  equake-available-shells 'nil 't 'nil 'nil)))))
+                                  equake-available-shells nil t nil nil)))))
 
 (defun equake-new-tab (&optional override)
   "Open a new shell tab on monitor, optionally OVERRIDE default shell."
@@ -545,7 +574,8 @@ Needed to assign a new name for a new tab (e.g. its number)")
                            (tab-name . ,tab-name))
                  equake--tab-properties)
         (equake--rename-tab tab-name)
-        (equake-mode))))) ; set Equake minor mode for buffer
+        (equake-mode) ; set Equake minor mode for buffer
+        (equake--record-frame-history))))) ; make sure to record new tab
 
 (defun equake-move-tab-right ()
   "Move current tab one position to the right."
@@ -596,7 +626,7 @@ Needed to assign a new name for a new tab (e.g. its number)")
   (let ((monitor (equake--get-tab-property 'monitor)))
     (if equake-mode
         (message "Currently in an Equake tab already.")
-        (switch-to-buffer (alist-get monitor equake--last-tab)))))
+      (switch-to-buffer (alist-get monitor equake--last-tab)))))
 
 (defun equake-close-tab-without-query ()
   "Close the current Equake tab/buffer without querying."
@@ -615,7 +645,7 @@ Needed to assign a new name for a new tab (e.g. its number)")
         (switch-to-buffer (equake--find-next-tab monitor killed-tab)))
       (cl-callf2 delq killed-tab (alist-get monitor equake--tab-list))
       (equake--update-mode-line monitor)
-      (when (and equake-close-frame-after-last-etab-closes ;; if user-chosen and  
+      (when (and equake-close-frame-after-last-etab-closes ;; if user-chosen and
                  (null (cdr (assoc monitor equake--tab-list)))) ;; if no more etabs,
         (setf (alist-get monitor equake--max-tab-no) -1) ;; reset the "highest tab number" and
         ;; destroy the corresponding equake frame:
@@ -745,9 +775,10 @@ several parameters of it (e.g window history, last visited buffer
 etc) in variables, in order to be able to restore them when the
 frame is destroyed."
   (let ((monitor (equake--get-monitor (selected-frame))))
-    (setf (alist-get monitor equake--last-buffer) (current-buffer))
-    (setf (alist-get monitor equake--win-history) (window-prev-buffers))
-    (when equake-mode
+    (when (equake--tab-p (current-buffer))
+      (setf (alist-get monitor equake--last-buffer) (current-buffer))
+      (setf (alist-get monitor equake--win-history) (window-prev-buffers)))
+    (when (and equake-mode (equake--tab-p (current-buffer)))
       (setf (alist-get monitor equake--last-tab) (current-buffer)))))
 
 (defun equake--hide-or-destroy-frame (current-frame)
@@ -761,7 +792,7 @@ frame is destroyed."
     (delete-frame current-frame)))
 
 (defun equake--set-up-new-frame ()
-  "Make and set up a new Equake frame, including cosmetic alterations."
+  "Begin new Equake frame setup, including cosmetic alterations."
   ;; N.B. the resulting frame should be marked as a finished Equake
   ;; frame only when it's fully configured. That means,
   ;; `(set-frame-parameter frame 'equakep t)' only at the end of
@@ -770,22 +801,43 @@ frame is destroyed."
          (monitor (equake--get-monitor frame)))
     (setf (alist-get monitor equake--frame) frame)
     (select-frame frame)
-    (unless (alist-get monitor equake--tab-list)
-      (equake-new-tab))
-    (->> (alist-get monitor equake--win-history)
-         (equake--filter-history)
-         (set-window-prev-buffers nil))
-    (when-let ((last-tab (alist-get monitor equake--last-tab)))
-      (switch-to-buffer last-tab))
-    (when-let ((last-buffer (alist-get monitor equake--last-buffer)))
-      (switch-to-buffer last-buffer))
-    (unless (equake--tab-p) ; make sure to restore to an Equake buffer
-      (bury-buffer))
-    (buffer-face-set 'equake-buffer-face)
-    (when equake-hide-from-taskbar-choice
-      (equake--hide-from-taskbar))
-    (raise-frame)
-    (set-frame-parameter frame 'equakep t))) ; mark a finished Equake frame
+    (equake--finish-equake-frame-setup frame monitor)))
+
+(defun equake--transform-existing-frame-into-equake-frame ()
+  "Transform an existing frame into an Equake frame.
+For GNOME Shell under Wayland, used with an emacsclient call."
+  ;; N.B. the resulting frame should be marked as a finished Equake
+  ;; frame only when it's fully configured. That means,
+  ;; `(set-frame-parameter frame 'equakep t)' only at the end of
+  ;; initialization. Otherwise, things will break.
+  (let* ((frame (selected-frame))
+         (monitor (equake--get-monitor frame))
+         (workarea (equake--get-monitor-attribute 'workarea)))
+    (setf (alist-get monitor equake--frame) frame)
+    (modify-frame-parameters frame (equake--make-frame-parameters monitor workarea))
+    (when (and (executable-find "wmctrl") (not equake-close-frame-on-focus-loss))
+      (shell-command "wmctrl -r :ACTIVE: -b toggle,above"))
+    (equake--finish-equake-frame-setup frame monitor)))
+
+(defun equake--finish-equake-frame-setup (frame monitor)
+  "Common operations for setting up Equake frames."
+  (unless (alist-get monitor equake--tab-list)
+    (equake-new-tab))
+  (->> (alist-get monitor equake--win-history)
+       (equake--filter-history)
+       (set-window-prev-buffers nil))
+  (when-let ((last-tab (alist-get monitor equake--last-tab)))
+    (switch-to-buffer last-tab))
+  (when-let ((last-buffer (alist-get monitor equake--last-buffer)))
+    (switch-to-buffer last-buffer))
+  (unless (equake--tab-p) ; make sure to restore to an Equake buffer
+    (bury-buffer))
+  (buffer-face-set 'equake-buffer-face)
+  (when equake-hide-from-taskbar-choice
+    (equake--hide-from-taskbar))
+  (raise-frame)
+  (set-frame-parameter frame 'equakep t)) ; mark a finished Equake frame
+
 
 (defun equake--make-new-frame ()
   "Make a new Equake frame on a current monitor on a current display.
@@ -903,6 +955,54 @@ reason remains to be determined."
       (progn (x-open-connection display) (x-close-connection display) t)
     (error nil)))
 
+;;; Close (hide or destroy) equake frame when it loses focus
+
+(defvar equake--last-frame-focus-state nil
+  "Last known focus state of the equake frame.
+Used to compare to the current state to determine if focus has been lost.")
+
+(defun equake--after-focus-change ()
+  "Compare the equake frame's last known focus state to the current one.
+If focus is lost, hide or destroy the frame."
+  (setq equake--focus-change-timer nil)
+  (let ((frame (alist-get (equake--get-monitor) equake--frame)))
+    (if (frame-live-p frame)
+        (let ((state (with-no-warnings (frame-focus-state frame))))
+          (when (and equake--last-frame-focus-state (not state))
+            (setq equake--last-frame-focus-state state)
+            ;; (message "lost focus")
+            (equake--hide-or-destroy-frame frame))
+          (when (and (not equake--last-frame-focus-state) state)
+            (setq equake--last-frame-focus-state state)
+            ;; (message "gained focus")
+            ))
+      ;; (message "dead frame")
+      (setq equake--last-frame-focus-state nil))))
+
+(defvar equake--focus-change-timer nil
+  "Holds the scheduled call to 'equake--after-focus-change'.")
+
+(defvar equake--focus-change-debounce-delay 0.015
+  "Delay in seconds to use when debouncing focus change events.
+Window manager may send spurious focus change events.  To filter
+them, the code delays handling of focus-change events by this
+number of seconds.  Based on rudimentary testing, 0.015 (i.e. 15
+milliseconds) is a good compromise between performing the
+filtering and introducing a visible delay.)")
+
+(defun equake--after-focus-change-hook ()
+  "Schedule a call to 'equake--after-focus-change', which does the real work.
+The schedule is delayed by 'equake--focus-change-debounce-delay' to de-bounce
+spurious focus change events from the window manager.  This scheduling, and
+hence the feature, is enabled if 'equake-close-frame-on-focus-loss' is non-nil."
+  (when equake-close-frame-on-focus-loss
+    (and equake--focus-change-timer (cancel-timer equake--focus-change-timer))
+    (setq equake--focus-change-timer
+          (run-with-timer equake--focus-change-debounce-delay nil
+                          #'equake--after-focus-change))))
+
+(add-function :after after-focus-change-function #'equake--after-focus-change-hook)
+
 ;;; Rest
 
 (defun equake--hide-from-taskbar ()
@@ -910,7 +1010,7 @@ reason remains to be determined."
   (let ((frame (alist-get (equake--get-monitor) equake--frame)))
     (when (executable-find "xprop")
       (shell-command (concat "xprop -name "
-                           (frame-parameter frame 'name)
+                           (shell-quote-argument (frame-parameter frame 'name))
                            " -f _NET_WM_STATE 32a -set _NET_WM_STATE _NET_WM_STATE_SKIP_TASKBAR")))))
 
 (defun equake--select-some-graphic-frame ()
@@ -960,7 +1060,7 @@ HISTORY is of format given by `window-prev-buffers'."
   "Launch a new shell session, LAUNCHSHELL will set non-default shell."
   (interactive)
   (let ((sh-command equake-default-sh-command)
-        (success 't))
+        (success t))
     (when (equal sh-command "")
       (setq sh-command shell-file-name))
     (cond ((equal launchshell 'eshell)
@@ -968,10 +1068,11 @@ HISTORY is of format given by `window-prev-buffers'."
           ((equal launchshell 'vterm)
            (if (require 'vterm nil 'noerror)
                (vterm)
-             (setq success 'nil)))
+             (setq success nil)))
           ((equal launchshell 'rash)
            (if (not equake-rash-installed)
-               (setq success 'nil)
+
+               (setq success nil)
                (if (require 'vterm nil 'noerror)
                    (vterm)
                  (shell)
@@ -984,7 +1085,7 @@ HISTORY is of format given by `window-prev-buffers'."
           ((equal launchshell 'shell)
            (shell)
            (delete-other-windows))
-          ('t (setq success 'nil)))
+          (t (setq success nil)))
     success))
 
 ;;; Configuration
