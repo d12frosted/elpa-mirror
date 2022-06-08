@@ -5,8 +5,8 @@
 ;; Author: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; Maintainer: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; URL: https://github.com/trevorpogue/topspace
-;; Package-Version: 20220513.1925
-;; Package-Commit: dd7d35b52dda7bf503b8d4c23d97150152eebc41
+;; Package-Version: 20220608.1302
+;; Package-Commit: 6692cd1346ce0b0a1fbdcbfa496b49365bcd660b
 ;; Keywords: convenience, scrolling, center, cursor, margin, padding
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -616,10 +616,9 @@ If that doesn't work it uses `topspace--count-lines-slow'."
   (cond
    ((= (round height) 0) "")
    ((= (round height) 1)
-    ;; comment a) It seems there is a bug in Emacs where you cannot set a
-    ;; string's line-height to a positive float less than 1.  So in this
-    ;; condition, settle for rounding the top space height up to 1
-    ;; TODO: open issue with Emacs devel mailing list for this
+    ;; comment a) You cannot set a string's line-height
+    ;; to a positive float less than 1.  So in this condition,
+    ;; settle for rounding the top space height up to 1
     "\n")
    (t
     ;; set the text to a series of newline characters with the last line
@@ -693,7 +692,8 @@ ARG defaults to 1."
 
 (defun topspace--post-command ()
   "Reduce top space height before the cursor can move past `window-end'."
-  (when (= topspace--pre-command-window-start 1)
+  (when (and (= topspace--pre-command-window-start 1)
+             (> (point) topspace--pre-command-point))
     (let ((next-line-point))
       (save-excursion
         (goto-char topspace--pre-command-point)

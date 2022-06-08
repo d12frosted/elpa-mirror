@@ -17,9 +17,21 @@ If EVIL is installed,
 If EVIL is NOT installed,
  - Use `evilmi-jump-items-native' to replace `evilmi-jump-items'
 
- - Forget `evilmi-shortcut' and `global-evil-matchit-mode'
+ - `evilmi-shortcut' and `global-evil-matchit-mode' are not used
 
-See https://github.com/redguardtoo/evil-matchit/ for help.
+Tips:
+  It's reported some mode is not compatible with this package.
+  You can use `evilmi-jump-hook' to turn off the mode before
+  jumping to the matched tag.
+  Then turn on it after the jump using the same hook.
+
+  An example to toggle `global-tree-sitter-mode',
+
+  (add-hook 'evilmi-jump-hook
+            (lambda (before-jump-p)
+              (global-tree-sitter-mode (not before-jump-p))))
+
+See https://github.com/redguardtoo/evil-matchit/ for more information
 
 This program requires EVIL (https://github.com/emacs-evil/evil)
 

@@ -3,32 +3,3 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/guile.git
 
 Updating /mnt/store/melpa/working/geiser-guile/
-Checking out origin/HEAD
-Checking out c641fcc50b6b86ca95743122b5206cdcd475f96e
-Checking out c641fcc50b6b86ca95743122b5206cdcd475f96e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/geiser-guile/
-  to /tmp/geiser-guileYem6pk/geiser-guile-20220323.2352
-    geiser-guile.el -> geiser-guile.el
-    geiser-guile.texi -> geiser-guile.texi
-    src/geiser => src/geiser
-Generating /tmp/geiser-guileYem6pk/geiser-guile-20220323.2352/geiser-guile.info
-Created geiser-guile-20220323.2352.tar containing:
-  geiser-guile-20220323.2352/
-  geiser-guile-20220323.2352/dir
-  geiser-guile-20220323.2352/geiser-guile-pkg.el
-  geiser-guile-20220323.2352/geiser-guile.el
-  geiser-guile-20220323.2352/geiser-guile.info
-  geiser-guile-20220323.2352/src/
-  geiser-guile-20220323.2352/src/geiser/
-  geiser-guile-20220323.2352/src/geiser/completion.scm
-  geiser-guile-20220323.2352/src/geiser/doc.scm
-  geiser-guile-20220323.2352/src/geiser/emacs.scm
-  geiser-guile-20220323.2352/src/geiser/evaluation.scm
-  geiser-guile-20220323.2352/src/geiser/modules.scm
-  geiser-guile-20220323.2352/src/geiser/utils.scm
-  geiser-guile-20220323.2352/src/geiser/xref.scm
-Built geiser-guile in 6.522s, finished at 2022-06-08T10:04:58+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 442 Jun  8 10:04 packages/geiser-guile-20220323.2352.entry
- 72K -rw-r--r-- 1 root root 70K Jun  8 10:04 packages/geiser-guile-20220323.2352.tar
