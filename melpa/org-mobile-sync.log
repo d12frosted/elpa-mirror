@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/org-mobile-sync.git
 
 Updating /mnt/store/melpa/working/org-mobile-sync/
-Checking out origin/HEAD
-Checking out 06764b943a528827df1e2acc6bc7806cc2c1351f
-Built org-mobile-sync in 4.861s, finished at 2022-06-08T01:25:24+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.7K Jun  8 01:25 packages/org-mobile-sync-20180606.524.el
-4.0K -rw-r--r-- 1 root root  407 Jun  8 01:25 packages/org-mobile-sync-20180606.524.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://framagit.org/steckerhalter/org-mobile-sync.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@
 ;; Copyright (C) 2012 François Févotte
 ;; Author:  François Févotte <fevotte@gmail.com>
 ;; URL:     https://github.com/ffevotte/isend-mode.el
-;; Package-Version: 20190201.832
+;; Package-Version: 20210106.1506
+;; Package-X-Original-Version: 20190201.832
 ;; Package-Commit: 38ace354d579eb364d4f95b9ea16081c171ea604
-;; Version: 0.2
+;; Package-Commit: ea855f63be7febc15bd08aec6229fab9407734fb
+;; X-Original-Version: 0.2
 
 ;; This file is NOT part of Emacs.
 
