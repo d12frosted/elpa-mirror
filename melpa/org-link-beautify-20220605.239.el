@@ -3,7 +3,7 @@
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "5.0.0"))
 ;; Package-Version: 20220605.239
-;; Package-Commit: a7fe761d3ed0f64124ded26f2c776973b5e84f14
+;; Package-Commit: 47d54dd736abc9ef5406e3e7394d54c5110d355d
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git

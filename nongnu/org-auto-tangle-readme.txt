@@ -1,4 +1,71 @@
-It is common to want to tangle org files everytime you save your changes,
-especially for common tangled init files. So this program allows you to
-do so using #+auto_tangle option in an org file. It also does so asynchronously
-so it does let you emacs session hang
+			   ━━━━━━━━━━━━━━━━━
+			    ORG-AUTO-TANGLE
+			   ━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. USAGE
+2. Babel Auto Tangle Safelist
+3. License
+
+
+This package (i.e org-auto-tangle) is a very simple emacs package that
+allows you to automatically tangle org files on save. This is done by
+adding the option `#+auto_tangle: t' in your org file.
+
+The tangling process happens asynchronously so it will not block your
+emacs session.
+
+
+1 USAGE
+═══════
+
+  Simply require the package in you emacs init and hook it into
+  org-mode.
+
+  ┌────
+  │ 
+  │ (require 'org-auto-tangle)
+  │ 
+  │ (add-hook 'org-mode-hook 'org-auto-tangle-mode)
+  │ 
+  └────
+
+  or you can use use-package
+
+  ┌────
+  │ (use-package org-auto-tangle
+  │   :load-path "site-lisp/org-auto-tangle/"    ;; this line is necessary only if you cloned the repo in your site-lisp directory 
+  │   :defer t
+  │   :hook (org-mode . org-auto-tangle-mode))
+  └────
+
+  If the minor mode is on, it will try to automatically tangle your org
+  files if they contain a non nil value for the `#+auto_tangle:' option.
+
+  You can configure auto-tangle as the default behavior for all org
+  buffers by setting the `org-auto-tangle-default' variable to `t'. In
+  this case, you can disable it for some buffers by setting the
+  `#+auto_tangle:' option to `nil'.
+
+
+2 Babel Auto Tangle Safelist
+════════════════════════════
+
+  Add a list of files to the safelist to autotangle with noweb
+  evaluation
+  ┌────
+  │ (setq org-auto-tangle-babel-safelist '(
+  │ 				     "~/system.org"
+  │ 				     "~/test.org"
+  │ 				     ))
+  └────
+
+
+3 License
+═════════
+
+  This package (i.e. `org-auto-tangle') is licensed under the the
+  2-Clause BSD License.
