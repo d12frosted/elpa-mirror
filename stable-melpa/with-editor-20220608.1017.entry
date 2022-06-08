@@ -1,11 +1,11 @@
 (with-editor .
-	     [(20220605 2036)
+	     [(20220608 1017)
 	      ((emacs
 		(25 1))
 	       (compat
 		(28 1 1 0)))
 	      "Use the Emacsclient as $EDITOR" tar
-	      ((:commit . "7344bb67855278e3884e970b681c5aae09717920")
+	      ((:commit . "cfcbc2731e402b9169c0dc03e89b5b57aa988502")
 	       (:authors
 		("Jonas Bernoulli" . "jonas@bernoul.li"))
 	       (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")

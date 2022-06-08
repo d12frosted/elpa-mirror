@@ -1,11 +1,13 @@
 (f .
-   [(20220607 1618)
-    ((s
+   [(20220608 943)
+    ((emacs
+      (24 1))
+     (s
       (1 7 0))
      (dash
       (2 2 0)))
     "Modern API for working with files and directories" tar
-    ((:commit . "c9511634704fa012717aa8bc50e6d46cfd5bff97")
+    ((:commit . "d2019d4f9625bcc44349c69fe46d6645fd9ff4ff")
      (:authors
       ("Johan Andersson" . "johan.rejeep@gmail.com"))
      (:maintainer "Lucien Cartier-Tilet" . "lucien@phundrak.com")
