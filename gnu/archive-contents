@@ -94,6 +94,17 @@
 		  (:authors
 		   ("Matthew Carter" . "m@ahungry.com"))
 		  (:keywords "ahungry" "palette" "color" "theme" "emacs" "color-theme" "deftheme"))])
+ (aircon-theme .
+	       [(0 0 5)
+		((emacs
+		  (24 4)))
+		"Cool and legible light theme" tar
+		((:url . "https://git.sr.ht/~chambln/aircon-theme.el")
+		 (:keywords "faces")
+		 (:maintainer "Gregory Chamberlain" . "~chambln/public-inbox@lists.sr.ht")
+		 (:authors
+		  ("Gregory Chamberlain" . "greg@cosine.blue"))
+		 (:commit . "4741bd16f539ec8800dadc69f885b73b9fc2b106"))])
  (all .
       [(1 0)
        nil "Edit all lines matching a given regexp" single
@@ -1677,7 +1688,7 @@
 	 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	(:url . "http://elpa.gnu.org/packages/lex.html"))])
  (lin .
-      [(0 3 1)
+      [(0 4 0)
        ((emacs
 	 (27 1)))
        "Make `hl-line-mode' more suitable for selection UIs" tar
@@ -1686,7 +1697,7 @@
 	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	(:commit . "520621e51a6f6882beda4420fa5ccee6682748dd"))])
+	(:commit . "6d2493ce0b7e0891b85e03e103ddd5c68aeb60a6"))])
  (lmc .
       [(1 4)
        ((emacs
