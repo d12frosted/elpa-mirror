@@ -4,8 +4,8 @@
 ;;
 ;; Author: Tony Zorman <soliditsallgood@mailbox.org>
 ;; Keywords: convenience
-;; Package-Version: 20220601.652
-;; Package-Commit: ce4bf6958109b3b15bfc3f808ba4882b41fcb3ff
+;; Package-Version: 20220609.602
+;; Package-Commit: ac30166e2ed4e07df7123377821487350aa4f026
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25.1") (dash "2.19.1") (s "1.12.0"))
 ;; Homepage: https://gitlab.com/slotThe/arXiv-citation
@@ -235,12 +235,14 @@ data if applicable (i.e., an arXiv url)."
     (let ((citation (buffer-substring (point) (point-max))))
       (erase-buffer)
       (insert citation)
-      ;; Insert readable name.
+      ;; Insert readable name
       (goto-char 0)
       (search-forward "{")
       (zap-up-to-char 1 ?,)                      ; @Article{,
       (insert (arxiv-citation-generate-autokey)) ; @Article{name,
-      ;; Align.
+      ;; Align
+      (setq-local indent-tabs-mode      nil
+                  align-default-spacing 5)
       (align-regexp (point-min) (point-max) "\\(\\s-*\\) =")
       (buffer-string))))
 

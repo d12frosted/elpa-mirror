@@ -5,8 +5,8 @@
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Maintainer: James Nguyen <james@jojojames.com>
 ;; URL: https://github.com/jojojames/dired-sidebar
-;; Package-Version: 20220601.1536
-;; Package-Commit: bede31ae5f4ecdcb8cac01a9ffe746988838a344
+;; Package-Version: 20220609.515
+;; Package-Commit: dfc135b24c3f225222dddf691fece32dc7668b05
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "25.1") (dired-subtree "0.0.1"))
 ;; Keywords: dired, files, tools
@@ -111,8 +111,6 @@ This only takes effect if on a local connection. (e.g. Not Tramp)"
   :type 'integer
   :group 'dired-sidebar)
 
-(define-obsolete-variable-alias 'dired-sidebar-refresh-on-projectile-switch
-'dired-sidebar-refresh-on-project-switch "2022-04-13")
 (defcustom dired-sidebar-refresh-on-project-switch t
   "Refresh sidebar when `projectile' or `project' changes projects."
   :type 'boolean
@@ -315,18 +313,21 @@ For more information, look up `delete-other-windows'."
   :group 'dired-sidebar)
 
 
-(define-obsolete-variable-alias 'dired-sidebar-one-instance-p
-'dired-sidebar-use-one-instance "2022-04-13")
 (defcustom dired-sidebar-use-one-instance nil
   "Only show one buffer instance for dired-sidebar for each frame."
   :type 'boolean
   :group 'dired-sidebar)
 
-(define-obsolete-variable-alias 'dired-sidebar-display-icons-for-remote-p
-'dired-sidebar-display-remote-icons "2022-04-13")
 (defcustom dired-sidebar-display-remote-icons nil
   "Show icons for remote directories. nil by default for performance reasons."
   :type 'boolean
+  :group 'dired-sidebar)
+
+(defcustom dired-sidebar-block-icon-display-modes '(all-the-icons-dired-mode)
+  "List of modes in `dired-mode-hook' that prevents icon display.
+
+See https://github.com/jojojames/dired-sidebar/issues/43."
+  :type 'list
   :group 'dired-sidebar)
 
 ;; Internal
@@ -564,7 +565,7 @@ With universal argument, use current directory."
                             (dired-sidebar-get-dir-to-show)))
            (sidebar-buffer (dired-sidebar-get-or-create-buffer dir-to-show)))
       (dired-sidebar-show-sidebar sidebar-buffer)
-      (when (and dired-sidebar-one-instance-p old-buffer (not (eq sidebar-buffer old-buffer)))
+      (when (and dired-sidebar-use-one-instance old-buffer (not (eq sidebar-buffer old-buffer)))
         (kill-buffer old-buffer))
       (if (and dired-sidebar-follow-file-at-point-on-toggle-open
                file-to-show)
@@ -704,7 +705,7 @@ window selection."
                (progn
                  (switch-to-buffer buf-name)
                  (dired-sidebar-update-state (current-buffer)))
-             (if (and dired-sidebar-one-instance-p (file-directory-p dired-file-name))
+             (if (and dired-sidebar-use-one-instance (file-directory-p dired-file-name))
                  (find-alternate-file dired-file-name)
                ;; Copied from `dired-find-file'.
                (find-file dired-file-name))
@@ -754,7 +755,7 @@ Select alternate window using `dired-sidebar-alternate-select-window-function'."
          (progn
            (switch-to-buffer up-name)
            (dired-sidebar-update-state (current-buffer)))
-       (if dired-sidebar-one-instance-p
+       (if dired-sidebar-use-one-instance
            (find-alternate-file "..")
          (dired-up-directory))
        (dired-sidebar-mode)
@@ -1081,9 +1082,15 @@ This function hides the sidebar before executing F and then reshows itself after
 
 (defun dired-sidebar-can-display-icons ()
   "Return whether or not icons should be displayed."
-  (or
-   dired-sidebar-display-icons-for-remote-p
-   (not (file-remote-p default-directory))))
+  (and
+   (or
+    dired-sidebar-display-remote-icons
+    (not (file-remote-p default-directory)))
+   (cl-every (lambda (mode)
+               ;; Check against the default value of `dired-mode-hook' here
+               ;; since we made it buffer local earlier.
+               (not (memq mode (default-value 'dired-mode-hook))))
+             dired-sidebar-block-icon-display-modes)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Text User Interface ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
