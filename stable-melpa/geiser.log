@@ -6,3 +6,64 @@ Updating /mnt/store/melpa/working/geiser/
 Checking out origin/HEAD
 Checking out d28d19b582347bffebbf0ca905297e744842a5f2
 Checking out d28d19b582347bffebbf0ca905297e744842a5f2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser/
+  to /tmp/geiser95735l/geiser-20220507.34
+  ! elisp/geiser-autodoc.el -> geiser-autodoc.el
+  ! elisp/geiser-base.el -> geiser-base.el
+  ! elisp/geiser-capf.el -> geiser-capf.el
+  ! elisp/geiser-compile.el -> geiser-compile.el
+  ! elisp/geiser-completion.el -> geiser-completion.el
+  ! elisp/geiser-connection.el -> geiser-connection.el
+  ! elisp/geiser-custom.el -> geiser-custom.el
+  ! elisp/geiser-debug.el -> geiser-debug.el
+  ! elisp/geiser-doc.el -> geiser-doc.el
+  ! elisp/geiser-edit.el -> geiser-edit.el
+  ! elisp/geiser-eval.el -> geiser-eval.el
+  ! elisp/geiser-image.el -> geiser-image.el
+  ! elisp/geiser-impl.el -> geiser-impl.el
+  ! elisp/geiser-log.el -> geiser-log.el
+  ! elisp/geiser-menu.el -> geiser-menu.el
+  ! elisp/geiser-mode.el -> geiser-mode.el
+  ! elisp/geiser-popup.el -> geiser-popup.el
+  ! elisp/geiser-reload.el -> geiser-reload.el
+  ! elisp/geiser-repl.el -> geiser-repl.el
+  ! elisp/geiser-syntax.el -> geiser-syntax.el
+  ! elisp/geiser-table.el -> geiser-table.el
+  ! elisp/geiser-xref.el -> geiser-xref.el
+  ! elisp/geiser.el -> geiser.el
+  ! doc/dir -> dir
+  ! doc/geiser.texi -> geiser.texi
+Generating /tmp/geiser95735l/geiser-20220507.34/geiser.info
+Created geiser-20220507.34.tar containing:
+  geiser-20220507.34/
+  geiser-20220507.34/dir
+  geiser-20220507.34/geiser-autodoc.el
+  geiser-20220507.34/geiser-base.el
+  geiser-20220507.34/geiser-capf.el
+  geiser-20220507.34/geiser-compile.el
+  geiser-20220507.34/geiser-completion.el
+  geiser-20220507.34/geiser-connection.el
+  geiser-20220507.34/geiser-custom.el
+  geiser-20220507.34/geiser-debug.el
+  geiser-20220507.34/geiser-doc.el
+  geiser-20220507.34/geiser-edit.el
+  geiser-20220507.34/geiser-eval.el
+  geiser-20220507.34/geiser-image.el
+  geiser-20220507.34/geiser-impl.el
+  geiser-20220507.34/geiser-log.el
+  geiser-20220507.34/geiser-menu.el
+  geiser-20220507.34/geiser-mode.el
+  geiser-20220507.34/geiser-pkg.el
+  geiser-20220507.34/geiser-popup.el
+  geiser-20220507.34/geiser-reload.el
+  geiser-20220507.34/geiser-repl.el
+  geiser-20220507.34/geiser-syntax.el
+  geiser-20220507.34/geiser-table.el
+  geiser-20220507.34/geiser-xref.el
+  geiser-20220507.34/geiser.el
+  geiser-20220507.34/geiser.info
+Built geiser in 13.172s, finished at 2022-06-08T22:09:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  423 Jun  8 22:09 packages/geiser-20220507.34.entry
+320K -rw-r--r-- 1 root root 320K Jun  8 22:09 packages/geiser-20220507.34.tar

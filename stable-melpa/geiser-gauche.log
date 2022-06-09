@@ -3,3 +3,20 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/gauche.git
 
 Updating /mnt/store/melpa/working/geiser-gauche/
+Checking out origin/HEAD
+Checking out 8ff743f6416f00751e24aef8b9791501a40f5421
+Checking out 8ff743f6416f00751e24aef8b9791501a40f5421
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-gauche/
+  to /tmp/geiser-gaucheCJO6Df/geiser-gauche-20220503.1700
+    geiser-gauche.el -> geiser-gauche.el
+    geiser-gauche.scm -> geiser-gauche.scm
+Created geiser-gauche-20220503.1700.tar containing:
+  geiser-gauche-20220503.1700/
+  geiser-gauche-20220503.1700/geiser-gauche-pkg.el
+  geiser-gauche-20220503.1700/geiser-gauche.el
+  geiser-gauche-20220503.1700/geiser-gauche.scm
+Built geiser-gauche in 6.351s, finished at 2022-06-08T22:09:16+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 430 Jun  8 22:09 packages/geiser-gauche-20220503.1700.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  8 22:09 packages/geiser-gauche-20220503.1700.tar
