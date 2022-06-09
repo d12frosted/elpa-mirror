@@ -27,6 +27,7 @@ Additional themes
   + `doom-horizon' (added by karetsu)
   + `doom-Iosvkem' (added by neutaaaaan)
   + `doom-ir-black' (added by legendre6891)
+  + `doom-lantern' (added by paladhammika)
   + `doom-laserwave' (added by hyakt)
   + `doom-material' (added by tam5)
   + `doom-material-dark' (added by trev-dev)
