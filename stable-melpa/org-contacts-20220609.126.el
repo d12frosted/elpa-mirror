@@ -1,14 +1,15 @@
-;;; org-contacts.el --- Contacts management system for Org Mode. -*- lexical-binding: t; -*-
+;;; org-contacts.el --- Contacts management system for Org Mode -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2010-2014, 2021 Julien Danjou <julien@danjou.info>
 
 ;; Author: Julien Danjou <julien@danjou.info>
 ;; Maintainer: stardiviner <numbchild@gmail.com>
 ;; Keywords: contacts, org-mode, outlines, hypermedia, calendar
-;; Package-Version: 20220604.102
-;; Package-Commit: c1c4cadf3f7890a07d03c531ef823e1fb5f3ef2f
+;; Package-Version: 20220609.126
+;; Package-Commit: dba21b48952e78e9db27e25628bcfb0353c19b24
 ;; Version: 1.0
-;; Package-Requires: ((emacs "28.1") (cl-lib "1.0") (org "9.3.4") (gnus "5.13"))
+;; Package-Requires: ((emacs "27.1") (cl-lib "0.7") (org "9.3.4") (gnus "5.13"))
+;; Homepage: https://repo.or.cz/org-contacts.git
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
@@ -632,14 +633,12 @@ description."
                  (run-hook-with-args-until-success
                   'org-contacts-complete-functions string))))))))
 
-;;;###autoload
 (defun org-contacts-org-complete--annotation-function (candidate)
   "Return org-contacts tags of contact candidate."
   ;; TODO
   "Tags: "
   (ignore candidate))
 
-;;;###autoload
 (defun org-contacts-org-complete--doc-function (candidate)
   "Return org-contacts content of contact candidate."
   (let* ((candidate (substring-no-properties candidate 1 nil))
@@ -678,7 +677,6 @@ description."
 ;;; display company-mode doc buffer bellow current window.
 (add-to-list 'display-buffer-alist '("^ \\*org-contact\\*" . (display-buffer-below-selected)))
 
-;;;###autoload
 (defun org-contacts-org-complete--location-function (candidate)
   "Return org-contacts location of contact candidate."
   (let* ((candidate (substring-no-properties candidate 1 nil))
@@ -763,8 +761,7 @@ Format is a string matching the following format specification:
   %l - Link to the heading
   %y - Number of year
   %Y - Number of year (ordinal)"
-  (let ((calendar-date-style 'american)
-        ) ;; (entry "")
+  (let ((calendar-date-style 'american))
     (unless format (setq format org-contacts-birthday-format))
     (cl-loop for contact in (org-contacts-filter)
              for anniv = (let ((anniv (cdr (assoc-string
@@ -786,7 +783,7 @@ Format is a string matching the following format specification:
                                                            (calendar-extract-year anniv))))
                                              (format "%d%s" years (diary-ordinal-suffix years)))))))))
 
-(defun org-completing-read-date ( prompt _collection
+(defun org-contacts--completing-read-date ( prompt _collection
                                   &optional _predicate _require-match _initial-input
                                   _hist def _inherit-input-method)
   "Like `completing-read' but reads a date.
@@ -794,7 +791,7 @@ Only PROMPT and DEF are really used."
   (org-read-date nil nil nil prompt nil def))
 
 (add-to-list 'org-property-set-functions-alist
-             `(,org-contacts-birthday-property . org-completing-read-date))
+             `(,org-contacts-birthday-property . org-contacts--completing-read-date))
 
 (defun org-contacts-template-name (&optional return-value)
   "Try to return the contact name for a template.
@@ -1053,12 +1050,12 @@ address."
                                                      hist def inherit-input-method)
   "Like `completing-read' but reads a nickname."
   (if (featurep 'erc)
-      (org-completing-read prompt (append collection (erc-nicknames-list)) predicate require-match
+      (org-completing-read prompt (append collection (org-contacts-erc-nicknames-list)) predicate require-match
                            initial-input hist def inherit-input-method)
     (org-completing-read prompt collection predicate require-match
                          initial-input hist def inherit-input-method)))
 
-(defun erc-nicknames-list ()
+(defun org-contacts-erc-nicknames-list ()
   "Return all nicknames of all ERC buffers."
   (cl-loop for buffer in (erc-buffer-list)
            nconc (with-current-buffer buffer
@@ -1288,7 +1285,6 @@ are effectively trimmed).  If nil, all zero-length substrings are retained."
           (org-link-add-props :link link :description headline-str)
           link)))))
 
-;;;###autoload
 (defun org-contacts--all-contacts ()
   "Return a list of all contacts in `org-contacts-files'.
 Each element has the form (NAME . (FILE . POSITION))."
