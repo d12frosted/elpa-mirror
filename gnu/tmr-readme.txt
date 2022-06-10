@@ -258,7 +258,7 @@ Table of Contents
 
   GNU ELPA provides the latest stable release.  Those who prefer to
   follow the development process in order to report bugs or suggest
-  changes, can use the version of the package from the `elpa-devel'
+  changes, can use the version of the package from the GNU-devel ELPA
   archive.  Read:
   <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
@@ -326,7 +326,7 @@ Table of Contents
         Protesilaos Stavrou (maintainer), Damien Cassou.
 
   Contributions to the code or manual
-        Christian Tietze, Damien Cassou.
+        Christian Tietze, Damien Cassou, Nathan R. DeGruchy.
 
 
 6 GNU Free Documentation License

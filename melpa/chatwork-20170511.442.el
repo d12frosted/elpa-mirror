@@ -5,6 +5,8 @@
 
 ;; Author: Masayuki Ataka <masayuki.ataka@gmail.com>
 ;; URL: https://github.com/ataka/chatwork
+;; Package-Version: 20170511.442
+;; Package-Commit: fea231d479f06bf40dbfcf45de143eecc9ed744c
 ;; Keywords: web
 ;; Version: 0.2
 
