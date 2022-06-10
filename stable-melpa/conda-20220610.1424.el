@@ -3,9 +3,9 @@
 ;; Copyright (C) 2016-2020 Rami Chowdhury
 ;; Author: Rami Chowdhury <rami.chowdhury@gmail.com>
 ;; URL: http://github.com/necaris/conda.el
-;; Package-Commit: 9825001ddb172d9224276170dd7fdfa3cf8c39a6
+;; Package-Commit: ed92b4bab3b2a7868aa1b70d852cf5bdd082ea6c
 ;; Version: 0.4
-;; Package-Version: 20220610.22
+;; Package-Version: 20220610.1424
 ;; Package-X-Original-Version: 0.4
 ;; Keywords: languages, local, tools, python, environment, conda
 ;; Package-Requires: ((emacs "25.1") (pythonic "0.1.0") (dash "2.13.0") (s "1.11.0") (f "0.18.2"))
@@ -246,7 +246,9 @@ struct. At minimum, this will contain an updated PATH."
   (if (not (conda--supports-json-activator))
       (make-conda-env-params
        :path (concat (conda--get-path-prefix env-dir) path-separator (getenv "PATH")))
-    (let* ((cmd (format "conda shell.posix+json activate %s" env-dir))
+    (let* ((cmd (if (eq system-type 'windows-nt)
+                    (format "conda shell.cmd.exe+json activate %s" env-dir)
+                  (format "conda shell.posix+json activate %s" env-dir)))
            (output (shell-command-to-string cmd))
            ;; TODO: use `json-parse-string' on sufficiently recent Emacs
            (result (json-read-from-string output)))
@@ -267,7 +269,9 @@ struct. At minimum, this will contain an updated PATH."
                (s-split path-separator)
                (conda-env-stripped-path)
                (s-join path-separator)))
-    (let* ((cmd (format "conda shell.posix+json deactivate"))
+    (let* ((cmd (if (eq system-type 'windows-nt)
+                    (format "conda shell.cmd.exe+json deactivate")
+                  (format "conda shell.posix+json deactivate")))
            (output (shell-command-to-string cmd))
            ;; TODO: use `json-parse-string' on sufficiently recent Emacs
            (result (json-read-from-string output)))
@@ -400,7 +404,8 @@ It's platform specific in that it uses the platform's native path separator.
         (progn ;; otherwise we fall back to legacy heuristics
           (setenv "VIRTUAL_ENV" nil)
           (setenv "CONDA_PREFIX" nil)))
-      (setq exec-path (s-split ":" (conda-env-params-path params)))
+      (setq exec-path (s-split (if (eq system-type 'windows-nt) ";" ":" )
+                               (conda-env-params-path params)))
       (setenv "PATH" (conda-env-params-path params)))
     (setq conda-env-current-path nil)
     (setq conda-env-current-name nil)
@@ -450,7 +455,8 @@ It's platform specific in that it uses the platform's native path separator.
             (progn ;; otherwise we fall back to legacy heuristics
               (setenv "VIRTUAL_ENV" env-dir)
               (setenv "CONDA_PREFIX" env-dir)))
-          (setq exec-path (s-split ":" (conda-env-params-path params)))
+          (setq exec-path (s-split (if (eq system-type 'windows-nt) ";" ":")
+                                   (conda-env-params-path params)))
           (message "new path? %s" (conda-env-params-path params))
           (setenv "PATH" (conda-env-params-path params)))
         (setq eshell-path-env (getenv "PATH"))

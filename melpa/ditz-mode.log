@@ -2,21 +2,3 @@ Package: ditz-mode
 Fetcher: hg
 Source:  https://hg.sr.ht/~zondo/ditz-mode
 
-Updating /mnt/store/melpa/working/ditz-mode/
-Checking out 74b6b93b097d595a001c019e3b762abfc60f821a
-
-Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
-
-pulling from https://hg.sr.ht/~zondo/ditz-mode
-searching for changes
-no changes found
-0 files updated, 0 files merged, 0 files removed, 0 files unresolved
-0 files updated, 0 files merged, 0 files removed, 0 files unresolved
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command exited with non-zero exit-code: 255
