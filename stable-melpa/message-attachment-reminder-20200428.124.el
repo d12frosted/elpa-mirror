@@ -6,7 +6,7 @@
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/message-attachment-reminder
 ;; Package-Version: 20200428.124
-;; Package-Commit: ce506b27b15cc39a47c58ff795026eaea8632e2f
+;; Package-Commit: 15498a6f424a4ddea7a3bdcc9d160e6a4dfb27c1
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
