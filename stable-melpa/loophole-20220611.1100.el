@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.2
-;; Package-Version: 20220311.1130
-;; Package-Commit: bd93fcd42fc2db76bf6bc3fbb4eb7401444bd04d
+;; Package-Version: 20220611.1100
+;; Package-Commit: f7e9cca980b7467a03d9a161a5e9e5a828bfd6c9
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -2559,15 +2559,19 @@ If TIME is negative, shorten timer."
            (let* ((line-list (split-string (substitute-command-keys
                                             (format "\\{%s}" map-variable))
                                            "\n"))
-                  (assoc-list (mapcar
-                               (lambda (line)
-                                 (cons line
-                                       (let ((keys (car (split-string line))))
-                                         (if (stringp keys)
-                                             (lookup-key
-                                              (symbol-value map-variable)
-                                              (kbd keys))))))
-                               line-list))
+                  (assoc-list
+                   (mapcar
+                    (lambda (line)
+                      (cons line
+                            (let ((keys (replace-regexp-in-string
+                                         "^\\(.+?\\)\\(  \\| \\.\\. \\).*"
+                                         "\\1"
+                                         line)))
+                              (if (stringp keys)
+                                  (lookup-key
+                                   (symbol-value map-variable)
+                                   (kbd keys))))))
+                    line-list))
                   (expanded-list
                    (mapcar (lambda (assoc)
                              (replace-regexp-in-string

@@ -4,8 +4,8 @@
 
 ;; Author: Yuwei Tian <ibluefocus@NOSPAM.gmail.com>
 ;; URL: https://github.com/galeo/corfu-doc
-;; Package-Version: 20220606.1654
-;; Package-Commit: 616a2a9fc6fb3222ea2273435ddbc63eba72670d
+;; Package-Version: 20220611.1234
+;; Package-Commit: 5dd2a2987a9e470112151d89be3f35d95c633be5
 ;; Version: 0.7
 ;; Keywords: corfu popup documentation convenience
 ;; Package-Requires: ((emacs "27.1")(corfu "0.25"))
@@ -432,7 +432,7 @@ compared with the value recorded by `corfu-doc--candiate'."
 
 The optional CANDIDATE-INDEX is the the current completion candidate index,
 it should be compared with the value recorded by `corfu--index'."
-  (and corfu-mode
+  (and corfu-mode (corfu--popup-support-p)
        (corfu-doc--cf-popup-visible-p)
        (or (null candidate-index)
            (equal candidate-index corfu--index))))
@@ -441,11 +441,6 @@ it should be compared with the value recorded by `corfu--index'."
   "Show the doc popup manually.
 
 The optional CANDIDATE-INDEX is the the current completion candidate index."
-  (unless (corfu--popup-support-p)
-    (display-warning
-     'corfu-doc
-     "Corfu-doc requires child frames to display documentation"
-     :warning))
   (when (corfu-doc--should-show-popup candidate-index)
     (when-let ((candidate (corfu-doc--get-candidate))
                (cf-popup-edges (corfu-doc--get-cf-popup-edges)))

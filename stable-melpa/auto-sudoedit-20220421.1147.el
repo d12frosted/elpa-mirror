@@ -3,7 +3,7 @@
 ;; Author: ncaq <ncaq@ncaq.net>
 ;; Version: 1.1.0
 ;; Package-Version: 20220421.1147
-;; Package-Commit: 39cb574a4b5ec74ad62857320bf5fec58abe876f
+;; Package-Commit: 1d9dd74cb1adaf615500208dbc0158630dd92933
 ;; Package-Requires: ((emacs "26.1")(f "0.19.0"))
 ;; URL: https://github.com/ncaq/auto-sudoedit
 
