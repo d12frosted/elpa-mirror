@@ -1,7 +1,9 @@
 (scratch-ext .
-	     [(20220611 11)
-	      nil "Extensions for *scratch*" single
-	      ((:commit . "0471dfa06df400a5e09dc50ae928afa268b3f296")
+	     [(20220611 630)
+	      ((emacs
+		(24 1)))
+	      "Extensions for *scratch*" single
+	      ((:commit . "2782935b3a4a9c1a079159d7e19784cc9f4abbe6")
 	       (:authors
 		("Kouhei Yanagita" . "yanagi@shakenbu.org"))
 	       (:maintainer "Kouhei Yanagita" . "yanagi@shakenbu.org")

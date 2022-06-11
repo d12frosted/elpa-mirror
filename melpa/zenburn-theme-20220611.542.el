@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
-;; Package-Version: 20220527.1800
-;; Package-Commit: b600814c8ddfe8812582f4ba4b62db817d665860
+;; Package-Version: 20220611.542
+;; Package-Commit: fd10925a3a8c39818a9e353b804ac8b1a847d73a
 ;; Version: 2.8.0-snapshot
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -1243,8 +1243,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                                    (list :height zenburn-height-plus-1))))))
    `(org-level-5 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-cyan))))
    `(org-level-6 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-green+2))))
-   `(org-level-7 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-red-4))))
-   `(org-level-8 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-blue-4))))
+   `(org-level-7 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-red+2))))
+   `(org-level-8 ((t (:inherit ,z-variable-pitch :foreground ,zenburn-magenta))))
    `(org-link ((t (:foreground ,zenburn-yellow-2 :underline t))))
    `(org-quote ((t (:background ,zenburn-bg+05 :extend t))))
    `(org-scheduled ((t (:foreground ,zenburn-green+4))))
