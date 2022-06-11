@@ -4,11 +4,11 @@ Source:  https://github.com/tumashu/pyim.git
 
 Updating /mnt/store/melpa/working/pyim/
 Checking out origin/HEAD
-Checking out 38efab117f0dc47087d3e427923c4a87bd9b6489
-Checking out 38efab117f0dc47087d3e427923c4a87bd9b6489
+Checking out 231bd63b2714eb799f1252150d2da71f98f75067
+Checking out 231bd63b2714eb799f1252150d2da71f98f75067
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pyim/
-  to /tmp/pyimIemSsF/pyim-20220610.942
+  to /tmp/pyim2ux33T/pyim-20220611.57
     pyim-autoselector.el -> pyim-autoselector.el
     pyim-candidates.el -> pyim-candidates.el
     pyim-cloudim.el -> pyim-cloudim.el
@@ -38,39 +38,41 @@ Copying files (->) and directories (=>)
     pyim-pymap.el -> pyim-pymap.el
     pyim-scheme.el -> pyim-scheme.el
     pyim.el -> pyim.el
-Created pyim-20220610.942.tar containing:
-  pyim-20220610.942/
-  pyim-20220610.942/pyim-autoselector.el
-  pyim-20220610.942/pyim-candidates.el
-  pyim-20220610.942/pyim-cloudim.el
-  pyim-20220610.942/pyim-codes.el
-  pyim-20220610.942/pyim-common.el
-  pyim-20220610.942/pyim-cregexp-utils.el
-  pyim-20220610.942/pyim-cregexp.el
-  pyim-20220610.942/pyim-cstring-utils.el
-  pyim-20220610.942/pyim-cstring.el
-  pyim-20220610.942/pyim-dcache.el
-  pyim-20220610.942/pyim-dhashcache.el
-  pyim-20220610.942/pyim-dict-manager.el
-  pyim-20220610.942/pyim-dict.el
-  pyim-20220610.942/pyim-dregcache.el
-  pyim-20220610.942/pyim-entered.el
-  pyim-20220610.942/pyim-imobjs.el
-  pyim-20220610.942/pyim-indicator.el
-  pyim-20220610.942/pyim-liberime.el
-  pyim-20220610.942/pyim-outcome.el
-  pyim-20220610.942/pyim-page.el
-  pyim-20220610.942/pyim-pinyin.el
-  pyim-20220610.942/pyim-pkg.el
-  pyim-20220610.942/pyim-preview.el
-  pyim-20220610.942/pyim-probe.el
-  pyim-20220610.942/pyim-process.el
-  pyim-20220610.942/pyim-punctuation.el
-  pyim-20220610.942/pyim-pymap-utils.el
-  pyim-20220610.942/pyim-pymap.el
-  pyim-20220610.942/pyim-scheme.el
-  pyim-20220610.942/pyim.el
-Built pyim in 5.641s, finished at 2022-06-10T22:42:09+0000
+Created pyim-20220611.57.tar containing:
+  pyim-20220611.57/
+  pyim-20220611.57/pyim-autoselector.el
+  pyim-20220611.57/pyim-candidates.el
+  pyim-20220611.57/pyim-cloudim.el
+  pyim-20220611.57/pyim-codes.el
+  pyim-20220611.57/pyim-common.el
+  pyim-20220611.57/pyim-cregexp-utils.el
+  pyim-20220611.57/pyim-cregexp.el
+  pyim-20220611.57/pyim-cstring-utils.el
+  pyim-20220611.57/pyim-cstring.el
+  pyim-20220611.57/pyim-dcache.el
+  pyim-20220611.57/pyim-dhashcache.el
+  pyim-20220611.57/pyim-dict-manager.el
+  pyim-20220611.57/pyim-dict.el
+  pyim-20220611.57/pyim-dregcache.el
+  pyim-20220611.57/pyim-entered.el
+  pyim-20220611.57/pyim-imobjs.el
+  pyim-20220611.57/pyim-indicator.el
+  pyim-20220611.57/pyim-liberime.el
+  pyim-20220611.57/pyim-outcome.el
+  pyim-20220611.57/pyim-page.el
+  pyim-20220611.57/pyim-pinyin.el
+  pyim-20220611.57/pyim-pkg.el
+  pyim-20220611.57/pyim-preview.el
+  pyim-20220611.57/pyim-probe.el
+  pyim-20220611.57/pyim-process.el
+  pyim-20220611.57/pyim-punctuation.el
+  pyim-20220611.57/pyim-pymap-utils.el
+  pyim-20220611.57/pyim-pymap.el
+  pyim-20220611.57/pyim-scheme.el
+  pyim-20220611.57/pyim.el
+Built pyim in 7.135s, finished at 2022-06-11T01:37:47+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  477 Jun 10 22:42 packages/pyim-20220610.942.entry
 472K -rw-r--r-- 1 root root 470K Jun 10 22:42 packages/pyim-20220610.942.tar
+4.0K -rw-r--r-- 1 root root  476 Jun 11 01:37 packages/pyim-20220611.57.entry
+472K -rw-r--r-- 1 root root 470K Jun 11 01:37 packages/pyim-20220611.57.tar
