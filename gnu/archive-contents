@@ -1174,7 +1174,7 @@
 		      (:authors
 		       ("Manuel Uberti" . "manuel.uberti@inventati.org")))])
  (fontaine .
-	   [(0 2 2)
+	   [(0 2 3)
 	    ((emacs
 	      (27 1)))
 	    "Set font configurations using presets" tar
@@ -1182,7 +1182,7 @@
 	     (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	     (:authors
 	      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	     (:commit . "7cf7cd0ed264f427a9824ad31dae8aa781574083"))])
+	     (:commit . "e18cc2e2a6180342ebfed8c94048b7d83e7d0d5d"))])
  (frame-tabs .
 	     [(1 1)
 	      nil "show buffer tabs in side window" single
@@ -2880,7 +2880,7 @@
 		(:url . "https://elpa.gnu.org/packages/sql-beeline.html")
 		(:commit . "b7ffff9404d93f569e3c2bc59db1be6e848c894f"))])
  (sql-cassandra .
-		[(0 2 1)
+		[(0 2 2)
 		 ((emacs
 		   (29)))
 		 "Cassandra support for sql.el" tar
@@ -2889,7 +2889,7 @@
 		  (:authors
 		   ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
 		  (:url . "https://elpa.gnu.org/packages/sql-cassandra.html")
-		  (:commit . "2920f8c64e937904087f3636696501fb1cfe7acc"))])
+		  (:commit . "3e997c6ad82f4240bcd62630ad44b5f023bd16c1"))])
  (sql-indent .
 	     [(1 6)
 	      ((cl-lib
@@ -3254,7 +3254,7 @@
 	      (:authors
 	       ("Philip Kaludercic" . "philipk@posteo.net")))])
  (vc-got .
-	 [(1 1 1)
+	 [(1 1 2)
 	  ((emacs
 	    (25 1)))
 	  "VC backend for Game of Trees VCS" tar
@@ -3264,7 +3264,7 @@
 	   (:authors
 	    ("Omar Polo" . "op@omarpolo.com")
 	    ("Timo Myyrä" . "timo.myyra@bittivirhe.fi"))
-	   (:commit . "18cc42ab3c12d124fb013923f4583dd25ffe5dcd"))])
+	   (:commit . "20cee209dece2d1a49daf68e043aa6e78b8a13e9"))])
  (vc-hgcmd .
 	   [(1 14 1)
 	    ((emacs

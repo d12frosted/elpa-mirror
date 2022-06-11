@@ -5,8 +5,8 @@
 ;; Author: Shuguang Sun <shuguang79@qq.com>
 ;; Created: 2019/04/06
 ;; Version: 1.0
-;; Package-Version: 20220531.31
-;; Package-Commit: 105a8edf97cc1e82ce1e959e7b7bd049851a255a
+;; Package-Version: 20220610.1406
+;; Package-Commit: 2ded9c23d0af2a7f6c0e02f9ea4af0e5b3cb7fb4
 ;; URL: https://github.com/ShuguangSun/ess-r-insert-obj
 ;; Package-Requires: ((emacs "26.1") (ess "18.10.1"))
 ;; Keywords: tools
@@ -85,7 +85,7 @@ From R data to Emacs list."
   :type `(choice (const :tag "ESS" ess-completing-read)
                  (const :tag "basic" completing-read)
                  (const :tag "ido" ido-completing-read)
-                 (const :tag "ivy" :require 'ivy ivy-completing-read)
+                 (const :tag "ivy" ivy-completing-read)
                  (function :tag "Other"))
   :group 'ess-r-insert-obj)
 

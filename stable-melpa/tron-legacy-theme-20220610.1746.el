@@ -4,8 +4,8 @@
 
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/tron-legacy-emacs-theme
-;; Package-Version: 20220312.1645
-;; Package-Commit: d775d9f348a942230ea57b6520e1eb56a5d67569
+;; Package-Version: 20220610.1746
+;; Package-Commit: 72655ce5ea0580cc23966821d2813e4d5e961f93
 ;; Version: 2.0.0
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -122,7 +122,7 @@
 
    ;;;;; More built-in UI
    `(region                                   ((,class (:background ,bg-hl :distant-foreground ,fg0 :extend nil))))
-   `(highlight                                ((,class (:foreground ,bg3 :background ,fg3))))
+   `(highlight                                ((,class (:foreground ,fg3 :background nil :underline t)))) ; link hover
    `(hl-line                                  ((,class (:background ,hl-line))))
    `(fringe                                   ((,class (:background ,bg1 :foreground ,fg4))))
    `(cursor                                   ((,class (:background ,cursor))))
@@ -175,7 +175,7 @@
    `(org-footnote                             ((,class (:underline t :foreground ,fg4))))
    `(org-link                                 ((,class (:underline t :foreground ,type ))))
    `(org-special-keyword                      ((,class (:foreground ,tron-green))))
-   `(org-block                                ((,class (:foreground ,fg2 :background ,bg0 :extend t))))
+   `(org-block                                ((,class (:foreground ,fg2 :background ,bg2 :extend t))))
    `(org-quote                                ((,class (:inherit org-block :slant italic))))
    `(org-verse                                ((,class (:inherit org-block :slant italic))))
    `(org-todo                                 ((,class (:box (:line-width 1 :color ,tron-lightred)
