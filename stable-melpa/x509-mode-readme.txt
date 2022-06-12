@@ -1,4 +1,4 @@
-Major for viewing certificates, CRLs, keys and DH-parameters.
+Major mode for viewing certificates, CRLs, and other PKI-related files.
 
 Uses OpenSSL for viewing PEM and DER encoded PKI entities.
 

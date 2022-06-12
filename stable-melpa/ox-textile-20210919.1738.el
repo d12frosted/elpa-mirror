@@ -4,8 +4,6 @@
 
 ;; Author: Yasushi SHOJI <yasushi.shoji@gmail.com>
 ;; URL: https://github.com/yashi/org-textile
-;; Package-Version: 20210919.1738
-;; Package-Commit: 5f2f61f572c24d702e922845c11a4c3da38ab261
 ;; Package-Requires: ((org "8.1"))
 ;; Keywords: org, textile
 

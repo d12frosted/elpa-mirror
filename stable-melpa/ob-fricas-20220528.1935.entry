@@ -1,0 +1,13 @@
+(ob-fricas .
+	   [(20220528 1935)
+	    ((emacs
+	      (26 1))
+	     (frimacs
+	      (1 0)))
+	    "A FriCAS backend for Org-Babel" single
+	    ((:commit . "7813f151b4e59c3c175c7117228f0dd70dcc10d7")
+	     (:authors
+	      ("Paul Onions" . "paul.onions@acm.org"))
+	     (:maintainer "Paul Onions" . "paul.onions@acm.org")
+	     (:keywords "fricas" "computer algebra" "extensions" "tools")
+	     (:url . "https://github.com/pdo/frimacs"))])

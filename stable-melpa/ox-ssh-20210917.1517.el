@@ -4,8 +4,6 @@
 
 ;; Author: Dante Catalfamo
 ;; Version: 2.0
-;; Package-Version: 20210917.1517
-;; Package-Commit: be3b39160da6ae37b1f1cd175ed854ac41d1cb63
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: outlines, org, ssh
 ;; Homepage: https://github.com/dantecatalfamo/ox-ssh
