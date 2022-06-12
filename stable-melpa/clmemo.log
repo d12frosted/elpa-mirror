@@ -8,15 +8,15 @@ Checking out f695c38c551f72f6ac5e1a82badc540c80d3b33b
 Checking out f695c38c551f72f6ac5e1a82badc540c80d3b33b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clmemo/
-  to /tmp/clmemoeUBW8J/clmemo-20220204.1345
+  to /tmp/clmemoaycL5s/clmemo-20220204.1345
     clmemo.el -> clmemo.el
   ! doc/clmemo.texi -> clmemo.texi
   ! doc/install.texi -> install.texi
   ! doc/news.texi -> news.texi
-Generating /tmp/clmemoeUBW8J/clmemo-20220204.1345/clmemo.info
-Generating /tmp/clmemoeUBW8J/clmemo-20220204.1345/install.info
+Generating /tmp/clmemoaycL5s/clmemo-20220204.1345/clmemo.info
+Generating /tmp/clmemoaycL5s/clmemo-20220204.1345/install.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemoeUBW8J/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemoaycL5s/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -32,7 +32,7 @@ HEAD is now at f695c38 Update face name
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/clmemoeUBW8J/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/clmemoaycL5s/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -45,10 +45,10 @@ HEAD is now at f695c38 Update face name
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Next reference to nonexistent `input memo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Prev reference to nonexistent `clmemo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Up reference to nonexistent `clmemo'
-install-info: No such file or directory for /tmp/clmemoeUBW8J/clmemo-20220204.1345/install.info
+install-info: No such file or directory for /tmp/clmemoaycL5s/clmemo-20220204.1345/install.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/clmemoeUBW8J/clmemo-20220204.1345/news.info
+Generating /tmp/clmemoaycL5s/clmemo-20220204.1345/news.info
 Created clmemo-20220204.1345.tar containing:
   clmemo-20220204.1345/
   clmemo-20220204.1345/clmemo-pkg.el
@@ -56,7 +56,7 @@ Created clmemo-20220204.1345.tar containing:
   clmemo-20220204.1345/clmemo.info
   clmemo-20220204.1345/dir
   clmemo-20220204.1345/news.info
-Built clmemo in 10.776s, finished at 2022-06-12T03:28:03+0000
+Built clmemo in 12.185s, finished at 2022-06-12T06:24:57+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  321 Jun 12 03:28 packages/clmemo-20220204.1345.entry
-132K -rw-r--r-- 1 root root 130K Jun 12 03:28 packages/clmemo-20220204.1345.tar
+4.0K -rw-r--r-- 1 root root  321 Jun 12 06:24 packages/clmemo-20220204.1345.entry
+132K -rw-r--r-- 1 root root 130K Jun 12 06:24 packages/clmemo-20220204.1345.tar

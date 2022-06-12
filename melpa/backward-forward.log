@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/vancan1ty/emacs-backward-forward.git
 
 Updating /mnt/store/melpa/working/backward-forward/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-error: RPC failed; HTTP 524 curl 22 The requested URL returned error: 524
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 58489957a62a0da25dfb5df902624d2548d800b4
+Built backward-forward in 7.161s, finished at 2022-06-12T06:21:16+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun 12 06:21 packages/backward-forward-20161229.550.el
+4.0K -rw-r--r-- 1 root root 473 Jun 12 06:21 packages/backward-forward-20161229.550.entry

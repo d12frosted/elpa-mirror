@@ -8,3 +8,6 @@ use M-x `x509-viewcert' to create a new buffer that displays the decoded
 certificate.
 Use `x509-viewcrl', `x509-viewasn1',`x509-viewkey', `x509-viewdh',
 `x509-viewreq', `x509-viewpkcs7' in a similar manner.
+
+When point is in a PEM encoded region, M-x `x509-dwim' tries to guess
+what view-function to call. It falls back to `x509-viewasn1' if it fails.
