@@ -4,8 +4,8 @@
 ;;
 ;; Author: Joel Rosdahl <joel@rosdahl.net>
 ;; Version: 1.6
-;; Package-Version: 20220611.918
-;; Package-Commit: 67e33073b4f42de9fc4df76bc04ec8b31aca02ea
+;; Package-Version: 20220612.858
+;; Package-Commit: 9ec1888335107bd314e8f40b3e113d525fed8083
 ;; License: BSD-3-clause
 ;; URL: https://github.com/jrosdahl/iflipb
 ;;
@@ -38,112 +38,11 @@
 ;;
 ;; iflipb lets you flip between recently visited buffers in a way that
 ;; resembles what Alt-(Shift-)TAB does in Microsoft Windows and other graphical
-;; window managers. iflipb treats the buffer list as a stack, and (by design)
-;; it doesn't wrap around. This means that when you have flipped to the last
-;; buffer and continue, you don't get to the first buffer again. This is a good
-;; thing. (If you disagree and want wrap-around, set iflipb-wrap-around to
-;; non-nil.)
+;; window managers.
 ;;
+;; See <https://github.com/jrosdahl/iflipb/blob/master/README.md> for more
+;; information and configuration instructions.
 ;;
-;; OPERATION
-;; =========
-;;
-;; iflipb provides twree commands: iflipb-next-buffer, iflipb-previous-buffer
-;; and iflipb-kill-buffer.
-;;
-;; iflipb-next-buffer behaves like Alt-TAB: it switches to the previously used
-;; buffer, just like "C-x b RET" (or C-M-l in XEmacs). However, another
-;; consecutive call to iflipb-next-buffer switches to the next buffer in the
-;; buffer list, and so on. When such a consecutive call is made, the
-;; skipped-over buffer is not regarded as visited.
-;;
-;; While flipping, the names of the most recent buffers are displayed in the
-;; minibuffer, and the currently visited buffer is surrounded by square
-;; brackets and marked with a bold face.
-;;
-;; A key thing to notice here is that iflipb displays the buffer contents after
-;; each step forward/backwards (in addition to displaying the buffer names),
-;; unlike for instance the buffer switching model of ido-mode where only the
-;; buffer names are displayed.
-;;
-;; iflipb-previous-buffer behaves like Alt-Shift-TAB: it walks backwards in the
-;; buffer list.
-;;
-;; Here is an illustration of what happens in a couple of different scenarios:
-;;
-;;                    Minibuffer    Actual
-;;                    display       buffer list
-;; --------------------------------------------
-;; Original:                        A B C D E
-;; Forward flip:      A [B] C D E   B A C D E
-;; Forward flip:      A B [C] D E   C A B D E
-;; Forward flip:      A B C [D] E   D A B C E
-;;
-;; Original:                        A B C D E
-;; Forward flip:      A [B] C D E   B A C D E
-;; Forward flip:      A B [C] D E   C A B D E
-;; Backward flip:     A [B] C D E   B A C D E
-;;
-;; Original:                        A B C D E
-;; Forward flip:      A [B] C D E   B A C D E
-;; Forward flip:      A B [C] D E   C A B D E
-;; [Edit buffer C]:                 C A B D E
-;; Forward flip:      C [A] B D E   A C B D E
-;;
-;; iflipb by default ignores buffers whose names start with an asterisk or
-;; space. You can give a prefix argument to iflipb-next-buffer to make it flip
-;; between more buffers. See the documentation of the variables
-;; iflipb-ignore-buffers and iflipb-always-ignore-buffers for how to change
-;; this.
-;;
-;; iflipb-kill-buffer is designed to be bound to "C-x k". It behaves like
-;; kill-buffer but keeps iflipb's buffer list state so that it's possible to
-;; kill a buffer and then advance to the next buffer without starting all over
-;; again.
-;;
-;; INSTALLATION
-;; ============
-;;
-;; To load iflipb, store iflipb.el in your Emacs load path and put
-;;
-;;   (require 'iflipb)
-;;
-;; in your .emacs file or equivalent.
-;;
-;; iflipb does not install any key bindings for the two commands. I personally
-;; use M-h and M-H (i.e., M-S-h) since I don't use the standard binding of M-h
-;; (mark-paragraph) and M-h is quick and easy to press. To install iflipb with
-;; M-h and M-H as keyboard bindings, put something like this in your .emacs:
-;;
-;;   (global-set-key (kbd "M-h") 'iflipb-next-buffer)
-;;   (global-set-key (kbd "M-H") 'iflipb-previous-buffer)
-;;
-;; Another alternative is to use C-tab and C-S-tab:
-;;
-;;   (global-set-key (kbd "<C-tab>") 'iflipb-next-buffer)
-;;   (global-set-key
-;;    (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))
-;;    'iflipb-previous-buffer)
-;;
-;; Or perhaps use functions keys like F9 and F10:
-;;
-;;   (global-set-key (kbd "<f10>") 'iflipb-next-buffer)
-;;   (global-set-key (kbd "<f9>")  'iflipb-previous-buffer)
-;;
-;;
-;; ABOUT
-;; =====
-;;
-;; iflipb was inspired by cycle-buffer.el
-;; <http://kellyfelkins.org/pub/cycle-buffer.el>. cycle-buffer.el has some more
-;; features, but doesn't quite behave like I want, so I wrote my own simple
-;; replacement.
-;;
-;; Have fun!
-;;
-;; /Joel Rosdahl <joel@rosdahl.net>
-;;
-
 ;;; Code:
 
 (defgroup :iflipb nil
@@ -155,13 +54,12 @@
 
 This variable determines which buffers to ignore when a prefix
 argument has not been given to `iflipb-next-buffer'. The value
-may be either a regexp string, a function or a list. If the value
-is a regexp string, it describes buffer names to exclude from the
+should be a regexp string, a function or a list. If the value is
+a regexp string, it describes buffer names to exclude from the
 buffer list. If the value is a function, the function will get a
-buffer name as an argument (a return value of nil from the
-function means include and non-nil means exclude). If the value
-is a list, the filter matches if any of the elements in the value
-match."
+buffer name as an argument and should return `nil' if the buffer
+should be excluded, otherwise non-`nil'. If the value is a list,
+the filter matches if any of the list elements match."
   :type '(choice
           (regexp :tag "Regexp that describes buffer names to exclude")
           (function :tag "Function that takes a buffer name")
@@ -172,13 +70,12 @@ match."
   "Which buffers to always ignore.
 
 This variable determines which buffers to always ignore. The
-value may be either a regexp string, a function or a list. If the
+value should be a regexp string, a function or a list. If the
 value is a regexp string, it describes buffer names to exclude
 from the buffer list. If the value is a function, the function
-will get a buffer name as an argument (a return value of nil from
-the function means include and non-nil means exclude). If the
-value is a list, the filter matches if any of the elements in the
-value match."
+will get a buffer name as an argument and should return `nil' if
+the buffer should be excluded, otherwise non-`nil'. If the value
+is a list, the filter matches if any of the list elements match."
   :type '(choice
           (regexp :tag "Regexp that describes buffer names to exclude")
           (function :tag "Function that takes a buffer name")
@@ -221,9 +118,9 @@ place in the buffer list."
   "%s"
   "String template for displaying other buffers.
 
-This is the template string that will be applied to a non-current
-buffer name. Use `%s' to refer to the buffer name.
-Note: don't enter the surrounding quotes in the input field."
+This template string says how to display a non-current buffer
+name. \"%s\" expands to the buffer name. Note: don't enter the
+surrounding quotes in the input field."
   :type 'string
   :group 'iflipb)
 
@@ -232,16 +129,16 @@ Note: don't enter the surrounding quotes in the input field."
   "String template for displaying the current buffer.
 
 This is the template string that will be applied to the current
-buffer name. Use `%s' to refer to the buffer name.
-Note: don't enter the surrounding quotes in the input field."
+buffer name. Use \"%s\" to refer to the buffer name. Note: don't
+enter the surrounding quotes in the input field."
   :type 'strings
   :group 'iflipb)
 
 (defcustom iflipb-buffer-list-function
-  'iflipb-buffer-list
-  "The function to be used to create the buffer list.
+  #'iflipb-buffer-list
+  "The function to be used to retrieve the buffer list.
 
-Current options are `iflipb-buffer-list' and
+The current options are `iflipb-buffer-list' and
 `iflipb-ido-buffer-list'."
   :type 'function
   :group 'iflipb)
@@ -250,11 +147,12 @@ Current options are `iflipb-buffer-list' and
   #'iflipb-format-buffers-horizontally
   "The function to be used to format buffers.
 
-The function will get the current buffer and a buffer list as
-arguments. A return value is a string to be displayed. Predefined
-functions are `iflipb-format-buffers-horizontally' for a
-horizontal list and `iflipb-format-buffers-vertically' for a
-vertical list. See also `iflipb-format-buffers-height'."
+This function is used to format buffer names. The function will
+get the current buffer and a buffer list as arguments. A return
+value is a string to be displayed. Predefined functions are
+`iflipb-format-buffers-horizontally' for a horizontal list and
+`iflipb-format-buffers-vertically' for a vertical list. See also
+`iflipb-format-buffers-height'."
   :type '(choice
           (function-item
            :tag "Horizontally" iflipb-format-buffers-horizontally)
@@ -265,10 +163,10 @@ vertical list. See also `iflipb-format-buffers-height'."
 
 (defcustom iflipb-format-buffers-height 5
   "Minibuffer height for displaying buffers when using
-`iflipb-format-buffers-vertically`.
+`iflipb-format-buffers-vertically'.
 
 The actual height will not exceed the height indicated by
-`max-mini-window-height`."
+`max-mini-window-height'."
   :type 'integer
   :group 'iflipb)
 
@@ -469,7 +367,6 @@ buffer list."
 (defun iflipb-kill-buffer ()
   "Same as `kill-buffer' but keep the iflipb buffer list state."
   (interactive)
-  ;; (apply 'kill-buffer args)
   (call-interactively #'kill-buffer)
   (if (iflipb-first-iflipb-buffer-switch-command)
       (setq last-command 'kill-buffer)

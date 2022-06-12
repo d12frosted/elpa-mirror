@@ -4,8 +4,8 @@
 
 ;; Author: Paul Onions <paul.onions@acm.org>
 ;; Keywords: FriCAS, computer algebra, extensions, tools
-;; Package-Version: 20220528.1935
-;; Package-Commit: 7813f151b4e59c3c175c7117228f0dd70dcc10d7
+;; Package-Version: 20220612.854
+;; Package-Commit: 742268f6f05f418993dc366bbca9ccc931125748
 ;; URL: https://github.com/pdo/frimacs
 ;; Package-Requires: ((emacs "26.1") (frimacs "1.0"))
 ;; Version: 1.0
@@ -127,10 +127,11 @@
 
 ;;; Org framework functions -- functions invoked by Org-mode activity
 ;;;
-(defun ob-fricas-initiate-session (session params)
+(defun ob-fricas-initiate-session (session _params)
   "Start a FriCAS session for use by org-babel.
 
-Use SESSION name and PARAMS parameters."
+Use SESSION name and PARAMS parameters (the latter currently not
+used)."
   ;;(message "ob-fricas-initiate-session\n %S\n %S" session params)
   (if (string= session "none")
       session
