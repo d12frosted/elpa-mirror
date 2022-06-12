@@ -6,8 +6,6 @@
 ;; Description: Switch back and forth between similarly named buffers.
 ;; Created: Fri May 13 2016
 ;; Version: 0.0.1
-;; Package-Version: 20190327.1024
-;; Package-Commit: 546c7e811b290470288b617f2c27106bd83ccd33
 ;; Package-Requires: ((cl-lib "0.5"))
 ;; Keywords: file, buffer, switch, selection, matching, convenience
 ;; URL: https://github.com/julien-montmartin/related

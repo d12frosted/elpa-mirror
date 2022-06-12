@@ -1,3 +1,12 @@
+--------------------------------------------------------------------
+IMPORTANT: This package is DEPRECATED and no further development
+will take place.  It has been replaced by the ``ob-fricas'' package
+(see http://github.com/pdo/frimacs).  To switch, first uninstall
+the axiom-environment, company-axiom and ob-axiom packages, then
+install frimacs and ob-fricas.  These packages are available in the
+MELPA package collection.
+--------------------------------------------------------------------
+
 The ``ob-axiom'' package is an org-babel extension that integrates
 the axiom-environment into org-mode, allowing a literate
 development & presentation style with easy publishing to HTML, PDF,
