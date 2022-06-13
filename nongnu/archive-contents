@@ -60,12 +60,13 @@
 		 ("Karl Chen" . "quarl@nospam.quarl.org"))
 		(:keywords "languages" "faces"))])
  (apropospriate-theme .
-		      [(0 1 1)
+		      [(0 2 0)
 		       nil "A light & dark theme set for Emacs." tar
 		       ((:url . "http://github.com/waymondo/apropospriate-theme")
 			(:maintainer "Justin Talbott" . "justin@waymondo.com")
 			(:authors
-			 ("Justin Talbott" . "justin@waymondo.com")))])
+			 ("Justin Talbott" . "justin@waymondo.com"))
+			(:commit . "a03fd98f438806bfd74ed3cd0957de859ea7fd2f"))])
  (arduino-mode .
 	       [(1 3 0)
 		((emacs

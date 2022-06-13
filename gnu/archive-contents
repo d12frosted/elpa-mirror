@@ -1617,7 +1617,7 @@
 	   ("Ivan Kanis" . "ivan@kanis.fr"))
 	  (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
  (kind-icon .
-	    [(0 1 5)
+	    [(0 1 6)
 	     ((emacs
 	       (27 1))
 	      (svg-lib
@@ -1628,7 +1628,7 @@
 	      (:maintainer "J.D. Smith" . "jdtsmith@gmail.com")
 	      (:authors
 	       ("J.D. Smith" . "jdtsmith@gmail.com"))
-	      (:commit . "235c3d20d1e667d6ac73e11d55a380e070b7cacf"))])
+	      (:commit . "f10bf6170769a1b0ef7d06347d1631fb6e71446b"))])
  (kiwix .
 	[(1 1 5)
 	 ((emacs
@@ -2170,7 +2170,7 @@
 		("Noboru Ota" . "me@nobiot.com"))
 	       (:commit . "576e5680682bfb80a50b057b8752e0674d766f8d"))])
  (org-transclusion .
-		   [(1 2 0)
+		   [(1 3 0)
 		    ((emacs
 		      (27 1))
 		     (org
@@ -2181,7 +2181,7 @@
 		     (:maintainer "Noboru Ota" . "me@nobiot.com")
 		     (:authors
 		      ("Noboru Ota" . "me@nobiot.com"))
-		     (:commit . "2d44c56fb666da2dbb6c988389a21bee5bdd406c"))])
+		     (:commit . "5cb94542e18722bf72a281441e944a8039b5301f"))])
  (org-translate .
 		[(0 1 4)
 		 ((emacs
@@ -2711,15 +2711,16 @@
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
 	(:url . "https://elpa.gnu.org/packages/seq.html"))])
  (setup .
-	[(1 2 0)
+	[(1 3 0)
 	 ((emacs
 	   (26 1)))
 	 "Helpful Configuration Macro" tar
 	 ((:url . "https://git.sr.ht/~pkal/setup")
 	  (:keywords "lisp" "local")
-	  (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
+	  (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
 	  (:authors
-	   ("Philip Kaludercic" . "philipk@posteo.net")))])
+	   ("Philip Kaludercic" . "philipk@posteo.net"))
+	  (:commit . "eece09d1151fd641f31d738b8c62742918993e95"))])
  (shelisp .
 	  [(1 0 0)
 	   nil "execute elisp in shell" tar

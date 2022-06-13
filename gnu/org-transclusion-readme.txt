@@ -1,6 +1,15 @@
-		       ━━━━━━━━━━━━━━━━━━━━━━━━━
-			ORG-TRANSCLUSION README
-		       ━━━━━━━━━━━━━━━━━━━━━━━━━
+		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+		       README – ORG-TRANSCLUSION
+		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Example Use Cases & Main Features
+2. Installation
+3. Contributing
+4. License
 
 
 Org-transclusion lets you insert a copy of text content via a file link
@@ -10,59 +19,37 @@ the source of the content, and you can refresh the transcluded copies to
 the up-to-date state. Org-transclusion keeps your files clear of the
 transcluded copies, leaving only the links to the original content.
 
-A complete [user manual] is available online or Emacs in-system as an
-Info document (`C-h i' and find the `Org-transclusion' node).
+A complete user manual is available [online] or Emacs in-system as an
+Info node `(org-transclusion)': (`C-h i' and find the `Org-transclusion'
+node).
 
 For installation and minimum configuration, refer to [Installation]
-below or the corresponding section in the user manual.
+below or the user manual: [online] or Info node
+`(org-transclusion)Installation'
 
-[Getting Started] in the user manual will get you started in 5 minutes.
+Getting Started in the user manual will get you started in 5 minutes:
+[online] or Info node `(org-transclusion)Getting Started'.
 
-Below are images and videos demonstrating some of the key features of
-Org-transclusion.
-
-<https://github.com/nobiot/org-transclusion/blob/main/resources/2021-09-10-transclusion.gif?raw=true>
-
-*Figure 1*. Animation to show creation of a transclusion from an ID link
-
-<https://github.com/nobiot/org-transclusion/blob/main/resources/2021-05-01-org-transclusion-0.1.0-live-sync.gif?raw=true>
-
-*Figure 2*. Animation to show live sync from transclusion to source
-
-<https://github.com/nobiot/org-transclusion/blob/main/resources/demo9-title.png?raw=true>
-
-*Figure 3*. [Video demo on v0.2.1 on YouTube] demonstrating new features
- to transclude a source file into a src-block and function to specify a
- range of text/source line
-
-• Older videos
-
-  ⁃ [Video demo on v0.2.0 on YouTube] featuring minor breaking changes
-    and new transclusion filters
-
-  ⁃ [Video demo on v0.1.1 on YouTube] featuring basic syntax and
-    live-sync edit
+For customization, refer to the customization group `org-transclusion'
+or user manual: [online] or Info node `(org-transclusion)Customizing'.
 
 
-[user manual] <https://nobiot.github.io/org-transclusion/>
+[online] <https://nobiot.github.io/org-transclusion/>
 
 [Installation] See section 2
 
-[Getting Started]
-<https://nobiot.github.io/org-transclusion/#Getting-Started>
+[online] <https://nobiot.github.io/org-transclusion/#Installation>
 
-[Video demo on v0.2.1 on YouTube] <https://youtu.be/ueaPiA622wA>
+[online] <https://nobiot.github.io/org-transclusion/#Getting-Started>
 
-[Video demo on v0.2.0 on YouTube] <https://youtu.be/idlFzWeygwA>
-
-[Video demo on v0.1.1 on YouTube] <https://youtu.be/idlFzWeygwA>
+[online] <https://nobiot.github.io/org-transclusion/#Customizing>
 
 
 1 Example Use Cases & Main Features
 ═══════════════════════════════════
 
-  Here is a summary of some real use cases that users have shared with
-  the author, including his own.
+  Here are some real use cases that users have shared with the author,
+  including his own.
 
   Book writing
         You have a collection of notes. You can quickly transclude
@@ -131,7 +118,8 @@ Org-transclusion.
   like this:
 
   ┌────
-  │ (add-to-list 'package-archives '("gnu-devel" . "https://elpa.gnu.org/devel/") t)
+  │ (add-to-list 'package-archives
+  │ 	     '("gnu-devel" . "https://elpa.gnu.org/devel/") :append)
   └────
 
   Refresh the archive with `M-x package-refresh-contents RET' and you
@@ -177,7 +165,7 @@ Org-transclusion.
 ══════════════
 
   • Get involved in a discussion in [Org-roam forum] (the package is
-    originally aimed for its users, me included)
+    originally aimed for its users, the author included)
 
   • Create issues, discussion, and/or pull requests. All welcome.
 
