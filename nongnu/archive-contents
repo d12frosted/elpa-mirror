@@ -1456,7 +1456,7 @@
 	   ("Random User"))
 	  (:commit . "7a0c36c808e107b5851ba48ec3825dfa3c1a902e"))])
  (swift-mode .
-	     [(8 4 2)
+	     [(8 5 0)
 	      ((emacs
 		(24 4))
 	       (seq
@@ -1469,7 +1469,8 @@
 		("taku0 (http://github.com/taku0)")
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
-		("Arthur Evstifeev" . "lod@pisem.net")))])
+		("Arthur Evstifeev" . "lod@pisem.net"))
+	       (:commit . "c92e780530950a2cd6e501baf48c96ae4d8214a6"))])
  (swsw .
        [(2 1 1)
 	((emacs
