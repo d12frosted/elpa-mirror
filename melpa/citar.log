@@ -4,11 +4,12 @@ Source:  https://github.com/emacs-citar/citar.git
 
 Updating /mnt/store/melpa/working/citar/
 Checking out origin/HEAD
-Checking out 1976f2938b3fc2ebb963429dce78f2372edb483c
-Checking out 1976f2938b3fc2ebb963429dce78f2372edb483c
+Checking out 784791a090f9a2ed293f8b3ebd5636c690b718bc
+Checking out 784791a090f9a2ed293f8b3ebd5636c690b718bc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citar/
-  to /tmp/citarCfqaHc/citar-20220602.2157
+  to /tmp/citarR3qoGC/citar-20220613.1223
+    citar-capf.el -> citar-capf.el
     citar-citeproc.el -> citar-citeproc.el
     citar-file.el -> citar-file.el
     citar-filenotify.el -> citar-filenotify.el
@@ -16,17 +17,20 @@ Copying files (->) and directories (=>)
     citar-markdown.el -> citar-markdown.el
     citar-org.el -> citar-org.el
     citar.el -> citar.el
-Created citar-20220602.2157.tar containing:
-  citar-20220602.2157/
-  citar-20220602.2157/citar-citeproc.el
-  citar-20220602.2157/citar-file.el
-  citar-20220602.2157/citar-filenotify.el
-  citar-20220602.2157/citar-latex.el
-  citar-20220602.2157/citar-markdown.el
-  citar-20220602.2157/citar-org.el
-  citar-20220602.2157/citar-pkg.el
-  citar-20220602.2157/citar.el
-Built citar in 4.468s, finished at 2022-06-13T12:00:44+0000
+Created citar-20220613.1223.tar containing:
+  citar-20220613.1223/
+  citar-20220613.1223/citar-capf.el
+  citar-20220613.1223/citar-citeproc.el
+  citar-20220613.1223/citar-file.el
+  citar-20220613.1223/citar-filenotify.el
+  citar-20220613.1223/citar-latex.el
+  citar-20220613.1223/citar-markdown.el
+  citar-20220613.1223/citar-org.el
+  citar-20220613.1223/citar-pkg.el
+  citar-20220613.1223/citar.el
+Built citar in 4.619s, finished at 2022-06-13T14:59:56+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  403 Jun 13 12:00 packages/citar-20220602.2157.entry
 120K -rw-r--r-- 1 root root 120K Jun 13 12:00 packages/citar-20220602.2157.tar
+4.0K -rw-r--r-- 1 root root  403 Jun 13 14:59 packages/citar-20220613.1223.entry
+132K -rw-r--r-- 1 root root 130K Jun 13 14:59 packages/citar-20220613.1223.tar

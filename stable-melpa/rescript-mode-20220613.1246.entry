@@ -1,0 +1,13 @@
+(rescript-mode .
+	       [(20220613 1246)
+		((emacs
+		  (26 1)))
+		"A major mode for editing ReScript" tar
+		((:commit . "2aae2fbd4971dff965c758ec19688780ed7bff21")
+		 (:authors
+		  ("Karl Landstrom" . "karl.landstrom@brgeight.se")
+		  ("Daniel Colascione" . "dancol@dancol.org")
+		  ("John Lee" . "jjl@pobox.com"))
+		 (:maintainer "John Lee" . "jjl@pobox.com")
+		 (:keywords "languages" "rescript")
+		 (:url . "https://github.com/jjlee/rescript-mode"))])
