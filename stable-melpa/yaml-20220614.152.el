@@ -4,8 +4,8 @@
 
 ;; Author: Zachary Romero <zkry@posteo.org>
 ;; Version: 0.1.0
-;; Package-Version: 20220613.41
-;; Package-Commit: 164cd43d6ecba9a49714127511ecf7dcc9725bff
+;; Package-Version: 20220614.152
+;; Package-Commit: c07cc6d0f3af7cbacb08f0596bdd831f8a1ae5dd
 ;; Homepage: https://github.com/zkry/yaml.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools
@@ -416,7 +416,7 @@ This flag is intended for development purposes.")
      ((equal top-state :anchor)
       (let* ((anchor (pop yaml--object-stack))
              (name (nth 1 anchor)))
-        (puthash name value* yaml--anchor-mappings)
+        (puthash name value yaml--anchor-mappings)
         (pop yaml--state-stack)
         (yaml--scalar-event nil value)))
      ((equal top-state :sequence)

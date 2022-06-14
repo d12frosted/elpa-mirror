@@ -4,11 +4,11 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out b34185a93416a81bdaafe4db5b96e2f7f13b7514
-Checking out b34185a93416a81bdaafe4db5b96e2f7f13b7514
+Checking out 7beed8c5c638ed9a94cb5962587ea286f07b8981
+Checking out 7beed8c5c638ed9a94cb5962587ea286f07b8981
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubbtW1a1/ghub-20220429.1708
+  to /tmp/ghublAgtP2/ghub-20220613.2208
     ghub-pkg.el -> ghub-pkg.el
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
@@ -18,20 +18,20 @@ Copying files (->) and directories (=>)
   ! lisp/gsexp.el -> gsexp.el
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
-Generating /tmp/ghubbtW1a1/ghub-20220429.1708/ghub.info
-Created ghub-20220429.1708.tar containing:
-  ghub-20220429.1708/
-  ghub-20220429.1708/buck.el
-  ghub-20220429.1708/dir
-  ghub-20220429.1708/ghub-graphql.el
-  ghub-20220429.1708/ghub-pkg.el
-  ghub-20220429.1708/ghub.el
-  ghub-20220429.1708/ghub.info
-  ghub-20220429.1708/glab.el
-  ghub-20220429.1708/gogs.el
-  ghub-20220429.1708/gsexp.el
-  ghub-20220429.1708/gtea.el
-Built ghub in 9.017s, finished at 2022-06-13T21:18:48+0000
+Generating /tmp/ghublAgtP2/ghub-20220613.2208/ghub.info
+Created ghub-20220613.2208.tar containing:
+  ghub-20220613.2208/
+  ghub-20220613.2208/buck.el
+  ghub-20220613.2208/dir
+  ghub-20220613.2208/ghub-graphql.el
+  ghub-20220613.2208/ghub-pkg.el
+  ghub-20220613.2208/ghub.el
+  ghub-20220613.2208/ghub.info
+  ghub-20220613.2208/glab.el
+  ghub-20220613.2208/gogs.el
+  ghub-20220613.2208/gsexp.el
+  ghub-20220613.2208/gtea.el
+Built ghub in 9.289s, finished at 2022-06-14T03:17:57+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  414 Jun 13 21:18 packages/ghub-20220429.1708.entry
-160K -rw-r--r-- 1 root root 160K Jun 13 21:18 packages/ghub-20220429.1708.tar
+4.0K -rw-r--r-- 1 root root  414 Jun 14 03:17 packages/ghub-20220613.2208.entry
+160K -rw-r--r-- 1 root root 160K Jun 14 03:17 packages/ghub-20220613.2208.tar
