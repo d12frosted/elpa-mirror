@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/deadgrep
-;; Package-Version: 20220507.1755
-;; Package-Commit: ae333e4069e296e98bf9631088c8198f50891d55
+;; Package-Version: 20220613.2051
+;; Package-Commit: 3bfaccb72b5be38d4db897af81109ff51833ae46
 ;; Keywords: tools
 ;; Version: 0.12
 ;; Package-Requires: ((emacs "25.1") (dash "2.12.0") (s "1.11.0") (spinner "1.7.3"))
@@ -968,7 +968,7 @@ Returns a list ordered by the most recently accessed."
 
 (defun deadgrep--find-file (path)
   "Open PATH in a buffer, and return a cons cell
-\(BUF . OPENED). OPENED is nil if there was aleady a buffer for
+\(BUF . OPENED). OPENED is nil if there was already a buffer for
 this path."
   (let* ((initial-buffers (buffer-list))
          (opened nil)

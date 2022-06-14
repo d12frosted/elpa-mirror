@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.8.0
-;; Package-Version: 20220613.304
-;; Package-Commit: 0967b19e4c5cc06699665b7a8518984fb69a2b02
+;; Package-Version: 20220613.1804
+;; Package-Commit: a14e1328d228cc7b8d3f5ae3f9ce9121c19f394f
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -1010,10 +1010,14 @@ Return `default-directory' if no project was found."
 
 (defun all-the-icons-ivy-rich-project-find-file-transformer (cand)
   "Transform non-visited file names with `ivy-virtual' face."
-  (if (get-file-buffer
-       (expand-file-name cand (all-the-icons-ivy-rich--project-root)))
-      cand
-    (propertize cand 'face 'ivy-virtual)))
+  (cond
+   ((or (ivy--dirname-p cand)
+        (file-directory-p (all-the-icons-ivy-rich--file-path cand)))
+    (propertize cand 'face 'ivy-subdir))
+   ((not (get-file-buffer
+          (expand-file-name cand (all-the-icons-ivy-rich--project-root))))
+    (propertize cand 'face 'ivy-virtual))
+   (t cand)))
 
 (defvar all-the-icons-ivy-rich--file-modes-cache nil
   "File modes cache.")
