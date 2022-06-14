@@ -1,5 +1,5 @@
 (lsp-pyright .
-	     [(20220411 1753)
+	     [(20220614 1545)
 	      ((emacs
 		(26 1))
 	       (lsp-mode
@@ -9,7 +9,7 @@
 	       (ht
 		(2 0)))
 	      "Python LSP client using Pyright" single
-	      ((:commit . "21d5c775415930a0859488a72c0615e83d0d261a")
+	      ((:commit . "b7d6e5bbf2141d2a1efb469ad3451ecc12ddb1cd")
 	       (:authors
 		("Arif Rezai, Vincent Zhang, Andrew Christianson"))
 	       (:maintainer "Arif Rezai, Vincent Zhang, Andrew Christianson")
