@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://repo.or.cz/eldoc-overlay.git
 
 Updating /mnt/store/melpa/working/eldoc-overlay/
-Checking out origin/HEAD
-Checking out b96f5864a47407ec608c807e0d890f62b891ee03
-Built eldoc-overlay in 4.804s, finished at 2022-06-14T06:17:51+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Jun 14 06:17 packages/eldoc-overlay-20220210.1358.el
-4.0K -rw-r--r-- 1 root root  458 Jun 14 06:17 packages/eldoc-overlay-20220210.1358.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://repo.or.cz/eldoc-overlay.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
