@@ -2,8 +2,6 @@
 ;; copyright (C) 2015 κeen All rights reserved.
 ;; Author: κeen
 ;; Version: 0.0.2
-;; Package-Version: 20161025.824
-;; Package-Commit: 7a38f26bf8ff947215f34f0a064c7ca80575ccbc
 ;; Keywords: style code formatter
 ;; URL: https://github.com/KeenS/stylefmt.el
 ;; This program is free software; you can redistribute it and/or modify

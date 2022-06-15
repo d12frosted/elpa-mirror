@@ -1,0 +1,12 @@
+(helm .
+      [(20220615 557)
+       ((helm-core
+	 (3 8 4))
+	(popup
+	 (0 5 3)))
+       "Helm is an Emacs incremental and narrowing framework" tar
+       ((:commit . "ece8a6042da8dad0239055570e45b44d641293ac")
+	(:authors
+	 ("Thierry Volpiatto "))
+	(:maintainer "Thierry Volpiatto ")
+	(:url . "https://emacs-helm.github.io/helm/"))])

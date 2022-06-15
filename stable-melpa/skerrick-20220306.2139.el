@@ -8,7 +8,7 @@
 ;; Modified: January 01, 2022
 ;; Version: 0.0.1
 ;; Package-Version: 20220306.2139
-;; Package-Commit: fc88e82aa4b0a71b1fbe0217df4020538ebd8cd5
+;; Package-Commit: ac8ba166446048bfc5b2b4a5719aad61a5487182
 ;; Keywords: languages javascript js repl repl-driven
 ;; Homepage: https://github.com/anonimitoraf/skerrick
 ;; Package-Requires: ((emacs "27.1") (request "0.3.2"))
