@@ -3,3 +3,11 @@ Fetcher: git
 Source:  https://repo.or.cz/emacs-rainbow-fart.git
 
 Updating /mnt/store/melpa/working/rainbow-fart/
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://repo.or.cz/emacs-rainbow-fart.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
