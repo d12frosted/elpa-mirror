@@ -1605,7 +1605,7 @@
 			("Joost Kremers" . "joostkremers@fastmail.fm"))
 		       (:commit . "afaad5ac6b15cdf9f362662538e35d48578e218a"))])
  (web-mode .
-	   [(17 2 2)
+	   [(17 2 3)
 	    ((emacs
 	      (23 1)))
 	    "major mode for editing web templates" tar
@@ -1614,7 +1614,7 @@
 	     (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
 	     (:authors
 	      ("François-Xavier Bois"))
-	     (:commit . "cdbd74b5e71d78ca7cb0768771f38e7b764fa0ac"))])
+	     (:commit . "7b5459f58c381f31eed257480b000a9a46209094"))])
  (webpaste .
 	   [(3 2 2)
 	    ((emacs
@@ -1668,7 +1668,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(17 13 20220613204648)
+	       [(17 13 20220615002353)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -1677,7 +1677,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "d4eb6f61ff1c9fec04b09d0398581f7e5e31ae63"))])
+		 (:commit . "894cd36c580fe397a8b8f48cd0d69698712c8c4c"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar
