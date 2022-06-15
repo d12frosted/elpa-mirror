@@ -2402,14 +2402,14 @@
 	  ("Feng Shu" . "tumashu@163.com"))
 	 (:commit . "6b4cea1b541f5efd18067d4cafa1ca4b059a0c63"))])
  (pyim-basedict .
-		[(0 5 3)
+		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar
 		 ((:url . "https://github.com/tumashu/pyim-basedict")
 		  (:keywords "convenience" "chinese" "pinyin" "input-method" "complete")
 		  (:maintainer "Feng Shu" . "tumashu@163.com")
 		  (:authors
 		   ("Feng Shu" . "tumashu@163.com"))
-		  (:commit . "4aa30ff9f83cf6435230a987d323e48230f1f40e"))])
+		  (:commit . "d61af27686f7a39e6c138b7261a686e7ea7a0ef7"))])
  (python .
 	 [(0 28)
 	  ((emacs
