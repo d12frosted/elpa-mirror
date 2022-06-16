@@ -4,9 +4,9 @@
 
 ;; Authors: Jason Milkins <jasonm23@gmail.com>
 ;; URL: http://github.com/emacsfodder/emacs-theme-creamsody
-;; Package-Version: 20220527.927
-;; Package-Commit: 4e1f00a590628034282a914d483fd6008a76c8f8
-;; Version: 0.3.14
+;; Package-Version: 20220616.119
+;; Package-Commit: 21add9e946e2d00c15b609e75d65aa4c292bc7a2
+;; Version: 0.3.15
 ;; Package-Requires: ((autothemer "0.2"))
 
 ;;; Commentary:
@@ -396,7 +396,7 @@
   (isearch-fail                              (:foreground creamsody-foreground0_hard :background creamsody-faded_red))
 
   ;; MODE SUPPORT: show-paren)
-  (show-paren-match                          (:foreground creamsody-foreground0 :background creamsody-faded_blue))
+  (show-paren-match                          (:foreground creamsody-foreground0 :background creamsody-background2))
   (show-paren-mismatch                       (:foreground creamsody-foreground0_hard :background creamsody-faded_red))
 
   ;; MODE SUPPORT: anzu)

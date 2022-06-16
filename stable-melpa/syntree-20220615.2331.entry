@@ -1,11 +1,9 @@
 (syntree .
-	 [(20220122 2341)
+	 [(20220615 2331)
 	  ((emacs
-	    (27 1))
-	   (transient
-	    (0 3 7)))
-	  "Draw plain text constituency trees" single
-	  ((:commit . "45d010b071c32cab4a3a5d336d6c01cde49657f8")
+	    (27 1)))
+	  "Draw plain text constituency trees" tar
+	  ((:commit . "1ad84a7905959b1d2c4f2fee37fbccc87d711864")
 	   (:authors
 	    ("Enrico Flor" . "enrico@eflor.net"))
 	   (:maintainer "Enrico Flor" . "enrico@eflor.net")

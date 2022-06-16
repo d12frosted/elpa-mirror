@@ -4,6 +4,8 @@
 
 ;; Author: Mihai Bazon <mihai.bazon@gmail.com>
 ;; Keywords:
+;; Package-Version: 20170525.1117
+;; Package-Commit: 3295e7de5e2cfddc3bf0e462e852bf58972f5d70
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

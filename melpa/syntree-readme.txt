@@ -7,3 +7,4 @@ form.
 
 For full documentation, see the readme file at
          <https://github.com/enricoflor/syntree>
+or the info page installed with the package.
