@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://repo.or.cz/ob-redis.git
 
 Updating /mnt/store/melpa/working/ob-redis/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://repo.or.cz/ob-redis.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 44c83636ccbea0b3e9838b0180471905c30224c5
+Built ob-redis in 4.771s, finished at 2022-06-16T15:37:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.1K Jun 16 15:37 packages/ob-redis-20220221.1249.el
+4.0K -rw-r--r-- 1 root root  382 Jun 16 15:37 packages/ob-redis-20220221.1249.entry

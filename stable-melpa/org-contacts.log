@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://repo.or.cz/org-contacts.git
 
 Updating /mnt/store/melpa/working/org-contacts/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://repo.or.cz/org-contacts.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out dba21b48952e78e9db27e25628bcfb0353c19b24
+Built org-contacts in 5.645s, finished at 2022-06-16T15:38:50+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 60K Jun 16 15:38 packages/org-contacts-20220609.126.el
+4.0K -rw-r--r-- 1 root root 480 Jun 16 15:38 packages/org-contacts-20220609.126.entry

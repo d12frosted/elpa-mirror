@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://repo.or.cz/proxy-mode.git
 
 Updating /mnt/store/melpa/working/proxy-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://repo.or.cz/proxy-mode.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 620e48c6afaf760d0ee9f5bdf583fd91cd9d0ec6
+Built proxy-mode in 5.437s, finished at 2022-06-16T15:45:28+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.1K Jun 16 15:45 packages/proxy-mode-20220210.1410.el
+4.0K -rw-r--r-- 1 root root  261 Jun 16 15:45 packages/proxy-mode-20220210.1410.entry

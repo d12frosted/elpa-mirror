@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://repo.or.cz/goldendict.el.git
 
 Updating /mnt/store/melpa/working/goldendict/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://repo.or.cz/goldendict.el.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f3fbe658a8d31dc1bd0ca69e4d2ebaab59e92791
+Built goldendict in 5.434s, finished at 2022-06-16T15:19:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Jun 16 15:19 packages/goldendict-20220210.1401.el
+4.0K -rw-r--r-- 1 root root  309 Jun 16 15:19 packages/goldendict-20220210.1401.entry
