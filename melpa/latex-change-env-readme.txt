@@ -9,6 +9,9 @@ functionality, as well as how to install it.  Briefly:
 + The entry point is the `latex-change-env' function, which—when
   invoked from inside an environments—pops up a list of possible
   actions, as defined by the `latex-change-env-options' variable.
+  There is also the option to cycle through arguments in
+  `latex-change-env-cycle', which depends on the `math-delimiters'
+  package.
 
 + Labels are changed/deleted in a previous way, with an option to
   edit the respective label across the whole project; see below.

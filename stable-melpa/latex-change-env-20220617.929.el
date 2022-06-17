@@ -4,8 +4,8 @@
 ;;
 ;; Author: Tony Zorman <soliditsallgood@mailbox.org>
 ;; Keywords: convenience, tex
-;; Package-Version: 20220610.733
-;; Package-Commit: 02a718ee6c3e01f580008a0082bcc50ec02b122b
+;; Package-Version: 20220617.929
+;; Package-Commit: d2b0a2d1830ccddf2c687752e66b2f3048553ca0
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "27.1") (auctex "13.1"))
 ;; Homepage: https://gitlab.com/slotThe/change-env
@@ -40,6 +40,9 @@
 ;; + The entry point is the `latex-change-env' function, which—when
 ;;   invoked from inside an environments—pops up a list of possible
 ;;   actions, as defined by the `latex-change-env-options' variable.
+;;   There is also the option to cycle through arguments in
+;;   `latex-change-env-cycle', which depends on the `math-delimiters'
+;;   package.
 ;;
 ;; + Labels are changed/deleted in a previous way, with an option to
 ;;   edit the respective label across the whole project; see below.
@@ -315,18 +318,21 @@ delimiters, as indicated by the optional arguments BEG and END."
                     (lambda () (save-excursion (back-to-indentation) (point))))))
     (indent-region (mark) (point))))
 
-(defun latex-change-env--modify ()
+(defun latex-change-env--modify (&optional new-env)
   "Modify a LaTeX environment.
 Most of the implementation stolen from `LaTeX-environment', just
-also act on display math environments."
+also act on display math environments.
+
+The optional argument NEW-ENV specifies an environment directly."
   (let* ((default (cond ((TeX-near-bobp) "document")
                         ((and LaTeX-default-document-environment
                               (string-equal (LaTeX-current-environment) "document"))
                          LaTeX-default-document-environment)
                         (t LaTeX-default-environment)))
-         (new-env (completing-read (concat "Environment type (default " default "): ")
-                                   (LaTeX-environment-list-filtered) nil nil
-                                   nil 'LaTeX-environment-history default)))
+         (new-env (or new-env
+                      (completing-read (concat "Environment type (default " default "): ")
+                                       (LaTeX-environment-list-filtered) nil nil
+                                       nil 'LaTeX-environment-history default))))
     (unless (equal new-env default)
       (setq LaTeX-default-environment new-env))
     (pcase-let ((entry (assoc new-env (LaTeX-environment-list)))
@@ -351,6 +357,55 @@ specified by `latex-change-env-options'."
   (interactive)
   (let ((key (read-key (latex-change-env--prompt))))
     (funcall (cadr (alist-get key latex-change-env-options)))))
+
+;;;###autoload
+(defun latex-change-env-cycle (envs)
+  "Cycle through environments.
+ENVS is a list of environments to cycle through.  The special
+symbol `math' denotes a display math environment.
+
+This function heavily depends on the `math-delimiters'
+package[1].  If one is right at the end of a display or inline
+math environment, call `math-delimiters-insert' instead of
+cycling through environments.  The same is done when not inside
+any environment, which, for our definition of environment, also
+includes inline math.  As such, we only use
+`math-delimiters-{inline,display}' for figuring out your
+preferences, ignoring `latex-change-env-math-display'!.
+
+[1]: https://github.com/oantolin/math-delimiters"
+  (interactive)
+
+  (require 'math-delimiters)
+  (defvar math-delimiters-display)
+  (defvar math-delimiters-inline)
+
+  (setf envs (append envs (list (car envs))))
+  (pcase-let* ((env (car (or (ignore-errors (save-excursion
+                                              (latex-change-env--closest-env)))
+                             (and (texmathp) texmathp-why))))
+               (env-sym (intern (if (keywordp env)
+                                    (substring (symbol-name env) 1)
+                                  env)))
+               (`(,dopen . ,dclose) math-delimiters-display)
+               (`(,iopen . _) math-delimiters-inline))
+    (cl-flet ((change-real-env ()
+                (let ((new-env (cadr (memq env-sym envs))))
+                  (pcase new-env
+                    ('math (latex-change-env--to-display-math))
+                    (_     (latex-change-env--modify (symbol-name new-env)))))))
+      (cond
+       ((or (not env)                   ; not in a math env
+            (equal env iopen))          ; in inline math
+        (math-delimiters-insert))
+       ((equal env dopen)               ; in display math
+        (if (looking-back (regexp-quote dclose) (- (point) (length dclose)))
+            (math-delimiters-insert)
+          (change-real-env)))
+       ((and env (not (memq env-sym envs)))
+        (math-delimiters-insert))
+       (t
+        (change-real-env))))))
 
 (provide 'latex-change-env)
 ;;; latex-change-env.el ends here
