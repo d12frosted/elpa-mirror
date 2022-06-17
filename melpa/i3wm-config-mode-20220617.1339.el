@@ -4,8 +4,8 @@
 
 ;; Author: Alexander Miller <alexanderm@web.de>
 ;; Package-Requires: ((emacs "24.1"))
-;; Package-Version: 20201105.2022
-;; Package-Commit: c70bdc1367e461299e13a4797bc9d9d950184edd
+;; Package-Version: 20220617.1339
+;; Package-Commit: 3574d88241118ed6cc5a3022b6dde58d6f5af9dd
 ;; Homepage: https://github.com/Alexander-Miller/i3wm-Config-Mode
 ;; Version: 1.0
 ;; Keywords: faces, languages, i3wm, font-lock
@@ -227,7 +227,8 @@ the 'x' in 'for_window [x=y]'.")
           "minus"
           "enable"
           "assign"
-          "for_window")
+          "for_window"
+          "no_focus")
          symbol-end))
       0
       'i3wm-config-verb)
