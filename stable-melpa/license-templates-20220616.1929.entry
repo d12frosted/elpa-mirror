@@ -1,0 +1,13 @@
+(license-templates .
+		   [(20220616 1929)
+		    ((emacs
+		      (24 3))
+		     (request
+		      (0 3 0)))
+		    "Create LICENSE using GitHub API" single
+		    ((:commit . "72148a9343a6861ca2acf467913e169b57bd3e7c")
+		     (:authors
+		      ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		     (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		     (:keywords "license" "api" "template")
+		     (:url . "https://github.com/jcs-elpa/license-templates"))])

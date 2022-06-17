@@ -1,0 +1,19 @@
+(line-reminder .
+	       [(20220616 1842)
+		((emacs
+		  (25 1))
+		 (indicators
+		  (0 0 4))
+		 (fringe-helper
+		  (1 0 1))
+		 (ov
+		  (1 0 6))
+		 (ht
+		  (2 0)))
+		"Line annotation for changed and saved lines" single
+		((:commit . "30c151fdd5ac1cf172f354a050fcae131367e61c")
+		 (:authors
+		  ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		 (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		 (:keywords "annotation" "line" "number" "linum" "reminder" "highlight" "display")
+		 (:url . "https://github.com/emacs-vs/line-reminder"))])

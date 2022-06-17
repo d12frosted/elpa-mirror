@@ -1,0 +1,11 @@
+(show-eol .
+	  [(20220616 1946)
+	   ((emacs
+	     (24 4)))
+	   "Show end of line symbol in buffer" single
+	   ((:commit . "df38d6ad4949579046ac0a8b90afa406c8ae40fa")
+	    (:authors
+	     ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+	    (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+	    (:keywords "end" "eol" "line")
+	    (:url . "https://github.com/jcs-elpa/show-eol"))])

@@ -1,0 +1,19 @@
+(helm-searcher .
+	       [(20220616 1804)
+		((emacs
+		  (25 1))
+		 (helm
+		  (2 0))
+		 (searcher
+		  (0 1 8))
+		 (s
+		  (1 12 0))
+		 (f
+		  (0 20 0)))
+		"Helm interface to use searcher" single
+		((:commit . "2952ed7d743e7728efbf2d4a9f091717851dcab7")
+		 (:authors
+		  ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		 (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		 (:keywords "helm" "interface" "searcher" "search" "replace" "grep" "ag" "rg")
+		 (:url . "https://github.com/emacs-helm/helm-searcher"))])

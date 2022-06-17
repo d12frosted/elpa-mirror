@@ -5,7 +5,7 @@
 ;; Author: Tomohiro Matsuyama <m2ym.pub@gmail.com>
 ;; Keywords: convenience
 ;; Package-Version: 20211231.1837
-;; Package-Commit: bfba20e435a6f5bba328309a8a5ca20dea7a301d
+;; Package-Commit: 74867a4c991b98cf636ff1a2b81c2a6b41ebbcb9
 ;; URL: https://github.com/auto-complete/fuzzy-el
 ;; Keywords: lisp fuzzy
 ;; Version: 0.3

@@ -1,0 +1,17 @@
+(company-fuzzy .
+	       [(20220616 1903)
+		((emacs
+		  (26 1))
+		 (company
+		  (0 8 12))
+		 (s
+		  (1 12 0))
+		 (ht
+		  (2 0)))
+		"Fuzzy matching for `company-mode'" single
+		((:commit . "6099c3af5b8bc9373734c243c30c3b1c4848d65d")
+		 (:authors
+		  ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		 (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		 (:keywords "auto" "auto-complete" "complete" "fuzzy" "matching")
+		 (:url . "https://github.com/jcs-elpa/company-fuzzy"))])

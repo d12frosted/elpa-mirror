@@ -4,11 +4,11 @@ Source:  https://github.com/emacs-vs/docstr.git
 
 Updating /mnt/store/melpa/working/docstr/
 Checking out origin/HEAD
-Checking out 0a48429c2d0c2aa1de34ea24d2d3f9c8176519de
-Checking out 0a48429c2d0c2aa1de34ea24d2d3f9c8176519de
+Checking out e63373e8af519823f366aadbdd1521b2408206b7
+Checking out e63373e8af519823f366aadbdd1521b2408206b7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docstr/
-  to /tmp/docstrcnCnZR/docstr-20220608.532
+  to /tmp/docstr3f2m8u/docstr-20220616.1838
     docstr-faces.el -> docstr-faces.el
     docstr-key.el -> docstr-key.el
     docstr-util.el -> docstr-util.el
@@ -31,32 +31,32 @@ Copying files (->) and directories (=>)
   ! langs/docstr-scala.el -> docstr-scala.el
   ! langs/docstr-swift.el -> docstr-swift.el
   ! langs/docstr-typescript.el -> docstr-typescript.el
-Created docstr-20220608.532.tar containing:
-  docstr-20220608.532/
-  docstr-20220608.532/docstr-actionscript.el
-  docstr-20220608.532/docstr-c++.el
-  docstr-20220608.532/docstr-c.el
-  docstr-20220608.532/docstr-csharp.el
-  docstr-20220608.532/docstr-faces.el
-  docstr-20220608.532/docstr-go.el
-  docstr-20220608.532/docstr-groovy.el
-  docstr-20220608.532/docstr-java.el
-  docstr-20220608.532/docstr-js.el
-  docstr-20220608.532/docstr-key.el
-  docstr-20220608.532/docstr-lua.el
-  docstr-20220608.532/docstr-objc.el
-  docstr-20220608.532/docstr-php.el
-  docstr-20220608.532/docstr-pkg.el
-  docstr-20220608.532/docstr-python.el
-  docstr-20220608.532/docstr-ruby.el
-  docstr-20220608.532/docstr-rust.el
-  docstr-20220608.532/docstr-scala.el
-  docstr-20220608.532/docstr-swift.el
-  docstr-20220608.532/docstr-typescript.el
-  docstr-20220608.532/docstr-util.el
-  docstr-20220608.532/docstr-writers.el
-  docstr-20220608.532/docstr.el
-Built docstr in 6.135s, finished at 2022-06-16T15:07:12+0000
+Created docstr-20220616.1838.tar containing:
+  docstr-20220616.1838/
+  docstr-20220616.1838/docstr-actionscript.el
+  docstr-20220616.1838/docstr-c++.el
+  docstr-20220616.1838/docstr-c.el
+  docstr-20220616.1838/docstr-csharp.el
+  docstr-20220616.1838/docstr-faces.el
+  docstr-20220616.1838/docstr-go.el
+  docstr-20220616.1838/docstr-groovy.el
+  docstr-20220616.1838/docstr-java.el
+  docstr-20220616.1838/docstr-js.el
+  docstr-20220616.1838/docstr-key.el
+  docstr-20220616.1838/docstr-lua.el
+  docstr-20220616.1838/docstr-objc.el
+  docstr-20220616.1838/docstr-php.el
+  docstr-20220616.1838/docstr-pkg.el
+  docstr-20220616.1838/docstr-python.el
+  docstr-20220616.1838/docstr-ruby.el
+  docstr-20220616.1838/docstr-rust.el
+  docstr-20220616.1838/docstr-scala.el
+  docstr-20220616.1838/docstr-swift.el
+  docstr-20220616.1838/docstr-typescript.el
+  docstr-20220616.1838/docstr-util.el
+  docstr-20220616.1838/docstr-writers.el
+  docstr-20220616.1838/docstr.el
+Built docstr in 6.001s, finished at 2022-06-17T03:27:54+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  337 Jun 16 15:07 packages/docstr-20220608.532.entry
-120K -rw-r--r-- 1 root root 120K Jun 16 15:07 packages/docstr-20220608.532.tar
+4.0K -rw-r--r-- 1 root root  373 Jun 17 03:27 packages/docstr-20220616.1838.entry
+120K -rw-r--r-- 1 root root 120K Jun 17 03:27 packages/docstr-20220616.1838.tar
