@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.4
-;; Package-Version: 20220610.824
-;; Package-Commit: 9863d97fd9e2774b3acc9c4ecdab19e3128cb897
+;; Package-Version: 20220617.325
+;; Package-Commit: f4ea2f2c9de84e993aed6082fc70f89a109f20f9
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -140,8 +140,8 @@ Options:
 Calling `zk-new-note' with a prefix-argument inserts a link
 regardless of how `zk-new-note-link-insert' is set."
   :type '(choice (const :tag "Always" t)
-                 (const :tag "Ask" 'ask)
-                 (const :tag "Only in zk notes" 'zk)
+                 (const :tag "Ask" ask)
+                 (const :tag "Only in zk notes" zk)
                  (const :tag "Never" nil)))
 
 (defcustom zk-select-file-function #'zk--select-file
@@ -176,7 +176,7 @@ Options:
 The format in which link and title are inserted can be configured
 by setting the variable `zk-link-and-title-format'."
   :type '(choice (const :tag "Always" t)
-                 (const :tag "Ask" 'ask)
+                 (const :tag "Ask" ask)
                  (const :tag "Never" nil)))
 
 (defcustom zk-link-and-title-format "%t [[%i]]"
