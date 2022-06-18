@@ -4,8 +4,8 @@
 ;; Maintainer: Emacs User Group Berlin <emacs-berlin@emacs-berlin.org>
 
 ;; Version: 0.1
-;; Package-Version: 20210105.1400
-;; Package-Commit: ffe8b28907973fda775254432f88b55c92b5ae1f
+;; Package-Version: 20220618.817
+;; Package-Commit: 28410740e42ad9bb84416164406269b177fb49fa
 
 ;; URL: https://github.com/emacs-berlin/syntactic-close
 
@@ -251,6 +251,8 @@ Default is t"
 			       'php-mode
 			       'python-mode
 			       'ruby-mode
+                               'scala-mode
+                               'shell-mode
 			       'sgml-mode
 			       'web-mode
 			       'xml-mode
@@ -260,7 +262,6 @@ Default is t"
 (defvar syntactic-close-indent-modes (list
 				      'ruby-mode)
   "Mode where ‘indent-according-to-mode’ shall be after closer is inserted. ")
-
 
 (defvar syntactic-close-emacs-lisp-block-re
   (concat
@@ -666,21 +667,9 @@ Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
 
 ;; Haskell
 (defun syntactic-close-haskell-close (&optional pps)
-  "Might deliver equivalent to `py-dedent'.
-
-Argument B-OF-ST read beginning-of-statement.
-Argument B-OF-BL read beginning-of-block.
-Optional argument PADDING to be done.
-Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
+  "Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
   (interactive "*")
-  (let* ((pps (or pps (parse-partial-sexp (point-min) (point))))
-	 ;; (syntactic-close-beginning-of-statement
-	 ;;  (or b-of-st
-	 ;;      (if (ignore-errors (functionp 'py-backward-statement))
-	 ;; 	  'py-backward-statement
-	 ;; 	(lambda ()(beginning-of-line)(back-to-indentation)))))
-	 ;; (syntactic-close-beginning-of-block-re (or b-of-bl "[ 	]*\\_<\\(class\\|def\\|async def\\|async for\\|for\\|if\\|try\\|while\\|with\\|async with\\)\\_>[:( \n	]*"))
-	 )
+  (let* ((pps (or pps (parse-partial-sexp (point-min) (point)))))
     (cond
      ((nth 8 pps)
       (syntactic-close-generic-forms pps))
@@ -703,6 +692,28 @@ Argument PPS is result of a call to function ‘parse-partial-sexp’"
   (cond ((ignore-errors (and (< (nth 1 pps) (nth 8 pps))(syntactic-close--string-before-list-maybe pps))))
 	((and (or (nth 1 pps) (nth 3 pps)) (syntactic-close-pure-syntax-intern pps)))
 	(t (syntactic-close--ruby))))
+
+(defun syntactic-close-scala-close (&optional pps)
+  "Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
+  (interactive "*")
+  (let* ((pps (or pps (parse-partial-sexp (point-min) (point)))))
+    (cond
+     ((nth 8 pps)
+      (syntactic-close-generic-forms pps))
+     ((nth 1 pps)
+      (syntactic-close-pure-syntax pps))
+     (t (syntactic-close--generic nil nil pps)))))
+
+(defun syntactic-close-shell-close (&optional pps)
+  "Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
+  (interactive "*")
+  (let* ((pps (or pps (parse-partial-sexp (point-min) (point)))))
+    (cond
+     ((nth 8 pps)
+      (syntactic-close-generic-forms pps))
+     ((nth 1 pps)
+      (syntactic-close-pure-syntax pps))
+     (t (syntactic-close--generic nil nil pps)))))
 
 (defun syntactic-close--semicolon-modes (pps)
   "Close specific modes.
@@ -755,22 +766,26 @@ Argument PPS, the result of ‘parse-partial-sexp’."
   "No special treatment required.
 Argument PPS result of ‘parse-partial-sexp’."
   (pcase major-mode
-    (`python-mode
-     (syntactic-close-python-close pps))
     (`agda2-mode
      (syntactic-close-haskell-close pps))
     (`emacs-lisp-mode
      (syntactic-close-emacs-lisp-close pps))
-    (`org-mode
-     (syntactic-close-emacs-lisp-close pps t))
-    (`ruby-mode
-     (syntactic-close-ruby-close pps))
-    (`nxml-mode
-     (syntactic-close--finish-element))
     (`html-mode
      (syntactic-close-ml))
     (`mhtml-mode
      (syntactic-close-ml))
+    (`nxml-mode
+     (syntactic-close--finish-element))
+    (`org-mode
+     (syntactic-close-emacs-lisp-close pps t))
+    (`python-mode
+     (syntactic-close-python-close pps))
+    (`ruby-mode
+     (syntactic-close-ruby-close pps))
+    (`scala-mode
+     (syntactic-close-scala-close pps))
+    (`shell-mode
+     (syntactic-close-shell-close pps))
     (`sgml-mode
      (syntactic-close-ml))
     (`xml-mode
