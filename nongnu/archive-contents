@@ -1668,16 +1668,16 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(17 13 20220615002353)
+	       [(17 14 20220618104311)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
-		((:url . "http://xahlee.info/emacs/misc/ergoemacs_vi_mode.html")
+		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "emulations" "vim" "ergoemacs")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "894cd36c580fe397a8b8f48cd0d69698712c8c4c"))])
+		 (:commit . "eb981247061d50fd9b338560fa4234859a14a044"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar

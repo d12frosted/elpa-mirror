@@ -1,5 +1,5 @@
 (eglot-fsharp .
-	      [(20220605 1329)
+	      [(20220618 1535)
 	       ((emacs
 		 (27 1))
 		(eglot
@@ -9,7 +9,7 @@
 		(jsonrpc
 		 (1 0 14)))
 	       "fsharp-mode eglot integration" single
-	       ((:commit . "c7842fe63b8bae5aa8bd6a9891036c5ce04e4030")
+	       ((:commit . "76fc02698afa728749221d32fca4563e6858dbc7")
 		(:authors
 		 ("Jürgen Hötzel" . "juergen@hoetzel.info"))
 		(:maintainer "Jürgen Hötzel" . "juergen@hoetzel.info")

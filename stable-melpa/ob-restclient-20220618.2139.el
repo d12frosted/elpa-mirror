@@ -4,8 +4,8 @@
 
 ;; Author: Alf Lervåg
 ;; Keywords: literate programming, reproducible research
-;; Package-Version: 20220202.1609
-;; Package-Commit: 586f1fa07f76aaca13cb3f86945759f4b9fb8db7
+;; Package-Version: 20220618.2139
+;; Package-Commit: 3ac834b02b8276aae1b760312612c3b940598f90
 ;; Homepage: https://github.com/alf/ob-restclient.el
 ;; Version: 0.02
 ;; Package-Requires: ((restclient "0"))
@@ -56,6 +56,7 @@ This function is called by `org-babel-execute-src-block'"
   (with-temp-buffer
     (let ((results-buffer (current-buffer))
           (restclient-same-buffer-response t)
+          (restclient-response-body-only (org-babel-restclient--should-hide-headers-p params))
           (restclient-same-buffer-response-name (buffer-name))
           (display-buffer-alist
            (cons
@@ -82,11 +83,6 @@ This function is called by `org-babel-execute-src-block'"
       (goto-char (point-min))
       (when (equal (buffer-name) (buffer-string))
         (error "Restclient encountered an error"))
-
-      (when (or (org-babel-restclient--return-pure-payload-result-p params)
-                (assq :noheaders params)
-                (assq :jq params))
-        (org-babel-restclient--hide-headers))
 
        (when-let* ((jq-header (assoc :jq params))
                   (jq-path "jq"))
@@ -116,18 +112,11 @@ This function is called by `org-babel-execute-src-block'"
     (goto-char (point-max))
     (insert "#+END_SRC\n")))
 
-(defun org-babel-restclient--hide-headers ()
-  "Just return the payload."
-  (let ((comments-start
-         (save-excursion
-           (goto-char (point-max))
-           (while (comment-only-p (line-beginning-position) (line-end-position))
-             (forward-line -1))
-           ;; Include the last line as well
-           (forward-line)
-           (point))))
-    (narrow-to-region (point-min) comments-start)))
-
+(defun org-babel-restclient--should-hide-headers-p (params)
+  "Return `t' if headers should be hidden."
+  (or (org-babel-restclient--return-pure-payload-result-p params)
+                (assq :noheaders params)
+                (assq :jq params)))
 
 (defun org-babel-restclient--return-pure-payload-result-p (params)
   "Return `t' if the `:results' key in PARAMS contains `value' or `table'."

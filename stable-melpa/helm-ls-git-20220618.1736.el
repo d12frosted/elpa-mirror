@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2022 Thierry Volpiatto
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20220618.546
-;; Package-Commit: 98a71170cc25203bc986299e82fe2e3a3e52bcb0
+;; Package-Version: 20220618.1736
+;; Package-Commit: 950d254f4bc496e1811939cf5832f70b4555d1cb
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -1042,10 +1042,11 @@ object will be passed git rebase i.e. git rebase -i <hash>."
        proc (lambda (_process event)
               (if (string= event "finished\n")
                   (progn (progress-reporter-done pr)
-                         (when tm (cancel-timer tm)
                          (when helm-alive-p
-                           (with-helm-window (helm-force-update "^\\*")))))
-                (error "Failed %sing from %s" command remote)))))))
+                           (with-helm-window (helm-force-update "^\\*"))))
+                (and tm (cancel-timer tm))
+                (error "Failed %sing from %s" command remote))
+              (and tm (cancel-timer tm)))))))
 
 (defun helm-ls-git--filter-process (proc string)
   (when (buffer-live-p (process-buffer proc))

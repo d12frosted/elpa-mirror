@@ -4,11 +4,11 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out 7beed8c5c638ed9a94cb5962587ea286f07b8981
-Checking out 7beed8c5c638ed9a94cb5962587ea286f07b8981
+Checking out fb9d33b21b3105acc1fcbced851dca70c4be2ff8
+Checking out fb9d33b21b3105acc1fcbced851dca70c4be2ff8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubJeHrHJ/ghub-20220613.2208
+  to /tmp/ghub8Gkklf/ghub-20220618.1940
     ghub-pkg.el -> ghub-pkg.el
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
@@ -18,20 +18,22 @@ Copying files (->) and directories (=>)
   ! lisp/gsexp.el -> gsexp.el
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
-Generating /tmp/ghubJeHrHJ/ghub-20220613.2208/ghub.info
-Created ghub-20220613.2208.tar containing:
-  ghub-20220613.2208/
-  ghub-20220613.2208/buck.el
-  ghub-20220613.2208/dir
-  ghub-20220613.2208/ghub-graphql.el
-  ghub-20220613.2208/ghub-pkg.el
-  ghub-20220613.2208/ghub.el
-  ghub-20220613.2208/ghub.info
-  ghub-20220613.2208/glab.el
-  ghub-20220613.2208/gogs.el
-  ghub-20220613.2208/gsexp.el
-  ghub-20220613.2208/gtea.el
-Built ghub in 8.876s, finished at 2022-06-18T15:23:27+0000
+Generating /tmp/ghub8Gkklf/ghub-20220618.1940/ghub.info
+Created ghub-20220618.1940.tar containing:
+  ghub-20220618.1940/
+  ghub-20220618.1940/buck.el
+  ghub-20220618.1940/dir
+  ghub-20220618.1940/ghub-graphql.el
+  ghub-20220618.1940/ghub-pkg.el
+  ghub-20220618.1940/ghub.el
+  ghub-20220618.1940/ghub.info
+  ghub-20220618.1940/glab.el
+  ghub-20220618.1940/gogs.el
+  ghub-20220618.1940/gsexp.el
+  ghub-20220618.1940/gtea.el
+Built ghub in 9.477s, finished at 2022-06-18T21:21:27+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  414 Jun 18 15:23 packages/ghub-20220613.2208.entry
-160K -rw-r--r-- 1 root root 160K Jun 18 15:23 packages/ghub-20220613.2208.tar
+4.0K -rw-r--r-- 1 root root  414 Jun 18 18:23 packages/ghub-20220613.2208.entry
+160K -rw-r--r-- 1 root root 160K Jun 18 18:23 packages/ghub-20220613.2208.tar
+4.0K -rw-r--r-- 1 root root  414 Jun 18 21:21 packages/ghub-20220618.1940.entry
+160K -rw-r--r-- 1 root root 160K Jun 18 21:21 packages/ghub-20220618.1940.tar

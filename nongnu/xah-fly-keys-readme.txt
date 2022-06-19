@@ -79,7 +79,7 @@ lines to you init.el before (require 'xah-fly-keys):
 If you have a bug, post on github.
 
 For detail about design and other info, see home page at
-http://xahlee.info/emacs/misc/ergoemacs_vi_mode.html
+http://xahlee.info/emacs/misc/xah-fly-keys.html
 
 If you like this project, Buy Xah Emacs Tutorial
 http://xahlee.info/emacs/emacs/buy_xah_emacs_tutorial.html or make

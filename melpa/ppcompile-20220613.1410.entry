@@ -1,0 +1,11 @@
+(ppcompile .
+	   [(20220613 1410)
+	    ((emacs
+	      (25 1)))
+	    "Ping-pong compile projects on remote machines" single
+	    ((:commit . "c6450517157dfb73572892785a0aafe440596d19")
+	     (:authors
+	      ("Guangwang Huang" . "whatacold@gmail.com"))
+	     (:maintainer "Guangwang Huang")
+	     (:keywords "tools")
+	     (:url . "https://github.com/whatacold/ppcompile"))])
