@@ -4,23 +4,27 @@ Source:  https://github.com/ShuguangSun/rutils.el.git
 
 Updating /mnt/store/melpa/working/rutils/
 Checking out origin/HEAD
-Checking out e216db63a2ccd50fe5c80679fc5b929dd2c114e8
-Checking out e216db63a2ccd50fe5c80679fc5b929dd2c114e8
+Checking out dd500ab8062ce40cb339ec8620bdfc63fdd28364
+Checking out dd500ab8062ce40cb339ec8620bdfc63fdd28364
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rutils/
-  to /tmp/rutilsPCdrsq/rutils-20210805.608
+  to /tmp/rutilsELtKuW/rutils-20220619.1421
+    rutils-devtools.el -> rutils-devtools.el
     rutils-lib.el -> rutils-lib.el
     rutils-packrat.el -> rutils-packrat.el
     rutils-renv.el -> rutils-renv.el
     rutils.el -> rutils.el
-Created rutils-20210805.608.tar containing:
-  rutils-20210805.608/
-  rutils-20210805.608/rutils-lib.el
-  rutils-20210805.608/rutils-packrat.el
-  rutils-20210805.608/rutils-pkg.el
-  rutils-20210805.608/rutils-renv.el
-  rutils-20210805.608/rutils.el
-Built rutils in 4.094s, finished at 2022-06-19T06:43:21+0000
+Created rutils-20220619.1421.tar containing:
+  rutils-20220619.1421/
+  rutils-20220619.1421/rutils-devtools.el
+  rutils-20220619.1421/rutils-lib.el
+  rutils-20220619.1421/rutils-packrat.el
+  rutils-20220619.1421/rutils-pkg.el
+  rutils-20220619.1421/rutils-renv.el
+  rutils-20220619.1421/rutils.el
+Built rutils in 4.748s, finished at 2022-06-19T15:40:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 391 Jun 19 06:43 packages/rutils-20210805.608.entry
- 40K -rw-r--r-- 1 root root 40K Jun 19 06:43 packages/rutils-20210805.608.tar
+4.0K -rw-r--r-- 1 root root 392 Jun 19 12:43 packages/rutils-20220619.1141.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 19 12:43 packages/rutils-20220619.1141.tar
+4.0K -rw-r--r-- 1 root root 392 Jun 19 15:40 packages/rutils-20220619.1421.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 19 15:40 packages/rutils-20220619.1421.tar

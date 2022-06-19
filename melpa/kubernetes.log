@@ -4,11 +4,11 @@ Source:  https://github.com/kubernetes-el/kubernetes-el.git
 
 Updating /mnt/store/melpa/working/kubernetes/
 Checking out origin/HEAD
-Checking out 8ff79f7776cb9143f63bf3a11728bbecfcaca34c
-Checking out 8ff79f7776cb9143f63bf3a11728bbecfcaca34c
+Checking out de2d49122605d9b055f06ab6f1aeb2be794f41b4
+Checking out de2d49122605d9b055f06ab6f1aeb2be794f41b4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kubernetes/
-  to /tmp/kubernetesVy4J0m/kubernetes-20220619.108
+  to /tmp/kubernetesOG8hPy/kubernetes-20220619.108
     kubernetes-ast.el -> kubernetes-ast.el
     kubernetes-commands.el -> kubernetes-commands.el
     kubernetes-configmaps.el -> kubernetes-configmaps.el
@@ -76,7 +76,7 @@ Created kubernetes-20220619.108.tar containing:
   kubernetes-20220619.108/kubernetes-vars.el
   kubernetes-20220619.108/kubernetes-yaml.el
   kubernetes-20220619.108/kubernetes.el
-Built kubernetes in 9.579s, finished at 2022-06-19T06:23:24+0000
+Built kubernetes in 8.268s, finished at 2022-06-19T15:20:56+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  654 Jun 19 06:23 packages/kubernetes-20220619.108.entry
-260K -rw-r--r-- 1 root root 260K Jun 19 06:23 packages/kubernetes-20220619.108.tar
+4.0K -rw-r--r-- 1 root root  654 Jun 19 15:20 packages/kubernetes-20220619.108.entry
+260K -rw-r--r-- 1 root root 260K Jun 19 15:20 packages/kubernetes-20220619.108.tar
