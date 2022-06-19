@@ -4,11 +4,11 @@ Source:  https://github.com/kubernetes-el/kubernetes-el.git
 
 Updating /mnt/store/melpa/working/kubernetes/
 Checking out origin/HEAD
-Checking out e0d0cd6b949802fe63ff8940cc743cc7efedb089
-Checking out e0d0cd6b949802fe63ff8940cc743cc7efedb089
+Checking out 8ff79f7776cb9143f63bf3a11728bbecfcaca34c
+Checking out 8ff79f7776cb9143f63bf3a11728bbecfcaca34c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kubernetes/
-  to /tmp/kubernetesA4Zae6/kubernetes-20220331.1314
+  to /tmp/kubernetesVy4J0m/kubernetes-20220619.108
     kubernetes-ast.el -> kubernetes-ast.el
     kubernetes-commands.el -> kubernetes-commands.el
     kubernetes-configmaps.el -> kubernetes-configmaps.el
@@ -41,42 +41,42 @@ Copying files (->) and directories (=>)
     kubernetes-vars.el -> kubernetes-vars.el
     kubernetes-yaml.el -> kubernetes-yaml.el
     kubernetes.el -> kubernetes.el
-Created kubernetes-20220331.1314.tar containing:
-  kubernetes-20220331.1314/
-  kubernetes-20220331.1314/kubernetes-ast.el
-  kubernetes-20220331.1314/kubernetes-commands.el
-  kubernetes-20220331.1314/kubernetes-configmaps.el
-  kubernetes-20220331.1314/kubernetes-contexts.el
-  kubernetes-20220331.1314/kubernetes-core.el
-  kubernetes-20220331.1314/kubernetes-deployments.el
-  kubernetes-20220331.1314/kubernetes-el-tramp.el
-  kubernetes-20220331.1314/kubernetes-errors.el
-  kubernetes-20220331.1314/kubernetes-ingress.el
-  kubernetes-20220331.1314/kubernetes-jobs.el
-  kubernetes-20220331.1314/kubernetes-kubectl.el
-  kubernetes-20220331.1314/kubernetes-labels.el
-  kubernetes-20220331.1314/kubernetes-loading-container.el
-  kubernetes-20220331.1314/kubernetes-logs.el
-  kubernetes-20220331.1314/kubernetes-modes.el
-  kubernetes-20220331.1314/kubernetes-namespaces.el
-  kubernetes-20220331.1314/kubernetes-nodes.el
-  kubernetes-20220331.1314/kubernetes-overview.el
-  kubernetes-20220331.1314/kubernetes-persistentvolumeclaims.el
-  kubernetes-20220331.1314/kubernetes-pkg.el
-  kubernetes-20220331.1314/kubernetes-pod-line.el
-  kubernetes-20220331.1314/kubernetes-pods.el
-  kubernetes-20220331.1314/kubernetes-popups.el
-  kubernetes-20220331.1314/kubernetes-process.el
-  kubernetes-20220331.1314/kubernetes-props.el
-  kubernetes-20220331.1314/kubernetes-secrets.el
-  kubernetes-20220331.1314/kubernetes-services.el
-  kubernetes-20220331.1314/kubernetes-state.el
-  kubernetes-20220331.1314/kubernetes-statefulsets.el
-  kubernetes-20220331.1314/kubernetes-utils.el
-  kubernetes-20220331.1314/kubernetes-vars.el
-  kubernetes-20220331.1314/kubernetes-yaml.el
-  kubernetes-20220331.1314/kubernetes.el
-Built kubernetes in 5.994s, finished at 2022-06-18T21:32:48+0000
+Created kubernetes-20220619.108.tar containing:
+  kubernetes-20220619.108/
+  kubernetes-20220619.108/kubernetes-ast.el
+  kubernetes-20220619.108/kubernetes-commands.el
+  kubernetes-20220619.108/kubernetes-configmaps.el
+  kubernetes-20220619.108/kubernetes-contexts.el
+  kubernetes-20220619.108/kubernetes-core.el
+  kubernetes-20220619.108/kubernetes-deployments.el
+  kubernetes-20220619.108/kubernetes-el-tramp.el
+  kubernetes-20220619.108/kubernetes-errors.el
+  kubernetes-20220619.108/kubernetes-ingress.el
+  kubernetes-20220619.108/kubernetes-jobs.el
+  kubernetes-20220619.108/kubernetes-kubectl.el
+  kubernetes-20220619.108/kubernetes-labels.el
+  kubernetes-20220619.108/kubernetes-loading-container.el
+  kubernetes-20220619.108/kubernetes-logs.el
+  kubernetes-20220619.108/kubernetes-modes.el
+  kubernetes-20220619.108/kubernetes-namespaces.el
+  kubernetes-20220619.108/kubernetes-nodes.el
+  kubernetes-20220619.108/kubernetes-overview.el
+  kubernetes-20220619.108/kubernetes-persistentvolumeclaims.el
+  kubernetes-20220619.108/kubernetes-pkg.el
+  kubernetes-20220619.108/kubernetes-pod-line.el
+  kubernetes-20220619.108/kubernetes-pods.el
+  kubernetes-20220619.108/kubernetes-popups.el
+  kubernetes-20220619.108/kubernetes-process.el
+  kubernetes-20220619.108/kubernetes-props.el
+  kubernetes-20220619.108/kubernetes-secrets.el
+  kubernetes-20220619.108/kubernetes-services.el
+  kubernetes-20220619.108/kubernetes-state.el
+  kubernetes-20220619.108/kubernetes-statefulsets.el
+  kubernetes-20220619.108/kubernetes-utils.el
+  kubernetes-20220619.108/kubernetes-vars.el
+  kubernetes-20220619.108/kubernetes-yaml.el
+  kubernetes-20220619.108/kubernetes.el
+Built kubernetes in 9.579s, finished at 2022-06-19T06:23:24+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  655 Jun 18 21:32 packages/kubernetes-20220331.1314.entry
-260K -rw-r--r-- 1 root root 260K Jun 18 21:32 packages/kubernetes-20220331.1314.tar
+4.0K -rw-r--r-- 1 root root  654 Jun 19 06:23 packages/kubernetes-20220619.108.entry
+260K -rw-r--r-- 1 root root 260K Jun 19 06:23 packages/kubernetes-20220619.108.tar
