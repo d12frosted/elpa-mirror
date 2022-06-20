@@ -2,9 +2,9 @@
 
 ;; Author: Fanael Linithien <fanael4@gmail.com>
 ;; URL: https://github.com/Fanael/persistent-scratch
-;; Package-Commit: 4e159967801b75d07303221c4e5a2b89039c6a11
-;; Package-Version: 20220218.810
-;; Package-X-Original-Version: 0.3.6
+;; Package-Commit: 92f540e7d310ec2e0b636eff1033cf78f0d9eb40
+;; Package-Version: 20220620.408
+;; Package-X-Original-Version: 0.3.7
 ;; Package-Requires: ((emacs "24"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -86,6 +86,18 @@ buffer is assumed to be a scratch buffer, thus becoming eligible for
   :type 'file
   :group 'persistent-scratch)
 
+(defcustom persistent-scratch-before-save-commit-functions '()
+  "Abnormal hook for performing operations before committing a save file.
+
+Functions are called with one argument TEMP-FILE: the path of the
+temporary file containing uncommitted save data, which will be moved to
+`persistent-scratch-save-file' after the hook runs.
+
+The intended use of this hook is to allow changing the file system
+permissions of the file before committing."
+  :type 'hook
+  :group 'persistent-scratch)
+
 (defcustom persistent-scratch-what-to-save
   '(major-mode point narrowing)
   "Specify what scratch buffer properties to save.
@@ -93,7 +105,7 @@ buffer is assumed to be a scratch buffer, thus becoming eligible for
 The buffer name and the buffer contents are always saved.
 
 It's a list containing some or all of the following values:
- - `major-mode': save the the major mode.
+ - `major-mode': save the major mode.
  - `point': save the positions of `point' and `mark'.
  - `narrowing': save the region the buffer is narrowed to.
  - `text-properties': save the text properties of the buffer contents."
@@ -162,6 +174,7 @@ representing the time of the last `persistent-scratch-new-backup' call."
           (let ((coding-system-for-write 'utf-8-unix))
             (write-region str nil tmp-file nil 0))
         (set-default-file-modes old-umask)))
+    (run-hook-with-args 'persistent-scratch-before-save-commit-functions tmp-file)
     (rename-file tmp-file actual-file t)
     (when (called-interactively-p 'interactive)
       (message "Wrote persistent-scratch file %s" actual-file)))
