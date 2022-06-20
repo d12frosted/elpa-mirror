@@ -1,0 +1,16 @@
+(zetteldesk-kb .
+	       [(20220619 2028)
+		((zetteldesk
+		  (1 0 1))
+		 (hydra
+		  (0 15))
+		 (major-mode-hydra
+		  (0 2))
+		 (emacs
+		  (24 1)))
+		"Keybindings for zetteldesk.el" single
+		((:commit . "559b9c170aad80e759f68a2739c9c8b6c6448f84")
+		 (:authors
+		  ("Vidianos Giannitsis" . "vidianosgiannitsis@gmail.com"))
+		 (:maintainer "Vidianos Giannitsis" . "vidianosgiannitsis@gmail.com")
+		 (:url . "https://github.com/Vidianos-Giannitsis/zetteldesk-kb.el"))])
