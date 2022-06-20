@@ -1,5 +1,5 @@
 (pdf-tools .
-	   [(20220522 13)
+	   [(20220619 2227)
 	    ((emacs
 	      (24 3))
 	     (nadvice
@@ -9,7 +9,7 @@
 	     (let-alist
 		 (1 0 4)))
 	    "Support library for PDF documents" tar
-	    ((:commit . "f9ccdf99e560bae70d3a13325cec9dc0e3cc45b0")
+	    ((:commit . "fe42da60ad68e806af1677210249caccd7b99451")
 	     (:authors
 	      ("Andreas Politz" . "mail@andreas-politz.de"))
 	     (:maintainer "Vedang Manerikar" . "vedang.manerikar@gmail.com")

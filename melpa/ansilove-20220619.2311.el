@@ -24,7 +24,7 @@
 ;; Homepage: https://gitlab.com/xgqt/emacs-ansilove/
 ;; Version: 0.3.1
 ;; Package-Version: 20220619.2311
-;; Package-Commit: d558e8fc3bed5163f3eadcacc474e59071a17929
+;; Package-Commit: 757345ddbe6d8a9f1f5c15e17f76e132b5c83869
 ;; Keywords: multimedia
 ;; Package-Requires: ((emacs "26.1"))
 

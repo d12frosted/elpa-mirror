@@ -4,11 +4,11 @@ Source:  https://github.com/vedang/pdf-tools.git
 
 Updating /mnt/store/melpa/working/pdf-tools/
 Checking out origin/HEAD
-Checking out f9ccdf99e560bae70d3a13325cec9dc0e3cc45b0
-Checking out f9ccdf99e560bae70d3a13325cec9dc0e3cc45b0
+Checking out fe42da60ad68e806af1677210249caccd7b99451
+Checking out fe42da60ad68e806af1677210249caccd7b99451
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pdf-tools/
-  to /tmp/pdf-tools5ckYNZ/pdf-tools-20220522.13
+  to /tmp/pdf-toolsJXsH1L/pdf-tools-20220619.2227
   ! lisp/pdf-annot.el -> pdf-annot.el
   ! lisp/pdf-cache.el -> pdf-cache.el
   ! lisp/pdf-dev.el -> pdf-dev.el
@@ -29,69 +29,69 @@ Copying files (->) and directories (=>)
     README -> README
   ! Makefile -> build/Makefile
   ! server => build/server
-Created pdf-tools-20220522.13.tar containing:
-  pdf-tools-20220522.13/
-  pdf-tools-20220522.13/README
-  pdf-tools-20220522.13/build/
-  pdf-tools-20220522.13/build/Makefile
-  pdf-tools-20220522.13/build/server/
-  pdf-tools-20220522.13/build/server/.gitignore
-  pdf-tools-20220522.13/build/server/Makefile.am
-  pdf-tools-20220522.13/build/server/autobuild
-  pdf-tools-20220522.13/build/server/autogen.sh
-  pdf-tools-20220522.13/build/server/configure.ac
-  pdf-tools-20220522.13/build/server/epdfinfo.c
-  pdf-tools-20220522.13/build/server/epdfinfo.h
-  pdf-tools-20220522.13/build/server/poppler-versions
-  pdf-tools-20220522.13/build/server/synctex_parser.c
-  pdf-tools-20220522.13/build/server/synctex_parser.h
-  pdf-tools-20220522.13/build/server/synctex_parser_advanced.h
-  pdf-tools-20220522.13/build/server/synctex_parser_local.h
-  pdf-tools-20220522.13/build/server/synctex_parser_readme.txt
-  pdf-tools-20220522.13/build/server/synctex_parser_utils.c
-  pdf-tools-20220522.13/build/server/synctex_parser_utils.h
-  pdf-tools-20220522.13/build/server/synctex_parser_version.txt
-  pdf-tools-20220522.13/build/server/synctex_version.h
-  pdf-tools-20220522.13/build/server/test/
-  pdf-tools-20220522.13/build/server/test/Makefile
-  pdf-tools-20220522.13/build/server/test/docker/
-  pdf-tools-20220522.13/build/server/test/docker/.gitignore
-  pdf-tools-20220522.13/build/server/test/docker/lib/
-  pdf-tools-20220522.13/build/server/test/docker/lib/run-tests
-  pdf-tools-20220522.13/build/server/test/docker/lib/yes-or-enter
-  pdf-tools-20220522.13/build/server/test/docker/templates/
-  pdf-tools-20220522.13/build/server/test/docker/templates/Dockerfile.in
-  pdf-tools-20220522.13/build/server/test/docker/templates/arch.Dockerfile.in.FAILING
-  pdf-tools-20220522.13/build/server/test/docker/templates/centos.Dockerfile.in.FAILING
-  pdf-tools-20220522.13/build/server/test/docker/templates/debian-10.Dockerfile.in
-  pdf-tools-20220522.13/build/server/test/docker/templates/debian-11.Dockerfile.in
-  pdf-tools-20220522.13/build/server/test/docker/templates/debian-9.Dockerfile.in
-  pdf-tools-20220522.13/build/server/test/docker/templates/fedora-34.Dockerfile.in
-  pdf-tools-20220522.13/build/server/test/docker/templates/fedora-35.Dockerfile.in
-  pdf-tools-20220522.13/build/server/test/docker/templates/fedora-36.Dockerfile.in
-  pdf-tools-20220522.13/build/server/test/docker/templates/gentoo.Dockerfile.in.FAILING
-  pdf-tools-20220522.13/build/server/test/docker/templates/ubuntu-18.Dockerfile.in
-  pdf-tools-20220522.13/build/server/test/docker/templates/ubuntu-20.Dockerfile.in
-  pdf-tools-20220522.13/build/server/test/docker/templates/ubuntu-22.Dockerfile.in
-  pdf-tools-20220522.13/pdf-annot.el
-  pdf-tools-20220522.13/pdf-cache.el
-  pdf-tools-20220522.13/pdf-dev.el
-  pdf-tools-20220522.13/pdf-history.el
-  pdf-tools-20220522.13/pdf-info.el
-  pdf-tools-20220522.13/pdf-isearch.el
-  pdf-tools-20220522.13/pdf-links.el
-  pdf-tools-20220522.13/pdf-loader.el
-  pdf-tools-20220522.13/pdf-macs.el
-  pdf-tools-20220522.13/pdf-misc.el
-  pdf-tools-20220522.13/pdf-occur.el
-  pdf-tools-20220522.13/pdf-outline.el
-  pdf-tools-20220522.13/pdf-sync.el
-  pdf-tools-20220522.13/pdf-tools-pkg.el
-  pdf-tools-20220522.13/pdf-tools.el
-  pdf-tools-20220522.13/pdf-util.el
-  pdf-tools-20220522.13/pdf-view.el
-  pdf-tools-20220522.13/pdf-virtual.el
-Built pdf-tools in 5.195s, finished at 2022-06-19T21:29:58+0000
+Created pdf-tools-20220619.2227.tar containing:
+  pdf-tools-20220619.2227/
+  pdf-tools-20220619.2227/README
+  pdf-tools-20220619.2227/build/
+  pdf-tools-20220619.2227/build/Makefile
+  pdf-tools-20220619.2227/build/server/
+  pdf-tools-20220619.2227/build/server/.gitignore
+  pdf-tools-20220619.2227/build/server/Makefile.am
+  pdf-tools-20220619.2227/build/server/autobuild
+  pdf-tools-20220619.2227/build/server/autogen.sh
+  pdf-tools-20220619.2227/build/server/configure.ac
+  pdf-tools-20220619.2227/build/server/epdfinfo.c
+  pdf-tools-20220619.2227/build/server/epdfinfo.h
+  pdf-tools-20220619.2227/build/server/poppler-versions
+  pdf-tools-20220619.2227/build/server/synctex_parser.c
+  pdf-tools-20220619.2227/build/server/synctex_parser.h
+  pdf-tools-20220619.2227/build/server/synctex_parser_advanced.h
+  pdf-tools-20220619.2227/build/server/synctex_parser_local.h
+  pdf-tools-20220619.2227/build/server/synctex_parser_readme.txt
+  pdf-tools-20220619.2227/build/server/synctex_parser_utils.c
+  pdf-tools-20220619.2227/build/server/synctex_parser_utils.h
+  pdf-tools-20220619.2227/build/server/synctex_parser_version.txt
+  pdf-tools-20220619.2227/build/server/synctex_version.h
+  pdf-tools-20220619.2227/build/server/test/
+  pdf-tools-20220619.2227/build/server/test/Makefile
+  pdf-tools-20220619.2227/build/server/test/docker/
+  pdf-tools-20220619.2227/build/server/test/docker/.gitignore
+  pdf-tools-20220619.2227/build/server/test/docker/lib/
+  pdf-tools-20220619.2227/build/server/test/docker/lib/run-tests
+  pdf-tools-20220619.2227/build/server/test/docker/lib/yes-or-enter
+  pdf-tools-20220619.2227/build/server/test/docker/templates/
+  pdf-tools-20220619.2227/build/server/test/docker/templates/Dockerfile.in
+  pdf-tools-20220619.2227/build/server/test/docker/templates/arch.Dockerfile.in.FAILING
+  pdf-tools-20220619.2227/build/server/test/docker/templates/centos.Dockerfile.in.FAILING
+  pdf-tools-20220619.2227/build/server/test/docker/templates/debian-10.Dockerfile.in
+  pdf-tools-20220619.2227/build/server/test/docker/templates/debian-11.Dockerfile.in
+  pdf-tools-20220619.2227/build/server/test/docker/templates/debian-9.Dockerfile.in
+  pdf-tools-20220619.2227/build/server/test/docker/templates/fedora-34.Dockerfile.in
+  pdf-tools-20220619.2227/build/server/test/docker/templates/fedora-35.Dockerfile.in
+  pdf-tools-20220619.2227/build/server/test/docker/templates/fedora-36.Dockerfile.in
+  pdf-tools-20220619.2227/build/server/test/docker/templates/gentoo.Dockerfile.in.FAILING
+  pdf-tools-20220619.2227/build/server/test/docker/templates/ubuntu-18.Dockerfile.in
+  pdf-tools-20220619.2227/build/server/test/docker/templates/ubuntu-20.Dockerfile.in
+  pdf-tools-20220619.2227/build/server/test/docker/templates/ubuntu-22.Dockerfile.in
+  pdf-tools-20220619.2227/pdf-annot.el
+  pdf-tools-20220619.2227/pdf-cache.el
+  pdf-tools-20220619.2227/pdf-dev.el
+  pdf-tools-20220619.2227/pdf-history.el
+  pdf-tools-20220619.2227/pdf-info.el
+  pdf-tools-20220619.2227/pdf-isearch.el
+  pdf-tools-20220619.2227/pdf-links.el
+  pdf-tools-20220619.2227/pdf-loader.el
+  pdf-tools-20220619.2227/pdf-macs.el
+  pdf-tools-20220619.2227/pdf-misc.el
+  pdf-tools-20220619.2227/pdf-occur.el
+  pdf-tools-20220619.2227/pdf-outline.el
+  pdf-tools-20220619.2227/pdf-sync.el
+  pdf-tools-20220619.2227/pdf-tools-pkg.el
+  pdf-tools-20220619.2227/pdf-tools.el
+  pdf-tools-20220619.2227/pdf-util.el
+  pdf-tools-20220619.2227/pdf-view.el
+  pdf-tools-20220619.2227/pdf-virtual.el
+Built pdf-tools in 7.816s, finished at 2022-06-20T03:22:44+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  489 Jun 19 21:29 packages/pdf-tools-20220522.13.entry
-1.1M -rw-r--r-- 1 root root 1.1M Jun 19 21:29 packages/pdf-tools-20220522.13.tar
+4.0K -rw-r--r-- 1 root root  491 Jun 20 03:22 packages/pdf-tools-20220619.2227.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jun 20 03:22 packages/pdf-tools-20220619.2227.tar

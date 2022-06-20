@@ -8,7 +8,7 @@ Checking out 45155e42ea10990295d47d5ee3cb29be16a1f9f6
 Checking out 45155e42ea10990295d47d5ee3cb29be16a1f9f6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mY0poRx/w3m-20220606.2300
+  to /tmp/w3mow2LWg/w3m-20220606.2300
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -41,9 +41,9 @@ Copying files (->) and directories (=>)
   ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
   ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Generating /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m-ja.info
+Generating /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m-ja.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m-ja.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m-ja.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -60,7 +60,7 @@ HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m-ja.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m-ja.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -74,12 +74,12 @@ HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m-ja.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m.info
+Generating /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -93,7 +93,7 @@ HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
@@ -103,7 +103,7 @@ install-info: No such file or directory for /tmp/w3mY0poRx/w3m-20220606.2300/ema
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -117,14 +117,14 @@ HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mY0poRx/w3m-20220606.2300/emacs-w3m.info
+install-info: No such file or directory for /tmp/w3mow2LWg/w3m-20220606.2300/emacs-w3m.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
 Created w3m-20220606.2300.tar containing:
@@ -204,7 +204,7 @@ Created w3m-20220606.2300.tar containing:
   w3m-20220606.2300/w3m-weather.el
   w3m-20220606.2300/w3m.el
   w3m-20220606.2300/w3mhack.el
-Built w3m in 18.193s, finished at 2022-06-19T21:45:58+0000
+Built w3m in 20.113s, finished at 2022-06-20T03:38:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  180 Jun 19 21:45 packages/w3m-20220606.2300.entry
-1.1M -rw-r--r-- 1 root root 1.1M Jun 19 21:45 packages/w3m-20220606.2300.tar
+4.0K -rw-r--r-- 1 root root  180 Jun 20 03:38 packages/w3m-20220606.2300.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jun 20 03:38 packages/w3m-20220606.2300.tar

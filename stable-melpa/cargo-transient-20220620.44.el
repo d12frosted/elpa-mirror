@@ -6,8 +6,8 @@
 ;; Maintainer: Peter Stuart <peter@peterstuart.org>
 ;; Created: 6 Jun 2022
 ;; URL: https://github.com/peterstuart/cargo-transient
-;; Package-Version: 20220619.1114
-;; Package-Commit: 9aad485b3bb46ff6dfc4f7a93974f34c9081b077
+;; Package-Version: 20220620.44
+;; Package-Commit: ecf86fe350b6295db0e660eb0d1a5b7fd95f0827
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "28.1"))
 
@@ -42,7 +42,8 @@
 
 ;; Not all commands and arguments are supported. If cargo-transient is
 ;; missing support for something you need, please open a pull request
-;; file an issue at `https://github.com/peterstuart/cargo-transient/'.
+;; or file an issue at
+;; <https://github.com/peterstuart/cargo-transient/>.
 
 ;; By default, all commands will share the same compilation buffer,
 ;; but that can be changed by customizing
