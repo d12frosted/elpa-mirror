@@ -8,7 +8,7 @@
 ;; Author: pspiagicw
 ;; Version: 1.0.0
 ;; Package-Version: 20220515.435
-;; Package-Commit: 784684c54a0d94c4a1cff8a69fcbdcd5d916e0a5
+;; Package-Commit: 715935a78d3acef9da52b3a178d5703c162829c3
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
 

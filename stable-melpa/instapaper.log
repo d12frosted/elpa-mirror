@@ -2,12 +2,11 @@ Package: instapaper
 Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/emacs-instapaper.git
 
-Updating /mnt/store/melpa/working/instapaper/
+Cloning https://git.carcosa.net/jmcbray/emacs-instapaper.git to /mnt/store/melpa/working/instapaper/
 
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C git clone https\://git.carcosa.net/jmcbray/emacs-instapaper.git /mnt/store/melpa/working/instapaper/' exited with non-zero exit-code: 128
 
-Fetching origin
+Cloning into '/mnt/store/melpa/working/instapaper'...
 fatal: unable to access 'https://git.carcosa.net/jmcbray/emacs-instapaper.git/': Failed to connect to git.carcosa.net port 443: No route to host
-error: Could not fetch origin
 
-Command exited with non-zero exit-code: 1
+Command exited with non-zero exit-code: 128

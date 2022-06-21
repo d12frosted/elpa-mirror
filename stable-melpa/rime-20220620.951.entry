@@ -1,0 +1,19 @@
+(rime .
+      [(20220620 951)
+       ((emacs
+	 (26 3))
+	(dash
+	 (2 17 0))
+	(cl-lib
+	 (0 6 1))
+	(popup
+	 (0 5 3))
+	(posframe
+	 (0 1 0)))
+       "Rime input method" tar
+       ((:commit . "3eeef9c445fa056a4b32137f9ef72c27ced2d4ab")
+	(:authors
+	 ("Shi Tianshu"))
+	(:maintainer "Shi Tianshu")
+	(:keywords "convenience" "input-method")
+	(:url . "https://www.github.com/DogLooksGood/emacs-rime"))])
