@@ -4,8 +4,8 @@
 
 ;; Author: Hans Sjunnesson <hans.sjunnesson@gmail.com>
 ;; Keywords: math
-;; Package-Version: 20220621.749
-;; Package-Commit: af8f90469a0206f4ac762228ee549dae8a7a5000
+;; Package-Version: 20220621.1228
+;; Package-Commit: b1d9905666eb075fb2f40d09beec272200f6eb3b
 ;; Version: 1.2
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -193,6 +193,9 @@ removes that notification."
       (let ((inhibit-read-only t))
         (insert (propertize "No results for your query.\n\n"
                             'face 'warning))))
+    (when (fboundp 'make-separator-line) ; Emacs >= 28.1
+      (let ((inhibit-read-only t))
+        (insert (make-separator-line))))
     (message "")))                      ;Remove the "Contacting host:.." message
 
 ;;;###autoload

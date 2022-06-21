@@ -4,11 +4,11 @@ Source:  https://github.com/emacs-ess/ESS.git
 
 Updating /mnt/store/melpa/working/ess/
 Checking out origin/HEAD
-Checking out e83ac622fe7e3cbfc848481a9257e5ed5c7b5afb
-Checking out e83ac622fe7e3cbfc848481a9257e5ed5c7b5afb
+Checking out 1eac54456e00bfcf96ee69ce56311c5d9943aaa1
+Checking out 1eac54456e00bfcf96ee69ce56311c5d9943aaa1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ess/
-  to /tmp/essmJJ8pG/ess-20220509.801
+  to /tmp/essLpn14x/ess-20220621.1054
     .dir-locals.el -> .dir-locals.el
   ! lisp/ess-bugs-d.el -> ess-bugs-d.el
   ! lisp/ess-bugs-l.el -> ess-bugs-l.el
@@ -53,83 +53,85 @@ Copying files (->) and directories (=>)
   ! lisp/obsolete/ess-r-a.el -> obsolete/ess-r-a.el
   ! lisp/obsolete/mouseme.el -> obsolete/mouseme.el
   ! lisp/obsolete/msdos.el -> obsolete/msdos.el
-Generating /tmp/essmJJ8pG/ess-20220509.801/ess.info
-Created ess-20220509.801.tar containing:
-  ess-20220509.801/
-  ess-20220509.801/.dir-locals.el
-  ess-20220509.801/dir
-  ess-20220509.801/ess-bugs-d.el
-  ess-20220509.801/ess-bugs-l.el
-  ess-20220509.801/ess-custom.el
-  ess-20220509.801/ess-gretl.el
-  ess-20220509.801/ess-help.el
-  ess-20220509.801/ess-inf.el
-  ess-20220509.801/ess-jags-d.el
-  ess-20220509.801/ess-julia.el
-  ess-20220509.801/ess-mode.el
-  ess-20220509.801/ess-pkg.el
-  ess-20220509.801/ess-r-completion.el
-  ess-20220509.801/ess-r-flymake.el
-  ess-20220509.801/ess-r-mode.el
-  ess-20220509.801/ess-r-package.el
-  ess-20220509.801/ess-r-syntax.el
-  ess-20220509.801/ess-r-xref.el
-  ess-20220509.801/ess-rd.el
-  ess-20220509.801/ess-rdired.el
-  ess-20220509.801/ess-roxy.el
-  ess-20220509.801/ess-s-lang.el
-  ess-20220509.801/ess-sas-a.el
-  ess-20220509.801/ess-sas-d.el
-  ess-20220509.801/ess-sas-l.el
-  ess-20220509.801/ess-site.el
-  ess-20220509.801/ess-sp6-d.el
-  ess-20220509.801/ess-toolbar.el
-  ess-20220509.801/ess-tracebug.el
-  ess-20220509.801/ess-trns.el
-  ess-20220509.801/ess-utils.el
-  ess-20220509.801/ess.el
-  ess-20220509.801/ess.info
-  ess-20220509.801/essd-els.el
-  ess-20220509.801/etc/
-  ess-20220509.801/etc/ESSR.rds
-  ess-20220509.801/etc/ESSR/
-  ess-20220509.801/etc/ESSR/BUILDESSR
-  ess-20220509.801/etc/ESSR/LOADREMOTE
-  ess-20220509.801/etc/ESSR/R/
-  ess-20220509.801/etc/ESSR/R/.basic.R
-  ess-20220509.801/etc/ESSR/R/.load.R
-  ess-20220509.801/etc/ESSR/R/completion.R
-  ess-20220509.801/etc/ESSR/R/debug.R
-  ess-20220509.801/etc/ESSR/R/misc.R
-  ess-20220509.801/etc/ESSR/R/mpi.R
-  ess-20220509.801/etc/ESSR/R/ns-eval.R
-  ess-20220509.801/etc/ESSR/R/pkg.R
-  ess-20220509.801/etc/Makefile
-  ess-20220509.801/etc/ess-julia.jl
-  ess-20220509.801/etc/ess-sas-sh-command
-  ess-20220509.801/etc/icons/
-  ess-20220509.801/etc/icons/README
-  ess-20220509.801/etc/icons/rbuffer.xpm
-  ess-20220509.801/etc/icons/rfunction.xpm
-  ess-20220509.801/etc/icons/rline.xpm
-  ess-20220509.801/etc/icons/rregion.xpm
-  ess-20220509.801/etc/icons/splus_letter_small.xpm
-  ess-20220509.801/etc/icons/splus_letters_large.png
-  ess-20220509.801/etc/icons/splus_letters_large.xpm
-  ess-20220509.801/etc/icons/spluslogo.xpm
-  ess-20220509.801/etc/icons/spluslogo.xpm.safe
-  ess-20220509.801/etc/icons/startr.xpm
-  ess-20220509.801/etc/icons/switch_ess.xpm
-  ess-20220509.801/etc/icons/switchr.xpm
-  ess-20220509.801/etc/icons/switchs.xpm
-  ess-20220509.801/obsolete/
-  ess-20220509.801/obsolete/ess-eldoc.el
-  ess-20220509.801/obsolete/ess-font-lock.el
-  ess-20220509.801/obsolete/ess-mouse.el
-  ess-20220509.801/obsolete/ess-r-a.el
-  ess-20220509.801/obsolete/mouseme.el
-  ess-20220509.801/obsolete/msdos.el
-Built ess in 20.057s, finished at 2022-06-21T10:20:11+0000
+Generating /tmp/essLpn14x/ess-20220621.1054/ess.info
+Created ess-20220621.1054.tar containing:
+  ess-20220621.1054/
+  ess-20220621.1054/.dir-locals.el
+  ess-20220621.1054/dir
+  ess-20220621.1054/ess-bugs-d.el
+  ess-20220621.1054/ess-bugs-l.el
+  ess-20220621.1054/ess-custom.el
+  ess-20220621.1054/ess-gretl.el
+  ess-20220621.1054/ess-help.el
+  ess-20220621.1054/ess-inf.el
+  ess-20220621.1054/ess-jags-d.el
+  ess-20220621.1054/ess-julia.el
+  ess-20220621.1054/ess-mode.el
+  ess-20220621.1054/ess-pkg.el
+  ess-20220621.1054/ess-r-completion.el
+  ess-20220621.1054/ess-r-flymake.el
+  ess-20220621.1054/ess-r-mode.el
+  ess-20220621.1054/ess-r-package.el
+  ess-20220621.1054/ess-r-syntax.el
+  ess-20220621.1054/ess-r-xref.el
+  ess-20220621.1054/ess-rd.el
+  ess-20220621.1054/ess-rdired.el
+  ess-20220621.1054/ess-roxy.el
+  ess-20220621.1054/ess-s-lang.el
+  ess-20220621.1054/ess-sas-a.el
+  ess-20220621.1054/ess-sas-d.el
+  ess-20220621.1054/ess-sas-l.el
+  ess-20220621.1054/ess-site.el
+  ess-20220621.1054/ess-sp6-d.el
+  ess-20220621.1054/ess-toolbar.el
+  ess-20220621.1054/ess-tracebug.el
+  ess-20220621.1054/ess-trns.el
+  ess-20220621.1054/ess-utils.el
+  ess-20220621.1054/ess.el
+  ess-20220621.1054/ess.info
+  ess-20220621.1054/essd-els.el
+  ess-20220621.1054/etc/
+  ess-20220621.1054/etc/ESSR.rds
+  ess-20220621.1054/etc/ESSR/
+  ess-20220621.1054/etc/ESSR/BUILDESSR
+  ess-20220621.1054/etc/ESSR/LOADREMOTE
+  ess-20220621.1054/etc/ESSR/R/
+  ess-20220621.1054/etc/ESSR/R/.basic.R
+  ess-20220621.1054/etc/ESSR/R/.load.R
+  ess-20220621.1054/etc/ESSR/R/completion.R
+  ess-20220621.1054/etc/ESSR/R/debug.R
+  ess-20220621.1054/etc/ESSR/R/misc.R
+  ess-20220621.1054/etc/ESSR/R/mpi.R
+  ess-20220621.1054/etc/ESSR/R/ns-eval.R
+  ess-20220621.1054/etc/ESSR/R/pkg.R
+  ess-20220621.1054/etc/Makefile
+  ess-20220621.1054/etc/ess-julia.jl
+  ess-20220621.1054/etc/ess-sas-sh-command
+  ess-20220621.1054/etc/icons/
+  ess-20220621.1054/etc/icons/README
+  ess-20220621.1054/etc/icons/rbuffer.xpm
+  ess-20220621.1054/etc/icons/rfunction.xpm
+  ess-20220621.1054/etc/icons/rline.xpm
+  ess-20220621.1054/etc/icons/rregion.xpm
+  ess-20220621.1054/etc/icons/splus_letter_small.xpm
+  ess-20220621.1054/etc/icons/splus_letters_large.png
+  ess-20220621.1054/etc/icons/splus_letters_large.xpm
+  ess-20220621.1054/etc/icons/spluslogo.xpm
+  ess-20220621.1054/etc/icons/spluslogo.xpm.safe
+  ess-20220621.1054/etc/icons/startr.xpm
+  ess-20220621.1054/etc/icons/switch_ess.xpm
+  ess-20220621.1054/etc/icons/switchr.xpm
+  ess-20220621.1054/etc/icons/switchs.xpm
+  ess-20220621.1054/obsolete/
+  ess-20220621.1054/obsolete/ess-eldoc.el
+  ess-20220621.1054/obsolete/ess-font-lock.el
+  ess-20220621.1054/obsolete/ess-mouse.el
+  ess-20220621.1054/obsolete/ess-r-a.el
+  ess-20220621.1054/obsolete/mouseme.el
+  ess-20220621.1054/obsolete/msdos.el
+Built ess in 19.397s, finished at 2022-06-21T13:29:29+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  839 Jun 21 10:20 packages/ess-20220509.801.entry
 1.5M -rw-r--r-- 1 root root 1.5M Jun 21 10:20 packages/ess-20220509.801.tar
+4.0K -rw-r--r-- 1 root root  840 Jun 21 13:29 packages/ess-20220621.1054.entry
+1.5M -rw-r--r-- 1 root root 1.5M Jun 21 13:29 packages/ess-20220621.1054.tar
