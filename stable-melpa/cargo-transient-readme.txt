@@ -8,6 +8,7 @@ Supported cargo commands:
 - check
 - clean
 - clippy
+- fmt
 - run
 - test
 

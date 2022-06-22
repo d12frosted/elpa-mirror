@@ -7,7 +7,7 @@
 ;;   Aaron Jensen <aaronjensen@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (treemacs "0.0") (dash "2.11.0"))
 ;; Package-Version: 20220221.2038
-;; Package-Commit: 9a1b2742d030bfa2cd9b272b103a6a5c6080f4e8
+;; Package-Commit: d6a4c6f08d5ae61af2e97d1584f38f73e7a7c513
 ;; Version: 0
 ;; Homepage: https://github.com/Alexander-Miller/treemacs
 

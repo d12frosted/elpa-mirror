@@ -63,18 +63,23 @@ Table of Contents
   `org-modern' uses text properties, which are considered more
   future-proof.
 
-  The package is available on MELPA. You can install it with
-  `package-install' if you have the MELPA package repository
-  activated. Then `org-modern' can be enabled manually in an Org buffer
-  by invoking `M-x org-modern-mode'. In order to enable `org-modern' for
-  all your Org buffers, add `org-modern-mode' to the Org mode hooks.
+  The package is available on GNU ELPA and MELPA. You can install the
+  package with `package-install'. Then `org-modern' can be enabled
+  manually in an Org buffer by invoking `M-x org-modern-mode'. In order
+  to enable `org-modern' for all your Org buffers, add `org-modern-mode'
+  to the Org mode hooks.
 
   ┌────
+  │ ;; Option 1: Per buffer
   │ (add-hook 'org-mode-hook #'org-modern-mode)
+  │ (add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
+  │ 
+  │ ;; Option 2: Globally
+  │ (global-org-modern-mode)
   └────
 
-  Try the following minimal setup in `emacs -Q' to emulate the looks of
-  the screenshot above.
+  Try the following more extensive setup in `emacs -Q' to reproduce the
+  looks of the screenshot above.
 
   ┌────
   │ ;; Minimal UI
@@ -85,8 +90,9 @@ Table of Contents
   │ (modus-themes-load-operandi)
   │ 
   │ ;; Choose some fonts
-  │ ;; (set-face-attribute 'default nil :family "???")
-  │ ;; (set-face-attribute 'variable-pitch nil :family "???")
+  │ ;; (set-face-attribute 'default nil :family "Iosevka")
+  │ ;; (set-face-attribute 'variable-pitch nil :family "Iosevka Aile")
+  │ ;; (set-face-attribute 'org-modern-symbol nil :family "Iosevka")
   │ 
   │ ;; Add frame borders and window dividers
   │ (modify-all-frames-parameters
@@ -99,18 +105,30 @@ Table of Contents
   │   (set-face-foreground face (face-attribute 'default :background)))
   │ (set-face-background 'fringe (face-attribute 'default :background))
   │ 
-  │ ;; Org settings
-  │ (setq org-hide-emphasis-markers t
-  │       org-pretty-entities t
-  │       org-auto-align-tags nil
-  │       org-tags-column 0
-  │       org-ellipsis "…"
-  │       org-catch-invisible-edits 'show-and-error
-  │       org-special-ctrl-a/e t
-  │       org-insert-heading-respect-content t)
+  │ (setq
+  │  ;; Edit settings
+  │  org-auto-align-tags nil
+  │  org-tags-column 0
+  │  org-catch-invisible-edits 'show-and-error
+  │  org-special-ctrl-a/e t
+  │  org-insert-heading-respect-content t
   │ 
-  │ ;; Enable org-modern-mode
-  │ (add-hook 'org-mode-hook 'org-modern-mode)
+  │  ;; Org styling, hide markup etc.
+  │  org-hide-emphasis-markers t
+  │  org-pretty-entities t
+  │  org-ellipsis "…"
+  │ 
+  │  ;; Agenda styling
+  │  org-agenda-tags-column 0
+  │  org-agenda-block-separator ?─
+  │  org-agenda-time-grid
+  │  '((daily today require-timed)
+  │    (800 1000 1200 1400 1600 1800 2000)
+  │    " ┄┄┄┄┄ " "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄")
+  │  org-agenda-current-time-string
+  │  "⭠ now ─────────────────────────────────────────────────")
+  │ 
+  │ (global-org-modern-mode)
   └────
 
 

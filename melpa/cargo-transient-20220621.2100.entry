@@ -1,0 +1,10 @@
+(cargo-transient .
+		 [(20220621 2100)
+		  ((emacs
+		    (28 1)))
+		  "A transient for cargo" single
+		  ((:commit . "e5ec156e7a56518aae5be92f76c935b30c6207b8")
+		   (:authors
+		    ("Peter Stuart" . "peter@peterstuart.org"))
+		   (:maintainer "Peter Stuart" . "peter@peterstuart.org")
+		   (:url . "https://github.com/peterstuart/cargo-transient"))])
