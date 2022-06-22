@@ -2,8 +2,6 @@
 ;;
 ;;; Author: Onur Temizkan
 ;;; Version: 0.13
-;; Package-Version: 20180815.1921
-;; Package-Commit: 255c5a2a8abee9c5935465ec42b9c3604c178c3c
 ;;
 ;;; Url: https://github.com/onurtemizkan/paganini
 ;;; Package-Requires: ((emacs "24.0"))
