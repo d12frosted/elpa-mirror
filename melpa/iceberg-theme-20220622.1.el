@@ -4,8 +4,8 @@
 
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Version: 1.0.1
-;; Package-Version: 20200812.943
-;; Package-Commit: 183b41eae07d94d4a8f299306078410bddc41d34
+;; Package-Version: 20220622.1
+;; Package-Commit: c9fdf9a8f5ff417c206730a84731f64a95483935
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "26.1") (solarized-theme "1.3"))
 ;; URL: https://github.com/conao3/iceberg-theme.el
@@ -106,7 +106,7 @@ yellow orange red magenta violet blue cyan green"
        `(php-variable-sigil ((,class (:foreground ,cyan))))))))
 
 ;;;###autoload
-(define-obsolete-function-alias 'iceberg-theme-create-theme 'iceberg-theme-create-theme-file)
+(define-obsolete-function-alias 'iceberg-theme-create-theme 'iceberg-theme-create-theme-file "28")
 
 (provide 'iceberg-theme)
 

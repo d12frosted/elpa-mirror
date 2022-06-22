@@ -1,5 +1,5 @@
 (org-jira .
-	  [(20220509 2058)
+	  [(20220622 25)
 	   ((emacs
 	     (24 5))
 	    (cl-lib
@@ -9,7 +9,7 @@
 	    (dash
 	     (2 14 1)))
 	   "Syncing between Jira and Org-mode." tar
-	   ((:commit . "c0c0086419b4e68bb45bf609931916d6d8ae48a2")
+	   ((:commit . "44fe1d947feb1c982d900b468737d133df8bd4fe")
 	    (:maintainer "Matthew Carter" . "m@ahungry.com")
 	    (:keywords "ahungry" "jira" "org" "bug" "tracker")
 	    (:url . "https://github.com/ahungry/org-jira"))])
