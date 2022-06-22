@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/emacscollective/no-littering
 ;; Keywords: convenience
 ;; Package-Version: 20220530.1845
-;; Package-Commit: a5aa3faada054f96b70b32ba9d9447f7a4cf403c
+;; Package-Commit: 11aeab815c47c7aff037d6285689e245d8f7c841
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
