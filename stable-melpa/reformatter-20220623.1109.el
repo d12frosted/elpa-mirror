@@ -4,10 +4,10 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: convenience, tools
-;; Package-Commit: 452a99b556ebf1953f92fe3e16c20d10d1fed466
+;; Package-Commit: 7c5452bf31c7bcaa19df7c94dfe17dcae5bdc078
 ;; Homepage: https://github.com/purcell/emacs-reformatter
 ;; Package-Requires: ((emacs "24.3"))
-;; Package-Version: 20210831.1405
+;; Package-Version: 20220623.1109
 ;; Package-X-Original-Version: 0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -288,9 +288,6 @@ DISPLAY-ERRORS, shows a buffer if the formatting fails."
          (interactive "p")
          (message "Formatting buffer")
          (,region-fn-name (point-min) (point-max) display-errors))
-
-       ;; This alias will be removed in a future version
-       (defalias ',name ',buffer-fn-name)
 
        ,minor-mode-form)))
 

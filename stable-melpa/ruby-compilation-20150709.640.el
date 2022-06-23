@@ -7,7 +7,7 @@
 ;; Maintainer: Steve Purcell <steve@sanityinc.com>
 ;; URL: https://github.com/eschulte/rinari
 ;; Package-Version: 20150709.640
-;; Package-Commit: 134438af8fbdfa9c8077267c768d273a9792b484
+;; Package-Commit: 9b3110f4043bc4f07d83e5ada26d64f90ef68aed
 ;; Version: 0.17
 ;; Created: 2008-08-23
 ;; Keywords: test convenience

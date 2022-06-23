@@ -8,7 +8,10 @@ Table of Contents
 ─────────────────
 
 1. 不兼容更新
-.. 1. <2021-04-28 Wed>  五笔输入法和仓颉输入法的不兼容更新
+.. 1. <2022-06-15 Wed>  Do not require popup in pyim-page.el
+.. 2. <2022-06-13 Mon>  pyim-dcache-backend 所需的 package 需要用户手工加载了。
+.. 3. <2022-05-29 Sun>  pyim-cregexp-utils, pyim-cstring-utils 和 pyim-dict-manager 需要用户手动 require.
+.. 4. <2021-04-28 Wed>  五笔输入法和仓颉输入法的不兼容更新
 2. 截图
 3. 简介
 4. 背景
@@ -68,7 +71,44 @@ Table of Contents
 1 不兼容更新
 ════════════
 
-1.1 <2021-04-28 Wed>  五笔输入法和仓颉输入法的不兼容更新
+1.1 <2022-06-15 Wed>  Do not require popup in pyim-page.el
+──────────────────────────────────────────────────────────
+
+  popup 是一个非 gnu elpa 包，pyim-page.el 不应该 require 它，需要用户自
+  己手动require, 使用 popup tooltip 的用户需要在配置中添加：
+
+  ┌────
+  │ (require 'popup)
+  └────
+
+
+1.2 <2022-06-13 Mon>  pyim-dcache-backend 所需的 package 需要用户手工加载了。
+─────────────────────────────────────────────────────────────────────────────
+
+  以前 pyim 可以根据 pyim-dcache-backend 的取值自动加载需要的 package,
+  这样做虽然方便，但代码特别容易出现问题，考虑到 pyim 未来支持的后端不会
+  有太大变化，我删除了这个功能，为了向后兼容，pyim 目前会自动加载
+  pyim-dregcache 包, 但这个兼容代码未来可能会删除，所以使用
+  pyim-dregcache 的用户，建议给自己的配置中添加：
+
+  ┌────
+  │ (require 'pyim-dregcache)
+  └────
+
+
+1.3 <2022-05-29 Sun>  pyim-cregexp-utils, pyim-cstring-utils 和 pyim-dict-manager 需要用户手动 require.
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  为降低 pyim 代码的复杂度，减少 pyim 依赖包的数量，下面三个包不会自动加
+  载，需要用户手动 require.
+
+  1. pyim-cregexp-utils
+  2. pyim-cstring-utils
+  3. pyim-dict-manager (使用 elpa 安装词库，或者手动管理 pyim-dicts 变量
+     的用户不需要这个包)
+
+
+1.4 <2021-04-28 Wed>  五笔输入法和仓颉输入法的不兼容更新
 ────────────────────────────────────────────────────────
 
   五笔输入法和仓颉输入法原来使用一个标点符号作为 code-prefix, 现在使用
@@ -85,7 +125,7 @@ Table of Contents
   1. 五笔用户
      1. 需要 (require 'pyim-wbdict), 加载五笔 scheme 设置。
      2. 需要将自己的五笔词库文件中的 code-prefix "." 替换为 "wubi/".
-     3. 运行 `pyim-dcache-upgrade' 命令，升级 icode2word 词库缓存。
+     3. 运行 `pyim-upgrade' 命令，升级 icode2word 词库缓存。
   2. 仓颉用户
      1. 需要 (require 'pyim-cangjie5dict), 加载仓颉 scheme 设置。
      2. 需要将自己的五笔词库文件中的 code-prefix "@" 替换为 "cangjie/".
@@ -170,8 +210,23 @@ Table of Contents
 
   ┌────
   │ (require 'pyim)
+  │ (require 'pyim-basedict)
+  │ (require 'pyim-cregexp-utils)
+  │ 
+  │ ;; 如果使用 popup page tooltip, 就需要加载 popup 包。
+  │ ;; (require 'popup nil t)
+  │ ;; (setq pyim-page-tooltip 'popup)
+  │ 
+  │ ;; 如果使用 pyim-dregcache dcache 后端，就需要加载 pyim-dregcache 包。
+  │ ;; (require 'pyim-dregcache)
+  │ ;; (setq pyim-dcache-backend 'pyim-dregcache)
+  │ 
+  │ (pyim-basedict-enable)
   │ 
   │ (setq default-input-method "pyim")
+  │ 
+  │ ;; 显示5个候选词。
+  │ (setq pyim-page-length 5)
   │ 
   │ ;; 金手指设置，可以将光标处的编码，比如：拼音字符串，转换为中文。
   │ (global-set-key (kbd "M-j") 'pyim-convert-string-at-point)
@@ -205,13 +260,6 @@ Table of Contents
   │ 
   │ ;; 开启代码搜索中文功能（比如拼音，五笔码等）
   │ (pyim-isearch-mode 1)
-  │ 
-  │ ;; 显示5个候选词。
-  │ (setq pyim-page-length 5)
-  │ 
-  │ ;; Basedict
-  │ (require 'pyim-basedict)
-  │ (pyim-basedict-enable)
   └────
 
 
@@ -310,12 +358,20 @@ Table of Contents
 
   用户可以通过下面的设置让 pyim 在 *光标处* 显示一个选词框：
 
-  1. 使用 popup 包来绘制选词框 （emacs overlay 机制）
+  1. 使用 popup 或者 popon 包来绘制选词框 （emacs overlay 机制）
      ┌────
+     │ (require 'popup)
      │ (setq pyim-page-tooltip 'popup)
      └────
+
+     ┌────
+     │ (require 'popon)
+     │ (setq pyim-page-tooltip 'popon)
+     └────
+
   2. 使用 posframe 来绘制选词框
      ┌────
+     │ (require 'posframe)
      │ (setq pyim-page-tooltip 'posframe)
      └────
      注意：pyim 不会自动安装 posframe, 用户需要手动安装这个包，
@@ -334,8 +390,6 @@ Table of Contents
   ┌────
   │ (setq pyim-page-style 'one-line)
   └────
-
-  注：用户可以添加函数 pyim-page-style:STYLENAME 来定义自己的选词框格式。
 
 
 9.8 设置模糊音
@@ -410,13 +464,12 @@ Table of Contents
   是中文输入状态，因为 pyim probe 探针功能可以让中英文输入状态动态切换，
   所以快速了解当前中英文输入状态有时候显得很重要。
 
-  pyim 当前内置三种指示器实现方式：
+  pyim 当前内置两种指示器实现方式：
   1. 改变光标颜色： pyim-indicator-with-cursor-color, 用户可以使用变量
      pyim-indicator-cursor-color 来配置两种输入状态对应的光标颜色。
   2. 使用 modeline 显示状态字符串：pyim-indicator-with-mode-line, 用户可
      以使用变量pyim-indicator-modeline-string 来配置两种状态对应的显示字
      符串。
-  3. 使用 posframe 来显示一个带颜色小点：pyim-indicator-with-posframe
 
   设置默认启用的指示器有两个，用户可以使用下面的变量调整：
   ┌────
@@ -626,9 +679,14 @@ Table of Contents
 
   <file:snapshots/imewlconverter-wordfreq.gif>
 
-  生成词库后，运行 `pyim-dicts-manager' ，按照命令提示，将转换得到的词库
-  文件的信息添加到 `pyim-dicts' 中，完成后运行命令 `pyim-restart' 或者重
-  启emacs。
+  生成词库后，
+
+  ┌────
+  │ (require 'pyim-dict-manager)
+  └────
+
+  然后运行 `pyim-dicts-manager' ，按照命令提示，将转换得到的词库文件的信
+  息添加到`pyim-dicts' 中，完成后运行命令 `pyim-restart' 或者重启emacs。
 
 
 12.8.2 第二种方式 (Linux & Unix 用户推荐使用)
@@ -695,14 +753,13 @@ Table of Contents
 12.12 中文分词
 ──────────────
 
-  pyim 包含了一个简单的分词函数：`pyim-cstring-split-to-list', 可以将一
-  个中文字符串分成一个词条列表，比如：
+  pyim-cstring-utils 包含了一个简单的分词函数：
+  `pyim-cstring-split-to-list', 可以将一个中文字符串分成一个词条列表，比
+  如：
 
   ┌────
-  │                   (("天安" 5 7)
-  │ 我爱北京天安门 ->  ("天安门" 5 8)
-  │                    ("北京" 3 5)
-  │                    ("我爱" 1 3))
+  │ (require 'pyim-cstring-utils)
+  │ (pyim-cstring-split-to-list "我爱北京天安门")
   └────
 
   其中，每一个词条列表中包含三个元素，第一个元素为词条本身，第二个元素为
@@ -718,8 +775,9 @@ Table of Contents
 12.13 获取光标处的中文词条
 ──────────────────────────
 
-  pyim 包含了一个简单的命令：`pyim-cstring-words-at-point', 这个命令可以
-  得到光标处的 *英文* 或者 *中文* 词条的 *列表*，这个命令依赖分词函数：
+  pyim-cstring-utils 包含了一个简单的命令：
+  `pyim-cstring-words-at-point', 这个命令可以得到光标处的 *英文* 或者 *
+  中文* 词条的 *列表*，这个命令依赖分词函数：
   `pyim-cstring-split-to-list'。
 
 
@@ -736,6 +794,7 @@ Table of Contents
   用户只需将其绑定到快捷键上就可以了，比如：
 
   ┌────
+  │ (require 'pyim-cstring-utils)
   │ (global-set-key (kbd "M-f") 'pyim-forward-word)
   │ (global-set-key (kbd "M-b") 'pyim-backward-word)
   └────
@@ -747,6 +806,7 @@ Table of Contents
   pyim 安装后，可以通过下面的设置开启拼音搜索功能：
 
   ┌────
+  │ (require 'pyim-cregexp-utils)
   │ (pyim-isearch-mode 1)
   └────
 
@@ -777,6 +837,7 @@ Table of Contents
 ───────────────────────────────────
 
   ┌────
+  │ (require 'pyim-cregexp-utils)
   │ (setq ivy-re-builders-alist
   │       '((t . pyim-cregexp-ivy)))
   └────

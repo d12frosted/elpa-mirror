@@ -4,6 +4,8 @@
 ;;
 ;; Author: Arthur Leonard Andersen <leoc.git@gmail.com>
 ;; URL: http://github.com/leoc/markup.el
+;; Package-Version: 20170420.1129
+;; Package-Commit: 876da2d3f23473475bb0fd0a1480ae11d2671291
 ;; Version: 2.0.1
 ;; Keywords: Convenience, Markup, HTML
 ;; Package-Requires: ((cl-lib "0.5"))

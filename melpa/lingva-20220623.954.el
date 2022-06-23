@@ -5,8 +5,8 @@
 ;; Author: marty hiatt <martianhiatus [a t] riseup [d o t] net>
 ;; Homepage: https://codeberg.org/martianh/lingva.el
 ;; Package-Requires: ((emacs "25.1"))
-;; Package-Version: 20220621.1023
-;; Package-Commit: 025a8e37d71a51c1e359292c24cc6b06c5434cc8
+;; Package-Version: 20220623.954
+;; Package-Commit: 39994a57b1d6d4d7e0f5df6b98a3e28b2073ddb7
 ;; Version: 0.2
 ;; Keywords: convenience, translation, wp, text
 
@@ -178,23 +178,21 @@ corresponding codes, see `lingva-languages'."
 Can be used for either source or target for a lingva query.
 \n Can be updated by running `lingva-update-lingva-languages'.")
 
-(defvar lingva-languages-url
-  (concat lingva-instance "/api/v1/languages")
-  "The URL for a lingva source and target languages list query.")
-
-
 (defvar lingva-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "i") #'lingva-translate)
     map)
   "Keymap for lingva results buffer.")
 
+(defun lingva-languages-url ()
+  "Return the URL to lingva languages."
+  (concat lingva-instance "/api/v1/languages"))
 
 (defun lingva--get-languages ()
   "Return the languages supported by the server."
   (let* ((url-request-method "GET")
          (response-buffer (url-retrieve-synchronously
-                           lingva-languages-url t))
+                           (lingva-languages-url) t))
          (json-array-type 'list))
     (with-current-buffer response-buffer
       (goto-char (point-min))
@@ -230,7 +228,7 @@ Can be used for either source or target for a lingva query.
    "/" "|"
    (or text
        (read-string
-        (format "Linva translate (%s): " (or region (current-word) ""))
+        (format "Lingva translate (%s): " (or region (current-word) ""))
         nil nil (or region (current-word))))))
 
 (defun lingva--read-lang (source-or-target langs)
