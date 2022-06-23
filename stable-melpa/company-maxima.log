@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sasanidas/maxima.git
 
 Updating /mnt/store/melpa/working/company-maxima/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-error: RPC failed; HTTP 524 curl 22 The requested URL returned error: 524
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 1334f44725bd80a265de858d652f3fde4ae401fa
+Built company-maxima in 4.923s, finished at 2022-06-23T13:54:26+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.8K Jun 23 13:54 packages/company-maxima-20210520.2034.el
+4.0K -rw-r--r-- 1 root root  430 Jun 23 13:54 packages/company-maxima-20210520.2034.entry
