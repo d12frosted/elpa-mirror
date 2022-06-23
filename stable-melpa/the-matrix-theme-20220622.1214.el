@@ -4,8 +4,8 @@
 
 ;; Author: Dan Dee <monkeyjunglejuice@pm.me>
 ;; URL: https://github.com/monkeyjunglejuice/matrix-emacs-theme
-;; Package-Version: 20220611.1032
-;; Package-Commit: f217e02dd683d9098001b854482f1c9d1a239cc0
+;; Package-Version: 20220622.1214
+;; Package-Commit: 289ed872003708ef1595e5e6765b50ca53e34ac8
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces, theme
@@ -122,6 +122,9 @@
    `(dired-perm-write ((t (:foreground ,color-bright))))
    `(dired-special ((t (:foreground ,color-middle))))
 
+   ;; eldoc
+   `(eldoc-highlight-function-argument ((t (:inherit highlight))))
+
    ;; proced
    `(proced-mark ((t (:inherit dired-mark))))
    `(proced-marked ((t (:inherit dired-marked))))
@@ -228,11 +231,11 @@
    `(org-mode-line-clock ((t (:background nil))))
    `(org-document-title ((t (:foreground ,color-middle :weight bold))))
    `(org-drawer ((t (:inherit font-lock-comment-face))))
-   `(org-block ((t (:foreground ,color-fg :inherit fixed-pitch))))
-   `(org-block-begin-line ((t (:inherit font-lock-comment-face))))
-   `(org-block-end-line ((t (:inherit font-lock-comment-face))))
-   `(org-meta-line ((t (:inherit font-lock-comment-face))))
-   `(org-document-info-keyword ((t (:inherit font-lock-comment-face))))
+   `(org-block ((t (:foreground ,color-fg :background ,color-bg-alt :inherit fixed-pitch :extend t))))
+   `(org-block-begin-line ((t (:foreground ,color-dark))))
+   `(org-block-end-line ((t (:foreground ,color-dark))))
+   `(org-meta-line ((t (:foreground ,color-dark))))
+   `(org-document-info-keyword ((t (:foreground ,color-dark))))
    `(org-document-info ((t (:foreground ,color-middle))))
    `(org-archived ((t (:foreground ,color-dark))))
 
@@ -256,6 +259,7 @@
 
    ;; smartparens
    `(sp-pair-overlay-face ((t (:foreground ,color-bright :background ,color-bg-alt))))
+   `(sp-show-pair-match-content ((t (:inherit show-paren-match-expression))))
 
    ;; rainbow delimiters
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,color-fg :weight light))))
@@ -329,8 +333,10 @@
    `(company-tooltip-common ((t (:foreground ,color-fg))))
    `(company-tooltip-common-selection ((t (:foreground ,color-middle))))
    `(company-tooltip-selection ((t (:foreground ,color-hl :background ,color-darker :weight bold :underline (:color ,color-bright)))))
-   `(company-scrollbar-bg ((t (:background ,color-darker))))
-   `(company-scrollbar-fg ((t (:background ,color-dark))))
+   `(company-tooltip-scrollbar-thumb ((t (:background ,color-dark))))
+   `(company-tooltip-scrollbar-track ((t (:background ,color-darker))))
+   `(company-scrollbar-fg ((t (:inherit company-tooltip-scrollbar-thumb))))  ; obsolete
+   `(company-scrollbar-bg ((t (:inherit company-tooltip-scrollbar-track))))  ; obsolete
 
    ;; flymake
    `(flymake-error ((t (:inherit error))))
@@ -367,8 +373,9 @@
    `(web-mode-html-attr-name-face ((t (:inherit shadow))))
    `(web-mode-css-selector-face ((t (:inherit css-selector))))
    `(web-mode-css-property-name-face ((t (:inherit css-property))))
-   `(web-mode-doctype-face ((t (:inherit shadow))))
    `(web-mode-css-color-face ((t (:foreground ,color-fg))))
+   `(web-mode-current-element-highlight-face ((t (:inherit lazy-highlight))))
+   `(web-mode-doctype-face ((t (:inherit shadow))))
 
    ;; slime
    `(slime-repl-inputed-output-face ((t (:foreground ,color-middle))))
@@ -385,6 +392,8 @@
 
    ;; geiser
    `(geiser-font-lock-repl-output ((t (:foreground ,color-middle))))
+   `(geiser-font-lock-autodoc-identifier ((t (:inherit font-lock-keyword-face))))
+   `(geiser-font-lock-autodoc-current-arg ((t (:inherit highlight))))
 
    ;; cider
    `(cider-result-overlay-face ((t (:background ,color-bg-alt))))

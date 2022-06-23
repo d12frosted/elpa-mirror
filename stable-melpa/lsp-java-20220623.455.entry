@@ -1,5 +1,5 @@
 (lsp-java .
-	  [(20220620 1843)
+	  [(20220623 455)
 	   ((emacs
 	     (25 1))
 	    (lsp-mode
@@ -19,6 +19,6 @@
 	    (dap-mode
 	     (0 5)))
 	   "Java support for lsp-mode" tar
-	   ((:commit . "94742f38dfdbb0024104018c20ead9f74b6c4cab")
+	   ((:commit . "663125190cbdefad9824a51d92f3c477633463c0")
 	    (:keywords "languague" "tools")
 	    (:url . "https://github.com/emacs-lsp/lsp-java"))])
