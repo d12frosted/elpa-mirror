@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.8.0
-;; Package-Version: 20220613.1804
-;; Package-Commit: 4b1f4e8db06857abf9aa4045ff68f205205c9461
+;; Package-Version: 20220624.332
+;; Package-Commit: a5f608c846b5eaa0912296b9359b8b5a090e0f3e
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -1707,7 +1707,7 @@ If the buffer is killed, return \"--\"."
   "Display the process icon in `ivy-rich'."
   (when (and (display-graphic-p) all-the-icons-ivy-rich-icon)
     (all-the-icons-ivy-rich--format-icon
-     (all-the-icons-octicon "zap" :height 1.0 :v-adjust -0.05 :face 'all-the-icons-lblue))))
+     (all-the-icons-faicon "bolt" :height 1.0 :v-adjust -0.05 :face 'all-the-icons-lblue))))
 
 (defun all-the-icons-ivy-rich-imenu-icon (cand)
   "Display the imenu icon for CAND in `ivy-rich'."
@@ -1722,7 +1722,7 @@ If the buffer is killed, return \"--\"."
           ((string-match-p "\\(Variables?\\)\\|\\(Fields?\\)\\|\\(Parameters?\\)[:)]" cand)
            (all-the-icons-octicon "tag" :height 0.95 :v-adjust 0 :face 'all-the-icons-lblue))
           ((string-match-p "Constants?[:)]" cand)
-           (all-the-icons-faicon "square-o" :height 0.95 :v-adjust -0.15))
+           (all-the-icons-faicon "square-o" :height 0.95 :v-adjust -0.05))
           ((string-match-p "Enum\\(erations?\\)?[:)]" cand)
            (all-the-icons-material "storage" :height 0.95 :v-adjust -0.2 :face 'all-the-icons-orange))
           ((string-match-p "References?[:)]" cand)
