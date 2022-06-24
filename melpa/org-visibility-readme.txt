@@ -61,7 +61,7 @@ like the following to your .emacs file:
   ;;(setq org-visibility-exclude-paths `(,(file-truename "~/org/old")))
 
   ;; optionally set maximum number of files to keep track of
-  ;; oldest files will be removed from the sate file first
+  ;; oldest files will be removed from the state file first
   ;;(setq org-visibility-maximum-tracked-files 100)
 
   ;; optionally set maximum number of days (since saved) to keep track of
@@ -74,7 +74,7 @@ like the following to your .emacs file:
   (require 'org-visibility)
 
   ;; enable org-visibility-mode
-  (add-hook 'org-mode-hook #'org-visibility-mode)
+  (org-visibility-mode 1)
 
   ;; optionally set a keybinding to force save
   (bind-keys :map org-visibility-mode-map
@@ -84,11 +84,11 @@ like the following to your .emacs file:
 Or, if using `use-package', add something like this instead:
 
   (use-package org-visibility
+    :after (org)
     :demand t
     :bind (:map org-visibility-mode-map
                 ("C-x C-v" . org-visibility-force-save) ; defaults to `find-alternative-file'
                 ("C-x M-v" . org-visibility-remove))    ; defaults to undefined
-    :hook (org-mode . org-visibility-mode)
     :custom
     ;; optionally change the location of the state file
     ;;(org-visibility-state-file `,(expand-file-name "/some/path/.org-visibility"))
@@ -100,14 +100,15 @@ Or, if using `use-package', add something like this instead:
     ;; list of directories and files to not persist and restore visibility state of
     ;;(org-visibility-exclude-paths `(,(file-truename "~/org/old")))
     ;; optionally set maximum number of files to keep track of
-    ;; oldest files will be removed from the sate file first
+    ;; oldest files will be removed from the state file first
     ;;(org-visibility-maximum-tracked-files 100)
     ;; optionally set maximum number of days (since saved) to keep track of
     ;; files older than this number of days will be removed from the state file
     ;;(org-visibility-maximum-tracked-days 180)
     ;; optionally turn off visibility state change messages
     ;;(org-visibility-display-messages nil)
-    )
+    :config
+    (org-visibility-mode 1))
 
 Usage:
 
