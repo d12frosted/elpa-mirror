@@ -604,7 +604,7 @@
 		(:authors
 		 ("Theodor Thornhill" . "theo@thornhill.no")))])
  (csv-mode .
-	   [(1 20)
+	   [(1 21)
 	    ((emacs
 	      (27 1))
 	     (cl-lib
@@ -615,7 +615,7 @@
 	     (:authors
 	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
-	     (:commit . "51580d5bf7095eff429029cd8d4b79214faf6b48"))])
+	     (:commit . "d10d68c382e17960fc9aaef072fd18a23ea92a86"))])
  (cursory .
 	  [(0 1 4)
 	   ((emacs

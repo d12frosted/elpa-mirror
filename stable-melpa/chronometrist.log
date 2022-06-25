@@ -3,32 +3,3 @@ Fetcher: git
 Source:  https://codeberg.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist/
-Checking out origin/dev
-Checking out b80d6ac5b661a90e84ab84bad9badb596c1d1965
-Checking out b80d6ac5b661a90e84ab84bad9badb596c1d1965
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/chronometrist/
-  to /tmp/chronometristadys5h/chronometrist-20220604.344
-  ! elisp/chronometrist-spark.el -> chronometrist-spark.el
-  ! elisp/chronometrist-sqlite.el -> chronometrist-sqlite.el
-  ! elisp/chronometrist-third.el -> chronometrist-third.el
-  ! elisp/chronometrist.el -> chronometrist.el
-  ! elisp/chronometrist-spark.org -> chronometrist-spark.org
-  ! elisp/chronometrist-sqlite.org -> chronometrist-sqlite.org
-  ! elisp/chronometrist-third.org -> chronometrist-third.org
-  ! elisp/chronometrist.org -> chronometrist.org
-Created chronometrist-20220604.344.tar containing:
-  chronometrist-20220604.344/
-  chronometrist-20220604.344/chronometrist-pkg.el
-  chronometrist-20220604.344/chronometrist-spark.el
-  chronometrist-20220604.344/chronometrist-spark.org
-  chronometrist-20220604.344/chronometrist-sqlite.el
-  chronometrist-20220604.344/chronometrist-sqlite.org
-  chronometrist-20220604.344/chronometrist-third.el
-  chronometrist-20220604.344/chronometrist-third.org
-  chronometrist-20220604.344/chronometrist.el
-  chronometrist-20220604.344/chronometrist.org
-Built chronometrist in 6.091s, finished at 2022-06-24T14:42:03+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  475 Jun 24 14:42 packages/chronometrist-20220604.344.entry
-432K -rw-r--r-- 1 root root 430K Jun 24 14:42 packages/chronometrist-20220604.344.tar

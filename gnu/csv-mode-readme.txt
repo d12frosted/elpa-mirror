@@ -29,6 +29,15 @@ In CSV mode, the following commands are available:
 - C-c C-t (`csv-transpose') interchanges rows and columns.  For
   details, see the documentation for the individual commands.
 
+- `csv-set-separator' sets the CSV separator of the current buffer,
+  while `csv-guess-set-separator' guesses and sets the separator
+  based on the current buffer's contents.
+  `csv-guess-set-separator' can be useful to add to the mode hook
+  to have CSV mode guess and set the separator automatically when
+  visiting a buffer:
+
+    (add-hook 'csv-mode-hook 'csv-guess-set-separator)
+
 CSV mode can recognize fields separated by any of several single
 characters, specified by the value of the customizable user option
 `csv-separators'.  CSV data fields can be delimited by quote
