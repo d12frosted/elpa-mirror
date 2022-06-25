@@ -1,15 +1,15 @@
 ;;; ob-julia-vterm.el --- Babel Functions for Julia in VTerm -*- lexical-binding: t -*-
 
-;; Copyright (C) 2020 Shigeaki Nishina
+;; Copyright (C) 2020-2022 Shigeaki Nishina
 
 ;; Author: Shigeaki Nishina
 ;; Maintainer: Shigeaki Nishina
 ;; Created: October 31, 2020
 ;; URL: https://github.com/shg/ob-julia-vterm.el
-;; Package-Version: 20220518.1429
-;; Package-Commit: 39dbdb265785ae72bcd53706bc53190ec5e11bf0
+;; Package-Version: 20220625.20
+;; Package-Commit: a7ff8f05e4a7af4082262c7a7ba3d83ae490a7f3
 ;; Package-Requires: ((emacs "26.1") (julia-vterm "0.16") (queue "0.2"))
-;; Version: 0.2c
+;; Version: 0.2d
 ;; Keywords: julia, org, outlines, literate programming, reproducible research
 
 ;; This file is not part of GNU Emacs.
@@ -45,6 +45,7 @@
 ;;; Code:
 
 (require 'ob)
+(require 'org-id)
 (require 'queue)
 (require 'filenotify)
 (require 'julia-vterm)
@@ -302,7 +303,7 @@ BODY contains the source code to be evaluated, and PARAMS contains header argume
 	  (ob-julia-vterm-process-evaluation-queue session)
 	  (concat "Executing... " (substring uuid 0 8)))))))
 
-(add-to-list 'org-src-lang-modes '("julia-vterm" . "julia"))
+(add-to-list 'org-src-lang-modes '("julia-vterm" . julia))
 
 (provide 'ob-julia-vterm)
 

@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.4
-;; Package-Version: 20220617.325
-;; Package-Commit: f4ea2f2c9de84e993aed6082fc70f89a109f20f9
+;; Package-Version: 20220625.305
+;; Package-Commit: c57a0e1b1255c350c5b3d370585f07a36813fdbe
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -808,9 +808,10 @@ brackets \"[[\" initiates completion."
 (defun zk-copy-link-and-title (&optional arg)
   "Copy link and title for id or file ARG at point."
   (interactive (list (funcall zk-select-file-function "Copy link: ")))
-  (let* ((id (cond ((member arg (zk--id-list))
+  (let* ((zk-id-list (zk--id-list))
+         (id (cond ((member arg zk-id-list)
                     arg)
-                   ((member (car arg) (zk--id-list))
+                   ((member (car arg) zk-id-list)
                     (car arg))
                    ((zk-file-p arg)
                     (zk--parse-file 'id arg))

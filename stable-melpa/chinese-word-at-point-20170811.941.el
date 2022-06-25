@@ -4,6 +4,8 @@
 
 ;; Author: Chunyang Xu <xuchunyang56@gmail.com>
 ;; URL: https://github.com/xuchunyang/chinese-word-at-point.el
+;; Package-Version: 20170811.941
+;; Package-Commit: 8223d7439e005555b86995a005b225ae042f0538
 ;; Package-Requires: ((cl-lib "0.5"))
 ;; Version: 0.2.3
 ;; Created: 9 Jan 2015
