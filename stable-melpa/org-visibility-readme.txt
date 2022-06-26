@@ -74,7 +74,7 @@ like the following to your .emacs file:
   (require 'org-visibility)
 
   ;; enable org-visibility-mode
-  (org-visibility-mode 1)
+  (add-hook 'org-mode-hook #'org-visibility-mode)
 
   ;; optionally set a keybinding to force save
   (bind-keys :map org-visibility-mode-map
@@ -86,15 +86,16 @@ Or, if using `use-package', add something like this instead:
   (use-package org-visibility
     :after (org)
     :demand t
-    :bind (:map org-visibility-mode-map
-                ("C-x C-v" . org-visibility-force-save) ; defaults to `find-alternative-file'
-                ("C-x M-v" . org-visibility-remove))    ; defaults to undefined
+    :bind* (:map org-visibility-mode-map
+                 ("C-x C-v" . org-visibility-force-save) ; defaults to `find-alternative-file'
+                 ("C-x M-v" . org-visibility-remove))    ; defaults to undefined
+    :hook (org-mode . org-visibility-mode)
     :custom
     ;; optionally change the location of the state file
     ;;(org-visibility-state-file `,(expand-file-name "/some/path/.org-visibility"))
     ;; list of directories and files to persist and restore visibility state of
     (org-visibility-include-paths `(,(file-truename "~/.emacs.d/init-emacs.org")
-                                    ,(file-truename "~/org"))))
+                                    ,(file-truename "~/org")))
     ;; persist all org files regardless of location
     ;;(org-visibility-include-regexps '("\\.org\\'"))
     ;; list of directories and files to not persist and restore visibility state of
@@ -107,8 +108,7 @@ Or, if using `use-package', add something like this instead:
     ;;(org-visibility-maximum-tracked-days 180)
     ;; optionally turn off visibility state change messages
     ;;(org-visibility-display-messages nil)
-    :config
-    (org-visibility-mode 1))
+    )
 
 Usage:
 
