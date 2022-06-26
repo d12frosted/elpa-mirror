@@ -1,0 +1,11 @@
+(literate-elisp .
+		[(20220626 932)
+		 ((emacs
+		   (26 1)))
+		 "Load Emacs Lisp code blocks from Org files" single
+		 ((:commit . "62c9ed0478d7e8aa832f848074e15c5be2a0cae7")
+		  (:authors
+		   ("Jingtao Xu" . "jingtaozf@gmail.com"))
+		  (:maintainer "Jingtao Xu" . "jingtaozf@gmail.com")
+		  (:keywords "lisp" "docs" "extensions" "tools")
+		  (:url . "https://github.com/jingtaozf/literate-elisp"))])
