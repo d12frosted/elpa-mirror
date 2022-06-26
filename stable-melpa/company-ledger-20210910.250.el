@@ -5,6 +5,8 @@
 ;; Author: Debanjum Singh Solanky <debanjum AT gmail DOT com>
 ;; Description: Fuzzy auto-completion for ledger & friends
 ;; Keywords: abbrev, matching, auto-complete, beancount, ledger, company
+;; Package-Version: 20210910.250
+;; Package-Commit: c6911b7e39b29c0d5f2541392ff485b0f53fd366
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3") (company "0.8.0"))
 ;; URL: https://github.com/debanjum/company-ledger

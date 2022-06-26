@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/gollth/helm-catkin.git
 
 Updating /mnt/store/melpa/working/helm-catkin/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/gollth/helm-catkin.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out d33c71cecd35616dfa7c3b81d8f51c128405977f
+Built helm-catkin in 3.563s, finished at 2022-06-26T03:19:18+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 35K Jun 26 03:19 packages/helm-catkin-20190425.1520.el
+4.0K -rw-r--r-- 1 root root 492 Jun 26 03:19 packages/helm-catkin-20190425.1520.entry

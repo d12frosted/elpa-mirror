@@ -10,8 +10,8 @@
 ;; Maintainer: FENTON, Alex <a-fent@github>
 ;; Created: 2014-07-20
 ;; Version: 1.210925
-;; Package-Version: 20220419.750
-;; Package-Commit: 0a35d0fbfa56bdd9ec5ba5bac2fe002b61c05c52
+;; Package-Version: 20220625.2232
+;; Package-Commit: 7a3a4b7d42640343ddabd991093252672e0c0c2d
 ;; Package-Requires: ((org "8.2") (emacs "24.4") (dash "2.8") (ht "2.0"))
 ;; Keywords: tools
 ;; URL: https://github.com/a-fent/ox-pandoc
@@ -1622,10 +1622,13 @@ holding contextual information."
           (setq number (org-export-get-ordinal
                         destination info nil #'org-html-standalone-image-p)))
 
-         ((eq dest-type 'latex-environment)
+         ((eq dest-type 'latex-environment)   ; Latex block, equation or similar
           (setq number (org-export-get-ordinal
                         destination info nil #'org-pandoc--numbered-equation-p)))
 
+         ((string-prefix-p "citeproc_bib_item" path) ; Rendered citation footnote number
+		  ) ;; leave it alone, it should already be correct
+		 
          (t                           ; captioned items
           (setq number (org-export-get-ordinal
                         destination info nil #'org-pandoc--has-caption-p))))
