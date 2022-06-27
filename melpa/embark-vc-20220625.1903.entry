@@ -1,0 +1,19 @@
+(embark-vc .
+	   [(20220625 1903)
+	    ((emacs
+	      (26 1))
+	     (code-review
+	      (0 0 2))
+	     (embark
+	      (0 13))
+	     (forge
+	      (0 3))
+	     (s
+	      (1 12 0)))
+	    "Embark actions for various VC integrations" single
+	    ((:commit . "e0d901a20eab3b627b2aeacd32d9a72f1ffae3c9")
+	     (:authors
+	      ("Ellis Kenyő <https://github.com/elken>"))
+	     (:maintainer "Ellis Kenyő" . "me@elken.dev")
+	     (:keywords "convenience" "matching" "terminals" "tools" "unix" "vc")
+	     (:url . "https://github.com/elken/embark-vc"))])

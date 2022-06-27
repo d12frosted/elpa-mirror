@@ -4,7 +4,7 @@
 ;; Maintainer: Vidianos Giannitsis <vidianosgiannitsis@gmail.com>
 ;; URL: https://github.com/Vidianos-Giannitsis/zetteldesk-kb.el
 ;; Package-Version: 20220619.2028
-;; Package-Commit: 171fefe91fc616c94b2ec29826fa6893f5816c00
+;; Package-Commit: 00575b41f5ff7587eff4dd88733aba9ff5f73f5b
 ;; Package-Requires: ((zetteldesk "1.0.1") (hydra "0.15") (major-mode-hydra "0.2") (emacs "24.1"))
 ;; Created: 3rd March 2022
 ;; License: GPL-3.0
