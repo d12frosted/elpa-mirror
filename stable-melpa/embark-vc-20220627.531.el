@@ -7,8 +7,8 @@
 ;; Created: November 20, 2021
 ;; Modified: November 20, 2021
 ;; Version: 0.2
-;; Package-Version: 20220625.1903
-;; Package-Commit: e0d901a20eab3b627b2aeacd32d9a72f1ffae3c9
+;; Package-Version: 20220627.531
+;; Package-Commit: a022f89ceaa49465e33b97bdbe046a0b651590ab
 ;; Keywords: convenience matching terminals tools unix vc
 ;; Homepage: https://github.com/elken/embark-vc
 ;; Package-Requires: ((emacs "26.1") (code-review "0.0.2") (embark "0.13") (forge "0.3") (s "1.12.0"))
@@ -30,8 +30,22 @@
 ;;; Commentary:
 ;;
 ;; Some actions and conveniences for interacting with various vc-related
-;; packages
+;; packages.
 ;;
+;; See embark for detailed docs about setup & the README for a table of all the
+;; keymaps and actions.
+;;
+;; In short, embark allows one to define a "target" (in this instance we have
+;; topic, pull-request, issue, commit and conflict) upon which actions can be
+;; performed onto.
+;;
+;; This package allows conveniences such as (for the purposes of these C-; will represent `embark-act'):
+;; - Starting a review for a PR with C-; r
+;; - Yank a PR URL with C-; y
+;; - Keep the top/bottom/whole merge conflict with C-; /t/b/a
+;;
+;; And many more. It should also be quite simple to add any desired functions to
+;; the keymaps.
 ;;; Code:
 
 (require 'embark)
