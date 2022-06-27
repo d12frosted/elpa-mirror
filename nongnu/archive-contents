@@ -1333,7 +1333,7 @@
 	     ("Bozhidar Batsov"))
 	    (:keywords "project" "convenience"))])
  (rust-mode .
-	    [(1 0 4)
+	    [(1 0 5)
 	     ((emacs
 	       (25 1)))
 	     "A major-mode for editing Rust source code" tar
@@ -1342,7 +1342,7 @@
 	      (:maintainer "Mozilla")
 	      (:authors
 	       ("Mozilla"))
-	      (:commit . "e35a1800fc0f9ed178539d6fb82ed885c1014fb5"))])
+	      (:commit . "7bff48894dc532caf4010be3060370d315ef75f6"))])
  (sass-mode .
 	    [(3 0 16)
 	     ((haml-mode
