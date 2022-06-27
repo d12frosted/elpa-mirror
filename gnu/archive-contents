@@ -524,7 +524,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 25)
+	[(0 26)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -532,7 +532,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "8b9d37413639a1c92f0c74f1230bddbe45e79c59"))])
+	  (:commit . "c07b8c168765c350ef4693d1d8cd26be43894872"))])
  (coterm .
 	 [(1 5)
 	  ((emacs
@@ -3316,7 +3316,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "86f08fb377e2b8f2df0614c48783bdce347f3758"))])
  (vertico .
-	  [(0 24)
+	  [(0 25)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
@@ -3324,7 +3324,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "e5935b5bbfc0d820c54ed1ad52e36e8c48248fd7"))])
+	    (:commit . "c511f874fa0f39e4691ab145b233bbe5b23e4fa2"))])
  (vertico-posframe .
 		   [(0 5 4)
 		    ((emacs

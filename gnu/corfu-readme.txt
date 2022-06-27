@@ -10,8 +10,8 @@ Table of Contents
 2. Features
 3. Installation and Configuration
 .. 1. Auto completion
-.. 2. Completing with Corfu in the minibuffer
-.. 3. Completing with Corfu in the Eshell or Shell
+.. 2. Completing in the minibuffer
+.. 3. Completing in the Eshell or Shell
 .. 4. Orderless completion
 .. 5. TAB-and-Go completion
 .. 6. Transfer completion to the minibuffer
@@ -239,15 +239,52 @@ Table of Contents
   │       corfu-quit-no-match 'separator) ;; or t
   └────
 
-  In general, I recommend to experiment a bit with the various settings
-  and key bindings to find a configuration which works for you. There is
-  no one size fits all solution. Some people like auto completion, some
-  like manual completion, some want to cycle with TAB and some with the
-  arrow keys…
+  I recommend to experiment a bit with the various settings and key
+  bindings to find a configuration which works for you. There is no one
+  size fits all solution. Some people like auto completion, some like
+  manual completion, some want to cycle with TAB and some with the arrow
+  keys.
+
+  In case you like aggressive auto completion settings, where the
+  completion popup appears immediately, I recommend to use a cheap
+  completion style like `basic', which performs prefix filtering. In
+  this case Corfu completion should still be very fast in buffers with
+  efficient completion backends. You can try the following settings in
+  an Elisp buffer or the Emacs scratch buffer.
+
+  ┌────
+  │ ;; Aggressive completion, cheap prefix filtering.
+  │ (setq-local corfu-auto t
+  │ 	    corfu-auto-delay 0
+  │ 	    corfu-auto-prefix 0
+  │ 	    completion-styles '(basic))
+  └────
+
+  If you want to combine fast prefix filtering and Orderless filtering
+  you can still do that by defining a custom Orderless completion style
+  via `orderless-define-completion-style'. We use a custom style
+  dispatcher, which enables prefix filtering for input shorter than 4
+  characters. Note that such a setup is quite advanced. Please refer to
+  the Orderless documentation and source code for further details.
+
+  ┌────
+  │ (defun orderless-fast-dispatch (word index total)
+  │   (and (= index 0) (= total 1) (length< word 4)
+  │        `(orderless-regexp . ,(concat "^" (regexp-quote word)))))
+  │ 
+  │ (orderless-define-completion-style orderless-fast
+  │   (orderless-dispatch '(orderless-fast-dispatch))
+  │   (orderless-matching-styles '(orderless-literal orderless-regexp)))
+  │ 
+  │ (setq-local corfu-auto t
+  │ 	    corfu-auto-delay 0
+  │ 	    corfu-auto-prefix 0
+  │ 	    completion-styles '(orderless-fast))
+  └────
 
 
-3.2 Completing with Corfu in the minibuffer
-───────────────────────────────────────────
+3.2 Completing in the minibuffer
+────────────────────────────────
 
   Corfu can be used for completion in the minibuffer, since it relies on
   child frames to display the candidates. By default,
@@ -284,8 +321,8 @@ Table of Contents
   └────
 
 
-3.3 Completing with Corfu in the Eshell or Shell
-────────────────────────────────────────────────
+3.3 Completing in the Eshell or Shell
+─────────────────────────────────────
 
   When completing in the Eshell I recommend conservative local settings
   without auto completion, such that the completion behavior is similar

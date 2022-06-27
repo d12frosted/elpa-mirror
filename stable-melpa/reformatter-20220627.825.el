@@ -4,10 +4,10 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: convenience, tools
-;; Package-Commit: 7c5452bf31c7bcaa19df7c94dfe17dcae5bdc078
+;; Package-Commit: 84cff54b0873fcca6fc0314d7584284e86708e8d
 ;; Homepage: https://github.com/purcell/emacs-reformatter
 ;; Package-Requires: ((emacs "24.3"))
-;; Package-Version: 20220623.1109
+;; Package-Version: 20220627.825
 ;; Package-X-Original-Version: 0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -78,6 +78,13 @@
   (require 'cl-lib))
 (require 'ansi-color)
 
+(defun reformatter--make-temp-file (sym)
+  "Create a temporary file whose filename is based on SYM, but with
+slashes replaced by underscores.  `make-temp-file' fails
+otherwise as it cannot create intermediate directories."
+  (make-temp-file
+   (replace-regexp-in-string "/" "_" (symbol-name sym))))
+
 (defun reformatter--do-region (name beg end program args stdin stdout input-file exit-code-success-p display-errors)
   "Do the work of reformatter called NAME.
 Reformats the current buffer's region from BEG to END using
@@ -91,8 +98,8 @@ the `reformatter-define' macro."
              (string= (file-truename input-file)
                       (file-truename (buffer-file-name))))
     (error "The reformatter must not operate on the current file in-place"))
-  (let* ((stderr-file (make-temp-file (symbol-name name)))
-         (stdout-file (make-temp-file (symbol-name name)))
+  (let* ((stderr-file (reformatter--make-temp-file name))
+         (stdout-file (reformatter--make-temp-file name))
          ;; Setting this coding system might not universally be
          ;; the best default, but was apparently necessary for
          ;; some hand-rolled reformatter functions that this
@@ -106,10 +113,10 @@ the `reformatter-define' macro."
                  (retcode
                   (condition-case e
                       (apply 'call-process program
-                                  (when stdin input-file)
-                                  (list (list :file stdout-file) stderr-file)
-                                  nil
-                                  args)
+                             (when stdin input-file)
+                             (list (list :file stdout-file) stderr-file)
+                             nil
+                             args)
                     (error e))))
             (with-current-buffer error-buffer
               (let ((inhibit-read-only t))
@@ -270,7 +277,9 @@ might use:
 When called interactively, or with prefix argument
 DISPLAY-ERRORS, shows a buffer if the formatting fails."
          (interactive "rp")
-         (let ((input-file ,(if input-file input-file `(make-temp-file ,(symbol-name name)))))
+         (let ((input-file ,(if input-file
+                                input-file
+                              `(reformatter--make-temp-file ',name))))
            ;; Evaluate args with input-file bound
            (unwind-protect
                (progn
