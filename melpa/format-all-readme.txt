@@ -30,6 +30,7 @@ Supported languages:
 - Elixir (mix format)
 - Elm (elm-format)
 - Emacs Lisp (Emacs)
+- Erb (erb-format)
 - Erlang (efmt)
 - F# (fantomas)
 - Fish Shell (fish_indent)

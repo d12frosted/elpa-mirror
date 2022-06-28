@@ -3,11 +3,45 @@ Fetcher: git
 Source:  https://forge.chalec.org/hjuvi/eide.git
 
 Updating /mnt/store/melpa/working/eide/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://forge.chalec.org/hjuvi/eide.git/': Failed to connect to forge.chalec.org port 443: Connection refused
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out a32b9266414d9173dfa92fa44b17064ebb39522f
+Checking out a32b9266414d9173dfa92fa44b17064ebb39522f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eide/
+  to /tmp/eide33XSse/eide-20220531.452
+  ! src/eide-compare.el -> eide-compare.el
+  ! src/eide-config.el -> eide-config.el
+  ! src/eide-display.el -> eide-display.el
+  ! src/eide-edit.el -> eide-edit.el
+  ! src/eide-keys.el -> eide-keys.el
+  ! src/eide-menu.el -> eide-menu.el
+  ! src/eide-pkg.el -> eide-pkg.el
+  ! src/eide-popup.el -> eide-popup.el
+  ! src/eide-project.el -> eide-project.el
+  ! src/eide-search.el -> eide-search.el
+  ! src/eide-vc.el -> eide-vc.el
+  ! src/eide-windows.el -> eide-windows.el
+  ! src/eide.el -> eide.el
+  ! src/themes/eide-dark-theme.el -> eide-dark-theme.el
+  ! src/themes/eide-light-theme.el -> eide-light-theme.el
+Created eide-20220531.452.tar containing:
+  eide-20220531.452/
+  eide-20220531.452/eide-compare.el
+  eide-20220531.452/eide-config.el
+  eide-20220531.452/eide-dark-theme.el
+  eide-20220531.452/eide-display.el
+  eide-20220531.452/eide-edit.el
+  eide-20220531.452/eide-keys.el
+  eide-20220531.452/eide-light-theme.el
+  eide-20220531.452/eide-menu.el
+  eide-20220531.452/eide-pkg.el
+  eide-20220531.452/eide-popup.el
+  eide-20220531.452/eide-project.el
+  eide-20220531.452/eide-search.el
+  eide-20220531.452/eide-vc.el
+  eide-20220531.452/eide-windows.el
+  eide-20220531.452/eide.el
+Built eide in 6.115s, finished at 2022-06-28T09:24:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  292 Jun 28 09:24 packages/eide-20220531.452.entry
+320K -rw-r--r-- 1 root root 320K Jun 28 09:24 packages/eide-20220531.452.tar
