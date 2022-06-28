@@ -45,10 +45,3 @@ Support any special buffer (say `ivy-occur-grep-mode'),
                                     (grep-mode)
                                     ;; need return current buffer at the end of function
                                     (current-buffer))))))
-
-
-User can specify frames not to save by setting name patterns in `wg-frame-name-regexp-excludes'.
-
-  (setq wg-frame-name-regexp-excludes
-        '("^initial_terminal$"
-          "InactiveMinibuffer"))

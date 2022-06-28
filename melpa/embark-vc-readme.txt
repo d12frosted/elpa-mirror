@@ -1,5 +1,5 @@
 
-Some actions and conveniences for interacting with various vc-related
+Some actions and conveniences for interacting with various version control
 packages.
 
 See embark for detailed docs about setup & the README for a table of all the

@@ -71,7 +71,7 @@ Supported languages:
 - Svelte (prettier plugin)
 - Swift (swiftformat)
 - Terraform (terraform fmt)
-- TOML (prettier plugin)
+- TOML (prettier plugin, taplo fmt)
 - TypeScript/TSX (prettier, ts-standard, prettierd)
 - V (v fmt)
 - Vue (prettier, prettierd)
