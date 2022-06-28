@@ -16,10 +16,10 @@
 ;; Author: Benjamin Slade <slade@lambda-y.net>
 ;; Maintainer: Benjamin Slade <slade@lambda-y.net>
 ;; URL: https://gitlab.com/emacsomancer/equake
-;; Package-Commit: 91b4fcedc091fc789b7723cf26f241e592a2dd27
-;; Package-Version: 20220626.1911
-;; Package-X-Original-Version: 0.991
-;; Version: 0.991
+;; Package-Commit: 7aa2e1715e6ea286b08bb446d2d9915afa0fdf03
+;; Package-Version: 20220627.2248
+;; Package-X-Original-Version: 0.9911
+;; Version: 0.9911
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1"))
 ;; Created: 2018-12-12
 ;; Keywords: convenience, frames, terminals, tools, window-system

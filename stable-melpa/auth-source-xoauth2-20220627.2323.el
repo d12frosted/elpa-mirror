@@ -16,8 +16,8 @@
 
 ;; Author: Cesar Crusius <ccrusius@google.com>
 ;; URL: https://github.com/ccrusius/auth-source-xoauth2
-;; Package-Version: 20200911.1554
-;; Package-Commit: d3890eaa3a46dc89758ec6b789949e70ae782896
+;; Package-Version: 20220627.2323
+;; Package-Commit: 7ba55330bbf1fb24daf6bc28f7993f18f283b5aa
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -206,6 +206,8 @@ in this package."
   ;; Add the functionality to smtpmail-try-auth-method
   (cond
    ((>= emacs-major-version 27)
+    (with-eval-after-load 'smtpmail
+      (add-to-list 'smtpmail-auth-supported 'xoauth2))
     (cl-defmethod smtpmail-try-auth-method
       (process (_mech (eql xoauth2)) user password)
       (auth-source-xoauth2--smtpmail-auth-method process user password)))

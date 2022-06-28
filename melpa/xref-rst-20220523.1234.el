@@ -5,9 +5,9 @@
 
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
-;; URL: https://gitlab.com/ideasman42/emacs-xref-rst
-;; Package-Version: 20220518.1102
-;; Package-Commit: bc76bc228d51f64a2e57be8f230cf8a7746ea54a
+;; URL: https://codeberg.org/ideasman42/emacs-xref-rst
+;; Package-Version: 20220523.1234
+;; Package-Commit: 4cbe37a4ae45dda7f8228f9490408eba3f92a19e
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "28.1"))
 
