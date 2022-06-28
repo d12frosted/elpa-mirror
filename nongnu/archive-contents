@@ -1251,7 +1251,7 @@
 	      ("Eric James Michael Ritz"))
 	     (:keywords "languages" "php"))])
  (popon .
-	[(0 6)
+	[(0 7)
 	 ((emacs
 	   (25 1)))
 	 "\"Pop\" floating text \"on\" a window" tar
@@ -1260,7 +1260,7 @@
 	  (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	  (:authors
 	   ("Akib Azmain Turja" . "akib@disroot.org"))
-	  (:commit . "af58ae43621655ea90f1583f5a67f0d6f25656b6"))])
+	  (:commit . "11ee8321e777ebef67f4956961bb6c7bfad225df"))])
  (popup .
 	[(0 5 9)
 	 ((emacs
@@ -1668,7 +1668,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(17 14 20220624001507)
+	       [(17 15 20220627044859)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -1677,7 +1677,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "5347be6e3165c74d9edc2a84010c2099f0620388"))])
+		 (:commit . "bc9f62fd5a3fdcee40670d02ae129dd43ea4980e"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar

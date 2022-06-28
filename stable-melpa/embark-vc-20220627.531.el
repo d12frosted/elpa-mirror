@@ -8,7 +8,7 @@
 ;; Modified: November 20, 2021
 ;; Version: 0.2
 ;; Package-Version: 20220627.531
-;; Package-Commit: a022f89ceaa49465e33b97bdbe046a0b651590ab
+;; Package-Commit: d25b41b72a72a971311a84fa218e572a26fbc037
 ;; Keywords: convenience matching terminals tools unix vc
 ;; Homepage: https://github.com/elken/embark-vc
 ;; Package-Requires: ((emacs "26.1") (code-review "0.0.2") (embark "0.13") (forge "0.3") (s "1.12.0"))

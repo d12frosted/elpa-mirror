@@ -4,11 +4,11 @@ Source:  https://github.com/Silex/docker.el.git
 
 Updating /mnt/store/melpa/working/docker/
 Checking out origin/HEAD
-Checking out 44f0bbec9b3deb027d17f4c10d8ec4106ed89dfb
-Checking out 44f0bbec9b3deb027d17f4c10d8ec4106ed89dfb
+Checking out 064bd80b74ae585978cfbfd2a76248c7b3790f7b
+Checking out 064bd80b74ae585978cfbfd2a76248c7b3790f7b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker/
-  to /tmp/dockerksZggb/docker-20220530.603
+  to /tmp/dockerdF8n4d/docker-20220627.2018
     docker-compose.el -> docker-compose.el
     docker-container.el -> docker-container.el
     docker-core.el -> docker-core.el
@@ -20,21 +20,23 @@ Copying files (->) and directories (=>)
     docker-utils.el -> docker-utils.el
     docker-volume.el -> docker-volume.el
     docker.el -> docker.el
-Created docker-20220530.603.tar containing:
-  docker-20220530.603/
-  docker-20220530.603/docker-compose.el
-  docker-20220530.603/docker-container.el
-  docker-20220530.603/docker-core.el
-  docker-20220530.603/docker-faces.el
-  docker-20220530.603/docker-group.el
-  docker-20220530.603/docker-image.el
-  docker-20220530.603/docker-network.el
-  docker-20220530.603/docker-pkg.el
-  docker-20220530.603/docker-process.el
-  docker-20220530.603/docker-utils.el
-  docker-20220530.603/docker-volume.el
-  docker-20220530.603/docker.el
-Built docker in 4.894s, finished at 2022-06-27T15:19:28+0000
+Created docker-20220627.2018.tar containing:
+  docker-20220627.2018/
+  docker-20220627.2018/docker-compose.el
+  docker-20220627.2018/docker-container.el
+  docker-20220627.2018/docker-core.el
+  docker-20220627.2018/docker-faces.el
+  docker-20220627.2018/docker-group.el
+  docker-20220627.2018/docker-image.el
+  docker-20220627.2018/docker-network.el
+  docker-20220627.2018/docker-pkg.el
+  docker-20220627.2018/docker-process.el
+  docker-20220627.2018/docker-utils.el
+  docker-20220627.2018/docker-volume.el
+  docker-20220627.2018/docker.el
+Built docker in 5.086s, finished at 2022-06-27T21:27:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  532 Jun 27 15:19 packages/docker-20220530.603.entry
-100K -rw-r--r-- 1 root root 100K Jun 27 15:19 packages/docker-20220530.603.tar
+4.0K -rw-r--r-- 1 root root  532 Jun 27 18:23 packages/docker-20220530.603.entry
+100K -rw-r--r-- 1 root root 100K Jun 27 18:23 packages/docker-20220530.603.tar
+4.0K -rw-r--r-- 1 root root  506 Jun 27 21:27 packages/docker-20220627.2018.entry
+100K -rw-r--r-- 1 root root 100K Jun 27 21:27 packages/docker-20220627.2018.tar
