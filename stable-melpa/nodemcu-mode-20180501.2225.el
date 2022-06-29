@@ -4,8 +4,6 @@
 
 ;; Author: Andreas Müller <code@0x7.ch>
 ;; Keywords: tools
-;; Package-Version: 20180501.2225
-;; Package-Commit: 8effd9f3df40b6b92a2f05e4d54750b624afc4a7
 ;; Version: 0.1.0
 ;; URL: https://github.com/andrmuel/nodemcu-mode
 ;; Package-Requires: ((emacs "25"))

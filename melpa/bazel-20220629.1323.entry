@@ -1,0 +1,8 @@
+(bazel .
+       [(20220629 1323)
+	((emacs
+	  (27 1)))
+	"Bazel support for Emacs" single
+	((:commit . "0b01986b1ba4acb0505be80303cdbed3727e958f")
+	 (:keywords "build tools" "languages")
+	 (:url . "https://github.com/bazelbuild/emacs-bazel-mode"))])
