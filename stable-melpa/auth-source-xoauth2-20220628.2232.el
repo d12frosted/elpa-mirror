@@ -16,8 +16,8 @@
 
 ;; Author: Cesar Crusius <ccrusius@google.com>
 ;; URL: https://github.com/ccrusius/auth-source-xoauth2
-;; Package-Version: 20220628.1725
-;; Package-Commit: 7beca7b939f2a5534867e0d8b06ba1d442685da7
+;; Package-Version: 20220628.2232
+;; Package-Commit: 3f80cd338d924ce76273b6749a8b73e2bfdf9db8
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -285,8 +285,12 @@ a different number of arguments."
    235))
 
 (defun auth-source-xoauth2--pass-get (key entry)
-  "Retrieve KEY from password-store ENTRY."
-  (let ((ret (auth-source-pass-get key entry)))
+  "Retrieve KEY from password-store ENTRY.
+ENTRY can be either a string specifying the password store entry name
+or an association list containing the pre-parsed the entry data."
+  (let ((ret (cond
+              ((stringp entry) (auth-source-pass-get key entry))
+              ((listp entry) (cdr (assoc key entry))))))
     (or ret (message "Missing XOAuth2 entry value for '%s'" key))
     ret))
 
