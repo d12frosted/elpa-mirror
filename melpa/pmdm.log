@@ -3,3 +3,20 @@ Fetcher: hg
 Source:  https://hg.serna.eu/emacs/pmdm
 
 Updating /mnt/store/melpa/working/pmdm/
+Checking out 1f30adce8a23da94b3c2460b7248d5910592d8af
+
+Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
+
+pulling from https://hg.serna.eu/emacs/pmdm
+searching for changes
+no changes found
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command exited with non-zero exit-code: 255
