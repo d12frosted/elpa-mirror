@@ -23,8 +23,8 @@
 ;; Author: Maciej Barć <xgqt@riseup.net>
 ;; Homepage: https://gitlab.com/xgqt/emacs-ansilove/
 ;; Version: 1.0.0
-;; Package-Version: 20220628.1849
-;; Package-Commit: 7841c01c56026f2b4405228803f8a9d4746a5680
+;; Package-Version: 20220629.2339
+;; Package-Commit: 3e3f6e8baa2135b072855567e4a1fc599a2fc800
 ;; Keywords: multimedia
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -119,6 +119,8 @@
   "Wrapper for calling ‘ansilove-executable’.
 Calls ‘ansilove-executable’ given INPUT-FILE as input and
 OUTPUT-FILE as output."
+  (unless (file-readable-p input-file)
+    (user-error "Fatal error: The file %s is not readable!" input-file))
   (let ((output-buffer (get-buffer-create "*Ansilove-Output*")))
     (call-process-shell-command
      (format "%s -o %s %s" ansilove-executable output-file input-file)
