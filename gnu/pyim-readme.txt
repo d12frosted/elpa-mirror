@@ -39,8 +39,9 @@ Table of Contents
 ..... 1. 根据环境自动切换到英文输入模式
 ..... 2. 根据环境自动切换到半角标点输入模式
 10. 开发
-11. 捐赠
-12. Tips
+11. 试用
+12. 捐赠
+13. Tips
 .. 1. 如何快速切换 scheme
 .. 2. 关闭输入联想词功能 (默认开启)
 .. 3. 如何将个人词条相关信息导入和导出？
@@ -270,7 +271,7 @@ Table of Contents
   常小* 的拼音词库，源于：libpinyin 项目
 
   如果 pyim-basedict 不能满足需求，用户可以使用其他方式为 pyim 添加拼音
-  词库，具体方式请参考 12.8 小结。
+  词库，具体方式请参考 13.8 小结。
 
 
 8.3 激活 pyim
@@ -424,9 +425,9 @@ Table of Contents
      置这个变量， 比如：
 
      ┌────
-     │ (setq-default pyim-punctuation-translate-p '(yes no auto))   ;使用全角标点。
-     │ (setq-default pyim-punctuation-translate-p '(no yes auto))   ;使用半角标点。
-     │ (setq-default pyim-punctuation-translate-p '(auto yes no))   ;中文使用全角标点，英文使用半角标点。
+     │ (setq-default pyim-punctuation-translate-p '(yes))    ;使用全角标点。
+     │ (setq-default pyim-punctuation-translate-p '(no))     ;使用半角标点。
+     │ (setq-default pyim-punctuation-translate-p '(auto))   ;中文使用全角标点，英文使用半角标点。
      └────
 
   2. 第二种方法：使用命令 `pyim-punctuation-translate-at-point' 只切换光
@@ -582,7 +583,22 @@ Table of Contents
 [Development.org] <file:Development.org>
 
 
-11 捐赠
+11 试用
+═══════
+
+  在pyim项目根目录运行shell命令 `make runemacs' 试用最新的pyim。
+
+  只有pyim和其依赖的包被载入。用户自己的emacs配置不会被载入。
+
+  指定运行的Emacs版本用以下命令,
+  ┌────
+  │ EMACS=~/my-whatever-directory/bin/emacs make runemacs
+  └────
+
+  Emacs启动后 "M-x toggle-input-method" 或按 "C-/" 打开输入法。
+
+
+12 捐赠
 ═══════
 
   您可以通过小额捐赠的方式支持 pyim 的开发工作，具体方式：
@@ -593,16 +609,16 @@ Table of Contents
      <file:snapshots/QR-code-for-author.jpg>
 
 
-12 Tips
+13 Tips
 ═══════
 
-12.1 如何快速切换 scheme
+13.1 如何快速切换 scheme
 ────────────────────────
 
   可以试试 pyim-default-scheme 命令。
 
 
-12.2 关闭输入联想词功能 (默认开启)
+13.2 关闭输入联想词功能 (默认开启)
 ──────────────────────────────────
 
   ┌────
@@ -610,14 +626,14 @@ Table of Contents
   └────
 
 
-12.3 如何将个人词条相关信息导入和导出？
+13.3 如何将个人词条相关信息导入和导出？
 ───────────────────────────────────────
 
   1. 导入使用命令： pyim-dcache-import
   2. 导出使用命令： pyim-dcache-export
 
 
-12.4 pyim 出现错误时，如何开启 debug 模式
+13.4 pyim 出现错误时，如何开启 debug 模式
 ─────────────────────────────────────────
 
   ┌────
@@ -625,7 +641,7 @@ Table of Contents
   └────
 
 
-12.5 将光标处的拼音或者五笔字符串转换为中文 (与 vimim 的 “点石成金” 功能类似)
+13.5 将光标处的拼音或者五笔字符串转换为中文 (与 vimim 的 “点石成金” 功能类似)
 ─────────────────────────────────────────────────────────────────────────────
 
   ┌────
@@ -633,7 +649,7 @@ Table of Contents
   └────
 
 
-12.6 如何使用其它字符翻页
+13.6 如何使用其它字符翻页
 ─────────────────────────
 
   ┌────
@@ -642,7 +658,7 @@ Table of Contents
   └────
 
 
-12.7 如何用 ";" 来选择第二个候选词
+13.7 如何用 ";" 来选择第二个候选词
 ──────────────────────────────────
 
   ┌────
@@ -653,14 +669,14 @@ Table of Contents
   └────
 
 
-12.8 如何添加自定义拼音词库
+13.8 如何添加自定义拼音词库
 ───────────────────────────
 
   pyim 默认没有携带任何拼音词库，用户可以使用下面几种方式，获取质量较好
   的拼音词库：
 
 
-12.8.1 第一种方式 (Windows 用户推荐使用)
+13.8.1 第一种方式 (Windows 用户推荐使用)
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   使用词库转换工具将其他输入法的词库转化为 pyim 使用的词库：这里只介绍
@@ -689,7 +705,7 @@ Table of Contents
   息添加到`pyim-dicts' 中，完成后运行命令 `pyim-restart' 或者重启emacs。
 
 
-12.8.2 第二种方式 (Linux & Unix 用户推荐使用)
+13.8.2 第二种方式 (Linux & Unix 用户推荐使用)
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   E-Neo 同学编写了一个词库转换工具: [scel2pyim] , 可以将一个搜狗词库转换
@@ -703,13 +719,13 @@ Table of Contents
 [scel2pyim] <https://github.com/E-Neo/scel2pyim>
 
 
-12.8.3 第三种方式
+13.8.3 第三种方式
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   可以了解：<https://github.com/redguardtoo/pyim-tsinghua-dict>
 
 
-12.9 如何手动安装和管理词库
+13.9 如何手动安装和管理词库
 ───────────────────────────
 
   这里假设有两个词库文件：
@@ -731,7 +747,7 @@ Table of Contents
   3. 词库文件的编码必须为 utf-8-unix，否则会出现乱码。
 
 
-12.10 Emacs 启动时加载 pyim 词库
+13.10 Emacs 启动时加载 pyim 词库
 ────────────────────────────────
 
   ┌────
@@ -740,7 +756,7 @@ Table of Contents
   └────
 
 
-12.11 将汉字字符串转换为拼音字符串
+13.11 将汉字字符串转换为拼音字符串
 ──────────────────────────────────
 
   下面两个函数可以将中文字符串转换的拼音字符串或者列表，用于 emacs-lisp
@@ -750,7 +766,7 @@ Table of Contents
   2. `pyim-cstring-to-pinyin-simple' （不考虑多音字）
 
 
-12.12 中文分词
+13.12 中文分词
 ──────────────
 
   pyim-cstring-utils 包含了一个简单的分词函数：
@@ -772,7 +788,7 @@ Table of Contents
   词库中不存在的中文词条。
 
 
-12.13 获取光标处的中文词条
+13.13 获取光标处的中文词条
 ──────────────────────────
 
   pyim-cstring-utils 包含了一个简单的命令：
@@ -781,7 +797,7 @@ Table of Contents
   `pyim-cstring-split-to-list'。
 
 
-12.14 让 `forward-word' 和 `back-backward’ 在中文环境下正常工作
+13.14 让 `forward-word' 和 `back-backward’ 在中文环境下正常工作
 ───────────────────────────────────────────────────────────────
 
   中文词语没有强制用空格分词，所以 Emacs 内置的命令 `forward-word' 和
@@ -800,7 +816,7 @@ Table of Contents
   └────
 
 
-12.15 为 isearch 相关命令添加拼音搜索支持
+13.15 为 isearch 相关命令添加拼音搜索支持
 ─────────────────────────────────────────
 
   pyim 安装后，可以通过下面的设置开启拼音搜索功能：
@@ -825,7 +841,7 @@ Table of Contents
   └────
 
 
-12.16 创建一个搜索中文的 regexp
+13.16 创建一个搜索中文的 regexp
 ───────────────────────────────
 
   ┌────
@@ -833,7 +849,7 @@ Table of Contents
   └────
 
 
-12.17 让 ivy 支持拼音搜索候选项功能
+13.17 让 ivy 支持拼音搜索候选项功能
 ───────────────────────────────────
 
   ┌────
@@ -843,7 +859,7 @@ Table of Contents
   └────
 
 
-12.18 让 avy 支持拼音搜索
+13.18 让 avy 支持拼音搜索
 ─────────────────────────
 
   ┌────
@@ -855,7 +871,7 @@ Table of Contents
   └────
 
 
-12.19 让 vertico, selectrum 等补全框架，通过 orderless 支持拼音搜索候选项功能。
+13.19 让 vertico, selectrum 等补全框架，通过 orderless 支持拼音搜索候选项功能。
 ───────────────────────────────────────────────────────────────────────────────
 
   ┌────

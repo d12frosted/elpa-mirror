@@ -2386,7 +2386,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "86a7c429c6878287c068106b318889824cad3210"))])
  (pyim .
-       [(5 1 0)
+       [(5 2 0)
 	((emacs
 	  (25 1))
 	 (async
@@ -2400,7 +2400,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "5617d8f87c45e6e19af7654ac9e62cc90854776f"))])
+	 (:commit . "9606d25f906f802307eb1d8cb5fa458eec837b04"))])
  (pyim-basedict .
 		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar
@@ -3110,7 +3110,7 @@
 	    ("Kaushal Modi" . "kaushal.modi@gmail.com"))
 	   (:commit . "670e0a08f625175fd80137cf69e799619bf8a381"))])
  (tramp .
-	[(2 5 2 5)
+	[(2 5 3)
 	 ((emacs
 	   (25 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -3119,7 +3119,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "35c25d03c7bb27dc1f606d1cb9273c303e2f4659"))])
+	  (:commit . "3e0278ea5938092600a781947334d175a4e4b542"))])
  (tramp-nspawn .
 	       [(1 0)
 		((emacs

@@ -4,6 +4,8 @@
 
 ;; Author: Takeshi Arabiki
 ;; Version: 0.2.4
+;; Package-Version: 20200802.1310
+;; Package-Commit: 3b841055cad00f442e4a9159b1056f59411b6646
 
 ;;  This program is free software: you can redistribute it and/or modify
 ;;  it under the terms of the GNU General Public License as published by
