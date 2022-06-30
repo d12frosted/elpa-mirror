@@ -5,8 +5,8 @@
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Created: 2017-09-25
 ;; Version: 0.3-pre
-;; Package-Version: 20210824.658
-;; Package-Commit: 0a177d4a3b4b2532be7f0775e5cc41e6382a45d4
+;; Package-Version: 20220630.844
+;; Package-Commit: 88d1e6019a3408835745e117cb5b83a8e31f11fe
 ;; Keywords: pocket
 ;; Package-Requires: ((emacs "25.1") (dash "2.13.0") (kv "0.0.19") (pocket-lib "0.1") (s "1.10") (ov "1.0.6") (rainbow-identifiers "0.2.2") (org-web-tools "0.1") (ht "2.2"))
 ;; URL: https://github.com/alphapapa/pocket-reader.el
@@ -160,7 +160,9 @@ item ID and second is the overlay used to mark it.")
     :given_url
     :amp_url
     :resolved_url)
-  "Keys to use in Pocket API responses, optionally with function to filter each one through.")
+  "Keys to use in Pocket API responses.
+Each item may also be a cons cell in which the cdr is a function
+to filter each one through.")
 
 ;;;;; Customization
 
@@ -205,7 +207,9 @@ item ID and second is the overlay used to mark it.")
 
 (defcustom pocket-reader-url-open-fn-map
   '((eww-browse-url "news.ycombinator.com"))
-  "A list mapping URL-matching regular expressions to functions used to open the URL.
+  ;; FIXME: This is supposed to be an alist, but the default value
+  ;; isn't one.
+  "List mapping URL-matching regexps to functions used to open the URL.
 Regexps are anchored after the protocol (i.e. \"https://\" is not
 matched against).
 
@@ -265,7 +269,7 @@ use when opening, copying, etc."
        ,@body)))
 
 (cl-defmacro pocket-reader--keywords-in-list (list &rest keywords)
-  "If any KEYWORDS are in LIST, destructively remove them from LIST and return the last KEYWORD found in LIST."
+  "Destructively remove KEYWORDS from LIST and return the last keyword found."
   (declare (debug nil))
   `(car (last (cl-loop for keyword in ',keywords
                        when (member keyword ,list)
@@ -273,7 +277,8 @@ use when opening, copying, etc."
                        and collect (s-replace (rx ":") "" keyword)))))
 
 (cl-defmacro pocket-reader--regexp-in-list (list regexp &optional (prefix ":"))
-  "If REGEXP matches strings in LIST, destructively remove strings from LIST and return the last matching string without PREFIX."
+  "Return last match of REGEXP in LIST, without PREFIX.
+Also destructively removes matching strings from LIST."
   `(car (last (cl-loop for string in ,list
                        when (string-match ,regexp string)
                        do (setq ,list (delete string ,list))
@@ -703,7 +708,8 @@ of which is chosen as configured by
   (pocket-reader--finalize))
 
 (defun pocket-reader--items-to-tabulated-list-entries (items)
-  "Convert ITEMS to a list of vectors of lists, suitable for `tabulated-list-entries'."
+  "Convert ITEMS to a list of vectors of lists.
+Suitable for `tabulated-list-entries'."
   ;; NOTE: From Emacs docs:
 
   ;; This buffer-local variable specifies the entries displayed in the
@@ -814,7 +820,9 @@ action in the Pocket API."
       (list (pocket-reader--current-item))))
 
 (defun pocket-reader--set-tabulated-list-format ()
-  "Set `tabulated-list-format' according to the maximum width of items about to be displayed."
+  "Set `tabulated-list-format'.
+Sets according to the maximum width of items about to be
+displayed."
   (when-let ((domain-width (cl-loop for item being the hash-values of pocket-reader-items
                                     maximizing (length (ht-get item 'domain))))
              (title-width (- (window-text-width) 11 2 domain-width 10 1)))
@@ -839,7 +847,8 @@ none is found, returns `pocket-reader-open-url-default-function'."
       pocket-reader-open-url-default-function))
 
 (defun pocket-reader--current-item ()
-  "Return list containing cons of current item's ID, suitable for passing to pocket-lib."
+  "Return list containing cons of current item's ID.
+Suitable for passing to pocket-lib."
   (let* ((id (tabulated-list-get-id)))
     (list (cons 'item_id id))))
 
@@ -1240,6 +1249,8 @@ eww, elfeed, and Org."
 (declare-function 'w3m-with-lnum 'w3m-lnum)
 (declare-function 'w3m-lnum-read-interactive 'w3m-lnum)
 (declare-function 'w3m-lnum-get-anchor-info 'w3m-lnum)
+(defvar last-index)
+(defvar w3m-current-url)
 ;;;###autoload
 (with-eval-after-load 'w3m-lnum
   (cl-defun pocket-reader-w3m-lnum-add-link (&key (type 1))
@@ -1286,6 +1297,7 @@ eww, elfeed, and Org."
         (message "Added: %s" url))
     (message "No URL found at point.")))
 
+(defvar elfeed-show-entry)
 ;;;###autoload
 (with-eval-after-load 'elfeed
   (defun pocket-reader-elfeed-search-add-link ()
@@ -1309,10 +1321,13 @@ This is only for the elfeed-entry buffer, not for search buffers."
 (defun pocket-reader-generic-add-link ()
   "Try to add URL at point to Pocket using `thing-at-pt'."
   (interactive)
-  (if-let ((url (thing-at-point-url-at-point)))
+  (if-let ((url (or (thing-at-point-url-at-point)
+                    (with-temp-buffer
+                      (insert (gui-get-selection))
+                      (thing-at-point-url-at-point)))))
       (when (pocket-lib-add-urls url)
         (message "Added: %s" url))
-    (message "No URL found at point.")))
+    (user-error "No URL found at point or in clipboard")))
 
 
 ;;;; Footer

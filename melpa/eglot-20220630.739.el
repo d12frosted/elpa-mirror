@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220624.939
-;; Package-Commit: 35a519a533c2d28e7d88e8541eca0de2daa531ee
+;; Package-Version: 20220630.739
+;; Package-Commit: bd970be047aba4513c2970b9ff2d842f0472cb0e
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -2713,13 +2713,10 @@ for which LSP on-type-formatting should be requested."
                (eglot--signal-textDocument/didChange)
                (eldoc)))))))))
 
-(defun eglot--hover-info (contents &optional range)
-  (let ((heading (and range (pcase-let ((`(,beg . ,end) (eglot--range-region range)))
-                              (concat (buffer-substring beg end)  ": "))))
-        (body (mapconcat #'eglot--format-markup
-                         (if (vectorp contents) contents (list contents)) "\n")))
-    (when (or heading (cl-plusp (length body))) (concat heading body))))
-
+(defun eglot--hover-info (contents &optional _range)
+  (mapconcat #'eglot--format-markup
+             (if (vectorp contents) contents (list contents)) "\n"))
+ 
 (defun eglot--sig-info (sigs active-sig sig-help-active-param)
   (cl-loop
    for (sig . moresigs) on (append sigs nil) for i from 0

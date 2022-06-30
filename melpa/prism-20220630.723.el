@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/prism.el
-;; Package-Version: 20220627.413
-;; Package-Commit: 1ce65db67e3f521c6c0ac8f67e4a39eb0cc950ab
+;; Package-Version: 20220630.723
+;; Package-Commit: 757bbcdf0ec51b6c7372c1853fa542c7de30499c
 ;; Version: 0.3-pre
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1"))
 ;; Keywords: faces lisp
@@ -473,7 +473,9 @@ Matches up to LIMIT."
               (or (unless (or in-string-p found-string-p found-comment-p)
                     ;; Neither in a string nor looking at nor in a
                     ;; comment: set `end' to any comment found before it.
-                    (when (re-search-forward (rx (or (syntax string-quote) (syntax comment-start))) end t)
+                    (when (re-search-forward (rx (or (seq (not (syntax escape)) (syntax string-quote))
+                                                     (syntax comment-start)))
+                                             end t)
                       (unless (equal '(7) (syntax-after (match-beginning 0)))
                         ;; Not in a string: set end to the beginning
                         ;; of the comment (this avoids stopping at
