@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.6
-;; Package-Version: 20220629.1827
-;; Package-Commit: 5f065301be9cb5374234ad7e6717d63634e15938
+;; Package-Version: 20220630.312
+;; Package-Commit: bfe7be9f483c9eb9764bdccd8601fc27b3546082
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "27.1")(zk "0.3"))
@@ -174,7 +174,8 @@ To quickly change this setting, call `zk-index-desktop-add-toggle'."
   (when zk-index-desktop-mode
     (zk-index-desktop-make-buttons)
     (when-let ((mode zk-index-desktop-major-mode))
-      (funcall mode))
+      (funcall mode)
+      (use-local-map zk-index-desktop-map))
     (setq truncate-lines t)))
 
 (defvar zk-index-desktop-button-map
