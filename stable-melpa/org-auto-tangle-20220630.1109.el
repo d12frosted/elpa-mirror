@@ -2,9 +2,9 @@
 
 ;; Author: Yilkal Argaw
 ;; URL: https://github.com/yilkalargaw/org-auto-tangle
-;; Package-Version: 20220607.2042
-;; Package-Commit: 87b867b46e9d75bb65c6b4d02565c67e225bd429
-;; Version: 0.4.1
+;; Package-Version: 20220630.1109
+;; Package-Commit: c20803648055791eb7ff7a72d0c43ceb43d7c082
+;; Version: 0.4.2
 ;; Keywords: outlines
 ;; Package-Requires: ((emacs "24.1") (async "1.9.3"))
 
@@ -81,15 +81,18 @@ for a specific file, add its full path to this list.")
   (async-start
    (let ((args (list file)))
      `(lambda ()
-	(require 'org)
-	(let ((start-time (current-time))
-	      (non-essential t)
-	      (org-confirm-babel-evaluate (not (member ,file ',org-auto-tangle-babel-safelist))))
-	  (apply #'org-babel-tangle-file ',args)
-	  (format "%.2f" (float-time (time-since start-time))))))
+        (require 'org)
+        (let ((start-time (current-time))
+              (non-essential t)
+              (org-confirm-babel-evaluate (not (member ,file ',org-auto-tangle-babel-safelist)))
+              (org-src-preserve-indentation ,org-src-preserve-indentation)
+              (org-babel-pre-tangle-hook ,org-babel-pre-tangle-hook)
+              (org-babel-post-tangle-hook ,org-babel-post-tangle-hook)))
+          (apply #'org-babel-tangle-file ',args)
+          (format "%.2f" (float-time (time-since start-time))))))
    (let ((message-string (format "Tangling %S completed after" file)))
      `(lambda (tangle-time)
-	(message "%s %s seconds",message-string tangle-time)))))
+        (message "%s %s seconds",message-string tangle-time)))))
 
 (defun org-auto-tangle-tangle-if-needed ()
   "Call org-auto-tangle-async if needed.
@@ -106,6 +109,7 @@ Tangle will happen depending on the value of
                         org-auto-tangle-default)))
       (org-auto-tangle-async (buffer-file-name)))))
 
+;;;###autoload
 (define-minor-mode org-auto-tangle-mode
   "Automatically tangle org-mode files with the option #+auto_tangle: t."
   :lighter " org-a-t"

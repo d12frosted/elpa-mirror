@@ -7,7 +7,7 @@
 ;; Created: 2022
 ;; Version: 0.4
 ;; Package-Version: 20220625.1302
-;; Package-Commit: 9ad8b7e20bb44b615fc1d053f410682d32893777
+;; Package-Commit: 239c02aa99dc52755edf38d5e9c9e986683c4249
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 

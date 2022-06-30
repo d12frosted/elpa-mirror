@@ -5,8 +5,6 @@
 ;; Author: Davide Restivo <davide.restivo@yahoo.it>
 ;; Maintainer: Davide Restivo <davide.restivo@yahoo.it>
 ;; Version: 0.0.3
-;; Package-Version: 20220108.2103
-;; Package-Commit: 968f037eff48ceca15fd135738051c48ab14cfd6
 ;; URL: https://github.com/daviderestivo/load-bash-alias
 ;; Package-Requires: ((emacs "24.1") (seq "2.16"))
 ;; Keywords: emacs bash eshell alias

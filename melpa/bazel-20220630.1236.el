@@ -1,8 +1,8 @@
 ;;; bazel.el --- Bazel support for Emacs -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/bazelbuild/emacs-bazel-mode
-;; Package-Version: 20220629.1323
-;; Package-Commit: 0b01986b1ba4acb0505be80303cdbed3727e958f
+;; Package-Version: 20220630.1236
+;; Package-Commit: f87ff76a639a06c0652f90e59cdc71732a4ad30d
 ;; Keywords: build tools, languages
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0
@@ -27,6 +27,12 @@
 ;; instructions.
 
 ;;; Code:
+
+;; Work around Bug#44481.
+;; TODO(phst): Add this workaround to rules_elisp instead.
+(eval-and-compile
+  (when (version< emacs-version "27.2")
+    (define-advice system-name (:after-until ()) "")))
 
 (require 'cl-lib)
 (require 'compile)
