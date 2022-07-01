@@ -1,0 +1,17 @@
+(eglot-fsharp .
+	      [(20220630 2007)
+	       ((emacs
+		 (27 1))
+		(eglot
+		 (1 4))
+		(fsharp-mode
+		 (1 10))
+		(jsonrpc
+		 (1 0 14)))
+	       "fsharp-mode eglot integration" single
+	       ((:commit . "185bfc2ca091cdd5d80ee798247d249076de2b30")
+		(:authors
+		 ("Jürgen Hötzel" . "juergen@hoetzel.info"))
+		(:maintainer "Jürgen Hötzel" . "juergen@hoetzel.info")
+		(:keywords "languages")
+		(:url . "https://github.com/fsharp/emacs-fsharp-mode"))])
