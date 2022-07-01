@@ -617,16 +617,16 @@
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
 	     (:commit . "d10d68c382e17960fc9aaef072fd18a23ea92a86"))])
  (cursory .
-	  [(0 1 4)
+	  [(0 2 1)
 	   ((emacs
 	     (27 1)))
 	   "Manage cursor styles using presets" tar
 	   ((:url . "https://git.sr.ht/~protesilaos/cursory")
 	    (:keywords "convenience" "cursor")
-	    (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+	    (:maintainer "Cursory Development" . "~protesilaos/cursory@lists.sr.ht")
 	    (:authors
 	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	    (:commit . "63c4b42ebe4446484bfb2a81b0b97ff65bcfbb3d"))])
+	    (:commit . "e04fd74d56bee52eccbc124c5395ee78e47189a0"))])
  (cycle-quotes .
 	       [(0 1)
 		nil "Cycle between quote styles" tar
@@ -2386,7 +2386,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "86a7c429c6878287c068106b318889824cad3210"))])
  (pyim .
-       [(5 2 0)
+       [(5 2 1)
 	((emacs
 	  (25 1))
 	 (async
@@ -2400,7 +2400,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "9606d25f906f802307eb1d8cb5fa458eec837b04"))])
+	 (:commit . "35315cf9fd554bb652961e5a8a8ebbafc3566d2e"))])
  (pyim-basedict .
 		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar

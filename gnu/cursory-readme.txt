@@ -10,11 +10,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `cursory' (or `cursory.el'), and provides every other piece
 of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.1.0,
-released on 2022-04-21.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.2.0,
+released on 2022-07-01.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.2.0-dev.
+Current development target is 0.3.0-dev.
 
 ⁃ Homepage: <https://protesilaos.com/emacs/cursory>.
 ⁃ Git repository: <https://git.sr.ht/~protesilaos/cursory>.
@@ -26,10 +26,11 @@ Table of Contents
 1. COPYING
 2. Overview
 3. Installation
-4. GNU ELPA package
-.. 1. Manual installation
-5. Sample configuration
-6. Acknowledgements
+.. 1. GNU ELPA package
+.. 2. Manual installation
+4. Sample configuration
+5. Acknowledgements
+6. Also see
 7. GNU Free Documentation License
 8. Indices
 .. 1. Function index
@@ -59,25 +60,61 @@ Table of Contents
 ══════════
 
   Cursory provides a thin wrapper around built-in variables that affect
-  the style of the Emacs cursor.  The intent is to allow the user to
-  define preset configurations such as “block with slow blinking” or
-  “bar with fast blinking” and set them on demand.
+  the style of the Emacs cursor on graphical terminals.  The intent is
+  to allow the user to define preset configurations such as “block with
+  slow blinking” or “bar with fast blinking” and set them on demand.
 
-  Users can define their preferences in the option `cursory-presets'.
-  The command `cursory-set-preset' can then be used to select one such
-  style.  Selection uses minibuffer completion.
+  The user option `cursory-presets' holds the presets.  The command
+  `cursory-set-preset' is used to select one among them.  Selection
+  supports minibuffer completion when there are multiple presets, else
+  sets the single preset outright.
 
-  The function `cursory-store-latest-preset' can be used to save the
-  last selected style in the `cursory-latest-state-file'.  The value can
-  then be restored with the `cursory-restore-latest-preset' function.
+  Presets consist of a list of properties that govern the cursor type in
+  the active and inactive windows, as well as cursor blinking variables.
+  They look like this:
+
+  ┌────
+  │ (bar
+  │  :cursor-type (bar . 2)
+  │  :cursor-in-non-selected-windows hollow
+  │  :blink-cursor-blinks 10
+  │  :blink-cursor-interval 0.5
+  │  :blink-cursor-delay 0.2)
+  └────
+
+  The car of the list is an arbitrary, user-defined symbol that
+  identifies (and can describe) the set.  Each of the properties
+  corresponds to built-in variables: `cursor-type',
+  `cursor-in-non-selected-windows', `blink-cursor-blinks',
+  `blink-cursor-interval', `blink-cursor-delay'.  The value each
+  property accepts is the same as the variable it references.
+
+  When called from Lisp, the `cursory-set-preset' command requires a
+  PRESET argument, such as:
+
+  ┌────
+  │ (cursory-set-preset 'bar)
+  └────
+
+  The default behaviour of `cursory-set-preset' is to change cursors
+  globally.  The user can, however, limit the effect to the current
+  buffer.  With interactive use, this is done by invoking the command
+  with a universal prefix argument (`C-u' by default).  When called from
+  Lisp, the LOCAL argument must be non-nil.
+
+  The function `cursory-store-latest-preset' is used to save the last
+  selected style in the `cursory-latest-state-file'.  The value can then
+  be restored with the `cursory-restore-latest-preset' function.
 
 
 3 Installation
 ══════════════
 
 
-4 GNU ELPA package
-══════════════════
+
+
+3.1 GNU ELPA package
+────────────────────
 
   The package is available as `cursory'.  Simply do:
 
@@ -89,8 +126,14 @@ Table of Contents
 
   And search for it.
 
+  GNU ELPA provides the latest stable release.  Those who prefer to
+  follow the development process in order to report bugs or suggest
+  changes, can use the version of the package from the GNU-devel ELPA
+  archive.  Read:
+  <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
-4.1 Manual installation
+
+3.2 Manual installation
 ───────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
@@ -119,7 +162,7 @@ Table of Contents
   Everything is in place to set up the package.
 
 
-5 Sample configuration
+4 Sample configuration
 ══════════════════════
 
   Remember to read the doc string of each of these variables or
@@ -129,33 +172,29 @@ Table of Contents
   │ (require 'cursory)
   │ 
   │ (setq cursory-presets
-  │       '((bar . ( :cursor-type (bar . 2)
-  │ 		 :cursor-in-non-selected-windows hollow
-  │ 		 :blink-cursor-blinks 10
-  │ 		 :blink-cursor-interval 0.5
-  │ 		 :blink-cursor-delay 0.2))
-  │ 
-  │ 	(box  . ( :cursor-type box
-  │ 		  :cursor-in-non-selected-windows hollow
-  │ 		  :blink-cursor-blinks 10
-  │ 		  :blink-cursor-interval 0.5
-  │ 		  :blink-cursor-delay 0.2))
-  │ 
-  │ 	(underscore . ( :cursor-type (hbar . 3)
-  │ 			:cursor-in-non-selected-windows hollow
-  │ 			:blink-cursor-blinks 50
-  │ 			:blink-cursor-interval 0.2
-  │ 			:blink-cursor-delay 0.2))))
+  │       '((bar
+  │ 	 :cursor-type (bar . 2)
+  │ 	 :cursor-in-non-selected-windows hollow
+  │ 	 :blink-cursor-blinks 10
+  │ 	 :blink-cursor-interval 0.5
+  │ 	 :blink-cursor-delay 0.2)
+  │ 	(box
+  │ 	 :cursor-type box
+  │ 	 :cursor-in-non-selected-windows hollow
+  │ 	 :blink-cursor-blinks 10
+  │ 	 :blink-cursor-interval 0.5
+  │ 	 :blink-cursor-delay 0.2)
+  │ 	(underscore
+  │ 	 :cursor-type (hbar . 3)
+  │ 	 :cursor-in-non-selected-windows hollow
+  │ 	 :blink-cursor-blinks 50
+  │ 	 :blink-cursor-interval 0.2
+  │ 	 :blink-cursor-delay 0.2)))
   │ 
   │ (setq cursory-latest-state-file (locate-user-emacs-file "cursory-latest-state"))
   │ 
-  │ (cursory-restore-latest-preset)
-  │ 
-  │ ;; Set `cursory-recovered-preset' or fall back to desired style from
-  │ ;; `cursory-presets'.
-  │ (if cursory-recovered-preset
-  │     (cursory-set-preset cursory-recovered-preset)
-  │   (cursory-set-preset 'bar))
+  │ ;; Set last preset or fall back to desired style from `cursory-presets'.
+  │ (cursory-set-preset (or (cursory-restore-latest-preset) 'bar))
   │ 
   │ ;; The other side of `cursory-restore-latest-preset'.
   │ (add-hook 'kill-emacs-hook #'cursory-store-latest-preset)
@@ -166,7 +205,7 @@ Table of Contents
   └────
 
 
-6 Acknowledgements
+5 Acknowledgements
 ══════════════════
 
   Cursory is meant to be a collective effort.  Every bit of help
@@ -176,7 +215,17 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to the code or manual
-        Philip Kaludercic, Stefan Monnier.
+        Christopher League, Philip Kaludercic, Stefan Monnier.
+
+
+6 Also see
+══════════
+
+  The `electric-cursor' package by Case Duckworth lets the user
+  automatically change the cursor style when a certain mode is
+  activated.  For example, the box is the default and switches to a bar
+  when `overwrite-mode' is on:
+  <https://github.com/duckwork/electric-cursor>.
 
 
 7 GNU Free Documentation License
