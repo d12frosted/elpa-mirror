@@ -8,12 +8,12 @@ Checking out bde0251ecb504f585dfa27c205c8e312655310cc
 Checking out bde0251ecb504f585dfa27c205c8e312655310cc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/el-autoyas/
-  to /tmp/el-autoyas8CaZoo/el-autoyas-20120918.1317
+  to /tmp/el-autoyas5f7Qhf/el-autoyas-20120918.1317
     el-autoyas.el -> el-autoyas.el
     el-autoyas.texi -> el-autoyas.texi
-Generating /tmp/el-autoyas8CaZoo/el-autoyas-20120918.1317/el-autoyas.info
+Generating /tmp/el-autoyas5f7Qhf/el-autoyas-20120918.1317/el-autoyas.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/el-autoyas/el-autoyas.texi -o /tmp/el-autoyas8CaZoo/el-autoyas-20120918.1317/el-autoyas.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/el-autoyas/el-autoyas.texi -o /tmp/el-autoyas5f7Qhf/el-autoyas-20120918.1317/el-autoyas.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -52,7 +52,7 @@ HEAD is now at bde0251 Tested with 0.6.  Bug fixes applied.
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/el-autoyas8CaZoo/el-autoyas-20120918.1317/el-autoyas.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/el-autoyas5f7Qhf/el-autoyas-20120918.1317/el-autoyas.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -88,7 +88,7 @@ HEAD is now at bde0251 Tested with 0.6.  Bug fixes applied.
 /mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: warning: node next `Hook run on package load' in menu `History' and in sectioning `' differ
 /mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: warning: node prev `Hook run on package load' in menu `Hook run on package load' and in sectioning `About' differ
 /mnt/store/melpa/working/el-autoyas/el-autoyas.texi:126: warning: node prev `History' in menu `Hook run on package load' and in sectioning `' differ
-install-info: No such file or directory for /tmp/el-autoyas8CaZoo/el-autoyas-20120918.1317/el-autoyas.info
+install-info: No such file or directory for /tmp/el-autoyas5f7Qhf/el-autoyas-20120918.1317/el-autoyas.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
 Created el-autoyas-20120918.1317.tar containing:
@@ -96,7 +96,7 @@ Created el-autoyas-20120918.1317.tar containing:
   el-autoyas-20120918.1317/dir
   el-autoyas-20120918.1317/el-autoyas-pkg.el
   el-autoyas-20120918.1317/el-autoyas.el
-Built el-autoyas in 6.123s, finished at 2022-07-01T03:38:24+0000
+Built el-autoyas in 9.395s, finished at 2022-07-01T06:37:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 362 Jul  1 03:38 packages/el-autoyas-20120918.1317.entry
- 32K -rw-r--r-- 1 root root 30K Jul  1 03:38 packages/el-autoyas-20120918.1317.tar
+4.0K -rw-r--r-- 1 root root 362 Jul  1 06:37 packages/el-autoyas-20120918.1317.entry
+ 32K -rw-r--r-- 1 root root 30K Jul  1 06:37 packages/el-autoyas-20120918.1317.tar

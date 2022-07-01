@@ -3,8 +3,8 @@
 ;; Copyright © 2018 Vitalii Elenhaupt <velenhaupt@gmail.com>
 ;; Author: Vitalii Elenhaupt
 ;; URL: https://github.com/veelenga/carbon-now-sh.el
-;; Package-Version: 20201028.950
-;; Package-Commit: 6444a77a6065803cf97c3321f811bd34a8063d76
+;; Package-Version: 20220701.332
+;; Package-Commit: e66f2e43e288f35ad9075f5fc84d59ad348efc88
 ;; Keywords: convenience
 ;; Version: 0
 ;; Package-Requires: ((emacs "24.4"))
@@ -53,7 +53,7 @@
                                 (beg (and (use-region-p) (region-beginning)))
                                 (end (and (use-region-p) (region-end))))
   "Return code in current region."
-  (buffer-substring-no-properties beg end))
+  (when beg (buffer-substring-no-properties beg end)))
 
 ;;;###autoload
 (defun carbon-now-sh ()

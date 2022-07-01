@@ -20,13 +20,13 @@
 ;; USA
 
 ;; Version: 0.8
-;; Package-Version: 20220625.855
-;; Package-Commit: f4d123cd0b6a9f32c9423fdd9950062054287835
+;; Package-Version: 20220701.641
+;; Package-Commit: f9844fa3e14cd51d9f667c3ab9d7a7d816c3fd55
 ;; Author: Sibi Prabakaran
 ;; Keywords: just justfile tools processes
 ;; URL: https://github.com/psibi/justl.el
 ;; License: GNU General Public License >= 3
-;; Package-Requires: ((transient "0.1.0") (emacs "25.3") (xterm-color "2.0") (s "1.2.0") (f "0.20.0"))
+;; Package-Requires: ((transient "0.1.0") (emacs "25.3") (s "1.2.0") (f "0.20.0"))
 
 ;;; Commentary:
 
@@ -62,17 +62,20 @@
 ;;
 ;; You can also control the width of the RECIPE column in the justl
 ;; buffer via `justl-recipe width`.  By default it has a value of 20.
+;;
 
 ;;; Code:
 
+(require 'ansi-color)
 (require 'transient)
 (require 'cl-lib)
-(require 'xterm-color)
 (require 'eshell)
 (require 'esh-mode)
 (require 's)
 (require 'f)
 (require 'compile)
+(require 'comint)
+(require 'subr-x)
 
 (defgroup justl nil
   "Justfile customization group."
@@ -285,20 +288,21 @@ CMD is the just command as a list."
                  process-name
                  err))))))
 
-(defun justl--xterm-color-filter (proc string)
-  "Filter function for PROC handling colors.
+(defun justl--process-filter (proc string)
+  "Filter function for PROC handling colors and carriage return.
 
 STRING is the data returned by the PROC"
   (when (buffer-live-p (process-buffer proc))
     (with-current-buffer (process-buffer proc)
-      (let ((inhibit-read-only t)
-            (moving (= (point) (process-mark proc))))
-        (save-excursion
-          ;; Insert the text, advancing the process marker.
-          (goto-char (process-mark proc))
-          (insert (xterm-color-filter string))
-          (set-marker (process-mark proc) (point)))
-        (if moving (goto-char (process-mark proc)))))))
+      (let ((inhibit-read-only t))
+        (unwind-protect
+            (progn
+              (widen)
+              (goto-char (marker-position (process-mark proc)))
+              (insert string)
+              (comint-carriage-motion (process-mark proc) (point))
+              (ansi-color-apply-on-region (process-mark proc) (point))
+              (set-marker (process-mark proc) (point))))))))
 
 (defun justl-compilation-setup-buffer (buf dir mode &optional no-mode-line)
   "Setup the compilation buffer for just-compile-mode.
@@ -351,7 +355,7 @@ ARGS is a plist that affects how the process is run.
 
         (setq-local justl--justfile (justl--justfile-from-arg (elt command 1)))
         (run-hook-with-args 'compilation-start-hook process)
-        (set-process-filter process 'justl--xterm-color-filter)
+        (set-process-filter process 'justl--process-filter)
         (set-process-sentinel process sentinel)
         (set-process-coding-system process 'utf-8-emacs-unix 'utf-8-emacs-unix)
         (pop-to-buffer buf)))))
@@ -432,7 +436,7 @@ ARGS is a ist of arguments."
     (justl--log-command process-name cmd)
     (make-process :name process-name
                   :buffer buffer-name
-                  :filter 'justl--xterm-color-filter
+                  :filter 'justl--process-filter
                   :sentinel #'justl--sentinel
                   :file-handler t
                   :stderr nil
