@@ -8,8 +8,8 @@ To turn CDLaTeX Minor Mode on and off in a particular buffer, use
 To turn on CDLaTeX Minor Mode for all LaTeX files, add one of the
 following lines to your .emacs file:
 
-  (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
-  (add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
+  (add-hook 'LaTeX-mode-hook #'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
+  (add-hook 'latex-mode-hook #'turn-on-cdlatex)   ; with Emacs latex mode
 
 For key bindings, see further down in this documentation.
 
@@ -47,7 +47,7 @@ on-the-fly help.
        template, text needs to be filled in at various places, which we
        call "points of interest".  You can use the TAB key to jump to
        the next point of interest in the template.  If there is an
-       active region, the region will be wrappend into the environment,
+       active region, the region will be wrapped into the environment,
        ignoring the template content.
 
        For many frequently used LaTeX environments, abbreviations are
@@ -177,8 +177,8 @@ on-the-fly help.
 
    If you press `_' or `^' twice, the template inserted will be
    `_{\rm }' or `^{\rm }', respectively, to insert a roman
-   sub/super-script.  Style guides require that all sub and
-   superscipts that are descriptive (so not a mathematical or
+   sub/super-script.  Style guides require that all sub- and
+   superscripts that are descriptive (so not a mathematical or
    physical quantity themselves) need to be roman.  So $x_i$ is i
    is an index, but $x_{\rm max}$ to indicate the maximum value.  You
    can disable this behavior through the variable
