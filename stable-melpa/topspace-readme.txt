@@ -1,6 +1,12 @@
-TopSpace allows you to scroll down and recenter top lines
-by automatically drawing an upper margin/padding above the top line
-as you scroll down or recenter top text.
+TopSpace provides the ability to scroll down the first line of a buffer
+to be below the top of the window with blank lines drawn above it,
+allowing the first line to be displayed in the center of the window
+as if it weren't the first line.
+This is done by automatically drawing an upper margin/padding above line 1
+as you recenter and scroll down top text, without modifying the
+underlying file.
+
+See https://github.com/trevorpogue/topspace for a gif demo & documentation.
 
 Features:
 
@@ -15,6 +21,7 @@ Features:
   centered all the way to the top line.
 
 How it works:
+
 The "upper margin" is created by drawing an overlay before
 window-start containing newline characters.  As you scroll above the
 top line, more newline characters are added or removed accordingly.
@@ -28,6 +35,3 @@ in Emacs as far as the author is aware.  This is achieved by using
 commands so that custom topspace functions are called before or after
 each time any of these other commands are called (interactively or
 otherwise).
-
-See the readme at https://github.com/trevorpogue/topspace for more
-information.

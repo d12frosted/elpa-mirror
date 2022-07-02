@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2022 Thierry Volpiatto
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20220629.1258
-;; Package-Commit: 11c91c13ca3649e3d6fca4672dc7fae4a59b5d56
+;; Package-Version: 20220701.523
+;; Package-Commit: 50627b2c5ac64f65a406c94aaaf5f7d115d02603
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -190,12 +190,17 @@ When non nil this disable `helm-move-to-line-cycle-in-source'."
 
 (defface helm-ls-git-branches-current
   '((t :foreground "gold"))
-  "Color of the start prefixing current branch."
+  "Color of the star prefixing current branch."
   :group 'helm-ls-git)
 
 (defface helm-ls-git-branches-name
   '((t :foreground "red"))
   "Color of branches names."
+  :group 'helm-ls-git)
+
+(defface helm-ls-git-branches-name-current
+  '((t :foreground "green"))
+  "Color of current branch name."
   :group 'helm-ls-git)
 
 
@@ -1067,7 +1072,7 @@ object will be passed git rebase i.e. git rebase -i <hash>."
                                   (propertize (match-string 1 c)
                                               'face 'helm-ls-git-branches-current)
                                   (propertize (match-string 2 c)
-                                              'face 'helm-ls-git-branches-name)
+                                              'face 'helm-ls-git-branches-name-current)
                                   (make-string (- maxlen (length c)) ? )
                                   log)
                         (format "%s: %s%s"
@@ -1104,6 +1109,7 @@ object will be passed git rebase i.e. git rebase -i <hash>."
   (with-helm-default-directory (helm-default-directory)
     (let* ((remote "origin")
            (pcommand (capitalize command))
+           (branch (helm-ls-git--branch))
            ;; A `C-g' in helm-comp-read will quit function as well.
            (switches (if current-prefix-arg
                          (append (list command)
@@ -1115,10 +1121,10 @@ object will be passed git rebase i.e. git rebase -i <hash>."
                                                (helm-ls-git-remotes)
                                                "\n")
                                               :allow-nest t)))
-                                 (list (helm-ls-git--branch)))
+                                 (list branch))
                        (append (list command) args)))
            (pr (make-progress-reporter
-                (format "%sing from `%s' " pcommand remote)))
+                (format "%sing from `%s/%s' " pcommand remote branch)))
            (tm (run-at-time 1 0.1 (lambda () (progress-reporter-update pr))))
            process-connection-type
            proc)
@@ -1606,7 +1612,11 @@ object will be passed git rebase i.e. git rebase -i <hash>."
 (defun helm-ls-git-run-stage-marked-and-commit ()
   (interactive)
   (with-helm-alive-p
-    (helm-exit-and-execute-action 'helm-ls-git-stage-marked-and-commit)))
+    (condition-case _err
+        ;; Fail when helm-ls-git-stage-marked-and-commit is not in
+        ;; action list because file is already staged.
+        (helm-exit-and-execute-action 'helm-ls-git-stage-marked-and-commit)
+      (error (helm-exit-and-execute-action 'helm-ls-git-commit) nil))))
 (put 'helm-ls-git-run-stage-marked-and-commit 'no-helm-mx t)
 
 (defun helm-ls-git-stage-marked-and-extend-commit (candidate)

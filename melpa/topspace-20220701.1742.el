@@ -1,12 +1,12 @@
-;;; topspace.el --- Scroll down & recenter top lines / get upper margins/padding -*- lexical-binding: t -*-
+;;; topspace.el --- Scroll down & recenter line 1 to be below the top of the window using upper margin/padding -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2021-2022 Free Software Foundation, Inc.
 
 ;; Author: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; Maintainer: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; URL: https://github.com/trevorpogue/topspace
-;; Package-Version: 20220608.1302
-;; Package-Commit: 6692cd1346ce0b0a1fbdcbfa496b49365bcd660b
+;; Package-Version: 20220701.1742
+;; Package-Commit: 86efd067c873f97ab51c194335ae79e095aab6dc
 ;; Keywords: convenience, scrolling, center, cursor, margin, padding
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -28,9 +28,15 @@
 
 ;;; Commentary:
 
-;; TopSpace allows you to scroll down and recenter top lines
-;; by automatically drawing an upper margin/padding above the top line
-;; as you scroll down or recenter top text.
+;; TopSpace provides the ability to scroll down the first line of a buffer
+;; to be below the top of the window with blank lines drawn above it,
+;; allowing the first line to be displayed in the center of the window
+;; as if it weren't the first line.
+;; This is done by automatically drawing an upper margin/padding above line 1
+;; as you recenter and scroll down top text, without modifying the
+;; underlying file.
+
+;; See https://github.com/trevorpogue/topspace for a gif demo & documentation.
 
 ;; Features:
 
@@ -45,6 +51,7 @@
 ;;   centered all the way to the top line.
 
 ;; How it works:
+
 ;; The "upper margin" is created by drawing an overlay before
 ;; window-start containing newline characters.  As you scroll above the
 ;; top line, more newline characters are added or removed accordingly.
@@ -58,9 +65,6 @@
 ;; commands so that custom topspace functions are called before or after
 ;; each time any of these other commands are called (interactively or
 ;; otherwise).
-
-;; See the readme at https://github.com/trevorpogue/topspace for more
-;; information.
 
 ;;; Code:
 
@@ -150,7 +154,7 @@ This is done by automatically calling `topspace-recenter-buffer'
 and the positioning can be customized with `topspace-center-position'.
 Top space will not be added if the number of text lines in the buffer is larger
 than or close to the selected window's height, or if `window-start' is greater
-than 1.  Customize `topspace-center-position' to adjust the centering position.
+than 1.
 
 With the default value, buffers will not be centered if in a child frame
 or if the user has already scrolled or used `recenter' with buffer in the
@@ -770,11 +774,17 @@ Topspace will not be enabled for:
 
 ;;;###autoload
 (define-minor-mode topspace-mode
-  "Scroll down & recenter top lines / get upper margins/padding.
+  "Scroll down & recenter line 1 to be below the top of the window.
 
-TopSpace allows you to scroll down and recenter top lines
-by automatically drawing an upper margin/padding above the top line
-as you scroll down or recenter top text.
+TopSpace provides the ability to scroll down the first line of a buffer
+to be below the top of the window with blank lines drawn above it,
+allowing the first line to be displayed in the center of the window
+as if it weren't the first line.
+This is done by automatically drawing an upper margin/padding above line 1
+as you recenter and scroll down top text, without modifying the
+underlying file.
+
+See https://github.com/trevorpogue/topspace for a gif demo & documentation.
 
 Features:
 
@@ -789,6 +799,7 @@ Features:
   centered all the way to the top line.
 
 How it works:
+
 The \"upper margin\" is created by drawing an overlay before
 window-start containing newline characters.  As you scroll above the
 top line, more newline characters are added or removed accordingly.
@@ -802,9 +813,6 @@ in Emacs as far as the author is aware.  This is achieved by using
 commands so that custom topspace functions are called before or after
 each time any of these other commands are called (interactively or
 otherwise).
-
-See the readme at https://github.com/trevorpogue/topspace for more
-information.
 
 Enabling/disabling:
 When called interactively, toggle `topspace-mode'.
