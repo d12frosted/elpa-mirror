@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/matsievskiysv/multistate.git
 
 Updating /mnt/store/melpa/working/multistate/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/matsievskiysv/multistate.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out a7ab9dc7aac0b6d6d2f872de4e0d1b8550834a9b
+Built multistate in 4.510s, finished at 2022-07-02T09:55:59+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jul  2 09:55 packages/multistate-20210124.2014.el
+4.0K -rw-r--r-- 1 root root 371 Jul  2 09:55 packages/multistate-20210124.2014.entry

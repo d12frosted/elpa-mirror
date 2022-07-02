@@ -3,11 +3,25 @@ Fetcher: gitlab
 Source:  https://gitlab.com/oer/org-re-reveal-ref.git
 
 Updating /mnt/store/melpa/working/org-re-reveal-ref/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/oer/org-re-reveal-ref.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ea9661864d5fbef87b12b78f516c13a40c683f24
+Checking out ea9661864d5fbef87b12b78f516c13a40c683f24
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-re-reveal-ref/
+  to /tmp/org-re-reveal-ref59DXwY/org-re-reveal-ref-20211029.551
+    org-re-reveal-ref.el -> org-re-reveal-ref.el
+    LICENSES => LICENSES
+    README.org -> README.org
+    references.bib -> references.bib
+Created org-re-reveal-ref-20211029.551.tar containing:
+  org-re-reveal-ref-20211029.551/
+  org-re-reveal-ref-20211029.551/LICENSES/
+  org-re-reveal-ref-20211029.551/LICENSES/GPL-3.0-or-later.txt
+  org-re-reveal-ref-20211029.551/README.org
+  org-re-reveal-ref-20211029.551/org-re-reveal-ref-pkg.el
+  org-re-reveal-ref-20211029.551/org-re-reveal-ref.el
+  org-re-reveal-ref-20211029.551/references.bib
+Built org-re-reveal-ref in 5.075s, finished at 2022-07-02T10:00:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 501 Jul  2 10:00 packages/org-re-reveal-ref-20211029.551.entry
+ 60K -rw-r--r-- 1 root root 60K Jul  2 10:00 packages/org-re-reveal-ref-20211029.551.tar

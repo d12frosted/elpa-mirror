@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/phillord/org-drill.git
 
 Updating /mnt/store/melpa/working/org-drill/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/phillord/org-drill.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out bf8fe812d44a3ce3e84361fb39b8ef28ca10fd0c
+Built org-drill in 4.500s, finished at 2022-07-02T09:59:36+0000
+ ✓ Success:
+156K -rw-r--r-- 1 root root 155K Jul  2 09:59 packages/org-drill-20210427.2003.el
+4.0K -rw-r--r-- 1 root root  503 Jul  2 09:59 packages/org-drill-20210427.2003.entry

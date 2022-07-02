@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/iain/hamburger-menu-mode.git
 
 Updating /mnt/store/melpa/working/hamburger-menu/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/iain/hamburger-menu-mode.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 06bc9d6872007a31226d7410d497a0acd98b272b
+Built hamburger-menu in 5.077s, finished at 2022-07-02T09:41:15+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jul  2 09:41 packages/hamburger-menu-20220509.1341.el
+4.0K -rw-r--r-- 1 root root  321 Jul  2 09:41 packages/hamburger-menu-20220509.1341.entry

@@ -3,11 +3,25 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/mit.git
 
 Updating /mnt/store/melpa/working/geiser-mit/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/emacs-geiser/mit.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 4e90e9ae815e89f3540fb9644e6016c663ef5765
+Checking out 4e90e9ae815e89f3540fb9644e6016c663ef5765
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-mit/
+  to /tmp/geiser-mitgaBFL5/geiser-mit-20211204.1935
+    geiser-mit.el -> geiser-mit.el
+    src/geiser => src/geiser
+Created geiser-mit-20211204.1935.tar containing:
+  geiser-mit-20211204.1935/
+  geiser-mit-20211204.1935/geiser-mit-pkg.el
+  geiser-mit-20211204.1935/geiser-mit.el
+  geiser-mit-20211204.1935/src/
+  geiser-mit-20211204.1935/src/geiser/
+  geiser-mit-20211204.1935/src/geiser/compile.scm
+  geiser-mit-20211204.1935/src/geiser/emacs.scm
+  geiser-mit-20211204.1935/src/geiser/geiser.pkg
+  geiser-mit-20211204.1935/src/geiser/load.scm
+Built geiser-mit in 4.904s, finished at 2022-07-02T09:38:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 453 Jul  2 09:38 packages/geiser-mit-20211204.1935.entry
+ 32K -rw-r--r-- 1 root root 30K Jul  2 09:38 packages/geiser-mit-20211204.1935.tar

@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/montanari/cosmo-el.git
 
 Updating /mnt/store/melpa/working/cosmo/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/montanari/cosmo-el.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out dd83b09a49a2843606b28279b674b2207040b36b
+Built cosmo in 5.113s, finished at 2022-07-02T09:22:29+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jul  2 09:22 packages/cosmo-20170922.744.el
+4.0K -rw-r--r-- 1 root root 336 Jul  2 09:22 packages/cosmo-20170922.744.entry

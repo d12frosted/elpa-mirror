@@ -3,11 +3,20 @@ Fetcher: gitlab
 Source:  https://gitlab.com/oer/org-re-reveal.git
 
 Updating /mnt/store/melpa/working/org-re-reveal/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/oer/org-re-reveal.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f184e66e398e1cfdfd55894c67392805ae531a39
+Checking out f184e66e398e1cfdfd55894c67392805ae531a39
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-re-reveal/
+  to /tmp/org-re-reveald1FSPd/org-re-reveal-20220622.642
+    org-re-reveal.el -> org-re-reveal.el
+    ox-re-reveal.el -> ox-re-reveal.el
+Created org-re-reveal-20220622.642.tar containing:
+  org-re-reveal-20220622.642/
+  org-re-reveal-20220622.642/org-re-reveal-pkg.el
+  org-re-reveal-20220622.642/org-re-reveal.el
+  org-re-reveal-20220622.642/ox-re-reveal.el
+Built org-re-reveal in 5.105s, finished at 2022-07-02T10:00:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  345 Jul  2 10:00 packages/org-re-reveal-20220622.642.entry
+132K -rw-r--r-- 1 root root 130K Jul  2 10:00 packages/org-re-reveal-20220622.642.tar

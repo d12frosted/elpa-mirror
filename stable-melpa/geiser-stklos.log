@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/stklos.git
 
 Updating /mnt/store/melpa/working/geiser-stklos/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/emacs-geiser/stklos.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 9db60a7e751c97e30dd528e2a96ff19575b618d2
+Built geiser-stklos in 4.647s, finished at 2022-07-02T09:38:28+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jul  2 09:38 packages/geiser-stklos-20211117.2114.el
+4.0K -rw-r--r-- 1 root root 441 Jul  2 09:38 packages/geiser-stklos-20211117.2114.entry

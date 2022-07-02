@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/akoehn/abgaben.git
 
 Updating /mnt/store/melpa/working/abgaben/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/akoehn/abgaben.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 20d14830f07d66e2a04bcad1498a4a6fbf4b4451
+Built abgaben in 6.664s, finished at 2022-07-02T09:12:35+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jul  2 09:12 packages/abgaben-20171119.646.el
+4.0K -rw-r--r-- 1 root root 411 Jul  2 09:12 packages/abgaben-20171119.646.entry

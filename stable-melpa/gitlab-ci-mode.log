@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/joewreschnig/gitlab-ci-mode.git
 
 Updating /mnt/store/melpa/working/gitlab-ci-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/joewreschnig/gitlab-ci-mode.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out c861dc5fa17d380d5c3aca99dc3bbec5eee623bc
+Built gitlab-ci-mode in 4.039s, finished at 2022-07-02T09:39:21+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jul  2 09:39 packages/gitlab-ci-mode-20191022.2017.el
+4.0K -rw-r--r-- 1 root root 363 Jul  2 09:39 packages/gitlab-ci-mode-20191022.2017.entry

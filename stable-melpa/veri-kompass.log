@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/koral/veri-kompass.git
 
 Updating /mnt/store/melpa/working/veri-kompass/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/koral/veri-kompass.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 271903cdf92db05898ee7cffb65641f30fa08280
+Built veri-kompass in 4.642s, finished at 2022-07-02T10:19:33+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 26K Jul  2 10:19 packages/veri-kompass-20200213.934.el
+4.0K -rw-r--r-- 1 root root 390 Jul  2 10:19 packages/veri-kompass-20200213.934.entry

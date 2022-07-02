@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/Vonfry/zoxide.el.git
 
 Updating /mnt/store/melpa/working/zoxide/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/Vonfry/zoxide.el.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 41c090402816b15eb226ff9368f0ca40c7244f92
+Built zoxide in 4.304s, finished at 2022-07-02T10:22:59+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.7K Jul  2 10:22 packages/zoxide-20220302.522.el
+4.0K -rw-r--r-- 1 root root  339 Jul  2 10:22 packages/zoxide-20220302.522.entry

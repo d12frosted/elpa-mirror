@@ -5,8 +5,8 @@
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.0
-;; Package-Version: 20220604.850
-;; Package-Commit: 1cf73acae8b791e214dc347c2adf7ec17e8ff41a
+;; Package-Version: 20220702.906
+;; Package-Commit: 012f6fee58404205f65fb20877eeaa6f1f6c6270
 ;; Package-Requires: ((emacs "27.1") (magit-section "3.3.0") (elfeed "3.4.1"))
 ;; Homepage: https://github.com/SqrtMinusOne/elfeed-summary.el
 
@@ -749,8 +749,7 @@ items."
                 show-read)
       (format "+%s " elfeed-summary-unread-tag))
     "="
-     (rx-to-string (elfeed-feed-id feed) t)
-    )))
+    (rx-to-string (elfeed-feed-id feed) t))))
 
 (defun elfeed-summary--search-feed-notify (widget &rest _)
   "A function to run in `:notify' in a feed widget button.
@@ -792,10 +791,7 @@ SECTION is an instance of `elfeed-summary-group-section'."
             (format "+%s " elfeed-summary-unread-tag))
           (mapconcat
            (lambda (feed)
-             (format "=%s" (replace-regexp-in-string
-                            (rx "?" (* not-newline) eos)
-                            ""
-                            (elfeed-feed-id feed))))
+             (format "=%s" (rx-to-string (elfeed-feed-id feed) t)))
            feeds
            " ")))))))
 

@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/llvilanova/info-buffer.git
 
 Updating /mnt/store/melpa/working/info-buffer/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/llvilanova/info-buffer.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out d35dad6e766c6e2ddb8dc6acb4ce5b6e10fbcaa7
+Built info-buffer in 4.806s, finished at 2022-07-02T09:46:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jul  2 09:46 packages/info-buffer-20170112.1422.el
+4.0K -rw-r--r-- 1 root root  391 Jul  2 09:46 packages/info-buffer-20170112.1422.entry

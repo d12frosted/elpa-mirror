@@ -3,11 +3,33 @@ Fetcher: gitlab
 Source:  https://gitlab.com/elzair/org-if.git
 
 Updating /mnt/store/melpa/working/org-if/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/elzair/org-if.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out fab602cc1bbee7a4e99c0083e129219d3f9ed2e8
+Checking out fab602cc1bbee7a4e99c0083e129219d3f9ed2e8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-if/
+  to /tmp/org-if1EXhUp/org-if-20150920.1513
+    ob-org-if.el -> ob-org-if.el
+    org-if-active.el -> org-if-active.el
+    org-if-interpreter.el -> org-if-interpreter.el
+    org-if-link.el -> org-if-link.el
+    org-if-misc.el -> org-if-misc.el
+    org-if-mode.el -> org-if-mode.el
+    org-if-pkg.el -> org-if-pkg.el
+    org-if-reader.el -> org-if-reader.el
+    org-if.el -> org-if.el
+Created org-if-20150920.1513.tar containing:
+  org-if-20150920.1513/
+  org-if-20150920.1513/ob-org-if.el
+  org-if-20150920.1513/org-if-active.el
+  org-if-20150920.1513/org-if-interpreter.el
+  org-if-20150920.1513/org-if-link.el
+  org-if-20150920.1513/org-if-misc.el
+  org-if-20150920.1513/org-if-mode.el
+  org-if-20150920.1513/org-if-pkg.el
+  org-if-20150920.1513/org-if-reader.el
+  org-if-20150920.1513/org-if.el
+Built org-if in 5.192s, finished at 2022-07-02T09:59:53+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 327 Jul  2 09:59 packages/org-if-20150920.1513.entry
+ 52K -rw-r--r-- 1 root root 50K Jul  2 09:59 packages/org-if-20150920.1513.tar

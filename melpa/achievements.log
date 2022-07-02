@@ -3,11 +3,27 @@ Fetcher: gitlab
 Source:  https://gitlab.com/gvol/emacs-achievements.git
 
 Updating /mnt/store/melpa/working/achievements/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/gvol/emacs-achievements.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out c8275ee492d56255999d58f2988129ab29145182
+Checking out c8275ee492d56255999d58f2988129ab29145182
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/achievements/
+  to /tmp/achievementsCWHgoa/achievements-20150531.1317
+    achievements-functions.el -> achievements-functions.el
+    achievements-pkg.el -> achievements-pkg.el
+    achievements.el -> achievements.el
+    advanced-achievements.el -> advanced-achievements.el
+    basic-achievements.el -> basic-achievements.el
+    ideas-achievements.el -> ideas-achievements.el
+Created achievements-20150531.1317.tar containing:
+  achievements-20150531.1317/
+  achievements-20150531.1317/achievements-functions.el
+  achievements-20150531.1317/achievements-pkg.el
+  achievements-20150531.1317/achievements.el
+  achievements-20150531.1317/advanced-achievements.el
+  achievements-20150531.1317/basic-achievements.el
+  achievements-20150531.1317/ideas-achievements.el
+Built achievements in 5.091s, finished at 2022-07-02T09:13:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 318 Jul  2 09:13 packages/achievements-20150531.1317.entry
+ 60K -rw-r--r-- 1 root root 60K Jul  2 09:13 packages/achievements-20150531.1317.tar
