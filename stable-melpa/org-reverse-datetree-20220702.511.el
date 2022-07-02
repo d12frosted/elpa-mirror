@@ -3,9 +3,9 @@
 ;; Copyright (C) 2018-2020,2021,2022 Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
-;; Version: 0.3.11.1
-;; Package-Version: 20220521.1755
-;; Package-Commit: 0b24765e270a2dfd84adf3a0f9afa8b72aabad30
+;; Version: 0.3.12
+;; Package-Version: 20220702.511
+;; Package-Commit: bd8bc9b4c15783debcec132c79835e37b03626c8
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -118,7 +118,7 @@ Each pattern takes one of the following expressions:
 
     Return a timestamp from one of the clock entries in the logbook.
 
-    ORDER can be either 'latest or 'earliest, which means the
+    ORDER can be either \\='latest or \\='earliest, which means the
     latest and earliest timestamp is returned respectively.
 
   * (match PLIST)
@@ -1256,6 +1256,38 @@ It returns a list of results returned by the function."
                     result))
             (end-of-line)))))
     (nreverse result)))
+
+(cl-defun org-reverse-datetree-guess-date (&key decoded)
+  "Return the date of the current entry in the date tree, if any.
+
+Note that this function may not work properly when
+`org-odd-levels-only' is non-nil or the date heading is
+unparsable with `parse-time-string'.
+
+Unless DECODED is non-nil, the returned date is an encoded time,
+so it can be passed to other functions in `org-reverse-datetree'
+package. The encoded time will be the midnight in the day."
+  (unless (org-before-first-heading-p)
+    (let* ((formats (org-reverse-datetree--get-level-formats t))
+           (level (length formats))
+           (current-level (org-outline-level)))
+      (when (and formats
+                 (>= current-level level))
+        (org-with-wide-buffer
+         (when (> current-level level)
+           (org-up-heading-all (- current-level level)))
+         (when-let (decoded-time (ignore-errors
+                                   (parse-time-string (org-get-heading t t t t))))
+           ;; `parse-time-string' can return a decoded time that contain no date
+           ;; fields. Check if the fourth field is non-nil.
+           (when (nth 4 decoded-time)
+             (if decoded
+                 decoded-time
+               ;; It may be better to add the offset of the current time zone. In
+               ;; that case, I would use `time-add' and `current-time-zone'.
+               (org-reverse-datetree--encode-time
+                (append '(0 0 0)
+                        (seq-drop decoded-time 3)))))))))))
 
 (provide 'org-reverse-datetree)
 ;;; org-reverse-datetree.el ends here

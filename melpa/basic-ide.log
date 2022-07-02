@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sasanidas/emacs-c64-basic-ide.git
 
 Updating /mnt/store/melpa/working/basic-ide/
-Checking out origin/HEAD
-Checking out 1d026b6ae70db9cde36596dcf46b101058a2e004
-Built basic-ide in 4.761s, finished at 2022-07-01T21:30:20+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.2K Jul  1 21:30 packages/basic-ide-20200429.1104.el
-4.0K -rw-r--r-- 1 root root  519 Jul  1 21:30 packages/basic-ide-20200429.1104.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/sasanidas/emacs-c64-basic-ide.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

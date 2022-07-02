@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/stem-reading-mode.el.git
 
 Updating /mnt/store/melpa/working/stem-reading-mode/
-Checking out origin/HEAD
-Checking out 6efc9962e3a19a452c7ab9636cf1e2566a51bd38
-Built stem-reading-mode in 3.972s, finished at 2022-07-01T22:24:37+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.8K Jul  1 22:24 packages/stem-reading-mode-20220522.1053.el
-4.0K -rw-r--r-- 1 root root  417 Jul  1 22:24 packages/stem-reading-mode-20220522.1053.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/wavexx/stem-reading-mode.el.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/nivaca/nv-delete-back.git
 
 Updating /mnt/store/melpa/working/nv-delete-back/
-Checking out origin/HEAD
-Checking out b17cb826f14c18c2875d112574edb5e4f46f5296
-Built nv-delete-back in 5.176s, finished at 2022-07-01T22:08:56+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.0K Jul  1 22:08 packages/nv-delete-back-20170224.1249.el
-4.0K -rw-r--r-- 1 root root  326 Jul  1 22:08 packages/nv-delete-back-20170224.1249.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/nivaca/nv-delete-back.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

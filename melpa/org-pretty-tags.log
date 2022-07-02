@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/marcowahl/org-pretty-tags.git
 
 Updating /mnt/store/melpa/working/org-pretty-tags/
-Checking out origin/HEAD
-Checking out e127a1e08df8273b909a99594ffaad84960ff212
-Built org-pretty-tags in 4.521s, finished at 2022-07-01T22:11:35+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 10K Jul  1 22:11 packages/org-pretty-tags-20211228.1546.el
-4.0K -rw-r--r-- 1 root root 384 Jul  1 22:11 packages/org-pretty-tags-20211228.1546.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/marcowahl/org-pretty-tags.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/pidu/git-lens.git
 
 Updating /mnt/store/melpa/working/git-lens/
-Checking out origin/HEAD
-Checking out 8beec55b2c43bdf64172fb2539de97f1dd39a6d0
-Built git-lens in 5.752s, finished at 2022-07-01T21:51:17+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.1K Jul  1 21:51 packages/git-lens-20220623.722.el
-4.0K -rw-r--r-- 1 root root  400 Jul  1 21:51 packages/git-lens-20220623.722.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/pidu/git-lens.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

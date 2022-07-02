@@ -4,7 +4,7 @@
 ;; Maintainer: Guangwang Huang
 ;; URL: https://github.com/whatacold/ppcompile
 ;; Package-Version: 20220619.1535
-;; Package-Commit: 1e50692c658d3ad778720e2e469cb7bb2ef61488
+;; Package-Commit: ff54435af0ea970ec89b48afe050a61e721eb39f
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25.1"))
 ;; Homepage: https://github.com/whatacold/ppcompile

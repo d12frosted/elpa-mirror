@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jabranham/mixed-pitch.git
 
 Updating /mnt/store/melpa/working/mixed-pitch/
-Checking out origin/HEAD
-Checking out 519e05f74825abf04b7d2e0e38ec040d013a125a
-Built mixed-pitch in 3.678s, finished at 2022-07-01T22:05:55+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jul  1 22:05 packages/mixed-pitch-20210304.1900.el
-4.0K -rw-r--r-- 1 root root  405 Jul  1 22:05 packages/mixed-pitch-20210304.1900.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/jabranham/mixed-pitch.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

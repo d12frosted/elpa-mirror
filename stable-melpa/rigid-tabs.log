@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/rigid-tabs.el.git
 
 Updating /mnt/store/melpa/working/rigid-tabs/
-Checking out origin/HEAD
-Checking out 872a10c8751574c9610cba1800f541a6eda24997
-Built rigid-tabs in 4.520s, finished at 2022-07-01T22:19:47+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.7K Jul  1 22:19 packages/rigid-tabs-20220416.2123.el
-4.0K -rw-r--r-- 1 root root  425 Jul  1 22:19 packages/rigid-tabs-20220416.2123.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/wavexx/rigid-tabs.el.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

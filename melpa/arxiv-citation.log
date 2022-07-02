@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/slotThe/arxiv-citation.git
 
 Updating /mnt/store/melpa/working/arxiv-citation/
-Checking out origin/HEAD
-Checking out ac30166e2ed4e07df7123377821487350aa4f026
-Built arxiv-citation in 5.582s, finished at 2022-07-01T21:29:05+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jul  1 21:29 packages/arxiv-citation-20220609.602.el
-4.0K -rw-r--r-- 1 root root 449 Jul  1 21:29 packages/arxiv-citation-20220609.602.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/slotThe/arxiv-citation.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

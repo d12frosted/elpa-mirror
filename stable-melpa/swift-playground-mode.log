@@ -3,26 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/michael.sanders/swift-playground-mode.git
 
 Updating /mnt/store/melpa/working/swift-playground-mode/
-Checking out origin/HEAD
-Checking out 111cde906508824ee11d774b908df867142a8aec
-Checking out 111cde906508824ee11d774b908df867142a8aec
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/swift-playground-mode/
-  to /tmp/swift-playground-modesgxieK/swift-playground-mode-20190717.2223
-    swift-playground-mode.el -> swift-playground-mode.el
-  ! SwiftPlayground.vim/runner.sh -> runner.sh
-  ! SwiftPlayground.vim/PlaygroundRuntime.swift -> PlaygroundRuntime.swift
-  ! SwiftPlayground.vim/PlaygroundRuntimeCommon.swift -> PlaygroundRuntimeCommon.swift
-  ! SwiftPlayground.vim/PlaygroundRuntimeUI.swift -> PlaygroundRuntimeUI.swift
-Created swift-playground-mode-20190717.2223.tar containing:
-  swift-playground-mode-20190717.2223/
-  swift-playground-mode-20190717.2223/PlaygroundRuntime.swift
-  swift-playground-mode-20190717.2223/PlaygroundRuntimeCommon.swift
-  swift-playground-mode-20190717.2223/PlaygroundRuntimeUI.swift
-  swift-playground-mode-20190717.2223/runner.sh
-  swift-playground-mode-20190717.2223/swift-playground-mode-pkg.el
-  swift-playground-mode-20190717.2223/swift-playground-mode.el
-Built swift-playground-mode in 5.485s, finished at 2022-07-01T22:25:14+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 319 Jul  1 22:25 packages/swift-playground-mode-20190717.2223.entry
- 32K -rw-r--r-- 1 root root 30K Jul  1 22:25 packages/swift-playground-mode-20190717.2223.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/michael.sanders/swift-playground-mode.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

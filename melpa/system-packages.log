@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jabranham/system-packages.git
 
 Updating /mnt/store/melpa/working/system-packages/
-Checking out origin/HEAD
-Checking out c087d2c6e598f85fc2760324dce20104ea442fa3
-Built system-packages in 4.451s, finished at 2022-07-01T22:25:34+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jul  1 22:25 packages/system-packages-20220409.1023.el
-4.0K -rw-r--r-- 1 root root 382 Jul  1 22:25 packages/system-packages-20220409.1023.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/jabranham/system-packages.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

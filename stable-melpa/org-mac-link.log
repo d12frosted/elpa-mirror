@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/aimebertrand/org-mac-link.git
 
 Updating /mnt/store/melpa/working/org-mac-link/
-Checking out origin/HEAD
-Checking out 0b18c1d070b9601cc65c40e902169e367e4348c9
-Built org-mac-link in 4.548s, finished at 2022-07-01T22:11:14+0000
- ✓ Success:
- 44K -rw-r--r-- 1 root root 43K Jul  1 22:11 packages/org-mac-link-20220616.2340.el
-4.0K -rw-r--r-- 1 root root 677 Jul  1 22:11 packages/org-mac-link-20220616.2340.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/aimebertrand/org-mac-link.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

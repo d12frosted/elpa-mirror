@@ -19,9 +19,9 @@
 ;; Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
 ;; USA
 
-;; Version: 0.8
-;; Package-Version: 20220701.641
-;; Package-Commit: f9844fa3e14cd51d9f667c3ab9d7a7d816c3fd55
+;; Version: 0.9
+;; Package-Version: 20220702.602
+;; Package-Commit: 3c7f325132a88d27b0a5e0ea100869797b0cfc16
 ;; Author: Sibi Prabakaran
 ;; Keywords: just justfile tools processes
 ;; URL: https://github.com/psibi/justl.el

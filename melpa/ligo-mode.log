@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/ligolang/ligo.git
 
 Updating /mnt/store/melpa/working/ligo-mode/
-Checking out origin/HEAD
-Checking out f8b67b80a966dea9bf35b2aa825f10d4de877489
-Built ligo-mode in 48.802s, finished at 2022-07-01T22:02:48+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jul  1 22:02 packages/ligo-mode-20220209.755.el
-4.0K -rw-r--r-- 1 root root 363 Jul  1 22:02 packages/ligo-mode-20220209.755.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/ligolang/ligo.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

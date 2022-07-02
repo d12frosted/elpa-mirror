@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-language-id
-;; Package-Version: 20220701.1200
-;; Package-Commit: 6ca0c79dfd1161399ce3be0e66501dd23b2f8916
+;; Package-Version: 20220702.529
+;; Package-Commit: 1d05bb74075879351a33fedc363a5f375a18b8e5
 ;; Version: 0.19
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: languages util
@@ -48,6 +48,9 @@
       (language-id--file-name-extension ".cu"))
      (c++-mode
       (language-id--file-name-extension ".cuh")))
+
+    ;; mint-mode is derived from js-jsx-mode.
+    ("Mint" mint-mode)
 
     ;; json-mode is derived from javascript-mode.
     ("JSON5"
@@ -208,7 +211,6 @@
     ("Literate Haskell" literate-haskell-mode)
     ("Lua" lua-mode)
     ("Markdown" gfm-mode markdown-mode)
-    ("Mint" mint-mode)
     ("Nix" nix-mode)
     ("Objective-C" objc-mode)
     ("OCaml" caml-mode tuareg-mode)

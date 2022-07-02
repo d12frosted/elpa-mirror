@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/gvol/nanowrimo.el.git
 
 Updating /mnt/store/melpa/working/nanowrimo/
-Checking out origin/HEAD
-Checking out b1d41458926ccb39cefbb1bb74aefe4f02fd349f
-Built nanowrimo in 4.401s, finished at 2022-07-01T22:07:26+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 27K Jul  1 22:07 packages/nanowrimo-20151105.228.el
-4.0K -rw-r--r-- 1 root root 331 Jul  1 22:07 packages/nanowrimo-20151105.228.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/gvol/nanowrimo.el.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

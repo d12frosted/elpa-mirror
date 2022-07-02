@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/marcowahl/rope-read-mode.git
 
 Updating /mnt/store/melpa/working/rope-read-mode/
-Checking out origin/HEAD
-Checking out 6aad44e006a2999980c138f608d28c8ecab92b35
-Built rope-read-mode in 5.768s, finished at 2022-07-01T22:20:02+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Jul  1 22:20 packages/rope-read-mode-20211228.1126.el
-4.0K -rw-r--r-- 1 root root 401 Jul  1 22:20 packages/rope-read-mode-20211228.1126.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/marcowahl/rope-read-mode.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

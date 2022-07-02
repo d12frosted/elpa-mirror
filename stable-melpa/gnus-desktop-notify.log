@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/gnus-desktop-notify.el.git
 
 Updating /mnt/store/melpa/working/gnus-desktop-notify/
-Checking out origin/HEAD
-Checking out b438feb59136621a8ab979f0e2784f7002398d06
-Built gnus-desktop-notify in 4.415s, finished at 2022-07-01T21:51:53+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jul  1 21:51 packages/gnus-desktop-notify-20180623.1538.el
-4.0K -rw-r--r-- 1 root root 406 Jul  1 21:51 packages/gnus-desktop-notify-20180623.1538.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/wavexx/gnus-desktop-notify.el.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

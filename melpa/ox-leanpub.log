@@ -3,24 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/zzamboni/ox-leanpub.git
 
 Updating /mnt/store/melpa/working/ox-leanpub/
-Checking out origin/HEAD
-Checking out 4adf97dd195f0a777b952b97888b77cdd9479629
-Checking out 4adf97dd195f0a777b952b97888b77cdd9479629
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ox-leanpub/
-  to /tmp/ox-leanpubHrTBhe/ox-leanpub-20201129.2027
-    ox-leanpub-book.el -> ox-leanpub-book.el
-    ox-leanpub-markdown.el -> ox-leanpub-markdown.el
-    ox-leanpub-markua.el -> ox-leanpub-markua.el
-    ox-leanpub.el -> ox-leanpub.el
-Created ox-leanpub-20201129.2027.tar containing:
-  ox-leanpub-20201129.2027/
-  ox-leanpub-20201129.2027/ox-leanpub-book.el
-  ox-leanpub-20201129.2027/ox-leanpub-markdown.el
-  ox-leanpub-20201129.2027/ox-leanpub-markua.el
-  ox-leanpub-20201129.2027/ox-leanpub-pkg.el
-  ox-leanpub-20201129.2027/ox-leanpub.el
-Built ox-leanpub in 4.755s, finished at 2022-07-01T22:13:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 500 Jul  1 22:13 packages/ox-leanpub-20201129.2027.entry
- 80K -rw-r--r-- 1 root root 80K Jul  1 22:13 packages/ox-leanpub-20201129.2027.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/zzamboni/ox-leanpub.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

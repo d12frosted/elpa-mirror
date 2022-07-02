@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/drymerisnothere/molecule-el.git
 
 Updating /mnt/store/melpa/working/molecule/
-Checking out origin/HEAD
-Checking out 2ef72b81d9aa24ea782b71a061a3abdad6cae162
-Built molecule in 3.648s, finished at 2022-07-01T22:06:12+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.9K Jul  1 22:06 packages/molecule-20180527.743.el
-4.0K -rw-r--r-- 1 root root  390 Jul  1 22:06 packages/molecule-20180527.743.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/drymerisnothere/molecule-el.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

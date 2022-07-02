@@ -3,20 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-stuff/indent-tools.git
 
 Updating /mnt/store/melpa/working/indent-tools/
-Checking out origin/HEAD
-Checking out c731f05fa3950e2e8580ec61b88abbc705639830
-Checking out c731f05fa3950e2e8580ec61b88abbc705639830
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/indent-tools/
-  to /tmp/indent-toolsJyqHUy/indent-tools-20210622.1207
-    indent-tools-indentation-of.el -> indent-tools-indentation-of.el
-    indent-tools.el -> indent-tools.el
-Created indent-tools-20210622.1207.tar containing:
-  indent-tools-20210622.1207/
-  indent-tools-20210622.1207/indent-tools-indentation-of.el
-  indent-tools-20210622.1207/indent-tools-pkg.el
-  indent-tools-20210622.1207/indent-tools.el
-Built indent-tools in 4.707s, finished at 2022-07-01T21:57:56+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 495 Jul  1 21:57 packages/indent-tools-20210622.1207.entry
- 32K -rw-r--r-- 1 root root 30K Jul  1 21:57 packages/indent-tools-20210622.1207.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/emacs-stuff/indent-tools.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

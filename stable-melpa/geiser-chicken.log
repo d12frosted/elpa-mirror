@@ -3,23 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/chicken.git
 
 Updating /mnt/store/melpa/working/geiser-chicken/
-Checking out origin/HEAD
-Checking out 79a9ac78f4df7c9ec1f918313c543c116dbb8b70
-Checking out 79a9ac78f4df7c9ec1f918313c543c116dbb8b70
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/geiser-chicken/
-  to /tmp/geiser-chickenINHycf/geiser-chicken-20211204.2049
-    geiser-chicken.el -> geiser-chicken.el
-    src/geiser => src/geiser
-Created geiser-chicken-20211204.2049.tar containing:
-  geiser-chicken-20211204.2049/
-  geiser-chicken-20211204.2049/geiser-chicken-pkg.el
-  geiser-chicken-20211204.2049/geiser-chicken.el
-  geiser-chicken-20211204.2049/src/
-  geiser-chicken-20211204.2049/src/geiser/
-  geiser-chicken-20211204.2049/src/geiser/chicken4.scm
-  geiser-chicken-20211204.2049/src/geiser/chicken5.scm
-Built geiser-chicken in 4.311s, finished at 2022-07-01T21:50:22+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 390 Jul  1 21:50 packages/geiser-chicken-20211204.2049.entry
- 60K -rw-r--r-- 1 root root 60K Jul  1 21:50 packages/geiser-chicken-20211204.2049.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/emacs-geiser/chicken.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
