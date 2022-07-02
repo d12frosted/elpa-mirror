@@ -4,8 +4,8 @@
 ;;   Phil Hagelberg, Doug Alcorn, Will Farrington, Chen Bin
 ;;
 ;; Version: 6.2.0
-;; Package-Version: 20220430.107
-;; Package-Commit: 38ebbc21e32a6e616d315f5f898df4ca825f916d
+;; Package-Version: 20220702.1332
+;; Package-Commit: 677352621db8bf4a28be4e7a1c73dd3ce111f02a
 ;; Author: Phil Hagelberg, Doug Alcorn, and Will Farrington
 ;; Maintainer: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/redguardtoo/find-file-in-project
@@ -1134,10 +1134,7 @@ If OPEN-ANOTHER-WINDOW is not nil, the file will be opened in new window."
 (defun ffip-find-relative-path(&optional find-directory-p)
   "Find file/directory and copy its relative path into `kill-ring'.
 If FIND-DIRECTORY-P is t, copy the directory path.
-
-Set `ffip-find-relative-path-callback' to format the result,
-  (setq ffip-find-relative-path-callback 'ffip-copy-reactjs-import)
-  (setq ffip-find-relative-path-callback 'ffip-copy-org-file-link)"
+Set `ffip-find-relative-path-callback' to format the result."
   (interactive "P")
   (let* ((cands (ffip-project-search (ffip-read-keyword) find-directory-p)))
     (cond

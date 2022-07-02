@@ -4,8 +4,8 @@
 ;;
 ;; Author: Nicolas Hafner <shinmera@tymoon.eu>
 ;; URL: http://github.com/shirakumo/markless.el/
-;; Package-Version: 20190306.1002
-;; Package-Commit: 75fdef45df96978e9326ea4d9bf4e534a250c4c0
+;; Package-Version: 20220702.1154
+;; Package-Commit: 9c846f58575a446812f7bade284021b625976757
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 1.0
 ;; Keywords: languages, wp
@@ -387,6 +387,7 @@ Marks PRE and POST as markup and the content with PROP."
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.mess\\'" . markless-mode))
+(add-to-list 'auto-mode-alist '("\\.spess\\'" . markless-mode))
 
 (provide 'markless)
 

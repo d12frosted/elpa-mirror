@@ -5,7 +5,7 @@
 ;; Author: Paul Onions <paul.onions@acm.org>
 ;; Keywords: FriCAS, computer algebra, extensions, tools
 ;; Package-Version: 20220612.854
-;; Package-Commit: 5d8e7ad44de328d31cd642f2a0c92b4049114af4
+;; Package-Commit: 978665a47314f385850097442a3838ad7f3b688d
 ;; URL: https://github.com/pdo/frimacs
 ;; Package-Requires: ((emacs "26.1") (frimacs "1.0"))
 ;; Version: 1.0
