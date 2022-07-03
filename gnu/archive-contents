@@ -578,13 +578,14 @@
 	      ("Stephen Meister" . "pallagun@gmail.com"))
 	     (:commit . "fa979dfafa1beb374bf42e937f0b5b99ed06222e"))])
  (crdt .
-       [(0 2 7)
+       [(0 3 0)
 	nil "Collaborative editing using Conflict-free Replicated Data Types" tar
 	((:url . "https://code.librehq.com/qhong/crdt.el")
 	 (:keywords "collaboration" "crdt")
 	 (:maintainer "Qiantan Hong" . "qhong@alum.mit.edu")
 	 (:authors
-	  ("Qiantan Hong" . "qhong@alum.mit.edu")))])
+	  ("Qiantan Hong" . "qhong@alum.mit.edu"))
+	 (:commit . "77be6cded0e2d24fc9c132032ae3bf7ae8ed2cf9"))])
  (crisp .
 	[(1 3 6)
 	 nil "CRiSP/Brief Emacs emulator" single
@@ -2630,13 +2631,14 @@
 		   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 		  (:keywords "mode-line" "faces"))])
  (rnc-mode .
-	   [(0 2)
-	    nil "Emacs mode to edit Relax-NG Compact files" single
-	    ((:url . "http://elpa.gnu.org/packages/rnc-mode.html")
-	     (:keywords "xml" "relaxng")
+	   [(0 3)
+	    nil "Emacs mode to edit Relax-NG Compact files" tar
+	    ((:keywords "xml" "relaxng")
+	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
 	     (:authors
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
+	     (:url . "https://elpa.gnu.org/packages/rnc-mode.html")
+	     (:commit . "dfee31d83208b734ed1d1fdc523565d7056db850"))])
  (rt-liberation .
 		[(5)
 		 nil "Emacs interface to RT" tar
