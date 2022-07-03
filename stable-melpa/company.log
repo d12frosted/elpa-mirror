@@ -4,11 +4,11 @@ Source:  https://github.com/company-mode/company-mode.git
 
 Updating /mnt/store/melpa/working/company/
 Checking out origin/HEAD
-Checking out d5145006b948f93e673f439a766da01f636d39fc
-Checking out d5145006b948f93e673f439a766da01f636d39fc
+Checking out 1490c235b96acdbcc3927751473c67c1d32b2148
+Checking out 1490c235b96acdbcc3927751473c67c1d32b2148
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/company/
-  to /tmp/companyu0gSP9/company-20220425.1145
+  to /tmp/company8HF59Z/company-20220702.1935
     company-abbrev.el -> company-abbrev.el
     company-bbdb.el -> company-bbdb.el
     company-capf.el -> company-capf.el
@@ -57,120 +57,122 @@ Copying files (->) and directories (=>)
   ! doc/images/small/tooltip-qa-faces-light.png -> images/small/tooltip-qa-faces-light.png
   ! doc/images/small/tooltip-quick-access.png -> images/small/tooltip-quick-access.png
   ! doc/images/small/tooltip-search.png -> images/small/tooltip-search.png
-Generating /tmp/companyu0gSP9/company-20220425.1145/company.info
-Created company-20220425.1145.tar containing:
-  company-20220425.1145/
-  company-20220425.1145/company-abbrev.el
-  company-20220425.1145/company-bbdb.el
-  company-20220425.1145/company-capf.el
-  company-20220425.1145/company-clang.el
-  company-20220425.1145/company-cmake.el
-  company-20220425.1145/company-css.el
-  company-20220425.1145/company-dabbrev-code.el
-  company-20220425.1145/company-dabbrev.el
-  company-20220425.1145/company-elisp.el
-  company-20220425.1145/company-etags.el
-  company-20220425.1145/company-files.el
-  company-20220425.1145/company-gtags.el
-  company-20220425.1145/company-ispell.el
-  company-20220425.1145/company-keywords.el
-  company-20220425.1145/company-nxml.el
-  company-20220425.1145/company-oddmuse.el
-  company-20220425.1145/company-pkg.el
-  company-20220425.1145/company-semantic.el
-  company-20220425.1145/company-template.el
-  company-20220425.1145/company-tempo.el
-  company-20220425.1145/company-tng.el
-  company-20220425.1145/company-yasnippet.el
-  company-20220425.1145/company.el
-  company-20220425.1145/company.info
-  company-20220425.1145/dir
-  company-20220425.1145/icons/
-  company-20220425.1145/icons/LICENSE
-  company-20220425.1145/icons/attribution.md
-  company-20220425.1145/icons/vscode-dark/
-  company-20220425.1145/icons/vscode-dark/folder.svg
-  company-20220425.1145/icons/vscode-dark/references.svg
-  company-20220425.1145/icons/vscode-dark/symbol-array.svg
-  company-20220425.1145/icons/vscode-dark/symbol-boolean.svg
-  company-20220425.1145/icons/vscode-dark/symbol-class.svg
-  company-20220425.1145/icons/vscode-dark/symbol-color.svg
-  company-20220425.1145/icons/vscode-dark/symbol-constant.svg
-  company-20220425.1145/icons/vscode-dark/symbol-enumerator-member.svg
-  company-20220425.1145/icons/vscode-dark/symbol-enumerator.svg
-  company-20220425.1145/icons/vscode-dark/symbol-event.svg
-  company-20220425.1145/icons/vscode-dark/symbol-field.svg
-  company-20220425.1145/icons/vscode-dark/symbol-file.svg
-  company-20220425.1145/icons/vscode-dark/symbol-interface.svg
-  company-20220425.1145/icons/vscode-dark/symbol-key.svg
-  company-20220425.1145/icons/vscode-dark/symbol-keyword.svg
-  company-20220425.1145/icons/vscode-dark/symbol-method.svg
-  company-20220425.1145/icons/vscode-dark/symbol-misc.svg
-  company-20220425.1145/icons/vscode-dark/symbol-namespace.svg
-  company-20220425.1145/icons/vscode-dark/symbol-numeric.svg
-  company-20220425.1145/icons/vscode-dark/symbol-operator.svg
-  company-20220425.1145/icons/vscode-dark/symbol-parameter.svg
-  company-20220425.1145/icons/vscode-dark/symbol-property.svg
-  company-20220425.1145/icons/vscode-dark/symbol-ruler.svg
-  company-20220425.1145/icons/vscode-dark/symbol-snippet.svg
-  company-20220425.1145/icons/vscode-dark/symbol-string.svg
-  company-20220425.1145/icons/vscode-dark/symbol-structure.svg
-  company-20220425.1145/icons/vscode-dark/symbol-variable.svg
-  company-20220425.1145/icons/vscode-light/
-  company-20220425.1145/icons/vscode-light/folder.svg
-  company-20220425.1145/icons/vscode-light/references.svg
-  company-20220425.1145/icons/vscode-light/symbol-array.svg
-  company-20220425.1145/icons/vscode-light/symbol-boolean.svg
-  company-20220425.1145/icons/vscode-light/symbol-class.svg
-  company-20220425.1145/icons/vscode-light/symbol-color.svg
-  company-20220425.1145/icons/vscode-light/symbol-constant.svg
-  company-20220425.1145/icons/vscode-light/symbol-enumerator-member.svg
-  company-20220425.1145/icons/vscode-light/symbol-enumerator.svg
-  company-20220425.1145/icons/vscode-light/symbol-event.svg
-  company-20220425.1145/icons/vscode-light/symbol-field.svg
-  company-20220425.1145/icons/vscode-light/symbol-file.svg
-  company-20220425.1145/icons/vscode-light/symbol-interface.svg
-  company-20220425.1145/icons/vscode-light/symbol-key.svg
-  company-20220425.1145/icons/vscode-light/symbol-keyword.svg
-  company-20220425.1145/icons/vscode-light/symbol-method.svg
-  company-20220425.1145/icons/vscode-light/symbol-misc.svg
-  company-20220425.1145/icons/vscode-light/symbol-namespace.svg
-  company-20220425.1145/icons/vscode-light/symbol-numeric.svg
-  company-20220425.1145/icons/vscode-light/symbol-operator.svg
-  company-20220425.1145/icons/vscode-light/symbol-parameter.svg
-  company-20220425.1145/icons/vscode-light/symbol-property.svg
-  company-20220425.1145/icons/vscode-light/symbol-ruler.svg
-  company-20220425.1145/icons/vscode-light/symbol-snippet.svg
-  company-20220425.1145/icons/vscode-light/symbol-string.svg
-  company-20220425.1145/icons/vscode-light/symbol-structure.svg
-  company-20220425.1145/icons/vscode-light/symbol-variable.svg
-  company-20220425.1145/images/
-  company-20220425.1145/images/small/
-  company-20220425.1145/images/small/echo-meta.png
-  company-20220425.1145/images/small/echo-qa.png
-  company-20220425.1145/images/small/echo-strip-qa.png
-  company-20220425.1145/images/small/echo-strip.png
-  company-20220425.1145/images/small/echo.png
-  company-20220425.1145/images/small/preview-dark.png
-  company-20220425.1145/images/small/preview-light.png
-  company-20220425.1145/images/small/tooltip-annotations.png
-  company-20220425.1145/images/small/tooltip-faces-light.png
-  company-20220425.1145/images/small/tooltip-filter.png
-  company-20220425.1145/images/small/tooltip-flip.png
-  company-20220425.1145/images/small/tooltip-icon-bg.png
-  company-20220425.1145/images/small/tooltip-icon-face.png
-  company-20220425.1145/images/small/tooltip-icons-dot.png
-  company-20220425.1145/images/small/tooltip-icons-text.png
-  company-20220425.1145/images/small/tooltip-icons-vscode.png
-  company-20220425.1145/images/small/tooltip-limit.png
-  company-20220425.1145/images/small/tooltip-margin.png
-  company-20220425.1145/images/small/tooltip-minimum-above.png
-  company-20220425.1145/images/small/tooltip-minimum-below.png
-  company-20220425.1145/images/small/tooltip-offset-display.png
-  company-20220425.1145/images/small/tooltip-qa-faces-light.png
-  company-20220425.1145/images/small/tooltip-quick-access.png
-  company-20220425.1145/images/small/tooltip-search.png
-Built company in 10.652s, finished at 2022-07-02T15:21:05+0000
+Generating /tmp/company8HF59Z/company-20220702.1935/company.info
+Created company-20220702.1935.tar containing:
+  company-20220702.1935/
+  company-20220702.1935/company-abbrev.el
+  company-20220702.1935/company-bbdb.el
+  company-20220702.1935/company-capf.el
+  company-20220702.1935/company-clang.el
+  company-20220702.1935/company-cmake.el
+  company-20220702.1935/company-css.el
+  company-20220702.1935/company-dabbrev-code.el
+  company-20220702.1935/company-dabbrev.el
+  company-20220702.1935/company-elisp.el
+  company-20220702.1935/company-etags.el
+  company-20220702.1935/company-files.el
+  company-20220702.1935/company-gtags.el
+  company-20220702.1935/company-ispell.el
+  company-20220702.1935/company-keywords.el
+  company-20220702.1935/company-nxml.el
+  company-20220702.1935/company-oddmuse.el
+  company-20220702.1935/company-pkg.el
+  company-20220702.1935/company-semantic.el
+  company-20220702.1935/company-template.el
+  company-20220702.1935/company-tempo.el
+  company-20220702.1935/company-tng.el
+  company-20220702.1935/company-yasnippet.el
+  company-20220702.1935/company.el
+  company-20220702.1935/company.info
+  company-20220702.1935/dir
+  company-20220702.1935/icons/
+  company-20220702.1935/icons/LICENSE
+  company-20220702.1935/icons/attribution.md
+  company-20220702.1935/icons/vscode-dark/
+  company-20220702.1935/icons/vscode-dark/folder.svg
+  company-20220702.1935/icons/vscode-dark/references.svg
+  company-20220702.1935/icons/vscode-dark/symbol-array.svg
+  company-20220702.1935/icons/vscode-dark/symbol-boolean.svg
+  company-20220702.1935/icons/vscode-dark/symbol-class.svg
+  company-20220702.1935/icons/vscode-dark/symbol-color.svg
+  company-20220702.1935/icons/vscode-dark/symbol-constant.svg
+  company-20220702.1935/icons/vscode-dark/symbol-enumerator-member.svg
+  company-20220702.1935/icons/vscode-dark/symbol-enumerator.svg
+  company-20220702.1935/icons/vscode-dark/symbol-event.svg
+  company-20220702.1935/icons/vscode-dark/symbol-field.svg
+  company-20220702.1935/icons/vscode-dark/symbol-file.svg
+  company-20220702.1935/icons/vscode-dark/symbol-interface.svg
+  company-20220702.1935/icons/vscode-dark/symbol-key.svg
+  company-20220702.1935/icons/vscode-dark/symbol-keyword.svg
+  company-20220702.1935/icons/vscode-dark/symbol-method.svg
+  company-20220702.1935/icons/vscode-dark/symbol-misc.svg
+  company-20220702.1935/icons/vscode-dark/symbol-namespace.svg
+  company-20220702.1935/icons/vscode-dark/symbol-numeric.svg
+  company-20220702.1935/icons/vscode-dark/symbol-operator.svg
+  company-20220702.1935/icons/vscode-dark/symbol-parameter.svg
+  company-20220702.1935/icons/vscode-dark/symbol-property.svg
+  company-20220702.1935/icons/vscode-dark/symbol-ruler.svg
+  company-20220702.1935/icons/vscode-dark/symbol-snippet.svg
+  company-20220702.1935/icons/vscode-dark/symbol-string.svg
+  company-20220702.1935/icons/vscode-dark/symbol-structure.svg
+  company-20220702.1935/icons/vscode-dark/symbol-variable.svg
+  company-20220702.1935/icons/vscode-light/
+  company-20220702.1935/icons/vscode-light/folder.svg
+  company-20220702.1935/icons/vscode-light/references.svg
+  company-20220702.1935/icons/vscode-light/symbol-array.svg
+  company-20220702.1935/icons/vscode-light/symbol-boolean.svg
+  company-20220702.1935/icons/vscode-light/symbol-class.svg
+  company-20220702.1935/icons/vscode-light/symbol-color.svg
+  company-20220702.1935/icons/vscode-light/symbol-constant.svg
+  company-20220702.1935/icons/vscode-light/symbol-enumerator-member.svg
+  company-20220702.1935/icons/vscode-light/symbol-enumerator.svg
+  company-20220702.1935/icons/vscode-light/symbol-event.svg
+  company-20220702.1935/icons/vscode-light/symbol-field.svg
+  company-20220702.1935/icons/vscode-light/symbol-file.svg
+  company-20220702.1935/icons/vscode-light/symbol-interface.svg
+  company-20220702.1935/icons/vscode-light/symbol-key.svg
+  company-20220702.1935/icons/vscode-light/symbol-keyword.svg
+  company-20220702.1935/icons/vscode-light/symbol-method.svg
+  company-20220702.1935/icons/vscode-light/symbol-misc.svg
+  company-20220702.1935/icons/vscode-light/symbol-namespace.svg
+  company-20220702.1935/icons/vscode-light/symbol-numeric.svg
+  company-20220702.1935/icons/vscode-light/symbol-operator.svg
+  company-20220702.1935/icons/vscode-light/symbol-parameter.svg
+  company-20220702.1935/icons/vscode-light/symbol-property.svg
+  company-20220702.1935/icons/vscode-light/symbol-ruler.svg
+  company-20220702.1935/icons/vscode-light/symbol-snippet.svg
+  company-20220702.1935/icons/vscode-light/symbol-string.svg
+  company-20220702.1935/icons/vscode-light/symbol-structure.svg
+  company-20220702.1935/icons/vscode-light/symbol-variable.svg
+  company-20220702.1935/images/
+  company-20220702.1935/images/small/
+  company-20220702.1935/images/small/echo-meta.png
+  company-20220702.1935/images/small/echo-qa.png
+  company-20220702.1935/images/small/echo-strip-qa.png
+  company-20220702.1935/images/small/echo-strip.png
+  company-20220702.1935/images/small/echo.png
+  company-20220702.1935/images/small/preview-dark.png
+  company-20220702.1935/images/small/preview-light.png
+  company-20220702.1935/images/small/tooltip-annotations.png
+  company-20220702.1935/images/small/tooltip-faces-light.png
+  company-20220702.1935/images/small/tooltip-filter.png
+  company-20220702.1935/images/small/tooltip-flip.png
+  company-20220702.1935/images/small/tooltip-icon-bg.png
+  company-20220702.1935/images/small/tooltip-icon-face.png
+  company-20220702.1935/images/small/tooltip-icons-dot.png
+  company-20220702.1935/images/small/tooltip-icons-text.png
+  company-20220702.1935/images/small/tooltip-icons-vscode.png
+  company-20220702.1935/images/small/tooltip-limit.png
+  company-20220702.1935/images/small/tooltip-margin.png
+  company-20220702.1935/images/small/tooltip-minimum-above.png
+  company-20220702.1935/images/small/tooltip-minimum-below.png
+  company-20220702.1935/images/small/tooltip-offset-display.png
+  company-20220702.1935/images/small/tooltip-qa-faces-light.png
+  company-20220702.1935/images/small/tooltip-quick-access.png
+  company-20220702.1935/images/small/tooltip-search.png
+Built company in 11.082s, finished at 2022-07-02T21:19:15+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  353 Jul  2 15:21 packages/company-20220425.1145.entry
-1.2M -rw-r--r-- 1 root root 1.2M Jul  2 15:21 packages/company-20220425.1145.tar
+4.0K -rw-r--r-- 1 root root  353 Jul  2 18:20 packages/company-20220425.1145.entry
+1.2M -rw-r--r-- 1 root root 1.2M Jul  2 18:20 packages/company-20220425.1145.tar
+4.0K -rw-r--r-- 1 root root  353 Jul  2 21:19 packages/company-20220702.1935.entry
+1.2M -rw-r--r-- 1 root root 1.2M Jul  2 21:19 packages/company-20220702.1935.tar

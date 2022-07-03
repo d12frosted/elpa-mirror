@@ -1066,7 +1066,7 @@
 	     (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
 	     (:commit . "e4e604ae3ac91748c4e7d51a591cb9ee60961b7c"))])
  (org-auto-tangle .
-		  [(0 4 2)
+		  [(0 5 0)
 		   ((emacs
 		     (24 1))
 		    (async
@@ -1074,10 +1074,10 @@
 		   "Automatically and Asynchronously tangles org files on save" tar
 		   ((:url . "https://github.com/yilkalargaw/org-auto-tangle")
 		    (:keywords "outlines")
-		    (:maintainer "Yilkal Argaw")
+		    (:maintainer "Yilkal Argaw" . "yilkalargawworkneh@gmail.com")
 		    (:authors
-		     ("Yilkal Argaw"))
-		    (:commit . "c20803648055791eb7ff7a72d0c43ceb43d7c082"))])
+		     ("Yilkal Argaw" . "yilkalargawworkneh@gmail.com"))
+		    (:commit . "c64ca020f99952cce9798209912a8e335900a1a4"))])
  (org-contrib .
 	      [(0 4)
 	       ((emacs
