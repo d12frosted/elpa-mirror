@@ -4,8 +4,6 @@
 
 ;; Author: Bruno Félix Rezende Ribeiro <oitofelix@gnu.org>
 ;; Keywords: processes
-;; Package-Version: 20200409.2356
-;; Package-Commit: 1594b76d4ad3a6e3c471d82da366226d156e6226
 ;; Package: cpu-sos
 ;; Homepage: https://github.com/oitofelix/cpu-sos
 ;; Version: 20200409.2056

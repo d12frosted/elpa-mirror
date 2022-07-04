@@ -4,7 +4,7 @@
 ;; Maintainer: Vidianos Giannitsis <vidianosgiannitsis@gmail.com>
 ;; URL: https://github.com/Vidianos-Giannitsis/zetteldesk-remark.el
 ;; Package-Version: 20220626.1100
-;; Package-Commit: 99c5434a809da0b783f31b10872c8cb2a2176e2d
+;; Package-Commit: b9367a738628dbb569ab878b65240a567eadaaf6
 ;; Package-Requires: ((zetteldesk "1.0") (org-remark "1.0") (emacs "27.2"))
 ;; Created: 22nd March 2022
 ;; License: GPL-3.0

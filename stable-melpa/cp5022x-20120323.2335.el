@@ -4,8 +4,6 @@
 
 ;; Author: ARISAWA Akihiro <ari@mbf.ocn.ne.jp>
 ;; Keywords: languages, cp50220, cp50221, cp50222, cp51932, cp932
-;; Package-Version: 20120323.2335
-;; Package-Commit: ea7327dd75e54539576916f592ae1be98179ae35
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

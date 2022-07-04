@@ -774,29 +774,29 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 8 5)
+       [(3 8 6)
 	((helm-core
 	  (3 8 4))
 	 (popup
 	  (0 5 3)))
 	"Helm is an Emacs incremental and narrowing framework" tar
 	((:url . "https://emacs-helm.github.io/helm/")
-	 (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+	 (:maintainer "Thierry Volpiatto ")
 	 (:authors
-	  ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	 (:commit . "5e035c9193bf1e1d4bb709794a154957544dcfc7"))])
+	  ("Thierry Volpiatto "))
+	 (:commit . "0fc13ddb13b1c8e70eb6c0c7f7d46308a55f2344"))])
  (helm-core .
-	    [(3 8 5)
+	    [(3 8 6)
 	     ((emacs
 	       (25 1))
 	      (async
 	       (1 9 4)))
 	     "Development files for Helm" tar
 	     ((:url . "https://emacs-helm.github.io/helm/")
-	      (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+	      (:maintainer "Thierry Volpiatto ")
 	      (:authors
-	       ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	      (:commit . "5e035c9193bf1e1d4bb709794a154957544dcfc7"))])
+	       ("Thierry Volpiatto "))
+	      (:commit . "0fc13ddb13b1c8e70eb6c0c7f7d46308a55f2344"))])
  (highlight-parentheses .
 			[(2 1 1)
 			 ((emacs
