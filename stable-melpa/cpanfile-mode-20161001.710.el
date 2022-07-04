@@ -3,6 +3,8 @@
 ;; Copyright (C) 2016 Zak B. Elep
 
 ;; URL              : https://github.com/zakame/cpanfile-mode
+;; Package-Version: 20161001.710
+;; Package-Commit: eda675703525198df1f76ddf250bffa40217ec5d
 ;; Author           : Zak B. Elep <zakame@zakame.net>
 ;; Version          : 0.0.1
 ;; Date Created     : Mon Sep 26 07:10:33 UTC 2016

@@ -4,6 +4,8 @@
 
 ;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: http://github.com/redguardtoo/cpputils-cmake
+;; Package-Version: 20181006.328
+;; Package-Commit: 64b2b05eff5398b4cd522e66efaf14553ab18ff4
 ;; Keywords: CMake IntelliSense Flymake Flycheck
 ;; Version: 0.5.8
 

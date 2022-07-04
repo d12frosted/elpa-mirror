@@ -3,9 +3,9 @@
 ;; Copyright (C) 2010 - 2022
 
 ;; Author: Shawn Ellis <shawn.ellis17@gmail.com>
-;; Version: 0.0.41
-;; Package-Version: 20220415.2334
-;; Package-Commit: d51551296425b1febd102a38a46f2d3dc4548559
+;; Version: 0.0.43
+;; Package-Version: 20220703.2154
+;; Package-Commit: 43a30f9578dc2f5acd4fc2941bedaa031b942b81
 ;; Package-Requires: ((emacs "25"))
 ;; URL: https://hg.osdn.net/view/multi-project/multi-project
 ;; Keywords: convenience project management
@@ -53,6 +53,7 @@
 ;; C-x p n - Add a new project         Prompts for new project information
 ;; C-x p r - Go to project root        Visits the project root
 ;; C-x p s - Project shell             Creates a project shell
+;; C-x p S - Project shell             Creates a project shell at the root
 ;; C-x p u - Resets the anchor         Unsets the project anchor
 ;; C-x p v - Visit a project           Visits another project in a separate frame
 
@@ -94,6 +95,7 @@
 (require 'grep)
 (require 'tramp)
 (require 'xref)
+(require 'delsel)
 
 (defgroup multi-project nil
   "Support for working with multiple projects."
@@ -172,6 +174,7 @@ under the root, and the TAGS location."
     (define-key map (kbd "C-x pP") 'multi-project-present-project-new-frame)
     (define-key map (kbd "C-x pg") 'multi-project-interactive-grep)
     (define-key map (kbd "C-x ps") 'multi-project-shell)
+    (define-key map (kbd "C-x pS") 'multi-project-root-shell)
     (define-key map (kbd "C-x pt") 'multi-project-toggle)
     (define-key map (kbd "C-x pT") 'multi-project-recreate-tags)
 
@@ -1100,35 +1103,29 @@ ignored. If a version control directory is not found, the default
 
 
 ;;;###autoload
-(defun multi-project-shell ()
-  "Create a shell with a buffer name of the project.
-The function first looks if the current directory is within a
-known project.  If no projects are found, then the current
-project is used."
+(defun multi-project-shell (&optional shell-directory)
+  "Create a shell with a buffer name of the project. The
+SHELL-DIRECTORY can be specified to create the shell in a
+different directory."
   (interactive)
 
-  (let ((project (multi-project-dir-current)))
+  (let ((project (multi-project-find-by-directory)))
     (when project
       (let* ((buffer-name (concat "*shell-" "<" (multi-project-name project) ">*"))
 	     (buffer (get-buffer buffer-name)))
 
-	;; create the buffer and invoke the shell
 	(unless buffer
 	  (setq buffer (get-buffer-create buffer-name))
-	  (set-buffer buffer)
-
-	  ;; Set the working directory to the current directory if the
-	  ;; invocation occurred within a project directory. If not, then create
-	  ;; the directory at the project root.
-
-	  (let (shell-directory)
-	    (if (multi-project-find-by-directory)
-		(setq shell-directory default-directory)
-	      (setq shell-directory (multi-project-dir project)))
-	    (cd shell-directory)))
+	  (with-current-buffer buffer
+	    (cd (or shell-directory default-directory))))
 
 	(shell buffer)))))
 
+;;;###autoload
+(defun multi-project-root-shell ()
+  "Creates a shell at the root of the project."
+  (interactive)
+  (multi-project-shell (multi-project-dir (multi-project-dir-current))))
 
 (defun multi-project-execute-tags-command (buffer-name etags-command)
   "Generate a TAGS file in BUFFER-NAME for ETAGS-COMMAND."

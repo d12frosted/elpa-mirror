@@ -4,6 +4,8 @@
 
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/emacsorphanage/cpp-auto-include
+;; Package-Version: 20210318.2217
+;; Package-Commit: 0ce829f27d466c083e78b9fe210dcfa61fb417f4
 ;; Version: 0.2.0
 ;; Package-Requires: ((cl-lib "0.5"))
 

@@ -5,8 +5,8 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20220526.1525
-;; Package-Commit: 63f0d4dc09afb058450dc10dd3916027a93ee487
+;; Package-Version: 20220704.37
+;; Package-Commit: 5d0459d27aa7cf738b5af36cf862723a62bef955
 ;; Version: 0.6
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "27.1") (embark "0.17") (consult "0.17"))
@@ -79,16 +79,6 @@
   (cadr (embark-target-collect-candidate)))
 
 (add-hook 'consult--completion-candidate-hook #'embark-consult--collect-candidate)
-
-(define-obsolete-function-alias
-  'embark-consult-preview-minor-mode
-  'consult-preview-at-point-mode
-  "0.11")
-
-(define-obsolete-function-alias
-  'embark-consult-preview-at-point
-  'consult-preview-at-point
-  "0.11")
 
 ;;; Support for consult-location
 

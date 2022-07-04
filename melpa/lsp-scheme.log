@@ -2,13 +2,13 @@ Package: lsp-scheme
 Fetcher: git
 Source:  https://codeberg.org/rgherdt/emacs-lsp-scheme
 
-Cloning https://codeberg.org/rgherdt/emacs-lsp-scheme to /mnt/store/melpa/working/lsp-scheme/
+Updating /mnt/store/melpa/working/lsp-scheme/
 Checking out origin/HEAD
 Checking out e683842668b728c057c7eaa415e43922c3bfd9b4
 Checking out e683842668b728c057c7eaa415e43922c3bfd9b4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-scheme/
-  to /tmp/lsp-schemeyFWmT7/lsp-scheme-20220629.2248
+  to /tmp/lsp-schemejqKOcW/lsp-scheme-20220629.2248
     lsp-scheme.el -> lsp-scheme.el
     scripts => scripts
 Created lsp-scheme-20220629.2248.tar containing:
@@ -17,7 +17,7 @@ Created lsp-scheme-20220629.2248.tar containing:
   lsp-scheme-20220629.2248/lsp-scheme.el
   lsp-scheme-20220629.2248/scripts/
   lsp-scheme-20220629.2248/scripts/lsp-server-connect.sh
-Built lsp-scheme in 5.289s, finished at 2022-07-03T21:34:51+0000
+Built lsp-scheme in 5.130s, finished at 2022-07-04T03:27:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 475 Jul  3 21:34 packages/lsp-scheme-20220629.2248.entry
- 32K -rw-r--r-- 1 root root 30K Jul  3 21:34 packages/lsp-scheme-20220629.2248.tar
+4.0K -rw-r--r-- 1 root root 475 Jul  4 03:27 packages/lsp-scheme-20220629.2248.entry
+ 32K -rw-r--r-- 1 root root 30K Jul  4 03:27 packages/lsp-scheme-20220629.2248.tar

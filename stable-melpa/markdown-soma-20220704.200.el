@@ -4,10 +4,10 @@
 
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/markdown-soma
-;; Package-Version: 20220703.1821
-;; Package-Commit: d72febf46dfc12b6d6612f33f75e918bf71d9abc
+;; Package-Version: 20220704.200
+;; Package-Commit: 0bc5fcaeca919f0ce639eb7e6565a70de5189712
 ;; Keywords: wp, docs, text, markdown
-;; Version: 0.1.12
+;; Version: 0.1.13
 ;; Package-Requires: ((emacs "25") (s "1.11.0") (dash "2.19.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -116,9 +116,8 @@ By default, `~/.cargo/bin` will be in your `$PATH`."
 (defvar markdown-soma--render-buffer-hooks
   '(after-revert-hook
     after-save-hook
-    after-change-functions
-    post-command-hook)
-  "hooks which trigger markdown-soma-render-buffer.")
+    after-change-functions)
+  "A collection of hooks which trigger markdown-soma-render-buffer.")
 
 (defvar markdown-soma-highlightjs-theme-list
   '("3024" "a11y-dark" "a11y-light" "agate" "an-old-hope" "androidstudio" "apathy" "apprentice" "arduino-light" "arta" "ascetic" "ashes" "atelier-cave-dark" "atelier-cave-light" "atelier-cave" "atelier-cave.dark" "atelier-cave.light" "atelier-dune-dark" "atelier-dune-light" "atelier-dune" "atelier-dune.dark" "atelier-dune.light" "atelier-estuary-dark" "atelier-estuary-light" "atelier-estuary" "atelier-estuary.dark" "atelier-estuary.light" "atelier-forest-dark" "atelier-forest-light" "atelier-forest" "atelier-forest.dark" "atelier-forest.light" "atelier-heath-dark" "atelier-heath-light" "atelier-heath" "atelier-heath.dark" "atelier-heath.light" "atelier-lakeside-dark" "atelier-lakeside-light" "atelier-lakeside" "atelier-lakeside.dark" "atelier-lakeside.light" "atelier-plateau-dark" "atelier-plateau-light" "atelier-plateau" "atelier-plateau.dark" "atelier-plateau.light" "atelier-savanna-dark" "atelier-savanna-light" "atelier-savanna" "atelier-savanna.dark" "atelier-savanna.light" "atelier-seaside-dark" "atelier-seaside-light" "atelier-seaside" "atelier-seaside.dark" "atelier-seaside.light" "atelier-sulphurpool-dark" "atelier-sulphurpool-light" "atelier-sulphurpool" "atelier-sulphurpool.dark" "atelier-sulphurpool.light" "atlas" "atom-one-dark-reasonable" "atom-one-dark" "atom-one-light" "bespin" "black-metal-bathory" "black-metal-burzum" "black-metal-dark-funeral" "black-metal-gorgoroth" "black-metal-immortal" "black-metal-khold" "black-metal-marduk" "black-metal-mayhem" "black-metal-nile" "black-metal-venom" "black-metal" "brewer" "bright" "brogrammer" "brown-paper" "brown-papersq.png" "brown_paper" "brown_papersq.png" "brush-trees-dark" "brush-trees" "chalk" "circus" "classic-dark" "classic-light" "codepen-embed" "codeschool" "color-brewer" "colors" "cupcake" "cupertino" "danqing" "darcula" "dark-violet" "dark" "darkmoss" "darktooth" "darkula" "decaf" "default-dark" "default-light" "default" "devibeans" "dirtysea" "docco" "dracula" "edge-dark" "edge-light" "eighties" "embers" "equilibrium-dark" "equilibrium-gray-dark" "equilibrium-gray-light" "equilibrium-light" "espresso" "eva-dim" "eva" "far" "felipec" "flat" "foundation" "framer" "fruit-soda" "gigavolt" "github-dark-dimmed" "github-dark" "github-gist" "github" "gml" "google-dark" "google-light" "googlecode" "gradient-dark" "gradient-light" "grayscale-dark" "grayscale-light" "grayscale" "green-screen" "gruvbox-dark-hard" "gruvbox-dark-medium" "gruvbox-dark-pale" "gruvbox-dark-soft" "gruvbox-dark" "gruvbox-light-hard" "gruvbox-light-medium" "gruvbox-light-soft" "gruvbox-light" "hardcore" "harmonic16-dark" "harmonic16-light" "heetch-dark" "heetch-light" "helios" "hopscotch" "horizon-dark" "horizon-light" "humanoid-dark" "humanoid-light" "hybrid" "ia-dark" "ia-light" "icy-dark" "idea" "intellij-light" "ir-black" "ir_black" "isbl-editor-dark" "isbl-editor-light" "isotope" "kimber" "kimbie-dark" "kimbie-light" "kimbie.dark" "kimbie.light" "lightfair" "lioshi" "london-tube" "macintosh" "magula" "marrakesh" "materia" "material-darker" "material-lighter" "material-palenight" "material-vivid" "material" "mellow-purple" "mexico-light" "mocha" "mono-blue" "monokai-sublime" "monokai" "monokai_sublime" "nebula" "night-owl" "nnfx-dark" "nnfx-light" "nord" "nova" "obsidian" "ocean" "oceanicnext" "one-light" "onedark" "outrun-dark" "panda-syntax-dark" "panda-syntax-light" "papercolor-dark" "papercolor-light" "paraiso-dark" "paraiso-light" "paraiso" "paraiso.dark" "paraiso.light" "pasque" "phd" "pico" "pojoaque" "pojoaque.jpg" "pop" "porple" "purebasic" "qtcreator-dark" "qtcreator-light" "qtcreator_dark" "qtcreator_light" "qualia" "railscasts" "rainbow" "rebecca" "ros-pine-dawn" "ros-pine-moon" "ros-pine" "routeros" "sagelight" "sandcastle" "school-book" "school-book.png" "school_book" "school_book.png" "seti-ui" "shades-of-purple" "shapeshifter" "silk-dark" "silk-light" "snazzy" "solar-flare-light" "solar-flare" "solarized-dark" "solarized-light" "solarized_dark" "solarized_light" "spacemacs" "srcery" "stackoverflow-dark" "stackoverflow-light" "summercamp" "summerfruit-dark" "summerfruit-light" "sunburst" "synth-midnight-terminal-dark" "synth-midnight-terminal-light" "tango" "tender" "tokyo-night-dark" "tokyo-night-light" "tomorrow-night-blue" "tomorrow-night-bright" "tomorrow-night-eighties" "tomorrow-night" "tomorrow" "twilight" "unikitty-dark" "unikitty-light" "vs" "vs2015" "vulcan" "windows-10-light" "windows-10" "windows-95-light" "windows-95" "windows-high-contrast-light" "windows-high-contrast" "windows-nt-light" "windows-nt" "woodland" "xcode-dusk" "xcode" "xt256" "zenburn")
@@ -177,7 +176,7 @@ By default, `~/.cargo/bin` will be in your `$PATH`."
       (progn
         (markdown-soma-stop)
         (markdown-soma-start))
-    (user-error "markdown-soma-mode not active.")))
+    (user-error "Please note markdown-soma-mode is not currently active")))
 
 (defun markdown-soma--run ()
   "Run soma."
