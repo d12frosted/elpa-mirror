@@ -4,7 +4,7 @@
 ;; Author: Erick Navarro <erick@navarro.io>
 ;; URL: https://github.com/erickgnavar/tree-sitter-ispell.el
 ;; Package-Version: 20220704.340
-;; Package-Commit: 5cd63219bbef77eb002c7e7d0df30f5714ae69dc
+;; Package-Commit: 2efe943dd62096a819b7c2d6b61c93a4f18aeb22
 ;; Version: 0.1.0
 ;; SPDX-License-Identifier: GNU General Public License v3.0 or later
 ;; Package-Requires: ((emacs "25.1") (tree-sitter "0.15.0"))
