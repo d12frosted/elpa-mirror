@@ -4,13 +4,12 @@
 ;; Created date 2020-06-25 01:42:34
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; Description: Make window/frame transparent.
-;; Keyword: window transparent frame
-;; Version: 0.1.3
-;; Package-Version: 20200910.1636
-;; Package-Commit: 4128b85b1ee075a55c88fd53d04823cb48a3cce6
-;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/jcs-elpa/transwin
+;; Package-Version: 20220704.640
+;; Package-Commit: 209b410f406ab4db5bb357d8f5b305982d3dea4b
+;; Version: 0.1.3
+;; Package-Requires: ((emacs "24.3"))
+;; Keywords: frames window transparent
 
 ;; This file is NOT part of GNU Emacs.
 

@@ -5,11 +5,11 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/quelpa/quelpa-leaf
-;; Package-Version: 20220616.1759
-;; Package-Commit: 4dd07a39fe41eb748a5a9883fa44a74fee4e4729
+;; Package-Version: 20220704.635
+;; Package-Commit: dadbc96a3c806e1c2dd7614a44ccffa3ee673568
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "25.1") (quelpa "1.0") (leaf "4.1.0"))
-;; Keywords: package managment elpa leaf
+;; Keywords: convenience package managment elpa leaf
 
 ;; This file is NOT part of GNU Emacs.
 
