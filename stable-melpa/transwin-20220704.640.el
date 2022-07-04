@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/transwin
 ;; Package-Version: 20220704.640
-;; Package-Commit: 209b410f406ab4db5bb357d8f5b305982d3dea4b
+;; Package-Commit: 9f3c5ef4029f992fe94b70d54b8d00f0a4cbce1c
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: frames window transparent

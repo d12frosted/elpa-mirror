@@ -1,0 +1,25 @@
+(define-it .
+  [(20220704 647)
+   ((emacs
+     (25 1))
+    (s
+     (1 12 0))
+    (request
+     (0 3 0))
+    (popup
+     (0 5 3))
+    (pos-tip
+     (0 4 6))
+    (posframe
+     (1 1 7))
+    (google-translate
+     (0 11 18))
+    (wiki-summary
+     (0 1)))
+   "Define, translate, wiki the word" single
+   ((:commit . "004f24aff4ff12113e2fb9365640526bdf0a6f22")
+    (:authors
+     ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+    (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+    (:keywords "convenience" "dictionary" "explanation" "search" "wiki")
+    (:url . "https://github.com/jcs-elpa/define-it"))])

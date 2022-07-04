@@ -1,0 +1,13 @@
+(parse-it .
+	  [(20220704 640)
+	   ((emacs
+	     (25 1))
+	    (s
+	     (1 12 0)))
+	   "Basic Parser in Emacs Lisp" tar
+	   ((:commit . "c16cb7aa1b4437a6b9943feaf058e10cd17056fa")
+	    (:authors
+	     ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+	    (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+	    (:keywords "convenience" "parse" "parser" "lex" "lexer" "ast")
+	    (:url . "https://github.com/jcs-elpa/parse-it"))])

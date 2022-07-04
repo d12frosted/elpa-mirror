@@ -1,0 +1,11 @@
+(buffer-wrap .
+	     [(20220704 646)
+	      ((emacs
+		(24 4)))
+	      "Wrap the beginning and the end of buffer" single
+	      ((:commit . "8be8508ad5570b1487d9d2fc1b5aa71558f2d0f5")
+	       (:authors
+		("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+	       (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+	       (:keywords "convenience" "buffer" "tool" "wrap")
+	       (:url . "https://github.com/jcs-elpa/buffer-wrap"))])
