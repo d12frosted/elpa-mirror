@@ -1,8 +1,11 @@
 Package: git-lens
-Fetcher: gitlab
-Source:  https://gitlab.com/pidu/git-lens.git
+Fetcher: git
+Source:  https://codeberg.org/pidu/git-lens
 
-Updating /mnt/store/melpa/working/git-lens/
+Cloning https://codeberg.org/pidu/git-lens to /mnt/store/melpa/working/git-lens/
 Checking out origin/HEAD
-Checking out 8f4234590c9e1f73f7f598d40aeb754b278848f5
-No matching file(s) found in /mnt/store/melpa/working/git-lens/ using default spec
+Checking out 8beec55b2c43bdf64172fb2539de97f1dd39a6d0
+Built git-lens in 5.462s, finished at 2022-07-04T21:18:42+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jul  4 21:18 packages/git-lens-20220623.722.el
+4.0K -rw-r--r-- 1 root root  400 Jul  4 21:18 packages/git-lens-20220623.722.entry

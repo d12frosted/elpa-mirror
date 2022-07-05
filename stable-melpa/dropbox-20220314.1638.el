@@ -5,8 +5,6 @@
 
 ;; Author: Pavel Panchekha <me@pavpanchekha.com>
 ;; Version: 0.9.1
-;; Package-Version: 20220314.1638
-;; Package-Commit: c048faad0be24e8fa31974f08b710a87cf5b668c
 ;; Package-Requires: ((request "0.3.0") (json "1.2") (oauth "1.0.3"))
 ;; Keywords: dropbox
 ;; Contributors:

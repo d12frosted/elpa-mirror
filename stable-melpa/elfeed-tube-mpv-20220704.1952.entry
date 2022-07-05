@@ -1,0 +1,15 @@
+(elfeed-tube-mpv .
+		 [(20220704 1952)
+		  ((emacs
+		    (27 1))
+		   (elfeed-tube
+		    (0 10))
+		   (mpv
+		    (0 2 0)))
+		  "Control mpv from Elfeed" single
+		  ((:commit . "6110561fdeca1d2591fc99bb57e166f31fe4eac1")
+		   (:authors
+		    ("Karthik Chikmagalur" . "karthikchikmagalur@gmail.com"))
+		   (:maintainer "Karthik Chikmagalur" . "karthikchikmagalur@gmail.com")
+		   (:keywords "news" "hypermedia")
+		   (:url . "https://github.com/karthink/elfeed-tube"))])

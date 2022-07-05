@@ -1,8 +1,11 @@
 Package: git-timemachine
-Fetcher: gitlab
-Source:  https://gitlab.com/pidu/git-timemachine.git
+Fetcher: git
+Source:  https://codeberg.org/pidu/git-timemachine.git
 
-Updating /mnt/store/melpa/working/git-timemachine/
+Cloning https://codeberg.org/pidu/git-timemachine.git to /mnt/store/melpa/working/git-timemachine/
 Checking out origin/HEAD
-Checking out 6df7f435de78440f8fa84cde99c7853bf0c57661
-No matching file(s) found in /mnt/store/melpa/working/git-timemachine/ using default spec
+Checking out ca09684e94767cc0b2339b77b778b4de4f9d104f
+Built git-timemachine in 5.904s, finished at 2022-07-04T21:18:47+0000
+ ✓ Success:
+ 20K -rwxr-xr-x 1 root root 18K Jul  4 21:18 packages/git-timemachine-20220324.1057.el
+4.0K -rw-r--r-- 1 root root 423 Jul  4 21:18 packages/git-timemachine-20220324.1057.entry

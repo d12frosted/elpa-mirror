@@ -3,7 +3,7 @@
 ;; Author: Andy Rosen <ajr@corp.mlfs.org>
 ;; URL: https://github.com/ajrosen/emacs
 ;; Package-Version: 20220628.45
-;; Package-Commit: c7581d244665d86464a301eb0aa68dd08c44501f
+;; Package-Commit: 7da11a70ca0aa6287b4f0cd629db0f1b70420938
 ;; Version: 20220627.2012
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: convenience, frames
