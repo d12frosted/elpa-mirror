@@ -17,7 +17,8 @@
 
    (optional) if you don't want to have to answer the "directory" prompt
    every time you call `extempore-run', you can set the `extempore-path'
-   variable (either in your init file or through the customisation interface)
+   variable - note the trailing "/" - either in your init file or through the
+   customisation interface
 
    (setq extempore-path "/path/to/extempore/")
 

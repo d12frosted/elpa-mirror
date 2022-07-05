@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/wbolster/emacs-evil-colemak-basics.git
 
 Updating /mnt/store/melpa/working/evil-colemak-basics/
-Checking out origin/HEAD
-Checking out 66648de206a7368013f28c0d053b1b32c3efe6c6
-Built evil-colemak-basics in 5.820s, finished at 2022-07-04T21:12:05+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Jul  4 21:12 packages/evil-colemak-basics-20220222.1856.el
-4.0K -rw-r--r-- 1 root root  528 Jul  4 21:12 packages/evil-colemak-basics-20220222.1856.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/wbolster/emacs-evil-colemak-basics.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
