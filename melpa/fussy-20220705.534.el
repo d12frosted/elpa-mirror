@@ -4,8 +4,8 @@
 
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 1.0
-;; Package-Version: 20220705.130
-;; Package-Commit: 8e32eb2984175d6f1035901782bce5c1112c1b21
+;; Package-Version: 20220705.534
+;; Package-Commit: eb5b6799a207aa00779575b7e7e791645d7905fb
 ;; Package-Requires: ((emacs "27.2") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
@@ -536,7 +536,10 @@ Set a text-property \='completion-score on candidates with their score.
           ;; Don't score x but don't filter it out either.
           (push x result)
         (let ((score (funcall fussy-score-fn
-                              x string
+                              x
+                              (if (fussy--orderless-p)
+                                  (replace-regexp-in-string "\\\s" "" string)
+                                string)
                               cache)))
           ;; Candidates with a score of N or less are filtered.
           (when (and score

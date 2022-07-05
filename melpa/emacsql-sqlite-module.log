@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacscollective/emacsql-sqlite-builtin.git
 
 Updating /mnt/store/melpa/working/emacsql-sqlite-module/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/emacscollective/emacsql-sqlite-builtin.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 3e820c66fdaa9937f9e612900954dcd6c7d01943
+Built emacsql-sqlite-module in 4.557s, finished at 2022-07-05T06:11:01+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Jul  5 06:11 packages/emacsql-sqlite-module-20220422.1605.el
+4.0K -rw-r--r-- 1 root root  492 Jul  5 06:11 packages/emacsql-sqlite-module-20220422.1605.entry
