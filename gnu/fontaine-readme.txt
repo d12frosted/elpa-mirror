@@ -11,16 +11,20 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `fontaine' (or `fontaine.el'), and provides every other
 piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2022-05-09.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2022-07-06.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
-⁃ Homepage: <https://protesilaos.com/emacs/fontaine>.
-⁃ Change log: <https://protesilaos.com/emacs/fontaine-changelog>.
-⁃ Git repository: <https://git.sr.ht/~protesilaos/fontaine>.
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/fontaine>.
+⁃ Package name (GNU ELPA): `fontaine'
+⁃ Official manual: <https://protesilaos.com/emacs/fontaine>
+⁃ Change log: <https://protesilaos.com/emacs/fontaine-changelog>
+⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/fontaine>
+  • Mirrors:
+    ⁃ GitHub: <https://github.com/protesilaos/fontaine>
+    ⁃ GitLab: <https://gitlab.com/protesilaos/fontaine>
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/fontaine>
 
 Table of Contents
 ─────────────────
@@ -520,7 +524,8 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to the code or manual
-        Christopher League, Eli Zaretskii, Terry F. Torrey.
+        Christopher League, Eli Zaretskii, Florent Teissier, Terry
+        F. Torrey.
 
   Ideas and user feedback
         Ted Reed.

@@ -4,8 +4,8 @@
 
 ;; Author: Johannes Maier <johannes.maier@mailbox.org>
 ;; Version: 0.1
-;; Package-Version: 20220705.811
-;; Package-Commit: bc90550b6f528944b9e99d1ac916f6e743599f24
+;; Package-Version: 20220706.912
+;; Package-Commit: 900ea0393f6ddc0551436276a7d801bd22a20779
 ;; Homepage: https://github.com/kenranunderscore/emacs-naga-theme
 ;; Keywords: faces themes
 ;; Package-Requires: ((emacs "24.1"))
@@ -69,7 +69,7 @@ The default style is green text in a green box."
       (region (:background ,dark-blue))
       (secondary-selection (:foreground "black" :background ,(color-darken-name "dark green" 7)))
       (vertical-border (:foreground "gray30"))
-      (help-key-binding (:foreground ,gold :background ,bg :box ,gold))
+      (help-key-binding (:foreground ,fg :background ,bg-green :box ,fg))
       (link (:foreground ,cyan :underline t))
       (font-lock-builtin-face (:foreground ,orange))
       (font-lock-comment-face (:foreground ,comment))
@@ -84,13 +84,14 @@ The default style is green text in a green box."
       (font-lock-warning-face (:slant italic :foreground ,orange-red))
       (fringe (:background ,bg))
       (warning (:foreground ,orange-red :weight regular))
+      (header-line (:foreground ,grey :background ,block-light))
       (mode-line ,(cond
                    ((eq naga-theme-modeline-style 'golden-box)
                     `(:background ,bg :foreground ,gold :box ,gold))
                    ((eq naga-theme-modeline-style 'filled-green)
                     `(:background ,fg-dark :foreground ,bg :box ,bg))
                    ((eq naga-theme-modeline-style 'green-box)
-                    `(:background "#041a04" :foreground ,fg :box ,fg))))
+                    `(:background ,bg-green :foreground ,fg :box ,fg))))
       (mode-line-buffer-id (:weight bold))
       (mode-line-emphasis (:weight bold))
       (mode-line-inactive (:box "#555555" :background ,bg :foreground ,comment))
@@ -177,7 +178,7 @@ The default style is green text in a green box."
       (org-document-info (:foreground ,cyan))
       (org-verbatim (:foreground ,pink))
       (org-code (:foreground ,string))
-      (org-block (:background ,block-bg))
+      (org-block (:background ,block))
       (org-block-begin-line (:foreground ,comment))
       (org-block-end-line (:inherit 'org-block-begin-line :extend nil))
       (org-special-keyword (:foreground ,comment))
@@ -189,10 +190,10 @@ The default style is green text in a green box."
       (magit-branch-remote (:foreground ,cyan))
       (magit-tag (:foreground ,string))
       (magit-diff-file-heading-highlight (:background ,dark-blue))
-      (magit-diff-context-highlight (:background ,block-bg :foreground ,comment-light))
+      (magit-diff-context-highlight (:background ,block-light :foreground ,grey))
       (magit-diff-context (:foreground ,comment))
-      (magit-diff-hunk-heading (:background ,bg-green :foreground ,fg-dark))
-      (magit-diff-hunk-heading-highlight (:background ,fg-dark :foreground ,bg))
+      (magit-diff-hunk-heading (:background "#181818" :foreground ,comment-light :slant oblique))
+      (magit-diff-hunk-heading-highlight (:slant oblique :weight bold :background "#3f3f3f" :foreground "#b5c5b5"))
 
       ;; manpages
       (Man-overstrike (:foreground ,cyan))
@@ -233,7 +234,7 @@ The default style is green text in a green box."
 
 ;; Set all the colors to their actual values.
 (let ((bg "#040404")
-      (bg-green "#042304")
+      (bg-green "#041a04")
       (fg "#0ac30a")
       (fg-dark "#078807")
       (yellow "#eec900")
@@ -245,12 +246,14 @@ The default style is green text in a green box."
       (orange "#ff9000")
       (comment "#707370")
       (comment-light "#909590")
+      (grey "#aabaaa")
       (dark-blue "#01018a")
       (sea-green "#3cb371")
       (orange-red "#ff4500")
       (red "#ff1500")
       (whitespace-fg "#151515")
-      (block-bg "#121212"))
+      (block "#121212")
+      (block-light "#252525"))
   (apply #'custom-theme-set-faces
          (cons 'naga (create-theme-colors))))
 

@@ -5,8 +5,8 @@
 ;; Created: March 3rd, 2022
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20220508.1232
-;; Package-Commit: 05cec288f931a1f3cd5984b88a79f1339110e4b9
+;; Package-Version: 20220706.627
+;; Package-Commit: 9b51aed939054c54934a6969290ad78587051cde
 ;; Homepage: https://github.com/jgru/consult-org-roam
 ;; Package-Requires: ((emacs "27.1") (org-roam "2.2.0") (consult "0.16"))
 
@@ -201,6 +201,7 @@ filtered out."
 By enabling `consult-org-roam-mode' the functions `org-roam-node-read' and
 `org-roam-ref-read' are overriden by consults-org-roam's equivalents. Optional
 argument ARG indicates whether the mode should be enabled or disabled."
+  :global t
   :lighter " cor"
   ;; Add or remove advice when enabled respectively disabled
   (if consult-org-roam-mode
