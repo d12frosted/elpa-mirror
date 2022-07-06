@@ -4,8 +4,8 @@
 
 ;; Author: Jürgen Hötzel <juergen@archlinux.org>
 ;; URL: https://github.com/juergenhoetzel/password-mode
-;; Package-Version: 20220222.1757
-;; Package-Commit: 456a01e959140cb070e77bce5032a6885c7b7ae0
+;; Package-Version: 20220706.507
+;; Package-Commit: 883981d9f8d0e2a8ec479c89f5f6b2492c22e01a
 ;; Version: 1.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: docs password passphrase
@@ -32,6 +32,7 @@
 ;;; Code:
 
 (require 'seq)
+(require 'cl-lib)
 
 ;;---------------------------------------------------------------------------
 ;; user-configurable variables
@@ -76,7 +77,7 @@ match wouldn't work.  Shy groups are OK."
 (defun password-mode-prompt-password (ov after start end &optional len)
   "Prompt for new password."
   (when after
-    (assert (zerop len))	;when doing insertion, len is always 0
+    (cl-assert (zerop len))	;when doing insertion, len is always 0
     (let* ((inhibit-modification-hooks t)
 	   (insert-length (- (overlay-end ov) (overlay-start ov) (overlay-get ov 'password-mode-length)))
 	   (istr (buffer-substring (overlay-start ov) (+ (overlay-start ov) insert-length)))

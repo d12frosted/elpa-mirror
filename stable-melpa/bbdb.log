@@ -4,11 +4,11 @@ Source:  https://git.savannah.nongnu.org/git/bbdb.git
 
 Updating /mnt/store/melpa/working/bbdb/
 Checking out origin/HEAD
-Checking out ed7648f723d3fd03476b8a007a76e9058f7f7f47
-Checking out ed7648f723d3fd03476b8a007a76e9058f7f7f47
+Checking out 1b121e94871f5d931c75793257db732ba82fdddb
+Checking out 1b121e94871f5d931c75793257db732ba82fdddb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/bbdb/
-  to /tmp/bbdbqLdSbe/bbdb-20220416.405
+  to /tmp/bbdbPfhick/bbdb-20220706.433
   ! lisp/bbdb-anniv.el -> bbdb-anniv.el
   ! lisp/bbdb-com.el -> bbdb-com.el
   ! lisp/bbdb-gnus-aux.el -> bbdb-gnus-aux.el
@@ -32,37 +32,39 @@ Copying files (->) and directories (=>)
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/gpl.texi -> gpl.texi
   ! lisp/bbdb-site.el.in -> bbdb-site.el
-Generating /tmp/bbdbqLdSbe/bbdb-20220416.405/bbdb.info
-Generating /tmp/bbdbqLdSbe/bbdb-20220416.405/doclicense.info
-Generating /tmp/bbdbqLdSbe/bbdb-20220416.405/gpl.info
-Created bbdb-20220416.405.tar containing:
-  bbdb-20220416.405/
-  bbdb-20220416.405/bbdb-anniv.el
-  bbdb-20220416.405/bbdb-com.el
-  bbdb-20220416.405/bbdb-gnus-aux.el
-  bbdb-20220416.405/bbdb-gnus.el
-  bbdb-20220416.405/bbdb-ispell.el
-  bbdb-20220416.405/bbdb-message.el
-  bbdb-20220416.405/bbdb-mhe.el
-  bbdb-20220416.405/bbdb-migrate.el
-  bbdb-20220416.405/bbdb-mu4e.el
-  bbdb-20220416.405/bbdb-mua.el
-  bbdb-20220416.405/bbdb-pgp.el
-  bbdb-20220416.405/bbdb-pkg.el
-  bbdb-20220416.405/bbdb-rmail.el
-  bbdb-20220416.405/bbdb-sc.el
-  bbdb-20220416.405/bbdb-site.el
-  bbdb-20220416.405/bbdb-snarf.el
-  bbdb-20220416.405/bbdb-tex.el
-  bbdb-20220416.405/bbdb-vm-aux.el
-  bbdb-20220416.405/bbdb-vm.el
-  bbdb-20220416.405/bbdb-wl.el
-  bbdb-20220416.405/bbdb.el
-  bbdb-20220416.405/bbdb.info
-  bbdb-20220416.405/dir
-  bbdb-20220416.405/doclicense.info
-  bbdb-20220416.405/gpl.info
-Built bbdb in 12.614s, finished at 2022-07-06T03:15:02+0000
+Generating /tmp/bbdbPfhick/bbdb-20220706.433/bbdb.info
+Generating /tmp/bbdbPfhick/bbdb-20220706.433/doclicense.info
+Generating /tmp/bbdbPfhick/bbdb-20220706.433/gpl.info
+Created bbdb-20220706.433.tar containing:
+  bbdb-20220706.433/
+  bbdb-20220706.433/bbdb-anniv.el
+  bbdb-20220706.433/bbdb-com.el
+  bbdb-20220706.433/bbdb-gnus-aux.el
+  bbdb-20220706.433/bbdb-gnus.el
+  bbdb-20220706.433/bbdb-ispell.el
+  bbdb-20220706.433/bbdb-message.el
+  bbdb-20220706.433/bbdb-mhe.el
+  bbdb-20220706.433/bbdb-migrate.el
+  bbdb-20220706.433/bbdb-mu4e.el
+  bbdb-20220706.433/bbdb-mua.el
+  bbdb-20220706.433/bbdb-pgp.el
+  bbdb-20220706.433/bbdb-pkg.el
+  bbdb-20220706.433/bbdb-rmail.el
+  bbdb-20220706.433/bbdb-sc.el
+  bbdb-20220706.433/bbdb-site.el
+  bbdb-20220706.433/bbdb-snarf.el
+  bbdb-20220706.433/bbdb-tex.el
+  bbdb-20220706.433/bbdb-vm-aux.el
+  bbdb-20220706.433/bbdb-vm.el
+  bbdb-20220706.433/bbdb-wl.el
+  bbdb-20220706.433/bbdb.el
+  bbdb-20220706.433/bbdb.info
+  bbdb-20220706.433/dir
+  bbdb-20220706.433/doclicense.info
+  bbdb-20220706.433/gpl.info
+Built bbdb in 12.721s, finished at 2022-07-06T06:11:39+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  224 Jul  6 03:15 packages/bbdb-20220416.405.entry
 700K -rw-r--r-- 1 root root 700K Jul  6 03:15 packages/bbdb-20220416.405.tar
+4.0K -rw-r--r-- 1 root root  224 Jul  6 06:11 packages/bbdb-20220706.433.entry
+700K -rw-r--r-- 1 root root 700K Jul  6 06:11 packages/bbdb-20220706.433.tar
