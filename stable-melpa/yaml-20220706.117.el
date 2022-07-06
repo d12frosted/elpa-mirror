@@ -4,8 +4,8 @@
 
 ;; Author: Zachary Romero <zkry@posteo.org>
 ;; Version: 0.1.0
-;; Package-Version: 20220702.1912
-;; Package-Commit: 14e6e4bc3d43078750571f446cbc670701d672c6
+;; Package-Version: 20220706.117
+;; Package-Commit: 2500074ebf988a5d2e6a4a9f6dbe9b7df513a96c
 ;; Homepage: https://github.com/zkry/yaml.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools
@@ -763,7 +763,8 @@ repeat for each character in a text.")
              (let ((str (substring yaml--parsing-input beg yaml--parsing-position)))
                (list ,name
                      (if yaml--parsing-store-position
-                         (propertize str 'yaml-position (cons beg yaml--parsing-position))
+                         (propertize str 'yaml-position (cons (1+ beg)
+                                                              (1+ yaml--parsing-position)))
                        str)
                      ,res-symbol)))
             ((equal res-type 'list) (list ,name ,res-symbol))

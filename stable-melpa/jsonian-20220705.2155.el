@@ -4,8 +4,8 @@
 
 ;; Author: Ian Wahbe
 ;; URL: https://github.com/iwahbe/jsonian
-;; Package-Version: 20220705.2045
-;; Package-Commit: d031099dd9f512fb2f66c43f45eb555d74db9e7d
+;; Package-Version: 20220705.2155
+;; Package-Commit: ad861d130e969560f3c74ea548ec12b8e4872524
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -1407,9 +1407,15 @@ designed to be installed with `advice-add' and `:before-until'."
       (jsonian-narrow-to-defun arg))
     correct))
 
+(defvar jsonian--so-long-predicate nil
+  "The function originally assigned to `so-long-predicate'.")
+
 (defun jsonian-unload-function ()
   "Unload `jsonian'."
-  (advice-remove #'narrow-to-defun #'jsonian--correct-narrow-to-defun))
+  (advice-remove #'narrow-to-defun #'jsonian--correct-narrow-to-defun)
+  (defvar so-long-predicate)
+  (when jsonian--so-long-predicate
+    (setq so-long-predicate jsonian--so-long-predicate)))
 
 
 ;; Foreign integration
@@ -1437,10 +1443,11 @@ designed to be installed with `advice-add' and `:before-until'."
   (unless (boundp 'so-long-predicate)
     (user-error "`so-long' mode needs to be loaded"))
   (defvar so-long-predicate)
+  (setq jsonian--so-long-predicate so-long-predicate)
   (setq so-long-predicate
         (lambda ()
           (unless (eq major-mode 'jsonian-mode)
-            (funcall so-long-predicate)))))
+            (funcall jsonian--so-long-predicate)))))
 
 
 ;; Miscellaneous utility functions
