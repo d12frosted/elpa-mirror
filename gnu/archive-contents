@@ -692,7 +692,7 @@
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
  (denote .
-	 [(0 2 0)
+	 [(0 2 1)
 	  ((emacs
 	    (27 2)))
 	  "Simple notes with an efficient file-naming scheme" tar
@@ -700,7 +700,7 @@
 	   (:maintainer "Denote Development" . "~protesilaos/denote@lists.sr.ht")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "918a15b29caaf0457d30b741a4ed3ec0fad63446"))])
+	   (:commit . "f10fe51fcd80bbcfc44bbef31d5b8f6952b4be4c"))])
  (detached .
 	   [(0 7)
 	    ((emacs
