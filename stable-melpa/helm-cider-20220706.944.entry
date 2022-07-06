@@ -1,13 +1,13 @@
 (helm-cider .
-	    [(20220614 942)
+	    [(20220706 944)
 	     ((emacs
 	       (26))
 	      (cider
 	       (1 0))
 	      (helm-core
-	       (2 8)))
+	       (3 7 0)))
 	     "Helm interface to CIDER" tar
-	     ((:commit . "62eb5613984c9e7f4d04bd46637e675eda351ca4")
+	     ((:commit . "fe7e48befdb0b20ea1b0fb3626a8a725e54ae626")
 	      (:authors
 	       ("Tianxiang Xiong" . "tianxiang.xiong@gmail.com"))
 	      (:maintainer "Tianxiang Xiong" . "tianxiang.xiong@gmail.com")

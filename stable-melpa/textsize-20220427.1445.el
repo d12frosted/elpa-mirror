@@ -4,8 +4,6 @@
 ;;
 ;; Author: James Ferguson <james@faff.org>
 ;; Version: 3.0
-;; Package-Version: 20220427.1445
-;; Package-Commit: df91392c3c928d7841631f5809716b9cf0f7309e
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience
 ;; URL: https://github.com/WJCFerguson/textsize

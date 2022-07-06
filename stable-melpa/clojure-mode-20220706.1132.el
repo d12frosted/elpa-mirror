@@ -11,8 +11,8 @@
 ;;       Magnar Sveen <magnars@gmail.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20220418.2015
-;; Package-Commit: b6f41d74904daa9312648f3a7bea7a72fd8e140b
+;; Package-Version: 20220706.1132
+;; Package-Commit: d82417cf86644a4135c6d764aa901f69045fd5ca
 ;; Keywords: languages clojure clojurescript lisp
 ;; Version: 5.14.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -143,10 +143,10 @@ to indent function forms.
           merge
           some-coll)"
   :safe #'symbolp
-  :type '(choice (const :tag "Same as `lisp-mode'" 'always-align)
-                 (const :tag "Indent like a macro body" 'always-indent)
+  :type '(choice (const :tag "Same as `lisp-mode'" always-align)
+                 (const :tag "Indent like a macro body" always-indent)
                  (const :tag "Indent like a macro body unless first arg is on the same line"
-                        'align-arguments))
+                        align-arguments))
   :package-version '(clojure-mode . "5.2.0"))
 
 (defcustom clojure-use-backtracking-indent t
@@ -1145,7 +1145,7 @@ will align the values like this:
   :type `(choice (const :tag "Make blank lines prevent vertical alignment from happening."
                         ,clojure--align-separator-newline-regexp)
                  (other :tag "Allow blank lines to happen within a vertically-aligned expression."
-                        'entire)))
+                        entire)))
 
 (defcustom clojure-align-reader-conditionals nil
   "Whether to align reader conditionals, as if they were maps."

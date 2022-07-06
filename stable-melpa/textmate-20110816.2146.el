@@ -5,8 +5,6 @@
 ;; Licensed under the same terms as Emacs.
 
 ;; Keywords: textmate osx mac
-;; Package-Version: 20110816.2146
-;; Package-Commit: 350918b070148f0ace6d9d3cd4ebcaf15c1a8781
 ;; Created: 22 Nov 2008
 ;; Author: Chris Wanstrath <chris@ozmm.org>
 ;; Version: 2
