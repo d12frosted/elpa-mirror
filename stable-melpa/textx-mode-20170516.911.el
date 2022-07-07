@@ -4,6 +4,8 @@
 
 ;; Author: Novak Boškov <gnovak.boskov@gmail.com>
 ;; URL: https://github.com/novakboskov/textx-mode
+;; Package-Version: 20170516.911
+;; Package-Commit: 72f9f0c5855b382024f0da8f56833c22a70a5cb3
 ;; Keywords: textx
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.3"))

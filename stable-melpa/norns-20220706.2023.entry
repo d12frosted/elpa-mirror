@@ -1,0 +1,18 @@
+(norns .
+       [(20220706 2023)
+	((emacs
+	  (27 1))
+	 (dash
+	  (2 17 0))
+	 (s
+	  (1 12 0))
+	 (f
+	  (0 20 0))
+	 (request
+	  (0 3 2))
+	 (websocket
+	  (1 13)))
+	"Interactive development environment for monome norns" single
+	((:commit . "d9972936192458ae194e43ef484b3f24fc923c11")
+	 (:keywords "processes" "terminals")
+	 (:url . "https://github.com/p3r7/norns.el"))])
