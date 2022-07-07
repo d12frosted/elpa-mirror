@@ -4,11 +4,11 @@ Source:  https://github.com/emacs-w3m/emacs-w3m.git
 
 Updating /mnt/store/melpa/working/w3m/
 Checking out origin/HEAD
-Checking out 45155e42ea10990295d47d5ee3cb29be16a1f9f6
-Checking out 45155e42ea10990295d47d5ee3cb29be16a1f9f6
+Checking out e3ca74f62602e69af5ff3271bd98977bd490e9de
+Checking out e3ca74f62602e69af5ff3271bd98977bd490e9de
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mMpv9Tc/w3m-20220606.2300
+  to /tmp/w3m0OzZcB/w3m-20220606.2300
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -41,15 +41,15 @@ Copying files (->) and directories (=>)
   ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
   ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Generating /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m-ja.info
+Generating /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m-ja.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m-ja.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m-ja.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -60,13 +60,13 @@ HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m-ja.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m-ja.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -74,18 +74,18 @@ HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m-ja.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m.info
+Generating /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -93,7 +93,7 @@ HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
@@ -103,13 +103,13 @@ install-info: No such file or directory for /tmp/w3mMpv9Tc/w3m-20220606.2300/ema
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
-HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
+HEAD is now at e3ca74f6 Replace hankaku tilde with swung dash in shimbun.el (shimbun-japanese-hankaku-region-1)
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -117,14 +117,14 @@ HEAD is now at 45155e42 Fix unquoted single quotation marks in docstrings
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mMpv9Tc/w3m-20220606.2300/emacs-w3m.info
+install-info: No such file or directory for /tmp/w3m0OzZcB/w3m-20220606.2300/emacs-w3m.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
 Created w3m-20220606.2300.tar containing:
@@ -204,7 +204,7 @@ Created w3m-20220606.2300.tar containing:
   w3m-20220606.2300/w3m-weather.el
   w3m-20220606.2300/w3m.el
   w3m-20220606.2300/w3mhack.el
-Built w3m in 21.074s, finished at 2022-07-06T22:17:55+0000
+Built w3m in 18.490s, finished at 2022-07-07T04:12:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  180 Jul  6 22:17 packages/w3m-20220606.2300.entry
-1.1M -rw-r--r-- 1 root root 1.1M Jul  6 22:17 packages/w3m-20220606.2300.tar
+4.0K -rw-r--r-- 1 root root  180 Jul  7 04:12 packages/w3m-20220606.2300.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jul  7 04:12 packages/w3m-20220606.2300.tar

@@ -4,8 +4,8 @@
 
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 1.0
-;; Package-Version: 20220705.534
-;; Package-Commit: eb5b6799a207aa00779575b7e7e791645d7905fb
+;; Package-Version: 20220706.2245
+;; Package-Commit: 95ab380202006169d8c1532d2074bb4a868a358f
 ;; Package-Requires: ((emacs "27.2") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
@@ -534,7 +534,8 @@ Set a text-property \='completion-score on candidates with their score.
       (setf x (copy-sequence x))
       (if (> (length x) fussy-max-word-length-to-score)
           ;; Don't score x but don't filter it out either.
-          (push x result)
+          (unless fussy-filter-unscored-candidates
+            (push x result))
         (let ((score (funcall fussy-score-fn
                               x
                               (if (fussy--orderless-p)

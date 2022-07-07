@@ -3,7 +3,7 @@
 ;; Author: Erik Bäckman <contact@ebackman.net>
 ;; Version: 0.1
 ;; Package-Version: 20220705.1423
-;; Package-Commit: d08d6235cc122fafa144aae06a4332c730bc3ba4
+;; Package-Commit: 1b96a4c251111b9e16b8fe4734a4a7212e3db8b8
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces
 ;; Homepage: https://github.com/erikbackman/mindre-theme

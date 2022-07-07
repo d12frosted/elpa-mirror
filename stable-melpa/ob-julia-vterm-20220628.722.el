@@ -7,7 +7,7 @@
 ;; Created: October 31, 2020
 ;; URL: https://github.com/shg/ob-julia-vterm.el
 ;; Package-Version: 20220628.722
-;; Package-Commit: abf149274bd98f562d34d4dbd8d65350a12e2c8e
+;; Package-Commit: 26b72ea0a9fbebca5a753df9a821646c01cb4201
 ;; Package-Requires: ((emacs "26.1") (julia-vterm "0.16") (queue "0.2"))
 ;; Version: 0.2e
 ;; Keywords: julia, org, outlines, literate programming, reproducible research
