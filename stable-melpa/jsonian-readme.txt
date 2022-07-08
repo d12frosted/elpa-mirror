@@ -6,8 +6,9 @@ Notable features include:
 - `jsonian-find': A `find-file' style interface to navigating a JSON document.
 - Automatic indentation discovery via `jsonian-indent-line'.
 
-When `jsonian' is loaded, it adds itself to `auto-mode-alist'.  This will
-overwrite `javascript-mode' by default when opening a .json file.
+When `jsonian' is loaded, it adds `jsonian-mode' and `jsonian-c-mode' to `auto-mode-alist'.
+This will overwrite `javascript-mode' by default when opening a .json file.  It will
+overwrite `fundamental-mode' when opening a .jsonc file
 
 To have `jsonian-mode' activate when any JSON like buffer is opened,
 regardless of the extension, add
