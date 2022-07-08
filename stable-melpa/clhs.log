@@ -3,10 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sam-s/clhs.git
 
 Updating /mnt/store/melpa/working/clhs/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/sam-s/clhs.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 7b106c4fb5a6388ab753f94740f6dfadcdeedcbb
+Built clhs in 4.776s, finished at 2022-07-08T15:08:25+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jul  8 15:08 packages/clhs-20210428.1911.el
+4.0K -rw-r--r-- 1 root root  310 Jul  8 15:08 packages/clhs-20210428.1911.entry

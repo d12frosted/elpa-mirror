@@ -4,8 +4,8 @@
 
 ;; Author: Taiki Sugawara <buzz.taiki@gmail.com>
 ;; URL: https://github.com/buzztaiki/project-rootfile.el
-;; Package-Version: 20220516.1419
-;; Package-Commit: 65e46311dae24f3458e43c2490ad265c711aa624
+;; Package-Version: 20220708.1403
+;; Package-Commit: b37b6a4d2943bd63f9931f8fe6cc2af8b27fcde4
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -51,6 +51,7 @@
 ;;; Code:
 
 (require 'project)
+(require 'cl-lib)
 
 (defgroup project-rootfile nil
   "Extension of `project' to detect project root with root file (e.g. Gemfile)."

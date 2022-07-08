@@ -1,9 +1,9 @@
 ;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
 
 ;; Author: Erik Bäckman <contact@ebackman.net>
-;; Version: 0.1
-;; Package-Version: 20220707.1958
-;; Package-Commit: 03a089c64c0dc637cfe34e4943ee546f60fc7ebb
+;; Version: 0.1.1
+;; Package-Version: 20220708.1451
+;; Package-Commit: 7e28932815febea116aa85b695d8d2ae5907e892
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces
 ;; Homepage: https://github.com/erikbackman/mindre-theme
@@ -62,8 +62,7 @@
     (green-faint . "#537469")
     (yellow-dark . "#54433a")
     (red . "#BF616A")
-    (orange . "#d47500")
-    ))
+    (orange . "#d47500")))
 
 (defmacro mindre-with-color-variables (&rest body)
   (declare (indent 0))
@@ -185,9 +184,33 @@
   "Use more bold constructs."
   :type 'boolean :group 'mindre)
 
+(defcustom mindre-faded-lisp-parens-modes
+  '(emacs-lisp-mode
+    lisp-mode
+    scheme-mode
+    racket-mode)
+  "List of modes for which faded parentheses should be enabled."
+  :type '(symbol) :group 'mindre)
+
+(defun mindre--set-faded-lisp-parens (symbol value)
+  "Mindre :set function for `mindre-use-faded-lisp-parens'.
+Takes care of adding or removing hooks when the
+`mindre-use-faded-lisp-parens' is customized."
+  (let ((hooks (mapcar (lambda (mode) (intern (format "%s-hook" mode)))
+		       mindre-faded-lisp-parens-modes)))
+    (if value
+	(progn
+	  (dolist (hook hooks)
+	    (add-hook hook #'mindre--font-lock-add-paren)))
+      (dolist (hook hooks)
+	(remove-hook hook #'mindre--font-lock-add-paren))))
+  (setq mindre-use-faded-lisp-parens value))
+
 (defcustom mindre-use-faded-lisp-parens t
   "Use faded parenthesis in Lisp modes."
-  :type 'boolean :group 'mindre)
+  :type 'boolean :group 'mindre
+  :initialize #'custom-initialize-reset
+  :set #'mindre--set-faded-lisp-parens)
 
 (defface mindre-heading-1 nil
   "Face for headings."
@@ -845,20 +868,12 @@
     `(geiser-font-lock-autodoc-identifier ((t :inherit mindre-keyword)))
 
     ;; --- Racket ----------------------------------------------------
-    `(racket-keyword-argument-face ((t (:inherit mindre-keyword))))
-    )))
+    `(racket-keyword-argument-face ((t (:inherit mindre-keyword)))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
   (add-to-list 'custom-theme-load-path
 	       (file-name-as-directory (file-name-directory load-file-name))))
-
-;;;###autoload
-(when mindre-use-faded-lisp-parens
-  (add-hook 'lisp-mode-hook #'mindre--font-lock-add-paren)
-  (add-hook 'lisp-data-mode-hook #'mindre--font-lock-add-paren)
-  (add-hook 'scheme-mode-hook #'mindre--font-lock-add-paren)
-  (add-hook 'racket-mode-hook #'mindre--font-lock-add-paren))
 
 ;;;###autoload
 (run-hooks 'mindre-after-load-hook)
