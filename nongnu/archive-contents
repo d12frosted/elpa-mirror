@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 6 0)
+	   [(1 7 0)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "4e90910a2cc383446e610bfc4c110720ffbd70b5"))])
+	     (:commit . "9bfa065a4e14f7e96c8ac487c4e54b084a02133c"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -241,6 +241,19 @@
 		    (:maintainer "Nicholas M. Van Horn" . "nvanhorn@protonmail.com")
 		    (:authors
 		     ("Nicholas M. Van Horn" . "nvanhorn@protonmail.com")))])
+ (cycle-at-point .
+		 [(0 1)
+		  ((emacs
+		    (28 1))
+		   (recomplete
+		    (0 2)))
+		  "Cycle (rotate) the thing under the cursor" tar
+		  ((:url . "https://codeberg.com/ideasman42/emacs-cycle-at-point")
+		   (:keywords "convenience")
+		   (:maintainer "Campbell Barton")
+		   (:authors
+		    ("Campbell Barton"))
+		   (:commit . "ea22b90f35f4cef73387047b3ef3fad83787d4e2"))])
  (d-mode .
 	 [(202003130913)
 	  ((emacs
@@ -261,6 +274,27 @@
 	      (:authors
 	       ("https://github.com/bradyt/dart-mode/issues"))
 	      (:keywords "languages"))])
+ (diff-ansi .
+	    [(0 1)
+	     ((emacs
+	       (27 1)))
+	     "Display diff's using alternative diffing tools" tar
+	     ((:url . "https://codeberg.org/ideasman42/emacs-diff-ansi")
+	      (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+	      (:authors
+	       ("Campbell Barton" . "ideasman42@gmail.com"))
+	      (:commit . "f2207a67e3cc79433b43deeb463d0768357c350f"))])
+ (doc-show-inline .
+		  [(0 1)
+		   ((emacs
+		     (26 2)))
+		   "Show doc-strings found in external files" tar
+		   ((:url . "https://codeberg.com/ideasman42/emacs-doc-show-inline")
+		    (:keywords "convenience")
+		    (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		    (:authors
+		     ("Campbell Barton" . "ideasman42@gmail.com"))
+		    (:commit . "1c5837d2a667d977a1bd90ba44ebd911cc660f26"))])
  (dockerfile-mode .
 		  [(1 5)
 		   ((emacs
@@ -289,6 +323,16 @@
 		(:authors
 		 ("Arne Jørgensen" . "arne@arnested.dk"))
 		(:commit . "ed90b0c4d808365e9ae9f16cc8a96eff17815621"))])
+ (edit-indirect .
+		[(0 1 10)
+		 ((emacs
+		   (24 3)))
+		 "Edit regions in separate buffers" tar
+		 ((:url . "https://github.com/Fanael/edit-indirect")
+		  (:maintainer "Fanael Linithien" . "fanael4@gmail.com")
+		  (:authors
+		   ("Fanael Linithien" . "fanael4@gmail.com"))
+		  (:commit . "f80f63822ffae78de38dbe72cacaeb1aaa96c732"))])
  (editorconfig .
 	       [(0 8 2)
 		((cl-lib
@@ -808,6 +852,16 @@
 			  (:authors
 			   ("Nikolaj Schumacher <bugs * nschum de>"))
 			  (:commit . "438a1cb2563e2a2496be4678cc0df8d5b22caf5d"))])
+ (hl-block-mode .
+		[(0 1)
+		 ((emacs
+		   (26 1)))
+		 "Highlighting nested blocks" tar
+		 ((:url . "https://codeberg.com/ideasman42/emacs-hl-block-mode")
+		  (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		  (:authors
+		   ("Campbell Barton" . "ideasman42@gmail.com"))
+		  (:commit . "877e14c0645397aa8c1a45eb34ea70f3ecd21280"))])
  (htmlize .
 	  [(1 57)
 	   nil "Convert buffer text and decorations to HTML." tar
@@ -816,6 +870,17 @@
 	    (:authors
 	     ("Hrvoje Niksic" . "hniksic@gmail.com"))
 	    (:keywords "hypermedia" "extensions"))])
+ (idle-highlight-mode .
+		      [(1 1 3)
+		       ((emacs
+			 (27 1)))
+		       "Highlight the word the point is on" tar
+		       ((:url . "https://codeberg.com/ideasman42/emacs-idle-highlight-mode")
+			(:keywords "convenience")
+			(:maintainer "Phil Hagelberg, Cornelius Mika, Campbell Barton")
+			(:authors
+			 ("Phil Hagelberg, Cornelius Mika, Campbell Barton"))
+			(:commit . "f71e57554071a398dbc0e2d48a71908cf13541b4"))])
  (idris-mode .
 	     [(1 1 0)
 	      ((emacs
@@ -845,6 +910,17 @@
 	       "Run an external Clojure process in an Emacs buffer" tar
 	       ((:url . "http://github.com/clojure-emacs/inf-clojure")
 		(:keywords "processes" "clojure"))])
+ (inkpot-theme .
+	       [(0 1)
+		((emacs
+		  (24 1)))
+		"A port of vim's inkpot theme" tar
+		((:url . "https://codeberg.com/ideasman42/emacs-inkpot-theme")
+		 (:maintainer "Sarah Iovan" . "sarah@hwaetageek.com")
+		 (:authors
+		  ("Sarah Iovan" . "sarah@hwaetageek.com")
+		  ("Campbell Barton" . "ideasman42@gmail.com"))
+		 (:commit . "de745de9ab7f67431a5ce493a63be68d408ec40e"))])
  (j-mode .
 	 [(1 1 1)
 	  nil "Major mode for editing J programs" tar
@@ -1065,6 +1141,16 @@
 	     (:keywords "nix" "languages" "tools" "unix")
 	     (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
 	     (:commit . "e4e604ae3ac91748c4e7d51a591cb9ee60961b7c"))])
+ (oblivion-theme .
+		 [(0 1)
+		  ((emacs
+		    (24 1)))
+		  "A port of GEdit oblivion theme" tar
+		  ((:url . "https://codeberg.com/ideasman42/emacs-oblivion-theme")
+		   (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		   (:authors
+		    ("Campbell Barton" . "ideasman42@gmail.com"))
+		   (:commit . "3a1d67637ea4a6099a62de45842b8c5e4440ede4"))])
  (org-auto-tangle .
 		  [(0 5 0)
 		   ((emacs
@@ -1313,6 +1399,16 @@
 	      (:authors
 	       ("Hinrik Örn Sigurðsson" . "hinrik.sig@gmail.com"))
 	      (:commit . "4ee9045eeb90f7831d7c0ee2e4adfcd957f712be"))])
+ (recomplete .
+	     [(0 2)
+	      ((emacs
+		(26 1)))
+	      "Immediately (re)complete actions" tar
+	      ((:url . "https://codeberg.com/ideasman42/emacs-recomplete")
+	       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+	       (:authors
+		("Campbell Barton" . "ideasman42@gmail.com"))
+	       (:commit . "2b38ca25e3392636fe936d3edad447970279a463"))])
  (request .
 	  [(0 3 3)
 	   ((emacs
@@ -1360,6 +1456,26 @@
 	      nil "Major mode for editing Scala" tar
 	      ((:url . "https://github.com/hvesalai/emacs-scala-mode")
 	       (:keywords "languages"))])
+ (scroll-on-drag .
+		 [(0 1)
+		  ((emacs
+		    (26 2)))
+		  "Interactive scrolling" tar
+		  ((:url . "https://codeberg.com/ideasman42/emacs-scroll-on-drag")
+		   (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		   (:authors
+		    ("Campbell Barton" . "ideasman42@gmail.com"))
+		   (:commit . "a668537a8da77e4425b6a4110bdaba598a295f9e"))])
+ (scroll-on-jump .
+		 [(0 1)
+		  ((emacs
+		    (26 2)))
+		  "Scroll when jumping to a new point" tar
+		  ((:url . "https://codeberg.com/ideasman42/emacs-scroll-on-jump")
+		   (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		   (:authors
+		    ("Campbell Barton" . "ideasman42@gmail.com"))
+		   (:commit . "30e23e86949b1bd53906d3f9036dfb57213e336c"))])
  (sesman .
 	 [(0 3 2)
 	  ((emacs
@@ -1426,6 +1542,17 @@
 		    (:authors
 		     ("Nasser Alshammari"))
 		    (:commit . "4857e6eb7ea20be3a2631beee42d0644dff7eb1b"))])
+ (spell-fu .
+	   [(0 3)
+	    ((emacs
+	      (26 2)))
+	    "Fast & light spelling highlighter" tar
+	    ((:url . "https://codeberg.org/ideasman42/emacs-spell-fu")
+	     (:keywords "convenience")
+	     (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+	     (:authors
+	      ("Campbell Barton" . "ideasman42@gmail.com"))
+	     (:commit . "ddad489f2c87467480520502a93e682f81bfac18"))])
  (stylus-mode .
 	      [(1 0 1)
 	       nil "Major mode for editing .styl files" tar
@@ -1482,6 +1609,19 @@
 	 (:authors
 	  ("Daniel Semyonov" . "daniel@dsemy.com"))
 	 (:commit . "bbe31e347c794df2753f67520060182745c8f19f"))])
+ (symbol-overlay .
+		 [(4 1)
+		  ((emacs
+		    (24 3))
+		   (seq
+		    (2 2)))
+		  "Highlight symbols with keymap-enabled overlays" tar
+		  ((:url . "https://github.com/wolray/symbol-overlay/")
+		   (:keywords "faces" "matching")
+		   (:maintainer "wolray" . "wolray@foxmail.com")
+		   (:authors
+		    ("wolray" . "wolray@foxmail.com"))
+		   (:commit . "d1464042783e252f5cac1fcac82fee16fc3534db"))])
  (systemd .
 	  [(1 6)
 	   ((emacs
@@ -1575,6 +1715,27 @@
 		 (:maintainer "Mark Tran" . "mark.tran@gmail.com")
 		 (:authors
 		  ("Mark Tran" . "mark.tran@gmail.com")))])
+ (undo-fu .
+	  [(0 4)
+	   ((emacs
+	     (25 1)))
+	   "Undo helper with redo" tar
+	   ((:url . "https://codeberg.com/ideasman42/emacs-undo-fu")
+	    (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+	    (:authors
+	     ("Campbell Barton" . "ideasman42@gmail.com"))
+	    (:commit . "46de023b5f8ddb989eeff7665feeec2877d8eda8"))])
+ (undo-fu-session .
+		  [(0 2)
+		   ((emacs
+		     (28 1)))
+		   "Persistent undo, available between sessions" tar
+		   ((:url . "https://codeberg.com/ideasman42/emacs-undo-fu-session")
+		    (:keywords "convenience")
+		    (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		    (:authors
+		     ("Campbell Barton" . "ideasman42@gmail.com"))
+		    (:commit . "e2043f8350970e1a9ef06a94956a733826cdf32b"))])
  (vc-fossil .
 	    [(20220707)
 	     nil "VC backend for the fossil sofware configuraiton management system" tar

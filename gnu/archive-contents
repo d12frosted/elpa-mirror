@@ -3095,17 +3095,18 @@
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
  (tmr .
-      [(0 3 1)
+      [(0 4 0)
        ((emacs
 	 (27 1)))
        "Set timers using a convenient notation" tar
        ((:url . "https://git.sr.ht/~protesilaos/tmr")
 	(:keywords "convenience" "timer")
-	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+	(:maintainer "TMR Development" . "~protesilaos/tmr@lists.sr.ht")
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com")
-	 ("Damien Cassou" . "damien@cassou.me"))
-	(:commit . "600437f92cb7e4c111aed09fe668bf103c00f989"))])
+	 ("Damien Cassou" . "damien@cassou.me")
+	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	(:commit . "0d6ce6979c980f0d61c61d1f6478f805612315b4"))])
  (tomelr .
 	 [(0 4 3)
 	  ((emacs

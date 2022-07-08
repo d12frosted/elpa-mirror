@@ -1,0 +1,1 @@
+Support showing diffs using external tools.

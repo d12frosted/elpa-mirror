@@ -12,4 +12,4 @@ If you're installing manually, you should add this to your .emacs
 file after putting it on your load path:
 
    (add-to-list 'load-path "(path-to)/Enhanced-Ruby-Mode") ; must be added after any path containing old ruby-mode
-   (setq enh-ruby-program "(path-to-ruby1.9)/bin/ruby") ; so that still works if ruby points to ruby1.8
+   (setq enh-ruby-program "(path-to-ruby)/bin/ruby") ; so that still works if ruby points to ruby1.8

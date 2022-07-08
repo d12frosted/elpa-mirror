@@ -1,0 +1,1 @@
+Interactive scrolling which can be cancelled by pressing escape.
