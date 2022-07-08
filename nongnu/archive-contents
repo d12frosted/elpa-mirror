@@ -275,7 +275,7 @@
 	       ("https://github.com/bradyt/dart-mode/issues"))
 	      (:keywords "languages"))])
  (diff-ansi .
-	    [(0 1)
+	    [(0 2)
 	     ((emacs
 	       (27 1)))
 	     "Display diff's using alternative diffing tools" tar
@@ -283,7 +283,7 @@
 	      (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
 	      (:authors
 	       ("Campbell Barton" . "ideasman42@gmail.com"))
-	      (:commit . "f2207a67e3cc79433b43deeb463d0768357c350f"))])
+	      (:commit . "71336e614e3150c47c58f99f2df10a3af73370ac"))])
  (doc-show-inline .
 		  [(0 1)
 		   ((emacs
