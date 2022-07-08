@@ -1,0 +1,13 @@
+(cycle-at-point .
+		[(20220708 500)
+		 ((emacs
+		   (28 1))
+		  (recomplete
+		   (0 2)))
+		 "Cycle (rotate) the thing under the cursor" tar
+		 ((:commit . "d900f71b46fabadab6bf058f3f48236de6ee9220")
+		  (:authors
+		   ("Campbell Barton" . "ideasman42@gmail.com"))
+		  (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		  (:keywords "convenience")
+		  (:url . "https://codeberg.org/ideasman42/emacs-cycle-at-point"))])
