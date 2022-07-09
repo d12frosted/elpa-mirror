@@ -17,6 +17,10 @@ Table of Contents
 This package shows Flymake diagnostics on cursor hover.  This works on
 both graphical and non-graphical displays.
 
+<file:./demo-gui.png> `flymake-popon' on GUI using Posframe.
+
+<file:./demo-terminal.png> `flymake-popon' on terminal using Popon.
+
 
 1 Installation
 ══════════════
