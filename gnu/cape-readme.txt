@@ -56,6 +56,7 @@ Table of Contents
 
   ⁃ `cape-dabbrev': Complete word from current buffers
   ⁃ `cape-file': Complete file name
+  ⁃ `cape-history': Complete from Eshell, Comint or minibuffer history
   ⁃ `cape-keyword': Complete programming language keyword
   ⁃ `cape-symbol': Complete Elisp symbol
   ⁃ `cape-abbrev': Complete abbreviation (`add-global-abbrev',
@@ -80,14 +81,16 @@ Table of Contents
   │ ;; See the Corfu README for more configuration tips.
   │ (use-package corfu
   │   :init
-  │   (corfu-global-mode))
+  │   (global-corfu-mode))
   │ 
   │ ;; Add extensions
   │ (use-package cape
   │   ;; Bind dedicated completion commands
+  │   ;; Alternative prefix keys: C-c p, M-p, M-+, ...
   │   :bind (("C-c p p" . completion-at-point) ;; capf
   │ 	 ("C-c p t" . complete-tag)        ;; etags
   │ 	 ("C-c p d" . cape-dabbrev)        ;; or dabbrev-completion
+  │ 	 ("C-c p h" . cape-history)
   │ 	 ("C-c p f" . cape-file)
   │ 	 ("C-c p k" . cape-keyword)
   │ 	 ("C-c p s" . cape-symbol)
@@ -103,9 +106,10 @@ Table of Contents
   │   :init
   │   ;; Add `completion-at-point-functions', used by `completion-at-point'.
   │   (add-to-list 'completion-at-point-functions #'cape-file)
-  │   (add-to-list 'completion-at-point-functions #'cape-tex)
   │   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
-  │   (add-to-list 'completion-at-point-functions #'cape-keyword)
+  │   ;;(add-to-list 'completion-at-point-functions #'cape-history)
+  │   ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
+  │   ;;(add-to-list 'completion-at-point-functions #'cape-tex)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-sgml)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
@@ -252,8 +256,15 @@ Table of Contents
 4.4 Other Capf transformers
 ───────────────────────────
 
+  Cape provides a set of additional Capf transformation functions, which
+  are mostly meant to used by experts to fine tune the Capf behavior and
+  Capf interaction. These can either be used as advices (`cape-wrap-*)'
+  or to create a new Capf from an existing Capf (`cape-capf-*').
+
   • `cape-interactive-capf': Create a Capf which can be called
     interactively.
+  • `cape-wrap-accept-all', `cape-capf-accept-all': Create a Capf which
+    accepts every input as valid.
   • `cape-wrap-silent', `cape-capf-silent': Wrap a chatty Capf and
     silence it.
   • `cape-wrap-purify', `cape-capf-purify': Purify a broken Capf and
@@ -266,6 +277,51 @@ Table of Contents
     properties to a Capf.
   • `cape-wrap-predicate', `cape-capf-predicate': Add candidate
     predicate to a Capf.
+  • `cape-wrap-prefix-length', `cape-capf-prefix-length': Enforce a
+    minimal prefix length.
+
+  In the following we show a few example configurations, which have come
+  up on the [Cape] or [Corfu issue tracker] or the [Corfu wiki.] I use
+  some of these tweaks in my personal configuration.
+
+  ┌────
+  │ ;; Example 1: Sanitize the `pcomplete-completions-at-point' Capf.
+  │ ;; The Capf has undesired side effects on Emacs 28 and earlier.
+  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
+  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify)
+  │ 
+  │ ;; Example 2: Configure a Capf with a specific auto completion prefix length
+  │ (setq-local completion-at-point-functions
+  │ 	    (list (cape-capf-prefix-length #'cape-dabbrev 2)))
+  │ 
+  │ ;; Example 3: Define a defensive Dabbrev Capf, which accepts all inputs.
+  │ ;; If you use Corfu and `corfu-auto=t', the first candidate won't be auto
+  │ ;; selected even if `corfu-preselect-first=t'! You can use this instead of
+  │ ;; `cape-dabbrev'.
+  │ (defun my-cape-dabbrev-accept-all ()
+  │   (cape-wrap-accept-all #'cape-dabbrev))
+  │ (add-to-list 'completion-at-point-functions #'my-cape-dabbrev-accept-all)
+  │ 
+  │ ;; Example 4: Define interactive Capf which can be bound to a key.
+  │ ;; Here we wrap the `elisp-completion-at-point' such that we can
+  │ ;; complete Elisp code explicitly in arbitrary buffers.
+  │ (global-set-key (kbd "C-c p e")
+  │ 		(cape-interactive-capf #'elisp-completion-at-point))
+  │ 
+  │ ;; Example 5: Ignore :keywords in Elisp completion.
+  │ (defun ignore-elisp-keywords (sym)
+  │   (not (keywordp sym)))
+  │ (setq-local completion-at-point-functions
+  │ 	    (list (cape-capf-predicate #'elisp-completion-at-point
+  │ 				       #'ignore-elisp-keywords)))
+  └────
+
+
+[Cape] <https://github.com/minad/cape/issues>
+
+[Corfu issue tracker] <https://github.com/minad/corfu/issues>
+
+[Corfu wiki.] <https://github.com/minad/corfu/wiki>
 
 
 5 Contributions

@@ -4,11 +4,11 @@ Source:  https://github.com/andras-simonyi/citeproc-el.git
 
 Updating /mnt/store/melpa/working/citeproc/
 Checking out origin/HEAD
-Checking out aeb5e68bd1f396e3a31c4fd39f66a7724c9919fc
-Checking out aeb5e68bd1f396e3a31c4fd39f66a7724c9919fc
+Checking out 993aeb24ba53d638cf9e5b4f2f7926d6d235c123
+Checking out 993aeb24ba53d638cf9e5b4f2f7926d6d235c123
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citeproc/
-  to /tmp/citeproc7K50oe/citeproc-20220702.2132
+  to /tmp/citeprocwxRU81/citeproc-20220709.759
     citeproc-biblatex.el -> citeproc-biblatex.el
     citeproc-bibtex.el -> citeproc-bibtex.el
     citeproc-choose.el -> citeproc-choose.el
@@ -35,36 +35,38 @@ Copying files (->) and directories (=>)
     citeproc-term.el -> citeproc-term.el
     citeproc-test-human.el -> citeproc-test-human.el
     citeproc.el -> citeproc.el
-Created citeproc-20220702.2132.tar containing:
-  citeproc-20220702.2132/
-  citeproc-20220702.2132/citeproc-biblatex.el
-  citeproc-20220702.2132/citeproc-bibtex.el
-  citeproc-20220702.2132/citeproc-choose.el
-  citeproc-20220702.2132/citeproc-cite.el
-  citeproc-20220702.2132/citeproc-context.el
-  citeproc-20220702.2132/citeproc-date.el
-  citeproc-20220702.2132/citeproc-disamb.el
-  citeproc-20220702.2132/citeproc-formatters.el
-  citeproc-20220702.2132/citeproc-generic-elements.el
-  citeproc-20220702.2132/citeproc-itemdata.el
-  citeproc-20220702.2132/citeproc-itemgetters.el
-  citeproc-20220702.2132/citeproc-lib.el
-  citeproc-20220702.2132/citeproc-locale.el
-  citeproc-20220702.2132/citeproc-macro.el
-  citeproc-20220702.2132/citeproc-name.el
-  citeproc-20220702.2132/citeproc-number.el
-  citeproc-20220702.2132/citeproc-pkg.el
-  citeproc-20220702.2132/citeproc-prange.el
-  citeproc-20220702.2132/citeproc-proc.el
-  citeproc-20220702.2132/citeproc-rt.el
-  citeproc-20220702.2132/citeproc-s.el
-  citeproc-20220702.2132/citeproc-sort.el
-  citeproc-20220702.2132/citeproc-style.el
-  citeproc-20220702.2132/citeproc-subbibs.el
-  citeproc-20220702.2132/citeproc-term.el
-  citeproc-20220702.2132/citeproc-test-human.el
-  citeproc-20220702.2132/citeproc.el
-Built citeproc in 7.455s, finished at 2022-07-09T06:13:45+0000
+Created citeproc-20220709.759.tar containing:
+  citeproc-20220709.759/
+  citeproc-20220709.759/citeproc-biblatex.el
+  citeproc-20220709.759/citeproc-bibtex.el
+  citeproc-20220709.759/citeproc-choose.el
+  citeproc-20220709.759/citeproc-cite.el
+  citeproc-20220709.759/citeproc-context.el
+  citeproc-20220709.759/citeproc-date.el
+  citeproc-20220709.759/citeproc-disamb.el
+  citeproc-20220709.759/citeproc-formatters.el
+  citeproc-20220709.759/citeproc-generic-elements.el
+  citeproc-20220709.759/citeproc-itemdata.el
+  citeproc-20220709.759/citeproc-itemgetters.el
+  citeproc-20220709.759/citeproc-lib.el
+  citeproc-20220709.759/citeproc-locale.el
+  citeproc-20220709.759/citeproc-macro.el
+  citeproc-20220709.759/citeproc-name.el
+  citeproc-20220709.759/citeproc-number.el
+  citeproc-20220709.759/citeproc-pkg.el
+  citeproc-20220709.759/citeproc-prange.el
+  citeproc-20220709.759/citeproc-proc.el
+  citeproc-20220709.759/citeproc-rt.el
+  citeproc-20220709.759/citeproc-s.el
+  citeproc-20220709.759/citeproc-sort.el
+  citeproc-20220709.759/citeproc-style.el
+  citeproc-20220709.759/citeproc-subbibs.el
+  citeproc-20220709.759/citeproc-term.el
+  citeproc-20220709.759/citeproc-test-human.el
+  citeproc-20220709.759/citeproc.el
+Built citeproc in 8.112s, finished at 2022-07-09T10:09:27+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  569 Jul  9 06:13 packages/citeproc-20220702.2132.entry
 272K -rw-r--r-- 1 root root 270K Jul  9 06:13 packages/citeproc-20220702.2132.tar
+4.0K -rw-r--r-- 1 root root  568 Jul  9 10:09 packages/citeproc-20220709.759.entry
+280K -rw-r--r-- 1 root root 280K Jul  9 10:09 packages/citeproc-20220709.759.tar

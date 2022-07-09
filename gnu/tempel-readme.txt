@@ -49,18 +49,17 @@ Table of Contents
   them there. As soon as you move before (behind) the first (last)
   field, the fields are finalized.
 
-  Tempel can hook into the abbrev mechanism of Emacs by enabling the
-  `tempel-abbrev-mode' in a buffer or by enabling the
-  `tempel-global-abbrev-mode'.  Then the Tempel templates will be
-  available via `expand-abbrev' which is usually bound to `C-x ''.
+  Tempel can hook into Abbrev by enabling the `tempel-abbrev-mode' in a
+  buffer or by enabling the `global-tempel-abbrev-mode'. Then the Tempel
+  templates will be available via `expand-abbrev' which is usually bound
+  to `C-x ''.
 
-  Note that this package is not a competitor to the mature and widely
-  used YASnippet library, which comes with many readily available
-  snippet collections.  Try Tempel only if you like small and simple
-  packages. With Tempel you write your templates in Lisp syntax, which
-  from my perspective fits well to the hackable nature of Emacs. Tempel
-  took inspiration from the [Tempo-Snippets] package by Nikolaj
-  Schumacher ([GitHub link]).
+  Note that this package does not come with readily available snippet
+  collections, unlike the YASnippet library. Try Tempel if you like
+  small and simple packages.  With Tempel you write your templates in
+  Lisp syntax, which from my perspective fits well to the hackable
+  nature of Emacs. Tempel took inspiration from the [Tempo-Snippets]
+  package by Nikolaj Schumacher ([GitHub link]).
 
 
 [Corfu] <https://github.com/minad/corfu>
@@ -74,12 +73,16 @@ Table of Contents
 ═════════════
 
   The package is available on GNU ELPA and MELPA and can be installed
-  with `package-install'. In the following we show an example
-  configuration, which relies on on `use-package'.
+  with `package-install'. The following example configuration relies on
+  `use-package'.
 
   ┌────
   │ ;; Configure Tempel
   │ (use-package tempel
+  │   ;; Require trigger prefix before template name when completing.
+  │   ;; :custom
+  │   ;; (tempel-trigger-prefix "<")
+  │ 
   │   :bind (("M-+" . tempel-complete) ;; Alternative tempel-expand
   │ 	 ("M-*" . tempel-insert))
   │ 
@@ -87,12 +90,13 @@ Table of Contents
   │ 
   │   ;; Setup completion at point
   │   (defun tempel-setup-capf ()
-  │     ;; Add the Tempel Capf to `completion-at-point-functions'. `tempel-expand'
-  │     ;; only triggers on exact matches. Alternatively use `tempel-complete' if
-  │     ;; you want to see all matches, but then Tempel will probably trigger too
-  │     ;; often when you don't expect it.
-  │     ;; NOTE: We add `tempel-expand' *before* the main programming mode Capf,
-  │     ;; such that it will be tried first.
+  │     ;; Add the Tempel Capf to `completion-at-point-functions'.
+  │     ;; `tempel-expand' only triggers on exact matches. Alternatively use
+  │     ;; `tempel-complete' if you want to see all matches, but then you
+  │     ;; should also configure `tempel-trigger-prefix', such that Tempel
+  │     ;; does not trigger too often when you don't expect it. NOTE: We add
+  │     ;; `tempel-expand' *before* the main programming mode Capf, such
+  │     ;; that it will be tried first.
   │     (setq-local completion-at-point-functions
   │ 		(cons #'tempel-expand
   │ 		      completion-at-point-functions)))
@@ -103,31 +107,33 @@ Table of Contents
   │   ;; Optionally make the Tempel templates available to Abbrev,
   │   ;; either locally or globally. `expand-abbrev' is bound to C-x '.
   │   ;; (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
-  │   ;; (tempel-global-abbrev-mode)
+  │   ;; (global-tempel-abbrev-mode)
   │ )
   │ 
   │ ;; Optional: Use the Corfu completion UI
   │ (use-package corfu
   │   :init
-  │   (corfu-global-mode))
+  │   (global-corfu-mode))
   └────
 
 
 3 Template file format
 ══════════════════════
 
-  The templates are defined in a Lisp file which is stored by default in
-  the `user-emacs-directory' (`~/.config/emacs/templates'). The
-  templates are grouped by major mode with an optional
-  `:condition'. Each template is a list in the concise form of the Emacs
+  The templates are defined in a Lisp data file configured by
+  `tempel-path'. By default the file `~/.config/emacs/templates' is
+  used. The templates are grouped by major mode with an optional `:when'
+  condition. Each template is a list in the concise form of the Emacs
   Tempo syntax. The first element of each list is the name of the
-  template. Behind the name, the Tempo syntax elements follow. Pre- and
-  post-expansion operations can be specified per template by the
-  optional keys `:pre' and `:post'.
+  template. Behind the name, the Tempo syntax elements follow.
+
+  In addition, each template may specify a `:pre' and/or `:post' key
+  with a FORM that is evaluated before the template is expanded or after
+  it is finalized, respectively. The `:post' form is evaluated in the
+  lexical scope of the template, which means that it can access the
+  template's named fields.
 
   ┌────
-  │ ;; -*- mode: lisp -*-
-  │ 
   │ fundamental-mode ;; Available everywhere
   │ 
   │ (today (format-time-string "%Y-%m-%d"))
@@ -141,8 +147,8 @@ Table of Contents
   │ 
   │ latex-mode
   │ 
-  │ (begin "\\begin{" (s env) "}" > n> r> "\\end{" (s env) "}")
-  │ (frac "\\frac{" p "}{" p "}")
+  │ (begin "\\begin{" (s env) "}" r> n> "\\end{" (s env) "}")
+  │ (frac "\\frac{" p "}{" q "}")
   │ (enumerate "\\begin{enumerate}\n\\item " r> n> "\\end{enumerate}")
   │ (itemize "\\begin{itemize}\n\\item " r> n> "\\end{itemize}")
   │ 
@@ -152,28 +158,46 @@ Table of Contents
   │ 
   │ emacs-lisp-mode
   │ 
+  │ (autoload ";;;###autoload")
+  │ (pt "(point)")
   │ (lambda "(lambda (" p ")" n> r> ")")
   │ (var "(defvar " p "\n  \"" p "\")")
+  │ (local "(defvar-local " p "\n  \"" p "\")")
   │ (const "(defconst " p "\n  \"" p "\")")
   │ (custom "(defcustom " p "\n  \"" p "\"" n> ":type '" p ")")
   │ (face "(defface " p " '((t :inherit " p "))\n  \"" p "\")")
   │ (group "(defgroup " p " nil\n  \"" p "\"" n> ":group '" p n> ":prefix \"" p "-\")")
   │ (macro "(defmacro " p " (" p ")\n  \"" p "\"" n> r> ")")
+  │ (alias "(defalias '" p " '" p ")")
   │ (fun "(defun " p " (" p ")\n  \"" p "\"" n> r> ")")
+  │ (iflet "(if-let (" p ")" n> r> ")")
+  │ (whenlet "(when-let (" p ")" n> r> ")")
+  │ (iflet* "(if-let* (" p ")" n> r> ")")
+  │ (whenlet* "(when-let* (" p ")" n> r> ")")
+  │ (andlet* "(and-let* (" p ")" n> r> ")")
+  │ (cond "(cond" n "(" q "))" >)
+  │ (pcase "(pcase " (p "scrutinee") n "(" q "))" >)
   │ (let "(let (" p ")" n> r> ")")
-  │ (star "(let* (" p ")" n> r> ")")
+  │ (let* "(let* (" p ")" n> r> ")")
   │ (rec "(letrec (" p ")" n> r> ")")
-  │ (command "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive)" n> r> ")")
+  │ (dotimes "(dotimes (" p ")" n> r> ")")
+  │ (dolist "(dolist (" p ")" n> r> ")")
+  │ (loop "(cl-loop for " p " in " p " do" n> r> ")")
+  │ (command "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive" p ")" n> r> ")")
+  │ (advice "(defun " (p "adv" name) " (&rest app)" n> p n> "(apply app))" n>
+  │ 	"(advice-add #'" (p "fun") " " (p ":around") " #'" (s name) ")")
+  │ (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
+  │ 	 ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name))) " ends here" n)
   │ 
   │ eshell-mode
   │ 
-  │ (for "for " (p "i") " in " p " { " p " }")
-  │ (while "while { " p " } { " p " }")
-  │ (until "until { " p " } { " p " }")
-  │ (if "if { " p " } { " p " }")
-  │ (if-else "if { " p " } { " p " } { " p " }")
-  │ (unless "unless { " p " } { " p " }")
-  │ (unless-else "unless { " p " } { " p " } { " p " }")
+  │ (for "for " (p "i") " in " p " { " q " }")
+  │ (while "while { " p " } { " q " }")
+  │ (until "until { " p " } { " q " }")
+  │ (if "if { " p " } { " q " }")
+  │ (ife "if { " p " } { " p " } { " q " }")
+  │ (unl "unless { " p " } { " q " }")
+  │ (unle "unless { " p " } { " p " } { " q " }")
   │ 
   │ text-mode
   │ 
@@ -193,7 +217,7 @@ Table of Contents
   │ 
   │ (class "public class " (p (file-name-base (or (buffer-file-name) (buffer-name)))) " {" n> r> n "}")
   │ 
-  │ c-mode :condition (re-search-backward "^\\w*$" (line-beginning-position) 'noerror)
+  │ c-mode :when (re-search-backward "^\\S-*$" (line-beginning-position) 'noerror)
   │ 
   │ (inc "#include <" (p (concat (file-name-base (or (buffer-file-name) (buffer-name))) ".h")) ">")
   │ (incc "#include \"" (p (concat (file-name-base (or (buffer-file-name) (buffer-name))) ".h")) "\"")
@@ -206,9 +230,13 @@ Table of Contents
   │ (center "#+begin_center" n> r> n> "#+end_center")
   │ (comment "#+begin_comment" n> r> n> "#+end_comment")
   │ (verse "#+begin_verse" n> r> n> "#+end_verse")
-  │ (src "#+begin_src " p n> r> n> "#+end_src")
-  │ (elisp "#+begin_src emacs-lisp" n> r> n "#+end_src"
-  │        :post (progn (tempel-done) (org-edit-src-code)))
+  │ (src "#+begin_src " p n> r> n> "#+end_src" :post (org-edit-src-code))
+  │ (elisp "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
+  │ 
+  │ ;; Local Variables:
+  │ ;; mode: lisp-data
+  │ ;; outline-regexp: "[a-z]"
+  │ ;; End:
   └────
 
 
@@ -223,8 +251,9 @@ Table of Contents
   • `p' Inserts an unnamed placeholder field.
   • `n' Inserts a newline.
   • `>' Indents with `indent-according-to-mode'.
-  • `r' Inserts the current region.
-  • `r>' The region, but indented.
+  • `r' Inserts the current region.  If no region is active, quits the
+    containing template when jumped to.
+  • `r>' Acts like `r', but indent region.
   • `n>' Inserts a newline and indents.
   • `&' Insert newline if there is only whitespace between line start
     and point.
@@ -246,6 +275,7 @@ Table of Contents
     evaluated.
   • `(FORM ...)' Other Lisp forms are evaluated. Named fields are
     lexically bound.
+  • `q' Quits the containing template when jumped to.
 
   Use caution with templates which execute arbitrary code!
 
@@ -259,7 +289,7 @@ Table of Contents
   source. A source can either be a function, which should return a list
   of applicable templates, or the symbol of a variable, which holds a
   list of templates, which apply to the current context.  By default,
-  Tempel configures only the source `tempel-file-templates'. You may
+  Tempel configures only the source `tempel-path-templates'. You may
   want to add global or local template variables to your user
   configuration:
 
@@ -315,7 +345,7 @@ Table of Contents
   • [skempo.el]: Unifies the Skeleton and Tempo configuration
   • [snippet.el]: Original snippet mode
   • [tempo-snippets.el]: snippet.el-like interface for Tempo
-  • [yasnippet.el]: The most popular Emacs template system
+  • [yasnippet.el]: The most popular template system
 
 
 [aas.el] <https://github.com/ymarco/auto-activating-snippets>

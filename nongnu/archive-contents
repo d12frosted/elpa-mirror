@@ -1583,7 +1583,7 @@
 	   ("Random User"))
 	  (:commit . "7a0c36c808e107b5851ba48ec3825dfa3c1a902e"))])
  (swift-mode .
-	     [(8 5 0)
+	     [(8 6 0)
 	      ((emacs
 		(24 4))
 	       (seq
@@ -1597,7 +1597,7 @@
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
 		("Arthur Evstifeev" . "lod@pisem.net"))
-	       (:commit . "c92e780530950a2cd6e501baf48c96ae4d8214a6"))])
+	       (:commit . "cdd194cbadcee724a9813da386f0a612082b1ab1"))])
  (swsw .
        [(2 1 1)
 	((emacs
@@ -1829,7 +1829,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(17 15 20220705140319)
+	       [(17 16 20220708232047)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -1838,7 +1838,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "8bde45ee32f6833c03e349719d9272e19ebce638"))])
+		 (:commit . "604ca32c104e6046e0295b4d5aa7019ae35e52ac"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar
