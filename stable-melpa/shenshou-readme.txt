@@ -11,6 +11,8 @@ Usage,
   - Set `shenshou-login-user-name' and `shenshou-login-password' first.
   - Run `shenshou-download-subtitle' in Dired buffer or anywhere.
   - Run `shenshou-logout-now' to logout.
+  - Run `shenshou-extract-subtitle-from-zip' to extract subtitle from zip file.
+    Subtitle is automatically renamed to match selected video file.
 
 Tips,
   - Use `shenshou-language-code-list' to set up subtitle's language.
