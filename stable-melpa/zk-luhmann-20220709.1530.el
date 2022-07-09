@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20220706.1925
-;; Package-Commit: 9f9623ba527d73015771d5bd6c50af83857d457a
+;; Package-Version: 20220709.1530
+;; Package-Commit: c8d7fdcbb2684e7e62d1a6e7de93612f732b6a69
 ;; Homepage: https://github.com/localauthor/zk-luhmann
 ;; Package-Requires: ((emacs "24.4")(zk "0.4")(zk-index "0.6"))
 
@@ -423,7 +423,7 @@ Passes ARGS to `zk-index'."
     (zk-luhmann--index (zk-luhmann-files)
                        zk-index-last-format-function
                        #'zk-luhmann-sort
-                       (buffer-name))
+                       nil)
     (re-search-forward id nil t)
     (beginning-of-line)
     (zk-index--reset-mode-line)))
