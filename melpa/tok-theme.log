@@ -1,11 +1,11 @@
 Package: tok-theme
-Fetcher: github
-Source:  https://github.com/topikettunen/tok-theme.git
+Fetcher: git
+Source:  https://git.sr.ht/~tok/tok-theme
 
-Updating /mnt/store/melpa/working/tok-theme/
+Cloning https://git.sr.ht/~tok/tok-theme to /mnt/store/melpa/working/tok-theme/
 Checking out origin/HEAD
-Checking out 8708fa7978e1c3655bda3e5f166f11c11cc31fd8
-Built tok-theme in 6.731s, finished at 2022-07-09T15:40:00+0000
+Checking out 52f8db69ad4eb3c9c104ec68487d73d39c6737c3
+Built tok-theme in 10.701s, finished at 2022-07-10T03:20:49+0000
  ✓ Success:
- 52K -rw-r--r-- 1 root root 51K Jul  9 15:39 packages/tok-theme-20220708.1317.el
-4.0K -rw-r--r-- 1 root root 374 Jul  9 15:39 packages/tok-theme-20220708.1317.entry
+ 52K -rw-r--r-- 1 root root 51K Jul 10 03:20 packages/tok-theme-20220708.1317.el
+4.0K -rw-r--r-- 1 root root 374 Jul 10 03:20 packages/tok-theme-20220708.1317.entry
