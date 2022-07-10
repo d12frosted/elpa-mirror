@@ -4,7 +4,7 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-oblivion-theme
 ;; Package-Version: 20220708.211
-;; Package-Commit: 7781f3644c566cdf598ed194ee8f4df7591a02c5
+;; Package-Commit: 4df39caa9e4e1c0718af03477892551ed732aec4
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 

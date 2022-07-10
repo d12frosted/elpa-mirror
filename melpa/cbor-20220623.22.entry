@@ -1,0 +1,12 @@
+(cbor .
+      [(20220623 22)
+       ((emacs
+	 (25 1))
+	(dash
+	 (2 19 0)))
+       "CBOR utilities" single
+       ((:commit . "821f77cd0814284bb4fe606b9b436be818a444fc")
+	(:authors
+	 ("Oscar Najera <https://oscarnajera.com>"))
+	(:maintainer "Oscar Najera" . "hi@oscarnajera.com")
+	(:url . "https://github.com/Titan-C/cardano.el"))])

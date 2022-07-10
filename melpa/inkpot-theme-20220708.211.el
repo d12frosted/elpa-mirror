@@ -5,7 +5,7 @@
 ;;         Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-inkpot-theme
 ;; Package-Version: 20220708.211
-;; Package-Commit: e77c766be3f6484de2881988c1fc38c2537214c8
+;; Package-Commit: e2cb8564b8795913fa6b812df190ec23b05abf3c
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 

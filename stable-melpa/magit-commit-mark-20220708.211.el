@@ -7,7 +7,7 @@
 
 ;; URL: https://codeberg.org/ideasman42/emacs-magit-commit-mark
 ;; Package-Version: 20220708.211
-;; Package-Commit: 5762fdd85b3381fa72fa3219dc758e9e8c342246
+;; Package-Commit: c7008bf9fff5e94060a7483ca68d0627d52f4460
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "28.1") (magit "3.3.0"))
 

@@ -1,0 +1,11 @@
+Package: my-repo-pins
+Fetcher: github
+Source:  https://github.com/ninjatrappeur/my-repo-pins.git
+
+Cloning https://github.com/ninjatrappeur/my-repo-pins.git to /mnt/store/melpa/working/my-repo-pins/
+Checking out origin/HEAD
+Checking out 01dacd4b01bef53742b0f79f0e254c4762ebc23e
+Built my-repo-pins in 5.663s, finished at 2022-07-10T06:37:34+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 32K Jul 10 06:37 packages/my-repo-pins-20220705.839.el
+4.0K -rw-r--r-- 1 root root 390 Jul 10 06:37 packages/my-repo-pins-20220705.839.entry
