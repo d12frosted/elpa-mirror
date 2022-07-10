@@ -1586,7 +1586,7 @@
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (js2-mode .
-	   [(20211229)
+	   [(20220710)
 	    ((emacs
 	      (24 1))
 	     (cl-lib
@@ -1598,7 +1598,8 @@
 	     (:authors
 	      ("Steve Yegge" . "steve.yegge@gmail.com")
 	      ("mooz" . "stillpedant@gmail.com")
-	      ("Dmitry Gutov" . "dgutov@yandex.ru")))])
+	      ("Dmitry Gutov" . "dgutov@yandex.ru"))
+	     (:commit . "841cfec9570ae06a67a131997e2aff32340e81d7"))])
  (json-mode .
 	    [(0 2)
 	     ((emacs
