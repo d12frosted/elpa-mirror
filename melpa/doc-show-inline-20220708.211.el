@@ -7,7 +7,7 @@
 
 ;; URL: https://codeberg.org/ideasman42/emacs-doc-show-inline
 ;; Package-Version: 20220708.211
-;; Package-Commit: 115db9ef4287c707b0798de104a09f38334c4e98
+;; Package-Commit: 1be290742980331736828207208caf2473f3ba60
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
