@@ -3,9 +3,9 @@
 ;; Copyright (C) 2016-2020 Rami Chowdhury
 ;; Author: Rami Chowdhury <rami.chowdhury@gmail.com>
 ;; URL: http://github.com/necaris/conda.el
-;; Package-Commit: b97ab1ac89b862219e12e1cd89dd30f0f4f40718
+;; Package-Commit: 06a1ac946ed245e0b0fae2755f9641c4c180de9f
 ;; Version: 0.4
-;; Package-Version: 20220702.1848
+;; Package-Version: 20220710.1740
 ;; Package-X-Original-Version: 0.4
 ;; Keywords: languages, local, tools, python, environment, conda
 ;; Package-Requires: ((emacs "25.1") (pythonic "0.1.0") (dash "2.13.0") (s "1.11.0") (f "0.18.2"))
@@ -289,7 +289,7 @@ ANACONDA_HOME environment variable."
 (defun conda--get-deactivation-parameters (env-dir)
   "Return activation values for the environment in ENV-DIR, as a `conda-env-params' struct. At minimum, this will contain an updated PATH."
   (if (conda--supports-json-activator)
-      (let ((result (conda--call-json-subcommand "deactivate" env-dir)))
+      (let ((result (conda--call-json-subcommand "deactivate")))
         (make-conda-env-params
          :path (s-join path-separator (alist-get 'PATH (alist-get 'path result)))
          :vars-export (alist-get 'export (alist-get 'vars result))

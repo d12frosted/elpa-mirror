@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://git.genehack.net/genehack/smart-tab.git
 
 Updating /mnt/store/melpa/working/smart-tab/
-Checking out origin/HEAD
-Checking out 2f1b4073904805c8454ebc9bc967b23836a2d577
-Built smart-tab in 5.365s, finished at 2022-07-10T14:39:00+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.2K Jul 10 14:38 packages/smart-tab-20210530.1743.el
-4.0K -rw-r--r-- 1 root root  508 Jul 10 14:38 packages/smart-tab-20210530.1743.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.genehack.net/genehack/smart-tab.git/': Failed to connect to git.genehack.net port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

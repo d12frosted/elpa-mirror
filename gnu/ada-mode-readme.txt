@@ -1,4 +1,4 @@
-Emacs Ada mode version 7.2.0
+Emacs Ada mode version 7.2.1
 
 Ada mode provides auto-casing, fontification, navigation, and
 indentation for Ada source code files.

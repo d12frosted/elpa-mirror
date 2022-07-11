@@ -4,11 +4,11 @@ Source:  https://github.com/andras-simonyi/citeproc-el.git
 
 Updating /mnt/store/melpa/working/citeproc/
 Checking out origin/HEAD
-Checking out dea83413ac58f9d23927a2b4843034666ab50611
-Checking out dea83413ac58f9d23927a2b4843034666ab50611
+Checking out 7cc0152706d59954124f8c1559198050783bbc59
+Checking out 7cc0152706d59954124f8c1559198050783bbc59
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citeproc/
-  to /tmp/citeprocHqJFZy/citeproc-20220710.1208
+  to /tmp/citeprocCLSgR5/citeproc-20220710.2043
     citeproc-biblatex.el -> citeproc-biblatex.el
     citeproc-bibtex.el -> citeproc-bibtex.el
     citeproc-choose.el -> citeproc-choose.el
@@ -35,38 +35,38 @@ Copying files (->) and directories (=>)
     citeproc-term.el -> citeproc-term.el
     citeproc-test-human.el -> citeproc-test-human.el
     citeproc.el -> citeproc.el
-Created citeproc-20220710.1208.tar containing:
-  citeproc-20220710.1208/
-  citeproc-20220710.1208/citeproc-biblatex.el
-  citeproc-20220710.1208/citeproc-bibtex.el
-  citeproc-20220710.1208/citeproc-choose.el
-  citeproc-20220710.1208/citeproc-cite.el
-  citeproc-20220710.1208/citeproc-context.el
-  citeproc-20220710.1208/citeproc-date.el
-  citeproc-20220710.1208/citeproc-disamb.el
-  citeproc-20220710.1208/citeproc-formatters.el
-  citeproc-20220710.1208/citeproc-generic-elements.el
-  citeproc-20220710.1208/citeproc-itemdata.el
-  citeproc-20220710.1208/citeproc-itemgetters.el
-  citeproc-20220710.1208/citeproc-lib.el
-  citeproc-20220710.1208/citeproc-locale.el
-  citeproc-20220710.1208/citeproc-macro.el
-  citeproc-20220710.1208/citeproc-name.el
-  citeproc-20220710.1208/citeproc-number.el
-  citeproc-20220710.1208/citeproc-pkg.el
-  citeproc-20220710.1208/citeproc-prange.el
-  citeproc-20220710.1208/citeproc-proc.el
-  citeproc-20220710.1208/citeproc-rt.el
-  citeproc-20220710.1208/citeproc-s.el
-  citeproc-20220710.1208/citeproc-sort.el
-  citeproc-20220710.1208/citeproc-style.el
-  citeproc-20220710.1208/citeproc-subbibs.el
-  citeproc-20220710.1208/citeproc-term.el
-  citeproc-20220710.1208/citeproc-test-human.el
-  citeproc-20220710.1208/citeproc.el
-Built citeproc in 8.171s, finished at 2022-07-10T13:25:21+0000
+Created citeproc-20220710.2043.tar containing:
+  citeproc-20220710.2043/
+  citeproc-20220710.2043/citeproc-biblatex.el
+  citeproc-20220710.2043/citeproc-bibtex.el
+  citeproc-20220710.2043/citeproc-choose.el
+  citeproc-20220710.2043/citeproc-cite.el
+  citeproc-20220710.2043/citeproc-context.el
+  citeproc-20220710.2043/citeproc-date.el
+  citeproc-20220710.2043/citeproc-disamb.el
+  citeproc-20220710.2043/citeproc-formatters.el
+  citeproc-20220710.2043/citeproc-generic-elements.el
+  citeproc-20220710.2043/citeproc-itemdata.el
+  citeproc-20220710.2043/citeproc-itemgetters.el
+  citeproc-20220710.2043/citeproc-lib.el
+  citeproc-20220710.2043/citeproc-locale.el
+  citeproc-20220710.2043/citeproc-macro.el
+  citeproc-20220710.2043/citeproc-name.el
+  citeproc-20220710.2043/citeproc-number.el
+  citeproc-20220710.2043/citeproc-pkg.el
+  citeproc-20220710.2043/citeproc-prange.el
+  citeproc-20220710.2043/citeproc-proc.el
+  citeproc-20220710.2043/citeproc-rt.el
+  citeproc-20220710.2043/citeproc-s.el
+  citeproc-20220710.2043/citeproc-sort.el
+  citeproc-20220710.2043/citeproc-style.el
+  citeproc-20220710.2043/citeproc-subbibs.el
+  citeproc-20220710.2043/citeproc-term.el
+  citeproc-20220710.2043/citeproc-test-human.el
+  citeproc-20220710.2043/citeproc.el
+Built citeproc in 6.790s, finished at 2022-07-10T21:09:25+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  568 Jul 10 09:36 packages/citeproc-20220709.759.entry
-280K -rw-r--r-- 1 root root 280K Jul 10 09:36 packages/citeproc-20220709.759.tar
-4.0K -rw-r--r-- 1 root root  569 Jul 10 13:25 packages/citeproc-20220710.1208.entry
-280K -rw-r--r-- 1 root root 280K Jul 10 13:25 packages/citeproc-20220710.1208.tar
+4.0K -rw-r--r-- 1 root root  569 Jul 10 17:17 packages/citeproc-20220710.1208.entry
+280K -rw-r--r-- 1 root root 280K Jul 10 17:17 packages/citeproc-20220710.1208.tar
+4.0K -rw-r--r-- 1 root root  569 Jul 10 21:09 packages/citeproc-20220710.2043.entry
+280K -rw-r--r-- 1 root root 280K Jul 10 21:09 packages/citeproc-20220710.2043.tar

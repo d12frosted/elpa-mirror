@@ -4,10 +4,10 @@
 ;;
 ;; Author: Kyle W T Sherman <kylewsherman@gmail.com>
 ;; URL: https://github.com/nullman/emacs-org-visibility
-;; Package-Version: 20220625.2122
-;; Package-Commit: 3aa780edced6fd83a2b560b94fd35f673da0e465
+;; Package-Version: 20220710.1747
+;; Package-Commit: 24aee13a956bc1cff72f8b04f47e7d9ec01bb3b3
 ;; Created: 2021-07-17
-;; Version: 1.1.9
+;; Version: 1.1.10
 ;; Keywords: outlines convenience
 ;; Package-Requires: ((emacs "27.1"))
 ;;
@@ -106,9 +106,9 @@
 ;;   (add-hook 'org-mode-hook #'org-visibility-mode)
 ;;
 ;;   ;; optionally set a keybinding to force save
-;;   (bind-keys :map org-visibility-mode-map
-;;                   ("C-x C-v" . org-visibility-force-save) ; defaults to `find-alternative-file'
-;;                   ("C-x M-v" . org-visibility-remove))    ; defaults to undefined
+;;   (bind-keys* :map org-visibility-mode-map
+;;                    ("C-x C-v" . org-visibility-force-save) ; defaults to `find-alternative-file'
+;;                    ("C-x M-v" . org-visibility-remove))    ; defaults to undefined
 ;;
 ;; Or, if using `use-package', add something like this instead:
 ;;
@@ -277,7 +277,7 @@ and `org-visibility-exclude-regexps'.)")
 With a prefix argument, insert the Emacs version string at point
 instead of displaying it."
   (interactive "P")
-  (let ((version-string "Org Visibility 1.1.9"))
+  (let ((version-string "Org Visibility 1.1.10"))
     (if here
         (insert version-string)
       (if (called-interactively-p 'interactive)
@@ -326,7 +326,8 @@ non-nil and exceeded."
 
 Set visibility state record for BUFFER to VISIBLE and update
 `org-visibility-state-file' with new state."
-  (let ((data (and (file-exists-p org-visibility-state-file)
+  (let ((print-length nil)
+        (data (and (file-exists-p org-visibility-state-file)
                    (ignore-errors
                      (with-temp-buffer
                        (insert-file-contents org-visibility-state-file)
@@ -470,7 +471,8 @@ or matches a regular expression listed in
 (defun org-visibility-remove (&optional file-name)
   "Remove visibility state of FILE-NAME or `current-buffer'."
   (interactive)
-  (let ((file-name (or file-name (buffer-file-name (current-buffer)))))
+  (let ((print-length nil)
+        (file-name (or file-name (buffer-file-name (current-buffer)))))
     (when file-name
       (let ((data
              (cl-remove-if
@@ -488,7 +490,8 @@ or matches a regular expression listed in
 (defun org-visibility-clean ()
   "Remove any missing files from `org-visibility-state-file'."
   (interactive)
-  (let ((data
+  (let ((print-length nil)
+        (data
          (cl-remove-if-not
           (lambda (x)
             (let ((file-name (car x)))
@@ -586,7 +589,6 @@ file is saved or killed, and restored when the file is loaded.
 \\{org-visibility-mode-map}"
   :lighter " vis"
   :keymap (make-sparse-keymap)
-  ;; toggle hooks on and off
   (if org-visibility-mode
       (org-visibility-enable-hooks)
     (org-visibility-disable-hooks)))

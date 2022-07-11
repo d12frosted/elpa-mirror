@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.7
-;; Package-Version: 20220710.1446
-;; Package-Commit: 956c44a0f6b27f7e1797613137deed6a957feb0f
+;; Package-Version: 20220710.2020
+;; Package-Commit: 84805842febd76cce71ca66bce01f54aba7cd8b3
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "27.1")(zk "0.3"))
@@ -1113,9 +1113,7 @@ With prefix-argument, raise ZK-Desktop in other frame."
   "Kill line in `zk-index-desktop-mode'."
   (interactive)
   (let ((inhibit-read-only t))
-    (if (save-excursion
-          (beginning-of-line)
-          (looking-at-p "[[:space:]]*$"))
+    (if (not (zk-index--button-at-point-p))
         (kill-line)
       (kill-region (line-beginning-position)
                    (line-end-position)))))

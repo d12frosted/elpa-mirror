@@ -77,9 +77,9 @@ like the following to your .emacs file:
   (add-hook 'org-mode-hook #'org-visibility-mode)
 
   ;; optionally set a keybinding to force save
-  (bind-keys :map org-visibility-mode-map
-                  ("C-x C-v" . org-visibility-force-save) ; defaults to `find-alternative-file'
-                  ("C-x M-v" . org-visibility-remove))    ; defaults to undefined
+  (bind-keys* :map org-visibility-mode-map
+                   ("C-x C-v" . org-visibility-force-save) ; defaults to `find-alternative-file'
+                   ("C-x M-v" . org-visibility-remove))    ; defaults to undefined
 
 Or, if using `use-package', add something like this instead:
 
