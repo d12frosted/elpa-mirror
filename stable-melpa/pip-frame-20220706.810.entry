@@ -1,0 +1,11 @@
+(pip-frame .
+	   [(20220706 810)
+	    ((emacs
+	      (25 1)))
+	    "Display and manage a PIP frame" single
+	    ((:commit . "7a75e73f884f294c979d19a520268f2a4371861b")
+	     (:authors
+	      ("Milan Zamazal" . "pdm@zamazal.org"))
+	     (:maintainer "Milan Zamazal" . "pdm@zamazal.org")
+	     (:keywords "frames")
+	     (:url . "https://git.zamazal.org/pdm/pip-frame"))])

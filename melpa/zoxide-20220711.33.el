@@ -7,8 +7,8 @@
 ;; Created: 23 Jun 2021
 ;; Modified: 23 Jun 2021
 ;; Version: 0.0.1
-;; Package-Version: 20220302.522
-;; Package-Commit: cc173b8528d9d582c955e9b24a5841c37e494078
+;; Package-Version: 20220711.33
+;; Package-Commit: b09c06962316d28b14ecbb2340af7c0636ab6d16
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: converience matching
 ;; URL: https://gitlab.com/Vonfry/zoxide.el
@@ -51,7 +51,7 @@
 (defcustom zoxide-find-file-function #'find-file
   "The callback function for the target path in `zoxide-find-file'.
 If the function is interactive, it will be called by `call-interactively' in
-`default-directory' with target path.  Otherwise, the target path is passed as
+`efault-directory' with target path.  Otherwise, the target path is passed as
 argument.
 
 For example, you set this to `counsel-fzf' to open file with fzf through counsel
@@ -66,7 +66,8 @@ as its first argument noninteractively."
   :type 'function
   :group 'zoxide)
 
-(defcustom zoxide-get-path-function (lambda (&rest _) default-directory)
+(defcustom zoxide-get-path-function
+  (lambda (&rest _) (expand-file-name default-directory))
   "A function how to get current path.
 
 The function should take a argument to get the context and return a string for

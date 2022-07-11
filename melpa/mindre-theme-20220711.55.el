@@ -1,9 +1,9 @@
 ;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
 
 ;; Author: Erik Bäckman <contact@ebackman.net>
-;; Version: 0.1.1
-;; Package-Version: 20220708.1914
-;; Package-Commit: c2814c0d3ca6b70b8c8881fc6a6336e67f445e78
+;; Version: 0.1.2
+;; Package-Version: 20220711.55
+;; Package-Commit: 9eaf0a3e8611d9441c8db6d7c56b62325e5a8a1b
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces
 ;; Homepage: https://github.com/erikbackman/mindre-theme
@@ -251,7 +251,7 @@ Takes care of adding or removing hooks when the
     `(mindre-faded ((t (:foreground ,gray-silver))))
     `(mindre-faded-i ((t (:foreground ,bg-main :background ,gray-silver))))
 
-    `(mindre-default ((t (:foreground ,fg-main :background ,bg-main))))
+    `(mindre-default ((t (:foreground ,fg-main))))
 
     `(mindre-default-i ((t (:foreground ,bg-main :background ,fg-main))))
 
@@ -847,7 +847,7 @@ Takes care of adding or removing hooks when the
     '(term-color-yellow ((t (:foreground "#d47500" :background "#F8B400"))))
 
     ;; --- Haskell ----------------------------------------------------
-    `(haskell-constructor-face ((t (:inherit mindre-keyword))))
+    `(haskell-constructor-face ((t (:inherit mindre-type))))
     `(haskell-pragma-face ((t (:inherit font-lock-comment-face))))
     `(haskell-operator-face ((t (:inherit mindre-default))))
 
