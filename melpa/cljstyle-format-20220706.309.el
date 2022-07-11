@@ -5,7 +5,7 @@
 ;; Author: Derek Passen <dpassen1@gmail.com>
 ;; Keywords: clojure, cljstyle, tools, languages
 ;; Package-Version: 20220706.309
-;; Package-Commit: 31a43dfbeea12bbd4639dcec4fbb043cc0ff86d3
+;; Package-Commit: 4ca28444856e0e1e6b24e5343bcd5c601c4aa86a
 ;; URL: http://www.github.com/dpassen/cljstyle-format
 ;; Package-Requires: ((emacs "24") (reformatter "0.3"))
 ;; Version: 1.0.0

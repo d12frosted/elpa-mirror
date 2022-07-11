@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-sideline/sideline-flycheck
 ;; Package-Version: 20220629.752
-;; Package-Commit: a1fd5368acbc8cd15e00d23a0bf6f19d24f5c061
+;; Package-Commit: 7f11c14c938a88a35728b04add991903486ddd31
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1") (sideline "0.1.1") (flycheck "0.14") (ht "2.4"))
 ;; Keywords: convenience flycheck

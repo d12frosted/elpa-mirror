@@ -3,12 +3,12 @@
 ;; Copyright (C) 2017,2018, 2021 David Thompson
 ;; Author: David Thompson
 ;; Version: 0.1
-;; Package-Version: 20220515.2359
-;; Package-Commit: 1ebacdfbaa996319adf88a49258814c28ba49b1b
+;; Package-Version: 20220711.445
+;; Package-Commit: c7e42920c2db19428c1b30402aaf99bd65bcac7e
 ;; Keywords: calendar
 ;; Homepage: https://github.com/thomp/noaa
 ;; URL: https://github.com/thomp/noaa
-;; Package-Requires: ((emacs "27.1") (request "0.2.0"))
+;; Package-Requires: ((emacs "27.1") (request "0.2.0") (s "1.12.0"))
 
 ;;; Commentary:
 
