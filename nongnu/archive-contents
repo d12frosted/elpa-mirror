@@ -480,7 +480,7 @@
 			 ("Chen Bin" . "chenbin.sh@gmail.com"))
 			(:commit . "29ced6fda6a76771a8a054ef55c13a1330793d4d"))])
  (evil-numbers .
-	       [(0 6)
+	       [(0 7)
 		((emacs
 		  (24 1))
 		 (evil
@@ -490,7 +490,8 @@
 		 (:keywords "convenience" "tools")
 		 (:maintainer "Julia Path" . "julia@jpath.de")
 		 (:authors
-		  ("Michael Markert" . "markert.michael@googlemail.com")))])
+		  ("Michael Markert" . "markert.michael@googlemail.com"))
+		 (:commit . "61dde4e3715fd1255df8f87a37d9c8022e909bf4"))])
  (evil-visualstar .
 		  [(0 2 0)
 		   ((evil

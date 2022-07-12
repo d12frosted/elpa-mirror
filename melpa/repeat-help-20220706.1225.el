@@ -5,7 +5,7 @@
 ;; Author: Karthik Chikmagalur <karthikchikmagalur@gmail.com>
 ;; version: 0.10
 ;; Package-Version: 20220706.1225
-;; Package-Commit: 4f8bc98a35047146438f47059e32fbd5aae80e89
+;; Package-Commit: 47fd9041bfb33af6a24a49db37e174c96b7f8fe4
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "28.1"))
 ;; URL: https://github.com/karthink/repeat-help

@@ -22,7 +22,7 @@ location. Something like this:
     │   └── mpv
     └── NinjaTrappeur
         ├── cinny
-        └── my-repo-pins.el
+        └── my-repo-pins
 
 The main entry point of this package is the my-repo-pins command.
 Using it, you can either:

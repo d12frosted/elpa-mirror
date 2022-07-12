@@ -15,7 +15,8 @@ Table of Contents
 .. 1. Basic Installation
 .. 2. Use Package
 4. Known Bugs
-5. Contributors
+5. Similar Packages
+6. Contributors
 
 
 
@@ -82,6 +83,11 @@ Table of Contents
         • '`upcase' Always upper case.
         • '`downcase' Always lower case.
 
+  `evil-numbers-use-cursor-at-end-of-number'
+        Support matching numbers directly before the cursor.
+
+        This is off by default as it doesn't follow VIM's behavior.
+
 
 2.2 Key Bindings
 ────────────────
@@ -141,7 +147,26 @@ Table of Contents
   See <http://github.com/juliapath/evil-numbers/issues>
 
 
-5 Contributors
+5 Similar Packages
+══════════════════
+
+  • [Mouse Slider Package]
+  • [Number Package]
+  • [Shift Number Package]
+  • [Emacs Wiki (Increment Number)]
+
+
+[Mouse Slider Package] <https://melpa.org/#/mouse-slider-mode>
+
+[Number Package] <https://melpa.org/#/number>
+
+[Shift Number Package] <https://melpa.org/#/shift-number>
+
+[Emacs Wiki (Increment Number)]
+<https://www.emacswiki.org/emacs/IncrementNumber>
+
+
+6 Contributors
 ══════════════
 
   • Matthew Fidler <matthew.fidler@gmail.com>

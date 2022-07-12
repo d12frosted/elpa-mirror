@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2022-07-04.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2022-07-11.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote>
@@ -36,10 +36,10 @@ Table of Contents
 2. Overview
 3. Points of entry
 .. 1. Standard note creation
-.. 2. Create note by specifying file type
-.. 3. Create note using a date
-.. 4. Create note in a specific directory
-.. 5. Create note using Org capture
+..... 1. The `denote-prompts' option
+..... 2. Convenience commands for note creation
+.. 2. Create note using Org capture
+.. 3. Maintain separate directories for notes
 4. Renaming files
 5. The file-naming scheme
 .. 1. Sluggified title and keywords
@@ -73,6 +73,7 @@ Table of Contents
 .. 5. I add TODOs to my files; will the many files slow down the Org agenda?
 .. 6. I want to sort by last modified, why won’t Denote let me?
 .. 7. How do you handle the last modified case?
+.. 8. Why do I get “Search failed with status 1” when I search for backlinks?
 17. Acknowledgements
 18. GNU Free Documentation License
 19. Indices
@@ -183,8 +184,8 @@ Table of Contents
   There are five ways to write a note with Denote: invoke the `denote',
   `denote-type', `denote-date', `denote-subdirectory' commands, or
   leverage the `org-capture-templates' by setting up a template which
-  calls the function `denote-org-capture'.  We explain all those in the
-  subsequent sections.
+  calls the function `denote-org-capture'.  We explain all of those in
+  the subsequent sections.
 
 
 3.1 Standard note creation
@@ -197,7 +198,7 @@ Table of Contents
   The file type of the new note is determined by the user option
   `denote-file-type' ([Front matter]).
 
-  The keyword prompt supports minibuffer completion.  Available
+  The keywords’ prompt supports minibuffer completion.  Available
   candidates are those defined in the user option
   `denote-known-keywords'.  More candidates can be inferred from the
   names of existing notes, by setting `denote-infer-keywords' to non-nil
@@ -209,9 +210,11 @@ Table of Contents
   keywords are sorted alphabetically (technically, the sorting is done
   with `string-lessp').
 
-  The `denote' command can also be called from Lisp, in which case it
-  expects the `TITLE' and `KEYWORDS' arguments.  The former is a string,
-  the latter a list of strings.
+  The interactive behaviour of the `denote' command is influenced by the
+  user option `denote-prompts' ([The denote-prompts option]).
+
+  The `denote' command can also be called from Lisp.  Read its doc
+  string for the technicalities.
 
   In the interest of discoverability, `denote' is also available under
   the alias `denote-create-note'.
@@ -221,63 +224,145 @@ Table of Contents
 
 [Front matter] See section 6
 
+[The denote-prompts option] See section 3.1.1
 
-3.2 Create note by specifying file type
-───────────────────────────────────────
+3.1.1 The `denote-prompts' option
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  The `denote-type' command is like `denote' except it also prompts for
-  a file type to use as an ad-hoc value for `denote-file-type'.  In
-  practical terms, this lets you produce, say, a note in Markdown even
-  though you normally write in Org ([Standard note creation]).
+  The user option `denote-prompts' determines how the `denote' command
+  will behave interactively ([Standard note creation]).
 
-  The `denote-create-note-using-type' is an alias of `denote-type'.
+  The value is a list of symbols, which includes any of the following:
+
+  • `title': Prompt for the title of the new note.
+
+  • `keywords': Prompts with completion for the keywords of the new
+    note.  Available candidates are those specified in the user option
+    `denote-known-keywords'.  If the user option `denote-infer-keywords'
+    is non-nil, keywords in existing note file names are included in the
+    list of candidates.  The `keywords' prompt uses
+    `completing-read-multiple', meaning that it can accept multiple
+    keywords separated by a comma (or whatever the value of
+    `crm-sepator' is).
+
+  • `file-type': Prompts with completion for the file type of the new
+    note.  Available candidates are those specified in the user option
+    `denote-file-type'.  Without this prompt, `denote' uses the value of
+    `denote-file-type'.
+
+  • `subdirectory': Prompts with completion for a subdirectory in which
+    to create the note.  Available candidates are the value of the user
+    option `denote-directory' and all of its subdirectories.  Any
+    subdirectory must already exist: Denote will not create it.
+
+  • `date': Prompts for the date of the new note.  It will expect an
+    input like 2022-06-16 or a date plus time: 2022-06-16 14:30.
+    Without the `date' prompt, the `denote' command uses the
+    `current-time'.
+
+  The prompts occur in the given order.
+
+  If the value of this user option is nil, no prompts are used.  The
+  resulting file name will consist of an identifier (i.e. the date and
+  time) and a supported file type extension (per `denote-file-type').
+
+  Recall that Denote’s standard file-naming scheme is defined as follows
+  ([The file-naming scheme]):
+
+  ┌────
+  │ DATE--TITLE__KEYWORDS.EXT
+  └────
+
+
+  If either or both of the `title' and `keywords' prompts are not
+  included in the value of this variable, file names will be any of
+  those permutations:
+
+  ┌────
+  │ DATE.EXT
+  │ DATE--TITLE.EXT
+  │ DATE__KEYWORDS.EXT
+  └────
+
+
+  When in doubt, always include the `title' and `keywords' prompts.
+
+  Finally, this user option only affects the interactive use of the
+  `denote' command (advanced users can call it from Lisp).  For ad-hoc
+  interactive actions that do not change the default behaviour of the
+  `denote' command, users can invoke these convenience commands:
+  `denote-type', `denote-subdirectory', `denote-date'.  They are
+  described in the subsequent section ([Convenience commands for note
+  creation]).
 
 
 [Standard note creation] See section 3.1
 
+[The file-naming scheme] See section 5
 
-3.3 Create note using a date
-────────────────────────────
+[Convenience commands for note creation] See section 3.1.2
 
-  Normally, Denote reads the current date and time to derive the
-  identifier of a new note ([Standard note creation]).  Sometimes,
-  however, the user needs to set an explicit date+time value.
 
-  This is where the `denote-date' command comes in.  It accepts the
-  familiar `TITLE' and `KEYWORDS' arguments, though it starts by asking
-  for a date.  The input for the `DATE' argument is like `2022-06-16' or
-  `2022-06-16 14:30'.  When the time is omitted, it is interpreted as
-  `00:00'.
+3.1.2 Convenience commands for note creation
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Since the ability to insert a date may result in duplicate
-  identifiers, Denote takes care to abort the operation if such an
-  identity is established (e.g. when you use `denote-date' with
-  `2022-06-16' twice, it will generate the same identifier of
-  `20220616T000000').  The user must thus call the `denote-date' command
-  again and provide a unique date or date+time value.
+  Sometimes the user needs to create a note that has different
+  requirements from those of `denote' ([Standard note creation]).  While
+  this can be achieved globally by changing the `denote-prompts' user
+  option, there are cases where an ad-hoc method is the appropriate one
+  ([The denote-prompts option]).
 
-  The `denote-create-note-using-date' is an alias of `denote-date'.
+  To this end, Denote provides the following convenience interactive
+  commands for note creation:
+
+  Create note by specifying file type
+        The `denote-type' command creates a note while prompting for a
+        file type.
+
+        This is the equivalent to calling `denote' when `denote-prompts'
+        is set to `'(file-type title keywords)'.  In practical terms,
+        this lets you produce, say, a note in Markdown even though you
+        normally write in Org ([Standard note creation]).
+
+        The `denote-create-note-using-type' is an alias of
+        `denote-type'.
+
+  Create note using a date
+        Normally, Denote reads the current date and time to construct
+        the unique identifier of a newly created note ([Standard note
+        creation]).  Sometimes, however, the user needs to set an
+        explicit date+time value.
+
+        This is where the `denote-date' command comes in.  It creates a
+        note while prompting for a date.  The date can be in
+        YEAR-MONTH-DAY notation like `2022-06-30' or that plus the time:
+        `2022-06-16 14:30'.
+
+        This is the equivalent to calling `denote' when `denote-prompts'
+        is set to `'(date title keywords)'.
+
+        The `denote-create-note-using-date' is an alias of
+        `denote-date'.
+
+  Create note in a specific directory
+        The `denote-subdirectory' command creates a note while prompting
+        for a subdirectory.  Available candidates include the value of
+        the variable `denote-directory' and any subdirectory thereof
+        (Denote does not create subdirectories).
+
+        This is equivalent to calling `denote' when `denote-prompts' is
+        set to `'(subdirectory title keywords)'.
+
+        The `denote-create-note-in-subdirectory' is a more descriptive
+        alias of `denote-subdirectory'.
 
 
 [Standard note creation] See section 3.1
 
-
-3.4 Create note in a specific directory
-───────────────────────────────────────
-
-  The `denote-subdirectory' command is like `denote' except it prompts
-  for a directory to place the new note in ([Standard note creation]).
-  Candidates are the value of the user option `denote-directory' and any
-  subdirectory inside of it.  Denote does not create subdirectories.
-
-  The `denote-create-note-in-subdirectory' is a more descriptive alias
-  of `denote-subdirectory'.
+[The denote-prompts option] See section 3.1.1
 
 
-[Standard note creation] See section 3.1
-
-
-3.5 Create note using Org capture
+3.2 Create note using Org capture
 ─────────────────────────────────
 
   For integration with `org-capture', the user must first add the
@@ -328,6 +413,66 @@ Table of Contents
 
 
 [Standard note creation] See section 3.1
+
+
+3.3 Maintain separate directories for notes
+───────────────────────────────────────────
+
+  The user option `denote-directory' accepts a value that represents the
+  path to a directory, such as `~/Documents/notes'.  Normally, the user
+  will have one place where they store all their notes, in which case
+  this arrangement shall suffice.
+
+  There is, however, the possibility to maintain separate directories of
+  notes.  By “separate”, we mean that they do not communicate with each
+  other: no linking between them, no common keywords, nothing.  Think of
+  the scenario where one set of notes is for private use and another is
+  for an employer.  We call these separate directories “silos”.
+
+  To create silos, the user must specify a local variable at the root of
+  the desired directory.  This is done by creating a `.dir-locals.el'
+  file, with the following contents:
+
+  ┌────
+  │ ;;; Directory Local Variables.  For more information evaluate:
+  │ ;;;
+  │ ;;;     (info "(emacs) Directory Variables")
+  │ 
+  │ ((nil . ((denote-directory . default-directory))))
+  └────
+
+  When inside the directory that contains this `.dir-locals.el' file,
+  all Denote commands/functions for note creation, linking, the
+  inference of available keywords, et cetera will use the silo as their
+  point of reference.  They will not read the global value of
+  `denote-directory'.  The global value of `denote-directory' is read
+  everywhere else except the silos.
+
+  In concrete terms, this is a representation of the directory
+  structures (notice the `.dir-locals.el' file is needed only for the
+  silos):
+
+  ┌────
+  │ ;; This is the global value of 'denote-directory' (no need for a .dir-locals.el)
+  │ ~/Documents/notes
+  │ |-- 20210303T120534--this-is-a-test__journal_philosophy.txt
+  │ |-- 20220303T120534--another-sample__journal_testing.md
+  │ `-- 20220620T181255--the-third-test__keyword.org
+  │ 
+  │ ;; A silo with notes for the employer
+  │ ~/different/path/to/notes-for-employer
+  │ |-- .dir-locals.el
+  │ |-- 20210303T120534--this-is-a-test__conference.txt
+  │ |-- 20220303T120534--another-sample__meeting.md
+  │ `-- 20220620T181255--the-third-test__keyword.org
+  │ 
+  │ ;; Another silo with notes for my volunteering
+  │ ~/different/path/to/notes-for-volunteering
+  │ |-- .dir-locals.el
+  │ |-- 20210303T120534--this-is-a-test__activism.txt
+  │ |-- 20220303T120534--another-sample__teambuilding.md
+  │ `-- 20220620T181255--the-third-test__keyword.org
+  └────
 
 
 4 Renaming files
@@ -676,6 +821,13 @@ section 5.2
   │ 	(window-width . 0.3)))
   └────
 
+  Note that the backlinking facility uses Emacs’ built-in Xref
+  infrastructure.  On some operating systems, the user may need to add
+  certain executables to the relevant environment variable.
+
+  [Why do I get “Search failed with status 1” when I search for
+  backlinks?]
+
   The command `denote-link-add-links' adds links at point matching a
   regular expression or plain string.  The links are inserted as a
   typographic list, such as:
@@ -740,6 +892,9 @@ section 5.2
 
 
 [Extending Denote] See section 10
+
+[Why do I get “Search failed with status 1” when I search for
+backlinks?] See section 16.8
 
 7.1 Writing metanotes
 ─────────────────────
@@ -886,7 +1041,7 @@ section 5.2
   │   (interactive)
   │   (denote
   │    (format-time-string "%A %e %B %Y") ; format like Tuesday 14 June 2022
-  │    "journal")) ; multiple keywords are a list of strings: '("one" "two")
+  │    '("journal"))) ; multiple keywords are a list of strings: '("one" "two")
   └────
 
   By invoking `my-denote-journal' you will go straight into the newly
@@ -901,7 +1056,7 @@ section 5.2
   │   (interactive)
   │   (denote
   │    (denote--title-prompt) ; ask for title, instead of using human-readable date
-  │    "journal"))
+  │    '("journal")))
   └────
 
   Sometimes journaling is done with the intent to hone one’s writing
@@ -921,7 +1076,7 @@ section 5.2
   │   (interactive)
   │   (denote
   │    (format-time-string "%A %e %B %Y")
-  │    "journal")
+  │    '("journal"))
   │   (tmr 10 "Practice writing in my journal")) ; set 10 minute timer with a description
   └────
 
@@ -1221,11 +1376,11 @@ section 5.2
   │ 
   │ ;; Remember to check the doc strings of those variables.
   │ (setq denote-directory (expand-file-name "~/Documents/notes/"))
-  │ (setq denote-known-keywords
-  │       '("emacs" "philosophy" "politics" "economics"))
+  │ (setq denote-known-keywords '("emacs" "philosophy" "politics" "economics"))
   │ (setq denote-infer-keywords t)
   │ (setq denote-sort-keywords t)
   │ (setq denote-file-type nil) ; Org is the default, set others here
+  │ (setq denote-prompts '(title keywords))
   │ 
   │ ;; We allow multi-word keywords by default.  The author's personal
   │ ;; preference is for single-word keywords for a more rigid workflow.
@@ -1271,7 +1426,7 @@ section 5.2
   │   (interactive)
   │   (denote
   │    (denote--title-prompt)
-  │    "journal"))
+  │    '("journal")))
   │ 
   │ ;; Denote does not define any key bindings.  This is for the user to
   │ ;; decide.  For example:
@@ -1724,6 +1879,27 @@ section 5.2
   software handle the tracking of changes.
 
 
+16.8 Why do I get “Search failed with status 1” when I search for backlinks?
+────────────────────────────────────────────────────────────────────────────
+
+  Denote uses [Emacs’ Xref] to find backlinks.  Xref requires `xargs'
+  and one of `grep' or `ripgrep', depending on your configuration.
+
+  This is usually not an issue on *nix systems, but the necessary
+  executables are not available on Windows Emacs distributions.  Please
+  ensure that you have both `xargs' and either `grep' or `ripgrep'
+  available within your `PATH' environment variable.
+
+  If you have `git' on Windows installed, then you may use the following
+  code (adjust the git’s installation path if necessary):
+  ┌────
+  │ (setenv "PATH" (concat (getenv "PATH") ";" "C:\\Program Files\\Git\\usr\\bin"))
+  └────
+
+
+[Emacs’ Xref] <info:emacs#Xref>
+
+
 17 Acknowledgements
 ═══════════════════
 
@@ -1733,13 +1909,14 @@ section 5.2
         Protesilaos Stavrou.
 
   Contributions to code or the manual
-        Damien Cassou, Jack Baty, Jean-Philippe Gagné Guay, Kaushal
-        Modi.
+        Benjamin Kästner, Damien Cassou, Jack Baty, Jean-Philippe Gagné
+        Guay, Kaushal Modi, Stefan Monnier.
 
   Ideas and/or user feedback
-        Benjamin Kästner, Colin McLear, Damien Cassou, Frank Ehmsen,
-        Jack Baty, Kaushal Modi, M. Hadi Timachi, Peter Prevos, Shreyas
-        Ragavan, Sven Seebeck, Ypot.
+        Alan Schmitt, Alfredo Borrás, Benjamin Kästner, Colin McLear,
+        Damien Cassou, Frank Ehmsen, Jack Baty, Kaushal Modi, M. Hadi
+        Timachi, Peter Prevos, Shreyas Ragavan, Summer Emacs, Sven
+        Seebeck, Ypot, pRot0ta1p.
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.

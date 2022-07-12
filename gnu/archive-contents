@@ -693,7 +693,7 @@
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
  (denote .
-	 [(0 2 1)
+	 [(0 3 0)
 	  ((emacs
 	    (27 2)))
 	  "Simple notes with an efficient file-naming scheme" tar
@@ -701,7 +701,7 @@
 	   (:maintainer "Denote Development" . "~protesilaos/denote@lists.sr.ht")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "f10fe51fcd80bbcfc44bbef31d5b8f6952b4be4c"))])
+	   (:commit . "4d5063f68afc7a8a9d2cc168c5ec18640b69acaa"))])
  (detached .
 	   [(0 7)
 	    ((emacs
@@ -3545,7 +3545,7 @@
 	(:authors
 	 ("Thien-Thi Nguyen" . "ttn@gnu.org")))])
  (xr .
-     [(1 22)
+     [(1 23)
       ((emacs
 	(26 1)))
       "Convert string regexp to rx notation" tar
@@ -3554,7 +3554,7 @@
        (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
        (:authors
 	("Mattias Engdegård" . "mattiase@acm.org"))
-       (:commit . "a873bbbe9cdf1abab63fc94730966f5a8f9adaa6"))])
+       (:commit . "74906f6d104b7daae162dc32684e0443e80fdb03"))])
  (xref .
        [(1 4 1)
 	((emacs
