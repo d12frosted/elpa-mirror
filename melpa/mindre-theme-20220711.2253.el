@@ -1,9 +1,9 @@
 ;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
 
 ;; Author: Erik Bäckman <contact@ebackman.net>
-;; Version: 0.1.2
-;; Package-Version: 20220711.1339
-;; Package-Commit: 715b1c8fbde5a7d17362b3f198a4721e2b5e91cd
+;; Version: 0.1.3
+;; Package-Version: 20220711.2253
+;; Package-Commit: 06e7e2401a79425b9c02bb44cb995a8e79077d68
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces
 ;; Homepage: https://github.com/erikbackman/mindre-theme
@@ -63,7 +63,7 @@
       (green . "#16524F")
       (green-faint . "#537469")
       (yellow-dark . "#54433a")
-      (red . "#BF616A")
+      (red . "#9E0000")
       (orange . "#d47500"))))
 
 (defmacro mindre-with-color-variables (&rest body)
@@ -478,10 +478,39 @@ Takes care of adding or removing hooks when the
     '(epa-validity-low ((t (:inherit mindre-faded))))
 
     ;; --- Dired --------------------------------------------------------
-    '(dired-directory ((t (:inherit (mindre-strong bold)))))
+    '(dired-header ((t (:inherit mindre-keyword))))
+    '(dired-directory ((t (:inherit (mindre-bold)))))
     `(dired-symlink ((t (:slant italic))))
     '(dired-marked ((t (:inherit mindre-keyword))))
-    `(dired-broken-symlink ((t (:slant italic :strike-through "#BF616A"))))
+    `(dired-flagged ((t (:inherit mindre-critical-i))))
+    `(dired-broken-symlink ((t (:slant italic :strike-through ,red))))
+
+    ;; --- Diredfl ------------------------------------------------------
+    `(diredfl-dir-heading ((t (:inherit mindre-keyword))))
+    `(diredfl-file-name ((t (:inhert mindre-default))))
+    `(diredfl-write-priv ((t (:inhert mindre-default))))
+    `(diredfl-read-priv ((t (:inhert mindre-default))))
+    `(diredfl-exec-priv ((t (:inherit mindre-keyword))))
+    `(diredfl-no-priv ((t (:inherit mindre-faded))))
+    `(diredfl-dir-priv ((t (:inherit (mindre-bold mindre-strong)))))
+    `(diredfl-date-time ((t (:inherit mindre-verbatim))))
+    `(diredfl-number ((t (:foreground ,fg-main))))
+    `(diredfl-file-suffix ((t (:inherit mindre-keyword))))
+    `(diredfl-dir-name ((t (:inherit mindre-bold))))
+    `(diredfl-deletion-file-name ((t (:background ,bg-inactive))))
+    `(diredfl-deletion ((t (:inherit (mindre-critical-i mindre-bold)))))
+    `(diredfl-ignored-file-name ((t (:inherit mindre-faded))))
+    `(diredfl-flag-mark-line ((t (:background ,bg-inactive))))
+    `(diredfl-flag-mark ((t (:background ,bg-inactive))))
+    `(diredfl-symlink ((t (:slant italic))))
+    `(diredfl-rare-priv ((t (:inherit mindre-default :slant italic))))
+    `(diredfl-compressed-file-name ((t (:inherit mindre-default))))
+    `(diredfl-compressed-extensions ((t (:inherit mindre-keyword))))
+    `(diredfl-compressed-file-suffix ((t (:inherit mindre-type))))
+    ; TODO: I don't know what these are..
+    `(diredfl-link-priv ((t (:foreground ,orange))))
+;    `(diredfl-other-priv ((t ())))
+    `(diredfl-tagged-autofile-name ((t (:background "#c6dad3"))))
 
     ;; --- Eglot --------------------------------------------------------
     `(eglot-mode-line ((t (:foreground ,fg-main))))

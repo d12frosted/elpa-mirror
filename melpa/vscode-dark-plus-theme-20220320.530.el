@@ -5,7 +5,7 @@
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/vscode-dark-plus-emacs-theme
 ;; Package-Version: 20220320.530
-;; Package-Commit: cec18a9d816fef372a4e70f6ad1e16a42aa93b06
+;; Package-Commit: d247fcf2b0c4f21398276e12faf3f2a4c26b2306
 ;; Version: 0.0.0
 
 ;; This program is free software: you can redistribute it and/or modify
