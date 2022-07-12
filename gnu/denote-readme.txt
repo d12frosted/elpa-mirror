@@ -1077,7 +1077,7 @@ backlinks?] See section 16.8
   │   (denote
   │    (format-time-string "%A %e %B %Y")
   │    '("journal"))
-  │   (tmr 10 "Practice writing in my journal")) ; set 10 minute timer with a description
+  │   (tmr "10" "Practice writing in my journal")) ; set 10 minute timer with a description
   └────
 
   Once the timer elapses, stop writing and review your performance.

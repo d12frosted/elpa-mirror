@@ -5,7 +5,7 @@
 ;;; Maintainer: Félix Baylac Jacqué <felix at alternativebit.fr>
 ;;; Version: 0.1
 ;; Package-Version: 20220711.1300
-;; Package-Commit: 9e7ff9c2436684ff08a3da0c88371582ffdf31c9
+;; Package-Commit: 6ba60541656d6f0088fddab6753ddbde7a5f911c
 ;;; Homepage: https://alternativebit.fr/projects/my-repo-pins/
 ;;; Package-Requires: ((emacs "26.1"))
 ;;; License:
