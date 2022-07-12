@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20220709.33
-;; Package-Commit: 1b9180f408aa57e8560504a54ae22bdd50909b77
+;; Package-Version: 20220712.123
+;; Package-Commit: 7a6aec1b28416fb4bdda5611f1ca30c77d18a854
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -300,6 +300,7 @@
                   ("audio" . ,(all-the-icons-faicon "file-audio-o" :face '(:foreground "LightGray")))
                   ("movie" . ,(all-the-icons-material "movie" :face '(:foreground "LightGray")))
                   ("book" . ,(all-the-icons-octicon "book" :face '(:foreground "LightGray")))
+                  ("comic" . ,(all-the-icons-faicon "file-image-o" :face '(:foreground "LightGray")))
                   ("bookmark" . ,(all-the-icons-material "bookmark" :face '(:foreground "LightGray")))
                   ("plot" . ,(all-the-icons-faicon "bar-chart" :face '(:foreground "chartreuse")))
                   ("diagram" . ,(all-the-icons-faicon "line-chart" :face '(:foreground "chartreuse")))
@@ -976,6 +977,7 @@
     ("org" ("Org_Mode")) ("md" ("Markdown")) ("txt" ("document"))
     ("pdf" ("pdf")) ("doc" ("word")) ("docx" ("word")) ("xls" ("excel")) ("ppt" ("powerpoint"))
     ("epub" ("book")) ("mobi" ("book")) ("azw3" ("book"))
+    ("cbr" ("comic")) ("cbz" ("comic")) ("cb7" ("comic"))
     ("zip" ("archive_file")) ("rar" ("archive_file")) ("tar" ("archive_file")) ("tar.gz" ("archive_file")) ("tar.bz2" ("archive_file"))
     ;; source code file formats
     ("py" ("Python")) ("rb" ("Ruby"))

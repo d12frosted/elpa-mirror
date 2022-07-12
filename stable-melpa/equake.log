@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacsomancer/equake.git
 
 Updating /mnt/store/melpa/working/equake/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/emacsomancer/equake.git/': The requested URL returned error: 524
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 25d2bb9b60fdfae72990d8971be3db593ca4266b
+Built equake in 6.209s, finished at 2022-07-12T07:45:46+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 45K Jul 12 07:45 packages/equake-20220627.2248.el
+4.0K -rw-r--r-- 1 root root 442 Jul 12 07:45 packages/equake-20220627.2248.entry
