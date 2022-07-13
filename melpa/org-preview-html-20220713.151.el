@@ -5,8 +5,8 @@
 ;; Author: Jake B <jakebox0@protonmail.com>
 ;; Original author of org-preview-html (until 2021-09): DarkSun <lujun9972@gmail.com>
 ;; Url: https://github.com/jakebox/org-preview-html
-;; Package-Version: 20220228.414
-;; Package-Commit: cb85524d5090b8189e965cc49d65be04650c17c4
+;; Package-Version: 20220713.151
+;; Package-Commit: 220d7ea93945581a9ab9fa7b43c67070bb5680a4
 ;; Keywords: Org, convenience, outlines
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "25.1") (org "8.0"))
@@ -216,16 +216,15 @@ Obselete as of version 0.3, instead use `org-preview-html-subtree-only'."
 (defun org-preview-html--open-browser ()
   "Open a browser to preview the exported HTML file."
   ;; Store the exported HTML filename
-  (setq-local org-preview-html--html-file (concat (file-name-sans-extension
-												   (concat "file://" buffer-file-name)) ".html"))
+  (setq-local org-preview-html--html-file (concat (file-name-sans-extension buffer-file-name) ".html"))
   (unless (file-exists-p org-preview-html--html-file)
 	(org-preview-html--org-export-html)) ;; Unless the file already exists, export it
   ;; Procedure to open the side-by-side preview
   (split-window-right)
   (other-window 1)
   (let ((file org-preview-html--html-file))
-	(cond ((eq org-preview-html-viewer 'xwidget) (xwidget-webkit-browse-url file))
-		  ((eq org-preview-html-viewer 'eww) (eww-browse-url file))))
+	(cond ((eq org-preview-html-viewer 'xwidget) (xwidget-webkit-browse-url (concat "file://" file)))
+		  ((eq org-preview-html-viewer 'eww) (eww-open-file file))))
   (setq org-preview-html--browser-buffer (get-buffer (buffer-name)))
   (org-preview-html--previous-window-any-frame))
 

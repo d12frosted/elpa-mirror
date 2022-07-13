@@ -6,10 +6,10 @@
 ;; Maintainer: Shigeaki Nishina
 ;; Created: March 11, 2020
 ;; URL: https://github.com/shg/julia-vterm.el
-;; Package-Version: 20220702.1411
-;; Package-Commit: 58a62b398bbc1ff7408a28f2efb9921928caadd9
+;; Package-Version: 20220713.216
+;; Package-Commit: fef0df66e1de1733c4df706d76a4fc29788fe251
 ;; Package-Requires: ((emacs "25.1") (vterm "0.0.1"))
-;; Version: 0.17
+;; Version: 0.18
 ;; Keywords: languages, julia
 
 ;; This file is not part of GNU Emacs.
@@ -58,6 +58,7 @@
 ;;; Code:
 
 (require 'vterm)
+(require 'rx)
 
 
 ;;----------------------------------------------------------------------

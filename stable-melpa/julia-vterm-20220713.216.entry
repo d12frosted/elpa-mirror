@@ -1,11 +1,11 @@
 (julia-vterm .
-	     [(20220702 1411)
+	     [(20220713 216)
 	      ((emacs
 		(25 1))
 	       (vterm
 		(0 0 1)))
 	      "A mode for Julia REPL using vterm" single
-	      ((:commit . "58a62b398bbc1ff7408a28f2efb9921928caadd9")
+	      ((:commit . "fef0df66e1de1733c4df706d76a4fc29788fe251")
 	       (:authors
 		("Shigeaki Nishina"))
 	       (:maintainer "Shigeaki Nishina")

@@ -3,7 +3,7 @@
 ;; Author: The govc developers
 ;; URL: https://github.com/vmware/govmomi/tree/master/govc/emacs
 ;; Package-Version: 20220509.1455
-;; Package-Commit: 67e845ea29ffd8fdea4b3cf9da2903bba12199eb
+;; Package-Commit: e0c2c7b11e7998047ecf59d052a6de6fc83730d6
 ;; Keywords: convenience
 ;; Version: 0.18.0
 ;; Package-Requires: ((emacs "24.3") (dash "1.5.0") (s "1.9.0") (magit-popup "2.0.50") (json-mode "1.6.0"))
