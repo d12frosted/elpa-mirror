@@ -1,10 +1,10 @@
 ;;; simple-paren.el --- Non-electrical insert paired delimiter, wrap -*- lexical-binding: t; -*-
 
 ;; Version: 0.2
-;; Package-Version: 20220207.2007
-;; Package-Commit: a454901635dfe4142d8c4f0153e737ddc778d708
+;; Package-Version: 20220713.902
+;; Package-Commit: 05331d19942f48e2fc857a07152698d5a6eb4780
 
-;; Copyright (C) 2016-2021  Andreas Röhler, Steve Purcell
+;; Copyright (C) 2016-2022  Andreas Röhler, Steve Purcell
 ;; See also http://www.unicode.org/L2/L2013/13046-BidiBrackets.txt
 
 ;; Author: Andreas Röhler, Steve Purcell
@@ -58,7 +58,7 @@
 ;; with active region and \\[universal-argument] until end of word
 ;; int|eractive		==> int(eractive)
 
-;; With ‘simple-paren-honor-padding-p’ set to ‘t’, active region
+;; With `simple-paren-honor-padding-p’ set to ‘t', active region
 ;; and \\[universal-argument]
 ;; | foo		==> ( foo )
 
@@ -80,7 +80,7 @@
 
 (defvar simple-paren-paired-delimiter-chars
   (list
-   ?‘ ?’
+   ?\‘ ?\’
    ?` ?'
    ?< ?>
    ?> ?<
@@ -150,7 +150,7 @@
 
 (defvar simple-paren-forward-delimiter-chars
   (list
-     ?’
+     ?\’
      ?'
      ?>
      ?<
@@ -219,7 +219,7 @@
 
 (defvar simple-paren-backward-delimiter-chars
   (list
-   ?‘
+   ?\‘
    ?`
    ?<
    ?>
@@ -312,7 +312,6 @@
 (defun simple-paren--return-complement-char-maybe (erg)
   "For example return \"}\" for \"{\" but keep \"\\\"\"."
   (pcase erg
-    (?‘ ?’)
     (?` ?')
     (?< ?>)
     (?> ?<)
@@ -384,7 +383,7 @@
 (defvar simple-paren-braced-newline (list 'js-mode))
 
 (defcustom simple-paren-honor-padding-p t
-  "Default is ‘t’, honor padding."
+  "Default is `t', honor padding."
   :type 'boolean
   :group 'convenience)
 
@@ -454,40 +453,39 @@ With numerical ARG 2 honor padding")))
        (interactive "*P")
        (simple-paren--intern ,code1 ,code2 times))))
 
-(simple-paren-define angled-percent-equal "<%=" "%>")
-(simple-paren-define angled-percent "<%" "%>")
-(simple-paren-define slashstar "/*" "*/")
-(simple-paren-define braceminus "{-" "-}")
-(simple-paren-define braceminussharp "{-#" "#-}")
-(simple-paren-define braceminuset "{-@" "@-}")
-(simple-paren-define doublequote ?\" ?\")
 (simple-paren-define acute-accent ?\´ ?\´)
 (simple-paren-define angle-bracket ?\〈 ?\〉)
 (simple-paren-define angle-bracket-with-dot ?\⦑ ?\⦒)
+(simple-paren-define angled-percent "<%" "%>")
+(simple-paren-define angled-percent-equal "<%=" "%>")
 (simple-paren-define arc-less-than-bracket ?\⦓ ?\⦔)
 (simple-paren-define backslash ?\\ ?\\)
 (simple-paren-define backtick ?\` ?\`)
-(simple-paren-define question-mark ?\? ?\?)
-(simple-paren-define exclamation-mark ?\! ?\!)
-(simple-paren-define semicolon ?\; ?\;)
 (simple-paren-define black-lenticular-bracket ?\【 ?\】)
 (simple-paren-define black-tortoise-shell-bracket ?\⦗ ?\⦘)
 (simple-paren-define bottom-half-bracket ?\⸤ ?\⸥)
 (simple-paren-define brace ?\{ ?\})
+(simple-paren-define braceminus "{-" "-}")
+(simple-paren-define braceminuset "{-@" "@-}")
+(simple-paren-define braceminussharp "{-#" "#-}")
 (simple-paren-define bracket ?\[ ?\])
 (simple-paren-define colon ?\: ?\:)
 (simple-paren-define comma ?\, ?\,)
 (simple-paren-define corner-bracket ?\「 ?\」)
 (simple-paren-define cross ?\+ ?\+)
 (simple-paren-define curly-bracket ?\{ ?\})
+(simple-paren-define curveddoublequote ?\“ ?\”)
+(simple-paren-define curvedsinglequote ?\‘ ?\’)
 (simple-paren-define dollar ?\$ ?\$)
 (simple-paren-define dot ?\. ?\.)
 (simple-paren-define double-angle-bracket ?\《 ?\》)
 (simple-paren-define double-arc-greater-than-bracket ?\⦕ ?\⦖)
 (simple-paren-define double-parenthesis ?\⸨ ?\⸩)
 (simple-paren-define double-wiggly-fence ?\⧚ ?\⧛)
+(simple-paren-define doublequote ?\" ?\")
 (simple-paren-define equalize ?\= ?\=)
 (simple-paren-define escape ?\\ ?\\)
+(simple-paren-define exclamation-mark ?\! ?\!)
 (simple-paren-define fullwidth-curly-bracket ?\｛ ?\｝)
 (simple-paren-define fullwidth-parenthesis ?\（ ?\）)
 (simple-paren-define fullwidth-square-bracket ?\［ ?\］)
@@ -499,8 +497,6 @@ With numerical ARG 2 honor padding")))
 (simple-paren-define heavy-pointing-angle-bracket-ornament ?\❰ ?\❱)
 (simple-paren-define heavy-pointing-angle-quotation-mark-ornament ?\❮ ?\❯)
 (simple-paren-define hyphen ?\- ?\-)
-(simple-paren-define curveddoublequote ?\“ ?\”)
-(simple-paren-define curvedsinglequote ?\‘ ?\’)
 (simple-paren-define lesser-than ?\< ?\>)
 (simple-paren-define light-tortoise-shell-bracket-ornament ?\❲ ?\❳)
 (simple-paren-define mathematical-angle-bracket ?\⟨ ?\⟩)
@@ -517,14 +513,16 @@ With numerical ARG 2 honor padding")))
 (simple-paren-define parentize ?\( ?\))
 (simple-paren-define percent ?% ?%)
 (simple-paren-define period ?\. ?\.)
+(simple-paren-define pipe ?| ?|)
 (simple-paren-define point ?\. ?\.)
 (simple-paren-define pointing-angle-bracket ?\〈 ?\〉)
 (simple-paren-define pointing-curved-angle-bracket ?\⧼ ?\⧽)
+(simple-paren-define question-mark ?\? ?\?)
 (simple-paren-define s-shaped-bag-delimiter ?\⟅ ?\⟆)
-(simple-paren-define semicolon ?\; ?\;)
 (simple-paren-define sideways-u-bracket ?\⸦ ?\⸧)
 (simple-paren-define singlequote ?\' ?\')
 (simple-paren-define slash ?\/ ?\/)
+(simple-paren-define slashstar "/*" "*/")
 (simple-paren-define small-curly-bracket ?\﹛ ?\﹜)
 (simple-paren-define small-parenthesis ?\﹙ ?\﹚)
 (simple-paren-define small-tortoise-shell-bracket ?\﹝ ?\﹞)
@@ -542,7 +540,6 @@ With numerical ARG 2 honor padding")))
 (simple-paren-define top-half-bracket ?\⸢ ?\⸣)
 (simple-paren-define tortoise-shell-bracket ?\〔 ?\〕)
 (simple-paren-define underscore ?\_ ?\_)
-(simple-paren-define pipe ?| ?|)
 (simple-paren-define white-corner-bracket ?\『 ?\』)
 (simple-paren-define white-curly-bracket ?\⦃ ?\⦄)
 (simple-paren-define white-lenticular-bracket ?\〖 ?\〗)
@@ -553,6 +550,8 @@ With numerical ARG 2 honor padding")))
 (simple-paren-define wiggly-fence ?\⧘ ?\⧙)
 (simple-paren-define z-notation-binding-bracket ?\⦉ ?\⦊)
 (simple-paren-define z-notation-image-bracket ?\⦇ ?\⦈)
+
+
 ;; Commands
 
 (defvar simple-paren-mode-map nil)
@@ -605,8 +604,10 @@ With numerical ARG 2 honor padding")))
   "Commands inserting paired delimiters.
 
 Provide characters used in Math resp. Logic"
-
-  nil " SP" simple-paren-mode-map)
+  :lighter    " SP"
+  :init-value nil
+  :global     nil
+  :keymap simple-paren-mode-map)
 
 (provide 'simple-paren)
 ;;; simple-paren.el ends here

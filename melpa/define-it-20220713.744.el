@@ -5,10 +5,10 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/define-it
-;; Package-Version: 20220704.647
-;; Package-Commit: d19f6276b687fe7084246ecababa7655b27495b6
-;; Version: 0.2.4
-;; Package-Requires: ((emacs "25.1") (s "1.12.0") (request "0.3.0") (popup "0.5.3") (pos-tip "0.4.6") (posframe "1.1.7") (google-translate "0.11.18") (wiki-summary "0.1"))
+;; Package-Version: 20220713.744
+;; Package-Commit: de026f399d5b7fa9286f7733b2e3416c6f234372
+;; Version: 0.2.5
+;; Package-Requires: ((emacs "25.1") (s "1.12.0") (popup "0.5.3") (pos-tip "0.4.6") (posframe "1.1.7") (define-word "0.1.0") (google-translate "0.11.18") (wiki-summary "0.1"))
 ;; Keywords: convenience dictionary explanation search wiki
 
 ;; This file is NOT part of GNU Emacs.
@@ -38,11 +38,11 @@
 (require 's)
 (require 'subr-x)
 
-(require 'request)
 (require 'pos-tip)
 (require 'popup)
 (require 'posframe)
 
+(require 'define-word)
 (require 'google-translate)
 (require 'wiki-summary)
 
@@ -273,205 +273,11 @@ CASE are flag for `case-fold-search'."
 ;; (@* "Core" )
 ;;
 
-(defun define-it--fix-gap-between-same-sections (str)
-  "Fixed the same sections' gap lines by STR."
-  (define-it--through-buffer-by-blank-line
-   (lambda (_line)
-     (let (last-line-str next-line-str)
-       (save-excursion
-         (forward-line -1)
-         (setq last-line-str (define-it--line-match-p str)))
-       (save-excursion
-         (forward-line 1)
-         (setq next-line-str (define-it--line-match-p str)))
-       (when (and next-line-str last-line-str) (define-it--delete-line 1))))))
-
-(defun define-it--parse-dictionary (data)
-  "Parse dictionary HTML from DATA."
-  (let ((content "") dom (text ""))
-    (setq
-     content
-     (with-temp-buffer
-       (insert data)
-       (setq dom (libxml-parse-html-region (point-min) (point-max)))
-       (delete-region (point-min) (point-max))  ; Remove all content.
-       (setq text (dom-texts (dom-by-class dom "dictentry"))
-             text (s-replace-regexp "\\(^\\s-*$\\)\n" "\n" text))
-       (insert text)
-       ;; Removed useless header section.
-       (goto-char (point-min))
-       (while (define-it--search-forward "Word Frequency")
-         (define-it--delete-line 1)
-         (let ((word-pt (point)))
-           (define-it--search-forward define-it--current-word)
-           (delete-region word-pt (point))))
-
-       ;; Removed Copyright
-       (define-it--strip-string-from-buffer-with-line "Copyright")
-       (define-it--strip-string-from-buffer-with-line "All rights reserved")
-
-       ;; Removed embedded scripts. (For AdBlock)
-       (goto-char (point-min))
-       (while (define-it--search-forward "googletag.cmd")
-         ;; Code is always 12 line embedded.
-         (define-it--delete-line 12))
-
-       (define-it--strip-string-from-buffer "    More Synonyms of")
-       (define-it--strip-string-from-buffer "More Synonyms of")
-
-       (goto-char (point-min))
-       (let ((case-fold-search nil))
-         (while (define-it--re-search-forward "[0-9]+[. ]+[^A-Z0-9]+")
-           (save-excursion
-             (define-it--re-search-backward "[0-9]+[. ]+[^A-Z0-9]+")
-             (while (not (string= (string (char-before)) " ")) (forward-char -1))
-             (insert "\n\n"))
-           (insert "\n\n")))
-
-       ;; Minimize sense number.
-       (goto-char (point-min))
-       (while (define-it--re-search-forward "[0-9]+[.  ]+")
-         (define-it--next-not-blank-line)
-         (let ((st-pt (line-beginning-position)) (end-pt -1)
-               (old-content "") (new-content ""))
-           (ignore-errors (search-forward-regexp "^[ \t]*\n"))
-           (forward-line -1)
-           (setq end-pt (line-end-position)
-                 old-content (buffer-substring st-pt end-pt)
-                 new-content (s-replace-regexp "[ ]*\n[ ]*" " " old-content))
-           (delete-region st-pt end-pt)
-           (insert (format "%s\n" new-content))))
-
-       ;; Pretty syntax
-       (define-it--buffer-replace
-        (lambda (current-content)
-          (setq current-content (s-replace "]  " "]  \n\n" current-content)
-                current-content (s-replace-regexp "[ ]+" " " current-content)
-                current-content (s-replace-regexp "[ ]+[.]" "." current-content)
-                current-content (s-replace-regexp "[ \n]*,[ \n]*" ", " current-content)
-                current-content (s-replace-regexp "Synonyms:[ ]*\n " "Synonyms: " current-content)
-                current-content (s-replace-regexp "[ ]*Synonyms:[ ]*" "Synonyms: " current-content)
-                current-content (s-replace-regexp "Synonyms: " "  Synonyms: " current-content)
-                current-content (s-replace-regexp "Synonyms: " "\n\n  Synonyms: " current-content)
-                current-content (s-replace-regexp "[ \n]*[[] " " [ " current-content)
-                current-content (s-replace-regexp "[ \n]+)" " )" current-content)
-                current-content (s-replace-regexp "  " " " current-content)
-                current-content (s-replace " " "" current-content))
-          ;; Cleaned last trailing empty lines with `string-trim'.
-          (setq current-content (s-replace-regexp "\\(^\\s-*$\\)\n" "\n" (string-trim current-content)))
-          current-content))
-       ;; Fixed missing headline
-       (goto-char (point-min))
-       (while (define-it--re-search-forward "^[0-9]+[.]+[ ]*")
-         (when (= (line-end-position) (point))
-           (delete-char 1)))
-
-       ;; Split all ]
-       (goto-char (point-min))
-       (while (define-it--re-search-forward "[]][ ][^\n]")
-         (forward-char -1)
-         (insert "\n"))
-
-       ;; Add Example
-       (let ((blank-line-count 0))
-         (define-it--through-buffer-by-line
-          (lambda (line)
-            (if (or (string-match-p "[0-9]+[.] " line) (string-match-p "[:]" line))
-                (setq blank-line-count 0)
-              (let ((blank-ln (define-it--current-line-empty-p)))
-                ;; Found example.
-                (when (and (= blank-line-count 2) (not blank-ln))
-                  (move-to-column 0) (insert " Example: "))
-                (when blank-ln (setq blank-line-count (1+ blank-line-count))))))))
-       ;; Post process
-       (define-it--buffer-replace
-        (lambda (current-content)
-          (setq current-content (s-replace "  " " " current-content)
-                current-content (s-replace "[^ ]\n[^ ]" " " current-content)
-                current-content (s-replace-regexp "[.][^\n][\n]*See" ". See" current-content)
-                current-content (s-replace-regexp "\\(^\\s-*$\\)\n" "\n" current-content))
-          current-content))
-       ;; Fix Synonyms and Example gap.
-       (define-it--fix-gap-between-same-sections "Synonyms:")
-       (define-it--fix-gap-between-same-sections "Example:")
-       ;; Fix definition
-       (let ((blank-line-count 0))
-         (define-it--through-buffer-by-line
-          (lambda (line)
-            (if (or (string-match-p "[0-9]+[.] " line) (string-match-p "[:]" line))
-                (setq blank-line-count 0)
-              (let ((blank-ln (define-it--current-line-empty-p)))
-                ;; Found definition.
-                (when (and (= blank-line-count 1) (not blank-ln))
-                  (let ((st-pt -1) (end-pt -1) (old-content "") (new-content ""))
-                    (setq st-pt (line-beginning-position))
-                    (save-excursion
-                      (define-it--next-blank-line)
-                      (forward-line -1)
-                      (setq end-pt (line-end-position)))
-                    (setq old-content (buffer-substring st-pt end-pt))
-                    (delete-region st-pt end-pt)
-                    (setq new-content (s-replace "\n" " " old-content)
-                          new-content (s-replace "  " " " new-content))
-                    (insert new-content)))
-                (when blank-ln (setq blank-line-count (1+ blank-line-count))))))))
-       ;; Fixed missing line break
-       (goto-char (point-min))
-       (while (define-it--re-search-forward "[A-Z][a-z]")
-         (let (in-block)
-           (save-excursion
-             (forward-char -2)
-             (setq in-block (looking-back "[[\n.][a-zA-Z ]*" -10))
-             (when (and (not in-block) (not (define-it--line-match-p "[:]")))
-               (insert "\n * ")))))
-
-       (define-it--through-buffer-by-line
-        (lambda (_line)
-          (let (last-line-char next-char)
-            (save-excursion
-              (forward-line -1)
-              (move-to-column (1- (line-end-position)))
-              (setq last-line-char (char-before)))
-            (save-excursion
-              (move-to-column 1)
-              (setq next-char (char-before)))
-            (when (and last-line-char next-char
-                       (not (string-match-p "[ \n]" (string last-line-char)))
-                       (not (string-match-p "[ \n]" (string next-char))))
-              (ignore-errors (delete-char -1))
-              (insert " ")))))
-
-       ;; Propertize text.
-       (define-it--put-text-property-by-string "Word forms:" define-it-var-face)
-       (define-it--put-text-property-by-string "Example:" define-it-var-face)
-       (define-it--put-text-property-by-string "Synonyms:" define-it-var-face)
-       (define-it--put-text-property-by-string "Phrasal verbs:" define-it-var-face)
-       (define-it--put-text-property-by-string "^[0-9]+[.][^\n]+" define-it-sense-number-face)
-       (define-it--put-text-property-by-string "[[][a-zA-Z +-=_]*[]]" define-it-type-face)
-
-       (buffer-string)))
-    content))
-
 (defun define-it--get-dictionary-definition-as-string (search-str)
   "Return the dictionary definition as a string with SEARCH-STR."
-  (setq define-it--dictionary-it nil)
-  (request
-    (format "https://www.collinsdictionary.com/dictionary/english/%s" search-str)
-    :type "GET"
-    :parser 'buffer-string
-    :success
-    (cl-function
-     (lambda (&key data &allow-other-keys)
-       (setq define-it--dictionary-it t
-             define-it--dictionary-content
-             (if (string-match-p "Sorry, no results" data)
-                 "No definition found"
-               (define-it--parse-dictionary data)))))
-    :error
-    ;; NOTE: Accept, error.
-    (cl-function
-     (lambda (&rest args &key _error-thrown &allow-other-keys)
-       (setq define-it--dictionary-it t)))))
+  (setq define-it--dictionary-it nil)  ; TODO: this is no longer needed
+  (setq define-it--dictionary-content (define-word search-str nil))
+  (setq define-it--dictionary-it t))
 
 (defun define-it--get-google-translate-as-string (search-str)
   "Return the google translate as a string with SEARCH-STR."

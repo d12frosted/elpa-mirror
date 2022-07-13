@@ -3293,14 +3293,16 @@
 	     (:authors
 	      ("Andrii Kolomoiets" . "andreyk.mad@gmail.com")))])
  (vcard .
-	[(0 2 1)
+	[(0 2 2)
 	 ((emacs
 	   (27 1)))
 	 "Package for handling vCard files" tar
-	 ((:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
+	 ((:keywords "vcard" "mail" "news")
+	  (:maintainer "Noah Friedman <friedman@splode.com>, Eric Abrahamsen" . "eric@ericabrahamsen.net")
 	  (:authors
-	   ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-	  (:url . "https://elpa.gnu.org/packages/vcard.html"))])
+	   ("Noah Friedman" . "friedman@splode.com"))
+	  (:url . "https://elpa.gnu.org/packages/vcard.html")
+	  (:commit . "28b88fd8ed53ca12d9499175217af81f5ea161fc"))])
  (vcl-mode .
 	   [(1 1)
 	    nil "Major mode for Varnish Configuration Language" single

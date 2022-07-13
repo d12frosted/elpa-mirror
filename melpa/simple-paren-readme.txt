@@ -27,7 +27,7 @@ with active region and \\[universal-argument] until end of word
 with active region and \\[universal-argument] until end of word
 int|eractive		==> int(eractive)
 
-With ‘simple-paren-honor-padding-p’ set to ‘t’, active region
+With `simple-paren-honor-padding-p’ set to ‘t', active region
 and \\[universal-argument]
 | foo		==> ( foo )
 

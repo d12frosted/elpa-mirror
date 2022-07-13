@@ -3,21 +3,3 @@ Fetcher: github
 Source:  https://github.com/dougm/vagrant-tramp.git
 
 Updating /mnt/store/melpa/working/vagrant-tramp/
-Checking out origin/HEAD
-Checking out 2b7a4fabd328961384da06e0e302250cd97edc47
-Checking out 2b7a4fabd328961384da06e0e302250cd97edc47
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/vagrant-tramp/
-  to /tmp/vagrant-trampshTWIE/vagrant-tramp-20220508.52
-    vagrant-tramp.el -> vagrant-tramp.el
-    bin => bin
-Created vagrant-tramp-20220508.52.tar containing:
-  vagrant-tramp-20220508.52/
-  vagrant-tramp-20220508.52/bin/
-  vagrant-tramp-20220508.52/bin/vagrant-tramp-ssh
-  vagrant-tramp-20220508.52/vagrant-tramp-pkg.el
-  vagrant-tramp-20220508.52/vagrant-tramp.el
-Built vagrant-tramp in 5.482s, finished at 2022-07-13T04:26:18+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 399 Jul 13 04:26 packages/vagrant-tramp-20220508.52.entry
- 20K -rw-r--r-- 1 root root 20K Jul 13 04:26 packages/vagrant-tramp-20220508.52.tar
