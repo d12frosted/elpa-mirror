@@ -1,12 +1,12 @@
 ;;; auto-virtualenv.el --- Auto activate python virtualenvs
 
-;; Copyright (C) 2017-2021 Marcwebbie
+;; Copyright (C) 2017-2022 Marcwebbie
 
 ;; Author: Marcwebbie <marcwebbie@gmail.com>
 ;; URL: http://github.com/marcwebbie/auto-virtualenv
-;; Package-Version: 20211215.907
-;; Package-Commit: 07064e05feb62277991b8a7c04f7cdad50acaddf
-;; Version: 1.3.0
+;; Package-Version: 20220712.1612
+;; Package-Commit: 92bc2cd7cb401ab0643e9ca037c4d225ba45a7c1
+;; Version: 1.4.1
 ;; Keywords: Python, Virtualenv, Tools
 ;; Package-Requires: ((cl-lib "0.5") (pyvenv "1.9") (s "1.10.0"))
 
@@ -27,6 +27,7 @@
 
 ;; Auto virtualenv activates virtualenv automatically when called.
 ;; To use auto-virtualenv set hooks for `auto-virtualenv-set-virtualenv'
+;; To set a custom virtualenv path set variable `auto-virtualenv-custom-virtualenv-path'
 
 ;; For example:
 ;; (require 'auto-virtualenv)
@@ -51,6 +52,9 @@
   :type 'directory
   :safe #'stringp
   :group 'auto-virtualenv)
+
+(defvar auto-virtualenv-custom-virtualenv-path ".custom-virtualenv"
+  "Variable that sets a custom virtualenv path")
 
 (defvar auto-virtualenv-project-root-files
   '(".python-version" ".dir-locals.el" ".projectile" ".emacs-project" "manage.py" ".git" ".hg")
@@ -118,29 +122,45 @@ a root directory"
 
 (defun auto-virtualenv-find-virtualenv-path ()
   "Get current buffer-file possible virtualenv name.
-0. Try path from .auto-virtualenv-version file if it exists or
-1. Try name from .python-version file if it exists or
-2. Try .venv dir in the root of project
-3. Try find a virtualenv with the same name of Project Root.
+0. Try path set from custom virtualenv variable
+1. Try path from .auto-virtualenv-version file if it exists or
+2. Try name from .python-version file if it exists or
+3. Try .venv or .virtualenv or venv dir in the root of project
+4. Try find a virtualenv with the same name of Project Root.
 Project root name is found using `auto-virtualenv--project-root'"
   (let ((python-version-file (expand-file-name ".python-version" (auto-virtualenv--project-root)))
+        (custom-virtualenv-dir (expand-file-name auto-virtualenv-custom-virtualenv-path (auto-virtualenv--project-root)))
         (dot-venv-dir (expand-file-name ".venv/" (auto-virtualenv--project-root)))
-        (auto-virtualenv-version-file (expand-file-name ".auto-virtualenv-version" (auto-virtualenv--project-root))))
+        (dot-virtualenv-dir (expand-file-name ".virtualenv/" (auto-virtualenv--project-root)))
+        (local-venv-dir (expand-file-name "venv/" (auto-virtualenv--project-root)))
+        (auto-virtualenv-version-file (expand-file-name ".auto-virtualenv-version" (auto-virtualenv--project-root)))
+        )
     (cond
-     ;; 0. Try path from .auto-virtualenv-version file if it exists or
+     ;; 0. Try path set from custom virtualenv variable
+     ((file-exists-p custom-virtualenv-dir)
+      custom-virtualenv-dir)
+
+     ;; 1. Try path from .auto-virtualenv-version file if it exists or
      ((file-exists-p auto-virtualenv-version-file)
       (auto-virtualenv-expandpath
        (with-temp-buffer
          (insert-file-contents auto-virtualenv-version-file) (s-trim (buffer-string)))))
-     ;; 1. Try name from .python-version file if it exists or
+
+     ;; 2. Try name from .python-version file if it exists or
      ((file-exists-p python-version-file)
       (auto-virtualenv-expandpath
        (with-temp-buffer
          (insert-file-contents python-version-file) (s-trim (buffer-string)))))
-     ;; 2. Try .venv dir in the root of project
+
+     ;; 3. Try .venv dir in the root of project
      ((file-exists-p dot-venv-dir)
       dot-venv-dir)
-     ;; 3. Try find a virtualenv with the same name of Project Root.
+     ((file-exists-p dot-virtualenv-dir)
+      dot-virtualenv-dir)
+     ((file-exists-p local-venv-dir)
+      local-venv-dir)
+
+     ;; 4. Try find a virtualenv with the same name of Project Root.
      ((and (auto-virtualenv--versions) (member (auto-virtualenv--project-name) (auto-virtualenv--versions)))
       (auto-virtualenv-expandpath (auto-virtualenv--project-name))))))
 

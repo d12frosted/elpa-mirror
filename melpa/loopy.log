@@ -3,3 +3,34 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
+Checking out origin/HEAD
+Checking out a2dbc79bd33a1d194c4804c1157caf27e67b5066
+Checking out a2dbc79bd33a1d194c4804c1157caf27e67b5066
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/loopy/
+  to /tmp/loopyNknVIe/loopy-20220510.323
+    loopy-commands.el -> loopy-commands.el
+    loopy-iter.el -> loopy-iter.el
+    loopy-misc.el -> loopy-misc.el
+    loopy-pcase.el -> loopy-pcase.el
+    loopy-seq.el -> loopy-seq.el
+    loopy-vars.el -> loopy-vars.el
+    loopy.el -> loopy.el
+  ! doc/loopy.texi -> loopy.texi
+Generating /tmp/loopyNknVIe/loopy-20220510.323/loopy.info
+Created loopy-20220510.323.tar containing:
+  loopy-20220510.323/
+  loopy-20220510.323/dir
+  loopy-20220510.323/loopy-commands.el
+  loopy-20220510.323/loopy-iter.el
+  loopy-20220510.323/loopy-misc.el
+  loopy-20220510.323/loopy-pcase.el
+  loopy-20220510.323/loopy-pkg.el
+  loopy-20220510.323/loopy-seq.el
+  loopy-20220510.323/loopy-vars.el
+  loopy-20220510.323/loopy.el
+  loopy-20220510.323/loopy.info
+Built loopy in 23.335s, finished at 2022-07-12T20:03:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  303 Jul 12 20:03 packages/loopy-20220510.323.entry
+472K -rw-r--r-- 1 root root 470K Jul 12 20:03 packages/loopy-20220510.323.tar

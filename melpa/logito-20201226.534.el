@@ -4,8 +4,6 @@
 
 ;; Author: Yann Hodique <yann.hodique@gmail.com>
 ;; Keywords: lisp, extensions
-;; Package-Version: 20201226.534
-;; Package-Commit: d5934ce10ba3a70d3fcfb94d742ce3b9136ce124
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25.1"))
 

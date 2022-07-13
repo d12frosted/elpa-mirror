@@ -4,21 +4,3 @@ Source:  https://hg.serna.eu/emacs/lms
 
 Updating /mnt/store/melpa/working/lms/
 Checking out 05c8fd16ff94590393b6b0a9cb193ec9572a9c97
-
-Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
-
-pulling from https://hg.serna.eu/emacs/lms
-searching for changes
-no changes found
-0 files updated, 0 files merged, 0 files removed, 0 files unresolved
-updated to "05c8fd16ff94: Added tag v1.1 for changeset 29593b4c18a5"
-1 other heads for branch "default"
-0 files updated, 0 files merged, 0 files removed, 0 files unresolved
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command exited with non-zero exit-code: 255

@@ -4,7 +4,7 @@
 
 ;; Author: Andrii Kolomoiets <andreyk.mad@gmail.com>
 ;; Keywords: tools
-;; Package-Commit: bfc0ec1f27b02b8ab816dcfd9073e5d78dae1aed
+;; Package-Commit: 383499d347b72d919178d6f9e6b69abc2f9aa05e
 ;; URL: https://github.com/muffinmad/emacs-ibuffer-project
 ;; Package-Version: 20220321.1312
 ;; Package-X-Original-Version: 2.2

@@ -4,8 +4,8 @@
 
 ;; Author: Lee Hinman <lee@writequit.org>
 ;; URL: http://www.github.com/dakrone/emacs-java-imports
-;; Package-Version: 20211006.2153
-;; Package-Commit: 7535a36d85497448a6e83579b822beaca7251ccb
+;; Package-Version: 20220712.1653
+;; Package-Commit: bbb173c319a32b46680b5c0bffd72b607ed7b71a
 ;; Version: 0.1.1
 ;; Keywords: java kotlin
 ;; Package-Requires: ((emacs "24.4") (s "1.10.0") (pcache "0.3.2"))
@@ -279,12 +279,12 @@ package and cache it for future statements."
 
 ;;;###autoload
 (defun java-imports-scan-local-jars (&optional local-repo)
-  (interactive)
   "scan the local repository, find local jars and add them to the cache.
 if a class is found in multiple packages, any such package may be registered
 for that class in the cache.
 This is currently a synchronous and potentially slow operation, but
 hopefully faster than adding imports manually or using eclipse"
+  (interactive)
   (cl-labels ((shell-command-to-lines
                (cmd)
                (s-split "\n" (shell-command-to-string cmd) t)))

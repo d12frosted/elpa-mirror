@@ -3,9 +3,9 @@
 ;; Copyright (C) 2022 Markus Läll
 ;;
 ;; URL: https://github.com/eyeinsky/org-anki
-;; Package-Version: 20220710.1144
-;; Package-Commit: f51f85d6d4dbb2b59a324b7ef177de3480ba9d20
-;; Version: 1.0.3
+;; Package-Version: 20220712.1916
+;; Package-Commit: 4c3b27efe8eed9a9c8b5636fb15b86975ef7e00e
+;; Version: 1.0.4
 ;; Author: Markus Läll <markus.l2ll@gmail.com>
 ;; Keywords: outlines, flashcards, memory
 ;; Package-Requires: ((emacs "27.1") (request "0.3.2") (dash "2.17") (promise "1.1"))
@@ -679,7 +679,7 @@ Pandoc is required to be installed."
       (replace-regexp-in-string
        "\n+$" ""
        (shell-command-to-string
-        (format "pandoc --wrap=none --from=html --to=org <<< '%s'" html)))
+        (format "pandoc --wrap=none --from=html --to=org <<< %s" (shell-quote-argument html))))
     ""))
 
 (defun org-anki--write-note (note)

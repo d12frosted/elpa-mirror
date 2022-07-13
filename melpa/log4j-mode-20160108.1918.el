@@ -5,8 +5,6 @@
 ;; Author: Johan Dykstrom <jody4711-sf@yahoo.se>
 ;; Created: Jan 2006
 ;; Version: 1.4
-;; Package-Version: 20160108.1918
-;; Package-Commit: 26171b1e723502055e085393b0ecdcb6db406010
 ;; Keywords: tools
 ;; URL: http://log4j-mode.sourceforge.net
 
