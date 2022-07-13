@@ -4,8 +4,8 @@
 
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/markdown-soma
-;; Package-Version: 20220704.200
-;; Package-Commit: 0bc5fcaeca919f0ce639eb7e6565a70de5189712
+;; Package-Version: 20220713.1438
+;; Package-Commit: 507ca274e901aca86cdf84b03218dac3df920812
 ;; Keywords: wp, docs, text, markdown
 ;; Version: 0.1.13
 ;; Package-Requires: ((emacs "25") (s "1.11.0") (dash "2.19.1"))
@@ -93,6 +93,40 @@
       (markdown-soma-start)
     (markdown-soma-stop)))
 
+;; The throttle-table is a hash table that stores the last time a function was
+;; called. When a function is throttled, this table is consulted to see if the
+;; function has been called recently. If it has, the function is not executed.
+;; Otherwise, the function is executed and the current time is recorded in the
+;; throttle-table.
+(setq-local markdown-soma-throttle-table (make-hash-table :test 'equal))
+
+(defun markdown-soma-throttle-since (func wait)
+  "Return t if FUNC has not been called since WAIT seconds ago."
+  (let ((last-time (gethash func markdown-soma-throttle-table)))
+    (if (and last-time
+             (< (- (float-time) last-time) wait))
+        nil
+      (puthash func (float-time) markdown-soma-throttle-table)
+      t)))
+
+(defvar markdown-soma-throttle-default-wait 0.3)
+
+(defun markdown-soma-throttle (func &optional wait)
+  "Throttle execution of FUNC, for WAIT (seconds).
+
+If WAIT is non-nil, it should be a number of seconds to wait between
+calls to FUNC.  The default is 0.1 seconds.
+
+This function returns a new function that, when called, will
+execute FUNC if it has not been called since WAIT."
+  (let ((wait (or wait markdown-soma-throttle-default-wait)))
+    (lambda (&rest args)
+      (when (markdown-soma-throttle-since func wait)
+        (message "Calling markdown-soma render buffer...")
+        (apply func args)))))
+
+(defvar markdown-soma-render-buffer (markdown-soma-throttle 'markdown-soma-render-buffer-internal))
+
 (defconst markdown-soma--needs-executable-message
   "Markdown soma executable `soma` not found.
 
@@ -130,7 +164,7 @@ By default, `~/.cargo/bin` will be in your `$PATH`."
     (process-send-string "*markdown-soma*" (format "%s\n" text))
     (process-send-eof "*markdown-soma*")))
 
-(defun markdown-soma-render-buffer (&rest _)
+(defun markdown-soma-render-buffer-internal (&rest _)
   "Render buffer via soma."
   (markdown-soma-render
    (format "<!-- SOMA: {\"scrollTo\": %f} -->\n%s"

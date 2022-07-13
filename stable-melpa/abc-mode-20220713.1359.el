@@ -1,13 +1,13 @@
 ;;; abc-mode.el --- Major mode for editing abc music files
 
 ;; Copyright (C) 2002, 2003, 2004, 2006, 2008, 2012, 2013, 2014, 2017,
-;; 2021 Matthew K. Junker
+;; 2021, 2022 Matthew K. Junker
 
 ;; Author: Matthew K. Junker <junker@alum.mit.edu>
-;; Package-Version: 20210508.1552
-;; Package-X-Original-Version: 20210508.105113
+;; Package-Version: 20220713.1359
+;; Package-X-Original-Version: 20220713.1359
 ;; Keywords: local, docs
-;; Package-Commit: 80fa954787b57d14e21e19bd65e52abab1686f4a
+;; Package-Commit: 45193b67508861cf77da7e76b71711855c002caa
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -62,6 +62,7 @@
 (require 'easymenu)
 (require 'newcomment)
 (require 'autoinsert)
+(require 'align)
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.abp\\'"  . abc-mode))

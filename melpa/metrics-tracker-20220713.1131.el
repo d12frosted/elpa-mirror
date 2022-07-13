@@ -4,9 +4,9 @@
 
 ;; Author: Ian Martins <ianxm@jhu.edu>
 ;; URL: https://github.com/ianxm/emacs-tracker
-;; Package-Version: 20211026.1347
-;; Package-Commit: 115f6de4a01b9e10936b7e6d1fdadd3770bae391
-;; Version: 0.3.11
+;; Package-Version: 20220713.1131
+;; Package-Commit: b524398c768227bc14fd12c833dcd4e22d66efd3
+;; Version: 0.3.12
 ;; Keywords: calendar
 ;; Package-Requires: ((emacs "24.4") (seq "2.3"))
 
@@ -257,7 +257,7 @@ Returned a time value with hours, minutes, seconds zeroed out."
 (defconst metrics-tracker--time-format
   (rx line-start
       (opt (group (repeat 1 2 digit)) ?:)        ; hh:
-      (group (= 2 digit)) ?: (group (= 2 digit)) ; mm:ss
+      (group (repeat 1 2 digit)) ?: (group (= 2 digit)) ; mm:ss
       (opt ?. (1+ digit))                        ; .ms
       line-end))
 
