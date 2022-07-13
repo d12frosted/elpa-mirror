@@ -8,7 +8,7 @@
 ;; Created: 2014
 ;; Version: 4.1
 ;; Package-Version: 20220620.2207
-;; Package-Commit: 35e9ced9ff7332b989f90e59e8d15c8c1148c654
+;; Package-Commit: 1ec276bb26371b686d6c57ffd38ca222cf42e8db
 ;; Keywords: text bibtex
 ;; URL: https://github.com/joostkremers/parsebib
 ;; Package-Requires: ((emacs "25.1"))

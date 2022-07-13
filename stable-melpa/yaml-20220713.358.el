@@ -3,9 +3,9 @@
 ;; Copyright © 2021 Zachary Romero <zkry@posteo.org>
 
 ;; Author: Zachary Romero <zkry@posteo.org>
-;; Version: 0.5.0
-;; Package-Version: 20220709.1653
-;; Package-Commit: bdfaa8ce5588445e1798e14242a027af46795f2c
+;; Version: 0.5.1
+;; Package-Version: 20220713.358
+;; Package-Commit: 0ac7f365bb6b4507259b31679bb37ac291e1f1c7
 ;; Homepage: https://github.com/zkry/yaml.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools
@@ -47,7 +47,7 @@
 (require 'seq)
 (require 'cl-lib)
 
-(defconst yaml-parser-version "0.5.0")
+(defconst yaml-parser-version "0.5.1")
 
 (defvar yaml--parse-debug nil
   "Turn on debugging messages when parsing YAML when non-nil.
@@ -263,7 +263,7 @@ This flag is intended for development purposes.")
 (defun yaml--process-literal-text (text)
   "Remove the header line for a folded match and return TEXT body formatted."
   (let ((n (get-text-property 0 'yaml-n text)))
-    (setq text (substring-no-properties text 0 (length text)))
+    (remove-text-properties 0 (length text) '(yaml-n nil) text)
     (let* ((header-line (substring text 0 (string-match "\n" text)))
            (text-body (substring text (1+ (string-match "\n" text))))
            (parsed-header (yaml--parse-block-header header-line))
