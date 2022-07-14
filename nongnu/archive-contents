@@ -1394,6 +1394,13 @@
 	       (:authors
 		("Bozhidar Batsov" . "bozhidar@batsov.dev"))
 	       (:keywords "project" "convenience"))])
+ (proof-general .
+		[(4 5)
+		 ((emacs
+		   (25 2)))
+		 "A generic Emacs interface for proof assistants" tar
+		 ((:url . "https://proofgeneral.github.io/")
+		  (:commit . "c366365aaddeb3a65dc0816c8f93ec209dc9de44"))])
  (prop-menu .
 	    [(0 1 2)
 	     ((emacs
