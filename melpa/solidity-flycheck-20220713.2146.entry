@@ -1,0 +1,14 @@
+(solidity-flycheck .
+		   [(20220713 2146)
+		    ((flycheck
+		      (32 -4))
+		     (solidity-mode
+		      (0 1 9))
+		     (dash
+		      (2 17 0)))
+		    "Flycheck integration for solidity emacs mode" single
+		    ((:commit . "211dbdf0dfab1139681156e6f9621a5bbe0f74a1")
+		     (:authors
+		      ("Lefteris Karapetsas " . "lefteris@refu.co"))
+		     (:maintainer "Lefteris Karapetsas " . "lefteris@refu.co")
+		     (:keywords "languages" "solidity" "flycheck"))])
