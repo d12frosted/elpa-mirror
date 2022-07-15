@@ -4,8 +4,8 @@
 
 ;; Author: Damien Cassou <damien@cassou.me>
 ;; Url: https://github.com/DamienCassou/flycheck-hledger/
-;; Package-Version: 20220323.726
-;; Package-Commit: 87b275b9b3d476b5f458e85e760f3f7fa3e66775
+;; Package-Version: 20220715.1115
+;; Package-Commit: c360025b8433abc4da89b0bfcc7ed1ff27004c64
 ;; Package-requires: ((emacs "27.1") (flycheck "31"))
 ;; Version: 0.3.0
 
@@ -58,43 +58,60 @@ https://hledger.org/hledger.html#check."
         (string-suffix-p "hledger" ledger-binary-path))))
 
 (flycheck-define-checker hledger
-  "A checker for hledger journals, showing unmatched balances and failed checks."
+  "A checker for errors in hledger journals, optionally with --strict checking and/or extra checks supported by the check command."
   :modes (ledger-mode hledger-mode)
   ;; Activate the checker only if ledger-binary-path ends with "hledger":
   :predicate flycheck-hledger--enabled-p
-  :command ("hledger"
-            "-f" source-inplace
-            "--auto"
-            "check"
+  :command ("hledger" "-f" source-inplace "--auto" "check"
             (option-flag "--strict" flycheck-hledger-strict)
             (eval flycheck-hledger-checks))
-  ;; hledger error messages are quite inconsistent, requiring a filter and multiple patterns.
   :error-filter (lambda (errors) (flycheck-sanitize-errors (flycheck-fill-empty-line-numbers errors)))
   :error-parser flycheck-parse-with-patterns
   :error-patterns
-  (;; Used for an unbalanced transaction:
-   (error line-start "hledger: \"" (file-name) "\" (lines " line "-" end-line ")\n"
-          (message (zero-or-more line-start (zero-or-more not-newline) "\n")) "\n")
-   ;; Used for invalid balance assertion:
-   (error line-start "hledger: balance assertion: \"" (file-name) "\" (line " line ", column " column ")\n"
-          "transaction:\n"
-          (message (zero-or-more line-start (zero-or-more not-newline) "\n")) "\n")
-   ;; Used for invalid regular expression:
-   (error line-start "hledger: " (message "this regular expression" (zero-or-more not-newline)) "\n")
-   ;; Used for an undeclared payee:
-   (error line-start "Error: " (message) "\n"
-          "at: \"" (file-name) "\" (lines " line "-" end-line ")\n")
-   ;; Used for unordered dates:
-   (error line-start "Error: " (message) "\n"
-          "at \"" (file-name) "\" (lines " line "-" end-line "):\n")
-   ;; Used for duplicate leaf names:
-   (error line-start "Error: " (message) "\n")
-   ;; Used for an undeclared account:
-   (error line-start "hledger: " (message) "\n"
-          "in transaction at: \"" (file-name) "\" (lines " line "-" end-line ")\n")
-   ;; Used for parse errors and invalid dates:
-   (error line-start "hledger: " (file-name) ":" line ":" column ":\n"
-          (message (zero-or-more line-start (zero-or-more not-newline) "\n")) "\n")))
+  (
+   ;; hledger error messages are becoming more consistent, but still require a number of patterns.
+   ;; We try to support hledger 1.26 and newer.
+   ;; The typical format is a standard first line with possible error type, filename and line/column number(s),
+   ;; several lines of highlighted excerpt, and one or more lines of explanation.
+   ;; See https://github.com/simonmichael/hledger/tree/master/hledger/test/errors for examples.
+
+   ;; hledger 1.26
+
+   ;; hledger 1.26 assertions (:LINE:COL)
+   (error
+    bol "hledger: Error: balance assertion: " (file-name (minimal-match (one-or-more (not ":")))) ":" line ":" column "\n"
+    (message (one-or-more bol (zero-or-more nonl) "\n")))
+
+   ;; hledger 1.26 balancedwithautoconversion, balancednoautoconversion (:LINE-LINE)
+   (error
+    bol "hledger: Error: " (file-name (minimal-match (one-or-more (not ":")))) ":" line "-" end-line "\n"
+    (message (one-or-more bol (zero-or-more nonl) "\n")))
+
+   ;; hledger 1.26+
+
+   ;; hledger 1.26+ error with LINE-LINE:
+   (error
+    bol "hledger: Error: " (file-name (minimal-match (one-or-more (not ":")))) ":" line "-" end-line ":\n" ; first line
+    (one-or-more bol (any space digit) (zero-or-more nonl) "\n")                                           ; excerpt lines
+    (message (one-or-more bol (zero-or-more nonl) "\n")))                                                  ; message lines
+
+   ;; hledger 1.26+ error with LINE:COL-COL:
+   (error
+    bol "hledger: Error: " (file-name (minimal-match (one-or-more (not ":")))) ":" line ":" column "-" end-column ":\n"
+    (one-or-more bol (any space digit) (zero-or-more nonl) "\n")
+    (message (one-or-more bol (zero-or-more nonl) "\n")))
+
+   ;; hledger 1.26+ error with LINE:COL:
+   (error
+    bol "hledger: Error: " (file-name (minimal-match (one-or-more (not ":")))) ":" line ":" column ":\n"
+    (one-or-more bol (any space digit) (zero-or-more nonl) "\n")
+    (message (one-or-more bol (zero-or-more nonl) "\n")))
+
+   ;; hledger 1.26+ error with LINE:
+   (error
+    bol "hledger: Error: " (file-name (minimal-match (one-or-more (not ":")))) ":" line ":\n"
+    (one-or-more bol (any space digit) (zero-or-more nonl) "\n")
+    (message (one-or-more bol (zero-or-more nonl) "\n")))))
 
 (add-to-list 'flycheck-checkers 'hledger)
 
