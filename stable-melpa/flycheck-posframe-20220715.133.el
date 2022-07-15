@@ -5,8 +5,8 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/flycheck-posframe
-;; Package-Version: 20210316.618
-;; Package-Commit: 8f60c9bf124ab9597d681504a73fdf116a0bde12
+;; Package-Version: 20220715.133
+;; Package-Commit: 19896b922c76a0f460bf3fe8d8ebc2f9ac9028d8
 ;; Version: 0.9
 ;; Package-Requires: ((flycheck "0.24") (emacs "26") (posframe "0.7.0"))
 
@@ -69,6 +69,12 @@
   :group 'flycheck-posframe
   :type 'integer
   :package-version '(flycheck-posframe . "0.6"))
+
+(defcustom flycheck-posframe-border-use-error-face nil
+  "If non-nil, `flycheck-posframe-border-face' will be overriden by the foreground of the highest error level face."
+  :group 'flycheck-posframe
+  :type 'boolean
+  :package-version '(flycheck-posframe . "0.7"))
 
 (defcustom flycheck-posframe-prefix "\u27a4 "
   "String to be displayed before every default message in posframe."
@@ -142,7 +148,7 @@ Only the `foreground' is used in this face."
   "Last position for which a flycheck posframe was displayed.")
 
 (defun flycheck-posframe-check-position ()
-  "Update flycheck-posframe-last-position, returning t if there was no change."
+  "Update `flycheck-posframe-last-position', returning t if there was no change."
   (equal flycheck-posframe-last-position
          (setq flycheck-posframe-last-position
                (list (current-buffer) (buffer-modified-tick) (point)))))
@@ -167,6 +173,12 @@ Only the `foreground' is used in this face."
     ('warning 'flycheck-posframe-warning-face)
     ('error 'flycheck-posframe-error-face)
     (_ 'flycheck-posframe-face)))
+
+(defun flycheck-posframe-highest-error-level-face (errs)
+  "Return the face corresponding to the highest error level from ERRS."
+  (flycheck-posframe-get-face-for-error (cl-reduce
+					 (lambda (err1 err2) (if (flycheck-error-level-< err1 err2) err2 err1))
+					 errs)))
 
 (defun flycheck-posframe-format-error (err)
   "Formats ERR for display."
@@ -203,7 +215,9 @@ Only the `foreground' is used in this face."
        :background-color (face-background 'flycheck-posframe-background-face nil t)
        :position (point)
        :internal-border-width flycheck-posframe-border-width
-       :internal-border-color (face-foreground 'flycheck-posframe-border-face nil t)
+       :internal-border-color (face-foreground (if flycheck-posframe-border-use-error-face
+						   (flycheck-posframe-highest-error-level-face errors)
+						 'flycheck-posframe-border-face) nil t)
        :poshandler poshandler
        :hidehandler #'flycheck-posframe-hidehandler))))
 

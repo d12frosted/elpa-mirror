@@ -2,10 +2,10 @@
 
 ;; Author: Tom Gillespie
 ;; URL: https://github.com/tgbugs/orgstrap
-;; Package-Version: 20211126.2201
-;; Package-Commit: c761da3d5e9d4761335b74cfb43c75df7336f067
+;; Package-Version: 20220715.16
+;; Package-Commit: f4df67e94926f9d389f4a456a9cbf721c9b22b89
 ;; Keywords: lisp org org-mode bootstrap
-;; Version: 1.4
+;; Version: 1.5
 ;; Package-Requires: ((emacs "24.4"))
 
 ;;;; License and Commentary
@@ -78,9 +78,9 @@ using `setq-default' since it will not change automatically.")
 ;; it is also not risky, so we leave it unmarked
 
 (defconst orgstrap--internal-norm-funcs
-  '(orgstrap-norm-func--prp-1.0
-    orgstrap-norm-func--prp-1.1
-    orgstrap-norm-func--dprp-1.0)
+  '(orgstrap-norm-func--prp-1-0
+    orgstrap-norm-func--prp-1-1
+    orgstrap-norm-func--dprp-1-0)
   "List internally implemented normalization functions.
 Used to determine which norm func names are safe local variables.")
 
@@ -91,9 +91,9 @@ Used to determine which norm func names are safe local variables.")
 ;; Unless `orgstrap-mode' is enabled and the name is in the list of
 ;; functions that are implemented internally this is not safe
 
-(defvar-local orgstrap-norm-func #'orgstrap-norm-func--dprp-1.0
+(defvar-local orgstrap-norm-func #'orgstrap-norm-func--dprp-1-0
   "Dynamic variable to simplify calling normalizaiton functions.
-Defaults to `orgstrap-norm-func--dprp-1.0'.")
+Defaults to `orgstrap-norm-func--dprp-1-0'.")
 
 (defvar orgstrap--debug nil
   "If non-nil run `orgstrap-norm' in debug mode.")
@@ -526,8 +526,8 @@ _FMT has the wrong meaning in 24 and 25."
 
 ;; orgstrap normalization functions
 
-(defun orgstrap-norm-func--dprp-1.0 (body)
-  "Normalize BODY using dprp-1.0."
+(defun orgstrap-norm-func--dprp-1-0 (body)
+  "Normalize BODY using dprp-1-0."
   (let ((p (read (concat "(progn\n" body "\n)")))
         (m '(defun defun-local defmacro defvar defvar-local defconst defcustom))
         print-quoted print-length print-level)
@@ -551,16 +551,16 @@ _FMT has the wrong meaning in 24 and 25."
           p))
       (prin1-to-string (f p)))))
 
-(defun orgstrap-norm-func--prp-1.1 (body)
-  "Normalize BODY using prp-1.1."
+(defun orgstrap-norm-func--prp-1-1 (body)
+  "Normalize BODY using prp-1-1."
   (let (print-quoted print-length print-level)
     (prin1-to-string (read (concat "(progn\n" body "\n)")))))
 
-(defun orgstrap-norm-func--prp-1.0 (body)
-  "Normalize BODY using prp-1.0."
+(defun orgstrap-norm-func--prp-1-0 (body)
+  "Normalize BODY using prp-1-0."
   (let ((print-quoted nil))
     (prin1-to-string (read (concat "(progn\n" body "\n)")))))
-(make-obsolete #'orgstrap-norm-func--prp-1.0 #'orgstrap-norm-func--prp-1.1 "1.2")
+(make-obsolete #'orgstrap-norm-func--prp-1-0 #'orgstrap-norm-func--prp-1-1 "1.2")
 
 
 (defun orgstrap--goto-named-src-block (blockname)
@@ -672,12 +672,39 @@ NEW-PARAMS.  If UPDATE is non-nil existing header arguments are updated."
                     (warn "%s already defined for block %s!" key name))
                 (org-babel-insert-header-arg header-arg value)))))))))
 
+(unless (fboundp #'flatten-tree)
+  ;; backwards compatibility for Emacs < 27
+  (defun flatten-tree (tree)
+    (let (elems)
+      (while (consp tree)
+        (let ((elem (pop tree)))
+          (while (consp elem)
+            (push (cdr elem) tree)
+            (setq elem (car elem)))
+          (if elem (push elem elems))))
+      (if tree (push tree elems))
+      (nreverse elems))))
+
+(defun orgstrap--check-portable-subset (body)
+  "Ensure that BODY uses only symbols that are portable for `prin1-to-string'."
+  ;; XXX Note that [.] may diverge again because `.asdf' can be read without
+  ;; escaping the leading . whereas `\?asdf' cannot. This is an artifact of
+  ;; the c implementation of `prin1' being reused to handle both chars.
+  (let* ((l (flatten-tree (read (concat "(progn\n" body "\n)"))))
+         (symbols (cl-remove-duplicates (cl-remove-if-not #'symbolp l)))
+         (bads (cl-remove-if-not
+                (lambda (s) (string-match "[.?]" (cl-subseq (symbol-name s) 1)))
+                symbols)))
+    (when bads
+      (error "checksum failed: non-portable symbols detected: %S" bads))))
+
 ;; edit user facing functions
 (defun orgstrap-get-block-checksum (&optional cypher)
   "Calculate the `orgstrap-block-checksum' for the current buffer using CYPHER."
   (interactive)
   (orgstrap--with-block orgstrap-orgstrap-block-name
     (ignore params body-unexpanded)
+    (orgstrap--check-portable-subset body)
     (let ((cypher (or cypher (orgstrap--current-buffer-cypher)))
           (body-normalized (orgstrap-norm body)))
       (secure-hash cypher body-normalized))))
@@ -847,22 +874,22 @@ MINIMAL is passed to `orgstrap--get-min-org-version'."
   "Return the version check local variables given INFO and MINIMAL."
   `(
     (setq-local orgstrap-min-org-version ,(orgstrap--get-min-org-version info minimal))
-    (let ((actual (org-version))
-          (need orgstrap-min-org-version))
+    (let ((a (org-version)) ; actual
+          (n orgstrap-min-org-version)) ; need
       (or (fboundp #'orgstrap--confirm-eval) ; orgstrap with portable is already present on the system
-          (not need)
-          (string< need actual)
-          (string= need actual)
-          (error "Your Org is too old! %s < %s" actual need)))))
+          (not n)
+          (string< n a)
+          (string= n a)
+          (error "Your Org is too old! %s < %s" a n)))))
 
 (defun orgstrap--local-variables--norm (&optional norm-func-name)
   "Return the normalization function for local variables given NORM-FUNC-NAME."
   (let ((norm-func-name (or norm-func-name (default-value 'orgstrap-norm-func))))
     (cl-case norm-func-name
-      (orgstrap-norm-func--dprp-1.0
+      (orgstrap-norm-func--dprp-1-0
        '(
-         (defun orgstrap-norm-func--dprp-1.0 (body)
-           "Normalize BODY using dprp-1.0."
+         (defun orgstrap-norm-func--dprp-1-0 (body)
+           "Normalize BODY using dprp-1-0."
            (let ((p (read (concat "(progn\n" body "\n)")))
                  (m '(defun defun-local defmacro defvar defvar-local defconst defcustom))
                  print-quoted print-length print-level)
@@ -885,15 +912,15 @@ MINIMAL is passed to `orgstrap--get-min-org-version'."
                      (f e)))
                    p))
                (prin1-to-string (f p)))))))
-      (orgstrap-norm-func--prp-1.1
+      (orgstrap-norm-func--prp-1-1
        '(
-         (defun orgstrap-norm-func--prp-1.1 (body)
-           "Normalize BODY using prp-1.1."
+         (defun orgstrap-norm-func--prp-1-1 (body)
+           "Normalize BODY using prp-1-1."
            (let (print-quoted print-length print-level)
              (prin1-to-string (read (concat "(progn\n" body "\n)")))))))
-      (orgstrap-norm-func--prp-1.0
-       (error "`orgstrap-norm-func--prp-1.0' is deprecated.
-Please update `orgstrap-norm-func-name' to `orgstrap-norm-func--prp-1.1'"))
+      (orgstrap-norm-func--prp-1-0
+       (error "`orgstrap-norm-func--prp-1-0' is deprecated.
+Please update `orgstrap-norm-func-name' to `orgstrap-norm-func--prp-1-1'"))
       (otherwise (error "Don't know that normalization function %s" norm-func-name)))))
 
 (defun orgstrap--local-variables--norm-common ()
@@ -1342,9 +1369,11 @@ Since -batch implies -q, `user-init-file' must be passed explicitly.
 emacs -batch -eval \\
 \"(let ((user-init-file (pop argv)) (file (pop argv))) (package-initialize) (orgstrap-whitelist-file file))\" \\
 ~/.emacs.d/init.el /path/to/whitelist.org"
-  (with-current-buffer (find-file-literally path)
-    (orgstrap--whitelist-current-buffer)
-    (kill-buffer)))
+  (let (enable-local-variables) ; < 28 don't run orgstrap block
+    ;; `find-file-literally' is broken on 27 so regularize behavior
+    (with-current-buffer (find-file-literally path)
+      (orgstrap--whitelist-current-buffer)
+      (kill-buffer))))
 
 (provide 'orgstrap)
 
