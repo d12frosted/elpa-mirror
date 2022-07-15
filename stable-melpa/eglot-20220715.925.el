@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220714.1447
-;; Package-Commit: c64fe76e866d6ab38bb7ff7283b766a48c116440
+;; Package-Version: 20220715.925
+;; Package-Commit: 25f6338741c04466591cf1ea1825b5f47f91bf0d
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -2103,8 +2103,12 @@ THINGS are either registrations or unregisterations (sic)."
                               :key #'seq-first))))
       (eglot-format (point) nil last-input-event))))
 
+(defvar eglot--workspace-symbols-cache (make-hash-table :test #'equal)
+  "Cache of `workspace/Symbol' results  used by `xref-find-definitions'.")
+
 (defun eglot--pre-command-hook ()
   "Reset some temporary variables."
+  (clrhash eglot--workspace-symbols-cache)
   (setq eglot--last-inserted-char nil))
 
 (defun eglot--CompletionParams ()
@@ -2394,9 +2398,6 @@ Try to visit the target file for a richer summary line."
           (eglot--current-server-or-lose))
     (xref-make-match summary (xref-make-file-location file line column) length)))
 
-(defvar eglot--workspace-symbols-cache (make-hash-table :test #'equal)
-  "Cache of `workspace/Symbol' results  used by `xref-find-definitions'.")
-
 (cl-defmethod xref-backend-identifier-completion-table ((_backend (eql eglot)))
   (if (eglot--server-capable :workspaceSymbolProvider)
       (let ((buf (current-buffer)))
@@ -2448,10 +2449,10 @@ Try to visit the target file for a richer summary line."
   "Search `eglot--workspace-symbols-cache' for rich entry of STRING."
   (catch 'found
     (maphash (lambda (_k v)
-               (while v
+               (while (consp v)
                  ;; Like mess? Ask minibuffer.el about improper lists.
                  (when (equal (car v) string) (throw 'found (car v)))
-                 (setq v (and (consp v) (cdr v)))))
+                 (setq v (cdr v))))
              eglot--workspace-symbols-cache)))
 
 (add-to-list 'completion-category-overrides

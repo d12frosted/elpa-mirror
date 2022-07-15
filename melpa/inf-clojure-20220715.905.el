@@ -5,10 +5,10 @@
 ;; Authors: Bozhidar Batsov <bozhidar@batsov.dev>
 ;;       Olin Shivers <shivers@cs.cmu.edu>
 ;; URL: http://github.com/clojure-emacs/inf-clojure
-;; Package-Version: 20220603.1523
-;; Package-Commit: 771cf6da1df65e1fccfcd0d0a9fc911b100e4bed
-;; Keywords: processes, clojure
-;; Version: 3.2.0-snapshot
+;; Package-Version: 20220715.905
+;; Package-Commit: 67b0403aa183d521e36545266100f1f62a34e783
+;; Keywords: processes, comint, clojure
+;; Version: 3.2.0
 ;; Package-Requires: ((emacs "25.1") (clojure-mode "5.11"))
 
 ;; This file is not part of GNU Emacs.
@@ -295,8 +295,9 @@ See http://blog.jorgenschaefer.de/2014/05/race-conditions-in-emacs-process-filte
   :link '(emacs-commentary-link :tag "Commentary" "inf-clojure"))
 
 (defconst inf-clojure-version
-  (eval-when-compile
-    (lm-version (or load-file-name buffer-file-name)))
+  (or (if (fboundp 'package-get-version)
+          (package-get-version))
+      "3.2.0")
   "The current version of `inf-clojure'.")
 
 (defcustom inf-clojure-prompt-read-only t

@@ -4,8 +4,8 @@
 
 ;; Author: Johannes Maier <johannes.maier@mailbox.org>
 ;; Version: 0.1
-;; Package-Version: 20220711.558
-;; Package-Commit: 9bba468e116869b65391230e029bfab5f2dc5e07
+;; Package-Version: 20220715.1017
+;; Package-Commit: 44204a9d0dabe1553c28310f6d2d78f144c08990
 ;; Homepage: https://github.com/kenranunderscore/emacs-naga-theme
 ;; Keywords: faces themes
 ;; Package-Requires: ((emacs "24.1"))
@@ -205,6 +205,14 @@ The default style is green text in a green box."
       (whitespace-space (:foreground ,whitespace-fg :background ,bg))
       (whitespace-tab (:foreground ,whitespace-fg :background ,bg))
       (whitespace-line (:foreground ,orange-red :background ,bg))
+      (whitespace-newline (:foreground ,whitespace-fg :background ,bg))
+      (whitespace-empty (:foreground ,red :background ,yellow))
+      (whitespace-indentation (:foreground ,red :background ,yellow))
+      (whitespace-space-before-tab (:foreground ,red :background ,orange))
+      (whitespace-space-after-tab (:foreground ,red :background ,yellow))
+      (whitespace-missing-newline-at-eof (:background ,string))
+      (whitespace-trailing (:background ,red))
+      (whitespace-big-indent (:background ,red))
 
       ;; gnus and message-mode
       (gnus-header (:inherit default))
@@ -251,7 +259,7 @@ The default style is green text in a green box."
       (sea-green "#3cb371")
       (orange-red "#ff4500")
       (red "#ff1500")
-      (whitespace-fg "#151515")
+      (whitespace-fg "#555f55")
       (block "#121212")
       (block-light "#252525"))
   (apply #'custom-theme-set-faces

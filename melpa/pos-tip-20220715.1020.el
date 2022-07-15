@@ -5,8 +5,8 @@
 ;; Author: S. Irie
 ;; Maintainer: S. Irie
 ;; Keywords: Tooltip
-;; Package-Version: 20191227.1356
-;; Package-Commit: 179cc126b363f72ca12fab1e0dc462ce0ee79742
+;; Package-Version: 20220715.1020
+;; Package-Commit: bfe74204d1201a33ace81898e7c485382817510a
 
 (defconst pos-tip-version "0.4.6")
 
@@ -272,7 +272,7 @@ coordinates can't be obtained by `pos-tip-compute-pixel-position'."
 
 (defun pos-tip-window-system (&optional frame)
   "The name of the window system that FRAME is displaying through.
-The value is a symbol---for instance, 'x' for X windows.
+The value is a symbol---for instance, `x' for X windows.
 The value is nil if Emacs is using a text-only terminal.
 
 FRAME defaults to the currently selected frame."
@@ -586,22 +586,22 @@ See `pos-tip-show' for details.
 Example:
 
 \(defface my-tooltip
-  '((t
+  \\='((t
      :background \"gray85\"
      :foreground \"black\"
      :inherit variable-pitch))
   \"Face for my tooltip.\")
 
 \(defface my-tooltip-highlight
-  '((t
+  \\='((t
      :background \"blue\"
      :foreground \"white\"
      :inherit my-tooltip))
   \"Face for my tooltip highlighted.\")
 
-\(let ((str (propertize \" foo \\n bar \\n baz \" 'face 'my-tooltip)))
-  (put-text-property 6 11 'face 'my-tooltip-highlight str)
-  (pos-tip-show-no-propertize str 'my-tooltip))"
+\(let ((str (propertize \" foo \\n bar \\n baz \" \\='face \\='my-tooltip)))
+  (put-text-property 6 11 \\='face \\='my-tooltip-highlight str)
+  (pos-tip-show-no-propertize str \\='my-tooltip))"
   (unless window
     (setq window (selected-window)))
   (let* ((frame (window-frame window))
