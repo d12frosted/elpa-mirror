@@ -2,9 +2,9 @@
 
 ;; Author: Yilkal Argaw <yilkalargawworkneh@gmail.com>
 ;; URL: https://github.com/yilkalargaw/org-auto-tangle
-;; Package-Version: 20220709.2032
-;; Package-Commit: c07a86bbd5e43a56852bf95403c6682cdb7c6211
-;; Version: 0.5.0
+;; Package-Version: 20220715.329
+;; Package-Commit: bce665c79fc29f1e80f1eae7db7e91c56b0788fc
+;; Version: 0.5.1
 ;; Keywords: outlines
 ;; Package-Requires: ((emacs "24.1") (async "1.9.3"))
 
@@ -69,9 +69,9 @@ for a specific file, add its full path to this list.")
 (defun org-auto-tangle-find-value (buffer)
   "Search the `auto_tangle' property in BUFFER and extracts it when found."
   (with-current-buffer buffer
-    (save-restriction
-      (widen)
-      (save-excursion
+    (save-excursion
+      (save-restriction
+        (widen)
         (goto-char (point-min))
         (when (re-search-forward (org-make-options-regexp '("auto_tangle")) nil :noerror)
           (match-string 2))))))
@@ -106,11 +106,10 @@ Tangle will happen depending on the value of
 `#+auto_tangle' keyword in the current buffer. If present,
 `#+auto_tangle' always overrides `org-auto-tangle-default'."
   (let ((auto-tangle-kw (org-auto-tangle-find-value (current-buffer))))
-    (when (and (eq major-mode 'org-mode)
-               (or (and auto-tangle-kw
-                        (not (string= auto-tangle-kw "nil")))
-                   (and (not auto-tangle-kw)
-                        org-auto-tangle-default)))
+    (when (and (derived-mode-p 'org-mode)
+               (if auto-tangle-kw
+                   (not (string= auto-tangle-kw "nil"))
+                 org-auto-tangle-default))
       (org-auto-tangle-async (buffer-file-name)))))
 
 ;;;###autoload

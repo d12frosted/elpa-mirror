@@ -4,8 +4,8 @@
 
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/howdoyou/
-;; Package-Version: 20210909.2000
-;; Package-Commit: a01971a7279c8a031de78513c004d7a09d293712
+;; Package-Version: 20220715.552
+;; Package-Commit: faf2b8a1ef0c6b5a12250f8bde7ca0b3a879ce21
 ;; Package-Requires: ((emacs "25.1") (promise "1.1") (request "0.3.3") (org "9.2"))
 ;; Version: 0.2.3
 
@@ -223,12 +223,8 @@ URL is a link string. Download the url and parse it to a DOM object"
       ;; (switch-to-buffer-other-window my-buffer))
       (if howdoyou-switch-to-answer-buffer
           (select-window
-           (display-buffer my-buffer
-                           '(display-buffer-use-some-window (inhibit-same-window
-                                                             . t))))
-        (display-buffer my-buffer
-                        '(display-buffer-use-some-window (inhibit-same-window
-                                                          . t)))))
+           (display-buffer my-buffer))
+        (display-buffer my-buffer)))
     (with-current-buffer my-buffer
       (let ((inhibit-read-only t))
         (erase-buffer)
