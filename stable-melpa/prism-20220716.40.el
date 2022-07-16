@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/prism.el
-;; Package-Version: 20220630.723
-;; Package-Commit: 05543bdac08b4ec4854bc8ca0cb81b6df2c5de9d
+;; Package-Version: 20220716.40
+;; Package-Commit: 9cf6b5e3bcb6044567f3911a4adb796e0c61f207
 ;; Version: 0.3-pre
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1"))
 ;; Keywords: faces lisp
@@ -911,6 +911,7 @@ Function `prism-set-colors' does not save its argument values
 permanently.  This command saves them using the customization
 system so that `prism-set-colors' can then be called without
 arguments to set the same faces."
+  ;; FIXME: Make this interactive.
   (cl-letf (((symbol-function 'custom-save-all)
              (symbol-function 'ignore)))
     ;; Avoid saving the file for each variable, which is very slow.
