@@ -4,8 +4,8 @@
 
 ;; Author: David Vazquez Pua <davazp@gmail.com>
 ;; Keywords: languages
-;; Package-Version: 20220714.807
-;; Package-Commit: daeb5557a918093272755bdfbd1a56b936fca932
+;; Package-Version: 20220716.827
+;; Package-Commit: 92136cf9b5a4dcd8c202c8dba9064b497776d2f7
 ;; Package-Requires: ((emacs "24.3"))
 ;; Homepage: https://github.com/davazp/graphql-mode
 ;; Version: 1.0.0
@@ -159,10 +159,8 @@ Please install it and try again."))
 (defun graphql-beginning-of-query ()
   "Move the point to the beginning of the current query."
   (interactive)
-  (while (and (> (point) (point-min))
-              (or (> (current-indentation) 0)
-                  (> (car (syntax-ppss)) 0)))
-    (forward-line -1)))
+  (goto-char (syntax-ppss-toplevel-pos (syntax-ppss (point-at-bol))))
+  (back-to-indentation))
 
 (defun graphql-end-of-query ()
   "Move the point to the end of the current query."
@@ -314,7 +312,12 @@ Please install it and try again."))
 (defun graphql-indent-line ()
   "Indent GraphQL schema language."
   (let ((position (point))
+        (column)
         (indent-pos))
+    (save-excursion
+      (graphql-beginning-of-query)
+      (setq column (current-column)))
+
     (save-excursion
       (let ((level (car (syntax-ppss (point-at-bol)))))
 
@@ -322,7 +325,7 @@ Please install it and try again."))
         (when (looking-at "\\s-*\\s)")
           (setq level (1- level)))
 
-        (indent-line-to (* graphql-indent-level level))
+        (indent-line-to (+ column (* graphql-indent-level level)))
         (setq indent-pos (point))))
 
     (when (< position indent-pos)
