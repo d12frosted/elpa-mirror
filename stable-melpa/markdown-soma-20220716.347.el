@@ -4,8 +4,8 @@
 
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/markdown-soma
-;; Package-Version: 20220713.1438
-;; Package-Commit: 507ca274e901aca86cdf84b03218dac3df920812
+;; Package-Version: 20220716.347
+;; Package-Commit: f78ffe4ef3e2f4ce8af818c719148b17acf51097
 ;; Keywords: wp, docs, text, markdown
 ;; Version: 0.1.13
 ;; Package-Requires: ((emacs "25") (s "1.11.0") (dash "2.19.1"))
@@ -109,7 +109,7 @@
       (puthash func (float-time) markdown-soma-throttle-table)
       t)))
 
-(defvar markdown-soma-throttle-default-wait 0.3)
+(defvar markdown-soma-throttle-default-wait 0.2)
 
 (defun markdown-soma-throttle (func &optional wait)
   "Throttle execution of FUNC, for WAIT (seconds).
@@ -124,8 +124,6 @@ execute FUNC if it has not been called since WAIT."
       (when (markdown-soma-throttle-since func wait)
         (message "Calling markdown-soma render buffer...")
         (apply func args)))))
-
-(defvar markdown-soma-render-buffer (markdown-soma-throttle 'markdown-soma-render-buffer-internal))
 
 (defconst markdown-soma--needs-executable-message
   "Markdown soma executable `soma` not found.
@@ -164,7 +162,11 @@ By default, `~/.cargo/bin` will be in your `$PATH`."
     (process-send-string "*markdown-soma*" (format "%s\n" text))
     (process-send-eof "*markdown-soma*")))
 
-(defun markdown-soma-render-buffer-internal (&rest _)
+(defun markdown-soma-render-buffer ()
+  "Render buffer through a throttle."
+  (markdown-soma-throttle 'markdown-soma-render-buffer-internal))
+
+(defun markdown-soma-render-buffer-internal ()
   "Render buffer via soma."
   (markdown-soma-render
    (format "<!-- SOMA: {\"scrollTo\": %f} -->\n%s"
