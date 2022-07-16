@@ -4,11 +4,11 @@ Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
 Checking out origin/HEAD
-Checking out cf837cf05575c1c77c316eadac603a3edace8e5f
-Checking out cf837cf05575c1c77c316eadac603a3edace8e5f
+Checking out 0d2f46eb41180ada741725f9ea2e1272491591c4
+Checking out 0d2f46eb41180ada741725f9ea2e1272491591c4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldev405Nrn/eldev-20220628.1756
+  to /tmp/eldevjAfv1c/eldev-20220715.2010
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-ecukes.el -> eldev-ecukes.el
@@ -20,22 +20,24 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20220628.1756.tar containing:
-  eldev-20220628.1756/
-  eldev-20220628.1756/bin/
-  eldev-20220628.1756/bin/eldev
-  eldev-20220628.1756/bin/eldev.bat
-  eldev-20220628.1756/bin/eldev.ps1
-  eldev-20220628.1756/eldev-build.el
-  eldev-20220628.1756/eldev-buttercup.el
-  eldev-20220628.1756/eldev-ecukes.el
-  eldev-20220628.1756/eldev-ert.el
-  eldev-20220628.1756/eldev-pkg.el
-  eldev-20220628.1756/eldev-plugins.el
-  eldev-20220628.1756/eldev-util.el
-  eldev-20220628.1756/eldev-vc.el
-  eldev-20220628.1756/eldev.el
-Built eldev in 7.151s, finished at 2022-07-15T13:43:58+0000
+Created eldev-20220715.2010.tar containing:
+  eldev-20220715.2010/
+  eldev-20220715.2010/bin/
+  eldev-20220715.2010/bin/eldev
+  eldev-20220715.2010/bin/eldev.bat
+  eldev-20220715.2010/bin/eldev.ps1
+  eldev-20220715.2010/eldev-build.el
+  eldev-20220715.2010/eldev-buttercup.el
+  eldev-20220715.2010/eldev-ecukes.el
+  eldev-20220715.2010/eldev-ert.el
+  eldev-20220715.2010/eldev-pkg.el
+  eldev-20220715.2010/eldev-plugins.el
+  eldev-20220715.2010/eldev-util.el
+  eldev-20220715.2010/eldev-vc.el
+  eldev-20220715.2010/eldev.el
+Built eldev in 10.754s, finished at 2022-07-15T21:45:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 Jul 15 13:43 packages/eldev-20220628.1756.entry
-492K -rw-r--r-- 1 root root 490K Jul 15 13:43 packages/eldev-20220628.1756.tar
+4.0K -rw-r--r-- 1 root root  340 Jul 15 17:46 packages/eldev-20220715.1547.entry
+500K -rw-r--r-- 1 root root 500K Jul 15 17:46 packages/eldev-20220715.1547.tar
+4.0K -rw-r--r-- 1 root root  340 Jul 15 21:45 packages/eldev-20220715.2010.entry
+500K -rw-r--r-- 1 root root 500K Jul 15 21:45 packages/eldev-20220715.2010.tar

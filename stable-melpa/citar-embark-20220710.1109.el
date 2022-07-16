@@ -10,7 +10,7 @@
 ;;
 ;; Version: 1.0
 ;; Package-Version: 20220710.1109
-;; Package-Commit: 96a567d70bae00118187c77051159df95c33f2dc
+;; Package-Commit: c05dce095f340b1ab91434e17eac06b40911fd2a
 ;; Keywords: bib extensions
 ;; Homepage: https://github.com/emacs-citar/citar-embark
 ;; Package-Requires: ((emacs "27.1") (embark "0.17") (citar "0.9.7"))
