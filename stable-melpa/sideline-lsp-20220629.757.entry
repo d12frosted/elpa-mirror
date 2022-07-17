@@ -1,0 +1,21 @@
+(sideline-lsp .
+	      [(20220629 757)
+	       ((emacs
+		 (27 1))
+		(sideline
+		 (0 1 0))
+		(lsp-mode
+		 (6 0))
+		(dash
+		 (2 18 0))
+		(ht
+		 (2 4))
+		(s
+		 (1 12 0)))
+	       "Show lsp information with sideline" single
+	       ((:commit . "b340c1e9a6d26ad4b3afe6aa660d62e8cebd66c8")
+		(:authors
+		 ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		(:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		(:keywords "convenience" "lsp")
+		(:url . "https://github.com/emacs-sideline/sideline-lsp"))])
