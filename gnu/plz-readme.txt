@@ -7,19 +7,23 @@ Table of Contents
 ─────────────────
 
 1. Installation
-.. 1. MELPA
+.. 1. GNU ELPA
 .. 2. Manual
 2. Usage
 .. 1. Examples
 .. 2. Functions
-.. 3. Tips
+.. 3. Queueing
+.. 4. Tips
 3. Changelog
-.. 1. 0.1
+.. 1. 0.2
+.. 2. 0.1
 4. Credits
 5. Development
 .. 1. Copyright assignment
 6. License
 
+
+[file:http://elpa.gnu.org/packages/plz.svg]
 
 `plz' is an HTTP library for Emacs.  It uses `curl' as a backend, which
 avoids some of the issues with using Emacs's built-in `url' library.  It
@@ -29,30 +33,37 @@ be simple and well-organized.  Every feature is tested against
 [httpbin].
 
 
+[file:http://elpa.gnu.org/packages/plz.svg]
+<http://elpa.gnu.org/packages/plz.html>
+
 [httpbin] <https://httpbin.org/>
 
 
 1 Installation
 ══════════════
 
-1.1 MELPA
-─────────
+1.1 GNU ELPA
+────────────
 
-  This library isn't on MELPA yet.
+  `plz' is available in [GNU ELPA].  It may be installed in Emacs using
+  the `package-install' command.
+
+
+[GNU ELPA] <http://elpa.gnu.org/packages/plz.html>
 
 
 1.2 Manual
 ──────────
 
   `plz' has no dependencies other than Emacs and `curl'.  It's known to
-  work on Emacs 26.3 or later.  Simply place `plz.el' in your
-  `load-path' and `(require 'plz)'.
+  work on Emacs 26.3 or later.  To install it manually, simply place
+  `plz.el' in your `load-path' and `(require 'plz)'.
 
 
 2 Usage
 ═══════
 
-  The only public function is `plz', which sends an HTTP request and
+  The main public function is `plz', which sends an HTTP request and
   returns either the result of the specified type (for a synchronous
   request), or the `curl' process object (for asynchronous requests).
   For asynchronous requests, callback, error-handling, and finalizer
@@ -182,7 +193,46 @@ be simple and well-organized.  Every feature is tested against
         `NOQUERY' is passed to `make-process', which see.
 
 
-2.3 Tips
+2.3 Queueing
+────────────
+
+  `plz' provides a simple system for queueing HTTP requests.  First,
+  make a `plz-queue' struct by calling `make-plz-queue'.  Then call
+  `plz-queue' with the struct as the first argument, and the rest of the
+  arguments being the same as those passed to `plz'.  Then call
+  `plz-run' to run the queued requests.
+
+  All of the queue-related functions return the queue as their value,
+  making them easy to use.  For example:
+
+  ┌────
+  │ (defvar my-queue (make-plz-queue :limit 2))
+  │ 
+  │ (plz-run
+  │  (plz-queue my-queue
+  │    'get "https://httpbin.org/get?foo=0"
+  │    :then (lambda (body) (message "%s" body))))
+  └────
+
+  Or:
+
+  ┌────
+  │ (let ((queue (make-plz-queue :limit 2))
+  │       (urls '("https://httpbin.org/get?foo=0"
+  │ 	      "https://httpbin.org/get?foo=1")))
+  │   (plz-run
+  │    (dolist (url urls queue)
+  │      (plz-queue queue 'get url
+  │        :then (lambda (body) (message "%s" body))))))
+  └────
+
+  You may also clear a queue with `plz-clear', which cancels any active
+  or queued requests and calls their `:else' functions.  And
+  `plz-length' returns the number of a queue's active and queued
+  requests.
+
+
+2.4 Tips
 ────────
 
   ⁃ You can customize settings in the `plz' group, but this can only be
@@ -193,7 +243,14 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.1
+3.1 0.2
+───────
+
+  *Added*
+  ⁃ Simple request queueing.
+
+
+3.2 0.1
 ───────
 
   Initial release.
