@@ -5,7 +5,7 @@
 ;; Author: Wojciech Siewierski <wojciech dot siewierski at onet dot pl>
 ;; URL: https://github.com/vifon/dired-recent.el
 ;; Package-Version: 20211004.1924
-;; Package-Commit: a376f53e42fdca80c3286e8111578c65c64b0711
+;; Package-Commit: a0869778e252b97c568140bca366955f9391d885
 ;; Keywords: files
 ;; Version: 0.9
 ;; Package-Requires: ((emacs "24"))

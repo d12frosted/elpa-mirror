@@ -1,0 +1,11 @@
+(frimacs .
+	 [(20220718 1739)
+	  ((emacs
+	    (26 1)))
+	  "An environment for the FriCAS computer algebra system" tar
+	  ((:commit . "1acd5666bd0d920b488243bbf7a24741d29f8e9d")
+	   (:authors
+	    ("Paul Onions" . "paul.onions@acm.org"))
+	   (:maintainer "Paul Onions" . "paul.onions@acm.org")
+	   (:keywords "fricas" "computer algebra" "extensions" "tools")
+	   (:url . "https://github.com/pdo/frimacs"))])
