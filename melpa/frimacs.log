@@ -4,14 +4,15 @@ Source:  https://github.com/pdo/frimacs.git
 
 Updating /mnt/store/melpa/working/frimacs/
 Checking out origin/HEAD
-Checking out cfae8c8020f608a1361a4ead98dfbdaf240f4448
-Checking out cfae8c8020f608a1361a4ead98dfbdaf240f4448
+Checking out 9fc66368c21a05d8c10605afcf832739c428ff97
+Checking out 9fc66368c21a05d8c10605afcf832739c428ff97
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/frimacs/
-  to /tmp/frimacskRe5GY/frimacs-20220717.858
+  to /tmp/frimacshBpFww/frimacs-20220717.1916
     frimacs-base.el -> frimacs-base.el
     frimacs-boot-mode.el -> frimacs-boot-mode.el
     frimacs-buffer-menu.el -> frimacs-buffer-menu.el
+    frimacs-domain-explorer.el -> frimacs-domain-explorer.el
     frimacs-help-mode.el -> frimacs-help-mode.el
     frimacs-input-mode.el -> frimacs-input-mode.el
     frimacs-process-mode.el -> frimacs-process-mode.el
@@ -22,26 +23,25 @@ Copying files (->) and directories (=>)
     data/fricas-standard-domain-info.dat -> data/fricas-standard-domain-info.dat
     data/fricas-standard-operation-info.dat -> data/fricas-standard-operation-info.dat
     data/fricas-standard-package-info.dat -> data/fricas-standard-package-info.dat
-Created frimacs-20220717.858.tar containing:
-  frimacs-20220717.858/
-  frimacs-20220717.858/data/
-  frimacs-20220717.858/data/fricas-standard-category-info.dat
-  frimacs-20220717.858/data/fricas-standard-domain-info.dat
-  frimacs-20220717.858/data/fricas-standard-operation-info.dat
-  frimacs-20220717.858/data/fricas-standard-package-info.dat
-  frimacs-20220717.858/frimacs-base.el
-  frimacs-20220717.858/frimacs-boot-mode.el
-  frimacs-20220717.858/frimacs-buffer-menu.el
-  frimacs-20220717.858/frimacs-help-mode.el
-  frimacs-20220717.858/frimacs-input-mode.el
-  frimacs-20220717.858/frimacs-pkg.el
-  frimacs-20220717.858/frimacs-process-mode.el
-  frimacs-20220717.858/frimacs-selector.el
-  frimacs-20220717.858/frimacs-spad-mode.el
-  frimacs-20220717.858/frimacs.el
-Built frimacs in 10.611s, finished at 2022-07-17T12:43:15+0000
+Created frimacs-20220717.1916.tar containing:
+  frimacs-20220717.1916/
+  frimacs-20220717.1916/data/
+  frimacs-20220717.1916/data/fricas-standard-category-info.dat
+  frimacs-20220717.1916/data/fricas-standard-domain-info.dat
+  frimacs-20220717.1916/data/fricas-standard-operation-info.dat
+  frimacs-20220717.1916/data/fricas-standard-package-info.dat
+  frimacs-20220717.1916/frimacs-base.el
+  frimacs-20220717.1916/frimacs-boot-mode.el
+  frimacs-20220717.1916/frimacs-buffer-menu.el
+  frimacs-20220717.1916/frimacs-domain-explorer.el
+  frimacs-20220717.1916/frimacs-help-mode.el
+  frimacs-20220717.1916/frimacs-input-mode.el
+  frimacs-20220717.1916/frimacs-pkg.el
+  frimacs-20220717.1916/frimacs-process-mode.el
+  frimacs-20220717.1916/frimacs-selector.el
+  frimacs-20220717.1916/frimacs-spad-mode.el
+  frimacs-20220717.1916/frimacs.el
+Built frimacs in 9.916s, finished at 2022-07-18T03:53:14+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  407 Jul 17 08:53 packages/frimacs-20220702.1004.entry
-232K -rw-r--r-- 1 root root 230K Jul 17 08:53 packages/frimacs-20220702.1004.tar
-4.0K -rw-r--r-- 1 root root  406 Jul 17 12:43 packages/frimacs-20220717.858.entry
-232K -rw-r--r-- 1 root root 230K Jul 17 12:43 packages/frimacs-20220717.858.tar
+4.0K -rw-r--r-- 1 root root  407 Jul 18 03:53 packages/frimacs-20220717.1916.entry
+240K -rw-r--r-- 1 root root 240K Jul 18 03:53 packages/frimacs-20220717.1916.tar

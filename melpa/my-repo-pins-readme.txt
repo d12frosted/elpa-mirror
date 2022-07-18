@@ -1,4 +1,3 @@
-
 Open source developers often have to jump between projects, either
 to read code, or to craft patches. My Repo Pins reduces the
 friction so that it becomes trivial to do so.

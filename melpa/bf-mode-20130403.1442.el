@@ -6,6 +6,8 @@
 ;; Copyright (C) 2012,2013 myuhe all rights reserved.
 ;; Created: :2005-12-28
 ;; Version: 0.0.1
+;; Package-Version: 20130403.1442
+;; Package-Commit: 7cc4d09aed64d9db6be95646f5f5067de68f8895
 ;; Keywords: convenience
 ;; URL: https://github.com/emacs-jp/bf-mode
 ;;

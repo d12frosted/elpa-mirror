@@ -1,1 +1,2 @@
-This file is based on Per Vognsen's port of the original vim theme.
+A dark color scheme with bright easily identifiable colors,
+without being garish. Based on VIM's InkPot theme.
