@@ -3,7 +3,7 @@
 ;;; Author: Kang-min Liu <gugod@gugod.org>
 ;;; Version: 1.0.0
 ;; Package-Version: 20220711.2241
-;; Package-Commit: fa20051b6c7c1ac837f72ea2d7414f4594074d11
+;; Package-Commit: 10e243316000e85a10b49729745ccd4262d21cda
 ;;; Keywords: faces
 ;;; URL: https://github.com/gugod/grey-paper-theme
 ;;; Package-Requires: ((emacs "24.1"))

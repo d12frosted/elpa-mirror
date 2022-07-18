@@ -4,11 +4,11 @@ Source:  https://git.sr.ht/~niklaseklund/detached.el
 
 Updating /mnt/store/melpa/working/detached/
 Checking out origin/HEAD
-Checking out 56bf59e7d4b8997901e4b7db87e94e7ed17998fd
-Checking out 56bf59e7d4b8997901e4b7db87e94e7ed17998fd
+Checking out d8e657cc569da2ad0f1916aa0b5dbc444f0675ff
+Checking out d8e657cc569da2ad0f1916aa0b5dbc444f0675ff
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/detached/
-  to /tmp/detachedUWyOhq/detached-20220718.659
+  to /tmp/detached4aZFDM/detached-20220718.1501
     detached-compile.el -> detached-compile.el
     detached-consult.el -> detached-consult.el
     detached-dired.el -> detached-dired.el
@@ -19,20 +19,22 @@ Copying files (->) and directories (=>)
     detached-shell.el -> detached-shell.el
     detached-vterm.el -> detached-vterm.el
     detached.el -> detached.el
-Created detached-20220718.659.tar containing:
-  detached-20220718.659/
-  detached-20220718.659/detached-compile.el
-  detached-20220718.659/detached-consult.el
-  detached-20220718.659/detached-dired.el
-  detached-20220718.659/detached-eshell.el
-  detached-20220718.659/detached-extra.el
-  detached-20220718.659/detached-init.el
-  detached-20220718.659/detached-org.el
-  detached-20220718.659/detached-pkg.el
-  detached-20220718.659/detached-shell.el
-  detached-20220718.659/detached-vterm.el
-  detached-20220718.659/detached.el
-Built detached in 7.448s, finished at 2022-07-18T11:18:47+0000
+Created detached-20220718.1501.tar containing:
+  detached-20220718.1501/
+  detached-20220718.1501/detached-compile.el
+  detached-20220718.1501/detached-consult.el
+  detached-20220718.1501/detached-dired.el
+  detached-20220718.1501/detached-eshell.el
+  detached-20220718.1501/detached-extra.el
+  detached-20220718.1501/detached-init.el
+  detached-20220718.1501/detached-org.el
+  detached-20220718.1501/detached-pkg.el
+  detached-20220718.1501/detached-shell.el
+  detached-20220718.1501/detached-vterm.el
+  detached-20220718.1501/detached.el
+Built detached in 8.131s, finished at 2022-07-18T15:10:11+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  417 Jul 18 15:10 packages/detached-20220718.1501.entry
+120K -rw-r--r-- 1 root root 120K Jul 18 15:10 packages/detached-20220718.1501.tar
 4.0K -rw-r--r-- 1 root root  416 Jul 18 11:18 packages/detached-20220718.659.entry
 120K -rw-r--r-- 1 root root 120K Jul 18 11:18 packages/detached-20220718.659.tar
