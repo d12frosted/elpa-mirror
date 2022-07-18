@@ -4,8 +4,8 @@
 
 ;; Author: Pierre Neidhardt <mail@ambrevar.xyz>
 ;; URL: https://gitlab.com/ambrevar/emacs-gif-screencast
-;; Package-Version: 20210401.656
-;; Package-Commit: 5517a557a17d8016c9e26b0acb74197550f829b9
+;; Package-Version: 20220714.1300
+;; Package-Commit: adec408e6adab2e8e057fe0ad828749f473bfb83
 ;; Version: 1.2
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: multimedia, screencast
@@ -53,7 +53,7 @@ See also `gif-screencast-capture-format'."
   "Arguments to `screencast-program'.
 \"scrot\" can use `--focused' to restrict the capture to the Emacs frame."
   :group 'gif-screencast
-  :type 'string)
+  :type '(repeat string))
 
 (defcustom gif-screencast-log "*gif-screencast-log*"
   "Name of the buffer logging the actions.
@@ -68,7 +68,7 @@ various programs run here."
 (defcustom gif-screencast-convert-args '("-delay" "100" "-loop" "0" "-dither" "None" "-colors" "80" "-fuzz" "40%" "-layers" "OptimizeFrame")
   "Arguments to `gif-screencast-convert-program'."
   :group 'gif-screencast
-  :type 'string)
+  :type '(repeat string))
 
 (defvar gif-screencast-cropping-program "mogrify"
   "A program for cropping the screenshots.
@@ -95,7 +95,7 @@ returning a list of strings. "
 (defcustom gif-screencast-optimize-args '("--batch" "--optimize=3")
   "Arguments to `gif-screencast-optimize-program'."
   :group 'gif-screencast
-  :type 'string)
+  :type '(repeat string))
 
 (defcustom gif-screencast-countdown 3
   "Countdown before recording.

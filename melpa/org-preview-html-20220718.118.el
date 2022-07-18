@@ -5,8 +5,8 @@
 ;; Author: Jake B <jakebox0@protonmail.com>
 ;; Original author of org-preview-html (until 2021-09): DarkSun <lujun9972@gmail.com>
 ;; Url: https://github.com/jakebox/org-preview-html
-;; Package-Version: 20220713.151
-;; Package-Commit: 220d7ea93945581a9ab9fa7b43c67070bb5680a4
+;; Package-Version: 20220718.118
+;; Package-Commit: eb3454c9df8911d13ac25700084d9675d0a5f1b2
 ;; Keywords: Org, convenience, outlines
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "25.1") (org "8.0"))
@@ -145,7 +145,7 @@ Obselete as of version 0.3, instead use `org-preview-html-subtree-only'."
 (defun org-preview-html--org-export-html ()
   "Silently export org to HTML."
   (let ((standard-output 'ignore))
-	(org-export-to-file 'html (substring org-preview-html--html-file 7)
+	(org-export-to-file 'html org-preview-html--html-file
 	  nil org-preview-html-subtree-only nil nil nil nil)))
 
 (defun org-preview-html--reload-preview ()

@@ -5,8 +5,8 @@
 ;; Author: Dmitry Cherkassov <dcherkassov@gmail.com>
 ;; Maintainer: Dmitry Cherkassov <dcherkassov@gmail.com>
 ;; URL: https://github.com/4da/eshell-toggle
-;; Package-Version: 20210407.2039
-;; Package-Commit: 7160518ca56444fead841b8acff59aeffc7cebb3
+;; Package-Version: 20220718.729
+;; Package-Commit: d4e884624f02e68b267b0044322ad17baa6780f8
 ;; Version: 0.10.0
 ;; Package-Requires: ((emacs "25.1")(dash "2.11.0"))
 ;; Keywords: processes
@@ -57,10 +57,10 @@
 (defcustom eshell-toggle-window-side
   'below
   "Eshell-toggle buffer position.  See `split-window'."
-  :type '(choice (const 'above)
-                 (const 'below)
-                 (const 'left)
-                 (const 'right))
+  :type '(choice (const above)
+                 (const below)
+                 (const left)
+                 (const right))
   :group 'eshell-toggle)
 
 (defcustom eshell-toggle-default-directory
