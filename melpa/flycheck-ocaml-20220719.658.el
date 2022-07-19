@@ -5,8 +5,8 @@
 
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn.com>
 ;; URL: https://github.com/flycheck/flycheck-ocaml
-;; Package-Version: 20170730.2153
-;; Package-Commit: 8707a7bf545a8639a6a5c600a98d9a2ea1487dc9
+;; Package-Version: 20220719.658
+;; Package-Commit: e726ec006316c46cf1a7c3142ac8743191495a3c
 ;; Keywords: convenience, tools, languages
 ;; Version: 0.4-cvs
 ;; Package-Requires: ((emacs "24.1") (flycheck "0.22") (merlin "3.0.1") (let-alist "1.0.3"))
@@ -142,7 +142,7 @@ CALLBACK is the status callback passed by Flycheck."
 See URL `https://github.com/the-lambda-church/merlin'."
   :start #'flycheck-ocaml-merlin-start
   :verify #'flycheck-verify-ocaml-merlin
-  :modes '(caml-mode tuareg-mode)
+  :modes '(caml-mode tuareg-mode reason-mode)
   :predicate (lambda () (and merlin-mode
                              ;; Don't check if Merlin's own checking is
                              ;; enabled, to avoid duplicate overlays

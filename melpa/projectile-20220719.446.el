@@ -1,11 +1,11 @@
 ;;; projectile.el --- Manage and navigate projects in Emacs easily -*- lexical-binding: t -*-
 
-;; Copyright © 2011-2021 Bozhidar Batsov <bozhidar@batsov.dev>
+;; Copyright © 2011-2022 Bozhidar Batsov <bozhidar@batsov.dev>
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20220710.959
-;; Package-Commit: 00fce5a62cab56873c37629bef653bb2a1e4a4c1
+;; Package-Version: 20220719.446
+;; Package-Commit: dc6e7ff658789e4c6cf7c32a4b4fdf22ef9bc5a3
 ;; Keywords: project, convenience
 ;; Version: 2.6.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
