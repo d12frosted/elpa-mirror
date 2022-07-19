@@ -1,15 +1,15 @@
 (markdown-soma .
-	       [(20220718 1424)
+	       [(20220719 1004)
 		((emacs
 		  (25))
 		 (s
 		  (1 11 0))
 		 (dash
 		  (2 19 1))
-		 (cl-lib
-		  (2 2)))
+		 (f
+		  (0 20 0)))
 		"Live preview for Markdown" single
-		((:commit . "4b2bada7b0c0255aa80bc0f7d8a59da46e04eafe")
+		((:commit . "0faa93b35ba148d7cadb86a5a9657773495c7c24")
 		 (:authors
 		  ("Jason Milkins" . "jasonm23@gmail.com"))
 		 (:maintainer "Jason Milkins" . "jasonm23@gmail.com")

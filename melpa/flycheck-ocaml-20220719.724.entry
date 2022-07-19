@@ -1,5 +1,5 @@
 (flycheck-ocaml .
-		[(20220719 658)
+		[(20220719 724)
 		 ((emacs
 		   (24 1))
 		  (flycheck
@@ -9,9 +9,9 @@
 		  (let-alist
 		      (1 0 3)))
 		 "Flycheck: OCaml support" single
-		 ((:commit . "e726ec006316c46cf1a7c3142ac8743191495a3c")
+		 ((:commit . "af3d3f244cd95827bd431f4a0e54732780084d3c")
 		  (:authors
 		   ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
 		  (:maintainer "Sebastian Wiesner" . "swiesner@lunaryorn.com")
-		  (:keywords "convenience" "tools" "languages")
+		  (:keywords "convenience" "tools" "languages" "ocaml")
 		  (:url . "https://github.com/flycheck/flycheck-ocaml"))])

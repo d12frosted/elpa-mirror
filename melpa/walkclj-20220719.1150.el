@@ -5,8 +5,8 @@
 ;; Maintainer: Arne Brasseur
 ;; Created: Mi Jul 18 09:39:10 2018 (+0200)
 ;; Version: 0.2.0
-;; Package-Version: 20220422.854
-;; Package-Commit: ce4e7713d801b03f94f5da9898fce09718380ed4
+;; Package-Version: 20220719.1150
+;; Package-Commit: 914b6617439df3c75f2e1700403dbf2f859171b0
 ;; Package-Requires: ((emacs "25") (parseclj "0.1.0") (treepy "0.1.0"))
 ;; URL: https://github.com/plexus/walkclj
 ;; Keywords: languages
@@ -49,26 +49,27 @@
 (require 'parseclj)
 (require 'cl-macs)
 
-(defvar walkclj-function-names '(ffirst
-                                 first
-                                 last
-                                 list-p
-                                 list?
-                                 meta
-                                 name
-                                 second
-                                 symbol?
-                                 symbol-p?
-                                 unwrap-meta)
-  "Names that are recognized inside walkclj-do and rewritten to be
+(eval-and-compile
+  (defvar walkclj-function-names '(ffirst
+                                   first
+                                   last
+                                   list-p
+                                   list?
+                                   meta
+                                   name
+                                   second
+                                   symbol?
+                                   symbol-p?
+                                   unwrap-meta)
+    "Names that are recognized inside walkclj-do and rewritten to be
 walkclj- prefixed.")
 
-(defun walkclj--update-predicate-suffix (sym)
-  "Change a symbol SYM that ends in `?' in one that ends in -p."
-  (let ((s (symbol-name sym)))
-    (if (equal "?" (substring s (1- (length s))) )
-        (intern (concat (substring s 0 (1- (length s))) "-p"))
-      sym)))
+  (defun walkclj--update-predicate-suffix (sym)
+    "Change a symbol SYM that ends in `?' in one that ends in -p."
+    (let ((s (symbol-name sym)))
+      (if (equal "?" (substring s (1- (length s))) )
+          (intern (concat (substring s 0 (1- (length s))) "-p"))
+        sym))))
 
 (defmacro walkclj-do (&rest body)
   "Evaluate BODY with auto-prefixing.

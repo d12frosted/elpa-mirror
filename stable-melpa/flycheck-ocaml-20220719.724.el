@@ -2,13 +2,14 @@
 
 ;; Copyright (C) 2014-2015  Sebastian Wiesner <swiesner@lunaryorn.com>
 ;; Copyright (C) 2015  Frédéric Bour <frederic.bour@lakaban.net>
+;; Copyright (C) 2022  Bozhidar Batsov <bozhidar@batsov.dev>
 
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn.com>
 ;; URL: https://github.com/flycheck/flycheck-ocaml
-;; Package-Version: 20220719.658
-;; Package-Commit: e726ec006316c46cf1a7c3142ac8743191495a3c
-;; Keywords: convenience, tools, languages
-;; Version: 0.4-cvs
+;; Package-Version: 20220719.724
+;; Package-Commit: af3d3f244cd95827bd431f4a0e54732780084d3c
+;; Keywords: convenience, tools, languages, ocaml
+;; Version: 0.4.0
 ;; Package-Requires: ((emacs "24.1") (flycheck "0.22") (merlin "3.0.1") (let-alist "1.0.3"))
 
 ;; This file is not part of GNU Emacs.
@@ -107,12 +108,17 @@ Return the corresponding `flycheck-error'."
 
 (defun flycheck-verify-ocaml-merlin (_checker)
   "Verify the OCaml Merlin syntax checker."
-  (let ((command (executable-find (merlin-command))))
+  (let ((command (executable-find (merlin-command)))
+        (merlin-file (and buffer-file-name (locate-dominating-file buffer-file-name ".merlin")))
     (list
      (flycheck-verification-result-new
       :label "Merlin command"
       :message (if command (format "Found at %s" command) "Not found")
       :face (if command 'success '(bold error)))
+     (flycheck-verification-result-new
+      :label "Merlin file (.merlin)"
+      :message (if merlin-file (format "Found at %s" merlin-file) "Not found")
+      :face (if merlin-file 'success '(bold error)))
      (flycheck-verification-result-new
       :label "Merlin mode"
       :message (if merlin-mode "enabled" "disabled")
@@ -144,6 +150,9 @@ See URL `https://github.com/the-lambda-church/merlin'."
   :verify #'flycheck-verify-ocaml-merlin
   :modes '(caml-mode tuareg-mode reason-mode)
   :predicate (lambda () (and merlin-mode
+                             ;; Don't check if .merlin is not present somewhere
+                             ;; in the directory tree
+                             (and buffer-file-name (locate-dominating-file buffer-file-name ".merlin")
                              ;; Don't check if Merlin's own checking is
                              ;; enabled, to avoid duplicate overlays
                              (not merlin-error-after-save))))
