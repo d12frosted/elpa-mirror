@@ -4,6 +4,8 @@
 ;; Description: An enhancement to `semantic-stickyfunc-mode'
 ;; Author: Tu, Do Hoang <tuhdo1710@gmail.com>
 ;; URL      : https://github.com/tuhdo/semantic-stickyfunc-enhance
+;; Package-Version: 20150429.1814
+;; Package-Commit: 13bdba51fcd83ccbc3267959d23afc94d458dcb0
 ;; Maintainer: Tu, Do Hoang
 ;; Created: Friday March 13
 ;; Version: 0.1

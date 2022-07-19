@@ -7,7 +7,7 @@
 
 ;; URL: https://codeberg.org/ideasman42/emacs-undo-fu
 ;; Package-Version: 20220710.351
-;; Package-Commit: f2bec18020b182486270a518b9180f5cdfef0e74
+;; Package-Commit: 913cbb4ff3659d8537c764e56953dbb1b85e73c9
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "25.1"))
 
