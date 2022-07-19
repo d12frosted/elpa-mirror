@@ -4,8 +4,8 @@
 
 ;; Author: Aaron Bieber <aaron@aaronbieber.com>
 ;; Version: 1.0
-;; Package-Version: 20161213.1235
-;; Package-Commit: 05563b94537b6eb22aeddedef2a6e59e3f88d073
+;; Package-Version: 20220719.1550
+;; Package-Commit: eae513ba326b44a677453e96fe866e08d9c76ebd
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: menu tools
 ;; URL: https://github.com/aaronbieber/tiny-menu.el
@@ -92,11 +92,13 @@ be nil."
           (error (concat "The transition menu specified, \"%s\", is not a valid option, "
                          "check tiny-menu-items.") (or next-menu "N/A")))))))
 
-(defun tiny-menu (&optional menu)
+(defun tiny-menu (&optional menu omit-final-msg-p)
   "Display the items in MENU and run the selected item.
 
 If MENU is not given, a dynamically generated menu of available menus
-is displayed."
+is displayed.
+  
+If SILENT is given, do not show the message \"Menu ended.\" when finished."
   (interactive)
   (if (< (length tiny-menu-items) 1)
       (message "Configure tiny-menu-items first.")
@@ -122,8 +124,9 @@ is displayed."
                    ((wrong-type-argument)
                     (funcall (nth 2 choice))))))
         (setq menu (tiny-menu--lookup-transition menu (nth 3 choice)))))
-    (if (not (current-message))
-        (message "Menu ended."))))
+    (unless (or silent
+                (current-message))
+      (message "Menu ended."))))
 
 (defun tiny-menu--menu-of-menus ()
   "Build menu items for all configured menus.
