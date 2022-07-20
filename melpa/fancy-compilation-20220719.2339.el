@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-fancy-compilation
-;; Package-Version: 20220719.244
-;; Package-Commit: 1e710e0a3d531fa089545a296c5b300967ee03ef
+;; Package-Version: 20220719.2339
+;; Package-Commit: 1dc8abb3feed18d4677d6d2f494aacda40195c31
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -44,11 +44,6 @@
   "Override theme faces (foreground/background)."
   :type 'boolean)
 
-(defface fancy-compilation-default-face
-  (list (list t :foreground "#C0C0C0" :background "#000000"))
-  "Face used to render black color.
-Use when `fancy-compilation-override-colors' is non-nil.")
-
 (defcustom fancy-compilation-quiet-prelude t
   "Suppress text inserted before compilation starts."
   :type 'boolean)
@@ -56,6 +51,46 @@ Use when `fancy-compilation-override-colors' is non-nil.")
 (defcustom fancy-compilation-quiet-prolog t
   "Use less verbose text upon completing compilation."
   :type 'boolean)
+
+
+;; ---------------------------------------------------------------------------
+;; Faces
+
+(defface fancy-compilation-default-face
+  (list (list t :background "black" :inherit 'ansi-color-grey))
+  "Face used to render black color.")
+
+(defface fancy-compilation-function-name-face
+  (list (list t :foreground "cyan3"))
+  "Face used to show function names.")
+
+(defface fancy-compilation-line-number-face
+  (list (list t :foreground "cyan3"))
+  "Face used to show line numbers.")
+
+(defface fancy-compilation-column-number-face
+  (list (list t :foreground "cyan3"))
+  "Face used to show column numbers.")
+
+(defface fancy-compilation-info-face
+  (list (list t :foreground "cyan3"))
+  "Face used to show info text.")
+
+(defface fancy-compilation-warning-face
+  (list (list t :foreground "yellow3"))
+  "Face used to show error text.")
+
+(defface fancy-compilation-error-face
+  (list (list t :foreground "dark orange"))
+  "Face used to show error text.")
+
+(defface fancy-compilation-complete-success-face
+  (list (list t :foreground "black" :inherit 'ansi-color-green :extend t))
+  "Face used to show success on completion.")
+
+(defface fancy-compilation-complete-error-face
+  (list (list t :foreground "black" :inherit 'ansi-color-red :extend t))
+  "Face used to show success on completion.")
 
 
 ;; ---------------------------------------------------------------------------
@@ -89,7 +124,15 @@ Use when `fancy-compilation-override-colors' is non-nil.")
 (defun fancy-compilation--compilation-mode ()
   "Mode hook to set buffer local defaults."
   (when fancy-compilation-override-colors
-    (setq-local face-remapping-alist (list (cons 'default 'fancy-compilation-default-face))))
+    (setq-local face-remapping-alist
+      (list
+        (cons 'default 'fancy-compilation-default-face)
+        (cons 'font-lock-function-name-face 'fancy-compilation-function-name-face)
+        (cons 'compilation-line-number 'fancy-compilation-line-number-face)
+        (cons 'compilation-column-number 'fancy-compilation-column-number-face)
+        (cons 'compilation-info 'fancy-compilation-info-face)
+        (cons 'compilation-warning 'fancy-compilation-warning-face)
+        (cons 'compilation-error 'fancy-compilation-error-face))))
 
   ;; Needed so `ansi-text' isn't converted to [...].
   (setq-local compilation-max-output-line-length nil)
@@ -161,20 +204,16 @@ Use when `fancy-compilation-override-colors' is non-nil.")
               (when fancy-compilation-override-colors
                 (let
                   (
-                    (hl-face
-                      (list
-                        :background
-                        (cond
-                          ((zerop exit-status)
-                            (face-attribute 'ansi-color-green :foreground))
-                          (t
-                            (face-attribute 'ansi-color-red :foreground)))
-                        :foreground (face-attribute 'ansi-color-black :foreground)
-                        :extend t)))
+                    (complete-face
+                      (cond
+                        ((zerop exit-status)
+                          'fancy-compilation-complete-success-face)
+                        (t
+                          'fancy-compilation-complete-error-face))))
                   (let ((overlay (make-overlay (1+ trim-beg) (point-max))))
                     (overlay-put overlay 'evaporate t)
-                    (overlay-put overlay 'after-string (propertize "\n" 'face hl-face))
-                    (overlay-put overlay 'face hl-face)))))))))
+                    (overlay-put overlay 'after-string (propertize "\n" 'face complete-face))
+                    (overlay-put overlay 'face complete-face)))))))))
 
     (t
       (funcall fn process-status exit-status msg))))
