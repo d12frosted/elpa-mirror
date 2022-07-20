@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://repo.or.cz/spice-mode.git
 
 Updating /mnt/store/melpa/working/spice-mode/
-Checking out origin/HEAD
-Checking out f55c2b6dd35caace0ec7250b5c7b5d119235a23d
-Built spice-mode in 7.140s, finished at 2022-07-20T07:59:47+0000
- ✓ Success:
-312K -rw-r--r-- 1 root root 310K Jul 20 07:59 packages/spice-mode-20220210.1414.el
-4.0K -rw-r--r-- 1 root root  647 Jul 20 07:59 packages/spice-mode-20220210.1414.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://repo.or.cz/spice-mode.git/': Failed to connect to repo.or.cz port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

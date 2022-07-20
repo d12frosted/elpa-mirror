@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://repo.or.cz/sdcv.el.git
 
 Updating /mnt/store/melpa/working/sdcv/
-Checking out origin/HEAD
-Checking out 98e239c7380c63282845d5bc55ea6d605f5a33b8
-Built sdcv in 8.767s, finished at 2022-07-20T07:54:59+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Jul 20 07:54 packages/sdcv-20220210.1412.el
-4.0K -rw-r--r-- 1 root root 460 Jul 20 07:54 packages/sdcv-20220210.1412.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://repo.or.cz/sdcv.el.git/': Failed to connect to repo.or.cz port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

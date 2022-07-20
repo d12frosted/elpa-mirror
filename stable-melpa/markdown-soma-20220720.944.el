@@ -4,10 +4,10 @@
 
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/markdown-soma
-;; Package-Version: 20220719.1004
-;; Package-Commit: 96cf7820023e23e0008d07ad9456aee3ae21cfda
+;; Package-Version: 20220720.944
+;; Package-Commit: 9c6c869050f086eeb3307691c4f68b8dba73dd35
 ;; Keywords: wp, docs, text, markdown
-;; Version: 0.2.2
+;; Version: 0.2.4
 ;; Package-Requires: ((emacs "25") (s "1.11.0") (dash "2.19.1") (f "0.20.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -134,9 +134,7 @@ By default, `~/.cargo/bin` will be in your `$PATH`."
   "Render TEXT via soma.
 
 markdown-soma-render is debounced to 250ms."
-  (message "render attempt")
   (when (null markdown-soma--render-gate)
-    (message "render done...")
     (process-send-string (get-process"markdown-soma") (format "%s\n" text))
     (process-send-eof (get-process"markdown-soma")))
   (setq-local markdown-soma--render-gate t)
@@ -183,13 +181,13 @@ markdown-soma-render is debounced to 250ms."
   (markdown-soma--kill)
   (markdown-soma-hooks-remove))
 
-(defun markdown-soma-retart ()
+(defun markdown-soma-restart ()
   "Restart a running soma session."
   (interactive)
   (if markdown-soma-mode
       (progn
         (markdown-soma-stop)
-        (markdown-soma-start))
+        (run-with-timer 0.2 nil #'markdown-soma-start))
     (user-error "Please note markdown-soma-mode is not currently active")))
 
 (defun markdown-soma--run ()
@@ -223,9 +221,7 @@ markdown-soma-render is debounced to 250ms."
 
 (defun markdown-soma--kill ()
   "Kill soma process and buffer."
-  (when (get-buffer-process "*markdown-soma")
-   (stop-process (get-buffer-process "*markdown-soma*")))
-  (and (buffer-live-p (get-buffer "*markdown-soma*"))
+  (when (buffer-live-p (get-buffer "*markdown-soma*"))
     (kill-buffer "*markdown-soma*")))
 
 (defun markdown-soma--window-point ()
