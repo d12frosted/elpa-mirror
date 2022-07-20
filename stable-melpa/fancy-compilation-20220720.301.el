@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-fancy-compilation
-;; Package-Version: 20220719.2339
-;; Package-Commit: 1dc8abb3feed18d4677d6d2f494aacda40195c31
+;; Package-Version: 20220720.301
+;; Package-Commit: a4cd5e4d21a2ff7029052e6202854d6fb20902d3
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 

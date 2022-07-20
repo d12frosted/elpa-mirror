@@ -1,9 +1,7 @@
 (embark-vc .
-	   [(20220703 1008)
+	   [(20220720 613)
 	    ((emacs
 	      (26 1))
-	     (code-review
-	      (0 0 2))
 	     (embark
 	      (0 13))
 	     (forge
@@ -11,7 +9,7 @@
 	     (s
 	      (1 12 0)))
 	    "Embark actions for various version control integrations" single
-	    ((:commit . "6124909d8b07c70a0eb3bcaf47f1c3a28698528a")
+	    ((:commit . "4a6fcf96d07c79ab8c5f4fe3f84b4335a2a4033f")
 	     (:authors
 	      ("Ellis Kenyő <https://github.com/elken>"))
 	     (:maintainer "Ellis Kenyő" . "me@elken.dev")

@@ -7,11 +7,11 @@
 ;; Created: November 20, 2021
 ;; Modified: November 20, 2021
 ;; Version: 0.2
-;; Package-Version: 20220703.1008
-;; Package-Commit: 6124909d8b07c70a0eb3bcaf47f1c3a28698528a
+;; Package-Version: 20220720.613
+;; Package-Commit: 4a6fcf96d07c79ab8c5f4fe3f84b4335a2a4033f
 ;; Keywords: convenience matching terminals tools unix vc
 ;; Homepage: https://github.com/elken/embark-vc
-;; Package-Requires: ((emacs "26.1") (code-review "0.0.2") (embark "0.13") (forge "0.3") (s "1.12.0"))
+;; Package-Requires: ((emacs "26.1") (embark "0.13") (forge "0.3") (s "1.12.0"))
 ;;
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -50,7 +50,6 @@
 
 (require 'embark)
 (require 'forge-commands)
-(require 'code-review)
 (require 's)
 
 (defun embark-vc-target-topic-at-point ()
@@ -150,11 +149,13 @@
 (embark-define-keymap embark-vc-pull-request-map
   "Keymap for actions related to Pull Requests"
   :parent embark-vc-topic-map
-  ("b" embark-vc-checkout-branch)
-  ("B" forge-browse-pullreq)
-  ("r" embark-vc-start-review)
+  ("c" embark-vc-checkout-branch)
+  ("b" forge-browse-pullreq)
   ("m" forge-merge)
   ("v" embark-vc-visit-pr))
+
+(when (require 'code-review nil t)
+  (define-key embark-vc-pull-request-map "r" #'embark-vc-start-review))
 
 (embark-define-keymap embark-vc-issue-map
   "Keymap for actions related to Issues"

@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/helm-file-preview
-;; Package-Version: 20220716.850
-;; Package-Commit: b6108fa3f2508087bb2e38085806b7a9d4802884
+;; Package-Version: 20220720.531
+;; Package-Commit: bebd4e9c42543c9003984442701db2c384c21f3e
 ;; Version: 0.1.5
 ;; Package-Requires: ((emacs "25.1") (helm "2.0"))
 ;; Keywords: convenience file helm preview select selection
@@ -33,6 +33,7 @@
 
 ;;; Code:
 
+(require 'project)
 
 (require 'helm)
 
@@ -67,12 +68,11 @@
 (defvar helm-file-preview--exiting t
   "Exit flag for this minor mode.")
 
-;;; Core
+;;; Externals
 
 (declare-function project-root "project" (project))
-(when (version< emacs-version "28.0.90")
-  (defun project-root (project)
-    (cdr project)))
+
+;;; Core
 
 (defun helm-file-preview--do-preview (fp ln cl)
   "Do preview with filepath (FP), line number (LN), column (CL)."
@@ -112,7 +112,9 @@ ARGS : rest of the arguments."
              (fn (nth 0 sel-lst))   ; filename
              (ln (nth 1 sel-lst))   ; line
              (cl (nth 2 sel-lst))   ; column
-             (root (project-root (project-current)))
+             (root (if (fboundp #'project-root)
+                       (ignore-errors (project-root (project-current)))
+                     (cdr (project-current))))
              (fp (concat root fn))  ; file path
              )
         ;; NOTE: Try expand file, if the file not found relative to

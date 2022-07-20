@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20220701.359
-;; Package-Commit: ee06be6d82d36330cf0f96544e7cfcfdc1b7bb02
+;; Package-Version: 20220605.239
+;; Package-Commit: 47d54dd736abc9ef5406e3e7394d54c5110d355d
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -639,7 +639,6 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     ;; Org Mode external link types
     ("eaf" (all-the-icons-faicon "cubes" :v-adjust -0.05)) ; emacs-application-framework
     ("eww" (all-the-icons-icon-for-mode 'eww-mode))
-    ("chrome" (all-the-icons-faicon "chrome" :v-adjust -0.05))
     ("mu4e" (all-the-icons-faicon "envelope" :v-adjust -0.05))
     ("git" (all-the-icons-faicon "git-square" :v-adjust -0.05))
     ("orgit" (all-the-icons-faicon "git-square" :v-adjust -0.05))
@@ -816,7 +815,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     ('children (ignore))
     ('folded
      (org-link-beautify-clear state))
-    (_ (ignore))))
+    (_ (ignore)))
+  ;; PERFORMANCE: benchmark this.
+  (org-restart-font-lock))
 
 ;;; toggle org-link-beautify text-properties
 (defun org-link-beautify--clear-text-properties (&optional begin end)

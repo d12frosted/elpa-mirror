@@ -6,8 +6,6 @@
 ;; Maintainer: Javier A. Pollak <javi.po.123@gmail.com>
 ;; Created: 17 Apr 2020
 ;; Keywords: convenience
-;; Package-Version: 20201121.123
-;; Package-Commit: 5827e890059d0ce67ebb4779da63c15afccf0973
 ;; Version: 1.1.1
 ;; Homepage: https://github.com/Javyre/winds.el
 ;; Package-Requires: ((emacs "25.1"))
