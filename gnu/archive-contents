@@ -2388,16 +2388,16 @@
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pulsar .
-	 [(0 3 1)
+	 [(0 4 0)
 	  ((emacs
 	    (27 1)))
 	  "Pulse highlight on demand or after select functions" tar
 	  ((:url . "https://git.sr.ht/~protesilaos/pulsar")
 	   (:keywords "convenience" "pulse" "highlight")
-	   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+	   (:maintainer "Pulsar Development" . "~protesilaos/pulsar@lists.sr.ht")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "86a7c429c6878287c068106b318889824cad3210"))])
+	   (:commit . "1b91e34af63240fcfc02e267d740a78590f1f2de"))])
  (pyim .
        [(5 2 3)
 	((emacs

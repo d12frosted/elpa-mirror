@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `pulsar' (or `pulsar.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.3.0,
-released on 2022-04-08.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.4.0,
+released on 2022-07-19.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.4.0-dev.
+Current development target is 0.5.0-dev.
 
 ⁃ Homepage: <https://protesilaos.com/emacs/pulsar>.
 ⁃ Git repository: <https://git.sr.ht/~protesilaos/pulsar>.
@@ -67,10 +67,9 @@ Table of Contents
   enabled.
 
   There is no need to add all functions that affect the active window to
-  the `pulsar-pulse-functions'.  Instead, set the user option
-  `pulsar-pulse-on-window-change' to a non-nil value.  It will pulse the
-  current line whenever the active window changes (it is part of
-  0.4.0-dev).
+  the `pulsar-pulse-functions'.  Instead, keep the user option
+  `pulsar-pulse-on-window-change' in its default non-nil value.  It will
+  pulse the current line whenever the active window changes.
 
   The overall duration of the highlight is determined by a combination
   of `pulsar-delay' and `pulsar-iterations'.  The latter determines the
@@ -123,6 +122,12 @@ Table of Contents
 
 
   And search for it.
+
+  GNU ELPA provides the latest stable release.  Those who prefer to
+  follow the development process in order to report bugs or suggest
+  changes, can use the version of the package from the GNU-devel ELPA
+  archive.  Read:
+  <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
 3.2 Manual installation
