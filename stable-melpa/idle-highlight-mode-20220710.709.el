@@ -7,7 +7,7 @@
 ;; Maintainer: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-idle-highlight-mode
 ;; Package-Version: 20220710.709
-;; Package-Commit: dd07a8f465adb76c05d4712d03e093e9fdb79485
+;; Package-Commit: 92339ed48718852a69120ecd92b7279d5521118e
 ;; Version: 1.1.3
 ;; Created: 2008-05-13
 ;; Keywords: convenience

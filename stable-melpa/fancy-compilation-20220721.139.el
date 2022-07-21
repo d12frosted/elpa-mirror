@@ -7,7 +7,7 @@
 
 ;; URL: https://codeberg.org/ideasman42/emacs-fancy-compilation
 ;; Package-Version: 20220721.139
-;; Package-Commit: 88d189ba66d972db63d4e0acc17fedee1976af46
+;; Package-Commit: 6755db743aed81841f2fe0bd676e475a50d5a0f5
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
