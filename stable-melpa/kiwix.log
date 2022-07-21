@@ -3,11 +3,20 @@ Fetcher: git
 Source:  https://repo.or.cz/kiwix.el.git
 
 Updating /mnt/store/melpa/working/kiwix/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://repo.or.cz/kiwix.el.git/': Failed to connect to repo.or.cz port 443: Connection refused
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 444f686a7f75db788d54f544b923a3532732eb8b
+Checking out 444f686a7f75db788d54f544b923a3532732eb8b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kiwix/
+  to /tmp/kiwixt69KdZ/kiwix-20220316.847
+    kiwix.el -> kiwix.el
+    org-kiwix.el -> org-kiwix.el
+Created kiwix-20220316.847.tar containing:
+  kiwix-20220316.847/
+  kiwix-20220316.847/kiwix-pkg.el
+  kiwix-20220316.847/kiwix.el
+  kiwix-20220316.847/org-kiwix.el
+Built kiwix in 6.458s, finished at 2022-07-21T03:05:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 375 Jul 21 03:05 packages/kiwix-20220316.847.entry
+ 40K -rw-r--r-- 1 root root 40K Jul 21 03:05 packages/kiwix-20220316.847.tar

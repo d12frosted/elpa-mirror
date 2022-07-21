@@ -1,0 +1,17 @@
+(flycheck-ocaml .
+		[(20220720 1256)
+		 ((emacs
+		   (24 1))
+		  (flycheck
+		   (0 22))
+		  (merlin
+		   (3 0 1))
+		  (let-alist
+		      (1 0 3)))
+		 "Flycheck: OCaml support" single
+		 ((:commit . "629080c1bbe4d6195c70bae3f4e09cc2b79c8e2d")
+		  (:authors
+		   ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
+		  (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+		  (:keywords "convenience" "tools" "languages" "ocaml")
+		  (:url . "https://github.com/flycheck/flycheck-ocaml"))])

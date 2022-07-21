@@ -3,11 +3,11 @@ Fetcher: git
 Source:  https://repo.or.cz/org-link-beautify.git
 
 Updating /mnt/store/melpa/working/org-link-beautify/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://repo.or.cz/org-link-beautify.git/': Failed to connect to repo.or.cz port 443: Connection refused
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 47d54dd736abc9ef5406e3e7394d54c5110d355d
+Built org-link-beautify in 6.969s, finished at 2022-07-21T03:21:45+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 43K Jul 21 03:21 packages/org-link-beautify-20220605.239.el
+4.0K -rw-r--r-- 1 root root 302 Jul 21 03:21 packages/org-link-beautify-20220605.239.entry
+ 44K -rw-r--r-- 1 root root 43K Jul 20 23:19 packages/org-link-beautify-20220701.359.el
+4.0K -rw-r--r-- 1 root root 302 Jul 20 23:19 packages/org-link-beautify-20220701.359.entry

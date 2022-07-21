@@ -5,7 +5,7 @@
 ;; Author: Manuel Uberti <manuel.uberti@inventati.org>
 ;; URL: https://github.com/manuel-uberti/goto-last-point
 ;; Package-Version: 20190525.1855
-;; Package-Commit: 7ea191df18ff4774cf1dc568e1726143dd54ea02
+;; Package-Commit: 6218441a0e644c23e247594aece004e80775d307
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: convenience

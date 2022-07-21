@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://repo.or.cz/amread-mode.git
 
 Updating /mnt/store/melpa/working/amread-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://repo.or.cz/amread-mode.git/': Failed to connect to repo.or.cz port 443: Connection refused
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 21f3cf796c08625cf70d534a990f4ae2273a5d4f
+Built amread-mode in 7.826s, finished at 2022-07-21T02:14:54+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jul 21 02:14 packages/amread-mode-20220519.45.el
+4.0K -rw-r--r-- 1 root root  289 Jul 21 02:14 packages/amread-mode-20220519.45.entry

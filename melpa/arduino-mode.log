@@ -3,11 +3,26 @@ Fetcher: git
 Source:  https://repo.or.cz/arduino-mode.git
 
 Updating /mnt/store/melpa/working/arduino-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://repo.or.cz/arduino-mode.git/': Failed to connect to repo.or.cz port 443: Connection refused
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 652c6a328fa8f2db06534d5f231c6b6933be3edc
+Checking out 652c6a328fa8f2db06534d5f231c6b6933be3edc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/arduino-mode/
+  to /tmp/arduino-modeQMBmoa/arduino-mode-20220210.1355
+    arduino-mode-init.el -> arduino-mode-init.el
+    arduino-mode.el -> arduino-mode.el
+    ede-arduino.el -> ede-arduino.el
+    flycheck-arduino.el -> flycheck-arduino.el
+    ob-arduino.el -> ob-arduino.el
+Created arduino-mode-20220210.1355.tar containing:
+  arduino-mode-20220210.1355/
+  arduino-mode-20220210.1355/arduino-mode-init.el
+  arduino-mode-20220210.1355/arduino-mode-pkg.el
+  arduino-mode-20220210.1355/arduino-mode.el
+  arduino-mode-20220210.1355/ede-arduino.el
+  arduino-mode-20220210.1355/flycheck-arduino.el
+  arduino-mode-20220210.1355/ob-arduino.el
+Built arduino-mode in 7.283s, finished at 2022-07-21T02:15:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 347 Jul 21 02:15 packages/arduino-mode-20220210.1355.entry
+ 52K -rw-r--r-- 1 root root 50K Jul 21 02:15 packages/arduino-mode-20220210.1355.tar

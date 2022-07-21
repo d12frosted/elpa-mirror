@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://repo.or.cz/org-seek.el.git
 
 Updating /mnt/store/melpa/working/org-seek/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://repo.or.cz/org-seek.el.git/': Failed to connect to repo.or.cz port 443: Connection refused
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 1f51e6634e3b9a6a29d335d0d14370a6ffef2265
+Built org-seek in 6.598s, finished at 2022-07-21T03:22:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jul 21 03:22 packages/org-seek-20161217.502.el
+4.0K -rw-r--r-- 1 root root  421 Jul 21 03:22 packages/org-seek-20161217.502.entry
