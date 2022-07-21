@@ -6,11 +6,11 @@
 ;; Copyright (C) 2015 Yuhei Maeda all rights reserved.
 ;; Created: :2013-06-05
 ;; Version: 0.2
-;; Package-Version: 20151001.1524
-;; Package-Commit: 9655ac340d1ccc5f3d1c0f7c49be8dd3556d4d0d
+;; Package-Version: 20220721.756
+;; Package-Commit: d58d35627bb1714bb2cb095f696706b6881233ed
 ;; Keywords: convenience, helm, org
 ;; URL: https://github.com/emacs-jp/helm-orgcard
-;; Package-Requires: ((helm-core "1.7.7"))
+;; Package-Requires: ((helm-core "3.6.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@
 
 ;;; Code:
 
-(require 'helm)
+(require 'helm-core)
 
 (defgroup helm-orgcard nil
   "Browse the orgcard by helm"

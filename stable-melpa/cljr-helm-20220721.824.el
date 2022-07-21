@@ -4,11 +4,11 @@
 
 ;; Author   : Phil Jackson <phil@shellarchive.co.uk>
 ;; URL      : https://github.com/philjackson/cljr-helm
-;; Package-Version: 20160913.828
-;; Package-Commit: f2fc7b698a56e4a44d5dfbc6a55d77a93c0fa9a4
+;; Package-Version: 20220721.824
+;; Package-Commit: 2c1f9cbd892ec03335f671ea3f974ee2ff6078dc
 ;; Version  : 0.9
 ;; Keywords : helm, clojure, refactor
-;; Package-Requires: ((clj-refactor "0.13.0") (helm-core "1.7.7") (cl-lib "0.5"))
+;; Package-Requires: ((clj-refactor "0.13.0") (helm-core "3.6.0") (cl-lib "0.5"))
 
 ;; This file is part of GNU Emacs.
 
@@ -40,7 +40,7 @@
 
 ;;; Code:
 
-(require 'helm)
+(require 'helm-core)
 (require 'clj-refactor)
 
 (defun cljr-helm-candidates ()
