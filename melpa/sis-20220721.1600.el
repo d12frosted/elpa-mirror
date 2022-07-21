@@ -1,8 +1,8 @@
 ;;; sis.el --- Less manual switch for native or OS input source (input method). -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/laishulu/emacs-smart-input-source
-;; Package-Version: 20220720.1536
-;; Package-Commit: 4a5189cf1beb9965cabc021b2697b51f18390266
+;; Package-Version: 20220721.1600
+;; Package-Commit: d7a415b00bb1ddcf940d82afdd01e8b793d5466b
 ;; Created: March 27th, 2020
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "25.1") (terminal-focus-reporting "0.0"))
@@ -869,6 +869,8 @@ Only used for `terminal-focus-reporting'."
          lambda (buffer)
          (and (sis--string-match-p "^\*" (buffer-name buffer))
               (not (sis--string-match-p "^\*new\*"
+                                        (downcase (buffer-name buffer))))
+              (not (sis--string-match-p "^\*dashboard\*"
                                         (downcase (buffer-name buffer))))
               (not (sis--string-match-p "^\*scratch\*"
                                         (downcase (buffer-name buffer)))))))
