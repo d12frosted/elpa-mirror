@@ -1,11 +1,11 @@
 (ssh-tunnels .
-	     [(20220606 1229)
+	     [(20220721 1242)
 	      ((cl-lib
 		(0 5))
 	       (emacs
 		(24)))
 	      "Manage SSH tunnels" tar
-	      ((:commit . "191013b83f3ec3214394a1ed698c4cf38e4d9047")
+	      ((:commit . "5010d779edef33f869065231b99d74723c9c7eaf")
 	       (:authors
 		("death <github.com/death>"))
 	       (:maintainer "death <github.com/death>")

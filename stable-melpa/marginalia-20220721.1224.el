@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.13
-;; Package-Version: 20220707.914
-;; Package-Commit: cc2a909a069c93a49c9253ceeb9e05ce9c5d36d6
+;; Package-Version: 20220721.1224
+;; Package-Commit: ee2bd929fc40875dbe2df031cb93c5df908bea04
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -711,10 +711,10 @@ keybinding since CAND includes it."
                             (package--from-builtin built-in)
                           (car (alist-get pkg package-archive-contents))))))
     (marginalia--fields
-     ((package-version-join (package-desc-version desc)) :width 16 :face 'marginalia-version)
+     ((package-version-join (package-desc-version desc)) :truncate 16 :face 'marginalia-version)
      ((cond
        ((package-desc-archive desc) (propertize (package-desc-archive desc) 'face 'marginalia-archive))
-       (t (propertize (or (package-desc-status desc) "orphan") 'face 'marginalia-installed))) :width 10)
+       (t (propertize (or (package-desc-status desc) "orphan") 'face 'marginalia-installed))) :truncate 12)
      ((package-desc-summary desc) :truncate 1.0 :face 'marginalia-documentation))))
 
 (defun marginalia--bookmark-type (bm)
