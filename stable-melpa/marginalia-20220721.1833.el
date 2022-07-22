@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.13
-;; Package-Version: 20220721.1224
-;; Package-Commit: ee2bd929fc40875dbe2df031cb93c5df908bea04
+;; Package-Version: 20220721.1833
+;; Package-Commit: 69442c2d9472b665f698f67426cd255f6c0620a3
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -428,8 +428,8 @@ FACE is the name of the face, with which the field should be propertized."
   (let ((flist (indirect-function fun)))
     (advice--p (if (eq 'macro (car-safe flist)) (cdr flist) flist))))
 
-;; Symbol class characters from Emacs 28 `help--symbol-completion-table-affixation'
-;; ! and * are our additions
+;; Symbol class characters from Emacs 28 `help--symbol-class'
+;; ! and & are our additions
 (defun marginalia--symbol-class (s)
   "Return symbol class characters for symbol S.
 
@@ -445,12 +445,14 @@ s side-effect-free
 @ autoloaded
 ! advised
 - obsolete
+& alias
 
 Variable:
 u custom (U modified compared to global value)
 v variable
 l local (L modified compared to default value)
 - obsolete
+& alias
 
 Other:
 a face
@@ -471,6 +473,7 @@ t cl-type"
         (t "f"))
        (and (autoloadp (symbol-function s)) "@")
        (and (marginalia--advised s) "!")
+       (and (symbolp (symbol-function s)) "&")
        (and (get s 'byte-obsolete-info) "-")))
     (when (boundp s)
       (concat
@@ -486,6 +489,7 @@ t cl-type"
                        (eval (car (get s 'standard-value))))))
                "U" "u")
          "v")
+       (ignore-errors (and (not (eq (indirect-variable s) s)) "&"))
        (and (get s 'byte-obsolete-variable) "-")))
     (and (facep s) "a")
     (and (fboundp 'cl-find-class) (cl-find-class s) "t"))))

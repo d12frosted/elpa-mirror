@@ -4,8 +4,8 @@
 
 ;; Author: Jonathan Arnett <jonathan.arnett@protonmail.com>
 ;; URL: https://github.com/J3RN/inf-elixir
-;; Package-Version: 20211202.210
-;; Package-Commit: acb948ca41a862c8c9b3f61ad576dec2c30d0052
+;; Package-Version: 20220721.1939
+;; Package-Commit: 5b45f5bd346446d87c629794b3c3e586c3eefd9c
 ;; Keywords: languages, processes, tools
 ;; Version: 2.1.2
 ;; Package-Requires: ((emacs "25.1"))
@@ -34,6 +34,7 @@
 
 (require 'comint)
 (require 'subr-x)
+(require 'map)
 
 
 ;;; Customization
@@ -71,10 +72,24 @@ NOTE: Changing this variable will not affect running REPLs."
   :type 'string
   :group 'inf-elixir)
 
+(defcustom inf-elixir-repl-buffer nil
+  "Override for what REPL buffer code snippets should be sent to.
+
+If this variable is set and the corresponding REPL buffer exists
+and has a living process, all `inf-elixir-send-*' commands will
+send to it.  If this variable is unset (the default) or the
+indicated buffer is dead or has a dead process, a warning will be
+printed instead."
+  :type 'buffer
+  :group 'inf-elixir)
+
 
 ;;; Mode definitions and configuration
 (defvar inf-elixir-project-buffers (make-hash-table :test 'equal)
   "A mapping of projects to buffers with running Elixir REPL subprocesses.")
+
+(defvar inf-elixir-unaffiliated-buffers '()
+  "A list of Elixir REPL buffers unaffiliated with any project.")
 
 ;;;###autoload
 (define-minor-mode inf-elixir-minor-mode
@@ -156,18 +171,66 @@ Always returns a REPL buffer for DIR."
       (with-current-buffer
           (apply #'make-comint-in-buffer buf-name nil (car cmd) nil (cdr cmd))
         (inf-elixir-mode)
-        (when dir (inf-elixir--set-project-buffer dir (current-buffer)))
+        (if dir
+            (inf-elixir--set-project-buffer dir (current-buffer))
+          (add-to-list 'inf-elixir-unaffiliated-buffers (current-buffer)))
         (current-buffer)))))
 
-(defun inf-elixir--send (command)
-  "Send COMMAND to the REPL process in BUF."
-  (let* ((proj-dir (inf-elixir--find-project-root))
-         (proj-buf (inf-elixir--get-project-buffer proj-dir)))
-    (if (process-live-p (get-buffer-process proj-buf))
-        (with-current-buffer proj-buf
-          (comint-add-to-input-history command)
-          (comint-send-string proj-buf (concat command "\n")))
-      (message (concat "No REPL running in " (inf-elixir--project-name proj-dir))))))
+(defun inf-elixir--send (cmd)
+  "Determine where to send CMD and send it."
+  (when-let ((buf (inf-elixir--determine-repl-buf)))
+    (with-current-buffer buf
+      (comint-add-to-input-history cmd)
+      (comint-send-string buf (concat cmd "\n")))
+    (pop-to-buffer buf)))
+
+(defun inf-elixir--determine-repl-buf ()
+  "Determines where to send a cmd when `inf-elixir-send-*' are used."
+  (if inf-elixir-repl-buffer
+      (if (process-live-p (get-buffer-process inf-elixir-repl-buffer))
+          inf-elixir-repl-buffer
+        (inf-elixir--prompt-repl-buffers "`inf-elixir-repl-buffer' is dead, please choose another REPL buffer: "))
+    (if-let ((proj-dir (inf-elixir--find-project-root)))
+        (inf-elixir--determine-project-repl-buf proj-dir)
+      (inf-elixir--prompt-repl-buffers))))
+
+(defun inf-elixir--determine-project-repl-buf (proj-dir)
+  "Determines where to send a cmd when `inf-elixir-send-*' are used inside the PROJ-DIR Mix project."
+  (if-let ((proj-buf (inf-elixir--get-project-buffer proj-dir)))
+      (if (process-live-p (get-buffer-process proj-buf))
+          proj-buf
+        (if (y-or-n-p "A project REPL buffer exists, but the process is dead.  Start a new one? ")
+            (inf-elixir-project)
+          (inf-elixir--prompt-repl-buffers)))
+    (if (y-or-n-p "No REPL exists for this project yet.  Start one? ")
+        (inf-elixir-project)
+      (inf-elixir--prompt-repl-buffers))))
+
+(defun inf-elixir--prompt-repl-buffers (&optional prompt)
+  "Prompt the user to select an inf-elixir REPL buffers or create an new one.
+
+Returns the select buffer (as a buffer object).
+
+If PROMPT is supplied, it is used as the prompt for a REPL buffer.
+
+When the user selects a REPL, it is set as `inf-elixir-repl-buffer' locally in
+the buffer so that the choice is remembered for that buffer."
+  ;; Cleanup
+  (setq inf-elixir-unaffiliated-buffers (seq-filter 'buffer-live-p inf-elixir-unaffiliated-buffers))
+  (setq inf-elixir-project-buffers
+        (map-into
+         (map-filter (lambda (_dir buf) (buffer-live-p buf)) inf-elixir-project-buffers)
+         '(hash-table :test equal)))
+  ;; Actual functionality
+  (let* ((repl-buffers (append
+                       '("Create new")
+                       (mapcar (lambda (buf) `(,(buffer-name buf) . buf)) inf-elixir-unaffiliated-buffers)
+                       (mapcar (lambda (buf) `(,(buffer-name buf) . buf)) (hash-table-values inf-elixir-project-buffers))))
+         (prompt (or prompt "Which REPL?"))
+         (selected-buf (completing-read prompt repl-buffers (lambda (_) t) t)))
+    (setq-local inf-elixir-repl-buffer (if (equal selected-buf "Create new")
+                                           (inf-elixir)
+                                         selected-buf))))
 
 
 ;;; Public functions
@@ -223,6 +286,11 @@ be prompted for the REPL command.  The default is provided by
                   (t inf-elixir-project-command))))
         (inf-elixir-run-cmd default-directory cmd))
     (message "Could not find project root! Try `inf-elixir' instead.")))
+
+(defun inf-elixir-set-repl ()
+  "Select which REPL to use for this buffer."
+  (interactive)
+  (inf-elixir--prompt-repl-buffers))
 
 (defun inf-elixir-send-line ()
   "Send the region to the REPL buffer and run it."

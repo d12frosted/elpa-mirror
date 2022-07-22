@@ -3,8 +3,8 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: docs, convenience
-;; Package-Version: 20220720.2120
-;; Package-Commit: 85a527af318f220c1671c56b89faa5ca23d2c7ec
+;; Package-Version: 20220721.1851
+;; Package-Commit: d80ad99e4df0ab47829eeee148ab701d014d67ae
 ;; License: GPL-3.0-or-later
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "26.1") (consult "0.9"))
@@ -27,8 +27,9 @@
 
 ;;; Commentary:
 
-;; A `consult-recoll' command to perform interactive queries over your Recoll
-;; (https://www.lesbonscomptes.com/recoll/) index using consult. Use
+;; A `consult-recoll' command to perform interactive queries (including life
+;; previews of documment snippets) over your Recoll
+;; (https://www.lesbonscomptes.com/recoll/) index, using consult. Use
 ;;
 ;;     M-x consult-recoll
 ;;
@@ -70,16 +71,21 @@ See also `consult-recoll-open-fns'"
 Set to nil to use the default 'title (path)' format."
   :type '(choice (const nil) function))
 
-(defface consult-recoll-url-face '((t :inherit default))
+(defface consult-recoll-url-face '((t :inherit link))
   "Face used to display URLs of candidates.")
 
 (defface consult-recoll-title-face '((t :inherit italic))
   "Face used to display titles of candidates.")
 
+(defface consult-recoll-mime-face '((t :inherit font-lock-comment-face))
+  "Face used to display MIME type of candidates.")
+
 (defvar consult-recoll-history nil "History for `consult-recoll'.")
+(defvar consult-recoll--current "")
 
 (defun consult-recoll--command (text)
   "Command used to perform queries for TEXT."
+  (setq consult-recoll--current text)
   `("recollq" ,@consult-recoll-search-flags ,text))
 
 (defun consult-recoll--transformer (str)
@@ -94,17 +100,62 @@ Set to nil to use the default 'title (path)' format."
                    (format "%s (%s)"
                            (propertize title 'face 'consult-recoll-title-face)
                            (propertize urln 'face 'consult-recoll-url-face)))))
-      (propertize cand 'mime-type mime 'url urln))))
+      (propertize cand 'mime-type mime 'url urln 'title title))))
+
+(defsubst consult-recoll--candidate-title (candidate)
+  (get-text-property 0 'title candidate))
+
+(defsubst consult-recoll--candidate-mime (candidate)
+  (get-text-property 0 'mime-type candidate))
+
+(defun consult-recoll--candidate-url (candidate)
+  (get-text-property 0 'url candidate))
 
 (defun consult-recoll--open (candidate)
   "Open file of corresponding completion CANDIDATE."
   (when candidate
-    (let ((url (get-text-property 0 'url candidate))
-          (opener (alist-get (get-text-property 0 'mime-type candidate)
+    (let ((url (consult-recoll--candidate-url candidate))
+          (opener (alist-get (consult-recoll--candidate-mime candidate)
                              consult-recoll-open-fns
                              (or consult-recoll-open-fn #'find-file)
                              nil 'string=)))
       (funcall opener url))))
+
+(defvar consult-recoll--preview-buffer "*consult-recoll preview*")
+
+(defun consult-recoll--preview (action candidate)
+  "Preview search result CANDIDATE when ACTION is 'preview."
+  (cond ((or (eq action 'setup) (null candidate))
+         (with-current-buffer (get-buffer-create consult-recoll--preview-buffer)
+           (delete-region (point-min) (point-max))))
+        ((and (eq action 'preview) candidate)
+         (when-let* ((url (consult-recoll--candidate-url candidate))
+                     (q (format "recollq -A -p 5 filename:%s AND %s"
+                                (replace-regexp-in-string "^.+://" "" url)
+                                consult-recoll--current))
+                     (buff (get-buffer consult-recoll--preview-buffer)))
+           (with-current-buffer buff
+             (delete-region (point-min) (point-max))
+             (insert (shell-command-to-string q))
+             (goto-char (point-min))
+             (when (re-search-forward (regexp-quote (format "[%s]" url)) nil t)
+               (delete-region (point-min) (point)))
+             (unless (re-search-forward "^SNIPPETS$" nil t)
+               (goto-char (point-max)))
+             (delete-region (point-min) (point))
+             (when-let (title (consult-recoll--candidate-title candidate))
+               (insert (propertize title 'face 'consult-recoll-title-face) "\n"))
+             (insert (propertize url 'face 'consult-recoll-url-face) "\n")
+             (insert (propertize (consult-recoll--candidate-mime candidate)
+                                 'face 'consult-recoll-mime-face)
+                     "\n")
+             (when (re-search-forward "^/SNIPPETS$" nil t)
+               (replace-match ""))
+             (delete-region (point) (point-max)))
+           (pop-to-buffer buff)))
+        ((eq action 'exit)
+         (when (get-buffer consult-recoll--preview-buffer)
+           (kill-buffer consult-recoll--preview-buffer)))))
 
 (defun consult-recoll--search (&optional initial)
   "Perform an asynchronous recoll search via `consult--read'.
@@ -117,6 +168,7 @@ If given, use INITIAL as the starting point of the query."
                  :require-match t
                  :lookup #'consult--lookup-member
                  :sort nil
+                 :state #'consult-recoll--preview
                  :initial (consult--async-split-initial initial)
                  :history '(:input consult-recoll-history)
                  :category 'recoll-result))

@@ -1,5 +1,6 @@
-A `consult-recoll' command to perform interactive queries over your Recoll
-(https://www.lesbonscomptes.com/recoll/) index using consult. Use
+A `consult-recoll' command to perform interactive queries (including life
+previews of documment snippets) over your Recoll
+(https://www.lesbonscomptes.com/recoll/) index, using consult. Use
 
     M-x consult-recoll
 

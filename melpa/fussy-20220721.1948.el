@@ -4,8 +4,8 @@
 
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 1.0
-;; Package-Version: 20220713.23
-;; Package-Commit: 314280ae62a907004ce82f8bbbddf8feca497e95
+;; Package-Version: 20220721.1948
+;; Package-Commit: 82b8a357ecfcf5f148b60f860c104b2b20c58481
 ;; Package-Requires: ((emacs "27.2") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
@@ -604,8 +604,14 @@ pcm-style refers to using `completion-pcm--hilit-commonality' for highlighting."
   "Return propertized copy of OBJ according to score.
 
 If SCORE does not have indices to highlight, return OBJ unmodified."
-  (if (<= (length score) 1)
-      ;; Has only a score or nil.
+  (if (or
+       ;; Has only score but no indices or nil.
+       (<= (length score) 1)
+       ;; Indices are higher than the length of obj indicating the indices are
+       ;; incorrect. Skip highlighting to avoid breaking completion.
+       ;; Take the last index to compare against obj because all indices need
+       ;; to be less than the length of obj in order for highlighting to work.
+       (>= (car (last score)) (length obj)))
       obj
     ;; Has a score and an index to highlight.
     (let ((block-started (cadr score))
