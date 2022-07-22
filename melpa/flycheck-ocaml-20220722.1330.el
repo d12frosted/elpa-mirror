@@ -7,8 +7,8 @@
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/flycheck/flycheck-ocaml
-;; Package-Version: 20220722.709
-;; Package-Commit: 3f42f093edd1ebb9d7abd781ce643d64cc14e62a
+;; Package-Version: 20220722.1330
+;; Package-Commit: dd3cf1080a9c49c8290eec027a3adedb72979cbd
 ;; Keywords: convenience, tools, languages, ocaml
 ;; Version: 0.4.1
 ;; Package-Requires: ((emacs "24.1") (flycheck "0.22") (merlin "3.0.1") (let-alist "1.0.3"))
@@ -139,7 +139,7 @@ CALLBACK is the status callback passed by Flycheck."
                            (lambda (alist)
                              (flycheck-ocaml-merlin-parse-error alist
                                                                 checker))
-                           (merlin/call "errors")))))
+                           (merlin-call "errors")))))
         (funcall callback 'finished errors))
     (error (funcall callback 'errored (error-message-string err)))))
 

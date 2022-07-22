@@ -5,11 +5,11 @@
 ;; Author: Gunther Hagleitner
 ;; Maintainer: Julien Pagès <j.parkouss@gmail.com>
 ;; Version: 1.2
-;; Package-Version: 20191204.1107
-;; Package-Commit: 5ef695f7159aa1f20c7c9e55f0c39bcdacce8d21
+;; Package-Version: 20220722.1332
+;; Package-Commit: 3cec9fe34bc2bd83d43c3a69e937e2126031eb9f
 ;; Keywords: games
 ;; URL: https://github.com/parkouss/speed-type
-;; Package-Requires: ((emacs "24.3") (cl-lib "0.3"))
+;; Package-Requires: ((emacs "25.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -38,16 +38,20 @@
 (require 'cl-lib)
 
 (defgroup speed-type nil
-  "Practice touch-typing in emacs."
+  "Practice touch-typing in Emacs."
   :group 'games)
 
+(define-derived-mode speed-type-mode fundamental-mode "SpeedType"
+  "Major mode for practicing touch typing."
+  :group "speed-type")
+
 (defcustom speed-type-min-chars 200
-  "The minimum number of chars to type required when the text to type is picked randomly."
+  "The minimum number of chars to type required when the text is picked randomly."
   :group 'speed-type
   :type 'integer)
 
 (defcustom speed-type-max-chars 450
-  "The maximum number of chars to type required when the text to type is picked randomly."
+  "The maximum number of chars to type required when the text is picked randomly."
   :group 'speed-type
   :type 'integer)
 
@@ -88,6 +92,11 @@ E.g. if you always want lowercase words, set:
   "Default language for training wordlists.  Ask when NIL."
   :type '(choice (const :tag "None" nil)
                  (symbol :tag "Language")))
+
+(defface speed-type-default
+  '()
+  "Default face for `speed-type'."
+  :group 'speed-type)
 
 (defface speed-type-correct
   '((t :foreground "green"))
@@ -143,14 +152,6 @@ Total errors: %d
 (defvar-local speed-type--lang nil)
 (defvar-local speed-type--n-words nil)
 (defvar-local speed-type--opened-on-buffer nil)
-
-;; save-mark-and-excursion in Emacs 25.1 and above works like save-excursion did before
-(eval-when-compile
-  (when (or
-         (< emacs-major-version 25)
-         (and (= emacs-major-version 25) (< emacs-minor-version 1)))
-    (defmacro save-mark-and-excursion (&rest body)
-      `(save-excursion ,@body))))
 
 (defun speed-type--seconds-to-minutes (seconds)
   "Return minutes in float for SECONDS."
@@ -322,7 +323,8 @@ Accuracy is computed as (CORRECT-ENTRIES - CORRECTIONS) / TOTAL-ENTRIES."
                   (propertize "r" 'face 'highlight)))
   (insert (format "    [%s]ext random sample\n"
                   (propertize "n" 'face 'highlight)))
-  (read-only-mode)
+  (let ((view-read-only nil))
+    (read-only-mode))
   (use-local-map speed-type--completed-keymap))
 
 (defun speed-type--diff (orig new start end)
@@ -346,7 +348,7 @@ Accuracy is computed as (CORRECT-ENTRIES - CORRECTIONS) / TOTAL-ENTRIES."
                                        'speed-type-mistake)))))))
 
 (defun speed-type--change (start end length)
-  "Handle buffer changes.
+  "Handle buffer change.
 
 Make sure that the contents don't actually change, but rather the contents
 are color coded and stats are gathered about the typing performance."
@@ -386,8 +388,7 @@ AUTHOR and TITLE can be given, this happen when the text to type comes
 from a gutenberg book.
 
 LANG and N-WORDS is used when training random words where LANG is the
-language symbol and N-WORDS is the top N words that should be trained.
-"
+language symbol and N-WORDS is the top N words that should be trained."
   (with-temp-buffer
     (insert text)
     (delete-trailing-whitespace)
@@ -395,6 +396,8 @@ language symbol and N-WORDS is the top N words that should be trained.
   (let ((buf (generate-new-buffer "speed-type"))
         (len (length text)))
     (set-buffer buf)
+    (speed-type-mode)
+    (buffer-face-set 'speed-type-default)
     (setq speed-type--orig-text text)
     (setq speed-type--mod-str (make-string len 0))
     (setq speed-type--remaining len)
@@ -492,8 +495,8 @@ to (point-min) and (point-max)"
 (defun speed-type-buffer (full)
   "Open copy of buffer contents in a new buffer to speed type the text.
 
-If using a prefix while calling this function (C-u), then the FULL text
-will be used. Else some text will be picked randomly."
+If using a prefix while calling this function `C-u', then the FULL text
+will be used.  Else some text will be picked randomly."
   (interactive "P")
   (if full
       (speed-type--setup (buffer-substring-no-properties
