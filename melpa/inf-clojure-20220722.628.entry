@@ -1,11 +1,11 @@
 (inf-clojure .
-	     [(20220716 1651)
+	     [(20220722 628)
 	      ((emacs
 		(25 1))
 	       (clojure-mode
 		(5 11)))
 	      "Run an external Clojure process in an Emacs buffer" single
-	      ((:commit . "7de63df35fd912fb04fde56a1c07862e0e22bfe4")
+	      ((:commit . "151b20ba9d3ae39b88f91aecbab98bd5a5215f1a")
 	       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 	       (:keywords "processes" "comint" "clojure")
 	       (:url . "http://github.com/clojure-emacs/inf-clojure"))])

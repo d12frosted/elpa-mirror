@@ -3,8 +3,8 @@
 ;; Copyright (C) 2021-2022 Chen Bin
 ;;
 ;; Version: 0.0.5
-;; Package-Version: 20220709.654
-;; Package-Commit: f3f991f9773283f3834e8518eb6910aa29e88f9e
+;; Package-Version: 20220722.853
+;; Package-Commit: c4880ee5324a53822a7f28d3d54e53e58713326c
 
 ;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
 ;; URL: http://github.com/redguardtoo/shenshou
@@ -641,7 +641,11 @@ Or else user need specify the video to process."
                             (archive-zip-summarize))))
          (enames (delq nil
                        (mapcar (lambda (e)
-                                 (let ((ename (archive--file-desc-ext-file-name e)))
+                                 (let ((ename (if (fboundp 'archive--file-desc-ext-file-name)
+                                                  ;; emacs 28
+                                                  (archive--file-desc-ext-file-name e)
+                                                ;; emacs 27
+                                                (aref e 0))))
                                    (when (string-match "\\.srt$" ename)
                                      ename)))
                                zip-summarize)))

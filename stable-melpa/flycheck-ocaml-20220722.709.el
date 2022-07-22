@@ -7,8 +7,8 @@
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/flycheck/flycheck-ocaml
-;; Package-Version: 20220720.1256
-;; Package-Commit: 629080c1bbe4d6195c70bae3f4e09cc2b79c8e2d
+;; Package-Version: 20220722.709
+;; Package-Commit: 3f42f093edd1ebb9d7abd781ce643d64cc14e62a
 ;; Keywords: convenience, tools, languages, ocaml
 ;; Version: 0.4.1
 ;; Package-Requires: ((emacs "24.1") (flycheck "0.22") (merlin "3.0.1") (let-alist "1.0.3"))
@@ -110,16 +110,16 @@ Return the corresponding `flycheck-error'."
 (defun flycheck-verify-ocaml-merlin (_checker)
   "Verify the OCaml Merlin syntax checker."
   (let ((command (executable-find (merlin-command)))
-        (merlin-file (and buffer-file-name (locate-dominating-file buffer-file-name ".merlin"))))
+        (dune-file (and buffer-file-name (locate-dominating-file buffer-file-name "dune-project"))))
     (list
      (flycheck-verification-result-new
       :label "Merlin command"
       :message (if command (format "Found at %s" command) "Not found")
       :face (if command 'success '(bold error)))
      (flycheck-verification-result-new
-      :label "Merlin file (.merlin)"
-      :message (if merlin-file (format "Found at %s" merlin-file) "Not found")
-      :face (if merlin-file 'success '(bold error)))
+      :label "Dune project"
+      :message (if dune-file (format "Found at %s" dune-file) "Not found")
+      :face (if dune-file 'success '(bold error)))
      (flycheck-verification-result-new
       :label "Merlin mode"
       :message (if merlin-mode "enabled" "disabled")

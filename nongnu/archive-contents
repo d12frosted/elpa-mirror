@@ -914,7 +914,7 @@
 	   ("Victor Ren" . "victorhge@gmail.com"))
 	  (:commit . "699e179dac18c78698cba1a2052bee6f0bbc6bf7"))])
  (inf-clojure .
-	      [(3 2 0)
+	      [(3 2 1)
 	       ((emacs
 		 (25 1))
 		(clojure-mode
@@ -922,7 +922,8 @@
 	       "Run an external Clojure process in an Emacs buffer" tar
 	       ((:url . "http://github.com/clojure-emacs/inf-clojure")
 		(:keywords "processes" "comint" "clojure")
-		(:commit . "67b0403aa183d521e36545266100f1f62a34e783"))])
+		(:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+		(:commit . "151b20ba9d3ae39b88f91aecbab98bd5a5215f1a"))])
  (inf-ruby .
 	   [(2 6 1)
 	    ((emacs

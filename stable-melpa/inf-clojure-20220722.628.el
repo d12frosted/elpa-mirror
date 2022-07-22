@@ -6,10 +6,10 @@
 ;;       Olin Shivers <shivers@cs.cmu.edu>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/inf-clojure
-;; Package-Version: 20220716.1651
-;; Package-Commit: 7de63df35fd912fb04fde56a1c07862e0e22bfe4
+;; Package-Version: 20220722.628
+;; Package-Commit: 151b20ba9d3ae39b88f91aecbab98bd5a5215f1a
 ;; Keywords: processes, comint, clojure
-;; Version: 3.2.0
+;; Version: 3.2.1
 ;; Package-Requires: ((emacs "25.1") (clojure-mode "5.11"))
 
 ;; This file is not part of GNU Emacs.
@@ -298,7 +298,7 @@ See http://blog.jorgenschaefer.de/2014/05/race-conditions-in-emacs-process-filte
 (defconst inf-clojure-version
   (or (if (fboundp 'package-get-version)
           (package-get-version))
-      "3.2.0")
+      "3.2.1")
   "The current version of `inf-clojure'.")
 
 (defcustom inf-clojure-prompt-read-only t

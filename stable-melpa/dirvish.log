@@ -4,11 +4,11 @@ Source:  https://github.com/alexluigit/dirvish.git
 
 Updating /mnt/store/melpa/working/dirvish/
 Checking out origin/HEAD
-Checking out 4a6576eb4e707067f533d7480d2eb7a2de4014e0
-Checking out 4a6576eb4e707067f533d7480d2eb7a2de4014e0
+Checking out ab2f6c0aec5b1a7391ea68eacf0c17a515acee6e
+Checking out ab2f6c0aec5b1a7391ea68eacf0c17a515acee6e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dirvish/
-  to /tmp/dirvishUd7sB9/dirvish-20220721.1645
+  to /tmp/dirvishYmMcYo/dirvish-20220722.844
     dirvish.el -> dirvish.el
   ! extensions/dirvish-bookmark.el -> dirvish-bookmark.el
   ! extensions/dirvish-collapse.el -> dirvish-collapse.el
@@ -17,6 +17,7 @@ Copying files (->) and directories (=>)
   ! extensions/dirvish-fd.el -> dirvish-fd.el
   ! extensions/dirvish-history.el -> dirvish-history.el
   ! extensions/dirvish-icons.el -> dirvish-icons.el
+  ! extensions/dirvish-layout.el -> dirvish-layout.el
   ! extensions/dirvish-ls.el -> dirvish-ls.el
   ! extensions/dirvish-media.el -> dirvish-media.el
   ! extensions/dirvish-menu.el -> dirvish-menu.el
@@ -26,27 +27,30 @@ Copying files (->) and directories (=>)
   ! extensions/dirvish-subtree.el -> dirvish-subtree.el
   ! extensions/dirvish-vc.el -> dirvish-vc.el
   ! extensions/dirvish-yank.el -> dirvish-yank.el
-Created dirvish-20220721.1645.tar containing:
-  dirvish-20220721.1645/
-  dirvish-20220721.1645/dirvish-bookmark.el
-  dirvish-20220721.1645/dirvish-collapse.el
-  dirvish-20220721.1645/dirvish-emerge.el
-  dirvish-20220721.1645/dirvish-extras.el
-  dirvish-20220721.1645/dirvish-fd.el
-  dirvish-20220721.1645/dirvish-history.el
-  dirvish-20220721.1645/dirvish-icons.el
-  dirvish-20220721.1645/dirvish-ls.el
-  dirvish-20220721.1645/dirvish-media.el
-  dirvish-20220721.1645/dirvish-menu.el
-  dirvish-20220721.1645/dirvish-narrow.el
-  dirvish-20220721.1645/dirvish-peek.el
-  dirvish-20220721.1645/dirvish-pkg.el
-  dirvish-20220721.1645/dirvish-side.el
-  dirvish-20220721.1645/dirvish-subtree.el
-  dirvish-20220721.1645/dirvish-vc.el
-  dirvish-20220721.1645/dirvish-yank.el
-  dirvish-20220721.1645/dirvish.el
-Built dirvish in 6.448s, finished at 2022-07-22T05:19:34+0000
+Created dirvish-20220722.844.tar containing:
+  dirvish-20220722.844/
+  dirvish-20220722.844/dirvish-bookmark.el
+  dirvish-20220722.844/dirvish-collapse.el
+  dirvish-20220722.844/dirvish-emerge.el
+  dirvish-20220722.844/dirvish-extras.el
+  dirvish-20220722.844/dirvish-fd.el
+  dirvish-20220722.844/dirvish-history.el
+  dirvish-20220722.844/dirvish-icons.el
+  dirvish-20220722.844/dirvish-layout.el
+  dirvish-20220722.844/dirvish-ls.el
+  dirvish-20220722.844/dirvish-media.el
+  dirvish-20220722.844/dirvish-menu.el
+  dirvish-20220722.844/dirvish-narrow.el
+  dirvish-20220722.844/dirvish-peek.el
+  dirvish-20220722.844/dirvish-pkg.el
+  dirvish-20220722.844/dirvish-side.el
+  dirvish-20220722.844/dirvish-subtree.el
+  dirvish-20220722.844/dirvish-vc.el
+  dirvish-20220722.844/dirvish-yank.el
+  dirvish-20220722.844/dirvish.el
+Built dirvish in 6.174s, finished at 2022-07-22T09:26:38+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  412 Jul 22 05:19 packages/dirvish-20220721.1645.entry
 240K -rw-r--r-- 1 root root 240K Jul 22 05:19 packages/dirvish-20220721.1645.tar
+4.0K -rw-r--r-- 1 root root  411 Jul 22 09:26 packages/dirvish-20220722.844.entry
+240K -rw-r--r-- 1 root root 240K Jul 22 09:26 packages/dirvish-20220722.844.tar
