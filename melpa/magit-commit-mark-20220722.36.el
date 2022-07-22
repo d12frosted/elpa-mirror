@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-magit-commit-mark
-;; Package-Version: 20220708.211
-;; Package-Commit: c7008bf9fff5e94060a7483ca68d0627d52f4460
+;; Package-Version: 20220722.36
+;; Package-Commit: 0e67320abc7f2198d5a5688d339f0c4ae7b63d32
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "28.1") (magit "3.3.0"))
 
@@ -426,7 +426,12 @@ useful for merge commits that show branching lines."
     (cond
       (found-point
         (goto-char found-point)
-        (call-interactively 'magit-show-commit)
+
+        ;; Use maybe-update with a zero timer instead of `(call-interactively 'magit-show-commit)'
+        ;; Because it handles canceling the idle timer, causing an occasional glitch
+        ;; where the idle timer opens a different commit than this one.
+        (let ((magit-update-other-window-delay 0.0))
+          (magit-log-maybe-update-revision-buffer))
         t)
       (t
         nil))))

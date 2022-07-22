@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220719.1650
-;; Package-Commit: c962f6e5f61cf3e1d24607484d310197ebebf259
+;; Package-Version: 20220722.17
+;; Package-Commit: 29690e88e3b1d2f5d5472d7457a56cc363fb2805
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -435,14 +435,12 @@ Here's what an element of this alist might look like:
     (Command ((:title . string) (:command . string)) (:arguments))"))
 
 (eval-and-compile
-  (defvar eglot-strict-mode (if load-file-name '()
-                              '(disallow-non-standard-keys
-                                ;; Uncomment these two for fun at
-                                ;; compile-time or with flymake-mode.
-                                ;;
-                                ;; enforce-required-keys
-                                ;; enforce-optional-keys
-                                ))
+  (defvar eglot-strict-mode
+    '(;; Uncomment next lines for fun and debugging
+      ;; disallow-non-standard-keys
+      ;; enforce-required-keys
+      ;; enforce-optional-keys
+      )
     "How strictly to check LSP interfaces at compile- and run-time.
 
 Value is a list of symbols (if the list is empty, no checks are
