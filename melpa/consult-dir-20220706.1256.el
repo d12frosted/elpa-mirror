@@ -4,8 +4,8 @@
 ;; Maintainer: Karthik Chikmagalur <karthik.chikmagalur@gmail.com>
 ;; Created: 2021
 ;; Version: 0.1
-;; Package-Version: 20220505.1037
-;; Package-Commit: d397ca6ea67af4d3c59a330a778affd825f0efd9
+;; Package-Version: 20220706.1256
+;; Package-Commit: 88f1d7cce614fabbfb41dff5338399971835c48c
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (project "0.6.0"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/karthink/consult-dir
@@ -136,8 +136,8 @@ The options are
 3. Any user-defined function. This function should take no
 arguments and return a list of directories."
   :type '(radio
-          (const :tag "Project.el projects" 'consult-dir-project-dirs)
-          (const :tag "Projectile projects" 'consult-dir-projectile-dirs)
+          (function-item :tag "Project.el projects" consult-dir-project-dirs)
+          (function-item :tag "Projectile projects" consult-dir-projectile-dirs)
           (function :tag "User-defined function")))
 
 (defcustom consult-dir-sources

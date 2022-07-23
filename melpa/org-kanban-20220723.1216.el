@@ -9,11 +9,12 @@
 ;;         Damian Chrzanowski <a00246203@student.ait.ie>
 ;;         Vlk <zdenek.mzourek@gmail.com>
 ;;         Pieter Hijma <pieterhijma@users.noreply.github.com>
+;;         Darius Foo <darius.foo.tw@gmail.com>
 ;; Keywords: org-mode, org, kanban, tools
-;; Package-Commit: 1d3234359fa52fce5ac1006e2c51f14c760d275e
+;; Package-Commit: e78deb03880ae89d6bceae6563ef1383526233a1
 ;; Package-Requires: ((s) (dash "2.17.0") (emacs "24.4") (org "9.1"))
-;; Package-Version: 20220510.2150
-;; Package-X-Original-Version: 0.6.4
+;; Package-Version: 20220723.1216
+;; Package-X-Original-Version: 0.6.5
 ;; Homepage: http://github.com/gizmomogwai/org-kanban
 
 ;;; Commentary:
@@ -399,7 +400,7 @@ Return file and marker."
         (if marker
           (if (and
                 (eq (marker-position marker) required-point)
-                (eq file required-file))
+                (string-equal file required-file))
             (setq done-p t)
             (forward-line 1))
           (forward-line 1))))))
@@ -692,7 +693,7 @@ PARAMS may contain `:mirrored`, `:match`, `:scope`, `:layout`, `:range`, `:depth
 (defun org-kanban/version ()
   "Print org-kanban version."
   (interactive)
-  (message "org-kanban 0.6.4"))
+  (message "org-kanban 0.6.5"))
 
 (defun org-kanban--scope-action (button)
   "Set scope from a BUTTON."

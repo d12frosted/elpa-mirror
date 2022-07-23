@@ -4,6 +4,8 @@
 
 ;; Author: Takeshi Banse <takebi@laafc.net>
 ;; Version: 0.1.0
+;; Package-Version: 20160407.2348
+;; Package-Commit: 843ce3bbb63d560face889e13a57a2f7543957d5
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: terminals
 

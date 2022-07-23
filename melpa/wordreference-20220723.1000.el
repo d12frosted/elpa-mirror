@@ -4,8 +4,8 @@
 ;; Copyright (C) 2022 Marty Hiatt <martianhiatus AT riseup.net>
 ;;
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
-;; Package-Version: 20220723.922
-;; Package-Commit: 8cfdaef15a9d94ec97910c0faf0ad5b9c393e75d
+;; Package-Version: 20220723.1000
+;; Package-Commit: 2d38f5eeffc3019c3d6516d2314e47ca6be2b299
 ;; Keywords: convenience, translate, wp, dictionary
 ;; URL: https://codeberg.org/martianh/wordreference.el
 ;; Version: 0.2
@@ -229,7 +229,7 @@ Optionally specify SOURCE and TARGET languages."
                   'wordreference--parse-async (list word source target))))
 
 (defun wordreference--parse-async (_status word source target)
-  ""
+  "Callback to parse query response for WORD from SOURCE to TARGET language."
   (let ((parsed
          (with-current-buffer (current-buffer)
            (goto-char (point-min))
@@ -498,6 +498,7 @@ SOURCE and TARGET are languages."
                do (wordreference-prop-single-term-in-results x)))))
 
 (defun wordreference-prop-single-term-in-results (term)
+  "Propertize single TERM in results buffer."
   (cl-loop while (search-forward-regexp (concat "\\b" term "\\b")
                                         nil 'noerror)
            do (unless
@@ -846,8 +847,8 @@ From SOURCE language to TARGET language, as two letter language codes."
       (wordreference--print-suggestions suggestions))))
 
 (defun wordreference--print-suggestions (suggestions)
-  "Print `did you mean' suggestions."
-  (let ((propertized (wordreference--propertize-similars suggestions)))
+  "Print `did you mean' SUGGESTIONS."
+  (let ((propertized (wordreference--propertize-suggestions suggestions)))
     (when propertized
       (with-current-buffer "*wordreference*"
         (goto-char (point-min))
@@ -869,7 +870,7 @@ From SOURCE language to TARGET language, as two letter language codes."
                         'term x
                         'keymap wordreference-result-search-map
                         'fontified t
-                        'face 'leo-link-face
+                        'face 'warning
                         'mouse-face 'highlight
                         'help-echo (concat "Search wordreference for '"
                                            x "'")))
