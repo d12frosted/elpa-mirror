@@ -4,8 +4,8 @@
 
 ;; Author: alpha22jp <alpha22jp@gmail.com>
 ;; Package-Requires: ((emacs "24.4") (let-alist "1.0.4") (websocket "1.4"))
-;; Package-Version: 20210221.59
-;; Package-Commit: c73367d8aa660f2b3c3f70ef5c39f5b502d60404
+;; Package-Version: 20220723.113
+;; Package-Commit: 061958ab96c31085b5daf449b1d826b052777b59
 ;; Keywords: chrome edit textarea
 ;; URL: https://github.com/alpha22jp/atomic-chrome
 ;; Version: 2.0.0
@@ -81,14 +81,14 @@
   :group 'atomic-chrome)
 
 (defcustom atomic-chrome-enable-auto-update t
-  "If non-nil, edit on Emacs is reflected to the browser instantly, \
-otherwise you need to type \"C-cC-s\" manually."
+  "If non-nil, edit on Emacs is reflected to the browser instantly.
+If nil, you need to type \"C-cC-s\" manually."
   :type 'boolean
   :group 'atomic-chrome)
 
 (defcustom atomic-chrome-enable-bidirectional-edit t
-  "If non-nil, you can edit both on the browser text area and Emacs, \
-otherwise edit on browser is ignored while editing on Emacs."
+  "If non-nil, you can edit both on the browser text area and Emacs.
+If nil, edit on browser is ignored while editing on Emacs."
   :type 'boolean
   :group 'atomic-chrome)
 
@@ -98,9 +98,9 @@ otherwise edit on browser is ignored while editing on Emacs."
   :group 'atomic-chrome)
 
 (defcustom atomic-chrome-url-major-mode-alist nil
-  "Association list of URL (or, for GhostText, hostname) regexp \
-and corresponding major mode which is used to select major mode \
-for specified website."
+  "Association list to select a major mode for a website.
+Relates URL (or, for GhostText, hostname) regular expressions to
+corresponding major modes."
   :type '(alist :key-type (regexp :tag "regexp")
                 :value-type (function :tag "major mode"))
   :group 'atomic-chrome)
@@ -126,18 +126,18 @@ for specified website."
 Each element has a list consisting of (websocket, frame).")
 
 (defun atomic-chrome-get-websocket (buffer)
-  "Lookup websocket associated with buffer BUFFER \
-from `atomic-chrome-buffer-table'."
+  "Look up websocket associated with buffer BUFFER.
+Looks in `atomic-chrome-buffer-table'."
   (nth 0 (gethash buffer atomic-chrome-buffer-table)))
 
 (defun atomic-chrome-get-frame (buffer)
-  "Lookup frame associated with buffer BUFFER \
-from `atomic-chrome-buffer-table'."
+  "Look up frame associated with buffer BUFFER.
+Looks in `atomic-chrome-buffer-table'."
   (nth 1 (gethash buffer atomic-chrome-buffer-table)))
 
 (defun atomic-chrome-get-buffer-by-socket (socket)
-  "Lookup buffer which is associated to the websocket SOCKET \
-from `atomic-chrome-buffer-table'."
+  "Look up buffer which is associated to the websocket SOCKET.
+Looks in `atomic-chrome-buffer-table'."
   (let (buffer)
     (cl-loop for key being the hash-keys of atomic-chrome-buffer-table
              using (hash-values val)
@@ -177,20 +177,27 @@ otherwise fallback to `atomic-chrome-default-major-mode'"
                atomic-chrome-default-major-mode)))
 
 (defun atomic-chrome-show-edit-buffer (buffer title)
-  "Show editing buffer BUFFER by creating a frame with title TITLE, \
-or raising the selected frame depending on `atomic-chrome-buffer-open-style'."
+  "Show editing buffer BUFFER.
+Either creates a frame with title TITLE, or raises the selected
+frame, depending on `atomic-chrome-buffer-open-style'."
   (let ((edit-frame nil)
         (frame-params (list (cons 'name (format "Atomic Chrome: %s" title))
                             (cons 'width atomic-chrome-buffer-frame-width)
                             (cons 'height atomic-chrome-buffer-frame-height))))
     (when (eq atomic-chrome-buffer-open-style 'frame)
       (setq edit-frame
-            (if (memq window-system '(ns mac))
-                ;; Avoid using make-frame-on-display for Mac OS.
-                (make-frame frame-params)
-              (make-frame-on-display
-               (if (eq system-type 'windows-nt) "w32" (getenv "DISPLAY"))
-               frame-params)))
+            (cond
+             ((memq window-system '(pgtk x))
+              (if (string-match-p "wayland" x-display-name)
+                  (make-frame frame-params)
+                (make-frame-on-display (getenv "DISPLAY") frame-params)))
+             ;; Avoid using make-frame-on-display for Mac OS
+             ((memq window-system '(ns mac))
+              (make-frame frame-params))
+             ((memq window-system '(w32))
+              (make-frame-on-display "w32" frame-params))
+             (t
+              (make-frame frame-params))))
       (select-frame edit-frame))
     (if (eq atomic-chrome-buffer-open-style 'split)
         (pop-to-buffer buffer)
@@ -240,8 +247,8 @@ TITLE is used for the buffer name and TEXT is inserted to the buffer."
         (insert text)))))
 
 (defun atomic-chrome-on-message (socket frame)
-  "Function to handle data received from websocket client specified by SOCKET, \
-where FRAME show raw data received."
+  "Handle data received from the websocket client specified by SOCKET.
+FRAME holds the raw data received."
   (let ((msg (json-read-from-string
               (decode-coding-string
                (encode-coding-string (websocket-frame-payload frame) 'utf-8)
@@ -353,8 +360,8 @@ STRING is the string process received."
 
 ;;;###autoload
 (defun atomic-chrome-start-server ()
-  "Start websocket server for atomic-chrome.  Fails silently if a \
-server is already running."
+  "Start websocket server for atomic-chrome.
+Fails silently if a server is already running."
   (interactive)
   (ignore-errors
       (progn
