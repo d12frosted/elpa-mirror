@@ -5,8 +5,6 @@
 ;; Author: Stephane Zermatten <szermatt@gmx.net>
 ;; Maintainer: Stephane Zermatten <szermatt@gmail.com>
 ;; Version: 3.1.0
-;; Package-Version: 20220531.1104
-;; Package-Commit: 8e9c20dbfe01d8bf6c61db231593623a201c75c6
 ;; Keywords: shell bash bash-completion
 ;; URL: http://github.com/szermatt/emacs-bash-completion
 ;; Package-Requires: ((emacs "24.3"))

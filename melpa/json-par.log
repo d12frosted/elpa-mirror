@@ -4,11 +4,11 @@ Source:  https://github.com/taku0/json-par.git
 
 Updating /mnt/store/melpa/working/json-par/
 Checking out origin/HEAD
-Checking out 962e5a2221136aa07f512834925c381cfeed2d92
-Checking out 962e5a2221136aa07f512834925c381cfeed2d92
+Checking out 2c13ad1bc3c2a62141d3312501d2c2012555972b
+Checking out 2c13ad1bc3c2a62141d3312501d2c2012555972b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/json-par/
-  to /tmp/json-parJXpkcJ/json-par-20220122.352
+  to /tmp/json-parJrQ5Ji/json-par-20220723.829
     json-par-ancestor-overlay.el -> json-par-ancestor-overlay.el
     json-par-clone.el -> json-par-clone.el
     json-par-delete.el -> json-par-delete.el
@@ -25,26 +25,28 @@ Copying files (->) and directories (=>)
     json-par-transpose.el -> json-par-transpose.el
     json-par-utils.el -> json-par-utils.el
     json-par.el -> json-par.el
-Created json-par-20220122.352.tar containing:
-  json-par-20220122.352/
-  json-par-20220122.352/json-par-ancestor-overlay.el
-  json-par-20220122.352/json-par-clone.el
-  json-par-20220122.352/json-par-delete.el
-  json-par-20220122.352/json-par-guess.el
-  json-par-20220122.352/json-par-indent.el
-  json-par-20220122.352/json-par-insert.el
-  json-par-20220122.352/json-par-keymap.el
-  json-par-20220122.352/json-par-lexer.el
-  json-par-20220122.352/json-par-mark-narrow.el
-  json-par-20220122.352/json-par-motion.el
-  json-par-20220122.352/json-par-oneline-multiline.el
-  json-par-20220122.352/json-par-pkg.el
-  json-par-20220122.352/json-par-raise.el
-  json-par-20220122.352/json-par-split-join.el
-  json-par-20220122.352/json-par-transpose.el
-  json-par-20220122.352/json-par-utils.el
-  json-par-20220122.352/json-par.el
-Built json-par in 5.938s, finished at 2022-07-23T05:26:13+0000
+Created json-par-20220723.829.tar containing:
+  json-par-20220723.829/
+  json-par-20220723.829/json-par-ancestor-overlay.el
+  json-par-20220723.829/json-par-clone.el
+  json-par-20220723.829/json-par-delete.el
+  json-par-20220723.829/json-par-guess.el
+  json-par-20220723.829/json-par-indent.el
+  json-par-20220723.829/json-par-insert.el
+  json-par-20220723.829/json-par-keymap.el
+  json-par-20220723.829/json-par-lexer.el
+  json-par-20220723.829/json-par-mark-narrow.el
+  json-par-20220723.829/json-par-motion.el
+  json-par-20220723.829/json-par-oneline-multiline.el
+  json-par-20220723.829/json-par-pkg.el
+  json-par-20220723.829/json-par-raise.el
+  json-par-20220723.829/json-par-split-join.el
+  json-par-20220723.829/json-par-transpose.el
+  json-par-20220723.829/json-par-utils.el
+  json-par-20220723.829/json-par.el
+Built json-par in 6.334s, finished at 2022-07-23T09:04:54+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  413 Jul 23 05:26 packages/json-par-20220122.352.entry
 452K -rw-r--r-- 1 root root 450K Jul 23 05:26 packages/json-par-20220122.352.tar
+4.0K -rw-r--r-- 1 root root  413 Jul 23 09:04 packages/json-par-20220723.829.entry
+452K -rw-r--r-- 1 root root 450K Jul 23 09:04 packages/json-par-20220723.829.tar
