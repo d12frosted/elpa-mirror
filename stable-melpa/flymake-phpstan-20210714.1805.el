@@ -6,7 +6,7 @@
 ;; Created: 31 Mar 2020
 ;; Version: 0.6.0
 ;; Package-Version: 20210714.1805
-;; Package-Commit: 4f990bf51cc65b3bdc63f4991e007d03b76932a2
+;; Package-Commit: e229e990e36a2bfb88503bfe2bb6f2836eaa2874
 ;; Keywords: tools, php
 ;; Homepage: https://github.com/emacs-php/phpstan.el
 ;; Package-Requires: ((emacs "26.1") (phpstan "0.5.0"))
