@@ -80,11 +80,3 @@ main function has to be on a very easy to use keybinding.  The tab
 seems to be a good choice for this.  By preserving access to the
 original tab binding when there is no expansion, pabbrev mostly
 "does what I mean", at least in my hands.
-
-Installation:
-
-To install this file place in your `load-path', and add
-
-(require 'pabbrev)
-
-to your .emacs

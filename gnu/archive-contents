@@ -2246,12 +2246,13 @@
 			("Stephen Leake" . "stephen_leake@member.fsf.org"))
 		       (:maintainer "Stephen Leake" . "stephen_leake@member.fsf.org"))])
  (pabbrev .
-	  [(4 2 1)
-	   nil "Predictive abbreviation expansion" single
-	   ((:url . "http://elpa.gnu.org/packages/pabbrev.html")
+	  [(4 2 2)
+	   nil "Predictive abbreviation expansion" tar
+	   ((:maintainer "Phillip Lord" . "phillip.lord@newcastle.ac.uk")
 	    (:authors
 	     ("Phillip Lord" . "phillip.lord@newcastle.ac.uk"))
-	    (:maintainer "Phillip Lord" . "phillip.lord@newcastle.ac.uk"))])
+	    (:url . "https://elpa.gnu.org/packages/pabbrev.html")
+	    (:commit . "6de1b9e4b57b9e1a4d598d11f4476db9ee870637"))])
  (paced .
 	[(1 1 3)
 	 ((emacs
