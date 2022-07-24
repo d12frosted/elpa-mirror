@@ -1,5 +1,5 @@
 (lispy .
-       [(20220209 1138)
+       [(20220526 1832)
 	((emacs
 	  (24 3))
 	 (ace-window
@@ -11,9 +11,9 @@
 	 (hydra
 	  (0 14 0))
 	 (zoutline
-	  (0 1 0)))
+	  (0 2 0)))
 	"vi-like Paredit" tar
-	((:commit . "df1b7e614fb0f73646755343e8892ddda310f427")
+	((:commit . "dbab5899f26fa2ee27f5c2e8b32c20f2f69242fb")
 	 (:authors
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
