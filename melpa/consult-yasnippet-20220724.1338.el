@@ -4,8 +4,8 @@
 
 ;; Author: mohsin kaleem <mohkale@kisara.moe>
 ;; Package-Requires: ((emacs "27.1") (yasnippet "0.14") (consult "0.16"))
-;; Package-Version: 20220409.1209
-;; Package-Commit: cdb256d2c50e4f8473c6052e1009441b65b8f8ab
+;; Package-Version: 20220724.1338
+;; Package-Commit: ae0450889484f23dc4ec37518852a2c61b89f184
 ;; Version: 0.2
 ;; URL: https://github.com/mohkale/consult-yasnippet
 
@@ -33,14 +33,32 @@
 (require 'consult)
 (require 'yasnippet)
 
-(defun consult-yasnippet--expand-template (template region region-contents)
-  "Expand TEMPLATE at point saving REGION and REGION-CONTENTS."
+(defgroup consult-yasnippet nil
+  "Consult interface for yasnippet."
+  :group 'consult
+  :group 'editing)
+
+(defcustom consult-yasnippet-use-thing-at-point nil
+  "Use `thing-at-point' as initial value for `consult-yasnippet'."
+  :type 'boolean
+  :group 'consult-yasnippet)
+
+(defcustom consult-yasnippet-always-overwrite-thing-at-point nil
+  "Always overwrite `thing-at-point' when expanding a snippet.
+This option forces `consult-yasnippet' to replace `thing-at-point' with the
+expanded snippet even if the expansion doesn't match. This option only
+applies when `consult-yasnippet-use-thing-at-point' is t."
+  :type 'boolean
+  :group 'consult-yasnippet)
+
+(defun consult-yasnippet--expand-template (template region)
+  "Expand TEMPLATE at point saving REGION."
   (deactivate-mark)
   (goto-char (car region))
 
   ;; Restore marked region (when it existed) so that `yas-expand-snippet'
   ;; overwrites it.
-  (when (not (string-equal "" region-contents))
+  (when (not (string-equal "" (buffer-substring (car region) (cdr region))))
     (push-mark (point))
     (push-mark (cdr region) nil t))
 
@@ -53,6 +71,23 @@
                         nil nil
                         (yas--template-expand-env template))))
 
+(defun consult-yasnippet--bounds-of-thing-at-point (template)
+  "Check for `thing-at-point' in TEMPLATE.
+Returns true if `thing-at-point' is a substring of either `template-key'
+or `template-name'. Matches only if `consult-yasnippet-use-thing-at-point'
+is t."
+  (if consult-yasnippet-use-thing-at-point
+      (let* ((thing (or (thing-at-point 'symbol) ""))
+             (use-thing-at-point
+              (or consult-yasnippet-always-overwrite-thing-at-point
+                  (when template
+                    (or (string-match-p thing (regexp-quote (yas--template-key template)))
+                        (string-match-p thing (regexp-quote (yas--template-name template))))))))
+        (if use-thing-at-point
+            (bounds-of-thing-at-point 'symbol)
+          (cons (point) (point))))
+    (cons (point) (point))))
+
 (defun consult-yasnippet--preview ()
   "Previewer for `consult--read'.
 This function expands TEMPLATE at point in the buffer
@@ -61,39 +96,53 @@ overwriting any region that was active and removing any previous
 previews that're already active.
 
 When TEMPLATE is not given, this function essentially just resets
-the state of the current buffer to before any snippets were previewed."
+the state of the current buffer to before any snippets were previewed.
+
+If `consult-yasnippet-use-thing-at-point' is t and region is not selected,
+this function removes the matching prefix from the preview."
   (let* ((buf (current-buffer))
-         (region (if (region-active-p)
-                     (cons (region-beginning) (region-end))
-                   (cons (point) (point))))
-         (region-contents (buffer-substring (car region) (cdr region))))
+         (region-active-initially (use-region-p))
+         (initial-region (if (use-region-p)
+                             (cons (region-beginning) (region-end))
+                           (cons (point) (point))))
+         (initial-region-contents (buffer-substring (car initial-region) (cdr initial-region)))
+         (region (cons (car initial-region) (cdr initial-region))))
     (lambda (action template)
       (with-current-buffer buf
-        (let ((yas-verbosity 0)
-              (inhibit-redisplay t)
-              (inhibit-read-only t)
-              (orig-offset (- (point-max) (cdr region)))
-              (yas-prompt-functions '(yas-no-prompt)))
-
+        (let* ((yas-verbosity 0)
+               (inhibit-redisplay t)
+               (inhibit-read-only t)
+               (orig-offset (- (point-max) (cdr region)))
+               (yas-prompt-functions '(yas-no-prompt)))
           ;; We always undo any snippet previews before maybe setting up
           ;; some new previews.
           (delete-region (car region) (cdr region))
           (goto-char (car region))
-          (setcar region (point))
-          (insert region-contents)
-          (setcdr region (point))
+          (setq region (cons (car initial-region) (cdr initial-region)))
+          (insert initial-region-contents)
+          (when (not region-active-initially)
+            (setq region (consult-yasnippet--bounds-of-thing-at-point template))
+            (setq initial-region region)
+            (setq initial-region-contents (buffer-substring (car region) (cdr region))))
+
+          ;; Restore the region if it was initially active, so that yasnippet can overwrite
+          (when (and region-active-initially (eq action 'return))
+            (activate-mark)
+            (set-mark (car region))
+            (goto-char (cdr region)))
 
           (when (and template (not (eq action 'return)))
             (unwind-protect
-                (consult-yasnippet--expand-template template region region-contents)
+                (consult-yasnippet--expand-template template region)
               (unwind-protect
                   (mapc #'yas--commit-snippet
                         (yas-active-snippets (point-min) (point-max)))
-                (setcdr region (- (point-max) orig-offset))))
+                (setcdr region (- (point-max) orig-offset))
+                (deactivate-mark)))
             (redisplay)))))))
 
 (defun consult-yasnippet--candidates (templates)
-  "Convert TEMPLATES into candidates for completing-read."
+  "Convert TEMPLATES into candidates for `completing-read'."
   (mapcar
    (lambda (template)
      (cons (concat
@@ -144,6 +193,9 @@ returns a snippet template from the user."
      candidates
      :prompt "Choose a snippet: "
      :annotate (consult-yasnippet--annotate candidates)
+     :initial
+     (when consult-yasnippet-use-thing-at-point
+       (thing-at-point 'symbol))
      :lookup 'consult--lookup-cdr
      :require-match t
      :state (consult-yasnippet--preview)
@@ -169,9 +221,14 @@ selected a chosen snippet will be expanded at point using
 With ARG select snippets from all snippet tables, not just the current one."
   (interactive "P")
   (when-let ((template (consult-yasnippet--read-template arg)))
-    (yas-expand-snippet (yas--template-content template)
-                        nil nil
-                        (yas--template-expand-env template))))
+    (let* ((thing-bounds (if (region-active-p)
+                             (cons nil nil)
+                           (consult-yasnippet--bounds-of-thing-at-point template)))
+           (thing-start (car thing-bounds))
+           (thing-end (cdr thing-bounds)))
+      (yas-expand-snippet (yas--template-content template)
+                          thing-start thing-end
+                          (yas--template-expand-env template)))))
 
 (provide 'consult-yasnippet)
 ;;; consult-yasnippet.el ends here
