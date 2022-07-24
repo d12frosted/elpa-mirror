@@ -2,6 +2,8 @@
 
 ;; Author: Grant Shangreaux (shshoshin@protonmail.com)
 ;; URL: https://git.sr.ht/~shoshin/lakota-input.git
+;; Package-Version: 20200823.2146
+;; Package-Commit: b74b9de284a0404a120bb15340def4dd2f9a4779
 ;; Version: 1.0
 
 ;; This program is free software; you can redistribute it and/or modify
