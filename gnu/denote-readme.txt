@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.3.0,
-released on 2022-07-11.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.4.0,
+released on 2022-07-25.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.4.0-dev.
+Current development target is 0.5.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote>
@@ -41,12 +41,21 @@ Table of Contents
 .. 2. Create note using Org capture
 .. 3. Maintain separate directories for notes
 4. Renaming files
+.. 1. Rename a single file
+.. 2. Rename file and add front matter
+.. 3. Rename multiple files at once
 5. The file-naming scheme
 .. 1. Sluggified title and keywords
 .. 2. Features of the file-naming scheme for searching or filtering
 6. Front matter
 7. Linking notes
-.. 1. Writing metanotes
+.. 1. Adding a single link
+.. 2. Insert links matching a regexp
+.. 3. Insert links from marked files in Dired
+.. 4. The backlinks’ buffer
+.. 5. Writing metanotes
+.. 6. Visiting linked files via the minibuffer
+.. 7. Miscellaneous information about links
 8. Fontification in Dired
 9. Minibuffer histories
 10. Extending Denote
@@ -173,7 +182,7 @@ Table of Contents
 
 [Points of entry] See section 3
 
-[Writing metanotes] See section 7.1
+[Writing metanotes] See section 7.5
 
 [Keep a journal or diary] See section 10.1
 
@@ -205,7 +214,7 @@ Table of Contents
   (which is the case by default).
 
   Multiple keywords can be inserted by separating them with a comma (or
-  whatever the value of the `crm-indicator' is—which should be a comma).
+  whatever the value of the `crm-separator' is—which should be a comma).
   When the user option `denote-sort-keywords' is non-nil (the default),
   keywords are sorted alphabetically (technically, the sorting is done
   with `string-lessp').
@@ -395,12 +404,14 @@ Table of Contents
   Users may prefer to leverage `org-capture' in order to extend file
   creation with the specifiers described in the `org-capture-templates'
   documentation (such as to capture the active region and/or create a
-  hyperlink pointing to the given context).  Due to the particular
-  file-naming scheme of Denote, which is derived dynamically, such
-  specifiers cannot be written directly in the template.  Instead, they
-  have to be assigned to the user option
-  `denote-org-capture-specifiers', which is interpreted by the function
-  `denote-org-capture'.  Example with our default value:
+  hyperlink pointing to the given context).
+
+  IMPORTANT.  Due to the particular file-naming scheme of Denote, which
+  is derived dynamically, such specifiers or other arbitrary text cannot
+  be written directly in the template.  Instead, they have to be
+  assigned to the user option `denote-org-capture-specifiers', which is
+  interpreted by the function `denote-org-capture'.  Example with our
+  default value:
 
   ┌────
   │ (setq denote-org-capture-specifiers "%l\n%i\n%?")
@@ -481,34 +492,44 @@ Table of Contents
   Denote’s file-naming scheme is not specific to notes or text files: it
   is useful for all sorts of files, such as multimedia and PDFs that
   form part of the user’s longer-term storage ([The file-naming
-  scheme]).  While Denote does not manage such files, it already has all
-  the mechanisms to facilitate the task of renaming them.
+  scheme]).  While Denote does not manage such files (e.g. doesn’t
+  create links to them), it already has all the mechanisms to facilitate
+  the task of renaming them.
 
-  To this end, we provide the `denote-dired-rename-file' command.  It
-  has a two-fold purpose: (i) to change the name of an existing file
-  while retaining its identifier and (ii) to write a Denote-compliant
-  file name for an item that was not created by `denote' or related
-  commands (such as an image or PDF).
 
-  The `denote-dired-rename-file' command will target the file at point
-  if it finds one in the current Dired buffer.  Otherwise it prompts
-  with minibuffer completion for a file name.  It then uses the familiar
-  prompts for a `TITLE' and `KEYWORDS' the same way the `denote' command
-  does ([Points of entry]).  As a final step, it asks for confirmation
-  before renaming the file at point, showing a message like:
+[The file-naming scheme] See section 5
+
+4.1 Rename a single file
+────────────────────────
+
+  The `denote-dired-rename-file' command renames a file and updates
+  existing front matter if appropriate.
+
+  If in Dired, the `FILE' to be renamed is the one at point, else the
+  command prompts with minibuffer completion for a target file.
+
+  If `FILE' has a Denote-compliant identifier, the command retains it
+  while updating the `TITLE' and `KEYWORDS' fields of the file name.
+  Otherwise it creates an identifier based on the file’s attribute of
+  last modification time.  If such attribute cannot be found, the
+  identifier falls back to the current date and time.
+
+  The default `TITLE' is retrieved from a line starting with a title
+  field in the file’s contents, depending on the given file type ([Front
+  matter]).  Else, the file name is used as a default value at the
+  minibuffer prompt.
+
+  As a final step after the `FILE', `TITLE', and `KEYWORDS' prompts, ask
+  for confirmation, showing the difference between old and new file
+  names.  For example:
 
   ┌────
   │ Rename sample.pdf to 20220612T052900--my-sample-title__testing.pdf? (y or n)
   └────
 
   However, if the user option `denote-dired-rename-expert' is non-nil,
-  conduct the renaming operation outright—no questions asked.
-
-  When operating on a file that has no identifier, such as `sample.pdf',
-  Denote reads the file properties to retrieve its last modification
-  time.  If the file was from a past date like 2000-11-31 it will get an
-  identifier starting with `20001131' followed by the time component
-  (per our file-naming scheme).
+  the command conducts the renaming operation outright—no questions
+  asked!
 
   The file type extension (e.g. `.pdf') is read from the underlying file
   and is preserved through the renaming process.  Files that have no
@@ -517,25 +538,96 @@ Table of Contents
   Renaming only occurs relative to the current directory.  Files are not
   moved between directories.
 
-  The final step of the `denote-dired-rename-file' command is to call
-  the special hook `denote-dired-post-rename-functions'.  Functions
-  added to that hook must accept three arguments, as explained in its
-  doc string.  For the time being, the only function we define is the
-  one which updates the underlying note’s front matter to match the new
-  file name: `denote-dired-rewrite-front-matter'.  The function takes
-  care to only operate on an actual note, instead of arbitrary files.
+  If the `FILE' has Denote-style front matter for the `TITLE' and
+  `KEYWORDS', this command asks to rewrite their values in order to
+  reflect the new input (this step always requires confirmation and the
+  underlying buffer is not saved, so consider invoking
+  `diff-buffer-with-file' to double-check the effect).  The rewrite of
+  the `FILE' and `KEYWORDS' in the front matter should not affect the
+  rest of the block.
 
-  DEVELOPMENT NOTE: the `denote-dired-rewrite-front-matter' needs to be
-  tested thoroughly.  It rewrites file contents so we have to be sure it
-  does the right thing.  To avoid any trouble, it always asks for
-  confirmation before performing the replacement.  This confirmation
-  ignores `denote-dired-rename-expert' for the time being, though we
-  might want to lift that restriction once everything works as intended.
+  If the file doesn’t have front matter, the command skips this step
+  (see the command `denote-dired-rename-file-and-add-front-matter').
+
+  This command is intended to (i) rename existing Denote notes while
+  updating their title and keywords in the front matter, (ii) rename
+  files that can benefit from Denote’s file-naming scheme.  The latter
+  is a convenience we provide, since we already have all the requisite
+  mechanisms in place (Denote does not and will not manage such files
+  though). ([Rename file and add front matter]).
+
+  The `denote-dired-rename-file' command is intended to (i) rename
+  existing Denote notes while updating their front matter, (ii) rename
+  files that can benefit from Denote’s file-naming scheme.  The latter
+  is a convenience we provide, since we already have all the requisite
+  mechanisms in place (though Denote does not—and will not—manage such
+  files).
 
 
-[The file-naming scheme] See section 5
+[Front matter] See section 6
 
-[Points of entry] See section 3
+[Rename file and add front matter] See section 4.2
+
+
+4.2 Rename file and add front matter
+────────────────────────────────────
+
+  The command `denote-dired-rename-file-and-add-front-matter' has the
+  same modalities of interaction as the `denote-dired-rename-file'
+  command ([Rename a single file]).  The difference is that it
+  unconditionally inserts front matter at the start of a file.
+
+  This command is thus suitable for a workflow where an existing
+  writable file needs to be converted into a Denote-style note.  Whereas
+  the other command does not insert front matter if one doesn’t already
+  exist.
+
+  Front matter is added when the file type extension is among the
+  supported ones (per `denote-file-type').
+
+
+[Rename a single file] See section 4.1
+
+
+4.3 Rename multiple files at once
+─────────────────────────────────
+
+  The `denote-dired-rename-marked-files' command renames marked files in
+  Dired to conform with our file-naming scheme.  The operation does the
+  following:
+
+  • the file’s existing file name is retained and becomes the `TITLE'
+    field, per Denote’s file-naming scheme;
+
+  • the `TITLE' is sluggified and downcased, per our conventions;
+
+  • an identifier is prepended to the `TITLE';
+
+  • the file’s extension is retained;
+
+  • a prompt is asked once for the `KEYWORDS' field and the input is
+    applied to all file names;
+
+  • if the file is recognized as a Denote note, its front matter is
+    rewritten to include the new keywords.  A confirmation to carry out
+    this step is performed once at the outset.  Note that the affected
+    buffers are not saved.  The user can thus check them to confirm that
+    the new front matter does not cause any problems (e.g. with the
+    command `diff-buffer-with-file').  Multiple buffers can be saved
+    with `save-some-buffers' (read its doc string).
+
+  The command `denote-dired-rename-marked-files-and-add-front-matters'
+  is like `denote-dired-rename-marked-files' but also adds front matter.
+  The additon of front matter takes place only if the file has the
+  appropriate file type extension (per the user option
+  `denote-file-type').
+
+  Buffers are not saved.  The user can thus check them to confirm that
+  the new front matter does not cause any problems (e.g. by invoking the
+  command `diff-buffer-with-file').
+
+  Multiple buffers can be saved with `save-some-buffers' (read its doc
+  string).
 
 
 5 The file-naming scheme
@@ -751,6 +843,21 @@ section 5.2
 7 Linking notes
 ═══════════════
 
+  Denote offers several commands for linking between notes.
+
+  All links target files which are Denote notes.  This means that they
+  have our file-naming scheme, are writable/regular (not directory,
+  named pipe, etc.), and use the appropriate file type extension (per
+  `denote-file-type').  Furthermore, the files need to be inside the
+  `denote-directory' or one of its subdirectories.  No other file is
+  recognised.
+
+  The following sections delve into the details.
+
+
+7.1 Adding a single link
+────────────────────────
+
   The `denote-link' command inserts a link at point to an entry
   specified at the minibuffer prompt.  Links are formatted depending on
   the file type of current note.  In Org and plain text buffers, links
@@ -773,60 +880,18 @@ section 5.2
   │ (add-hook 'find-file-hook #'denote-link-buttonize-buffer)
   └────
 
-  Denote has a major-mode-agnostic mechanism to collect all linked file
-  references in the current buffer and return them as an appropriately
-  formatted list.  This list can then be used in interactive commands.
-  The `denote-link-find-file' is such a command.  It uses minibuffer
-  completion to visit a file that is linked to from the current note.
-  The candidates have the correct metadata, which is ideal for
-  integration with other standards-compliant tools ([Extending Denote]).
-  For instance, a package such as `marginalia' will display accurate
-  annotations, while the `embark' package will be able to work its magic
-  such as in exporting the list into a filtered Dired buffer (i.e. a
-  familiar Dired listing with only the files of the current minibuffer
-  session).
+  The `denote-link-buttonize-buffer' is also an interactive function in
+  case the user needs it.
 
-  The command `denote-link-backlinks' produces a bespoke buffer which
-  displays the file name of all notes linking to the current one.  Each
-  file name appears on its own line and is buttonized so that it
-  performs the action of visiting the referenced file.  The backlinks’
-  buffer looks like this:
+  Links are created only for files which qualify as a “note” for our
+  purposes ([Linking notes]).
 
-  ┌────
-  │ Backlinks to "On being honest" (20220614T130812)
-  │ ------------------------------------------------
-  │ 
-  │ 20220614T145606--let-this-glance-become-a-stare__journal.txt
-  │ 20220616T182958--not-feeling-butterflies-in-your-stomach__journal.txt
-  └────
 
-  The backlinks’ buffer is fontified by default, though the user has
-  access to the `denote-link-fontify-backlinks' option to disable this
-  effect by setting its value to nil.
+[Linking notes] See section 7
 
-  The placement of the backlinks’ buffer is subject to the user option
-  `denote-link-backlinks-display-buffer-action'.  Due to the nature of
-  the underlying `display-buffer' mechanism, this inevitably is a
-  relatively advanced feature.  By default, the backlinks’ buffer is
-  displayed below the current window.  The doc string of our user option
-  includes a sample configuration that places the buffer in a left side
-  window instead.  Reproducing it here for the sake of convenience:
 
-  ┌────
-  │ (setq denote-link-backlinks-display-buffer-action
-  │       '((display-buffer-reuse-window
-  │ 	 display-buffer-in-side-window)
-  │ 	(side . left)
-  │ 	(slot . 99)
-  │ 	(window-width . 0.3)))
-  └────
-
-  Note that the backlinking facility uses Emacs’ built-in Xref
-  infrastructure.  On some operating systems, the user may need to add
-  certain executables to the relevant environment variable.
-
-  [Why do I get “Search failed with status 1” when I search for
-  backlinks?]
+7.2 Insert links matching a regexp
+──────────────────────────────────
 
   The command `denote-link-add-links' adds links at point matching a
   regular expression or plain string.  The links are inserted as a
@@ -882,21 +947,98 @@ section 5.2
   `\|') when done interactively but twice when called from Lisp.  What
   we show above is for interactive usage.
 
-  For convenience, the `denote-link' command has an alias called
-  `denote-link-insert-link'.  The `denote-link-backlinks' can also be
-  used as `denote-link-show-backlinks-buffer'.  While
-  `denote-link-add-links' is aliased
-  `denote-link-insert-links-matching-regexp'.  The purpose of these
-  aliases is to offer alternative, more descriptive names of select
-  commands.
+  Links are created only for files which qualify as a “note” for our
+  purposes ([Linking notes]).
 
 
-[Extending Denote] See section 10
+[Linking notes] See section 7
+
+
+7.3 Insert links from marked files in Dired
+───────────────────────────────────────────
+
+  The command `denote-link-dired-marked-notes' is similar to
+  `denote-link-add-links' in that it inserts in the buffer a typographic
+  list of links to Denote notes ([Insert links matching a regexp]).
+  Though instead of reading a regular expression, it lets the user mark
+  files in Dired and link to them.  This should be easier for users of
+  all skill levels, instead of having to write a potentially complex
+  regular expression.
+
+  If there are multiple buffers that visit a Denote note, this command
+  will ask to select one among them, using minibuffer completion.  If
+  there is only one buffer, it will operate in it outright.  If there
+  are no buffers, it will produce an error.
+
+  With optional `ID-ONLY' as a prefix argument (`C-u' by default), the
+  command inserts links with just the identifier, which is the same
+  principle as with `denote-link' and others ([Adding a single link]).
+
+  The command `denote-link-dired-marked-notes' is meant to be used from
+  a Dired buffer.
+
+  As always, links are created only for files which qualify as a “note”
+  for our purposes ([Linking notes]).
+
+
+[Insert links matching a regexp] See section 7.2
+
+[Adding a single link] See section 7.1
+
+[Linking notes] See section 7
+
+
+7.4 The backlinks’ buffer
+─────────────────────────
+
+  The command `denote-link-backlinks' produces a bespoke buffer which
+  displays the file name of all notes linking to the current one.  Each
+  file name appears on its own line and is buttonized so that it
+  performs the action of visiting the referenced file.  The backlinks’
+  buffer looks like this:
+
+  ┌────
+  │ Backlinks to "On being honest" (20220614T130812)
+  │ ------------------------------------------------
+  │ 
+  │ 20220614T145606--let-this-glance-become-a-stare__journal.txt
+  │ 20220616T182958--not-feeling-butterflies-in-your-stomach__journal.txt
+  └────
+
+  The backlinks’ buffer is fontified by default, though the user has
+  access to the `denote-link-fontify-backlinks' option to disable this
+  effect by setting its value to nil.
+
+  The placement of the backlinks’ buffer is subject to the user option
+  `denote-link-backlinks-display-buffer-action'.  Due to the nature of
+  the underlying `display-buffer' mechanism, this inevitably is a
+  relatively advanced feature.  By default, the backlinks’ buffer is
+  displayed below the current window.  The doc string of our user option
+  includes a sample configuration that places the buffer in a left side
+  window instead.  Reproducing it here for the sake of convenience:
+
+  ┌────
+  │ (setq denote-link-backlinks-display-buffer-action
+  │       '((display-buffer-reuse-window
+  │ 	 display-buffer-in-side-window)
+  │ 	(side . left)
+  │ 	(slot . 99)
+  │ 	(window-width . 0.3)))
+  └────
+
+  Note that the backlinking facility uses Emacs’ built-in Xref
+  infrastructure.  On some operating systems, the user may need to add
+  certain executables to the relevant environment variable.
+
+  [Why do I get “Search failed with status 1” when I search for
+  backlinks?]
+
 
 [Why do I get “Search failed with status 1” when I search for
 backlinks?] See section 16.8
 
-7.1 Writing metanotes
+
+7.5 Writing metanotes
 ─────────────────────
 
   A “metanote” is an entry that describes other entries who have
@@ -906,12 +1048,18 @@ backlinks?] See section 16.8
   entries from the past year to reflect on your experiences, evolution
   as a person, and the like.
 
-  The command `denote-link-add-links', which we covered extensively in
-  the previous section, is suited for this task ([Linking notes]).  You
-  will create your metanote the way you use Denote ordinarily (metanotes
-  may have the `metanote' keyword), write an introduction or however you
-  want to go about it, invoke `denote-link-add-links' to cite the notes
-  that match the given regexp, and continue writing.
+  The commands `denote-link-add-links', `denote-link-dired-marked-notes'
+  are suited for this task.
+
+  [Insert links matching a regexp].
+
+  [Insert links from marked files in Dired].
+
+  You will create your metanote the way you use Denote ordinarily
+  (metanotes may have the `metanote' keyword, among others), write an
+  introduction or however you want to go about it, invoke the command
+  which inserts multiple links at once (see the above-cited nodes), and
+  continue writing.
 
   Metanotes can serve as entry points to groupings of individual notes.
   They are not the same as a filtered list of files, i.e. what you would
@@ -925,7 +1073,41 @@ backlinks?] See section 16.8
   the knowledge derived from the deliberate self-reflection.
 
 
-[Linking notes] See section 7
+[Insert links matching a regexp] See section 7.2
+
+[Insert links from marked files in Dired] See section 7.3
+
+
+7.6 Visiting linked files via the minibuffer
+────────────────────────────────────────────
+
+  Denote has a major-mode-agnostic mechanism to collect all linked file
+  references in the current buffer and return them as an appropriately
+  formatted list.  This list can then be used in interactive commands.
+  The `denote-link-find-file' is such a command.  It uses minibuffer
+  completion to visit a file that is linked to from the current note.
+  The candidates have the correct metadata, which is ideal for
+  integration with other standards-compliant tools ([Extending Denote]).
+  For instance, a package such as `marginalia' will display accurate
+  annotations, while the `embark' package will be able to work its magic
+  such as in exporting the list into a filtered Dired buffer (i.e. a
+  familiar Dired listing with only the files of the current minibuffer
+  session).
+
+
+[Extending Denote] See section 10
+
+
+7.7 Miscellaneous information about links
+─────────────────────────────────────────
+
+  For convenience, the `denote-link' command has an alias called
+  `denote-link-insert-link'.  The `denote-link-backlinks' can also be
+  used as `denote-link-show-backlinks-buffer'.  While
+  `denote-link-add-links' is aliased
+  `denote-link-insert-links-matching-regexp'.  The purpose of these
+  aliases is to offer alternative, more descriptive names of select
+  commands.
 
 
 8 Fontification in Dired
@@ -978,7 +1160,8 @@ backlinks?] See section 16.8
   conventions ([The file-naming scheme]).  This is particularly useful
   for scenaria where, say, one wants to organise their collection of
   PDFs and multimedia in a systematic way (and, perhaps, use them as
-  attachments for the notes Denote produces).
+  attachments for the notes Denote produces if you are writing Org notes
+  and are using its standand attachments’ facility).
 
 
 [The file-naming scheme] See section 5
@@ -999,7 +1182,7 @@ backlinks?] See section 16.8
   ┌────
   │ (require 'savehist)
   │ (setq savehist-file (locate-user-emacs-file "savehist"))
-  │ (setq history-length 10000)
+  │ (setq history-length 500)
   │ (setq history-delete-duplicates t)
   │ (setq savehist-save-minibuffer-history t)
   │ (add-hook 'after-init-hook #'savehist-mode)
@@ -1428,7 +1611,7 @@ section 5.2
   │    (denote--title-prompt)
   │    '("journal")))
   │ 
-  │ ;; Denote does not define any key bindings.  This is for the user to
+  │ ;; Denote DOES NOT define any key bindings.  This is for the user to
   │ ;; decide.  For example:
   │ (let ((map global-map))
   │   (define-key map (kbd "C-c n j") #'my-denote-journal) ; our custom command
@@ -1447,7 +1630,14 @@ section 5.2
   │   ;; Note that `denote-dired-rename-file' can work from any context, not
   │   ;; just Dired bufffers.  That is why we bind it here to the
   │   ;; `global-map'.
-  │   (define-key map (kbd "C-c n r") #'denote-dired-rename-file))
+  │   (define-key map (kbd "C-c n r") #'denote-dired-rename-file)
+  │   (define-key map (kbd "C-c n R") #'denote-dired-rename-file-and-add-front-matter))
+  │ 
+  │ ;; Key bindings specifically for Dired.
+  │ (let ((map dired-mode-map))
+  │   (define-key map (kbd "C-c C-d C-i") #'denote-link-dired-marked-notes)
+  │   (define-key map (kbd "C-c C-d C-r") #'denote-dired-rename-marked-files)
+  │   (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-and-add-front-matters))
   │ 
   │ (with-eval-after-load 'org-capture
   │   (require 'denote-org-capture)
@@ -1910,13 +2100,14 @@ section 5.2
 
   Contributions to code or the manual
         Benjamin Kästner, Damien Cassou, Jack Baty, Jean-Philippe Gagné
-        Guay, Kaushal Modi, Stefan Monnier.
+        Guay, Kaushal Modi, Kyle Meyer, Peter Prevos, Philip Kaludercic,
+        Stefan Monnier.
 
   Ideas and/or user feedback
-        Alan Schmitt, Alfredo Borrás, Benjamin Kästner, Colin McLear,
-        Damien Cassou, Frank Ehmsen, Jack Baty, Kaushal Modi, M. Hadi
-        Timachi, Peter Prevos, Shreyas Ragavan, Summer Emacs, Sven
-        Seebeck, Ypot, pRot0ta1p.
+        Abin Simon, Alan Schmitt, Alfredo Borrás, Benjamin Kästner,
+        Colin McLear, Damien Cassou, Frank Ehmsen, Jack Baty, Kaushal
+        Modi, M. Hadi Timachi, Peter Prevos, Shreyas Ragavan, Summer
+        Emacs, Sven Seebeck, Taoufik, Ypot, hpgisler, pRot0ta1p.
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.

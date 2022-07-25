@@ -10,6 +10,8 @@ subed
 ..... Manual installation
 ..... use-package configuration
 .. Getting started
+.. Troubleshooting
+..... subed-mpv: Service name too long
 .. Contributions
 .. License
 
@@ -220,6 +222,18 @@ Getting started
   `subed-srt-mode', `subed-vtt-mode', and `subed-ass-mode'. When
   manually loading a mode, use those specific format modes instead of
   `subed-mode'.
+
+
+Troubleshooting
+───────────────
+
+subed-mpv: Service name too long
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  If `subed-mpv-client' reports `(error "Service name too long")', this
+  is probably because the path to the socket used to communicate with
+  MPV is too long for your operating system. You can use `M-x customize'
+  to set `subed-mpv-socket-dir' to a shorter path.
 
 
 Contributions
