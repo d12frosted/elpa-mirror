@@ -2,11 +2,12 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25.1"))
-;; Package-Commit: 0aa200022212f8fc4d76d0ae0fa19644a90f44ac
-;; Package-Version: 20220724.38
+;; Package-Commit: c364895f27c7b5a6421a7bf159851390bfc95642
+;; Package-Version: 20220725.528
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: wp processes
 ;; homepage: https://repo.or.cz/external-dict.el.git
+;; SPDX-License-Identifier: GPL-2.0-or-later
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
@@ -20,6 +21,7 @@
 
 ;;; Code:
 
+(declare-function ns-do-applescript "nsfns.m" t)
 
 (defgroup external-dict nil
   "Use external dictionary in Emacs."

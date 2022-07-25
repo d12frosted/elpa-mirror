@@ -6,7 +6,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-sideline/sideline-blame
 ;; Package-Version: 20220629.801
-;; Package-Commit: 6e9fb45caea9031554e6e2110e39e219a407779e
+;; Package-Commit: 574592a8ecc171112d4ac2575f9cac51ff5eb184
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1") (sideline "0.1.0") (vc-msg "1.1.1"))
 ;; Keywords: convenience blame

@@ -5,7 +5,7 @@
 ;; Author: Kevin W. van Rooijen
 ;; URL: https://github.com/kwrooijen/hiccup-cli
 ;; Package-Version: 20210208.652
-;; Package-Commit: b56ae0d5cd5ce3ef24ed13be5103e231c91ef4e2
+;; Package-Commit: c554f94e6aed2c755ed9e4391f5a090d6289b1ee
 
 ;; Version: 0.1.0
 ;; Keywords: tools
