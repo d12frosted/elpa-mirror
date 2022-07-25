@@ -1,0 +1,11 @@
+(pipewire .
+	  [(20220716 1933)
+	   ((emacs
+	     (28 1)))
+	   "PipeWire user interface" tar
+	   ((:commit . "8109f438550a83633db5f4bd2cf88a5feb445f82")
+	    (:authors
+	     ("Milan Zamazal" . "pdm@zamazal.org"))
+	    (:maintainer "Milan Zamazal" . "pdm@zamazal.org")
+	    (:keywords "multimedia")
+	    (:url . "https://git.zamazal.org/pdm/pipewire-0"))])

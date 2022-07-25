@@ -14,8 +14,8 @@ therefore this system is not infallible, however adjustments will
 only be made if the guess is considered reliable.  This way it
 should leave you off no worse than before.
 
-To install, M-x customize-group dtrt-indent-global, and turn on "Dtrt
-Indent Global Mode".
+To install, M-x customize-variable dtrt-indent-global-mode, and turn on
+"Dtrt Indent Global Mode".
 
 The default settings have been carefully chosen and tested to work
 reliably on a wide range of source files.  However, if it doesn't work
