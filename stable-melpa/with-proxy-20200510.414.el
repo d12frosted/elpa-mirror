@@ -5,6 +5,8 @@
 ;; Author: Gong Qijian <gongqijian@gmail.com>
 ;; Created: 2019/02/25
 ;; Version: 0.1.0
+;; Package-Version: 20200510.414
+;; Package-Commit: 93b1ed2f3060f305009fa71f4fb5bb10173a10e3
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/twlz0ne/with-proxy.el
 ;; Keywords: comm

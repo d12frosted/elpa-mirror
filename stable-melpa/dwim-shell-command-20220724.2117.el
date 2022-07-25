@@ -3,7 +3,7 @@
 ;; Author: Alvaro Ramirez
 ;; Package-Requires: ((emacs "27.1"))
 ;; Package-Version: 20220724.2117
-;; Package-Commit: c1949a73bf672614b989124118d6222c741ef93c
+;; Package-Commit: c034bd176714f656d5282728cadbfb7e258044f3
 ;; URL: https://github.com/xenodium/dwim-shell-command
 ;; Version: 0.1
 

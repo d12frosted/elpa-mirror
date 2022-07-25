@@ -17,6 +17,8 @@ License:
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
+C-c C-c ビルドを実行する。デフォルトの呼び出しはrake pdfのみだが、編集して実行すれば履歴に登録される
+
 C-c C-a ユーザーから編集者へのメッセージ擬似マーカー
 C-c C-k ユーザー注釈の擬似マーカー
 C-c C-d DTP担当へのメッセージ擬似マーカー
