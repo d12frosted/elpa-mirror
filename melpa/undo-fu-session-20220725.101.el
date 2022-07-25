@@ -7,8 +7,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-undo-fu-session
-;; Package-Version: 20220710.1043
-;; Package-Commit: 7abd8dc70730429556e75eac9de5c0f59350e986
+;; Package-Version: 20220725.101
+;; Package-Commit: a522c9a511819083bb1b1c760e92df80a246f5fd
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "28.1"))
@@ -477,7 +477,7 @@ Argument PENDING-LIST an `pending-undo-list' compatible list."
     (cond
       ((null filename)
         nil)
-      ( ;; Ignore encryped files.
+      ( ;; Ignore encrypted files.
         (and
           undo-fu-session-ignore-encrypted-files
           epa-file-handler
