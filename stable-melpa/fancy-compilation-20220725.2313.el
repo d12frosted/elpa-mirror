@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-fancy-compilation
-;; Package-Version: 20220725.932
-;; Package-Commit: fe741f7c49a849ba59b3204f5dc478783ee6f039
+;; Package-Version: 20220725.2313
+;; Package-Commit: 6d98cf908b0bbd6286a55e6bf11905010468a006
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -52,6 +52,10 @@
   "Use less verbose text upon completing compilation."
   :type 'boolean)
 
+(defcustom fancy-compilation-setup-hook nil
+  "Hooks run just after the fancy-compilation buffer has been initialized.
+Use this to set or override defaults."
+  :type 'hook)
 
 ;; ---------------------------------------------------------------------------
 ;; Faces
@@ -147,7 +151,9 @@
   ;; Avoid jumping past the last line when correcting scroll.
   (setq-local scroll-conservatively most-positive-fixnum)
   ;; A margin doesn't make sense for compilation output.
-  (setq-local scroll-margin 0))
+  (setq-local scroll-margin 0)
+
+  (run-hooks 'fancy-compilation-setup-hook))
 
 (defun fancy-compilation--compile (fn &rest args)
   "Wrap the `compile' command (FN ARGS)."

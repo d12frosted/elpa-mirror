@@ -1,8 +1,8 @@
 ;;; dired-single.el --- Reuse the current dired buffer to visit a directory
 
 ;; Version:    0.3.0
-;; Package-Version: 20211101.2319
-;; Package-Commit: b254f9b7bfc96a5eab5760a56811f2872d2c590a
+;; Package-Version: 20220726.137
+;; Package-Commit: 48532d747f0098280050721b5d016ec59c97c77c
 ;; Keywords:   dired, reuse, buffer
 ;; URL:        https://github.com/crocket/dired-single
 ;; License:    public-domain
@@ -15,6 +15,7 @@
 (eval-and-compile
   (require 'cl-lib)
   (require 'dired)
+  (require 'subr-x)
   (autoload 'dired-get-filename "dired"))
 
 ;;; **************************************************************************
@@ -99,7 +100,7 @@ a dired buffer).  If the current line represents a file, the file is visited
 in another window."
   (interactive)
   ;; use arg passed in or find name of current line
-  (let ((name (or default-dirname (dired-get-filename nil t))))
+  (when-let ((name (or default-dirname (dired-get-filename nil t))))
     (save-excursion
       (save-match-data
         ;; See if the selection is a directory or not.
