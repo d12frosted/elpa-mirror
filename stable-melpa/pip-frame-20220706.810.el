@@ -5,7 +5,7 @@
 ;; Author: Milan Zamazal <pdm@zamazal.org>
 ;; Version: 1
 ;; Package-Version: 20220706.810
-;; Package-Commit: 7a75e73f884f294c979d19a520268f2a4371861b
+;; Package-Commit: e8b16420f8e3992b068e17d2936b2b2102ed039e
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: frames
 ;; URL: https://git.zamazal.org/pdm/pip-frame
