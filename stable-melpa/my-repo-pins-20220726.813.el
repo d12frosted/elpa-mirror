@@ -4,8 +4,8 @@
 ;;; Author: Félix Baylac Jacqué <felix at alternativebit.fr>
 ;;; Maintainer: Félix Baylac Jacqué <felix at alternativebit.fr>
 ;;; Version: 0.2
-;; Package-Version: 20220717.1416
-;; Package-Commit: 3a85c415b2fd6c9146de9de6cc99fe5de629cd07
+;; Package-Version: 20220726.813
+;; Package-Commit: f460f17c524db2c815966a0b1ffe86ac450d4908
 ;;; Homepage: https://alternativebit.fr/projects/my-repo-pins/
 ;;; Package-Requires: ((emacs "26.1"))
 ;;; License:
@@ -476,7 +476,7 @@ If MAX-DEPTH is set to nil, do not use any recursion stop gap."
                   (let ((full-file (concat dir "/" file)))
 	            ;; Don't follow symlinks to other directories.
 	            (when (not (file-symlink-p full-file))
-                      (if (file-directory-p (concat full-file ".git"))
+                      (if (my-repo-pins--is-git-dir full-file)
                           ;; It's a git repo, let's stop here.
                           (setq projects (nconc projects (list full-file)))
                         ;; It's not a git repo, let's recurse into it.
@@ -503,6 +503,10 @@ If MAX-DEPTH is set to nil, do not use any recursion stop gap."
     (if max-depth
           (recurse-in-dir dir 0)
       (recurse-in-dir dir nil))))
+
+(defun my-repo-pins--is-git-dir (dir)
+  "Return non-nil if DIR is a git directory."
+  (file-exists-p (concat (file-name-as-directory dir) ".git")))
 
 (defun my-repo-pins--get-code-root-projects (code-root max-depth)
   "Retrieve the projects contained in the CODE-ROOT directory.

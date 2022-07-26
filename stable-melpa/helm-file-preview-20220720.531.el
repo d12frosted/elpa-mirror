@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/helm-file-preview
 ;; Package-Version: 20220720.531
-;; Package-Commit: bebd4e9c42543c9003984442701db2c384c21f3e
+;; Package-Commit: c7584ce5e75c7f1b7b31c820fcd30bde4614c663
 ;; Version: 0.1.5
 ;; Package-Requires: ((emacs "25.1") (helm "2.0"))
 ;; Keywords: convenience file helm preview select selection
