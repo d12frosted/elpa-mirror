@@ -2,8 +2,8 @@
 
 ;; Author: Yann Herklotz <yann@ymhg.org>
 ;; URL: https://github.com/ymherklotz/emacs-zettelkasten
-;; Package-Version: 20210830.1025
-;; Package-Commit: 9eb18ecd93895a9894970fa85b68257da647812d
+;; Package-Version: 20220727.859
+;; Package-Commit: a6c8ac8f6770e904c3ebcacc5f54a24e7b1b9b79
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "25.1") (s "1.10.0"))
 ;; Keywords: files, hypermedia, notes
@@ -14,7 +14,7 @@
 
 ;;; License:
 
-;; Copyright (C) 2020-2021  Yann Herklotz
+;; Copyright (C) 2020-2022  Yann Herklotz
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -213,12 +213,15 @@ This is deprecated in favour for `zettelkasten-list-notes'."
     (goto-char (point-max))
     (insert "\n" (zettelkasten--format-link note))))
 
-(defun zettelkasten--create-new-note-ni (title &optional parent)
+(defun zettelkasten--create-new-note-ni (title &optional parent custom-id)
   "Create a new note based on the TITLE and it's optional PARENT note.
 
-If PARENT is nil, it will not add a link from a PARENT."
+If PARENT is nil, it will not add a link from a PARENT.
+
+If CUSTOM-ID is not nil, will not generate a time-based ID but
+will use that instead."
   (let* ((note (zettelkasten--find-new-note-name
-                (format-time-string zettelkasten-file-format)))
+                (or custom-id (format-time-string zettelkasten-file-format))))
          (filename (zettelkasten--make-filename note)))
     (with-temp-buffer
       (set-visited-file-name filename)
@@ -405,6 +408,23 @@ Also see `zettelkasten--create-new-note-ni' for more information."
      title
      (unless (or prefix (not notes))
        (completing-read "Parent note: " notes nil 'match)))))
+
+(defun zettelkasten-create-new-custom-note (prefix)
+  "Create a new zettelkasten.
+
+If PREFIX is used, or if the `zettelkasten-directory' is empty,
+does not create a parent.
+
+Also see `zettelkasten--create-new-note-ni' for more information."
+  (interactive "P")
+  (let ((title (read-string "Note title: "))
+        (notes (zettelkasten--list-notes)))
+    (zettelkasten--create-new-note-ni
+     title
+     (unless (or prefix (not notes))
+       (completing-read "Parent note: " notes nil 'match))
+     (let ((id (read-string "Note ID: ")))
+       (if (string= id "") nil id)))))
 
 (defun zettelkasten-open-parent (&optional note)
   "Find the parent notes to the NOTE that is given.
