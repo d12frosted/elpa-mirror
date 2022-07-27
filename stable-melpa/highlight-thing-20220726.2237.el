@@ -4,8 +4,8 @@
 
 ;; Author: Felix Geller <fgeller@gmail.com>
 ;; Keywords: highlight thing symbol
-;; Package-Version: 20220626.831
-;; Package-Commit: f122a40ef717602937a8e083813395d423963202
+;; Package-Version: 20220726.2237
+;; Package-Commit: cdf429c41c13c22d25fe43493cc5d85cc480dba6
 ;; URL: https://github.com/fgeller/highlight-thing.el
 
 ;; This file is not part of GNU Emacs.
@@ -129,13 +129,16 @@ functionality."
 (defvar highlight-thing-timer nil
   "Timer that triggers highlighting.")
 
+(defun highlight-thing-timer-delay-changed-p ()
+  (not (time-equal-p (timer--time highlight-thing-timer)
+					 (time-convert highlight-thing-delay-seconds))))
+
 (defun highlight-thing-loop ()
   (when highlight-thing-mode
+	(when (and highlight-thing-timer
+			   (highlight-thing-timer-delay-changed-p))
+		(timer-set-idle-time highlight-thing-timer highlight-thing-delay-seconds t))
     (highlight-thing-do)))
-
-(defun highlight-thing-deactivate ()
-  (highlight-thing-remove-last)
-  (when highlight-thing-timer (cancel-timer highlight-thing-timer)))
 
 (defun highlight-thing-regexp (thing)
   (cond
@@ -238,10 +241,11 @@ functionality."
     (highlight-thing-mode 1)))
 
 (defun highlight-thing-schedule-timer ()
-  (unless highlight-thing-timer
+  (if highlight-thing-timer
+	  (when (highlight-thing-timer-delay-changed-p)
+		(timer-set-idle-time highlight-thing-timer highlight-thing-delay-seconds t))
     (setq highlight-thing-timer
-          (run-with-idle-timer
-           highlight-thing-delay-seconds t 'highlight-thing-loop))))
+          (run-with-idle-timer highlight-thing-delay-seconds t 'highlight-thing-loop))))
 
 (defun highlight-thing-list-visible-buffers ()
   (mapcan (lambda (f)
@@ -252,7 +256,6 @@ functionality."
 (define-minor-mode highlight-thing-mode
   "Minor mode that highlights things at point"
   :lighter " hlt"
-  :keymap nil
   :group 'highlight-thing
   (if highlight-thing-mode
       (highlight-thing-schedule-timer)

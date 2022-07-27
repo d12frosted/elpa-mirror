@@ -1,5 +1,5 @@
 (cov .
-     [(20220410 2247)
+     [(20220727 31)
       ((emacs
 	(24 4))
        (f
@@ -9,9 +9,9 @@
        (elquery
 	(0)))
       "Show coverage stats in the fringe." single
-      ((:commit . "8396fa82a84965cd88fa23f5b361ab80ff28e231")
+      ((:commit . "cd3e1995c596cc227124db9537792d8329ffb696")
        (:authors
 	("Adam Niederer"))
        (:maintainer "Adam Niederer")
-       (:keywords "coverage" "gcov" "c")
+       (:keywords "coverage" "gcov" "c" "lcov" "coveralls" "clover")
        (:url . "https://github.com/AdamNiederer/cov"))])
