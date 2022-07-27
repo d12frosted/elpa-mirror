@@ -2,8 +2,8 @@
 
 ;; Author: Yann Herklotz <yann@ymhg.org>
 ;; URL: https://github.com/ymherklotz/emacs-zettelkasten
-;; Package-Version: 20220727.859
-;; Package-Commit: a6c8ac8f6770e904c3ebcacc5f54a24e7b1b9b79
+;; Package-Version: 20220727.1137
+;; Package-Commit: edba7bcfdc054ad0ff1952bb525f5709a687db25
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "25.1") (s "1.10.0"))
 ;; Keywords: files, hypermedia, notes
@@ -67,6 +67,11 @@ For supported options, please consult `format-time-string'."
   :type 'string
   :group 'zettelkasten)
 
+(defcustom zettelkasten-id-regexp "[0-9]+"
+  "Regexp for IDs."
+  :type 'string
+  :group 'zettelkasten)
+
 ;;; -----------------------------
 ;;; HELPER FUNCTIONS FOR NOTE IDs
 ;;; -----------------------------
@@ -78,7 +83,9 @@ For supported options, please consult `format-time-string'."
 
 (defun zettelkasten--filename-to-id (filename)
   "Convert FILENAME to id."
-  (string-match (format "\\([0-9]*\\)\\.%s\\'" zettelkasten-extension) filename)
+  (string-match
+    (format "\\(%s\\)\\.%s\\'" zettelkasten-id-regexp zettelkasten-extension)
+    filename)
   (match-string 1 filename))
 
 (defun zettelkasten--display-for-search (note)
@@ -92,7 +99,7 @@ Meant for displaying when searching."
 
 The note may be formatted with some title, which this function
 aims to remove."
-  (string-match "[^0-9]*\\([0-9]+\\)" note)
+  (string-match (format "[^0-9]*\\(%s\\)" zettelkasten-id-regexp) note)
   (match-string 1 note))
 
 (defun zettelkasten--format-link (note &optional link-text)
@@ -145,7 +152,7 @@ Return the NUMth match.  If NUM is nil, return the 0th match."
   (mapcar #'zettelkasten--filename-to-id
           (directory-files
            (expand-file-name zettelkasten-directory) nil
-           (format "[0-9]+\\.%s$" zettelkasten-extension) t)))
+           (format "%s\\.%s$" zettelkasten-id-regexp zettelkasten-extension) t)))
 
 (defun zettelkasten--list-notes-grep ()
   "Return all the ids and titles of notes in the `zettelkasten-directory'.
@@ -163,8 +170,8 @@ This is deprecated in favour for `zettelkasten-list-notes'."
                (line-beginning-position)
                (line-end-position)))
         (when (string-match
-               (format "\\([0-9]*\\)\\.%s:#\\+TITLE: \\(.*\\)"
-                       zettelkasten-extension)
+               (format "\\(%s\\)\\.%s:#\\+TITLE: \\(.*\\)"
+                       zettelkasten-id-regexp zettelkasten-extension)
                current-string)
           (setq matched-string (concat (match-string 1 current-string) ": "
                                        (match-string 2 current-string)))

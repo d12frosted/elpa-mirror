@@ -1,15 +1,15 @@
-;;; tangonov-theme.el --- A 256 color dark theme featuring bright pastels
+;;; tangonov-theme.el --- A 256 color dark theme featuring bright pastels -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2022 Trevor Richards
 
 ;; Author: Trevor Richards <trev@trevdev.ca>
 ;; Maintainer: Trevor Richards <trev@trevdev.ca>
 ;; URL: https://github.com/trev-dev/tangonov-theme
-;; Package-Version: 20220726.358
-;; Package-Commit: 6d6c3e89a01e6527168ea2efcbcfe2f32f0c908f
+;; Package-Version: 20220727.1356
+;; Package-Commit: b07f75382cdbba6c26e95bfe96a78827ed702be3
 ;; Created: 20th July, 2022
 ;; Keywords: faces, theme, dark
-;; Version: 1.0.3
+;; Version: 1.0.4
 ;; Package-Requires: ((emacs "25"))
 
 ;; License: GPL3
@@ -297,6 +297,44 @@ Alpha should be a float between 0 and 1."
    `(erc-my-nick-prefix-face ((,spec (:inherit 'erc-my-nick-face))))
    `(erc-notice-face ((,spec (:foreground ,gray2))))
    `(erc-prompt-face ((,spec (:foreground ,cyan :weight bold))))
+   `(evil-ex-info ((,spec (:foreground ,red :slant italic))))
+   `(evil-ex-search
+     ((,spec (:background ,gray1 :foreground ,cyan :weight bold))))
+   `(evil-ex-substitute-matches
+     ((,spec (:background ,gray1 :foreground
+                          ,red :weight bold :strike-through t))))
+   `(evil-ex-substitute-replacement
+     ((,spec (:background ,gray1 :foreground ,green :weight bold))))
+   `(evil-search-highlight-persist-highlight-face
+     ((,spec (:inherit 'lazy-highlight))))
+   `(evil-mc-cursor-default-face
+     ((,spec (:background ,magenta :foreground ,gray1 :inverse-video nil))))
+   `(evil-mc-region-face ((,spec (:inherit 'region))))
+   `(evil-mc-cursor-bar-face
+     ((,spec (:height 1 :background ,magenta :foreground ,gray1))))
+   `(evil-mc-cursor-hbar-face ((,spec (:underline `(:color ,cyan)))))
+   `(evil-snipe-first-match-face
+     ((,spec (:foreground ,blue :background
+                          ,(tangonov-darken blue 0.5) :weight bold))))
+   `(evil-snipe-matches-face
+     ((,spec (:foreground highlight :underline t :weight bold))))
+   `(evil-goggles-delete-face
+     ((,spec (:foreground ,(tangonov-darken red 0.5) :background ,red))))
+;; `(evil-goggles-join-face ((,spec ())))
+;; `(evil-goggles-fill-and-move-face ((,spec ())))
+   `(evil-goggles-paste-face
+     ((,spec (:foreground ,(tangonov-darken green 0.5) :background ,green))))
+;; `(evil-goggles-shift-face ((,spec ())))
+;; `(evil-goggles-surround-face ((,spec ())))
+;; `(evil-goggles-commentary-face ((,spec ())))
+;; `(evil-goggles-nerd-commenter-face ((,spec ())))
+;; `(evil-goggles-replace-with-register-face ((,spec ())))
+;; `(evil-goggles-set-marker-face ((,spec ())))
+`(evil-goggles-undo-redo-add-face ((,spec (:inherit 'evil-goggles-paste-face))))
+`(evil-goggles-undo-redo-remove-face ((,spec (:inherit 'evil-goggles-delete-face))))
+;;`(evil-goggles-undo-redo-change-face ((,spec ())))
+`(evil-goggles-record-macro-face
+  ((,spec (:foreground ,(tangonov-darken yellow 0.5) :background ,yellow))))
    ;; Font Lock
    `(font-lock-warning-face ((,spec (:inherit 'warning))))
    `(font-lock-function-name-face ((,spec (:foreground ,blue))))
@@ -362,6 +400,8 @@ Alpha should be a float between 0 and 1."
    `(org-level-6 ((,spec (:foreground ,magenta))))
    `(org-level-7 ((,spec (:foreground ,teal))))
    `(org-level-8 ((,spec (:foreground ,violet))))
+   `(org-headline-done ((,spec (:foreground ,gray2))))
+   `(org-table ((,spec (:foreground ,magenta))))
    `(org-todo ((,spec (:foreground ,orange))))
    `(org-done ((,spec (:foreground ,gray2))))
    `(org-drawer ((,spec (:foreground ,gray2))))
