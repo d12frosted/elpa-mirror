@@ -4,7 +4,7 @@
 ;; Author: Jeremie Dimino <jeremie@dimino.org>
 ;; URL: https://github.com/ocaml-community/utop
 ;; Package-Version: 20220719.2111
-;; Package-Commit: f9b5ec7266112cfadfbb3b6e40ecf07ff10f3f31
+;; Package-Commit: bbd9a6ed45c8de8d50adcd5d4d845bdba212db63
 ;; Licence: BSD3
 ;; Version: 1.11
 ;; Package-Requires: ((emacs "26") (tuareg "2.2.0"))

@@ -1,11 +1,11 @@
-;;; mocker.el --- mocking framework for emacs
+;;; mocker.el --- mocking framework for emacs -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2011  Yann Hodique.
 
 ;; Author: Yann Hodique <yann.hodique@gmail.com>
 ;; Keywords: lisp, testing
-;; Package-Version: 20210115.157
-;; Package-Commit: 5b01b3cc51388faf1ba823683c3600790099c84c
+;; Package-Version: 20220727.1452
+;; Package-Commit: 4bd8d56eb4c3a1fcbbcdbf616f1b43e076b13eee
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "25.1"))
 
