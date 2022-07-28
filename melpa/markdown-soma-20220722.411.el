@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/markdown-soma
 ;; Package-Version: 20220722.411
-;; Package-Commit: 1d1242124ba44672c760884a3199044b23353206
+;; Package-Commit: 01e6ebb26e8c9c88785a0c7a4fd43db808fd19a5
 ;; Keywords: wp, docs, text, markdown
 ;; Version: 0.2.4
 ;; Package-Requires: ((emacs "25") (s "1.11.0") (dash "2.19.1") (f "0.20.0"))

@@ -4,23 +4,25 @@ Source:  https://github.com/redguardtoo/wucuo.git
 
 Updating /mnt/store/melpa/working/wucuo/
 Checking out origin/HEAD
-Checking out 412cab0c4a9ce987c1b109b6cdd3de2f7b9bd6d6
-Checking out 412cab0c4a9ce987c1b109b6cdd3de2f7b9bd6d6
+Checking out a7fe5428c88522a121c22b5811cb499a16fd8fa8
+Checking out a7fe5428c88522a121c22b5811cb499a16fd8fa8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/wucuo/
-  to /tmp/wucuokENzkw/wucuo-20220526.1431
+  to /tmp/wucuob6oBUE/wucuo-20220728.1358
     wucuo-flyspell-html-verify.el -> wucuo-flyspell-html-verify.el
     wucuo-flyspell-org-verify.el -> wucuo-flyspell-org-verify.el
     wucuo-sdk.el -> wucuo-sdk.el
     wucuo.el -> wucuo.el
-Created wucuo-20220526.1431.tar containing:
-  wucuo-20220526.1431/
-  wucuo-20220526.1431/wucuo-flyspell-html-verify.el
-  wucuo-20220526.1431/wucuo-flyspell-org-verify.el
-  wucuo-20220526.1431/wucuo-pkg.el
-  wucuo-20220526.1431/wucuo-sdk.el
-  wucuo-20220526.1431/wucuo.el
-Built wucuo in 6.313s, finished at 2022-07-28T13:33:00+0000
+Created wucuo-20220728.1358.tar containing:
+  wucuo-20220728.1358/
+  wucuo-20220728.1358/wucuo-flyspell-html-verify.el
+  wucuo-20220728.1358/wucuo-flyspell-org-verify.el
+  wucuo-20220728.1358/wucuo-pkg.el
+  wucuo-20220728.1358/wucuo-sdk.el
+  wucuo-20220728.1358/wucuo.el
+Built wucuo in 7.184s, finished at 2022-07-28T17:28:45+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 384 Jul 28 13:32 packages/wucuo-20220526.1431.entry
  40K -rw-r--r-- 1 root root 40K Jul 28 13:32 packages/wucuo-20220526.1431.tar
+4.0K -rw-r--r-- 1 root root 384 Jul 28 17:28 packages/wucuo-20220728.1358.entry
+ 40K -rw-r--r-- 1 root root 40K Jul 28 17:28 packages/wucuo-20220728.1358.tar

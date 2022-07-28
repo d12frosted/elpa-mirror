@@ -4,6 +4,8 @@
 
 ;; Author: Hiroaki Otsu <ootsuhiroaki@gmail.com>
 ;; Keywords: widgets
+;; Package-Version: 20141129.105
+;; Package-Commit: 11c9170d1f7b343233f7716d4c0a62be024c1654
 ;; URL: https://github.com/aki2o/emacs-date-field
 ;; Version: 0.0.1
 ;; Package-Requires: ((dash "2.9.0") (log4e "0.2.0") (yaxception "0.3.2"))

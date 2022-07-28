@@ -4,7 +4,7 @@
 ;;
 ;; Version: 0.1.0
 ;; Package-Version: 20220629.817
-;; Package-Commit: 3f051e42288ddfe4cd7cd0ee62efad90227de24b
+;; Package-Commit: 173e4d632c94af6670869729c09bfb8ba484d257
 ;; Keywords: unix tools
 ;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/redguardtoo/shellcop
