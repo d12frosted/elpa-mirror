@@ -3,20 +3,3 @@ Fetcher: github
 Source:  https://github.com/emacs-pe/docker-tramp.el.git
 
 Updating /mnt/store/melpa/working/docker-tramp/
-Checking out origin/HEAD
-Checking out 930d7b46c180d8a13240a028c1b40af84f2a3219
-Checking out 930d7b46c180d8a13240a028c1b40af84f2a3219
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/docker-tramp/
-  to /tmp/docker-trampE4LAGv/docker-tramp-20220219.420
-    docker-tramp-compat.el -> docker-tramp-compat.el
-    docker-tramp.el -> docker-tramp.el
-Created docker-tramp-20220219.420.tar containing:
-  docker-tramp-20220219.420/
-  docker-tramp-20220219.420/docker-tramp-compat.el
-  docker-tramp-20220219.420/docker-tramp-pkg.el
-  docker-tramp-20220219.420/docker-tramp.el
-Built docker-tramp in 6.450s, finished at 2022-07-28T04:30:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 434 Jul 28 04:30 packages/docker-tramp-20220219.420.entry
- 20K -rw-r--r-- 1 root root 20K Jul 28 04:30 packages/docker-tramp-20220219.420.tar

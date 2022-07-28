@@ -2,8 +2,8 @@
 
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; URL: https://github.com/nlamirault/gotest.el
-;; Package-Version: 20220209.1739
-;; Package-Commit: 78be56c0f210224b1e3a7d58239e2a32f8f84bf4
+;; Package-Version: 20220728.750
+;; Package-Commit: 2ec82dcc70d5f6aa22f66b44f8b537be33bd7903
 ;; Version: 0.14.0
 ;; Keywords: languages, go, tests
 
@@ -46,6 +46,16 @@
   "Display debugging information during test execution."
   :type 'boolean
   :group 'gotest)
+
+(defvar-local go-test-go-command nil
+  "The 'go' command for 'go test' that should be used instead of `go-command'.
+
+This variable is buffer-local, set using .dir-locals.el for example.")
+
+(defvar-local go-run-go-command nil
+  "The 'go' command for 'go run' that should be used instead of `go-command'.
+
+This variable is buffer-local, set using .dir-locals.el for example.")
 
 (defcustom go-test-gb-command "gb"
   "The 'gb' command.
@@ -210,9 +220,10 @@ See also: `compilation-error-regexp-alist'."
   "Return the command to launch unit test.
 `ARGS' corresponds to go command line arguments.
 When `ENV' concatenate before command."
-  (if env
-      (s-concat env " " go-command " test " args)
-    (s-concat go-command " test " args)))
+  (let ((command-args (s-concat (or go-test-go-command go-command) " test " args)))
+    (if env
+        (s-concat env " " command-args)
+      command-args)))
 
 
 (defun go-test--gb-get-program (args)
@@ -397,7 +408,7 @@ For example, if the current buffer is `foo.go', the buffer for
 (defun go-test--go-run-get-program (args)
   "Return the command to launch go run.
 `ARGS' corresponds to go command line arguments."
-  (s-concat go-command " run " args))
+  (s-concat (or go-run-go-command go-command) " run " args))
 
 (defun go-test--go-run-arguments ()
   "Arguments for go run."

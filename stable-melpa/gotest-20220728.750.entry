@@ -1,5 +1,5 @@
 (gotest .
-	[(20220209 1739)
+	[(20220728 750)
 	 ((emacs
 	   (24 3))
 	  (s
@@ -9,7 +9,7 @@
 	  (go-mode
 	   (1 5 0)))
 	 "Launch GO unit tests" single
-	 ((:commit . "78be56c0f210224b1e3a7d58239e2a32f8f84bf4")
+	 ((:commit . "2ec82dcc70d5f6aa22f66b44f8b537be33bd7903")
 	  (:authors
 	   ("Nicolas Lamirault" . "nicolas.lamirault@gmail.com"))
 	  (:maintainer "Nicolas Lamirault" . "nicolas.lamirault@gmail.com")
