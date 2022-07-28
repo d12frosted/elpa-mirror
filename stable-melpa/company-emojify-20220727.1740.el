@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/company-emojify
-;; Package-Version: 20220704.647
-;; Package-Commit: 1b3f944973eb0393e3bb63a88659385ade0ea6cc
+;; Package-Version: 20220727.1740
+;; Package-Commit: cc3ae96fbafa51d71fde802fa3c1e5fad9402158
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "26.1") (company "0.8.0") (emojify "1.2.1") (ht "2.0"))
 ;; Keywords: convenience emoji company emojify
@@ -44,6 +44,11 @@
   :prefix "company-emojify-"
   :group 'tool
   :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/company-emojify"))
+
+(defcustom company-emojify-insert-unicode t
+  "Replace the :shortcode: with the real Unicode character upon completion."
+  :type 'boolean
+  :group 'company-emojify)
 
 (defcustom company-emojify-emoji-styles emojify-emoji-styles
   "Styles same with variable `emojify-emoji-styles' but limit to this package."
@@ -161,7 +166,15 @@ Arguments COMMAND, ARG and IGNORED are standard arguments from `company-mode`."
     (prefix (company-grab "\:[a-zA-Z0-9-_+]*"))
     (candidates (company-emojify--candidates))
     (annotation (company-emojify--annotation arg))
-    (doc-buffer (company-emojify--doc-buffer arg))))
+    (doc-buffer (company-emojify--doc-buffer arg))
+    (post-completion
+     (kill-region (- (point) (length arg) 1) (point))
+     (if company-emojify-insert-unicode
+         (let* ((data (emojify-get-emoji arg))
+                (type "unicode")
+                (display (when (hash-table-p data) (ht-get data type))))
+           (insert display))
+       (insert arg)))))
 
 (provide 'company-emojify)
 ;;; company-emojify.el ends here

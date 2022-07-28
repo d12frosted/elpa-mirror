@@ -5,7 +5,7 @@
 ;; Author: Yann Hodique <yann.hodique@gmail.com>
 ;; Keywords: lisp, testing
 ;; Package-Version: 20220727.1452
-;; Package-Commit: 4bd8d56eb4c3a1fcbbcdbf616f1b43e076b13eee
+;; Package-Commit: e455599f48bad7d73fd445e70a3acf4b44c2f5c1
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "25.1"))
 
