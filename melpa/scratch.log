@@ -1,9 +1,11 @@
 Package: scratch
-Fetcher: github
-Source:  https://github.com/ieure/scratch-el.git
+Fetcher: git
+Source:  https://codeberg.org/emacs-weirdware/scratch.git
 
-Updating /mnt/store/melpa/working/scratch/
+Cloning https://codeberg.org/emacs-weirdware/scratch.git to /mnt/store/melpa/working/scratch/
 Checking out origin/HEAD
-Checking out 39235696ad0b0137fda24e7676a61d33d50b6aad
-Note: scratch :files spec is equivalent to the default.
-No matching file(s) found in /mnt/store/melpa/working/scratch/ using (scratch.el)
+Checking out f000648c9663833a76a8de9b1e78c99a9d698e48
+Built scratch in 6.218s, finished at 2022-07-28T13:16:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 8.0K Jul 28 13:16 packages/scratch-20220319.1705.el
+4.0K -rw-r--r-- 1 root root  364 Jul 28 13:16 packages/scratch-20220319.1705.entry

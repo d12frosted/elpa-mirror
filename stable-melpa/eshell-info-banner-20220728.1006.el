@@ -3,8 +3,8 @@
 ;; Author: Lucien Cartier-Tilet <lucien@phundrak.com>
 ;; Maintainer: Lucien Cartier-Tilet <lucien@phundrak.com>
 ;; Version: 0.8.8
-;; Package-Version: 20220531.940
-;; Package-Commit: b7f2bfc0137be9cdc3dfe26a71e1984d3c3bcdc4
+;; Package-Version: 20220728.1006
+;; Package-Commit: 2f4e59ea7ac2129b175af2b6acf353b29687fb9f
 ;; Package-Requires: ((emacs "25.1") (s "1"))
 ;; Homepage: https://github.com/Phundrak/eshell-info-banner.el
 
@@ -141,6 +141,21 @@
   :group 'eshell-info-banner
   :type 'list)
 
+(defcustom eshell-info-banner-filter-duplicate-partitions nil
+  "Whether to filter duplicate partitions.
+
+Two partitions are considered duplicate if they have the same
+size and amount of space used."
+  :group 'eshell-info-banner
+  :type 'boolean)
+
+(defcustom eshell-info-banner-exclude-partitions nil
+  "List of patterns to exclude from the partition list.
+
+Patterns are matched against the partition name with
+`string-match-p'."
+  :group 'eshell-info-banner
+  :type '(repeat string))
 
 (defmacro eshell-info-banner--executable-find (program)
   "Find PROGRAM executable, possibly on a remote machine.
@@ -419,23 +434,51 @@ Return detected partitions as a list of structs.  See
 chosen.  Relies on the `df' command."
   (eshell-info-banner--get-mounted-partitions-df 8))
 
-(defun eshell-info-banner--get-mounted-partitions ()
+(defun eshell-info-banner--get-mounted-partitions-1 ()
   "Detect mounted partitions on the system.
 
 Return detected partitions as a list of structs."
   (if eshell-info-banner-use-duf
       (eshell-info-banner--get-mounted-partitions-duf)
     (pcase system-type
-       ((or 'gnu 'gnu/linux 'gnu/kfreebsd 'berkeley-unix)
-        (eshell-info-banner--get-mounted-partitions-gnu))
-       ((or 'ms-dos 'windows-nt 'cygwin)
-        (eshell-info-banner--get-mounted-partitions-windows))
-       ('darwin
-        (eshell-info-banner--get-mounted-partitions-darwin))
-       (other
-        (progn
+      ((or 'gnu 'gnu/linux 'gnu/kfreebsd 'berkeley-unix)
+       (eshell-info-banner--get-mounted-partitions-gnu))
+      ((or 'ms-dos 'windows-nt 'cygwin)
+       (eshell-info-banner--get-mounted-partitions-windows))
+      ('darwin
+       (eshell-info-banner--get-mounted-partitions-darwin))
+      (other
+       (progn
          (warn "Partition detection for %s not yet supported." other)
          nil)))))
+
+(defun eshell-info-banner--get-mounted-partitions ()
+  "Detect mounted partitions on the system.
+
+Take `eshell-info-banner-filter-duplicate-partitions' and
+`eshell-info-banner-exclude-partitions' into account."
+  (let ((partitions (eshell-info-banner--get-mounted-partitions-1)))
+    (when eshell-info-banner-filter-duplicate-partitions
+      (setq partitions
+            (cl-loop for partition in partitions
+                     with used = nil
+                     for signature =
+                     (format "%d-%d"
+                             (eshell-info-banner--mounted-partitions-size partition)
+                             (eshell-info-banner--mounted-partitions-used partition))
+                     unless (member signature used)
+                     collect partition and do (push signature used))))
+    (when eshell-info-banner-exclude-partitions
+      (setq partitions
+            (seq-filter (lambda (partition)
+                          (let ((path (eshell-info-banner--mounted-partitions-path
+                                       partition)))
+                            (not (seq-some
+                                  (lambda (pattern)
+                                    (string-match-p pattern path))
+                                  eshell-info-banner-exclude-partitions))))
+                        partitions)))
+    partitions))
 
 (defun eshell-info-banner--partition-to-string (partition text-padding bar-length)
   "Display a progress bar showing how full a PARTITION is.

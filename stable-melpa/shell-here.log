@@ -1,8 +1,11 @@
 Package: shell-here
-Fetcher: github
-Source:  https://github.com/ieure/shell-here.git
+Fetcher: git
+Source:  https://codeberg.org/emacs-weirdware/shell-here.git
 
-Updating /mnt/store/melpa/working/shell-here/
+Cloning https://codeberg.org/emacs-weirdware/shell-here.git to /mnt/store/melpa/working/shell-here/
 Checking out origin/HEAD
-Checking out 9e38f370fd0a650fc497a95ff19b1e78711b02ab
-No matching file(s) found in /mnt/store/melpa/working/shell-here/ using default spec
+Checking out eeb437ff26d62a5009046b1b3b4503b768e3131a
+Built shell-here in 6.224s, finished at 2022-07-28T13:17:19+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jul 28 13:17 packages/shell-here-20220102.1703.el
+4.0K -rw-r--r-- 1 root root  330 Jul 28 13:17 packages/shell-here-20220102.1703.entry

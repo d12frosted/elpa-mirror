@@ -4,6 +4,8 @@
 
 ;; Author: Mario Rodas <marsam@users.noreply.github.com>
 ;; URL: https://github.com/emacs-pe/docean.el
+;; Package-Version: 20180605.1744
+;; Package-Commit: bbe2298fd21f7876fc2d5c52a69b931ff59df979
 ;; Keywords: convenience
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5") (request "0.2.0"))
