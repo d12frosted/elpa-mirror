@@ -17,9 +17,7 @@
 
 ;; Author: Dmitry Moskowski
 ;; Keywords: tools, convenience
-;; Package-Commit: c3794bf7bdb8fdb3db90db41619dda4e7d3dd7b9
-;; Package-Version: 20210412.1541
-;; Package-X-Original-Version: 20170501.112
+;; Package-Version: 20170501.112
 ;; Homepage: https://github.com/corpix/ob-blockdiag.el
 
 ;; This file is NOT part of GNU Emacs.
@@ -74,6 +72,10 @@
         (let
             ((exit-code (apply 'call-process tool nil buffer nil (append args (list data-file)))))
           (if (= 0 exit-code) nil (error (format error-template tool exit-code buffer-name))))))))
+
+(provide 'ob-blockdiag)
+;;; ob-blockdiag.el ends here
+error-template tool exit-code buffer-name))))))))
 
 (provide 'ob-blockdiag)
 ;;; ob-blockdiag.el ends here

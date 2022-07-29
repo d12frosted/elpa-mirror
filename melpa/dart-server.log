@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/bradyt/dart-server.git
 
 Updating /mnt/store/melpa/working/dart-server/
-Checking out origin/HEAD
-Checking out 75562baf9a89b7e314bc2f795f6ecdc5d1f2cc8c
-Built dart-server in 5.586s, finished at 2022-07-28T23:46:28+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 58K Jul 28 23:46 packages/dart-server-20210501.1445.el
-4.0K -rw-r--r-- 1 root root 511 Jul 28 23:46 packages/dart-server-20210501.1445.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

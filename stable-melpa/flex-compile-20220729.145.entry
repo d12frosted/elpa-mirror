@@ -1,5 +1,5 @@
 (flex-compile .
-	      [(20220205 205)
+	      [(20220729 145)
 	       ((emacs
 		 (26 1))
 		(dash
@@ -7,7 +7,7 @@
 		(buffer-manage
 		 (1 1)))
 	       "Run, evaluate and compile across many languages" tar
-	       ((:commit . "2da0e5e791896810747c710276ff3a1d0465d843")
+	       ((:commit . "cf28cf68f025b0090f9a8ae82326b647dced2d66")
 		(:authors
 		 ("Paul Landes"))
 		(:maintainer "Paul Landes")

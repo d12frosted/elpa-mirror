@@ -4,11 +4,11 @@ Source:  https://github.com/plandes/flex-compile.git
 
 Updating /mnt/store/melpa/working/flex-compile/
 Checking out origin/HEAD
-Checking out 2da0e5e791896810747c710276ff3a1d0465d843
-Checking out 2da0e5e791896810747c710276ff3a1d0465d843
+Checking out cf28cf68f025b0090f9a8ae82326b647dced2d66
+Checking out cf28cf68f025b0090f9a8ae82326b647dced2d66
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flex-compile/
-  to /tmp/flex-compileW3ckxc/flex-compile-20220205.205
+  to /tmp/flex-compileB18ymJ/flex-compile-20220729.145
     flex-compile-base.el -> flex-compile-base.el
     flex-compile-choice-program.el -> flex-compile-choice-program.el
     flex-compile-cli.el -> flex-compile-cli.el
@@ -27,28 +27,30 @@ Copying files (->) and directories (=>)
     flex-compile-xml-validate.el -> flex-compile-xml-validate.el
     flex-compile.el -> flex-compile.el
     flex-compiler.el -> flex-compiler.el
-Created flex-compile-20220205.205.tar containing:
-  flex-compile-20220205.205/
-  flex-compile-20220205.205/flex-compile-base.el
-  flex-compile-20220205.205/flex-compile-choice-program.el
-  flex-compile-20220205.205/flex-compile-cli.el
-  flex-compile-20220205.205/flex-compile-clojure.el
-  flex-compile-20220205.205/flex-compile-comint.el
-  flex-compile-20220205.205/flex-compile-command.el
-  flex-compile-20220205.205/flex-compile-config.el
-  flex-compile-20220205.205/flex-compile-ess.el
-  flex-compile-20220205.205/flex-compile-make.el
-  flex-compile-20220205.205/flex-compile-manage.el
-  flex-compile-20220205.205/flex-compile-org-export.el
-  flex-compile-20220205.205/flex-compile-pkg.el
-  flex-compile-20220205.205/flex-compile-python.el
-  flex-compile-20220205.205/flex-compile-repl.el
-  flex-compile-20220205.205/flex-compile-script.el
-  flex-compile-20220205.205/flex-compile-single-buffer.el
-  flex-compile-20220205.205/flex-compile-xml-validate.el
-  flex-compile-20220205.205/flex-compile.el
-  flex-compile-20220205.205/flex-compiler.el
-Built flex-compile in 11.334s, finished at 2022-07-29T00:00:07+0000
+Created flex-compile-20220729.145.tar containing:
+  flex-compile-20220729.145/
+  flex-compile-20220729.145/flex-compile-base.el
+  flex-compile-20220729.145/flex-compile-choice-program.el
+  flex-compile-20220729.145/flex-compile-cli.el
+  flex-compile-20220729.145/flex-compile-clojure.el
+  flex-compile-20220729.145/flex-compile-comint.el
+  flex-compile-20220729.145/flex-compile-command.el
+  flex-compile-20220729.145/flex-compile-config.el
+  flex-compile-20220729.145/flex-compile-ess.el
+  flex-compile-20220729.145/flex-compile-make.el
+  flex-compile-20220729.145/flex-compile-manage.el
+  flex-compile-20220729.145/flex-compile-org-export.el
+  flex-compile-20220729.145/flex-compile-pkg.el
+  flex-compile-20220729.145/flex-compile-python.el
+  flex-compile-20220729.145/flex-compile-repl.el
+  flex-compile-20220729.145/flex-compile-script.el
+  flex-compile-20220729.145/flex-compile-single-buffer.el
+  flex-compile-20220729.145/flex-compile-xml-validate.el
+  flex-compile-20220729.145/flex-compile.el
+  flex-compile-20220729.145/flex-compiler.el
+Built flex-compile in 7.391s, finished at 2022-07-29T03:54:17+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  413 Jul 29 00:00 packages/flex-compile-20220205.205.entry
 140K -rw-r--r-- 1 root root 140K Jul 29 00:00 packages/flex-compile-20220205.205.tar
+4.0K -rw-r--r-- 1 root root  413 Jul 29 03:54 packages/flex-compile-20220729.145.entry
+140K -rw-r--r-- 1 root root 140K Jul 29 03:54 packages/flex-compile-20220729.145.tar
