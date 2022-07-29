@@ -5,7 +5,7 @@
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
 ;; Package-Version: 20220715.1509
-;; Package-Commit: bb327cb9707787c8f1dbcb2d219f6cbceb553a96
+;; Package-Commit: f38ca723971cb46a57541947417f24549ff41fa9
 ;; Version: 3.0.0
 ;; Keywords: languages, lisp
 ;; Package-Requires: ((clojure-mode "3.0"))

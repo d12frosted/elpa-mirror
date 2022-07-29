@@ -3,3 +3,42 @@ Fetcher: git
 Source:  https://codeberg.org/martianh/mastodon.el
 
 Updating /mnt/store/melpa/working/mastodon/
+Checking out origin/HEAD
+Checking out c06f1a14cceb02ba702c1a67d6ba97f3badc2a7b
+Checking out c06f1a14cceb02ba702c1a67d6ba97f3badc2a7b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mastodon/
+  to /tmp/mastodonOYp6MW/mastodon-20220727.854
+  ! lisp/mastodon-async.el -> mastodon-async.el
+  ! lisp/mastodon-auth.el -> mastodon-auth.el
+  ! lisp/mastodon-client.el -> mastodon-client.el
+  ! lisp/mastodon-discover.el -> mastodon-discover.el
+  ! lisp/mastodon-http.el -> mastodon-http.el
+  ! lisp/mastodon-inspect.el -> mastodon-inspect.el
+  ! lisp/mastodon-media.el -> mastodon-media.el
+  ! lisp/mastodon-notifications.el -> mastodon-notifications.el
+  ! lisp/mastodon-profile.el -> mastodon-profile.el
+  ! lisp/mastodon-search.el -> mastodon-search.el
+  ! lisp/mastodon-tl.el -> mastodon-tl.el
+  ! lisp/mastodon-toot.el -> mastodon-toot.el
+  ! lisp/mastodon.el -> mastodon.el
+Created mastodon-20220727.854.tar containing:
+  mastodon-20220727.854/
+  mastodon-20220727.854/mastodon-async.el
+  mastodon-20220727.854/mastodon-auth.el
+  mastodon-20220727.854/mastodon-client.el
+  mastodon-20220727.854/mastodon-discover.el
+  mastodon-20220727.854/mastodon-http.el
+  mastodon-20220727.854/mastodon-inspect.el
+  mastodon-20220727.854/mastodon-media.el
+  mastodon-20220727.854/mastodon-notifications.el
+  mastodon-20220727.854/mastodon-pkg.el
+  mastodon-20220727.854/mastodon-profile.el
+  mastodon-20220727.854/mastodon-search.el
+  mastodon-20220727.854/mastodon-tl.el
+  mastodon-20220727.854/mastodon-toot.el
+  mastodon-20220727.854/mastodon.el
+Built mastodon in 9.192s, finished at 2022-07-29T15:59:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  391 Jul 29 15:59 packages/mastodon-20220727.854.entry
+260K -rw-r--r-- 1 root root 260K Jul 29 15:59 packages/mastodon-20220727.854.tar
