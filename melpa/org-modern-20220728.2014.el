@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.4
-;; Package-Version: 20220625.1302
-;; Package-Commit: 239c02aa99dc52755edf38d5e9c9e986683c4249
+;; Package-Version: 20220728.2014
+;; Package-Commit: f336d5a625fc423b08c6bf7020ceaf8bcbf2eb33
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
@@ -512,7 +512,8 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
   :group 'org-modern
   (cond
    (org-modern-mode
-    (unless (fringe-bitmap-p 'org-modern--block-inner)
+    (when (and (fboundp 'fringe-bitmap-p)
+               (not (fringe-bitmap-p 'org-modern--block-inner)))
       (let* ((g (ceiling (frame-char-height) 1.8))
              (h (- (default-line-height) g)))
         (define-fringe-bitmap 'org-modern--block-inner

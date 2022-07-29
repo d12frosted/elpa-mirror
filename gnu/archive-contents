@@ -285,16 +285,18 @@
 	  (:keywords "brief" "emulations" "crisp")
 	  (:url . "http://elpa.gnu.org/packages/brief.html"))])
  (buffer-env .
-	     [(0 3)
+	     [(0 4)
 	      ((emacs
-		(27 1)))
+		(27 1))
+	       (compat
+		(28 1)))
 	      "Buffer-local process environments" tar
 	      ((:url . "https://github.com/astoff/buffer-env")
 	       (:keywords "processes" "tools")
 	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	       (:authors
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
-	       (:commit . "ba1c9d24d3f1ba58445cbf1f762ba6859b66f6bf"))])
+	       (:commit . "7c176d043445ea94fe924a715158c25b91ec4776"))])
  (buffer-expose .
 		[(0 4 3)
 		 ((emacs
