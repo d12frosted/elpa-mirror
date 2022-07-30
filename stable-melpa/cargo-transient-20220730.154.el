@@ -6,8 +6,8 @@
 ;; Maintainer: Peter Stuart <peter@peterstuart.org>
 ;; Created: 6 Jun 2022
 ;; URL: https://github.com/peterstuart/cargo-transient
-;; Package-Version: 20220714.128
-;; Package-Commit: 69b56ef92cac91384b21dbeed370646285288517
+;; Package-Version: 20220730.154
+;; Package-Commit: 1755da9c1cedde6026a0a9e7fd0fe98ed2d30dbb
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "28.1"))
 
@@ -72,8 +72,13 @@ It is equivalent to `project-compilation-buffer-name-function'."
   :group 'cargo-transient
   :type '(choice (const :tag "Default" nil)
                  (const :tag "Prefixed with root directory name"
-                        project-prefixed-buffer-name)
+                        cargo-transient-project-prefixed-buffer-name)
                  (function :tag "Custom function")))
+
+(defun cargo-transient-project-prefixed-buffer-name (mode)
+  (let* ((project           (project-current))
+         (default-directory (if project (project-root project) default-directory)))
+    (project-prefixed-buffer-name mode)))
 
 ;; Group Names
 

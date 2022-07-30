@@ -1,8 +1,8 @@
 ;;; vagrant.el --- Manage a vagrant box from emacs
 
 ;;; Version: 0.7.0
-;; Package-Version: 20211206.1634
-;; Package-Commit: a232b7385178d5b029ccc5274dfa9b56e5ba43a1
+;; Package-Version: 20220730.302
+;; Package-Commit: eb4ec2053955eda1ac9e5ff92ded88f1919e13f2
 ;;; Author: Robert Crim <rob@servermilk.com>
 ;;; Url: https://github.com/ottbot/vagrant.el
 ;;; Keywords: vagrant chef
@@ -30,7 +30,8 @@
 
 (defcustom vagrant-up-options ""
   "Options to run vagrant up command"
-  :group 'vagrant)
+  :group 'vagrant
+  :type 'string)
 
 (defcustom vagrant-project-directory "~/vagrant"
   "The path to a Vagrant sandbox."

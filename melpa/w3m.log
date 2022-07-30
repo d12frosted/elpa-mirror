@@ -8,7 +8,7 @@ Checking out db02ce0fde628a8eb9a1a0c95939c41981fdd931
 Checking out db02ce0fde628a8eb9a1a0c95939c41981fdd931
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mvEkFFP/w3m-20220729.42
+  to /tmp/w3m29FZUy/w3m-20220729.42
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -41,4 +41,170 @@ Copying files (->) and directories (=>)
   ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
   ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Generating /tmp/w3mvEkFFP/w3m-20220729.42/emacs-w3m-ja.info
+Generating /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m-ja.info
+
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m-ja.info' exited with non-zero exit-code: 1
+
+Fetching origin
+origin/HEAD set to master
+HEAD is now at db02ce0f Simplify tab-line stuff
+HEAD is now at db02ce0f Simplify tab-line stuff
+HEAD is now at db02ce0f Simplify tab-line stuff
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:65: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
+
+Error: (error "Command exited with non-zero exit-code: 1")
+
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m-ja.info' exited with non-zero exit-code: 1
+
+Fetching origin
+origin/HEAD set to master
+HEAD is now at db02ce0f Simplify tab-line stuff
+HEAD is now at db02ce0f Simplify tab-line stuff
+HEAD is now at db02ce0f Simplify tab-line stuff
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:65: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
+install-info: No such file or directory for /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m-ja.info
+
+Error: (error "Command exited with non-zero exit-code: 1")
+Generating /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m.info
+
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m.info' exited with non-zero exit-code: 1
+
+Fetching origin
+origin/HEAD set to master
+HEAD is now at db02ce0f Simplify tab-line stuff
+HEAD is now at db02ce0f Simplify tab-line stuff
+HEAD is now at db02ce0f Simplify tab-line stuff
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:65: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
+install-info: No such file or directory for /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m-ja.info
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
+
+Error: (error "Command exited with non-zero exit-code: 1")
+
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m.info' exited with non-zero exit-code: 1
+
+Fetching origin
+origin/HEAD set to master
+HEAD is now at db02ce0f Simplify tab-line stuff
+HEAD is now at db02ce0f Simplify tab-line stuff
+HEAD is now at db02ce0f Simplify tab-line stuff
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:65: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
+install-info: No such file or directory for /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m-ja.info
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
+install-info: No such file or directory for /tmp/w3m29FZUy/w3m-20220729.42/emacs-w3m.info
+
+Error: (error "Command exited with non-zero exit-code: 1")
+Created w3m-20220729.42.tar containing:
+  w3m-20220729.42/
+  w3m-20220729.42/bookmark-w3m.el
+  w3m-20220729.42/dir
+  w3m-20220729.42/icons/
+  w3m-20220729.42/icons/antenna-up.png
+  w3m-20220729.42/icons/antenna-up.xpm
+  w3m-20220729.42/icons/back-disabled.png
+  w3m-20220729.42/icons/back-disabled.xpm
+  w3m-20220729.42/icons/back-up.png
+  w3m-20220729.42/icons/back-up.xpm
+  w3m-20220729.42/icons/copy-up.png
+  w3m-20220729.42/icons/copy-up.xpm
+  w3m-20220729.42/icons/db-history-up.png
+  w3m-20220729.42/icons/db-history-up.xpm
+  w3m-20220729.42/icons/forward-disabled.png
+  w3m-20220729.42/icons/forward-disabled.xpm
+  w3m-20220729.42/icons/forward-up.png
+  w3m-20220729.42/icons/forward-up.xpm
+  w3m-20220729.42/icons/history-up.png
+  w3m-20220729.42/icons/history-up.xpm
+  w3m-20220729.42/icons/home-up.png
+  w3m-20220729.42/icons/home-up.xpm
+  w3m-20220729.42/icons/image-up.png
+  w3m-20220729.42/icons/image-up.xpm
+  w3m-20220729.42/icons/open-up.png
+  w3m-20220729.42/icons/open-up.xpm
+  w3m-20220729.42/icons/parent-disabled.png
+  w3m-20220729.42/icons/parent-disabled.xpm
+  w3m-20220729.42/icons/parent-up.png
+  w3m-20220729.42/icons/parent-up.xpm
+  w3m-20220729.42/icons/reload-up.png
+  w3m-20220729.42/icons/reload-up.xpm
+  w3m-20220729.42/icons/save-up.png
+  w3m-20220729.42/icons/save-up.xpm
+  w3m-20220729.42/icons/search-up.png
+  w3m-20220729.42/icons/search-up.xpm
+  w3m-20220729.42/icons/spinner.gif
+  w3m-20220729.42/icons/state-00.png
+  w3m-20220729.42/icons/state-00.xpm
+  w3m-20220729.42/icons/state-01.png
+  w3m-20220729.42/icons/state-01.xpm
+  w3m-20220729.42/icons/state-10.png
+  w3m-20220729.42/icons/state-10.xpm
+  w3m-20220729.42/icons/state-11.png
+  w3m-20220729.42/icons/state-11.xpm
+  w3m-20220729.42/icons/weather-up.png
+  w3m-20220729.42/icons/weather-up.xpm
+  w3m-20220729.42/mime-w3m.el
+  w3m-20220729.42/w3m-antenna.el
+  w3m-20220729.42/w3m-bookmark.el
+  w3m-20220729.42/w3m-bug.el
+  w3m-20220729.42/w3m-cookie.el
+  w3m-20220729.42/w3m-dtree.el
+  w3m-20220729.42/w3m-ems.el
+  w3m-20220729.42/w3m-favicon.el
+  w3m-20220729.42/w3m-fb.el
+  w3m-20220729.42/w3m-filter.el
+  w3m-20220729.42/w3m-form.el
+  w3m-20220729.42/w3m-hist.el
+  w3m-20220729.42/w3m-image.el
+  w3m-20220729.42/w3m-lnum.el
+  w3m-20220729.42/w3m-mail.el
+  w3m-20220729.42/w3m-namazu.el
+  w3m-20220729.42/w3m-perldoc.el
+  w3m-20220729.42/w3m-pkg.el
+  w3m-20220729.42/w3m-proc.el
+  w3m-20220729.42/w3m-rss.el
+  w3m-20220729.42/w3m-save.el
+  w3m-20220729.42/w3m-search.el
+  w3m-20220729.42/w3m-session.el
+  w3m-20220729.42/w3m-symbol.el
+  w3m-20220729.42/w3m-tabmenu.el
+  w3m-20220729.42/w3m-util.el
+  w3m-20220729.42/w3m-weather.el
+  w3m-20220729.42/w3m.el
+  w3m-20220729.42/w3mhack.el
+Built w3m in 36.344s, finished at 2022-07-30T04:12:49+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  178 Jul 30 04:12 packages/w3m-20220729.42.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jul 30 04:12 packages/w3m-20220729.42.tar

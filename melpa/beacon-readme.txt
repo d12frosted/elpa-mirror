@@ -1,4 +1,4 @@
-This is a global minor-mode. Turn it on everywhere with:
+This is a global minor-mode.  Turn it on everywhere with:
 ┌────
 │ (beacon-mode 1)
 └────
