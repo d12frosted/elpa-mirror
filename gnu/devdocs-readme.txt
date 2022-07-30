@@ -46,7 +46,7 @@ package-install RET devdocs'.
   possibility, in analogy to `C-h S' (`info-lookup-symbol'), is
 
   ┌────
-  │ (global-set-key (kbd ("C-h D")) 'devdocs-lookup)
+  │ (global-set-key (kbd "C-h D") 'devdocs-lookup)
   └────
 
   In any given buffer, the first call to `devdocs-lookup' will query for

@@ -1,13 +1,8 @@
 Package: org-present-remote
-Fetcher: gitlab
-Source:  https://gitlab.com/duncan-bayne/org-present-remote.git
+Fetcher: git
+Source:  https://git.sr.ht/~duncan-bayne/org-present-remote
 
-Updating /mnt/store/melpa/working/org-present-remote/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: could not read Username for 'https://gitlab.com': No such device or address
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Cloning https://git.sr.ht/~duncan-bayne/org-present-remote to /mnt/store/melpa/working/org-present-remote/
+Checking out origin/HEAD
+Checking out 782d4acc756e9fdf0e60f54849ffa863c2bb5448
+Version must be a string

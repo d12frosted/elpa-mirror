@@ -11,10 +11,10 @@
 ;;       Magnar Sveen <magnars@gmail.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20220729.811
-;; Package-Commit: f38ca723971cb46a57541947417f24549ff41fa9
+;; Package-Version: 20220729.2246
+;; Package-Commit: ad322e989e56c10c05bb286e5b55a82b1e031d62
 ;; Keywords: languages clojure clojurescript lisp
-;; Version: 5.15.0
+;; Version: 5.15.1
 ;; Package-Requires: ((emacs "25.1"))
 
 ;; This file is not part of GNU Emacs.
