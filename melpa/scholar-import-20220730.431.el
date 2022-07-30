@@ -3,8 +3,8 @@
 ;; Author: Anh T Nguyen <https://github.com/teeann>
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20220504.1101
-;; Package-Commit: cd0b42e5026426af2bfad57b692760bcb5d05dbb
+;; Package-Version: 20220730.431
+;; Package-Commit: 7cb04af45f1ed1db30d6e7788803e578c641b3b6
 ;; Package-Requires: ((emacs "26.1") (org "9.0") (request "0.3.0") (s "1.10.0"))
 ;; Homepage: https://github.com/teeann/scholar-import
 
@@ -70,13 +70,15 @@ The argument list of this function should be (bibtexKey, pdfURL)."
   (let ((bibtexUrl (url-unhex-string (plist-get info :bibtexUrl)))
         (pdfUrl (plist-get info :pdfUrl)))
     (request
-      bibtexUrl
-      :parser #'buffer-string
-      ;; Google seems to block requests without a normal User-Agent
-      :headers '(("User-Agent" . "Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0"))
-      :success (cl-function
-                (lambda (&key data &allow-other-keys)
-                  (scholar-import--add-bibtex-pdf data pdfUrl))))))
+     bibtexUrl
+     :parser #'buffer-string
+     ;; Google seems to block requests without a normal User-Agent
+     :headers '(("User-Agent" . "Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0"))
+     :error (cl-function (lambda (&rest args &key error-thrown &allow-other-keys)
+                           (message "Got error %S, please try to reload Google Scholar page" error-thrown)))
+     :success (cl-function
+               (lambda (&key data &allow-other-keys)
+                 (scholar-import--add-bibtex-pdf data pdfUrl))))))
 
 (defun scholar-import--add-bibtex-pdf (bibtex pdfUrl)
   "Add a BIBTEX entry and download document from PDFURL."
@@ -84,8 +86,9 @@ The argument list of this function should be (bibtexKey, pdfURL)."
          (dest (concat (file-name-as-directory scholar-import-library-path) key ".pdf")))
     (run-hooks 'scholar-import-before-hook)
     (scholar-import--append-file bibtex scholar-import-bibliography)
-    ;; TODO download documents asynchronously
-    (url-copy-file pdfUrl dest)
+    (async-start
+     (lambda () (url-copy-file pdfUrl dest t))
+     (lambda (result) (message (format "%s.pdf downloaded" key))))
     (if (functionp scholar-import-user-process-function)
         (funcall scholar-import-user-process-function key pdfUrl))
     (run-hooks 'scholar-import-after-hook)))

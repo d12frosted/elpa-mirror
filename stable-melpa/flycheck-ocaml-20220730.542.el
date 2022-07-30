@@ -7,11 +7,11 @@
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/flycheck/flycheck-ocaml
-;; Package-Version: 20220729.1323
-;; Package-Commit: 74b1542fcf8dd640dd90e9b3db8210190b68a08b
+;; Package-Version: 20220730.542
+;; Package-Commit: 77f8ddbd9bfc3a11957ac7ec7e45d5fa9179b192
 ;; Keywords: convenience, tools, languages, ocaml
 ;; Version: 0.4.2
-;; Package-Requires: ((emacs "24.3") (flycheck "31") (merlin "3.0.1") (let-alist "1.0.3"))
+;; Package-Requires: ((emacs "24.3") (flycheck "32") (merlin "3.0.1") (let-alist "1.0.3"))
 
 ;; This file is not part of GNU Emacs.
 
