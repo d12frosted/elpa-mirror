@@ -1,12 +1,12 @@
 ;;; ah.el --- Additional hooks -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2020 Takaaki ISHIKAWA
+;; Copyright (C) 2019-2022 Takaaki ISHIKAWA
 
 ;; Author: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; Keywords: convenience
-;; Package-Version: 20220729.1533
-;; Package-Commit: dc04deafbbddc4d8130cd1c45bf8a101c2dfb46a
-;; Version: 0.9.2
+;; Package-Version: 20220730.1058
+;; Package-Commit: 8e12223f0f423e7fa882cc049a25af6db755902d
+;; Version: 0.9.3
 ;; Maintainer: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; URL: https://github.com/takaxp/ah
 ;; Package-Requires: ((emacs "25.1"))

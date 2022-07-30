@@ -4,8 +4,8 @@
 
 ;; Author: Masahiro Nakamura <tsuucat@icloud.com>
 ;; Version: 0.2.0
-;; Package-Version: 20220730.1003
-;; Package-Commit: ccc24daefbc72eeac68c1b52fe8f3d3d833443e0
+;; Package-Version: 20220730.1100
+;; Package-Commit: f4012ac86e612eac7662c62afd946e59b3b405bd
 ;; URL: https://github.com/tsuu32/auctex-cluttex
 ;; Package-Requires: ((emacs "24.4") (auctex "13.1"))
 ;; Keywords: tex
@@ -39,9 +39,9 @@
 
 (require 'tex)
 (require 'latex)
-(require 'tex)
 
 (require 'cl-lib)
+(require 'ansi-color)
 
 
 (defgroup auctex-cluttex nil
@@ -152,7 +152,7 @@ the mode if ARG is omitted or nil.
 
 When AUCTeX ClutTeX mode is enabled, `auctex-cluttex-ClutTeX-command'
 is added to `TeX-command-list'."
-  nil nil nil
+  :init-value nil
   (cond
    (auctex-cluttex-mode
     (auctex-cluttex-mode 0)

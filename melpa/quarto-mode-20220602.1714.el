@@ -5,7 +5,7 @@
 ;; Copyright (C) 2022 RStudio PBC
 ;; Version: 0.0.1
 ;; Package-Version: 20220602.1714
-;; Package-Commit: 593b666cc27e020942465fb2a46dea7e0c61d213
+;; Package-Commit: 028157889134031af4752205082173bf44b7e016
 ;; package-requires: ((emacs "25.1") (polymode "0.2.2") (poly-markdown "0.2.2") (markdown-mode "2.3") (request "0.3.2"))
 ;; URL: https://github.com/quarto-dev/quarto-emacs
 ;; Keywords: languages, multi-modes
