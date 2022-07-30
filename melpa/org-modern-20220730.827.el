@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.4
-;; Package-Version: 20220728.2014
-;; Package-Commit: f336d5a625fc423b08c6bf7020ceaf8bcbf2eb33
+;; Package-Version: 20220730.827
+;; Package-Commit: c82b50a61d04571e11c242fb91944753d8bf945c
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
@@ -325,16 +325,16 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
 (defun org-modern--progress ()
   "Prettify headline todo progress."
   (put-text-property
-   (match-beginning 1) (1+ (match-beginning 1)) 'display
+   (match-beginning 2) (match-end 2) 'display
    (aref org-modern--progress-cache
          (floor
           (* (1- (length org-modern--progress-cache))
-             (if (match-beginning 2)
-                 (* 0.01 (string-to-number (match-string 2)))
-               (let ((q (string-to-number (match-string 4))))
+             (if (match-beginning 3)
+                 (* 0.01 (string-to-number (match-string 3)))
+               (let ((q (string-to-number (match-string 5))))
                  (if (= q 0)
                      1.0
-                   (/ (* 1.0 (string-to-number (match-string 3))) q)))))))))
+                   (/ (* 1.0 (string-to-number (match-string 4))) q)))))))))
 
 (defun org-modern--tag ()
   "Prettify headline tags."
@@ -624,10 +624,10 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
            (1 '(face org-modern-label display #("  " 1 2 (face (:strike-through t) cursor t))) t)
            (2 '(face org-modern-label display #("  " 0 1 (face (:strike-through t)))) t))))
       (when org-modern-statistics
-        `((" \\(\\[\\(?:\\([0-9]+\\)%\\|\\([0-9]+\\)/\\([0-9]+\\)\\)\\(\\]\\)\\)"
-           (0 ,(if org-modern-progress '(org-modern--progress) ''(face nil display " ")))
+        `((" \\(\\(\\[\\)\\(?:\\([0-9]+\\)%\\|\\([0-9]+\\)/\\([0-9]+\\)\\)\\(\\]\\)\\)"
            (1 '(face org-modern-statistics) t)
-           (5 '(face nil display " ")))))))
+           (2 ,(if org-modern-progress '(org-modern--progress) ''(face nil display " ")))
+           (6 '(face nil display " ")))))))
     (font-lock-add-keywords nil org-modern--font-lock-keywords 'append)
     (advice-add #'org-unfontify-region :after #'org-modern--unfontify))
    (t (font-lock-remove-keywords nil org-modern--font-lock-keywords)))

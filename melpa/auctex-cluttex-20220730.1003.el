@@ -4,10 +4,10 @@
 
 ;; Author: Masahiro Nakamura <tsuucat@icloud.com>
 ;; Version: 0.2.0
-;; Package-Version: 20210226.302
-;; Package-Commit: 9a15742a6de1285831329eac93f9e35752472685
+;; Package-Version: 20220730.1003
+;; Package-Commit: ccc24daefbc72eeac68c1b52fe8f3d3d833443e0
 ;; URL: https://github.com/tsuu32/auctex-cluttex
-;; Package-Requires: ((emacs "24.4") (auctex "12.2"))
+;; Package-Requires: ((emacs "24.4") (auctex "13.1"))
 ;; Keywords: tex
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -39,7 +39,7 @@
 
 (require 'tex)
 (require 'latex)
-(require 'tex-buf)
+(require 'tex)
 
 (require 'cl-lib)
 

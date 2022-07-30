@@ -22,11 +22,11 @@ installed with, you must recompile the package:
 
    * Remove all byte-compiled Tramp files
 
-          $ rm -f ~/.emacs.d/elpa/tramp-2.5.3/tramp*.elc
+          $ rm -f ~/.emacs.d/elpa/tramp-2.5.3.1/tramp*.elc
 
    * Start Emacs with Tramp's source files
 
-          $ emacs -L ~/.emacs.d/elpa/tramp-2.5.3 -l tramp
+          $ emacs -L ~/.emacs.d/elpa/tramp-2.5.3.1 -l tramp
 
      This should not give you the error.
 

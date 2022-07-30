@@ -207,15 +207,16 @@
 	 (:url . "https://elpa.gnu.org/packages/bbdb.html")
 	 (:commit . "715f35b5f53d6bcdcb3754b4f98933df01b57c15"))])
  (beacon .
-	 [(1 3 3)
-	  ((seq
-	    (2 14)))
-	  "Highlight the cursor whenever the window scrolls" single
-	  ((:keywords "convenience")
+	 [(1 3 4)
+	  ((emacs
+	    (25 1)))
+	  "Highlight the cursor whenever the window scrolls" tar
+	  ((:url . "https://github.com/Malabarba/beacon")
+	   (:keywords "convenience")
+	   (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	   (:authors
 	    ("Artur Malabarba" . "emacs@endlessparentheses.com"))
-	   (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
-	   (:url . "https://github.com/Malabarba/beacon"))])
+	   (:commit . "0cf8b60f62876f3e75653a5fb30d5d5cdd74c586"))])
  (blist .
 	[(0 1)
 	 nil "Display bookmarks in an ibuffer way" tar
@@ -3140,7 +3141,7 @@
 	    ("Kaushal Modi" . "kaushal.modi@gmail.com"))
 	   (:commit . "670e0a08f625175fd80137cf69e799619bf8a381"))])
  (tramp .
-	[(2 5 3)
+	[(2 5 3 1)
 	 ((emacs
 	   (25 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -3149,7 +3150,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "3e0278ea5938092600a781947334d175a4e4b542"))])
+	  (:commit . "c6e0674c4c8a0844a7555926a35e505ad4c1ff24"))])
  (tramp-nspawn .
 	       [(1 0)
 		((emacs
