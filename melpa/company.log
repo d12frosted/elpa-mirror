@@ -4,11 +4,11 @@ Source:  https://github.com/company-mode/company-mode.git
 
 Updating /mnt/store/melpa/working/company/
 Checking out origin/HEAD
-Checking out 73a3bdea0a82731ba8fb5890b6cdcba5b9dd44b7
-Checking out 73a3bdea0a82731ba8fb5890b6cdcba5b9dd44b7
+Checking out 537d13b7b62e3d7289b28de9dc6360f240d1c3a0
+Checking out 537d13b7b62e3d7289b28de9dc6360f240d1c3a0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/company/
-  to /tmp/companyh8avPx/company-20220729.1249
+  to /tmp/company5JjJvc/company-20220730.2109
     company-abbrev.el -> company-abbrev.el
     company-bbdb.el -> company-bbdb.el
     company-capf.el -> company-capf.el
@@ -57,120 +57,122 @@ Copying files (->) and directories (=>)
   ! doc/images/small/tooltip-qa-faces-light.png -> images/small/tooltip-qa-faces-light.png
   ! doc/images/small/tooltip-quick-access.png -> images/small/tooltip-quick-access.png
   ! doc/images/small/tooltip-search.png -> images/small/tooltip-search.png
-Generating /tmp/companyh8avPx/company-20220729.1249/company.info
-Created company-20220729.1249.tar containing:
-  company-20220729.1249/
-  company-20220729.1249/company-abbrev.el
-  company-20220729.1249/company-bbdb.el
-  company-20220729.1249/company-capf.el
-  company-20220729.1249/company-clang.el
-  company-20220729.1249/company-cmake.el
-  company-20220729.1249/company-css.el
-  company-20220729.1249/company-dabbrev-code.el
-  company-20220729.1249/company-dabbrev.el
-  company-20220729.1249/company-elisp.el
-  company-20220729.1249/company-etags.el
-  company-20220729.1249/company-files.el
-  company-20220729.1249/company-gtags.el
-  company-20220729.1249/company-ispell.el
-  company-20220729.1249/company-keywords.el
-  company-20220729.1249/company-nxml.el
-  company-20220729.1249/company-oddmuse.el
-  company-20220729.1249/company-pkg.el
-  company-20220729.1249/company-semantic.el
-  company-20220729.1249/company-template.el
-  company-20220729.1249/company-tempo.el
-  company-20220729.1249/company-tng.el
-  company-20220729.1249/company-yasnippet.el
-  company-20220729.1249/company.el
-  company-20220729.1249/company.info
-  company-20220729.1249/dir
-  company-20220729.1249/icons/
-  company-20220729.1249/icons/LICENSE
-  company-20220729.1249/icons/attribution.md
-  company-20220729.1249/icons/vscode-dark/
-  company-20220729.1249/icons/vscode-dark/folder.svg
-  company-20220729.1249/icons/vscode-dark/references.svg
-  company-20220729.1249/icons/vscode-dark/symbol-array.svg
-  company-20220729.1249/icons/vscode-dark/symbol-boolean.svg
-  company-20220729.1249/icons/vscode-dark/symbol-class.svg
-  company-20220729.1249/icons/vscode-dark/symbol-color.svg
-  company-20220729.1249/icons/vscode-dark/symbol-constant.svg
-  company-20220729.1249/icons/vscode-dark/symbol-enumerator-member.svg
-  company-20220729.1249/icons/vscode-dark/symbol-enumerator.svg
-  company-20220729.1249/icons/vscode-dark/symbol-event.svg
-  company-20220729.1249/icons/vscode-dark/symbol-field.svg
-  company-20220729.1249/icons/vscode-dark/symbol-file.svg
-  company-20220729.1249/icons/vscode-dark/symbol-interface.svg
-  company-20220729.1249/icons/vscode-dark/symbol-key.svg
-  company-20220729.1249/icons/vscode-dark/symbol-keyword.svg
-  company-20220729.1249/icons/vscode-dark/symbol-method.svg
-  company-20220729.1249/icons/vscode-dark/symbol-misc.svg
-  company-20220729.1249/icons/vscode-dark/symbol-namespace.svg
-  company-20220729.1249/icons/vscode-dark/symbol-numeric.svg
-  company-20220729.1249/icons/vscode-dark/symbol-operator.svg
-  company-20220729.1249/icons/vscode-dark/symbol-parameter.svg
-  company-20220729.1249/icons/vscode-dark/symbol-property.svg
-  company-20220729.1249/icons/vscode-dark/symbol-ruler.svg
-  company-20220729.1249/icons/vscode-dark/symbol-snippet.svg
-  company-20220729.1249/icons/vscode-dark/symbol-string.svg
-  company-20220729.1249/icons/vscode-dark/symbol-structure.svg
-  company-20220729.1249/icons/vscode-dark/symbol-variable.svg
-  company-20220729.1249/icons/vscode-light/
-  company-20220729.1249/icons/vscode-light/folder.svg
-  company-20220729.1249/icons/vscode-light/references.svg
-  company-20220729.1249/icons/vscode-light/symbol-array.svg
-  company-20220729.1249/icons/vscode-light/symbol-boolean.svg
-  company-20220729.1249/icons/vscode-light/symbol-class.svg
-  company-20220729.1249/icons/vscode-light/symbol-color.svg
-  company-20220729.1249/icons/vscode-light/symbol-constant.svg
-  company-20220729.1249/icons/vscode-light/symbol-enumerator-member.svg
-  company-20220729.1249/icons/vscode-light/symbol-enumerator.svg
-  company-20220729.1249/icons/vscode-light/symbol-event.svg
-  company-20220729.1249/icons/vscode-light/symbol-field.svg
-  company-20220729.1249/icons/vscode-light/symbol-file.svg
-  company-20220729.1249/icons/vscode-light/symbol-interface.svg
-  company-20220729.1249/icons/vscode-light/symbol-key.svg
-  company-20220729.1249/icons/vscode-light/symbol-keyword.svg
-  company-20220729.1249/icons/vscode-light/symbol-method.svg
-  company-20220729.1249/icons/vscode-light/symbol-misc.svg
-  company-20220729.1249/icons/vscode-light/symbol-namespace.svg
-  company-20220729.1249/icons/vscode-light/symbol-numeric.svg
-  company-20220729.1249/icons/vscode-light/symbol-operator.svg
-  company-20220729.1249/icons/vscode-light/symbol-parameter.svg
-  company-20220729.1249/icons/vscode-light/symbol-property.svg
-  company-20220729.1249/icons/vscode-light/symbol-ruler.svg
-  company-20220729.1249/icons/vscode-light/symbol-snippet.svg
-  company-20220729.1249/icons/vscode-light/symbol-string.svg
-  company-20220729.1249/icons/vscode-light/symbol-structure.svg
-  company-20220729.1249/icons/vscode-light/symbol-variable.svg
-  company-20220729.1249/images/
-  company-20220729.1249/images/small/
-  company-20220729.1249/images/small/echo-meta.png
-  company-20220729.1249/images/small/echo-qa.png
-  company-20220729.1249/images/small/echo-strip-qa.png
-  company-20220729.1249/images/small/echo-strip.png
-  company-20220729.1249/images/small/echo.png
-  company-20220729.1249/images/small/preview-dark.png
-  company-20220729.1249/images/small/preview-light.png
-  company-20220729.1249/images/small/tooltip-annotations.png
-  company-20220729.1249/images/small/tooltip-faces-light.png
-  company-20220729.1249/images/small/tooltip-filter.png
-  company-20220729.1249/images/small/tooltip-flip.png
-  company-20220729.1249/images/small/tooltip-icon-bg.png
-  company-20220729.1249/images/small/tooltip-icon-face.png
-  company-20220729.1249/images/small/tooltip-icons-dot.png
-  company-20220729.1249/images/small/tooltip-icons-text.png
-  company-20220729.1249/images/small/tooltip-icons-vscode.png
-  company-20220729.1249/images/small/tooltip-limit.png
-  company-20220729.1249/images/small/tooltip-margin.png
-  company-20220729.1249/images/small/tooltip-minimum-above.png
-  company-20220729.1249/images/small/tooltip-minimum-below.png
-  company-20220729.1249/images/small/tooltip-offset-display.png
-  company-20220729.1249/images/small/tooltip-qa-faces-light.png
-  company-20220729.1249/images/small/tooltip-quick-access.png
-  company-20220729.1249/images/small/tooltip-search.png
-Built company in 17.698s, finished at 2022-07-30T18:22:30+0000
+Generating /tmp/company5JjJvc/company-20220730.2109/company.info
+Created company-20220730.2109.tar containing:
+  company-20220730.2109/
+  company-20220730.2109/company-abbrev.el
+  company-20220730.2109/company-bbdb.el
+  company-20220730.2109/company-capf.el
+  company-20220730.2109/company-clang.el
+  company-20220730.2109/company-cmake.el
+  company-20220730.2109/company-css.el
+  company-20220730.2109/company-dabbrev-code.el
+  company-20220730.2109/company-dabbrev.el
+  company-20220730.2109/company-elisp.el
+  company-20220730.2109/company-etags.el
+  company-20220730.2109/company-files.el
+  company-20220730.2109/company-gtags.el
+  company-20220730.2109/company-ispell.el
+  company-20220730.2109/company-keywords.el
+  company-20220730.2109/company-nxml.el
+  company-20220730.2109/company-oddmuse.el
+  company-20220730.2109/company-pkg.el
+  company-20220730.2109/company-semantic.el
+  company-20220730.2109/company-template.el
+  company-20220730.2109/company-tempo.el
+  company-20220730.2109/company-tng.el
+  company-20220730.2109/company-yasnippet.el
+  company-20220730.2109/company.el
+  company-20220730.2109/company.info
+  company-20220730.2109/dir
+  company-20220730.2109/icons/
+  company-20220730.2109/icons/LICENSE
+  company-20220730.2109/icons/attribution.md
+  company-20220730.2109/icons/vscode-dark/
+  company-20220730.2109/icons/vscode-dark/folder.svg
+  company-20220730.2109/icons/vscode-dark/references.svg
+  company-20220730.2109/icons/vscode-dark/symbol-array.svg
+  company-20220730.2109/icons/vscode-dark/symbol-boolean.svg
+  company-20220730.2109/icons/vscode-dark/symbol-class.svg
+  company-20220730.2109/icons/vscode-dark/symbol-color.svg
+  company-20220730.2109/icons/vscode-dark/symbol-constant.svg
+  company-20220730.2109/icons/vscode-dark/symbol-enumerator-member.svg
+  company-20220730.2109/icons/vscode-dark/symbol-enumerator.svg
+  company-20220730.2109/icons/vscode-dark/symbol-event.svg
+  company-20220730.2109/icons/vscode-dark/symbol-field.svg
+  company-20220730.2109/icons/vscode-dark/symbol-file.svg
+  company-20220730.2109/icons/vscode-dark/symbol-interface.svg
+  company-20220730.2109/icons/vscode-dark/symbol-key.svg
+  company-20220730.2109/icons/vscode-dark/symbol-keyword.svg
+  company-20220730.2109/icons/vscode-dark/symbol-method.svg
+  company-20220730.2109/icons/vscode-dark/symbol-misc.svg
+  company-20220730.2109/icons/vscode-dark/symbol-namespace.svg
+  company-20220730.2109/icons/vscode-dark/symbol-numeric.svg
+  company-20220730.2109/icons/vscode-dark/symbol-operator.svg
+  company-20220730.2109/icons/vscode-dark/symbol-parameter.svg
+  company-20220730.2109/icons/vscode-dark/symbol-property.svg
+  company-20220730.2109/icons/vscode-dark/symbol-ruler.svg
+  company-20220730.2109/icons/vscode-dark/symbol-snippet.svg
+  company-20220730.2109/icons/vscode-dark/symbol-string.svg
+  company-20220730.2109/icons/vscode-dark/symbol-structure.svg
+  company-20220730.2109/icons/vscode-dark/symbol-variable.svg
+  company-20220730.2109/icons/vscode-light/
+  company-20220730.2109/icons/vscode-light/folder.svg
+  company-20220730.2109/icons/vscode-light/references.svg
+  company-20220730.2109/icons/vscode-light/symbol-array.svg
+  company-20220730.2109/icons/vscode-light/symbol-boolean.svg
+  company-20220730.2109/icons/vscode-light/symbol-class.svg
+  company-20220730.2109/icons/vscode-light/symbol-color.svg
+  company-20220730.2109/icons/vscode-light/symbol-constant.svg
+  company-20220730.2109/icons/vscode-light/symbol-enumerator-member.svg
+  company-20220730.2109/icons/vscode-light/symbol-enumerator.svg
+  company-20220730.2109/icons/vscode-light/symbol-event.svg
+  company-20220730.2109/icons/vscode-light/symbol-field.svg
+  company-20220730.2109/icons/vscode-light/symbol-file.svg
+  company-20220730.2109/icons/vscode-light/symbol-interface.svg
+  company-20220730.2109/icons/vscode-light/symbol-key.svg
+  company-20220730.2109/icons/vscode-light/symbol-keyword.svg
+  company-20220730.2109/icons/vscode-light/symbol-method.svg
+  company-20220730.2109/icons/vscode-light/symbol-misc.svg
+  company-20220730.2109/icons/vscode-light/symbol-namespace.svg
+  company-20220730.2109/icons/vscode-light/symbol-numeric.svg
+  company-20220730.2109/icons/vscode-light/symbol-operator.svg
+  company-20220730.2109/icons/vscode-light/symbol-parameter.svg
+  company-20220730.2109/icons/vscode-light/symbol-property.svg
+  company-20220730.2109/icons/vscode-light/symbol-ruler.svg
+  company-20220730.2109/icons/vscode-light/symbol-snippet.svg
+  company-20220730.2109/icons/vscode-light/symbol-string.svg
+  company-20220730.2109/icons/vscode-light/symbol-structure.svg
+  company-20220730.2109/icons/vscode-light/symbol-variable.svg
+  company-20220730.2109/images/
+  company-20220730.2109/images/small/
+  company-20220730.2109/images/small/echo-meta.png
+  company-20220730.2109/images/small/echo-qa.png
+  company-20220730.2109/images/small/echo-strip-qa.png
+  company-20220730.2109/images/small/echo-strip.png
+  company-20220730.2109/images/small/echo.png
+  company-20220730.2109/images/small/preview-dark.png
+  company-20220730.2109/images/small/preview-light.png
+  company-20220730.2109/images/small/tooltip-annotations.png
+  company-20220730.2109/images/small/tooltip-faces-light.png
+  company-20220730.2109/images/small/tooltip-filter.png
+  company-20220730.2109/images/small/tooltip-flip.png
+  company-20220730.2109/images/small/tooltip-icon-bg.png
+  company-20220730.2109/images/small/tooltip-icon-face.png
+  company-20220730.2109/images/small/tooltip-icons-dot.png
+  company-20220730.2109/images/small/tooltip-icons-text.png
+  company-20220730.2109/images/small/tooltip-icons-vscode.png
+  company-20220730.2109/images/small/tooltip-limit.png
+  company-20220730.2109/images/small/tooltip-margin.png
+  company-20220730.2109/images/small/tooltip-minimum-above.png
+  company-20220730.2109/images/small/tooltip-minimum-below.png
+  company-20220730.2109/images/small/tooltip-offset-display.png
+  company-20220730.2109/images/small/tooltip-qa-faces-light.png
+  company-20220730.2109/images/small/tooltip-quick-access.png
+  company-20220730.2109/images/small/tooltip-search.png
+Built company in 19.468s, finished at 2022-07-30T22:20:46+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  353 Jul 30 18:22 packages/company-20220729.1249.entry
 1.2M -rw-r--r-- 1 root root 1.2M Jul 30 18:22 packages/company-20220729.1249.tar
+4.0K -rw-r--r-- 1 root root  353 Jul 30 22:20 packages/company-20220730.2109.entry
+1.2M -rw-r--r-- 1 root root 1.2M Jul 30 22:20 packages/company-20220730.2109.tar
