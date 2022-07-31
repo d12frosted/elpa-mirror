@@ -4,36 +4,38 @@ Source:  https://github.com/dgutov/robe.git
 
 Updating /mnt/store/melpa/working/robe/
 Checking out origin/HEAD
-Checking out 11207bd549a5a78e3a4d70265c3715990dcdab71
-Checking out 11207bd549a5a78e3a4d70265c3715990dcdab71
+Checking out 89e67681746eeecaab841e93e4a6c2f078ccbf43
+Checking out 89e67681746eeecaab841e93e4a6c2f078ccbf43
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/robe/
-  to /tmp/robe7OcBGG/robe-20211208.205
+  to /tmp/robe7y2qMS/robe-20220731.104
     ac-robe.el -> ac-robe.el
     company-robe.el -> company-robe.el
     robe.el -> robe.el
     lib => lib
-Created robe-20211208.205.tar containing:
-  robe-20211208.205/
-  robe-20211208.205/ac-robe.el
-  robe-20211208.205/company-robe.el
-  robe-20211208.205/lib/
-  robe-20211208.205/lib/robe.rb
-  robe-20211208.205/lib/robe/
-  robe-20211208.205/lib/robe/core_ext.rb
-  robe-20211208.205/lib/robe/jvisor.rb
-  robe-20211208.205/lib/robe/sash.rb
-  robe-20211208.205/lib/robe/sash/
-  robe-20211208.205/lib/robe/sash/const_locations.rb
-  robe-20211208.205/lib/robe/sash/doc_for.rb
-  robe-20211208.205/lib/robe/sash/includes_tracker.rb
-  robe-20211208.205/lib/robe/scanners.rb
-  robe-20211208.205/lib/robe/server.rb
-  robe-20211208.205/lib/robe/type_space.rb
-  robe-20211208.205/lib/robe/visor.rb
-  robe-20211208.205/robe-pkg.el
-  robe-20211208.205/robe.el
-Built robe in 6.233s, finished at 2022-07-30T23:29:37+0000
+Created robe-20220731.104.tar containing:
+  robe-20220731.104/
+  robe-20220731.104/ac-robe.el
+  robe-20220731.104/company-robe.el
+  robe-20220731.104/lib/
+  robe-20220731.104/lib/robe.rb
+  robe-20220731.104/lib/robe/
+  robe-20220731.104/lib/robe/core_ext.rb
+  robe-20220731.104/lib/robe/jvisor.rb
+  robe-20220731.104/lib/robe/sash.rb
+  robe-20220731.104/lib/robe/sash/
+  robe-20220731.104/lib/robe/sash/const_locations.rb
+  robe-20220731.104/lib/robe/sash/doc_for.rb
+  robe-20220731.104/lib/robe/sash/includes_tracker.rb
+  robe-20220731.104/lib/robe/scanners.rb
+  robe-20220731.104/lib/robe/server.rb
+  robe-20220731.104/lib/robe/type_space.rb
+  robe-20220731.104/lib/robe/visor.rb
+  robe-20220731.104/robe-pkg.el
+  robe-20220731.104/robe.el
+Built robe in 6.616s, finished at 2022-07-31T03:19:35+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 365 Jul 30 23:29 packages/robe-20211208.205.entry
  92K -rw-r--r-- 1 root root 90K Jul 30 23:29 packages/robe-20211208.205.tar
+4.0K -rw-r--r-- 1 root root 365 Jul 31 03:19 packages/robe-20220731.104.entry
+ 92K -rw-r--r-- 1 root root 90K Jul 31 03:19 packages/robe-20220731.104.tar

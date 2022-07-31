@@ -6,7 +6,7 @@
 ;; Maintainer: Elia Scotto <eliascotto94@gmail.com>
 ;; URL: https://github.com/elias94/accent
 ;; Package-Version: 20220202.1312
-;; Package-Commit: 6b502df6940587dae2dfbd349c22dfd44c803a86
+;; Package-Commit: 23af25e3f1629755b1b245364fbb93bf4ba933b9
 ;; Keywords: i18n
 ;; Version: 1.3
 ;; Package-Requires: ((emacs "24.3") (popup "0.5.8"))

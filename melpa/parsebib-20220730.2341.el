@@ -6,9 +6,9 @@
 ;; Author: Joost Kremers <joostkremers@fastmail.fm>
 ;; Maintainer: Joost Kremers <joostkremers@fastmail.fm>
 ;; Created: 2014
-;; Version: 4.1
-;; Package-Version: 20220620.2207
-;; Package-Commit: 1ec276bb26371b686d6c57ffd38ca222cf42e8db
+;; Version: 4.2
+;; Package-Version: 20220730.2341
+;; Package-Commit: ca7f5fcbbdfb38e84fd1740e14dad32a7081c69e
 ;; Keywords: text bibtex
 ;; URL: https://github.com/joostkremers/parsebib
 ;; Package-Requires: ((emacs "25.1"))
@@ -358,6 +358,11 @@ replaced by the result of calling the function on the match
 string).  Earlier elements are evaluated before later ones, so if
 one string is a subpattern of another, the second must appear
 later (e.g. \"''\" is before \"'\").")
+
+(defvar parsebib-clean-TeX-markup-excluded-fields '("file"
+                                                    "url"
+                                                    "doi")
+  "List of fields that should not be passed to `parsebib-clean-TeX-markup'.")
 
 (defun parsebib-clean-TeX-markup (string)
   "Return STRING without TeX markup.
@@ -737,10 +742,12 @@ ASCII/Unicode characters.  See the variable
   (unless (>= (point) limit)                      ; If we haven't reached the end of the entry.
     (let ((beg (point)))
       (if (parsebib--looking-at-goto-end (concat "\\(" parsebib--bibtex-identifier "\\)[[:space:]]*=[[:space:]]*") 1)
-          (let ((field-type (buffer-substring-no-properties beg (point))))
+          (let* ((field (buffer-substring-no-properties beg (point)))
+                 (replace-TeX (and replace-TeX
+                                   (not (member-ignore-case field parsebib-clean-TeX-markup-excluded-fields)))))
             (if (or (not fields)
-                    (member-ignore-case field-type fields))
-                (cons field-type (parsebib--parse-bib-value limit strings replace-TeX))
+                    (member-ignore-case field fields))
+                (cons field (parsebib--parse-bib-value limit strings replace-TeX))
               (parsebib--parse-bib-value limit) ; Skip over the field value.
               :ignore)))))) ; Ignore this field but keep the `cl-loop' in `parsebib-read-entry' going.
 
