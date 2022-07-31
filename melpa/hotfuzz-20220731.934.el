@@ -4,8 +4,8 @@
 
 ;; Author: Axel Forsman <axelsfor@gmail.com>
 ;; Version: 0.1
-;; Package-Version: 20220626.1704
-;; Package-Commit: af1b4022bdd9887430c07de08aa2721009ca65bb
+;; Package-Version: 20220731.934
+;; Package-Commit: 5ccab77f7bfb1d4246aa01639e151ec9509c64bb
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/axelf4/hotfuzz
@@ -238,28 +238,57 @@ list before passing it to `display-sort-function' or
   "Previous values of the Selectrum sort/filter/highlight API endpoints.")
 
 ;;;###autoload
-(progn
-  (define-minor-mode hotfuzz-selectrum-mode
-    "Minor mode that enables hotfuzz in Selectrum menus."
-    :group 'hotfuzz
-    :global t
-    (if hotfuzz-selectrum-mode
-        (setq hotfuzz--prev-selectrum-functions
-              `(,(when (boundp 'selectrum-refine-candidates-function)
-                   selectrum-refine-candidates-function)
-                . ,(when (boundp 'selectrum-highlight-candidates-function)
-                     selectrum-highlight-candidates-function))
-              selectrum-refine-candidates-function #'hotfuzz-filter
-              selectrum-highlight-candidates-function #'hotfuzz--highlight-all)
-      (cl-flet ((restore
-                 (sym old our &aux (standard (car-safe (get sym 'standard-value))))
-                 (cond ((not (eq (symbol-value sym) our)))
-                       (old (set sym old))
-                       (standard (set sym (eval standard t)))
-                       (t (makunbound sym)))))
-        (cl-destructuring-bind (old-rcf . old-hcf) hotfuzz--prev-selectrum-functions
-          (restore 'selectrum-refine-candidates-function old-rcf #'hotfuzz-filter)
-          (restore 'selectrum-highlight-candidates-function old-hcf #'hotfuzz--highlight-all))))))
+(define-minor-mode hotfuzz-selectrum-mode
+  "Minor mode that enables hotfuzz in Selectrum menus."
+  :group 'hotfuzz
+  :global t
+  (if hotfuzz-selectrum-mode
+      (setq hotfuzz--prev-selectrum-functions
+            `(,(when (boundp 'selectrum-refine-candidates-function)
+                 selectrum-refine-candidates-function)
+              . ,(when (boundp 'selectrum-highlight-candidates-function)
+                   selectrum-highlight-candidates-function))
+            selectrum-refine-candidates-function #'hotfuzz-filter
+            selectrum-highlight-candidates-function #'hotfuzz--highlight-all)
+    (cl-flet ((restore
+               (sym old our &aux (standard (car-safe (get sym 'standard-value))))
+               (cond ((not (eq (symbol-value sym) our)))
+                     (old (set sym old))
+                     (standard (set sym (eval standard t)))
+                     (t (makunbound sym)))))
+      (cl-destructuring-bind (old-rcf . old-hcf) hotfuzz--prev-selectrum-functions
+        (restore 'selectrum-refine-candidates-function old-rcf #'hotfuzz-filter)
+        (restore 'selectrum-highlight-candidates-function old-hcf #'hotfuzz--highlight-all)))))
+
+;;; Vertico integration
+
+(declare-function vertico--all-completions "ext:vertico")
+
+(defun hotfuzz--vertico--all-completions-advice (fun &rest args)
+  "Advice for FUN `vertico--all-completions' to defer hotfuzz highlighting."
+  (cl-letf* ((hl nil)
+             ((symbol-function #'hotfuzz-highlight)
+              (lambda (pattern cand)
+                (setq hl (apply-partially
+                          #'mapcar
+                          (lambda (x) (hotfuzz-highlight pattern (copy-sequence x)))))
+                cand))
+             (hotfuzz-max-highlighted-completions 1)
+             (result (apply fun args)))
+    (when hl (setcdr result hl))
+    result))
+
+;;;###autoload
+(define-minor-mode hotfuzz-vertico-mode
+  "Toggle Hotfuzz compatibility code for the Vertico completion system.
+Contrary to what the name might suggest, this mode does not
+automatically enable Hotfuzz. You still have to choose when it gets
+used by customizing e.g. `completion-styles'."
+  :global t
+  :group 'hotfuzz
+  (if hotfuzz-vertico-mode
+      (advice-add #'vertico--all-completions :around #'hotfuzz--vertico--all-completions-advice)
+    (advice-remove #'vertico--all-completions #'hotfuzz--vertico--all-completions-advice)))
 
 (provide 'hotfuzz)
 ;;; hotfuzz.el ends here
