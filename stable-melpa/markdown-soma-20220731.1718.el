@@ -4,10 +4,10 @@
 
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/markdown-soma
-;; Package-Version: 20220722.411
-;; Package-Commit: 01e6ebb26e8c9c88785a0c7a4fd43db808fd19a5
+;; Package-Version: 20220731.1718
+;; Package-Commit: 5208978a641a0e5e44dce67d2a05054f77dcebe7
 ;; Keywords: wp, docs, text, markdown
-;; Version: 0.2.4
+;; Version: 0.2.6
 ;; Package-Requires: ((emacs "25") (s "1.11.0") (dash "2.19.1") (f "0.20.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -221,7 +221,7 @@
   :prefix "markdown-soma-")
 
 (defcustom markdown-soma-working-directory nil
-  "Server web root. Default nil pwd becomes working directory."
+  "Server web root. Default nil, pwd becomes working directory."
   :type '(string)
   :require 'markdown-soma
   :group 'markdown-soma)
@@ -232,7 +232,7 @@
   :require 'markdown-soma
   :group 'markdown-soma)
 
-(defcustom markdown-soma-custom-css nil
+(defcustom markdown-soma-custom-css (markdown-soma--css-pathname-from-builtin-name "markdown-soma")
   "Custom CSS can be set to a file or url."
   :type '(string)
   :require 'markdown-soma
@@ -260,12 +260,12 @@
     (markdown-soma-stop)))
 
 (defconst markdown-soma--needs-executable-message
-  "Markdown soma executable `soma` not found.
+  "Markdown soma executable `soma' not found.
 
-The markdown WebSocket server `soma` is in the package repository.
+The markdown WebSocket server `soma' is in the package repository.
 You'll need to compile it from source.
 
-Install rustup if rust is not on your system.
+Install `rustup' if rust is not on your system.
 
 Once rust is ready to use, open a terminal at the package/repo
 folder and enter:
@@ -276,7 +276,7 @@ compiles:
 
     ~/.cargo/bin/soma
 
-By default, `~/.cargo/bin` will be in your `$PATH`."
+By default, `~/.cargo/bin' will be in `$PATH'."
   "Message text shown when soma is not found.")
 
 (defvar markdown-soma--render-buffer-hooks
@@ -286,12 +286,11 @@ By default, `~/.cargo/bin` will be in your `$PATH`."
     post-command-hook)
   "A collection of hooks which trigger markdown-soma-render-buffer.")
 
-(defvar markdown-soma-highlightjs-theme-list
-  '("3024" "a11y-dark" "a11y-light" "agate" "an-old-hope" "androidstudio" "apathy" "apprentice" "arduino-light" "arta" "ascetic" "ashes" "atelier-cave-dark" "atelier-cave-light" "atelier-cave" "atelier-cave.dark" "atelier-cave.light" "atelier-dune-dark" "atelier-dune-light" "atelier-dune" "atelier-dune.dark" "atelier-dune.light" "atelier-estuary-dark" "atelier-estuary-light" "atelier-estuary" "atelier-estuary.dark" "atelier-estuary.light" "atelier-forest-dark" "atelier-forest-light" "atelier-forest" "atelier-forest.dark" "atelier-forest.light" "atelier-heath-dark" "atelier-heath-light" "atelier-heath" "atelier-heath.dark" "atelier-heath.light" "atelier-lakeside-dark" "atelier-lakeside-light" "atelier-lakeside" "atelier-lakeside.dark" "atelier-lakeside.light" "atelier-plateau-dark" "atelier-plateau-light" "atelier-plateau" "atelier-plateau.dark" "atelier-plateau.light" "atelier-savanna-dark" "atelier-savanna-light" "atelier-savanna" "atelier-savanna.dark" "atelier-savanna.light" "atelier-seaside-dark" "atelier-seaside-light" "atelier-seaside" "atelier-seaside.dark" "atelier-seaside.light" "atelier-sulphurpool-dark" "atelier-sulphurpool-light" "atelier-sulphurpool" "atelier-sulphurpool.dark" "atelier-sulphurpool.light" "atlas" "atom-one-dark-reasonable" "atom-one-dark" "atom-one-light" "bespin" "black-metal-bathory" "black-metal-burzum" "black-metal-dark-funeral" "black-metal-gorgoroth" "black-metal-immortal" "black-metal-khold" "black-metal-marduk" "black-metal-mayhem" "black-metal-nile" "black-metal-venom" "black-metal" "brewer" "bright" "brogrammer" "brown-paper" "brown-papersq.png" "brown_paper" "brown_papersq.png" "brush-trees-dark" "brush-trees" "chalk" "circus" "classic-dark" "classic-light" "codepen-embed" "codeschool" "color-brewer" "colors" "cupcake" "cupertino" "danqing" "darcula" "dark-violet" "dark" "darkmoss" "darktooth" "darkula" "decaf" "default-dark" "default-light" "default" "devibeans" "dirtysea" "docco" "dracula" "edge-dark" "edge-light" "eighties" "embers" "equilibrium-dark" "equilibrium-gray-dark" "equilibrium-gray-light" "equilibrium-light" "espresso" "eva-dim" "eva" "far" "felipec" "flat" "foundation" "framer" "fruit-soda" "gigavolt" "github-dark-dimmed" "github-dark" "github-gist" "github" "gml" "google-dark" "google-light" "googlecode" "gradient-dark" "gradient-light" "grayscale-dark" "grayscale-light" "grayscale" "green-screen" "gruvbox-dark-hard" "gruvbox-dark-medium" "gruvbox-dark-pale" "gruvbox-dark-soft" "gruvbox-dark" "gruvbox-light-hard" "gruvbox-light-medium" "gruvbox-light-soft" "gruvbox-light" "hardcore" "harmonic16-dark" "harmonic16-light" "heetch-dark" "heetch-light" "helios" "hopscotch" "horizon-dark" "horizon-light" "humanoid-dark" "humanoid-light" "hybrid" "ia-dark" "ia-light" "icy-dark" "idea" "intellij-light" "ir-black" "ir_black" "isbl-editor-dark" "isbl-editor-light" "isotope" "kimber" "kimbie-dark" "kimbie-light" "kimbie.dark" "kimbie.light" "lightfair" "lioshi" "london-tube" "macintosh" "magula" "marrakesh" "materia" "material-darker" "material-lighter" "material-palenight" "material-vivid" "material" "mellow-purple" "mexico-light" "mocha" "mono-blue" "monokai-sublime" "monokai" "monokai_sublime" "nebula" "night-owl" "nnfx-dark" "nnfx-light" "nord" "nova" "obsidian" "ocean" "oceanicnext" "one-light" "onedark" "outrun-dark" "panda-syntax-dark" "panda-syntax-light" "papercolor-dark" "papercolor-light" "paraiso-dark" "paraiso-light" "paraiso" "paraiso.dark" "paraiso.light" "pasque" "phd" "pico" "pojoaque" "pojoaque.jpg" "pop" "porple" "purebasic" "qtcreator-dark" "qtcreator-light" "qtcreator_dark" "qtcreator_light" "qualia" "railscasts" "rainbow" "rebecca" "ros-pine-dawn" "ros-pine-moon" "ros-pine" "routeros" "sagelight" "sandcastle" "school-book" "school-book.png" "school_book" "school_book.png" "seti-ui" "shades-of-purple" "shapeshifter" "silk-dark" "silk-light" "snazzy" "solar-flare-light" "solar-flare" "solarized-dark" "solarized-light" "solarized_dark" "solarized_light" "spacemacs" "srcery" "stackoverflow-dark" "stackoverflow-light" "summercamp" "summerfruit-dark" "summerfruit-light" "sunburst" "synth-midnight-terminal-dark" "synth-midnight-terminal-light" "tango" "tender" "tokyo-night-dark" "tokyo-night-light" "tomorrow-night-blue" "tomorrow-night-bright" "tomorrow-night-eighties" "tomorrow-night" "tomorrow" "twilight" "unikitty-dark" "unikitty-light" "vs" "vs2015" "vulcan" "windows-10-light" "windows-10" "windows-95-light" "windows-95" "windows-high-contrast-light" "windows-high-contrast" "windows-nt-light" "windows-nt" "woodland" "xcode-dusk" "xcode" "xt256" "zenburn")
-  "List of highlightjs themes.")
-
 (defvar markdown-soma--render-gate nil
   "Gate when t pauses render.")
+
+(defvar markdown-soma-source-view nil
+  "Toggle on to view source in browser.")
 
 (defun markdown-soma-render (text)
   "Render TEXT via soma.
@@ -305,12 +304,16 @@ markdown-soma-render is debounced to 250ms."
                   (lambda ()
                     (setq-local markdown-soma--render-gate nil))))
 
+(defun markdown-soma--buffer-as-source (text)
+ "Wrap TEXT in markdown code fence."
+ (format "```\n%s\n```" text))
+
 (defun markdown-soma-render-buffer ()
   "Render buffer via soma."
   (markdown-soma-render
    (format "<!-- SOMA: {\"scrollTo\": %f} -->\n%s"
            (markdown-soma-current-scroll-percent)
-           (buffer-string))))
+           (if markdown-soma-source-view (markdown-soma--buffer-as-source (buffer-string)) (buffer-string)))))
 
 (defun markdown-soma-hooks-add ()
   "Activate hooks to trigger soma."
@@ -341,9 +344,9 @@ markdown-soma-render is debounced to 250ms."
 (defun markdown-soma-stop ()
   "Stop a running soma session."
   (message "markdown-soma-stop")
-  (markdown-soma--kill)
-  (markdown-soma-hooks-remove))
-
+  (markdown-soma-hooks-remove)
+  (markdown-soma--kill))
+  
 (defun markdown-soma-restart ()
   "Restart a running soma session."
   (interactive)
@@ -408,7 +411,7 @@ markdown-soma-render is debounced to 250ms."
  "The installed location of markdown-soma."
  (f-dirname
   (file-truename
-   (string-replace ".elc" ".el"
+   (replace-regexp-in-string "[.]elc$" ".el"
                    (locate-library "markdown-soma")))))
 
 (defun markdown-soma--builtin-css-theme-names ()
@@ -423,9 +426,19 @@ markdown-soma-render is debounced to 250ms."
               "styles")
              'markdown-soma--is-css-file-p nil))
 
+(defun markdown-soma--highlightjs-themes ()
+  "A list of highlightjs themes."
+ (--filter (not (string= "" it))
+           (s-lines
+            (f-read-text
+             (format "%s%s%s"
+                     (markdown-soma--source-dir)
+                     (f-path-separator)
+                     "highlightjs.themes")))))
+
 (defun markdown-soma--css-pathname-from-builtin-name (name)
   "Return the path and filename of CSS theme matching NAME."
-  (--find (s-contains-p name it) (markdown-soma--builtin-css-theme-files)))
+  (--find (s-ends-with-p (format "%s.css" name) it) (markdown-soma--builtin-css-theme-files)))
 
 (defun markdown-soma-select-builtin-css ()
   "Select markdown CSS from builtin themes."
@@ -454,7 +467,7 @@ markdown-soma-render is debounced to 250ms."
   (setq markdown-soma-highlightjs-theme
         (completing-read
          "Select highlightjs theme: "
-         markdown-soma-highlightjs-theme-list))
+         (markdown-soma--highlightjs-themes)))
   (message "Restart markdown-soma-mode to take effect in the browser"))
 
 (provide 'markdown-soma)

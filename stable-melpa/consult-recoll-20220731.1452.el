@@ -3,8 +3,8 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: docs, convenience
-;; Package-Version: 20220731.106
-;; Package-Commit: 6ea952cd4cbbfb9276325adbf05d6e050d225d51
+;; Package-Version: 20220731.1452
+;; Package-Commit: 89457fe05574a57498c11100ba4ffce5ee54165e
 ;; License: GPL-3.0-or-later
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "26.1") (consult "0.18"))
@@ -88,7 +88,7 @@ Set to nil to use the default 'title (path)' format."
   (setq consult-recoll--current text)
   `("recollq" ,@consult-recoll-search-flags ,text))
 
-(defconst consult-recoll--line-rx "^\\([^[]+\\)\t\\[\\([^]]+\\)\\]\t\\[\\([^[]+\\)\\]"
+(defconst consult-recoll--line-rx "^\\(.*?\\)\t\\[\\(.*?\\)\\]\t\\[\\(.*\\)\\]"
   "Regular expression decomposing result lines returned by recollq")
 
 (defun consult-recoll--transformer (str)
