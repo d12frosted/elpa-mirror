@@ -4,8 +4,8 @@
 ;; Author: Sarah Iovan <sarah@hwaetageek.com>
 ;;         Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-inkpot-theme
-;; Package-Version: 20220719.13
-;; Package-Commit: 935d72cf8ebafe24b685c1e6fca2209037a7d95f
+;; Package-Version: 20220731.435
+;; Package-Commit: a8a09d1c4f9044f89b480fcfec9cc9cd868190e5
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -452,6 +452,10 @@
     ;; highlight-indent-guides (melpa).
     `(highlight-indent-guides-odd-face ((t (:background ,ip-slate-dark+15.7))))
     `(highlight-indent-guides-even-face ((t (:background ,ip-slate-dark+7.9))))
+
+    ;; hl-indent-scope (melpa).
+    `(hl-indent-scope-odd-face ((t (:background ,ip-slate-dark+15.7))))
+    `(hl-indent-scope-even-face ((t (:background ,ip-slate-dark+7.9))))
 
     ;; highlight-operators (melpa).
     `(highlight-operators-face ((t (:foreground ,ip-blue-bright))))

@@ -1,9 +1,9 @@
 (cider .
-       [(20220728 508)
+       [(20220731 522)
 	((emacs
 	  (26))
 	 (clojure-mode
-	  (5 14))
+	  (5 15 1))
 	 (parseedn
 	  (1 0 6))
 	 (queue
@@ -15,7 +15,7 @@
 	 (sesman
 	  (0 3 2)))
 	"Clojure Interactive Development Environment that Rocks" tar
-	((:commit . "f422665fb0491abb9d8a8fdc2ce1aebb2497d6d3")
+	((:commit . "21ccc40d8e50b9b74ac09d8d31374211c92b27e1")
 	 (:authors
 	  ("Tim King" . "kingtim@gmail.com")
 	  ("Phil Hagelberg" . "technomancy@gmail.com")
