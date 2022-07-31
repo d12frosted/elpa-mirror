@@ -3,9 +3,9 @@
 ;; Copyright (C) 2018-2020,2021,2022 Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
-;; Version: 0.3.12
-;; Package-Version: 20220702.511
-;; Package-Commit: bd8bc9b4c15783debcec132c79835e37b03626c8
+;; Version: 0.3.13
+;; Package-Version: 20220731.1246
+;; Package-Commit: e53d0fde875d137eeb03eddd6b50d3c827f9947f
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -212,6 +212,8 @@ refiling many entries to a single file."
 (defvar-local org-reverse-datetree-non-reverse nil
   "If non-nil, creates a non-reverse date tree.")
 
+(defvar-local org-reverse-datetree-num-levels nil)
+
 (eval-and-compile
   (if (version< emacs-version "27")
       (defun org-reverse-datetree--encode-time (time)
@@ -382,6 +384,7 @@ If ALLOW-FAILURE is non-nil, it returns nil if the buffer does
 not have a datetree format configured."
   (or org-reverse-datetree-level-formats
       (progn
+        (setq org-reverse-datetree-num-levels nil)
         (org-reverse-datetree--get-file-headers)
         (catch 'datetree-format
           (let* ((type (org-reverse-datetree--lookup-type-header-1
@@ -508,7 +511,12 @@ TEXT is a heading text."
 (defun org-reverse-datetree--get-file-headers ()
   "Get the file headers of the current Org buffer."
   (require 'org-element)
-  (let ((buffer-ast (org-with-wide-buffer (org-element-parse-buffer))))
+  (let ((buffer-ast (org-with-wide-buffer
+                     (goto-char (point-min))
+                     (save-match-data
+                       (when (re-search-forward org-heading-regexp nil t)
+                         (narrow-to-region (point-min) (point))))
+                     (org-element-parse-buffer))))
     (setq org-reverse-datetree--file-headers
           (or (org-element-map buffer-ast 'keyword
                 (lambda (keyword)
@@ -1268,10 +1276,9 @@ Unless DECODED is non-nil, the returned date is an encoded time,
 so it can be passed to other functions in `org-reverse-datetree'
 package. The encoded time will be the midnight in the day."
   (unless (org-before-first-heading-p)
-    (let* ((formats (org-reverse-datetree--get-level-formats t))
-           (level (length formats))
-           (current-level (org-outline-level)))
-      (when (and formats
+    (let ((level (org-reverse-datetree-num-levels))
+          (current-level (org-outline-level)))
+      (when (and level
                  (>= current-level level))
         (org-with-wide-buffer
          (when (> current-level level)
@@ -1288,6 +1295,23 @@ package. The encoded time will be the midnight in the day."
                (org-reverse-datetree--encode-time
                 (append '(0 0 0)
                         (seq-drop decoded-time 3)))))))))))
+
+(defun org-reverse-datetree-num-levels ()
+  "Return the number of outline levels of datetree entries.
+
+If the file does not contain a datetree configured, it returns
+nil.
+
+This uses a cached value whenever available, so it is faster than
+calling `org-reverse-datetree--get-level-formats'."
+  (if org-reverse-datetree-level-formats
+      (length org-reverse-datetree-level-formats)
+    (let ((levels (or org-reverse-datetree-num-levels
+                      (setq org-reverse-datetree-num-levels
+                            (length (org-reverse-datetree--get-level-formats t))))))
+      ;; If the file contains no datetree, the cached value is set to zero,
+      (unless (= 0 levels)
+        levels))))
 
 (provide 'org-reverse-datetree)
 ;;; org-reverse-datetree.el ends here
