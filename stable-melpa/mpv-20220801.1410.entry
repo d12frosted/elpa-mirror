@@ -1,0 +1,11 @@
+(mpv .
+     [(20220801 1410)
+      ((emacs
+	(25 1)))
+      "control mpv for easy note-taking" single
+      ((:commit . "edf04c18fce5ba502d735d03751e2c5bc8ab2f27")
+       (:authors
+	("Johann Klähn" . "johann@jklaehn.de"))
+       (:maintainer "Johann Klähn" . "johann@jklaehn.de")
+       (:keywords "tools" "multimedia")
+       (:url . "https://github.com/kljohann/mpv.el"))])

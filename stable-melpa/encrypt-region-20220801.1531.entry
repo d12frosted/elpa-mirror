@@ -1,0 +1,11 @@
+(encrypt-region .
+		[(20220801 1531)
+		 ((emacs
+		   (26 1)))
+		 "Encrypts and decrypts regions" single
+		 ((:commit . "468c541b45ac14ff08ce24b1196d9e8f0dba1b4a")
+		  (:authors
+		   ("Carlton Shepherd" . "carlton@linux.com"))
+		  (:maintainer "Carlton Shepherd" . "carlton@linux.com")
+		  (:keywords "tools" "convenience")
+		  (:url . "https://github.com/cgshep/encrypt-region"))])
