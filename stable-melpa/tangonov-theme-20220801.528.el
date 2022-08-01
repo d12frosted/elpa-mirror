@@ -5,11 +5,11 @@
 ;; Author: Trevor Richards <trev@trevdev.ca>
 ;; Maintainer: Trevor Richards <trev@trevdev.ca>
 ;; URL: https://github.com/trev-dev/tangonov-theme
-;; Package-Version: 20220727.1356
-;; Package-Commit: b07f75382cdbba6c26e95bfe96a78827ed702be3
+;; Package-Version: 20220801.528
+;; Package-Commit: 20b59b96ef57f7531525951989cef0e9f849371b
 ;; Created: 20th July, 2022
 ;; Keywords: faces, theme, dark
-;; Version: 1.0.4
+;; Version: 1.0.5
 ;; Package-Requires: ((emacs "25"))
 
 ;; License: GPL3
@@ -121,7 +121,9 @@ Alpha should be a float between 0 and 1."
    `(region ((,spec (:foreground
                      ,cyan :background ,(tangonov-darken cyan 0.5)))))
    `(secondary-selection ((,spec (:background ,gray2 :foreground ,fg))))
-   `(lazy-highlight ((,spec (:inherit 'isearch))))
+   `(lazy-highlight ((,spec
+                      (:foreground ,blue :background
+                                   ,(tangonov-darken blue 0.5)))))
    `(error ((,spec (:foreground ,red))))
    `(warning ((,spec (:foreground ,yellow))))
    `(success ((,spec (:foreground ,green))))
@@ -175,6 +177,17 @@ Alpha should be a float between 0 and 1."
    `(custom-state
      ((,spec (:foreground ,green :background ,(tangonov-darken green 0.5)))))
    `(custom-changed ((,spec (:foreground ,blue :background ,bg))))
+   `(elfeed-log-debug-level-face ((,spec (:foreground ,gray2))))
+   `(elfeed-log-error-level-face ((,spec (:inherit 'error))))
+   `(elfeed-log-info-level-face ((,spec (:inherit 'success))))
+   `(elfeed-log-warn-level-face ((,spec (:inherit 'warning))))
+   `(elfeed-search-date-face ((,spec (:foreground ,violet))))
+   `(elfeed-search-feed-face ((,spec (:foreground ,blue))))
+   `(elfeed-search-tag-face ((,spec (:foreground ,gray2))))
+   `(elfeed-search-title-face ((,spec (:foreground ,gray2))))
+   `(elfeed-search-filter-face ((,spec (:foreground ,violet))))
+   `(elfeed-search-unread-count-face ((,spec (:foreground ,yellow))))
+   `(elfeed-search-unread-title-face ((,spec (:foreground ,fg :weight bold))))
    `(message-header-name ((,spec (:foreground ,green))))
    `(message-header-subject ((,spec (:foreground ,cyan :weight bold))))
    `(message-header-to ((,spec (:foreground ,cyan :weight bold))))
@@ -250,6 +263,12 @@ Alpha should be a float between 0 and 1."
    `(gnus-cite-11 ((,spec (:foreground ,yellow))))
    `(gnus-signature ((,spec (:foreground ,yellow))))
    `(gnus-x-face ((,spec (:background ,gray3 :foreground ,fg))))
+   `(notmuch-crypto-decryption ((,spec (:foreground ,magenta))))
+   ; `(notmuch-crypto-part-header ((,spec ())))
+   `(notmuch-crypto-signature-bad ((,spec (:foreground ,red))))
+   `(notmuch-crypto-signature-good ((,spec (:foreground ,green))))
+   `(notmuch-crypto-signature-good-key ((,spec (:foreground ,orange))))
+   `(notmuch-crypto-signature-unknown ((,spec (:foreground ,red))))
    `(notmuch-message-summary-face
      ((,spec (:background ,bg-alt))))
    `(notmuch-search-count ((,spec (:foreground ,gray2))))

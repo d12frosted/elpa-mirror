@@ -5,8 +5,8 @@
 ;;; Author: Carlton Shepherd <carlton@linux.com>
 
 ;;; Version: 1.0
-;; Package-Version: 20220731.2314
-;; Package-Commit: 1b1aa768d242b9a01a089b395944feb6435469f6
+;; Package-Version: 20220801.248
+;; Package-Commit: f5f7454df137c9aa250a8209351550d704b62e9d
 ;;; Keywords: tools, convenience
 ;;; License: GPLv3
 ;;; Package-Requires: ((emacs "26.1"))
@@ -59,7 +59,8 @@ Argument LENGTH pad length."
   "Remove padding from STRING."
   (substring string 0 (- (length string)
 			 (aref string (1- (length string))))))
-     
+
+;;;###autoload
 (defun encrypt-region-encrypt (start end)
   "Encrypts a region and outputs its base64 encoding.
 Argument START region start.
@@ -78,6 +79,7 @@ Argument END region end."
 				      "") "###"))
     (switch-to-buffer encrypt-region--encrypt-buf-name)))
 
+;;;###autoload
 (defun encrypt-region-decrypt (start end)
   "Decrypt a base64-encoded encrypted region.
 Argument START region start.
