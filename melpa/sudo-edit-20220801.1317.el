@@ -4,8 +4,8 @@
 
 ;; Author: Nathaniel Flath <flat0103@gmail.com>
 ;; URL: https://github.com/nflath/sudo-edit
-;; Package-Version: 20210706.534
-;; Package-Commit: 23b78a39053088839f281bc0c3134203d7e04e50
+;; Package-Version: 20220801.1317
+;; Package-Commit: 74eb1e6986461baed9a9269566ff838530b4379b
 ;; Keywords: convenience
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
@@ -105,14 +105,16 @@ attention to case differences."
   "Tramp method to use with `sudo-edit' for local files."
   :type '(choice
           (const "sudo")
+          (const "doas")
           (const "su"))
   :group 'sudo-edit)
 
 (defcustom sudo-edit-remote-method nil
   "Tramp method to use with `sudo-edit' for remote files."
   :type '(choice
-          (const :tag "Use local medthod" nil)
+          (const :tag "Use local method" nil)
           (const "sudo")
+          (const "doas")
           (const "su"))
   :group 'sudo-edit)
 
