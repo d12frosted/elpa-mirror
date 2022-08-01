@@ -1,0 +1,14 @@
+(flycheck-languagetool .
+		       [(20220731 2301)
+			((emacs
+			  (25 1))
+			 (flycheck
+			  (0 14)))
+			"Flycheck support for LanguageTool" single
+			((:commit . "53b3e46d47a0e70fd2e5c49fea9134ee9aa41793")
+			 (:authors
+			  ("Shen, Jen-Chieh" . "jcs090218@gmail.com")
+			  ("Peter Oliver" . "git@mavit.org.uk"))
+			 (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+			 (:keywords "convenience" "grammar" "check")
+			 (:url . "https://github.com/emacs-languagetool/flycheck-languagetool"))])

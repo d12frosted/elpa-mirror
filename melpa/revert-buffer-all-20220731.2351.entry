@@ -1,0 +1,10 @@
+(revert-buffer-all .
+		   [(20220731 2351)
+		    ((emacs
+		      (24 3)))
+		    "Revert all open buffers" single
+		    ((:commit . "c07996fcf3e8f7ee156055327522586f32582ce1")
+		     (:authors
+		      ("Campbell Barton" . "ideasman42@gmail.com"))
+		     (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		     (:url . "https://codeberg.org/ideasman42/emacs-buffer-revert-all"))])
