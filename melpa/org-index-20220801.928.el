@@ -4,8 +4,8 @@
 
 ;; Author: Marc Ihm <1@2484.de>
 ;; URL: https://github.com/marcIhm/org-index
-;; Package-Version: 20220228.1651
-;; Package-Commit: 9671cf059b681fac39ce910dd8847b5c7bfad170
+;; Package-Version: 20220801.928
+;; Package-Commit: 9ca02c4e7a38c788b70a1f5364ab505695335bd3
 ;; Version: 7.4.3
 ;; Package-Requires: ((org "9.3") (dash "2.12") (s "1.12") (emacs "26.3"))
 
@@ -2248,6 +2248,12 @@ Argument TOPIC"
             (insert-button
              "goto index" 'action
              (lambda (_) (oidx--index-checks-goto-index topic)))
+            (insert ", ")
+            (insert-button
+             "Update id locations" 'action
+             (lambda (_)
+               (org-id-update-id-locations)
+               (message "Locations updated, you may want to repeat the index checks now and even restart emacs before.")))
             (insert "\n"))
           list)))
 
