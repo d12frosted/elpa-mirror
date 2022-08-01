@@ -4,11 +4,11 @@ Source:  https://codeberg.org/martianh/mastodon.el
 
 Updating /mnt/store/melpa/working/mastodon/
 Checking out origin/HEAD
-Checking out c06f1a14cceb02ba702c1a67d6ba97f3badc2a7b
-Checking out c06f1a14cceb02ba702c1a67d6ba97f3badc2a7b
+Checking out b6184b5cc445a496397d1b90aac7634c775ca9ee
+Checking out b6184b5cc445a496397d1b90aac7634c775ca9ee
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonW7Hxkh/mastodon-20220727.854
+  to /tmp/mastodonb9IYmo/mastodon-20220731.2054
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -22,23 +22,25 @@ Copying files (->) and directories (=>)
   ! lisp/mastodon-tl.el -> mastodon-tl.el
   ! lisp/mastodon-toot.el -> mastodon-toot.el
   ! lisp/mastodon.el -> mastodon.el
-Created mastodon-20220727.854.tar containing:
-  mastodon-20220727.854/
-  mastodon-20220727.854/mastodon-async.el
-  mastodon-20220727.854/mastodon-auth.el
-  mastodon-20220727.854/mastodon-client.el
-  mastodon-20220727.854/mastodon-discover.el
-  mastodon-20220727.854/mastodon-http.el
-  mastodon-20220727.854/mastodon-inspect.el
-  mastodon-20220727.854/mastodon-media.el
-  mastodon-20220727.854/mastodon-notifications.el
-  mastodon-20220727.854/mastodon-pkg.el
-  mastodon-20220727.854/mastodon-profile.el
-  mastodon-20220727.854/mastodon-search.el
-  mastodon-20220727.854/mastodon-tl.el
-  mastodon-20220727.854/mastodon-toot.el
-  mastodon-20220727.854/mastodon.el
-Built mastodon in 10.428s, finished at 2022-07-31T18:23:36+0000
+Created mastodon-20220731.2054.tar containing:
+  mastodon-20220731.2054/
+  mastodon-20220731.2054/mastodon-async.el
+  mastodon-20220731.2054/mastodon-auth.el
+  mastodon-20220731.2054/mastodon-client.el
+  mastodon-20220731.2054/mastodon-discover.el
+  mastodon-20220731.2054/mastodon-http.el
+  mastodon-20220731.2054/mastodon-inspect.el
+  mastodon-20220731.2054/mastodon-media.el
+  mastodon-20220731.2054/mastodon-notifications.el
+  mastodon-20220731.2054/mastodon-pkg.el
+  mastodon-20220731.2054/mastodon-profile.el
+  mastodon-20220731.2054/mastodon-search.el
+  mastodon-20220731.2054/mastodon-tl.el
+  mastodon-20220731.2054/mastodon-toot.el
+  mastodon-20220731.2054/mastodon.el
+Built mastodon in 8.563s, finished at 2022-07-31T22:19:20+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  391 Jul 31 18:23 packages/mastodon-20220727.854.entry
 260K -rw-r--r-- 1 root root 260K Jul 31 18:23 packages/mastodon-20220727.854.tar
+4.0K -rw-r--r-- 1 root root  392 Jul 31 22:19 packages/mastodon-20220731.2054.entry
+260K -rw-r--r-- 1 root root 260K Jul 31 22:19 packages/mastodon-20220731.2054.tar
