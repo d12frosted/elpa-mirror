@@ -5,8 +5,9 @@ tags are aggregated in the database that can be queried in various
 ways.
 
 The tag format is as follows:
-[[org-journal:<tag-name>::<number-of-paragraphs>][<tag-description>]]
-where the "::<number-of-paragraphs>" part is optional.
+[[org-journal:<kind>:<tag-name>::<number-of-paragraphs>][<tag-description>]]
+where the ":<kind>" and "::<number-of-paragraphs>" part is
+optional.
 
 Enabling `org-journal-tags-autosync-mode' syncronizes these tags
 with the database at the moment of saving the org-journal buffer.
