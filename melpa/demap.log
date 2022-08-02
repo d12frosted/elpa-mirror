@@ -3,24 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sawyerjgardner/demap.el.git
 
 Updating /mnt/store/melpa/working/demap/
-Checking out origin/HEAD
-Checking out c42ec4752544f80ca7c172ff65e705a56089bc96
-Checking out c42ec4752544f80ca7c172ff65e705a56089bc96
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/demap/
-  to /tmp/demapMst54g/demap-20220322.2309
-    demap-minimap.el -> demap-minimap.el
-    demap-modes.el -> demap-modes.el
-    demap-tools.el -> demap-tools.el
-    demap.el -> demap.el
-Created demap-20220322.2309.tar containing:
-  demap-20220322.2309/
-  demap-20220322.2309/demap-minimap.el
-  demap-20220322.2309/demap-modes.el
-  demap-20220322.2309/demap-pkg.el
-  demap-20220322.2309/demap-tools.el
-  demap-20220322.2309/demap.el
-Built demap in 10.186s, finished at 2022-08-01T17:11:55+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 387 Aug  1 17:11 packages/demap-20220322.2309.entry
- 72K -rw-r--r-- 1 root root 70K Aug  1 17:11 packages/demap-20220322.2309.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/sawyerjgardner/demap.el.git/': The requested URL returned error: 524
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
