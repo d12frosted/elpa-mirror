@@ -5,8 +5,8 @@
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.4.0
-;; Package-Version: 20220802.904
-;; Package-Commit: d2375f42c80799ad7fb2324247315169bedc4c19
+;; Package-Version: 20220802.1544
+;; Package-Commit: 7578762cdadfd66ceafa6a49b19628020b95dc5c
 ;; Package-Requires: ((emacs "27.1") (org-journal "2.1.2") (magit-section "3.3.0") (transient "0.3.7"))
 ;; Homepage: https://github.com/SqrtMinusOne/org-journal-tags
 
@@ -73,6 +73,9 @@
 
 ;; Same with org-contacts.
 (declare-function org-contacts-db "org-contacts")
+
+;; And org-encrypt.
+(declare-function org-encrypt-entries "org-crypt")
 
 (defgroup org-journal-tags ()
   "Tagging and querying system for org-journal."
@@ -1902,6 +1905,8 @@ If called interactively, prompt for both."
                    source-tag-name target-tag-name)
                   (org-journal-tags--refactor-buffer-section
                    source-tag-name target-tag-name)
+                  (when (fboundp #'org-encrypt-entries)
+                    (org-encrypt-entries))
                   (save-buffer)))))
 
 ;; Status buffer

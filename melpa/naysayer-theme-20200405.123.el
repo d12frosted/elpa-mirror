@@ -2,8 +2,6 @@
 
 ;; Author: Nick Aversano <nickav@users.noreply.github.com>
 ;; Version: 0.33
-;; Package-Version: 20200405.123
-;; Package-Commit: 9d0bef898f31368cd30e063d53d443dee29683b0
 ;; Filename: naysayer-theme.el
 ;; Package-Requires: ((emacs "24"))
 ;; URL: https://github.com/nickav/naysayer-theme.el

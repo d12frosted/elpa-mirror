@@ -4,8 +4,8 @@
 ;;
 ;; Author: Mark Karpov <markkarpov92@gmail.com>
 ;; URL: https://github.com/mrkkrp/modalka
-;; Package-Version: 20210318.1748
-;; Package-Commit: 3d7f652d06c8e39cfe252ece804868a20730df07
+;; Package-Version: 20220802.1450
+;; Package-Commit: 414b3e89937495b36fd8897adc6443eca98df78c
 ;; Version: 0.1.5
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: modal editing
@@ -85,7 +85,8 @@ This variable is considered when Modalka is enabled globally via
         (let ((binding (key-binding target-key)))
           (unless (or (memq binding '(nil undefined))
                       (keymapp binding))
-            (call-interactively binding))))
+            (call-interactively binding)
+            (setq this-command binding))))
       `(format "This command translates %s into %s, which calls `%s'."
                (key-description ,actual-key)
                (key-description ,target-key)
