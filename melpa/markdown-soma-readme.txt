@@ -1,4 +1,3 @@
-
 # Markdown Soma
 
 ### Live Markdown in Emacs
@@ -13,7 +12,7 @@ Based on the Vim plugin [`vim-markdown-composer`][vmc],
 To start:
 
 ```
-M-x markdown-soma
+M-x markdown-soma-mode
 ```
 
 The default browser will open a tab with the rendered markdown view.
@@ -27,7 +26,7 @@ improve it are welcome.)_
 
 A new markdown render triggers by hooks in  `markdown-soma--render-buffer-hooks`.
 
-```emacs-lisp
+```lisp
 ;; default render buffer hooks
 
 (setq markdown-soma--render-buffer-hooks
@@ -49,7 +48,7 @@ Using [Doom Emacs](https://github.com/doomemacs/doomemacs)
 
 in `~/.doom.d/packages.el`
 
-```
+```lisp
 (package! markdown-soma)
 ```
 
@@ -80,7 +79,7 @@ M-x markdown-soma-select-builtin-css
 
 To persist the setting, select a theme name and add it to your Emacs init with:
 
-```
+```lisp
 (setq markdown-soma-custom-css
    (markdown-soma--css-pathname-from-builtin-name "theme name")
 ```
@@ -103,7 +102,7 @@ M-x markdown-soma-restart
 
 To persist the setting add to your Emacs init
 
-```
+```lisp
 (setq markdown-soma-custom-css "/path/to/your.css")
 ```
 
@@ -115,7 +114,7 @@ M-x markdown-soma-select-highlight-theme
 
 To persist the setting add to your Emacs init
 
-```
+```lisp
 ;; Change "theme name" to the selected highlightjs theme.
 (setq markdown-soma-highlightjs-theme "theme name")
 ```
@@ -167,7 +166,7 @@ changes to connected clients (as HTML).
 Emacs embeds a value for `scrollTo`, into the input with a
 magic comment e.g.
 
-```
+```html
 <!-- SOMA: {"scrollTo": 0} // scrolls to the top.  -->
 ```
 

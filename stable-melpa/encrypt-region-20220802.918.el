@@ -5,8 +5,8 @@
 ;; Author: Carlton Shepherd <carlton@linux.com>
 
 ;; Version: 1.0
-;; Package-Version: 20220801.1531
-;; Package-Commit: 468c541b45ac14ff08ce24b1196d9e8f0dba1b4a
+;; Package-Version: 20220802.918
+;; Package-Commit: 8ff5704bc6f4c57f935a8b7680129e599bbe474f
 ;; Keywords: tools convenience
 ;; License: GPLv3
 ;; Package-Requires: ((emacs "26.1"))
@@ -44,8 +44,8 @@
   :type 'string
   :group 'encrypt-region)
 
-(defvar encrypt-region--encrypt-buf-name "*Encrypt Region*")
-(defvar encrypt-region--decrypt-buf-name "*Decrypt Region*")
+(defvar encrypt-region--encrypt-buf-name "*Encrypted Region*")
+(defvar encrypt-region--decrypt-buf-name "*Decrypted Region*")
 
 (defun encrypt-region--pad (input length)
   "Pad string to a given LENGTH using PKCS#7.

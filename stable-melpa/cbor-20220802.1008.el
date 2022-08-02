@@ -5,8 +5,8 @@
 ;; Author: Oscar Najera <https://oscarnajera.com>
 ;; Maintainer: Oscar Najera <hi@oscarnajera.com>
 ;; Version: 0.2.1
-;; Package-Version: 20220623.22
-;; Package-Commit: 2c1ad565ff39fd03d137ba115b1fb77841914c6d
+;; Package-Version: 20220802.1008
+;; Package-Commit: 40d04a0baf5c3d1087b18cc03595c573a1b5891d
 ;; Homepage: https://github.com/Titan-C/cardano.el
 ;; Package-Requires: ((emacs "25.1") (dash "2.19.0"))
 ;;
@@ -63,10 +63,7 @@
 (defun cbor--get-ints (string &optional little)
   "Convert byte STRING to integer.
 Default to big-endian unless LITTLE is non-nil."
-  (let ((work-str (if little string (reverse string))))
-    (apply #'logior
-           (-zip-with #'ash (string-to-list work-str)
-                      (number-sequence 0 (* 8 (length work-str)) 8)))))
+  (seq-reduce (lambda (acc n) (logior n (ash acc 8))) (if little (nreverse string) string) 0))
 
 (defun cbor--consume! (bytes)
   "Consume N BYTES from the source string."

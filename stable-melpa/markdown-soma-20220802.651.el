@@ -4,10 +4,10 @@
 
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/markdown-soma
-;; Package-Version: 20220801.1922
-;; Package-Commit: cba55e699b4c66880dc2a5ad563d45c11583b629
+;; Package-Version: 20220802.651
+;; Package-Commit: 46001230021459e9fa4281cf57213e8c745403f5
 ;; Keywords: wp, docs, text, markdown
-;; Version: 0.2.9
+;; Version: 0.3.1
 ;; Package-Requires: ((emacs "25") (s "1.11.0") (dash "2.19.1") (f "0.20.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -24,7 +24,6 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 ;;; Commentary:
-;;
 ;; # Markdown Soma
 ;;
 ;; ### Live Markdown in Emacs
@@ -39,7 +38,7 @@
 ;; To start:
 ;;
 ;; ```
-;; M-x markdown-soma
+;; M-x markdown-soma-mode
 ;; ```
 ;;
 ;; The default browser will open a tab with the rendered markdown view.
@@ -53,7 +52,7 @@
 ;;
 ;; A new markdown render triggers by hooks in  `markdown-soma--render-buffer-hooks`.
 ;;
-;; ```emacs-lisp
+;; ```lisp
 ;; ;; default render buffer hooks
 ;;
 ;; (setq markdown-soma--render-buffer-hooks
@@ -75,7 +74,7 @@
 ;;
 ;; in `~/.doom.d/packages.el`
 ;;
-;; ```
+;; ```lisp
 ;; (package! markdown-soma)
 ;; ```
 ;;
@@ -106,7 +105,7 @@
 ;;
 ;; To persist the setting, select a theme name and add it to your Emacs init with:
 ;;
-;; ```
+;; ```lisp
 ;; (setq markdown-soma-custom-css
 ;;    (markdown-soma--css-pathname-from-builtin-name "theme name")
 ;; ```
@@ -129,7 +128,7 @@
 ;;
 ;; To persist the setting add to your Emacs init
 ;;
-;; ```
+;; ```lisp
 ;; (setq markdown-soma-custom-css "/path/to/your.css")
 ;; ```
 ;;
@@ -141,7 +140,7 @@
 ;;
 ;; To persist the setting add to your Emacs init
 ;;
-;; ```
+;; ```lisp
 ;; ;; Change "theme name" to the selected highlightjs theme.
 ;; (setq markdown-soma-highlightjs-theme "theme name")
 ;; ```
@@ -193,7 +192,7 @@
 ;; Emacs embeds a value for `scrollTo`, into the input with a
 ;; magic comment e.g.
 ;;
-;; ```
+;; ```html
 ;; <!-- SOMA: {"scrollTo": 0} // scrolls to the top.  -->
 ;; ```
 ;;
@@ -299,11 +298,20 @@ By default, `~/.cargo/bin' will be in `$PATH'."
 
 ;;;###autoload
 (defun markdown-soma-toggle-source-view (force)
-  "Toggle source view or FORCE on."
+  "Toggle source view or FORCE on/off.
+
+FORCE will expect a prefix positive integer to mean on or
+negative prefix to mean off.
+
+This will trigger markdown-soma-restart in an active session."
   (interactive "p")
-  (if force
-      (setq markdown-soma-source-view t)
-    (setq markdown-soma-source-view (not markdown-soma-source-view))))
+  (when (< 0 force)
+      (setq markdown-soma-source-view nil))
+  (when (> 1 force)
+      (setq markdown-soma-source-view t))
+  (when (= 1 force)
+      (setq markdown-soma-source-view (not markdown-soma-source-view)))
+  (when markdown-soma-mode (markdown-soma-restart)))
 
 (defun markdown-soma--source-dir ()
  "The installed location of markdown-soma."
@@ -331,14 +339,14 @@ By default, `~/.cargo/bin' will be in `$PATH'."
 (defun markdown-soma-render (text)
   "Render TEXT via soma.
 
-markdown-soma-render is debounced to 250ms."
+markdown-soma-render is debounced to 400ms."
   (unless markdown-soma--render-gate
     (process-send-string (get-process "markdown-soma") (format "%s\n" text))
     (process-send-eof (get-process "markdown-soma")))
   (setq-local markdown-soma--render-gate t)
-  (run-with-timer 0.250 nil
-                  (lambda ()
-                    (setq-local markdown-soma--render-gate nil))))
+  (run-with-timer 0.400 nil
+     (lambda ()
+       (setq-local markdown-soma--render-gate nil))))
 
 (defun markdown-soma--code-fence (text)
  "Wrap TEXT in markdown code fence."
@@ -346,10 +354,11 @@ markdown-soma-render is debounced to 250ms."
 
 (defun markdown-soma-render-buffer ()
   "Render buffer via soma."
-  (markdown-soma-render
-   (format "<!-- SOMA: {\"scrollTo\": %f} -->\n%s"
+  (ignore-errors
+   (markdown-soma-render
+     (format "<!-- SOMA: {\"scrollTo\": %f} -->\n%s"
            (markdown-soma-current-scroll-percent)
-           (if markdown-soma-source-view (markdown-soma--code-fence (buffer-string)) (buffer-string)))))
+           (if markdown-soma-source-view (markdown-soma--code-fence (buffer-string)) (buffer-string))))))
 
 (defun markdown-soma-hooks-add ()
   "Activate hooks to trigger soma."
@@ -396,12 +405,13 @@ markdown-soma-render is debounced to 250ms."
 
 (defun markdown-soma--run ()
   "Run soma."
-  (start-process-shell-command
-   "markdown-soma"
-   "*markdown-soma*"
-   (markdown-soma--shell-command))
-  (set-process-query-on-exit-flag
-   (get-process "markdown-soma") nil))
+  (let ((process-name (format "%s-markdown-soma-process" (buffer-name))))
+   (start-process-shell-command
+     process-name
+     (format "*%s-buffer*" process-name)
+     (markdown-soma--shell-command))
+   (set-process-query-on-exit-flag
+    (get-process process-name) nil)))
 
 (defun markdown-soma--shell-command ()
   "Generate the markdown-soma shell command."
@@ -425,8 +435,9 @@ markdown-soma-render is debounced to 250ms."
 
 (defun markdown-soma--kill ()
   "Kill soma process and buffer."
-  (when (buffer-live-p (get-buffer "*markdown-soma*"))
-    (kill-buffer "*markdown-soma*")))
+  (let ((process-buffer-name (format "*%s-markdown-soma-process-buffer*" (buffer-name))))
+   (when (buffer-live-p (get-buffer process-buffer-name))
+     (kill-buffer process-buffer-name))))
 
 (defun markdown-soma--window-point ()
   "Return the current (column . row) within the window."
@@ -456,15 +467,17 @@ markdown-soma-render is debounced to 250ms."
                      "highlightjs.themes")))))
 
 (defun markdown-soma-select-builtin-css ()
-  "Select markdown CSS from builtin themes."
+  "Select markdown CSS from builtin themes.
+
+This will trigger markdown-soma-restart in an active session."
   (interactive)
   (setq markdown-soma-custom-css
    (markdown-soma--css-pathname-from-builtin-name
     (completing-read
      "Select CSS theme: "
      (markdown-soma--builtin-css-theme-names))))
-  (message "Restart markdown-soma-mode to take effect in the browser"))
-
+  (when markdown-soma-mode (markdown-soma-restart)))
+  
 (defun markdown-soma-select-css-file ()
   "Select markdown CSS file to use with soma."
   (interactive)
@@ -474,7 +487,7 @@ markdown-soma-render is debounced to 250ms."
     (if (markdown-soma--is-css-file-p css-file)
         (setq markdown-soma-custom-css css-file)
       (user-error "Error markdown-soma-custom-css is %s is not a css file" css-file)))
-  (message "Restart markdown-soma-mode to take effect in the browser"))
+  (when markdown-soma-mode (markdown-soma-restart)))
 
 (defun markdown-soma-select-highlightjs-theme ()
   "Select a highlightjs theme for markdown."
@@ -483,7 +496,7 @@ markdown-soma-render is debounced to 250ms."
         (completing-read
          "Select highlightjs theme: "
          (markdown-soma--highlightjs-themes)))
-  (message "Restart markdown-soma-mode to take effect in the browser"))
+  (when markdown-soma-mode (markdown-soma-restart)))
 
 (provide 'markdown-soma)
 ;;; markdown-soma.el ends here
