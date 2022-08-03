@@ -3,9 +3,9 @@
 ;; Author: Carlos Scheidegger
 ;; Maintainer: Carlos Scheidegger
 ;; Copyright (C) 2022 RStudio PBC
-;; Version: 0.0.1
-;; Package-Version: 20220602.1714
-;; Package-Commit: 028157889134031af4752205082173bf44b7e016
+;; Version: 0.0.3
+;; Package-Version: 20220802.2041
+;; Package-Commit: 769a4ec178f8ad3e0c87b1ee23e64616ee161b02
 ;; package-requires: ((emacs "25.1") (polymode "0.2.2") (poly-markdown "0.2.2") (markdown-mode "2.3") (request "0.3.2"))
 ;; URL: https://github.com/quarto-dev/quarto-emacs
 ;; Keywords: languages, multi-modes
@@ -155,17 +155,7 @@ disk output."
 	    
 (defun quarto-mode--buffer-in-quarto-project-p ()
   "Return the full filename of the _quarto.yml project configuration for the present buffer or nil if none is found."
-  (let* ((dirs (quarto-mode--parent-directories buffer-file-name))
-	 result)
-    (while dirs
-      (let ((dir (car dirs)))
-	(cond
-	 ((file-exists-p (concat dir "_quarto.yml"))
-	  (setq result dir
-		dirs '()))
-	 (t
-	  (setq dirs (cdr dirs))))))
-    result))
+  (locate-dominating-file buffer-file-name "_quarto.yml"))
 
 (defvar quarto-mode--preview-process nil)
 (defvar quarto-mode--preview-url nil)

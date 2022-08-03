@@ -5,8 +5,8 @@
 ;; Author: Juergen Hoetzel <juergen@hoetzel.info>
 ;; Maintainer: Juergen Hoetzel <juergen@hoetzel.info>
 ;; URL: https://github.com/juergenhoetzel/pkgbuild-mode
-;; Package-Version: 20220723.1401
-;; Package-Commit: a6985ae497c5ca721b62d3d2742f1fe1fd9fa3a3
+;; Package-Version: 20220802.1951
+;; Package-Commit: 9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067
 ;; Package-Requires: ((emacs "26.1"))
 ;; Version: 1.0-snapshot
 ;; Keywords: languages
@@ -375,7 +375,7 @@ REPORT-FN is flymake's callback function."
      (unless diagnostics
        (save-excursion
 	 (goto-char (point-min))
-	 (while (re-search-forward "^[[:space:]]*\\(md\\|sha\\|b2\\)[[:digit:]]*bsums\\(_[^=]+\\)?=([^()]*)[ \f\t\r\v]*\n?" (point-max) t) ;sum line exists
+	 (while (re-search-forward "^[[:space:]]*\\(md\\|sha\\|b2\\)[[:digit:]]*sums\\(_[^=]+\\)?=([^()]*)[ \f\t\r\v]*\n?" (point-max) t) ;sum line exists
 	   (delete-region (match-beginning 0) (match-end 0)))
 	 (goto-char (point-max))
 	 (if (re-search-backward "^[[:space:]]*source\\(_[^=]+\\)?=([^()]*)" (point-min) t)

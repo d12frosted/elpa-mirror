@@ -4,8 +4,8 @@
 
 ;; Author: Milan Zamazal <pdm@zamazal.org>
 ;; Version: 1
-;; Package-Version: 20220706.810
-;; Package-Commit: e8b16420f8e3992b068e17d2936b2b2102ed039e
+;; Package-Version: 20220802.1914
+;; Package-Commit: 8c396a11f532a1beb594b65e99e594f1e9f1c2c8
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: frames
 ;; URL: https://git.zamazal.org/pdm/pip-frame
@@ -177,14 +177,15 @@ If the buffer is not present in the PIP frame, do nothing."
   (interactive (list (completing-read "Remove PIP buffer: "
                                       (mapcar #'buffer-name (pip-frame--buffers))
                                       nil t)))
-  (let* ((windows (window-list (pip-frame--get-frame)))
-         (buffer (get-buffer buffer-or-name))
-         (windows-to-delete (cl-remove buffer windows
-                                       :key #'window-buffer
-                                       :test-not #'eq)))
-    (if (= (length windows-to-delete) (length windows))
-        (pip-frame-delete-frame)
-      (seq-do #'delete-window windows-to-delete))))
+  (if-let ((frame (pip-frame--get-frame t))
+           (windows (window-list frame))
+           (buffer (get-buffer buffer-or-name))
+           (windows-to-delete (cl-remove buffer windows
+                                         :key #'window-buffer
+                                         :test-not #'eq)))
+      (if (= (length windows-to-delete) (length windows))
+          (pip-frame-delete-frame)
+        (seq-do #'delete-window windows-to-delete))))
 
 (defun pip-frame--move (x y)
   (let ((frame (pip-frame--get-frame)))
