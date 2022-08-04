@@ -1893,16 +1893,16 @@
 			  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 			 (:keywords "faces" "theme" "accessibility"))])
  (modus-themes .
-	       [(2 4 1)
+	       [(2 5 0)
 		((emacs
 		  (27 1)))
 		"Elegant, highly legible and customizable themes" tar
 		((:url . "https://git.sr.ht/~protesilaos/modus-themes")
 		 (:keywords "faces" "theme" "accessibility")
-		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+		 (:maintainer "Modus-Themes Development" . "~protesilaos/modus-themes@lists.sr.ht")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "e3ec91232fcdd4d7fe2c48fcdb78b4ac7c6356d5"))])
+		 (:commit . "8a9839348fb8762c8843362595f2ca9de60d515c"))])
  (modus-vivendi-theme .
 		      [(0 13 2)
 		       ((emacs

@@ -1,9 +1,9 @@
 (flymake-go-staticcheck .
-			[(20190708 1325)
+			[(20220803 1929)
 			 ((emacs
-			   (25)))
+			   (26 1)))
 			 "Go staticcheck linter for flymake" single
-			 ((:commit . "130079fcd29c3e2a72f8325f3041042bcc6286f1")
+			 ((:commit . "d29b158acc2c131cdbb5c62f54cb0fc024339575")
 			  (:authors
 			   ("Sergey Kostyaev" . "feo.me@ya.ru"))
 			  (:maintainer "Sergey Kostyaev" . "feo.me@ya.ru")

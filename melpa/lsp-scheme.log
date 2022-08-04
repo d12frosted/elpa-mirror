@@ -4,20 +4,22 @@ Source:  https://codeberg.org/rgherdt/emacs-lsp-scheme
 
 Updating /mnt/store/melpa/working/lsp-scheme/
 Checking out origin/HEAD
-Checking out 16fd04af47fb2168707ed0c455acfcd9c52839f8
-Checking out 16fd04af47fb2168707ed0c455acfcd9c52839f8
+Checking out 65d2d4cb72fd3dd77a77172edc9daf952179624a
+Checking out 65d2d4cb72fd3dd77a77172edc9daf952179624a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-scheme/
-  to /tmp/lsp-schemehs2tiu/lsp-scheme-20220716.808
+  to /tmp/lsp-schemenNAKpE/lsp-scheme-20220803.2023
     lsp-scheme.el -> lsp-scheme.el
     scripts => scripts
-Created lsp-scheme-20220716.808.tar containing:
-  lsp-scheme-20220716.808/
-  lsp-scheme-20220716.808/lsp-scheme-pkg.el
-  lsp-scheme-20220716.808/lsp-scheme.el
-  lsp-scheme-20220716.808/scripts/
-  lsp-scheme-20220716.808/scripts/lsp-server-connect.sh
-Built lsp-scheme in 6.377s, finished at 2022-08-03T18:23:08+0000
+Created lsp-scheme-20220803.2023.tar containing:
+  lsp-scheme-20220803.2023/
+  lsp-scheme-20220803.2023/lsp-scheme-pkg.el
+  lsp-scheme-20220803.2023/lsp-scheme.el
+  lsp-scheme-20220803.2023/scripts/
+  lsp-scheme-20220803.2023/scripts/lsp-server-connect.sh
+Built lsp-scheme in 9.659s, finished at 2022-08-03T22:00:50+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 474 Aug  3 18:23 packages/lsp-scheme-20220716.808.entry
  32K -rw-r--r-- 1 root root 30K Aug  3 18:23 packages/lsp-scheme-20220716.808.tar
+4.0K -rw-r--r-- 1 root root 475 Aug  3 22:00 packages/lsp-scheme-20220803.2023.entry
+ 32K -rw-r--r-- 1 root root 30K Aug  3 22:00 packages/lsp-scheme-20220803.2023.tar

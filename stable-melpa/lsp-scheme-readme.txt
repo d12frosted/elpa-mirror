@@ -31,6 +31,11 @@ Add the following lines to your Emacs configuration file:
   (add-hook 'scheme-mode-hook #'lsp-scheme)
   (setq lsp-scheme-implementation "guile") ;;; customizable
 
+Alternatively you can add the specific command as hook, for example:
+  (add-hook 'scheme-mode-hook #'lsp-scheme-guile)
+In this case lsp-scheme-implementation is ignored.
+
+
 
 ;; Usage
 This LSP client tries to implement an workflow similar to other Lisp-related
