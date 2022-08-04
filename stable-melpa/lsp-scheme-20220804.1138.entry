@@ -1,0 +1,15 @@
+(lsp-scheme .
+	    [(20220804 1138)
+	     ((emacs
+	       (25 1))
+	      (f
+	       (0 20 0))
+	      (lsp-mode
+	       (8 0 0)))
+	     "Scheme support for lsp-mode" tar
+	     ((:commit . "69e84057e921ac6edbf18f22c5edb35a78880796")
+	      (:authors
+	       ("Ricardo G. Herdt" . "r.herdt@posteo.de"))
+	      (:maintainer "Ricardo G. Herdt" . "r.herdt@posteo.de")
+	      (:keywords "languages" "lisp" "tools")
+	      (:url . "https://codeberg.org/rgherdt/emacs-lsp-scheme"))])
