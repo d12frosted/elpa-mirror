@@ -4,8 +4,8 @@
 ;; Description: An updated blue-green Laguna Theme.
 ;; Author: Henry Newcomer <a.cliche.email@gmail.com>
 ;; Version: 2.0
-;; Package-Version: 20220419.1459
-;; Package-Commit: 48d14ffad6f0ffb4bd60c341e618c47ddbb7a2d8
+;; Package-Version: 20220804.227
+;; Package-Commit: 680ab8c936cb1c249b5a6a07976bcc83ef217e25
 ;; URL: https://github.com/HenryNewcomer/laguna-theme
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -69,7 +69,7 @@
   (color-cursor-bg-alt "#7cb8e7")
   (color-constant "#20905f")
   ;; (color-cursor-fg "#141922")
-  (color-line-number-fg "#1e252f") ;; The font color for line numbers
+  (color-line-number-fg "#788f9c") ;; The font color for line numbers
   (color-current-line-text-area-bg "#141923")
   (color-current-line-side-bg "#1c3445")
   (color-current-line-side-fg "#b2c5d4")

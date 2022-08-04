@@ -2,8 +2,6 @@
 
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; Version: 0.1.0
-;; Package-Version: 20180511.654
-;; Package-Commit: 27f78996da0725943bcfb2d18038e6f7bddfa9c7
 ;; Keywords: mail tools
 ;; Package-Requires: ((emacs "24.4") (dash "2.12.0") (all-the-icons "3.1.0"))
 

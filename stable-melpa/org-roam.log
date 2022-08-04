@@ -4,11 +4,11 @@ Source:  https://github.com/org-roam/org-roam.git
 
 Updating /mnt/store/melpa/working/org-roam/
 Checking out origin/HEAD
-Checking out e435581215a9eb8e95dde49ce1fb3c25929b80f4
-Checking out e435581215a9eb8e95dde49ce1fb3c25929b80f4
+Checking out 7f453f3fffb924ca4ae3f8d34cabc03fbcae0127
+Checking out 7f453f3fffb924ca4ae3f8d34cabc03fbcae0127
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-roam/
-  to /tmp/org-roamrTknns/org-roam-20220723.2058
+  to /tmp/org-roamQUd8aj/org-roam-20220804.437
     org-roam-capture.el -> org-roam-capture.el
     org-roam-compat.el -> org-roam-compat.el
     org-roam-db.el -> org-roam-db.el
@@ -25,28 +25,30 @@ Copying files (->) and directories (=>)
   ! extensions/org-roam-graph.el -> org-roam-graph.el
   ! extensions/org-roam-overlay.el -> org-roam-overlay.el
   ! extensions/org-roam-protocol.el -> org-roam-protocol.el
-Generating /tmp/org-roamrTknns/org-roam-20220723.2058/org-roam.info
-Created org-roam-20220723.2058.tar containing:
-  org-roam-20220723.2058/
-  org-roam-20220723.2058/dir
-  org-roam-20220723.2058/org-roam-capture.el
-  org-roam-20220723.2058/org-roam-compat.el
-  org-roam-20220723.2058/org-roam-dailies.el
-  org-roam-20220723.2058/org-roam-db.el
-  org-roam-20220723.2058/org-roam-export.el
-  org-roam-20220723.2058/org-roam-graph.el
-  org-roam-20220723.2058/org-roam-id.el
-  org-roam-20220723.2058/org-roam-log.el
-  org-roam-20220723.2058/org-roam-migrate.el
-  org-roam-20220723.2058/org-roam-mode.el
-  org-roam-20220723.2058/org-roam-node.el
-  org-roam-20220723.2058/org-roam-overlay.el
-  org-roam-20220723.2058/org-roam-pkg.el
-  org-roam-20220723.2058/org-roam-protocol.el
-  org-roam-20220723.2058/org-roam-utils.el
-  org-roam-20220723.2058/org-roam.el
-  org-roam-20220723.2058/org-roam.info
-Built org-roam in 23.207s, finished at 2022-08-04T01:48:55+0000
+Generating /tmp/org-roamQUd8aj/org-roam-20220804.437/org-roam.info
+Created org-roam-20220804.437.tar containing:
+  org-roam-20220804.437/
+  org-roam-20220804.437/dir
+  org-roam-20220804.437/org-roam-capture.el
+  org-roam-20220804.437/org-roam-compat.el
+  org-roam-20220804.437/org-roam-dailies.el
+  org-roam-20220804.437/org-roam-db.el
+  org-roam-20220804.437/org-roam-export.el
+  org-roam-20220804.437/org-roam-graph.el
+  org-roam-20220804.437/org-roam-id.el
+  org-roam-20220804.437/org-roam-log.el
+  org-roam-20220804.437/org-roam-migrate.el
+  org-roam-20220804.437/org-roam-mode.el
+  org-roam-20220804.437/org-roam-node.el
+  org-roam-20220804.437/org-roam-overlay.el
+  org-roam-20220804.437/org-roam-pkg.el
+  org-roam-20220804.437/org-roam-protocol.el
+  org-roam-20220804.437/org-roam-utils.el
+  org-roam-20220804.437/org-roam.el
+  org-roam-20220804.437/org-roam.info
+Built org-roam in 13.902s, finished at 2022-08-04T05:28:41+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  549 Aug  4 01:48 packages/org-roam-20220723.2058.entry
 360K -rw-r--r-- 1 root root 360K Aug  4 01:48 packages/org-roam-20220723.2058.tar
+4.0K -rw-r--r-- 1 root root  548 Aug  4 05:28 packages/org-roam-20220804.437.entry
+360K -rw-r--r-- 1 root root 360K Aug  4 05:28 packages/org-roam-20220804.437.tar

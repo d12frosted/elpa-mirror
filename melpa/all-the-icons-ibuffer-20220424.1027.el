@@ -5,8 +5,6 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ibuffer
 ;; Version: 1.5.0
-;; Package-Version: 20220424.1027
-;; Package-Commit: 370fff61b52b9d918da8af6c72edbc21e766c499
 ;; Package-Requires: ((emacs "24.4") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ibuffer
 
