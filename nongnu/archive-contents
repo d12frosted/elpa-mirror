@@ -779,14 +779,15 @@
 		  ("David Vazquez Pua" . "davazp@gmail.com"))
 		 (:commit . "fe8d7e2db5581cd0cb7a69563bc44f0669f76322"))])
  (gruvbox-theme .
-		[(1 26 0)
+		[(1 27 0)
 		 ((autothemer
 		   (0 2)))
 		 "A retro-groove colour theme for Emacs" tar
 		 ((:url . "http://github.com/greduan/emacs-theme-gruvbox")
 		  (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
 		  (:authors
-		   ("Jason Milkins" . "jasonm23@gmail.com")))])
+		   ("Jason Milkins" . "jasonm23@gmail.com"))
+		  (:commit . "01bcb9ed82cf00be15900fbe9721f62a6d1fa673"))])
  (guru-mode .
 	    [(1 0)
 	     nil "Become an Emacs guru" tar
