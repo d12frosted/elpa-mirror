@@ -3,10 +3,11 @@
 ;; Copyright (C) 2016-2022 David Thompson
 ;; Author: David Thompson
 ;; Version: 0.2
-;; Package-Version: 20220317.1839
-;; Package-Commit: 72ebbe2b3d2e04dbfda636fa114d4f47835ce044
+;; Package-Version: 20220805.1655
+;; Package-Commit: e7877700144cf4abb5f5482eea7fde9b749cfc57
 ;; Keywords: dired, launch
 ;; URL: https://github.com/thomp/dired-launch
+;; Package-Requires: ((emacs "24.3"))
 
 ;;; Commentary:
 
@@ -19,6 +20,8 @@
 ;; you.
 
 ;;; Code:
+
+(require 'cl-lib)
 
 (defvar dired-launch-default-launcher
   nil
@@ -62,7 +65,7 @@
   (interactive)
   (let ((extensions nil)
 	(files (dired-get-marked-files t current-prefix-arg)))
-    (map nil #'(lambda (file)
+    (cl-map nil #'(lambda (file)
 	     (let ((extension (file-name-extension file)))
 	       (unless (member extension extensions)
 		 (push extension extensions)
@@ -100,18 +103,18 @@
 	     (cons launch-cmd args))))))
 
 (defun dired-launch-extensions-map-get (extension)
-  "Return the map entry corresponding to the specified extension."
-  (cdr (assoc extension dired-launch-extensions-map)))
+  "Return the complete map entry corresponding to the specified extension."
+  (assoc extension dired-launch-extensions-map))
 
 (defun dired-launch-extensions-map-pop (extension)
-  (pop (second (assoc extension dired-launch-extensions-map))))
+  (pop (cl-second (assoc extension dired-launch-extensions-map))))
 
 (defun dired-launch-extensions-map-add-handler (extension handler)
   ;; add a member for the extension if such an entry does not exist
-  (if (not (assoc extension dired-launch-extensions-map))
+  (if (not (dired-launch-extensions-map-get extension))
       (push (list extension (list handler))
 	    dired-launch-extensions-map)
-    (push handler (second (assoc extension dired-launch-extensions-map)))))
+    (push handler (cl-second (assoc extension dired-launch-extensions-map)))))
 
 (defun dired-launch-homebrew (files)
   (mapc #'(lambda (file)
@@ -176,11 +179,10 @@
   "Prompt user to select a completion. Return the corresponding value (either the completion value itself or, if completions are specified as an alist, the value corresponding to the alist key."
   (let ((completions-and-source (funcall dired-launch-completions-f file)))
     (let ((completions (car completions-and-source)))
-     (let ((selection (minibuffer-with-setup-hook 'minibuffer-complete
-			(completing-read (concat "Executable to use: ")
-					 completions))))
+     (let ((selection (completing-read (concat "Executable to use: ")
+				       completions)))
        ;; if internal preferred handler isn't defined, offer to "remember" (short-term memory... no session persistence) selection 
-       (if (not (eq (second completions-and-source) :user-extensions-map))
+       (if (not (eq (cl-second completions-and-source) :user-extensions-map))
 	   ;; ultimately, desirable to offer persistence and not just short-term memory
 	   (let ((extension (file-name-extension file)))
 	     (let ((rememberp (y-or-n-p (format "Use %s as preferred handler for %s files?" selection extension))))
@@ -229,7 +231,7 @@
 (defun dired-launch--executables-list-using-user-extensions-map (file)
   (let* ((extension (string-trim (or (file-name-extension file nil)
 				     "")))
-	 (match (assoc extension dired-launch-extensions-map)))
+	 (match (dired-launch-extensions-map-get extension)))
     (cadr match)))
 
 

@@ -6,8 +6,8 @@
 
 ;; Author: Frédéric Perrin <frederic (dot) perrin (arobas) resel (dot) fr>
 ;; URL: http://github.com/jschaf/powershell.el
-;; Package-Version: 20220402.643
-;; Package-Commit: 77b27faf8a292f1dc9f54c872241dc53b6791bf1
+;; Package-Version: 20220805.1712
+;; Package-Commit: f2da15857e430206e215a3c65289b4058ae3c976
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: powershell, languages
@@ -543,7 +543,7 @@ characters that can't be set by the `syntax-table' alone.")
       (2 (cons font-lock-type-face '(underline)) t t))
      ;; function argument names
      (,powershell-function-switch-names-regexp
-      (0 font-lock-reference-face)
+      (0 font-lock-constant-face)
       (1 (cons font-lock-type-face '(underline)) t t)
       (2 (cons font-lock-type-face '(underline)) t t))
      ;; function names
