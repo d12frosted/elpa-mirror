@@ -8,11 +8,25 @@ Checking out 6357a1c2d1718778503f7ee0909585094117525b
 Checking out 6357a1c2d1718778503f7ee0909585094117525b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/web-server/
-  to /tmp/web-serversjYVep/web-server-20210708.2242
+  to /tmp/web-serversU1gD1/web-server-20210708.2242
     web-server-status-codes.el -> web-server-status-codes.el
     web-server.el -> web-server.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/gpl.texi -> gpl.texi
   ! doc/web-server.texi -> web-server.texi
-Generating /tmp/web-serversjYVep/web-server-20210708.2242/doclicense.info
-Generating /tmp/web-serversjYVep/web-server-20210708.2242/gpl.info
+Generating /tmp/web-serversU1gD1/web-server-20210708.2242/doclicense.info
+Generating /tmp/web-serversU1gD1/web-server-20210708.2242/gpl.info
+Generating /tmp/web-serversU1gD1/web-server-20210708.2242/web-server.info
+Created web-server-20210708.2242.tar containing:
+  web-server-20210708.2242/
+  web-server-20210708.2242/dir
+  web-server-20210708.2242/doclicense.info
+  web-server-20210708.2242/gpl.info
+  web-server-20210708.2242/web-server-pkg.el
+  web-server-20210708.2242/web-server-status-codes.el
+  web-server-20210708.2242/web-server.el
+  web-server-20210708.2242/web-server.info
+Built web-server in 18.638s, finished at 2022-08-05T08:00:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  432 Aug  5 08:00 packages/web-server-20210708.2242.entry
+212K -rw-r--r-- 1 root root 210K Aug  5 08:00 packages/web-server-20210708.2242.tar
