@@ -3,10 +3,10 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: docs, convenience
-;; Package-Version: 20220804.1353
-;; Package-Commit: 47f6c618a2f8c3fd5ef284f6f9fcc61d1cc2e764
+;; Package-Version: 20220805.241
+;; Package-Commit: 1c48329d90f93ec9718b4a2a4775a9b16ed802ca
 ;; License: GPL-3.0-or-later
-;; Version: 0.6
+;; Version: 0.6.1
 ;; Package-Requires: ((emacs "26.1") (consult "0.18"))
 ;; Homepage: https://codeberg.org/jao/consult-recoll
 
@@ -101,6 +101,8 @@ Set to nil to use the default 'title (path)' format."
 
 (defun consult-recoll--command (text)
   "Command used to perform queries for TEXT."
+  (setq consult-recoll--current nil)
+  (setq consult-recoll--index 0)
   `("recollq" "-A" "-p" "5" ,@consult-recoll-search-flags ,text))
 
 (defconst consult-recoll--line-rx "^\\(.*?\\)\t\\[\\(.*?\\)\\]\t\\[\\(.*\\)\\]"
@@ -129,7 +131,7 @@ Set to nil to use the default 'title (path)' format."
   (get-text-property 0 'index candidate))
 
 (defsubst consult-recoll--snippets (&optional candidate)
-  (get-text-property 0 'snippets (or candidate consult-recoll--current)))
+  (get-text-property 0 'snippets (or candidate consult-recoll--current "")))
 
 (defsubst consult-recoll--find-file (file &optional _page) (find-file file))
 
@@ -159,12 +161,14 @@ Set to nil to use the default 'title (path)' format."
                                   'url urln
                                   'title title
                                   'index idx)))
-           (setq consult-recoll--current cand)
-           nil))
+           (prog1 (and (not (consult-recoll--snippets)) consult-recoll--current)
+             (setq consult-recoll--current cand))))
         ((string= "/SNIPPETS" str)
          (and (not consult-recoll-inline-snippets) consult-recoll--current))
         ((string= "SNIPPETS" str)
-         (and consult-recoll-inline-snippets consult-recoll--current))
+         (and consult-recoll-inline-snippets
+              (setq consult-recoll--current
+                    (propertize consult-recoll--current 'snippets t))))
         ((and consult-recoll-inline-snippets consult-recoll--current)
          (when-let* ((page (and (string-match "^\\([0-9]+\\) :" str)
                                 (match-string 1 str)))
@@ -209,8 +213,6 @@ Set to nil to use the default 'title (path)' format."
 (defun consult-recoll--search (&optional initial)
   "Perform an asynchronous recoll search via `consult--read'.
 If given, use INITIAL as the starting point of the query."
-  (setq consult-recoll--current nil)
-  (setq consult-recoll--index 0)
   (consult--read (consult--async-command
                      #'consult-recoll--command
                    (consult--async-filter #'identity)
