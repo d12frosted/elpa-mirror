@@ -5,8 +5,8 @@
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.4.0
-;; Package-Version: 20220803.1358
-;; Package-Commit: 687c95eea69b515b194b416db27def686392e06f
+;; Package-Version: 20220805.1001
+;; Package-Commit: 66b4dcd6084242008a430aedb27e5834671b5f99
 ;; Package-Requires: ((emacs "27.1") (org-journal "2.1.2") (magit-section "3.3.0") (transient "0.3.7"))
 ;; Homepage: https://github.com/SqrtMinusOne/org-journal-tags
 
@@ -635,6 +635,7 @@ PREFIX is the universal prefix argument."
 
 (defun org-journal-tags--org-contacts-complete ()
   "Complete org-journal-tags tag with `org-contacts'."
+  (require 'org-contacts nil t)
   (unless (fboundp #'org-contacts-db)
     (user-error "Org Contacts is unavailable"))
   (let* ((contacts (org-contacts-db))
