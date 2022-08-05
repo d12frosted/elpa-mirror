@@ -1,0 +1,21 @@
+(lispy .
+       [(20220804 1946)
+	((emacs
+	  (24 3))
+	 (ace-window
+	  (0 9 0))
+	 (iedit
+	  (0 9 9))
+	 (swiper
+	  (0 13 4))
+	 (hydra
+	  (0 14 0))
+	 (zoutline
+	  (0 2 0)))
+	"vi-like Paredit" tar
+	((:commit . "cdb7d32f2195ca2ed8df237aa6826bbd177b2813")
+	 (:authors
+	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
+	 (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+	 (:keywords "lisp")
+	 (:url . "https://github.com/abo-abo/lispy"))])
