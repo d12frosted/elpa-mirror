@@ -1,6 +1,6 @@
 ;;; mgmtconfig-mode.el --- mgmt configuration management language
 
-;; Copyright (C) 2013-2021+ James Shubin and the project contributors
+;; Copyright (C) 2013-2022+ James Shubin and the project contributors
 ;; Written by James Shubin <james@shubin.ca> and the project contributors
 ;;
 ;; This program is free software: you can redistribute it and/or modify
@@ -19,8 +19,8 @@
 ;; Author: Peter Oliver <mgmtconfig@mavit.org.uk>
 ;; Maintainer: Mgmt contributors <https://github.com/purpleidea/mgmt>
 ;; Keywords: languages
-;; Package-Version: 20210131.2152
-;; Package-Commit: ac39606386949fbe2cd4ae1e0f30d7bb0e1143e7
+;; Package-Version: 20220806.306
+;; Package-Commit: 3cea4223657cdbb32fcb0afc54bb736388dfbd5e
 ;; URL: https://github.com/purpleidea/mgmt/misc/emacs
 ;; Package-Requires: ((emacs "24.3"))
 
