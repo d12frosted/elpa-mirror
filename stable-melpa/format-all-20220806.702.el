@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20220718.1014
-;; Package-Commit: 9e6170437f0c2aa9bc27804c5b06b9cb44ccd02a
+;; Package-Version: 20220806.702
+;; Package-Commit: 7e375c01eeaacdf33a27b59f6cf1849bb6a0caa5
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.19"))
 ;; Keywords: languages util
@@ -268,7 +268,7 @@ association list. Using \".dir-locals.el\" is convenient since
 the rules for an entire source tree can be given in one file.")
 
 (define-error 'format-all-executable-not-found
-  "Formatter command not found")
+  "Formatter not found")
 
 (defun format-all--proper-list-p (object)
   "Return t if OBJECT is a proper list, nil otherwise."
