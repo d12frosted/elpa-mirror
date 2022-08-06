@@ -4,8 +4,8 @@
 ;; Copyright (C) 2022 Marty Hiatt <martianhiatus AT riseup.net>
 ;;
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
-;; Package-Version: 20220804.946
-;; Package-Commit: 6bb88a37895b62350650447fff124ce06c7e1ec8
+;; Package-Version: 20220806.1022
+;; Package-Commit: fd46c30ddc3abd6124b9057110fb0cbdc242937a
 ;; Keywords: convenience, translate, wp, dictionary
 ;; URL: https://codeberg.org/martianh/wordreference.el
 ;; Version: 0.2
@@ -1148,7 +1148,9 @@ Prefix is the prefix arg test."
                        t)
     (or ;; prev search
      (wordreference-get-results-info-item type)
-     wordreference-source-lang)))
+     (if (eql type 'source)
+         wordreference-source-lang
+       wordreference-target-lang))))
 
 (define-derived-mode wordreference-mode special-mode "wordreference"
   :group 'wordreference

@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-languagetool/lsp-ltex
-;; Package-Version: 20220802.1532
-;; Package-Commit: 5c26bae674990537b512da00a8b00e69d8e38e01
+;; Package-Version: 20220806.1456
+;; Package-Commit: 18b0e8608408f9e913d89075e78c2b4e3f69cf1c
 ;; Version: 0.2.1
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "6.1"))
 ;; Keywords: convenience lsp languagetool checker
@@ -64,6 +64,15 @@ https://github.com/valentjn/ltex-ls"
   (expand-file-name "ltex-ls" lsp-server-install-dir)
   "The path to the file in which LTEX Language Server will be stored."
   :type 'file
+  :group 'lsp-ltex)
+
+(defcustom lsp-ltex-user-rules-path
+  (let ((path (expand-file-name "lsp-ltex" user-emacs-directory)))
+    (unless (and (file-exists-p path) (file-directory-p path))
+      (mkdir path t))
+    path)
+  "The path to the directory where `lsp-ltex' will store user rules."
+  :type 'directory
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-enabled nil
@@ -154,6 +163,26 @@ external LanguageTool HTTP server."
   :type 'string
   :group 'lsp-ltex)
 
+(defcustom lsp-ltex-languagetool-org-username ""
+  "Username/email as used to log in at languagetool.org for Premium API access.
+Only relevant if `lsp-ltex-languagetool-http-server-uri' is set."
+  :type 'string
+  :group 'lsp-ltex)
+
+(defcustom lsp-ltex-languagetool-org-api-key ""
+  "API key for Premium API access.
+Only relevant if `lsp-ltex-languagetool-http-server-uri' is set."
+  :type 'string
+  :group 'lsp-ltex)
+
+(defcustom lsp-ltex-ls-path ""
+  "If set to an empty string, LTEX automatically downloads ltex-ls from GitHub.
+It stores it in the folder of the extension, and uses it for the checking
+process.  You can point this setting to an ltex-ls release you downloaded by
+yourself."
+  :type 'directory
+  :group 'lsp-ltex)
+
 (defcustom lsp-ltex-log-level "fine"
   "Logging level (verbosity) of the ltex-ls server log."
   :type '(choice (const "severe")
@@ -174,12 +203,6 @@ installation instead."
   :type 'string
   :group 'lsp-ltex)
 
-(defcustom lsp-ltex-java-force-try-system-wide nil
-  "If non-nil, always try to use a system-wide Java installation before
-trying to use an automatically downloaded Java distribution."
-  :type 'boolean
-  :group 'lsp-ltex)
-
 (defcustom lsp-ltex-java-initial-heap-size 64
   "Initial size of the Java heap memory in megabytes.
 Corresponds to Java's -Xmx option, this must be a positive integer"
@@ -198,6 +221,10 @@ This must be a positive integer."
   :type 'integer
   :group 'lsp-ltex)
 
+(defcustom lsp-ltex-completion-enabled nil ;; TODO: Add proper implementation
+  "If this this is enabled, auto-completion list for the current word is sent.
+The editor need to send a completion request.")
+
 (defcustom lsp-ltex-diagnostic-severity "information"
   "Severity of the diagnostics corresponding to the grammar and spelling errors."
   :type '(choice (const "error")
@@ -215,6 +242,11 @@ This must be a positive integer."
 
 (defcustom lsp-ltex-clear-diagnostics-when-closing-file t
   "If non-nil, diagnostics of a file are cleared when the file is closed."
+  :type 'boolean
+  :group 'lsp-ltex)
+
+(defcustom lsp-ltex-status-bar-item nil ;; TODO: Add proper implementation
+  "If non-nil, the status of LTEX is shown permanently in the status bar."
   :type 'boolean
   :group 'lsp-ltex)
 
@@ -237,18 +269,79 @@ This must be a positive integer."
 ;; (@* "Util" )
 ;;
 
+(defmacro lsp-ltex--mute-apply (&rest body)
+  "Execute BODY without message."
+  (declare (indent 0) (debug t))
+  `(let (message-log-max)
+     (with-temp-message (or (current-message) nil)
+       (let ((inhibit-message t)) ,@body))))
+
 (defun lsp-ltex--s-replace (old new s)
-  "Replaces OLD with NEW in S."
+  "Replace OLD with NEW in S."
   (replace-regexp-in-string (regexp-quote old) new s t t))
 
 (defun lsp-ltex--execute (cmd &rest args)
   "Return non-nil if CMD executed succesfully with ARGS."
   (save-window-excursion
-    (let ((inhibit-message t) (message-log-max nil))
+    (lsp-ltex--mute-apply
       (= 0 (shell-command (concat cmd " "
                                   (mapconcat #'shell-quote-argument
                                              (cl-remove-if #'null args)
                                              " ")))))))
+
+(defun lsp-ltex--serialize-symbol (sym dir)
+  "Serialize SYM to DIR.
+Return the written file name, or nil if SYM is not bound."
+  (when (boundp sym)
+    (let ((out-file (expand-file-name
+                     (lsp-ltex--s-replace "lsp-ltex--" ""
+                                          (symbol-name sym))
+                     dir)))
+      (lsp-message "[INFO] Saving `%s' to file \"%s\"" (symbol-name sym) out-file)
+      (with-temp-buffer
+        (prin1 (eval sym) (current-buffer))
+        (lsp-ltex--mute-apply (write-file out-file)))
+      out-file)))
+
+(defun lsp-ltex--deserialize-symbol (sym dir &optional mutate)
+  "Deserialize SYM from DIR, if MUTATE is non-nil, assign the object to SYM.
+Return the deserialized object, or nil if the SYM.el file dont exist."
+  (let ((in-file (expand-file-name
+                  (lsp-ltex--s-replace "lsp-ltex--" ""
+                                       (symbol-name sym))
+                  dir))
+        res)
+    (when (file-exists-p in-file)
+      (lsp-message "[INFO] Loading `%s' from file \"%s\"" (symbol-name sym) in-file)
+      (with-temp-buffer
+        (insert-file-contents in-file)
+        (goto-char (point-min))
+        (ignore-errors (setq res (read (current-buffer)))))
+      (when mutate (set sym res)))
+    res))
+
+(defun lsp-ltex--add-rule (lang rule rules-plist)
+  "Add RULE of language LANG to the plist named RULES-PLIST (symbol)."
+  (let ((lang-key (intern (concat ":" lang))))
+    (when (null (eval rules-plist))
+      (set rules-plist (list lang-key [])))
+    (plist-put (eval rules-plist) lang-key
+               (vconcat (list rule) (plist-get (eval rules-plist) lang-key)))
+    (when-let (out-file (lsp-ltex--serialize-symbol rules-plist lsp-ltex-user-rules-path))
+      (lsp-message "[INFO] Rule for language %s saved to file \"%s\"" lang out-file))))
+
+(defun lsp-ltex-combine-plists (&rest plists)
+  "Create a single property list from all plists in PLISTS.
+Modified from `org-combine-plists'. This supposes the values to be vectors,
+and concatenate them."
+  (let ((res (copy-sequence (pop plists)))
+        prop val plist)
+    (while plists
+      (setq plist (pop plists))
+      (while plist
+        (setq prop (pop plist) val (pop plist))
+        (setq res (plist-put res prop (vconcat val (plist-get res prop))))))
+    res))
 
 ;;
 ;; (@* "Installation and Upgrade" )
@@ -298,7 +391,7 @@ This is use to active language server and check if language server's existence."
    'ltex-ls
    '(:system "ltex-ls")
    `(:download :url ,lsp-ltex--server-download-url
-     :store-path ,(lsp-ltex--downloaded-extension-path))))
+               :store-path ,(lsp-ltex--downloaded-extension-path))))
 
 (defcustom lsp-ltex-version (or (lsp-ltex--current-version)
                                 (lsp-ltex--latest-version)
@@ -350,6 +443,34 @@ If current server not found, install it then."
 ;; (@* "Activation" )
 ;;
 
+(defvar lsp-ltex--stored-dictionary
+  (lsp-ltex--deserialize-symbol 'lsp-ltex--stored-dictionary
+                                lsp-ltex-user-rules-path)
+  "The dictionary created from interactively added words.")
+
+(defvar lsp-ltex--stored-disabled-rules
+  (lsp-ltex--deserialize-symbol 'lsp-ltex--stored-disabled-rules
+                                lsp-ltex-user-rules-path)
+  "The rules created from interactively added words.")
+
+(defvar lsp-ltex--stored-hidden-false-positives
+  (lsp-ltex--deserialize-symbol 'lsp-ltex--stored-hidden-false-positives
+                                lsp-ltex-user-rules-path)
+  "The rules created from interactively added words.")
+
+(defvar lsp-ltex--combined-dictionary
+  (lsp-ltex-combine-plists lsp-ltex-dictionary lsp-ltex--stored-dictionary)
+  "The combined `lsp-ltex-dictionary' and interactively added words.")
+
+(defvar lsp-ltex--combined-disabled-rules
+  (lsp-ltex-combine-plists lsp-ltex-disabled-rules lsp-ltex--stored-disabled-rules)
+  "The combined `lsp-ltex-disabled-rules' and interactively added rules.")
+
+(defvar lsp-ltex--combined-hidden-false-positives
+  (lsp-ltex-combine-plists lsp-ltex-hidden-false-positives
+                           lsp-ltex--stored-hidden-false-positives)
+  "The combined `lsp-ltex-hidden-false-positives' and interactively added rules.")
+
 (defun lsp-ltex--server-entry ()
   "Return the server entry file.
 
@@ -369,32 +490,79 @@ This file is use to activate the language server."
 (lsp-register-custom-settings
  '(("ltex.enabled" lsp-ltex-enabled)
    ("ltex.language" lsp-ltex-language)
-   ("ltex.dictionary" lsp-ltex-dictionary)
-   ("ltex.disabledRules" lsp-ltex-disabled-rules)
+   ("ltex.dictionary" lsp-ltex--combined-dictionary)
+   ("ltex.disabledRules" lsp-ltex--combined-disabled-rules)
    ("ltex.enabledRules" lsp-ltex-enabled-rules)
-   ("ltex.hiddenFalsePositives" lsp-ltex-hidden-false-positives)
+   ("ltex.hiddenFalsePositives" lsp-ltex--combined-hidden-false-positives)
    ("ltex.bibtex.fields" lsp-ltex-bibtex-fields)
    ("ltex.latex.commands" lsp-ltex-latex-commands)
    ("ltex.latex.environments" lsp-ltex-latex-environments)
-   ("ltex.markdown-nodes" lsp-ltex-markdown-nodes)
-   ("ltex.additionalRules.enablePickyRules" lsp-ltex-additional-rules-enable-picky-rules)
+   ("ltex.markdown.nodes" lsp-ltex-markdown-nodes)
+   ("ltex.additionalRules.enablePickyRules" lsp-ltex-additional-rules-enable-picky-rules t)
    ("ltex.additionalRules.motherTongue" lsp-ltex-mother-tongue)
    ("ltex.additionalRules.languageModel" lsp-ltex-additional-rules-language-model)
    ("ltex.additionalRules.neuralNetworkModel" lsp-ltex-additional-rules-neural-network-model)
    ("ltex.additionalRules.word2VecModel" lsp-ltex-additional-rules-word-2-vec-model)
-   ("ltex.ltex-ls.languageToolHttpServerUri" lsp-ltex-languagetool-http-server-uri)
+   ("ltex.languageToolHttpServerUri" lsp-ltex-languagetool-http-server-uri)
+   ("ltex.languageToolOrg.username" lsp-ltex-languagetool-org-username)
+   ("ltex.languageToolOrg.apiKey" lsp-ltex-languagetool-org-api-key)
+   ("ltex.ltex-ls.path" lsp-ltex-ls-path)
    ("ltex.ltex-ls.logLevel" lsp-ltex-log-level)
    ("ltex.java.path" lsp-ltex-java-path)
-   ("ltex.java.forceTrySystemWide" lsp-ltex-java-force-try-system-wide)
    ("ltex.java.initialHeapSize" lsp-ltex-java-initial-heap-size)
    ("ltex.java.maximumHeapSize" lsp-ltex-java-maximum-heap-size)
    ("ltex.sentenceCacheSize" lsp-ltex-sentence-cache-size)
+   ("ltex.completionEnabled" lsp-ltex-completion-enabled t)
    ("ltex.diagnosticSeverity" lsp-ltex-diagnostic-severity)
    ("ltex.checkFrequency" lsp-ltex-check-frequency)
-   ("ltex.clearDiagnosticsWhenClosingFile" lsp-ltex-clear-diagnostics-when-closing-file)
+   ("ltex.clearDiagnosticsWhenClosingFile" lsp-ltex-clear-diagnostics-when-closing-file t)
+   ("ltex.statusBarItem" lsp-ltex-status-bar-item t)
    ("ltex.trace.server" lsp-ltex-trace-server)))
 
 (lsp-ltex--lsp-dependency)
+
+(defun lsp-ltex--action-add-to-rules (action-ht key rules-plist &optional store)
+  "Execute action ACTION-HT by getting KEY and storing it in the RULES-PLIST.
+When STORE is non-nil, this will also store the new plist in the directory
+`lsp-ltex-user-rules-path'."
+  (let ((args-ht (gethash key action-ht)))
+    (dolist (lang (hash-table-keys args-ht))
+      (mapc (lambda (rule)
+              (lsp-ltex--add-rule lang rule rules-plist)
+              (when store
+                (lsp-ltex--serialize-symbol rules-plist lsp-ltex-user-rules-path)))
+            (gethash lang args-ht)))))
+
+(lsp-defun lsp-ltex--code-action-add-to-dictionary ((&Command :arguments?))
+  "Handle action for \"_ltex.addToDictionary\"."
+  ;; Add rule internally to the `lsp-ltex--stored-dictionary' plist and
+  ;; store it in the directory `lsp-ltex-user-rules-path'
+  (lsp-ltex--action-add-to-rules
+   (elt arguments? 0) "words" 'lsp-ltex--stored-dictionary t)
+  ;; Combine user configured words `lsp-ltex-dictionary' and the internal
+  ;; interactively generated `lsp-ltex--stored-dictionary', and store them in
+  ;; the internal `lsp-ltex--combined-dictionary', which is sent to ltex-ls
+  (setq lsp-ltex--combined-dictionary
+        (lsp-ltex-combine-plists lsp-ltex-dictionary lsp-ltex--stored-dictionary))
+  (lsp-message "[INFO] Word added to dictionary."))
+
+(lsp-defun lsp-ltex--code-action-hide-false-positives ((&Command :arguments?))
+  "Handle action for \"_ltex.hideFalsePositives\"."
+  (lsp-ltex--action-add-to-rules (elt arguments? 0) "falsePositives"
+                                 'lsp-ltex--stored-hidden-false-positives t)
+  (setq lsp-ltex--combined-hidden-false-positives
+        (lsp-ltex-combine-plists lsp-ltex-hidden-false-positives
+                                 lsp-ltex--stored-hidden-false-positives))
+  (lsp-message "[INFO] Rule added to false positives."))
+
+(lsp-defun lsp-ltex--code-action-disable-rules ((&Command :arguments?))
+  "Handle action for \"_ltex.disableRules\"."
+  (lsp-ltex--action-add-to-rules (elt arguments? 0) "ruleIds"
+                                 'lsp-ltex--stored-disabled-rules t)
+  (setq lsp-ltex--combined-disabled-rules
+        (lsp-ltex-combine-plists lsp-ltex-disabled-rules
+                                 lsp-ltex--stored-disabled-rules))
+  (lsp-message "[INFO] Rule disabled."))
 
 (lsp-register-client
  (make-lsp-client
@@ -404,7 +572,13 @@ This file is use to activate the language server."
                                 (and (file-exists-p entry)
                                      (not (file-directory-p entry))
                                      (file-executable-p entry)))))
-  :activation-fn (lambda (&rest _) (apply #'derived-mode-p lsp-ltex-active-modes))
+  :activation-fn
+  (lambda (&rest _) (apply #'derived-mode-p lsp-ltex-active-modes))
+  :action-handlers
+  (lsp-ht
+   ("_ltex.addToDictionary" #'lsp-ltex--code-action-add-to-dictionary)
+   ("_ltex.disableRules" #'lsp-ltex--code-action-disable-rules)
+   ("_ltex.hideFalsePositives" #'lsp-ltex--code-action-hide-false-positives))
   :priority -2
   :add-on? t
   :server-id 'ltex-ls
