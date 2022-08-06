@@ -76,7 +76,7 @@ collected.  When it is called for the first time in a given project
 / module, it parses dependency archives, as well as JDK ones, and
 it may take quite a while.
 
-`javaimp-organize-import': command to organize imports in the
+`javaimp-organize-imports': command to organize imports in the
 current buffer, sorting and deleting duplicates.
 
 If you don't visit a project, then Javaimp tries to determine

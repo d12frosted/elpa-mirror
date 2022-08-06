@@ -1572,14 +1572,14 @@
 		  ("Feng Shu" . "tumashu@163.com")
 		  ("Naoya Yamashita" . "conao3@gmail.com")))])
  (javaimp .
-	  [(0 9)
+	  [(0 9 1)
 	   nil "Add and reorder Java import statements in Maven/Gradle projects" tar
 	   ((:keywords "java" "maven" "gradle" "programming")
 	    (:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm")
 	    (:authors
 	     ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
 	    (:url . "https://elpa.gnu.org/packages/javaimp.html")
-	    (:commit . "65599a7954821c38e38949b5ec42891b41e75e13"))])
+	    (:commit . "2ac7afce3c6f0b390c4b62c065a898883940d65a"))])
  (jgraph-mode .
 	      [(1 1)
 	       ((cl-lib
@@ -3041,7 +3041,7 @@
 	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	 (:url . "http://www.dr-qubit.org/emacs.php"))])
  (taxy .
-       [(0 9)
+       [(0 10)
 	((emacs
 	  (26 3)))
 	"Programmable taxonomical grouping for arbitrary objects" tar
@@ -3050,20 +3050,22 @@
 	 (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	 (:authors
 	  ("Adam Porter" . "adam@alphapapa.net"))
-	 (:commit . "b209692b632bbe8d7f97ea8a39b0c28c1be3b7ec"))])
+	 (:commit . "3c561ceaf967a827cb4f02db870a52c8e77d8db0"))])
  (taxy-magit-section .
-		     [(0 9 1)
+		     [(0 10)
 		      ((emacs
 			(26 3))
 		       (magit-section
-			(3 2 1)))
+			(3 2 1))
+		       (taxy
+			(0 10)))
 		      "View Taxy structs in a Magit Section buffer" tar
 		      ((:url . "https://github.com/alphapapa/taxy.el")
 		       (:keywords "lisp")
 		       (:maintainer "Adam Porter" . "adam@alphapapa.net")
 		       (:authors
 			("Adam Porter" . "adam@alphapapa.net"))
-		       (:commit . "62624c32d7f58bfa4acc89becc7cc8427d546aab"))])
+		       (:commit . "11feab7cdf82cfe9e5d1ca7f70e1b9bbf792ef5a"))])
  (temp-buffer-browse .
 		     [(1 5)
 		      ((emacs
@@ -3288,7 +3290,7 @@
 	      (:authors
 	       ("Philip Kaludercic" . "philipk@posteo.net")))])
  (vc-got .
-	 [(1 1 2)
+	 [(1 2)
 	  ((emacs
 	    (25 1)))
 	  "VC backend for Game of Trees VCS" tar
@@ -3298,7 +3300,7 @@
 	   (:authors
 	    ("Omar Polo" . "op@omarpolo.com")
 	    ("Timo Myyrä" . "timo.myyra@bittivirhe.fi"))
-	   (:commit . "20cee209dece2d1a49daf68e043aa6e78b8a13e9"))])
+	   (:commit . "bc158324418fd8bef96a7f62856679de2569030f"))])
  (vc-hgcmd .
 	   [(1 14 1)
 	    ((emacs

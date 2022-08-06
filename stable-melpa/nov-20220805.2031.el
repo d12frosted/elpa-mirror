@@ -4,8 +4,8 @@
 
 ;; Author: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://depp.brause.cc/nov.el
-;; Package-Version: 20220428.1417
-;; Package-Commit: 8f5b42e9d9f304b422c1a7918b43ee323a7d3532
+;; Package-Version: 20220805.2031
+;; Package-Commit: cb5f45cbcfbcf263cdeb2d263eb15edefc8b07cb
 ;; Version: 0.4.0
 ;; Package-Requires: ((esxml "0.3.6") (emacs "25.1"))
 ;; Keywords: hypermedia, multimedia, epub
@@ -121,6 +121,13 @@ should change it to contain the rendered version of it."
 If set to `nil', no saving and restoring is performed."
   :type '(choice (file  :tag "File name")
                  (const :tag "Don't save last reading places" nil))
+  :group 'nov)
+
+(defcustom nov-header-line-format "%t: %c"
+  "Header line format.
+- %t is replaced by the title.
+- %c is replaced by the chapter title."
+  :type 'string
   :group 'nov)
 
 (defvar-local nov-file-name nil
@@ -537,16 +544,22 @@ internal ones."
 
 (defun nov-render-title (dom)
   "Custom <title> rendering function for DOM.
-Sets `header-line-format' to a combination of the EPUB title and
-chapter title."
-  (let ((title (cdr (assq 'title nov-metadata)))
-        (chapter-title (car (dom-children dom))))
-    (when (not chapter-title)
-      (setq chapter-title '(:propertize "No title" face italic)))
-    ;; this shouldn't happen for properly authored EPUBs
-    (when (not title)
-      (setq title '(:propertize "No title" face italic)))
-    (setq header-line-format (list title ": " chapter-title))))
+Sets `header-line-format' according to `nov-header-line-format'."
+  (setq header-line-format
+	(and nov-header-line-format
+	     (let ((title (cdr (assq 'title nov-metadata)))
+		   (chapter-title (car (dom-children dom))))
+	       (when (not chapter-title)
+		 (setq chapter-title (propertize "No title" 'face 'italic)))
+	       ;; this shouldn't happen for properly authored EPUBs
+	       (when (not title)
+		 (setq title (propertize "No title" 'face 'italic)))
+	       (string-replace
+		"%" "%%"
+		(format-spec
+		 nov-header-line-format
+		 `((?c . ,chapter-title)
+		   (?t . ,title))))))))
 
 (defvar nov-shr-rendering-functions
   '(;; default function uses url-retrieve and fails on local images

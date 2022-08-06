@@ -5,11 +5,11 @@
 ;; Author: Trevor Richards <trev@trevdev.ca>
 ;; Maintainer: Trevor Richards <trev@trevdev.ca>
 ;; URL: https://github.com/trev-dev/tangonov-theme
-;; Package-Version: 20220801.528
-;; Package-Commit: 20b59b96ef57f7531525951989cef0e9f849371b
+;; Package-Version: 20220805.2149
+;; Package-Commit: 1f8753577e5628fe4c29b53ab82a94c4a50a6a58
 ;; Created: 20th July, 2022
-;; Keywords: faces, theme, dark
-;; Version: 1.0.5
+;; Keywords: faces, theme, dark, fringe
+;; Version: 1.1.0
 ;; Package-Requires: ((emacs "25"))
 
 ;; License: GPL3
@@ -72,6 +72,93 @@ Alpha should be a float between 0 and 1."
          (cl-loop for c in color collect (tangonov-lighten c alpha)))
         ((tangonov-blend color "#FFFFFF" (- 1 alpha)))))
 
+(defgroup tangonov-theme nil
+  "Custom settings for `tangonov-theme'.")
+
+(defcustom tangonov-enable-custom-fringes t
+  "Use custom settings from tangonov-theme to set up your fringe area."
+  :type 'boolean
+  :group 'tangonov-theme)
+
+(defvar tangonov--fringe-right-triangle
+  (vector #b00000000
+          #b00000000
+          #b00000000
+          #b00000000
+          #b00000000
+          #b10000000
+          #b11000000
+          #b11100000
+          #b11110000
+          #b11100000
+          #b11000000
+          #b10000000
+          #b00000000
+          #b00000000
+          #b00000000
+          #b00000000
+          #b00000000)
+  "A fringe bitmap used by tangonov-theme.")
+
+(defvar tangonov--fringe-stub
+  (vector #b00000000
+          #b00000000
+          #b00000000
+          #b00000000
+          #b00000000
+          #b11110000
+          #b11110000
+          #b11110000
+          #b11110000
+          #b11110000
+          #b11110000
+          #b11110000
+          #b00000000
+          #b00000000
+          #b00000000
+          #b00000000
+          #b00000000)
+  "A fringe bitmap used by tangonov-theme")
+
+(when tangonov-enable-custom-fringes
+  (fringe-mode '(4 . 0))
+  (with-eval-after-load 'bookmark
+    (define-fringe-bitmap 'bookmark-fringe-mark
+      tangonov--fringe-stub))
+  (with-eval-after-load 'flycheck
+    (define-fringe-bitmap 'flycheck-fringe-bitmap-caret
+      tangonov--fringe-stub)
+    (flycheck-define-error-level
+          'error
+        :severity 100
+        :compilation-level 2
+        :overlay-category 'flycheck-error-overlay
+        :fringe-bitmap 'flycheck-fringe-bitmap-caret
+        :fringe-face 'flycheck-fringe-error
+        :error-list-face 'flycheck-error-list-error)
+      (flycheck-define-error-level
+          'warning
+        :severity 100
+        :compilation-level 1
+        :overlay-category 'flycheck-warning-overlay
+        :fringe-bitmap 'flycheck-fringe-bitmap-caret
+        :fringe-face 'flycheck-fringe-warning
+        :warning-list-face 'flycheck-warning-list-warning)
+      (flycheck-define-error-level
+          'info
+        :severity 100
+        :compilation-level 1
+        :overlay-category 'flycheck-info-overlay
+        :fringe-bitmap 'flycheck-fringe-bitmap-caret
+        :fringe-face 'flycheck-fringe-info
+        :info-list-face 'flycheck-info-list-info))
+  (with-eval-after-load 'flymake
+    (define-fringe-bitmap 'small-right-triangle
+      tangonov--fringe-right-triangle)
+    (setq flymake-note-bitmap    '(small-right-triangle compilation-info)
+          flymake-error-bitmap   '(small-right-triangle compilation-error)
+          flymake-warning-bitmap '(small-right-triangle compilation-warning))))
+
 (deftheme tangonov
   "A 256 color dark theme featuring bright pastels.")
 
@@ -95,6 +182,22 @@ Alpha should be a float between 0 and 1."
 
   (custom-theme-set-faces
    'tangonov
+   `(ansi-color-black ((,spec (:foregound ,gray1 :background ,gray1))))
+   `(ansi-color-blue ((,spec (:foreground ,blue :background ,blue))))
+   `(ansi-color-bright-black ((,spec (:foreground ,gray2 :background ,gray2))))
+   `(ansi-color-bright-blue ((,spec (:foreground ,blue :background ,blue))))
+   `(ansi-color-bright-cyan ((,spec (:foreground ,cyan :background ,cyan))))
+   `(ansi-color-bright-green ((,spec (:foreground ,green :background ,green))))
+   `(ansi-color-bright-magenta ((,spec (:foreground ,magenta :background ,magenta))))
+   `(ansi-color-bright-red ((,spec (:foreground ,red :background ,red))))
+   `(ansi-color-bright-white ((,spec (:foreground "#FFFFFF" :background "#FFFFFF"))))
+   `(ansi-color-bright-yellow ((,spec (:foreground ,yellow :background ,yellow))))
+   `(ansi-color-cyan ((,spec (:foreground ,cyan :background ,cyan))))
+   `(ansi-color-green ((,spec (:foreground ,green :background ,green))))
+   `(ansi-color-magenta ((,spec (:foreground ,magenta :background ,magenta))))
+   `(ansi-color-red ((,spec (:foreground ,red :background ,red))))
+   `(ansi-color-white ((,spec (:foreground ,fg :background ,fg))))
+   `(ansi-color-yellow ((,spec (:foreground ,yellow :background ,yellow))))
    `(avy-goto-char-timer-face
      ((,spec (:inherit 'isearch))))
    `(avy-background-face ((,spec (:foreground ,(tangonov-darken bg 0.2)))))
@@ -137,6 +240,7 @@ Alpha should be a float between 0 and 1."
    `(completions-first-difference ((,spec (:foreground ,yellow))))
    `(trailing-whitespace ((,spec (:background ,red))))
    `(whitespace-trailing ((,spec (:background ,red))))
+   `(bookmark-face ((,spec (:foreground ,orange))))
    `(css-proprietary-property ((,spec (:foreground ,orange))))
    `(css-property ((,spec (:foreground ,green))))
    `(css-selector ((,spec (:foreground ,blue))))
@@ -270,7 +374,7 @@ Alpha should be a float between 0 and 1."
    `(notmuch-crypto-signature-good-key ((,spec (:foreground ,orange))))
    `(notmuch-crypto-signature-unknown ((,spec (:foreground ,red))))
    `(notmuch-message-summary-face
-     ((,spec (:background ,bg-alt))))
+     ((,spec (:background ,bg-alt :overline ,gray2))))
    `(notmuch-search-count ((,spec (:foreground ,gray2))))
    `(notmuch-search-date ((,spec (:foreground ,orange))))
    `(notmuch-search-flagged-face
@@ -374,6 +478,9 @@ Alpha should be a float between 0 and 1."
    `(hydra-face-amaranth ((,spec (:foreground ,magenta :weight bold))))
    `(hydra-face-pink ((,spec (:foreground ,violet :weight bold))))
    `(hydra-face-teal ((,spec (:foreground ,teal :weight bold))))
+   `(inf-ruby-result-overlay-face
+     ((,spec (:foreground ,cyan :background
+                          ,bg-alt :box (:line-width 1 :color ,cyan)))))
    `(isearch ((,spec (:inherit 'match :weight bold))))
    `(isearch-fail ((,spec (:background ,red :foreground ,gray1 :weight bold))))
    `(flymake-error ((,spec (:underline (:style wave :color ,red)))))
@@ -401,12 +508,12 @@ Alpha should be a float between 0 and 1."
    `(eldoc-box-border ((,spec (:background ,fg-alt))))
    ;; Modeline/Tabline
    `(mode-line
-     ((,spec (:foreground ,fg :background ,bg-alt :box
+     ((,spec (:foreground ,fg-alt :background ,bg-alt :box
                           (:line-width (2 . 2) :color ,bg-alt)))))
    `(mode-line-inactive
      ((,spec (:inherit 'mode-line :foreground ,gray2 :background ,bg))))
    `(mode-line-highlight ((,spec (:box (:line-width (2 . 2) :color ,magenta)))))
-   `(mode-line-buffer-id ((,spec (:weight bold))))
+   `(mode-line-buffer-id ((,spec (:foreground ,fg :weight bold))))
    `(tab-line ((,spec (:foreground ,fg :background ,bg-alt))))
    `(org-block ((,spec (:background ,bg-alt))))
    `(org-block-background ((,spec (:background ,bg-alt))))
@@ -463,9 +570,11 @@ Alpha should be a float between 0 and 1."
      ((,spec (:foreground ,magenta :slant italic))))
    `(org-journal-calendar-scheduled-face
      ((,spec (:foreground ,red :slant italic))))
-   `(org-pomodoro-mode-line ((,spec (:foreground ,red))))
+   `(org-pomodoro-mode-line ((,spec (:foreground ,fg))))
    `(org-pomodoro-mode-line-overtime
      ((,spec (:foreground ,yellow :weight bold))))
+   `(org-mode-line-clock ((,spec (:foreground ,fg))))
+   `(org-mode-line-clock-overrun ((,spec (:inherit error))))
    `(org-ref-acronym-face ((,spec (:foreground ,violet))))
    `(org-ref-cite-face
      ((,spec (:foreground ,yellow :weight light :underline t))))
