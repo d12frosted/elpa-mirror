@@ -4,8 +4,8 @@
 ;;
 ;; Author: Ric Lister
 ;; Version: 0.1
-;; Package-Version: 20220108.1802
-;; Package-Commit: c0f1f36b2384b58b00a2000f2e30895a6230bb6b
+;; Package-Version: 20220806.1847
+;; Package-Commit: 4ec04e1b77dea76d7c30066ccf3200d2e0b7bee9
 ;; Package-Requires: ((org "7"))
 ;; URL: https://github.com/rlister/org-present
 ;;
@@ -68,12 +68,14 @@
 (define-key org-present-mode-keymap (kbd "C-c C-w") 'org-present-read-write)
 (define-key org-present-mode-keymap (kbd "C-c <")   'org-present-beginning)
 (define-key org-present-mode-keymap (kbd "C-c >")   'org-present-end)
+(define-key org-present-mode-keymap (kbd "C-c C-1") 'org-present-toggle-one-big-page)
 
 ;; how much to scale up font size
 (defvar org-present-text-scale 5)
 (defvar org-present-cursor-cache (or cursor-type nil)
   "Holds the user set value of cursor for `org-present-read-only'")
 (defvar org-present-overlays-list nil)
+(defvar org-present-one-big-page nil)
 
 (define-minor-mode org-present-mode
   "Minimalist presentation minor mode for org-mode."
@@ -168,6 +170,13 @@
      (regexp-opt '("title:" "author:" "date:" "email:"))
      string)))
 
+(defvar org-present-hide-stars-in-headings t
+  "Whether to hide the asterisk characters in headings while in presentation
+mode. If you turn this off (by setting it to nil) make sure to set
+`org-hide-emphasis-markers' non-nil, since currently `org-present''s algorithm
+for hiding emphasis markers has a bad interaction with bullets. This combo also
+makes tabs work in presentation mode as in the rest of Org mode.")
+
 (defun org-present-add-overlays ()
   "Add overlays for this mode."
   (add-to-invisibility-spec '(org-present))
@@ -178,9 +187,10 @@
       (let ((end (if (org-present-show-option (match-string 2)) 2 0)))
         (org-present-add-overlay (match-beginning 1) (match-end end))))
     ;; hide stars in headings
-    (goto-char (point-min))
-    (while (re-search-forward "^\\(*+\\)" nil t)
-      (org-present-add-overlay (match-beginning 1) (match-end 1)))
+    (if org-present-hide-stars-in-headings
+        (progn (goto-char (point-min))
+               (while (re-search-forward "^\\(*+\\)" nil t)
+                 (org-present-add-overlay (match-beginning 1) (match-end 1)))))
     ;; hide emphasis/verbatim markers if not already hidden by org
     (if org-hide-emphasis-markers nil
       ;; TODO https://github.com/rlister/org-present/issues/12
@@ -200,17 +210,19 @@
 
 (defun org-present-rm-overlays ()
   "Remove overlays for this mode."
-  (mapc 'delete-overlay org-present-overlays-list)
+  (mapc #'delete-overlay org-present-overlays-list)
   (remove-from-invisibility-spec '(org-present)))
 
 (defun org-present-read-only ()
   "Make buffer read-only."
   (interactive)
   (setq buffer-read-only t)
-  (define-key org-present-mode-keymap (kbd "SPC") 'org-present-next))
+  (setq org-present-cursor-cache cursor-type
+        cursor-type nil)
+  (define-key org-present-mode-keymap (kbd "SPC") #'org-present-next))
 
 (defun org-present-read-write ()
-  "Make buffer read-only."
+  "Make buffer read/write."
   (interactive)
   (setq buffer-read-only nil)
   (define-key org-present-mode-keymap (kbd "SPC") 'self-insert-command))
@@ -232,13 +244,23 @@
 
 ;;;###autoload
 (defun org-present ()
-  "init."
+  "Start org presentation."
   (interactive)
   (setq org-present-mode t)
   (org-present-add-overlays)
   (run-hooks 'org-present-mode-hook)
   (org-present-narrow)
   (org-present-run-after-navigate-functions))
+
+(defun org-present-toggle-one-big-page ()
+  "Toggle showing all pages in a buffer."
+  (interactive)
+  (if org-present-one-big-page
+      (progn
+        (org-present-narrow)
+        (setq-local org-present-one-big-page nil))
+    (widen)
+    (setq-local org-present-one-big-page t)))
 
 (defun org-present-quit ()
   "Quit the minor-mode."
@@ -252,6 +274,12 @@
   (run-hooks 'org-present-mode-quit-hook)
   (setq org-present-mode nil))
 
+(defvar org-present-startup-folded nil
+  "Like `org-startup-folded', but for presentation mode. Also analogous to
+introduction of slide items by effects in other presentation programs: i.e., if
+you do not want to show the whole slide at first, but to unfurl it slowly, set
+this to non-nil.")
+
 (defvar org-present-after-navigate-functions nil
   "Abnormal hook run after org-present navigates to a new heading.")
 
@@ -263,11 +291,14 @@
    (replace-regexp-in-string "[ \t\n]*\\'" "" string)))
 
 (defun org-present-run-after-navigate-functions ()
-  "Run org-present-after-navigate hook, passing the name of the presentation buffer and the current heading."
-  (let* ((title-text (thing-at-point 'line))
-         (safe-title-text (replace-regexp-in-string "^[ \*]" "" title-text))
-         (current-heading (org-present-trim-string safe-title-text)))
-    (run-hook-with-args 'org-present-after-navigate-functions (buffer-name) current-heading)))
+  "Fold slide if `org-present-startup-folded' is non-nil.
+Run org-present-after-navigate hook, passing the name of the presentation buffer and the current heading."
+  (progn
+    (if org-present-startup-folded (org-cycle))
+    (let* ((title-text (thing-at-point 'line))
+           (safe-title-text (replace-regexp-in-string "^[ \*]" "" title-text))
+           (current-heading (org-present-trim-string safe-title-text)))
+      (run-hook-with-args 'org-present-after-navigate-functions (buffer-name) current-heading))))
 
 (provide 'org-present)
 ;;; org-present.el ends here

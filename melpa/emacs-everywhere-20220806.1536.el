@@ -7,8 +7,8 @@
 ;; Created: February 06, 2021
 ;; Modified: February 06, 2021
 ;; Version: 0.1.0
-;; Package-Version: 20220628.1501
-;; Package-Commit: cbe56e216df38756de11370535601b5324fdc63b
+;; Package-Version: 20220806.1536
+;; Package-Commit: a1b16b53c5211607fa0f76c80aebb3a72f645ae1
 ;; Keywords: conenience, frames
 ;; Homepage: https://github.com/tecosaur/emacs-everywhere
 ;; Package-Requires: ((emacs "26.3"))
@@ -207,7 +207,7 @@ Make sure that it will be matched by `emacs-everywhere-file-patterns'."
 
 ;;;###autoload
 (defun emacs-everywhere (&optional file line column)
-  "Lanuch the emacs-everywhere frame from emacsclient."
+  "Launch the emacs-everywhere frame from emacsclient."
   (let ((app-info (emacs-everywhere-app-info)))
     (apply #'call-process "emacsclient" nil 0 nil
            (delq
