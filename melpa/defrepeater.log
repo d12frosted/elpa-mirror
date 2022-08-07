@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/alphapapa/defrepeater.el.git
 
 Updating /mnt/store/melpa/working/defrepeater/
-Checking out origin/HEAD
-Checking out 9c027a2561fe141dcfb79f75fcaee36cd0386ec1
-Built defrepeater in 5.012s, finished at 2022-08-07T06:08:20+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Aug  7 06:08 packages/defrepeater-20180830.410.el
-4.0K -rw-r--r-- 1 root root  388 Aug  7 06:08 packages/defrepeater-20180830.410.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/alphapapa/defrepeater.el.git/': Could not resolve host: github.com
+
+Command exited with non-zero exit-code: 128

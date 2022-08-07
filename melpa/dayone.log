@@ -3,22 +3,10 @@ Fetcher: github
 Source:  https://github.com/mori-dev/emacs-dayone.git
 
 Updating /mnt/store/melpa/working/dayone/
-Checking out origin/HEAD
-Checking out ab628274f0806451f23bce16f62a6a11cbf91a2b
-Checking out ab628274f0806451f23bce16f62a6a11cbf91a2b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dayone/
-  to /tmp/dayoneSNCYFq/dayone-20160105.1240
-    dayone.el -> dayone.el
-    layout.xml.mustache -> layout.xml.mustache
-    tag.xml.mustache -> tag.xml.mustache
-Created dayone-20160105.1240.tar containing:
-  dayone-20160105.1240/
-  dayone-20160105.1240/dayone-pkg.el
-  dayone-20160105.1240/dayone.el
-  dayone-20160105.1240/layout.xml.mustache
-  dayone-20160105.1240/tag.xml.mustache
-Built dayone in 7.553s, finished at 2022-08-07T06:07:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 407 Aug  7 06:07 packages/dayone-20160105.1240.entry
- 20K -rw-r--r-- 1 root root 20K Aug  7 06:07 packages/dayone-20160105.1240.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/mori-dev/emacs-dayone.git/': Could not resolve host: github.com
+
+Command exited with non-zero exit-code: 128

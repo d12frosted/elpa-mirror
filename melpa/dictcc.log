@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/martenlienen/dictcc.el.git
 
 Updating /mnt/store/melpa/working/dictcc/
-Checking out origin/HEAD
-Checking out 8ecb954fcf193cba138191f8947c8b0b60a1c6c5
-Built dictcc in 7.154s, finished at 2022-08-07T06:08:45+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Aug  7 06:08 packages/dictcc-20220219.1302.el
-4.0K -rw-r--r-- 1 root root 353 Aug  7 06:08 packages/dictcc-20220219.1302.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/martenlienen/dictcc.el.git/': Could not resolve host: github.com
+
+Command exited with non-zero exit-code: 128

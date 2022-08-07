@@ -3,9 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/fommil/emacs-darcula-theme.git
 
 Updating /mnt/store/melpa/working/darcula-theme/
-Checking out origin/HEAD
-Checking out d9b82b58ded9014985be6658f4ab17e26ed9e93e
-Built darcula-theme in 8.268s, finished at 2022-08-07T06:07:13+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Aug  7 06:07 packages/darcula-theme-20171227.1845.el
-4.0K -rw-r--r-- 1 root root 359 Aug  7 06:07 packages/darcula-theme-20171227.1845.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/fommil/emacs-darcula-theme.git/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+
+Command exited with non-zero exit-code: 128

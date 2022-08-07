@@ -3,22 +3,11 @@ Fetcher: github
 Source:  https://github.com/matthewlmcclure/dircmp-mode.git
 
 Updating /mnt/store/melpa/working/dircmp/
-Checking out origin/HEAD
-Checking out 558ee0b601c2de9d247612085aafe2926f56a09f
-Checking out 558ee0b601c2de9d247612085aafe2926f56a09f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dircmp/
-  to /tmp/dircmp67cCBS/dircmp-20141204.1756
-    dircmp.el -> dircmp.el
-    emacs-git-difftool.sh -> emacs-git-difftool.sh
-    emacs-git-mergetool.sh -> emacs-git-mergetool.sh
-Created dircmp-20141204.1756.tar containing:
-  dircmp-20141204.1756/
-  dircmp-20141204.1756/dircmp-pkg.el
-  dircmp-20141204.1756/dircmp.el
-  dircmp-20141204.1756/emacs-git-difftool.sh
-  dircmp-20141204.1756/emacs-git-mergetool.sh
-Built dircmp in 5.867s, finished at 2022-08-07T06:09:07+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 349 Aug  7 06:09 packages/dircmp-20141204.1756.entry
- 32K -rw-r--r-- 1 root root 30K Aug  7 06:09 packages/dircmp-20141204.1756.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/matthewlmcclure/dircmp-mode.git/': Could not resolve host: github.com
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

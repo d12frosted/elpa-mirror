@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/liblit/demangle-mode.git
 
 Updating /mnt/store/melpa/working/demangle-mode/
-Checking out origin/HEAD
-Checking out 04f545adab066708d6151f13da65aaf519f8ac4e
-Built demangle-mode in 5.447s, finished at 2022-08-07T06:08:26+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Aug  7 06:08 packages/demangle-mode-20210822.2210.el
-4.0K -rw-r--r-- 1 root root 389 Aug  7 06:08 packages/demangle-mode-20210822.2210.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/liblit/demangle-mode.git/': Could not resolve host: github.com
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

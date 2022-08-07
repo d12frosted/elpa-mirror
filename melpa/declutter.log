@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/sanel/declutter.git
 
 Updating /mnt/store/melpa/working/declutter/
-Checking out origin/HEAD
-Checking out 8ac50a64dc3a12440d98bc1556b5c7727fdf51ed
-Built declutter in 6.018s, finished at 2022-08-07T06:08:12+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.0K Aug  7 06:08 packages/declutter-20220310.2101.el
-4.0K -rw-r--r-- 1 root root  421 Aug  7 06:08 packages/declutter-20220310.2101.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/sanel/declutter.git/': Could not resolve host: github.com
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

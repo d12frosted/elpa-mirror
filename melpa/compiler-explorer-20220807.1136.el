@@ -4,8 +4,8 @@
 
 ;; Author: Michał Krzywkowski <k.michal@zoho.com>
 ;; Keywords: c, tools
-;; Package-Version: 20210916.1316
-;; Package-Commit: 9ea0cc78ac40f667dfaf9277758a22b9058ca434
+;; Package-Version: 20220807.1136
+;; Package-Commit: 04da0fd822d7e9eca82c993c99f6318df824b652
 ;; Version: 0.1.0
 ;; Homepage: https://github.com/mkcms/compiler-explorer.el
 ;; Package-Requires: ((emacs "26.1") (request "0.3.0"))
@@ -28,32 +28,31 @@
 ;;
 ;;; compiler-explorer.el
 ;;
-;; Package that provides a simple client for [compiler
-;; explorer][compiler-explorer] service.
+;; Package that provides a simple client for https://godbolt.org service.
 ;;
 ;;
 ;;; Usage
 ;;
-;; M-x `compiler-explorer' is the main entry point.  It will ask you
-;; for a language and display source&compilation buffers.  Type
-;; something in the source buffer; the compilation buffer will
-;; automatically update with compiled asm code.  Another buffer
-;; displays output of the compiled and executed program.
+;; M-x `compiler-explorer' is the main entry point.  It will ask you for a
+;; language and display source&compilation buffers.  Type something in the
+;; source buffer; the compilation buffer will automatically update with
+;; compiled asm code.  Another buffer displays output of the compiled and
+;; executed program.
 ;;
-;; M-x `compiler-explorer-set-compiler' changes the compiler for
-;;current session.
+;; M-x `compiler-explorer-set-compiler' changes the compiler for current
+;;session.
 ;;
 ;; M-x `compiler-explorer-set-compiler-args' sets compilation options.
 ;;
-;; M-x `compiler-explorer-add-library' asks for a library version and
-;; adds it to current compilation.  M-x
-;; `compiler-explorer-remove-library' removes them.
+;; M-x `compiler-explorer-add-library' asks for a library version and adds
+;; it to current compilation.  M-x `compiler-explorer-remove-library'
+;; removes them.
 ;;
-;; M-x `compiler-explorer-set-execution-args' sets the arguments for
-;; the executed program.
+;; M-x `compiler-explorer-set-execution-args' sets the arguments for the
+;; executed program.
 ;;
-;; M-x `compiler-explorer-set-input' reads a string from minibuffer
-;; that will be used as input for the executed program.
+;; M-x `compiler-explorer-set-input' reads a string from minibuffer that
+;; will be used as input for the executed program.
 ;;
 ;; M-x `compiler-explorer-new-session' kills the current session and
 ;; creates a new one, asking for source language.
@@ -67,7 +66,6 @@
 ;; M-x `compiler-explorer-layout' cycles between different layouts.
 ;;
 ;;
-;; [compiler-explorer]: https://godbolt.org/
 
 ;;; Code:
 
@@ -280,7 +278,7 @@ This calls `compiler-explorer--handle-compilation-response' and
                                       (pcase-lambda (`(,id . ,version))
                                         `(:id ,id :version ,version))
                                       compiler-explorer--selected-libraries)])
-                      :allowStoreCodeDebug nil)))
+                      :allowStoreCodeDebug :json-false)))
            :parser #'compiler-explorer--parse-json-compilation
            :complete (lambda (&rest _args) (force-mode-line-update t))
            :error #'ignore              ;Error is displayed in the mode-line
@@ -359,7 +357,9 @@ This calls `compiler-explorer--handle-compilation-response' and
 
 (defun compiler-explorer--mode-line-format ()
   "Get the mode line format used in compiler explorer mode."
-  (let ((resp compiler-explorer--last-compilation-request))
+  (let ((resp (if (eq (current-buffer) (get-buffer compiler-explorer--exe-output-buffer))
+                  compiler-explorer--last-exe-request
+                compiler-explorer--last-compilation-request)))
     (propertize
      (concat "CE: "
              (cond

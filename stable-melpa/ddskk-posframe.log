@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/conao3/ddskk-posframe.el.git
 
 Updating /mnt/store/melpa/working/ddskk-posframe/
-Checking out origin/HEAD
-Checking out 299493dd951e5a0b43b8213321e3dc0bac10f762
-Built ddskk-posframe in 9.216s, finished at 2022-08-07T06:08:04+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Aug  7 06:08 packages/ddskk-posframe-20200812.917.el
-4.0K -rw-r--r-- 1 root root  461 Aug  7 06:08 packages/ddskk-posframe-20200812.917.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/conao3/ddskk-posframe.el.git/': Could not resolve host: github.com
+
+Command exited with non-zero exit-code: 128

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/HKey/dired-atool.git
 
 Updating /mnt/store/melpa/working/dired-atool/
-Checking out origin/HEAD
-Checking out 01416fd5961b901c50686c91cb59b3833adc831b
-Built dired-atool in 5.662s, finished at 2022-08-07T06:09:10+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Aug  7 06:09 packages/dired-atool-20210719.404.el
-4.0K -rw-r--r-- 1 root root  388 Aug  7 06:09 packages/dired-atool-20210719.404.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/HKey/dired-atool.git/': Could not resolve host: github.com
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

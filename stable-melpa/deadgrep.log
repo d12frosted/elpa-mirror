@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/Wilfred/deadgrep.git
 
 Updating /mnt/store/melpa/working/deadgrep/
-Checking out origin/HEAD
-Checking out 0c57d113aa6840bec073b3432ed62b382f20acc6
-Built deadgrep in 8.376s, finished at 2022-08-07T06:08:04+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 59K Aug  7 06:08 packages/deadgrep-20220704.1714.el
-4.0K -rw-r--r-- 1 root root 449 Aug  7 06:08 packages/deadgrep-20220704.1714.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/Wilfred/deadgrep.git/': Could not resolve host: github.com
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

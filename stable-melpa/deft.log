@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/jrblevin/deft.git
 
 Updating /mnt/store/melpa/working/deft/
-Checking out origin/HEAD
-Checking out 28be94d89bff2e1c7edef7244d7c5ba0636b1296
-Built deft in 5.114s, finished at 2022-08-07T06:08:25+0000
- ✓ Success:
- 72K -rw-r--r-- 1 root root 71K Aug  7 06:08 packages/deft-20210707.1633.el
-4.0K -rw-r--r-- 1 root root 402 Aug  7 06:08 packages/deft-20210707.1633.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/jrblevin/deft.git/': Could not resolve host: github.com
+
+Command exited with non-zero exit-code: 128

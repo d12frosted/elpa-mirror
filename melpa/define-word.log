@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/abo-abo/define-word.git
 
 Updating /mnt/store/melpa/working/define-word/
-Checking out origin/HEAD
-Checking out 31a8c67405afa99d0e25e7c86a4ee7ef84a808fe
-Built define-word in 5.115s, finished at 2022-08-07T06:08:19+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Aug  7 06:08 packages/define-word-20220104.1848.el
-4.0K -rw-r--r-- 1 root root 387 Aug  7 06:08 packages/define-word-20220104.1848.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://github.com/abo-abo/define-word.git/': Could not resolve host: github.com
+
+Command exited with non-zero exit-code: 128
