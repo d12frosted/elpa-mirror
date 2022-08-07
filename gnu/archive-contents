@@ -1856,6 +1856,15 @@
 	  (:authors
 	   ("Tino Calancha" . "tino.calancha@gmail.com"))
 	  (:keywords "games"))])
+ (minibuffer-header .
+		    [(0 2)
+		     ((emacs
+		       (27 1)))
+		     "Minibuffer header line" tar
+		     ((:url . "https://github.com/rougier/minibuffer-header")
+		      (:keywords "convenience")
+		      (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
+		      (:commit . "ad10a018c75d8ff8039252b73daf57d19b060d3b"))])
  (minibuffer-line .
 		  [(0 1)
 		   nil "Display status info in the minibuffer window" single
