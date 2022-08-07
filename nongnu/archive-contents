@@ -307,13 +307,13 @@
 		     ("Campbell Barton" . "ideasman42@gmail.com"))
 		    (:commit . "1c5837d2a667d977a1bd90ba44ebd911cc660f26"))])
  (dockerfile-mode .
-		  [(1 5)
+		  [(1 7)
 		   ((emacs
 		     (24)))
 		   "Major mode for editing Docker's Dockerfiles" tar
 		   ((:url . "https://github.com/spotify/dockerfile-mode")
 		    (:keywords "docker")
-		    (:commit . "628315e2e4ab2f269548126444234caa057b2c75"))])
+		    (:commit . "74ed3dfd1584298a0ea9881115d33ba1808a4c3f"))])
  (dracula-theme .
 		[(1 7 0)
 		 ((emacs
