@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/kenoss/debug-print.git
 
 Updating /mnt/store/melpa/working/debug-print/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/kenoss/debug-print.git/': Could not resolve host: github.com
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out d817fd9ea2d3f8d2c1ace4d8af155684f3a99dc5
+Built debug-print in 7.945s, finished at 2022-08-07T17:15:12+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Aug  7 17:15 packages/debug-print-20140126.19.el
+4.0K -rw-r--r-- 1 root root 429 Aug  7 17:15 packages/debug-print-20140126.19.entry

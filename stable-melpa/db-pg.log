@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/nicferrier/emacs-db-pg.git
 
 Updating /mnt/store/melpa/working/db-pg/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/nicferrier/emacs-db-pg.git/': Could not resolve host: github.com
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7d5ab86b74b05fe003b3b434d4835f37f3f3eded
+Built db-pg in 7.297s, finished at 2022-08-07T17:15:02+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 8.0K Aug  7 17:15 packages/db-pg-20130131.1902.el
+4.0K -rw-r--r-- 1 root root  331 Aug  7 17:15 packages/db-pg-20130131.1902.entry

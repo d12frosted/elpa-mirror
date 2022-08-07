@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/alezost/dim.el.git
 
 Updating /mnt/store/melpa/working/dim/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/alezost/dim.el.git/': Could not resolve host: github.com
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 5515f2e8657ef14adcc34aa5b05383a2684328ae
+Built dim in 5.906s, finished at 2022-08-07T17:16:23+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Aug  7 17:16 packages/dim-20160818.949.el
+4.0K -rw-r--r-- 1 root root  371 Aug  7 17:16 packages/dim-20160818.949.entry

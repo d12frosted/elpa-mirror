@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/myrjola/diminish.el.git
 
 Updating /mnt/store/melpa/working/diminish/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/myrjola/diminish.el.git/': Could not resolve host: github.com
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 6b7e837b0cf0129e9d7d6abae48093cf599bb9e8
+Built diminish in 5.921s, finished at 2022-08-07T17:16:27+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Aug  7 17:16 packages/diminish-20220104.1539.el
+4.0K -rw-r--r-- 1 root root 437 Aug  7 17:16 packages/diminish-20220104.1539.entry

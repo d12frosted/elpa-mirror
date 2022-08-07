@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/alezost/debpaste.el.git
 
 Updating /mnt/store/melpa/working/debpaste/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/alezost/debpaste.el.git/': Could not resolve host: github.com
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 6f2a400665062468ebd03a2ce1de2a73d9084958
+Built debpaste in 6.843s, finished at 2022-08-07T17:15:10+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 37K Aug  7 17:15 packages/debpaste-20160113.2347.el
+4.0K -rw-r--r-- 1 root root 396 Aug  7 17:15 packages/debpaste-20160113.2347.entry

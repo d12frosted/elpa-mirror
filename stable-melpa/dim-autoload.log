@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/tarsius/dim-autoload.git
 
 Updating /mnt/store/melpa/working/dim-autoload/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/tarsius/dim-autoload.git/': Could not resolve host: github.com
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 81c94b0707d5ddd9a3b9962ee441206db1d25967
+Built dim-autoload in 5.386s, finished at 2022-08-07T17:16:24+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Aug  7 17:16 packages/dim-autoload-20220422.1601.el
+4.0K -rw-r--r-- 1 root root  404 Aug  7 17:16 packages/dim-autoload-20220422.1601.entry

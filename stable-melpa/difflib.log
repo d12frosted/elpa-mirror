@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/dieggsy/difflib.el.git
 
 Updating /mnt/store/melpa/working/difflib/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/dieggsy/difflib.el.git/': Could not resolve host: github.com
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 646fc4388274fe765bbf4661e17a24e4d081250c
+Built difflib in 5.995s, finished at 2022-08-07T17:16:15+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Aug  7 17:16 packages/difflib-20210224.2242.el
+4.0K -rw-r--r-- 1 root root 453 Aug  7 17:16 packages/difflib-20210224.2242.entry

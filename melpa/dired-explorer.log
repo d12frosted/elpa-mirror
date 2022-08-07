@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jidaikobo-shibata/dired-explorer.git
 
 Updating /mnt/store/melpa/working/dired-explorer/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/jidaikobo-shibata/dired-explorer.git/': Could not resolve host: github.com
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 3ade0a31b5340271d05e9bf443f2504960f6c6dd
+Built dired-explorer in 5.885s, finished at 2022-08-07T17:16:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.1K Aug  7 17:16 packages/dired-explorer-20180607.221.el
+4.0K -rw-r--r-- 1 root root  264 Aug  7 17:16 packages/dired-explorer-20180607.221.entry

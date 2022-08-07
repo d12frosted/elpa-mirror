@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/knu/dired-fdclone.el.git
 
 Updating /mnt/store/melpa/working/dired-fdclone/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/knu/dired-fdclone.el.git/': Could not resolve host: github.com
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 66e337012e72cebd2485f1efca0b2f78dc9c6252
+Built dired-fdclone in 5.442s, finished at 2022-08-07T17:16:39+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 43K Aug  7 17:16 packages/dired-fdclone-20220119.717.el
+4.0K -rw-r--r-- 1 root root 372 Aug  7 17:16 packages/dired-fdclone-20220119.717.entry

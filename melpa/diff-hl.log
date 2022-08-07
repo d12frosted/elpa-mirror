@@ -3,11 +3,32 @@ Fetcher: github
 Source:  https://github.com/dgutov/diff-hl.git
 
 Updating /mnt/store/melpa/working/diff-hl/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/dgutov/diff-hl.git/': Could not resolve host: github.com
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out dabb7be6283488abd8d232ea8ce590d502713ed8
+Checking out dabb7be6283488abd8d232ea8ce590d502713ed8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/diff-hl/
+  to /tmp/diff-hlU4b2Lz/diff-hl-20220620.1309
+    diff-hl-amend.el -> diff-hl-amend.el
+    diff-hl-dired.el -> diff-hl-dired.el
+    diff-hl-flydiff.el -> diff-hl-flydiff.el
+    diff-hl-inline-popup.el -> diff-hl-inline-popup.el
+    diff-hl-margin.el -> diff-hl-margin.el
+    diff-hl-show-hunk-posframe.el -> diff-hl-show-hunk-posframe.el
+    diff-hl-show-hunk.el -> diff-hl-show-hunk.el
+    diff-hl.el -> diff-hl.el
+Created diff-hl-20220620.1309.tar containing:
+  diff-hl-20220620.1309/
+  diff-hl-20220620.1309/diff-hl-amend.el
+  diff-hl-20220620.1309/diff-hl-dired.el
+  diff-hl-20220620.1309/diff-hl-flydiff.el
+  diff-hl-20220620.1309/diff-hl-inline-popup.el
+  diff-hl-20220620.1309/diff-hl-margin.el
+  diff-hl-20220620.1309/diff-hl-pkg.el
+  diff-hl-20220620.1309/diff-hl-show-hunk-posframe.el
+  diff-hl-20220620.1309/diff-hl-show-hunk.el
+  diff-hl-20220620.1309/diff-hl.el
+Built diff-hl in 5.551s, finished at 2022-08-07T17:16:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  378 Aug  7 17:16 packages/diff-hl-20220620.1309.entry
+112K -rw-r--r-- 1 root root 110K Aug  7 17:16 packages/diff-hl-20220620.1309.tar

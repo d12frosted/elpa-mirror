@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/Fuco1/dired-hacks.git
 
 Updating /mnt/store/melpa/working/dired-collapse/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/Fuco1/dired-hacks.git/': Could not resolve host: github.com
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7c0ef09d57a80068a11edc74c3568e5ead5cc15a
+Built dired-collapse in 6.121s, finished at 2022-08-07T17:16:36+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.7K Aug  7 17:16 packages/dired-collapse-20210403.1230.el
+4.0K -rw-r--r-- 1 root root  394 Aug  7 17:16 packages/dired-collapse-20210403.1230.entry

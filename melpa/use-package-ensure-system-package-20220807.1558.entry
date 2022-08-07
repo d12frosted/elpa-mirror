@@ -1,0 +1,13 @@
+(use-package-ensure-system-package .
+				   [(20220807 1558)
+				    ((use-package
+				      (2 1))
+				     (system-packages
+				      (1 0 4)))
+				    "auto install system packages" single
+				    ((:commit . "c1d8da78365886818c24c3934c4fa5ce25c08b5b")
+				     (:authors
+				      ("Justin Talbott" . "justin@waymondo.com"))
+				     (:maintainer "Justin Talbott" . "justin@waymondo.com")
+				     (:keywords "convenience" "tools" "extensions")
+				     (:url . "https://github.com/waymondo/use-package-ensure-system-package"))])

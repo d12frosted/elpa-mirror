@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/psibi/dhall-mode.git
 
 Updating /mnt/store/melpa/working/dhall-mode/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/psibi/dhall-mode.git/': Could not resolve host: github.com
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out c77f1c1e75b6d2725019c5275fc102ae98d25628
+Built dhall-mode in 6.443s, finished at 2022-08-07T17:16:06+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Aug  7 17:16 packages/dhall-mode-20220519.1115.el
+4.0K -rw-r--r-- 1 root root 436 Aug  7 17:16 packages/dhall-mode-20220519.1115.entry

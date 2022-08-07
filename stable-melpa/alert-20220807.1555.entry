@@ -1,0 +1,15 @@
+(alert .
+       [(20220807 1555)
+	((gntp
+	  (0 1))
+	 (log4e
+	  (0 3 0))
+	 (cl-lib
+	  (0 5)))
+	"Growl-style notification system for Emacs" single
+	((:commit . "6698801c8ea2804070b9e7fdf39befd1f00384ff")
+	 (:authors
+	  ("John Wiegley" . "jwiegley@gmail.com"))
+	 (:maintainer "John Wiegley" . "jwiegley@gmail.com")
+	 (:keywords "notification" "emacs" "message")
+	 (:url . "https://github.com/jwiegley/alert"))])

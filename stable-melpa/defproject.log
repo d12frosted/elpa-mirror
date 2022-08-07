@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/kotfic/defproject.git
 
 Updating /mnt/store/melpa/working/defproject/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/kotfic/defproject.git/': Could not resolve host: github.com
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 674d48a5e34cb4bba76faa38ee901322ec649086
+Built defproject in 10.270s, finished at 2022-08-07T17:15:33+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.9K Aug  7 17:15 packages/defproject-20151201.2219.el
+4.0K -rw-r--r-- 1 root root  356 Aug  7 17:15 packages/defproject-20151201.2219.entry
