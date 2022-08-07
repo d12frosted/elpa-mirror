@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov
 ;; URL: https://github.com/bbatsov/helm-projectile
-;; Package-Version: 20201217.908
-;; Package-Commit: 58123f14c392021714fc5d23b9f95c7f95ce07f1
+;; Package-Version: 20220807.350
+;; Package-Commit: 6dcc543815984f7f40e99050b1ee3b68a088e160
 ;; Created: 2011-31-07
 ;; Keywords: project, convenience
 ;; Version: 1.1.0-snapshot
@@ -733,7 +733,7 @@ See documentation of `helm-grep-default-command' for the format."
     helm-source-projectile-files-list
     helm-source-projectile-projects)
   "Default sources for `helm-projectile'."
-  :type 'list
+  :type '(repeat symbol)
   :group 'helm-projectile)
 
 (defmacro helm-projectile-command (command source prompt &optional not-require-root truncate-lines-var)
@@ -988,14 +988,27 @@ DIR is the project root, if not set then current directory is used"
         (buffer-substring-no-properties (region-beginning) (region-end))
       (helm-rg--get-thing-at-pt))))
 
+(defun glob-quote (string)
+  "Quote the special glob characters: *, ?, [, and ].
+STRING the string in which to escape special characters."
+  (replace-regexp-in-string "[]*?[]" "\\\\\\&" string))
+
 ;;;###autoload
 (defun helm-projectile-rg ()
   "Projectile version of `helm-rg'."
   (interactive)
   (if (require 'helm-rg nil t)
       (if (projectile-project-p)
-          (let ((helm-rg-prepend-file-name-line-at-top-of-matches nil)
-                (helm-rg-include-file-on-every-match-line t))
+          (let* ((helm-rg-prepend-file-name-line-at-top-of-matches nil)
+                 (helm-rg-include-file-on-every-match-line t)
+                 (ignored-files (mapcan (lambda (path)
+                                          (list "--glob" (concat "!" (glob-quote path))))
+                                        (cl-union (projectile-ignored-files-rel)  grep-find-ignored-files)))
+                 (ignored-directories (mapcan (lambda (path)
+                                                   (list "--glob" (concat "!" (glob-quote path) "/**")))
+                                              (cl-union (mapcar 'directory-file-name (projectile-ignored-directories-rel))
+                                                        grep-find-ignored-directories)))
+                 (helm-rg--extra-args `(,@ignored-files ,@ignored-directories)))
             (let ((default-directory (projectile-project-root)))
               (helm-rg (helm-projectile-rg--region-selection)
                        nil)))
