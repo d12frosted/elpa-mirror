@@ -3,14 +3,14 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: docs, convenience
-;; Package-Version: 20220805.241
-;; Package-Commit: 72fc38d27a637a7a2e959ca663ab9fd02da050f1
+;; Package-Version: 20220806.2209
+;; Package-Commit: c57d3e791349619a62242b7a7faff77cb64e114b
 ;; License: GPL-3.0-or-later
 ;; Version: 0.6.1
 ;; Package-Requires: ((emacs "26.1") (consult "0.18"))
 ;; Homepage: https://codeberg.org/jao/consult-recoll
 
-;; Copyright (C) 2021, 2022  Jose A Ortega Ruiz
+;; Copyright (C) 2021-2022  Free Software Foundation, Inc.
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
