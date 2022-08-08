@@ -5,7 +5,7 @@
 ;; Author: Noah Peart <noah.v.peart@gmail.com>
 ;; URL: https://github.com/nverno/ebnf-mode
 ;; Package-Version: 20220606.1846
-;; Package-Commit: 89a868226e7ddb303548e82a81f76fbb0e5b21c5
+;; Package-Commit: 89df6ca4215b3a325dc94a8f246f403cacc99745
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1"))
 ;; Created: 29 December 2021

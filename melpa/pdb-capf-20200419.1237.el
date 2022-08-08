@@ -4,7 +4,7 @@
 
 ;; Author: Andrii Kolomoiets <andreyk.mad@gmail.com>
 ;; Keywords: languages, abbrev, convenience
-;; Package-Commit: 2f4099aa1330f87df4e9cd526de057ee9b71de6c
+;; Package-Commit: 31602ccab53aa7dcf26a1af222c7da2bcc1390ed
 ;; Package-Version: 20200419.1237
 ;; Package-X-Original-Version: 1.0
 ;; Package-Requires: ((emacs "25.1"))

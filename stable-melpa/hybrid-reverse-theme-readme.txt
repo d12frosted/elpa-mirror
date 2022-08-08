@@ -42,6 +42,7 @@ Supported packages:
 - winum
 
 Supported defaults:
+- ansi-term
 - custom (M-x customize)
 - diff-mode
 - dired
