@@ -5,7 +5,7 @@
 ;; Author: Mykhaylo Bilyanskyy
 ;; URL: https://github.com./licht1stein/obsidian.el
 ;; Package-Version: 20220807.2215
-;; Package-Commit: 5517a57ad975260a9c05047cad662938e97279f6
+;; Package-Commit: ef5f4174acdc8c6ef38707103f2a05223ad4481b
 ;; Keywords: obsidian, pkm, convenience
 ;; Version: 1.1.0
 ;; Package-Requires: ((emacs "27.2") (company "0.9.13") (s "1.12.0") (dash "2.13") (org "9.5.3") (markdown-mode "2.6") (elgrep "1.0.0"))

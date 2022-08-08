@@ -5,8 +5,10 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/auto-compile
 ;; Keywords: compile convenience lisp
+;; Package-Commit: b204e2f85aaa4d41af4eb1819633c9613f5172bf
 
-;; Package-Version: 1.7.1
+;; Package-Version: 20220517.1501
+;; Package-X-Original-Version: 1.7.1
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0") (packed "3.0.3"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later

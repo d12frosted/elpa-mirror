@@ -2,23 +2,25 @@ Package: websearch
 Fetcher: gitlab
 Source:  https://gitlab.com/xgqt/emacs-websearch.git
 
-Cloning https://gitlab.com/xgqt/emacs-websearch.git to /mnt/store/melpa/working/websearch/
+Updating /mnt/store/melpa/working/websearch/
 Checking out origin/HEAD
-Checking out f69d26bee3330b59132deecf97b7c17fd1c5f27e
-Checking out f69d26bee3330b59132deecf97b7c17fd1c5f27e
+Checking out 25d28eb3ada57c038879d6058d708119285d4c5d
+Checking out 25d28eb3ada57c038879d6058d708119285d4c5d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/websearch/
-  to /tmp/websearchHvBcme/websearch-20220807.2219
+  to /tmp/websearchBIemAz/websearch-20220808.1128
     websearch-custom.el -> websearch-custom.el
     websearch-mode.el -> websearch-mode.el
     websearch.el -> websearch.el
-Created websearch-20220807.2219.tar containing:
-  websearch-20220807.2219/
-  websearch-20220807.2219/websearch-custom.el
-  websearch-20220807.2219/websearch-mode.el
-  websearch-20220807.2219/websearch-pkg.el
-  websearch-20220807.2219/websearch.el
-Built websearch in 5.860s, finished at 2022-08-08T05:52:15+0000
+Created websearch-20220808.1128.tar containing:
+  websearch-20220808.1128/
+  websearch-20220808.1128/websearch-custom.el
+  websearch-20220808.1128/websearch-mode.el
+  websearch-20220808.1128/websearch-pkg.el
+  websearch-20220808.1128/websearch.el
+Built websearch in 8.309s, finished at 2022-08-08T13:28:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 378 Aug  8 05:52 packages/websearch-20220807.2219.entry
- 20K -rw-r--r-- 1 root root 20K Aug  8 05:52 packages/websearch-20220807.2219.tar
+4.0K -rw-r--r-- 1 root root 378 Aug  8 09:36 packages/websearch-20220807.2219.entry
+ 20K -rw-r--r-- 1 root root 20K Aug  8 09:36 packages/websearch-20220807.2219.tar
+4.0K -rw-r--r-- 1 root root 378 Aug  8 13:28 packages/websearch-20220808.1128.entry
+ 20K -rw-r--r-- 1 root root 20K Aug  8 13:28 packages/websearch-20220808.1128.tar

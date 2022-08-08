@@ -8,7 +8,7 @@
 ;; Modified: April 20, 2022
 ;; Version: 0.0.1
 ;; Package-Version: 20220514.2039
-;; Package-Commit: 886cb5b20520f90445e9779db0aead3e3960e719
+;; Package-Commit: 77f33fc765decce01d5ad7905e908ccbf2233307
 ;; Keywords: convenience tools
 ;; Homepage: https://github.com/babashka/neil
 ;; Package-Requires: ((emacs "27.1"))

@@ -13,8 +13,9 @@ following lines to your .emacs file:
 
 For key bindings, see further down in this documentation.
 
-CDLaTeX requires texmathp.el which is distributed with AUCTeX.
-Starting with Emacs 21.3, texmathp.el will be part of Emacs.
+CDLaTeX requires texmathp.el (which is distributed with AUCTeX) to
+auto-insert $...$ when needed, so we recommend you install AUCTeX to get
+this functionality.
 
 --------------------------------------------------------------------------
 
