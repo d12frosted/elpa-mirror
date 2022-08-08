@@ -517,6 +517,19 @@
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
 	    (:commit . "0f55ad146b327d82a4a6dfa674349bfbbf3820e4"))])
+ (consult-recoll .
+		 [(0 6 2)
+		  ((emacs
+		    (26 1))
+		   (consult
+		    (0 18)))
+		  "Recoll queries using consult" tar
+		  ((:url . "https://codeberg.org/jao/consult-recoll")
+		   (:keywords "docs" "convenience")
+		   (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
+		   (:authors
+		    ("Jose A Ortega Ruiz" . "jao@gnu.org"))
+		   (:commit . "8299efb610178a73ea809de74f87d724ee6183d6"))])
  (context-coloring .
 		   [(8 1 0)
 		    ((emacs
