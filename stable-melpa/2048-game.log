@@ -4,3 +4,19 @@ Source:  https://hg.sr.ht/~zck/game-2048
 
 Updating /mnt/store/melpa/working/2048-game/
 Checking out aad4a590ea91f9a3256233b9b345e9159c6993f2
+
+Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
+
+pulling from https://hg.sr.ht/~zck/game-2048
+searching for changes
+no changes found
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command exited with non-zero exit-code: 255

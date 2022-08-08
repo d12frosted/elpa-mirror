@@ -4,8 +4,8 @@
 ;; Maintainer: Karthik Chikmagalur <karthik.chikmagalur@gmail.com>
 ;; Created: 2021
 ;; Version: 0.1
-;; Package-Version: 20220706.1256
-;; Package-Commit: 88f1d7cce614fabbfb41dff5338399971835c48c
+;; Package-Version: 20220808.141
+;; Package-Commit: 8abf62df088de87175e98adf8f6f5fb93515004c
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (project "0.6.0"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/karthink/consult-dir
@@ -263,11 +263,13 @@ REFRESH is non-nil force the hash to be rebuilt."
 
 Entries that are also in the list of projects are removed."
   (let* ((current-dirs (consult-dir--default-dirs))
-           (proj-list-hash (consult-dir--project-list-make))
-           (in-other-source-p (lambda (dir) (not (or (and proj-list-hash (gethash dir proj-list-hash))
-                                                (member dir current-dirs))))))
+         (proj-list-hash (consult-dir--project-list-make))
+         (in-other-source-p (lambda (dir) (not (or (and proj-list-hash (gethash dir proj-list-hash))
+                                              (member dir current-dirs)))))
+         (file-directory-safe (lambda (f) (or (and (file-directory-p f) (file-name-as-directory f))
+                                         (file-name-directory f)))))
     (thread-last recentf-list
-      (mapcar #'file-name-directory)
+      (mapcar file-directory-safe)
       (delete-dups)
       (mapcar #'abbreviate-file-name)
       (seq-filter in-other-source-p))))

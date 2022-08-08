@@ -5,7 +5,7 @@
 ;; Author: Sebastian Sturm
 ;; URL: https://github.com/sebastiansturm/autothemer
 ;; Package-Version: 20220106.416
-;; Package-Commit: 1dbc06ad430c51b5ec1a602a808ee46b9bd4bafa
+;; Package-Commit: 00a8643066357185bf6d8483dae2074fdc62e557
 ;; Version: 0.2.3
 ;; Package-Requires: ((dash "2.10.0") (emacs "24") (cl-lib "0.5"))
 

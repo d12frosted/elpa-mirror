@@ -6,8 +6,8 @@
 ;; Created: 24 Aug 2011
 ;; Updated: 16 Mar 2015
 ;; Version: 1.2
-;; Package-Version: 20220807.1555
-;; Package-Commit: 6698801c8ea2804070b9e7fdf39befd1f00384ff
+;; Package-Version: 20220808.510
+;; Package-Commit: fb92919739b35ec6e9e6db56ca7c10cf7ef1329d
 ;; Package-Requires: ((gntp "0.1") (log4e "0.3.0") (cl-lib "0.5"))
 ;; Keywords: notification emacs message
 ;; X-URL: https://github.com/jwiegley/alert
@@ -672,17 +672,33 @@ This is found in the Growl Extras: http://growl.info/extras.php."
 
 (defun alert-growl-notify (info)
   (if alert-growl-command
-      (let ((args
-             (list "--appIcon"  "Emacs"
-                   "--name"     "Emacs"
-                   "--title"    (alert-encode-string (plist-get info :title))
-                   "--message"  (alert-encode-string (plist-get info :message))
-                   "--priority" (number-to-string
-                                 (cdr (assq (plist-get info :severity)
-                                            alert-growl-priorities))))))
+      (let* ((title (alert-encode-string (plist-get info :title)))
+             (priority (number-to-string
+                        (cdr (assq (plist-get info :severity)
+                                   alert-growl-priorities))))
+             (args
+              (case system-type
+                ('windows-nt (mapcar
+                              (lambda (lst) (apply #'concat lst))
+                              `(
+                                ;; http://www.growlforwindows.com/gfw/help/growlnotify.aspx
+                                ("/i:" ,(file-truename (concat invocation-directory "../share/icons/hicolor/48x48/apps/emacs.png")))
+                                ("/t:" ,title)
+                                ("/p:" ,priority))))
+                (t (list
+                    "--appIcon"  "Emacs"
+                    "--name"     "Emacs"
+                    "--title"    title
+                    "--priority" priority)))))
         (if (and (plist-get info :persistent)
                  (not (plist-get info :never-persist)))
-            (nconc args (list "--sticky")))
+            (case system-type
+              ('windows-nt (nconc args (list "/s:true")))
+              (t (nconc args (list "--sticky")))))
+        (let ((message (alert-encode-string (plist-get info :message))))
+          (case system-type
+            ('windows-nt (nconc args (list message)))
+            (t (nconc args (list "--message" message)))))
         (apply #'call-process alert-growl-command nil nil nil args))
     (alert-message-notify info)))
 
