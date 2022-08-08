@@ -1857,14 +1857,14 @@
 	   ("Tino Calancha" . "tino.calancha@gmail.com"))
 	  (:keywords "games"))])
  (minibuffer-header .
-		    [(0 2)
+		    [(0 4)
 		     ((emacs
 		       (27 1)))
 		     "Minibuffer header line" tar
 		     ((:url . "https://github.com/rougier/minibuffer-header")
 		      (:keywords "convenience")
 		      (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-		      (:commit . "ad10a018c75d8ff8039252b73daf57d19b060d3b"))])
+		      (:commit . "22b1d168ebb9baf06b27db077f5b95c3ecd915f9"))])
  (minibuffer-line .
 		  [(0 1)
 		   nil "Display status info in the minibuffer window" single
@@ -2331,6 +2331,17 @@
 	(:authors
 	 ("Helmut Eller" . "eller.helmut@gmail.com"))
 	(:url . "http://elpa.gnu.org/packages/peg.html"))])
+ (perl-doc .
+	   [(0 2)
+	    ((emacs
+	      (27)))
+	    "Read Perl documentation" tar
+	    ((:url . "https://github.com/HaraldJoerg/emacs-perl-doc")
+	     (:keywords "languages")
+	     (:maintainer "Harald Jörg" . "haj@posteo.de")
+	     (:authors
+	      ("Harald Jörg" . "haj@posteo.de"))
+	     (:commit . "bc968d37dcc29db4cae65e6d1c3ddc80e31ffbb3"))])
  (persist .
 	  [(0 4)
 	   nil "Persist Variables between Emacs Sessions" tar
