@@ -4,7 +4,7 @@
 ;;
 ;;; Version: 1.3.2
 ;; Package-Version: 20220808.1456
-;; Package-Commit: 2016973e92651f25518e130405155bb8728339e3
+;; Package-Commit: e4f4ee32f54c0c71551dbe5e4419d2c2727130bf
 ;;
 ;;; Package-Requires: ((emacs "28.1") (s "1.12"))
 ;;

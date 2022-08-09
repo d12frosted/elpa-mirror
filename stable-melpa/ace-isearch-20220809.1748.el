@@ -4,8 +4,8 @@
 
 ;; Author: Akira Tamamori
 ;; URL: https://github.com/tam17aki/ace-isearch
-;; Package-Version: 20210830.746
-;; Package-Commit: 8439136206a42e41ef95af923e0dc3bbd4fa306c
+;; Package-Version: 20220809.1748
+;; Package-Commit: a24bfc626100f183dbad016bd7723eb12e238534
 ;; Version: 1.0
 ;; Created: Sep 25 2014
 ;; Package-Requires: ((emacs "24"))
@@ -101,19 +101,34 @@
               ace-isearch-2-function 'avy-goto-char-2)
       (user-error "You need to install either ace-jump-mode or avy.")))
 
-(defcustom ace-isearch-function-from-isearch 'ace-isearch-helm-swoop-from-isearch
+(defcustom ace-isearch-disable-isearch-function-from-isearch-message nil
+  "Disable message shown by `ace-isearch-function-from-isearch'."
+  :type 'boolean
+  :group 'ace-isearch)
+
+(defcustom ace-isearch-function-from-isearch
+  (cond
+   ((require 'helm-swoop nil 'noerror) 'ace-isearch-helm-swoop-from-isearch)
+   ((require 'helm-occur nil 'noerror) 'ace-isearch-helm-occur-from-isearch)
+   ((require 'swiper     nil 'noerror) 'ace-isearch-swiper-from-isearch)
+   ((require 'consult    nil 'noerror) 'ace-isearch-consult-line-from-isearch)
+   ((progn
+      (customize-set-variable 'ace-isearch-use-function-from-isearch nil)
+      (unless ace-isearch-disable-isearch-function-from-isearch-message
+	(message "You don't have a suitable line-searching package installed.
+In order to seamlessly transition to a line-searching command
+through `ace-isearch', you should install the following
+package(s) of your choice:
+
+* Helm (in order to use `helm-occur')
+* Helm and helm-swoop (in order to use `helm-swoop')
+* Swiper (in order to use `swiper'), or
+* Consult (in order to use `consult-line').")))
+    nil))
   "Symbol name of function which is invoked when the length of `isearch-string'
 is longer than or equal to `ace-isearch-input-length'."
   :type 'symbol
   :group 'ace-isearch)
-
-(if (not (or (require 'helm-swoop nil 'noerror)
-             (if (require 'helm-occur nil 'noerror)
-                 (setq ace-isearch-function-from-isearch 'ace-isearch-helm-occur-from-isearch)
-               nil)))
-    (if (require 'swiper nil 'noerror)
-        (setq ace-isearch-function-from-isearch 'ace-isearch-swiper-from-isearch)
-      (user-error "You need to install either helm-swoop, helm-occur or swiper.")))
 
 (defcustom ace-isearch-lighter " AceI"
   "Lighter of ace-isearch-mode."
@@ -353,6 +368,17 @@ of `isearch-string' is longer than or equal to `ace-isearch-input-length'."
     (let (search-nonincremental-instead)
       (ignore-errors (isearch-done t t)))
     (swiper $query)))
+
+(defun ace-isearch-consult-line-from-isearch ()
+  "Invoke `consult-line' from ace-isearch."
+  (interactive)
+  (let (($query (if isearch-regexp
+		    isearch-string
+		  (regexp-quote isearch-string))))
+    (isearch-update-ring isearch-string isearch-regexp)
+    (let (search-nonincremental-instead)
+      (ignore-errors (isearch-done t t)))
+    (consult-line $query)))
 
 ;;;###autoload
 (defun ace-isearch-jump-during-isearch ()
