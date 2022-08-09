@@ -5,7 +5,7 @@
 ;; Author: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
 ;; Keywords: languages
 ;; Package-Version: 20210603.2153
-;; Package-Commit: 339814df22b87eebca02137e581f65d6283fce97
+;; Package-Commit: 8b4948b7fcad90fc9b72f69f4653260bd21f62c3
 ;; URL: https://github.com/wyuenho/emacs-python-isort
 ;; Package-Requires: ((emacs "26") (reformatter "0.6"))
 ;; Version: 1.0.0

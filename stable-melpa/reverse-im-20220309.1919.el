@@ -3,7 +3,7 @@
 ;; Authors: Juri Linkov <juri@jurta.org> (initial idea), Dmitry K. (packager and maintainer)
 ;; Package-Requires: ((emacs "25.1") (seq "2.23"))
 ;; Package-Version: 20220309.1919
-;; Package-Commit: 50b8376f152916bc200635a112db9439bc3cc9b5
+;; Package-Commit: 41f47d5ccab77d42cc2e1a89a09d0dc2410e9eb4
 ;; Keywords: i18n
 ;; Homepage: https://github.com/a13/reverse-im.el
 ;; Version: 0.0.8
