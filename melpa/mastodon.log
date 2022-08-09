@@ -4,11 +4,11 @@ Source:  https://codeberg.org/martianh/mastodon.el
 
 Updating /mnt/store/melpa/working/mastodon/
 Checking out origin/HEAD
-Checking out a74340a72789ed12011d3f8618449bbe515a7e77
-Checking out a74340a72789ed12011d3f8618449bbe515a7e77
+Checking out 3ff8f250c3a0e0ab0670cf7af72a2607950e4b5e
+Checking out 3ff8f250c3a0e0ab0670cf7af72a2607950e4b5e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonOlsqPz/mastodon-20220803.1937
+  to /tmp/mastodonVHJSfe/mastodon-20220808.1410
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -22,23 +22,23 @@ Copying files (->) and directories (=>)
   ! lisp/mastodon-tl.el -> mastodon-tl.el
   ! lisp/mastodon-toot.el -> mastodon-toot.el
   ! lisp/mastodon.el -> mastodon.el
-Created mastodon-20220803.1937.tar containing:
-  mastodon-20220803.1937/
-  mastodon-20220803.1937/mastodon-async.el
-  mastodon-20220803.1937/mastodon-auth.el
-  mastodon-20220803.1937/mastodon-client.el
-  mastodon-20220803.1937/mastodon-discover.el
-  mastodon-20220803.1937/mastodon-http.el
-  mastodon-20220803.1937/mastodon-inspect.el
-  mastodon-20220803.1937/mastodon-media.el
-  mastodon-20220803.1937/mastodon-notifications.el
-  mastodon-20220803.1937/mastodon-pkg.el
-  mastodon-20220803.1937/mastodon-profile.el
-  mastodon-20220803.1937/mastodon-search.el
-  mastodon-20220803.1937/mastodon-tl.el
-  mastodon-20220803.1937/mastodon-toot.el
-  mastodon-20220803.1937/mastodon.el
-Built mastodon in 7.127s, finished at 2022-08-08T12:46:24+0000
+Created mastodon-20220808.1410.tar containing:
+  mastodon-20220808.1410/
+  mastodon-20220808.1410/mastodon-async.el
+  mastodon-20220808.1410/mastodon-auth.el
+  mastodon-20220808.1410/mastodon-client.el
+  mastodon-20220808.1410/mastodon-discover.el
+  mastodon-20220808.1410/mastodon-http.el
+  mastodon-20220808.1410/mastodon-inspect.el
+  mastodon-20220808.1410/mastodon-media.el
+  mastodon-20220808.1410/mastodon-notifications.el
+  mastodon-20220808.1410/mastodon-pkg.el
+  mastodon-20220808.1410/mastodon-profile.el
+  mastodon-20220808.1410/mastodon-search.el
+  mastodon-20220808.1410/mastodon-tl.el
+  mastodon-20220808.1410/mastodon-toot.el
+  mastodon-20220808.1410/mastodon.el
+Built mastodon in 7.687s, finished at 2022-08-09T00:27:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  392 Aug  8 12:46 packages/mastodon-20220803.1937.entry
-260K -rw-r--r-- 1 root root 260K Aug  8 12:46 packages/mastodon-20220803.1937.tar
+4.0K -rw-r--r-- 1 root root  392 Aug  9 00:27 packages/mastodon-20220808.1410.entry
+260K -rw-r--r-- 1 root root 260K Aug  9 00:27 packages/mastodon-20220808.1410.tar

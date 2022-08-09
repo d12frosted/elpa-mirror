@@ -1,0 +1,11 @@
+(i3bar .
+       [(20220808 1551)
+	((emacs
+	  (28 1)))
+	"Display status from an i3status command in the tab bar" single
+	((:commit . "7c182fef33578ae32f945758123601396de227d0")
+	 (:authors
+	  ("Steven Allen" . "steven@stebalien.com"))
+	 (:maintainer "Steven Allen" . "steven@stebalien.com")
+	 (:keywords "unix")
+	 (:url . "https://github.com/Stebalien/i3bar.el"))])
