@@ -1870,14 +1870,14 @@
 	   ("Tino Calancha" . "tino.calancha@gmail.com"))
 	  (:keywords "games"))])
  (minibuffer-header .
-		    [(0 4)
+		    [(0 5)
 		     ((emacs
 		       (27 1)))
 		     "Minibuffer header line" tar
 		     ((:url . "https://github.com/rougier/minibuffer-header")
 		      (:keywords "convenience")
 		      (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-		      (:commit . "22b1d168ebb9baf06b27db077f5b95c3ecd915f9"))])
+		      (:commit . "fe5d90d3f13c0010eed3b5dd437b458f8bf3da5f"))])
  (minibuffer-line .
 		  [(0 1)
 		   nil "Display status info in the minibuffer window" single
@@ -2363,7 +2363,7 @@
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "http://elpa.gnu.org/packages/persist.html"))])
  (phps-mode .
-	    [(0 4 24)
+	    [(0 4 25)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2372,7 +2372,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "49c379f9f6db473310a2625b0c6dfc77d9198b6f"))])
+	      (:commit . "585f638d3c16b1a0cae35ef341fbd61c63020e79"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
