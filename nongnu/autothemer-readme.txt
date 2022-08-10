@@ -1,4 +1,5 @@
 # Autothemer
+[![NonGNU ELPA](https://elpa.nongnu.org/nongnu/autothemer.svg)](https://elpa.nongnu.org/nongnu/autothemer.html)
 
 Autothemer provides a thin layer on top of `deftheme` and
 `custom-theme-set-faces` that creates a new custom color theme.
@@ -27,8 +28,8 @@ Take a look at the example below.
     (example-cyan   "#22DDFF" "#00FFFF"))
 
     ;; specifications for Emacs faces.
-    ((button (:underline t :weight 'bold :foreground yellowish))
-     (error  (:foreground reddish)))
+    ((button (:underline t :weight 'bold :foreground example-yellow))
+     (error  (:foreground example-red)))
 
     ;; Forms after the face specifications are evaluated.
     ;; (palette vars can be used, read below for details.)
@@ -44,7 +45,7 @@ Take a look at the example below.
 
 ## Faces and Color Classes
 
-One of the things that makes writing themes for Emacs difficult is the clumsy syntax of `defface`, the macro used to configre Emacs `face` definitions.
+One of the things that makes writing themes for Emacs difficult is the syntax of `defface`, the macro used to configre Emacs `face` definitions.
 
 Because the syntax isn't particularly developer friendly, it usually results in themes with limited support for different color displays, usually GUI / 24bit themes are made, and the results in the terminal are often sub par.  On occassion a theme does appear that provides better support for multiple display types, but due to the manual work involved in adding face specs, mode support is limited and development often stalls.
 
@@ -114,12 +115,12 @@ As we can see in the example above face specs now look like this:
 
 ```
 ;; specifications for Emacs faces.
-((button (:underline t :weight 'bold :foreground yellowish))
- (error  (:foreground reddish)))
+((button (:underline t :weight 'bold :foreground example-yellow))
+ (error  (:foreground example-red)))
 ```
 
 color names from the palette can be used directly, as we can see here.
-The faces are using colors named `yellowish` and `redish`.
+The faces are using colors named `example-yellow` and `example-red`.
 
 One important thing to remember is that we are in a different context
 to `deftheme` so symbols like `bold` or faces we want to `:inherit`
@@ -180,9 +181,9 @@ variable that can be used in other parts of your emacs configuration.
 
 ### Themes using Autothemer
 
+- [Gruvbox](https://github.com/greduan/emacs-theme-gruvbox)
 - [Darktooth](https://github.com/emacsfodder/emacs-theme-darktooth)
 - [Creamsody](https://github.com/emacsfodder/emacs-theme-creamsody)
-- [Gruvbox](https://github.com/greduan/emacs-theme-gruvbox)
 ...
 
 ### Contributing

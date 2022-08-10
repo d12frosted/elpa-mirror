@@ -4,11 +4,11 @@
 
 ;; Author: Russell Sim <russell.sim@gmail.com>
 ;; Keywords: data, languages
-;; Package-Version: 20220512.2104
-;; Package-Commit: f98b9f9088fcb66c97f9200f6c8a0cd16c11caae
+;; Package-Version: 20220809.1942
+;; Package-Commit: ebc50a881c6fbce429b0ec6bef8ea91a8310cf46
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/russell/cue-mode
-;; Version: 1.0.9
+;; Version: 1.0.10
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -357,7 +357,9 @@ it should move backward to the beginning of the previous token."
                                  collect "-I"
                                  collect dir)
                         (list file-to-eval))))
-      (let ((outbuf (get-buffer-create output-buffer-name)))
+      (let* ((outbuf (get-buffer-create output-buffer-name))
+             (outwindow (car (get-buffer-window-list outbuf)))
+             (outwindow-start (when outwindow (window-start outwindow))))
         (with-current-buffer outbuf
           (let ((origional-point (point)))
             (setq buffer-read-only nil)
@@ -367,7 +369,9 @@ it should move backward to the beginning of the previous token."
                   (cue-mode)
                   (view-mode))
               (compilation-mode nil))
-            (goto-char origional-point)))
+            (if outwindow
+                (set-window-start outwindow outwindow-start)
+              (goto-char origional-point))))
         (display-buffer outbuf '(nil (allow-no-window . t)))))))
 
 ;;;###autoload

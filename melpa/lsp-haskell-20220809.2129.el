@@ -1,8 +1,8 @@
 ;;; lsp-haskell.el --- Haskell support for lsp-mode
 
 ;; Version: 1.0
-;; Package-Version: 20220307.2312
-;; Package-Commit: daa51072e1718ca075987901fccbbc2357bca1fc
+;; Package-Version: 20220809.2129
+;; Package-Commit: 485c1148ce4d27030bb95b21c7289809294e7d31
 ;; Package-Requires: ((emacs "24.3") (lsp-mode "3.0"))
 ;; Keywords: haskell
 ;; URL: https://github.com/emacs-lsp/lsp-haskell
@@ -250,7 +250,7 @@ For example, use the following the start the process in a nix-shell:
    (append (list \"nix-shell\" \"-I\" \".\" \"--command\" )
            (list (mapconcat 'identity argv \" \"))
            )
-   (list (concat (lsp-haskell--get-root) \"/shell.nix\"))
+   (list (concat (lsp--suggest-project-root) \"/shell.nix\"))
    )
   )"
   :group 'lsp-haskell

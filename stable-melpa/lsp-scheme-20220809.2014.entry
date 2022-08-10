@@ -1,13 +1,13 @@
 (lsp-scheme .
-	    [(20220806 1936)
+	    [(20220809 2014)
 	     ((emacs
-	       (25 1))
+	       (26 1))
 	      (f
 	       (0 20 0))
 	      (lsp-mode
 	       (8 0 0)))
 	     "Scheme support for lsp-mode" tar
-	     ((:commit . "d406c0ab1c7bb9f7ec5a09e25e4e9f3bc0f44737")
+	     ((:commit . "02e56f4c4981bc5497cdd516969206418858a357")
 	      (:authors
 	       ("Ricardo G. Herdt" . "r.herdt@posteo.de"))
 	      (:maintainer "Ricardo G. Herdt" . "r.herdt@posteo.de")

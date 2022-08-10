@@ -1,5 +1,5 @@
 (evil .
-      [(20220807 2016)
+      [(20220809 2107)
        ((emacs
 	 (24 1))
 	(goto-chg
@@ -7,7 +7,7 @@
 	(cl-lib
 	 (0 5)))
        "Extensible Vi layer for Emacs." tar
-       ((:commit . "fdf8a72b6d8525788a651fef135a0eecf647505b")
+       ((:commit . "87a1fc7fdf75feaac1b0fd163ca60694eda1834e")
 	(:maintainer "Tom Dalziel" . "tom.dalziel@gmail.com")
 	(:keywords "emulation" "vim")
 	(:url . "https://github.com/emacs-evil/evil"))])

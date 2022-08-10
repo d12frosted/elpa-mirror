@@ -78,7 +78,7 @@
 		 (:maintainer "stardiviner" . "numbchild@gmail.com")
 		 (:keywords "languages" "arduino"))])
  (autothemer .
-	     [(0 2 3)
+	     [(0 2 5)
 	      ((dash
 		(2 10 0))
 	       (emacs
@@ -86,10 +86,11 @@
 	       (cl-lib
 		(0 5)))
 	      "Conveniently define themes." tar
-	      ((:url . "https://github.com/sebastiansturm/autothemer")
-	       (:maintainer "Sebastian Sturm")
+	      ((:url . "https://github.com/jasonm23/autothemer")
+	       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
 	       (:authors
-		("Sebastian Sturm")))])
+		("Sebastian Sturm"))
+	       (:commit . "3223cd8867fb75a109e41ccce98ab0e89d0a4f1b"))])
  (better-jumper .
 		[(1 0 1)
 		 ((emacs
