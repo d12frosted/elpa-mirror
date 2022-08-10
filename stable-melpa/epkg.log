@@ -4,11 +4,11 @@ Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
 Checking out origin/HEAD
-Checking out 4524f9a8f19717c4afb84a184db7841b4ffcbf56
-Checking out 4524f9a8f19717c4afb84a184db7841b4ffcbf56
+Checking out 824ef024e8c2ee119ba20ddf119936dbdf1e6e64
+Checking out 824ef024e8c2ee119ba20ddf119936dbdf1e6e64
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgxrXZ4v/epkg-20220510.2036
+  to /tmp/epkgGslgI2/epkg-20220810.1156
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-gelpa.el -> epkg-gelpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -18,21 +18,23 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkgxrXZ4v/epkg-20220510.2036/epkg.info
-Created epkg-20220510.2036.tar containing:
-  epkg-20220510.2036/
-  epkg-20220510.2036/dir
-  epkg-20220510.2036/epkg-desc.el
-  epkg-20220510.2036/epkg-gelpa.el
-  epkg-20220510.2036/epkg-list.el
-  epkg-20220510.2036/epkg-melpa.el
-  epkg-20220510.2036/epkg-org.el
-  epkg-20220510.2036/epkg-pkg.el
-  epkg-20220510.2036/epkg-schemata.el
-  epkg-20220510.2036/epkg-utils.el
-  epkg-20220510.2036/epkg.el
-  epkg-20220510.2036/epkg.info
-Built epkg in 2.715s, finished at 2022-08-10T09:12:54+0000
+Generating /tmp/epkgGslgI2/epkg-20220810.1156/epkg.info
+Created epkg-20220810.1156.tar containing:
+  epkg-20220810.1156/
+  epkg-20220810.1156/dir
+  epkg-20220810.1156/epkg-desc.el
+  epkg-20220810.1156/epkg-gelpa.el
+  epkg-20220810.1156/epkg-list.el
+  epkg-20220810.1156/epkg-melpa.el
+  epkg-20220810.1156/epkg-org.el
+  epkg-20220810.1156/epkg-pkg.el
+  epkg-20220810.1156/epkg-schemata.el
+  epkg-20220810.1156/epkg-utils.el
+  epkg-20220810.1156/epkg.el
+  epkg-20220810.1156/epkg.info
+Built epkg in 10.984s, finished at 2022-08-10T12:53:25+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  404 Aug 10 09:12 packages/epkg-20220510.2036.entry
 112K -rw-r--r-- 1 root root 110K Aug 10 09:12 packages/epkg-20220510.2036.tar
+4.0K -rw-r--r-- 1 root root  404 Aug 10 12:53 packages/epkg-20220810.1156.entry
+112K -rw-r--r-- 1 root root 110K Aug 10 12:53 packages/epkg-20220810.1156.tar

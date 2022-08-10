@@ -4,11 +4,11 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out 94f5aa2ddecc6426ebc69a0c67934ccba6ae9797
-Checking out 94f5aa2ddecc6426ebc69a0c67934ccba6ae9797
+Checking out 4e5bb75305a763ef9ccfc1971b3cba4520f290d7
+Checking out 4e5bb75305a763ef9ccfc1971b3cba4520f290d7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubRTQSjv/ghub-20220624.803
+  to /tmp/ghubk7Kx0R/ghub-20220810.1157
     ghub-pkg.el -> ghub-pkg.el
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
@@ -18,20 +18,22 @@ Copying files (->) and directories (=>)
   ! lisp/gsexp.el -> gsexp.el
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
-Generating /tmp/ghubRTQSjv/ghub-20220624.803/ghub.info
-Created ghub-20220624.803.tar containing:
-  ghub-20220624.803/
-  ghub-20220624.803/buck.el
-  ghub-20220624.803/dir
-  ghub-20220624.803/ghub-graphql.el
-  ghub-20220624.803/ghub-pkg.el
-  ghub-20220624.803/ghub.el
-  ghub-20220624.803/ghub.info
-  ghub-20220624.803/glab.el
-  ghub-20220624.803/gogs.el
-  ghub-20220624.803/gsexp.el
-  ghub-20220624.803/gtea.el
-Built ghub in 9.932s, finished at 2022-08-10T09:23:23+0000
+Generating /tmp/ghubk7Kx0R/ghub-20220810.1157/ghub.info
+Created ghub-20220810.1157.tar containing:
+  ghub-20220810.1157/
+  ghub-20220810.1157/buck.el
+  ghub-20220810.1157/dir
+  ghub-20220810.1157/ghub-graphql.el
+  ghub-20220810.1157/ghub-pkg.el
+  ghub-20220810.1157/ghub.el
+  ghub-20220810.1157/ghub.info
+  ghub-20220810.1157/glab.el
+  ghub-20220810.1157/gogs.el
+  ghub-20220810.1157/gsexp.el
+  ghub-20220810.1157/gtea.el
+Built ghub in 12.354s, finished at 2022-08-10T13:04:04+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  413 Aug 10 09:23 packages/ghub-20220624.803.entry
 160K -rw-r--r-- 1 root root 160K Aug 10 09:23 packages/ghub-20220624.803.tar
+4.0K -rw-r--r-- 1 root root  414 Aug 10 13:04 packages/ghub-20220810.1157.entry
+160K -rw-r--r-- 1 root root 160K Aug 10 13:04 packages/ghub-20220810.1157.tar
