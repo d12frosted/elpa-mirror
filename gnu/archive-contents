@@ -684,7 +684,7 @@
 		  ("Daiki Ueno" . "ueno@gnu.org"))
 		 (:maintainer nil . "emacs-devel@gnu.org"))])
  (debbugs .
-	  [(0 32)
+	  [(0 33)
 	   ((emacs
 	     (26 1))
 	    (soap-client
@@ -695,7 +695,7 @@
 	    (:authors
 	     ("Michael Albinus" . "michael.albinus@gmx.de"))
 	    (:url . "https://elpa.gnu.org/packages/debbugs.html")
-	    (:commit . "a35646a9798226b8630fbd7a0691edc78ccd92b3"))])
+	    (:commit . "5354f5884cc7ebd4fe40326ab43671770aa1280c"))])
  (delight .
 	  [(1 7)
 	   ((cl-lib
@@ -709,7 +709,7 @@
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
  (denote .
-	 [(0 4 0)
+	 [(0 5 1)
 	  ((emacs
 	    (27 2)))
 	  "Simple notes with an efficient file-naming scheme" tar
@@ -717,7 +717,7 @@
 	   (:maintainer "Denote Development" . "~protesilaos/denote@lists.sr.ht")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "0ca421e3d403e0e81882b1a3584f482b97d27a15"))])
+	   (:commit . "1d714e8fb260470ada1f48dce731f6849905b78f"))])
  (detached .
 	   [(0 7)
 	    ((emacs

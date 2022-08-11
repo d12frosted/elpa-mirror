@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.4.0,
-released on 2022-07-25.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.5.0,
+released on 2022-08-10.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.5.0-dev.
+Current development target is 0.6.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote>
@@ -37,17 +37,21 @@ Table of Contents
 3. Points of entry
 .. 1. Standard note creation
 ..... 1. The `denote-prompts' option
-..... 2. Convenience commands for note creation
+..... 2. The `denote-templates' option
+..... 3. Convenience commands for note creation
 .. 2. Create note using Org capture
 .. 3. Maintain separate directories for notes
 4. Renaming files
 .. 1. Rename a single file
-.. 2. Rename file and add front matter
-.. 3. Rename multiple files at once
+.. 2. Rename multiple files at once
+.. 3. Rename a single file based on its front matter
+.. 4. Rename multiple files based on their front matter
 5. The file-naming scheme
 .. 1. Sluggified title and keywords
 .. 2. Features of the file-naming scheme for searching or filtering
 6. Front matter
+.. 1. Change the front matter format
+.. 2. Regenerate front matter
 7. Linking notes
 .. 1. Adding a single link
 .. 2. Insert links matching a regexp
@@ -79,10 +83,11 @@ Table of Contents
 .. 2. Why not rely exclusively on Org?
 .. 3. Why care about Unix tools when you use Emacs?
 .. 4. Why many small files instead of few large ones?
-.. 5. I add TODOs to my files; will the many files slow down the Org agenda?
-.. 6. I want to sort by last modified, why won’t Denote let me?
-.. 7. How do you handle the last modified case?
-.. 8. Why do I get “Search failed with status 1” when I search for backlinks?
+.. 5. Does Denote perform well at scale?
+.. 6. I add TODOs to my files; will the many files slow down the Org agenda?
+.. 7. I want to sort by last modified, why won’t Denote let me?
+.. 8. How do you handle the last modified case?
+.. 9. Why do I get “Search failed with status 1” when I search for backlinks?
 17. Acknowledgements
 18. GNU Free Documentation License
 19. Indices
@@ -191,10 +196,10 @@ Table of Contents
 ═════════════════
 
   There are five ways to write a note with Denote: invoke the `denote',
-  `denote-type', `denote-date', `denote-subdirectory' commands, or
-  leverage the `org-capture-templates' by setting up a template which
-  calls the function `denote-org-capture'.  We explain all of those in
-  the subsequent sections.
+  `denote-type', `denote-date', `denote-subdirectory', `denote-template'
+  commands, or leverage the `org-capture-templates' by setting up a
+  template which calls the function `denote-org-capture'.  We explain
+  all of those in the subsequent sections.
 
 
 3.1 Standard note creation
@@ -269,6 +274,11 @@ Table of Contents
     Without the `date' prompt, the `denote' command uses the
     `current-time'.
 
+  • `template': Prompts for a KEY among the `denote-templates'.  The
+    value of that KEY is used to populate the new note with content,
+    which is added after the front matter ([The denote-templates
+    option]).
+
   The prompts occur in the given order.
 
   If the value of this user option is nil, no prompts are used.  The
@@ -307,12 +317,82 @@ Table of Contents
 
 [Standard note creation] See section 3.1
 
+[The denote-templates option] See section 3.1.2
+
 [The file-naming scheme] See section 5
 
-[Convenience commands for note creation] See section 3.1.2
+[Convenience commands for note creation] See section 3.1.3
 
 
-3.1.2 Convenience commands for note creation
+3.1.2 The `denote-templates' option
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The user option `denote-templates' is an alist of content templates
+  for new notes.  A template is arbitrary text that Denote will add to a
+  newly created note right below the front matter.
+
+  Templates are expressed as a `(KEY . STRING)' association.
+
+  • The `KEY' is the name which identifies the template.  It is an
+    arbitrary symbol, such as `report', `memo', `statement'.
+
+  • The `STRING' is ordinary text that Denote will insert as-is.  It can
+    contain newline characters to add spacing.  Below we show some
+    concrete examples.
+
+  The user can choose a template either by invoking the command
+  `denote-template' or by changing the user option `denote-prompts' to
+  always prompt for a template when calling the `denote' command.
+
+  [The denote-prompts option].
+
+  [Convenience commands for note creation].
+
+  Templates can be written directly as one large string.  For example
+  (the `\n' character is read as a newline):
+
+  ┌────
+  │ (setq denote-templates
+  │       '((report . "* Some heading\n\n* Another heading")
+  │ 	(memo . "* Some heading
+  │ 
+  │ * Another heading
+  │ 
+  │ ")))
+  └────
+
+  Long strings may be easier to type but interpret indentation
+  literally.  Also, they do not scale well.  A better way is to use some
+  Elisp code to construct the string.  This would typically be the
+  `concat' function, which joins multiple strings into one.  The
+  following is the same as the previous example:
+
+  ┌────
+  │ (setq denote-templates
+  │       `((report . "* Some heading\n\n* Another heading")
+  │ 	(memo . ,(concat "* Some heading"
+  │ 			 "\n\n"
+  │ 			 "* Another heading"
+  │ 			 "\n\n"))))
+  └────
+
+  Notice that to evaluate a function inside of an alist we use the
+  backtick to quote the alist (NOT the straight quote) and then prepend
+  a comma to the expression that should be evaluated.  The `concat' form
+  here is not sensitive to indentation, so it is easier to adjust for
+  legibility.
+
+  DEV NOTE: We do not provide more examples at this point, though feel
+  welcome to ask for help if the information provided herein is not
+  sufficient.  We shall expand the manual accordingly.
+
+
+[The denote-prompts option] See section 3.1.1
+
+[Convenience commands for note creation] See section 3.1.3
+
+
+3.1.3 Convenience commands for note creation
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Sometimes the user needs to create a note that has different
@@ -365,10 +445,24 @@ Table of Contents
         The `denote-create-note-in-subdirectory' is a more descriptive
         alias of `denote-subdirectory'.
 
+  Create note and add a template
+        The `denote-template' command creates a new note and inserts the
+        specified template below the front matter ([The denote-templates
+        option]).  Available candidates for templates are specified in
+        the user option `denote-templates'.
+
+        This is equivalent to calling `denote' when `denote-prompts' is
+        set to `'(template title keywords)'.
+
+        The `denote-create-note-with-template' is an alias of the
+        command `denote-template', meant to help with discoverability.
+
 
 [Standard note creation] See section 3.1
 
 [The denote-prompts option] See section 3.1.1
+
+[The denote-templates option] See section 3.1.2
 
 
 3.2 Create note using Org capture
@@ -379,7 +473,6 @@ Table of Contents
 
   ┌────
   │ (with-eval-after-load 'org-capture
-  │   (require 'denote-org-capture)
   │   (add-to-list 'org-capture-templates
   │ 	       '("n" "New note (with Denote)" plain
   │ 		 (file denote-last-path)
@@ -489,21 +582,37 @@ Table of Contents
 4 Renaming files
 ════════════════
 
-  Denote’s file-naming scheme is not specific to notes or text files: it
-  is useful for all sorts of files, such as multimedia and PDFs that
-  form part of the user’s longer-term storage ([The file-naming
-  scheme]).  While Denote does not manage such files (e.g. doesn’t
-  create links to them), it already has all the mechanisms to facilitate
-  the task of renaming them.
+  Denote provides commands to rename files and update their front matter
+  where relevant.  For Denote to work, only the file name needs to be in
+  order, by following our naming conventions ([The file-naming scheme]).
+  The linking mechanism, in particular, needs just the identifier in the
+  file name ([Linking notes]).
+
+  We write front matter in notes for the user’s convenience and for
+  other tools to make use of that information (e.g. Org’s export
+  mechanism).  The renaming mechanism takes care to keep this data in
+  sync with the file name, when the user performs a change.
+
+  Renaming is useful for managing existing files created with Denote,
+  but also for converting older text files to Denote notes.
+
+  Lastly, Denote’s file-naming scheme is not specific to notes or text
+  files: it is useful for all sorts of items, such as multimedia and
+  PDFs that form part of the user’s longer-term storage.  While Denote
+  does not manage such files (e.g. doesn’t create links to them), it
+  already has all the mechanisms to facilitate the task of renaming
+  them.
 
 
 [The file-naming scheme] See section 5
 
+[Linking notes] See section 7
+
 4.1 Rename a single file
 ────────────────────────
 
-  The `denote-dired-rename-file' command renames a file and updates
-  existing front matter if appropriate.
+  The `denote-rename-file' command renames a file and updates existing
+  front matter if appropriate.
 
   If in Dired, the `FILE' to be renamed is the one at point, else the
   command prompts with minibuffer completion for a target file.
@@ -524,14 +633,10 @@ Table of Contents
   names.  For example:
 
   ┌────
-  │ Rename sample.pdf to 20220612T052900--my-sample-title__testing.pdf? (y or n)
+  │ Rename sample.txt to 20220612T052900--my-sample-title__testing.txt? (y or n)
   └────
 
-  However, if the user option `denote-dired-rename-expert' is non-nil,
-  the command conducts the renaming operation outright—no questions
-  asked!
-
-  The file type extension (e.g. `.pdf') is read from the underlying file
+  The file type extension (e.g. `.txt') is read from the underlying file
   and is preserved through the renaming process.  Files that have no
   extension are simply left without one.
 
@@ -546,50 +651,24 @@ Table of Contents
   the `FILE' and `KEYWORDS' in the front matter should not affect the
   rest of the block.
 
-  If the file doesn’t have front matter, the command skips this step
-  (see the command `denote-dired-rename-file-and-add-front-matter').
+  If the file doesn’t have front matter but is among the supported file
+  types (per `denote-file-type'), the `denote-rename-file' command adds
+  front matter at the top of it and leaves the buffer unsaved for
+  further inspection.
 
   This command is intended to (i) rename existing Denote notes while
-  updating their title and keywords in the front matter, (ii) rename
-  files that can benefit from Denote’s file-naming scheme.  The latter
-  is a convenience we provide, since we already have all the requisite
-  mechanisms in place (Denote does not and will not manage such files
-  though). ([Rename file and add front matter]).
-
-  The `denote-dired-rename-file' command is intended to (i) rename
-  existing Denote notes while updating their front matter, (ii) rename
-  files that can benefit from Denote’s file-naming scheme.  The latter
-  is a convenience we provide, since we already have all the requisite
-  mechanisms in place (though Denote does not—and will not—manage such
-  files).
+  updating their title and keywords in the front matter, (ii) convert
+  existing supported file types to Denote notes, and (ii) rename
+  non-note files (e.g. PDF) that can benefit from Denote’s file-naming
+  scheme.  The latter is a convenience we provide, since we already have
+  all the requisite mechanisms in place (though Denote does not—and will
+  not—manage such files).
 
 
 [Front matter] See section 6
 
-[Rename file and add front matter] See section 4.2
 
-
-4.2 Rename file and add front matter
-────────────────────────────────────
-
-  The command `denote-dired-rename-file-and-add-front-matter' has the
-  same modalities of interaction as the `denote-dired-rename-file'
-  command ([Rename a single file]).  The difference is that it
-  unconditionally inserts front matter at the start of a file.
-
-  This command is thus suitable for a workflow where an existing
-  writable file needs to be converted into a Denote-style note.  Whereas
-  the other command does not insert front matter if one doesn’t already
-  exist.
-
-  Front matter is added when the file type extension is among the
-  supported ones (per `denote-file-type').
-
-
-[Rename a single file] See section 4.1
-
-
-4.3 Rename multiple files at once
+4.2 Rename multiple files at once
 ─────────────────────────────────
 
   The `denote-dired-rename-marked-files' command renames marked files in
@@ -608,26 +687,118 @@ Table of Contents
   • a prompt is asked once for the `KEYWORDS' field and the input is
     applied to all file names;
 
-  • if the file is recognized as a Denote note, its front matter is
-    rewritten to include the new keywords.  A confirmation to carry out
-    this step is performed once at the outset.  Note that the affected
-    buffers are not saved.  The user can thus check them to confirm that
-    the new front matter does not cause any problems (e.g. with the
-    command `diff-buffer-with-file').  Multiple buffers can be saved
-    with `save-some-buffers' (read its doc string).
+  • if the file is recognized as a Denote note, this command adds or
+    rewrites front matter to include the new keywords.  A confirmation
+    to carry out this step is performed once at the outset.  Note that
+    the affected buffers are not saved.  The user can thus check them to
+    confirm that the new front matter does not cause any problems
+    (e.g. with the command `diff-buffer-with-file').  Multiple buffers
+    can be saved with `save-some-buffers' (read its doc string).  The
+    addition of front matter takes place only if the given file has the
+    appropriate file type extension (per the user option
+    `denote-file-type').
 
-  The command `denote-dired-rename-marked-files-and-add-front-matters'
-  is like `denote-dired-rename-marked-files' but also adds front matter.
-  The additon of front matter takes place only if the file has the
-  appropriate file type extension (per the user option
-  `denote-file-type').
 
-  Buffers are not saved.  The user can thus check them to confirm that
-  the new front matter does not cause any problems (e.g. by invoking the
-  command `diff-buffer-with-file').
+4.3 Rename a single file based on its front matter
+──────────────────────────────────────────────────
 
-  Multiple buffers can be saved with `save-some-buffers' (read its doc
-  string).
+  In the previous section, we covered the more general mechanism of the
+  command `denote-rename-file' ([Rename a single file]).  There is also
+  a way to have the same outcome by making Denote read the data in the
+  current file’s front matter and use it to construct/update the file
+  name.  The command for this is
+  `denote-rename-file-using-front-matter'.  It is only relevant for
+  files that (i) are among the supported file types, per
+  `denote-file-type', and (ii) have the requisite front matter in place.
+
+  Suppose you have an `.org' file with this front matter ([Front
+  matter]):
+
+  ┌────
+  │ #+title:      My sample note file
+  │ #+date:       [2022-08-05 Fri 13:10]
+  │ #+filetags:   :testing:
+  │ #+identifier: 20220805T131044
+  └────
+
+  Its file name reflects this information:
+
+  ┌────
+  │ 20220805T131044--my-sample-note-file__testing.org
+  └────
+
+
+  You want to change its title and keywords manually, so you modify it
+  thus:
+
+  ┌────
+  │ #+title:      My modified sample note file
+  │ #+date:       [2022-08-05 Fri 13:10]
+  │ #+filetags:   :testing:denote:emacs:
+  │ #+identifier: 20220805T131044
+  └────
+
+  The file name still shows the old title and keywords.  So after saving
+  the buffer, you invoke `denote-rename-file-using-front-matter' and it
+  updates the file name to:
+
+  ┌────
+  │ 20220805T131044--my-modified-sample-note-file__testing_denote_emacs.org
+  └────
+
+
+  The renaming is subject to a “yes or no” prompt that shows the old and
+  new names, just so the user is certain about the change.
+
+  The identifier of the file, if any, is never modified even if it is
+  edited in the front matter: Denote considers the file name to be the
+  source of truth in this case, to avoid potential breakage with typos
+  and the like.
+
+
+[Rename a single file] See section 4.1
+
+[Front matter] See section 6
+
+
+4.4 Rename multiple files based on their front matter
+─────────────────────────────────────────────────────
+
+  As already noted, Denote can rename a file based on the data in its
+  front matter ([Rename a single file based on its front matter]).  The
+  command `denote-dired-rename-marked-files-using-front-matter' extends
+  this principle to a batch operation which applies to all marked files
+  in Dired.
+
+  Marked files must count as notes for the purposes of Denote, which
+  means that they at least have an identifier in their file name and use
+  a supported file type, per `denote-file-type'.  Files that do not meet
+  this criterion are ignored.
+
+  The operation does the following:
+
+  • the title in the front matter becomes the `TITLE' component of the
+    file name ([The file-naming scheme]);
+
+  • the keywords in the front matter are used for the `KEYWORDS'
+    component of the file name and are processed accordingly, if needed;
+
+  • the identifier remains unchanged in the file name even if it is
+    modified in the front matter (this is done to avoid breakage caused
+    by typos and the like).
+
+  NOTE that files must be saved, because Denote reads from the
+  underlying file, not a modified buffer (this is done to avoid
+  potential mistakes).  The return value of a modified buffer is the one
+  prior to the modification, i.e. the one already written on disk.
+
+  This command is useful for synchronizing multiple file names with
+  their respective front matter.
+
+
+[Rename a single file based on its front matter] See section 4.3
+
+[The file-naming scheme] See section 5
 
 
 5 The file-naming scheme
@@ -677,7 +848,7 @@ Table of Contents
   (`org-mode') though the user option `denote-file-type' provides
   support for Markdown with YAML or TOML variants (`.md' which runs
   `markdown-mode') and plain text (`.txt' via `text-mode').  Consult its
-  doc string for the minutia.  While files end in the `.org' extension
+  doc string for the minutiae.  While files end in the `.org' extension
   by default, the Denote code base does not actually depend on org.el
   and/or its accoutrements.
 
@@ -784,7 +955,7 @@ section 5.2
   ┌────
   │ #+title:      This is a sample note
   │ #+date:       [2022-06-30 Thu 16:09]
-  │ #+filetags:   denote  testing
+  │ #+filetags:   :denote:testing:
   │ #+identifier: 20220630T160934
   └────
 
@@ -795,7 +966,7 @@ section 5.2
   │ ---
   │ title:      "This is a sample note"
   │ date:       2022-06-30T16:09:58+03:00
-  │ tags:       denote  testing
+  │ tags:       ["denote", "testing"]
   │ identifier: "20220630T160958"
   │ ---
   └────
@@ -838,6 +1009,127 @@ section 5.2
   If the value is a string, ignore the above and use it instead.  The
   string must include format specifiers for the date.  These are
   described in the doc string of `format-time-string'..
+
+
+6.1 Change the front matter format
+──────────────────────────────────
+
+  Per Denote’s design principles, the code is hackable.  All front
+  matter is stored in variables that are intended for public use.  We do
+  not declare those as “user options” because (i) they expect the user
+  to have some degree of knowledge in Emacs Lisp and (ii) implement
+  custom code.
+
+  [ NOTE for tinkerers: code intended for internal use includes double
+    hyphens in its symbol.  “Internal use” means that it can be changed
+    without warning and with no further reference in the change log.  Do
+    not use any of it without understanding the consequences. ]
+
+  The variables which hold the front matter format are:
+
+  • `denote-org-front-matter'
+
+  • `denote-text-front-matter'
+
+  • `denote-toml-front-matter'
+
+  • `denote-yaml-front-matter'
+
+  These variables hold a string with specifiers that are used by the
+  `format' function.  The formatting operation passes four arguments
+  (five in the case of `denote-text-front-matter' as noted in its doc
+  string) which include the values of the given entries.  The doc string
+  of `denote-org-front-matter' describes the technicalities:
+
+        The order of the arguments is TITLE, DATE, KEYWORDS, ID.
+        If you are an advanced user who wants to edit this
+        variable to affect how front matter is produced, consider
+        using something like %2$s to control where Nth argument is
+        placed.
+
+        Make sure to:
+
+        1. Not use empty lines inside the front matter block.
+
+        2. Insert at least one empty line after the front matter
+           block and do not use any empty line before it.
+
+        These help with consistency and might prove useful if we
+        ever need to operate on the front matter as a whole.
+
+  With those granted, below are some examples.  The approach is the same
+  for all variables.
+
+  ┌────
+  │ ;; Like the default, but upcase the entries
+  │ (setq denote-org-front-matter
+  │   "#+TITLE:      %s
+  │ #+DATE:       %s
+  │ #+FILETAGS:   %s
+  │ #+IDENTIFIER: %s
+  │ \n")
+  │ 
+  │ ;; Change the order (notice the %N$s notation)
+  │ (setq denote-org-front-matter
+  │   "#+title:      %1$s
+  │ #+filetags:   %3$s
+  │ #+date:       %2$s
+  │ #+identifier: %4$s
+  │ \n")
+  │ 
+  │ ;; Remove the date
+  │ (setq denote-org-front-matter
+  │   "#+title:      %1$s
+  │ #+filetags:   %3$s
+  │ #+identifier: %4$s
+  │ \n")
+  │ 
+  │ ;; Remove the date and the identifier
+  │ (setq denote-org-front-matter
+  │   "#+title:      %1$s
+  │ #+filetags:   %3$s
+  │ \n")
+  └────
+
+  Note that `setq' has a global effect: it affects the creation of all
+  new notes.  Depending on the workflow, it may be preferrable to have a
+  custom command which `let' binds the different format.  We shall not
+  provide examples at this point as this is a more advanced feature and
+  we are not yet sure what the user’s needs are.  Please provide
+  feedback and we shall act accordingly.
+
+
+6.2 Regenerate front matter
+───────────────────────────
+
+  Sometimes the user needs to produce new front matter for an existing
+  note.  Perhaps because they accidentally deleted a line and could not
+  undo the operation.  The command `denote-add-front-matter' can be used
+  for this very purpose.
+
+  In interactive use, `denote-add-front-matter' must be invoked from a
+  buffer that visits a Denote note.  It prompts for a title and then for
+  keywords.  These are the standard prompts we already use for note
+  creation, so the keywords’ prompt allows minibuffer completion and the
+  input of multiple entries, each separated by a comma ([Points of
+  entry]).
+
+  The newly created front matter is added to the top of the file.
+
+  This command does not rename the file (e.g. to update the keywords).
+  To rename a file by reading its front matter as input, the user can
+  rely on `denote-rename-file-using-front-matter' ([Renaming files]).
+
+  Note that `denote-add-front-matter' is useful only for existing Denote
+  notes.  If the user needs to convert a generic text file to a Denote
+  note, they can use one of the command which first rename the file to
+  make it comply with our file-naming scheme and then add the relevant
+  front matter.
+
+
+[Points of entry] See section 3
+
+[Renaming files] See section 4
 
 
 7 Linking notes
@@ -885,6 +1177,17 @@ section 5.2
 
   Links are created only for files which qualify as a “note” for our
   purposes ([Linking notes]).
+
+  Links are styled with the `denote-faces-link' face, which looks
+  exactly like an ordinary link by default.  This is just a convenience
+  for the user/theme in case they want `denote:' links to remain
+  distinct from other links.
+
+  In Org files, broken links get the `denote-faces-broken-link' if the
+  linked identifier does not resolve to a file path with a note.  The
+  ability to use distinct faces for such a scenario is a feature of Org,
+  which is not available in other supported file types that use Emacs’
+  generic button mechanism.
 
 
 [Linking notes] See section 7
@@ -1026,6 +1329,12 @@ section 5.2
   │ 	(window-width . 0.3)))
   └────
 
+  The backlinks’ buffer runs the major-mode `denote-backlink-mode',
+  which is derived from `special-mode'.  It binds keys to move between
+  links with `n' (next) and `p' (previous).  These are stored in the
+  `denote-backlink-mode-map' (use `M-x describe-mode' (`C-h m') in an
+  unfamiliar buffer to learn more about it).
+
   Note that the backlinking facility uses Emacs’ built-in Xref
   infrastructure.  On some operating systems, the user may need to add
   certain executables to the relevant environment variable.
@@ -1035,7 +1344,7 @@ section 5.2
 
 
 [Why do I get “Search failed with status 1” when I search for
-backlinks?] See section 16.8
+backlinks?] See section 16.9
 
 
 7.5 Writing metanotes
@@ -1123,7 +1432,6 @@ backlinks?] See section 16.8
   directories, which probably is not needed:
 
   ┌────
-  │ (require 'denote-dired)
   │ (add-hook 'dired-mode-hook #'denote-dired-mode)
   └────
 
@@ -1131,8 +1439,6 @@ backlinks?] See section 16.8
   up the function `denote-dired-mode-in-directories':
 
   ┌────
-  │ (require 'denote-dired)
-  │ 
   │ ;; We use different ways to specify a path for demo purposes.
   │ (setq denote-dired-directories
   │       (list denote-directory
@@ -1142,7 +1448,7 @@ backlinks?] See section 16.8
   │ (add-hook 'dired-mode-hook #'denote-dired-mode-in-directories)
   └────
 
-  The faces we define are:
+  The faces we define for this purpose are:
 
   ⁃ `denote-faces-date'
   ⁃ `denote-faces-delimiter'
@@ -1449,7 +1755,7 @@ section 5.2
   For example:
 
   ┌────
-  │ (setq consult-notes-data-dirs
+  │ (setq consult-notes-sources
   │       `(("Notes"  ?n ,denote-directory)
   │ 	("Books"  ?b "~/Documents/books")))
   └────
@@ -1457,6 +1763,11 @@ section 5.2
   With the above, `M-x consult-notes' will list the files in those two
   directories.  If you type `n' and space, it narrows the list to just
   the notes, while `b' does the same for books.
+
+  To search all your notes with grep (or ripgrep if installed – see
+  `consult-notes-use-rg' variable) use the command
+  `consult-notes-search-in-all-notes'. This will employ grep/ripgrep for
+  searching terms in all the directories set in `consult-notes-sources'.
 
   Note that `consult-notes' is in its early stages of development.
   Expect improvements in the near future (written on 2022-06-22 16:48
@@ -1466,11 +1777,11 @@ section 5.2
 10.7 Treat your notes as a project
 ──────────────────────────────────
 
-  Emacs a built-in library for treating a directory tree as a “project”.
-  This means that the contents of this tree are seen as part of the same
-  set, so commands like `project-switch-to-buffer' (`C-x p b' by
-  default) will only consider buffers in the current project (e.g. three
-  notes that are currently being visited).
+  Emacs has a built-in library for treating a directory tree as a
+  “project”.  This means that the contents of this tree are seen as part
+  of the same set, so commands like `project-switch-to-buffer' (`C-x p
+  b' by default) will only consider buffers in the current project
+  (e.g. three notes that are currently being visited).
 
   Normally, a “project” is a directory tree whose root is under version
   control.  For our purposes, all you need is to navigate to the
@@ -1565,16 +1876,15 @@ section 5.2
   │ (setq denote-file-type nil) ; Org is the default, set others here
   │ (setq denote-prompts '(title keywords))
   │ 
+  │ ;; Read this manual for how to specify `denote-templates'.  We do not
+  │ ;; include an example here to avoid potential confusion.
+  │ 
+  │ 
   │ ;; We allow multi-word keywords by default.  The author's personal
   │ ;; preference is for single-word keywords for a more rigid workflow.
   │ (setq denote-allow-multi-word-keywords t)
   │ 
   │ (setq denote-date-format nil) ; read doc string
-  │ 
-  │ ;; You will not need to `require' all those individually once the
-  │ ;; package is available.
-  │ (require 'denote-retrieve)
-  │ (require 'denote-link)
   │ 
   │ ;; By default, we fontify backlinks in their bespoke buffer.
   │ (setq denote-link-fontify-backlinks t)
@@ -1585,9 +1895,6 @@ section 5.2
   │ ;; If you use Markdown or plain text files (Org renders links as buttons
   │ ;; right away)
   │ (add-hook 'find-file-hook #'denote-link-buttonize-buffer)
-  │ 
-  │ (require 'denote-dired)
-  │ (setq denote-dired-rename-expert nil)
   │ 
   │ ;; We use different ways to specify a path for demo purposes.
   │ (setq denote-dired-directories
@@ -1619,6 +1926,7 @@ section 5.2
   │   (define-key map (kbd "C-c n N") #'denote-type)
   │   (define-key map (kbd "C-c n d") #'denote-date)
   │   (define-key map (kbd "C-c n s") #'denote-subdirectory)
+  │   (define-key map (kbd "C-c n t") #'denote-template)
   │   ;; If you intend to use Denote with a variety of file types, it is
   │   ;; easier to bind the link-related commands to the `global-map', as
   │   ;; shown here.  Otherwise follow the same pattern for `org-mode-map',
@@ -1627,20 +1935,18 @@ section 5.2
   │   (define-key map (kbd "C-c n I") #'denote-link-add-links)
   │   (define-key map (kbd "C-c n l") #'denote-link-find-file) ; "list" links
   │   (define-key map (kbd "C-c n b") #'denote-link-backlinks)
-  │   ;; Note that `denote-dired-rename-file' can work from any context, not
-  │   ;; just Dired bufffers.  That is why we bind it here to the
-  │   ;; `global-map'.
-  │   (define-key map (kbd "C-c n r") #'denote-dired-rename-file)
-  │   (define-key map (kbd "C-c n R") #'denote-dired-rename-file-and-add-front-matter))
+  │   ;; Note that `denote-rename-file' can work from any context, not just
+  │   ;; Dired bufffers.  That is why we bind it here to the `global-map'.
+  │   (define-key map (kbd "C-c n r") #'denote-rename-file)
+  │   (define-key map (kbd "C-c n R") #'denote-rename-file-using-front-matter))
   │ 
   │ ;; Key bindings specifically for Dired.
   │ (let ((map dired-mode-map))
   │   (define-key map (kbd "C-c C-d C-i") #'denote-link-dired-marked-notes)
   │   (define-key map (kbd "C-c C-d C-r") #'denote-dired-rename-marked-files)
-  │   (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-and-add-front-matters))
+  │   (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-using-front-matter))
   │ 
   │ (with-eval-after-load 'org-capture
-  │   (require 'denote-org-capture)
   │   (setq denote-org-capture-specifiers "%l\n%i\n%?")
   │   (add-to-list 'org-capture-templates
   │ 	       '("n" "New note (with denote.el)" plain
@@ -2011,23 +2317,41 @@ section 5.2
   about using the right tool for the job).
 
 
-16.5 I add TODOs to my files; will the many files slow down the Org agenda?
+16.5 Does Denote perform well at scale?
+───────────────────────────────────────
+
+  Denote does not do anything fancy and has no special requirements: it
+  uses standard tools to accomplish ordinary tasks.  If Emacs can cope
+  with lots of files, then that is all you need to know: Denote will
+  work.
+
+  To put this to the test, Peter Prevos is running simulations with R
+  that generate large volumes of notes.  You can read the technicalities
+  here: <https://lucidmanager.org/productivity/testing-denote-package/>.
+  Excerpt:
+
+        Using this code I generated ten thousands notes and used
+        this to test the Denote package to see it if works at a
+        large scale. This tests shows that Prot’s approach is
+        perfectly capable of working with thousands of notes.
+
+  Of course, we are always prepared to make refinements to the code,
+  where necessary, without compromising on the project’s principles.
+
+
+16.6 I add TODOs to my files; will the many files slow down the Org agenda?
 ───────────────────────────────────────────────────────────────────────────
 
   I have not tested it, but assume that yes, many files will slow down
-  the agenda.  Consider looking into one of Denote’s alternatives, with
-  `org-roam' being the obvious choice ([Alternatives to Denote]).
+  the agenda due to how that works.
 
-  Or, if you want my opinion, decouple your longer-term storage from
-  your ephemeral to-do list: Denote (and others) can be used for the
-  former, while you let standard Org work splendidly for the latter—that
-  is what I do, anyway.
-
-
-[Alternatives to Denote] See section 15
+  If you want my opinion though, decouple your knowledge base from your
+  ephemeral to-do list: Denote (and others) can be used for the former,
+  while you let standard Org work splendidly for the latter—that is what
+  I do, anyway.
 
 
-16.6 I want to sort by last modified, why won’t Denote let me?
+16.7 I want to sort by last modified, why won’t Denote let me?
 ──────────────────────────────────────────────────────────────
 
   Denote does not sort files and will not reinvent tools that handle
@@ -2043,7 +2367,7 @@ section 5.2
   preference.
 
 
-16.7 How do you handle the last modified case?
+16.8 How do you handle the last modified case?
 ──────────────────────────────────────────────
 
   Denote does not insert any meta data or heading pertaining to edits in
@@ -2069,7 +2393,7 @@ section 5.2
   software handle the tracking of changes.
 
 
-16.8 Why do I get “Search failed with status 1” when I search for backlinks?
+16.9 Why do I get “Search failed with status 1” when I search for backlinks?
 ────────────────────────────────────────────────────────────────────────────
 
   Denote uses [Emacs’ Xref] to find backlinks.  Xref requires `xargs'
@@ -2099,18 +2423,23 @@ section 5.2
         Protesilaos Stavrou.
 
   Contributions to code or the manual
-        Benjamin Kästner, Damien Cassou, Jack Baty, Jean-Philippe Gagné
-        Guay, Kaushal Modi, Kyle Meyer, Peter Prevos, Philip Kaludercic,
-        Stefan Monnier.
+        Benjamin Kästner, Colin McLear, Damien Cassou, Jack Baty,
+        Jean-Philippe Gagné Guay, Jürgen Hötzel, Kaushal Modi, Kyle
+        Meyer, Peter Prevos, Philip Kaludercic, Quiliro Ordóñez, Stefan
+        Monnier.
 
   Ideas and/or user feedback
         Abin Simon, Alan Schmitt, Alfredo Borrás, Benjamin Kästner,
-        Colin McLear, Damien Cassou, Frank Ehmsen, Jack Baty, Kaushal
-        Modi, M. Hadi Timachi, Peter Prevos, Shreyas Ragavan, Summer
-        Emacs, Sven Seebeck, Taoufik, Ypot, hpgisler, pRot0ta1p.
+        Colin McLear, Damien Cassou, Frank Ehmsen, Hanspeter Gisler,
+        Jack Baty, Kaushal Modi, M. Hadi Timachi, Paul van Gelder, Peter
+        Prevos, Shreyas Ragavan, Summer Emacs, Sven Seebeck, Taoufik,
+        Ypot, hpgisler, pRot0ta1p.
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.
+
+  Special thanks to Jean-Philippe Gagné Guay for the numerous
+  contributions to the code base.
 
 
 18 GNU Free Documentation License
