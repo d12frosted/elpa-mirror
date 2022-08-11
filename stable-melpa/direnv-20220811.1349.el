@@ -2,8 +2,8 @@
 
 ;; Author: wouter bolsterlee <wouter@bolsterl.ee>
 ;; Version: 2.2.0
-;; Package-Version: 20220513.656
-;; Package-Commit: 416ed17efa93503b37eba196a14f967e0899bce4
+;; Package-Version: 20220811.1349
+;; Package-Commit: 0cbcbcfc12b867779dd19006cf5240dc2ca67ce0
 ;; Package-Requires: ((emacs "25.1") (dash "2.12.0"))
 ;; Keywords: direnv, environment, processes, unix, tools
 ;; URL: https://github.com/wbolster/emacs-direnv
@@ -294,13 +294,26 @@ visited (local) file."
       (direnv--enable)
     (direnv--disable)))
 
+(defvar direnv-envrc-stdlib-functions
+  '("MANPATH_add" "PATH_add" "PATH_rm" "direnv_apply_dump" "direnv_layout_dir"
+    "direnv_load" "direnv_version" "dotenv" "dotenv_if_exists"
+    "env_vars_required" "expand_path" "fetchurl" "find_up" "has" "join_args"
+    "layout" "load_prefix" "log_error" "log_status" "on_git_branch" "path_add"
+    "path_rm" "rvm" "semver_search" "source_env" "source_env_if_exists"
+    "source_up" "source_up_if_exists" "source_url" "strict_env" "unstrict_env"
+    "use" "user_rel_path" "watch_dir" "watch_file")
+  "direnv stdlib functions.")
+
 ;;;###autoload
 (define-derived-mode direnv-envrc-mode
   sh-mode "envrc"
   "Major mode for .envrc files as used by direnv.
 
 Since .envrc files are shell scripts, this mode inherits from ‘sh-mode’.
-\\{direnv-envrc-mode-map}")
+\\{direnv-envrc-mode-map}"
+  (font-lock-add-keywords
+   nil `((,(regexp-opt direnv-envrc-stdlib-functions 'symbols)
+          (0 font-lock-keyword-face)))))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.envrc\\'" . direnv-envrc-mode))

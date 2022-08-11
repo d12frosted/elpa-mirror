@@ -4,8 +4,8 @@
 
 ;; Author: Johannes Maier <johannes.maier@mailbox.org>
 ;; Version: 0.1
-;; Package-Version: 20220724.2023
-;; Package-Commit: c5ef0baf1d2e95bc613e99700c38a1227cabe187
+;; Package-Version: 20220811.1207
+;; Package-Commit: 109c63ee8879130a76a9eaf9a4a5086d1e48a652
 ;; Homepage: https://github.com/kenranunderscore/emacs-naga-theme
 ;; Keywords: faces themes
 ;; Package-Requires: ((emacs "24.1"))
@@ -102,6 +102,7 @@ The default style is green text in a green box."
       (completions-common-part (:inherit 'orderless-match-face-0))
       (error (:foreground ,red))
       (compilation-mode-line-run (:foreground ,yellow))
+      (cursor (:background ,red))
 
       ;; orderless
       (orderless-match-face-0 (:foreground ,purple))

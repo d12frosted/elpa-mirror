@@ -4,8 +4,8 @@
 
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; URL: https://github.com/astoff/buffer-env
-;; Package-Version: 20220728.1835
-;; Package-Commit: 7c176d043445ea94fe924a715158c25b91ec4776
+;; Package-Version: 20220811.1159
+;; Package-Commit: 9ccfbd07c4b2e2af38fe315ce7e3d905298d2fdd
 ;; Keywords: processes, tools
 ;; Package-Requires: ((emacs "27.1") (compat "28.1"))
 ;; Version: 0.4
@@ -70,7 +70,7 @@
     ("guix.scm" . "guix shell -D -f \"$0\" -- env -0")
     ("*" . ">&2 . \"$0\" && env -0"))
   "Alist of commands used to produce environment variables.
-For each entry, the car is glob pattern and the cdr is a shell
+For each entry, the car is a glob pattern and the cdr is a shell
 command.  The command specifies how to execute a script and
 collect the environment variables it defines.
 
@@ -149,19 +149,15 @@ Files marked as safe to execute are permanently stored in
 
 (defun buffer-env--locate-script ()
   "Locate a dominating file named `buffer-env-script-name'."
-  (cond
-   ((file-remote-p default-directory) nil)
-   ((listp buffer-env-script-name)
+  (unless (file-remote-p default-directory)
     (seq-some
-     (lambda (script-name)
-       (and-let* ((dir (locate-dominating-file default-directory
-					       script-name)))
-	 (expand-file-name script-name dir)))
-     buffer-env-script-name))
-   ((stringp buffer-env-script-name)
-    (when-let* ((dir (locate-dominating-file default-directory
-					     buffer-env-script-name)))
-      (expand-file-name buffer-env-script-name dir)))))
+     (lambda (name)
+       (when-let ((dir (locate-dominating-file default-directory
+					       name)))
+	 (expand-file-name name dir)))
+     (if (stringp buffer-env-script-name)
+         (list buffer-env-script-name)
+       buffer-env-script-name))))
 
 ;;;###autoload
 (defun buffer-env-update (&optional file)
