@@ -9,11 +9,11 @@
 ;;         Kyle Hargraves <pd@krh.me>
 ;; Maintainer: Dmitry Gutov <dgutov@yandex.ru>
 ;; URL: http://github.com/nonsequitur/inf-ruby
-;; Package-Version: 20220811.111
-;; Package-Commit: f9c856bd5496cd1b9c8c1f9e09a4331c88c5917e
+;; Package-Version: 20220811.949
+;; Package-Commit: eb7bf95d5b03bdb9b28647c89ea0a73e35fe0ad1
 ;; Created: 8 April 1998
 ;; Keywords: languages ruby
-;; Version: 2.6.1
+;; Version: 2.6.2
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software: you can redistribute it and/or modify

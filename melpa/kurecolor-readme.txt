@@ -4,20 +4,19 @@ Emacs themes, etc.
 [![MELPA](https://stable.melpa.org/packages/kurecolor-badge.svg)](https://stable.melpa.org/#/kurecolor)
 [![MELPA](https://melpa.org/packages/kurecolor-badge.svg)](https://melpa.org/#/kurecolor)
 
-It's recommend you use kurekolor commands in conjunction with rainbow-mode, for
-instant feedback on color changes.
+When using kurecolor commands, we suggest using rainbow-mode for instant feedback on color changes.
 
 ## Installing
 
-Kurecolor is on MELPA, you can install using `package.el`
+Kurecolor is on MELPA, you can install using `package.el'
 
     M-x package-install kurecolor
 
 ### Tests
 
 This package has a suite of unit tests.  To run them load both
-kurecolor and kurecolor-test, and then do `M-x ert` (accept
-`default`).
+kurecolor and kurecolor-test, and then do `M-x ert' (accept
+`default').
 
 ## Ephemera
 
