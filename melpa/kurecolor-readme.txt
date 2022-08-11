@@ -1,6 +1,9 @@
 A collection of tools aimed at those working with color, useful for CSS,
 Emacs themes, etc.
 
+[![MELPA](https://stable.melpa.org/packages/kurecolor-badge.svg)](https://stable.melpa.org/#/kurecolor)
+[![MELPA](https://melpa.org/packages/kurecolor-badge.svg)](https://melpa.org/#/kurecolor)
+
 It's recommend you use kurekolor commands in conjunction with rainbow-mode, for
 instant feedback on color changes.
 
@@ -32,6 +35,3 @@ Since the question comes up occassionally, the mode-line hack used
 in the presentation is based on original work by Armit Patel. I
 gisted this a while back, you can get it from.
 https://gist.github.com/jasonm23/8554119
-
-
-; Licence: MIT

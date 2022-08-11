@@ -4,8 +4,8 @@
 
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; Keywords: help
-;; Package-Version: 20220729.923
-;; Package-Commit: 60099be5fc5c90d5adc2795b3bfacb492a0adb88
+;; Package-Version: 20220811.703
+;; Package-Commit: 61ce83b79dc64e2f99d7f016a09b97e14b331459
 ;; URL: https://github.com/astoff/devdocs.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.5
@@ -89,6 +89,10 @@ name and a count."
 (defcustom devdocs-fontify-code-blocks t
   "Whether to fontify code snippets inside pre tags.
 Fontification is done using the `org-src' library, which see."
+  :type 'boolean)
+
+(defcustom devdocs-window-select nil
+  "Whether to select the DevDocs window for viewing."
   :type 'boolean)
 
 (defface devdocs-code-block '((t nil))
@@ -576,10 +580,14 @@ If INITIAL-INPUT is not nil, insert it into the minibuffer."
   (let* ((entry (devdocs--read-entry "Go to documentation: "
                                      (devdocs--relevant-docs ask-docs)
                                      initial-input))
-         (buffer (devdocs--render entry)))
-    (with-selected-window (display-buffer buffer)
-      (devdocs-goto-target)
-      (recenter 0))))
+         (buffer (devdocs--render entry))
+         (window (display-buffer buffer)))
+    (when window
+      (with-selected-window window
+        (devdocs-goto-target)
+        (recenter 0))
+      (when devdocs-window-select
+        (select-window window)))))
 
 ;;;###autoload
 (defun devdocs-peruse (doc)

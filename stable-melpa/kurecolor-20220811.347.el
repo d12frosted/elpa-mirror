@@ -3,14 +3,19 @@
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;
 ;;; Version: 1.3.2
-;; Package-Version: 20220808.1456
-;; Package-Commit: e4f4ee32f54c0c71551dbe5e4419d2c2727130bf
+;; Package-Version: 20220811.347
+;; Package-Commit: c806a6e868c7dbbd9f8a22304796059eda43a154
 ;;
 ;;; Package-Requires: ((emacs "28.1") (s "1.12"))
+;;
+;;; Licence: MIT
 ;;
 ;;; Commentary:
 ;; A collection of tools aimed at those working with color, useful for CSS,
 ;; Emacs themes, etc.
+;;
+;;[![MELPA](https://stable.melpa.org/packages/kurecolor-badge.svg)](https://stable.melpa.org/#/kurecolor)
+;;[![MELPA](https://melpa.org/packages/kurecolor-badge.svg)](https://melpa.org/#/kurecolor)
 ;;
 ;; It's recommend you use kurekolor commands in conjunction with rainbow-mode, for
 ;; instant feedback on color changes.
@@ -44,9 +49,6 @@
 ;; gisted this a while back, you can get it from.
 ;; https://gist.github.com/jasonm23/8554119
 ;;
-
-;;; Licence: MIT
-
 ;;; Code:
 
 (require 's)

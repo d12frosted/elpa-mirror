@@ -3,7 +3,7 @@
 ;; Author:  <m.sakurai at kiwanami.net>
 ;; Version: 0.0.1
 ;; Package-Version: 20170521.1935
-;; Package-Commit: ef50c6f0269a6fd9ce742d0a87647d60a0ef850f
+;; Package-Commit: 5f1f83b1689d4954d62e794d9a89c57709099c27
 ;; Package-Requires: ((tern "0.0.1") (auto-complete "1.4") (cl-lib "0.5") (emacs "24"))
 
 ;;; Commentary:

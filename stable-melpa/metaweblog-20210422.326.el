@@ -8,7 +8,7 @@
 ;; Maintainer: Grant Rettke <grant@wisdomandwonder.com>
 ;; Version: 1.1.1
 ;; Package-Version: 20210422.326
-;; Package-Commit: 68695ed0e012379556d57f9564ac5ad8cd68fbb8
+;; Package-Commit: 6ee1b59e0a83b6a855f583743287e801cbdc1e09
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: comm
 ;; Homepage: https://github.com/org2blog/org2blog

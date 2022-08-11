@@ -4,3 +4,4 @@
 - Download unused themes automatically with package.el.
 - Generate interactive function automatically.
 - Automatically change themes depending on a time schedule created by users.
+- Distinguish light and dark theme, and switch themes based on system appearance.

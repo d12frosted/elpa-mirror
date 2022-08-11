@@ -1,5 +1,5 @@
 (org2blog .
-	  [(20210929 17)
+	  [(20220811 51)
 	   ((htmlize
 	     (1 54))
 	    (hydra
@@ -9,7 +9,7 @@
 	    (metaweblog
 	     (1 1 1)))
 	   "Blog from Org mode to WordPress" tar
-	   ((:commit . "2fc07af405552ef3fc00e218ad48ff24840243f6")
+	   ((:commit . "6ee1b59e0a83b6a855f583743287e801cbdc1e09")
 	    (:authors
 	     ("Puneeth Chaganti" . "punchagan+org2blog@gmail.com"))
 	    (:maintainer "Grant Rettke" . "grant@wisdomandwonder.com")
