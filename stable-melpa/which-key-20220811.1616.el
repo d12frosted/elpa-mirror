@@ -5,8 +5,8 @@
 ;; Author: Justin Burkett <justin@burkett.cc>
 ;; Maintainer: Justin Burkett <justin@burkett.cc>
 ;; URL: https://github.com/justbur/emacs-which-key
-;; Package-Version: 20220811.1324
-;; Package-Commit: 23fc54eb80890b28a72071f72437880c5bfbf94b
+;; Package-Version: 20220811.1616
+;; Package-Commit: 8093644032854b1cdf3245ce4e3c7b6673f741bf
 ;; Version: 3.6.0
 ;; Keywords:
 ;; Package-Requires: ((emacs "24.4"))
@@ -91,9 +91,16 @@ which-key popup."
 
 (defcustom which-key-max-description-length 27
   "Truncate the description of keys to this length.
-Also adds \"..\". If nil, disable any truncation."
+Either nil (no truncation), an integer (truncate after that many
+characters), a float (use that fraction of the available width),
+or a function, which takes one argument, the available width in
+characters, and whose return value has one of the types mentioned
+before.  Truncation is done using `which-key-ellipsis'."
   :group 'which-key
-  :type '(choice integer (const :tag "Disable truncation" nil)))
+  :type '(choice (const :tag "Disable truncation" nil)
+		 (integer :tag "Width in characters")
+		 (float :tag "Use fraction of available width")
+		 function))
 
 (defcustom which-key-min-column-description-width 0
   "Every column should at least have this width."
@@ -137,12 +144,12 @@ the default is \" : \"."
 
 (defcustom which-key-ellipsis
   (if which-key-dont-use-unicode ".." "…")
-  "Ellipsis to use when truncating. Default is \"…\", unless
-`which-key-dont-use-unicode' is non nil, in which case
-the default is \"..\"."
+  "Ellipsis to use when truncating.
+Default is \"…\", unless `which-key-dont-use-unicode' is non nil,
+in which case the default is \"..\".  This can also be the empty
+string to truncate without using any ellipsis."
   :group 'which-key
   :type 'string)
-
 
 (defcustom which-key-prefix-prefix "+"
   "String to insert in front of prefix commands (i.e., commands
@@ -1589,13 +1596,23 @@ If KEY contains any \"special keys\" defined in
                                (which-key--string-width key-w-face))))
         key-w-face))))
 
-(defsubst which-key--truncate-description (desc)
+(defsubst which-key--truncate-description (desc avl-width)
   "Truncate DESC description to `which-key-max-description-length'."
-  (let* ((last-face (get-text-property (1- (length desc)) 'face desc))
-         (dots (which-key--propertize which-key-ellipsis 'face last-face)))
-    (if (and which-key-max-description-length
-             (> (length desc) which-key-max-description-length))
-        (concat (substring desc 0 which-key-max-description-length) dots)
+  (let* ((max which-key-max-description-length)
+	 (max (cl-etypecase max
+		(null nil)
+		(integer max)
+		(float (truncate (* max avl-width)))
+		(function (let ((val (funcall max avl-width)))
+			    (if (floatp val) (truncate val) val))))))
+    (if (and max (> (length desc) max))
+        (let ((dots (and (not (equal which-key-ellipsis ""))
+			 (which-key--propertize
+			  which-key-ellipsis 'face
+			  (get-text-property (1- (length desc)) 'face desc)))))
+	  (if dots
+              (concat (substring desc 0 (- max (length dots))) dots)
+	    (substring desc 0 max)))
       desc)))
 
 (defun which-key--highlight-face (description)
@@ -1698,6 +1715,7 @@ alists. Returns a list (key separator description)."
          (which-key--propertize which-key-separator
                                 'face 'which-key-separator-face))
         (local-map (current-local-map))
+	(avl-width (cdr (which-key--popup-max-dimensions)))
         new-list)
     (dolist (key-binding unformatted)
       (let* ((keys (car key-binding))
@@ -1712,7 +1730,8 @@ alists. Returns a list (key separator description)."
         (when final-desc
           (setq final-desc
                 (which-key--truncate-description
-                 (which-key--maybe-add-docstring final-desc orig-desc))))
+                 (which-key--maybe-add-docstring final-desc orig-desc)
+		 avl-width)))
         (when (consp key-binding)
           (push
            (list (which-key--propertize-key
@@ -1867,22 +1886,24 @@ element in each list element of KEYS."
    (lambda (x y) (max x (which-key--string-width (nth index y))))
    keys :initial-value (if initial-value initial-value 0)))
 
-(defun which-key--pad-column (col-keys)
+(defun which-key--pad-column (col-keys avl-width)
   "Take a column of (key separator description) COL-KEYS,
 calculate the max width in the column and pad all cells out to
 that width."
   (let* ((col-key-width  (+ which-key-add-column-padding
                             (which-key--max-len col-keys 0)))
          (col-sep-width  (which-key--max-len col-keys 1))
-         (col-desc-width (which-key--max-len
-                          col-keys 2 which-key-min-column-description-width))
-         (col-width      (+ 1 col-key-width col-sep-width col-desc-width)))
+	 (avl-width      (- avl-width col-key-width col-sep-width))
+         (col-desc-width (min avl-width
+			      (which-key--max-len
+                               col-keys 2
+			       which-key-min-column-description-width)))
+         (col-width      (+ col-key-width col-sep-width col-desc-width))
+	 (col-format     (concat "%" (int-to-string col-key-width)
+                                 "s%s%-" (int-to-string col-desc-width) "s")))
     (cons col-width
-          (mapcar (lambda (k)
-                    (format (concat "%" (int-to-string col-key-width)
-                                    "s%s%-" (int-to-string col-desc-width) "s")
-                            (nth 0 k) (nth 1 k) (nth 2 k)))
-                  col-keys))))
+          (mapcar (lambda (k) (apply #'format col-format k))
+		  col-keys))))
 
 (defun which-key--partition-list (n list)
   "Partition LIST into N-sized sublists."
@@ -1896,8 +1917,8 @@ that width."
   "Convert list of KEYS to columns based on dimensions AVL-LINES and AVL-WIDTH.
 Returns a `which-key--pages' object that holds the page strings,
 as well as metadata."
-  (let ((cols-w-widths (mapcar #'which-key--pad-column
-                               (which-key--partition-list avl-lines keys)))
+  (let ((cols-w-widths (mapcar (lambda (c) (which-key--pad-column c avl-width))
+			       (which-key--partition-list avl-lines keys)))
         (page-width 0) (n-pages 0) (n-keys 0) (n-columns 0)
         page-cols pages page-widths keys/page col)
     (if (> (apply #'max (mapcar #'car cols-w-widths)) avl-width)
@@ -1915,10 +1936,10 @@ as well as metadata."
         (while (and cols-w-widths
                     (or (null which-key-max-display-columns)
                         (< n-columns which-key-max-display-columns))
-                    (<= (+ (caar cols-w-widths) page-width) avl-width))
+                    (<= (+ page-width 1 (caar cols-w-widths)) avl-width))
           (setq col (pop cols-w-widths))
           (push (cdr col) page-cols)
-          (cl-incf page-width (car col))
+          (cl-incf page-width (1+ (car col)))
           (cl-incf n-keys (length (cdr col)))
           (cl-incf n-columns))
         (push (which-key--join-columns page-cols) pages)
@@ -1975,8 +1996,9 @@ is the width of the live window."
          (avl-lines (if prefix-top-bottom (- max-lines 1) max-lines))
          (min-lines (min avl-lines which-key-min-display-lines))
          (avl-width (if prefix (- max-width prefix) max-width))
-         (vertical (and (eq which-key-popup-type 'side-window)
-                        (member which-key-side-window-location '(left right))))
+         (vertical (or (and (eq which-key-popup-type 'side-window)
+                            (member which-key-side-window-location '(left right)))
+		       (eq which-key-max-display-columns 1)))
          result)
     (setq result
           (which-key--create-pages-1
@@ -1988,6 +2010,9 @@ is the width of the live window."
             (or prefix-title
                 (which-key--maybe-get-prefix-title
                  (key-description prefix-keys))))
+      (when prefix-top-bottom
+	;; Add back the line earlier reserved for the page information.
+        (setf (which-key--pages-height result) max-lines))
       (when (and (= (which-key--pages-num-pages result) 1)
                  (> which-key-min-display-lines
                     (which-key--pages-height result)))

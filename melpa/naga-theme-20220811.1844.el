@@ -4,8 +4,8 @@
 
 ;; Author: Johannes Maier <johannes.maier@mailbox.org>
 ;; Version: 0.1
-;; Package-Version: 20220811.1207
-;; Package-Commit: 109c63ee8879130a76a9eaf9a4a5086d1e48a652
+;; Package-Version: 20220811.1844
+;; Package-Commit: 34aaa9318e15a8cdce584864e186ba33a6a3c9ea
 ;; Homepage: https://github.com/kenranunderscore/emacs-naga-theme
 ;; Keywords: faces themes
 ;; Package-Requires: ((emacs "24.1"))
@@ -127,6 +127,9 @@ The default style is green text in a green box."
 
       ;; corfu
       (corfu-current (:inherit 'highlight))
+      (corfu-default (:background "#090909"))
+      (corfu-border (:background ,fg-dark))
+      (corfu-bar (:background ,comment-light))
 
       ;; which-key
       (which-key-key-face (:foreground ,yellow))
