@@ -1,9 +1,10 @@
 There are three main functions:
 
   1. For Ruby   -> string-inflection-ruby-style-cycle   (foo_bar => FOO_BAR => FooBar => foo_bar)
-  2. For Python -> string-inflection-python-style-cycle (foo_bar => FOO_BAR => FooBar => foo_bar)
-  3. For Java   -> string-inflection-java-style-cycle   (fooBar  => FOO_BAR => FooBar => fooBar)
-  4. For All    -> string-inflection-all-cycle          (foo_bar => FOO_BAR => FooBar => fooBar => foo-bar => Foo_Bar => foo_bar)
+  2. For Elixir -> string-inflection-elixir-style-cycle (foo_bar => FooBar => foo_bar)
+  3. For Python -> string-inflection-python-style-cycle (foo_bar => FOO_BAR => FooBar => foo_bar)
+  4. For Java   -> string-inflection-java-style-cycle   (fooBar  => FOO_BAR => FooBar => fooBar)
+  5. For All    -> string-inflection-all-cycle          (foo_bar => FOO_BAR => FooBar => fooBar => foo-bar => Foo_Bar => foo_bar)
 
 
 Example 1:
@@ -26,6 +27,9 @@ Example 1:
      ;; for python
      ((eq major-mode 'python-mode)
       (string-inflection-python-style-cycle))
+     ;; for elixir
+     ((eq major-mode 'elixir-mode)
+      (string-inflection-elixir-style-cycle))
      (t
       ;; default
       (string-inflection-ruby-style-cycle))))
@@ -42,6 +46,11 @@ Example 2:
   (add-hook 'ruby-mode-hook
             '(lambda ()
                (local-set-key (kbd "C-c C-u") 'string-inflection-ruby-style-cycle)))
+
+  ;; for elixir
+  (add-hook 'elixir-mode-hook
+            '(lambda ()
+               (local-set-key (kbd "C-c C-u") 'string-inflection-elixir-style-cycle)))
 
   ;; for python
   (add-hook 'python-mode-hook

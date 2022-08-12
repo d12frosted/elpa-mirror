@@ -1,9 +1,9 @@
-direnv (https://direnv.net/) integration for emacs. see the readme
-at https://github.com/wbolster/emacs-direnv for details.
+direnv (https://direnv.net/) integration for Emacs.  See the readme at
+https://github.com/wbolster/emacs-direnv for details.
 
 quick usage instructions for those familiar with direnv:
 
-- use ‘direnv-update-environment’ to manually update the emacs
+- use ‘direnv-update-environment’ to manually update the Emacs
   environment so that inferior shells, linters, compilers, and test
   runners start with the intended environmental variables.
 
