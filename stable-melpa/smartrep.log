@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/myuhe/smartrep.el.git
 
 Updating /mnt/store/melpa/working/smartrep/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/myuhe/smartrep.el.git/': Empty reply from server
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out f0ff5a6d7b8603603598ae3045c98b011e58d86e
+Built smartrep in 5.577s, finished at 2022-08-12T06:33:26+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Aug 12 06:33 packages/smartrep-20150509.230.el
+4.0K -rw-r--r-- 1 root root  337 Aug 12 06:33 packages/smartrep-20150509.230.entry
