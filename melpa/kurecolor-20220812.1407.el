@@ -2,9 +2,9 @@
 ;;
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;
-;;; Version: 1.3.3
-;; Package-Version: 20220811.1028
-;; Package-Commit: f7c0b1211c2ea11987c66edd2002b1de0f2d5ad9
+;;; Version: 1.3.4
+;; Package-Version: 20220812.1407
+;; Package-Commit: c2633c7cf02dd6d14f561c940885e194507a8990
 ;;
 ;;; Package-Requires: ((emacs "28.1") (s "1.12"))
 ;;
@@ -149,13 +149,9 @@ For this module, h is returned as [0-1] instead of [0-360]."
             val))))
 
 (defun kurecolor-hsv-to-rgb (h s v)
-  "Convert hue H, saturation S, value V to `(red green blue)'.
-
-H S V will be clamped to values from 0.0..1.0"
-  (let* ((h (kurecolor-clamp h 0.0 1.0))
-         (s (kurecolor-clamp s 0.0 1.0))
-         (v (kurecolor-clamp v 0.0 1.0))
-         (i (floor (* h 6.0)))
+  "Convert hsv (H S V) to red green blue.
+Note: args H S V are expected to be a values from 0..1"
+  (let* ((i (floor (* h 6.0)))
          (f (- (* h 6.0) i))
          (p (* v (- 1.0 s)))
          (q (* v (- 1.0 (* f s))))

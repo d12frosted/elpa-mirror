@@ -3,9 +3,9 @@
 ;; Copyright (C) 2018-2020,2021,2022 Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
-;; Version: 0.3.13
-;; Package-Version: 20220731.1246
-;; Package-Commit: e53d0fde875d137eeb03eddd6b50d3c827f9947f
+;; Version: 0.3.14
+;; Package-Version: 20220812.1659
+;; Package-Commit: 311a8bff2fa0a6ccf83311c648d2cd045d765bc6
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -71,6 +71,11 @@
   "Reverse date trees for Org mode."
   :group 'org
   :prefix "org-reverse-datetree-")
+
+(defface org-reverse-datetree-calendar-date-face
+  '((t (:background "#481260")))
+  "Face for calendar dates."
+  :group 'calendar-faces)
 
 (defcustom org-reverse-datetree-year-format "%Y"
   "Year format used by org-reverse-datetree."
@@ -1221,6 +1226,76 @@ are deleted without confirmation as well."
                   (goto-char (point-min)))
               (throw 'abort t))))))))
 
+
+;;;; Calendar integration
+
+(defvar org-reverse-datetree-calendar-file nil)
+
+(defun org-reverse-datetree-calendar ()
+  "Display calendar with dates in the current file highlighted.
+
+If the point is on a date in the date tree, go to the date in the
+calendar."
+  (interactive)
+  (require 'calendar)
+  (org-reverse-datetree-link-calendar)
+  (let ((date (org-reverse-datetree-guess-date :decoded t)))
+    (calendar)
+    (when date
+      (calendar-goto-date (org-reverse-datetree--to-calendar-date date)))))
+
+(defun org-reverse-datetree-link-calendar (&optional file)
+  "Associate FILE with the calendar."
+  (unless (derived-mode-p 'org-mode)
+    (user-error "Run this command in org-mode"))
+  (setq org-reverse-datetree-calendar-file
+        (or file (buffer-file-name)))
+  (add-hook 'calendar-today-visible-hook
+            #'org-reverse-datetree-mark-calendar)
+  (add-hook 'calendar-today-invisible-hook
+            #'org-reverse-datetree-mark-calendar))
+
+(defun org-reverse-datetree-unlink-calendar ()
+  "Unassociate the file from the calendar."
+  (interactive)
+  (setq org-reverse-datetree-calendar-file nil)
+  (remove-hook 'calendar-today-visible-hook
+               #'org-reverse-datetree-mark-calendar)
+  (remove-hook 'calendar-today-invisible-hook
+               #'org-reverse-datetree-mark-calendar))
+
+(defun org-reverse-datetree-display-entry ()
+  "Display the Org entry for the date at point in the calendar."
+  (interactive)
+  (let ((date (calendar-cursor-to-date))
+        (file org-reverse-datetree-calendar-file))
+    (with-current-buffer (or (find-buffer-visiting file)
+                             (find-file-noselect file))
+      (pop-to-buffer (current-buffer))
+      (org-reverse-datetree-goto-date-in-file
+       (org-reverse-datetree--encode-time
+        (list 0 0 0 (nth 1 date) (nth 0 date) (nth 2 date)
+              nil nil (car (current-time-zone)))))
+      (org-beginning-of-line))))
+
+(defun org-reverse-datetree-mark-calendar ()
+  "Mark the calendar entry."
+  (when org-reverse-datetree-calendar-file
+    (let ((file org-reverse-datetree-calendar-file))
+      (dolist (date (with-current-buffer
+                        (or (find-buffer-visiting file)
+                            (find-file-noselect file))
+                      (mapcar #'org-reverse-datetree--to-calendar-date
+                              (org-reverse-datetree-dates :decoded t))))
+        (when (calendar-date-is-visible-p date)
+          (calendar-mark-visible-date date 'org-reverse-datetree-calendar-date-face))))))
+
+(defun org-reverse-datetree--to-calendar-date (decoded-time)
+  "Convert DECODED-TIME to a calendar date (month day year)."
+  (list (nth 4 decoded-time)
+        (nth 3 decoded-time)
+        (nth 5 decoded-time)))
+
 ;;;; Other public functions for convenience
 
 (cl-defun org-reverse-datetree-map-entries (func &key date-regexp)
@@ -1264,6 +1339,31 @@ It returns a list of results returned by the function."
                     result))
             (end-of-line)))))
     (nreverse result)))
+
+(cl-defun org-reverse-datetree-dates (&key decoded)
+  "Return a list of date tree dates in the buffer."
+  (org-with-wide-buffer
+   (let ((level (org-reverse-datetree-num-levels))
+         dates)
+     (goto-char (point-min))
+     (save-match-data
+       (while (re-search-forward org-complex-heading-regexp nil t)
+         (when (= (- (match-end 1) (match-beginning 1))
+                  level)
+           (let* ((heading (match-string-no-properties 4))
+                  (decoded-time (ignore-errors
+                                  (parse-time-string heading))))
+             (when (and (nth 3 decoded-time)
+                        (nth 4 decoded-time)
+                        (nth 5 decoded-time))
+               (org-end-of-subtree)
+               (push (if decoded
+                         decoded-time
+                       (org-reverse-datetree--encode-time
+                        (append '(0 0 0)
+                                (seq-drop decoded-time 3))))
+                     dates)))))
+       dates))))
 
 (cl-defun org-reverse-datetree-guess-date (&key decoded)
   "Return the date of the current entry in the date tree, if any.

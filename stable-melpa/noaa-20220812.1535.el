@@ -3,8 +3,8 @@
 ;; Copyright (C) 2017 - 2022 David Thompson
 ;; Author: David Thompson
 ;; Version: 0.1
-;; Package-Version: 20220803.1427
-;; Package-Commit: beacb05f7298228dce4d494fb41c73d26991e15c
+;; Package-Version: 20220812.1535
+;; Package-Commit: c691e770da0f1ed5b83c656087dfbc2ff231bef7
 ;; Keywords: calendar
 ;; Homepage: https://github.com/thomp/noaa
 ;; URL: https://github.com/thomp/noaa
@@ -30,6 +30,7 @@
 (require 's)          ; s-truncate
 (require 'solar)      ; calendar-latitude, calendar-longitude
 (require 'subr-x)     ; string-blank-p
+(require 'url-http)   ; url-http-user-agent-string
 
 (defgroup noaa ()
   "View an NOAA weather forecast for a specific geographic location."
@@ -517,10 +518,10 @@ query."
   "If an NOAA-POINT struct corresponding to LAT and LON is present in
 NOAA-POINTS, return a list where the first member is the point and the
 second member is the index of the point."
-  (let ((i (position-if (lambda (point)
-			  (and (= (noaa-point-query-lat point) lat)
-			       (= (noaa-point-query-lon point) lon)))
-			noaa-points)))
+  (let ((i (cl-position-if (lambda (point)
+			     (and (= (noaa-point-query-lat point) lat)
+				  (= (noaa-point-query-lon point) lon)))
+			   noaa-points)))
     (if i
 	(list (elt noaa-points i) i)
       (list nil nil))))
