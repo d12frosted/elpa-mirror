@@ -5,8 +5,8 @@
 ;; Authors: Damien Cassou <damien@cassou.me>
 ;;          Matus Goljer <matus.goljer@gmail.com>
 ;; Version: 2.3.0
-;; Package-Version: 20220803.1431
-;; Package-Commit: eb77d82dc88846c5715353b7fd99c9030a2e2ee7
+;; Package-Version: 20220811.1828
+;; Package-Commit: 68b7b76dffc6c5f0df412b4154a72c15b915c6e0
 ;; URL: https://github.com/DamienCassou/beginend
 ;; Package-Requires: ((emacs "25.3"))
 ;; Created: 01 Jun 2015
@@ -271,6 +271,12 @@ BEGIN-BODY and END-BODY are two `progn' expressions passed to respectively
   (progn)
   (progn
     (forward-line -1)))
+
+(beginend-define-mode elfeed-show-mode
+  (progn
+    (re-search-forward "^Link:")
+    (forward-line))
+  (progn))
 
 (declare-function prodigy-first "prodigy")
 (declare-function prodigy-last "prodigy")

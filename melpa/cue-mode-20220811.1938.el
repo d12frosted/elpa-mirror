@@ -4,11 +4,11 @@
 
 ;; Author: Russell Sim <russell.sim@gmail.com>
 ;; Keywords: data, languages
-;; Package-Version: 20220809.1942
-;; Package-Commit: ebc50a881c6fbce429b0ec6bef8ea91a8310cf46
+;; Package-Version: 20220811.1938
+;; Package-Commit: 31c671d56e7884fa87ad0f1d27d0bb439dc65380
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/russell/cue-mode
-;; Version: 1.0.10
+;; Version: 1.0.11
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -361,6 +361,7 @@ it should move backward to the beginning of the previous token."
              (outwindow (car (get-buffer-window-list outbuf)))
              (outwindow-start (when outwindow (window-start outwindow))))
         (with-current-buffer outbuf
+          (setq default-directory (file-name-directory file-to-eval))
           (let ((origional-point (point)))
             (setq buffer-read-only nil)
             (erase-buffer)

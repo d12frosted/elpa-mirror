@@ -927,20 +927,20 @@
 		(:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 		(:commit . "151b20ba9d3ae39b88f91aecbab98bd5a5215f1a"))])
  (inf-ruby .
-	   [(2 6 1)
+	   [(2 6 2)
 	    ((emacs
 	      (24 3)))
 	    "Run a Ruby process in a buffer" tar
 	    ((:url . "http://github.com/nonsequitur/inf-ruby")
 	     (:keywords "languages" "ruby")
-	     (:maintainer "Yukihiro Matsumoto")
+	     (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")
 	     (:authors
 	      ("Yukihiro Matsumoto")
 	      ("Nobuyoshi Nakada")
 	      ("Cornelius Mika" . "cornelius.mika@gmail.com")
 	      ("Dmitry Gutov" . "dgutov@yandex.ru")
 	      ("Kyle Hargraves" . "pd@krh.me"))
-	     (:commit . "4ddf6b3889004156a224e061c78357fa8936777a"))])
+	     (:commit . "eb7bf95d5b03bdb9b28647c89ea0a73e35fe0ad1"))])
  (inkpot-theme .
 	       [(0 1)
 		((emacs
