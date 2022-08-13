@@ -7,8 +7,6 @@
 ;;         Jambunathan K <kjambunathan at gmail dot com>
 ;;         Brandon van Beekum <marsmining at gmail dot com>
 ;; URL: https://github.com/marsmining/ox-twbs
-;; Package-Version: 20200628.1949
-;; Package-Commit: e8a27dc78b7be494d9918f26db7a3bbb6b45020b
 ;; Keywords: org, html, publish, twitter, bootstrap
 ;; Version: 1.1.4
 

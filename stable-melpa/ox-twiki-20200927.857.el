@@ -4,8 +4,6 @@
 
 ;; Author: Derek Feichtinger <derek.feichtinger@psi.ch>
 ;; Keywords: org
-;; Package-Version: 20200927.857
-;; Package-Commit: 3377d8732aa916e736ce5822c7a9a4fbdc894e37
 ;; Homepage: https://github.com/dfeich/org8-wikiexporters
 ;; Package-Requires: ((org "8") (emacs "24.4"))
 ;; Version: 0.1.20200927

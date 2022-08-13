@@ -4,8 +4,8 @@
 
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 2.0
-;; Package-Version: 20220813.546
-;; Package-Commit: 80749357530feaa1ad4429e6858f9c0685445301
+;; Package-Version: 20220813.1007
+;; Package-Commit: cd236fdddc9398125492ae2f29d4c459e2d0e2b5
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools, frames
 ;; URL: https://github.com/davidshepherd7/terminal-here
@@ -46,9 +46,11 @@
     (cond
      ;; Try to guess from the wide range of "standard" environment variables!
      ;; Based on xdg_util.cc.
+     ((equal xdg-current-desktop "Enlightenment") 'terminology)
      ((equal xdg-current-desktop "Unity") 'gnome-terminal)
      ((equal xdg-current-desktop "GNOME") 'gnome-terminal)
      ((equal xdg-current-desktop "KDE") 'konsole)
+     ((equal desktop-session "enlightenment") 'terminology)
      ((equal xdg-current-desktop "LXQt") 'qterminal)
      ((equal desktop-session "gnome") 'gnome-terminal)
      ((equal desktop-session "mate") 'gnome-terminal)
@@ -74,6 +76,7 @@ Common settings:
     konsole
     xfce4-terminal
     terminator
+    terminology
     xterm
     sakura
     urxvt
@@ -220,6 +223,7 @@ buffer is not in a project."
    (cons 'sakura              (list "sakura"))
    (cons 'xfce4-terminal      (list "xfce4-terminal"))
    (cons 'terminator          (list "terminator"))
+   (cons 'terminology         (list "terminology"))
    (cons 'tilix               (list "tilix"))
    (cons 'kitty               (list "kitty"))
    (cons 'foot                (list "foot"))
@@ -262,6 +266,7 @@ terminal-here with tramp files to create ssh connections."
    (cons 'sakura         "-e")
    (cons 'xfce4-terminal "-x")
    (cons 'terminator     "-x")
+   (cons 'terminology    "-e")
    (cons 'tilix          "-e")
    (cons 'kitty          "--") ; kitty and foot don't need a special
    (cons 'foot           "--") ; flag for this, but we have to specify something.
