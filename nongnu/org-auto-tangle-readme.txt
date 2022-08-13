@@ -50,6 +50,30 @@ emacs session.
   this case, you can disable it for some buffers by setting the
   `#+auto_tangle:' option to `nil'.
 
+  The `#+auto_tangle:' option may also be used to specify variables that
+  should be preserved in the asynchronous tangling process. For example,
+  if you have installed a newer version of `org-mode' or additional
+  Babel processors, using
+
+  ┌────
+  │ #+auto_tangle: vars:load-path
+  └────
+
+  will be sure that they are available during tangling. The `vars'
+  option takes a colon-separated list so multiple variables may be
+  specified
+
+  ┌────
+  │ #+auto_tangle: vars:calendar-longitude:calendar-latitude:calendar-location-name
+  └────
+
+  It is also possible to disable auto-tangling by adding the `nil'
+  option to the line without removing any `vars' list.
+
+  ┌────
+  │ #+auto_tangle: vars:load-path nil
+  └────
+
 
 2 Babel Auto Tangle Safelist
 ════════════════════════════

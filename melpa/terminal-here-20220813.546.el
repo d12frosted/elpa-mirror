@@ -4,8 +4,8 @@
 
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 2.0
-;; Package-Version: 20220519.552
-;; Package-Commit: c16a500926416c09cd2faee6ab9541686b51e34f
+;; Package-Version: 20220813.546
+;; Package-Commit: 80749357530feaa1ad4429e6858f9c0685445301
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools, frames
 ;; URL: https://github.com/davidshepherd7/terminal-here
@@ -49,11 +49,13 @@
      ((equal xdg-current-desktop "Unity") 'gnome-terminal)
      ((equal xdg-current-desktop "GNOME") 'gnome-terminal)
      ((equal xdg-current-desktop "KDE") 'konsole)
+     ((equal xdg-current-desktop "LXQt") 'qterminal)
      ((equal desktop-session "gnome") 'gnome-terminal)
      ((equal desktop-session "mate") 'gnome-terminal)
      ((equal desktop-session "kde4") 'konsole)
      ((equal desktop-session "kde-plasma") 'konsole)
      ((equal desktop-session "kde") 'konsole)
+     ((equal desktop-session "lxqt") 'qterminal)
      ((equal desktop-session "xubuntu") 'xfce-terminal)
      ((string-match-p (regexp-quote "xfce") desktop-session) 'xfce-terminal)
 
@@ -81,6 +83,7 @@ Common settings:
     kitty
     tilix
     foot
+    qterminal
 
 Usually this variable should be one of the symbols listed above.
 
@@ -212,6 +215,7 @@ buffer is not in a project."
    (cons 'xst                 (list "xst"))
    (cons 'st                  #'terminal-here--find-and-run-st)
    (cons 'konsole             (list "konsole"))
+   (cons 'qterminal           (list "qterminal"))
    (cons 'xterm               (list "xterm"))
    (cons 'sakura              (list "sakura"))
    (cons 'xfce4-terminal      (list "xfce4-terminal"))
@@ -253,6 +257,7 @@ terminal-here with tramp files to create ssh connections."
    (cons 'xst            "-e") ; popular st fork
    (cons 'st             "-e")
    (cons 'konsole        "-e") ; ssh seems to immediately exit with konsole
+   (cons 'qterminal      "-e")
    (cons 'xterm          "-e")
    (cons 'sakura         "-e")
    (cons 'xfce4-terminal "-x")
