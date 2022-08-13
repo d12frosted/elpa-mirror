@@ -5,8 +5,6 @@
 ;; Author: Ben Liblit <liblit@acm.org>
 ;; Created: 13 Aug 2015
 ;; Version: 1.3
-;; Package-Version: 20180330.2325
-;; Package-Commit: 4bd113ab42dec9544b66e0a27ed9008ce8148433
 ;; Package-Requires: ((cl-lib "0.1") (emacs "24") (flycheck "0.20") (let-alist "1.0"))
 ;; Keywords: convenience languages tools
 ;; URL: https://github.com/liblit/flycheck-status-emoji

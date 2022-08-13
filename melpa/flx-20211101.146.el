@@ -7,8 +7,6 @@
 ;; Description: fuzzy matching with good sorting
 ;; Created: Wed Apr 17 01:01:41 2013 (+0800)
 ;; Version: 0.6.1
-;; Package-Version: 20211101.146
-;; Package-Commit: e3b3f0533e44c5250ce73d728b59a7e96c692b5d
 ;; Package-Requires: ((cl-lib "0.3"))
 ;; URL: https://github.com/lewang/flx
 

@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://git.korewanetadesu.com/pelican-mode.git
 
 Updating /mnt/store/melpa/working/pelican-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.korewanetadesu.com/pelican-mode.git/': Failed to connect to git.korewanetadesu.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 65d7caf5d926599a5007eb7bc279215908aa5252
+Built pelican-mode in 6.474s, finished at 2022-08-13T05:06:31+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Aug 13 05:06 packages/pelican-mode-20190124.2336.el
+4.0K -rw-r--r-- 1 root root 408 Aug 13 05:06 packages/pelican-mode-20190124.2336.entry
