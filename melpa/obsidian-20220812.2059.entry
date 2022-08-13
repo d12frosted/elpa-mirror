@@ -1,5 +1,5 @@
 (obsidian .
-	  [(20220811 912)
+	  [(20220812 2059)
 	   ((emacs
 	     (27 2))
 	    (s
@@ -11,9 +11,11 @@
 	    (markdown-mode
 	     (2 6))
 	    (elgrep
-	     (1 0 0)))
+	     (1 0 0))
+	    (yaml
+	     (0 5 1)))
 	   "Obsidian Notes interface" single
-	   ((:commit . "811c97bf3982788b5b7118e22884493c32163e84")
+	   ((:commit . "0952bcbac335a8eebe6f7d40458eb3342474ab42")
 	    (:authors
 	     ("Mykhaylo Bilyanskyy"))
 	    (:maintainer "Mykhaylo Bilyanskyy")

@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://git.korewanetadesu.com/apt-sources-list.git
 
 Updating /mnt/store/melpa/working/apt-sources-list/
-Checking out origin/HEAD
-Checking out 5289443ceff230dfc8a2c1c6b524c90560eb08a5
-Built apt-sources-list in 7.486s, finished at 2022-08-12T16:37:36+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Aug 12 16:37 packages/apt-sources-list-20180527.1241.el
-4.0K -rw-r--r-- 1 root root 394 Aug 12 16:37 packages/apt-sources-list-20180527.1241.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.korewanetadesu.com/apt-sources-list.git/': Failed to connect to git.korewanetadesu.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

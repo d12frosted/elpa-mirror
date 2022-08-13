@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://git.korewanetadesu.com/pelican-mode.git
 
 Updating /mnt/store/melpa/working/pelican-mode/
-Checking out origin/HEAD
-Checking out 65d7caf5d926599a5007eb7bc279215908aa5252
-Built pelican-mode in 6.228s, finished at 2022-08-12T17:43:36+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Aug 12 17:43 packages/pelican-mode-20190124.2336.el
-4.0K -rw-r--r-- 1 root root 408 Aug 12 17:43 packages/pelican-mode-20190124.2336.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.korewanetadesu.com/pelican-mode.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
