@@ -2,9 +2,9 @@
 
 ;; Author: Yilkal Argaw <yilkalargawworkneh@gmail.com>
 ;; URL: https://github.com/yilkalargaw/org-auto-tangle
-;; Package-Version: 20220812.130
-;; Package-Commit: 5cd4d5982102f536c749b74febab09ad922a0f6c
-;; Version: 0.5.1
+;; Package-Version: 20220812.2327
+;; Package-Commit: 2494a6f78c9db5311123abc7cad119851a29a55c
+;; Version: 0.6.0
 ;; Keywords: outlines
 ;; Package-Requires: ((emacs "24.1") (async "1.9.3"))
 

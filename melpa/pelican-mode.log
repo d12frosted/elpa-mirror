@@ -7,7 +7,7 @@ Updating /mnt/store/melpa/working/pelican-mode/
 Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
 
 Fetching origin
-fatal: unable to access 'https://git.korewanetadesu.com/pelican-mode.git/': gnutls_handshake() failed: Error in the pull function.
+fatal: unable to access 'https://git.korewanetadesu.com/pelican-mode.git/': Failed to connect to git.korewanetadesu.com port 443: Connection timed out
 error: Could not fetch origin
 
 Command exited with non-zero exit-code: 1

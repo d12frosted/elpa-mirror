@@ -2,8 +2,8 @@
 
 ;; Copyright (c) 2013 Spotify AB
 ;; Package-Requires: ((emacs "24"))
-;; Package-Version: 20220806.1709
-;; Package-Commit: c7e4e2541deb66d266f58c364e33a4a10cefbc2b
+;; Package-Version: 20220813.5
+;; Package-Commit: 73a8bcc25547b874e1983a75901f6c31708cd104
 ;; Homepage: https://github.com/spotify/dockerfile-mode
 ;; URL: https://github.com/spotify/dockerfile-mode
 ;; Version: 1.7
@@ -206,7 +206,7 @@ This can be set in file or directory-local variables.")
 
 If prefix arg NO-CACHE is set, don't cache the image.
 The build string will be of the format:
-`sudo docker build --no-cache --force-rm --pull --force-rm --tag IMAGE-NAME --build-args arg1.. --progress PROGRESS_TYPE -f filename directory`"
+`sudo docker build --no-cache --force-rm --pull --tag IMAGE-NAME --build-args arg1.. --progress PROGRESS_TYPE -f filename directory`"
 
   (interactive (list (dockerfile-read-image-name) prefix-arg))
   (save-buffer)
