@@ -5,7 +5,7 @@
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Version: 2.7
 ;; Package-Version: 20210827.424
-;; Package-Commit: e6e8efd740df0b68db89805ba72492818dba61ab
+;; Package-Commit: 617c3674193c38d34e5b01d5d936318cc421eedd
 ;; Keywords: convenience, color-themes
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2014/03/22

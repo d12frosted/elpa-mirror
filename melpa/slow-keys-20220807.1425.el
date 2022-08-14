@@ -4,8 +4,8 @@
 
 ;; Author: Manuel Uberti <manuel.uberti@inventati.org>
 ;; URL: https://github.com/manuel-uberti/slow-keys
-;; Package-Version: 20180831.459
-;; Package-Commit: b89b4fbddb4b6b95fcc7301ec543ea535b2cc4d7
+;; Package-Version: 20220807.1425
+;; Package-Commit: b951ae4bdcea56ced03f227b82b28c3d91d15e61
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: convenience
@@ -49,56 +49,60 @@
   :group 'slow-keys
   :type 'number)
 
-(defun slow-keys-slow-down (msg)
+(defcustom slow-keys-warning-hook nil
+  "Hook run when key presses exceed `slow-keys-min-delay'."
+  :type 'hook)
+
+(defcustom slow-keys-ignore-command '(mwheel-scroll)
+  "Check whether CMD should be ignored by `slow-keys-do'."
+  :type 'list)
+
+(defun slow-keys--slow-down (msg)
   "Display warning MSG and sleep before let typing begin again."
   (message "%s" (propertize msg 'face 'compilation-error))
   (redisplay)
-  (sleep-for slow-keys-sleep-for))
+  (sleep-for slow-keys-sleep-for)
+  (run-hooks 'slow-keys-warning-hook))
 
-(defun slow-keys-typing-cmd (cmd)
+(defun slow-keys--typing-cmd (cmd)
   "Check whether CMD is `self-insert-command' or `org-self-insert-command'."
   (or (eq cmd 'self-insert-command)
       (eq cmd 'org-self-insert-command)))
 
-(defun slow-keys-ignore-cmd (cmd)
-  "Check whether CMD should be ignored by slow typing check."
-  (eq cmd 'mwheel-scroll))
-
-(defun slow-keys-do ()
+(defun slow-keys--do ()
   "Check whether typing or running a command is done slowly enough."
   (unless (or executing-kbd-macro
-              (slow-keys-ignore-cmd this-command))
+              (memq this-command slow-keys-ignore-command))
     (setq slow-keys-repeat
           (if (eq last-command this-command)
               (1+ slow-keys-repeat)
             0))
     (when (and (> slow-keys-repeat 3)
-               (not (slow-keys-typing-cmd this-command)))
-      (slow-keys-slow-down
+               (not (slow-keys--typing-cmd this-command)))
+      (slow-keys--slow-down
        (format "Use repetition numbers or more high-level commands: %S"
                this-command)))
     (let ((now (float-time)))
       (cond
-       ((and (slow-keys-typing-cmd this-command)
-             (slow-keys-typing-cmd last-command)
+       ((and (slow-keys--typing-cmd this-command)
+             (slow-keys--typing-cmd last-command)
              (< (- now slow-keys-last-press) slow-keys-min-delay))
-        (slow-keys-slow-down "Slow down typing!"))
-       ((and (not (slow-keys-typing-cmd this-command))
-             (not (slow-keys-typing-cmd last-command))
+        (slow-keys--slow-down "Slow down typing!"))
+       ((and (not (slow-keys--typing-cmd this-command))
+             (not (slow-keys--typing-cmd last-command))
              (< (- now slow-keys-last-press) slow-keys-min-delay))
-        (slow-keys-slow-down "Slow down command running!")))
+        (slow-keys--slow-down "Slow down command running!")))
       (setq slow-keys-last-press now))))
 
 ;;;###autoload
 (define-minor-mode slow-keys-mode
   "Type slowly to avoid RSI."
-  nil
   :lighter " Slow"
   :require 'slow-keys
   :global t
   (if slow-keys-mode
-      (add-hook 'post-command-hook #'slow-keys-do)
-    (remove-hook 'post-command-hook #'slow-keys-do)))
+      (add-hook 'post-command-hook #'slow-keys--do)
+    (remove-hook 'post-command-hook #'slow-keys--do)))
 
 (provide 'slow-keys)
 
