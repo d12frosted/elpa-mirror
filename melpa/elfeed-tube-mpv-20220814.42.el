@@ -4,8 +4,8 @@
 
 ;; Author: Karthik Chikmagalur <karthikchikmagalur@gmail.com>
 ;; version: 0.10
-;; Package-Version: 20220704.1952
-;; Package-Commit: a048950b9dc6d33741ed3224d6d8440fe4408742
+;; Package-Version: 20220814.42
+;; Package-Commit: d0140f24c7274fca6a357a33ba77dddf70837ba7
 ;; Keywords: news, hypermedia
 ;; Package-Requires: ((emacs "27.1") (elfeed-tube "0.10") (mpv "0.2.0"))
 ;; URL: https://github.com/karthink/elfeed-tube
@@ -131,7 +131,7 @@ session."
     (when-let* ((time (or (get-text-property pos 'timestamp) 0))
                 (entry (or elfeed-show-entry
                            (elfeed-search-selected 'ignore-region)))
-                (video-id (elfeed-tube--get-video-id entry))
+                (video-id (elfeed-tube--entry-video-id entry))
                 (video-url (concat "https://youtube.com/watch?v="
                                    video-id
                                    "&t="
@@ -157,7 +157,7 @@ session."
               (elfeed-tube-mpv--set-timer entry)))
         (apply #'start-process
                (concat "elfeed-tube-mpv-"
-                       (elfeed-tube--get-video-id elfeed-show-entry))
+                       (elfeed-tube--entry-video-id elfeed-show-entry))
                nil "mpv" args)
         (message (concat "Starting new mpv instance: "
                          (propertize "Not connected to Elfeed ❌"
@@ -302,7 +302,7 @@ anywhere in the transcript to seek to that point in the video."
         (elfeed-tube-mpv-follow-mode -1))
        
        (t (if-let* ((entry elfeed-show-entry)
-                    (video-id (elfeed-tube--get-video-id entry))
+                    (video-id (elfeed-tube--entry-video-id entry))
                     (video-url
                      (concat "https://youtube.com/watch?v="
                              video-id)))
