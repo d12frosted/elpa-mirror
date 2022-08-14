@@ -4,9 +4,10 @@ Source:  https://git.systemreboot.net/exiftool.el/
 
 Updating /mnt/store/melpa/working/exiftool/
 
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
 
 Fetching origin
-fatal: unable to access 'https://git.systemreboot.net/exiftool.el/': Failed to connect to git.systemreboot.net port 443: Connection timed out
+fatal: unable to access 'https://git.systemreboot.net/exiftool.el/': Could not resolve host: git.systemreboot.net
+error: Could not fetch origin
 
-Command exited with non-zero exit-code: 128
+Command exited with non-zero exit-code: 1
