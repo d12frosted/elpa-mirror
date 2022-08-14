@@ -4,9 +4,9 @@
 
 ;; Author: Gong Qijian <gongqijian@gmail.com>
 ;; Created: 2019/04/20
-;; Version: 0.4.1
-;; Package-Version: 20200210.1543
-;; Package-Commit: 9f99bec56f87e53deb9f33b364eda77677a17eb9
+;; Version: 0.4.2
+;; Package-Version: 20220814.444
+;; Package-Commit: fb9ef454a4bb2d6de3415807b4858a20a9cc0dad
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/twlz0ne/with-emacs.el
 ;; Keywords: tools
@@ -30,41 +30,55 @@
 ;;
 ;; ,---
 ;; | ;;; `with-emacs'
-;; | 
+;; |
 ;; | ;; Evaluate expressions in a separate Emacs.
 ;; | (with-emacs ...)
-;; | 
+;; |
 ;; | ;; Specify the version of Emacs and enable lexical binding
 ;; | (with-emacs :path "/path/to/{version}/emacs" :lexical t ...)
-;; | 
-;; | ;; Use partially applied function (see `with-emacs-define-partially-applied' for more)
-;; | ;; instead of writting verry long parameter each time:
-;; | (with-emacs-nightly-t ...)
-;; | ;; Equaivalent to:
-;; | ;; (with-emacs :path "/path/to/nightly/emacs" :lexical t ...)
-;; | 
+;; |
+;; |
 ;; | ;;; `with-emacs-server'
-;; | 
+;; |
 ;; | ;; Evaluate expressions in server "name" or signal an error if no such server.
 ;; | (with-emacs-server "name" ...)
-;; | 
+;; |
 ;; | ;; Evaluate expressions in server "name" and start a server if necessary.
 ;; | (with-emacs-server "name" :ensure t ...)
 ;; | (with-emacs-server "name" :ensure "/path/to/{version}/emacs" ...)
-;; | 
+;; |
 ;; | ;; Kill server after 100 minutes of idle
 ;; | (with-emacs-server "name" :ensure t :timeout 100 ...)
+;; |
 ;; | ;; Set default timeout for every new server:
 ;; | (setq with-emacs-server-timeout 100)
 ;; | (with-emacs-server "name" :ensure t ...)
+;; |
 ;; | ;; Disable default timeout temporary:
 ;; | (with-emacs-server "name" :ensure t :timeout nil ...)
+;; |
+;; |
+;; | ;;; `with-emacs-define-partially-applied'
+;; |
+;; | ;; Generate functions with partial parameters applied
+;; | (with-emacs-define-partially-applied
+;; |  (t      nil t)
+;; |  (24.3   "/path/to/emacs-24.3")
+;; |  (24.4-t "/path/to/emacs-24.4" t))
+;; | ;; =>
+;; | ;; with-emacs-t       ;; applied `:lexical t`
+;; | ;; with-emacs-24.3    ;; applied `:path "/path/to/emacs-24.3"'
+;; | ;; with-emacs-24.4-t  ;; applied `:path "/path/to/emacs-24.3" :lexical t'
 ;; `---
 ;;
 ;; See README for more information.
 
 ;;; Change Log:
 
+;; 0.4.2 2021/01/29
+;;   Fix output handling when `debug-on-error' toggled.
+;;   Fix error message in `with-emacs--handle-output'.
+;;   Add variable `with-emacs-server-ensure'.
 ;;
 ;; 0.4.1  2020/02/05
 ;;   Add timeout timer for `with-emacs-server'.
@@ -77,7 +91,7 @@
 ;;
 ;; 0.2.1  2019/08/19
 ;;
-;;   Refactor the macro with-emacs
+;;   Refactor the macro with-emacs.
 ;;
 ;; 0.2.0  2019/06/05
 ;;
@@ -120,12 +134,31 @@
   :type 'string
   :group 'with-emacs)
 
+(defcustom with-emacs-server-ensure nil
+  "Default value of parameter ‘:ensure’ of ‘with-emacs-server’.
+It can be nil, t or string:
+
+nil     -- No default
+t       -- Follow the ‘with-emacs-executable-path’
+string  -- Custom path of Emacs executable"
+  :type '(choice
+          (const :tag "No default" nil)
+          (const :tag "Follow the ‘with-emacs-executable-path’" t)
+          (string :tag "Custom path of Emacs executable"))
+  :group 'with-emacs)
+
 (defcustom with-emacs-server-timeout nil
   "Number of minutes idle time before kill server process, ‘nil’ means no timeout.
 
 This can be overwritten by parameter :timeout in ‘with-emacs-server’."
   :type 'number
   :group 'with-emacs)
+
+(defvar with-emacs-comint-prompt "DC5ECD81-02D0-44BC-AE41-889565D3907C"
+  "String to indicate new expression.")
+
+(defvar with-emacs-eoe-indicator "2CC60357-22B3-46BF-A7BB-42A521C6E330"
+  "String to indicate that evaluation has completed.")
 
 (defvar with-emacs-sit-for-seconds 0.1
   "Comint buffer/process polling interval.")
@@ -169,7 +202,11 @@ returned list are in the same order as in TREE.
   `(,path
     "--batch"
     "--eval" ,(format "(setq lexical-binding %s)" lexical)
-    "--eval" ,(format "%s" '(while t (prin1 (eval (read) lexical-binding))))))
+    "--eval" ,(format "(setq comint-prompt %S)" with-emacs-comint-prompt)
+    "--eval" ,(format "%S" '(while t
+                             (prin1
+                              (eval (read (read-from-minibuffer comint-prompt))
+                                    lexical-binding))))))
 
 (defun with-emacs--eval-expr-send-input (proc form eoe-indicator)
   ;; Clean buffer
@@ -184,6 +221,7 @@ returned list are in the same order as in TREE.
     (unwind-protect
         (mapc (lambda (it)
                 (insert (format "%S" it))
+                ;; (message "==> [DEBUG] send: %S" it)
                 (comint-send-input))
               form)
       (when advice (advice-remove comint-input-sender advice))))
@@ -213,12 +251,21 @@ returned list are in the same order as in TREE.
 
 (defun with-emacs--eval-expr-error-message (proc)
   (when (< 0 (process-exit-status proc))
-    (save-excursion
-      (goto-char comint-last-output-start)
-      (save-restriction
-        (narrow-to-region comint-last-output-start
-                          (goto-char (next-property-change (point))))
-        (buffer-substring-no-properties (point-min) (point-max))))))
+    ;; (message "==> [DEBUG] comint-last-output-start: %s, current-point: %s" comint-last-output-start (point))
+    ;; (message "==> [DEBUG] buffer begin >>>>>>>>>>")
+    ;; (print (buffer-string))
+    ;; (message "==> [DEBUG] buffer end <<<<<<<<<<<<")
+    (buffer-substring-no-properties
+     (or (save-excursion
+           (goto-char comint-last-output-start)
+           (when (re-search-backward comint-prompt-regexp nil t)
+             (match-end 0)))
+         comint-last-output-start)
+     (save-excursion
+       (goto-char (point-max))
+       (re-search-backward
+        "\\(?:\nProcess .* exited abnormally with code [0-9]+\n\\)\\=" nil t)
+       (point)))))
 
 (defun with-emacs--eval-expr (buf form eoe-indicator)
   (let ((proc (get-buffer-process buf)))
@@ -232,30 +279,45 @@ returned list are in the same order as in TREE.
 (defun with-emacs--extract-return-value (s)
   "Extract return value from string S."
   (with-temp-buffer
+    ;; (message "[DEBUG] return: %S" s)
     (insert s)
     (emacs-lisp-mode)
     (goto-char (point-max))
     (sexp-at-point)))
 
 (defun with-emacs--handle-output (output error)
+  ;; (message "[DEBUG] error: %S" error)
+  ;; (message "[DEBUG] output: %S" output)
   (if error
-      (signal 'error (list error))
+      (signal 'error
+              (if debug-on-error
+                  (list
+                   (with-temp-buffer
+                     (insert error)
+                     (goto-char (point-min))
+                     (if (re-search-forward "^Debugger entered--Lisp error:" nil t)
+                         (buffer-substring (match-beginning 0) (point-max))
+                       error)))
+                (last (split-string error comint-prompt-regexp))))
     (when output
       (let* ((strs (split-string output comint-prompt-regexp))
              (ret (car (cddr (reverse strs)))))
+        ;; (message "[DEBUG] strs: %S" strs)
         ;; Redirect message to `*Messages*'
         (mapc (lambda (s)
-                ;; (message "s: [%S]" s) ;; debug
+                ;; (message "[DEBUG] s: %S" s)
                 (when (string-match with-emacs-output-regexp s)
+                  ;; (message "[DEBUG] m: %S" (match-string 1 s))
+                  ;; (message (match-string 1 s))
                   (with-current-buffer (get-buffer "*Messages*")
                     (let ((inhibit-read-only t)
                           (msg (match-string 1 s)))
                       (goto-char (point-max))
                       (insert "\n")
-                      (insert msg)
-                      msg))))
+                      (insert msg)))))
               strs)
         ;; Return the result of the last expression as a string
+        ;; (message "[DEBUG] ret: %S" ret)
         (with-emacs--extract-return-value ret)))))
 
 (cl-defmacro with-emacs (&rest body
@@ -271,27 +333,30 @@ If LEXICAL not set, use `with-emacs-lexical-binding.'"
                   (if has-path? path with-emacs-executable-path)
                   (if has-lexical? lexical with-emacs-lexical-binding))))
     `(let* ((process-connection-type nil)
-            (eoe-indicator "with-emacs-eoe")
-            (comint-prompt-regexp "Lisp expression: ")
+            (eoe-indicator with-emacs-eoe-indicator)
+            (comint-prompt-regexp with-emacs-comint-prompt)
+            (comint-prompt-read-only t)
             (cmdlist ',cmdlist)
             (pbuf ,(current-buffer))
             (output nil)
             (comint-output-filter-functions
-             (lambda (text)
-               ;; (message "==> text: %s" text)
-               (setq output (concat output text))))
+             (cons (lambda (text)
+                     ;; (message "==> text: %S" text)
+                     (setq output (concat output text)))
+                   comint-output-filter-functions))
             (buf (apply 'make-comint-in-buffer "with-emacs"
                         (generate-new-buffer-name "*with-emacs*")
                         (car cmdlist) nil (cdr cmdlist))))
        (let ((error (with-emacs--eval-expr buf ',body eoe-indicator)))
+         ;; (message "==> error: %s" error)
          (with-emacs--handle-output output error)))))
 
 (cl-defmacro with-emacs-server (server
                                 &rest
                                   body
                                 &key
-                                  (ensure nil has-ensure?)
-                                  (timeout nil has-timeout?)
+                                  ensure
+                                  timeout
                                 &allow-other-keys)
   "Contact the Emacs server named SERVER and evaluate FORM there.
 Returns the result of the evaluation, or signals an error if it
@@ -311,20 +376,20 @@ disable timeout timer.
 => 2"
   (declare (indent 1) (debug t))
   `(let* ((server-dir (if server-use-tcp server-auth-dir server-socket-dir))
-          (server-file (expand-file-name ,server server-dir)))
+          (server-file (expand-file-name ,server server-dir))
+          (ensure (or ,ensure with-emacs-server-ensure)))
        (unless (file-exists-p server-file)
-         (if ,has-ensure?
+         (if ensure
              (shell-command
               (format "%s -Q --daemon=%s"
-                      (cond ((stringp ,ensure) ,ensure)
+                      (cond ((stringp ensure) ensure)
                             (t with-emacs-executable-path))
                       ,server))
            (error "No such server: %s" ,server)))
        (server-eval-at ,server
                        '(condition-case err
                             (progn
-                              (let ((time ,(if has-timeout? timeout
-                                             with-emacs-server-timeout)))
+                              (let ((time ,(or timeout with-emacs-server-timeout)))
                                 (when time
                                   (run-with-idle-timer time 0
                                                        (lambda () (kill-emacs)))))

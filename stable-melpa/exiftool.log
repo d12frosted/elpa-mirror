@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://git.systemreboot.net/exiftool.el/
 
 Updating /mnt/store/melpa/working/exiftool/
-Checking out origin/HEAD
-Checking out fc6713e753380f3034d8df55b7af3a737ea52ab4
-Built exiftool in 7.334s, finished at 2022-08-14T02:30:30+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Aug 14 02:30 packages/exiftool-20190520.1106.el
-4.0K -rw-r--r-- 1 root root  367 Aug 14 02:30 packages/exiftool-20190520.1106.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+fatal: unable to access 'https://git.systemreboot.net/exiftool.el/': Failed to connect to git.systemreboot.net port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

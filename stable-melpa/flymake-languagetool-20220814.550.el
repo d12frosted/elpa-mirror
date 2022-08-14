@@ -5,8 +5,8 @@
 
 ;; Authors: Shen, Jen-Chieh <jcs090218@gmail.com>, Trey Peacock <git@treypeacock.com>
 ;; URL: https://github.com/emacs-languagetool/flymake-languagetool
-;; Package-Version: 20220704.637
-;; Package-Commit: 857f4f94a7615d7de5305a40045b2b85ae1ff760
+;; Package-Version: 20220814.550
+;; Package-Commit: b954dde15be113e5b917aebd0f006be1b54a2ee3
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "27.1") (s "1.9.0"))
 ;; Keywords: convenience grammar check
@@ -248,7 +248,7 @@ STATUS provided from `url-retrieve'."
                   (list "language" flymake-languagetool-language)
                   (unless (string-empty-p disabled)
                     (list "disabledRules" disabled))))
-         (url-request-data (url-build-query-string params)))
+         (url-request-data (url-build-query-string params nil t)))
     (url-retrieve
      (concat (or flymake-languagetool-url
                  (format "http://localhost:%s"
