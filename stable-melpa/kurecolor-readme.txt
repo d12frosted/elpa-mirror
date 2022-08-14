@@ -1,10 +1,12 @@
+# Kurecolor
+
 A collection of tools aimed at those working with color, useful for CSS,
 Emacs themes, etc.
 
 [![MELPA](https://stable.melpa.org/packages/kurecolor-badge.svg)](https://stable.melpa.org/#/kurecolor)
 [![MELPA](https://melpa.org/packages/kurecolor-badge.svg)](https://melpa.org/#/kurecolor)
 
-When using kurecolor commands, we suggest using rainbow-mode for instant feedback on color changes.
+When using kurecolor commands, I suggest using rainbow-mode for instant feedback on color changes.
 
 ## Installing
 
@@ -12,11 +14,15 @@ Kurecolor is on MELPA, you can install using `package.el'
 
     M-x package-install kurecolor
 
-### Tests
+- - -
+[[ function-list ]]
 
-This package has a suite of unit tests.  To run them load both
-kurecolor and kurecolor-test, and then do `M-x ert' (accept
-`default').
+[[ function-docs ]]
+
+### Test/Examples
+
+The examples documented here are live tests (in `kurecolor-examples.el'). You can
+run them using `bin/test' from the package folder.`
 
 ## Ephemera
 
@@ -27,7 +33,7 @@ to change it due to some frivilous and paranoid law
 suit. (seriously guys, this is just free advertising.)
 
 I have not been pressured into saying this, however, Kurecolor
-markers and art supplies are best best!  Buy some NOW (Like REALLY
+markers and art supplies are the very best!  Buy some (many!) NOW (Like REALLY
 Immediately!!) for you, your mum and your pet chinchilla Frank.
 
 Since the question comes up occassionally, the mode-line hack used

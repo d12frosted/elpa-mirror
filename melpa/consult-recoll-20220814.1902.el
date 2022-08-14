@@ -3,8 +3,8 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Keywords: docs, convenience
-;; Package-Version: 20220808.9
-;; Package-Commit: 61c01d3980c33727d5fb3e0fbc0d2030396ac0d8
+;; Package-Version: 20220814.1902
+;; Package-Commit: 80f1933d686bdeec09f2adb8cdf491ff849b3e9b
 ;; License: GPL-3.0-or-later
 ;; Version: 0.6.2
 ;; Package-Requires: ((emacs "26.1") (consult "0.18"))
@@ -43,6 +43,8 @@
 (require 'seq)
 (require 'subr-x)
 (require 'consult)
+
+(declare-function 'eww-open-file "eww")
 
 (defgroup consult-recoll nil
   "Options for consult recoll."
@@ -133,19 +135,37 @@ Set to nil to use the default 'title (path)' format."
 (defsubst consult-recoll--snippets (&optional candidate)
   (get-text-property 0 'snippets (or candidate consult-recoll--current "")))
 
-(defsubst consult-recoll--find-file (file &optional _page) (find-file file))
+(defun consult-recoll--search-snippet (candidate mime)
+  "When CANDIDATE is the text of a snippet, search for it in current buffer."
+  (when (string-match "^\s+0 : " candidate)
+    (let ((txt (replace-match "" nil nil candidate)))
+      (goto-char (point-min))
+      (when (or (search-forward txt nil t)
+                (and (derived-mode-p 'org-mode)
+                     (let ((txt (replace-regexp-in-string "\\]\\].+" "" txt)))
+                       (search-forward txt nil t)))
+                (and (string= mime "text/html")
+                     (let ((mid (/ (length txt) 2)))
+                       (or (search-forward (substring txt 0 mid) nil t)
+                           (search-forward (substring txt mid) nil t)))))
+        (goto-char (match-beginning 0))
+        (when (derived-mode-p 'org-mode) (org-reveal))))))
 
 (defun consult-recoll--open (candidate)
   "Open file of corresponding completion CANDIDATE."
   (when candidate
-    (let ((url (consult-recoll--candidate-url candidate))
-          (open (alist-get (consult-recoll--candidate-mime candidate)
-                           consult-recoll-open-fns
-                           (or consult-recoll-open-fn 'consult-recoll--find-file)
-                           nil 'string=)))
-      (if consult-recoll-inline-snippets
-          (funcall open url (consult-recoll--candidate-page candidate))
-        (funcall open url)))))
+    (let* ((url (consult-recoll--candidate-url candidate))
+           (mime (consult-recoll--candidate-mime candidate))
+           (open (cond ((cdr (assoc mime consult-recoll-open-fns)))
+                       (consult-recoll-open-fn)
+                       ((string= mime "text/html")
+                        (lambda (f &optional _ignored) (eww-open-file f)))
+                       (t (lambda (f &optional _ignored) (find-file f))))))
+      (if (not consult-recoll-inline-snippets)
+          (funcall open url)
+        (funcall open url (consult-recoll--candidate-page candidate))
+        (when (string-prefix-p "text/" mime)
+          (consult-recoll--search-snippet candidate mime))))))
 
 (defun consult-recoll--transformer (str)
   "Decode STR, as returned by recollq."

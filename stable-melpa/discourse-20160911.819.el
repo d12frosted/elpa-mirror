@@ -4,8 +4,6 @@
 
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; Keywords: lisp, discourse
-;; Package-Version: 20160911.819
-;; Package-Commit: a86c7e608851e186fe12e892a573994f08c8e65e
 ;; Created: 2016-07-01
 ;; Version: 0.1
 ;; Package-Requires: ((cl-lib "0.5") (request "0.2")(s "1.11.0"))

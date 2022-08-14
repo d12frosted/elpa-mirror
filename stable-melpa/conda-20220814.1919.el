@@ -3,9 +3,9 @@
 ;; Copyright (C) 2016-2022 Rami Chowdhury
 ;; Author: Rami Chowdhury <rami.chowdhury@gmail.com>
 ;; URL: http://github.com/necaris/conda.el
-;; Package-Commit: a65ed0084876366fd1b238bb2b8b36ee75ac98d8
+;; Package-Commit: e7f7e72cc058318b9c11499c38c3b0125322e6d6
 ;; Version: 0.4
-;; Package-Version: 20220724.1857
+;; Package-Version: 20220814.1919
 ;; Package-X-Original-Version: 0.4
 ;; Keywords: languages, local, tools, python, environment, conda
 ;; Package-Requires: ((emacs "25.1") (pythonic "0.1.0") (dash "2.13.0") (s "1.11.0") (f "0.18.2"))
@@ -348,7 +348,7 @@ Set for the lifetime of the process.")
     (let* ((default-location (file-name-as-directory (conda-env-default-location)))
            (initial-possibilities (list name (concat default-location name)))
            (possibilities (if (boundp 'venv-location)
-                              (if (stringp 'venv-location)
+                              (if (stringp venv-location)
                                   (cons venv-location initial-possibilities)
                                 (nconc venv-location initial-possibilities))
                             initial-possibilities))
