@@ -4,23 +4,25 @@ Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
 Checking out origin/HEAD
-Checking out da968c24cdbd70aafc4e05032c9c804670fde81c
-Checking out da968c24cdbd70aafc4e05032c9c804670fde81c
+Checking out b137f76ae76dd7c2e9648a352a679099f1b0f101
+Checking out b137f76ae76dd7c2e9648a352a679099f1b0f101
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-build/
-  to /tmp/package-build7I3scs/package-build-20220810.1038
+  to /tmp/package-buildkJSlBf/package-build-20220815.1311
     package-build-badges.el -> package-build-badges.el
     package-build.el -> package-build.el
     package-recipe-mode.el -> package-recipe-mode.el
     package-recipe.el -> package-recipe.el
-Created package-build-20220810.1038.tar containing:
-  package-build-20220810.1038/
-  package-build-20220810.1038/package-build-badges.el
-  package-build-20220810.1038/package-build-pkg.el
-  package-build-20220810.1038/package-build.el
-  package-build-20220810.1038/package-recipe-mode.el
-  package-build-20220810.1038/package-recipe.el
-Built package-build in 6.747s, finished at 2022-08-15T11:11:24+0000
+Created package-build-20220815.1311.tar containing:
+  package-build-20220815.1311/
+  package-build-20220815.1311/package-build-badges.el
+  package-build-20220815.1311/package-build-pkg.el
+  package-build-20220815.1311/package-build.el
+  package-build-20220815.1311/package-recipe-mode.el
+  package-build-20220815.1311/package-recipe.el
+Built package-build in 8.406s, finished at 2022-08-15T14:53:09+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 530 Aug 15 11:11 packages/package-build-20220810.1038.entry
  72K -rw-r--r-- 1 root root 70K Aug 15 11:11 packages/package-build-20220810.1038.tar
+4.0K -rw-r--r-- 1 root root 530 Aug 15 14:53 packages/package-build-20220815.1311.entry
+ 72K -rw-r--r-- 1 root root 70K Aug 15 14:53 packages/package-build-20220815.1311.tar

@@ -3,20 +3,11 @@ Fetcher: github
 Source:  https://github.com/vspinu/sesman.git
 
 Updating /mnt/store/melpa/working/sesman/
-Checking out origin/HEAD
-Checking out e0f555f963c9f02f8e4a50e06fc353eb4c15ee77
-Checking out e0f555f963c9f02f8e4a50e06fc353eb4c15ee77
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sesman/
-  to /tmp/sesmanDIiLll/sesman-20210901.1134
-    sesman-browser.el -> sesman-browser.el
-    sesman.el -> sesman.el
-Created sesman-20210901.1134.tar containing:
-  sesman-20210901.1134/
-  sesman-20210901.1134/sesman-browser.el
-  sesman-20210901.1134/sesman-pkg.el
-  sesman-20210901.1134/sesman.el
-Built sesman in 6.004s, finished at 2022-08-15T11:22:37+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 283 Aug 15 11:22 packages/sesman-20210901.1134.entry
- 72K -rw-r--r-- 1 root root 70K Aug 15 11:22 packages/sesman-20210901.1134.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/vspinu/sesman.git/': Empty reply from server
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
