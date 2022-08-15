@@ -6,10 +6,3 @@ Tabs are currently not supported.
 ; Usage
 
 (hl-indent-scope-mode) ;; activate in the current buffer.
-
-; Developer Notes:
-
-- It's important never to use `char-syntax' when reading characters,
-  as the same character may represent different brackets.
-  (C++ can use <> for angle brackets for as well as operators for e.g.)
-  Instead read the syntax table from the point e.g. `syntax-after'.
