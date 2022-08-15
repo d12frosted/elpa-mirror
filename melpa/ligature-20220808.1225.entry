@@ -1,0 +1,11 @@
+(ligature .
+	  [(20220808 1225)
+	   ((emacs
+	     (28)))
+	   "Display typographical ligatures in major modes" single
+	   ((:commit . "86fce5ce97db83f616fc6915c6610e0334954211")
+	    (:authors
+	     ("Mickey Petersen" . "mickey@masteringemacs.org"))
+	    (:maintainer "Mickey Petersen" . "mickey@masteringemacs.org")
+	    (:keywords "tools" "faces")
+	    (:url . "https://www.github.com/mickeynp/ligature.el"))])

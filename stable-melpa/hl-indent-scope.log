@@ -1,0 +1,28 @@
+Package: hl-indent-scope
+Fetcher: git
+Source:  https://codeberg.org/ideasman42/emacs-hl-indent-scope.git
+
+Updating /mnt/store/melpa/working/hl-indent-scope/
+Checking out origin/HEAD
+Checking out 8deb138941b0b8848afbb2effb36516f44ee44c9
+Checking out 8deb138941b0b8848afbb2effb36516f44ee44c9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hl-indent-scope/
+  to /tmp/hl-indent-scopeywNhPJ/hl-indent-scope-20220814.2238
+    hl-indent-scope-preset-c++-mode.el -> hl-indent-scope-preset-c++-mode.el
+    hl-indent-scope-preset-c-mode.el -> hl-indent-scope-preset-c-mode.el
+    hl-indent-scope-preset-cmake-mode.el -> hl-indent-scope-preset-cmake-mode.el
+    hl-indent-scope-preset-python-mode.el -> hl-indent-scope-preset-python-mode.el
+    hl-indent-scope.el -> hl-indent-scope.el
+Created hl-indent-scope-20220814.2238.tar containing:
+  hl-indent-scope-20220814.2238/
+  hl-indent-scope-20220814.2238/hl-indent-scope-pkg.el
+  hl-indent-scope-20220814.2238/hl-indent-scope-preset-c++-mode.el
+  hl-indent-scope-20220814.2238/hl-indent-scope-preset-c-mode.el
+  hl-indent-scope-20220814.2238/hl-indent-scope-preset-cmake-mode.el
+  hl-indent-scope-20220814.2238/hl-indent-scope-preset-python-mode.el
+  hl-indent-scope-20220814.2238/hl-indent-scope.el
+Built hl-indent-scope in 7.201s, finished at 2022-08-15T07:14:56+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 374 Aug 15 07:14 packages/hl-indent-scope-20220814.2238.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 15 07:14 packages/hl-indent-scope-20220814.2238.tar
