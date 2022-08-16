@@ -6,14 +6,14 @@ Table of Contents
 .. 1. Installation
 .. 2. Start a shared session
 .. 3. Join a session
-.. 4. What if we don't have a public IP?
-.. 5. List active users
-.. 6. List all sessions, and buffer in current session
-.. 7. Stop sharing
-.. 8. Disconnect from a session
-.. 9. Visualizing author of parts of the document
-.. 10. Synchronizing Org folding status
-.. 11. Comint integration
+.. 4. List active users
+.. 5. List all sessions, and buffer in current session
+.. 6. Stop sharing
+.. 7. Disconnect from a session
+.. 8. Visualizing author of parts of the document
+.. 9. Synchronizing Org folding status
+.. 10. Comint integration
+.. 11. What if we don't have a public IP?
 
 
 1 Introduction
@@ -43,6 +43,18 @@ Table of Contents
 
   `crdt.el' is now on GNU ELPA! Just `M-x package-install crdt'.
 
+  *Caution!!!* Please make sure that you and your peers are on the same
+  `crdt.el' version!  It turns out to be one of the most common causes
+  of `crdt.el' not working.  Because currently the network protocol is
+  not stablized, behavior when using mismatched versions is
+  unexpectable.
+  • Strictly speaking, it should work when `crdt-protocol-version' are
+    defined (added after version `0.2.5') and the same on all peers.
+    But why not save some hassle and keep everyone on the latest
+    version.
+  • To upgrade, just `M-x package-reinstall crdt', then preferably
+    restart Emacs. To check your `crdt.el' version, `M-x crdt-version'.
+
 
 2.2 Start a shared session
 ──────────────────────────
@@ -61,15 +73,101 @@ Table of Contents
   6530), optional password and your display name (default to your
   current `(user-full-name)').
 
+  Experimental settings: "Secure Port" specifies TLS port, and "Command
+  Functions" specifies user permissions. It's ok to just use the default
+  values.
+
 
 2.3 Join a session
 ──────────────────
 
   `M-x crdt-connect', then enter address, port, and your display name.
 
+  If the server has provided the permission (this is the default case),
+  connected user may also add their buffers to the session via `M-x
+  crdt-share-buffer'.
 
-2.4 What if we don't have a public IP?
-──────────────────────────────────────
+
+2.4 List active users
+─────────────────────
+
+  In a CRDT shared buffer (either server or client), `M-x
+  crdt-list-users'.
+
+  In the displayed user list, press `RET' on an entry to goto that
+  user's cursor position.  Press `f' to follow that user, and press `f'
+  again or `M-x crdt-stop-follow' to stop following.
+
+  You can also use `M-x crdt-goto-next-user' and `M-x
+  crdt-goto-prev-user' to cycle through users' cursor positions from any
+  CRDT shared buffer (don't need to be in the user list buffer).
+
+
+2.5 List all sessions, and buffer in current session
+────────────────────────────────────────────────────
+
+  `M-x crdt-list-sessions' lists all sessions.
+
+  `M-x crdt-list-buffers' lists all buffers in current session. Or you
+  can also press `RET' in the session list to see buffers in the
+  selected session.
+
+
+2.6 Stop sharing
+────────────────
+
+  `M-x crdt-stop-session' stops a session you've started and disconnect
+  all other users from it.  This will ask for your confirmation,
+  customize `crdt-confirm-stop-session' if you want to disable it.
+
+  You can also press `k' or `d' in the session list (show it by `M-x
+  crdt-list-sessions').
+
+  `M-x crdt-stop-share-buffer' removes current buffer from its CRDT
+  session (this operation is only allowed at server side). You can also
+  press `k' or `d' in the buffer list.
+
+
+2.7 Disconnect from a session
+─────────────────────────────
+
+  `M-x crdt-disconnect', then choose a session to disconnect from.
+
+  You can also press `k' or `d' in the session list (show it by `M-x
+  crdt-list-sessions').
+
+  The server Emacs has the privilege to disconnect a user from a
+  session.  To do so, press `k' or `d' on an entry in the user list
+  (show it by `M-x crdt-list-users').
+
+
+2.8 Visualizing author of parts of the document
+───────────────────────────────────────────────
+
+  Turn on `crdt-visualize-author-mode'. Colored underlines are added to
+  each part of the document, based on which user authored it.
+
+
+2.9 Synchronizing Org folding status
+────────────────────────────────────
+
+  Turn on `crdt-org-sync-overlay-mode'. All peers that have this enabled
+  have their folding status synchronized. Peers without enabling this
+  minor mode are unaffected.
+
+
+2.10 Comint integration
+───────────────────────
+
+  Just go ahead and share you comint REPL buffer! Tested: `shell' and
+  `cmuscheme'.  By default, when sharing a comint buffer, `crdt.el'
+  temporarily reset input history (as in `M-n' `M-p') so others don't
+  spy into your `.bash_history' and alike.  You can customize this
+  behavior using variable `crdt-comint-share-input-history'.
+
+
+2.11 What if we don't have a public IP?
+───────────────────────────────────────
 
   There're various workaround.
 
@@ -121,77 +219,3 @@ Table of Contents
 [Tox] <https://tox.chat>
 
 [their website] <https://www.remlab.net/miredo/>
-
-
-2.5 List active users
-─────────────────────
-
-  In a CRDT shared buffer (either server or client), `M-x
-  crdt-list-users'.
-
-  In the displayed user list, press `RET' on an entry to goto that
-  user's cursor position.  Press `f' to follow that user, and press `f'
-  again or `M-x crdt-stop-follow' to stop following.
-
-
-2.6 List all sessions, and buffer in current session
-────────────────────────────────────────────────────
-
-  `M-x crdt-list-sessions' lists all sessions.
-
-  `M-x crdt-list-buffers' lists all buffers in current session. Or you
-  can also press `RET' in the session list to see buffers in the
-  selected session.
-
-
-2.7 Stop sharing
-────────────────
-
-  `M-x crdt-stop-session' stops a session you've started and disconnect
-  all other users from it.  This will ask for your confirmation,
-  customize `crdt-confirm-stop-session' if you want to disable it.
-
-  You can also press `k' in the session list (show it by `M-x
-  crdt-list-sessions').
-
-  `M-x crdt-stop-share-buffer' removes current buffer from its CRDT
-  session (this operation is only allowed at server side). Or press `k'
-  in the buffer list.
-
-
-2.8 Disconnect from a session
-─────────────────────────────
-
-  `M-x crdt-disconnect', then choose a session to disconnect from.
-
-  You can also press `k' in the session list (show it by `M-x
-  crdt-list-sessions').
-
-  The server Emacs has the privilege to disconnect a user from a
-  session.  To do so, press `k' on an entry in the user list (show it by
-  `M-x crdt-list-users').
-
-
-2.9 Visualizing author of parts of the document
-───────────────────────────────────────────────
-
-  Turn on `crdt-visualize-author-mode'. Colored underlines are added to
-  each part of the document, based on which user authored it.
-
-
-2.10 Synchronizing Org folding status
-─────────────────────────────────────
-
-  Turn on `crdt-org-sync-overlay-mode'. All peers that have this enabled
-  have their folding status synchronized. Peers without enabling this
-  minor mode are unaffected.
-
-
-2.11 Comint integration
-───────────────────────
-
-  Just go ahead and share you comint REPL buffer! Tested: `shell' and
-  `cmuscheme'.  By default, when sharing a comint buffer, `crdt.el'
-  temporarily reset input history (as in `M-n' `M-p') so others don't
-  spy into your `.bash_history' and alike.  You can customize this
-  behavior using variable `crdt-comint-share-input-history'.

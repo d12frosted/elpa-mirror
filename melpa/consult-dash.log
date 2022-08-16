@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://codeberg.org/ravi/consult-dash.git
 
 Updating /mnt/store/melpa/working/consult-dash/
-Checking out origin/HEAD
-Checking out 0eb8e133a12570f482efcf367dcc7887c15def32
-Built consult-dash in 5.965s, finished at 2022-08-16T01:10:00+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.7K Aug 16 01:10 packages/consult-dash-20220621.226.el
-4.0K -rw-r--r-- 1 root root  434 Aug 16 01:10 packages/consult-dash-20220621.226.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ravi/consult-dash.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

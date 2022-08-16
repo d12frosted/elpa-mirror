@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://codeberg.org/contrapunctus/chronometrist-goal.git
 
 Updating /mnt/store/melpa/working/chronometrist-goal/
-Checking out origin/HEAD
-Checking out 6cb939d160f5d5966d7853aa23f3ed7c7ef9df44
-Built chronometrist-goal in 6.193s, finished at 2022-08-16T01:06:18+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Aug 16 01:06 packages/chronometrist-goal-20210510.1831.el
-4.0K -rw-r--r-- 1 root root 531 Aug 16 01:06 packages/chronometrist-goal-20210510.1831.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/contrapunctus/chronometrist-goal.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,34 +3,11 @@ Fetcher: git
 Source:  https://codeberg.org/ideasman42/emacs-cycle-at-point.git
 
 Updating /mnt/store/melpa/working/cycle-at-point/
-Checking out origin/HEAD
-Checking out d12be2e91337096f4fbf36029de57d4119a00e1d
-Checking out d12be2e91337096f4fbf36029de57d4119a00e1d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cycle-at-point/
-  to /tmp/cycle-at-pointD5pW00/cycle-at-point-20220723.646
-    cycle-at-point-find-alphabet.el -> cycle-at-point-find-alphabet.el
-    cycle-at-point-find-integer.el -> cycle-at-point-find-integer.el
-    cycle-at-point-preset-c++-mode.el -> cycle-at-point-preset-c++-mode.el
-    cycle-at-point-preset-c-mode.el -> cycle-at-point-preset-c-mode.el
-    cycle-at-point-preset-cmake-mode.el -> cycle-at-point-preset-cmake-mode.el
-    cycle-at-point-preset-emacs-lisp-mode.el -> cycle-at-point-preset-emacs-lisp-mode.el
-    cycle-at-point-preset-lang-en.el -> cycle-at-point-preset-lang-en.el
-    cycle-at-point-preset-python-mode.el -> cycle-at-point-preset-python-mode.el
-    cycle-at-point.el -> cycle-at-point.el
-Created cycle-at-point-20220723.646.tar containing:
-  cycle-at-point-20220723.646/
-  cycle-at-point-20220723.646/cycle-at-point-find-alphabet.el
-  cycle-at-point-20220723.646/cycle-at-point-find-integer.el
-  cycle-at-point-20220723.646/cycle-at-point-pkg.el
-  cycle-at-point-20220723.646/cycle-at-point-preset-c++-mode.el
-  cycle-at-point-20220723.646/cycle-at-point-preset-c-mode.el
-  cycle-at-point-20220723.646/cycle-at-point-preset-cmake-mode.el
-  cycle-at-point-20220723.646/cycle-at-point-preset-emacs-lisp-mode.el
-  cycle-at-point-20220723.646/cycle-at-point-preset-lang-en.el
-  cycle-at-point-20220723.646/cycle-at-point-preset-python-mode.el
-  cycle-at-point-20220723.646/cycle-at-point.el
-Built cycle-at-point in 7.267s, finished at 2022-08-16T01:11:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 426 Aug 16 01:11 packages/cycle-at-point-20220723.646.entry
- 40K -rw-r--r-- 1 root root 40K Aug 16 01:11 packages/cycle-at-point-20220723.646.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-cycle-at-point.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
