@@ -3,11 +3,20 @@ Fetcher: git
 Source:  https://codeberg.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist-spark/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/contrapunctus/chronometrist.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/dev
+Checking out a8f05bcd051e6c1a1b247c3083be3db9c95c4b8c
+Checking out a8f05bcd051e6c1a1b247c3083be3db9c95c4b8c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chronometrist-spark/
+  to /tmp/chronometrist-sparkZ4v8Ut/chronometrist-spark-20220321.349
+  ! elisp/chronometrist-spark.el -> chronometrist-spark.el
+  ! elisp/chronometrist-spark.org -> chronometrist-spark.org
+Created chronometrist-spark-20220321.349.tar containing:
+  chronometrist-spark-20220321.349/
+  chronometrist-spark-20220321.349/chronometrist-spark-pkg.el
+  chronometrist-spark-20220321.349/chronometrist-spark.el
+  chronometrist-spark-20220321.349/chronometrist-spark.org
+Built chronometrist-spark in 6.840s, finished at 2022-08-16T15:42:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 505 Aug 16 15:42 packages/chronometrist-spark-20220321.349.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 16 15:42 packages/chronometrist-spark-20220321.349.tar

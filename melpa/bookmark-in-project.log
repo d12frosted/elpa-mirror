@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://codeberg.org/ideasman42/emacs-bookmark-in-project.git
 
 Updating /mnt/store/melpa/working/bookmark-in-project/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-bookmark-in-project.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ccffde03b57d9b16fff59188d8e4090bf64d46d6
+Built bookmark-in-project in 5.963s, finished at 2022-08-16T15:39:33+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Aug 16 15:39 packages/bookmark-in-project-20220708.211.el
+4.0K -rw-r--r-- 1 root root 438 Aug 16 15:39 packages/bookmark-in-project-20220708.211.entry

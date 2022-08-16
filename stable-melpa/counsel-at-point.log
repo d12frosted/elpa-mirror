@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://codeberg.org/ideasman42/emacs-counsel-at-point.git
 
 Updating /mnt/store/melpa/working/counsel-at-point/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-counsel-at-point.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 65a7244ad6342ac79c612fbc6e5ca54759ebaf03
+Built counsel-at-point in 5.540s, finished at 2022-08-16T15:46:13+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Aug 16 15:46 packages/counsel-at-point-20220731.2354.el
+4.0K -rw-r--r-- 1 root root  449 Aug 16 15:46 packages/counsel-at-point-20220731.2354.entry

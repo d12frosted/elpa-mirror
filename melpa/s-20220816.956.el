@@ -4,8 +4,8 @@
 
 ;; Author: Magnar Sveen <magnars@gmail.com>
 ;; Version: 1.12.0
-;; Package-Version: 20220813.351
-;; Package-Commit: 39340b58c024b08ea6ef812ef26f37bacbeb2d12
+;; Package-Version: 20220816.956
+;; Package-Commit: 7f25ead4b0deac6f49d07e0c3b8859adedb28207
 ;; Keywords: strings
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -235,9 +235,9 @@ When not specified, ELLIPSIS defaults to ‘...’."
   (declare (pure t) (side-effect-free t))
   (let ((extra (max 0 (- len (length s)))))
     (concat
-     (make-string (ceiling extra 2) ? )
+     (make-string (ceiling extra 2) ?\s)
      s
-     (make-string (floor extra 2) ? ))))
+     (make-string (floor extra 2) ?\s))))
 
 (defun s-pad-left (len padding s)
   "If S is shorter than LEN, pad it with PADDING on the left."
@@ -542,14 +542,18 @@ When START is non-nil the search will start at that index."
 (defun s-slice-at (regexp s)
   "Slices S up at every index matching REGEXP."
   (declare (side-effect-free t))
-  (if (= 0 (length s)) (list "")
-    (save-match-data
-      (let (i)
-        (setq i (string-match regexp s 1))
-        (if i
-            (cons (substring s 0 i)
-                  (s-slice-at regexp (substring s i)))
-          (list s))))))
+  (if (s-blank? s)
+      (list s)
+    (let (ss)
+      (while (not (s-blank? s))
+        (save-match-data
+          (let ((i (string-match regexp s 1)))
+            (if i
+                (setq ss (cons (substring s 0 i) ss)
+                      s (substring s i))
+              (setq ss (cons s ss)
+                    s "")))))
+      (nreverse ss))))
 
 (defun s-split-words (s)
   "Split S into list of words."
@@ -586,6 +590,11 @@ When START is non-nil the search will start at that index."
   "Convert S to dashed-words."
   (declare (side-effect-free t))
   (s-join "-" (mapcar 'downcase (s-split-words s))))
+
+(defun s-spaced-words (s)
+  "Convert S to spaced words."
+  (declare (side-effect-free t))
+  (s-join " " (s-split-words s)))
 
 (defun s-capitalized-words (s)
   "Convert S to Capitalized words."

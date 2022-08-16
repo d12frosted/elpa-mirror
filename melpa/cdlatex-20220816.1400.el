@@ -3,8 +3,8 @@
 ;;
 ;; Author: Carsten Dominik <carsten.dominik@gmail.com>
 ;; Keywords: tex
-;; Package-Version: 20220815.1610
-;; Package-Commit: 3ad5ac4c5702a6a97f69a14ad58ca63f9eab2a3a
+;; Package-Version: 20220816.1400
+;; Package-Commit: cf1dad9f993f619c987d84181167ff937e576909
 ;; Version: 4.12
 ;;
 ;; This file is not part of GNU Emacs.
@@ -852,7 +852,10 @@ When pressed twice, make the sub/superscript roman."
   (interactive)
   (if (and cdlatex-make-sub-superscript-roman-if-pressed-twice
            (equal this-command last-command))
-      (insert "\\rm ")
+      (progn
+        ;; (insert "\\rm ")
+        (insert "\\mathrm{}")
+        (backward-char 1))
     (if (cdlatex-number-of-backslashes-is-odd)
         ;; Quoted
         (insert (event-basic-type last-command-event))
