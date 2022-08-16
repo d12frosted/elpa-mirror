@@ -1,0 +1,19 @@
+(boogie-friends .
+		[(20220815 1808)
+		 ((cl-lib
+		   (0 5))
+		  (dash
+		   (2 10 0))
+		  (flycheck
+		   (0 23))
+		  (yasnippet
+		   (0 9 0 1))
+		  (company
+		   (0 8 12)))
+		 "A collection of programming modes for Boogie, Dafny, and Z3 (SMTLIB v2)." tar
+		 ((:commit . "986458f66a4f306e4697b71806c9a797940cf92c")
+		  (:authors
+		   ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
+		  (:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com")
+		  (:keywords "convenience" "languages")
+		  (:url . "https://github.com/boogie-org/boogie-friends/"))])
