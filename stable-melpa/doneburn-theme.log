@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/manuel-uberti/doneburn-theme.git
 
 Updating /mnt/store/melpa/working/doneburn-theme/
-Checking out origin/HEAD
-Checking out f2307b883d6b94b741662dcd160fb7ee24588314
-Built doneburn-theme in 5.273s, finished at 2022-08-16T15:51:31+0000
- ✓ Success:
- 64K -rwxr-xr-x 1 root root 61K Aug 16 15:51 packages/doneburn-theme-20220720.1218.el
-4.0K -rw-r--r-- 1 root root 395 Aug 16 15:51 packages/doneburn-theme-20220720.1218.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

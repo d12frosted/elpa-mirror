@@ -4,7 +4,7 @@
 ;; Maintainer: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Keywords: docs, convenience
 ;; Package-Version: 20220814.1902
-;; Package-Commit: 80f1933d686bdeec09f2adb8cdf491ff849b3e9b
+;; Package-Commit: 527974b7a23141d7070c04923fd0e6cdbdc3b242
 ;; License: GPL-3.0-or-later
 ;; Version: 0.6.2
 ;; Package-Requires: ((emacs "26.1") (consult "0.18"))

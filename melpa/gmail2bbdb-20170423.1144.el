@@ -3,6 +3,8 @@
 ;; Copyright (C) 2014, 2015 Chen Bin
 ;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: http://github.com/redguardtoo/gmail2bbdb
+;; Package-Version: 20170423.1144
+;; Package-Commit: a84fa385cfaec7fc5f1518c368e52722da139f99
 ;; Keywords: vcard bbdb email contact gmail
 ;; Version: 0.0.6
 

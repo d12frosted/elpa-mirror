@@ -1,0 +1,25 @@
+(citeproc .
+	  [(20220816 1732)
+	   ((emacs
+	     (26))
+	    (dash
+	     (2 13 0))
+	    (s
+	     (1 12 0))
+	    (f
+	     (0 18 0))
+	    (queue
+	     (0 2))
+	    (string-inflection
+	     (1 0))
+	    (org
+	     (9))
+	    (parsebib
+	     (2 4)))
+	   "A CSL 1.0.2 Citation Processor" tar
+	   ((:commit . "36c4ecdc485a2f264297bb60f82c0afe1a1d64d3")
+	    (:authors
+	     ("András Simonyi" . "andras.simonyi@gmail.com"))
+	    (:maintainer "András Simonyi" . "andras.simonyi@gmail.com")
+	    (:keywords "bib")
+	    (:url . "https://github.com/andras-simonyi/citeproc-el"))])
