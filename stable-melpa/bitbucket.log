@@ -3,24 +3,12 @@ Fetcher: github
 Source:  https://github.com/tjaartvdwalt/bitbucket.el.git
 
 Updating /mnt/store/melpa/working/bitbucket/
-Checking out origin/HEAD
-Checking out 5e663da1bd38a14c1ecf4d66a79d4321ac833bcf
-Checking out 5e663da1bd38a14c1ecf4d66a79d4321ac833bcf
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/bitbucket/
-  to /tmp/bitbucketYyq7TA/bitbucket-20170405.446
-    bitbucket-api.el -> bitbucket-api.el
-    bitbucket-http.el -> bitbucket-http.el
-    bitbucket-issues.el -> bitbucket-issues.el
-    bitbucket.el -> bitbucket.el
-Created bitbucket-20170405.446.tar containing:
-  bitbucket-20170405.446/
-  bitbucket-20170405.446/bitbucket-api.el
-  bitbucket-20170405.446/bitbucket-http.el
-  bitbucket-20170405.446/bitbucket-issues.el
-  bitbucket-20170405.446/bitbucket-pkg.el
-  bitbucket-20170405.446/bitbucket.el
-Built bitbucket in 5.982s, finished at 2022-08-17T13:31:48+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 453 Aug 17 13:31 packages/bitbucket-20170405.446.entry
- 20K -rw-r--r-- 1 root root 20K Aug 17 13:31 packages/bitbucket-20170405.446.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

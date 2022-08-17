@@ -3,9 +3,13 @@ Fetcher: github
 Source:  https://github.com/riscy/bifocal-mode.git
 
 Updating /mnt/store/melpa/working/bifocal/
-Checking out origin/HEAD
-Checking out de8d09b08b0b30714c4f9b98c97e9577d47b9be6
-Built bifocal in 5.791s, finished at 2022-08-17T13:31:39+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Aug 17 13:31 packages/bifocal-20200325.539.el
-4.0K -rw-r--r-- 1 root root 265 Aug 17 13:31 packages/bifocal-20200325.539.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/riscy/bifocal-mode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
