@@ -8,7 +8,7 @@
 ;;
 ;;; URL: https://github.com/jasonm23/autothemer
 ;; Package-Version: 20220809.906
-;; Package-Commit: 3223cd8867fb75a109e41ccce98ab0e89d0a4f1b
+;; Package-Commit: c5901014ebd361322e479c26a311d9bb6918cd23
 ;;; Version: 0.2.5
 ;;; Package-Requires: ((dash "2.10.0") (emacs "24") (cl-lib "0.5"))
 
