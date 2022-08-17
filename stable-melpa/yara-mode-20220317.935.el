@@ -5,7 +5,7 @@
 ;; Author: binjo.cn@gmail.com
 ;; Version: $Id: yara-mode.el,v 0.0 2012/10/16 14:11:51 binjo Exp $
 ;; Package-Version: 20220317.935
-;; Package-Commit: 4c959b300ce52665c92e04e524dda5ed051c34f3
+;; Package-Commit: 8a9738f2d4b3454a01c755ca690cdef881f12843
 ;; Keywords: yara
 ;; X-URL: not distributed yet
 ;; Package-Requires: ((emacs "24"))
