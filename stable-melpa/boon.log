@@ -4,11 +4,11 @@ Source:  https://github.com/jyp/boon.git
 
 Updating /mnt/store/melpa/working/boon/
 Checking out origin/HEAD
-Checking out db7b6083d390e3febf82f9af5782e1a36d30093c
-Checking out db7b6083d390e3febf82f9af5782e1a36d30093c
+Checking out 225c8b9d979182e7ee27ff2eb33657180971a82c
+Checking out 225c8b9d979182e7ee27ff2eb33657180971a82c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/boon/
-  to /tmp/boonuj6EG2/boon-20220502.1850
+  to /tmp/boon2QCBMk/boon-20220816.2151
     boon-arguments.el -> boon-arguments.el
     boon-colemak.el -> boon-colemak.el
     boon-core.el -> boon-core.el
@@ -30,30 +30,32 @@ Copying files (->) and directories (=>)
     boon-utils.el -> boon-utils.el
     boon-workman.el -> boon-workman.el
     boon.el -> boon.el
-Created boon-20220502.1850.tar containing:
-  boon-20220502.1850/
-  boon-20220502.1850/boon-arguments.el
-  boon-20220502.1850/boon-colemak.el
-  boon-20220502.1850/boon-core.el
-  boon-20220502.1850/boon-dvorak.el
-  boon-20220502.1850/boon-emacs.el
-  boon-20220502.1850/boon-hl.el
-  boon-20220502.1850/boon-keys.el
-  boon-20220502.1850/boon-loaddefs.el
-  boon-20220502.1850/boon-main.el
-  boon-20220502.1850/boon-moves.el
-  boon-20220502.1850/boon-pkg.el
-  boon-20220502.1850/boon-powerline.el
-  boon-20220502.1850/boon-qwerty.el
-  boon-20220502.1850/boon-qwertz.el
-  boon-20220502.1850/boon-regs.el
-  boon-20220502.1850/boon-search.el
-  boon-20220502.1850/boon-spaceline.el
-  boon-20220502.1850/boon-tutorial.el
-  boon-20220502.1850/boon-utils.el
-  boon-20220502.1850/boon-workman.el
-  boon-20220502.1850/boon.el
-Built boon in 6.746s, finished at 2022-08-16T19:24:32+0000
+Created boon-20220816.2151.tar containing:
+  boon-20220816.2151/
+  boon-20220816.2151/boon-arguments.el
+  boon-20220816.2151/boon-colemak.el
+  boon-20220816.2151/boon-core.el
+  boon-20220816.2151/boon-dvorak.el
+  boon-20220816.2151/boon-emacs.el
+  boon-20220816.2151/boon-hl.el
+  boon-20220816.2151/boon-keys.el
+  boon-20220816.2151/boon-loaddefs.el
+  boon-20220816.2151/boon-main.el
+  boon-20220816.2151/boon-moves.el
+  boon-20220816.2151/boon-pkg.el
+  boon-20220816.2151/boon-powerline.el
+  boon-20220816.2151/boon-qwerty.el
+  boon-20220816.2151/boon-qwertz.el
+  boon-20220816.2151/boon-regs.el
+  boon-20220816.2151/boon-search.el
+  boon-20220816.2151/boon-spaceline.el
+  boon-20220816.2151/boon-tutorial.el
+  boon-20220816.2151/boon-utils.el
+  boon-20220816.2151/boon-workman.el
+  boon-20220816.2151/boon.el
+Built boon in 5.800s, finished at 2022-08-16T23:09:13+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  247 Aug 16 19:24 packages/boon-20220502.1850.entry
 172K -rw-r--r-- 1 root root 170K Aug 16 19:24 packages/boon-20220502.1850.tar
+4.0K -rw-r--r-- 1 root root  247 Aug 16 23:09 packages/boon-20220816.2151.entry
+160K -rw-r--r-- 1 root root 160K Aug 16 23:09 packages/boon-20220816.2151.tar

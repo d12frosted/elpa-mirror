@@ -4,6 +4,8 @@
 
 ;; Author: Yuta Yamada <cokesboy"at"gmail.com>
 ;; URL: https://github.com/logaling/logalimacs
+;; Package-Version: 20131021.1829
+;; Package-Commit: 8286e39502250fc6c3c6656a7f46a8eee8e9a713
 ;; Version: 1.0.1
 ;; Package-Requires: ((popwin "0.6.2") (popup "0.5.0") (stem "20130120"))
 ;; Keywords: translation, logaling-command
