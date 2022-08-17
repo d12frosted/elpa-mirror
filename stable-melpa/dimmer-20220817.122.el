@@ -5,8 +5,8 @@
 ;; Filename: dimmer.el
 ;; Author: Neil Okamoto
 ;; Version: 0.4.2
-;; Package-Version: 20211123.1536
-;; Package-Commit: 2f915b100044e09dd647b22085e1696249c4b115
+;; Package-Version: 20220817.122
+;; Package-Commit: a5b697580e5aed6168b571ae3d925753428284f8
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/gonewest818/dimmer.el
 ;; Keywords: faces, editing
@@ -182,7 +182,7 @@ of dimmed buffers."
   "Should windows be dimmed when all Emacs frame(s) lose focus?
 
 Restart Emacs after changing this configuration.
-When configuring dimmer in your init scripts, pleae be sure to
+When configuring dimmer in your init scripts, please be sure to
 change this setting before calling the function `dimmer-mode'."
   :type '(boolean)
   :group 'dimmer)

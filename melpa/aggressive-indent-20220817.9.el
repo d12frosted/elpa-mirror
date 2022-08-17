@@ -4,8 +4,8 @@
 
 ;; Author: Artur Malabarba <emacs@endlessparentheses.com>
 ;; URL: https://github.com/Malabarba/aggressive-indent-mode
-;; Package-Version: 20210701.2224
-;; Package-Commit: cb416faf61c46977c06cf9d99525b04dc109a33c
+;; Package-Version: 20220817.9
+;; Package-Commit: 70b3f0add29faff41e480e82930a231d88ee9ca7
 ;; Version: 1.10.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: indent lisp maint tools
@@ -140,7 +140,7 @@ commands will NOT be followed by a re-indent."
   :package-version '(aggressive-indent . "0.1"))
 
 (defcustom aggressive-indent-protected-current-commands
-  '(query-replace-regexp query-replace)
+  '(query-replace-regexp query-replace exit-minibuffer)
   "Like `aggressive-indent-protected-commands', but for the current command.
 For instance, with the default value, this variable prevents
 indentation during `query-replace' (but not after)."
