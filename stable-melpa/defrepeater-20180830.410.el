@@ -4,8 +4,6 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: http://github.com/alphapapa/defrepeater.el
-;; Package-Version: 20180830.410
-;; Package-Commit: 9c027a2561fe141dcfb79f75fcaee36cd0386ec1
 ;; Version: 1.0-pre
 ;; Package-Requires: ((emacs "25.2") (s "1.12.0"))
 ;; Keywords: convenience
