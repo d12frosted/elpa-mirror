@@ -3,11 +3,24 @@ Fetcher: github
 Source:  https://github.com/jwiegley/emacs-async.git
 
 Updating /mnt/store/melpa/working/async/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/jwiegley/emacs-async.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 6d164db151c4ab68242662342f71741b8594762f
+Checking out 6d164db151c4ab68242662342f71741b8594762f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/async/
+  to /tmp/asyncLUt4Tr/async-20220807.1541
+    async-bytecomp.el -> async-bytecomp.el
+    async.el -> async.el
+    dired-async.el -> dired-async.el
+    smtpmail-async.el -> smtpmail-async.el
+Created async-20220807.1541.tar containing:
+  async-20220807.1541/
+  async-20220807.1541/async-bytecomp.el
+  async-20220807.1541/async-pkg.el
+  async-20220807.1541/async.el
+  async-20220807.1541/dired-async.el
+  async-20220807.1541/smtpmail-async.el
+Built async in 6.161s, finished at 2022-08-17T20:57:32+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 344 Aug 17 20:57 packages/async-20220807.1541.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 17 20:57 packages/async-20220807.1541.tar

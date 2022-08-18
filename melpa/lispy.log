@@ -4,11 +4,11 @@ Source:  https://github.com/abo-abo/lispy.git
 
 Updating /mnt/store/melpa/working/lispy/
 Checking out origin/HEAD
-Checking out 53b93630d6bd4003038e17ce7b6ad75a41e057cb
-Checking out 53b93630d6bd4003038e17ce7b6ad75a41e057cb
+Checking out 887a5a0a296fb361bdc6bb56974a5ac901c5ad21
+Checking out 887a5a0a296fb361bdc6bb56974a5ac901c5ad21
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lispy/
-  to /tmp/lispyp3TPNg/lispy-20220817.1628
+  to /tmp/lispythhUUa/lispy-20220817.1839
     elpa.el -> elpa.el
     le-clojure.el -> le-clojure.el
     le-hy.el -> le-hy.el
@@ -26,28 +26,28 @@ Copying files (->) and directories (=>)
     lispy-clojure.clj -> lispy-clojure.clj
     lispy-clojure.cljs -> lispy-clojure.cljs
     lispy-python.py -> lispy-python.py
-Created lispy-20220817.1628.tar containing:
-  lispy-20220817.1628/
-  lispy-20220817.1628/elpa.el
-  lispy-20220817.1628/le-clojure.el
-  lispy-20220817.1628/le-hy.el
-  lispy-20220817.1628/le-js.el
-  lispy-20220817.1628/le-julia.el
-  lispy-20220817.1628/le-lisp.el
-  lispy-20220817.1628/le-python.el
-  lispy-20220817.1628/le-racket.el
-  lispy-20220817.1628/le-scheme.el
-  lispy-20220817.1628/lispy-clojure.clj
-  lispy-20220817.1628/lispy-clojure.cljs
-  lispy-20220817.1628/lispy-inline.el
-  lispy-20220817.1628/lispy-occur.el
-  lispy-20220817.1628/lispy-pkg.el
-  lispy-20220817.1628/lispy-python.py
-  lispy-20220817.1628/lispy-tags.el
-  lispy-20220817.1628/lispy.el
-Built lispy in 10.704s, finished at 2022-08-17T18:01:07+0000
+Created lispy-20220817.1839.tar containing:
+  lispy-20220817.1839/
+  lispy-20220817.1839/elpa.el
+  lispy-20220817.1839/le-clojure.el
+  lispy-20220817.1839/le-hy.el
+  lispy-20220817.1839/le-js.el
+  lispy-20220817.1839/le-julia.el
+  lispy-20220817.1839/le-lisp.el
+  lispy-20220817.1839/le-python.el
+  lispy-20220817.1839/le-racket.el
+  lispy-20220817.1839/le-scheme.el
+  lispy-20220817.1839/lispy-clojure.clj
+  lispy-20220817.1839/lispy-clojure.cljs
+  lispy-20220817.1839/lispy-inline.el
+  lispy-20220817.1839/lispy-occur.el
+  lispy-20220817.1839/lispy-pkg.el
+  lispy-20220817.1839/lispy-python.py
+  lispy-20220817.1839/lispy-tags.el
+  lispy-20220817.1839/lispy.el
+Built lispy in 8.143s, finished at 2022-08-17T21:44:47+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  430 Aug 17 14:15 packages/lispy-20220804.1946.entry
-512K -rw-r--r-- 1 root root 510K Aug 17 14:15 packages/lispy-20220804.1946.tar
 4.0K -rw-r--r-- 1 root root  430 Aug 17 18:01 packages/lispy-20220817.1628.entry
 512K -rw-r--r-- 1 root root 510K Aug 17 18:01 packages/lispy-20220817.1628.tar
+4.0K -rw-r--r-- 1 root root  430 Aug 17 21:44 packages/lispy-20220817.1839.entry
+512K -rw-r--r-- 1 root root 510K Aug 17 21:44 packages/lispy-20220817.1839.tar

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/lucaswerkmeister/ceylon-mode.git
 
 Updating /mnt/store/melpa/working/ceylon-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/lucaswerkmeister/ceylon-mode.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 948515672bc596dc118e8e3ede3ede5ec6a3c95a
+Built ceylon-mode in 10.246s, finished at 2022-08-17T21:02:48+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Aug 17 21:02 packages/ceylon-mode-20180606.1324.el
+4.0K -rw-r--r-- 1 root root 437 Aug 17 21:02 packages/ceylon-mode-20180606.1324.entry

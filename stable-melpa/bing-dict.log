@@ -3,12 +3,20 @@ Fetcher: github
 Source:  https://github.com/cute-jumper/bing-dict.el.git
 
 Updating /mnt/store/melpa/working/bing-dict/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 1d581aaa9622b34f8fb83af5579fa252aa24cfef
+Checking out 1d581aaa9622b34f8fb83af5579fa252aa24cfef
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bing-dict/
+  to /tmp/bing-dicteT4GLA/bing-dict-20200216.110
+    bing-dict-cache.el -> bing-dict-cache.el
+    bing-dict.el -> bing-dict.el
+Created bing-dict-20200216.110.tar containing:
+  bing-dict-20200216.110/
+  bing-dict-20200216.110/bing-dict-cache.el
+  bing-dict-20200216.110/bing-dict-pkg.el
+  bing-dict-20200216.110/bing-dict.el
+Built bing-dict in 6.005s, finished at 2022-08-17T20:59:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 371 Aug 17 20:59 packages/bing-dict-20200216.110.entry
+ 32K -rw-r--r-- 1 root root 30K Aug 17 20:59 packages/bing-dict-20200216.110.tar

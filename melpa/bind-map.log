@@ -3,13 +3,9 @@ Fetcher: github
 Source:  https://github.com/justbur/emacs-bind-map.git
 
 Updating /mnt/store/melpa/working/bind-map/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/justbur/emacs-bind-map.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 510a24138d8de3b8df0783f1ac493a551fc9bd74
+Built bind-map in 4.636s, finished at 2022-08-17T20:59:54+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Aug 17 20:59 packages/bind-map-20220108.228.el
+4.0K -rw-r--r-- 1 root root 357 Aug 17 20:59 packages/bind-map-20220108.228.entry
