@@ -8,8 +8,6 @@
 ;; Homepage: https://github.com/Boruch-Baum/emacs-key-assist
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Keywords: abbrev convenience docs help
-;; Package-Version: 20210722.758
-;; Package-Commit: 8e5cd089e0b2fedec57c55eeff74cdb6121441aa
 ;; Package: key-assist
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.3"))
