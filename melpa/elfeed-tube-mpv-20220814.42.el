@@ -5,7 +5,7 @@
 ;; Author: Karthik Chikmagalur <karthikchikmagalur@gmail.com>
 ;; version: 0.10
 ;; Package-Version: 20220814.42
-;; Package-Commit: 589836ddab309a7b47a94725b230aa92ac417b34
+;; Package-Commit: 395d8add1b090bae075b0f918add0078a2ca9759
 ;; Keywords: news, hypermedia
 ;; Package-Requires: ((emacs "27.1") (elfeed-tube "0.10") (mpv "0.2.0"))
 ;; URL: https://github.com/karthink/elfeed-tube
