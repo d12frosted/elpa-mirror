@@ -1,0 +1,17 @@
+(paperless .
+	   [(20220819 226)
+	    ((emacs
+	      (24 4))
+	     (f
+	      (0 11 0))
+	     (s
+	      (1 10 0))
+	     (cl-lib
+	      (0 6 1)))
+	    "A major mode for sorting and filing PDF documents." tar
+	    ((:commit . "f230acbc01588bb2ec99426832099b7fb7bad6c0")
+	     (:authors
+	      ("Anthony Green" . "green@moxielogic.com"))
+	     (:maintainer "Anthony Green" . "green@moxielogic.com")
+	     (:keywords "pdf" "convenience")
+	     (:url . "http://github.com/atgreen/paperless"))])

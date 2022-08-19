@@ -3,6 +3,8 @@
 ;; Copyright (C) 2022 Jordan Besly
 ;;
 ;; Version: 0.0.1
+;; Package-Version: 20220707.1006
+;; Package-Commit: fea64be77d413ef3d8442a9699b3bfc53859ae80
 ;; Keywords: processes, terminals
 ;; URL: https://github.com/p3r7/norns.el
 ;; Package-Requires: ((emacs "27.1")(dash "2.17.0")(s "1.12.0")(f "0.20.0")(request "0.3.2")(websocket "1.13"))

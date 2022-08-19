@@ -5,7 +5,7 @@
 ;; Author: Justin Talbott <justin@waymondo.com>
 ;; Keywords: convenience, tools, extensions
 ;; Package-Version: 20220807.1556
-;; Package-Commit: ec3941537007cba01c2e15022e2dbdf7dde866ec
+;; Package-Commit: 8a3d29e433d97cfa5612e7bc686ce7c0d24b8f47
 ;; URL: https://github.com/jwiegley/use-package
 ;; Version: 0.2.1
 ;; Package-Requires: ((use-package "2.1") (bind-key "1.0") (bind-chord "0.2") (key-chord "0.6"))
