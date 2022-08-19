@@ -11,25 +11,32 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `pulsar' (or `pulsar.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.4.0,
-released on 2022-07-19.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.5.0,
+released on 2022-08-19.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.5.0-dev.
+Current development target is 0.6.0-dev.
 
-⁃ Homepage: <https://protesilaos.com/emacs/pulsar>.
-⁃ Git repository: <https://git.sr.ht/~protesilaos/pulsar>.
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/pulsar>.
+⁃ Package name (GNU ELPA): `pulsar'
+⁃ Official manual: <https://protesilaos.com/emacs/pulsar>
+⁃ Change log: <https://protesilaos.com/emacs/pulsar-changelog>
+⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/pulsar>
+  • Mirrors:
+    ⁃ GitHub: <https://github.com/protesilaos/pulsar>
+    ⁃ GitLab: <https://gitlab.com/protesilaos/pulsar>
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/pulsar>
 
 Table of Contents
 ─────────────────
 
 1. COPYING
 2. Overview
+.. 1. Convenience functions
 3. Installation
 .. 1. GNU ELPA package
 .. 2. Manual installation
 4. Sample configuration
+.. 1. Use pulsar with next-error
 5. Integration with other packages
 6. Acknowledgements
 7. GNU Free Documentation License
@@ -66,11 +73,6 @@ Table of Contents
   when either `pulsar-mode' (buffer-local) or `pulsar-global-mode' is
   enabled.
 
-  There is no need to add all functions that affect the active window to
-  the `pulsar-pulse-functions'.  Instead, keep the user option
-  `pulsar-pulse-on-window-change' in its default non-nil value.  It will
-  pulse the current line whenever the active window changes.
-
   The overall duration of the highlight is determined by a combination
   of `pulsar-delay' and `pulsar-iterations'.  The latter determines the
   number of blinks in a pulse, while the former sets their delay in
@@ -102,6 +104,31 @@ Table of Contents
   Why the name “pulsar”?  It sounds like “pulse” and is a recognisable
   word.  Though if you need a backronym, consider “Pulsar Unquestionably
   Luminates, Strictly Absent the Radiation”.
+
+
+2.1 Convenience functions
+─────────────────────────
+
+  Depending on the user’s workflow, there may be a need for differently
+  colored pulses.  These are meant to provide an ad-hoc deviation from
+  the standard style of the command `pulsar-pulse-line' (which is
+  governed by the user option `pulsar-face').  Pulsar thus provides the
+  following for the user’s convenience:
+
+  • `pulsar-pulse-line-red'
+
+  • `pulsar-pulse-line-green'
+
+  • `pulsar-pulse-line-yellow'
+
+  • `pulsar-pulse-line-blue'
+
+  • `pulsar-pulse-line-magenta'
+
+  • `pulsar-pulse-line-cyan'
+
+  These can be called with `M-x', assigned to a hook and/or key binding,
+  or be incorporated in custom functions.
 
 
 3 Installation
@@ -167,43 +194,10 @@ Table of Contents
   ┌────
   │ (require 'pulsar)
   │ 
-  │ (setq pulsar-pulse-functions
-  │       ;; NOTE 2022-04-09: The commented out functions are from before
-  │       ;; the introduction of `pulsar-pulse-on-window-change'.  Try that
-  │       ;; instead.
-  │       '(recenter-top-bottom
-  │ 	move-to-window-line-top-bottom
-  │ 	reposition-window
-  │ 	;; bookmark-jump
-  │ 	;; other-window
-  │ 	;; delete-window
-  │ 	;; delete-other-windows
-  │ 	forward-page
-  │ 	backward-page
-  │ 	scroll-up-command
-  │ 	scroll-down-command
-  │ 	;; windmove-right
-  │ 	;; windmove-left
-  │ 	;; windmove-up
-  │ 	;; windmove-down
-  │ 	;; windmove-swap-states-right
-  │ 	;; windmove-swap-states-left
-  │ 	;; windmove-swap-states-up
-  │ 	;; windmove-swap-states-down
-  │ 	;; tab-new
-  │ 	;; tab-close
-  │ 	;; tab-next
-  │ 	org-next-visible-heading
-  │ 	org-previous-visible-heading
-  │ 	org-forward-heading-same-level
-  │ 	org-backward-heading-same-level
-  │ 	outline-backward-same-level
-  │ 	outline-forward-same-level
-  │ 	outline-next-visible-heading
-  │ 	outline-previous-visible-heading
-  │ 	outline-up-heading))
+  │ ;; Check the default value of `pulsar-pulse-functions'.  That is where
+  │ ;; you add more commands that should cause a pulse after they are
+  │ ;; invoked
   │ 
-  │ (setq pulsar-pulse-on-window-change t)
   │ (setq pulsar-pulse t)
   │ (setq pulsar-delay 0.055)
   │ (setq pulsar-iterations 10)
@@ -230,6 +224,21 @@ Table of Contents
   │ (let ((map global-map))
   │   (define-key map (kbd "C-c h p") #'pulsar-pulse-line)
   │   (define-key map (kbd "C-c h h") #'pulsar-highlight-line))
+  └────
+
+
+4.1 Use pulsar with next-error
+──────────────────────────────
+
+  By default, the `n' and `p' keys in Emacs’ compilation buffers
+  (e.g. the results of a `grep' search) produce a highlight for the
+  locus of the given match.  Due to how the code is implemented, we
+  cannot use Pulsar’s standard mechanism to trigger a pulse after the
+  match is highlighted.  Instead, the user must add this to their
+  configuration in lieu of a Pulsar-level solution that “just works”:
+
+  ┌────
+  │ (add-hook 'next-error-hook #'pulsar-pulse-line)
   └────
 
 
@@ -271,8 +280,8 @@ Table of Contents
         Aymeric Agon-Rambosson, Daniel Mendler, Ivan Popovych, JD Smith.
 
   Ideas and user feedback
-        Mark Barton, Petter Storvik, Rudolf Adamkovič, Toon Claes, and
-        user kb.
+        Duy Nguyen, Mark Barton, Petter Storvik, Rudolf Adamkovič, Toon
+        Claes, and users djl, kb.
 
 
 7 GNU Free Documentation License

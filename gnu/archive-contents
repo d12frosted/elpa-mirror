@@ -946,7 +946,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "cf29c278e874f0147c8fcd9d0513a0d59972f91d"))])
  (ef-themes .
-	    [(0 2 0)
+	    [(0 2 1)
 	     ((emacs
 	       (28 1)))
 	     "Colorful and legible themes" tar
@@ -955,7 +955,7 @@
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "6815d0c5398a1a0312b21f18cf4ad6200fa4831a"))])
+	      (:commit . "c124ee310c5baa1789e8c4a8d9a597729593b703"))])
  (eglot .
 	[(1 8)
 	 ((emacs
@@ -2449,7 +2449,7 @@
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pulsar .
-	 [(0 4 0)
+	 [(0 5 0)
 	  ((emacs
 	    (27 1)))
 	  "Pulse highlight on demand or after select functions" tar
@@ -2458,7 +2458,7 @@
 	   (:maintainer "Pulsar Development" . "~protesilaos/pulsar@lists.sr.ht")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "1b91e34af63240fcfc02e267d740a78590f1f2de"))])
+	   (:commit . "e01a8f7e80c5c83dfcfb87b10e0213d4963e4d15"))])
  (pyim .
        [(5 2 3)
 	((emacs

@@ -152,16 +152,14 @@
 	  ("Damien Doligez" . "damien.doligez@inria.fr"))
 	 (:keywords "ocaml"))])
  (cdlatex .
-	  [(4 12)
-	   ((auctex
-	     (9 9)))
-	   "Fast input methods for LaTeX environments and math" tar
+	  [(4 13)
+	   nil "Fast input methods for LaTeX environments and math" tar
 	   ((:keywords "tex")
 	    (:maintainer "Carsten Dominik" . "carsten.dominik@gmail.com")
 	    (:authors
 	     ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
-	    (:commit . "7791fa94d509f56ed671055e856c5d00c788dd7e"))])
+	    (:commit . "43c047919d2aef0cce5571830e01ebc83d4ea0f8"))])
  (cider .
 	[(1 4 1)
 	 ((emacs
