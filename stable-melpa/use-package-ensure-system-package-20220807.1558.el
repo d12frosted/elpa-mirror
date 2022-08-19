@@ -5,7 +5,7 @@
 ;; Author: Justin Talbott <justin@waymondo.com>
 ;; Keywords: convenience, tools, extensions
 ;; Package-Version: 20220807.1558
-;; Package-Commit: 8a3d29e433d97cfa5612e7bc686ce7c0d24b8f47
+;; Package-Commit: e2d173b1200865a9efd5c2066831a230497582c0
 ;; URL: https://github.com/waymondo/use-package-ensure-system-package
 ;; Version: 0.2
 ;; Package-Requires: ((use-package "2.1") (system-packages "1.0.4"))

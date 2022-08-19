@@ -6,7 +6,7 @@
 ;; Maintainer: Trevor Richards <trev@trevdev.ca>
 ;; URL: https://sr.ht/~trevdev/tangonov-theme/
 ;; Package-Version: 20220816.2316
-;; Package-Commit: 398ee944df315a321e9a212d65b79b490e4dbb98
+;; Package-Commit: 18c0c07b03a963b0c625f66c77f1f0755a0ca22a
 ;; Created: 20th July, 2022
 ;; Keywords: faces, theme, dark, fringe
 ;; Version: 1.4.0

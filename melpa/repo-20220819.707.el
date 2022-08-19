@@ -2,8 +2,8 @@
 
 ;; Author: Damien Merenne
 ;; URL: https://github.com/canatella/repo-el
-;; Package-Version: 20191201.38
-;; Package-Commit: 7b3ce731f1209d74113cb65a2d6aa6f54ce8ed27
+;; Package-Version: 20220819.707
+;; Package-Commit: b874903f43fc0a33a687789d674cacc2accf2403
 ;; Created: 2016-01-11
 ;; Keywords: convenience
 ;; Version: 0.1
@@ -58,6 +58,8 @@ If not set, repo uses `magit-status' if available, `vc-dir' otherwise."
 (defvar repo-workspace nil "The repo workspace associated to the current buffer.")
 (make-variable-buffer-local 'repo-workspace)
 
+(defvar repo-project-regexp "^\\(?1:project\\) \\(?2:[^ ]+\\)/\\W+")
+
 ;;; Our functions
 
 (defun repo-status-buffer-name (directory)
@@ -101,12 +103,12 @@ IGNORE-AUTO and NO-CONFIRM has no effect here."
     (repo-status repo-workspace)))
 
 (defun repo-internal-vc-function ()
-  "Return the function to call for opening git status buffer."
-  (if repo-vc-function
-      repo-vc-function
-    (if (fboundp 'magit-status-internal)
-        (function magit-status-internal)
-      (function vc-dir))))
+    "Return the function to call for opening git status buffer."
+    (if repo-vc-function
+        repo-vc-function
+      (if (fboundp 'magit-status-setup-buffer)
+          (function magit-status-setup-buffer)
+        (function vc-dir))))
 
 (defun repo-call-vc-function (dirname)
     "Call `repo-vc-function' with DIRNAME as argument."
@@ -123,11 +125,11 @@ If point is on
   (save-excursion
     (goto-char (line-beginning-position))
     (cond ((looking-at "^ [-AMDRCTU][-md]\t\\(.*\\)")
-		   (let ((file (match-string 1))
-				 (project (progn (re-search-backward "project +\\([^ ]+\\)" nil t)
-								 (match-string 1))))
-			 (find-file (concat repo-workspace project file))))
-		  ((looking-at "project +\\([^ ]+\\)")
+                   (let ((file (match-string 1))
+                                 (project (progn (re-search-backward "project +\\([^ ]+\\)" nil t)
+                                                                 (match-string 1))))
+                         (find-file (concat repo-workspace project file))))
+                  ((looking-at "project +\\([^ ]+\\)")
            (let ((project (match-string 1)))
              (repo-call-vc-function (concat repo-workspace project))))
           ((looking-at-p "Manifest groups:") nil)
@@ -179,6 +181,25 @@ PROC is the repo status process, EVENT is the sentinel event."
     (let ((default-directory workspace))
       (call-interactively (function repo-init-default-directory)))
     't))
+
+(defun repo-next-project ()
+  "Move to next project in Repo status buffer."
+  (interactive)
+  (let ((pos (point)))
+    (save-excursion
+      (forward-line)
+      (when (re-search-forward repo-project-regexp nil t)
+        (setq pos (point))))
+    (when (> pos (point))
+      (goto-char pos)
+      (beginning-of-line))))
+
+(defun repo-previous-project ()
+  "Move to previous project in Repo status buffer."
+  (interactive)
+  (re-search-backward repo-project-regexp nil t))
+
+
 
 ;;;###autoload
 (defun repo-status (workspace)
@@ -291,14 +312,20 @@ With a prefix argument, sets KILL-BUFFER and  kill the buffer instead."
 (defvar repo-mode-map nil "Keymap for repo-mode.")
 (when (not repo-mode-map)
   (setq repo-mode-map (make-sparse-keymap))
-  (define-key repo-mode-map (kbd "g") (function revert-buffer))
-  (define-key repo-mode-map (kbd "RET") (function repo-find))
-  (define-key repo-mode-map (kbd "q") (function repo-status-bury-buffer)))
+  (define-key repo-mode-map (kbd "g")       #'revert-buffer)
+  (define-key repo-mode-map (kbd "RET")     #'repo-find)
+  (define-key repo-mode-map (kbd "q")       #'repo-status-bury-buffer)
+  (define-key repo-mode-map (kbd "p")       #'previous-line)
+  (define-key repo-mode-map (kbd "n")       #'next-line)
+  (define-key repo-mode-map (kbd "f")       #'forward-char)
+  (define-key repo-mode-map (kbd "b")       #'backward-char)
+  (define-key repo-mode-map (kbd "C-c C-p") #'repo-previous-project)
+  (define-key repo-mode-map (kbd "C-c C-n") #'repo-next-project))
 
 (define-derived-mode repo-mode fundamental-mode "Repo"
   "A mode for repo status buffer."
   (setq-local font-lock-defaults repo-font-lock-defaults)
-  (setq-local revert-buffer-function (function repo-revert-buffer))
+  (setq-local revert-buffer-function #'repo-revert-buffer)
   (setq-local repo-workspace default-directory)
   (read-only-mode))
 
