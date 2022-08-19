@@ -85,6 +85,9 @@ on-the-fly help.
        inserted.  For example in the `\frac{}{}' template, it will
        move you from the first argument to the second and then out of
        the second.  For a list of available templates, type `C-c ?'.
+       As a special case, the left-right parenthesis combinations can
+       also be applied after writing the content by selecting the
+       content and typing '( or '[ or '{ or '< or '| .
 
 2. MATHEMATICAL SYMBOLS
    --------------------
@@ -101,7 +104,7 @@ on-the-fly help.
    backquote character several times before pressing the letter.  For
    example, typing "`d" inserts "\delta" (level 1), and typing "``d"
    inserts "\partial" (level 2).  Similarly, "`e" inserts "\epsilon"
-   and "``e" inserts "\vareppsilon".
+   and "``e" inserts "\varepsilon".
 
    On each level, on-thy-fly help will pop up automatically if you
    hesitate to press the next key.  The help screen is a window which
@@ -147,6 +150,8 @@ on-the-fly help.
      and positions the cursor inside.
    - when a numeric prefix argument is supplied, the command acts on
      whole words before the cursor.
+   - Furthermore, if there is an active region, the change will apply
+     to the content of that region.
 
    In order to insert a normal quote, you can press the quote
    character twice.  Also, if the key character is not associated with
@@ -177,7 +182,7 @@ on-the-fly help.
    inserts "$10^{34}$".
 
    If you press `_' or `^' twice, the template inserted will be
-   `_{\rm }' or `^{\rm }', respectively, to insert a roman
+   `_{\mathrm{}}' or `^{\mathrm }', respectively, to insert a roman
    sub/super-script.  Style guides require that all sub- and
    superscripts that are descriptive (so not a mathematical or
    physical quantity themselves) need to be roman.  So $x_i$ is i
