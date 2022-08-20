@@ -1,0 +1,14 @@
+(mastodon .
+	  [(20220820 1427)
+	   ((emacs
+	     (27 1))
+	    (request
+	     (0 3 2))
+	    (seq
+	     (1 0)))
+	   "Client for Mastodon" tar
+	   ((:commit . "448b9e5a757b4ebf617a8ff1f04b9643f086672e")
+	    (:authors
+	     ("Johnson Denen" . "johnson.denen@gmail.com"))
+	    (:maintainer "Marty Hiatt" . "martianhiatus@riseup.net")
+	    (:url . "https://codeberg.org/martianh/mastodon.el"))])
