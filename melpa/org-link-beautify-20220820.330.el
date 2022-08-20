@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "28.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20220819.1120
-;; Package-Commit: e72fa7a1a4d2750e1680eee69296e11c23805681
+;; Package-Version: 20220820.330
+;; Package-Commit: f0a52b3da11cb12cdff61908c6a2766e1b12daf2
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -524,21 +524,22 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     (unless (file-exists-p thumbnail-file)
       (pcase org-link-beautify--video-thumbnailer
         ("qlmanage"
-         (start-process
-          "org-link-beautify--video-preview"
-          " *org-link-beautify video-preview*"
-          "qlmanage"
-          "-x"
-          "-t"
-          "-s" (number-to-string thumbnail-size)
-          video-file
-          "-o" thumbnails-dir)
-         ;; then rename [video.mp4.png] to [video.png]
-         (let ((original-thumbnail-file (concat thumbnails-dir (file-name-nondirectory video-file) ".png")))
-           (if (and (not org-link-beautify-enable-debug-p) (file-exists-p original-thumbnail-file))
-               (rename-file original-thumbnail-file thumbnail-file)
-             (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
-               (org-link-beautify--notify-generate-thumbnail-failed video-file thumbnail-file)))))
+         (let ((qlmanage-thumbnail-file (concat thumbnails-dir (file-name-nondirectory video-file) ".png")))
+           (unless (file-exists-p qlmanage-thumbnail-file)
+             (start-process
+              "org-link-beautify--video-preview"
+              " *org-link-beautify video-preview*"
+              "qlmanage"
+              "-x"
+              "-t"
+              "-s" (number-to-string thumbnail-size)
+              video-file
+              "-o" thumbnails-dir))
+           ;; then rename [video.mp4.png] to [video.png]
+           (when (not (file-exists-p thumbnail-file))
+             (rename-file qlmanage-thumbnail-file thumbnail-file))
+           (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
+             (org-link-beautify--notify-generate-thumbnail-failed video-file thumbnail-file))))
         ("ffmpegthumbnailer"
          (start-process
           "org-link-beautify--video-preview"
@@ -567,6 +568,16 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     (org-link-beautify--add-keymap start end)
     (org-link-beautify--display-thumbnail thumbnail-file thumbnail-size start end)))
 
+(defvar org-link-beautify--audio-thumbnailer
+  (cond
+   ;; for macOS, use `qlmanage'
+   ((and (eq system-type 'darwin) (executable-find "qlmanage")) "qlmanage")
+   ;; for Linux, use `audiowaveform'
+   ((and (eq system-type 'gnu/linux) (executable-find "audiowaveform")) "audiowaveform")
+   ;; for general, use `ffmpeg'
+   ((executable-find "ffmpeg") "ffmpeg"))
+  "Find available audio thumbnailer command.")
+
 (defun org-link-beautify--preview-audio (path start end)
   "Preview audio PATH with wave form image on link between START and END."
   (let* ((audio-file (expand-file-name (org-link-unescape path)))
@@ -575,34 +586,36 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
          (thumbnail-size (or org-link-beautify-audio-preview-size 200)))
     (org-link-beautify--ensure-thumbnails-dir thumbnails-dir)
     (unless (file-exists-p thumbnail-file)
-      ;; DEBUG:
-      ;; (message "%s\n%s\n" audio-file thumbnail-file)
-      (cond
-       ((and (eq system-type 'darwin) (executable-find "qlmanage"))
-        (start-process
-         "org-link-beautify--audio-preview"
-         " *org-link-beautify audio preview*"
-         "qlmanage"
-         "-x"
-         "-t"
-         "-s" (number-to-string 100)
-         audio-file
-         "-o" thumbnails-dir)
-        ;; then rename [video.mp4.png] to [video.png]
-        (let ((original-thumbnail-file (concat thumbnails-dir (file-name-nondirectory audio-file) ".png")))
-          (if (and (not org-link-beautify-enable-debug-p) (file-exists-p original-thumbnail-file))
-              (rename-file original-thumbnail-file thumbnail-file)
-            (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
-              (org-link-beautify--notify-generate-thumbnail-failed audio-file thumbnail-file)))))
-       ((and (eq system-type 'gnu/linux) (executable-find "audiowaveform"))
-        (start-process
-         "org-link-beautify--audio-preview"
-         " *org-link-beautify audio preview*" ; DEBUG: check out output buffer
-         "audiowaveform"
-         "-i" audio-file
-         "-o" thumbnail-file)
-        (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
-          (org-link-beautify--notify-generate-thumbnail-failed audio-file thumbnail-file)))))
+      (pcase org-link-beautify--audio-thumbnailer
+        ("qlmanage"
+         (let ((qlmanage-thumbnail-file (concat thumbnails-dir (file-name-nondirectory audio-file) ".png")))
+           (unless (file-exists-p qlmanage-thumbnail-file)
+             (start-process
+              "org-link-beautify--audio-preview"
+              " *org-link-beautify audio preview*"
+              "qlmanage"
+              "-x"
+              "-t"
+              "-s" (number-to-string 100)
+              audio-file
+              "-o" thumbnails-dir))
+           ;; then rename [audio.mp3.png] to [audio.png]
+           (when (not (file-exists-p thumbnail-file))
+             (rename-file qlmanage-thumbnail-file thumbnail-file))
+           (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
+             (org-link-beautify--notify-generate-thumbnail-failed audio-file thumbnail-file))))
+        ("audiowaveform"
+         (start-process
+          "org-link-beautify--audio-preview"
+          " *org-link-beautify audio preview*" ; DEBUG: check out output buffer
+          "audiowaveform"
+          "-i" audio-file
+          "-o" thumbnail-file)
+         (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
+           (org-link-beautify--notify-generate-thumbnail-failed audio-file thumbnail-file)))
+        ;; TODO: use ffmpeg to generate audio wave form preview image.
+        ("ffmpeg"
+         )))
     (org-link-beautify--add-overlay-marker start end)
     (org-link-beautify--add-keymap start end)
     (org-link-beautify--display-thumbnail thumbnail-file thumbnail-size start end)))
