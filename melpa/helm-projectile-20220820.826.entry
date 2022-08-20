@@ -1,5 +1,5 @@
 (helm-projectile .
-		 [(20220807 350)
+		 [(20220820 826)
 		  ((helm
 		    (1 9 9))
 		   (projectile
@@ -7,7 +7,7 @@
 		   (cl-lib
 		    (0 3)))
 		  "Helm integration for Projectile" single
-		  ((:commit . "6dcc543815984f7f40e99050b1ee3b68a088e160")
+		  ((:commit . "5813f7286533990783546c9c39c184faa034d1f1")
 		   (:authors
 		    ("Bozhidar Batsov"))
 		   (:maintainer "Bozhidar Batsov")

@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov
 ;; URL: https://github.com/bbatsov/helm-projectile
-;; Package-Version: 20220807.350
-;; Package-Commit: 6dcc543815984f7f40e99050b1ee3b68a088e160
+;; Package-Version: 20220820.826
+;; Package-Commit: 5813f7286533990783546c9c39c184faa034d1f1
 ;; Created: 2011-31-07
 ;; Keywords: project, convenience
 ;; Version: 1.1.0-snapshot
@@ -536,11 +536,14 @@ Meant to be added to `helm-cleanup-hook', from which it removes
   (remove-hook 'helm-after-update-hook #'helm-projectile--move-to-real)
   (remove-hook 'helm-cleanup-hook #'helm-projectile--remove-move-to-real))
 
+(defvar helm-source-projectile-files-list-before-init-hook
+  (lambda ()
+    (add-hook 'helm-after-update-hook #'helm-projectile--move-to-real)
+    (add-hook 'helm-cleanup-hook #'helm-projectile--remove-move-to-real)))
+
 (defvar helm-source-projectile-files-list
   (helm-build-sync-source "Projectile files"
-    :before-init-hook (lambda ()
-                        (add-hook 'helm-after-update-hook #'helm-projectile--move-to-real)
-                        (add-hook 'helm-cleanup-hook #'helm-projectile--remove-move-to-real))
+    :before-init-hook 'helm-source-projectile-files-list-before-init-hook
     :candidates (lambda ()
                   (when (projectile-project-p)
                     (with-helm-current-buffer

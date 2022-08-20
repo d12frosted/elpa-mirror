@@ -7,14 +7,17 @@ Table of Contents
 ─────────────────
 
 1. About
+.. 1. Tip: using consult-recoll with helm
 2. Searching
 .. 1. Tip: Two-level filtering
 3. Displaying results
 .. 1. Example: formatting results list
-.. 2. Tip: displaying snippets in results list
-.. 3. Tip: disabling mime type groups
+.. 2. Integration with embark-collect
+.. 3. Tip: displaying snippets in results list
+.. 4. Tip: disabling mime type groups
 4. Opening search results
-.. 1. Example: PDF open with external viewer
+.. 1. Example: opening PDFs with external viewer
+.. 2. Example: Opening emails with notmuch
 5. Thanks
 
 
@@ -44,11 +47,24 @@ Table of Contents
 
 [Recoll] <https://www.lesbonscomptes.com/recoll/>
 
-[consult] <https://github.com/minad/consult>
+[consult] <http://elpa.gnu.org/packages/consult.html>
 
-[vertico] <https://github.com/minad/vertico>
+[vertico] <http://elpa.gnu.org/packages/vertico.html>
 
 [GNU ELPA] <http://elpa.gnu.org/packages/consult-recoll.html>
+
+1.1 Tip: using consult-recoll with helm
+───────────────────────────────────────
+
+  If you use `helm-mode', you'll need to disable helm's completing read
+  for `consult-recoll', with something like:
+
+  ┌────
+  │ (with-eval-after-load "helm"
+  │   (with-eval-after-load "recoll"
+  │     (add-to-list 'helm-completing-read-handlers-alist
+  │ 		 (cons #'consult-recoll nil))))
+  └────
 
 
 2 Searching
@@ -145,7 +161,24 @@ Table of Contents
   └────
 
 
-3.2 Tip: displaying snippets in results list
+3.2 Integration with embark-collect
+───────────────────────────────────
+
+  If you use [embark], you can use `embark-collect' to export the list
+  of search results in the minibuffer to an /Embark collect/ buffer.  To
+  allow opening buffer in that buffer as if they had been selected in
+  the minibuffer, enable integration with embark adding this call to
+  your init file:
+
+  ┌────
+  │ (consult-recoll-embark-setup)
+  └────
+
+
+[embark] <http://elpa.gnu.org/packages/embark.html>
+
+
+3.3 Tip: displaying snippets in results list
 ────────────────────────────────────────────
 
   Instead of relying on a separate preview buffer to display snippets,
@@ -155,7 +188,7 @@ Table of Contents
   <https://codeberg.org/jao/consult-recoll/raw/branch/main/consult-recoll-inline.png>
 
 
-3.3 Tip: disabling mime type groups
+3.4 Tip: disabling mime type groups
 ───────────────────────────────────
 
   By default, results are listed grouped by their mime type.  You can
@@ -171,31 +204,65 @@ Table of Contents
   When a search result candidate is selected, its MIME type is used to
   look up a function to open its associated file in the customizable
   variable `consult-recoll-open-fns'.  If no entry is found,
-  consult-recoll uses the value of `consult-open-fn' as a default.
+  consult-recoll uses the value of `consult-open-fn' as a default.  If
+  the latter is not set, `eww-open-file' is used for HTML files and
+  `find-file' for the rest.
 
   If `consult-recoll-inline-snippets' is set, the functions above take
   two arguments: the URL of the file to open and, if present, the
   snippet page number (or `nil' if it is not available, e.g., because
-  the selected candidate is the one showing the document data)
+  the selected candidate is the one showing the document data).
+
+  If the selected candidate is a snippet corresponding to a text MIME
+  and the page number of the snippet is 0 (as is often the case, since
+  text files are normally not paginated), `consult-recoll' will perform
+  a search for the snippet text after opening the file.
+
+  See also [Integration with embark-collect] for an alternative way of
+  listing and opening search results using embark.
 
 
-4.1 Example: PDF open with external viewer
-──────────────────────────────────────────
+[Integration with embark-collect] See section 3.2
+
+4.1 Example: opening PDFs with external viewer
+──────────────────────────────────────────────
 
   For instance, if you want to use `zathura' to open PDF documents, you
   could define an elisp helper like:
 
   ┌────
-  │ (defun open-pdf/zathura (file &optional page)
+  │ (defun open-with-zathura (file &optional page)
   │   (shell-command (format "zathura %s -P %s" file (or page 1))))
   └────
 
   and then add it to `consult-recoll-open-fns':
 
   ┌────
-  │ (add-to-list 'consult-recoll-open-fns
-  │ 	     '("application/pdf" . open-pdf/zathura))
+  │ (add-to-list 'consult-recoll-open-fns '("application/pdf" . open-with-zathura))
   └────
+
+
+4.2 Example: Opening emails with notmuch
+────────────────────────────────────────
+
+  If you use [notmuch] and include your maildirs in recoll's indexed
+  directories, a simple way to open a candidate result given its file
+  name is to find out the message's ID and use `notmuch.el''s function
+  `notmuch-show' to open it:
+
+  ┌────
+  │ (defun open-with-notmuch (file &optional _page)
+  │   (with-temp-buffer
+  │     (insert-file-contents-literally file)
+  │     (goto-char (point-min))
+  │     (and (re-search-forward "^Message-ID: <\\([^>]+\\)>$" nil t)
+  │ 	 (notmuch-show (concat "id:" (match-string 1))))))
+  │ 
+  │ (add-to-list 'consult-recoll-open-fns '("message/rfc822" . open-with-notmuch))
+  └────
+
+
+[notmuch] <https://notmuchmail.org/>
 
 
 5 Thanks
@@ -206,6 +273,7 @@ Table of Contents
   • [Nicholas P. Rougier] for useful discussions and suggestions,
     including actual fixes.
   • [Stefan Monnier] for setting up the GNU ELPA package.
+  • Johan Widén for tips on using consult-recoll with helm.
 
 
 [Nicholas P. Rougier] <https://codeberg.org/rougier>
