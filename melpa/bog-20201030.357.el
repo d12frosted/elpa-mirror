@@ -6,7 +6,7 @@
 ;; Author: Kyle Meyer <kyle@kyleam.com>
 ;; URL: https://github.com/kyleam/bog
 ;; Package-Version: 20201030.357
-;; Package-Commit: af929c164c4ffaee0c33ba97c06733f0ce9431d4
+;; Package-Commit: 449c17b5f25513398173f265b272fc1f9178a6e2
 ;; Keywords: bib, outlines
 ;; Version: 1.3.2
 ;; Package-Requires: ((cl-lib "0.5"))

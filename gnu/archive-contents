@@ -140,15 +140,16 @@
 			 (:maintainer "Thien-Thi Nguyen" . "ttn@gnu.org")
 			 (:url . "http://www.gnuvola.org/software/aa2u/"))])
  (async .
-	[(1 9 5)
+	[(1 9 6)
 	 ((emacs
-	   (24 3)))
+	   (24 4)))
 	 "Asynchronous processing in Emacs" tar
 	 ((:url . "https://github.com/jwiegley/emacs-async")
-	  (:maintainer "John Wiegley" . "jwiegley@gmail.com")
+	  (:keywords "async")
+	  (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	  (:authors
 	   ("John Wiegley" . "jwiegley@gmail.com"))
-	  (:keywords "async"))])
+	  (:commit . "370ead445f5d0fc21b7338e05a64830c410368a3"))])
  (auctex .
 	 [(13 1 3)
 	  ((emacs
@@ -1926,7 +1927,7 @@
 			  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 			 (:keywords "faces" "theme" "accessibility"))])
  (modus-themes .
-	       [(2 5 0)
+	       [(2 6 0)
 		((emacs
 		  (27 1)))
 		"Elegant, highly legible and customizable themes" tar
@@ -1935,7 +1936,7 @@
 		 (:maintainer "Modus-Themes Development" . "~protesilaos/modus-themes@lists.sr.ht")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "8a9839348fb8762c8843362595f2ca9de60d515c"))])
+		 (:commit . "dd97bff219dd3039c576710850e04fa4fa32f004"))])
  (modus-vivendi-theme .
 		      [(0 13 2)
 		       ((emacs
