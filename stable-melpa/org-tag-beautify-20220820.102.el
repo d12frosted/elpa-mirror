@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20220723.758
-;; Package-Commit: b9c6ffcc206ffaeafbe6e3ef9561ce6a8e0f30ad
+;; Package-Version: 20220820.102
+;; Package-Commit: 28eceb17131a4a5de79ce06f867bce49d1a04b78
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -211,7 +211,9 @@
                   ("express" . ,(all-the-icons-material "local_shipping" :face '(:foreground "PaleTurquoise")))
                   ("money" . ,(all-the-icons-faicon "money" :face '(:foreground "green")))
                   ("usd" . ,(all-the-icons-faicon "usd" :face '(:foreground "green")))
-                  ("eur" . ,(all-the-icons-faicon "eur" :face '(:foreground "green")))
+                  ("eur" . ,(all-the-icons-faicon "eur" :face '(:foreground "LightSeaGreen")))
+                  ("jpy" . ,(all-the-icons-faicon "jpy" :face '(:foreground "GreenYellow")))
+                  ("rmb" . ,(all-the-icons-faicon "jpy" :face '(:foreground "IndianRed1")))
                   ("payment" . ,(all-the-icons-faicon "credit-card" :face '(:foreground "CornflowerBlue")))
                   ("credit_card" . ,(all-the-icons-material "credit_card" :face '(:foreground "CornflowerBlue")))
                   ("credit_card_visa" . ,(all-the-icons-faicon "cc-visa" :face '(:foreground "CornflowerBlue")))

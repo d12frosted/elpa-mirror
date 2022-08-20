@@ -2,8 +2,8 @@
 
 ;; Author: Yann Herklotz <yann@ymhg.org>
 ;; URL: https://github.com/ymherklotz/emacs-zettelkasten
-;; Package-Version: 20220817.1044
-;; Package-Commit: 7278052cb451178a2f1ffc61569156ca0adcc34a
+;; Package-Version: 20220819.2335
+;; Package-Commit: 505fd41dea012e743962c3a376c1e63e7a1e127e
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "24.3") (org "9.0"))
 ;; Keywords: files, hypermedia, Org, notes
@@ -17,7 +17,7 @@
 
 ;;; License:
 
-;; Copyright (C) 2020-2021  Yann Herklotz
+;; Copyright (C) 2020-2022  Yann Herklotz
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -50,7 +50,7 @@
 The value of this variable is checked as part of loading Zettelkasten mode.
 After that, changing the prefix key requires manipulating keymaps."
   :type 'key-sequence
-  :group 'zettelkasten)
+  :group 'org-zettelkasten)
 
 (defun org-zettelkasten-incr-id (ident)
   "Simple function to increment any IDENT.

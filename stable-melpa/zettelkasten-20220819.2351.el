@@ -2,8 +2,8 @@
 
 ;; Author: Yann Herklotz <yann@ymhg.org>
 ;; URL: https://github.com/ymherklotz/emacs-zettelkasten
-;; Package-Version: 20210830.1025
-;; Package-Commit: 7278052cb451178a2f1ffc61569156ca0adcc34a
+;; Package-Version: 20220819.2351
+;; Package-Commit: 505fd41dea012e743962c3a376c1e63e7a1e127e
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "25.1") (s "1.10.0"))
 ;; Keywords: files, hypermedia, notes
@@ -14,7 +14,7 @@
 
 ;;; License:
 
-;; Copyright (C) 2020-2021  Yann Herklotz
+;; Copyright (C) 2020-2022  Yann Herklotz
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -67,6 +67,11 @@ For supported options, please consult `format-time-string'."
   :type 'string
   :group 'zettelkasten)
 
+(defcustom zettelkasten-id-regexp "[0-9]+"
+  "Regexp for IDs."
+  :type 'string
+  :group 'zettelkasten)
+
 ;;; -----------------------------
 ;;; HELPER FUNCTIONS FOR NOTE IDs
 ;;; -----------------------------
@@ -78,7 +83,9 @@ For supported options, please consult `format-time-string'."
 
 (defun zettelkasten--filename-to-id (filename)
   "Convert FILENAME to id."
-  (string-match (format "\\([0-9]*\\)\\.%s\\'" zettelkasten-extension) filename)
+  (string-match
+    (format "\\(%s\\)\\.%s\\'" zettelkasten-id-regexp zettelkasten-extension)
+    filename)
   (match-string 1 filename))
 
 (defun zettelkasten--display-for-search (note)
@@ -92,7 +99,7 @@ Meant for displaying when searching."
 
 The note may be formatted with some title, which this function
 aims to remove."
-  (string-match "[^0-9]*\\([0-9]+\\)" note)
+  (string-match (format "[^0-9]*\\(%s\\)" zettelkasten-id-regexp) note)
   (match-string 1 note))
 
 (defun zettelkasten--format-link (note &optional link-text)
@@ -145,7 +152,7 @@ Return the NUMth match.  If NUM is nil, return the 0th match."
   (mapcar #'zettelkasten--filename-to-id
           (directory-files
            (expand-file-name zettelkasten-directory) nil
-           (format "[0-9]+\\.%s$" zettelkasten-extension) t)))
+           (format "%s\\.%s$" zettelkasten-id-regexp zettelkasten-extension) t)))
 
 (defun zettelkasten--list-notes-grep ()
   "Return all the ids and titles of notes in the `zettelkasten-directory'.
@@ -163,8 +170,8 @@ This is deprecated in favour for `zettelkasten-list-notes'."
                (line-beginning-position)
                (line-end-position)))
         (when (string-match
-               (format "\\([0-9]*\\)\\.%s:#\\+TITLE: \\(.*\\)"
-                       zettelkasten-extension)
+               (format "\\(%s\\)\\.%s:#\\+TITLE: \\(.*\\)"
+                       zettelkasten-id-regexp zettelkasten-extension)
                current-string)
           (setq matched-string (concat (match-string 1 current-string) ": "
                                        (match-string 2 current-string)))
@@ -213,12 +220,15 @@ This is deprecated in favour for `zettelkasten-list-notes'."
     (goto-char (point-max))
     (insert "\n" (zettelkasten--format-link note))))
 
-(defun zettelkasten--create-new-note-ni (title &optional parent)
+(defun zettelkasten--create-new-note-ni (title &optional parent custom-id)
   "Create a new note based on the TITLE and it's optional PARENT note.
 
-If PARENT is nil, it will not add a link from a PARENT."
+If PARENT is nil, it will not add a link from a PARENT.
+
+If CUSTOM-ID is not nil, will not generate a time-based ID but
+will use that instead."
   (let* ((note (zettelkasten--find-new-note-name
-                (format-time-string zettelkasten-file-format)))
+                (or custom-id (format-time-string zettelkasten-file-format))))
          (filename (zettelkasten--make-filename note)))
     (with-temp-buffer
       (set-visited-file-name filename)
@@ -405,6 +415,23 @@ Also see `zettelkasten--create-new-note-ni' for more information."
      title
      (unless (or prefix (not notes))
        (completing-read "Parent note: " notes nil 'match)))))
+
+(defun zettelkasten-create-new-custom-note (prefix)
+  "Create a new zettelkasten.
+
+If PREFIX is used, or if the `zettelkasten-directory' is empty,
+does not create a parent.
+
+Also see `zettelkasten--create-new-note-ni' for more information."
+  (interactive "P")
+  (let ((title (read-string "Note title: "))
+        (notes (zettelkasten--list-notes)))
+    (zettelkasten--create-new-note-ni
+     title
+     (unless (or prefix (not notes))
+       (completing-read "Parent note: " notes nil 'match))
+     (let ((id (read-string "Note ID: ")))
+       (if (string= id "") nil id)))))
 
 (defun zettelkasten-open-parent (&optional note)
   "Find the parent notes to the NOTE that is given.

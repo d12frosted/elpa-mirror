@@ -4,8 +4,8 @@
 
 ;; Author: Alf Lervåg
 ;; Keywords: literate programming, reproducible research
-;; Package-Version: 20220618.2139
-;; Package-Commit: 3ac834b02b8276aae1b760312612c3b940598f90
+;; Package-Version: 20220819.2228
+;; Package-Commit: 1b021ce1c67c97fa1aa4d2c0816edb7add129e48
 ;; Homepage: https://github.com/alf/ob-restclient.el
 ;; Version: 0.02
 ;; Package-Requires: ((restclient "0"))
@@ -104,6 +104,16 @@ This function is called by `org-babel-execute-src-block'"
         (org-babel-restclient--wrap-result))
 
       (buffer-string))))
+
+;;;###autoload
+(defun org-babel-variable-assignments:restclient (params)
+  "Return a list of restclient statements assigning the block's variables specified in PARAMS."
+  (mapcar
+   (lambda (pair)
+     (let ((name (car pair))
+           (value (cdr pair)))
+       (format ":%s = %s" name value)))
+   (org-babel--get-vars params)))
 
 (defun org-babel-restclient--wrap-result ()
   "Wrap the contents of the buffer in an `org-mode' src block."
