@@ -947,16 +947,16 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "cf29c278e874f0147c8fcd9d0513a0d59972f91d"))])
  (ef-themes .
-	    [(0 2 1)
+	    [(0 3 0)
 	     ((emacs
-	       (28 1)))
+	       (27 1)))
 	     "Colorful and legible themes" tar
 	     ((:url . "https://git.sr.ht/~protesilaos/ef-themes")
 	      (:keywords "faces" "theme" "accessibility")
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "c124ee310c5baa1789e8c4a8d9a597729593b703"))])
+	      (:commit . "057ab6f29e18d65545cb72067f44c6b78955c7ae"))])
  (eglot .
 	[(1 8)
 	 ((emacs

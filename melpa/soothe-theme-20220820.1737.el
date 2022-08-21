@@ -4,10 +4,10 @@
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
-;; URL: https://github.com/jason/soothe-theme
-;; Package-Version: 20220820.1402
-;; Package-Commit: 6388eaf8627bf2f0a3a1a19f74bbc8d1ecc0ed11
-;; Version: 1.1.1
+;; URL: https://github.com/emacsfodder/emacs-soothe-theme
+;; Package-Version: 20220820.1737
+;; Package-Commit: 0cee7400ebc565ce3c2fb81a810062205385aec4
+;; Version: 1.1.5
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -360,14 +360,16 @@
   (git-gutter:unchanged                      (:background soothe-yellow-1bg))
 
   (magit-item-highlight                      (:background soothe-purple-3bg))
-  (magit-branch                              (:foreground soothe-green-2     :background soothe-green-2bg))
-  (magit-branch-remote                       (:foreground soothe-green-2     :background soothe-green-2bg))
+  (magit-branch                              (:foreground soothe-orange-1     :background soothe-orange-2bg))
+  (magit-branch-remote                       (:foreground soothe-orange-1     :background soothe-orange-2bg))
   (magit-whitespace-warning-face             (:foreground soothe-red-3       :background soothe-red-1bg))
   (magit-section-heading                     (:foreground soothe-orange-1    :background soothe-purple-1bg))
   (magit-section-title                       (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-section-highlight                   (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-section-highlight-selection         (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-header                              (:foreground soothe-orange-1    :background soothe-orange-1bg))
+  (magit-hash                                (:foreground soothe-purple-1    :background soothe-purple-1bg))
+  (magit-tag                                 (:foreground soothe-orange-1    :background soothe-orange-1bg))
   (magit-item-mark                           (:foreground soothe-green-1))
 
   (magit-diff-added-highlight                (:foreground soothe-foam :background soothe-dark-green))
@@ -389,7 +391,7 @@
   (magit-diff-file-heading-highlight         (:extend t :inherit 'magit-section-highlight))
   (magit-diff-file-heading-selection         (:extend t :foreground soothe-yellow-1 :inherit 'magit-diff-file-heading-highlight))
   (magit-diff-hunk-heading                   (:extend t :foreground soothe-foreground :background soothe-low-purple))
-  (magit-diff-hunk-heading-highlight         (:extend t :foreground soothe-foreground :background soothe-mid-purple))
+  (magit-diff-hunk-heading-highlight         (:extend t :foreground soothe-foreground :background soothe-low-purple))
   (magit-diff-hunk-heading-selection         (:extend t :foreground soothe-yellow-1 :inherit 'magit-diff-hunk-heading-highlight))
 
   (magit-diff-lines-heading                  (:extend t :foreground soothe-darker-crem :background soothe-red-2 :inherit 'magit-diff-hunk-heading-highlight))
@@ -410,6 +412,9 @@
   (magit-diff-their-highlight                (:inherit 'magit-diff-added-highlight))
   (magit-diff-whitespace-warning             (:inherit 'trailing-whitespace))
 
+  (magit-branch-current                      (:foreground soothe-purple-1    :background soothe-purple-1bg :box (:line-width -1 :color soothe-purple-1)))
+  (magit-branch-local                        (:foreground soothe-purple-1    :background soothe-purple-1bg))
+  (magit-log-author                          (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-log-author                          (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-log-graph                           (:foreground soothe-blue-2      :background soothe-blue-2bg))
   (magit-log-head-label-bisect-good          (:foreground soothe-turquoise-1 :background soothe-turquoise-1bg))

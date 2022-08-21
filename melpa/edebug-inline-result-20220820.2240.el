@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25.1"))
-;; Package-Version: 20220210.1357
-;; Package-Commit: 9fb3c48434da24f800833a5ee3419452d5fb83cb
+;; Package-Version: 20220820.2240
+;; Package-Commit: 90e401ae3e7b3c85da8b24af940fd97f5e744625
 ;; Version: 0.1
 ;; Keywords: extensions lisp tools
 ;; homepage: https://repo.or.cz/edebug-inline-result.git
@@ -88,7 +88,8 @@ Optional argument POSITION ."
        (posframe-show edebug-inline-result--buffer-name
                       :string (substring-no-properties edebug-previous-result)
                       :position (edebug-inline-result--position position)
-                      :width (window-width)
+                      :max-height (/ (window-height) 5) ; (/ (frame-height) 10)
+                      :max-width (window-width) ; (frame-width)
                       :background-color
                       (if (eq (alist-get 'background-mode (frame-parameters)) 'dark)
                           "DarkCyan" "yellow")

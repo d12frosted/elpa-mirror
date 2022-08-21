@@ -3,3 +3,38 @@ Fetcher: github
 Source:  https://github.com/nim-lang/nim-mode.git
 
 Updating /mnt/store/melpa/working/nim-mode/
+Checking out origin/HEAD
+Checking out 744e076f0bea1c5ddc49f92397d9aa98ffa7eff8
+Checking out 744e076f0bea1c5ddc49f92397d9aa98ffa7eff8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nim-mode/
+  to /tmp/nim-modeVZVyCQ/nim-mode-20211102.917
+    nim-capf.el -> nim-capf.el
+    nim-compile.el -> nim-compile.el
+    nim-fill.el -> nim-fill.el
+    nim-helper.el -> nim-helper.el
+    nim-mode.el -> nim-mode.el
+    nim-rx.el -> nim-rx.el
+    nim-smie.el -> nim-smie.el
+    nim-suggest.el -> nim-suggest.el
+    nim-syntax.el -> nim-syntax.el
+    nim-util.el -> nim-util.el
+    nim-vars.el -> nim-vars.el
+Created nim-mode-20211102.917.tar containing:
+  nim-mode-20211102.917/
+  nim-mode-20211102.917/nim-capf.el
+  nim-mode-20211102.917/nim-compile.el
+  nim-mode-20211102.917/nim-fill.el
+  nim-mode-20211102.917/nim-helper.el
+  nim-mode-20211102.917/nim-mode-pkg.el
+  nim-mode-20211102.917/nim-mode.el
+  nim-mode-20211102.917/nim-rx.el
+  nim-mode-20211102.917/nim-smie.el
+  nim-mode-20211102.917/nim-suggest.el
+  nim-mode-20211102.917/nim-syntax.el
+  nim-mode-20211102.917/nim-util.el
+  nim-mode-20211102.917/nim-vars.el
+Built nim-mode in 5.263s, finished at 2022-08-20T23:46:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  435 Aug 20 23:46 packages/nim-mode-20211102.917.entry
+240K -rw-r--r-- 1 root root 240K Aug 20 23:46 packages/nim-mode-20211102.917.tar

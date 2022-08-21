@@ -3,8 +3,8 @@
 ;; Copyright 2011-2022 François-Xavier Bois
 
 ;; Version: 17.3.1
-;; Package-Version: 20220819.1128
-;; Package-Commit: 38ed4c575939083487e8abe59240d0ce4f671c93
+;; Package-Version: 20220820.1935
+;; Package-Commit: de9dfa3ac3cd54e6acb4f9d9d1343f8d4eabd363
 ;; Author: François-Xavier Bois
 ;; Maintainer: François-Xavier Bois <fxbois@gmail.com>
 ;; Package-Requires: ((emacs "23.1"))
@@ -1047,7 +1047,7 @@ Must be used in conjunction with web-mode-enable-block-face."
     ("go"               . "\\.go\\(html\\|tmpl\\)\\'")
     ("handlebars"       . "\\.\\(hb\\.html\\|hbs\\)\\'")
     ("hero"             . "\\.hero\\'")
-    ("jinja"            . "\\.jinja\\'")
+    ("jinja"            . "\\.\\(jinja\\|nwt\\)\\'")
     ("jsp"              . "\\.[gj]sp\\'")
     ("lsp"              . "\\.lsp\\'")
     ("mako"             . "\\.mako?\\'")
@@ -5477,7 +5477,7 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
 
 ;; FLAGS: attr
 ;; (1)custom-attr (2)engine-attr (4)spread-attr[jsx] (8)code-value
-;; SPECS: https://www.w3.org/TR/2012/WD-html-markup-20120329/syntax.html#attr-value-unquoted
+;; https://www.w3.org/TR/2012/WD-html-markup-20120329/syntax.html#attr-value-unquoted
 
 ;; STATES: attr
 ;; (0)nil (1)space (2)name (3)space-before (4)equal (5)space-after
@@ -5488,15 +5488,16 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
   (let ((tag-flags 0) (attr-flags 0) (continue t) (attrs 0) (counter 0) (brace-depth 0)
         (pos-ori (point)) (state 0) (equal-offset 0) (go-back nil)
         (is-jsx (or (string= web-mode-content-type "jsx") (eq (get-text-property (point) 'part-type) 'jsx)))
-        attr name-beg name-end val-beg char pos escaped spaced quoted)
+        attr name-beg name-end val-beg char pos escaped spaced quoted mem step)
 
     (while continue
 
       (setq pos (point)
             char (char-after)
+            mem state
             ;;spaced (eq char ?\s)
             spaced (member char '(?\s ?\n))
-            )
+            step nil)
 
       (when quoted (setq quoted (1+ quoted)))
 
@@ -5519,10 +5520,11 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
        ((and (= state 9) (eq char ?\}) (> brace-depth 1))
         (setq brace-depth (1- brace-depth)))
 
-       ((get-text-property pos 'block-side)
-        (when (= state 2)
-          (setq name-end pos))
-        )
+       ;; #1233
+       ;;((get-text-property pos 'block-side)
+       ;; (when (= state 2)
+       ;;   (setq name-end pos))
+       ;; )
 
        ((and (= state 2) is-jsx (eq char ?\}) (eq attr-flags 4))
         (setq name-end pos)
@@ -5539,8 +5541,6 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
             (and (= state 7) (eq ?\' char) (not escaped))
             (and (= state 9) (eq ?\} char) (= brace-depth 1))
             )
-
-        ;;(message "%S %S" (point) attr-flags)
         (setq attrs (+ attrs (web-mode-attr-scan pos state char name-beg name-end val-beg attr-flags equal-offset tag-flags)))
         (setq state 0
               attr-flags 0
@@ -5556,8 +5556,8 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
         (setq state (cond ((eq ?\' char) 7)
                           ((eq ?\" char) 8)
                           (t             9)))
-        (when (= state 9)
-          (setq brace-depth 1))
+        (setq step 100)
+        (when (= state 9) (setq brace-depth 1))
         )
 
        ((and (eq ?\= char) (member state '(2 3)))
@@ -5566,7 +5566,6 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
         (setq state 4)
         (setq attr (buffer-substring-no-properties name-beg (1+ name-end)))
         (when (and web-mode-indentless-attributes (member (downcase attr) web-mode-indentless-attributes))
-          ;;(message "onclick")
           (setq attr-flags (logior attr-flags 8)))
         )
 
@@ -5687,10 +5686,6 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
              ((member attr '("http-equiv"))
               (setq attr-flags (1- attr-flags))
               )
-             ;;((and web-mode-engine-attr-regexp
-             ;;      (string-match-p web-mode-engine-attr-regexp attr))
-             ;; (setq attr-flags (logior attr-flags 2))
-             ;; )
              ((and (eq char ?\-) (not (string= attr "http-")))
               (setq attr-flags (logior attr-flags 1)))
              ) ;cond
@@ -5709,6 +5704,8 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
       (when (null go-back)
         (forward-char))
 
+      ;;(when (not (= mem state)) (message "pos=%S before=%S after=%S step=%S" pos mem state step))
+
       ) ;while
 
     (when (> attrs 0) (setq tag-flags (logior tag-flags 1)))
@@ -5716,13 +5713,11 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
     tag-flags))
 
 (defun web-mode-attr-scan (pos state char name-beg name-end val-beg attr-flags equal-offset tag-flags)
-  ;;(message "point(%S) state(%S) c(%c) name-beg(%S) name-end(%S) val-beg(%S) attr-flags(%S) equal-offset(%S) tag-flags(%S)"
-  ;;         pos state char name-beg name-end val-beg attr-flags equal-offset tag-flags)
+  ;;(message "point(%S) state(%S) c(%c) name-beg(%S) name-end(%S) val-beg(%S) attr-flags(%S) equal-offset(%S) tag-flags(%S)" pos state char name-beg name-end val-beg attr-flags equal-offset tag-flags)
   (when (null attr-flags) (setq attr-flags 0))
   (when (and name-beg name-end web-mode-engine-attr-regexp)
     (let (name)
       (setq name (buffer-substring-no-properties name-beg (1+ name-end)))
-      ;;(message "%S" name)
       (cond
        ((string-match-p "^data[-]" name)
         (setq attr-flags (logior attr-flags 1))
