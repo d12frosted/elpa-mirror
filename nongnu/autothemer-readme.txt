@@ -11,7 +11,7 @@ simplified face specifications to be applied to Emacs.
 
 Take a look at the example below.
 
-```elisp
+```lisp
 (autothemer-deftheme example-name "Autothemer example..."
 
   ;; Specify the color classes used by the theme
@@ -49,13 +49,13 @@ One of the things that makes writing themes for Emacs difficult is the syntax of
 
 Because the syntax isn't particularly developer friendly, it usually results in themes with limited support for different color displays, usually GUI / 24bit themes are made, and the results in the terminal are often sub par.  On occassion a theme does appear that provides better support for multiple display types, but due to the manual work involved in adding face specs, mode support is limited and development often stalls.
 
-On the plus side the complexity of face specifcations means we can in theory design themes that support any display with any number of colors, we can support dark and light background modes.  It's a shame that it's been so hard to fully exploit the potential.
+On the plus side the complexity of face specifcations means we can in theory design themes that support any display with any number of colors, we can support dark and light background modes.  Until now it's been hard to fully exploit the potential.
 
 Autothemer solves most of the problems that a theme developer would face.
 
 By defining a simple set of color class rules we can remove swathes of repetitive face specs.  Looking again at the example above.
 
-```
+```lisp
 (((class color) (min-colors #xFFFFFF))
  ((class color) (min-colors #xFF)))
 ```
@@ -66,19 +66,19 @@ We can setup as many columns as we'd like to support, here's a few more examples
 
 For a two color display:
 
-```
+```lisp
 ((class color) (monochrome)))
 ```
 
 For a light background 24bit
 
-```
+```lisp
 ((class color) (min-colors #xFFFFFF) (background light))
 ```
 
 For a dark background 24bit
 
-```
+```lisp
 ((class color) (min-colors #xFFFFFF) (background dark))
 ```
 
@@ -92,7 +92,7 @@ You can set color values as nil and the first color to the left will be used.
 
 For example, if we have three display classes defined, 256, 24bit, 16 color:
 
-```
+```lisp
 ((((class color) (min-colors #xFF))
   ((class color) (min-colors #xFFFFFF))
   ((class color) (min-colors 16)))
@@ -113,7 +113,7 @@ Autothemer's primary purpose is to reduce this down to a minimum.
 
 As we can see in the example above face specs now look like this:
 
-```
+```lisp
 ;; specifications for Emacs faces.
 ((button (:underline t :weight 'bold :foreground example-yellow))
  (error  (:foreground example-red)))
@@ -168,7 +168,7 @@ judgement and taste!
 While autothemer doesn't export the defined color variables for external
 use, you can define simple advice on `autothemer-deftheme` to do so:
 
-```emacs-lisp
+```lisp
 (define-advice autothemer-deftheme (:before (_ _ palette &rest _) defcolors)
   (mapcar (lambda (e)
             (setf (symbol-value (car e))
@@ -179,12 +179,120 @@ If you place the advice definition before the autothemer-generated theme
 is loaded, e.g. `my-red` from the example above will be available as a 
 variable that can be used in other parts of your emacs configuration.
 
+# TVA
+
+Theme Variance Architecture is the pattern used in the Gruvbox theme for creating theme variants.
+
+For tooling compatibility you should use this architecture when creating theme variants with [Autothemer].
+
+### TVA Specification
+
+TVA requires package, themes and variants to be named using a specific convention.
+
+### Convert an autothemer based theme to the TVA style.
+
+For example, let's say we've created a standalone theme called:
+
+```
+foo
+```
+
+Given the `package.el` and Emacs convention we will have named the Emacs lisp file:
+
+```
+foo-theme.el
+```
+
+To prepare to add variants, we'll create a macro for the `foo` theme family. It'll look after setting all the face specs in emacs, and allow us to define our variant palette elsewhere.  **As long as the same palette variable names are used, we should be ok.**
+
+[Let's take a look at how this 
+was done in Gruvbox](https://github.com/greduan/emacs-theme-gruvbox/blob/3929f29674ac1cb59efaa017e3c534e0d8d72a2d/gruvbox.el#L88)
+
+For our `foo-theme` we'd do the following.
+
+- Create a file called `foo.el` in the package folder.
+- Create `deftheme-foo` in `foo.el`.
+  ```
+  (require 'autothemer)
+  
+  (defmacro deftheme-foo (name description palette &rest body) 
+    ,(autothemer ,name
+                 ,description
+                 ,palette
+                 
+                 ((face (specs...)))
+                 
+                 ,@body)
+  ```
+- Move the face specs from `foo-theme.el` into the `deftheme-foo` macro definition replacing:
+  ```
+  ((face (specs...)))
+  ```  
+  For Gruvbox's development, [this commit captures the face specs move.](https://github.com/greduan/emacs-theme-gruvbox/commit/250df251d0972aecd259144ad1ad3daf33c97cb2). Although we'd already created variants at that point, and had a lot of code duplication. (TVA is the way we've DRYed up this duplication, giving `gruvbox.el` the status of single point where we add new mode support.)
+- Modify `foo-theme.el`
+  - use `deftheme-foo` instead of `autothemer-deftheme`
+  - Replace `(require 'autothemer)` with `(require 'foo)`
+
+### Creating variants.
+
+Once we've completed the conversion to TVA style above. We can create a variant by copying `foo-theme.el` to a new name.
+
+For a light variant of our theme, we'll copy `foo-theme.el` to  `foo-light-theme.el`.
+
+We can now modify the palette (use the same palette names and just modify the color values). We must also update the theme name.
+
+Check the differences in [`gruvbox-theme.el`](https://github.com/greduan/emacs-theme-gruvbox/blob/e9f8e6ee52727f6008c125b71a26c80cfa59c0af/gruvbox-theme.el) and [`gruvbox-dark-hard-theme.el`](https://github.com/greduan/emacs-theme-gruvbox/blob/e9f8e6ee52727f6008c125b71a26c80cfa59c0af/gruvbox-dark-hard-theme.el)
+
+`gruvbox-theme.el`
+
+```lisp
+  1 ;;; gruvbox-theme.el --- A retro-groove colour theme for Emacs -*- lexical-binding: t -*-
+    
+ 53 (gruvbox-deftheme)
+ 54  gruvbox
+ 55  "A retro-groove colour theme" 
+    
+146  (custom-theme-set-variables 'gruvbox)
+    
+165 (provide-theme 'gruvbox)
+     
+172 ;;; gruvbox-theme.el ends here
+```
+
+`gruvbox-dark-hard-theme.el`
+
+```lisp
+  1 ;;; gruvbox-dark-hard-theme.el --- A retro-groove colour theme for Emacs -*- lexical-binding: t -*-
+     
+ 55 (gruvbox-deftheme)
+ 56  gruvbox-dark-hard
+ 57  "A retro-groove colour theme (dark version, hard contrast)"
+     
+148  (custom-theme-set-variables 'gruvbox-dark-hard)
+     
+167 (provide-theme 'gruvbox-dark-hard)
+      
+173 ;;; gruvbox-dark-hard-theme.el ends here
+```
+
+Once this is done you test your theme.
+
+(I use `disable-theme` and `enable-theme` to test/use themes under development.  
+Make sure you eval all the theme's elisp files before enabling the theme.)
+
+
+
 ### Themes using Autothemer
 
 - [Gruvbox](https://github.com/greduan/emacs-theme-gruvbox)
 - [Darktooth](https://github.com/emacsfodder/emacs-theme-darktooth)
 - [Creamsody](https://github.com/emacsfodder/emacs-theme-creamsody)
-...
+- [Sakura](https://github.com/emacsfodder/emacs-theme-sakura)
+- [Cyanometric](https://github.com/emacsfodder/emacs-theme-cyanometric)
+- [Orangey Bits](https://github.com/emacsfodder/emacs-theme-orangey-bits)
+- [Vegetative](https://github.com/emacsfodder/emacs-theme-vegetative)
+
+If you are creating themes with Autothemer, please let us know (you can email the maintainer.)
 
 ### Contributing
 
@@ -192,4 +300,6 @@ We welcome all issues and pull requests, for review by the project author.
 
 ### Licence
 
-See LICENCE
+See [LICENCE](LICENCE)
+
+[Autothemer]: https://github.com/jasonm23/autothemer
