@@ -4,8 +4,8 @@
 
 ;; Author: Massimiliano Mirra <hyperstruct@gmail.com>
 ;; URL: https://github.com/bard/emacs-run-command
-;; Package-Version: 20210529.1505
-;; Package-Commit: ce2d69feeffb9ef9815ef5b5e32f236763197a10
+;; Package-Version: 20220821.1421
+;; Package-Commit: 0ac25bc1acae652ffb58c48a3853cd1dcd7b40a4
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: processes
@@ -439,7 +439,7 @@ retired, please remove from `run-command-experiments'" name))
                          (setq run-command--deprecated-experiment-warning
                                (not (yes-or-no-p
                                      (format "Warning: run-command: experiment \
- `%S' is deprecated, please update your configuration. Disable reminder for \
+ `%S' is deprecated, please update your configuration.  Disable reminder for \
 this session?" name))))))
                       ('active nil)))
                 (error "[run-command] Experiment `%S' does not exist, \

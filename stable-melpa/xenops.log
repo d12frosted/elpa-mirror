@@ -4,11 +4,11 @@ Source:  https://github.com/dandavison/xenops.git
 
 Updating /mnt/store/melpa/working/xenops/
 Checking out origin/HEAD
-Checking out a2c685b3bb2257da49af771caa02325aa41fa699
-Checking out a2c685b3bb2257da49af771caa02325aa41fa699
+Checking out 4d75c1cd5ee7afba62af3a39a1f43432b295c29c
+Checking out 4d75c1cd5ee7afba62af3a39a1f43432b295c29c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/xenops/
-  to /tmp/xenops1zDScz/xenops-20220421.1320
+  to /tmp/xenopsrlmYGt/xenops-20220821.1111
   ! lisp/xenops-aio.el -> xenops-aio.el
   ! lisp/xenops-apply.el -> xenops-apply.el
   ! lisp/xenops-auctex.el -> xenops-auctex.el
@@ -30,31 +30,33 @@ Copying files (->) and directories (=>)
   ! lisp/xenops-util.el -> xenops-util.el
   ! lisp/xenops-xen.el -> xenops-xen.el
   ! lisp/xenops.el -> xenops.el
-Created xenops-20220421.1320.tar containing:
-  xenops-20220421.1320/
-  xenops-20220421.1320/xenops-aio.el
-  xenops-20220421.1320/xenops-apply.el
-  xenops-20220421.1320/xenops-auctex.el
-  xenops-20220421.1320/xenops-avy.el
-  xenops-20220421.1320/xenops-doctor.el
-  xenops-20220421.1320/xenops-element.el
-  xenops-20220421.1320/xenops-elements.el
-  xenops-20220421.1320/xenops-font.el
-  xenops-20220421.1320/xenops-footnote.el
-  xenops-20220421.1320/xenops-image.el
-  xenops-20220421.1320/xenops-math-latex.el
-  xenops-20220421.1320/xenops-math.el
-  xenops-20220421.1320/xenops-minted.el
-  xenops-20220421.1320/xenops-overlay.el
-  xenops-20220421.1320/xenops-parse.el
-  xenops-20220421.1320/xenops-pkg.el
-  xenops-20220421.1320/xenops-png.el
-  xenops-20220421.1320/xenops-src.el
-  xenops-20220421.1320/xenops-style.el
-  xenops-20220421.1320/xenops-util.el
-  xenops-20220421.1320/xenops-xen.el
-  xenops-20220421.1320/xenops.el
-Built xenops in 8.073s, finished at 2022-08-21T07:32:50+0000
+Created xenops-20220821.1111.tar containing:
+  xenops-20220821.1111/
+  xenops-20220821.1111/xenops-aio.el
+  xenops-20220821.1111/xenops-apply.el
+  xenops-20220821.1111/xenops-auctex.el
+  xenops-20220821.1111/xenops-avy.el
+  xenops-20220821.1111/xenops-doctor.el
+  xenops-20220821.1111/xenops-element.el
+  xenops-20220821.1111/xenops-elements.el
+  xenops-20220821.1111/xenops-font.el
+  xenops-20220821.1111/xenops-footnote.el
+  xenops-20220821.1111/xenops-image.el
+  xenops-20220821.1111/xenops-math-latex.el
+  xenops-20220821.1111/xenops-math.el
+  xenops-20220821.1111/xenops-minted.el
+  xenops-20220821.1111/xenops-overlay.el
+  xenops-20220821.1111/xenops-parse.el
+  xenops-20220821.1111/xenops-pkg.el
+  xenops-20220821.1111/xenops-png.el
+  xenops-20220821.1111/xenops-src.el
+  xenops-20220821.1111/xenops-style.el
+  xenops-20220821.1111/xenops-util.el
+  xenops-20220821.1111/xenops-xen.el
+  xenops-20220821.1111/xenops.el
+Built xenops in 6.374s, finished at 2022-08-21T14:46:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  471 Aug 21 07:32 packages/xenops-20220421.1320.entry
-152K -rw-r--r-- 1 root root 150K Aug 21 07:32 packages/xenops-20220421.1320.tar
+4.0K -rw-r--r-- 1 root root  471 Aug 21 11:10 packages/xenops-20220421.1320.entry
+152K -rw-r--r-- 1 root root 150K Aug 21 11:10 packages/xenops-20220421.1320.tar
+4.0K -rw-r--r-- 1 root root  471 Aug 21 14:46 packages/xenops-20220821.1111.entry
+152K -rw-r--r-- 1 root root 150K Aug 21 14:46 packages/xenops-20220821.1111.tar

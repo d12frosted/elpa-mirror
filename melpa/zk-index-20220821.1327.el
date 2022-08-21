@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.7
-;; Package-Version: 20220818.1030
-;; Package-Commit: f376b64ec4ef975ef076ba9c5f64d2716d3adb32
+;; Package-Version: 20220821.1327
+;; Package-Commit: 843e33acaa8e0a2caa8cd5fbbcc7ab66693efe06
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "27.1")(zk "0.3"))
@@ -301,6 +301,7 @@ FILES must be a list of filepaths. If nil, all files in
               (zk-find-file-by-id zk-default-backlink)))
           (generate-new-buffer buf-name)
           (with-current-buffer buf-name
+            (setq default-directory (expand-file-name zk-directory))
             (zk-index-mode)
             (zk-index--sort list format-fn sort-fn)
             (setq truncate-lines t)

@@ -2,8 +2,8 @@
 
 ;; Author: Samuel W. Flint <swflint@flintfam.org>
 ;; URL: https://git.sr.ht/~swflint/time-block
-;; Package-Version: 20220820.1608
-;; Package-Commit: f679d7a9d369ca8ccd72f2fc8a0a3d40121648a6
+;; Package-Version: 20220821.1431
+;; Package-Commit: 4ac663b5196567326b82fe76c9930c116bed5596
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1") (ts "0.1"))
 ;; Keywords: tools, productivity, convenience
@@ -106,6 +106,7 @@ Wednesday  3
 Thursday   4
 Friday     5
 Saturday   6"
+  :group 'time-block
   :type '(alist :tag "Group Definitions"
                 :key-type (keyword :tag "Group Name")
                 :value-type (alist :tag "Group Definition"
