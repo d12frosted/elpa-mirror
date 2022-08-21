@@ -4,11 +4,11 @@ Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
 Checking out origin/HEAD
-Checking out e46ad5e4d9d6bae7c09a984be37d139ba95ff0b6
-Checking out e46ad5e4d9d6bae7c09a984be37d139ba95ff0b6
+Checking out 5453ccab9fb99f7d303150ce7ce528360ac35863
+Checking out 5453ccab9fb99f7d303150ce7ce528360ac35863
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyi2OZCS/loopy-20220820.2037
+  to /tmp/loopyRjIi5c/loopy-20220821.13
     loopy-commands.el -> loopy-commands.el
     loopy-iter.el -> loopy-iter.el
     loopy-misc.el -> loopy-misc.el
@@ -17,22 +17,20 @@ Copying files (->) and directories (=>)
     loopy-vars.el -> loopy-vars.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Generating /tmp/loopyi2OZCS/loopy-20220820.2037/loopy.info
-Created loopy-20220820.2037.tar containing:
-  loopy-20220820.2037/
-  loopy-20220820.2037/dir
-  loopy-20220820.2037/loopy-commands.el
-  loopy-20220820.2037/loopy-iter.el
-  loopy-20220820.2037/loopy-misc.el
-  loopy-20220820.2037/loopy-pcase.el
-  loopy-20220820.2037/loopy-pkg.el
-  loopy-20220820.2037/loopy-seq.el
-  loopy-20220820.2037/loopy-vars.el
-  loopy-20220820.2037/loopy.el
-  loopy-20220820.2037/loopy.info
-Built loopy in 7.798s, finished at 2022-08-20T23:40:26+0000
+Generating /tmp/loopyRjIi5c/loopy-20220821.13/loopy.info
+Created loopy-20220821.13.tar containing:
+  loopy-20220821.13/
+  loopy-20220821.13/dir
+  loopy-20220821.13/loopy-commands.el
+  loopy-20220821.13/loopy-iter.el
+  loopy-20220821.13/loopy-misc.el
+  loopy-20220821.13/loopy-pcase.el
+  loopy-20220821.13/loopy-pkg.el
+  loopy-20220821.13/loopy-seq.el
+  loopy-20220821.13/loopy-vars.el
+  loopy-20220821.13/loopy.el
+  loopy-20220821.13/loopy.info
+Built loopy in 18.112s, finished at 2022-08-21T06:53:08+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  303 Aug 20 20:03 packages/loopy-20220817.135.entry
-500K -rw-r--r-- 1 root root 500K Aug 20 20:03 packages/loopy-20220817.135.tar
-4.0K -rw-r--r-- 1 root root  304 Aug 20 23:40 packages/loopy-20220820.2037.entry
-500K -rw-r--r-- 1 root root 500K Aug 20 23:40 packages/loopy-20220820.2037.tar
+4.0K -rw-r--r-- 1 root root  302 Aug 21 06:53 packages/loopy-20220821.13.entry
+500K -rw-r--r-- 1 root root 500K Aug 21 06:53 packages/loopy-20220821.13.tar
