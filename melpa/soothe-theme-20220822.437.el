@@ -6,7 +6,7 @@
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
 ;; Package-Version: 20220822.437
-;; Package-Commit: 0acef4185e098ad401f9121a13e1f4857608b06a
+;; Package-Commit: f61180e99fa31a124692374fd5f3ffca7ad5e3fa
 ;; Version: 1.4.0
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
