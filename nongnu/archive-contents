@@ -548,7 +548,7 @@
 	       ("Matus Goljer" . "matus.goljer@gmail.com"))
 	      (:commit . "6f9172376af4d399c7853cbdfdd7425348a878f9"))])
  (geiser .
-	 [(0 25)
+	 [(0 25 1)
 	  ((emacs
 	    (25 1))
 	   (transient
@@ -561,7 +561,7 @@
 	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 	   (:authors
 	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-	   (:commit . "b03bad3e5dfa8f8a74167f78f25d7b664284a9ae"))])
+	   (:commit . "ecfbef1c771f3a5c34f46fb2b387b9669c661d2f"))])
  (geiser-chez .
 	      [(0 17)
 	       ((emacs
