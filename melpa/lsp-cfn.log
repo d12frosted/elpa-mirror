@@ -4,23 +4,27 @@ Source:  https://github.com/LaurenceWarne/lsp-cfn.el.git
 
 Updating /mnt/store/melpa/working/lsp-cfn/
 Checking out origin/HEAD
-Checking out 8228864e0b16f7107300fb6b8ba595bb84f016fd
-Checking out 8228864e0b16f7107300fb6b8ba595bb84f016fd
+Checking out 55203d41d767c091511599fca236c1f9c39cd58a
+Checking out 55203d41d767c091511599fca236c1f9c39cd58a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-cfn/
-  to /tmp/lsp-cfnZWJOmQ/lsp-cfn-20220707.824
+  to /tmp/lsp-cfn69lCTB/lsp-cfn-20220822.1545
     lsp-cfn.el -> lsp-cfn.el
     snippets => snippets
-Created lsp-cfn-20220707.824.tar containing:
-  lsp-cfn-20220707.824/
-  lsp-cfn-20220707.824/lsp-cfn-pkg.el
-  lsp-cfn-20220707.824/lsp-cfn.el
-  lsp-cfn-20220707.824/snippets/
-  lsp-cfn-20220707.824/snippets/js-mode/
-  lsp-cfn-20220707.824/snippets/js-mode/aws
-  lsp-cfn-20220707.824/snippets/yaml-mode/
-  lsp-cfn-20220707.824/snippets/yaml-mode/aws
-Built lsp-cfn in 5.742s, finished at 2022-08-22T11:51:58+0000
+Created lsp-cfn-20220822.1545.tar containing:
+  lsp-cfn-20220822.1545/
+  lsp-cfn-20220822.1545/lsp-cfn-pkg.el
+  lsp-cfn-20220822.1545/lsp-cfn.el
+  lsp-cfn-20220822.1545/snippets/
+  lsp-cfn-20220822.1545/snippets/js-mode/
+  lsp-cfn-20220822.1545/snippets/js-mode/aws
+  lsp-cfn-20220822.1545/snippets/js-mode/sam
+  lsp-cfn-20220822.1545/snippets/yaml-mode/
+  lsp-cfn-20220822.1545/snippets/yaml-mode/aws
+  lsp-cfn-20220822.1545/snippets/yaml-mode/sam
+Built lsp-cfn in 6.646s, finished at 2022-08-22T15:46:59+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 350 Aug 22 11:51 packages/lsp-cfn-20220707.824.entry
  20K -rw-r--r-- 1 root root 20K Aug 22 11:51 packages/lsp-cfn-20220707.824.tar
+4.0K -rw-r--r-- 1 root root 351 Aug 22 15:46 packages/lsp-cfn-20220822.1545.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 22 15:46 packages/lsp-cfn-20220822.1545.tar

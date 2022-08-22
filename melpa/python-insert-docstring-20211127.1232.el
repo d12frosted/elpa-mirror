@@ -4,8 +4,6 @@
 
 ;; Author: Marco Vocialta <macurovc@tutanota.com>
 ;; Package-Requires: ((emacs "25.1"))
-;; Package-Version: 20211127.1232
-;; Package-Commit: cd6419b74c99c06d5c48c1b289572acce1fd193b
 ;; URL: https://github.com/macurovc/insert-docstring
 ;; Version: 1.1
 
