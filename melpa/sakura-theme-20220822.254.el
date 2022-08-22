@@ -4,8 +4,8 @@
 
 ;; Authors: Jason Milkins <jasonm23@gmail.com>
 ;; URL: http://github.com/emacsfodder/emacs-theme-sakura
-;; Package-Version: 20220819.754
-;; Package-Commit: ea8267d7c32387b50193fa88270973444bbb3d56
+;; Package-Version: 20220822.254
+;; Package-Commit: d78648632a94dd5354d2fed0f94fcb7aece29132
 ;; Version: 1.0.1
 ;; ;; Package-Requires: ((autothemer "0.2") (emacs "24"))
 
@@ -1005,6 +1005,11 @@
   (vline-visual                              (:background sakura-background-teal))
   (w3m-haddock-heading-face                  (:inherit 'highlight))
   (warning                                   (:foreground sakura-bright-red :bold t))
+  (web-mode-doctype-face                     (:foreground sakura-foreground-2 :weight 'bold))
+  (web-mode-html-attr-equal-face             (:inherit 'default))
+  (web-mode-html-attr-name-face              (:inherit 'font-lock-variable-name-face))
+  (web-mode-html-tag-bracket-face            (:inherit 'default))
+  (web-mode-html-tag-face                    (:foreground sakura-foreground-3))
   (which-key-command-description-face        (:inherit 'font-lock-function-name-face))
   (which-key-group-description-face          (:inherit 'font-lock-keyword-face))
   (which-key-highlighted-command-face        (:underline t :inherit 'which-key-command-description-face))

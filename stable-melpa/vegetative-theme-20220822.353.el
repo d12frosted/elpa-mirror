@@ -4,9 +4,9 @@
 
 ;; Authors: Jason Milkins <jasonm23@gmail.com>
 ;; URL: http://github.com/emacsfodder/emacs-theme-vegetative
-;; Package-Version: 20220819.754
-;; Package-Commit: ad0ab4aae06bb7113cc23fbaca7c8621c81e134e
-;; Version: 1.0.1
+;; Package-Version: 20220822.353
+;; Package-Commit: db60ce0fe327ae7e4371545179ed94483b1132a8
+;; Version: 1.0.2
 ;; Package-Requires: ((autothemer "0.2") (emacs "24"))
 
 ;;; License
@@ -27,6 +27,7 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; Commentary:
+
 ;;  A Theme based on green CRT terminals.
 
 ;;; GUI Support only.
@@ -1004,6 +1005,11 @@
   (vline-visual                              (:background vegetative-background-teal))
   (w3m-haddock-heading-face                  (:inherit 'highlight))
   (warning                                   (:foreground vegetative-bright-red :bold t))
+  (web-mode-doctype-face                     (:foreground vegetative-foreground-2 :weight 'bold))
+  (web-mode-html-attr-equal-face             (:inherit 'default))
+  (web-mode-html-attr-name-face              (:inherit 'font-lock-variable-name-face))
+  (web-mode-html-tag-bracket-face            (:inherit 'default))
+  (web-mode-html-tag-face                    (:foreground vegetative-foreground-3))
   (which-key-command-description-face        (:inherit 'font-lock-function-name-face))
   (which-key-group-description-face          (:inherit 'font-lock-keyword-face))
   (which-key-highlighted-command-face        (:underline t :inherit 'which-key-command-description-face))

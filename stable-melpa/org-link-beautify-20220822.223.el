@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "28.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20220820.330
-;; Package-Commit: f0a52b3da11cb12cdff61908c6a2766e1b12daf2
+;; Package-Version: 20220822.223
+;; Package-Commit: 518dca0f55edf7f6a00720c8a16af678a43d8fa7
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -151,6 +151,20 @@ PDF preview."
 If command \"gnome-epub-thumbnailer\" is available, enable EPUB
 preview by default. You can set this option to nil to disable
 EPUB preview."
+  :type 'boolean
+  :safe #'booleanp
+  :group 'org-link-beautify)
+
+(defcustom org-link-beautify-kindle-preview
+  (cl-case system-type
+    ('gnu/linux (executable-find "mobitool"))
+    ('darwin (executable-find "mobitool")))
+  "Whether enable Kindle ebook files cover preview?
+
+Enable Kindle ebook preview by default. You can set this option
+to nil to disable EPUB preview.
+
+You can install software `libmobi' to get command `mobitool'."
   :type 'boolean
   :safe #'booleanp
   :group 'org-link-beautify)
@@ -438,6 +452,48 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
              (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
                (org-link-beautify--notify-generate-thumbnail-failed epub-file thumbnail-file)))
             (t (user-error "This system platform currently not supported by org-link-beautify.\n Please contribute code to support"))))
+        (org-link-beautify--add-overlay-marker start end)
+        (org-link-beautify--add-keymap start end)
+        (org-link-beautify--display-thumbnail thumbnail-file thumbnail-size start end))))
+
+(defvar org-link-beautify--kindle-cover
+  (cond
+   ;; for macOS, use `mobitool' from libmobi.
+   ((and (eq system-type 'darwin) (executable-find "mobitool")) "mobitool")
+   ;; for Linux, use `mobitool' from libmobi.
+   ((and (eq system-type 'gnu/linux) (executable-find "mobitool")) "mobitool"))
+  "Find available kindle ebook cover dump command.
+You can install software `libmobi' to get command `mobitool'.")
+
+(defun org-link-beautify--preview-kindle (path start end)
+  "Preview Kindle ebook files like mobi, azw3 PATH and display on link between START and END."
+  (if (string-match "\\(.*?\\)\\(?:::\\(.*\\)\\)?\\'" path)
+      (let* ((file-path (match-string 1 path))
+             ;; DEBUG: (_ (lambda (message "--> HERE")))
+             (_mob-page-number (or (match-string 2 path) 1))
+             (kindle-file (expand-file-name (org-link-unescape file-path)))
+             (thumbnails-dir (org-link-beautify--get-thumbnails-dir-path kindle-file))
+             (thumbnail-file (expand-file-name (format "%s%s.jpg" thumbnails-dir (file-name-base kindle-file))))
+             (thumbnail-size (or org-link-beautify-ebook-preview-size 500)))
+        (org-link-beautify--ensure-thumbnails-dir thumbnails-dir)
+        ;; DEBUG:
+        ;; (message kindle-file)
+        (unless (file-exists-p thumbnail-file)
+          (pcase org-link-beautify--kindle-cover
+            ("mobitool"
+             (let ((mobitool-cover-file (concat thumbnails-dir (file-name-base kindle-file) "_cover.jpg")))
+               (unless (file-exists-p mobitool-cover-file)
+                 (message "[org-link-beautify] preview kindle ebook file %s" kindle-file)
+                 (start-process
+                  "org-link-beautify--kindle-preview"
+                  " *org-link-beautify--kindle-preview*"
+                  "mobitool" "-c" "-o" thumbnails-dir kindle-file))
+               ;; then rename [file_cover.jpg] to [file.jpg]
+               (when (not (file-exists-p thumbnail-file))
+                 (rename-file mobitool-cover-file thumbnail-file))
+               (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
+                 (org-link-beautify--notify-generate-thumbnail-failed kindle-file thumbnail-file))))
+            (_ (user-error "[org-link-beautify] Error: failed to extract kindle ebook file %s cover." kindle-file))))
         (org-link-beautify--add-overlay-marker start end)
         (org-link-beautify--add-keymap start end)
         (org-link-beautify--display-thumbnail thumbnail-file thumbnail-size start end))))
@@ -811,6 +867,14 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
             ;; DEBUG:
             ;; (user-error "[org-link-beautify] cond -> epub file")
             (org-link-beautify--preview-epub path start end))
+
+           ;; kindle ebook file cover preview
+           ((and org-link-beautify-kindle-preview
+                 (equal type "file") (or (string= extension "mobi") (string= extension "azw3")))
+            ;; DEBUG:
+            ;; (user-error "[org-link-beautify] cond -> epub file")
+            (org-link-beautify--preview-kindle path start end))
+           
            
            ;; text content preview
            ((and org-link-beautify-text-preview

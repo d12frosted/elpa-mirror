@@ -4,9 +4,9 @@
 
 ;; Authors: Jason Milkins <jasonm23@gmail.com>
 ;; URL: http://github.com/emacsfodder/emacs-theme-orangey-bits
-;; Package-Version: 20220819.754
-;; Package-Commit: d1499dec435e953db6f4ca15e3b25c2dcfb8df21
-;; Version: 1.0.1
+;; Package-Version: 20220822.324
+;; Package-Commit: 533856d399cb4098300bcaf4a2d20920395746f8
+;; Version: 1.0.2
 ;; Package-Requires: ((autothemer "0.2") (emacs "27.1"))
 
 ;;; License
@@ -986,45 +986,34 @@
   (vc-needs-update-state                     (:inherit 'vc-state-base))
   (vc-removed-state                          (:inherit 'vc-state-base))
   (vc-state-base nil)
-  (vc-up-to-date-state                       (:inherit 'vc-state-base))
-  (vertical-border                           (:foreground orangey-bits-background-2))
-  (vertico-posframe                          (:background orangey-bits-background-0-hard))
-  (vertico-posframe-border                   (:background orangey-bits-background-0-hard))
-  (vertico-posframe-border-2                 (:background orangey-bits-background-0))
-  (vertico-posframe-border-3                 (:background orangey-bits-background-1))
-  (vertico-posframe-border-4                 (:background orangey-bits-background-2))
-  (vline                                     (:background orangey-bits-background-teal))
-  (vline-visual                              (:background orangey-bits-background-teal))
-  (w3m-haddock-heading-face                  (:inherit 'highlight))
-  (warning                                   (:foreground orangey-bits-bright-red :bold t))
-  (which-key-command-description-face        (:inherit 'font-lock-function-name-face))
-  (which-key-group-description-face          (:inherit 'font-lock-keyword-face))
-  (which-key-highlighted-command-face        (:underline t :inherit 'which-key-command-description-face))
-  (which-key-key-face                        (:inherit 'font-lock-constant-face))
-  (which-key-local-map-description-face      (:inherit 'which-key-command-description-face))
-  (which-key-note-face                       (:inherit 'which-key-separator-face))
-  (which-key-separator-face                  (:inherit 'font-lock-comment-face))
-  (which-key-special-key-face                (:weight 'bold :inverse-video t :inherit 'which-key-key-face))
-  (whitespace-empty                          (:foreground nil :background nil))
-  (whitespace-hspace                         (:foreground orangey-bits-background-4 :background orangey-bits-background-0))
-  (whitespace-indentation                    (:foreground orangey-bits-background-4 :background orangey-bits-background-0))
-  (whitespace-line                           (:foreground orangey-bits-neutral-red :background orangey-bits-background-1))
-  (whitespace-newline                        (:foreground orangey-bits-background-4 :background orangey-bits-background-0))
-  (whitespace-space                          (:foreground orangey-bits-background-4 :background orangey-bits-background-0))
-  (whitespace-space-after-tab                (:foreground orangey-bits-background-4 :background orangey-bits-background-0))
-  (whitespace-space-before-tab               (:foreground orangey-bits-background-4 :background orangey-bits-background-0))
-  (whitespace-tab                            (:foreground orangey-bits-background-4 :background orangey-bits-background-0))
-  (whitespace-trailing                       (:foreground orangey-bits-neutral-red :background orangey-bits-background-1))
-  (widget-button                             (:weight 'bold))
-  (widget-button-pressed                     (:foreground orangey-bits-faded-red))
-  (widget-documentation                      (:foreground orangey-bits-mid-yellow))
-  (widget-field                              (:background orangey-bits-background-4))
-  (widget-inactive                           (:inherit 'shadow))
-  (widget-single-line-field                  (:background orangey-bits-background-4))
-  (window-divider                            (:foreground orangey-bits-background-2))
-  (window-divider-first-pixel                (:foreground orangey-bits-background-2))
-  (window-divider-last-pixel                 (:foreground orangey-bits-background-2))
-  (yas-field-highlight-face                  (:inherit 'region)))
+  (vc-up-to-date-state                      (:inherit 'vc-state-base))
+
+  (w3m-haddock-heading-face                 (:inherit 'highlight))
+
+  (web-mode-doctype-face                     (:foreground orangey-bits-foreground-2 :weight 'bold))
+  (web-mode-html-attr-equal-face             (:inherit 'default))
+  (web-mode-html-attr-name-face              (:inherit 'font-lock-variable-name-face))
+  (web-mode-html-tag-bracket-face            (:inherit 'default))
+  (web-mode-html-tag-face                    (:foreground orangey-bits-foreground-3))
+
+  (which-key-command-description-face       (:inherit 'font-lock-function-name-face))
+  (which-key-group-description-face         (:inherit 'font-lock-keyword-face))
+  (which-key-highlighted-command-face       (:underline t :inherit 'which-key-command-description-face))
+  (which-key-key-face                       (:inherit 'font-lock-constant-face))
+  (which-key-local-map-description-face     (:inherit 'which-key-command-description-face))
+  (which-key-note-face                      (:inherit 'which-key-separator-face))
+  (which-key-separator-face                 (:inherit 'font-lock-comment-face))
+  (which-key-special-key-face               (:weight 'bold :inverse-video t :inherit 'which-key-key-face))
+
+  (widget-button                            (:weight 'bold))
+  (widget-button-pressed                    (:foreground orangey-bits-faded-red))
+  (widget-documentation                     (:foreground orangey-bits-mid-yellow))
+  (widget-field                             (:background orangey-bits-background-4))
+  (widget-inactive                          (:inherit 'shadow))
+  (widget-single-line-field                 (:background orangey-bits-background-4))
+
+  (yas--field-debug-face nil)
+  (yas-field-highlight-face                 (:inherit ('quote 'region))))
 
  (custom-theme-set-variables 'orangey-bits
                              `(pos-tip-foreground-color ,orangey-bits-foreground-0-hard)
