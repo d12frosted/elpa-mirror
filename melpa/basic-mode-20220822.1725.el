@@ -1,15 +1,15 @@
-;;; basic-mode.el --- major mode for editing BASIC code
+;;; basic-mode.el --- Major mode for editing BASIC code
 
-;; Copyright (C) 2017-2021 Johan Dykstrom
+;; Copyright (C) 2017-2022 Johan Dykstrom
 
 ;; Author: Johan Dykstrom
 ;; Created: Sep 2017
-;; Version: 0.4.3
-;; Package-Version: 20210316.1253
-;; Package-Commit: eaa5f24d2fb303d9e5d7de2a28c7c18b01532ab6
+;; Version: 0.4.4
+;; Package-Version: 20220822.1725
+;; Package-Commit: e58d30883f7ab78d2b4573bb566d2199a39f97ba
 ;; Keywords: basic, languages
 ;; URL: https://github.com/dykstrom/basic-mode
-;; Package-Requires: ((seq "2.20") (emacs "24.3"))
+;; Package-Requires: ((seq "2.20") (emacs "25.1"))
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@
 ;;
 ;; You can format the region, or the entire buffer, by typing C-c C-f.
 ;;
-;; When line numbers are turned or, hitting the return key will insert
+;; When line numbers are turned on, hitting the return key will insert
 ;; a new line starting with a fresh line number.  Typing C-c C-r will
 ;; renumber all lines in the region, or the entire buffer, including
 ;; any jumps in the code.
@@ -61,7 +61,7 @@
 ;; `basic-delete-trailing-whitespace' and `delete-trailing-lines'
 ;; (from simple.el).
 ;;
-;; You can also customize the number of columns to use for line
+;; You can also customize the number of columns to allocate for line
 ;; numbers, see variable `basic-line-number-cols'.  The default value
 ;; is 0, which means not using line numbers at all.
 ;;
@@ -71,6 +71,7 @@
 
 ;;; Change Log:
 
+;;  0.4.4  2022-08-22  Auto-numbering without line-number-cols.
 ;;  0.4.3  2021-03-16  Improved indentation with tabs.
 ;;                     Thanks to Jeff Spaulding.
 ;;  0.4.2  2018-09-19  Lookup of dimmed variables.
@@ -148,7 +149,7 @@ empty lines are never numbered."
 ;; Variables:
 ;; ----------------------------------------------------------------------------
 
-(defconst basic-mode-version "0.4.3"
+(defconst basic-mode-version "0.4.4"
   "The current version of `basic-mode'.")
 
 (defconst basic-increase-indent-keywords-bol
@@ -457,8 +458,7 @@ trailing lines at the end of the buffer if the variable
         (goto-char (point-max))
         (backward-char)
         (while (eq (char-before) ?\n)
-          (delete-char -1))
-        ))))
+          (delete-char -1))))))
 
 ;; ----------------------------------------------------------------------------
 ;; Line numbering:
@@ -487,27 +487,24 @@ are available between the existing lines, just increment by one,
 even if that creates overlaps."
   (interactive)
   (let* ((current-line-number (basic-current-line-number))
-	 (next-line-number (save-excursion
-			     (end-of-line)
-			     (and (forward-word 1)
-				  (basic-current-line-number))))
-	 (new-line-number (and current-line-number
-			       basic-auto-number
-			       (+ current-line-number basic-auto-number))))
+	     (next-line-number (save-excursion
+			                 (end-of-line)
+			                 (and (forward-word 1)
+				                  (basic-current-line-number))))
+	     (new-line-number (and current-line-number
+			                   basic-auto-number
+			                   (+ current-line-number basic-auto-number))))
     (basic-indent-line)
     (newline)
-    (when (and new-line-number
-	       (not (zerop basic-line-number-cols)))
-      (when (and next-line-number
-		 (<= next-line-number
-		     new-line-number))
-	(setq new-line-number
-	      (+ current-line-number
-		 (truncate (- next-line-number current-line-number)
-			   2)))
-	(when (= new-line-number current-line-number)
-	  (setq new-line-number (1+ new-line-number))))
-      (insert (int-to-string new-line-number)))
+    (when (and next-line-number
+               new-line-number
+		       (<= next-line-number new-line-number))
+	  (setq new-line-number
+	        (+ current-line-number
+		       (truncate (- next-line-number current-line-number) 2)))
+	  (when (= new-line-number current-line-number)
+	    (setq new-line-number (1+ new-line-number))))
+    (insert (int-to-string new-line-number))
     (basic-indent-line)))
 
 (defun basic-find-jumps ()
