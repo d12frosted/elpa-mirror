@@ -5,8 +5,8 @@
 ;; Author: Johan Dykstrom
 ;; Created: Sep 2017
 ;; Version: 0.4.4
-;; Package-Version: 20220822.1725
-;; Package-Commit: e58d30883f7ab78d2b4573bb566d2199a39f97ba
+;; Package-Version: 20220823.1148
+;; Package-Commit: 8d7f66ba38d003d7ee6ff271482edfabf146963c
 ;; Keywords: basic, languages
 ;; URL: https://github.com/dykstrom/basic-mode
 ;; Package-Requires: ((seq "2.20") (emacs "25.1"))
@@ -71,7 +71,7 @@
 
 ;;; Change Log:
 
-;;  0.4.4  2022-08-22  Auto-numbering without line-number-cols.
+;;  0.4.4  2022-08-23  Auto-numbering without line-number-cols.
 ;;  0.4.3  2021-03-16  Improved indentation with tabs.
 ;;                     Thanks to Jeff Spaulding.
 ;;  0.4.2  2018-09-19  Lookup of dimmed variables.
@@ -504,7 +504,7 @@ even if that creates overlaps."
 		       (truncate (- next-line-number current-line-number) 2)))
 	  (when (= new-line-number current-line-number)
 	    (setq new-line-number (1+ new-line-number))))
-    (insert (int-to-string new-line-number))
+    (if new-line-number (insert (int-to-string new-line-number)))
     (basic-indent-line)))
 
 (defun basic-find-jumps ()
