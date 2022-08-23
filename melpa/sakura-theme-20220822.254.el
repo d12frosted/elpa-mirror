@@ -5,7 +5,7 @@
 ;; Authors: Jason Milkins <jasonm23@gmail.com>
 ;; URL: http://github.com/emacsfodder/emacs-theme-sakura
 ;; Package-Version: 20220822.254
-;; Package-Commit: d78648632a94dd5354d2fed0f94fcb7aece29132
+;; Package-Commit: 49f6fbb9f0f5d0129c2fc23c09be2c6bfc7ada0a
 ;; Version: 1.0.1
 ;; ;; Package-Requires: ((autothemer "0.2") (emacs "24"))
 
