@@ -5,7 +5,7 @@
 ;; Author: Patrick Thomson <patrickt@github.com>
 ;; URL: https://github.com/patrickt/codespaces.el
 ;; Package-Version: 20220822.1255
-;; Package-Commit: e1e17b2c41512763bfeef53f1e857ea186034809
+;; Package-Commit: 7b0b939e8e470af2fa358cf98c973c3a87df5682
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: comm
