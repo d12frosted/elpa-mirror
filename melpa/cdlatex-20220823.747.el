@@ -3,9 +3,9 @@
 ;;
 ;; Author: Carsten Dominik <carsten.dominik@gmail.com>
 ;; Keywords: tex
-;; Package-Version: 20220819.1232
-;; Package-Commit: 132176d0c593e23a6e2873a3f43be91739dda75a
-;; Version: 4.13
+;; Package-Version: 20220823.747
+;; Package-Commit: 6f734db8ab87f11dffb77c33a445140baeb723c4
+;; Version: 4.14
 ;;
 ;; This file is not part of GNU Emacs.
 ;;

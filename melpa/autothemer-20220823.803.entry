@@ -1,13 +1,11 @@
 (autothemer .
-	    [(20220822 222)
+	    [(20220823 803)
 	     ((dash
 	       (2 10 0))
 	      (emacs
-	       (24))
-	      (cl-lib
-	       (0 5)))
+	       (26 1)))
 	     "Conveniently define themes" single
-	     ((:commit . "026f074b10a35ee1e0e8e39c2dcb78ebfcb04619")
+	     ((:commit . "c09d76196c73c0885295c3b3dafee251d6529180")
 	      (:authors
 	       ("Sebastian Sturm"))
 	      (:maintainer "Jason Milkins" . "jasonm23@gmail.com")

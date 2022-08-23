@@ -3,20 +3,11 @@ Fetcher: git
 Source:  https://gitee.com/shaqxu/prettify-math.git
 
 Updating /mnt/store/melpa/working/prettify-math/
-Checking out origin/HEAD
-Checking out 5bdb9a8af7593d3a38492a618aedc545278fe8a1
-Checking out 5bdb9a8af7593d3a38492a618aedc545278fe8a1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/prettify-math/
-  to /tmp/prettify-mathQ9FB6G/prettify-math-20220101.549
-    prettify-math.el -> prettify-math.el
-    mathjax-jsonrpc.js -> mathjax-jsonrpc.js
-Created prettify-math-20220101.549.tar containing:
-  prettify-math-20220101.549/
-  prettify-math-20220101.549/mathjax-jsonrpc.js
-  prettify-math-20220101.549/prettify-math-pkg.el
-  prettify-math-20220101.549/prettify-math.el
-Built prettify-math in 139.698s, finished at 2022-08-23T07:29:03+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 441 Aug 23 07:29 packages/prettify-math-20220101.549.entry
- 32K -rw-r--r-- 1 root root 30K Aug 23 07:29 packages/prettify-math-20220101.549.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitee.com/shaqxu/prettify-math.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -7,13 +7,12 @@
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;;
 ;; URL: https://github.com/jasonm23/autothemer
-;; Package-Version: 20220822.222
-;; Package-Commit: 026f074b10a35ee1e0e8e39c2dcb78ebfcb04619
-;; Version: 0.2.6
-;; Package-Requires: ((dash "2.10.0") (emacs "24") (cl-lib "0.5"))
-
+;; Package-Version: 20220823.803
+;; Package-Commit: c09d76196c73c0885295c3b3dafee251d6529180
+;; Version: 0.2.8
+;; Package-Requires: ((dash "2.10.0") (emacs "26.1"))
+;;
 ;;; License:
-
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
@@ -39,7 +38,7 @@
 
 (cl-defstruct autothemer--color name value)
 
-(cl-defstruct autothemer--theme colors defined-faces)
+(cl-defstruct autothemer--theme colors defined-faces name description)
 
 (defvar autothemer--current-theme nil
   "Internal variable of type `autothemer--theme' used by autothemer.
@@ -107,6 +106,8 @@ bindings within both the REDUCED-SPECS and the BODY."
                                                                                 :value ,temp-color)))
                                  (setq autothemer--current-theme
                                        (make-autothemer--theme
+                                        :name ,(symbol-name name)
+                                        :description ,description
                                         :colors ,temp-color-structs
                                         :defined-faces ',face-names))))
                            (setq ,face-specs
@@ -135,14 +136,14 @@ type `autothemer--color'."
   "Return the element of COLORS that is closest in rgb space to COLOR.
 Here, COLOR is an Emacs color specification and COLORS is a list
 of `autothemer--color' structs."
-  (let ((mindistance 0)
+  (let ((min-distance 0)
         (closest-color nil))
     (mapc (lambda (candidate)
             (when (color-defined-p (autothemer--color-value candidate))
               (let ((distance (autothemer--color-distance color candidate)))
-                (if (or (not closest-color) (< distance mindistance))
+                (if (or (not closest-color) (< distance min-distance))
                     (setq closest-color candidate
-                          mindistance distance)))))
+                          min-distance distance)))))
           colors)
     closest-color))
 
@@ -287,11 +288,239 @@ An error is shown when no current theme is available."
     (with-current-buffer buffer (emacs-lisp-mode) (insert (pp templates)))
     (switch-to-buffer buffer)))
 
-(cl-defsubst autothemer--append-column (list-of-lists new-column)
-  "If LIST-OF-LISTS is nil, return NEW-COLUMN.  Otherwise, append to every element of LIST-OF-LISTS the corresponding element of NEW-COLUMN."
-  (cl-assert (or (not list-of-lists) (eq (length list-of-lists) (length new-column))))
-  (if list-of-lists (inline (-zip-with #'append list-of-lists new-column))
+(cl-defsubst autothemer--append-column (lists new-column)
+  "If LISTS is nil, return NEW-COLUMN.
+Otherwise, append NEW-COLUMN to every element of LISTS."
+  (cl-assert (or (not lists) (eq (length lists) (length new-column))))
+  (if lists (inline (-zip-with #'append lists new-column))
     new-column))
+
+(defun autothemer--current-theme-guard ()
+  "Guard functions from executing when there's no current theme."
+  (when (null autothemer--current-theme)
+    (user-error "No current theme available. Evaluate an autotheme definition")))
+
+;;; Get colors from theme palette
+
+(defun autothemer--get-color (color-name)
+  "Return color palette object for (string) COLOR-NAME.
+
+Search the `autothemer--current-theme' color palette for COLOR-NAME
+and returns a color in the form of `autothemer--color' struct.
+
+See also `autothemer--color-p', `autothemer--color-name', `autothemer--color-value'."
+  (autothemer--current-theme-guard)
+  (--find
+   (eql (intern color-name)
+        (autothemer--color-name it))
+   (autothemer--theme-colors autothemer--current-theme)))
+
+(defun autothemer--select-color (&optional prompt)
+  "Select a color from the current palette, optionally use PROMPT.
+Current palette is read from `autothemer--current-theme'.
+
+The selected color will be in the form of a `autothemer--color'
+
+See also `autothemer--color-p', `autothemer--color-name', `autothemer--color-value'."
+  (autothemer--current-theme-guard)
+  (let*
+      ((selected
+        (completing-read (if (null prompt)
+                             "Select a color: "
+                           prompt)
+         (mapcar #'(lambda (it)
+                     (let ((color (autothemer--color-value it))
+                           (name (autothemer--color-name it)))
+                      (format
+                       "%s %s  %-45s"
+                       (propertize "                                        "
+                        'face (list ':background color
+                                    ':foreground (readable-foreground-color color)))
+                       (propertize color
+                        'face (list ':background color
+                                    ':foreground (readable-foreground-color color)))
+                       name)))
+          (autothemer--theme-colors autothemer--current-theme))))
+       (color-name (car (split-string selected " " t " "))))
+    (autothemer--get-color color-name)))
+
+;;; Helper Functions
+
+(defmacro autothemer--plist-bind (args plist &rest body)
+  "Evaluate BODY with using ARGS to access PLIST values.
+
+For example:
+
+    (autothemer--plist-bind (a b c) '(:a 1 :b 2 :c 3) (list a b))
+    => '(1 2)
+
+If PLIST is nil, ARGS are bound to BODY nil values."
+  `(if (listp ,plist)
+       (cl-destructuring-bind (&key ,@args &allow-other-keys) ,plist ,@body)
+     (let (,@args) ,@body)))
+
+(defun autothemer--unindent (s)
+  "Unindent string S marked with | chars."
+  (replace-regexp-in-string "^ *|" "" s))
+
+;;; SVG Palette generator...
+
+(defun autothemer-generate-palette-svg (&optional options)
+  "Create an SVG palette image for a theme.
+
+Optionally supply OPTIONS, a plist (all keys are optional):
+
+    :theme-file - theme filename
+    :theme-name - override the title found in :theme-file
+    :theme-description - override the description found in :theme-file
+    :theme-url - override the url found in :theme-file
+    :swatch-width - px spacing width of a color swatch (default: 100)
+    :swatch-height - px spacing height of a color swatch (default: 150)
+    :columns - number of columns for each palette row (default: 6)
+    :page-template - see page-template below
+    :swatch-template - see swatch-template below
+    :font-family - font name to use in the generated SVG
+    :bg-color - background color
+    :text-color - text color
+    :text-accent-color - text color
+    :svg-out-file - SVG output filename
+
+For advanced customization the :page-template and :swatch-template can be
+used to provide customize the SVG templates.
+
+Note: Template parameters are filled by `format' so we mark them as follows:
+
+Page Template parameters:
+
+    %1$s  - width
+    %2$s  - height
+    %3$s  - font-family
+    %4$s  - text-color
+    %5$s  - text-accent-color
+    %6$s  - bg-color
+    %7$s  - theme-name
+    %8$s  - theme-description
+    %9$s  - theme-url
+    %10$s - color swatches
+
+Swatch Template parameters:
+
+    %1$s - x
+    %2$s - y
+    %3$s - swatch-color
+    %4$s - text-color
+    %5$s - swatch-color-name"
+  (interactive)
+  (autothemer--plist-bind
+    (theme-file theme-name theme-description theme-url
+     swatch-width swatch-height columns page-template
+     swatch-template font-family bg-color
+     text-color text-accent-color svg-out-file)
+    options
+   (let ((theme-file (or theme-file (read-file-name "Select autothemer theme .el file: "))))
+     (load-file theme-file) ;; make it the current-theme
+     (let* ((page-template
+             (or page-template
+              (autothemer--unindent "<?xml version=\"1.0\" standalone=\"no\"?>
+                         |<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"
+                         |\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">
+                         |<svg width=\"%1$spx\" height=\"%2$spx\"
+                         |     version=\"1.1\"
+                         |     xmlns=\"http://www.w3.org/2000/svg\"
+                         |     xmlns:xlink=\"http://www.w3.org/1999/xlink\">
+                         |  <style>
+                         |    text {
+                         |    font-family: \"%3$s\";
+                         |    fill: %4$s;
+                         |    }
+                         |  </style>
+                         |  <rect x=\"0\" y=\"0\" rx=\"10\" width=\"%1$spx\" height=\"%2$spx\" id=\"background-panel\" fill=\"%6$s\"/>
+                         |  <g transform=\"translate(14,10)\">
+                         |    <a xlink:href=\"%9$s\">
+                         |    <text style=\"font-size:42pt;\" font-weight=\"bold\" x=\"3%%\" y=\"50\" id=\"theme-name\">%7$s</text>
+                         |    <text style=\"font-size:12pt;\" x=\"4%%\" y=\"75\" id=\"theme-description\">%8$s</text>
+                         |    <text style=\"font-size:8pt;fill: %5$s\" text-anchor=\"end\" x=\"95%%\" y=\"20\" id=\"theme-url\">%9$s</text>
+                         |    </a>
+                         |  </g>
+                         |  <g transform=\"translate(70,-40)\">
+                         |  %10$s
+                         |  </g>
+                         |</svg>
+                         |")))
+
+            (swatch-template
+             (or swatch-template
+              (autothemer--unindent "<g transform=\"translate(%1$s,%2$s),rotate(45)\">
+                         | <ellipse cx=\"70\" cy=\"70\" rx=\"45\" ry=\"45\" id=\"background-color\" fill=\"%3$s\"/>
+                         | <ellipse cx=\"70\" cy=\"70\" rx=\"42\" ry=\"42\" id=\"color\" fill=\"%4$s\"/>
+                         | <text style=\"font-size:7pt\" font-weight=\"bold\" x=\"52\" y=\"125\" id=\"color-name\">%6$s</text>
+                         | <text style=\"font-size:7pt; fill:%5$s;\" font-weight=\"bold\" x=\"52\" y=\"134\" id=\"color\">%4$s</text>
+                         |</g>
+                         |")))
+
+            (autotheme-name (autothemer--theme-name autothemer--current-theme))
+            (theme-name (or theme-name
+                            (autothemer--theme-name autothemer--current-theme)))
+            (theme-description (or theme-description
+                                   (autothemer--theme-description autothemer--current-theme)))
+            (theme-url  (or theme-url
+                         (lm-homepage theme-file)
+                         (read-string "Enter theme URL: " "https://github.com/")))
+            (colors (autothemer--theme-colors autothemer--current-theme))
+            (font-family  (or font-family
+                           (read-string "Font family name: " "Helvetica Neue")))
+            (swatch-width (or swatch-width
+                              100))
+            (swatch-height (or swatch-height
+                               150))
+            (columns (or columns
+                         6))
+            ;; TODO: Width and Height padding (55, 120) parameterized?
+            (width (+ 55 (* columns swatch-width)))
+            (height (+ 120 (* (/ (length colors) columns) swatch-height)))
+            (background-color (or bg-color
+                                  (autothemer--color-value
+                                   (autothemer--select-color "Select Background color: "))))
+            (text-color (or text-color
+                            (autothemer--color-value
+                             (autothemer--select-color "Select Text color: "))))
+            (text-accent-color (or text-accent-color
+                                   (autothemer--color-value
+                                    (autothemer--select-color "Select Text accent color: "))))
+            (svg-out-file (or svg-out-file (read-file-name (format "Enter a Filename to save SVG palette for %s." theme-name))))
+            (svg-swatches (string-join
+                            (-map-indexed
+                               (lambda (index it)
+                                   (let ((color (autothemer--color-value it))
+                                         (name  (upcase
+                                                 (replace-regexp-in-string
+                                                  (concat autotheme-name "-") ""
+                                                  (format "%s" (autothemer--color-name it)))))
+                                         (x (+ 20 (* swatch-width (% index columns))))
+                                         (y (+ 90 (* swatch-height (/ index columns)))))
+                                     (format swatch-template
+                                             x
+                                             y
+                                             background-color
+                                             color
+                                             text-accent-color
+                                             name)))
+                             colors)
+                            "\n")))
+       (with-temp-file svg-out-file
+         (insert
+          (format page-template
+                  width
+                  height
+                  font-family
+                  text-color
+                  text-accent-color
+                  background-color
+                  theme-name
+                  theme-description
+                  theme-url
+                  svg-swatches)))
+      (message "%s generated." svg-out-file)))))
 
 (provide 'autothemer)
 ;;; autothemer.el ends here

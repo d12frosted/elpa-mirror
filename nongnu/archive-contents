@@ -78,19 +78,17 @@
 		 (:maintainer "stardiviner" . "numbchild@gmail.com")
 		 (:keywords "languages" "arduino"))])
  (autothemer .
-	     [(0 2 6)
+	     [(0 2 8)
 	      ((dash
 		(2 10 0))
 	       (emacs
-		(24))
-	       (cl-lib
-		(0 5)))
-	      "Conveniently define themes." tar
+		(26 1)))
+	      "Conveniently define themes" tar
 	      ((:url . "https://github.com/jasonm23/autothemer")
 	       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
 	       (:authors
 		("Sebastian Sturm"))
-	       (:commit . "f1cf7b8d918d5bcc52c2769c774104b5938a6f85"))])
+	       (:commit . "07c4d891cc8b824b391831e73b8dd44d3a7b17c5"))])
  (better-jumper .
 		[(1 0 1)
 		 ((emacs
@@ -152,14 +150,14 @@
 	  ("Damien Doligez" . "damien.doligez@inria.fr"))
 	 (:keywords "ocaml"))])
  (cdlatex .
-	  [(4 13)
+	  [(4 14)
 	   nil "Fast input methods for LaTeX environments and math" tar
 	   ((:keywords "tex")
 	    (:maintainer "Carsten Dominik" . "carsten.dominik@gmail.com")
 	    (:authors
 	     ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
-	    (:commit . "43c047919d2aef0cce5571830e01ebc83d4ea0f8"))])
+	    (:commit . "6f734db8ab87f11dffb77c33a445140baeb723c4"))])
  (cider .
 	[(1 4 1)
 	 ((emacs
