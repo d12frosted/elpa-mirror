@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
-;; Package-Version: 20220710.623
-;; Package-Commit: cff73bfea8deef2c97cc1ceac4b03702702c4a83
+;; Package-Version: 20220823.442
+;; Package-Commit: 2db3a34f50ec4dd6e2cae92bab639ccfc742b3cc
 ;; Version: 2.8.0-snapshot
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -1488,6 +1488,29 @@ Also bind `class' to ((class color) (min-colors 89))."
       (t
        (:underline ,zenburn-green))))
    `(slime-highlight-face ((t (:inherit highlight))))
+;;;;; SLY
+   `(sly-mrepl-output-face ((t (:foreground ,zenburn-red))))
+   `(sly-error-face
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-red)))
+      (t
+       (:underline ,zenburn-red))))
+   `(sly-warning-face
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-orange)))
+      (t
+       (:underline ,zenburn-orange))))
+   `(sly-style-warning-face
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-yellow)))
+      (t
+       (:underline ,zenburn-yellow))))
+   `(sly-note-face
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-green)))
+      (t
+       (:underline ,zenburn-green))))
+   `(sly-stickers-placed-face ((t (:foreground ,zenburn-fg :background ,zenburn-bg+3))))
 ;;;;; solaire
    `(solaire-default-face ((t (:inherit default :background ,zenburn-bg-08))))
    `(solaire-minibuffer-face ((t (:inherit default :background ,zenburn-bg-08))))
