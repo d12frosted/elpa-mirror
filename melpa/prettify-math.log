@@ -3,10 +3,20 @@ Fetcher: git
 Source:  https://gitee.com/shaqxu/prettify-math.git
 
 Updating /mnt/store/melpa/working/prettify-math/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://gitee.com/shaqxu/prettify-math.git/': Failed to connect to gitee.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 5bdb9a8af7593d3a38492a618aedc545278fe8a1
+Checking out 5bdb9a8af7593d3a38492a618aedc545278fe8a1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prettify-math/
+  to /tmp/prettify-mathsWUlJz/prettify-math-20220101.549
+    prettify-math.el -> prettify-math.el
+    mathjax-jsonrpc.js -> mathjax-jsonrpc.js
+Created prettify-math-20220101.549.tar containing:
+  prettify-math-20220101.549/
+  prettify-math-20220101.549/mathjax-jsonrpc.js
+  prettify-math-20220101.549/prettify-math-pkg.el
+  prettify-math-20220101.549/prettify-math.el
+Built prettify-math in 14.495s, finished at 2022-08-23T22:56:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 441 Aug 23 22:56 packages/prettify-math-20220101.549.entry
+ 32K -rw-r--r-- 1 root root 30K Aug 23 22:56 packages/prettify-math-20220101.549.tar

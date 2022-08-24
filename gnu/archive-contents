@@ -1489,7 +1489,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 5)
+	    [(0 6)
 	     ((emacs
 	       (27)))
 	     "Tool for inspection of Emacs Lisp objects." tar
@@ -1498,7 +1498,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "69df4a49f3e8260c9a43c227960ead4d821341bc"))])
+	      (:commit . "9404e8a6b9933ae8c6fd48826ff0069445eac031"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
@@ -3188,6 +3188,17 @@
 	   (:authors
 	    ("Kaushal Modi" . "kaushal.modi@gmail.com"))
 	   (:commit . "670e0a08f625175fd80137cf69e799619bf8a381"))])
+ (topspace .
+	   [(0 3 0)
+	    ((emacs
+	      (25 1)))
+	    "Recenter line 1 with scrollable upper margin/padding" tar
+	    ((:url . "https://github.com/trevorpogue/topspace")
+	     (:keywords "convenience" "scrolling" "center" "cursor" "margin" "padding")
+	     (:maintainer "Trevor Edwin Pogue" . "trevor.pogue@gmail.com")
+	     (:authors
+	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
+	     (:commit . "851737dfe3dbd6ea5186d6d421d9d0c9197831ec"))])
  (tramp .
 	[(2 5 3 1)
 	 ((emacs

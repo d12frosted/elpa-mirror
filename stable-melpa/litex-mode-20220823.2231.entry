@@ -1,11 +1,9 @@
 (litex-mode .
-	    [(20220415 1704)
-	     ((cl-lib
-	       (0 5))
-	      (emacs
-	       (24 1)))
+	    [(20220823 2231)
+	     ((emacs
+	       (24 4)))
 	     "Minor mode for converting lisp to LaTeX" tar
-	     ((:commit . "5d5750af2990c050c8d36baa4b8e7a45850d5a6a")
+	     ((:commit . "c4a1071fcf6d2bec9eb367ede8c33b190e9ff802")
 	      (:authors
 	       ("Gaurav Atreya" . "allmanpride@gmail.com"))
 	      (:maintainer "Gaurav Atreya" . "allmanpride@gmail.com")

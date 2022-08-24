@@ -1,12 +1,12 @@
-;;; helm-mu.el --- Helm sources for searching emails and contacts
+;;; helm-mu.el --- Helm sources for searching emails and contacts. -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2013 Titus von der Malsburg <malsburg@posteo.de>
 
 ;; Author: Titus von der Malsburg <malsburg@posteo.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/emacs-helm/helm-mu
-;; Package-Version: 20210816.913
-;; Package-Commit: b85019d01815a4b58d6016c3a30fefa60d8363f2
+;; Package-Version: 20220823.1905
+;; Package-Commit: 4562322214421693efa8dc529d66b6256b81746a
 ;; Version: 1.0.0
 ;; Package-Requires: ((helm "1.5.5"))
 
@@ -179,9 +179,9 @@ Homebrew without some specific installation options."
 
 (defcustom helm-mu-append-implicit-wildcard nil
   "Should a wildcard be appended implicitly to the search string.
-If non-nil a wildcard is appended to the user's search query before passing it
-to mu, this allows getting results even for partially entered queries.
-See `helm-mu-get-search-pattern'"
+If non-nil a wildcard is appended to the user's search query
+before passing it to mu, this allows getting results even for
+partially entered queries.  See `helm-mu-get-search-pattern'"
   :group 'helm-mu
   :type 'boolean)
 
@@ -236,10 +236,14 @@ than '~/.mu' to store your data"
   (helm-build-in-buffer-source "Search contacts with mu"
     :data #'helm-mu-contacts-init
     :filtered-candidate-transformer #'helm-mu-contacts-transformer
-    :action '(("Compose email to contact(s)"      . helm-mu-compose-mail)
-              ("Search emails from/to contact(s)" . helm-mu-action-get-contact-emails)
-              ("Insert contact(s) at point"       . helm-mu-action-insert-contacts)
-              ("Copy contact(s) to clipboard"     . helm-mu-action-copy-contacts-to-clipboard))))
+    :action '(("Compose email to contact(s)"      .
+               helm-mu-compose-mail)
+              ("Search emails from/to contact(s)" .
+               helm-mu-action-get-contact-emails)
+              ("Insert contact(s) at point"       .
+               helm-mu-action-insert-contacts)
+              ("Copy contact(s) to clipboard"     .
+               helm-mu-action-copy-contacts-to-clipboard))))
 
 
 
@@ -265,8 +269,12 @@ by appending a `*' to the pattern input by the user"
   "Initialize async mu process for `helm-source-mu'."
   (let ((process-connection-type nil)
         (maxnum (helm-candidate-number-limit helm-source-mu))
-        (mucmd (concat mu4e-mu-binary " find " helm-mu-command-arguments " -f $'i\td\tf\tt\ts' --sortfield=d --maxnum=%d --reverse --format=sexp %s 2>/dev/null "))
-        (sedcmd (concat helm-mu-gnu-sed-program " -e ':a;N;$!ba;s/\\n\\(\\t\\|\\()\\)\\)/ \\2/g'"))
+        (mucmd (concat mu4e-mu-binary
+                       " find "
+                       helm-mu-command-arguments
+                       " -f $'i\td\tf\tt\ts' --sortfield=d --maxnum=%d --reverse --format=sexp %s 2>/dev/null "))
+        (sedcmd (concat helm-mu-gnu-sed-program
+                        " -e ':a;N;$!ba;s/\\n\\(\\t\\|\\()\\)\\)/ \\2/g'"))
         (pattern (helm-mu-get-search-pattern)))
     (prog1
       (start-process-shell-command "helm-mu" helm-buffer
@@ -277,20 +285,21 @@ by appending a `*' to the pattern input by the user"
                  " | " sedcmd))
       (set-process-sentinel
         (get-buffer-process helm-buffer)
-        #'(lambda (process event)
-            (if (string= event "finished\n")
-                (with-helm-window
-                  (setq mode-line-format
-                        '(" " mode-line-buffer-identification " "
-                          (line-number-mode "%l") " "
-                          (:eval (propertize
-                                  (format "[Mu Process Finish- (%s results)]"
-                                          (max (1- (count-lines
-                                                    (point-min) (point-max))) 0))
-                                  'face 'helm-grep-finish))))
-                  (force-mode-line-update))
-                (helm-log "Error: Mu %s"
-                          (replace-regexp-in-string "\n" "" event))))))))
+        (lambda (_process event)
+          (if (string= event "finished\n")
+              (with-helm-window
+                (setq mode-line-format
+                      '(" " mode-line-buffer-identification " "
+                        (line-number-mode "%l") " "
+                        (:eval (propertize
+                                (format "[Mu Process Finish- (%s results)]"
+                                        (max (1- (count-lines
+                                                  (point-min) (point-max)))
+                                             0))
+                                'face 'helm-grep-finish))))
+                (force-mode-line-update))
+            (helm-log "Error: Mu %s"
+                      (replace-regexp-in-string "\n" "" event))))))))
 
 (defun helm-mu-contacts-init ()
   "Retrieves contacts from mu."
@@ -344,15 +353,16 @@ by appending a `*' to the pattern input by the user"
         (when str
           (setq line (concat line
               (if (not width) str
-                (truncate-string-to-width str width 0 ?\s t)) " ")))))
+                (truncate-string-to-width str width 0 ?\s t))
+              " ")))))
     (propertize line 'face
       (let ((flags (mu4e-message-field candidate :flags)))
         (cond
           ((memq 'trashed flags) 'mu4e-trashed-face)
           ((memq 'draft flags)   'mu4e-draft-face)
-          ((or
-             (memq 'unread flags)
-             (memq 'new flags))  'mu4e-unread-face)
+          ((or (memq 'unread flags)
+               (memq 'new flags))
+           'mu4e-unread-face)
           ((memq 'flagged flags) 'mu4e-flagged-face)
           ((memq 'replied flags) 'mu4e-replied-face)
           ((memq 'passed flags)  'mu4e-forwarded-face)
@@ -376,11 +386,12 @@ by appending a `*' to the pattern input by the user"
   (if (equal candidates '("mu: no matches for search expression"))
       (list (propertize (car candidates) 'face 'mu4e-system-face))
     (cl-loop for i in candidates
-          for width = (save-excursion (with-helm-window (helm-mu-window-width)))
+          for width = (save-excursion
+                        (with-helm-window (helm-mu-window-width)))
           for line = (helm-mu-candidate-formatter i)
           collect (cons (truncate-string-to-width line width) i))))
 
-(defun helm-mu-contacts-transformer (candidates source)
+(defun helm-mu-contacts-transformer (candidates _source)
   "Formats the contacts to display in two columns, name and
 address.  The name column has a predefined width."
   (let* ((candidates (helm-remove-if-not-match "@" candidates))
@@ -394,7 +405,8 @@ address.  The name column has a predefined width."
                          (cadr helm-mu-contacts-name-replace)
                          (cadr contact))
              for address = (car contact)
-             for width = (save-excursion (with-helm-window (helm-mu-window-width)))
+             for width = (save-excursion
+                           (with-helm-window (helm-mu-window-width)))
              collect
              (cons (concat
                     (propertize
@@ -404,7 +416,8 @@ address.  The name column has a predefined width."
                     " "
                     (propertize
                      (truncate-string-to-width
-                      address (- width helm-mu-contacts-name-colwidth 1) 0 ?\s)
+                      address (- width helm-mu-contacts-name-colwidth 1)
+                      0 ?\s)
                      'face 'helm-mu-contacts-address-face))
                    i))))
 
@@ -425,9 +438,10 @@ address.  The name column has a predefined width."
 
 (defun helm-mu-display-email (candidate)
   "Open an email using mu4e."
-  (mu4e-headers-search (helm-mu-get-search-pattern) nil nil nil (plist-get candidate :message-id) t))
+  (mu4e-headers-search (helm-mu-get-search-pattern)
+                       nil nil nil (plist-get candidate :message-id) t))
 
-(defun helm-mu-compose-mail (candidate)
+(defun helm-mu-compose-mail (_candidate)
   "Compose a new email directed to the selected contacts."
   (mu4e~compose-mail (mapconcat 'helm-mu-format-contact
                                 (helm-marked-candidates) ", "))
@@ -440,16 +454,18 @@ address.  The name column has a predefined width."
                          (mapcar #'split-string
                                  (helm-marked-candidates))))
          ;; Compose the search query for helm-mu and let bind it to
-         ;; `helm-mu-default-search-string'. The query is grouped so that any
-         ;; further filter supplied by user are applied for messages matching
-         ;; all contacts not just the last contact
+         ;; `helm-mu-default-search-string'. The query is grouped so
+         ;; that any further filter supplied by user are applied for
+         ;; messages matching all contacts not just the last contact
          (helm-mu-default-search-string
           (concat "("
                   ;; Not using `string-join' here
                   ;; since it is not available on
                   ;; pre 24.4 emacs
                   (mapconcat 'identity
-                             (mapcar (lambda (email) (format "contact:%s" email)) emails)
+                             (mapcar (lambda (email)
+                                       (format "contact:%s" email))
+                                     emails)
                              " OR ")
                   ")")))
     (helm-mu)))
@@ -464,13 +480,17 @@ address.  The name column has a predefined width."
 (defun helm-mu-compile-address-list (candidates)
   "Compile a string containing a list of contacts suitable for
 use in the address field of an email."
-  (let* ((candidates (mapcar (lambda (s) (split-string s "[ \t]")) candidates)))
+  (let* ((candidates (mapcar (lambda (s) (split-string s "[ \t]"))
+                             candidates)))
     (mapconcat #'identity
                (cl-loop
                 for cand in candidates
                 for address = (helm-mu-chomp (car cand))
-                for name    = (helm-mu-chomp (mapconcat #'identity (cdr cand) " "))
-                for name    = (if (string-match "," name) (format "\"%s\"" name) name)
+                for name1   = (helm-mu-chomp
+                               (mapconcat #'identity (cdr cand) " "))
+                for name    = (if (string-match "," name1)
+                                  (format "\"%s\"" name1)
+                                name1)
                 if (string= name "") collect address
                 else collect (format "%s <%s>" name address))
                ", ")))
@@ -508,16 +528,16 @@ current query will be used to initialize the search.  Otherwise
                          (not helm-mu-always-use-default-search-string))
                     (mu4e-last-query)
                   helm-mu-default-search-string))
-         ;; Do not append space it there is already trailing space or query is
-         ;; empty
+         ;; Do not append space it there is already trailing space or
+         ;; query is empty
          (input (if (not (or (string-match-p " $" query)
                              (string= "" query)))
                     (concat query " ")
                   query)))
 
-    ;; If there is an existing helm action buffer kill it, otherwise it interferes
-    ;; with the action for this source. This will happen if helm-mu is called as
-    ;; an action from some other source
+    ;; If there is an existing helm action buffer kill it, otherwise
+    ;; it interferes with the action for this source. This will happen
+    ;; if helm-mu is called as an action from some other source
     (when (get-buffer helm-action-buffer)
       (kill-buffer helm-action-buffer))
 
