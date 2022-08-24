@@ -5,7 +5,7 @@
 ;; Author: Magnar Sveen <magnars@gmail.com>
 ;; Version: 1.12.0
 ;; Package-Version: 20220816.956
-;; Package-Commit: 7f25ead4b0deac6f49d07e0c3b8859adedb28207
+;; Package-Commit: 07c57d3562da534d1b18a0fb21e12cd6ae6ff4d7
 ;; Keywords: strings
 
 ;; This program is free software; you can redistribute it and/or modify
