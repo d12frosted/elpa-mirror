@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/use-ttf
 ;; Package-Version: 20220704.700
-;; Package-Commit: 6473227e4e26896db099d54bd2ba1d05619395bc
+;; Package-Commit: 9fd4d37c3fce9d0f3743172f50ed7c4cb17b822d
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience customize font install ttf

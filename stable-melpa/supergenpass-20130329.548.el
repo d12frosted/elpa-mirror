@@ -4,8 +4,6 @@
 
 ;; Author: Jaime Fournier <jaimef@linbsd.org>
 ;; Keywords: SuperGenPass
-;; Package-Version: 20130329.548
-;; Package-Commit: 549072ef7b5b82913cadd4758e8a0a9926f0a04a
 ;; Version: 0.1
 
 ;; This program is free software; you can redistribute it and/or modify

@@ -5,7 +5,7 @@
 ;; Author: Jen-Chieh Shen
 ;; URL: https://github.com/emacs-vs/vs-dark-theme
 ;; Package-Version: 20220817.733
-;; Package-Commit: e03bf01da97428c5cbb6615cb3c499e26812522e
+;; Package-Commit: bf0e9d763ccff2add31f441261903986f9cbc702
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 

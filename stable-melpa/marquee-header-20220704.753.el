@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/marquee-header
 ;; Package-Version: 20220704.753
-;; Package-Commit: 14f490b8683bdce53a6272fcc28a9b4137f86a24
+;; Package-Commit: 8a54972a893d28ba79dcd832d55c446a8db43d62
 ;; Version: 0.0.9
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: wp animation marquee

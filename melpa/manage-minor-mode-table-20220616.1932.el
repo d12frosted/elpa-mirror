@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/manage-minor-mode-table
 ;; Package-Version: 20220616.1932
-;; Package-Commit: e47d0e1856f0a9eb9935abdaf6e14e67ef2ab4cc
+;; Package-Commit: dd1c23ecaeaabba8d72f2a0822eefd6a2df9fcb7
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "25.1") (manage-minor-mode "1.1"))
 ;; Keywords: tools minor-mode manage

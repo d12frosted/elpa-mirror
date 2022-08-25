@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/searcher
 ;; Package-Version: 20220704.758
-;; Package-Commit: 6debf99431a5cb4d1db55e5379453c6a181a133f
+;; Package-Commit: 54330eabcc5c47019b9ab51d6b3fc035deebbab0
 ;; Version: 0.4.1
 ;; Package-Requires: ((emacs "25.1") (dash "2.10") (f "0.20.0"))
 ;; Keywords: convenience search searcher string

@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/reveal-in-folder
 ;; Package-Version: 20220704.659
-;; Package-Commit: ccc5d8c61d386bb817863624fea0dba1273e7255
+;; Package-Commit: 3d9a05c0bd3a80600a0544f420b77eba9a1f86c4
 ;; Version: 0.1.2
 ;; Package-Requires: ((emacs "24.3") (f "0.20.0") (s "1.12.0"))
 ;; Keywords: convenience folder finder reveal file explorer

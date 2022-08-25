@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/logms
 ;; Package-Version: 20220704.654
-;; Package-Commit: c5c2e8c3850417d8c1b0733b77a364002805863c
+;; Package-Commit: 7c110d94a7d17c55fc1fac489f307f2e6055d82e
 ;; Version: 0.3.1
 ;; Package-Requires: ((emacs "27.1") (f "0.20.0") (s "1.9.0") (ht "2.3"))
 ;; Keywords: maint debug log

@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/license-templates
 ;; Package-Version: 20220704.654
-;; Package-Commit: 8182fa959477388b61c3a5d226e88e63ca2e87d3
+;; Package-Commit: a926f07abc7b4daa22944f0e9ce393fe45094a5f
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "24.3") (request "0.3.0"))
 ;; Keywords: convenience license api template

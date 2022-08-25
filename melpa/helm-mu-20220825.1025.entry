@@ -1,0 +1,10 @@
+(helm-mu .
+	 [(20220825 1025)
+	  ((helm
+	    (1 5 5)))
+	  "Helm sources for searching emails and contacts." single
+	  ((:commit . "85714ac9a9db6619035c40f5b5a2cae948561b01")
+	   (:authors
+	    ("Titus von der Malsburg" . "malsburg@posteo.de"))
+	   (:maintainer "Titus von der Malsburg" . "malsburg@posteo.de")
+	   (:url . "https://github.com/emacs-helm/helm-mu"))])

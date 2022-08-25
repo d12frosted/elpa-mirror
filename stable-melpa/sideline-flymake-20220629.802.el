@@ -6,7 +6,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-sideline/sideline-flymake
 ;; Package-Version: 20220629.802
-;; Package-Commit: a6c6e9e4e64a12040adadaf351f3e83a0e2954e6
+;; Package-Commit: d105be829dc621bbc50158da3dbed7a5e304f8a8
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "27.1") (sideline "0.1.0"))
 ;; Keywords: convenience flymake
