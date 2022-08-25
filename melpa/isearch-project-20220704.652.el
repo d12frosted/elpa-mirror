@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/isearch-project
 ;; Package-Version: 20220704.652
-;; Package-Commit: 08b1102c1f55011952aff818261a9478175a5b92
+;; Package-Commit: a8c9a9f71c34ba35f9754621ce4f70d19381e807
 ;; Version: 0.2.6
 ;; Package-Requires: ((emacs "26.1") (f "0.20.0"))
 ;; Keywords: convenience search

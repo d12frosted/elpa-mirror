@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/com-css-sort
 ;; Package-Version: 20220704.647
-;; Package-Commit: bda336544e61b45e24927d8850fdb28d4b7c267e
+;; Package-Commit: f54c2ba98d4e73d5504152ae8d61071ed467e39f
 ;; Version: 0.0.7
 ;; Package-Requires: ((emacs "25.1") (s "1.12.0"))
 ;; Keywords: convenience matching css sort

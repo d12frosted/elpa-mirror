@@ -6,7 +6,7 @@
 ;; Author: Florian Kaufmann <sensorflo@gmail.com>
 ;; URL: https://github.com/emacsorphanage/adoc-mode
 ;; Package-Version: 20220720.622
-;; Package-Commit: e0d08ee6d29289a475796e22b2298b028c02b408
+;; Package-Commit: 00c59c8d952c92c547cb18ba57dff0f673866670
 ;; Created: 2009
 ;; Version: 0.7.0-snapshot
 ;; Package-Requires: ((emacs "26") (markup-faces "1.0.0"))

@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/company-quickhelp-terminal
 ;; Package-Version: 20220704.647
-;; Package-Commit: 70c8a979d82e436dca8595e3ec049c733246f338
+;; Package-Commit: 4968de67d0db8ddae29a03719b31f1be0434cb9f
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24.4") (company-quickhelp "2.2.0") (popup "0.5.3"))
 ;; Keywords: convenience terminal extends support tip help

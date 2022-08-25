@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/htmltagwrap
 ;; Package-Version: 20220704.652
-;; Package-Commit: aeabbb7606e033bccbb70d2a1c463ba8a733a4e9
+;; Package-Commit: 31ebfdaa333c6ef7d5d249de9d859030bfb3cb82
 ;; Version: 0.0.3
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keyword: convenience keybindings

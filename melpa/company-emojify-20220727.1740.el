@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/company-emojify
 ;; Package-Version: 20220727.1740
-;; Package-Commit: cc3ae96fbafa51d71fde802fa3c1e5fad9402158
+;; Package-Commit: f877614d3395ba3f2a678b50d79bac6d392c2d2b
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "26.1") (company "0.8.0") (emojify "1.2.1") (ht "2.0"))
 ;; Keywords: convenience emoji company emojify

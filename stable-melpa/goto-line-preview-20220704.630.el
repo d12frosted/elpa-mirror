@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-vs/goto-line-preview
 ;; Package-Version: 20220704.630
-;; Package-Commit: b58af255e822b6bb226085592ca471dee6027b95
+;; Package-Commit: 162f6f3e410365399efed4122321eec23d482e22
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "25"))
 ;; Keywords: convenience line navigation

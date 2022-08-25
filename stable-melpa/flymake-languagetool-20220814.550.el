@@ -6,7 +6,7 @@
 ;; Authors: Shen, Jen-Chieh <jcs090218@gmail.com>, Trey Peacock <git@treypeacock.com>
 ;; URL: https://github.com/emacs-languagetool/flymake-languagetool
 ;; Package-Version: 20220814.550
-;; Package-Commit: b954dde15be113e5b917aebd0f006be1b54a2ee3
+;; Package-Commit: 0860650caa5538ccb679b5149dffb9b4992cfa75
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "27.1") (s "1.9.0"))
 ;; Keywords: convenience grammar check

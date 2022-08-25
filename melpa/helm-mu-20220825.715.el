@@ -5,8 +5,8 @@
 ;; Author: Titus von der Malsburg <malsburg@posteo.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/emacs-helm/helm-mu
-;; Package-Version: 20220824.757
-;; Package-Commit: f57e36415e29dd8122fc05b830b4331e4df970db
+;; Package-Version: 20220825.715
+;; Package-Commit: bf1def8c3e4d565072bb214c10ce6531bd8040a4
 ;; Version: 1.0.0
 ;; Package-Requires: ((helm "1.5.5"))
 
@@ -442,9 +442,9 @@ address.  The name column has a predefined width."
   (helm-run-after-quit 'mu4e-headers-search (helm-mu-get-search-pattern)))
 
 (defun helm-mu-display-email (candidate)
-  "Open email CANDIDATE using mu4e."
-  (let ((message-id (plist-get candidate :message-id)))
-    (mu4e-view-message-with-message-id message-id)))
+  "Open an email using mu4e."
+  (mu4e-headers-search (helm-mu-get-search-pattern)
+                       nil nil nil (plist-get candidate :message-id) t))
 
 (defun helm-mu-compose-mail (_candidate)
   "Compose a new email directed to the selected contacts."

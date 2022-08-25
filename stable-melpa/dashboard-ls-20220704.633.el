@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-dashboard/dashboard-ls
 ;; Package-Version: 20220704.633
-;; Package-Commit: 62cc1aa84c9f5a6657fcd5032574a7670eac5aa0
+;; Package-Commit: 1f8c66c7d05c3d350f6986841adaa3294f1699d2
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "24.3") (dashboard "1.2.5"))
 ;; Keywords: convenience directory file show

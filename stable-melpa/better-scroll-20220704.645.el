@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/better-scroll
 ;; Package-Version: 20220704.645
-;; Package-Commit: 9ec8cb24751784cc114263728d7565fd473facd7
+;; Package-Commit: 6ca5c402757710eba2c20c382ea532aa10f054a2
 ;; Version: 0.1.4
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: convenience scrolling scroll window better improvement

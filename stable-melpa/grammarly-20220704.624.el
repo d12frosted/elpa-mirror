@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-grammarly/grammarly
 ;; Package-Version: 20220704.624
-;; Package-Commit: 1242c4f26c70697ed2447b7fca41645e8f9daf96
+;; Package-Commit: fa7463ff3692581112c6aadade570744028ecc91
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "26.1") (s "1.12.0") (request "0.3.0") (websocket "1.6"))
 ;; Keywords: convenience grammar api interface english

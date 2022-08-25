@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/fill-page
 ;; Package-Version: 20220704.650
-;; Package-Commit: 7da1dc1259c1b15e28736d27d87f4cef40a3a18d
+;; Package-Commit: 84f3ba47d7864e9a5ba9fa83770e3f3919751380
 ;; Version: 0.3.7
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience fill page buffer

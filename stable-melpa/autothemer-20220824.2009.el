@@ -7,9 +7,9 @@
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;;
 ;; URL: https://github.com/jasonm23/autothemer
-;; Package-Version: 20220823.803
-;; Package-Commit: c09d76196c73c0885295c3b3dafee251d6529180
-;; Version: 0.2.8
+;; Package-Version: 20220824.2009
+;; Package-Commit: 378f8707bdd944f19b6fd4544359e993c9113752
+;; Version: 0.2.9
 ;; Package-Requires: ((dash "2.10.0") (emacs "26.1"))
 ;;
 ;;; License:
@@ -297,7 +297,7 @@ Otherwise, append NEW-COLUMN to every element of LISTS."
 
 (defun autothemer--current-theme-guard ()
   "Guard functions from executing when there's no current theme."
-  (when (null autothemer--current-theme)
+  (unless autothemer--current-theme
     (user-error "No current theme available. Evaluate an autotheme definition")))
 
 ;;; Get colors from theme palette
@@ -341,8 +341,24 @@ See also `autothemer--color-p', `autothemer--color-name', `autothemer--color-val
                                     ':foreground (readable-foreground-color color)))
                        name)))
           (autothemer--theme-colors autothemer--current-theme))))
-       (color-name (car (split-string selected " " t " "))))
+       (color-name (cadr (split-string selected " " t " "))))
     (autothemer--get-color color-name)))
+
+(defun autothemer-insert-color ()
+  "Interactively select and insert a color from the current autotheme palette."
+  (interactive)
+  (autothemer--current-theme-guard)
+  (let ((color (autothemer--color-value
+                 (autothemer--select-color "Insert a color: "))))
+    (insert color)))
+
+(defun autothemer-insert-color-name ()
+  "Interactively select and insert a color name from the current autotheme palette."
+  (interactive)
+  (autothemer--current-theme-guard)
+  (let ((color-name (autothemer--color-name
+                      (autothemer--select-color "Insert a color name: "))))
+    (insert (format"%s" color-name))))
 
 ;;; Helper Functions
 

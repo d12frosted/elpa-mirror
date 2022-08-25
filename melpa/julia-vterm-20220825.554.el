@@ -6,8 +6,8 @@
 ;; Maintainer: Shigeaki Nishina
 ;; Created: March 11, 2020
 ;; URL: https://github.com/shg/julia-vterm.el
-;; Package-Version: 20220720.1410
-;; Package-Commit: 698ca35da04d99f25c8f075e8342015434f6a662
+;; Package-Version: 20220825.554
+;; Package-Commit: a82419796dbd2faf70b7cb41f484ccf36e6ae5dd
 ;; Package-Requires: ((emacs "25.1") (vterm "0.0.1"))
 ;; Version: 0.19
 ;; Keywords: languages, julia
@@ -66,7 +66,7 @@
   "A major mode for inferior Julia REPL."
   :group 'julia)
 
-(defvar julia-vterm-repl-program "julia"
+(defvar-local julia-vterm-repl-program "julia"
   "Name of the command for executing Julia code.
 Maybe either a command in the path, like julia
 or an absolute path name, like /usr/local/bin/julia
@@ -87,8 +87,9 @@ parameters may be used, like julia -q")
   :group 'julia-vterm-repl)
 
 (defun julia-vterm-repl-buffer-name (&optional session-name)
-  "Return a Julia REPL buffer name whose session name is SESSION-NAME."
-  (format "*julia:%s*" (if session-name session-name "main")))
+  "Return a Julia REPL buffer name whose session name is SESSION-NAME.
+If SESSION-NAME is not given, the default session name `main' is assumed."
+  (format "*julia:%s*" (or session-name "main")))
 
 (defun julia-vterm-repl-session-name (repl-buffer)
   "Return the session name of REPL-BUFFER."
@@ -97,37 +98,29 @@ parameters may be used, like julia -q")
 	(substring bn 7 -1)
       nil)))
 
-(defun julia-vterm-repl-buffer-with-session-name (session-name &optional restart)
+(defun julia-vterm-repl-buffer (&optional session-name restart)
   "Return an inferior Julia REPL buffer of the session name SESSION-NAME.
 If there exists no such buffer, one is created and returned.
 With non-nil RESTART, the existing buffer will be killed and
 recreated."
-  (if-let ((buffer (get-buffer (julia-vterm-repl-buffer-name session-name)))
-	   (alive (vterm-check-proc buffer))
-	   (no-restart (not restart)))
-      buffer
-    (if (get-buffer-process buffer) (delete-process buffer))
-    (if buffer (kill-buffer buffer))
-    (let ((buffer (generate-new-buffer (julia-vterm-repl-buffer-name session-name)))
-	  (vterm-shell julia-vterm-repl-program))
-      (with-current-buffer buffer
-	(julia-vterm-repl-mode)
-	(add-function :filter-args (process-filter vterm--process)
-		      (julia-vterm-repl-run-filter-functions-func session-name)))
-      buffer)))
-
-(defun julia-vterm-repl-buffer (&optional session-name restart)
-  "Return an inferior Julia REPL buffer.
-The main REPL buffer will be returned if SESSION-NAME is not
-given.  If non-nil RESTART is given, the REPL buffer will be
-recreated even when a process is alive and running in the buffer."
-  (if session-name
-      (julia-vterm-repl-buffer-with-session-name session-name restart)
-    (julia-vterm-repl-buffer-with-session-name "main" restart)))
+  (let ((ses-name (or session-name "main")))
+    (if-let ((buffer (get-buffer (julia-vterm-repl-buffer-name ses-name)))
+	     (alive (vterm-check-proc buffer))
+	     (no-restart (not restart)))
+	buffer
+      (if (get-buffer-process buffer) (delete-process buffer))
+      (if buffer (kill-buffer buffer))
+      (let ((buffer (generate-new-buffer (julia-vterm-repl-buffer-name ses-name)))
+	    (vterm-shell julia-vterm-repl-program))
+	(with-current-buffer buffer
+	  (julia-vterm-repl-mode)
+	  (add-function :filter-args (process-filter vterm--process)
+			(julia-vterm-repl-run-filter-functions-func ses-name)))
+	buffer))))
 
 (defun julia-vterm-repl (&optional arg)
   "Create an inferior Julia REPL buffer and open it.
-The buffer name will be `*julia:main*` where `main` is the default session name.
+The buffer name will be `*julia:main*' where `main' is the default session name.
 With prefix ARG, prompt for a session name.
 If there's already an alive REPL buffer for the session, it will be opened."
   (interactive "P")
@@ -178,6 +171,7 @@ If there's already an alive REPL buffer for the session, it will be opened."
 	  (list proc str))))))
 
 (defun julia-vterm-repl-buffer-status ()
+  "Check and return the prompt status of the REPL command input."
   (let* ((bs (buffer-string))
 	 (tail (substring bs (- (min 256 (length bs))))))
     (set-text-properties 0 (length tail) nil tail)
@@ -268,7 +262,9 @@ With prefix ARG, prompt for session name."
     (vterm-send-return)))
 
 (defun julia-vterm-paste-string (string &optional session-name)
-  "Send STRING to the Julia REPL buffer using brackted paste mode."
+  "Send STRING to the Julia REPL buffer using brackted paste mode.
+If SESSION-NAME is given, the REPL with the session name, otherwise
+the main REPL, is used."
   (with-current-buffer (julia-vterm-fellow-repl-buffer session-name)
     (vterm-send-string string t)))
 
@@ -291,13 +287,16 @@ script buffer."
 	      (newline))))))
   (forward-line))
 
+(defun julia-vterm-ensure-newline (str)
+  "Add a newline at the end of STR if the last character is not a newline."
+  (concat str (if (string= (substring str -1 nil) "\n") "" "\n")))
+
 (defun julia-vterm-send-region-or-current-line ()
   "Send the content of the region if the region is active, or send the current line."
   (interactive)
   (if (use-region-p)
-      (progn
-	(julia-vterm-paste-string
-	 (buffer-substring-no-properties (region-beginning) (region-end)))
+      (let ((str (julia-vterm-ensure-newline (buffer-substring-no-properties (region-beginning) (region-end)))))
+	(julia-vterm-paste-string str)
 	(deactivate-mark))
     (julia-vterm-send-current-line)))
 
@@ -305,7 +304,7 @@ script buffer."
   "Send the whole content of the script buffer to the Julia REPL line by line."
   (interactive)
   (save-excursion
-    (julia-vterm-paste-string (buffer-string))))
+    (julia-vterm-paste-string (julia-vterm-ensure-newline (buffer-string)))))
 
 (defun julia-vterm-send-include-buffer-file (&optional arg)
   "Send a line to evaluate the buffer's file using include() to the Julia REPL.
@@ -319,7 +318,7 @@ With prefix ARG, use Revise.includet() instead."
       (message "The buffer must be saved in a file to include."))))
 
 (defun julia-vterm-send-cd-to-buffer-directory ()
-  "Send cd() function call to the Julia REPL to change the current working directory of REPL to the buffer's directory."
+  "Change the REPL's working directory to the directory of the buffer file."
   (interactive)
   (if buffer-file-name
       (let ((buffer-directory (file-name-directory buffer-file-name)))
@@ -335,9 +334,6 @@ With prefix ARG, use Revise.includet() instead."
   (with-current-buffer (julia-vterm-fellow-repl-buffer)
     (julia-vterm-repl-buffer-status)))
 
-(unless (fboundp 'julia)
-  (defalias 'julia 'julia-vterm-repl))
-
 ;;;###autoload
 (define-minor-mode julia-vterm-mode
   "A minor mode for a Julia script buffer that interacts with an inferior Julia REPL."
@@ -349,6 +345,16 @@ With prefix ARG, use Revise.includet() instead."
     (,(kbd "C-c C-b") . julia-vterm-send-buffer)
     (,(kbd "C-c C-i") . julia-vterm-send-include-buffer-file)
     (,(kbd "C-c C-d") . julia-vterm-send-cd-to-buffer-directory)))
+
+
+;;----------------------------------------------------------------------
+;; Define some utility aliases but not override if the names are already used.
+(unless (fboundp 'julia)
+  (defalias 'julia 'julia-vterm-repl))
+
+(unless (boundp 'julia-session)
+  (defvaralias 'julia-session 'julia-vterm-session))
+
 
 (provide 'julia-vterm)
 

@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/diminish-buffer
 ;; Package-Version: 20220704.648
-;; Package-Commit: 6521793eb1a33d56c78bb1e8e579cdeafd224ed7
+;; Package-Commit: ace41c25a6ec8bce755a0d83b3abef22db7ea641
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience diminish hide buffer menu

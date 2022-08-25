@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/alt-codes
 ;; Package-Version: 20220704.644
-;; Package-Commit: cd007b1627afc450a30183da82e50d611afe6b8e
+;; Package-Commit: 6ba4b3cc6c7891adff408e58e9ed399d9effbea9
 ;; Version: 0.0.5
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience alt codes insertion meta

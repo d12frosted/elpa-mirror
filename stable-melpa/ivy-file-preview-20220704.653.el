@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/ivy-file-preview
 ;; Package-Version: 20220704.653
-;; Package-Commit: 3b78a194298290babd1a35ed689f333a271471b6
+;; Package-Commit: 30af5edfe6ce27738233050774356f9ab15d05d0
 ;; Version: 0.4.5
 ;; Package-Requires: ((emacs "25.1") (ivy "0.8.0") (s "1.12.0") (f "0.20.0"))
 ;; Keywords: convenience file ivy swiper preview select selection

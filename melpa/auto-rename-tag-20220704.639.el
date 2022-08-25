@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/auto-rename-tag
 ;; Package-Version: 20220704.639
-;; Package-Commit: 955a25bf371fe7edc7c1c5fdda0578731273c108
+;; Package-Commit: 7e47763d127ccebcf58aa5fce5daf14260b5d55b
 ;; Version: 0.3.5
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience auto-complete html rename tag xml

@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 ;; Package-Version: 20220721.1609
-;; Package-Commit: 91b76fc475f7eb17a0ae8b94a42625dfb546cc01
+;; Package-Commit: 7b54f88d2241073986b0e3d109012ee396cfdb3f
 ;; Version: 1.4.0
 ;; Package-Requires: ((emacs "26.1") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; Keywords: matching auto-complete complete fuzzy
