@@ -4,7 +4,7 @@
 ;; Author: Sohail Somani <sohail@taggedtype.net>
 ;; Version: 0.1
 ;; Package-Version: 20140129.717
-;; Package-Commit: a864a8be5842223043702395f311e3350c28e9db
+;; Package-Commit: f94f970c2d375e0973b66ba99b29c7aa42fd550f
 ;; URL: https://github.com/abingham/prosjekt
 ;; Package-Requires: ((prosjekt "0.3") (helm "1.5.9"))
 

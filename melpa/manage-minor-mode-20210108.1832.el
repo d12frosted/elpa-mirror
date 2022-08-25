@@ -5,7 +5,7 @@
 
 ;; Version: 1.1
 ;; Package-Version: 20210108.1832
-;; Package-Commit: 7d886dddf81568c9387410701f60302cd33b4f63
+;; Package-Commit: f4b37fffec7b6608a597e6a3f6900634802807b4
 ;; Author: Shingo Fukuyama - http://fukuyama.co
 ;; Maintainer: Jen-Chieh Shen <jcs090218@gmail.com>
 ;; URL: https://github.com/ShingoFukuyama/manage-minor-mode

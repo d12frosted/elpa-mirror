@@ -18,7 +18,7 @@
 
 ;; Version: 1.3
 ;; Package-Version: 20171004.451
-;; Package-Commit: 292e07203c676361a1d918deb5acf2123cd70eaf
+;; Package-Commit: 67d516138172fd60782df94454b3d0bd247e84f3
 ;; Keywords: indentation
 ;; URL: https://github.com/listx/kakapo-mode
 ;; Package-Requires: ((cl-lib "0.5"))

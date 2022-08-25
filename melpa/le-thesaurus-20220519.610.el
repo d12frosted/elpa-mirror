@@ -3,7 +3,7 @@
 ;;; Copyright (C) 2022 by Anselm Coogan
 ;;; URL: https://github.com/AnselmC/le-thesaurus.el
 ;; Package-Version: 20220519.610
-;; Package-Commit: 3ea30714e7197f660dea59ec6c762cde0a44f74e
+;; Package-Commit: 790ffaaf3d24b82fbf05376daa6787717c5b1f7d
 ;;; Version: 0.2.0
 ;;; Package-Requires: ((request "0.3.2") (emacs "24.4"))
 

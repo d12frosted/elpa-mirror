@@ -8,7 +8,7 @@
 ;; Modified: october 3, 2021
 ;; Version: 0.1.6
 ;; Package-Version: 20211114.1233
-;; Package-Commit: a0503498ae43a50157549c661381d94578ad2bd7
+;; Package-Commit: 313f74b17580c2a55f5c068e1bda17821b50c31e
 ;; Keywords: event, calendar, ics, khal
 ;; Homepage: https://gitlab.com/hperrey/khalel
 ;; Package-Requires: ((emacs "27.1"))

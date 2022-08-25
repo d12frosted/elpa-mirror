@@ -5,7 +5,7 @@
 ;; Author: edkolev <evgenysw@gmail.com>
 ;; URL: http://github.com/edkolev/evil-goggles
 ;; Package-Version: 20220112.1302
-;; Package-Commit: 8f20a16e74016f37ad76dc4f2230d9b00c6df3c2
+;; Package-Commit: 1b66053ea5f06b08a52bebdd42bffd8eff82032b
 ;; Package-Requires: ((emacs "24.4") (evil "1.0.0"))
 ;; Version: 0.0.2
 ;; Keywords: emulations, evil, vim, visual

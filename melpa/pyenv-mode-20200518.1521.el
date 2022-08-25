@@ -5,7 +5,7 @@
 ;; Author: Artem Malyshev <proofit404@gmail.com>
 ;; URL: https://github.com/proofit404/pyenv-mode
 ;; Package-Version: 20200518.1521
-;; Package-Commit: b818901b8eac0e260ced66a6a5acabdbf6f5ba99
+;; Package-Commit: d191037fe62ed8d4fee5888845da3e2c386d8e89
 ;; Version: 0.1.0
 ;; Package-Requires: ((pythonic "0.1.0"))
 

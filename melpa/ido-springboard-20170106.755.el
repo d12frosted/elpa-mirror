@@ -6,7 +6,7 @@
 ;; Created: 13 Jun 2012
 ;; Version: 1.0
 ;; Package-Version: 20170106.755
-;; Package-Commit: 687d1e5898a880878995dc9bffe93b4598366203
+;; Package-Commit: 263a8cd4582c81bfc29d7db37d5267e2488b148c
 ;; Keywords: ido
 ;; X-URL: https://github.com/jwiegley/springboard
 

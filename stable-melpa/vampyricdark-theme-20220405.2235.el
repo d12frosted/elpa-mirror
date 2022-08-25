@@ -4,7 +4,7 @@
 
 ;; Version: 1.0.1
 ;; Package-Version: 20220405.2235
-;; Package-Commit: 7b9ac67efd38466765b85b1dd131d6b64d8f71f9
+;; Package-Commit: 24e43991ae50098e1f8fecaaabc768183de76947
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/VampyricDark/emacs
 

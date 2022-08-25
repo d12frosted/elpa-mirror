@@ -5,7 +5,7 @@
 ;; Author: Jonas Gorauskas <jgorauskas@gmail.com>
 ;; URL: http://github.com/gorauskas/darkburn-theme
 ;; Package-Version: 20170423.1652
-;; Package-Commit: 0af794ff7fac19778ac8a7efb92455c6f6c2158f
+;; Package-Commit: b59053533246330e9107721da7977a0af312c915
 ;; Version: 0.5
 
 ;; # ATTENTION: This fork is no lorger maintained !!!

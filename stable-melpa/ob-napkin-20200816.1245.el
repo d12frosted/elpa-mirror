@@ -5,7 +5,7 @@
 ;; Author: Hans Jang
 ;; Keywords: tools, literate programming, reproducible research, napkin, plantuml
 ;; Package-Version: 20200816.1245
-;; Package-Commit: 7af5e8af08da8455c489909afbd9528a61f570e7
+;; Package-Commit: a2e7e77706a326c00eb6a441de1e920fba676ee0
 ;; Homepage: https://github.com/pinetr2e/ob-napkin
 ;; Version: 0.9
 ;; Package-Requires: ((emacs "26.1"))

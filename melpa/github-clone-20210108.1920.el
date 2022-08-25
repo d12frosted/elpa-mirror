@@ -6,7 +6,7 @@
 ;; Created: 2 Aug 2014
 ;; Version: 0.3
 ;; Package-Version: 20210108.1920
-;; Package-Commit: 9e40d6d3c6128407d7456bf71c95ad1fbb473b2a
+;; Package-Commit: 7b2ce0109f5aac0b65f3e6a5ba761e18bd86f093
 ;; URL: https://github.com/dgtized/github-clone.el
 ;; Keywords: vc, tools
 ;; Package-Requires: ((gh "1.0.1") (magit "3.0.0") (emacs "25.1"))

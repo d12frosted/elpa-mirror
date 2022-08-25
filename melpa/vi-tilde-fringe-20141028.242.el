@@ -5,7 +5,7 @@
 ;;;; Author: Sylvain Benner <sylvain.benner@gmail.com>
 ;; Keywords: emulation
 ;; Package-Version: 20141028.242
-;; Package-Commit: f1597a8d54535bb1d84b442577b2024e6f910308
+;; Package-Commit: e6e15638e8c45a5e68d0874d5d8c9a46c4f38a54
 ;; Created: 27 Oct 2014
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24"))

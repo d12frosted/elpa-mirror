@@ -6,7 +6,7 @@
 ;; Created: 31 Dec 2014
 ;; Version: 0.1
 ;; Package-Version: 20150308.1243
-;; Package-Commit: 38df823d05df08ec0748a4185113fae5f99090e9
+;; Package-Commit: 258c0268cc4357640c2af78774ba9667beff28ee
 ;; URL: https://github.com/alezost/date-at-point.el
 ;; Keywords: convenience
 

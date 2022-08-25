@@ -5,7 +5,7 @@
 ;; Copyright (C) 2018
 ;; Version: 0.2.2
 ;; Package-Version: 20220117.2351
-;; Package-Commit: d4ca396ec4a7d674ef0d671a6896f929ce5b504c
+;; Package-Commit: 81d648ce623c05727836dbee5cbd1dfe6fe850f1
 ;; Package-Requires: ((emacs "25") (polymode "0.2.2") (markdown-mode "2.3"))
 ;; URL: https://github.com/polymode/poly-markdown
 ;; Keywords: emacs

@@ -5,7 +5,7 @@
 ;; Author: Stephen Marsh <stephen.david.marsh@gmail.com>
 ;; Version: 0.1
 ;; Package-Version: 20160624.1710
-;; Package-Commit: 72d6179b60adc438aada74083b2bf4264b575de3
+;; Package-Commit: 6bf487144119b03f9cc54168f70e3d7d8d84e22b
 ;; URL: https://github.com/stephendavidmarsh/control-mode
 ;; Keywords: convenience emulations
 

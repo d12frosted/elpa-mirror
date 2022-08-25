@@ -3,7 +3,7 @@
 ;; Author: Wataru MIYAGUNI <gonngo@gmail.com>
 ;; URL: https://github.com/gongo/json-reformat
 ;; Package-Version: 20160212.853
-;; Package-Commit: 8eb6668ed447988aea06467ba8f42e1f2178246f
+;; Package-Commit: 24c2bf3c41897b5cf1398dcaedfec88526308bf4
 ;; Version: 0.0.6
 ;; Keywords: json
 

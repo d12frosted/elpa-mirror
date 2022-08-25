@@ -5,7 +5,7 @@
 ;; Author: Markus Triska <markus.triska@gmx.at>
 ;; Keywords: files, processes
 ;; Package-Version: 20120531.2136
-;; Package-Commit: 1dc89670822966fab6e656f6519fdd7f01e8301a
+;; Package-Commit: dd1f0e2a527535086c2b0ae12031dbf3ab7c5fd7
 ;; URL: https://bitbucket.org/jpkotta/openwith
 ;; Version: 20120531
 

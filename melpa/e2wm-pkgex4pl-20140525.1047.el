@@ -5,7 +5,7 @@
 ;; Author: Hiroaki Otsu <ootsuhiroaki@gmail.com>
 ;; Keywords: tools, window manager, perl
 ;; Package-Version: 20140525.1047
-;; Package-Commit: 7ea994450727190c4f3cb46cb429ba41b692ecc0
+;; Package-Commit: b72561b75e98961f05544a2159d83592c964ba1e
 ;; URL: https://github.com/aki2o/e2wm-pkgex4pl
 ;; Version: 0.0.1
 ;; Package-Requires: ((e2wm "1.2") (plsense-direx "0.2.0"))

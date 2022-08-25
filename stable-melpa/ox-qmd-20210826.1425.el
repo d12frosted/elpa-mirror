@@ -5,7 +5,7 @@
 ;; Author: 0x60DF <0x60DF@gmail.com>
 ;; URL: https://github.com/0x60df/ox-qmd
 ;; Package-Version: 20210826.1425
-;; Package-Commit: ccabf6bd79ed87dd3bd57993321ee6d93c1818be
+;; Package-Commit: 8a6e14416ba8865bb6e254754fefd8570b4ff403
 ;; Version: 1.0.5
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: wp

@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/atl-long-lines
 ;; Package-Version: 20220704.644
-;; Package-Commit: 5ddd52c752fc60096ed3cf939d773b60f781e325
+;; Package-Commit: 4b4abd242e9a8203dc70130b4ca65f809bd41ab7
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: convenience truncate lines auto long

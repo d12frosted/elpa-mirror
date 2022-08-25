@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-vs/goto-char-preview
 ;; Package-Version: 20220704.630
-;; Package-Commit: b4c6f5ef2f0b2449d29e45e6fb95fe3b0f3c8bb6
+;; Package-Commit: 507bd498457cf755d3500209ec0c2a4625a96584
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: convenience character navigation

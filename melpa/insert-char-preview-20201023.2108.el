@@ -4,7 +4,7 @@
 ;; Maintainer: Matsievskiy S.V.
 ;; Version: 0.1
 ;; Package-Version: 20201023.2108
-;; Package-Commit: 0e4a62b5407fb1bed8920a4c13cf9a91065e15ad
+;; Package-Commit: 8f13262ebcb3f271f1d188584d04ca6d87214111
 ;; Package-Requires: ((emacs "24.1"))
 ;; Homepage: https://gitlab.com/matsievskiysv/insert-char-preview
 ;; Keywords: convenience

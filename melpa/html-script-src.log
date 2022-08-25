@@ -4,8 +4,40 @@ Source:  https://github.com/rejeep/html-script-src.el.git
 
 Updating /mnt/store/melpa/working/html-script-src/
 Checking out origin/HEAD
-Checking out 66460f8ab1b24656e6f3ce5bd50cff6a81be8422
-Built html-script-src in 6.037s, finished at 2022-08-25T15:27:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Aug 25 15:27 packages/html-script-src-20120403.1815.el
-4.0K -rw-r--r-- 1 root root  408 Aug 25 15:27 packages/html-script-src-20120403.1815.entry
+Checking out 0efeed7ab948e48128e6f1a7ddff17ef2951e1c2
+
+Command 'env LC_ALL\=C git submodule update --init --recursive' exited with non-zero exit-code: 1
+
+Fetching origin
+origin/HEAD set to master
+HEAD is now at 66460f8 Update README.
+HEAD is now at 0efeed7 Fix some docs.
+Synchronizing submodule url for 'util/ecukes'
+Synchronizing submodule url for 'util/ert'
+Synchronizing submodule url for 'util/espuds'
+Cloning into '/mnt/store/melpa/working/html-script-src/util/ecukes'...
+fatal: unable to connect to github.com:
+github.com[0: 192.30.255.112]: errno=Connection timed out
+
+fatal: clone of 'git://github.com/rejeep/ecukes.git' into submodule path '/mnt/store/melpa/working/html-script-src/util/ecukes' failed
+Failed to clone 'util/ecukes'. Retry scheduled
+Cloning into '/mnt/store/melpa/working/html-script-src/util/ert'...
+fatal: unable to connect to github.com:
+github.com[0: 192.30.255.113]: errno=Connection timed out
+
+fatal: clone of 'git://github.com/nex3/ert.git' into submodule path '/mnt/store/melpa/working/html-script-src/util/ert' failed
+Failed to clone 'util/ert'. Retry scheduled
+Cloning into '/mnt/store/melpa/working/html-script-src/util/espuds'...
+fatal: unable to connect to github.com:
+github.com[0: 192.30.255.112]: errno=Connection timed out
+
+fatal: clone of 'git://github.com/rejeep/espuds.git' into submodule path '/mnt/store/melpa/working/html-script-src/util/espuds' failed
+Failed to clone 'util/espuds'. Retry scheduled
+Cloning into '/mnt/store/melpa/working/html-script-src/util/ecukes'...
+fatal: unable to connect to github.com:
+github.com[0: 192.30.255.113]: errno=Connection timed out
+
+fatal: clone of 'git://github.com/rejeep/ecukes.git' into submodule path '/mnt/store/melpa/working/html-script-src/util/ecukes' failed
+Failed to clone 'util/ecukes' a second time, aborting
+
+Command exited with non-zero exit-code: 1

@@ -5,7 +5,7 @@
 ;; Author: Daniils Petrovs <thedanpetrov@gmail.com>
 ;; URL: https://github.com/DaniruKun/dilbert-el
 ;; Package-Version: 20211118.1512
-;; Package-Commit: 3e9a39717490be4d5c14211a47fcd8588ef668af
+;; Package-Commit: d8c586f1bac58c334822b64bce671dde5e25a27f
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "26.1") (enlive "0.0.1") (dash "2.19.1"))
 ;; Keywords: multimedia news

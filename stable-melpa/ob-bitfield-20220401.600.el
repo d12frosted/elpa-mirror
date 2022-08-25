@@ -3,7 +3,7 @@
 ;; Author: Gulshan Singh
 ;; Version: 0.1
 ;; Package-Version: 20220401.600
-;; Package-Commit: 28e01448ee66b8b6858294cad1b7dae0b9a85e6a
+;; Package-Commit: abe3d8fe49dc53c4663def689ceb5c0433638652
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/gsingh93/ob-bitfield
 

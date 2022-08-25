@@ -5,7 +5,7 @@
 ;; Author: Arne Köhn <arne@chark.eu>
 ;; Created: 31 Oct 2017
 ;; Keywords: mail outlines convenience
-;; Package-Commit: 20d14830f07d66e2a04bcad1498a4a6fbf4b4451
+;; Package-Commit: 966bfcfdd3b2e288576ffe363d676ad282902090
 ;; Homepage: http://arne.chark.eu/
 ;; Package-Requires: ((pdf-tools "0.80") (f "0.19.0") (s "1.11.0"))
 ;; Package-Version: 20171119.646

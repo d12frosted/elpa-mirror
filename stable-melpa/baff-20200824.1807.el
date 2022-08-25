@@ -5,7 +5,7 @@
 ;;; Author: Dave Footitt <dave.footitt@gmail.com>
 ;;; URL: https://github.com/dave-f/baff/
 ;; Package-Version: 20200824.1807
-;; Package-Commit: 7af72db9c6e542ed2b60952933113d0aa86728cf
+;; Package-Commit: 52a8508e2300ee810ce7806cb78a2b294f2630f2
 ;;; Package-Requires: ((emacs "24.3") (f "0.20.0"))
 ;;; Version: 1.0
 ;;; Keywords: convenience, usability

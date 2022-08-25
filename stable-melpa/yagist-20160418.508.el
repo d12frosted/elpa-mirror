@@ -8,7 +8,7 @@
 ;;               Dan McKinley
 ;; Version: 0.8.13
 ;; Package-Version: 20160418.508
-;; Package-Commit: dcdbd84f348414815d02f3da8a6ee0ac271632d4
+;; Package-Commit: 10da4baa272ff0f7052f17debecc340764c7003f
 ;; Created: 21 Jul 2008
 ;; Keywords: tools
 ;; Package-Requires: ((cl-lib "0.3"))

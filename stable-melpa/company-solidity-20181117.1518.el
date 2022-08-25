@@ -5,7 +5,7 @@
 ;; Author: Samuel Smolkin <sam@future-precedent.org>
 ;; URL: https://github.com/ethereum/emacs-solidity
 ;; Package-Version: 20181117.1518
-;; Package-Commit: 211dbdf0dfab1139681156e6f9621a5bbe0f74a1
+;; Package-Commit: d6c48a1cb64d3c8a825dc0d06c839f2cacd4d289
 ;; Keywords: solidity, completion, company
 ;; Version: 2.0.0
 ;; Package-Requires: ((company "0.9.0") (cl-lib "0.5.0") (solidity-mode "0.1.9"))

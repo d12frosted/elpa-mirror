@@ -6,7 +6,7 @@
 ;; Maintainer: Valerii Lysenko <vallyscode@gmail.com>
 ;; Keywords: color theme
 ;; Package-Version: 20220205.1336
-;; Package-Commit: 16372ea1f527917102ac302afaec3ef09e289d24
+;; Package-Commit: 16ef7fbf0a423b29e3c3a0a2d9525afaf265aaed
 ;; URL: https://github.com/vallyscode/cloud-theme
 ;; Version: 0.1
 ;; Package: cloud-theme

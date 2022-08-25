@@ -5,7 +5,7 @@
 ;; Author: David Röthlisberger <david@rothlis.net>
 ;; URL: http://github.com/drothlis/pretty-symbols
 ;; Package-Version: 20140814.959
-;; Package-Commit: 582cbe51ecfe1cc0a5b185bc06113c8a661e3956
+;; Package-Commit: ab82b3fba129fae14e4031eb7fd648c1a92d0e71
 ;; Version: 2.0
 ;; Keywords: faces
 

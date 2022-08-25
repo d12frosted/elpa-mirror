@@ -8,7 +8,7 @@
 ;; Package-Version: 20220308.2218
 ;; Package-X-Original-Version: 0.1
 ;; Package-Requires: ((emacs "26"))
-;; Package-Commit: 688638177b4e23ecc192975e3062274ca904ada1
+;; Package-Commit: 1ad9acb599e6be6aac57280b7c918b0e4a0f07de
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

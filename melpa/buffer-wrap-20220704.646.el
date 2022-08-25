@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/buffer-wrap
 ;; Package-Version: 20220704.646
-;; Package-Commit: b0c18216904581d6223e76626821a266355830da
+;; Package-Commit: b6b2118f59b8152fa02bd0b09d65a1f8ade4141b
 ;; Version: 0.1.5
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience buffer tool wrap

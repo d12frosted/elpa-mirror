@@ -5,7 +5,7 @@
 ;; Author: Eliza Velasquez
 ;; Version: 0.1.0
 ;; Package-Version: 20220817.429
-;; Package-Commit: 1641a01ecca254db4094e166893a073b7f9288d0
+;; Package-Commit: 313698d9c7766c17b077a70b31a2d0f52496d767
 ;; Package-Requires: ((emacs "26.1"))
 ;; Created: 3 Jun 2021
 ;; Keywords: games

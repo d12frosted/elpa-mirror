@@ -5,7 +5,7 @@
 ;; Author: Daniel Martín <mardani29@yahoo.es>
 ;; URL: https://github.com/danielmartin/djinni-mode
 ;; Package-Version: 20190303.139
-;; Package-Commit: 6f84bc60d078725cc8b922a259ec5f4c7de83681
+;; Package-Commit: f0da31d8f45c4b1b2341cf88ec7f2d2e7d16267f
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: languages

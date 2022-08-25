@@ -3,7 +3,7 @@
 ;; Author: Derek Feichtinger <derek.feichtinger@psi.ch>
 ;; Keywords: org multimedia
 ;; Package-Version: 20210221.1336
-;; Package-Commit: 55fa23e69c8ac4c40f8600300301a9cdc5c6732f
+;; Package-Commit: 14240909b64605fa966955a14c6045df0f402367
 ;; Package-Requires: ((emacs "24.3"))
 ;; Homepage: https://github.com/dfeich/org-screenshot
 ;; Version: 0.9

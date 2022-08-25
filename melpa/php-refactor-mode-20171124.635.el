@@ -6,7 +6,7 @@
 ;; Maintainer: Matthew M. Keeler <keelerm84@gmail.com>
 ;; URL: https://github.com/keelerm84/php-refactor-mode.el
 ;; Package-Version: 20171124.635
-;; Package-Commit: 7a794b0618df2882b1bd586fdd698dba0bc5130d
+;; Package-Commit: d06dabd9ca743a04067e02282b69d7b7467fb4b7
 ;; Keywords: php, refactor
 ;; Created: 26th March 2014
 ;; Version: 0.0.1

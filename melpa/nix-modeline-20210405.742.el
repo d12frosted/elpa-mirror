@@ -4,7 +4,7 @@
 
 ;; Version: 1.1.0
 ;; Package-Version: 20210405.742
-;; Package-Commit: ecda866b960321bb82deac26af45918e172ef0ba
+;; Package-Commit: 9a6116a11bdacf649f2c50ae1f2f4b12c03bed70
 ;; Author: Jordan Mulcahey <snhjordy@gmail.com>
 ;; Description: Show in-progress Nix evaluations on your modeline
 ;; URL: https://github.com/ocelot-project/nix-modeline

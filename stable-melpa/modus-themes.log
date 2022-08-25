@@ -1,20 +1,19 @@
 Package: modus-themes
-Fetcher: git
+Fetcher: sourcehut
 Source:  https://git.sr.ht/~protesilaos/modus-themes
 
 Updating /mnt/store/melpa/working/modus-themes/
 Checking out origin/HEAD
 Checking out 777089c0ffaabadc10cefead3737fabe24b9004c
-Checking out 777089c0ffaabadc10cefead3737fabe24b9004c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/modus-themes/
-  to /tmp/modus-themesITZIQR/modus-themes-20220823.1919
+  to /tmp/modus-themesTRYZhd/modus-themes-20220823.1919
     modus-operandi-theme.el -> modus-operandi-theme.el
     modus-themes.el -> modus-themes.el
     modus-vivendi-theme.el -> modus-vivendi-theme.el
   ! doc/modus-themes.info -> modus-themes.info
   ! doc/doclicense.texi -> doclicense.texi
-Generating /tmp/modus-themesITZIQR/modus-themes-20220823.1919/doclicense.info
+Generating /tmp/modus-themesTRYZhd/modus-themes-20220823.1919/doclicense.info
 Created modus-themes-20220823.1919.tar containing:
   modus-themes-20220823.1919/
   modus-themes-20220823.1919/dir
@@ -24,7 +23,7 @@ Created modus-themes-20220823.1919.tar containing:
   modus-themes-20220823.1919/modus-themes.el
   modus-themes-20220823.1919/modus-themes.info
   modus-themes-20220823.1919/modus-vivendi-theme.el
-Built modus-themes in 10.125s, finished at 2022-08-25T15:41:58+0000
+Built modus-themes in 8.794s, finished at 2022-08-25T19:31:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  450 Aug 25 15:41 packages/modus-themes-20220823.1919.entry
-720K -rw-r--r-- 1 root root 720K Aug 25 15:41 packages/modus-themes-20220823.1919.tar
+4.0K -rw-r--r-- 1 root root  450 Aug 25 19:31 packages/modus-themes-20220823.1919.entry
+720K -rw-r--r-- 1 root root 720K Aug 25 19:31 packages/modus-themes-20220823.1919.tar

@@ -5,7 +5,7 @@
 ;; Created: :2015-03-01
 ;; Version: 0.0.1
 ;; Package-Version: 20150804.1721
-;; Package-Commit: c437a32d3955f859d9bbcbadf0911bbe27d877ff
+;; Package-Commit: 60c296e202a71e9dcf1c3936d47b5c4b95c5839f
 ;; Keywords: markdown, memo
 ;; URL: http://github.com/mikanfactory/emacs-memolist
 ;; Package-Requires: ((markdown-mode "22.0") (ag "0.45"))

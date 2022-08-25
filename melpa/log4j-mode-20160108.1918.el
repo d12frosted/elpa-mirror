@@ -6,7 +6,7 @@
 ;; Created: Jan 2006
 ;; Version: 1.4
 ;; Package-Version: 20160108.1918
-;; Package-Commit: 26171b1e723502055e085393b0ecdcb6db406010
+;; Package-Commit: a278948ea07ef8f4fdb6d389345a68b50de14fae
 ;; Keywords: tools
 ;; URL: http://log4j-mode.sourceforge.net
 

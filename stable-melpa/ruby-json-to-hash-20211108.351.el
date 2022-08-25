@@ -5,7 +5,7 @@
 ;; Author: Otávio Schwanck dos Santos <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
 ;; Package-Version: 20211108.351
-;; Package-Commit: 383b22bb2e007289ac0dba146787d02ff99d4415
+;; Package-Commit: 8e94d8c5ac1732e1f4d09786968b46e14139520c
 ;; Homepage: https://github.com/otavioschwanck/ruby-json-to-hash.el
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.2") (smartparens "1.11.0") (string-inflection "1.0.16"))

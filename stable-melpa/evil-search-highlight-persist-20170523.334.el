@@ -1,7 +1,7 @@
 ;;; evil-search-highlight-persist.el --- Persistent highlights after search
 ;; Version: 20150107.4
 ;; Package-Version: 20170523.334
-;; Package-Commit: 979d2dec58d3b9c5ca5fdf4bb802a0209913794e
+;; Package-Commit: 6e04a8c075f5fd62526d222447048faab8bfa187
 ;; X-Original-Version: 20140918
 
 ;; Author: Juanjo Alvarez <juanjo@juanjoalvarez.net>

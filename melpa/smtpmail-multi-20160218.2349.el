@@ -8,7 +8,7 @@
 ;; Created: 2013-08-19 02:06:43
 ;; Version: 0.6
 ;; Package-Version: 20160218.2349
-;; Package-Commit: 83fa9d7a02e000be95cb282c8b48446646896ea1
+;; Package-Commit: 81eabfe56f620ee044ff9dd52fa8b6148d0a9f30
 ;; Last-Updated: 2013-09-19 15:24:00
 ;;           By: Joe Bloggs
 ;; URL: https://github.com/vapniks/smtpmail-multi

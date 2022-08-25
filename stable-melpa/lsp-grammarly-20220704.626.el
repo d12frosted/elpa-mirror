@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-grammarly/lsp-grammarly
 ;; Package-Version: 20220704.626
-;; Package-Commit: 1fa44a3f9ccffb09021bf05a5e7d905061fe5a95
+;; Package-Commit: 1b2c90593e984605d6ad85094ca8a41f4f64c37c
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "6.1") (grammarly "0.3.0") (request "0.3.0") (s "1.12.0") (ht "2.3"))
 ;; Keywords: convenience lsp grammarly checker

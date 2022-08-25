@@ -5,7 +5,7 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL:https://github.com/syohex/emacs-helm-robe
 ;; Package-Version: 20151209.355
-;; Package-Commit: 6e69543b4ee76c5f8f3f2510c76e6d9aed17a370
+;; Package-Commit: 7348d0bc0251b51979554ea678b970fd01c0efe9
 ;; Version: 0.02
 ;; Package-Requires: ((helm "1.7.7"))
 

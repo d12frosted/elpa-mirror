@@ -4,7 +4,7 @@
 
 ;; Version: 0.2
 ;; Package-Version: 20160303.2112
-;; Package-Commit: 5ebabb466a6ae70882549855b6b2194fc32189f8
+;; Package-Commit: e7a1a18de77f752eb0dbb4b878925f2265538d0b
 ;; Keywords: paste pastie pastebin dpaste python
 ;; Created: 01 Dec 2008
 ;; Author: Greg Newman <greg@gregnewman.org>

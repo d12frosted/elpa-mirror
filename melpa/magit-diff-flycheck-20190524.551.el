@@ -4,7 +4,7 @@
 ;; Created: 05 May 2019
 ;; Homepage: https://github.com/ragone/magit-diff-flycheck
 ;; Keywords: convenience, matching
-;; Package-Commit: 28acf74f59e385865746cccf4b1e4c4025ae9433
+;; Package-Commit: ad58efa312d708f25661dfcc2a7f83a833cca328
 ;; Package-Version: 20190524.551
 ;; Package-X-Original-Version: 0.1.0
 ;; Package-Requires: ((magit "2") (flycheck "31") (seq "2") (emacs "25.1"))

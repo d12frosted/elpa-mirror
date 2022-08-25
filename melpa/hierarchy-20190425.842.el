@@ -6,7 +6,7 @@
 ;; Maintainer: Damien Cassou <damien@cassou.me>
 ;; Version: 0.7.0
 ;; Package-Version: 20190425.842
-;; Package-Commit: d8373b376642e9297595468dbe72ec63a6e4b571
+;; Package-Commit: a5bc6bf2e1bbd48cc17c508043134f24abb41944
 ;; Package-Requires: ((emacs "25.1"))
 ;; GIT: https://github.com/DamienCassou/hierarchy
 ;; URL: https://github.com/DamienCassou/hierarchy

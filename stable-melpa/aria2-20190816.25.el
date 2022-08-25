@@ -6,7 +6,7 @@
 ;; Maintainer: Łukasz Gruner <lukasz@gruner.lu>
 ;; Version: 2
 ;; Package-Version: 20190816.25
-;; Package-Commit: 32e08d5a8ad2f305578e0f783e087c1d312238c7
+;; Package-Commit: 90aeb73bedba63ac9efb9cad8e7444feb8b40261
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://bitbucket.org/ukaszg/aria2-mode
 ;; Created: 19/10/2014

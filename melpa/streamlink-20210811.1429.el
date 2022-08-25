@@ -4,7 +4,7 @@
 ;; Copyright (C) 2021 Benedikt Broich
 ;; Version: 0.1
 ;; Package-Version: 20210811.1429
-;; Package-Commit: c265dc61c02ad29ec01dfd8b5cbe3bac60fbf097
+;; Package-Commit: 13dff15121ac0276f693696db9b04ae5820058d5
 ;; Package-Requires: ((s "1.12.0"))
 ;; Keywords: multimedia, streamlink
 ;; URL: https://github.com/BenediktBroich/streamlink

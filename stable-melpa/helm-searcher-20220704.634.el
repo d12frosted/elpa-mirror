@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-helm/helm-searcher
 ;; Package-Version: 20220704.634
-;; Package-Commit: 4219ee9e6d173caef7f8a4a586966b054f55d8e2
+;; Package-Commit: 27a6cfc7f9b3c988b4c7c6f1b3954760a9701dc0
 ;; Version: 0.2.5
 ;; Package-Requires: ((emacs "25.1") (helm "2.0") (searcher "0.1.8") (s "1.12.0") (f "0.20.0"))
 ;; Keywords: convenience replace grep ag rg

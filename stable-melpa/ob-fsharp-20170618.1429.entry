@@ -1,11 +1,11 @@
 (ob-fsharp .
 	   [(20170618 1429)
-	    ((emacs
-	      (25))
-	     (fsharp-mode
-	      (1 9 8)))
-	    "Org-Babel F#" single
-	    ((:commit . "0b2fdd9bb4f38af8b5cf4914627af52f5b43d9f7")
+	    ((fsharp-mode
+	      (1 9 8))
+	     (emacs
+	      (25)))
+	    "Org-Babel F#" tar
+	    ((:commit . "65ec2b626ac55313d8a04e746940370f615fed1e")
 	     (:authors
 	      ("Jürgen Hötzel" . "juergen@archlinux.org"))
 	     (:maintainer "Jürgen Hötzel" . "juergen@archlinux.org")

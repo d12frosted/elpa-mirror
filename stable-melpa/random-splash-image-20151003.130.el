@@ -5,7 +5,7 @@
 ;; Author: kakakaya <kakakaya AT gmail.com>
 ;; Keywords: games
 ;; Package-Version: 20151003.130
-;; Package-Commit: 53a39ebfd8ac6be066a652a508a717870f94218a
+;; Package-Commit: 907e2db5ceff781ac7f4dbdd65fe71736c36aa22
 ;; Version: 1.0.0
 ;; URL: https://github.com/kakakaya/random-splash-image
 

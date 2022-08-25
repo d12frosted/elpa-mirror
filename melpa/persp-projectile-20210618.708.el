@@ -6,7 +6,7 @@
 ;; Created: 2014-04-14
 ;; Keywords: project, convenience
 ;; Package-Version: 20210618.708
-;; Package-Commit: 4e374d7650c7e041df5af5ac280a44d4a4ec705a
+;; Package-Commit: 6e4c2e017d59d10d627cf95b2bb9f9fa2b22a3a3
 ;; Version: 1.0.0
 ;; Package-Requires: ((perspective "1.9") (projectile "2.4") (cl-lib "0.3"))
 

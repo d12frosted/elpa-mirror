@@ -4,7 +4,7 @@
 
 ;; Version: 0.3
 ;; Package-Version: 20201219.231
-;; Package-Commit: a622d128afc8d2d67de897666a1e2eccba8d7818
+;; Package-Commit: b012270ea7780ed02ddf61d884b96cdc4fc01594
 ;; Author: Paul Landes
 ;; Maintainer: Paul Landes
 ;; Keywords: mark point lisp

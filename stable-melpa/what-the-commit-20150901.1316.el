@@ -4,7 +4,7 @@
 ;; Author: Dan Barbarito <dan@barbarito.me>
 ;; Version: 1.0
 ;; Package-Version: 20150901.1316
-;; Package-Commit: 868c80a1b8614bcbd2225cd0290142c72f2a7956
+;; Package-Commit: 42604410cfd5be715c8aa730aef4673773454e8b
 ;; Keywords: git, commit, message
 ;; URL: http://barbarito.me/
 ;; Created: 30th August 2015

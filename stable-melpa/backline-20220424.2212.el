@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/backline
 ;; Keywords: outlines
 ;; Package-Version: 20220424.2212
-;; Package-Commit: edc5f1e8ca049c06d18d703479c4737f3530602e
+;; Package-Commit: 0d44408262080cdf998de5a52516f220e7e7c99a
 
 ;; Package-Requires: (
 ;;     (emacs "25.1")

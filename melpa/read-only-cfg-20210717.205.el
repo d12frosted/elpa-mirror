@@ -5,7 +5,7 @@
 ;; Author: pfchen <pfchen31@gmail.com>
 ;; Version: 0.1.0
 ;; Package-Version: 20210717.205
-;; Package-Commit: a4e50d4fbf48970e98b2464e13f46e51a4c43c37
+;; Package-Commit: fa16d6018a5a29f26adf6007b6b76ea1b3c0bfce
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: tools, convenience
 ;; URL: https://github.com/pfchen/read-only-cfg

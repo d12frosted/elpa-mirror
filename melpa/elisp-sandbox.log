@@ -4,8 +4,39 @@ Source:  https://github.com/joelmccracken/elisp-sandbox.git
 
 Updating /mnt/store/melpa/working/elisp-sandbox/
 Checking out origin/HEAD
-Checking out d894d68934ef09c42f72ac4e1173a0bedc23f139
-Built elisp-sandbox in 5.242s, finished at 2022-08-25T15:05:23+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 10K Aug 25 15:05 packages/elisp-sandbox-20131116.1842.el
-4.0K -rw-r--r-- 1 root root 432 Aug 25 15:05 packages/elisp-sandbox-20131116.1842.entry
+Checking out ddd669266ca36d7e4ebba73eb1ab42523787e042
+
+Command 'env LC_ALL\=C git submodule update --init --recursive' exited with non-zero exit-code: 1
+
+Fetching origin
+origin/HEAD set to master
+HEAD is now at d894d68 foo
+HEAD is now at ddd6692 Fixing tests, oops was all brokeos
+Submodule 'vendor/el-spec' (git@github.com:joelmccracken/el-spec.git) registered for path 'vendor/el-spec'
+Submodule 'vendor/test-double' (git@github.com:joelmccracken/test-double.git) registered for path 'vendor/test-double'
+Cloning into '/mnt/store/melpa/working/elisp-sandbox/vendor/el-spec'...
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+fatal: clone of 'git@github.com:joelmccracken/el-spec.git' into submodule path '/mnt/store/melpa/working/elisp-sandbox/vendor/el-spec' failed
+Failed to clone 'vendor/el-spec'. Retry scheduled
+Cloning into '/mnt/store/melpa/working/elisp-sandbox/vendor/test-double'...
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+fatal: clone of 'git@github.com:joelmccracken/test-double.git' into submodule path '/mnt/store/melpa/working/elisp-sandbox/vendor/test-double' failed
+Failed to clone 'vendor/test-double'. Retry scheduled
+Cloning into '/mnt/store/melpa/working/elisp-sandbox/vendor/el-spec'...
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+fatal: clone of 'git@github.com:joelmccracken/el-spec.git' into submodule path '/mnt/store/melpa/working/elisp-sandbox/vendor/el-spec' failed
+Failed to clone 'vendor/el-spec' a second time, aborting
+
+Command exited with non-zero exit-code: 1

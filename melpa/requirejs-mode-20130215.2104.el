@@ -5,7 +5,7 @@
 ;; Author: Marc-Olivier Ricard <marco.ricard@gmail.com>
 ;; Version: 1.1
 ;; Package-Version: 20130215.2104
-;; Package-Commit: bbb0c09f8eb2d6a33c17319be8137f68bb16bc92
+;; Package-Commit: 011849043098b6c4f27571625ae19071b53b8824
 ;; Keywords: Javascript, AMD, RequireJs
 
 ;; This file is not part of GNU Emacs.

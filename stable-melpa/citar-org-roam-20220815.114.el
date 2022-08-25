@@ -7,7 +7,7 @@
 ;; Created: May 22, 2022
 ;; Version: 0.3
 ;; Package-Version: 20220815.114
-;; Package-Commit: 4325e648c228269e519c322d696846a6c1f42f99
+;; Package-Commit: d87d35041f4f48b27795d5e5225c76b32d83648c
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; SPDX-FileCopyrightText: 2022 Bruce D'Arcus
 ;; Homepage: https://github.com/emacs-citar/citar-org-roam

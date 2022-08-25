@@ -6,7 +6,7 @@
 ;; Maintainer: Laurence Warne
 ;; Version: 1.0
 ;; Package-Version: 20220629.1539
-;; Package-Commit: 036b285b800c7b310398bce0212b14d93b717d48
+;; Package-Commit: 71d7cee736542f6504c4733d040601d2d2086443
 ;; Keywords: outlines, hypermedia
 ;; URL: https://github.com/LaurenceWarne/ox-yaow.el
 ;; Package-Requires: ((emacs "27") (f "0.2.0") (s "1.12.0") (dash "2.17.0"))

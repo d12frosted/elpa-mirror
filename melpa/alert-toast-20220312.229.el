@@ -7,7 +7,7 @@
 ;; Updated: 25 Mar 2022
 ;; Version: 1.0.0
 ;; Package-Version: 20220312.229
-;; Package-Commit: ba931529a266537783cfec2a28c2b8c058364ff2
+;; Package-Commit: 96c88c93c1084de681700f655223142ee0eb944a
 ;; Package-Requires: ((emacs "25.1") (alert "1.2") (f "0.20.0") (s "1.12.0"))
 ;; Url: https://github.com/gkowzan/alert-toast
 

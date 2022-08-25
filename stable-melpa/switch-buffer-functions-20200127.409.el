@@ -3,7 +3,7 @@
 ;; Author: 10sr <8slashes+el [at] gmail [dot] com>
 ;; URL: https://github.com/10sr/switch-buffer-functions-el
 ;; Package-Version: 20200127.409
-;; Package-Commit: 95a846baa93bac4c3b3c028b9d53507f1042b23a
+;; Package-Commit: 40cb0c9e2c84b30e1c5c7458a795cda1bd8ad8fa
 ;; Version: 0.0.1
 ;; Keywords: hook utility
 

@@ -6,7 +6,7 @@
 ;; License: GPLv3
 ;; Created: 2014-12-15 17:21:05
 ;; Version: 1.2.0
-;; Package-Commit: 696c5b056e45067512a7d6dcce2515f3c639f61b
+;; Package-Commit: c78e4d5ddacda064c253e2b38d1c35188aa1ad71
 ;; Package-Version: 20180825.1951
 ;; Package-X-Original-Version: 20180825.120
 ;; URL: https://github.com/joshuamiller/clojars.el

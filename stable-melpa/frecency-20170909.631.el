@@ -5,7 +5,7 @@
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: http://github.com/alphapapa/frecency.el
 ;; Package-Version: 20170909.631
-;; Package-Commit: 6d57aee131d96315aedf6cb7d6e5d6d09bf71503
+;; Package-Commit: 132130088ef5695cffed6fcacfa219cb0c389026
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "25.1") (a "0.1") (dash "2.13.0"))
 ;; Keywords: libraries recency recent frequency frequent

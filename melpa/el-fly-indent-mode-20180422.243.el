@@ -5,7 +5,7 @@
 ;; Author: Jiahao Li <jiahaowork@gmail.com>
 ;; Version: 0.1.0
 ;; Package-Version: 20180422.243
-;; Package-Commit: 39738c88c01a3a035edffe63400d434edb1e3003
+;; Package-Commit: 1dd4b907ff4d9581c18b4e38e8719e83ba0dace1
 ;; Keywords: lisp, languages
 ;; Homepage: https://github.com/jiahaowork/el-fly-indent-mode.el
 ;; Package-Requires: ((emacs "25"))

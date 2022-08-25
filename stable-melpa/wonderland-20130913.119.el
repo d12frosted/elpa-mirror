@@ -4,7 +4,7 @@
 
 ;; Version: 0.1.1
 ;; Package-Version: 20130913.119
-;; Package-Commit: 89d274ad694b0e748efdac23ccd60b7d8b73d7c6
+;; Package-Commit: 28cf6b37000c395ece9519db53147fb826a42bc4
 ;; Package-Requires: ((dash "2.0.0") (dash-functional "1.0.0") (multi "2.0.0") (emacs "24"))
 ;; Keywords: configuration profile wonderland
 ;; Author: Christina Whyte <kurisu.whyte@gmail.com>

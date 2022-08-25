@@ -6,7 +6,7 @@
 ;; Created: 2016-08-13
 ;; Version: 0.1.0
 ;; Package-Version: 20160816.540
-;; Package-Commit: be0768e9aa6f9b8e76f2230f4f7f4d152a766b9a
+;; Package-Commit: e5b0b6ca6c5feeb2502d66a760ddf5bb590d04c4
 ;; Url: https://github.com/peter-b/lcb-mode
 ;; Keywords: languages
 ;; Package-Requires: ((emacs "24"))

@@ -5,7 +5,7 @@
 ;; Author: Mark Dawson <markgdawson@gmail.com>
 ;; URL: https://github.com/markgdawson/polybar-sesman.el
 ;; Package-Version: 20210901.1336
-;; Package-Commit: 5175b8d641aad9576519717f69f858621892d5c7
+;; Package-Commit: 5b8ff640ada92da98400206ba9a61140093a823f
 ;; Keywords: project, convenience
 ;; Version: 0.0.1-snapshot
 ;; Package-Requires: ((emacs "25.1") (dash "2.19.1") (sesman "0.3.0"))

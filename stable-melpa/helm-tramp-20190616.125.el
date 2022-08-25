@@ -5,7 +5,7 @@
 ;; Author: Masashı Mıyaura
 ;; URL: https://github.com/masasam/emacs-helm-tramp
 ;; Package-Version: 20190616.125
-;; Package-Commit: 55e56975fe1456591a293bf60c183c3dda9f788f
+;; Package-Commit: 924b5516270b3933e847562e8e14e3888dd24184
 ;; Version: 1.3.9
 ;; Package-Requires: ((emacs "24.3") (helm "2.0"))
 

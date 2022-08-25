@@ -5,7 +5,7 @@
 ;; Author: Michael Herstine <sp1ff@pobox.com>
 ;; Version: 0.2.2
 ;; Package-Version: 20210904.35
-;; Package-Commit: 334b066dc5bb82d9ccb6cc30d63afed0f7610fe8
+;; Package-Commit: 6694fef890ae3ed4faf6a6bf671f3ef197bcc9c1
 ;; Package-Requires: ((emacs "25.1") (elmpd "0.1"))
 ;; Keywords: comm
 ;; URL: https://github.com/sp1ff/mpdmacs

@@ -5,7 +5,7 @@
 ;; Created: 26 Feb 2017
 ;; Version: 1.1.0
 ;; Package-Version: 20170619.2133
-;; Package-Commit: 0973f1aa6b96355fa376fffe8b45733b6e963c51
+;; Package-Commit: 57e8e2a475ea89316dbb5c4d2ea047f56a2cbcdf
 ;; Keywords: convenience faces
 ;; URL: https://github.com/anler/remember-last-theme
 ;; Package-Requires: ((emacs "24.4"))

@@ -5,7 +5,7 @@
 ;; Author: Phillip Lord <phillip.lord@newcastle.ac.uk>
 ;; URL: https://github.com/phillord/lein-sync
 ;; Package-Version: 20140807.1554
-;; Package-Commit: bab53a2361526d63a24cda176d07a1247bf5b399
+;; Package-Commit: 9506238562c2e0c0df744e0d81edff4c74322a7d
 ;; Version: 0.3.1
 ;; Package-Requires: ((cider "0.6"))
 ;;

@@ -6,7 +6,7 @@
 ;; Author: Ryan C. Thompson
 ;; URL: https://github.com/DarwinAwardWinner/ido-yes-or-no
 ;; Package-Version: 20161108.2351
-;; Package-Commit: c55383b1fce5879e87e7ca6809fc60534508e182
+;; Package-Commit: 8953eadaaa7811ebc66d8a9eb7ac43f38913ab59
 ;; Version: 1.4
 ;; Created: 2011-09-24
 ;; Package-Requires: ((ido-completing-read+ "0"))

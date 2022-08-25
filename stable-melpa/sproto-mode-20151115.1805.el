@@ -4,7 +4,7 @@
 ;; Created: 15-Nov-2015
 ;; Version: 0.1
 ;; Package-Version: 20151115.1805
-;; Package-Commit: 0583a88273204dccd884b7edaa3590cefd31e7f7
+;; Package-Commit: 1753277d9f2163fb3bc58b983a9892831cf9874b
 ;; Keywords: sproto
 
 ;;; Commentary:

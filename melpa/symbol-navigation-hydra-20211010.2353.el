@@ -5,7 +5,7 @@
 ;; Author: Brett Wines <bgwines@cs.stanford.edu>
 ;; Keywords: highlight face match convenience hydra symbol
 ;; Package-Version: 20211010.2353
-;; Package-Commit: 5675976cad4cbeee30f43e6c4b28c2e5904575a5
+;; Package-Commit: b3b1257e676514d93cd2d71a10a485bf00b5375f
 ;; Package-Requires: ((auto-highlight-symbol "1.61") (hydra "0.15.0") (emacs "24.4") (multiple-cursors "1.4.0"))
 ;; URL: https://github.com/bgwines/symbol-navigation-hydra
 ;; Version: 0.0.7

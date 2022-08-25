@@ -5,7 +5,7 @@
 ;; Author: Patrick Mosby <patrick@schreiblogade.de>
 ;; URL: https://github.com/halbtuerke/encourage-mode.el
 ;; Package-Version: 20151128.905
-;; Package-Commit: 99edacf2d94d168d3da0609860dc7253db7c9815
+;; Package-Commit: ca411e6bfd3d0edffe95852127bd995730b942e3
 ;; Version: 0.0.1
 ;; Keywords: fun
 ;; Package-Requires: ((emacs "24.4"))

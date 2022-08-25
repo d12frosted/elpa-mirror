@@ -5,7 +5,7 @@
 ;; Author: Ian Martins <ianxm@jhu.edu>
 ;; URL: https://github.com/ianxm/emacs-scrum
 ;; Package-Version: 20200131.1129
-;; Package-Commit: f7a46bc4bc85305f0c2b72565170ea0e007c42fd
+;; Package-Commit: a383348ea80c2459bfb96fa0652b98f0059bd311
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.5") (org "8.2") (seq "2.3") (cl-lib "1.0"))
 

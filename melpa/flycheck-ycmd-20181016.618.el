@@ -4,7 +4,7 @@
 ;; Author: Austin Bingham <austin.bingham@gmail.com>
 ;; Version: 0.1
 ;; Package-Version: 20181016.618
-;; Package-Commit: c17ff9e0250a9b39d23af37015a2b300e2f36fed
+;; Package-Commit: ef87d020d3314efbac2e8925c115d0ac5c128c2a
 ;; URL: https://github.com/abingham/emacs-ycmd
 ;; Package-Requires: ((emacs "24") (dash "2.13.0") (flycheck "0.22") (ycmd "1.2") (let-alist "1.0.5"))
 ;;

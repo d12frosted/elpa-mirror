@@ -5,7 +5,7 @@
 ;; Author: Iñigo Serna <inigoserna@gmx.com>
 ;; URL: https://hg.serna.eu/emacs/pmdm
 ;; Package-Version: 20191101.2346
-;; Package-Commit: 1f30adce8a23da94b3c2460b7248d5910592d8af
+;; Package-Commit: 6d2af9f9e88e6c91eb74dafaddb5f009e1de4907
 ;; Version: 1.1
 ;; Keywords:
 

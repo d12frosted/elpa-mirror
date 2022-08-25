@@ -5,7 +5,7 @@
 ;; Author: Anthony HAMON <hamon.anth@gmail.com>
 ;; URL: http://github.com/antham/eyuml
 ;; Package-Version: 20141028.2227
-;; Package-Commit: eb29c37316e44a14741f16e894fbcfcb7537dc80
+;; Package-Commit: 2f259c201c6cc63ee608f75cd85c1ae27f9d2532
 ;; Version: 0.1.0
 ;; Package-Requires: ((request "0.2.0") (s "1.8.0"))
 ;; Keywords: uml

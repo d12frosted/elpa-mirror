@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/define-it
 ;; Package-Version: 20220713.744
-;; Package-Commit: c2ca045c76a63ebea45da3808bf1c1df791beae8
+;; Package-Commit: 82a3813097774289d68199fb47662af9f90f1741
 ;; Version: 0.2.5
 ;; Package-Requires: ((emacs "25.1") (s "1.12.0") (popup "0.5.3") (pos-tip "0.4.6") (posframe "1.1.7") (define-word "0.1.0") (google-translate "0.11.18") (wiki-summary "0.1"))
 ;; Keywords: convenience dictionary explanation search wiki

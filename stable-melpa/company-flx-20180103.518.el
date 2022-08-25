@@ -5,7 +5,7 @@
 ;; Author: PythonNut <pythonnut@pythonnut.com>
 ;; Keywords: convenience, company, fuzzy, flx
 ;; Package-Version: 20180103.518
-;; Package-Commit: 16ca0d2f84e8e768bf2db8c5cfe421230a00bded
+;; Package-Commit: 05efcafb488f587bb6e60923078d97227462eb68
 ;; Version: 20151016
 ;; URL: https://github.com/PythonNut/company-flx
 ;; Package-Requires: ((emacs "24") (company "0.8.12") (flx "0.5"))

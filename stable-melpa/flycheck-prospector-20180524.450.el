@@ -6,7 +6,7 @@
 ;; Created: 23 May 2018
 ;; URL: https://github.com/chocoelho/flycheck-prospector
 ;; Package-Version: 20180524.450
-;; Package-Commit: 92f2680573290ba4a69a2d6e140f44680efce6a8
+;; Package-Commit: d5b81adb5c8261b935baf0a614dd4b776280392e
 ;; Version: 0.1
 ;; Package-Requires: ((flycheck "0.22"))
 

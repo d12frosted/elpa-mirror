@@ -6,7 +6,7 @@
 ;;         Anand Reddy Pandikunta <anand21nanda AT gmail DOT com>
 ;; Version: 0.4
 ;; Package-Version: 20200505.1537
-;; Package-Commit: 481a2d1460ab5a9b6df3721dda76ad515923bfd1
+;; Package-Commit: 8e51241e5ba7b07b91d8188c14cf193017640292
 ;; Date: January 27, 2015
 ;; URL: https://github.com/ChillarAnand/real-auto-save
 ;; Package-Requires: ((emacs "24.4"))

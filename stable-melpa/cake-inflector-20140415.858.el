@@ -19,7 +19,7 @@
 ;;
 ;; Version: 1.1.1
 ;; Package-Version: 20140415.858
-;; Package-Commit: a1d338ec4840b1b1bc14f7f9298c07e2c1d2d8fc
+;; Package-Commit: d9c6298fbca53efeb6f0f37140395659d9a6d7cc
 ;; Author: k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>
 ;; URL: https://github.com/k1LoW/emacs-cake-inflector
 ;; Package-Requires: ((s "1.9.0"))

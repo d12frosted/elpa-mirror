@@ -5,7 +5,7 @@
 ;; Author: Mario Rodas <marsam@users.noreply.github.com>
 ;; URL: https://github.com/emacs-pe/jist.el
 ;; Package-Version: 20161229.1721
-;; Package-Commit: da0692452e312a99bb27d8708504b521798aca48
+;; Package-Commit: ec4b27eb4051f0084cb3b1e4f19fab9e2db77665
 ;; Keywords: convenience
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4") (dash "2.12.0") (seq "1.11") (let-alist "1.0.4") (magit "2.1.0") (request "0.2.0"))

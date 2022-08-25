@@ -4,7 +4,7 @@
 ;; Maintainer: Robin Schroer
 ;; Version: 0.1
 ;; Package-Version: 20210227.1607
-;; Package-Commit: 2e39c5896819bb2063f9d7795c4299f419cf5542
+;; Package-Commit: 1432b0ad0f32b03fec564c0815951d5e096c2f6a
 ;; Homepage: https://github.com/sulami/circleci-api
 ;; Package-Requires: ((emacs "27") (request "0.3.2"))
 

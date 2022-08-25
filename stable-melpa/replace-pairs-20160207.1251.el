@@ -5,7 +5,7 @@
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 0.1
 ;; Package-Version: 20160207.1251
-;; Package-Commit: acfb254dddffcee4250092fab9394ef2b42ffbc0
+;; Package-Commit: ef6f2719aab7714f6cb209fd3dd6d2e720681b3c
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords:
 ;; URL: https://github.com/davidshepherd7/replace-pairs

@@ -5,7 +5,7 @@
 ;; Author: Michael Steger <mjsteger1@gmail.com>
 ;; Keywords: automation, convenience
 ;; Package-Version: 20120331.2044
-;; Package-Commit: 761fd7252e6d7bf5148283c2a7ee935f087d9427
+;; Package-Commit: a01cf15608c5bf91df253104053041ca1afdf411
 ;; URL: https://github.com/mjsteger/watch-buffer
 ;; Version: 1.0.1
 

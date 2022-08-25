@@ -7,7 +7,7 @@
 
 ;; URL: https://github.com/arthurcgusmao/unmodified-buffer
 ;; Package-Version: 20220129.2013
-;; Package-Commit: 9095a3f870aa570804a11d75aba0952294199715
+;; Package-Commit: cb892d614df659783246393c4223ddd8b2d39cb7
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.1"))
 

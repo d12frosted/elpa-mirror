@@ -4,7 +4,7 @@
 ;; Author: Juan Amiguet Vercher <jamiguet@gmail.com>
 ;; Created: 17 Oct 2017
 ;; Version: 1.0
-;; Package-Commit: 958dd0d419e4f9402648a86b754091ba346e01b8
+;; Package-Commit: d80b38dbec79f813c3949a8df8fb5f58d48b60ee
 ;; Package-Version: 20171123.1146
 ;; Package-X-Original-Version: 1.0
 ;; Keywords: unix tools hardware lisp

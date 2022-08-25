@@ -1,7 +1,7 @@
 ;;; rgb.el --- RGB control via OpenRGB
 ;; Version: 2.0.0
 ;; Package-Version: 20220717.1940
-;; Package-Commit: c83388c134e5ed207170b97cf55eb69cec1d2857
+;; Package-Commit: 4aab5a5be16b69b47ef5e67d02782df5e41dbd7b
 ;; URL: https://gitlab.com/cwpitts/rgb.el
 ;; Package-Requires: ((emacs "24.3"))
 

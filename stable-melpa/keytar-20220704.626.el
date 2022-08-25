@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-grammarly/keytar
 ;; Package-Version: 20220704.626
-;; Package-Commit: ecbc2677de1cb68bb8b8e405304d7dfe6bce5668
+;; Package-Commit: 9d232decb1dee73b1b60480eb9c7ab6750ea90e1
 ;; Version: 0.1.2
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience keytar password credential secret security

@@ -5,7 +5,7 @@
 ;; Author: Mehmet Tekman
 ;; URL: https://gitlab.com/mtekman/exwm-float.el
 ;; Package-Version: 20210207.2035
-;; Package-Commit: eb1b60b4a65e1ca5e323ef68a284ec6af72e637a
+;; Package-Commit: 047c83aa6b54bfb6ca8cac4d3ea18542611cef77
 ;; Keywords: outlines
 ;; Package-Requires: ((emacs "25.1") (xelb "0.18") (exwm "0.24") (popwin "1.0.2"))
 ;; Version: 0.4

@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/emacscollective/packed
 ;; Keywords: lisp
 ;; Package-Version: 20220422.1626
-;; Package-Commit: 6a427d9da742d78a8f6bd6ed9e31fbf241b2ea82
+;; Package-Commit: 2d4ed03032b3ddc008182f48bd3b81dbda0cbefc
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 

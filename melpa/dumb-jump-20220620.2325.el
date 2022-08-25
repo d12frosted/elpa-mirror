@@ -3,7 +3,7 @@
 ;; Author: jack angers and contributors
 ;; Url: https://github.com/jacktasia/dumb-jump
 ;; Package-Version: 20220620.2325
-;; Package-Commit: 0a783d1db610ff1dc4e1b7869589cff16ff92f7a
+;; Package-Commit: ba4127336d897f5656032694bbe22c490ecbb000
 ;; Version: 0.5.4
 ;; Package-Requires: ((emacs "24.3") (s "1.11.0") (dash "2.9.0") (popup "0.5.3"))
 ;; Keywords: programming

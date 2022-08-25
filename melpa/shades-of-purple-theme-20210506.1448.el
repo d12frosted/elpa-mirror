@@ -18,7 +18,7 @@
 ;; Author: Arturo Vergara <hello@dead.computer>
 ;; URL: https://github.com/arturovm/shades-of-purple-emacs
 ;; Package-Version: 20210506.1448
-;; Package-Commit: e9d2ac081ae657b1ad6a30b9f53e8572479deb80
+;; Package-Commit: 951b5901ff90ca86f18a39936fc84e2481a2c8b3
 ;; Version: 0.1.0
 
 ;;; Commentary:

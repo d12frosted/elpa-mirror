@@ -7,7 +7,7 @@
 ;;; Homepage: https://github.com/chkhd/hydandata-light-theme
 ;;; Version: 0.2
 ;; Package-Version: 20190809.1925
-;; Package-Commit: 180c3797fa7ef3e4bb679baaf5b492c33bbb9b8b
+;; Package-Commit: 812ffa4bee3163098ef66ee4506feed45018be4e
 ;;; Created: 01 January 2016
 ;;; Keywords: color-theme theme
 

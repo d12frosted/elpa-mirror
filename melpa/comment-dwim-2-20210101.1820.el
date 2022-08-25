@@ -5,7 +5,7 @@
 ;; Author: Rémy Ferré <dev@remyferre.net>
 ;; Version: 1.4.3
 ;; Package-Version: 20210101.1820
-;; Package-Commit: 7cdafd6d98234a7402865b8abdae54a2f2551c94
+;; Package-Commit: b4d6bf4be5a159c4bcc7d43bea287315a16114ce
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/remyferre/comment-dwim-2
 ;; Keywords: convenience

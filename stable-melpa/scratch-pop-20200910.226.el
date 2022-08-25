@@ -19,7 +19,7 @@
 
 ;; Version: 2.2.0
 ;; Package-Version: 20200910.226
-;; Package-Commit: cbe842fd78e4b742ece9fc493ebf43e69d872866
+;; Package-Commit: 545badcd840dd50b39dd7dfa37459c6f71d02ea6
 ;; Author: zk_phi
 ;; URL: http://hins11.yu-yake.com/
 ;; Package-Requires: ()

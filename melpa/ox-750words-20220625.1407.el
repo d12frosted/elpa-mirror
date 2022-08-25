@@ -8,7 +8,7 @@
 ;; Modified: June 10, 2021
 ;; Version: 0.0.1
 ;; Package-Version: 20220625.1407
-;; Package-Commit: 8abef82d644223c7991beb689072889c72d1faee
+;; Package-Commit: 43eee19428fc8f5a133192398510d7313eb33d97
 ;; Keywords: files, org, writing
 ;; Homepage: https://github.com/zzamboni/750words-client
 ;; Package-Requires: ((emacs "24.4") (750words "0.0.1"))

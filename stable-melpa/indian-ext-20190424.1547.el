@@ -5,7 +5,7 @@
 ;; Author: Patrick McAllister <pma@rdorte.org>
 ;; Keywords: i18n, tools, wp, indian, devanagari, encoding
 ;; Package-Version: 20190424.1547
-;; Package-Commit: c941cde1205642c6b933ae6abbc47d199f609df0
+;; Package-Commit: a5450fe467393194bc2458c0d5e0a06c91bf117a
 ;; URL: https://github.com/paddymcall/indian-ext
 ;; Package-Requires: ((emacs "24"))
 ;; Version: 0.1

@@ -5,7 +5,7 @@
 ;; Author: Joshua Wolfe
 ;; Keywords: lisp org ox mdx deck
 ;; Package-Version: 20181115.1847
-;; Package-Commit: 2e46ac76f7ac279c371474cbbf39634bbe40f4c7
+;; Package-Commit: f3dbc35870b69a5d8971b1647da8c5468f520c5d
 ;; Version: 0.0.1
 ;; URL: https://github.com/WolfeCub/ox-mdx-deck/
 ;; Package-Requires: ((emacs "24") (ox-hugo "0.7"))

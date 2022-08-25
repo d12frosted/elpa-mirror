@@ -8,7 +8,7 @@
 ;;
 ;; URL: https://github.com/dash-docs-el/helm-dash
 ;; Package-Version: 20190527.1118
-;; Package-Commit: 7f853bd34da666f0e9a883011c80f451b06f6c59
+;; Package-Commit: 6c76c794fec95586028633f24773451812af5df4
 ;; Version: 1.3.0
 ;; Package-Requires: ((emacs "24.4") (dash-docs "1.4.0") (helm "1.9.2") (cl-lib "0.5"))
 ;; Keywords: docs

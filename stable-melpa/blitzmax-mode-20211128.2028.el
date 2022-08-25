@@ -4,7 +4,7 @@
 
 ;; Version: 1.0.0
 ;; Package-Version: 20211128.2028
-;; Package-Commit: c9651fa69116b5821cd34fb34eabc3e12ce238e2
+;; Package-Commit: 080d66c80f8350f3981bb97bc45c91b683cafdc0
 ;; Keywords: languages blitzmax
 ;; Author: Phil Newton
 ;; URL: https://www.sodaware.net/dev/tools/blitzmax-mode/

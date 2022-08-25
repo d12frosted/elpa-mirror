@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/liquidmetal
 ;; Package-Version: 20220704.654
-;; Package-Commit: e2d62849a2295dbc9d457cfcfadca3769ee62199
+;; Package-Commit: 323c38edd4572d7d58cdec729dcaac7a615d000d
 ;; Version: 1.3.0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: matching fuzzy

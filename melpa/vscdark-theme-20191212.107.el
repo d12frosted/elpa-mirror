@@ -5,7 +5,7 @@
 ;; Author: Alexander L. Belikoff
 ;; URL: https://github.com/abelikoff/vscdark-theme
 ;; Package-Version: 20191212.107
-;; Package-Commit: 8eba74059e8a9db974e4056ee024e52fe54da485
+;; Package-Commit: f419553e2a2f091a8bc257fb5ab520326e93ddd4
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 ;; Created with emacs-theme-generator, https://github.com/mswift42/theme-creator.

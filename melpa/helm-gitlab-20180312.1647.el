@@ -3,7 +3,7 @@
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; URL: https://github.com/nlamirault/emacs-gitlab
 ;; Package-Version: 20180312.1647
-;; Package-Commit: 8c2324c02119500f094c2f92dfaba4c9977ce1ba
+;; Package-Commit: 68318aca3206d50701039c9aae39734ca29a49f9
 ;; Version: 0.1.0
 ;; Keywords: gitlab, helm
 

@@ -6,7 +6,7 @@
 ;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
 ;; URL: https://github.com/emacsorphanage/anzu
 ;; Package-Version: 20211002.2255
-;; Package-Commit: 5abb37455ea44fa401d5f4c1bdc58adb2448db67
+;; Package-Commit: 14e4483a5e708097870b22ac56ea693ec1d893bf
 ;; Version: 0.64
 ;; Package-Requires: ((emacs "25.1"))
 

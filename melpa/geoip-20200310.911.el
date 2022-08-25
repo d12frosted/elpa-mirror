@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/xuchunyang/geoip.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Package-Version: 20200310.911
-;; Package-Commit: 25eb1278788b942c38405c233d3614a1de92ddea
+;; Package-Commit: b4952890993642c7055f4bbbf05b0384740f8f51
 ;; Keywords: tools
 ;; Version: 0
 

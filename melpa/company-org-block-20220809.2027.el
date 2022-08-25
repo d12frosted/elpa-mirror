@@ -3,7 +3,7 @@
 ;; Author: Alvaro Ramirez
 ;; Package-Requires: ((emacs "25.1") (company "0.8.0") (org "9.2.0"))
 ;; Package-Version: 20220809.2027
-;; Package-Commit: 4d96750beba7f90478dbf5f4d52eb9c21d538f4a
+;; Package-Commit: 29a2edb35e18c2627dcfa0641852a55d9639263c
 ;; URL: https://github.com/xenodium/company-org-block
 ;; Version: 0.4
 

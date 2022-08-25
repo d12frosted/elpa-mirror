@@ -13,7 +13,7 @@
 ;; Created: 2009-01-20 16:31:45
 ;; Version: 0.5.8
 ;; Package-Version: 20160508.952
-;; Package-Commit: 03cc293eb2f78ec58fc1d84279af06816a04b979
+;; Package-Commit: 9fe516d39b349070537099a01fe34e47fbded2c8
 ;; URL: https://github.com/Yuki-Inoue/elisp-format
 ;; Keywords:
 ;; Compatibility: GNU Emacs 22 ~

@@ -6,7 +6,7 @@
 ;; Homepage: http://github.com/rolandwalker/minimal-session-saver
 ;; URL: http://raw.githubusercontent.com/rolandwalker/minimal-session-saver/master/minimal-session-saver.el
 ;; Package-Version: 20140508.2041
-;; Package-Commit: cf654ac549850746dc21091746e4bcc1aef7668e
+;; Package-Commit: ac42b6835f777a8a7e04599d8f20ec650997ba96
 ;; Version: 0.6.2
 ;; Last-Updated: 29 Oct 2013
 ;; EmacsWiki: MinimalSessionSaver

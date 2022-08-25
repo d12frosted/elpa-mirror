@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/xuchunyang/sexp-diff.el
 ;; Package-Requires: ((emacs "25"))
 ;; Package-Version: 20200314.2018
-;; Package-Commit: 7e8c988bea2af209e17b70fa51316ade55529acb
+;; Package-Commit: 4fea80f7b04c64b160a95bdc9d6de68c71096706
 ;; Keywords: lisp
 ;; Version: 0.0
 

@@ -8,7 +8,7 @@
 ;; Maintainer: Noah Friedman <friedman@splode.com>
 ;; Keywords: games
 ;; Package-Version: 20180303.2016
-;; Package-Commit: a749b2a77b87e505572d0f1f5d59fac76348bb73
+;; Package-Commit: 2cfb860a483197e92a4c20d7b9b055d586e76fe0
 ;; Version: 2.0
 ;; Package-Requires: ((emacs "24"))
 ;; URL: https://github.com/mschuldt/flame

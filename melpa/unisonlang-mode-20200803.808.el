@@ -5,7 +5,7 @@
 ;; Author: Dario Oddenino
 ;; Version: 0.2.0
 ;; Package-Version: 20200803.808
-;; Package-Commit: 2b794adbe0b2a4edd40f350173a32b80bd2c5896
+;; Package-Commit: b8da68fc2a6a62a255a6089b0c6794bfa2370f34
 ;; Package-Requires: ((emacs "25.1"))
 ;; Created: 24 Apr 2020
 ;; Keywords: languages

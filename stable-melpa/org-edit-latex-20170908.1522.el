@@ -5,7 +5,7 @@
 ;; Author: James Wong <jianwang.academic@gmail.com>
 ;; URL: https://github.com/et2010/org-edit-latex
 ;; Package-Version: 20170908.1522
-;; Package-Commit: 1f228310ef2f3f2959a527f6d99e42ce977384c8
+;; Package-Commit: ecd91601cb6f3aa79d055bde99bfec6d2b335952
 ;; Keywords: org, LaTeX
 ;; Version: 0.8.3
 ;; Package-Requires: ((emacs "24.4") (auctex "11.90"))

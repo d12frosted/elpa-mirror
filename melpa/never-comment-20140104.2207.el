@@ -4,7 +4,7 @@
 ;; Maintainer: Toon Claes
 ;; Version: 1.0
 ;; Package-Version: 20140104.2207
-;; Package-Commit: 74ded8f1e7f23240f5f6032d0451fb0a51733bc4
+;; Package-Commit: 1996d003cad6bccf1475f7845d79efacbc7cd673
 ;; URL: http://stackoverflow.com/a/4554658/89376
 
 ;; This file is not currently part of GNU Emacs.

@@ -5,7 +5,7 @@
 ;; Author: Guillermo Robles <guillerobles1995@gmail.com>
 ;; URL: https://github.com/wynro/emacs-csgo-conf-mode
 ;; Package-Version: 20161209.1619
-;; Package-Commit: 57e7224f87a3ccc76b5564cc95fa0ff43bb6807c
+;; Package-Commit: df45ca833eb68c394dd03acce5733a33c3b06bf8
 ;; Keywords: languages
 ;; Version: 1.0
 

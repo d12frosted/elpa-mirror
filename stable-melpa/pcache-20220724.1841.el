@@ -5,7 +5,7 @@
 ;; Author: Yann Hodique <yann.hodique@gmail.com>
 ;; Keywords: extensions
 ;; Package-Version: 20220724.1841
-;; Package-Commit: 507230d094cc4a5025fe09b62569ad60c71c4226
+;; Package-Commit: cae29ddbc3d12fac18ab5cfc26fa3ef13eb97dad
 ;; Version: 0.5.1
 ;; Package-Requires: ((emacs "25.1"))
 

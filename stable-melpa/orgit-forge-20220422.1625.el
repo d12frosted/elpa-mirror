@@ -5,7 +5,7 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/magit/orgit-forge
 ;; Keywords: hypermedia vc
-;; Package-Commit: 8baf1dee795f026d4555687022487fab89c9bcdf
+;; Package-Commit: 0ffae0b325824372e5e6b1451e5e863e170cdef3
 
 ;; Package-Version: 20220422.1625
 ;; Package-X-Original-Version: 0.1.3-git

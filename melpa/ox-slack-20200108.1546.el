@@ -5,7 +5,7 @@
 
 ;; Author: Matt Price
 ;; Keywords: org, slack, outlines
-;; Package-Commit: bd797dcc58851d5051dc3516c317706967a44721
+;; Package-Commit: c55b003f4ac343d6c6d8ef7cbe01d0d100abac34
 ;; Package-Version: 20200108.1546
 ;; Package-X-Original-Version: 0.1.1
 ;; Package-Requires: ((emacs "24") (org "9.1.4") (ox-gfm "1.0"))

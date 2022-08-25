@@ -3,7 +3,7 @@
 ;; Author: Denys Valchuk <dvalchuk@gmail.com>
 ;; URL: https://bitbucket.org/dvalchuk/waf-mode
 ;; Package-Version: 20170403.1940
-;; Package-Commit: 20c75eabd1d54fbce8e0dbef785c9fb68577ee4f
+;; Package-Commit: 91c761336aa137b85b88b53b3f0cc60786d70800
 ;; Version: 0.1.0
 
 ;; This file is NOT part of GNU Emacs.

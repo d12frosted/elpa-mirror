@@ -5,7 +5,7 @@
 ;;; Author: Ben Yelsey <byelsey1@gmail.com>
 ;;; Url: https://github.com/inlinestyle/emacs-cherry-blossom-theme
 ;; Package-Version: 20150622.342
-;; Package-Commit: eea7653e00f35973857ee23b27bc2fae5e753e50
+;; Package-Commit: e5ea23694c0f20ab670c0aa87214c27f2232d922
 ;;; Version: 0.0.2
 ;;; Package-Requires: ((emacs "24.0"))
 

@@ -5,7 +5,7 @@
 ;; Author: Brian Sermons
 ;; Package-Requires: ((flycheck "0.29-cvs") (emacs "24.4") (let-alist "1.0.5") (seq "2.20"))
 ;; Package-Version: 20181107.146
-;; Package-Commit: 1b60050efd4729bfba548f3e5adbcb58436667cb
+;; Package-Commit: debd0af563cb6c2944367a691c7fa3021d9378c1
 ;; URL: https://github.com/bsermons/flycheck-elm
 
 ;; This file is not part of GNU Emacs.

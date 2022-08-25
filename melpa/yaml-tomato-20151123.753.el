@@ -4,7 +4,7 @@
 ;; Created: 22-Nov-2015
 ;; Version: 0.1
 ;; Package-Version: 20151123.753
-;; Package-Commit: f9df1c9bdfcec629b03031b2d2032f9dc533cb14
+;; Package-Commit: 1272c502fac6ce6b0f8b7f8a9beb353f0b35e13c
 ;; Keywords: Yaml
 ;; Package-Requires: ((s "1.9"))
 

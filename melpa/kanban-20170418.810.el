@@ -5,7 +5,7 @@
 
 ;; Version: 0.2.1
 ;; Package-Version: 20170418.810
-;; Package-Commit: fcf0173ce0144e59de97ba8a7808192620e5f8f4
+;; Package-Commit: dd11d722b20ae720f29b8aa93a3b1cad87650b33
 
 ;; Author: Arne Babenhauserheide <arne_bab@web.de>
 ;; Keywords: outlines, convenience

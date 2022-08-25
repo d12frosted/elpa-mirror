@@ -5,7 +5,7 @@
 ;; Author: Jakob Lind <karl.jakob.lind@gmail.com>
 ;; URL: https://github.com/jakoblind/github-pullrequest
 ;; Package-Version: 20170116.616
-;; Package-Commit: 6ae5c38b0fc15b638b5ba4490112d9822ce5e267
+;; Package-Commit: 471816e09d1e140a0975911fe020c6c659f71209
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "24.4") (request "0.2.0") (dash "2.11.0") (magit "2.10.0"))
 ;; Version: 1.0

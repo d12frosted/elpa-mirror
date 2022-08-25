@@ -5,7 +5,7 @@
 ;; Author: Raghunandan Rao <r.raghunandan@gmail.com>
 ;; Keywords: tdd test toggle productivity
 ;; Package-Version: 20140723.537
-;; Package-Commit: e969321f274903d705995a7d0345a257576ec5ff
+;; Package-Commit: a0b64834101c2b8b24da365baea1d36e57b069b5
 ;; Version: 1.0.2
 ;; Url: https://github.com/rags/toggle-test
 

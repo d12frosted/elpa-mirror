@@ -5,7 +5,7 @@
 ;; Author: Peter Jones <pjones@pmade.com>
 ;; URL: https://github.com/pjones/bufshow
 ;; Package-Version: 20130726.1838
-;; Package-Commit: d60a554e7239e6f7520d9c3436d5ecdbc9cf6957
+;; Package-Commit: 42d7fb74c3f914e127d5447c63d209bf19f5d517
 ;; Package-Requires: ((emacs "24.1"))
 ;; Version: 0.1.0
 ;;

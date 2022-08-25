@@ -5,7 +5,7 @@
 ;; Author: Boris Buliga <d12frosted@gmail.com>
 ;; URL: https://github.com/d12frosted/counsel-osx-app
 ;; Package-Version: 20160821.809
-;; Package-Commit: b1c54cbc033c4939966910d85ce035503079e108
+;; Package-Commit: 5cc93ec684f837dc31ce20e7625407f2c0445691
 ;; Version: 0.1.0
 ;; Package-Requires: ((ivy "0.8.0") (emacs "24.3"))
 ;;

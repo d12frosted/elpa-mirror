@@ -7,7 +7,7 @@
 ;; Author: rubikitch <rubikitch@ruby-lang.org>
 ;; Keywords: lisp
 ;; Package-Version: 20170926.34
-;; Package-Commit: 9688994e23ccb2de568225ef125b41c46e5667c3
+;; Package-Commit: c3aa957602c924c01fe07d48d191b8616fb3696a
 ;; URL: http://www.emacswiki.org/cgi-bin/wiki/download/minor-mode-hack.el
 ;; Version: 1.6
 

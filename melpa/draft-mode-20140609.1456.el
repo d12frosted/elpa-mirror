@@ -1,7 +1,7 @@
 ;;; draft-mode.el --- Rough drafting for Emacs.
 ;; Version: 0.1.1
 ;; Package-Version: 20140609.1456
-;; Package-Commit: 4779fb32daf53746459da2def7e08004492d4f18
+;; Package-Commit: f059c04b044f62aec764c7698adddad301bfe89c
 
 ;; Copyright (C) 2014 Eeli Reilin
 

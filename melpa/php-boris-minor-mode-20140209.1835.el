@@ -5,7 +5,7 @@
 ;; Author: steckerhalter
 ;; URL: https://github.com/steckerhalter/php-boris-minor-mode
 ;; Package-Version: 20140209.1835
-;; Package-Commit: c70e176dd6545f2d42ca3427e87b469635616d8a
+;; Package-Commit: 8648eba604e4ff82ef6594a2c5ee4cb4825e6235
 ;; Package-Requires: ((php-boris "0.0.1") (highlight "0"))
 ;; Keywords: php repl eval
 

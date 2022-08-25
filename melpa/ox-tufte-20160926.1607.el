@@ -6,7 +6,7 @@
 ;; Description: An org exporter for Tufte HTML
 ;; Keywords: org, tufte, html
 ;; Package-Version: 20160926.1607
-;; Package-Commit: 49d7ea78fde063b407ce6fa57739f90c83500682
+;; Package-Commit: ca1b16eb91b25bb4f05e58e9b6692e8486c8c619
 ;; Version: 1.0.0
 ;; Package-Requires: ((org "8.2") (emacs "24"))
 ;; URL: https://github.com/dakrone/ox-tufte

@@ -6,7 +6,7 @@
 ;; Package-Version: 20210325.1622
 ;; Package-X-Original-Version: 0.1
 ;; Package-Requires: ((dash "2.12.1") (s "1.10.0"))
-;; Package-Commit: 053a2d5110ce05b7f99bcc2ac4804b70cbe87916
+;; Package-Commit: d3ec98405f1f9dac833abf9e146249b1b943870d
 ;; Homepage: https://github.com/travisbhartwell/nix-emacs
 
 ;; This file is not part of GNU Emacs.

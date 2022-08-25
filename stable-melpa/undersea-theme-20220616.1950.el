@@ -5,7 +5,7 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/undersea-theme
-;; Package-Commit: ee8a3cff8abadbfcd1b3c51e8622d32a104c99c4
+;; Package-Commit: 6bc351c4cb49ccc7210801e6b54ecc2993289b92
 ;; Package-Version: 20220616.1950
 ;; Package-X-Original-Version: 0.3
 ;; Package-Requires: ((emacs "24.3"))

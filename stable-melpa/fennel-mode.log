@@ -1,26 +1,27 @@
 Package: fennel-mode
-Fetcher: git
+Fetcher: sourcehut
 Source:  https://git.sr.ht/~technomancy/fennel-mode
 
 Updating /mnt/store/melpa/working/fennel-mode/
 Checking out origin/HEAD
-Checking out 5664357349462d0564c0bb55cb289a6722f0ecbc
-Checking out 5664357349462d0564c0bb55cb289a6722f0ecbc
+Checking out a3d7564f209c32b804852b7fe8056c1952414f08
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fennel-mode/
-  to /tmp/fennel-modej5wDhx/fennel-mode-20220701.1956
+  to /tmp/fennel-modegnxJLj/fennel-mode-20220825.1549
     antifennel.el -> antifennel.el
     fennel-eldoc.el -> fennel-eldoc.el
     fennel-mode.el -> fennel-mode.el
     fennel-scratch.el -> fennel-scratch.el
-Created fennel-mode-20220701.1956.tar containing:
-  fennel-mode-20220701.1956/
-  fennel-mode-20220701.1956/antifennel.el
-  fennel-mode-20220701.1956/fennel-eldoc.el
-  fennel-mode-20220701.1956/fennel-mode-pkg.el
-  fennel-mode-20220701.1956/fennel-mode.el
-  fennel-mode-20220701.1956/fennel-scratch.el
-Built fennel-mode in 6.912s, finished at 2022-08-25T15:11:33+0000
+Created fennel-mode-20220825.1549.tar containing:
+  fennel-mode-20220825.1549/
+  fennel-mode-20220825.1549/antifennel.el
+  fennel-mode-20220825.1549/fennel-eldoc.el
+  fennel-mode-20220825.1549/fennel-mode-pkg.el
+  fennel-mode-20220825.1549/fennel-mode.el
+  fennel-mode-20220825.1549/fennel-scratch.el
+Built fennel-mode in 6.051s, finished at 2022-08-25T19:01:45+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 361 Aug 25 15:11 packages/fennel-mode-20220701.1956.entry
  60K -rw-r--r-- 1 root root 60K Aug 25 15:11 packages/fennel-mode-20220701.1956.tar
+4.0K -rw-r--r-- 1 root root 361 Aug 25 19:01 packages/fennel-mode-20220825.1549.entry
+ 60K -rw-r--r-- 1 root root 60K Aug 25 19:01 packages/fennel-mode-20220825.1549.tar

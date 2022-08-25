@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-grammarly/flymake-grammarly
 ;; Package-Version: 20220704.626
-;; Package-Commit: 2e3c0851b322c21e4147c92f05d2488687eccd8e
+;; Package-Commit: 4bbf93df6ca31a925417b656eec521f7b2c85681
 ;; Version: 0.2.1
 ;; Package-Requires: ((emacs "26.1") (grammarly "0.3.0") (s "1.12.0"))
 ;; Keywords: convenience grammar check

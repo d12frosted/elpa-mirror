@@ -6,7 +6,7 @@
 ;; Created: 21 October 2014
 ;; Version: 0.5
 ;; Package-Version: 20210123.1949
-;; Package-Commit: ebc4731c45709ad1e0526f4f4164020ae83cbeff
+;; Package-Commit: ec9b527191cd47d3b5947cb0ec3d6a8a57b121ea
 
 ;;; Commentary:
 

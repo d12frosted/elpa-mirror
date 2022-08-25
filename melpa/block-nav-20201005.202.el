@@ -6,7 +6,7 @@
 ;; Maintainer: Philip Dumaresq <phdumaresq@protonmail.com>
 ;; URL: https://github.com/nixin72/block-nav.el
 ;; Package-Version: 20201005.202
-;; Package-Commit: d69acaa3d6c75bf4c518d8ab8896ad63580253fc
+;; Package-Commit: bc02e545cfd9a048a8df777669a426a8edc2321f
 ;; Keywords: convenience
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "25.1"))

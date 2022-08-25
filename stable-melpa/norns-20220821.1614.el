@@ -4,7 +4,7 @@
 ;;
 ;; Version: 0.0.1
 ;; Package-Version: 20220821.1614
-;; Package-Commit: 022b433334cd1db4f83e77f055cd89e9f857076d
+;; Package-Commit: 387c7ae65383f7e9ff7ae93250ef6cf0e2b1b71a
 ;; Keywords: processes, terminals
 ;; URL: https://github.com/p3r7/norns.el
 ;; Package-Requires: ((emacs "27.1")(dash "2.17.0")(s "1.12.0")(f "0.20.0")(request "0.3.2")(websocket "1.13"))

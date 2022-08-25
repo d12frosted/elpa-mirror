@@ -5,7 +5,7 @@
 ;; Author: khiker <khiker.mail+elisp@gmail.com>
 ;; URL: https://github.com/waymondo/popup-kill-ring
 ;; Package-Version: 20131020.1854
-;; Package-Commit: 5773dfadc104a906c088a3ec62e8cdd3e01e57fa
+;; Package-Commit: dc50b62ae8b7c2675dde96bb410d9bf0e8643f6a
 ;; Keywords: popup, kill-ring, pos-tip
 ;; Package-Requires: ((popup "0.4") (pos-tip "0.4"))
 

@@ -5,7 +5,7 @@
 ;; Author: Dewdrops <v_v_4474@126.com>
 ;; URL: http://github.com/Dewdrops/evil-extra-operator
 ;; Package-Version: 20210225.1239
-;; Package-Commit: fb249889acacc3e28869491195391fa6f617ae56
+;; Package-Commit: 49c2dae224705f05dcfa03868b9fbbb72f2b5a8d
 ;; Version: 0.2
 ;; Keywords: evil, plugin
 ;; Package-Requires: ((evil "1.0.7"))

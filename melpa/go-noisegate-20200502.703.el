@@ -3,7 +3,7 @@
 ;; Author: The Noise Gate Authors
 ;; Version: 0.1.0
 ;; Package-Version: 20200502.703
-;; Package-Commit: e3fc198c234131c94f7d307b7f7c6ef623fb93b7
+;; Package-Commit: 825d1fb05ec329f938c4c5bed23592f54d326f80
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: languages, go, test
 ;; URL: https://github.com/go-noisegate/go-noisegate.el

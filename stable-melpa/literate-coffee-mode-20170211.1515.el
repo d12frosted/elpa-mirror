@@ -5,7 +5,7 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-literate-coffee-mode
 ;; Package-Version: 20170211.1515
-;; Package-Commit: 55ce0305495f4a38c8063c4bd63deb1e1252373d
+;; Package-Commit: ef34c3a5b813ef078d44c29887761950ab6821c7
 ;; Version: 0.04
 ;; Package-Requires: ((coffee-mode "0.5.0"))
 

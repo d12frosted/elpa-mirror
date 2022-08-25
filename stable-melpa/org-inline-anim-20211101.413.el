@@ -7,7 +7,7 @@
 ;; Created: October 24, 2021
 ;; URL: https://github.com/shg/org-inline-anim.el
 ;; Package-Version: 20211101.413
-;; Package-Commit: ea7feb924c991f3a2cdc4a70fb176eaceae87938
+;; Package-Commit: 1808574ff04ed66b7382247f3f13815fae2a4929
 ;; Package-Requires: ((emacs "25.3") (org "9.4"))
 ;; Version: 0.2
 ;; Keywords: org, outlines, hypermedia, multimedia

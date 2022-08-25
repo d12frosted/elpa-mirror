@@ -4,7 +4,7 @@
 
 ;; Version: 0.1.3
 ;; Package-Version: 20220619.1304
-;; Package-Commit: 7016040ae45eba97575d9250a20df19cc496c165
+;; Package-Commit: 7dff0e7a497a055577226c7ae7ecdeaf7078b4c1
 ;; Author: Matt Nemitz <matt.nemitz@gmail.com>
 ;; Maintainer: Matt Nemitz <matt.nemitz@gmail.com>
 ;; URL: http://github.com/mnemitz/smithy-mode

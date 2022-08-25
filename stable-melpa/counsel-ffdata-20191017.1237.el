@@ -5,7 +5,7 @@
 ;; Author: Zhu Zihao <all_but_last@163.com>
 ;; URL: https://github.com/cireu/counsel-ffdata
 ;; Package-Version: 20191017.1237
-;; Package-Commit: 88c2348c4039d9e562bd3d9a364708b01037c283
+;; Package-Commit: 913cb1b8cd5e4ca2ba6613eab56d52040e08a0a5
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "25.1") (counsel "0.11.0") (emacsql "3.0.0"))
 ;; Keywords: convenience, tools, matching

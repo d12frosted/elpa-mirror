@@ -6,7 +6,7 @@
 ;; Created: 07 Dec 2009
 ;; Keywords: lua
 ;; Package-Version: 20170129.154
-;; Package-Commit: 84589f20066921a5b79cf3a1f914a223a2552d2a
+;; Package-Commit: dcc32b62a285215898ae774ba63dbda0656f6f53
 
 ;; This file is not part of GNU Emacs.
 

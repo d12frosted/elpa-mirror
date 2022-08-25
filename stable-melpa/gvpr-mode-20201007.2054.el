@@ -7,7 +7,7 @@
 ;; Created: 7 Dec 2013
 ;; Version: 0.1.0
 ;; Package-Version: 20201007.2054
-;; Package-Commit: ef6ec2d4a4c9de68078c94a0e43b05bf77ec4674
+;; Package-Commit: a729fa4623a6d846ab860778842b38f685246c95
 ;; Keywords: graphviz, gv, dot, gvpr, graph
 ;; URL: https://raw.github.com/rodw/gvpr-lib/master/extra/gvpr-mode.el
 

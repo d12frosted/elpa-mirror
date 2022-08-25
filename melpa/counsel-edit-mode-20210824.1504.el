@@ -2,7 +2,7 @@
 ;; Author: Tyler Dodge
 ;; Version: 0.6
 ;; Package-Version: 20210824.1504
-;; Package-Commit: 378803ac0040c04762ff001ab1aca7d4325ecf22
+;; Package-Commit: 00ee3fd5cb88021fc4a58b038407e21398607c3c
 ;; Keywords: convenience, matching
 ;; Package-Requires: ((emacs "26.1") (ht "2.3") (s "1.12.0") (counsel "0.10.0"))
 ;; URL: https://github.com/tyler-dodge/counsel-edit-mode

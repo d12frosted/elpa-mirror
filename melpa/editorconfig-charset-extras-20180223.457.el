@@ -3,7 +3,7 @@
 ;; Author: 10sr <8.slashes@gmail.com>
 ;; URL: https://github.com/10sr/editorconfig-charset-extras-el
 ;; Package-Version: 20180223.457
-;; Package-Commit: 4f75e175ad15ce2038f926fe4f0e5a0c1d0cbc46
+;; Package-Commit: ddf60923c6f4841cb593b2ea04c9c710a01d262f
 ;; Version: 0.1
 ;; Package-Requires: ((editorconfig "0.6.0"))
 ;; Keywords: tools

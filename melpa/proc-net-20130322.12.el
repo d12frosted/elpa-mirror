@@ -5,7 +5,7 @@
 ;; Author: Nic Ferrier <nferrier@ferrier.me.uk>
 ;; Keywords: processes
 ;; Package-Version: 20130322.12
-;; Package-Commit: 10861112a1f3994c8e6374d6c5bb5d734cfeaf73
+;; Package-Commit: 00bfc92a381787ec387974ed17070118ced6d9ad
 ;; Version: 0.0.1
 ;; Url: http://github.com/nicferrier/emacs-procnet
 

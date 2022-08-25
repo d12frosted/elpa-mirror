@@ -5,7 +5,7 @@
 
 ;; Version: 1.0.2
 ;; Package-Version: 20201102.1508
-;; Package-Commit: 38baf140cae26f9d93fc45d5eaff7d5c7f050bff
+;; Package-Commit: 189c55261ecf0d7990edf7d1bb89776225e9092b
 ;; Keywords: languages
 ;; Package-Requires: ((emacs "24.4"))
 ;; Homepage: https://gitlab.com/matteoredaelli/sql-sqlline

@@ -4,7 +4,7 @@
 ;; Author: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; Keywords: extensions, convenience
 ;; Package-Version: 20171223.210
-;; Package-Commit: a9c769998bc56373d19f0ec9cbbbb4bd89a43c2d
+;; Package-Commit: d2609cdfce14052ab2d9c23761d4fe56966a8ed1
 ;; Version: 0.9.1
 ;; Maintainer: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; URL: https://github.com/takaxp/helm-selected

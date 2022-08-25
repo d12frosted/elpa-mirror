@@ -7,7 +7,7 @@
 ;; Homepage: https://github.com/JorisE/evil-mu4e
 ;; Version: 0.0.8
 ;; Package-Version: 20180613.1039
-;; Package-Commit: 5b22c1e30246318f233264506272d770f63897ca
+;; Package-Commit: f4b387ccbd2c49f3bbb5401e93bfcc050ca128ef
 ;; Package-Requires: ((emacs "24.4") (evil "1.2.10"))
 
 ;; This file is free software; you can redistribute it and/or modify

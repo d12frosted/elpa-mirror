@@ -3,7 +3,7 @@
 ;; Author: Yann Herklotz <yann@ymhg.org>
 ;; URL: https://github.com/ymherklotz/emacs-zettelkasten
 ;; Package-Version: 20220819.2335
-;; Package-Commit: 505fd41dea012e743962c3a376c1e63e7a1e127e
+;; Package-Commit: c1f3ca9368a43638de7a0e78a0dceaa0f8943c37
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "24.3") (org "9.0"))
 ;; Keywords: files, hypermedia, Org, notes

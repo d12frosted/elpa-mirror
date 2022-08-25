@@ -5,7 +5,7 @@
 ;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: http://github.com/redguardtoo/elpa-mirror
 ;; Package-Version: 20220526.1512
-;; Package-Commit: 2e2048bc335d170b5680e97c6a4cccd71eb85129
+;; Package-Commit: fecb74e8b5ce1562df2951dbbed158d75a21aa7f
 ;; Package-Requires: ((emacs "25.1"))
 ;; Version: 2.2.0
 ;; Keywords: tools

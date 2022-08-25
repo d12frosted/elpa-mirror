@@ -5,7 +5,7 @@
 ;; Author: Yuta Yamada <cokesboy[at]gmail.com>
 ;; URL: https://github.com/yuutayamada/contrast-color-el
 ;; Package-Version: 20160903.1807
-;; Package-Commit: c5fb77a211ebbef3185ada37bea7420534c33f94
+;; Package-Commit: 6ff1b807e09ef6a775e4ab1032bb2ea3fc442d9e
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.3") (cl-lib "0.5"))
 ;; Keywords: color, convenience

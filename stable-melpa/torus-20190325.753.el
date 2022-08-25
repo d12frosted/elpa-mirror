@@ -7,7 +7,7 @@
 ;; Package-Version: 20190325.753
 ;; Package-X-Original-Version: 1.10
 ;; Package-requires: ((emacs "26"))
-;; Package-Commit: b309da8c2eaee573a2e2572f25a08ce5da9e9990
+;; Package-Commit: 863886f10db77f3d1b16815d77561b6c81d88352
 ;; Keywords: files, buffers, groups, persistent, history, layout, tabs
 ;; URL: https://github.com/chimay/torus
 

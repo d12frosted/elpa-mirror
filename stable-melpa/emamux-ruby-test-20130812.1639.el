@@ -6,7 +6,7 @@
 ;;          Malyshev Artem <proofit404@gmail.com>
 ;; URL: https://github.com/syohex/emamux-ruby-test
 ;; Package-Version: 20130812.1639
-;; Package-Commit: 23b73c650573b340351a919da3da416acfc2ac84
+;; Package-Commit: 785bfd44d097a46bb2ebe1e62ac7595fd4dc9ab5
 ;; Package-Requires: ((emamux "0.01") (projectile "0.9.1"))
 
 ;; This program is free software; you can redistribute it and/or modify

@@ -4,7 +4,7 @@
 
 ;; Version: 0.1
 ;; Package-Version: 20151009.2031
-;; Package-Commit: 91a644662afb352475efad0b377713656f131e5c
+;; Package-Commit: d38dd6dd7974b7cb11bff6fd84846fd01163211a
 ;; Package-Requires: ((circe "1.2"))
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Keywords: convenience, tools

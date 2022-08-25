@@ -5,7 +5,7 @@
 ;; Author: Artur Malabarba <bruce.connor.am@gmail.com>
 ;; URL: http://github.com/Bruce-Connor/org-agenda-property
 ;; Package-Version: 20140626.2116
-;; Package-Commit: 3b469f3e93de0036547f3631cd0366d53f7584c8
+;; Package-Commit: 01afb36072eb27846eb09310dfca7991dbae831e
 ;; Version: 1.3.2
 ;; Package-Requires: ((emacs "24.2"))
 ;; Keywords: calendar 

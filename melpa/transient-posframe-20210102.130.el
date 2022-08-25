@@ -6,7 +6,7 @@
 ;; Maintainer: Yanghao Xie <yhaoxie@gmail.com>
 ;; URL: https://github.com/yanghaoxie/transient-posframe
 ;; Package-Version: 20210102.130
-;; Package-Commit: dcd898d1d35183a7d4f2c8f0ebcb43b4f8e70ebe
+;; Package-Commit: 5f0874ac3ce6f50968ed5e088d6538a07bdfd11f
 ;; Version: 0.1.0
 ;; Keywords: convenience, bindings, tooltip
 ;; Package-Requires: ((emacs "26.0")(posframe "0.4.3")(transient "0.2.0"))

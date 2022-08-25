@@ -7,7 +7,7 @@
 ;;      Ilya Goldin
 ;; URL: http://github.com/tanzoniteblack/jape-mode
 ;; Package-Version: 20140903.1506
-;; Package-Commit: 85b9182850707b5d107391f6caee5bd401507a7d
+;; Package-Commit: 27dbebc4de93eb887038fda7a11671349efe8dbb
 ;; Keywords: languages jape gate
 ;; Version: 0.2.1
 

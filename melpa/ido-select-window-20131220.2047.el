@@ -5,7 +5,7 @@
 ;; Author: Peter Jones <pjones@devalot.com>
 ;; URL: https://github.com/pjones/ido-select-window
 ;; Package-Version: 20131220.2047
-;; Package-Commit: a64707d8d154664d50d12e26417d586e4c3dd78b
+;; Package-Commit: 946db3db7a3fec582cc1a0097877f1250303b53a
 ;; Package-Requires: ((emacs "24.1"))
 ;; Version: 0.1.0
 ;;

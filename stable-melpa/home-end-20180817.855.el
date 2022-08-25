@@ -9,7 +9,7 @@
 ;; Package-Version: 20180817.855
 ;; Package-X-Original-Version:  1.0
 ;; Package-requires: ((emacs "24.3") (keypress-multi-event "1.0"))
-;; Package-Commit: fbddad2c1268720ce17662a232b48f666e489526
+;; Package-Commit: 211914c5e7b25f35f02626575a9b10536f81ba1d
 ;; Keywords:         abbrev, convenience, wp, keyboard
 ;; URL:              https://www.github.com/Boruch_Baum/emacs-home-end
 

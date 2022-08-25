@@ -6,7 +6,7 @@
 ;; Maintainer: Oscar Najera <hi@oscarnajera.com>
 ;; Version: 0.2.2
 ;; Package-Version: 20220810.1600
-;; Package-Commit: 5e1bf8b8ffa4c75bece7a93feab9858f0e7d676e
+;; Package-Commit: 5282753b9f4509468d391357147e13129859ccbe
 ;; Homepage: https://github.com/Titan-C/cardano.el
 ;; Package-Requires: ((emacs "25.1") (dash "2.19.0"))
 ;;

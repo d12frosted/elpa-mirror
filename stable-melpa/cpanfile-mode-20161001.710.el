@@ -4,7 +4,7 @@
 
 ;; URL              : https://github.com/zakame/cpanfile-mode
 ;; Package-Version: 20161001.710
-;; Package-Commit: eda675703525198df1f76ddf250bffa40217ec5d
+;; Package-Commit: b09908b4342b3aa97940159dbe91ac074ec98e0b
 ;; Author           : Zak B. Elep <zakame@zakame.net>
 ;; Version          : 0.0.1
 ;; Date Created     : Mon Sep 26 07:10:33 UTC 2016

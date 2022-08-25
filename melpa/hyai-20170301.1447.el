@@ -5,7 +5,7 @@
 ;; Author:    Iku Iwasa <iku.iwasa@gmail.com>
 ;; URL:       https://github.com/iquiw/hyai
 ;; Package-Version: 20170301.1447
-;; Package-Commit: 9efad2ac6a57059b3be624588f649e276a96fdd4
+;; Package-Commit: e9a7e945fed12d8e664e898cf8b434b0376d5d80
 ;; Version:   1.4.0
 ;; Package-Requires: ((cl-lib "0.5") (emacs "24"))
 

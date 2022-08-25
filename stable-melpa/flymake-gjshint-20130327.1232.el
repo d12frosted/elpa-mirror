@@ -5,7 +5,7 @@
 ;; Author: Yasuyuki Oka <yasuyk@gmail.com>
 ;; Keywords: flymake, javascript, jshint, gjslint
 ;; Package-Version: 20130327.1232
-;; Package-Commit: dc957c14cb060819585de8aedb330e24efa4b784
+;; Package-Commit: 71495ee5303de18293decd57ab9f9abdbaabfa05
 ;; Version: 0.0.6
 
 ;; This program is free software; you can redistribute it and/or modify

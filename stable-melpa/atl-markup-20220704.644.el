@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/atl-markup
 ;; Package-Version: 20220704.644
-;; Package-Commit: e5047b5fd68b540e2653aa5915da80c70201544d
+;; Package-Commit: 8604cd6b0a2473595988d47f41623d2cd06d0a7b
 ;; Version: 0.1.5
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: convenience automatic truncate visual lines

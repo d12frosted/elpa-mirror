@@ -8,7 +8,7 @@
 ;; Author: Daniel Barreto <daniel.barreto.n@gmail.com>
 ;; Keywords: lisp, maint, tools
 ;; Package-Version: 20191108.2217
-;; Package-Commit: 3ac940e97f3d03e48ca9d7fcd74916a9b01c72f3
+;; Package-Commit: 306f7031d26e4ebfc9ff36614acdc6993f3e23c3
 ;; Created: Mon Jul 10 15:17:36 2017 (+0200)
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "25.1"))

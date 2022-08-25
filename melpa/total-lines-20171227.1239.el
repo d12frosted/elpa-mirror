@@ -5,7 +5,7 @@
 ;; Author: Hinrik Örn Sigurðsson
 ;; URL: https://github.com/hinrik/total-lines
 ;; Package-Version: 20171227.1239
-;; Package-Commit: 473fa74a5416697ecd938866518bcad423f8fda6
+;; Package-Commit: c762f08d039c8103f71c747e00304f209c2254f4
 ;; Version: 0.2.0
 ;; Keywords: convenience mode-line
 ;; Package-Requires: ((emacs "24.3"))

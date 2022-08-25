@@ -7,7 +7,7 @@
 ;;         Peter Oliver <git@mavit.org.uk>
 ;; URL: https://github.com/emacs-languagetool/flycheck-languagetool
 ;; Package-Version: 20220731.2301
-;; Package-Commit: f267f3075298ef715406f16efc1aba23f53a37ad
+;; Package-Commit: 53b3e46d47a0e70fd2e5c49fea9134ee9aa41793
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.14"))
 ;; Keywords: convenience grammar check

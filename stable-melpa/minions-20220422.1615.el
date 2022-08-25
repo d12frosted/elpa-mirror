@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/minions
 ;; Keywords: convenience
 ;; Package-Version: 20220422.1615
-;; Package-Commit: 19dae1c41542777cb5b0311b6e2e77f43e2fd407
+;; Package-Commit: b0427eea174adb494efc9fa212c22021861d3f76
 
 ;; Package-Requires: ((emacs "25.2") (compat "28.1.1.0"))
 

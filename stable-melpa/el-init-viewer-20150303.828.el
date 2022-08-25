@@ -5,7 +5,7 @@
 ;; Author:  Hiroki YAMAKAWA <s06139@gmail.com>
 ;; URL: https://github.com/HKey/el-init-viewer
 ;; Package-Version: 20150303.828
-;; Package-Commit: 7c0169d356d6c007317e253e5776e1e48a60d6ad
+;; Package-Commit: c40417db7808c8b8c9b2f196a69de5da7eee84a2
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5") (ctable "0.1.2") (dash "2.10.0") (anaphora "1.0.0") (el-init "0.1.4"))
 ;; Keywords:

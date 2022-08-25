@@ -6,7 +6,7 @@
 ;; Created: 2015-11-23
 ;; Version: 0.1
 ;; Package-Version: 20160426.1218
-;; Package-Commit: 32d59c5c845d6dbdda18f9bd1c03a58d55417fc5
+;; Package-Commit: 3c79338eae5c892bfb4e4882298422d9fd65d2d7
 ;; Keywords: lisp, code
 ;; Package-Requires: ((gist "1.3.1"))
 

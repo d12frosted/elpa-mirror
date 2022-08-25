@@ -5,7 +5,7 @@
 ;; Author:  Benjamin Kästner <benjamin.kaestner@gmail.com>
 ;; URL: https://github.com/bkaestner/redacted.el
 ;; Package-Version: 20220108.1037
-;; Package-Commit: c4ea6cbffda9c67af112f25b2db2843aa4abce85
+;; Package-Commit: b3f44ccf51d9d5274f7837fc825db0a378055744
 ;; Keywords: games
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "25.1"))

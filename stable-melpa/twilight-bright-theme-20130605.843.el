@@ -5,7 +5,7 @@
 ;; Author: Jim Myhrberg <contact@jimeh.me>
 ;; Version: 0.1.0
 ;; Package-Version: 20130605.843
-;; Package-Commit: 322157cb2f3bf7920ecd209dafc31bc1c7959f49
+;; Package-Commit: 9859474333fee9f907474dbd8763f617e8bfd89c
 ;; Keywords: themes
 ;; URL: https://github.com/jimeh/twilight-bright-theme.el
 ;;

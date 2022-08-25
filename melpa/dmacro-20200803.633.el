@@ -10,7 +10,7 @@
 ;; Created: 14 Apr 1993
 ;; Version: 2.0
 ;; Package-Version: 20200803.633
-;; Package-Commit: 3480b97aaad9e65fa03c6a9d1a0a8111be1179f8
+;; Package-Commit: 0008e7d2403a20f444b29a63fad65819aefabe18
 ;; Keywords: convenience
 ;; URL: https://github.com/emacs-jp/dmacro
 ;; Package-Requires: ((emacs "24.1") (cl-lib "0.6"))

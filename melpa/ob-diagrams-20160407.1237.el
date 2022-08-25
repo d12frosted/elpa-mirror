@@ -5,7 +5,7 @@
 ;; Author: Daniel Bergey
 ;; Keywords: literate programming, reproducible research
 ;; Package-Version: 20160407.1237
-;; Package-Commit: ed6649616325ca5b2d2109f74aded8bcb8aa5186
+;; Package-Commit: be45815f5596d181592fae709096b7b5f4a71992
 ;; Homepage: http://orgmode.org
 
 ;; This file is NOT part of GNU Emacs.

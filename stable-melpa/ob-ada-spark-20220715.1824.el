@@ -6,7 +6,7 @@
 ;; Maintainer: Francesc Rocher
 ;; Keywords: languages, tools, outlines
 ;; Package-Version: 20220715.1824
-;; Package-Commit: 38b72a41c12f8b6e6ba47f9136affa956123d73e
+;; Package-Commit: e2c9b08b62d8cd480f274f548bd97f3a941ae707
 ;; URL: https://github.com/rocher/ob-ada-spark
 ;; Package-Requires: ((emacs "26.1") (f "0.20.0"))
 ;; Version: 1.3.0

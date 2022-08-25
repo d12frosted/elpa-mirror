@@ -7,7 +7,7 @@
 ;; Authors: Avelino <t@avelino.xxx>
 ;; URL: https://github.com/rumlang/rum-mode
 ;; Package-Version: 20180127.22
-;; Package-Commit: b69a3866e0299cae8c9c805d644e69b2c17b64de
+;; Package-Commit: 161471e6476d232d479f9767535918920811d7bf
 ;; Version: 1.2
 ;; Keywords: rum, languages, lisp
 ;; Package-Requires: ((emacs "24"))

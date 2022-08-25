@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/show-eol
 ;; Package-Version: 20220704.659
-;; Package-Commit: 61e8b5f867b3b139bdaa8a0079fe11447b5ca886
+;; Package-Commit: 1af58bd6358e934c05830c4689a3eb576b9d6daf
 ;; Version: 0.0.5
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience end eol line

@@ -5,7 +5,7 @@
 ;; Maintainer: Peter W. V. Tran-Jørgensen <peter.w.v.jorgensen@gmail.com>
 ;; URL: https://github.com/peterwvj/vdm-mode
 ;; Package-Version: 20190304.839
-;; Package-Commit: 56336930555df91787f196acac15680498d17d5e
+;; Package-Commit: 103993147b24325ef68099d087dce9ac501f02f9
 ;; Created: 29th August 2018
 ;; Version: 0.0.4
 ;; Keywords: languages

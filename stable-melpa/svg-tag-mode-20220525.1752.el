@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/rougier/svg-tag-mode
 ;; Keywords: convenience
 ;; Package-Version: 20220525.1752
-;; Package-Commit: efd22edf650fb25e665269ba9fed7ccad0771a2f
+;; Package-Commit: 6e52f7c17e92c83476d6278869bf3f55d91ac9c9
 ;; Version: 0.3.2
 
 ;; Package-Requires: ((emacs "27.1") (svg-lib "0.2"))

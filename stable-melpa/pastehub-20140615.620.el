@@ -5,7 +5,7 @@
 ;; Author: Kiyoka Nishiyama
 ;; Version: 0.9.4
 ;; Package-Version: 20140615.620
-;; Package-Commit: 37b045c67659c078f1517d0fbd5282dab58dca23
+;; Package-Commit: 3cc5dcb87104f3b4320a6d7fa20fa7340e6b7026
 ;; URL: https://github.com/kiyoka/pastehub
 ;;
 ;; This file is part of PasteHub.el

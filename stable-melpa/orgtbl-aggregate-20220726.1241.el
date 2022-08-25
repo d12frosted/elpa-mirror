@@ -14,7 +14,7 @@
 
 ;; Version: 1.0
 ;; Package-Version: 20220726.1241
-;; Package-Commit: cfdddd6700c7c0e8850aecfaae6f0bb4345ea5d0
+;; Package-Commit: 815c9f6aa89354a5720759616bcb1ff7ec52b21c
 ;; Keywords: org, table, aggregation, filtering
 
 ;; orgtbl-aggregate is free software: you can redistribute it and/or modify

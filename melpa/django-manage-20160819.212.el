@@ -5,7 +5,7 @@
 ;; Author: Daniel Gopar <gopardaniel@yahoo.com>
 ;; Package-Requires: ((hydra "0.13.2"))
 ;; Package-Version: 20160819.212
-;; Package-Commit: 876fb2cb627d465adfdc905841279784bcdd7ee8
+;; Package-Commit: e72b1cf2fdbb5c624d19169176e60467b4918fe2
 ;; Version: 0.1
 ;; Keywords: languages
 

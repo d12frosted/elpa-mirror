@@ -5,7 +5,7 @@
 ;; Author: Simon Friis Vindum <simon@vindum.io>
 ;; Keywords: lisp
 ;; Package-Version: 20160322.1839
-;; Package-Commit: 17ddbd83205818763e6d68aa7a1aa9aaf414cbd4
+;; Package-Commit: ad4e0de29115dc010733b9060d3dab02836b15e1
 ;; Version: 0.0.1
 
 ;; This program is free software; you can redistribute it and/or modify

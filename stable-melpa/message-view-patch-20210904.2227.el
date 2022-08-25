@@ -6,7 +6,7 @@
 ;; Author: Sean Farley
 ;; URL: https://github.com/seanfarley/message-view-patch
 ;; Package-Version: 20210904.2227
-;; Package-Commit: 40bc2e554fc1d0b6f0c403192c0a3ceaa019a78d
+;; Package-Commit: 50dd3d92a1794f24b7e375b74e5199c63b54a2d8
 ;; Version: 0.2.0
 ;; Created: 2018-06-15
 ;; Package-Requires: ((emacs "24.4") (magit "3.0.0"))

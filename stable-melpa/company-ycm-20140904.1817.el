@@ -5,7 +5,7 @@
 ;; Author: Ajay Gopinathan <ajay@gopinathan.net>
 ;; Keywords: abbrev
 ;; Package-Version: 20140904.1817
-;; Package-Commit: 4da8a14abcd0f4fa3235042ade2e12b5068c0601
+;; Package-Commit: b2cb611503cf8d256fa19fc76362d7d5d9449d01
 ;; Package-Requires: ((ycm "0.1"))
 
 ;; This program is free software; you can redistribute it and/or modify

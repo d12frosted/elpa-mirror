@@ -3,7 +3,7 @@
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; URL: https://github.com/nlamirault/emacs-markdownfmt
 ;; Package-Version: 20160609.1241
-;; Package-Commit: 187a74eb4fd9e8520ce08da42d1d292b9af7f2b7
+;; Package-Commit: af83cd00fafcaa837ffdb50d1fa2b0ac952f16c0
 ;; Version: 0.1.0
 ;; Keywords: markdown
 

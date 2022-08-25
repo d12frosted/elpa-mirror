@@ -5,7 +5,7 @@
 ;; Author: Torgeir Thoresen <@torgeir>
 ;; Version: 1.1.0
 ;; Package-Version: 20190921.942
-;; Package-Commit: 29b1b3c441f0d7e450a3c65b5ff9e72023dc6314
+;; Package-Commit: 1df8583fafadf8c8c5ceb2aecaa815a2a4152686
 ;; Keywords: helm js codemod region
 ;; Package-Requires: ((emacs "24.4") (helm-core "1.9.8") (js-codemod "1.0.0"))
 

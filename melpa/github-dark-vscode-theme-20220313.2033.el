@@ -5,7 +5,7 @@
 ;; Author: Justintime50
 ;; Keywords: faces
 ;; Package-Version: 20220313.2033
-;; Package-Commit: 785d2192d7cd30fb7d9c6cd660133a4002f598cc
+;; Package-Commit: 0f0f0b52ee55a5c9305ebf5abb7bcf480f98db0a
 ;; Homepage: https://github.com/justintime50/github-dark-vscode-emacs-theme
 ;; License: MIT
 ;; Version: 0.3.1

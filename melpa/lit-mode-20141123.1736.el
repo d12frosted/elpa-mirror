@@ -5,7 +5,7 @@
 ;; Author: Hector A Escobedo <ninjahector.escobedo@gmail.com>
 ;; Keywords: languages, tools
 ;; Package-Version: 20141123.1736
-;; Package-Commit: c61c403afc8333a5649c5421ab1a6341dc1c7d92
+;; Package-Commit: bfecbe898223393f34340ca379977be753ee497a
 ;; Version: 0.1.1
 
 ;; This program is free software; you can redistribute it and/or modify

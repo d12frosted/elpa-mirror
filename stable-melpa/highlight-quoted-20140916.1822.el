@@ -3,7 +3,7 @@
 ;; Author: Fanael Linithien <fanael4@gmail.com>
 ;; URL: https://github.com/Fanael/highlight-quoted
 ;; Package-Version: 20140916.1822
-;; Package-Commit: 24103478158cd19fbcfb4339a3f1fa1f054f1469
+;; Package-Commit: ec9108486cf7f21f9a0b13f81369849b3b525f1f
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24"))
 

@@ -6,7 +6,7 @@
 ;; Maintainer: Matúš Goljer <matus.goljer@gmail.com>
 ;; Version: 0.0.1
 ;; Package-Version: 20170304.1615
-;; Package-Commit: f512e509dd690f65133e55563ebbfd2dede5034f
+;; Package-Commit: b135d95b158048927f12184e5cfb8fe01fc44713
 ;; Created:  4th March 2017
 ;; Package-requires: ()
 ;; Keywords: languages

@@ -5,7 +5,7 @@
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.2.2
 ;; Package-Version: 20200810.1050
-;; Package-Commit: a6b284f65b229d9b118b4316c2f6377de93400b1
+;; Package-Commit: b6a27379bc40fd6530a84afc50b3f41cd488e0c9
 ;; Package-Requires: ((emacs "25.1") (ivy "0.13") (dash "2.12"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/ivy-omni-org

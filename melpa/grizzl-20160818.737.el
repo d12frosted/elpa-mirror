@@ -7,7 +7,7 @@
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL:        https://github.com/grizzl/grizzl
 ;; Package-Version: 20160818.737
-;; Package-Commit: 1e917253ce2b846f0272b8356fad3dbff9cd513a
+;; Package-Commit: d554d93afa8519ee3a41340ec8aa6b4555065446
 ;; Version:    0.1.2
 ;; Keywords:   convenience, usability
 ;; Package-Requires: ((cl-lib "0.5") (emacs "24.3"))

@@ -5,7 +5,7 @@
 ;; Git: https://github.com/zwild/pcmpl-pip.git
 ;; Package-Requires: ((s "1.12.0") (f "0.19.0") (seq "2.15"))
 ;; Package-Version: 20181229.1420
-;; Package-Commit: bc79228674ad5c1bc458c90dd8839790fb0a09e8
+;; Package-Commit: ebb672d4494f876f611639e65df4e28e566c06b5
 ;; Version: 0.5
 ;; Created: 2014-09-10
 ;; Time-stamp: <2017-12-01 16:08>

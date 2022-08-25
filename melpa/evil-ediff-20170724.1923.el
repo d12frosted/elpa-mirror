@@ -5,7 +5,7 @@
 ;; Author: Justin Burkett <justin@burkett.cc>
 ;; Package-Requires: ((evil "1.2.3"))
 ;; Package-Version: 20170724.1923
-;; Package-Commit: 50d26cb0654fca8f8fd7227410e5cbf0b8f681cf
+;; Package-Commit: 67b0e69f65c196eff5b39dacb7a9ec05bb919c74
 ;; Homepage: https://github.com/justbur/evil-ediff
 ;; Version: 0
 

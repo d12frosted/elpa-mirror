@@ -5,7 +5,7 @@
 ;; Author:  Afonso Bordado <afonsobordado@az8.co>
 ;; Version: 0.1
 ;; Package-Version: 20161009.1755
-;; Package-Commit: 7a6fe71125a26ed1c492dab77cc688a7fe1d68ac
+;; Package-Commit: d1962858734253eca791721ccf62d1c4a10719f5
 ;; URL: http://github.com/afonso360/build-helper
 ;; Keywords: convenience
 ;; Package-Requires: ((projectile "0.9.0"))

@@ -6,7 +6,7 @@
 ;; Homepage: https://codeberg.org/martianh/lingva.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Package-Version: 20220623.954
-;; Package-Commit: 2032ffdcace23cca0a2ad4345352c20c1580be9e
+;; Package-Commit: 39994a57b1d6d4d7e0f5df6b98a3e28b2073ddb7
 ;; Version: 0.2
 ;; Keywords: convenience, translation, wp, text
 

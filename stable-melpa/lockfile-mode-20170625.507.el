@@ -3,7 +3,7 @@
 ;; Author: Preetpal S. Sohal
 ;; URL: https://github.com/preetpalS/emacs-lockfile-mode
 ;; Package-Version: 20170625.507
-;; Package-Commit: fcfef88460cb3cd67c4d83a1801d0326d282feac
+;; Package-Commit: 496b6035716df0582f879f9488f296947cabead2
 ;; Version: 0.1.0
 ;; License: GNU General Public License Version 3
 

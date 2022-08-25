@@ -6,7 +6,7 @@
 ;; Modified: 2020-05-10
 ;; Version: 2.1
 ;; Package-Version: 20200516.2054
-;; Package-Commit: be87248435509f83c56a7f08ac9bcbbd3b20d780
+;; Package-Commit: aea33aed864dca2866ae951161d15de0b2366e99
 ;; Author: xristos <xristos@sdf.org>
 ;; URL: https://github.com/atomontage/erc-crypt
 ;; Package-Requires: ((cl-lib "0.5"))

@@ -3,7 +3,7 @@
 ;; Author: Wanderson Ferreira <iagwanderson@gmail.com>
 ;; URL: https://github.com/wandersoncferreira/cljr-ivy
 ;; Package-Version: 20200602.1607
-;; Package-Commit: 921ba65d0db7cda4edcd690c708946125b874a70
+;; Package-Commit: 18e6e3526e872010a643c91aa71ff1d429431b83
 ;; Package-Requires: ((clj-refactor "2.5.0") (ivy "0.13.0") (emacs "24.3") (cl-lib "0.6.1"))
 ;; Version: 0.1
 ;; Keywords: convenience, matching

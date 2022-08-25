@@ -6,7 +6,7 @@
 ;; Homepage: http://github.com/rolandwalker/fixmee
 ;; URL: http://raw.githubusercontent.com/rolandwalker/fixmee/master/fixmee.el
 ;; Package-Version: 20150223.1355
-;; Package-Commit: 5cddb64e0d52635e9a1529d80cb5cefa6f829341
+;; Package-Commit: 1b8b3460f1e3c3c1784b2a63fb9f4fb3bb4dc084
 ;; Version: 0.8.6
 ;; Last-Updated: 23 Feb 2015
 ;; EmacsWiki: FixmeeMode

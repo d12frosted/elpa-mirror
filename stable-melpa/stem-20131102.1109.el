@@ -4,7 +4,7 @@
 ;;; Author: Tsuchiya Masatoshi <tsuchiya@pine.kuee.kyoto-u.ac.jp>
 ;; URL: https://github.com/yuutayamada/stem
 ;; Package-Version: 20131102.1109
-;; Package-Commit: d74e6611d6ba5025e0276a2cc7c8a90f46bfa9ac
+;; Package-Commit: dd704c3447bd5d3f5ac0a4840f8987d4f855d87e
 ;; Keywords: stemming
 
 ;;; License:

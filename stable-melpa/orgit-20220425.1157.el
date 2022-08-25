@@ -5,7 +5,7 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/magit/orgit
 ;; Keywords: hypermedia vc
-;; Package-Commit: b33b916915db5f91d2c9da4cb1a2457ccbb09332
+;; Package-Commit: 6dc4d4bfffd6c11550952203a51346b13e120165
 
 ;; Package-Version: 20220425.1157
 ;; Package-X-Original-Version: 1.8.0-git

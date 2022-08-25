@@ -5,7 +5,7 @@
 ;; Author: Manuel Uberti <manuel.uberti@inventati.org>
 ;; URL: https://github.com/manuel-uberti/slow-keys
 ;; Package-Version: 20220807.1425
-;; Package-Commit: ec69a853a40bc5650c1b30cd866acb16e0a2dd8a
+;; Package-Commit: b951ae4bdcea56ced03f227b82b28c3d91d15e61
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: convenience

@@ -6,7 +6,7 @@
 ;; Maintainer: David Chkhikvadze <david.chk@outlook.com>
 ;; Version: 0.0.1
 ;; Package-Version: 20160113.1752
-;; Package-Commit: d136fa09a152b3cd80db6d55c7b4ddfe07b90fbf
+;; Package-Commit: d19828122cf3322bcf50601cefa4ac385d2d8f82
 ;; Created: 29th December 2015
 ;; Keywords: calendar
 

@@ -8,7 +8,7 @@
 ;; Maintainer: Aaron Culich <aculich@gmail.com>
 ;; Version: 1.2.1
 ;; Package-Version: 20140220.2301
-;; Package-Commit: 276c0f4d6493b402dc4d22ecdf17b2b072e911b3
+;; Package-Commit: cc82856b6316d5e78073de717f0d5d1a4ee35fa6
 ;; Created: September 2010
 ;; Updated: September 2014
 ;; Keywords: python virtualenv

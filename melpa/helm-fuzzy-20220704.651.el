@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/helm-fuzzy
 ;; Package-Version: 20220704.651
-;; Package-Commit: a716d266f0042aa2164d51f82aa76932119748fe
+;; Package-Commit: f04b0023534e41c1399b74de393e6915a5f95ba5
 ;; Version: 0.1.6
 ;; Package-Requires: ((emacs "24.4") (helm "1.7.9") (flx "0.5"))
 ;; Keywords: matching fuzzy helm source

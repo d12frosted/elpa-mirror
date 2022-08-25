@@ -4,7 +4,7 @@
 ;; Maintainer: Vidianos Giannitsis <vidianosgiannitsis@gmail.com>
 ;; URL: https://github.com/Vidianos-Giannitsis/zetteldesk-ref.el
 ;; Package-Version: 20220619.2028
-;; Package-Commit: b9367a738628dbb569ab878b65240a567eadaaf6
+;; Package-Commit: cac8fb90596d7d2573ef42e2a4a7de0cf49107b9
 ;; Package-Requires: ((zetteldesk "1.0") (bibtex-completion "1.0") (emacs "26.1"))
 ;; Created: 27th March 2022
 ;; License: GPL-3.0

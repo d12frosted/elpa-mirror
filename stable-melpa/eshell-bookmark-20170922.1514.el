@@ -6,7 +6,7 @@
 ;; Maintainer: Matúš Goljer <matus.goljer@gmail.com>
 ;; Version: 2.0.0
 ;; Package-Version: 20170922.1514
-;; Package-Commit: 99a491c77e27ecc4626bdd4ad453ac71aa2654d4
+;; Package-Commit: deda4b848b2fb979dbe73ead2cb866610e3596ed
 ;; Created:  6th September 2017
 ;; Package-requires: ((emacs "24.3"))
 ;; Keywords: convenience, files

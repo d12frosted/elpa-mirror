@@ -9,7 +9,7 @@
 ;; Created: Thu Jul 20 11:56:23 2017 (-0700)
 ;; Version: 3.0
 ;; Package-Version: 20210527.2320
-;; Package-Commit: 0f43fe46d4ab098c18a90b9df18cb96bab8e4a35
+;; Package-Commit: 41f4547339927aec16ede71d1bff7837f5ff49ed
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/DarwinAwardWinner/with-simulated-input
 ;; Keywords: lisp, tools, extensions

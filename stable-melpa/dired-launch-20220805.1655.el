@@ -4,7 +4,7 @@
 ;; Author: David Thompson
 ;; Version: 0.2
 ;; Package-Version: 20220805.1655
-;; Package-Commit: e7877700144cf4abb5f5482eea7fde9b749cfc57
+;; Package-Commit: b00c084c705311a40b19b624be9d301c9e92b3d9
 ;; Keywords: dired, launch
 ;; URL: https://github.com/thomp/dired-launch
 ;; Package-Requires: ((emacs "24.3"))

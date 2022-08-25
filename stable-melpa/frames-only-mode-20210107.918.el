@@ -5,7 +5,7 @@
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 1.0.0
 ;; Package-Version: 20210107.918
-;; Package-Commit: d3f6647c484656ddabdac5d18546599a03823cd4
+;; Package-Commit: 27a5116f36af14df39b92ee2ea1f8583f22484cf
 ;; Package-Requires: ((emacs "24.4") (dash "2.13.0") (s "1.11.0"))
 ;; Keywords: frames, windows
 ;; URL: https://github.com/davidshepherd7/frames-only-mode

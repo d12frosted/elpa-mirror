@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/non/uxntal-mode
 ;; Version: 0.2
 ;; Package-Version: 20220502.154
-;; Package-Commit: 39cde87b15a98e0612e30b80e0676211236ac3e7
+;; Package-Commit: 3fa793964f287d448e3e2b53fd812803c5f5890e
 ;; Package-Requires: ((emacs "27.1"))
 ;; SPDX-License-Identifier: Apache-2.0
 

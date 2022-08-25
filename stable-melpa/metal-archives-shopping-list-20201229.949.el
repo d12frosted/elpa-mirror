@@ -7,7 +7,7 @@
 
 ;; Package-Requires: ((emacs "26.3") (org-ml "5.5.2") (alert "1.2") (ht "2.3") (metal-archives "0.1"))
 ;; Package-Version: 20201229.949
-;; Package-Commit: a218d63b990365edeef6a2394f72d1f2286aeeae
+;; Package-Commit: a7602a32e7fd3c7779bc5b5c5e398ea31713ee45
 ;; Keywords: org, calendar
 ;; Version: 0.1
 ;; Homepage: https://github.com/seblemaguer/metal-archives.el

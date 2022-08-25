@@ -24,7 +24,7 @@
 ;; Created: 10 July 2014
 ;; Keywords: games
 ;; Package-Version: 20171023.1004
-;; Package-Commit: 27f3e21acb22f786606481e3f4e5dc1edbaaaed4
+;; Package-Commit: fac0011983251d5c44f4ed1eacac03f5de3caac4
 ;; Version: 0.1.0
 ;; URL: https://github.com/taksatou/flappymacs
 

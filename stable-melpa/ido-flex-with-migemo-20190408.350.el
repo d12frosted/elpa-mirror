@@ -6,7 +6,7 @@
 
 ;; Version: 0.0.0
 ;; Package-Version: 20190408.350
-;; Package-Commit: da64f2fe3849492d35e155d81a817308a4853473
+;; Package-Commit: aa93aa05947eb6c106bb9523ff3163b8574c4eac
 
 ;; URL: https://github.com/ROCKTAKEY/ido-flex-with-migemo
 

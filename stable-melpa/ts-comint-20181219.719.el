@@ -8,7 +8,7 @@
 ;;; Created: 28 September 2016
 ;;; Version: 0.0.1
 ;; Package-Version: 20181219.719
-;; Package-Commit: 786b88fffc553e122868a1c4883f14136a040df6
+;; Package-Commit: b280cfe9fe5ecec9d5970043b6b2866f644b39ad
 ;;; URL: https://github.com/josteink/ts-comint
 ;;; Package-Requires: ()
 ;;; Keywords: typescript, node, inferior-mode, convenience

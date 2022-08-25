@@ -5,8 +5,6 @@
 
 ;; Author: Erik Sjöstrand
 ;; URL: http://github.com/Kungsgeten/yankpad
-;; Package-Version: 20220201.2104
-;; Package-Commit: 927e6d26956ac7219b8a69d641acf486854fba16
 ;; Version: 2.30
 ;; Keywords: abbrev convenience
 ;; Package-Requires: ((emacs "25.1"))

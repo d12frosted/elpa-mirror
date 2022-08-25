@@ -6,7 +6,7 @@
 ;; Maintainer: Glynn Forrest <me@glynnforrest.com>
 ;; URL: https://github.com/glynnforrest/salt-mode
 ;; Package-Version: 20200210.1200
-;; Package-Commit: c46b24e7fdf4a46df5507dc9c533bbc0064a46fa
+;; Package-Commit: e76e78d93e4770d42bdde9367a11d0e0836a21c9
 ;; Keywords: languages
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "24.4") (yaml-mode "0.0.12") (mmm-mode "0.5.4") (mmm-jinja2 "0.1"))

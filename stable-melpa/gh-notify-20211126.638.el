@@ -8,7 +8,7 @@
 ;; Modified: 2021-11-26
 ;; Version: 0.1.0
 ;; Package-Version: 20211126.638
-;; Package-Commit: aa4d8bc0c56366d437e7c126e7eedc5938109342
+;; Package-Commit: 8937f64092ea3b7e2cea2d61c12fde8e0f5e7917
 ;; Author: Bas Alberts <bas@anti.computer>
 ;;         xristos <xristos@sdf.org>
 ;;

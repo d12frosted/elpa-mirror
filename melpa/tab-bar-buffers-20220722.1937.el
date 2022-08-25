@@ -3,7 +3,7 @@
 ;; Author: Andy Rosen <ajr@corp.mlfs.org>
 ;; URL: https://github.com/ajrosen/tab-bar-buffers
 ;; Package-Version: 20220722.1937
-;; Package-Commit: 243a55685a2000a2cbe9d49d04bf9efa8cda210b
+;; Package-Commit: 6d196d4b853c5355403da86607dfb31a038cc024
 ;; Version: 20220722.1535
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: convenience, frames

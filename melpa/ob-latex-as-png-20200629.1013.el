@@ -5,7 +5,7 @@
 ;; Author: Musa Al-hassy <alhassy@gmail.com>
 ;; Version: 1.0
 ;; Package-Version: 20200629.1013
-;; Package-Commit: a20e3fedbac4034de4ab01436673a0f8845de1df
+;; Package-Commit: b0c68bdb54741fbee1068654e4eba1962241f271
 ;; Package-Requires: ((emacs "26.1") (org "9.1"))
 ;; Keywords: literate programming, reproducible research, org, convenience
 ;; URL: https://github.com/alhassy/ob-latex-as-png

@@ -5,7 +5,7 @@
 ;; Author: Alexander Kahl <ak@sodosopa.io>
 ;; Version: 1.0.0
 ;; Package-Version: 20180726.800
-;; Package-Commit: e3c0de4a2e06757a0e8407c3c6e75930026191e3
+;; Package-Commit: 7ad2bb36426fd182d4d5ee7fd9be1cc0db8c7a84
 ;; Package-Requires: ((emacs "24") (dash "2.12.1") (cl-lib "0.5"))
 ;; Keywords: convenience, tools
 ;; URL: https://github.com/lshift-de/contextual

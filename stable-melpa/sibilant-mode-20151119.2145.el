@@ -6,7 +6,7 @@
 ;; Created: Feb 9, 2011
 ;; Keywords: languages
 ;; Package-Version: 20151119.2145
-;; Package-Commit: bc1b5d8cd597918bafc9b2880ee49024740e54ab
+;; Package-Commit: 5baf8c3e80ee0736c7298a2a17fb615ba5ac0d2d
 ;; Homepage: http://sibilantjs.info
 
 ;; This file is not part of GNU Emacs.

@@ -6,7 +6,7 @@
 ;; Homepage: http://github.com/rolandwalker/unicode-whitespace
 ;; URL: http://raw.githubusercontent.com/rolandwalker/unicode-whitespace/master/unicode-whitespace.el
 ;; Package-Version: 20140508.2041
-;; Package-Commit: a18c6b38d78b94f2eb1dcc4cb4fa91b6a17efabe
+;; Package-Commit: b0cbfe4f9998a2c1eb4cba031efcb785ef518916
 ;; Version: 0.2.4
 ;; Last-Updated:  6 Nov 2013
 ;; EmacsWiki: UnicodeWhitespace

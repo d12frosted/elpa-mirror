@@ -5,7 +5,7 @@
 ;; Author: Love Lagerkvist
 ;; URL: https://github.com/motform/arduino-cli-mode
 ;; Package-Version: 20210511.653
-;; Package-Commit: 603f9f4d7d9cb37b005b8f10e5105636dc559217
+;; Package-Commit: 9ff2c47a3b56cbffd41a62376f7c2ff16ccbf4e0
 ;; Version: 201001
 ;; Package-Requires: ((emacs "25.1"))
 ;; Created: 2019-11-16

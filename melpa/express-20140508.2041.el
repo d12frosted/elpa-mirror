@@ -6,7 +6,7 @@
 ;; Homepage: http://github.com/rolandwalker/express
 ;; URL: http://raw.githubusercontent.com/rolandwalker/express/master/express.el
 ;; Package-Version: 20140508.2041
-;; Package-Commit: 93dae7377eace4a5413ba99aecb6f26f90798725
+;; Package-Commit: 6c301e8a4b6b58a5fe59ba607865238e38cee8fd
 ;; Version: 0.6.0
 ;; Last-Updated: 23 Oct 2013
 ;; EmacsWiki: Express

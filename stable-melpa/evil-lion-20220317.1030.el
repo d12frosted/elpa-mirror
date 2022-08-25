@@ -5,7 +5,7 @@
 ;; Author: edkolev <evgenysw@gmail.com>
 ;; URL: http://github.com/edkolev/evil-lion
 ;; Package-Version: 20220317.1030
-;; Package-Commit: a55eb647422342f6b1cf867f797b060b3645d9d8
+;; Package-Commit: 4da660e124731ed65e7aaa6c067c30e876619429
 ;; Package-Requires: ((emacs "24.3") (evil "1.0.0"))
 ;; Version: 0.0.2
 ;; Keywords: emulations, evil, vim

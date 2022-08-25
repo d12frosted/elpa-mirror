@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/xuchunyang/bencoding.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Package-Version: 20200331.1102
-;; Package-Commit: 1e16ccfd5c6560a83ae2926afe4a5076a541d3d6
+;; Package-Commit: 409836f2cf4883826600de42519ee9cffeb48a11
 ;; Version: 0
 ;; Keywords: tools
 

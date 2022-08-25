@@ -5,7 +5,7 @@
 ;; Author:            Adam Sokolnicki <adam.sokolnicki@gmail.com>
 ;; URL:               https://github.com/asok/projectile-rails
 ;; Package-Version: 20220403.1621
-;; Package-Commit: 2a0107e83d8320507e288c853e0762bec110cd15
+;; Package-Commit: f7877971cfe266d3d91b3a72012855e12a0112df
 ;; Version:           0.22.0
 ;; Keywords:          rails, projectile
 ;; Package-Requires:  ((emacs "25.1") (projectile "0.12.0") (inflections "1.1") (inf-ruby "2.2.6") (f "0.13.0") (rake "0.3.2") (dash "2.18.1"))

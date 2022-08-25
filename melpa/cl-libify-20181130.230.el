@@ -4,7 +4,7 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: lisp
-;; Package-Commit: f215866d7d7c52e84220cd541f40608a5b85abf0
+;; Package-Commit: e205b96f944a4f312fd523804cbbaf00027a3c8b
 ;; Homepage: https://github.com/purcell/cl-libify
 ;; Package-Requires: ((emacs "25"))
 ;; Package-Version: 20181130.230

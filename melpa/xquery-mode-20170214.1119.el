@@ -9,7 +9,7 @@
 ;;   Artem Malyshev <proofit404@gmail.com>
 ;; URL: https://github.com/xquery-mode/xquery-mode
 ;; Package-Version: 20170214.1119
-;; Package-Commit: 1b655ccf83d02a7bd473d2cf02359ed60bdf7369
+;; Package-Commit: 19e6f9553ce05380843582b879712de00679e4ab
 ;; Version: 0.1.0
 ;; Package-Requires: ((cl-lib "0.5"))
 

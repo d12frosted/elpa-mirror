@@ -6,7 +6,7 @@
 ;; Author: Sanel Zukan <sanelz@gmail.com>
 ;; URL: http://www.github.com/sanel/declutter
 ;; Package-Version: 20220310.2101
-;; Package-Commit: 8ac50a64dc3a12440d98bc1556b5c7727fdf51ed
+;; Package-Commit: 0b2ca86fa716dfc2fb3bc3425019f049dd65eda2
 ;; Version: 0.2.0
 ;; Keywords: html, hypermedia, terminals
 ;; Package-Requires: ((emacs "25.1"))

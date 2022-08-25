@@ -6,7 +6,7 @@
 ;; Authors: Tom Tromey <tromey@redhat.com>, Eric Schulte <schulte.eric@gmail.com>, Lee Hinman <lee@writequit.org>
 ;; URL: https://github.com/dakrone/epresent
 ;; Package-Version: 20160411.201
-;; Package-Commit: 6c8abedcf46ff08091fa2bba52eb905c6290057d
+;; Package-Commit: bc3443879bb0111dcde2abd2f9c578e2cd438186
 ;; Created: 12 Jun 2008
 ;; Version: 1.0.0
 ;; Keywords: gui

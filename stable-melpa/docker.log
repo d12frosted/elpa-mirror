@@ -4,11 +4,10 @@ Source:  https://github.com/Silex/docker.el.git
 
 Updating /mnt/store/melpa/working/docker/
 Checking out origin/HEAD
-Checking out 8d0429d6bd7f7a74cd58b00ac26a0c9148706124
-Checking out 8d0429d6bd7f7a74cd58b00ac26a0c9148706124
+Checking out c74d87818b8b8c6f925ed2cbda941157b06ebaad
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker/
-  to /tmp/dockers605rk/docker-20220629.527
+  to /tmp/dockerksJLjw/docker-20220629.527
     docker-compose.el -> docker-compose.el
     docker-container.el -> docker-container.el
     docker-core.el -> docker-core.el
@@ -34,7 +33,7 @@ Created docker-20220629.527.tar containing:
   docker-20220629.527/docker-utils.el
   docker-20220629.527/docker-volume.el
   docker-20220629.527/docker.el
-Built docker in 7.389s, finished at 2022-08-25T15:01:59+0000
+Built docker in 10.287s, finished at 2022-08-25T18:51:48+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  505 Aug 25 15:01 packages/docker-20220629.527.entry
-100K -rw-r--r-- 1 root root 100K Aug 25 15:01 packages/docker-20220629.527.tar
+4.0K -rw-r--r-- 1 root root  505 Aug 25 18:51 packages/docker-20220629.527.entry
+100K -rw-r--r-- 1 root root 100K Aug 25 18:51 packages/docker-20220629.527.tar

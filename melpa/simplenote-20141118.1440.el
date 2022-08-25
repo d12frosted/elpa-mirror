@@ -5,7 +5,7 @@
 ;; Author: Konstantinos Efstathiou <konstantinos@efstathiou.gr>
 ;; Keywords: simplenote
 ;; Package-Version: 20141118.1440
-;; Package-Commit: e836fcdb5a6497a9ffd6bceddd19b4bc52189078
+;; Package-Commit: 734603e877b2d642162ca45f799d2f7b956d2ea0
 ;; Version: 1.0
 
 ;; This program is free software; you can redistribute it and/or modify it under

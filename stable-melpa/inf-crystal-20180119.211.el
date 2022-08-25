@@ -4,7 +4,7 @@
 
 ;; Author: Brantou <brantou89@gmail.com>
 ;; URL: https://github.com/brantou/inf-crystal.el
-;; Package-Commit: 02007b2a2a3bea44902d7c83c4acba1e39d278e3
+;; Package-Commit: dd5c85e621976ea09b602182a15396e3b510ec63
 ;; Package-Version: 20180119.211
 ;; Package-X-Original-Version: 20180105.1610
 ;; Keywords: languages crystal

@@ -5,7 +5,7 @@
 ;; Author: John Buckley <john@olivetoast.com>
 ;; URL: https://github.com/nhojb/flycheck-swiftx
 ;; Package-Version: 20200814.845
-;; Package-Commit: 84f42393dea362d3bdfc9253a205a17ec7a12a76
+;; Package-Commit: 4d0c8ca0540b06fb947a83f1a38a6003a5abe0d4
 ;; Version: 1.0.2
 ;; Keywords: convenience, languages, tools
 ;; Package-Requires: ((emacs "26.1") (flycheck "26") (xcode-project "1.0"))

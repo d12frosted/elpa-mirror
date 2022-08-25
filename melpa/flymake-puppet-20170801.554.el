@@ -5,7 +5,7 @@
 ;; Author: Ben Prew
 ;; URL: https://github.com/benprew/flymake-puppet
 ;; Package-Version: 20170801.554
-;; Package-Commit: 8a772395f4ccc59d883712ab53a92a17c1d9a429
+;; Package-Commit: 9579e5c736cb890195464fabf51df113313de88d
 ;; Version: 1.0.0
 ;; Package-Requires: ((flymake-easy "0.9"))
 

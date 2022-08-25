@@ -6,7 +6,7 @@
 ;; Created: 2016/06/13
 ;; Version: 0.42
 ;; Package-Version: 20160625.1050
-;; Package-Commit: 0062f326106ce8be3c9b7d3fa0e88ed2c7bbfa5e
+;; Package-Commit: 770ffb34b04bfa0ea8484fa1506e96c530168e13
 ;; Keywords: document, proofreading, help
 ;; X-URL: https://github.com/karronoli/redpen-paragraph.el
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5") (json "1.4"))

@@ -1,7 +1,7 @@
 ;;; plain-theme.el --- Plain theme without syntax highlighting
 
 ;; Package-Requires: ((emacs "24"))
-;; Package-Commit: 48b37b9b19d8f1e0accbf930f30b5346cf7959fe
+;; Package-Commit: 2609a811335d58cfb73a65d6307c156fe09037d3
 ;; Package-Version: 20171124.410
 ;; Package-X-Original-Version: 8
 

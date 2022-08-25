@@ -3,7 +3,7 @@
 ;; Author: Álvaro González Sotillo <alvarogonzalezsotillo@gmail.com>
 ;; URL: https://github.com/alvarogonzalezsotillo/region-occurrences-highlighter
 ;; Package-Version: 20200815.1555
-;; Package-Commit: 07e2201db7a88b246a63e868e711749e1465d3d6
+;; Package-Commit: 51e4c51e6078ebf0681e65f7dea4f328f0c91cfe
 ;; Package-Requires: ((emacs "24"))
 ;; Version: 1.3
 ;; Keywords: convenience

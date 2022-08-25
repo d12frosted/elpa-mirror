@@ -4,7 +4,7 @@
 ;; Maintainer: SpringHan
 ;; Version: 1.0
 ;; Package-Version: 20210823.713
-;; Package-Commit: 38da548225f51ca7bca22d3e9b0de78e3b9e6cdd
+;; Package-Commit: 944cdc01049f7e4b563675495f4d27cb018ca2f0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Homepage: https://github.com/SpringHan/minibuffer-modifier-keys.git
 ;; Keywords: tools

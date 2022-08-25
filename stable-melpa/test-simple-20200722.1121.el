@@ -6,7 +6,7 @@
 ;; Author: Rocky Bernstein <rocky@gnu.org>
 ;; URL: https://github.com/rocky/emacs-test-simple
 ;; Package-Version: 20200722.1121
-;; Package-Commit: ce6de04636e8d19ec84a475c03c0142b20a63de0
+;; Package-Commit: 29c2c1ca7c240c8dfdba93dba6201e542a5a3b43
 ;; Keywords: unit-test
 ;; Package-Requires: ((cl-lib "0"))
 ;; Version: 1.3.0

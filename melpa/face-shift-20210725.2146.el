@@ -3,7 +3,7 @@
 ;; Author: Philip Kaludercic <philipk@posteo.net>
 ;; Version: 0.2.0
 ;; Package-Version: 20210725.2146
-;; Package-Commit: 14dce79fc42116c49eb4c8a4ab7ca3c4bd7cbf6f
+;; Package-Commit: c214be3398a7671c6ea975f97740abdd38e910ea
 ;; Keywords: faces
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL: https://git.sr.ht/~pkal/face-shift

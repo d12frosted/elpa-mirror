@@ -5,7 +5,7 @@
 ;; Author: Nikolaj Schumacher <bugs * nschum de>
 ;; Version: 1.0
 ;; Package-Version: 20130525.1434
-;; Package-Commit: 6074df10ebc97ddfcc228c71c73db179e672dac3
+;; Package-Commit: 26e397c0f930b7eb0be413ef7dd257b1da052bec
 ;; Keywords: tools
 ;; URL: http://nschum.de/src/emacs/test-case-mode/
 ;; Compatibility: GNU Emacs 22.x, GNU Emacs 23.x, GNU Emacs 24.x

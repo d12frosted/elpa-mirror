@@ -6,7 +6,7 @@
 ;; Maintainer: Jay Kamat <jaygkamat@gmail.com>
 ;; Version: 0.1.0
 ;; Package-Version: 20190608.2201
-;; Package-Commit: 181065e1f9ab4ec7096bafffe6818b0d7f5362b1
+;; Package-Commit: 587b39ea7a1d786df5c04796d51bf2a5a4eda0d7
 ;; Keywords: highlight, c
 ;; URL: http://gitlab.com/jgkamat/bpftrace-mode
 ;; Package-Requires: ((emacs "24.0"))

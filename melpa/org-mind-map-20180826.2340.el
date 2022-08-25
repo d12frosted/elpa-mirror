@@ -2,7 +2,7 @@
 ;; Author: Ted Wiles <theodore.wiles@gmail.com>
 ;; Keywords: orgmode, extensions, graphviz, dot
 ;; Package-Version: 20180826.2340
-;; Package-Commit: 95347b2f9291f5c5eb6ebac8e726c03634c61de3
+;; Package-Commit: 41df4b2e30455494f1848b4e06cc9208aa9e902b
 ;; Version: 0.4
 ;; URL: https://github.com/theodorewiles/org-mind-map
 ;; Package-Requires: ((emacs "24") (dash "1.8.0") (org "8.2.10"))

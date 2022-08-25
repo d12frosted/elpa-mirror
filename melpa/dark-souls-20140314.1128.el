@@ -5,7 +5,7 @@
 ;; Author: Tom Jakubowski <tom@crystae.net>
 ;; URL: http://github.com/tomjakubowski/dark-souls.el
 ;; Package-Version: 20140314.1128
-;; Package-Commit: 94122b1215423e58dcf18584a2bd022029d54d4b
+;; Package-Commit: 2c9437265b52f966b2fb13a410a12f3b1e167cb7
 ;; Version: 1.0
 ;; Keywords: games
 

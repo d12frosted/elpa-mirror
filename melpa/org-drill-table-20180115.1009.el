@@ -5,7 +5,7 @@
 ;; Author: Chris Barrett <chris.d.barrett@me.com>
 ;; Package-Requires: ((s "1.7.0") (dash "2.2.0") (cl-lib "0.3") (org "8.2") (emacs "24.1"))
 ;; Package-Version: 20180115.1009
-;; Package-Commit: 2729aaa42c1e2720d9bf7bcc125e92dcf48b7f7d
+;; Package-Commit: e4c4c1b0a17f51cb8de67eafe06a6bffc754f525
 ;; Version: 0.1.1
 
 ;; This file is not part of GNU Emacs.

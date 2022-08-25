@@ -5,7 +5,7 @@
 ;; Author: Quang Linh LE <linktohack@gmail.com>
 ;; URL: http://github.com/linktohack/evil-rsi
 ;; Package-Version: 20160221.2104
-;; Package-Commit: 65ae60866be494e4622fe383e23975e04d2a42a3
+;; Package-Commit: 236bf6ed1e2285698db808463e5f2f69f5f5e7c0
 ;; Version: 2.0.0
 ;; Keywords: evil rsi evil-rsi
 ;; Package-Requires: ((evil "1.0.0"))

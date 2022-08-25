@@ -3,7 +3,7 @@
 ;; Homepage: https://github.com/a13/iqa.el
 ;; Version: 0.0.1
 ;; Package-Version: 20200520.1137
-;; Package-Commit: c1077aca6553cb2011f21b178e10271a17fe4f58
+;; Package-Commit: 03f90a2f68b2f05d8a2509bf3612a337d3d5b67f
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This file is free software; you can redistribute it and/or modify

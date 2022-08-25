@@ -5,7 +5,7 @@
 ;; Author: Rocky Bernstein <rocky@gnu.org>
 ;; Version: 1.2
 ;; Package-Version: 20200722.1111
-;; Package-Commit: 0a55bcba684f78417e831eef2cc32da24a207f29
+;; Package-Commit: 2db42905675e1740305f9884613bc48582601b8a
 ;; URL: https://github.com/rocky/emacs-loc-changes
 ;; Compatibility: GNU Emacs 24.x
 

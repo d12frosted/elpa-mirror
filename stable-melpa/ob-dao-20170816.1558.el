@@ -5,7 +5,7 @@
 ;; Author: Chunyang Xu <mail@xuchunyang.me>
 ;; Package-Requires: ((org "8"))
 ;; Package-Version: 20170816.1558
-;; Package-Commit: fa92f62a63c684d689f57e790e5dd614c5bba270
+;; Package-Commit: 8c62bd800b1f572860e30be4b72c71fa415a2e31
 ;; Keywords: literate programming, reproducible research, org, babel, dao
 ;; URL: https://github.com/xuchunyang/ob-dao
 ;; Version: 0.1.0

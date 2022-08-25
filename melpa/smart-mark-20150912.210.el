@@ -5,7 +5,7 @@
 ;; Author: Kai Yu <yeannylam@gmail.com>
 ;; Keywords: mark, restore
 ;; Package-Version: 20150912.210
-;; Package-Commit: 04b522a23e3aae8381c6a976fc978532fcb2e7d0
+;; Package-Commit: d179cdc3f53001a5ce99d5095f493cdf3a792567
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

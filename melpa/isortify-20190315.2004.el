@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/proofit404/isortify
 ;; Version: 0.0.1
 ;; Package-Version: 20190315.2004
-;; Package-Commit: ae7fb7163ce075209543f72953c9f431d103f6a3
+;; Package-Commit: 4d8ecfcadf58ea51368e66ecf6f2a95a95953fcf
 ;; Package-Requires: ((emacs "25") (pythonic "0.1.0"))
 
 ;; This file is free software; you can redistribute it and/or modify

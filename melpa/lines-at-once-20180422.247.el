@@ -5,7 +5,7 @@
 ;; Author: Jiahao Li <jiahaowork@gmail.com>
 ;; Version: 0.1.0
 ;; Package-Version: 20180422.247
-;; Package-Commit: 31bce4b79fe16251b7cf118f0d343b0b46f72360
+;; Package-Commit: a018ba90549384d52ec58c2685fd14a0f65252be
 ;; Keywords: abbrev, tools
 ;; Homepage: https://github.com/jiahaowork/lines-at-once.el
 ;; Package-Requires: ((emacs "25"))

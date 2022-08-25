@@ -5,7 +5,7 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-zoom-window
 ;; Package-Version: 20201205.1038
-;; Package-Commit: 9b052ac33d4eafe724d0e37d3376926deba91676
+;; Package-Commit: 474ca4723517d95356145950b134652d5dc0c7f7
 ;; Version: 0.06
 ;; Package-Requires: ((emacs "24.3"))
 

@@ -5,7 +5,7 @@
 ;; Author: Cheung Hoi Yu <yeannylam@gmail.com>
 ;; Version: 0.0.1
 ;; Package-Version: 20150604.1138
-;; Package-Commit: 2a3fd16c992f7790dc67134ef06a814c3d20579c
+;; Package-Commit: 865ff97449a4cbbcb40d38b4908cf4d7b22a5108
 ;; Keywords: js, javascript, jasmine, coffee, coffeescript
 ;; Package-Requires: ((s "1.9") (f "0.17") (dash "2.10") (pcache "0.3") (emacs "24.4"))
 ;; URL: https://github.com/cheunghy/jst-mode

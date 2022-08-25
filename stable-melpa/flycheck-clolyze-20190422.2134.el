@@ -4,7 +4,7 @@
 ;;
 ;; URL: https://github.com/DLaps/flycheck-clolyze
 ;; Package-Version: 20190422.2134
-;; Package-Commit: c8b27602dd505aeae6486feb6f584754079baf51
+;; Package-Commit: 9a3300eac22a7ff96accf37fa2d761c13cc38020
 ;; Author: Daniel Laps <daniel.laps@hhu.de>
 ;; Version: 1.0.0
 ;; Package-Requires: ((flycheck "0.25") (emacs "24"))

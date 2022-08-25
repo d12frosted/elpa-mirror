@@ -5,7 +5,7 @@
 ;; Author: Andreas Jansson <andreas@jansson.me.uk>
 ;; URL: https://github.com/andreasjansson/language-detection.el
 ;; Package-Version: 20161123.1813
-;; Package-Commit: 54a6ecf55304fba7d215ef38a4ec96daff2f35a4
+;; Package-Commit: 38f5d294870678efc6ccf94ce6e8175a58f93025
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
 ;; Version: 0.1.0
 

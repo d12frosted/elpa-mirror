@@ -10,7 +10,7 @@
 ;; Author: Yuki Inoue <inouetakahiroki _at_ gmail.com>
 ;; URL: https://github.com/Yuki-Inoue/tblui.el
 ;; Package-Version: 20161007.1912
-;; Package-Commit: bb29323bb3e27093d50cb42db3a9329a096b6e4d
+;; Package-Commit: e280e11b35a2fdbcadf9ce901a2b62684ac7a7a3
 ;; Version: 0.1.0
 ;; Package-Requires: ((dash "2.12.1") (magit-popup "2.6.0") (tablist "0.70") (cl-lib "0.5"))
 

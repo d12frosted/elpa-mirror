@@ -5,7 +5,7 @@
 ;; Author: Takafumi Arakaki <aka.tkf at gmail.com>
 ;; Package-Requires: ((deferred "0.3.1"))
 ;; Package-Version: 20130210.140
-;; Package-Commit: 6503d77ea882c995b051d22e72db336fb28770fc
+;; Package-Commit: 38f78132ae311faffba98ed5dd18d661af68678e
 ;; Version: 0.0.1alpha0
 ;; URL: https://github.com/tkf/factlog
 

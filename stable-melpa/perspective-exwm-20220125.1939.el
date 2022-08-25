@@ -7,7 +7,7 @@
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.4
 ;; Package-Version: 20220125.1939
-;; Package-Commit: 8afdbf894a888854ce9dfbe0ad2a5dc41f75ecb8
+;; Package-Commit: 541946caa0359c14c90da58196bec7baed122a46
 ;; Package-Requires: ((emacs "27.1") (burly "0.2-pre") (exwm "0.26") (perspective "2.17"))
 ;; Homepage: https://github.com/SqrtMinusOne/perspective-exwm.el
 

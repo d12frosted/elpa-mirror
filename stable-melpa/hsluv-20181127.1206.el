@@ -4,7 +4,7 @@
 ;;
 ;; Version: 1.0.0
 ;; Package-Version: 20181127.1206
-;; Package-Commit: c3bc5228e30d66e7dee9ff1a0694c2b976862fc0
+;; Package-Commit: bc6e27d25b62f5a2f79836a32e8de6125f4d1564
 ;; Author: Geert Vermeiren
 ;; Keywords: color hsluv
 ;; URL: https://github.com/hsluv/hsluv-emacs

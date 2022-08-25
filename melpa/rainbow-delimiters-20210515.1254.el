@@ -9,7 +9,7 @@
 ;; Created: 2010-09-02
 ;; Version: 2.1.5
 ;; Package-Version: 20210515.1254
-;; Package-Commit: a32b39bdfe6c61c322c37226d66e1b6d4f107ed0
+;; Package-Commit: 7919681b0d883502155d5b26e791fec15da6aeca
 ;; Keywords: faces, convenience, lisp, tools
 ;; Homepage: https://github.com/Fanael/rainbow-delimiters
 

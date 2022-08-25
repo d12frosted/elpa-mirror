@@ -5,7 +5,7 @@
 ;; Author: Chenyun Yang <yangchenyun@gmail.com>
 ;; URL: https://github.com/yangchenyun/programmer-dvorak
 ;; Package-Version: 20150427.137
-;; Package-Commit: 3288a8f058eca4cab390a564babbbcb17cfa0350
+;; Package-Commit: c35d5e3b8b53c1e9341957b5d5db40387ba0c8ee
 ;; Version: 0.0.1
 ;; Keywords: dvorak programmer-dvorak input-method
 

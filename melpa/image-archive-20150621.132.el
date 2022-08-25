@@ -3,7 +3,7 @@
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: multimedia
 ;; Package-Version: 20150621.132
-;; Package-Commit: 8d29535bd832329ffeeac780aae7aa8919af1175
+;; Package-Commit: 4cf0edabfd6a4da2ffb920ff1e5009a002fc1e53
 ;; URL: https://github.com/mhayashi1120/Emacs-image-archive
 ;; Emacs: GNU Emacs 24 or later
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))

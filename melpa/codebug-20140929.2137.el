@@ -19,7 +19,7 @@
 ;; Author: Shane Dowling
 ;; URL: http://www.shanedowling.com/
 ;; Package-Version: 20140929.2137
-;; Package-Commit: ac0e4331ba94ccb5203fa492570e1ca6b90c3d52
+;; Package-Commit: d95e5182fa1465406964873d9db1fdac77206f5b
 ;; Version: 0.0.1
 
 ;;; Change Log:

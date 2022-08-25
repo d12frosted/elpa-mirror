@@ -3,7 +3,7 @@
 ;; Author: John Del Rosario <john2x@gmail.com>
 ;; URL: https://github.com/john2x/nameframe
 ;; Package-Version: 20170406.119
-;; Package-Commit: aafb8c5c5fbe0510e2f5d5b6b6b5dd0b73abe5d8
+;; Package-Commit: d14186e99fa800d293e8e3072ba26f383c6624c6
 ;; Version: 0.4.2-beta
 ;; Package-Requires: ((nameframe "0.4.1-beta") (perspective "1.12"))
 

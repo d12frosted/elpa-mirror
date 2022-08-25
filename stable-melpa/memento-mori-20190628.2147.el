@@ -3,7 +3,7 @@
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-memento-mori
 ;; Package-Version: 20190628.2147
-;; Package-Commit: b99c5ff526079fc5a1e1be097534855da176bc2b
+;; Package-Commit: 52f95bd4cf6617b60dc204c9bccb8d8fa17d4f9e
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
 ;; Keywords: help

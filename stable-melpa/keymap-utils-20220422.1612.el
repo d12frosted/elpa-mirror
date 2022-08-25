@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/keymap-utils
 ;; Keywords: convenience extensions
 ;; Package-Version: 20220422.1612
-;; Package-Commit: f95fded924a7184a638ef233324fcda34c60ff7e
+;; Package-Commit: 2e5f99f38cfdd55979dadda74b2d7086fedebb03
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 

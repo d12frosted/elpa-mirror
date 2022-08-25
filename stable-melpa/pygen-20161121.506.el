@@ -5,7 +5,7 @@
 ;; Author: Jack Crawley <http://www.github.com/jackcrawley>
 ;; Keywords: python, code generation
 ;; Package-Version: 20161121.506
-;; Package-Commit: 9019ff44ba49d7295b1476530feab91fdadb084b
+;; Package-Commit: 3a5d1d1a0640865b15be05cd1eeb33bb4793b622
 ;; Version: 0.2.7
 ;; Package-Requires: ((elpy "1.12.0") (python-mode "6.2.2") (dash "2.13.0"))
 ;; URL: https://github.com/JackCrawley/pygen/

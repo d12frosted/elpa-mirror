@@ -5,7 +5,7 @@
 ;; Author: Cheung Mou Wai <yeannylam@gmail.com>
 ;; URL: https://github.com/cheunghy/private
 ;; Package-Version: 20150122.157
-;; Package-Commit: 9266d01c095895cc3ee9de95bc20511e88353755
+;; Package-Commit: f57f1c2f6bfe900bd40b252688df4c6ed6a5f44b
 ;; Keywords: private, configuration, backup, recover
 ;; Package-Requires: ((aes "0.6"))
 ;; Version: 0.1

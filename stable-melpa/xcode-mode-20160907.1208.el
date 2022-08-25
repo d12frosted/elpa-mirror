@@ -5,7 +5,7 @@
 ;; Author: Nickolas Lanasa <nick@nytekproductions.com>,
 ;; Keywords: conveniences
 ;; Package-Version: 20160907.1208
-;; Package-Commit: 2ae4f512d6c601ea39d5ab785c2b5288eac24b59
+;; Package-Commit: 5b5f0a4f505d44840a4924b24e3ef73b8528d98b
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4") (s "1.10.0") (dash "2.11.0") (multiple-cursors "1.0.0"))
 

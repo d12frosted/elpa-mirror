@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: lisp
 ;; Package-Version: 20211108.219
-;; Package-Commit: 627d88f2695336245527fcc77f5728575ecf742b
+;; Package-Commit: cac3120451482516b6e4416b47dea9980f145889
 
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24.3"))

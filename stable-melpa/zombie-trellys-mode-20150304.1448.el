@@ -5,7 +5,7 @@
 ;; Author: David Raymond Christiansen <david@davidchristiansen.dk>
 ;; Keywords: languages
 ;; Package-Version: 20150304.1448
-;; Package-Commit: 7f0c45fdda3a44c3b6d1762d116abb1421b8fba2
+;; Package-Commit: 03b8d3635f65dbf38f9a19b5d1a8dfdcb38ba423
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5") (haskell-mode "1.5"))
 ;; Version: 0.2.1
 

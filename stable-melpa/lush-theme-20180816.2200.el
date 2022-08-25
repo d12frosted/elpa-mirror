@@ -4,7 +4,7 @@
 ;; Author: Andre Richter <andre.o.richter@gmail.com>
 ;; Version: 0.1
 ;; Package-Version: 20180816.2200
-;; Package-Commit: 645e1959143532df8f7ef90e1184e9556df18af7
+;; Package-Commit: 7cfc993709d712f75c51b505078608c9e1c11466
 ;; URL: https://github.com/andre-richter/emacs-lush-theme
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: theme, dark, strong colors

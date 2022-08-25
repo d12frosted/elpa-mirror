@@ -5,7 +5,7 @@
 ;; Last update: 2011-02-17
 ;; Version: 0.8
 ;; Package-Version: 20110419.1355
-;; Package-Commit: f21531bcb935e7e9b9e8df83dd0e0838adbf9b1b
+;; Package-Commit: 4714ed1b014615f8213e6f93637e4ec1d9d5a37a
 ;; URL: htts://bitbucket.org/jfm/emacs-instapaper
 ;; Contributors:
 

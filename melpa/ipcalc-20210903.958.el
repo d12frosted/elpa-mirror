@@ -7,7 +7,7 @@
 ;; Created: 2012-03-11 17:10
 ;; Version: 0.2.6
 ;; Package-Version: 20210903.958
-;; Package-Commit: 8d5af5b8e075f204c1e265174c96587886831996
+;; Package-Commit: 05fcb5bb8db3ba0c1f9e5f1bfcf0c183828a2426
 ;; URL: http://github.com/dotemacs/ipcalc.el
 ;; Keywords: networking tools
 ;; Package-Requires: ((cl-lib "0.5"))

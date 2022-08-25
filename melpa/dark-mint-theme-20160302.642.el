@@ -1,6 +1,6 @@
 ;;; dark-mint-theme.el --- dark & minty fresh theme
 ;; Package-Version: 20160302.642
-;; Package-Commit: 95c30a26de31549cd341184ba9ab2be8fdc67eba
+;; Package-Commit: c8ad39b7115baf889b54c3e9bffe32daeab93c29
 
 ;; Copyright (C) 2016 by Shaun Viguerie
 

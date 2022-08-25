@@ -3,7 +3,7 @@
 ;; Author: https://github.com/bradyt/dart-mode/issues
 ;; URL: https://github.com/bradyt/dart-mode
 ;; Package-Version: 20220401.0
-;; Package-Commit: 9c846769abd37f7fdc7ba8388d1f3a2b844b75e3
+;; Package-Commit: ae032b9b30ebadfe1b8a48a4cf278417e506d100
 ;; Version: 1.0.7
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: languages

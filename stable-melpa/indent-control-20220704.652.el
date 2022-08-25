@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/indent-control
 ;; Package-Version: 20220704.652
-;; Package-Commit: 3f992c8d4bfcdd92a936621058f677ee0a0ef5a9
+;; Package-Commit: d82a5aa4d3ee4b37c69261480e1866fff8b7b348
 ;; Version: 0.3.4
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience control indent tab generic level

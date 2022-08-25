@@ -6,7 +6,7 @@
 ;; Created: 27 Sep 2014
 ;; Version: 0.1
 ;; Package-Version: 20141105.1826
-;; Package-Commit: a2b43dd9de423a38d67cda2e3bd9412f7d363257
+;; Package-Commit: beea38bdf34ed27059d6484e1e2a337a27e1f7ce
 ;; URL: https://gitorious.org/alezost-emacs/pretty-sha-path
 ;; URL: https://github.com/alezost/pretty-sha-path.el
 ;; Keywords: faces convenience

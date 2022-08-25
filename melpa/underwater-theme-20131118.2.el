@@ -5,7 +5,7 @@
 ;; Author: Jon-Michael Deldin <dev@jmdeldin.com>
 ;; Keywords: faces
 ;; Package-Version: 20131118.2
-;; Package-Commit: 4eb9ef014f580adc135d91d1cd68d37a310640b6
+;; Package-Commit: 1fbd4ecd4538256c6c46f9638f883072c73ac927
 ;; Compatibility: 24.1
 ;; Version: 1.1.0
 

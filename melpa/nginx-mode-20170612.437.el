@@ -7,7 +7,7 @@
 ;; Created: 15 Oct 2010
 ;; Version: 1.1.9
 ;; Package-Version: 20170612.437
-;; Package-Commit: 6e9d96f58eddd69f62f7fd443d9b9753e16e0e96
+;; Package-Commit: a2bab83c2eb233d57d76b236e7c141c2ccc97005
 ;; Keywords: languages, nginx
 
 ;; available from http://github.com/ajc/nginx-mode

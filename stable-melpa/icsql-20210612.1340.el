@@ -4,7 +4,7 @@
 
 ;; Version: 0.4
 ;; Package-Version: 20210612.1340
-;; Package-Commit: 4521e9d2debef7687bfd26a664479f0c46688a36
+;; Package-Commit: 5ca5bd6b1bf307953b5fe7be1967c38cc879ad8a
 ;; Author: Paul Landes
 ;; Maintainer: Paul Landes
 ;; Keywords: isql sql rdbms data

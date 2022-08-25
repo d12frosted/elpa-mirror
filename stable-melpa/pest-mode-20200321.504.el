@@ -5,7 +5,7 @@
 ;; Author: ksqsf <i@ksqsf.moe>
 ;; URL: https://github.com/ksqsf/pest-mode
 ;; Package-Version: 20200321.504
-;; Package-Commit: af677327f185113442e95b00986097b30cab650c
+;; Package-Commit: e71e2f2730e926ee936ff7be15d912de27547e9e
 ;; Keywords: languages
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.3"))

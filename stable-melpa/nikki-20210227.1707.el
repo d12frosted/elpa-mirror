@@ -5,7 +5,7 @@
 ;; Author: Taiki Harada <thdev994@gmail.com>
 ;; URL: https://github.com/th994/nikki
 ;; Package-Version: 20210227.1707
-;; Package-Commit: b2ea20d04a061df88d72bd8dd0412a6e7876458d
+;; Package-Commit: 894bb6060018cb523abe43a7d3b2bf5691dda5e8
 ;; Version: 0.0.5
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "24.3"))

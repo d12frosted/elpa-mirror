@@ -3,7 +3,7 @@
 ;; Author: Austin Bingham <austin.bingham@gmail.com>
 ;; Version:
 ;; Package-Version: 20140909.538
-;; Package-Commit: d2c9dd26618fb2f7bf1e7b6eae193b1cceba3c97
+;; Package-Commit: ffc35b77f227d4c64a1271ec30d31333ffeb0013
 ;; URL: https://github.com/abingham/kfg
 ;; Package-Requires: ((f "0.17.1"))
 ;;

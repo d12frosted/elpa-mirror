@@ -8,7 +8,7 @@
 
 ;; Keywords: nand2tetris-assembler, hdl
 ;; Package-Version: 20171201.1813
-;; Package-Commit: 33acee34d24b1c6a87db833b7d23449cf858f64f
+;; Package-Commit: fe37ee41367ceff6f7d7a472a5f80cf1285e1e01
 ;; Homepage: http://www.github.com/CestDiego/nand2tetris-assembler.el/
 ;; Version: 1.1.0
 ;; Package-Requires: ((nand2tetris "1.1.0"))

@@ -4,7 +4,7 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: convenience
-;; Package-Commit: 0ecc2402b258990e7a0cf7e60847712c69444070
+;; Package-Commit: 62fbf84dbf0b9a4cbbbeede69d5392fe2774391b
 ;; Package-Version: 20181121.2316
 ;; Package-X-Original-Version: 0
 ;; Package-Requires: ((emacs "24.3"))

@@ -7,7 +7,7 @@
 ;; Author: Jonathan Sterling <jon@jonmsterling.com>
 ;; Package-Requires: ((emacs "25.3"))
 ;; Package-Version: 20181121.21
-;; Package-Commit: ae76658873a647eb43d8cf84365a9d68e9a3273c
+;; Package-Commit: c95d1a0787fb92eb011df690b4bdc1029a611c0b
 ;; Version: 0.0.1
 ;; Keywords: languages
 

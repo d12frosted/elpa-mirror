@@ -5,7 +5,7 @@
 ;; Author: Sam (sam030820)
 ;; Version: 0.1.1
 ;; Package-Version: 20201201.722
-;; Package-Commit: 067bdd92ab2fccdfdee3d8707aa570527c74fd6a
+;; Package-Commit: b6b47f1521f221e0c2a215f1f802708e10294422
 ;; Package-Requires: ((emacs "24.3") (request "0.3.2"))
 ;; Keywords: convenience
 ;; URL: https://github.com/sam030820/insert-esv/

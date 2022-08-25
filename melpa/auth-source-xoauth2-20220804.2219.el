@@ -17,7 +17,7 @@
 ;; Author: Cesar Crusius <ccrusius@google.com>
 ;; URL: https://github.com/ccrusius/auth-source-xoauth2
 ;; Package-Version: 20220804.2219
-;; Package-Commit: 5d1adfa649bb5a9df20a2fa89f235a55a64b52e4
+;; Package-Commit: 99a03f8ce835412943d311b2746e77fcf5a1b500
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "26.1"))
 

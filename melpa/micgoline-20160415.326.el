@@ -5,7 +5,7 @@
 ;; Author: yzprofile <yzprofiles@gmail.com>
 ;; URL: https://github.com/yzprofile/micgoline
 ;; Package-Version: 20160415.326
-;; Package-Commit: 837504263bb1711203b0f7efecd6b7b5f272fae0
+;; Package-Commit: e3e2effe4846175a3b52b4092c0c134ced5978d8
 ;; Version: 1.0.0
 ;; Keywords: mode-line powerline theme
 ;; Package-Requires: ((emacs "24.3") (powerline "2.3"))

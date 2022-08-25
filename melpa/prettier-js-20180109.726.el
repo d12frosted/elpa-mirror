@@ -2,7 +2,7 @@
 
 ;; Version: 0.1.0
 ;; Package-Version: 20180109.726
-;; Package-Commit: e9b73e81d3e1642aec682195f127a42dfb0b5774
+;; Package-Commit: 0e8b95c4e5898a03e85dbc555c37b4f968292aec
 
 ;; Copyright (c) 2014 The go-mode Authors. All rights reserved.
 ;; Portions Copyright (c) 2015-present, Facebook, Inc. All rights reserved.

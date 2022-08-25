@@ -5,7 +5,7 @@
 ;; Author: Andreas Jansson and contributors
 ;; URL: http://github.com/andreasjansson/biblio-bibsonomy/
 ;; Package-Version: 20190105.1200
-;; Package-Commit: 778cc944db3c6dababe2e7fec5877fba42e8c00d
+;; Package-Commit: fbdb3ecfcd88c179a2358d7967f7ecafef725835
 ;; Package-Requires: ((emacs "24.4") (biblio-core "0.2"))
 ;; Version: 1.0
 ;; Keywords: bib, tex, bibsonomy

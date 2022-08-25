@@ -5,7 +5,7 @@
 ;;
 ;; Package-Requires: ((eclim "0.3") (company "0.7") (cl-lib "0.5"))
 ;; Package-Version: 20180911.1121
-;; Package-Commit: 222ddd48fcf0ee01592dec77c58e0cf3f2ea1100
+;; Package-Commit: edff7e0e30c87036710d88fb0b7a4644750858e8
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

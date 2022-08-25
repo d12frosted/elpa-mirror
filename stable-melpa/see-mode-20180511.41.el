@@ -3,7 +3,7 @@
 ;; Author: Marcelo Muñoz <ma.munoz.araya@gmail.com>
 ;; URL: https://github.com/marcelino-m/see-mode
 ;; Package-Version: 20180511.41
-;; Package-Commit: b6e72ea90105b03816c334be9e43bb41dcc79abf
+;; Package-Commit: db9e4324f9dcc14d5125cb6a79d6c9fad5b14626
 ;; Keywords: convenience
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4") (language-detection "0.1.0"))

@@ -5,7 +5,7 @@
 ;; Author: Tsunenobu Kai <kai2nenobu@gmail.com>
 ;; URL: https://github.com/kai2nenobu/guide-key
 ;; Package-Version: 20150108.635
-;; Package-Commit: 8f8b839f42edd53af13d588254f07727108ae312
+;; Package-Commit: 9236d287a7272e307fb941237390a96037c8c0a2
 ;; Version: 1.2.5
 ;; Package-Requires: ((dash "2.10.0") (popwin "0.3.0") (s "1.9.0"))
 ;; Keywords: help convenience

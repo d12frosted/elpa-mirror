@@ -5,7 +5,7 @@
 ;; Author: Filipe Silva <filipe.silva@gmail.com>
 ;; URL: https://github.com/ninrod/evil-string-inflection
 ;; Package-Version: 20180313.1755
-;; Package-Commit: d22a90ab807afa7f27f3815b5b5ea47d52d05218
+;; Package-Commit: 5512db7e0e5fd28c881cc278add50ffae1f121f0
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24") (evil "1.2.13") (string-inflection "1.0.6"))
 

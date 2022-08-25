@@ -5,7 +5,7 @@
 ;; Author: David J. Pearce <dave01001110@gmail.com>
 ;; URL: http://github.com/Whiley/WhileyEmacsMode
 ;; Package-Version: 20220501.2219
-;; Package-Commit: 69eb67cf41dad029f1456079aea62a4b61ca9b46
+;; Package-Commit: e7cc4759d46be589d421a2235af6771bcde9ae33
 ;; Version: 1.0.1
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: languages

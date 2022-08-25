@@ -1,7 +1,7 @@
 (edit-server .
 	     [(20181016 1125)
 	      nil "server that responds to edit requests from Chrome" single
-	      ((:commit . "65a8e434547dcbe1df89dc3fd7aee075f8b06366")
+	      ((:commit . "81eb5211f79cf5a2234b7a932f6006d27d506aa5")
 	       (:authors
 		("Alex Bennée" . "alex@bennee.com"))
 	       (:maintainer "Alex Bennée" . "alex@bennee.com")

@@ -18,7 +18,7 @@
 ;; Author: Håkan Mattsson
 ;; Version: 1.0
 ;; Package-Version: 20220328.1301
-;; Package-Commit: 3e72cd3474d2668199aec7d2549d852ffe65c8bf
+;; Package-Commit: f9335e885611c2a5d65c449facdad72c28b3ff9c
 ;; Homepage: https://github.com/hawk/lux
 ;; Package-Requires: ((emacs "24.3"))
 

@@ -5,7 +5,7 @@
 ;; Author: Hiroaki Otsu <ootsuhiroaki@gmail.com>
 ;; Keywords: completion
 ;; Package-Version: 20140227.651
-;; Package-Commit: 2595d3dab1ef3549271ca922f212928e9d830eec
+;; Package-Commit: dc5c0af834d327dd686d74a4171e5d9170007a6c
 ;; URL: https://github.com/aki2o/auto-complete-pcmp
 ;; Package-Requires: ((auto-complete "1.4.0") (log4e "0.2.0") (yaxception "0.1"))
 ;; Version: 0.0.2

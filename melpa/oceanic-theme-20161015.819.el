@@ -5,7 +5,7 @@
 ;; Author: Tengfei Guo
 ;; Keywords: oceanic color theme
 ;; Package-Version: 20161015.819
-;; Package-Commit: a92ee9b470843c923e6cdcafdd65106ff994d04d
+;; Package-Commit: 00288f6a5245eb001dc123e36af1820eb3cbe985
 ;; URL: https://github.com/terry3/oceanic-theme
 ;; Version: 0.0.1
 

@@ -8,7 +8,7 @@
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/flycheck/flycheck-ocaml
 ;; Package-Version: 20220730.542
-;; Package-Commit: 77f8ddbd9bfc3a11957ac7ec7e45d5fa9179b192
+;; Package-Commit: 7d7b969cba6ff75fd0e5694aa0ffd6be05beb390
 ;; Keywords: convenience, tools, languages, ocaml
 ;; Version: 0.4.2
 ;; Package-Requires: ((emacs "24.3") (flycheck "32") (merlin "3.0.1") (let-alist "1.0.3"))

@@ -5,7 +5,7 @@
 ;; Author: Taiki Sugawara <buzz.taiki@gmail.com>
 ;; URL: https://github.com/buzztaiki/project-rootfile.el
 ;; Package-Version: 20220708.1403
-;; Package-Commit: db981a9d270e438b669aa0772d0ea406689d42ad
+;; Package-Commit: 9259708307c9da6b06f04f5b34ccd28f1fba5eaa
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "27.1"))
 

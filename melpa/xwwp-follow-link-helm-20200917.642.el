@@ -3,7 +3,7 @@
 ;; Author: Damien Merenne
 ;; URL: https://github.com/canatella/xwwp
 ;; Package-Version: 20200917.642
-;; Package-Commit: f67e070a6e1b233e60274deb717274b000923231
+;; Package-Commit: 99670ec37e2083eada9691a342441d2fa4589002
 ;; Created: 2020-03-11
 ;; Keywords: convenience
 ;; Version: 0.1

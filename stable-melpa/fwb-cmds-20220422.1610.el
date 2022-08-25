@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/fwb-cmds
 ;; Keywords: convenience
 ;; Package-Version: 20220422.1610
-;; Package-Commit: e6eeac7552b61d4f7abd51aff6ce72394133663e
+;; Package-Commit: b2661943ff3e2ad8d6db2158c173ca04221790a1
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 

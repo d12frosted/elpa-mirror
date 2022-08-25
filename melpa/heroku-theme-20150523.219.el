@@ -5,7 +5,7 @@
 ;; Author: Jonathan Chu <me@jonathanchu.is>
 ;; URL: https://github.com/jonathanchu/color-theme-heroku
 ;; Package-Version: 20150523.219
-;; Package-Commit: 8083643fe92ec3a1c3eb82f1b8dc2236c9c9691d
+;; Package-Commit: 7c1e80f8b5087c37008fec687070344638cd4752
 ;; Version: 2.0.0
 ;;
 ;;; Commentary:

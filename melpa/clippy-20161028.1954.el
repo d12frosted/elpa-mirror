@@ -7,7 +7,7 @@
 ;; Created: 18 Mar 2013
 ;; Keywords: docs
 ;; Package-Version: 20161028.1954
-;; Package-Commit: e77f6b63e54d74e243be98accad474e38f7e2a86
+;; Package-Commit: ad4b5dba4cede6d4b21533186303d3d3e9a2510f
 ;; Version: 1.1
 ;; Package-Requires: ((pos-tip "1.0"))
 ;; URL: https://github.com/Fuco1/clippy.el

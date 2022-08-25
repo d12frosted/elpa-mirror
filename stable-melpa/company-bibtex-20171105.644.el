@@ -5,7 +5,7 @@
 ;; Author: GB Gardner <gbgar@users.noreply.github.com>
 ;; Version: 1.0
 ;; Package-Version: 20171105.644
-;; Package-Commit: da67faf3a6faba8e7f1b222dedfc5521b02c7655
+;; Package-Commit: 225c6f5c0c070c94c8cdbbd452ea548cd94d76f4
 ;; Package-Requires: ((company "0.9.0") (cl-lib "0.5") (parsebib "1.0"))
 ;; Keywords: company-mode, bibtex
 ;; URL: https://github.com/gbgar/company-bibtex

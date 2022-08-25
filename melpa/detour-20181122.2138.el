@@ -7,7 +7,7 @@
 ;; Created: 2018
 ;; Version: 1.0
 ;; Package-Version: 20181122.2138
-;; Package-Commit: 1ff23c236e18971ed1077840daf047cde79a45ee
+;; Package-Commit: f41f17cf1cf4f3db41563ff011786b6567596fb4
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, abbrev
 

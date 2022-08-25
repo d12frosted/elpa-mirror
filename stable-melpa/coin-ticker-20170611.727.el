@@ -5,7 +5,7 @@
 ;; Author: Evan Klitzke <evan@eklitzke.org>
 ;; URL: https://github.com/eklitzke/coin-ticker-mode
 ;; Package-Version: 20170611.727
-;; Package-Commit: 9efab90fe4e6f29464af14e0d8fd1e20c0147b80
+;; Package-Commit: 45108e239e1d129c0cc1ff37f2870cf73087780b
 ;; Version: 0.1.0
 ;; Package-Requires: ((request "0.3.0") (emacs "25"))
 ;; Keywords: news

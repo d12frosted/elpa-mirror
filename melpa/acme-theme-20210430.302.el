@@ -5,7 +5,7 @@
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/acme-emacs-theme
 ;; Package-Version: 20210430.302
-;; Package-Commit: 7c408d111c5e451ecb8fdd5f76cf7d8074aec793
+;; Package-Commit: ae8788b5851ea353fbb80ab586a3bbd5dc8e91aa
 ;; Version: 1.0.0
 
 ;; This program is free software; you can redistribute it and/or modify

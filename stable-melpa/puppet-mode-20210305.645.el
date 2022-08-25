@@ -14,7 +14,7 @@
 ;;     Tim Meusel <tim@bastelfreak.de>
 ;; URL: https://github.com/voxpupuli/puppet-mode
 ;; Package-Version: 20210305.645
-;; Package-Commit: 71bcd383f20a457e8ad34e0e08ec47f8e1b64263
+;; Package-Commit: ab25cf379236f4e1bd4bc9c1d77a93c95800e9bf
 ;; Keywords: languages
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "24.1") (pkg-info "0.4"))

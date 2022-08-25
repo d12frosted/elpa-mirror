@@ -5,7 +5,7 @@
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.1
 ;; Package-Version: 20201202.1605
-;; Package-Commit: ee09e382b3fefb67ccf3cd4db96a8dd2acc34045
+;; Package-Commit: 5eaa15feb56cd113db81718f1452f74fa97c0e48
 ;; Package-Requires: ((emacs "27.1") (org-ml "5.3") (dash "2.12"))
 ;; Keywords: outlines wp files
 ;; URL: https://github.com/akirak/xmind-org-el

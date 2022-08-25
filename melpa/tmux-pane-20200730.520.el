@@ -4,7 +4,7 @@
 
 ;; URL: https://github.com/laishulu/emacs-tmux-pane
 ;; Package-Version: 20200730.520
-;; Package-Commit: 92f67c6d270c7c923edcde81a235ed0b49a61a70
+;; Package-Commit: 923524efe8e6e5e0d269de6bb253b45e02d9a663
 ;; Created: November 1, 2018
 ;; Keywords: convenience, terminals, tmux, window, pane, navigation, integration
 ;; Package-Requires: ((names "0.5") (emacs "24") (s "0"))

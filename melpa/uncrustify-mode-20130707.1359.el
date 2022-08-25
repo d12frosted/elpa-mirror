@@ -4,7 +4,7 @@
 ;; Author: Tabito Ohtani <koko1000ban@gmail.com>
 ;; Version: 0.01
 ;; Package-Version: 20130707.1359
-;; Package-Commit: 73893d000361e95784911e5ec268ad0ab2a1473c
+;; Package-Commit: 2c00d5cf2d1868a5955347438746f4dd82b3b9fc
 ;; Keywords: uncrustify
 
 ;; This program is free software; you can redistribute it and/or modify

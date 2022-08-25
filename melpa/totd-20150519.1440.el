@@ -5,7 +5,7 @@
 ;; Author: Erik Hetzner <egh@e6h.org>
 ;; Keywords: help
 ;; Package-Version: 20150519.1440
-;; Package-Commit: ca47b618ea8290776cdb5b0f1c2c335691f69660
+;; Package-Commit: a715f7f2df416b8a6c827a9493ce7004180a3a4f
 ;; Package-Requires: ((s "1.9.0") (cl-lib "0.5"))
 
 ;; This file is not part of GNU Emacs.

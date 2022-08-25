@@ -4,7 +4,7 @@
 
 ;; Version: 0.2
 ;; Package-Version: 20111002.847
-;; Package-Commit: 1914f1ba87587ecf5f175eeb2144c28e9f039317
+;; Package-Commit: 280a47e0bf02ee3abc7c5b6b14345056f41981f9
 ;; Keywords: LOLCODE major mode
 ;; Author: Bodil Stokke <lolcode@bodil.tv>
 ;; URL: http://github.com/bodil/lolcode-mode

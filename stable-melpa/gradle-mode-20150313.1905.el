@@ -6,7 +6,7 @@
 ;; Maintainer: Daniel Mijares <daniel.j.mijares@gmail.com>
 ;; URL: http://github.com/jacobono/emacs-gradle-mode
 ;; Package-Version: 20150313.1905
-;; Package-Commit: e4d665d5784ecda7ddfba015f07c69be3cfc45f2
+;; Package-Commit: 579de06674551919cddac9cfe42129f4fb0155c9
 ;; Version: 0.5.3
 ;; Keywords: gradle
 ;; Package-Requires: ((s "1.8.0"))

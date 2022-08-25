@@ -9,7 +9,7 @@
 ;;             Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacsorphanage/git-gutter
 ;; Package-Version: 20220423.1704
-;; Package-Commit: 315e7924a2683f75bcdd5e1ed032fbf01ac218e5
+;; Package-Commit: a50672b62a678922b8c0cab95225d520f493439b
 ;; Version: 0.92
 ;; Package-Requires: ((emacs "25.1"))
 

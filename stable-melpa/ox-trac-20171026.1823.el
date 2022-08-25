@@ -4,7 +4,7 @@
 
 ;; URL: https://github.com/JalapenoGremlin/ox-trac
 ;; Package-Version: 20171026.1823
-;; Package-Commit: 03cc31efb1aa06991918f1071e250a9d58f96cfb
+;; Package-Commit: 5ac6c81bbc18db6c17e267d6399778c3fb5bf1ee
 ;; Author: Brian J. Carlson <hacker (at) abutilize (dot) com>
 ;; Package-Requires: ((org "9.0"))
 ;; Keywords: org-mode trac

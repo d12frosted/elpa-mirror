@@ -5,7 +5,7 @@
 ;; Created: 19 Nov 2014
 ;; Version: 0.1
 ;; Package-Version: 20220426.1701
-;; Package-Commit: d5cb5f075264ff2e625099aebca3151f4f35019a
+;; Package-Commit: e811665951cd48819a63e477e7206c43232a78bd
 ;; URL: https://github.com/mpwang/perfect-margin
 ;; Keywords: convenience, frames
 ;; Package-Requires: ((emacs "24.0") (cl-lib "0.5"))

@@ -3,7 +3,7 @@
 ;; Author: wouter bolsterlee <wouter@bolsterl.ee>
 ;; Keywords: languages
 ;; Package-Version: 20191011.1148
-;; Package-Commit: 2861c4e33e18b077112efa072316b031bca4236c
+;; Package-Commit: 670ba3d69e702f76a687f81e079addfc7c66075c
 ;; URL: https://github.com/wbolster/emacs-xml-format
 ;; Package-Requires: ((emacs "25") (reformatter "0.4"))
 ;; Version: 1.0.0

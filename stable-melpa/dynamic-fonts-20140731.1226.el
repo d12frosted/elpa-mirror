@@ -6,7 +6,7 @@
 ;; Homepage: http://github.com/rolandwalker/dynamic-fonts
 ;; URL: http://raw.githubusercontent.com/rolandwalker/dynamic-fonts/master/dynamic-fonts.el
 ;; Package-Version: 20140731.1226
-;; Package-Commit: ab0c65accbdb59acaed5b263327e22ec019b3e82
+;; Package-Commit: 004ee6014dc7dbff8f14d26015c91d9229f6eac0
 ;; Version: 0.6.4
 ;; Last-Updated: 22 Oct 2013
 ;; EmacsWiki: DynamicFonts

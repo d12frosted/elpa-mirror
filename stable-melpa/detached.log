@@ -1,14 +1,13 @@
 Package: detached
-Fetcher: git
+Fetcher: sourcehut
 Source:  https://git.sr.ht/~niklaseklund/detached.el
 
 Updating /mnt/store/melpa/working/detached/
 Checking out origin/HEAD
-Checking out 8a76055290aae3e9b555a055498e71591032e995
-Checking out 8a76055290aae3e9b555a055498e71591032e995
+Checking out a453de761b02e118d231bb6e31c8398cb2180ac3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/detached/
-  to /tmp/detachedECo3W4/detached-20220823.2025
+  to /tmp/detachedQdS33F/detached-20220825.1830
     detached-compile.el -> detached-compile.el
     detached-consult.el -> detached-consult.el
     detached-dired.el -> detached-dired.el
@@ -19,20 +18,22 @@ Copying files (->) and directories (=>)
     detached-shell.el -> detached-shell.el
     detached-vterm.el -> detached-vterm.el
     detached.el -> detached.el
-Created detached-20220823.2025.tar containing:
-  detached-20220823.2025/
-  detached-20220823.2025/detached-compile.el
-  detached-20220823.2025/detached-consult.el
-  detached-20220823.2025/detached-dired.el
-  detached-20220823.2025/detached-eshell.el
-  detached-20220823.2025/detached-extra.el
-  detached-20220823.2025/detached-init.el
-  detached-20220823.2025/detached-org.el
-  detached-20220823.2025/detached-pkg.el
-  detached-20220823.2025/detached-shell.el
-  detached-20220823.2025/detached-vterm.el
-  detached-20220823.2025/detached.el
-Built detached in 6.429s, finished at 2022-08-25T14:59:40+0000
+Created detached-20220825.1830.tar containing:
+  detached-20220825.1830/
+  detached-20220825.1830/detached-compile.el
+  detached-20220825.1830/detached-consult.el
+  detached-20220825.1830/detached-dired.el
+  detached-20220825.1830/detached-eshell.el
+  detached-20220825.1830/detached-extra.el
+  detached-20220825.1830/detached-init.el
+  detached-20220825.1830/detached-org.el
+  detached-20220825.1830/detached-pkg.el
+  detached-20220825.1830/detached-shell.el
+  detached-20220825.1830/detached-vterm.el
+  detached-20220825.1830/detached.el
+Built detached in 5.450s, finished at 2022-08-25T18:49:40+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  417 Aug 25 14:59 packages/detached-20220823.2025.entry
 120K -rw-r--r-- 1 root root 120K Aug 25 14:59 packages/detached-20220823.2025.tar
+4.0K -rw-r--r-- 1 root root  417 Aug 25 18:49 packages/detached-20220825.1830.entry
+120K -rw-r--r-- 1 root root 120K Aug 25 18:49 packages/detached-20220825.1830.tar

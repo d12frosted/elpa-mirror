@@ -44,7 +44,7 @@
 ;; Created: 09-02-1996
 ;; Version: 9
 ;; Package-Version: 20200707.2309
-;; Package-Commit: 61caf8f419659a0567a269f290c90427a215d77b
+;; Package-Commit: 2529eb0f7f35c526c1b6fca5250399718ff5138a
 ;; Keywords: convenience emulations files
 ;; URL: https://github.com/mtk/teco.git
 

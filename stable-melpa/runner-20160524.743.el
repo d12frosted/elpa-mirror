@@ -3,7 +3,7 @@
 ;; Author: Thamer Mahmoud <thamer.mahmoud@gmail.com>
 ;; Version: 1.8
 ;; Package-Version: 20160524.743
-;; Package-Commit: a211d57ddc600410d07a8b534920ba905b093d87
+;; Package-Commit: e7394d7c9e886788a656a7085b4cf963d6fc318f
 ;; Time-stamp: <2016-05-24 10:02:01 thamer>
 ;; URL: https://github.com/thamer/runner
 ;; Keywords: shell command, dired, file extension, open with

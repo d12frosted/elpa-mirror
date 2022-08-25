@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-vs/line-reminder
 ;; Package-Version: 20220721.451
-;; Package-Commit: 3928cf1ba8492b8c0d79340ad7ba5bb5badb5374
+;; Package-Commit: 1b2dfa899409f4af2896fce6b9acbe98072abd59
 ;; Version: 0.5.1
 ;; Package-Requires: ((emacs "25.1") (indicators "0.0.4") (fringe-helper "1.0.1") (ov "1.0.6") (ht "2.0"))
 ;; Keywords: convenience annotation

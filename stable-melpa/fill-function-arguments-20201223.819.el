@@ -5,7 +5,7 @@
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 0.9
 ;; Package-Version: 20201223.819
-;; Package-Commit: a0a2f8538c80ac08e497dea784fcb90c93ab465b
+;; Package-Commit: 124cde3c17e31f6e3992d38f86f13f6d18711943
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience
 ;; URL: https://github.com/davidshepherd7/fill-function-arguments

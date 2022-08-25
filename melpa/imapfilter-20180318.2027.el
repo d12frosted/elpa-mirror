@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/imapfilter
 ;; Keywords: mail
 ;; Package-Version: 20180318.2027
-;; Package-Commit: 79bbbe918319bc1e8f42a0bef53dc7c77fe868ea
+;; Package-Commit: 5e842a8c60ba98f344edf1b1e65f5a480ed938ed
 
 ;; This file is not part of GNU Emacs.
 

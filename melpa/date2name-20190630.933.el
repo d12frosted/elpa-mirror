@@ -5,7 +5,7 @@
 ;; Author: Max Beutelspacher
 ;; URL: https://github.com/DerBeutlin/date2name.el
 ;; Package-Version: 20190630.933
-;; Package-Commit: 386dbe73678705d6107cd5c9bdeb4f7c97632360
+;; Package-Commit: 1d239e4d647ad8ba5cd23a8d4012a9f10bcf7d7d
 ;; Keywords: files, convenience
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4"))

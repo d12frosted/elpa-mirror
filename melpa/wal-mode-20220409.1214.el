@@ -5,7 +5,7 @@
 ;; Author: Lucas Klemmer <lucas.klemmer@jku.at>
 ;; Keywords: languages
 ;; Package-Version: 20220409.1214
-;; Package-Commit: 1daaf882824e8483419dc999c2d5507ad30cc929
+;; Package-Commit: 16733847f04af1929e590ff3e41f554baa3ba640
 ;; URL: https://github.com/LucasKl/wal-major-mode
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "25.1"))

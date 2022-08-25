@@ -5,7 +5,7 @@
 ;; Created: May 23 2011
 ;; Keywords: terminals, processes, comint, shell, repl
 ;; Package-Version: 20220424.2124
-;; Package-Commit: 15bbc0f89a4927792e2e791378de827ab698ed69
+;; Package-Commit: db82bd1452928a1151badf7a28ace9d68b265532
 ;; URL: https://github.com/riscy/shx-for-emacs
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "24.4"))

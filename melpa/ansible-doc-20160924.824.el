@@ -5,7 +5,7 @@
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn>
 ;; URL: https://github.com/lunaryorn/ansible-doc.el
 ;; Package-Version: 20160924.824
-;; Package-Commit: 86083a7bb2ed0468ca64e52076b06441a2f8e9e0
+;; Package-Commit: bc8128a85a79b14f4a121105d87a5eddc33975ad
 ;; Keywords: tools, help
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "24.3"))

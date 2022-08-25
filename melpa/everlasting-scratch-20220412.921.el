@@ -5,7 +5,7 @@
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/everlasting-scratch
 ;; Package-Version: 20220412.921
-;; Package-Commit: 8706c55f3b7c267c15b8f10170ecec9998b3cc3d
+;; Package-Commit: b3f8339f9564a1926bd8b71c163fa7660cc3b1f4
 ;; Version: 0.1.0
 ;; Created: 2022-04-01
 ;; Keywords: convenience, tool

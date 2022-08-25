@@ -6,7 +6,7 @@
 ;; Homepage: http://github.com/rolandwalker/buffer-utils
 ;; URL: http://raw.githubusercontent.com/rolandwalker/buffer-utils/master/buffer-utils.el
 ;; Package-Version: 20140512.1400
-;; Package-Commit: 685b13457e3a2085b7584e41365d2aa0779a1b6f
+;; Package-Commit: 32e1f23817b9c6caedb53e5359baad29e99eaa2b
 ;; Version: 0.1.0
 ;; Last-Updated: 21 Oct 2013
 ;; EmacsWiki: BufferUtils

@@ -1,6 +1,6 @@
 ;;; bitlbee.el --- Help get Bitlbee (http://www.bitlbee.org) up and running.
 ;; Package-Version: 20151203.0
-;; Package-Commit: 3a92a4119e0c007df2c7dcf1b1c3a5f23ee40e05
+;; Package-Commit: f3342da46b0864ae8db4e82b553d9e617b090534
 ;;
 ;; Copyright (C) 2008 pmade inc. (Peter Jones pjones@pmade.com)
 ;;

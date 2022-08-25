@@ -2,7 +2,7 @@
 
 ;; Version: 1.0.0
 ;; Package-Version: 20200527.557
-;; Package-Commit: 391207e6505948b0d0cb57b802ee4885e3292c21
+;; Package-Commit: ec66ba36ba6e07883b029569c33fd461d28eed75
 ;; Author: Rajasegar Chandran <rajasegar.c@gmail.com>
 ;; Url: https://github.com/rajasegar/pnpm-mode
 ;; Keywords: convenience, project, javascript, node, npm, pnpm

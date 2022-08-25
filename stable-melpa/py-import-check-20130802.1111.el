@@ -5,7 +5,7 @@
 ;; Author: Sibi <sibi@psibi.in>
 ;; Version: 0.2
 ;; Package-Version: 20130802.1111
-;; Package-Commit: 9787f87745a4234cd9bed711860b707902bc8ae4
+;; Package-Commit: 38ad91e67047bd37231497d11d409d064d510f98
 ;; URL: https://github.com/psibi/emacs-py-import-check
 ;; Keywords: python, import, check
 

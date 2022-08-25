@@ -5,7 +5,7 @@
 ;; Author: Michael Herstine <sp1ff@pobox.com>
 ;; Version: 0.2.3
 ;; Package-Version: 20210904.7
-;; Package-Commit: c9e413fcb6c526c86e1a64d45c7ea94aceca4e6e
+;; Package-Commit: 7cfc932d590287a80278f330e4ca71cb5702ef80
 ;; Keywords: comm
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/sp1ff/elmpd

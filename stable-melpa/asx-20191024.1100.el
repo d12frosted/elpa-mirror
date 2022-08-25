@@ -5,7 +5,7 @@
 ;; Homepage: https://github.com/ragone/asx
 ;; Keywords: convenience
 ;; Package-Version: 20191024.1100
-;; Package-Commit: ec4bf74de602b97df1f306d51acf4cda45184aac
+;; Package-Commit: 5ca12cc51bb02b5926adf9a7976ba9ca08a1ea21
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "26.1"))
 

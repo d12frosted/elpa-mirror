@@ -5,7 +5,7 @@
 ;; Author: Mickey Petersen <mickey@masteringemacs.org>
 ;; Version: 1.0
 ;; Package-Version: 20220808.1225
-;; Package-Commit: 5eb950ada991705fdda4456970b0321241ee2bfa
+;; Package-Commit: 89cbd67a815f61e5001f19d64d6ec1771e867742
 ;; Keywords: tools faces
 ;; Homepage: https://www.github.com/mickeynp/ligature.el
 ;; Package-Requires: ((emacs "28"))

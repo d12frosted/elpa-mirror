@@ -5,7 +5,7 @@
 ;; Author: Wojciech Siewierski
 ;; URL: https://github.com/vifon/hyperlist-mode
 ;; Package-Version: 20200515.2209
-;; Package-Commit: 374cdc04761df23e7a50ca276319ba9745cda9d7
+;; Package-Commit: 00af994deda061fa95ad0046510eb6a2672c99aa
 ;; Keywords: outlines
 ;; Version: 0.9
 ;; Package-Requires: ((emacs "24"))

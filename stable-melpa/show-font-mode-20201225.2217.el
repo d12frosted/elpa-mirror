@@ -5,7 +5,7 @@
 ;; Author: Melissa Boiko <melissa@namakajiri.net>
 ;; Keywords: faces, i18n, unicode, fonts, fontsets
 ;; Package-Version: 20201225.2217
-;; Package-Commit: 8503be7966d3bd8316039b5f49d3c37c7b97d10c
+;; Package-Commit: c7328b85655688d257b769192d26b9f5c9bbe26d
 ;; Package-Requires: ((emacs "25.1"))
 ;; Version: 0.1
 ;; Homepage: https://github.com/melissaboiko/show-font-mode

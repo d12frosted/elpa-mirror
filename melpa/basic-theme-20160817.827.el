@@ -5,7 +5,7 @@
 ;; Author: Felix Geller <fgeller@gmail.com>
 ;; Keywords: theme basic minimal colors
 ;; Package-Version: 20160817.827
-;; Package-Commit: e2a855bd39f4b78296228d4b790f9123156f7d7e
+;; Package-Commit: 9d0fd5f56898a5237c1de3363ad416aeab7f880e
 ;; URL: http://github.com/fgeller/basic-theme.el
 ;; Package-Requires: ((emacs "24"))
 

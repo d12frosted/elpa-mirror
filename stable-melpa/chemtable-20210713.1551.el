@@ -7,7 +7,7 @@
 ;; Created: 2021
 ;; Version: 1.0
 ;; Package-Version: 20210713.1551
-;; Package-Commit: 151594b11fa6555c73b998ed1f15ee9b5f979f67
+;; Package-Commit: 05fc1449db497e715b33b8e08359fa17c3148c7b
 ;; Keywords: convenience, chemistry
 ;; Homepage: https://github.com/sergiruiztrepat/chemtable
 ;; Package-Requires: ((emacs "24.1"))

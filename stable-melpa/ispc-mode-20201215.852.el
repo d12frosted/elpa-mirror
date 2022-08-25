@@ -5,7 +5,7 @@
 ;; Author: Philip Munksgaard <philip@munksgaard.me>
 ;; Keywords: c, ispc
 ;; Package-Version: 20201215.852
-;; Package-Commit: 722fdc45da2714f8fe0757968589cdb5ccacc8a0
+;; Package-Commit: bedfff2528157d4bb0b75927c459631bebe2b1ce
 ;; URL: https://github.com/Munksgaard/ispc-mode
 ;; Version: 0.1
 

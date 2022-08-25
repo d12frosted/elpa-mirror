@@ -6,7 +6,7 @@
 ;; Created: 19 May 2016
 ;; Version: 0.0.1
 ;; Package-Version: 20160520.1052
-;; Package-Commit: e6427538b547cbe02e1bd6ed4b765c73620bdae8
+;; Package-Commit: 3a1871613facc928ff250ed8f12fbc7073e46b75
 ;; Package-Requires: ((cl-lib "0.5") (datetime-format "0.0.1"))
 ;; Keywords: datetime testing
 ;; Homepage: https://github.com/zonuexe/emacs-datetime

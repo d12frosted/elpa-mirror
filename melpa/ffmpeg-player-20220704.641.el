@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/ffmpeg-player
 ;; Package-Version: 20220704.641
-;; Package-Commit: 24fc776c9647859031fdc44d737aee5b96d2bf51
+;; Package-Commit: 2c41d715b012f399e661a816376824a8dea0b941
 ;; Version: 0.2.1
 ;; Package-Requires: ((emacs "24.4") (s "1.12.0") (f "0.20.0"))
 ;; Keywords: multimedia video ffmpeg buffering images

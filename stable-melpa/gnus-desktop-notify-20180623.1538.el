@@ -5,7 +5,7 @@
 ;;               Basil L. Contovounesios <contovob AT tcd.ie>
 ;; Version: 1.4
 ;; Package-Version: 20180623.1538
-;; Package-Commit: b438feb59136621a8ab979f0e2784f7002398d06
+;; Package-Commit: 44ebe0241a19f4052cd427dff408206542aa3c8f
 ;; URL: http://www.thregr.org/~wavexx/software/gnus-desktop-notify.el/
 ;; GIT: git://src.thregr.org/gnus-desktop-notify.el/
 ;; Package-Requires: ((gnus "1.0"))

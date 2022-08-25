@@ -6,7 +6,7 @@
 ;; Created: 2019/04/06
 ;; Version: 0.3.36
 ;; Package-Version: 20220715.2343
-;; Package-Commit: 9af0c1f417c460352f77de88b5b4432d6b955858
+;; Package-Commit: 74b7e1d5fe917dfa8fbf7e7867454b454d0d3f0d
 ;; Last-Updated: 2022-07-16 07:22:48 +0800
 ;;           by: Gong Qijian
 ;; Package-Requires: ((emacs "25.1") (dash "2.18") (edit-indirect "0.1.5"))

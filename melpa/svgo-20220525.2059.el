@@ -3,7 +3,7 @@
 ;; Author: Mathis Hofer <mathis@fsfe.org>
 ;; Version: 1.0.3
 ;; Package-Version: 20220525.2059
-;; Package-Commit: 40ddd6f47966561344bec8f46235e40dad99115f
+;; Package-Commit: 9b01cc9eb1fdf2731cd2b931a7dfe1f601b70786
 ;; Package-Requires: ((emacs "26.2"))
 ;; Keywords: tools
 ;; URL: https://github.com/hupf/svgo.el/

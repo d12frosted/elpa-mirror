@@ -5,7 +5,7 @@
 ;; Author:  Benjamin Kästner <benjamin.kaestner@gmail.com>
 ;; URL: https://github.com/bkaestner/org-arbeitszeit
 ;; Package-Version: 20220816.1447
-;; Package-Commit: b22ae3292b24772aa37dd5a54cd551f7312b6213
+;; Package-Commit: 2598fb45a182d22e6d7579d55139db80e8af0b02
 ;; Keywords: tools, org, calendar, convenience
 ;; Version: 0.0.4
 ;; Package-Requires: ((emacs "27.1"))

@@ -8,7 +8,7 @@
 ;; Maintainer: Peter Fraenkel <pnf@podsnap.com>
 ;; URL: https://github.com/clojure-emacs/squiggly-clojure
 ;; Package-Version: 20191215.2227
-;; Package-Commit: 592c4f89efb5112784cbf94c9ea6fdd045771b62
+;; Package-Commit: bc85f9dfe1bcfa66a98d2ca5da955e7eab4ae00d
 ;; Version: 1.8.0
 ;; Package-Requires: ((cider "0.22.0") (flycheck "32-cvs") (let-alist "1.0.1") (emacs "25"))
 

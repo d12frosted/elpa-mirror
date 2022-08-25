@@ -6,7 +6,7 @@
 ;; Author: Donald Ephraim Curtis <dcurtis@milkbox.net>
 ;; URL: https://github.com/milkypostman/package-filter
 ;; Package-Version: 20161122.719
-;; Package-Commit: bc73b41aea1d65ca44ef1593ca13126df9bbb39e
+;; Package-Commit: c8e2531227c02c4c5e9d593f2cdb6a4ab4a6849b
 ;; Version: 0.3
 
 ;;; Commentary:

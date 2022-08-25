@@ -5,7 +5,7 @@
 ;; Author: Diego Pasquali <hello@dgopsq.space>
 ;; Keywords: comm, tools, codcut, share
 ;; Package-Version: 20190915.1009
-;; Package-Commit: 7ca7db69e8c38ec45eb572ad16ab2b56086f2131
+;; Package-Commit: bf07c3db3900e36b0b87423f3b715d6378f86393
 ;; Homepage: https://github.com/codcut/codcut-emacs
 ;; Version: 0.0.1
 

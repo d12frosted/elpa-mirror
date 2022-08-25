@@ -1,11 +1,11 @@
 Package: git-lens
-Fetcher: git
-Source:  https://codeberg.org/pidu/git-lens
+Fetcher: codeberg
+Source:  https://codeberg.org/pidu/git-lens.git
 
-Updating /mnt/store/melpa/working/git-lens/
+Cloning https://codeberg.org/pidu/git-lens.git to /mnt/store/melpa/working/git-lens/
 Checking out origin/HEAD
 Checking out 8beec55b2c43bdf64172fb2539de97f1dd39a6d0
-Built git-lens in 5.994s, finished at 2022-08-25T15:18:22+0000
+Built git-lens in 6.307s, finished at 2022-08-25T19:08:27+0000
  ✓ Success:
- 12K -rw-r--r-- 1 root root 8.1K Aug 25 15:18 packages/git-lens-20220623.722.el
-4.0K -rw-r--r-- 1 root root  400 Aug 25 15:18 packages/git-lens-20220623.722.entry
+ 12K -rw-r--r-- 1 root root 8.1K Aug 25 19:08 packages/git-lens-20220623.722.el
+4.0K -rw-r--r-- 1 root root  400 Aug 25 19:08 packages/git-lens-20220623.722.entry

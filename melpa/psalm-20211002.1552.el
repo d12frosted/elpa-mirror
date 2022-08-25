@@ -6,7 +6,7 @@
 ;; Created: 31 Mar 2020
 ;; Version: 0.6.0
 ;; Package-Version: 20211002.1552
-;; Package-Commit: 28d546a79cb865a78b94cd7e929d66d720505faa
+;; Package-Commit: 06434b938485e2540fc97ce6cb017a8a001c1f13
 ;; Keywords: tools, php
 ;; Homepage: https://github.com/emacs-php/psalm.el
 ;; Package-Requires: ((emacs "24.3") (php-mode "1.22.3"))

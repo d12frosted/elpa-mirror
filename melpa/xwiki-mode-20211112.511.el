@@ -7,7 +7,7 @@
 ;; Created: Oct 15, 2021
 ;; Version: 0.0.1
 ;; Package-Version: 20211112.511
-;; Package-Commit: 580e65296ca0ffb20270610ef16bfeb8850fc7c8
+;; Package-Commit: 8b6f2caead8ec804e8d7d37d87eb3b46aa96b6e8
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: languages, convenience, tools
 ;; URL: https://github.com/ackerleytng/xwiki-mode

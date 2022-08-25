@@ -5,7 +5,7 @@
 ;; Author: Jean Monlong <jean.monlong@gmail.com>
 ;; Version: 0.1
 ;; Package-Version: 20190712.529
-;; Package-Commit: 963faa828d15d49cee5a63f619c3c30e162c2d0f
+;; Package-Commit: fe2ee0c441795c35a8c127fa1f7006a5f251f564
 ;; Package-Requires: ((emacs "25") (polymode "0.2") (wdl-mode "20170709"))
 ;; Keywords: languages
 ;; URL: https://github.com/jmonlong/poly-wdl

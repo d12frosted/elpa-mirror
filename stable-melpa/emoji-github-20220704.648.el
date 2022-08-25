@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/emoji-github
 ;; Package-Version: 20220704.648
-;; Package-Commit: 01d4a14f06d76b6d121be897dea8bc92dad50ee6
+;; Package-Commit: a25c5e4e41c32ee7b3f7707b3d1281929f810d92
 ;; Version: 0.2.3
 ;; Package-Requires: ((emacs "24.4") (emojify "1.0") (request "0.3.0"))
 ;; Keywords: convenience list github emoji display

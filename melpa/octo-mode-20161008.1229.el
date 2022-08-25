@@ -6,7 +6,7 @@
 ;; Maintainer: John Olsson <john@cryon.se>
 ;; URL: https://github.com/cryon/octo-mode
 ;; Package-Version: 20161008.1229
-;; Package-Commit: bd4db7e5e3275b24c74e6a23c11d04f54e9feca5
+;; Package-Commit: 4b2ed4a61674f73a6ccd390b5ae123474bd0c977
 ;; Created: 4th October 2016
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24"))

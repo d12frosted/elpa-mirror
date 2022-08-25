@@ -2,7 +2,7 @@
 
 ;; Version: 0.1.0
 ;; Package-Version: 20121208.1158
-;; Package-Commit: 0416f561edbc6b4a29fced8be84d2527a9613d65
+;; Package-Commit: e1a4fb5ec0f46e82f569865ca47042ba5934e425
 ;; URL: https://github.com/folone/roy-mode
 
 ;; Copyright (C) 2011  Free Software Foundation, Inc.

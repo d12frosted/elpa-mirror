@@ -5,7 +5,7 @@
 ;; Author: Yasuyuki Oka <yasuyk@gmail.com>
 ;; Version: 0.0.2
 ;; Package-Version: 20130423.1548
-;; Package-Commit: 24cb5b744a1796e554e6dbfc6eeb237d06a00b10
+;; Package-Commit: 0dd11eed29fe4054ff5b4e06e2c39b4d925d6aae
 ;; URL: https://github.com/yasuyk/flymake-yaml
 ;; Package-Requires: ((flymake-easy "0.1"))
 ;; Keywords: yaml

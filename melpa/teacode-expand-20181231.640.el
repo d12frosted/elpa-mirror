@@ -5,7 +5,7 @@
 ;; Author: Richard Guay <raguay@customct.com>
 ;; Keywords: lisp
 ;; Package-Version: 20181231.640
-;; Package-Commit: 2122e4b32ed4edd2d7ebc0ff8ebf407e29d6e910
+;; Package-Commit: 7df6f9ec95da1fb47bbae489bb3f2c27ed3a9b3a
 ;; URL: https://github.com/raguay/TeaCode-Expand
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4"))

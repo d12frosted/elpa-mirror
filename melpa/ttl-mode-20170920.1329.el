@@ -57,7 +57,7 @@
 ;;
 ;; Version: @VERSION@
 ;; Package-Version: 20170920.1329
-;; Package-Commit: 8aa647178942c9be58e5c9cea1e6ede30c8fd562
+;; Package-Commit: b4084667f92afbfe5916d1307916acbd68c52e5e
 
 ;;; Code:
 

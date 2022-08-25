@@ -6,7 +6,7 @@
 ;; Created: 3 Sept 2017
 ;; Version: 0.1
 ;; Package-Version: 20210105.1919
-;; Package-Commit: 761b15bc31696a4f80c5fd508c84b1f5b4190ec2
+;; Package-Commit: c3beff15688481162d14ae8600f59a366bb4c829
 ;; URL: https://github.com/dgtized/winnow.el
 ;; Keywords: matching
 ;; Package-Requires: ((emacs "24"))

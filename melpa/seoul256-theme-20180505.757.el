@@ -6,7 +6,7 @@
 ;; Maintainer: Anand Iyer <anand.ucb@gmail.com>
 ;; URL: http://github.com/anandpiyer/seoul256-emacs
 ;; Package-Version: 20180505.757
-;; Package-Commit: d28a9de73a5ffb1a1c9492db75a5c1efe5e9815f
+;; Package-Commit: 8e76d0207489964ef780420723d49e409f68f7d1
 ;; Created: 21 October 2016
 ;; Modified: 05 May 2018
 ;; Version: 0.3.7

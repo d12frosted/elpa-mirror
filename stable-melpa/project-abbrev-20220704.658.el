@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/project-abbrev
 ;; Package-Version: 20220704.658
-;; Package-Commit: 8ce8f7cf2b228795dc76af0128cc66c7d7aac3be
+;; Package-Commit: 3eb8000e7a07f16e6c8323c1b7e7b45777dbb5cd
 ;; Version: 0.0.4
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: abbrev abbreviation customizable shortcut

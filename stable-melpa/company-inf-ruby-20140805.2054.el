@@ -5,7 +5,7 @@
 ;; Author: Dmitry Gutov <dgutov@yandex.ru>
 ;; Version: 0.3
 ;; Package-Version: 20140805.2054
-;; Package-Commit: fe3e4863bc971fbb81edad447efad5795ead1b17
+;; Package-Commit: 9c2eab3bb82e8838c54013026e6ffb51cccbd37e
 ;; URL: https://github.com/company-mode/company-inf-ruby
 ;; Package-Requires: ((company "0.6.10") (inf-ruby "2.2.7") (emacs "24.1"))
 

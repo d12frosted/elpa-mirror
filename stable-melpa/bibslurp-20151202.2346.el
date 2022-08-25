@@ -5,7 +5,7 @@
 ;; Authors: Mike McCourt <mkmcc@astro.berkeley.edu>
 ;; URL: https://github.com/mkmcc/bibslurp
 ;; Package-Version: 20151202.2346
-;; Package-Commit: 0116bbb04840d20a6b087e6d9c921bb1c2489a8f
+;; Package-Commit: aeba96368f2a06959e4fe945375ce2a54d34b189
 ;; Version: 0.0.2
 ;; Keywords: bibliography, nasa ads
 ;; Package-Requires: ((s "1.6.0") (dash "1.5.0"))

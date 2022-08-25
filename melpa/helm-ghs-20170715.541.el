@@ -5,7 +5,7 @@
 ;; Author: iory <ab.ioryz@gmail.com>
 ;; Version: 0.0.2
 ;; Package-Version: 20170715.541
-;; Package-Commit: 17a70bf16255d90d67c8350e88200ec8bfd47563
+;; Package-Commit: f9d4ab80e8a33b21cd635285289ec5779bbe629f
 ;; URL: https://github.com/iory/emacs-helm-ghs
 ;; Package-Requires: ((emacs "24") (helm "2.2.0"))
 

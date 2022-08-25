@@ -5,7 +5,7 @@
 ;; Author: Adam Sokolnicki <adam.sokolnicki@gmail.com>
 ;; Keywords: files, convenience
 ;; Package-Version: 20160321.2237
-;; Package-Commit: 29f6e7058f635b0084880a1f890a6c92501e8c29
+;; Package-Commit: 12d7e52cd5ae29fd828db0bf1fbf648020077145
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
