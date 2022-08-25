@@ -7,6 +7,7 @@ sure.
 
 Not every function provided in newer versions of Emacs is provided
 here.  Some depend on new features from the core, others cannot be
-implemented to a meaningful degree.  The main audience for this
-library are not regular users, but package maintainers.  Therefore
-commands and user options are usually not implemented here.
+implemented to a meaningful degree.  Please consult the Compat
+manual for details.  The main audience for this library are not
+regular users, but package maintainers.  Therefore commands and
+user options are usually not implemented here.

@@ -494,7 +494,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(28 1 2 0)
+	 [(28 1 2 1)
 	  ((emacs
 	    (24 3))
 	   (nadvice
@@ -505,7 +505,7 @@
 	   (:maintainer "Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
-	   (:commit . "6b70229adf1ad7c2227789061dd1b2fc00d36ad8"))])
+	   (:commit . "ce2fecf94eb3f27851567237a65251dbb419de4b"))])
  (consult .
 	  [(0 18)
 	   ((emacs
