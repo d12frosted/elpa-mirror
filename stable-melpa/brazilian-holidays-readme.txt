@@ -5,10 +5,13 @@ State variable.
 E.g.:
 (require 'brazilian-holidays)
 (setq brazilian-holidays-rj-holidays t)
+(brazilian-holidays-mode 1)
 
 Or with `use-package`:
 
 (use-package brazilian-holidays
  :custom
  (brazilian-holidays-rj-holidays t)
- (brazilian-holidays-sp-holidays t))
+ (brazilian-holidays-sp-holidays t)
+ :init
+ (brazilian-holidays-mode 1))

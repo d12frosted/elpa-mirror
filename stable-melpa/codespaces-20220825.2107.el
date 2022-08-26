@@ -4,9 +4,9 @@
 
 ;; Author: Patrick Thomson <patrickt@github.com>
 ;; URL: https://github.com/patrickt/codespaces.el
-;; Package-Version: 20220824.1820
-;; Package-Commit: ec99d50e82fa5cabd7e79d32257bf64bbbeb2ceb
-;; Version: 0.1
+;; Package-Version: 20220825.2107
+;; Package-Commit: c9a42e87dc38aedba6646bf2f4b1b4a6571b3b22
+;; Version: 0.2
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: comm
 ;; Created: 2022-08-11
@@ -29,7 +29,7 @@
 ;;; Commentary:
 
 ;; This package provides support for connecting to GitHub Codespaces
-;; via TRAMP in Emacs. It also provides a completing-read interface
+;; via TRAMP in Emacs.  It also provides a completing-read interface
 ;; to select codespaces.
 
 ;; This package works by registering a new "ghcs" method in tramp-methods.
@@ -39,7 +39,7 @@
 (require 'tramp)
 
 (defun codespaces-setup ()
-  "Set up the ghcs tramp-method. Should be called after requiring this package."
+  "Set up the ghcs tramp-method.  Should be called after requiring this package."
   (interactive)
   (unless (executable-find "gh")
     (user-error "Could not find `gh' program in your PATH"))
@@ -55,6 +55,8 @@
     (if ghcs (setcdr ghcs ghcs-methods)
       (push (cons "ghcs" ghcs-methods) tramp-methods))))
 
+;;; codespace struct
+
 (cl-defstruct codespaces-space name display-name state repository ref)
 
 (defun codespaces-space-from-hashtable (ht)
@@ -67,7 +69,7 @@
    :ref (gethash "ref" (gethash "gitStatus" ht))))
 
 (defun codespaces-space-readable-name (cs)
-  "Return the codespace's display name, or, if that is empty, its machine name."
+  "Return the display name of CS, or, if that is empty, its machine name."
   (let ((name (codespaces-space-display-name cs)))
     (if (string-empty-p name) (codespaces-space-name cs) name)))
 
@@ -82,12 +84,46 @@
   "Return t if codespace CS is marked as available."
   (equal "Available" (codespaces-space-state cs)))
 
+;;; Internal methods
+
 (defun codespaces--get-codespaces ()
   "Execute `gh' and parse its results."
   (letrec
       ((gh-invocation "gh codespace list --json name,displayName,repository,state,gitStatus,lastUsedAt")
        (codespace-json (shell-command-to-string gh-invocation)))
     (codespaces--munge (json-parse-string codespace-json))))
+
+(defun codespaces--get-available-codespaces ()
+  "Internal: find all available codespaces."
+  (letrec ((newtable (make-hash-table :test 'equal))
+           ;; This is a terrible implementation but until I switch to using plists it's the best I can do
+           (construct (lambda (_ v)
+                        (when (codespaces-space-available-p v)
+                          (puthash (codespaces-space-readable-name v) v newtable)))))
+    (maphash construct (codespaces--get-codespaces))
+    newtable))
+
+(defun codespaces--get-unavailable-codespaces ()
+  "Internal: find all unavailable codespaces."
+  (letrec ((newtable (make-hash-table :test 'equal))
+           ;; This is a terrible implementation but until I switch to using plists it's the best I can do
+           (construct (lambda (_ v)
+                        (unless (codespaces-space-available-p v)
+                          (puthash (codespaces-space-readable-name v) v newtable)))))
+    (maphash construct (codespaces--get-codespaces))
+    newtable))
+
+(defun codespaces--send-start-async (cs)
+  "Send an `echo' command to CS over ssh."
+  (async-shell-command (format "gh codespace ssh -c %s echo 'Codespace ready.'" (codespaces-space-name cs))))
+
+(defun codespaces--send-start-sync (cs)
+  "Send an `echo' command to CS over ssh synchronously."
+  (shell-command (format "gh codespace ssh -c %s echo 'Codespace ready.'" (codespaces-space-name cs)) (get-buffer shell-command-buffer-name)))
+
+(defun codespaces--send-stop-async (cs)
+  "Tell codespaces CS to stop."
+  (shell-command (format "gh codespace stop -c %s" (codespaces-space-name cs))))
 
 (defun codespaces--fold (acc val)
   "Internal: fold function for accumulating JSON results into ACC from VAL."
@@ -111,14 +147,33 @@
        (valid-names ht))
     (completing-read "Select a codespace: " valid-names nil t)))
 
+;;; Public interface
+
+(defun codespaces-stop ()
+  "Stop a codespace chosen by `completing-read'."
+  (interactive)
+  (letrec ((json (codespaces--get-available-codespaces))
+           (selected (gethash (codespaces--complete json) json)))
+    (codespaces--send-stop-async selected)))
+
+(defun codespaces-start ()
+  "Start a codespace chosen by `completing-read'."
+  (interactive)
+  (letrec ((json (codespaces--get-unavailable-codespaces))
+           (selected (gethash (codespaces--complete json) json)))
+    (codespaces--send-start-async selected)))
+
+(defalias 'codespaces-activate #'codespaces-start)
+(make-obsolete 'codespaces-activate 'codespaces-start nil)
+
 (defun codespaces-connect ()
   "Connect to a codespace chosen by `completing-read'."
   (interactive)
   (letrec ((json (codespaces--get-codespaces))
-           (cs (codespaces--complete json))
-           (selected (gethash cs json)))
+           (selected (gethash (codespaces--complete json) json)))
     (unless (codespaces-space-available-p selected)
-      (message "Activating codespace (this may take some time)..."))
+      (message "Activating codespace (this may take some time)...")
+      (codespaces--send-start-sync selected))
     (find-file (format "/ghcs:%s:/workspaces" (codespaces-space-name selected)))))
 
 (provide 'codespaces)

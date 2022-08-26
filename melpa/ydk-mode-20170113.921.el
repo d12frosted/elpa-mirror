@@ -5,7 +5,7 @@
 ;; Author: Jackson Ray Hamilton <jackson@jacksonrayhamilton.com>
 ;; Version: 1.0.0
 ;; Package-Version: 20170113.921
-;; Package-Commit: f3f125b29408e0b0a34fec27dcb7c02c5dbfd04e
+;; Package-Commit: 3de9ef27dbdf5887f05092895e4ba93e7659e0ec
 ;; Keywords: faces games languages ydk yugioh yu-gi-oh
 ;; URL: https://github.com/jacksonrayhamilton/ydk-mode
 

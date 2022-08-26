@@ -2,12 +2,12 @@ Package: mastodon
 Fetcher: codeberg
 Source:  https://codeberg.org/martianh/mastodon.el.git
 
-Cloning https://codeberg.org/martianh/mastodon.el.git to /mnt/store/melpa/working/mastodon/
+Updating /mnt/store/melpa/working/mastodon/
 Checking out origin/HEAD
 Checking out 448b9e5a757b4ebf617a8ff1f04b9643f086672e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonHUyueu/mastodon-20220820.1427
+  to /tmp/mastodonXEZDgN/mastodon-20220820.1427
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -37,7 +37,7 @@ Created mastodon-20220820.1427.tar containing:
   mastodon-20220820.1427/mastodon-tl.el
   mastodon-20220820.1427/mastodon-toot.el
   mastodon-20220820.1427/mastodon.el
-Built mastodon in 14.708s, finished at 2022-08-25T19:29:49+0000
+Built mastodon in 6.073s, finished at 2022-08-25T23:13:34+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  392 Aug 25 19:29 packages/mastodon-20220820.1427.entry
-260K -rw-r--r-- 1 root root 260K Aug 25 19:29 packages/mastodon-20220820.1427.tar
+4.0K -rw-r--r-- 1 root root  392 Aug 25 23:13 packages/mastodon-20220820.1427.entry
+260K -rw-r--r-- 1 root root 260K Aug 25 23:13 packages/mastodon-20220820.1427.tar

@@ -1,11 +1,11 @@
 ;;; brazilian-holidays.el --- Brazilian holidays                   -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019 Jaguaraquem A. Reinaldo
+;; Copyright (C) 2022 Jaguaraquem A. Reinaldo
 
 ;; Author: Jaguaraquem A. Reinaldo <jaguar.adler@gmail.com>
-;; Version: 2.1.2
-;; Package-Version: 20210302.107
-;; Package-Commit: 68811fd5f3e9d9c0572995c3ca46ead2c35eb421
+;; Version: 2.1.3
+;; Package-Version: 20220825.2222
+;; Package-Commit: eaf7684da40c2ad1162cee07f3ffd4c1881f7cf6
 ;; URL: https://github.com/jadler/brazilian-holidays
 ;; Keywords: calendar holidays brazilian
 ;; Package-Requires: ((emacs "26"))
@@ -34,13 +34,16 @@
 ;; E.g.:
 ;; (require 'brazilian-holidays)
 ;; (setq brazilian-holidays-rj-holidays t)
+;; (brazilian-holidays-mode 1)
 ;;
 ;; Or with `use-package`:
 ;;
 ;; (use-package brazilian-holidays
 ;;  :custom
 ;;  (brazilian-holidays-rj-holidays t)
-;;  (brazilian-holidays-sp-holidays t))
+;;  (brazilian-holidays-sp-holidays t)
+;;  :init
+;;  (brazilian-holidays-mode 1))
 
 ;;; Code:
 
@@ -212,7 +215,7 @@ a non-positive integer, and enable the mode otherwise
 
 When brazilian holidays mode is enabled, it will hide
 holidays from other countries."
-  :init-value t
+  :init-value nil
   :group 'brazilian-holidays
   :global t
   (if brazilian-holidays-mode

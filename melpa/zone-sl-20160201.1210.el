@@ -6,7 +6,7 @@
 ;; Created: 2016-01-19
 ;; Version: 1.160201
 ;; Package-Version: 20160201.1210
-;; Package-Commit: 7ec22e3661c6348382f9fc39a9d0063dbd2352ff
+;; Package-Commit: 737b21b4b35c28a487ad8a31598e745bc183b209
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: games
 ;; URL: https://github.com/kawabata/zone-sl

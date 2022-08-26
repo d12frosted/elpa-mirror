@@ -494,7 +494,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(28 1 2 1)
+	 [(28 1 2 2)
 	  ((emacs
 	    (24 3))
 	   (nadvice
@@ -505,7 +505,7 @@
 	   (:maintainer "Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
-	   (:commit . "ce2fecf94eb3f27851567237a65251dbb419de4b"))])
+	   (:commit . "d533692182c084bad623977b69f9dc298255eaab"))])
  (consult .
 	  [(0 18)
 	   ((emacs
@@ -1489,7 +1489,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 6)
+	    [(0 7)
 	     ((emacs
 	       (27)))
 	     "Tool for inspection of Emacs Lisp objects." tar
@@ -1498,7 +1498,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "9404e8a6b9933ae8c6fd48826ff0069445eac031"))])
+	      (:commit . "44b3a9aec819b583d76bbbde1421b76c29fe2596"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
