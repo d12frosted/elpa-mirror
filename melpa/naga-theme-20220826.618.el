@@ -4,8 +4,8 @@
 
 ;; Author: Johannes Maier <johannes.maier@mailbox.org>
 ;; Version: 0.1
-;; Package-Version: 20220824.2032
-;; Package-Commit: 5f22695256f909667ee416d5f26abc1bc809daf9
+;; Package-Version: 20220826.618
+;; Package-Commit: 2517f1f84904c28ba25d6687a8f01e818e10e273
 ;; Homepage: https://github.com/kenranunderscore/emacs-naga-theme
 ;; Keywords: faces themes
 ;; Package-Requires: ((emacs "24.1"))
@@ -103,6 +103,8 @@ The default style is green text in a green box."
       (error (:foreground ,red))
       (compilation-mode-line-run (:foreground ,yellow))
       (cursor (:background ,red))
+      (shadow (:foreground ,comment-light))
+      (match (:foreground ,yellow :background ,bg-green :slant oblique))
 
       ;; orderless
       (orderless-match-face-0 (:foreground ,purple))
@@ -249,7 +251,10 @@ The default style is green text in a green box."
       ;; envrc
       (envrc-mode-line-none-face (:foreground ,fg))
       (envrc-mode-line-on-face (:foreground ,string))
-      (envrc-mode-line-error-face (:inherit 'error)))))
+      (envrc-mode-line-error-face (:inherit 'error))
+
+      ;; eglot
+      (eglot-highlight-symbol-face (:foreground ,fg :background ,bg-green :weight bold)))))
 
 ;; Set all the colors to their actual values.
 (let ((bg "#040404")
