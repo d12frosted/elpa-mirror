@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "28.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20220822.1337
-;; Package-Commit: 5309895a7616e04a55a9dd397100adfe35fcec60
+;; Package-Version: 20220826.139
+;; Package-Commit: 0565a7ca247834e19fa03cd7517f03666cd0ec80
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -379,7 +379,7 @@ Each element has form (ARCHIVE-FILE-EXTENSION COMMAND)."
               "-singlefile"
               "-f" (number-to-string pdf-page-number)
               pdf-file (file-name-sans-extension thumbnail-file))
-             (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+             (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
                (org-link-beautify--notify-generate-thumbnail-failed pdf-file thumbnail-file)))
             ('pdf2svg
              (unless (eq org-link-beautify-pdf-preview-image-format 'svg)
@@ -391,7 +391,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
               " *org-link-beautify pdf-preview*"
               "pdf2svg"
               pdf-file thumbnail-file (number-to-string pdf-page-number))
-             (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+             (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
                (org-link-beautify--notify-generate-thumbnail-failed pdf-file thumbnail-file)))))
         (org-link-beautify--add-overlay-marker start end)
         (org-link-beautify--add-keymap start end)
@@ -425,7 +425,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
               ;; (if org-link-beautify-ebook-preview-size
               ;;     (number-to-string thumbnail-size))
               )
-             (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+             (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
                (org-link-beautify--notify-generate-thumbnail-failed epub-file thumbnail-file)))
             ('darwin                    ; for macOS "epub-thumbnailer" command
              ;; DEBUG
@@ -448,7 +448,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
                             ))
               :stdout " *org-link-beautify epub-preview*"
               :stderr " *org-link-beautify epub-preview*")
-             (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+             (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
                (org-link-beautify--notify-generate-thumbnail-failed epub-file thumbnail-file)))
             (t (user-error "This system platform currently not supported by org-link-beautify.\n Please contribute code to support"))))
         (org-link-beautify--add-overlay-marker start end)
@@ -492,7 +492,7 @@ You can install software `libmobi' to get command `mobitool'.")
                ;; then rename [file_cover.jpg] to [file.jpg]
                (when (and (not (file-exists-p thumbnail-file)) (file-exists-p mobitool-cover-file))
                  (rename-file mobitool-cover-file thumbnail-file))
-               (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+               (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
                  (org-link-beautify--notify-generate-thumbnail-failed kindle-file thumbnail-file))))
             (_ (user-error "[org-link-beautify] Error: Can't find command tool to dump kindle ebook file cover."))))
         (org-link-beautify--add-overlay-marker start end)
@@ -597,7 +597,7 @@ You can install software `libmobi' to get command `mobitool'.")
            ;; then rename [video.mp4.png] to [video.png]
            (when (and (not (file-exists-p thumbnail-file)) (file-exists-p qlmanage-thumbnail-file))
              (rename-file qlmanage-thumbnail-file thumbnail-file))
-           (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+           (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
              (org-link-beautify--notify-generate-thumbnail-failed video-file thumbnail-file))))
         ("ffmpegthumbnailer"
          (start-process
@@ -607,7 +607,7 @@ You can install software `libmobi' to get command `mobitool'.")
           "-f" "-i" video-file
           "-s" (number-to-string thumbnail-size)
           "-o" thumbnail-file)
-         (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+         (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
            (org-link-beautify--notify-generate-thumbnail-failed video-file thumbnail-file)))
         ("ffmpeg"
          ;; $ ffmpeg -ss 00:09:00 video.avi -vcodec png -vframes 1 -an -f rawvideo -s 119x64 out.png
@@ -621,7 +621,7 @@ You can install software `libmobi' to get command `mobitool'.")
           "-an" "-f" "rawvideo"
           "-s" (number-to-string thumbnail-size)
           thumbnail-file)
-         (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+         (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
            (org-link-beautify--notify-generate-thumbnail-failed video-file thumbnail-file)))))
     (org-link-beautify--add-overlay-marker start end)
     (org-link-beautify--add-keymap start end)
@@ -657,13 +657,13 @@ You can install software `libmobi' to get command `mobitool'.")
               "qlmanage"
               "-x"
               "-t"
-              "-s" (number-to-string 100)
+              "-s" (number-to-string thumbnail-size)
               audio-file
               "-o" thumbnails-dir))
            ;; then rename [audio.mp3.png] to [audio.png]
            (when (and (not (file-exists-p thumbnail-file)) (file-exists-p qlmanage-thumbnail-file))
              (rename-file qlmanage-thumbnail-file thumbnail-file))
-           (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+           (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
              (org-link-beautify--notify-generate-thumbnail-failed audio-file thumbnail-file))))
         ("audiowaveform"
          (start-process
@@ -672,7 +672,7 @@ You can install software `libmobi' to get command `mobitool'.")
           "audiowaveform"
           "-i" audio-file
           "-o" thumbnail-file)
-         (when (or (not (file-exists-p thumbnail-file)) org-link-beautify-enable-debug-p)
+         (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
            (org-link-beautify--notify-generate-thumbnail-failed audio-file thumbnail-file)))
         ;; TODO: use ffmpeg to generate audio wave form preview image.
         ("ffmpeg"
