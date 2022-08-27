@@ -1,9 +1,11 @@
 (elx .
-     [(20220331 2252)
+     [(20220717 1643)
       ((emacs
-	(25 1)))
-      "extract information from Emacs Lisp libraries" single
-      ((:commit . "ea0b10340b22e8dd0454fe37ba84ff2157fada4f")
+	(25 1))
+       (compat
+	(28 1 1 0)))
+      "Extract information from Emacs Lisp libraries" single
+      ((:commit . "2432d4bea001653384c592a11fcc96ecaa5e834f")
        (:authors
 	("Jonas Bernoulli" . "jonas@bernoul.li"))
        (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")

@@ -1,30 +1,32 @@
-;;; elx.el --- extract information from Emacs Lisp libraries  -*- lexical-binding: t -*-
+;;; elx.el --- Extract information from Emacs Lisp libraries  -*- lexical-binding:t -*-
 
-;; Copyright (C) 2008-2022  Jonas Bernoulli
+;; Copyright (C) 2008-2022 Jonas Bernoulli
+
+;; Includes code from Emacs, which is
+;; Copyright (C) 1985-2022 Free Software Foundation, Inc.
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
-;; Created: 20081202
-;; Package-Requires: ((emacs "25.1"))
-;; Package-Version: 20220331.2252
-;; Package-Commit: ea0b10340b22e8dd0454fe37ba84ff2157fada4f
 ;; Homepage: https://github.com/emacscollective/elx
-;; Keywords: docs, libraries, packages
+;; Keywords: docs libraries packages
+;; Package-Version: 20220717.1643
+;; Package-Commit: 2432d4bea001653384c592a11fcc96ecaa5e834f
+
+;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
+
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
-;; This file is not part of GNU Emacs.
-
-;; This file is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation; either version 3, or (at your option)
-;; any later version.
-
+;; This file is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published
+;; by the Free Software Foundation, either version 3 of the License,
+;; or (at your option) any later version.
+;;
 ;; This file is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
-
+;;
 ;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;; along with this file.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
@@ -39,8 +41,10 @@
 
 ;;; Code:
 
+(require 'compat)
 (require 'json)
 (require 'lisp-mnt)
+(require 'package)
 (require 'subr-x)
 
 (defgroup elx nil
@@ -72,7 +76,7 @@ removed and the first word is upcases."
                   (when (string-match "[ \t]*-\\*-.*-\\*-" summary)
                     (setq summary (substring summary 0 (match-beginning 0))))
                   (when sanitize
-                    (when (string-match "\\.$" summary)
+                    (when (string-suffix-p "." summary)
                       (setq summary (substring summary 0 -1)))
                     (when (string-match "^[a-z]" summary)
                       (setq summary
@@ -109,7 +113,7 @@ else as strings."
         (dolist (keyword (split-string
                           (downcase line)
                           (concat "\\("
-                                  (if (string-match-p "," line)
+                                  (if (string-search "," line)
                                       ",[ \t]*"
                                     "[ \t]+")
                                   "\\|[ \t]+and[ \t]+\\)")
@@ -138,8 +142,8 @@ the leading semicolons and exactly one space are removed,
 likewise leading \"\(\" is replaced with just \"(\".  Lines
 consisting only of whitespace are converted to empty lines."
   (lm-with-file file
-    (when-let ((start (lm-section-start lm-commentary-header t)))
-      (progn
+    (and-let* ((start (lm-section-start lm-commentary-header t)))
+      (progn ; debbugs#31840
         (goto-char start)
         (let ((commentary (buffer-substring-no-properties
                            start (lm-commentary-end))))
@@ -158,6 +162,16 @@ consisting only of whitespace are converted to empty lines."
                        (concat commentary "\n"))))
           commentary)))))
 
+;;; Extract Package-Requires
+
+(defun elx-package-requires (&optional file)
+  "Extract the value of the Package-Requires header of the specified package."
+  (and-let* ((require-lines
+              (lm-with-file file
+                (lm-header-multiline "package-requires"))))
+    (package--prepare-dependencies
+     (package-read-from-string (mapconcat #'identity require-lines " ")))))
+
 ;;; Extract Pages
 
 (defun elx-wikipage (&optional file)
@@ -171,7 +185,7 @@ consisting only of whitespace are converted to empty lines."
 ;;; Extract License
 
 (defconst elx-gnu-permission-statement-regexp
-  (replace-regexp-in-string
+  (string-replace
    "\s" "[\s\t\n;]+"
    ;; is free software[.,:;]? \
    ;; you can redistribute it and/or modify it under the terms of the \
@@ -186,9 +200,9 @@ version \\(?2:[0-9.]*[0-9]\\)[.,:;]?\
 \\(?3: or \\(?:(?at your option)? \\)?any later version\\)?"))
 
 (defconst elx-bsd-permission-statement-regexp
-  (replace-regexp-in-string
+  (string-replace
    "%" "[-0-4).*\s\t\n;]+"
-   (replace-regexp-in-string
+   (string-replace
     "\s" "[\s\t\n;]+"
     ;; Copyright (c) <year>, <copyright holder>
     ;; All rights reserved.
@@ -229,7 +243,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT \
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\\.")))
 
 (defconst elx-mit-permission-statement-regexp
-  (replace-regexp-in-string
+  (string-replace
    "\s" "[\s\t\n;]+"
    ;; Copyright (c) <year> <copyright holders>
    ;;
@@ -262,7 +276,7 @@ this Software without prior written authorization\\)?"
    ))
 
 (defconst elx-isc-permission-statement-regexp
-  (replace-regexp-in-string
+  (string-replace
    "\s" "[\s\t\n;]+"
    ;; Copyright <YEAR> <OWNER>
    ;;
@@ -282,7 +296,7 @@ OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF \
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE\\."))
 
 (defconst elx-cc-permission-statement-regexp
-  (replace-regexp-in-string
+  (string-replace
    "\s" "[\s\t\n;]+"
    ;; This work is
    "\
@@ -299,7 +313,7 @@ licensed under the Creative Commons \
    ))
 
 (defconst elx-wtf-permission-statement-regexp
-  (replace-regexp-in-string
+  (string-replace
    "\s" "[\s\t\n;]+"
    ;; This program is
    "\
@@ -324,7 +338,7 @@ To Public License, Version 2, as published by Sam Hocevar\\."))
   `(;; SPDX:
     ("GPL-3.0-or-later" . "^;\\{1,4\\} Licensed under the same terms as Emacs")
     ("GPL-2.0-or-later" . "^;;   :licence:  GPL 2 or later (free software)")
-    ("GPL-2.0-only"     . ,(replace-regexp-in-string "\s" "[\s\n;]+" "\
+    ("GPL-2.0-only"     . ,(string-replace "\s" "[\s\n;]+" "\
 This file is free software; you can redistribute it and/or \
 modify it under the terms of version 2 of the GNU General \
 Public License as published by the Free Software Foundation\\.")) ; lmselect, tiger
@@ -1027,7 +1041,7 @@ An effort is made to normalize the returned value."
         (prefix  (match-string 4 value)))
     (concat
      (if prefix
-         (cond ((string-match-p "\\`zlib\\'" prefix) "Zlib")
+         (cond ((equal prefix "zlib") "Zlib")
                (t (upcase prefix)))
        (pcase (and abbrev (downcase abbrev))
          ("lesser "  "LGPL")
@@ -1118,8 +1132,8 @@ the \"Updated\" or \"Last-Updated\" header keyword."
                           (elx--date-2 string dmy nil))))
                (cond ((not a) b)
                      ((not b) a)
-                     ((> (length a) (length b)) a)
-                     ((> (length b) (length a)) b)
+                     ((length> a (length b)) a)
+                     ((length> b (length a)) b)
                      (t a)))))))
 
 (defun elx--date-2 (string regexp anchored)
@@ -1127,8 +1141,8 @@ the \"Updated\" or \"Last-Updated\" header keyword."
        (let ((m  (match-string 2 string))
              (d  (match-string 3 string)))
          (concat (match-string 1 string)
-                 (and m d (concat (if (= (length m) 2) m (concat "0" m))
-                                  (if (= (length d) 2) d (concat "0" d))))))))
+                 (and m d (concat (if (length= m 2) m (concat "0" m))
+                                  (if (length= d 2) d (concat "0" d))))))))
 
 (defun elx--date-3 (string)
   (let ((time (mapcar (lambda (e) (or e 0))

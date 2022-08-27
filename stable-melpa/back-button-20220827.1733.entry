@@ -1,11 +1,9 @@
 (back-button .
-	     [(20150804 2004)
+	     [(20220827 1733)
 	      ((nav-flash
 		(1 0 0))
 	       (smartrep
 		(0 0 3))
-	       (ucs-utils
-		(0 7 2))
 	       (list-utils
 		(0 4 2))
 	       (persistent-soft
@@ -13,7 +11,7 @@
 	       (pcache
 		(0 2 3)))
 	      "Visual navigation through mark rings" single
-	      ((:commit . "98d92984a740acd1547bd7ed05cca0affdb21c3e")
+	      ((:commit . "f8783c98a7fefc1d0419959c1b462c7dcadce5a8")
 	       (:authors
 		("Roland Walker" . "walker@pobox.com"))
 	       (:maintainer "Roland Walker" . "walker@pobox.com")

@@ -96,8 +96,7 @@ Compatibility and Requirements
     GNU Emacs version 22.2           : yes, with some limitations
     GNU Emacs version 21.x and lower : unknown
 
-    Uses if present: smartrep.el, nav-flash.el, visible-mark.el,
-                     ucs-utils.el
+    Uses if present: smartrep.el, nav-flash.el, visible-mark.el
 
 Bugs
 
