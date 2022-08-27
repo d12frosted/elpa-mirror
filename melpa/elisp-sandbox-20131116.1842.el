@@ -4,7 +4,7 @@
 ;; Author: Joel McCracken <mccracken.joel@gmail.com>, D. Goel <deego@gnufans.org>
 ;; Version: 0.0.1
 ;; Package-Version: 20131116.1842
-;; Package-Commit: d894d68934ef09c42f72ac4e1173a0bedc23f139
+;; Package-Commit: ddd669266ca36d7e4ebba73eb1ab42523787e042
 ;; URL: https://github.com/joelmccracken/elisp-sandbox
 ;; Keywords: lisp
 

@@ -6,7 +6,7 @@
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
 ;; Version: 0.0.2
 ;; Package-Version: 20120403.1815
-;; Package-Commit: 66460f8ab1b24656e6f3ce5bd50cff6a81be8422
+;; Package-Commit: 0efeed7ab948e48128e6f1a7ddff17ef2951e1c2
 ;; Keywords: tools, convenience
 ;; URL: http://github.com/rejeep/html-script-src
 
