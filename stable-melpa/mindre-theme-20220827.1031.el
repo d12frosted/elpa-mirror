@@ -1,9 +1,9 @@
 ;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
 
 ;; Author: Erik Bäckman <contact@ebackman.net>
-;; Version: 0.1.4
-;; Package-Version: 20220819.1
-;; Package-Commit: b787829f7c1b7940a88af885945c572f266fead8
+;; Version: 0.1.5
+;; Package-Version: 20220827.1031
+;; Package-Commit: fc9ab1ba03494f2fb8cb8dc4e2ba5120ae35eb31
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces
 ;; Homepage: https://github.com/erikbackman/mindre-theme
@@ -70,6 +70,7 @@
       (green-faint . "#537469")
       (yellow-dark . "#54433a")
       (red . "#9E0000")
+      (red-faint . "#ffb7b6")
       (orange . "#d47500"))))
 
 (defmacro mindre-with-color-variables (&rest body)
@@ -282,7 +283,7 @@ Takes care of adding or removing hooks when the
     `(mindre-error ((t (:foreground ,red))))
     `(mindre-critical ((t (:foreground ,bg-main :background ,red))))
     `(mindre-critical-i ((t (:foreground ,red))))
-    `(mindre-link ((t (:foreground ,purple :underline t))))
+    `(mindre-link ((t (:foreground ,blue :underline t))))
 
     `(mindre-heading-1 ((t (:inherit mindre-strong :height ,mindre-heading-1-height))))
     `(mindre-block ((t (:background ,bg-active :foreground ,fg-main :extend t))))
@@ -292,8 +293,8 @@ Takes care of adding or removing hooks when the
     `(mindre-bar ((t (:foreground ,fg-main :inherit mindre-border))))
     `(mindre-bar-inactive ((t (:foreground "#535c65" :background ,bg-inactive :inherit mindre-border))))
 
-    `(mindre-button ((t (:box (:style nil) :background ,bg-inactive))))
-    `(mindre-button-pressed ((t (:box (:style nil) :background ,bg-inactive))))
+    `(mindre-button ((t (:box (:color ,gray-silver) :background ,bg-inactive))))
+    `(mindre-button-pressed ((t (:box (:color ,gray-dark) :background ,bg-inactive))))
     `(mindre-button-hover ((t (:inherit mindre-button :background ,bg-inactive))))
 
     ;; --- Header & mode line -------------------------------------------
@@ -577,10 +578,10 @@ Takes care of adding or removing hooks when the
     '(popup-tip-face ((t (:inherit mindre-strong-i))))
 
     ;; --- Diff ---------------------------------------------------------
-    '(diff-header ((t (:inherit mindre-faded))))
+    `(diff-header ((t (:inherit mindre-bold))))
     '(diff-file-header ((t (:inherit mindre-strong))))
     '(diff-context ((t (:inherit mindre-default))))
-    '(diff-removed ((t (:inherit mindre-faded))))
+    '(diff-removed ((t (:background "#ffb7b6"))))
     '(diff-changed ((t (:inherit mindre-strong))))
     `(diff-added ((t (:background ,green-mint))))
     '(diff-refine-added ((t (:inherit (mindre-keyword mindre-strong)))))
@@ -784,12 +785,12 @@ Takes care of adding or removing hooks when the
     `(notmuch-search-count ((t (:inherit mindre-faded))))
     `(notmuch-search-unread-face ((t (:weight semibold))))
     `(notmuch-search-date ((t (:inherit mindre-default))))
-    `(notmuch-search-matching-authors ((t (:inherit mindre-keyword))))
+    `(notmuch-search-matching-authors ((t (:foreground ,black-alt))))
     `(notmuch-search-non-matching-authors ((t (:inherit mindre-faded))))
     `(notmuch-search-subject ((t (:inherit mindre-default))))
     `(notmuch-tag-added ((t (:inherit mindre-verbatim :underline t))))
     `(notmuch-tag-deleted ((t (:inherit mindre-verbatim :strike-through t))))
-    `(notmuch-tag-face ((t (:inherit mindre-verbatim))))
+    `(notmuch-tag-face ((t (:inherit mindre-keyword))))
     `(notmuch-tag-flagged ((t (:inherit mindre-strong))))
     `(notmuch-tag-unread ((t (:inherit mindre-strong))))
     `(notmuch-tree-match-author-face ((t (:inherit mindre-keyword))))
