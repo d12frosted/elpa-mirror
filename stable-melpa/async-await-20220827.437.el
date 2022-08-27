@@ -4,8 +4,8 @@
 
 ;; Author: chuntaro <chuntaro@sakura-games.jp>
 ;; URL: https://github.com/chuntaro/emacs-async-await
-;; Package-Version: 20220825.946
-;; Package-Commit: 46cd65bdac59c85ce54e3bf3ce6ea2849a0331d4
+;; Package-Version: 20220827.437
+;; Package-Commit: e0d15e8057ed7520100bc50c5552278292ebcb07
 ;; Package-Requires: ((emacs "25.1") (promise "1.1") (iter2 "0.9.10"))
 ;; Version: 1.1
 ;; Keywords: async await convenience
@@ -235,12 +235,7 @@ See \"For complex cases\" section in `make-autoload'."
 (advice-add 'make-autoload :around #'async-await-advice-make-autoload)
 
 (add-to-list 'lisp-imenu-generic-expression
-             (list nil (purecopy (concat
-                                  "^\\s-*("
-                                  (eval-when-compile
-                                    (regexp-opt '("async-defun" "async-lambda") t))
-                                  "\\s-+\\(" lisp-mode-symbol-regexp "\\)"))
-                   2))
+             (list nil (concat "^\\s-*(async-defun\\s-+\\(" lisp-mode-symbol-regexp "\\)") 1))
 
 (provide 'async-await)
 ;;; async-await.el ends here

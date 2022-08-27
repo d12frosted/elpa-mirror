@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20220826.2149
-;; Package-Commit: fcf655db6c343dbc017d8f1b91af4e0efcbd408c
+;; Package-Version: 20220827.531
+;; Package-Commit: a44381d92c342455ab4df218df12a6a084531402
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -249,7 +249,9 @@
                   ("health" . ,(all-the-icons-faicon "medkit" :face '(:foreground "LightGray")))
                   ("law" . ,(all-the-icons-faicon "gavel" :face '(:foreground "LightGray")))
                   ("court" . ,(all-the-icons-faicon "balance-scale" :face '(:foreground "LightGray")))
-                  ("government" . ,(all-the-icons-faicon "building-o" :face '(:foreground "LightGray")))
+                  ("lawer" . ,(all-the-icons-faicon "black-tie" :face '(:foreground "DodgerBlue")))
+                  ("building" . ,(all-the-icons-faicon "building-o" :face '(:foreground "LightGray")))
+                  ("government" . ,(all-the-icons-faicon "building-o" :face '(:foreground "SlateGray2")))
                   ("school" . ,(all-the-icons-material "school" :face '(:foreground "black")))
                   ("censorship" . ,(all-the-icons-faicon "assistive-listening-systems" :face '(:foreground "OrangeRed")))
                   ("map" . ,(all-the-icons-material "map" :face '(:foreground "RosyBrown")))
@@ -291,11 +293,12 @@
                   ("reStructure" . ,(all-the-icons-fileicon "rst" :face '(:foreground "LightGray")))
                   ("OneNote" . ,(all-the-icons-fileicon "onenote" :face '(:foreground "BlueViolet")))
                   ("slideshow" . ,(all-the-icons-material "slideshow" :face '(:foreground "IndianRed")))
-                  ("word" . ,(all-the-icons-fileicon "word" :face '(:foreground "SteelBlue")))
-                  ("excel" . ,(all-the-icons-fileicon "excel" :face '(:foreground "ForestGreen")))
-                  ("powerpoint" . ,(all-the-icons-fileicon "powerpoint" :face '(:foreground "IndianRed")))
-                  ("keynote" . ,(all-the-icons-fileicon "keynote" :face '(:foreground "LightGray")))
-                  ("access" . ,(all-the-icons-fileicon "access" :face '(:foreground "IndianRed")))
+                  ("Word" . ,(all-the-icons-fileicon "word" :face '(:foreground "SteelBlue")))
+                  ("Excel" . ,(all-the-icons-fileicon "excel" :face '(:foreground "ForestGreen")))
+                  ("PowerPoint" . ,(all-the-icons-fileicon "powerpoint" :face '(:foreground "IndianRed")))
+                  ("Keynote" . ,(all-the-icons-fileicon "keynote" :face '(:foreground "LightGray")))
+                  ("WordPress" . ,(all-the-icons-faicon "wordpress" :face '(:foreground "LightGray")))
+                  ("Access" . ,(all-the-icons-fileicon "access" :face '(:foreground "IndianRed")))
                   ("pdf" . ,(all-the-icons-faicon "file-pdf-o" :face '(:foreground "LightCoral")))
                   ("image" . ,(all-the-icons-faicon "file-image-o" :face '(:foreground "LightGray")))
                   ("video" . ,(all-the-icons-faicon "file-video-o" :face '(:foreground "LightGray")))
@@ -349,7 +352,7 @@
                   ("@family" . ,(all-the-icons-material "home" :face '(:foreground "DarkKhaki")))
                   
                   ;; Work
-                  ("work" . ,(all-the-icons-faicon "black-tie" :face '(:foreground "DodgerBlue")))
+                  ("work" . ,(all-the-icons-faicon "black-tie" :face '(:foreground "OliveDrab4")))
                   ("print" . ,(all-the-icons-faicon "print" :face '(:foreground "SkyBlue")))
                   ("business_trip" . ,(all-the-icons-faicon "briefcase" :face '(:foreground "DarkTurquoise")))
                   
@@ -409,6 +412,7 @@
                   ("smartphone" . ,(all-the-icons-material "smartphone" :face '(:foreground "SkyBlue")))
                   ("phone" . ,(all-the-icons-faicon "phone-square" :face '(:foreground "SkyBlue")))
                   ("keyboard" . ,(all-the-icons-faicon "keyboard-o" :face '(:foreground "cyan")))
+                  ("mouse" . ,(all-the-icons-faicon "mouse-pointer" :face '(:foreground "cyan")))
                   ("arduino" . ,(all-the-icons-fileicon "arduino" :face '(:foreground "SkyBlue")))
                   ("Arduino" . ,(all-the-icons-fileicon "arduino" :face '(:foreground "SkyBlue")))
                   ("hardware" . ,(all-the-icons-material "devices_other" :face '(:foreground "SkyBlue")))
@@ -659,6 +663,7 @@
                   ("free" . ,(all-the-icons-fileicon "freemarker" :face '(:foreground "gray")))
                   ;; ("license" . ,(all-the-icons-faicon "" :face '(:foreground "SteelBlue")))
                   ("copyright" . ,(all-the-icons-faicon "copyright" :face '(:foreground "SteelBlue")))
+                  ("trademark" . ,(all-the-icons-faicon "trademark" :face '(:foreground "SteelBlue")))
                   ("registered" . ,(all-the-icons-faicon "registered" :face '(:foreground "gold")))
                   ("CC" . ,(all-the-icons-faicon "cc" :face '(:foreground "gray")))
                   ;; -----------------------------------------------------

@@ -7,8 +7,8 @@
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;;
 ;; URL: https://github.com/jasonm23/autothemer
-;; Package-Version: 20220824.2009
-;; Package-Commit: 378f8707bdd944f19b6fd4544359e993c9113752
+;; Package-Version: 20220827.200
+;; Package-Commit: 99c94627bda8ee0dfdf4dfe7dfb2245b5ef3bb0a
 ;; Version: 0.2.9
 ;; Package-Requires: ((dash "2.10.0") (emacs "26.1"))
 ;;
@@ -35,6 +35,8 @@
 ;;; Code:
 (require 'cl-lib)
 (require 'dash)
+(require 'lisp-mnt)
+(require 'subr-x)
 
 (cl-defstruct autothemer--color name value)
 
