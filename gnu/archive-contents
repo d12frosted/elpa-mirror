@@ -96,7 +96,7 @@
 		   ("Matthew Carter" . "m@ahungry.com"))
 		  (:keywords "ahungry" "palette" "color" "theme" "emacs" "color-theme" "deftheme"))])
  (aircon-theme .
-	       [(0 0 5)
+	       [(0 0 6)
 		((emacs
 		  (24 4)))
 		"Cool and legible light theme" tar
@@ -105,7 +105,7 @@
 		 (:maintainer "Gregory Chamberlain" . "~chambln/public-inbox@lists.sr.ht")
 		 (:authors
 		  ("Gregory Chamberlain" . "greg@cosine.blue"))
-		 (:commit . "4741bd16f539ec8800dadc69f885b73b9fc2b106"))])
+		 (:commit . "0cecd81e7f6631c91ed0437d801517677e018c1d"))])
  (all .
       [(1 0)
        nil "Edit all lines matching a given regexp" single

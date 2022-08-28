@@ -4,8 +4,8 @@
 
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Version: 0.0.1
-;; Package-Version: 20200527.732
-;; Package-Commit: 2b258fa4f0811443e4dbafbc94ea6756062420f6
+;; Package-Version: 20220828.6
+;; Package-Commit: e84387b947cd707d3ff0c039ddef753a468f88e7
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "26.1") (async-await "1.0") (async "1.9.4") (all-the-icons "2.2.0") (ppp "1.0.0"))
 ;; URL: https://github.com/conao3/dired-git.el
@@ -161,7 +161,7 @@ WIDTH stored maxlength to align column."
        shell-command-switch
        "find . -mindepth 1 -maxdepth 1 -type d | sort | tr \\\\n \\\\0 | \
 xargs -0 -I^ sh -c \"
-cd ^
+cd '^'
 git rev-parse --is-inside-work-dir >/dev/null 2>&1 || exit 0
 if [ \\\"true\\\" = \\\"\\$(git rev-parse --is-inside-git-dir)\\\" ]; then exit 0; fi
 if [ \\\"\\$PWD\\\" != \\\"\\$(git rev-parse --show-toplevel)\\\" ]; then exit 0; fi
