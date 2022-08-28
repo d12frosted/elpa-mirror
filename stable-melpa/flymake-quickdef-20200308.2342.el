@@ -4,6 +4,8 @@
 
 ;; Author: Karl Otness
 ;; Version: 1.0.0
+;; Package-Version: 20200308.2342
+;; Package-Commit: 150c5839768a3d32f988f9dc08052978a68f2ad7
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: languages, tools, convenience, lisp
 ;; URL: https://github.com/karlotness/flymake-quickdef

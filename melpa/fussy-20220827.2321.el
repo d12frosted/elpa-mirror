@@ -4,8 +4,8 @@
 
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Version: 1.0
-;; Package-Version: 20220817.1234
-;; Package-Commit: fa62f9624a6847dac594ab9f9a3154105ba2e3ef
+;; Package-Version: 20220827.2321
+;; Package-Commit: 1e785a4cd94c8d68df5b7905de05bb03c53e70ba
 ;; Package-Requires: ((emacs "27.2") (flx "0.5"))
 ;; Keywords: matching
 ;; Homepage: https://github.com/jojojames/fussy
@@ -500,7 +500,8 @@ Implement `all-completions' interface with additional fuzzy / `flx' scoring."
                  (substring beforepoint (car bounds))
                  (substring afterpoint 0 (cdr bounds)))))
     (if-let ((cached-all (and fussy-use-cache
-                              (gethash string fussy--all-cache))))
+                              (cl-copy-list
+                               (gethash string fussy--all-cache)))))
         (progn
           ;; (message "%s from hash with length %d"
           ;;          string (length cached-all))
@@ -514,8 +515,10 @@ Implement `all-completions' interface with additional fuzzy / `flx' scoring."
                             (and
                              fussy-use-cache
                              (> (length string) 0)
-                             (gethash (substring string 0 (- (length string) 1))
-                                      fussy--all-cache))))
+                             (cl-copy-list
+                              (gethash
+                               (substring string 0 (- (length string) 1))
+                               fussy--all-cache)))))
                       (progn
                         ;; (message "using cache for filter")
                         (list

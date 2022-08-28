@@ -4,6 +4,8 @@
 
 ;; Author: Daniel Martín <mardani29@yahoo.es>
 ;; URL: https://github.com/danielmartin/flycheck-drstring
+;; Package-Version: 20200210.1903
+;; Package-Commit: d8d5a560e792a6657ef5ac69934c74f1ed51372d
 ;; Created: 1 February 2020
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.25") (swift-mode "8.0"))

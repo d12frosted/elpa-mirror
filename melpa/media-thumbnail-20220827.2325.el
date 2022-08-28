@@ -5,8 +5,8 @@
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Maintainer: James Nguyen <james@jojojames.com>
 ;; URL: https://github.com/jojojames/media-thumbnail
-;; Package-Version: 20220821.255
-;; Package-Commit: b8234e25a6eb19320fc0b868059b8d0c653cc7c0
+;; Package-Version: 20220827.2325
+;; Package-Commit: 14e626fe7ee714ab45c9e636d00a26e89aa2832a
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: files, tools
@@ -206,7 +206,7 @@ to disable automatic refresh when a special command is triggered."
                          :file ,file)
                        :append)
           image-spec))))
-   (:default nil)))
+   (t nil)))
 
 (defun media-thumbnail--create-image (filename)
   "Helper method to create and return an image given FILENAME."
