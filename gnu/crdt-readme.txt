@@ -6,14 +6,11 @@ Table of Contents
 .. 1. Installation
 .. 2. Start a shared session
 .. 3. Join a session
-.. 4. List active users
-.. 5. List all sessions, and buffer in current session
-.. 6. Stop sharing
-.. 7. Disconnect from a session
-.. 8. Visualizing author of parts of the document
-.. 9. Synchronizing Org folding status
-.. 10. Comint integration
-.. 11. What if we don't have a public IP?
+.. 4. Navigate through sessions
+.. 5. Stop sharing
+.. 6. Disconnect from a session
+.. 7. Fancy stuff
+.. 8. What if we don't have a public IP?
 
 
 1 Introduction
@@ -88,32 +85,34 @@ Table of Contents
   crdt-share-buffer'.
 
 
-2.4 List active users
-─────────────────────
+2.4 Navigate through sessions
+─────────────────────────────
 
-  In a CRDT shared buffer (either server or client), `M-x
-  crdt-list-users'.
+  Sessions
+        `M-x crdt-list-sessions' lists all sessions.
 
-  In the displayed user list, press `RET' on an entry to goto that
-  user's cursor position.  Press `f' to follow that user, and press `f'
-  again or `M-x crdt-stop-follow' to stop following.
+  Buffers
+        `M-x crdt-list-buffers' lists all buffers in current session.
+        In the displayed buffer list, press `RET' in the session list to
+        see buffers in the selected session.
 
-  You can also use `M-x crdt-goto-next-user' and `M-x
-  crdt-goto-prev-user' to cycle through users' cursor positions from any
-  CRDT shared buffer (don't need to be in the user list buffer).
+        You can also use `M-x crdt-switch-to-buffer' to interactively
+        switch to another buffer in the current session.
+
+  Users
+        In a CRDT shared buffer (either server or client), `M-x
+        crdt-list-users' to list active users. In the displayed user
+        list, press `RET' on an entry to goto that user's cursor
+        position.  Press `f' to follow that user, and press `f' again or
+        `M-x crdt-stop-follow' to stop following.
+
+        You can also use `M-x crdt-goto-next-user' and `M-x
+        crdt-goto-prev-user' to cycle through users' cursor positions
+        from any CRDT shared buffer (don't need to be in the user list
+        buffer).
 
 
-2.5 List all sessions, and buffer in current session
-────────────────────────────────────────────────────
-
-  `M-x crdt-list-sessions' lists all sessions.
-
-  `M-x crdt-list-buffers' lists all buffers in current session. Or you
-  can also press `RET' in the session list to see buffers in the
-  selected session.
-
-
-2.6 Stop sharing
+2.5 Stop sharing
 ────────────────
 
   `M-x crdt-stop-session' stops a session you've started and disconnect
@@ -128,7 +127,7 @@ Table of Contents
   press `k' or `d' in the buffer list.
 
 
-2.7 Disconnect from a session
+2.6 Disconnect from a session
 ─────────────────────────────
 
   `M-x crdt-disconnect', then choose a session to disconnect from.
@@ -141,33 +140,29 @@ Table of Contents
   (show it by `M-x crdt-list-users').
 
 
-2.8 Visualizing author of parts of the document
-───────────────────────────────────────────────
+2.7 Fancy stuff
+───────────────
 
-  Turn on `crdt-visualize-author-mode'. Colored underlines are added to
-  each part of the document, based on which user authored it.
+  Visualizing author of parts of the document
+        Turn on `crdt-visualize-author-mode' to color text based on
+        which user authored it.
 
+  Synchronizing Org folding status
+        Turn on `crdt-org-sync-overlay-mode'. All peers that have this
+        enabled have their folding status synchronized. Peers without
+        enabling this minor mode are unaffected.
 
-2.9 Synchronizing Org folding status
-────────────────────────────────────
-
-  Turn on `crdt-org-sync-overlay-mode'. All peers that have this enabled
-  have their folding status synchronized. Peers without enabling this
-  minor mode are unaffected.
-
-
-2.10 Comint integration
-───────────────────────
-
-  Just go ahead and share you comint REPL buffer! Tested: `shell' and
-  `cmuscheme'.  By default, when sharing a comint buffer, `crdt.el'
-  temporarily reset input history (as in `M-n' `M-p') so others don't
-  spy into your `.bash_history' and alike.  You can customize this
-  behavior using variable `crdt-comint-share-input-history'.
+  Comint integration
+        Just go ahead and share you comint REPL buffer! Tested: `shell'
+        and `cmuscheme'.  By default, when sharing a comint buffer,
+        `crdt.el' temporarily reset input history (as in `M-n' `M-p') so
+        others don't spy into your `.bash_history' and alike.  You can
+        customize this behavior using variable
+        `crdt-comint-share-input-history'.
 
 
-2.11 What if we don't have a public IP?
-───────────────────────────────────────
+2.8 What if we don't have a public IP?
+──────────────────────────────────────
 
   There're various workaround.
 

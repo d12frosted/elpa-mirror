@@ -5,8 +5,8 @@
 ;;
 ;; Author: Florian Kaufmann <sensorflo@gmail.com>
 ;; URL: https://github.com/bbatsov/adoc-mode
-;; Package-Version: 20220826.1507
-;; Package-Commit: 888a38beb2287f2bde0ce91f4baec9343aaf8eeb
+;; Package-Version: 20220828.733
+;; Package-Commit: 800c316c90d335a1678f152fcf987f505a492ffe
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; Created: 2009
 ;; Version: 0.7.0-snapshot
@@ -353,177 +353,6 @@ To become a customizable variable when regexps for list items become customizabl
 (defvar adoc-replacement-failed nil )
 
 (define-abbrev-table 'adoc-mode-abbrev-table ())
-
-(defvar adoc-mode-map
-  (let ((map (make-sparse-keymap)))
-    (define-key map "\C-c\C-d" 'adoc-demote)
-    (define-key map "\C-c\C-p" 'adoc-promote)
-    (define-key map "\C-c\C-t" 'adoc-toggle-title-type)
-    (define-key map "\C-c\C-g" 'adoc-goto-ref-label)
-    (easy-menu-define adoc-mode-menu map "Menu for adoc mode"
-    `("AsciiDoc"
-      ["Promote" adoc-promote]
-      ["Demote" adoc-demote]
-      ["Toggle title type" adoc-toggle-title-type]
-      ["Adjust title underline" adoc-adjust-title-del]
-      ["Goto anchor" adoc-goto-ref-label]
-      "---"
-      ;; names|wording / rough order/ help texts are from asciidoc manual
-      ("Templates / cheat sheet"
-       ("Text formatting - constrained quotes"
-        :help ,adoc-help-constrained-quotes
-        ["_Emphasis_" tempo-template-adoc-emphasis
-         :help ,adoc-help-emphasis ]
-        ["*Strong*" tempo-template-adoc-strong
-         :help ,adoc-help-strong ]
-        ["+Monospaced+" tempo-template-adoc-monospace
-         :help ,adoc-help-monospace]
-        ["`Monospaced literal`" tempo-template-adoc-monospace-literal ; redundant to the one in the passthrough section
-         :help ,adoc-help-monospace-literal]
-        ["`Single quote'" tempo-template-adoc-single-quote
-         :help ,adoc-help-single-quote]
-        ["``Double quote''" tempo-template-adoc-double-quote
-         :help ,adoc-help-double-quote]
-        ;; TODO: insert underline, overline, strikethrough, big, small
-        ["[attributes]##text##" tempo-template-adoc-attributed
-         :help ,adoc-help-attributed])
-       ("Text formatting - unconstrained quotes"
-        :help ,adoc-help-unconstrained-quotes
-        ["^Superscript^" tempo-template-adoc-superscript]
-        ["~Subscript~" tempo-template-adoc-subscript]
-        ["__Emphasis__" tempo-template-adoc-emphasis-uc
-         :help ,adoc-help-emphasis ]
-        ["**Strong**" tempo-template-adoc-strong-uc
-         :help ,adoc-help-strong ]
-        ["++Monospaced++" tempo-template-adoc-monospace-uc
-         :help ,adoc-help-monospace]
-        ["[attributes]##text##" tempo-template-adoc-attributed-uc
-         :help ,adoc-help-attributed])
-       ("Text formatting - misc"
-        ["Line break: <SPC>+<NEWLINE>" tempo-template-adoc-line-break
-         :help ,adoc-help-line-break]
-        ["Page break: <<<" tempo-template-adoc-page-break
-         :help ,adoc-help-page-break]
-        ["Ruler line: ---" tempo-template-adoc-ruler-line
-         :help ,adoc-help-ruler-line])
-       ("Text formatting - replacements"
-        ["Copyright: (C) \u2192 \u00A9" tempo-template-adoc-copyright]
-        ["Trademark: (TM) \u2192 \u2122" tempo-template-adoc-trademark]
-        ["Registered trademark: (R) \u2192 \u00AE" tempo-template-adoc-registered-trademark]
-        ["Dash: -- \u2192 \u2014" tempo-template-adoc-dash]
-        ["Ellipsis: ... \u2192 \u2026" tempo-template-adoc-ellipsis]
-        ["Right arrow: -> \u2192 \u2192" tempo-template-adoc-right-arrow]
-        ["Left arrow: <- \u2192 \u2190" tempo-template-adoc-left-arrow]
-        ["Right double arrow: => \u2192 \u21D2" tempo-template-adoc-right-double-arrow]
-        ["Left double arrow: <= \u2192 \u21D0" tempo-template-adoc-left-double-arrow]
-        "---"
-        ["Character entity reference: &...;" tempo-template-adoc-entity-reference
-         :help ,adoc-help-entity-reference])
-       ("Titles"
-        [,(concat "Document title (level 0): " (adoc-template-str-title 0))
-         tempo-template-adoc-title-1]
-        [,(concat "Section title (level 1): " (adoc-template-str-title 1))
-         tempo-template-adoc-title-2]
-        [,(concat "Section title (level 2): " (adoc-template-str-title 2))
-         tempo-template-adoc-title-3]
-        [,(concat "Section title (level 3): " (adoc-template-str-title 3))
-         tempo-template-adoc-title-4]
-        [,(concat "Section title (level 4): " (adoc-template-str-title 4))
-         tempo-template-adoc-title-5]
-        ["Block title: .foo" tempo-template-adoc-block-title]
-        ["BlockId: [[id]]" tempo-template-adoc-anchor]) ; redundant to anchor below
-       ("Paragraphs"
-        ["Literal paragraph" tempo-template-adoc-literal-paragraph
-         :help ,adoc-help-literal-paragraph]
-        "---"
-        ["TIP: " tempo-template-adoc-paragraph-tip]
-        ["NOTE: " tempo-template-adoc-paragraph-note]
-        ["IMPORTANT: " tempo-template-adoc-paragraph-important]
-        ["WARNING: " tempo-template-adoc-paragraph-warning]
-        ["CAUTION: " tempo-template-adoc-paragraph-caution])
-       ("Delimited blocks"
-        :help ,adoc-help-delimited-block
-        ;; BUG: example does not reflect the content of adoc-delimited-block-del
-        ["Comment: ////" tempo-template-adoc-delimited-block-comment
-         :help ,adoc-help-delimited-block-comment]
-        ["Passthrough: ++++" tempo-template-adoc-delimited-block-passthrough
-         :help ,adoc-help-delimited-block-passthrouh]
-        ["Listing: ----" tempo-template-adoc-delimited-block-listing
-         :help ,adoc-help-delimited-block-listing]
-        ["Literal: ...." tempo-template-adoc-delimited-block-literal
-         :help ,adoc-help-delimited-block-literal]
-        ["Quote: ____" tempo-template-adoc-delimited-block-quote
-         :help ,adoc-help-delimited-block-quote]
-        ["Example: ====" tempo-template-adoc-delimited-block-example
-         :help ,adoc-help-delimited-block-example]
-        ["Sidebar: ****" tempo-template-adoc-delimited-block-sidebar
-         :help ,adoc-help-delimited-block-sidebar]
-        ["Open: --" tempo-template-adoc-delimited-block-open-block
-         :help ,adoc-help-delimited-block-open-block])
-       ("Lists"
-        :help ,adoc-help-list
-        ("Bulleted"
-         :help ,adoc-help-bulleted-list
-         ["Item: -" tempo-template-adoc-bulleted-list-item-1]
-         ["Item: **" tempo-template-adoc-bulleted-list-item-2]
-         ["Item: ***" tempo-template-adoc-bulleted-list-item-3]
-         ["Item: ****" tempo-template-adoc-bulleted-list-item-4]
-         ["Item: *****" tempo-template-adoc-bulleted-list-item-5])
-        ("Numbered - explicit"
-         ["Arabic (decimal) numbered item: 1." tempo-template-adoc-numbered-list-item]
-         ["Lower case alpha (letter) numbered item: a." tempo-template-adoc-numbered-list-item]
-         ["Upper case alpha (letter) numbered item: A." tempo-template-adoc-numbered-list-item]
-         ["Lower case roman numbered list item: i)" tempo-template-adoc-numbered-list-item-roman]
-         ["Upper case roman numbered list item: I)" tempo-template-adoc-numbered-list-item-roman])
-        ("Numbered - implicit"
-         ["Arabic (decimal) numbered item: ." tempo-template-adoc-implicit-numbered-list-item-1]
-         ["Lower case alpha (letter) numbered item: .." tempo-template-adoc-implicit-numbered-list-item-2]
-         ["Upper case alpha (letter)numbered item: ..." tempo-template-adoc-implicit-numbered-list-item-3]
-         ["Lower case roman numbered list item: ...." tempo-template-adoc-implicit-numbered-list-item-4]
-         ["Upper case roman numbered list item: ....." tempo-template-adoc-implicit-numbered-list-item-5])
-        ["Labeled item: label:: text" tempo-template-adoc-labeled-list-item]
-        ["List item continuation: <NEWLINE>+<NEWLINE>" tempo-template-adoc-list-item-continuation
-         :help ,adoc-help-list-item-continuation])
-       ("Tables"
-        :help ,adoc-help-table
-        ["Example table" tempo-template-adoc-example-table])
-       ("Macros (inline & block)"
-        :help ,adoc-help-macros
-        ["URL: http://foo.com" tempo-template-adoc-url
-         :help ,adoc-help-url]
-        ["URL with caption: http://foo.com[caption]" tempo-template-adoc-url-caption
-         :help ,adoc-help-url]
-        ["EMail: bob@foo.com" tempo-template-adoc-email
-         :help ,adoc-help-url]
-        ["EMail with caption: mailto:address[caption]" tempo-template-adoc-email-caption
-         :help ,adoc-help-url]
-        ["Anchor aka BlockId (syntax 1): [[id,xreflabel]]" tempo-template-adoc-anchor
-         :help ,adoc-help-anchor]
-        ["Anchor (syntax 2): anchor:id[xreflabel]" tempo-template-adoc-anchor-default-syntax
-         :help ,adoc-help-anchor]
-        ["Xref (syntax 1): <<id,caption>>" adoc-xref
-         :help ,adoc-help-xref]
-        ["Xref (syntax 2): xref:id[caption]" adoc-xref-default-syntax
-         :help ,adoc-help-xref]
-        ["Image: image:target-path[caption]" adoc-image]
-        ["Comment: //" tempo-template-adoc-comment
-         :help ,adoc-help-comment]
-        ("Passthrough macros"
-         :help adoc-help-passthrough-macros
-         ["pass:[text]" tempo-template-adoc-pass
-          :help ,adoc-help-pass]
-         ["ASCIIMath: asciimath:[text]" tempo-template-adoc-asciimath
-          :help ,adoc-help-asciimath]
-         ["LaTeX math: latexmath[text]" tempo-template-adoc-latexmath
-          :help ,adoc-help-latexmath]
-         ["+++text+++" tempo-template-adoc-pass-+++
-          :help ,adoc-help-pass-+++]
-         ["$$text$$" tempo-template-pass-$$
-          :help ,adoc-help-pass-$$]
-         ["`text`" tempo-template-monospace-literal ; redundant to the one in the quotes section
-          :help ,adoc-help-monospace-literal])))))
-    map)
-  "Keymap used in adoc mode.")
 
 
 ;;;; help text copied from asciidoc manual
@@ -2851,6 +2680,177 @@ LOCAL-ATTRIBUTE-FACE-ALIST before it is looked up in
     (modify-syntax-entry ?_ "." table)
     table)
   "Syntax table to use in adoc-mode.")
+
+(defvar adoc-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map "\C-c\C-d" 'adoc-demote)
+    (define-key map "\C-c\C-p" 'adoc-promote)
+    (define-key map "\C-c\C-t" 'adoc-toggle-title-type)
+    (define-key map "\C-c\C-g" 'adoc-goto-ref-label)
+    (easy-menu-define adoc-mode-menu map "Menu for adoc mode"
+    `("AsciiDoc"
+      ["Promote" adoc-promote]
+      ["Demote" adoc-demote]
+      ["Toggle title type" adoc-toggle-title-type]
+      ["Adjust title underline" adoc-adjust-title-del]
+      ["Goto anchor" adoc-goto-ref-label]
+      "---"
+      ;; names|wording / rough order/ help texts are from asciidoc manual
+      ("Templates / cheat sheet"
+       ("Text formatting - constrained quotes"
+        :help ,adoc-help-constrained-quotes
+        ["_Emphasis_" tempo-template-adoc-emphasis
+         :help ,adoc-help-emphasis ]
+        ["*Strong*" tempo-template-adoc-strong
+         :help ,adoc-help-strong ]
+        ["+Monospaced+" tempo-template-adoc-monospace
+         :help ,adoc-help-monospace]
+        ["`Monospaced literal`" tempo-template-adoc-monospace-literal ; redundant to the one in the passthrough section
+         :help ,adoc-help-monospace-literal]
+        ["`Single quote'" tempo-template-adoc-single-quote
+         :help ,adoc-help-single-quote]
+        ["``Double quote''" tempo-template-adoc-double-quote
+         :help ,adoc-help-double-quote]
+        ;; TODO: insert underline, overline, strikethrough, big, small
+        ["[attributes]##text##" tempo-template-adoc-attributed
+         :help ,adoc-help-attributed])
+       ("Text formatting - unconstrained quotes"
+        :help ,adoc-help-unconstrained-quotes
+        ["^Superscript^" tempo-template-adoc-superscript]
+        ["~Subscript~" tempo-template-adoc-subscript]
+        ["__Emphasis__" tempo-template-adoc-emphasis-uc
+         :help ,adoc-help-emphasis ]
+        ["**Strong**" tempo-template-adoc-strong-uc
+         :help ,adoc-help-strong ]
+        ["++Monospaced++" tempo-template-adoc-monospace-uc
+         :help ,adoc-help-monospace]
+        ["[attributes]##text##" tempo-template-adoc-attributed-uc
+         :help ,adoc-help-attributed])
+       ("Text formatting - misc"
+        ["Line break: <SPC>+<NEWLINE>" tempo-template-adoc-line-break
+         :help ,adoc-help-line-break]
+        ["Page break: <<<" tempo-template-adoc-page-break
+         :help ,adoc-help-page-break]
+        ["Ruler line: ---" tempo-template-adoc-ruler-line
+         :help ,adoc-help-ruler-line])
+       ("Text formatting - replacements"
+        ["Copyright: (C) \u2192 \u00A9" tempo-template-adoc-copyright]
+        ["Trademark: (TM) \u2192 \u2122" tempo-template-adoc-trademark]
+        ["Registered trademark: (R) \u2192 \u00AE" tempo-template-adoc-registered-trademark]
+        ["Dash: -- \u2192 \u2014" tempo-template-adoc-dash]
+        ["Ellipsis: ... \u2192 \u2026" tempo-template-adoc-ellipsis]
+        ["Right arrow: -> \u2192 \u2192" tempo-template-adoc-right-arrow]
+        ["Left arrow: <- \u2192 \u2190" tempo-template-adoc-left-arrow]
+        ["Right double arrow: => \u2192 \u21D2" tempo-template-adoc-right-double-arrow]
+        ["Left double arrow: <= \u2192 \u21D0" tempo-template-adoc-left-double-arrow]
+        "---"
+        ["Character entity reference: &...;" tempo-template-adoc-entity-reference
+         :help ,adoc-help-entity-reference])
+       ("Titles"
+        [,(concat "Document title (level 0): " (adoc-template-str-title 0))
+         tempo-template-adoc-title-1]
+        [,(concat "Section title (level 1): " (adoc-template-str-title 1))
+         tempo-template-adoc-title-2]
+        [,(concat "Section title (level 2): " (adoc-template-str-title 2))
+         tempo-template-adoc-title-3]
+        [,(concat "Section title (level 3): " (adoc-template-str-title 3))
+         tempo-template-adoc-title-4]
+        [,(concat "Section title (level 4): " (adoc-template-str-title 4))
+         tempo-template-adoc-title-5]
+        ["Block title: .foo" tempo-template-adoc-block-title]
+        ["BlockId: [[id]]" tempo-template-adoc-anchor]) ; redundant to anchor below
+       ("Paragraphs"
+        ["Literal paragraph" tempo-template-adoc-literal-paragraph
+         :help ,adoc-help-literal-paragraph]
+        "---"
+        ["TIP: " tempo-template-adoc-paragraph-tip]
+        ["NOTE: " tempo-template-adoc-paragraph-note]
+        ["IMPORTANT: " tempo-template-adoc-paragraph-important]
+        ["WARNING: " tempo-template-adoc-paragraph-warning]
+        ["CAUTION: " tempo-template-adoc-paragraph-caution])
+       ("Delimited blocks"
+        :help ,adoc-help-delimited-block
+        ;; BUG: example does not reflect the content of adoc-delimited-block-del
+        ["Comment: ////" tempo-template-adoc-delimited-block-comment
+         :help ,adoc-help-delimited-block-comment]
+        ["Passthrough: ++++" tempo-template-adoc-delimited-block-passthrough
+         :help ,adoc-help-delimited-block-passthrouh]
+        ["Listing: ----" tempo-template-adoc-delimited-block-listing
+         :help ,adoc-help-delimited-block-listing]
+        ["Literal: ...." tempo-template-adoc-delimited-block-literal
+         :help ,adoc-help-delimited-block-literal]
+        ["Quote: ____" tempo-template-adoc-delimited-block-quote
+         :help ,adoc-help-delimited-block-quote]
+        ["Example: ====" tempo-template-adoc-delimited-block-example
+         :help ,adoc-help-delimited-block-example]
+        ["Sidebar: ****" tempo-template-adoc-delimited-block-sidebar
+         :help ,adoc-help-delimited-block-sidebar]
+        ["Open: --" tempo-template-adoc-delimited-block-open-block
+         :help ,adoc-help-delimited-block-open-block])
+       ("Lists"
+        :help ,adoc-help-list
+        ("Bulleted"
+         :help ,adoc-help-bulleted-list
+         ["Item: -" tempo-template-adoc-bulleted-list-item-1]
+         ["Item: **" tempo-template-adoc-bulleted-list-item-2]
+         ["Item: ***" tempo-template-adoc-bulleted-list-item-3]
+         ["Item: ****" tempo-template-adoc-bulleted-list-item-4]
+         ["Item: *****" tempo-template-adoc-bulleted-list-item-5])
+        ("Numbered - explicit"
+         ["Arabic (decimal) numbered item: 1." tempo-template-adoc-numbered-list-item]
+         ["Lower case alpha (letter) numbered item: a." tempo-template-adoc-numbered-list-item]
+         ["Upper case alpha (letter) numbered item: A." tempo-template-adoc-numbered-list-item]
+         ["Lower case roman numbered list item: i)" tempo-template-adoc-numbered-list-item-roman]
+         ["Upper case roman numbered list item: I)" tempo-template-adoc-numbered-list-item-roman])
+        ("Numbered - implicit"
+         ["Arabic (decimal) numbered item: ." tempo-template-adoc-implicit-numbered-list-item-1]
+         ["Lower case alpha (letter) numbered item: .." tempo-template-adoc-implicit-numbered-list-item-2]
+         ["Upper case alpha (letter)numbered item: ..." tempo-template-adoc-implicit-numbered-list-item-3]
+         ["Lower case roman numbered list item: ...." tempo-template-adoc-implicit-numbered-list-item-4]
+         ["Upper case roman numbered list item: ....." tempo-template-adoc-implicit-numbered-list-item-5])
+        ["Labeled item: label:: text" tempo-template-adoc-labeled-list-item]
+        ["List item continuation: <NEWLINE>+<NEWLINE>" tempo-template-adoc-list-item-continuation
+         :help ,adoc-help-list-item-continuation])
+       ("Tables"
+        :help ,adoc-help-table
+        ["Example table" tempo-template-adoc-example-table])
+       ("Macros (inline & block)"
+        :help ,adoc-help-macros
+        ["URL: http://foo.com" tempo-template-adoc-url
+         :help ,adoc-help-url]
+        ["URL with caption: http://foo.com[caption]" tempo-template-adoc-url-caption
+         :help ,adoc-help-url]
+        ["EMail: bob@foo.com" tempo-template-adoc-email
+         :help ,adoc-help-url]
+        ["EMail with caption: mailto:address[caption]" tempo-template-adoc-email-caption
+         :help ,adoc-help-url]
+        ["Anchor aka BlockId (syntax 1): [[id,xreflabel]]" tempo-template-adoc-anchor
+         :help ,adoc-help-anchor]
+        ["Anchor (syntax 2): anchor:id[xreflabel]" tempo-template-adoc-anchor-default-syntax
+         :help ,adoc-help-anchor]
+        ["Xref (syntax 1): <<id,caption>>" adoc-xref
+         :help ,adoc-help-xref]
+        ["Xref (syntax 2): xref:id[caption]" adoc-xref-default-syntax
+         :help ,adoc-help-xref]
+        ["Image: image:target-path[caption]" adoc-image]
+        ["Comment: //" tempo-template-adoc-comment
+         :help ,adoc-help-comment]
+        ("Passthrough macros"
+         :help adoc-help-passthrough-macros
+         ["pass:[text]" tempo-template-adoc-pass
+          :help ,adoc-help-pass]
+         ["ASCIIMath: asciimath:[text]" tempo-template-adoc-asciimath
+          :help ,adoc-help-asciimath]
+         ["LaTeX math: latexmath[text]" tempo-template-adoc-latexmath
+          :help ,adoc-help-latexmath]
+         ["+++text+++" tempo-template-adoc-pass-+++
+          :help ,adoc-help-pass-+++]
+         ["$$text$$" tempo-template-pass-$$
+          :help ,adoc-help-pass-$$]
+         ["`text`" tempo-template-monospace-literal ; redundant to the one in the quotes section
+          :help ,adoc-help-monospace-literal])))))
+    map)
+  "Keymap used in adoc mode.")
 
 
 ;;;###autoload
