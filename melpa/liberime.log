@@ -3,38 +3,4 @@ Fetcher: github
 Source:  https://github.com/merrickluo/liberime.git
 
 Updating /mnt/store/melpa/working/liberime/
-Checking out origin/HEAD
-Checking out 79b709debe036f98d74ac129934e59c4d08c1dd5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/liberime/
-  to /tmp/liberimeM74T3h/liberime-20211203.244
-    liberime.el -> liberime.el
-    src => src
-    emacs-module => emacs-module
-    LICENSE -> LICENSE
-    Makefile -> Makefile
-    README.org -> README.org
-Created liberime-20211203.244.tar containing:
-  liberime-20211203.244/
-  liberime-20211203.244/LICENSE
-  liberime-20211203.244/Makefile
-  liberime-20211203.244/README.org
-  liberime-20211203.244/emacs-module/
-  liberime-20211203.244/emacs-module/26/
-  liberime-20211203.244/emacs-module/26/emacs-module.h
-  liberime-20211203.244/emacs-module/27/
-  liberime-20211203.244/emacs-module/27/emacs-module.h
-  liberime-20211203.244/emacs-module/28/
-  liberime-20211203.244/emacs-module/28/emacs-module.h
-  liberime-20211203.244/liberime-pkg.el
-  liberime-20211203.244/liberime.el
-  liberime-20211203.244/src/
-  liberime-20211203.244/src/init.c
-  liberime-20211203.244/src/interface.c
-  liberime-20211203.244/src/interface.h
-  liberime-20211203.244/src/liberime-core.c
-  liberime-20211203.244/src/liberime-core.h
-Built liberime in 3.050s, finished at 2022-08-28T09:55:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  325 Aug 28 09:55 packages/liberime-20211203.244.entry
-160K -rw-r--r-- 1 root root 160K Aug 28 09:55 packages/liberime-20211203.244.tar
+Wrong number of arguments: (1 . 1), 2

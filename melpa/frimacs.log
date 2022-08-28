@@ -3,44 +3,4 @@ Fetcher: github
 Source:  https://github.com/pdo/frimacs.git
 
 Updating /mnt/store/melpa/working/frimacs/
-Checking out origin/HEAD
-Checking out b35fdefb60ead4d7559131601c43761973762a9a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/frimacs/
-  to /tmp/frimacs4r5DwC/frimacs-20220723.1902
-    frimacs-base.el -> frimacs-base.el
-    frimacs-boot-mode.el -> frimacs-boot-mode.el
-    frimacs-buffer-menu.el -> frimacs-buffer-menu.el
-    frimacs-domain-explorer.el -> frimacs-domain-explorer.el
-    frimacs-help-mode.el -> frimacs-help-mode.el
-    frimacs-input-mode.el -> frimacs-input-mode.el
-    frimacs-process-mode.el -> frimacs-process-mode.el
-    frimacs-selector.el -> frimacs-selector.el
-    frimacs-spad-mode.el -> frimacs-spad-mode.el
-    frimacs.el -> frimacs.el
-    data/fricas-standard-category-info.dat -> data/fricas-standard-category-info.dat
-    data/fricas-standard-domain-info.dat -> data/fricas-standard-domain-info.dat
-    data/fricas-standard-operation-info.dat -> data/fricas-standard-operation-info.dat
-    data/fricas-standard-package-info.dat -> data/fricas-standard-package-info.dat
-Created frimacs-20220723.1902.tar containing:
-  frimacs-20220723.1902/
-  frimacs-20220723.1902/data/
-  frimacs-20220723.1902/data/fricas-standard-category-info.dat
-  frimacs-20220723.1902/data/fricas-standard-domain-info.dat
-  frimacs-20220723.1902/data/fricas-standard-operation-info.dat
-  frimacs-20220723.1902/data/fricas-standard-package-info.dat
-  frimacs-20220723.1902/frimacs-base.el
-  frimacs-20220723.1902/frimacs-boot-mode.el
-  frimacs-20220723.1902/frimacs-buffer-menu.el
-  frimacs-20220723.1902/frimacs-domain-explorer.el
-  frimacs-20220723.1902/frimacs-help-mode.el
-  frimacs-20220723.1902/frimacs-input-mode.el
-  frimacs-20220723.1902/frimacs-pkg.el
-  frimacs-20220723.1902/frimacs-process-mode.el
-  frimacs-20220723.1902/frimacs-selector.el
-  frimacs-20220723.1902/frimacs-spad-mode.el
-  frimacs-20220723.1902/frimacs.el
-Built frimacs in 3.087s, finished at 2022-08-28T09:43:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  407 Aug 28 09:43 packages/frimacs-20220723.1902.entry
-240K -rw-r--r-- 1 root root 240K Aug 28 09:43 packages/frimacs-20220723.1902.tar
+Wrong number of arguments: (1 . 1), 2

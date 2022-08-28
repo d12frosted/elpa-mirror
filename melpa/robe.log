@@ -3,36 +3,4 @@ Fetcher: github
 Source:  https://github.com/dgutov/robe.git
 
 Updating /mnt/store/melpa/working/robe/
-Checking out origin/HEAD
-Checking out 993ae13791ba882076b644b0c8054b6e89e22dad
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/robe/
-  to /tmp/robejUUgpx/robe-20220731.2016
-    ac-robe.el -> ac-robe.el
-    company-robe.el -> company-robe.el
-    robe.el -> robe.el
-    lib => lib
-Created robe-20220731.2016.tar containing:
-  robe-20220731.2016/
-  robe-20220731.2016/ac-robe.el
-  robe-20220731.2016/company-robe.el
-  robe-20220731.2016/lib/
-  robe-20220731.2016/lib/robe.rb
-  robe-20220731.2016/lib/robe/
-  robe-20220731.2016/lib/robe/core_ext.rb
-  robe-20220731.2016/lib/robe/jvisor.rb
-  robe-20220731.2016/lib/robe/sash.rb
-  robe-20220731.2016/lib/robe/sash/
-  robe-20220731.2016/lib/robe/sash/const_locations.rb
-  robe-20220731.2016/lib/robe/sash/doc_for.rb
-  robe-20220731.2016/lib/robe/sash/includes_tracker.rb
-  robe-20220731.2016/lib/robe/scanners.rb
-  robe-20220731.2016/lib/robe/server.rb
-  robe-20220731.2016/lib/robe/type_space.rb
-  robe-20220731.2016/lib/robe/visor.rb
-  robe-20220731.2016/robe-pkg.el
-  robe-20220731.2016/robe.el
-Built robe in 3.156s, finished at 2022-08-28T10:18:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 366 Aug 28 10:18 packages/robe-20220731.2016.entry
- 92K -rw-r--r-- 1 root root 90K Aug 28 10:18 packages/robe-20220731.2016.tar
+Wrong number of arguments: (1 . 1), 2

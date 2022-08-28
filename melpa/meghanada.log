@@ -3,23 +3,4 @@ Fetcher: github
 Source:  https://github.com/mopemope/meghanada-emacs.git
 
 Updating /mnt/store/melpa/working/meghanada/
-Checking out origin/HEAD
-Checking out 4582818c4795cbe231665ab4c0f38ccfa650ce8b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/meghanada/
-  to /tmp/meghanada7j3wrA/meghanada-20220101.501
-    company-meghanada.el -> company-meghanada.el
-    eldoc-meghanada.el -> eldoc-meghanada.el
-    flycheck-meghanada.el -> flycheck-meghanada.el
-    meghanada.el -> meghanada.el
-Created meghanada-20220101.501.tar containing:
-  meghanada-20220101.501/
-  meghanada-20220101.501/company-meghanada.el
-  meghanada-20220101.501/eldoc-meghanada.el
-  meghanada-20220101.501/flycheck-meghanada.el
-  meghanada-20220101.501/meghanada-pkg.el
-  meghanada-20220101.501/meghanada.el
-Built meghanada in 5.409s, finished at 2022-08-28T09:59:01+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  507 Aug 28 09:59 packages/meghanada-20220101.501.entry
-112K -rw-r--r-- 1 root root 110K Aug 28 09:59 packages/meghanada-20220101.501.tar
+Wrong number of arguments: (1 . 1), 2

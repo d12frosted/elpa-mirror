@@ -3,28 +3,4 @@ Fetcher: github
 Source:  https://github.com/smaximov/org-commentary.git
 
 Updating /mnt/store/melpa/working/org-commentary/
-Checking out origin/HEAD
-Checking out 821ccb994811359c42f4e3d459e0e88849d42b75
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-commentary/
-  to /tmp/org-commentarytD2imB/org-commentary-20160802.637
-    org-commentary-cli.el -> org-commentary-cli.el
-    org-commentary-export.el -> org-commentary-export.el
-    org-commentary-headers.el -> org-commentary-headers.el
-    org-commentary-util.el -> org-commentary-util.el
-    org-commentary.el -> org-commentary.el
-    bin => bin
-Created org-commentary-20160802.637.tar containing:
-  org-commentary-20160802.637/
-  org-commentary-20160802.637/bin/
-  org-commentary-20160802.637/bin/org-doc
-  org-commentary-20160802.637/org-commentary-cli.el
-  org-commentary-20160802.637/org-commentary-export.el
-  org-commentary-20160802.637/org-commentary-headers.el
-  org-commentary-20160802.637/org-commentary-pkg.el
-  org-commentary-20160802.637/org-commentary-util.el
-  org-commentary-20160802.637/org-commentary.el
-Built org-commentary in 3.721s, finished at 2022-08-28T10:04:48+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 473 Aug 28 10:04 packages/org-commentary-20160802.637.entry
- 52K -rw-r--r-- 1 root root 50K Aug 28 10:04 packages/org-commentary-20160802.637.tar
+Wrong number of arguments: (1 . 1), 2

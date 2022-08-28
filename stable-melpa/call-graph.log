@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/beacoder/call-graph.git
 
 Updating /mnt/store/melpa/working/call-graph/
-Checking out origin/HEAD
-Checking out fec9f746de753b85d75ff2a595b39014a8f44dbb
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/call-graph/
-  to /tmp/call-graphqLcMpv/call-graph-20220528.27
-    call-graph.el -> call-graph.el
-    cg-global.el -> cg-global.el
-Created call-graph-20220528.27.tar containing:
-  call-graph-20220528.27/
-  call-graph-20220528.27/call-graph-pkg.el
-  call-graph-20220528.27/call-graph.el
-  call-graph-20220528.27/cg-global.el
-Built call-graph in 3.295s, finished at 2022-08-28T09:26:13+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 513 Aug 28 09:26 packages/call-graph-20220528.27.entry
- 52K -rw-r--r-- 1 root root 50K Aug 28 09:26 packages/call-graph-20220528.27.tar
+Wrong number of arguments: (1 . 1), 2

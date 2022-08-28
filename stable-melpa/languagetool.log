@@ -3,29 +3,4 @@ Fetcher: github
 Source:  https://github.com/PillFall/languagetool.el.git
 
 Updating /mnt/store/melpa/working/languagetool/
-Checking out origin/HEAD
-Checking out 503d18bd3c074fe8f495cfa6a34ccca1ef6961ce
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/languagetool/
-  to /tmp/languagetoolmhvm9y/languagetool-20220514.309
-    languagetool-console.el -> languagetool-console.el
-    languagetool-core.el -> languagetool-core.el
-    languagetool-correction.el -> languagetool-correction.el
-    languagetool-issue.el -> languagetool-issue.el
-    languagetool-java.el -> languagetool-java.el
-    languagetool-server.el -> languagetool-server.el
-    languagetool.el -> languagetool.el
-Created languagetool-20220514.309.tar containing:
-  languagetool-20220514.309/
-  languagetool-20220514.309/languagetool-console.el
-  languagetool-20220514.309/languagetool-core.el
-  languagetool-20220514.309/languagetool-correction.el
-  languagetool-20220514.309/languagetool-issue.el
-  languagetool-20220514.309/languagetool-java.el
-  languagetool-20220514.309/languagetool-pkg.el
-  languagetool-20220514.309/languagetool-server.el
-  languagetool-20220514.309/languagetool.el
-Built languagetool in 2.681s, finished at 2022-08-28T09:54:59+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 479 Aug 28 09:54 packages/languagetool-20220514.309.entry
- 60K -rw-r--r-- 1 root root 60K Aug 28 09:54 packages/languagetool-20220514.309.tar
+Wrong number of arguments: (1 . 1), 2

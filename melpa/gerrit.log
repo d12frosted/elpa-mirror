@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/thisch/gerrit.el.git
 
 Updating /mnt/store/melpa/working/gerrit/
-Checking out origin/HEAD
-Checking out 4de561d1295d4c86ca9b159ab0c746bedc2d0380
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/gerrit/
-  to /tmp/gerritTlSBng/gerrit-20220812.2150
-    gerrit-rest.el -> gerrit-rest.el
-    gerrit.el -> gerrit.el
-Created gerrit-20220812.2150.tar containing:
-  gerrit-20220812.2150/
-  gerrit-20220812.2150/gerrit-pkg.el
-  gerrit-20220812.2150/gerrit-rest.el
-  gerrit-20220812.2150/gerrit.el
-Built gerrit in 3.560s, finished at 2022-08-28T09:43:58+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 390 Aug 28 09:43 packages/gerrit-20220812.2150.entry
- 92K -rw-r--r-- 1 root root 90K Aug 28 09:43 packages/gerrit-20220812.2150.tar
+Wrong number of arguments: (1 . 1), 2

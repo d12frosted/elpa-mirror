@@ -3,10 +3,4 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~shoshin/lakota-input
 
 Cloning https://git.sr.ht/~shoshin/lakota-input to /mnt/store/melpa/working/lakota-input/
-
-Command 'env LC_ALL\=C git clone https\://git.sr.ht/\~shoshin/lakota-input /mnt/store/melpa/working/lakota-input/' exited with non-zero exit-code: 128
-
-Cloning into '/mnt/store/melpa/working/lakota-input'...
-fatal: unable to access 'https://git.sr.ht/~shoshin/lakota-input/': The requested URL returned error: 403
-
-Command exited with non-zero exit-code: 128
+Wrong number of arguments: (1 . 1), 2

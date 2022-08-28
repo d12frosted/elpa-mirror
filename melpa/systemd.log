@@ -3,23 +3,4 @@ Fetcher: github
 Source:  https://github.com/holomorph/systemd-mode.git
 
 Updating /mnt/store/melpa/working/systemd/
-Checking out origin/HEAD
-Checking out b6ae63a236605b1c5e1069f7d3afe06ae32a7bae
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/systemd/
-  to /tmp/systemdXfN6Ue/systemd-20210209.2052
-    systemd.el -> systemd.el
-    network-directives.txt -> network-directives.txt
-    nspawn-directives.txt -> nspawn-directives.txt
-    unit-directives.txt -> unit-directives.txt
-Created systemd-20210209.2052.tar containing:
-  systemd-20210209.2052/
-  systemd-20210209.2052/network-directives.txt
-  systemd-20210209.2052/nspawn-directives.txt
-  systemd-20210209.2052/systemd-pkg.el
-  systemd-20210209.2052/systemd.el
-  systemd-20210209.2052/unit-directives.txt
-Built systemd in 3.111s, finished at 2022-08-28T10:24:30+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 306 Aug 28 10:24 packages/systemd-20210209.2052.entry
- 40K -rw-r--r-- 1 root root 40K Aug 28 10:24 packages/systemd-20210209.2052.tar
+Wrong number of arguments: (1 . 1), 2

@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/laishulu/emacs-vterm-manager.git
 
 Updating /mnt/store/melpa/working/vtm/
-Checking out origin/HEAD
-Checking out d770fd8cff7c24688199392ad93c01485c6a9569
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/vtm/
-  to /tmp/vtmOOZFqN/vtm-20200921.338
-    example.el -> example.el
-    vtm.el -> vtm.el
-Created vtm-20200921.338.tar containing:
-  vtm-20200921.338/
-  vtm-20200921.338/example.el
-  vtm-20200921.338/vtm-pkg.el
-  vtm-20200921.338/vtm.el
-Built vtm in 3.303s, finished at 2022-08-28T10:28:35+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 255 Aug 28 10:28 packages/vtm-20200921.338.entry
- 12K -rw-r--r-- 1 root root 10K Aug 28 10:28 packages/vtm-20200921.338.tar
+Wrong number of arguments: (1 . 1), 2

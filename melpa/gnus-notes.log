@@ -3,21 +3,4 @@ Fetcher: github
 Source:  https://github.com/deusmax/gnus-notes.git
 
 Updating /mnt/store/melpa/working/gnus-notes/
-Checking out origin/HEAD
-Checking out 1457bba34b40d5197aa14dbf0856925f83025ae1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/gnus-notes/
-  to /tmp/gnus-notesAM4CwK/gnus-notes-20210207.1010
-    gnus-notes-helm.el -> gnus-notes-helm.el
-    gnus-notes-org.el -> gnus-notes-org.el
-    gnus-notes.el -> gnus-notes.el
-Created gnus-notes-20210207.1010.tar containing:
-  gnus-notes-20210207.1010/
-  gnus-notes-20210207.1010/gnus-notes-helm.el
-  gnus-notes-20210207.1010/gnus-notes-org.el
-  gnus-notes-20210207.1010/gnus-notes-pkg.el
-  gnus-notes-20210207.1010/gnus-notes.el
-Built gnus-notes in 3.590s, finished at 2022-08-28T09:45:03+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 640 Aug 28 09:45 packages/gnus-notes-20210207.1010.entry
- 72K -rw-r--r-- 1 root root 70K Aug 28 09:45 packages/gnus-notes-20210207.1010.tar
+Wrong number of arguments: (1 . 1), 2

@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/seanirby/evalator-clojure.git
 
 Updating /mnt/store/melpa/working/evalator-clojure/
-Checking out origin/HEAD
-Checking out caa4e0a137bdfada86593128a654e16aa617ad50
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/evalator-clojure/
-  to /tmp/evalator-clojure4bFzfz/evalator-clojure-20160208.2148
-    evalator-clojure.el -> evalator-clojure.el
-    evalator-clojure.clj -> evalator-clojure.clj
-Created evalator-clojure-20160208.2148.tar containing:
-  evalator-clojure-20160208.2148/
-  evalator-clojure-20160208.2148/evalator-clojure-pkg.el
-  evalator-clojure-20160208.2148/evalator-clojure.clj
-  evalator-clojure-20160208.2148/evalator-clojure.el
-Built evalator-clojure in 3.637s, finished at 2022-08-28T09:38:02+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 446 Aug 28 09:38 packages/evalator-clojure-20160208.2148.entry
- 20K -rw-r--r-- 1 root root 20K Aug 28 09:38 packages/evalator-clojure-20160208.2148.tar
+Wrong number of arguments: (1 . 1), 2

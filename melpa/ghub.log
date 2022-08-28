@@ -3,34 +3,4 @@ Fetcher: github
 Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
-Checking out origin/HEAD
-Checking out 41c5e501e75b6bc02bd581669256fbd6be8746fa
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubg5sw0x/ghub-20220810.1157
-    ghub-pkg.el -> ghub-pkg.el
-  ! lisp/buck.el -> buck.el
-  ! lisp/ghub-graphql.el -> ghub-graphql.el
-  ! lisp/ghub.el -> ghub.el
-  ! lisp/glab.el -> glab.el
-  ! lisp/gogs.el -> gogs.el
-  ! lisp/gsexp.el -> gsexp.el
-  ! lisp/gtea.el -> gtea.el
-  ! docs/ghub.texi -> ghub.texi
-Generating /tmp/ghubg5sw0x/ghub-20220810.1157/ghub.info
-Created ghub-20220810.1157.tar containing:
-  ghub-20220810.1157/
-  ghub-20220810.1157/buck.el
-  ghub-20220810.1157/dir
-  ghub-20220810.1157/ghub-graphql.el
-  ghub-20220810.1157/ghub-pkg.el
-  ghub-20220810.1157/ghub.el
-  ghub-20220810.1157/ghub.info
-  ghub-20220810.1157/glab.el
-  ghub-20220810.1157/gogs.el
-  ghub-20220810.1157/gsexp.el
-  ghub-20220810.1157/gtea.el
-Built ghub in 8.548s, finished at 2022-08-28T09:44:13+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  414 Aug 28 09:44 packages/ghub-20220810.1157.entry
-160K -rw-r--r-- 1 root root 160K Aug 28 09:44 packages/ghub-20220810.1157.tar
+Wrong number of arguments: (1 . 1), 2

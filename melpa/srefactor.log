@@ -3,21 +3,4 @@ Fetcher: github
 Source:  https://github.com/tuhdo/semantic-refactor.git
 
 Updating /mnt/store/melpa/working/srefactor/
-Checking out origin/HEAD
-Checking out 6f2c97d17fb70f4ca2112f5a2b99a8ec162004f5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/srefactor/
-  to /tmp/srefactorDmenVG/srefactor-20180703.1810
-    srefactor-lisp.el -> srefactor-lisp.el
-    srefactor-ui.el -> srefactor-ui.el
-    srefactor.el -> srefactor.el
-Created srefactor-20180703.1810.tar containing:
-  srefactor-20180703.1810/
-  srefactor-20180703.1810/srefactor-lisp.el
-  srefactor-20180703.1810/srefactor-pkg.el
-  srefactor-20180703.1810/srefactor-ui.el
-  srefactor-20180703.1810/srefactor.el
-Built srefactor in 4.569s, finished at 2022-08-28T10:23:14+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  394 Aug 28 10:23 packages/srefactor-20180703.1810.entry
-120K -rw-r--r-- 1 root root 120K Aug 28 10:23 packages/srefactor-20180703.1810.tar
+Wrong number of arguments: (1 . 1), 2

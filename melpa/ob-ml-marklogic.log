@@ -3,25 +3,4 @@ Fetcher: github
 Source:  https://github.com/ndw/ob-ml-marklogic.git
 
 Updating /mnt/store/melpa/working/ob-ml-marklogic/
-Checking out origin/HEAD
-Checking out d5660ad14f29e17cd26ae92eeb585b24030e9570
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ob-ml-marklogic/
-  to /tmp/ob-ml-marklogicbxxan7/ob-ml-marklogic-20190312.1314
-    ob-ml-common.el -> ob-ml-common.el
-    ob-ml-javascript.el -> ob-ml-javascript.el
-    ob-ml-marklogic.el -> ob-ml-marklogic.el
-    ob-ml-sparql.el -> ob-ml-sparql.el
-    ob-ml-xquery.el -> ob-ml-xquery.el
-Created ob-ml-marklogic-20190312.1314.tar containing:
-  ob-ml-marklogic-20190312.1314/
-  ob-ml-marklogic-20190312.1314/ob-ml-common.el
-  ob-ml-marklogic-20190312.1314/ob-ml-javascript.el
-  ob-ml-marklogic-20190312.1314/ob-ml-marklogic-pkg.el
-  ob-ml-marklogic-20190312.1314/ob-ml-marklogic.el
-  ob-ml-marklogic-20190312.1314/ob-ml-sparql.el
-  ob-ml-marklogic-20190312.1314/ob-ml-xquery.el
-Built ob-ml-marklogic in 3.553s, finished at 2022-08-28T10:03:28+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 386 Aug 28 10:03 packages/ob-ml-marklogic-20190312.1314.entry
- 32K -rw-r--r-- 1 root root 30K Aug 28 10:03 packages/ob-ml-marklogic-20190312.1314.tar
+Wrong number of arguments: (1 . 1), 2

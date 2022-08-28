@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/osx-trash.git
 
 Updating /mnt/store/melpa/working/osx-trash/
-Checking out origin/HEAD
-Checking out af74a2055a15bf4182d8196600f7decd66eec634
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/osx-trash/
-  to /tmp/osx-trashuagFyb/osx-trash-20210419.2229
-    osx-trash.el -> osx-trash.el
-    trashfile.AppleScript -> trashfile.AppleScript
-Created osx-trash-20210419.2229.tar containing:
-  osx-trash-20210419.2229/
-  osx-trash-20210419.2229/osx-trash-pkg.el
-  osx-trash-20210419.2229/osx-trash.el
-  osx-trash-20210419.2229/trashfile.AppleScript
-Built osx-trash in 2.851s, finished at 2022-08-28T10:07:11+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 414 Aug 28 10:07 packages/osx-trash-20210419.2229.entry
- 12K -rw-r--r-- 1 root root 10K Aug 28 10:07 packages/osx-trash-20210419.2229.tar
+Wrong number of arguments: (1 . 1), 2

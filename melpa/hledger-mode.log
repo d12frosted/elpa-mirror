@@ -3,33 +3,4 @@ Fetcher: github
 Source:  https://github.com/narendraj9/hledger-mode.git
 
 Updating /mnt/store/melpa/working/hledger-mode/
-Checking out origin/HEAD
-Checking out 400bde42a8d2712af80cd7c773c9cdfbb63a515a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hledger-mode/
-  to /tmp/hledger-modeMOjqmj/hledger-mode-20220515.1225
-    hledger-core.el -> hledger-core.el
-    hledger-defuns.el -> hledger-defuns.el
-    hledger-input.el -> hledger-input.el
-    hledger-mail.el -> hledger-mail.el
-    hledger-mode.el -> hledger-mode.el
-    hledger-navigate.el -> hledger-navigate.el
-    hledger-reports.el -> hledger-reports.el
-    hledger-suggest.el -> hledger-suggest.el
-    hledger-webservice.el -> hledger-webservice.el
-Created hledger-mode-20220515.1225.tar containing:
-  hledger-mode-20220515.1225/
-  hledger-mode-20220515.1225/hledger-core.el
-  hledger-mode-20220515.1225/hledger-defuns.el
-  hledger-mode-20220515.1225/hledger-input.el
-  hledger-mode-20220515.1225/hledger-mail.el
-  hledger-mode-20220515.1225/hledger-mode-pkg.el
-  hledger-mode-20220515.1225/hledger-mode.el
-  hledger-mode-20220515.1225/hledger-navigate.el
-  hledger-mode-20220515.1225/hledger-reports.el
-  hledger-mode-20220515.1225/hledger-suggest.el
-  hledger-mode-20220515.1225/hledger-webservice.el
-Built hledger-mode in 2.787s, finished at 2022-08-28T09:49:56+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  458 Aug 28 09:49 packages/hledger-mode-20220515.1225.entry
-120K -rw-r--r-- 1 root root 120K Aug 28 09:49 packages/hledger-mode-20220515.1225.tar
+Wrong number of arguments: (1 . 1), 2

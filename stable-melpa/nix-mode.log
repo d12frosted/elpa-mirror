@@ -3,45 +3,4 @@ Fetcher: github
 Source:  https://github.com/NixOS/nix-mode.git
 
 Updating /mnt/store/melpa/working/nix-mode/
-Checking out origin/HEAD
-Checking out e22819a73bf4e2b71166992a0af2f555036cf634
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-modeEaGwmk/nix-mode-20220719.505
-    nix-build.el -> nix-build.el
-    nix-drv-mode.el -> nix-drv-mode.el
-    nix-edit.el -> nix-edit.el
-    nix-flake.el -> nix-flake.el
-    nix-format.el -> nix-format.el
-    nix-instantiate.el -> nix-instantiate.el
-    nix-log.el -> nix-log.el
-    nix-mode.el -> nix-mode.el
-    nix-prettify-mode.el -> nix-prettify-mode.el
-    nix-repl.el -> nix-repl.el
-    nix-search.el -> nix-search.el
-    nix-shebang.el -> nix-shebang.el
-    nix-shell.el -> nix-shell.el
-    nix-store.el -> nix-store.el
-    nix.el -> nix.el
-Created nix-mode-20220719.505.tar containing:
-  nix-mode-20220719.505/
-  nix-mode-20220719.505/nix-build.el
-  nix-mode-20220719.505/nix-drv-mode.el
-  nix-mode-20220719.505/nix-edit.el
-  nix-mode-20220719.505/nix-flake.el
-  nix-mode-20220719.505/nix-format.el
-  nix-mode-20220719.505/nix-instantiate.el
-  nix-mode-20220719.505/nix-log.el
-  nix-mode-20220719.505/nix-mode-pkg.el
-  nix-mode-20220719.505/nix-mode.el
-  nix-mode-20220719.505/nix-prettify-mode.el
-  nix-mode-20220719.505/nix-repl.el
-  nix-mode-20220719.505/nix-search.el
-  nix-mode-20220719.505/nix-shebang.el
-  nix-mode-20220719.505/nix-shell.el
-  nix-mode-20220719.505/nix-store.el
-  nix-mode-20220719.505/nix.el
-Built nix-mode in 3.038s, finished at 2022-08-28T10:02:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  384 Aug 28 10:02 packages/nix-mode-20220719.505.entry
-132K -rw-r--r-- 1 root root 130K Aug 28 10:02 packages/nix-mode-20220719.505.tar
+Wrong number of arguments: (1 . 1), 2

@@ -3,21 +3,4 @@ Fetcher: github
 Source:  https://github.com/minad/cape.git
 
 Updating /mnt/store/melpa/working/cape/
-Checking out origin/HEAD
-Checking out f360464007386b36952b4c3ba0a977f056d0ee19
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cape/
-  to /tmp/cape2d10vM/cape-20220819.1710
-    cape-char.el -> cape-char.el
-    cape-keyword.el -> cape-keyword.el
-    cape.el -> cape.el
-Created cape-20220819.1710.tar containing:
-  cape-20220819.1710/
-  cape-20220819.1710/cape-char.el
-  cape-20220819.1710/cape-keyword.el
-  cape-20220819.1710/cape-pkg.el
-  cape-20220819.1710/cape.el
-Built cape in 3.154s, finished at 2022-08-28T09:26:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 328 Aug 28 09:26 packages/cape-20220819.1710.entry
- 72K -rw-r--r-- 1 root root 70K Aug 28 09:26 packages/cape-20220819.1710.tar
+Wrong number of arguments: (1 . 1), 2

@@ -3,23 +3,4 @@ Fetcher: github
 Source:  https://github.com/DogLooksGood/emacs-rime.git
 
 Updating /mnt/store/melpa/working/rime/
-Checking out origin/HEAD
-Checking out 3eeef9c445fa056a4b32137f9ef72c27ced2d4ab
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/rime/
-  to /tmp/rimeAfFc4A/rime-20220620.951
-    rime-predicates.el -> rime-predicates.el
-    rime.el -> rime.el
-    lib.c -> lib.c
-    Makefile -> Makefile
-Created rime-20220620.951.tar containing:
-  rime-20220620.951/
-  rime-20220620.951/Makefile
-  rime-20220620.951/lib.c
-  rime-20220620.951/rime-pkg.el
-  rime-20220620.951/rime-predicates.el
-  rime-20220620.951/rime.el
-Built rime in 3.505s, finished at 2022-08-28T10:18:26+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 393 Aug 28 10:18 packages/rime-20220620.951.entry
- 72K -rw-r--r-- 1 root root 70K Aug 28 10:18 packages/rime-20220620.951.tar
+Wrong number of arguments: (1 . 1), 2

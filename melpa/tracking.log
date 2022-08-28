@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/emacs-circe/circe.git
 
 Updating /mnt/store/melpa/working/tracking/
-Checking out origin/HEAD
-Checking out 054adb71f685f96cef6cb28381c0080af22e729a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tracking/
-  to /tmp/trackingTuGoKT/tracking-20210713.1609
-    tracking.el -> tracking.el
-    shorten.el -> shorten.el
-Created tracking-20210713.1609.tar containing:
-  tracking-20210713.1609/
-  tracking-20210713.1609/shorten.el
-  tracking-20210713.1609/tracking-pkg.el
-  tracking-20210713.1609/tracking.el
-Built tracking in 3.434s, finished at 2022-08-28T10:26:09+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 326 Aug 28 10:26 packages/tracking-20210713.1609.entry
- 32K -rw-r--r-- 1 root root 30K Aug 28 10:26 packages/tracking-20210713.1609.tar
+Wrong number of arguments: (1 . 1), 2

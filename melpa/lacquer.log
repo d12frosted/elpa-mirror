@@ -3,23 +3,4 @@ Fetcher: github
 Source:  https://github.com/zakudriver/lacquer.git
 
 Updating /mnt/store/melpa/working/lacquer/
-Checking out origin/HEAD
-Checking out 70650105be1b4c1ade34c0a1c3263d80b2388593
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lacquer/
-  to /tmp/lacqueryhRf86/lacquer-20220811.649
-    lacquer-automation.el -> lacquer-automation.el
-    lacquer-setting.el -> lacquer-setting.el
-    lacquer-utils.el -> lacquer-utils.el
-    lacquer.el -> lacquer.el
-Created lacquer-20220811.649.tar containing:
-  lacquer-20220811.649/
-  lacquer-20220811.649/lacquer-automation.el
-  lacquer-20220811.649/lacquer-pkg.el
-  lacquer-20220811.649/lacquer-setting.el
-  lacquer-20220811.649/lacquer-utils.el
-  lacquer-20220811.649/lacquer.el
-Built lacquer in 3.030s, finished at 2022-08-28T09:54:53+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 362 Aug 28 09:54 packages/lacquer-20220811.649.entry
- 40K -rw-r--r-- 1 root root 40K Aug 28 09:54 packages/lacquer-20220811.649.tar
+Wrong number of arguments: (1 . 1), 2

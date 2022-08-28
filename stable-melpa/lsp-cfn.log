@@ -3,25 +3,4 @@ Fetcher: github
 Source:  https://github.com/LaurenceWarne/lsp-cfn.el.git
 
 Updating /mnt/store/melpa/working/lsp-cfn/
-Checking out origin/HEAD
-Checking out 55203d41d767c091511599fca236c1f9c39cd58a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lsp-cfn/
-  to /tmp/lsp-cfngbjGf0/lsp-cfn-20220822.1545
-    lsp-cfn.el -> lsp-cfn.el
-    snippets => snippets
-Created lsp-cfn-20220822.1545.tar containing:
-  lsp-cfn-20220822.1545/
-  lsp-cfn-20220822.1545/lsp-cfn-pkg.el
-  lsp-cfn-20220822.1545/lsp-cfn.el
-  lsp-cfn-20220822.1545/snippets/
-  lsp-cfn-20220822.1545/snippets/js-mode/
-  lsp-cfn-20220822.1545/snippets/js-mode/aws
-  lsp-cfn-20220822.1545/snippets/js-mode/sam
-  lsp-cfn-20220822.1545/snippets/yaml-mode/
-  lsp-cfn-20220822.1545/snippets/yaml-mode/aws
-  lsp-cfn-20220822.1545/snippets/yaml-mode/sam
-Built lsp-cfn in 3.129s, finished at 2022-08-28T09:56:37+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 351 Aug 28 09:56 packages/lsp-cfn-20220822.1545.entry
- 20K -rw-r--r-- 1 root root 20K Aug 28 09:56 packages/lsp-cfn-20220822.1545.tar
+Wrong number of arguments: (1 . 1), 2

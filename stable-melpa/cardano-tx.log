@@ -3,40 +3,4 @@ Fetcher: github
 Source:  https://github.com/Titan-C/cardano.el.git
 
 Updating /mnt/store/melpa/working/cardano-tx/
-Checking out origin/HEAD
-Checking out 4dcd38383367296acd284b9889c0265000da08f4
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cardano-tx/
-  to /tmp/cardano-txapjFqd/cardano-tx-20220718.1440
-    cardano-tx-address.el -> cardano-tx-address.el
-    cardano-tx-assets.el -> cardano-tx-assets.el
-    cardano-tx-cli.el -> cardano-tx-cli.el
-    cardano-tx-db.el -> cardano-tx-db.el
-    cardano-tx-log.el -> cardano-tx-log.el
-    cardano-tx-utils.el -> cardano-tx-utils.el
-    cardano-tx.el -> cardano-tx.el
-    snippets => snippets
-Created cardano-tx-20220718.1440.tar containing:
-  cardano-tx-20220718.1440/
-  cardano-tx-20220718.1440/cardano-tx-address.el
-  cardano-tx-20220718.1440/cardano-tx-assets.el
-  cardano-tx-20220718.1440/cardano-tx-cli.el
-  cardano-tx-20220718.1440/cardano-tx-db.el
-  cardano-tx-20220718.1440/cardano-tx-log.el
-  cardano-tx-20220718.1440/cardano-tx-pkg.el
-  cardano-tx-20220718.1440/cardano-tx-utils.el
-  cardano-tx-20220718.1440/cardano-tx.el
-  cardano-tx-20220718.1440/snippets/
-  cardano-tx-20220718.1440/snippets/cardano-tx-mode/
-  cardano-tx-20220718.1440/snippets/cardano-tx-mode/certificates
-  cardano-tx-20220718.1440/snippets/cardano-tx-mode/meta-nft
-  cardano-tx-20220718.1440/snippets/cardano-tx-mode/mint
-  cardano-tx-20220718.1440/snippets/cardano-tx-mode/spend
-  cardano-tx-20220718.1440/snippets/cardano-tx-mode/wallet-spend
-  cardano-tx-20220718.1440/snippets/cardano-tx-mode/withdrawals
-  cardano-tx-20220718.1440/snippets/yaml-mode/
-  cardano-tx-20220718.1440/snippets/yaml-mode/native script
-Built cardano-tx in 2.754s, finished at 2022-08-28T09:26:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 693 Aug 28 09:26 packages/cardano-tx-20220718.1440.entry
- 92K -rw-r--r-- 1 root root 90K Aug 28 09:26 packages/cardano-tx-20220718.1440.tar
+Wrong number of arguments: (1 . 1), 2

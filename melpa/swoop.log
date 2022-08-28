@@ -3,21 +3,4 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/swoop.git
 
 Updating /mnt/store/melpa/working/swoop/
-Checking out origin/HEAD
-Checking out 828ae0f17f3beaea50ee66d06c500f4847ccc7dd
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/swoop/
-  to /tmp/swoopFqaJ2G/swoop-20200618.905
-    swoop-edit.el -> swoop-edit.el
-    swoop-lib.el -> swoop-lib.el
-    swoop.el -> swoop.el
-Created swoop-20200618.905.tar containing:
-  swoop-20200618.905/
-  swoop-20200618.905/swoop-edit.el
-  swoop-20200618.905/swoop-lib.el
-  swoop-20200618.905/swoop-pkg.el
-  swoop-20200618.905/swoop.el
-Built swoop in 3.310s, finished at 2022-08-28T10:24:17+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 443 Aug 28 10:24 packages/swoop-20200618.905.entry
- 60K -rw-r--r-- 1 root root 60K Aug 28 10:24 packages/swoop-20200618.905.tar
+Wrong number of arguments: (1 . 1), 2

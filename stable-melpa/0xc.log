@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/AdamNiederer/0xc.git
 
 Updating /mnt/store/melpa/working/0xc/
-Checking out origin/HEAD
-Checking out 5bd6c0c901d03d1f24a3ddcf3a62d3b6d2428c80
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/0xc/
-  to /tmp/0xcLlJxdo/0xc-20201025.2105
-    0xc-live.el -> 0xc-live.el
-    0xc.el -> 0xc.el
-Created 0xc-20201025.2105.tar containing:
-  0xc-20201025.2105/
-  0xc-20201025.2105/0xc-live.el
-  0xc-20201025.2105/0xc-pkg.el
-  0xc-20201025.2105/0xc.el
-Built 0xc in 4.355s, finished at 2022-08-28T09:20:27+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 399 Aug 28 09:20 packages/0xc-20201025.2105.entry
- 20K -rw-r--r-- 1 root root 20K Aug 28 09:20 packages/0xc-20201025.2105.tar
+Wrong number of arguments: (1 . 1), 2

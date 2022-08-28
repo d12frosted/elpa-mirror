@@ -3,24 +3,4 @@ Fetcher: github
 Source:  https://github.com/org2blog/org2blog.git
 
 Updating /mnt/store/melpa/working/org2blog/
-Checking out origin/HEAD
-Checking out b641fbcf33ac2b8a0de7b80536b42ce035428625
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org2blog/
-  to /tmp/org2blogkeSgY7/org2blog-20220824.148
-    org2blog-pkg.el -> org2blog-pkg.el
-    org2blog-test-system.el -> org2blog-test-system.el
-    org2blog.el -> org2blog.el
-    ox-wp.el -> ox-wp.el
-    README.org -> README.org
-Created org2blog-20220824.148.tar containing:
-  org2blog-20220824.148/
-  org2blog-20220824.148/README.org
-  org2blog-20220824.148/org2blog-pkg.el
-  org2blog-20220824.148/org2blog-test-system.el
-  org2blog-20220824.148/org2blog.el
-  org2blog-20220824.148/ox-wp.el
-Built org2blog in 3.669s, finished at 2022-08-28T10:06:49+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  503 Aug 28 10:06 packages/org2blog-20220824.148.entry
-220K -rw-r--r-- 1 root root 220K Aug 28 10:06 packages/org2blog-20220824.148.tar
+Wrong number of arguments: (1 . 1), 2

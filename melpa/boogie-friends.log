@@ -3,33 +3,4 @@ Fetcher: github
 Source:  https://github.com/boogie-org/boogie-friends.git
 
 Updating /mnt/store/melpa/working/boogie-friends/
-Checking out origin/HEAD
-Checking out 986458f66a4f306e4697b71806c9a797940cf92c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/boogie-friends/
-  to /tmp/boogie-friendsIJ8V7M/boogie-friends-20220815.1808
-  ! emacs/boogie-friends-pkg.el -> boogie-friends-pkg.el
-  ! emacs/boogie-friends.el -> boogie-friends.el
-  ! emacs/boogie-mode.el -> boogie-mode.el
-  ! emacs/dafny-docs.el -> dafny-docs.el
-  ! emacs/dafny-mode.el -> dafny-mode.el
-  ! emacs/inferior-dafny.el -> inferior-dafny.el
-  ! emacs/z3-smt2-mode.el -> z3-smt2-mode.el
-  ! emacs/etc => etc
-Created boogie-friends-20220815.1808.tar containing:
-  boogie-friends-20220815.1808/
-  boogie-friends-20220815.1808/boogie-friends-pkg.el
-  boogie-friends-20220815.1808/boogie-friends.el
-  boogie-friends-20220815.1808/boogie-mode.el
-  boogie-friends-20220815.1808/dafny-docs.el
-  boogie-friends-20220815.1808/dafny-mode.el
-  boogie-friends-20220815.1808/etc/
-  boogie-friends-20220815.1808/etc/dafny-attributes
-  boogie-friends-20220815.1808/etc/dafny-docs.html.gz
-  boogie-friends-20220815.1808/etc/dafny-snippets
-  boogie-friends-20220815.1808/inferior-dafny.el
-  boogie-friends-20220815.1808/z3-smt2-mode.el
-Built boogie-friends in 3.998s, finished at 2022-08-28T09:25:18+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  570 Aug 28 09:25 packages/boogie-friends-20220815.1808.entry
-120K -rw-r--r-- 1 root root 120K Aug 28 09:25 packages/boogie-friends-20220815.1808.tar
+Wrong number of arguments: (1 . 1), 2

@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/takaxp/moom.git
 
 Updating /mnt/store/melpa/working/moom/
-Checking out origin/HEAD
-Checking out 808952a934d0459829422b3417ca23926c1ceabf
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/moom/
-  to /tmp/moomLz3w9r/moom-20220724.808
-    moom-font.el -> moom-font.el
-    moom.el -> moom.el
-Created moom-20220724.808.tar containing:
-  moom-20220724.808/
-  moom-20220724.808/moom-font.el
-  moom-20220724.808/moom-pkg.el
-  moom-20220724.808/moom.el
-Built moom in 3.277s, finished at 2022-08-28T10:00:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 385 Aug 28 10:00 packages/moom-20220724.808.entry
- 80K -rw-r--r-- 1 root root 80K Aug 28 10:00 packages/moom-20220724.808.tar
+Wrong number of arguments: (1 . 1), 2

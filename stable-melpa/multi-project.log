@@ -3,20 +3,4 @@ Fetcher: hg
 Source:  https://hg.osdn.net/view/multi-project/multi-project
 
 Updating /mnt/store/melpa/working/multi-project/
-Checking out 43a30f9578dc2f5acd4fc2941bedaa031b942b81
-
-Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
-
-pulling from https://hg.osdn.net/view/multi-project/multi-project
-searching for changes
-no changes found
-0 files updated, 0 files merged, 0 files removed, 0 files unresolved
-0 files updated, 0 files merged, 0 files removed, 0 files unresolved
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command exited with non-zero exit-code: 255
+Wrong number of arguments: (1 . 1), 2

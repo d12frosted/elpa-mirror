@@ -3,25 +3,4 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/parseclj.git
 
 Updating /mnt/store/melpa/working/parseclj/
-Checking out origin/HEAD
-Checking out 4d0e780e00f1828b00c43099e6eebc6582998f72
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/parseclj/
-  to /tmp/parsecljsrrTGj/parseclj-20220422.936
-    parseclj-alist.el -> parseclj-alist.el
-    parseclj-ast.el -> parseclj-ast.el
-    parseclj-lex.el -> parseclj-lex.el
-    parseclj-parser.el -> parseclj-parser.el
-    parseclj.el -> parseclj.el
-Created parseclj-20220422.936.tar containing:
-  parseclj-20220422.936/
-  parseclj-20220422.936/parseclj-alist.el
-  parseclj-20220422.936/parseclj-ast.el
-  parseclj-20220422.936/parseclj-lex.el
-  parseclj-20220422.936/parseclj-parser.el
-  parseclj-20220422.936/parseclj-pkg.el
-  parseclj-20220422.936/parseclj.el
-Built parseclj in 3.106s, finished at 2022-08-28T10:08:23+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 324 Aug 28 10:08 packages/parseclj-20220422.936.entry
- 60K -rw-r--r-- 1 root root 60K Aug 28 10:08 packages/parseclj-20220422.936.tar
+Wrong number of arguments: (1 . 1), 2

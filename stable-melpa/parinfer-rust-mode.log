@@ -3,21 +3,4 @@ Fetcher: github
 Source:  https://github.com/justinbarclay/parinfer-rust-mode.git
 
 Updating /mnt/store/melpa/working/parinfer-rust-mode/
-Checking out origin/HEAD
-Checking out c2c1bbec6cc7dad4f546868aa07609b8d58a78f8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/parinfer-rust-mode/
-  to /tmp/parinfer-rust-modeNFc8Gn/parinfer-rust-mode-20210413.2
-    parinfer-rust-changes.el -> parinfer-rust-changes.el
-    parinfer-rust-helper.el -> parinfer-rust-helper.el
-    parinfer-rust-mode.el -> parinfer-rust-mode.el
-Created parinfer-rust-mode-20210413.2.tar containing:
-  parinfer-rust-mode-20210413.2/
-  parinfer-rust-mode-20210413.2/parinfer-rust-changes.el
-  parinfer-rust-mode-20210413.2/parinfer-rust-helper.el
-  parinfer-rust-mode-20210413.2/parinfer-rust-mode-pkg.el
-  parinfer-rust-mode-20210413.2/parinfer-rust-mode.el
-Built parinfer-rust-mode in 2.428s, finished at 2022-08-28T10:08:18+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 445 Aug 28 10:08 packages/parinfer-rust-mode-20210413.2.entry
- 52K -rw-r--r-- 1 root root 50K Aug 28 10:08 packages/parinfer-rust-mode-20210413.2.tar
+Wrong number of arguments: (1 . 1), 2

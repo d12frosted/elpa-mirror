@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/elisp-demos.git
 
 Updating /mnt/store/melpa/working/elisp-demos/
-Checking out origin/HEAD
-Checking out 4b51dff1ee5b6cb9fac946431753489cd96a67b0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elisp-demos/
-  to /tmp/elisp-demosGLhr27/elisp-demos-20220707.410
-    elisp-demos.el -> elisp-demos.el
-    elisp-demos.org -> elisp-demos.org
-Created elisp-demos-20220707.410.tar containing:
-  elisp-demos-20220707.410/
-  elisp-demos-20220707.410/elisp-demos-pkg.el
-  elisp-demos-20220707.410/elisp-demos.el
-  elisp-demos-20220707.410/elisp-demos.org
-Built elisp-demos in 2.982s, finished at 2022-08-28T09:35:43+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  326 Aug 28 09:35 packages/elisp-demos-20220707.410.entry
-292K -rw-r--r-- 1 root root 290K Aug 28 09:35 packages/elisp-demos-20220707.410.tar
+Wrong number of arguments: (1 . 1), 2

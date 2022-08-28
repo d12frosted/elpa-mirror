@@ -3,23 +3,4 @@ Fetcher: github
 Source:  https://github.com/DamienCassou/eslint-disable-rule.git
 
 Updating /mnt/store/melpa/working/eslint-disable-rule/
-Checking out origin/HEAD
-Checking out 642ead124172dd470e8ab59fd0645597dc9d8e66
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eslint-disable-rule/
-  to /tmp/eslint-disable-ruleFjXLb2/eslint-disable-rule-20220811.1006
-    eslint-disable-rule-all.el -> eslint-disable-rule-all.el
-    eslint-disable-rule-flycheck.el -> eslint-disable-rule-flycheck.el
-    eslint-disable-rule-flymake.el -> eslint-disable-rule-flymake.el
-    eslint-disable-rule.el -> eslint-disable-rule.el
-Created eslint-disable-rule-20220811.1006.tar containing:
-  eslint-disable-rule-20220811.1006/
-  eslint-disable-rule-20220811.1006/eslint-disable-rule-all.el
-  eslint-disable-rule-20220811.1006/eslint-disable-rule-flycheck.el
-  eslint-disable-rule-20220811.1006/eslint-disable-rule-flymake.el
-  eslint-disable-rule-20220811.1006/eslint-disable-rule-pkg.el
-  eslint-disable-rule-20220811.1006/eslint-disable-rule.el
-Built eslint-disable-rule in 2.862s, finished at 2022-08-28T09:37:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 279 Aug 28 09:37 packages/eslint-disable-rule-20220811.1006.entry
- 32K -rw-r--r-- 1 root root 30K Aug 28 09:37 packages/eslint-disable-rule-20220811.1006.tar
+Wrong number of arguments: (1 . 1), 2

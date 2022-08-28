@@ -3,19 +3,4 @@ Fetcher: github
 Source:  https://github.com/rejeep/f.el.git
 
 Updating /mnt/store/melpa/working/f/
-Checking out origin/HEAD
-Checking out 9f7346b863022c0e2259c6d26d74e898f6047ab6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/f/
-  to /tmp/fJtLTga/f-20220814.1054
-    f-shortdoc.el -> f-shortdoc.el
-    f.el -> f.el
-Created f-20220814.1054.tar containing:
-  f-20220814.1054/
-  f-20220814.1054/f-pkg.el
-  f-20220814.1054/f-shortdoc.el
-  f-20220814.1054/f.el
-Built f in 2.849s, finished at 2022-08-28T09:39:22+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 444 Aug 28 09:39 packages/f-20220814.1054.entry
- 40K -rw-r--r-- 1 root root 40K Aug 28 09:39 packages/f-20220814.1054.tar
+Wrong number of arguments: (1 . 1), 2
