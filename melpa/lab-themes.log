@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/MetroWind/lab-theme.git
 
 Updating /mnt/store/melpa/working/lab-themes/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 9d7deb9635959d3a50ccb1082eb1207275f4b3e8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lab-themes/
+  to /tmp/lab-themes1Mc9dg/lab-themes-20200815.2104
+    lab-dark-theme.el -> lab-dark-theme.el
+    lab-light-theme.el -> lab-light-theme.el
+    lab-themes.el -> lab-themes.el
+Created lab-themes-20200815.2104.tar containing:
+  lab-themes-20200815.2104/
+  lab-themes-20200815.2104/lab-dark-theme.el
+  lab-themes-20200815.2104/lab-light-theme.el
+  lab-themes-20200815.2104/lab-themes-pkg.el
+  lab-themes-20200815.2104/lab-themes.el
+Built lab-themes in 3.269s, finished at 2022-08-29T13:08:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 408 Aug 29 13:08 packages/lab-themes-20200815.2104.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 29 13:08 packages/lab-themes-20200815.2104.tar

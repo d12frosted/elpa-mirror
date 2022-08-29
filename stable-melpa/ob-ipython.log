@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/gregsexton/ob-ipython.git
 
 Updating /mnt/store/melpa/working/ob-ipython/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 7147455230841744fb5b95dcbe03320313a77124
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-ipython/
+  to /tmp/ob-ipythonzD2w4o/ob-ipython-20180224.953
+    ob-ipython.el -> ob-ipython.el
+    client.py -> client.py
+Created ob-ipython-20180224.953.tar containing:
+  ob-ipython-20180224.953/
+  ob-ipython-20180224.953/client.py
+  ob-ipython-20180224.953/ob-ipython-pkg.el
+  ob-ipython-20180224.953/ob-ipython.el
+Built ob-ipython in 3.298s, finished at 2022-08-29T13:16:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 548 Aug 29 13:16 packages/ob-ipython-20180224.953.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 29 13:16 packages/ob-ipython-20180224.953.tar

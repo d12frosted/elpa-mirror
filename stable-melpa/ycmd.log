@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/abingham/emacs-ycmd.git
 
 Updating /mnt/store/melpa/working/ycmd/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 6f4f7384b82203cccf208e3ec09252eb079439f9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ycmd/
+  to /tmp/ycmdeZQsIc/ycmd-20190416.807
+    ycmd.el -> ycmd.el
+    ycmd-eldoc.el -> ycmd-eldoc.el
+  ! contrib/ycmd-next-error.el -> ycmd-next-error.el
+Created ycmd-20190416.807.tar containing:
+  ycmd-20190416.807/
+  ycmd-20190416.807/ycmd-eldoc.el
+  ycmd-20190416.807/ycmd-next-error.el
+  ycmd-20190416.807/ycmd-pkg.el
+  ycmd-20190416.807/ycmd.el
+Built ycmd in 3.870s, finished at 2022-08-29T13:41:53+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  406 Aug 29 13:41 packages/ycmd-20190416.807.entry
+112K -rw-r--r-- 1 root root 110K Aug 29 13:41 packages/ycmd-20190416.807.tar

@@ -3,4 +3,89 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/cider.git
 
 Updating /mnt/store/melpa/working/cider/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 5bba4856fb42636bd52d1a1ebb4997a8806df759
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cider/
+  to /tmp/cider3Jg3jn/cider-20220824.759
+    cider-apropos.el -> cider-apropos.el
+    cider-browse-ns.el -> cider-browse-ns.el
+    cider-browse-spec.el -> cider-browse-spec.el
+    cider-cheatsheet.el -> cider-cheatsheet.el
+    cider-classpath.el -> cider-classpath.el
+    cider-client.el -> cider-client.el
+    cider-clojuredocs.el -> cider-clojuredocs.el
+    cider-common.el -> cider-common.el
+    cider-completion.el -> cider-completion.el
+    cider-connection.el -> cider-connection.el
+    cider-debug.el -> cider-debug.el
+    cider-doc.el -> cider-doc.el
+    cider-eldoc.el -> cider-eldoc.el
+    cider-eval.el -> cider-eval.el
+    cider-find.el -> cider-find.el
+    cider-format.el -> cider-format.el
+    cider-inspector.el -> cider-inspector.el
+    cider-jar.el -> cider-jar.el
+    cider-macroexpansion.el -> cider-macroexpansion.el
+    cider-mode.el -> cider-mode.el
+    cider-ns.el -> cider-ns.el
+    cider-overlays.el -> cider-overlays.el
+    cider-popup.el -> cider-popup.el
+    cider-profile.el -> cider-profile.el
+    cider-repl-history.el -> cider-repl-history.el
+    cider-repl.el -> cider-repl.el
+    cider-resolve.el -> cider-resolve.el
+    cider-scratch.el -> cider-scratch.el
+    cider-selector.el -> cider-selector.el
+    cider-stacktrace.el -> cider-stacktrace.el
+    cider-test.el -> cider-test.el
+    cider-tracing.el -> cider-tracing.el
+    cider-util.el -> cider-util.el
+    cider-xref.el -> cider-xref.el
+    cider.el -> cider.el
+    nrepl-client.el -> nrepl-client.el
+    nrepl-dict.el -> nrepl-dict.el
+Created cider-20220824.759.tar containing:
+  cider-20220824.759/
+  cider-20220824.759/cider-apropos.el
+  cider-20220824.759/cider-browse-ns.el
+  cider-20220824.759/cider-browse-spec.el
+  cider-20220824.759/cider-cheatsheet.el
+  cider-20220824.759/cider-classpath.el
+  cider-20220824.759/cider-client.el
+  cider-20220824.759/cider-clojuredocs.el
+  cider-20220824.759/cider-common.el
+  cider-20220824.759/cider-completion.el
+  cider-20220824.759/cider-connection.el
+  cider-20220824.759/cider-debug.el
+  cider-20220824.759/cider-doc.el
+  cider-20220824.759/cider-eldoc.el
+  cider-20220824.759/cider-eval.el
+  cider-20220824.759/cider-find.el
+  cider-20220824.759/cider-format.el
+  cider-20220824.759/cider-inspector.el
+  cider-20220824.759/cider-jar.el
+  cider-20220824.759/cider-macroexpansion.el
+  cider-20220824.759/cider-mode.el
+  cider-20220824.759/cider-ns.el
+  cider-20220824.759/cider-overlays.el
+  cider-20220824.759/cider-pkg.el
+  cider-20220824.759/cider-popup.el
+  cider-20220824.759/cider-profile.el
+  cider-20220824.759/cider-repl-history.el
+  cider-20220824.759/cider-repl.el
+  cider-20220824.759/cider-resolve.el
+  cider-20220824.759/cider-scratch.el
+  cider-20220824.759/cider-selector.el
+  cider-20220824.759/cider-stacktrace.el
+  cider-20220824.759/cider-test.el
+  cider-20220824.759/cider-tracing.el
+  cider-20220824.759/cider-util.el
+  cider-20220824.759/cider-xref.el
+  cider-20220824.759/cider.el
+  cider-20220824.759/nrepl-client.el
+  cider-20220824.759/nrepl-dict.el
+Built cider in 5.856s, finished at 2022-08-29T15:49:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  750 Aug 29 15:49 packages/cider-20220824.759.entry
+892K -rw-r--r-- 1 root root 890K Aug 29 15:49 packages/cider-20220824.759.tar

@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/zenspider/package.git
 
 Updating /mnt/store/melpa/working/package+/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 06fbc904e09d3349b669c2624a587fee5accf5ef
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/package+/
+  to /tmp/package+1ggSWn/package+-20210124.640
+    package+.el -> package+.el
+    package+advice.el -> package+advice.el
+Created package+-20210124.640.tar containing:
+  package+-20210124.640/
+  package+-20210124.640/package+-pkg.el
+  package+-20210124.640/package+.el
+  package+-20210124.640/package+advice.el
+Built package+ in 3.934s, finished at 2022-08-29T13:21:35+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 385 Aug 29 13:21 packages/package+-20210124.640.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 29 13:21 packages/package+-20210124.640.tar

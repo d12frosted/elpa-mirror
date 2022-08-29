@@ -3,4 +3,33 @@ Fetcher: github
 Source:  https://github.com/emacs-citar/citar.git
 
 Updating /mnt/store/melpa/working/citar/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 731c0ae81aecca94f7dcc4f2dad51a0cd1c3de68
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/citar/
+  to /tmp/citarh2vit4/citar-20220820.1409
+    citar-cache.el -> citar-cache.el
+    citar-capf.el -> citar-capf.el
+    citar-citeproc.el -> citar-citeproc.el
+    citar-file.el -> citar-file.el
+    citar-format.el -> citar-format.el
+    citar-latex.el -> citar-latex.el
+    citar-markdown.el -> citar-markdown.el
+    citar-org.el -> citar-org.el
+    citar.el -> citar.el
+Created citar-20220820.1409.tar containing:
+  citar-20220820.1409/
+  citar-20220820.1409/citar-cache.el
+  citar-20220820.1409/citar-capf.el
+  citar-20220820.1409/citar-citeproc.el
+  citar-20220820.1409/citar-file.el
+  citar-20220820.1409/citar-format.el
+  citar-20220820.1409/citar-latex.el
+  citar-20220820.1409/citar-markdown.el
+  citar-20220820.1409/citar-org.el
+  citar-20220820.1409/citar-pkg.el
+  citar-20220820.1409/citar.el
+Built citar in 5.076s, finished at 2022-08-29T15:50:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  407 Aug 29 15:50 packages/citar-20220820.1409.entry
+152K -rw-r--r-- 1 root root 150K Aug 29 15:50 packages/citar-20220820.1409.tar

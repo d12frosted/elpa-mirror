@@ -3,4 +3,15 @@ Fetcher: hg
 Source:  https://hg.sr.ht/~arnebab/kanban.el
 
 Updating /mnt/store/melpa/working/kanban/
-Wrong number of arguments: (1 . 1), 2
+Checking out dd11d722b20ae720f29b8aa93a3b1cad87650b33
+
+Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
+
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command exited with non-zero exit-code: 255

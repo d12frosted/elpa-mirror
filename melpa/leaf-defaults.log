@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/conao3/leaf-defaults.el.git
 
 Updating /mnt/store/melpa/working/leaf-defaults/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 96ce39d4f16736f1e654e24eac16a2603976c724
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leaf-defaults/
+  to /tmp/leaf-defaults63Rxyf/leaf-defaults-20210301.118
+    leaf-defaults-recipe.el -> leaf-defaults-recipe.el
+    leaf-defaults.el -> leaf-defaults.el
+Created leaf-defaults-20210301.118.tar containing:
+  leaf-defaults-20210301.118/
+  leaf-defaults-20210301.118/leaf-defaults-pkg.el
+  leaf-defaults-20210301.118/leaf-defaults-recipe.el
+  leaf-defaults-20210301.118/leaf-defaults.el
+Built leaf-defaults in 2.805s, finished at 2022-08-29T13:08:49+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 415 Aug 29 13:08 packages/leaf-defaults-20210301.118.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 29 13:08 packages/leaf-defaults-20210301.118.tar

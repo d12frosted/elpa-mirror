@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/egison/egison.git
 
 Updating /mnt/store/melpa/working/egison-mode/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 1ec6e8fedcda1bc2a6517cdbd8b1a85a1401a8f1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/egison-mode/
+  to /tmp/egison-modeVzfBeU/egison-mode-20200107.2333
+  ! elisp/egison-mode.el -> egison-mode.el
+  ! elisp/s-egison-mode.el -> s-egison-mode.el
+Created egison-mode-20200107.2333.tar containing:
+  egison-mode-20200107.2333/
+  egison-mode-20200107.2333/egison-mode-pkg.el
+  egison-mode-20200107.2333/egison-mode.el
+  egison-mode-20200107.2333/s-egison-mode.el
+Built egison-mode in 5.241s, finished at 2022-08-29T15:58:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 354 Aug 29 15:58 packages/egison-mode-20200107.2333.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 29 15:58 packages/egison-mode-20200107.2333.tar

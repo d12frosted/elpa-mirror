@@ -3,4 +3,25 @@ Fetcher: github
 Source:  https://github.com/pekingduck/emacs-sqlite3-api.git
 
 Updating /mnt/store/melpa/working/sqlite3/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 2f6095201b1d943d92cc017e100eec571a8d2aab
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sqlite3/
+  to /tmp/sqlite3zMJ4Fg/sqlite3-20220529.1106
+    sqlite3.el -> sqlite3.el
+    Makefile -> Makefile
+    consts.c -> consts.c
+    emacs-module.h -> emacs-module.h
+    sqlite3-api.c -> sqlite3-api.c
+Created sqlite3-20220529.1106.tar containing:
+  sqlite3-20220529.1106/
+  sqlite3-20220529.1106/Makefile
+  sqlite3-20220529.1106/consts.c
+  sqlite3-20220529.1106/emacs-module.h
+  sqlite3-20220529.1106/sqlite3-api.c
+  sqlite3-20220529.1106/sqlite3-pkg.el
+  sqlite3-20220529.1106/sqlite3.el
+Built sqlite3 in 4.066s, finished at 2022-08-29T13:33:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  375 Aug 29 13:33 packages/sqlite3-20220529.1106.entry
+100K -rw-r--r-- 1 root root 100K Aug 29 13:33 packages/sqlite3-20220529.1106.tar

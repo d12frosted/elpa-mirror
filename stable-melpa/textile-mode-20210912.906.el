@@ -424,3 +424,5 @@ non-matching parentheses"
 
 (provide 'textile-mode)
  ;;; textile-mode.el ends here
+
+;;; textile-mode.el ends here

@@ -3,4 +3,22 @@ Fetcher: git
 Source:  https://thelambdalab.xyz/git/elpher.git
 
 Updating /mnt/store/melpa/working/elpher/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out b5269970249871a8889950a3e47bdff51eb0420c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elpher/
+  to /tmp/elpherelFzEP/elpher-20220809.253
+    elpher-pkg.el -> elpher-pkg.el
+    elpher.el -> elpher.el
+    elpher.texi -> elpher.texi
+Generating /tmp/elpherelFzEP/elpher-20220809.253/elpher.info
+Created elpher-20220809.253.tar containing:
+  elpher-20220809.253/
+  elpher-20220809.253/dir
+  elpher-20220809.253/elpher-pkg.el
+  elpher-20220809.253/elpher.el
+  elpher-20220809.253/elpher.info
+Built elpher in 7.350s, finished at 2022-08-29T15:59:26+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  351 Aug 29 15:59 packages/elpher-20220809.253.entry
+160K -rw-r--r-- 1 root root 160K Aug 29 15:59 packages/elpher-20220809.253.tar

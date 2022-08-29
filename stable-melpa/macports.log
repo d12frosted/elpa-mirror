@@ -3,4 +3,27 @@ Fetcher: github
 Source:  https://github.com/amake/macports.el.git
 
 Updating /mnt/store/melpa/working/macports/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out a3d554e2d9d7900fc4723c1ef8d6941d0f65b010
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/macports/
+  to /tmp/macportsWdlAhg/macports-20220820.1110
+    macports-core.el -> macports-core.el
+    macports-describe.el -> macports-describe.el
+    macports-installed.el -> macports-installed.el
+    macports-outdated.el -> macports-outdated.el
+    macports-select.el -> macports-select.el
+    macports.el -> macports.el
+Created macports-20220820.1110.tar containing:
+  macports-20220820.1110/
+  macports-20220820.1110/macports-core.el
+  macports-20220820.1110/macports-describe.el
+  macports-20220820.1110/macports-installed.el
+  macports-20220820.1110/macports-outdated.el
+  macports-20220820.1110/macports-pkg.el
+  macports-20220820.1110/macports-select.el
+  macports-20220820.1110/macports.el
+Built macports in 3.733s, finished at 2022-08-29T13:10:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 353 Aug 29 13:10 packages/macports-20220820.1110.entry
+ 60K -rw-r--r-- 1 root root 60K Aug 29 13:10 packages/macports-20220820.1110.tar

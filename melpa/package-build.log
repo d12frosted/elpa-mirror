@@ -3,4 +3,25 @@ Fetcher: github
 Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out ac2abd863047e5437398f5d58fe38c4a17062401
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/package-build/
+  to /tmp/package-build76i6Ce/package-build-20220828.1519
+    package-build-badges.el -> package-build-badges.el
+    package-build.el -> package-build.el
+    package-recipe-mode.el -> package-recipe-mode.el
+    package-recipe.el -> package-recipe.el
+Created package-build-20220828.1519.tar containing:
+  package-build-20220828.1519/
+  package-build-20220828.1519/package-build-badges.el
+  package-build-20220828.1519/package-build-pkg.el
+  package-build-20220828.1519/package-build.el
+  package-build-20220828.1519/package-recipe-mode.el
+  package-build-20220828.1519/package-recipe.el
+Built package-build in 4.656s, finished at 2022-08-29T13:21:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 530 Aug 29 13:21 packages/package-build-20220828.1519.entry
+ 72K -rw-r--r-- 1 root root 70K Aug 29 13:21 packages/package-build-20220828.1519.tar
+4.0K -rw-r--r-- 1 root root 529 Aug 28 10:07 packages/package-build-20220828.925.entry
+ 72K -rw-r--r-- 1 root root 70K Aug 28 10:07 packages/package-build-20220828.925.tar

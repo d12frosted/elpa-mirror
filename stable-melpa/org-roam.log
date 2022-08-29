@@ -3,4 +3,49 @@ Fetcher: github
 Source:  https://github.com/org-roam/org-roam.git
 
 Updating /mnt/store/melpa/working/org-roam/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 7f453f3fffb924ca4ae3f8d34cabc03fbcae0127
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-roam/
+  to /tmp/org-roam9yztVR/org-roam-20220804.437
+    org-roam-capture.el -> org-roam-capture.el
+    org-roam-compat.el -> org-roam-compat.el
+    org-roam-db.el -> org-roam-db.el
+    org-roam-id.el -> org-roam-id.el
+    org-roam-log.el -> org-roam-log.el
+    org-roam-migrate.el -> org-roam-migrate.el
+    org-roam-mode.el -> org-roam-mode.el
+    org-roam-node.el -> org-roam-node.el
+    org-roam-utils.el -> org-roam-utils.el
+    org-roam.el -> org-roam.el
+  ! doc/org-roam.texi -> org-roam.texi
+  ! extensions/org-roam-dailies.el -> org-roam-dailies.el
+  ! extensions/org-roam-export.el -> org-roam-export.el
+  ! extensions/org-roam-graph.el -> org-roam-graph.el
+  ! extensions/org-roam-overlay.el -> org-roam-overlay.el
+  ! extensions/org-roam-protocol.el -> org-roam-protocol.el
+Generating /tmp/org-roam9yztVR/org-roam-20220804.437/org-roam.info
+Created org-roam-20220804.437.tar containing:
+  org-roam-20220804.437/
+  org-roam-20220804.437/dir
+  org-roam-20220804.437/org-roam-capture.el
+  org-roam-20220804.437/org-roam-compat.el
+  org-roam-20220804.437/org-roam-dailies.el
+  org-roam-20220804.437/org-roam-db.el
+  org-roam-20220804.437/org-roam-export.el
+  org-roam-20220804.437/org-roam-graph.el
+  org-roam-20220804.437/org-roam-id.el
+  org-roam-20220804.437/org-roam-log.el
+  org-roam-20220804.437/org-roam-migrate.el
+  org-roam-20220804.437/org-roam-mode.el
+  org-roam-20220804.437/org-roam-node.el
+  org-roam-20220804.437/org-roam-overlay.el
+  org-roam-20220804.437/org-roam-pkg.el
+  org-roam-20220804.437/org-roam-protocol.el
+  org-roam-20220804.437/org-roam-utils.el
+  org-roam-20220804.437/org-roam.el
+  org-roam-20220804.437/org-roam.info
+Built org-roam in 15.521s, finished at 2022-08-29T13:19:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  548 Aug 29 13:19 packages/org-roam-20220804.437.entry
+360K -rw-r--r-- 1 root root 360K Aug 29 13:19 packages/org-roam-20220804.437.tar

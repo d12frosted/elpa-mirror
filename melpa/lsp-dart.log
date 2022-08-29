@@ -3,4 +3,47 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-dart.git
 
 Updating /mnt/store/melpa/working/lsp-dart/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out a312fe8cd941b641216d4654da2e8be82b16d611
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-dart/
+  to /tmp/lsp-dartGjApza/lsp-dart-20220717.1834
+    lsp-dart-closing-labels.el -> lsp-dart-closing-labels.el
+    lsp-dart-code-lens.el -> lsp-dart-code-lens.el
+    lsp-dart-commands.el -> lsp-dart-commands.el
+    lsp-dart-dap.el -> lsp-dart-dap.el
+    lsp-dart-devtools.el -> lsp-dart-devtools.el
+    lsp-dart-flutter-colors.el -> lsp-dart-flutter-colors.el
+    lsp-dart-flutter-daemon.el -> lsp-dart-flutter-daemon.el
+    lsp-dart-flutter-fringe-colors.el -> lsp-dart-flutter-fringe-colors.el
+    lsp-dart-flutter-widget-guide.el -> lsp-dart-flutter-widget-guide.el
+    lsp-dart-outline.el -> lsp-dart-outline.el
+    lsp-dart-protocol.el -> lsp-dart-protocol.el
+    lsp-dart-test-output.el -> lsp-dart-test-output.el
+    lsp-dart-test-support.el -> lsp-dart-test-support.el
+    lsp-dart-test-tree.el -> lsp-dart-test-tree.el
+    lsp-dart-utils.el -> lsp-dart-utils.el
+    lsp-dart.el -> lsp-dart.el
+Created lsp-dart-20220717.1834.tar containing:
+  lsp-dart-20220717.1834/
+  lsp-dart-20220717.1834/lsp-dart-closing-labels.el
+  lsp-dart-20220717.1834/lsp-dart-code-lens.el
+  lsp-dart-20220717.1834/lsp-dart-commands.el
+  lsp-dart-20220717.1834/lsp-dart-dap.el
+  lsp-dart-20220717.1834/lsp-dart-devtools.el
+  lsp-dart-20220717.1834/lsp-dart-flutter-colors.el
+  lsp-dart-20220717.1834/lsp-dart-flutter-daemon.el
+  lsp-dart-20220717.1834/lsp-dart-flutter-fringe-colors.el
+  lsp-dart-20220717.1834/lsp-dart-flutter-widget-guide.el
+  lsp-dart-20220717.1834/lsp-dart-outline.el
+  lsp-dart-20220717.1834/lsp-dart-pkg.el
+  lsp-dart-20220717.1834/lsp-dart-protocol.el
+  lsp-dart-20220717.1834/lsp-dart-test-output.el
+  lsp-dart-20220717.1834/lsp-dart-test-support.el
+  lsp-dart-20220717.1834/lsp-dart-test-tree.el
+  lsp-dart-20220717.1834/lsp-dart-utils.el
+  lsp-dart-20220717.1834/lsp-dart.el
+Built lsp-dart in 3.695s, finished at 2022-08-29T13:10:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  421 Aug 29 13:10 packages/lsp-dart-20220717.1834.entry
+172K -rw-r--r-- 1 root root 170K Aug 29 13:10 packages/lsp-dart-20220717.1834.tar

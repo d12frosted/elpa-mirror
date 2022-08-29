@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/neeasade/ct.el.git
 
 Updating /mnt/store/melpa/working/ct/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out dd883e2315aba099e32fba9f1039437551b96ef3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ct/
+  to /tmp/ctl3TtVj/ct-20220610.1146
+    ct-doc.el -> ct-doc.el
+    ct.el -> ct.el
+Created ct-20220610.1146.tar containing:
+  ct-20220610.1146/
+  ct-20220610.1146/ct-doc.el
+  ct-20220610.1146/ct-pkg.el
+  ct-20220610.1146/ct.el
+Built ct in 3.357s, finished at 2022-08-29T15:53:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 425 Aug 29 15:53 packages/ct-20220610.1146.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 29 15:53 packages/ct-20220610.1146.tar

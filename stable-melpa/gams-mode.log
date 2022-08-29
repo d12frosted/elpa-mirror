@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/ShiroTakeda/gams-mode.git
 
 Updating /mnt/store/melpa/working/gams-mode/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 937b2223259fb102bd6991fe46f509897e4f6cba
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gams-mode/
+  to /tmp/gams-mode7gQ9D8/gams-mode-20220512.222
+    gams-mode.el -> gams-mode.el
+    gams-logo.xpm -> gams-logo.xpm
+Created gams-mode-20220512.222.tar containing:
+  gams-mode-20220512.222/
+  gams-mode-20220512.222/gams-logo.xpm
+  gams-mode-20220512.222/gams-mode-pkg.el
+  gams-mode-20220512.222/gams-mode.el
+Built gams-mode in 4.346s, finished at 2022-08-29T16:07:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  373 Aug 29 16:07 packages/gams-mode-20220512.222.entry
+632K -rw-r--r-- 1 root root 630K Aug 29 16:07 packages/gams-mode-20220512.222.tar

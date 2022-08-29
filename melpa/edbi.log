@@ -3,4 +3,20 @@ Fetcher: github
 Source:  https://github.com/kiwanami/emacs-edbi.git
 
 Updating /mnt/store/melpa/working/edbi/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 6f50aaf4bde75255221f2292c7a4ad3fa9d918c0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/edbi/
+  to /tmp/edbigIdRO7/edbi-20160225.141
+    edbi-pkg.el -> edbi-pkg.el
+    edbi.el -> edbi.el
+    edbi-bridge.pl -> edbi-bridge.pl
+Created edbi-20160225.141.tar containing:
+  edbi-20160225.141/
+  edbi-20160225.141/edbi-bridge.pl
+  edbi-20160225.141/edbi-pkg.el
+  edbi-20160225.141/edbi.el
+Built edbi in 4.062s, finished at 2022-08-29T15:57:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  407 Aug 29 15:57 packages/edbi-20160225.141.entry
+100K -rw-r--r-- 1 root root 100K Aug 29 15:57 packages/edbi-20160225.141.tar

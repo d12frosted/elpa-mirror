@@ -3,4 +3,27 @@ Fetcher: github
 Source:  https://github.com/mpdel/mpdel.git
 
 Updating /mnt/store/melpa/working/mpdel/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out be954f3722d4f28718748eeb5dc859b04d3fefeb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mpdel/
+  to /tmp/mpdelDxsSQb/mpdel-20220706.1952
+    mpdel-browser.el -> mpdel-browser.el
+    mpdel-core.el -> mpdel-core.el
+    mpdel-playlist.el -> mpdel-playlist.el
+    mpdel-song.el -> mpdel-song.el
+    mpdel-tablist.el -> mpdel-tablist.el
+    mpdel.el -> mpdel.el
+Created mpdel-20220706.1952.tar containing:
+  mpdel-20220706.1952/
+  mpdel-20220706.1952/mpdel-browser.el
+  mpdel-20220706.1952/mpdel-core.el
+  mpdel-20220706.1952/mpdel-pkg.el
+  mpdel-20220706.1952/mpdel-playlist.el
+  mpdel-20220706.1952/mpdel-song.el
+  mpdel-20220706.1952/mpdel-tablist.el
+  mpdel-20220706.1952/mpdel.el
+Built mpdel in 3.224s, finished at 2022-08-29T13:14:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 379 Aug 29 13:14 packages/mpdel-20220706.1952.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 29 13:14 packages/mpdel-20220706.1952.tar

@@ -3,4 +3,38 @@ Fetcher: github
 Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out f41699dcb7dba5db3eecd8b0e5024e37b90e5e31
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eldev/
+  to /tmp/eldevEcF9UW/eldev-20220826.1531
+    eldev-build.el -> eldev-build.el
+    eldev-buttercup.el -> eldev-buttercup.el
+    eldev-ecukes.el -> eldev-ecukes.el
+    eldev-ert.el -> eldev-ert.el
+    eldev-plugins.el -> eldev-plugins.el
+    eldev-util.el -> eldev-util.el
+    eldev-vc.el -> eldev-vc.el
+    eldev.el -> eldev.el
+    bin/eldev -> bin/eldev
+    bin/eldev.bat -> bin/eldev.bat
+    bin/eldev.ps1 -> bin/eldev.ps1
+Created eldev-20220826.1531.tar containing:
+  eldev-20220826.1531/
+  eldev-20220826.1531/bin/
+  eldev-20220826.1531/bin/eldev
+  eldev-20220826.1531/bin/eldev.bat
+  eldev-20220826.1531/bin/eldev.ps1
+  eldev-20220826.1531/eldev-build.el
+  eldev-20220826.1531/eldev-buttercup.el
+  eldev-20220826.1531/eldev-ecukes.el
+  eldev-20220826.1531/eldev-ert.el
+  eldev-20220826.1531/eldev-pkg.el
+  eldev-20220826.1531/eldev-plugins.el
+  eldev-20220826.1531/eldev-util.el
+  eldev-20220826.1531/eldev-vc.el
+  eldev-20220826.1531/eldev.el
+Built eldev in 4.420s, finished at 2022-08-29T15:58:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  340 Aug 29 15:58 packages/eldev-20220826.1531.entry
+552K -rw-r--r-- 1 root root 550K Aug 29 15:58 packages/eldev-20220826.1531.tar

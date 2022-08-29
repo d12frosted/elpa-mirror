@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/linktohack/evil-commentary.git
 
 Updating /mnt/store/melpa/working/evil-commentary/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out ca182e27156198db533bf6d48b7e5f6f54081397
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-commentary/
+  to /tmp/evil-commentaryQ8WkSz/evil-commentary-20210210.1702
+    evil-commentary-integration.el -> evil-commentary-integration.el
+    evil-commentary.el -> evil-commentary.el
+Created evil-commentary-20210210.1702.tar containing:
+  evil-commentary-20210210.1702/
+  evil-commentary-20210210.1702/evil-commentary-integration.el
+  evil-commentary-20210210.1702/evil-commentary-pkg.el
+  evil-commentary-20210210.1702/evil-commentary.el
+Built evil-commentary in 4.371s, finished at 2022-08-29T16:02:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 435 Aug 29 16:02 packages/evil-commentary-20210210.1702.entry
+ 12K -rw-r--r-- 1 root root 10K Aug 29 16:02 packages/evil-commentary-20210210.1702.tar

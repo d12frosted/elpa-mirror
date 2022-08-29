@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/milkypostman/powerline.git
 
 Updating /mnt/store/melpa/working/powerline/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 566c77844f053cb39fa7acdfbc143a855450f0b5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/powerline/
+  to /tmp/powerlineZmORdv/powerline-20220122.1904
+    powerline-separators.el -> powerline-separators.el
+    powerline-themes.el -> powerline-themes.el
+    powerline.el -> powerline.el
+Created powerline-20220122.1904.tar containing:
+  powerline-20220122.1904/
+  powerline-20220122.1904/powerline-pkg.el
+  powerline-20220122.1904/powerline-separators.el
+  powerline-20220122.1904/powerline-themes.el
+  powerline-20220122.1904/powerline.el
+Built powerline in 4.912s, finished at 2022-08-29T13:24:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 390 Aug 29 13:24 packages/powerline-20220122.1904.entry
+ 80K -rw-r--r-- 1 root root 80K Aug 29 13:24 packages/powerline-20220122.1904.tar

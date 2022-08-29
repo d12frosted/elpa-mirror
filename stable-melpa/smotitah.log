@@ -3,4 +3,25 @@ Fetcher: github
 Source:  https://github.com/laynor/smotitah.git
 
 Updating /mnt/store/melpa/working/smotitah/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out f9ab562128a5460549d016913533778e8c94bcf3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smotitah/
+  to /tmp/smotitahoZyZbk/smotitah-20150218.1030
+    smotitah-pkg.el -> smotitah-pkg.el
+    smotitah.el -> smotitah.el
+    templates => templates
+Created smotitah-20150218.1030.tar containing:
+  smotitah-20150218.1030/
+  smotitah-20150218.1030/smotitah-pkg.el
+  smotitah-20150218.1030/smotitah.el
+  smotitah-20150218.1030/templates/
+  smotitah-20150218.1030/templates/sm-integration-template.el
+  smotitah-20150218.1030/templates/sm-module-base-template.el
+  smotitah-20150218.1030/templates/sm-module-template.el
+  smotitah-20150218.1030/templates/sm-package-template.el
+  smotitah-20150218.1030/templates/sm-profile-template.el
+Built smotitah in 3.766s, finished at 2022-08-29T13:32:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 303 Aug 29 13:32 packages/smotitah-20150218.1030.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 29 13:32 packages/smotitah-20150218.1030.tar

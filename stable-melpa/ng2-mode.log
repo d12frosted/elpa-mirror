@@ -3,4 +3,23 @@ Fetcher: github
 Source:  https://github.com/AdamNiederer/ng2-mode.git
 
 Updating /mnt/store/melpa/working/ng2-mode/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out d341f177c6e4fb9d99b8639943ab5fc9184e2715
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ng2-mode/
+  to /tmp/ng2-mode29mRCE/ng2-mode-20201203.1925
+    ng2-html.el -> ng2-html.el
+    ng2-mode.el -> ng2-mode.el
+    ng2-shared.el -> ng2-shared.el
+    ng2-ts.el -> ng2-ts.el
+Created ng2-mode-20201203.1925.tar containing:
+  ng2-mode-20201203.1925/
+  ng2-mode-20201203.1925/ng2-html.el
+  ng2-mode-20201203.1925/ng2-mode-pkg.el
+  ng2-mode-20201203.1925/ng2-mode.el
+  ng2-mode-20201203.1925/ng2-shared.el
+  ng2-mode-20201203.1925/ng2-ts.el
+Built ng2-mode in 3.513s, finished at 2022-08-29T13:15:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 424 Aug 29 13:15 packages/ng2-mode-20201203.1925.entry
+ 32K -rw-r--r-- 1 root root 30K Aug 29 13:15 packages/ng2-mode-20201203.1925.tar

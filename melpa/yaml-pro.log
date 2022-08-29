@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/zkry/yaml-pro.git
 
 Updating /mnt/store/melpa/working/yaml-pro/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 3e698c625c716a1f85e64b9b839241cb56f0db92
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yaml-pro/
+  to /tmp/yaml-proE4C3qV/yaml-pro-20220722.334
+    yaml-pro-edit.el -> yaml-pro-edit.el
+    yaml-pro.el -> yaml-pro.el
+Created yaml-pro-20220722.334.tar containing:
+  yaml-pro-20220722.334/
+  yaml-pro-20220722.334/yaml-pro-edit.el
+  yaml-pro-20220722.334/yaml-pro-pkg.el
+  yaml-pro-20220722.334/yaml-pro.el
+Built yaml-pro in 3.800s, finished at 2022-08-29T13:41:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 343 Aug 29 13:41 packages/yaml-pro-20220722.334.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 29 13:41 packages/yaml-pro-20220722.334.tar

@@ -3,4 +3,34 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-ui.git
 
 Updating /mnt/store/melpa/working/lsp-ui/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out d8cce7dc154aa3216c080dd5c6fb827bdba9a312
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-ui/
+  to /tmp/lsp-uiyUI2Ua/lsp-ui-20220823.1626
+    lsp-ui-doc.el -> lsp-ui-doc.el
+    lsp-ui-flycheck.el -> lsp-ui-flycheck.el
+    lsp-ui-imenu.el -> lsp-ui-imenu.el
+    lsp-ui-peek.el -> lsp-ui-peek.el
+    lsp-ui-sideline.el -> lsp-ui-sideline.el
+    lsp-ui-util.el -> lsp-ui-util.el
+    lsp-ui.el -> lsp-ui.el
+    lsp-ui-doc.html -> lsp-ui-doc.html
+    resources => resources
+Created lsp-ui-20220823.1626.tar containing:
+  lsp-ui-20220823.1626/
+  lsp-ui-20220823.1626/lsp-ui-doc.el
+  lsp-ui-20220823.1626/lsp-ui-doc.html
+  lsp-ui-20220823.1626/lsp-ui-flycheck.el
+  lsp-ui-20220823.1626/lsp-ui-imenu.el
+  lsp-ui-20220823.1626/lsp-ui-peek.el
+  lsp-ui-20220823.1626/lsp-ui-pkg.el
+  lsp-ui-20220823.1626/lsp-ui-sideline.el
+  lsp-ui-20220823.1626/lsp-ui-util.el
+  lsp-ui-20220823.1626/lsp-ui.el
+  lsp-ui-20220823.1626/resources/
+  lsp-ui-20220823.1626/resources/lightbulb.png
+Built lsp-ui in 4.081s, finished at 2022-08-29T13:10:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  486 Aug 29 13:10 packages/lsp-ui-20220823.1626.entry
+160K -rw-r--r-- 1 root root 160K Aug 29 13:10 packages/lsp-ui-20220823.1626.tar

@@ -3,4 +3,41 @@ Fetcher: github
 Source:  https://github.com/r0man/paimon.el.git
 
 Updating /mnt/store/melpa/working/paimon/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 01675ff30ce0f29ad81f9275b4fc0797c0a7073f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/paimon/
+  to /tmp/paimonSs46Rt/paimon-20220326.2051
+  ! src/paimon-api.el -> paimon-api.el
+  ! src/paimon-data-index.el -> paimon-data-index.el
+  ! src/paimon-db.el -> paimon-db.el
+  ! src/paimon-profile.el -> paimon-profile.el
+  ! src/paimon-profiles.el -> paimon-profiles.el
+  ! src/paimon-search-job.el -> paimon-search-job.el
+  ! src/paimon-search-jobs.el -> paimon-search-jobs.el
+  ! src/paimon-search-result.el -> paimon-search-result.el
+  ! src/paimon-search-results-layout.el -> paimon-search-results-layout.el
+  ! src/paimon-search-results.el -> paimon-search-results.el
+  ! src/paimon-search.el -> paimon-search.el
+  ! src/paimon-util.el -> paimon-util.el
+  ! src/paimon.el -> paimon.el
+Created paimon-20220326.2051.tar containing:
+  paimon-20220326.2051/
+  paimon-20220326.2051/paimon-api.el
+  paimon-20220326.2051/paimon-data-index.el
+  paimon-20220326.2051/paimon-db.el
+  paimon-20220326.2051/paimon-pkg.el
+  paimon-20220326.2051/paimon-profile.el
+  paimon-20220326.2051/paimon-profiles.el
+  paimon-20220326.2051/paimon-search-job.el
+  paimon-20220326.2051/paimon-search-jobs.el
+  paimon-20220326.2051/paimon-search-result.el
+  paimon-20220326.2051/paimon-search-results-layout.el
+  paimon-20220326.2051/paimon-search-results.el
+  paimon-20220326.2051/paimon-search.el
+  paimon-20220326.2051/paimon-util.el
+  paimon-20220326.2051/paimon.el
+Built paimon in 4.181s, finished at 2022-08-29T13:21:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  531 Aug 29 13:21 packages/paimon-20220326.2051.entry
+120K -rw-r--r-- 1 root root 120K Aug 29 13:21 packages/paimon-20220326.2051.tar

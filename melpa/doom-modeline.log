@@ -3,4 +3,23 @@ Fetcher: github
 Source:  https://github.com/seagle0128/doom-modeline.git
 
 Updating /mnt/store/melpa/working/doom-modeline/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out c22abef9fe62eb56dabc95b312525fd8526bc395
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/doom-modeline/
+  to /tmp/doom-modelineyMSt1E/doom-modeline-20220827.635
+    doom-modeline-core.el -> doom-modeline-core.el
+    doom-modeline-env.el -> doom-modeline-env.el
+    doom-modeline-segments.el -> doom-modeline-segments.el
+    doom-modeline.el -> doom-modeline.el
+Created doom-modeline-20220827.635.tar containing:
+  doom-modeline-20220827.635/
+  doom-modeline-20220827.635/doom-modeline-core.el
+  doom-modeline-20220827.635/doom-modeline-env.el
+  doom-modeline-20220827.635/doom-modeline-pkg.el
+  doom-modeline-20220827.635/doom-modeline-segments.el
+  doom-modeline-20220827.635/doom-modeline.el
+Built doom-modeline in 3.977s, finished at 2022-08-29T15:56:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  432 Aug 29 15:56 packages/doom-modeline-20220827.635.entry
+212K -rw-r--r-- 1 root root 210K Aug 29 15:56 packages/doom-modeline-20220827.635.tar

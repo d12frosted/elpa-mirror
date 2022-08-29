@@ -3,4 +3,43 @@ Fetcher: github
 Source:  https://github.com/universal-ctags/citre.git
 
 Updating /mnt/store/melpa/working/citre/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 1c0ca637c7993559a0175e3001941457b8c71211
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/citre/
+  to /tmp/citregGkmVR/citre-20220523.745
+    citre-basic-tools.el -> citre-basic-tools.el
+    citre-common.el -> citre-common.el
+    citre-config.el -> citre-config.el
+    citre-core-tables.el -> citre-core-tables.el
+    citre-core.el -> citre-core.el
+    citre-ctags.el -> citre-ctags.el
+    citre-global.el -> citre-global.el
+    citre-lang-c.el -> citre-lang-c.el
+    citre-lang-fileref.el -> citre-lang-fileref.el
+    citre-lang-verilog.el -> citre-lang-verilog.el
+    citre-peek.el -> citre-peek.el
+    citre-tag.el -> citre-tag.el
+    citre-util.el -> citre-util.el
+    citre.el -> citre.el
+Created citre-20220523.745.tar containing:
+  citre-20220523.745/
+  citre-20220523.745/citre-basic-tools.el
+  citre-20220523.745/citre-common.el
+  citre-20220523.745/citre-config.el
+  citre-20220523.745/citre-core-tables.el
+  citre-20220523.745/citre-core.el
+  citre-20220523.745/citre-ctags.el
+  citre-20220523.745/citre-global.el
+  citre-20220523.745/citre-lang-c.el
+  citre-20220523.745/citre-lang-fileref.el
+  citre-20220523.745/citre-lang-verilog.el
+  citre-20220523.745/citre-peek.el
+  citre-20220523.745/citre-pkg.el
+  citre-20220523.745/citre-tag.el
+  citre-20220523.745/citre-util.el
+  citre-20220523.745/citre.el
+Built citre in 5.631s, finished at 2022-08-29T15:50:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  345 Aug 29 15:50 packages/citre-20220523.745.entry
+340K -rw-r--r-- 1 root root 340K Aug 29 15:50 packages/citre-20220523.745.tar

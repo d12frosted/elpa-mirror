@@ -3,4 +3,20 @@ Fetcher: github
 Source:  https://github.com/emacsattic/org-doing.git
 
 Updating /mnt/store/melpa/working/org-doing/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 4819e75c827c2115bd28f3b3148d846aa64ccd9b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-doing/
+  to /tmp/org-doing6ftvSy/org-doing-20161017.1620
+    org-doing.el -> org-doing.el
+    bin => bin
+Created org-doing-20161017.1620.tar containing:
+  org-doing-20161017.1620/
+  org-doing-20161017.1620/bin/
+  org-doing-20161017.1620/bin/org-doing
+  org-doing-20161017.1620/org-doing-pkg.el
+  org-doing-20161017.1620/org-doing.el
+Built org-doing in 2.992s, finished at 2022-08-29T13:18:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 304 Aug 29 13:18 packages/org-doing-20161017.1620.entry
+ 12K -rw-r--r-- 1 root root 10K Aug 29 13:18 packages/org-doing-20161017.1620.tar

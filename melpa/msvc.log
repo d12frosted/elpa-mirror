@@ -3,4 +3,29 @@ Fetcher: github
 Source:  https://github.com/yaruopooner/msvc.git
 
 Updating /mnt/store/melpa/working/msvc/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 122dc9cb7f145f12dac7b117a48fceb38b279432
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/msvc/
+  to /tmp/msvcTIsRJK/msvc-20210503.1856
+    msvc-env.el -> msvc-env.el
+    msvc-flags.el -> msvc-flags.el
+    msvc.el -> msvc.el
+    empty.cpp -> empty.cpp
+    invoke-msbuild.bat -> invoke-msbuild.bat
+    msvc-extractor.cflags.vcxproj -> msvc-extractor.cflags.vcxproj
+    msvc-extractor.flymake.vcxproj -> msvc-extractor.flymake.vcxproj
+Created msvc-20210503.1856.tar containing:
+  msvc-20210503.1856/
+  msvc-20210503.1856/empty.cpp
+  msvc-20210503.1856/invoke-msbuild.bat
+  msvc-20210503.1856/msvc-env.el
+  msvc-20210503.1856/msvc-extractor.cflags.vcxproj
+  msvc-20210503.1856/msvc-extractor.flymake.vcxproj
+  msvc-20210503.1856/msvc-flags.el
+  msvc-20210503.1856/msvc-pkg.el
+  msvc-20210503.1856/msvc.el
+Built msvc in 3.333s, finished at 2022-08-29T13:14:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  467 Aug 29 13:14 packages/msvc-20210503.1856.entry
+152K -rw-r--r-- 1 root root 150K Aug 29 13:14 packages/msvc-20210503.1856.tar

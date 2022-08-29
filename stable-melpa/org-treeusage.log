@@ -3,4 +3,23 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mtekman/org-treeusage.el.git
 
 Updating /mnt/store/melpa/working/org-treeusage/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out f2d3e5cfac135dea304a3f75711520b0d80fc847
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-treeusage/
+  to /tmp/org-treeusageSm1GnR/org-treeusage-20200418.1904
+    org-treeusage-cycle.el -> org-treeusage-cycle.el
+    org-treeusage-overlay.el -> org-treeusage-overlay.el
+    org-treeusage-parse.el -> org-treeusage-parse.el
+    org-treeusage.el -> org-treeusage.el
+Created org-treeusage-20200418.1904.tar containing:
+  org-treeusage-20200418.1904/
+  org-treeusage-20200418.1904/org-treeusage-cycle.el
+  org-treeusage-20200418.1904/org-treeusage-overlay.el
+  org-treeusage-20200418.1904/org-treeusage-parse.el
+  org-treeusage-20200418.1904/org-treeusage-pkg.el
+  org-treeusage-20200418.1904/org-treeusage.el
+Built org-treeusage in 3.939s, finished at 2022-08-29T13:20:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 387 Aug 29 13:20 packages/org-treeusage-20200418.1904.entry
+ 32K -rw-r--r-- 1 root root 30K Aug 29 13:20 packages/org-treeusage-20200418.1904.tar

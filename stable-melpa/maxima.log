@@ -3,4 +3,44 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sasanidas/maxima.git
 
 Updating /mnt/store/melpa/working/maxima/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 8f0f64740928def955762780c801ef682dabd562
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/maxima/
+  to /tmp/maximaMWv1oc/maxima-20220531.1751
+    maxima.el -> maxima.el
+    maxima-font-lock.el -> maxima-font-lock.el
+    keywords/constants -> keywords/constants
+    keywords/functions -> keywords/functions
+    keywords/global -> keywords/global
+    keywords/graphic -> keywords/graphic
+    keywords/object -> keywords/object
+    keywords/operators -> keywords/operators
+    keywords/options -> keywords/options
+    keywords/plot -> keywords/plot
+    keywords/properties -> keywords/properties
+    keywords/scene -> keywords/scene
+    keywords/special -> keywords/special
+    keywords/system_variables -> keywords/system_variables
+Created maxima-20220531.1751.tar containing:
+  maxima-20220531.1751/
+  maxima-20220531.1751/keywords/
+  maxima-20220531.1751/keywords/constants
+  maxima-20220531.1751/keywords/functions
+  maxima-20220531.1751/keywords/global
+  maxima-20220531.1751/keywords/graphic
+  maxima-20220531.1751/keywords/object
+  maxima-20220531.1751/keywords/operators
+  maxima-20220531.1751/keywords/options
+  maxima-20220531.1751/keywords/plot
+  maxima-20220531.1751/keywords/properties
+  maxima-20220531.1751/keywords/scene
+  maxima-20220531.1751/keywords/special
+  maxima-20220531.1751/keywords/system_variables
+  maxima-20220531.1751/maxima-font-lock.el
+  maxima-20220531.1751/maxima-pkg.el
+  maxima-20220531.1751/maxima.el
+Built maxima in 4.423s, finished at 2022-08-29T13:12:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  416 Aug 29 13:12 packages/maxima-20220531.1751.entry
+192K -rw-r--r-- 1 root root 190K Aug 29 13:12 packages/maxima-20220531.1751.tar

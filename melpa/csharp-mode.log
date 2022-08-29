@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/emacs-csharp/csharp-mode.git
 
 Updating /mnt/store/melpa/working/csharp-mode/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 6e9d1f6b9900d3b8aa4106abf84a89311dfed85f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/csharp-mode/
+  to /tmp/csharp-moden2rTzB/csharp-mode-20220819.1351
+    csharp-compilation.el -> csharp-compilation.el
+    csharp-mode.el -> csharp-mode.el
+    csharp-tree-sitter.el -> csharp-tree-sitter.el
+Created csharp-mode-20220819.1351.tar containing:
+  csharp-mode-20220819.1351/
+  csharp-mode-20220819.1351/csharp-compilation.el
+  csharp-mode-20220819.1351/csharp-mode-pkg.el
+  csharp-mode-20220819.1351/csharp-mode.el
+  csharp-mode-20220819.1351/csharp-tree-sitter.el
+Built csharp-mode in 4.261s, finished at 2022-08-29T15:53:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 407 Aug 29 15:53 packages/csharp-mode-20220819.1351.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 29 15:53 packages/csharp-mode-20220819.1351.tar

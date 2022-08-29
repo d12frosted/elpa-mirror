@@ -3,4 +3,27 @@ Fetcher: github
 Source:  https://github.com/ocaml/tuareg.git
 
 Updating /mnt/store/melpa/working/tuareg/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out ad8a688b7e2aeeafc320a845f86cdd9aa7c971ce
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tuareg/
+  to /tmp/tuaregrTjp6f/tuareg-20220719.148
+    dot-emacs.el -> dot-emacs.el
+    ocamldebug.el -> ocamldebug.el
+    tuareg-compat.el -> tuareg-compat.el
+    tuareg-menhir.el -> tuareg-menhir.el
+    tuareg-opam.el -> tuareg-opam.el
+    tuareg.el -> tuareg.el
+Created tuareg-20220719.148.tar containing:
+  tuareg-20220719.148/
+  tuareg-20220719.148/dot-emacs.el
+  tuareg-20220719.148/ocamldebug.el
+  tuareg-20220719.148/tuareg-compat.el
+  tuareg-20220719.148/tuareg-menhir.el
+  tuareg-20220719.148/tuareg-opam.el
+  tuareg-20220719.148/tuareg-pkg.el
+  tuareg-20220719.148/tuareg.el
+Built tuareg in 17.754s, finished at 2022-08-29T13:37:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  618 Aug 29 13:37 packages/tuareg-20220719.148.entry
+260K -rw-r--r-- 1 root root 260K Aug 29 13:37 packages/tuareg-20220719.148.tar

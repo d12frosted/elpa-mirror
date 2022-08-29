@@ -304,3 +304,5 @@ Emacs-lisp table, otherwise return the results as a string."
 
 (provide 'ob-coffeescript)
  ;;; ob-coffeescript.el ends here
+
+;;; ob-coffeescript.el ends here

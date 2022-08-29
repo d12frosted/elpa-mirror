@@ -3,4 +3,22 @@ Fetcher: github
 Source:  https://github.com/jsinglet/latex-preview-pane.git
 
 Updating /mnt/store/melpa/working/latex-preview-pane/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 5297668a89996b50b2b62f99cba01cc544dbed2e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/latex-preview-pane/
+  to /tmp/latex-preview-paneTGoTNb/latex-preview-pane-20181008.1822
+    latex-preview-pane-pkg.el -> latex-preview-pane-pkg.el
+    latex-preview-pane.el -> latex-preview-pane.el
+    message-latex-preview-pane-welcome.txt -> message-latex-preview-pane-welcome.txt
+    message-no-preview-yet.txt -> message-no-preview-yet.txt
+Created latex-preview-pane-20181008.1822.tar containing:
+  latex-preview-pane-20181008.1822/
+  latex-preview-pane-20181008.1822/latex-preview-pane-pkg.el
+  latex-preview-pane-20181008.1822/latex-preview-pane.el
+  latex-preview-pane-20181008.1822/message-latex-preview-pane-welcome.txt
+  latex-preview-pane-20181008.1822/message-no-preview-yet.txt
+Built latex-preview-pane in 3.096s, finished at 2022-08-29T13:08:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 442 Aug 29 13:08 packages/latex-preview-pane-20181008.1822.entry
+ 32K -rw-r--r-- 1 root root 30K Aug 29 13:08 packages/latex-preview-pane-20181008.1822.tar

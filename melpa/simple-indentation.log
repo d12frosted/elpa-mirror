@@ -3,4 +3,25 @@ Fetcher: github
 Source:  https://github.com/semenInRussia/simple-indentation.el.git
 
 Updating /mnt/store/melpa/working/simple-indentation/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 7008ac14f0789ff74e36636ae6bd13fdb2042193
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/simple-indentation/
+  to /tmp/simple-indentationU203N1/simple-indentation-20220215.1745
+    simple-indentation-hooks.el -> simple-indentation-hooks.el
+    simple-indentation-namespace.el -> simple-indentation-namespace.el
+    simple-indentation-rules.el -> simple-indentation-rules.el
+    simple-indentation-utils.el -> simple-indentation-utils.el
+    simple-indentation.el -> simple-indentation.el
+Created simple-indentation-20220215.1745.tar containing:
+  simple-indentation-20220215.1745/
+  simple-indentation-20220215.1745/simple-indentation-hooks.el
+  simple-indentation-20220215.1745/simple-indentation-namespace.el
+  simple-indentation-20220215.1745/simple-indentation-pkg.el
+  simple-indentation-20220215.1745/simple-indentation-rules.el
+  simple-indentation-20220215.1745/simple-indentation-utils.el
+  simple-indentation-20220215.1745/simple-indentation.el
+Built simple-indentation in 5.156s, finished at 2022-08-29T13:31:26+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 488 Aug 29 13:31 packages/simple-indentation-20220215.1745.entry
+ 72K -rw-r--r-- 1 root root 70K Aug 29 13:31 packages/simple-indentation-20220215.1745.tar

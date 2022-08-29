@@ -3,4 +3,37 @@ Fetcher: github
 Source:  https://github.com/sp1ff/elfeed-score.git
 
 Updating /mnt/store/melpa/working/elfeed-score/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out ac938fdc617d489eb25f1d8c0bd800bb7693c588
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-score/
+  to /tmp/elfeed-scoredllRRx/elfeed-score-20220702.1548
+    elfeed-score-log.el -> elfeed-score-log.el
+    elfeed-score-maint.el -> elfeed-score-maint.el
+    elfeed-score-pkg.el -> elfeed-score-pkg.el
+    elfeed-score-rule-stats.el -> elfeed-score-rule-stats.el
+    elfeed-score-rules.el -> elfeed-score-rules.el
+    elfeed-score-scoring.el -> elfeed-score-scoring.el
+    elfeed-score-serde.el -> elfeed-score-serde.el
+    elfeed-score.el -> elfeed-score.el
+  ! doc/elfeed-score.texi -> elfeed-score.texi
+  ! doc/version.texi -> version.texi
+Generating /tmp/elfeed-scoredllRRx/elfeed-score-20220702.1548/elfeed-score.info
+Generating /tmp/elfeed-scoredllRRx/elfeed-score-20220702.1548/version.info
+Created elfeed-score-20220702.1548.tar containing:
+  elfeed-score-20220702.1548/
+  elfeed-score-20220702.1548/dir
+  elfeed-score-20220702.1548/elfeed-score-log.el
+  elfeed-score-20220702.1548/elfeed-score-maint.el
+  elfeed-score-20220702.1548/elfeed-score-pkg.el
+  elfeed-score-20220702.1548/elfeed-score-rule-stats.el
+  elfeed-score-20220702.1548/elfeed-score-rules.el
+  elfeed-score-20220702.1548/elfeed-score-scoring.el
+  elfeed-score-20220702.1548/elfeed-score-serde.el
+  elfeed-score-20220702.1548/elfeed-score.el
+  elfeed-score-20220702.1548/elfeed-score.info
+  elfeed-score-20220702.1548/version.info
+Built elfeed-score in 10.668s, finished at 2022-08-29T15:59:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  385 Aug 29 15:59 packages/elfeed-score-20220702.1548.entry
+252K -rw-r--r-- 1 root root 250K Aug 29 15:59 packages/elfeed-score-20220702.1548.tar

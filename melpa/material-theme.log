@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/cpaulik/emacs-material-theme.git
 
 Updating /mnt/store/melpa/working/material-theme/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 6823009bc92f82aa3a90e27e1009f7da8e87b648
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/material-theme/
+  to /tmp/material-themeiEfVJo/material-theme-20210904.1226
+    material-light-theme.el -> material-light-theme.el
+    material-theme.el -> material-theme.el
+Created material-theme-20210904.1226.tar containing:
+  material-theme-20210904.1226/
+  material-theme-20210904.1226/material-light-theme.el
+  material-theme-20210904.1226/material-theme-pkg.el
+  material-theme-20210904.1226/material-theme.el
+Built material-theme in 3.072s, finished at 2022-08-29T13:11:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  400 Aug 29 13:11 packages/material-theme-20210904.1226.entry
+112K -rw-r--r-- 1 root root 110K Aug 29 13:11 packages/material-theme-20210904.1226.tar

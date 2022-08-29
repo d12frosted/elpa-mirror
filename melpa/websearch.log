@@ -3,4 +3,21 @@ Fetcher: gitlab
 Source:  https://gitlab.com/xgqt/emacs-websearch.git
 
 Updating /mnt/store/melpa/working/websearch/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 9336601462ce29822e6aa14db01d923a4bd1c6ef
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/websearch/
+  to /tmp/websearchRf1Bl4/websearch-20220823.42
+    websearch-custom.el -> websearch-custom.el
+    websearch-mode.el -> websearch-mode.el
+    websearch.el -> websearch.el
+Created websearch-20220823.42.tar containing:
+  websearch-20220823.42/
+  websearch-20220823.42/websearch-custom.el
+  websearch-20220823.42/websearch-mode.el
+  websearch-20220823.42/websearch-pkg.el
+  websearch-20220823.42/websearch.el
+Built websearch in 5.279s, finished at 2022-08-29T13:40:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 376 Aug 29 13:40 packages/websearch-20220823.42.entry
+ 32K -rw-r--r-- 1 root root 30K Aug 29 13:40 packages/websearch-20220823.42.tar

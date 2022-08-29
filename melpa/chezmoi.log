@@ -3,4 +3,27 @@ Fetcher: github
 Source:  https://github.com/tuh8888/chezmoi.el.git
 
 Updating /mnt/store/melpa/working/chezmoi/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 781783c483bc8fcdba3a230bb774c3a8a5ebe396
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chezmoi/
+  to /tmp/chezmoi76LknP/chezmoi-20220310.2014
+    chezmoi-company.el -> chezmoi-company.el
+    chezmoi-dired.el -> chezmoi-dired.el
+    chezmoi-ediff.el -> chezmoi-ediff.el
+    chezmoi-magit.el -> chezmoi-magit.el
+    chezmoi-template.el -> chezmoi-template.el
+    chezmoi.el -> chezmoi.el
+Created chezmoi-20220310.2014.tar containing:
+  chezmoi-20220310.2014/
+  chezmoi-20220310.2014/chezmoi-company.el
+  chezmoi-20220310.2014/chezmoi-dired.el
+  chezmoi-20220310.2014/chezmoi-ediff.el
+  chezmoi-20220310.2014/chezmoi-magit.el
+  chezmoi-20220310.2014/chezmoi-pkg.el
+  chezmoi-20220310.2014/chezmoi-template.el
+  chezmoi-20220310.2014/chezmoi.el
+Built chezmoi in 4.743s, finished at 2022-08-29T15:49:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 336 Aug 29 15:49 packages/chezmoi-20220310.2014.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 29 15:49 packages/chezmoi-20220310.2014.tar

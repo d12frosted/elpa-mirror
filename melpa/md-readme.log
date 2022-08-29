@@ -3,4 +3,20 @@ Fetcher: github
 Source:  https://github.com/thomas11/md-readme.git
 
 Updating /mnt/store/melpa/working/md-readme/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out ca99f44de11fab18d1f50d4b1722f2ceee3c814d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/md-readme/
+  to /tmp/md-readmesDNKTs/md-readme-20191112.1943
+    md-readme.el -> md-readme.el
+    bin => bin
+Created md-readme-20191112.1943.tar containing:
+  md-readme-20191112.1943/
+  md-readme-20191112.1943/bin/
+  md-readme-20191112.1943/bin/md-readme
+  md-readme-20191112.1943/md-readme-pkg.el
+  md-readme-20191112.1943/md-readme.el
+Built md-readme in 4.507s, finished at 2022-08-29T13:12:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 433 Aug 29 13:12 packages/md-readme-20191112.1943.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 29 13:12 packages/md-readme-20191112.1943.tar

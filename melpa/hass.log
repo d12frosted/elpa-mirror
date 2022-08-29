@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/purplg/hass.git
 
 Updating /mnt/store/melpa/working/hass/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out c6d9bd2e29fc2c4f37c0c72f3d136e43f34addbc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hass/
+  to /tmp/hassh8sYEj/hass-20220813.1717
+    hass-dash.el -> hass-dash.el
+    hass-websocket.el -> hass-websocket.el
+    hass.el -> hass.el
+Created hass-20220813.1717.tar containing:
+  hass-20220813.1717/
+  hass-20220813.1717/hass-dash.el
+  hass-20220813.1717/hass-pkg.el
+  hass-20220813.1717/hass-websocket.el
+  hass-20220813.1717/hass.el
+Built hass in 3.646s, finished at 2022-08-29T12:59:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 288 Aug 29 12:59 packages/hass-20220813.1717.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 29 12:59 packages/hass-20220813.1717.tar

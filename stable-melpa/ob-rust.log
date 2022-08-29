@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/micanzhang/ob-rust.git
 
 Updating /mnt/store/melpa/working/ob-rust/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out be059d231fafeb24a658db212a55ccdc55c0c500
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-rust/
+  to /tmp/ob-rustyRdbqf/ob-rust-20220824.1923
+    ob-rust.el -> ob-rust.el
+    test-ob-rust.el -> test-ob-rust.el
+Created ob-rust-20220824.1923.tar containing:
+  ob-rust-20220824.1923/
+  ob-rust-20220824.1923/ob-rust-pkg.el
+  ob-rust-20220824.1923/ob-rust.el
+  ob-rust-20220824.1923/test-ob-rust.el
+Built ob-rust in 3.058s, finished at 2022-08-29T13:16:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 304 Aug 29 13:16 packages/ob-rust-20220824.1923.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 29 13:16 packages/ob-rust-20220824.1923.tar

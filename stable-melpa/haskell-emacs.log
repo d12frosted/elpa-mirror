@@ -3,4 +3,26 @@ Fetcher: github
 Source:  https://github.com/knupfer/haskell-emacs.git
 
 Updating /mnt/store/melpa/working/haskell-emacs/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out a2c6a079175904689eed7c6c200754bfa85d1ed9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/haskell-emacs/
+  to /tmp/haskell-emacsABGgMp/haskell-emacs-20160904.2026
+    haskell-emacs.el -> haskell-emacs.el
+    HaskellEmacs.hs -> HaskellEmacs.hs
+    README.org -> README.org
+    Foreign => Foreign
+Created haskell-emacs-20160904.2026.tar containing:
+  haskell-emacs-20160904.2026/
+  haskell-emacs-20160904.2026/Foreign/
+  haskell-emacs-20160904.2026/Foreign/Emacs.hs
+  haskell-emacs-20160904.2026/Foreign/Emacs/
+  haskell-emacs-20160904.2026/Foreign/Emacs/Internal.hs
+  haskell-emacs-20160904.2026/HaskellEmacs.hs
+  haskell-emacs-20160904.2026/README.org
+  haskell-emacs-20160904.2026/haskell-emacs-pkg.el
+  haskell-emacs-20160904.2026/haskell-emacs.el
+Built haskell-emacs in 3.157s, finished at 2022-08-29T12:59:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 316 Aug 29 12:59 packages/haskell-emacs-20160904.2026.entry
+ 60K -rw-r--r-- 1 root root 60K Aug 29 12:59 packages/haskell-emacs-20160904.2026.tar

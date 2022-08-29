@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/mtenders/emacs-leo.git
 
 Updating /mnt/store/melpa/working/leo/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 9f6aeb9670241255c373432af7785c7b87cee290
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leo/
+  to /tmp/leoRUmRG9/leo-20220111.1045
+    leo-inspect.el -> leo-inspect.el
+    leo.el -> leo.el
+Created leo-20220111.1045.tar containing:
+  leo-20220111.1045/
+  leo-20220111.1045/leo-inspect.el
+  leo-20220111.1045/leo-pkg.el
+  leo-20220111.1045/leo.el
+Built leo in 3.978s, finished at 2022-08-29T13:09:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 439 Aug 29 13:09 packages/leo-20220111.1045.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 29 13:09 packages/leo-20220111.1045.tar

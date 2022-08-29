@@ -2,5 +2,26 @@ Package: for
 Fetcher: github
 Source:  https://github.com/usaoc/elisp-for.git
 
-Cloning https://github.com/usaoc/elisp-for.git to /mnt/store/melpa/working/for/
-Wrong number of arguments: (1 . 1), 2
+Updating /mnt/store/melpa/working/for/
+Checking out origin/HEAD
+Checking out cfe36764d6a5c44946236b45cfa576c106929743
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/for/
+  to /tmp/forBJYHYb/for-20220829.957
+    for-iteration.el -> for-iteration.el
+    for-sequence.el -> for-sequence.el
+    for.el -> for.el
+    for.texi -> for.texi
+Generating /tmp/forBJYHYb/for-20220829.957/for.info
+Created for-20220829.957.tar containing:
+  for-20220829.957/
+  for-20220829.957/dir
+  for-20220829.957/for-iteration.el
+  for-20220829.957/for-pkg.el
+  for-20220829.957/for-sequence.el
+  for-20220829.957/for.el
+  for-20220829.957/for.info
+Built for in 9.727s, finished at 2022-08-29T16:07:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  365 Aug 29 16:07 packages/for-20220829.957.entry
+140K -rw-r--r-- 1 root root 140K Aug 29 16:07 packages/for-20220829.957.tar

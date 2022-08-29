@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/emacs-pe/docker-tramp.el.git
 
 Updating /mnt/store/melpa/working/docker-tramp/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 930d7b46c180d8a13240a028c1b40af84f2a3219
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/docker-tramp/
+  to /tmp/docker-trampLublxA/docker-tramp-20220219.420
+    docker-tramp-compat.el -> docker-tramp-compat.el
+    docker-tramp.el -> docker-tramp.el
+Created docker-tramp-20220219.420.tar containing:
+  docker-tramp-20220219.420/
+  docker-tramp-20220219.420/docker-tramp-compat.el
+  docker-tramp-20220219.420/docker-tramp-pkg.el
+  docker-tramp-20220219.420/docker-tramp.el
+Built docker-tramp in 6.895s, finished at 2022-08-29T15:56:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 434 Aug 29 15:56 packages/docker-tramp-20220219.420.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 29 15:56 packages/docker-tramp-20220219.420.tar

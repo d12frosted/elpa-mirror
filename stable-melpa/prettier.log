@@ -3,4 +3,25 @@ Fetcher: github
 Source:  https://github.com/jscheid/prettier.el.git
 
 Updating /mnt/store/melpa/working/prettier/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/release
+Checking out 3fcf3ba3507f47b8ac1392e7901aa2c418147758
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prettier/
+  to /tmp/prettierzTt5Ae/prettier-20220603.1338
+    prettier.el -> prettier.el
+    dir -> dir
+    prettier.info -> prettier.info
+    bootstrap-min.js -> bootstrap-min.js
+    prettier-el.js.gz.base64 -> prettier-el.js.gz.base64
+Created prettier-20220603.1338.tar containing:
+  prettier-20220603.1338/
+  prettier-20220603.1338/bootstrap-min.js
+  prettier-20220603.1338/dir
+  prettier-20220603.1338/prettier-el.js.gz.base64
+  prettier-20220603.1338/prettier-pkg.el
+  prettier-20220603.1338/prettier.el
+  prettier-20220603.1338/prettier.info
+Built prettier in 7.502s, finished at 2022-08-29T13:25:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  471 Aug 29 13:25 packages/prettier-20220603.1338.entry
+100K -rw-r--r-- 1 root root 100K Aug 29 13:25 packages/prettier-20220603.1338.tar

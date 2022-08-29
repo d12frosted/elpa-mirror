@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/Jannis/emacs-constant-theme.git
 
 Updating /mnt/store/melpa/working/constant-theme/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 0feb9f99d708633d62fa548c953ebbe68fd70de0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/constant-theme/
+  to /tmp/constant-themeZnGKpY/constant-theme-20180921.1012
+    constant-light-theme.el -> constant-light-theme.el
+    constant-theme.el -> constant-theme.el
+Created constant-theme-20180921.1012.tar containing:
+  constant-theme-20180921.1012/
+  constant-theme-20180921.1012/constant-light-theme.el
+  constant-theme-20180921.1012/constant-theme-pkg.el
+  constant-theme-20180921.1012/constant-theme.el
+Built constant-theme in 4.508s, finished at 2022-08-29T15:52:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 401 Aug 29 15:52 packages/constant-theme-20180921.1012.entry
+ 32K -rw-r--r-- 1 root root 30K Aug 29 15:52 packages/constant-theme-20180921.1012.tar

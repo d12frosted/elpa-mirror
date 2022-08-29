@@ -3,4 +3,19 @@ Fetcher: git
 Source:  https://git.code.sf.net/p/jtags/code
 
 Updating /mnt/store/melpa/working/jtags/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out f7d29e1635ef7ee4ee2cdb8f1f6ab83e1015c84a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jtags/
+  to /tmp/jtagso1w925/jtags-20160211.2029
+  ! src/lisp/jtags-extras.el -> jtags-extras.el
+  ! src/lisp/jtags.el -> jtags.el
+Created jtags-20160211.2029.tar containing:
+  jtags-20160211.2029/
+  jtags-20160211.2029/jtags-extras.el
+  jtags-20160211.2029/jtags-pkg.el
+  jtags-20160211.2029/jtags.el
+Built jtags in 5.523s, finished at 2022-08-29T13:07:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  402 Aug 29 13:07 packages/jtags-20160211.2029.entry
+100K -rw-r--r-- 1 root root 100K Aug 29 13:07 packages/jtags-20160211.2029.tar

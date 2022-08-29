@@ -3,4 +3,29 @@ Fetcher: github
 Source:  https://github.com/nlamirault/cerbere.git
 
 Updating /mnt/store/melpa/working/cerbere/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out bb18d932b16541105d41a668dbf6fc4e833a6dc2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cerbere/
+  to /tmp/cerbereuvBEpc/cerbere-20181113.1641
+    cerbere-common.el -> cerbere-common.el
+    cerbere-elisp-ert-runner.el -> cerbere-elisp-ert-runner.el
+    cerbere-php-phpunit.el -> cerbere-php-phpunit.el
+    cerbere-python-tox.el -> cerbere-python-tox.el
+    cerbere-ruby-minitest.el -> cerbere-ruby-minitest.el
+    cerbere-rust-libtest.el -> cerbere-rust-libtest.el
+    cerbere.el -> cerbere.el
+Created cerbere-20181113.1641.tar containing:
+  cerbere-20181113.1641/
+  cerbere-20181113.1641/cerbere-common.el
+  cerbere-20181113.1641/cerbere-elisp-ert-runner.el
+  cerbere-20181113.1641/cerbere-php-phpunit.el
+  cerbere-20181113.1641/cerbere-pkg.el
+  cerbere-20181113.1641/cerbere-python-tox.el
+  cerbere-20181113.1641/cerbere-ruby-minitest.el
+  cerbere-20181113.1641/cerbere-rust-libtest.el
+  cerbere-20181113.1641/cerbere.el
+Built cerbere in 3.938s, finished at 2022-08-29T15:49:16+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 455 Aug 29 15:49 packages/cerbere-20181113.1641.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 29 15:49 packages/cerbere-20181113.1641.tar

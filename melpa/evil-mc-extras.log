@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/gabesoft/evil-mc-extras.git
 
 Updating /mnt/store/melpa/working/evil-mc-extras/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out ba3252ae129c3b79aeb70ec3d276cbda32b00421
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-mc-extras/
+  to /tmp/evil-mc-extrasEH8YoY/evil-mc-extras-20170202.1649
+    evil-mc-extras-num.el -> evil-mc-extras-num.el
+    evil-mc-extras.el -> evil-mc-extras.el
+Created evil-mc-extras-20170202.1649.tar containing:
+  evil-mc-extras-20170202.1649/
+  evil-mc-extras-20170202.1649/evil-mc-extras-num.el
+  evil-mc-extras-20170202.1649/evil-mc-extras-pkg.el
+  evil-mc-extras-20170202.1649/evil-mc-extras.el
+Built evil-mc-extras in 5.097s, finished at 2022-08-29T16:02:47+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 564 Aug 29 16:02 packages/evil-mc-extras-20170202.1649.entry
+ 12K -rw-r--r-- 1 root root 10K Aug 29 16:02 packages/evil-mc-extras-20170202.1649.tar

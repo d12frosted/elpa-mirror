@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/kisaragi-hiu/cangjie.el.git
 
 Updating /mnt/store/melpa/working/cangjie/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 87408d79b73a69194842a8848de6d7708e98c3a4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cangjie/
+  to /tmp/cangjie3pc9Ia/cangjie-20211201.2307
+    cangjie-practice.el -> cangjie-practice.el
+    cangjie.el -> cangjie.el
+Created cangjie-20211201.2307.tar containing:
+  cangjie-20211201.2307/
+  cangjie-20211201.2307/cangjie-pkg.el
+  cangjie-20211201.2307/cangjie-practice.el
+  cangjie-20211201.2307/cangjie.el
+Built cangjie in 3.014s, finished at 2022-08-29T15:48:49+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 333 Aug 29 15:48 packages/cangjie-20211201.2307.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 29 15:48 packages/cangjie-20211201.2307.tar

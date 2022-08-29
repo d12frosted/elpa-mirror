@@ -3,4 +3,27 @@ Fetcher: github
 Source:  https://github.com/GuiltyDolphin/org-evil.git
 
 Updating /mnt/store/melpa/working/org-evil/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 981b0931d043d3b0eb61fcab6258b5a88cc74d15
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-evil/
+  to /tmp/org-evilc7npEu/org-evil-20210809.1724
+    org-evil-commands.el -> org-evil-commands.el
+    org-evil-core.el -> org-evil-core.el
+    org-evil-list.el -> org-evil-list.el
+    org-evil-motion.el -> org-evil-motion.el
+    org-evil-table.el -> org-evil-table.el
+    org-evil.el -> org-evil.el
+Created org-evil-20210809.1724.tar containing:
+  org-evil-20210809.1724/
+  org-evil-20210809.1724/org-evil-commands.el
+  org-evil-20210809.1724/org-evil-core.el
+  org-evil-20210809.1724/org-evil-list.el
+  org-evil-20210809.1724/org-evil-motion.el
+  org-evil-20210809.1724/org-evil-pkg.el
+  org-evil-20210809.1724/org-evil-table.el
+  org-evil-20210809.1724/org-evil.el
+Built org-evil in 3.206s, finished at 2022-08-29T13:18:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 434 Aug 29 13:18 packages/org-evil-20210809.1724.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 29 13:18 packages/org-evil-20210809.1724.tar

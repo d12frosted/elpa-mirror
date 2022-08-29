@@ -3,4 +3,54 @@ Fetcher: github
 Source:  https://github.com/auto-complete/auto-complete.git
 
 Updating /mnt/store/melpa/working/auto-complete/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 57cb8f2ee32dff17ea1b4431fe5920272aa38d72
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auto-complete/
+  to /tmp/auto-completeIktjU4/auto-complete-20220105.439
+    auto-complete-config.el -> auto-complete-config.el
+    auto-complete-pkg.el -> auto-complete-pkg.el
+    auto-complete.el -> auto-complete.el
+    dict => dict
+Created auto-complete-20220105.439.tar containing:
+  auto-complete-20220105.439/
+  auto-complete-20220105.439/auto-complete-config.el
+  auto-complete-20220105.439/auto-complete-pkg.el
+  auto-complete-20220105.439/auto-complete.el
+  auto-complete-20220105.439/dict/
+  auto-complete-20220105.439/dict/ada-mode
+  auto-complete-20220105.439/dict/c++-mode
+  auto-complete-20220105.439/dict/c-mode
+  auto-complete-20220105.439/dict/caml-mode
+  auto-complete-20220105.439/dict/clojure-mode
+  auto-complete-20220105.439/dict/clojurescript-mode
+  auto-complete-20220105.439/dict/coq-mode
+  auto-complete-20220105.439/dict/css-mode
+  auto-complete-20220105.439/dict/erlang-mode
+  auto-complete-20220105.439/dict/ess-julia-mode
+  auto-complete-20220105.439/dict/go-mode
+  auto-complete-20220105.439/dict/haskell-mode
+  auto-complete-20220105.439/dict/java-mode
+  auto-complete-20220105.439/dict/js-mode
+  auto-complete-20220105.439/dict/julia-mode
+  auto-complete-20220105.439/dict/lua-mode
+  auto-complete-20220105.439/dict/nim-mode
+  auto-complete-20220105.439/dict/objc-mode
+  auto-complete-20220105.439/dict/octave-mode
+  auto-complete-20220105.439/dict/php-mode
+  auto-complete-20220105.439/dict/python-mode
+  auto-complete-20220105.439/dict/qml-mode
+  auto-complete-20220105.439/dict/ruby-mode
+  auto-complete-20220105.439/dict/scala-mode
+  auto-complete-20220105.439/dict/scheme-mode
+  auto-complete-20220105.439/dict/sclang-mode
+  auto-complete-20220105.439/dict/sh-mode
+  auto-complete-20220105.439/dict/swift-mode
+  auto-complete-20220105.439/dict/tcl-mode
+  auto-complete-20220105.439/dict/ts-mode
+  auto-complete-20220105.439/dict/tuareg-mode
+  auto-complete-20220105.439/dict/verilog-mode
+Built auto-complete in 3.803s, finished at 2022-08-29T15:46:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  411 Aug 29 15:46 packages/auto-complete-20220105.439.entry
+332K -rw-r--r-- 1 root root 330K Aug 29 15:46 packages/auto-complete-20220105.439.tar

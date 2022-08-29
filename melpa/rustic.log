@@ -3,4 +3,49 @@ Fetcher: github
 Source:  https://github.com/brotzeit/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out d1488a6f9491a3cad122dbecc17bbba028b43964
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rustic/
+  to /tmp/rusticMijwGd/rustic-20220827.1121
+    rustic-babel.el -> rustic-babel.el
+    rustic-cargo.el -> rustic-cargo.el
+    rustic-clippy.el -> rustic-clippy.el
+    rustic-comint.el -> rustic-comint.el
+    rustic-compile.el -> rustic-compile.el
+    rustic-doc.el -> rustic-doc.el
+    rustic-expand.el -> rustic-expand.el
+    rustic-flycheck.el -> rustic-flycheck.el
+    rustic-interaction.el -> rustic-interaction.el
+    rustic-lsp.el -> rustic-lsp.el
+    rustic-playpen.el -> rustic-playpen.el
+    rustic-popup.el -> rustic-popup.el
+    rustic-racer.el -> rustic-racer.el
+    rustic-rustfix.el -> rustic-rustfix.el
+    rustic-rustfmt.el -> rustic-rustfmt.el
+    rustic-spellcheck.el -> rustic-spellcheck.el
+    rustic.el -> rustic.el
+Created rustic-20220827.1121.tar containing:
+  rustic-20220827.1121/
+  rustic-20220827.1121/rustic-babel.el
+  rustic-20220827.1121/rustic-cargo.el
+  rustic-20220827.1121/rustic-clippy.el
+  rustic-20220827.1121/rustic-comint.el
+  rustic-20220827.1121/rustic-compile.el
+  rustic-20220827.1121/rustic-doc.el
+  rustic-20220827.1121/rustic-expand.el
+  rustic-20220827.1121/rustic-flycheck.el
+  rustic-20220827.1121/rustic-interaction.el
+  rustic-20220827.1121/rustic-lsp.el
+  rustic-20220827.1121/rustic-pkg.el
+  rustic-20220827.1121/rustic-playpen.el
+  rustic-20220827.1121/rustic-popup.el
+  rustic-20220827.1121/rustic-racer.el
+  rustic-20220827.1121/rustic-rustfix.el
+  rustic-20220827.1121/rustic-rustfmt.el
+  rustic-20220827.1121/rustic-spellcheck.el
+  rustic-20220827.1121/rustic.el
+Built rustic in 4.542s, finished at 2022-08-29T13:29:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  478 Aug 29 13:29 packages/rustic-20220827.1121.entry
+200K -rw-r--r-- 1 root root 200K Aug 29 13:29 packages/rustic-20220827.1121.tar

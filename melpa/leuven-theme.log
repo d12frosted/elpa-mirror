@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/fniessen/emacs-leuven-theme.git
 
 Updating /mnt/store/melpa/working/leuven-theme/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out d7dd9188a65e2ab7cf73c2e575a830baae38cb0c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leuven-theme/
+  to /tmp/leuven-themeuPio1h/leuven-theme-20220203.947
+  ! lisp/leuven-dark-theme.el -> leuven-dark-theme.el
+  ! lisp/leuven-theme.el -> leuven-theme.el
+Created leuven-theme-20220203.947.tar containing:
+  leuven-theme-20220203.947/
+  leuven-theme-20220203.947/leuven-dark-theme.el
+  leuven-theme-20220203.947/leuven-theme-pkg.el
+  leuven-theme-20220203.947/leuven-theme.el
+Built leuven-theme in 4.251s, finished at 2022-08-29T13:09:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  430 Aug 29 13:09 packages/leuven-theme-20220203.947.entry
+140K -rw-r--r-- 1 root root 140K Aug 29 13:09 packages/leuven-theme-20220203.947.tar

@@ -3,4 +3,33 @@ Fetcher: gitlab
 Source:  https://gitlab.com/fvdbeek/emacs-pubmed.git
 
 Updating /mnt/store/melpa/working/pubmed/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 7e38b3f8ec72618b89afdeaa113f1787dcb690ca
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pubmed/
+  to /tmp/pubmedZvyTFO/pubmed-20220710.2149
+    pubmed-advanced-search.el -> pubmed-advanced-search.el
+    pubmed-bibtex.el -> pubmed-bibtex.el
+    pubmed-dissemin.el -> pubmed-dissemin.el
+    pubmed-openaccessbutton.el -> pubmed-openaccessbutton.el
+    pubmed-pmc.el -> pubmed-pmc.el
+    pubmed-scihub.el -> pubmed-scihub.el
+    pubmed-springer.el -> pubmed-springer.el
+    pubmed-unpaywall.el -> pubmed-unpaywall.el
+    pubmed.el -> pubmed.el
+Created pubmed-20220710.2149.tar containing:
+  pubmed-20220710.2149/
+  pubmed-20220710.2149/pubmed-advanced-search.el
+  pubmed-20220710.2149/pubmed-bibtex.el
+  pubmed-20220710.2149/pubmed-dissemin.el
+  pubmed-20220710.2149/pubmed-openaccessbutton.el
+  pubmed-20220710.2149/pubmed-pkg.el
+  pubmed-20220710.2149/pubmed-pmc.el
+  pubmed-20220710.2149/pubmed-scihub.el
+  pubmed-20220710.2149/pubmed-springer.el
+  pubmed-20220710.2149/pubmed-unpaywall.el
+  pubmed-20220710.2149/pubmed.el
+Built pubmed in 4.689s, finished at 2022-08-29T13:26:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  446 Aug 29 13:26 packages/pubmed-20220710.2149.entry
+220K -rw-r--r-- 1 root root 220K Aug 29 13:26 packages/pubmed-20220710.2149.tar

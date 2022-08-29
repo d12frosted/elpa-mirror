@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/ilya-babanov/emacs-bpr.git
 
 Updating /mnt/store/melpa/working/bpr/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out af84a83dea09d86e77d87ac30604f2c5b4bf4117
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bpr/
+  to /tmp/bprNfGIyp/bpr-20180220.1844
+    bpr.el -> bpr.el
+    test-bpr.el -> test-bpr.el
+Created bpr-20180220.1844.tar containing:
+  bpr-20180220.1844/
+  bpr-20180220.1844/bpr-pkg.el
+  bpr-20180220.1844/bpr.el
+  bpr-20180220.1844/test-bpr.el
+Built bpr in 3.284s, finished at 2022-08-29T15:47:59+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 395 Aug 29 15:47 packages/bpr-20180220.1844.entry
+ 32K -rw-r--r-- 1 root root 30K Aug 29 15:47 packages/bpr-20180220.1844.tar

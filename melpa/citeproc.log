@@ -3,4 +3,67 @@ Fetcher: github
 Source:  https://github.com/andras-simonyi/citeproc-el.git
 
 Updating /mnt/store/melpa/working/citeproc/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 36c4ecdc485a2f264297bb60f82c0afe1a1d64d3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/citeproc/
+  to /tmp/citeproc6hTFCe/citeproc-20220816.1732
+    citeproc-biblatex.el -> citeproc-biblatex.el
+    citeproc-bibtex.el -> citeproc-bibtex.el
+    citeproc-choose.el -> citeproc-choose.el
+    citeproc-cite.el -> citeproc-cite.el
+    citeproc-context.el -> citeproc-context.el
+    citeproc-date.el -> citeproc-date.el
+    citeproc-disamb.el -> citeproc-disamb.el
+    citeproc-formatters.el -> citeproc-formatters.el
+    citeproc-generic-elements.el -> citeproc-generic-elements.el
+    citeproc-itemdata.el -> citeproc-itemdata.el
+    citeproc-itemgetters.el -> citeproc-itemgetters.el
+    citeproc-lib.el -> citeproc-lib.el
+    citeproc-locale.el -> citeproc-locale.el
+    citeproc-macro.el -> citeproc-macro.el
+    citeproc-name.el -> citeproc-name.el
+    citeproc-number.el -> citeproc-number.el
+    citeproc-prange.el -> citeproc-prange.el
+    citeproc-proc.el -> citeproc-proc.el
+    citeproc-rt.el -> citeproc-rt.el
+    citeproc-s.el -> citeproc-s.el
+    citeproc-sort.el -> citeproc-sort.el
+    citeproc-style.el -> citeproc-style.el
+    citeproc-subbibs.el -> citeproc-subbibs.el
+    citeproc-term.el -> citeproc-term.el
+    citeproc-test-human.el -> citeproc-test-human.el
+    citeproc.el -> citeproc.el
+Created citeproc-20220816.1732.tar containing:
+  citeproc-20220816.1732/
+  citeproc-20220816.1732/citeproc-biblatex.el
+  citeproc-20220816.1732/citeproc-bibtex.el
+  citeproc-20220816.1732/citeproc-choose.el
+  citeproc-20220816.1732/citeproc-cite.el
+  citeproc-20220816.1732/citeproc-context.el
+  citeproc-20220816.1732/citeproc-date.el
+  citeproc-20220816.1732/citeproc-disamb.el
+  citeproc-20220816.1732/citeproc-formatters.el
+  citeproc-20220816.1732/citeproc-generic-elements.el
+  citeproc-20220816.1732/citeproc-itemdata.el
+  citeproc-20220816.1732/citeproc-itemgetters.el
+  citeproc-20220816.1732/citeproc-lib.el
+  citeproc-20220816.1732/citeproc-locale.el
+  citeproc-20220816.1732/citeproc-macro.el
+  citeproc-20220816.1732/citeproc-name.el
+  citeproc-20220816.1732/citeproc-number.el
+  citeproc-20220816.1732/citeproc-pkg.el
+  citeproc-20220816.1732/citeproc-prange.el
+  citeproc-20220816.1732/citeproc-proc.el
+  citeproc-20220816.1732/citeproc-rt.el
+  citeproc-20220816.1732/citeproc-s.el
+  citeproc-20220816.1732/citeproc-sort.el
+  citeproc-20220816.1732/citeproc-style.el
+  citeproc-20220816.1732/citeproc-subbibs.el
+  citeproc-20220816.1732/citeproc-term.el
+  citeproc-20220816.1732/citeproc-test-human.el
+  citeproc-20220816.1732/citeproc.el
+Built citeproc in 6.473s, finished at 2022-08-29T15:50:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  569 Aug 29 15:50 packages/citeproc-20220816.1732.entry
+280K -rw-r--r-- 1 root root 280K Aug 29 15:50 packages/citeproc-20220816.1732.tar

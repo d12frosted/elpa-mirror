@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/fgeller/fingers.el.git
 
 Updating /mnt/store/melpa/working/fingers/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 7de351448a6f5ea7aa7a25db6c90d5138f87eb16
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fingers/
+  to /tmp/fingersr2OZOA/fingers-20160817.829
+    fingers-neo.el -> fingers-neo.el
+    fingers-qwerty.el -> fingers-qwerty.el
+    fingers.el -> fingers.el
+Created fingers-20160817.829.tar containing:
+  fingers-20160817.829/
+  fingers-20160817.829/fingers-neo.el
+  fingers-20160817.829/fingers-pkg.el
+  fingers-20160817.829/fingers-qwerty.el
+  fingers-20160817.829/fingers.el
+Built fingers in 3.849s, finished at 2022-08-29T16:04:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 380 Aug 29 16:04 packages/fingers-20160817.829.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 29 16:04 packages/fingers-20160817.829.tar

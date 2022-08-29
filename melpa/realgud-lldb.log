@@ -3,4 +3,28 @@ Fetcher: github
 Source:  https://github.com/realgud/realgud-lldb.git
 
 Updating /mnt/store/melpa/working/realgud-lldb/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 19a2c0a8b228af543338f3a8e51141a9e23484a5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/realgud-lldb/
+  to /tmp/realgud-lldbe3qTyk/realgud-lldb-20220419.2006
+    cask-install.el -> cask-install.el
+    realgud-lldb.el -> realgud-lldb.el
+    lldb/core.el -> lldb/core.el
+    lldb/init.el -> lldb/init.el
+    lldb/lldb.el -> lldb/lldb.el
+    lldb/track-mode.el -> lldb/track-mode.el
+Created realgud-lldb-20220419.2006.tar containing:
+  realgud-lldb-20220419.2006/
+  realgud-lldb-20220419.2006/cask-install.el
+  realgud-lldb-20220419.2006/lldb/
+  realgud-lldb-20220419.2006/lldb/core.el
+  realgud-lldb-20220419.2006/lldb/init.el
+  realgud-lldb-20220419.2006/lldb/lldb.el
+  realgud-lldb-20220419.2006/lldb/track-mode.el
+  realgud-lldb-20220419.2006/realgud-lldb-pkg.el
+  realgud-lldb-20220419.2006/realgud-lldb.el
+Built realgud-lldb in 3.798s, finished at 2022-08-29T13:27:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 383 Aug 29 13:27 packages/realgud-lldb-20220419.2006.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 29 13:27 packages/realgud-lldb-20220419.2006.tar

@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/joddie/macrostep.git
 
 Updating /mnt/store/melpa/working/macrostep/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 424e3734a1ee526a1bd7b5c3cd1d3ef19d184267
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/macrostep/
+  to /tmp/macrostepDGi7CU/macrostep-20161120.2106
+    macrostep-c.el -> macrostep-c.el
+    macrostep.el -> macrostep.el
+Created macrostep-20161120.2106.tar containing:
+  macrostep-20161120.2106/
+  macrostep-20161120.2106/macrostep-c.el
+  macrostep-20161120.2106/macrostep-pkg.el
+  macrostep-20161120.2106/macrostep.el
+Built macrostep in 3.149s, finished at 2022-08-29T13:10:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 387 Aug 29 13:10 packages/macrostep-20161120.2106.entry
+ 60K -rw-r--r-- 1 root root 60K Aug 29 13:10 packages/macrostep-20161120.2106.tar

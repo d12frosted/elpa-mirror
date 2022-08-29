@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/david-christiansen/jonprl-mode.git
 
 Updating /mnt/store/melpa/working/jonprl-mode/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 6059bb64891fae45827174e044d6a87ac07172d8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jonprl-mode/
+  to /tmp/jonprl-model6xAlK/jonprl-mode-20160819.59
+    jonprl-compat.el -> jonprl-compat.el
+    jonprl-mode.el -> jonprl-mode.el
+    jonprl-icon.png -> jonprl-icon.png
+Created jonprl-mode-20160819.59.tar containing:
+  jonprl-mode-20160819.59/
+  jonprl-mode-20160819.59/jonprl-compat.el
+  jonprl-mode-20160819.59/jonprl-icon.png
+  jonprl-mode-20160819.59/jonprl-mode-pkg.el
+  jonprl-mode-20160819.59/jonprl-mode.el
+Built jonprl-mode in 4.842s, finished at 2022-08-29T13:06:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 431 Aug 29 13:06 packages/jonprl-mode-20160819.59.entry
+ 32K -rw-r--r-- 1 root root 30K Aug 29 13:06 packages/jonprl-mode-20160819.59.tar

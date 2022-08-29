@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/ancane/markdown-preview-mode.git
 
 Updating /mnt/store/melpa/working/markdown-preview-mode/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out dde87b96de9e81dd01d174da67ef68687b3a5eb5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/markdown-preview-mode/
+  to /tmp/markdown-preview-modeoESFqL/markdown-preview-mode-20210516.936
+    markdown-preview-mode.el -> markdown-preview-mode.el
+    preview.html -> preview.html
+    favicon.ico -> favicon.ico
+Created markdown-preview-mode-20210516.936.tar containing:
+  markdown-preview-mode-20210516.936/
+  markdown-preview-mode-20210516.936/favicon.ico
+  markdown-preview-mode-20210516.936/markdown-preview-mode-pkg.el
+  markdown-preview-mode-20210516.936/markdown-preview-mode.el
+  markdown-preview-mode-20210516.936/preview.html
+Built markdown-preview-mode in 3.192s, finished at 2022-08-29T13:11:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 526 Aug 29 13:11 packages/markdown-preview-mode-20210516.936.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 29 13:11 packages/markdown-preview-mode-20210516.936.tar

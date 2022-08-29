@@ -3,4 +3,51 @@ Fetcher: github
 Source:  https://github.com/the-kenny/weechat.el.git
 
 Updating /mnt/store/melpa/working/weechat/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out d9a13306ea8be27367f92e9202d116a88fa1f441
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/weechat/
+  to /tmp/weechatvOwBAB/weechat-20190520.1551
+    weechat-button.el -> weechat-button.el
+    weechat-cmd.el -> weechat-cmd.el
+    weechat-color.el -> weechat-color.el
+    weechat-complete.el -> weechat-complete.el
+    weechat-core.el -> weechat-core.el
+    weechat-corrector.el -> weechat-corrector.el
+    weechat-image.el -> weechat-image.el
+    weechat-latex.el -> weechat-latex.el
+    weechat-notifications.el -> weechat-notifications.el
+    weechat-read-marker.el -> weechat-read-marker.el
+    weechat-relay.el -> weechat-relay.el
+    weechat-sauron.el -> weechat-sauron.el
+    weechat-secrets.el -> weechat-secrets.el
+    weechat-smiley.el -> weechat-smiley.el
+    weechat-speedbar.el -> weechat-speedbar.el
+    weechat-spelling.el -> weechat-spelling.el
+    weechat-tracking.el -> weechat-tracking.el
+    weechat.el -> weechat.el
+Created weechat-20190520.1551.tar containing:
+  weechat-20190520.1551/
+  weechat-20190520.1551/weechat-button.el
+  weechat-20190520.1551/weechat-cmd.el
+  weechat-20190520.1551/weechat-color.el
+  weechat-20190520.1551/weechat-complete.el
+  weechat-20190520.1551/weechat-core.el
+  weechat-20190520.1551/weechat-corrector.el
+  weechat-20190520.1551/weechat-image.el
+  weechat-20190520.1551/weechat-latex.el
+  weechat-20190520.1551/weechat-notifications.el
+  weechat-20190520.1551/weechat-pkg.el
+  weechat-20190520.1551/weechat-read-marker.el
+  weechat-20190520.1551/weechat-relay.el
+  weechat-20190520.1551/weechat-sauron.el
+  weechat-20190520.1551/weechat-secrets.el
+  weechat-20190520.1551/weechat-smiley.el
+  weechat-20190520.1551/weechat-speedbar.el
+  weechat-20190520.1551/weechat-spelling.el
+  weechat-20190520.1551/weechat-tracking.el
+  weechat-20190520.1551/weechat.el
+Built weechat in 4.623s, finished at 2022-08-29T13:40:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  571 Aug 29 13:40 packages/weechat-20190520.1551.entry
+220K -rw-r--r-- 1 root root 220K Aug 29 13:40 packages/weechat-20190520.1551.tar

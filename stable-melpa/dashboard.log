@@ -3,4 +3,27 @@ Fetcher: github
 Source:  https://github.com/emacs-dashboard/emacs-dashboard.git
 
 Updating /mnt/store/melpa/working/dashboard/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 49e5603cac7d028bfc4c679161a20ca40327956c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dashboard/
+  to /tmp/dashboardFPQzfx/dashboard-20220809.1358
+    dashboard-widgets.el -> dashboard-widgets.el
+    dashboard.el -> dashboard.el
+    banners => banners
+Created dashboard-20220809.1358.tar containing:
+  dashboard-20220809.1358/
+  dashboard-20220809.1358/banners/
+  dashboard-20220809.1358/banners/1.txt
+  dashboard-20220809.1358/banners/2.txt
+  dashboard-20220809.1358/banners/3.txt
+  dashboard-20220809.1358/banners/4.txt
+  dashboard-20220809.1358/banners/emacs.png
+  dashboard-20220809.1358/banners/logo.png
+  dashboard-20220809.1358/dashboard-pkg.el
+  dashboard-20220809.1358/dashboard-widgets.el
+  dashboard-20220809.1358/dashboard.el
+Built dashboard in 4.134s, finished at 2022-08-29T15:54:26+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  447 Aug 29 15:54 packages/dashboard-20220809.1358.entry
+160K -rw-r--r-- 1 root root 160K Aug 29 15:54 packages/dashboard-20220809.1358.tar

@@ -3,4 +3,51 @@ Fetcher: github
 Source:  https://github.com/alexluigit/dirvish.git
 
 Updating /mnt/store/melpa/working/dirvish/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out e156c2b8c652f8f74b8e2742f03db39140793273
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dirvish/
+  to /tmp/dirvish7fYOgs/dirvish-20220829.1159
+    dirvish-extras.el -> dirvish-extras.el
+    dirvish-media.el -> dirvish-media.el
+    dirvish-widgets.el -> dirvish-widgets.el
+    dirvish.el -> dirvish.el
+  ! extensions/dirvish-collapse.el -> dirvish-collapse.el
+  ! extensions/dirvish-emerge.el -> dirvish-emerge.el
+  ! extensions/dirvish-fd.el -> dirvish-fd.el
+  ! extensions/dirvish-history.el -> dirvish-history.el
+  ! extensions/dirvish-icons.el -> dirvish-icons.el
+  ! extensions/dirvish-layout.el -> dirvish-layout.el
+  ! extensions/dirvish-ls.el -> dirvish-ls.el
+  ! extensions/dirvish-narrow.el -> dirvish-narrow.el
+  ! extensions/dirvish-peek.el -> dirvish-peek.el
+  ! extensions/dirvish-quick-access.el -> dirvish-quick-access.el
+  ! extensions/dirvish-side.el -> dirvish-side.el
+  ! extensions/dirvish-subtree.el -> dirvish-subtree.el
+  ! extensions/dirvish-vc.el -> dirvish-vc.el
+  ! extensions/dirvish-yank.el -> dirvish-yank.el
+Created dirvish-20220829.1159.tar containing:
+  dirvish-20220829.1159/
+  dirvish-20220829.1159/dirvish-collapse.el
+  dirvish-20220829.1159/dirvish-emerge.el
+  dirvish-20220829.1159/dirvish-extras.el
+  dirvish-20220829.1159/dirvish-fd.el
+  dirvish-20220829.1159/dirvish-history.el
+  dirvish-20220829.1159/dirvish-icons.el
+  dirvish-20220829.1159/dirvish-layout.el
+  dirvish-20220829.1159/dirvish-ls.el
+  dirvish-20220829.1159/dirvish-media.el
+  dirvish-20220829.1159/dirvish-narrow.el
+  dirvish-20220829.1159/dirvish-peek.el
+  dirvish-20220829.1159/dirvish-pkg.el
+  dirvish-20220829.1159/dirvish-quick-access.el
+  dirvish-20220829.1159/dirvish-side.el
+  dirvish-20220829.1159/dirvish-subtree.el
+  dirvish-20220829.1159/dirvish-vc.el
+  dirvish-20220829.1159/dirvish-widgets.el
+  dirvish-20220829.1159/dirvish-yank.el
+  dirvish-20220829.1159/dirvish.el
+Built dirvish in 5.676s, finished at 2022-08-29T15:56:02+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  412 Aug 29 15:56 packages/dirvish-20220829.1159.entry
+260K -rw-r--r-- 1 root root 260K Aug 29 15:56 packages/dirvish-20220829.1159.tar

@@ -3,4 +3,41 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-sonarlint.git
 
 Updating /mnt/store/melpa/working/lsp-sonarlint/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 3af97828f9c08d782fb2086e3a73bda5759e6788
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-sonarlint/
+  to /tmp/lsp-sonarlintmPrDMG/lsp-sonarlint-20210820.2044
+    lsp-sonarlint.el -> lsp-sonarlint.el
+  ! languages/xml/lsp-sonarlint-xml.el -> languages/lsp-sonarlint-xml.el
+  ! languages/typescript/lsp-sonarlint-typescript.el -> languages/lsp-sonarlint-typescript.el
+  ! languages/scala/lsp-sonarlint-scala.el -> languages/lsp-sonarlint-scala.el
+  ! languages/ruby/lsp-sonarlint-ruby.el -> languages/lsp-sonarlint-ruby.el
+  ! languages/python/lsp-sonarlint-python.el -> languages/lsp-sonarlint-python.el
+  ! languages/php/lsp-sonarlint-php.el -> languages/lsp-sonarlint-php.el
+  ! languages/javascript/lsp-sonarlint-javascript.el -> languages/lsp-sonarlint-javascript.el
+  ! languages/java/lsp-sonarlint-java.el -> languages/lsp-sonarlint-java.el
+  ! languages/html/lsp-sonarlint-html.el -> languages/lsp-sonarlint-html.el
+    server/LICENSE -> server/LICENSE
+    server/sonarlint-language-server.jar -> server/sonarlint-language-server.jar
+Created lsp-sonarlint-20210820.2044.tar containing:
+  lsp-sonarlint-20210820.2044/
+  lsp-sonarlint-20210820.2044/languages/
+  lsp-sonarlint-20210820.2044/languages/lsp-sonarlint-html.el
+  lsp-sonarlint-20210820.2044/languages/lsp-sonarlint-java.el
+  lsp-sonarlint-20210820.2044/languages/lsp-sonarlint-javascript.el
+  lsp-sonarlint-20210820.2044/languages/lsp-sonarlint-php.el
+  lsp-sonarlint-20210820.2044/languages/lsp-sonarlint-python.el
+  lsp-sonarlint-20210820.2044/languages/lsp-sonarlint-ruby.el
+  lsp-sonarlint-20210820.2044/languages/lsp-sonarlint-scala.el
+  lsp-sonarlint-20210820.2044/languages/lsp-sonarlint-typescript.el
+  lsp-sonarlint-20210820.2044/languages/lsp-sonarlint-xml.el
+  lsp-sonarlint-20210820.2044/lsp-sonarlint-pkg.el
+  lsp-sonarlint-20210820.2044/lsp-sonarlint.el
+  lsp-sonarlint-20210820.2044/server/
+  lsp-sonarlint-20210820.2044/server/LICENSE
+  lsp-sonarlint-20210820.2044/server/sonarlint-language-server.jar
+Built lsp-sonarlint in 4.373s, finished at 2022-08-29T13:10:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 480 Aug 29 13:10 packages/lsp-sonarlint-20210820.2044.entry
+ 14M -rw-r--r-- 1 root root 14M Aug 29 13:10 packages/lsp-sonarlint-20210820.2044.tar

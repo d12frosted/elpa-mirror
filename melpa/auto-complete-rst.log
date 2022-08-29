@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/tkf/auto-complete-rst.git
 
 Updating /mnt/store/melpa/working/auto-complete-rst/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 4803ce41a96224e6fa54e6741a5b5f40ebed7351
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auto-complete-rst/
+  to /tmp/auto-complete-rstlep1nd/auto-complete-rst-20140225.944
+    auto-complete-rst.el -> auto-complete-rst.el
+    genesource.py -> genesource.py
+Created auto-complete-rst-20140225.944.tar containing:
+  auto-complete-rst-20140225.944/
+  auto-complete-rst-20140225.944/auto-complete-rst-pkg.el
+  auto-complete-rst-20140225.944/auto-complete-rst.el
+  auto-complete-rst-20140225.944/genesource.py
+Built auto-complete-rst in 3.299s, finished at 2022-08-29T15:46:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 349 Aug 29 15:46 packages/auto-complete-rst-20140225.944.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 29 15:46 packages/auto-complete-rst-20140225.944.tar

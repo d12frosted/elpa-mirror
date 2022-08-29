@@ -3,4 +3,56 @@ Fetcher: github
 Source:  https://github.com/louabill/ado-mode.git
 
 Updating /mnt/store/melpa/working/ado-mode/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 07ab2979692d70ca21ac64313903d5347ab748a9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ado-mode/
+  to /tmp/ado-modewznZew/ado-mode-20220415.1647
+  ! lisp/ado-clip.el -> ado-clip.el
+  ! lisp/ado-cons.el -> ado-cons.el
+  ! lisp/ado-cus.el -> ado-cus.el
+  ! lisp/ado-font-lock.el -> ado-font-lock.el
+  ! lisp/ado-font.el -> ado-font.el
+  ! lisp/ado-mode.el -> ado-mode.el
+  ! lisp/ado-stata-info.el -> ado-stata-info.el
+  ! lisp/ado-to-stata.el -> ado-to-stata.el
+    scripts => scripts
+    templates => templates
+Created ado-mode-20220415.1647.tar containing:
+  ado-mode-20220415.1647/
+  ado-mode-20220415.1647/ado-clip.el
+  ado-mode-20220415.1647/ado-cons.el
+  ado-mode-20220415.1647/ado-cus.el
+  ado-mode-20220415.1647/ado-font-lock.el
+  ado-mode-20220415.1647/ado-font.el
+  ado-mode-20220415.1647/ado-mode-pkg.el
+  ado-mode-20220415.1647/ado-mode.el
+  ado-mode-20220415.1647/ado-stata-info.el
+  ado-mode-20220415.1647/ado-to-stata.el
+  ado-mode-20220415.1647/scripts/
+  ado-mode-20220415.1647/scripts/send2stata.au3
+  ado-mode-20220415.1647/scripts/send2stata.exe
+  ado-mode-20220415.1647/scripts/send2stata.scpt
+  ado-mode-20220415.1647/scripts/send2ztata.sh
+  ado-mode-20220415.1647/templates/
+  ado-mode-20220415.1647/templates/ado.blp
+  ado-mode-20220415.1647/templates/class.blp
+  ado-mode-20220415.1647/templates/dialog.blp
+  ado-mode-20220415.1647/templates/do.blp
+  ado-mode-20220415.1647/templates/help.blp
+  ado-mode-20220415.1647/templates/help10.blp
+  ado-mode-20220415.1647/templates/help11.blp
+  ado-mode-20220415.1647/templates/help6.blp
+  ado-mode-20220415.1647/templates/help7.blp
+  ado-mode-20220415.1647/templates/lbl.blp
+  ado-mode-20220415.1647/templates/mata.blp
+  ado-mode-20220415.1647/templates/pkg.blp
+  ado-mode-20220415.1647/templates/readme
+  ado-mode-20220415.1647/templates/smallado.blp
+  ado-mode-20220415.1647/templates/sparse.blp
+  ado-mode-20220415.1647/templates/testado.blp
+  ado-mode-20220415.1647/templates/toc.blp
+Built ado-mode in 5.003s, finished at 2022-08-29T15:44:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  429 Aug 29 15:44 packages/ado-mode-20220415.1647.entry
+1.4M -rw-r--r-- 1 root root 1.4M Aug 29 15:44 packages/ado-mode-20220415.1647.tar

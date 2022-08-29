@@ -3,4 +3,27 @@ Fetcher: github
 Source:  https://github.com/fasheng/elfeed-protocol.git
 
 Updating /mnt/store/melpa/working/elfeed-protocol/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out b813574faefc1ac4825da19b40f620339b6badff
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-protocol/
+  to /tmp/elfeed-protocolT7cBPf/elfeed-protocol-20220524.336
+    elfeed-protocol-common.el -> elfeed-protocol-common.el
+    elfeed-protocol-fever.el -> elfeed-protocol-fever.el
+    elfeed-protocol-newsblur.el -> elfeed-protocol-newsblur.el
+    elfeed-protocol-owncloud.el -> elfeed-protocol-owncloud.el
+    elfeed-protocol-ttrss.el -> elfeed-protocol-ttrss.el
+    elfeed-protocol.el -> elfeed-protocol.el
+Created elfeed-protocol-20220524.336.tar containing:
+  elfeed-protocol-20220524.336/
+  elfeed-protocol-20220524.336/elfeed-protocol-common.el
+  elfeed-protocol-20220524.336/elfeed-protocol-fever.el
+  elfeed-protocol-20220524.336/elfeed-protocol-newsblur.el
+  elfeed-protocol-20220524.336/elfeed-protocol-owncloud.el
+  elfeed-protocol-20220524.336/elfeed-protocol-pkg.el
+  elfeed-protocol-20220524.336/elfeed-protocol-ttrss.el
+  elfeed-protocol-20220524.336/elfeed-protocol.el
+Built elfeed-protocol in 3.373s, finished at 2022-08-29T15:58:56+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  455 Aug 29 15:58 packages/elfeed-protocol-20220524.336.entry
+160K -rw-r--r-- 1 root root 160K Aug 29 15:58 packages/elfeed-protocol-20220524.336.tar

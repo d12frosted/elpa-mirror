@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/ROCKTAKEY/grugru.git
 
 Updating /mnt/store/melpa/working/grugru/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 1b3b807e84cb250f0cc70876a438fed3b27eb756
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/grugru/
+  to /tmp/grugru25T9Kg/grugru-20211119.815
+    grugru-default.el -> grugru-default.el
+    grugru-utils.el -> grugru-utils.el
+    grugru.el -> grugru.el
+Created grugru-20211119.815.tar containing:
+  grugru-20211119.815/
+  grugru-20211119.815/grugru-default.el
+  grugru-20211119.815/grugru-pkg.el
+  grugru-20211119.815/grugru-utils.el
+  grugru-20211119.815/grugru.el
+Built grugru in 4.132s, finished at 2022-08-29T12:59:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 345 Aug 29 12:59 packages/grugru-20211119.815.entry
+ 72K -rw-r--r-- 1 root root 70K Aug 29 12:59 packages/grugru-20211119.815.tar

@@ -3,4 +3,31 @@ Fetcher: github
 Source:  https://github.com/flexibeast/org-vcard.git
 
 Updating /mnt/store/melpa/working/org-vcard/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out bdaebcb4ef44c155a92d9c89a21a1d29019ee026
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-vcard/
+  to /tmp/org-vcardpwGDNg/org-vcard-20220206.1209
+    org-vcard.el -> org-vcard.el
+    styles => styles
+Created org-vcard-20220206.1209.tar containing:
+  org-vcard-20220206.1209/
+  org-vcard-20220206.1209/org-vcard-pkg.el
+  org-vcard-20220206.1209/org-vcard.el
+  org-vcard-20220206.1209/styles/
+  org-vcard-20220206.1209/styles/flat/
+  org-vcard-20220206.1209/styles/flat/functions.el
+  org-vcard-20220206.1209/styles/flat/mappings/
+  org-vcard-20220206.1209/styles/flat/mappings/en
+  org-vcard-20220206.1209/styles/flat/mappings/en_AU
+  org-vcard-20220206.1209/styles/flat/mappings/en_US
+  org-vcard-20220206.1209/styles/tree/
+  org-vcard-20220206.1209/styles/tree/functions.el
+  org-vcard-20220206.1209/styles/tree/mappings/
+  org-vcard-20220206.1209/styles/tree/mappings/en
+  org-vcard-20220206.1209/styles/tree/mappings/en_AU
+  org-vcard-20220206.1209/styles/tree/mappings/en_US
+Built org-vcard in 4.725s, finished at 2022-08-29T13:20:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  418 Aug 29 13:20 packages/org-vcard-20220206.1209.entry
+112K -rw-r--r-- 1 root root 110K Aug 29 13:20 packages/org-vcard-20220206.1209.tar

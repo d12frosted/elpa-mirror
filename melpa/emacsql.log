@@ -3,4 +3,21 @@ Fetcher: github
 Source:  https://github.com/skeeto/emacsql.git
 
 Updating /mnt/store/melpa/working/emacsql/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 373975cbccf7776af771e23f86043b236a330702
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emacsql/
+  to /tmp/emacsqlBbHQGb/emacsql-20220408.1614
+    emacsql.el -> emacsql.el
+    emacsql-compiler.el -> emacsql-compiler.el
+    README.md -> README.md
+Created emacsql-20220408.1614.tar containing:
+  emacsql-20220408.1614/
+  emacsql-20220408.1614/README.md
+  emacsql-20220408.1614/emacsql-compiler.el
+  emacsql-20220408.1614/emacsql-pkg.el
+  emacsql-20220408.1614/emacsql.el
+Built emacsql in 3.280s, finished at 2022-08-29T15:59:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 349 Aug 29 15:59 packages/emacsql-20220408.1614.entry
+ 60K -rw-r--r-- 1 root root 60K Aug 29 15:59 packages/emacsql-20220408.1614.tar

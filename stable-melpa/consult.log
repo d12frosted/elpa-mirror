@@ -3,4 +3,35 @@ Fetcher: github
 Source:  https://github.com/minad/consult.git
 
 Updating /mnt/store/melpa/working/consult/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out e4546edb6f1268c4a13ac3dd1dec8c9b28d7df51
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult/
+  to /tmp/consultd6w8dk/consult-20220807.1302
+    consult-compile.el -> consult-compile.el
+    consult-flymake.el -> consult-flymake.el
+    consult-icomplete.el -> consult-icomplete.el
+    consult-imenu.el -> consult-imenu.el
+    consult-org.el -> consult-org.el
+    consult-register.el -> consult-register.el
+    consult-selectrum.el -> consult-selectrum.el
+    consult-vertico.el -> consult-vertico.el
+    consult-xref.el -> consult-xref.el
+    consult.el -> consult.el
+Created consult-20220807.1302.tar containing:
+  consult-20220807.1302/
+  consult-20220807.1302/consult-compile.el
+  consult-20220807.1302/consult-flymake.el
+  consult-20220807.1302/consult-icomplete.el
+  consult-20220807.1302/consult-imenu.el
+  consult-20220807.1302/consult-org.el
+  consult-20220807.1302/consult-pkg.el
+  consult-20220807.1302/consult-register.el
+  consult-20220807.1302/consult-selectrum.el
+  consult-20220807.1302/consult-vertico.el
+  consult-20220807.1302/consult-xref.el
+  consult-20220807.1302/consult.el
+Built consult in 4.846s, finished at 2022-08-29T15:52:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  352 Aug 29 15:52 packages/consult-20220807.1302.entry
+260K -rw-r--r-- 1 root root 260K Aug 29 15:52 packages/consult-20220807.1302.tar

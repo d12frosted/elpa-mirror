@@ -3,4 +3,35 @@ Fetcher: github
 Source:  https://github.com/hvesalai/emacs-scala-mode.git
 
 Updating /mnt/store/melpa/working/scala-mode/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 598cb680f321d9609295aa9b4679040cc703b602
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scala-mode/
+  to /tmp/scala-modeRXEOsL/scala-mode-20210414.1126
+    scala-compile.el -> scala-compile.el
+    scala-mode-fontlock.el -> scala-mode-fontlock.el
+    scala-mode-imenu.el -> scala-mode-imenu.el
+    scala-mode-indent.el -> scala-mode-indent.el
+    scala-mode-lib.el -> scala-mode-lib.el
+    scala-mode-map.el -> scala-mode-map.el
+    scala-mode-paragraph.el -> scala-mode-paragraph.el
+    scala-mode-prettify-symbols.el -> scala-mode-prettify-symbols.el
+    scala-mode-syntax.el -> scala-mode-syntax.el
+    scala-mode.el -> scala-mode.el
+Created scala-mode-20210414.1126.tar containing:
+  scala-mode-20210414.1126/
+  scala-mode-20210414.1126/scala-compile.el
+  scala-mode-20210414.1126/scala-mode-fontlock.el
+  scala-mode-20210414.1126/scala-mode-imenu.el
+  scala-mode-20210414.1126/scala-mode-indent.el
+  scala-mode-20210414.1126/scala-mode-lib.el
+  scala-mode-20210414.1126/scala-mode-map.el
+  scala-mode-20210414.1126/scala-mode-paragraph.el
+  scala-mode-20210414.1126/scala-mode-pkg.el
+  scala-mode-20210414.1126/scala-mode-prettify-symbols.el
+  scala-mode-20210414.1126/scala-mode-syntax.el
+  scala-mode-20210414.1126/scala-mode.el
+Built scala-mode in 2.853s, finished at 2022-08-29T13:29:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  240 Aug 29 13:29 packages/scala-mode-20210414.1126.entry
+140K -rw-r--r-- 1 root root 140K Aug 29 13:29 packages/scala-mode-20210414.1126.tar

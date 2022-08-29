@@ -3,4 +3,20 @@ Fetcher: github
 Source:  https://github.com/zzkt/i-ching.git
 
 Updating /mnt/store/melpa/working/i-ching/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 54f19e2dcb1d16735b94fc7e06a2aa8b1b6f165a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/i-ching/
+  to /tmp/i-chingdXp9nj/i-ching-20220619.817
+    i-ching.el -> i-ching.el
+    i-ching.info -> i-ching.info
+Created i-ching-20220619.817.tar containing:
+  i-ching-20220619.817/
+  i-ching-20220619.817/dir
+  i-ching-20220619.817/i-ching-pkg.el
+  i-ching-20220619.817/i-ching.el
+  i-ching-20220619.817/i-ching.info
+Built i-ching in 3.688s, finished at 2022-08-29T13:03:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 386 Aug 29 13:03 packages/i-ching-20220619.817.entry
+ 80K -rw-r--r-- 1 root root 80K Aug 29 13:03 packages/i-ching-20220619.817.tar

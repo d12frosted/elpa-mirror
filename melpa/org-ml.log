@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/ndwarshuis/org-ml.git
 
 Updating /mnt/store/melpa/working/org-ml/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 385e3bee497f858705144d7ab5e6570d31d3ffe8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-ml/
+  to /tmp/org-mlRskcZP/org-ml-20220711.1528
+    org-ml-macs.el -> org-ml-macs.el
+    org-ml.el -> org-ml.el
+Created org-ml-20220711.1528.tar containing:
+  org-ml-20220711.1528/
+  org-ml-20220711.1528/org-ml-macs.el
+  org-ml-20220711.1528/org-ml-pkg.el
+  org-ml-20220711.1528/org-ml.el
+Built org-ml in 4.332s, finished at 2022-08-29T13:18:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  405 Aug 29 13:18 packages/org-ml-20220711.1528.entry
+332K -rw-r--r-- 1 root root 330K Aug 29 13:18 packages/org-ml-20220711.1528.tar

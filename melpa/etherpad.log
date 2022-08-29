@@ -3,4 +3,19 @@ Fetcher: github
 Source:  https://github.com/zzkt/ethermacs.git
 
 Updating /mnt/store/melpa/working/etherpad/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 1fae6a03084e0794e09ac036838b53aaae1dbd63
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/etherpad/
+  to /tmp/etherpadHnYlPV/etherpad-20211128.106
+    etherpad.el -> etherpad.el
+    ethersync.el -> ethersync.el
+Created etherpad-20211128.106.tar containing:
+  etherpad-20211128.106/
+  etherpad-20211128.106/etherpad-pkg.el
+  etherpad-20211128.106/etherpad.el
+  etherpad-20211128.106/ethersync.el
+Built etherpad in 5.168s, finished at 2022-08-29T16:01:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 500 Aug 29 16:01 packages/etherpad-20211128.106.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 29 16:01 packages/etherpad-20211128.106.tar

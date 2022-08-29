@@ -3,4 +3,24 @@ Fetcher: github
 Source:  https://github.com/thblt/eziam-theme-emacs.git
 
 Updating /mnt/store/melpa/working/eziam-theme/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out f30927040c77f88cd1859be59978cddd238bf386
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eziam-theme/
+  to /tmp/eziam-themeONGG5i/eziam-theme-20200327.1810
+    eziam-common.el -> eziam-common.el
+    eziam-dark-theme.el -> eziam-dark-theme.el
+    eziam-dusk-theme.el -> eziam-dusk-theme.el
+    eziam-light-theme.el -> eziam-light-theme.el
+    eziam-theme-pkg.el -> eziam-theme-pkg.el
+Created eziam-theme-20200327.1810.tar containing:
+  eziam-theme-20200327.1810/
+  eziam-theme-20200327.1810/eziam-common.el
+  eziam-theme-20200327.1810/eziam-dark-theme.el
+  eziam-theme-20200327.1810/eziam-dusk-theme.el
+  eziam-theme-20200327.1810/eziam-light-theme.el
+  eziam-theme-20200327.1810/eziam-theme-pkg.el
+Built eziam-theme in 4.758s, finished at 2022-08-29T16:03:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  206 Aug 29 16:03 packages/eziam-theme-20200327.1810.entry
+112K -rw-r--r-- 1 root root 110K Aug 29 16:03 packages/eziam-theme-20200327.1810.tar

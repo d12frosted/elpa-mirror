@@ -3,4 +3,20 @@ Fetcher: github
 Source:  https://github.com/rksm/clj-org-analyzer.git
 
 Updating /mnt/store/melpa/working/org-analyzer/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 19da62aa4dcf1090be8f574f6f2d4c7e116163a8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-analyzer/
+  to /tmp/org-analyzerSuuLn8/org-analyzer-20191001.1717
+  ! org-analyzer-el/org-analyzer.jar -> org-analyzer.jar
+  ! org-analyzer-el/org-analyzer-pkg.el -> org-analyzer-pkg.el
+  ! org-analyzer-el/org-analyzer.el -> org-analyzer.el
+Created org-analyzer-20191001.1717.tar containing:
+  org-analyzer-20191001.1717/
+  org-analyzer-20191001.1717/org-analyzer-pkg.el
+  org-analyzer-20191001.1717/org-analyzer.el
+  org-analyzer-20191001.1717/org-analyzer.jar
+Built org-analyzer in 4.167s, finished at 2022-08-29T13:17:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 376 Aug 29 13:17 packages/org-analyzer-20191001.1717.entry
+ 14M -rw-r--r-- 1 root root 14M Aug 29 13:17 packages/org-analyzer-20191001.1717.tar

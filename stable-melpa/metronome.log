@@ -3,4 +3,21 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jagrg/metronome.git
 
 Updating /mnt/store/melpa/working/metronome/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 1e1bd5234f3ecfb608041d423be7412c461ad3c2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/metronome/
+  to /tmp/metronomepRyG2h/metronome-20220210.147
+    metronome.el -> metronome.el
+    sounds => sounds
+Created metronome-20220210.147.tar containing:
+  metronome-20220210.147/
+  metronome-20220210.147/metronome-pkg.el
+  metronome-20220210.147/metronome.el
+  metronome-20220210.147/sounds/
+  metronome-20220210.147/sounds/high.wav
+  metronome-20220210.147/sounds/low.wav
+Built metronome in 5.885s, finished at 2022-08-29T13:12:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 348 Aug 29 13:12 packages/metronome-20220210.147.entry
+ 20K -rw-r--r-- 1 root root 20K Aug 29 13:12 packages/metronome-20220210.147.tar

@@ -3,4 +3,35 @@ Fetcher: github
 Source:  https://github.com/nlamirault/marcopolo.git
 
 Updating /mnt/store/melpa/working/marcopolo/
-Wrong number of arguments: (1 . 1), 2
+Checking out origin/HEAD
+Checking out 85db828f2bb4346a811b3326349b1c6d0aae4601
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/marcopolo/
+  to /tmp/marcopoloQ7v1jt/marcopolo-20160421.1004
+    marcopolo-api.el -> marcopolo-api.el
+    marcopolo-custom.el -> marcopolo-custom.el
+    marcopolo-errors.el -> marcopolo-errors.el
+    marcopolo-hub.el -> marcopolo-hub.el
+    marcopolo-mode.el -> marcopolo-mode.el
+    marcopolo-registry.el -> marcopolo-registry.el
+    marcopolo-ui.el -> marcopolo-ui.el
+    marcopolo-utils.el -> marcopolo-utils.el
+    marcopolo-version.el -> marcopolo-version.el
+    marcopolo.el -> marcopolo.el
+Created marcopolo-20160421.1004.tar containing:
+  marcopolo-20160421.1004/
+  marcopolo-20160421.1004/marcopolo-api.el
+  marcopolo-20160421.1004/marcopolo-custom.el
+  marcopolo-20160421.1004/marcopolo-errors.el
+  marcopolo-20160421.1004/marcopolo-hub.el
+  marcopolo-20160421.1004/marcopolo-mode.el
+  marcopolo-20160421.1004/marcopolo-pkg.el
+  marcopolo-20160421.1004/marcopolo-registry.el
+  marcopolo-20160421.1004/marcopolo-ui.el
+  marcopolo-20160421.1004/marcopolo-utils.el
+  marcopolo-20160421.1004/marcopolo-version.el
+  marcopolo-20160421.1004/marcopolo.el
+Built marcopolo in 3.234s, finished at 2022-08-29T13:11:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 504 Aug 29 13:11 packages/marcopolo-20160421.1004.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 29 13:11 packages/marcopolo-20160421.1004.tar
