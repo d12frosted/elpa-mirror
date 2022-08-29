@@ -756,17 +756,18 @@
 	       ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp"))])
  (diff-hl .
-	  [(1 8 8)
+	  [(1 9 0)
 	   ((cl-lib
 	     (0 2))
 	    (emacs
-	     (24 3)))
+	     (25 1)))
 	   "Highlight uncommitted changes using VC" tar
 	   ((:url . "https://github.com/dgutov/diff-hl")
+	    (:keywords "vc" "diff")
 	    (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")
 	    (:authors
 	     ("Dmitry Gutov" . "dgutov@yandex.ru"))
-	    (:keywords "vc" "diff"))])
+	    (:commit . "37b00f3bad841e131d69442a89cbebc3041d996b"))])
  (diffview .
 	   [(1 0)
 	    nil "View diffs in side-by-side format" single
@@ -1824,13 +1825,14 @@
 	       ("Lennart Borgman" . "lennart.borgman@gmail.com"))
 	      (:maintainer "Lennart Borgman" . "lennart.borgman@gmail.com"))])
  (math-symbol-lists .
-		    [(1 2 1)
-		     nil "Lists of Unicode math symbols and latex commands" single
-		     ((:keywords "unicode" "symbols" "mathematics")
+		    [(1 3)
+		     nil "Lists of Unicode math symbols and latex commands" tar
+		     ((:url . "https://github.com/vspinu/math-symbol-lists")
+		      (:keywords "unicode" "symbols" "mathematics")
+		      (:maintainer "Vitalie Spinu" . "spinuvit@gmail.com")
 		      (:authors
 		       ("Vitalie Spinu" . "spinuvit@gmail.com"))
-		      (:maintainer "Vitalie Spinu" . "spinuvit@gmail.com")
-		      (:url . "https://github.com/vspinu/math-symbol-lists"))])
+		      (:commit . "590d9f09f8ad9aab747b97f077396a2035dcf50f"))])
  (mct .
       [(0 5 0)
        ((emacs
