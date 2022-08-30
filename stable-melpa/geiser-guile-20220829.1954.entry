@@ -1,0 +1,13 @@
+(geiser-guile .
+	      [(20220829 1954)
+	       ((emacs
+		 (25 1))
+		(geiser
+		 (0 23 2)))
+	       "Guile's implementation of the geiser protocols" tar
+	       ((:commit . "b2d6f398e33c0f140dcde5adc91117aa7de4463d")
+		(:authors
+		 ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
+		(:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
+		(:keywords "languages" "guile" "scheme" "geiser")
+		(:url . "https://gitlab.com/emacs-geiser/guile"))])

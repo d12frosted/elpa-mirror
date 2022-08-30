@@ -6,20 +6,19 @@
 Table of Contents
 ─────────────────
 
-1. Introduction
-2. Features
-3. Key bindings
-4. Configuration
+1. Features
+2. Key bindings
+3. Configuration
 .. 1. Completion styles and TAB completion
 .. 2. Completion-at-point and completion-in-region
-5. Extensions
+4. Extensions
 .. 1. Configure Vertico per command or completion category
-6. Complementary packages
-7. Child frames and Popups
-8. Alternatives
-9. Resources
-10. Contributions
-11. Problematic completion commands
+5. Complementary packages
+6. Child frames and Popups
+7. Alternatives
+8. Resources
+9. Contributions
+10. Problematic completion commands
 .. 1. `org-refile'
 .. 2. `org-agenda-filter'
 .. 3. `tmm-menubar'
@@ -29,30 +28,48 @@ Table of Contents
 .. 7. Tramp hostname completion
 
 
+Vertico provides a performant and minimalistic vertical completion UI
+based on the default completion system. The main focus of Vertico is to
+provide a UI which behaves /correctly/ under all circumstances. By
+reusing the built-in facilities system, Vertico achieves /full
+compatibility/ with built-in Emacs completion commands and completion
+tables. Vertico only provides the completion UI but aims to be highly
+flexible, extensible and modular. Additional enhancements are available
+as [extensions] or [complementary packages]. The code base is small and
+maintainable. The main `vertico.el' package is only about 600 lines of
+code without white space and comments.
+
+Table of Contents
+─────────────────
+
+1. Features
+2. Key bindings
+3. Configuration
+.. 1. Completion styles and TAB completion
+.. 2. Completion-at-point and completion-in-region
+4. Extensions
+.. 1. Configure Vertico per command or completion category
+5. Complementary packages
+6. Child frames and Popups
+7. Alternatives
+8. Resources
+9. Contributions
+10. Problematic completion commands
+.. 1. `org-refile'
+.. 2. `org-agenda-filter'
+.. 3. `tmm-menubar'
+.. 4. `ffap-menu'
+.. 5. `completion-table-dynamic'
+.. 6. Submitting the empty string
+.. 7. Tramp hostname completion
 
 
+[extensions] See section 4
 
-1 Introduction
-══════════════
-
-  Vertico provides a performant and minimalistic vertical completion UI
-  based on the default completion system. The main focus of Vertico is
-  to provide a UI which behaves /correctly/ under all circumstances. By
-  reusing the built-in facilities system, Vertico achieves /full
-  compatibility/ with built-in Emacs completion commands and completion
-  tables. Vertico only provides the completion UI but aims to be highly
-  flexible, extensible and modular. Additional enhancements are
-  available as [extensions] or [complementary packages]. The code base
-  is small and maintainable. The main `vertico.el' package is only about
-  600 lines of code without white space and comments.
+[complementary packages] See section 5
 
 
-[extensions] See section 5
-
-[complementary packages] See section 6
-
-
-2 Features
+1 Features
 ══════════
 
   • Vertical display with arrow key navigation. See the [extensions] for
@@ -74,10 +91,10 @@ Table of Contents
   <https://github.com/minad/vertico/blob/screenshots/vertico-mx.png?raw=true>
 
 
-[extensions] See section 5
+[extensions] See section 4
 
 
-3 Key bindings
+2 Key bindings
 ══════════════
 
   Vertico defines its own local keymap in the minibuffer which is
@@ -102,7 +119,7 @@ Table of Contents
   • `TAB' -> `vertico-insert'
 
 
-4 Configuration
+3 Configuration
 ═══════════════
 
   Vertico is available from [GNU ELPA]. You can install it directly via
@@ -208,7 +225,7 @@ Table of Contents
 [Elisp manual]
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html>
 
-4.1 Completion styles and TAB completion
+3.1 Completion styles and TAB completion
 ────────────────────────────────────────
 
   The bindings of the `minibuffer-local-completion-map' are not
@@ -261,7 +278,7 @@ Table of Contents
   └────
 
 
-4.2 Completion-at-point and completion-in-region
+3.2 Completion-at-point and completion-in-region
 ────────────────────────────────────────────────
 
   The `completion-at-point' command is usually bound to `M-TAB' or
@@ -292,7 +309,7 @@ Table of Contents
 [Corfu] <https://github.com/minad/corfu>
 
 
-5 Extensions
+4 Extensions
 ════════════
 
   We maintain small extension packages to Vertico in this repository in
@@ -385,7 +402,7 @@ Table of Contents
 [vertico-unobtrusive]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-unobtrusive.el>
 
-5.1 Configure Vertico per command or completion category
+4.1 Configure Vertico per command or completion category
 ────────────────────────────────────────────────────────
 
   <https://github.com/minad/vertico/blob/screenshots/vertico-ripgrep.png?raw=true>
@@ -494,7 +511,7 @@ Table of Contents
   └────
 
 
-6 Complementary packages
+5 Complementary packages
 ════════════════════════
 
   Vertico integrates well with complementary packages, which enrich the
@@ -505,7 +522,7 @@ Table of Contents
   • [Embark]: Minibuffer actions and context menu
   • [Orderless]: Advanced completion style
 
-  In order to get accustomed with the package ecosystem, I recommed the
+  In order to get accustomed with the package ecosystem, I recommend the
   following quick start approach:
 
   1. Start with plain Emacs (`emacs -Q').
@@ -543,10 +560,10 @@ Table of Contents
 
 [Orderless] <https://github.com/oantolin/orderless>
 
-[extensions] See section 5
+[extensions] See section 4
 
 
-7 Child frames and Popups
+6 Child frames and Popups
 ═════════════════════════
 
   An often requested feature is the ability to display the completions
@@ -575,7 +592,7 @@ Table of Contents
 [vertico-posframe] <https://github.com/tumashu/vertico-posframe>
 
 
-8 Alternatives
+7 Alternatives
 ══════════════
 
   There are many alternative completion UIs, each UI with its own
@@ -587,15 +604,14 @@ Table of Contents
   or Ivy is explicitly avoided in order to increase flexibility and
   package reuse. Due to its small code base and reuse of the Emacs
   built-in facilities, bugs and compatibility issues are less likely to
-  occur in comparison to completion UIs or full completion systems,
-  which reimplement a lot of functionality.
+  occur in comparison to completion UIs or monolithic completion
+  systems.
 
   Since Vertico only provides the UI, you may want to combine it with
   some of the complementary packages, to give a full-featured completion
-  experience similar to Helm or Ivy. Overall the packages in the spirit
-  of Vertico have a different style than Helm or Ivy. The idea is to
-  have smaller independent components, which one can add and understand
-  step by step. Each component focuses on its niche and tries to be as
+  experience similar to Helm or Ivy. The idea is to have smaller
+  independent components, which one can add and understand step by
+  step. Each component focuses on its niche and tries to be as
   non-intrusive as possible. Vertico targets users interested in
   crafting their Emacs precisely to their liking - completion plays an
   integral part in how the users interacts with Emacs.
@@ -606,46 +622,48 @@ Table of Contents
   • [Mct]: Minibuffer and Completions in Tandem. Mct reuses the default
     `*Completions*' buffer and enhances it with automatic updates and
     additional keybindings, to select a candidate and move between
-    minibuffer and completions buffer. Mct can be configured to open
-    only when requested. Furthermore since Mct uses a fully functional
-    buffer you can reuse all your familar buffer commands inside the
-    completions buffer. The main distinction to Vertico's approach is
-    that `*Completions*' buffer displays all matching candidates. This
-    has the advantage that you can interact freely with the candidates
-    and jump around with Isearch or Avy. On the other hand it
-    necessarily causes a slowdown in comparison to Vertico, which only
-    displays a subset of candidates. Mct supports completion in region
-    via its `mct-region-mode'.
-  • [Icomplete-vertical]: This package enhances the Emacs builtin
-    Icomplete with a vertical display. In contrast to Vertico, Icomplete
-    rotates the candidates such that the current candidate always
-    appears at the top. From my perspective, candidate rotation feels a
-    bit less intuitive than the UI of Vertico or Selectrum. Note that
-    Emacs 28 offers a built-in `icomplete-vertical-mode'.
+    minibuffer and completions buffer. Since Mct uses a fully functional
+    buffer you can use familiar buffer commands inside the completions
+    buffer. The main distinction to Vertico's approach is that
+    `*Completions*' buffer displays all matching candidates. This has
+    the advantage that you can interact freely with the candidates and
+    jump around with Isearch or Avy. On the other hand it necessarily
+    causes a slowdown. Mct supports completion in region via its
+    `mct-region-mode'. Note that Mct development is currently
+    [discontinued] due to recent changes of the default completion UI on
+    the Emacs master branch.
   • [Selectrum]: Selectrum is the predecessor of Vertico, since it
-    directly inspired Vertico. Selectrum has a similar UI and
-    interaction model as Vertico. Vertico offers additional features and
-    is more flexible than Selectrum thanks to its
-    [extensions]. Unfortunately Selectrum is not fully compatible with
-    every Emacs completion command and dynamic completion tables ([Issue
-    #481]), since it uses its own filtering infrastructure, which
-    deviates from the standard Emacs completion facilities. The
-    filtering infrastructure also leads to a larger and more complex
-    code base.
+    directly inspired Vertico. Vertico offers more flexibility thanks to
+    its [extensions]. Selectrum is not fully compatible with every Emacs
+    completion command and dynamic completion tables ([selectrum#481]),
+    since it uses its own filtering infrastructure, which deviates from
+    the standard Emacs completion facilities.  Therefore Selectrum is
+    likely getting deprecated in favor of Vertico ([vertico#237],
+    [selectrum#598)].
+  • Icomplete: Emacs 28 comes with a builtin `icomplete-vertical-mode',
+    which is a more bare-bone than Vertico. Vertico offers more
+    flexibility thanks to its [extensions].
 
 
 [Mct] <https://git.sr.ht/~protesilaos/mct>
 
-[Icomplete-vertical] <https://github.com/oantolin/icomplete-vertical>
+[discontinued]
+<https://protesilaos.com/codelog/2022-04-14-emacs-discontinue-mct/>
 
-[Selectrum] <https://github.com/raxod502/selectrum>
+[Selectrum] <https://github.com/radian-software/selectrum>
 
-[extensions] See section 5
+[extensions] See section 4
 
-[Issue #481] <https://github.com/raxod502/selectrum/issues/481>
+[selectrum#481]
+<https://github.com/radian-software/selectrum/issues/481>
+
+[vertico#237] <https://github.com/minad/vertico/issues/237>
+
+[selectrum#598)]
+<https://github.com/radian-software/selectrum/issues/598>
 
 
-9 Resources
+8 Resources
 ═══════════
 
   If you want to learn more about Vertico and minibuffer completion,
@@ -653,6 +671,11 @@ Table of Contents
 
   • [Doom Emacs Vertico Module]: Vertico is Doom's default completion
     system.
+  • [Crafted Emacs Completion Module]: Vertico and Corfu are used for
+    completion.
+  • [Prot's Emacs configuration]: Vertico and Corfu are used for
+    completion.
+  • [Emacs Completion Explained] (2022-07-19) by Andrew Tropin.
   • [Emacs Minibuffer Completions] (2022-02-12) by Greg Yut.
   • [Vertico Extensions for Emacs] (2022-01-08) by Karthik Chikmagalur.
   • [Using Emacs Episode 80 - Vertico, Marginalia, Consult and Embark]
@@ -664,7 +687,16 @@ Table of Contents
 
 
 [Doom Emacs Vertico Module]
-<https://github.com/hlissner/doom-emacs/tree/develop/modules/completion/vertico>
+<https://github.com/doomemacs/doomemacs/tree/master/modules/completion/vertico>
+
+[Crafted Emacs Completion Module]
+<https://github.com/SystemCrafters/crafted-emacs/blob/master/modules/crafted-completion.el>
+
+[Prot's Emacs configuration]
+<https://git.sr.ht/~protesilaos/dotfiles/tree/master/item/emacs/.emacs.d/>
+
+[Emacs Completion Explained]
+<https://www.youtube.com/watch?v=fnE0lXoe7Y0>
 
 [Emacs Minibuffer Completions]
 <https://www.youtube.com/watch?v=w9hHMDyF9V4>
@@ -682,8 +714,8 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 <https://www.youtube.com/watch?v=J0OaRy85MOo>
 
 
-10 Contributions
-════════════════
+9 Contributions
+═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a
   copyright assignment to the FSF.
@@ -692,7 +724,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 [GNU ELPA] <http://elpa.gnu.org/packages/vertico.html>
 
 
-11 Problematic completion commands
+10 Problematic completion commands
 ══════════════════════════════════
 
   Vertico is robust in most scenarios. However some completion commands
@@ -701,7 +733,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   other UIs and require minor workarounds.
 
 
-11.1 `org-refile'
+10.1 `org-refile'
 ─────────────────
 
   `org-refile' uses `org-olpath-completing-read' to complete the outline
@@ -739,7 +771,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-11.2 `org-agenda-filter'
+10.2 `org-agenda-filter'
 ────────────────────────
 
   Similar to `org-refile', the `org-agenda-filter' completion function
@@ -752,7 +784,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   would be `+tag<0:10'.
 
 
-11.3 `tmm-menubar'
+10.3 `tmm-menubar'
 ──────────────────
 
   The text menu bar works well with Vertico but always shows a
@@ -767,7 +799,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-11.4 `ffap-menu'
+10.4 `ffap-menu'
 ────────────────
 
   The command `ffap-menu' shows the `*Completions*' buffer by default
@@ -782,7 +814,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-11.5 `completion-table-dynamic'
+10.5 `completion-table-dynamic'
 ───────────────────────────────
 
   Dynamic completion tables (`completion-table-dynamic',
@@ -806,7 +838,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-11.6 Submitting the empty string
+10.6 Submitting the empty string
 ────────────────────────────────
 
   The commands `multi-occur', `auto-insert', `bbdb-create' read multiple
@@ -834,7 +866,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   possible by pressing `RET' only.
 
 
-11.7 Tramp hostname completion
+10.7 Tramp hostname completion
 ──────────────────────────────
 
   In combination with Orderless, hostnames are not made available for

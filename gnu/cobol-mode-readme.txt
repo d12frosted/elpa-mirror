@@ -15,11 +15,11 @@ following to your .emacs:
 
 To automatically load cobol-mode.el upon opening COBOL files, add this:
 (setq auto-mode-alist
-   (append
-     '(("\\.cob\\'" . cobol-mode)
-       ("\\.cbl\\'" . cobol-mode)
-       ("\\.cpy\\'" . cobol-mode))
-    auto-mode-alist))
+      (append
+       '(("\\.cob\\'" . cobol-mode)
+         ("\\.cbl\\'" . cobol-mode)
+         ("\\.cpy\\'" . cobol-mode))
+       auto-mode-alist))
 
 Finally, I strongly suggest installing auto-complete-mode, which makes typing
 long keywords and variable names a thing of the past.  See

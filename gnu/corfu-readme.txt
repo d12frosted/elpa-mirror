@@ -6,55 +6,59 @@
 Table of Contents
 ─────────────────
 
-1. Introduction
-2. Features
-3. Installation and Configuration
+1. Features
+2. Installation and Configuration
 .. 1. Auto completion
 .. 2. Completing in the minibuffer
 .. 3. Completing in the Eshell or Shell
 .. 4. Orderless completion
 .. 5. TAB-and-Go completion
 .. 6. Transfer completion to the minibuffer
-4. Key bindings
-5. Extensions
-6. Complementary packages
-7. Alternatives
-8. Contributions
+3. Key bindings
+4. Extensions
+5. Complementary packages
+6. Alternatives
+7. Contributions
 
 
+Corfu enhances completion at point with a small completion popup. The
+current candidates are shown in a popup below or above the point. Corfu
+is the minimalistic `completion-in-region' counterpart of the [Vertico]
+minibuffer UI.
 
+Corfu is a small package, which relies on the Emacs completion
+facilities and concentrates on providing a polished completion
+UI. Completions are either provided by commands like
+`dabbrev-completion' or by pluggable backends
+(`completion-at-point-functions', Capfs). Most programming language
+major modes implement a Capf. Furthermore the language server packages,
+[Eglot] and [Lsp-mode], use Capfs which talk to the LSP server to
+retrieve the completions. Corfu does not include its own completion
+backends. The Emacs built-in Capfs and the Capfs provided by other
+programming language packages are usually sufficient. A few additional
+Capfs and completion utilities are provided by the [Cape] package.
 
+*NOTE*: Corfu uses child frames to show the popup and falls back to the
+default setting of the `completion-in-region-function' on non-graphical
+displays. If you want to use Corfu in the terminal, install the package
+[corfu-terminal], which provides an alternative overlay-based display.
 
-1 Introduction
-══════════════
+Table of Contents
+─────────────────
 
-  Corfu enhances completion at point with a small completion popup. The
-  current candidates are shown in a popup below or above the
-  point. Corfu is the minimalistic `completion-in-region' counterpart of
-  the [Vertico] minibuffer UI.
-
-  Corfu is a small package, which relies on the Emacs completion
-  facilities and concentrates on providing a polished completion
-  UI. Completions are either provided by commands like
-  `dabbrev-completion' or by pluggable backends
-  (`completion-at-point-functions', Capfs). Most programming language
-  major modes implement a Capf. Furthermore the language server
-  packages, [Eglot] and [Lsp-mode], use Capfs which talk to the LSP
-  server to retrieve the completions. Corfu does not include its own
-  completion backends. The Emacs built-in Capfs and the Capfs provided
-  by other programming language packages are usually sufficient. A few
-  additional Capfs and completion utilities are provided by the [Cape]
-  package.
-
-  *NOTE*: Corfu uses child frames to show the popup and falls back to
-  the default setting of the `completion-in-region-function' on
-  non-graphical displays. If you want to use Corfu in the terminal,
-  install the package [corfu-terminal], which provides an alternative
-  overlay-based display.
-
-  <https://github.com/minad/corfu/blob/screenshots/light.png?raw=true>
-
-  <https://github.com/minad/corfu/blob/screenshots/dark.png?raw=true>
+1. Features
+2. Installation and Configuration
+.. 1. Auto completion
+.. 2. Completing in the minibuffer
+.. 3. Completing in the Eshell or Shell
+.. 4. Orderless completion
+.. 5. TAB-and-Go completion
+.. 6. Transfer completion to the minibuffer
+3. Key bindings
+4. Extensions
+5. Complementary packages
+6. Alternatives
+7. Contributions
 
 
 [Vertico] <https://github.com/minad/vertico>
@@ -68,7 +72,7 @@ Table of Contents
 [corfu-terminal] <https://codeberg.org/akib/emacs-corfu-terminal>
 
 
-2 Features
+1 Features
 ══════════
 
   • Timer-based auto-completions (/off/ by default, set `corfu-auto').
@@ -97,7 +101,7 @@ Table of Contents
 [Orderless] <https://github.com/oantolin/orderless>
 
 
-3 Installation and Configuration
+2 Installation and Configuration
 ════════════════════════════════
 
   Corfu is available from [GNU ELPA], such that it can be installed
@@ -204,11 +208,11 @@ Table of Contents
   enter a wildcard. You may also give the `initials' completion style a
   try.
 
-  See also the [Corfu Wiki] for additional configuration tips. In
-  particular the Lsp-mode configuration is documented in the wiki. For
-  more general documentation read the chapter about completion in the
-  [Emacs manual]. If you want to create your own Capfs, you can find
-  documentation about completion in the [Elisp manual].
+  See also the [Corfu Wiki] and the [Cape manual] for additional Capf
+  configuration tips. The Lsp-mode configuration is documented in the
+  wiki. For more general documentation read the chapter about completion
+  in the [Emacs manual]. If you want to create your own Capfs, you can
+  find documentation about completion in the [Elisp manual].
 
 
 [GNU ELPA] <http://elpa.gnu.org/packages/corfu.html>
@@ -219,13 +223,15 @@ Table of Contents
 
 [Corfu Wiki] <https://github.com/minad/corfu/wiki>
 
+[Cape manual] <https://github.com/minad/cape>
+
 [Emacs manual]
 <https://www.gnu.org/software/emacs/manual/html_node/emacs/Completion.html>
 
 [Elisp manual]
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html>
 
-3.1 Auto completion
+2.1 Auto completion
 ───────────────────
 
   Auto completion is disabled by default, but can be enabled by setting
@@ -273,7 +279,7 @@ Table of Contents
   │        `(orderless-regexp . ,(concat "^" (regexp-quote word)))))
   │ 
   │ (orderless-define-completion-style orderless-fast
-  │   (orderless-dispatch '(orderless-fast-dispatch))
+  │   (orderless-style-dispatchers '(orderless-fast-dispatch))
   │   (orderless-matching-styles '(orderless-literal orderless-regexp)))
   │ 
   │ (setq-local corfu-auto t
@@ -283,7 +289,7 @@ Table of Contents
   └────
 
 
-3.2 Completing in the minibuffer
+2.2 Completing in the minibuffer
 ────────────────────────────────
 
   Corfu can be used for completion in the minibuffer, since it relies on
@@ -321,7 +327,7 @@ Table of Contents
   └────
 
 
-3.3 Completing in the Eshell or Shell
+2.3 Completing in the Eshell or Shell
 ─────────────────────────────────────
 
   When completing in the Eshell I recommend conservative local settings
@@ -355,10 +361,10 @@ Table of Contents
   │ (advice-add #'corfu-insert :after #'corfu-send-shell)
   └────
 
-  Shell completion uses the flexible `pcomplete' mechanism internally,
+  Shell completion uses the flexible `Pcomplete' mechanism internally,
   which allows you to program the completions per shell command. If you
   want to know more, look into this [blog post], which shows how to
-  configure pcomplete for git commands. I recommend the [pcmpl-args]
+  configure Pcomplete for git commands. I recommend the [pcmpl-args]
   package which extends Pcomplete with completion support and helpful
   annotation support for more commands. Similar to the Fish shell,
   pcmpl-args uses man page parsing and –help output parsing to
@@ -367,8 +373,8 @@ Table of Contents
 
   Unfortunately Pcomplete has a few technical issues, which we can work
   around with the [Cape] library (Completion at point extensions). Cape
-  provides wrappers, which sanitize the pcomplete function. Ideally the
-  bugs in pcomplete should be fixed upstream. *For now these two advices
+  provides wrappers, which sanitize the Pcomplete function. Ideally the
+  bugs in Pcomplete should be fixed upstream. *For now these two advices
   are strongly recommended to achieve a sane Eshell experience.*
 
   ┌────
@@ -389,7 +395,7 @@ Table of Contents
 [Cape] <https://github.com/minad/cape>
 
 
-3.4 Orderless completion
+2.4 Orderless completion
 ────────────────────────
 
   [Orderless] is an advanced completion style that supports
@@ -459,7 +465,7 @@ Table of Contents
 [Orderless] <https://github.com/oantolin/orderless>
 
 
-3.5 TAB-and-Go completion
+2.5 TAB-and-Go completion
 ─────────────────────────
 
   You may be interested in configuring Corfu in TAB-and-Go
@@ -489,7 +495,7 @@ Table of Contents
   └────
 
 
-3.6 Transfer completion to the minibuffer
+2.6 Transfer completion to the minibuffer
 ─────────────────────────────────────────
 
   Sometimes it is useful to transfer the Corfu completion session to the
@@ -519,7 +525,7 @@ Table of Contents
 [Embark] <https://github.com/oantolin/embark>
 
 
-4 Key bindings
+3 Key bindings
 ══════════════
 
   Corfu uses a transient keymap `corfu-map' which is active while the
@@ -541,7 +547,7 @@ Table of Contents
   • `keyboard-escape-quit' -> `corfu-reset'
 
 
-5 Extensions
+4 Extensions
 ════════════
 
   We maintain small extension packages to Corfu in this repository in
@@ -578,7 +584,7 @@ Table of Contents
 <https://github.com/minad/corfu/blob/main/extensions/corfu-quick.el>
 
 
-6 Complementary packages
+5 Complementary packages
 ════════════════════════
 
   Corfu works well together with all packages providing code completion
@@ -601,7 +607,7 @@ Table of Contents
 
   • [Cape]: Additional Capf backends and `completion-in-region' commands
     are provided by the [Cape] package. Among others, the package
-    supplies a file path and a dabbrev completion backend. Cape provides
+    supplies a file path and a Dabbrev completion backend. Cape provides
     the `cape-company-to-capf' adapter to reuse Company backends in
     Corfu. Furthermore the function `cape-super-capf' can merge multiple
     Capfs, such that the candidates of multiple Capfs are displayed
@@ -642,7 +648,7 @@ Table of Contents
 [Vertico] <https://github.com/minad/vertico>
 
 
-7 Alternatives
+6 Alternatives
 ══════════════
 
   • [Company]: Company is a widely used and mature completion package,
@@ -668,7 +674,9 @@ Table of Contents
     movement such that you can quickly switch between the completions
     buffer and the minibuffer or the region which is being
     completed. Mct does not support timer-based auto completion, but the
-    integration into Emacs is naturally tight.
+    integration into Emacs is naturally tight. Note that Mct development
+    is currently [discontinued] due to recent changes of the default
+    completion UI on the Emacs master branch.
 
   • [consult-completion-in-region]: The Consult package provides the
     function `consult-completion-in-region' which can be set as
@@ -684,12 +692,15 @@ Table of Contents
 
 [Mct] <https://git.sr.ht/~protesilaos/mct>
 
+[discontinued]
+<https://protesilaos.com/codelog/2022-04-14-emacs-discontinue-mct/>
+
 [consult-completion-in-region] <https://github.com/minad/consult>
 
 [Vertico] <https://github.com/minad/vertico>
 
 
-8 Contributions
+7 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a

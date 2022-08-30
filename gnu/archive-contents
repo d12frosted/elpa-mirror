@@ -401,15 +401,16 @@
 			 ("Clemens Radermacher" . "clemera@posteo.net"))
 			(:keywords "convenience"))])
  (cobol-mode .
-	     [(1 0 0)
+	     [(1 1)
 	      ((cl-lib
 		(0 5)))
-	      "Mode for editing COBOL code" single
-	      ((:url . "http://elpa.gnu.org/packages/cobol-mode.html")
-	       (:keywords "languages")
+	      "Mode for editing COBOL code" tar
+	      ((:keywords "languages")
+	       (:maintainer nil . "emacs-devel@gnu.org")
 	       (:authors
 		("Edward Hart" . "edward.dan.hart@gmail.com"))
-	       (:maintainer "Edward Hart" . "edward.dan.hart@gmail.com"))])
+	       (:url . "https://elpa.gnu.org/packages/cobol-mode.html")
+	       (:commit . "bd7879daa71908616277688ba51d27b60c88b0a2"))])
  (code-cells .
 	     [(0 2)
 	      ((emacs
@@ -542,7 +543,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 26)
+	[(0 27)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -550,7 +551,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "c07b8c168765c350ef4693d1d8cd26be43894872"))])
+	  (:commit . "42f777680ee50fa1328326c7be0c045e9c3ccb69"))])
  (coterm .
 	 [(1 5)
 	  ((emacs
@@ -948,7 +949,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "db182293dbbef6f6611be4d8930da37481b6857a"))])
  (ef-themes .
-	    [(0 3 4)
+	    [(0 4 0)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -957,7 +958,7 @@
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "dc35c4fdbdce3a3656177024e9be708def0122ea"))])
+	      (:commit . "24cf2c89dd3a083ec8c072366098d8bf34f413d5"))])
  (eglot .
 	[(1 8)
 	 ((emacs
@@ -3411,7 +3412,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "86f08fb377e2b8f2df0614c48783bdce347f3758"))])
  (vertico .
-	  [(0 25)
+	  [(0 26)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
@@ -3419,7 +3420,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "c511f874fa0f39e4691ab145b233bbe5b23e4fa2"))])
+	    (:commit . "ae6603c351eb075b7fca0cb31c029817a57b1973"))])
  (vertico-posframe .
 		   [(0 5 4)
 		    ((emacs
