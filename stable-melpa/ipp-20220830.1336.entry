@@ -1,0 +1,13 @@
+(ipp .
+     [(20220830 1336)
+      ((cl-lib
+	(0 5))
+       (emacs
+	(24 1)))
+      "Implementation of the Internet Printing Protocol" single
+      ((:commit . "21d3b3fd5d1e655126ee03dac9d6b46cad9deef6")
+       (:authors
+	("Eric Marsden" . "eric.marsden@risk-engineering.org"))
+       (:maintainer "Eric Marsden" . "eric.marsden@risk-engineering.org")
+       (:keywords "printing" "hardware")
+       (:url . "https://github.com/emarsden/ipp-el"))])

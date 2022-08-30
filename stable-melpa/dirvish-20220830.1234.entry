@@ -1,0 +1,13 @@
+(dirvish .
+	 [(20220830 1234)
+	  ((emacs
+	    (27 1))
+	   (transient
+	    (0 3 7)))
+	  "A modern file manager based on dired mode" tar
+	  ((:commit . "261080ee18459652b87f9af9f7e356e2d1942a8a")
+	   (:authors
+	    ("Alex Lu <https://github.com/alexluigit>"))
+	   (:maintainer "Alex Lu <https://github.com/alexluigit>")
+	   (:keywords "files" "convenience")
+	   (:url . "https://github.com/alexluigit/dirvish"))])

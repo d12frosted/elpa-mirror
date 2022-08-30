@@ -4,10 +4,10 @@ Source:  https://github.com/jkitchin/org-ref.git
 
 Updating /mnt/store/melpa/working/org-ref/
 Checking out origin/HEAD
-Checking out a65e3020759ca695c843965295f43d5f3e4fe6c3
+Checking out f69842ea6bc67f18ac4796bad1414bc476a477e4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-ref/
-  to /tmp/org-refmmITtP/org-ref-20220818.1215
+  to /tmp/org-refqlwFgU/org-ref-20220830.1210
     contrib.el -> contrib.el
     doi-utils.el -> doi-utils.el
     nist-webbook.el -> nist-webbook.el
@@ -42,52 +42,54 @@ Copying files (->) and directories (=>)
     org-ref.org -> org-ref.org
     org-ref.bib -> org-ref.bib
     citeproc => citeproc
-Created org-ref-20220818.1215.tar containing:
-  org-ref-20220818.1215/
-  org-ref-20220818.1215/citeproc/
-  org-ref-20220818.1215/citeproc/csl-locales/
-  org-ref-20220818.1215/citeproc/csl-locales/locales-en-US.xml
-  org-ref-20220818.1215/citeproc/csl-styles/
-  org-ref-20220818.1215/citeproc/csl-styles/apa-5th-edition.csl
-  org-ref-20220818.1215/citeproc/csl-styles/apa-numeric-superscript-brackets.csl
-  org-ref-20220818.1215/citeproc/csl-styles/chicago-author-date-16th-edition.csl
-  org-ref-20220818.1215/citeproc/csl-styles/elsevier-harvard.csl
-  org-ref-20220818.1215/citeproc/csl-styles/elsevier-with-titles.csl
-  org-ref-20220818.1215/contrib.el
-  org-ref-20220818.1215/doi-utils.el
-  org-ref-20220818.1215/nist-webbook.el
-  org-ref-20220818.1215/org-ref-arxiv.el
-  org-ref-20220818.1215/org-ref-bibliography-links.el
-  org-ref-20220818.1215/org-ref-bibtex.el
-  org-ref-20220818.1215/org-ref-citation-links.el
-  org-ref-20220818.1215/org-ref-core.el
-  org-ref-20220818.1215/org-ref-export.el
-  org-ref-20220818.1215/org-ref-glossary.el
-  org-ref-20220818.1215/org-ref-helm.el
-  org-ref-20220818.1215/org-ref-isbn.el
-  org-ref-20220818.1215/org-ref-ivy.el
-  org-ref-20220818.1215/org-ref-label-link.el
-  org-ref-20220818.1215/org-ref-latex.el
-  org-ref-20220818.1215/org-ref-misc-links.el
-  org-ref-20220818.1215/org-ref-natbib-bbl-citeproc.el
-  org-ref-20220818.1215/org-ref-pdf.el
-  org-ref-20220818.1215/org-ref-pgk.el
-  org-ref-20220818.1215/org-ref-pkg.el
-  org-ref-20220818.1215/org-ref-pubmed.el
-  org-ref-20220818.1215/org-ref-ref-links.el
-  org-ref-20220818.1215/org-ref-refproc.el
-  org-ref-20220818.1215/org-ref-sci-id.el
-  org-ref-20220818.1215/org-ref-scifinder.el
-  org-ref-20220818.1215/org-ref-scopus.el
-  org-ref-20220818.1215/org-ref-url-utils.el
-  org-ref-20220818.1215/org-ref-utils.el
-  org-ref-20220818.1215/org-ref-worldcat.el
-  org-ref-20220818.1215/org-ref-wos.el
-  org-ref-20220818.1215/org-ref.bib
-  org-ref-20220818.1215/org-ref.el
-  org-ref-20220818.1215/org-ref.org
-  org-ref-20220818.1215/x2bib.el
-Built org-ref in 4.775s, finished at 2022-08-30T11:27:41+0000
+Created org-ref-20220830.1210.tar containing:
+  org-ref-20220830.1210/
+  org-ref-20220830.1210/citeproc/
+  org-ref-20220830.1210/citeproc/csl-locales/
+  org-ref-20220830.1210/citeproc/csl-locales/locales-en-US.xml
+  org-ref-20220830.1210/citeproc/csl-styles/
+  org-ref-20220830.1210/citeproc/csl-styles/apa-5th-edition.csl
+  org-ref-20220830.1210/citeproc/csl-styles/apa-numeric-superscript-brackets.csl
+  org-ref-20220830.1210/citeproc/csl-styles/chicago-author-date-16th-edition.csl
+  org-ref-20220830.1210/citeproc/csl-styles/elsevier-harvard.csl
+  org-ref-20220830.1210/citeproc/csl-styles/elsevier-with-titles.csl
+  org-ref-20220830.1210/contrib.el
+  org-ref-20220830.1210/doi-utils.el
+  org-ref-20220830.1210/nist-webbook.el
+  org-ref-20220830.1210/org-ref-arxiv.el
+  org-ref-20220830.1210/org-ref-bibliography-links.el
+  org-ref-20220830.1210/org-ref-bibtex.el
+  org-ref-20220830.1210/org-ref-citation-links.el
+  org-ref-20220830.1210/org-ref-core.el
+  org-ref-20220830.1210/org-ref-export.el
+  org-ref-20220830.1210/org-ref-glossary.el
+  org-ref-20220830.1210/org-ref-helm.el
+  org-ref-20220830.1210/org-ref-isbn.el
+  org-ref-20220830.1210/org-ref-ivy.el
+  org-ref-20220830.1210/org-ref-label-link.el
+  org-ref-20220830.1210/org-ref-latex.el
+  org-ref-20220830.1210/org-ref-misc-links.el
+  org-ref-20220830.1210/org-ref-natbib-bbl-citeproc.el
+  org-ref-20220830.1210/org-ref-pdf.el
+  org-ref-20220830.1210/org-ref-pgk.el
+  org-ref-20220830.1210/org-ref-pkg.el
+  org-ref-20220830.1210/org-ref-pubmed.el
+  org-ref-20220830.1210/org-ref-ref-links.el
+  org-ref-20220830.1210/org-ref-refproc.el
+  org-ref-20220830.1210/org-ref-sci-id.el
+  org-ref-20220830.1210/org-ref-scifinder.el
+  org-ref-20220830.1210/org-ref-scopus.el
+  org-ref-20220830.1210/org-ref-url-utils.el
+  org-ref-20220830.1210/org-ref-utils.el
+  org-ref-20220830.1210/org-ref-worldcat.el
+  org-ref-20220830.1210/org-ref-wos.el
+  org-ref-20220830.1210/org-ref.bib
+  org-ref-20220830.1210/org-ref.el
+  org-ref-20220830.1210/org-ref.org
+  org-ref-20220830.1210/x2bib.el
+Built org-ref in 4.452s, finished at 2022-08-30T14:40:35+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  630 Aug 30 11:27 packages/org-ref-20220818.1215.entry
 652K -rw-r--r-- 1 root root 650K Aug 30 11:27 packages/org-ref-20220818.1215.tar
+4.0K -rw-r--r-- 1 root root  630 Aug 30 14:40 packages/org-ref-20220830.1210.entry
+652K -rw-r--r-- 1 root root 650K Aug 30 14:40 packages/org-ref-20220830.1210.tar
