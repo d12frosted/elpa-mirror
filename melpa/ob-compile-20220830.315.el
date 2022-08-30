@@ -4,9 +4,9 @@
 
 ;; Author: Giap Tran <txgvnn@gmail.com>
 ;; Homepage: https://github.com/TxGVNN/ob-compile
-;; Version: 0.1.0
-;; Package-Version: 20220413.228
-;; Package-Commit: eb4fca6dc728cdc1e73d5d7ca8cad0f4cb1ad36a
+;; Version: 0.2
+;; Package-Version: 20220830.315
+;; Package-Commit: 9a16b3dd0f467c091e91944b90a2ca3d646d6617
 ;; Keywords:  literate programming, reproducible, processes
 ;; Package-Requires: ((emacs "24.4"))
 ;; This file is NOT part of GNU Emacs.
@@ -27,7 +27,7 @@
 ;;; Commentary:
 ;; Run compile in org-mode.
 ;; Example:
-;; #+begin_src compile :output (format "compile-%s" (format-time-string "%y%m%d-%H%M%S"))
+;; #+begin_src compile :name uname :output (format "compile-%s" (format-time-string "%y%m%d-%H%M%S"))
 ;; uname -a
 ;; #+end_src
 ;;
@@ -48,15 +48,21 @@
   :group 'ob-compile
   :type 'string)
 
+(defvar-local ob-compile-output nil)
+
 ;;;###autoload
 (defun org-babel-execute:compile (body params)
   "Orgmode Babel COMPILE evaluate function for `BODY' with `PARAMS'."
-  (let* ((file (or (cdr (assoc ':output params)) "")))
+  (let* ((file (or (cdr (assoc ':output params)) nil))
+         (name (or (cdr (assoc ':name params)) "")))
     (let ((compilation-buffer-name-function
            (lambda (_)
-             (format "*ob-compile:%s*" file))))
-      (compile (format "true '%s';\n%s" params body) t))
-    file))
+             (format "*ob-compile:%s*" name))))
+      (compile (format "true '%s';\n%s" params body) t)
+      (when file
+        (with-current-buffer (format "*ob-compile:%s*" name)
+          (setq-local ob-compile-output file))))
+    ""))
 
 (defvar org-babel-default-header-args:compile '())
 
@@ -66,14 +72,12 @@
 
 (defun ob-compile-save-file (buffer _)
   "Save ob-compile BUFFER to file."
-  (if (equal (substring (buffer-name buffer) 0 12) "*ob-compile:")
-      (let* ((bufname (buffer-name buffer))
-             (filename (string-trim (replace-regexp-in-string
-                                     "*ob-compile:\\(.+\\)\\*" "\\1" bufname))))
-        (unless (equal filename "*ob-compile:*")
-          (save-excursion
-            (write-file (format "%s" filename) t)
-            (rename-buffer bufname))))))
+  (let ((bufname (buffer-name buffer)))
+    (with-current-buffer buffer
+      (when ob-compile-output
+        (save-excursion
+          (write-file (format "%s" ob-compile-output) t)
+          (rename-buffer bufname))))))
 
 (provide 'ob-compile)
 

@@ -6,8 +6,8 @@
 ;; Maintainer: Benaiah Mischenko
 ;; Created: Thu September 15 2016
 ;; Version: 0.3
-;; Package-Version: 20160921.1533
-;; Package-Commit: 6bca4f7de63e31839d2542f6c678b79931dec344
+;; Package-Version: 20220830.230
+;; Package-Commit: 27455860fec01ca47bf98b85f093cc24b9852bef
 ;; Package-Requires: ()
 ;; Last-Updated: Thu September 15 2016
 ;;           By: Benaiah Mischenko
@@ -92,7 +92,7 @@
           (mapcar (lambda (entry)
                     (let ((key (aref (car entry) 0))
                           (notes (fsbot-process-notes
-                                  (cdr (car (cdr (aref (car entry) 7)))))))
+                                  (cdr (car (aref (car entry) 8))))))
                       `(,key [,key ,notes])))
                   fsbot-parsed-data)))
     (setq fsbot-data loaded-fsbot-data)

@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/helpful
-;; Package-Version: 20220704.1722
-;; Package-Commit: 94a07d49a80f66f8ebc54a49a4b4f6899a65fbe3
+;; Package-Version: 20220830.456
+;; Package-Commit: 6633d82c6e3c921c486ec284cb6542f33278b605
 ;; Keywords: help, lisp
 ;; Version: 0.20
 ;; Package-Requires: ((emacs "25") (dash "2.18.0") (s "1.11.0") (f "0.20.0") (elisp-refs "1.2"))
@@ -151,6 +151,8 @@ can make Helpful very slow.")
       (setq helpful--callable-p callable-p)
       (setq helpful--start-buffer current-buffer)
       (setq helpful--associated-buffer current-buffer)
+      (setq list-buffers-directory
+        (if (symbolp symbol) (format "%s: %s" (helpful--kind-name symbol callable-p) symbol) "lambda"))
       (if (helpful--primitive-p symbol callable-p)
           (setq-local comment-start "//")
         (setq-local comment-start ";")))
@@ -2558,7 +2560,8 @@ For example, \"(some-func FOO &optional BAR)\"."
       source-sig)
      ;; If that's not set, use the usage specification in the
      ;; docstring, if present.
-     (docstring-sig)
+     (docstring-sig
+      (replace-regexp-in-string "\\\\=\\(['\\`‘’]\\)" "\\1" docstring-sig t))
      (t
       ;; Otherwise, just use the signature from the source code.
       source-sig))))
