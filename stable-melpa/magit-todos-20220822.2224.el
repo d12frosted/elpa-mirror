@@ -4,6 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: http://github.com/alphapapa/magit-todos
+;; Package-Version: 20220822.2224
+;; Package-Commit: c5030cc27c7c1a48db52b0134bf2648a59a43176
 ;; Version: 1.6-pre
 ;; Package-Requires: ((emacs "26.1") (async "1.9.2") (dash "2.13.0") (f "0.17.2") (hl-todo "1.9.0") (magit "2.13.0") (pcre2el "1.8") (s "1.12.0") (transient "0.2.0"))
 ;; Keywords: magit, vc
