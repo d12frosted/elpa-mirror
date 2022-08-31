@@ -1,0 +1,11 @@
+(cern-ldap .
+	   [(20220830 1909)
+	    ((emacs
+	      (27 1)))
+	    "Library to interact with CERN's LDAP servers" single
+	    ((:commit . "1e8ac2029ade5e7755ec76f15a0948a10c955a8f")
+	     (:authors
+	      ("Nacho Barrientos" . "nacho.barrientos@cern.ch"))
+	     (:maintainer "Nacho Barrientos" . "nacho.barrientos@cern.ch")
+	     (:keywords "tools" "convenience")
+	     (:url . "https://git.sr.ht/~nbarrientos/cern-ldap.el"))])

@@ -1,0 +1,14 @@
+(consult-company .
+		 [(20220830 1834)
+		  ((emacs
+		    (27 1))
+		   (company
+		    (0 9))
+		   (consult
+		    (0 9)))
+		  "Consult frontend for company" single
+		  ((:commit . "5d8275bff131ce2aaa678dd46aac345eb4fc8b27")
+		   (:authors
+		    ("mohsin kaleem" . "mohkale@kisara.moe"))
+		   (:maintainer "mohsin kaleem" . "mohkale@kisara.moe")
+		   (:url . "https://github.com/mohkale/consult-company"))])
