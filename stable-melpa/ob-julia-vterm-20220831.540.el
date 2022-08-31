@@ -6,10 +6,10 @@
 ;; Maintainer: Shigeaki Nishina
 ;; Created: October 31, 2020
 ;; URL: https://github.com/shg/ob-julia-vterm.el
-;; Package-Version: 20220708.2223
-;; Package-Commit: e1be8bb074928d628f99402e9c7643bb2bb1dedb
+;; Package-Version: 20220831.540
+;; Package-Commit: 354de54a4e155f6165507f9427043014ae476ca8
 ;; Package-Requires: ((emacs "26.1") (julia-vterm "0.16") (queue "0.2"))
-;; Version: 0.2e
+;; Version: 0.2f
 ;; Keywords: julia, org, outlines, literate programming, reproducible research
 
 ;; This file is not part of GNU Emacs.
@@ -169,29 +169,30 @@ BODY is the contents and PARAMS are header arguments of the code block."
 		(with-current-buffer .buf
 		  (save-excursion
 		    (goto-char .src-block-begin)
-		    (if (and (not (equal .src-block-begin .src-block-end))
-			     (or (eq (org-element-type (org-element-context)) 'src-block)
-				 (eq (org-element-type (org-element-context)) 'inline-src-block)))
-			(let ((result (with-temp-buffer
-					(insert-file-contents .out-file)
-					(buffer-string)))
-			      (result-params (cdr (assq :result-params .params))))
-			  (cond ((member "file" result-params)
-				 (org-redisplay-inline-images))
-				((not (member "none" result-params))
-				 (org-babel-insert-result
-				  (if (ob-julia-vterm-check-long-line result)
-				      "Output suppressed (line too long)"
-				    (org-babel-result-cond result-params
-				      result
-				      (org-babel-reassemble-table
-				       result
-				       (org-babel-pick-name (cdr (assq :colname-names .params))
-							    (cdr (assq :colnames .params)))
-				       (org-babel-pick-name (cdr (assq :rowname-names .params))
-							    (cdr (assq :rownames .params))))))
-				  result-params
-				  (org-babel-get-src-block-info 'light))))))))
+		    (when (and (not (equal .src-block-begin .src-block-end))
+			       (or (eq (org-element-type (org-element-context)) 'src-block)
+				   (eq (org-element-type (org-element-context)) 'inline-src-block)))
+		      (ob-julia-vterm-wait-for-file-change .out-file 10 0.1)
+		      (let ((result (with-temp-buffer
+				      (insert-file-contents .out-file)
+				      (buffer-string)))
+			    (result-params (cdr (assq :result-params .params))))
+			(cond ((member "file" result-params)
+			       (org-redisplay-inline-images))
+			      ((not (member "none" result-params))
+			       (org-babel-insert-result
+				(if (ob-julia-vterm-check-long-line result)
+				    "Output suppressed (line too long)"
+				  (org-babel-result-cond result-params
+				    result
+				    (org-babel-reassemble-table
+				     result
+				     (org-babel-pick-name (cdr (assq :colname-names .params))
+							  (cdr (assq :colnames .params)))
+				     (org-babel-pick-name (cdr (assq :rowname-names .params))
+							  (cdr (assq :rownames .params))))))
+				result-params
+				(org-babel-get-src-block-info 'light))))))))
 		(queue-dequeue ob-julia-vterm-evaluation-queue)
 		(file-notify-rm-watch (cdr (assoc .uuid ob-julia-vterm-evaluation-watches)))
 		(setq ob-julia-vterm-evaluation-watches
@@ -217,6 +218,8 @@ BODY is the contents and PARAMS are header arguments of the code block."
 	(if state "" str)))))
 
 (defun ob-julia-vterm-wait-for-file-change (file sec interval)
+  "Wait up to SEC seconds synchronously until FILE becomes non-empty.
+The file is checked at INTERVAL second intervals while waiting."
   (let ((c 0))
     (while (and (< c (/ sec interval))
 		(= 0 (file-attribute-size (file-attributes file))))

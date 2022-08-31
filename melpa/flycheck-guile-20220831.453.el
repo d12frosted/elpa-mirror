@@ -6,10 +6,10 @@
 ;; Author: Ricardo Wurmus <rekado@elephly.net>
 ;; Maintainer: Andrew Whatson <whatson@gmail.com>
 ;; Version: 0.1
-;; Package-Version: 20220826.955
-;; Package-Commit: e3ab25245b14fdb267c41532f8035f8aff329952
+;; Package-Version: 20220831.453
+;; Package-Commit: e58ceb8b511cd395b9be69f4a1ff85305fbb51c3
 ;; URL: https://github.com/flatwhatson/flycheck-guile
-;; Package-Requires: ((emacs "25.1") (flycheck "0.22") (geiser "0.11"))
+;; Package-Requires: ((emacs "25.1") (flycheck "0.22") (geiser "0.20"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -33,6 +33,10 @@
 ;;; Code:
 
 (require 'flycheck)
+
+(defvar geiser-guile-load-path)
+(defvar geiser-repl-current-project-function)
+(defvar geiser-repl-add-project-paths)
 
 (defgroup flycheck-guile nil
   "GNU Guile support for Flycheck."
@@ -89,12 +93,32 @@ The list of supported warning types can be found by running
 
 (flycheck-def-args-var flycheck-guile-args guile)
 
+(defun flycheck-guile--load-path-args ()
+  "Build the load-path arguments for `guild compile'."
+  (mapcan (lambda (p)
+            (list "-L" p))
+          (append (flycheck-guile--project-path)
+                  geiser-guile-load-path)))
+
+(defun flycheck-guile--project-path ()
+  "Determine project paths from geiser configuration."
+  ;; see `geiser-repl--set-up-load-path'
+  (if-let ((geiser-repl-add-project-paths)
+           (root (funcall geiser-repl-current-project-function)))
+      (mapcar (lambda (p)
+                (expand-file-name p root))
+              (cond ((eq t geiser-repl-add-project-paths)
+                     '("."))
+                    ((listp geiser-repl-add-project-paths)
+                     geiser-repl-add-project-paths)))
+    nil))
+
 (flycheck-define-checker guile
   "A GNU Guile syntax checker using `guild compile'."
   :command ("guild" "compile" "-O0"
             (eval flycheck-guile-args)
             (option-list "-W" flycheck-guile-warnings)
-            (option-list "-L" geiser-guile-load-path list expand-file-name)
+            (eval (flycheck-guile--load-path-args))
             source)
   :predicate
   (lambda ()

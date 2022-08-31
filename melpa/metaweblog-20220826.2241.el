@@ -6,10 +6,10 @@
 
 ;; Author: Puneeth Chaganti <punchagan+org2blog@gmail.com>
 ;; Maintainer: Grant Rettke <grant@wisdomandwonder.com>
-;; Version: 1.1.12
-;; Package-Version: 20220824.148
-;; Package-Commit: b641fbcf33ac2b8a0de7b80536b42ce035428625
-;; Package-Requires: ((emacs "27.1"))
+;; Version: 1.1.13
+;; Package-Version: 20220826.2241
+;; Package-Commit: 635c0ef0d5a5a12acad4b4aee4c1a89f6c1b997a
+;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: comm
 ;; Homepage: https://github.com/org2blog/org2blog
 
@@ -53,7 +53,7 @@
 
 ;;; Constants
 
-(defconst metaweblog-version "1.1.12"
+(defconst metaweblog-version "1.1.13"
   "Current version of metaweblog.el.")
 
 ;;; Deprecations
