@@ -4,10 +4,10 @@ Source:  https://github.com/DamienCassou/libbcel.git
 
 Updating /mnt/store/melpa/working/libbcel/
 Checking out origin/HEAD
-Checking out 1c73379d1462c54125480a79efe6cac1db929857
+Checking out 4d5fd6399a6e758b038ae664adb06c4d9b9c29c8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/libbcel/
-  to /tmp/libbcelV8gqoB/libbcel-20191216.641
+  to /tmp/libbcelDpkwU9/libbcel-20220831.1413
     libbcel-actions.el -> libbcel-actions.el
     libbcel-client.el -> libbcel-client.el
     libbcel-nav.el -> libbcel-nav.el
@@ -15,17 +15,19 @@ Copying files (->) and directories (=>)
     libbcel-structs.el -> libbcel-structs.el
     libbcel-util.el -> libbcel-util.el
     libbcel.el -> libbcel.el
-Created libbcel-20191216.641.tar containing:
-  libbcel-20191216.641/
-  libbcel-20191216.641/libbcel-actions.el
-  libbcel-20191216.641/libbcel-client.el
-  libbcel-20191216.641/libbcel-nav.el
-  libbcel-20191216.641/libbcel-oauth.el
-  libbcel-20191216.641/libbcel-pkg.el
-  libbcel-20191216.641/libbcel-structs.el
-  libbcel-20191216.641/libbcel-util.el
-  libbcel-20191216.641/libbcel.el
-Built libbcel in 3.708s, finished at 2022-08-31T09:26:09+0000
+Created libbcel-20220831.1413.tar containing:
+  libbcel-20220831.1413/
+  libbcel-20220831.1413/libbcel-actions.el
+  libbcel-20220831.1413/libbcel-client.el
+  libbcel-20220831.1413/libbcel-nav.el
+  libbcel-20220831.1413/libbcel-oauth.el
+  libbcel-20220831.1413/libbcel-pkg.el
+  libbcel-20220831.1413/libbcel-structs.el
+  libbcel-20220831.1413/libbcel-util.el
+  libbcel-20220831.1413/libbcel.el
+Built libbcel in 4.046s, finished at 2022-08-31T15:47:14+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 356 Aug 31 09:26 packages/libbcel-20191216.641.entry
- 52K -rw-r--r-- 1 root root 50K Aug 31 09:26 packages/libbcel-20191216.641.tar
+4.0K -rw-r--r-- 1 root root 357 Aug 31 12:33 packages/libbcel-20220831.1123.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 31 12:33 packages/libbcel-20220831.1123.tar
+4.0K -rw-r--r-- 1 root root 357 Aug 31 15:47 packages/libbcel-20220831.1413.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 31 15:47 packages/libbcel-20220831.1413.tar
