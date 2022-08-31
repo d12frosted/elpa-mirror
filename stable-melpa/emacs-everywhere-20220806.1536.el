@@ -7,8 +7,6 @@
 ;; Created: February 06, 2021
 ;; Modified: February 06, 2021
 ;; Version: 0.1.0
-;; Package-Version: 20220806.1536
-;; Package-Commit: a1b16b53c5211607fa0f76c80aebb3a72f645ae1
 ;; Keywords: conenience, frames
 ;; Homepage: https://github.com/tecosaur/emacs-everywhere
 ;; Package-Requires: ((emacs "26.3"))
