@@ -4,8 +4,8 @@
 
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
 ;; Version: 0.4.0
-;; Package-Version: 20220318.1007
-;; Package-Commit: 140a63995ca15d393c7e7003cf0e6edddcd4088c
+;; Package-Version: 20220901.1202
+;; Package-Commit: 30a33cabfdaea2d9b54a040f88cf741ea43738b2
 ;; Package-Requires: ((emacs "26.1"))
 ;; Url: https://visl.sdu.dk/constraint_grammar.html
 ;; Keywords: languages
@@ -460,9 +460,8 @@ CG-mode provides the following specific keyboard key bindings:
   (set (make-local-variable 'defun-prompt-regexp) (concat cg-kw-re "\\(?::[^\n\t ]+\\)[\t ]"))
   (set (make-local-variable 'beginning-of-defun-function) #'cg-beginning-of-defun)
   (set (make-local-variable 'end-of-defun-function) #'cg-end-of-defun)
-  ;; Dabbrev is about as much completion as we can expect for now, ensure it works:
-  (setq-local dabbrev-upcase-means-case-search t)
-  (add-to-list 'completion-at-point-functions 'dabbrev-completion)
+  ;; Completion:
+  (add-to-list 'completion-at-point-functions 'cg-complete-list-set)
   ;; Syntax highlighting:
   (when font-lock-mode
     (setq font-lock-set-defaults nil)
@@ -1249,9 +1248,10 @@ Similarly, `cg-post-pipe' is run on output."
   "Open buffer of grammar rules file."
   (interactive)
   (let ((cg-buffer (find-buffer-visiting cg--file)))
-    (bury-buffer)
+    (if (cdr (window-list))
+        (delete-window)
+      (bury-buffer))
     (let ((cg-window (get-buffer-window cg-buffer)))
-
       (if cg-window
 	  (select-window cg-window)
 	(pop-to-buffer cg-buffer)))))
@@ -1303,6 +1303,14 @@ Similarly, `cg-post-pipe' is run on output."
              (push (match-string-no-properties 1) matches))))
        matches))
    'switch-buffer))
+
+(defun cg-complete-list-set ()
+  "Simple dabbrev-like completion for `completion-at-point-functions'."
+  (let ((bounds (or (bounds-of-thing-at-point 'symbol)
+                    (cons (point) (point)))))
+    (list (car bounds)
+          (cdr bounds)
+          (xref-backend-identifier-completion-table 'cg))))
 
 (cl-defmethod xref-backend-definitions ((_backend (eql cg)) symbol)
   "Find definitions of SYMBOL.

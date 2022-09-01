@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/hammy.el
-;; Package-Version: 20220829.844
-;; Package-Commit: 596878be93535c2dcff4515d4a937c56da2689e8
+;; Package-Version: 20220901.1102
+;; Package-Commit: bd51cfd903d00a3302542dc2a8a17fe8b4d48107
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "28.1") (ts "0.2.2"))
 ;; Keywords: convenience
@@ -44,12 +44,17 @@
 
 ;; TODO: Pausing.
 ;; TODO: Summarize logged interval times.
+;; TODO: Menu bar/clicking for mode line lighter.  See `tab-bar-menu-bar', et al.
 
 ;;;; Requirements
 
 (require 'cl-lib)
 (require 'map)
 (require 'ring)
+
+(eval-when-compile
+  ;; For `org-with-point-at'.
+  (require 'org-macs))
 
 (require 'ts)
 
@@ -272,6 +277,8 @@ each of them; if nil, do nothing."
 
 ;;;; Variables
 
+(defvar org-clock-hd-marker)
+
 (defvar hammy-hammys nil
   "List of defined hammys.
 Define a hammy with `hammy-define'.")
@@ -349,19 +356,26 @@ Called with the hammy, and optionally a message."
     (mapc #'adjust-interval (ring-elements (hammy-intervals hammy)))))
 
 ;;;###autoload
-(defun hammy-start (hammy &optional duration)
+(cl-defun hammy-start (hammy &key duration interval)
   "Start HAMMY and return it.
-If DURATION, set its first interval to last that many seconds."
-  (interactive (list (hammy-complete "Start hammy: " (cl-remove-if #'hammy-timer hammy-hammys))
-                     (cl-typecase current-prefix-arg
-                       (number current-prefix-arg))))
+If DURATION, set its first interval to last that many seconds.
+INTERVAL may be an interval in the hammy to start
+with (interactively, with universal prefix, prompt for the
+interval with completion)."
+  (interactive (let ((hammy (hammy-complete "Start hammy: " (cl-remove-if #'hammy-timer hammy-hammys))))
+                 (list hammy
+                       :duration (cl-typecase current-prefix-arg
+                                   (number current-prefix-arg))
+                       :interval (cl-typecase current-prefix-arg
+                                   (null nil)
+                                   (list (hammy-complete-interval hammy :prompt "Start with interval: "))))))
   (unless (and (= 0 (hammy-cycles hammy))
                (null (hammy-history hammy))
                (null (hammy-interval hammy)))
     (user-error "Hammy already started: %s" (hammy-format hammy)))
   (run-hook-with-args 'hammy-start-hook hammy)
   (hammy-call (hammy-before hammy) hammy)
-  (hammy-next hammy duration :advance t)
+  (hammy-next hammy :duration duration :advance t :interval interval)
   (push hammy hammy-active)
   hammy)
 
@@ -378,15 +392,11 @@ the task should be clocked in)."
   (interactive)
   (call-interactively #'org-clock-in)
   (let ((hammy (call-interactively #'hammy-start)))
-    (setf (alist-get 'org-clock-hd-marker (hammy-etc hammy))
-          ;; `org-clock-out' kills the marker, so we have to copy it
-          ;; for future reference.
-          (copy-marker org-clock-hd-marker))
-    (cl-pushnew #'hammy--org-clock-in (hammy-interval-before (hammy-interval hammy))
-                :test #'equal)
-    (cl-pushnew #'hammy--org-clock-out (hammy-interval-after (hammy-interval hammy))
-                :test #'equal)
-    (cl-pushnew #'hammy--org-clock-out (hammy-stopping hammy) :test #'equal)
+    (cl-macrolet ((pushfn (fn place)
+                          `(cl-pushnew ,fn ,place :test #'equal)))
+      (pushfn #'hammy--org-clock-in (hammy-interval-before (hammy-interval hammy)))
+      (pushfn #'hammy--org-clock-out (hammy-interval-after (hammy-interval hammy)))
+      (pushfn #'hammy--org-clock-out (hammy-stopping hammy)))
     hammy))
 
 (defun hammy-stop (hammy &optional quietly)
@@ -419,13 +429,22 @@ If QUIETLY, don't say so."
     (hammy-reset hammy)
     hammy))
 
-(cl-defun hammy-next (hammy &optional duration &key advance)
+(cl-defun hammy-next (hammy &key duration advance interval)
   "Advance to HAMMY's next interval.
 If DURATION (interactively, with numeric prefix), set the
 interval's duration to DURATION seconds.  If ADVANCE, advance to
 the next interval even if the previous interval has an
-unsatisfied ADVANCE predicate."
-  (interactive (list (hammy-complete "Advance hammy: " hammy-active) nil :advance t))
+unsatisfied ADVANCE predicate.  INTERVAL may be an interval in
+the hammy to advance to (interactively, with universal prefix,
+prompt for the interval with completion)."
+  (interactive (let ((hammy (hammy-complete "Advance hammy: " hammy-active)))
+                 (list hammy
+                       :duration (cl-typecase current-prefix-arg
+                                   (number current-prefix-arg))
+                       :advance t
+                       :interval (cl-typecase current-prefix-arg
+                                   (null nil)
+                                   (list (hammy-complete-interval hammy :prompt "Advance to interval: "))))))
   (when (hammy-timer hammy)
     ;; Cancel any outstanding timer.
     (cancel-timer (hammy-timer hammy))
@@ -457,13 +476,13 @@ unsatisfied ADVANCE predicate."
         (progn
           (hammy-stop hammy 'quietly)
           (run-hook-with-args 'hammy-complete-hook hammy)
-          (hammy-call (hammy-after hammy) hammy)
-          (setf hammy-active (remove hammy hammy-active)))
+          (hammy-call (hammy-after hammy) hammy))
       ;; Hammy not complete: start next interval.
-      (pcase-let* (((cl-struct hammy interval) hammy)
-                   (next-interval (if interval
-                                      (ring-next (hammy-intervals hammy) interval)
-                                    (ring-ref (hammy-intervals hammy) 0)))
+      (pcase-let* (((cl-struct hammy (interval current-interval)) hammy)
+                   (next-interval (or interval
+                                      (if current-interval
+                                          (ring-next (hammy-intervals hammy) current-interval)
+                                        (ring-ref (hammy-intervals hammy) 0))))
                    (next-duration (or duration
                                       ;; This seems a bit awkward, but we want to allow the value to be a
                                       ;; number, a string, or a function that returns a number or string.
@@ -534,12 +553,17 @@ If paused, resume it.  If running, pause it."
     (setf (alist-get 'remaining-time (hammy-etc hammy)) nil))
   hammy)
 
-(defun hammy-view-log ()
-  "Show Hammy log buffer."
-  (interactive)
-  (pop-to-buffer (hammy-log-buffer)))
-
 ;;;; Functions
+
+(cl-defun hammy-complete-interval (hammy &key (prompt "Interval: "))
+  "Return an interval selected in HAMMY with completion.
+PROMPT may be specified."
+  (let* ((intervals (ring-elements (hammy-intervals hammy)))
+         (names (mapcar #'hammy-interval-name intervals))
+         (selected-name (completing-read prompt names nil t)))
+    (cl-find selected-name intervals
+             :test (lambda (name interval)
+                     (equal name (hammy-interval-name interval))))))
 
 (defun hammy-format (hammy &optional message)
   "Return formatted status for HAMMY, optionally with MESSAGE."
@@ -607,12 +631,6 @@ cycles)."
     (cl-loop for (_interval start-time end-time) in intervals
              sum (float-time (time-subtract end-time start-time)))))
 
-(defun hammy-log-buffer ()
-  "Return Hammy log buffer."
-  (with-current-buffer (get-buffer-create hammy-log-buffer-name)
-    (read-only-mode)
-    (current-buffer)))
-
 (defun hammy-complete (prompt hammys)
   "Return one of HAMMYS selected with completion and PROMPT."
   (cl-labels ((describe (hammy)
@@ -632,21 +650,28 @@ cycles)."
   (message "Hammy (%s): %s"
            (hammy-name hammy) message))
 
+(declare-function org-clock-in "org-clock")
 (defun hammy--org-clock-in (hammy)
   "Clock in to HAMMY's Org task."
-  (when-let ((marker (alist-get 'org-clock-hd-marker (hammy-etc hammy))))
-    (org-with-point-at marker
-      (org-clock-in))))
+  (cl-symbol-macrolet ((marker (alist-get 'org-clock-hd-marker (hammy-etc hammy))))
+    (when marker
+      (org-with-point-at marker
+        (org-clock-in))
+      ;; Unset the saved marker, because it will be saved again when
+      ;; clocking out.
+      (setf marker nil))))
 
+(declare-function org-clocking-p "org-clock")
+(declare-function org-clock-out "org-clock")
 (defun hammy--org-clock-out (hammy)
   "Clock out of HAMMY's Org task."
-  (cl-symbol-macrolet ((marker (alist-get 'org-clock-hd-marker (hammy-etc hammy))))
-    (when (and (org-clocking-p)
-               marker
-               (equal org-clock-hd-marker marker))
-      ;; The currently clocked-in task is the one clocked in by this
-      ;; hammy: clock out of it.
-      (org-clock-out))))
+  (when (org-clocking-p)
+    ;; Record the clocked-in task so we can clock back in to it later.
+    ;; `org-clock-out' kills the marker, so we have to copy it for
+    ;; future reference.
+    (setf (alist-get 'org-clock-hd-marker (hammy-etc hammy))
+          (copy-marker org-clock-hd-marker))
+    (org-clock-out)))
 
 ;;;; Mode
 
@@ -712,12 +737,12 @@ cycles)."
                                          (- (hammy-current-duration hammy)
                                             (float-time (time-subtract (current-time)
                                                                        (hammy-current-interval-start-time hammy)))))))
-                         (format "%s%s(%s:%s)"
+                         (format "%s(%s%s:%s)"
+                                 (hammy-name hammy)
                                  (if (hammy-overduep hammy)
                                      (propertize hammy-mode-lighter-overdue
                                                  'face 'hammy-mode-lighter-overdue)
                                    "")
-                                 (hammy-name hammy)
                                  (propertize (hammy-interval-name (hammy-interval hammy))
                                              'face (hammy-interval-face (hammy-interval hammy)))
                                  (concat (if (hammy-overduep hammy)
@@ -726,27 +751,42 @@ cycles)."
                                              ;; interval (i.e. "T-minus...") .
                                              "+" "-")
                                          (ts-human-format-duration remaining 'abbr))))))
-    (let ((hammys (cl-remove-if-not (lambda (hammy)
-                                      (or (hammy-timer hammy)
-                                          (alist-get 'reminder (hammy-etc hammy))))
-                                    hammy-hammys)))
-      (if hammys
-          (concat (propertize hammy-mode-lighter-prefix
-                              'face 'hammy-mode-lighter-prefix-active)
-                  ":"
-                  (mapconcat #'format-hammy hammys ",") " ")
-        ;; No active hammys.
-        (when hammy-mode-always-show-lighter
-          (concat (propertize hammy-mode-lighter-prefix
-                              'face 'hammy-mode-lighter-prefix-inactive)
-                  (if hammy-mode-lighter-suffix-inactive
-                      (concat ":" hammy-mode-lighter-suffix-inactive))
-                  " "))))))
+    (if hammy-active
+        (concat (propertize hammy-mode-lighter-prefix
+                            'face 'hammy-mode-lighter-prefix-active)
+                ":"
+                (mapconcat #'format-hammy hammy-active ",") " ")
+      ;; No active hammys.
+      (when hammy-mode-always-show-lighter
+        (concat (propertize hammy-mode-lighter-prefix
+                            'face 'hammy-mode-lighter-prefix-inactive)
+                (if hammy-mode-lighter-suffix-inactive
+                    (concat ":" hammy-mode-lighter-suffix-inactive))
+                " ")))))
 
 (defun hammy--mode-line-update (&rest _ignore)
   "Force updating of all mode lines when a hammy is active."
   (when hammy-active
     (force-mode-line-update 'all)))
+
+;;;; Log buffer
+
+(define-derived-mode hammy-log-mode read-only-mode "Hammy-Log")
+
+(progn
+  (define-key hammy-log-mode-map "q" #'bury-buffer))
+
+(defun hammy-view-log ()
+  "Show Hammy log buffer."
+  (interactive)
+  (pop-to-buffer (hammy-log-buffer)))
+
+(defun hammy-log-buffer ()
+  "Return Hammy log buffer."
+  (or (get-buffer hammy-log-buffer-name)
+      (with-current-buffer (get-buffer-create hammy-log-buffer-name)
+        (hammy-log-mode)
+        (current-buffer))))
 
 ;;;; Notifications
 
