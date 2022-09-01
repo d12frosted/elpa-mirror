@@ -1,0 +1,12 @@
+(auto-dark .
+	   [(20220901 109)
+	    ((emacs
+	      (24 4)))
+	    "Automatically set the dark-mode theme based on MacOS status" single
+	    ((:commit . "9293593dfd9c4effa8abe855c7569c1f22531983")
+	     (:authors
+	      ("Rahul M. Juliato")
+	      ("Tim Harper <timcharper at gmail dot com>"))
+	     (:maintainer "Rahul M. Juliato")
+	     (:keywords "tools" "unix" "faces")
+	     (:url . "https://github.com/LionyxML/auto-dark-emacs"))])
