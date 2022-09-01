@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `logos' (or `logos.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.4.0,
-released on 2022-06-02.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.5.0,
+released on 2022-09-01.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.5.0-dev.
+Current development target is 1.0.0-dev.
 
 ⁃ Homepage: <https://protesilaos.com/emacs/logos>.
 ⁃ Git repository: <https://git.sr.ht/~protesilaos/logos>.
@@ -32,11 +32,14 @@ Table of Contents
 4. Sample configuration
 5. Extra tweaks
 .. 1. Center the buffer in its window
-.. 2. Automatically reveal Org or Outline subtree
-.. 3. Recenter at the top upon page motion
-.. 4. Use outlines and page breaks
-.. 5. Leverage logos-focus-mode-extra-functions
+.. 2. Make EWW look like the rest of Emacs
+.. 3. Automatically reveal Org or Outline subtree
+.. 4. Recenter at the top upon page motion
+.. 5. Use outlines and page breaks
+.. 6. Leverage logos-focus-mode-extra-functions
 ..... 1. Conditionally toggle org-indent-mode
+..... 2. Disable menu-bar and tool-bar
+.. 7. Update fringe color on theme switch
 6. Acknowledgements
 7. GNU Free Documentation License
 8. Indices
@@ -95,6 +98,12 @@ Table of Contents
   know how to narrow effectively.  Such users may still want to bind it
   to a key.
 
+  For users running Emacs version 28 or higher, Logos defines the
+  `logos-repeat-map' which is activated when `repeat-mode' is enabled.
+  This means that page motions, `C-x ]' and `C-x [', can be repeated by
+  following them up with either `]' or `['.  The repetition stops when
+  another command is invoked.
+
   Logos provides some optional aesthetic tweaks which come into effect
   when the buffer-local `logos-focus-mode' is enabled.  These will hide
   the mode line (`logos-hide-mode-line'), disable the buffer boundary
@@ -105,6 +114,11 @@ Table of Contents
   `olivetti' package is installed (`logos-olivetti'), and hide the
   `fringe' face (`logos-hide-fringe').  All these variables are
   buffer-local.
+
+  Furthermore, the `logos-focus-mode' establishes a bespoke keymap,
+  which can be used to, for example, bind the arrow keys to page
+  motions.  The keymap is `logos-focus-mode-map' and is empty by default
+  (we do not define any keys and trust the user to pick their own).
 
   Logos is the familiar word derived from Greek (watch my presentation
   on philosophy about Cosmos, Logos, and the living universe:
@@ -222,6 +236,9 @@ Table of Contents
   │   (define-key map [remap forward-page] #'logos-forward-page-dwim)
   │   (define-key map [remap backward-page] #'logos-backward-page-dwim)
   │   (define-key map (kbd "<f9>") #'logos-focus-mode))
+  │ 
+  │ ;; Also consider adding keys to `logos-focus-mode-map'.  They will take
+  │ ;; effect when `logos-focus-mode' is enabled.
   └────
 
 
@@ -254,7 +271,41 @@ Table of Contents
   `auto-fill-mode' disabled.
 
 
-5.2 Automatically reveal Org or Outline subtree
+5.2 Make EWW look like the rest of Emacs
+────────────────────────────────────────
+
+  By default, all `M-x eww' buffers use the `shr-max-width' which is set
+  to 120 characters.  This is above the standard value of `fill-column'
+  and thus does not let text flow nicely while using `olivetti' package
+  ([Center the buffer in its window]).
+
+  For a general customization, the user can evaluate this:
+
+  ┌────
+  │ (setq shr-max-width fill-column)
+  └────
+
+  EWW buffers also default to `variable-pitch' typography by default (as
+  opposed to whatever the font family of the `default' face is).  This
+  too can be made consistent with the rest of Emacs:
+
+  ┌────
+  │ (setq shr-use-fonts nil)
+  └────
+
+  [ For font-related customizations check the `fontaine' package on GNU
+    ELPA (by Protesilaos). ]
+
+  Note that all variables with the `shr-' prefix are about the built-in
+  Simple HTML Renderer, so they will affect any other package that
+  relies on them beside EWW (in principle, the aforementioned should not
+  pose any problem).
+
+
+[Center the buffer in its window] See section 5.1
+
+
+5.3 Automatically reveal Org or Outline subtree
 ───────────────────────────────────────────────
 
   The Logos page motions normally jump between positions.  Though Org
@@ -295,7 +346,7 @@ Table of Contents
   └────
 
 
-5.3 Recenter at the top upon page motion
+5.4 Recenter at the top upon page motion
 ────────────────────────────────────────
 
   Page motions normally reposition the point at the centre of the window
@@ -337,7 +388,7 @@ Table of Contents
   └────
 
 
-5.4 Use outlines and page breaks
+5.5 Use outlines and page breaks
 ────────────────────────────────
 
   By default, the page motions only move between the `^L' delimiters.
@@ -403,7 +454,7 @@ Table of Contents
   └────
 
 
-5.5 Leverage logos-focus-mode-extra-functions
+5.6 Leverage logos-focus-mode-extra-functions
 ─────────────────────────────────────────────
 
   The `logos-focus-mode-extra-functions' is a normal hook that runs when
@@ -418,7 +469,7 @@ Table of Contents
   `logos--hide-fringe' provides yet another useful sample.
 
 
-5.5.1 Conditionally toggle org-indent-mode
+5.6.1 Conditionally toggle org-indent-mode
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Here is a snippet that relies on `logos-focus-mode-extra-functions' to
@@ -440,8 +491,94 @@ Table of Contents
   │ (add-hook 'logos-focus-mode-extra-functions #'my-logos-org-indent)
   └────
 
+  The `my-logos-org-indent' variable lets the user opt in and out of
+  this feature, by setting it to t or nil, respectively.  If such a
+  toggle is not needed, the following will suffice:
 
-[Leverage logos-focus-mode-extra-functions] See section 5.5
+  ┌────
+  │ (defun my-logos-org-indent ()
+  │   "Set `my-logos-org-indent' in `logos-focus-mode'."
+  │   ;; Disable `org-indent-mode' when `logos-focus-mode' is enabled and
+  │   ;; restore it when `logos-focus-mode' is disabled.  The
+  │   ;; `logos--mode' function takes care of the technicalities.
+  │   (logos--mode 'org-indent-mode -1))
+  │ 
+  │ (add-hook 'logos-focus-mode-extra-functions #'my-logos-org-indent)
+  └────
+
+
+[Leverage logos-focus-mode-extra-functions] See section 5.6
+
+
+5.6.2 Disable menu-bar and tool-bar
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Continuing with the examples in this section of the manual, this is
+  how to disable the `menu-bar-mode' and `tool-bar-mode' when activating
+  the `logos-focus-mode'.
+
+  ┌────
+  │ ;; Assuming the `menu-bar-mode' is enabled by default...
+  │ (defun my-logos-hide-menu-bar ()
+  │   (logos--mode 'menu-bar-mode -1))
+  │ 
+  │ (add-hook 'logos-focus-mode-extra-functions #'my-logos-hide-menu-bar)
+  │ 
+  │ ;; Assuming the `tool-bar-mode' is enabled by default...
+  │ (defun my-logos-hide-tool-bar ()
+  │   (logos--mode 'tool-bar-mode -1))
+  │ 
+  │ (add-hook 'logos-focus-mode-extra-functions #'my-logos-hide-tool-bar)
+  └────
+
+  If those modes are already disabled, the following have no effect.
+  Otherwise they toggle the bars off while `logos-focus-mode' is enabled
+  and then restore them back on when `logos-focus-mode' is disabled.
+
+
+5.7 Update fringe color on theme switch
+───────────────────────────────────────
+
+  The user option `logos-hide-fringe' does not actually remove the
+  fringe, as that would change the user’s preference for `fringe-mode'.
+  Instead, it remaps its background color to be the same as that of the
+  `default' face.  For example, if the main background is white while
+  the fringe is gray, the fringe will become white as well.
+
+  The problem with this approach is that the color is not automatically
+  updated upon switching to a new theme, such as by toggling between one
+  with a light background to another with a dark one.  The solution is
+  to assign the `logos-update-fringe-in-buffers' function to a hook that
+  is triggered by the theme-loading operation.
+
+  Some themes provide such a hook.  For example, the `modus-themes'
+  package has the `modus-themes-after-load-theme-hook' (the themes
+  `modus-operandi' and `modus-vivendi' are built into Emacs version 28
+  or higher).
+
+  ┌────
+  │ (add-hook 'modus-themes-after-load-theme-hook #'logos-update-fringe-in-buffers)
+  └────
+
+  A user-defined, theme-agnostic setup for such a hook can be configured
+  thus:
+
+  ┌────
+  │ (defvar after-enable-theme-hook nil
+  │   "Normal hook run after enabling a theme.")
+  │ 
+  │ (defun run-after-enable-theme-hook (&rest _args)
+  │   "Run `after-enable-theme-hook'."
+  │   (run-hooks 'after-enable-theme-hook))
+  │ 
+  │ (advice-add 'enable-theme :after #'run-after-enable-theme-hook)
+  └────
+
+  Then use it like this:
+
+  ┌────
+  │ (add-hook 'after-enable-theme-hook #'logos-update-fringe-in-buffers)
+  └────
 
 
 6 Acknowledgements
@@ -453,8 +590,8 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to code or the manual
-        Daniel Mendler, Omar Antolín Camarena, Philip Kaludercic, Remco
-        van ’t Veer, and user Ypot.
+        Daniel Mendler, Lucy McPhail, Omar Antolín Camarena, Philip
+        Kaludercic, Remco van ’t Veer, and user Ypot.
 
   Ideas and/or user feedback
         Daniel Mendler, Ypot.
