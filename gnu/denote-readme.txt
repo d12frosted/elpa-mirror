@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.5.0,
-released on 2022-08-10.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.6.0,
+released on 2022-08-31.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.6.0-dev.
+Current development target is 1.0.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote>
@@ -39,6 +39,7 @@ Table of Contents
 ..... 1. The `denote-prompts' option
 ..... 2. The `denote-templates' option
 ..... 3. Convenience commands for note creation
+..... 4. The `denote-date-prompt-use-org-read-date' option
 .. 2. Create note using Org capture
 .. 3. Maintain separate directories for notes
 4. Renaming files
@@ -205,9 +206,12 @@ Table of Contents
 3.1 Standard note creation
 ──────────────────────────
 
-  The `denote' command will prompt for a title.  Once that is supplied,
-  it will ask for keywords.  The resulting note will have a file name as
-  already explained: [The file naming scheme]
+  The `denote' command will prompt for a title.  If a region is active,
+  the text of the region becomes the default at the minibuffer prompt
+  (meaning that typing `RET' without any input will use the default
+  value).  Once the title is supplied, the `denote' command will then
+  ask for keywords.  The resulting note will have a file name as already
+  explained: [The file naming scheme]
 
   The file type of the new note is determined by the user option
   `denote-file-type' ([Front matter]).
@@ -274,6 +278,8 @@ Table of Contents
     Without the `date' prompt, the `denote' command uses the
     `current-time'.
 
+    [The denote-date-prompt-use-org-read-date option].
+
   • `template': Prompts for a KEY among the `denote-templates'.  The
     value of that KEY is used to populate the new note with content,
     which is added after the front matter ([The denote-templates
@@ -316,6 +322,8 @@ Table of Contents
 
 
 [Standard note creation] See section 3.1
+
+[The denote-date-prompt-use-org-read-date option] See section 3.1.4
 
 [The denote-templates option] See section 3.1.2
 
@@ -427,6 +435,8 @@ Table of Contents
         YEAR-MONTH-DAY notation like `2022-06-30' or that plus the time:
         `2022-06-16 14:30'.
 
+        [The denote-date-prompt-use-org-read-date option].
+
         This is the equivalent to calling `denote' when `denote-prompts'
         is set to `'(date title keywords)'.
 
@@ -462,7 +472,93 @@ Table of Contents
 
 [The denote-prompts option] See section 3.1.1
 
+[The denote-date-prompt-use-org-read-date option] See section 3.1.4
+
 [The denote-templates option] See section 3.1.2
+
+◊ 3.1.3.1 Write your own convenience commands
+
+  The convenience commands we provide only cover some basic use-cases
+  ([Convenience commands for note creation]).  The user may require
+  combinations that are not covered, such as to prompt for a template
+  and for a subdirectory, instead of only one of the two.  To this end,
+  we show how to follow the code we use in Denote to write your own
+  variants of those commands.
+
+  First let’s take a look at the definition of one of those commands.
+  They all look the same, but we use `denote-subdirectory' for this
+  example:
+
+  ┌────
+  │ (defun denote-subdirectory ()
+  │   "Create note while prompting for a subdirectory.
+  │ 
+  │ Available candidates include the value of the variable
+  │ `denote-directory' and any subdirectory thereof.
+  │ 
+  │ This is equivalent to calling `denote' when `denote-prompts' is
+  │ set to '(subdirectory title keywords)."
+  │   (declare (interactive-only t))
+  │   (interactive)
+  │   (let ((denote-prompts '(subdirectory title keywords)))
+  │     (call-interactively #'denote)))
+  └────
+
+  The hyphenated word after `defun' is the name of the function.  It has
+  to be unique.  Then we have the documentation string (or “doc string”)
+  which is for the user’s convenience.
+
+  This function is `interactive', meaning that it can be called via
+  `M-x' or be assigned to a key binding.  Then we have the local binding
+  of the `denote-prompts' to the desired combination (“local” means
+  specific to this function without affecting other contexts).  Lastly,
+  it calls the standard `denote' command interactively, so it uses all
+  the prompts in their specified order.
+
+  Now let’s say we want to have a command that (i) asks for a template
+  and (ii) for a subdirectory ([The denote-templates option]).  All we
+  need to do is tweak the `let' bound value of `denote-prompts' and give
+  our command a unique name:
+
+  ┌────
+  │ ;; Like `denote-subdirectory' but also ask for a template
+  │ (defun denote-subdirectory-with-template ()
+  │   "Create note while also prompting for a template and subdirectory.
+  │ 
+  │ This is equivalent to calling `denote' when `denote-prompts' is
+  │ set to '(template subdirectory title keywords)."
+  │   (declare (interactive-only t))
+  │   (interactive)
+  │   (let ((denote-prompts '(template subdirectory title keywords)))
+  │     (call-interactively #'denote)))
+  └────
+
+  The tweaks to `denote-prompts' determine how the command will behave
+  ([The denote-prompts option]).  Use this paradigm to write your own
+  variants which you can then assign to keys or invoke with `M-x'.
+
+
+  [Convenience commands for note creation] See section 3.1.3
+
+  [The denote-templates option] See section 3.1.2
+
+  [The denote-prompts option] See section 3.1.1
+
+
+3.1.4 The `denote-date-prompt-use-org-read-date' option
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  By default, Denote uses its own simple prompt for date or date+time
+  input ([The denote-prompts option]).  This is done when the
+  `denote-prompts' option includes a `date' symbol and/or when the user
+  invokes the `denote-date' command.
+
+  Users who want to benefit from the more advanced date selection method
+  that is common in interactions with Org mode, can set the user option
+  `denote-date-prompt-use-org-read-date' to a non-nil value.
+
+
+[The denote-prompts option] See section 3.1.1
 
 
 3.2 Create note using Org capture
@@ -950,7 +1046,8 @@ section 5.2
   prompt, as well as the date and unique identifier, which are derived
   automatically.
 
-  This is how it looks for Org mode (when `denote-file-type' is nil):
+  This is how it looks for Org mode (when `denote-file-type' is nil or
+  the `org' symbol):
 
   ┌────
   │ #+title:      This is a sample note
@@ -1035,27 +1132,22 @@ section 5.2
 
   • `denote-yaml-front-matter'
 
-  These variables hold a string with specifiers that are used by the
-  `format' function.  The formatting operation passes four arguments
-  (five in the case of `denote-text-front-matter' as noted in its doc
-  string) which include the values of the given entries.  The doc string
-  of `denote-org-front-matter' describes the technicalities:
+  These variables have a string value with specifiers that are used by
+  the `format' function.  The formatting operation passes four arguments
+  which include the values of the given entries.  If you are an advanced
+  user who wants to edit this variable to affect how front matter is
+  produced, consider using something like `%2$s' to control where the
+  Nth argument is placed.
 
-        The order of the arguments is TITLE, DATE, KEYWORDS, ID.
-        If you are an advanced user who wants to edit this
-        variable to affect how front matter is produced, consider
-        using something like %2$s to control where Nth argument is
-        placed.
+  When editing the value, make sure to:
 
-        Make sure to:
+  1. Not use empty lines inside the front matter block.
 
-        1. Not use empty lines inside the front matter block.
+  2. Insert at least one empty line after the front matter block and do
+     not use any empty line before it.
 
-        2. Insert at least one empty line after the front matter
-           block and do not use any empty line before it.
-
-        These help with consistency and might prove useful if we
-        ever need to operate on the front matter as a whole.
+  These help with consistency and might prove useful if we ever need to
+  operate on the front matter as a whole.
 
   With those granted, below are some examples.  The approach is the same
   for all variables.
@@ -1329,10 +1421,10 @@ section 5.2
   │ 	(window-width . 0.3)))
   └────
 
-  The backlinks’ buffer runs the major-mode `denote-backlink-mode',
+  The backlinks’ buffer runs the major-mode `denote-backlinks-mode',
   which is derived from `special-mode'.  It binds keys to move between
   links with `n' (next) and `p' (previous).  These are stored in the
-  `denote-backlink-mode-map' (use `M-x describe-mode' (`C-h m') in an
+  `denote-backlinks-mode-map' (use `M-x describe-mode' (`C-h m') in an
   unfamiliar buffer to learn more about it).
 
   Note that the backlinking facility uses Emacs’ built-in Xref
@@ -1875,6 +1967,11 @@ section 5.2
   │ (setq denote-sort-keywords t)
   │ (setq denote-file-type nil) ; Org is the default, set others here
   │ (setq denote-prompts '(title keywords))
+  │ 
+  │ 
+  │ ;; Pick dates, where relevant, with Org's advanced interface:
+  │ (setq denote-date-prompt-use-org-read-date t)
+  │ 
   │ 
   │ ;; Read this manual for how to specify `denote-templates'.  We do not
   │ ;; include an example here to avoid potential confusion.
@@ -2423,17 +2520,17 @@ section 5.2
         Protesilaos Stavrou.
 
   Contributions to code or the manual
-        Benjamin Kästner, Colin McLear, Damien Cassou, Jack Baty,
-        Jean-Philippe Gagné Guay, Jürgen Hötzel, Kaushal Modi, Kyle
-        Meyer, Peter Prevos, Philip Kaludercic, Quiliro Ordóñez, Stefan
-        Monnier.
+        Abin Simon, Benjamin Kästner, Colin McLear, Damien Cassou, Eshel
+        Yaron, Jack Baty, Jean-Philippe Gagné Guay, Jürgen Hötzel,
+        Kaushal Modi, Kyle Meyer, Peter Prevos, Philip Kaludercic,
+        Quiliro Ordóñez, Stefan Monnier.
 
   Ideas and/or user feedback
         Abin Simon, Alan Schmitt, Alfredo Borrás, Benjamin Kästner,
         Colin McLear, Damien Cassou, Frank Ehmsen, Hanspeter Gisler,
         Jack Baty, Kaushal Modi, M. Hadi Timachi, Paul van Gelder, Peter
         Prevos, Shreyas Ragavan, Summer Emacs, Sven Seebeck, Taoufik,
-        Ypot, hpgisler, pRot0ta1p.
+        Ypot, atanasj, hpgisler, pRot0ta1p.
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.
