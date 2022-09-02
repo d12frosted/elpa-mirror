@@ -554,16 +554,18 @@
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	  (:commit . "42f777680ee50fa1328326c7be0c045e9c3ccb69"))])
  (coterm .
-	 [(1 5)
+	 [(1 6)
 	  ((emacs
-	    (26 1)))
+	    (26 1))
+	   (compat
+	    (28 1 2 0)))
 	  "Terminal emulation for comint" tar
 	  ((:url . "https://repo.or.cz/emacs-coterm.git")
 	   (:keywords "processes")
 	   (:maintainer "jakanakaevangeli" . "jakanakaevangeli@chiru.no")
 	   (:authors
 	    ("jakanakaevangeli" . "jakanakaevangeli@chiru.no"))
-	   (:commit . "ef4b5fb55304266244c87d2c6aaefab58149da62"))])
+	   (:commit . "d8e1b04cd359d9f27ab7c6dbf8cae90dde834085"))])
  (counsel .
 	  [(0 13 4)
 	   ((emacs
