@@ -5,8 +5,6 @@
 ;; Author: Xu Chunyang <mail@xuchunyang.me>
 ;; Homepage: https://github.com/xuchunyang/repeater
 ;; Package-Requires: ((emacs "24.4"))
-;; Package-Version: 20180418.1212
-;; Package-Commit: 854b874542b186b2408cbc58ad0591fe8eb70b6c
 ;; Keywords: convenience
 ;; Created: Fri, 30 Mar 2018 22:16:53 +0800
 
