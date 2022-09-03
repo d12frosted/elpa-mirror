@@ -724,16 +724,16 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "4d67ff82a01a02b993370bf730bc2520e8cbb88a"))])
  (detached .
-	   [(0 7)
+	   [(0 8 0)
 	    ((emacs
 	      (27 1)))
 	    "A package to launch, and manage, detached processes" tar
 	    ((:url . "https://sr.ht/~niklaseklund/detached.el/")
 	     (:keywords "convenience" "processes")
-	     (:maintainer "Niklas Eklund" . "niklas.eklund@posteo.net")
+	     (:maintainer "detached.el Development" . "~niklaseklund/detached.el@lists.sr.ht")
 	     (:authors
 	      ("Niklas Eklund" . "niklas.eklund@posteo.net"))
-	     (:commit . "8402e7ef4574c719f114b15f89b4aecdddea1e1e"))])
+	     (:commit . "982443b3638e697fbe859faaa95eef502c13339d"))])
  (devdocs .
 	  [(0 5)
 	   ((emacs

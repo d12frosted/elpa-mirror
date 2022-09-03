@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/mina86/auto-dim-other-buffers.el.git
 
 Updating /mnt/store/melpa/working/auto-dim-other-buffers/
-Checking out origin/HEAD
-Checking out 33b5f88b799a17947c266b04ad59462c5aeb4ed7
-Built auto-dim-other-buffers in 6.680s, finished at 2022-09-02T18:35:45+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 23K Sep  2 18:35 packages/auto-dim-other-buffers-20220209.2101.el
-4.0K -rw-r--r-- 1 root root 364 Sep  2 18:35 packages/auto-dim-other-buffers-20220209.2101.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/mina86/auto-dim-other-buffers.el.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/agda/agda.git
 
 Updating /mnt/store/melpa/working/annotation/
-Checking out origin/HEAD
-Checking out aa5e3a127bf17a8c80d947f3c286758a36dadc36
-Built annotation in 18.952s, finished at 2022-09-02T18:34:49+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Sep  2 18:34 packages/annotation-20200914.644.el
-4.0K -rw-r--r-- 1 root root 224 Sep  2 18:34 packages/annotation-20200914.644.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/agda/agda.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
