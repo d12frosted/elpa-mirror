@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/fommil/emacs-intellij-theme.git
 
 Updating /mnt/store/melpa/working/intellij-theme/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/fommil/emacs-intellij-theme.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 1bbfff8e6742d18e9b77ed796f44da3b7bd10606
+Built intellij-theme in 4.406s, finished at 2022-09-03T17:01:36+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Sep  3 17:01 packages/intellij-theme-20171017.1415.el
+4.0K -rw-r--r-- 1 root root 302 Sep  3 17:01 packages/intellij-theme-20171017.1415.entry

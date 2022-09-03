@@ -3,11 +3,19 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sasanidas/company-plisp.git
 
 Updating /mnt/store/melpa/working/company-plisp/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/sasanidas/company-plisp.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 0e6941e1832faafb2176238339667edd482acd95
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-plisp/
+  to /tmp/company-plispUkkmdR/company-plisp-20200531.1927
+    company-plisp.el -> company-plisp.el
+    company-plisp.l -> company-plisp.l
+Created company-plisp-20200531.1927.tar containing:
+  company-plisp-20200531.1927/
+  company-plisp-20200531.1927/company-plisp-pkg.el
+  company-plisp-20200531.1927/company-plisp.el
+  company-plisp-20200531.1927/company-plisp.l
+Built company-plisp in 3.993s, finished at 2022-09-03T19:48:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 488 Sep  3 19:48 packages/company-plisp-20200531.1927.entry
+ 12K -rw-r--r-- 1 root root 10K Sep  3 19:48 packages/company-plisp-20200531.1927.tar

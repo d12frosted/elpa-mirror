@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/shackra/flymake-golangci.git
 
 Updating /mnt/store/melpa/working/flymake-golangci/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/shackra/flymake-golangci.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out dfc31a1a6ae3f087b49fe6f5f21b3866780aa91c
+Built flymake-golangci in 3.832s, finished at 2022-09-03T20:02:38+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Sep  3 20:02 packages/flymake-golangci-20191028.1927.el
+4.0K -rw-r--r-- 1 root root  464 Sep  3 20:02 packages/flymake-golangci-20191028.1927.entry

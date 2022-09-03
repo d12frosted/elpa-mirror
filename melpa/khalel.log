@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/hperrey/khalel.git
 
 Updating /mnt/store/melpa/working/khalel/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/hperrey/khalel.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 313f74b17580c2a55f5c068e1bda17821b50c31e
+Built khalel in 5.068s, finished at 2022-09-03T17:04:32+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Sep  3 17:04 packages/khalel-20211114.1233.el
+4.0K -rw-r--r-- 1 root root 385 Sep  3 17:04 packages/khalel-20211114.1233.entry

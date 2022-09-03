@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/vancan1ty/emacs-backward-forward.git
 
 Updating /mnt/store/melpa/working/backward-forward/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/vancan1ty/emacs-backward-forward.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 58489957a62a0da25dfb5df902624d2548d800b4
+Built backward-forward in 4.355s, finished at 2022-09-03T19:43:07+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Sep  3 19:43 packages/backward-forward-20161229.550.el
+4.0K -rw-r--r-- 1 root root 473 Sep  3 19:43 packages/backward-forward-20161229.550.entry

@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/git-assembler-mode.el.git
 
 Updating /mnt/store/melpa/working/git-assembler-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/wavexx/git-assembler-mode.el.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 1243bdc1a9cdc79802ece05c90731ee14e4f92c9
+Built git-assembler-mode in 3.830s, finished at 2022-09-03T20:04:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.3K Sep  3 20:04 packages/git-assembler-mode-20210207.1545.el
+4.0K -rw-r--r-- 1 root root  451 Sep  3 20:04 packages/git-assembler-mode-20210207.1545.entry
