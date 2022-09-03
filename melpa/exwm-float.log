@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mtekman/exwm-float.el.git
 
 Updating /mnt/store/melpa/working/exwm-float/
-Checking out origin/HEAD
-Checking out 047c83aa6b54bfb6ca8cac4d3ea18542611cef77
-Built exwm-float in 3.957s, finished at 2022-09-03T07:33:45+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 28K Sep  3 07:33 packages/exwm-float-20210207.2035.el
-4.0K -rw-r--r-- 1 root root 462 Sep  3 07:33 packages/exwm-float-20210207.2035.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/mtekman/exwm-float.el.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

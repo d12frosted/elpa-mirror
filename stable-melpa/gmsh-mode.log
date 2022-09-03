@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/matsievskiysv/gmsh-mode.git
 
 Updating /mnt/store/melpa/working/gmsh-mode/
-Checking out origin/HEAD
-Checking out 2b7c573f378f7e9210400115d4d9dfd879f8a4ad
-Built gmsh-mode in 3.286s, finished at 2022-09-03T07:39:35+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Sep  3 07:39 packages/gmsh-mode-20211204.826.el
-4.0K -rw-r--r-- 1 root root 358 Sep  3 07:39 packages/gmsh-mode-20211204.826.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/matsievskiysv/gmsh-mode.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

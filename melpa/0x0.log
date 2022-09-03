@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/willvaughn/emacs-0x0.git
 
 Updating /mnt/store/melpa/working/0x0/
-Checking out origin/HEAD
-Checking out ad9f84e6d39c620da381313b160667864a702fd6
-Built 0x0 in 3.911s, finished at 2022-09-03T07:12:57+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Sep  3 07:12 packages/0x0-20210701.839.el
-4.0K -rw-r--r-- 1 root root 349 Sep  3 07:12 packages/0x0-20210701.839.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/willvaughn/emacs-0x0.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

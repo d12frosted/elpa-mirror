@@ -1,0 +1,10 @@
+(x509-mode .
+	   [(20220903 718)
+	    ((emacs
+	      (25 1)))
+	    "View certificates, CRLs and keys using OpenSSL" tar
+	    ((:commit . "ce1bce34eaf2c8c21ac294195e92a6475ead714e")
+	     (:authors
+	      ("Fredrik Axelsson" . "f.axelsson@gmai.com"))
+	     (:maintainer "Fredrik Axelsson" . "f.axelsson@gmai.com")
+	     (:url . "https://github.com/jobbflykt/x509-mode"))])

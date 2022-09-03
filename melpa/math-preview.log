@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/matsievskiysv/math-preview.git
 
 Updating /mnt/store/melpa/working/math-preview/
-Checking out origin/HEAD
-Checking out dd41b03c64eca324558e6139699cacccfdd0efd2
-Built math-preview in 5.341s, finished at 2022-09-03T07:53:17+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 46K Sep  3 07:53 packages/math-preview-20220830.1740.el
-4.0K -rw-r--r-- 1 root root 402 Sep  3 07:53 packages/math-preview-20220830.1740.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/matsievskiysv/math-preview.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

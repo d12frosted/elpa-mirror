@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/slotThe/change-env.git
 
 Updating /mnt/store/melpa/working/latex-change-env/
-Checking out origin/HEAD
-Checking out 4e6f75f678b207b3bb5031c8b2e31f8d577df445
-Built latex-change-env in 3.667s, finished at 2022-09-03T07:50:02+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Sep  3 07:50 packages/latex-change-env-20220710.933.el
-4.0K -rw-r--r-- 1 root root 447 Sep  3 07:50 packages/latex-change-env-20220710.933.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/slotThe/change-env.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

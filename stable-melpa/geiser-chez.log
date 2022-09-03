@@ -3,22 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/chez.git
 
 Updating /mnt/store/melpa/working/geiser-chez/
-Checking out origin/HEAD
-Checking out 48427d4aecc6fed751d266673f1ce2ad57ddbcfc
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/geiser-chez/
-  to /tmp/geiser-chez2KwiYh/geiser-chez-20211216.2332
-    geiser-chez.el -> geiser-chez.el
-    src/geiser => src/geiser
-Created geiser-chez-20211216.2332.tar containing:
-  geiser-chez-20211216.2332/
-  geiser-chez-20211216.2332/geiser-chez-pkg.el
-  geiser-chez-20211216.2332/geiser-chez.el
-  geiser-chez-20211216.2332/src/
-  geiser-chez-20211216.2332/src/geiser/
-  geiser-chez-20211216.2332/src/geiser/geiser.ss
-  geiser-chez-20211216.2332/src/geiser/test.ss
-Built geiser-chez in 3.471s, finished at 2022-09-03T07:38:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 444 Sep  3 07:38 packages/geiser-chez-20211216.2332.entry
- 32K -rw-r--r-- 1 root root 30K Sep  3 07:38 packages/geiser-chez-20211216.2332.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/emacs-geiser/chez.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/OlMon/consult-flyspell.git
 
 Updating /mnt/store/melpa/working/consult-flyspell/
-Checking out origin/HEAD
-Checking out 396def174495cc77413e2065ef79658a02490dad
-Built consult-flyspell in 4.548s, finished at 2022-09-03T07:22:27+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Sep  3 07:22 packages/consult-flyspell-20220419.2044.el
-4.0K -rw-r--r-- 1 root root  386 Sep  3 07:22 packages/consult-flyspell-20220419.2044.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/OlMon/consult-flyspell.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/xuhdev/dired-quick-sort.git
 
 Updating /mnt/store/melpa/working/dired-quick-sort/
-Checking out origin/HEAD
-Checking out 69b06f306a5fc2b38e707bae3ff1e35db2b39b6b
-Built dired-quick-sort in 3.203s, finished at 2022-09-03T07:26:14+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Sep  3 07:26 packages/dired-quick-sort-20201221.403.el
-4.0K -rw-r--r-- 1 root root 457 Sep  3 07:26 packages/dired-quick-sort-20201221.403.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/xuhdev/dired-quick-sort.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

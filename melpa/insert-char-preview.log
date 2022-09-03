@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/matsievskiysv/insert-char-preview.git
 
 Updating /mnt/store/melpa/working/insert-char-preview/
-Checking out origin/HEAD
-Checking out 8f13262ebcb3f271f1d188584d04ca6d87214111
-Built insert-char-preview in 4.206s, finished at 2022-09-03T07:46:33+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Sep  3 07:46 packages/insert-char-preview-20201023.2108.el
-4.0K -rw-r--r-- 1 root root  373 Sep  3 07:46 packages/insert-char-preview-20201023.2108.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/matsievskiysv/insert-char-preview.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

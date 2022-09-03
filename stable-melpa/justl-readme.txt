@@ -9,7 +9,7 @@ the directory where the justfile is present should be enough.
 
 Alternatively, if you want to just execute a recipe, call
 
-M-x justl-execute-recipe-in-dir
+M-x justl-exec-recipe-in-dir
 
 Shortcuts:
 

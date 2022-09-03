@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/olymk2/emacs-digitalocean-helm.git
 
 Updating /mnt/store/melpa/working/digitalocean-helm/
-Checking out origin/HEAD
-Checking out b125c9882eded7d73ec109d152b26625f333440b
-Built digitalocean-helm in 4.042s, finished at 2022-09-03T07:25:51+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.1K Sep  3 07:25 packages/digitalocean-helm-20180610.746.el
-4.0K -rw-r--r-- 1 root root  492 Sep  3 07:25 packages/digitalocean-helm-20180610.746.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/olymk2/emacs-digitalocean-helm.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

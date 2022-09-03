@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/flexw/mutt-mode.git
 
 Updating /mnt/store/melpa/working/mutt-mode/
-Checking out origin/HEAD
-Checking out 1d495de49e6f536459b00d5396a2f5ce5ad4757b
-Built mutt-mode in 3.220s, finished at 2022-09-03T07:55:48+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Sep  3 07:55 packages/mutt-mode-20191102.2330.el
-4.0K -rw-r--r-- 1 root root 405 Sep  3 07:55 packages/mutt-mode-20191102.2330.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/flexw/mutt-mode.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
