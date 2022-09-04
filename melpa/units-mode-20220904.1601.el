@@ -5,8 +5,8 @@
 ;; Author: Gaurav Atreya <allmanpride@gmail.com>
 ;; Maintainer:
 ;; URL: https://github.com/Atreyagaurav/units-mode
-;; Package-Version: 20220904.401
-;; Package-Commit: 22cfd1a9e4264eb4b95b0ef58aaa08cae862e924
+;; Package-Version: 20220904.1601
+;; Package-Commit: 6e19d631a02fd6fc6e8646b332b429ba3e4b2f1c
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 ;; Homepage: https://github.com/Atreyagaurav/units-mode
@@ -49,8 +49,9 @@
   "Extra args for user to add to units command."
   :group 'units :type 'string)
 
-(defvar units-insert-separator " = "
-  "Separator to insert before inserting the `units' outputs.")
+(defcustom units-insert-separator " = "
+  "Separator to insert before inserting the `units' outputs."
+  :group 'units :type 'string)
 
 (defun units-command (args)
   "Run the units command with ARGS and return the output."
@@ -126,7 +127,6 @@
 
 (defun units-reduce (value)
   "Reduce the VALUE to standard units."
-  (interactive "r")
   (message "%s" (units-command
 		 (format "\"%s\"" value))))
 

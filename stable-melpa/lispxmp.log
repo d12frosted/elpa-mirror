@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/rubikitch/lispxmp.git
 
 Updating /mnt/store/melpa/working/lispxmp/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/rubikitch/lispxmp.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7ad077b4ee91ce8a42f84eeddb9fc7ea4eac7814
+Built lispxmp in 3.045s, finished at 2022-09-04T17:50:58+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Sep  4 17:50 packages/lispxmp-20170926.23.el
+4.0K -rw-r--r-- 1 root root 373 Sep  4 17:50 packages/lispxmp-20170926.23.entry

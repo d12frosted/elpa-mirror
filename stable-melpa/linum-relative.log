@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/coldnew/linum-relative.git
 
 Updating /mnt/store/melpa/working/linum-relative/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 503 curl 22 The requested URL returned error: 503
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out c74a6981b688a5e1e6b8e0809363963ff558ce4d
+Built linum-relative in 3.195s, finished at 2022-09-04T17:50:53+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Sep  4 17:50 packages/linum-relative-20180124.1047.el
+4.0K -rw-r--r-- 1 root root 350 Sep  4 17:50 packages/linum-relative-20180124.1047.entry

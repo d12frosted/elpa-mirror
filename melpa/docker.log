@@ -4,10 +4,10 @@ Source:  https://github.com/Silex/docker.el.git
 
 Updating /mnt/store/melpa/working/docker/
 Checking out origin/HEAD
-Checking out c74d87818b8b8c6f925ed2cbda941157b06ebaad
+Checking out 670b7c346ba562614c27b68c04723af784978c15
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker/
-  to /tmp/dockeriURwpO/docker-20220629.527
+  to /tmp/docker9CnGGJ/docker-20220904.1648
     docker-compose.el -> docker-compose.el
     docker-container.el -> docker-container.el
     docker-core.el -> docker-core.el
@@ -19,21 +19,23 @@ Copying files (->) and directories (=>)
     docker-utils.el -> docker-utils.el
     docker-volume.el -> docker-volume.el
     docker.el -> docker.el
-Created docker-20220629.527.tar containing:
-  docker-20220629.527/
-  docker-20220629.527/docker-compose.el
-  docker-20220629.527/docker-container.el
-  docker-20220629.527/docker-core.el
-  docker-20220629.527/docker-faces.el
-  docker-20220629.527/docker-group.el
-  docker-20220629.527/docker-image.el
-  docker-20220629.527/docker-network.el
-  docker-20220629.527/docker-pkg.el
-  docker-20220629.527/docker-process.el
-  docker-20220629.527/docker-utils.el
-  docker-20220629.527/docker-volume.el
-  docker-20220629.527/docker.el
-Built docker in 4.966s, finished at 2022-09-04T14:22:49+0000
+Created docker-20220904.1648.tar containing:
+  docker-20220904.1648/
+  docker-20220904.1648/docker-compose.el
+  docker-20220904.1648/docker-container.el
+  docker-20220904.1648/docker-core.el
+  docker-20220904.1648/docker-faces.el
+  docker-20220904.1648/docker-group.el
+  docker-20220904.1648/docker-image.el
+  docker-20220904.1648/docker-network.el
+  docker-20220904.1648/docker-pkg.el
+  docker-20220904.1648/docker-process.el
+  docker-20220904.1648/docker-utils.el
+  docker-20220904.1648/docker-volume.el
+  docker-20220904.1648/docker.el
+Built docker in 5.151s, finished at 2022-09-04T17:28:36+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  505 Sep  4 14:22 packages/docker-20220629.527.entry
 100K -rw-r--r-- 1 root root 100K Sep  4 14:22 packages/docker-20220629.527.tar
+4.0K -rw-r--r-- 1 root root  506 Sep  4 17:28 packages/docker-20220904.1648.entry
+100K -rw-r--r-- 1 root root 100K Sep  4 17:28 packages/docker-20220904.1648.tar
