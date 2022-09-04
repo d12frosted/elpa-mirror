@@ -6,8 +6,8 @@
 ;;         Marshall T. Vandegrift <llasram@gmail.com>
 ;; Maintainer: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://github.com/yoshiki/yaml-mode
-;; Package-Version: 20220104.1503
-;; Package-Commit: a79d2a7b9281f8c56f461d717b1ba40fc58e22fd
+;; Package-Version: 20220903.1821
+;; Package-Commit: 9969207f60b69e42c573a63764faeb9caaccb2bf
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: data yaml
 ;; Version: 0.0.15
@@ -308,8 +308,8 @@ artificially limited to the value of
   (if (eolp) (goto-char (1+ (point))))
   (unless (or (eobp) (>= (point) bound))
     (let ((begin (point))
-          (end (min (1+ (point-at-eol)) bound)))
-      (goto-char (point-at-bol))
+          (end (min (1+ (line-end-position)) bound)))
+      (goto-char (line-beginning-position))
       (while (and (looking-at yaml-blank-line-re)
                   (not (bobp)))
         (forward-line -1))
@@ -428,7 +428,7 @@ margin."
 otherwise do nothing."
   (interactive)
   (save-excursion
-    (goto-char (point-at-bol))
+    (goto-char (line-beginning-position))
     (while (and (looking-at-p yaml-blank-line-re) (not (bobp)))
       (forward-line -1))
     (let ((nlines yaml-block-literal-search-lines)

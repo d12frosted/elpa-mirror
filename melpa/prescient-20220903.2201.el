@@ -5,8 +5,8 @@
 ;; Author: Radian LLC <contact+prescient@radian.codes>
 ;; Homepage: https://github.com/raxod502/prescient.el
 ;; Keywords: extensions
-;; Package-Version: 20220601.1652
-;; Package-Commit: 07d61b7779c4cca3009390383e7f98a55de7e17e
+;; Package-Version: 20220903.2201
+;; Package-Commit: 32aa2424cadb970e9adbaddb898ba43f3437530c
 ;; Created: 7 Aug 2017
 ;; Package-Requires: ((emacs "25.1"))
 ;; SPDX-License-Identifier: MIT
@@ -348,6 +348,11 @@ This is the same as `char-fold-to-regexp' but it works around
 https://github.com/raxod502/prescient.el/issues/71. The issue
 should really be fixed upstream in Emacs, but it looks like that
 is not happening anytime soon."
+  ;; This variable apparently isn't always loaded when calling
+  ;; `char-fold-to-regexp'. If it isn't, then we get an error about
+  ;; trying to set the constant `nil'.
+  (unless (boundp 'char-fold-table)
+    (require 'char-fold))
   (let ((regexp (char-fold-to-regexp string)))
     (condition-case _
         (prog1 regexp

@@ -4,8 +4,8 @@
 
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
 ;; URL: https://github.com/abo-abo/orca
-;; Package-Version: 20210828.1639
-;; Package-Commit: 47c03af0c1df2b679d800f3708d675a4c2a3e722
+;; Package-Version: 20220828.4
+;; Package-Commit: 0687f416a5573f63b691d384454f5a793266ed97
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3") (zoutline "0.1.0"))
 ;; Keywords: org, convenience
@@ -33,6 +33,8 @@
 ;;; Code:
 (require 'org-protocol)
 (require 'org-capture)
+(require 'zoutline)
+(require 'url-parse)
 
 ;;* Org config
 ;; In the Firefox extension https://github.com/sprig/org-capture-extension:
@@ -211,8 +213,8 @@ Try to remove superfluous information, like the website title."
   (let* ((link (caar org-stored-links))
          (default-directory org-directory)
          (old-links
-          (counsel--sl
-           (format "rg -Fn '[%s]'" link))))
+          (split-string (shell-command-to-string
+                         (format "rg -Fn '[%s]'" link)) "\n" t)))
     (if old-links
         (let ((old-link (car old-links)))
           (if (string-match "^\\(.*\\):\\([0-9]+\\):\\(.*\\)$" old-link)

@@ -4,6 +4,8 @@
 
 ;; Author: Takashi Masuda <masutaka.net@gmail.com>
 ;; URL: https://github.com/masutaka/emacs-helm-qiita
+;; Package-Version: 20190526.1359
+;; Package-Commit: 5f82010c595f8e122aa3f68148ba8d8ccb1333d8
 ;; Version: 1.1.3
 ;; Package-Requires: ((emacs "24") (helm "2.8.2"))
 

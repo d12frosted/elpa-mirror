@@ -5,8 +5,8 @@
 ;; Author: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; Maintainer: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; URL: <https://github.com/saf-dmitry/taskpaper-mode>
-;; Package-Version: 20220830.938
-;; Package-Commit: 9f7c512b8bfdc9d5d7a39b65f8ae169f363591c4
+;; Package-Version: 20220903.1946
+;; Package-Commit: 89f1afc63b3e4a264d547825477d5aaac12552c9
 ;; Keywords: outlines, notetaking, task management, productivity, taskpaper
 
 ;; This file is not part of GNU Emacs.
@@ -1175,8 +1175,8 @@ is essential."
          deactivate-mark buffer-file-name buffer-file-truename)
     (remove-text-properties
      begin end
-     '(display t mouse-face t keymap t
-               help-echo t invisible t taskpaper-syntax t))))
+     '(display t mouse-face t keymap t line-height t
+       help-echo t invisible t taskpaper-syntax t))))
 
 (defun taskpaper-toggle-markup-hiding ()
   "Toggle the display or hiding of inline markup."
