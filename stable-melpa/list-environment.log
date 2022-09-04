@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/dgtized/list-environment.el.git
 
 Updating /mnt/store/melpa/working/list-environment/
-Checking out origin/HEAD
-Checking out 0a72a5a9c1abc090b25202a0387e3f766994b053
-Built list-environment in 3.355s, finished at 2022-09-03T23:24:57+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.3K Sep  3 23:24 packages/list-environment-20210930.1439.el
-4.0K -rw-r--r-- 1 root root  337 Sep  3 23:24 packages/list-environment-20210930.1439.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/dgtized/list-environment.el.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

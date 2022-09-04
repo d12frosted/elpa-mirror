@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/Lindydancer/lisp-extra-font-lock.git
 
 Updating /mnt/store/melpa/working/lisp-extra-font-lock/
-Checking out origin/HEAD
-Checking out 4605eccbe1a7fcbd3cacf5b71249435413b4db4f
-Built lisp-extra-font-lock in 3.205s, finished at 2022-09-03T23:24:53+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 21K Sep  3 23:24 packages/lisp-extra-font-lock-20181008.1921.el
-4.0K -rw-r--r-- 1 root root 357 Sep  3 23:24 packages/lisp-extra-font-lock-20181008.1921.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/Lindydancer/lisp-extra-font-lock.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -14,7 +14,3 @@ assist with theme building, here are a few highlights...
   - `autothemer-insert-color'
 - Colorize/font-lock palette color names in the buffer
   - `autothemer-colorize'  (requires `rainbow-mode' during development.)
-
-
-Note in the function reference, the fucntion prefix `autothemer--' indicates internal
-functions.

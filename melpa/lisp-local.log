@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/lispunion/emacs-lisp-local.git
 
 Updating /mnt/store/melpa/working/lisp-local/
-Checking out origin/HEAD
-Checking out 22e221c9330d2b5dc07e8b2caa34c83ac7c20b0d
-Built lisp-local in 3.187s, finished at 2022-09-03T23:24:53+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.7K Sep  3 23:24 packages/lisp-local-20210605.1347.el
-4.0K -rw-r--r-- 1 root root  416 Sep  3 23:24 packages/lisp-local-20210605.1347.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/lispunion/emacs-lisp-local.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

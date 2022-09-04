@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/DarwinAwardWinner/mac-pseudo-daemon.git
 
 Updating /mnt/store/melpa/working/mac-pseudo-daemon/
-Checking out origin/HEAD
-Checking out 564b006835facc4a8df247d8a47ab1030d7e7beb
-Built mac-pseudo-daemon in 3.046s, finished at 2022-09-03T23:26:13+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.0K Sep  3 23:26 packages/mac-pseudo-daemon-20200215.513.el
-4.0K -rw-r--r-- 1 root root  399 Sep  3 23:26 packages/mac-pseudo-daemon-20200215.513.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/DarwinAwardWinner/mac-pseudo-daemon.git/': Empty reply from server
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
