@@ -7,8 +7,8 @@
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;;
 ;; URL: https://github.com/jasonm23/autothemer
-;; Package-Version: 20220904.1401
-;; Package-Commit: 64d855aee8b0a98183ac3cb2ec70857447dd6497
+;; Package-Version: 20220905.333
+;; Package-Commit: 5c878d088a39c1ba8d45d38ade4d8c5a5d8c65e4
 ;; Version: 0.2.12
 ;; Package-Requires: ((dash "2.10.0") (emacs "26.1"))
 ;;
@@ -317,18 +317,13 @@ Pad with nil if necessary."
 (defun autothemer--replace-nil-by-precursor(palette-row)
   "Replace nil colors in PALETTE-ROW with their precursor.
 
-PALETTE-ROW is of the form `(name color [color ...])'
-
-Where  the first `color' must be non nil.
-
-Any subsequent nil color will be replaced by the previous value.
+PALETTE-ROW is of the form `(name color [color ...])' Where the
+first `color' must be non nil. Any subsequent nil color will be
+replaced by the previous value.
 
 For example:
-
      (\"red-foo\" \"#FF0000\" nil)
-
 Will become:
-
      (\"red-foo\" \"#FF0000\" \"#FF0000\")"
   (cl-assert (car palette-row))
   (let* ((color-name (car palette-row))
