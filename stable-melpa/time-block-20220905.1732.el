@@ -2,9 +2,9 @@
 
 ;; Author: Samuel W. Flint <swflint@flintfam.org>
 ;; URL: https://git.sr.ht/~swflint/time-block
-;; Package-Version: 20220821.1431
-;; Package-Commit: 4ac663b5196567326b82fe76c9930c116bed5596
-;; Version: 1.0.0
+;; Package-Version: 20220905.1732
+;; Package-Commit: f6daeb2084af8ef8efe968120394c69fa376d533
+;; Version: 1.1.0
 ;; Package-Requires: ((emacs "25.1") (ts "0.1"))
 ;; Keywords: tools, productivity, convenience
 
@@ -39,13 +39,23 @@
 ;;
 ;;;;  Time Blocking Groups
 ;;
-;; Customize the variable `time-block-groups'.  An example of a groups definition is below.
+;; Customize the variable `time-block-groups'.  An example of a groups
+;; definition is below.
 ;;
 ;; (setf time-block-groups '((workday . ((1 . (("09:00" . "17:00")))
 ;;                                       (2 . (("09:00" . "17:00")))
 ;;                                       (3 . (("09:00" . "17:00")))
 ;;                                       (4 . (("09:00" . "17:00")))
 ;;                                       (5 . (("09:00" . "17:00")))))))
+;;
+;; This variable is an alist of names (keywords) to group definitions.  A
+;; group definition is an alist from days of the week (as numbers, Sunday
+;; = 0/7, etc.) to lists of start/stop pairs (times in "HH:MM" form).
+;;
+;; It is also possible to ignore time blocking on holidays.  This is
+;; globally set using the `time-block-skip-on-holidays-p' variable.
+;; This defaults to nil, which does not ignore blocking on holidays.
+;; If set to t, time blocking will be ignored on holidays.
 ;;
 ;;;; Defining Time Blocked Commands
 ;;
@@ -76,6 +86,21 @@
 ;;
 ;; (time-block-advise my/elfeed-block-advice 'elfeed workday "You have decided not to check news currently."
 ;;                    "You have decided not to check news currently.\nStill start elfeed?")
+;;
+;;;; Manually advising commands to be time-blocked
+;;
+;; Commands can also be manually advised.  This can be done to prevent
+;; only certain cases from happening.  For instance, I use the following
+;; code to delay myself from editing my emacs configuration during the
+;; workday.
+;;
+;; (defun my/buffer-sets-around-advice (orig name)
+;;   "Check if NAME is 'emacs', if so, follow time blocking logic before calling ORIG (`buffer-sets-load-set')."
+;;   (unless (and (string= name "emacs")
+;;                (time-block-group-blocked-p :workday)
+;;                (not (yes-or-no-p "You have decided not to edit your emacs configuration at this time.\nContinue?")))
+;;     (funcall orig name)))
+;; (advice-add 'buffer-sets-load-set :around #'my/buffer-sets-around-advice)
 
 (require 'ts)
 (require 'cl-lib)
@@ -117,24 +142,40 @@ Saturday   6"
 
 (make-obsolete-variable 'time-block-command-groups 'time-block-groups "time-block 0.1.0")
 
+(defcustom time-block-skip-on-holidays-p nil
+  "If t skip checking for time blocking on holidays.  Default to nil."
+  :group 'time-block
+  :type '(choice (const :tag "Continue blocking on holidays." nil)
+                 (const :tag "Do not block on holidays." t)))
+
+
+;; Utility Functions
+
 (defun time-block-group-blocked-p (block-group)
   "Is group BLOCK-GROUP currently blocked?"
-  (when-let ((group (cl-rest (assoc block-group time-block-groups)))
-             (ts-now (ts-now))
-             (current-day (ts-dow ts-now))
-             (day-blocks (cl-rest (assoc current-day group)))
-             (now (ts-parse (ts-format "%H:%M" ts-now))))
-    (cl-do* ((pair (cl-first day-blocks) (cl-first blocks-left))
-             (blocks-left (cl-rest day-blocks) (cl-rest blocks-left))
-             (start (ts-parse (car pair)) (ts-parse (car pair)))
-             (end (ts-parse (cdr pair)) (ts-parse (cdr pair))))
-        ((or (null blocks-left)
-             (and (ts<= start now)
-                  (ts<= now end)))
-         (and (ts<= start now)
-              (ts<= now end))))))
+  (unless (and time-block-skip-on-holidays-p
+               (not (null (calendar-check-holidays (list (ts-month (ts-now))
+                                                         (ts-day (ts-now))
+                                                         (ts-year (ts-now)))))))
+    (when-let ((group (cl-rest (assoc block-group time-block-groups)))
+               (ts-now (ts-now))
+               (current-day (ts-dow ts-now))
+               (day-blocks (cl-rest (assoc current-day group)))
+               (now (ts-parse (ts-format "%H:%M" ts-now))))
+      (cl-do* ((pair (cl-first day-blocks) (cl-first blocks-left))
+               (blocks-left (cl-rest day-blocks) (cl-rest blocks-left))
+               (start (ts-parse (car pair)) (ts-parse (car pair)))
+               (end (ts-parse (cdr pair)) (ts-parse (cdr pair))))
+          ((or (null blocks-left)
+               (and (ts<= start now)
+                    (ts<= now end)))
+           (and (ts<= start now)
+                (ts<= now end)))))))
 
 (make-obsolete 'timeblock-define-block-command 'define-time-blocked-command "time-block 0.1.0")
+
+
+;; Main definition macro
 
 (cl-defmacro define-time-blocked-command (name argslist (group block-message &optional override-prompt) &body body)
   "Define NAME as a time-blocked command.
@@ -182,6 +223,9 @@ BODY is the body of the code.  This should include an
          (if ,condition
              (message ,block-message)
            ,@body)))))
+
+
+;; Advice macro
 
 (defmacro time-block-advise (advice-name command group block-message &optional override-prompt)
   "Define `:around' advice for COMMAND called ADVICE-NAME.

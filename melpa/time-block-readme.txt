@@ -13,13 +13,23 @@ blocking groups and define time blocked commands.
 
 ;;  Time Blocking Groups
 
-Customize the variable `time-block-groups'.  An example of a groups definition is below.
+Customize the variable `time-block-groups'.  An example of a groups
+definition is below.
 
 (setf time-block-groups '((workday . ((1 . (("09:00" . "17:00")))
                                       (2 . (("09:00" . "17:00")))
                                       (3 . (("09:00" . "17:00")))
                                       (4 . (("09:00" . "17:00")))
                                       (5 . (("09:00" . "17:00")))))))
+
+This variable is an alist of names (keywords) to group definitions.  A
+group definition is an alist from days of the week (as numbers, Sunday
+= 0/7, etc.) to lists of start/stop pairs (times in "HH:MM" form).
+
+It is also possible to ignore time blocking on holidays.  This is
+globally set using the `time-block-skip-on-holidays-p' variable.
+This defaults to nil, which does not ignore blocking on holidays.
+If set to t, time blocking will be ignored on holidays.
 
 ;; Defining Time Blocked Commands
 
@@ -50,3 +60,18 @@ following example.
 
 (time-block-advise my/elfeed-block-advice 'elfeed workday "You have decided not to check news currently."
                    "You have decided not to check news currently.\nStill start elfeed?")
+
+;; Manually advising commands to be time-blocked
+
+Commands can also be manually advised.  This can be done to prevent
+only certain cases from happening.  For instance, I use the following
+code to delay myself from editing my emacs configuration during the
+workday.
+
+(defun my/buffer-sets-around-advice (orig name)
+  "Check if NAME is 'emacs', if so, follow time blocking logic before calling ORIG (`buffer-sets-load-set')."
+  (unless (and (string= name "emacs")
+               (time-block-group-blocked-p :workday)
+               (not (yes-or-no-p "You have decided not to edit your emacs configuration at this time.\nContinue?")))
+    (funcall orig name)))
+(advice-add 'buffer-sets-load-set :around #'my/buffer-sets-around-advice)
