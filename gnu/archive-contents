@@ -640,7 +640,7 @@
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
 	     (:commit . "d10d68c382e17960fc9aaef072fd18a23ea92a86"))])
  (cursory .
-	  [(0 2 1)
+	  [(0 3 0)
 	   ((emacs
 	     (27 1)))
 	   "Manage cursor styles using presets" tar
@@ -649,7 +649,7 @@
 	    (:maintainer "Cursory Development" . "~protesilaos/cursory@lists.sr.ht")
 	    (:authors
 	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	    (:commit . "e04fd74d56bee52eccbc124c5395ee78e47189a0"))])
+	    (:commit . "568310b13dfeda471fa23c6aa9b88c2a410aed01"))])
  (cycle-quotes .
 	       [(0 1)
 		nil "Cycle between quote styles" tar
@@ -714,7 +714,7 @@
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
  (denote .
-	 [(0 6 0)
+	 [(0 6 1)
 	  ((emacs
 	    (27 2)))
 	  "Simple notes with an efficient file-naming scheme" tar
@@ -722,7 +722,7 @@
 	   (:maintainer "Denote Development" . "~protesilaos/denote@lists.sr.ht")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "4d67ff82a01a02b993370bf730bc2520e8cbb88a"))])
+	   (:commit . "a143347053d1b91cbbaae602d6a109157d0e2ed7"))])
  (detached .
 	   [(0 8 0)
 	    ((emacs

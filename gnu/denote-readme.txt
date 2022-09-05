@@ -2521,9 +2521,9 @@ section 5.2
 
   Contributions to code or the manual
         Abin Simon, Benjamin Kästner, Colin McLear, Damien Cassou, Eshel
-        Yaron, Jack Baty, Jean-Philippe Gagné Guay, Jürgen Hötzel,
-        Kaushal Modi, Kyle Meyer, Peter Prevos, Philip Kaludercic,
-        Quiliro Ordóñez, Stefan Monnier.
+        Yaron, Hilde Rhyne, Jack Baty, Jean-Philippe Gagné Guay, Jürgen
+        Hötzel, Kaushal Modi, Kyle Meyer, Peter Prevos, Philip
+        Kaludercic, Quiliro Ordóñez, Stefan Monnier.
 
   Ideas and/or user feedback
         Abin Simon, Alan Schmitt, Alfredo Borrás, Benjamin Kästner,

@@ -10,15 +10,20 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `cursory' (or `cursory.el'), and provides every other piece
 of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2022-07-01.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2022-09-04.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
-⁃ Homepage: <https://protesilaos.com/emacs/cursory>.
-⁃ Git repository: <https://git.sr.ht/~protesilaos/cursory>.
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/cursory>.
+⁃ Package name (GNU ELPA): `cursory'
+⁃ Official manual: <https://protesilaos.com/emacs/cursory>
+⁃ Change log: <https://protesilaos.com/emacs/cursory-changelog>
+⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/cursory>
+  • Mirrors:
+    ⁃ GitHub: <https://github.com/protesilaos/cursory>
+    ⁃ GitLab: <https://gitlab.com/protesilaos/cursory>
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/cursory>
 
 Table of Contents
 ─────────────────
@@ -88,6 +93,40 @@ Table of Contents
   `cursor-in-non-selected-windows', `blink-cursor-blinks',
   `blink-cursor-interval', `blink-cursor-delay'.  The value each
   property accepts is the same as the variable it references.
+
+  A property of `:blink-cursor-mode' is also available.  It is a numeric
+  value of either `1' or `-1' and is given to the function
+  `blink-cursor-mode' (`1' is to enable, `-1' is to disable the mode).
+
+  A preset whose car is `t' is treated as the default option.  This
+  makes it possible to specify multiple presets without duplicating
+  their properties.  The other presets beside `t' act as overrides of
+  the defaults and, as such, need only consist of the properties that
+  change from the default.  See the original value of this variable for
+  how that is done:
+
+  ┌────
+  │ (defcustom cursory-presets
+  │   '((box
+  │      :blink-cursor-interval 0.8)
+  │     (box-no-blink
+  │      :blink-cursor-mode -1)
+  │     (bar
+  │      :cursor-type (bar . 2)
+  │      :blink-cursor-interval 0.5)
+  │     (underscore
+  │      :cursor-type (hbar . 3)
+  │      :blink-cursor-blinks 50)
+  │     (t ; the default values
+  │      :cursor-type box
+  │      :cursor-in-non-selected-windows hollow
+  │      :blink-cursor-mode 1
+  │      :blink-cursor-blinks 10
+  │      :blink-cursor-interval 0.2
+  │      :blink-cursor-delay 0.2))
+  │   ;; Omitting the doc string for demo purposes
+  │   )
+  └────
 
   When called from Lisp, the `cursory-set-preset' command requires a
   PRESET argument, such as:
@@ -171,25 +210,7 @@ Table of Contents
   ┌────
   │ (require 'cursory)
   │ 
-  │ (setq cursory-presets
-  │       '((bar
-  │ 	 :cursor-type (bar . 2)
-  │ 	 :cursor-in-non-selected-windows hollow
-  │ 	 :blink-cursor-blinks 10
-  │ 	 :blink-cursor-interval 0.5
-  │ 	 :blink-cursor-delay 0.2)
-  │ 	(box
-  │ 	 :cursor-type box
-  │ 	 :cursor-in-non-selected-windows hollow
-  │ 	 :blink-cursor-blinks 10
-  │ 	 :blink-cursor-interval 0.5
-  │ 	 :blink-cursor-delay 0.2)
-  │ 	(underscore
-  │ 	 :cursor-type (hbar . 3)
-  │ 	 :cursor-in-non-selected-windows hollow
-  │ 	 :blink-cursor-blinks 50
-  │ 	 :blink-cursor-interval 0.2
-  │ 	 :blink-cursor-delay 0.2)))
+  │ ;; Check the `cursory-presets' for how to set your own preset styles.
   │ 
   │ (setq cursory-latest-state-file (locate-user-emacs-file "cursory-latest-state"))
   │ 
