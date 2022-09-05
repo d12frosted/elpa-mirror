@@ -11,8 +11,8 @@
 ;;       Magnar Sveen <magnars@gmail.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20220903.932
-;; Package-Commit: 24ee36858775b65410b37d97aaf14c6e1c6cd614
+;; Package-Version: 20220905.1237
+;; Package-Commit: d47298212ffc486ade3f2428f103feba3a467af0
 ;; Keywords: languages clojure clojurescript lisp
 ;; Version: 5.15.1
 ;; Package-Requires: ((emacs "25.1"))
@@ -881,8 +881,16 @@ any number of matches of `clojure--sym-forbidden-rest-chars'."))
                 "\\(\\sw+\\)?")
        (2 font-lock-type-face nil t))
       ;; Function definition
-      (,(concat "(\\(?:clojure.core/\\)?"
-                "\\(defn\\)"
+      (,(concat "(\\(?:clojure.core/\\)?\\("
+                (regexp-opt '("defn"
+                              "defn-"
+                              "defmulti"
+                              "defmethod"
+                              "deftest"
+                              "deftest-"
+                              "defmacro"
+                              "definline"))
+                "\\)"
                 ;; Function declarations
                 "\\>"
                 ;; Any whitespace

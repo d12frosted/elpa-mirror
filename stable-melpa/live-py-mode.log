@@ -3,3 +3,30 @@ Fetcher: github
 Source:  https://github.com/donkirkby/live-py-plugin.git
 
 Updating /mnt/store/melpa/working/live-py-mode/
+Checking out origin/HEAD
+Checking out e509c806138cbe164c0d655cc7d662f94c386c9b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/live-py-mode/
+  to /tmp/live-py-modey0riti/live-py-mode-20220518.204
+  ! emacs-live-py-mode/live-py-mode.el -> live-py-mode.el
+  ! plugin/PySrc/space_tracer => space_tracer
+Created live-py-mode-20220518.204.tar containing:
+  live-py-mode-20220518.204/
+  live-py-mode-20220518.204/live-py-mode-pkg.el
+  live-py-mode-20220518.204/live-py-mode.el
+  live-py-mode-20220518.204/space_tracer/
+  live-py-mode-20220518.204/space_tracer/__init__.py
+  live-py-mode-20220518.204/space_tracer/__main__.py
+  live-py-mode-20220518.204/space_tracer/about.py
+  live-py-mode-20220518.204/space_tracer/canvas.py
+  live-py-mode-20220518.204/space_tracer/code_tracer.py
+  live-py-mode-20220518.204/space_tracer/live_image.py
+  live-py-mode-20220518.204/space_tracer/main.py
+  live-py-mode-20220518.204/space_tracer/mock_turtle.py
+  live-py-mode-20220518.204/space_tracer/module_importers.py
+  live-py-mode-20220518.204/space_tracer/report_builder.py
+  live-py-mode-20220518.204/space_tracer/traced_finder.py
+Built live-py-mode in 6.141s, finished at 2022-09-05T15:19:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  370 Sep  5 15:19 packages/live-py-mode-20220518.204.entry
+180K -rw-r--r-- 1 root root 180K Sep  5 15:19 packages/live-py-mode-20220518.204.tar

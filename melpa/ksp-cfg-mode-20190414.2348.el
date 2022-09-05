@@ -7,7 +7,9 @@
 ;; Created: 3 May 2016
 
 ;; Version: 0.6
-;; Package-Version: 0.6
+;; Package-Commit: faec8bd8456c67276d065eb68c88a30efcef59ef
+;; Package-Version: 20190414.2348
+;; Package-X-Original-Version: 0.6
 ;; Keywords: data
 ;; URL: http://github.com/lashtear/ksp-cfg-mode
 ;; Homepage: http://github.com/lashtear/ksp-cfg-mode
