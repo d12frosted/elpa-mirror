@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-jit-lock-stealth-progress
-;; Package-Version: 20220829.941
-;; Package-Commit: e4219797a0132559e7711307fc2caeb3b700dc56
+;; Package-Version: 20220905.41
+;; Package-Commit: ebcff242ab90e7562f9873c946a9b067459da779
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "28.1"))
 
@@ -49,9 +49,8 @@ With a customized mode-line it may be preferable to include
 
 (defconst jit-lock-stealth-progress--mode-line-format '(list 1 jit-lock-stealth-progress-info))
 
-(defvar-local jit-lock-stealth-progress--min nil)
-(defvar-local jit-lock-stealth-progress--max nil)
-
+;; When non-nil, a cons cell representing (min . max).
+(defvar-local jit-lock-stealth-progress--range-done nil)
 
 ;; ---------------------------------------------------------------------------
 ;; Utility Functions
@@ -98,8 +97,7 @@ With a customized mode-line it may be preferable to include
   (when jit-lock-stealth-progress-add-to-mode-line
     (jit-lock-stealth-progress--mode-line-remove))
   (kill-local-variable 'jit-lock-stealth-progress-info)
-  (kill-local-variable 'jit-lock-stealth-progress--min)
-  (kill-local-variable 'jit-lock-stealth-progress--max))
+  (kill-local-variable 'jit-lock-stealth-progress--range-done))
 
 (defun jit-lock-stealth-progress--fontify-wrapper (orig-fn &rest args)
   "Wrapper for `jit-lock-stealth-fontify' as (ORIG-FN ARGS) to set progress."
@@ -109,15 +107,10 @@ With a customized mode-line it may be preferable to include
       (is-first
         (or
           (null (buffer-local-boundp 'jit-lock-stealth-progress-info this-progress-buffer))
-          (null (memq this-progress-buffer jit-lock-stealth-buffers))))
+          (null (memq this-progress-buffer jit-lock-stealth-buffers))
+          (null jit-lock-stealth-progress--range-done)))
       (did-font-lock-run nil)
       (do-mode-line-update nil))
-
-    (when is-first
-      (when jit-lock-stealth-progress-add-to-mode-line
-        (jit-lock-stealth-progress--mode-line-ensure))
-      (setq jit-lock-stealth-progress--min (point))
-      (setq jit-lock-stealth-progress--max (point)))
 
     (jit-lock-stealth-progress--with-advice 'jit-lock-fontify-now
       :around
@@ -126,25 +119,35 @@ With a customized mode-line it may be preferable to include
           ;; Stealthy font locking may update other buffers,
           ;; these aren't so useful to show in the mode-line.
           (when (eq this-progress-buffer (current-buffer))
+
+            (when is-first
+              (when jit-lock-stealth-progress-add-to-mode-line
+                (jit-lock-stealth-progress--mode-line-ensure))
+              (setq jit-lock-stealth-progress--range-done (cons (point) (point))))
+
             (setq did-font-lock-run t)
             ;; When first is backwards, all points ahead of (point) have been calculated.
             (when (and is-first (< beg (point)))
-              (setq jit-lock-stealth-progress--max (point-max)))
-            (setq jit-lock-stealth-progress--min (min beg jit-lock-stealth-progress--min))
-            (setq jit-lock-stealth-progress--max
-              (min (max end jit-lock-stealth-progress--max) (point-max)))
+              (setcdr jit-lock-stealth-progress--range-done (point-max)))
 
+            (setcar jit-lock-stealth-progress--range-done
+              (min beg (car jit-lock-stealth-progress--range-done)))
+            (setcdr jit-lock-stealth-progress--range-done
+              (min (max end (cdr jit-lock-stealth-progress--range-done)) (point-max)))
             (let
               (
                 (range-full (- (point-max) (point-min)))
-                (range-done (- jit-lock-stealth-progress--max jit-lock-stealth-progress--min)))
+                (range-done
+                  (-
+                    (cdr jit-lock-stealth-progress--range-done)
+                    (car jit-lock-stealth-progress--range-done))))
               (let ((progress (* 100.0 (- 1.0 (/ (float (- range-full range-done)) range-full)))))
                 (setq-local jit-lock-stealth-progress-info
                   (format jit-lock-stealth-progress-info-format progress))))
             (setq do-mode-line-update t))))
 
       (prog1 (apply orig-fn args)
-        (unless did-font-lock-run
+        (when (and (null is-first) (null did-font-lock-run))
           ;; Complete, clear the variable.
           (jit-lock-stealth-progress--clear-variables)
           (setq do-mode-line-update t))))

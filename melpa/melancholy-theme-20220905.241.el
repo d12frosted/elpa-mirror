@@ -7,10 +7,10 @@
 ;; Created: 30 August 2022
 
 ;; Version: 1.0.7
-;; Package-Version: 20220830.527
-;; Package-Commit: b27f0329f4bda5e06045fb457d62d655e574c494
-;; License: GPL3
-;; Package-requires: ((emacs "28.1"))
+;; Package-Version: 20220905.241
+;; Package-Commit: 059dbff9749ac6d78624680562f8120b1dbad578
+;; SPDX-License-Identifier:  GPL-3.0
+;; Package-requires: ((emacs "27.1"))
 
 ;; Keywords: faces, frames
 ;; URL: https://gitlab.com/baaash/melancholy-theme
@@ -22,9 +22,9 @@
 ;;
 ;; Ensure the following fonts are installed before use:
 ;;
-;;    - google-go-fonts
-;;    - google-go-mono-fonts
-;;    - impallari-dancing-script-fonts
+;;    - fonts-purisa
+;;    - fonts-inconsolata
+;;    - fonts-dancingscript
 ;;
 ;; ========================================
 
@@ -38,9 +38,9 @@
 (let
    (
      (font-cursive "DancingScript" )
-     (font-default   "Go" )
-     (font-mono "Go Mono" )
-     (font-sans "Go" )
+     (font-default   "Purisa" )
+     (font-mono "Inconsolata" )
+     (font-sans "Purisa" )
      (my-fluff              "#FCDEEA" )
      (my-active             "#F92672" )
      (my-visited            "#999999" )

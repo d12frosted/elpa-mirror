@@ -5,8 +5,8 @@
 ;; Author: Gaurav Atreya <allmanpride@gmail.com>
 ;; Maintainer:
 ;; URL: https://github.com/Atreyagaurav/units-mode
-;; Package-Version: 20220904.1601
-;; Package-Commit: 6e19d631a02fd6fc6e8646b332b429ba3e4b2f1c
+;; Package-Version: 20220904.1848
+;; Package-Commit: 8611f09fa1d0ca898eef262ad45d8585a64344b3
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 ;; Homepage: https://github.com/Atreyagaurav/units-mode
@@ -37,6 +37,7 @@
 ;; https://github.com/Atreyagaurav/units-mode
 
 ;;; Code:
+(eval-when-compile (require 'subr-x))
 (require 'cl-lib)
 
 (defcustom units-binary-path "units"
@@ -61,15 +62,15 @@
 	    units-binary-path
 	    units-default-args
 	    units-user-args
-	    args))))
+	    (mapconcat
+	     #'shell-quote-argument
+	     args " ")))))
 
 
 (defun units-convert (value to-unit)
   "Convert VALUE to TO-UNIT unit."
   (let ((out-lines (split-string
-		     (units-command
-		      (format "\"%s\" \"%s\""
-			      value to-unit)) "\n")))
+		     (units-command (list value to-unit)) "\n")))
     (if (and (= (length out-lines) 1)
 	     (string-match-p "^[0-9.e;]+$"
 			     (car out-lines)))
@@ -102,8 +103,8 @@
 
 (defun units-conformable-list (value)
   "Conformable units list related to VALUE."
-  (let ((output (units-command (format "--conformable \"%s\""
-				       value))))
+  (let ((output (units-command `("--conformable"
+				 ,value))))
     (if (not (string-match-p "Unknown unit" output))
 	      (split-string output
 	       "\n")
@@ -127,8 +128,7 @@
 
 (defun units-reduce (value)
   "Reduce the VALUE to standard units."
-  (message "%s" (units-command
-		 (format "\"%s\"" value))))
+  (message "%s" (units-command `(,value))))
 
 (defun units-reduce-region (beg end)
   "Reduce the region (BEG to END) to standard units."
