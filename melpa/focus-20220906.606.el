@@ -4,8 +4,8 @@
 
 ;; Author: Lars Tveito <larstvei@ifi.uio.no>
 ;; URL: http://github.com/larstvei/Focus
-;; Package-Version: 20191209.2210
-;; Package-Commit: 5f3f20e7f22fb9fd7c48abce8bd38061d97e4bc0
+;; Package-Version: 20220906.606
+;; Package-Commit: 704db499888f106af2bd637109c5c11e7c3db62d
 ;; Created: 11th May 2015
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.3") (cl-lib "0.5"))
@@ -53,12 +53,12 @@ many derivatives should be placed by the end of the list.
 Things that are defined include `symbol', `list', `sexp',
 `defun', `filename', `url', `email', `word', `sentence',
 `whitespace', `line', and `page'."
-  :type '(repeat symbol)
+  :type '(alist :key-type symbol :valye-type symbol)
   :group 'focus)
 
 (defcustom focus-read-only-blink-seconds 1
   "The duration of a cursor blink in `focus-read-only-mode'."
-  :type '(float)
+  :type 'number
   :group 'focus)
 
 (defface focus-unfocused
