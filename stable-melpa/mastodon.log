@@ -3,11 +3,41 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/martianh/mastodon.el.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 23013ff6daa54c8268c6f5b791270b78e1ac7eb0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mastodon/
+  to /tmp/mastodonrIB0Tv/mastodon-20220903.1634
+  ! lisp/mastodon-async.el -> mastodon-async.el
+  ! lisp/mastodon-auth.el -> mastodon-auth.el
+  ! lisp/mastodon-client.el -> mastodon-client.el
+  ! lisp/mastodon-discover.el -> mastodon-discover.el
+  ! lisp/mastodon-http.el -> mastodon-http.el
+  ! lisp/mastodon-inspect.el -> mastodon-inspect.el
+  ! lisp/mastodon-media.el -> mastodon-media.el
+  ! lisp/mastodon-notifications.el -> mastodon-notifications.el
+  ! lisp/mastodon-profile.el -> mastodon-profile.el
+  ! lisp/mastodon-search.el -> mastodon-search.el
+  ! lisp/mastodon-tl.el -> mastodon-tl.el
+  ! lisp/mastodon-toot.el -> mastodon-toot.el
+  ! lisp/mastodon.el -> mastodon.el
+Created mastodon-20220903.1634.tar containing:
+  mastodon-20220903.1634/
+  mastodon-20220903.1634/mastodon-async.el
+  mastodon-20220903.1634/mastodon-auth.el
+  mastodon-20220903.1634/mastodon-client.el
+  mastodon-20220903.1634/mastodon-discover.el
+  mastodon-20220903.1634/mastodon-http.el
+  mastodon-20220903.1634/mastodon-inspect.el
+  mastodon-20220903.1634/mastodon-media.el
+  mastodon-20220903.1634/mastodon-notifications.el
+  mastodon-20220903.1634/mastodon-pkg.el
+  mastodon-20220903.1634/mastodon-profile.el
+  mastodon-20220903.1634/mastodon-search.el
+  mastodon-20220903.1634/mastodon-tl.el
+  mastodon-20220903.1634/mastodon-toot.el
+  mastodon-20220903.1634/mastodon.el
+Built mastodon in 4.937s, finished at 2022-09-06T16:08:33+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  369 Sep  6 16:08 packages/mastodon-20220903.1634.entry
+280K -rw-r--r-- 1 root root 280K Sep  6 16:08 packages/mastodon-20220903.1634.tar

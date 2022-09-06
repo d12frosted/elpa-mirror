@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-sidecar-locals.git
 
 Updating /mnt/store/melpa/working/sidecar-locals/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-sidecar-locals.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 3aa9c890ebc38800ab26f5f877da32a79ce87d18
+Built sidecar-locals in 4.062s, finished at 2022-09-06T13:19:29+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Sep  6 13:19 packages/sidecar-locals-20220710.1040.el
+4.0K -rw-r--r-- 1 root root 406 Sep  6 13:19 packages/sidecar-locals-20220710.1040.entry

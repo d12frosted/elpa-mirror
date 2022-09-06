@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-recomplete.git
 
 Updating /mnt/store/melpa/working/recomplete/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-recomplete.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 3ed522a234bced2d2ba1d069fd00e715359ac29a
+Built recomplete in 4.407s, finished at 2022-09-06T13:16:10+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Sep  6 13:16 packages/recomplete-20220731.2328.el
+4.0K -rw-r--r-- 1 root root 382 Sep  6 13:16 packages/recomplete-20220731.2328.entry

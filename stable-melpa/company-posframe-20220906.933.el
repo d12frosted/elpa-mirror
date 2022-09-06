@@ -5,8 +5,8 @@
 ;; Author: Clément Pit-Claudel, Feng Shu, Lars Andersen <expez@expez.com>
 ;; Maintainer: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/company-posframe
-;; Package-Version: 20220331.2141
-;; Package-Commit: df0e34f69dc8e9aaa1a6c5e88783898f4ae3f2df
+;; Package-Version: 20220906.933
+;; Package-Commit: b67ec1fa83229187fdf1d3dc5576f81a37a2b369
 ;; Version: 0.6.0
 ;; Keywords: abbrev, convenience, matching
 ;; Package-Requires: ((emacs "26.0")(company "0.9.0")(posframe "0.9.0"))
@@ -293,21 +293,20 @@ be triggered manually using `company-posframe-quickhelp-show'."
                                                             (substring meta 0 width)
                                                           meta)
                                                         'face 'company-posframe-metadata))
+                             "")
+                           (if company-posframe-show-indicator
+                               (concat "\n" (substring backend-names 0
+                                                       (min width (length backend-names))))
                              "")))
          (buffer (get-buffer-create company-posframe-buffer)))
     ;; FIXME: Do not support mouse at the moment, so remove mouse-face
     (setq contents (copy-sequence contents))
     (remove-text-properties 0 (length contents) '(mouse-face nil) contents)
-    (with-current-buffer buffer
-      (when company-posframe-show-indicator
-        (setq-local mode-line-format `(,(substring backend-names 0
-                                                   (min width (length backend-names)))))))
     (apply #'posframe-show buffer
            :string contents
-           :min-height (+ height (if meta 1 0))
+           :min-height (+ (+ height (if meta 1 0)) (if company-posframe-show-indicator 1 0))
            :min-width (+ company-tooltip-minimum-width (* 2 company-tooltip-margin))
            :max-width (+ company-tooltip-maximum-width (* 2 company-tooltip-margin))
-           :respect-mode-line company-posframe-show-indicator
            :font company-posframe-font
            :background-color (face-attribute 'company-tooltip :background)
            :lines-truncate t

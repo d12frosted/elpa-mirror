@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/contrapunctus/sxiv.el.git
 
 Updating /mnt/store/melpa/working/sxiv/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/contrapunctus/sxiv.el.git/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/dev
+Checking out 47f5b2fbb94c569dc5e71cbe4de9c6eabbbc69e8
+Built sxiv in 6.384s, finished at 2022-09-06T13:23:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.7K Sep  6 13:23 packages/sxiv-20220530.14.el
+4.0K -rw-r--r-- 1 root root  417 Sep  6 13:23 packages/sxiv-20220530.14.entry

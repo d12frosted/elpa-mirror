@@ -1,5 +1,5 @@
 (cardano-tx .
-	    [(20220718 1440)
+	    [(20220906 1126)
 	     ((emacs
 	       (27 1))
 	      (f
@@ -23,7 +23,7 @@
 	      (emacsql-sqlite3
 	       (1 0 2)))
 	     "Cardano transaction editor" tar
-	     ((:commit . "4dcd38383367296acd284b9889c0265000da08f4")
+	     ((:commit . "2d414d39b4824bf4de97b98f130da24c70ca916e")
 	      (:authors
 	       ("Oscar Najera <https://oscarnajera.com>"))
 	      (:maintainer "Oscar Najera" . "hi@oscarnajera.com")

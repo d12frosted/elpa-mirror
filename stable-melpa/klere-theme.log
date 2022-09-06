@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/WammKD/emacs-klere-theme.git
 
 Updating /mnt/store/melpa/working/klere-theme/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/WammKD/emacs-klere-theme.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f9eacacc00455e6c42961ec41f24f864c2a05ace
+Built klere-theme in 4.801s, finished at 2022-09-06T16:04:41+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Sep  6 16:04 packages/klere-theme-20210320.1912.el
+4.0K -rw-r--r-- 1 root root 391 Sep  6 16:04 packages/klere-theme-20210320.1912.entry

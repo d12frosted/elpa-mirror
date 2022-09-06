@@ -3,11 +3,33 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-cycle-at-point.git
 
 Updating /mnt/store/melpa/working/cycle-at-point/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-cycle-at-point.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7d8198e509c49eaeb76072bb8f1baa46d7970100
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cycle-at-point/
+  to /tmp/cycle-at-pointUzAZ6x/cycle-at-point-20220723.646
+    cycle-at-point-find-alphabet.el -> cycle-at-point-find-alphabet.el
+    cycle-at-point-find-integer.el -> cycle-at-point-find-integer.el
+    cycle-at-point-preset-c++-mode.el -> cycle-at-point-preset-c++-mode.el
+    cycle-at-point-preset-c-mode.el -> cycle-at-point-preset-c-mode.el
+    cycle-at-point-preset-cmake-mode.el -> cycle-at-point-preset-cmake-mode.el
+    cycle-at-point-preset-emacs-lisp-mode.el -> cycle-at-point-preset-emacs-lisp-mode.el
+    cycle-at-point-preset-lang-en.el -> cycle-at-point-preset-lang-en.el
+    cycle-at-point-preset-python-mode.el -> cycle-at-point-preset-python-mode.el
+    cycle-at-point.el -> cycle-at-point.el
+Created cycle-at-point-20220723.646.tar containing:
+  cycle-at-point-20220723.646/
+  cycle-at-point-20220723.646/cycle-at-point-find-alphabet.el
+  cycle-at-point-20220723.646/cycle-at-point-find-integer.el
+  cycle-at-point-20220723.646/cycle-at-point-pkg.el
+  cycle-at-point-20220723.646/cycle-at-point-preset-c++-mode.el
+  cycle-at-point-20220723.646/cycle-at-point-preset-c-mode.el
+  cycle-at-point-20220723.646/cycle-at-point-preset-cmake-mode.el
+  cycle-at-point-20220723.646/cycle-at-point-preset-emacs-lisp-mode.el
+  cycle-at-point-20220723.646/cycle-at-point-preset-lang-en.el
+  cycle-at-point-20220723.646/cycle-at-point-preset-python-mode.el
+  cycle-at-point-20220723.646/cycle-at-point.el
+Built cycle-at-point in 4.339s, finished at 2022-09-06T15:40:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 426 Sep  6 15:40 packages/cycle-at-point-20220723.646.entry
+ 40K -rw-r--r-- 1 root root 40K Sep  6 15:40 packages/cycle-at-point-20220723.646.tar
