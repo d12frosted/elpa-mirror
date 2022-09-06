@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/ShuguangSun/find-dupes-dired.git
 
 Updating /mnt/store/melpa/working/find-dupes-dired/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/ShuguangSun/find-dupes-dired.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out af56f75afc240d8121c8944a614a272be811830c
+Built find-dupes-dired in 3.302s, finished at 2022-09-06T18:58:21+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Sep  6 18:58 packages/find-dupes-dired-20210426.835.el
+4.0K -rw-r--r-- 1 root root 389 Sep  6 18:58 packages/find-dupes-dired-20210426.835.entry

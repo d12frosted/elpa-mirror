@@ -1,0 +1,13 @@
+(org-download .
+	      [(20220906 1755)
+	       ((emacs
+		 (24 3))
+		(async
+		 (1 2)))
+	       "Image drag-and-drop for Org-mode." single
+	       ((:commit . "7ca67dfa963c95c607dc6126004c5df49a4089c5")
+		(:authors
+		 ("Oleh Krehel"))
+		(:maintainer "Oleh Krehel")
+		(:keywords "multimedia" "images" "screenshots" "download")
+		(:url . "https://github.com/abo-abo/org-download"))])
