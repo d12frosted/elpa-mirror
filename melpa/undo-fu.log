@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-undo-fu.git
 
 Updating /mnt/store/melpa/working/undo-fu/
-Checking out origin/HEAD
-Checking out b0d6eba024ac87a0aaf7fa66ae76d76f6c764d46
-Built undo-fu in 4.358s, finished at 2022-09-06T07:11:04+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Sep  6 07:11 packages/undo-fu-20220731.2326.el
-4.0K -rw-r--r-- 1 root root 338 Sep  6 07:11 packages/undo-fu-20220731.2326.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-undo-fu.git/': Failed to connect to codeberg.org port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

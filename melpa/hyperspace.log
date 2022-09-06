@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware/hyperspace.git
 
 Updating /mnt/store/melpa/working/hyperspace/
-Checking out origin/HEAD
-Checking out c4c363c140250ba6b775516082063878975a6154
-Built hyperspace in 7.448s, finished at 2022-09-06T06:38:21+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.3K Sep  6 06:38 packages/hyperspace-20210603.1825.el
-4.0K -rw-r--r-- 1 root root  404 Sep  6 06:38 packages/hyperspace-20210603.1825.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/emacs-weirdware/hyperspace.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

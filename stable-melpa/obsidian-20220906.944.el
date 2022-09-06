@@ -4,8 +4,8 @@
 
 ;; Author: Mykhaylo Bilyanskyy
 ;; URL: https://github.com./licht1stein/obsidian.el
-;; Package-Version: 20220824.1728
-;; Package-Commit: 324d614d36c2dc9dd5326952b7c44d40453b2b9d
+;; Package-Version: 20220906.944
+;; Package-Commit: df1cb7fc6f5bb4d614ae6c476e2508f47925fef7
 ;; Keywords: obsidian, pkm, convenience
 ;; Version: 1.1.3
 ;; Package-Requires: ((emacs "27.2") (s "1.12.0") (dash "2.13") (markdown-mode "2.6") (elgrep "1.0.0") (yaml "0.5.1"))
@@ -65,6 +65,7 @@
 
 (eval-when-compile (defvar local-minor-modes))
 
+;;;###autoload
 (defun obsidian-specify-path (&optional path)
   "Specifies obsidian folder PATH to obsidian-folder variable.
 
@@ -206,7 +207,10 @@ At the moment updates only `obsidian--aliases-map' with found aliases."
 
 (defun obsidian--update-all-from-front-matter ()
   "Take all files in obsidian vault, parse front matter and update."
-  (-map #'obsidian--update-from-front-matter (obsidian-list-all-files))
+  (-map (lambda (f) (condition-case err
+                        (obsidian--update-from-front-matter f)
+                      (error (message "Error updating YAML front matter in file %s. Error: %s" f (error-message-string err)))))
+        (obsidian-list-all-files))
   (message "Obsidian aliases updated."))
 
 (defun obsidian-tag-p (s)
@@ -293,9 +297,7 @@ Optional argument IGNORED this is ignored."
   "Command update everything there is to update in obsidian.el (tags, links etc.)."
   (interactive)
   (obsidian-update-tags-list)
-  ;; (obsidian-update-aliases)
-  (obsidian--update-all-from-front-matter)
-  )
+  (obsidian--update-all-from-front-matter))
 
 (defun obsidian--request-link ()
   "Service function to request user for link iput."
@@ -307,6 +309,7 @@ Optional argument IGNORED this is ignored."
          (description (read-from-minibuffer "Description (optional): " (or region default-description))))
     (list :file chosen-file :description description)))
 
+;;;###autoload
 (defun obsidian-insert-wikilink ()
   "Insert a link to file in wikiling format."
   (interactive)
@@ -319,6 +322,7 @@ Optional argument IGNORED this is ignored."
                  (s-concat "[[" no-ext "]]"))))
     (insert link)))
 
+;;;###autoload
 (defun obsidian-insert-link ()
   "Insert a link to file in markdown format."
   (interactive)
@@ -414,6 +418,7 @@ link name must be available via `match-string'."
           obsidian-prepare-file-path
           obsidian-find-file))))
 
+;;;###autoload
 (defun obsidian-follow-link-at-point ()
   "Follow thing at point if possible, such as a reference link or wiki link.
 Opens inline and reference links in a browser.  Opens wiki links

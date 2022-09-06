@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-theme-inkpot.git
 
 Updating /mnt/store/melpa/working/inkpot-theme/
-Checking out origin/HEAD
-Checking out 4a488ddf2cd47949ee627af03743f66ee91177cd
-Built inkpot-theme in 4.145s, finished at 2022-09-06T06:39:39+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 24K Sep  6 06:39 packages/inkpot-theme-20220819.28.el
-4.0K -rw-r--r-- 1 root root 403 Sep  6 06:39 packages/inkpot-theme-20220819.28.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-theme-inkpot.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

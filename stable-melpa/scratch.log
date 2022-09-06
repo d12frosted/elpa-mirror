@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware/scratch.git
 
 Updating /mnt/store/melpa/working/scratch/
-Checking out origin/HEAD
-Checking out f000648c9663833a76a8de9b1e78c99a9d698e48
-Built scratch in 4.763s, finished at 2022-09-06T07:03:23+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 8.0K Sep  6 07:03 packages/scratch-20220319.1705.el
-4.0K -rw-r--r-- 1 root root  364 Sep  6 07:03 packages/scratch-20220319.1705.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/emacs-weirdware/scratch.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

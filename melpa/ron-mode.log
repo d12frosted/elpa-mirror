@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/Hutzdog/ron-mode.git
 
 Updating /mnt/store/melpa/working/ron-mode/
-Checking out origin/HEAD
-Checking out c5e0454b9916d6b73adc15dab8abbb0b0a68ea22
-Built ron-mode in 5.649s, finished at 2022-09-06T07:02:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Sep  6 07:02 packages/ron-mode-20200830.1554.el
-4.0K -rw-r--r-- 1 root root  396 Sep  6 07:02 packages/ron-mode-20200830.1554.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/Hutzdog/ron-mode.git/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

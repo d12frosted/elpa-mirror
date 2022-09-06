@@ -523,6 +523,18 @@
 		  (:authors
 		   ("Akib Azmain Turja" . "akib@disroot.org"))
 		  (:commit . "3255a917fc90d946a7a6f04ef7f7632c9a89ac94"))])
+ (focus .
+	[(1 0 0)
+	 ((emacs
+	   (24 3))
+	  (cl-lib
+	   (0 5)))
+	 "Dim the font color of text in surrounding sections" tar
+	 ((:url . "http://github.com/larstvei/Focus")
+	  (:maintainer "Lars Tveito" . "larstvei@ifi.uio.no")
+	  (:authors
+	   ("Lars Tveito" . "larstvei@ifi.uio.no"))
+	  (:commit . "5f3f20e7f22fb9fd7c48abce8bd38061d97e4bc0"))])
  (forth-mode .
 	     [(0 2)
 	      nil "Programming language mode for Forth" tar
@@ -544,7 +556,7 @@
 	       ("Matus Goljer" . "matus.goljer@gmail.com"))
 	      (:commit . "6f9172376af4d399c7853cbdfdd7425348a878f9"))])
  (geiser .
-	 [(0 26)
+	 [(0 26 1)
 	  ((emacs
 	    (25 1))
 	   (transient
@@ -557,7 +569,7 @@
 	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 	   (:authors
 	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-	   (:commit . "40f03bbad917a16ffda0e4b5d5795a2875bc0428"))])
+	   (:commit . "d0a54c942839a561032b4bc41ca65ff4481bd073"))])
  (geiser-chez .
 	      [(0 17)
 	       ((emacs
@@ -620,18 +632,18 @@
 		   ("András Simonyi" . "andras.simonyi@gmail.com"))
 		  (:keywords "languages" "gauche" "scheme" "geiser"))])
  (geiser-guile .
-	       [(0 23 2)
+	       [(0 26 1)
 		((emacs
 		  (25 1))
 		 (geiser
-		  (0 23 2)))
+		  (0 26 1)))
 		"Guile's implementation of the geiser protocols" tar
 		((:url . "https://gitlab.com/emacs-geiser/guile")
 		 (:keywords "languages" "guile" "scheme" "geiser")
 		 (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 		 (:authors
 		  ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-		 (:commit . "c641fcc50b6b86ca95743122b5206cdcd475f96e"))])
+		 (:commit . "e540e14db538ed0d116a188569413f5aadd79180"))])
  (geiser-kawa .
 	      [(0 0 1)
 	       ((emacs

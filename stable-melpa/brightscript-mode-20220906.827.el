@@ -4,9 +4,9 @@
 
 ;; Author: Daniel Mircea <daniel@viseztrance.com>
 ;; URL: https://github.com/viseztrance/brightscript-mode
-;; Package-Version: 20200321.2126
-;; Package-Commit: 01405633a14269ab26d053ca6f1494c987d24195
-;; Version: 1.0.0
+;; Package-Version: 20220906.827
+;; Package-Commit: 025d6f5a70752c62a28d4f86c053a283b3898a49
+;; Version: 1.1.0
 ;; Package-Requires: ((emacs "26.3"))
 ;; Maintainer: daniel@viseztrance.com
 ;; Created: Mar 2020
@@ -188,6 +188,10 @@
     (modify-syntax-entry ?\n ">" table)
     table))
 
+(defvar brightscript-imenu-generic-expression
+  '(("Function" "^[Ff]unction +\\([a-zA-Z_]+\\)" 1)
+    ("Function" "^[Ss]ub +\\([a-zA-Z_]+\\)" 1)))
+
 ;;;###autoload
 (define-derived-mode brightscript-mode prog-mode "BrightScript"
   "Major mode for editing BrightScript code."
@@ -196,7 +200,9 @@
 
   (setq-local comment-start "'")
   (setq-local comment-end "")
-  (set-syntax-table brightscript-mode-syntax-table))
+  (set-syntax-table brightscript-mode-syntax-table)
+
+  (setq-local imenu-generic-expression brightscript-imenu-generic-expression))
 
 (provide 'brightscript-mode)
 

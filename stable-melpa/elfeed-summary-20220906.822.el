@@ -5,8 +5,8 @@
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.0
-;; Package-Version: 20220702.906
-;; Package-Commit: 012f6fee58404205f65fb20877eeaa6f1f6c6270
+;; Package-Version: 20220906.822
+;; Package-Commit: 5006ef64325911785225dc37004f50d4ff51abb4
 ;; Package-Requires: ((emacs "27.1") (magit-section "3.3.0") (elfeed "3.4.1"))
 ;; Homepage: https://github.com/SqrtMinusOne/elfeed-summary.el
 
@@ -610,7 +610,7 @@ The return value is a list of alists of the following elements:
         (puthash (elfeed-feed-id feed)
                  (1+ (or (gethash (elfeed-feed-id feed) unread-count) 0))
                  unread-count))
-      (when (> (- (time-convert nil 'integer)
+      (when (> (- (float-time)
                   elfeed-summary-look-back)
                (elfeed-entry-date entry))
         (elfeed-db-return)))

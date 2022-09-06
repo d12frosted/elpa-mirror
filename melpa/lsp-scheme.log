@@ -3,20 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/rgherdt/emacs-lsp-scheme.git
 
 Updating /mnt/store/melpa/working/lsp-scheme/
-Checking out origin/HEAD
-Checking out 02e56f4c4981bc5497cdd516969206418858a357
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lsp-scheme/
-  to /tmp/lsp-schemeYzW1O3/lsp-scheme-20220809.2014
-    lsp-scheme.el -> lsp-scheme.el
-    scripts => scripts
-Created lsp-scheme-20220809.2014.tar containing:
-  lsp-scheme-20220809.2014/
-  lsp-scheme-20220809.2014/lsp-scheme-pkg.el
-  lsp-scheme-20220809.2014/lsp-scheme.el
-  lsp-scheme-20220809.2014/scripts/
-  lsp-scheme-20220809.2014/scripts/lsp-server-connect.sh
-Built lsp-scheme in 3.901s, finished at 2022-09-06T06:45:11+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 475 Sep  6 06:45 packages/lsp-scheme-20220809.2014.entry
- 32K -rw-r--r-- 1 root root 30K Sep  6 06:45 packages/lsp-scheme-20220809.2014.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/rgherdt/emacs-lsp-scheme.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
