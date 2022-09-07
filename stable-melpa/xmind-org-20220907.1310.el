@@ -1,11 +1,11 @@
 ;;; xmind-org.el --- Import XMind mindmaps into Org -*- lexical-binding: t -*-
 
-;; Copyright (C) 2020 Akira Komamura
+;; Copyright (C) 2020,2022 Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.1
-;; Package-Version: 20201202.1605
-;; Package-Commit: 5eaa15feb56cd113db81718f1452f74fa97c0e48
+;; Package-Version: 20220907.1310
+;; Package-Commit: 79f0b1d95af2a1b8436cee2d3d6c6115d9c6483d
 ;; Package-Requires: ((emacs "27.1") (org-ml "5.3") (dash "2.12"))
 ;; Keywords: outlines wp files
 ;; URL: https://github.com/akirak/xmind-org-el
@@ -57,7 +57,9 @@
         (when (zerop (call-process xmind-org-unzip-command nil
                                    (cons stdout nil)
                                    nil
-                                   "-p" file "content.json"))
+                                   "-p"
+                                   (convert-standard-filename file)
+                                   "content.json"))
           (with-current-buffer stdout
             (goto-char (point-min))
             (json-parse-buffer :array-type 'list
@@ -132,7 +134,7 @@ If COMMENT is non-nil, the node will have a comment heading."
   "Insert an XMind FILE into the current Org buffer."
   (interactive "f")
   (cl-assert (derived-mode-p 'org-mode))
-  (-> (xmind-org-parse-content file)
+  (-> (xmind-org-parse-content (expand-file-name file))
       (xmind-org-root-node)
       (xmind-org-insert-node)))
 

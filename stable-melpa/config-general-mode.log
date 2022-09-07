@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/TLINDEN/config-general-mode.git
 
 Updating /mnt/store/melpa/working/config-general-mode/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/TLINDEN/config-general-mode.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out b4a8e6ba0bb027a77e4a0f701409f3e57bb2e4c0
+Built config-general-mode in 7.150s, finished at 2022-09-07T13:26:20+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Sep  7 13:26 packages/config-general-mode-20171024.1840.el
+4.0K -rw-r--r-- 1 root root 376 Sep  7 13:26 packages/config-general-mode-20171024.1840.entry
