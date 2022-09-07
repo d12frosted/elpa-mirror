@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/outergod/contextual.git
 
 Updating /mnt/store/melpa/working/contextual/
-Checking out origin/HEAD
-Checking out 7ad2bb36426fd182d4d5ee7fd9be1cc0db8c7a84
-Built contextual in 3.772s, finished at 2022-09-06T18:47:30+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Sep  6 18:47 packages/contextual-20180726.800.el
-4.0K -rw-r--r-- 1 root root  462 Sep  6 18:47 packages/contextual-20180726.800.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/outergod/contextual.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

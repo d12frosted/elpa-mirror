@@ -4,8 +4,8 @@
 
 ;; Author: Oleh Krehel
 ;; URL: https://github.com/abo-abo/org-download
-;; Package-Version: 20220906.1755
-;; Package-Commit: 7ca67dfa963c95c607dc6126004c5df49a4089c5
+;; Package-Version: 20220906.1929
+;; Package-Commit: 19e166f0a8c539b4144cfbc614309d47a9b2a9b7
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3") (async "1.2"))
 ;; Keywords: multimedia images screenshots download
@@ -508,7 +508,8 @@ It's inserted before the image link and is used to annotate it.")
   (interactive "sUrl: ")
   (let* ((link-and-ext (org-download--parse-link link))
          (filename
-          (cond ((and (memq major-mode '(org-mode org-journal-mode)) (eq org-download-method 'attach))
+          (cond ((and (derived-mode-p 'org-mode)
+                      (eq org-download-method 'attach))
                  (let ((org-download-image-dir (org-attach-dir t))
                        org-download-heading-lvl)
                    (apply #'org-download--fullname link-and-ext)))

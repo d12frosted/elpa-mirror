@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/company-mode/company-quickhelp.git
 
 Updating /mnt/store/melpa/working/company-quickhelp/
-Checking out origin/HEAD
-Checking out 6660a1b380b9599af9ef1cc617168db83f24b9b7
-Built company-quickhelp in 3.634s, finished at 2022-09-06T18:46:53+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Sep  6 18:46 packages/company-quickhelp-20220825.1037.el
-4.0K -rw-r--r-- 1 root root 517 Sep  6 18:46 packages/company-quickhelp-20220825.1037.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/company-mode/company-quickhelp.git/': GnuTLS recv error (-54): Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

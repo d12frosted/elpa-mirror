@@ -22,8 +22,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20220906.1907
-;; Package-Commit: e739de291d0b70005666d02699cd062127db0a85
+;; Package-Version: 20220906.1916
+;; Package-Commit: d89ded9c83dbc4c9b2edd92d13f13cb05c24fcdd
 ;; Author: Adrien Brochard
 ;; Keywords: kubernetes k8s tools processes
 ;; URL: https://github.com/abrochard/kubel
@@ -263,7 +263,9 @@ CMD is the kubectl command as a list."
 
 CMD is the command string to run."
   (kubel--log-command "kubectl-command" cmd)
-  (shell-command-to-string cmd))
+  (with-output-to-string
+    (with-current-buffer standard-output
+      (shell-command cmd t "*kubel stderr*"))))
 
 (defvar kubel-namespace "default"
   "Current namespace.")

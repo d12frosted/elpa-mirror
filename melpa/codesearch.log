@@ -3,19 +3,12 @@ Fetcher: github
 Source:  https://github.com/abingham/emacs-codesearch.git
 
 Updating /mnt/store/melpa/working/codesearch/
-Checking out origin/HEAD
-Checking out f6eb96f034a925444412cfa03e45e0ccbbafe3f2
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/codesearch/
-  to /tmp/codesearchvMvBO8/codesearch-20181006.1431
-    codesearch.el -> codesearch.el
-    listing-codesearch.el -> listing-codesearch.el
-Created codesearch-20181006.1431.tar containing:
-  codesearch-20181006.1431/
-  codesearch-20181006.1431/codesearch-pkg.el
-  codesearch-20181006.1431/codesearch.el
-  codesearch-20181006.1431/listing-codesearch.el
-Built codesearch in 3.231s, finished at 2022-09-06T18:45:50+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 490 Sep  6 18:45 packages/codesearch-20181006.1431.entry
- 20K -rw-r--r-- 1 root root 20K Sep  6 18:45 packages/codesearch-20181006.1431.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 503 curl 22 The requested URL returned error: 503
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
