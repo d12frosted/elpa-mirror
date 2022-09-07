@@ -6,10 +6,10 @@
 ;; Maintainer: Shigeaki Nishina
 ;; Created: March 11, 2020
 ;; URL: https://github.com/shg/julia-vterm.el
-;; Package-Version: 20220825.834
-;; Package-Commit: 738b9eb50b9febbca2bdcd5e880450eec707c1ee
+;; Package-Version: 20220907.633
+;; Package-Commit: a3ab6cef6ca938ba446f357b9618572115bf3721
 ;; Package-Requires: ((emacs "25.1") (vterm "0.0.1"))
-;; Version: 0.20
+;; Version: 0.21
 ;; Keywords: languages, julia
 
 ;; This file is not part of GNU Emacs.
@@ -144,10 +144,7 @@ If there's already an alive REPL buffer for the session, it will be opened."
     (if script-buffer
 	(with-current-buffer script-buffer
 	  (setq julia-vterm-fellow-repl-buffer repl-buffer)
-	  (let ((display-buffer-alist '((".*"
-					 (display-buffer-reuse-window)
-					 (reusable-frames . visible)))))
-	    (switch-to-buffer-other-window script-buffer))))))
+	  (switch-to-buffer-other-window script-buffer)))))
 
 (defun julia-vterm-repl-clear-buffer ()
   "Clear the content of the Julia REPL buffer."
@@ -251,10 +248,7 @@ With prefix ARG, prompt for session name."
     (setq julia-vterm-fellow-repl-buffer repl-buffer)
     (with-current-buffer repl-buffer
       (setq julia-vterm-repl-script-buffer script-buffer)
-      (let ((display-buffer-alist '((".*"
-				     (display-buffer-reuse-window display-buffer-reuse-mode-window)
-				     (reusable-frames . visible)))))
-	(switch-to-buffer-other-window repl-buffer)))))
+      (switch-to-buffer-other-window repl-buffer))))
 
 (defun julia-vterm-send-return-key ()
   "Send a return key to the Julia REPL."
