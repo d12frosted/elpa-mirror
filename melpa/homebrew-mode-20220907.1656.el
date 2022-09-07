@@ -1,14 +1,14 @@
-;;; homebrew-mode.el --- minor mode for editing Homebrew formulae
+;;; homebrew-mode.el --- Minor mode for editing Homebrew formulae
 
 ;; Copyright (C) 2020 Alex Dunn
 
 ;; Author: Alex Dunn <dunn.alex@gmail.com>
 ;; URL: https://github.com/dunn/homebrew-mode
-;; Package-Version: 20210919.331
-;; Package-Commit: 8c630c6f768b942a86a10750f720abc64a817cd0
+;; Package-Version: 20220907.1656
+;; Package-Commit: e32da1397ce176766e39c286861ef4c40d64bbf5
 ;; Version: 2.0.0
 ;; Package-Requires: ((emacs "24.4") (inf-ruby "2.4.0") (dash "1.2.0"))
-;; Keywords: homebrew brew ruby
+;; Keywords: languages homebrew brew ruby
 ;; Prefix: homebrew
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -105,7 +105,7 @@
 
 ;; Custom variables
 
-(defgroup homebrew-mode nil
+(defgroup homebrew nil
   "Minor mode for editing Homebrew formulae."
   :group 'ruby)
 
@@ -113,7 +113,7 @@
 ;; so ty lunaryorn.
 (defcustom homebrew-mode-keymap-prefix (kbd "C-c C-h")
   "Prefix for homebrew-mode key bindings."
-  :group 'homebrew-mode
+  :group 'homebrew
   :type 'string
   :risky t)
 
@@ -131,7 +131,7 @@
     (define-key map "u"     #'homebrew-brew-unpack)
     map)
   "Keymap for `homebrew-mode` commands prefixed by homebrew-mode-keymap-prefix."
-  :group 'homebrew-mode
+  :group 'homebrew
   :type 'string)
 
 (defvar homebrew-mode-map
@@ -143,14 +143,14 @@
 
 (defcustom homebrew-prefix "/usr/local"
   "The base of your Homebrew installation.  May be different on your system."
-  :group 'homebrew-mode
+  :group 'homebrew
   :type 'string)
 
 (defvar homebrew-executable (concat homebrew-prefix "/bin/brew"))
 
 (defcustom homebrew-cache-dir "~/Library/Caches/Homebrew/"
   "The cache directory for Homebrew."
-  :group 'homebrew-mode
+  :group 'homebrew
   :type 'string)
 
 (defcustom homebrew-formula-file-patterns
@@ -160,26 +160,29 @@
   "Regular expressions matching Homebrew formulae files.
 
 If you edit this variable, make sure the new value passes the formula-detection tests."
-  :group 'homebrew-mode
+  :group 'homebrew
   :type 'list
   :risky t)
 
 (defcustom homebrew-default-args
   '( "--verbose" )
   "Arguments passed to every invocation of `brew`."
-  :group 'homebrew-mode
+  :group 'homebrew
   :type 'list
   :risky t)
 
 (defcustom homebrew-patch-whitespace-mode nil
   "Turn on `whitespace-mode' when editing formulae with inline patches."
-  :group 'homebrew-mode
+  :group 'homebrew
   :type 'boolean)
 
 (defcustom homebrew-poet-executable nil
   "Path to `poet` executable.  Install with `pip install homebrew-pypi-poet`."
-  :group 'homebrew-mode
+  :group 'homebrew
   :type 'string)
+
+(defvar homebrew-tap-history '()
+  "History of visited Homebrew taps.")
 
 ;;; Internal functions
 
@@ -432,16 +435,22 @@ Pop the process buffer on failure."
 ;;;###autoload
 (defun homebrew-tap (tap)
   "Visit the Formula directory of TAP using Dired."
-  (interactive (list (completing-read "Visit Homebrew tap: "
-                                      (homebrew--list-taps) nil t)))
+  (interactive
+   (list (completing-read "Visit Homebrew tap: "
+                          (homebrew--list-taps)
+                          nil t nil 'homebrew-tap-history)))
   (when (string-blank-p tap)
     (error "No tap given"))
-  (let ((taproot (or (homebrew--get-tap-dir tap)
-                     (error "Tap not available locally: %s" tap))))
-    (dired (-find #'file-directory-p
-                  (list (concat taproot "Formula")
-                        (concat taproot "Casks")
-                        taproot)))))
+  (let* ((taproot (or (homebrew--get-tap-dir tap)
+                      (error "Tap not available locally: %s" tap)))
+         (subdirs (-filter #'file-directory-p
+                           (list (concat taproot "Formula")
+                                 (concat taproot "Casks"))))
+         (n (length subdirs)))
+    (cond ((= n 0) (dired taproot))
+          ((= n 1) (dired (-first-item subdirs)))
+          (t       (dired taproot)
+                   (dired-goto-file (-first-item subdirs))))))
 
 (defun homebrew-poet-insert (packages)
   "Insert resource blocks for the specified Python PACKAGES."

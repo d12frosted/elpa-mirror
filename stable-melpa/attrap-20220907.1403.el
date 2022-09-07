@@ -6,8 +6,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/attrap
-;; Package-Version: 20220822.1348
-;; Package-Commit: 62fbd5f2665f0001f9c6a2dd0622edda7f4431da
+;; Package-Version: 20220907.1403
+;; Package-Commit: aa74a1e2e5cbc0d65a6d0c2c5dec3c8b3cd0370f
 ;; Created: February 2018
 ;; Keywords: programming, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "25.1") (f "0.19.0") (flycheck "0.30") (s "1.11.0"))
@@ -180,6 +180,7 @@
     "RecordWildCards"
     "ScopedTypeVariables"
     "StandaloneDeriving"
+    "StandaloneKindSignatures"
     ; "StarIsType" ; not a 'cool' extension
     "TemplateHaskell"
     "TransformListComp"

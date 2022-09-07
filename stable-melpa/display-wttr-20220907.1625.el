@@ -4,9 +4,9 @@
 
 ;; Author: Jose G Perez Taveras <josegpt27@gmail.com>
 ;; Maintainer: Jose G Perez Taveras <josegpt27@gmail.com>
-;; Version: 2.0.0
-;; Package-Version: 20220316.213
-;; Package-Commit: 2cb36df32b0ecf381185126a969b7282af5a0e01
+;; Version: 2.1.0
+;; Package-Version: 20220907.1625
+;; Package-Commit: d1f5b57e00ee229548005ddd1e8061e213effd32
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/josegpt/display-wttr
 ;; SPDX-License-Identifier: GPL-3.0-only
@@ -156,8 +156,12 @@ Argument LOCATION holds the location to fetch info from."
 (defun display-wttr--sentinel ()
   "Update `display-wttr-string' only when fetching all locations is finished."
   (when (= (length display-wttr-locations) (length display-wttr-list))
-    (setq display-wttr-string
-          (concat (string-join display-wttr-list " ") " "))
+    (let ((wttr-string (string-join display-wttr-list " ")))
+      (setq display-wttr-string
+            (concat (unless (string-match (rx (: bol "Unknown location;"))
+                                          wttr-string)
+                      wttr-string)
+                    " ")))
     (run-hooks 'display-wttr-hook)
     (force-mode-line-update 'all)))
 

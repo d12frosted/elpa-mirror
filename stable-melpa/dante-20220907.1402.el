@@ -9,13 +9,13 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/dante
-;; Package-Version: 20220429.1454
+;; Package-Version: 20220907.1402
 ;; Package-X-Original-Version: 20200921.723
 ;; Package-Commit: e2acbf6dd37818cbf479c9c3503d8a59192e34af
 ;; Created: October 2016
 ;; Keywords: haskell, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "25.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (haskell-mode "13.14") (s "1.11.0") (lcr "1.0"))
-;; Package-Commit: b81081c2eb8dcbd7e67e05cf5e1991df6cf3e57c
+;; Package-Commit: 1ab4d9520d17cd37d1f370d1c8adebf4d9d3f737
 ;; X-Original-Version: 0-pre
 
 ;; This file is free software; you can redistribute it and/or modify
@@ -720,7 +720,7 @@ This is a standard process sentinel function."
 (defun dante-show-process-problem (process change)
   "Report to the user that PROCESS reported CHANGE, causing it to end."
   (message "Problem with GHCi process!")
-  (switch-to-buffer (process-buffer process))
+  (display-buffer (process-buffer process) 'display-buffer-pop-up-window)
   (goto-char (point-max))
   (insert "\n---\n\n")
   (insert
