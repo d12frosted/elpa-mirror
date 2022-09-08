@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `fontaine' (or `fontaine.el'), and provides every other
 piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.3.0,
-released on 2022-07-06.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.4.0,
+released on 2022-09-07.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.4.0-dev.
+Current development target is 0.5.0-dev.
 
 ⁃ Package name (GNU ELPA): `fontaine'
 ⁃ Official manual: <https://protesilaos.com/emacs/fontaine>
@@ -36,6 +36,7 @@ Table of Contents
 .. 1. GNU ELPA package
 .. 2. Manual installation
 4. Sample configuration
+.. 1. Persist font configurations on theme switch
 5. Acknowledgements
 6. GNU Free Documentation License
 7. Indices
@@ -71,27 +72,32 @@ Table of Contents
 
   Presets consist of a list of properties that govern the family,
   weight, and height of the faces `default', `fixed-pitch',
-  `variable-pitch', `bold', and `italic'.  Each preset is identified by
-  a user-defined symbol as the car of a property list.  It looks like
-  this (check the default value of `fontaine-presets' for how everything
-  is pieced together):
+  `fixed-pitch-serif', `variable-pitch', `bold', and `italic'.  Each
+  preset is identified by a user-defined symbol as the car of a property
+  list.  It looks like this (check the default value of
+  `fontaine-presets' for how everything is pieced together):
 
   ┌────
   │ (regular
-  │  :default-family "Hack"
-  │  :default-weight normal
+  │  ;; I keep all properties for didactic purposes, but most can be
+  │  ;; omitted.
+  │  :default-family "Monospace"
+  │  :default-weight regular
   │  :default-height 100
-  │  :fixed-pitch-family "Fira Code"
+  │  :fixed-pitch-family nil ; falls back to :default-family
   │  :fixed-pitch-weight nil ; falls back to :default-weight
   │  :fixed-pitch-height 1.0
-  │  :variable-pitch-family "Noto Sans"
-  │  :variable-pitch-weight normal
+  │  :fixed-pitch-serif-family nil ; falls back to :default-family
+  │  :fixed-pitch-serif-weight nil ; falls back to :default-weight
+  │  :fixed-pitch-serif-height 1.0
+  │  :variable-pitch-family "Sans"
+  │  :variable-pitch-weight nil
   │  :variable-pitch-height 1.0
   │  :bold-family nil ; use whatever the underlying face has
   │  :bold-weight bold
-  │  :italic-family "Source Code Pro"
+  │  :italic-family nil
   │  :italic-slant italic
-  │  :line-spacing 1)
+  │  :line-spacing nil)
   └────
 
   The doc string of `fontaine-presets' explains all properties in detail
@@ -166,8 +172,8 @@ Table of Contents
 2.1 Shared and implicit fallback values for presets
 ───────────────────────────────────────────────────
 
-  The user option `fontaine-presets' may look like this (its default
-  value):
+  The user option `fontaine-presets' may look like this (though check
+  its default value before you make any edits):
 
   ┌────
   │ (setq fontaine-presets
@@ -466,37 +472,60 @@ Table of Contents
   │ (setq fontaine-latest-state-file
   │       (locate-user-emacs-file "fontaine-latest-state.eld"))
   │ 
+  │ ;; Iosevka Comfy is my highly customised build of Iosevka with
+  │ ;; monospaced and duospaced (quasi-proportional) variants as well as
+  │ ;; support or no support for ligatures:
+  │ ;; <https://git.sr.ht/~protesilaos/iosevka-comfy>.
+  │ ;;
+  │ ;; Iosevka Comfy            == monospaced, supports ligatures
+  │ ;; Iosevka Comfy Fixed      == monospaced, no ligatures
+  │ ;; Iosevka Comfy Duo        == quasi-proportional, supports ligatures
+  │ ;; Iosevka Comfy Wide       == like Iosevka Comfy, but wider
+  │ ;; Iosevka Comfy Wide Fixed == like Iosevka Comfy Fixed, but wider
   │ (setq fontaine-presets
-  │       '((regular
-  │ 	 :default-family "Hack"
-  │ 	 :default-weight normal
-  │ 	 :default-height 100
-  │ 	 :fixed-pitch-family "Fira Code"
-  │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-height 1.0
-  │ 	 :variable-pitch-family "Noto Sans"
-  │ 	 :variable-pitch-weight normal
-  │ 	 :variable-pitch-height 1.0
-  │ 	 :bold-family nil ; use whatever the underlying face has
-  │ 	 :bold-weight bold
-  │ 	 :italic-family "Source Code Pro"
-  │ 	 :italic-slant italic
-  │ 	 :line-spacing 1)
+  │       '((tiny
+  │ 	 :default-family "Iosevka Comfy Wide Fixed"
+  │ 	 :default-height 70)
+  │ 	(small
+  │ 	 :default-family "Iosevka Comfy Fixed"
+  │ 	 :default-height 90)
+  │ 	(regular
+  │ 	 :default-height 100)
+  │ 	(medium
+  │ 	 :default-height 110)
   │ 	(large
-  │ 	 :default-family "Iosevka"
-  │ 	 :default-weight normal
-  │ 	 :default-height 150
+  │ 	 :default-weight semilight
+  │ 	 :default-height 140
+  │ 	 :bold-weight extrabold)
+  │ 	(presentation
+  │ 	 :default-weight semilight
+  │ 	 :default-height 170
+  │ 	 :bold-weight extrabold)
+  │ 	(jumbo
+  │ 	 :default-weight semilight
+  │ 	 :default-height 220
+  │ 	 :bold-weight extrabold)
+  │ 	(t
+  │ 	 ;; I keep all properties for didactic purposes, but most can be
+  │ 	 ;; omitted.  See the fontaine manual for the technicalities:
+  │ 	 ;; <https://protesilaos.com/emacs/fontaine>.
+  │ 	 :default-family "Iosevka Comfy"
+  │ 	 :default-weight regular
+  │ 	 :default-height 100
   │ 	 :fixed-pitch-family nil ; falls back to :default-family
   │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
   │ 	 :fixed-pitch-height 1.0
-  │ 	 :variable-pitch-family "FiraGO"
-  │ 	 :variable-pitch-weight normal
-  │ 	 :variable-pitch-height 1.05
+  │ 	 :fixed-pitch-serif-family nil ; falls back to :default-family
+  │ 	 :fixed-pitch-serif-weight nil ; falls back to :default-weight
+  │ 	 :fixed-pitch-serif-height 1.0
+  │ 	 :variable-pitch-family "Iosevka Comfy Duo"
+  │ 	 :variable-pitch-weight nil
+  │ 	 :variable-pitch-height 1.0
   │ 	 :bold-family nil ; use whatever the underlying face has
   │ 	 :bold-weight bold
-  │ 	 :italic-family nil ; use whatever the underlying face has
+  │ 	 :italic-family nil
   │ 	 :italic-slant italic
-  │ 	 :line-spacing 1)))
+  │ 	 :line-spacing nil)))
   │ 
   │ ;; Recover last preset or fall back to desired style from
   │ ;; `fontaine-presets'.
@@ -511,6 +540,60 @@ Table of Contents
   │ ;;     (info "(elisp) Key Binding Conventions")
   │ (define-key global-map (kbd "C-c f") #'fontaine-set-preset)
   │ (define-key global-map (kbd "C-c F") #'fontaine-set-face-font)
+  └────
+
+
+4.1 Persist font configurations on theme switch
+───────────────────────────────────────────────
+
+  Themes re-apply face definitions when they are loaded.  This is
+  necessary to render the theme.  For certain faces, such as `bold' and
+  `italic', it means that their font family may be reset (depending on
+  the particularities of the theme).
+
+  To avoid such a problem, we can arrange to restore the current font
+  preset which was applied by `fontaine-set-preset'.  Fontaine provides
+  the command `fontaine-apply-current-preset'.  It can either be called
+  interactively after loading a theme or be assigned to a hook that is
+  ran at the post `load-theme' phase.
+
+  Some themes that provide a hook are the `modus-themes' and `ef-themes'
+  (both by Protesilaos), so we can use something like:
+
+  ┌────
+  │ (add-hook 'modus-themes-after-load-theme-hook #'fontaine-apply-current-preset))
+  └────
+
+  If both packages are used, we can either write two lines of `add-hook'
+  or do this:
+
+  ┌────
+  │ ;; Persist font configurations while switching themes (doing it with
+  │ ;; my `modus-themes' and `ef-themes' via the hooks they provide).
+  │ (dolist (hook '(modus-themes-after-load-theme-hook ef-themes-post-load-hook))
+  │   (add-hook hook #'fontaine-apply-current-preset))
+  └────
+
+  Themes must specify a hook that is called by their relevant commands
+  at the post-theme-load phase.  This can also be done in a
+  theme-agnostic way:
+
+  ┌────
+  │ ;; Set up the `after-enable-theme-hook'
+  │ (defvar after-enable-theme-hook nil
+  │   "Normal hook run after enabling a theme.")
+  │ 
+  │ (defun run-after-enable-theme-hook (&rest _args)
+  │   "Run `after-enable-theme-hook'."
+  │   (run-hooks 'after-enable-theme-hook))
+  │ 
+  │ (advice-add 'enable-theme :after #'run-after-enable-theme-hook)
+  └────
+
+  And then simply use that hook:
+
+  ┌────
+  │ (add-hook 'after-enable-theme-hook #'fontaine-apply-current-preset)
   └────
 
 
