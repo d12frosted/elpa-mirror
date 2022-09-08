@@ -6,8 +6,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/attrap
-;; Package-Version: 20220907.1403
-;; Package-Commit: aa74a1e2e5cbc0d65a6d0c2c5dec3c8b3cd0370f
+;; Package-Version: 20220908.1519
+;; Package-Commit: ecfdf357f4bde6d9acb0826c82a32e72e9c4972f
 ;; Created: February 2018
 ;; Keywords: programming, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "25.1") (f "0.19.0") (flycheck "0.30") (s "1.11.0"))
@@ -251,6 +251,10 @@ usage: (attrap-alternatives CLAUSES...)"
       (re-search-forward "\\(\\.\\) [^ ]" (line-end-position))
       (replace-match ". " nil t nil 1)))
    ((string-match "might as well have a documentation" msg)
+    (attrap-one-option 'add-empty-doc
+      (beginning-of-line)
+      (insert "  \"\"\n")))
+   ((string-match "should have documentation" msg)
     (attrap-one-option 'add-empty-doc
       (beginning-of-line)
       (insert "  \"\"\n")))

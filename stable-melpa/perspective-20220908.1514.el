@@ -6,8 +6,8 @@
 
 ;; Author: Natalie Weizenbaum <nex342@gmail.com>
 ;; URL: http://github.com/nex3/perspective-el
-;; Package-Version: 20220828.1410
-;; Package-Commit: 866c699d2147ff0fffa334f4f20b5c5c5996527a
+;; Package-Version: 20220908.1514
+;; Package-Commit: 4cb9be75a41b66ec91d95464f1eed34cb1ea3b0a
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.5"))
 ;; Version: 2.17
 ;; Created: 2008-03-05
@@ -1949,9 +1949,11 @@ to the perspective's *scratch* buffer."
                         :merge-list (frame-parameter nil 'persp-merge-list))))))
 
 (defun persp-purge-exception-p (buffer)
-  (let (result)
-    (dolist (exception persp-purge-initial-persp-on-save-exceptions result)
-      (setq result (or result (string-match-p exception (buffer-name buffer)))))))
+  (if (buffer-live-p buffer)
+      (let (result)
+        (dolist (exception persp-purge-initial-persp-on-save-exceptions result)
+          (setq result (or result (string-match-p exception (buffer-name buffer))))))
+    nil))
 
 ;;;###autoload
 (cl-defun persp-state-save (&optional file interactive?)

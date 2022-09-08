@@ -5,8 +5,8 @@
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; Created: 25 Jun 2016
 ;; Version: 1.1
-;; Package-Version: 20180308.1752
-;; Package-Commit: a6f63cf7ed93f0c0f7c207e6595813966f8852b9
+;; Package-Version: 20220908.1610
+;; Package-Commit: c006a5fd0e5c9e297aa2ad71b2f02f463286b5e3
 ;; Package-Requires: ((dash "2.8.0") (s "1.9.0") (shut-up "0.3.2"))
 ;;; Commentary:
 
@@ -323,7 +323,7 @@ Required for `pyimport-remove-unused'.")
     (kill-buffer "*pyimport*")
 
     (let* ((raw-lines (s-split "\n" (s-trim flycheck-output)))
-           (lines (--map (s-split ":" it) raw-lines))
+           (lines (--map (s-split-up-to ":" it 2) raw-lines))
            (import-lines (--filter (s-ends-with-p "imported but unused" (-last-item it)) lines))
            (unused-imports (--map (cons (read (nth 1 it))
                                         (pyimport--extract-unused-var (nth 2 it))) import-lines)))
