@@ -27,6 +27,8 @@
 ;; POSSIBILITY OF SUCH DAMAGE.
 
 ;;; Version: 0.8
+;; Package-Version: 20210707.1633
+;; Package-Commit: 28be94d89bff2e1c7edef7244d7c5ba0636b1296
 ;;; Author: Jason R. Blevins <jrblevin@xbeta.org>
 ;;; Keywords: plain text, notes, Simplenote, Notational Velocity
 ;;; URL: https://jblevins.org/projects/deft/

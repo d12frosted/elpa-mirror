@@ -1,0 +1,16 @@
+(org-roam-bibtex .
+		 [(20220908 1053)
+		  ((emacs
+		    (27 1))
+		   (org-roam
+		    (2 2 0))
+		   (bibtex-completion
+		    (2 0 0)))
+		  "Org Roam meets BibTeX" tar
+		  ((:commit . "12f721ab0b1e74ccae00711d60aab700b38fa8cc")
+		   (:authors
+		    ("Mykhailo Shevchuk" . "mail@mshevchuk.com")
+		    ("Leo Vivier" . "leo.vivier+dev@gmail.com"))
+		   (:maintainer "Mykhailo Shevchuk" . "mail@mshevchuk.com")
+		   (:keywords "bib" "hypermedia" "outlines" "wp")
+		   (:url . "https://github.com/org-roam/org-roam-bibtex"))])
