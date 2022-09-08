@@ -1364,15 +1364,16 @@
 	      (:authors
 	       ("Andreas Politz" . "politza@fh-trier.de")))])
  (php-mode .
-	   [(1 24 0)
+	   [(1 24 1)
 	    ((emacs
 	      (25 2)))
 	    "Major mode for editing PHP code" tar
 	    ((:url . "https://github.com/emacs-php/php-mode")
+	     (:keywords "languages" "php")
 	     (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
 	     (:authors
 	      ("Eric James Michael Ritz"))
-	     (:keywords "languages" "php"))])
+	     (:commit . "ae3b0b184e096b8bd916516ae7db908dbb27ec1e"))])
  (popon .
 	[(0 9)
 	 ((emacs
