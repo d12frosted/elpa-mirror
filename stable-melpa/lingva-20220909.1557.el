@@ -5,8 +5,8 @@
 ;; Author: marty hiatt <martianhiatus [a t] riseup [d o t] net>
 ;; Homepage: https://codeberg.org/martianh/lingva.el
 ;; Package-Requires: ((emacs "25.1"))
-;; Package-Version: 20220623.954
-;; Package-Commit: 39994a57b1d6d4d7e0f5df6b98a3e28b2073ddb7
+;; Package-Version: 20220909.1557
+;; Package-Commit: c28abd07754f03c50c8a0b838a831b14de6f595f
 ;; Version: 0.2
 ;; Keywords: convenience, translation, wp, text
 
@@ -181,6 +181,8 @@ Can be used for either source or target for a lingva query.
 (defvar lingva-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "i") #'lingva-translate)
+    (define-key map (kbd "s") #'lingva-translate)
+    (define-key map (kbd "v") #'lingva-paste-to-search)
     map)
   "Keymap for lingva results buffer.")
 
@@ -247,6 +249,11 @@ language or target language."
   (mapcar (lambda (x)
             (cons (cdr x) (car x)))
           langs))
+
+(defun lingva-paste-to-search (&optional arg)
+  "Call `lingva-translate' with the most recent killed text as input."
+  (interactive)
+  (lingva-translate arg (current-kill 0)))
 
 ;;;###autoload
 (defun lingva-translate (&optional arg text variable-pitch)
