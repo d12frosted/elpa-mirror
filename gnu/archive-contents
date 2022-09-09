@@ -1664,7 +1664,7 @@
 	   ("Ivan Kanis" . "ivan@kanis.fr"))
 	  (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
  (kind-icon .
-	    [(0 1 6)
+	    [(0 1 7)
 	     ((emacs
 	       (27 1))
 	      (svg-lib
@@ -1675,7 +1675,7 @@
 	      (:maintainer "J.D. Smith" . "jdtsmith@gmail.com")
 	      (:authors
 	       ("J.D. Smith" . "jdtsmith@gmail.com"))
-	      (:commit . "f10bf6170769a1b0ef7d06347d1631fb6e71446b"))])
+	      (:commit . "4fe30b105c21303754f04156a41e00d9a058777d"))])
  (kiwix .
 	[(1 1 5)
 	 ((emacs
@@ -2467,7 +2467,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "e01a8f7e80c5c83dfcfb87b10e0213d4963e4d15"))])
  (pyim .
-       [(5 2 3)
+       [(5 2 4)
 	((emacs
 	  (25 1))
 	 (async
@@ -2481,7 +2481,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "3d9d16b578a1136ef344b61db5f0d55cefcf4164"))])
+	 (:commit . "6b4329a25f0ec61f8fd404d926315064b966fa0b"))])
  (pyim-basedict .
 		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar
