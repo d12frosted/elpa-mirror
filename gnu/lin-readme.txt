@@ -9,15 +9,20 @@
 This manual, written by Protesilaos Stavrou, describes the specifics of
 `lin.el'.
 
-The documentation furnished herein corresponds to stable version 0.4.0,
-released on 2022-06-09.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.0.0,
+released on 2022-09-08.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.5.0-dev.
+Current development target is 1.1.0-dev.
 
-⁃ Homepage: <https://protesilaos.com/emacs/lin>.
-⁃ Git repository: <https://git.sr.ht/~protesilaos/lin>.
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/lin>.
+⁃ Package name (GNU ELPA): `lin'
+⁃ Official manual: <https://protesilaos.com/emacs/lin>
+⁃ Change log: <https://protesilaos.com/emacs/lin-changelog>
+⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/lin>
+  • Mirrors:
+    ⁃ GitHub: <https://github.com/protesilaos/lin>
+    ⁃ GitLab: <https://gitlab.com/protesilaos/lin>
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/lin>
 
 Table of Contents
 ─────────────────
@@ -173,11 +178,15 @@ Table of Contents
   │ 	notmuch-tree-mode-hook
   │ 	occur-mode-hook
   │ 	org-agenda-mode-hook
+  │ 	pdf-outline-buffer-mode-hook
   │ 	proced-mode-hook
   │ 	tabulated-list-mode-hook))
   │ 
   │ (lin-global-mode 1)
   └────
+
+  Check out Christian Tietze’s blog post on integrating Lin with
+  Neotree: <https://christiantietze.de/posts/2022/03/hl-line-priority/>.
 
 
 5 Acknowledgements
@@ -189,8 +198,8 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to code or documentation
-        Christian Tietze, Damien Cassou, Federico Stilman, Kai von
-        Fintel, Nicolas De Jaeghere.
+        Christian Tietze, Damien Cassou, Federico Stilman, Gautier
+        Ponsinet, Kai von Fintel, Nicolas De Jaeghere.
 
 
 6 GNU Free Documentation License

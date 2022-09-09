@@ -1735,16 +1735,16 @@
 	 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	(:url . "http://elpa.gnu.org/packages/lex.html"))])
  (lin .
-      [(0 4 0)
+      [(1 0 0)
        ((emacs
 	 (27 1)))
        "Make `hl-line-mode' more suitable for selection UIs" tar
        ((:url . "https://git.sr.ht/~protesilaos/lin")
 	(:keywords "convenience" "faces" "theme")
-	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+	(:maintainer "Lin Development" . "~protesilaos/lin@lists.sr.ht")
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	(:commit . "6d2493ce0b7e0891b85e03e103ddd5c68aeb60a6"))])
+	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
  (lmc .
       [(1 4)
        ((emacs

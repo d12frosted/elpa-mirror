@@ -4,8 +4,8 @@
 ;;
 ;; Author:     Rustem Muslimov <r.muslimov@gmail.com>
 ;; Version:    0.14.0
-;; Package-Version: 20210603.802
-;; Package-Commit: cef26f2c063f2473af42d0e126c8613fe2f709e4
+;; Package-Version: 20220908.1736
+;; Package-Commit: 010639fc6bd6c710b56e0f095352da60c92473a3
 ;; Keywords:   github, gitlab, bitbucket, gist, stash, phabricator, sourcehut, pagure
 ;; Homepage:   https://github.com/rmuslimov/browse-at-remote
 ;; Package-Requires: ((f "0.17.2") (s "1.9.0") (cl-lib "0.5"))
@@ -70,7 +70,8 @@
     ("^.*\\.visualstudio\\.com$" . "ado")
     ("^pagure\\.io$" . "pagure")
     ("^.*\\.fedoraproject\\.org$" . "pagure")
-    ("^.*\\.googlesource\\.com$" . "gitiles"))
+    ("^.*\\.googlesource\\.com$" . "gitiles")
+    ("^gitlab\\.gnome\\.org$" . "gitlab"))
   "Alist of domain regular expressions to remote types."
 
   :type browse-at-remote--customize-remote-types
@@ -337,7 +338,7 @@ If HEAD is detached, return nil."
   "URL formatted for stash"
 	(let* ((branch (cond
                   ((string= location "master") "")
-                  (t (string-join (list "?at=refs%2Fheads%2F" location)))))
+                  (t (string-join (list "?at=" location)))))
          (lines (cond
                  (lineend (format "#%d-%d" linestart lineend))
                  (linestart (format "#%d" linestart))

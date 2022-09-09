@@ -3,9 +3,9 @@
 ;; Copyright (C) 2012 Constantin Kulikov
 
 ;; Author: Constantin Kulikov (Bad_ptr) <zxnotdead@gmail.com>
-;; Version: 3.0.4
-;; Package-Version: 20220818.1621
-;; Package-Commit: 8f192c304ef1c51e28a9a36284ee1f79a1931b29
+;; Version: 3.0.5
+;; Package-Version: 20220908.1130
+;; Package-Commit: cc5d552cf8e2923fbd5803e59bd9b5392e051b9f
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: perspectives, session, workspace, persistence, windows, buffers, convenience
 ;; URL: https://github.com/Bad-ptr/persp-mode.el
@@ -3564,14 +3564,18 @@ Return `NAME'."
 
 (defun persp-delete-other-windows ()
   (let ((win (selected-window)))
-    (when (window-parameter win 'window-side)
+    (when (or (window-parameter win 'window-side)
+              (window-minibuffer-p win))
       (setq win (cl-loop
                  for win in (window-list nil 1)
                  unless (window-parameter win 'window-side)
                  return win)))
     (when win
       (let ((ignore-window-parameters t))
-        (delete-other-windows win)))))
+        (condition-case-unless-debug err
+            (delete-other-windows win)
+          (error
+           (message "[persp-mode] Warning: Can not delete-other-windows -- %S" err)))))))
 
 (cl-defun persp-restore-window-conf (&optional (frame (selected-frame))
                                                (persp (get-frame-persp frame))
@@ -3845,7 +3849,7 @@ of the perspective %S can't be saved."
                      (tramp-tramp-file-p buf-f-name))
             (let ((dissected-f-name (tramp-dissect-file-name buf-f-name))
                   tmh)
-              (if (tramp-file-name-hop dissected-f-name)
+              (if (tramp-file-name-method dissected-f-name)
                   (when (and
                          (or (featurep 'tramp-sh) (require 'tramp-sh nil t))
                          (fboundp 'tramp-compute-multi-hops)
