@@ -5,12 +5,12 @@
 ;; Author: Ag Ibragimomv <https://github.com/agzam>
 ;; Maintainer: Ag Ibragimomv <agzam.ibragimov@gmail.com>
 ;; Created: May, 2021
-;; Version: 1.0.0
-;; Package-Version: 20220508.2141
-;; Package-Commit: f146d1b406308298b4004a28aaa11124b02d015b
+;; Version: 1.1.0
+;; Package-Version: 20220909.457
+;; Package-Commit: 62894ac7b8b85eb03766f66072b0be10ffb6898e
 ;; Keywords: convenience extensions outlines
 ;; Homepage: https://github.com/agzam/org-edit-indirect.el
-;; Package-Requires: ((emacs "25.1") (edit-indirect "0.1.6") (org "9.0"))
+;; Package-Requires: ((emacs "27") (edit-indirect "0.1.10") (org "9.0"))
 ;;
 ;; This file is not part of GNU Emacs
 
@@ -49,11 +49,11 @@
   (let* ((el-type (org-element-type (org-element-context org-element)))
          (parent (org-element-property :parent org-element))
          (beg (pcase el-type
-                ((or `quote-block `verse-block `comment-block `plain-list)
+                ((or `quote-block `verse-block `comment-block `plain-list 'drawer 'paragraph 'headline)
                  (org-element-property :contents-begin org-element))
                 (_ (org-element-property :begin (or parent org-element)))))
          (end (pcase el-type
-                ((or `quote-block `verse-block `comment-block `plain-list)
+                ((or `quote-block `verse-block `comment-block `plain-list 'drawer 'paragraph 'headline)
                  (org-element-property :contents-end org-element))
                 (_ (org-element-property :end (or parent org-element))))))
     (edit-indirect-region beg end :display)))
@@ -71,7 +71,7 @@ ARG is passed to `org-edit-special'."
     (pcase (org-element-type context)
       ((or `quote-block `verse-block `comment-block
            `paragraph `headline `property-drawer
-           `plain-list `item)
+           `plain-list `item 'drawer 'link)
        (org-edit-indirect-generic-block element))
       (_ (org-edit-special arg)))))
 
