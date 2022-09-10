@@ -3,10 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~shoshin/lakota-input
 
 Cloning https://git.sr.ht/~shoshin/lakota-input to /mnt/store/melpa/working/lakota-input/
-
-Command 'env LC_ALL\=C git clone https\://git.sr.ht/\~shoshin/lakota-input /mnt/store/melpa/working/lakota-input/' exited with non-zero exit-code: 128
-
-Cloning into '/mnt/store/melpa/working/lakota-input'...
-fatal: unable to access 'https://git.sr.ht/~shoshin/lakota-input/': The requested URL returned error: 403
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out b74b9de284a0404a120bb15340def4dd2f9a4779
+Built lakota-input in 3.327s, finished at 2022-09-09T21:56:47+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Sep  9 21:56 packages/lakota-input-20200823.2146.el
+4.0K -rw-r--r-- 1 root root  361 Sep  9 21:56 packages/lakota-input-20200823.2146.entry

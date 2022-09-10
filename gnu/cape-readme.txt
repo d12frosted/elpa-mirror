@@ -6,44 +6,49 @@
 Table of Contents
 ─────────────────
 
-1. Introduction
-2. Available Capfs
-3. Configuration
-4. Experimental features
+1. Available Capfs
+2. Configuration
+3. Experimental features
 .. 1. Company adapter
 .. 2. Super-Capf - Merging multiple Capfs
 .. 3. Capf-Buster - Cache busting
 .. 4. Other Capf transformers
-5. Contributions
+4. Contributions
 
 
+Cape provides Completion At Point Extensions which can be used in
+combination with the [Corfu] completion UI or the default completion
+UI. The completion backends used by `completion-at-point' are so called
+`completion-at-point-functions' (Capfs). In principle, the Capfs
+provided by Cape can also be used by [Company].
 
+You can register the `cape-*' functions in the
+`completion-at-point-functions' list.  This makes the backends available
+for completion, which is usually invoked by pressing `TAB' or
+`M-TAB'. The functions can also be invoked interactively to trigger the
+respective completion at point. You can bind them directly to a key in
+your user configuration. Notable commands/Capfs are `cape-line' for
+completion of a line from the current buffer and `cape-file' for
+completion of a file name.  The command `cape-symbol' is particularly
+useful for documentation of Elisp packages or configurations, since it
+completes Elisp symbols anywhere.
 
+Cape has the super power to transform Company backends into Capfs and
+merge multiple Capfs into a Super-Capf! These transformers allow you to
+still take advantage of Company backends even if you are not using
+Company as frontend.
 
-1 Introduction
-══════════════
+Table of Contents
+─────────────────
 
-  Cape provides a bunch of Completion At Point Extensions which can be
-  used in combination with my [Corfu] completion UI or the default
-  completion UI. The completion backends used by `completion-at-point'
-  are so called `completion-at-point-functions' (Capfs). In principle,
-  the Capfs provided by Cape can also be used by [Company].
-
-  You can register the `cape-*' functions in the
-  `completion-at-point-functions' list.  This makes the backends
-  available for completion, which is usually invoked by pressing `TAB'
-  or `M-TAB'. The functions can also be invoked interactively to trigger
-  the respective completion at point. You can bind them directly to a
-  key in your user configuration. Notable commands/capfs are `cape-line'
-  for completion of a line from the current buffer and `cape-file' for
-  completion of a file name.  The command `cape-symbol' is particularily
-  useful for documentation of Elisp packages or configurations, since it
-  completes elisp symbols anywhere.
-
-  On the more experimental side, Cape has the super power to transform
-  Company backends into Capfs and merge multiple Capfs into a
-  Super-Capf! These transformers allow you to still take advantage of
-  Company backends even if you are not using Company as frontend.
+1. Available Capfs
+2. Configuration
+3. Experimental features
+.. 1. Company adapter
+.. 2. Super-Capf - Merging multiple Capfs
+.. 3. Capf-Buster - Cache busting
+.. 4. Other Capf transformers
+4. Contributions
 
 
 [Corfu] <https://github.com/minad/corfu>
@@ -51,7 +56,7 @@ Table of Contents
 [Company] <https://github.com/company-mode/company-mode>
 
 
-2 Available Capfs
+1 Available Capfs
 ═════════════════
 
   ⁃ `cape-dabbrev': Complete word from current buffers
@@ -69,7 +74,7 @@ Table of Contents
   ⁃ `cape-rfc1345': Complete unicode char using RFC 1345 mnemonics.
 
 
-3 Configuration
+2 Configuration
 ═══════════════
 
   Cape is available on GNU ELPA and MELPA. You can install the package
@@ -105,8 +110,8 @@ Table of Contents
   │ 	 ("C-c p r" . cape-rfc1345))
   │   :init
   │   ;; Add `completion-at-point-functions', used by `completion-at-point'.
-  │   (add-to-list 'completion-at-point-functions #'cape-file)
   │   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  │   (add-to-list 'completion-at-point-functions #'cape-file)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-history)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-tex)
@@ -121,20 +126,19 @@ Table of Contents
   └────
 
 
-4 Experimental features
+3 Experimental features
 ═══════════════════════
 
-4.1 Company adapter
+3.1 Company adapter
 ───────────────────
 
   /Wrap your Company backend in a Cape and turn it into a Capf!/
 
-  Cape provides an adapter for Company backends
-  `cape-company-to-capf'. The adapter transforms Company backends to
-  Capfs which are understood by the built-in Emacs completion
-  mechanism. The function is approximately the inverse of the
-  `company-capf' backend from Company. The adapter is still experimental
-  and may have certain edge cases. The adapter can be used as follows:
+  Cape provides the adapter `cape-company-to-capf' for Company
+  backends. The adapter transforms Company backends to Capfs which are
+  understood by the built-in Emacs completion mechanism. The function is
+  approximately the inverse of the `company-capf' backend from
+  Company. The adapter can be used as follows:
 
   ┌────
   │ ;; Use Company backends as Capfs.
@@ -143,8 +147,8 @@ Table of Contents
   │     (list #'company-files #'company-ispell #'company-dabbrev)))
   └────
 
-  Note that the adapter does not require Company to be
-  installed. Backends implementing the Company specification do not
+  Note that the adapter does not require Company to be installed or
+  enabled.  Backends implementing the Company specification do not
   necessarily have to depend on Company, however in practice most
   backends do. The following shows a small example completion backend,
   which can be used with both `completion-at-point' (Corfu, default
@@ -194,7 +198,7 @@ Table of Contents
   └────
 
 
-4.2 Super-Capf - Merging multiple Capfs
+3.2 Super-Capf - Merging multiple Capfs
 ───────────────────────────────────────
 
   /Throw multiple Capfs under the Cape and get a Super-Capf!/
@@ -206,7 +210,7 @@ Table of Contents
 
   Note that `cape-super-capf' is not needed if you want to use multiple
   Capfs which are tried one by one, e.g., it is perfectly possible to
-  use `cape-file' together with the lsp-mode Capf or other programming
+  use `cape-file' together with the Lsp-mode Capf or other programming
   mode Capfs by adding `cape-file' to the
   `completion-at-point-functions' list. The file completion will be
   available in comments and string literals. `cape-super-capf' is only
@@ -226,13 +230,18 @@ Table of Contents
   │ ;; Merge the dabbrev, dict and keyword capfs, display candidates together.
   │ (setq-local completion-at-point-functions
   │ 	    (list (cape-super-capf #'cape-dabbrev #'cape-dict #'cape-keyword)))
+  │ 
+  │ ;; Alternative: Define named Capf instead of using the anonymous Capf directly
+  │ (defalias 'cape-dabbrev+dict+keyword
+  │   (cape-super-capf #'cape-dabbrev #'cape-dict #'cape-keyword))
+  │ (setq-local completion-at-point-functions (list #'cape-dabbrev+dict+keyword))
   └────
 
   See also the aforementioned `company--multi-backend-adapter' from
   Company, which allows you to merge multiple Company backends.
 
 
-4.3 Capf-Buster - Cache busting
+3.3 Capf-Buster - Cache busting
 ───────────────────────────────
 
   /The Capf-Buster ensures that you always get a fresh set of
@@ -253,13 +262,15 @@ Table of Contents
   └────
 
 
-4.4 Other Capf transformers
+3.4 Other Capf transformers
 ───────────────────────────
 
   Cape provides a set of additional Capf transformation functions, which
   are mostly meant to used by experts to fine tune the Capf behavior and
   Capf interaction. These can either be used as advices (`cape-wrap-*)'
-  or to create a new Capf from an existing Capf (`cape-capf-*').
+  or to create a new Capf from an existing Capf (`cape-capf-*'). You can
+  bind the Capfs created by the Capf transformers with `defalias' to a
+  function symbol.
 
   • `cape-interactive-capf': Create a Capf which can be called
     interactively.
@@ -294,7 +305,11 @@ Table of Contents
   │ (setq-local completion-at-point-functions
   │ 	    (list (cape-capf-prefix-length #'cape-dabbrev 2)))
   │ 
-  │ ;; Example 3: Define a defensive Dabbrev Capf, which accepts all inputs.
+  │ ;; Example 3: Named Capf
+  │ (defalias 'cape-dabbrev-min-2 (cape-capf-prefix-length #'cape-dabbrev 2))
+  │ (setq-local completion-at-point-functions (list #'cape-dabbrev-min-2))
+  │ 
+  │ ;; Example 4: Define a defensive Dabbrev Capf, which accepts all inputs.
   │ ;; If you use Corfu and `corfu-auto=t', the first candidate won't be auto
   │ ;; selected even if `corfu-preselect-first=t'! You can use this instead of
   │ ;; `cape-dabbrev'.
@@ -302,13 +317,13 @@ Table of Contents
   │   (cape-wrap-accept-all #'cape-dabbrev))
   │ (add-to-list 'completion-at-point-functions #'my-cape-dabbrev-accept-all)
   │ 
-  │ ;; Example 4: Define interactive Capf which can be bound to a key.
+  │ ;; Example 5: Define interactive Capf which can be bound to a key.
   │ ;; Here we wrap the `elisp-completion-at-point' such that we can
   │ ;; complete Elisp code explicitly in arbitrary buffers.
   │ (global-set-key (kbd "C-c p e")
   │ 		(cape-interactive-capf #'elisp-completion-at-point))
   │ 
-  │ ;; Example 5: Ignore :keywords in Elisp completion.
+  │ ;; Example 6: Ignore :keywords in Elisp completion.
   │ (defun ignore-elisp-keywords (sym)
   │   (not (keywordp sym)))
   │ (setq-local completion-at-point-functions
@@ -324,7 +339,7 @@ Table of Contents
 [Corfu wiki.] <https://github.com/minad/corfu/wiki>
 
 
-5 Contributions
+4 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a

@@ -1,0 +1,472 @@
+			       ━━━━━━━━━━
+				EMENT.EL
+			       ━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Installation
+.. 1. GNU ELPA
+.. 2. GNU Guix
+.. 3. Debian
+.. 4. Git master
+.. 5. Manual
+2. Usage
+.. 1. Bindings
+..... 1. Room buffers
+..... 2. Room list buffer
+..... 3. Mentions/notifications buffers
+.. 2. Tips
+..... 1. Displaying symbols and emojis
+.. 3. Encrypted room support through Pantalaimon
+3. Rationale
+4. Changelog
+.. 1. 0.1.2
+.. 2. 0.1.1
+.. 3. 0.1
+5. Development
+.. 1. Copyright Assignment
+.. 2. Matrix spec in Org format
+6. License
+
+
+Ement.el is a Matrix client for Emacs.  It aims to be simple, fast,
+featureful, and reliable.
+
+Feel free to join us in the chat room:
+[https://img.shields.io/matrix/ement.el:matrix.org.svg?label=%23ement.el:matrix.org]
+
+
+[https://img.shields.io/matrix/ement.el:matrix.org.svg?label=%23ement.el:matrix.org]
+<https://matrix.to/#/#ement.el:matrix.org>
+
+
+1 Installation
+══════════════
+
+1.1 GNU ELPA
+────────────
+
+  Ement.el is published in [GNU ELPA], so it may be installed in Emacs
+  with the `package-install' command.  This is the recommended way to
+  install Ement.el, as it will install the current stable release.
+
+
+[GNU ELPA] <http://elpa.gnu.org/>
+
+
+1.2 GNU Guix
+────────────
+
+  Ement.el is also available in [GNU Guix] as `emacs-ement'.
+
+
+[GNU Guix] <https://guix.gnu.org/>
+
+
+1.3 Debian
+──────────
+
+  Ement.el is also available in Debian as [elpa-ement].
+
+
+[elpa-ement] <https://packages.debian.org/elpa-ement>
+
+
+1.4 Git master
+──────────────
+
+  The `master' branch of the Git repository is intended to be usable at
+  all times; only minor bugs are expected to be found in it before a new
+  stable release is made.  To install from this, it is recommended to
+  use [quelpa-use-package], like this:
+
+  ┌────
+  │ ;; Install and load `quelpa-use-package'.
+  │ (package-install 'quelpa-use-package)
+  │ (require 'quelpa-use-package)
+  │ 
+  │ ;; Install Ement.
+  │ (use-package ement
+  │   :quelpa (ement :fetcher github :repo "alphapapa/ement.el"))
+  └────
+
+  One might also use systems like [Straight] (which is also used by
+  [DOOM]) to install from Git, but the author cannot offer support for
+  them.
+
+
+[quelpa-use-package] <https://github.com/quelpa/quelpa-use-package>
+
+[Straight] <https://github.com/radian-software/straight.el>
+
+[DOOM] <https://github.com/doomemacs/doomemacs>
+
+
+1.5 Manual
+──────────
+
+  Ement.el is intended to be installed with Emacs's package system,
+  which will ensure that the required autoloads are generated, etc.  If
+  you choose to install it manually, you're on your own.
+
+
+2 Usage
+═══════
+
+  • 
+  • 
+  • 
+
+  1. Call command `ement-connect' to connect.  Multiple sessions are
+     supported, so you may call the command again to connect to another
+     account.
+  2. Wait for initial sync to complete (which can take a few
+     moments–initial sync JSON requests can be large).
+  3. Use these commands:
+     • `ement-list-rooms' to view the list of joined rooms.
+     • `ement-view-room' to view a room's buffer, selected with
+       completion.
+     • `ement-create-room' to create a new room.
+     • `ement-invite-user' to invite a user to a room.
+     • `ement-join-room' to join a room.
+     • `ement-leave-room' to leave a room.
+     • `ement-forget-room' to forget a room.
+     • `ement-tag-room' to add (or with interactive prefix, remove) a
+       tag on a room (including favorite/low-priority status).
+     • `ement-list-members' to list members in a room.
+     • `ement-send-direct-message' to send a direct message to a user
+       (in an existing direct room, or creating a new one
+       automatically).
+     • `ement-room-edit-message' to edit a message at point.
+     • `ement-room-send-file' to send a file.
+     • `ement-room-send-image' to send an image.
+     • `ement-room-set-topic' to set a room's topic.
+     • `ement-room-occur' to search in a room's known events.
+     • `ement-ignore-user' to ignore a user (or with interactive
+       prefix, un-ignore).
+     • `ement-room-set-message-format' to set a room's message format
+       buffer-locally.
+  4. Use these special buffers to see events from multiple rooms (you
+     can also reply to messages from these buffers!):
+     • See all new events that mention you in the `*Ement Mentions*'
+       buffer.
+     • See all new events in rooms that have open buffers in the
+       `*Ement Notifications*' buffer.
+
+
+2.1 Bindings
+────────────
+
+  These bindings are common to all of the following buffer types:
+
+  ⁃ Switch to a room buffer: `M-g M-r'
+  ⁃ Switch to the room list buffer: `M-g M-l'
+  ⁃ Switch to the mentions buffer: `M-g M-m'
+  ⁃ Switch to the notifications buffer: `M-g M-n'
+
+
+2.1.1 Room buffers
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ⁃ Show command menu: `?'
+
+
+
+  *Movement*
+
+  ⁃ Next event: `TAB'
+  ⁃ Previous event: `<backtab>'
+  ⁃ Scroll up and mark read: `SPC'
+  ⁃ Scroll down: `S-SPC'
+  ⁃ Jump to fully-read marker: `M-SPC'
+  ⁃ Load older messages: at top of buffer, scroll contents up
+    (i.e. `S-SPC', `M-v' or `mwheel-scroll')
+
+  *Switching*
+
+  ⁃ List rooms: `M-g M-l'
+  ⁃ Switch to other room: `M-g M-r'
+  ⁃ Switch to mentions buffer: `M-g M-m'
+  ⁃ Switch to notifications buffer: `M-g M-n'
+  ⁃ Quit window: `q'
+
+  *Messages*
+
+  ⁃ Write message: `RET'
+  ⁃ Write reply to event at point (when region is active, only quote
+    marked text) : `S-RET'
+  ⁃ Compose message in buffer: `M-RET' (while writing in minibuffer:
+    `C-c ')' (Use command `ement-room-compose-org' to activate Org mode
+    in the compose buffer.)
+  ⁃ Edit message: `<insert>'
+  ⁃ Delete message: `C-k'
+  ⁃ Send reaction to event at point, or send same reaction at point: `s
+    r'
+  ⁃ Send emote: `s e'
+  ⁃ Send file: `s f'
+  ⁃ Send image: `s i'
+  ⁃ View event source: `v'
+  ⁃ Complete members and rooms at point: `C-M-i' (standard
+    `completion-at-point' command).
+
+  *Images*
+
+  ⁃ Toggle scale of image (between fit-to-window and thumbnail):
+    `mouse-1'
+  ⁃ Show image in new buffer at full size: `double-mouse-1'
+
+  *Users*
+
+  ⁃ Send direct message: `u RET'
+  ⁃ Invite user: `u i'
+  ⁃ Ignore user: `u I'
+
+  *Room*
+
+  ⁃ Occur search in room: `M-s o'
+  ⁃ List members: `r m'
+  ⁃ Set topic: `r t'
+  ⁃ Set message format: `r f'
+  ⁃ Tag/untag room: `r T'
+
+  *Room membership*
+
+  ⁃ Create room: `R c'
+  ⁃ Join room: `R j'
+  ⁃ Leave room: `R l'
+  ⁃ Forget room: `R F'
+
+  *Other*
+
+  ⁃ Sync new messages (not necessary if auto sync is enabled; with
+    prefix to force new sync): `g'
+
+
+2.1.2 Room list buffer
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ⁃ Show buffer of room at point: `RET'
+  ⁃ Show buffer of next unread room: `SPC'
+  ⁃ Move between room names: `TAB' / `<backtab>'
+
+
+2.1.3 Mentions/notifications buffers
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ⁃ Move between events: `TAB' / `<backtab>'
+  ⁃ Go to event at point in its room buffer: `RET'
+  ⁃ Write reply to event at point (shows the event in its room while
+    writing) : `S-RET'
+
+
+2.2 Tips
+────────
+
+  ⁃ Desktop notifications are enabled by default for events that
+    mention the local user.  They can also be shown for all events in
+    rooms with open buffers.
+  ⁃ Send messages in Org mode format by customizing the option
+    `ement-room-send-message-filter' (which enables Org format by
+    default), or by calling `ement-room-compose-org' in a compose
+    buffer (which enables it for a single message).  Then Org-formatted
+    messages are automatically converted and sent as HTML-formatted
+    messages (with the Org syntax as the plain-text fallback).  You can
+    send syntax such as:
+    • Bold, italic, underline, strikethrough
+    • Links
+    • Tables
+    • Source blocks (including results with `:exports both')
+    • Footnotes (okay, that might be pushing it, but you can!)
+    • And, generally, anything that Org can export to HTML
+  ⁃ Starting in the room list buffer, by pressing `SPC' repeatedly, you
+    can cycle through and read all rooms with unread buffers.  (If a
+    room doesn't have a buffer, it will not be included.)
+  ⁃ Room buffers and the room-list buffer can be bookmarked in Emacs,
+    i.e. using `C-x r m'.  This is especially useful with [Burly]: you
+    can arrange an Emacs frame with several room buffers displayed at
+    once, use `burly-bookmark-windows' to bookmark the layout, and then
+    you can restore that layout and all of the room buffers by opening
+    the bookmark, rather than having to manually arrange them every
+    time you start Emacs or change the window configuration.
+  ⁃ Images and other files can be uploaded to rooms using
+    drag-and-drop.
+  ⁃ You can customize settings in the `ement' group.
+    • *Note:* `setq' should not be used for certain options, because
+       it will not call the associated setter function.  Users who
+       have an aversion to the customization system may experience
+       problems.
+
+
+[Burly] <https://github.com/alphapapa/burly.el>
+
+2.2.1 Displaying symbols and emojis
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Emacs may not display certain symbols and emojis well by default.
+  Based on [this question and answer], you may find that the simplest
+  way to fix this is to install an appropriate font, like [Noto Emoji],
+  and then use this Elisp code:
+
+  ┌────
+  │ (setf use-default-font-for-symbols nil)
+  │ (set-fontset-font t 'unicode "Noto Emoji" nil 'append)
+  └────
+
+
+[this question and answer]
+<https://emacs.stackexchange.com/questions/62049/override-the-default-font-for-emoji-characters>
+
+[Noto Emoji] <https://www.google.com/get/noto/#emoji-zsye>
+
+
+2.3 Encrypted room support through Pantalaimon
+──────────────────────────────────────────────
+
+  Ement.el doesn't support encrypted rooms natively, but it can be used
+  transparently with the E2EE-aware reverse proxy daemon [Pantalaimon].
+  After configuring it according to its documentation, call
+  `ement-connect' with the appropriate hostname and port, like:
+
+  ┌────
+  │ (ement-connect :uri-prefix "http://localhost:8009")
+  └────
+
+
+[Pantalaimon] <https://github.com/matrix-org/pantalaimon/>
+
+
+3 Rationale
+═══════════
+
+  Why write a new Emacs Matrix client when there is already
+  [matrix-client.el], by the same author, no less?  A few reasons:
+
+  • `matrix-client' uses an older version of the Matrix spec, r0.3.0,
+    with a few elements of r0.4.0 grafted in.  Bringing it up to date
+    with the current version of the spec, r0.6.1, would be more work
+    than to begin with the current version.  Ement.el targets r0.6.1
+    from the beginning.
+  • `matrix-client' does not use Matrix's lazy-loading feature (which
+    was added to the specification later), so initial sync requests can
+    take a long time for the server to process and can be large
+    (sometimes tens of megabytes of JSON for the client to process!).
+    Ement.el uses lazy-loading, which significantly improves
+    performance.
+  • `matrix-client' automatically makes buffers for every room a user
+    has joined, even if the user doesn't currently want to watch a
+    room.  Ement.el opens room buffers on-demand, improving performance
+    by not having to insert events into buffers for rooms the user
+    isn't watching.
+  • `matrix-client' was developed without the intention of publishing
+    it to, e.g. MELPA or ELPA.  It has several dependencies, and its
+    code does not always install or compile cleanly due to
+    macro-expansion issues (apparently depending on the user's Emacs
+    config).  Ement.el is designed to have minimal dependencies outside
+    of Emacs (currently only one, `plz', which could be imported into
+    the project), and every file is linted and compiles cleanly using
+    [makem.sh].
+  • `matrix-client' uses EIEIO, probably unnecessarily, since few, if
+    any, of the benefits of EIEIO are realized in it.  Ement.el uses
+    structs instead.
+  • `matrix-client' uses bespoke code for inserting messages into
+    buffers, which works pretty well, but has a few minor bugs which
+    are difficult to track down.  Ement.el uses Emacs's built-in (and
+    perhaps little-known) `ewoc' library, which makes it much simpler
+    and more reliable to insert and update messages in buffers, and
+    enables the development of advanced UI features more easily.
+  • `matrix-client' was, to a certain extent, designed to imitate other
+    messaging apps.  The result is, at least when used with the
+    `matrix-client-frame' command, fairly pleasing to use, but isn't
+    especially "Emacsy."  Ement.el is intended to better fit into
+    Emacs's paradigms.
+  • `matrix-client''s long name makes for long symbol names, which
+    makes for tedious, verbose code.  `ement' is easy to type and makes
+    for concise, readable code.
+  • The author has learned much since writing `matrix-client' and hopes
+    to write simpler, more readable, more maintainable code in
+    Ement.el.  It's hoped that this will enable others to contribute
+    more easily.
+
+  Note that, while `matrix-client' remains usable, and probably will for
+  some time to come, Ement.el has now surpassed it in every way.  The
+  only reason to choose `matrix-client' instead is if one is using an
+  older version of Emacs that isn't supported by Ement.el.
+
+
+[matrix-client.el] <https://github.com/alphapapa/matrix-client.el>
+
+[makem.sh] <https://github.com/alphapapa/makem.sh>
+
+
+4 Changelog
+═══════════
+
+4.1 0.1.2
+─────────
+
+  *Fixed*
+  ⁃ Function `ement-room-sync' correctly updates room-list buffers.
+    (Thanks to [Visuwesh].)
+  ⁃ Only send D-Bus notifications when supported.  (Fixes [#83].  Thanks
+    to [Tassilo Horn].)
+
+
+[Visuwesh] <https://github.com/vizs>
+
+[#83] <https://github.com/alphapapa/ement.el/issues/83>
+
+[Tassilo Horn] <https://github.com/tsdh>
+
+
+4.2 0.1.1
+─────────
+
+  *Fixed*
+  ⁃ Function `ement-room-scroll-up-mark-read' selects the correct room
+    window.
+  ⁃ Option `ement-room-list-avatars' defaults to what function
+    `display-images-p' returns.
+
+
+4.3 0.1
+───────
+
+  After almost two years of development, the first tagged release.
+  Submitted to GNU ELPA.
+
+
+5 Development
+═════════════
+
+  Bug reports, feature requests, suggestions — /oh my/!
+
+
+5.1 Copyright Assignment
+────────────────────────
+
+  Ement.el is published in GNU ELPA and is considered part of GNU Emacs.
+  Therefore, cumulative contributions of more than 15 lines of code
+  require that the author assign copyright of such contributions to the
+  FSF.  Authors who are interested in doing so may contact
+  [assign@gnu.org] to request the appropriate form.
+
+
+[assign@gnu.org] <mailto:assign@gnu.org>
+
+
+5.2 Matrix spec in Org format
+─────────────────────────────
+
+  An Org-formatted version of the Matrix spec is available in the
+  [meta/spec] branch.
+
+
+[meta/spec] <https://github.com/alphapapa/ement.el/tree/meta/spec>
+
+
+6 License
+═════════
+
+  GPLv3

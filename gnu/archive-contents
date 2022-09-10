@@ -325,7 +325,7 @@
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
  (cape .
-       [(0 8)
+       [(0 9)
 	((emacs
 	  (27 1)))
 	"Completion At Point Extensions" tar
@@ -333,7 +333,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "7042b048c8820223551d75c643b958befe7411d2"))])
+	 (:commit . "5cd6b861b7fb88c7a0a3d5062b36631b561fea8c"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -509,7 +509,7 @@
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
 	   (:commit . "d533692182c084bad623977b69f9dc298255eaab"))])
  (consult .
-	  [(0 18)
+	  [(0 19)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -519,7 +519,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "0f55ad146b327d82a4a6dfa674349bfbbf3820e4"))])
+	    (:commit . "ef3aad65e41e425fbcc80c4a9a1f6fc4cafff383"))])
  (consult-recoll .
 		 [(0 7)
 		  ((emacs
@@ -1058,6 +1058,29 @@
 		   (:authors
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "bd603d8f3b1bcff34aee2dc4b7b36dc7912b9b26"))])
+ (ement .
+	[(0 1 2)
+	 ((emacs
+	   (27 1))
+	  (map
+	   (2 1))
+	  (plz
+	   (0 2))
+	  (taxy
+	   (0 9))
+	  (taxy-magit-section
+	   (0 9))
+	  (svg-lib
+	   (0 2 5))
+	  (transient
+	   (0 3 7)))
+	 "Matrix client" tar
+	 ((:url . "https://github.com/alphapapa/ement.el")
+	  (:keywords "comm")
+	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
+	  (:authors
+	   ("Adam Porter" . "adam@alphapapa.net"))
+	  (:commit . "28cb94cfb5b31fdfaa344c9db42116e0179681c6"))])
  (emms .
        [(11)
 	((cl-lib
@@ -1812,15 +1835,15 @@
 	(:url . "https://elpa.gnu.org/packages/map.html")
 	(:commit . "fa92b040c6738de7278605cadeace0c5380a0814"))])
  (marginalia .
-	     [(0 13)
+	     [(0 14)
 	      ((emacs
-		(26 1)))
+		(27 1)))
 	      "Enrich existing commands with completion annotations" tar
 	      ((:url . "https://github.com/minad/marginalia")
 	       (:maintainer "Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "bd98c02720bc59a5c185c293f60595d06dfd7637"))])
+	       (:commit . "b6d9a7e663847d5b539adf46ecb68d25d18f68a3"))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" single

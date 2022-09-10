@@ -6,40 +6,41 @@
 Table of Contents
 ─────────────────
 
-1. Introduction
-2. Configuration
-3. Information shown by the annotators
-4. Adding custom annotators or classifiers
-5. Disabling annotators, builtin or lightweight annotators
-6. Contributions
+1. Configuration
+2. Information shown by the annotators
+3. Adding custom annotators or classifiers
+4. Disabling annotators, builtin or lightweight annotators
+5. Contributions
 
 
+This package provides `marginalia-mode' which adds marginalia to the
+minibuffer completions. [Marginalia] are marks or annotations placed at
+the margin of the page of a book or in this case helpful colorful
+annotations placed at the margin of the minibuffer for your completion
+candidates. Marginalia can only add annotations to the completion
+candidates. It cannot modify the appearance of the candidates
+themselves, which are shown unaltered as supplied by the original
+command.
 
+The annotations are added based on the completion category. For example
+`find-file' reports the `file' category and `M-x' reports the `command'
+category. You can cycle between more or less detailed annotators or even
+disable the annotator with command `marginalia-cycle'.
 
+Table of Contents
+─────────────────
 
-1 Introduction
-══════════════
-
-  This package provides `marginalia-mode' which adds marginalia to the
-  minibuffer completions.  [Marginalia] are marks or annotations placed
-  at the margin of the page of a book or in this case helpful colorful
-  annotations placed at the margin of the minibuffer for your completion
-  candidates. Marginalia can only add annotations to be displayed with
-  the completion candidates. It cannot modify the appearance of the
-  candidates themselves, which are shown as supplied by the original
-  commands.
-
-  The annotations are added based on the completion category. For
-  example `find-file' reports the `file' category and `M-x' reports the
-  `command' category. You can cycle between more or less detailed
-  annotators or even disable the annotator with command
-  `marginalia-cycle'.
+1. Configuration
+2. Information shown by the annotators
+3. Adding custom annotators or classifiers
+4. Disabling annotators, builtin or lightweight annotators
+5. Contributions
 
 
 [Marginalia] <https://en.wikipedia.org/wiki/Marginalia>
 
 
-2 Configuration
+1 Configuration
 ═══════════════
 
   It is recommended to use Marginalia together with either the
@@ -48,9 +49,9 @@ Table of Contents
   action support and [Consult], which provides many useful commands.
 
   ┌────
-  │ ;; Enable richer annotations using the Marginalia package
+  │ ;; Enable rich annotations using the Marginalia package
   │ (use-package marginalia
-  │   ;; Either bind `marginalia-cycle` globally or only in the minibuffer
+  │   ;; Either bind `marginalia-cycle' globally or only in the minibuffer
   │   :bind (("M-A" . marginalia-cycle)
   │ 	 :map minibuffer-local-map
   │ 	 ("M-A" . marginalia-cycle))
@@ -78,7 +79,7 @@ Table of Contents
 [Consult] <https://github.com/minad/consult>
 
 
-3 Information shown by the annotators
+2 Information shown by the annotators
 ═════════════════════════════════════
 
   In general, to learn more about what different annotations mean, a
@@ -87,12 +88,12 @@ Table of Contents
   interested in.
 
   For example the annotations for elisp symbols include their symbol
-  class - v for variable, f for function, c for command, etc. For more
-  information on what the different classifications mean, see the
+  class - `v' for variable, `f' for function, `c' for command, etc. For
+  more information on what the different classifications mean, see the
   docstring of `marginalia--symbol-class'.
 
 
-4 Adding custom annotators or classifiers
+3 Adding custom annotators or classifiers
 ═════════════════════════════════════════
 
   *IMPORTANT NOTICE FOR PACKAGE AUTHORS*: The intention of the
@@ -103,14 +104,14 @@ Table of Contents
   library functions as part of its public API. If you add your own
   completion commands to your package we recommend to specify an
   `annotation-function' or an `affixation-function', avoiding the
-  Marginalia dependency this way. The `annotation-function' is
-  documented in the [Elisp manual].  There is an exception to our
-  recommendation: If you want to implement annotations for an existing
-  package `hypothetical.el', which does not have annotations and where
-  annotations cannot be added, then the creation of a
-  `marginalia-hypothetical.el' package is a good idea, since Marginalia
-  provides the facilities to enhance existing commands from the
-  outside. If you have questions feel free to ask on the Marginalia
+  Marginalia dependency this way. The `annotation-function' and
+  `affixation-function' are documented in the [Elisp manual]. There is
+  an exception to our recommendation: If you want to implement
+  annotations for an existing package `hypothetic.el', which does not
+  have annotations and where annotations cannot be added, then the
+  creation of a `marginalia-hypothetic.el' package is a good idea, since
+  Marginalia provides the facilities to enhance existing commands from
+  the outside. If you have questions feel free to ask on the Marginalia
   issue tracker!
 
   Commands that support minibuffer completion use a completion table of
@@ -140,7 +141,7 @@ Table of Contents
 
   The `marginalia-classify-by-command-name' classifier uses the alist
   `marginalia-command-categories' to specify the completion category
-  based on the command name. This is particularily useful if the prompt
+  based on the command name. This is particularly useful if the prompt
   classifier yields a false positive.
 
   Completion categories are also important for [Embark], which
@@ -165,7 +166,7 @@ Table of Contents
   │ 	    (propertize "The quick brown fox jumps over the lazy dog" 'face sym))))
   └────
 
-  Look at Marginalia's various annotators for examples of formating
+  Look at Marginalia's various annotators for examples of formatting
   annotations.  In particular, the helper function `marginalia--fields'
   can be used to format information into columns.
 
@@ -191,7 +192,7 @@ Table of Contents
 [Embark] <https://github.com/oantolin/embark>
 
 
-5 Disabling annotators, builtin or lightweight annotators
+4 Disabling annotators, builtin or lightweight annotators
 ═════════════════════════════════════════════════════════
 
   Marginalia activates rich annotators by default. Depending on your
@@ -249,7 +250,7 @@ Table of Contents
   └────
 
 
-6 Contributions
+5 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a

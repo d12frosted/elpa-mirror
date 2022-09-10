@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220908.2337
-;; Package-Commit: fdd87b7dbb5730a82c908e0dae26f82d8c84207e
+;; Package-Version: 20220909.2125
+;; Package-Commit: 06e6dd6693123a737fb883dcf277432d63d6518e
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -153,7 +153,7 @@ chosen (interactively or automatically)."
                                 (vimrc-mode . ("vim-language-server" "--stdio"))
                                 (python-mode
                                  . ,(eglot-alternatives
-                                     '("pylsp" "pyls" ("pyright-langserver" "--stdio"))))
+                                     '("pylsp" "pyls" ("pyright-langserver" "--stdio") "jedi-language-server")))
                                 ((js-mode typescript-mode)
                                  . ("typescript-language-server" "--stdio"))
                                 (sh-mode . ("bash-language-server" "start"))
@@ -3018,8 +3018,12 @@ Returns a list as described in docstring of `imenu--index-alist'."
                          textDocument
                        (list (eglot--uri-to-path uri) edits version)))
                    documentChanges)))
-      (cl-loop for (uri edits) on changes by #'cddr
-               do (push (list (eglot--uri-to-path uri) edits) prepared))
+      (unless (and changes documentChanges)
+        ;; We don't want double edits, and some servers send both
+        ;; changes and documentChanges.  This unless ensures that we
+        ;; prefer documentChanges over changes.
+        (cl-loop for (uri edits) on changes by #'cddr
+                 do (push (list (eglot--uri-to-path uri) edits) prepared)))
       (if (or confirm
               (cl-notevery #'find-buffer-visiting
                            (mapcar #'car prepared)))

@@ -22,8 +22,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20220906.1916
-;; Package-Commit: d89ded9c83dbc4c9b2edd92d13f13cb05c24fcdd
+;; Package-Version: 20220909.2022
+;; Package-Commit: 723736950beafd7d611fa42790ffc41ec202abd9
 ;; Author: Adrien Brochard
 ;; Keywords: kubernetes k8s tools processes
 ;; URL: https://github.com/abrochard/kubel
@@ -283,9 +283,6 @@ CMD is the command string to run."
 
 (defvar kubel-selector ""
   "Label selector for resources.")
-
-(defvar kubel--line-number nil
-  "Store the current line number to jump back after a refresh.")
 
 (defvar kubel-namespace-history '()
   "List of previously used namespaces.")
@@ -666,19 +663,6 @@ TYPENAME is the resource type/name."
    (-contains? '("ReplicaSets" "replicasets" "replicasets.apps") kubel-resource)
    (-contains? '("StatefulSets" "statefulsets" "statefulsets.apps") kubel-resource)))
 
-(defun kubel--save-line ()
-  "Save the current line number if the view is unchanged."
-  (if (equal (buffer-name (current-buffer))
-             (kubel--buffer-name))
-      (setq kubel--line-number (+ 1 (count-lines 1 (point))))
-    (setq kubel--line-number nil)))
-
-(defun kubel--jump-back-to-line ()
-  "Jump back to the last cached line number."
-  (when kubel--line-number
-    (goto-char (point-min))
-    (forward-line (1- kubel--line-number))))
-
 ;; interactive
 (define-minor-mode kubel-yaml-editing-mode
   "Kubel Yaml editing mode.
@@ -819,8 +803,8 @@ ARGS is the arguments list from transient."
            (unless kubel--can-get-namespace-cached
              (setq kubel--can-get-namespace-cached
                    (string-match-p "yes\n"
-                          (kubel--exec-to-string
-                           (format "%s --context %s auth can-i list namespaces" kubel-kubectl kubel-context))))))
+                                   (kubel--exec-to-string
+                                    (format "%s --context %s auth can-i list namespaces" kubel-kubectl kubel-context))))))
          kubel--can-get-namespace-cached)))
 
 (defun kubel--get-namespace ()
@@ -1008,7 +992,6 @@ P can be a single number or a localhost:container port pair."
 
 (defun kubel-exec-vterm-pod ()
   "Exec into the pod under the cursor -> vterm."
-  (require 'vterm)
   (interactive)
   (kubel-setup-tramp)
   (let* ((dir-prefix (kubel--dir-prefix))
@@ -1019,6 +1002,13 @@ P can be a single number or a localhost:container port pair."
          (vterm-buffer-name (format "*kubel - vterm - %s@%s*" container pod))
          (vterm-shell "/bin/sh"))
     (vterm)))
+
+;;;###autoload
+(defun kubel-vterm-setup ()
+  "Adds a vterm enty to the KUBEL-EXEC-POP."
+  (require 'vterm)
+  (transient-append-suffix 'kubel-exec-popup "e"
+    '("v" "Vterm" kubel-exec-vterm-pod)))
 
 (defun kubel-exec-ansi-term-pod ()
   "Exec into the pod under the cursor -> `ansi-term'."
@@ -1181,7 +1171,6 @@ RESET is to be called if the search is nil after the first attempt."
    ("!" "Shell command" kubel-exec-pod-by-shell-command)
    ("d" "Dired" kubel-exec-pod)
    ("e" "Eshell" kubel-exec-eshell-pod)
-   ("v" "Vterm" kubel-exec-vterm-pod)
    ("a" "Ansi-term" kubel-exec-ansi-term-pod)
    ("s" "Shell" kubel-exec-shell-pod)])
 
@@ -1309,7 +1298,6 @@ DIRECTORY is optional for TRAMP support."
 
 DIRECTORY is optional for TRAMP support."
   (interactive)
-  (kubel--save-line)
   (kubel--pop-to-buffer (kubel--buffer-name))
   (when directory (setq default-directory directory))
   (kubel-mode)
@@ -1329,11 +1317,16 @@ DIRECTORY is optional for TRAMP support."
   (setq tabulated-list-sort-key kubel--list-sort-key)
   (setq tabulated-list-sort-key nil)
   (tabulated-list-init-header)
-  (tabulated-list-print)
+  (let ((line-num (line-number-at-pos (point)))
+        (current-id (tabulated-list-get-id)))
+    (tabulated-list-print t)
+    (unless (string-equal current-id (tabulated-list-get-id))
+      ;; tabulated-list could not follow the current entry, then fallback on
+      ;; keeping the same line.
+      (goto-char (point-min))
+      (forward-line (1- line-num))))
   (hl-line-mode 1)
   (run-mode-hooks 'kubel-mode-hook))
-
-(add-hook 'kubel-mode-hook #'kubel--jump-back-to-line)
 
 (provide 'kubel)
 ;;; kubel.el ends here
