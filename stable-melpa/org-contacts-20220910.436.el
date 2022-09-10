@@ -5,10 +5,10 @@
 ;; Author: Julien Danjou <julien@danjou.info>
 ;; Maintainer: stardiviner <numbchild@gmail.com>
 ;; Keywords: contacts, org-mode, outlines, hypermedia, calendar
-;; Package-Version: 20220827.135
-;; Package-Commit: 919511eb86975353eab78842f6b68e65f55fd44d
-;; Version: 1.0
-;; Package-Requires: ((emacs "27.1") (cl-lib "0.7") (org "9.3.4") (gnus "5.13"))
+;; Package-Version: 20220910.436
+;; Package-Commit: 217ba04c9d638067a6ccb0829cf1885f54c1d568
+;; Version: 1.1
+;; Package-Requires: ((emacs "27.1") (org "9.3.4"))
 ;; Homepage: https://repo.or.cz/org-contacts.git
 ;;
 ;; This file is not part of GNU Emacs.
@@ -58,11 +58,11 @@
 
 ;;;; Usage:
 
-;;; How to search?
-;;; - You can use [M-x org-contacts] command to search.
-;;;
-;;; - You can use `org-sparse-tree' [C-c / p] to filter based on a
-;;;   specific property. Or other matcher on `org-sparse-tree'.
+;; How to search?
+;; - You can use [M-x org-contacts] command to search.
+;;
+;; - You can use `org-sparse-tree' [C-c / p] to filter based on a
+;;   specific property. Or other matcher on `org-sparse-tree'.
 
 ;;; Code:
 
@@ -693,8 +693,9 @@ description."
 
 ;;;###autoload
 (defun org-contacts-org-complete-function ()
-  "Function used in `completion-at-point-functions' in `org-mode' to complete @name.
-Usage: (add-hook \\='completion-at-point-functions #\\='org-contacts-org-complete-function nil \\='local)"
+  "completion-at-point function to complete @name in `org-mode'.
+Usage: (add-hook \\='completion-at-point-functions
+                 #\\='org-contacts-org-complete-function nil \\='local)"
   (when-let* ((end (point))
               (begin (save-excursion (skip-chars-backward "[:alnum:]@") (point)))
               (symbol (buffer-substring-no-properties begin end))
@@ -1257,8 +1258,8 @@ are effectively trimmed).  If nil, all zero-length substrings are retained."
     (cdr (reverse proplist))))
 
 ;;;###autoload
-;;; Add an Org link type `org-contact:' for easy jump to or searching org-contacts headline.
-;;; link spec: [[org-contact:query][desc]]
+;; Add an Org link type `org-contact:' for easy jump to or searching org-contacts headline.
+;; link spec: [[org-contact:query][desc]]
 (if (fboundp 'org-link-set-parameters)
     (org-link-set-parameters "org-contact"
                              :follow #'org-contacts-link-open

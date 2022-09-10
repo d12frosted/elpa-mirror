@@ -1,15 +1,11 @@
 (org-contacts .
-	      [(20220827 135)
+	      [(20220910 436)
 	       ((emacs
 		 (27 1))
-		(cl-lib
-		 (0 7))
 		(org
-		 (9 3 4))
-		(gnus
-		 (5 13)))
+		 (9 3 4)))
 	       "Contacts management system for Org Mode" single
-	       ((:commit . "919511eb86975353eab78842f6b68e65f55fd44d")
+	       ((:commit . "217ba04c9d638067a6ccb0829cf1885f54c1d568")
 		(:authors
 		 ("Julien Danjou" . "julien@danjou.info"))
 		(:maintainer "stardiviner" . "numbchild@gmail.com")
