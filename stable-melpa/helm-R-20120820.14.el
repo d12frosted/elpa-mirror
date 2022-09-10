@@ -6,8 +6,6 @@
 ;; Copyright (C) 2010,2011,2012 myuhe all rights reserved.
 ;; Created: :2012-05-20
 ;; Version: 0.0.1
-;; Package-Version: 20120820.14
-;; Package-Commit: b0eb9d5f6a483a9dbe6eb6cf1f2024d4f5938bc2
 ;; Keywords: convenience
 ;; URL: https://github.com/myuhe/helm-R.el
 ;; Package-Requires: ((helm "20120517")(ess "20120509"))

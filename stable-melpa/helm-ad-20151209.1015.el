@@ -5,8 +5,6 @@
 ;; Author: Takahiro Noda <takahiro.noda+github@gmail.com>
 ;; Created: Jul 31, 2014
 ;; Version: 0.0.1
-;; Package-Version: 20151209.1015
-;; Package-Commit: 8ac044705d8620ee354a9cfa8cc1b865e83c0d55
 ;; Keywords: comm
 ;; Package-Requires: ((dash "2.8.0") (helm "1.6.2"))
 

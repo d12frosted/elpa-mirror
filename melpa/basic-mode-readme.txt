@@ -33,9 +33,11 @@ Formatting is also affected by the customizable variables
 `basic-delete-trailing-whitespace' and `delete-trailing-lines'
 (from simple.el).
 
-You can also customize the number of columns to allocate for line
-numbers, see variable `basic-line-number-cols'.  The default value
-is 0, which means not using line numbers at all.
+You can also customize the number of columns to allocate for
+line numbers using the variable `basic-line-number-cols'. The
+default value of 0 (no space reserved), is appropriate for
+programs with no line numbers and for left aligned numbering.
+Use a positive integer, such as 6, if you prefer right alignment.
 
 The other line number features can be configured by customizing
 the variables `basic-auto-number', `basic-renumber-increment' and
