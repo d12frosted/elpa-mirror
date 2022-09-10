@@ -2198,6 +2198,19 @@
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	(:commit . "8ef6205a560cd3a92f8c5f8fe34953b80121c2cb"))])
+ (org-contacts .
+	       [(1 1)
+		((emacs
+		  (27 1))
+		 (org
+		  (9 3 4)))
+		"Contacts management system for Org Mode" tar
+		((:url . "https://repo.or.cz/org-contacts.git")
+		 (:keywords "contacts" "org-mode" "outlines" "hypermedia" "calendar")
+		 (:maintainer "stardiviner" . "numbchild@gmail.com")
+		 (:authors
+		  ("Julien Danjou" . "julien@danjou.info"))
+		 (:commit . "217ba04c9d638067a6ccb0829cf1885f54c1d568"))])
  (org-edna .
 	   [(1 1 2)
 	    ((emacs
