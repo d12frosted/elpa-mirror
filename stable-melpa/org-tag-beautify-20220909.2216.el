@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20220904.1303
-;; Package-Commit: 2d6ddade8fec71fabed8efde36a3cfb8a6df3118
+;; Package-Version: 20220909.2216
+;; Package-Commit: 26293b6dbd1dc708e18f04be9e067a96c6167782
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -82,6 +82,7 @@
                   ("decrypted" . ,(all-the-icons-faicon "unlock" :face '(:foreground "DodgerBlue")))
                   ("certificate" . ,(all-the-icons-faicon "certificate" :face '(:foreground "DodgerBlue")))
                   ("private" . ,(all-the-icons-material "fingerprint" :face '(:foreground "LawnGreen")))
+                  ("privacy" . ,(all-the-icons-material "fingerprint" :face '(:foreground "LawnGreen")))
                   ("face" . ,(all-the-icons-material "face" :face '(:foreground "black")))
                   ("filter" . ,(all-the-icons-faicon "filter" :face '(:foreground "black")))
                   ("sort" . ,(all-the-icons-faicon "sort" :face '(:foreground "black")))
@@ -455,6 +456,7 @@
                   ("mobile" . ,(all-the-icons-faicon "mobile" :face '(:foreground "SkyBlue")))
                   ("smartphone" . ,(all-the-icons-material "smartphone" :face '(:foreground "SkyBlue")))
                   ("phone" . ,(all-the-icons-faicon "phone-square" :face '(:foreground "SkyBlue")))
+                  ("iPhone" . ,(all-the-icons-faicon "mobile" :face '(:foreground "SkyBlue")))
                   ("keyboard" . ,(all-the-icons-faicon "keyboard-o" :face '(:foreground "cyan")))
                   ("mouse" . ,(all-the-icons-faicon "mouse-pointer" :face '(:foreground "cyan")))
                   ("arduino" . ,(all-the-icons-fileicon "arduino" :face '(:foreground "SkyBlue")))

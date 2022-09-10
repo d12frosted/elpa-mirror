@@ -7,8 +7,8 @@
 ;; Created: 30 August 2022
 
 ;; Version: 1.0.7
-;; Package-Version: 20220906.38
-;; Package-Commit: 21a455d1a005c4640273de8422d2906811cff3f8
+;; Package-Version: 20220909.2250
+;; Package-Commit: f009efc4388e46ead770ce5330f1f1493463f252
 ;; SPDX-License-Identifier:  GPL-3.0
 ;; Package-requires: ((emacs "27.1"))
 
@@ -22,12 +22,12 @@
 ;;
 ;; Ensure the following fonts are installed before use:
 ;;
+;;    - Impact_Label (https://www.fontsquirrel.com/fonts/download/impact-label)
 ;;    - texlive-fonts-extra
 ;;    - fonts-purisa
 ;;    - fonts-inconsolata
 ;;    - fonts-dancingscript
 ;;
-;; Personally, i use Impact_Label font for font-heading variable
 ;; ========================================
 
 
@@ -42,7 +42,7 @@
      (font-heading "ImpactLabel")
      (font-cursive "Dancingscript" )
      (font-default   "Purisa" )
-     (font-mono "Go-Mono" )
+     (font-mono "Inconsolata" )
      (font-sans "OpenSansCondensed" )
      (my-fluff              "#FCDEEA" )
      (my-active             "#F92672" )
@@ -256,14 +256,13 @@
     `(org-headline-done ((t (:foreground ,my-contrast :strike-through t ))))
     `(org-level-1 ((t :family ,font-sans :height 2.6 :weight bold )))
     `(org-level-2 ((t :family ,font-sans :foreground ,my-contrast :height 2.4 :weight bold :slant italic )))
-    `(org-level-3 ((t :family ,font-sans :foreground ,my-active :height 1.4 :weight regular )))
-    `(org-level-4 ((t :family ,font-sans :foreground ,my-contrast :height 1.8 :weight regular )))
-    `(org-level-5 ((t :family ,font-sans :height 1.2  :weight regular )))
-    `(org-level-6 ((t :family ,font-sans :height 1.1  :weight regular )))
+    `(org-level-3 ((t :family ,font-sans :foreground ,my-active :height 1.8 :weight regular )))
+    `(org-level-4 ((t :family ,font-sans :foreground ,my-contrast :height 1.6 :weight regular )))
+    `(org-level-5 ((t :family ,font-sans :height 1.4  :weight regular )))
+    `(org-level-6 ((t :family ,font-sans :height 1.2  :weight regular )))
     `(org-level-7 ((t :family ,font-sans :foreground ,my-contrast :height 1.1 :weight regular )))
-    `(org-level-9 ((t :family ,font-sans :height 1.2 :weight  light )))
-    `(org-link ((t :foreground ,my-active :underline t )))
-    `(org-scheduled ((t :foreground ,my-info )))
+   `(org-link ((t :foreground ,my-active :underline t )))
+   `(org-scheduled ((t :foreground ,my-info )))
     `(org-scheduled-today ((t :foreground ,my-highlight )))
     `(org-src-block-faces ((t :family ,font-mono )))
     `(org-special-keyword ((t :family ,font-default :foreground ,my-contrast )))

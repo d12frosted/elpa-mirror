@@ -4,8 +4,8 @@
 
 ;; Author: A.I. <merrick@luois.me>
 ;; Keywords: language tools
-;; Package-Version: 20220816.1602
-;; Package-Commit: 6cff7196d0742a359a58c21a719a2cd436006e12
+;; Package-Version: 20220910.347
+;; Package-Commit: a64171870c81e9131fef72e3bd1a5672a77edb80
 ;; Version: 0.2
 ;; Package-Requires: ((lsp-mode "7.1") (f "0.20.0") (emacs "26.1"))
 ;; Keywords: tailwindcss
@@ -67,6 +67,7 @@ and make sure tailwindcss language server can find it."
   :group 'lsp-tailwindcss
   :package-version '(lsp-tailwindcss . "0.3"))
 
+;;;###autoload
 (defun lsp-tailwindcss-rustywind ()
   "[Experimental] Sort tailwindcss class name using rustywind.
 This is an *experimental* feature, please be careful when use."
@@ -89,6 +90,7 @@ This is an *experimental* feature, please be careful when use."
         (delete-file tmpfile)))
     (error (format "Can't find rustywind executable at %s" lsp-tailwindcss-rustywind-command))))
 
+;;;###autoload
 (defun lsp-tailwindcss-rustywind-before-save()
   "[Experimental] Run rustywind when saving buffer.
 By add this to `before-save-hook',
@@ -98,14 +100,16 @@ This is an *experimental* feature, please use it carefully."
   (when (lsp-tailwindcss--activate-p)
     (lsp-tailwindcss-rustywind)))
 
+;;;###autoload
 (defun lsp-tailwindcss-installed-server-version()
   "[Experimental] Get the installed version of tailwindcss language server."
+  (interactive)
   (let ((package-json-file (f-join lsp-server-install-dir "tailwindcss/extension/package.json")))
     (if (f-exists? package-json-file)
         (let ((json-object-type 'hash-table)
               (json-array-type 'list)
               (json-key-type 'string))
-          (gethash "version" (json-read-file package-json-file)))
+          (message "%s" (gethash "version" (json-read-file package-json-file))))
       (error "Can't find package.json file at %s" package-json-file))))
 
 ;;; Language server global settings:

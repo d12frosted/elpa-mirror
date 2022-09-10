@@ -1,11 +1,11 @@
 (use-package .
-	     [(20220909 2043)
+	     [(20220910 25)
 	      ((emacs
 		(24 3))
 	       (bind-key
 		(2 4)))
 	      "A configuration macro for simplifying your .emacs" tar
-	      ((:commit . "4db51ba3481ac4216147d774e969cbf0a46ac971")
+	      ((:commit . "9407f5f01c78ec3cb180f76eaf3adab35b80e3c3")
 	       (:authors
 		("John Wiegley" . "johnw@newartisans.com"))
 	       (:maintainer "John Wiegley" . "johnw@newartisans.com")
