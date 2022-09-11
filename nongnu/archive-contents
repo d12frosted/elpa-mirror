@@ -1728,6 +1728,17 @@
 	    (:maintainer "Sergei Nosov <sergei.nosov [at] gmail.com>")
 	    (:authors
 	     ("Sergei Nosov <sergei.nosov [at] gmail.com>")))])
+ (treeview .
+	   [(1 1 0)
+	    ((emacs
+	      (24 4)))
+	    "A generic tree navigation library" tar
+	    ((:url . "https://github.com/tilmanrassy/emacs-treeview")
+	     (:keywords "lisp" "tools" "internal" "convenience")
+	     (:maintainer "Tilman Rassy" . "tilman.rassy@googlemail.com")
+	     (:authors
+	      ("Tilman Rassy" . "tilman.rassy@googlemail.com"))
+	     (:commit . "ad9c094d89feae3300ac6c9fa49a62f08d0ff0ef"))])
  (tuareg .
 	 [(2 3 0)
 	  ((caml

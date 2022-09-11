@@ -1517,16 +1517,16 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 7)
+	    [(0 8)
 	     ((emacs
-	       (27)))
-	     "Tool for inspection of Emacs Lisp objects." tar
+	       (27 1)))
+	     "Tool for inspection of Emacs Lisp objects" tar
 	     ((:url . "https://github.com/mmontone/emacs-inspector")
-	      (:keywords "debugging" "tool" "emacs-lisp" "development")
+	      (:keywords "debugging" "tool" "lisp" "development")
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "44b3a9aec819b583d76bbbde1421b76c29fe2596"))])
+	      (:commit . "155794ebd620f4c7319f6013d671dcd519f43d33"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
