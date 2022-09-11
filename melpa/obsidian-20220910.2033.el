@@ -4,10 +4,10 @@
 
 ;; Author: Mykhaylo Bilyanskyy
 ;; URL: https://github.com./licht1stein/obsidian.el
-;; Package-Version: 20220906.944
-;; Package-Commit: df1cb7fc6f5bb4d614ae6c476e2508f47925fef7
+;; Package-Version: 20220910.2033
+;; Package-Commit: 148874a4778635079525589fdb4136ba314da801
 ;; Keywords: obsidian, pkm, convenience
-;; Version: 1.1.3
+;; Version: 1.1.4
 ;; Package-Requires: ((emacs "27.2") (s "1.12.0") (dash "2.13") (markdown-mode "2.6") (elgrep "1.0.0") (yaml "0.5.1"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -207,10 +207,13 @@ At the moment updates only `obsidian--aliases-map' with found aliases."
 
 (defun obsidian--update-all-from-front-matter ()
   "Take all files in obsidian vault, parse front matter and update."
-  (-map (lambda (f) (condition-case err
-                        (obsidian--update-from-front-matter f)
-                      (error (message "Error updating YAML front matter in file %s. Error: %s" f (error-message-string err)))))
-        (obsidian-list-all-files))
+  (-map
+   (lambda (f)
+     (condition-case err
+         (obsidian--update-from-front-matter f)
+       (error (message "Error updating YAML front matter in file %s. Error: %s"
+                       f (error-message-string err)))))
+   (obsidian-list-all-files))
   (message "Obsidian aliases updated."))
 
 (defun obsidian-tag-p (s)
@@ -451,10 +454,30 @@ See `markdown-follow-link-at-point' and
   "Find all notes with a tag."
   (interactive)
   (obsidian-update-tags-list)
-  (let* ((tag (completing-read "Select tag: " (->> obsidian--tags-list (-map 's-downcase) -distinct (-sort 'string-lessp))))
+  (let* ((tag (completing-read "Select tag: "
+                               (->> obsidian--tags-list (-map 's-downcase) -distinct (-sort 'string-lessp))))
          (results (obsidian--grep tag))
          (choice (completing-read "Select file: " results)))
     (obsidian-find-file choice)))
+
+(when (eval-when-compile (require 'hydra nil t))
+  (defhydra obsidian-hydra (:hint nil)
+    "
+Obsidian
+_f_ollow at point   insert _w_ikilink          _q_uit
+_j_ump to note      insert _l_ink
+_t_ag find          _c_apture new note
+_s_earch by expr.   _u_pdate tags/alises etc.
+"
+    ("c" obsidian-capture)
+    ("f" obsidian-follow-link-at-point)
+    ("j" obsidian-jump)
+    ("l" obsidian-insert-link :color blue)
+    ("q" nil :color blue)
+    ("s" obsidian-search)
+    ("t" obsidian-tag-find)
+    ("u" obsidian-update)
+    ("w" obsidian-insert-wikilink :color blue)))
 
 ;;;###autoload
 (define-globalized-minor-mode global-obsidian-mode obsidian-mode obsidian-enable-minor-mode)

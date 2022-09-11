@@ -4,8 +4,8 @@
 
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
 ;; URL: https://github.com/abo-abo/swiper
-;; Package-Version: 20220626.1826
-;; Package-Commit: 2051de5882706246da298ce5f60482cd7f469fe7
+;; Package-Version: 20220910.1908
+;; Package-Commit: 4c370d66776bd5145264497408fc67ee2763df3c
 ;; Version: 0.13.4
 ;; Package-Requires: ((emacs "24.5") (ivy "0.13.4") (swiper "0.13.4"))
 ;; Keywords: convenience, matching, tools
@@ -371,25 +371,15 @@ Update the minibuffer with the amount of lines collected every
   (company-mode 1)
   (unless company-candidates
     (company-complete))
-  (let ((len (cond ((let (l)
-                      (and company-common
-                           (string= company-common
-                                    (buffer-substring
-                                     (- (point) (setq l (length company-common)))
-                                     (point)))
-                           l)))
-                   (company-prefix
-                    (length company-prefix)))))
-    (when len
-      (setq ivy-completion-beg (- (point) len))
-      (setq ivy-completion-end (point))
-      (ivy-read "Candidate: " company-candidates
-                :action #'ivy-completion-in-region-action
-                :caller 'counsel-company))))
+  (company--continue)
+  (when company-candidates
+    (ivy-read "Candidate: " company-candidates
+              :action 'company-finish
+              :caller 'counsel-company)))
 
 (ivy-configure 'counsel-company
   :display-transformer-fn #'counsel--company-display-transformer
-  :unwind-fn #'company-abort)
+  :unwind-fn (lambda() (unless ivy-exit (company-abort))))
 
 (defun counsel--company-display-transformer (s)
   (concat s (let ((annot (company-call-backend 'annotation s)))
@@ -1307,6 +1297,9 @@ Like `locate-dominating-file', but DIR defaults to
      "\0"
      t)))
 
+(defvar counsel-git-history nil
+  "History for `counsel-git'.")
+
 ;;;###autoload
 (defun counsel-git (&optional initial-input)
   "Find file in the current Git repository.
@@ -1317,6 +1310,7 @@ INITIAL-INPUT can be given as the initial minibuffer input."
     (ivy-read "Find file: " (counsel-git-cands default-directory)
               :initial-input initial-input
               :action #'counsel-git-action
+              :history 'counsel-git-history
               :caller 'counsel-git)))
 
 (ivy-configure 'counsel-git
@@ -4501,24 +4495,26 @@ mark, as per \\[universal-argument] \\[yank]."
   "Like `yank-pop', but insert the kill corresponding to S.
 Signal a `buffer-read-only' error if called from a read-only
 buffer position."
-  (with-ivy-window
-    (barf-if-buffer-read-only)
-    (setq yank-window-start (window-start))
-    (unless (eq last-command 'yank)
-      ;; Avoid unexpected deletions with `yank-handler' properties.
-      (setq yank-undo-function nil))
-    (condition-case nil
-        (let (;; Deceive `yank-pop'.
-              (last-command 'yank)
-              ;; Avoid unexpected additions to `kill-ring'.
-              interprogram-paste-function)
-          (yank-pop (counsel--yank-pop-position s)))
-      (error
-       ;; Support strings not present in the kill ring.
-       (insert s)))
-    (when (funcall (if counsel-yank-pop-after-point #'> #'<)
-                   (point) (mark t))
-      (exchange-point-and-mark t))))
+  (if (eq major-mode 'vterm-mode)
+      (let ((inhibit-read-only t))
+        (vterm-insert s)))
+  (barf-if-buffer-read-only)
+  (setq yank-window-start (window-start))
+  (unless (eq last-command 'yank)
+    ;; Avoid unexpected deletions with `yank-handler' properties.
+    (setq yank-undo-function nil))
+  (condition-case nil
+      (let (;; Deceive `yank-pop'.
+            (last-command 'yank)
+            ;; Avoid unexpected additions to `kill-ring'.
+            interprogram-paste-function)
+        (yank-pop (counsel--yank-pop-position s)))
+    (error
+     ;; Support strings not present in the kill ring.
+     (insert s)))
+  (when (funcall (if counsel-yank-pop-after-point #'> #'<)
+                 (point) (mark t))
+    (exchange-point-and-mark t)))
 
 (defun counsel-yank-pop-action-remove (s)
   "Remove all occurrences of S from the kill ring."
@@ -4707,9 +4703,12 @@ S will be of the form \"[register]: content\"."
                                      imenu-auto-rescan-maxout))
          (items (imenu--make-index-alist t))
          (items (delete (assoc "*Rescan*" items) items))
-         (items (if (eq major-mode 'emacs-lisp-mode)
-                    (counsel-imenu-categorize-functions items)
-                  items)))
+         (items (cond ((eq major-mode 'emacs-lisp-mode)
+                       (counsel-imenu-categorize-functions items))
+                      ((eq major-mode 'python-mode)
+                       (python-imenu-create-flat-index))
+                      (t
+                       items))))
     (counsel-imenu-get-candidates-from items)))
 
 (defun counsel-imenu-get-candidates-from (alist &optional prefix)
@@ -4749,8 +4748,7 @@ PREFIX is used to create the key."
       items)))
 
 (defun counsel-imenu-action (x)
-  (with-ivy-window
-    (imenu (cdr x))))
+  (imenu (cdr x)))
 
 (defvar counsel-imenu-history nil
   "History for `counsel-imenu'.")
