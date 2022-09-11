@@ -4,6 +4,8 @@
 
 ;; Author: Bruno Félix Rezende Ribeiro <oitofelix@gnu.org>
 ;; Keywords: tools
+;; Package-Version: 20191022.718
+;; Package-Commit: f5126a2da1e0e52981fad9c12028814be80328c2
 ;; Package: elpa-deploy
 ;; Homepage: https://github.com/oitofelix/elpa-deploy
 
