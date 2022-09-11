@@ -4,10 +4,10 @@ Source:  https://github.com/millejoh/emacs-ipython-notebook.git
 
 Updating /mnt/store/melpa/working/ein/
 Checking out origin/HEAD
-Checking out b806c779cd6a550180c2b7bb66bf6e76dd89431f
+Checking out b2410dc96f61aa806a7934099d8f1e40c8f6ca18
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ein/
-  to /tmp/einHar72W/ein-20220618.1101
+  to /tmp/einalr9Lb/ein-20220911.1319
   ! lisp/ein-cell.el -> ein-cell.el
   ! lisp/ein-classes.el -> ein-classes.el
   ! lisp/ein-completer.el -> ein-completer.el
@@ -45,46 +45,48 @@ Copying files (->) and directories (=>)
   ! lisp/ein.el -> ein.el
   ! lisp/ob-ein.el -> ob-ein.el
   ! lisp/poly-ein.el -> poly-ein.el
-Created ein-20220618.1101.tar containing:
-  ein-20220618.1101/
-  ein-20220618.1101/ein-cell.el
-  ein-20220618.1101/ein-classes.el
-  ein-20220618.1101/ein-completer.el
-  ein-20220618.1101/ein-contents-api.el
-  ein-20220618.1101/ein-core.el
-  ein-20220618.1101/ein-dev.el
-  ein-20220618.1101/ein-events.el
-  ein-20220618.1101/ein-file.el
-  ein-20220618.1101/ein-gat.el
-  ein-20220618.1101/ein-ipdb.el
-  ein-20220618.1101/ein-ipynb-mode.el
-  ein-20220618.1101/ein-jupyter.el
-  ein-20220618.1101/ein-kernel.el
-  ein-20220618.1101/ein-kernelinfo.el
-  ein-20220618.1101/ein-kill-ring.el
-  ein-20220618.1101/ein-log.el
-  ein-20220618.1101/ein-markdown-mode.el
-  ein-20220618.1101/ein-node.el
-  ein-20220618.1101/ein-notebook.el
-  ein-20220618.1101/ein-notebooklist.el
-  ein-20220618.1101/ein-notification.el
-  ein-20220618.1101/ein-output-area.el
-  ein-20220618.1101/ein-pager.el
-  ein-20220618.1101/ein-pkg.el
-  ein-20220618.1101/ein-process.el
-  ein-20220618.1101/ein-python-send.el
-  ein-20220618.1101/ein-pytools.el
-  ein-20220618.1101/ein-query.el
-  ein-20220618.1101/ein-scratchsheet.el
-  ein-20220618.1101/ein-shared-output.el
-  ein-20220618.1101/ein-traceback.el
-  ein-20220618.1101/ein-utils.el
-  ein-20220618.1101/ein-websocket.el
-  ein-20220618.1101/ein-worksheet.el
-  ein-20220618.1101/ein.el
-  ein-20220618.1101/ob-ein.el
-  ein-20220618.1101/poly-ein.el
-Built ein in 3.801s, finished at 2022-09-11T07:07:03+0000
+Created ein-20220911.1319.tar containing:
+  ein-20220911.1319/
+  ein-20220911.1319/ein-cell.el
+  ein-20220911.1319/ein-classes.el
+  ein-20220911.1319/ein-completer.el
+  ein-20220911.1319/ein-contents-api.el
+  ein-20220911.1319/ein-core.el
+  ein-20220911.1319/ein-dev.el
+  ein-20220911.1319/ein-events.el
+  ein-20220911.1319/ein-file.el
+  ein-20220911.1319/ein-gat.el
+  ein-20220911.1319/ein-ipdb.el
+  ein-20220911.1319/ein-ipynb-mode.el
+  ein-20220911.1319/ein-jupyter.el
+  ein-20220911.1319/ein-kernel.el
+  ein-20220911.1319/ein-kernelinfo.el
+  ein-20220911.1319/ein-kill-ring.el
+  ein-20220911.1319/ein-log.el
+  ein-20220911.1319/ein-markdown-mode.el
+  ein-20220911.1319/ein-node.el
+  ein-20220911.1319/ein-notebook.el
+  ein-20220911.1319/ein-notebooklist.el
+  ein-20220911.1319/ein-notification.el
+  ein-20220911.1319/ein-output-area.el
+  ein-20220911.1319/ein-pager.el
+  ein-20220911.1319/ein-pkg.el
+  ein-20220911.1319/ein-process.el
+  ein-20220911.1319/ein-python-send.el
+  ein-20220911.1319/ein-pytools.el
+  ein-20220911.1319/ein-query.el
+  ein-20220911.1319/ein-scratchsheet.el
+  ein-20220911.1319/ein-shared-output.el
+  ein-20220911.1319/ein-traceback.el
+  ein-20220911.1319/ein-utils.el
+  ein-20220911.1319/ein-websocket.el
+  ein-20220911.1319/ein-worksheet.el
+  ein-20220911.1319/ein.el
+  ein-20220911.1319/ob-ein.el
+  ein-20220911.1319/poly-ein.el
+Built ein in 3.499s, finished at 2022-09-11T16:06:39+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  481 Sep 11 07:07 packages/ein-20220618.1101.entry
-820K -rw-r--r-- 1 root root 820K Sep 11 07:07 packages/ein-20220618.1101.tar
+4.0K -rw-r--r-- 1 root root  481 Sep 11 13:05 packages/ein-20220618.1101.entry
+820K -rw-r--r-- 1 root root 820K Sep 11 13:05 packages/ein-20220618.1101.tar
+4.0K -rw-r--r-- 1 root root  481 Sep 11 16:06 packages/ein-20220911.1319.entry
+820K -rw-r--r-- 1 root root 820K Sep 11 16:06 packages/ein-20220911.1319.tar

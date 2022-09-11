@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://gitlab.emacsos.com/sylecn/zero-el
 
 Updating /mnt/store/melpa/working/zero-input/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.emacsos.com/sylecn/zero-el/': Failed to connect to gitlab.emacsos.com port 443: Connection refused
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/pkg
+Checking out 729da9f4b99acb744ee6974ed7f3d4e252fd19da
+Built zero-input in 5.566s, finished at 2022-09-11T13:55:28+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root 63K Sep 11 13:55 packages/zero-input-20200405.1220.el
+4.0K -rw-r--r-- 1 root root 270 Sep 11 13:55 packages/zero-input-20200405.1220.entry

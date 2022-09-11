@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://git.zamazal.org/pdm/pip-frame
 
 Updating /mnt/store/melpa/working/pip-frame/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.zamazal.org/pdm/pip-frame/': Could not resolve host: git.zamazal.org
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 8c396a11f532a1beb594b65e99e594f1e9f1c2c8
+Built pip-frame in 3.720s, finished at 2022-09-11T13:38:19+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.9K Sep 11 13:38 packages/pip-frame-20220802.1914.el
+4.0K -rw-r--r-- 1 root root  372 Sep 11 13:38 packages/pip-frame-20220802.1914.entry
