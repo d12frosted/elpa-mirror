@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20220718.1215
-;; Package-Commit: d06c1e9566820b724260fe2411d3d8ee63dbbb60
+;; Package-Version: 20220911.2008
+;; Package-Commit: 7e0afa85a9e31bc9e4e7d349736d27de582431de
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -48,7 +48,7 @@
    'tok
    
    ;; Basic faces
-   `(default ((,class (:foreground "gray20" :background "white"))))
+   `(default ((,class (:foreground "black" :background "white"))))
    `(bold ((,class (:weight bold))))
    `(italic ((,class (:slant italic))))
    `(bold-italic ((,class (:weight bold :slant italic))))
@@ -58,16 +58,16 @@
    `(link-visited ((,class (:foreground "magenta4" :inherit link))))
    `(highlight ((,class (:foreground "black" :background "darkseagreen2"))))
    `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
-                      :background "light goldenrod yellow"))))
+                      :background "gray90"))))
    `(secondary-selection ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
                                    :background "yellow1"))))
    `(trailing-whitespace ((,class (:background "red1"))))
    `(vertical-border ((,class (:inherit shadow))))
    `(internal-border ((t (nil))))
-   `(fringe ((,class (:inherit default))))
+   `(fringe ((,class (:background "gray90"))))
    `(scroll-bar ((,class (:foreground "black"))))
    `(border ((t (nil))))
-   `(cursor ((,class (:background "red"))))
+   `(cursor ((,class (:inherit default))))
    `(mouse ((t (nil))))
    `(tool-bar ((,class (:foreground "black" :background "grey75"))))
    `(tab-bar ((,class (:foreground "black" :background "grey85" :inherit variable-pitch))))
@@ -75,7 +75,7 @@
    `(error ((,class (:weight bold :foreground "red1"))))
    `(warning ((,class (:weight bold :foreground "DarkOrange"))))
    `(success ((,class (:weight bold :foreground "ForestGreen"))))
-   `(minibuffer-prompt ((,class (:foreground "blue"))))
+   `(minibuffer-prompt ((t (nil))))
    `(menu ((,class (:inverse-video t))))
    `(button ((,class (:inherit link))))
 
@@ -91,13 +91,13 @@
 
    ;; hl-line
    `(hl-line ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
-                       :background "light yellow"))))
+                       :background "gray95"))))
    
    ;; mode-line
-   `(mode-line ((,class (:foreground "black" :background "LightBlue1" :box (:line-width -1 :style released-button)))))
+   `(mode-line ((,class (:foreground "black" :background "gray90" :box (:line-width -1 :color "gray30" :style released-button)))))
    (when (>= emacs-major-version 29)
      `(mode-line-active ((,class (:inherit mode-line)))))
-   `(mode-line-inactive ((,class (:weight light :foreground "grey20" :background "LightCyan1" :box (:line-width -1 :color "LightCyan2" :style nil)))))
+   `(mode-line-inactive ((,class (:weight light :foreground "grey40" :background "gray100" :box (:line-width -1 :color "gray60")))))
    `(mode-line-buffer-id ((,class (:weight bold))))
    `(mode-line-highlight ((t (nil))))
    `(mode-line-emphasis ((,class (:weight bold))))
@@ -134,20 +134,20 @@
    `(completions-common-part ((,class (:foreground "blue3"))))
 
    ;; font-lock
-   `(font-lock-comment-face ((,class (:foreground "forest green"))))
+   `(font-lock-comment-face ((,class (:foreground "green4"))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-string-face ((,class (:foreground "Firebrick"))))
+   `(font-lock-string-face ((t (nil))))
    `(font-lock-doc-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-doc-markup-face ((,class (:inherit font-lock-constant-face))))
-   `(font-lock-keyword-face ((,class (:foreground "blue4"))))
-   `(font-lock-builtin-face ((,class (:foreground "blue4"))))
+   `(font-lock-keyword-face ((t (nil))))
+   `(font-lock-builtin-face ((t (nil))))
    `(font-lock-function-name-face ((t nil)))
    `(font-lock-variable-name-face ((t nil)))
-   `(font-lock-type-face ((,class (:foreground "blue4"))))
-   `(font-lock-constant-face ((,class (:foreground "purple"))))
-   `(font-lock-warning-face ((,class (:inherit error))))
+   `(font-lock-type-face ((t (nil))))
+   `(font-lock-constant-face ((t (nil))))
+   `(font-lock-warning-face ((t (:inherit error))))
    `(font-lock-negation-char-face ((t nil)))
-   `(font-lock-preprocessor-face ((,class (:inherit font-lock-comment-face))))
+   `(font-lock-preprocessor-face ((t (nil))))
    `(font-lock-regexp-grouping-backslash ((t nil)))
    `(font-lock-regexp-grouping-construct ((t nil)))
 
@@ -828,6 +828,28 @@
    `(magit-blame-name ((t (nil))))
    `(magit-blame-date ((t (nil))))
    
+   ;; neotree
+   `(neo-banner-face ((t (nil))))
+   `(neo-header-face ((t (nil))))
+   `(neo-root-dir-face ((t (nil))))
+   `(neo-dir-link-face ((t (nil))))
+   `(neo-file-link-face ((t (nil))))
+   `(neo-button-face ((t (nil))))
+   `(neo-expand-btn-face ((t (nil))))
+   `(neo-vc-default-face ((t (nil))))
+   `(neo-vc-user-face ((t (nil))))
+   `(neo-vc-up-to-date-face ((t (nil))))
+   `(neo-vc-edited-face ((t (nil))))
+   `(neo-vc-needs-update-face ((t (nil))))
+   `(neo-vc-needs-merge-face ((t (nil))))
+   `(neo-vc-unlocked-changes-face ((t (nil))))
+   `(neo-vc-added-face ((t (nil))))
+   `(neo-vc-removed-face ((,class (:strike-through t))))
+   `(neo-vc-conflict-face ((t (nil))))
+   `(neo-vc-missing-face ((t (nil))))
+   `(neo-vc-ignored-face ((t (nil))))
+   `(neo-vc-unregistered-face ((t (nil))))
+
    ;; ungrouped
    `(fill-column-indicator ((,class (:inherit shadow))))
    `(escape-glyph ((,class (:foreground "brown"))))

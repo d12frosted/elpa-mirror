@@ -5,8 +5,8 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;;         Fredrik Bergroth <fbergroth@gmail.com>
 ;; URL: https://github.com/syohex/emacs-evil-anzu
-;; Package-Version: 20200514.1902
-;; Package-Commit: d3f6ed4773b48767bd5f4708c7f083336a8a8a86
+;; Package-Version: 20220911.1939
+;; Package-Commit: d1e98ee6976437164627542909a25c6946497899
 ;; Version: 0.02
 ;; Package-Requires: ((evil "1.0.0") (anzu "0.46"))
 
@@ -37,8 +37,9 @@
       (anzu--update string))))
 
 (defun evil-anzu-search-next (&optional pattern direction nowrap)
-  "Make anzu work with the 'evil-search search module.
-If PATTERN is not specified the current global pattern `evil-ex-search-pattern' is used."
+  "Make anzu work with the \\='evil-search search module.
+If PATTERN is not specified the current global pattern
+`evil-ex-search-pattern' is used."
   (when anzu-mode
     (anzu--cons-mode-line-search)
     (let* ((isearch-regexp t) ; all evil-ex searches are regexp searches

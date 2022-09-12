@@ -22,9 +22,10 @@ Table of Contents
 .. 3. Encrypted room support through Pantalaimon
 3. Rationale
 4. Changelog
-.. 1. 0.1.2
-.. 2. 0.1.1
-.. 3. 0.1
+.. 1. 0.1.3
+.. 2. 0.1.2
+.. 3. 0.1.1
+.. 4. 0.1
 5. Development
 .. 1. Copyright Assignment
 .. 2. Matrix spec in Org format
@@ -403,7 +404,17 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.1.2
+4.1 0.1.3
+─────────
+
+  *Fixed*
+
+  ⁃ Temporarily disable sending of read receipts due to an unusual bug
+    that could cause Emacs to become unresponsive.  (The feature will be
+    re-enabled in a future release.)
+
+
+4.2 0.1.2
 ─────────
 
   *Fixed*
@@ -420,7 +431,7 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.2 0.1.1
+4.3 0.1.1
 ─────────
 
   *Fixed*
@@ -430,7 +441,7 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.3 0.1
+4.4 0.1
 ───────
 
   After almost two years of development, the first tagged release.
