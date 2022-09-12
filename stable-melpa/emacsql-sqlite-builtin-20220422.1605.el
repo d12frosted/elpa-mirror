@@ -5,8 +5,6 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/emacsql-sqlite-builtin
 ;; Keywords: data
-;; Package-Version: 20220422.1605
-;; Package-Commit: c6f66f2a94a0c520d5c1028858adc2ab0f959f96
 
 ;; Package-Requires: (
 ;;     (emacs "29")
@@ -111,6 +109,10 @@ buffer. This is for debugging purposes."
 (provide 'emacsql-sqlite-builtin)
 ;; Local Variables:
 ;; indent-tabs-mode: nil
+;; byte-compile-warnings: (not docstrings)
+;; End:
+;;; emacsql-sqlite-builtin.el ends here
+il
 ;; byte-compile-warnings: (not docstrings)
 ;; End:
 ;;; emacsql-sqlite-builtin.el ends here
