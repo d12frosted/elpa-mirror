@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://git.spwhitton.name/org-d20
 
 Updating /mnt/store/melpa/working/org-d20/
-Checking out origin/HEAD
-Checking out bb3e28841ebc4b87a34a642a40662316234601c4
-Built org-d20 in 4.397s, finished at 2022-09-11T22:50:44+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Sep 11 22:50 packages/org-d20-20210212.139.el
-4.0K -rw-r--r-- 1 root root 461 Sep 11 22:50 packages/org-d20-20210212.139.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.spwhitton.name/org-d20/': Failed to connect to git.spwhitton.name port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
