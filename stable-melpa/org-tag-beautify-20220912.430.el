@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20220909.2216
-;; Package-Commit: 26293b6dbd1dc708e18f04be9e067a96c6167782
+;; Package-Version: 20220912.430
+;; Package-Commit: bfe7f054109f9f0e6fedbf5c9240fa96ebdde5fd
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -165,12 +165,15 @@
                   ("user" . ,(all-the-icons-faicon "user" :face '(:foreground "purple")))
                   ("users" . ,(all-the-icons-faicon "users" :face '(:foreground "purple")))
                   ("group" . ,(all-the-icons-material "group" :face '(:foreground "purple")))
+                  ("gift" . ,(all-the-icons-faicon "gift" :face '(:foreground "OrangeRed")))
 
                   ("girl" . ,(propertize "㊛" 'face '(:foreground "LightPink")))
                   ("boy" . ,(propertize "㊚" 'face '(:foreground "DeepSkyBlue")))
                   ("male" . ,(all-the-icons-faicon "male" :face '(:foreground "DodgerBlue")))
                   ("female" . ,(all-the-icons-faicon "female" :face '(:foreground "LightPink1")))
                   ("beauty" . ,(all-the-icons-faicon "female" :face '(:foreground "LightPink1")))
+
+                  ("love" . ,(all-the-icons-faicon "heart-o" :face '(:foreground "red")))
 
                   ;; Sexual orientation: https://en.wikipedia.org/wiki/Sexual_orientation
                   ;; LGBTQ symbols: https://en.wikipedia.org/wiki/LGBT_symbols
@@ -189,10 +192,10 @@
                   ("male_homosexual" . ,(propertize "⚣" 'face '(:foreground "purple")))
                   ("lesbian" . ,(propertize "⚢" 'face '(:foreground "purple")))
                   ("gay" . ,(propertize "⚣" 'face '(:foreground "purple")))
-                  ("asexuality" . ,(propertize "○" 'face '(:foreground "purple"))) ; 无性取向
-                  ("bisexuality" . ,(propertize "⚤" 'face '(:foreground "purple"))) ; 双性恋取向
+                  ("asexuality" . ,(propertize "○" 'face '(:foreground "purple")))     ; 无性取向
+                  ("bisexuality" . ,(propertize "⚤" 'face '(:foreground "purple")))    ; 双性恋取向
                   ("intersexuality" . ,(propertize "☿" 'face '(:foreground "purple"))) ; 中间性
-                  ("transsexual" . ,(propertize "⚧" 'face '(:foreground "purple"))) ; 变性取向
+                  ("transsexual" . ,(propertize "⚧" 'face '(:foreground "purple")))    ; 变性取向
                   
                   ;; Gender:
                   ;; ("genderless" . ,(all-the-icons-faicon "genderless" :face '(:foreground "purple"))) ; 无性别者
@@ -201,8 +204,8 @@
                   ;; ("sexless" . ,(all-the-icons-faicon "genderless" :face '(:foreground "purple"))) ; 无性别者
                   ("sexless" . ,(propertize "○" 'face '(:foreground "purple"))) ; 无性别者
                   ;; ("neuter" . ,(all-the-icons-faicon "neuter" :face '(:foreground "purple"))) ; 中性
-                  ("neuter" . ,(propertize "⚲" 'face '(:foreground "purple"))) ; 中性
-                  ("intersex" . ,(propertize "⚥" 'face '(:foreground "purple"))) ; 双性者
+                  ("neuter" . ,(propertize "⚲" 'face '(:foreground "purple")))      ; 中性
+                  ("intersex" . ,(propertize "⚥" 'face '(:foreground "purple")))    ; 双性者
                   ("transgender" . ,(propertize "⚧" 'face '(:foreground "purple"))) ; 变性者
                   ("bigender" . ,(propertize "⚥" 'face '(:foreground "purple")))
                   ("transgender-female" . ,(propertize "⧬" 'face '(:foreground "purple")))
@@ -221,9 +224,9 @@
                   ("shopping" . ,(all-the-icons-faicon "shopping-basket" :face '(:foreground "khaki")))
                   ("express" . ,(all-the-icons-material "local_shipping" :face '(:foreground "PaleTurquoise")))
                   ("diamond" . ,(all-the-icons-faicon "diamond" :face '(:foreground "green")))
-                  ("tag" . ,(all-the-icons-faicon "tag" :face '(:foreground "white")))
+                  ("tag" . ,(all-the-icons-fileicon "tag" :face '(:foreground "white")))
                   ("tags" . ,(all-the-icons-faicon "tags" :face '(:foreground "white")))
-                  ("money" . ,(all-the-icons-faicon "money" :face '(:foreground "green")))
+                  ("money" . ,(all-the-icons-faicon "money" :face '(:foreground "ForestGreen")))
                   ("usd" . ,(all-the-icons-faicon "usd" :face '(:foreground "green")))
                   ("eur" . ,(all-the-icons-faicon "eur" :face '(:foreground "LightSeaGreen")))
                   ("jpy" . ,(all-the-icons-faicon "jpy" :face '(:foreground "GreenYellow")))
@@ -322,8 +325,8 @@
                   ("Word" . ,(all-the-icons-fileicon "word" :face '(:foreground "SteelBlue")))
                   ("Excel" . ,(all-the-icons-fileicon "excel" :face '(:foreground "ForestGreen")))
                   ("PowerPoint" . ,(all-the-icons-fileicon "powerpoint" :face '(:foreground "IndianRed")))
-                  ("Keynote" . ,(all-the-icons-fileicon "keynote" :face '(:foreground "LightGray")))
-                  ("WordPress" . ,(all-the-icons-faicon "wordpress" :face '(:foreground "LightGray")))
+                  ("Keynote" . ,(all-the-icons-fileicon "keynote" :face '(:foreground "DeepSkyBlue")))
+                  ("WordPress" . ,(all-the-icons-faicon "wordpress" :face '(:foreground "LightSkyBlue")))
                   ("Access" . ,(all-the-icons-fileicon "access" :face '(:foreground "IndianRed")))
                   ("pdf" . ,(all-the-icons-faicon "file-pdf-o" :face '(:foreground "LightCoral")))
                   ("image" . ,(all-the-icons-faicon "file-image-o" :face '(:foreground "LightGray")))
@@ -602,6 +605,7 @@
                   ("Racket" . ,(all-the-icons-fileicon "racket" :face '(:foreground "DarkOrange")))
                   ("Python" . ,(all-the-icons-alltheicon "python" :face '(:foreground "orange") :v-adjust -0.01))
                   ("Cython" . ,(all-the-icons-fileicon "cython" :face '(:foreground "orange")))
+                  ("numpy" . ,(all-the-icons-fileicon "numpy" :face '(:foreground "CornflowerBlue")))
                   ("Haskell" . ,(all-the-icons-alltheicon "haskell" :face '(:foreground "orange")))
                   ("Julia" . ,(all-the-icons-fileicon "julia" :face '(:foreground "LightCoral")))
                   ("C" . ,(all-the-icons-alltheicon "c-line" :face '(:foreground "CornflowerBlue")))
@@ -691,6 +695,7 @@
                   ("Gulp" . ,(all-the-icons-fileicon "gulp" :face '(:foreground "orange")))
                   ("React" . ,(all-the-icons-alltheicon "react" :face '(:foreground "orange")))
                   ("Vue" . ,(all-the-icons-fileicon "vue" :face '(:foreground "chartreuse")))
+                  ("Svelte" . ,(all-the-icons-fileicon "svelte" :face '(:foreground "IndianRed2")))
                   ("reason" . ,(all-the-icons-fileicon "reason" :face '(:foreground "DeepSkyBlue")))
                   ("D3js" . ,(all-the-icons-fileicon "d3" :face '(:foreground "salmon")))
                   ("chartjs" . ,(all-the-icons-fileicon "chartjs" :face '(:foreground "tomato")))
@@ -714,7 +719,7 @@
                   ;; -----------------------------------------------------
                   ;; Open Source
                   ("GNU" . ,(all-the-icons-fileicon "gnu" :face '(:foreground "gray")))
-                  ("free" . ,(all-the-icons-fileicon "freemarker" :face '(:foreground "gray")))
+                  ("free" . ,(all-the-icons-fileicon "freemarker" :face '(:foreground "LimeGreen")))
                   ;; ("license" . ,(all-the-icons-faicon "" :face '(:foreground "SteelBlue")))
                   ("copyright" . ,(all-the-icons-faicon "copyright" :face '(:foreground "SteelBlue")))
                   ("trademark" . ,(all-the-icons-faicon "trademark" :face '(:foreground "SteelBlue")))
@@ -1063,6 +1068,7 @@
 
 (defun org-tag-beautify-enable ()
   "Enable `org-tag-beautify'."
+  (setq org-pretty-tags-surrogate-strings nil)
   (org-tag-beautify-set-common-tag-icons)
   (org-tag-beautify-set-programming-tag-icons)
   (org-tag-beautify-set-internet-company-tag-icons)

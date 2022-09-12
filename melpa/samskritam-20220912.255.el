@@ -1,12 +1,12 @@
-;;; samskritam.el --- Library to get samskrit word definition, translate to/from -*- lexical-binding: t -*-
+;;; samskritam.el --- Library to get samskrit word definition, translate to & from -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2022 Krishna Thapa
 
 ;; Description: Samskrit definitions and translations
 ;; Author: Krishna Thapa <thapakrish@gmail.com>
 ;; URL: https://github.com/thapakrish/samskritam
-;; Package-Version: 20220911.1857
-;; Package-Commit: 664fd843589072663399d9cc5ea176dfce823208
+;; Package-Version: 20220912.255
+;; Package-Commit: 93566481023b2645ca1f1dfcc5440712c2ec843b
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "28.1") (google-translate "0.12.0"))
 ;; Keywords: convenience, language, samskrit, sanskrit, dictionary, translation
