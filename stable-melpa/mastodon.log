@@ -4,10 +4,10 @@ Source:  https://codeberg.org/martianh/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
 Checking out origin/HEAD
-Checking out fa704169dfb18f080f4fbc25eb440dbf28ae2f2b
+Checking out cf504419334bf964e5211ab238783efb15325648
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodon0c54pF/mastodon-20220912.1436
+  to /tmp/mastodonBSBeQY/mastodon-20220912.2042
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -21,25 +21,25 @@ Copying files (->) and directories (=>)
   ! lisp/mastodon-tl.el -> mastodon-tl.el
   ! lisp/mastodon-toot.el -> mastodon-toot.el
   ! lisp/mastodon.el -> mastodon.el
-Created mastodon-20220912.1436.tar containing:
-  mastodon-20220912.1436/
-  mastodon-20220912.1436/mastodon-async.el
-  mastodon-20220912.1436/mastodon-auth.el
-  mastodon-20220912.1436/mastodon-client.el
-  mastodon-20220912.1436/mastodon-discover.el
-  mastodon-20220912.1436/mastodon-http.el
-  mastodon-20220912.1436/mastodon-inspect.el
-  mastodon-20220912.1436/mastodon-media.el
-  mastodon-20220912.1436/mastodon-notifications.el
-  mastodon-20220912.1436/mastodon-pkg.el
-  mastodon-20220912.1436/mastodon-profile.el
-  mastodon-20220912.1436/mastodon-search.el
-  mastodon-20220912.1436/mastodon-tl.el
-  mastodon-20220912.1436/mastodon-toot.el
-  mastodon-20220912.1436/mastodon.el
-Built mastodon in 5.868s, finished at 2022-09-12T17:22:41+0000
+Created mastodon-20220912.2042.tar containing:
+  mastodon-20220912.2042/
+  mastodon-20220912.2042/mastodon-async.el
+  mastodon-20220912.2042/mastodon-auth.el
+  mastodon-20220912.2042/mastodon-client.el
+  mastodon-20220912.2042/mastodon-discover.el
+  mastodon-20220912.2042/mastodon-http.el
+  mastodon-20220912.2042/mastodon-inspect.el
+  mastodon-20220912.2042/mastodon-media.el
+  mastodon-20220912.2042/mastodon-notifications.el
+  mastodon-20220912.2042/mastodon-pkg.el
+  mastodon-20220912.2042/mastodon-profile.el
+  mastodon-20220912.2042/mastodon-search.el
+  mastodon-20220912.2042/mastodon-tl.el
+  mastodon-20220912.2042/mastodon-toot.el
+  mastodon-20220912.2042/mastodon.el
+Built mastodon in 4.406s, finished at 2022-09-12T23:45:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  369 Sep 12 14:13 packages/mastodon-20220912.1305.entry
-280K -rw-r--r-- 1 root root 280K Sep 12 14:13 packages/mastodon-20220912.1305.tar
-4.0K -rw-r--r-- 1 root root  369 Sep 12 17:22 packages/mastodon-20220912.1436.entry
-292K -rw-r--r-- 1 root root 290K Sep 12 17:22 packages/mastodon-20220912.1436.tar
+4.0K -rw-r--r-- 1 root root  369 Sep 12 20:33 packages/mastodon-20220912.1436.entry
+292K -rw-r--r-- 1 root root 290K Sep 12 20:33 packages/mastodon-20220912.1436.tar
+4.0K -rw-r--r-- 1 root root  369 Sep 12 23:45 packages/mastodon-20220912.2042.entry
+292K -rw-r--r-- 1 root root 290K Sep 12 23:45 packages/mastodon-20220912.2042.tar

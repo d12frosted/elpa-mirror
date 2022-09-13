@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.4
-;; Package-Version: 20220912.1339
-;; Package-Commit: eef9323a87f7c7721236a8b47bc84984b38884aa
+;; Package-Version: 20220912.1844
+;; Package-Commit: 7a1e15c9b2097400d603c9ad7e3104d8afde8a7d
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
@@ -45,13 +45,11 @@
   :prefix "org-modern-")
 
 (defvar org-modern-label-border)
-(defvar org-modern-variable-pitch)
 (defun org-modern--update-label-face ()
   "Update border of the `org-modern-label' face."
   (when (facep 'org-modern-label)
     (set-face-attribute
      'org-modern-label nil
-     :inherit org-modern-variable-pitch
      :box
      (when org-modern-label-border
        (let ((border (if (eq org-modern-label-border 'auto)
@@ -228,11 +226,6 @@ references."
 Set to nil to disable the indicator."
   :type '(repeat string))
 
-(defcustom org-modern-variable-pitch 'variable-pitch
-  "Use variable pitch for modern style labels."
-  :type 'symbol
-  :set #'org-modern--setter)
-
 (defgroup org-modern-faces nil
   "Faces used by `org-modern'."
   :group 'org-modern
@@ -324,6 +317,7 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
 (defvar-local org-modern--star-cache nil)
 (defvar-local org-modern--checkbox-cache nil)
 (defvar-local org-modern--progress-cache nil)
+(defvar-local org-modern--sp-width (list nil))
 
 (defun org-modern--checkbox ()
   "Prettify checkboxes according to `org-modern-checkbox'."
@@ -452,9 +446,9 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
            (end (match-end 0))
            (tbeg (match-beginning 1))
            (tend (match-end 1))
-           ;; Unique objects
-           (sp1 (list 'space :width 1))
-           (sp2 (list 'space :width 1))
+           ;; Unique space objects
+           (sp1 (list 'space :width org-modern--sp-width))
+           (sp2 (list 'space :width org-modern--sp-width))
            (color (face-attribute 'org-table :foreground nil t))
            (inner (progn
                     (goto-char beg)
@@ -549,6 +543,10 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
           (forward-line)
           t)))))
 
+(defun org-modern--pre-redisplay (_)
+  "Compute font width before redisplay."
+  (setcar org-modern--sp-width (default-font-width)))
+
 ;;;###autoload
 (define-minor-mode org-modern-mode
   "Modern looks for Org."
@@ -556,7 +554,9 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
   :group 'org-modern
   (cond
    (org-modern-mode
-    (when (and (fboundp 'fringe-bitmap-p)
+    (add-hook 'pre-redisplay-functions #'org-modern--pre-redisplay nil 'local)
+    (when (and org-modern-block-fringe
+               (fboundp 'fringe-bitmap-p)
                (not (fringe-bitmap-p 'org-modern--block-inner)))
       (let* ((g (ceiling (frame-char-height) 1.8))
              (h (- (default-line-height) g)))
@@ -568,6 +568,7 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
           (vconcat (make-vector (- 127 h) #x80) [#xFF] (make-vector h 0)) nil nil 'bottom)))
     (org-modern--update-label-face)
     (setq
+     org-modern--sp-width (list nil)
      org-modern--star-cache
      (vconcat (mapcar
                (lambda (x) (propertize x 'face 'org-modern-symbol))
@@ -690,7 +691,9 @@ You can specify a font `:family'. The font families `Iosevka', `Hack' and
            (6 '(face nil display " ")))))))
     (font-lock-add-keywords nil org-modern--font-lock-keywords 'append)
     (advice-add #'org-unfontify-region :after #'org-modern--unfontify))
-   (t (font-lock-remove-keywords nil org-modern--font-lock-keywords)))
+   (t
+    (remove-hook 'pre-redisplay-functions #'org-modern--pre-redisplay 'local)
+    (font-lock-remove-keywords nil org-modern--font-lock-keywords)))
   (save-restriction
     (widen)
     (let ((org-modern-mode t))

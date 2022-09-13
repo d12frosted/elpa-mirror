@@ -5,8 +5,8 @@
 ;; Authors: Zachary Elliott <contact@zell.io>
 ;; Maintainer: Zachary Elliott <contact@zell.io>
 ;; URL: http://github.com/zellio/ansible-vault-mode
-;; Package-Version: 20211119.1500
-;; Package-Commit: 8da2ad658dbe94c71aad1c75d6fd22888338030c
+;; Package-Version: 20211119.1459
+;; Package-Commit: 9b3d82ee49d484a494f2d88927b37fcd6245d51e
 ;; Created: 2016-09-25
 ;; Version: 0.5.2
 ;; Keywords: ansible, ansible-vault, tools
