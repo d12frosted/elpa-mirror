@@ -2,10 +2,10 @@
 
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/emacs-virtual-comment
-;; Package-Version: 20220405.229
-;; Package-Commit: d1f08e8bec3b52818d44ff06f719950b89204126
+;; Package-Version: 20220913.419
+;; Package-Commit: fbfee18042b106c12e9be37a07a6724e1637590d
 ;; Package-Requires: ((emacs "26.1"))
-;; Version: 0.4
+;; Version: 0.4.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -73,6 +73,8 @@
 ;; https://www.emacswiki.org/emacs/InPlaceAnnotations
 ;;
 ;; Changelog
+;; 2022-09-12
+;;  0.4.1 back up to .evc.bk when saving data
 ;; 2022-02-28:
 ;;  0.4 virtual-comment-show-delete-display-unit-at-point
 ;; 2021-11-01:
@@ -314,7 +316,7 @@ There are two slots but for now we only care about slot comments."
         file-abs-path))))
 
 (defun virtual-comment--get-saved-file ()
-  "Return path to .ipa file at project root."
+  "Return path to .evc file at project root."
   (let ((root (virtual-comment--get-root)))
     (if root
         (concat root ".evc")
@@ -322,6 +324,7 @@ There are two slots but for now we only care about slot comments."
 
 (defun virtual-comment--dump-data-to-file (data file)
   "Dump DATA to .evc FILE."
+  (copy-file file (format "%s.bk" file) t)
   (with-temp-file file
     (let ((standard-output (current-buffer)))
       (prin1 data))))
@@ -353,11 +356,17 @@ There are two slots but for now we only care about slot comments."
 (defun virtual-comment--load-data-from-file (file)
   "Read data from FILE.
 If not found or fail, return an empty hash talbe."
-  (with-temp-buffer
-    (condition-case nil
-        (progn (insert-file-contents file)
-               (read (current-buffer)))
-      (error (make-hash-table :test 'equal)))))
+  (if (file-exists-p file)
+      (with-temp-buffer
+        (condition-case nil
+         (progn (insert-file-contents file)
+                (read (current-buffer)))
+         (error
+          (progn
+            (message "virtual-comment error: couldn't read %s" file)
+            (make-hash-table :test 'equal)))))
+    (message "virtual-comment: %s doesn't exist" file)
+    (make-hash-table :test 'equal)))
 
 (defun virtual-comment--load ()
   "Load stuff."

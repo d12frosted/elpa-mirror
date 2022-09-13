@@ -50,6 +50,8 @@ https://github.com/blue0513/phantom-inline-comment
 https://www.emacswiki.org/emacs/InPlaceAnnotations
 
 Changelog
+2022-09-12
+ 0.4.1 back up to .evc.bk when saving data
 2022-02-28:
  0.4 virtual-comment-show-delete-display-unit-at-point
 2021-11-01:
