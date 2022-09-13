@@ -5,8 +5,6 @@
 ;; Maintainer: Arne Brasseur
 ;; Created: Mi Jul 18 09:39:10 2018 (+0200)
 ;; Version: 0.2.0
-;; Package-Version: 20220719.1610
-;; Package-Commit: 875ee7a350f5141f425c4b5350a630e1ee1795e8
 ;; Package-Requires: ((emacs "25") (parseclj "0.1.0") (treepy "0.1.0") (a "1.0.0"))
 ;; URL: https://github.com/plexus/walkclj
 ;; Keywords: languages

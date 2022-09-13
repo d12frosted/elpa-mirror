@@ -7,6 +7,8 @@ Supported packages:
 - centaur-tabs
 - column-enforce-mode
 - company-mode
+- consult
+- consult-project-extra
 - dashboard
 - deft
 - diff-hl
@@ -29,6 +31,7 @@ Supported packages:
 - popup
 - powerline
 - powerline-evil
+- prescient
 - rainbow-delimiters
 - selectrum
 - smart-mode-line
@@ -43,6 +46,7 @@ Supported packages:
 
 Supported defaults:
 - ansi-term
+- completions
 - custom (M-x customize)
 - diff-mode
 - dired
