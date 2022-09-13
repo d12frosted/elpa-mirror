@@ -1,12 +1,12 @@
 Client for the Scheme LSP server.
-Currently this client only supports CHICKEN 5 and Guile 3, since
-those are supported by scheme-lsp-server.
+Currently this client only supports CHICKEN 5, Gambit 4.9.4+ and Guile 3.
 
 ;; Installation
 
 Make sure your chosen Scheme implementation is installed and on your
 load-path.  Implementation support depends on availability of a corresponding
-LSP server, as mentioned, for now only CHICKEN and Guile are supported.
+LSP server, as mentioned, for now only CHICKEN, Gambit and Guile are
+supported.
 
 On first run you should be prompted to install an lsp server.  The
 extension will install it to its cache directory.

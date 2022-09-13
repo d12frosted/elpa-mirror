@@ -3,25 +3,11 @@ Fetcher: github
 Source:  https://github.com/laynor/smotitah.git
 
 Updating /mnt/store/melpa/working/smotitah/
-Checking out origin/HEAD
-Checking out f9ab562128a5460549d016913533778e8c94bcf3
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/smotitah/
-  to /tmp/smotitahvB3rZm/smotitah-20150218.1030
-    smotitah-pkg.el -> smotitah-pkg.el
-    smotitah.el -> smotitah.el
-    templates => templates
-Created smotitah-20150218.1030.tar containing:
-  smotitah-20150218.1030/
-  smotitah-20150218.1030/smotitah-pkg.el
-  smotitah-20150218.1030/smotitah.el
-  smotitah-20150218.1030/templates/
-  smotitah-20150218.1030/templates/sm-integration-template.el
-  smotitah-20150218.1030/templates/sm-module-base-template.el
-  smotitah-20150218.1030/templates/sm-module-template.el
-  smotitah-20150218.1030/templates/sm-package-template.el
-  smotitah-20150218.1030/templates/sm-profile-template.el
-Built smotitah in 4.078s, finished at 2022-09-13T16:01:45+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 303 Sep 13 16:01 packages/smotitah-20150218.1030.entry
- 52K -rw-r--r-- 1 root root 50K Sep 13 16:01 packages/smotitah-20150218.1030.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/laynor/smotitah.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

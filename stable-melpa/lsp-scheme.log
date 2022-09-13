@@ -4,19 +4,23 @@ Source:  https://codeberg.org/rgherdt/emacs-lsp-scheme.git
 
 Updating /mnt/store/melpa/working/lsp-scheme/
 Checking out origin/HEAD
-Checking out 02e56f4c4981bc5497cdd516969206418858a357
+Checking out b316f0507759126bfaeb31448b56aed21443064f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-scheme/
-  to /tmp/lsp-schemengEiQ3/lsp-scheme-20220809.2014
+  to /tmp/lsp-schemeqme29S/lsp-scheme-20220913.1808
     lsp-scheme.el -> lsp-scheme.el
     scripts => scripts
-Created lsp-scheme-20220809.2014.tar containing:
-  lsp-scheme-20220809.2014/
-  lsp-scheme-20220809.2014/lsp-scheme-pkg.el
-  lsp-scheme-20220809.2014/lsp-scheme.el
-  lsp-scheme-20220809.2014/scripts/
-  lsp-scheme-20220809.2014/scripts/lsp-server-connect.sh
-Built lsp-scheme in 4.417s, finished at 2022-09-13T15:38:52+0000
+Created lsp-scheme-20220913.1808.tar containing:
+  lsp-scheme-20220913.1808/
+  lsp-scheme-20220913.1808/lsp-scheme-pkg.el
+  lsp-scheme-20220913.1808/lsp-scheme.el
+  lsp-scheme-20220913.1808/scripts/
+  lsp-scheme-20220913.1808/scripts/gambit-lsp-server.scm
+  lsp-scheme-20220913.1808/scripts/install-gambit-lsp-server.sh
+  lsp-scheme-20220913.1808/scripts/lsp-server-connect.sh
+Built lsp-scheme in 4.230s, finished at 2022-09-13T18:58:17+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 475 Sep 13 15:38 packages/lsp-scheme-20220809.2014.entry
  32K -rw-r--r-- 1 root root 30K Sep 13 15:38 packages/lsp-scheme-20220809.2014.tar
+4.0K -rw-r--r-- 1 root root 475 Sep 13 18:58 packages/lsp-scheme-20220913.1808.entry
+ 40K -rw-r--r-- 1 root root 40K Sep 13 18:58 packages/lsp-scheme-20220913.1808.tar
