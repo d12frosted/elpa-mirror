@@ -4,8 +4,10 @@
 
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; URL: http://github.com/lujun9972/html2org.el
+;; Package-Commit: 6904aed40259ad8afccff079ebd8a07bff319ebc
 ;; Created: 2017-4-10
-;; Package-Version: 20170412.0
+;; Package-Version: 20170418.501
+;; Package-X-Original-Version: 20170412.0
 ;; Version: 0.1
 ;; Keywords: convenience, html, org
 ;; Package-Requires: ((emacs "24.4"))

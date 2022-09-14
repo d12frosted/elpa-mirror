@@ -1,0 +1,9 @@
+(move-text .
+	   [(20220914 457)
+	    nil "Move current line or region with M-up or M-down." single
+	    ((:commit . "c47727ada2c17d2832d62079ca981852ae0b0623")
+	     (:authors
+	      ("Jason Milkins" . "jasonm23@gmail.com"))
+	     (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
+	     (:keywords "edit")
+	     (:url . "https://github.com/emacsfodder/move-text"))])

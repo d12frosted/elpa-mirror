@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2022 Thierry Volpiatto
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20220818.553
-;; Package-Commit: fc44fc1015bbc75d16e7d7aa5d971ff1ad85e9e1
+;; Package-Version: 20220914.543
+;; Package-Commit: 9df8d953ceae4f6747b5e949db4f7ef154a75c6b
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -895,14 +895,16 @@ See docstring of `helm-ls-git-ls-switches'.
          (tip (unless (cdr marked)
                 (helm-ls-git-oneline-log (helm-ls-git--branch))))
          buf1 buf2 file)
+    (when tip
+      (cl-assert (not (string= (car (split-string tip))
+                               (car (split-string (car marked)))))
+                 nil "Can't ediff a file at same revision"))
     (setq file (helm :sources (helm-build-in-buffer-source "Git cat-file"
                                 :data (helm-ls-git-list-files))
                      :buffer "*helm-ls-git cat-file*"))
     (setq buf1 (helm-ls-git-log-find-file-1 (or tip (car marked)) file :buffer-only)
           buf2 (helm-ls-git-log-find-file-1 (if tip (car marked) (cadr marked))
                                             file :buffer-only))
-    (cl-assert (not (eql buf1 buf2))
-               nil (format "Can't ediff file `%s' at same revision" file))
     (ediff-buffers buf1 buf2)))
 
 (defun helm-ls-git-log-cherry-pick (_candidate)
@@ -1437,7 +1439,7 @@ object will be passed git rebase i.e. git rebase -i <hash>."
                  ((string-match "^\\([?]\\{2\\} \\)\\(.*\\)" i)
                   (cons (propertize i 'face 'helm-ls-git-untracked-face)
                         (expand-file-name (match-string 2 i) root)))
-                 ((string-match "^\\([AC] +\\)\\(.*\\)" i)
+                 ((string-match "^\\(AC? +\\)\\(.*\\)" i)
                   (cons (propertize i 'face 'helm-ls-git-added-copied-face)
                         (expand-file-name (match-string 2 i) root)))
                  ((string-match "^\\( [D] \\)\\(.*\\)" i)
@@ -1446,7 +1448,7 @@ object will be passed git rebase i.e. git rebase -i <hash>."
                  ((string-match "^\\(RM?\\).* -> \\(.*\\)" i)
                   (cons (propertize i 'face 'helm-ls-git-renamed-modified-face)
                         (expand-file-name (match-string 2 i) root)))
-                 ((string-match "^\\([D] +\\)\\(.*\\)" i)
+                 ((string-match "^\\(A?D +\\)\\(.*\\)" i)
                   (cons (propertize i 'face 'helm-ls-git-deleted-and-staged-face)
                         (expand-file-name (match-string 2 i) root)))
                  ((string-match "^\\(UU \\)\\(.*\\)" i)
@@ -1500,7 +1502,7 @@ object will be passed git rebase i.e. git rebase -i <hash>."
                                                      do (insert (concat bname "\n"))
                                                      do (setq last-bname bname))
                                             (save-buffer)))))))
-          ((string-match "^A " disp)
+          ((string-match "^AM? " disp)
            (append actions '(("Commit staged file(s)"
                               . helm-ls-git-commit)
                              ("Extend commit"
@@ -1556,9 +1558,14 @@ object will be passed git rebase i.e. git rebase -i <hash>."
                                  '("Stage file(s)"
                                    . helm-ls-git-stage-files))))
           ;; Deleted and staged
-          ((string-match "^D +" disp)
+          ((string-match "^A?D +" disp)
            (append actions (list '("Commit staged file(s)"
                                    . helm-ls-git-commit)
+                                 '("Update index"
+                                   . (lambda (_candidate)
+                                       (let ((default-directory (helm-default-directory)))
+                                         (process-file "git" nil nil nil
+                                                       "add" "-u"))))
                                  '("Stage marked file(s) and commit"
                                    . helm-ls-git-stage-marked-and-commit))))
           ;; Conflict
