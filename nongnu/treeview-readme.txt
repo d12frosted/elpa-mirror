@@ -1,6 +1,10 @@
-# emacs-treeview
+emacs-treeview
+==============
+
 Abstract Emacs Lisp framework for tree navigation. Based on this framework, specific libraries for particular
 hierarchical data can be implemented, for example, file systems.
+
+This document describes v1.1.0 of emacs-treeview. Consider [this notes](#updating-from-v100) for upgrading from v1.0.0. 
 
 A typical tree could look like the following:
 
@@ -37,12 +41,15 @@ where the elements have the following meaning:
 Node properties are implemented as plists with Lisp symbols as keys.  The following
 properties exist:
 
-  *  `:label-overlay`    &nbsp;&ndash;&nbsp; The overlay containing the node label
-  *  `:control-overlay`  &nbsp;&ndash;&nbsp; The overlay containing the node control
-  *  `:icon-overlay`     &nbsp;&ndash;&nbsp; The overlay containing the node icon
-  *  `:start`            &nbsp;&ndash;&nbsp; A marker at the position where the node begins
-  *  `:end`              &nbsp;&ndash;&nbsp; A marker at the position where the node ends
-  *  `:state`            &nbsp;&ndash;&nbsp; The state of the node.  See below for details
+  *  `node-line-overlay` &nbsp;&ndash;&nbsp; The overlay containing the node line
+  *  `indent-overlay`    &nbsp;&ndash;&nbsp; The overlay containing the node indentation
+  *  `label-overlay`     &nbsp;&ndash;&nbsp; The overlay containing the node label
+  *  `control-overlay`   &nbsp;&ndash;&nbsp; The overlay containing the node control
+  *  `icon-overlay`      &nbsp;&ndash;&nbsp; The overlay containing the node icon
+  *  `start`             &nbsp;&ndash;&nbsp; A marker at the position where the node begins
+  *  `end`               &nbsp;&ndash;&nbsp; A marker at the position where the node ends
+  *  `state`             &nbsp;&ndash;&nbsp; The state of the node.  See below for details
+  *  `selected`          &nbsp;&ndash;&nbsp; Whether the node is selected (non-nil if selected, nil if not)
 
 Node states: Each node is in exactly one of three states, which are represented by the
 following Lisp symbols:
@@ -60,7 +67,8 @@ The framework declares a couple of "abstract" functions in the sense of function
 variables whose values are function symbols. If the framework is applied for a particular purpose,
 specific implementations for these functions must be provided.  Here is a list of that function
 variables:
-
+  
+  *  treeview-get-root-node-function
   *  treeview-node-leaf-p-function
   *  treeview-update-node-children-function
   *  treeview-after-node-expanded-function
@@ -78,6 +86,8 @@ variables:
   *  treeview-get-indent-face-function
   *  treeview-get-control-face-function
   *  treeview-get-control-mouse-face-function
+  *  treeview-get-selected-node-face-function
+  *  treeview-get-highlighted-node-face-function
   *  treeview-get-label-keymap-function
   *  treeview-get-label-face-function
   *  treeview-get-label-mouse-face-function
@@ -86,7 +96,14 @@ variables:
   *  treeview-get-icon-mouse-face-function
   *  treeview-suggest-point-pos-in-control-function
 
-A description of each variable can be found in the repsetive documentation strings.  All
+A description of each variable can be found in the respective documentation strings.  All
 variables are buffer-local.  Libraries using this framework should create a new buffer and
 set the variables to particular functions in that buffer. Then, the root node should be
 created and rendered in the buffer by a call to treeview-display-node.
+
+
+### Updating from v1.0.0
+
+Note that v1.1.0 defines another buffer-local function variable
+`treeview-get-root-node-function` which didn't exist in v1.0.0. It must be set to a
+function which returns the root node of the tree.
