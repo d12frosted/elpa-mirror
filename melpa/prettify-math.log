@@ -3,10 +3,19 @@ Fetcher: git
 Source:  https://gitee.com/shaqxu/prettify-math.git
 
 Updating /mnt/store/melpa/working/prettify-math/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 502 curl 22 The requested URL returned error: 502
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 5bdb9a8af7593d3a38492a618aedc545278fe8a1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prettify-math/
+  to /tmp/prettify-mathKfW4po/prettify-math-20220101.549
+    prettify-math.el -> prettify-math.el
+    mathjax-jsonrpc.js -> mathjax-jsonrpc.js
+Created prettify-math-20220101.549.tar containing:
+  prettify-math-20220101.549/
+  prettify-math-20220101.549/mathjax-jsonrpc.js
+  prettify-math-20220101.549/prettify-math-pkg.el
+  prettify-math-20220101.549/prettify-math.el
+Built prettify-math in 9.862s, finished at 2022-09-14T14:49:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 441 Sep 14 14:49 packages/prettify-math-20220101.549.entry
+ 32K -rw-r--r-- 1 root root 30K Sep 14 14:49 packages/prettify-math-20220101.549.tar
