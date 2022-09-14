@@ -5,8 +5,8 @@
 ;; Author: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; Maintainer: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; URL: <https://github.com/saf-dmitry/taskpaper-mode>
-;; Package-Version: 20220903.1946
-;; Package-Commit: 89f1afc63b3e4a264d547825477d5aaac12552c9
+;; Package-Version: 20220914.1802
+;; Package-Commit: d00ece88dcd65bea4f6319029759bc82497c1e9e
 ;; Keywords: outlines, notetaking, task management, productivity, taskpaper
 
 ;; This file is not part of GNU Emacs.
@@ -1492,59 +1492,41 @@ image link is a plain link to file matching return value from
 (defalias 'taskpaper-outline-end-of-subtree 'outline-end-of-subtree
   "Move to the end of the current subtree.")
 
-(defalias 'taskpaper-outline-up-level 'outline-up-heading
-  "Move to the visible parent item.
-With argument, move up ARG levels. If INVISIBLE-OK is non-nil,
-also consider invisible items.")
+(defun taskpaper-outline-next-item ()
+  "Move to the next (possibly invisible) item."
+  (interactive)
+  (outline-next-heading) (back-to-indentation))
 
-(defalias 'taskpaper-outline-next-item 'outline-next-heading
-  "Move to the next (possibly invisible) item.")
-
-(defalias 'taskpaper-outline-previous-item 'outline-previous-heading
-  "Move to the previous (possibly invisible) item.")
+(defun taskpaper-outline-previous-item ()
+  "Move to the previous (possibly invisible) item."
+  (interactive)
+  (outline-previous-heading) (back-to-indentation))
 
 (defun taskpaper-outline-forward-same-level (arg)
-  "Move forward to the ARG'th item at same level.
-Call `outline-forward-same-level', but provide a better error
-message."
+  "Move forward to the ARG'th item at same level."
   (interactive "p")
   (condition-case nil
       (outline-forward-same-level arg)
-    (error (user-error "No following same-level item"))))
+    (error (user-error "No following same-level item")))
+  (back-to-indentation))
 
 (defun taskpaper-outline-backward-same-level (arg)
-  "Move backward to the ARG'th item at same level.
-Call `outline-backward-same-level', but provide a better error
-message."
+  "Move backward to the ARG'th item at same level."
   (interactive "p")
   (condition-case nil
       (outline-backward-same-level arg)
-    (error (user-error "No previous same-level item"))))
+    (error (user-error "No previous same-level item")))
+  (back-to-indentation))
 
-(defsubst taskpaper-outline-up-level-safe ()
-  "Move to the (possibly invisible) ancestor item.
-This version will not throw an error. Also, this version is much
-faster than `outline-up-heading', relying directly on leading
-tabs."
-  (when (ignore-errors (outline-back-to-heading t))
-    (let ((level-up (1- (funcall outline-level))))
-      (and (> level-up 0)
-           (re-search-backward
-            (format "^[\t]\\{0,%d\\}[^\t\f\n]" (1- level-up)) nil t)))))
-
-(defun taskpaper-outline-forward-same-level-safe ()
-  "Move to the next (possibly invisible) sibling.
-This version will not throw an error."
+(defun taskpaper-outline-up-level (arg &optional invisible-ok)
+  "Move to the visible ancestor item.
+With argument, move up ARG levels. If INVISIBLE-OK is non-nil,
+also consider invisible items."
+  (interactive "p")
   (condition-case nil
-      (progn (outline-forward-same-level 1) t)
-    (error nil)))
-
-(defun taskpaper-outline-backward-same-level-safe ()
-  "Move to the preceeding (possibly invisible) sibling.
-This version will not throw an error."
-  (condition-case nil
-      (progn (outline-backward-same-level 1) t)
-    (error nil)))
+      (outline-up-heading arg invisible-ok)
+    (error (user-error "Already at top level")))
+  (back-to-indentation))
 
 (defun taskpaper-outline-next-item-safe ()
   "Move to the next (possibly invisible) item.
@@ -1559,6 +1541,31 @@ This version will not throw an error."
   (condition-case nil
       (progn (outline-previous-heading) t)
     (error nil)))
+
+(defun taskpaper-outline-forward-same-level-safe ()
+  "Move to the next (possibly invisible) sibling item.
+This version will not throw an error."
+  (condition-case nil
+      (progn (outline-forward-same-level 1) t)
+    (error nil)))
+
+(defun taskpaper-outline-backward-same-level-safe ()
+  "Move to the previous (possibly invisible) sibling item.
+This version will not throw an error."
+  (condition-case nil
+      (progn (outline-backward-same-level 1) t)
+    (error nil)))
+
+(defsubst taskpaper-outline-up-level-safe ()
+  "Move to the (possibly invisible) ancestor item.
+This version will not throw an error. Also, this version is much
+faster than `outline-up-heading', relying directly on leading
+tabs."
+  (when (ignore-errors (outline-back-to-heading t))
+    (let ((level-up (1- (funcall outline-level))))
+      (and (> level-up 0)
+           (re-search-backward
+            (format "^[\t]\\{0,%d\\}[^\t\f\n]" (1- level-up)) nil t)))))
 
 (defun taskpaper-outline-map-descendants (func &optional self)
   "Call FUNC for every descendant of the current item.
@@ -1779,10 +1786,6 @@ end.")
 
 ;;;; Promotion and demotion
 
-(defun taskpaper-fix-position-after-promote ()
-  "Fix cursor position after promoting or demoting."
-  (back-to-indentation))
-
 (defun taskpaper-outline-promote ()
   "Promote the current (possibly invisible) item."
   (interactive)
@@ -1805,21 +1808,25 @@ end.")
   "Promote the current (possibly invisible) subtree."
   (interactive)
   (taskpaper-outline-map-tree 'taskpaper-outline-promote)
-  (taskpaper-fix-position-after-promote))
+  (back-to-indentation))
 
 (defun taskpaper-outline-demote-subtree ()
   "Demote the current (possibly invisible) subtree."
   (interactive)
   (taskpaper-outline-map-tree 'taskpaper-outline-demote)
-  (taskpaper-fix-position-after-promote))
+  (back-to-indentation))
 
 ;;;; Vertical tree movement
 
-(defalias 'taskpaper-outline-move-subtree-up 'outline-move-subtree-up
-  "Move the current subtree up past ARG items of the same level.")
+(defun taskpaper-outline-move-subtree-up (&optional arg)
+  "Move the current subtree up past ARG items of the same level."
+  (interactive "p")
+  (outline-move-subtree-up arg) (back-to-indentation))
 
-(defalias 'taskpaper-outline-move-subtree-down 'outline-move-subtree-down
-  "Move the current subtree down past ARG items of the same level.")
+(defun taskpaper-outline-move-subtree-down (&optional arg)
+  "Move the current subtree down past ARG items of the same level."
+  (interactive "p")
+  (outline-move-subtree-down arg) (back-to-indentation))
 
 ;;; Mark ring navigation interface
 
@@ -3756,7 +3763,8 @@ When sorting is done, call `taskpaper-after-sorting-items-hook'."
       (goto-char begin)
       (taskpaper-outline-show-all)
       (or (outline-on-heading-p)
-          (taskpaper-outline-next-item)))
+          (progn (taskpaper-outline-next-item)
+                 (beginning-of-line))))
      (t
       ;; Sort children of the current item
       (setq begin (point))
@@ -3767,7 +3775,8 @@ When sorting is done, call `taskpaper-after-sorting-items-hook'."
       (setq end (point))
       (goto-char begin)
       (taskpaper-outline-show-subtree)
-      (taskpaper-outline-next-item)))
+      (taskpaper-outline-next-item)
+      (beginning-of-line)))
     ;; Check boundaries
     (when (>= begin end)
       (goto-char begin) (user-error "Nothing to sort"))
@@ -3788,7 +3797,8 @@ When sorting is done, call `taskpaper-after-sorting-items-hook'."
          (lambda nil
            (save-match-data
              (condition-case nil
-                 (taskpaper-outline-forward-same-level 1)
+                 (progn (taskpaper-outline-forward-same-level 1)
+                        (beginning-of-line))
                (error (goto-char (point-max))))))
          ;; STARTKEYFUN arg
          (lambda nil
