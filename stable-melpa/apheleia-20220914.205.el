@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20220911.818
-;; Package-Commit: e01ced3ac985eabd51dad348d04974cefa778625
+;; Package-Version: 20220914.205
+;; Package-Commit: 9101a3380cb1a86e8bb78d80e716266b0a484c67
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.0
@@ -927,7 +927,15 @@ being run, for diagnostic purposes."
   '((bean-format . ("bean-format"))
     (black . ("black" "-"))
     (brittany . ("brittany"))
-    (clang-format . ("clang-format"))
+    (clang-format . ("clang-format"
+                     "-assume-filename"
+                     (or (buffer-file-name)
+                         (cdr (assoc major-mode
+                                     '((c-mode        . ".c")
+                                       (c++-mode      . ".cpp")
+                                       (cuda-mode     . ".cu")
+                                       (protobuf-mode . ".proto"))))
+                         ".c")))
     (dart-format . ("dart" "format"))
     (elm-format . ("elm-format" "--yes" "--stdin"))
     (fish-indent . ("fish_indent"))

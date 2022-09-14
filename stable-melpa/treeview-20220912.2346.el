@@ -1,12 +1,12 @@
 ;;; treeview.el --- A generic tree navigation library -*- lexical-binding: t -*-
 
-;; Copyright (C) 2018-2021 Tilman Rassy
+;; Copyright (C) 2018-2022 Tilman Rassy
 
 ;; Author: Tilman Rassy <tilman.rassy@googlemail.com>
 ;; URL: https://github.com/tilmanrassy/emacs-treeview
-;; Package-Version: 20210723.2256
-;; Package-Commit: 09c8c1d045c7c8eace61b10b6df9d2f9079de78e
-;; Version: 1.1.0
+;; Package-Version: 20220912.2346
+;; Package-Commit: b68f77bf102b289e7b0e97f767bb7ffff9a5835b
+;; Version: 1.1.1
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: lisp, tools, internal, convenience
 
@@ -204,7 +204,8 @@ This is the case if, and only if, NODE's state is `folded-unread'."
 
 (defun treeview-node-folded-p (node)
   "Return non-nil if NODE is folded.
-This is the case if and only if NODES's state is `folded-unread' or `folded-read'."
+This is the case if and only if NODES's state is `folded-unread'
+or `folded-read'."
   (memq (treeview-get-node-state node) '(folded-unread folded-read)))
 
 (defun treeview-node-expanded-p (node)
@@ -261,7 +262,8 @@ If NODE does not have a next sibling, returns nil."
           (eq last-parent-child node)))))
 
 (defun treeview-parent-is-last-child-p (node)
-  "Return non-nil if the parent of NODE is the last child of its parent,  otherwise nil."
+  "Return non-nil if the parent of NODE is the last child of its parent,
+otherwise nil."
   (let ( (parent (treeview-get-node-parent node)) )
     (if parent (treeview-last-child-p parent) t)))
 
@@ -270,13 +272,14 @@ If NODE does not have a next sibling, returns nil."
     (or (treeview-node-unread-p node) (not (treeview-get-node-children node))))
   "Function that returns non-nil if NODE is a leaf of the tree.
 The default implementation considers a node to be a leaf if, and only if, the
-node has no children or is unread (i.e., its state is 'folded-unred'.")
+node has no children or is unread (i.e., its state is `folded-unred'.")
 
 (make-variable-buffer-local 'treeview-node-leaf-p-function)
 
 (defun treeview-node-leaf-p (node)
   "Return non-nil if NODE is a leaf of the tree; otherwise, return nil.
-Calls the buffer local function `treeview-node-leaf-p-function' with one argument, NODE."
+Calls the buffer local function `treeview-node-leaf-p-function' with one
+argument, NODE."
   (funcall treeview-node-leaf-p-function node))
 
 (defun treeview-node-not-hidden-p (node)
@@ -578,7 +581,8 @@ node."
     nodes))
 
 (defun treeview-get-node-at-pos (pos)
-  "Return the node at the buffer position POS, or nil if there is no node at that position."
+  "Return the node at the buffer position POS,
+or nil if there is no node at that position."
   (let ( (overlays (overlays-at pos t))
          (node nil) )
     (while (and overlays (not node))
@@ -687,8 +691,9 @@ The function returns the new overlay."
 
 (defun treeview-make-text-overlay (text &optional keymap face mouse-face)
   "Insert TEXT at point and create and return an overlay containing that text.
-If non-nil, KEYMAP, FACE, and MOUSE-FACE become the keymap, face, and mouse face
-of the overlay, respectively (see overlay documentation in the Emacs Lisp reference)."
+If non-nil, KEYMAP, FACE, and MOUSE-FACE become the keymap, face,
+and mouse face of the overlay, respectively
+\(see Info node `(elisp) Overlay Properties')."
   (let* ( (start (point))
           (overlay (progn (insert text) (make-overlay start (point)))) )
     (if keymap (overlay-put overlay 'keymap keymap))
@@ -936,7 +941,7 @@ return non-nil if the first argument is less that the second with respect to the
 If LEAVE-NO-GAP is non-nil, the node is removed without leaving a gap between
 the previuos and following nodes.  Otherwise, an empty line remains.
 
-The 'start' and 'end' properties of NODE are set to nil.  Except this, the
+The `start' and `end' properties of NODE are set to nil.  Except this, the
 internal representation of the tree is not altered.  Neither NODE or its
 descendents are removed from the children of their respective parents.
 
@@ -1111,14 +1116,16 @@ argument.  Otherwise, point is placed at the beginning of the label."
     (overlay-start (treeview-get-node-prop node 'label-overlay)))))
 
 (defun treeview-next-line ()
-  "Move the point one line down, and, if there is a node in that line, move the point to the node."
+  "Move point one line down,
+and, if there is a node in that line, move point to the node."
   (interactive)
   (forward-line)
   (let ( (node (treeview-get-node-at-point)) )
     (if node (treeview-place-point-in-node node))))
 
 (defun treeview-previous-line ()
-  "Move the point one line up, and, if there is a node in that line, move the point to the node."
+  "Move point one line up,
+and, if there is a node in that line, move point to the node."
   (interactive)
   (forward-line -1)
   (let ( (node (treeview-get-node-at-point)) )
