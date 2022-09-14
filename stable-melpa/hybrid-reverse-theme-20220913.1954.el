@@ -4,8 +4,8 @@
 
 ;; Author: Riyyi
 ;; URL: https://github.com/riyyi/emacs-hybrid-reverse
-;; Package-Version: 20220913.1259
-;; Package-Commit: f70c885e2319a573b383b3097ee08351aa063834
+;; Package-Version: 20220913.1954
+;; Package-Commit: 7315c279a63872b5da370eba11d1846961b08cb0
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: faces, theme
@@ -67,6 +67,7 @@
 ;; - telephone-line
 ;; - transient
 ;; - treemacs
+;; - vertico
 ;; - vterm
 ;; - which-key
 ;; - winum
@@ -279,8 +280,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(completions-annotations                  ((,class :foreground ,hr-white+6)))
    `(completions-common-part                  ((,class :foreground ,hr-blue)))
    `(completions-first-difference             ((,class :foreground ,hr-yellow                              :weight bold)))
-   ;; `(completions-group-separator              ((,class)))
-   ;; `(completions-group-title                  ((,class)))
+   `(completions-group-separator              ((,class                                                     :inherit shadow :strike-through t)))
+   `(completions-group-title                  ((,class                                                     :inherit shadow :slant italic)))
 
 ;;;;; custom (M-x customize)
    `(custom-button                            ((,class :foreground ,hr-fg        :background ,hr-black-3   :box (:line-width 2 :color ,hr-black-8))))
@@ -986,8 +987,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(selectrum-completion-annotation          ((,class                                                     :inherit completions-annotations)));
    `(selectrum-completion-docsig              ((,class                                                     :inherit selectrum-completion-annotation)));
    `(selectrum-current-candidate              ((,class :foreground ,hr-orange                              :weight bold)))
-   `(selectrum-group-separator                ((,class                                                     :inherit shadow :strike-through t)));
-   `(selectrum-group-title                    ((,class                                                     :inherit shadow :slant italic)));
+   `(selectrum-group-separator                ((,class                                                     :inherit completions-group-separator)));
+   `(selectrum-group-title                    ((,class                                                     :inherit completions-group-title)));
    `(selectrum-mouse-highlight                ((,class                                                     :inherit highlight)))
    `(selectrum-quick-keys-highlight           ((,class :foreground ,hr-bg        :background ,hr-yellow    :weight bold)));
    `(selectrum-quick-keys-match               ((,class :foreground ,hr-bg        :background ,hr-orange    :weight bold)));
@@ -1098,6 +1099,16 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(treemacs-root-unreadable-face            ((,class                                                     :inherit treemacs-root-face :strike-through t)))
    `(treemacs-tags-face                       ((,class :foreground ,hr-blue)))
    `(treemacs-term-node-face                  ((,class :foreground ,hr-green)))
+
+;;;;; vertico
+   `(vertico-current                          ((,class :foreground ,hr-orange                         :weight bold :extend t)))
+   `(vertico-group-separator                  ((,class                                                     :inherit completions-group-separator)))
+   `(vertico-group-title                      ((,class                                                     :inherit completions-group-title)))
+   `(vertico-indexed                          ((,class                                                     :inherit font-lock-comment-face :height 0.75)))
+   `(vertico-mouse                            ((,class                                                     :inherit highlight)))
+   `(vertico-multiline                        ((,class                                                     :inherit shadow)))
+   `(vertico-quick1                           ((,class :foreground ,hr-bg        :background ,hr-yellow    :weight bold)))
+   `(vertico-quick2                           ((,class :foreground ,hr-bg        :background ,hr-yellow    :weight bold)))
 
 ;;;;; vterm
    `(vterm-color-black                        ((,class :foreground ,hr-black-3   :background ,hr-black-6)))

@@ -1,15 +1,13 @@
 Add support for system trash on OS X.  In other words, make
 `delete-by-moving-to-trash' do what you expect it to do.
 
-Emacs does not support the system trash of OS X.  `system-move-file-to-trash'
-is not defined.  This library provides `osx-trash-move-file-to-trash' as an
-implementation of `system-move-file-to-trash' for OS X.
+Emacs does not support the system trash of OS X.  This library
+provides `osx-trash-move-file-to-trash' as an implementation of
+`system-move-file-to-trash' for OS X.
 
-`osx-trash-move-file-to-trash' tries to use `trash' utility from
-https://github.com/ali-rantakari/trash (brew install trash).  If `trash' is
-not available, the script falls back to an AppleScript helper which trashes
-the file via finder.  `trash' is generally preferred, because AppleScript is
-slow.
+By default an AppleScript helper is used to actually trash the
+file using the finder, but that is slow, so you might want to
+customize option `osx-trash-command' to use a faster command.
 
-To enable, call `osx-trash-setup' and set `delete-by-moving-to-trash' to a
-non-nil value.
+To enable use of the system trash, call `osx-trash-setup' and
+set `delete-by-moving-to-trash' to a non-nil value.

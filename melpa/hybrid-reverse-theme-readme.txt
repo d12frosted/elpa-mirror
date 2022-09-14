@@ -40,6 +40,7 @@ Supported packages:
 - telephone-line
 - transient
 - treemacs
+- vertico
 - vterm
 - which-key
 - winum

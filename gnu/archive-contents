@@ -2410,12 +2410,13 @@
 	      ("Harald Jörg" . "haj@posteo.de"))
 	     (:commit . "bc968d37dcc29db4cae65e6d1c3ddc80e31ffbb3"))])
  (persist .
-	  [(0 4)
+	  [(0 5)
 	   nil "Persist Variables between Emacs Sessions" tar
 	   ((:maintainer "Phillip Lord" . "phillip.lord@russet.org.uk")
 	    (:authors
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
-	    (:url . "http://elpa.gnu.org/packages/persist.html"))])
+	    (:url . "https://elpa.gnu.org/packages/persist.html")
+	    (:commit . "25d675307c03f720e592c3dc9a5a0ae8db0836eb"))])
  (phps-mode .
 	    [(0 4 25)
 	     ((emacs
