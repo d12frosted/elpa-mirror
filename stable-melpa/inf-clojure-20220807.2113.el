@@ -6,8 +6,6 @@
 ;;       Olin Shivers <shivers@cs.cmu.edu>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/inf-clojure
-;; Package-Version: 20220807.2113
-;; Package-Commit: 59a9f0695f3d97a593f8d5ea04b51ea5dcb2718a
 ;; Keywords: processes, comint, clojure
 ;; Version: 3.2.1
 ;; Package-Requires: ((emacs "25.1") (clojure-mode "5.11"))

@@ -4,10 +4,10 @@ Source:  https://git.sr.ht/~niklaseklund/detached.el
 
 Updating /mnt/store/melpa/working/detached/
 Checking out origin/HEAD
-Checking out ee0821fd9799ec4c89ad65d34b8bed10728d74d9
+Checking out 77921c6cf4020a8062f9fd6cccda19bef51b2350
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/detached/
-  to /tmp/detached8BWCPK/detached-20220910.1010
+  to /tmp/detachedtuf2kl/detached-20220915.1320
     detached-compile.el -> detached-compile.el
     detached-consult.el -> detached-consult.el
     detached-dired.el -> detached-dired.el
@@ -18,20 +18,22 @@ Copying files (->) and directories (=>)
     detached-shell.el -> detached-shell.el
     detached-vterm.el -> detached-vterm.el
     detached.el -> detached.el
-Created detached-20220910.1010.tar containing:
-  detached-20220910.1010/
-  detached-20220910.1010/detached-compile.el
-  detached-20220910.1010/detached-consult.el
-  detached-20220910.1010/detached-dired.el
-  detached-20220910.1010/detached-eshell.el
-  detached-20220910.1010/detached-extra.el
-  detached-20220910.1010/detached-init.el
-  detached-20220910.1010/detached-org.el
-  detached-20220910.1010/detached-pkg.el
-  detached-20220910.1010/detached-shell.el
-  detached-20220910.1010/detached-vterm.el
-  detached-20220910.1010/detached.el
-Built detached in 3.917s, finished at 2022-09-15T06:13:13+0000
+Created detached-20220915.1320.tar containing:
+  detached-20220915.1320/
+  detached-20220915.1320/detached-compile.el
+  detached-20220915.1320/detached-consult.el
+  detached-20220915.1320/detached-dired.el
+  detached-20220915.1320/detached-eshell.el
+  detached-20220915.1320/detached-extra.el
+  detached-20220915.1320/detached-init.el
+  detached-20220915.1320/detached-org.el
+  detached-20220915.1320/detached-pkg.el
+  detached-20220915.1320/detached-shell.el
+  detached-20220915.1320/detached-vterm.el
+  detached-20220915.1320/detached.el
+Built detached in 4.319s, finished at 2022-09-15T15:48:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  440 Sep 15 06:13 packages/detached-20220910.1010.entry
-120K -rw-r--r-- 1 root root 120K Sep 15 06:13 packages/detached-20220910.1010.tar
+4.0K -rw-r--r-- 1 root root  440 Sep 15 12:31 packages/detached-20220910.1010.entry
+120K -rw-r--r-- 1 root root 120K Sep 15 12:31 packages/detached-20220910.1010.tar
+4.0K -rw-r--r-- 1 root root  440 Sep 15 15:48 packages/detached-20220915.1320.entry
+120K -rw-r--r-- 1 root root 120K Sep 15 15:48 packages/detached-20220915.1320.tar
