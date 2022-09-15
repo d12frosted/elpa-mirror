@@ -4,8 +4,6 @@
 
 ;; Author: Patrick McAllister <pma@rdorte.org>
 ;; Keywords: xml, xquery, emacs
-;; Package-Version: 20200907.811
-;; Package-Commit: bd48e0f56b58e36309f7966dcf67db69d65100a4
 ;; URL: https://github.com/paddymcall/xquery-tool.el
 
 ;; This program is free software: you can redistribute it and/or modify

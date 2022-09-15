@@ -8,8 +8,6 @@
 ;;   Michael Blakeley <mike@blakeley.com>
 ;;   Artem Malyshev <proofit404@gmail.com>
 ;; URL: https://github.com/xquery-mode/xquery-mode
-;; Package-Version: 20170214.1119
-;; Package-Commit: 19e6f9553ce05380843582b879712de00679e4ab
 ;; Version: 0.1.0
 ;; Package-Requires: ((cl-lib "0.5"))
 
@@ -792,6 +790,12 @@ START and END are region boundaries."
               (setq exit t)
             (setq at-front t)
             (forward-line)
+            (beginning-of-line)))))))
+
+(provide 'xquery-mode)
+
+;;; xquery-mode.el ends here
+)
             (beginning-of-line)))))))
 
 (provide 'xquery-mode)

@@ -4,7 +4,9 @@
 
 ;; Author: Brantou <brantou89@gmail.com>
 ;; URL: https://github.com/brantou/inf-crystal.el
-;; Package-Version: 20180105.1610
+;; Package-Commit: dd5c85e621976ea09b602182a15396e3b510ec63
+;; Package-Version: 20180119.211
+;; Package-X-Original-Version: 20180105.1610
 ;; Keywords: languages crystal
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24.3") (crystal-mode "0.1.0"))
@@ -458,11 +460,6 @@ The following commands are available:
 
 \\{inf-crystal-minor-mode-map}"
   :lighter " Icr"
-  :keymap inf-crystal-minor-mode-map)
-
-(provide 'inf-crystal)
-;;; inf-crystal.el ends here
-ghter " Icr"
   :keymap inf-crystal-minor-mode-map)
 
 (provide 'inf-crystal)
