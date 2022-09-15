@@ -8,40 +8,44 @@ load-path.  Implementation support depends on availability of a corresponding
 LSP server, as mentioned, for now only CHICKEN, Gambit and Guile are
 supported.
 
-On first run you should be prompted to install an lsp server.  The
-extension will install it to its cache directory.
-In case something goes wrong, manually install the server available at
-https://codeberg.org/rgherdt/scheme-lsp-server (and make sure to create
-an issue at our repository).
-
-In order to achieve better results, follow these instructions to update
-CHICKEN's documentation:
-
-- install needed eggs: chicken-install -s r7rs apropos chicken-doc srfi-18 srfi-130
-- update documentation database:
-  $ cd `csi -R chicken.platform -p '(chicken-home)'`
-  $ curl https://3e8.org/pub/chicken-doc/chicken-doc-repo-5.tgz | sudo tar zx
+For Gambit and Guile, the extension will prompt you for auto-installing the
+LSP server.  In case something goes wrong (or you are using CHICKEN),
+manually install the correposnding server following the instructions at
+https://codeberg.org/rgherdt/scheme-lsp-server.
 
 
 ;; Setup
 
 Add the following lines to your Emacs configuration file:
 
-  (require lsp-scheme)
-  (add-hook 'scheme-mode-hook #'lsp-scheme)
-  (setq lsp-scheme-implementation "guile") ;;; customizable
+```
+(require 'lsp-scheme)
+(add-hook 'scheme-mode-hook #'lsp-scheme)
+
+(setq lsp-scheme-implementation "guile") ;;; also customizable
+```
 
 Alternatively you can add the specific command as hook, for example:
-  (add-hook 'scheme-mode-hook #'lsp-scheme-guile)
-In this case lsp-scheme-implementation is ignored.
+```
+   (add-hook 'scheme-mode-hook #'lsp-scheme-guile)
+```
+In this case, `lsp-scheme-implementation` is ignored.
+
+
+This should in the first run automatically install the corresponding LSP server
+and start the client.  In case you have trouble, you can manually install the
+server following the corresponding instructions.
 
 
 
 ;; Usage
-This LSP client tries to implement an workflow similar to other Lisp-related
-Emacs modes.  For instance, it relies on the interaction between the user and
-the REPL to load information needed.  The interaction is currently based on
-Emacs built-in Scheme inferior-mode.  So, for instance, in order to load the
-current buffer you can just issue C-c C-l.  Since the REPL is connected to the
-LSP server, this will allow it to fetch symbols defined in the buffer, as well
-as libraries imported by it.
+Starting with version 0.1.0, this LSP client works on the background and does
+not rely on interaction with the user to keep LSP-related information on sync.
+It also does not provide a custom REPL (as in the first version) anymore, you
+can use Emacs' built-in Scheme support instead (`run-scheme`).  You may customize
+`scheme-program-name` to run the interpreter of your Scheme of choice.
+
+The LSP server works best if your code is packed inside a library definition
+(either R6RS, R7RS or implementation specific). Depending on the implementation,
+you can improve the experience by adding your library to a path where your
+implementation can find it (see note regarding Guile below).

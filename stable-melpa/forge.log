@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 6de20942c99d566ea607b6337bf13fc73dc5f3d8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forge/
-  to /tmp/forgesXi0Nh/forge-20220914.1450
+  to /tmp/forge4fpkgm/forge-20220914.1450
     forge-pkg.el -> forge-pkg.el
   ! lisp/forge-bitbucket.el -> forge-bitbucket.el
   ! lisp/forge-commands.el -> forge-commands.el
@@ -28,7 +28,7 @@ Copying files (->) and directories (=>)
   ! lisp/forge-topic.el -> forge-topic.el
   ! lisp/forge.el -> forge.el
   ! docs/forge.texi -> forge.texi
-Generating /tmp/forgesXi0Nh/forge-20220914.1450/forge.info
+Generating /tmp/forge4fpkgm/forge-20220914.1450/forge.info
 Created forge-20220914.1450.tar containing:
   forge-20220914.1450/
   forge-20220914.1450/dir
@@ -52,9 +52,7 @@ Created forge-20220914.1450.tar containing:
   forge-20220914.1450/forge-topic.el
   forge-20220914.1450/forge.el
   forge-20220914.1450/forge.info
-Built forge in 10.650s, finished at 2022-09-14T17:37:12+0000
+Built forge in 16.689s, finished at 2022-09-15T03:20:50+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  585 Sep 14 14:18 packages/forge-20220821.2143.entry
-352K -rw-r--r-- 1 root root 350K Sep 14 14:18 packages/forge-20220821.2143.tar
-4.0K -rw-r--r-- 1 root root  585 Sep 14 17:37 packages/forge-20220914.1450.entry
-352K -rw-r--r-- 1 root root 350K Sep 14 17:37 packages/forge-20220914.1450.tar
+4.0K -rw-r--r-- 1 root root  585 Sep 15 03:20 packages/forge-20220914.1450.entry
+352K -rw-r--r-- 1 root root 350K Sep 15 03:20 packages/forge-20220914.1450.tar

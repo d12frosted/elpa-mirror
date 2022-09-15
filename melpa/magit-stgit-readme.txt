@@ -5,7 +5,7 @@ This package provides very basic support for StGit.
   StGit (Stacked Git) is an application that aims to provide a
   convenient way to maintain a patch stack on top of a Git branch.
 
-For information about StGit see http://www.procode.org/stgit.
+For information about StGit see http://stacked-git.github.io.
 
 If you are looking for full fledged StGit support in Emacs, then
 have a look at `stgit.el' which is distributed with StGit.
