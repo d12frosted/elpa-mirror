@@ -6,6 +6,8 @@
 ;; Created: 2020
 ;; License: GPL-3.0-or-later
 ;; Version: 0.2
+;; Package-Version: 20220403.1812
+;; Package-Commit: 6941fd5bc19c0a2789dda38334d2be582ed34e5a
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/goggles
 
