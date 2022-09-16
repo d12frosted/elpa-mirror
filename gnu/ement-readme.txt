@@ -22,15 +22,18 @@ Table of Contents
 .. 3. Encrypted room support through Pantalaimon
 3. Rationale
 4. Changelog
-.. 1. 0.1.3
-.. 2. 0.1.2
-.. 3. 0.1.1
-.. 4. 0.1
+.. 1. 0.1.4
+.. 2. 0.1.3
+.. 3. 0.1.2
+.. 4. 0.1.1
+.. 5. 0.1
 5. Development
 .. 1. Copyright Assignment
 .. 2. Matrix spec in Org format
 6. License
 
+
+[https://elpa.gnu.org/packages/ement.svg]
 
 Ement.el is a Matrix client for Emacs.  It aims to be simple, fast,
 featureful, and reliable.
@@ -38,6 +41,9 @@ featureful, and reliable.
 Feel free to join us in the chat room:
 [https://img.shields.io/matrix/ement.el:matrix.org.svg?label=%23ement.el:matrix.org]
 
+
+[https://elpa.gnu.org/packages/ement.svg]
+<https://elpa.gnu.org/packages/ement.html>
 
 [https://img.shields.io/matrix/ement.el:matrix.org.svg?label=%23ement.el:matrix.org]
 <https://matrix.to/#/#ement.el:matrix.org>
@@ -50,8 +56,9 @@ Feel free to join us in the chat room:
 ────────────
 
   Ement.el is published in [GNU ELPA], so it may be installed in Emacs
-  with the `package-install' command.  This is the recommended way to
-  install Ement.el, as it will install the current stable release.
+  with the command `M-x package-install RET ement RET'.  This is the
+  recommended way to install Ement.el, as it will install the current
+  stable release.
 
 
 [GNU ELPA] <http://elpa.gnu.org/>
@@ -404,7 +411,14 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.1.3
+4.1 0.1.4
+─────────
+
+  *Fixed*
+  ⁃ Info manual directory headers.
+
+
+4.2 0.1.3
 ─────────
 
   *Fixed*
@@ -414,7 +428,7 @@ Feel free to join us in the chat room:
     re-enabled in a future release.)
 
 
-4.2 0.1.2
+4.3 0.1.2
 ─────────
 
   *Fixed*
@@ -431,7 +445,7 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.3 0.1.1
+4.4 0.1.1
 ─────────
 
   *Fixed*
@@ -441,7 +455,7 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.4 0.1
+4.5 0.1
 ───────
 
   After almost two years of development, the first tagged release.
