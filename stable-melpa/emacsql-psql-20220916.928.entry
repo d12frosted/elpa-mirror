@@ -1,0 +1,12 @@
+(emacsql-psql .
+	      [(20220916 928)
+	       ((emacs
+		 (25 1))
+		(emacsql
+		 (2 0 0)))
+	       "EmacSQL back-end for PostgreSQL via psql" tar
+	       ((:commit . "6622516e153d1f48a199b613367bbe8f6d7d43bf")
+		(:authors
+		 ("Christopher Wellons" . "wellons@nullprogram.com"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:url . "https://github.com/magit/emacsql"))])

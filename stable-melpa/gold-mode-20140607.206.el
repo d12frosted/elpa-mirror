@@ -4,8 +4,6 @@
 
 ;; Author: Yuta Yamada <cokesboy"at"gmail.com>
 ;; URL: https://github.com/yuutayamada/gold-mode-el
-;; Package-Version: 20140607.206
-;; Package-Commit: 6d3aa59602b1b835495271c8c9741ac344c2eab1
 ;; Version: 0.0.1
 ;; Package-Requires: ((sws-mode "0"))
 ;; Keywords: golang template gold

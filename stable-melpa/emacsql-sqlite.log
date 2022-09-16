@@ -4,22 +4,24 @@ Source:  https://github.com/skeeto/emacsql.git
 
 Updating /mnt/store/melpa/working/emacsql-sqlite/
 Checking out origin/HEAD
-Checking out 739c24cab69c7b14eb43a0ef7f11a5111b401152
+Checking out 6622516e153d1f48a199b613367bbe8f6d7d43bf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emacsql-sqlite/
-  to /tmp/emacsql-sqliteDWx1hu/emacsql-sqlite-20220915.1951
+  to /tmp/emacsql-sqliteQuMjLz/emacsql-sqlite-20220916.928
     emacsql-sqlite.el -> emacsql-sqlite.el
     sqlite => sqlite
-Created emacsql-sqlite-20220915.1951.tar containing:
-  emacsql-sqlite-20220915.1951/
-  emacsql-sqlite-20220915.1951/emacsql-sqlite-pkg.el
-  emacsql-sqlite-20220915.1951/emacsql-sqlite.el
-  emacsql-sqlite-20220915.1951/sqlite/
-  emacsql-sqlite-20220915.1951/sqlite/Makefile
-  emacsql-sqlite-20220915.1951/sqlite/emacsql.c
-  emacsql-sqlite-20220915.1951/sqlite/sqlite3.c
-  emacsql-sqlite-20220915.1951/sqlite/sqlite3.h
-Built emacsql-sqlite in 4.040s, finished at 2022-09-16T01:58:38+0000
+Created emacsql-sqlite-20220916.928.tar containing:
+  emacsql-sqlite-20220916.928/
+  emacsql-sqlite-20220916.928/emacsql-sqlite-pkg.el
+  emacsql-sqlite-20220916.928/emacsql-sqlite.el
+  emacsql-sqlite-20220916.928/sqlite/
+  emacsql-sqlite-20220916.928/sqlite/Makefile
+  emacsql-sqlite-20220916.928/sqlite/emacsql.c
+  emacsql-sqlite-20220916.928/sqlite/sqlite3.c
+  emacsql-sqlite-20220916.928/sqlite/sqlite3.h
+Built emacsql-sqlite in 5.304s, finished at 2022-09-16T12:01:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  377 Sep 16 01:58 packages/emacsql-sqlite-20220915.1951.entry
-7.5M -rw-r--r-- 1 root root 7.5M Sep 16 01:58 packages/emacsql-sqlite-20220915.1951.tar
+4.0K -rw-r--r-- 1 root root  377 Sep 16 08:40 packages/emacsql-sqlite-20220915.1951.entry
+7.5M -rw-r--r-- 1 root root 7.5M Sep 16 08:40 packages/emacsql-sqlite-20220915.1951.tar
+4.0K -rw-r--r-- 1 root root  364 Sep 16 12:01 packages/emacsql-sqlite-20220916.928.entry
+7.5M -rw-r--r-- 1 root root 7.5M Sep 16 12:01 packages/emacsql-sqlite-20220916.928.tar
