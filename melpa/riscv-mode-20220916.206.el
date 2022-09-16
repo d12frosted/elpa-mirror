@@ -6,8 +6,8 @@
 ;; Maintainer: Adam Niederer
 ;; Created: September 29, 2016
 ;; Version: 0.1
-;; Package-Version: 20170804.1521
-;; Package-Commit: 99febf97d1fa9441e8dada94fe30c2aa439c9749
+;; Package-Version: 20220916.206
+;; Package-Commit: 8e335b9c93de93ed8dd063d702b0f5ad48eef6d7
 ;; Keywords: riscv assembly
 ;; Package-Requires: ((emacs "24.4"))
 ;; Homepage: https://github.com/AdamNiederer/riscv-mode
@@ -228,8 +228,8 @@ buffer's file"
 (define-derived-mode riscv-mode prog-mode "RISC V"
   "Major mode for editing RISC V assembly."
   (font-lock-add-keywords nil riscv-font-lock-keywords)
-  (setq tab-width riscv-tab-width)
-  (setq indent-line-function 'riscv-indent)
+  (setq-local tab-width riscv-tab-width)
+  (setq-local indent-line-function 'riscv-indent)
   (modify-syntax-entry ?# "< b" riscv-mode-syntax-table)
   (modify-syntax-entry ?\n "> b" riscv-mode-syntax-table))
 

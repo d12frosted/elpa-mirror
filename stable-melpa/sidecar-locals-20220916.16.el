@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-sidecar-locals
-;; Package-Version: 20220710.1040
-;; Package-Commit: 3aa9c890ebc38800ab26f5f877da32a79ce87d18
+;; Package-Version: 20220916.16
+;; Package-Commit: 109505ba737bc0654c532f36a53e720a1553e0b4
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -131,12 +131,26 @@ For example: \"/a/b/c\" explodes to (\"/\" \"a/\" \"b/\" \"c/\")"
       (setq mode (get mode 'derived-mode-parent)))
     mode-list))
 
+(defun sidecar-locals--locate-dominating-file-no-abbrev (path locate)
+  "A version of `locate-dominating-file' that does avoids abbreviation.
+Find LOCATE in PATH, returning it's canonical result."
+  (let ((directory-abbrev-alist nil))
+    (let ((test (locate-dominating-file path locate)))
+      (cond
+        (test
+          ;; Without this, files in the home directory will start with `~/`.
+          ;; NOTE: It's also possible to temporarily override the function `abbreviate-file-name'
+          ;; but this doesn't seem necessary.
+          (sidecar-locals--canonicalize-path test))
+        (t
+          nil)))))
+
 (defun sidecar-locals--locate-dominating-files (path locate)
   "Return a list of paths, the parent of PATH containing LOCATE.
 Start with the top-most path."
   (let ((path-list (list)))
     (while path
-      (let ((test (locate-dominating-file path locate)))
+      (let ((test (sidecar-locals--locate-dominating-file-no-abbrev path locate)))
         (cond
           (test
             (push test path-list)
@@ -243,7 +257,7 @@ When NO-TEST is non-nil checking for existing paths is disabled."
           (mapcar
             (lambda (dir-base)
               (cond
-                ((sidecar-locals--trusted-p-with-warning dir-base)
+                ((or no-test (sidecar-locals--trusted-p-with-warning dir-base))
                   (file-name-as-directory dir-base))
                 (t
                   nil)))
