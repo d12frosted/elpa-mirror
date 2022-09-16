@@ -4,10 +4,10 @@
 
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: tools, extensions
-;; Package-Version: 20220329.1027
-;; Package-Commit: 46a3108436cc4a2c5343b010f2086088d7b9682b
+;; Package-Version: 20220916.1632
+;; Package-Commit: 7d9c5dee2e493eb0c5d41afca1b6049de8c2a26d
 
-;; Version: 0.6.1
+;; Version: 0.7.1
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/ROCKTAKEY/rhq
 ;; This program is free software; you can redistribute it and/or modify
@@ -119,7 +119,8 @@ unmatched returned string."
                             dirname
                             (cl-some
                              (lambda (project)
-                               (when (string-match-p (regexp-quote dirname) project)
+                               (when (file-equal-p (expand-file-name dirname rhq-root-directory)
+                                                   project)
                                  project))
                              (rhq-get-project-list)))))
     absolute-dirname))
@@ -320,6 +321,20 @@ It automatically reload projects from rhq and put it into
   (if rhq-projectile-mode
       (advice-add #'projectile-relevant-known-projects :before #'rhq-projectile--advice-reload-projects)
     (advice-remove #'projectile-relevant-known-projects #'rhq-projectile--advice-reload-projects)))
+
+
+;;;; `consult' integration
+
+(defvar rhq-consult-source-project-directory
+  '( :name "Project Directory"
+     :narrow (?P . "Projects")
+     :hidden nil
+     :category file
+     :face consult-file
+     :history file-name-history
+     :state consult--file-state
+     :items rhq-get-project-list)
+  "Project file candidate source for `consult-buffer'.")
 
 (provide 'rhq)
 ;;; rhq.el ends here

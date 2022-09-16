@@ -3,8 +3,8 @@
 ;; Copyright (C) 2016-2022 David Thompson
 ;; Author: David Thompson
 ;; Version: 0.2
-;; Package-Version: 20220805.1655
-;; Package-Commit: b00c084c705311a40b19b624be9d301c9e92b3d9
+;; Package-Version: 20220916.1836
+;; Package-Commit: 519a6a49b56978b53e88a005490175cb913ec7fa
 ;; Keywords: dired, launch
 ;; URL: https://github.com/thomp/dired-launch
 ;; Package-Requires: ((emacs "24.3"))
@@ -91,13 +91,16 @@
 	     (cond ((executable-find launch-cmd) ; sanity check
 		    (cons launch-cmd args))
 		   (t
-		    (format "%s is broken: could not find executable %s for file %s"
-			     (cond ((stringp preferred-launch-cmd-spec)
-				    "dired-launch-extensions-map")
-				   (t
-				    "dired-launch-default-launcher"))
-			     launch-cmd
-			     file)
+		    ;; The specified executable appears to be missing
+		    (let ((message
+			   (format "%s is broken: could not find executable %s for file %s"
+				   (cond ((stringp preferred-launch-cmd-spec)
+					  "dired-launch-extensions-map")
+					 (t
+					  "dired-launch-default-launcher"))
+				   launch-cmd
+				   file)))
+		      (display-warning 'dired-launch message))
 		    nil)))
 	    (t
 	     (cons launch-cmd args))))))
