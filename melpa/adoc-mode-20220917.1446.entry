@@ -1,0 +1,13 @@
+(adoc-mode .
+	   [(20220917 1446)
+	    ((emacs
+	      (26))
+	     (markup-faces
+	      (1 0 0)))
+	    "a major-mode for editing AsciiDoc files in Emacs" single
+	    ((:commit . "2c4847d843b882f263fe409022c9684fc5801d8d")
+	     (:authors
+	      ("Florian Kaufmann" . "sensorflo@gmail.com"))
+	     (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+	     (:keywords "asciidoc")
+	     (:url . "https://github.com/bbatsov/adoc-mode"))])
