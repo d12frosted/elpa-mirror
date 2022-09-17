@@ -2,8 +2,6 @@
 
 ;; Copyright (C) 2015-2020 Johan Sivertsen
 ;;; Version: 1.2.0
-;; Package-Version: 20200402.2206
-;; Package-Commit: f6c23e259349922aae25cf2898ba815a7d8f2527
 ;;; Author: Johan Sivertsen <johanvts@gmail.com>
 ;;; URL: https://github.com/johanvts/emacs-fireplace
 ;;; Released: December 2015

@@ -1,8 +1,8 @@
 ;;; dired-single.el --- Reuse the current dired buffer to visit a directory
 
 ;; Version:    0.3.0
-;; Package-Version: 20220726.137
-;; Package-Commit: 48532d747f0098280050721b5d016ec59c97c77c
+;; Package-Version: 20220917.625
+;; Package-Commit: 3bb53664ccdfb2f911667947be6b6c022e4ec758
 ;; Keywords:   dired, reuse, buffer
 ;; URL:        https://github.com/crocket/dired-single
 ;; License:    public-domain
@@ -204,7 +204,9 @@ Will also seek to uniquify the 'real' buffer name."
   "Like `dired-up-directory' but with `dired-single-buffer'."
   (interactive)
   ;; replace dired with dired-single-buffer
-  (cl-letf (((symbol-function 'dired) (symbol-function 'dired-single-buffer)))
+  (cl-letf (((symbol-function 'dired) (symbol-function 'dired-single-buffer))
+            ;; Emacs 28 version of dired-up-directory implementation
+            ((symbol-function 'dired--find-possibly-alternative-file) (symbol-function 'dired-single-buffer)))
     (dired-up-directory other-window)))
 
 ;;; **************************************************************************

@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-sidecar-locals
-;; Package-Version: 20220916.16
-;; Package-Commit: 109505ba737bc0654c532f36a53e720a1553e0b4
+;; Package-Version: 20220917.417
+;; Package-Commit: ce8c9340916d768dd2ceedf85beccefba2d3c6b9
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -131,26 +131,28 @@ For example: \"/a/b/c\" explodes to (\"/\" \"a/\" \"b/\" \"c/\")"
       (setq mode (get mode 'derived-mode-parent)))
     mode-list))
 
-(defun sidecar-locals--locate-dominating-file-no-abbrev (path locate)
-  "A version of `locate-dominating-file' that does avoids abbreviation.
-Find LOCATE in PATH, returning it's canonical result."
-  (let ((directory-abbrev-alist nil))
-    (let ((test (locate-dominating-file path locate)))
-      (cond
-        (test
-          ;; Without this, files in the home directory will start with `~/`.
-          ;; NOTE: It's also possible to temporarily override the function `abbreviate-file-name'
-          ;; but this doesn't seem necessary.
-          (sidecar-locals--canonicalize-path test))
-        (t
-          nil)))))
+(defun sidecar-locals--locate-dominating-file-simple (path name)
+  "A simple version of `locate-dominating-file', find NAME in PATH.
+PATH must be an expanded directory as it is not interpreted."
+  ;; Ensure trailing slash.
+  (setq path (file-name-as-directory path))
+  (let ((result nil))
+    (while path
+      (let ((path-test (concat path name)))
+        (cond
+          ((file-exists-p path-test)
+            (setq result path)
+            (setq path nil))
+          (t
+            (setq path (sidecar-locals--parent-dir-or-nil-with-slash path))))))
+    result))
 
 (defun sidecar-locals--locate-dominating-files (path locate)
   "Return a list of paths, the parent of PATH containing LOCATE.
 Start with the top-most path."
   (let ((path-list (list)))
     (while path
-      (let ((test (sidecar-locals--locate-dominating-file-no-abbrev path locate)))
+      (let ((test (sidecar-locals--locate-dominating-file-simple path locate)))
         (cond
           (test
             (push test path-list)

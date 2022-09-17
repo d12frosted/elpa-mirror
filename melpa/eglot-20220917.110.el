@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220909.2125
-;; Package-Commit: 06e6dd6693123a737fb883dcf277432d63d6518e
+;; Package-Version: 20220917.110
+;; Package-Commit: 18d462732946a2cb23f4d69b427d56b6f2d274e5
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -60,7 +60,6 @@
 
 ;;; Code:
 
-(require 'json)
 (require 'imenu)
 (require 'cl-lib)
 (require 'project)
@@ -77,6 +76,7 @@
 (require 'filenotify)
 (require 'ert)
 (require 'array)
+(require 'json)
 
 ;; ElDoc is preloaded in Emacs, so `require'-ing won't guarantee we are
 ;; using the latest version from GNU Elpa when we load eglot.el.  Use an
@@ -2205,17 +2205,42 @@ SECTION should be a keyword or a string.  VALUE is a
 plist or a primitive type converted to JSON.
 
 The value of this variable can also be a unary function of a
-`eglot-lsp-server' instance, the server connection requesting the
-configuration.  It should return an alist of the format described
-above.")
+single argument, which will be a connected `eglot-lsp-server'
+instance.  The function runs with `default-directory' set to the
+root of the current project.  It should return an alist of the
+format described above.")
 
 ;;;###autoload
 (put 'eglot-workspace-configuration 'safe-local-variable 'listp)
+
+(defun eglot-show-workspace-configuration (&optional server)
+  "Dump `eglot-workspace-configuration' as JSON for debugging."
+  (interactive (list (and (eglot-current-server)
+                          (eglot--read-server "Server configuration"
+                                              (eglot-current-server)))))
+  (let ((conf (eglot--workspace-configuration-plist server)))
+    (with-current-buffer (get-buffer-create "*EGLOT workspace configuration*")
+      (erase-buffer)
+      (insert (jsonrpc--json-encode conf))
+      (with-no-warnings
+        (require 'json)
+        (require 'json-mode)
+        (json-mode)
+        (json-pretty-print-buffer))
+      (pop-to-buffer (current-buffer)))))
 
 (defun eglot--workspace-configuration (server)
   (if (functionp eglot-workspace-configuration)
       (funcall eglot-workspace-configuration server)
     eglot-workspace-configuration))
+
+(defun eglot--workspace-configuration-plist (server)
+  "Returns `eglot-workspace-configuraiton' suitable serialization."
+  (or (cl-loop for (section . v) in (eglot--workspace-configuration server)
+               collect (if (keywordp section) section
+                         (intern (format ":%s" section)))
+               collect v)
+      eglot--{}))
 
 (defun eglot-signal-didChangeConfiguration (server)
   "Send a `:workspace/didChangeConfiguration' signal to SERVER.
@@ -2225,12 +2250,7 @@ When called interactively, use the currently active server"
    server :workspace/didChangeConfiguration
    (list
     :settings
-    (or (cl-loop for (section . v) in (eglot--workspace-configuration server)
-                 collect (if (keywordp section)
-                             section
-                           (intern (format ":%s" section)))
-                 collect v)
-        eglot--{}))))
+    (eglot--workspace-configuration-plist server))))
 
 (cl-defmethod eglot-handle-request
   (server (_method (eql workspace/configuration)) &key items)

@@ -4,9 +4,9 @@
 
 ;; Author: Johan Dykstrom
 ;; Created: Sep 2017
-;; Version: 0.4.5
-;; Package-Version: 20220910.1351
-;; Package-Commit: fae4bc22d075765d9c945c4d53532c9a885829b6
+;; Version: 0.4.6
+;; Package-Version: 20220917.718
+;; Package-Commit: a3c305577c2e8d53b78f0255161f3568e9d0bb89
 ;; Keywords: basic, languages
 ;; URL: https://github.com/dykstrom/basic-mode
 ;; Package-Requires: ((seq "2.20") (emacs "25.1"))
@@ -73,7 +73,8 @@
 
 ;;; Change Log:
 
-;;  0.4.5  2022-09-10  Fix docs and REM syntax
+;;  0.4.6  2022-09-17  Auto-numbering handles digits after point.
+;;  0.4.5  2022-09-10  Fix docs and REM syntax.
 ;;                     Thanks to hackerb9.
 ;;  0.4.4  2022-08-23  Auto-numbering without line-number-cols.
 ;;  0.4.3  2021-03-16  Improved indentation with tabs.
@@ -157,7 +158,7 @@ empty lines are never numbered."
 ;; Variables:
 ;; ----------------------------------------------------------------------------
 
-(defconst basic-mode-version "0.4.5"
+(defconst basic-mode-version "0.4.6"
   "The current version of `basic-mode'.")
 
 (defconst basic-increase-indent-keywords-bol
@@ -204,14 +205,14 @@ beginning of a line or after a statement separator (:).")
 
 (defconst basic-function-regexp
   (regexp-opt '("abs" "asc" "atn" "cdbl" "cint" "chr$" "command$" "cos" "exp"
-                "fix" "instr" "int" "lcase$" "len" "left$" "log" "log10" "mid$"
-                "pi" "right$" "rnd" "sgn" "sin" "sqr" "str$" "tab" "tan"
-                "ucase$" "usr" "val")
+                "fix" "hex$" "instr" "int" "lcase$" "len" "left$" "log" "log10"
+                "ltrim$" "mid$" "pi" "oct$" "right$" "rnd" "rtrim$" "sgn" "sin"
+                "space$" "sqr" "str$" "tab" "tan" "timer" "ucase$" "usr" "val")
               'symbols)
   "Regexp string of symbols to highlight as functions.")
 
 (defconst basic-builtin-regexp
-  (regexp-opt '("and" "cls" "data" "input" "let" "mat" "mod" "not" "or"
+  (regexp-opt '("and" "cls" "data" "input" "let" "line" "mat" "mod" "not" "or"
                 "peek" "poke" "print" "read" "restore" "troff" "tron" "xor")
               'symbols)
   "Regexp string of symbols to highlight as builtins.")
@@ -219,8 +220,8 @@ beginning of a line or after a statement separator (:).")
 (defconst basic-keyword-regexp
   (regexp-opt '("as" "call" "def" "defbol" "defdbl" "defint" "defsng" "defstr"
                 "dim" "do" "else" "elseif" "end" "endif" "error" "exit" "fn"
-                "for" "gosub" "goto" "if" "loop" "next" "on" "step" "repeat"
-                "return" "sub" "then" "to" "until" "wend" "while")
+                "for" "gosub" "goto" "if" "loop" "next" "on" "step" "randomize"
+                "repeat" "return" "sub" "then" "to" "until" "wend" "while")
               'symbols)
   "Regexp string of symbols to highlight as keywords.")
 
@@ -512,7 +513,7 @@ even if that creates overlaps."
 		       (truncate (- next-line-number current-line-number) 2)))
 	  (when (= new-line-number current-line-number)
 	    (setq new-line-number (1+ new-line-number))))
-    (if new-line-number (insert (int-to-string new-line-number)))
+    (if new-line-number (insert (concat (int-to-string new-line-number) " ")))
     (basic-indent-line)))
 
 (defun basic-find-jumps ()
