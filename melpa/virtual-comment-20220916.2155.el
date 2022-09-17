@@ -2,8 +2,8 @@
 
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/emacs-virtual-comment
-;; Package-Version: 20220913.419
-;; Package-Commit: fbfee18042b106c12e9be37a07a6724e1637590d
+;; Package-Version: 20220916.2155
+;; Package-Commit: d6b9f469fb7b98c68b05e55e0dd573328238472f
 ;; Package-Requires: ((emacs "26.1"))
 ;; Version: 0.4.1
 
@@ -73,6 +73,11 @@
 ;; https://www.emacswiki.org/emacs/InPlaceAnnotations
 ;;
 ;; Changelog
+;; 2022-09-16
+;;  0.5.0
+;;  - won't create .evc if there is no comment for the project
+;;  - only save data if there is change
+;;  - if can't parse the evc file copy it to .evc.error
 ;; 2022-09-12
 ;;  0.4.1 back up to .evc.bk when saving data
 ;; 2022-02-28:
@@ -83,22 +88,26 @@
 ;;  0.02 add location/reference
 
 ;;; Code:
+(require 'cl-generic)
 (require 'cl-lib)
-(require 'project)
-(require 'subr-x)
 (require 'outline)
-(require 'simple)
-(require 'thingatpt)
+(require 'project)
 (require 'seq)
+(require 'simple)
+(require 'subr-x)
+(require 'thingatpt)
 
 (defvar-local virtual-comment--buffer-data nil
-  "Buffer comment data.")
+  "Buffer comment data.
+Lazily initialized value of `virtual-comment-buffer-data'")
 
 (defvar virtual-comment--store nil
-  "Global comment store.")
+  "Global comment store.
+Lazy singleton of `virtual-comment-store'")
 
 (defvar-local virtual-comment--project nil
-  "Project comment store.")
+  "Project comment store.
+Lazy value of `virtual-comment-project'")
 
 (defvar-local virtual-comment--is-initialized nil
   "Flag to tell if `virtual-comment--init' has already run.")
@@ -109,7 +118,7 @@ When this value is non-nil then there is a timer for
 `virtual-comment--update-data' to run in future.")
 
 (defvar virtual-comment--current-location nil
-  "A string of stored location")
+  "A string of stored (yanked) location")
 
 (defcustom virtual-comment-idle-time 1
   "Number of seconds after Emacs is idle to run a scheduled update."
@@ -132,36 +141,132 @@ When this value is non-nil then there is a timer for
 (cl-defstruct (virtual-comment-unit
                (:constructor virtual-comment-unit-create)
                (:copier nil))
-  "Comment data structure.
-POINT and COMMENT are self explained TARGET is the line content on
-which the comment is."
-  point comment target)
+  "Comment data structure."
+  (point nil
+         :type integer
+         :documentation
+         "where the comment starts. It is the begin of the line")
+  (comment nil
+           :type string
+           :documentation "comment string")
+  (target nil
+          :type string
+          :documentation "line content on which the comment is."))
 
 (cl-defstruct (virtual-comment-buffer-data
                (:constructor virtual-comment-buffer-data-create)
                (:copier nil))
-  "Store data of current buffer.
-FILENAME is file name from project root, it is not used.
-COMMENTS is list of `virtual-comment-unit'."
-  filename comments)
+  "Store data of current buffer."
+  (filename nil
+            :type string
+            :documentation "file name from project root, it is not used.")
+  (comments nil
+            :type list
+            :documentation "list of `virtual-comment-unit'"))
 
 (cl-defstruct (virtual-comment-store
                (:constructor virtual-comment-store-create)
                (:copier nil))
-  "Global store of comments.
-Slot DEFAULT is default `virtual-comment-project' for buffers
-which don't belong to a project. Slot PROJECTS is a hash table of
-project unique id (md5 of project path) to
-`virtual-comment-project'."
-  default projects)
+  "Global store of comments."
+  (default nil
+           :type record
+           :documentation
+           "Comments on files that does not belong to a project `virtual-comment-project'")
+  (projects nil
+            :type hash-table
+            :documentation "hash table of projet ID (MD5) vs `virtual-comment-project'"))
 
 (cl-defstruct (virtual-comment-project
                (:constructor virtual-comment-project-create)
                (:copier nil))
-  "Project store of comments.
-Slot files is hashtable of file-name:`virtual-comment-buffer-data'
-Slot count is reference count."
-  files count)
+  "Project store of comments."
+  (files nil
+         :type hash-table
+         :documentation "hash table of file-name vs `virtual-comment-buffer-data'")
+  (count nil
+         :type integer
+         :documentation "reference count"))
+
+(cl-defgeneric virtual-comment-equal (vc1 vc2)
+  "Compare if two virtual-comment structures are equal.")
+
+(cl-defmethod virtual-comment-equal
+  ((vc1 virtual-comment-unit) (vc2 virtual-comment-unit))
+  (and
+   (equal
+    (virtual-comment-unit-point vc1)
+    (virtual-comment-unit-point vc2))
+   (equal
+    (virtual-comment-unit-comment vc1)
+    (virtual-comment-unit-comment vc2))
+   (equal
+    (virtual-comment-unit-target vc1)
+    (virtual-comment-unit-target vc2))))
+
+(cl-defmethod virtual-comment-equal
+  ;; ((vc1 (head virtual-comment-unit)) (vc2 (head virtual-comment-unit)))
+  ((vc1 list) (vc2 list))
+  (and
+   (equal
+    (length vc1)
+    (length vc2))
+   (let* ((sort-fn (lambda (a b) (< (virtual-comment-unit-point a)
+                                    (virtual-comment-unit-point b))))
+          (sorted-vc1 (sort vc1 sort-fn))
+          (sorted-vc2 (sort vc2 sort-fn))
+          (head1 (car sorted-vc1))
+          (head2 (car sorted-vc2)))
+     (while (and sorted-vc1
+                 sorted-vc2
+                 (virtual-comment-equal head1 head2))
+       (setq sorted-vc1 (cdr sorted-vc1))
+       (setq sorted-vc2 (cdr sorted-vc2))
+       (setq head1 (car sorted-vc1))
+       (setq head2 (car sorted-vc2)))
+     (if sorted-vc1
+         nil
+       t))))
+
+(cl-defmethod virtual-comment-equal
+  ((vc1 virtual-comment-buffer-data) (vc2 (eql nil)))
+  nil)
+
+(cl-defmethod virtual-comment-equal
+  ((vc1 (eql nil)) (vc2 virtual-comment-buffer-data))
+  nil)
+
+(cl-defmethod virtual-comment-equal
+  ((vc1 virtual-comment-buffer-data) (vc2 virtual-comment-buffer-data))
+  (and (equal
+        (virtual-comment-buffer-data-filename vc1)
+        (virtual-comment-buffer-data-filename vc2))
+       (virtual-comment-equal
+        (virtual-comment-buffer-data-comments vc1)
+        (virtual-comment-buffer-data-comments vc2))))
+
+(cl-defmethod virtual-comment-equal
+  ((ht1 hash-table) (ht2 hash-table))
+  "Compare two hash tables of file-name vs `virtual-comment-buffer-data'."
+  (and (= (hash-table-count ht1)
+          (hash-table-count ht2))
+       (catch 'flag (maphash (lambda (x y)
+                               (unless (virtual-comment-equal (gethash x ht2) y)
+                                 (throw 'flag nil)))
+                             ht1)
+              t)))
+
+(defun virtual-comment--persisted-data-p (data)
+  "Validate data load from file.
+Which is a hash table of filename vs `virtual-comment-buffer-data'"
+  (and (hash-table-p data)
+       (catch 'flag
+         (maphash (lambda (filename vcbd)
+                    (unless (and (or (stringp filename) (equal filename nil))
+                                 (or (virtual-comment-buffer-data-p vcbd) (equal vcbd nil)))
+                      (throw 'flag nil)))
+                  data)
+         ;; (throw 'flag t)
+         t)))
 
 (defun virtual-comment--get-store ()
   "Get comment store.
@@ -331,15 +436,17 @@ There are two slots but for now we only care about slot comments."
 
 (defun virtual-comment--persist ()
   "Persist project data to file."
-  (let ((data (virtual-comment--get-project))
-        (file (virtual-comment-get-evc-file)))
-    (virtual-comment--dump-data-to-file (virtual-comment-project-files
-                                         data)
-                                        file)))
+  (let* ((new-data (virtual-comment-project-files (virtual-comment--get-project)))
+         (file (virtual-comment-get-evc-file))
+         (org-data (virtual-comment--load-data-from-file file)))
+    (unless (virtual-comment-equal new-data org-data)
+      (message "virtual-comment: Saving %s" file)
+      (virtual-comment--dump-data-to-file new-data
+                                          file))))
 
 (defun virtual-comment--take-non-nil (project-files-slot)
   "Create new hash table from PROJECT-FILES-SLOT and remove empty value."
-  (let ((my-hashtable (make-hash-table)))
+  (let ((my-hashtable (make-hash-table :test 'equal)))
     (maphash (lambda (k v) (when (virtual-comment-buffer-data-comments v)
                              (puthash k v my-hashtable)))
              project-files-slot)
@@ -351,27 +458,34 @@ There are two slots but for now we only care about slot comments."
   (let ((data (virtual-comment--get-project))
         (file (virtual-comment-get-evc-file)))
     (virtual-comment--dump-data-to-file
+     ;; need to filter nil data because this is a manual call
      (virtual-comment--take-non-nil (virtual-comment-project-files data)) file)))
 
-(defun virtual-comment--load-data-from-file (file)
+(defun virtual-comment--load-data-from-file (file &optional verbose)
   "Read data from FILE.
-If not found or fail, return an empty hash talbe."
+Return the slot file of `virtual-comment-project'. If not found
+or fail, return an empty hash talbe. When data doesn't pass the
+`virtual-comment--persisted-data-p' rename .evc file to
+.evc.error."
   (if (file-exists-p file)
       (with-temp-buffer
-        (condition-case nil
-         (progn (insert-file-contents file)
-                (read (current-buffer)))
-         (error
-          (progn
-            (message "virtual-comment error: couldn't read %s" file)
-            (make-hash-table :test 'equal)))))
-    (message "virtual-comment: %s doesn't exist" file)
+        (condition-case err
+            (progn (insert-file-contents file)
+                   (let ((data (read (current-buffer))))
+                     (if (virtual-comment--persisted-data-p data)
+                         data
+                       (user-error "evc unable to parse persited data"))))
+          (user-error
+           (let ((file-error (format "%s.error" file)))
+             (rename-file file file-error t)
+             (message "Could not parse .evc, renamed it to .evc.error"))
+           (make-hash-table :test 'equal))
+          (error
+           (progn
+             (message "virtual-comment error: couldn't read %s %s %s" file (car err) (cdr err))
+             (make-hash-table :test 'equal)))))
+    (when verbose (message "virtual-comment: %s doesn't exist" file))
     (make-hash-table :test 'equal)))
-
-(defun virtual-comment--load ()
-  "Load stuff."
-  (setq virtual-comment--buffer-data (virtual-comment--load-data-from-file
-                                      (virtual-comment--get-saved-file))))
 
 ;; https://stackoverflow.com/questions/16992726/how-to-prompt-the-user-for-a-block-of-text-in-elisp
 (defun virtual-comment--read-string-with-multiple-line (prompt pre-string exit-keyseq clear-keyseq)
@@ -382,7 +496,7 @@ CLEAR-KEYSEQ to clear text."
     (define-key keymap (kbd "RET") 'newline)
     (define-key keymap exit-keyseq 'exit-minibuffer)
     (define-key keymap clear-keyseq
-      (lambda () (interactive) (delete-region (minibuffer-prompt-end) (point-max))))
+                (lambda () (interactive) (delete-region (minibuffer-prompt-end) (point-max))))
     (read-from-minibuffer prompt pre-string keymap)))
 
 (defun virtual-comment--read-string (prompt &optional pre-string)
@@ -534,9 +648,10 @@ Decrease counter, check if should persist data."
     (cl-decf (virtual-comment-project-count data))
     ;; persistence maybe
     (when (= 0 (virtual-comment-project-count data))
-      (message
-       "virtual-comment: persisting virtual comments in %s"
-       (virtual-comment-get-evc-file))
+      ;; debug message
+      ;; (message
+      ;;  "virtual-comment: Leaving %s"
+      ;;  (virtual-comment--get-root))
       (virtual-comment--persist)
       ;; remove project files from store
       (virtual-comment--remove-project))))
@@ -1076,7 +1191,7 @@ of the comment string and return it's point."
     (virtual-comment--remove-comment vc-point
                                      file-name
                                      (virtual-comment--get-project))
-    ;; if buffer is live remove the the comment ov form it
+    ;; if buffer is live remove the the comment ov from it
     (virtual-comment--remove-comment-from-file-buffer-maybe vc-point full-path)))
 
 (defun virtual-comment--remove-comment-from-file-buffer-maybe (vc-point full-name)
@@ -1084,8 +1199,7 @@ of the comment string and return it's point."
   (when-let ((buff (find-buffer-visiting full-name)))
     (with-current-buffer buff
       (when-let ((ov (virtual-comment--get-overlay-at vc-point)))
-        (delete-overlay ov))
-    )))
+        (delete-overlay ov)))))
 
 (defun virtual-comment--remove-comment-from-units (comment-units point)
   "Take COMMENT-UNITS list of `virtual-comment-unit' return the filtered list.

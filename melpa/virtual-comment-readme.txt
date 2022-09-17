@@ -50,6 +50,11 @@ https://github.com/blue0513/phantom-inline-comment
 https://www.emacswiki.org/emacs/InPlaceAnnotations
 
 Changelog
+2022-09-16
+ 0.5.0
+ - won't create .evc if there is no comment for the project
+ - only save data if there is change
+ - if can't parse the evc file copy it to .evc.error
 2022-09-12
  0.4.1 back up to .evc.bk when saving data
 2022-02-28:

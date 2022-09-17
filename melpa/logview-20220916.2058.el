@@ -4,9 +4,9 @@
 
 ;; Author:     Paul Pogonyshev <pogonyshev@gmail.com>
 ;; Maintainer: Paul Pogonyshev <pogonyshev@gmail.com>
-;; Version:    0.15.1snapshot
-;; Package-Version: 20220609.2003
-;; Package-Commit: 6446ccf25f834519d7f5c71e5293b062d599b355
+;; Version:    0.15.2snapshot
+;; Package-Version: 20220916.2058
+;; Package-Commit: 3b0b544b69759f4c119d4460f98263b6e739e7de
 ;; Keywords:   files, tools
 ;; Homepage:   https://github.com/doublep/logview
 ;; Package-Requires: ((emacs "25.1") (datetime "0.6.1") (extmap "1.0"))
@@ -646,6 +646,7 @@ this face is used."
 (defvar-local logview--custom-submode-guessed-with 0)
 
 
+;; Don't access these as variables directly, use functions with the same name instead.
 (defvar-local logview--point-min nil)
 (defvar-local logview--point-max nil)
 
@@ -861,13 +862,33 @@ works for \\[logview-set-navigation-view] and \\[logview-highlight-view-entries]
        (with-silent-modifications
          ,@body))))
 
-(defmacro logview--std-temporarily-widening (&rest body)
+(defmacro logview--temporarily-widening (&rest body)
+  "Execute BODY with the current buffer fully widened.
+Original point restrictions, if any, will not be possible to find
+inside BODY.  In most cases (also if not sure) you should use
+macro `logview--std-temporarily-widening' instead."
   (declare (indent 0) (debug t))
   `(save-restriction
-     (let ((logview--point-min (logview--point-min))
-           (logview--point-max (logview--point-max)))
-       (widen)
-       ,@body)))
+     (widen)
+     ,@(when (>= emacs-major-version 29)
+         ;; It is better to fail hard now than to face an arbitrary failure later.  In
+         ;; particular, an infinite loop in fontification code can irreversibly freeze
+         ;; Emacs, but this is of course "not a bug":
+         ;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=57804
+         `((unless (and (= (point-min) 1) (= (point-max) (1+ (buffer-size))))
+             (error "Logview is incompatible with locked narrowing; see https://github.com/doublep/logview#locked-narrowing"))))
+     ,@body))
+
+(defmacro logview--std-temporarily-widening (&rest body)
+  "Execute BODY with the current buffer fully widened.
+Original point restrictions are available as return values of
+functions `logview--point-min' and `logview--point-max'.  This
+macro can be nested, with inner calls not changing results of the
+two functions (available since the first call) further."
+  (declare (indent 0) (debug t))
+  `(let ((logview--point-min (logview--point-min))
+         (logview--point-max (logview--point-max)))
+     (logview--temporarily-widening ,@body)))
 
 (defmacro logview--locate-current-entry (entry start &rest body)
   (declare (indent 2) (debug (symbolp symbolp body)))
@@ -1116,9 +1137,16 @@ interfere with editing) or if submode wasn't guessed
 successfully.")
 
 
+;; Emacs 29 (snapshots); need to set it to nil.
+(defvar long-line-threshold)
+
 ;;;###autoload
 (define-derived-mode logview-mode nil "Logview"
   "Major mode for viewing and filtering various log files."
+  ;; Logview is incompatible with locked narrowing of Emacs 29.  Set this variable in hope
+  ;; this prevents it from ever happening.  See `logview--temporarily-widening'.
+  (when (boundp 'long-line-threshold)
+    (setq-local long-line-threshold nil))
   (logview--update-keymap)
   (add-hook 'read-only-mode-hook #'logview--update-keymap nil t)
   (setq font-lock-defaults (copy-sequence logview-font-lock-defaults))
@@ -2709,8 +2737,7 @@ returns non-nil."
         (if (and (>= temporary-size reassurance-chars)
                      (string= (buffer-substring-no-properties 1 (1+ reassurance-chars))
                               (with-current-buffer buffer
-                                (save-restriction
-                                  (widen)
+                                (logview--std-temporarily-widening
                                   (buffer-substring-no-properties compare-from size)))))
             (if (= temporary-size reassurance-chars)
                 (message "Backing file %s hasn't grown" file)
@@ -2720,8 +2747,7 @@ returns non-nil."
                       ;; This is to avoid unnecessary confirmation about
                       ;; modifying a buffer with externally changed file.
                       (buffer-file-name  nil))
-                  (save-restriction
-                    (widen)
+                  (logview--std-temporarily-widening
                     (save-excursion
                       (goto-char (point-max))
                       (insert-buffer-substring-no-properties temporary (1+ reassurance-chars) (1+ temporary-size))))
@@ -2734,16 +2760,17 @@ returns non-nil."
 
 ;;; Internal functions (except helpers for specific command groups).
 
-(defvar inhibit-message)
-
 (defmacro logview--internal-log (format-string &rest arguments)
   `(let ((inhibit-message t))
      (message ,format-string ,@arguments)))
 
 (defun logview--guess-submode ()
   (save-excursion
-    (save-restriction
-      (widen)
+    ;; Need access to the buffer start, regardless of any narrowing.  Also, don't want
+    ;; original narrowing to have any effect on anything (see uses of corresponding
+    ;; functions that access it; not even sure they are even called from here, but that
+    ;; doesn't matter), that's why not `std'.
+    (logview--temporarily-widening
       (let ((line-number       0)
             (remaining-attemps (if (and (integerp logview-max-promising-lines) (> logview-max-promising-lines 0))
                                    logview-max-promising-lines
@@ -3674,7 +3701,10 @@ This list is preserved across Emacs session in
 
 (defun logview--fontify-region (region-start region-end loudly)
   (when (logview-initialized-p)
-    (logview--std-temporarily-widening
+    ;; We are basically managing narrowing indirectly, by not fontifying further than
+    ;; `region-end' (possibly expanded).  Not using `std' here to prevent
+    ;; `logview--iterate-entries-forward' from stopping early because of outer narrowing.
+    (logview--temporarily-widening
       ;; We are very fast.  Don't fontify too little to avoid overhead.
       ;; FIXME: See `font-lock-extend-region-functions'.  Might want to reuse that instead.
       (when (and (< region-end (point-max)) (not (get-text-property (1+ region-end) 'fontified)))
@@ -3918,9 +3948,9 @@ This list is preserved across Emacs session in
 (defun logview-filter-edit--font-lock-region (region-begin region-end &optional _old-length)
   (save-excursion
     (save-match-data
-      (save-restriction
+      ;; Not even in a Logview mode buffer, not using `std'.
+      (logview--temporarily-widening
         (with-silent-modifications
-          (widen)
           (goto-char region-begin)
           (forward-line 0)
           ;; Never try to parse from the middle of a multiline filter.
