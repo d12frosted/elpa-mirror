@@ -5,8 +5,8 @@
 ;; Author: Tijs Mallaerts <tijs.mallaerts@gmail.com>
 
 ;; Package-Requires: ((emacs "25"))
-;; Package-Version: 20191204.1558
-;; Package-Commit: e326a45b60e0fd4ca057f1d1dc3e99a516a5aa2f
+;; Package-Version: 20220918.514
+;; Package-Commit: b73cca120eb64538ab0666892a8b97b6d65b4d6b
 ;; Version: 0.0.2
 ;; URL: https://github.com/mallt/org-clock-today-mode
 
@@ -44,6 +44,11 @@
 
 (defcustom org-clock-today-count-subtree nil
   "If non-nil, count total minutes of the current subtree as well."
+  :type 'boolean
+  :group 'org-clock-today)
+
+(defcustom org-clock-today-show-mode-line-when-clock-is-inactive nil
+  "If non-nil, show the mode line when no org clocks are active."
   :type 'boolean
   :group 'org-clock-today)
 
@@ -86,7 +91,9 @@
               (setq org-clock-today-buffer-time
                     (org-clock-today--total-minutes))
               (funcall org-clock-today-display-format))
-          ""))
+          (if org-clock-today-show-mode-line-when-clock-is-inactive
+              (concat (funcall org-clock-today-display-format) " (inact)")
+            "")))
   (force-mode-line-update))
 
 (defun org-clock-today--start-timer ()
