@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/license-templates
-;; Package-Version: 20220704.654
-;; Package-Commit: de70c234f6183f6c0c15c1297d03f5f4f44bd8b0
+;; Package-Version: 20220918.813
+;; Package-Commit: cebb88350916e0c808668c06c40d55eb1c9d0b2e
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "24.3") (request "0.3.0"))
 ;; Keywords: convenience license api template
@@ -113,6 +113,7 @@
   "Get the license information without refreshing cache."
   (unless license-templates--info-list (license-templates--get-info)))
 
+;;;###autoload
 (defun license-templates-names ()
   "Return list of names of available license."
   (license-templates--safe-get-info)

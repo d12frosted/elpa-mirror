@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220917.2340
-;; Package-Commit: 5b24d46fa2c5711ddbdb9cc050ef04ea2516b830
+;; Package-Version: 20220918.1019
+;; Package-Commit: d703c1a94809b0c69d9dd4ad4f73feef3f05a2ae
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -2200,14 +2200,32 @@ Records BEG, END and PRE-CHANGE-LENGTH locally."
             '((name . eglot--signal-textDocument/didChange)))
 
 (defvar-local eglot-workspace-configuration ()
-  "Alist of (SECTION . VALUE) entries configuring the LSP server.
-SECTION should be a keyword or a string.  VALUE is a
-plist or a primitive type converted to JSON.
+  "Configure LSP servers specifically for a given project.
+
+This variable's value should be a plist (SECTION VALUE ...).
+SECTION is a keyword naming a parameter section relevant to a
+particular server.  VALUE is a plist or a primitive type
+converted to JSON also understood by that server.
+
+Instead of a plist, an alist ((SECTION . VALUE) ...) can be used
+instead, but this variant is less reliable and not recommended.
+
+This variable should be set as a directory-local variable.  See
+See info node `(emacs)Directory Variables' for various ways to to
+that.
+
+Here's an example value that establishes two sections relevant to
+the Pylsp and Gopls LSP servers:
+
+  (:pylsp (:plugins (:jedi_completion (:include_params t
+                                       :fuzzy t)
+                     :pylint (:enabled :json-false)))
+   :gopls (:usePlaceholders t))
 
 The value of this variable can also be a unary function of a
 single argument, which will be a connected `eglot-lsp-server'
 instance.  The function runs with `default-directory' set to the
-root of the current project.  It should return an alist of the
+root of the current project.  It should return an object of the
 format described above.")
 
 ;;;###autoload
@@ -2234,12 +2252,14 @@ format described above.")
     eglot-workspace-configuration))
 
 (defun eglot--workspace-configuration-plist (server)
-  "Returns `eglot-workspace-configuraiton' suitable serialization."
-  (or (cl-loop for (section . v) in (eglot--workspace-configuration server)
-               collect (if (keywordp section) section
-                         (intern (format ":%s" section)))
-               collect v)
-      eglot--{}))
+  "Returns `eglot-workspace-configuration' suitable for serialization."
+  (let ((val (eglot--workspace-configuration server)))
+    (or (and (consp (car val))
+             (cl-loop for (section . v) in val
+                      collect (if (keywordp section) section
+                                (intern (format ":%s" section)))
+                      collect v))
+        val)))
 
 (defun eglot-signal-didChangeConfiguration (server)
   "Send a `:workspace/didChangeConfiguration' signal to SERVER.
@@ -2249,7 +2269,8 @@ When called interactively, use the currently active server"
    server :workspace/didChangeConfiguration
    (list
     :settings
-    (eglot--workspace-configuration-plist server))))
+    (or (eglot--workspace-configuration-plist server)
+        eglot--{}))))
 
 (cl-defmethod eglot-handle-request
   (server (_method (eql workspace/configuration)) &key items)
@@ -2266,9 +2287,8 @@ When called interactively, use the currently active server"
                          (project-root (eglot--project server)))))
                 (setq-local major-mode (eglot--major-mode server))
                 (hack-dir-local-variables-non-file-buffer)
-                (alist-get section (eglot--workspace-configuration server)
-                           nil nil
-                           (lambda (wsection section)
+                (plist-get (eglot--workspace-configuration-plist server) section
+                           (lambda (section wsection)
                              (string=
                               (if (keywordp wsection)
                                   (substring (symbol-name wsection) 1)
@@ -3262,8 +3282,7 @@ If NOERROR, return predicate, else erroring function."
 (defun eglot--glob-emit-{} (arg self next)
   (let ((alternatives (split-string (substring arg 1 (1- (length arg))) ",")))
     `(,self ()
-            (or ,@(cl-loop for alt in alternatives
-                           collect `(re-search-forward ,(concat "\\=" alt) nil t))
+            (or (re-search-forward ,(concat "\\=" (regexp-opt alternatives)) nil t)
                 (error "Failed matching any of %s" ',alternatives))
             (,next))))
 
