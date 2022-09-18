@@ -413,7 +413,7 @@
 	       (:url . "https://elpa.gnu.org/packages/cobol-mode.html")
 	       (:commit . "bd7879daa71908616277688ba51d27b60c88b0a2"))])
  (code-cells .
-	     [(0 2)
+	     [(0 3)
 	      ((emacs
 		(27 1)))
 	      "Lightweight notebooks with support for ipynb files" tar
@@ -422,7 +422,7 @@
 	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	       (:authors
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
-	       (:commit . "ea7799c447066fee78c4efbafbdaf09520c7109d"))])
+	       (:commit . "fd68a33eb43b3cbd44fed767f48e230382903592"))])
  (coffee-mode .
 	      [(0 4 1 1)
 	       nil "Major mode for CoffeeScript files" single
@@ -432,7 +432,7 @@
 		(:maintainer "Chris Wanstrath" . "chris@ozmm.org")
 		(:url . "http://github.com/defunkt/coffee-mode"))])
  (comint-mime .
-	      [(0 1)
+	      [(0 2)
 	       ((emacs
 		 (28 1)))
 	       "Display content of various MIME types in comint buffers" tar
@@ -441,7 +441,7 @@
 		(:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 		(:authors
 		 ("Augusto Stoffel" . "arstoffel@gmail.com"))
-		(:commit . "2ac67834d9bb8e6a3521d75b934a4b496a3a0f9d"))])
+		(:commit . "9f480e76851d163e0aba0eaf0299d8d15bc0ee25"))])
  (compact-docstrings .
 		     [(0 2)
 		      nil "Shrink blank lines in docstrings and doc comments" single
@@ -1232,15 +1232,16 @@
 	    (:url . "https://elpa.gnu.org/packages/flymake.html")
 	    (:commit . "31af9bca99fa88350271e1a905c9b435eaec28cf"))])
  (flymake-proselint .
-		    [(0 2 3)
+		    [(0 3 0)
 		     ((emacs
-		       (26 1)))
+		       (27 1)))
 		     "Flymake backend for proselint" tar
-		     ((:url . "https://github.com/manuel-uberti/flymake-proselint")
+		     ((:url . "https://git.sr.ht/~manuel-uberti/flycheck-proselint")
 		      (:keywords "convenience")
-		      (:maintainer "Manuel Uberti" . "manuel.uberti@inventati.org")
+		      (:maintainer "Manuel Uberti" . "~manuel-uberti/flymake-proselint@lists.sr.ht")
 		      (:authors
-		       ("Manuel Uberti" . "manuel.uberti@inventati.org")))])
+		       ("Manuel Uberti" . "manuel.uberti@inventati.org"))
+		      (:commit . "9c68ee881f18f554f0ab5bbf5bee1a4b753d792b"))])
  (fontaine .
 	   [(0 4 0)
 	    ((emacs
@@ -1539,7 +1540,7 @@
 	   (:authors
 	    ("Thierry Volpiatto" . "thievol@posteo.net")))])
  (isearch-mb .
-	     [(0 5)
+	     [(0 6)
 	      ((emacs
 		(27 1)))
 	      "Control isearch from the minibuffer" tar
@@ -1548,7 +1549,7 @@
 	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	       (:authors
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
-	       (:commit . "e70ba8f594afef989006493dd71bd693a29e9f42"))])
+	       (:commit . "b2d9ba935fc77a59f3b7267fdebccda1ff349119"))])
  (iterators .
 	    [(0 1 1)
 	     ((emacs

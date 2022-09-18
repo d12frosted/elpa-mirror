@@ -30,7 +30,7 @@ By default, three styles of comments are recognized as cell boundaries:
 │ 
 │ # %% Optional title
 │ 
-│ # * Optional title
+│ #* Optional title
 └────
 
 The first is what you get by exporting a notebook to a script on
@@ -38,6 +38,10 @@ Jupyter's web interface or with the command `jupyter nbconvert'.  The
 second style is compatible with Jupytext, among several other tools.
 The third is in the spirit of Emacs's outline mode.  Further percent
 signs or asterisks signify nested cells.
+
+*Note.* As of version 0.3, the “outline mode” style heading requires /no
+space/ between the comment character and the asterisk.  The previous
+behavior, which allowed spaces, led to many false positives.
 
 
 [Jupytext] <https://github.com/mwouts/jupytext>
@@ -82,6 +86,8 @@ signs or asterisks signify nested cells.
   • `C-c % e': `code-cells-eval'
   • `C-c % b': `code-cells-backward-cell'
   • `C-c % f': `code-cells-forward-cell'
+  • `C-c % B': `code-cells-move-cell-up'
+  • `C-c % F': `code-cells-move-cell-down'
   • `C-c % ;': `code-cells-comment-or-uncomment'
   • `C-c % @': `code-cells-mark-cell'
 
@@ -125,6 +131,18 @@ signs or asterisks signify nested cells.
   │     (define-key map "p" (code-cells-speed-key 'code-cells-backward-cell))
   │     (define-key map "e" (code-cells-speed-key 'code-cells-eval))
   │     (define-key map (kbd "TAB") (code-cells-speed-key 'outline-cycle))))
+  └────
+
+  For Evil users, the following can be used:
+
+  ┌────
+  │ (with-eval-after-load 'code-cells
+  │   (let ((map code-cells-mode-map))
+  │     (define-key map [remap evil-search-next] (code-cells-speed-key 'code-cells-forward-cell)) ;; n
+  │     (define-key map [remap evil-paste-after] (code-cells-speed-key 'code-cells-backward-cell)) ;; p
+  │     (define-key map [remap evil-backward-word-begin] (code-cells-speed-key 'code-cells-eval-above)) ;; b
+  │     (define-key map [remap evil-forward-word-end] (code-cells-speed-key 'code-cells-eval)) ;; e
+  │     (define-key map [remap evil-jump-forward] (code-cells-speed-key 'outline-cycle)))) ;; TAB
   └────
 
 

@@ -18,7 +18,7 @@ Emacs parlance) to display graphics and other types of special content.
 <https://raw.githubusercontent.com/astoff/comint-mime/images/python-shell.png>
 
 The main motivation behind this package is to display plots in the
-Python shell. However, it does more that that.
+Python shell. However, it does more than that.
 
 First, it is not constrained to graphics, and can display other "MIME
 attachments" such as HTML and LaTeX content. In fact, the Python backend
