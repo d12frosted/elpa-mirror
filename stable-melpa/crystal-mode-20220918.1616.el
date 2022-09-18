@@ -5,8 +5,8 @@
 ;; Authors: Jason Pellerin
 ;;          crystal-lang-tools
 ;; URL: https://github.com/crystal-lang-tools/emacs-crystal-mode
-;; Package-Version: 20220104.2146
-;; Package-Commit: 96a8058205b24b513d0b9307db32f05e30f9570b
+;; Package-Version: 20220918.1616
+;; Package-Commit: e5b50952fc1d10b715231588cc1655eeef4a2458
 ;; Created: Tue Jun 23 2015
 ;; Keywords: languages crystal
 ;; Version: 0.2.0
@@ -1023,7 +1023,8 @@ It is used when `crystal-encoding-magic-comment-style' is set to `custom'."
   (setq-local parse-sexp-lookup-properties t)
   (setq-local paragraph-start (concat "$\\|" page-delimiter))
   (setq-local paragraph-separate paragraph-start)
-  (setq-local paragraph-ignore-fill-prefix t))
+  (setq-local paragraph-ignore-fill-prefix t)
+  (setq-local outline-regexp crystal-indent-beg-re))
 
 (defun crystal--insert-coding-comment (encoding)
   "Insert a magic coding comment for ENCODING.

@@ -5,6 +5,8 @@
 ;; Created: March 3rd, 2022
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Version: 0.1
+;; Package-Version: 20220917.1431
+;; Package-Commit: 2e2b707d4ae08ac1f2d8b85a5d6db143a32e6dbd
 ;; Homepage: https://github.com/jgru/consult-org-roam
 ;; Package-Requires: ((emacs "27.1") (org-roam "2.2.0") (consult "0.16"))
 
