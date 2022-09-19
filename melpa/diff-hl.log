@@ -4,10 +4,10 @@ Source:  https://github.com/dgutov/diff-hl.git
 
 Updating /mnt/store/melpa/working/diff-hl/
 Checking out origin/HEAD
-Checking out 37b00f3bad841e131d69442a89cbebc3041d996b
+Checking out 5d90cca340cb72a821dd20635e4f5a924dd20ccf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/diff-hl/
-  to /tmp/diff-hlR0syUR/diff-hl-20220829.15
+  to /tmp/diff-hlRS7izw/diff-hl-20220919.1045
     diff-hl-amend.el -> diff-hl-amend.el
     diff-hl-dired.el -> diff-hl-dired.el
     diff-hl-flydiff.el -> diff-hl-flydiff.el
@@ -16,18 +16,20 @@ Copying files (->) and directories (=>)
     diff-hl-show-hunk-posframe.el -> diff-hl-show-hunk-posframe.el
     diff-hl-show-hunk.el -> diff-hl-show-hunk.el
     diff-hl.el -> diff-hl.el
-Created diff-hl-20220829.15.tar containing:
-  diff-hl-20220829.15/
-  diff-hl-20220829.15/diff-hl-amend.el
-  diff-hl-20220829.15/diff-hl-dired.el
-  diff-hl-20220829.15/diff-hl-flydiff.el
-  diff-hl-20220829.15/diff-hl-inline-popup.el
-  diff-hl-20220829.15/diff-hl-margin.el
-  diff-hl-20220829.15/diff-hl-pkg.el
-  diff-hl-20220829.15/diff-hl-show-hunk-posframe.el
-  diff-hl-20220829.15/diff-hl-show-hunk.el
-  diff-hl-20220829.15/diff-hl.el
-Built diff-hl in 4.449s, finished at 2022-09-19T10:07:20+0000
+Created diff-hl-20220919.1045.tar containing:
+  diff-hl-20220919.1045/
+  diff-hl-20220919.1045/diff-hl-amend.el
+  diff-hl-20220919.1045/diff-hl-dired.el
+  diff-hl-20220919.1045/diff-hl-flydiff.el
+  diff-hl-20220919.1045/diff-hl-inline-popup.el
+  diff-hl-20220919.1045/diff-hl-margin.el
+  diff-hl-20220919.1045/diff-hl-pkg.el
+  diff-hl-20220919.1045/diff-hl-show-hunk-posframe.el
+  diff-hl-20220919.1045/diff-hl-show-hunk.el
+  diff-hl-20220919.1045/diff-hl.el
+Built diff-hl in 4.165s, finished at 2022-09-19T13:48:38+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  376 Sep 19 10:07 packages/diff-hl-20220829.15.entry
 112K -rw-r--r-- 1 root root 110K Sep 19 10:07 packages/diff-hl-20220829.15.tar
+4.0K -rw-r--r-- 1 root root  378 Sep 19 13:48 packages/diff-hl-20220919.1045.entry
+112K -rw-r--r-- 1 root root 110K Sep 19 13:48 packages/diff-hl-20220919.1045.tar
