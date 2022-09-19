@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 6ad8b71731f0cb2a42cd2315650cf257112d0958
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magit/
-  to /tmp/magitIGXb2c/magit-20220918.2059
+  to /tmp/magitCfYbog/magit-20220918.2059
   ! lisp/magit-apply.el -> magit-apply.el
   ! lisp/magit-autorevert.el -> magit-autorevert.el
   ! lisp/magit-base.el -> magit-base.el
@@ -57,7 +57,7 @@ Copying files (->) and directories (=>)
   ! docs/magit.texi -> magit.texi
   ! docs/AUTHORS.md -> AUTHORS.md
     LICENSE -> LICENSE
-Generating /tmp/magitIGXb2c/magit-20220918.2059/magit.info
+Generating /tmp/magitCfYbog/magit-20220918.2059/magit.info
 Created magit-20220918.2059.tar containing:
   magit-20220918.2059/
   magit-20220918.2059/AUTHORS.md
@@ -110,9 +110,7 @@ Created magit-20220918.2059.tar containing:
   magit-20220918.2059/magit-worktree.el
   magit-20220918.2059/magit.el
   magit-20220918.2059/magit.info
-Built magit in 45.448s, finished at 2022-09-18T23:53:37+0000
+Built magit in 43.356s, finished at 2022-09-19T03:29:31+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  558 Sep 18 20:20 packages/magit-20220916.1716.entry
-1.8M -rw-r--r-- 1 root root 1.8M Sep 18 20:20 packages/magit-20220916.1716.tar
-4.0K -rw-r--r-- 1 root root  558 Sep 18 23:53 packages/magit-20220918.2059.entry
-1.8M -rw-r--r-- 1 root root 1.8M Sep 18 23:53 packages/magit-20220918.2059.tar
+4.0K -rw-r--r-- 1 root root  558 Sep 19 03:29 packages/magit-20220918.2059.entry
+1.8M -rw-r--r-- 1 root root 1.8M Sep 19 03:29 packages/magit-20220918.2059.tar
