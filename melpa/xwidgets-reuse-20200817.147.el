@@ -3,8 +3,6 @@
 ;; Author: Boris Glavic <lordpretzel@gmail.com>
 ;; Maintainer: Boris Glavic <lordpretzel@gmail.com>
 ;; Version: 0.2
-;; Package-Version: 20200817.147
-;; Package-Commit: 3f95d81bfce1b3c52f9dcf2890cd2559a5287a33
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/lordpretzel/xwidgets-reuse
 ;; Keywords: hypermedia
