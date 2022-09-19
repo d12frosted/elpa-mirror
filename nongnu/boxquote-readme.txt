@@ -3,6 +3,7 @@ Quote text with a semi-box.
 
 [![MELPA Stable](http://stable.melpa.org/packages/boxquote-badge.svg)](http://stable.melpa.org/#/boxquote)
 [![MELPA](https://melpa.org/packages/boxquote-badge.svg)](https://melpa.org/#/boxquote)
+[![NonGNU ELPA](https://elpa.nongnu.org/nongnu/boxquote.svg)](https://elpa.nongnu.org/nongnu/boxquote.html)
 
 ## Commentary:
 
@@ -44,3 +45,5 @@ function.
 Reiner Steib for suggesting `boxquote-where-is` and the idea of letting
 `boxquote-describe-key` describe key bindings from other buffers. Also
 thanks go to Reiner for suggesting `boxquote-insert-buffer`.
+
+[//]: # (README.md ends here)

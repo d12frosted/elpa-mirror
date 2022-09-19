@@ -1,0 +1,17 @@
+(makefile-executor .
+		   [(20220919 802)
+		    ((emacs
+		      (27 1))
+		     (dash
+		      (2 11 0))
+		     (f
+		      (0 11 0))
+		     (s
+		      (1 10 0)))
+		    "Commands for conveniently running makefile targets" single
+		    ((:commit . "b304f4b5cc5d33eedf76ff0fdae839d1a00ed2a5")
+		     (:authors
+		      ("Lowe Thiderman" . "lowe.thiderman@gmail.com"))
+		     (:maintainer "Lowe Thiderman" . "lowe.thiderman@gmail.com")
+		     (:keywords "processes")
+		     (:url . "https://github.com/thiderman/makefile-executor.el"))])

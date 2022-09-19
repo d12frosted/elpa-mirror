@@ -116,7 +116,7 @@
 	       (:keywords "bison-mode" "yacc-mode")
 	       (:url . "https://elpa.nongnu.org/nongnu/bison-mode.html"))])
  (boxquote .
-	   [(2 2)
+	   [(2 3)
 	    ((cl-lib
 	      (0 5)))
 	    "Quote text with a semi-box." tar
@@ -124,7 +124,8 @@
 	     (:keywords "quoting")
 	     (:maintainer "Dave Pearson" . "davep@davep.org")
 	     (:authors
-	      ("Dave Pearson" . "davep@davep.org")))])
+	      ("Dave Pearson" . "davep@davep.org"))
+	     (:commit . "fe676396fa7e4372e01bf2c3d9a62e8d53615d46"))])
  (buttercup .
 	    [(1 26)
 	     ((emacs
@@ -1885,7 +1886,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(18 0 20220916203045)
+	       [(18 0 20220918232928)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -1894,7 +1895,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "b3746d9f81bb7a874b15b66de86ffd573b5762a6"))])
+		 (:commit . "e83b1d4f94ec1fd4294285a3c38743b0d2d6fd5b"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar
