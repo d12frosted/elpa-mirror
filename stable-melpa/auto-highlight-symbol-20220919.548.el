@@ -8,8 +8,8 @@
 ;; Author: Mitsuo Saito <arch320@NOSPAM.gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Version: 1.61
-;; Package-Version: 20220505.505
-;; Package-Commit: 3d60d2c64278f9f933ee78299f6decde2254af7e
+;; Package-Version: 20220919.548
+;; Package-Commit: e10e4952fd23025f3f46edfde66e3ac2d7bdf069
 ;; Keywords: highlight face match convenience
 ;; URL: http://github.com/jcs-elpa/auto-highlight-symbol
 ;; Package-Requires: ((emacs "26.1") (ht "2.3"))
@@ -1202,7 +1202,7 @@ You can do these operations at One Key!
     (overlay-put overlay 'ahs-symbol 'current)
     (overlay-put overlay 'priority ahs-overlay-priority)
     (overlay-put overlay 'face face)
-    (overlay-put overlay 'help-echo '(ahs-stat-string))
+    (overlay-put overlay 'help-echo '(or (ignore-errors (ahs-stat-string)) ""))
     (overlay-put overlay 'window (selected-window))
 
     (overlay-put overlay 'modification-hooks    '(ahs-modification-hook))
