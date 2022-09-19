@@ -5,8 +5,8 @@
 ;; Author: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; Maintainer: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; URL: <https://github.com/saf-dmitry/taskpaper-mode>
-;; Package-Version: 20220919.1302
-;; Package-Commit: 2989956a5c156d21f7a5c07f2b40568ac5ed9b0f
+;; Package-Version: 20220919.1840
+;; Package-Commit: 8c86490b4b7a7f16659ef3cf5a367d24085a4fd9
 ;; Keywords: outlines, notetaking, task management, productivity, taskpaper
 
 ;; This file is not part of GNU Emacs.
@@ -1556,16 +1556,40 @@ This version will not throw an error."
       (progn (outline-backward-same-level 1) t)
     (error nil)))
 
-(defsubst taskpaper-outline-up-level-safe ()
+(defvar-local taskpaper--up-level-cache nil
+  "Buffer-local `taskpaper-outline-up-level-safe' cache.")
+(defvar-local taskpaper--up-level-cache-tick nil
+  "Buffer `buffer-chars-modified-tick' in `taskpaper--up-level-cache'.")
+(defun taskpaper-outline-up-level-safe ()
   "Move to the (possibly invisible) ancestor item.
-This version will not throw an error. Also, this version is much
-faster than `outline-up-heading', relying directly on leading
+Return the level of the item found or nil otherwise. This version
+will not throw an error. Also, this version is a lot faster than
+`outline-up-heading', because it relies directly on leading
 tabs."
   (when (ignore-errors (outline-back-to-heading t))
-    (let ((level-up (1- (funcall outline-level))))
-      (and (> level-up 0)
-           (re-search-backward
-            (format "^[\t]\\{0,%d\\}[^\t\f\n]" (1- level-up)) nil t)))))
+    (let (level-cache)
+      (unless taskpaper--up-level-cache
+        (setq taskpaper--up-level-cache (make-hash-table)))
+      (if (and (eq (buffer-chars-modified-tick) taskpaper--up-level-cache-tick)
+               (setq level-cache (gethash (point) taskpaper--up-level-cache)))
+          (when (<= (point-min) (car level-cache) (point-max))
+            ;; Parent is inside accessible part of the buffer
+            (progn (goto-char (car level-cache))
+                   (cdr level-cache)))
+        ;; Buffer modified. Invalidate cache.
+        (unless (eq (buffer-chars-modified-tick) taskpaper--up-level-cache-tick)
+          (setq-local taskpaper--up-level-cache-tick
+                      (buffer-chars-modified-tick))
+          (clrhash taskpaper--up-level-cache))
+        (let* ((level-up (1- (funcall outline-level)))
+               (pos (point))
+               (res (and (> level-up 0)
+                         (re-search-backward
+                          (format "^[\t]\\{0,%d\\}[^\t\f\n]" (1- level-up)) nil t)
+                         (funcall outline-level))))
+          (when res
+            (puthash pos (cons (point) res) taskpaper--up-level-cache))
+          res)))))
 
 (defun taskpaper-outline-map-descendants (func &optional self)
   "Call FUNC for every descendant of the current item.
@@ -2086,41 +2110,6 @@ attribute name and VALUE is the attribute value, as strings."
       (setq attrs (nreverse excluded))))
   attrs)
 
-;;;; Attribute caching
-
-;; IMPORTANT: Due to the attribute inheritance mechanism
-;; attribute cache should be build and clear atomically
-
-(defvar taskpaper-attribute-cache (make-hash-table :size 10000)
-  "Attribute cache.")
-(make-variable-buffer-local 'taskpaper-attribute-cache)
-
-(defun taskpaper-attribute-cache-clear ()
-  "Clear attribute cache."
-  (clrhash taskpaper-attribute-cache))
-
-(defun taskpaper-attribute-cache-put (key attrs)
-  "Push attribute list ATTRS into attribute cache, under KEY."
-  (puthash key attrs taskpaper-attribute-cache))
-
-(defun taskpaper-attribute-cache-get (key)
-  "Retrieve attribute list for KEY from attribute cache."
-  (gethash key taskpaper-attribute-cache))
-
-(defun taskpaper-attribute-cache-build ()
-  "Build attribute cache."
-  (taskpaper-attribute-cache-clear)
-  (message "Caching...")
-  (save-excursion
-    (goto-char (point-min))
-    (let ((re (concat "^" outline-regexp)))
-      (while (let (case-fold-search)
-               (re-search-forward re nil t))
-        (let ((key (point-at-bol))
-              (attrs (taskpaper-item-get-attributes t)))
-          (taskpaper-attribute-cache-put key attrs)))))
-  (message "Caching...done"))
-
 ;;;; Attribute API
 
 (defun taskpaper-item-get-attributes (&optional inherit)
@@ -2128,18 +2117,15 @@ attribute name and VALUE is the attribute value, as strings."
 Return read-only list of cons cells (NAME . VALUE), where NAME is
 the attribute name and VALUE is the attribute value, as strings.
 If INHERIT is non-nil also check higher levels of the hierarchy."
-  (let* ((key (point-at-bol))
-         (attrs (taskpaper-attribute-cache-get key)))
-    (unless attrs
-      (setq attrs (append (taskpaper-item-get-special-attributes)
-                          (taskpaper-item-get-explicit-attributes)))
-      (when (and inherit (outline-on-heading-p t))
-        (save-excursion
-          (while (taskpaper-outline-up-level-safe)
-            (setq attrs
-                  (append attrs
-                          (taskpaper-remove-uninherited-attributes
-                           (taskpaper-item-get-explicit-attributes))))))))
+  (let ((attrs (append (taskpaper-item-get-special-attributes)
+                       (taskpaper-item-get-explicit-attributes))))
+    (when (and inherit (outline-on-heading-p t))
+      (save-excursion
+        (while (taskpaper-outline-up-level-safe)
+          (setq attrs
+                (append attrs
+                        (taskpaper-remove-uninherited-attributes
+                         (taskpaper-item-get-explicit-attributes)))))))
     (taskpaper-uniquify attrs)))
 
 (defun taskpaper-item-get-attribute (name &optional inherit)
@@ -4966,8 +4952,6 @@ string. PROMPT can overwrite the default prompt."
           (minibuffer-message-timeout 0.5))
       (unwind-protect
           (progn
-            ;; Build attribute cache
-            (taskpaper-attribute-cache-build)
             ;; Add hooks and set idle timer
             (setq taskpaper-iquery-idle-timer
                   (run-with-idle-timer
@@ -4979,9 +4963,7 @@ string. PROMPT can overwrite the default prompt."
         ;; Remove hooks and cancel idle timer
         (remove-hook 'after-change-functions
                      'taskpaper-read-query-propertize)
-        (cancel-timer taskpaper-iquery-idle-timer)
-        ;; Clear attribute cache
-        (taskpaper-attribute-cache-clear)))))
+        (cancel-timer taskpaper-iquery-idle-timer)))))
 
 (defun taskpaper-get-buffer-queries ()
   "Return a list of embedded buffer queries for selection."

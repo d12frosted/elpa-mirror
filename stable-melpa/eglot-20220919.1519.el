@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220918.1019
-;; Package-Commit: d703c1a94809b0c69d9dd4ad4f73feef3f05a2ae
+;; Package-Version: 20220919.1519
+;; Package-Commit: 79f41555d49b1f542e3c3428c396813bbc5ca4ff
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -174,7 +174,7 @@ language-server/bin/php-language-server.php"))
                                 (go-mode . ("gopls"))
                                 ((R-mode ess-r-mode) . ("R" "--slave" "-e"
                                                         "languageserver::run()"))
-                                (java-mode . ("jdtls" "-data" ".jdtls-cache"))
+                                (java-mode . ("jdtls"))
                                 (dart-mode . ("dart" "language-server"
                                               "--client-id" "emacs.eglot-dart"))
                                 (elixir-mode . ("language_server.sh"))
@@ -2287,13 +2287,15 @@ When called interactively, use the currently active server"
                          (project-root (eglot--project server)))))
                 (setq-local major-mode (eglot--major-mode server))
                 (hack-dir-local-variables-non-file-buffer)
-                (plist-get (eglot--workspace-configuration-plist server) section
-                           (lambda (section wsection)
-                             (string=
-                              (if (keywordp wsection)
-                                  (substring (symbol-name wsection) 1)
-                                wsection)
-                              section))))))
+                (cl-loop for (wsection o)
+                         on (eglot--workspace-configuration-plist server)
+                         by #'cddr
+                         when (string=
+                               (if (keywordp wsection)
+                                   (substring (symbol-name wsection) 1)
+                                 wsection)
+                               section)
+                         return o))))
           items)))
 
 (defun eglot--signal-textDocument/didChange ()
