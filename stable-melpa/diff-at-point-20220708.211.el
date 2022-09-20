@@ -6,6 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-diff-at-point
+;; Package-Version: 20220708.211
+;; Package-Commit: b32a741d5967b38749039ceafec85062a45e6bcd
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 

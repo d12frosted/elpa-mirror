@@ -4,8 +4,6 @@
 
 ;; Author: Schspa Shi <schspa@gmail.com>
 ;; URL: https://github.com/schspa/dtb-mode
-;; Package-Version: 20210105.1132
-;; Package-Commit: d5bca7d1afaac5615c586b60c7314a1d0e2514dc
 ;; Package-Requires: ((emacs "25"))
 ;; Version: 20210102.2003
 ;; Keywords: dtb dts convenience
