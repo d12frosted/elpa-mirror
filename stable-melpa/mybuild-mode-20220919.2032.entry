@@ -1,0 +1,11 @@
+(mybuild-mode .
+	      [(20220919 2032)
+	       ((emacs
+		 (24 3)))
+	       "Major mode for editing Mybuild files from Embox" single
+	       ((:commit . "0fc84a09a065903338d9364e980b692051f229b0")
+		(:authors
+		 ("Evgeny Simonenko" . "easimonenko@gmail.com"))
+		(:maintainer "Evgeny Simonenko" . "easimonenko@gmail.com")
+		(:keywords "languages")
+		(:url . "https://github.com/easimonenko/mybuild-mode"))])
