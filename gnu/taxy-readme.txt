@@ -25,28 +25,29 @@ Table of Contents
 ..... 1. Functions
 ..... 2. Macros
 4. Changelog
-.. 1. 0.10
-.. 2. 0.9
+.. 1. 0.10.1
+.. 2. 0.10
+.. 3. 0.9
 ..... 1. Changes
-.. 3. 0.8
+.. 4. 0.8
 ..... 1. Additions
 ..... 2. Fixes
-.. 4. 0.7
+.. 5. 0.7
 ..... 1. Additions
-.. 5. 0.6
+.. 6. 0.6
 ..... 1. Additions
-.. 6. 0.5
+.. 7. 0.5
 ..... 1. Additions
 ..... 2. Fixes
-.. 7. 0.4
-.. 8. 0.3
+.. 8. 0.4
+.. 9. 0.3
 ..... 1. Changes
 ..... 2. Fixes
-.. 9. 0.2
+.. 10. 0.2
 ..... 1. Changes
 ..... 2. Additions
 ..... 3. Fixes
-.. 10. 0.1
+.. 11. 0.1
 5. Development
 .. 1. Copyright assignment
 6. Credits
@@ -1125,7 +1126,14 @@ Flexible table view
 4 Changelog
 ═══════════
 
-4.1 0.10
+4.1 0.10.1
+──────────
+
+  *Examples*
+  ⁃ Fixed byte-compilation of `diredy.el'.
+
+
+4.2 0.10
 ────────
 
   *Examples*
@@ -1134,10 +1142,10 @@ Flexible table view
   ⁃ Diredy: Various small improvements.
 
 
-4.2 0.9
+4.3 0.9
 ───────
 
-4.2.1 Changes
+4.3.1 Changes
 ╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Library `taxy-magit-section' is now [packaged separately] and
@@ -1152,25 +1160,25 @@ Flexible table view
 <https://github.com/alphapapa/taxy.el/tree/package/taxy-magit-section>
 
 
-4.3 0.8
+4.4 0.8
 ───────
 
-4.3.1 Additions
+4.4.1 Additions
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Short documentation group for Emacs 28+.
 
 
-4.3.2 Fixes
+4.4.2 Fixes
 ╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Require `map' for `pcase' pattern.
 
 
-4.4 0.7
+4.5 0.7
 ───────
 
-4.4.1 Additions
+4.5.1 Additions
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Function `taxy-flatten' returns a list of the items in a taxy and
@@ -1180,10 +1188,10 @@ Flexible table view
     Taxy.
 
 
-4.5 0.6
+4.6 0.6
 ───────
 
-4.5.1 Additions
+4.6.1 Additions
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Sorting functions:
@@ -1207,10 +1215,10 @@ Flexible table view
     published as a separate package later.)
 
 
-4.6 0.5
+4.7 0.5
 ───────
 
-4.6.1 Additions
+4.7.1 Additions
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Function `taxy-magit-section-insert' takes new arguments:
@@ -1230,23 +1238,23 @@ Flexible table view
   ⁃ New example `taxy-package-report'.
 
 
-4.6.2 Fixes
+4.7.2 Fixes
 ╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Example `diredy' referred to an old function name.
 
 
-4.7 0.4
+4.8 0.4
 ───────
 
   ⁃ Incremented version to cause a new ELPA release (since removing a
     file that wasn't intended to be distributed on ELPA).
 
 
-4.8 0.3
+4.9 0.3
 ───────
 
-4.8.1 Changes
+4.9.1 Changes
 ╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Within the `taxy' struct and related functions, the term `objects'
@@ -1255,7 +1263,7 @@ Flexible table view
     becomes `(taxy-items taxy)').
 
 
-4.8.2 Fixes
+4.9.2 Fixes
 ╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Function `taxy-fill' always calls a taxy's `:take' function if
@@ -1265,19 +1273,19 @@ Flexible table view
     rely on text properties at the beginning of a line will work).
 
 
-4.9 0.2
-───────
+4.10 0.2
+────────
 
-4.9.1 Changes
-╌╌╌╌╌╌╌╌╌╌╌╌╌
+4.10.1 Changes
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Function `taxy-take-keyed*' is renamed to `taxy-take-keyed',
     replacing the old function: it's more powerful, and there's little
     reason to maintain two versions.
 
 
-4.9.2 Additions
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+4.10.2 Additions
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Struct `taxy' now has a `:make' slot, a function called to make new
     sub-taxys by `take-take-keyed' (defaulting to `make-taxy').  This
@@ -1292,15 +1300,15 @@ Flexible table view
     .
 
 
-4.9.3 Fixes
-╌╌╌╌╌╌╌╌╌╌╌
+4.10.3 Fixes
+╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ `taxy-magit-section''s `insert-object' function.
   ⁃ `taxy-fill' now applies objects to the root taxy if no sub-taxys
     take them.
 
 
-4.10 0.1
+4.11 0.1
 ────────
 
   First tagged version.

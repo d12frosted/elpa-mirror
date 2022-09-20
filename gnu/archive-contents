@@ -1814,7 +1814,7 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (logos .
-	[(0 5 0)
+	[(0 5 1)
 	 ((emacs
 	   (27 1)))
 	 "Simple focus mode and extras" tar
@@ -1823,7 +1823,7 @@
 	  (:maintainer "Logos Development" . "~protesilaos/logos@lists.sr.ht")
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	  (:commit . "83a2739a34e5dada28bf3679996d2cc2cce15984"))])
+	  (:commit . "be3333b6969c34bb3317d11f1daef6aa5af476cb"))])
  (map .
       [(3 2 1)
        ((emacs
@@ -3131,7 +3131,7 @@
 	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	 (:url . "http://www.dr-qubit.org/emacs.php"))])
  (taxy .
-       [(0 10)
+       [(0 10 1)
 	((emacs
 	  (26 3)))
 	"Programmable taxonomical grouping for arbitrary objects" tar
@@ -3140,7 +3140,7 @@
 	 (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	 (:authors
 	  ("Adam Porter" . "adam@alphapapa.net"))
-	 (:commit . "3c561ceaf967a827cb4f02db870a52c8e77d8db0"))])
+	 (:commit . "b27fa67ecf3f8954ce0d5c2747d1de4dc94ff09f"))])
  (taxy-magit-section .
 		     [(0 10)
 		      ((emacs

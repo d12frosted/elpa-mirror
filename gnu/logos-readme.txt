@@ -106,14 +106,17 @@ Table of Contents
 
   Logos provides some optional aesthetic tweaks which come into effect
   when the buffer-local `logos-focus-mode' is enabled.  These will hide
-  the mode line (`logos-hide-mode-line'), disable the buffer boundary
-  indicators (`indicate-buffer-boundaries'), enable `scroll-lock-mode'
+  the cursor (`logos-hide-cursor'), hide the mode line
+  (`logos-hide-mode-line'), disable the buffer boundary indicators
+  (`indicate-buffer-boundaries'), enable `scroll-lock-mode'
   (`logos-scroll-lock'), use `variable-pitch-mode' in non-programming
   buffers (`logos-variable-pitch'), make the buffer read-only
   (`logos-buffer-read-only'), center the buffer in its window if the
   `olivetti' package is installed (`logos-olivetti'), and hide the
   `fringe' face (`logos-hide-fringe').  All these variables are
   buffer-local.
+
+  [ Note that `logos-hide-cursor' is part of 1.0.0-dev. ]
 
   Furthermore, the `logos-focus-mode' establishes a bespoke keymap,
   which can be used to, for example, bind the arrow keys to page
@@ -127,7 +130,7 @@ Table of Contents
   backronyms about the mechanics of this package:
 
   1. `^L' Only Generates Ostensible Slides
-  2. Logos Optionally Garners Outline Sections
+  2. Logos Optionally Goes through Outline Sections
 
 
 3 Installation
@@ -199,28 +202,33 @@ Table of Contents
     example, assuming the default keys).
 
   ⁃ To have quick access to `logos-focus-mode', bind it to a key.  This
-    mode checks the variables `logos-hide-mode-line',
-    `logos-scroll-lock', `logos-variable-pitch',
+    mode checks the variables `logos-hide-cursor',
+    `logos-hide-mode-line', `logos-scroll-lock', `logos-variable-pitch',
     `logos-hide-buffer-boundaries', `logos-buffer-read-only',
     `logos-olivetti' (requires `olivetti' package) and applies their
     effects if they are non-nil.  Note that everything is buffer-local,
     so it is possible to use file variables as described in the Emacs
     manual.
 
+  [ Note that `logos-hide-cursor' is part of 1.0.0-dev. ]
+
   ┌────
   │ (require 'logos)
   │ 
-  │ ;; If you want to use outlines instead of page breaks (the ^L)
+  │ ;; If you want to use outlines instead of page breaks (the ^L):
   │ (setq logos-outlines-are-pages t)
+  │ 
+  │ ;; This is the default value for the outlines:
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . "^;;;+ ")
   │ 	(org-mode . "^\\*+ +")
   │ 	(markdown-mode . "^\\#+ +")
-  │ 	(t . ,(or outline-regexp logos--page-delimiter))))
+  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
   │ 
   │ ;; These apply when `logos-focus-mode' is enabled.  Their value is
   │ ;; buffer-local.
-  │ (setq-default logos-hide-mode-line t
+  │ (setq-default logos-hide-cursor nil
+  │ 	      logos-hide-mode-line t
   │ 	      logos-hide-buffer-boundaries t
   │ 	      logos-hide-fringe t
   │ 	      logos-variable-pitch nil
@@ -412,7 +420,7 @@ Table of Contents
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . "^;;;+ ")
   │ 	(org-mode . "^\\*+ +")
-  │ 	(t . ,(or outline-regexp logos--page-delimiter))))
+  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
   └────
 
   It is possible to tweak those regular expressions to target both the
@@ -422,7 +430,7 @@ Table of Contents
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . ,(format "\\(^;;;+ \\|%s\\)" (default-value 'page-delimiter)))
   │ 	(org-mode . ,(format "\\(^\\*+ +\\|%s\\)" (default-value 'page-delimiter)))
-  │ 	(t . ,(or outline-regexp logos--page-delimiter))))
+  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
   └────
 
   The form `,(format "\\(^;;;+ \\|%s\\)" logos--page-delimiter)' expands
@@ -436,21 +444,21 @@ Table of Contents
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . ,(format "\\(^;;;+ \\|%s\\)" logos--page-delimiter))
   │ 	(org-mode . ,(format "\\(^\\*+ +\\|^-\\{5\\}$\\|%s\\)" logos--page-delimiter))
-  │ 	(t . ,(or outline-regexp logos--page-delimiter))))
+  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
   └────
 
   Another Org-specific tweak is to use heading levels up to a specific
   number.  The idea would be that anything below that number is not
   significant.  For example, `^\\* +' only applies to top-level
   headings, while `^\\*\\{1,3\\} +' covers heading levels 1 through 3.
-  Accounting for the aforementiond horizontal rle and generic page
+  Accounting for the aforementiond horizontal rule and generic page
   delimiter, the end result can look like this:
 
   ┌────
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . ,(format "\\(^;;;+ \\|%s\\)" logos--page-delimiter))
   │ 	(org-mode . ,(format "\\(^\\*\\{1,3\\} +\\|^-\\{5\\}$\\|%s\\)" logos--page-delimiter))
-  │ 	(t . ,(or outline-regexp logos--page-delimiter))))
+  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
   └────
 
 
@@ -458,15 +466,16 @@ Table of Contents
 ─────────────────────────────────────────────
 
   The `logos-focus-mode-extra-functions' is a normal hook that runs when
-  `logos-focus-mode' is enabled.  It gives users the power to write
-  their own extensions that change how the buffer works when that mode
-  is toggled on/off.
+  `logos-focus-mode' is enabled.  Each function is run without an
+  argument and looks like those in `logos.el'.  An example that sets a
+  variable is `logos--buffer-read-only'; one that sets a mode is
+  `logos--scroll-lock'; another that sets the mode of an external
+  package is `logos--olivetti'; while `logos--hide-fringe' provides yet
+  another useful sample.
 
-  The hook is designed to call functions without an argument.  An
-  example function that sets a variable is `logos--buffer-read-only';
-  one that sets a mode is `logos--scroll-lock'; another that sets the
-  mode of an external package is `logos--olivetti'; while
-  `logos--hide-fringe' provides yet another useful sample.
+  If a function cannot be like the aforementioned though still needs to
+  set its state both when `logos-focus-mode' is enabled and disabled,
+  then use the `logos-focus-mode-hook' instead.
 
 
 5.6.1 Conditionally toggle org-indent-mode
@@ -594,7 +603,7 @@ Table of Contents
         Kaludercic, Remco van ’t Veer, and user Ypot.
 
   Ideas and/or user feedback
-        Daniel Mendler, Ypot.
+        Daniel Mendler, Marcel Ventosa, Xiaoduan, Ypot.
 
 
 7 GNU Free Documentation License
