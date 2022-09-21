@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/transwin
-;; Package-Version: 20220921.514
-;; Package-Commit: 443240e9fdbdb43d0590eee7706d58089db9815e
+;; Package-Version: 20220921.827
+;; Package-Commit: e4a1fe564224bce61fbf72ad6f12805078cbf8db
 ;; Version: 0.1.4
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: frames window transparent
@@ -95,7 +95,7 @@
 
 (defun transwin--delta-frame-transparent (del-trans)
   "Delta change the frame transparency by a certain percentage, DEL-TRANS."
-  (let ((alpha (frame-parameter nil transwin-parameter-alpha))
+  (let ((alpha (or (frame-parameter nil transwin-parameter-alpha) 100))
         (current-transparency transwin-delta-alpha))
 
     (setq current-transparency

@@ -4,8 +4,8 @@
 
 ;; Author: Giap Tran <txgvnn@gmail.com>
 ;; URL: https://github.com/TxGVNN/gitlab-pipeline
-;; Package-Version: 20220619.1215
-;; Package-Commit: 595e699aeab6c28582f309a047c42a0498873a8e
+;; Package-Version: 20220921.1044
+;; Package-Commit: 8cc070c156d6e45583074ef4eb110b8d1511b0c4
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1") (ghub "3.3.0"))
 ;; Keywords: comm, tools, git
@@ -132,7 +132,7 @@
          (path (format "%s/trace" jobpath))
          (host gitlab-pipeline-buffer-host))
     (when path
-      (ignore-error (kill-buffer (format "*Gitlab-CI:%s:%s" host path)))
+      (ignore-errors (kill-buffer (format "*Gitlab-CI:%s:%s" host path)))
       (with-current-buffer (get-buffer-create (format "*Gitlab-CI:%s:%s" host path))
         (erase-buffer)
         (insert (cdr (car (glab-get path nil :host host))))
