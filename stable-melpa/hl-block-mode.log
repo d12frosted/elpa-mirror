@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-hl-block-mode.git
 
 Updating /mnt/store/melpa/working/hl-block-mode/
-Checking out origin/HEAD
-Checking out a9e8e8cfd83972a448bdbb0a9967989d0aa1d05a
-Built hl-block-mode in 4.090s, finished at 2022-09-21T11:01:28+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Sep 21 11:01 packages/hl-block-mode-20220731.2352.el
-4.0K -rw-r--r-- 1 root root 353 Sep 21 11:01 packages/hl-block-mode-20220731.2352.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-hl-block-mode.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

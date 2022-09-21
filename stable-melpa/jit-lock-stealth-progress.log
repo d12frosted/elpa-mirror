@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-jit-lock-stealth-progress.git
 
 Updating /mnt/store/melpa/working/jit-lock-stealth-progress/
-Checking out origin/HEAD
-Checking out ebcff242ab90e7562f9873c946a9b067459da779
-Built jit-lock-stealth-progress in 8.141s, finished at 2022-09-21T11:05:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.2K Sep 21 11:05 packages/jit-lock-stealth-progress-20220905.41.el
-4.0K -rw-r--r-- 1 root root  422 Sep 21 11:05 packages/jit-lock-stealth-progress-20220905.41.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-jit-lock-stealth-progress.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

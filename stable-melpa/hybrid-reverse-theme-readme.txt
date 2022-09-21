@@ -47,6 +47,7 @@ Supported packages:
 
 Supported defaults:
 - ansi-term
+- compile
 - completions
 - custom (M-x customize)
 - diff-mode

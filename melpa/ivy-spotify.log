@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/ivy-spotify/
-Checking out origin/HEAD
-Checking out eefcb49d740570f6c874302d87be33e5b0ec54ff
-Built ivy-spotify in 4.381s, finished at 2022-09-21T11:04:46+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Sep 21 11:04 packages/ivy-spotify-20210329.312.el
-4.0K -rw-r--r-- 1 root root  410 Sep 21 11:04 packages/ivy-spotify-20210329.312.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/jao/espotify.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-fancy-compilation.git
 
 Updating /mnt/store/melpa/working/fancy-compilation/
-Checking out origin/HEAD
-Checking out 6d98cf908b0bbd6286a55e6bf11905010468a006
-Built fancy-compilation in 4.351s, finished at 2022-09-21T10:50:18+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Sep 21 10:50 packages/fancy-compilation-20220725.2313.el
-4.0K -rw-r--r-- 1 root root 391 Sep 21 10:50 packages/fancy-compilation-20220725.2313.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-fancy-compilation.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

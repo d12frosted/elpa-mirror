@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/lingva.el.git
 
 Updating /mnt/store/melpa/working/lingva/
-Checking out origin/HEAD
-Checking out 6c33594068fa33de622172503deeec6778d9c744
-Built lingva in 4.280s, finished at 2022-09-21T11:09:09+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Sep 21 11:09 packages/lingva-20220910.1435.el
-4.0K -rw-r--r-- 1 root root 434 Sep 21 11:09 packages/lingva-20220910.1435.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/martianh/lingva.el.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

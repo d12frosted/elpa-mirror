@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/akib/emacs-gnu-indent.git
 
 Updating /mnt/store/melpa/working/gnu-indent/
-Checking out origin/HEAD
-Checking out ff3e10edbdf9b919747ec2ba3434d5858f5cc9fa
-Built gnu-indent in 3.719s, finished at 2022-09-21T10:56:19+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.4K Sep 21 10:56 packages/gnu-indent-20220515.1719.el
-4.0K -rw-r--r-- 1 root root  403 Sep 21 10:56 packages/gnu-indent-20220515.1719.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/akib/emacs-gnu-indent.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

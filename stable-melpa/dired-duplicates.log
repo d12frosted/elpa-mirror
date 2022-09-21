@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/hjudt/dired-duplicates.git
 
 Updating /mnt/store/melpa/working/dired-duplicates/
-Checking out origin/HEAD
-Checking out 94319f44f716e9b4b0e0d4f6067c0e028dc0072b
-Built dired-duplicates in 4.929s, finished at 2022-09-21T10:41:15+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.8K Sep 21 10:41 packages/dired-duplicates-20220718.1341.el
-4.0K -rw-r--r-- 1 root root  387 Sep 21 10:41 packages/dired-duplicates-20220718.1341.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/hjudt/dired-duplicates.git/': The requested URL returned error: 504
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
