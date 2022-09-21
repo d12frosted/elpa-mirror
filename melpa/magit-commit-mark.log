@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-magit-commit-mark.git
 
 Updating /mnt/store/melpa/working/magit-commit-mark/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-magit-commit-mark.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 9367f7e4038792073f090b2c881cdbde1ab47f40
+Built magit-commit-mark in 7.058s, finished at 2022-09-21T18:42:20+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Sep 21 18:42 packages/magit-commit-mark-20220809.625.el
+4.0K -rw-r--r-- 1 root root 425 Sep 21 18:42 packages/magit-commit-mark-20220809.625.entry

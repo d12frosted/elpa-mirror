@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware/exwm-mff.git
 
 Updating /mnt/store/melpa/working/exwm-mff/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/emacs-weirdware/exwm-mff.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 89206f2e3189f589c27c56bd2b6203e906ee7100
+Built exwm-mff in 5.811s, finished at 2022-09-21T18:17:22+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Sep 21 18:17 packages/exwm-mff-20210603.1723.el
+4.0K -rw-r--r-- 1 root root  338 Sep 21 18:17 packages/exwm-mff-20210603.1723.entry

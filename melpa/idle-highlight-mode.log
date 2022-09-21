@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git
 
 Updating /mnt/store/melpa/working/idle-highlight-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b3eed5553fe8d7b28bd95b5093e4174d859695ca
+Built idle-highlight-mode in 4.409s, finished at 2022-09-21T18:33:09+0000
+ ✓ Success:
+ 20K -rwxr-xr-x 1 root root 17K Sep 21 18:33 packages/idle-highlight-mode-20220731.2354.el
+4.0K -rw-r--r-- 1 root root 448 Sep 21 18:33 packages/idle-highlight-mode-20220731.2354.entry
