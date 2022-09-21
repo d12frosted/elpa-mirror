@@ -50,6 +50,10 @@ https://github.com/blue0513/phantom-inline-comment
 https://www.emacswiki.org/emacs/InPlaceAnnotations
 
 Changelog
+2022-09-20
+ 0.5.1
+ - bug fix: check for evc existing before backup
+ - actually update version
 2022-09-16
  0.5.0
  - won't create .evc if there is no comment for the project
