@@ -5,8 +5,8 @@
 ;; Created: March 3rd, 2022
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20220919.657
-;; Package-Commit: 6e676a81b1cf769637fcd666a2423d70cfe9d8b1
+;; Package-Version: 20220921.507
+;; Package-Commit: 3eae47a4667a583e30703c1c5344e26225b5f676
 ;; Homepage: https://github.com/jgru/consult-org-roam
 ;; Package-Requires: ((emacs "27.1") (org-roam "2.2.0") (consult "0.16"))
 
@@ -46,6 +46,7 @@
 ;;;; Functions
 ;; ============================================================================
 
+;;;###autoload
 (defun consult-org-roam-search (&optional initial)
   "Search org-roam directory using `consult-ripgrep' with live-preview.
 With an option for INITIAL input when called non-interactively."

@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-sidecar-locals
-;; Package-Version: 20220921.412
-;; Package-Commit: 2cccb999fc12963d8da9756d091f2c67d3e50482
+;; Package-Version: 20220921.501
+;; Package-Commit: 4175fe207de8530474c4ec368d4507ddf97dc412
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -50,12 +50,6 @@
 
 
 ;; ---------------------------------------------------------------------------
-;; Require Dependencies
-
-(require 'subr-x) ;; For `string-empty-p'.
-
-
-;; ---------------------------------------------------------------------------
 ;; Custom Variables
 
 (defgroup sidecar-locals nil
@@ -85,6 +79,15 @@ check this buffer.")
   "The directory name to discover sidecar-locals in."
 
   :type 'string)
+
+
+;; ---------------------------------------------------------------------------
+;; Internal Variables
+
+;; Store the paths that were last checked, this way - setting new paths will be
+;; checked and there is no need to validate paths every time `sidecar-locals' runs.
+;; When non-nil this is a `cons' cell storing paths-allow & paths-deny.
+(defvar sidecar-locals--last-checked-paths nil)
 
 
 ;; ---------------------------------------------------------------------------
@@ -294,7 +297,7 @@ When NO-TEST is non-nil checking for existing paths is disabled."
 
         ;; Happens if the filename is in the same directory as the `sidecar-locals-dir-name'.
         ;; Discard the empty string in this case.
-        (when (and dir-tail-list (string-empty-p (car dir-tail-list)))
+        (when (and dir-tail-list (string-equal "" (car dir-tail-list)))
           (pop dir-tail-list))
 
         (while dir-tail-list
@@ -321,6 +324,11 @@ When NO-TEST is non-nil checking for existing paths is disabled."
 (defun sidecar-locals-hook ()
   "Load `sidecar-locals' files hook."
   (when (sidecar-locals-predicate)
+
+    ;; There is no ideal place to call this function,
+    ;; so ensure the user is informed of bad settings once.
+    (sidecar-locals--report-malformed-paths-once)
+
     (sidecar-locals--apply
       (file-name-directory (buffer-file-name)) major-mode
       (lambda (filepath)
@@ -350,6 +358,37 @@ When NO-TEST is non-nil checking for existing paths is disabled."
           (not (funcall sidecar-locals-ignore-buffer (current-buffer))))
         (t
           nil)))))
+
+
+;; ---------------------------------------------------------------------------
+;; Internal Path Validation
+
+(defun sidecar-locals--report-malformed-paths ()
+  "Report problems path settings."
+  (let ((has-error nil))
+    (dolist (var (list 'sidecar-locals-paths-allow 'sidecar-locals-paths-deny))
+      (dolist (path (symbol-value var))
+        (let ((path-as-dir (file-name-as-directory path)))
+          (unless (string-equal path path-as-dir)
+            (message "sidecar-locals: %s path must end with a slash %S" (symbol-name var) path)
+            (setq has-error t)))))
+    has-error))
+
+(defun sidecar-locals--report-malformed-paths-once ()
+  "Report problems path settings (only once)."
+  ;; NOTE: this is not a perfect solution, a developer could manipulate paths
+  ;; without changing the start of the list, so it's not fool-proof.
+  ;; Just a hint to users who have invalid configuration.
+  (pcase-let ((`(,prev-paths-allow . ,prev-paths-deny) sidecar-locals--last-checked-paths))
+    (unless
+      (and
+        (eq prev-paths-allow sidecar-locals-paths-allow)
+        (eq prev-paths-deny sidecar-locals-paths-deny))
+      (unless (sidecar-locals--report-malformed-paths)
+        ;; When there are no errors - don't check again unless the paths change.
+        ;; Otherwise report whenever a new file is opened (so the user doesn't miss the warning).
+        (setq sidecar-locals--last-checked-paths
+          (cons sidecar-locals-paths-allow sidecar-locals-paths-deny))))))
 
 
 ;; ---------------------------------------------------------------------------
@@ -440,12 +479,13 @@ This creates a buffer with links that visit that file."
 
 (defun sidecar-locals-mode-enable ()
   "Turn on option `sidecar-locals-mode' globally."
-
+  (setq sidecar-locals--last-checked-paths nil)
   (add-hook 'after-set-visited-file-name-hook #'sidecar-locals-hook nil nil)
   (add-hook 'find-file-hook #'sidecar-locals-hook nil nil))
 
 (defun sidecar-locals-mode-disable ()
   "Turn off option `sidecar-locals-mode' globally."
+  (setq sidecar-locals--last-checked-paths nil)
   (remove-hook 'after-set-visited-file-name-hook #'sidecar-locals-hook nil)
   (remove-hook 'find-file-hook #'sidecar-locals-hook nil))
 
