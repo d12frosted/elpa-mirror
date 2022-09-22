@@ -106,6 +106,20 @@ HTTPie program.
 
 HTTPie switches.
 
+##### `mb-url-http-httpie-supported-content-encoding-list'
+
+Content encodings which HTTPie supports to decode.
+
+If your HTTPie supports to decode a encoding like `br`, put the encoding
+into this list.
+
+By default, HTTPie supports to decode `gzip` and `deflate`.
+
+##### `mb-url-http-httpie-content-encoding-fix-function'
+
+A function to fix the value of `Content-Encoding` for HTTPie.  Default
+value is `mb-url-http-httpie-delete-content-encoding-from-list'.
+
 License:
 
 GPLv3
