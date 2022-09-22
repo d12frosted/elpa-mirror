@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.2.0
-;; Package-Version: 20220921.39
-;; Package-Commit: dec616ff694e94a3671a48d1b31eb0cce5f0276b
+;; Package-Version: 20220921.2351
+;; Package-Commit: 08a4e4b76b70a297415abf0ff882dec02b81ffcd
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -429,6 +429,7 @@
 
    ;; docker
    `(dockerfile-image-name ((t (:inherit font-lock-type-face))))
+   `(dockerfile-image-alias ((t (:inherit font-lock-constant-face))))
 
    ;; ediff
    `(ediff-current-diff-A ((t (:background "#482828"))))
