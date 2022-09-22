@@ -2,8 +2,6 @@
 
 ;; Author: Ryan Young
 ;; Version: 1.2.1
-;; Package-Version: 20200122.1700
-;; Package-Commit: 35e2cdc81fcc904b450a7ef3ec00fd25df6a4431
 ;; Created: February 13, 2013
 ;; Package-Requires: ((request "0.2.0") (cl-lib "0.5"))
 
