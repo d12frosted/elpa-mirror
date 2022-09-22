@@ -8,8 +8,8 @@
 ;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
 ;;             Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacsorphanage/git-gutter
-;; Package-Version: 20220423.1704
-;; Package-Commit: a50672b62a678922b8c0cab95225d520f493439b
+;; Package-Version: 20220922.256
+;; Package-Commit: ec28e85d237065cb3c28db4b66d129da6d309f9c
 ;; Version: 0.92
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -532,7 +532,7 @@ Argument TEST is the case before BODY execution."
          (git-gutter))
         ((memq git-gutter:real-this-command git-gutter:update-windows-commands)
          (git-gutter)
-         (unless global-linum-mode
+         (unless (bound-and-true-p global-linum-mode)
            (git-gutter:update-other-window-buffers (selected-window)
                                                    (current-buffer))))))
 
@@ -1145,7 +1145,7 @@ start revision."
           (delete-file original))))))
 
 ;; for linum-user
-(when (and global-linum-mode (not (boundp 'git-gutter-fringe)))
+(when (and (bound-and-true-p global-linum-mode) (not (boundp 'git-gutter-fringe)))
   (git-gutter:linum-setup))
 
 (defun git-gutter:all-hunks ()

@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-sideline/sideline
-;; Package-Version: 20220911.1609
-;; Package-Commit: 48714f3503d16469dac325dbc909a4a9a3e4a804
+;; Package-Version: 20220922.508
+;; Package-Commit: 0bfdb6274cda0c19424c78804086ed93df96b4bb
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: convenience
@@ -47,7 +47,6 @@
 (require 'cl-lib)
 (require 'face-remap)
 (require 'rect)
-(require 'shr)
 (require 'subr-x)
 
 (defgroup sideline nil
@@ -174,6 +173,13 @@
   "Record of last variable `text-scale-mode-amount'.")
 
 ;;
+;; (@* "Externals" )
+;;
+
+(declare-function string-pixel-width "subr-x.el")   ; TODO: remove this after 29.1
+(declare-function shr-string-pixel-width "shr.el")  ; TODO: remove this after 29.1
+
+;;
 ;; (@* "Entry" )
 ;;
 
@@ -220,12 +226,18 @@
   `(when (buffer-live-p ,buffer-or-name)
      (with-current-buffer ,buffer-or-name ,@body)))
 
+;; TODO: Use function `string-pixel-width' after 29.1
+(defun sideline--string-pixel-width (str)
+  "Return the width of STR in pixels."
+  (if (fboundp #'string-pixel-width)
+      (string-pixel-width str)
+    (require 'shr)
+    (shr-string-pixel-width str)))
+
 (defun sideline--str-len (str)
   "Calculate STR in pixel width."
   (let ((width (window-font-width))
-        (len (if (fboundp #'string-pixel-width)
-                 (string-pixel-width str)
-               (shr-string-pixel-width str))))
+        (len (sideline--string-pixel-width str)))
     (+ (/ len width)
        (if (zerop (% len width)) 0 1))))  ; add one if exceeed
 
