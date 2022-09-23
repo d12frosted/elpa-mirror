@@ -5,7 +5,7 @@ Table of Contents
 .. 1. Screenshot
 .. 2. Features
 .. 3. Installing mentor
-..... 1. Installing through MELPA (recommended)
+..... 1. Installing through NonGNU ELPA (recommended)
 ..... 2. Installing mentor manually
 .. 4. Quick Start
 .. 5. Configuration
@@ -71,32 +71,37 @@ Table of Contents
 1.3 Installing mentor
 ─────────────────────
 
-1.3.1 Installing through MELPA (recommended)
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+1.3.1 Installing through NonGNU ELPA (recommended)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  If you are using Emacs 24 or later you can install mentor using ELPA.
-  It is available from [MELPA].  If you have not already configured
-  MELPA, you can find information on how to do that [here].
+  You can install mentor from [NonGNU ELPA] or [MELPA].
 
-  Next, find and install mentor using this command:
+  NonGNU ELPA is configured by default in Emacs 28.1 or later.  Find and
+  install Mentor using this command:
 
   ┌────
   │ M-x package-list-packages
   └────
 
 
+  For earlier versions, please see the specific instructions for how to
+  configure [NonGNU ELPA] and [MELPA].
+
+
+[NonGNU ELPA] <https://elpa.nongnu.org/>
+
 [MELPA] <http://melpa.org/>
 
-[here] <https://melpa.org/#/getting-started>
+[MELPA] <https://melpa.org/#/getting-started>
 
 
 1.3.2 Installing mentor manually
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  If you for some reason do not use Emacs 24, or if you do not want to
-  use ELPA, you can install mentor manually.
+  You can also install mentor manually.  First, make sure you have the
+  minimum version of [xml-rpc.el] installed.
 
-  Clone the repository using:
+  Clone this repository using:
 
   ┌────
   │ git clone https://github.com/skangas/mentor.git
@@ -114,8 +119,6 @@ Table of Contents
   Change "~/src/mentor" to the path where you keep the mentor source
   code.
 
-  Make sure you have xml-rpc.el installed, at least version 1.6.9.
-
   If you wish to byte-compile mentor, go into the source directory and
   run:
 
@@ -125,11 +128,14 @@ Table of Contents
 
 
   Here is how you setup autoload.  See the Emacs manual for more
-  information on this.
+  information.
 
   ┌────
   │ (autoload 'mentor "mentor" nil t)
   └────
+
+
+[xml-rpc.el] <https://github.com/xml-rpc-el/xml-rpc-el>
 
 
 1.4 Quick Start
@@ -350,8 +356,12 @@ Table of Contents
   Stefan Kangas <stefankangas@gmail.com> or report them on GitHub.
 
   ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-  [file:https://melpa.org/packages/mentor-badge.svg]
+  [https://elpa.nongnu.org/nongnu/mentor.svg]
+  [https://melpa.org/packages/mentor-badge.svg]
 
 
-[file:https://melpa.org/packages/mentor-badge.svg]
+[https://elpa.nongnu.org/nongnu/mentor.svg]
+<https://elpa.nongnu.org/nongnu/mentor.html>
+
+[https://melpa.org/packages/mentor-badge.svg]
 <https://melpa.org/#/mentor>

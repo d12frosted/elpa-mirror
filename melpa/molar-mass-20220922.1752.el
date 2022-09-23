@@ -6,8 +6,8 @@
 ;; Author: Sergi Ruiz Trepat
 ;; Created: 2021
 ;; Version: 1.0
-;; Package-Version: 20210519.1342
-;; Package-Commit: 838db1486a2dc5a3774eb195d62fbcdef71a63f7
+;; Package-Version: 20220922.1752
+;; Package-Commit: c3b686c4b621b45fa4b17857b4934eb4487d74f5
 ;; Keywords: convenience, chemistry
 ;; Homepage: https://github.com/sergiruiztrepat/molar-mass.el
 ;; Package-Requires: ((emacs "24.3"))
@@ -49,6 +49,7 @@
 ;; You can customize the result's significant decimals (default is 3):
 ;; M-x customize-variable > molar-mass-significant-decimals
 ;;
+;; Please email me your comments to sergi@aloe-associacio.org
 ;;; Code:
 
 (defconst molar-mass-elements-mass

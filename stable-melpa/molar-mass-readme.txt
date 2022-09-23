@@ -28,3 +28,5 @@ works in LaTeX sintax (Ex: Fe(OH)_{2}).
 
 You can customize the result's significant decimals (default is 3):
 M-x customize-variable > molar-mass-significant-decimals
+
+Please email me your comments to sergi@aloe-associacio.org

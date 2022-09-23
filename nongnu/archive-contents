@@ -1093,23 +1093,22 @@
 		   (:authors
 		    ("Christoph Paulik" . "cpaulik@gmail.com")))])
  (mentor .
-	 [(0 3 5)
+	 [(0 4)
 	  ((emacs
 	    (25 1))
 	   (xml-rpc
 	    (1 6 15))
 	   (seq
 	    (1 11))
-	   (cl-lib
-	    (0 5))
 	   (async
 	    (1 9 3)))
 	  "Frontend for the rTorrent bittorrent client" tar
-	  ((:keywords "comm" "processes" "bittorrent")
+	  ((:url . "https://github.com/skangas/mentor")
+	   (:keywords "comm" "processes" "bittorrent")
 	   (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
 	   (:authors
 	    ("Stefan Kangas" . "stefankangas@gmail.com"))
-	   (:url . "https://elpa.nongnu.org/nongnu/mentor.html"))])
+	   (:commit . "4ce024e17bf8ae079b2cd67af475b3e636c82be1"))])
  (moe-theme .
 	    [(1 0 2)
 	     nil "A colorful eye-candy theme. Moe, moe, kyun!" tar
