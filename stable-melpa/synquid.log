@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/cpitclaudel/synquid-emacs.git
 
 Updating /mnt/store/melpa/working/synquid/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/cpitclaudel/synquid-emacs.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 28701ce1a15437202f53ab93a14bcba1de83fd2c
+Built synquid in 4.991s, finished at 2022-09-23T04:05:57+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Sep 23 04:05 packages/synquid-20160930.1550.el
+4.0K -rw-r--r-- 1 root root  428 Sep 23 04:05 packages/synquid-20160930.1550.entry
