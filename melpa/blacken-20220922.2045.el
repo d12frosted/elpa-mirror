@@ -5,8 +5,8 @@
 ;; Author: Artem Malyshev <proofit404@gmail.com>
 ;; Homepage: https://github.com/proofit404/blacken
 ;; Version: 0.2.0
-;; Package-Version: 20220529.1541
-;; Package-Commit: 764912ada13c3bf57e770fcd978c81a1ce26666a
+;; Package-Version: 20220922.2045
+;; Package-Commit: 456596e00f8277eafd9a08c62a71df06e8cad2c5
 ;; Package-Requires: ((emacs "25.2"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -134,7 +134,7 @@ Return black process the exit code."
 
 (defun blacken-project-is-blackened (&optional display)
   "Whether the project has a pyproject.toml with [tool.black] in it."
-  (when-let ((parent (locate-dominating-file default-directory "pyproject.toml")))
+  (when-let (parent (locate-dominating-file default-directory "pyproject.toml"))
     (with-temp-buffer
       (insert-file-contents (concat parent "pyproject.toml"))
       (re-search-forward "^\\[tool.black\\]$" nil t 1))))

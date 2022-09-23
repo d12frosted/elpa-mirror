@@ -3,8 +3,8 @@
 ;; Copyright (C) 2020 Kinney Zhang
 ;;
 ;; Version: 2.4.3
-;; Package-Version: 20220326.521
-;; Package-Commit: 38f517ac2894b16e6cf983b93ee96762fffa152a
+;; Package-Version: 20220923.1018
+;; Package-Commit: 7a6f2899e676ce4720b102cd9eb4410e05613958
 ;; Keywords: org, convenience
 ;; Author: Kinney Zhang <kinneyzhang666@gmail.com>
 ;; URL: https://github.com/Kinneyzhang/gkroam
@@ -207,6 +207,12 @@ The default format is '%Y%m%d%H%M%S' time string."
 (defvar gkroam-org-list-re
   "^ *\\([0-9]+[).]\\|[*+-]\\) \\(\\[[ X-]\\] \\)?"
   "Org list bullet and checkbox regexp.")
+
+(defvar gkroam-checkbox-todo-icon "□"
+  "The todo checkbox icon.")
+
+(defvar gkroam-checkbox-done-icon "■"
+  "The done checkbox icon.")
 
 (defvar gkroam-has-link-p nil
   "Judge if has link or hashtag in gkroam buffer.")
@@ -1195,6 +1201,11 @@ Output matched files' path."
          (title (concat month (format-time-string " %d, %Y"))))
     (gkroam-find title)))
 
+;; (defun gkroam-current-daily-date ()
+;;   (let ((title (gkroam--get-meta :title))
+;;         )
+;;     ))
+
 ;;;###autoload
 (defun gkroam-insert (&optional title alias without-headline)
   "Insert a gkroam page link at point.
@@ -1799,9 +1810,9 @@ With optional argument ALIAS, format also with alias."
      '(display "•"))
     (when (match-beginning 2)
       (pcase (match-string-no-properties 2)
-        ("[-] " (gkroam--fontify-org-checkbox "☐"))
-        ("[ ] " (gkroam--fontify-org-checkbox "☐"))
-        ("[X] " (gkroam--fontify-org-checkbox "☑"))))))
+        ("[-] " (gkroam--fontify-org-checkbox gkroam-checkbox-todo-icon))
+        ("[ ] " (gkroam--fontify-org-checkbox gkroam-checkbox-todo-icon))
+        ("[X] " (gkroam--fontify-org-checkbox gkroam-checkbox-done-icon))))))
 
 (defun gkroam-org-list-fontify (beg end)
   "Highlight org list bullet between BEG and END."
@@ -2086,8 +2097,9 @@ With optional argument ALIAS, format also with alias."
               (gkroam-at-unlinked-buf))
       (gkroam-mentions-mode -1))
     (gkroam-preserve-window-margin)
-    (with-silent-modifications
-      (set-text-properties (point-min) (point-max) nil))))
+    (when (gkroam-work-p)
+      (with-silent-modifications
+        (set-text-properties (point-min) (point-max) nil)))))
 
 (provide 'gkroam)
 ;;; gkroam.el ends here
