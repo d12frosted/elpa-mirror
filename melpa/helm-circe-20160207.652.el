@@ -17,8 +17,6 @@
 
 ;; Author: Les Harris <les@lesharris.com>
 ;; URL: https://github.com/lesharris/helm-circe
-;; Package-Version: 20160207.652
-;; Package-Commit: 9091651d9fdd8d49d8ff6f9dcf3a2ae416c9f15a
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "24") (helm "0.0") (circe "0.0") (cl-lib "0.5"))
 ;; Keywords: helm circe
