@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20220917.1658
-;; Package-Commit: e18455146bc8bb73beac5d5fa060c6a2ef656bec
+;; Package-Version: 20220924.1242
+;; Package-Commit: 99b3cbd44470c2c345f3516a9d58a4d1c847a12a
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -76,14 +76,14 @@
    `(mode-line-buffer-id ((,class (:weight bold))))
    `(header-line ((,class (:box nil :foreground "grey90" :background "grey20" :inherit mode-line))))
    `(header-line-highlight ((,class (:inherit mode-line-highlight))))
-   `(vertical-border ((,class (:foreground "gray20"))))
+   `(vertical-border ((,class (:inherit default))))
    `(window-divider ((,class (:foreground "gray60"))))
    `(window-divider-first-pixel ((,class (:foreground "gray80"))))
    `(window-divider-last-pixel ((,class (:foreground "gray40"))))
    `(internal-border ((t (nil))))
    `(child-frame-border ((t (nil))))
    `(minibuffer-prompt ((,class (:foreground "grey80"))))
-   `(fringe ((,class (:background "grey10"))))
+   `(fringe ((,class (:background "gray10"))))
    `(scroll-bar ((,class (:foreground "white"))))
    `(border ((t (nil))))
    `(cursor ((,class (:inherit default))))

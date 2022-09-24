@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/titaniumbones/ox-slack.git
 
 Updating /mnt/store/melpa/working/ox-slack/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/titaniumbones/ox-slack.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out c55b003f4ac343d6c6d8ef7cbe01d0d100abac34
+Built ox-slack in 3.166s, finished at 2022-09-24T14:32:38+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Sep 24 14:32 packages/ox-slack-20200108.1546.el
+4.0K -rw-r--r-- 1 root root 381 Sep 24 14:32 packages/ox-slack-20200108.1546.entry

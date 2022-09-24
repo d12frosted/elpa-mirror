@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/Silex/package-utils.git
 
 Updating /mnt/store/melpa/working/package-utils/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/Silex/package-utils.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 0168172062467b1bff913ea955b2ef709b43ecfa
+Built package-utils in 3.618s, finished at 2022-09-24T14:32:55+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Sep 24 14:32 packages/package-utils-20220630.2345.el
+4.0K -rw-r--r-- 1 root root  401 Sep 24 14:32 packages/package-utils-20220630.2345.entry

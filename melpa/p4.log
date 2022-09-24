@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/gareth-rees/p4.el.git
 
 Updating /mnt/store/melpa/working/p4/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/gareth-rees/p4.el.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out eff047caa75dbe4965defca9d1212454cdb755d5
+Built p4 in 3.072s, finished at 2022-09-24T14:32:46+0000
+ ✓ Success:
+148K -rw-r--r-- 1 root root 148K Sep 24 14:32 packages/p4-20150721.1937.el
+4.0K -rw-r--r-- 1 root root  317 Sep 24 14:32 packages/p4-20150721.1937.entry
