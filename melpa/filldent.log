@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/acdw/filldent.el.git
 
 Updating /mnt/store/melpa/working/filldent/
-Checking out origin/HEAD
-Checking out 2f32e0cf5e27c613f962fa41bf3427bbdc04e6c0
-Built filldent in 4.308s, finished at 2022-09-24T14:03:44+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K Sep 24 14:03 packages/filldent-20220423.2216.el
-4.0K -rw-r--r-- 1 root root  319 Sep 24 14:03 packages/filldent-20220423.2216.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/acdw/filldent.el.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

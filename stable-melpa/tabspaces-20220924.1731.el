@@ -3,8 +3,8 @@
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
 ;; Version: 1.2
-;; Package-Version: 20220614.2113
-;; Package-Commit: 6c3314167bf15a99247acb4eb60827faea36f4dd
+;; Package-Version: 20220924.1731
+;; Package-Commit: 241e1e55e007adb13c3eec5b12ae8d4e7da128ee
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -155,10 +155,12 @@ non-nil, then specify a tab index in the given frame."
 
 ;;;; Project Workspace Helper Functions
 
+;;;###autoload
 (defun tabspaces--list-tabspaces ()
   "Return a list of `tab-bar' tabs/workspaces."
   (mapcar (lambda (tab) (alist-get 'name tab)) (tab-bar-tabs)))
 
+;;;###autoload
 (defun tabspaces--project-name ()
   "Get name for project from vc.
 If not in a project return buffer filename, or `-' if not visiting a file."
@@ -167,6 +169,7 @@ If not in a project return buffer filename, or `-' if not visiting a file."
            (file-name-nondirectory (directory-file-name (vc-root-dir))))
           (t "-"))))
 
+;;;###autoload
 (defun tabspaces--name-tab-by-project-or-default ()
   "Return project name if in a project, or default tab-bar name if not.
 The default tab-bar name uses the buffer name along with a counter."
@@ -178,6 +181,7 @@ The default tab-bar name uses the buffer name along with a counter."
            (tab-bar-tab-name-current-with-count))
           (t (tabspaces--project-name)))))
 
+;;;###autoload
 (defun tabspaces--add-to-default-tabspace (buffer)
   "Add BUFFER to default tabspace buffer list."
   (let ((tab-names (mapcar
@@ -277,7 +281,21 @@ If FRAME is nil, use the current frame."
 ;; Some convenience functions for opening/closing workspaces and buffers.
 ;; Some of these are just wrappers around built-in functions.
 ;;;###autoload
-(defalias 'tabspaces-switch-or-create-workspace #'tab-bar-switch-to-tab)
+(defun tabspaces-switch-or-create-workspace (&optional workspace)
+  "Switch to tab if it exists, otherwise create a new tabbed workspace."
+  (interactive
+   (let ((tabs (tabspaces--list-tabspaces)))
+     (cond ((eq tabs nil)
+            (tab-new)
+            (tab-rename (completing-read "Workspace name: " tabs)))
+           (t
+            (list
+             (completing-read "Select or create tab: " tabs nil nil))))))
+  (cond ((member workspace (tabspaces--list-tabspaces))
+         (tab-switch workspace))
+        (t
+         (tab-new)
+         (tab-rename workspace))))
 
 ;;;;; Close Workspace
 (defalias 'tabspaces-close-workspace #'tab-bar-close-tab)
@@ -305,7 +323,7 @@ If PROJECT does not exist, create it, along with a `project.todo' file, in its o
       (completing-read "Project Name: " project--list))))
   (cond ((member (list project) project--list)
          (if (member (file-name-nondirectory (directory-file-name project)) (tabspaces--list-tabspaces))
-             (tabspaces-switch-or-create-workspace (file-name-nondirectory (directory-file-name project)))
+             (tab-switch (file-name-nondirectory (directory-file-name project)))
            (tab-bar-new-tab)
            (let ((project-switch-commands #'project-find-file))
              (project-switch-project project))
