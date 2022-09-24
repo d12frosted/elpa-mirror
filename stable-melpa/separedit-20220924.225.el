@@ -5,8 +5,8 @@
 ;; Author: Gong Qijian <gongqijian@gmail.com>
 ;; Created: 2019/04/06
 ;; Version: 0.3.36
-;; Package-Version: 20220811.1618
-;; Package-Commit: 6c3fd45ba8397daa74bfed12096e60ef28561a01
+;; Package-Version: 20220924.225
+;; Package-Commit: 328d792401f8f099472c4c35a2c085fbe18fd00d
 ;; Last-Updated: 2022-08-12 00:18:19 +0800
 ;;           by: Gong Qijian
 ;; Package-Requires: ((emacs "25.1") (dash "2.18") (edit-indirect "0.1.5"))
@@ -338,7 +338,6 @@
 
 (declare-function org-edit-special "org")
 (declare-function markdown-edit-code-block "markdown-mode")
-(declare-function gfm-edit-code-block "gfm-mode")
 
 (defcustom separedit-default-mode 'fundamental-mode
   "Default mode for editing comment or docstring file."
@@ -1643,7 +1642,7 @@ It will override by the key that `separedit' binding in source buffer.")
   (-if-let (entry-cmd
             (pcase major-mode
               (`markdown-mode #'markdown-edit-code-block)
-              (`gfm-mode #'gfm-edit-code-block)
+              (`gfm-mode #'markdown-edit-code-block)
               (`org-mode #'org-edit-special)
               (_ (when (derived-mode-p 'separedit-single-quote-string-mode
                                        'separedit-double-quote-string-mode
