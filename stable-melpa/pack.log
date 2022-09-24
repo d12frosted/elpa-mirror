@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/10sr/pack-el.git
 
 Updating /mnt/store/melpa/working/pack/
-Checking out origin/HEAD
-Checking out 85cd856fdc00a2365e88b50373b99f1b3d2227be
-Built pack in 3.507s, finished at 2022-09-24T05:02:01+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Sep 24 05:02 packages/pack-20191017.456.el
-4.0K -rw-r--r-- 1 root root 350 Sep 24 05:02 packages/pack-20191017.456.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/10sr/pack-el.git/': The requested URL returned error: 503
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220919.1519
-;; Package-Commit: 79f41555d49b1f542e3c3428c396813bbc5ca4ff
+;; Package-Version: 20220924.854
+;; Package-Commit: 83052a5e61267a2e1c091c1bd4301ea81f1bc6d7
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -959,10 +959,11 @@ be guessed."
                          program guess))))))
          (contact
           (or (and prompt
-                   (read-shell-command
-                    prompt
-                    full-program-invocation
-                    'eglot-command-history))
+                   (split-string-and-unquote
+                    (read-shell-command
+                     prompt
+                     full-program-invocation
+                     'eglot-command-history)))
               guess)))
     (list managed-mode (eglot--current-project) class contact language-id)))
 

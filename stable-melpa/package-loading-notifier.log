@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/tttuuu888/package-loading-notifier.git
 
 Updating /mnt/store/melpa/working/package-loading-notifier/
-Checking out origin/HEAD
-Checking out bc06ba97a0537aa202f277e5597ac96ca39307ab
-Built package-loading-notifier in 3.359s, finished at 2022-09-24T05:02:07+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Sep 24 05:02 packages/package-loading-notifier-20220130.318.el
-4.0K -rw-r--r-- 1 root root  448 Sep 24 05:02 packages/package-loading-notifier-20220130.318.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/tttuuu888/package-loading-notifier.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

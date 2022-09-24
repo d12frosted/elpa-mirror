@@ -3,23 +3,12 @@ Fetcher: github
 Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
-Checking out origin/HEAD
-Checking out c3c535e93d9dc92acd21ebc4b15016b5c3b90e7d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/package-build/
-  to /tmp/package-buildFi4IEa/package-build-20220830.1429
-    package-build-badges.el -> package-build-badges.el
-    package-build.el -> package-build.el
-    package-recipe-mode.el -> package-recipe-mode.el
-    package-recipe.el -> package-recipe.el
-Created package-build-20220830.1429.tar containing:
-  package-build-20220830.1429/
-  package-build-20220830.1429/package-build-badges.el
-  package-build-20220830.1429/package-build-pkg.el
-  package-build-20220830.1429/package-build.el
-  package-build-20220830.1429/package-recipe-mode.el
-  package-build-20220830.1429/package-recipe.el
-Built package-build in 4.641s, finished at 2022-09-24T05:02:03+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 530 Sep 24 05:02 packages/package-build-20220830.1429.entry
- 72K -rw-r--r-- 1 root root 70K Sep 24 05:02 packages/package-build-20220830.1429.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 503 curl 22 The requested URL returned error: 503
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

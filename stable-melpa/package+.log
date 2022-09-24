@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/zenspider/package.git
 
 Updating /mnt/store/melpa/working/package+/
-Checking out origin/HEAD
-Checking out 06fbc904e09d3349b669c2624a587fee5accf5ef
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/package+/
-  to /tmp/package+qspS7q/package+-20210124.640
-    package+.el -> package+.el
-    package+advice.el -> package+advice.el
-Created package+-20210124.640.tar containing:
-  package+-20210124.640/
-  package+-20210124.640/package+-pkg.el
-  package+-20210124.640/package+.el
-  package+-20210124.640/package+advice.el
-Built package+ in 3.718s, finished at 2022-09-24T05:02:02+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 385 Sep 24 05:02 packages/package+-20210124.640.entry
- 20K -rw-r--r-- 1 root root 20K Sep 24 05:02 packages/package+-20210124.640.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+error: RPC failed; HTTP 503 curl 22 The requested URL returned error: 503
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128

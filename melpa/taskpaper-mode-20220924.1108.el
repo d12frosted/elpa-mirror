@@ -5,8 +5,8 @@
 ;; Author: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; Maintainer: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; URL: <https://github.com/saf-dmitry/taskpaper-mode>
-;; Package-Version: 20220920.1206
-;; Package-Commit: f0403ad34ae8e8ed5ca1f3ccd076a4c125350c83
+;; Package-Version: 20220924.1108
+;; Package-Commit: 7dcbee55342bedf47ba70c6f9dbf5c8667ef722c
 ;; Keywords: outlines, notetaking, task management, productivity, taskpaper
 
 ;; This file is not part of GNU Emacs.
@@ -3897,24 +3897,24 @@ formatted outline path as string and POS is the corresponding
 buffer position. EXCLUDED-ENTRIES is a list of OLPATH elements,
 which will be excluded from the results."
   (let ((re (concat "^" outline-regexp)) target targets)
+    (message "Getting targets...")
     (save-excursion
       (save-restriction
         (widen) (goto-char (point-min))
-        (message "Get targets...")
         (while (re-search-forward re nil t)
           (setq target (taskpaper-format-outline-path
                         (taskpaper-item-get-outline-path t)))
           (unless (or (not target) (member target excluded-entries))
             (push (cons target (point-at-bol)) targets)))))
-    (message "Get targets...done")
+    (message "Getting targets...done")
     (nreverse targets)))
 
 (defun taskpaper-goto-get-location (&optional prompt no-exclude)
   "Prompt the user for a location, using PROMPT.
 Return a cons cell (OLPATH . POS), where OLPATH is the formatted
 outline path as string and POS is the corresponding buffer
-position. When NO-EXCLUDE is set, do not exclude entries in the
-current subtree."
+position. When NO-EXCLUDE is non-nil, don't exclude entries in
+the current subtree."
   (let ((prompt (or prompt "Path: "))
         excluded-entries targets target)
     (when (and (outline-on-heading-p) (not no-exclude))

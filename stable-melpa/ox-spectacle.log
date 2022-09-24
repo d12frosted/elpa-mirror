@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/lorniu/ox-spectacle.git
 
 Updating /mnt/store/melpa/working/ox-spectacle/
-Checking out origin/HEAD
-Checking out 9d3ec9a6326289074d8620e97d65e3105307ff51
-Built ox-spectacle in 4.293s, finished at 2022-09-24T05:01:46+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 32K Sep 24 05:01 packages/ox-spectacle-20181211.953.el
-4.0K -rw-r--r-- 1 root root 328 Sep 24 05:01 packages/ox-spectacle-20181211.953.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/lorniu/ox-spectacle.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

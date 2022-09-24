@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/marsmining/ox-twbs.git
 
 Updating /mnt/store/melpa/working/ox-twbs/
-Checking out origin/HEAD
-Checking out e8a27dc78b7be494d9918f26db7a3bbb6b45020b
-Built ox-twbs in 5.475s, finished at 2022-09-24T05:01:55+0000
- ✓ Success:
-128K -rw-r--r-- 1 root root 127K Sep 24 05:01 packages/ox-twbs-20200628.1949.el
-4.0K -rw-r--r-- 1 root root  512 Sep 24 05:01 packages/ox-twbs-20200628.1949.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/marsmining/ox-twbs.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
