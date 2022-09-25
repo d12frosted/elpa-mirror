@@ -6,8 +6,8 @@
 ;; Maintainer: Bruce D'Arcus <bdarcus@gmail.com>
 ;; Created: May 22, 2022
 ;; Version: 0.3
-;; Package-Version: 20220913.1114
-;; Package-Commit: 29688b89ac3bf78405fa0dce7e17965aa8fe0dff
+;; Package-Version: 20220925.1701
+;; Package-Commit: 191efe8723bc30fd4f88c66d79f2495513e729ca
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; SPDX-FileCopyrightText: 2022 Bruce D'Arcus
 ;; Homepage: https://github.com/emacs-citar/citar-org-roam
@@ -165,7 +165,7 @@ space."
         ;; TODO include note title in the candidate string?
         (push
          (truncate-string-to-width
-          (concat citekey " " (propertize nodeid 'invisible t)) 60 nil 32)
+          (concat citekey " " (propertize nodeid 'invisible t)) 87 nil 32)
          (gethash citekey cands))))))
 
 (defun citar-org-roam--create-capture-note (citekey entry)

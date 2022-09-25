@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://bitbucket.org/shackra/dwight-k.-schrute
 
 Updating /mnt/store/melpa/working/schrute/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://bitbucket.org/shackra/dwight-k.-schrute/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 59faa6c4232ae183cea93237301acad8c0763997
+Built schrute in 27.071s, finished at 2022-09-25T19:12:04+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Sep 25 19:12 packages/schrute-20170521.1840.el
+4.0K -rw-r--r-- 1 root root  417 Sep 25 19:12 packages/schrute-20170521.1840.entry

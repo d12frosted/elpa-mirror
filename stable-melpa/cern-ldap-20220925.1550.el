@@ -4,8 +4,8 @@
 
 ;; Author: Nacho Barrientos <nacho.barrientos@cern.ch>
 ;; Keywords: tools, convenience
-;; Package-Version: 20220830.1909
-;; Package-Commit: 1e8ac2029ade5e7755ec76f15a0948a10c955a8f
+;; Package-Version: 20220925.1550
+;; Package-Commit: 4851e952318e11ea9693efe2e460983d5c6dffcd
 ;; URL: https://git.sr.ht/~nbarrientos/cern-ldap.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.0.1
@@ -174,11 +174,10 @@ See `cern-ldap-user-by-login-dwim' for instructions on how to control
 how the results are displayed/filtered using ARG."
   (interactive "P\nsFull name: ")
   (let ((search-value
-         (cond
-          ((eq cern-ldap-user-full-name-matching-type 'relaxed)
-           (format "*%s*" full-name))
-          ((eq cern-ldap-user-full-name-matching-type 'strict)
-           full-name))))
+         (pcase cern-ldap-user-full-name-matching-type
+           ('relaxed (format "*%s*" full-name))
+           ('strict full-name)
+           (_ (user-error "Invalid full name matching type")))))
     (cern-ldap--lookup-user
      arg
      (concat cern-ldap-user-lookup-full-name-key "=" search-value))))

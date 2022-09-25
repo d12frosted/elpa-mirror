@@ -3,9 +3,9 @@ Fetcher: git
 Source:  https://bitbucket.org/pdo/axiom-environment
 
 Updating /mnt/store/melpa/working/company-axiom/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://bitbucket.org/pdo/axiom-environment/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 01d88daa0c864af9918db5a147fbb5e435dec199
+Built company-axiom in 22.415s, finished at 2022-09-25T18:23:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Sep 25 18:23 packages/company-axiom-20220612.1535.el
+4.0K -rw-r--r-- 1 root root  429 Sep 25 18:23 packages/company-axiom-20220612.1535.entry
