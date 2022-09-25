@@ -5,8 +5,8 @@
 ;; Author: Thierry Banel tbanelwebmin at free dot fr
 ;; Contributors:
 ;; Version: 0.1
-;; Package-Version: 20220726.1235
-;; Package-Commit: 4b09436de15545ce73dd40e938176a98254109f8
+;; Package-Version: 20220925.1225
+;; Package-Commit: d4fbd6ec1161794f2d246625c77589b9fb9f2956
 ;; Keywords: org, table, join, filtering
 ;; Package-Requires: ((cl-lib "0.5"))
 
@@ -42,6 +42,48 @@
 ;;; Code:
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; creating long lists in the right order may be done
+;; - by (nconc)  but behavior is quadratic
+;; - by (cons) (nreverse)
+;; a third way involves keeping track of the last cons of the growing list
+;; a cons at the head of the list is used for housekeeping
+;; the actual list is (cdr ls)
+
+(defsubst -appendable-list-create ()
+  (let ((x (cons nil nil)))
+    (setcar x x)))
+
+(defmacro -appendable-list-append (ls value)
+  `(setcar ,ls (setcdr (car ,ls) (cons ,value nil))))
+
+(defmacro -appendable-list-get (ls)
+  `(cdr ,ls))
+
+(defun split-string-with-quotes (string)
+  "Like `split-string', but also allows single or double quotes
+to protect space characters, and also single quotes to protect
+double quotes and the other way around"
+  (let ((l (length string))
+	(start 0)
+	(result (-appendable-list-create))
+	)
+    (save-match-data
+      (while (and (< start l)
+		  (string-match
+		   (rx
+		    (* (any " \f\t\n\r\v"))
+		    (group
+		     (+ (or
+			 (seq ?'  (* (not (any ?')))  ?' )
+			 (seq ?\" (* (not (any ?\"))) ?\")
+			 (not (any " '\""))))))
+		   string start))
+	(-appendable-list-append result (match-string 1 string))
+	(setq start (match-end 1))
+	))
+    (-appendable-list-get result)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; The function (org-table-to-lisp) have been greatly enhanced
 ;; in Org Mode version 9.4
 ;; To benefit from this speedup in older versions of Org Mode,
@@ -62,26 +104,23 @@ The table is taken from the parameter TXT, or from the buffer at point."
         (org-table-to-lisp-post-9-4))
     (save-excursion
       (goto-char (org-table-begin))
-      (let ((table nil)
-	    (inhibit-changing-match-data t)
-	    q
-	    p
-	    row)
-        (while (re-search-forward "\\=[ \t]*|" nil t)
-	  (if (looking-at "-")
-	      (push 'hline table)
-	    (setq row nil)
-	    (while (progn (skip-chars-forward " \t") (not (eolp)))
-	      (push
-	       (buffer-substring-no-properties
-		(setq q (point))
-		(if (progn (skip-chars-forward "^|\n") (eolp))
-		    (1- (point))
-		  (setq p (1+ (point)))
-		  (skip-chars-backward " \t" q)
-		  (prog1 (point) (goto-char p))))
-	       row))
-	    (push (nreverse row) table))
+      (let ((inhibit-changing-match-data t)
+	    table row p q)
+        (while (progn (skip-chars-forward " \t") (looking-at "|"))
+	  (forward-char)
+	  (push
+	   (if (looking-at "-")
+	       'hline
+	     (setq row nil)
+	     (while (progn (skip-chars-forward " \t") (not (eolp)))
+	       (setq q (point))
+	       (skip-chars-forward "^|\n")
+	       (setq p (if (eolp) (point) (1+ (point))))
+	       (skip-chars-backward " \t" q)
+	       (push (buffer-substring-no-properties q (point)) row)
+	       (goto-char p))
+	     (nreverse row))
+	   table)
 	  (forward-line))
 	(nreverse table)))))
 
@@ -91,6 +130,32 @@ The table is taken from the parameter TXT, or from the buffer at point."
 (defmacro pop-simple (place)
   "like pop, but without returning (car place)"
   `(setq ,place (cdr ,place)))
+
+(defun orgtbl--join-query-column (prompt table default)
+  "Interactively query a column.
+PROMPT is displayed to the user to explain what answer is expected.
+TABLE is the org mode table from which a column will be choosen
+by the user.  Its header is used for column names completion.  If
+TABLE has no header, completion is done on generic column names:
+$1, $2..."
+  (while (eq 'hline (car table))
+    (pop-simple table))
+  (let ((completions
+	 (if (memq 'hline table) ;; table has a header
+	     (car table)
+	   (cl-loop ;; table does not have a header
+	    for row in (car table)
+	    for i from 1
+	    collect (format "$%s" i)))))
+    (completing-read
+     prompt
+     completions
+     nil 'confirm
+     (and (member default completions) default))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; The following functions are borrowed
+;; from the orgtbl-aggregate package.
 
 (defun orgtbl-to-aggregated-table-colname-to-int (colname table &optional err)
   "Convert the column name into an integer (first column is numbered 1)
@@ -136,32 +201,6 @@ otherwise nil is returned."
 	  (and
 	   err
 	   (user-error "Column %s not found in table" colname))))))
-
-(defun orgtbl--join-query-column (prompt table default)
-  "Interactively query a column.
-PROMPT is displayed to the user to explain what answer is expected.
-TABLE is the org mode table from which a column will be choosen
-by the user.  Its header is used for column names completion.  If
-TABLE has no header, completion is done on generic column names:
-$1, $2..."
-  (while (eq 'hline (car table))
-    (pop-simple table))
-  (let ((completions
-	 (if (memq 'hline table) ;; table has a header
-	     (car table)
-	   (cl-loop ;; table does not have a header
-	    for row in (car table)
-	    for i from 1
-	    collect (format "$%s" i)))))
-    (completing-read
-     prompt
-     completions
-     nil 'confirm
-     (and (member default completions) default))))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; The following functions are borrowed
-;; from the orgtbl-aggregate package.
 
 (defun orgtbl-list-local-tables ()
   "Search for available tables in the current file."
@@ -360,7 +399,8 @@ current row is kept, with empty cells appended to it."
 	  (format "$%s" col)
 	  ref-table
 	  ref-column
-	  full)))
+	  full
+	  nil)))
       (delete-region b e))
     (goto-char (point-min))
     (forward-line (1- pt))
@@ -375,14 +415,16 @@ MASROW is a list of cells from the master table.  REFROW is a
 list of cells from the reference table.  REFCOL is the position,
 numbered from zero, of the column in REFROW that should not be
 appended in the result, because it is already present in MASROW."
-  (cl-loop with result = (reverse masrow)
-	   for cell in refrow
-	   for i from 0
-	   unless (equal i refcol)
-	   do (push cell result)
-	   finally return (nreverse result)))
+  (let ((result (-appendable-list-create)))
+    (cl-loop for cell in masrow
+	     do (-appendable-list-append result cell))
+    (cl-loop for cell in refrow
+	     for i from 0
+	     unless (equal i refcol)
+	     do (-appendable-list-append result cell))
+    (-appendable-list-get result)))
 
-(defun orgtbl--create-table-joined (mastable mascol reftable refcol full)
+(defun orgtbl--create-table-joined (mastable mascol reftable refcol full cols)
   "Join a master table with a reference table.
 MASTABLE is the master table, as a list of lists of cells.
 MASCOL is the name of the joining column in the master table.
@@ -394,11 +436,13 @@ if it contains \"mas\" then the master    table will appear entirely
 if it contains \"ref\" then the reference table will appear entirely
 if it contains both (like \"mas+ref\") then both table will appear
 entirely.
+COLS is the list of columns that must appear in the result
+if COLS is nil, all columns appear in the result
 Returns MASTABLE enriched with material from REFTABLE."
   (unless full (setq full "mas")) ;; default value is "mas"
   (unless (stringp full)
     (setq full (format "%s" full)))
-  (let ((result)  ;; result built in reverse order
+  (let ((result (-appendable-list-create))
 	(width
 	 (cl-loop for row in mastable
 		  maximize (if (listp row) (length row) 0)))
@@ -416,7 +460,7 @@ Returns MASTABLE enriched with material from REFTABLE."
 		    (nconc (car row) (make-list n ""))))))
     ;; skip any hline at the top of both tables
     (while (eq (car mastable) 'hline)
-      (push 'hline result)
+      (-appendable-list-append result 'hline)
       (pop-simple mastable))
     (while (eq (car reftable) 'hline)
       (pop-simple reftable))
@@ -449,11 +493,12 @@ Returns MASTABLE enriched with material from REFTABLE."
     ;; and join it with reference table header if any
     (if (memq 'hline mastable)
 	(while (listp (car mastable))
-	  (push (orgtbl--join-append-mas-ref-row
-		 (car mastable)
-		 (car refhead) ;; nil if refhead is nil
-		 refcol)
-		result)
+	  (-appendable-list-append
+	   result
+	   (orgtbl--join-append-mas-ref-row
+	    (car mastable)
+	    (car refhead) ;; nil if refhead is nil
+	    refcol))
 	  (pop-simple mastable)
 	  (if refhead (pop-simple refhead))))
     ;; create the joined table
@@ -462,18 +507,18 @@ Returns MASTABLE enriched with material from REFTABLE."
      for masrow in mastable
      do
      (if (not (listp masrow))
-	 (push masrow result)
+	 (-appendable-list-append result masrow)
        (let ((hashentry (gethash (nth mascol masrow) refhash)))
 	 (if (not hashentry)
 	     ;; if no ref-line matches, add the non-matching master-line anyway
-	     (if full-mas (push masrow result))
+	     (if full-mas (-appendable-list-append result masrow ))
 	   ;; if several ref-lines match, all of them are considered
 	   (cl-loop
 	    for refrow in (cdr hashentry)
 	    do
-	    (push
-	     (orgtbl--join-append-mas-ref-row masrow refrow refcol)
-	     result))
+	    (-appendable-list-append
+	     result
+	     (orgtbl--join-append-mas-ref-row masrow refrow refcol)))
 	   ;; ref-table rows were consumed, increment counter
 	   (setcar hashentry (1+ (car hashentry)))))))
     ;; add rows from the ref-table not consumed
@@ -486,15 +531,39 @@ Returns MASTABLE enriched with material from REFTABLE."
 	       (let ((fake-masrow (make-list width "")))
 		 (setcar (nthcdr mascol fake-masrow)
 			 (nth refcol (cadr hashentry)))
-		 (push
+		 (-appendable-list-append
+		  result
 		  (orgtbl--join-append-mas-ref-row
 		   fake-masrow
 		   refrow
-		   refcol)
-		  result))))
+		   refcol)))))
 	 else do
-	 (push 'hline result)))
-    (nreverse result)))
+	 (-appendable-list-append result 'hline)))
+    (setq result (-appendable-list-get result))
+    (if cols
+	(orgtbl--join-rearrange-columns result cols))
+    result))
+
+(defun orgtbl--join-rearrange-columns (table cols)
+  "If a :cols parameter was specified, this function
+rearranges the joined table to display only columns
+specified in :cols and in the same order"
+  (if (stringp cols)
+      (setq cols (split-string-with-quotes cols)))
+  (setq cols
+	(cl-loop
+	 for c in cols
+	 collect (1- (orgtbl-to-aggregated-table-colname-to-int c table t))))
+  (cl-loop
+   for rrow on table
+   for row = (car rrow)
+   if (listp row)
+   do (setcar
+       rrow
+       (cl-loop
+	for c in cols
+	collect (nth c row))))
+  table)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PUSH mode
@@ -529,7 +598,8 @@ same file with a bloc like this:
 	  (plist-get params :mas-column)
 	  (orgtbl-get-distant-table (plist-get params :ref-table))
 	  (plist-get params :ref-column)
-	  (plist-get params :full))))
+	  (plist-get params :full)
+	  (plist-get params :cols))))
     (with-temp-buffer
       (orgtbl-insert-elisp-table joined-table)
       (buffer-substring-no-properties (point-min) (1- (point-max))))))
@@ -614,7 +684,8 @@ The
       (plist-get params :mas-column)
       (orgtbl-get-distant-table (plist-get params :ref-table))
       (plist-get params :ref-column)
-      (plist-get params :full)))
+      (plist-get params :full)
+      (plist-get params :cols)))
     (delete-char -1) ;; remove trailing \n which Org Mode will add again
     (when (and content
 	       (let ((case-fold-search t))
