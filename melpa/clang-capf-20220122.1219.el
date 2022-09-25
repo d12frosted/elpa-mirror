@@ -2,6 +2,8 @@
 
 ;; Author: Philip K. <philipk [at] posteo [dot] net>
 ;; Version: 1.2.3
+;; Package-Version: 20220122.1219
+;; Package-Commit: b1765719288a138e125cc5ce624ef561c80015bf
 ;; Keywords: c, abbrev, convenience
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://git.sr.ht/~pkal/clang-capf
