@@ -5,8 +5,6 @@
 ;; Author: KAWABATA, Taichi <kawabata.taichi_at_gmail.com>
 ;; Created: 2013-12-25
 ;; Version: 1.151223
-;; Package-Version: 20160719.520
-;; Package-Commit: fd630ace4b4b4f33355a973743bbfe0c90ce4830
 ;; Package-Requires: ((helm "1.5") (cl-lib "0.3") (emacs "24"))
 ;; Keywords: tools
 ;; Human-Keywords: chrome bookmarks

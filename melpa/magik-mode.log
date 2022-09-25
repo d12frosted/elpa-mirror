@@ -4,10 +4,10 @@ Source:  https://github.com/roadrunner1776/magik.git
 
 Updating /mnt/store/melpa/working/magik-mode/
 Checking out origin/HEAD
-Checking out 2f86d2f456029c3ed9d8e5cd0ed2f3dd8cb3b862
+Checking out 17564feba8dd7adb39b402a743cbacd25d2f20d3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magik-mode/
-  to /tmp/magik-modeBwkpdA/magik-mode-20220920.1237
+  to /tmp/magik-modejTYuS0/magik-mode-20220925.700
     magik-aliases.el -> magik-aliases.el
     magik-cb-ac.el -> magik-cb-ac.el
     magik-cb.el -> magik-cb.el
@@ -22,34 +22,38 @@ Copying files (->) and directories (=>)
     magik-msg.el -> magik-msg.el
     magik-pragma.el -> magik-pragma.el
     magik-product.el -> magik-product.el
+    magik-session-extras.el -> magik-session-extras.el
     magik-session-filter.el -> magik-session-filter.el
     magik-session.el -> magik-session.el
     magik-template.el -> magik-template.el
     magik-utils.el -> magik-utils.el
     magik-version.el -> magik-version.el
-Created magik-mode-20220920.1237.tar containing:
-  magik-mode-20220920.1237/
-  magik-mode-20220920.1237/magik-aliases.el
-  magik-mode-20220920.1237/magik-cb-ac.el
-  magik-mode-20220920.1237/magik-cb.el
-  magik-mode-20220920.1237/magik-electric.el
-  magik-mode-20220920.1237/magik-indent.el
-  magik-mode-20220920.1237/magik-keys.el
-  magik-mode-20220920.1237/magik-lint.el
-  magik-mode-20220920.1237/magik-loadlist.el
-  magik-mode-20220920.1237/magik-menu.el
-  magik-mode-20220920.1237/magik-mode-pkg.el
-  magik-mode-20220920.1237/magik-mode.el
-  magik-mode-20220920.1237/magik-module.el
-  magik-mode-20220920.1237/magik-msg.el
-  magik-mode-20220920.1237/magik-pragma.el
-  magik-mode-20220920.1237/magik-product.el
-  magik-mode-20220920.1237/magik-session-filter.el
-  magik-mode-20220920.1237/magik-session.el
-  magik-mode-20220920.1237/magik-template.el
-  magik-mode-20220920.1237/magik-utils.el
-  magik-mode-20220920.1237/magik-version.el
-Built magik-mode in 3.577s, finished at 2022-09-25T06:05:39+0000
+Created magik-mode-20220925.700.tar containing:
+  magik-mode-20220925.700/
+  magik-mode-20220925.700/magik-aliases.el
+  magik-mode-20220925.700/magik-cb-ac.el
+  magik-mode-20220925.700/magik-cb.el
+  magik-mode-20220925.700/magik-electric.el
+  magik-mode-20220925.700/magik-indent.el
+  magik-mode-20220925.700/magik-keys.el
+  magik-mode-20220925.700/magik-lint.el
+  magik-mode-20220925.700/magik-loadlist.el
+  magik-mode-20220925.700/magik-menu.el
+  magik-mode-20220925.700/magik-mode-pkg.el
+  magik-mode-20220925.700/magik-mode.el
+  magik-mode-20220925.700/magik-module.el
+  magik-mode-20220925.700/magik-msg.el
+  magik-mode-20220925.700/magik-pragma.el
+  magik-mode-20220925.700/magik-product.el
+  magik-mode-20220925.700/magik-session-extras.el
+  magik-mode-20220925.700/magik-session-filter.el
+  magik-mode-20220925.700/magik-session.el
+  magik-mode-20220925.700/magik-template.el
+  magik-mode-20220925.700/magik-utils.el
+  magik-mode-20220925.700/magik-version.el
+Built magik-mode in 3.661s, finished at 2022-09-25T09:14:28+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  242 Sep 25 06:05 packages/magik-mode-20220920.1237.entry
 452K -rw-r--r-- 1 root root 450K Sep 25 06:05 packages/magik-mode-20220920.1237.tar
+4.0K -rw-r--r-- 1 root root  241 Sep 25 09:14 packages/magik-mode-20220925.700.entry
+460K -rw-r--r-- 1 root root 460K Sep 25 09:14 packages/magik-mode-20220925.700.tar
