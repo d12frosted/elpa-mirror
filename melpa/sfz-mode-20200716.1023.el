@@ -5,8 +5,6 @@
 ;; Author: Jean Pierre Cimalando <jp-dev@inbox.ru>
 ;; Created: 29 Dec 2019
 ;; Version: 0.1
-;; Package-Version: 20200716.1023
-;; Package-Commit: aaf31d1b68817251affed7da719dfcb2acd4b51a
 ;; Keywords: languages
 ;; Homepage: https://github.com/sfztools/emacs-sfz-mode
 ;; Package-Requires: ((emacs "25.1"))

@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20220909.1032
-;; Package-Commit: 48f79e894c04b0c73c6334194ee17d7f72046c83
+;; Package-Version: 20220926.639
+;; Package-Commit: 8f40631f5fe04df4988ad4d1e75ebf925a6540d6
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.19"))
 ;; Keywords: languages util
@@ -203,7 +203,12 @@
     ("_Nginx" nginxfmt)
     ("_Snakemake" snakefmt))
   "Default formatter to use for each language."
-  :type '(repeat (list string symbol))
+  :type '(repeat (list (string :tag "Language")
+                       (choice (symbol :tag "Formatter Only")
+                               (cons :tag "Formatter with Custom Arguments"
+                                     (symbol :tag "Formatter")
+                                     (repeat :tag "Custom Arguments"
+                                             (string :tag "Argument"))))))
   :group 'format-all)
 
 (defcustom format-all-show-errors 'errors

@@ -4,6 +4,8 @@
 
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-popup-complete
+;; Package-Version: 20141109.308
+;; Package-Commit: e362d4a005b36646ffbaa6be604e9e31bc406ca9
 ;; Version: 0.02
 ;; Package-Requires: ((popup "0.5.0"))
 

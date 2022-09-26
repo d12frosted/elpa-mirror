@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/kennethloeffler/blox.git
 
 Updating /mnt/store/melpa/working/blox/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/kennethloeffler/blox.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 9ebebb65fb38b5570ba8dfbb5ec835633c06b67d
+Built blox in 4.114s, finished at 2022-09-26T07:13:57+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.8K Sep 26 07:13 packages/blox-20220521.807.el
+4.0K -rw-r--r-- 1 root root  372 Sep 26 07:13 packages/blox-20220521.807.entry
