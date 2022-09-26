@@ -5,6 +5,8 @@
 ;; Author: Felipe Lema <felipelema@mortemale.org>
 ;; Created: 2021-07-14
 ;; Version: 0.0.3
+;; Package-Version: 20220302.2008
+;; Package-Commit: 427238bdfde880106dd39cf5845b559975e52f4f
 ;; Package-Requires: ((emacs "27.1") (jsonrpc "1.0.9"))
 ;; URL: https://codeberg.org/FelipeLema/session-async.el
 
