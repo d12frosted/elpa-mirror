@@ -1,0 +1,10 @@
+(flymake-sqlfluff .
+		  [(20220925 2144)
+		   ((emacs
+		     (27 1)))
+		   "A flymake plugin for SQL files using sqlfluff" single
+		   ((:commit . "b76f335555c9a94ffc3d7281f3dca345de474eed")
+		    (:authors
+		     ("Erick Navarro" . "erick@navarro.io"))
+		    (:maintainer "Erick Navarro" . "erick@navarro.io")
+		    (:url . "https://github.com/erickgnavar/flymake-sqlfluff"))])

@@ -1,0 +1,27 @@
+(exercism .
+	  [(20220925 2219)
+	   ((emacs
+	     (27 1))
+	    (dash
+	     (2 19 1))
+	    (a
+	     (1 0 0))
+	    (s
+	     (1 13 1))
+	    (request
+	     (0 3 2))
+	    (async
+	     (1 9 6))
+	    (async-await
+	     (1 1))
+	    (persist
+	     (0 5))
+	    (transient
+	     (0 3 7)))
+	   "Unofficial https://exercism.org integration" single
+	   ((:commit . "d221aec2f20f80e52d29d8ef858eae260dbb44a0")
+	    (:authors
+	     ("Rafael Nicdao <https://github.com/anonimito>"))
+	    (:maintainer "Rafael Nicdao" . "nicdaoraf@gmail.com")
+	    (:keywords "exercism" "convenience")
+	    (:url . "https://github.com/anonimitoraf/exercism.el"))])

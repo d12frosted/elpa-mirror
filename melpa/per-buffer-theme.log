@@ -3,15 +3,3 @@ Fetcher: hg
 Source:  https://hg.serna.eu/emacs/per-buffer-theme
 
 Updating /mnt/store/melpa/working/per-buffer-theme/
-Checking out df32a1d081a2d09e6460da4e5d4c4e1007c02eef
-
-Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
-
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command exited with non-zero exit-code: 255
