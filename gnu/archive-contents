@@ -10,13 +10,14 @@
 		("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	       (:keywords "window" "location"))])
  (ack .
-      [(1 10)
+      [(1 11)
        nil "interface to ack-like tools" tar
        ((:url . "https://github.com/leoliu/ack-el")
+	(:keywords "tools" "processes" "convenience")
 	(:maintainer "João Távora" . "joaotavora@gmail.com")
 	(:authors
 	 ("Leo Liu" . "sdl.web@gmail.com"))
-	(:keywords "tools" "processes" "convenience"))])
+	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (ada-mode .
 	   [(7 2 1)
 	    ((uniquify-files
@@ -724,7 +725,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "a143347053d1b91cbbaae602d6a109157d0e2ed7"))])
  (detached .
-	   [(0 9 0)
+	   [(0 9 1)
 	    ((emacs
 	      (27 1)))
 	    "A package to launch, and manage, detached processes" tar
@@ -733,7 +734,7 @@
 	     (:maintainer "detached.el Development" . "~niklaseklund/detached.el@lists.sr.ht")
 	     (:authors
 	      ("Niklas Eklund" . "niklas.eklund@posteo.net"))
-	     (:commit . "21a8cb01bb6714dcab99c49fc6a92c31540358fa"))])
+	     (:commit . "b7d4375e25a47fd4b2da4835f306262d9766e3e5"))])
  (devdocs .
 	  [(0 5)
 	   ((emacs
@@ -941,7 +942,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20220828)
+      [(20220926)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -950,9 +951,9 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "db182293dbbef6f6611be4d8930da37481b6857a"))])
+	(:commit . "ed23e0f2920df09ced0889627879567fd2a097ac"))])
  (ef-themes .
-	    [(0 5 0)
+	    [(0 6 0)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -961,7 +962,7 @@
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "cf4ae83a54ca87457f5d24701ccacfe7c6309930"))])
+	      (:commit . "fe8fcf23a326b4b7ccf1870a1919de6347a1191e"))])
  (eglot .
 	[(1 8)
 	 ((emacs
@@ -1059,7 +1060,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "bd603d8f3b1bcff34aee2dc4b7b36dc7912b9b26"))])
  (ement .
-	[(0 2)
+	[(0 2 1)
 	 ((emacs
 	   (27 1))
 	  (map
@@ -1080,7 +1081,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "9fa6c59836e6e284548d43aa6d7fa60d2473bf14"))])
+	  (:commit . "26bb6b8172007bddc878d822791ddc03a59b0188"))])
  (emms .
        [(11)
 	((cl-lib
@@ -2112,7 +2113,7 @@
 		(nil . "<johnh@isi.edu>."))
 	       (:url . "http://elpa.gnu.org/packages/notes-mode.html"))])
  (notmuch-indicator .
-		    [(0 1 0)
+		    [(0 1 1)
 		     ((emacs
 		       (27 1)))
 		     "Display mode line indicator with notmuch-count(1) output" tar
@@ -2121,7 +2122,7 @@
 		      (:maintainer "notmuch-indicator Development" . "~protesilaos/notmuch-indicator@lists.sr.ht")
 		      (:authors
 		       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		      (:commit . "f4b46313c3b1f68354ba9877ea8a1c7c44a1a7ed"))])
+		      (:commit . "f2e153a22c8f626f303f55933e622194fab89f90"))])
  (ntlm .
        [(2 1 0)
 	nil "NTLM (NT LanManager) authentication support" single
@@ -3267,7 +3268,7 @@
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
 	  (:commit . "c1fcc6bfc3a343d15a3cb757039b17af647617e3"))])
  (tramp-nspawn .
-	       [(1 0)
+	       [(1 0 1)
 		((emacs
 		  (23)))
 		"Tramp integration for systemd-nspawn containers" tar
@@ -3276,7 +3277,7 @@
 		 (:maintainer "Brian Cully" . "bjc@kublai.com")
 		 (:authors
 		  ("Brian Cully" . "bjc@kublai.com"))
-		 (:commit . "b8380ee8a7c15ad4b96963d224969fc1a0337180"))])
+		 (:commit . "c35ade49754e051c84eaa2733447b4307968f200"))])
  (tramp-theme .
 	      [(0 2)
 	       ((emacs
