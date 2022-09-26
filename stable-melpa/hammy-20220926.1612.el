@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/hammy.el
-;; Package-Version: 20220901.1102
-;; Package-Commit: bd51cfd903d00a3302542dc2a8a17fe8b4d48107
+;; Package-Version: 20220926.1612
+;; Package-Commit: 9ca107c40decb78c51a3003322190c2a1f6f6e0f
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "28.1") (ts "0.2.2"))
 ;; Keywords: convenience
@@ -437,14 +437,15 @@ the next interval even if the previous interval has an
 unsatisfied ADVANCE predicate.  INTERVAL may be an interval in
 the hammy to advance to (interactively, with universal prefix,
 prompt for the interval with completion)."
-  (interactive (let ((hammy (hammy-complete "Advance hammy: " hammy-active)))
-                 (list hammy
-                       :duration (cl-typecase current-prefix-arg
-                                   (number current-prefix-arg))
-                       :advance t
-                       :interval (cl-typecase current-prefix-arg
-                                   (null nil)
-                                   (list (hammy-complete-interval hammy :prompt "Advance to interval: "))))))
+  (interactive (if-let ((hammy (hammy-complete "Advance hammy: " hammy-active)))
+                   (list hammy
+                         :duration (cl-typecase current-prefix-arg
+                                     (number current-prefix-arg))
+                         :advance t
+                         :interval (cl-typecase current-prefix-arg
+                                     (null nil)
+                                     (list (hammy-complete-interval hammy :prompt "Advance to interval: "))))
+                 (user-error (substitute-command-keys "No active hammys (use \"\\[hammy-start]\")"))))
   (when (hammy-timer hammy)
     ;; Cancel any outstanding timer.
     (cancel-timer (hammy-timer hammy))
