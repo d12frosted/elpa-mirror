@@ -75,7 +75,7 @@ Supported languages:
 - TypeScript/TSX (prettier, ts-standard, prettierd)
 - V (v fmt)
 - Vue (prettier, prettierd)
-- Verilog (iStyle)
+- Verilog (iStyle, Verible)
 - YAML (prettier, prettierd)
 - Zig (zig)
 
