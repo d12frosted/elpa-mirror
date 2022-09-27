@@ -5,8 +5,6 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/morlock
 ;; Keywords: convenience
-;; Package-Version: 20220422.1616
-;; Package-Commit: 9cb24413291beb1f4204765c77d65e78dcf83a3b
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
