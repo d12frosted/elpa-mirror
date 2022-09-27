@@ -15,8 +15,9 @@ Table of Contents
 .. 3. Queueing
 .. 4. Tips
 3. Changelog
-.. 1. 0.2
-.. 2. 0.1
+.. 1. 0.2.1
+.. 2. 0.2
+.. 3. 0.1
 4. Credits
 5. Development
 .. 1. Copyright assignment
@@ -243,14 +244,21 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.2
+3.1 0.2.1
+─────────
+
+  *Fixes*
+  ⁃ Handle when Curl process is interrupted.
+
+
+3.2 0.2
 ───────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.2 0.1
+3.3 0.1
 ───────
 
   Initial release.
