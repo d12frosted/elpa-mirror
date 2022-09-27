@@ -5,8 +5,8 @@
 ;; Author: Shuguang Sun <shuguang79@qq.com>
 ;; Created: 2019/04/06
 ;; Version: 1.3
-;; Package-Version: 20220920.1548
-;; Package-Commit: 8f00579c79d12f359ce6aff828a7462c421c962d
+;; Package-Version: 20220927.353
+;; Package-Commit: 1b48afef4dcc8fbaed1af98fade7f0df84bd6871
 ;; URL: https://github.com/ShuguangSun/ess-view-data
 ;; Package-Requires: ((emacs "26.1") (ess "18.10.1") (csv-mode "1.12"))
 ;; Keywords: tools
@@ -208,7 +208,7 @@ If enabled, `ansi-color-for-comint-mode-on' should be turn on."
   :group 'ess-view-data)
 
 
-(defcustom ess-view-data-read-string 'basic
+(defcustom ess-view-data-read-string 'ess-completing-read
   "The function used to completing read."
   :type `(choice (const :tag "ESS" ess-completing-read)
                  (const :tag "basic" completing-read)

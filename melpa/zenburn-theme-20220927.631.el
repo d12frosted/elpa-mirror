@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
-;; Package-Version: 20220823.442
-;; Package-Commit: 2db3a34f50ec4dd6e2cae92bab639ccfc742b3cc
+;; Package-Version: 20220927.631
+;; Package-Commit: 4788de0bcfecf8faec69251decb9924492d008f3
 ;; Version: 2.8.0-snapshot
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -1558,6 +1558,18 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(tab-bar-tab-inactive ((t (:foreground ,zenburn-fg
                                            :background ,zenburn-bg+1
                                            :box (:line-width -1 :style released-button)))))
+;;;;; tab-line
+   `(tab-line ((t (:background ,zenburn-bg+1))))
+   `(tab-line-tab ((t (:foreground ,zenburn-fg
+                                  :background ,zenburn-bg
+                                  :weight bold
+                                  :box (:line-width -1 :style released-button)))))
+   `(tab-line-tab-inactive ((t (:foreground ,zenburn-fg
+                                           :background ,zenburn-bg+1
+                                           :box (:line-width -1 :style released-button)))))
+   `(tab-line-tab-current ((t (:foreground ,zenburn-fg
+                                           :background ,zenburn-bg+1
+                                           :box (:line-width -1 :style pressed-button)))))
 ;;;;; term
    `(term-color-black ((t (:foreground ,zenburn-bg
                                        :background ,zenburn-bg-1))))

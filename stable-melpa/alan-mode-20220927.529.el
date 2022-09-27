@@ -5,8 +5,8 @@
 ;; Author: Paul van Dam <pvandam@kjerner.com>
 ;; Maintainer: Paul van Dam <pvandam@kjerner.com>
 ;; Version: 1.0.0
-;; Package-Version: 20220923.1554
-;; Package-Commit: 01466bf6451104e9e996d157f1258fe0e19e049f
+;; Package-Version: 20220927.529
+;; Package-Commit: b9ba4d0a789b1d13eedc58f6877d5fb08fed04df
 ;; Created: 13 October 2017
 ;; URL: https://github.com/Kjerner/AlanForEmacs
 ;; Homepage: https://alan-platform.com/
@@ -127,7 +127,7 @@ It can be added locally by adding it to the alan-hook:
 
 (defvar-local alan-mode-font-lock-keywords
   '((("'\\([^'\n\\]\\|\\(\\\\'\\)\\|\\\\\\\)*'" . font-lock-variable-name-face)
-	 ("^///.*$" 0 'font-lock-doc-face t))
+	 ("^\\s-*///.*$" 0 'font-lock-doc-face t))
 	nil nil nil nil
 	(font-lock-syntactic-face-function . alan-font-lock-syntactic-face-function))
   "Highlighting for alan mode")
@@ -983,11 +983,13 @@ this to refresh the buffer for example `flycheck-buffer'."
 ;;;###autoload (autoload 'alan-phrases-mode "alan-mode")
 (alan-define-mode alan-phrases-mode)
 
+;; Alan documentation mode
+
 (defun alan--documentation-p()
   "Checks if point is on documentation."
   (save-mark-and-excursion
 	(move-beginning-of-line 1)
-	(looking-at "^///")))
+	(looking-at "^\\s-*///")))
 
 (defun alan-mark-documentation ()
   "Set the selected region to the current documentation block."
@@ -1020,7 +1022,7 @@ this to refresh the buffer for example `flycheck-buffer'."
 		  (documentation-content
 		   (mapconcat 'identity
 					  (mapcar (lambda (s)
-								(replace-regexp-in-string "^///\\s-?" "" s))
+								(replace-regexp-in-string "^\\s-*///\\s-?" "" s))
 							  (split-string (buffer-substring (region-beginning) (region-end)) "\n"))
 					  "\n"))
 		  (beginning-of-documentation (point))
@@ -1065,7 +1067,7 @@ buffer."
   (interactive)
   (with-current-buffer alan-documentation-associated-buffer
 	(deactivate-mark))
-  (kill-buffer-and-window))
+  (quit-window t))
 
 (defvar alan-documentation-mode-map
   (let ((map (make-sparse-keymap)))
@@ -1082,9 +1084,26 @@ buffer."
   nil
   "The location of the documentation in the source buffer.")
 
+(defface alan-documentation-link '((t :inherit link))
+  "Face for links.")
+
+(defconst alan-documentation-include-link-regex
+  "<<INCLUDE-ALAN\\[\\(.*\\)]>>")
+
+(defun alan-documentation-include-link-p ()
+  "Return non nul when `point' is a an alan link"
+  (thing-at-point-looking-at alan-documentation-include-link-regex))
+
+(defun alan-documentation-follow-include-link-at-point ()
+  "Follow Alan documentation links."
+  (interactive)
+  (when (alan-documentation-include-link-p)
+	(find-file (match-string-no-properties 1))))
+
 (define-minor-mode alan-documentation-mode
   "Minor mode for editing Alan documentation buffers."
-  :interactive nil)
+  :interactive nil
+  (font-lock-add-keywords nil '(("<<INCLUDE-ALAN\\[\\(.*\\)]>>" 1 'alan-documentation-link t))))
 
 (provide 'alan-mode)
 
