@@ -1,8 +1,6 @@
 ;;; quick-shell-keybind.el --- Interactively bind a key to shell commands
 
 ;; URL: https://github.com/eyeinsky/quick-shell-keybind
-;; Package-Version: 20171023.613
-;; Package-Commit: 5f4541a5a5554d108bf16b5fd1713e962161ca1b
 ;; Version: 0.0.1
 ;; Author: eyeinsky <eyeinsky9@gmail.com>
 ;; Keywords: maint convenience processes

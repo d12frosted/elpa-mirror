@@ -4,8 +4,6 @@
 
 ;; Author: Sebastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
 ;; Keywords: emacs, configuration
-;; Package-Version: 20201027.2307
-;; Package-Commit: da82555f286588f171eed1de151325bbdd8cbd91
 ;; Version: 0.1
 ;; Created: 2010-07-06
 ;; Last changed: 2020-10-28 00:07:31
