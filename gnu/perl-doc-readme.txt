@@ -30,9 +30,3 @@ The user visible benefits over the other formats are:
 
  * Makes use of Emacs faces: variable-pitch font for text,
    fixed-pitch for code, italics for, well, italics
-
-TODO list
-
- * The regex mechanism in `perl-doc--process-links` is a hack.  The
-   author wrote this before he learned about rx and always meant to
-   rewrite it in rx notation, but well, tuits.

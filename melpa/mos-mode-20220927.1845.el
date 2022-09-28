@@ -1,8 +1,8 @@
 ;;; mos-mode.el --- MOS toolkit usage -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/themkat/mos-mode
-;; Package-Version: 20220828.847
-;; Package-Commit: 1e688e76f1600095b8b55ea8006489a3db9c421d
+;; Package-Version: 20220927.1845
+;; Package-Commit: 3f82f1de4f951096424e0da14ea4e4a40a82059d
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4") (lsp-mode "8.0.0") (dap-mode "0.7") (dash "2.19.1") (ht "2.3"))
 
@@ -43,10 +43,101 @@
   :group 'mos-mode
   :type 'string)
 
+(defcustom mos-format-on-save t
+  "Whether to format the buffer when saving or not"
+  :group 'mos-mode
+  :type 'boolean)
+
+;; font lock to get proper syntax highlighting
+(defconst mos-font-lock-keywords
+  (list
+   ;; labels
+   (cons "[a-zA-Z0-9_]+\\:" 'font-lock-function-name-face)
+   ;; macro invocation
+   (cons "[a-zA-Z0-9_]+(.*)" 'font-lock-function-name-face)
+   ;; mnemonics/asm opcodes
+   (cons "[ ]+\\(adc\\|and\\|asl\\|bcc\\|bcs\\|beq\\|bit\\|bmi\\|bne\\|bpl\\|brk\\|bvc\\|bvs\\|clc\\|cld\\|cli\\|clv\\|cmp\\|cpx\\|cpy\\|dec\\|dex\\|dey\\|eor\\|inc\\|inx\\|iny\\|jmp\\|jsr\\|lda\\|ldx\\|ldy\\|lsr\\|nop\\|ora\\|pha\\|php\\|pla\\|plp\\|rol\\|ror\\|rti\\|rts\\|sbc\\|sec\\|sed\\|sei\\|sta\\|stx\\|sty\\|tax\\|tay\\|tsx\\|txa\\|txs\\|tya\\)"
+         'font-lock-keyword-face)
+   ;; mos builtins
+   (cons (regexp-opt '(".const" ".var" ".byte" ".word" ".dword" ".macro" ".define" ".segment" ".loop" ".align" ".if" "else" "as" ".import" "from" ".text" "ascii" "petscii" "petscreen" ".file" ".assert" ".trace" ".test")
+                     t)
+         'font-lock-builtin-face)
+   ;; hexadecimals
+   (cons "#?\\$[0-9A-Fa-f]+" 'font-lock-constant-face)
+   ;; binary numbers
+   (cons "#?\\%[0-1]+" 'font-lock-constant-face)
+   ;; decimals
+   (cons "#?[0-9]+" 'font-lock-constant-face)
+   ;; comments
+   (cons "/\\*.*\\*/" 'font-lock-comment-face)
+   (cons "//.*$" 'font-lock-comment-face))
+  "Highlighting rules for MOS, mostly 6502 assembly syntax with some special built-ins on top.")
+
+(defun mos--jump-to-prev-non-empty-line ()
+  "Jumps to first non-empty line, or the beginning of the buffer. Used for indentation."
+  (forward-line -1)
+  (back-to-indentation)
+  (when (and (not (bobp))
+             (looking-at "^[[:blank:]]*$"))
+    (mos--jump-to-prev-non-empty-line)))
+
+(defconst mos--regex-label-pattern "[[:blank:]]*[a-zA-Z0-9_]+:"
+  "Pattern to check if something is an assembly label.")
+
+(defun mos-indent-line ()
+  "Indent the current line."
+  (beginning-of-line)
+  (let (prev-indent
+        inside-block
+        is-prev-label
+        (prev-line-label-length -1))
+    ;; get the previous non empty lines indentation level
+    (save-excursion
+      (mos--jump-to-prev-non-empty-line)
+      (setq prev-indent (current-indentation))
+      (setq inside-block (looking-at ".*{"))
+      (setq is-prev-label (looking-at mos--regex-label-pattern))
+      (when is-prev-label
+        (let* ((curr-line (thing-at-point 'line))
+               (label-text (match-string (string-match mos--regex-label-pattern
+                                                       curr-line)
+                                         curr-line)))
+          (setq prev-line-label-length (length (string-trim label-text))))))
+
+    ;; actual indentation logic (probably super simple)
+    ;; (first time I ever had to create an indent function)
+    (cond ((bobp) (indent-line-to 20))
+          (inside-block
+           (indent-line-to (+ prev-indent 4)))
+          ((looking-at "^.*}")
+           (indent-line-to (- prev-indent 4)))
+          ((looking-at mos--regex-label-pattern)
+           ;; we are at the line of a label, so we need to get the labels length
+           (let* ((curr-line (thing-at-point 'line))
+                  (label-text (match-string (string-match mos--regex-label-pattern
+                                                          curr-line)
+                                            curr-line))
+                  (label-length (length (string-trim label-text))))
+             (indent-line-to (- prev-indent label-length 1))))
+          (is-prev-label
+           ;; Opposite of the "current line is label" calculation
+           (indent-line-to (+ prev-indent prev-line-label-length 1)))
+          (t
+           (indent-line-to prev-indent)))))
+
+;; Function to control whether we format on save
+(defun mos-format-on-save-fun ()
+  "Format on save given that the variable mos-format-on-save is true"
+  (when mos-format-on-save
+    (lsp-format-buffer)))
+
 ;; simple major mode based on assembly mode that can be activated
 (define-derived-mode mos-mode
-  asm-mode "MOS mode"
-  "Major mode for use with the MOS toolkit for 6502 processors.")
+  fundamental-mode "MOS mode"
+  "Major mode for use with the MOS toolkit for 6502 processors."
+  (setq font-lock-defaults '(mos-font-lock-keywords nil t))
+  (setq indent-line-function 'mos-indent-line)
+  (add-hook 'after-save-hook 'mos-format-on-save-fun nil t))
 
 (add-to-list 'lsp-language-id-configuration '(mos-mode . "mos"))
 (add-to-list 'mos-mode-hook #'lsp)

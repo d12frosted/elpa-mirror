@@ -2423,7 +2423,7 @@
 	 ("Helmut Eller" . "eller.helmut@gmail.com"))
 	(:url . "http://elpa.gnu.org/packages/peg.html"))])
  (perl-doc .
-	   [(0 2)
+	   [(0 4)
 	    ((emacs
 	      (27)))
 	    "Read Perl documentation" tar
@@ -2432,7 +2432,7 @@
 	     (:maintainer "Harald Jörg" . "haj@posteo.de")
 	     (:authors
 	      ("Harald Jörg" . "haj@posteo.de"))
-	     (:commit . "bc968d37dcc29db4cae65e6d1c3ddc80e31ffbb3"))])
+	     (:commit . "ad005b228af43ca0cc15be52e5e45137f7599216"))])
  (persist .
 	  [(0 5)
 	   nil "Persist Variables between Emacs Sessions" tar
