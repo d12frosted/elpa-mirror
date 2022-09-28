@@ -4,8 +4,8 @@
 
 ;; Author: Tilman Rassy <tilman.rassy@googlemail.com>
 ;; URL: https://github.com/tilmanrassy/emacs-treeview
-;; Package-Version: 20220912.2346
-;; Package-Commit: b68f77bf102b289e7b0e97f767bb7ffff9a5835b
+;; Package-Version: 20220928.43
+;; Package-Commit: d9c10feddf3b959e7b33ce83103e1f0a61162723
 ;; Version: 1.1.1
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: lisp, tools, internal, convenience
@@ -44,11 +44,11 @@
 ;;   [+] Node 4
 ;;
 ;; Each node has a "label".  Non-leaf nodes also have a "control".  The label is the text by which
-;; the node is represented.  The control is a clickable piece of text  in front of the label which
+;; the node is represented.  The control is a clickable piece of text in front of the label which
 ;; allows the user to fold or unfold the node.  Nodes without children usually don't have a control.
-;; Nodes can also have an icon, but this is optional.  Icons are implemented as symbols in an icon
-;; font.  Control, icon, and label are always displayed in this order, and are always displayed in
-;; one line.  Thus, multi-line nodes are not supported by this library.
+;; Nodes can also have an icon, but this is optional.  Icons are implemented as images or symbols in
+;; an icon font.  Control, icon, and label are always displayed in this order, and are always
+;; displayed in one line.  Thus, multi-line nodes are not supported by this library.
 ;;
 ;; Nodes are represented by lists of the form:
 ;;
@@ -143,9 +143,9 @@
 ;;
 ;; See library "dir-treeview" for an example where this framework is used.
 ;;
-;; If you upgrade from v1.0.0: Note that v1.1.0 (this version) defines another buffer-local
-;; function variable treeview-get-root-node-function which didn't exist in v1.0.0. It must be
-;; set to a function which returns the root node of the tree.
+;; If you upgrade from v1.0.0: Note that since v1.1.0 another buffer-local function variable
+;; treeview-get-root-node-function exists which didn't exist in v1.0.0. It must be set to a
+;; function which returns the root node of the tree.
 
 ;;; Code:
 

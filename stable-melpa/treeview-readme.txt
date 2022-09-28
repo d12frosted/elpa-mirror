@@ -17,11 +17,11 @@ A typical tree would look like the following:
   [+] Node 4
 
 Each node has a "label".  Non-leaf nodes also have a "control".  The label is the text by which
-the node is represented.  The control is a clickable piece of text  in front of the label which
+the node is represented.  The control is a clickable piece of text in front of the label which
 allows the user to fold or unfold the node.  Nodes without children usually don't have a control.
-Nodes can also have an icon, but this is optional.  Icons are implemented as symbols in an icon
-font.  Control, icon, and label are always displayed in this order, and are always displayed in
-one line.  Thus, multi-line nodes are not supported by this library.
+Nodes can also have an icon, but this is optional.  Icons are implemented as images or symbols in
+an icon font.  Control, icon, and label are always displayed in this order, and are always
+displayed in one line.  Thus, multi-line nodes are not supported by this library.
 
 Nodes are represented by lists of the form:
 
@@ -116,6 +116,6 @@ created and rendered in the buffer by a call to treeview-display-node.
 
 See library "dir-treeview" for an example where this framework is used.
 
-If you upgrade from v1.0.0: Note that v1.1.0 (this version) defines another buffer-local
-function variable treeview-get-root-node-function which didn't exist in v1.0.0. It must be
-set to a function which returns the root node of the tree.
+If you upgrade from v1.0.0: Note that since v1.1.0 another buffer-local function variable
+treeview-get-root-node-function exists which didn't exist in v1.0.0. It must be set to a
+function which returns the root node of the tree.

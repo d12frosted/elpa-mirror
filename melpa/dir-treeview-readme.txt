@@ -9,4 +9,4 @@ Works in text mode, too
 Supports file notifications
 Highly customizable
 Themable
-Ships with one theme called "pleasant" using Font Awesome icons
+Ships with one theme called "Pleasant" using Font Awesome icons
