@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-vs/line-reminder
-;; Package-Version: 20220927.1631
-;; Package-Commit: cc7822b4ce006c3e0213b31de3ccaaafa48c8cef
+;; Package-Version: 20220928.1307
+;; Package-Commit: 7561700e37543bc7622e41d81d5b6dd038a8efe0
 ;; Version: 0.5.1
 ;; Package-Requires: ((emacs "25.1") (indicators "0.0.4") (fringe-helper "1.0.1") (ov "1.0.6") (ht "2.0"))
 ;; Keywords: convenience annotation
@@ -214,6 +214,15 @@
          jit-lock-mode)
      ,@body))
 
+(defmacro line-reminder--with-selected-window (window &rest body)
+  "Same with `with-selected-window' but safe.
+
+See macro `with-selected-window' description for arguments WINDOW and BODY."
+  (declare (indent 1) (debug t))
+  `(when (window-live-p ,window)
+     (with-selected-window ,window
+       ,@body)))
+
 (defun line-reminder--goto-line (line)
   "Jump to LINE."
   (goto-char (point-min))
@@ -311,9 +320,10 @@ If optional argument THUMBNAIL is non-nil, return in thumbnail faces."
 
 (defun line-reminder--add-change-line (line)
   "Add LINE with `modified' flag."
-  (ht-set line-reminder--line-status line 'modified)
   (when (line-reminder--use-indicators-p)
-    (line-reminder--mark-line-by-linum line 'line-reminder-modified-sign-face)))
+    (unless (equal (ht-get line-reminder--line-status line) 'modified)
+      (ht-set line-reminder--line-status line 'modified)
+      (line-reminder--mark-line-by-linum line 'line-reminder-modified-sign-face))))
 
 (defun line-reminder--remove-change-line (line)
   "Remove LINE from status."
@@ -424,7 +434,7 @@ LINE : pass in by `linum-format' variable."
   (and (or print-escape-control-characters inhibit-read-only)
        (equal (buffer-file-name) (ignore-errors (expand-file-name custom-file)))))
 
-(defun line-reminder--is-valid-situation-p (&optional beg end)
+(defun line-reminder--valid-situation-p (beg end)
   "Return non-nil, if the conditions are matched.
 
 Arguments BEG and END are passed in by before/after change functions."
@@ -436,15 +446,28 @@ Arguments BEG and END are passed in by before/after change functions."
    (not (memq this-command line-reminder-disable-commands))
    (if (and beg end) (and (<= beg (point-max)) (<= end (point-max))) t)))
 
+(defmacro line-reminder--with-valid-situation (beg end &rest body)
+  "Execute BODY around `line-reminder--valid-situation-p' function.
+
+See function `line-reminder--valid-situation-p' description for arguments BEG
+and END."
+  (declare (indent 2) (debug t))
+  `(when (line-reminder--valid-situation-p ,beg ,end)
+     ,@body))
+
 (defun line-reminder--shift-all-lines (start delta)
   "Shift all `change`/`saved` lines by from START line with DELTA."
-  (let ((new-ht (ht-create)))
-    (ht-map (lambda (line value)
-              (if (< start line)
-                  (ht-set new-ht (+ line delta) value)
-                (ht-set new-ht line value)))
-            line-reminder--line-status)
-    (setq line-reminder--line-status new-ht)))  ; update
+  (unless (zerop delta)
+    (let ((new-ht (ht-create)))
+      (ht-map (lambda (line sign)
+                (if (< start line)
+                    (let ((new-line (+ line delta)))
+                      (ht-set new-ht new-line sign)
+                      (line-reminder--mark-line-by-linum new-line
+                                                         (line-reminder--get-face sign)))
+                  (ht-set new-ht line sign)))
+              line-reminder--line-status)
+      (setq line-reminder--line-status new-ht))))  ; update
 
 (defun line-reminder--remove-lines-out-range ()
   "Remove all lines outside of buffer."
@@ -499,7 +522,7 @@ Arguments BEG and END are passed in by before/after change functions."
 
 (defun line-reminder--before-change (beg end)
   "Do stuff before buffer is changed with BEG and END."
-  (when (line-reminder--is-valid-situation-p beg end)
+  (line-reminder--with-valid-situation beg end
     ;; If buffer consider virtual buffer like `*scratch*`, then always
     ;; treat it as modified
     (setq line-reminder--undo-cancel-p (and (buffer-file-name) undo-in-progress))
@@ -513,7 +536,7 @@ Arguments BEG and END are passed in by before/after change functions."
 
 (defun line-reminder--after-change (beg end len)
   "Do stuff after buffer is changed with BEG, END and LEN."
-  (when (line-reminder--is-valid-situation-p beg end)
+  (line-reminder--with-valid-situation beg end
     ;; When begin and end are not the same, meaning the there is addition/deletion
     ;; happening in the current buffer.
     (let ((adding-p (< (+ beg len) end))
@@ -543,23 +566,22 @@ Arguments BEG and END are passed in by before/after change functions."
         (setq delta-lines (- end-linum begin-linum))
         (unless adding-p (setq delta-lines (- 0 delta-lines))))
 
-      (line-reminder--add-change-line begin-linum)  ; Just add the current line
       ;; If adding line, bound is the begin line number
       (setq starting-line begin-linum)
 
       ;; NOTE: Deletion..
       (unless adding-p
         (line-reminder--remove-lines begin-linum end-linum comm-or-uncomm-p)
+        (line-reminder--add-change-line begin-linum)
         (line-reminder--shift-all-lines starting-line delta-lines))
-
-      (line-reminder--add-change-line begin-linum)  ; Just add the current line
 
       ;; NOTE: Addition..
       (when adding-p
         (line-reminder--shift-all-lines starting-line delta-lines)
         (line-reminder--add-lines begin-linum end-linum))
+
       (line-reminder--remove-lines-out-range)  ; Remove out range
-      (line-reminder--thumb-size-change))))  ; Display thumbnail
+      (line-reminder--thumb-scroll))))  ; Display thumbnail
 
 ;;
 ;; (@* "Save" )
@@ -683,46 +705,45 @@ Arguments BEG and END are passed in by before/after change functions."
 (defun line-reminder--thumb-show (window &rest _)
   "Show thumbnail using overlays inside WINDOW."
   (line-reminder--with-no-redisplay
-    (when (window-live-p window)
-      (with-selected-window window
-        (when line-reminder--cache-max-line
-          (let ((window-lines (float (line-reminder--window-height)))
-                (buffer-lines (float line-reminder--cache-max-line))
-                (guard (ht-create)) added start-point percent-line face)
-            (when (< window-lines buffer-lines)
-              (save-excursion
-                (move-to-window-line 0)  ; start from 0 percent
-                (setq start-point (point))
-                (ht-map
-                 (lambda (line sign)
-                   (setq face (line-reminder--get-face sign t)
-                         percent-line (* (/ line buffer-lines) window-lines)
-                         percent-line (floor percent-line)
-                         added (ht-get guard percent-line))
-                   ;; Prevent creating overlay twice on the same line
-                   (when (or (null added)
-                             ;; 'saved line can overwrite 'modified line
-                             (eq added 'modified))
-                     (goto-char start-point)
-                     (when (= (forward-line percent-line) 0)
-                       (ht-set guard percent-line sign)
-                       (line-reminder--thumb-create-ov face))))
-                 line-reminder--line-status)))))))))
+    (line-reminder--with-selected-window window
+      (when line-reminder--cache-max-line
+        (let ((window-lines (float (line-reminder--window-height)))
+              (buffer-lines (float line-reminder--cache-max-line))
+              (guard (ht-create)) added start-point percent-line face)
+          (when (< window-lines buffer-lines)
+            (save-excursion
+              (move-to-window-line 0)  ; start from 0 percent
+              (setq start-point (point))
+              (ht-map
+               (lambda (line sign)
+                 (setq face (line-reminder--get-face sign t)
+                       percent-line (* (/ line buffer-lines) window-lines)
+                       percent-line (floor percent-line)
+                       added (ht-get guard percent-line))
+                 ;; Prevent creating overlay twice on the same line
+                 (when (or (null added)
+                           ;; 'saved line can overwrite 'modified line
+                           (eq added 'modified))
+                   (goto-char start-point)
+                   (when (= (forward-line percent-line) 0)
+                     (ht-set guard percent-line sign)
+                     (line-reminder--thumb-create-ov face))))
+               line-reminder--line-status))))))))
 
 (defun line-reminder--thumb-size-change (&rest _)
   "Render thumbnail for all visible windows."
   (line-reminder--with-no-redisplay
-    (dolist (win (window-list)) (line-reminder--thumb-start-render win))))
+    (dolist (win (window-list)) (line-reminder--thumb-render win))))
 
 (defun line-reminder--thumb-scroll (&optional window &rest _)
   "Render thumbnail on WINDOW."
   (line-reminder--with-no-redisplay
-    (when (windowp window) (line-reminder--thumb-start-render window))))
+    (line-reminder--thumb-render (or window (selected-window)))))
 
-(defun line-reminder--thumb-start-render (window)
+(defun line-reminder--thumb-render (window)
   "Start render thumbnail for WINDOW."
   (when line-reminder-thumbnail
-    (with-selected-window window
+    (line-reminder--with-selected-window window
       (when line-reminder-mode
         (line-reminder--thumb-delete-ovs)
         (line-reminder--thumb-show window)))))

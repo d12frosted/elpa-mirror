@@ -1,10 +1,10 @@
-;;; org-tag-beautify.el --- Beautify Org Mode tags -*- lexical-binding: t; -*-
+;;; org-tag-beautify.el --- Beautify Org mode tags -*- lexical-binding: t; -*-
 ;; -*- coding: utf-8 -*-
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20220912.430
-;; Package-Commit: bfe7f054109f9f0e6fedbf5c9240fa96ebdde5fd
+;; Package-Version: 20220928.1506
+;; Package-Commit: bd91ba0cd57b8394b2ae970f6a110756f7a913b2
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -492,7 +492,7 @@
                   ("Emacs" . ,(all-the-icons-fileicon "emacs" :face '(:foreground "LightSlateBlue")))
                   ;; TODO: ("Vim" . ,(all-the-icons-fileicon "vim" :face '(:foreground "LightSlateBlue")))
                   ;; TODO: ("vscode" . ,(all-the-icons-fileicon "visual_studio_code" :face '(:foreground "LightSlateBlue")))
-                  ("Org_Mode" . ,(all-the-icons-fileicon "org" :face '(:foreground "SeaGreen")))
+                  ("Org_mode" . ,(all-the-icons-fileicon "org" :face '(:foreground "SeaGreen")))
                   ;; TODO: ("office" . ,(all-the-icons-fileicon "org" :face '(:foreground "SeaGreen")))
                   ;; TODO: ("wiki" . ,(all-the-icons-fileicon "org" :face '(:foreground "SeaGreen")))
                   ;; TODO: ("notebook" . ,(all-the-icons-fileicon "org" :face '(:foreground "SeaGreen")))
@@ -502,6 +502,7 @@
                   ("Edge" . ,(all-the-icons-fileicon "edge" :face '(:foreground "DodgerBlue")))
                   ("Safari" . ,(all-the-icons-faicon "safari" :face '(:foreground "LightSkyBlue")))
                   ("terminal" . ,(all-the-icons-fileicon "terminal" :face '(:foreground "black")))
+                  ("REPL" . ,(all-the-icons-alltheicon "terminal-alt" :face '(:foreground "LimeGreen")))
                   ("SSH" . ,(all-the-icons-fileicon "terminal" :face '(:foreground "SteelBlue")))
                   ("powershell" . ,(all-the-icons-fileicon "powershell" :face '(:foreground "RoyalBlue")))
                   ("dylib" . ,(all-the-icons-fileicon "dylib" :face '(:foreground "SteelBlue")))
@@ -736,6 +737,8 @@
                 `(("Internet" . ,(all-the-icons-faicon "globe" :face '(:foreground "SkyBlue")))
                   ("Google" . ,(all-the-icons-faicon "google" :face '(:foreground "OrangeRed")))
                   ("Microsoft" . ,(all-the-icons-faicon "windows" :face '(:foreground "DodgerBlue")))
+                  ;; TODO: update "Meta" icon
+                  ("Meta" . ,(all-the-icons-faicon "facebook-official" :face '(:foreground "DodgerBlue")))
                   ("Facebook" . ,(all-the-icons-faicon "facebook-official" :face '(:foreground "DodgerBlue")))
                   ("Twitter" . ,(all-the-icons-faicon "twitter" :face '(:foreground "DarkTurquoise")))
                   ("Amazon" . ,(all-the-icons-faicon "amazon" :face '(:foreground "goldenrod")))
@@ -1038,7 +1041,7 @@
     ;; ("png" ("image")) ("jpg" ("image")) ("jpeg" ("image")) ("webp" ("image"))
     ("gif" ("gif"))
     ;; document file types
-    ("org" ("Org_Mode")) ("md" ("Markdown")) ("txt" ("document"))
+    ("org" ("Org_mode")) ("md" ("Markdown")) ("txt" ("document"))
     ("pdf" ("pdf")) ("doc" ("word")) ("docx" ("word")) ("xls" ("excel")) ("ppt" ("powerpoint"))
     ("epub" ("book")) ("mobi" ("book")) ("azw3" ("book"))
     ("cbr" ("comic")) ("cbz" ("comic")) ("cb7" ("comic"))
