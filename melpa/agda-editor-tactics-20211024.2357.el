@@ -4,8 +4,6 @@
 
 ;; Author: Musa Al-hassy <alhassy@gmail.com>
 ;; Version: 1.0
-;; Package-Version: 20211024.2357
-;; Package-Commit: 06e374516cb2ab17018985f3dc4fccdc4acefd08
 ;; Package-Requires: ((s "1.12.0") (dash "2.16.0") (emacs "27.1") (org "9.1"))
 ;; Keywords: abbrev, convenience, languages, agda, tools
 ;; URL: https://github.com/alhassy/next-700-module-systems
