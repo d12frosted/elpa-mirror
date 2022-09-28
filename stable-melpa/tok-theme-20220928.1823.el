@@ -1,9 +1,9 @@
 ;;; tok-theme.el --- Comfy dark monochromatic theme -*- lexical-binding: t; -*-
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
-;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20220926.936
-;; Package-Commit: 183fb7ee0805fe0ee72dc7c3bd37bd64b613b4d9
+;; URL: https://git.sr.ht/~tok/tok-theme
+;; Package-Version: 20220928.1823
+;; Package-Commit: eb67fd9ba96a29e00d6c62261721ddf7c156e26b
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -46,15 +46,27 @@
 (let ((class '((class color) (min-colors 89))))
   (custom-theme-set-faces
    'tok
+   ;; Basic faces
    `(default ((,class (:foreground "white" :background "black"))))
    `(highlight ((,class (:background "grey15"))))
-   `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t)) :background "gray30"))))
-   `(secondary-selection ((,class (,@(and (>= emacs-major-version 27) '(:extend t)) :background "SkyBlue4"))))
+   `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
+                      :background "gray30"))))
+   `(secondary-selection ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
+                                   :background "SkyBlue4"))))
    `(trailing-whitespace ((,class (:inherit error))))
+   `(cursor ((,class (:inherit default))))
+   `(error ((,class (:weight bold :foreground "firebrick1"))))
+   `(warning ((,class (:weight bold :foreground "DarkOrange"))))
+   `(success ((,class (:weight bold :foreground "Green1"))))
+   `(minibuffer-prompt ((,class (:foreground "grey80"))))
+
+   ;; Line-numbes
    `(line-number ((,class (:foreground "gray50"))))
    `(line-number-current-line ((,class (:inherit highlight))))
    `(line-number-major-tick ((,class (:weight bold :background "grey75"))))
    `(line-number-minor-tick ((,class (:weight bold :background "grey55"))))
+
+   ;; Mode-line
    `(mode-line ((,class (:foreground "white" :background "grey10" :box (:line-width -1 :style released-button)))))
    (when (>= emacs-major-version 29)
      `(mode-line-active ((,class (:inherit mode-line)))))
@@ -62,35 +74,42 @@
    `(mode-line-highlight ((t (nil))))
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-buffer-id ((,class (:weight bold))))
-   `(cursor ((,class (:inherit default))))
-   `(error ((,class (:weight bold :foreground "firebrick1"))))
-   `(warning ((,class (:weight bold :foreground "DarkOrange"))))
-   `(success ((,class (:weight bold :foreground "Green1"))))
-   `(font-lock-comment-face ((,class (:foreground "grey50" :weight bold :italic t))))
+
+   ;; Font-lock
+   `(font-lock-comment-face ((,class (:foreground "grey50"))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-string-face ((t (nil))))
-   `(font-lock-doc-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-doc-markup-face ((,class (:inherit font-lock-constant-face))))
+   `(font-lock-doc-markup-face ((t (nil))))
    `(font-lock-keyword-face ((t (nil))))
    `(font-lock-builtin-face ((t (nil))))
    `(font-lock-function-name-face ((t (nil))))
    `(font-lock-variable-name-face ((t (nil))))
    `(font-lock-type-face ((t (nil))))
    `(font-lock-constant-face ((t (nil))))
-   `(font-lock-warning-face ((,class (:inherit error))))
+   `(font-lock-warning-face ((t (nil))))
    `(font-lock-negation-char-face ((t (nil))))
-   `(font-lock-preprocessor-face ((,class (:inherit font-lock-builtin-face))))
-   `(font-lock-regexp-grouping-backslash ((,class (:inherit bold))))
-   `(font-lock-regexp-grouping-construct ((,class (:inherit bold))))
+   `(font-lock-preprocessor-face ((t (nil))))
+   `(font-lock-regexp-grouping-backslash ((t (nil))))
+   `(font-lock-regexp-grouping-construct ((t (nil))))
+
+   ;; isearch
    `(isearch ((,class (:foreground "brown4" :background "palevioletred2"))))
    `(isearch-fail ((,class (:background "red4"))))
    `(lazy-highlight ((,class (:background "paleturquoise4"))))
    `(isearch-group-1 ((,class (:foreground "brown4" :background "palevioletred1"))))
    `(isearch-group-2 ((,class (:foreground "brown4" :background "palevioletred3"))))
-   `(sh-heredoc ((t nil)))
-   `(sh-quoted-exec ((t nil)))
-   `(terraform--resource-name-face ((t nil)))
-   `(terraform--resource-type-face ((t nil)))
+
+   ;; Flymake
+   `(flymake-error ((,class (:underline (:style wave :color "red")))))
+   `(flymake-warning ((,class (:underline (:style wave :color "DarkOrange")))))
+   `(flymake-note ((t (nil))))
+
+   ;; Disabled faces
+   `(fringe ((t (nil))))
+   `(sh-heredoc ((t (nil))))
+   `(sh-quoted-exec ((t (nil))))
+   `(terraform--resource-name-face ((t (nil))))
+   `(terraform--resource-type-face ((t (nil))))
    `(outline-1 ((t (nil))))
    `(outline-2 ((t (nil))))
    `(outline-3 ((t (nil))))
@@ -99,9 +118,8 @@
    `(outline-6 ((t (nil))))
    `(outline-7 ((t (nil))))
    `(outline-8 ((t (nil))))
-   `(flymake-error ((,class (:underline (:style wave :color "red")))))
-   `(flymake-warning ((,class (:underline (:style wave :color "DarkOrange")))))
-   `(flymake-note ((t (nil))))))
+   `(markdown-header-face ((t (nil))))
+   `(markdown-header-delimiter-face ((t (nil))))))
 
 (provide-theme 'tok)
 
