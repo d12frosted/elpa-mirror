@@ -3,8 +3,8 @@
 ;;
 ;; Author: Austin Bingham <austin.bingham@gmail.com>
 ;; Version: 0.1
-;; Package-Version: 20190609.1533
-;; Package-Commit: f08249535348d046d0974b9c20fe1b7dd3cd2660
+;; Package-Version: 20220929.608
+;; Package-Commit: 7c7ebc3de058a321cb76348a01f45f02dc55d2f0
 ;; URL: https://github.com/abingham/flycheck-vale
 ;; Package-Requires: ((emacs "24.4") (flycheck "0.22") (let-alist "1.0.4"))
 ;;
@@ -134,7 +134,8 @@ passing the results to CALLBACK."
                               flycheck-vale-output-buffer
                               flycheck-vale-program
                               "--output"
-                              "JSON")))
+                              "JSON"
+                              buffer-file-name)))
     (let ((checker checker)
           (callback callback)
           (buf (current-buffer)))

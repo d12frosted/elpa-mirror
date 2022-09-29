@@ -4,10 +4,10 @@ Source:  https://github.com/alexluigit/dirvish.git
 
 Updating /mnt/store/melpa/working/dirvish/
 Checking out origin/HEAD
-Checking out 39806bcb67af2a40585901a2d0c9758d825419e0
+Checking out 0b35f128cce114730960e998f5be167b76353f0c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dirvish/
-  to /tmp/dirvishEUQxdl/dirvish-20220928.1242
+  to /tmp/dirvishv12B2j/dirvish-20220929.359
     dirvish-extras.el -> dirvish-extras.el
     dirvish-widgets.el -> dirvish-widgets.el
     dirvish.el -> dirvish.el
@@ -25,27 +25,29 @@ Copying files (->) and directories (=>)
   ! extensions/dirvish-subtree.el -> dirvish-subtree.el
   ! extensions/dirvish-vc.el -> dirvish-vc.el
   ! extensions/dirvish-yank.el -> dirvish-yank.el
-Created dirvish-20220928.1242.tar containing:
-  dirvish-20220928.1242/
-  dirvish-20220928.1242/dirvish-collapse.el
-  dirvish-20220928.1242/dirvish-emerge.el
-  dirvish-20220928.1242/dirvish-extras.el
-  dirvish-20220928.1242/dirvish-fd.el
-  dirvish-20220928.1242/dirvish-history.el
-  dirvish-20220928.1242/dirvish-icons.el
-  dirvish-20220928.1242/dirvish-layout.el
-  dirvish-20220928.1242/dirvish-ls.el
-  dirvish-20220928.1242/dirvish-narrow.el
-  dirvish-20220928.1242/dirvish-peek.el
-  dirvish-20220928.1242/dirvish-pkg.el
-  dirvish-20220928.1242/dirvish-quick-access.el
-  dirvish-20220928.1242/dirvish-side.el
-  dirvish-20220928.1242/dirvish-subtree.el
-  dirvish-20220928.1242/dirvish-vc.el
-  dirvish-20220928.1242/dirvish-widgets.el
-  dirvish-20220928.1242/dirvish-yank.el
-  dirvish-20220928.1242/dirvish.el
-Built dirvish in 3.869s, finished at 2022-09-29T03:49:19+0000
+Created dirvish-20220929.359.tar containing:
+  dirvish-20220929.359/
+  dirvish-20220929.359/dirvish-collapse.el
+  dirvish-20220929.359/dirvish-emerge.el
+  dirvish-20220929.359/dirvish-extras.el
+  dirvish-20220929.359/dirvish-fd.el
+  dirvish-20220929.359/dirvish-history.el
+  dirvish-20220929.359/dirvish-icons.el
+  dirvish-20220929.359/dirvish-layout.el
+  dirvish-20220929.359/dirvish-ls.el
+  dirvish-20220929.359/dirvish-narrow.el
+  dirvish-20220929.359/dirvish-peek.el
+  dirvish-20220929.359/dirvish-pkg.el
+  dirvish-20220929.359/dirvish-quick-access.el
+  dirvish-20220929.359/dirvish-side.el
+  dirvish-20220929.359/dirvish-subtree.el
+  dirvish-20220929.359/dirvish-vc.el
+  dirvish-20220929.359/dirvish-widgets.el
+  dirvish-20220929.359/dirvish-yank.el
+  dirvish-20220929.359/dirvish.el
+Built dirvish in 4.137s, finished at 2022-09-29T06:58:57+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  412 Sep 29 03:49 packages/dirvish-20220928.1242.entry
 260K -rw-r--r-- 1 root root 260K Sep 29 03:49 packages/dirvish-20220928.1242.tar
+4.0K -rw-r--r-- 1 root root  411 Sep 29 06:58 packages/dirvish-20220929.359.entry
+260K -rw-r--r-- 1 root root 260K Sep 29 06:58 packages/dirvish-20220929.359.tar
