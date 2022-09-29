@@ -141,7 +141,7 @@
 			 (:maintainer "Thien-Thi Nguyen" . "ttn@gnu.org")
 			 (:url . "http://www.gnuvola.org/software/aa2u/"))])
  (async .
-	[(1 9 6)
+	[(1 9 7)
 	 ((emacs
 	   (24 4)))
 	 "Asynchronous processing in Emacs" tar
@@ -150,7 +150,7 @@
 	  (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	  (:authors
 	   ("John Wiegley" . "jwiegley@gmail.com"))
-	  (:commit . "370ead445f5d0fc21b7338e05a64830c410368a3"))])
+	  (:commit . "53addd02fbad33765f508f8e6254ebd44e1f81e5"))])
  (auctex .
 	 [(13 1 4)
 	  ((emacs
@@ -2984,17 +2984,18 @@
 		 ("Alexandru Harsanyi" . "AlexHarsanyi@gmail.com"))
 		(:commit . "37eef19fd608ca81acb40f974b8d7bbe7fc27127"))])
  (sokoban .
-	  [(1 4 8)
+	  [(1 4 9)
 	   ((emacs
 	     (23 1))
 	    (cl-lib
 	     (0 5)))
 	   "Implementation of Sokoban for Emacs." tar
-	   ((:maintainer "Dieter Deyke" . "dieter.deyke@gmail.com")
+	   ((:keywords "games")
+	    (:maintainer "Dieter Deyke" . "dieter.deyke@gmail.com")
 	    (:authors
 	     ("Glynn Clements" . "glynn.clements@xemacs.org"))
-	    (:keywords "games")
-	    (:url . "http://elpa.gnu.org/packages/sokoban.html"))])
+	    (:url . "https://elpa.gnu.org/packages/sokoban.html")
+	    (:commit . "3043723a7c2557443aa28d871137c8d9c3b46edc"))])
  (sotlisp .
 	  [(1 6 2)
 	   ((emacs
