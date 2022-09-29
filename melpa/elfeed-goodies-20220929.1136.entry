@@ -1,0 +1,18 @@
+(elfeed-goodies .
+		[(20220929 1136)
+		 ((popwin
+		   (1 0 0))
+		  (powerline
+		   (2 2))
+		  (elfeed
+		   (2 0 0))
+		  (cl-lib
+		   (0 5))
+		  (link-hint
+		   (0 1)))
+		 "Elfeed goodies" tar
+		 ((:commit . "ff9fa91e29c9cd06fdddedc1eabbdf4d3cb93e8c")
+		  (:authors
+		   ("Gergely Nagy"))
+		  (:maintainer "Gergely Nagy")
+		  (:url . "https://github.com/algernon/elfeed-goodies"))])
