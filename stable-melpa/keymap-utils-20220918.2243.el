@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/keymap-utils
 ;; Keywords: convenience extensions
-;; Package-Version: 20220422.1612
-;; Package-Commit: 2e5f99f38cfdd55979dadda74b2d7086fedebb03
+;; Package-Version: 20220918.2243
+;; Package-Commit: e4ef3c5fb46b1f749c9d838d2eba709e164402e2
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
@@ -470,7 +470,7 @@ explicit:
     \"a\" > \"b\" moved-command)
 
 A DEF can also be the symbol `=' in which case the binding of the
-preceding KEY is *not* changes.  This is useful when you want to
+preceding KEY is *not* changed.  This is useful when you want to
 make it explicit that an existing binding is kept when creating a
 new binding:
 

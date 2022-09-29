@@ -3,9 +3,9 @@
 ;; Copyright (C) 2018-2020,2021,2022 Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
-;; Version: 0.4
-;; Package-Version: 20220831.1033
-;; Package-Commit: b25ec9f8671c399807b6988b215e5dfc7c95a539
+;; Version: 0.4.1
+;; Package-Version: 20220929.1630
+;; Package-Commit: e4e13cc5e240f9b2717295f6df536d29a8ead108
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -73,7 +73,11 @@
   :prefix "org-reverse-datetree-")
 
 (defface org-reverse-datetree-calendar-date-face
-  '((t (:background "#481260")))
+  '((((class color) (min-colors 88) (background dark))
+     :background "#481260" :foreground "#ffffff" :bold t)
+    (((class color) (min-colors 88) (background light))
+     :background  "#eeaeee" :foreground "#000000" :bold t)
+    (t (:background "#cd5b45")))
   "Face for calendar dates."
   :group 'calendar-faces)
 
@@ -315,14 +319,14 @@ tree of the date tree, like a file+olp+datetree target of
                                 (org-reverse-datetree--apply-format (-last-item level-formats) time)
                                 :asc asc)))
               (cl-case return-type
-                ('marker (point-marker))
-                ('point (point))
-                ('rfloc (list (nth 4 (org-heading-components))
-                              (buffer-file-name (or (org-base-buffer (current-buffer))
-                                                    (current-buffer)))
-                              nil
-                              (point)))
-                ('created new)))))
+                (marker (point-marker))
+                (point (point))
+                (rfloc (list (nth 4 (org-heading-components))
+                             (buffer-file-name (or (org-base-buffer (current-buffer))
+                                                   (current-buffer)))
+                             nil
+                             (point)))
+                (created new)))))
       (when-let (visibility (or (cdr (assq (or return-type 'default)
                                            org-reverse-datetree-show-context-detail))
                                 (when (not (eq return-type 'default))
@@ -1282,6 +1286,39 @@ calendar."
         (list 0 0 0 (nth 1 date) (nth 0 date) (nth 2 date)
               nil nil (car (current-time-zone)))))
       (org-beginning-of-line))))
+
+(defun org-reverse-datetree-calendar-next (&optional backward)
+  "Go to the next date that has an entry."
+  (interactive)
+  (let ((calendar-date (calendar-cursor-to-date))
+        (file org-reverse-datetree-calendar-file))
+    (when-let (date (with-current-buffer (or (find-buffer-visiting file)
+                                             (find-file-noselect file))
+                      (cl-labels
+                          ((compare-dates (date1 date2)
+                             (- (calendar-absolute-from-gregorian date1)
+                                (calendar-absolute-from-gregorian date2)))
+                           (test-pred (entry-date)
+                             (if backward
+                                 (< (compare-dates entry-date calendar-date) 0)
+                               (> (compare-dates entry-date calendar-date) 0)))
+                           (sort-pred (date1 date2)
+                             (if backward
+                                 (> (compare-dates date1 date2) 0)
+                               (< (compare-dates date1 date2) 0))))
+                        (thread-last
+                          (org-reverse-datetree-dates :decoded t)
+                          (mapcar (pcase-lambda (`(,_ ,_ ,_ ,day ,month ,year . ,_))
+                                    (list month day year)))
+                          (seq-filter #'test-pred)
+                          (-sort #'sort-pred)
+                          (car)))))
+      (calendar-goto-date date))))
+
+(defun org-reverse-datetree-calendar-previous ()
+  "Go to the previous date that has an entry."
+  (interactive)
+  (org-reverse-datetree-calendar-next t))
 
 (defun org-reverse-datetree-mark-calendar ()
   "Mark the calendar entry."

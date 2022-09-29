@@ -6,8 +6,8 @@
 ;; Authors: Richard Chiang <richard@commandlinesystems.com>
 ;;              Kay Rhodes <masukomi@masukomi.org>
 ;; Version: 0.1.1
-;; Package-Version: 20220330.1316
-;; Package-Commit: 57eb1ba3812e44344b7d5336c3a3ad14a28e4f9e
+;; Package-Version: 20220929.1621
+;; Package-Commit: f6b50774cd4403b047ea137af4f019b09fa2f71b
 ;; Keywords: tools
 ;; URL: https://github.com/masukomi/private-comments-mode
 ;; Package-Requires: ((emacs "27.1"))
@@ -257,6 +257,7 @@ BUFFER is the edit buffer from which `url-retrieve' was issued."
                                            aligned
                                            'face '(private-comments-face
                                                    default)))
+			     ; this is the overlay on the text we're commenting on
                              (ov (make-overlay (point) (point-at-eol))))
                         (progn
                           (overlay-put ov 'pcm-commit treeish)
@@ -264,6 +265,7 @@ BUFFER is the edit buffer from which `url-retrieve' was issued."
                           (overlay-put ov 'before-string propertized)
                           (overlay-put ov 'modification-hooks
                                        (list 'private-comments--mod-callback)))
+
                       (display-warning 'private-comments
                                        (concat "private-comments--apply-callback: "
                                                "unexpected "

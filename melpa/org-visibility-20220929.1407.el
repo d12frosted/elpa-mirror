@@ -4,10 +4,10 @@
 ;;
 ;; Author: Kyle W T Sherman <kylewsherman@gmail.com>
 ;; URL: https://github.com/nullman/emacs-org-visibility
-;; Package-Version: 20220710.1747
-;; Package-Commit: 24aee13a956bc1cff72f8b04f47e7d9ec01bb3b3
+;; Package-Version: 20220929.1407
+;; Package-Commit: 71d57ca126ccb5441b87aa052903fa6ad59b62f3
 ;; Created: 2021-07-17
-;; Version: 1.1.10
+;; Version: 1.1.11
 ;; Keywords: outlines convenience
 ;; Package-Requires: ((emacs "27.1"))
 ;;
@@ -103,7 +103,7 @@
 ;;   (require 'org-visibility)
 ;;
 ;;   ;; enable org-visibility-mode
-;;   (add-hook 'org-mode-hook #'org-visibility-mode)
+;;   (org-visibility-mode 1)
 ;;
 ;;   ;; optionally set a keybinding to force save
 ;;   (bind-keys* :map org-visibility-mode-map
@@ -118,7 +118,6 @@
 ;;     :bind* (:map org-visibility-mode-map
 ;;                  ("C-x C-v" . org-visibility-force-save) ; defaults to `find-alternative-file'
 ;;                  ("C-x M-v" . org-visibility-remove))    ; defaults to undefined
-;;     :hook (org-mode . org-visibility-mode)
 ;;     :custom
 ;;     ;; optionally change the location of the state file
 ;;     ;;(org-visibility-state-file `,(expand-file-name "/some/path/.org-visibility"))
@@ -137,7 +136,8 @@
 ;;     ;;(org-visibility-maximum-tracked-days 180)
 ;;     ;; optionally turn off visibility state change messages
 ;;     ;;(org-visibility-display-messages nil)
-;;     )
+;;     :config
+;;     (org-visibility-mode 1))
 ;;
 ;; Usage:
 ;;
@@ -272,13 +272,14 @@ and `org-visibility-exclude-regexps'.)")
   nil
   "Non-nil if buffer has been modified since last visibility save.")
 
-(defun org-visibility-version (&optional here)
+(defun org-visibility-version (&optional insert)
   "Display the version of Org Visibility that is running in this session.
-With a prefix argument, insert the Emacs version string at point
+
+If INSERT is non-nil, insert the Emacs version string at point
 instead of displaying it."
-  (interactive "P")
-  (let ((version-string "Org Visibility 1.1.10"))
-    (if here
+  (interactive)
+  (let ((version-string "Org Visibility 1.1.11"))
+    (if insert
         (insert version-string)
       (if (called-interactively-p 'interactive)
           (message "%s" version-string)
@@ -360,8 +361,6 @@ Return visibility state for BUFFER if found in
     (when file-name
       (let ((state (assoc file-name data)))
         (when (string= (caddr state) checksum)
-          (when org-visibility-display-messages
-            (message "Restored visibility state for %s" file-name))
           (cadddr state))))))
 
 (defun org-visibility--save-internal (&optional buffer noerror force)
@@ -394,7 +393,8 @@ If FORCE is non-nil, save even if file is not marked as dirty."
   "Load visibility snapshot of org BUFFER.
 
 If NOERROR is non-nil, do not throw errors."
-  (let ((buffer (or buffer (current-buffer))))
+  (let ((buffer (or buffer (current-buffer)))
+        (file-name (buffer-file-name buffer)))
     (with-current-buffer buffer
       (if (not (derived-mode-p 'org-mode))
           (unless noerror
@@ -403,14 +403,17 @@ If NOERROR is non-nil, do not throw errors."
             (unless noerror
               (user-error "No file associated with this buffer: %S" buffer))
           (let ((visible (org-visibility--get buffer)))
-            (save-mark-and-excursion
-              (outline-hide-sublevels 1)
-              (dolist (x visible)
-                (ignore-errors
-                  (when (> x 1)
-                    (goto-char x)
-                    (when (invisible-p (1- (point)))
-                      (org-flag-region (1- (point-at-bol)) (point-at-eol) nil 'outline))))))
+            (when visible
+              (save-mark-and-excursion
+                (outline-hide-sublevels 1)
+                (dolist (x visible)
+                  (ignore-errors
+                    (when (> x 1)
+                      (goto-char x)
+                      (when (invisible-p (1- (point)))
+                        (org-flag-region (1- (point-at-bol)) (point-at-eol) nil 'outline))))))
+              (when org-visibility-display-messages
+                (message "Restored visibility state for %s" file-name)))
             (setq org-visibility-dirty nil)))))))
 
 (defun org-visibility--check-file-path (file-name paths)
@@ -589,6 +592,7 @@ file is saved or killed, and restored when the file is loaded.
 \\{org-visibility-mode-map}"
   :lighter " vis"
   :keymap (make-sparse-keymap)
+  :global t
   (if org-visibility-mode
       (org-visibility-enable-hooks)
     (org-visibility-disable-hooks)))
