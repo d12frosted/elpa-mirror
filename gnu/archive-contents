@@ -1071,7 +1071,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "bd603d8f3b1bcff34aee2dc4b7b36dc7912b9b26"))])
  (ement .
-	[(0 2 1)
+	[(0 3)
 	 ((emacs
 	   (27 1))
 	  (map
@@ -1092,7 +1092,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "26bb6b8172007bddc878d822791ddc03a59b0188"))])
+	  (:commit . "fc0add9ca1a91c297d93a8b0b5cf510936d55e91"))])
  (emms .
        [(11)
 	((cl-lib
@@ -2423,7 +2423,7 @@
 	 ("Helmut Eller" . "eller.helmut@gmail.com"))
 	(:url . "http://elpa.gnu.org/packages/peg.html"))])
  (perl-doc .
-	   [(0 4)
+	   [(0 6)
 	    ((emacs
 	      (27)))
 	    "Read Perl documentation" tar
@@ -2432,7 +2432,7 @@
 	     (:maintainer "Harald Jörg" . "haj@posteo.de")
 	     (:authors
 	      ("Harald Jörg" . "haj@posteo.de"))
-	     (:commit . "ad005b228af43ca0cc15be52e5e45137f7599216"))])
+	     (:commit . "eb329f2675e71d656e1512ba7ec5a37ada4603d6"))])
  (persist .
 	  [(0 5)
 	   nil "Persist Variables between Emacs Sessions" tar
@@ -3166,7 +3166,7 @@
 	  ("Adam Porter" . "adam@alphapapa.net"))
 	 (:commit . "b27fa67ecf3f8954ce0d5c2747d1de4dc94ff09f"))])
  (taxy-magit-section .
-		     [(0 10)
+		     [(0 11)
 		      ((emacs
 			(26 3))
 		       (magit-section
@@ -3179,7 +3179,7 @@
 		       (:maintainer "Adam Porter" . "adam@alphapapa.net")
 		       (:authors
 			("Adam Porter" . "adam@alphapapa.net"))
-		       (:commit . "11feab7cdf82cfe9e5d1ca7f70e1b9bbf792ef5a"))])
+		       (:commit . "aeadee643c292acdf584eaf292da9c0e36826390"))])
  (temp-buffer-browse .
 		     [(1 5)
 		      ((emacs

@@ -9,7 +9,7 @@ Motivation
 
 Perl documentation is written in a markup format called POD ("Plain
 Old Documentation") and is usually converted to other formats for
-human consumption.  The documentation used to be available in Emacs
+reading by humans.  The documentation used to be available in Emacs
 for a long time in 'info' or 'man' format.  However, Perl does no
 longer ship 'info' files, and the software available from CPAN
 never did.  'man' is not available on all platforms and allows only

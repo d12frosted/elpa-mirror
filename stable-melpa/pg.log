@@ -1,11 +1,13 @@
 Package: pg
 Fetcher: github
-Source:  https://github.com/cbbrowne/pg.el.git
+Source:  https://github.com/emarsden/pg-el.git
 
-Updating /mnt/store/melpa/working/pg/
+Cloning https://github.com/emarsden/pg-el.git to /mnt/store/melpa/working/pg/
 Checking out origin/HEAD
-Checking out 4f6516ec3946d95dcef49abb6703cc89ecb5183d
-Built pg in 3.821s, finished at 2022-09-29T17:05:45+0000
+Checking out 47de374b9b263641b9037d8a37fbe124388f6dd2
+Built pg in 3.615s, finished at 2022-09-29T23:31:35+0000
  ✓ Success:
- 52K -rw-r--r-- 1 root root 50K Sep 29 17:05 packages/pg-20130731.2142.el
-4.0K -rw-r--r-- 1 root root 334 Sep 29 17:05 packages/pg-20130731.2142.entry
+ 52K -rw-r--r-- 1 root root 50K Sep 29 20:23 packages/pg-20130731.2142.el
+4.0K -rw-r--r-- 1 root root 334 Sep 29 20:23 packages/pg-20130731.2142.entry
+ 60K -rw-r--r-- 1 root root 60K Sep 29 23:31 packages/pg-20220927.1220.el
+4.0K -rw-r--r-- 1 root root 451 Sep 29 23:31 packages/pg-20220927.1220.entry

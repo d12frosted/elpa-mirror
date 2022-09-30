@@ -16,19 +16,21 @@ Table of Contents
 .. 1. Bindings
 ..... 1. Room buffers
 ..... 2. Room list buffer
-..... 3. Mentions/notifications buffers
+..... 3. Directory buffers
+..... 4. Mentions/notifications buffers
 .. 2. Tips
 ..... 1. Displaying symbols and emojis
 .. 3. Encrypted room support through Pantalaimon
 3. Rationale
 4. Changelog
-.. 1. 0.2.1
-.. 2. 0.2
-.. 3. 0.1.4
-.. 4. 0.1.3
-.. 5. 0.1.2
-.. 6. 0.1.1
-.. 7. 0.1
+.. 1. 0.3
+.. 2. 0.2.1
+.. 3. 0.2
+.. 4. 0.1.4
+.. 5. 0.1.3
+.. 6. 0.1.2
+.. 7. 0.1.1
+.. 8. 0.1
 5. Development
 .. 1. Copyright Assignment
 .. 2. Matrix spec in Org format
@@ -158,6 +160,8 @@ Feel free to join us in the chat room:
        prefix, un-ignore).
      • `ement-room-set-message-format' to set a room's message format
        buffer-locally.
+     • `ement-directory' to view a room directory.
+     • `ement-directory-search' to search a room directory.
   4. Use these special buffers to see events from multiple rooms (you
      can also reply to messages from these buffers!):
      • See all new events that mention you in the `*Ement Mentions*'
@@ -262,7 +266,14 @@ Feel free to join us in the chat room:
   ⁃ Move between room names: `TAB' / `<backtab>'
 
 
-2.1.3 Mentions/notifications buffers
+2.1.3 Directory buffers
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ⁃ View/join a room: `RET' / `mouse-1'
+  ⁃ Load next batch of rooms: `+'
+
+
+2.1.4 Mentions/notifications buffers
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Move between events: `TAB' / `<backtab>'
@@ -413,14 +424,42 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.2.1
+4.1 0.3
+───────
+
+  *Additions*
+  ⁃ Command `ement-directory' shows a server's room directory.
+  ⁃ Command `ement-directory-search' searches a server's room directory.
+  ⁃ Command `ement-directory-next' fetches the next batch of rooms in a
+    directory.
+  ⁃ Command `ement-leave-room' accepts a `FORCE-P' argument
+    (interactively, with prefix) to leave a room without prompting.
+  ⁃ Command `ement-forget-room' accepts a `FORCE-P' argument
+    (interactively, with prefix) to also leave the room, and to forget
+    it without prompting.
+  ⁃ Option `ement-notify-mark-frame-urgent-predicates' marks the frame
+    as urgent when (by default) a message mentions the local user or
+    "@room" and the message's room has an open buffer.
+
+  *Changes*
+  ⁃ Minor improvements to date/time headers.
+
+  *Fixes*
+  ⁃ Command `ement-describe-room' for rooms without topics.
+  ⁃ Improve insertion of old messages around existing timestamp headers.
+  ⁃ Reduce D-Bus notification system check timeout to 2 seconds (from
+    the default of 25).
+  ⁃ Compatibility with Emacs 27.
+
+
+4.2 0.2.1
 ─────────
 
   *Fixes*
   ⁃ Info manual export filename.
 
 
-4.2 0.2
+4.3 0.2
 ───────
 
   *Changes*
@@ -455,14 +494,14 @@ Feel free to join us in the chat room:
 [Julien Roy] <https://github.com/MrRoy>
 
 
-4.3 0.1.4
+4.4 0.1.4
 ─────────
 
   *Fixed*
   ⁃ Info manual directory headers.
 
 
-4.4 0.1.3
+4.5 0.1.3
 ─────────
 
   *Fixed*
@@ -472,7 +511,7 @@ Feel free to join us in the chat room:
     re-enabled in a future release.)
 
 
-4.5 0.1.2
+4.6 0.1.2
 ─────────
 
   *Fixed*
@@ -489,7 +528,7 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.6 0.1.1
+4.7 0.1.1
 ─────────
 
   *Fixed*
@@ -499,7 +538,7 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.7 0.1
+4.8 0.1
 ───────
 
   After almost two years of development, the first tagged release.

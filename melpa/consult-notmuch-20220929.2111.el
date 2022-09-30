@@ -3,10 +3,10 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: mail
-;; Package-Version: 20220513.1647
-;; Package-Commit: 4138855cddee0ef126cff6a5fc5ca9c49fd2682d
+;; Package-Version: 20220929.2111
+;; Package-Commit: 29e9a3d0d4ed2e8bcefbf009103f7e5665b6c260
 ;; License: GPL-3.0-or-later
-;; Version: 0.7
+;; Version: 0.8
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (notmuch "0.31"))
 ;; Homepage: https://codeberg.org/jao/consult-notmuch
 

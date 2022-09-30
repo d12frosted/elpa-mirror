@@ -1,0 +1,23 @@
+Package: librera-sync
+Fetcher: github
+Source:  https://github.com/jumper047/librera-sync.git
+
+Updating /mnt/store/melpa/working/librera-sync/
+Checking out origin/HEAD
+Checking out b6b97adc08c26b1595249e1c129793100f4ca26e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/librera-sync/
+  to /tmp/librera-syncuRkcFy/librera-sync-20210827.2300
+    librera-sync-doc-view.el -> librera-sync-doc-view.el
+    librera-sync-pdf-view.el -> librera-sync-pdf-view.el
+    librera-sync.el -> librera-sync.el
+Created librera-sync-20210827.2300.tar containing:
+  librera-sync-20210827.2300/
+  librera-sync-20210827.2300/librera-sync-doc-view.el
+  librera-sync-20210827.2300/librera-sync-pdf-view.el
+  librera-sync-20210827.2300/librera-sync-pkg.el
+  librera-sync-20210827.2300/librera-sync.el
+Built librera-sync in 3.295s, finished at 2022-09-29T23:18:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 429 Sep 29 23:18 packages/librera-sync-20210827.2300.entry
+ 32K -rw-r--r-- 1 root root 30K Sep 29 23:18 packages/librera-sync-20210827.2300.tar

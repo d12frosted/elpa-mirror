@@ -6,8 +6,8 @@
 ;; Created: 28 Dec 2017
 ;; Homepage: https://github.com/radian-software/diary-manager
 ;; Keywords: extensions
-;; Package-Version: 20220508.128
-;; Package-Commit: c538504e606208fa902d040e54188072df6193d0
+;; Package-Version: 20220929.2042
+;; Package-Commit: 56c739224e5bb845d275bfe3f4e420285de3a929
 ;; Package-Requires: ((emacs "25"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 2.0.2
@@ -73,6 +73,13 @@ Defaults to DIARY_ENTRY_EXTENSION, if set."
 (defcustom diary-manager-enable-git-integration t
   "Whether to integrate with Git when inside a Git repository."
   :type 'boolean)
+
+(defcustom diary-manager-template
+  (or (getenv "DIARY_ENTRY_TEMPLATE") "template")
+  "Filename for template to initialize new diary entries with.
+This will have `diary-manager-entry-extension' appended to it,
+and is interpreted relative to `diary-manager-location'."
+  :type 'string)
 
 ;;;; Utility functions
 
@@ -192,6 +199,13 @@ failed\". RESULT is as returned by
                                  output))))))
       (format "%s [command not found]: %s\n"
               message cmd-string))))
+
+(defun diary-manager--get-filename (date)
+  "Get filename based on DATE. Return an absolute filepath."
+  (expand-file-name
+   (concat (format-time-string diary-manager-date-format date)
+           diary-manager-entry-extension)
+   diary-manager-location))
 
 (defun diary-manager--validate-process (pred result)
   "If PRED applied to RESULT returns a message, throw an error.
@@ -492,13 +506,17 @@ Interactively, select DATE using
    (progn
      (diary-manager--ensure-location-set)
      (list (funcall diary-manager-read-date-function "[Entry to edit]"))))
-  (diary-manager--ensure-location-set)
-  (find-file
-   (expand-file-name
-    (concat (format-time-string diary-manager-date-format date)
-            diary-manager-entry-extension)
-    diary-manager-location))
   (setq diary-manager--buffer-date date)
+  (diary-manager--ensure-location-set)
+  (let ((filename (diary-manager--get-filename diary-manager--buffer-date))
+        (templatefile
+         (expand-file-name
+          (concat diary-manager-template diary-manager-entry-extension)
+          diary-manager-location)))
+    (find-file filename)
+    (when (and (zerop (buffer-size))
+               (file-exists-p templatefile))
+      (insert-file-contents templatefile nil)))
   (setq diary-manager--buffer-dedicated t)
   (diary-manager-edit-mode +1))
 

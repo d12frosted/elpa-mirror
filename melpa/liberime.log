@@ -3,3 +3,38 @@ Fetcher: github
 Source:  https://github.com/merrickluo/liberime.git
 
 Updating /mnt/store/melpa/working/liberime/
+Checking out origin/HEAD
+Checking out 2217883b0ca3b308de4e2c670a0ac8c767fd633e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/liberime/
+  to /tmp/liberimeArC0hQ/liberime-20220928.845
+    liberime.el -> liberime.el
+    src => src
+    emacs-module => emacs-module
+    LICENSE -> LICENSE
+    Makefile -> Makefile
+    README.org -> README.org
+Created liberime-20220928.845.tar containing:
+  liberime-20220928.845/
+  liberime-20220928.845/LICENSE
+  liberime-20220928.845/Makefile
+  liberime-20220928.845/README.org
+  liberime-20220928.845/emacs-module/
+  liberime-20220928.845/emacs-module/26/
+  liberime-20220928.845/emacs-module/26/emacs-module.h
+  liberime-20220928.845/emacs-module/27/
+  liberime-20220928.845/emacs-module/27/emacs-module.h
+  liberime-20220928.845/emacs-module/28/
+  liberime-20220928.845/emacs-module/28/emacs-module.h
+  liberime-20220928.845/liberime-pkg.el
+  liberime-20220928.845/liberime.el
+  liberime-20220928.845/src/
+  liberime-20220928.845/src/init.c
+  liberime-20220928.845/src/interface.c
+  liberime-20220928.845/src/interface.h
+  liberime-20220928.845/src/liberime-core.c
+  liberime-20220928.845/src/liberime-core.h
+Built liberime in 3.697s, finished at 2022-09-29T23:18:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  325 Sep 29 23:18 packages/liberime-20220928.845.entry
+160K -rw-r--r-- 1 root root 160K Sep 29 23:18 packages/liberime-20220928.845.tar
