@@ -7,8 +7,8 @@
 ;; Created: April 17, 2020
 ;; Modified: February 20, 2022
 ;; Version: 1.1
-;; Package-Version: 20220426.2058
-;; Package-Commit: 566944e3b336c29d3ac11cd739a954c9d112f3fb
+;; Package-Version: 20220930.52
+;; Package-Commit: e92b5cffa4e87c221c24f3e72ae33959e1ec2b68
 ;; Keywords: abbrev, tools
 ;; Homepage: https://github.com/ymarco/auto-activating-snippets
 ;; Package-Requires: ((emacs "26.3"))
@@ -45,11 +45,13 @@
 
 (defvar-local aas-transient-snippet-key nil
   "Key of the active snippet.
+
 Defined while calling the expansion and condition functions, and
 during evaluation of `aas-pre-snippet-expand-hook' and
 `aas-post-snippet-expand-hook'.")
 (defvar-local aas-transient-snippet-expansion nil
   "Expansion of the active snippet.
+
 Defined while calling the expansion and condition functions, and
 during evaluation of `aas-pre-snippet-expand-hook' and
 `aas-post-snippet-expand-hook'.")
@@ -157,7 +159,7 @@ expand if it returned non-nil. To remove a previously-set
 condition, use :cond nil.
 
 During the expansion process, user-provided functions for
-conditions and examples are free to use the variables
+conditions and expansions are free to use the variables
 `aas-transient-snippet-key', `aas-transient-snippet-expansion',
 `aas-transient-snippet-condition-result', which see.
 
@@ -222,8 +224,8 @@ Use for the typing history, `aas--current-prefix-maps' and
                ;; unseccesfull. remove dead end from the list
                (cl-callf cdr current-map-sublist)
                (setcdr prev current-map-sublist)))
-            ;; Make sure the loop progresses even in the face of objectionable
-            ;; output from `this-command-keys'
+            ;; Make sure the loop progresses even in the face of odd output from
+            ;; `this-command-keys'
             (t (cl-callf cdr current-map-sublist)
                (setcdr prev current-map-sublist))))))
 

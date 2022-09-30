@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20220928.1506
-;; Package-Commit: bd91ba0cd57b8394b2ae970f6a110756f7a913b2
+;; Package-Version: 20220930.226
+;; Package-Commit: 0f7ad29dfa2b96cd1fe827d77dbd90603b57f5b9
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -81,6 +81,7 @@
                   ("encrypted" . ,(all-the-icons-faicon "lock" :face '(:foreground "DodgerBlue")))
                   ("decrypted" . ,(all-the-icons-faicon "unlock" :face '(:foreground "DodgerBlue")))
                   ("certificate" . ,(all-the-icons-faicon "certificate" :face '(:foreground "DodgerBlue")))
+                  ("fingerprint" . ,(all-the-icons-material "fingerprint" :face '(:foreground "LawnGreen")))
                   ("private" . ,(all-the-icons-material "fingerprint" :face '(:foreground "LawnGreen")))
                   ("privacy" . ,(all-the-icons-material "fingerprint" :face '(:foreground "LawnGreen")))
                   ("face" . ,(all-the-icons-material "face" :face '(:foreground "black")))
@@ -705,7 +706,7 @@
                   ("API" . ,(all-the-icons-fileicon "api-blueprint" :face '(:foreground "LightGray")))
                   ("qrcode" . ,(all-the-icons-faicon "qrcode" :face '(:foreground "LightGray")))
                   ("barcode" . ,(all-the-icons-faicon "barcode" :face '(:foreground "LightGray")))
-                  ;; -----------------------------------------------------
+                  
                   ;; Testing
                   ;; ("" . ,(all-the-icons-fileicon "test-dir" :face '(:foreground "DarkCyan")))
                   ;; ("" . ,(all-the-icons-fileicon "test-genertic" :face '(:foreground "DarkCyan")))
@@ -717,7 +718,7 @@
                   ;; ("" . ,(all-the-icons-fileicon "test-ruby" :face '(:foreground "DarkCyan")))
                   ;; ("" . ,(all-the-icons-fileicon "test-perl" :face '(:foreground "DarkCyan")))
                   ;; ("" . ,(all-the-icons-fileicon "phpunit" :face '(:foreground "DarkCyan")))
-                  ;; -----------------------------------------------------
+                  
                   ;; Open Source
                   ("GNU" . ,(all-the-icons-fileicon "gnu" :face '(:foreground "gray")))
                   ("free" . ,(all-the-icons-fileicon "freemarker" :face '(:foreground "LimeGreen")))
@@ -726,7 +727,9 @@
                   ("trademark" . ,(all-the-icons-faicon "trademark" :face '(:foreground "SteelBlue")))
                   ("registered" . ,(all-the-icons-faicon "registered" :face '(:foreground "gold")))
                   ("creative-commons" . ,(all-the-icons-faicon "creative-commons" :face '(:foreground "gray")))
-                  ;; -----------------------------------------------------
+
+                  ("AI" . ,(all-the-icons-fileicon "brain" :face '(:foreground "DeepSkyBlue")))
+
                   ;; Project
                   ("@project" . ,(all-the-icons-faicon "bolt" :face '(:foreground "yellow")))))))
 
