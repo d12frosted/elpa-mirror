@@ -289,6 +289,12 @@
   The actual visuals of this "pop-up" can be different depending of your
   system's setup (see [this pull request] for a couple of examples.
 
+  Moreover if `annotate-use-echo-area' and
+  `annotate-print-annotation-under-cursor' value *both* non null,
+  placing the cursor over an annotated text region will print the
+  annotation's text in the minibuffer prefixed by the value of
+  customizable variable `annotate-print-annotation-under-cursor-prefix'.
+
   Another alternative way to show annotations is provided by the
   command: `annotate-summary-of-file-from-current-pos'.
 
@@ -302,6 +308,9 @@
 ◊ 5.0.0.1 related customizable variable
 
   • `annotate-use-echo-area'
+  • `annotate-print-annotation-under-cursor'
+  • `annotate-print-annotation-under-cursor-prefix'
+  • `annotate-summary-of-file-from-current-pos'.
 
 
 6 Other commands

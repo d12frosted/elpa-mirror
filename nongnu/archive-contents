@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 7 2)
+	   [(1 8 0)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "145719fe7b31ede66d656261103d829a0ed695af"))])
+	     (:commit . "c210a75a2582bfd8e28f177747d3a9ec89fc2f3e"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -1628,7 +1628,7 @@
 	   ("Random User"))
 	  (:commit . "b10ab60a4e567a1fb7d7702d146ed7055b203113"))])
  (sweeprolog .
-	     [(0 4 3)
+	     [(0 4 5)
 	      ((emacs
 		(28)))
 	      "Embedded SWI-Prolog" tar
@@ -1637,7 +1637,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "cada0d387148fc4c8a7589a339dea3394de6b690"))])
+	       (:commit . "4a8fe00e40dc78cc47f448c25beae78fdd3c4cd1"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs

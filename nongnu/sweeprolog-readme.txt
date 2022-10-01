@@ -15,6 +15,7 @@ Table of Contents
 Overview
 .. High-level architecture
 Installation
+Getting started
 Prolog initialization and cleanup
 Querying Prolog
 .. Conversion of Elisp objects to Prolog terms
@@ -90,9 +91,9 @@ High-level architecture
 Installation
 ════════════
 
-  The dynamic Emacs module `sweeprolog-module' and the Prolog helper
-  library `sweep.pl' are included in the latest SWI-Prolog distribution.
-  For instructions on how to build and install SWI-Prolog, see
+  The dynamic Emacs module `sweep-module' and the Prolog helper library
+  `sweep.pl' are included in the latest SWI-Prolog distribution.  For
+  instructions on how to build and install SWI-Prolog, see
   <https://www.swi-prolog.org/build/>.
 
   The `sweeprolog' Elisp package is available on NonGNU ELPA, to install
@@ -117,10 +118,32 @@ Installation
      │ (add-to-list 'load-path "/path/to/sweep")
      └────
 
-  3. Load `sweep' into Emacs:
-     ┌────
-     │ (require 'sweeprolog)
-     └────
+
+Getting started
+═══════════════
+
+  After installing the `sweeprolog' Elisp library, load it into Emacs:
+
+  ┌────
+  │ (require 'sweeprolog)
+  └────
+
+  All set!  `sweeprolog' automatically loads `sweep-module' and
+  initializes the embedded SWI-Prolog runtime.  For a description of the
+  different features of `sweep', see the following sections of this
+  manual.
+
+  _Important note for Linux users_: prior to version 29, Emacs would
+  load dynamic modules in a way that is not fully compatible with the
+  way the SWI-Prolog native library, `libswipl', loads its own native
+  extensions.  This may lead to `sweep' failing after loading
+  `sweep-module'.  To work around this issue, users running Emacs 28 or
+  earlier on Linux can start Emacs with `libswipl' loaded upfront via
+  `LD_PRELOAD', for example:
+
+  ┌────
+  │ LD_PRELOAD=/usr/local/lib/libswipl.so emacs
+  └────
 
 
 Prolog initialization and cleanup
@@ -129,7 +152,7 @@ Prolog initialization and cleanup
   The embedded SWI-Prolog runtime must be initialized before it can
   start executing queries.  In `sweep', Prolog initialization is done
   via the C-implemented `sweeprolog-initialize' Elisp function defined
-  in `sweeprolog-module'.  `sweeprolog-initialize' takes one or more
+  in `sweep-module'.  `sweeprolog-initialize' takes one or more
   arguments, which must all be strings, and initializes the embedded
   Prolog as if it were invoked externally in a command line with the
   given strings as command line arguments, where the first argument to
@@ -504,6 +527,13 @@ Quasi-quotation highlighting
   If a quasi-quotation type does not have a matching mode in
   `sweeprolog-qq-mode-alist', the function `sweeprolog-qq-content-face'
   is used to determine a default face for quoted content.
+
+  For more information about quasi-quotations in SWI-Prolog, see
+  [library(quasi_quotations) in the SWI-Prolog manual].
+
+
+[library(quasi_quotations) in the SWI-Prolog manual]
+<https://www.swi-prolog.org/pldoc/man?section=quasiquotations>
 
 
 Term-based editing and motion commands
