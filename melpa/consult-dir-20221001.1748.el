@@ -4,8 +4,8 @@
 ;; Maintainer: Karthik Chikmagalur <karthik.chikmagalur@gmail.com>
 ;; Created: 2021
 ;; Version: 0.1
-;; Package-Version: 20220808.141
-;; Package-Commit: 8abf62df088de87175e98adf8f6f5fb93515004c
+;; Package-Version: 20221001.1748
+;; Package-Commit: ed8f0874d26f10f5c5b181ab9f2cf4107df8a0eb
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (project "0.6.0"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/karthink/consult-dir
@@ -266,8 +266,11 @@ Entries that are also in the list of projects are removed."
          (proj-list-hash (consult-dir--project-list-make))
          (in-other-source-p (lambda (dir) (not (or (and proj-list-hash (gethash dir proj-list-hash))
                                               (member dir current-dirs)))))
-         (file-directory-safe (lambda (f) (or (and (file-directory-p f) (file-name-as-directory f))
-                                         (file-name-directory f)))))
+         (file-directory-safe (lambda (f) (or (and (if (file-remote-p f)
+                                                       (string-suffix-p "/" f)
+                                                     (file-directory-p f))
+                                                   (file-name-as-directory f))
+                                              (file-name-directory f)))))
     (thread-last recentf-list
       (mapcar file-directory-safe)
       (delete-dups)

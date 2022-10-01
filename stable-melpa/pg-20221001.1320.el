@@ -4,8 +4,8 @@
 
 ;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
 ;; Version: 0.17
-;; Package-Version: 20221001.1001
-;; Package-Commit: 23362757a91bb46eec3b571cbcb864116664d01b
+;; Package-Version: 20221001.1320
+;; Package-Commit: 99085cd115b705e42e574b13dc168b901b767bf3
 ;; Keywords: data comm database postgresql
 ;; URL: https://github.com/emarsden/pg-el
 ;; Package-Requires: ((emacs "26.1"))
@@ -44,20 +44,32 @@
 ;; ------------
 ;;
 ;; (with-pg-connection con (dbname user [password host port]) &body body)
-;;     A macro which opens a connection to database DBNAME, executes the
-;;     BODY forms then disconnects. See function `pg-connect' for details
-;;     of the connection arguments.
+;;     A macro which opens a connection to database DBNAME over a TCP socket,
+;;     executes the BODY forms then disconnects. See function `pg-connect' for
+;;     details of the connection arguments.
+;;
+;; (with-pg-connection-local con (path dbname user [password]) &body body)
+;;     A macro which opens a connection to database DBNAME over a local Unix
+;;     socket at PATH, executes the BODY forms then disconnects. See function
+;;     `pg-connect-local' for details of the connection arguments.
 ;;
 ;; (with-pg-transaction con &body body)
 ;;     A macro which executes the BODY forms wrapped in an SQL transaction.
 ;;     CON is a connection to the database. If an error occurs during the
 ;;     execution of the forms, a ROLLBACK instruction is executed.
 ;;
-;; (pg-connect dbname user [password host port]) -> connection
+;; (pg-connect dbname user [password host port tls]) -> connection
 ;;     Connect to the database DBNAME on HOST (defaults to localhost) at PORT
 ;;     (defaults to 5432) via TCP/IP and log in as USER. PASSWORD is used for
-;;     authentication with the backend. Set the output date type to 'ISO', and
-;;     initialize our type parser tables.
+;;     authentication with the backend (defaults to the empty string). If TLS is
+;;     non-NIL, attempt to upgrade the connection to TLS. Set the output date
+;;     type to 'ISO', and initialize our type parser tables.
+;;
+;; (pg-connect-local path dbname user [password]) -> connection
+;;     Connect to the database DBNAME over local Unix socket at PATH and log in
+;;     as USER. PASSWORD is used for authentication with the backend (defaults
+;;     to the empty string). Set the output date type to 'ISO', and initialize
+;;     our type parser tables.
 ;;
 ;; (pg-exec connection &rest sql) -> pgresult
 ;;     Concatenate the SQL strings and send to the backend. Retrieve
@@ -310,6 +322,18 @@ normal or otherwise, the database connection is closed."
          (progn ,@body)
        (when ,con (pg-disconnect ,con)))))
 
+(defmacro with-pg-connection-local (con connect-args &rest body)
+  "Execute BODY forms in a scope with local Unix connection CON created by CONNECT-ARGS.
+The database connection is bound to the variable CON. If the
+connection is unsuccessful, the forms are not evaluated.
+Otherwise, the BODY forms are executed, and upon termination,
+normal or otherwise, the database connection is closed."
+  `(let ((,con (pg-connect-local ,@connect-args)))
+     (unwind-protect
+         (progn ,@body)
+       (when ,con (pg-disconnect ,con)))))
+
+
 (defmacro with-pg-transaction (con &rest body)
   "Execute BODY forms in a BEGIN..END block with pre-established connection CON.
 If a PostgreSQL error occurs during execution of the forms, execute
@@ -347,6 +371,114 @@ tag called pg-finished."
                    do (funcall callback res))
            (pg-exec con "CLOSE " cursor))))))
 
+;; Run the startup interaction with the PostgreSQL database. Authenticate and read the connection
+;; parameters. This function allows us to share code common to TCP and Unix socket connections to
+;; the backend.
+(cl-defun pg-do-startup (connection dbname user password)
+  "Handle the startup sequence to authenticate with PostgreSQL over CONNECTION."
+  ;; send the StartupMessage, as per https://www.postgresql.org/docs/current/protocol-message-formats.html
+  (let ((packet-octets (+ 4 2 2
+                          (1+ (length "user"))
+                          (1+ (length user))
+                          (1+ (length "database"))
+                          (1+ (length dbname))
+                          (1+ (length "application_name"))
+                          (1+ (length pg-application-name))
+                          1)))
+    (pg-send-int connection packet-octets 4)
+    (pg-send-int connection pg-PG_PROTOCOL_MAJOR 2)
+    (pg-send-int connection pg-PG_PROTOCOL_MINOR 2)
+    (pg-send-string connection "user")
+    (pg-send-string connection user)
+    (pg-send-string connection "database")
+    (pg-send-string connection dbname)
+    (pg-send-string connection "application_name")
+    (pg-send-string connection pg-application-name)
+    ;; A zero byte is required as a terminator after the last name/value pair.
+    (pg-send-int connection 0 1)
+    (pg-flush connection))
+  (cl-loop for c = (pg-read-char connection) do
+           (cond ((eq ?E c)
+                  ;; an ErrorResponse message
+                  (pg-handle-error-response connection "after StartupMessage"))
+                 
+                 ;; NegotiateProtocolVersion
+                 ((eq ?v c)
+                  (let ((_msglen (pg-read-net-int connection 4))
+                        (protocol-supported (pg-read-net-int connection 4))
+                        (unrec-options (pg-read-net-int connection 4))
+                        (unrec (list)))
+                    ;; read the list of protocol options not supported by the server
+                    (dotimes (_i unrec-options)
+                      (push (pg-read-string connection 4096) unrec))
+                    (error "Server only supports protocol minor version <= %s" protocol-supported)))
+
+                 ;; BackendKeyData
+                 ((eq ?K c)
+                  (let ((_msglen (pg-read-net-int connection 4)))
+                    (setf (pgcon-pid connection) (pg-read-net-int connection 4))
+                    (setf (pgcon-secret connection) (pg-read-net-int connection 4))))
+
+                 ;; ReadyForQuery message
+                 ((eq ?Z c)
+                  (let ((_msglen (pg-read-net-int connection 4))
+                        (_status (pg-read-char connection)))
+                    ;; status is 'I' or 'T' or 'E'
+                    (and (not pg-disable-type-coercion)
+                         (null pg-parsers)
+                         (pg-initialize-parsers connection))
+                    (pg-exec connection "SET datestyle = 'ISO'")
+                    (cl-return-from pg-do-startup connection)))
+
+                 ;; an authentication request
+                 ((eq ?R c)
+                  (let ((_msglen (pg-read-net-int connection 4))
+                        (areq (pg-read-net-int connection 4)))
+                    (cond
+                     ;; AuthenticationOK message
+                     ((= areq pg-AUTH_REQ_OK)
+                      ;; Continue processing server messages and wait for the ReadyForQuery
+                      ;; message
+                      nil)
+
+                     ((= areq pg-AUTH_REQ_PASSWORD)
+                      ;; send a PasswordMessage
+                      (pg-send-char connection ?p)
+                      (pg-send-int connection (+ 5 (length password)) 4)
+                      (pg-send-string connection password)
+                      (pg-flush connection))
+                     ;; AuthenticationSASL request
+                     ((= areq 10)
+                      (pg-do-sasl-authentication connection user password))
+                     ((= areq 5)
+                      (pg-do-md5-authentication connection user password))
+                     ((= areq pg-AUTH_REQ_CRYPT)
+                      (error "Crypt authentication not supported"))
+                     ((= areq pg-AUTH_REQ_KRB4)
+                      (error "Kerberos4 authentication not supported"))
+                     ((= areq pg-AUTH_REQ_KRB5)
+                      (error "Kerberos5 authentication not supported"))
+                     (t
+                      (error "Can't do that type of authentication: %s" areq)))))
+
+                 ;; ParameterStatus
+                 ((eq ?S c)
+                  (let* ((msglen (pg-read-net-int connection 4))
+                         (msg (pg-read-chars connection (- msglen 4)))
+                         (items (split-string msg (string 0))))
+                    (when (string= "client_encoding" (cl-first items))
+                      (let ((ce (pg-normalize-encoding-name (cl-second items))))
+                        (if ce
+                            (setf (pgcon-client-encoding connection) ce)
+                          (error "Don't know the Emacs equivalent for client encoding %s" (cl-second items)))))
+                    ;; We currently ignore the other ParameterStatus items (application_name,
+                    ;; DateStyle, in_hot_standby, integer_datetimes, etc.)
+                                        ; (when (> (length (cl-first items)) 0)
+                                        ;   (message "Got ParameterStatus %s=%s" (cl-first items) (cl-second items)))
+                    ))
+
+                 (t
+                  (error "Problem connecting: expected an authentication response, got %s" c)))))
 
 (cl-defun pg-connect (dbname user
                              &optional
@@ -354,7 +486,7 @@ tag called pg-finished."
                              (host "localhost")
                              (port 5432)
                              (tls nil))
-  "Initiate a connection with the PostgreSQL backend.
+  "Initiate a connection with the PostgreSQL backend over TCP.
 Connect to the database DBNAME with the username USER, on PORT of
 HOST, providing PASSWORD if necessary. Return a connection to the
 database (as an opaque type). PORT defaults to 5432, HOST to
@@ -391,109 +523,22 @@ attempt to establish an encrypted connection to PostgreSQL."
                               :keylist (and cert (list cert)))
           (gnutls-error
            (error "TLS error connecting to PostgreSQL: %s" (error-message-string err))))))
-    ;; send the StartupMessage, as per https://www.postgresql.org/docs/current/protocol-message-formats.html
-    (let ((packet-octets (+ 4 2 2
-                            (1+ (length "user"))
-                            (1+ (length user))
-                            (1+ (length "database"))
-                            (1+ (length dbname))
-                            (1+ (length "application_name"))
-                            (1+ (length pg-application-name))
-                            1)))
-      (pg-send-int connection packet-octets 4)
-      (pg-send-int connection pg-PG_PROTOCOL_MAJOR 2)
-      (pg-send-int connection pg-PG_PROTOCOL_MINOR 2)
-      (pg-send-string connection "user")
-      (pg-send-string connection user)
-      (pg-send-string connection "database")
-      (pg-send-string connection dbname)
-      (pg-send-string connection "application_name")
-      (pg-send-string connection pg-application-name)
-      ;; A zero byte is required as a terminator after the last name/value pair.
-      (pg-send-int connection 0 1)
-      (pg-flush connection))
-    (cl-loop for c = (pg-read-char connection) do
-     (cond ((eq ?E c)
-            ;; an ErrorResponse message
-            (pg-handle-error-response connection "after StartupMessage"))
+    ;; the remainder of the startup sequence is common to TCP and Unix socket connections
+    (pg-do-startup connection dbname user password)))
 
-           ;; NegotiateProtocolVersion
-           ((eq ?v c)
-            (let ((_msglen (pg-read-net-int connection 4))
-                  (protocol-supported (pg-read-net-int connection 4))
-                  (unrec-options (pg-read-net-int connection 4))
-                  (unrec (list)))
-              ;; read the list of protocol options not supported by the server
-              (dotimes (_i unrec-options)
-                (push (pg-read-string connection 4096) unrec))
-              (error "Server only supports protocol minor version <= %s" protocol-supported)))
+(cl-defun pg-connect-local (path dbname user &optional (password ""))
+  "Initiate a connection with the PostgreSQL backend over local Unix socket PATH.
+Connect to the database DBNAME with the username USER, providing
+PASSWORD if necessary. Return a connection to the database (as an
+opaque type). PASSWORD defaults to an empty string."
+  (let* ((buf (generate-new-buffer " *PostgreSQL*"))
+         (process (make-network-process :name "postgres" :buffer buf :family 'local :service path :coding nil))
+         (connection (make-pgcon :process process :position 1)))
+    (with-current-buffer buf
+      (set-process-coding-system process 'binary 'binary)
+      (set-buffer-multibyte nil))
+    (pg-do-startup connection dbname user password)))
 
-           ;; BackendKeyData
-           ((eq ?K c)
-            (let ((_msglen (pg-read-net-int connection 4)))
-              (setf (pgcon-pid connection) (pg-read-net-int connection 4))
-              (setf (pgcon-secret connection) (pg-read-net-int connection 4))))
-
-           ;; ReadyForQuery message
-           ((eq ?Z c)
-            (let ((_msglen (pg-read-net-int connection 4))
-                  (_status (pg-read-char connection)))
-              ;; status is 'I' or 'T' or 'E'
-              (and (not pg-disable-type-coercion)
-                   (null pg-parsers)
-                   (pg-initialize-parsers connection))
-              (pg-exec connection "SET datestyle = 'ISO'")
-              (cl-return-from pg-connect connection)))
-
-           ;; an authentication request
-           ((eq ?R c)
-             (let ((_msglen (pg-read-net-int connection 4))
-                   (areq (pg-read-net-int connection 4)))
-               (cond
-                ;; AuthenticationOK message
-                ((= areq pg-AUTH_REQ_OK)
-                 ;; Continue processing server messages and wait for the ReadyForQuery
-                 ;; message
-                 nil)
-
-                ((= areq pg-AUTH_REQ_PASSWORD)
-                 ;; send a PasswordMessage
-                 (pg-send-char connection ?p)
-                 (pg-send-int connection (+ 5 (length password)) 4)
-                 (pg-send-string connection password)
-                 (pg-flush connection))
-                ;; AuthenticationSASL request
-                ((= areq 10)
-                 (pg-do-sasl-authentication connection user password))
-                ((= areq 5)
-                 (pg-do-md5-authentication connection user password))
-                ((= areq pg-AUTH_REQ_CRYPT)
-                 (error "Crypt authentication not supported"))
-                ((= areq pg-AUTH_REQ_KRB4)
-                 (error "Kerberos4 authentication not supported"))
-                ((= areq pg-AUTH_REQ_KRB5)
-                 (error "Kerberos5 authentication not supported"))
-                (t
-                 (error "Can't do that type of authentication: %s" areq)))))
-
-           ;; ParameterStatus
-           ((eq ?S c)
-            (let* ((msglen (pg-read-net-int connection 4))
-                   (msg (pg-read-chars connection (- msglen 4)))
-                   (items (split-string msg (string 0))))
-              (when (string= "client_encoding" (cl-first items))
-                (let ((ce (pg-normalize-encoding-name (cl-second items))))
-                  (if ce
-                      (setf (pgcon-client-encoding connection) ce)
-                    (error "Don't know the Emacs equivalent for client encoding %s" (cl-second items)))))
-              ;; We currently ignore the other ParameterStatus items (application_name,
-              ;; DateStyle, in_hot_standby, integer_datetimes, etc.)
-              ; (when (> (length (cl-first items)) 0)
-              ;   (message "Got ParameterStatus %s=%s" (cl-first items) (cl-second items)))
-              ))
-
-            (t
-             (error "Problem connecting: expected an authentication response, got %s" c))))))
 
 (cl-defun pg-exec (connection &rest args)
   "Execute the SQL command given by concatenating ARGS on database CONNECTION.

@@ -16,20 +16,32 @@ Entry points
 ------------
 
 (with-pg-connection con (dbname user [password host port]) &body body)
-    A macro which opens a connection to database DBNAME, executes the
-    BODY forms then disconnects. See function `pg-connect' for details
-    of the connection arguments.
+    A macro which opens a connection to database DBNAME over a TCP socket,
+    executes the BODY forms then disconnects. See function `pg-connect' for
+    details of the connection arguments.
+
+(with-pg-connection-local con (path dbname user [password]) &body body)
+    A macro which opens a connection to database DBNAME over a local Unix
+    socket at PATH, executes the BODY forms then disconnects. See function
+    `pg-connect-local' for details of the connection arguments.
 
 (with-pg-transaction con &body body)
     A macro which executes the BODY forms wrapped in an SQL transaction.
     CON is a connection to the database. If an error occurs during the
     execution of the forms, a ROLLBACK instruction is executed.
 
-(pg-connect dbname user [password host port]) -> connection
+(pg-connect dbname user [password host port tls]) -> connection
     Connect to the database DBNAME on HOST (defaults to localhost) at PORT
     (defaults to 5432) via TCP/IP and log in as USER. PASSWORD is used for
-    authentication with the backend. Set the output date type to 'ISO', and
-    initialize our type parser tables.
+    authentication with the backend (defaults to the empty string). If TLS is
+    non-NIL, attempt to upgrade the connection to TLS. Set the output date
+    type to 'ISO', and initialize our type parser tables.
+
+(pg-connect-local path dbname user [password]) -> connection
+    Connect to the database DBNAME over local Unix socket at PATH and log in
+    as USER. PASSWORD is used for authentication with the backend (defaults
+    to the empty string). Set the output date type to 'ISO', and initialize
+    our type parser tables.
 
 (pg-exec connection &rest sql) -> pgresult
     Concatenate the SQL strings and send to the backend. Retrieve
