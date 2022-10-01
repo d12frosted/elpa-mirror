@@ -7,8 +7,8 @@
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Created: September 15, 2022
 ;; Version: 0.0.0
-;; Package-Version: 20220925.2219
-;; Package-Commit: d221aec2f20f80e52d29d8ef858eae260dbb44a0
+;; Package-Version: 20221001.1037
+;; Package-Commit: 44dca0c889ac605777257ec3db442263772bb2c6
 ;; Keywords: exercism, convenience
 ;; Homepage: https://github.com/anonimitoraf/exercism.el
 ;; Package-Requires: ((emacs "27.1") (dash "2.19.1") (a "1.0.0") (s "1.13.1") (request "0.3.2") (async "1.9.6") (async-await "1.1") (persist "0.5") (transient "0.3.7"))
@@ -17,8 +17,7 @@
 ;;
 ;;; Commentary:
 ;;
-;;  Unofficial https://exercism.org integration
-;;  Provides slightly more features then the CLI for a more streamlined experience.
+;;  Do exercism exercises within Emacs!
 ;;
 ;;; Code:
 
