@@ -1,11 +1,11 @@
 (emacsql-psql .
-	      [(20220918 1902)
+	      [(20221002 1336)
 	       ((emacs
 		 (25 1))
 		(emacsql
 		 (2 0 0)))
 	       "EmacSQL back-end for PostgreSQL via psql" tar
-	       ((:commit . "18b40213fdc4cab2f836f5dc3f42b12f3c27af66")
+	       ((:commit . "5c4aa1030be157229cdccd6b11cb30ca94cda954")
 		(:authors
 		 ("Christopher Wellons" . "wellons@nullprogram.com"))
 		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")

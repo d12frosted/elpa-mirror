@@ -1,11 +1,11 @@
 (emacsql-sqlite .
-		[(20220918 1902)
+		[(20220929 1924)
 		 ((emacs
 		   (25 1))
 		  (emacsql
 		   (3 0 0)))
 		 "EmacSQL back-end for SQLite" tar
-		 ((:commit . "18b40213fdc4cab2f836f5dc3f42b12f3c27af66")
+		 ((:commit . "b9d848fa9c5bdfe96a7e77e03ce91c1190ff2722")
 		  (:authors
 		   ("Christopher Wellons" . "wellons@nullprogram.com"))
 		  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")

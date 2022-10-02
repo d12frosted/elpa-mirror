@@ -4,10 +4,10 @@ Source:  https://git.sr.ht/~niklaseklund/detached.el
 
 Updating /mnt/store/melpa/working/detached/
 Checking out origin/HEAD
-Checking out 772ac746a9e8350f24ff548301ef13986e5b21d9
+Checking out 53be9af04c8ad3ab4b5f9cb451f6e40621b4c89c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/detached/
-  to /tmp/detachedGJNfDf/detached-20220928.806
+  to /tmp/detached5x1ziO/detached-20221002.1055
     detached-compile.el -> detached-compile.el
     detached-consult.el -> detached-consult.el
     detached-dired.el -> detached-dired.el
@@ -19,21 +19,23 @@ Copying files (->) and directories (=>)
     detached-shell.el -> detached-shell.el
     detached-vterm.el -> detached-vterm.el
     detached.el -> detached.el
-Created detached-20220928.806.tar containing:
-  detached-20220928.806/
-  detached-20220928.806/detached-compile.el
-  detached-20220928.806/detached-consult.el
-  detached-20220928.806/detached-dired.el
-  detached-20220928.806/detached-eshell.el
-  detached-20220928.806/detached-extra.el
-  detached-20220928.806/detached-init.el
-  detached-20220928.806/detached-list.el
-  detached-20220928.806/detached-org.el
-  detached-20220928.806/detached-pkg.el
-  detached-20220928.806/detached-shell.el
-  detached-20220928.806/detached-vterm.el
-  detached-20220928.806/detached.el
-Built detached in 4.100s, finished at 2022-10-02T07:25:10+0000
+Created detached-20221002.1055.tar containing:
+  detached-20221002.1055/
+  detached-20221002.1055/detached-compile.el
+  detached-20221002.1055/detached-consult.el
+  detached-20221002.1055/detached-dired.el
+  detached-20221002.1055/detached-eshell.el
+  detached-20221002.1055/detached-extra.el
+  detached-20221002.1055/detached-init.el
+  detached-20221002.1055/detached-list.el
+  detached-20221002.1055/detached-org.el
+  detached-20221002.1055/detached-pkg.el
+  detached-20221002.1055/detached-shell.el
+  detached-20221002.1055/detached-vterm.el
+  detached-20221002.1055/detached.el
+Built detached in 4.222s, finished at 2022-10-02T13:44:47+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  439 Oct  2 07:25 packages/detached-20220928.806.entry
-152K -rw-r--r-- 1 root root 150K Oct  2 07:25 packages/detached-20220928.806.tar
+4.0K -rw-r--r-- 1 root root  439 Oct  2 10:32 packages/detached-20220928.806.entry
+152K -rw-r--r-- 1 root root 150K Oct  2 10:32 packages/detached-20220928.806.tar
+4.0K -rw-r--r-- 1 root root  440 Oct  2 13:44 packages/detached-20221002.1055.entry
+152K -rw-r--r-- 1 root root 150K Oct  2 13:44 packages/detached-20221002.1055.tar
