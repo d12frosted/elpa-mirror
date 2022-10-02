@@ -4,11 +4,11 @@
 
 ;; Author: Mykhaylo Bilyanskyy
 ;; URL: https://github.com./licht1stein/obsidian.el
-;; Package-Version: 20220910.2033
-;; Package-Commit: 148874a4778635079525589fdb4136ba314da801
+;; Package-Version: 20221002.553
+;; Package-Commit: e1eeb03066f1d54157de87b629a544ebaa63f71d
 ;; Keywords: obsidian, pkm, convenience
-;; Version: 1.1.4
-;; Package-Requires: ((emacs "27.2") (s "1.12.0") (dash "2.13") (markdown-mode "2.6") (elgrep "1.0.0") (yaml "0.5.1"))
+;; Version: 1.1.5
+;; Package-Requires: ((emacs "27.2") (s "1.12.0") (dash "2.13") (markdown-mode "2.5") (elgrep "1.0.0") (yaml "0.5.1"))
 
 ;; This file is NOT part of GNU Emacs.
 
