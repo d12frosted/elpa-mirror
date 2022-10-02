@@ -33,6 +33,8 @@ Editing Prolog code
 .. Definitions and references
 .. Following file specifications
 .. Loading buffers
+.. Using templates for creating new modules
+.. Displaying predicate documentation
 The Prolog top-level
 .. Multiple top-levels
 .. Top-level history
@@ -645,6 +647,75 @@ Loading buffers
 
 [Loading Prolog source files]
 <https://www.swi-prolog.org/pldoc/man?section=consulting>
+
+
+Using templates for creating new modules
+────────────────────────────────────────
+
+  `sweep' integrates with the Emacs `auto-insert' facility to simplify
+  creation of new SWI-Prolog modules.  `auto-insert' allows for
+  populating newly created files with templates defined by the relevant
+  major mode.
+
+  `sweep' associates a Prolog module skeleton with `sweeprolog-mode',
+  the skeleton begins with a “file header” multi-line comment which
+  includes the name and email address of the user based on the values of
+  `user-full-name' and `user-mail-address' respectively.  A `module/2'
+  directive is placed after the file header, with the module name set to
+  the base name of the file.  Lastly the skeleton inserts a `PlDoc'
+  module comment to be filled with the module’s documentation (see [File
+  comments in the SWI-Prolog manual]).
+
+  As an example, after inserting the module skeleton, a new Prolog file
+  `foo.pl' will have the following contents:
+
+  ┌────
+  │ /*
+  │     Author:        John Doe
+  │     Email:         john.doe@example.com
+  │ 
+  │ */
+  │ 
+  │ :- module(foo, []).
+  │ 
+  │ /** <module> foo
+  │ 
+  │ */
+  │ 
+  └────
+
+  The multi-line comment included above the `module/2' directive can be
+  extended by customizing the user option
+  `sweeprolog-module-header-comment-skeleton', which see.  This can be
+  useful for including e.g. copyright text in the file header.
+
+  To open a new Prolog file, use the standard `C-x C-f' (`find-file')
+  and select a location for the new file.  In the new `sweeprolog-mode'
+  buffer, type `M-x auto-insert' to insert the Prolog module skeleton.
+
+  To automatically insert the module skeleton when opening new files in
+  `sweeprolog-mode', enable the minor mode `auto-insert-mode'.  For
+  detailed information about `auto-insert' and its customization
+  options, see [Autoinserting in the Autotyping manual].
+
+
+[File comments in the SWI-Prolog manual]
+<https://www.swi-prolog.org/pldoc/man?section=sectioncomments>
+
+[Autoinserting in the Autotyping manual] <info:autotype#Autoinserting>
+
+
+Displaying predicate documentation
+──────────────────────────────────
+
+  `sweep' integrates with the Emacs minor mode `ElDoc', which
+  automatically displays documentation for the predicate at point.
+  Whenever the cursor enters a predicate definition or invocation, the
+  signature and summary of that predicate are displayed in the echo area
+  at the bottom of the frame.
+
+  To disable the `ElDoc' integration in `sweeprolog-mode' buffers,
+  customize the user option `sweeprolog-enable-eldoc' to nil.
 
 
 The Prolog top-level
