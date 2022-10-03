@@ -5,10 +5,10 @@
 ;; Author: Eric Schulte
 ;; Maintainer: Chen Bin <chenbin.sh@gmail.com>
 ;; Keywords: mime, mail, email, html
-;; Package-Version: 20220722.242
-;; Package-Commit: 5c19b458f8dbd61f8a40c8b94ba843833ba90a77
+;; Package-Version: 20221003.105
+;; Package-Commit: cc00afcf0291633324364c1c83bfe2833cfdc1bf
 ;; Homepage: http://github.com/org-mime/org-mime
-;; Version: 0.3.1
+;; Version: 0.3.2
 ;; Package-Requires: ((emacs "25.1"))
 
 ;; This file is not part of GNU Emacs.
@@ -128,6 +128,7 @@
 (require 'outline)
 (require 'org)
 (require 'ox-org)
+(require 'ox-html)
 (require 'message)
 
 (defcustom org-mime-beautify-quoted-mail-p t
