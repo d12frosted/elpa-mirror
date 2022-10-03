@@ -1244,7 +1244,7 @@
 		 ("Bastian Bechtold")
 		 ("Christian Schwarzgruber")))])
  (org-mime .
-	   [(0 3 1)
+	   [(0 3 2)
 	    ((emacs
 	      (25 1)))
 	    "org html export for text/html MIME emails" tar
@@ -1253,7 +1253,7 @@
 	     (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 	     (:authors
 	      ("Eric Schulte"))
-	     (:commit . "cf96f585c68ad14751a3f73d937cbfcb890171b9"))])
+	     (:commit . "cc00afcf0291633324364c1c83bfe2833cfdc1bf"))])
  (org-present .
 	      [(0 1)
 	       ((org
