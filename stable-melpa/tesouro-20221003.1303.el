@@ -2,8 +2,8 @@
 
 ;;; Copyleft (Ⓚ) 2022   Rafael Beraldo
 ;;; URL: https://github.com/rberaldo/tesouro.el
-;; Package-Version: 20220928.1426
-;; Package-Commit: c7e7ac1d1d88a2ef7f30004611cf3b37dcdcda1b
+;; Package-Version: 20221003.1303
+;; Package-Commit: 3dbfc49209237215163be1ea338dea099ddc0795
 ;;; Version: 1.0
 ;;; Package-Requires: ((request "0.3.2") (emacs "24.4"))
 
@@ -22,11 +22,11 @@
 
 ;;; Commentary:
 
-;;; Queries dicio.com.br for synonyms of a word using @ThiagoNelsi’s
-;;; dicio-api (https://github.com/ThiagoNelsi/dicio-api)
+;; Queries dicio.com.br for synonyms of a word using @ThiagoNelsi’s
+;; dicio-api (https://github.com/ThiagoNelsi/dicio-api)
 
-;;; Heavily based on @AnselmC’s le-thesaurus.el
-;;; (https://github.com/AnselmC/le-thesaurus.el/)
+;; Heavily based on @AnselmC’s le-thesaurus.el
+;; (https://github.com/AnselmC/le-thesaurus.el/)
 
 ;;; Code:
 

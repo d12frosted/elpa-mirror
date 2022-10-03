@@ -4,8 +4,8 @@
 
 ;; Author: Patrick Thomson <patrickt@github.com>
 ;; URL: https://github.com/patrickt/codespaces.el
-;; Package-Version: 20220901.1802
-;; Package-Commit: 33705cd5e9628f1582baeac371b8bb5a1cc0250e
+;; Package-Version: 20221003.1408
+;; Package-Commit: 1f5f991aa2075d91213d5c9f9139551ffaf5cd3a
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: comm
@@ -53,7 +53,8 @@
                         (tramp-remote-shell-args ("-c")))))
     ;; just for debugging the methods
     (if ghcs (setcdr ghcs ghcs-methods)
-      (push (cons "ghcs" ghcs-methods) tramp-methods))))
+      (push (cons "ghcs" ghcs-methods) tramp-methods)))
+  (tramp-set-completion-function "ghcs" '((codespaces-tramp-completion ""))))
 
 ;;; codespace struct
 
@@ -144,6 +145,11 @@
   "Invoke `completing-read' over JSON hashtable HT, returning a codespace."
   (let ((completion-extra-properties '(:annotation-function codespaces--annotate)))
     (gethash (completing-read "Select a codespace: " ht nil t) ht)))
+
+(defun codespaces-tramp-completion (_filename)
+  "Provide a set of completion candidates to TRAMP connections."
+  (cl-loop for v being the hash-values of (codespaces--all-codespaces)
+         collect (list nil (codespaces-space-name v))))
 
 ;;; Public interface
 

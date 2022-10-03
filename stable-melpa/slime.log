@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out f41e5590e28a1dff1fc07111b43841eb1692de94
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/slime/
-  to /tmp/slimeiD2SJE/slime-20221003.936
+  to /tmp/slime7ZxOJT/slime-20221003.936
     slime-autoloads.el -> slime-autoloads.el
     slime-tests.el -> slime-tests.el
     slime.el -> slime.el
@@ -97,7 +97,7 @@ Copying files (->) and directories (=>)
     contrib/swank-trace-dialog.lisp -> contrib/swank-trace-dialog.lisp
     contrib/swank-util.lisp -> contrib/swank-util.lisp
     contrib/swank.rb -> contrib/swank.rb
-Generating /tmp/slimeiD2SJE/slime-20221003.936/slime.info
+Generating /tmp/slime7ZxOJT/slime-20221003.936/slime.info
 Created slime-20221003.936.tar containing:
   slime-20221003.936/
   slime-20221003.936/contrib/
@@ -212,9 +212,7 @@ Created slime-20221003.936.tar containing:
   slime-20221003.936/swank/source-file-cache.lisp
   slime-20221003.936/swank/source-path-parser.lisp
   slime-20221003.936/xref.lisp
-Built slime in 17.956s, finished at 2022-10-03T11:56:04+0000
+Built slime in 15.775s, finished at 2022-10-03T15:05:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  269 Oct  3 08:52 packages/slime-20220712.817.entry
-2.6M -rw-r--r-- 1 root root 2.6M Oct  3 08:52 packages/slime-20220712.817.tar
-4.0K -rw-r--r-- 1 root root  269 Oct  3 11:56 packages/slime-20221003.936.entry
-2.6M -rw-r--r-- 1 root root 2.6M Oct  3 11:56 packages/slime-20221003.936.tar
+4.0K -rw-r--r-- 1 root root  269 Oct  3 15:05 packages/slime-20221003.936.entry
+2.6M -rw-r--r-- 1 root root 2.6M Oct  3 15:05 packages/slime-20221003.936.tar

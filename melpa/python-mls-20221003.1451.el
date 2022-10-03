@@ -5,10 +5,10 @@
 ;; Author: J.D. Smith
 ;; Homepage: https://github.com/jdtsmith/python-mls
 ;; Package-Requires: ((emacs "27.1"))
-;; Package-Version: 20220528.1502
-;; Package-Commit: bbfe9a8b2ea081c032eccfd541dac2bc46aa54a6
+;; Package-Version: 20221003.1451
+;; Package-Commit: 398ba92372cc37bae5d63e4d4c42e65edf7db74b
 ;; Keywords: languages, processes
-;; Version: 0.1.3
+;; Version: 0.1.4
 
 ;;; Commentary:
 
@@ -67,16 +67,16 @@ if the variable `python-mls-save-command-history' is non-nil."
   :group 'python-mls
   :type 'file)
 
-(defcustom python-mls-after-prompt-hook '()
-  "Hook run each time a new input prompt is found."
-  :type 'hook
-  :local t
-  :group 'python-mls)
-
 (defcustom python-mls-kill-buffer-process-quit nil
   "Whether to kill the python buffer when the process completes."
   :group 'python-mls
   :type 'boolean)
+
+(defcustom python-mls-multiline-history-modifier '(shift)
+  "Modifier key for up/down arrow multi-line history navigation.
+List of symbols, or nil to disable."
+  :group 'python-mls
+  :type '(choice (const :tag "None" nil) (repeat :tag "List of modifiers" symbol)))
 
 (defcustom python-mls-import-python-nav-command-list
   '(python-nav-backward-block
@@ -102,6 +102,9 @@ Each function should take a single argument -- the prompt type (a symbol)."
   :type 'hook
   :local t)
 
+(defvar-local python-mls-after-prompt-hook '()
+  "Hook run each time a new input prompt is found.")
+
 (defvar python-mls-continuation-prompt-regexp "^\s*\\.\\.\\.: \s*$")
 (defun python-mls-in-continuation (&optional trim-trailing-ws)
   "Test whether we are in an continued input statement.
@@ -126,7 +129,9 @@ after the output field will be trimmed."
 	    (line-number-at-pos prompt-end)))))
 
 (defun python-mls--indent-line ()
-  "Indent line, narrowing to region after prompt if in continuation."
+  "Indent line, narrowing to region after prompt if in continuation.
+If the line is at the end of the buffer, insert an invisible
+newline to allow for a prefix prompt."
   (if-let ((end (cdr-safe comint-last-prompt)))
       (save-restriction
 	(narrow-to-region end (point-max))
@@ -181,7 +186,7 @@ Omits extra newlines at end, and preserves (some) text properties."
     (if (or
 	 (< ln (line-number-at-pos (cdr comint-last-prompt))) ; old input
 	 (not (python-mls-in-continuation)) ;; simple command
-	 (and (python-mls-line-empty-p) ;;final blank lines
+	 (and (python-mls-line-empty-p)	    ;;final blank lines
 	      (let ((lnmx (line-number-at-pos (point-max))))
 		(or (eq ln lnmx)
 		    (and (eq ln (1- lnmx)) ;trailing blank line OK
@@ -244,7 +249,7 @@ Use PROCESS if it is set."
 (defun python-mls-invisible-newline ()
   "Insert an invisible, cursor-intangible newline without moving point.
 Since continuation prompts use 'line-prefix property, and the
-line after a final newline is entirely empty, it has not prompt.
+line after a final newline is entirely empty, it has no prompt.
 To solve this we keep an invisible and intangible newline at the
 end of the buffer."
   (save-excursion
@@ -259,7 +264,8 @@ end of the buffer."
   "Last prompt before recent send.")
 (defvar-local python-mls-prompt-type nil
   "The type of prompt.
-Can be 'pdb, 'other, or nil for a normal input prompt.")
+Can be t for normal input prompts, 'pdb for a (i)PDB prompt, or
+'unknown for all others.")
 
 ;;;###autoload
 (defun python-mls-check-prompt (_process output &rest _)
@@ -269,61 +275,69 @@ handle it.  Multi-line statements are handled directly.  If a
 single command sent to (i)Python is the start of multi-line
 statment, the process will return a continuation prompt.  Remove
 it, sanitize the history, and then bring the last input forward
-to continue.  Run the hook `python-mls-after-prompt-hook' after a
-normal prompt is detected."
+to continue.  When the prompt type changes, run the hooks in
+`python-mls-prompt-change-functions' (supplying the type as the
+argument).  Run the hooks in `python-mls-after-prompt-hook' each
+time a know prompt type is detected.  Note that an unknown prompt
+type could correspond either to a real non-standard
+prompt (e.g. from a python call to input()) or to a 'false
+prompt', which may appear if the process produces output in
+chunks.  This is because comint is configured to mark any text
+not ending in a newline as a prompt, and has no way of knowing
+whether all of the output is yet received.  Any hook functions on
+`python-mls-prompt-change-functions' should guard against this
+possibility by examining their PTYPE argument. "
   (when-let ((python-mls--check-prompt)
 	     (process (python-shell-get-process))
 	     (pmark (process-mark process)))
     (with-current-buffer (process-buffer process)
       (goto-char pmark)
       (forward-line 0)
-      (cond
-       ;; Continuation prompt: comint performs input echo deletion in
-       ;; comint-send-string, which implicitly calls this filter
-       ;; function while waiting for echoed input.  But
-       ;; echo-detection/deletion must run _first_ before our
-       ;; continuation prompt deletion (which itself would delete the
-       ;; echoed input).  Since comint-send-input calls us finally
-       ;; with an empty string (after echo detection), if
-       ;; process-echoes is set, check and run this only at that time.
-       ((and (or (not comint-process-echoes) (string-empty-p output))
-	     (looking-at python-mls-continuation-prompt-regexp))
-	(let* ((start (marker-position comint-last-input-start))
-	       (input (buffer-substring-no-properties
-		       start
-		       comint-last-input-end))
-	       (inhibit-read-only t))
-	  (setq python-mls--check-prompt nil)
-	  (python-mls-interrupt-quietly process) ; re-enters!
-	  (delete-region start pmark)	 ;out with the old
+      (if (and (looking-at python-mls-continuation-prompt-regexp)
+	       (or (not comint-process-echoes) (string-empty-p output)))
+	  ;; Continuation prompt: comint performs input echo deletion
+	  ;; in comint-send-string, which implicitly calls this filter
+	  ;; function while waiting for echoed input to appear.  But
+	  ;; echo-detection/deletion must run _first_, before our
+	  ;; continuation prompt deletion (which itself would delete
+	  ;; the echoed input).  Since comint-send-input calls us
+	  ;; finally with an empty string (after echo detection), if
+	  ;; process-echoes is set, check and run this only at that
+	  ;; time.
+	  (let* ((start (marker-position comint-last-input-start))
+		 (input (buffer-substring-no-properties
+			 start
+			 comint-last-input-end))
+		 (inhibit-read-only t))
+	    (let ((python-mls--check-prompt nil)) ; prevent reentry
+	      (python-mls-interrupt-quietly process)) ; re-enters!
+	    (delete-region start pmark) ;out with the old
+	    (insert input)
+	    (funcall indent-line-function)
+	    (if (and comint-input-ring
+		     (not (ring-empty-p comint-input-ring)))
+		(ring-remove comint-input-ring 0)))
+	;; All other prompts
+	(let ((ptype (if (looking-at python-shell--prompt-calculated-input-regexp)
+			 (cond ((< (match-end 0) (point-max)) 'unknown) 
+			       ((string-match-p python-shell-prompt-pdb-regexp
+						(match-string 0))
+				'pdb)
+			       (t t))	; just a normal prompt
+		       'unknown)) 	; possibly a false prompt due to chunked output
+	      (python-mls--check-prompt nil)) ; inhibit re-entry
+	  (if (eq ptype t)
+	      (python-mls-compute-continuation-prompt (match-string 0)))
+	  (unless (eq ptype 'unknown)
+	    (let ((inhibit-read-only t))
+	      (add-text-properties (line-beginning-position) (1- pmark)
+				   '(cursor-intangible t))))
 	  (goto-char pmark)
-	  (insert input)
-	  (funcall indent-line-function)
-	  (if (and comint-input-ring
-		   (not (ring-empty-p comint-input-ring)))
-	      (ring-remove comint-input-ring 0))))
-     
-       ;; Normal prompts, including pdb, etc.
-       ((looking-at python-shell--prompt-calculated-input-regexp)
-	(let* ((prompt (match-string 0))
-	       (inhibit-read-only t)
-	       (ptype
-		(cond ((< (match-end 0) (point-max)) 'other) ; extra stuff at end
-		      ((string-match-p
-			python-shell-prompt-pdb-regexp
-			prompt)
-		       'pdb)
-		      (t nil))))
 	  (when (not (eq ptype python-mls-prompt-type))
 	    (setq python-mls-prompt-type ptype)
 	    (run-hook-with-args 'python-mls-prompt-change-functions ptype))
-	  
-	  (setq python-mls--check-prompt nil)
-	  (add-text-properties (1- pmark) (point-at-bol)
-			       '(cursor-intangible t)) 
-	  (python-mls-compute-continuation-prompt prompt)
-	  (goto-char pmark)
-	  (run-hooks 'python-mls-after-prompt-hook)))))))
+	  (unless (eq ptype 'unknown) 	; could be a "false prompt"
+	    (run-hooks 'python-mls-after-prompt-hook)))))))
 
 (defun python-mls-compute-continuation-prompt (prompt)
   "Compute a prompt to use for continuation based on the text of PROMPT."
@@ -335,7 +349,21 @@ normal prompt is detected."
 	      (propertize
 	       (concat (make-string spaces ?\s) "..." (if has-colon ": " " "))
 	       'font-lock-face 'comint-highlight-prompt)))))
-  
+
+(defun python-mls-strip-last-output-read-only ()
+  "Remove any spurious read-only properties from the output.
+Since python output can arrive in chunks, and
+`inferior-python-mode' enables `comint-prompt-read-only', a
+number of false prompts (text not ending in a newline) may be
+encountered before the final true prompt.  Comint sets read only
+properties on these false prompts, but does not clear them.  When
+used as a hook on `python-mls-after-prompt-hook', this function
+does so."
+  (if-let ((start comint-last-input-end)
+	   (prompt (car-safe comint-last-prompt))
+	   (inhibit-read-only t))
+      (remove-text-properties start (1- prompt) '(read-only))))
+
 (defun python-mls-move-or-history (up &optional arg nocont-move)
   "Move line or recall command history.
 When in the first or last line of input, do
@@ -483,9 +511,19 @@ If DISABLE is non-nil, disable instead."
 	(if (version< emacs-version "28")
 	    (advice-remove #'comint-output-filter
 			   #'python-mls--comint-output-filter-fix-rear-nonsticky)))
+    ;; Shift up/C-p: skips blocks
+    (when python-mls-multiline-history-modifier
+      (dolist (key (where-is-internal 'previous-line))
+	(let ((new (vector `(,@python-mls-multiline-history-modifier
+			     ,(aref key 0)))))
+	  (define-key python-mls-mode-map new 'python-mls-noblock-up-or-history)))
+      (dolist (key (where-is-internal 'next-line))
+	(let ((new (vector `(,@python-mls-multiline-history-modifier
+			     ,(aref key 0)))))
+	  (define-key python-mls-mode-map new 'python-mls-noblock-down-or-history))))
     (add-hook 'inferior-python-mode-hook #'python-mls-mode)
     (add-hook 'python-mode-hook #'python-mls-python-setup)
-    
+    (setq-default python-shell-font-lock-enable nil) ; we do our own
     ;; Fix bug in rear-nonsticky
     (if (version< emacs-version "28")
 	(advice-add 'comint-output-filter :after
@@ -518,8 +556,6 @@ If DISABLE is non-nil, disable instead."
 	(setq-local comint-history-isearch 'dwim)
 
 	;; font-lock handling
-	(if (derived-mode-p 'inferior-python-mode)
-	    (python-shell-font-lock-turn-off)) ;We'll do in-buffer font-lock ourselves!
 	(setq-local
 	 font-lock-keywords-only nil
 	 syntax-propertize-function python-syntax-propertize-function
@@ -546,17 +582,11 @@ If DISABLE is non-nil, disable instead."
 	(advice-add #'comint-output-filter :after #'python-mls-check-prompt)
 	(cursor-intangible-mode 1)
 
-	;; Shift up/C-p: skips blocks
-	(dolist (key (where-is-internal 'previous-line))
-	  (let ((new (vector `(shift ,(aref key 0)))))
-	    (define-key python-mls-mode-map new 'python-mls-noblock-up-or-history)))
-	(dolist (key (where-is-internal 'next-line))
-	  (let ((new (vector `(shift ,(aref key 0)))))
-	    (define-key python-mls-mode-map new 'python-mls-noblock-down-or-history)))
-
 	;; indentation
 	(electric-indent-local-mode -1) ; We handle [Ret] indentation ourselves
-	(setq-local indent-line-function #'python-mls--indent-line))
+	(setq-local indent-line-function #'python-mls--indent-line)
+	(add-hook 'python-mls-after-prompt-hook
+		  #'python-mls-strip-last-output-read-only -95 t))
     (python-mls-setup 'disable)
     (message "Python-MLS disabled for future inferior python shells.")))
 
