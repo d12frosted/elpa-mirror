@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/grip-mode
 ;; Version: 2.3.2
-;; Package-Version: 20220430.1545
-;; Package-Commit: f23c861ece56e909b94f9363f6009146b5a8788c
+;; Package-Version: 20221003.1518
+;; Package-Commit: e1e8ee952f75cdca93327b6e7dcd79244ca66bc0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, markdown, preview
 
@@ -103,6 +103,11 @@ When nil, only update the preview on file save."
   :type 'string
   :group 'grip)
 
+(defcustom grip-sleep-time 2
+  "Sleep seconds to ensure the server starts successfully."
+  :type 'integer
+  :group 'grip)
+
 
 
 ;; Externals
@@ -174,7 +179,7 @@ Use default browser unless `xwidget' is available."
                            (number-to-string grip--port)))
 
       (message "Preview `%s' on %s" buffer-file-name (grip--preview-url))
-      (sleep-for 2)               ; Ensure the server has started
+      (sleep-for grip-sleep-time) ; Ensure the server has started
       (grip--browse-url (grip--preview-url)))))
 
 (defun grip--kill-process ()
