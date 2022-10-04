@@ -3,9 +3,11 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tok/tok-theme
 
 Updating /mnt/store/melpa/working/tok-theme/
-Checking out origin/HEAD
-Checking out eb67fd9ba96a29e00d6c62261721ddf7c156e26b
-Built tok-theme in 4.550s, finished at 2022-10-03T18:21:39+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.2K Oct  3 18:21 packages/tok-theme-20220928.1823.el
-4.0K -rw-r--r-- 1 root root  352 Oct  3 18:21 packages/tok-theme-20220928.1823.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.sr.ht/~tok/tok-theme/': The requested URL returned error: 403
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
