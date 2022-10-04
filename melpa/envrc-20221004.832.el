@@ -4,10 +4,10 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: processes, tools
-;; Package-Commit: 27d2886cc36039527e4e86fc654eaef3804dc4a0
+;; Package-Commit: a3c59aa9eaa010b8a3ab3c781d592196621fa223
 ;; Homepage: https://github.com/purcell/envrc
 ;; Package-Requires: ((seq "2") (emacs "25.1") (inheritenv "0.1"))
-;; Package-Version: 20220924.833
+;; Package-Version: 20221004.832
 ;; Package-X-Original-Version: 0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -76,6 +76,10 @@
   "Whether or not to output debug messages while in operation.
 Messages are written into the *envrc-debug* buffer."
   :type 'boolean)
+
+(defcustom envrc-direnv-executable "direnv"
+  "The direnv executable used by envrc."
+  :type 'string)
 
 (define-obsolete-variable-alias 'envrc--lighter 'envrc-lighter "2021-05-17")
 
@@ -232,7 +236,7 @@ variable names and values."
     (unwind-protect
         (let ((default-directory env-dir))
           (with-temp-buffer
-            (let ((exit-code (envrc--call-process-with-global-env' "direnv" nil (list t stderr-file) nil "export" "json")))
+            (let ((exit-code (envrc--call-process-with-global-env' envrc-direnv-executable nil (list t stderr-file) nil "export" "json")))
               (envrc--debug "Direnv exited with %s and stderr=%S, stdout=%S"
                             exit-code
                             (with-temp-buffer
@@ -333,8 +337,8 @@ If there is no current env dir, abort with a user error."
 (defun envrc--call-process-with-global-env (&rest args)
   "Like `call-process', but always use the global process environment.
 In particular, we ensure the default variable `exec-path' and
-`process-environment' are used.  This ensures the
-globally-accessible \"direnv\" binary is consistently available.
+`process-environment' are used.  This ensures an .envrc doesn't take
+`envrc-direnv-executable' out of our path.
 ARGS is as for `call-process'."
   (let ((exec-path (default-value 'exec-path))
         (process-environment (default-value 'process-environment)))
@@ -351,7 +355,7 @@ ARGS is as for `call-process'."
   (interactive)
   (envrc--with-required-current-env env-dir
     (let* ((default-directory env-dir)
-           (exit-code (envrc--call-process-with-global-env' "direnv" nil (get-buffer-create "*envrc-allow*") nil "allow")))
+           (exit-code (envrc--call-process-with-global-env' envrc-direnv-executable nil (get-buffer-create "*envrc-allow*") nil "allow")))
       (if (zerop exit-code)
           (envrc--update-env env-dir)
         (display-buffer "*envrc-allow*")
@@ -362,7 +366,7 @@ ARGS is as for `call-process'."
   (interactive)
   (envrc--with-required-current-env env-dir
     (let* ((default-directory env-dir)
-           (exit-code (envrc--call-process-with-global-env' "direnv" nil (get-buffer-create "*envrc-deny*") nil "deny")))
+           (exit-code (envrc--call-process-with-global-env' envrc-direnv-executable nil (get-buffer-create "*envrc-deny*") nil "deny")))
       (if (zerop exit-code)
           (envrc--update-env env-dir)
         (display-buffer "*envrc-deny*")

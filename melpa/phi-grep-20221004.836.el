@@ -19,8 +19,8 @@
 
 ;; Author: zk_phi
 ;; URL: http://github.com/zk-phi/phi-grep
-;; Package-Version: 20210306.425
-;; Package-Commit: 7e2804c7ab4e875c7511917692c4b192662aa1ae
+;; Package-Version: 20221004.836
+;; Package-Commit: 9f3c42952ad4ad75d24abbdccb041240db4f0557
 ;; Version: 1.2.3
 ;; Package-Requires: ((cl-lib "0.1") (emacs "26.1"))
 
@@ -80,9 +80,9 @@
     "\.vdi$" "\.doc$" "\.jpg$" "\.avi$" "\.jpeg$" "\.png$"
     "\.xpm$" "\.jar$" "\.pbm$" "\.gif$" "\.xls$" "\.ppt$"
     "\.mdb$" "\.adp$" "\\<\\(TAGS\\)\\>" "\.tiff$" "\.img$"
-    "\.pdf$" "\.dvi$" "\.xbm$" "\.gpg$" "\.svg$" "\.rej$"
-    "\.exe$" "\.gch$" "\.o$" "\.so$" "\.class$"
-    "\.ppt$" "\.pptx$" "\.xls$" "\.xlsx$" "\.doc$" "\.docx$"
+    "\.pdf$" "\.dvi$" "\.xbm$" "\.gpg$" "\.rej$" "\.exe$"
+    "\.gch$" "\.o$" "\.so$" "\.class$" "\.ppt$" "\.pptx$"
+    "\.xls$" "\.xlsx$" "\.doc$" "\.docx$"
     "~$" "#[^/]+#$")
   "List of regexps that defines what files to ignore."
   :type '(repeat string)

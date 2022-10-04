@@ -4,8 +4,8 @@
 ;;
 ;; Author: Mark Karpov <markkarpov92@gmail.com>
 ;; URL: https://github.com/mrkkrp/ace-popup-menu
-;; Package-Version: 20210608.839
-;; Package-Commit: 594a305704be8ca0ef79a12b787bdb59bc6077c0
+;; Package-Version: 20221004.1115
+;; Package-Commit: e91283271ca409d7f1a477337cc82fb8a74e75ac
 ;; Version: 0.2.1
 ;; Package-Requires: ((emacs "24.3") (avy-menu "0.1"))
 ;; Keywords: convenience, popup, menu
@@ -57,10 +57,10 @@ is positive, and disable it otherwise.  If called from Lisp,
 enable the mode if ARG is omitted or NIL, and toggle it if ARG is
 `toggle'.
 
-This minor mode is global. When it's active any call to
+This minor mode is global.  When it's active any call to
 `x-popup-menu' will result in a call of `ace-popup-menu'
-instead. That function in turn implements a more efficient
-interface to select an option from a list. Emacs Lisp code can
+instead.  That function in turn implements a more efficient
+interface to select an option from a list.  Emacs Lisp code can
 also use `ace-popup-menu' directly."
   :global t
   (if ace-popup-menu-mode

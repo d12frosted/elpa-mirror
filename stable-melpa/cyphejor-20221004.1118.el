@@ -4,8 +4,8 @@
 ;;
 ;; Author: Mark Karpov <markkarpov92@gmail.com>
 ;; URL: https://github.com/mrkkrp/cyphejor
-;; Package-Version: 20210816.1607
-;; Package-Commit: 70b30cb79337ccfcc4e013c8ce7ab78815a65f1a
+;; Package-Version: 20221004.1118
+;; Package-Commit: 0ba2e60589f485bf1bb2540617c970ed00c70266
 ;; Version: 0.1.2
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: mode-line major-mode
@@ -159,7 +159,9 @@ the mode if ARG is omitted or NIL, and toggle it if ARG is
 This global minor mode shortens names of major modes by using a
 set of user-defined rules in `cyphejor-rules'.  See the
 description of the variable for more information."
-  nil "" nil
+  :init-value nil
+  :lighter ""
+  :keymap nil
   :global t
   (funcall (if cyphejor-mode #'add-hook #'remove-hook)
            'after-change-major-mode-hook
