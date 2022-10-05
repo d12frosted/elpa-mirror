@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20221004.619
-;; Package-Commit: e17eb83d7919f8ddd39e3a33cbdffaf08d43a42d
+;; Package-Version: 20221005.400
+;; Package-Commit: 5e271cb51b29a91fae69876f2e6428b03316d9aa
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -16,6 +16,8 @@
 
 (deftheme oblivion "Dark color scheme based on GEdit's oblivion theme.")
 
+;; See: https://gitlab.gnome.org/GNOME/gtksourceview/-/blob/master/data/styles/oblivion.xml
+;; for the latest reference of colors.
 (let
   (
     (ob-butter1 "#fce94f")

@@ -1,16 +1,16 @@
-;;; eldoc-overlay.el --- Display eldoc with contextual documentation overlay.
+;;; eldoc-overlay.el --- Display eldoc with contextual documentation overlay
 
 ;; Author: stardiviner <numbchild@gmail.com>
 ;; Author: Robert Weiner <rsw@gnu.org>
 ;; Maintainer: stardiviner <numbchild@gmail.com>
-;; Keywords: documentation, eldoc, overlay
-;; Package-Version: 20220210.1358
-;; Package-Commit: b96f5864a47407ec608c807e0d890f62b891ee03
+;; Keywords: docs, eldoc, overlay
+;; Package-Version: 20221005.154
+;; Package-Commit: d20dcecdde43737d8c9ae56551e2f0c05173870f
 ;; URL: https://repo.or.cz/eldoc-overlay.git
 ;; Created:  14th Jan 2017
 ;; Modified: 18th Dec 2017
 ;; Version: 0.1.1
-;; Package-Requires: ((emacs "24.3") (inline-docs "1.0.1") (quick-peek "1.0"))
+;; Package-Requires: ((emacs "24.4") (inline-docs "1.0.1") (quick-peek "1.0"))
 
 ;;; Commentary:
 ;;
@@ -33,6 +33,12 @@
 ;;; ----------------------------------------------------------------------------
 
 (require 'eldoc)
+(declare-function 'inline-docs "inline-docs" format-string &rest args)
+(declare-function 'inline-docs--clear-overlay "inline-docs")
+(declare-function 'quick-peek-show "quick-peek" str &optional pos min-h max-h)
+(declare-function 'quick-peek-hide "quick-peek" &optional pos)
+(declare-function 'company-box--get-frame "company-box")
+(declare-function 'company-tooltip-visible-p "company")
 
 ;; User Options
 (defgroup eldoc-overlay nil
@@ -48,7 +54,7 @@ enabled, it displays function signatures in the modeline."
   :group 'eldoc-overlay)
 
 (defvar eldoc-overlay-delay nil
-  "A timer delay with `sleep-for' for eldoc-overlay display.")
+  "A seconds timer delay with `sleep-for' for eldoc-overlay display.")
 
 ;; Variables
 (defcustom eldoc-overlay-backend 'quick-peek
@@ -58,6 +64,7 @@ Two backends are supported: `inline-docs' and `quick-peek'."
   :safe #'functionp)
 
 ;; Functions
+;;; FIXME: the current line font-lock color is messed up by `eldoc-overlay'.
 (defun eldoc-overlay-inline-docs (format-string &rest args)
   "Inline-docs backend function to show FORMAT-STRING and ARGS."
   (inline-docs format-string args))
@@ -70,23 +77,48 @@ Two backends are supported: `inline-docs' and `quick-peek'."
      (point)
      1)))
 
-(defun eldoc-overlay-display (format-string &rest args)
-  "Display eldoc for the minibuffer when there or call the function indexed by `eldoc-overlay-backend'."
+;;; `eldoc-minibuffer-message', `eldoc--message'
+(defun eldoc-overlay-message (format-string &rest args)
+  "Display eldoc in overlay using backend function from `eldoc-overlay-backend'.
+This function used as value of `eldoc-message-function'."
   (unless (or (company-tooltip-visible-p)
-              (when (and (featurep 'company-box) (company-box--get-frame))
+              (when (and (featurep 'company-box) (fboundp company-box--get-frame))
                 (frame-visible-p (company-box--get-frame)))
               (not format-string))
     (if (and (minibufferp) (not eldoc-overlay-enable-in-minibuffer))
         (apply #'eldoc-minibuffer-message format-string args)
-      (when (numberp eldoc-overlay-delay)
-        (sleep-for eldoc-overlay-delay))
+      (when (and (bound-and-true-p eldoc-overlay-delay)
+                 (numberp eldoc-overlay-delay))
+        (run-with-timer eldoc-overlay-delay nil #'eldoc-overlay-message-backend)
+        (eldoc-overlay-message-backend format-string args)
+        ;; (apply 'eldoc-overlay-quick-peek (list (funcall eldoc-documentation-function)))
+        ))))
+
+(defun eldoc-overlay-message-backend (format-string &rest args)
+  (funcall (pcase eldoc-overlay-backend
+             ('inline-docs 'eldoc-overlay-inline-docs)
+             ('quick-peek 'eldoc-overlay-quick-peek))
+           (apply #'format format-string args)))
+
+;; Reference `eldoc-display-in-buffer', `eldoc-display-in-echo-area'
+(defun eldoc-overlay-display (docs _interactive) ; the `docs' is a docstring in style of cons ((#(text-property)) . nil).
+  (when docs
+    (let* ((docs-text-property (caar docs))
+           (docs-plain (substring-no-properties docs-text-property)))
       (funcall (pcase eldoc-overlay-backend
-                 (`inline-docs 'eldoc-overlay-inline-docs)
-                 (`quick-peek 'eldoc-overlay-quick-peek))
-               (apply #'format-message format-string args)))))
+                 ('inline-docs 'eldoc-overlay-inline-docs)
+                 ('quick-peek 'eldoc-overlay-quick-peek))
+               docs-plain))))
 
 (defun eldoc-overlay-enable ()
-  (setq-local eldoc-message-function #'eldoc-overlay-display)
+  ;; adopt for new eldoc mechanism.
+  (when (and (boundp 'eldoc-documentation-strategy)
+             (fboundp 'eldoc-documentation-compose))
+    (setq-local eldoc-documentation-strategy #'eldoc-documentation-compose))
+  (if (boundp 'eldoc-documentation-functions)
+      (add-to-list 'eldoc-display-functions #'eldoc-overlay-display)
+    ;; roll back to old mechanism.
+    (setq-local eldoc-message-function #'eldoc-overlay-message))
   (when (eq eldoc-overlay-backend 'quick-peek)
     (add-hook 'post-command-hook #'quick-peek-hide)))
 

@@ -4,8 +4,6 @@
 
 ;; Author: Mark Oteiza <mvoteiza@udel.edu>
 ;; Version: 0.12.2
-;; Package-Version: 20210705.2152
-;; Package-Commit: a03a6f5c7b133e0a37896b6d993dd6d6d4532cc2
 ;; Package-Requires: ((emacs "24.4") (let-alist "1.0.5"))
 ;; Keywords: comm, tools
 
@@ -2402,6 +2400,11 @@ Transmission."
              (kill-buffer buffer)
              (signal (car e) (cdr e))))))
       (switch-to-buffer-other-window buffer))))
+
+(provide 'transmission)
+
+;;; transmission.el ends here
+tch-to-buffer-other-window buffer))))
 
 (provide 'transmission)
 

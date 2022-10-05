@@ -1,15 +1,15 @@
 (eldoc-overlay .
-	       [(20220210 1358)
+	       [(20221005 154)
 		((emacs
-		  (24 3))
+		  (24 4))
 		 (inline-docs
 		  (1 0 1))
 		 (quick-peek
 		  (1 0)))
-		"Display eldoc with contextual documentation overlay." single
-		((:commit . "b96f5864a47407ec608c807e0d890f62b891ee03")
+		"Display eldoc with contextual documentation overlay" single
+		((:commit . "d20dcecdde43737d8c9ae56551e2f0c05173870f")
 		 (:authors
 		  ("stardiviner" . "numbchild@gmail.com"))
 		 (:maintainer "stardiviner" . "numbchild@gmail.com")
-		 (:keywords "documentation" "eldoc" "overlay")
+		 (:keywords "docs" "eldoc" "overlay")
 		 (:url . "https://repo.or.cz/eldoc-overlay.git"))])
