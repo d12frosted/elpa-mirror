@@ -2600,7 +2600,7 @@
 	  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	 (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (rcirc-color .
-	      [(0 4 3)
+	      [(0 4 4)
 	       ((emacs
 		 (24 4)))
 	       "color nicks" tar
@@ -2609,7 +2609,7 @@
 		(:authors
 		 ("Alex Schroeder" . "alex@gnu.org"))
 		(:url . "https://elpa.gnu.org/packages/rcirc-color.html")
-		(:commit . "e34c4a6e338633808774c259e8bbd272351dbf4f"))])
+		(:commit . "cba15c56375575da5518f5537a22f85706625b5c"))])
  (rcirc-menu .
 	     [(1 1)
 	      nil "A menu of all your rcirc connections" single
