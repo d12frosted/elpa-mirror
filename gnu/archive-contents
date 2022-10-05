@@ -1455,6 +1455,17 @@
 		    ("Titus von der Malsburg" . "malsburg@posteo.de"))
 		   (:maintainer "Titus von der Malsburg" . "malsburg@posteo.de")
 		   (:url . "https://github.com/tmalsburg/guess-language.el"))])
+ (hcel .
+       [(1 0 0)
+	((emacs
+	  (28)))
+	"Haskell codebase explorer / cross referencer" tar
+	((:url . "https://g.ypei.me/hc.el.git")
+	 (:keywords "haskell")
+	 (:maintainer "Yuchen Pei" . "id@ypei.org")
+	 (:authors
+	  ("Yuchen Pei" . "id@ypei.org"))
+	 (:commit . "a215df2f884fb445d8f159a2b4d84e6853ac9816"))])
  (heap .
        [(0 5)
 	nil "Heap (a.k.a. priority queue) data structure" single

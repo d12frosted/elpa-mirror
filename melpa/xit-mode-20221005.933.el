@@ -6,8 +6,8 @@
 
 ;; Authors: Ryan Olson <ryolson@me.com>
 ;; URL: https://github.com/ryanolsonx/xit-mode
-;; Package-Version: 20221001.2155
-;; Package-Commit: a64498f718bb0fc62e855bee4da121341d9716db
+;; Package-Version: 20221005.933
+;; Package-Commit: 896951aaa0dc88921ce50a88c0d3013c83dc8873
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: xit, todo, tools, convinience, project
@@ -29,11 +29,14 @@
 
 ;; Versions:
 ;;
+;;   - 0.4 dates support
 ;;   - 0.3 melpa recipe is now available
 ;;   - 0.2 adding interactivity with keybindings and imenu support
 ;;   - 0.1 initial release with syntax color support
 
 ;;; Code:
+
+(require 'calendar)
 
 ;; Faces
 
@@ -92,6 +95,11 @@
   "Face used for tags."
   :group 'xit-faces)
 
+(defface xit-date-face
+  '((t :inherit font-lock-doc-face))
+  "Face used for dates."
+  :group 'xit-faces)
+
 ;; Variables
 
 (defvar xit-mode-hook nil)
@@ -124,6 +132,9 @@
 
 (defvar xit--tag-regexp "#[a-zA-Z0-9\\-_]+"
   "The regpexp used to search for tags.")
+
+(defvar xit--date-regexp "\\-> [0-9]+\\([-|\\/][Q|W]*[0-9]+\\)?\\([-|\\/][0-9]+\\)?"
+  "The regpexp used to search for dates.")
 
 (defvar xit--checkbox-open-string "[ ] "
   "The open checkbox string.")
@@ -229,6 +240,7 @@
     (define-key map (kbd "C-c C-c") 'xit-state-cycle-item) ;; c for cycle
     (define-key map (kbd "C-c C-<up>") 'xit-inc-priority-item)
     (define-key map (kbd "C-c C-<down>") 'xit-dec-priority-item)
+    (define-key map (kbd "C-c C-w") 'xit-insert-date) ;; w for when
     map)
   "Keymap for `xit-mode'.")
 
@@ -252,7 +264,8 @@
      (1 'xit-obsolete-checkbox-face)
      (2 'xit-obsolete-description-face))
    `(,xit--checkbox-priority-regexp 1 'xit-priority-face)
-   `(,xit--tag-regexp 0 'xit-tag-face))
+   `(,xit--tag-regexp 0 'xit-tag-face)
+   `(,xit--date-regexp 0 'xit-date-face))
   "Highlighting specification for `xit-mode'.")
 
 ;; Imenu support
@@ -301,6 +314,13 @@
             (push (cons last-group (nreverse items-buffer)) imenu-data)
           (setq imenu-data (append items-buffer imenu-data)))))
     (nreverse imenu-data)))
+
+;; Dates
+
+(defun xit-insert-date (date)
+  "Insert DATE at point."
+  (interactive (list (calendar-read-date)))
+  (insert (format "-> %d-%d-%d" (nth 2 date) (nth 1 date) (nth 0 date))))
 
 ;; Mode definition
 
