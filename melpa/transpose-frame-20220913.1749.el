@@ -4,6 +4,8 @@
 
 ;; Author: S. Irie
 ;; Keywords: window
+;; Package-Version: 20220913.1749
+;; Package-Commit: 7b7f8a1582436749a57ebbba6ead716b5a0edddc
 
 ;; This program is free software.
 

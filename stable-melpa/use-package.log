@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 9407f5f01c78ec3cb180f76eaf3adab35b80e3c3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/use-package/
-  to /tmp/use-package1zGB5V/use-package-20220910.25
+  to /tmp/use-packagembVKbp/use-package-20220910.25
     use-package-bind-key.el -> use-package-bind-key.el
     use-package-core.el -> use-package-core.el
     use-package-delight.el -> use-package-delight.el
@@ -17,4 +17,21 @@ Copying files (->) and directories (=>)
     use-package-lint.el -> use-package-lint.el
     use-package.el -> use-package.el
     use-package.texi -> use-package.texi
-Generating /tmp/use-package1zGB5V/use-package-20220910.25/use-package.info
+Generating /tmp/use-packagembVKbp/use-package-20220910.25/use-package.info
+Created use-package-20220910.25.tar containing:
+  use-package-20220910.25/
+  use-package-20220910.25/dir
+  use-package-20220910.25/use-package-bind-key.el
+  use-package-20220910.25/use-package-core.el
+  use-package-20220910.25/use-package-delight.el
+  use-package-20220910.25/use-package-diminish.el
+  use-package-20220910.25/use-package-ensure.el
+  use-package-20220910.25/use-package-jump.el
+  use-package-20220910.25/use-package-lint.el
+  use-package-20220910.25/use-package-pkg.el
+  use-package-20220910.25/use-package.el
+  use-package-20220910.25/use-package.info
+Built use-package in 6.572s, finished at 2022-10-05T07:28:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  472 Oct  5 07:28 packages/use-package-20220910.25.entry
+140K -rw-r--r-- 1 root root 140K Oct  5 07:28 packages/use-package-20220910.25.tar
