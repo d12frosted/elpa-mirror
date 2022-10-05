@@ -4,8 +4,6 @@
 
 ;; Author: Taiki Sugawara <buzz.taiki@gmail.com>
 ;; Keywords: convenience, processes, docker, flymake
-;; Package-Version: 20220328.823
-;; Package-Commit: 82a6df7f6cc95e1ab95c5d28f2edcd8c1d4c7382
 ;; URL: https://github.com/buzztaiki/flymake-hadolint
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "26.1"))

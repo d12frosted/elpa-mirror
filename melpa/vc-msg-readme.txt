@@ -40,22 +40,5 @@ correctly:
   (setq vc-msg-p4-file-to-url '(".*/proj1" "//depot/development/proj1"))
 
 The program provides a plugin framework so you can easily write a
-plugin to support any alien VCS.  Please use "vc-msg-git.el" as a sample.
+plugin to support any VCS.  See "vc-msg-git.el" for a sample.
 
-Sample configuration to integrate with Magit (https://magit.vc/),
-
-(eval-after-load 'vc-msg-git
-  '(progn
-     ;; show code of commit
-     (setq vc-msg-git-show-commit-function 'magit-show-commit)
-     ;; open file of certain revision
-     (push '("m"
-             "[m]agit-find-file"
-             (lambda ()
-               (let* ((info vc-msg-previous-commit-info)
-                      (git-dir (locate-dominating-file default-directory ".git")))
-                 (magit-find-file (plist-get info :id )
-                                  (concat git-dir (plist-get info :filename))))))
-           vc-msg-git-extra)))
-
-If git-link is installed, a new menu item to copy the git link is displayed.
