@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/ninrod/evil-replace-with-char.git
 
 Updating /mnt/store/melpa/working/evil-replace-with-char/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/ninrod/evil-replace-with-char.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ed4a12d5bff11163eb03ad2826c52fd30f51a8d3
+Built evil-replace-with-char in 3.579s, finished at 2022-10-06T08:06:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.2K Oct  6 08:06 packages/evil-replace-with-char-20180324.2206.el
+4.0K -rw-r--r-- 1 root root  409 Oct  6 08:06 packages/evil-replace-with-char-20180324.2206.entry

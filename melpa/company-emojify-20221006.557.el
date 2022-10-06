@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/company-emojify
-;; Package-Version: 20220727.1740
-;; Package-Commit: 7731c85a03713fdd09908db948942f1444506dc7
+;; Package-Version: 20221006.557
+;; Package-Commit: 6856bdb187bf6f8c31965058e4408827f6ae178f
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "26.1") (company "0.8.0") (emojify "1.2.1") (ht "2.0"))
 ;; Keywords: convenience emoji company emojify
@@ -168,7 +168,7 @@ Arguments COMMAND, ARG and IGNORED are standard arguments from `company-mode`."
     (annotation (company-emojify--annotation arg))
     (doc-buffer (company-emojify--doc-buffer arg))
     (post-completion
-     (kill-region (- (point) (length arg) 1) (point))
+     (kill-region (- (point) (length arg)) (point))
      (if company-emojify-insert-unicode
          (let* ((data (emojify-get-emoji arg))
                 (type "unicode")
