@@ -5,10 +5,10 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/lcr
-;; Package-Version: 20221004.1257
-;; Package-Commit: 5371109d5292dcb93608883ee8dcf79d4bf29a9f
+;; Package-Version: 20221006.1529
+;; Package-Commit: 017f052d380d3c8dbc64d0582cd7bc2f60f5a123
 ;; Created: January 2018
-;; Version: 1.1
+;; Version: 1.2
 ;; Keywords: tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "25.1"))
 
@@ -76,6 +76,15 @@
                   macroexpand-all-environment))
          (not lcr-yield-seen))))
 
+
+(defmacro lcr--do (continuation &rest body)
+  "Transform BODY to CPS, and call CONTINUATION on the result."
+  (declare (indent 1))
+  (let ((exp-body (macroexpand-all `(progn ,@body) macroexpand-all-environment)))
+    ;; expand all macros so lcr--transform-1 only has to deal with basic constructs.
+    `(progn
+       ,(lcr--transform-1 exp-body (lambda (x) `(funcall ,continuation ,x))))))
+
 (defmacro lcr-def (name arglist &rest body)
   "Define a lightweight coroutine (lcr) with NAME, ARGLIST and BODY.
 The defined lcr is added an extra continuation argument and the
@@ -84,12 +93,15 @@ Within an lcr, call another lcr using `lcr-call' (this will
 forward the continuation as expected).  From the outside, use
 `lcr-async-let' or call the lcr with an explicit continuation."
   (declare (doc-string 3) (indent 2))
-  (let ((exp-body (macroexpand-all `(progn ,@body) macroexpand-all-environment)))
-    ;; expand all macros so lcr--transform-1 only has to deal with basic constructs.
-    `(progn
-       (put (quote ,name) 'lcr? t)
-       (defun ,name ,(-snoc  arglist 'lcr--continuation)
-         ,(lcr--transform-1 exp-body (lambda (x) `(funcall lcr--continuation ,x)))))))
+  `(progn
+     (put (quote ,name) 'lcr? t)
+     (defun ,name ,(-snoc  arglist 'lcr--continuation)
+       (lcr--do lcr--continuation ,@body))))
+
+(defmacro lcr-spawn (&rest body)
+  "Expand BODY and run `lcr-scheduler' when done."
+  (declare (indent 0))
+  `(lcr--do (lambda (_) (lcr-scheduler)) ,@body))
 
 ;; (defmacro lcr-async-bind (var expr &rest body)
 ;;   "Bind VAR in a continuation passed to EXPR with contents BODY.
@@ -125,6 +137,9 @@ expands to: (fun1 arg1 (λ (x) (fun2 arg2 (λ (y z) body))))."
   (pcase bindings
     (`((,vars ,expr)) `(progn (lcr-cps-bind ,vars ,expr ,@body) (lcr-scheduler)))
     (`((,vars ,expr) . ,rest) `(lcr-cps-bind ,vars ,expr (lcr-cps-let ,rest ,@body)))))
+
+;; TODO: can be implemented as follows in the 1-variable return case.
+;; (lcr-spawn (let ,(--map ((car it) . (lcr-call (cdr it))) bindings) ,@body))
 
 (defun lcr--transform-body (forms k)
   "Transform FORMS and pass the result of the last form to K."
@@ -173,14 +188,6 @@ expands to: (fun1 arg1 (λ (x) (fun2 arg2 (λ (y z) body))))."
                             (progn ,@body)
                           (cond ,@rest))
                        k))
-    (`(cond (,condition) . ,rest)
-      (lcr--transform-1 `(or ,condition (cond ,@rest))
-                        next-state))
-    (`(cond (,condition . ,body) . ,rest)
-      (lcr--transform-1 `(if ,condition
-                             (progn ,@body)
-                           (cond ,@rest))
-                        next-state))
 
     ;; Process `if'.
 
@@ -255,7 +262,7 @@ expands to: (fun1 arg1 (λ (x) (fun2 arg2 (λ (y z) body))))."
                              ,(lcr--transform-1
                                test
                                (lambda (x) `(if ,x
-                                                ,(lcr--transform-1 `(progn ,@body) (lambda (_) `(lcr-yield ,while-fun)))
+                                                ,(lcr--transform-1 `(progn ,@body) (lambda (_) `(funcall ,while-fun)))
                                               ,(funcall k 'nil))))))
           (funcall ,while-fun))))
     ;; Process various kinds of `quote'.
@@ -312,7 +319,7 @@ comes back."
 
 (defmacro lcr--with-context (ctx &rest body)
   "Temporarily switch to CTX (if possible) and run BODY."
-  (declare (indent 2))
+  (declare (indent 1))
   `(save-current-buffer
      (when (marker-buffer ,ctx) (set-buffer (marker-buffer ,ctx)))
      (save-excursion
@@ -320,7 +327,9 @@ comes back."
        ,@body)))
 
 (defvar lcr-context-switch-hook nil
-"Hook to run when a context switch (lightweight yield) occurs.")
+"Hook to run when a context switch (lightweight yield) occurs.
+That is, when yielding control back to another thread or Emacs
+main loop.")
 
 (defun lcr-refresh-modelines ()
   "Update all modelines."
@@ -328,10 +337,6 @@ comes back."
 
 (defvar lcr-ready-in (list) "List of ready processes, inbound portion of queue.")
 (defvar lcr-ready-out (list) "List of ready processes, outbound portion of queue.")
-
-(defun lcr-yield (cont)
-  "Enqueue the ready process CONT."
-  (push cont lcr-ready-in))
 
 (defun lcr-scheduler ()
   "This is the main loop of the lcr 'OS'.
@@ -345,26 +350,31 @@ main loop."
       (setq lcr-ready-in nil))
     (let ((next-process (pop lcr-ready-out)))
       ;; (message "lcr-scheduler running... %s ready" (+ (length lcr-ready-in) (length lcr-ready-out)))
-      (funcall next-process))))
+      (funcall next-process)))
+  (run-hooks 'lcr-context-switch-hook))
 
 (defmacro lcr-context-switch (&rest body)
   "Save the current context, to restore it in a continuation.
-The current continuation is passed as CONT and can be called
-within a BODY by using the macro `lcr-resume'.  The operations
-performed here correspond to a context-switch in operating-system
-parlance.  After BODY is run `lcr-scheduler' is called.
-
 This macro must be used every time a continuation isn't run right
 away, but rather is stored in a data structure for running later,
-be it a timer, waiting on a process, etc."
-  (declare (indent 2))
+be it a timer, waiting on a process, etc. The BODY will store the
+continuation
+.  But, it must not store it as such, but rather it
+should wrap it by using the macro `lcr-resume'.  This ensures
+that the context is properly restored at the point the
+contiuation will be restored.  performed here correspond to a
+context-switch in operating-system parlance.  After BODY is run,
+`lcr-scheduler' is called.  Indeed, the purpose of storing a
+continuation to run later is precisely to switch control to
+another green process, or return to the Emacs main loop."
+  (declare (indent 0))
   `(let ((ctx (lcr--context)))
      (cl-macrolet ((lcr-resume (cont &rest args)
-                                 `(lcr--with-context
-                                   ctx
-                                   (funcall ,cont ,@args))))
+                               `(lcr--with-context ctx
+                                  (funcall ,cont ,@args))))
        (progn ,@body
-              (run-hooks 'lcr-context-switch-hook)
+              ;; at this point the green thread (cont) is waiting. So
+              ;; schedule something else.
               (lcr-scheduler)))))
 
 (defvar-local lcr-process-callback nil "Callback used by `lcr-process-read'.")
@@ -392,7 +402,7 @@ outputs text and `lcr-process-read' is not waiting for output,
 the data is simply appended to the process' buffer.  This
 function is a lightweight coroutine, see `lcr'."
   (if (buffer-local-value 'lcr-process-callback buffer)
-      (funcall continue "lcr-process-read: try to read from (%s), but another coroutine is reading from it already.")
+      (error "lcr-process-read: Tried to read from (%s), but another coroutine is reading from it already" buffer)
     (lcr-context-switch
         (lcr-set-local 'lcr-process-callback
                        (lambda (input)
@@ -403,6 +413,11 @@ function is a lightweight coroutine, see `lcr'."
 (defun lcr-set-local (var val buffer)
   "Set variable VAR to value VAL in BUFFER."
   (with-current-buffer buffer (set (make-local-variable var) val)))
+
+(defun lcr-yield (cont)
+  "Enqueue the ready process CONT."
+  (lcr-context-switch
+    (push (lambda () (lcr-resume cont)) lcr-ready-in)))
 
 (defun lcr-wait (secs continue)
   "Wait SECS then CONTINUE.

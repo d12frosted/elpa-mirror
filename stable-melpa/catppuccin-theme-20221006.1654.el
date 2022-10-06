@@ -7,16 +7,15 @@
 ;; Maintainer: pspiagicw <pspiagicw@gmail.com>
 ;; Author: pspiagicw
 ;; Version: 1.0.0
-;; Package-Version: 20220515.435
-;; Package-Commit: 9dcbe770d38f6ea417dc614caa4ab197bfa896a7
+;; Package-Version: 20221006.1654
+;; Package-Commit: f36765cbbd4129aabb22250a87e90a1387bd5dc7
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
 ;;; Commentary:
 
 ;; A dark color theme available for a number of editors.
-;; This theme tries as much as possible to follow the consensual
-;; specification (see URL `https://spec.catppuccintheme.com/').
+;; This theme tries as much as possible to follow the consensual.
 
 ;;; Code:
 (deftheme catppuccin)
