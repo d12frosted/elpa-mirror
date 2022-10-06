@@ -2,9 +2,9 @@
 
 ;; Author: Samuel W. Flint <swflint@flintfam.org>
 ;; URL: https://git.sr.ht/~swflint/time-block
-;; Package-Version: 20220905.1732
-;; Package-Commit: f6daeb2084af8ef8efe968120394c69fa376d533
-;; Version: 1.1.0
+;; Package-Version: 20221005.2108
+;; Package-Commit: 2b4795fb2e7ca5bdfdced7704411426372ad4fc0
+;; Version: 1.2.0
 ;; Package-Requires: ((emacs "25.1") (ts "0.1"))
 ;; Keywords: tools, productivity, convenience
 
@@ -55,7 +55,9 @@
 ;; It is also possible to ignore time blocking on holidays.  This is
 ;; globally set using the `time-block-skip-on-holidays-p' variable.
 ;; This defaults to nil, which does not ignore blocking on holidays.
-;; If set to t, time blocking will be ignored on holidays.
+;; If set to t, time blocking will be ignored on any holiday.  It may
+;; also be set to a regular expression or a list.  Holidays which
+;; match either representation will cause time blocking to be ignored.
 ;;
 ;;;; Defining Time Blocked Commands
 ;;
@@ -145,18 +147,34 @@ Saturday   6"
 (defcustom time-block-skip-on-holidays-p nil
   "If t skip checking for time blocking on holidays.  Default to nil."
   :group 'time-block
-  :type '(choice (const :tag "Continue blocking on holidays." nil)
-                 (const :tag "Do not block on holidays." t)))
+  :type '(choice (const :tag "Continue blocking on holidays" nil)
+                 (regexp :tag "Matching regexp")
+                 (repeat :tag "Listed holidays" string)
+                 (const :tag "All holidays" t)))
 
 
 ;; Utility Functions
 
+(defun time-block-is-skipped-holiday-p ()
+  "Determine if today is a skipped holiday."
+  (when-let ((holidays time-block-skip-on-holidays-p)
+             (holidays-today (calendar-check-holidays (list (ts-month (ts-now))
+                                                            (ts-day (ts-now))
+                                                            (ts-year (ts-now))))))
+    (cond
+     ((listp holidays)
+      (cl-find-if #'(lambda (x)
+                      (cl-member x holidays :test #'string=))
+                  holidays-today))
+     ((stringp holidays)
+      (cl-find-if #'(lambda (x)
+                      (string-match-p holidays x))
+                  holidays-today))
+     (t t))))
+
 (defun time-block-group-blocked-p (block-group)
   "Is group BLOCK-GROUP currently blocked?"
-  (unless (and time-block-skip-on-holidays-p
-               (not (null (calendar-check-holidays (list (ts-month (ts-now))
-                                                         (ts-day (ts-now))
-                                                         (ts-year (ts-now)))))))
+  (unless (time-block-is-skipped-holiday-p)
     (when-let ((group (cl-rest (assoc block-group time-block-groups)))
                (ts-now (ts-now))
                (current-day (ts-dow ts-now))

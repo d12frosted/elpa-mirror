@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220926.1235
-;; Package-Commit: a49f620f53d00efe471dbceccc795329d6d40e5e
+;; Package-Version: 20221005.1955
+;; Package-Commit: 2599cd0d7951c6436b01e950110c98ee6375786a
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -275,7 +275,7 @@ CONTACT can be:
 
 (defface eglot-mode-line
   '((t (:inherit font-lock-constant-face :weight bold)))
-  "Face for package-name in EGLOT's mode line.")
+  "Face for package-name in Eglot's mode line.")
 
 (defface eglot-diagnostic-tag-unnecessary-face
   '((t (:inherit shadow)))
@@ -673,7 +673,7 @@ treated as in `eglot-dbind'."
                 method)))
 
 (cl-defgeneric eglot-client-capabilities (server)
-  "What the EGLOT LSP client supports for SERVER."
+  "What the Eglot LSP client supports for SERVER."
   (:method (s)
            (list
             :workspace (list
@@ -1133,7 +1133,7 @@ Each function is passed the server as an argument")
     contact))
 
 (defvar-local eglot--cached-server nil
-  "A cached reference to the current EGLOT server.")
+  "A cached reference to the current Eglot server.")
 
 (defun eglot--connect (managed-modes project class contact language-id)
   "Connect to MANAGED-MODES, LANGUAGE-ID, PROJECT, CLASS and CONTACT.
@@ -1627,7 +1627,7 @@ For example, to keep your Company customization, add the symbol
 `company' to this variable.")
 
 (defun eglot--stay-out-of-p (symbol)
-  "Tell if EGLOT should stay of of SYMBOL."
+  "Tell if Eglot should stay of of SYMBOL."
   (cl-find (symbol-name symbol) eglot-stay-out-of
            :test (lambda (s thing)
                    (let ((re (if (symbolp thing) (symbol-name thing) thing)))
@@ -1639,15 +1639,15 @@ For example, to keep your Company customization, add the symbol
      (setq-local ,symbol ,binding)))
 
 (defun eglot-managed-p ()
-  "Tell if current buffer is managed by EGLOT."
+  "Tell if current buffer is managed by Eglot."
   eglot--managed-mode)
 
 (defvar eglot-managed-mode-hook nil
-  "A hook run by EGLOT after it started/stopped managing a buffer.
+  "A hook run by Eglot after it started/stopped managing a buffer.
 Use `eglot-managed-p' to determine if current buffer is managed.")
 
 (define-minor-mode eglot--managed-mode
-  "Mode for source buffers managed by some EGLOT project."
+  "Mode for source buffers managed by some Eglot project."
   :init-value nil :lighter nil :keymap eglot-mode-map
   (cond
    (eglot--managed-mode
@@ -1717,7 +1717,7 @@ Use `eglot-managed-p' to determine if current buffer is managed.")
   (eglot--managed-mode -1))
 
 (defun eglot-current-server ()
-  "Return logical EGLOT server for current buffer, nil if none."
+  "Return logical Eglot server for current buffer, nil if none."
   (setq eglot--cached-server
         (or eglot--cached-server
             (cl-find major-mode
@@ -1730,7 +1730,7 @@ Use `eglot-managed-p' to determine if current buffer is managed.")
                           eglot--servers-by-xrefed-file)))))
 
 (defun eglot--current-server-or-lose ()
-  "Return current logical EGLOT server connection or error."
+  "Return current logical Eglot server connection or error."
   (or (eglot-current-server)
       (jsonrpc-error "No current JSON-RPC connection")))
 
@@ -1861,7 +1861,7 @@ Uses THING, FACE, DEFS and PREPEND."
                                          mouse-face mode-line-highlight))))
 
 (defun eglot--mode-line-format ()
-  "Compose the EGLOT's mode-line."
+  "Compose the Eglot's mode-line."
   (pcase-let* ((server (eglot-current-server))
                (nick (and server (eglot-project-nickname server)))
                (pending (and server (hash-table-count
@@ -2418,7 +2418,7 @@ may be called multiple times (respecting the protocol of
              :region (cons (point-min) (point-max))))
   (setq eglot--diagnostics diags))
 
-(defun eglot-xref-backend () "EGLOT xref backend." 'eglot)
+(defun eglot-xref-backend () "Eglot xref backend." 'eglot)
 
 (defvar eglot--temp-location-buffers (make-hash-table :test #'equal)
   "Helper variable for `eglot--handling-xrefs'.")
@@ -2668,7 +2668,7 @@ for which LSP on-type-formatting should be requested."
       :deferred method))))
 
 (defun eglot-completion-at-point ()
-  "EGLOT's `completion-at-point' function."
+  "Eglot's `completion-at-point' function."
   ;; Commit logs for this function help understand what's going on.
   (when-let (completion-capability (eglot--server-capable :completionProvider))
     (let* ((server (eglot--current-server-or-lose))
@@ -2985,7 +2985,7 @@ for which LSP on-type-formatting should be requested."
       nil)))
 
 (defun eglot-imenu ()
-  "EGLOT's `imenu-create-index-function'.
+  "Eglot's `imenu-create-index-function'.
 Returns a list as described in docstring of `imenu--index-alist'."
   (cl-labels
       ((unfurl (obj)
@@ -3126,8 +3126,9 @@ Returns a list as described in docstring of `imenu--index-alist'."
     (let ((boftap (bounds-of-thing-at-point 'sexp)))
       (list (car boftap) (cdr boftap)))))
 
-(defun eglot-code-actions (beg &optional end action-kind)
-  "Offer to execute actions of ACTION-KIND between BEG and END.
+(defun eglot-code-actions (beg &optional end action-kind interactive)
+  "Find LSP code actions of type ACTION-KIND between BEG and END.
+Interactively, offer to execute them.
 If ACTION-KIND is nil, consider all kinds of actions.
 Interactively, default BEG and END to region's bounds else BEG is
 point and END is nil, which results in a request for code actions
@@ -3137,8 +3138,10 @@ at point.  With prefix argument, prompt for ACTION-KIND."
      ,(and current-prefix-arg
            (completing-read "[eglot] Action kind: "
                             '("quickfix" "refactor.extract" "refactor.inline"
-                              "refactor.rewrite" "source.organizeImports")))))
-  (unless (eglot--server-capable :codeActionProvider)
+                              "refactor.rewrite" "source.organizeImports")))
+     t))
+  (unless (or (not interactive)
+              (eglot--server-capable :codeActionProvider))
     (eglot--error "Server can't execute code actions!"))
   (let* ((server (eglot--current-server-or-lose))
          (actions
@@ -3156,13 +3159,20 @@ at point.  With prefix argument, prompt for ACTION-KIND."
                                collect it)]
                    ,@(when action-kind `(:only [,action-kind]))))
            :deferred t))
-         (menu-items
-          (or (cl-loop for action across actions
-                       ;; Do filtering ourselves, in case the `:only'
-                       ;; didn't go through.
-                       when (or (not action-kind)
-                                (equal action-kind (plist-get action :kind)))
-                       collect (cons (plist-get action :title) action))
+         ;; Redo filtering, in case the `:only' didn't go through.
+         (actions (cl-loop for a across actions
+                           when (or (not action-kind)
+                                    (equal action-kind (plist-get a :kind)))
+                           collect a)))
+    (if interactive
+        (eglot--read-execute-code-action actions server action-kind)
+      actions)))
+
+(defun eglot--read-execute-code-action (actions server &optional action-kind)
+  "Helper for interactive calls to `eglot-code-actions'"
+  (let* ((menu-items
+          (or (cl-loop for a in actions
+                       collect (cons (plist-get a :title) a))
               (apply #'eglot--error
                      (if action-kind `("No \"%s\" code actions here" ,action-kind)
                        `("No code actions here")))))
@@ -3171,7 +3181,7 @@ at point.  With prefix argument, prompt for ACTION-KIND."
                               (plist-get (cdr menu-item) :isPreferred))
                             menu-items))
          (default-action (car (or preferred-action (car menu-items))))
-         (action (if (and action-kind (null (cadr menu-items)))
+         (chosen (if (and action-kind (null (cadr menu-items)))
                      (cdr (car menu-items))
                    (if (listp last-nonmenu-event)
                        (x-popup-menu last-nonmenu-event `("Eglot code actions:"
@@ -3181,7 +3191,7 @@ at point.  With prefix argument, prompt for ACTION-KIND."
                                           default-action)
                                   menu-items nil t nil nil default-action)
                                  menu-items))))))
-    (eglot--dcase action
+    (eglot--dcase chosen
       (((Command) command arguments)
        (eglot-execute-command server (intern command) arguments))
       (((CodeAction) edit command)
@@ -3317,6 +3327,40 @@ If NOERROR, return predicate, else erroring function."
 (defun eglot--glob-emit-range (arg self next)
   (when (eq ?! (aref arg 1)) (aset arg 1 ?^))
   `(,self () (re-search-forward ,(concat "\\=" arg)) (,next)))
+
+
+;;; List connections mode
+
+(define-derived-mode eglot-list-connections-mode  tabulated-list-mode
+  "" "Eglot Connection List Mode
+
+\\{sly-connection-list-mode-map}"
+  (setq-local tabulated-list-format
+              `[("Language server" 16) ("Project name" 16) ("Modes handled" 16)])
+  (tabulated-list-init-header))
+
+(defun eglot-list-connections ()
+  "List currently active Eglot connections."
+  (interactive)
+  (with-current-buffer
+      (get-buffer-create "*EGLOT connections*")
+    (let ((inhibit-read-only t))
+      (erase-buffer)
+      (eglot-list-connections-mode)
+      (setq-local tabulated-list-entries
+                  (mapcar
+                   (lambda (server)
+                     (list server
+                           `[,(or (plist-get (eglot--server-info server) :name)
+                                  (jsonrpc-name server))
+                             ,(eglot-project-nickname server)
+                             ,(mapconcat #'symbol-name
+                                         (eglot--major-modes server)
+                                         ", ")]))
+                   (cl-reduce #'append
+                              (hash-table-values eglot--servers-by-project))))
+      (revert-buffer)
+      (pop-to-buffer (current-buffer)))))
 
 
 ;;; Hacks

@@ -690,7 +690,7 @@
 		  ("Daiki Ueno" . "ueno@gnu.org"))
 		 (:maintainer nil . "emacs-devel@gnu.org"))])
  (debbugs .
-	  [(0 33)
+	  [(0 34)
 	   ((emacs
 	     (26 1))
 	    (soap-client
@@ -701,7 +701,7 @@
 	    (:authors
 	     ("Michael Albinus" . "michael.albinus@gmx.de"))
 	    (:url . "https://elpa.gnu.org/packages/debbugs.html")
-	    (:commit . "5354f5884cc7ebd4fe40326ab43671770aa1280c"))])
+	    (:commit . "c852b57ba235e54a46ef7c1e5198d7e34957650c"))])
  (delight .
 	  [(1 7)
 	   ((cl-lib
@@ -1071,7 +1071,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "bd603d8f3b1bcff34aee2dc4b7b36dc7912b9b26"))])
  (ement .
-	[(0 3)
+	[(0 3 1)
 	 ((emacs
 	   (27 1))
 	  (map
@@ -1092,7 +1092,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "fc0add9ca1a91c297d93a8b0b5cf510936d55e91"))])
+	  (:commit . "049c4b67c4dd693a22641221863b7d7c9fef4e4d"))])
  (emms .
        [(11)
 	((cl-lib
