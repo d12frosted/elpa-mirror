@@ -34,9 +34,12 @@ Editing Prolog code
 .. Following file specifications
 .. Loading buffers
 .. Using templates for creating new modules
+.. Documenting predicates
 .. Displaying predicate documentation
 The Prolog top-level
 .. Multiple top-levels
+.. The Top-level Menu buffer
+.. Sending signals to running top-levels
 .. Top-level history
 .. Completion in the top-level
 Finding Prolog code
@@ -705,6 +708,42 @@ Using templates for creating new modules
 [Autoinserting in the Autotyping manual] <info:autotype#Autoinserting>
 
 
+Documenting predicates
+──────────────────────
+
+  SWI-Prolog predicates can be documented with specially structured
+  comments placed above the predicate definition, which are processed by
+  the `PlDoc' source documentation system.  Emacs comes with many useful
+  commands specifically intended for working with comments in
+  programming languages, which apply also to writing `PlDoc' comments
+  for Prolog predicates.  For an overview of the relevant standard Emacs
+  commands, see [Comment Commands in the Emacs manual].
+
+  `sweep' also includes a dedicated command called
+  `sweeprolog-document-predicate-at-point' for interactively creating
+  `PlDoc' comments for predicates in `sweeprolog-mode' buffers.  This
+  command, bound by default to `C-c C-d', finds the beginning of the
+  predicate definition under or right above the current cursor location,
+  and inserts formatted `PlDoc' comments while prompting the user to
+  interactively fill in the argument modes, determinism specification,
+  and initial contents of the predicate documentation.
+  `sweeprolog-document-predicate-at-point' leaves the cursor at the end
+  of the newly inserted documentation comment for the user to extend or
+  edit it if needed.  To add another comment line, use `M-j'
+  (`comment-indent-new-line') which starts a new line with the comment
+  prefix filled in.  To reformat the current paragraph of `PlDoc'
+  comments, use `M-q' (`fill-paragraph').
+
+  For more information about `PlDoc' and source documentation in
+  SWI-Prolog, see [the PlDoc manual].
+
+
+[Comment Commands in the Emacs manual] <info:emacs#Comment Commands>
+
+[the PlDoc manual]
+<https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/pldoc.html%27)>
+
+
 Displaying predicate documentation
 ──────────────────────────────────
 
@@ -750,6 +789,73 @@ Multiple top-levels
   name of the original top-level buffer to something like
   `*sweeprolog-top-level*<2>' and allow the new top-level to claim the
   buffer name `*sweeprolog-top-level*'.
+
+
+The Top-level Menu buffer
+─────────────────────────
+
+  `sweep' provides a convenient interface for listing the active Prolog
+  top-levels and operating on them, called the Top-level Menu buffer.
+  This buffer shows the list of active `sweep' top-level buffers in a
+  table that includes information and statistics for each top-level.
+
+  To open the Top-level Menu buffer, use the command `M-x
+  sweeprolog-list-top-levels'.  By default, the buffer is will be named
+  `*sweep Top-levels*'.
+
+  The Top-level Menu buffer uses a special major mode named
+  `sweeprolog-top-level-menu-mode'.  This mode provides several commands
+  that operate on the top-level corresponding to the table row at point.
+  The available commands are:
+
+  `RET' (`sweeprolog-top-level-menu-go-to')
+        Open the specified top-level buffer.
+
+  `k' (`sweeprolog-top-level-menu-kill')
+        Kill the specified top-level buffer.
+
+  `s' (`sweeprolog-top-level-menu-signal')
+        Signal the specified top-level buffer (see [Sending signals to
+        running top-levels]).
+
+  `t' (`sweeprolog-top-level-menu-new')
+        Create a new top-level buffer.
+
+  `g' (`revert-buffer')
+        Update the Top-level Menu contents.
+
+
+[Sending signals to running top-levels] See section Sending signals to
+running top-levels
+
+
+Sending signals to running top-levels
+─────────────────────────────────────
+
+  When executing long running Prolog queries in the top-level, there may
+  arise a need to interrupt the query, either to inspect the state of
+  the top-level or to free it for running other queries.  To signal a
+  `sweep' top-level that it should stop executing the current query and
+  do something else instead, use the command `M-x
+  sweeprolog-top-level-signal'.  This command prompts for an active
+  `sweep' top-level buffer followed by a Prolog goal, and interrupts the
+  top-level causing it to run the specified goal.
+
+  In `sweeprolog-top-level-mode' buffers, the command
+  `sweeprolog-top-level-signal-current' is available for signaling the
+  current top-level.  It is bound by default to `C-c C-c'.
+
+  It is also possible to signal top-levels from the `sweep' Top-level
+  Menu buffer with the command `sweeprolog-top-level-menu-signal' with
+  point at the entry corresponding to the wanted top-level (see The
+  Top-level Menu buffer).
+
+  For more information about interrupting threads in SWI-Prolog, see
+  [Signaling threads in the SWI-Prolog manual].
+
+
+[Signaling threads in the SWI-Prolog manual]
+<https://www.swi-prolog.org/pldoc/man?section=thread-signal>
 
 
 Top-level history
