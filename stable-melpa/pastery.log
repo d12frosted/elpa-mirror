@@ -3,25 +3,11 @@ Fetcher: github
 Source:  https://github.com/diasbruno/pastery.el.git
 
 Updating /mnt/store/melpa/working/pastery/
-Checking out origin/HEAD
-Checking out 4493be98b743b4d062cb4e00760125e394a55022
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pastery/
-  to /tmp/pasterySbmY1A/pastery-20171114.349
-    pastery-buffer.el -> pastery-buffer.el
-    pastery-data.el -> pastery-data.el
-    pastery-list-mode.el -> pastery-list-mode.el
-    pastery-net.el -> pastery-net.el
-    pastery.el -> pastery.el
-Created pastery-20171114.349.tar containing:
-  pastery-20171114.349/
-  pastery-20171114.349/pastery-buffer.el
-  pastery-20171114.349/pastery-data.el
-  pastery-20171114.349/pastery-list-mode.el
-  pastery-20171114.349/pastery-net.el
-  pastery-20171114.349/pastery-pkg.el
-  pastery-20171114.349/pastery.el
-Built pastery in 3.167s, finished at 2022-10-05T23:14:05+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 382 Oct  5 23:14 packages/pastery-20171114.349.entry
- 20K -rw-r--r-- 1 root root 20K Oct  5 23:14 packages/pastery-20171114.349.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/diasbruno/pastery.el.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
