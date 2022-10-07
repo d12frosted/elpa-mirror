@@ -48,6 +48,13 @@ Quick access to sweep commands
 Examining Prolog messages
 Setting Prolog flags
 Installing Prolog packages
+Contributing
+.. Setting up sweep for local development
+.. Submitting patches and bug reports
+Things to do
+.. Improvements around editing Prolog
+.. Improvements around running Prolog
+.. General improvements
 Indices
 .. Function index
 .. Variable index
@@ -1007,6 +1014,241 @@ Installing Prolog packages
   upgrade a SWI-Prolog `pack'. When selecting a `pack' to install, the
   completion candidates are annotated with description and the version
   of each package.
+
+
+Contributing
+════════════
+
+  We highly appreciate all contributions, including bug reports,
+  patches, improvement suggestions, and general feedback.
+
+  For a list of known desired improvements in `sweep', see [Things to
+  do].
+
+
+[Things to do] See section Things to do
+
+Setting up sweep for local development
+──────────────────────────────────────
+
+  Since the Prolog and C parts of `sweep' are intended to be distributed
+  and installed along with SWI-Prolog (see [Installation]), the easiest
+  way to set up `sweep' for development is to start with a SWI-Prolog
+  development setup.  Clone the `swipl-devel' Git repository, and update
+  the included `sweep' submodule from its master branch:
+
+  ┌────
+  │ $ git clone --recursive https://github.com/SWI-Prolog/swipl-devel.git
+  │ $ cd swipl-devel/packages/sweep
+  │ $ git checkout master
+  │ $ git pull
+  └────
+
+  The directory `swipl-devel/packages/sweep' now contains the
+  development version of `sweep', you can make changes to source files
+  and they will apply when you (re)build SWI-Prolog.  See [Building
+  SWI-Prolog using cmake] for instructions on how to build SWI-Prolog
+  from source.
+
+  Changes in the Elisp library `sweeprolog.el' do not require rebuilding
+  SWI-Prolog, and can be applied and tested directly inside Emacs (see
+  [Evaluating Elisp in the Emacs manual]).
+
+  Most often rebuilding SWI-Prolog after changing `sweep.c' and/or
+  `sweep.pl' can be achieved with the following command executed in
+  `swipl-devel/packages/sweep':
+
+  ┌────
+  │ $ ninja -C ../../build
+  └────
+
+
+[Installation] See section Installation
+
+[Building SWI-Prolog using cmake]
+<https://github.com/SWI-Prolog/swipl-devel/blob/master/CMAKE.md#building-from-source>
+
+[Evaluating Elisp in the Emacs manual] <info:emacs#Lisp Eval>
+
+
+Submitting patches and bug reports
+──────────────────────────────────
+
+  The best way to get in touch with the `sweep' maintainers is via [the
+  sweep mailing list].
+
+  The command `M-x sweeprolog-submit-bug-report' can be used to easily
+  contact the `sweep' maintainers from within Emacs.  This command opens
+  a new buffer with a message template ready to be sent to the `sweep'
+  mailing list.
+
+
+[the sweep mailing list] <https://lists.sr.ht/~eshel/dev>
+
+
+Things to do
+════════════
+
+  While `sweep' is ready to be used for effective editing of Prolog
+  code, there some further improvements that we want to pursue:
+
+
+Improvements around editing Prolog
+──────────────────────────────────
+
+  Inherit user customizations from `prolog-mode'
+        `sweep' should inherit user customizations from the standard
+        `prolog.el' built into Emacs to accommodate users updating their
+        configs to work with `sweep'.  Ideally, `sweeprolog-mode' should
+        be derived from `prolog-mode' instead of the generic `prog-mode'
+        to inherit user-set hooks and modifications, but careful
+        consideration is required to make sure `sweeprolog-mode'
+        overrides all conflicting `prolog-mode' features.
+
+  Provide automatic whitespace formatting for if-then-else constructs
+        By convention, if-then-else constructs are aligned such that
+        each goal starts at the fourth column after the /start/ of the
+        opening parenthesis or operator, as follows:
+
+        ┌────
+        │ (   if
+        │ ->  then
+        │ ;   else
+        │ *-> elif
+        │ ;   true
+        │ )
+        └────
+
+        Note that the number of spaces differs from line to line,
+        e.g. in the first line there are three spaces because the
+        opening parenthesis in only spans a single column, while the
+        second line contains two spaces since the operator `->' is
+        already two columns long.
+
+        `sweep' should make it trivial for users to achieve the
+        conventional layout without manually counting spaces.  Ideally,
+        pressing `TAB' or `SPC', possibly with a modifier, after the
+        opening parenthesis or operator should result in the above
+        layout.
+
+  Reflect buffer status in the mode line
+        It may be useful to indicate in the mode line whether the
+        current `sweeprolog-mode' buffer has been loaded into the Prolog
+        runtime and/or if its cross-reference data is up to date.
+
+  Provide right-click (`mouse-3') menus with `context-menu-mode'
+        To accommodate users who prefer a mouse-based workflow,
+        `sweeprolog-mode' should provide right-click context-aware menus
+        by integrating with `context-menu-mode'.
+
+  Provide descriptions for tokens by setting their `help-echo' propety
+        We should annotate tokens in Prolog code with a short text in
+        their `help-echo' property that says what kind of token this is,
+        to expose the precise semantics of each token to the user.
+
+  Add a command for exporting the current predicate
+        `sweeprolog-mode' should provide a command for adding a
+        predicate to the export list of the module defined in the
+        current buffer, defaulting to the predicate at point.
+
+  Add a command for updating the dependencies for the current module
+        `sweeprolog-mode' should provide a command for adding and/or
+        updating `use_module/2' and `autoload/2' directives as needed
+        according to the predicates that the current buffer depends
+        on. The directives should be inserted in the appropriate
+        position, i.e. before the first predicate definition in the
+        buffer.
+
+  Add a command for inserting a new clause, similar to `C-M-m' in `prolog-mode'
+        `sweeprolog-mode' should provide a command for inserting a new
+        clause for the predicate at or above point.
+
+  Add a command for interactively inserting a new predicate
+        `sweeprolog-mode' should provide a command for interactively
+        inserting a new predicate definition, ideally with optional
+        `PlDoc' comments (see [Documenting predicates]).
+
+  Add commands for narrowing and moving by predicate definitions
+        `sweeprolog-mode' should include commands moving point to the
+        next/previous predicate definition.  We already have commands
+        for clause-based motion (`C-M-a', `C-M-e') but it would be
+        useful to have predicate-based variants as well.  These commands
+        could then be bound to `C-c C-n' for moving to the next
+        predicate definition and `C-c C-p' for moving to the previous.
+
+  Integrate with `flymake' to provide on-the-fly diagnostics
+        `sweeprolog-mode' should integrate with `flymake' to provide
+        diagnostics and feedback for errors in Prolog code in an
+        Emacs-standard manner.
+
+  Improve the information provided for predicate completion candidates
+        predicate completion with `C-M-i' should annotate each
+        completion candidate with the names and modes of its arguments,
+        when available.  E.g. say `foo(+Bar, -Baz)' instead of `foo/2'.
+
+  Improve the behavior of predicate completion in the middle of a functor
+        When invoking predicate completion in the middle of a functor,
+        e.g. `foo<|>bar(' (where `<|>' designates the location of the
+        cursor), we should take into account the part that comes after
+        the cursor and either restrict completion to candidates that
+        match it as a suffix, or delete it after completion.
+
+  Make predicate completion aware of module-qualification
+        predicate completion should detect when the prefix it’s trying
+        to complete starts with a module-qualification `foo:ba<|>' and
+        restrict completion to matching candidates in the specified
+        module.
+
+
+[Documenting predicates] See section Documenting predicates
+
+
+Improvements around running Prolog
+──────────────────────────────────
+
+  Persist top-level history across sessions
+        `sweep' should persist Prolog top-level histories across
+        invocations of `sweeprolog-top-level', ideally also across
+        different Emacs sessions.
+
+
+General improvements
+────────────────────
+
+  Facilitate interactive debugging
+        `sweep' should facilitate interactive debugging of SWI-Prolog
+        code.  This is a big topic that we don’t currently address.
+        Perhaps this should handled through some Debug Adapter Protocol
+        integration similar to what was done in `dap-swi-prolog' (see
+        [Debug Adapter Protocol for SWI-Prolog]).
+
+  Integrate with `project.el' adding support for SWI-Prolog packs
+        It would be nice if `sweep' would “teach” `project.el' to detect
+        directories containing SWI-Prolog `pack.pl' package definitions
+        as root project directories.
+
+  Add command line arguments handling for Prolog flags
+        `sweep' should make it easy to specify Prolog initialization
+        arguments (see [Prolog initialization and cleanup]) already in
+        the Emacs command line invocation.  One way to achieve that
+        would be to extend `command-line-functions' with a custom
+        command line arguments handler.
+
+  Extend the provided Elisp-Prolog interface
+        Currently, the Elisp interface that `sweep' provides for
+        querying Prolog only allows calling directly to predicates of
+        arity 2 (see [Querying Prolog]), ideally we should provide a
+        (backward-compatible) way for executing arbitrary Prolog
+        queries.
+
+
+[Debug Adapter Protocol for SWI-Prolog]
+<https://github.com/eshelyaron/debug_adapter/blob/main/README.md>
+
+[Prolog initialization and cleanup] See section Prolog initialization
+and cleanup
+
+[Querying Prolog] See section Querying Prolog
 
 
 Indices
