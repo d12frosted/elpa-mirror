@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm/
 Checking out origin/HEAD
-Checking out 9b13fc0e3112d17b2d6dca8e920630c68d064b55
+Checking out 56454b9253052af7701910b6b158c288a7ef9e40
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmgXTPd7/helm-20221006.620
+  to /tmp/helmdeNBrX/helm-20221006.728
     .dir-locals.el -> .dir-locals.el
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
@@ -52,54 +52,54 @@ Copying files (->) and directories (=>)
     helm-x-files.el -> helm-x-files.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20221006.620.tar containing:
-  helm-20221006.620/
-  helm-20221006.620/.dir-locals.el
-  helm-20221006.620/emacs-helm.sh
-  helm-20221006.620/helm-adaptive.el
-  helm-20221006.620/helm-bookmark.el
-  helm-20221006.620/helm-buffers.el
-  helm-20221006.620/helm-color.el
-  helm-20221006.620/helm-comint.el
-  helm-20221006.620/helm-command.el
-  helm-20221006.620/helm-config.el
-  helm-20221006.620/helm-dabbrev.el
-  helm-20221006.620/helm-easymenu.el
-  helm-20221006.620/helm-elisp-package.el
-  helm-20221006.620/helm-elisp.el
-  helm-20221006.620/helm-epa.el
-  helm-20221006.620/helm-eshell.el
-  helm-20221006.620/helm-eval.el
-  helm-20221006.620/helm-external.el
-  helm-20221006.620/helm-fd.el
-  helm-20221006.620/helm-files.el
-  helm-20221006.620/helm-find.el
-  helm-20221006.620/helm-font.el
-  helm-20221006.620/helm-for-files.el
-  helm-20221006.620/helm-global-bindings.el
-  helm-20221006.620/helm-grep.el
-  helm-20221006.620/helm-help.el
-  helm-20221006.620/helm-id-utils.el
-  helm-20221006.620/helm-imenu.el
-  helm-20221006.620/helm-info.el
-  helm-20221006.620/helm-locate.el
-  helm-20221006.620/helm-man.el
-  helm-20221006.620/helm-misc.el
-  helm-20221006.620/helm-mode.el
-  helm-20221006.620/helm-net.el
-  helm-20221006.620/helm-occur.el
-  helm-20221006.620/helm-pkg.el
-  helm-20221006.620/helm-regexp.el
-  helm-20221006.620/helm-ring.el
-  helm-20221006.620/helm-semantic.el
-  helm-20221006.620/helm-shell.el
-  helm-20221006.620/helm-sys.el
-  helm-20221006.620/helm-tags.el
-  helm-20221006.620/helm-types.el
-  helm-20221006.620/helm-utils.el
-  helm-20221006.620/helm-x-files.el
-  helm-20221006.620/helm.el
-Built helm in 4.323s, finished at 2022-10-07T06:39:27+0000
+Created helm-20221006.728.tar containing:
+  helm-20221006.728/
+  helm-20221006.728/.dir-locals.el
+  helm-20221006.728/emacs-helm.sh
+  helm-20221006.728/helm-adaptive.el
+  helm-20221006.728/helm-bookmark.el
+  helm-20221006.728/helm-buffers.el
+  helm-20221006.728/helm-color.el
+  helm-20221006.728/helm-comint.el
+  helm-20221006.728/helm-command.el
+  helm-20221006.728/helm-config.el
+  helm-20221006.728/helm-dabbrev.el
+  helm-20221006.728/helm-easymenu.el
+  helm-20221006.728/helm-elisp-package.el
+  helm-20221006.728/helm-elisp.el
+  helm-20221006.728/helm-epa.el
+  helm-20221006.728/helm-eshell.el
+  helm-20221006.728/helm-eval.el
+  helm-20221006.728/helm-external.el
+  helm-20221006.728/helm-fd.el
+  helm-20221006.728/helm-files.el
+  helm-20221006.728/helm-find.el
+  helm-20221006.728/helm-font.el
+  helm-20221006.728/helm-for-files.el
+  helm-20221006.728/helm-global-bindings.el
+  helm-20221006.728/helm-grep.el
+  helm-20221006.728/helm-help.el
+  helm-20221006.728/helm-id-utils.el
+  helm-20221006.728/helm-imenu.el
+  helm-20221006.728/helm-info.el
+  helm-20221006.728/helm-locate.el
+  helm-20221006.728/helm-man.el
+  helm-20221006.728/helm-misc.el
+  helm-20221006.728/helm-mode.el
+  helm-20221006.728/helm-net.el
+  helm-20221006.728/helm-occur.el
+  helm-20221006.728/helm-pkg.el
+  helm-20221006.728/helm-regexp.el
+  helm-20221006.728/helm-ring.el
+  helm-20221006.728/helm-semantic.el
+  helm-20221006.728/helm-shell.el
+  helm-20221006.728/helm-sys.el
+  helm-20221006.728/helm-tags.el
+  helm-20221006.728/helm-types.el
+  helm-20221006.728/helm-utils.el
+  helm-20221006.728/helm-x-files.el
+  helm-20221006.728/helm.el
+Built helm in 4.923s, finished at 2022-10-07T16:06:12+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  376 Oct  7 06:39 packages/helm-20221006.620.entry
-1.2M -rw-r--r-- 1 root root 1.2M Oct  7 06:39 packages/helm-20221006.620.tar
+4.0K -rw-r--r-- 1 root root  376 Oct  7 16:06 packages/helm-20221006.728.entry
+1.2M -rw-r--r-- 1 root root 1.2M Oct  7 16:06 packages/helm-20221006.728.tar
