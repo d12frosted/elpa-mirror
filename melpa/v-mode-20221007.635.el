@@ -4,8 +4,8 @@
 
 ;; Authors: Damon Kwok <damon-kwok@outlook.com>
 ;; Version: 0.0.1
-;; Package-Version: 20220104.142
-;; Package-Commit: a701f4cedfff91cf4bcd17c9a2cd16a49f942743
+;; Package-Version: 20221007.635
+;; Package-Commit: 84f26ab0f0f5b23133292674da9fa4558207c33d
 ;; URL: https://github.com/damon-kwok/v-mode
 ;; Keywords: languages programming
 ;; Package-Requires: ((emacs "25.1") (dash "2.17.0") (hydra "0.15.0"))
@@ -71,10 +71,12 @@
     (modify-syntax-entry ?/ ". 124" table)
 
     ;; /* */ comments, which can be nested
-    (modify-syntax-entry ?* ". 23bn" table)
-
-    ;; \n is a comment ender
-    (modify-syntax-entry ?\n ">" table)
+    ;; (modify-syntax-entry ?* ". 23bn" table)
+    ;; (modify-syntax-entry ?\n ">" table)
+       
+    ;; uses // for comments
+    (modify-syntax-entry ?/  ". 12" table)
+    (modify-syntax-entry ?\n ">"    table)
 
     ;; string
     (modify-syntax-entry ?\` "\"" table)
@@ -487,8 +489,9 @@ Optional argument BUILD ."
   ;;
   (setq-local require-final-newline mode-require-final-newline)
   (setq-local parse-sexp-ignore-comments t)
-  (setq-local comment-start "/*")
-  (setq-local comment-end "*/")
+  (setq-local comment-start "// ")
+  (setq-local comment-end "")
+  (setq-local comment-multi-line t)
   (setq-local comment-start-skip "\\(//+\\|/\\*+\\)\\s *")
   ;;
   (setq-local indent-tabs-mode nil)
