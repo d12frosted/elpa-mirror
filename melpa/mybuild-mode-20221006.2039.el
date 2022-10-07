@@ -4,8 +4,8 @@
 
 ;; Author: Evgeny Simonenko <easimonenko@gmail.com>
 ;; Keywords: languages
-;; Package-Version: 20220919.2032
-;; Package-Commit: 0fc84a09a065903338d9364e980b692051f229b0
+;; Package-Version: 20221006.2039
+;; Package-Commit: b8680e4eb62dfd911de63ecfbe6cae9ff5ee16fe
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Created: August 2022
@@ -111,7 +111,7 @@
   (setq-local font-lock-defaults '(mybuild-highlights)))
 
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("/Mybuild\\'" . mybuild-mode))
+(add-to-list 'auto-mode-alist '("\\(?:/Mybuild\\|\\.my\\|/mods\\.conf\\)\\'" . mybuild-mode))
 
 (provide 'mybuild-mode)
 ;;; mybuild-mode.el ends here

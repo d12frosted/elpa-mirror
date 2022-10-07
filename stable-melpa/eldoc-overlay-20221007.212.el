@@ -4,8 +4,8 @@
 ;; Author: Robert Weiner <rsw@gnu.org>
 ;; Maintainer: stardiviner <numbchild@gmail.com>
 ;; Keywords: docs, eldoc, overlay
-;; Package-Version: 20221005.154
-;; Package-Commit: d20dcecdde43737d8c9ae56551e2f0c05173870f
+;; Package-Version: 20221007.212
+;; Package-Commit: 5ae9e062295ea2a2855569826b770f3469f73e2f
 ;; URL: https://repo.or.cz/eldoc-overlay.git
 ;; Created:  14th Jan 2017
 ;; Modified: 18th Dec 2017
@@ -112,9 +112,9 @@ This function used as value of `eldoc-message-function'."
 
 (defun eldoc-overlay-enable ()
   ;; adopt for new eldoc mechanism.
-  (when (and (boundp 'eldoc-documentation-strategy)
-             (fboundp 'eldoc-documentation-compose))
-    (setq-local eldoc-documentation-strategy #'eldoc-documentation-compose))
+  ;; (when (and (boundp 'eldoc-documentation-strategy)
+  ;;            (fboundp 'eldoc-documentation-compose))
+  ;;   (setq-local eldoc-documentation-strategy #'eldoc-documentation-compose))
   (if (boundp 'eldoc-documentation-functions)
       (add-to-list 'eldoc-display-functions #'eldoc-overlay-display)
     ;; roll back to old mechanism.
@@ -131,6 +131,9 @@ This function used as value of `eldoc-message-function'."
        (remove-hook 'post-command-hook #'quick-peek-hide)))
     ('inline-docs
      (inline-docs--clear-overlay)))
+  (when (boundp 'eldoc-documentation-functions)
+    (setq eldoc-display-functions
+          (delq #'eldoc-overlay-display eldoc-display-functions)))
   (setq-local eldoc-message-function #'eldoc-minibuffer-message))
 
 ;;;###autoload
