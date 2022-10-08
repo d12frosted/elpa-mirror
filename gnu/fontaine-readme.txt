@@ -611,7 +611,7 @@ Table of Contents
         F. Torrey.
 
   Ideas and user feedback
-        Ted Reed.
+        Joe Higton, Ted Reed.
 
 
 6 GNU Free Documentation License

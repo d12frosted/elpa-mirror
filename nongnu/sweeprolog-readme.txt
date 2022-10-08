@@ -103,10 +103,9 @@ High-level architecture
 Installation
 ════════════
 
-  The dynamic Emacs module `sweep-module' and the Prolog helper library
-  `sweep.pl' are included in the latest SWI-Prolog distribution.  For
-  instructions on how to build and install SWI-Prolog, see
-  <https://www.swi-prolog.org/build/>.
+  The dynamic Emacs module `sweep-module' is included in the SWI-Prolog
+  distribution from version 8.5.18.  For instructions on how to build
+  and install SWI-Prolog, see <https://www.swi-prolog.org/build/>.
 
   The `sweeprolog' Elisp package is available on NonGNU ELPA, to install
   `sweeprolog' simply type `M-x package-install RET sweeprolog RET'.
@@ -1054,8 +1053,8 @@ Setting up sweep for local development
   SWI-Prolog, and can be applied and tested directly inside Emacs (see
   [Evaluating Elisp in the Emacs manual]).
 
-  Most often rebuilding SWI-Prolog after changing `sweep.c' and/or
-  `sweep.pl' can be achieved with the following command executed in
+  Most often rebuilding SWI-Prolog after changing `sweep.c' can be
+  achieved with the following command executed in
   `swipl-devel/packages/sweep':
 
   ┌────
