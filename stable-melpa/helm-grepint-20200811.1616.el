@@ -6,8 +6,6 @@
 ;; Maintainer: Kalle Kankare <kalle.kankare@iki.fi>
 ;; Created: 19 Sep 2015
 ;; Keywords: grep, grepping, searching, helm, tools, convenience
-;; Package-Version: 20200811.1616
-;; Package-Commit: 9aec98428823b749eb14d2c8512b46b59ca9f8ca
 ;; Version: 1.6.1
 ;; URL: https://github.com/kopoli/helm-grepint
 ;; Package-Requires: ((helm "2.9.7") (emacs "24.4"))
