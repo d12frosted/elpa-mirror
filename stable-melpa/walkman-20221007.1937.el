@@ -20,8 +20,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20220318.2122
-;; Package-Commit: 3118dd4f493caffcc2849058833572dfc0c0e0a9
+;; Package-Version: 20221007.1937
+;; Package-Commit: f5021a4d9f16a2013e67a9fa7c121f87bf030203
 ;; Author: Adrien Brochard
 ;; Keywords: walkman http curl org comm
 ;; URL: https://github.com/abrochard/walkman
@@ -213,12 +213,12 @@ LOCAL-VARIABLES is the alist of local variables from original buffer."
                  (let ((link (car (org-element-map item 'link 'identity)))
                        (item (car (org-element-contents item))))
                    (replace-regexp-in-string
-                    ": *" "="
+                    "\\(: \\).*\\'" "="
                     (if link
                         (concat (buffer-substring-no-properties (org-element-property :begin item)
                                                                 (org-element-property :begin link))
                                 "@" (org-element-property :path link))
-                      (walkman--org-text item)))))))))))
+                      (walkman--org-text item)) nil nil 1)))))))))
 
 (defun walkman--extract-body (elements)
   "Extract the body out of an org section parsed into org ELEMENTS."
