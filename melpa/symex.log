@@ -4,10 +4,10 @@ Source:  https://github.com/countvajhula/symex.el.git
 
 Updating /mnt/store/melpa/working/symex/
 Checking out origin/HEAD
-Checking out 7e5e712283656e7f075a9840548a6b5004563a15
+Checking out b999c02284f6e72ff2061a98cbaa084954c44879
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/symex/
-  to /tmp/symexiFxHq5/symex-20221004.2236
+  to /tmp/symexdACUqc/symex-20221008.1605
     symex-computations.el -> symex-computations.el
     symex-custom.el -> symex-custom.el
     symex-data.el -> symex-data.el
@@ -30,32 +30,34 @@ Copying files (->) and directories (=>)
     symex-ui.el -> symex-ui.el
     symex-utils.el -> symex-utils.el
     symex.el -> symex.el
-Created symex-20221004.2236.tar containing:
-  symex-20221004.2236/
-  symex-20221004.2236/symex-computations.el
-  symex-20221004.2236/symex-custom.el
-  symex-20221004.2236/symex-data.el
-  symex-20221004.2236/symex-dsl.el
-  symex-20221004.2236/symex-evaluator.el
-  symex-20221004.2236/symex-evil-support.el
-  symex-20221004.2236/symex-evil.el
-  symex-20221004.2236/symex-hydra.el
-  symex-20221004.2236/symex-interface-arc.el
-  symex-20221004.2236/symex-interface-clojure.el
-  symex-20221004.2236/symex-interface-common-lisp.el
-  symex-20221004.2236/symex-interface-elisp.el
-  symex-20221004.2236/symex-interface-racket.el
-  symex-20221004.2236/symex-interface-scheme.el
-  symex-20221004.2236/symex-interop.el
-  symex-20221004.2236/symex-misc.el
-  symex-20221004.2236/symex-pkg.el
-  symex-20221004.2236/symex-primitives.el
-  symex-20221004.2236/symex-transformations.el
-  symex-20221004.2236/symex-traversals.el
-  symex-20221004.2236/symex-ui.el
-  symex-20221004.2236/symex-utils.el
-  symex-20221004.2236/symex.el
-Built symex in 6.914s, finished at 2022-10-08T05:37:51+0000
+Created symex-20221008.1605.tar containing:
+  symex-20221008.1605/
+  symex-20221008.1605/symex-computations.el
+  symex-20221008.1605/symex-custom.el
+  symex-20221008.1605/symex-data.el
+  symex-20221008.1605/symex-dsl.el
+  symex-20221008.1605/symex-evaluator.el
+  symex-20221008.1605/symex-evil-support.el
+  symex-20221008.1605/symex-evil.el
+  symex-20221008.1605/symex-hydra.el
+  symex-20221008.1605/symex-interface-arc.el
+  symex-20221008.1605/symex-interface-clojure.el
+  symex-20221008.1605/symex-interface-common-lisp.el
+  symex-20221008.1605/symex-interface-elisp.el
+  symex-20221008.1605/symex-interface-racket.el
+  symex-20221008.1605/symex-interface-scheme.el
+  symex-20221008.1605/symex-interop.el
+  symex-20221008.1605/symex-misc.el
+  symex-20221008.1605/symex-pkg.el
+  symex-20221008.1605/symex-primitives.el
+  symex-20221008.1605/symex-transformations.el
+  symex-20221008.1605/symex-traversals.el
+  symex-20221008.1605/symex-ui.el
+  symex-20221008.1605/symex-utils.el
+  symex-20221008.1605/symex.el
+Built symex in 4.519s, finished at 2022-10-08T18:24:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  608 Oct  8 05:37 packages/symex-20221004.2236.entry
-200K -rw-r--r-- 1 root root 200K Oct  8 05:37 packages/symex-20221004.2236.tar
+4.0K -rw-r--r-- 1 root root  608 Oct  8 15:05 packages/symex-20221004.2236.entry
+200K -rw-r--r-- 1 root root 200K Oct  8 15:05 packages/symex-20221004.2236.tar
+4.0K -rw-r--r-- 1 root root  608 Oct  8 18:24 packages/symex-20221008.1605.entry
+200K -rw-r--r-- 1 root root 200K Oct  8 18:24 packages/symex-20221008.1605.tar

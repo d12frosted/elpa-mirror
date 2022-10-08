@@ -51,7 +51,7 @@ Supported languages:
 - Markdown (prettier, prettierd)
 - Nginx (nginxfmt)
 - Nix (nixpkgs-fmt, nixfmt, alejandra)
-- OCaml (ocp-indent)
+- OCaml (ocp-indent, ocamlformat)
 - Perl (perltidy)
 - PHP (prettier plugin)
 - Protocol Buffers (clang-format)
