@@ -6,8 +6,8 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; Maintainer: Jen-Chieh Shen <jcs090218@gmail.com>
 ;; URL: https://github.com/emacsorphanage/quickrun
-;; Package-Version: 20221007.1956
-;; Package-Commit: abbd70b63edc68f5184ee59795255905e5a3a197
+;; Package-Version: 20221009.929
+;; Package-Commit: d0bd25228d113a4f67719179124c51e23726bfdc
 ;; Version: 2.3.1
 ;; Package-Requires: ((emacs "26.1") (ht "2.0"))
 ;; Keywords: tools
@@ -191,16 +191,30 @@ FMT and ARGS passed `message'."
 ;;
 
 (defvar quickrun--language-alist
-  '(("asm" . ((:command . "nasm")
-              (:exec . ("%c -f elf64 %o %s -o %e.o" "ld -o %e %e.o" "%e %a"))
-              (:remove . ("%e" "%e.o"))
-              (:description . "Compile Assembly file with nasm and execute")))
+  '(("asm/masm" . ((:command . "ml")
+                   (:exec . ("%c /c /coff %s"
+                             "link /subsystem:windows %n.obj"
+                             "%n.exe"))
+                   (:compile-only . "%c /c /coff %s")
+                   (:remove  . ("%n.obj" "%n.exe"))
+                   (:description . "Compile Assembly file with masm and execute")))
+    ("asm/masm64" . ((:command . "ml64")
+                     (:exec . ("%c /c /coff %s"
+                               "link /subsystem:windows %n.obj"
+                               "%n.exe"))
+                     (:compile-only . "%c /c /coff %s")
+                     (:remove  . ("%n.obj" "%n.exe"))
+                     (:description . "Compile Assembly file with masm x64 and execute")))
+    ("asm/nasm" . ((:command . "nasm")
+                   (:exec . ("%c -f elf64 %o %s -o %e.o" "ld -o %e %e.o" "%e %a"))
+                   (:remove . ("%e" "%e.o"))
+                   (:description . "Compile Assembly file with nasm and execute")))
+
     ("c/gcc" . ((:command . "gcc")
                 (:exec    . ("%c -x c %o -o %e %s" "%e %a"))
                 (:compile-only . "%c -Wall -Werror %o -o %e %s")
                 (:remove . ("%e"))
                 (:description . "Compile C file with gcc and execute")))
-
     ("c/clang" . ((:command . "clang")
                   (:exec    . ("%c -x c %o -o %e %s" "%e %a"))
                   (:compile-only . "%c -Wall -Werror %o -o %e %s")
@@ -615,7 +629,7 @@ if you set your own language configuration.")
     (elixir-mode . "elixir")
     (tcl-mode . "tcl")
     (swift-mode . "swift")
-    (asm-mode . "asm")
+    ((asm-mode nasm-mode masm-mode) . "asm")
     (ats-mode . "ats")
     (ess-mode . "r")
     (nim-mode . "nim")
@@ -1287,7 +1301,8 @@ by quickrun.el. But you can register your own command for some languages")
         (t '("g++" "clang++"))))
 
 (defconst quicklang/lang-candidates
-  `(("c" . ,(quickrun--c-compiler))
+  `(("asm" . ("nasm" "masm" "masm64"))
+    ("c" . ,(quickrun--c-compiler))
     ("c++" . ,(quickrun--c++-compiler))
     ("c#" . ("dotnet" "mono"))
     ("fortran" . ("gfortran"))

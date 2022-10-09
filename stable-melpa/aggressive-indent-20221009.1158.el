@@ -4,8 +4,8 @@
 
 ;; Author: Artur Malabarba <emacs@endlessparentheses.com>
 ;; URL: https://github.com/Malabarba/aggressive-indent-mode
-;; Package-Version: 20221003.2200
-;; Package-Commit: 6a96e2890caa19f64f75b43dbd020e4da8efc5c7
+;; Package-Version: 20221009.1158
+;; Package-Commit: f376cdc25de5c0f8c330f1e053557d95ca47a540
 ;; Version: 1.10.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: indent lisp maint tools
@@ -489,17 +489,18 @@ If BODY finishes, `while-no-input' returns whatever value BODY produced."
 ;;; Minor modes
 ;;;###autoload
 (define-minor-mode aggressive-indent-mode
+  "Minor mode to keep your code always indented."
   :lighter " =>"
-  `((,(kbd "C-c C-q") . aggressive-indent-indent-defun)
-    ([backspace]
-     menu-item "maybe-delete-indentation" ignore :filter
-     (lambda (&optional _)
-       (when (and (looking-back "^[[:blank:]]+")
-                  ;; Wherever we don't want to indent, we probably also
-                  ;; want the default backspace behavior.
-                  (not (run-hook-wrapped 'aggressive-indent--internal-dont-indent-if #'eval))
-                  (not (aggressive-indent--run-user-hooks)))
-         #'delete-indentation))))
+  :keymap `((,(kbd "C-c C-q") . aggressive-indent-indent-defun)
+            ([backspace]
+             menu-item "maybe-delete-indentation" ignore :filter
+             (lambda (&optional _)
+               (when (and (looking-back "^[[:blank:]]+")
+                          ;; Wherever we don't want to indent, we probably also
+                          ;; want the default backspace behavior.
+                          (not (run-hook-wrapped 'aggressive-indent--internal-dont-indent-if #'eval))
+                          (not (aggressive-indent--run-user-hooks)))
+                 #'delete-indentation))))
   (if aggressive-indent-mode
       (if (and (bound-and-true-p global-aggressive-indent-mode)
                (or (cl-member-if #'derived-mode-p aggressive-indent-excluded-modes)

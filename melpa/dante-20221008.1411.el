@@ -9,14 +9,12 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/dante
-;; Package-Version: 20221008.1411
-;; Package-X-Original-Version: 20200921.723
+;; Package-Version: 20200921.723
 ;; Package-Commit: e2acbf6dd37818cbf479c9c3503d8a59192e34af
 ;; Created: October 2016
 ;; Keywords: haskell, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "28.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (haskell-mode "13.14") (s "1.11.0") (lcr "1.4"))
-;; Package-Commit: a50eb873b836272173269d6010dcb1972d7d248b
-;; X-Original-Version: 0-pre
+;; Version: 0-pre
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -987,6 +985,11 @@ Or nil if BUFFER / TEMP-FILE are not relevant to the message."
           (cl-destructuring-bind (type msg-first-line) type-analysis
             (let* ((final-msg (s-trim (concat msg-first-line "\n" (replace-regexp-in-string "^    " "" msg)))))
               (flymake-make-diagnostic buffer (car r) (cdr r) type final-msg))))))))
+
+(provide 'dante)
+
+;;; dante.el ends here
+   (flymake-make-diagnostic buffer (car r) (cdr r) type final-msg))))))))
 
 (provide 'dante)
 
