@@ -29,6 +29,7 @@ Editing Prolog code
 ..... Available styles
 ..... Highlighting occurrences of a variable
 ..... Quasi-quotation highlighting
+.. Aligning with multiple spaces
 .. Term-based editing and motion commands
 .. Definitions and references
 .. Following file specifications
@@ -545,6 +546,74 @@ Quasi-quotation highlighting
 
 [library(quasi_quotations) in the SWI-Prolog manual]
 <https://www.swi-prolog.org/pldoc/man?section=quasiquotations>
+
+
+Aligning with multiple spaces
+─────────────────────────────
+
+  By convention, if-then-else constructs are aligned such that each goal
+  starts at the fourth column after the /start/ of the opening
+  parenthesis or operator, as follows:
+
+  ┌────
+  │ (   if
+  │ ->  then
+  │ ;   else
+  │ *-> elif
+  │ ;   true
+  │ )
+  └────
+
+  To simplify maintaining the desired layout without manually counting
+  spaces, `sweep' provides a command that updates the whitespace around
+  point such that the next token is aligned to a (multiple of) four
+  columns from the start of the previous token.
+
+  To insert or update whitespace around point, use the command `M-x
+  sweeprolog-align-spaces'.  For example, consider a `sweeprolog-mode'
+  buffer with the following contents, where `^' designates the location
+  of the cursor:
+
+  ┌────
+  │ foo :-
+  │     (   if
+  │     ;
+  │      ^
+  └────
+
+  Calling `M-x sweeprolog-align-spaces' will insert three spaces, to
+  yield the expected layout:
+
+  ┌────
+  │ foo :-
+  │     (   if
+  │     ;
+  │ 	^
+  └────
+
+  In Emacs 29, the command `M-x cycle-spacing' is extensible through a
+  list of callback functions stored in the variable
+  `cycle-spacing-actions'.  `sweep' leverages this facility and adds
+  `sweeprolog-align-spaces' as the first action of `cycle-spacing'.  To
+  inhibit this `sweeprolog-mode' from doing so, set the user option
+  `sweeprolog-enable-cycle-spacing' to nil.
+
+  Moreover, in Emacs 29 `cycle-spacing' is bound by default to `M-SPC',
+  thus aligning if-then-else and similar constructs only requires typing
+  `M-SPC' after the first token.
+
+  In Emacs prior to version 29, users are advised to bind
+  `sweeprolog-align-spaces' to `M-SPC' directly by adding the following
+  lines to Emacs’ initialization file (see [The Emacs Initialization
+  File]).
+
+  ┌────
+  │ (eval-after-load 'sweeprolog
+  │   '(define-key sweeprolog-mode-map (kbd "M-SPC") #'sweeprolog-align-spaces))
+  └────
+
+
+[The Emacs Initialization File] <info:emacs#Init File>
 
 
 Term-based editing and motion commands
@@ -1103,32 +1172,6 @@ Improvements around editing Prolog
         to inherit user-set hooks and modifications, but careful
         consideration is required to make sure `sweeprolog-mode'
         overrides all conflicting `prolog-mode' features.
-
-  Provide automatic whitespace formatting for if-then-else constructs
-        By convention, if-then-else constructs are aligned such that
-        each goal starts at the fourth column after the /start/ of the
-        opening parenthesis or operator, as follows:
-
-        ┌────
-        │ (   if
-        │ ->  then
-        │ ;   else
-        │ *-> elif
-        │ ;   true
-        │ )
-        └────
-
-        Note that the number of spaces differs from line to line,
-        e.g. in the first line there are three spaces because the
-        opening parenthesis in only spans a single column, while the
-        second line contains two spaces since the operator `->' is
-        already two columns long.
-
-        `sweep' should make it trivial for users to achieve the
-        conventional layout without manually counting spaces.  Ideally,
-        pressing `TAB' or `SPC', possibly with a modifier, after the
-        opening parenthesis or operator should result in the above
-        layout.
 
   Reflect buffer status in the mode line
         It may be useful to indicate in the mode line whether the
