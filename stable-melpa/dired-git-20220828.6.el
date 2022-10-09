@@ -4,6 +4,8 @@
 
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Version: 0.0.1
+;; Package-Version: 20220828.6
+;; Package-Commit: e84387b947cd707d3ff0c039ddef753a468f88e7
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "26.1") (async-await "1.0") (async "1.9.4") (all-the-icons "2.2.0") (ppp "1.0.0"))
 ;; URL: https://github.com/conao3/dired-git.el

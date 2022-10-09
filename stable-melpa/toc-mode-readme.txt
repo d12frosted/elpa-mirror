@@ -1,13 +1,13 @@
-toc-mode.el is a package to create and add a Table of Contents to pdf and
-djvu documents. It implements features to extract a Table of Contents from
-the textlayer of a document or via OCR if that last option is necessary or
-prefered. For 'software generated' PDFs it provides the option to use
-pdf.tocgen (see URL `https://krasjet.com/voice/pdf.tocgen/'). Subsequently
-this package implements various features to assist in tidy up the extracted
-Table of Contents, adjust the pagenumbers and finally parsing the Table of
-Contents into syntax that is understood by the `pdfoutline' and `djvused'
-commands that are used to add the table of contents to pdf- and djvu-files
-respectively.
+toc-mode.el is a package for creating and adding Tables of Contents to pdf
+and djvu documents. It includes features for extracting the Table of Contents
+from the textlayer of a document or via OCR if that last option is necessary
+(or prefered). For 'software generated' PDFs it provides the option to use
+pdf.tocgen (see URL `https://krasjet.com/voice/pdf.tocgen/'). Additionally,
+this package implements various features for assisting in tidying up the
+extracted Table of Contents, adjusting the pagenumbers and finally parsing
+the Table of Contents into syntax that is understood by the `pdfoutline' and
+`djvused' commands that are used to add the table of contents to pdf- and
+djvu-files respectively.
 
 Requirements: To use the pdf.tocgen functionality that software has to be
 installed (see URL `https://krasjet.com/voice/pdf.tocgen/'). For the
@@ -32,7 +32,7 @@ Extraction and adding contents to a document is done in 4 steps:
 3 adjust/correct pagenumbers
 4 add TOC to document
 
-1. Extraction For PDFs without TOC pages, with a very complicated TOC (i.e.
+1. Extraction: For PDFs without TOC pages, with a very complicated TOC (i.e.
 that require much cleanup work) or with headlines well fitted for automatic
 extraction (you will have to decide for yourself by trying it) consider to
 use the pdf.tocgen (URL `https://krasjet.com/voice/pdf.tocgen/')
@@ -80,7 +80,7 @@ continue with the steps below.
 If you merely want to extract text without further processing then you can
 use the command `toc-extract-only'.
 
-2. TOC-Cleanup In this mode you can further cleanup the contents to create a
+2. TOC-Cleanup: In this mode you can further cleanup the contents to create a
 list where each line has the structure:
 
 TITLE (SOME) PAGENUMBER
@@ -118,7 +118,7 @@ there is a space character before the \&).
 
 Type C-c C-c when finished
 
-3. TOC-tabular (adjust pagenumbers) This mode provides the functionality for
+3. TOC-tabular (adjust pagenumbers): This mode provides the functionality for
 easy adjustment of pagenmumbers. The buffer can be navigated with the arrow
 up/down keys. The left and right arrow keys will shift down/up all the page
 numbers from the current line and below (combine with SHIFT for setting
@@ -132,10 +132,10 @@ pdf, C-up/C-down will scroll smoothly in that window.
 
 Type C-c C-c when done.
 
-4. TOC-mode (add outline to document) The text of this buffer should have the
-right structure for adding the contents to (for pdf’s a copy of) the original
-document. Final adjusments can be done but should not be necessary. Type C-c
-C-c for adding the contents to the document.
+4. TOC-mode (add outline to document): The text of this buffer should have
+the right structure for adding the contents to (for pdf’s a copy of) the
+original document. Final adjusments can be done but should not be necessary.
+Type C-c C-c for adding the contents to the document.
 
 By default, the TOC is simply added to the original file. ONLY FOR PDF’s, if
 the (customizable) variable toc-replace-original-file is nil, then the TOC is
@@ -158,9 +158,10 @@ files directly into HandyOutliner).
 Finally, if you just want to extract some text
 
 Keybindings
+Key Binding        Description
+
 all-modes (i.e. all steps)
- Key Binding       Description
- C-c C-c           dispatch (next step)
+C-c C-c            dispatch (next step)
 
 toc-cleanup-mode
 C-c C-j            toc--join-next-unnumbered-lines
