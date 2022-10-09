@@ -6,6 +6,8 @@
 ;; Author: Qichen Huang <unicad.el@gmail.com>
 ;; MELPA recipe author: chendianbuji <chendianbuji@gmail.com>
 ;; Package-Requires: ((emacs "24") (nadvice "0.3"))
+;; Package-Version: 20200914.1500
+;; Package-Commit: a5fd4e326a0607acc3776c11f41826e60b6486c6
 ;; Time-stamp: <2010-04-21 15:07:12>
 ;; Version: 1.1.7
 ;; Keywords: i18n

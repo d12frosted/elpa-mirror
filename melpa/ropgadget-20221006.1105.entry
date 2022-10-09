@@ -1,0 +1,10 @@
+(ropgadget .
+	   [(20221006 1105)
+	    ((emacs
+	      (24 4))
+	     (transient
+	      (0 3 6)))
+	    "Display and filter ROP gadgets of a binary" single
+	    ((:commit . "03305f2d73d7092adab495c45b15c8f16f292c8f")
+	     (:keywords "tools" "ctf" "pwn" "rop")
+	     (:url . "https://github.com/Dragoncraft89/ropgadget-el"))])
