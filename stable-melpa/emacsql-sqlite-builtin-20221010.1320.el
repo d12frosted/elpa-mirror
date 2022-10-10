@@ -1,44 +1,27 @@
 ;;; emacsql-sqlite-builtin.el --- EmacSQL back-end for SQLite using builtin support  -*- lexical-binding:t -*-
 
-;; Copyright (C) 2021-2022 Jonas Bernoulli
+;; This is free and unencumbered software released into the public domain.
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
-;; Homepage: https://github.com/emacscollective/emacsql-sqlite-builtin
-;; Keywords: data
-;; Package-Version: 20220422.1605
-;; Package-Commit: c6f66f2a94a0c520d5c1028858adc2ab0f959f96
+;; Homepage: https://github.com/magit/emacsql
 
-;; Package-Requires: (
-;;     (emacs "29")
-;;     (emacsql "3.0.0")
-;;     (emacsql-sqlite "3.0.0"))
-
-;; SPDX-License-Identifier: GPL-3.0-or-later
-
-;; This file is free software: you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published
-;; by the Free Software Foundation, either version 3 of the License,
-;; or (at your option) any later version.
-;;
-;; This file is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with this file.  If not, see <https://www.gnu.org/licenses/>.
+;; Package-Version: 20221010.1320
+;; Package-X-Original-Version: 3.0.0-git
+;; Package-Requires: ((emacs "29") (emacsql "3.0.0"))
+;; Package-Commit: 676f1ff6f561e213dab91d218c5b4e7e965791c1
+;; SPDX-License-Identifier: Unlicense
 
 ;;; Commentary:
 
-;; An alternative EmacsSQL back-end for SQLite, which uses the builtin
-;; support added in Emacs 29.
+;; This package provides an Emacsql back-end for SQLite, which uses
+;; the built-in SQLite support in Emacs 29 an later.
 
 ;;; Code:
 
 (require 'sqlite)
 (require 'emacsql)
-;; For `emacsql-sqlite-reserved' and `emacsql-sqlite-condition-alist'.
-(require 'emacsql-sqlite)
+
+(emacsql-register-reserved emacsql-sqlite-reserved)
 
 (defclass emacsql-sqlite-builtin-connection (emacsql-connection)
   ((file :initarg :file
@@ -49,11 +32,7 @@
           :initform '((integer "INTEGER")
                       (float "REAL")
                       (object "TEXT")
-                      (nil nil)))
-   ;; Cannot use `process' slot because we cannot completely
-   ;; change the type of a slot, just make it more specific.
-   (handle :documentation "Database handle."
-           :accessor emacsql-process))
+                      (nil nil))))
   (:documentation "A connection to a SQLite database using builtin support."))
 
 (cl-defmethod initialize-instance :after
@@ -63,6 +42,7 @@
   (when emacsql-global-timeout
     (emacsql connection [:pragma (= busy-timeout $s1)]
              (/ (* emacsql-global-timeout 1000) 2)))
+  (emacsql connection [:pragma (= foreign-keys on)])
   (emacsql-register connection))
 
 (cl-defun emacsql-sqlite-builtin (file &key debug)
@@ -95,22 +75,18 @@ buffer. This is for debugging purposes."
                                 (t (read col))))
                         row))
               (sqlite-select (emacsql-process connection) message nil nil))
-    ((db-error sql-error)
-     (pcase-let ((`(,sym ,msg ,code) err))
-       (signal (or (cadr (cl-assoc code emacsql-sqlite-condition-alist
-                                   :test #'memql))
-                   'emacsql-error)
-               (list msg code sym))))
     (error
-     (signal 'emacsql-error err))))
+     ;; TODO https://debbugs.gnu.org/cgi/bugreport.cgi?bug=58363
+     (pcase-let* ((`(,_ ,msg) err)
+                  (`(,code ,_ ,sym)
+                   (car (cl-member msg emacsql-sqlite-error-codes
+                                   :test #'equal :key #'cl-cadddr))))
+       (signal (or sym 'emacsql-error)
+               (list msg code))))))
 
 (cl-defmethod emacsql ((connection emacsql-sqlite-builtin-connection) sql &rest args)
   (emacsql-send-message connection (apply #'emacsql-compile connection sql args)))
 
-;;; _
 (provide 'emacsql-sqlite-builtin)
-;; Local Variables:
-;; indent-tabs-mode: nil
-;; byte-compile-warnings: (not docstrings)
-;; End:
+
 ;;; emacsql-sqlite-builtin.el ends here
