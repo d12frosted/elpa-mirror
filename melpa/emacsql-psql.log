@@ -1,21 +1,12 @@
 Package: emacsql-psql
 Fetcher: github
-Source:  https://github.com/skeeto/emacsql.git
+Source:  https://github.com/magit/emacsql.git
 
-Updating /mnt/store/melpa/working/emacsql-psql/
+Cloning https://github.com/magit/emacsql.git to /mnt/store/melpa/working/emacsql-psql/
 Checking out origin/HEAD
 Checking out 4fe4413994b667e4fd2d7795d56d01cbc0237a6a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/emacsql-psql/
-  to /tmp/emacsql-psqlBfNRSj/emacsql-psql-20221009.1108
-    emacsql-psql.el -> emacsql-psql.el
-    emacsql-pg.el -> emacsql-pg.el
-Created emacsql-psql-20221009.1108.tar containing:
-  emacsql-psql-20221009.1108/
-  emacsql-psql-20221009.1108/emacsql-pg.el
-  emacsql-psql-20221009.1108/emacsql-psql-pkg.el
-  emacsql-psql-20221009.1108/emacsql-psql.el
-Built emacsql-psql in 4.906s, finished at 2022-10-10T10:14:18+0000
+Built emacsql-psql in 9.286s, finished at 2022-10-10T13:22:42+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 382 Oct 10 10:14 packages/emacsql-psql-20221009.1108.entry
- 20K -rw-r--r-- 1 root root 20K Oct 10 10:14 packages/emacsql-psql-20221009.1108.tar
+8.0K -rw-r--r-- 1 root root 6.0K Oct 10 13:22 packages/emacsql-psql-20221009.1108.el
+4.0K -rw-r--r-- 1 root root  385 Oct 10 13:22 packages/emacsql-psql-20221009.1108.entry
+ 20K -rw-r--r-- 1 root root  20K Oct 10 10:14 packages/emacsql-psql-20221009.1108.tar

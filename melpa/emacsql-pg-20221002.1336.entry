@@ -1,0 +1,14 @@
+(emacsql-pg .
+	    [(20221002 1336)
+	     ((emacs
+	       (25 1))
+	      (emacsql
+	       (3 0 0))
+	      (pg
+	       (0 16)))
+	     "EmacSQL back-end for PostgreSQL via pg" single
+	     ((:commit . "5c4aa1030be157229cdccd6b11cb30ca94cda954")
+	      (:authors
+	       ("Christopher Wellons" . "wellons@nullprogram.com"))
+	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	      (:url . "https://github.com/magit/emacsql"))])

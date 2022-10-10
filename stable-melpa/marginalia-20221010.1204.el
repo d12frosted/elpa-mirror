@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.14
-;; Package-Version: 20220922.1059
-;; Package-Commit: ddba3a384916d83b68527379bbdf01161201853e
+;; Package-Version: 20221010.1204
+;; Package-Commit: c37a2765b97520203c7b842490717c7c08be468f
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -307,8 +307,6 @@ determine it."
 (declare-function color-rgb-to-hex "color")
 (declare-function color-rgb-to-hsl "color")
 (declare-function color-hsl-to-rgb "color")
-
-(declare-function selectrum--get-full "ext:selectrum")
 
 ;;;; Marginalia mode
 
@@ -816,11 +814,9 @@ example, during file name completion the candidates are one path
 component of a full file path."
   (if-let (win (active-minibuffer-window))
       (with-current-buffer (window-buffer win)
-        (if (bound-and-true-p selectrum-is-active)
-            (selectrum--get-full cand)
-          (concat (substring (minibuffer-contents-no-properties)
-                             0 marginalia--base-position)
-                  cand)))
+        (concat (substring (minibuffer-contents-no-properties)
+                           0 marginalia--base-position)
+                cand))
     ;; no minibuffer is active, trust that cand already conveys all
     ;; necessary information (there's not much else we can do)
     cand))
@@ -1106,9 +1102,9 @@ looking for a regexp that matches the prompt."
 
 (defun marginalia--cached (cache fun key)
   "Cached application of function FUN with KEY.
-The CACHE keeps around the last `marginalia--cache-size' computed annotations.
-The cache is mainly useful when scrolling in completion UIs like Vertico or
-Selectrum."
+The CACHE keeps around the last `marginalia--cache-size' computed
+annotations. The cache is mainly useful when scrolling in
+completion UIs like Vertico or Icomplete."
   (if cache
       (let ((ht (cdr cache)))
         (or (gethash key ht)
