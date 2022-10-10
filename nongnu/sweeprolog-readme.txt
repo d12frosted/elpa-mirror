@@ -595,7 +595,7 @@ Aligning with multiple spaces
   list of callback functions stored in the variable
   `cycle-spacing-actions'.  `sweep' leverages this facility and adds
   `sweeprolog-align-spaces' as the first action of `cycle-spacing'.  To
-  inhibit this `sweeprolog-mode' from doing so, set the user option
+  inhibit `sweeprolog-mode' from doing so, set the user option
   `sweeprolog-enable-cycle-spacing' to nil.
 
   Moreover, in Emacs 29 `cycle-spacing' is bound by default to `M-SPC',
