@@ -4,8 +4,8 @@
 
 ;; Author: Yuki Inoue <inouetakahiroki _at_ gmail.com>
 ;; URL: https://github.com/Yuki-Inoue/aws.el
-;; Package-Version: 20161007.1914
-;; Package-Commit: 5601d4f268fc34b86a02ca90cde7d3771619a368
+;; Package-Version: 20221011.538
+;; Package-Commit: 7b500097ac3c2addbe1644f78595dc2ea4eb87c4
 ;; Version: 0.0.3
 ;; Package-Requires: ((emacs "24.4") (dash "2.12.1") (tblui "0.1.0"))
 
@@ -42,7 +42,7 @@
 
 (defun aws--shell-command-to-string (&rest args)
   (with-temp-buffer
-    (let* ((aws-cmd-args (append (aws-profile-args) args))
+    (let* ((aws-cmd-args (append (aws-profile-args) (aws-endpoint-args) args))
            (not-used (message (combine-and-quote-strings (cons (aws-bin) aws-cmd-args))))
            (retval (apply #'call-process (aws-bin) nil (current-buffer) nil aws-cmd-args))
            (output (buffer-string)))
@@ -50,6 +50,11 @@
         (with-current-buffer (get-buffer-create "*aws-errors*") (insert output))
         (error "The aws command failed. Check *aws-errors* for output"))
       output)))
+
+(defun aws-endpoint-args ()
+  (if aws-current-endpoint
+      `("--endpoint" ,aws-current-endpoint)
+    nil))
 
 (defun aws-profile-args ()
   (if aws-current-profile
@@ -222,6 +227,17 @@ Host %s
    :name aws-instances-configure-popup
    :funcs ((?C "Append ssh configs to ~/.ssh/config" aws-instances-configure-ssh-config)))
   ))
+
+
+(defvar aws-current-endpoint nil
+  "The currently used aws endpoint")
+
+(defun aws-set-endpoint (endpoint)
+  "Configures which endpoint to be used."
+  (interactive "sEndpoint: ")
+  (if (string= "" endpoint)
+      (setq endpoint nil))
+  (setq aws-current-endpoint endpoint))
 
 (defvar aws-current-profile nil
   "The currently used aws profile")

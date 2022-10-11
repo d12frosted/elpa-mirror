@@ -9,13 +9,13 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/dante
-;; Package-Version: 20221009.1935
+;; Package-Version: 20221011.846
 ;; Package-X-Original-Version: 20200921.723
 ;; Package-Commit: e2acbf6dd37818cbf479c9c3503d8a59192e34af
 ;; Created: October 2016
 ;; Keywords: haskell, tools
-;; Package-Requires: ((dash "2.12.0") (emacs "28.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (haskell-mode "13.14") (s "1.11.0") (lcr "1.4"))
-;; Package-Commit: 7ef533018888eb4b1c0278ae7771016ffd3ca1f8
+;; Package-Requires: ((dash "2.12.0") (emacs "27.2") (f "0.19.0") (flycheck "0.30") (company "0.9") (haskell-mode "13.14") (s "1.11.0") (lcr "1.4"))
+;; Package-Commit: 550a9dbfa2b0d82f6dc871f124fa6e5733ed1559
 ;; X-Original-Version: 0-pre
 
 ;; This file is free software; you can redistribute it and/or modify
@@ -336,7 +336,7 @@ and over."
       (setq dante-interpreted interpret)
       (puthash (dante-local-name fname) src-fname dante-original-buffer-map)
       (write-region nil nil fname nil 0)
-      ;; GHCi will interpret the buffer iff. both -fbyte-code and :l * are used.
+      ;; GHCi will interpret the buffer if both -fbyte-code and :l * are used.
       (lcr-call dante-async-call (if interpret ":set -fbyte-code" ":set -fobject-code"))
       (with-current-buffer buffer
         (dante-async-write (if same-target ":r"
@@ -593,7 +593,7 @@ This applies to paths of the form x:\\foo\\bar"
   (interactive)
   (when (dante-buffer-p)
     (dante-destroy))
-  (lcr-spawn (lcr-call dante-session)))
+  (lcr-spawn (lcr-call dante-start)))
 
 (defun dante-session (cont)
   "Get the session or create one if none exists.
@@ -878,7 +878,7 @@ Intended for `eldoc-documentation-functions'"
                 (s-blank? tap))
       (lcr-spawn
         (lcr-call dante-async-load-current-buffer t nil)
-        (let* ((ty (lcr-call dante-async-call (concat ":type-at " tap))))
+        (let ((ty (lcr-call dante-async-call (concat ":type-at " tap))))
           (unless (s-match "^<interactive>" ty)
             (funcall callback (s-collapse-whitespace (dante-fontify-expression ty))))))
       ;; TODO: improve by reporting :thing separately

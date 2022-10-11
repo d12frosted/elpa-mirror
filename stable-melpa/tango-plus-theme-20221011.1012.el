@@ -5,8 +5,8 @@
 ;; Author: Titus von der Malsburg <malsburg@posteo.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/tmalsburg/tango-plus-theme
-;; Package-Version: 20220525.1311
-;; Package-Commit: bdf1dd6ea9c43d07b22dfa15fec0dcfd03544c63
+;; Package-Version: 20221011.1012
+;; Package-Commit: 30495d1ab1df6213ecac008c599b91e6f9244c12
 ;; Version: 2.0.0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -350,6 +350,9 @@ Semantic, and Ansi-Color faces are included.")
    `(magit-diff-hunk-header         ((,class (:inherit header-line))))
    `(magit-diff-file-header         ((,class (:inherit header-line))))
    `(git-commit-summary-face        ((,class (:inherit default))))
+   `(git-gutter:added               ((,class (:foreground ,cham-3))))
+   `(git-gutter:deleted             ((,class (:foreground ,red-3))))
+   `(git-gutter:modified             ((,class (:foreground ,plum-2))))
 
    ;; Helm
    `(helm-source-header             ((,class (:inherit default :weight bold

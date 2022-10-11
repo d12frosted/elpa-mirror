@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/hl-todo
 ;; Keywords: convenience
-;; Package-Version: 20220422.1611
-;; Package-Commit: 6769accd7003ba5a0376d2c5cef0fcffce8f45be
+;; Package-Version: 20221011.1032
+;; Package-Commit: c699c9beb2f878ad3803c91bd0bd7c1a5e1c9690
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
@@ -220,7 +220,7 @@ including alphanumeric characters, cannot be used here."
 (defun hl-todo--setup ()
   (hl-todo--setup-regexp)
   (setq hl-todo--keywords
-        `(((lambda (bound) (hl-todo--search nil bound))
+        `((,(lambda (bound) (hl-todo--search nil bound))
            (1 (hl-todo--get-face) prepend t))))
   (font-lock-add-keywords nil hl-todo--keywords t))
 
