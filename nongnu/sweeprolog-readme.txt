@@ -37,6 +37,7 @@ Editing Prolog code
 .. Using templates for creating new modules
 .. Documenting predicates
 .. Displaying predicate documentation
+.. Examining diagnostics
 The Prolog top-level
 .. Multiple top-levels
 .. The Top-level Menu buffer
@@ -59,6 +60,7 @@ Things to do
 Indices
 .. Function index
 .. Variable index
+.. Keystroke index
 .. Concept index
 
 
@@ -453,8 +455,10 @@ Semantic highlighting
 
   At any point in a `sweeprolog-mode' buffer, the command `C-c C-c' (or
   `M-x sweeprolog-colourise-buffer') can be used to update the cross
-  reference cache and highlight the buffer accordingly.  This may be
-  useful e.g. after defining a new predicate.
+  reference cache and highlight the buffer accordingly.  When `flymake'
+  integration is enabled, this command also updates the diagnostics for
+  the current buffer (see [Examining diagnostics]).  This may be useful
+  e.g. after defining a new predicate.
 
   If the user option `sweeprolog-colourise-buffer-on-idle' is set to
   non-nil (as it is by default), `sweeprolog-mode' also updates semantic
@@ -476,6 +480,8 @@ Semantic highlighting
 
 
 [Font Lock in the Emacs manual] <info:emacs#Font Lock>
+
+[Examining diagnostics] See section Examining diagnostics
 
 [Faces in the Emacs manual] <info:emacs#Faces>
 
@@ -830,6 +836,38 @@ Displaying predicate documentation
 
   To disable the `ElDoc' integration in `sweeprolog-mode' buffers,
   customize the user option `sweeprolog-enable-eldoc' to nil.
+
+
+Examining diagnostics
+─────────────────────
+
+  `sweeprolog-mode' can diagnose problems in Prolog code and report them
+  to the user by integrating with `flymake', a powerful interface for
+  on-the-fly diagnostics built into Emacs.
+
+  `flymake' integration is enabled by default, to disable it customize
+  the user option `sweeprolog-enable-flymake' to nil.
+
+  When this integration is enabled, several `flymake' commands are
+  available for listing and jumping between found errors.  For a full
+  description of these commands, see [Finding diagnostics in the Flymake
+  manual].  Additionally, `sweeprolog-mode' configures the standard
+  command `M-x next-error' to operate on `flymake' diagnostics.  This
+  allows for moving to the next (or previous) error location with the
+  common `M-g n' (or `M-g p') keybinding.  For more information about
+  these commands, see [Compilation Mode in the Emacs manual].
+
+  The command `sweeprolog-show-diagnostics' shows a list of `flymake'
+  diagnostics for the current buffer.  It is bound by default to `C-c
+  C-`' in `sweeprolog-mode' buffers with `flymake' integration enabled.
+  When called with a prefix argument (`C-u C-c C-`'), shows a list of
+  diagnostics for all buffers in the current project.
+
+
+[Finding diagnostics in the Flymake manual] <info:flymake#Finding
+diagnostics>
+
+[Compilation Mode in the Emacs manual] <info:emacs#Compilation Mode>
 
 
 The Prolog top-level
@@ -1218,11 +1256,6 @@ Improvements around editing Prolog
         could then be bound to `C-c C-n' for moving to the next
         predicate definition and `C-c C-p' for moving to the previous.
 
-  Integrate with `flymake' to provide on-the-fly diagnostics
-        `sweeprolog-mode' should integrate with `flymake' to provide
-        diagnostics and feedback for errors in Prolog code in an
-        Emacs-standard manner.
-
   Improve the information provided for predicate completion candidates
         predicate completion with `C-M-i' should annotate each
         completion candidate with the names and modes of its arguments,
@@ -1302,6 +1335,10 @@ Function index
 
 Variable index
 ──────────────
+
+
+Keystroke index
+───────────────
 
 
 Concept index
