@@ -2504,14 +2504,14 @@
 	      ("Feng Shu" . "tumashu@163.com"))
 	     (:commit . "0c5e57ac870735cb780936b1efc4bdd17fe87112"))])
  (project .
-	  [(0 8 1)
+	  [(0 8 2)
 	   ((emacs
 	     (26 1))
 	    (xref
-	     (1 0 2)))
+	     (1 4 0)))
 	   "Operations on the current project" tar
 	   ((:url . "https://elpa.gnu.org/packages/project.html")
-	    (:commit . "6bf29072e968401f842789c71468e624e5c913a9"))])
+	    (:commit . "ef6e518035fddf13547d7f1f945b5069a0fe6ea7"))])
  (psgml .
 	[(1 3 4)
 	 nil "SGML-editing mode with parsing support" tar
