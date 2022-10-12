@@ -1,5 +1,5 @@
 (run-command-recipes .
-		     [(20220903 824)
+		     [(20221012 1811)
 		      ((emacs
 			(25 1))
 		       (dash
@@ -7,11 +7,9 @@
 		       (f
 			(0 20 0))
 		       (run-command
-			(0 1 0))
-		       (ht
-			(2 4)))
+			(0 1 0)))
 		      "This is collection of recipes to `run-command'" tar
-		      ((:commit . "6a1ffaed684fdfc4b963d0d723b9753ee0f19e4c")
+		      ((:commit . "4c032423a2538d5911ef902d972940e1d63a3ead")
 		       (:authors
 			("semenInRussia" . "hrams205@gmail.com"))
 		       (:maintainer "semenInRussia" . "hrams205@gmail.com")
