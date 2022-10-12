@@ -1,0 +1,13 @@
+(mmm-mode .
+	  [(20221011 2053)
+	   ((emacs
+	     (25 1))
+	    (cl-lib
+	     (0 2)))
+	   "Allow Multiple Major Modes in a buffer" tar
+	   ((:commit . "fd80f3093701aad389533a5667bfa31648730117")
+	    (:authors
+	     ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
+	    (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")
+	    (:keywords "convenience" "faces" "languages" "tools")
+	    (:url . "https://github.com/purcell/mmm-mode"))])
