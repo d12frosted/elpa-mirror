@@ -4,8 +4,8 @@
 ;;
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; Version: 0.4.0
-;; Package-Version: 20180914.1500
-;; Package-Commit: 93eca9138f6d6eea1af92f476c797ce19fa573d9
+;; Package-Version: 20221013.541
+;; Package-Commit: b6bd5beb0c11348f1afd9486cbb451d0d2e3c45a
 ;; Keywords : ripgrep projectile
 ;; Homepage: https://github.com/nlamirault/ripgrep.el
 ;; Package-Requires: ((ripgrep "0.3.0") (projectile "0.14.0"))
@@ -57,7 +57,7 @@ regular expression."
                                                                      "")))
                           (projectile-symbol-or-selection-at-point))
     current-prefix-arg))
-  (let ((args (mapcar (lambda (val) (concat "--glob !" val))
+  (let ((args (mapcar (lambda (val) (concat "--glob \\!" val))
                       (append (projectile-ignored-files-rel)
                               (projectile-ignored-directories-rel)))))
     (ripgrep-regexp search-term

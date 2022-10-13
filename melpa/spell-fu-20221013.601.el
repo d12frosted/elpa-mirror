@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-spell-fu
-;; Package-Version: 20220911.851
-;; Package-Commit: 3e532cc3b2e08d488ad5c8e91d2d46c6868439ef
+;; Package-Version: 20221013.601
+;; Package-Commit: ba5942c9e6344f004b27e784f53976d1057b1680
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -1087,7 +1087,11 @@ Return t if the file was updated."
       (dict-aspell-name (cadr (nth 5 (assoc dict-name ispell-aspell-dictionary-alist))))
       (dict-file (and dict-aspell-name (spell-fu--aspell-find-data-file dict-name)))
       (is-dict-outdated
-        (and has-words-file dict-file (spell-fu--file-is-older words-file dict-file)))
+        (and
+          has-words-file dict-file
+          (spell-fu--file-is-older words-file
+            ;; Chase links is needed as checking the symbolic-link date isn't correct, #31.
+            (file-chase-links dict-file))))
       ;; Return value, failure to run `aspell' leaves this nil.
       (updated nil))
 
@@ -1277,9 +1281,9 @@ Return t if the file was updated."
       (has-dict-personal (and personal-words-file (file-exists-p personal-words-file)))
       (is-dict-outdated
         (and
-          has-words-file
-          has-dict-personal
-          (spell-fu--file-is-older words-file personal-words-file))))
+          has-words-file has-dict-personal
+          ;; Chase links is needed as checking the symbolic-link date isn't correct, #31.
+          (spell-fu--file-is-older words-file (file-chase-links personal-words-file)))))
 
     (when (or (not has-words-file) is-dict-outdated)
 
