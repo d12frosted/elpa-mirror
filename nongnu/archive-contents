@@ -1463,6 +1463,16 @@
 	    (:maintainer "Takafumi Arakaki <aka.tkf at gmail.com>")
 	    (:authors
 	     ("Takafumi Arakaki <aka.tkf at gmail.com>")))])
+ (rfc-mode .
+	   [(1 3 0)
+	    ((emacs
+	      (25 1)))
+	    "RFC document browser and viewer" tar
+	    ((:url . "https://github.com/galdor/rfc-mode")
+	     (:maintainer "Nicolas Martyanoff" . "khaelin@gmail.com")
+	     (:authors
+	      ("Nicolas Martyanoff" . "khaelin@gmail.com"))
+	     (:commit . "02546beecf4c495940885e7b7b911d84b12646ef"))])
  (rubocop .
 	  [(0 6 0)
 	   ((emacs

@@ -9,8 +9,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/dante
-;; Package-Version: 20221012.1414
-;; Package-Commit: 30c8d925a7350aecccf29191af725ae2f84f169b
+;; Package-Version: 20221012.1919
+;; Package-Commit: 6b5d7b79651c0da84f62a94f96b7e3a2df3eb211
 ;; Created: October 2016
 ;; Keywords: haskell, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "27.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (haskell-mode "13.14") (s "1.11.0") (lcr "1.5"))
@@ -402,31 +402,12 @@ CHECKER and BUFFER are added if the error is in TEMP-FILE."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Company integration (auto-completion)
 
-(defun check-balanced-parens (opened str)
-  "Check that all parenthesis are balanced in STR.
-Assume an number parenthesis OPENED in a prefix."
-  (cond
-   ((string-empty-p str) (= 0 opened))
-   ((< opened 0) nil)
-   (t (let ((head (substring str 0 1))
-            (tail (substring str 1 (length str))))
-        (check-balanced-parens (cond ((string= head "(") (+ opened 1))
-                                     ((string= head ")") (- opened 1))
-                                     (t opened))
-                               tail)))))
-
 (lcr-def dante-complete (prefix)
-  (let ((imports
-         (--filter (and (s-matches? "^import[ \t]+" it)
-                        (check-balanced-parens 0 it))
-                   (s-lines (buffer-string)))))
-    (lcr-call dante-async-load-current-buffer nil nil)
-    (dolist (i imports)
-      (lcr-call dante-async-call i)) ;; the file probably won't load when trying to complete. So, load all the imports instead.
-    (let* ((reply (lcr-call dante-async-call (format ":complete repl %S" prefix)))
-           (lines (s-lines reply))
-           (common (nth 2 (read (concat "(" (car lines) ")")))))
-      (--map (concat common (read it)) (cdr lines)))))
+  (lcr-call dante-async-load-current-buffer nil nil)
+  (let* ((reply (lcr-call dante-async-call (format ":complete repl %S" prefix)))
+         (lines (s-lines reply))
+         (common (nth 2 (read (concat "(" (car lines) ")")))))
+    (--map (concat common (read it)) (cdr lines))))
 
 (defun dante--in-a-comment ()
   "Return non-nil if point is in a comment."
@@ -466,9 +447,8 @@ See ``company-backends'' for the meaning of COMMAND, ARG and _IGNORED."
 (defun dante-ident-at-point ()
   "Return the identifier under point, or nil if none found.
 May return a qualified name."
-  (let ((reg (dante-ident-pos-at-point)))
-    (when reg
-      (apply #'buffer-substring-no-properties reg))))
+  (when-let ((reg (dante-ident-pos-at-point)))
+    (apply #'buffer-substring-no-properties reg)))
 
 (defun dante-ident-pos-at-point (&optional offset)
   "Return the span of the (qualified) identifier at point+OFFSET.
@@ -721,11 +701,11 @@ This is a standard process sentinel function."
                             '(default-directory dante-command-line dante-state dante-queue dante-loaded-file dante-load-message lcr-process-callback))))
     "No GHCi interaction buffer"))
 
-(defun dante-show-process-problem (process change)
-  "Report to the user that PROCESS reported CHANGE, causing it to end."
+(defun dante-show-process-problem (buf change)
+  "Report to the user that GHCi in BUF reported CHANGE, causing it to end."
   (message "Problem with GHCi process!")
-  (display-buffer (process-buffer process) 'display-buffer-pop-up-window)
-  (with-current-buffer (process-buffer process)
+  (display-buffer buf 'display-buffer-pop-up-window)
+  (with-current-buffer buf
     (goto-char (point-max))
     (insert "\n---\n\n")
     (insert
@@ -733,15 +713,15 @@ This is a standard process sentinel function."
       (concat "This is the buffer associated with the GHCi session. This buffer
 is normally hidden, but the GHCi process ended.
 
-WHAT TO DO NEXT
-
-Verify that the GHCi REPL can be loaded manually, then try to
-customize (probably file-locally or directory-locally)
-`dante-project-root' and/or `dante-repl-command-line'.  If you
-fixed the problem, just kill this buffer, Dante will make a fresh
-one and attempt to restart GHCi automatically.
-If you leave this buffer around Dante will not attempt to restart
-GHCi.  You can always run `dante-restart' to make it try again.
+WHAT TO DO NEXT: Verify that the GHCi REPL can be loaded
+manually, then try to customize (probably file-locally or
+directory-locally) a combination of the following variables:
+`dante-method', `dante-project-root', `dante-repl-command-line',
+`dante-target'.  If you fixed the problem, just kill this buffer,
+Dante will make a fresh one and attempt to restart GHCi
+automatically.  If you leave this buffer around Dante will not
+attempt to restart GHCi.  You can always run `dante-restart' to
+make it try again.
 
 EXTRA TROUBLESHOOTING INFO
 

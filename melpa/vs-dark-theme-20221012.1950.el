@@ -4,8 +4,8 @@
 
 ;; Author: Jen-Chieh Shen
 ;; URL: https://github.com/emacs-vs/vs-dark-theme
-;; Package-Version: 20220923.1634
-;; Package-Commit: d03f8d4eb43e89f64985eb661be9a6265588585d
+;; Package-Version: 20221012.1950
+;; Package-Commit: 14cbc27bc71729deba3920a92fc8002ba7b63542
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -62,7 +62,7 @@
 
  `(fill-column-indicator ((t :foreground "#AA4242")))
 
- `(show-paren-match ((t :background "#113D6F")))
+ `(show-paren-match ((t :box (:line-width (-1 . -1) :style released-button :color "#464646"))))
 
  `(highlight-doxygen-comment    ((t :background "#1E1E1E")))
  `(highlight-doxygen-code-block ((t :background "grey40")))
@@ -106,12 +106,12 @@
 
  `(flx-highlight-face ((t :foreground "#72a4ff" :weight bold)))
 
- `(ahs-plugin-default-face           ((t :background "#123E70" :box (:line-width -1 :style pressed-button :color "#525D68"))))
- `(ahs-plugin-default-face-unfocused ((t :background "#0E3056" :box (:line-width -1 :style pressed-button :color "#525D68"))))
- `(ahs-face                          ((t :background "#123E70" :box (:line-width -1 :style pressed-button :color "#525D68"))))
- `(ahs-definition-face               ((t :background "#123E70" :box (:line-width -1 :style pressed-button :color "#525D68"))))
- `(ahs-face-unfocused                ((t :background "#0E3056" :box (:line-width -1 :style pressed-button :color "#525D68"))))
- `(ahs-definition-face-unfocused     ((t :background "#0E3056" :box (:line-width -1 :style pressed-button :color "#525D68"))))
+ `(ahs-plugin-default-face           ((t :background "#123E70" :box (:line-width (-1 . -1) :style pressed-button :color "#525D68"))))
+ `(ahs-plugin-default-face-unfocused ((t :background "#0E3056" :box (:line-width (-1 . -1) :style pressed-button :color "#525D68"))))
+ `(ahs-face                          ((t :background "#123E70" :box (:line-width (-1 . -1) :style pressed-button :color "#525D68"))))
+ `(ahs-definition-face               ((t :background "#123E70" :box (:line-width (-1 . -1) :style pressed-button :color "#525D68"))))
+ `(ahs-face-unfocused                ((t :background "#0E3056" :box (:line-width (-1 . -1) :style pressed-button :color "#525D68"))))
+ `(ahs-definition-face-unfocused     ((t :background "#0E3056" :box (:line-width (-1 . -1) :style pressed-button :color "#525D68"))))
 
  `(centaur-tabs-display-line               ((t :background "#1D1D1D" :box nil :overline nil :underline nil)))
  `(centaur-tabs-default                    ((t :background "#1D1D1D")))
@@ -136,10 +136,10 @@
 
  `(highlight-numbers-number ((t :foreground "#9BCEA3")))
 
- `(modablist-select-face ((t :box (:line-width -1 :color "#65A7E2" :style nil))))
- `(modablist-insert-face ((t :background "#565136" :box (:line-width -1 :color "#65A7E2" :style nil))))
+ `(modablist-select-face ((t :box (:line-width (-1 . -1) :color "#65A7E2" :style nil))))
+ `(modablist-insert-face ((t :background "#565136" :box (:line-width (-1 . -1) :color "#65A7E2" :style nil))))
 
- `(ts-fold-replacement-face ((t :foreground "#808080" :box (:line-width -1 :style 'pressed-button))))
+ `(ts-fold-replacement-face ((t :foreground "#808080" :box (:line-width (-1 . -1) :style pressed-button))))
 
  `(rjsx-tag              ((t (:foreground "#87CEFA"))))
  `(rjsx-attr             ((t (:foreground "#EEDD82"))))

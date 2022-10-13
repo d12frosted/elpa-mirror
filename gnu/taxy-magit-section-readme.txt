@@ -8,10 +8,11 @@ Table of Contents
 
 1. Installation
 2. Changelog
-.. 1. 0.11
-.. 2. 0.10
-.. 3. 0.9.1
-.. 4. 0.9
+.. 1. 0.12
+.. 2. 0.11
+.. 3. 0.10
+.. 4. 0.9.1
+.. 5. 0.9
 3. Development
 4. Credits
 5. License
@@ -44,7 +45,14 @@ This library renders [Taxy] structs with [magit-section].
 2 Changelog
 ═══════════
 
-2.1 0.11
+2.1 0.12
+────────
+
+  *Fixes*
+  ⁃ Section visibility caching.
+
+
+2.2 0.11
 ────────
 
   *Additions*
@@ -52,14 +60,14 @@ This library renders [Taxy] structs with [magit-section].
     value can be viewed.
 
 
-2.2 0.10
+2.3 0.10
 ────────
 
   *Fixes*
   ⁃ Require package `taxy' in package headers.
 
 
-2.3 0.9.1
+2.4 0.9.1
 ─────────
 
   *Fixes*
@@ -70,7 +78,7 @@ This library renders [Taxy] structs with [magit-section].
     items' values.
 
 
-2.4 0.9
+2.5 0.9
 ───────
 
   ⁃ `taxy-magit-section' moved to separate package.
