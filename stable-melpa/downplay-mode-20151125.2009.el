@@ -4,6 +4,8 @@
 
 ;; Author: Toby Crawley <toby@tcrawley.org>
 ;; URL: https://github.com/tobias/downplay-mode/
+;; Package-Version: 20151125.2009
+;; Package-Commit: 4a2c3addc73c8ca3816345c3c11c08af265baedb
 ;; Created: 2013-12-21
 ;; Version: 0.1
 
@@ -122,12 +124,6 @@
                         (delete-overlay overlay)
                         overlay))
                     '(nil nil)))
-    (downplay-quit))) 
-
-(provide 'downplay-mode)
-
-;;; downplay-mode.el ends here
-'(nil nil)))
     (downplay-quit))) 
 
 (provide 'downplay-mode)
