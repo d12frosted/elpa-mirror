@@ -1274,6 +1274,22 @@ Improvements around editing Prolog
         restrict completion to matching candidates in the specified
         module.
 
+  Respect `font-lock-maximum-decoration'
+        We should take into account the value of
+        `font-lock-maximum-decoration' while highlighting
+        `sweeprolog-mode' buffers.  This variable conveys the user’s
+        preferred degree of highlighting.  A possible approach would be
+        changing `sweeprolog--colour-term-to-faces' such that each color
+        fragment in returned list states its target decoration level
+        (i.e. 1, 2 or 3).  `sweeprolog--colourise' would then compare
+        this target to the value of
+
+        ┌────
+        │ (font-lock-value-in-major-mode font-lock-maximum-decoration)
+        └────
+
+        And decide whether or not to apply the fragment.
+
 
 [Documenting predicates] See section Documenting predicates
 
@@ -1296,6 +1312,12 @@ General improvements
         Perhaps this should handled through some Debug Adapter Protocol
         integration similar to what was done in `dap-swi-prolog' (see
         [Debug Adapter Protocol for SWI-Prolog]).
+
+  Provide predicate documentation in a `help-mode' buffer
+        `sweep' should include a command `sweeprolog-describe-predicate'
+        that works similarly to the built-in `describe-function' by
+        opening a `help-mode' buffer and populating it with the full
+        cross-referenced documentation of a given Prolog predicate.
 
   Integrate with `project.el' adding support for SWI-Prolog packs
         It would be nice if `sweep' would “teach” `project.el' to detect
