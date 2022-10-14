@@ -4,8 +4,8 @@
 
 ;; Author: Nacho Barrientos <nacho.barrientos@cern.ch>
 ;; Keywords: tools, convenience
-;; Package-Version: 20221010.1451
-;; Package-Commit: 6cfd7bbefcf4d2acfd2c3107fb37104d8e401c92
+;; Package-Version: 20221014.1151
+;; Package-Commit: 0d188a997f24caaa3da748ad6ca16eb55cecff27
 ;; URL: https://git.sr.ht/~nbarrientos/cern-ldap.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.0.1
@@ -164,7 +164,7 @@ how the results are displayed/filtered using ARG."
 See `cern-ldap-user-by-login-dwim' for instructions on how to control
 how the results are displayed/filtered using ARG."
   (interactive "P\nsLogin: ")
-  (cern-ldap--lookup-user
+  (cern-ldap--display-user
    arg
    (concat cern-ldap-user-lookup-login-key "=" login)))
 
@@ -183,9 +183,31 @@ how the results are displayed/filtered using ARG."
            ('relaxed (format "*%s*" full-name))
            ('strict full-name)
            (_ (user-error "Invalid full name matching type")))))
-    (cern-ldap--lookup-user
+    (cern-ldap--display-user
      arg
      (concat cern-ldap-user-lookup-full-name-key "=" search-value))))
+
+(defun cern-ldap-users-single-attribute (accounts attribute)
+  "Return the values of ATTRIBUTE for all ACCOUNTS.
+
+The elements of ACCOUNTS will be searched for using
+`cern-ldap-user-lookup-full-name-key'.
+
+This function is useful for instance to obtain the break-down of
+organisational units for a list of accounts, for example:
+
+\(seq-sort-by #'cdr
+              #'>
+              (-frequencies
+               (cern-ldap-users-single-attribute
+                '(\"user1\" \"user2\")
+                \"department\")))"
+  (mapcar (lambda (login)
+            (cadr (flatten-list
+                   (cern-ldap--lookup-user
+                    (concat cern-ldap-user-lookup-login-key "=" login)
+                    (list attribute)))))
+          accounts))
 
 ;;;###autoload
 (defun cern-ldap-group-dwim (arg)
@@ -234,7 +256,20 @@ automatically lookup information about that username."
             (run-hooks 'cern-ldap-finish-hook)))
       (user-error "%s is an empty or unknown group" group))))
 
-(defun cern-ldap--lookup-user (arg filter)
+(defun cern-ldap--lookup-user (filter attributes)
+  "Return the value of some ATTRIBUTES for users matching FILTER.
+
+The results are sorted alphabetically by `cern-ldap-user-sort-key'."
+  (seq-sort-by
+   (lambda (e)
+     (cadr (assoc cern-ldap-user-sort-key e)))
+   #'string<
+   (cern-ldap--query
+    filter
+    attributes
+    cern-ldap--user-base-dn)))
+
+(defun cern-ldap--display-user (arg filter)
   "Lookup users in LDAP returning some attributes in a new buffer.
 
 The results will be delivered in a temporary read-only buffer
@@ -253,14 +288,7 @@ automatically lookup information about that username."
                       (?l . ,(car (last (split-string filter "=")))))))
          (attributes (unless arg
                        cern-ldap-user-displayed-attributes))
-         (data (seq-sort-by
-                (lambda (e)
-                  (cadr (assoc cern-ldap-user-sort-key e)))
-                #'string<
-                (cern-ldap--query
-                 filter
-                 attributes
-                 cern-ldap--user-base-dn))))
+         (data (cern-ldap--lookup-user filter attributes)))
     (if data
         (with-temp-buffer-window buffer-n
             #'display-buffer-reuse-window
