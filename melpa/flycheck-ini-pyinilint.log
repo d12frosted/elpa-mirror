@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/danieljrmay/flycheck-ini-pyinilint.git
 
 Updating /mnt/store/melpa/working/flycheck-ini-pyinilint/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://gitlab.com/danieljrmay/flycheck-ini-pyinilint.git/': The requested URL returned error: 520
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 54744a78d06373404933fedc3ca836916e83de51
+Built flycheck-ini-pyinilint in 3.870s, finished at 2022-10-13T23:32:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Oct 13 23:32 packages/flycheck-ini-pyinilint-20190312.1931.el
+4.0K -rw-r--r-- 1 root root  445 Oct 13 23:32 packages/flycheck-ini-pyinilint-20190312.1931.entry
