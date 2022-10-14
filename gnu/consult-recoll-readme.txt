@@ -206,7 +206,9 @@ Table of Contents
   variable `consult-recoll-open-fns'.  If no entry is found,
   consult-recoll uses the value of `consult-open-fn' as a default.  If
   the latter is not set, `eww-open-file' is used for HTML files and
-  `find-file' for the rest.
+  `find-file' for the rest, moving to the result's page number if the
+  major mode of the opened file is either `doc-view-mode' or
+  `pdf-view-mode'.
 
   If `consult-recoll-inline-snippets' is set, the functions above take
   two arguments: the URL of the file to open and, if present, the
