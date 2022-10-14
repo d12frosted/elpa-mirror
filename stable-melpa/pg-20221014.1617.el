@@ -4,8 +4,8 @@
 
 ;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
 ;; Version: 0.18
-;; Package-Version: 20221012.1157
-;; Package-Commit: 85db097c357281162a27e4feabdaa8721edc4fd5
+;; Package-Version: 20221014.1617
+;; Package-Commit: f5319ce20a9c1c6351342eba937aab606f8cafe4
 ;; Keywords: data comm database postgresql
 ;; URL: https://github.com/emarsden/pg-el
 ;; Package-Requires: ((emacs "26.1"))
@@ -273,6 +273,10 @@ session (not per connection to the backend).")
 Each handler is called with three arguments: the connection to
 the backend, the parameter name and the parameter value.")
 
+(defvar pg-handle-notice-functions (list 'pg-log-notice)
+  "List of handlers called when the backend sends us a NOTICE message.
+Each handler is called with one argument, the notice, as a pgerror
+struct.")
 
 (define-error 'pg-error "PostgreSQL error" 'error)
 (define-error 'pg-protocol-error "PostgreSQL protocol error" 'pg-error)
@@ -643,18 +647,10 @@ Return a result structure which can be decoded using `pg-result'."
 
             ;; NoticeResponse
             (?N
-             (let* ((msglen (pg-read-net-int connection 4))
-                    (msg (pg-read-chars connection (- msglen 5))))
-               (message "tmp notice msg is %s" msg)
-               (cl-loop with msgpos = 0
-                        while (< msgpos (- msglen 5))
-                        with code = (aref msg msgpos)
-                        until (zerop code)
-                        for val = (let* ((start (cl-incf msgpos))
-                                         (end (cl-position #x0 msg :start start :end (- msglen 5))))
-                                    (prog1 (substring msg start end)
-                                      (setf msgpos (1+ end))))
-                        do (message "PostgreSQL notice %c: %s" code val))))
+             ;; a Notice response has the same structure and fields as an ErrorResponse
+             (let ((notice (pg-read-error-response connection)))
+               (dolist (handler pg-handle-notice-functions)
+                 (funcall handler notice))))
 
             ;; CursorResponse
             (?P
@@ -1412,6 +1408,7 @@ PostgreSQL returns the version as a string. CrateDB returns it as an integer."
                          (prog1
                              (substring msg start end)
                            (setf msgpos (1+ end))))
+             ;; these field types: https://www.postgresql.org/docs/current/protocol-error-fields.html
              do (cond ((eq field ?S)
                        (setf (pgerror-severity err) val))
                       ((eq field ?C)
@@ -1469,6 +1466,31 @@ presented to the user."
                           (or (concat " " context) "")
                           (pgerror-message e)
                           (apply #'concat extra))))))
+
+(defun pg-log-notice (notice)
+  "Log a NOTICE to the *Messages* buffer."
+  (let ((extra (list)))
+    (when (pgerror-detail notice)
+      (push ", " extra)
+      (push (pgerror-detail notice) extra))
+    (when (pgerror-hint notice)
+      (push ", " extra)
+      (push (format "hint: %s" (pgerror-hint notice)) extra))
+    (when (pgerror-table notice)
+      (push ", " extra)
+      (push (format "table: %s" (pgerror-table notice)) extra))
+    (when (pgerror-column notice)
+      (push ", " extra)
+      (push (format "column: %s" (pgerror-column notice)) extra))
+    (setf extra (nreverse extra))
+    (pop extra)
+    (setf extra (butlast extra))
+    (when extra
+      (setf extra (append (list " (") extra (list ")"))))
+    (message "PostgreSQL %s %s %s"
+             (pgerror-severity notice)
+             (pgerror-message notice)
+             (apply #'concat extra))))
 
 ;; higher order bits first
 (defun pg-send-int (connection num bytes)
