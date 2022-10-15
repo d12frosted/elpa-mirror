@@ -465,7 +465,7 @@
 		  ("Chen Bin" . "chenbin.sh@gmail.com"))
 		 (:commit . "7a2a7384b6e752a805d6fbb78cf9425e54c2b18b"))])
  (evil-nerd-commenter .
-		      [(3 5 7)
+		      [(3 5 8)
 		       ((emacs
 			 (25 1)))
 		       "Comment/uncomment lines efficiently. Like Nerd Commenter in Vim" tar
@@ -474,7 +474,7 @@
 			(:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 			(:authors
 			 ("Chen Bin" . "chenbin.sh@gmail.com"))
-			(:commit . "29ced6fda6a76771a8a054ef55c13a1330793d4d"))])
+			(:commit . "9609fb170da00aeca1716b022d93e1cb68464a34"))])
  (evil-numbers .
 	       [(0 7)
 		((emacs
@@ -557,7 +557,7 @@
 	       ("Matus Goljer" . "matus.goljer@gmail.com"))
 	      (:commit . "6f9172376af4d399c7853cbdfdd7425348a878f9"))])
  (geiser .
-	 [(0 26 1)
+	 [(0 27)
 	  ((emacs
 	    (25 1))
 	   (transient
@@ -570,7 +570,7 @@
 	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 	   (:authors
 	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-	   (:commit . "d0a54c942839a561032b4bc41ca65ff4481bd073"))])
+	   (:commit . "af81e4fb1088d9ccbd36dcd541e29eb2770e4d87"))])
  (geiser-chez .
 	      [(0 17)
 	       ((emacs
