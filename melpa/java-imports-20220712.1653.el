@@ -4,8 +4,6 @@
 
 ;; Author: Lee Hinman <lee@writequit.org>
 ;; URL: http://www.github.com/dakrone/emacs-java-imports
-;; Package-Version: 20220712.1653
-;; Package-Commit: bbb173c319a32b46680b5c0bffd72b607ed7b71a
 ;; Version: 0.1.1
 ;; Keywords: java kotlin
 ;; Package-Requires: ((emacs "24.4") (s "1.10.0") (pcache "0.3.2"))
