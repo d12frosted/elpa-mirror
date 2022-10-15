@@ -8,7 +8,7 @@
   - Visual Studio project file manager
     backend: msvc + ede
   - coexistence of different versions
-    2019/2017/2015/2013/2012/2010
+    2022/2019/2017/2015/2013/2012/2010
   - code completion (auto / manual)
     backend: ac-clang
     ac-sources: ac-clang or semantic
@@ -29,7 +29,7 @@
   - Microsoft Windows 64/32bit
     10/8/7/Vista
   - Microsoft Visual Studio Community/Professional/Enterprise
-    2019/2017/2015/2013/2012/2010
+    2022/2019/2017/2015/2013/2012/2010
   - Shell 64/32bit
     CYGWIN/MSYS/CMD(cmdproxy)
     CYGWIN's bash recommended
@@ -85,7 +85,7 @@ Usage:
                                       :project-file "d:/DirectXSamples/SubD11/SubD11_2010.vcxproj"
                                       :platform "x64"
                                       :configuration "Release"
-                                      :product-name "2019"
+                                      :product-name "2022"
                                       :toolset 'x86_amd64
                                       :md5-name-p nil
                                       :force-parse-p nil

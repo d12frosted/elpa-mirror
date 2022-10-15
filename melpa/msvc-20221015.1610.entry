@@ -1,5 +1,5 @@
 (msvc .
-      [(20210503 1856)
+      [(20221015 1610)
        ((emacs
 	 (24))
 	(cl-lib
@@ -9,7 +9,7 @@
 	(ac-clang
 	 (2 0 0)))
        "Microsoft Visual C/C++ mode" tar
-       ((:commit . "122dc9cb7f145f12dac7b117a48fceb38b279432")
+       ((:commit . "1bf173b5da3fbf2bdb799116e2a1f31916c1e16e")
 	(:authors
 	 ("yaruopooner [https://github.com/yaruopooner]"))
 	(:maintainer "yaruopooner [https://github.com/yaruopooner]")

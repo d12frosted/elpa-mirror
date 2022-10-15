@@ -9,8 +9,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/dante
-;; Package-Version: 20221012.1919
-;; Package-Commit: 6b5d7b79651c0da84f62a94f96b7e3a2df3eb211
+;; Package-Version: 20221015.1623
+;; Package-Commit: f24f472d54fbf9543f228d4aa55429f3d1964d4e
 ;; Created: October 2016
 ;; Keywords: haskell, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "27.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (haskell-mode "13.14") (s "1.11.0") (lcr "1.5"))
@@ -133,7 +133,7 @@ Set `dante-project-root', `dante-repl-command-line' and
 `dante-target'.  Do so according to `dante-methods' and previous
 values of the above variables."
   (unless dante-target ; Get the current package name from a nearby .cabal file
-    (setq dante-target
+    (setq-local dante-target
           (let ((cabal-file (dante-cabal-find-file)))
             (if cabal-file
                 (replace-regexp-in-string
@@ -684,7 +684,7 @@ This is a standard process sentinel function."
       (if (eq (buffer-local-value 'dante-state buffer) 'deleting)
           (message "GHCi process deleted.")
         (with-current-buffer buffer (setq dante-state 'dead))
-        (dante-show-process-problem process change)))))
+        (dante-show-process-problem buffer change)))))
 
 (defun dante-diagnose ()
   "Show all state info in a help buffer."

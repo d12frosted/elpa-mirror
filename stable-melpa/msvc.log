@@ -4,10 +4,10 @@ Source:  https://github.com/yaruopooner/msvc.git
 
 Updating /mnt/store/melpa/working/msvc/
 Checking out origin/HEAD
-Checking out 122dc9cb7f145f12dac7b117a48fceb38b279432
+Checking out 1bf173b5da3fbf2bdb799116e2a1f31916c1e16e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/msvc/
-  to /tmp/msvcce8MOP/msvc-20210503.1856
+  to /tmp/msvcfmgALa/msvc-20221015.1610
     msvc-env.el -> msvc-env.el
     msvc-flags.el -> msvc-flags.el
     msvc.el -> msvc.el
@@ -15,17 +15,17 @@ Copying files (->) and directories (=>)
     invoke-msbuild.bat -> invoke-msbuild.bat
     msvc-extractor.cflags.vcxproj -> msvc-extractor.cflags.vcxproj
     msvc-extractor.flymake.vcxproj -> msvc-extractor.flymake.vcxproj
-Created msvc-20210503.1856.tar containing:
-  msvc-20210503.1856/
-  msvc-20210503.1856/empty.cpp
-  msvc-20210503.1856/invoke-msbuild.bat
-  msvc-20210503.1856/msvc-env.el
-  msvc-20210503.1856/msvc-extractor.cflags.vcxproj
-  msvc-20210503.1856/msvc-extractor.flymake.vcxproj
-  msvc-20210503.1856/msvc-flags.el
-  msvc-20210503.1856/msvc-pkg.el
-  msvc-20210503.1856/msvc.el
-Built msvc in 4.180s, finished at 2022-10-15T13:07:37+0000
+Created msvc-20221015.1610.tar containing:
+  msvc-20221015.1610/
+  msvc-20221015.1610/empty.cpp
+  msvc-20221015.1610/invoke-msbuild.bat
+  msvc-20221015.1610/msvc-env.el
+  msvc-20221015.1610/msvc-extractor.cflags.vcxproj
+  msvc-20221015.1610/msvc-extractor.flymake.vcxproj
+  msvc-20221015.1610/msvc-flags.el
+  msvc-20221015.1610/msvc-pkg.el
+  msvc-20221015.1610/msvc.el
+Built msvc in 3.519s, finished at 2022-10-15T19:39:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  467 Oct 15 13:07 packages/msvc-20210503.1856.entry
-152K -rw-r--r-- 1 root root 150K Oct 15 13:07 packages/msvc-20210503.1856.tar
+4.0K -rw-r--r-- 1 root root  467 Oct 15 19:39 packages/msvc-20221015.1610.entry
+152K -rw-r--r-- 1 root root 150K Oct 15 19:39 packages/msvc-20221015.1610.tar
