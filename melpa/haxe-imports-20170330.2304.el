@@ -4,8 +4,6 @@
 
 ;; Author: Juan Karlo Licudine <karlo@accidentalrebel.com>
 ;; URL: http://www.github.com/accidentalrebel/emacs-haxe-imports
-;; Package-Version: 20170330.2304
-;; Package-Commit: a4ab31759bd237e78c055dda73e808a4ee1b5fde
 ;; Version: 0.1.0
 ;; Keywords: haxe 
 ;; Package-Requires: ((emacs "24.4") (s "1.10.0") (pcache "0.3.1"))

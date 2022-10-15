@@ -1,0 +1,13 @@
+(geiser-chez .
+	     [(20221015 615)
+	      ((emacs
+		(26 1))
+	       (geiser
+		(0 19)))
+	      "Chez and Geiser talk to each other" tar
+	      ((:commit . "f00dcb93477ef97c215debf6267192cd0dd94e22")
+	       (:authors
+		("Peter" . "craven@gmx.net"))
+	       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
+	       (:keywords "languages" "chez" "scheme" "geiser")
+	       (:url . "https://gitlab.com/emacs-geiser/chez"))])

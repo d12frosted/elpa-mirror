@@ -3,7 +3,7 @@ This package provides a minor mode that will disallow buffers from
 being killed.  Any buffer matching a regexp in the list
 `unkillable-buffers' will not be killed.
 
-Only one bufer is in `unkillable-buffers' by default: the *scratch*
+Only one buffer is in `unkillable-buffers' by default: the *scratch*
 buffer.
 
 The *scratch* buffer is considered specially; in the event of a call to

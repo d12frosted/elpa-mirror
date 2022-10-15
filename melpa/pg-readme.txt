@@ -184,6 +184,9 @@ when the backend informs us of a parameter change, for example a change to
 the session time zone. Each handler is called with three arguments: the
 connection to the backend, the parameter name and the parameter value.
 
+Variable `pg-handle-notice-functions' is a list of handlers to be called when
+the backend sends us a `NOTICE' message. Each handler is called with one
+argument, the notice, as a pgerror struct.
 
 Boolean variable `pg-disable-type-coercion' can be set to non-nil (before
 initiating a connection) to disable the library's type coercion facility.
