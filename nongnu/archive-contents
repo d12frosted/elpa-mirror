@@ -1349,6 +1349,20 @@
 	       (:authors
 		("Jonathan Waltman" . "jonathan.waltman@gmail.com"))
 	       (:commit . "5f2943fd70d94065496c52d21f05eb89028637cc"))])
+ (pcre2el .
+	  [(1 9)
+	   ((emacs
+	     (25 1))
+	    (cl-lib
+	     (0 3))
+	    (a
+	     (1 0 0)))
+	   "regexp syntax converter" tar
+	   ((:url . "https://github.com/joddie/pcre2el")
+	    (:maintainer "joddie <jonxfield at gmail.com>")
+	    (:authors
+	     ("joddie <jonxfield at gmail.com>"))
+	    (:commit . "ffa53a7c78c55bfb068cdfb68ca8b1705c119f82"))])
  (pdf-tools .
 	    [(1 0)
 	     ((emacs
@@ -1638,7 +1652,7 @@
 	   ("Random User"))
 	  (:commit . "b10ab60a4e567a1fb7d7702d146ed7055b203113"))])
  (sweeprolog .
-	     [(0 6 1)
+	     [(0 6 2)
 	      ((emacs
 		(28)))
 	      "Embedded SWI-Prolog" tar
@@ -1647,7 +1661,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "539b2829085a31f2f14ec0f2ffb72ed7edc3da49"))])
+	       (:commit . "c6ac1105d83b132e1b485d1324f69ad6a757bf42"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs

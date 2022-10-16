@@ -38,6 +38,7 @@ Editing Prolog code
 .. Documenting predicates
 .. Displaying predicate documentation
 .. Examining diagnostics
+.. Exporting predicates
 The Prolog top-level
 .. Multiple top-levels
 .. The Top-level Menu buffer
@@ -180,6 +181,11 @@ Prolog initialization and cleanup
   ┌────
   │ (add-to-list 'sweeprolog-init-args "--stack-limit=512m")
   └────
+
+  The default value of `sweeprolog-init-args' is set to load the Prolog
+  helper library `sweep.pl' and to create a boolean Prolog flag `sweep',
+  set to `true', which indicates to SWI-Prolog that it is running under
+  `sweep'.
 
   To inhibit `sweeprolog' from initializing Prolog on load, set the
   user-option `sweeprolog-init-on-load' to nil.
@@ -868,6 +874,27 @@ Examining diagnostics
 diagnostics>
 
 [Compilation Mode in the Emacs manual] <info:emacs#Compilation Mode>
+
+
+Exporting predicates
+────────────────────
+
+  By default, a predicate defined in Prolog module is not visible to
+  dependent modules unless they it is /exported/, by including it in the
+  export list of the defining module (i.e. the second argument of the
+  `module/2' directive).
+
+  `sweep' provides a convenient command for exporting predicates defined
+  in `sweeprolog-mode' buffer.  To add the predicate near point to the
+  export list of the current module, use the command `C-c C-e'
+  (`sweeprolog-export-predicate').  If the current predicate is
+  documented with a `PlDoc' comment, a comment with the predicate’s mode
+  is added after the predicate name in the export list.  If point is not
+  near a predicate definition, calling `sweeprolog-export-predicate'
+  will prompt for a predicate to export, providing completion candidates
+  based on the non-exported predicates defined in the current buffer.
+  To force prompting for a predicate, invoke
+  `sweeprolog-export-predicate' with a prefix argument (`C-u C-c C-e').
 
 
 The Prolog top-level
