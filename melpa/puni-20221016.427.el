@@ -6,8 +6,8 @@
 ;; Maintainer: Hao Wang <amaikinono@gmail.com>
 ;; Created: 08 Aug 2021
 ;; Keywords: convenience, lisp, tools
-;; Package-Version: 20220730.1556
-;; Package-Commit: 28836e98d5566172b1a94d7b38290d07b49201b2
+;; Package-Version: 20221016.427
+;; Package-Commit: af8dfe1f5a3e5c4ba650fd15716ae707f29b33f8
 ;; Homepage: https://github.com/AmaiKinono/puni
 ;; Version: 0
 ;; Package-Requires: ((emacs "26.1"))
@@ -1679,7 +1679,7 @@ jumps forward consecutive single-line comments.
 
 With prefix argument N, go forward that many sexps.  Negative
 argument means go backward."
-  (interactive "p")
+  (interactive "^p")
   (setq n (or n 1))
   (if (< n 0) (puni-backward-sexp (- n))
     (dotimes (_ n)
@@ -1693,7 +1693,7 @@ jumps backward consecutive single-line comments.
 
 With prefix argument N, go backward that many sexps.  Negative
 argument means go forward."
-  (interactive "p")
+  (interactive "^p")
   (setq n (or n 1))
   (if (< n 0) (puni-forward-sexp (- n))
     (dotimes (_ n)
@@ -1710,7 +1710,7 @@ opening delimiters.
 If it goes to the beginning of the buffer (likely to happen when
 called by accident in the top scope), set a mark at where we
 begin so we can pop back to it."
-  (interactive)
+  (interactive "^")
   (unless (bobp)
     (let ((from (point)))
       (or (puni-beginning-of-list-around-point)
@@ -1729,7 +1729,7 @@ closing delimiters.
 If it goes to the end of the buffer (likely to happen when called
 by accident in the top scope), set a mark at where we begin so we
 can pop back to it."
-  (interactive)
+  (interactive "^")
   (unless (eobp)
     (let ((from (point)))
       (or (puni-end-of-list-around-point)
@@ -1751,7 +1751,7 @@ This means:
 
 This command is designed to give you a \"syntactical navigating\"
 feeling."
-  (interactive)
+  (interactive "^")
   (let ((in-str-or-comment-p (or (puni--in-comment-p) (puni--in-string-p)))
         done)
     (while (and (not done)
@@ -1787,7 +1787,7 @@ This means:
 
 This command is designed to give you a \"syntactical navigating\"
 feeling."
-  (interactive)
+  (interactive "^")
   (let ((in-str-or-comment-p (or (puni--in-comment-p) (puni--in-string-p)))
         done)
     (while (and (not done)

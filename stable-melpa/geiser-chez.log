@@ -4,22 +4,24 @@ Source:  https://gitlab.com/emacs-geiser/chez.git
 
 Updating /mnt/store/melpa/working/geiser-chez/
 Checking out origin/HEAD
-Checking out f00dcb93477ef97c215debf6267192cd0dd94e22
+Checking out e7b2c6635f9511c8294af862daf874bc519f56bf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser-chez/
-  to /tmp/geiser-chezyFBQmb/geiser-chez-20221015.615
+  to /tmp/geiser-chezwZYWYa/geiser-chez-20221016.317
     geiser-chez.el -> geiser-chez.el
     src/geiser => src/geiser
-Created geiser-chez-20221015.615.tar containing:
-  geiser-chez-20221015.615/
-  geiser-chez-20221015.615/geiser-chez-pkg.el
-  geiser-chez-20221015.615/geiser-chez.el
-  geiser-chez-20221015.615/src/
-  geiser-chez-20221015.615/src/geiser/
-  geiser-chez-20221015.615/src/geiser/geiser-data.ss
-  geiser-chez-20221015.615/src/geiser/geiser.ss
-  geiser-chez-20221015.615/src/geiser/test.ss
-Built geiser-chez in 3.535s, finished at 2022-10-16T01:53:00+0000
+Created geiser-chez-20221016.317.tar containing:
+  geiser-chez-20221016.317/
+  geiser-chez-20221016.317/geiser-chez-pkg.el
+  geiser-chez-20221016.317/geiser-chez.el
+  geiser-chez-20221016.317/src/
+  geiser-chez-20221016.317/src/geiser/
+  geiser-chez-20221016.317/src/geiser/geiser-data.ss
+  geiser-chez-20221016.317/src/geiser/geiser.ss
+  geiser-chez-20221016.317/src/geiser/test.ss
+Built geiser-chez in 5.333s, finished at 2022-10-16T05:07:01+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  425 Oct 16 01:53 packages/geiser-chez-20221015.615.entry
 160K -rw-r--r-- 1 root root 160K Oct 16 01:53 packages/geiser-chez-20221015.615.tar
+4.0K -rw-r--r-- 1 root root  425 Oct 16 05:07 packages/geiser-chez-20221016.317.entry
+160K -rw-r--r-- 1 root root 160K Oct 16 05:07 packages/geiser-chez-20221016.317.tar
