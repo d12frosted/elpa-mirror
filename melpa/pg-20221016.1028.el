@@ -4,8 +4,8 @@
 
 ;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
 ;; Version: 0.18
-;; Package-Version: 20221015.1054
-;; Package-Commit: 0621efb53b551436f613bd9963cf67e9160fd8eb
+;; Package-Version: 20221016.1028
+;; Package-Commit: 08d35bffdc311629e69e6fa73f419f1d02245fa5
 ;; Keywords: data comm database postgresql
 ;; URL: https://github.com/emarsden/pg-el
 ;; Package-Requires: ((emacs "26.1"))
@@ -790,7 +790,7 @@ PostgreSQL and Emacs. CON should no longer be used."
     ("text"         . ,'pg-text-parser)
     ("varchar"      . ,'pg-text-parser)
     ("bytea"        . ,'pg-bytea-parser)
-    ;; "json" TODO
+    ("json"         . ,'pg-json-parser)
     ;; "jsonb" TODO
     ;; "xml" TODO
     ("numeric"      . ,'pg-number-parser)
@@ -832,6 +832,18 @@ PostgreSQL and Emacs. CON should no longer be used."
     (signal 'pg-protocol-error
             (list "Unexpected format for BYTEA binary string")))
   (decode-hex-string (substring str 2)))
+
+;; We use either the native libjansson support compiled into Emacs, or fall back to the routines
+;; from the JSON library. Note however that these do not parse JSON in exactly the same way (in
+;; particular, NULL, false and the empty array are handled differently).
+(defun pg-json-parser (str _encoding)
+  (if (and (fboundp 'json-parse-string)
+           (json-available-p))
+      ;; Use the JSON support natively compiled into Emacs
+      (json-parse-string str)
+    ;; Use the parsing routines from the json library
+    (require 'json)
+    (json-read-from-string str)))
 
 (defun pg-bool-parser (str _encoding)
   (cond ((string= "t" str) t)
@@ -923,19 +935,19 @@ PostgreSQL and Emacs. CON should no longer be used."
     (when m (cdr m))))
 
 
-(defun pg-serialize-binary (bytestring)
+(defun pg-serialize-binary (_bytestring)
   )
 
-(defun pg-serialize-json (json)
+(defun pg-serialize-json (_json)
   )
 
-(defun pg-serialize-xml (xml)
+(defun pg-serialize-xml (_xml)
   )
 
-(defun pg-serialize-array (array)
+(defun pg-serialize-array (_array)
   )
 
-(defun pg-serialize-string (string)
+(defun pg-serialize-string (_string)
   ;; quoting/escaping characters as necessary (eg NULL)
   )
 
@@ -959,7 +971,6 @@ Authenticate as USER with PASSWORD."
 ;; TODO: implement stringprep for user names and passwords, as per RFC4013.
 (defun pg-sasl-prep (string)
   string)
-
 
 
 (defun pg-logxor-string (s1 s2)

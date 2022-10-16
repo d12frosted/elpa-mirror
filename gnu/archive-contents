@@ -953,7 +953,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20220926)
+      [(20221015)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -962,7 +962,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "ed23e0f2920df09ced0889627879567fd2a097ac"))])
+	(:commit . "e80c5efd00214613e6837fa11036bf8463040529"))])
  (ef-themes .
 	    [(0 7 0)
 	     ((emacs

@@ -9,8 +9,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/dante
-;; Package-Version: 20221015.1623
-;; Package-Commit: f24f472d54fbf9543f228d4aa55429f3d1964d4e
+;; Package-Version: 20221016.1005
+;; Package-Commit: f90242d4c678fae52bf43e011ec50058cc07486b
 ;; Created: October 2016
 ;; Keywords: haskell, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "27.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (haskell-mode "13.14") (s "1.11.0") (lcr "1.5"))
@@ -238,6 +238,7 @@ if the argument is omitted or nil or a positive integer).
 (define-key dante-mode-map (kbd "C-c ,") 'dante-info)
 (define-key dante-mode-map (kbd "C-c /") 'attrap-attrap) ;; deprecated keybinding
 (define-key dante-mode-map (kbd "C-c \"") 'dante-eval-block)
+(define-key dante-mode-map (kbd "C-c C-c") 'dante-exec)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Interactive utils
@@ -872,6 +873,15 @@ The command block is indicated by the >>> symbol."
           (while (and (looking-at "[ \t]*--")
                       (not (looking-at "[ \t]*--[ \t]+>>>")))
             (forward-line)))))))
+
+(defcustom dante-exec-default "main"
+  (substitute-command-keys "Default command to run by `dante-exec'.")
+  :group 'dante :safe t :type 'string)
+
+(defun dante-exec (command)
+  "Execute COMMAND in GHCi and show the result in the echo area."
+  (interactive (list dante-exec-default))
+  (lcr-spawn (message "%s" (lcr-call dante-async-call command))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Flymake
