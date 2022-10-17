@@ -215,7 +215,7 @@ Table of Contents
   find documentation about completion in the [Elisp manual].
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/corfu.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/corfu.html>
 
 [Cape] <https://github.com/minad/cape>
 
@@ -707,4 +707,4 @@ Table of Contents
   copyright assignment to the FSF.
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/corfu.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/corfu.html>

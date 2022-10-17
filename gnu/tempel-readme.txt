@@ -6,28 +6,42 @@
 Table of Contents
 ─────────────────
 
-1. Introduction
-2. Quick start
+1. Template expansion
+2. Configuration
 3. Template file format
 4. Template syntax
 5. Adding template sources
-6. Binding important templates to a key
-7. Alternatives
-8. Contributions
+6. Hooking into the Abbrev mechanism
+7. Binding important templates to a key
+8. Alternatives
+9. Contributions
 
 
+Tempel is a tiny template package for Emacs, which uses the syntax of
+the Emacs Tempo library. Tempo is an ancient temple of the church of
+Emacs. It is 27 years old, but still in good shape since it successfully
+resisted change over the decades. However it may look a bit dusty here
+and there. Therefore we present Tempel, a modernized implementation of
+Tempo.
+
+Table of Contents
+─────────────────
+
+1. Template expansion
+2. Configuration
+3. Template file format
+4. Template syntax
+5. Adding template sources
+6. Hooking into the Abbrev mechanism
+7. Binding important templates to a key
+8. Alternatives
+9. Contributions
 
 
+1 Template expansion
+════════════════════
 
-1 Introduction
-══════════════
-
-  Tempel is a tiny template package for Emacs, which uses the syntax of
-  the Emacs Tempo library. Tempo is an ancient temple of the church of
-  Emacs. It is 27 years old, but still in good shape since it
-  successfully resisted change over the decades. However it may look a
-  bit dusty here and there. Therefore we present to you, Tempel, a
-  modernized implementation of Tempo, in the form of three commands:
+  Tempel comes with three commands for template expansion:
 
   ⁃ `tempel-complete' completes a template name at point in the buffer
     and subsequently expands the template. If called non-interactively
@@ -49,28 +63,12 @@ Table of Contents
   them there. As soon as you move before (behind) the first (last)
   field, the fields are finalized.
 
-  Tempel can hook into Abbrev by enabling the `tempel-abbrev-mode' in a
-  buffer or by enabling the `global-tempel-abbrev-mode'. Then the Tempel
-  templates will be available via `expand-abbrev' which is usually bound
-  to `C-x ''.
-
-  Note that this package does not come with readily available snippet
-  collections, unlike the YASnippet library. Try Tempel if you like
-  small and simple packages.  With Tempel you write your templates in
-  Lisp syntax, which from my perspective fits well to the hackable
-  nature of Emacs. Tempel took inspiration from the [Tempo-Snippets]
-  package by Nikolaj Schumacher ([GitHub link]).
-
 
 [Corfu] <https://github.com/minad/corfu>
 
-[Tempo-Snippets] <https://nschum.de/src/emacs/tempo-snippets/>
 
-[GitHub link] <https://github.com/nschum/tempo-snippets.el>
-
-
-2 Quick start
-═════════════
+2 Configuration
+═══════════════
 
   The package is available on GNU ELPA and MELPA and can be installed
   with `package-install'. The following example configuration relies on
@@ -121,11 +119,13 @@ Table of Contents
 ══════════════════════
 
   The templates are defined in a Lisp data file configured by
-  `tempel-path'. By default the file `~/.config/emacs/templates' is
-  used. The templates are grouped by major mode with an optional `:when'
-  condition. Each template is a list in the concise form of the Emacs
-  Tempo syntax. The first element of each list is the name of the
-  template. Behind the name, the Tempo syntax elements follow.
+  `tempel-path'. Lisp data files are files containing Lisp s-expressions
+  (see `lisp-data-mode'). By default the file
+  `~/.config/emacs/templates' is used. The templates are grouped by
+  major mode with an optional `:when' condition. Each template is a list
+  in the concise form of the Emacs Tempo syntax. The first element of
+  each list is the name of the template. Behind the name, the Tempo
+  syntax elements follow.
 
   In addition, each template may specify a `:pre' and/or `:post' key
   with a FORM that is evaluated before the template is expanded or after
@@ -134,6 +134,8 @@ Table of Contents
   template's named fields.
 
   ┌────
+  │ ;; ~/.config/emacs/templates
+  │ 
   │ fundamental-mode ;; Available everywhere
   │ 
   │ (today (format-time-string "%Y-%m-%d"))
@@ -261,17 +263,18 @@ Table of Contents
     line end.
   • `o' Like `%' but leaves the point before newline.
   • `(s NAME)' Inserts a named field.
-  • `(p PROMPT <NAME> <NONINS>)' Insert an optionally named field with a
-    prompt.  The `PROMPT' is displayed directly in the buffer as default
-    value. If `NOINSERT' is non-nil, no field is inserted. Then the
-    minibuffer is used for prompting and the value is bound to `NAME'.
+  • `(p PROMPT <NAME> <NOINSERT>)' Insert an optionally named field with
+    a prompt.  The `PROMPT' is displayed directly in the buffer as
+    default value. If `NOINSERT' is non-nil, no field is inserted. Then
+    the minibuffer is used for prompting and the value is bound to
+    `NAME'.
   • `(r PROMPT <NAME> <NOINSERT>)' Insert region or act like `(p ...)'.
   • `(r> PROMPT <NAME> <NOINSERT>)' Act like `(r ...)', but indent
     region.
 
   Furthermore Tempel supports syntax extensions:
 
-  • `(p FORM <NAME> <NONINS>)' Like `p' described above, but `FORM' is
+  • `(p FORM <NAME> <NOINSERT>)' Like `p' described above, but `FORM' is
     evaluated.
   • `(FORM ...)' Other Lisp forms are evaluated. Named fields are
     lexically bound.
@@ -304,7 +307,16 @@ Table of Contents
   └────
 
 
-6 Binding important templates to a key
+6 Hooking into the Abbrev mechanism
+═══════════════════════════════════
+
+  Tempel can hook into Abbrev by enabling the `tempel-abbrev-mode' in a
+  buffer or by enabling the `global-tempel-abbrev-mode'. Then the Tempel
+  templates will be available via `expand-abbrev' which is usually bound
+  to `C-x ''.
+
+
+7 Binding important templates to a key
 ══════════════════════════════════════
 
   Important templates can be bound to a key with the small utility macro
@@ -328,8 +340,15 @@ Table of Contents
 [general] <https://github.com/noctuid/general>
 
 
-7 Alternatives
+8 Alternatives
 ══════════════
+
+  Tempel does not come with readily available snippet collections,
+  unlike the YASnippet library. Try Tempel if you like small and simple
+  packages. With Tempel you write your templates in Lisp syntax, which
+  from my perspective fits well to the hackable nature of Emacs. Tempel
+  took inspiration from the [Tempo-Snippets] package by Nikolaj
+  Schumacher ([GitHub link]).
 
   There are plenty of alternative packages which provide abbreviation or
   snippet expansion.
@@ -347,6 +366,10 @@ Table of Contents
   • [tempo-snippets.el]: snippet.el-like interface for Tempo
   • [yasnippet.el]: The most popular template system
 
+
+[Tempo-Snippets] <https://nschum.de/src/emacs/tempo-snippets/>
+
+[GitHub link] <https://github.com/nschum/tempo-snippets.el>
 
 [aas.el] <https://github.com/ymarco/auto-activating-snippets>
 
@@ -367,11 +390,11 @@ Table of Contents
 [yasnippet.el] <https://github.com/joaotavora/yasnippet>
 
 
-8 Contributions
+9 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a
   copyright assignment to the FSF.
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/tempel.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/tempel.html>

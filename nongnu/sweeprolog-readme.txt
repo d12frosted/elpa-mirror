@@ -39,6 +39,7 @@ Editing Prolog code
 .. Displaying predicate documentation
 .. Examining diagnostics
 .. Exporting predicates
+Prolog Help
 The Prolog top-level
 .. Multiple top-levels
 .. The Top-level Menu buffer
@@ -897,6 +898,24 @@ Exporting predicates
   `sweeprolog-export-predicate' with a prefix argument (`C-u C-c C-e').
 
 
+Prolog Help
+═══════════
+
+  `sweep' provides a way to read SWI-Prolog documentation via the
+  standard Emacs `help' user interface, akin to Emacs’ built-in
+  `describe-function' (`C-h f') and `describe-variable' (`C-h v').  For
+  more information about Emacs `help' and its special major mode,
+  `help-mode', see [Help Mode in the Emacs manual].
+
+  The command `M-x sweeprolog-describe-module' prompts for the name of a
+  Prolog module and displays its documentation in the `*Help*' buffer.
+  To jump to the source code from its documentation, press `s'
+  (`help-view-source').
+
+
+[Help Mode in the Emacs manual] <info:emacs#Help Mode>
+
+
 The Prolog top-level
 ════════════════════
 
@@ -1253,11 +1272,6 @@ Improvements around editing Prolog
         their `help-echo' property that says what kind of token this is,
         to expose the precise semantics of each token to the user.
 
-  Add a command for exporting the current predicate
-        `sweeprolog-mode' should provide a command for adding a
-        predicate to the export list of the module defined in the
-        current buffer, defaulting to the predicate at point.
-
   Add a command for updating the dependencies for the current module
         `sweeprolog-mode' should provide a command for adding and/or
         updating `use_module/2' and `autoload/2' directives as needed
@@ -1344,7 +1358,10 @@ General improvements
         `sweep' should include a command `sweeprolog-describe-predicate'
         that works similarly to the built-in `describe-function' by
         opening a `help-mode' buffer and populating it with the full
-        cross-referenced documentation of a given Prolog predicate.
+        cross-referenced documentation of a given Prolog predicate.  We
+        currently have `sweeprolog-describe-module' as a proof of
+        concept which should be extended to cover predicate
+        documentation as well.
 
   Integrate with `project.el' adding support for SWI-Prolog packs
         It would be nice if `sweep' would “teach” `project.el' to detect

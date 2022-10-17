@@ -525,7 +525,7 @@
 		   ("Akib Azmain Turja" . "akib@disroot.org"))
 		  (:commit . "3255a917fc90d946a7a6f04ef7f7632c9a89ac94"))])
  (focus .
-	[(1 0 0)
+	[(1 0 1)
 	 ((emacs
 	   (24 3))
 	  (cl-lib
@@ -535,7 +535,7 @@
 	  (:maintainer "Lars Tveito" . "larstvei@ifi.uio.no")
 	  (:authors
 	   ("Lars Tveito" . "larstvei@ifi.uio.no"))
-	  (:commit . "5f3f20e7f22fb9fd7c48abce8bd38061d97e4bc0"))])
+	  (:commit . "2507ec4ec5a9402647ef85540669db1815520c15"))])
  (forth-mode .
 	     [(0 2)
 	      nil "Programming language mode for Forth" tar
@@ -1652,7 +1652,7 @@
 	   ("Random User"))
 	  (:commit . "b10ab60a4e567a1fb7d7702d146ed7055b203113"))])
  (sweeprolog .
-	     [(0 6 2)
+	     [(0 6 3)
 	      ((emacs
 		(28)))
 	      "Embedded SWI-Prolog" tar
@@ -1661,7 +1661,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "c6ac1105d83b132e1b485d1324f69ad6a757bf42"))])
+	       (:commit . "87e98628e5e6e73d016afbc09480d8bf1f0a70ee"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs

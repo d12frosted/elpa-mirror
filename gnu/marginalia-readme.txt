@@ -44,9 +44,9 @@ Table of Contents
 ═══════════════
 
   It is recommended to use Marginalia together with either the
-  [Vertico], [Mct], [Icomplete] or the [Selectrum] completion
-  system. Furthermore Marginalia can be combined with [Embark] for
-  action support and [Consult], which provides many useful commands.
+  [Vertico], [Mct], [Icomplete] or the default completion
+  UI. Furthermore Marginalia can be combined with [Embark] for action
+  support and [Consult], which provides many useful commands.
 
   ┌────
   │ ;; Enable rich annotations using the Marginalia package
@@ -71,8 +71,6 @@ Table of Contents
 
 [Icomplete]
 <https://www.gnu.org/software/emacs/manual/html_node/emacs/Icomplete.html>
-
-[Selectrum] <https://github.com/raxod502/selectrum>
 
 [Embark] <https://github.com/oantolin/embark>
 
@@ -257,4 +255,4 @@ Table of Contents
   copyright assignment to the FSF.
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/marginalia.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/marginalia.html>

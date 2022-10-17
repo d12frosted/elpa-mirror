@@ -213,7 +213,7 @@ Table of Contents
   you can find documentation about completion in the [Elisp manual].
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/vertico.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/vertico.html>
 
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
@@ -633,13 +633,15 @@ Table of Contents
     [discontinued] due to recent changes of the default completion UI on
     the Emacs master branch.
   • [Selectrum]: Selectrum is the predecessor of Vertico, since it
-    directly inspired Vertico. Vertico offers more flexibility thanks to
-    its [extensions]. Selectrum is not fully compatible with every Emacs
-    completion command and dynamic completion tables ([selectrum#481]),
-    since it uses its own filtering infrastructure, which deviates from
-    the standard Emacs completion facilities.  Therefore Selectrum is
-    likely getting deprecated in favor of Vertico ([vertico#237],
-    [selectrum#598)].
+    directly inspired Vertico. Vertico was designed specifically to
+    address the technical shortcomings of Selectrum. Selectrum is not
+    fully compatible with every Emacs completion command and dynamic
+    completion tables ([selectrum#481]), since it uses its own filtering
+    infrastructure, which deviates from the standard Emacs completion
+    facilities. Therefore Selectrum is getting deprecated in favor of
+    Vertico ([vertico#237], [selectrum#598)]. Furthermore, Vertico was
+    designed with flexibility in mind via its [extensions]. See the
+    [migration guide] if you plan to migrate from Selectrum to Vertico.
   • Icomplete: Emacs 28 comes with a builtin `icomplete-vertical-mode',
     which is a more bare-bone than Vertico. Vertico offers more
     flexibility thanks to its [extensions].
@@ -652,8 +654,6 @@ Table of Contents
 
 [Selectrum] <https://github.com/radian-software/selectrum>
 
-[extensions] See section 4
-
 [selectrum#481]
 <https://github.com/radian-software/selectrum/issues/481>
 
@@ -661,6 +661,11 @@ Table of Contents
 
 [selectrum#598)]
 <https://github.com/radian-software/selectrum/issues/598>
+
+[extensions] See section 4
+
+[migration guide]
+<https://github.com/minad/vertico/wiki/Migrating-from-Selectrum-to-Vertico>
 
 
 8 Resources
@@ -721,7 +726,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   copyright assignment to the FSF.
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/vertico.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/vertico.html>
 
 
 10 Problematic completion commands

@@ -49,17 +49,15 @@ command `consult-imenu' presents a flat list of the Imenu with [live
 preview], [grouping and narrowing]. Please take a look at the [full list
 of commands].
 
-Consult is fully compatible with completion systems based on the
+Consult is fully compatible with completion systems centered around the
 standard Emacs `completing-read' API, notably the default completion
-system, [Vertico], [Mct], [Icomplete] and [Selectrum].
+system, [Vertico], [Mct], and [Icomplete].
 
 This package keeps the completion system specifics to a minimum. The
 ability of the Consult commands to work well with arbitrary completion
 systems is one of the main advantages of the package. Consult fits well
 into existing setups and it helps you to create a full completion
-environment out of small and independent components. Note that, if you
-use [Ivy] or [Helm], you probably don't need Consult, since both
-packages bring their own Consult-like functionality.
+environment out of small and independent components.
 
 You can combine the complementary packages [Marginalia], [Embark] and
 [Orderless] with Consult. Marginalia enriches the completion display
@@ -121,12 +119,6 @@ Table of Contents
 
 [Icomplete]
 <https://www.gnu.org/software/emacs/manual/html_node/emacs/Icomplete.html>
-
-[Selectrum] <https://github.com/radian-software/selectrum>
-
-[Ivy] <https://github.com/abo-abo/swiper#ivy>
-
-[Helm] <https://github.com/emacs-helm/helm>
 
 [Marginalia] <https://github.com/minad/marginalia/>
 
@@ -311,7 +303,7 @@ Table of Contents
     `default-directory' is searched. If `consult-grep' is invoked with
     prefix argument `C-u M-s g', you can specify the directory manually.
   • `consult-find', `consult-locate': Find file by matching the path
-    against a regexp.  Like for `consult-grep,' either the project root
+    against a regexp.  Like for `consult-grep', either the project root
     or the current directory is the root directory for the search. The
     input string is treated similarly to `consult-grep', where the first
     part is passed to find, and the second part is used for Emacs
@@ -399,9 +391,8 @@ Table of Contents
     your in-buffer completion UI, this function can be set as
     `completion-in-region-function'. Then your minibuffer completion UI
     (e.g., Vertico or Icomplete) will be used for
-    `completion-at-point'. Note that Selectrum provides its own variant
-    of `consult-completion-in-region'. If you use Mct, you may want to
-    try `mct-region-mode' instead.
+    `completion-at-point'. If you use Mct, you can give
+    `mct-region-mode' a try.
     ┌────
     │ ;; Use `consult-completion-in-region' if Vertico is enabled.
     │ ;; Otherwise use the default `completion--in-region' function.
@@ -690,8 +681,7 @@ Table of Contents
 
   Sources can be added directly to the `consult-buffer-source' list for
   convenience.  For example views/perspectives can be added to the list
-  of virtual buffers from a library like
-  <https://github.com/minad/bookmark-view/>.
+  of virtual buffers from a library like [bookmark-view].
 
   ┌────
   │ ;; Configure new bookmark-view source
@@ -751,6 +741,9 @@ Table of Contents
   internal `consult--multi' API. The `consult--multi' function can be
   used to create new multi-source commands, but is part of the internal
   API as of now, since some details may still change.
+
+
+[bookmark-view] <https://github.com/minad/bookmark-view/>
 
 
 2.5 Embark integration
@@ -815,7 +808,7 @@ Table of Contents
   lexical binding.
 
 
-[ELPA] <http://elpa.gnu.org/packages/consult.html>
+[ELPA] <https://elpa.gnu.org/packages/consult.html>
 
 [MELPA] <https://melpa.org/#/consult>
 
@@ -993,13 +986,13 @@ Table of Contents
    consult-grep-args                 Command line arguments for grep                       
    consult-imenu-config              Mode-specific configuration for `consult-imenu'       
    consult-line-numbers-widen        Show absolute line numbers when narrowing is active.  
-   consult-line-point-placement      Placement of the point used by `consult-line'         
    consult-line-start-from-top       Start the `consult-line' search from the top          
    consult-locate-args               Command line arguments for locate                     
    consult-man-args                  Command line arguments for man                        
    consult-mode-command-filter       Filter for `consult-mode-command'                     
    consult-mode-histories            Mode-specific history variables                       
    consult-narrow-key                Narrowing prefix key during completion                
+   consult-point-placement           Placement of the point when jumping to matches        
    consult-preview-key               Keys which triggers preview                           
    consult-preview-allowed-hooks     List of `find-file' hooks to enable during preview    
    consult-preview-excluded-files    Regexps matched against file names during preview     
@@ -1112,10 +1105,8 @@ Table of Contents
 
   • The builtin completion UI, which pops up the `*Completions*' buffer.
   • The builtin `icomplete-vertical-mode' in Emacs 28.
-  • [selectrum by Radon Rosborough]: Alternative vertical UI,
-    predecessor of Vertico.
   • [mct by Protesilaos Stavrou]: Minibuffer and Completions in Tandem,
-    which builds on the default completion UI (development
+    which builds on the default completion UI (development currently
     [discontinued]).
 
   You can integrated Consult with special programs or with other
@@ -1185,9 +1176,6 @@ Table of Contents
 [embark and embark-consult] <https://github.com/oantolin/embark>
 
 [orderless] <https://github.com/oantolin/orderless>
-
-[selectrum by Radon Rosborough]
-<https://github.com/radian-software/selectrum>
 
 [mct by Protesilaos Stavrou] <https://git.sr.ht/~protesilaos/mct>
 
@@ -1277,9 +1265,9 @@ Table of Contents
      includes Consult, Vertico or other completion UIs, Marginalia,
      Embark and Orderless.
   2. Either use the default completion UI or ensure that exactly one of
-     `vertico-mode', `mct-mode', `selectrum-mode', or `icomplete-mode'
-     is enabled.  The unsupported modes `ivy-mode', `helm-mode' and
-     `ido-ubiquitous-mode' must be disabled.
+     `vertico-mode', `mct-mode', or `icomplete-mode' is enabled. The
+     unsupported modes `ivy-mode', `helm-mode' and `ido-ubiquitous-mode'
+     must be disabled.
   3. Ensure that the `completion-styles' variable is properly
      configured. Try to set `completion-styles' to a list including
      `substring' or `orderless'.
@@ -1310,8 +1298,7 @@ Table of Contents
   report:
 
   • The minimal configuration snippet used to reproduce the issue.
-  • Your completion UI (Default completion, Vertico, Mct, Selectrum or
-    Icomplete).
+  • Your completion UI (Default completion, Vertico, Mct or Icomplete).
   • A stack trace in case the bug triggers an exception.
   • Your Emacs version, since bugs may be fixed or introduced in newer
     versions.
@@ -1352,7 +1339,7 @@ Table of Contents
   command snippets.
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/consult.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/consult.html>
 
 [Consult issue tracker] <https://github.com/consult/issues>
 
@@ -1365,14 +1352,15 @@ Table of Contents
 ═════════════════
 
   This package took inspiration from [Counsel] by Oleh Krehel. Some of
-  the Consult commands originated in the Counsel package or the
-  [Selectrum wiki]. The commands have been rewritten and greatly
-  enhanced in comparison to the original versions.
+  the Consult commands originated in the Counsel package or the wiki of
+  the Selectrum package.  This package exists only thanks to the help of
+  these great contributors and thanks to the feedback of many
+  users. Thank you!
 
   Code contributions:
   • [Omar Antolín Camarena]
   • [Sergey Kostyaev]
-  • [okamsn]
+  • [Earl Hyatt]
   • [Clemens Radermacher]
   • [Tom Fitzhenry]
   • [jakanakaevangeli]
@@ -1386,6 +1374,10 @@ Table of Contents
   • [Sylvain Rousseau]
   • [J.D. Smith]
   • [Mohsin Kaleem]
+  • [Jean-Philippe Bernardy]
+  • [Aymeric Agon-Rambosson]
+  • [Geoffrey Lessel]
+  • [Piotr Kwiecinski]
 
   Advice and useful discussions:
   • [Clemens Radermacher]
@@ -1402,6 +1394,7 @@ Table of Contents
   • [Bruce d'Arcus]
   • [J.D. Smith]
   • [Enrique Kessler Martínez]
+  • [Radon Rosborough]
 
   Authors of supplementary `consult-*' packages:
 
@@ -1422,14 +1415,11 @@ Table of Contents
 
 [Counsel] <https://github.com/abo-abo/swiper#counsel>
 
-[Selectrum wiki]
-<https://github.com/radian-software/selectrum/wiki/Useful-Commands>
-
 [Omar Antolín Camarena] <https://github.com/oantolin/>
 
 [Sergey Kostyaev] <https://github.com/s-kostyaev/>
 
-[okamsn] <https://github.com/okamsn/>
+[Earl Hyatt] <https://github.com/okamsn/>
 
 [Clemens Radermacher] <https://github.com/clemera/>
 
@@ -1457,6 +1447,14 @@ Table of Contents
 
 [Mohsin Kaleem] <https://github.com/mohkale>
 
+[Jean-Philippe Bernardy] <https://github.com/jyp>
+
+[Aymeric Agon-Rambosson] <https://github.com/aagon>
+
+[Geoffrey Lessel] <https://github.com/geolessel>
+
+[Piotr Kwiecinski] <https://github.com/piotrkwiecinski>
+
 [Protesilaos Stavrou] <https://protesilaos.com>
 
 [Steve Purcell] <https://github.com/purcell/>
@@ -1476,6 +1474,8 @@ Table of Contents
 [Bruce d'Arcus] <https://github.com/bdarcus>
 
 [Enrique Kessler Martínez] <https://github.com/Qkessler>
+
+[Radon Rosborough] <https://github.com/raxod502>
 
 [Jose A Ortega Ruiz] <https://codeberg.org/jao/>
 

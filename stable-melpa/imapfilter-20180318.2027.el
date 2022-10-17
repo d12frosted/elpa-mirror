@@ -5,8 +5,6 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/imapfilter
 ;; Keywords: mail
-;; Package-Version: 20180318.2027
-;; Package-Commit: 5e842a8c60ba98f344edf1b1e65f5a480ed938ed
 
 ;; This file is not part of GNU Emacs.
 
