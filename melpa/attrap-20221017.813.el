@@ -6,8 +6,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/attrap
-;; Package-Version: 20221016.2018
-;; Package-Commit: 58ac51542ced1c7a3c22d4f23f6ca58358587748
+;; Package-Version: 20221017.813
+;; Package-Commit: 8b1dfeb784f365f2e73aefbae1214751c2fdf803
 ;; Created: February 2018
 ;; Keywords: programming, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "25.1") (f "0.19.0") (s "1.11.0"))
@@ -74,9 +74,14 @@
   :type '(alist :key-type symbol :value-type function)
   :group 'attrap)
 
+(declare-function flymake-flycheck-diagnostic-function-for 'flymake-flycheck (checker))
+(with-eval-after-load 'flymake-flycheck
+  (defalias 'attrap-flymake-hlint
+    (flymake-flycheck-diagnostic-function-for 'haskell-hlint)))
+
 (defcustom attrap-flymake-backends-alist
   '((dante-flymake . attrap-ghc-fixer)
-    (hlint-flymake . attrap-hlint-fixer)
+    (attrap-flymake-hlint . attrap-hlint-fixer)
     (elisp-flymake-byte-compile . attrap-elisp-fixer)
     (elisp-flymake-checkdoc . attrap-elisp-fixer))
   "An alist from flymake backend to attrap fixer."
@@ -143,10 +148,10 @@
   (interactive "d")
   (cond
    ((and (bound-and-true-p flyspell-mode)
+         (fboundp 'flyspell-overlay-p)
          (-any #'flyspell-overlay-p (overlays-at (point))))
-    (unless (fboundp 'flyspell-correct-at-point)
-      (error "Expecting the package flyspell-correct-ivy to be installed"))
-    (flyspell-correct-at-point))
+    (if (fboundp 'flyspell-correct-at-point)
+        (flyspell-correct-at-point)))
    ((bound-and-true-p flymake-mode) (attrap-flymake pos))
    ((bound-and-true-p flycheck-mode) (attrap-flycheck pos))
    (t (error "Expecting flymake or flycheck to be active"))))
@@ -227,11 +232,11 @@ The body is code that performs the fix."
 
 (defmacro attrap-alternatives (&rest clauses)
   "Append all succeeding clauses.
-Each clause looks like (CONDITION BODY...).  CONDITION is evaluated
-and, if the value is non-nil, this clause succeeds:
+Each clause looks like (CONDITION BODY...).  CONDITION is
+evaluated and, if the value is non-nil, this clause succeeds:
 then the expressions in BODY are evaluated and the last one's
-value is a list which is appended to the result of `attrap-alternatives'.
-usage: (attrap-alternatives CLAUSES...)"
+value is a list which is appended to the result of
+`attrap-alternatives'.  Usage: (attrap-alternatives CLAUSES...)"
   `(append ,@(mapcar (lambda (c) `(when ,(car c) ,@(cdr c))) clauses)))
 
 (defun attrap-elisp-fixer (msg _beg _end)
@@ -284,12 +289,14 @@ usage: (attrap-alternatives CLAUSES...)"
       (backward-char)
       (insert ".")))))
 
-(defun attrap-insert-language-pragma (pragma)
+(defun attrap-insert-language-pragma (extension)
+  "Insert language EXTENSION pragma at beginning of file."
   (goto-char 1)
-  (insert (concat "{-# LANGUAGE " pragma " #-}\n")))
+  (insert (concat "{-# LANGUAGE " extension " #-}\n")))
 
 (defun attrap-ghc-fixer (msg pos _end)
-  "An `attrap' fixer for any GHC error or warning given as MSG and reported between POS and END."
+  "An `attrap' fixer for any GHC error or warning.
+Error is given as MSG and reported between POS and END."
   (let ((normalized-msg (s-collapse-whitespace msg)))
   (append
    (when (string-match "Parse error in pattern: pattern" msg)
@@ -493,27 +500,30 @@ usage: (attrap-alternatives CLAUSES...)"
 
 (defun attrap-hlint-fixer (msg pos end)
   "Fixer for any hlint hint given as MSG and reported between POS and END."
-  (attrap-alternatives
+  (cond
    ((or
      (s-matches? "Unused LANGUAGE pragma" msg)
      (s-matches? "Use fewer LANGUAGE pragmas" msg))
     (attrap-one-option 'kill-pragma
       (delete-region pos (+ 2 end))))
    ((s-matches? (rx "Redundant $") msg)
-    (attrap-one-option 'delete
+    (attrap-one-option 'kill-dollar
       (delete-region pos (+ 1 end))))
    ((s-matches? (rx "Redundant bracket") msg)
-    (attrap-one-option 'delete
+    (attrap-one-option 'kill-brackets
       (delete-region pos (1+ pos))
-      (delete-region (1- end) end)))))
-   ;; ((string-match
-   ;;   (rx "Found:\n  " (group (+ not-newline)) "\nPerhaps:\n  " (group (+ not-newline))) msg)
-   ;;  (let ((replacement (match-string 2 msg)))
-   ;;    (attrap-one-option 'apply-hint
-   ;;      (delete-region pos (+ 1 end))
-   ;;      (insert replacement)
-   ;;      )))
-   )
+      (delete-region (1- end) end)))
+   ((string-match
+     (rx "Found:\n  "
+         (group (+ anychar))
+         "\nPerhaps:\n  "
+         (group (+ anychar))
+         "[haskell-hlint]")
+     msg)
+    (let ((replacement (match-string 2 msg)))
+      (attrap-one-option 'replace-as-hinted
+        (delete-region pos (+ 1 end))
+        (insert (s-collapse-whitespace replacement)))))))
      
      
 

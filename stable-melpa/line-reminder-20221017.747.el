@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-vs/line-reminder
-;; Package-Version: 20221016.1811
-;; Package-Commit: 53f6756b93c82d531d6b9419de0d2dcacc7a3f4e
+;; Package-Version: 20221017.747
+;; Package-Commit: 501b4739e422ca4859f47b9226e2ea292ecb6800
 ;; Version: 0.5.1
 ;; Package-Requires: ((emacs "25.1") (indicators "0.0.4") (fringe-helper "1.0.1") (ov "1.0.6") (ht "2.0"))
 ;; Keywords: convenience annotation
@@ -219,9 +219,7 @@
 
 See macro `with-selected-window' description for arguments WINDOW and BODY."
   (declare (indent 1) (debug t))
-  `(when (window-live-p ,window)
-     (with-selected-window ,window
-       ,@body)))
+  `(when (window-live-p ,window) (with-selected-window ,window ,@body)))
 
 (defun line-reminder--goto-line (line)
   "Jump to LINE."
@@ -387,7 +385,10 @@ LINE : pass in by `linum-format' variable."
   (add-hook 'before-change-functions #'line-reminder--before-change nil t)
   (add-hook 'after-change-functions #'line-reminder--after-change nil t)
   (add-hook 'post-command-hook #'line-reminder--post-command nil t)
-  (add-hook 'after-save-hook #'line-reminder--save-buffer nil t)
+  ;; XXX: We add advice to `save-buffer', but we never need to remove it since
+  ;; we have checked `line-reminder-mode' inside `line-reminder--save-buffer'
+  ;; function.
+  (advice-add 'save-buffer :after #'line-reminder--save-buffer)
   ;; XXX: Don't use local for these hooks/functions, without the local flag
   ;; it will be much faster for large operations (paste, save, etc)
   (add-hook 'window-scroll-functions #'line-reminder--thumb-scroll)
@@ -398,7 +399,6 @@ LINE : pass in by `linum-format' variable."
   (remove-hook 'before-change-functions #'line-reminder--before-change t)
   (remove-hook 'after-change-functions #'line-reminder--after-change t)
   (remove-hook 'post-command-hook #'line-reminder--post-command t)
-  (remove-hook 'after-save-hook #'line-reminder--save-buffer t)
   (line-reminder-clear-reminder-lines-sign)
   ;; XXX: Don't use local for these hooks/functions, without the local flag
   ;; it will be much faster for large operations (paste, save, etc)
