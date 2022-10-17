@@ -1,13 +1,13 @@
 Package: emacsql-sqlite
 Fetcher: github
-Source:  https://github.com/skeeto/emacsql.git
+Source:  https://github.com/magit/emacsql.git
 
 Updating /mnt/store/melpa/working/emacsql-sqlite/
 Checking out origin/HEAD
 Checking out ec4f3d091b8e2c60ee305a63a6f45f0ea5996ed6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emacsql-sqlite/
-  to /tmp/emacsql-sqliteywRJxs/emacsql-sqlite-20221013.1512
+  to /tmp/emacsql-sqlitewxhmhn/emacsql-sqlite-20221013.1512
     emacsql-sqlite.el -> emacsql-sqlite.el
     sqlite => sqlite
 Created emacsql-sqlite-20221013.1512.tar containing:
@@ -19,7 +19,7 @@ Created emacsql-sqlite-20221013.1512.tar containing:
   emacsql-sqlite-20221013.1512/sqlite/emacsql.c
   emacsql-sqlite-20221013.1512/sqlite/sqlite3.c
   emacsql-sqlite-20221013.1512/sqlite/sqlite3.h
-Built emacsql-sqlite in 4.603s, finished at 2022-10-17T09:37:26+0000
+Built emacsql-sqlite in 3.943s, finished at 2022-10-17T16:05:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  365 Oct 17 09:37 packages/emacsql-sqlite-20221013.1512.entry
-8.8M -rw-r--r-- 1 root root 8.8M Oct 17 09:37 packages/emacsql-sqlite-20221013.1512.tar
+4.0K -rw-r--r-- 1 root root  365 Oct 17 16:05 packages/emacsql-sqlite-20221013.1512.entry
+8.8M -rw-r--r-- 1 root root 8.8M Oct 17 16:05 packages/emacsql-sqlite-20221013.1512.tar
