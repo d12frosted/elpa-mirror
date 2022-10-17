@@ -5,8 +5,8 @@ Ensure the following fonts are installed before use:
 
    - Impact_Label (https://www.fontsquirrel.com/fonts/download/impact-label)
    - texlive-fonts-extra
-   - fonts-purisa
-   - fonts-inconsolata
+   - texlive-sourcecodepro.
+   - fonts-purisa || thai-scalable-purisa-fonts
    - fonts-dancingscript
 
 ========================================

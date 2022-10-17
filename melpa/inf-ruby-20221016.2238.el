@@ -9,8 +9,8 @@
 ;;         Kyle Hargraves <pd@krh.me>
 ;; Maintainer: Dmitry Gutov <dgutov@yandex.ru>
 ;; URL: http://github.com/nonsequitur/inf-ruby
-;; Package-Version: 20220811.949
-;; Package-Commit: eb7bf95d5b03bdb9b28647c89ea0a73e35fe0ad1
+;; Package-Version: 20221016.2238
+;; Package-Commit: c6192178941b46754fdb50405f344481c8ef2fd1
 ;; Created: 8 April 1998
 ;; Keywords: languages ruby
 ;; Version: 2.6.2
@@ -143,6 +143,7 @@ the same directory and used the same base name."
     #'identity
     '("\\(^%s> *\\)"                      ; Simple
       "\\(^(rdb:1) *\\)"                  ; Debugger
+      "\\(^(rdbg[^)]*) *\\)"              ; Ruby Debug Gem
       "\\(^(byebug) *\\)"                 ; byebug
       "\\(^\\(irb([^)]+)"                 ; IRB default
       "\\([[0-9]+] \\)?[Pp]ry ?([^)]+)"   ; Pry
@@ -1016,7 +1017,7 @@ keymaps to bind `inf-ruby-switch-from-compilation' to `С-x C-q'."
 one of the predicates matches, then calls `inf-ruby-console-TYPE',
 passing it the found directory.")
 
-(defvar inf-ruby-breakpoint-pattern "\\(\\[1\\] pry(\\)\\|\\((rdb:1)\\)\\|\\((byebug)\\)"
+(defvar inf-ruby-breakpoint-pattern "\\(\\[1\\] pry(\\)\\|\\((rdb:1)\\)\\|\\((byebug)\\)\\|\\((rdbg[^)]*)\\)"
   "Pattern found when a breakpoint is triggered in a compilation session.
 This checks if the current line is a pry or ruby-debug prompt.")
 

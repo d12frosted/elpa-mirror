@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-recomplete
-;; Package-Version: 20221016.1018
-;; Package-Commit: 665ccdb54e5a0cbc0c01f04936b1c8bb70552b5d
+;; Package-Version: 20221017.37
+;; Package-Commit: 44d4e57a2bfb401c282e4a460db755680e896de9
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -69,58 +69,6 @@
 ;;   after `recomplete-with-callback', so we know not to break the chain in that case.
 (defvar-local recomplete--alist nil "Internal properties for repeated `recomplete' calls.")
 
-;; ---------------------------------------------------------------------------
-;; Generic Functions/Macros
-
-(defun recomplete--replace-in-region (str beg end)
-  "Replace region from BEG to END with STR.
-Return the region replaced."
-  (let
-    (
-      (len (length str))
-      (i-beg nil)
-      (i-end nil)
-      (i-end-ofs nil))
-
-    ;; Check for skip end.
-    (let ((i 0))
-      (let ((len-test (min (- end beg) len)))
-        (while (< i len-test)
-          (let ((i-next (1+ i)))
-            (cond
-              ((eq (aref str (- len i-next)) (char-after (- end i-next)))
-                (setq i i-next))
-              (t ;; Break.
-                (setq len-test i))))))
-      (unless (zerop i)
-        (setq i-end (- len i))
-        (setq len (- len i))
-        (setq end (- end i))
-        (setq i-end-ofs i)))
-
-    ;; Check for skip start.
-    (let ((i 0))
-      (let ((len-test (min (- end beg) len)))
-        (while (< i len-test)
-          (cond
-            ((eq (aref str i) (char-after (+ beg i)))
-              (setq i (1+ i)))
-            (t ;; Break.
-              (setq len-test i)))))
-      (unless (zerop i)
-        (setq i-beg i)
-        (setq beg (+ beg i))))
-
-    (when (or i-beg i-end)
-      (setq str (substring str (or i-beg 0) (or i-end len))))
-
-    (goto-char beg)
-    (delete-region beg end)
-    (insert str)
-    (when i-end-ofs
-      ;; Leave the cursor where it would be if the end wasn't clipped.
-      (goto-char (+ (point) i-end-ofs)))
-    (cons beg (+ beg (length str)))))
 
 (defmacro recomplete--with-advice (fn-orig where fn-advice &rest body)
   "Execute BODY with advice added.
@@ -274,7 +222,7 @@ Argument FN-CACHE stores the result for reuse."
 
     (when result-choices
       (let ((word-at-index (nth (mod cycle-index (length result-choices)) result-choices)))
-        (recomplete--replace-in-region word-at-index word-beg word-end)))
+        (recomplete-replace-in-region word-at-index word-beg word-end)))
 
     (list result-choices fn-cache)))
 
@@ -325,7 +273,7 @@ Argument FN-CACHE stores the result for reuse."
         (setq fn-cache (list result-choices word-beg word-end))))
 
     (let ((word-at-index (nth (mod cycle-index (length result-choices)) result-choices)))
-      (recomplete--replace-in-region word-at-index word-beg word-end))
+      (recomplete-replace-in-region word-at-index word-beg word-end))
 
     (list result-choices fn-cache)))
 
@@ -369,13 +317,64 @@ Argument FN-CACHE stores the result for reuse."
           (setq fn-cache (list result-choices word-beg word-end)))))
 
     (let ((word-at-index (nth (mod cycle-index (length result-choices)) result-choices)))
-      (recomplete--replace-in-region word-at-index word-beg word-end))
+      (recomplete-replace-in-region word-at-index word-beg word-end))
 
     (list result-choices fn-cache)))
 
 
 ;; ---------------------------------------------------------------------------
 ;; Public Functions
+
+;;;###autoload
+(defun recomplete-replace-in-region (str beg end)
+  "Utility to replace region from BEG to END with STR.
+Return the region replaced."
+  (let
+    (
+      (len (length str))
+      (i-beg nil)
+      (i-end nil)
+      (i-end-ofs nil))
+
+    ;; Check for skip end.
+    (let ((i 0))
+      (let ((len-test (min (- end beg) len)))
+        (while (< i len-test)
+          (let ((i-next (1+ i)))
+            (cond
+              ((eq (aref str (- len i-next)) (char-after (- end i-next)))
+                (setq i i-next))
+              (t ;; Break.
+                (setq len-test i))))))
+      (unless (zerop i)
+        (setq i-end (- len i))
+        (setq len (- len i))
+        (setq end (- end i))
+        (setq i-end-ofs i)))
+
+    ;; Check for skip start.
+    (let ((i 0))
+      (let ((len-test (min (- end beg) len)))
+        (while (< i len-test)
+          (cond
+            ((eq (aref str i) (char-after (+ beg i)))
+              (setq i (1+ i)))
+            (t ;; Break.
+              (setq len-test i)))))
+      (unless (zerop i)
+        (setq i-beg i)
+        (setq beg (+ beg i))))
+
+    (when (or i-beg i-end)
+      (setq str (substring str (or i-beg 0) (or i-end len))))
+
+    (goto-char beg)
+    (delete-region beg end)
+    (insert str)
+    (when i-end-ofs
+      ;; Leave the cursor where it would be if the end wasn't clipped.
+      (goto-char (+ (point) i-end-ofs)))
+    (cons beg (+ beg (length str)))))
 
 ;; Make public since users may want to add their own callbacks.
 
