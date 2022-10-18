@@ -909,8 +909,15 @@ Prolog Help
 
   The command `M-x sweeprolog-describe-module' prompts for the name of a
   Prolog module and displays its documentation in the `*Help*' buffer.
-  To jump to the source code from its documentation, press `s'
+  To jump to the source code from the documentation, press `s'
   (`help-view-source').
+
+  Similarly, `M-x sweeprolog-describe-predicate' can be used to display
+  the documentation of a Prolog predicate.  This commands prompts for a
+  predicate with completion.  When the cursor is over a predicate
+  definition or invocation in a `sweeprolog-mode', that predicate is set
+  as the default selection and can be described by simply typing `RET'
+  in response to the prompt.
 
 
 [Help Mode in the Emacs manual] <info:emacs#Help Mode>
@@ -1353,15 +1360,6 @@ General improvements
         Perhaps this should handled through some Debug Adapter Protocol
         integration similar to what was done in `dap-swi-prolog' (see
         [Debug Adapter Protocol for SWI-Prolog]).
-
-  Provide predicate documentation in a `help-mode' buffer
-        `sweep' should include a command `sweeprolog-describe-predicate'
-        that works similarly to the built-in `describe-function' by
-        opening a `help-mode' buffer and populating it with the full
-        cross-referenced documentation of a given Prolog predicate.  We
-        currently have `sweeprolog-describe-module' as a proof of
-        concept which should be extended to cover predicate
-        documentation as well.
 
   Integrate with `project.el' adding support for SWI-Prolog packs
         It would be nice if `sweep' would “teach” `project.el' to detect

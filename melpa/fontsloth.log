@@ -3,3 +3,59 @@ Fetcher: github
 Source:  https://github.com/jollm/fontsloth.git
 
 Updating /mnt/store/melpa/working/fontsloth/
+Checking out origin/HEAD
+Checking out 615dd846cb80701cda4b34bc1dfb43bf695318b6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fontsloth/
+  to /tmp/fontslothr7VPgn/fontsloth-20211118.2018
+    fontsloth--common-types.el -> fontsloth--common-types.el
+    fontsloth-bbox.el -> fontsloth-bbox.el
+    fontsloth-cache.el -> fontsloth-cache.el
+    fontsloth-coords.el -> fontsloth-coords.el
+    fontsloth-geometry.el -> fontsloth-geometry.el
+    fontsloth-glyph.el -> fontsloth-glyph.el
+    fontsloth-layout-lb-tables.el -> fontsloth-layout-lb-tables.el
+    fontsloth-layout-linebreak.el -> fontsloth-layout-linebreak.el
+    fontsloth-layout.el -> fontsloth-layout.el
+    fontsloth-line.el -> fontsloth-line.el
+    fontsloth-log.el -> fontsloth-log.el
+    fontsloth-otf--mac-names.el -> fontsloth-otf--mac-names.el
+    fontsloth-otf-.el -> fontsloth-otf-.el
+    fontsloth-otf-cff-dict.el -> fontsloth-otf-cff-dict.el
+    fontsloth-otf-cff.el -> fontsloth-otf-cff.el
+    fontsloth-otf-glyf.el -> fontsloth-otf-glyf.el
+    fontsloth-otf-kern.el -> fontsloth-otf-kern.el
+    fontsloth-otf-typo.el -> fontsloth-otf-typo.el
+    fontsloth-otf.el -> fontsloth-otf.el
+    fontsloth-point.el -> fontsloth-point.el
+    fontsloth-raster.el -> fontsloth-raster.el
+    fontsloth.el -> fontsloth.el
+Created fontsloth-20211118.2018.tar containing:
+  fontsloth-20211118.2018/
+  fontsloth-20211118.2018/fontsloth--common-types.el
+  fontsloth-20211118.2018/fontsloth-bbox.el
+  fontsloth-20211118.2018/fontsloth-cache.el
+  fontsloth-20211118.2018/fontsloth-coords.el
+  fontsloth-20211118.2018/fontsloth-geometry.el
+  fontsloth-20211118.2018/fontsloth-glyph.el
+  fontsloth-20211118.2018/fontsloth-layout-lb-tables.el
+  fontsloth-20211118.2018/fontsloth-layout-linebreak.el
+  fontsloth-20211118.2018/fontsloth-layout.el
+  fontsloth-20211118.2018/fontsloth-line.el
+  fontsloth-20211118.2018/fontsloth-log.el
+  fontsloth-20211118.2018/fontsloth-otf--mac-names.el
+  fontsloth-20211118.2018/fontsloth-otf-.el
+  fontsloth-20211118.2018/fontsloth-otf-cff-dict.el
+  fontsloth-20211118.2018/fontsloth-otf-cff.el
+  fontsloth-20211118.2018/fontsloth-otf-glyf.el
+  fontsloth-20211118.2018/fontsloth-otf-kern.el
+  fontsloth-20211118.2018/fontsloth-otf-typo.el
+  fontsloth-20211118.2018/fontsloth-otf.el
+  fontsloth-20211118.2018/fontsloth-pkg.el
+  fontsloth-20211118.2018/fontsloth-point.el
+  fontsloth-20211118.2018/fontsloth-raster.el
+  fontsloth-20211118.2018/fontsloth.el
+Built fontsloth in 6.612s, finished at 2022-10-17T22:34:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  511 Oct 17 22:34 packages/fontsloth-20211118.2018.entry
+360K -rw-r--r-- 1 root root 360K Oct 17 22:34 packages/fontsloth-20211118.2018.tar
