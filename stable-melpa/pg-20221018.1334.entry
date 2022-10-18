@@ -1,0 +1,11 @@
+(pg .
+    [(20221018 1334)
+     ((emacs
+       (26 1)))
+     "Emacs Lisp socket-level interface to the PostgreSQL RDBMS" single
+     ((:commit . "e05498b746b0937f4dc898b1af266db47cec2f07")
+      (:authors
+       ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
+      (:maintainer "Eric Marsden" . "eric.marsden@risk-engineering.org")
+      (:keywords "data" "comm" "database" "postgresql")
+      (:url . "https://github.com/emarsden/pg-el"))])

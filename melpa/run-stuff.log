@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-run-stuff.git
 
 Updating /mnt/store/melpa/working/run-stuff/
-Checking out origin/HEAD
-Checking out 984e5219adbee369487768a3ad6a408515e15446
-Built run-stuff in 4.148s, finished at 2022-10-18T02:08:47+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Oct 18 02:08 packages/run-stuff-20221009.2235.el
-4.0K -rw-r--r-- 1 root root 438 Oct 18 02:08 packages/run-stuff-20221009.2235.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-run-stuff.git/': GnuTLS recv error (-54): Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
