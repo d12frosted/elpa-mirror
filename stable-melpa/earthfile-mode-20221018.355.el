@@ -2,8 +2,8 @@
 
 ;; Author: Thanabodee Charoenpiriyakij <wingyminus@gmail.com>
 ;; URL: https://github.com/earthly/earthly-mode
-;; Package-Version: 20221005.1756
-;; Package-Commit: 841f88bbf56e9a9eeccf7cca55f529a4880b2389
+;; Package-Version: 20221018.355
+;; Package-Commit: 0427c367768ab52c359c34941ed13dbf419d74d7
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MPL-2.0
@@ -52,7 +52,8 @@
 	  "IMPORT"
 	  "PROJECT"
 	  "PIPELINE"
-	  "TRIGGER")
+	  "TRIGGER"
+	  "CACHE")
       (or (+ space) line-end))
   "All Earthfile keywords.")
 
