@@ -4,8 +4,8 @@
 
 ;; Author: Patrick Thomson <patrickt@github.com>
 ;; URL: https://github.com/patrickt/codespaces.el
-;; Package-Version: 20221003.1408
-;; Package-Commit: 1f5f991aa2075d91213d5c9f9139551ffaf5cd3a
+;; Package-Version: 20221018.1831
+;; Package-Commit: 8e0843684ea685c2b25b8f5601cf02553bab4b08
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: comm
@@ -37,6 +37,23 @@
 ;;; Code:
 
 (require 'tramp)
+
+(defgroup codespaces nil
+  "Codespaces configuration."
+  :group 'tramp
+  :prefix "codespaces-")
+
+(defcustom codespaces-default-directory nil
+  "The default directory for a codespace.
+
+This will be resolved relative to the connection root.  By default, this will
+use the default directory for the codespace (the same as if you ran
+`gh cs ssh`) but if you provide a path, relative or absolute, that will be
+substituted instead.
+
+When this is nil, the default of '/workspaces/<repo-name>' is used."
+  :group 'codespaces
+  :type 'string)
 
 (defun codespaces-setup ()
   "Set up the ghcs tramp-method.  Should be called after requiring this package."
@@ -83,6 +100,11 @@
   (let ((name (codespaces-space-display-name cs)))
     (if (string-empty-p name) (codespaces-space-name cs) name)))
 
+(defun codespaces-space-repository-name (cs)
+  "Return the repository part of the CS codespace repo, or if empty, its name."
+  (cl-check-type cs codespaces-space)
+  (car (cdr (split-string (codespaces-space-repository cs) "/"))))
+
 (defun codespaces-space-describe (cs)
   "Format details about codespace CS for display as marginalia."
   (cl-check-type cs codespaces-space)
@@ -103,10 +125,16 @@
 
 ;;; Internal methods
 
+(defmacro codespaces--locally (&rest body)
+  "Ensure BODY is run with a local `default-directory'."
+  `(let ((default-directory (if (file-remote-p default-directory) "/" default-directory)))
+     ,@body))
+
 (defun codespaces--all-codespaces ()
   "Fetch all user codespaces by executing `gh'."
   (let ((gh-invocation "gh codespace list --json name,displayName,repository,state,gitStatus,lastUsedAt"))
-    (codespaces--build-table (json-parse-string (shell-command-to-string gh-invocation)))))
+    (codespaces--locally
+     (codespaces--build-table (json-parse-string (shell-command-to-string gh-invocation))))))
 
 (defun codespaces--filter-codespaces (pred)
   "Fetch all available codespaces, filtering by PRED."
@@ -118,15 +146,18 @@
 
 (defun codespaces--send-start-async (cs)
   "Send an `echo' command to CS over ssh."
-  (async-shell-command (format "gh codespace ssh -c %s echo 'Codespace ready.'" (codespaces-space-name cs))))
+  (codespaces--locally
+   (async-shell-command (format "gh codespace ssh -c %s echo 'Codespace ready.'" (codespaces-space-name cs)))))
 
 (defun codespaces--send-start-sync (cs)
   "Send an `echo' command to CS over ssh synchronously."
-  (shell-command (format "gh codespace ssh -c %s echo 'Codespace ready.'" (codespaces-space-name cs)) (get-buffer shell-command-buffer-name)))
+  (codespaces--locally
+   (shell-command
+    (format "gh codespace ssh -c %s echo 'Codespace ready.'" (codespaces-space-name cs)) (get-buffer shell-command-buffer-name))))
 
 (defun codespaces--send-stop-sync (cs)
   "Tell codespaces CS to stop."
-  (shell-command (format "gh codespace stop -c %s" (codespaces-space-name cs))))
+  (codespaces--locally (shell-command (format "gh codespace stop -c %s" (codespaces-space-name cs)))))
 
 (defun codespaces--build-table (json)
   "Accumulate a JSON vector into a hashtable from names to codespaces."
@@ -149,7 +180,7 @@
 (defun codespaces-tramp-completion (_filename)
   "Provide a set of completion candidates to TRAMP connections."
   (cl-loop for v being the hash-values of (codespaces--all-codespaces)
-         collect (list nil (codespaces-space-name v))))
+           collect (list nil (codespaces-space-name v))))
 
 ;;; Public interface
 
@@ -174,7 +205,10 @@
     (unless (codespaces-space-available-p selected)
       (message "Activating codespace (this may take some time)...")
       (codespaces--send-start-sync selected))
-    (find-file (format "/ghcs:%s:/workspaces" (codespaces-space-name selected)))))
+    (find-file (format "/ghcs:%s:%s"
+                       (codespaces-space-name selected)
+                       (or codespaces-default-directory
+                           (format "/workspaces/%s" (codespaces-space-repository-name selected)))))))
 
 (provide 'codespaces)
 

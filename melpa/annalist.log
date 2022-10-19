@@ -1,0 +1,23 @@
+Package: annalist
+Fetcher: github
+Source:  https://github.com/noctuid/annalist.el.git
+
+Updating /mnt/store/melpa/working/annalist/
+Checking out origin/HEAD
+Checking out 08df07e4530953a2c0b1aa553adcab37b7b614b0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/annalist/
+  to /tmp/annalistHlThxJ/annalist-20190929.207
+    annalist.el -> annalist.el
+    annalist.texi -> annalist.texi
+Generating /tmp/annalistHlThxJ/annalist-20190929.207/annalist.info
+Created annalist-20190929.207.tar containing:
+  annalist-20190929.207/
+  annalist-20190929.207/annalist-pkg.el
+  annalist-20190929.207/annalist.el
+  annalist-20190929.207/annalist.info
+  annalist-20190929.207/dir
+Built annalist in 7.377s, finished at 2022-10-19T05:34:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 433 Oct 19 05:34 packages/annalist-20190929.207.entry
+ 72K -rw-r--r-- 1 root root 70K Oct 19 05:34 packages/annalist-20190929.207.tar

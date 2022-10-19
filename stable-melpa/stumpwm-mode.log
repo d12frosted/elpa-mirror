@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://git.savannah.nongnu.org/git/stumpwm.git
 
 Updating /mnt/store/melpa/working/stumpwm-mode/
-Checking out origin/HEAD
-Checking out a920d31bac148e7f6afa98c05f98920135de8b89
-Built stumpwm-mode in 3.906s, finished at 2022-10-18T17:50:41+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Oct 18 17:50 packages/stumpwm-mode-20140131.216.el
-4.0K -rw-r--r-- 1 root root  252 Oct 18 17:50 packages/stumpwm-mode-20140131.216.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.savannah.nongnu.org/git/stumpwm.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
