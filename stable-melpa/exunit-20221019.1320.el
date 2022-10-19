@@ -4,8 +4,8 @@
 
 ;; Author: Anantha kumaran <ananthakumaran@gmail.com>
 ;; URL: http://github.com/ananthakumaran/exunit.el
-;; Package-Version: 20211209.1012
-;; Package-Commit: 8871bb12ce0cdb209029ab796b0b202735f82f7f
+;; Package-Version: 20221019.1320
+;; Package-Commit: e0a8c2b81f3d53885ed753b911b3cb6ee9229bec
 ;; Version: 0.1
 ;; Keywords: processes elixir exunit
 ;; Package-Requires: ((s "1.11.0") (emacs "24.3") (f "0.20.0") (transient "0.3.6"))
@@ -58,6 +58,18 @@
     ("u" "all in umbrella" exunit-verify-all-in-umbrella)]
    [("t" "toggle file and test" exunit-toggle-file-and-test)
     ("4 t" "toggle other window" exunit-toggle-file-and-test-other-window)]])
+
+(defcustom exunit-mix-command '("mix" "test")
+  "List of commands used to run the mix tool."
+  :type '(repeat string)
+  :group 'exunit
+  :safe #'listp)
+
+(defcustom exunit-comint-command '("iex" "-S" "mix" "test" "--trace")
+  "List of commands used to run the comint buffer."
+  :type '(repeat string)
+  :group 'exunit
+  :safe #'listp)
 
 (defcustom exunit-mix-test-default-options '()
   "List of options that gets passed to the mix test command."
@@ -198,14 +210,14 @@ and filename relative to the dependency."
                   (append infixes args)
                 args)))
     (exunit-do-compile
-     (s-join " " (append '("mix" "test") exunit-mix-test-default-options args)))))
+     (s-join " " (append exunit-mix-command exunit-mix-test-default-options args)))))
 
 (defun exunit-comint (args &optional directory)
   "Run mix test in iex shell with the given ARGS."
   (let ((default-directory (or directory (exunit-project-root)))
         (compilation-environment exunit-environment))
     (exunit-do-comint
-     (s-join " " (append '("iex" "-S" "mix" "test" "--trace") exunit-mix-test-default-options args)))))
+     (s-join " " (append exunit-comint-command exunit-mix-test-default-options args)))))
 
 (defun exunit-test-file-p (file)
   "Return non-nil if FILE is an ExUnit test file."

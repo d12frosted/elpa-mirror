@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/david-christiansen/prop-menu-el.git
 
 Updating /mnt/store/melpa/working/prop-menu/
-Checking out origin/HEAD
-Checking out 50b102c1c0935fd3e0c465feed7f27d66b21cdf3
-Built prop-menu in 4.245s, finished at 2022-10-19T13:19:26+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Oct 19 13:19 packages/prop-menu-20150728.1118.el
-4.0K -rw-r--r-- 1 root root  490 Oct 19 13:19 packages/prop-menu-20150728.1118.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/david-christiansen/prop-menu-el.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+
+Command exited with non-zero exit-code: 128

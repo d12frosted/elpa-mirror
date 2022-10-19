@@ -4,8 +4,8 @@
 ;; Maintainer: Brian Caruso <briancaruso@gmail.com>
 ;; Created: 2016-05-27
 ;; URL: https://github.com/bdc34/helm-taskswitch
-;; Package-Commit: 00fe3a1f535dc63ec8ad1a46739f08c27fc5087c
-;; Package-Version: 20190304.1414
+;; Package-Commit: 6e8b62702376c1d30ab52a419dd72cb2a40fd76e
+;; Package-Version: 20221019.1542
 ;; Package-X-Original-Version: 2.0.0
 ;; Package-Requires: ((emacs "24")(helm "3.0"))
 ;; Keywords: frames
@@ -60,16 +60,16 @@
 
 ;; ## TODOs
 
+;; * handle desktops: Switch to WM desktop withEmacs, bring Emacs to fore on
+;; activating, In most cases this already works.
+
 ;; * Track or get with focus history and use it to order candidates.
-;; There is a strat on this commented out at the bottom.  The current
+;; There is a start on this commented out at the bottom.  The current
 ;; order is arbitrary.
 
-;; Intersting blog post about alt-tab, suggests markov model
+;; Interesting blog post about alt-tab, suggests Markov model
 ;; http://www.azarask.in/blog/post/solving-the-alt-tab-problem/
 ;; Ideas from that: other hot key for "go back to most recent window"
-
-;; * Keep Emacs out of focust history
-;; Filter Emacs out of focus history when it is used for switching.
 
 ;; * Dedup WMCLASS
 ;; WMCLASS is often program.Program, transform theses to just Program
@@ -79,7 +79,10 @@
 
 ;; ## License
 
-;; [GNU General Public License version 3](http://www.gnu.org/licenses/gpl.html), or (at your option) any later version;; Code from https://github.com/flexibeast/ewmctrl is used under GNU 3.
+;; [GNU General Public License version 3]
+;; (http://www.gnu.org/licenses/gpl.html), or (at your option) any
+;; later version;; Code from https://github.com/flexibeast/ewmctrl is
+;; used under GNU 3.
 
 ;;; Code:
 
@@ -204,9 +207,11 @@
 (defun helm-taskswitch-focus-window-by-candidate (al)
   "Internal function to focus the desktop window specified by AL, a window associative list."
   (let* ((id (cdr (assoc 'window-id (car al))))
-         (cmd (concat helm-taskswitch-wmctrl-path " -i -a '" id "'")))
-    (message cmd)
-    (call-process-shell-command cmd)))
+         (desktop-id (cdr (assoc 'desktop-id (car al))))
+         (desktop-switch-cmd (concat helm-taskswitch-wmctrl-path " -s '" desktop-id "'"))
+         (window-switch-cmd (concat helm-taskswitch-wmctrl-path " -i -a '" id "'")))
+    (call-process-shell-command desktop-switch-cmd)
+    (call-process-shell-command window-switch-cmd)))
 
 
 (defun helm-taskswitch-close-candidate (al)
@@ -241,12 +246,14 @@
   (interactive)
   (run-hooks 'helm-taskswitch-open-hooks )
   (select-frame-set-input-focus (window-frame (selected-window)))
+  (make-frame-visible)
   (unless helm-source-buffers-list
    (setq helm-source-buffers-list
           (helm-make-source "Buffers" 'helm-source-buffers)))
   (helm :sources '(helm-taskswitch-source-x-windows
                    helm-source-buffers-list
                    helm-source-recentf
+                   ;;helm-chrome-history-source
                    helm-source-buffer-not-found)
         :buffer "*helm-taskswitch*"
         :truncate-lines t))
