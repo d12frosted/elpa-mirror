@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/d12frosted/counsel-osx-app.git
 
 Updating /mnt/store/melpa/working/counsel-osx-app/
-Checking out origin/HEAD
-Checking out 5cc93ec684f837dc31ce20e7625407f2c0445691
-Built counsel-osx-app in 3.836s, finished at 2022-10-19T08:55:57+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.7K Oct 19 08:55 packages/counsel-osx-app-20160821.809.el
-4.0K -rw-r--r-- 1 root root  393 Oct 19 08:55 packages/counsel-osx-app-20160821.809.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/d12frosted/counsel-osx-app.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

@@ -4,42 +4,46 @@ Source:  https://github.com/universal-ctags/citre.git
 
 Updating /mnt/store/melpa/working/citre/
 Checking out origin/HEAD
-Checking out 1c0ca637c7993559a0175e3001941457b8c71211
+Checking out 2e42117682988b93ab56fd92572f1f9e0c6f7d11
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citre/
-  to /tmp/citrewrAJDu/citre-20220523.745
-    citre-basic-tools.el -> citre-basic-tools.el
-    citre-common.el -> citre-common.el
+  to /tmp/citre6cZyu9/citre-20221019.1409
+    citre-backend-interface.el -> citre-backend-interface.el
+    citre-common-tag.el -> citre-common-tag.el
+    citre-common-util.el -> citre-common-util.el
     citre-config.el -> citre-config.el
-    citre-core-tables.el -> citre-core-tables.el
-    citre-core.el -> citre-core.el
     citre-ctags.el -> citre-ctags.el
     citre-global.el -> citre-global.el
     citre-lang-c.el -> citre-lang-c.el
     citre-lang-fileref.el -> citre-lang-fileref.el
     citre-lang-verilog.el -> citre-lang-verilog.el
-    citre-peek.el -> citre-peek.el
-    citre-tag.el -> citre-tag.el
-    citre-util.el -> citre-util.el
+    citre-readtags-tables.el -> citre-readtags-tables.el
+    citre-readtags.el -> citre-readtags.el
+    citre-tags.el -> citre-tags.el
+    citre-ui-jump.el -> citre-ui-jump.el
+    citre-ui-peek.el -> citre-ui-peek.el
     citre.el -> citre.el
-Created citre-20220523.745.tar containing:
-  citre-20220523.745/
-  citre-20220523.745/citre-basic-tools.el
-  citre-20220523.745/citre-common.el
-  citre-20220523.745/citre-config.el
-  citre-20220523.745/citre-core-tables.el
-  citre-20220523.745/citre-core.el
-  citre-20220523.745/citre-ctags.el
-  citre-20220523.745/citre-global.el
-  citre-20220523.745/citre-lang-c.el
-  citre-20220523.745/citre-lang-fileref.el
-  citre-20220523.745/citre-lang-verilog.el
-  citre-20220523.745/citre-peek.el
-  citre-20220523.745/citre-pkg.el
-  citre-20220523.745/citre-tag.el
-  citre-20220523.745/citre-util.el
-  citre-20220523.745/citre.el
-Built citre in 4.056s, finished at 2022-10-19T08:52:24+0000
+Created citre-20221019.1409.tar containing:
+  citre-20221019.1409/
+  citre-20221019.1409/citre-backend-interface.el
+  citre-20221019.1409/citre-common-tag.el
+  citre-20221019.1409/citre-common-util.el
+  citre-20221019.1409/citre-config.el
+  citre-20221019.1409/citre-ctags.el
+  citre-20221019.1409/citre-global.el
+  citre-20221019.1409/citre-lang-c.el
+  citre-20221019.1409/citre-lang-fileref.el
+  citre-20221019.1409/citre-lang-verilog.el
+  citre-20221019.1409/citre-pkg.el
+  citre-20221019.1409/citre-readtags-tables.el
+  citre-20221019.1409/citre-readtags.el
+  citre-20221019.1409/citre-tags.el
+  citre-20221019.1409/citre-ui-jump.el
+  citre-20221019.1409/citre-ui-peek.el
+  citre-20221019.1409/citre.el
+Built citre in 5.805s, finished at 2022-10-19T16:06:12+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  345 Oct 19 08:52 packages/citre-20220523.745.entry
-340K -rw-r--r-- 1 root root 340K Oct 19 08:52 packages/citre-20220523.745.tar
+4.0K -rw-r--r-- 1 root root  345 Oct 19 12:22 packages/citre-20220523.745.entry
+340K -rw-r--r-- 1 root root 340K Oct 19 12:22 packages/citre-20220523.745.tar
+4.0K -rw-r--r-- 1 root root  346 Oct 19 16:06 packages/citre-20221019.1409.entry
+360K -rw-r--r-- 1 root root 360K Oct 19 16:06 packages/citre-20221019.1409.tar

@@ -4,8 +4,8 @@
 ;;         Tim Harper <timcharper at gmail dot com>
 ;; Created: July 16 2019
 ;; Version: 0.4
-;; Package-Version: 20220901.109
-;; Package-Commit: 9293593dfd9c4effa8abe855c7569c1f22531983
+;; Package-Version: 20221019.1557
+;; Package-Commit: 3f28652e20d6b8966a61aa151a34d3cf41f87c46
 ;; Keywords: tools, unix, faces
 ;; URL: https://github.com/LionyxML/auto-dark-emacs
 ;; Package-Requires: ((emacs "24.4"))
@@ -90,12 +90,12 @@ end tell")))
           (setq auto-dark--last-dark-mode-state is-dark-mode)
           (if is-dark-mode
               (progn
-                (load-theme auto-dark--dark-theme t)
                 (disable-theme auto-dark--light-theme)
+                (load-theme auto-dark--dark-theme t)
                 (run-hooks 'auto-dark-dark-mode-hook))
             (progn
-              (load-theme auto-dark--light-theme t)
               (disable-theme auto-dark--dark-theme)
+              (load-theme auto-dark--light-theme t)
               (run-hooks 'auto-dark-light-mode-hook)))))))
 
 (run-with-timer 0 auto-dark--polling-interval-seconds 'auto-dark--check-and-set-dark-mode)
