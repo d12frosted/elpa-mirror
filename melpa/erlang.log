@@ -4,10 +4,10 @@ Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
 Checking out origin/HEAD
-Checking out 7e702ac4b321c4870bdbbfc4c24ac3a5d5d572b5
+Checking out 1da7d9bc5ec5c30c34435aee72601f44c4e7e38d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erlang/
-  to /tmp/erlangepA0ks/erlang-20220215.1844
+  to /tmp/erlangD3ebJD/erlang-20221019.643
   ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
   ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
   ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
@@ -18,19 +18,21 @@ Copying files (->) and directories (=>)
   ! lib/tools/emacs/erlang-test.el -> erlang-test.el
   ! lib/tools/emacs/erlang.el -> erlang.el
   ! lib/tools/emacs/erldoc.el -> erldoc.el
-Created erlang-20220215.1844.tar containing:
-  erlang-20220215.1844/
-  erlang-20220215.1844/erlang-edoc.el
-  erlang-20220215.1844/erlang-eunit.el
-  erlang-20220215.1844/erlang-flymake.el
-  erlang-20220215.1844/erlang-pkg.el
-  erlang-20220215.1844/erlang-skels-old.el
-  erlang-20220215.1844/erlang-skels.el
-  erlang-20220215.1844/erlang-start.el
-  erlang-20220215.1844/erlang-test.el
-  erlang-20220215.1844/erlang.el
-  erlang-20220215.1844/erldoc.el
-Built erlang in 35.259s, finished at 2022-10-19T05:51:08+0000
+Created erlang-20221019.643.tar containing:
+  erlang-20221019.643/
+  erlang-20221019.643/erlang-edoc.el
+  erlang-20221019.643/erlang-eunit.el
+  erlang-20221019.643/erlang-flymake.el
+  erlang-20221019.643/erlang-pkg.el
+  erlang-20221019.643/erlang-skels-old.el
+  erlang-20221019.643/erlang-skels.el
+  erlang-20221019.643/erlang-start.el
+  erlang-20221019.643/erlang-test.el
+  erlang-20221019.643/erlang.el
+  erlang-20221019.643/erldoc.el
+Built erlang in 25.457s, finished at 2022-10-19T09:04:09+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  259 Oct 19 05:51 packages/erlang-20220215.1844.entry
 432K -rw-r--r-- 1 root root 430K Oct 19 05:51 packages/erlang-20220215.1844.tar
+4.0K -rw-r--r-- 1 root root  258 Oct 19 09:04 packages/erlang-20221019.643.entry
+432K -rw-r--r-- 1 root root 430K Oct 19 09:04 packages/erlang-20221019.643.tar

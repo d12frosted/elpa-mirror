@@ -592,7 +592,7 @@ Table of Contents
   │ EMACS=~/my-whatever-directory/bin/emacs make runemacs
   └────
 
-  Emacs启动后 "M-x toggle-input-method" 或按 "C-/" 打开输入法。
+  Emacs启动后 "M-x toggle-input-method" 或按 "C-\\" 打开输入法。
 
 
 12 Tips

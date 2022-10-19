@@ -11,15 +11,22 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `logos' (or `logos.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.5.0,
-released on 2022-09-01.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.0.0,
+released on 2022-10-19.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.0.0-dev.
+Current development target is 1.1.0-dev.
 
-⁃ Homepage: <https://protesilaos.com/emacs/logos>.
-⁃ Git repository: <https://git.sr.ht/~protesilaos/logos>.
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/logos>.
+⁃ Package name (GNU ELPA): `logos'
+⁃ Official manual: <https://protesilaos.com/emacs/logos>
+⁃ Change log: <https://protesilaos.com/emacs/logos-changelog>
+⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/logos>
+  • Mirrors:
+    ⁃ GitHub: <https://github.com/protesilaos/logos>
+    ⁃ GitLab: <https://gitlab.com/protesilaos/logos>
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/logos>
+⁃ Backronyms: `^L' Only Generates Ostensible Slides; Logos Optionally
+  Goes through Outline Sections
 
 Table of Contents
 ─────────────────
@@ -116,8 +123,6 @@ Table of Contents
   `fringe' face (`logos-hide-fringe').  All these variables are
   buffer-local.
 
-  [ Note that `logos-hide-cursor' is part of 1.0.0-dev. ]
-
   Furthermore, the `logos-focus-mode' establishes a bespoke keymap,
   which can be used to, for example, bind the arrow keys to page
   motions.  The keymap is `logos-focus-mode-map' and is empty by default
@@ -210,8 +215,6 @@ Table of Contents
     so it is possible to use file variables as described in the Emacs
     manual.
 
-  [ Note that `logos-hide-cursor' is part of 1.0.0-dev. ]
-
   ┌────
   │ (require 'logos)
   │ 
@@ -222,8 +225,7 @@ Table of Contents
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . "^;;;+ ")
   │ 	(org-mode . "^\\*+ +")
-  │ 	(markdown-mode . "^\\#+ +")
-  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
+  │ 	(markdown-mode . "^\\#+ +")))
   │ 
   │ ;; These apply when `logos-focus-mode' is enabled.  Their value is
   │ ;; buffer-local.
@@ -402,7 +404,9 @@ Table of Contents
   By default, the page motions only move between the `^L' delimiters.
   While the option `logos-outlines-are-pages' changes the behaviour to
   move between outline headings instead.  What constitutes an “outline
-  heading” is determined by the `logos-outline-regexp-alist'.
+  heading” is determined by the `logos-outline-regexp-alist' with an
+  automatic fallback to either `outline-regexp' or `page-delimiter'
+  (Logos handles this fallback condition internally).
 
   Provided this:
 
@@ -419,8 +423,7 @@ Table of Contents
   ┌────
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . "^;;;+ ")
-  │ 	(org-mode . "^\\*+ +")
-  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
+  │ 	(org-mode . "^\\*+ +")))
   └────
 
   It is possible to tweak those regular expressions to target both the
@@ -429,8 +432,7 @@ Table of Contents
   ┌────
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . ,(format "\\(^;;;+ \\|%s\\)" (default-value 'page-delimiter)))
-  │ 	(org-mode . ,(format "\\(^\\*+ +\\|%s\\)" (default-value 'page-delimiter)))
-  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
+  │ 	(org-mode . ,(format "\\(^\\*+ +\\|%s\\)" (default-value 'page-delimiter)))))
   └────
 
   The form `,(format "\\(^;;;+ \\|%s\\)" logos--page-delimiter)' expands
@@ -443,8 +445,7 @@ Table of Contents
   ┌────
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . ,(format "\\(^;;;+ \\|%s\\)" logos--page-delimiter))
-  │ 	(org-mode . ,(format "\\(^\\*+ +\\|^-\\{5\\}$\\|%s\\)" logos--page-delimiter))
-  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
+  │ 	(org-mode . ,(format "\\(^\\*+ +\\|^-\\{5\\}$\\|%s\\)" logos--page-delimiter))))
   └────
 
   Another Org-specific tweak is to use heading levels up to a specific
@@ -457,8 +458,7 @@ Table of Contents
   ┌────
   │ (setq logos-outline-regexp-alist
   │       `((emacs-lisp-mode . ,(format "\\(^;;;+ \\|%s\\)" logos--page-delimiter))
-  │ 	(org-mode . ,(format "\\(^\\*\\{1,3\\} +\\|^-\\{5\\}$\\|%s\\)" logos--page-delimiter))
-  │ 	(t . ,(if (boundp 'outline-regexp) outline-regexp logos--page-delimiter))))
+  │ 	(org-mode . ,(format "\\(^\\*\\{1,3\\} +\\|^-\\{5\\}$\\|%s\\)" logos--page-delimiter))))
   └────
 
 

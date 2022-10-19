@@ -1648,16 +1648,16 @@
 	   ("Random User"))
 	  (:commit . "b10ab60a4e567a1fb7d7702d146ed7055b203113"))])
  (sweeprolog .
-	     [(0 7 0)
+	     [(0 7 1)
 	      ((emacs
-		(28)))
+		(28 1)))
 	      "Embedded SWI-Prolog" tar
 	      ((:url . "https://git.sr.ht/~eshel/sweep")
 	       (:keywords "prolog" "languages" "extensions")
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "3ed11d4947c0559ee8cc1970861d0128c6b4a0f7"))])
+	       (:commit . "f807eea272426b269228ed01b2e6fac84e642c5a"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs

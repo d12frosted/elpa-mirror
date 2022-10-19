@@ -964,7 +964,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "e80c5efd00214613e6837fa11036bf8463040529"))])
  (ef-themes .
-	    [(0 7 0)
+	    [(0 8 0)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -973,7 +973,7 @@
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "887f91e07c9997df9038401252cac6769ed393ca"))])
+	      (:commit . "b79a67c2cdebe2e4885867187da5834b3ca740b1"))])
  (eglot .
 	[(1 9)
 	 ((emacs
@@ -1839,7 +1839,7 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (logos .
-	[(0 5 1)
+	[(1 0 1)
 	 ((emacs
 	   (27 1)))
 	 "Simple focus mode and extras" tar
@@ -1848,7 +1848,7 @@
 	  (:maintainer "Logos Development" . "~protesilaos/logos@lists.sr.ht")
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	  (:commit . "be3333b6969c34bb3317d11f1daef6aa5af476cb"))])
+	  (:commit . "d8f18f74591ffcac6466409ac7cd29f90838b2fe"))])
  (map .
       [(3 2 1)
        ((emacs
@@ -2541,7 +2541,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "e01a8f7e80c5c83dfcfb87b10e0213d4963e4d15"))])
  (pyim .
-       [(5 2 5)
+       [(5 2 6)
 	((emacs
 	  (25 1))
 	 (async
@@ -2555,7 +2555,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "2d9e9c5b9703dc4f3a400ab353ee99556c892c00"))])
+	 (:commit . "5d40490623294c503315946ab34f38a759b2a82c"))])
  (pyim-basedict .
 		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar

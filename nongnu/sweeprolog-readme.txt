@@ -48,6 +48,7 @@ The Prolog top-level
 .. Completion in the top-level
 Finding Prolog code
 .. Prolog file specification expansion
+.. Built-in Native Predicates
 Quick access to sweep commands
 Examining Prolog messages
 Setting Prolog flags
@@ -1083,6 +1084,51 @@ Prolog file specification expansion
   For example, typing `C-x C-f library(pldoc/doc_man)' will open the
   source of the `pldoc_man' module from the Prolog library, and likewise
   `C-x C-f pack(.)' will open the Prolog packages directory.
+
+
+Built-in Native Predicates
+──────────────────────────
+
+  Some of the built-in predicates provided by SWI-Prolog, such as
+  `is/2', are implemented in C and included as native functions in the
+  SWI-Prolog runtime.  It is sometimes useful to examine the
+  implementation of such native built-in predicates by reading its
+  definition in the SWI-Prolog C sources.  `sweep' knows about
+  SWI-Prolog native built-ins, and can find and jump to their
+  definitions in C when the user has the SWI-Prolog sources checked out
+  locally.
+
+  The way `sweep' locates the SWI-Prolog sources depends on the user
+  option `sweeprolog-swipl-sources'.  When customized to a string, it is
+  taken to be the path to the root directory of the SWI-Prolog source
+  code.  If instead `sweeprolog-swipl-sources' is set to `t' (the
+  default), `sweep' will try to locate a local checkout of the
+  SWI-Prolog sources automatically among known project root directories
+  provided by Emacs’ built-in `project-known-project-roots' from
+  `project.el' (see [Projects in the Emacs manual] for more information
+  about `project.el' projects).  Lastly, setting
+  `sweeprolog-swipl-sources' to `nil' disables searching for definitions
+  of native built-ins.
+
+  With `sweeprolog-swipl-sources' set, the provided commands for finding
+  predicate definitions operate seamlessly on native built-ins to
+  display their C definitions in `c-mode' buffers (see [the Emacs CC
+  Mode manual] for information about working with C code in Emacs).
+  These commands include:
+  • `M-x sweeprolog-find-predicate',
+  • `M-.' (`xref-find-definitions') in `sweeprolog-mode' buffers (see
+    [Definitions and references]), and
+  • `s' (`help-view-source') in the `*Help*' buffer produced by `M-x
+      sweeprolog-describe-predicate' (see [Prolog Help]).
+
+
+[Projects in the Emacs manual] <info:emacs#Projects>
+
+[the Emacs CC Mode manual] <info:ccmode#Top>
+
+[Definitions and references] See section Definitions and references
+
+[Prolog Help] See section Prolog Help
 
 
 Quick access to sweep commands
