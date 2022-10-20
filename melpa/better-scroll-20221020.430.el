@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/better-scroll
-;; Package-Version: 20220704.645
-;; Package-Commit: cea04fac68efe6aab497780fb683cddef2fa2748
+;; Package-Version: 20221020.430
+;; Package-Commit: e7b3196f437f690028aeea414aaf71ca3779c175
 ;; Version: 0.1.4
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: convenience scrolling scroll window better improvement
@@ -136,6 +136,18 @@ of buffer."
   "Scroll up other window."
   (interactive)
   (save-selected-window (other-window 1) (better-scroll-up)))
+
+;;; UX
+
+;;;###autoload
+(defun better-scroll-setup ()
+  "Improve scrolling UX."
+  (setq scroll-conservatively 101))
+
+;;;###autoload
+(defun better-scroll-revert ()
+  "Revert scrolling UX."
+  (setq scroll-conservatively 0))
 
 (provide 'better-scroll)
 ;;; better-scroll.el ends here

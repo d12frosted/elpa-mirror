@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.5
-;; Package-Version: 20221016.1144
-;; Package-Commit: ed9d67d00f26148019acd67b4aac0e26360a33b1
+;; Package-Version: 20221020.749
+;; Package-Commit: 59b2e3c94756b4e37b2cf7b9f81028c6d4758672
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
@@ -56,8 +56,11 @@ Set to nil to disable styling the headlines."
   :type '(repeat string))
 
 (defcustom org-modern-hide-stars 'leading
-  "Make some of the headline stars invisible."
+  "Changes the displays of the stars.
+Can be leading, t, or a string replacement for each leading star.
+Set to nil to disable."
   :type '(choice
+          (string :tag "Replacement string for leading stars")
           (const :tag "Do not hide stars" nil)
           (const :tag "Hide all stars" t)
           (const :tag "Hide leading stars" leading)))
@@ -291,6 +294,7 @@ the font.")
 
 (defvar-local org-modern--font-lock-keywords nil)
 (defvar-local org-modern--star-cache nil)
+(defvar-local org-modern--hide-stars-cache nil)
 (defvar-local org-modern--checkbox-cache nil)
 (defvar-local org-modern--progress-cache nil)
 (defvar-local org-modern--table-sp-width 0)
@@ -412,11 +416,19 @@ the font.")
 
 (defun org-modern--star ()
   "Prettify headline stars."
-  (let ((level (- (match-end 1) (match-beginning 1))))
-    (put-text-property
-     (match-beginning 2) (match-end 2) 'display
-     (aref org-modern--star-cache
-           (min (1- (length org-modern--star-cache)) level)))))
+  (let* ((beg (match-beginning 1))
+         (end (match-end 1))
+         (level (- end beg)))
+    (when (and org-modern--hide-stars-cache (not (eq beg end)))
+      (cl-loop for i from beg below end do
+               (put-text-property i (1+ i) 'display
+                                  (nth (logand i 1)
+                                       org-modern--hide-stars-cache))))
+    (when org-modern-star
+      (put-text-property
+       (match-beginning 2) (match-end 2) 'display
+       (aref org-modern--star-cache
+             (min (1- (length org-modern--star-cache)) level))))))
 
 (defun org-modern--table ()
   "Prettify vertical table lines."
@@ -456,7 +468,7 @@ the font.")
                 (b (match-end 0)))
             (cl-loop for i from a below b do
                      (put-text-property i (1+ i) 'display
-                                        (nth (mod i 2) org-modern--table-sp)))))))))
+                                        (nth (logand i 1) org-modern--table-sp)))))))))
 
 (defun org-modern--block-name ()
   "Prettify block according to `org-modern-block-name'."
@@ -584,7 +596,9 @@ the font.")
         (0 (org-modern--checkbox)))))
    (when (or org-modern-star org-modern-hide-stars)
      `(("^\\(\\**\\)\\(\\*\\) "
-        ,@(and (not (eq org-modern-hide-stars t)) org-modern-star '((0 (org-modern--star))))
+        ,@(and (not (eq org-modern-hide-stars t))
+               (or org-modern-star (stringp org-modern-hide-stars))
+               '((0 (org-modern--star))))
         ,@(and (eq org-modern-hide-stars 'leading) '((1 '(face nil invisible t))))
         ,@(and (eq org-modern-hide-stars t) '((0 '(face nil invisible t)))))))
    (when org-modern-horizontal-rule
@@ -685,6 +699,10 @@ the font.")
      (vconcat (mapcar
                (lambda (x) (propertize x 'face 'org-modern-symbol))
                org-modern-star))
+     org-modern--hide-stars-cache
+     (and (stringp org-modern-hide-stars)
+          (list (propertize org-modern-hide-stars 'face 'org-modern-symbol)
+                (propertize org-modern-hide-stars 'face 'org-modern-symbol)))
      org-modern--progress-cache
      (vconcat (mapcar
                (lambda (x) (concat " " (propertize x 'face 'org-modern-symbol) " "))

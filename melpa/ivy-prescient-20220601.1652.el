@@ -5,6 +5,8 @@
 ;; Author: Radian LLC <contact+prescient@radian.codes>
 ;; Homepage: https://github.com/raxod502/prescient.el
 ;; Keywords: extensions
+;; Package-Version: 20220601.1652
+;; Package-Commit: 07d61b7779c4cca3009390383e7f98a55de7e17e
 ;; Created: 1 May 2018
 ;; Package-Requires: ((emacs "25.1") (prescient "5.2.1") (ivy "0.11.0"))
 ;; SPDX-License-Identifier: MIT

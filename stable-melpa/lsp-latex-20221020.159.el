@@ -4,10 +4,10 @@
 
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: languages, tex
-;; Package-Version: 20221001.1150
-;; Package-Commit: 94c4536579c18e17e87f2441810968a153c3bea1
+;; Package-Version: 20221020.159
+;; Package-Commit: ee4df225b59992946c19d8523e940944f76661c4
 
-;; Version: 3.0.0
+;; Version: 3.0.1
 
 ;; Package-Requires: ((emacs "25.1") (lsp-mode "6.0"))
 ;; URL: https://github.com/ROCKTAKEY/lsp-latex
@@ -293,11 +293,12 @@ Called with the arguments in `lsp-latex-texlab-executable-argument-list'."
 
 
 
-(defcustom lsp-latex-root-directory "."
+(defcustom lsp-latex-root-directory nil
   "Root directory of each buffer."
   :group 'lsp-latex
   :risky t
-  :type 'string)
+  :type '(choice string
+                 (const nil)))
 
 (defcustom lsp-latex-build-executable "latexmk"
   "Build command used on `lsp-latex-build'."
