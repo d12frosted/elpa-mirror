@@ -5,10 +5,10 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/isearch-project
-;; Package-Version: 20220704.652
-;; Package-Commit: 08b1102c1f55011952aff818261a9478175a5b92
+;; Package-Version: 20221019.1956
+;; Package-Commit: 73cd2bdc5655a838f7c20b45fc922ab43209a172
 ;; Version: 0.2.6
-;; Package-Requires: ((emacs "26.1") (f "0.20.0"))
+;; Package-Requires: ((emacs "27.1") (f "0.20.0"))
 ;; Keywords: convenience search
 
 ;; This file is NOT part of GNU Emacs.
@@ -34,9 +34,11 @@
 ;;; Code:
 
 (require 'cl-lib)
-(require 'f)
 (require 'grep)
 (require 'isearch)
+(require 'project)
+
+(require 'f)
 
 (defgroup isearch-project nil
   "Incremental search through the whole project."
@@ -76,22 +78,13 @@ to research from the start.")
 
 ;;; Util
 
-(defun isearch-project--flatten-list (lst)
-  "Flatten the multiple dimensional array, LST to one dimensonal array.
-For instance, '(1 2 3 4 (5 6 7 8)) => '(1 2 3 4 5 6 7 8)."
-  (cond
-   ((null lst) nil)
-   ((atom lst) (list lst))
-   (t (append (isearch-project--flatten-list (car lst)) (isearch-project--flatten-list (cdr lst))))))
-
 (defun isearch-project--is-contain-list-string (in-list in-str)
   "Check if IN-STR contain in any string in the IN-LIST."
   (cl-some #'(lambda (lb-sub-str) (string-match-p (regexp-quote lb-sub-str) in-str)) in-list))
 
 (defun isearch-project--remove-nth-element (nth lst)
   "Remove NTH element from the LST and return the list."
-  (if (zerop nth)
-      (cdr lst)
+  (if (zerop nth) (cdr lst)
     (let ((last (nthcdr (1- nth) lst)))
       (setcdr last (cddr last))
       lst)))
@@ -100,24 +93,22 @@ For instance, '(1 2 3 4 (5 6 7 8)) => '(1 2 3 4 5 6 7 8)."
   "Check if the IN-SUB-STR is a string in IN-STR."
   (string-match-p in-sub-str in-str))
 
-(defun isearch-project--get-string-from-file (path)
+(defun isearch-project--string-from-file (path)
   "Return PATH file content."
-  (with-temp-buffer
-    (insert-file-contents path)
-    (buffer-string)))
+  (with-temp-buffer (insert-file-contents path) (buffer-string)))
 
 ;;; Core
 
 (defun isearch-project--f-directories-ignore-directories (path &optional rec)
   "Find all directories in PATH by ignored common directories with FN and REC."
   (let ((dirs (f-directories path))
-        (valid-dirs '())
-        (final-dirs '())
+        (valid-dirs)
+        (final-dirs)
         (ignore-lst (append grep-find-ignored-directories
                             isearch-project-ignore-paths
-                            (if (boundp 'projectile-globally-ignored-directories)
-                                projectile-globally-ignored-directories
-                              '()))))
+                            project-vc-ignores
+                            (when (boundp 'projectile-globally-ignored-directories)
+                              projectile-globally-ignored-directories))))
     (dolist (dir dirs)
       (unless (isearch-project--is-contain-list-string ignore-lst (f-slash dir))
         (push dir valid-dirs)))
@@ -126,19 +117,19 @@ For instance, '(1 2 3 4 (5 6 7 8)) => '(1 2 3 4 5 6 7 8)."
         (push (isearch-project--f-directories-ignore-directories dir rec) final-dirs)))
     (setq valid-dirs (reverse valid-dirs))
     (setq final-dirs (reverse final-dirs))
-    (isearch-project--flatten-list (append valid-dirs final-dirs))))
+    (flatten-list (append valid-dirs final-dirs))))
 
 (defun isearch-project--f-files-ignore-directories (path &optional fn rec)
   "Find all files in PATH by ignored common directories with FN and REC."
   (let ((dirs (append (list path) (isearch-project--f-directories-ignore-directories path rec)))
-        (files '()))
+        (files))
     (dolist (dir dirs)
       (push (f-files dir fn) files))
-    (isearch-project--flatten-list (reverse files))))
+    (flatten-list (reverse files))))
 
 (defun isearch-project--prepare ()
   "Incremental search preparation."
-  (let ((prepare-success nil))
+  (let (prepare-success)
     (setq isearch-project--project-dir (cdr (project-current)))
     (when isearch-project--project-dir
       ;; Get the current buffer name.
@@ -231,7 +222,7 @@ CNT : search count."
           (setq next-fn (nth next-file-index isearch-project--files))
 
           ;; Update buffer content.
-          (setq buf-content (isearch-project--get-string-from-file next-fn))
+          (setq buf-content (isearch-project--string-from-file next-fn))
 
           (when (or
                  ;; Found match.

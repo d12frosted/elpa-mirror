@@ -6,8 +6,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/attrap
-;; Package-Version: 20221019.828
-;; Package-Commit: c6275c212e2ba19a1d1c8bade56ba71e7609f029
+;; Package-Version: 20221019.2021
+;; Package-Commit: d5d913215c11737ea55175613e2bfd929945a4cc
 ;; Created: February 2018
 ;; Keywords: programming, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "25.1") (f "0.19.0") (s "1.11.0"))
@@ -321,7 +321,7 @@ Error is given as MSG and reported between POS and END."
       (let ((type (match-string 1 msg)))
         (end-of-line)
         (insert (format "\n  type %s = _" type)))))
-   (when (string-match "Using ‘.*’ (or its Unicode variant) to mean ‘Data.Kind.Type’" msg)
+   (when (s-matches? (rx "Using ‘*’ (or its Unicode variant) to mean ‘Data.Kind.Type’") msg)
     (attrap-one-option 'replace-star-by-Type
       (goto-char pos)
       (delete-char 1)
@@ -416,27 +416,28 @@ Error is given as MSG and reported between POS and END."
         (insert (attrap-add-operator-parens missing)))))
     ;; Not in scope: data constructor ‘SimpleBroadcast’
     ;; Perhaps you meant ‘SimpleBroadCast’ (imported from TypedFlow.Types)
-    ;;     Not in scope: ‘BackCore.argmax’
+    ;; Not in scope: ‘BackCore.argmax’
     ;;     Perhaps you meant one of these:
     ;;       ‘BackCore.argMax’ (imported from TensorFlow.GenOps.Core),
     ;;       ‘BackCore.argMax'’ (imported from TensorFlow.GenOps.Core),
     ;;       ‘BackCore.max’ (imported from TensorFlow.GenOps.Core)
-    (when (string-match (s-join "\\|"
-                           '("Data constructor not in scope:[ \n\t]*\\(?1:[^ \n]*\\)"
-                             "Variable not in scope:[ \n\t]*\\(?1:[^ \n]*\\)"
-                             "not in scope: data constructor ‘\\(?1:[^’]*\\)’"
-                             "not in scope: type constructor or class ‘\\(?1:[^’]*\\)’"
-                             "Not in scope: ‘\\(?1:[^’]*\\)’"
-                             )) ; in patterns
-                   msg)
-    (let* ((delete (match-string 1 msg))
+    ;;       ‘BackCore.maxx’ (line 523)
+   (when-let ((match
+               (s-match (rx (or (seq (or "Data constructor" "Variable") " not in scope:"
+                                     (* (any " \n\t")) (group-n 1 (+ (not (any " \n")))))
+                                (seq "Not in scope: "
+                                     (or "" "data constructor " "type constructor or class ") (identifier 1))))
+                        msg)))
+    (let* ((delete (nth 1 match))
            (delete-has-paren (eq ?\( (elt delete 0)))
            (delete-no-paren (if delete-has-paren (substring delete 1 (1- (length delete))) delete))
+           (rest (nth 1 (s-match (rx "Perhaps you meant" (? "one of these:") (group (+ anychar))) msg)))
            (replacements (s-match-strings-all
-                          (rx "Perhaps you meant " (identifier 1)
-                              " " (parens (seq "line " (group-n 2 (* num)) )))
-                          msg)))
-      (--map (attrap-option (list 'replace delete-no-paren (nth 1 it) (nth 2 it))
+                          (rx (identifier 1) " "
+                              (parens (or (seq "imported from " (group-n 2 (+ not-newline )))
+                                          (group-n 2 (seq "line "  (* num))))))
+                          rest)))
+      (--map (attrap-option (list 'replace delete-no-paren 'by (nth 1 it) 'from (nth 2 it))
                (goto-char pos)
                (let ((case-fold-search nil))
                  (search-forward delete-no-paren (+ (length delete) pos))
@@ -484,21 +485,17 @@ Error is given as MSG and reported between POS and END."
         (goto-char pos)
         (search-forward wildcard)
         (replace-match (concat "(" type-expr ")") t))))
-   (when (and (string-match-p "parse error on input ‘case’" msg)
+   (when (and (string-match-p "parse error on input ‘case’" msg) ; Obsolete with GHC 9, which appears to recognize Lambda case specially.
               (save-excursion
                 (goto-char pos)
                 (string-match-p (rx "\\case\\_>") (buffer-substring-no-properties pos (line-end-position)))))
      (attrap-one-option (list 'use-extension "LambdaCase")
                         (attrap-insert-language-pragma "LambdaCase")))
-   (when (string-match-p (rx (or "Illegal symbol ‘forall’ in type"
-                                 (seq "Perhaps you intended to use"
-                                      (* anything) "language"
-                                      (* anything) "extension"
-                                      (* anything) "to"
-                                      (* anything) "enable"
-                                      (* anything) "explicit-forall"
-                                      (* anything) "syntax")))
-                         msg)
+   (when (s-matches? (rx (or "Illegal symbol ‘forall’ in type"
+                             (seq "Perhaps you intended to use"
+                                  (* anything)
+                                  "language extension to enable explicit-forall syntax")))
+                     normalized-msg)
      (attrap-one-option (list 'use-extension "ScopedTypeVariables")
                         (attrap-insert-language-pragma "ScopedTypeVariables")))
    (--map (attrap-option (list 'use-extension it)

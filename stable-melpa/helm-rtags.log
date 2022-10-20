@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/Andersbakken/rtags.git
 
 Updating /mnt/store/melpa/working/helm-rtags/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/Andersbakken/rtags.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 595055b5316a7c92ba1d638f324f98842a0f41a5
+Built helm-rtags in 5.612s, finished at 2022-10-20T00:27:51+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Oct 20 00:27 packages/helm-rtags-20191222.920.el
+4.0K -rw-r--r-- 1 root root  434 Oct 20 00:27 packages/helm-rtags-20191222.920.entry

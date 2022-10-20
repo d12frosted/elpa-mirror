@@ -2137,7 +2137,7 @@
 		(nil . "<johnh@isi.edu>."))
 	       (:url . "http://elpa.gnu.org/packages/notes-mode.html"))])
  (notmuch-indicator .
-		    [(0 2 1)
+		    [(0 2 2)
 		     ((emacs
 		       (27 1)))
 		     "Display mode line indicator with notmuch-count(1) output" tar
@@ -2146,7 +2146,7 @@
 		      (:maintainer "notmuch-indicator Development" . "~protesilaos/notmuch-indicator@lists.sr.ht")
 		      (:authors
 		       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		      (:commit . "d8f3f4acc4fa03010d08c222b22cf081fcecc5a3"))])
+		      (:commit . "9a0bf7d85cc80e6c4c05bfd4d794a86926b3a8a9"))])
  (ntlm .
        [(2 1 0)
 	nil "NTLM (NT LanManager) authentication support" single

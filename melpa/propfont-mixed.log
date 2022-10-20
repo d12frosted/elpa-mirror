@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/ikirill/propfont-mixed.git
 
 Updating /mnt/store/melpa/working/propfont-mixed/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/ikirill/propfont-mixed.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 0b461ef4754a469610dba71874a34b6da42176bf
+Built propfont-mixed in 6.041s, finished at 2022-10-19T21:14:31+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.6K Oct 19 21:14 packages/propfont-mixed-20150113.2211.el
+4.0K -rw-r--r-- 1 root root  410 Oct 19 21:14 packages/propfont-mixed-20150113.2211.entry
