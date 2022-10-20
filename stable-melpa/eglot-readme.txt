@@ -1,29 +1,60 @@
 Eglot ("Emacs Polyglot") is an Emacs LSP client that stays out of
 your way.
 
-Typing M-x eglot should be enough to get you started, but here's a
-little info (see the accompanying README.md or the URL for more).
+Typing M-x eglot in some source file is often enough to get you
+started, if the language server you're looking to use is installed
+in your system.  Please refer to the manual, available from
+https://joaotavora.github.io/eglot/ or from M-x info for more usage
+instructions.
 
-M-x eglot starts a server via a shell command guessed from
-`eglot-server-programs', using the current major mode (for whatever
-language you're programming in) as a hint.  If it can't guess, it
-prompts you in the minibuffer for these things.  Actually, the
-server does not need to be running locally: you can connect to a
-running server via TCP by entering a <host:port> syntax.
+If you wish to contribute changes to Eglot, please do read the user
+manual first.  Additionally, take the following in consideration:
 
-If the connection is successful, you should see an `eglot'
-indicator pop up in your mode-line.  More importantly, this means
-that current *and future* file buffers of that major mode *inside
-your current project* automatically become \"managed\" by the LSP
-server.  In other words, information about their content is
-exchanged periodically to provide enhanced code analysis using
-`xref-find-definitions', `flymake-mode', `eldoc-mode',
-`completion-at-point', among others.
+* Eglot's main job is to hook up the information that language
+  servers offer via LSP to Emacs's UI facilities: Xref for
+  definition-chasing, Flymake for diagnostics, Eldoc for at-point
+  documentation, etc.  Eglot's job is generally *not* to provide
+  such a UI itself, though a small number of simple
+  counter-examples do exist, for example in the `eglot-rename'
+  command.  When a new UI is evidently needed, consider adding a
+  new package to Emacs, or extending an existing one.
 
-To "unmanage" these buffers, shutdown the server with
-M-x eglot-shutdown.
+* Eglot was designed to function with just the UI facilities found
+  in the latest Emacs core, as long as those facilities are also
+  available as GNU ELPA :core packages.  Historically, a number of
+  :core packages were added or reworked in Emacs to make this
+  possible.  This principle should be upheld when adding new LSP
+  features or tweaking exising ones.  Design any new facilities in
+  a way that they could work in the absence of LSP or using some
+  different protocol, then make sure Eglot can link up LSP
+  information to it.
 
-To start an eglot session automatically when a foo-mode buffer is
-visited, you can put this in your init file:
+* There are few Eglot configuration variables.  This principle
+  should also be upheld.  If Eglot had these variables, it could be
+  duplicating configuration found elsewhere, bloating itself up,
+  and making it generally hard to integrate with the ever growing
+  set of LSP features and Emacs packages.  For instance, this is
+  why one finds a single variable
+  `eglot-ignored-server-capabilities' instead of a number of
+  capability-specific flags, or why customizing the display of
+  LSP-provided documentation is done via ElDoc's variables, not
+  Eglot's.
 
-  (add-hook 'foo-mode-hook 'eglot-ensure)
+* Linking up LSP information to other libraries is generally done
+  in the `eglot--managed-mode' minor mode function, by
+  buffer-locally setting the other library's variables to
+  Eglot-specific versions.  When deciding what to set the variable
+  to, the general idea is to choose a good default for beginners
+  that doesn't clash with Emacs's defaults.  The settings are only
+  in place during Eglot's LSP-enriched tenure over a project.  Even
+  so, some of those decisions will invariably aggravate a minority
+  of Emacs power users, but these users can use `eglot-stay-out-of'
+  and `eglot-managed-mode-hook' to quench their OCD.
+
+* On occasion, to enable new features, Eglot can have soft
+  dependencies on popular libraries that are not in Emacs core.
+  "Soft" means that the dependency doesn't impair any other use of
+  Eglot beyond that feature.  Such is the case of the snippet
+  functionality, via the Yasnippet package, Markdown formatting of
+  at-point documentation via the markdown-mode package, and nicer
+  looking completions when the Company package is used.

@@ -6,4 +6,4 @@ font styles and a green base color which varies only in brightness
 and luminosity, with additional clues in red and blue.
 
 Other themes:
-- "Nude Beach" https://github.com/monkeyjunglejuice/nude-beach-emacs-theme
+- "Beach Bar" https://github.com/monkeyjunglejuice/beach-bar-emacs-theme
