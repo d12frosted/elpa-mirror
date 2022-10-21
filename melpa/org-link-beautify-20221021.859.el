@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "28.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20221019.728
-;; Package-Commit: 41bf1978903e323b507ed491d9dc601ff7ba021e
+;; Package-Version: 20221021.859
+;; Package-Commit: 0e72581a26a23b1fafd4983904f0904496395cd1
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -468,7 +468,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
               )
              (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
                (org-link-beautify--notify-generate-thumbnail-failed epub-file thumbnail-file)))
-            ('darwin                    ; for macOS "epub-thumbnailer" command
+            ('darwin            ; for macOS "epub-thumbnailer" command
              ;; DEBUG
              ;; (message epub-file)
              ;; (message thumbnail-file)
@@ -912,6 +912,7 @@ You can install software `libmobi' to get command `mobitool'.")
            ;; [[video:/path/to/video.mp4]]
            ((and org-link-beautify-video-preview
                  (member type '("file" "video"))
+                 (file-exists-p path)
                  (member extension org-link-beautify-video-preview-list))
             ;; DEBUG:
             ;; (user-error "[org-link-beautify] cond -> video file")
@@ -920,7 +921,9 @@ You can install software `libmobi' to get command `mobitool'.")
            ;; audio wave form image preview
            ;; [[file:/path/to/audio.mp3]]
            ((and org-link-beautify-audio-preview
-                 (equal type "file") (member extension org-link-beautify-audio-preview-list))
+                 (equal type "file")
+                 (file-exists-p path)
+                 (member extension org-link-beautify-audio-preview-list))
             ;; DEBUG:
             ;; (user-error "[org-link-beautify] cond -> audio file")
             (org-link-beautify--preview-audio path start end))
@@ -934,7 +937,8 @@ You can install software `libmobi' to get command `mobitool'.")
                      (equal type "pdf")
                      (equal type "pdfview")
                      (equal type "docview")
-                     (equal type "eaf")))
+                     (equal type "eaf"))
+                 (file-exists-p path))
             ;; DEBUG:
             ;; (user-error "[org-link-beautify] cond -> PDF file")
             ;; (message "org-link-beautify: PDF file previewing [%s], link-type: [%s], search-option: [%s] (type: %s)," path type search-option (type-of search-option))
@@ -947,14 +951,18 @@ You can install software `libmobi' to get command `mobitool'.")
            
            ;; EPUB file cover preview
            ((and org-link-beautify-epub-preview
-                 (equal type "file") (string= extension "epub"))
+                 (equal type "file")
+                 (file-exists-p path)
+                 (string= extension "epub"))
             ;; DEBUG:
             ;; (user-error "[org-link-beautify] cond -> epub file")
             (org-link-beautify--preview-epub path start end))
 
            ;; kindle ebook file cover preview
            ((and org-link-beautify-kindle-preview
-                 (equal type "file") (or (string= extension "mobi") (string= extension "azw3")))
+                 (equal type "file")
+                 (file-exists-p path)
+                 (or (string= extension "mobi") (string= extension "azw3")))
             ;; DEBUG:
             ;; (user-error "[org-link-beautify] cond -> epub file")
             (org-link-beautify--preview-kindle path start end))
@@ -962,14 +970,18 @@ You can install software `libmobi' to get command `mobitool'.")
            
            ;; text content preview
            ((and org-link-beautify-text-preview
-                 (equal type "file") (member extension org-link-beautify-text-preview-list))
+                 (equal type "file")
+                 (file-exists-p path)
+                 (member extension org-link-beautify-text-preview-list))
             ;; DEBUG:
             ;; (user-error "[org-link-beautify] cond -> text file")
             (org-link-beautify--preview-text path start end))
            
            ;; compressed archive file preview
            ((and org-link-beautify-archive-preview
-                 (equal type "file") (member extension (mapcar 'car org-link-beautify-archive-preview-alist)))
+                 (equal type "file")
+                 (file-exists-p path)
+                 (member extension (mapcar 'car org-link-beautify-archive-preview-alist)))
             ;; DEBUG:
             ;; (user-error "[org-link-beautify] cond -> archive file")
             ;; (if (null extension)
