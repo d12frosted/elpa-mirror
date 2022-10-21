@@ -7,8 +7,8 @@
 ;; Created: February 01, 2020
 ;; Modified: August 02, 2020
 ;; Version: 1.0.2
-;; Package-Version: 20220415.842
-;; Package-Commit: 44830d42eaec6dd78cbb6d700e898bbf89ed57b9
+;; Package-Version: 20221021.1344
+;; Package-Commit: 97616a81fb88ad558051b57d899fdaba56d8d7fa
 ;; Keywords: tex, emulation, vi, evil, wp
 ;; Homepage: https://github.com/iyefrat/evil-tex
 ;; Package-Requires: ((emacs "26.1") (evil "1.0") (auctex "11.88"))
@@ -102,13 +102,15 @@ ARGS is the information about the text object needed for the functions to work
 
 The format for the return is (outer-beg outer-end inner-beg inner-end)."
   (let ((delim-pair-outer (ignore-errors
-                            (apply #'evil-select-paren
-                                   (regexp-quote deliml)
-                                   (regexp-quote delimr) (append args '(t)))))
+                            (save-excursion
+                              (apply #'evil-select-paren
+                                     (regexp-quote deliml)
+                                     (regexp-quote delimr) (append args '(t))))))
         (delim-pair-inner (ignore-errors
-                            (apply #'evil-select-paren
-                                   (regexp-quote deliml)
-                                   (regexp-quote delimr) (append args '(nil))))))
+                            (save-excursion
+                              (apply #'evil-select-paren
+                                     (regexp-quote deliml)
+                                     (regexp-quote delimr) (append args '(nil)))))))
     (when (and delim-pair-outer delim-pair-inner)
       (nconc (nbutlast delim-pair-outer 3) (nbutlast delim-pair-inner 3)))))
 
@@ -133,7 +135,9 @@ ARGS passed to `evil-select-paren', within `evil-tex--delim-finder'."
                           ( "\\Bigl"  "\\Bigr")  ("\\Big"  "\\Big")
                           ( "\\Biggl" "\\Biggr") ("\\Bigg" "\\Bigg"))
                      collect (evil-tex--delim-finder (concat pre-l l) (concat pre-r r) args)))
-   (lambda (arg) (when (consp arg) ; check if selection succeeded
+   (lambda (arg) (when (and (consp arg) ; selection succeeded
+                            ;; selection includes point
+                            (<= (nth 2 arg) (point) (nth 3 arg)))
                    arg))
    #'evil-tex--delim-compare))
 
@@ -239,19 +243,22 @@ ARGS passed to `evil-select-paren' or `evil-select-quote'.
 Math includes inline and display math, e.g. \\(foo\\), \\=\\[bar\\], and $baz$"
 
   (evil-tex-max-key
-   (list
-    (nconc (nbutlast (ignore-errors (apply #'evil-select-paren
-                                           (regexp-quote "\\(") (regexp-quote "\\)") (append args '(t)))) 3)
-           (nbutlast (ignore-errors (apply #'evil-select-paren
-                                           (regexp-quote "\\(") (regexp-quote "\\)") (append args '(nil)))) 3))
-    (nconc (nbutlast (ignore-errors (apply #'evil-select-paren
-                                           (regexp-quote "\\[") (regexp-quote "\\]") (append args '(t)))) 3)
-           (nbutlast (ignore-errors (apply #'evil-select-paren
-                                           (regexp-quote "\\[") (regexp-quote "\\]") (append args '(nil)))) 3))
-    (nconc (nbutlast (ignore-errors (apply #'evil-select-paren
-                                           (regexp-quote "$") (regexp-quote "$") (append args '(t)))) 3)
-           (nbutlast (ignore-errors (apply #'evil-select-paren
-                                           (regexp-quote "$") (regexp-quote "$") (append args '(nil)))) 3)))
+   ;; run all combination of pairs + outer-or-inner
+   (cl-loop for (l r ) in '(("\\(" "\\)")
+                            ("\\[" "\\]")
+                            ("$"   "$"  ))
+            collect
+            (cl-loop for inner? in '(t nil)
+                     nconc
+                     (save-excursion ; evil-select-paren can be a bad boy and
+                                        ; move point
+                       (nbutlast (ignore-errors
+                                   (apply #'evil-select-paren
+                                          (regexp-quote l)
+                                          (regexp-quote r)
+                                          (append args (list inner?))))
+                                 3))))
+   ;; scoring function: get the range that starts closest to point (i.e just
    (lambda (arg) (if (and (consp arg) ; selection succeeded
                           ;; Selection is close enough to point.
                           ;; evil-select-quote can select things further down in

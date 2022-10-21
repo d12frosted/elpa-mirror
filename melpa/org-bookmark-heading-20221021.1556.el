@@ -2,8 +2,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Version: 1.2-pre
-;; Package-Version: 20220805.2357
-;; Package-Commit: fac3edac3b70a00f5412e3e7e2830a5cfee84432
+;; Package-Version: 20221021.1556
+;; Package-Commit: 823113b535301745cf5d559e6c84dc154754dbca
 ;; Url: http://github.com/alphapapa/org-bookmark-heading
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: hypermedia, outlines
@@ -218,7 +218,7 @@ supported, in which case it should be an entry ID)."
             ;; non-indirect buffer at the bottom of the prev-buffers list
             ;; so it won't be selected when the indirect buffer is killed.
             (set-window-prev-buffers nil (append (cdr (window-prev-buffers))
-                                                 (car (window-prev-buffers))))))
+                                                 (list (car (window-prev-buffers)))))))
         (unless (equal (buffer-file-name (buffer-base-buffer)) filename)
           ;; TODO: Automatically update the bookmark?
           ;; Warn that the node has moved to another file
