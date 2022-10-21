@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.0.0,
-released on 2022-09-30.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.1.0,
+released on 2022-10-20.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.1.0-dev.
+Current development target is 1.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote>
@@ -25,6 +25,8 @@ Current development target is 1.1.0-dev.
     ⁃ GitHub: <https://github.com/protesilaos/denote>
     ⁃ GitLab: <https://gitlab.com/protesilaos/denote>
 ⁃ Mailing list: <https://lists.sr.ht/~protesilaos/denote>
+⁃ Backronyms: Denote Everything Neatly; Omit The Excesses.  Don’t Ever
+  Note Only The Epiphenomenal.
 
 If you are viewing the README.org version of this file, please note that
 the GNU ELPA machinery automatically generates an Info manual out of it.
@@ -40,6 +42,7 @@ Table of Contents
 ..... 2. The `denote-templates' option
 ..... 3. Convenience commands for note creation
 ..... 4. The `denote-date-prompt-use-org-read-date' option
+..... 5. Add or remove keywords interactively
 .. 2. Create note using Org capture
 .. 3. Maintain separate directories for notes
 4. Renaming files
@@ -56,12 +59,13 @@ Table of Contents
 7. Linking notes
 .. 1. Adding a single link
 .. 2. Insert links matching a regexp
-.. 3. Insert links from marked files in Dired
-.. 4. Link to an existing note or create a new one
-.. 5. The backlinks’ buffer
-.. 6. Writing metanotes
-.. 7. Visiting linked files via the minibuffer
-.. 8. Miscellaneous information about links
+.. 3. Insert links, but only those missing from current buffer
+.. 4. Insert links from marked files in Dired
+.. 5. Link to an existing note or create a new one
+.. 6. The backlinks’ buffer
+.. 7. Writing metanotes
+.. 8. Visiting linked files via the minibuffer
+.. 9. Miscellaneous information about links
 8. Fontification in Dired
 9. Minibuffer histories
 10. Extending Denote
@@ -85,7 +89,7 @@ Table of Contents
 14. Contributing
 15. Things to do
 16. Alternatives to Denote
-.. 1. Alternative ideas wih Emacs and further reading
+.. 1. Alternative ideas with Emacs and further reading
 17. Frequently Asked Questions
 .. 1. Why develop Denote when PACKAGE already exists?
 .. 2. Why not rely exclusively on Org?
@@ -95,7 +99,8 @@ Table of Contents
 .. 6. I add TODOs to my notes; will many files slow down the Org agenda?
 .. 7. I want to sort by last modified, why won’t Denote let me?
 .. 8. How do you handle the last modified case?
-.. 9. Why do I get “Search failed with status 1” when I search for backlinks?
+.. 9. Speed up backlinks’ buffer creation?
+.. 10. Why do I get “Search failed with status 1” when I search for backlinks?
 18. Acknowledgements
 19. GNU Free Documentation License
 20. Indices
@@ -195,7 +200,7 @@ Table of Contents
 
 [Points of entry] See section 3
 
-[Writing metanotes] See section 7.6
+[Writing metanotes] See section 7.7
 
 [Keep a journal or diary] See section 10.1
 
@@ -568,6 +573,27 @@ Table of Contents
 [The denote-prompts option] See section 3.1.1
 
 
+3.1.5 Add or remove keywords interactively
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The commands `denote-keywords-add' and `denote-keywords-remove'
+  streamline the process of interactively updating a file’s keywords in
+  the front matter and renaming it accordingly.
+
+  The `denote-keywords-add' asks for keywords using the familiar
+  minibuffer prompt ([Standard note creation]).  It then renames the
+  file ([Rename a single file based on its front matter]).
+
+  Similarly, the `denote-keywords-remove' removes one or more keywords
+  from the list of existing keywords and then renames the file
+  accordingly.
+
+
+[Standard note creation] See section 3.1
+
+[Rename a single file based on its front matter] See section 4.3
+
+
 3.2 Create note using Org capture
 ─────────────────────────────────
 
@@ -720,11 +746,21 @@ Table of Contents
   If in Dired, the `FILE' to be renamed is the one at point, else the
   command prompts with minibuffer completion for a target file.
 
-  If `FILE' has a Denote-compliant identifier, the command retains it
-  while updating the `TITLE' and `KEYWORDS' fields of the file name.
-  Otherwise it creates an identifier based on the file’s attribute of
-  last modification time.  If such attribute cannot be found, the
-  identifier falls back to the current date and time.
+  If `FILE' has a Denote-compliant identifier, retain it while updating
+  the `TITLE' and `KEYWORDS' fields of the file name.  Else create an
+  identifier based on the following conditions:
+
+  • If `FILE' does not have an identifier and optional `DATE' is non-nil
+    (such as with a prefix argument), invoke the function
+    `denote-prompt-for-date-return-id'.  It prompts for a date and uses
+    it to derive the identifier.
+
+  • If `FILE' does not have an identifier and optional `DATE' is nil
+    (this is the case without a prefix argument), use the file
+    attributes to determine the last modified date and format it as an
+    identifier.
+
+  • As a fallback, derive an identifier from the current time.
 
   The default `TITLE' is retrieved from a line starting with a title
   field in the file’s contents, depending on the given file type ([Front
@@ -852,6 +888,9 @@ Table of Contents
 
   The renaming is subject to a “yes or no” prompt that shows the old and
   new names, just so the user is certain about the change.
+
+  If called interactively with a prefix argument `C-u' or from Lisp with
+  a non-nil `AUTO-CONFIRM' argument, this “yes or no” prompt is skipped.
 
   The identifier of the file, if any, is never modified even if it is
   edited in the front matter: Denote considers the file name to be the
@@ -1259,6 +1298,12 @@ section 5.2
   default), it formats links like `[[denote:IDENTIFIER]]'.  The user
   might prefer its simplicity.
 
+  The description of the link is taken from the target file’s front
+  matter or, if that is not available, from the file name.  If the
+  region is active, its text is used as the link’s description instead.
+  If the active region has no text, the inserted link used just the
+  identifier, as with the `C-u' prefix mentioned above.
+
   Inserted links are automatically buttonized and remain active for as
   long as the buffer is available.  In Org this is handled by the major
   mode: the `denote:' hyperlink type works exactly like the standard
@@ -1350,7 +1395,22 @@ section 5.2
 [Linking notes] See section 7
 
 
-7.3 Insert links from marked files in Dired
+7.3 Insert links, but only those missing from current buffer
+────────────────────────────────────────────────────────────
+
+  As a variation on the `denote-link-add-links' command, one may wish to
+  only include ’missing links’, i.e. links that are not yet present in
+  the current file.
+
+  This can be achieved with `denote-link-add-missing-links'. The command
+  is similar to `denote-link-add-links', but will only include links to
+  notes that are not yet linked to ([Insert links matching a regexp]).
+
+
+[Insert links matching a regexp] See section 7.2
+
+
+7.4 Insert links from marked files in Dired
 ───────────────────────────────────────────
 
   The command `denote-link-dired-marked-notes' is similar to
@@ -1384,7 +1444,7 @@ section 5.2
 [Linking notes] See section 7
 
 
-7.4 Link to an existing note or create a new one
+7.5 Link to an existing note or create a new one
 ────────────────────────────────────────────────
 
   In one’s note-taking workflow, there may come a point where they are
@@ -1443,7 +1503,7 @@ section 5.2
 [Adding a single link] See section 7.1
 
 
-7.5 The backlinks’ buffer
+7.6 The backlinks’ buffer
 ─────────────────────────
 
   The command `denote-link-backlinks' produces a bespoke buffer which
@@ -1459,6 +1519,8 @@ section 5.2
   │ 20220614T145606--let-this-glance-become-a-stare__journal.txt
   │ 20220616T182958--not-feeling-butterflies-in-your-stomach__journal.txt
   └────
+
+  [Speed up backlinks’ buffer creation?]
 
   The backlinks’ buffer is fontified by default, though the user has
   access to the `denote-link-fontify-backlinks' option to disable this
@@ -1494,12 +1556,20 @@ section 5.2
   [Why do I get “Search failed with status 1” when I search for
   backlinks?]
 
+  Backlinks to the current file can also be visited by using the
+  minibuffer completion interface with the `denote-link-find-backlink'
+  command ([Visiting linked files via the minibuffer]).
+
+
+[Speed up backlinks’ buffer creation?] See section 17.9
 
 [Why do I get “Search failed with status 1” when I search for
-backlinks?] See section 17.9
+backlinks?] See section 17.10
+
+[Visiting linked files via the minibuffer] See section 7.8
 
 
-7.6 Writing metanotes
+7.7 Writing metanotes
 ─────────────────────
 
   A “metanote” is an entry that describes other entries who have
@@ -1536,10 +1606,10 @@ backlinks?] See section 17.9
 
 [Insert links matching a regexp] See section 7.2
 
-[Insert links from marked files in Dired] See section 7.3
+[Insert links from marked files in Dired] See section 7.4
 
 
-7.7 Visiting linked files via the minibuffer
+7.8 Visiting linked files via the minibuffer
 ────────────────────────────────────────────
 
   Denote has a major-mode-agnostic mechanism to collect all linked file
@@ -1555,11 +1625,17 @@ backlinks?] See section 17.9
   familiar Dired listing with only the files of the current minibuffer
   session).
 
+  To visit backlinks to the current note via the minibuffer, use
+  `denote-link-find-backlink'.  This is an alternative to placing
+  backlinks in a dedicated buffer ([The backlinks’ buffer]).
+
 
 [Extending Denote] See section 10
 
+[The backlinks’ buffer] See section 7.6
 
-7.8 Miscellaneous information about links
+
+7.9 Miscellaneous information about links
 ─────────────────────────────────────────
 
   For convenience, the `denote-link' command has an alias called
@@ -2399,8 +2475,9 @@ section 5.2
   │   ;; `markdown-mode-map', and/or `text-mode-map'.
   │   (define-key map (kbd "C-c n i") #'denote-link) ; "insert" mnemonic
   │   (define-key map (kbd "C-c n I") #'denote-link-add-links)
-  │   (define-key map (kbd "C-c n l") #'denote-link-find-file) ; "list" links
   │   (define-key map (kbd "C-c n b") #'denote-link-backlinks)
+  │   (define-key map (kbd "C-c n f f") #'denote-link-find-file)
+  │   (define-key map (kbd "C-c n f b") #'denote-link-find-backlink)
   │   ;; Note that `denote-rename-file' can work from any context, not just
   │   ;; Dired bufffers.  That is why we bind it here to the `global-map'.
   │   (define-key map (kbd "C-c n r") #'denote-rename-file)
@@ -2516,6 +2593,10 @@ section 5.2
         accepts a directory-local value ([Maintain separate directories
         for notes]).
 
+  Function `denote-directory-text-only-files'
+        Return list of text files in variable `denote-directory'.
+        Filter `denote-directory-files' using `denote-file-is-note-p'.
+
   Function `denote-directory-subdirectories'
         Return list of subdirectories of the variable
         `denote-directory'.  Note that the `denote-directory' accepts a
@@ -2581,14 +2662,27 @@ section 5.2
         Return existing Denote identifier in `STRING', else nil.
 
   Function `denote-retrieve-filename-identifier'
-        Extract identifier from `FILE' name.  To only return an existing
+        Extract identifier from `FILE' name.  To return an existing
         identifier or create a new one, refer to the
         `denote-retrieve-or-create-file-identifier' function.
 
   Function `denote-retrieve-or-create-file-identifier'
-        Extract identifier from `FILE' name.  To only return an existing
-        identifier or create a new one, refer to the function
-        `denote-retrieve-or-create-file-identifier'.
+        Return `FILE' identifier, generating one if appropriate.  The
+        conditions are as follows:
+
+        • If `FILE' has an identifier, return it.
+
+        • If `FILE' does not have an identifier and optional `DATE' is
+          non-nil, invoke `denote-prompt-for-date-return-id'.
+
+        • If `FILE' does not have an identifier and DATE is nil, use the
+          file attributes to determine the last modified date and format
+          it as an identifier.
+
+        • As a fallback, derive an identifier from the current time.
+
+        To only return an existing identifier, refer to the function
+        `denote-retrieve-filename-identifier'.
 
   Function `denote-retrieve-filename-title'
         Extract title from `FILE' name, else return `file-name-base'.
@@ -2609,6 +2703,8 @@ section 5.2
 
   Function `denote-file-prompt'
         Prompt for file with identifier in variable `denote-directory'.
+        With optional `INITIAL-TEXT', use it to prepopulate the
+        minibuffer.
 
   Function `denote-keywords-prompt'
         Prompt for one or more keywords.  In the case of multiple
@@ -2631,6 +2727,9 @@ section 5.2
         utility if the user option
         `denote-date-prompt-use-org-read-date' is non-nil.  It requires
         Org ([The denote-date-prompt-use-org-read-date option]).
+
+  Function `denote-prompt-for-date-return-id'
+        Use `denote-date-prompt' and return it as `denote-id-format'.
 
   Function `denote-template-prompt'
         Prompt for template key in `denote-templates' and return its
@@ -2976,8 +3075,8 @@ section 5.2
 
 [zetteldeft] <https://github.com/EFLS/zetteldeft>
 
-16.1 Alternative ideas wih Emacs and further reading
-────────────────────────────────────────────────────
+16.1 Alternative ideas with Emacs and further reading
+─────────────────────────────────────────────────────
 
   This section covers blog posts from the Emacs community on the matter
   of note-taking.  They may reference some of the packages covered in
@@ -3242,8 +3341,46 @@ section 5.2
   software handle the tracking of changes.
 
 
-17.9 Why do I get “Search failed with status 1” when I search for backlinks?
-────────────────────────────────────────────────────────────────────────────
+17.9 Speed up backlinks’ buffer creation?
+─────────────────────────────────────────
+
+  Denotes leverages the built-in `xref' library to search for the
+  identifier of the current file and return any links to it.  For users
+  of Emacs version 28 or higher, there exists a user option to specify
+  the program that performs this search: `xref-search-program'.  The
+  default is `grep', which can be slow, though one may opt for `ugrep',
+  `ripgrep', or even specify something else (read the doc string of that
+  user option for the details).
+
+  Try either for these for better results:
+
+  ┌────
+  │ (setq xref-search-program 'ripgrep)
+  │ 
+  │ ;; OR
+  │ 
+  │ (setq xref-search-program 'ugrep)
+  └────
+
+  To use whatever executable is available on your system, use something
+  like this:
+
+  ┌────
+  │ ;; Prefer ripgrep, then ugrep, and fall back to regular grep.
+  │ (setq xref-search-program
+  │       (cond
+  │        ((or (executable-find "ripgrep")
+  │ 	    (executable-find "rg"))
+  │ 	'ripgrep)
+  │        ((executable-find "ugrep")
+  │ 	'ugrep)
+  │        (t
+  │ 	'grep)))
+  └────
+
+
+17.10 Why do I get “Search failed with status 1” when I search for backlinks?
+─────────────────────────────────────────────────────────────────────────────
 
   Denote uses [Emacs’ Xref] to find backlinks.  Xref requires `xargs'
   and one of `grep' or `ripgrep', depending on your configuration.
@@ -3272,19 +3409,20 @@ section 5.2
         Protesilaos Stavrou.
 
   Contributions to code or the manual
-        Abin Simon, Alan Schmitt, Benjamin Kästner, Clemens Radermacher,
-        Colin McLear, Damien Cassou, Eshel Yaron, Hilde Rhyne, Jack
-        Baty, Jean-Philippe Gagné Guay, Jürgen Hötzel, Kaushal Modi,
-        Kyle Meyer, Marc Fargas, Peter Prevos, Philip Kaludercic,
+        Abin Simon, Alan Schmitt, Benjamin Kästner, Charanjit Singh,
+        Clemens Radermacher, Colin McLear, Damien Cassou, Elias Storms,
+        Eshel Yaron, Florian, Hilde Rhyne, Jack Baty, Jean-Philippe
+        Gagné Guay, Jürgen Hötzel, Kaushal Modi, Kyle Meyer, Marc
+        Fargas, Noboru Ota (nobiot), Peter Prevos, Philip Kaludercic,
         Quiliro Ordóñez, Stefan Monnier.
 
   Ideas and/or user feedback
         Abin Simon, Alan Schmitt, Alfredo Borrás, Benjamin Kästner,
-        Colin McLear, Damien Cassou, Elias Storms, Frank Ehmsen,
-        Hanspeter Gisler, Jack Baty, Juanjo Presa, Kaushal Modi, M. Hadi
-        Timachi, Paul van Gelder, Peter Prevos, Shreyas Ragavan, Summer
-        Emacs, Sven Seebeck, Taoufik, Yi Liu, Ypot, atanasj, hpgisler,
-        pRot0ta1p, sienic, sundar bp.
+        Colin McLear, Damien Cassou, Elias Storms, Federico Stilman,
+        Florian, Frank Ehmsen, Hanspeter Gisler, Jack Baty, Juanjo
+        Presa, Kaushal Modi, M. Hadi Timachi, Paul van Gelder, Peter
+        Prevos, Shreyas Ragavan, Summer Emacs, Sven Seebeck, Taoufik, Yi
+        Liu, Ypot, atanasj, hpgisler, pRot0ta1p, sienic, sundar bp.
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.

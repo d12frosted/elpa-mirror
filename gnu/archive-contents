@@ -152,14 +152,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "53addd02fbad33765f508f8e6254ebd44e1f81e5"))])
  (auctex .
-	 [(13 1 4)
+	 [(13 1 5)
 	  ((emacs
 	    (25 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "0029ca410fdce5a6d04199a5508e636dc6bef86a"))])
+	   (:commit . "c569c7d486624ac7a5bb924ca92c41e80a58091f"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single
@@ -715,7 +715,7 @@
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
  (denote .
-	 [(1 0 0)
+	 [(1 1 0)
 	  ((emacs
 	    (27 2)))
 	  "Simple notes with an efficient file-naming scheme" tar
@@ -723,7 +723,7 @@
 	   (:maintainer "Denote Development" . "~protesilaos/denote@lists.sr.ht")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "9b969da55c84e52ce3be4dd163e7d1f081209dab"))])
+	   (:commit . "d9a1b0c0b801b4f841fab412b8318cb66ca55134"))])
  (detached .
 	   [(0 9 1)
 	    ((emacs

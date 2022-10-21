@@ -175,10 +175,11 @@ Prolog initialization and cleanup
   given strings as command line arguments, where the first argument to
   `sweeprolog-initialize' corresponds to `argv[0]'.
 
-  By default, `sweeprolog.el' will initialize Prolog automatically when
-  it is loaded into Emacs.  The arguments used to initialize Prolog in
-  that case are determined by the value of the user-option
-  `sweeprolog-init-args' which the user is free to extend with e.g.:
+  `sweep' loads and initializes Prolog on-demand at the first invocation
+  of a command that requires the embedded Prolog.  The arguments used to
+  initialize Prolog in case are determined by the value of the
+  user-option `sweeprolog-init-args' which the user is free to extend
+  with e.g.:
 
   ┌────
   │ (add-to-list 'sweeprolog-init-args "--stack-limit=512m")
@@ -188,9 +189,6 @@ Prolog initialization and cleanup
   helper library `sweep.pl' and to create a boolean Prolog flag `sweep',
   set to `true', which indicates to SWI-Prolog that it is running under
   `sweep'.
-
-  To inhibit `sweeprolog' from initializing Prolog on load, set the
-  user-option `sweeprolog-init-on-load' to nil.
 
   The embedded Prolog runtime can be reset using the command
   `sweeprolog-restart'.  This command cleans up the the Prolog state and
@@ -1317,7 +1315,7 @@ Improvements around editing Prolog
 
   Provide right-click (`mouse-3') menus with `context-menu-mode'
         To accommodate users who prefer a mouse-based workflow,
-        `sweeprolog-mode' should provide right-click context-aware menus
+        `sweeprolog-mode' should provide context-aware right-click menus
         by integrating with `context-menu-mode'.
 
   Provide descriptions for tokens by setting their `help-echo' propety

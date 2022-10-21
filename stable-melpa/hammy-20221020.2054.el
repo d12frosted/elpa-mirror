@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/hammy.el
-;; Package-Version: 20221020.1349
-;; Package-Commit: e5bc0abc4b023e72f8e82195983086ab955e9bf0
+;; Package-Version: 20221020.2054
+;; Package-Commit: 03a7a0daecefc62d5cd315cb7ca4a27eaca00cd7
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "28.1") (ts "0.2.2"))
 ;; Keywords: convenience
@@ -398,6 +398,7 @@ the task should be clocked in)."
     (cl-macrolet ((pushfn (fn place)
                           `(cl-pushnew ,fn ,place :test #'equal)))
       (pushfn #'hammy--org-clock-in (hammy-interval-before (hammy-interval hammy)))
+      ;; FIXME: The user is clocked out when the interval "ends", but before the user advances it.
       (pushfn #'hammy--org-clock-out (hammy-interval-after (hammy-interval hammy)))
       (pushfn #'hammy--org-clock-out (hammy-stopping hammy)))
     hammy))
@@ -516,6 +517,7 @@ prompt for the interval with completion)."
                 (hammy-overduep hammy) nil)
           (when next-duration
             (hammy-call (hammy-interval-before next-interval) hammy)
+            ;; TODO: Mention elapsed time of just-completed interval.
             (run-hook-with-args 'hammy-interval-hook hammy
                                 (format "Interval started: %s (%s)"
                                         (hammy-interval-name (hammy-interval hammy))

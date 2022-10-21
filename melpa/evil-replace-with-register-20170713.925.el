@@ -4,8 +4,6 @@
 
 ;; Author: Dewdrops <v_v_4474@126.com>
 ;; URL: https://github.com/Dewdrops/evil-ReplaceWithRegister
-;; Package-Version: 20170713.925
-;; Package-Commit: 91cc7bf21a94703c441cc9212214075b226b7f67
 ;; Version: 0.1
 ;; Keywords: evil, plugin
 ;; Package-Requires: ((evil "1.0.8"))
