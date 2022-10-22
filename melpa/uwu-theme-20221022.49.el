@@ -5,8 +5,8 @@
 ;; Author: Kevin Borling
 ;; Created: December 24, 2021
 ;; Version: 1.0.0
-;; Package-Version: 20220411.1904
-;; Package-Commit: feef3e73dbcb3fbba431c62a99a3333959f6158e
+;; Package-Version: 20221022.49
+;; Package-Commit: 188d74cb279537f476c6f35b4e4f966d38884314
 ;; Keywords: custom themes, dark, faces
 ;; License: MIT
 ;; URL: https://github.com/kborling/uwu-theme
@@ -49,28 +49,28 @@
 ;;; Variables
 (eval-and-compile
   (defvar uwu-colors-alist
-    '(("uwu-fg"                . "#C5C8C9")
-      ("uwu-bg"                . "#131A1C")
-      ("uwu-black"             . "#1B2224")
-      ("uwu-red"               . "#F65B5B")
-      ("uwu-green"             . "#6BB05D")
-      ("uwu-yellow"            . "#E59E67")
-      ("uwu-blue"              . "#53A7BF")
-      ("uwu-magenta"           . "#B185DB")
-      ("uwu-cyan"              . "#51A39F")
-      ("uwu-white"             . "#C4C4C4")
-      ("uwu-bright-black"      . "#232A2C")
-      ("uwu-bright-red"        . "#C26F6F")
-      ("uwu-bright-green"      . "#8DC776")
-      ("uwu-bright-yellow"     . "#E7AC7E")
-      ("uwu-bright-blue"       . "#6CBAD1")
-      ("uwu-bright-magenta"    . "#BB8FE5")
-      ("uwu-bright-cyan"       . "#6DB0AD")
-      ("uwu-bright-white"      . "#C5C8C9")
-      ("uwu-comment"           . "#62686A")
-      ("uwu-highlight"         . "#2F3638")
-      ("uwu-warning"           . "#E6D967")
-      ("uwu-error"             . "#E93D3D"))))
+    '(("uwu-fg"             . "#C5C8C9")
+      ("uwu-bg"             . "#131A1C")
+      ("uwu-black"          . "#1B2224")
+      ("uwu-red"            . "#F65B5B")
+      ("uwu-green"          . "#6BB05D")
+      ("uwu-yellow"         . "#E59E67")
+      ("uwu-blue"           . "#53A7BF")
+      ("uwu-magenta"        . "#B185DB")
+      ("uwu-cyan"           . "#51A39F")
+      ("uwu-white"          . "#C4C4C4")
+      ("uwu-bright-black"   . "#232A2C")
+      ("uwu-bright-red"     . "#C26F6F")
+      ("uwu-bright-green"   . "#8DC776")
+      ("uwu-bright-yellow"  . "#E7AC7E")
+      ("uwu-bright-blue"    . "#6CBAD1")
+      ("uwu-bright-magenta" . "#BB8FE5")
+      ("uwu-bright-cyan"    . "#6DB0AD")
+      ("uwu-bright-white"   . "#C5C8C9")
+      ("uwu-comment"        . "#62686A")
+      ("uwu-highlight"      . "#2F3638")
+      ("uwu-warning"        . "#E6D967")
+      ("uwu-error"          . "#E93D3D"))))
 
 (defvar uwu-use-variable-pitch nil
   "When non-nil, use variable pitch face for some headings and titles.")
@@ -411,6 +411,15 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(tab-line-tab-inactive ((t (:inherit tab-line-tab
                                                                 :background ,uwu-black
                                                                 :foreground ,uwu-comment))))
+                          ;; spaceline
+                          `(spaceline-flycheck-error  ((t (:foreground ,uwu-error))))
+                          `(spaceline-flycheck-info   ((t (:foreground ,uwu-cyan))))
+                          `(spaceline-flycheck-warning((t (:foreground ,uwu-warning))))
+                          ;; powerline
+                          `(powerline-active1 ((t (:background ,uwu-black :foreground ,uwu-white))))
+                          `(powerline-active2 ((t (:background ,uwu-black :foreground ,uwu-white))))
+                          `(powerline-inactive1 ((t (:background ,uwu-black :foreground ,uwu-comment))))
+                          `(powerline-inactive2 ((t (:background ,uwu-black :foreground ,uwu-comment))))
                           ;; vertico
                           `(vertico-current ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))

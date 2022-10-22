@@ -6,8 +6,8 @@
 ;;         Marshall T. Vandegrift <llasram@gmail.com>
 ;; Maintainer: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://github.com/yoshiki/yaml-mode
-;; Package-Version: 20220903.1821
-;; Package-Commit: 9969207f60b69e42c573a63764faeb9caaccb2bf
+;; Package-Version: 20221022.920
+;; Package-Commit: 141b85f9e01589e67955f3785a83b72b42109357
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: data yaml
 ;; Version: 0.0.15
@@ -180,7 +180,7 @@ that key is pressed to begin a block literal."
              "y" "Y" "yes" "Yes" "YES" "n" "N" "no" "No" "NO"
              "true" "True" "TRUE" "false" "False" "FALSE"
              "on" "On" "ON" "off" "Off" "OFF") t)
-          " *$")
+          "\\_>")
   "Regexp matching certain scalar constants in scalar context.")
 
 

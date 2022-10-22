@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.6-dev
-;; Package-Version: 20220829.225
-;; Package-Commit: 3f1c61b25cb0677122414e9ea14064a13e548c36
+;; Package-Version: 20221022.735
+;; Package-Commit: 1306088b2abe22bd88b97fabde1b376bc21f8ec7
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -2925,7 +2925,8 @@ When FACELESS is non-nil, do not return matches where faces have been applied."
                 (markdown-in-comment-p)
                 (markdown-range-property-any
                  begin begin 'face '(markdown-url-face
-                                     markdown-plain-url-face))
+                                     markdown-plain-url-face
+                                     markdown-markup-face))
                 (markdown-range-property-any
                  begin end 'face '(markdown-bold-face
                                    markdown-list-face
@@ -8158,13 +8159,13 @@ newline after."
   (let* ((modified (buffer-modified-p))
          (buffer-undo-list t)
          (inhibit-read-only t)
-         (inhibit-point-motion-hooks t)
          deactivate-mark
          buffer-file-truename)
     (unwind-protect
         (save-excursion
           (save-match-data
             (save-restriction
+              (cursor-intangible-mode +1) ;; inhibit-point-motion-hooks is obsoleted since Emacs 29
               ;; Extend the region to fontify so that it starts
               ;; and ends at safe places.
               (cl-multiple-value-bind (new-from new-to)
@@ -8181,6 +8182,7 @@ newline after."
                   (markdown-unfontify-region-wiki-links new-from new-to)
                   ;; Now do the fontification.
                   (markdown-fontify-region-wiki-links new-from new-to))))))
+      (cursor-intangible-mode -1)
       (and (not modified)
            (buffer-modified-p)
            (set-buffer-modified-p nil)))))
