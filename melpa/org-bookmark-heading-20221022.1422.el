@@ -1,25 +1,25 @@
-;;; org-bookmark-heading.el --- Emacs bookmark support for org-mode  -*- lexical-binding: t; -*-
+;;; org-bookmark-heading.el --- Emacs bookmark support for Org mode  -*- lexical-binding: t; -*-
 
 ;; Author: Adam Porter <adam@alphapapa.net>
-;; Version: 1.2-pre
-;; Package-Version: 20221021.1556
-;; Package-Commit: 823113b535301745cf5d559e6c84dc154754dbca
+;; Version: 1.2
+;; Package-Version: 20221022.1422
+;; Package-Commit: f245c9023df28d6ee545dae4b96a1c237e6965ba
 ;; Url: http://github.com/alphapapa/org-bookmark-heading
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: hypermedia, outlines
 
 ;;; Commentary:
 
-;; This package provides Emacs bookmark support for org-mode.  You can
-;; bookmark headings in org-mode files and jump to them using standard
+;; This package provides Emacs bookmark support for Org mode.  You can
+;; bookmark headings in Org mode files and jump to them using standard
 ;; Emacs bookmark commands.
 
 ;; It seems like this file should be named org-bookmark.el, but a
 ;; package by that name already exists in org-mode/contrib which lets
-;; org-mode links point to Emacs bookmarks, sort-of the reverse of
+;; Org mode links point to Emacs bookmarks, sort-of the reverse of
 ;; this package.
 
-;; It also seems like this should be built-in to org-mode...  ;)
+;; It also seems like this should be built-in to Org mode...  ;)
 
 ;;; Installation
 
@@ -33,12 +33,12 @@
 
 ;; Use the standard Emacs bookmark commands, "C-x r m", etc.
 
-;; If you use Helm, you can jump to org-mode bookmarks in an indirect
+;; If you use Helm, you can jump to Org mode bookmarks in an indirect
 ;; buffer by pressing "<C-return>" in the Helm buffer, or by choosing
 ;; the action from the list.
 
 ;; You can also customize the variable `org-bookmark-jump-indirect' to
-;; make org-mode bookmarks always open in indirect buffers.
+;; make Org mode bookmarks always open in indirect buffers.
 
 ;;; Credits:
 
@@ -76,10 +76,10 @@
   'org-bookmark-jump-indirect 'org-bookmark-heading-jump-indirect "1.2")
 
 (defcustom org-bookmark-heading-jump-indirect nil
-  "Jump to `org-mode' bookmarks in indirect buffers.
-When enabled, always jumps to bookmarked headings in indirect
-buffers.  Otherwise, only uses indirect buffers if the bookmark
-was made in one.  Uses `org-tree-to-indirect-buffer'."
+  "Jump to bookmarks in indirect buffers.
+When enabled, always jump to bookmarked headings in indirect
+buffers.  Otherwise, only use indirect buffers if the bookmark
+was made in one."
   :type 'boolean)
 
 (defcustom org-bookmark-heading-filename-fn #'org-bookmark-heading--display-path
@@ -88,7 +88,7 @@ It should take one argument, the path to the file."
   :type 'function)
 
 (defcustom org-bookmark-heading-make-ids nil
-  "Whether to automatically make ID properties when bookmarking headings.
+  "Automatically make ID properties when bookmarking headings.
 A bookmark will always include an entry's filename, outline path,
 and ID, if one exists.  If this option is enabled, an ID will be
 created for entries that don't already have one."
@@ -108,8 +108,8 @@ created for entries that don't already have one."
 
 ;;;###autoload
 (defun org-bookmark-heading-make-record ()
-  "Return alist for `bookmark-set' for current `org-mode'
-heading.  Set org-id for heading if necessary."
+  "Return bookmark record for current heading.
+Sets ID property for heading if necessary."
   (let* ((filename (buffer-file-name (org-base-buffer (current-buffer))))
          (display-filename (funcall org-bookmark-heading-filename-fn filename))
          (heading (unless (org-before-first-heading-p)
@@ -243,7 +243,7 @@ better way to do this, but Helm can be confusing, and this works."
       (bookmark-jump bookmark)))
 
   (defun helm-org-bookmark-heading-jump-indirect ()
-    "Jump to `org-mode' bookmark in an indirect buffer."
+    "Jump to bookmark in an indirect buffer."
     (interactive)
     (with-helm-alive-p
       (let ((bookmark (helm-get-selection)))

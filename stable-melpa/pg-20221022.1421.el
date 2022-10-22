@@ -4,8 +4,8 @@
 
 ;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
 ;; Version: 0.18
-;; Package-Version: 20221018.1334
-;; Package-Commit: e05498b746b0937f4dc898b1af266db47cec2f07
+;; Package-Version: 20221022.1421
+;; Package-Commit: b26034a7c1b6eb6e3dd4f882a7fe441b37df4a20
 ;; Keywords: data comm database postgresql
 ;; URL: https://github.com/emarsden/pg-el
 ;; Package-Requires: ((emacs "26.1"))
@@ -782,6 +782,8 @@ PostgreSQL and Emacs. CON should no longer be used."
 ;; user-defined type should be returned parsed from `pg-result'.
 (defvar pg-type-parsers
   `(("bool"         . ,'pg-bool-parser)
+    ("bit"          . ,'pg-bit-parser)
+    ("varbit"       . ,'pg-bit-parser)
     ("char"         . ,'pg-text-parser)
     ("char2"        . ,'pg-text-parser)
     ("char4"        . ,'pg-text-parser)
@@ -802,6 +804,13 @@ PostgreSQL and Emacs. CON should no longer be used."
     ("numeric"      . ,'pg-float-parser)
     ("float4"       . ,'pg-float-parser)
     ("float8"       . ,'pg-float-parser)
+    ("_int2"        . ,'pg-intarray-parser)
+    ("_int2vector"  . ,'pg-intarray-parser)
+    ("_int4"        . ,'pg-intarray-parser)
+    ("_int8"        . ,'pg-intarray-parser)
+    ("_float4"      . ,'pg-floatarray-parser)
+    ("_float8"      . ,'pg-floatarray-parser)
+    ("_numeric"     . ,'pg-floatarray-parser)
     ("money"        . ,'pg-text-parser)
     ("date"         . ,'pg-date-parser)
     ("timestamp"    . ,'pg-isodate-parser)
@@ -829,6 +838,29 @@ PostgreSQL and Emacs. CON should no longer be used."
          0.0e+NaN)
         (t
          (string-to-number str))))
+
+(defun pg-bit-parser (str _encoding)
+  (let* ((len (length str))
+         (bv (make-bool-vector len t)))
+    (dotimes (i len)
+      (setf (aref bv i) (eql ?1 (aref str i))))
+    bv))
+
+(defun pg-intarray-parser (str _encoding)
+  (let ((len (length str)))
+    (unless (and (eql (aref str 0) ?{)
+                 (eql (aref str (1- len)) ?}))
+      (signal 'pg-protocol-error (list "Unexpected format for int array")))
+    (let ((segments (split-string (subseq str 1 (- len 1)) ",")))
+      (apply #'vector (mapcar #'string-to-number segments)))))
+
+(defun pg-floatarray-parser (str _encoding)
+  (let ((len (length str)))
+    (unless (and (eql (aref str 0) ?{)
+                 (eql (aref str (1- len)) ?}))
+      (signal 'pg-protocol-error (list "Unexpected format for float array")))
+    (let ((segments (split-string (subseq str 1 (- len 1)) ",")))
+      (apply #'vector (mapcar (lambda (x) (pg-float-parser x nil)) segments)))))
 
 (defsubst pg-text-parser (str encoding)
   (if encoding
