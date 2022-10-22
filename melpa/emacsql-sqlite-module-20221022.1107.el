@@ -5,10 +5,10 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/magit/emacsql
 
-;; Package-Version: 20221021.2131
+;; Package-Version: 20221022.1107
 ;; Package-X-Original-Version: 3.0.0-git
 ;; Package-Requires: ((emacs "25") (emacsql "3.0.0") (sqlite3 "0.15"))
-;; Package-Commit: cf8fb77babc4f92e16dfc63da03dd75add7a1d51
+;; Package-Commit: 0a42ce65584551a1cd2fadcbdeded20efdcb9812
 ;; SPDX-License-Identifier: Unlicense
 
 ;;; Commentary:

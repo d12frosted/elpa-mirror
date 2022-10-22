@@ -3,8 +3,6 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20221005.400
-;; Package-Commit: 5e271cb51b29a91fae69876f2e6428b03316d9aa
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
