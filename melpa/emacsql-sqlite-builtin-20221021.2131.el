@@ -5,10 +5,10 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/magit/emacsql
 
-;; Package-Version: 20221020.1117
+;; Package-Version: 20221021.2131
 ;; Package-X-Original-Version: 3.0.0-git
 ;; Package-Requires: ((emacs "29") (emacsql "3.0.0"))
-;; Package-Commit: fe342ead8fe1329b66d62ab8a83fb2faf02771ec
+;; Package-Commit: cf8fb77babc4f92e16dfc63da03dd75add7a1d51
 ;; SPDX-License-Identifier: Unlicense
 
 ;;; Commentary:
@@ -75,14 +75,16 @@ buffer. This is for debugging purposes."
                                 (t (read col))))
                         row))
               (sqlite-select (emacsql-process connection) message nil nil))
+    ((sqlite-error sqlite-locked-error)
+     (if (stringp (cdr err))
+         (signal 'emacsql-error (list (cdr err)))
+       (pcase-let* ((`(,_ ,errstr ,errmsg ,errcode ,ext-errcode) err)
+                    (`(,_ ,_ ,signal ,_)
+                     (assq errcode emacsql-sqlite-error-codes)))
+         (signal (or signal 'emacsql-error)
+                 (list errmsg errcode ext-errcode errstr)))))
     (error
-     ;; TODO https://debbugs.gnu.org/cgi/bugreport.cgi?bug=58363
-     (pcase-let* ((`(,_ ,msg) err)
-                  (`(,code ,_ ,sym)
-                   (car (cl-member msg emacsql-sqlite-error-codes
-                                   :test #'equal :key #'cl-cadddr))))
-       (signal (or sym 'emacsql-error)
-               (list msg code))))))
+     (signal 'emacsql-error (cdr err)))))
 
 (cl-defmethod emacsql ((connection emacsql-sqlite-builtin-connection) sql &rest args)
   (emacsql-send-message connection (apply #'emacsql-compile connection sql args)))

@@ -5,10 +5,10 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/magit/emacsql
 
-;; Package-Version: 20221020.1117
+;; Package-Version: 20221021.2131
 ;; Package-X-Original-Version: 3.0.0-git
 ;; Package-Requires: ((emacs "25") (emacsql "3.0.0") (sqlite3 "0.15"))
-;; Package-Commit: fe342ead8fe1329b66d62ab8a83fb2faf02771ec
+;; Package-Commit: cf8fb77babc4f92e16dfc63da03dd75add7a1d51
 ;; SPDX-License-Identifier: Unlicense
 
 ;;; Commentary:
@@ -68,8 +68,8 @@ buffer. This is for debugging purposes."
 
 (cl-defmethod emacsql-send-message
   ((connection emacsql-sqlite-module-connection) message)
-  (let (rows)
-    (condition-case err
+  (condition-case err
+      (let (rows)
         (sqlite3-exec (emacsql-process connection)
                       message
                       (lambda (_ row __)
@@ -79,15 +79,15 @@ buffer. This is for debugging purposes."
                                               (t (read col))))
                                       row)
                               rows)))
-      ((db-error sql-error)
-       (pcase-let ((`(,_ ,msg ,code) err))
-         (signal (or (cadr (cl-assoc code emacsql-sqlite-condition-alist
-                                     :test #'memql))
-                     'emacsql-error)
-                 (list msg code))))
-      (error
-       (signal 'emacsql-error (cdr err))))
-    (nreverse rows)))
+        (nreverse rows))
+    ((db-error sql-error)
+     (pcase-let* ((`(,_ ,errmsg ,errcode) err)
+                  (`(,_ ,_ ,signal ,errstr)
+                   (assq errcode emacsql-sqlite-error-codes)))
+       (signal (or signal 'emacsql-error)
+               (list errmsg errcode nil errstr))))
+    (error
+     (signal 'emacsql-error (cdr err)))))
 
 (cl-defmethod emacsql ((connection emacsql-sqlite-module-connection) sql &rest args)
   (emacsql-send-message connection (apply #'emacsql-compile connection sql args)))

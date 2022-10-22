@@ -1,5 +1,5 @@
 (python-pytest .
-	       [(20221018 1545)
+	       [(20221021 1937)
 		((emacs
 		  (24 4))
 		 (dash
@@ -11,7 +11,7 @@
 		 (s
 		  (1 12 0)))
 		"helpers to run pytest" single
-		((:commit . "aef8b42f7ca69d84289209c7bf0974c8ef4c95ab")
+		((:commit . "33c921adaa6c9c8f7cceba2342114c6b406e0d7c")
 		 (:authors
 		  ("wouter bolsterlee" . "wouter@bolsterl.ee"))
 		 (:maintainer "wouter bolsterlee" . "wouter@bolsterl.ee")
