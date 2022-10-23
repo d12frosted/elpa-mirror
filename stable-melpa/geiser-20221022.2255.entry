@@ -1,13 +1,11 @@
 (geiser .
-	[(20221021 238)
+	[(20221022 2255)
 	 ((emacs
 	   (25 1))
-	  (transient
-	   (0 3))
 	  (project
 	   (0 8 1)))
 	 "GNU Emacs and Scheme talk to each other" tar
-	 ((:commit . "74e4e87820112ac94bac583ba154dc67bc017a42")
+	 ((:commit . "fd58d38118e2c409db524ccc8ff213e8d98a43bf")
 	  (:authors
 	   ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
 	  (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
