@@ -1648,7 +1648,7 @@
 	   ("Random User"))
 	  (:commit . "b10ab60a4e567a1fb7d7702d146ed7055b203113"))])
  (sweeprolog .
-	     [(0 7 2)
+	     [(0 8 0)
 	      ((emacs
 		(28 1)))
 	      "Embedded SWI-Prolog" tar
@@ -1657,7 +1657,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "a6eac1467d9a53b67e3bed05ad0366cce7b95c88"))])
+	       (:commit . "6e42efc6f83a29a8201a742e00020b4cf4377e3d"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs
@@ -1675,7 +1675,7 @@
 		("Arthur Evstifeev" . "lod@pisem.net"))
 	       (:commit . "cdd194cbadcee724a9813da386f0a612082b1ab1"))])
  (swsw .
-       [(2 2)
+       [(2 3)
 	((emacs
 	  (27 1)))
 	"Simple window switching" tar
@@ -1684,7 +1684,7 @@
 	 (:maintainer "swsw Mailing List" . "~dsemy/swsw-devel@lists.sr.ht")
 	 (:authors
 	  ("Daniel Semyonov" . "daniel@dsemy.com"))
-	 (:commit . "5faeffc16329a4a4946780c880c343a9fb95deb4"))])
+	 (:commit . "f41a36677737786d0f651f2d0ba5eb23d63c8ab5"))])
  (symbol-overlay .
 		 [(4 1)
 		  ((emacs
@@ -1917,7 +1917,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(18 3 20221020112604)
+	       [(19 1 20221022135313)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -1926,7 +1926,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "e24ea8b680d4844e3efafd7026e761f3b54bc84d"))])
+		 (:commit . "2be7669f2f972fe1020e7b8bf4e486f9a86deef5"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar

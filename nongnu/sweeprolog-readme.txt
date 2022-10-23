@@ -39,6 +39,8 @@ Editing Prolog code
 .. Displaying predicate documentation
 .. Examining diagnostics
 .. Exporting predicates
+.. Context-Based Term Insertion
+..... Filling Holes
 Prolog Help
 The Prolog top-level
 .. Multiple top-levels
@@ -897,6 +899,66 @@ Exporting predicates
   `sweeprolog-export-predicate' with a prefix argument (`C-u C-c C-e').
 
 
+Context-Based Term Insertion
+────────────────────────────
+
+  As a means of automating common Prolog code editing tasks, such as
+  adding new clauses to an existing predicate, `sweeprolog-mode'
+  provides the “do what I mean” command `M-x
+  sweeprolog-insert-term-dwim', bound by default to `C-M-m' (or
+  equivalently, `M-RET').  This command inserts a new term at or after
+  point according to the context in which `sweeprolog-insert-term-dwim'
+  is invoked.
+
+  To determine which term to insert and exactly where, this command
+  calls the functions in the list held by the variable
+  `sweeprolog-insert-term-functions' one after the other until one of
+  the functions signal success by returning non-nil.
+
+  By default, `sweeprolog-insert-term-dwim' tries the following
+  insertion functions, in order:
+
+  `sweeprolog-maybe-insert-next-clause'
+        If the last token before point is a fullstop ending a predicate
+        clause, insert a new clause below it.
+  `sweeprolog-maybe-define-predicate'
+        If point is over a call to an undefined predicate, insert a
+        definition for that predicate below the last clause of the
+        current predicate definition.
+
+
+Filling Holes
+╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The default term insertion functions used by
+  `sweeprolog-insert-term-dwim' create a new clause in the buffer, with
+  placeholders for the arguments of the head term (if any) and for the
+  clause’s body.  These placeholders are simply anonymous variables
+  (`_'), but they are annotated by the insertion functions with a
+  special text property[1] that allows `sweeprolog-mode' to recognize
+  them as “holes” needed to be filled.  After a term is inserted with
+  `sweeprolog-insert-term-dwim', the region is set to the first hole and
+  the cursor left at the its end.
+
+  To jump to the next hole in a `sweeprolog-mode' buffer, use the
+  command `C-c C-i' (`M-x sweeprolog-forward-hole').  This command sets
+  up the region to cover the next hole after point leaving the cursor at
+  right after the hole.  To jump to the previous hole instead, call
+  `sweeprolog-forward-hole' with a negative prefix argument (`C-- C-c
+  C-i').
+
+  To “fill” a hole marked by one of the aforementioned commands, type
+  `C-w' (`M-x kill-region') to kill the region and remove the
+  placeholder variable, then insert Prolog code as usual.  As an
+  alternative to manually killing the region with `C-w', with
+  `delete-selection-mode' enabled the placeholder is automatically
+  deleted when the user inserts a character while the region is active
+  (see also [Using Region in the Emacs manual]).
+
+
+[Using Region in the Emacs manual] <info:emacs#Using Region>
+
+
 Prolog Help
 ═══════════
 
@@ -1331,10 +1393,6 @@ Improvements around editing Prolog
         position, i.e. before the first predicate definition in the
         buffer.
 
-  Add a command for inserting a new clause, similar to `C-M-m' in `prolog-mode'
-        `sweeprolog-mode' should provide a command for inserting a new
-        clause for the predicate at or above point.
-
   Add a command for interactively inserting a new predicate
         `sweeprolog-mode' should provide a command for interactively
         inserting a new predicate definition, ideally with optional
@@ -1451,3 +1509,11 @@ Keystroke index
 
 Concept index
 ─────────────
+
+
+
+Footnotes
+─────────
+
+[1] see [Text Properties in the Elisp manual] (<info:elisp#Text
+Properties>)

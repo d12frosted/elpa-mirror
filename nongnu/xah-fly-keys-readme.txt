@@ -23,12 +23,11 @@ Press "SPC C-h" to see the full list.
 
 "SPC SPC" also activates insertion mode.
 
-"SPC RET" calls `execute-extended-command-for-buffer' (if emacs
-28), else `execute-extended-command'.
+"SPC RET" calls `execute-extended-command'.
 
 "a" calls `execute-extended-command'.
 
-The leader key sequence basically replace ALL emacs commands that
+The leader key sequence basically supplant ALL emacs commands that
 starts with C-x key.
 
 When using xah-fly-keys, you don't need to press Control or Meta,
