@@ -1,11 +1,9 @@
 (docker .
-	[(20220904 1648)
+	[(20221023 1201)
 	 ((aio
 	   (1 0))
 	  (dash
 	   (2 19 1))
-	  (docker-tramp
-	   (0 1))
 	  (emacs
 	   (26 1))
 	  (s
@@ -15,7 +13,7 @@
 	  (transient
 	   (0 3 7)))
 	 "Interface to Docker" tar
-	 ((:commit . "670b7c346ba562614c27b68c04723af784978c15")
+	 ((:commit . "cc0046e6a557dce0ccc4108dd22e04f21ba8b0dc")
 	  (:authors
 	   ("Philippe Vaucher" . "philippe.vaucher@gmail.com"))
 	  (:maintainer "Philippe Vaucher" . "philippe.vaucher@gmail.com")

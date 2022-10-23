@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
-;; Package-Version: 20221012.801
-;; Package-Commit: f9af160cb2fc78719330318566f1fdc15be7bfc5
+;; Package-Version: 20221023.1142
+;; Package-Commit: 0a814694a5f6ed12926de07f29d04850789f19e2
 ;; Version: 1.4.0
 ;; Package-Requires: ((emacs "26.1") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; Keywords: matching auto-complete complete fuzzy
@@ -111,7 +111,7 @@
   :group 'company-fuzzy)
 
 (defvar-local company-fuzzy--prefix ""
-  "Record down the company current search reg/characters.")
+  "Generic prefix.")
 
 (defvar-local company-fuzzy--backends nil
   "Company fuzzy backends we are going to use.")
@@ -122,8 +122,11 @@
 (defvar-local company-fuzzy--is-trigger-prefix-p nil
   "Flag to see if currently completion having a valid prefix.")
 
-(defvar-local company-fuzzy--ht-backends-candidates (ht-create)
-  "Store candidates by backend as id.")
+(defvar-local company-fuzzy--prefixes (ht-create)
+  "Map for each backend's prefix.")
+
+(defvar-local company-fuzzy--candidates (ht-create)
+  "Map for each bakend's candidates.")
 
 ;;
 ;; (@* "External" )
@@ -178,7 +181,8 @@
   (company-fuzzy--init)
   ;; XXX Don't know why, but you need to clear it first to make local
   ;; variables work!
-  (ht-clear company-fuzzy--ht-backends-candidates)
+  (ht-clear company-fuzzy--prefixes)
+  (ht-clear company-fuzzy--candidates)
   (unless company-fuzzy--recorded-backends
     (setq company-fuzzy--recorded-backends company-backends
           company-fuzzy--backends (company-fuzzy--normalize-backend-list company-fuzzy--recorded-backends))
@@ -237,13 +241,15 @@
 
 (defun company-fuzzy--furthest-prefix ()
   "Return the possible furthest (greatest length) prefix."
+  (ht-clear company-fuzzy--prefixes)
   (let ((final-len 0) final-prefix)
     (dolist (backend company-fuzzy--backends)
       (when-let* ((prefix (ignore-errors (funcall backend 'prefix)))
-                  (len (length prefix))
-                  ((< final-len len)))
-        (setq final-prefix prefix
-              final-len len)))
+                  (len (length prefix)))
+        (ht-set company-fuzzy--prefixes backend prefix)
+        (when (< final-len len)
+          (setq final-prefix prefix
+                final-len len))))
     final-prefix))
 
 (defun company-fuzzy--generic-prefix ()
@@ -291,7 +297,7 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
   "Return the backend symbol by using CANDIDATE as search index."
   (let ((match (ht-find (lambda (_backend cands)
                           (member candidate cands))
-                        company-fuzzy--ht-backends-candidates)))
+                        company-fuzzy--candidates)))
     (car match)))
 
 (defun company-fuzzy--call-backend (backend command key)
@@ -469,7 +475,7 @@ If optional argument FLIP is non-nil, reverse query and pattern order."
 
 (defun company-fuzzy--valid-prefix (backend)
   "Guess the current BACKEND prefix."
-  (let ((prefix (funcall backend 'prefix)))
+  (let ((prefix (ht-get company-fuzzy--prefixes backend)))
     (if (stringp prefix) prefix
       (thing-at-point 'symbol))))  ; Fallback
 
@@ -495,7 +501,7 @@ does best describe the for this candidate."
   (cl-case backend
     ((company-capf) (company-fuzzy--valid-prefix backend))
     (`company-c-headers
-     (when-let ((prefix (funcall backend 'prefix)))
+     (when-let ((prefix (ht-get company-fuzzy--prefixes backend)))
        ;; Skip the first < or " symbol
        (substring prefix 1 (length prefix))))
     (`company-files
@@ -503,7 +509,7 @@ does best describe the for this candidate."
      ;; for the best match.
      ;;
      ;; Example, if I have path `/path/to/dir'; then it shall return `dir'.
-     (when-let* ((prefix (funcall backend 'prefix))
+     (when-let* ((prefix (ht-get company-fuzzy--prefixes backend))
                  (splitted (split-string prefix "/" t))
                  (len-splitted (length splitted))
                  (last (nth (1- len-splitted) splitted)))
@@ -525,9 +531,9 @@ P.S.  Not all backend work this way."
   (cl-case backend
     (`company-c-headers
      ;; Skip the < or " symbol for the first character
-     (ignore-errors (substring (funcall backend 'prefix) 1 2)))
+     (ignore-errors (substring (ht-get company-fuzzy--prefixes backend) 1 2)))
     (`company-files
-     (when-let ((prefix (funcall backend 'prefix)))
+     (when-let ((prefix (ht-get company-fuzzy--prefixes backend)))
        (let* ((splitted (split-string prefix "/" t))
               (len-splitted (length splitted))
               (last (nth (1- len-splitted) splitted))
@@ -536,7 +542,8 @@ P.S.  Not all backend work this way."
            (setq new-prefix
                  (substring prefix 0 (- (length prefix) (length last)))))
          new-prefix)))
-    (t (ignore-errors (substring company-fuzzy--prefix 0 1)))))
+    (t (when (ht-get company-fuzzy--prefixes backend)
+         (ignore-errors (substring company-fuzzy--prefix 0 1))))))
 
 (defun company-fuzzy--backend-prefix-candidate (cand type)
   "Get the backend prefix by CAND and TYPE."
@@ -594,12 +601,12 @@ Insert .* between each char."
   (let (all-candidates)
     (ht-map (lambda (_backend cands)
               (setq all-candidates (append all-candidates cands)))
-            company-fuzzy--ht-backends-candidates)
+            company-fuzzy--candidates)
     (delete-dups all-candidates)))
 
 (defun company-fuzzy-all-candidates ()
   "Return the list of all candidates."
-  (ht-clear company-fuzzy--ht-backends-candidates)  ; Clean up
+  (ht-clear company-fuzzy--candidates)  ; Clean up
   (setq company-fuzzy--is-trigger-prefix-p (company-fuzzy--trigger-prefix-p))
   (dolist (backend company-fuzzy--backends)
     (if (memq backend company-fuzzy-passthrough-backends)
@@ -645,7 +652,7 @@ Insert .* between each char."
 (defun company-fuzzy--register-candidates (backend candidates)
   "Register CANDIDATES with BACKEND id."
   (delete-dups candidates)
-  (ht-set company-fuzzy--ht-backends-candidates backend (copy-sequence candidates)))
+  (ht-set company-fuzzy--candidates backend (copy-sequence candidates)))
 
 (defun company-fuzzy--collect-candidates (backend candidates)
   "Collect BACKEND's CANDIDATES by it's type."
@@ -659,7 +666,7 @@ Insert .* between each char."
    ;; NOTE: Synchronous
    ;;
    ;; This is the final ensure step before processing it to scoring phase.
-   ;; We confirm candidates by adding it to `company-fuzzy--ht-backends-candidates'.
+   ;; We confirm candidates by adding it to `company-fuzzy--candidates'.
    ;; The function `company-fuzzy--valid-candidates-p' is use to ensure the
    ;; candidates returns a list of strings, which this is the current only valid
    ;; type to this package.

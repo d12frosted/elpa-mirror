@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.2
-;; Package-Version: 20221018.1301
-;; Package-Commit: 8ff37cd27deb63dabd9a96d09aabf820ddc7e45b
+;; Package-Version: 20221023.1343
+;; Package-Commit: 7db031061ad290ef41ed807e149c68a040834ab0
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -187,9 +187,9 @@ write protected."
   :type 'number)
 
 (define-obsolete-variable-alias 'loophole-kmacro-by-read-key-finish-key
-  'loophole-read-key-termination-key "27.1")
+  'loophole-read-key-termination-key "0.8.2")
 (define-obsolete-variable-alias 'loophole-array-by-read-key-finish-key
-  'loophole-read-key-termination-key "27.1")
+  'loophole-read-key-termination-key "0.8.2")
 (defcustom loophole-read-key-termination-key (where-is-internal
                                               'keyboard-quit nil t)
   "Key sequence to finish `loophole-read-key-until-termination-key'."
@@ -238,7 +238,10 @@ If non-nil, `loophole-register' always reads tag string,
 but if symbol infer is set, `loophole-register' try to infer
 tag string before asking."
   :group 'loophole
-  :type 'boolean)
+  :type '(choice
+          (const :tag "No" nil)
+          (const :tag "Yes, but try to infer first" multiline)
+          (other :tag "Yes" t)))
 
 (defcustom loophole-make-describe-use-builtin nil
   "Flag if `loophole-describe' uses builtin `describe-keymap'.
@@ -271,7 +274,7 @@ in the buffer."
   :type 'string)
 
 (define-obsolete-variable-alias 'loophole-kmacro-by-recursive-edit-map
-  'loophole-defining-kmacro-map "27.1")
+  'loophole-defining-kmacro-map "0.8.2")
 (defvar loophole-defining-kmacro-map
   (let ((map (make-sparse-keymap)))
     (define-key map "\C-c[" #'loophole-end-kmacro)
@@ -286,14 +289,14 @@ Activity of this map is controled by
 `loophole-defining-kmacro-map-flag'.")
 
 (define-obsolete-variable-alias 'loophole-kmacro-by-recursive-edit-map-flag
-  'loophole-defining-kmacro-map-flag "27.1")
+  'loophole-defining-kmacro-map-flag "0.8.2")
 (defcustom loophole-defining-kmacro-map-flag t
   "Non-nil means `loophole-defining-kmacro-map' is enabled."
   :group 'loophole
   :type 'boolean)
 
 (define-obsolete-variable-alias 'loophole-kmacro-by-recursive-edit-map-tag
-  'loophole-defining-kmacro-map-tag "27.1")
+  'loophole-defining-kmacro-map-tag "0.8.2")
 (defcustom loophole-defining-kmacro-map-tag
   "kmacro[End: \\[loophole-end-kmacro], Abort: \\[loophole-abort-kmacro]]"
   "Tag string for `loophole-defining-kmacro-map'."
@@ -526,7 +529,7 @@ default `loophole-read-key' will be used for reading key."
   :type '(repeat sexp))
 
 (define-obsolete-variable-alias 'loophole-register-functions
-  'loophole-after-register-functions "27.1")
+  'loophole-after-register-functions "0.7.6")
 (defcustom loophole-after-register-functions nil
   "Hook for `loophole-register'.
 Functions added to this user option are called with one
@@ -535,7 +538,7 @@ argument, registered map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-unregister-functions
-  'loophole-after-unregister-functions "27.1")
+  'loophole-after-unregister-functions "0.7.6")
 (defcustom loophole-after-unregister-functions nil
   "Hook for `loophole-unregister'.
 Functions added to this user option are called with one
@@ -544,7 +547,7 @@ argument, unregistered map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-prioritize-functions
-  'loophole-after-prioritize-functions "27.1")
+  'loophole-after-prioritize-functions "0.7.6")
 (defcustom loophole-after-prioritize-functions nil
   "Hook for `loophole-prioritize'.
 Functions added to this user option are called with one
@@ -553,7 +556,7 @@ argument, prioritized map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-globalize-functions
-  'loophole-after-globalize-functions "27.1")
+  'loophole-after-globalize-functions "0.7.6")
 (defcustom loophole-after-globalize-functions nil
   "Hook for `loophole-globalize'.
 Functions added to this user option are called with one
@@ -562,7 +565,7 @@ argument, globalized map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-localize-functions
-  'loophole-after-localize-functions "27.1")
+  'loophole-after-localize-functions "0.7.6")
 (defcustom loophole-after-localize-functions nil
   "Hook for `loophole-localize'.
 Functions added to this user option are called with one
@@ -571,7 +574,7 @@ argument, localized map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-enable-functions
-  'loophole-after-enable-functions "27.1")
+  'loophole-after-enable-functions "0.7.6")
 (defcustom loophole-after-enable-functions nil
   "Hook for `loophole-enable'.
 Functions added to this user option are called with one
@@ -580,7 +583,7 @@ argument, enabled map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-disable-functions
-  'loophole-after-disable-functions "27.1")
+  'loophole-after-disable-functions "0.7.6")
 (defcustom loophole-after-disable-functions nil
   "Hook for `loophole-disable'.
 Functions added to this user option are called with one
@@ -589,7 +592,7 @@ argument, disabled map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-start-editing-functions
-  'loophole-after-start-editing-functions "27.1")
+  'loophole-after-start-editing-functions "0.7.6")
 (defcustom loophole-after-start-editing-functions nil
   "Hook for `loophole-start-editing'.
 Functions added to this user option are called with one
@@ -598,7 +601,7 @@ argument, which is being edited map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-stop-editing-functions
-  'loophole-after-stop-editing-functions "27.1")
+  'loophole-after-stop-editing-functions "0.7.6")
 (defcustom loophole-after-stop-editing-functions nil
   "Hook for `loophole-stop-editing'.
 Functions added to this user option are called with one
@@ -607,7 +610,7 @@ argument, which has been edited map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-globalize-editing-functions
-  'loophole-after-globalize-editing-functions "27.1")
+  'loophole-after-globalize-editing-functions "0.7.6")
 (defcustom loophole-after-globalize-editing-functions nil
   "Hook for `loophole-globalize-editing'.
 Functions added to this user option are called with one
@@ -616,7 +619,7 @@ argument, which is being edited map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-localize-editing-functions
-  'loophole-after-localize-editing-functions "27.1")
+  'loophole-after-localize-editing-functions "0.7.6")
 (defcustom loophole-after-localize-editing-functions nil
   "Hook for `loophole-localize-editing'.
 Functions added to this user option are called with one
@@ -625,7 +628,7 @@ argument, which is being edited map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-name-functions
-  'loophole-after-name-functions "27.1")
+  'loophole-after-name-functions "0.7.6")
 (defcustom loophole-after-name-functions nil
   "Hook for `loophole-name'.
 Functions added to this user option are called with one
@@ -634,7 +637,7 @@ argument, named new map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-merge-functions
-  'loophole-after-merge-functions "27.1")
+  'loophole-after-merge-functions "0.7.6")
 (defcustom loophole-after-merge-functions nil
   "Hook for `loophole-merge'.
 Functions added to this user option are called with one
@@ -643,7 +646,7 @@ argument, merger map variable."
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-duplicate-functions
-  'loophole-after-duplicate-functions "27.1")
+  'loophole-after-duplicate-functions "0.7.6")
 (defcustom loophole-after-duplicate-functions nil
   "Hook for `loophole-duplicate'.
 Functions added to this user option are called with two
@@ -3221,7 +3224,7 @@ Definition can be finished by calling `loophole-end-kmacro'."
 (defun loophole-read-key-for-kmacro-by-read-key (prompt)
   "`loophole-read-key' with checking finish and quit key.
 PROMPT is a string for reading key."
-  (declare (obsolete nil "27.1"))
+  (declare (obsolete nil "0.8.2"))
   (let ((finish (vconcat loophole-kmacro-by-read-key-finish-key))
         (quit (vconcat (where-is-internal 'keyboard-quit nil t))))
     (or (not (zerop (length finish)))
@@ -3232,7 +3235,7 @@ PROMPT is a string for reading key."
 (defun loophole-read-key-for-array-by-read-key (prompt)
   "`loophole-read-key' with checking finish and quit key.
 PROMPT is a string for reading key."
-  (declare (obsolete nil "27.1"))
+  (declare (obsolete nil "0.8.2"))
   (let ((finish (vconcat loophole-array-by-read-key-finish-key))
         (quit (vconcat (where-is-internal 'keyboard-quit nil t))))
     (or (not (zerop (length finish)))
@@ -4837,10 +4840,10 @@ For more detailed customization, see documentation string of
   :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
-         (set-default symbol value)
          (if value
              (loophole-turn-on-auto-prioritize)
-           (loophole-turn-off-auto-prioritize))))
+           (if (boundp symbol) (loophole-turn-off-auto-prioritize)))
+         (set-default symbol value)))
 
 (defcustom loophole-use-auto-stop-editing t
   "Flag if stop editing keymap automatically.
@@ -4856,10 +4859,10 @@ For more detailed customization, see documentation string of
   :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
-         (set-default symbol value)
          (if value
              (loophole-turn-on-auto-stop-editing)
-           (loophole-turn-off-auto-stop-editing))))
+           (if (boundp symbol) (loophole-turn-off-auto-stop-editing)))
+         (set-default symbol value)))
 
 (defcustom loophole-use-auto-resume t
   "Flag if resume Loophole automatically.
@@ -4875,10 +4878,10 @@ For more detailed customization, see documentation string of
   :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
-         (set-default symbol value)
          (if value
              (loophole-turn-on-auto-resume)
-           (loophole-turn-off-auto-resume))))
+           (if (boundp symbol) (loophole-turn-off-auto-resume)))
+         (set-default symbol value)))
 
 (defcustom loophole-use-auto-timer nil
   "Flag if start timer for disabling Loophole map automatically.
@@ -4894,10 +4897,10 @@ For more detailed customization, see documentation string of
   :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
-         (set-default symbol value)
          (if value
              (loophole-turn-on-auto-timer)
-           (loophole-turn-off-auto-timer))))
+           (if (boundp symbol) (loophole-turn-off-auto-timer)))
+         (set-default symbol value)))
 
 (defcustom loophole-use-auto-editing-timer nil
   "Flag if start timer for stopping editing session automatically.
@@ -4913,10 +4916,10 @@ For more detailed customization, see documentation string of
   :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
-         (set-default symbol value)
          (if value
              (loophole-turn-on-auto-editing-timer)
-           (loophole-turn-off-auto-editing-timer))))
+           (if (boundp symbol) (loophole-turn-off-auto-editing-timer)))
+         (set-default symbol value)))
 
 (defcustom loophole-use-auto-start-editing-for-existing-binding nil
   "Flag if start editing automatically when existing key is looked up.
@@ -4938,16 +4941,17 @@ session.
 For more detailed customization, see documentation string of
 `loophole-turn-on-auto-start-editing-for-existing-binding'."
   :group 'loophole
-  :type 'boolean
+  :type 'sexp
   :set (lambda (symbol value)
-         (set-default symbol value)
          (if value
              (if (listp value)
                  (apply
                   #'loophole-turn-on-auto-start-editing-for-existing-binding
                   value)
                (loophole-turn-on-auto-start-editing-for-existing-binding))
-           (loophole-turn-off-auto-start-editing-for-existing-binding))))
+           (if (boundp symbol)
+               (loophole-turn-off-auto-start-editing-for-existing-binding)))
+         (set-default symbol value)))
 
 (defcustom loophole-use-idle-prioritize nil
   "Flag if prioritize Loophole maps when idle.
@@ -4979,14 +4983,14 @@ for this variable.  Use `custom-set-variables' or call
 They setup idle timer."
   :risky t
   :group 'loophole
-  :type 'boolean
+  :type 'sexp
   :set (lambda (symbol value)
-         (set-default symbol value)
          (if value
              (if (listp value)
                  (apply #'loophole-turn-on-idle-prioritize value)
                (loophole-turn-on-idle-prioritize))
-           (loophole-turn-off-idle-prioritize))))
+           (if (boundp symbol) (loophole-turn-off-idle-prioritize)))
+         (set-default symbol value)))
 
 (defcustom loophole-use-idle-save nil
   "Flag if save Loophole maps when idle.
@@ -5023,14 +5027,14 @@ for this variable.  Use `custom-set-variables' or call
 They setup idle timer."
   :risky t
   :group 'loophole
-  :type 'boolean
+  :type 'sexp
   :set (lambda (symbol value)
-         (set-default symbol value)
          (if value
              (if (listp value)
                  (apply #'loophole-turn-on-idle-save value)
                (loophole-turn-on-idle-save))
-           (loophole-turn-off-idle-save))))
+           (if (boundp symbol) (loophole-turn-off-idle-save)))
+         (set-default symbol value)))
 
 ;;; A macro for defining keymap
 
@@ -5040,18 +5044,6 @@ They setup idle timer."
 (defconst loophole--define-map-font-lock-regexp
   "(\\(loophole-define-map\\)\\_>[ 	]*\\(\\(?:\\sw\\|\\s_\\|\\\\.\\)+\\)?"
   "Regexp that matches with head of `loophole-define-map' form.")
-
-(defcustom loophole-font-lock-multiline t
-  "Flag if multiline font lock for Loophole forms is enabled.
-
-This user option must be set before loading this file.
-
-If the value of this option is non-nil,
-`jit-lock-contextually' should be non-nil on buffers
-containing Loophole forms like `loophole-define-map' to
-properly rehighlight forms."
-  :group 'loophole
-  :type 'boolean)
 
 (defun loophole--define-map-font-lock-extend-region ()
   "Extending region of multiline font lock for `loophole-define-map'.
@@ -5107,7 +5099,91 @@ LIMIT is used for limiting search region."
 (defun loophole--define-map-add-font-lock-extend-region-function ()
   "Add `loophole--define-map-font-lock-extend-region' to hook."
   (add-hook 'font-lock-extend-region-functions
-             #'loophole--define-map-font-lock-extend-region nil t))
+            #'loophole--define-map-font-lock-extend-region nil t))
+
+(defun loophole--font-lock-keywords (&optional multiline)
+  "Return keyboards of Loophole for font lock.
+If the optional argument MULTILINE is non-nil, the keywords
+support multiline."
+  `((,(if multiline
+          #'loophole--define-map-font-lock-function
+        loophole--define-map-font-lock-regexp)
+     (1 font-lock-keyword-face)
+     (2 font-lock-variable-name-face nil t)
+     (3 font-lock-variable-name-face nil t)
+     (4 font-lock-doc-face t t))))
+
+(defun loophole-font-lock-add-keywords (&optional multiline)
+  "Add keyboards of Loophole for font lock.
+If the optional argument MULTILINE is non-nil, the keyboards
+supporting multiline are added."
+  (let ((keywords (loophole--font-lock-keywords multiline))
+        (modes '(emacs-lisp-mode lisp-interaction-mode)))
+    (dolist (mode modes)
+      (if multiline
+          (add-hook
+           (intern (concat (symbol-name mode) "-hook"))
+           #'loophole--define-map-add-font-lock-extend-region-function))
+      (font-lock-add-keywords mode keywords))
+    (dolist (buffer (buffer-list))
+      (with-current-buffer buffer
+        (when (memq major-mode modes)
+          (if multiline
+              (loophole--define-map-add-font-lock-extend-region-function))
+          (font-lock-add-keywords nil keywords))))))
+
+(defun loophole-font-lock-remove-keywords (&optional multiline)
+  "Remove keyboards of Loophole for font lock.
+If the optional argument MULTILINE is non-nil, the keyboards
+supporting multiline are removed."
+  (let ((keywords (loophole--font-lock-keywords multiline))
+        (modes '(emacs-lisp-mode lisp-interaction-mode)))
+    (dolist (mode modes)
+      (if multiline
+          (remove-hook
+           (intern (concat (symbol-name mode) "-hook"))
+           #'loophole--define-map-add-font-lock-extend-region-function))
+      (font-lock-remove-keywords mode keywords))
+    (dolist (buffer (buffer-list))
+      (with-current-buffer buffer
+        (when (memq major-mode modes)
+          (if multiline
+              (remove-hook 'font-lock-extend-region-functions
+                            #'loophole--define-map-font-lock-extend-region t))
+          (font-lock-remove-keywords nil keywords))))))
+
+(make-obsolete-variable
+ 'loophole-font-lock-multiline
+ "Font lock activity is now handled by `loophole-font-lock'."
+ "0.8.2")
+(defcustom loophole-font-lock 'multiline
+  "Flag if font lock for Loophole forms is enabled.
+
+Because this option uses :set property, `setq' does not work
+for this variable.  Use `custom-set-variables' or call
+`loophole-font-lock-add-keywords' or
+`loophole-font-lock-remove-keywords' manually.
+They setup some hooks and add or remove keyboards.
+
+If the value of this option is non-nil, font lock for
+Loophole form is enabled, and especially for the symbol
+multiline, multiline font lock is enabled.
+When using multiline, `jit-lock-contextually' should be
+non-nil on buffers containing Loophole forms like
+`loophole-define-map' to properly rehighlight forms."
+  :group 'loophole
+  :type '(choice
+          (const :tag "Disable font lock" nil)
+          (const :tag "Enable font lock with support for multiline" multiline)
+          (other :tag "Enable" t))
+  :set (lambda (symbol new-value)
+         (let ((old-value (if (boundp symbol) (symbol-value symbol))))
+           (if new-value
+               (unless old-value
+                 (loophole-font-lock-add-keywords (eq new-value 'multiline)))
+             (when old-value
+               (loophole-font-lock-remove-keywords (eq old-value 'multiline)))))
+         (set-default symbol new-value)))
 
 ;;;###autoload
 (defmacro loophole-define-map (map &optional spec docstring
@@ -5159,26 +5235,6 @@ TAG, GLOBAL and WITHOUT-BASE-MAP are passed to
      ,(unless global
         `(make-variable-buffer-local ',state))
      (loophole-register ',map ',state ,tag ,global ,without-base-map)))
-
-(let ((keywords `((,(if loophole-font-lock-multiline
-                        #'loophole--define-map-font-lock-function
-                      loophole--define-map-font-lock-regexp)
-                   (1 font-lock-keyword-face)
-                   (2 font-lock-variable-name-face nil t)
-                   (3 font-lock-variable-name-face nil t)
-                   (4 font-lock-doc-face t t))))
-      (modes '(emacs-lisp-mode lisp-interaction-mode)))
-  (dolist (mode modes)
-    (if loophole-font-lock-multiline
-        (add-hook (intern (concat (symbol-name mode) "-hook"))
-                  #'loophole--define-map-add-font-lock-extend-region-function))
-    (font-lock-add-keywords mode keywords))
-  (dolist (buffer (buffer-list))
-    (with-current-buffer buffer
-      (when (memq major-mode modes)
-        (if loophole-font-lock-multiline
-            (loophole--define-map-add-font-lock-extend-region-function))
-        (font-lock-add-keywords nil keywords)))))
 
 ;;; Aliases for main interfaces
 
