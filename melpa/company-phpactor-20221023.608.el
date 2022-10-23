@@ -6,8 +6,8 @@
 ;;         Mikael Kermorgant <mikael@kgtech.fi>
 ;; Created: 18 Apr 2018
 ;; Version: 0.1.0
-;; Package-Version: 20220920.555
-;; Package-Commit: 91594855ba4986f99c777e79ccb011fbf5925578
+;; Package-Version: 20221023.608
+;; Package-Commit: c652439afd052910d322a8fb9249e09d278a3f37
 ;; Keywords: tools, php
 ;; Package-Requires: ((emacs "24.3") (company "0.9.6") (phpactor "0.1.0"))
 ;; URL: https://github.com/emacs-php/phpactor.el
@@ -32,6 +32,9 @@
 
 ;;; Code:
 (require 'phpactor)
+(eval-when-compile
+  (require 'php-mode nil t)
+  (defvar php-mode-syntax-table))
 
 (declare-function company-begin-backend "ext:company" (backend &optional callback))
 
