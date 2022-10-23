@@ -2,10 +2,10 @@
 
 ;; Author: John Del Rosario <john2x@gmail.com>
 ;; URL: https://github.com/john2x/nameframe
-;; Package-Version: 20170406.119
-;; Package-Commit: d14186e99fa800d293e8e3072ba26f383c6624c6
-;; Version: 0.4.2-beta
-;; Package-Requires: ((nameframe "0.4.1-beta") (perspective "1.12"))
+;; Package-Version: 20221023.957
+;; Package-Commit: 06d3400750c6b33ae215b9ac2922ee4dafd6b506
+;; Version: 0.5.0-beta
+;; Package-Requires: ((nameframe "0.5.0-beta") (perspective "1.12"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

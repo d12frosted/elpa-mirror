@@ -2,9 +2,9 @@
 
 ;; Author: John Del Rosario <john2x@gmail.com>
 ;; URL: https://github.com/john2x/nameframe
-;; Package-Version: 20171107.56
-;; Package-Commit: aafb8c5c5fbe0510e2f5d5b6b6b5dd0b73abe5d8
-;; Version: 0.4.1-beta
+;; Package-Version: 20221023.957
+;; Package-Commit: 06d3400750c6b33ae215b9ac2922ee4dafd6b506
+;; Version: 0.5.0-beta
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -21,11 +21,13 @@
 
 ;;; Commentary:
 
-;; This package defines utility functions for managing frames by their names.
-;; It is meant to be used together with Projectile and perspective.el.
+;; This package defines utility functions for managing frames by their
+;; names.  It is meant to be used together with Projectile (or
+;; project.el) and perspective.el.
 ;;
-;; To enable Projectile integration, call (nameframe-projectile-init).
-;; To enable perspective.el integration, call (nameframe-perspective-init).
+;; To enable Projectile integration, call (nameframe-projectile-mode).
+;; To enable project.el integration, call (nameframe-project-mode).
+;; To enable perspective.el integration, call (nameframe-perspective-mode).
 
 ;;; Code:
 
