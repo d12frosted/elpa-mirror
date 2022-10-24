@@ -4,8 +4,8 @@
 ;;         Justin Burkett <justin@burkett.cc>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/tmalsburg/helm-bibtex
-;; Package-Version: 20221011.1854
-;; Package-Commit: 01b7fef069198bc440f38969f0a8f28cb7b6d5a0
+;; Package-Version: 20221024.857
+;; Package-Commit: 78f5931e1cc82e7ae2bcf0508cf31d0d1629a8dd
 ;; Version: 1.0.0
 ;; Package-Requires: ((parsebib "1.0") (s "1.9.0") (dash "2.6.0") (f "0.16.2") (cl-lib "0.5") (biblio "0.2") (emacs "26.1"))
 
@@ -581,7 +581,7 @@ fields listed above) as an alist."
     (message "Done (re)loading bibliography.")
     (cl-loop
      for file in files
-     append (cddr (assoc file bibtex-completion-cache)))))
+     append (reverse (cddr (assoc file bibtex-completion-cache))))))
 
 (defun bibtex-completion-resolve-crossrefs (files reparsed-files)
   "Expand all entries with fields from cross-referenced entries in FILES, assuming that only those files in REPARSED-FILES were reparsed whereas the other files in FILES were up-to-date."
