@@ -4,32 +4,32 @@ Source:  https://gitlab.com/emacs-geiser/guile.git
 
 Updating /mnt/store/melpa/working/geiser-guile/
 Checking out origin/HEAD
-Checking out 68fb9f4724440ddb854421f51a37ee88e1044af2
+Checking out 8e4ee5ccb6dc970f75c385cff2603fa3862b9611
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser-guile/
-  to /tmp/geiser-guilezcbdyt/geiser-guile-20221023.2313
+  to /tmp/geiser-guile09qz2c/geiser-guile-20221024.147
     geiser-guile.el -> geiser-guile.el
     geiser-guile.texi -> geiser-guile.texi
     src/geiser => src/geiser
-Generating /tmp/geiser-guilezcbdyt/geiser-guile-20221023.2313/geiser-guile.info
-Created geiser-guile-20221023.2313.tar containing:
-  geiser-guile-20221023.2313/
-  geiser-guile-20221023.2313/dir
-  geiser-guile-20221023.2313/geiser-guile-pkg.el
-  geiser-guile-20221023.2313/geiser-guile.el
-  geiser-guile-20221023.2313/geiser-guile.info
-  geiser-guile-20221023.2313/src/
-  geiser-guile-20221023.2313/src/geiser/
-  geiser-guile-20221023.2313/src/geiser/completion.scm
-  geiser-guile-20221023.2313/src/geiser/doc.scm
-  geiser-guile-20221023.2313/src/geiser/emacs.scm
-  geiser-guile-20221023.2313/src/geiser/evaluation.scm
-  geiser-guile-20221023.2313/src/geiser/modules.scm
-  geiser-guile-20221023.2313/src/geiser/utils.scm
-  geiser-guile-20221023.2313/src/geiser/xref.scm
-Built geiser-guile in 6.618s, finished at 2022-10-24T00:32:37+0000
+Generating /tmp/geiser-guile09qz2c/geiser-guile-20221024.147/geiser-guile.info
+Created geiser-guile-20221024.147.tar containing:
+  geiser-guile-20221024.147/
+  geiser-guile-20221024.147/dir
+  geiser-guile-20221024.147/geiser-guile-pkg.el
+  geiser-guile-20221024.147/geiser-guile.el
+  geiser-guile-20221024.147/geiser-guile.info
+  geiser-guile-20221024.147/src/
+  geiser-guile-20221024.147/src/geiser/
+  geiser-guile-20221024.147/src/geiser/completion.scm
+  geiser-guile-20221024.147/src/geiser/doc.scm
+  geiser-guile-20221024.147/src/geiser/emacs.scm
+  geiser-guile-20221024.147/src/geiser/evaluation.scm
+  geiser-guile-20221024.147/src/geiser/modules.scm
+  geiser-guile-20221024.147/src/geiser/utils.scm
+  geiser-guile-20221024.147/src/geiser/xref.scm
+Built geiser-guile in 6.990s, finished at 2022-10-24T03:44:07+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 454 Oct 23 21:13 packages/geiser-guile-20221022.2254.entry
- 72K -rw-r--r-- 1 root root 70K Oct 23 21:13 packages/geiser-guile-20221022.2254.tar
 4.0K -rw-r--r-- 1 root root 454 Oct 24 00:32 packages/geiser-guile-20221023.2313.entry
  72K -rw-r--r-- 1 root root 70K Oct 24 00:32 packages/geiser-guile-20221023.2313.tar
+4.0K -rw-r--r-- 1 root root 453 Oct 24 03:44 packages/geiser-guile-20221024.147.entry
+ 72K -rw-r--r-- 1 root root 70K Oct 24 03:44 packages/geiser-guile-20221024.147.tar

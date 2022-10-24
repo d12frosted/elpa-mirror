@@ -16,6 +16,8 @@
 ;; Copyright (C) 2014 imakado
 ;; Created: :2014-10-23
 ;; Version: 0.12
+;; Package-Version: 20141024.923
+;; Package-Commit: 00a1e7eea2cb9e9066343a23927d6c747707902f
 ;; Keywords: convenience
 ;; URL: https://github.com/imakado/emacs-imakado
 
