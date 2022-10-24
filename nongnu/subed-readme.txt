@@ -2,7 +2,6 @@ Table of Contents
 ─────────────────
 
 subed
-.. Important change in v1.0.0
 .. Features
 ..... mpv integration (optional)
 .. Installation
@@ -12,6 +11,7 @@ subed
 .. Getting started
 .. Troubleshooting
 ..... subed-mpv: Service name too long
+.. Important change in v1.0.0
 .. Contributions
 .. License
 
@@ -21,33 +21,19 @@ subed
 
   subed is an Emacs major mode for editing subtitles while playing the
   corresponding video with [mpv].  At the moment, the only supported
-  formats are SubRip ( `.srt'), WebVTT ( `.vtt' ), and Advanced
-  SubStation Alpha ( `.ass', experimental ).
+  formats are:
+  • SubRip ( `.srt')
+  • WebVTT ( `.vtt' )
+  • Advanced SubStation Alpha ( `.ass', experimental )
+  • Tab-separated values ( `.tsv', experimental ) - as exported by
+    Audacity for labels. TSVs are not recognized automatically because
+    it's a common data format, but you can use `subed-tsv-mode' to turn
+    it on in a buffer.
 
   <file:https://raw.githubusercontent.com/rndusr/subed/master/screenshot.jpg>
 
 
 [mpv] <https://mpv.io/>
-
-Important change in v1.0.0
-──────────────────────────
-
-  `subed' now uses `subed-srt-mode', `subed-vtt-mode', and
-  `subed-ass-mode' instead of directly using `subed-mode'. These modes
-  should be automatically associated with the `.vtt', `.srt', and `.ass'
-  extensions. If the generic `subed-mode' is loaded instead of the
-  format-specific mode, you may get an error such as:
-
-  ┌────
-  │ Error in post-command-hook (subed--post-command-handler): (cl-no-applicable-method subed--subtitle-id)
-  └────
-
-  If you set `auto-mode-alist' manually in your config, please make sure
-  you associate extensions the appropriate format-specific mode instead
-  of `subed-mode'. The specific backend functions (ex:
-  `subed-srt--jump-to-subtitle-id') are also deprecated in favor of
-  using generic functions such as `subed-jump-to-subtitle-id'.
-
 
 Features
 ────────
@@ -97,10 +83,15 @@ Features
     starts. Use `M-x customize-group' `subed' to configure trimming to
     happen automatically when buffers are loaded or saved, which time is
     adjusted, and how much time to leave between subtitles.
+  • Convert between formats with `M-x subed-convert'.
 
 
 mpv integration (optional)
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Using network sockets to control MPV works on Linux and on Mac OS X,
+  but not on Microsoft Windows due to the lack of Unix-style sockets. On
+  Microsoft Windows, you will not be able to synchronize with MPV.
 
   • Open videos with `C-c C-v' or automatically when opening a subtitle
     file if the video file is named like the subtitle file but with a
@@ -234,6 +225,26 @@ subed-mpv: Service name too long
   is probably because the path to the socket used to communicate with
   MPV is too long for your operating system. You can use `M-x customize'
   to set `subed-mpv-socket-dir' to a shorter path.
+
+
+Important change in v1.0.0
+──────────────────────────
+
+  `subed' now uses `subed-srt-mode', `subed-vtt-mode', and
+  `subed-ass-mode' instead of directly using `subed-mode'. These modes
+  should be automatically associated with the `.vtt', `.srt', and `.ass'
+  extensions. If the generic `subed-mode' is loaded instead of the
+  format-specific mode, you may get an error such as:
+
+  ┌────
+  │ Error in post-command-hook (subed--post-command-handler): (cl-no-applicable-method subed--subtitle-id)
+  └────
+
+  If you set `auto-mode-alist' manually in your config, please make sure
+  you associate extensions the appropriate format-specific mode instead
+  of `subed-mode'. The specific backend functions (ex:
+  `subed-srt--jump-to-subtitle-id') are also deprecated in favor of
+  using generic functions such as `subed-jump-to-subtitle-id'.
 
 
 Contributions

@@ -341,7 +341,7 @@
 		   ("Fanael Linithien" . "fanael4@gmail.com"))
 		  (:commit . "f80f63822ffae78de38dbe72cacaeb1aaa96c732"))])
  (editorconfig .
-	       [(0 8 2)
+	       [(0 9 0)
 		((cl-lib
 		  (0 5))
 		 (nadvice
@@ -352,7 +352,8 @@
 		((:url . "https://github.com/editorconfig/editorconfig-emacs#readme")
 		 (:maintainer "EditorConfig Team" . "editorconfig@googlegroups.com")
 		 (:authors
-		  ("EditorConfig Team" . "editorconfig@googlegroups.com")))])
+		  ("EditorConfig Team" . "editorconfig@googlegroups.com"))
+		 (:commit . "bcd377596fc0c5c315598adaa59fcd0455916f8d"))])
  (elixir-mode .
 	      [(2 4 0)
 	       ((emacs
@@ -508,7 +509,7 @@
 		   (:authors
 		    ("https://turbocafe.keybase.pub")))])
  (flymake-popon .
-		[(0 3)
+		[(0 4)
 		 ((emacs
 		   (26 1))
 		  (flymake
@@ -523,7 +524,7 @@
 		  (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 		  (:authors
 		   ("Akib Azmain Turja" . "akib@disroot.org"))
-		  (:commit . "3255a917fc90d946a7a6f04ef7f7632c9a89ac94"))])
+		  (:commit . "e64b4a188e50cab0d61fe569d8d6912492334c9b"))])
  (focus .
 	[(1 0 1)
 	 ((emacs
@@ -1637,7 +1638,7 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 0 10)
+	[(1 0 12)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
@@ -1646,7 +1647,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:authors
 	   ("Random User"))
-	  (:commit . "b10ab60a4e567a1fb7d7702d146ed7055b203113"))])
+	  (:commit . "e528c001d98fcd526fd04ff49caef5c475d74f3b"))])
  (sweeprolog .
 	     [(0 8 0)
 	      ((emacs

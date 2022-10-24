@@ -1,5 +1,5 @@
 (geiser-guile .
-	      [(20221022 2254)
+	      [(20221023 2313)
 	       ((emacs
 		 (25 1))
 		(transient
@@ -7,7 +7,7 @@
 		(geiser
 		 (0 26 1)))
 	       "Guile and Geiser talk to each other" tar
-	       ((:commit . "a2ef4dbd7d63896f012896d497b17d8162f82178")
+	       ((:commit . "68fb9f4724440ddb854421f51a37ee88e1044af2")
 		(:authors
 		 ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
 		(:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
