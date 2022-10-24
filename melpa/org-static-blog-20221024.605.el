@@ -6,8 +6,8 @@
 ;; luhuaei, zngguvnf, Qiantan Hong, Jonas Bernoulli, Théo Jacquin,
 ;; K. Scarlet, zsxh
 ;; URL: https://github.com/bastibe/org-static-blog
-;; Package-Version: 20221018.933
-;; Package-Commit: bebd826a7664bd4140ad4d8b592ba1d2c5decd76
+;; Package-Version: 20221024.605
+;; Package-Commit: f830e027986df120be4f199f4f36b8f2948f3247
 ;; Version: 1.6.0
 ;; Package-Requires: ((emacs "24.3"))
 
@@ -604,7 +604,7 @@ published HTML version of the post."
          (root-dir (if (string-prefix-p true-posts-directory true-post-filename)
                        true-posts-directory
                      (file-truename org-static-blog-drafts-directory))))
-    (concat (file-name-sans-extension (file-relative-name true-post-filename root-dir)) ".html"))))
+    (concat (file-name-sans-extension (file-relative-name true-post-filename root-dir)) ".html")))
 
 (defun org-static-blog-get-relative-path (post-filename)
   "Removes absolute directory path from POST-FILENAME and changes file extention
