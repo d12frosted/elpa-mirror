@@ -6,10 +6,10 @@
 ;; Author: Bastian Bechtold
 ;; Maintainer: Bastian Bechtold <bastibe.dev@mailbox.org>, cage <cage-dev@twistfold.it>
 ;; URL: https://github.com/bastibe/annotate.el
-;; Package-Version: 20220930.1003
-;; Package-Commit: 0c3342bd55c827b8e4529fd5ee2aa40053a334f6
+;; Package-Version: 20221024.1829
+;; Package-Commit: 479aa90fd6a4db69361339c0058190423fe839e7
 ;; Created: 2015-06-10
-;; Version: 1.8.0
+;; Version: 1.8.1
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -60,7 +60,7 @@
 ;;;###autoload
 (defgroup annotate nil
   "Annotate files without changing them."
-  :version "1.8.0"
+  :version "1.8.1"
   :group 'text)
 
 (defvar annotate-mode-map
@@ -140,7 +140,7 @@ that Emacs passes to the diff program."
   "Marker that is written before every integrated annotation."
   :type 'string)
 
-(defcustom annotate-integrate-higlight ?~
+(defcustom annotate-integrate-highlight ?~
   "Character used to underline an annotated text."
   :type 'character)
 
@@ -944,8 +944,8 @@ annotate-actual-comment-end."
                                        export-buffer
                                      (current-buffer))))
       (with-current-buffer output-buffer
+        (erase-buffer)
         (when as-new-buffer
-          (erase-buffer)
           (funcall parent-buffer-mode))
         (cl-loop
          for buffer-line in buffer-lines
@@ -968,8 +968,8 @@ annotate-actual-comment-end."
                              (annotated-lines (annotate--split-lines (overlay-get overlay
                                                                                   'annotation)))
                              (ov-length       (- relative-end relative-start))
-                             (underline       (make-string (1- ov-length)
-                                                           annotate-integrate-higlight)))
+                             (underline       (make-string ov-length
+                                                           annotate-integrate-highlight)))
                         (insert (annotate-wrap-in-comment padding underline) "\n")
                         (when (annotate-chain-last-p overlay)
                           (when use-annotation-marker

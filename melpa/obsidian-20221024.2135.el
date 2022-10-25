@@ -4,10 +4,10 @@
 
 ;; Author: Mykhaylo Bilyanskyy
 ;; URL: https://github.com./licht1stein/obsidian.el
-;; Package-Version: 20221018.941
-;; Package-Commit: d4eb9533bb6a5acec22ad46632ce04aa798ca827
+;; Package-Version: 20221024.2135
+;; Package-Commit: d5431f131668d7d55708f46ee9836d2b4ad35c2f
 ;; Keywords: obsidian, pkm, convenience
-;; Version: 1.1.6
+;; Version: 1.1.7
 ;; Package-Requires: ((emacs "27.2") (s "1.12.0") (dash "2.13") (markdown-mode "2.5") (elgrep "1.0.0") (yaml "0.5.1"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -114,6 +114,12 @@ When run interactively asks user to specify the path."
   "Return t if FILE is not in .trash of Obsidian."
   (not (s-contains-p "/.trash" file)))
 
+(defun obsidian-user-directory-p (&optional file)
+  "Return t if FILE is a user defined directory inside `obsidian-directory'."
+  (and (file-directory-p file)
+       (not (s-contains-p "/.obsidian" file))
+       (not (s-contains-p "/.trash" file))))
+
 (defun obsidian-file-p (&optional file)
   "Return t if FILE is an obsidian.el file, nil otherwise.
 
@@ -147,6 +153,11 @@ Obsidian notes files:
 - Pass the `obsidian-file-p' check"
   (->> (directory-files-recursively obsidian-directory "\.*$")
        (-filter #'obsidian-file-p)))
+
+(defun obsidian-list-all-directories ()
+  "Lists all Obsidian sub folders."
+  (->> (directory-files-recursively obsidian-directory "" t)
+       (-filter #'obsidian-user-directory-p)))
 
 (defun obsidian-read-file-or-buffer (&optional file)
   "Return string contents of a file or current buffer.
@@ -361,6 +372,22 @@ In the `obsidian-inbox-directory' if set otherwise in `obsidian-directory' root.
          (choice (completing-read "Jump to: " choices))
          (target (obsidian--get-alias choice (gethash choice dict))))
     (find-file target)))
+
+;;;###autoload
+(defun obsidian-move-file ()
+  "Move current note to another directory."
+  (interactive)
+  (when (not (obsidian-file-p (buffer-file-name)))
+    (user-error "Current file is not an obsidian-file"))
+  (let* ((dict (make-hash-table :test 'equal))
+         (_ (-map (lambda (d)
+                    (puthash (file-relative-name d obsidian-directory) d dict))
+                  (obsidian-list-all-directories)))
+         (choice (completing-read "Move to: " (hash-table-keys dict)))
+         (new-file-directory (file-name-as-directory (gethash choice dict)))
+         (new-file-path (expand-file-name (file-name-nondirectory (buffer-file-name)) new-file-directory)))
+    (rename-file (buffer-file-name) new-file-directory)
+    (write-file new-file-path)))
 
 (defun obsidian-prepare-file-path (s)
   "Replace %20 with spaces in file path.

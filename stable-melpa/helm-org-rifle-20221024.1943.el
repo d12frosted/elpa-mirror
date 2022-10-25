@@ -2,9 +2,9 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Url: http://github.com/alphapapa/helm-org-rifle
-;; Package-Version: 20200512.1943
-;; Package-Commit: 263f56d70112f5d0496684c89a2aa07959e0a95f
-;; Version: 1.7.1
+;; Package-Version: 20221024.1943
+;; Package-Commit: 74725b63e71b1c941f354e6c8a2cf8b5ee7ef563
+;; Version: 1.8-pre
 ;; Package-Requires: ((emacs "24.4") (dash "2.12") (f "0.18.1") (helm "1.9.4") (s "1.10.0"))
 ;; Keywords: hypermedia, outlines
 
@@ -301,6 +301,10 @@ Note that the separator is also \"reversed\" to indicate that the
 paths are reversed.  Also, when `helm-org-rifle-fontify-headings'
 is enabled, the fontification typically makes it obvious that the
 paths are reversed, depending on your Org faces."
+  :type 'boolean)
+
+(defcustom helm-org-rifle-show-level-stars nil
+  "Show heading level stars before each heading."
   :type 'boolean)
 
 (defcustom helm-org-rifle-re-prefix
@@ -1061,7 +1065,9 @@ because it uses variables in its outer scope."
                                   (setq path (s-join "/" (-snoc parts last))))))
                             (concat path tags))
                         ;; Not fontifying
-                        (s-join "/" (list (or path (org-get-outline-path)) heading))))
+                        (s-join "/" (cl-typecase path
+                                      (null (org-get-outline-path))
+                                      (list path)))))
                   ;; No path or not showing path
                   (if helm-org-rifle-fontify-headings
                       (helm-org-rifle-fontify-like-in-org-mode
@@ -1083,7 +1089,9 @@ because it uses variables in its outer scope."
           (setq entry
                 (if helm-org-rifle-show-full-contents
                     (s-join helm-org-rifle-heading-contents-separator
-                            (list heading
+                            (list (if helm-org-rifle-show-level-stars
+                                      (concat (s-repeat level "*") " " heading)
+                                    heading)
                                   (buffer-substring (save-excursion
                                                       (goto-char node-beg)
                                                       (org-end-of-meta-data)
@@ -1091,7 +1099,9 @@ because it uses variables in its outer scope."
                                                     node-end)))
                   ;; Show context strings
                   (s-join helm-org-rifle-heading-contents-separator
-                          (list heading
+                          (list (if helm-org-rifle-show-level-stars
+                                    (concat (s-repeat level "*") " " heading)
+                                  heading)
                                 (s-join helm-org-rifle-ellipsis-string
                                         matched-words-with-context)))))
           ;; Return list in format: text-for-display node-beg

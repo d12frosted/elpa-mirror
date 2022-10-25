@@ -1,8 +1,8 @@
 ;;; rubocopfmt.el --- Minor-mode to format Ruby code with RuboCop on save
 
 ;; Version: 0.4.1
-;; Package-Version: 20200713.1144
-;; Package-Commit: b4be08469c9d8d95b2847c625241d9be8fa34ed0
+;; Package-Version: 20221024.2139
+;; Package-Commit: 9b0023158cf2517fc07938f678fac8b67f1c6da3
 ;; Keywords: convenience wp edit ruby rubocop
 ;; Package-Requires: ((cl-lib "0.5"))
 ;; URL: https://github.com/jimeh/rubocopfmt.el
@@ -43,7 +43,7 @@
 
 ;;; Commentary:
 ;;
-;; This library formats Ruby code by using rubocop and it's --auto-correct
+;; This library formats Ruby code by using rubocop and it's --autocorrect
 ;; option.
 
 ;;; Code:
@@ -93,7 +93,7 @@ inside a `before-save-hook'."
 
 (defcustom rubocopfmt-include-unsafe-cops nil
   "When t include unsafe cops when auto-correcting.
-Determines if --auto-correct or --auto-correct-all will be passed to rubocop."
+Determines if --autocorrect or --autocorrect-all will be passed to rubocop."
   :type 'boolean
   :group 'rubocopfmt)
 
@@ -253,8 +253,7 @@ If FILE is not found in DIRECTORY, the parent of DIRECTORY will be searched."
          (src-dir (file-name-directory buffer-file))
          (src-file (file-name-nondirectory buffer-file))
          (fmt-command rubocopfmt-rubocop-command)
-         (auto-correct-flag (if rubocopfmt-include-unsafe-cops
-                                "--auto-correct-all" "--auto-correct"))
+         (auto-correct-flag (if rubocopfmt-include-unsafe-cops "-A" "-a"))
          (fmt-args (list "--stdin" src-file
                          auto-correct-flag
                          "--format" "emacs")))

@@ -293,7 +293,9 @@
   `annotate-print-annotation-under-cursor' value *both* non null,
   placing the cursor over an annotated text region will print the
   annotation's text in the minibuffer prefixed by the value of
-  customizable variable `annotate-print-annotation-under-cursor-prefix'.
+  customizable variable `annotate-print-annotation-under-cursor-prefix',
+  after a delay (in seconds) defined by the variable
+  `annotate-print-annotation-under-cursor-delay'.
 
   Another alternative way to show annotations is provided by the
   command: `annotate-summary-of-file-from-current-pos'.
@@ -310,6 +312,7 @@
   • `annotate-use-echo-area'
   • `annotate-print-annotation-under-cursor'
   • `annotate-print-annotation-under-cursor-prefix'
+  • `annotate-print-annotation-under-cursor-delay'
   • `annotate-summary-of-file-from-current-pos'.
 
 

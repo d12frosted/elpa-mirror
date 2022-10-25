@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/hammy.el
-;; Package-Version: 20221020.2054
-;; Package-Commit: 03a7a0daecefc62d5cd315cb7ca4a27eaca00cd7
+;; Package-Version: 20221024.2040
+;; Package-Commit: 09249e36715ee33e3abd9cdda9df3bea739ff207
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "28.1") (ts "0.2.2"))
 ;; Keywords: convenience
@@ -78,7 +78,7 @@ Called with one argument, the hammy.")
   (after nil :documentation "Function(s) called after timer has completed.
 Called with one argument, the hammy.  Called when the hammy's
 completion predicate returns non-nil.")
-  (stopping nil :documentation "Function(s) called after stopping timer.
+  (stopped nil :documentation "Function(s) called after stopping timer.
 Called with one argument, the hammy.  Called by `hammy-stop'.")
   (complete-p nil :documentation "Predicate that returns non-nil when hammy is complete.
 Called with one argument, the hammy.  Called after each interval
@@ -95,11 +95,14 @@ run in.")
   (before nil :documentation "Function(s) called before interval begins.
 Called with one argument, the Hammy timer.")
   (after nil :documentation "Function(s) called when interval ends.
-Called with one argument, the Hammy timer.")
+Called with one argument, the Hammy timer.  Note that when an
+interval's `advance' slot is not `auto', the `after' slot's
+functions are not called until the user manually advances to the
+next interval.")
   (advance 'auto :documentation "How to advance to the next interval when this one ends.
-If nil, do so automatically.  Otherwise, a list of functions to
-call when the interval is ready to be advanced, and don't advance
-until the user calls `hammy-next'."))
+If `auto', do so automatically.  Otherwise, a list of functions
+to call when the interval is ready to be advanced, and don't
+advance until the user calls `hammy-next'."))
 
 (define-error 'hammy-complete "Hammy is over!")
 
@@ -301,8 +304,8 @@ Define a hammy with `hammy-define'.")
 Called with the hammy."
   :type 'hook)
 
-(defcustom hammy-stop-hook '((lambda (hammy)
-                               (hammy-log hammy (hammy-summary hammy))))
+(defcustom hammy-stopped '((lambda (hammy)
+                             (hammy-log hammy (hammy-summary hammy))))
   "Functions run when a hammy is stopped.
 Called with the hammy."
   :type 'hook)
@@ -372,9 +375,7 @@ interval with completion)."
                        :interval (cl-typecase current-prefix-arg
                                    (null nil)
                                    (list (hammy-complete-interval hammy :prompt "Start with interval: "))))))
-  (unless (and (= 0 (hammy-cycles hammy))
-               (null (hammy-history hammy))
-               (null (hammy-interval hammy)))
+  (when (hammy-interval hammy)
     (user-error "Hammy already started: %s" (hammy-format hammy)))
   (run-hook-with-args 'hammy-start-hook hammy)
   (hammy-call (hammy-before hammy) hammy)
@@ -384,7 +385,7 @@ interval with completion)."
 
 ;;;###autoload
 (defun hammy-start-org-clock-in (&rest _ignore)
-  "Call `org-clock-in', then `hammy-start'.
+  "Call `org-clock-in' and start a hammy (or use an already-started one).
 The Org task will then automatically be clocked out during the
 hammy's second interval (and when the hammy is stopped), and back
 in when the first interval resumes.
@@ -394,13 +395,15 @@ first interval is the work interval (i.e. the one during which
 the task should be clocked in)."
   (interactive)
   (call-interactively #'org-clock-in)
-  (let ((hammy (call-interactively #'hammy-start)))
+  (let ((hammy (hammy-complete "Clock in with Hammy: " hammy-hammys)))
     (cl-macrolet ((pushfn (fn place)
                           `(cl-pushnew ,fn ,place :test #'equal)))
       (pushfn #'hammy--org-clock-in (hammy-interval-before (hammy-interval hammy)))
       ;; FIXME: The user is clocked out when the interval "ends", but before the user advances it.
       (pushfn #'hammy--org-clock-out (hammy-interval-after (hammy-interval hammy)))
-      (pushfn #'hammy--org-clock-out (hammy-stopping hammy)))
+      (pushfn #'hammy--org-clock-out (hammy-stopped hammy)))
+    (unless (hammy-interval hammy)
+      (hammy-start hammy))
     hammy))
 
 (defun hammy-stop (hammy &optional quietly)
@@ -414,7 +417,6 @@ If QUIETLY, don't say so."
                 hammy)
                ;; TODO: Logging, totals, etc.
                (message "Stopped."))
-    (setf hammy-active (remove hammy hammy-active))
     (when internal-timer
       (cancel-timer internal-timer)
       (setf (hammy-timer hammy) nil)
@@ -425,13 +427,13 @@ If QUIETLY, don't say so."
       (cancel-timer reminder)
       (setf (alist-get 'reminder (hammy-etc hammy)) nil))
     ;; Run the hook after having stopped the hammy, so any errors in
-    ;; stop-hook functions won't prevent the hammy from stopping
+    ;; stopped functions won't prevent the hammy from stopping
     ;; correctly; and do it before resetting the hammy, so functions
     ;; in the stop hook can access the hammy's data before resetting.
     (hammy--record-interval hammy)
-    (run-hook-with-args 'hammy-stop-hook hammy)
-    (hammy-call (hammy-stopping hammy) hammy)
-    (hammy-reset hammy)
+    (run-hook-with-args 'hammy-stopped hammy)
+    (hammy-call (hammy-stopped hammy) hammy)
+    (setf hammy-active (remove hammy hammy-active))
     hammy))
 
 (cl-defun hammy-next (hammy &key duration advance interval)
@@ -459,21 +461,17 @@ prompt for the interval with completion)."
                () (or (and (hammy-interval hammy)
                            (eq 'auto (hammy-interval-advance (hammy-interval hammy))))
                       advance)))
-    (unless (and (= 0 (hammy-cycles hammy))
-                 (null (hammy-history hammy))
-                 (null (hammy-interval hammy)))
-      ;; Hammy already started, interval completed.
-      (hammy--record-interval hammy)
-      (run-hook-with-args 'hammy-interval-hook hammy
-                          (format "Interval ended: %s"
-                                  (hammy-interval-name (hammy-interval hammy))))
-      (hammy-call (hammy-interval-after (hammy-interval hammy)) hammy)
+    (when (hammy-interval hammy)
+      ;; Hammy already started, interval completed (or ready to be
+      ;; advanced).
       (when (and (advancep)
                  (equal (hammy-interval hammy)
                         (ring-ref (hammy-intervals hammy)
                                   (1- (ring-length (hammy-intervals hammy))))))
         ;; Cycle completed.
         (cl-incf (hammy-cycles hammy))
+        ;; FIXME: Not sure if it makes sense to run the cycle hook
+        ;; here or later, after running other hooks.
         (run-hook-with-args 'hammy-cycle-hook hammy)))
     (if (and (advancep)
              (hammy-complete-p hammy)
@@ -509,13 +507,23 @@ prompt for the interval with completion)."
               (hammy-log hammy "Waiting for user to advance...")
               (setf (hammy-overduep hammy) t)
               (hammy-call (hammy-interval-advance (hammy-interval hammy)) hammy))
-          ;; Advancing.
-          (hammy-log hammy (format "Elapsed: %s" (hammy-format-current-times hammy)))
+          ;; Automatically advancing, manually advancing, or starting the hammy.
+          (when (hammy-interval hammy)
+            ;; Advancing to the next interval (rather than starting the hammy).
+            ;; NOTE: We call the interval-hook and the interval's after
+            ;; functions when actually advancing to the next interval.
+            (hammy--record-interval hammy)
+            (hammy-log hammy (format "Elapsed: %s" (hammy-format-current-times hammy)))
+            (run-hook-with-args 'hammy-interval-hook hammy
+                                (format "Interval ended: %s"
+                                        (hammy-interval-name (hammy-interval hammy))))
+            (hammy-call (hammy-interval-after (hammy-interval hammy)) hammy))
           (setf (hammy-interval hammy) next-interval
                 (hammy-current-interval-start-time hammy) (current-time)
                 (hammy-current-duration hammy) next-duration
                 (hammy-overduep hammy) nil)
           (when next-duration
+            ;; Starting next interval.
             (hammy-call (hammy-interval-before next-interval) hammy)
             ;; TODO: Mention elapsed time of just-completed interval.
             (run-hook-with-args 'hammy-interval-hook hammy
@@ -746,6 +754,9 @@ Summary includes elapsed times, etc."
         (progn
           (when hammy-mode-update-mode-line-continuously
             ;; TODO: Only run this timer when a hammy is running.
+            (when (timerp hammy-mode-update-mode-line-timer)
+              ;; Cancel any existing timer.  Generally shouldn't happen, but not impossible.
+              (cancel-timer hammy-mode-update-mode-line-timer))
             (setf hammy-mode-update-mode-line-timer (run-with-timer 1 1 #'hammy--mode-line-update)))
           (add-hook 'hammy-interval-hook #'hammy--mode-line-update)
           ;; Avoid adding the lighter multiple times if the mode is activated again.
@@ -944,7 +955,7 @@ Summary includes elapsed times, etc."
                                   (notify "Break time is over!")
                                   (when hammy-sound-end-break
                                     (play-sound-file hammy-sound-end-break))))))
-  :stopping (do (setf (alist-get 'unused-break etc) nil)))
+  :stopped (do (setf (alist-get 'unused-break etc) nil)))
 
 ;;;; Footer
 

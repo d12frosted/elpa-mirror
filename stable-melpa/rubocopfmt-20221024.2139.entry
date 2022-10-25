@@ -1,9 +1,9 @@
 (rubocopfmt .
-	    [(20200713 1144)
+	    [(20221024 2139)
 	     ((cl-lib
 	       (0 5)))
 	     "Minor-mode to format Ruby code with RuboCop on save" single
-	     ((:commit . "b4be08469c9d8d95b2847c625241d9be8fa34ed0")
+	     ((:commit . "9b0023158cf2517fc07938f678fac8b67f1c6da3")
 	      (:authors
 	       ("Jim Myhrberg"))
 	      (:maintainer "Jim Myhrberg")
