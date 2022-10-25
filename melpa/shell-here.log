@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware/shell-here.git
 
 Updating /mnt/store/melpa/working/shell-here/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/emacs-weirdware/shell-here.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out eeb437ff26d62a5009046b1b3b4503b768e3131a
+Built shell-here in 5.574s, finished at 2022-10-25T13:29:47+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Oct 25 13:29 packages/shell-here-20220102.1703.el
+4.0K -rw-r--r-- 1 root root  330 Oct 25 13:29 packages/shell-here-20220102.1703.entry
