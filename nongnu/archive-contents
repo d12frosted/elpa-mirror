@@ -1407,15 +1407,16 @@
 	  (:authors
 	   ("Tomohiro Matsuyama" . "m2ym.pub@gmail.com")))])
  (projectile .
-	     [(2 5 0)
+	     [(2 6 0)
 	      ((emacs
 		(25 1)))
 	      "Manage and navigate projects in Emacs easily" tar
 	      ((:url . "https://github.com/bbatsov/projectile")
+	       (:keywords "project" "convenience")
 	       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 	       (:authors
 		("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-	       (:keywords "project" "convenience"))])
+	       (:commit . "e3bae8c91bb69c501dcc2e74f9ea14e89cf0a09c"))])
  (proof-general .
 		[(4 5)
 		 ((emacs
