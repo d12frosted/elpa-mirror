@@ -1,0 +1,11 @@
+(macrostep .
+	   [(20221025 1855)
+	    ((cl-lib
+	      (0 5)))
+	    "interactive macro expander" tar
+	    ((:commit . "4c3c2609647f4b98061cdea4cd30abaace1ed8a1")
+	     (:authors
+	      ("Jon Oddie" . "j.j.oddie@gmail.com"))
+	     (:maintainer "Jon Oddie" . "j.j.oddie@gmail.com")
+	     (:keywords "lisp" "languages" "macro" "debugging")
+	     (:url . "https://github.com/emacsorphanage/macrostep"))])

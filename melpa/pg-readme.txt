@@ -74,6 +74,11 @@ Entry points
     database (this is PostgreSQL-specific, please refer to the
     documentation for more details).
 
+(pg-cancel connection) -> nil
+    Ask the server to cancel the command being processed by the backend.
+    The cancellation request concerns the command requested over
+    database connection CONNECTION.
+
 (pg-disconnect connection) -> nil
     Close the database connection.
 
@@ -209,11 +214,13 @@ line such as `(require 'pg)' in your Emacs initialization file.
 
 ; TODO
 
-* add a mechanism for parsing user-defined types. The user should
+* Provide support for client-side certificates to authenticate network
+  connections over TLS.
+
+* Implement the SASLPREP algorithm for usernames and passwords that contain
+  unprintable characters (used for SCRAM-SHA-256 authentication).
+
+* Add a mechanism for parsing user-defined types. The user should
   be able to define a parse function and a type-name; we query
   pg_type to get the type's OID and add the information to
   pg-parsers.
-
-* in a future release I will probably modify the numeric conversion
-  routines to return elisp floating point values instead of elisp
-  integers, in order to work around possible overflow problems.

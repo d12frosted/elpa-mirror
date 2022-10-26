@@ -4,10 +4,10 @@ Source:  https://github.com/hvesalai/emacs-scala-mode.git
 
 Updating /mnt/store/melpa/working/scala-mode/
 Checking out origin/HEAD
-Checking out 598cb680f321d9609295aa9b4679040cc703b602
+Checking out 5d7cf21c37e345c49f921fe5111a49fd54efd1e0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/scala-mode/
-  to /tmp/scala-mode33wkK2/scala-mode-20210414.1126
+  to /tmp/scala-modeDaPlVp/scala-mode-20221025.1502
     scala-compile.el -> scala-compile.el
     scala-mode-fontlock.el -> scala-mode-fontlock.el
     scala-mode-imenu.el -> scala-mode-imenu.el
@@ -18,20 +18,22 @@ Copying files (->) and directories (=>)
     scala-mode-prettify-symbols.el -> scala-mode-prettify-symbols.el
     scala-mode-syntax.el -> scala-mode-syntax.el
     scala-mode.el -> scala-mode.el
-Created scala-mode-20210414.1126.tar containing:
-  scala-mode-20210414.1126/
-  scala-mode-20210414.1126/scala-compile.el
-  scala-mode-20210414.1126/scala-mode-fontlock.el
-  scala-mode-20210414.1126/scala-mode-imenu.el
-  scala-mode-20210414.1126/scala-mode-indent.el
-  scala-mode-20210414.1126/scala-mode-lib.el
-  scala-mode-20210414.1126/scala-mode-map.el
-  scala-mode-20210414.1126/scala-mode-paragraph.el
-  scala-mode-20210414.1126/scala-mode-pkg.el
-  scala-mode-20210414.1126/scala-mode-prettify-symbols.el
-  scala-mode-20210414.1126/scala-mode-syntax.el
-  scala-mode-20210414.1126/scala-mode.el
-Built scala-mode in 4.219s, finished at 2022-10-25T13:28:05+0000
+    scala-organise.el -> scala-organise.el
+Created scala-mode-20221025.1502.tar containing:
+  scala-mode-20221025.1502/
+  scala-mode-20221025.1502/scala-compile.el
+  scala-mode-20221025.1502/scala-mode-fontlock.el
+  scala-mode-20221025.1502/scala-mode-imenu.el
+  scala-mode-20221025.1502/scala-mode-indent.el
+  scala-mode-20221025.1502/scala-mode-lib.el
+  scala-mode-20221025.1502/scala-mode-map.el
+  scala-mode-20221025.1502/scala-mode-paragraph.el
+  scala-mode-20221025.1502/scala-mode-pkg.el
+  scala-mode-20221025.1502/scala-mode-prettify-symbols.el
+  scala-mode-20221025.1502/scala-mode-syntax.el
+  scala-mode-20221025.1502/scala-mode.el
+  scala-mode-20221025.1502/scala-organise.el
+Built scala-mode in 4.034s, finished at 2022-10-26T03:58:10+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  240 Oct 25 13:28 packages/scala-mode-20210414.1126.entry
-140K -rw-r--r-- 1 root root 140K Oct 25 13:28 packages/scala-mode-20210414.1126.tar
+4.0K -rw-r--r-- 1 root root  240 Oct 26 03:58 packages/scala-mode-20221025.1502.entry
+152K -rw-r--r-- 1 root root 150K Oct 26 03:58 packages/scala-mode-20221025.1502.tar
