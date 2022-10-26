@@ -5,8 +5,8 @@
 ;; Author: Artem Khramov <akhramov+emacs@pm.me>
 ;; Created: 6 Jan 2017
 ;; Version: 0.4.1
-;; Package-Version: 20221025.2028
-;; Package-Commit: 5117aa054b60a326350d2c3542d50a8bdeaa9a44
+;; Package-Version: 20221026.554
+;; Package-Commit: ba2d80e2a1ccdc0e8cb41da040282c5ec324157b
 ;; Package-Requires: ((alert "1.2") (async "1.9.3") (dash "2.18.0") (emacs "24.4"))
 ;; Keywords: notification alert org org-agenda agenda
 ;; URL: https://github.com/akhramov/org-wild-notifier.el
@@ -195,9 +195,9 @@ Returns a list of notification messages"
        (--zip-with (cons (car it) other) (cadr (assoc 'times event)))
        (--map (org-wild-notifier--notification-text it event))))
 
-(defun org-wild-notifier--get-tags (marker)
-  "Retrieve tags of MARKER."
-  (-> (org-entry-get marker "TAGS")
+(defun org-wild-notifier--get-tags (event)
+  "Retrieve tags of EVENT."
+  (-> (assoc "ALLTAGS" event)
       (or "")
       (org-split-string  ":")))
 
@@ -205,7 +205,7 @@ Returns a list of notification messages"
   (->> `([,org-wild-notifier-keyword-whitelist
           (lambda (it)
             (-contains-p org-wild-notifier-keyword-whitelist
-                         (org-entry-get it "TODO")))]
+                         (assoc "TODO" it)))]
 
          [,org-wild-notifier-tags-whitelist
           (lambda (it)
@@ -218,7 +218,7 @@ Returns a list of notification messages"
   (->> `([,org-wild-notifier-keyword-blacklist
           (lambda (it)
             (-contains-p org-wild-notifier-keyword-blacklist
-                         (org-entry-get it "TODO")))]
+                         (assoc "TODO" it)))]
 
          [,org-wild-notifier-tags-blacklist
           (lambda (it)
@@ -227,19 +227,19 @@ Returns a list of notification messages"
        (--filter (aref it 0))
        (--map (aref it 1))))
 
-(defun org-wild-notifier--apply-whitelist (markers)
-  "Apply whitelist to MARKERS."
+(defun org-wild-notifier--apply-whitelist (events)
+  "Apply whitelist to EVENTS."
   (-if-let (whitelist-predicates (org-wild-notifier--whitelist-predicates))
       (-> (apply '-orfn whitelist-predicates)
-          (-filter markers))
-    markers))
+          (-filter events))
+    events))
 
-(defun org-wild-notifier--apply-blacklist (markers)
-  "Apply blacklist to MARKERS."
+(defun org-wild-notifier--apply-blacklist (events)
+  "Apply blacklist to EVENTS."
   (-if-let (blacklist-predicates (org-wild-notifier--blacklist-predicates))
       (-> (apply '-orfn blacklist-predicates)
-          (-remove markers))
-    markers))
+          (-remove events))
+    events))
 
 (defun org-wild-notifier--retrieve-events ()
   "Get events from agenda view."
@@ -298,8 +298,7 @@ string, cdr holds time in list-of-integer format."
     '("DEADLINE" "SCHEDULED" "TIMESTAMP"))))
 
 (defun org-wild-notifier--extract-title (event)
-  "Extract event title from EVENT.
-MARKER acts like the event's identifier."
+  "Extract event title from EVENT."
   (cdr (assoc "ITEM" event)))
 
 (defun org-wild-notifier--extract-notication-intervals (event)

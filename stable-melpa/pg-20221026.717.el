@@ -4,8 +4,8 @@
 
 ;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
 ;; Version: 0.18
-;; Package-Version: 20221025.1403
-;; Package-Commit: 0b85c5b18173099f031423557e30ed2b8cefa055
+;; Package-Version: 20221026.717
+;; Package-Commit: 05add40916f779a768b57ed138124915f5de4430
 ;; Keywords: data comm database postgresql
 ;; URL: https://github.com/emarsden/pg-el
 ;; Package-Requires: ((emacs "26.1"))
@@ -498,9 +498,8 @@ tag called pg-finished."
                   (let* ((msglen (pg-read-net-int connection 4))
                          (msg (pg-read-chars connection (- msglen 4)))
                          (items (split-string msg (string 0))))
-                    ;; ParameterStatus items sent by the backend include
-                    ;; application_name, DateStyle, in_hot_standby,
-                    ;; integer_datetimes
+                    ;; ParameterStatus items sent by the backend include application_name,
+                    ;; DateStyle, in_hot_standby, integer_datetimes
                     (when (> (length (cl-first items)) 0)
                       (dolist (handler pg-parameter-change-functions)
                         (funcall handler connection (cl-first items) (cl-second items))))))
