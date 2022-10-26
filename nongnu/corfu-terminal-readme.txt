@@ -25,10 +25,10 @@ which works everywhere.
  <file:./demo-gui.png>  <file:./demo-colorterm.png>  <file:./demo-tty.png>          
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-/Note: The above screenshots were taken with `kind-icon' enabled.  And
-the/ /TTY screenshot isn't a screenshot of a real TTY, it was emulated
-on a/ /terminal emulator with `TERM=linux' and `COLORTERM=', and the
-Corfu faces/ /were modified to make the popup/popon visible on TTY./
+/Note: The above screenshots were taken with `kind-icon' enabled./ /And
+the TTY screenshot isn't a screenshot of a real TTY, it was/ /emulated
+on a terminal emulator with `TERM=linux' and `COLORTERM=',/ /and the
+Corfu faces were modified to make the popup/popon visible on/ /TTY./
 
 
 1 Installation

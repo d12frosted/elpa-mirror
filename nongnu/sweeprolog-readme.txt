@@ -39,6 +39,7 @@ Editing Prolog code
 .. Displaying predicate documentation
 .. Examining diagnostics
 .. Exporting predicates
+.. Code Completion
 .. Context-Based Term Insertion
 ..... Filling Holes
 Prolog Help
@@ -132,7 +133,7 @@ Installation
      │ git clone https://github.com/SWI-Prolog/packages-sweep sweep
      └────
 
-  2. Add `sweep' to Emacs’ `load-path':
+  2. Add `sweep' to Emacs’s `load-path':
      ┌────
      │ (add-to-list 'load-path "/path/to/sweep")
      └────
@@ -618,7 +619,7 @@ Aligning with multiple spaces
 
   In Emacs prior to version 29, users are advised to bind
   `sweeprolog-align-spaces' to `M-SPC' directly by adding the following
-  lines to Emacs’ initialization file (see [The Emacs Initialization
+  lines to Emacs’s initialization file (see [The Emacs Initialization
   File]).
 
   ┌────
@@ -637,7 +638,7 @@ Term-based editing and motion commands
   in source code buffer, such as marking, transposing and moving over
   expressions.  By default, these features are geared towards working
   with Lisp expressions, or “sexps”.  `sweeprolog-mode' extends the
-  Emacs’ notion of syntactic expressions to accommodate for Prolog
+  Emacs’s notion of syntactic expressions to accommodate for Prolog
   terms, which allows the standard sexp-based commands to operate on
   them seamlessly.
 
@@ -681,7 +682,7 @@ Definitions and references
   point.  Refer to [Find Identifiers in the Emacs manual] for an
   overview of the available commands.
 
-  `sweeprolog-mode' also integrates with Emacs’ `imenu', which provides
+  `sweeprolog-mode' also integrates with Emacs’s `imenu', which provides
   a simple facility for looking up and jumping to definitions in the
   current buffer.  To jump to a definition in the current buffer, type
   `M-x imenu' (bound by default to `M-g i' in Emacs version 29).  For
@@ -899,6 +900,30 @@ Exporting predicates
   `sweeprolog-export-predicate' with a prefix argument (`C-u C-c C-e').
 
 
+Code Completion
+───────────────
+
+  `sweeprolog-mode' empowers Emacs’s standard `completion-at-point'
+  command, bound by default to `C-M-i' and `M-TAB', with context-aware
+  completion for Prolog terms.  For background about completion-at-point
+  in Emacs, see [Symbol Completion in the Emacs manual].
+
+  In `sweeprolog-mode' buffers, the following enhancements are provided:
+
+  Variable name completion
+        If the text before point can be completed to one or more
+        variable names that appear elsewhere in the current clause,
+        `completion-at-point' suggests matching variable names as
+        completion candidates.
+  Predicate completion
+        If the text before point can be completed to a predicate call,
+        `completion-at-point' suggests matching predicates as completion
+        candidates.
+
+
+[Symbol Completion in the Emacs manual] <info:emacs#Symbol Completion>
+
+
 Context-Based Term Insertion
 ────────────────────────────
 
@@ -963,7 +988,7 @@ Prolog Help
 ═══════════
 
   `sweep' provides a way to read SWI-Prolog documentation via the
-  standard Emacs `help' user interface, akin to Emacs’ built-in
+  standard Emacs `help' user interface, akin to Emacs’s built-in
   `describe-function' (`C-h f') and `describe-variable' (`C-h v').  For
   more information about Emacs `help' and its special major mode,
   `help-mode', see [Help Mode in the Emacs manual].
@@ -1123,9 +1148,9 @@ Finding Prolog code
 
   `sweep' provides the command `M-x sweeprolog-find-module' for
   selecting and jumping to the source code of a loaded or auto-loadable
-  Prolog module.  `sweep' integrates with Emacs’ standard completion API
-  to annotate candidate modules in the completion UI with their `PLDoc'
-  description when available.
+  Prolog module.  `sweep' integrates with Emacs’s standard completion
+  API to annotate candidate modules in the completion UI with their
+  `PLDoc' description when available.
 
   Along with `M-x sweeprolog-find-module', `sweep' provides the command
   `M-x sweeprolog-find-predicate' jumping to the definition a loaded or
@@ -1138,7 +1163,7 @@ Prolog file specification expansion
   `sweep' defines a handler for the Emacs function `expand-file-file'
   that recognizes Prolog file specifications, such as `library(lists)',
   and expands them to their corresponding absolute paths.  This means
-  that one can use Prolog file specifications with Emacs’ standard
+  that one can use Prolog file specifications with Emacs’s standard
   `find-file' (`C-x C-f') to locate Prolog resources directly.
 
   For example, typing `C-x C-f library(pldoc/doc_man)' will open the
@@ -1164,7 +1189,7 @@ Built-in Native Predicates
   code.  If instead `sweeprolog-swipl-sources' is set to `t' (the
   default), `sweep' will try to locate a local checkout of the
   SWI-Prolog sources automatically among known project root directories
-  provided by Emacs’ built-in `project-known-project-roots' from
+  provided by Emacs’s built-in `project-known-project-roots' from
   `project.el' (see [Projects in the Emacs manual] for more information
   about `project.el' projects).  Lastly, setting
   `sweeprolog-swipl-sources' to `nil' disables searching for definitions
@@ -1399,11 +1424,11 @@ Improvements around editing Prolog
         `PlDoc' comments (see [Documenting predicates]).
 
   Add commands for narrowing and moving by predicate definitions
-        `sweeprolog-mode' should include commands moving point to the
-        next/previous predicate definition.  We already have commands
-        for clause-based motion (`C-M-a', `C-M-e') but it would be
-        useful to have predicate-based variants as well.  These commands
-        could then be bound to `C-c C-n' for moving to the next
+        `sweeprolog-mode' should include commands for moving point to
+        the next/previous predicate definition.  We already have
+        commands for clause-based motion (`C-M-a', `C-M-e') but it would
+        be useful to have predicate-based variants as well.  These
+        commands could then be bound to `C-c C-n' for moving to the next
         predicate definition and `C-c C-p' for moving to the previous.
 
   Improve the information provided for predicate completion candidates

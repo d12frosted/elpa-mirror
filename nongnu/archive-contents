@@ -216,7 +216,7 @@
 			   (:authors
 			    ("Julien Barnier")))])
  (corfu-terminal .
-		 [(0 4)
+		 [(0 5)
 		  ((emacs
 		    (26 1))
 		   (corfu
@@ -229,7 +229,7 @@
 		   (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 		   (:authors
 		    ("Akib Azmain Turja" . "akib@disroot.org"))
-		   (:commit . "7c5a8a1c07b6c1a41b358b083d5bf7773701d26b"))])
+		   (:commit . "1a15a01e2e1464daadfa4973cb695802e5c23a25"))])
  (crux .
        [(0 4 0)
 	((seq
@@ -1386,7 +1386,7 @@
 	      ("Eric James Michael Ritz"))
 	     (:commit . "ae3b0b184e096b8bd916516ae7db908dbb27ec1e"))])
  (popon .
-	[(0 10)
+	[(0 11)
 	 ((emacs
 	   (25 1)))
 	 "\"Pop\" floating text \"on\" a window" tar
@@ -1395,7 +1395,7 @@
 	  (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	  (:authors
 	   ("Akib Azmain Turja" . "akib@disroot.org"))
-	  (:commit . "8e055aac271e03b5f90c180b6fa89cf169ff74b3"))])
+	  (:commit . "1ece1f531440b17e4921c30d574c7c30a4a9519d"))])
  (popup .
 	[(0 5 9)
 	 ((emacs
@@ -1639,7 +1639,7 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 0 12)
+	[(1 0 14)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
@@ -1648,9 +1648,9 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:authors
 	   ("Random User"))
-	  (:commit . "e528c001d98fcd526fd04ff49caef5c475d74f3b"))])
+	  (:commit . "74793f06532d15ea5e1008b5d227dab17ab8f27a"))])
  (sweeprolog .
-	     [(0 8 0)
+	     [(0 8 1)
 	      ((emacs
 		(28 1)))
 	      "Embedded SWI-Prolog" tar
@@ -1659,7 +1659,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "6e42efc6f83a29a8201a742e00020b4cf4377e3d"))])
+	       (:commit . "24b5e1637e4e07049c437372f4f1f7818320cc27"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs
@@ -1919,7 +1919,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(19 1 20221022135313)
+	       [(19 2 20221025102337)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -1928,7 +1928,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "2be7669f2f972fe1020e7b8bf4e486f9a86deef5"))])
+		 (:commit . "4dfbd9f3a7af57fc52ecd121d7392089e73a7825"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar
