@@ -3,12 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~eshel/flymake-swi-prolog
 
 Updating /mnt/store/melpa/working/flymake-swi-prolog/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ae0e4b706a40b71c007ed6cb0ec5425d49bea4c3
+Built flymake-swi-prolog in 3.595s, finished at 2022-10-26T14:30:19+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Oct 26 14:30 packages/flymake-swi-prolog-20220404.950.el
+4.0K -rw-r--r-- 1 root root  367 Oct 26 14:30 packages/flymake-swi-prolog-20220404.950.entry

@@ -3,12 +3,40 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~niklaseklund/detached.el
 
 Updating /mnt/store/melpa/working/detached/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7796d2e6f241819703843d24a57597afef2f9757
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/detached/
+  to /tmp/detached6skoMy/detached-20221025.1652
+    detached-compile.el -> detached-compile.el
+    detached-consult.el -> detached-consult.el
+    detached-dired.el -> detached-dired.el
+    detached-eshell.el -> detached-eshell.el
+    detached-extra.el -> detached-extra.el
+    detached-init.el -> detached-init.el
+    detached-list.el -> detached-list.el
+    detached-org.el -> detached-org.el
+    detached-shell.el -> detached-shell.el
+    detached-vterm.el -> detached-vterm.el
+    detached.el -> detached.el
+  ! doc/detached.info -> detached.info
+Created detached-20221025.1652.tar containing:
+  detached-20221025.1652/
+  detached-20221025.1652/detached-compile.el
+  detached-20221025.1652/detached-consult.el
+  detached-20221025.1652/detached-dired.el
+  detached-20221025.1652/detached-eshell.el
+  detached-20221025.1652/detached-extra.el
+  detached-20221025.1652/detached-init.el
+  detached-20221025.1652/detached-list.el
+  detached-20221025.1652/detached-org.el
+  detached-20221025.1652/detached-pkg.el
+  detached-20221025.1652/detached-shell.el
+  detached-20221025.1652/detached-vterm.el
+  detached-20221025.1652/detached.el
+  detached-20221025.1652/detached.info
+  detached-20221025.1652/dir
+Built detached in 6.105s, finished at 2022-10-26T14:15:47+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  440 Oct 26 14:15 packages/detached-20221025.1652.entry
+180K -rw-r--r-- 1 root root 180K Oct 26 14:15 packages/detached-20221025.1652.tar

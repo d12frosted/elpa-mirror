@@ -3,12 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~abrahms/ox-gemini
 
 Updating /mnt/store/melpa/working/ox-gemini/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 168f820ea401fb813435a3a55af295873a4c110b
+Built ox-gemini in 4.044s, finished at 2022-10-26T15:02:49+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Oct 26 15:02 packages/ox-gemini-20220418.1433.el
+4.0K -rw-r--r-- 1 root root 397 Oct 26 15:02 packages/ox-gemini-20220418.1433.entry

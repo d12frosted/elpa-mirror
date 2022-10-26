@@ -3,12 +3,10 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/buffer-sets
 
 Updating /mnt/store/melpa/working/buffer-sets/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out c6c09baf3ca39260b2f4c6aaf2f3d967f688760d
+Warning: buffer-sets :files spec is equivalent to the default
+Built buffer-sets in 5.471s, finished at 2022-10-26T14:06:59+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Oct 26 14:06 packages/buffer-sets-20220914.2115.el
+4.0K -rw-r--r-- 1 root root 413 Oct 26 14:06 packages/buffer-sets-20220914.2115.entry

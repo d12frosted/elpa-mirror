@@ -3,12 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jakob/ox-haunt
 
 Updating /mnt/store/melpa/working/ox-haunt/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out d32c4b1ab258dc34ca7e713152a274eab35d2608
+Built ox-haunt in 4.157s, finished at 2022-10-26T15:02:51+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Oct 26 15:02 packages/ox-haunt-20220615.7.el
+4.0K -rw-r--r-- 1 root root 438 Oct 26 15:02 packages/ox-haunt-20220615.7.entry

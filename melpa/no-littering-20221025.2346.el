@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
 ;; Keywords: convenience
-;; Package-Version: 20221017.1551
-;; Package-Commit: 7c35c7b8262d77d8a44a1fe1eec79a1170dd1ef0
+;; Package-Version: 20221025.2346
+;; Package-Commit: 8a556ddad8ff58db2d2e2fafd5a495815d23179b
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
@@ -363,6 +363,8 @@ directories."
     (eval-after-load 'geiser
       `(make-directory ,(var "geiser/") t))
     (setq geiser-repl-history-filename     (var "geiser/repl-history"))
+    (setq gnus-notes-top-dir               (var "gnus-notes/"))
+    (setq gnus-notes-file                  (var "gnus-notes/articles.el"))
     (setq hackernews-visited-links-file    (var "hackernews/visited-links.el"))
     (setq harpoon-cache-file               (var "harpoon/"))
     (eval-after-load 'helm

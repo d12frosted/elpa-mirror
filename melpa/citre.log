@@ -4,10 +4,10 @@ Source:  https://github.com/universal-ctags/citre.git
 
 Updating /mnt/store/melpa/working/citre/
 Checking out origin/HEAD
-Checking out 050bb7cafc2a89379406f363f7120ac56177ede7
+Checking out bce7ad69e1a1947232de7368eb18e75bd159ba65
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citre/
-  to /tmp/citre3WTT94/citre-20221024.1619
+  to /tmp/citreyFbUk5/citre-20221026.1325
     citre-backend-interface.el -> citre-backend-interface.el
     citre-common-tag.el -> citre-common-tag.el
     citre-common-util.el -> citre-common-util.el
@@ -23,25 +23,27 @@ Copying files (->) and directories (=>)
     citre-ui-jump.el -> citre-ui-jump.el
     citre-ui-peek.el -> citre-ui-peek.el
     citre.el -> citre.el
-Created citre-20221024.1619.tar containing:
-  citre-20221024.1619/
-  citre-20221024.1619/citre-backend-interface.el
-  citre-20221024.1619/citre-common-tag.el
-  citre-20221024.1619/citre-common-util.el
-  citre-20221024.1619/citre-config.el
-  citre-20221024.1619/citre-ctags.el
-  citre-20221024.1619/citre-global.el
-  citre-20221024.1619/citre-lang-c.el
-  citre-20221024.1619/citre-lang-fileref.el
-  citre-20221024.1619/citre-lang-verilog.el
-  citre-20221024.1619/citre-pkg.el
-  citre-20221024.1619/citre-readtags-tables.el
-  citre-20221024.1619/citre-readtags.el
-  citre-20221024.1619/citre-tags.el
-  citre-20221024.1619/citre-ui-jump.el
-  citre-20221024.1619/citre-ui-peek.el
-  citre-20221024.1619/citre.el
-Built citre in 6.938s, finished at 2022-10-26T10:26:09+0000
+Created citre-20221026.1325.tar containing:
+  citre-20221026.1325/
+  citre-20221026.1325/citre-backend-interface.el
+  citre-20221026.1325/citre-common-tag.el
+  citre-20221026.1325/citre-common-util.el
+  citre-20221026.1325/citre-config.el
+  citre-20221026.1325/citre-ctags.el
+  citre-20221026.1325/citre-global.el
+  citre-20221026.1325/citre-lang-c.el
+  citre-20221026.1325/citre-lang-fileref.el
+  citre-20221026.1325/citre-lang-verilog.el
+  citre-20221026.1325/citre-pkg.el
+  citre-20221026.1325/citre-readtags-tables.el
+  citre-20221026.1325/citre-readtags.el
+  citre-20221026.1325/citre-tags.el
+  citre-20221026.1325/citre-ui-jump.el
+  citre-20221026.1325/citre-ui-peek.el
+  citre-20221026.1325/citre.el
+Built citre in 8.396s, finished at 2022-10-26T14:09:36+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  346 Oct 26 10:26 packages/citre-20221024.1619.entry
 360K -rw-r--r-- 1 root root 360K Oct 26 10:26 packages/citre-20221024.1619.tar
+4.0K -rw-r--r-- 1 root root  346 Oct 26 14:09 packages/citre-20221026.1325.entry
+372K -rw-r--r-- 1 root root 370K Oct 26 14:09 packages/citre-20221026.1325.tar

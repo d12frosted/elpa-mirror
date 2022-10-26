@@ -3,12 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~pkal/clang-capf
 
 Updating /mnt/store/melpa/working/clang-capf/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b1765719288a138e125cc5ce624ef561c80015bf
+Built clang-capf in 6.409s, finished at 2022-10-26T14:09:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.1K Oct 26 14:09 packages/clang-capf-20220122.1219.el
+4.0K -rw-r--r-- 1 root root  433 Oct 26 14:09 packages/clang-capf-20220122.1219.entry

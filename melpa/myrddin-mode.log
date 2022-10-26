@@ -3,12 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jakob/myrddin-mode
 
 Updating /mnt/store/melpa/working/myrddin-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 51c0a2cb9dfc9526cd47e71313f5a745c99cadcc
+Built myrddin-mode in 4.740s, finished at 2022-10-26T14:55:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.2K Oct 26 14:55 packages/myrddin-mode-20191225.2120.el
+4.0K -rw-r--r-- 1 root root  417 Oct 26 14:55 packages/myrddin-mode-20191225.2120.entry

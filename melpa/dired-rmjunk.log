@@ -3,12 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jakob/dired-rmjunk
 
 Updating /mnt/store/melpa/working/dired-rmjunk/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 0e890a41fa680a45b4b4aad2c28f9d6dca999cee
+Built dired-rmjunk in 4.481s, finished at 2022-10-26T14:16:49+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Oct 26 14:16 packages/dired-rmjunk-20191007.1232.el
+4.0K -rw-r--r-- 1 root root  400 Oct 26 14:16 packages/dired-rmjunk-20191007.1232.entry

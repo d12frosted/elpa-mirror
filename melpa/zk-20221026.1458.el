@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.5
-;; Package-Version: 20221019.747
-;; Package-Commit: 850e3dd7e2df93ce0e07a6c2b78c9dbdefa40e89
+;; Package-Version: 20221026.1458
+;; Package-Commit: db63d783d92765675cb1897fcf667c62991f10d6
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -384,18 +384,21 @@ file-paths."
              (buffer-file-name x)))
          (buffer-list))))
 
-(defun zk--grep-file-list (str)
-  "Return a list of files containing regexp STR."
-  (let* ((files (shell-command-to-string (concat
-                                          "grep -lir --include \\*."
-                                          zk-file-extension
-                                          " -e "
-                                          (shell-quote-argument
-                                           str)
-                                          " "
-                                          zk-directory
-                                          " 2>/dev/null"))))
-    (split-string files "\n" t)))
+(defun zk--grep-file-list (str &optional extended invert)
+  "Return a list of files containing regexp STR.
+If EXTENDED is non-nil, use egrep. If INVERT is non-nil,
+return list of files not matching the regexp."
+  (split-string
+   (shell-command-to-string
+    (concat (if extended "egrep" "grep")
+            (if invert " --lines-without-match" " --lines-with-matches")
+            " --recursive"
+            " --ignore-case"
+            " --include \\*." zk-file-extension
+            " --regexp=" (shell-quote-argument str)
+            " " zk-directory
+            " 2>/dev/null"))
+   "\n" t))
 
 (defun zk--grep-id-list (str)
   "Return a list of IDs for files containing STR."

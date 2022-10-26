@@ -3,12 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tomterl/fullframe
 
 Updating /mnt/store/melpa/working/fullframe/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 886b831c001b44ec95aec4ff36e8bc1b3003c786
+Built fullframe in 4.073s, finished at 2022-10-26T14:31:27+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K Oct 26 14:31 packages/fullframe-20210226.1057.el
+4.0K -rw-r--r-- 1 root root  334 Oct 26 14:31 packages/fullframe-20210226.1057.entry

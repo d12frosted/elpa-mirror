@@ -173,7 +173,7 @@ details.
   read from the buffer won't have the uninterned symbols of the real
   macro expansion.  This will probably work OK with CL-style gensyms,
   but may cause problems with `make-symbol' symbols if they have the
-  same print name as another symbol in the expansion. It's possible that
+  same print name as another symbol in the expansion.  It's possible that
   using `print-circle' and `print-gensym' could get around this.
 
   Please send other bug reports and feature requests to the author.
@@ -221,5 +221,5 @@ details.
   - v0.5, 2013-04-16: highlight region, maintain cleaner buffer state
   - v0.4, 2013-04-07: only enter macrostep-mode on successful
     macro-expansion
-  - v0.3, 2012-10-30: print dotted lists correctly. autoload
+  - v0.3, 2012-10-30: print dotted lists correctly.  autoload
     definitions.

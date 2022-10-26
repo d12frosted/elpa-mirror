@@ -1,5 +1,5 @@
 (es-mode .
-	 [(20220912 1442)
+	 [(20221026 1103)
 	  ((dash
 	    (2 11 0))
 	   (cl-lib
@@ -11,7 +11,7 @@
 	   (request
 	    (0 3 0)))
 	  "A major mode for editing and executing Elasticsearch queries" tar
-	  ((:commit . "7db6bee12496c2cc70bfff05ca4d3b376d50db7a")
+	  ((:commit . "e82465fd785688bb58918ea62ca4de06a2a23a1e")
 	   (:authors
 	    ("Lee Hinman" . "lee@writequit.org"))
 	   (:maintainer "Lee Hinman" . "lee@writequit.org")
