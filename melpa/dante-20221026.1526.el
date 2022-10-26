@@ -9,11 +9,11 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/dante
-;; Package-Version: 20221017.1959
-;; Package-Commit: 3793b5f6b7b94f489bf9a0c33080918e7bc33030
+;; Package-Version: 20221026.1526
+;; Package-Commit: 3f367ae06c756daa3dfbf65fd195e831159d9f0a
 ;; Created: October 2016
 ;; Keywords: haskell, tools
-;; Package-Requires: ((dash "2.12.0") (emacs "27.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (haskell-mode "13.14") (s "1.11.0") (lcr "1.5"))
+;; Package-Requires: ((dash "2.12.0") (emacs "27.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (flymake "1.0") (s "1.11.0") (lcr "1.5"))
 ;; Version: 0-pre
 
 ;; This file is free software; you can redistribute it and/or modify
@@ -45,7 +45,7 @@
 (require 'dash)
 (require 'f)
 (require 'flycheck)
-(require 'haskell-mode)
+(require 'flymake)
 (require 's)
 (require 'xref)
 (require 'lcr)

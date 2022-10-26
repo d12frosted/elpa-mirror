@@ -1,5 +1,5 @@
 (dante .
-       [(20221017 1959)
+       [(20221026 1526)
 	((dash
 	  (2 12 0))
 	 (emacs
@@ -10,14 +10,14 @@
 	  (0 30))
 	 (company
 	  (0 9))
-	 (haskell-mode
-	  (13 14))
+	 (flymake
+	  (1 0))
 	 (s
 	  (1 11 0))
 	 (lcr
 	  (1 5)))
 	"Development mode for Haskell" single
-	((:commit . "3793b5f6b7b94f489bf9a0c33080918e7bc33030")
+	((:commit . "3f367ae06c756daa3dfbf65fd195e831159d9f0a")
 	 (:authors
 	  ("Jean-Philippe Bernardy" . "jeanphilippe.bernardy@gmail.com"))
 	 (:maintainer "Jean-Philippe Bernardy" . "jeanphilippe.bernardy@gmail.com")

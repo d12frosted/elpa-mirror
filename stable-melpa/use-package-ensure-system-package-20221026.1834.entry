@@ -1,11 +1,11 @@
 (use-package-ensure-system-package .
-				   [(20220807 1558)
+				   [(20221026 1834)
 				    ((use-package
 				      (2 1))
 				     (system-packages
 				      (1 0 4)))
 				    "auto install system packages" single
-				    ((:commit . "d3c648a88e68547ec0e2ff5ea0f236f7d0e5942c")
+				    ((:commit . "5c95dcb1e8690ab5f15342dc9d4bedd599f1650f")
 				     (:authors
 				      ("Justin Talbott" . "justin@waymondo.com"))
 				     (:maintainer "Justin Talbott" . "justin@waymondo.com")

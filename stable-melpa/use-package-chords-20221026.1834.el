@@ -1,11 +1,11 @@
 ;;; use-package-chords.el --- key-chord keyword for use-package  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2015-2019 Justin Talbott
+;; Copyright (C) 2015-2022 Free Software Foundation, Inc.
 
 ;; Author: Justin Talbott <justin@waymondo.com>
 ;; Keywords: convenience, tools, extensions
-;; Package-Version: 20220807.1556
-;; Package-Commit: e0d0fd78a77cb7da880ba4c3063fa8a28ec6dae9
+;; Package-Version: 20221026.1834
+;; Package-Commit: 5c95dcb1e8690ab5f15342dc9d4bedd599f1650f
 ;; URL: https://github.com/jwiegley/use-package
 ;; Version: 0.2.1
 ;; Package-Requires: ((use-package "2.1") (bind-key "1.0") (bind-chord "0.2") (key-chord "0.6"))

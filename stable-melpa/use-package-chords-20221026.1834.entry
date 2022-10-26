@@ -1,5 +1,5 @@
 (use-package-chords .
-		    [(20220807 1556)
+		    [(20221026 1834)
 		     ((use-package
 		       (2 1))
 		      (bind-key
@@ -9,7 +9,7 @@
 		      (key-chord
 		       (0 6)))
 		     "key-chord keyword for use-package" single
-		     ((:commit . "e0d0fd78a77cb7da880ba4c3063fa8a28ec6dae9")
+		     ((:commit . "5c95dcb1e8690ab5f15342dc9d4bedd599f1650f")
 		      (:authors
 		       ("Justin Talbott" . "justin@waymondo.com"))
 		      (:maintainer "Justin Talbott" . "justin@waymondo.com")

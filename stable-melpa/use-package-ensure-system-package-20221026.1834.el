@@ -1,11 +1,11 @@
 ;;; use-package-ensure-system-package.el --- auto install system packages  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2017 Justin Talbott
+;; Copyright (C) 2022 Free Software Foundation, Inc.
 
 ;; Author: Justin Talbott <justin@waymondo.com>
 ;; Keywords: convenience, tools, extensions
-;; Package-Version: 20220807.1558
-;; Package-Commit: d3c648a88e68547ec0e2ff5ea0f236f7d0e5942c
+;; Package-Version: 20221026.1834
+;; Package-Commit: 5c95dcb1e8690ab5f15342dc9d4bedd599f1650f
 ;; URL: https://github.com/waymondo/use-package-ensure-system-package
 ;; Version: 0.2
 ;; Package-Requires: ((use-package "2.1") (system-packages "1.0.4"))
