@@ -3,23 +3,12 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~technomancy/fennel-mode
 
 Updating /mnt/store/melpa/working/fennel-mode/
-Checking out origin/HEAD
-Checking out da958db7a6fdeeaf202cd8fdca630e85dbf6a455
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fennel-mode/
-  to /tmp/fennel-modecRDgce/fennel-mode-20221025.1830
-    antifennel.el -> antifennel.el
-    fennel-eldoc.el -> fennel-eldoc.el
-    fennel-mode.el -> fennel-mode.el
-    fennel-scratch.el -> fennel-scratch.el
-Created fennel-mode-20221025.1830.tar containing:
-  fennel-mode-20221025.1830/
-  fennel-mode-20221025.1830/antifennel.el
-  fennel-mode-20221025.1830/fennel-eldoc.el
-  fennel-mode-20221025.1830/fennel-mode-pkg.el
-  fennel-mode-20221025.1830/fennel-mode.el
-  fennel-mode-20221025.1830/fennel-scratch.el
-Built fennel-mode in 5.168s, finished at 2022-10-26T06:56:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 361 Oct 26 06:56 packages/fennel-mode-20221025.1830.entry
- 60K -rw-r--r-- 1 root root 60K Oct 26 06:56 packages/fennel-mode-20221025.1830.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

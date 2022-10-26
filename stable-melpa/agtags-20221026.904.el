@@ -4,8 +4,8 @@
 
 ;; Author: Vietor Liu <vietor.liu@gmail.com>
 ;; Version: 0.2.2
-;; Package-Version: 20221006.1011
-;; Package-Commit: cb8126dfca5d085813728442f59079ead1a7355f
+;; Package-Version: 20221026.904
+;; Package-Commit: e8e04ece2f32d65b084974597bfe8077da3ddba0
 ;; Keywords: tools, convenience
 ;; Created: 2018-12-14
 ;; URL: https://github.com/vietor/agtags
@@ -68,6 +68,9 @@ This affects 'agtags--find-file' and 'agtags--find-grep'."
                                         (inhibit-same-window . nil))
   "Custom 'display-buffer-overriding-action' in agtags-*-mode.")
 
+(defvar agtags--global-to-list-cache nil
+  "Cache for 'agtags--run-cached-global-to-list.")
+
 ;;
 ;; The private functions
 ;;
@@ -99,33 +102,50 @@ Return nil if an error occured."
         (apply #'process-lines "global" arguments)
       (error nil))))
 
+(defun agtags--run-cached-global-to-list (arguments)
+  "Execute the global command to list and cache it, use ARGUMENTS;
+Return nil if an error occured."
+  (let ((cache-key (string-join arguments "$"))
+        (result-data nil))
+    (if (and agtags--global-to-list-cache
+             (string= (car agtags--global-to-list-cache) cache-key))
+        (cdr agtags--global-to-list-cache)
+      (progn
+        (setq result-data (agtags--run-global-to-list arguments))
+        (when result-data
+          (setq agtags--global-to-list-cache (cons cache-key result-data)))
+        result-data))))
+
 (defun agtags--run-global-to-mode (arguments &optional result)
   "Execute the global command to agtags-*-mode, use ARGUMENTS;
 Output format use RESULT."
   (let* ((xr (or result "grep"))
-         (xs (append (list "global"
-                           (format "--result=%s" xr)
-                           (and agtags-global-ignore-case "--ignore-case")
-                           (and agtags-global-treat-text "--other"))
-                     arguments))
+         (xs (delq nil (append (list "global"
+                                     (format "--result=%s" xr)
+                                     (and agtags-global-ignore-case "-i")
+                                     (and agtags-global-treat-text "-o"))
+                               arguments)))
          (default-directory (agtags--get-root))
          (display-buffer-overriding-action agtags--display-buffer-dwim))
-    (compilation-start (mapconcat #'identity (delq nil xs) " ")
+    (compilation-start (mapconcat #'identity xs " ")
                        (if (string= xr "path") 'agtags-path-mode 'agtags-grep-mode))))
 
 (defun agtags--run-global-completing (flag string predicate code)
   "Completion Function with FLAG for `completing-read'.
 Require: STRING PREDICATE CODE."
-  (let* ((xs (append (list "-c"
-                           (and (eq flag 'files) "--path")
-                           (and (eq flag 'rtags) "--reference")
-                           (and agtags-global-ignore-case "--ignore-case")
-                           (and agtags-global-treat-text "--other")
-                           string)))
-         (candidates (agtags--run-global-to-list (delq nil xs))))
-    (if (not code)
-        (try-completion string candidates predicate)
-      (all-completions string candidates predicate))))
+  (let* ((xs (delq nil (append (list "-c"
+                                     (and (eq flag 'files) "-P")
+                                     (and (eq flag 'rtags) "-r")
+                                     (and agtags-global-ignore-case "-i")
+                                     (and agtags-global-treat-text "-o")
+                                     string))))
+         (candidates (agtags--run-cached-global-to-list xs)))
+    (cond ((eq code nil)
+	       (try-completion string candidates predicate))
+	      ((eq code t)
+	       (all-completions string candidates predicate))
+	      ((eq code 'lambda)
+	       (if (intern-soft string candidates) t nil)))))
 
 (defun agtags--read-dwim ()
   "If there's an active selection, return that.
@@ -187,6 +207,7 @@ If there's a string at point, offer that as a default."
              buffer-file-name
              (agtags--is-active)
              (string-prefix-p (agtags--get-root) buffer-file-name))
+    (setq agtags--global-to-list-cache nil)
     (call-process "global" nil nil nil "-u" (concat "--single-update=" buffer-file-name))))
 
 (defadvice compile-goto-error (around agtags activate)
@@ -285,10 +306,8 @@ BUFFER is the global's mode buffer, STATUS was the finish status."
 
 (defvar agtags--completion-table
   (let ((fun (lambda (prefix)
-               (agtags--run-global-to-list (list "-c" prefix)))))
-    (if (fboundp 'completion-table-with-cache)
-        (completion-table-with-cache fun)
-      (completion-table-dynamic fun))))
+               (agtags--run-cached-global-to-list (list "-c" prefix)))))
+    (completion-table-dynamic fun)))
 
 (defun agtags--completion-at-point ()
   "A function for `completion-at-point-functions'."
@@ -362,6 +381,7 @@ any additional command line arguments to pass to GNU Global."
 (defun agtags-update-tags ()
   "Create or Update tag files (e.g. GTAGS) in directory `GTAGSROOT`."
   (interactive)
+  (setq agtags--global-to-list-cache nil)
   (let ((rootpath (agtags--get-root)))
     (dolist (file (list "GRTAGS" "GPATH" "GTAGS"))
       (ignore-errors
@@ -383,7 +403,7 @@ any additional command line arguments to pass to GNU Global."
   (interactive)
   (let ((user-input (agtags--read-input "Find files")))
     (when (> (length user-input) 0)
-      (agtags--run-global-to-mode (list "--path" (shell-quote-argument user-input) "path")))))
+      (agtags--run-global-to-mode (list "-P" (shell-quote-argument user-input) "path")))))
 
 (defun agtags-find-tag ()
   "Input tag and move to the locations."
@@ -397,21 +417,21 @@ any additional command line arguments to pass to GNU Global."
   (interactive)
   (let ((user-input (agtags--read-completing-dwim 'rtags "Find rtag")))
     (when (> (length user-input) 0)
-      (agtags--run-global-to-mode (list "--reference" (shell-quote-argument (agtags--quote user-input)))))))
+      (agtags--run-global-to-mode (list "-r" (shell-quote-argument (agtags--quote user-input)))))))
 
 (defun agtags-find-with-pattern ()
   "Input pattern, search with grep(1) and move to the locations."
   (interactive)
   (let ((user-input (agtags--read-input-dwim "Search pattern")))
     (when (> (length user-input) 0)
-      (agtags--run-global-to-mode (list "--grep" (shell-quote-argument user-input))))))
+      (agtags--run-global-to-mode (list "-g" (shell-quote-argument user-input))))))
 
 (defun agtags-find-with-string ()
   "Input string, search as substring and move to the locations."
   (interactive)
   (let ((user-input (agtags--read-input-dwim "Search string")))
     (when (> (length user-input) 0)
-      (agtags--run-global-to-mode (list "--grep" (shell-quote-argument (agtags--quote user-input)))))))
+      (agtags--run-global-to-mode (list "-g" (shell-quote-argument (agtags--quote user-input)))))))
 
 (defun agtags-switch-dwim ()
   "Switch to last agtags-*-mode buffer."
@@ -442,7 +462,8 @@ any additional command line arguments to pass to GNU Global."
 ;;;###autoload
 (defun agtags-update-root (root)
   "Set ROOT directory of the project for agtags."
-  (setenv "GTAGSROOT" root))
+  (setenv "GTAGSROOT" root)
+  (setq agtags--global-to-list-cache nil))
 
 (provide 'agtags)
 ;;; agtags.el ends here

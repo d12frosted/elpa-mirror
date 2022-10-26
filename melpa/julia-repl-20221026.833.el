@@ -3,8 +3,8 @@
 ;; Copyright (C) 2016  Tamas K. Papp
 ;; Author: Tamas Papp <tkpapp@gmail.com>
 ;; Keywords: languages
-;; Package-Version: 20220428.541
-;; Package-Commit: ee4a33f8d0121d0092ae73e0c4c84db6a86ea55c
+;; Package-Version: 20221026.833
+;; Package-Commit: 6625e95c3d0561c6966a13c2565d35d2ae6c07ca
 ;; Version: 1.3.0
 ;; Package-Requires: ((emacs "25.1")(s "1.12"))
 ;; URL: https://github.com/tpapp/julia-repl
@@ -277,7 +277,8 @@ Valid backends are currently:
      (setq julia-repl--terminal-backend (make-julia-repl--buffer-ansi-term)))
     ('vterm
      (require 'vterm)
-     (setq julia-repl--terminal-backend (make-julia-repl--buffer-vterm)))
+     (setq julia-repl--terminal-backend (make-julia-repl--buffer-vterm))
+     (add-to-list 'vterm-eval-cmds '("julia-repl--show" julia-repl--show)))
     (otherwise
      (error "Unrecognized backend “%s”." backend))))
 
@@ -817,6 +818,35 @@ When called with a prefix argument, activate the home project."
   "Use emacsclient as the JULIA_EDITOR."
   (interactive)
   (julia-repl--send-string "ENV[\"JULIA_EDITOR\"] = \"emacsclient\";"))
+
+(defun julia-repl--show (kind mime base64data)
+  "Show data sent from Julia via EmacsVterm.jl in some Emacs window.
+KIND identifies the type of data being sent, MIME is the mime
+type of the data and BASE64DATA contains the actual
+Base64-encoded data.
+
+Currently, only showing the documentation is supported, but
+later, things like showing inline images or rendered LaTeX might
+be added."
+  (pcase `(,kind . ,mime)
+    ('("documentation" . "text/html")
+     (with-current-buffer-window "*julia-doc*" nil nil
+       (insert (decode-coding-string (base64-decode-string base64data) 'utf-8))
+       (shr-render-region (point-min) (point-max))
+       (goto-char (point-min))
+       (view-mode-enter)))
+    (`("image" . ,_)
+     (with-current-buffer-window "*julia-img*" nil nil
+       (let ((imgdata (base64-decode-string base64data)))
+         ;; TODO: Implement different display modes like julia-snail
+         ;; allow images to be erased
+         (fundamental-mode)
+         (read-only-mode -1)
+         (erase-buffer)
+         (insert imgdata)
+         (image-mode))))
+    (_ (error "Unsupported data kind `%s' or MIME type `%s' (upgrade julia-repl or use older EmacsVterm.jl)"
+              kind mime))))
 
 ;;;###autoload
 (define-minor-mode julia-repl-mode

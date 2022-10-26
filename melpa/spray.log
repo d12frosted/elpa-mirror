@@ -3,9 +3,12 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~iank/spray
 
 Updating /mnt/store/melpa/working/spray/
-Checking out origin/HEAD
-Checking out 69fe48e7bb079e3011476b9f4eb6ac9ae94d6d9b
-Built spray in 5.841s, finished at 2022-10-26T07:47:49+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Oct 26 07:47 packages/spray-20160304.2220.el
-4.0K -rw-r--r-- 1 root root 314 Oct 26 07:47 packages/spray-20160304.2220.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

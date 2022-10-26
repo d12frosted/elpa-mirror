@@ -1514,15 +1514,18 @@
 		  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		 (:keywords "html" "xml"))])
  (hydra .
-	[(0 14 0)
+	[(0 15 0)
 	 ((cl-lib
-	   (0 5)))
+	   (0 5))
+	  (lv
+	   (0)))
 	 "Make bindings that stick around." tar
 	 ((:url . "https://github.com/abo-abo/hydra")
+	  (:keywords "bindings")
 	  (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	  (:authors
 	   ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	  (:keywords "bindings"))])
+	  (:commit . "7081ee6d443dbf2b58e77fa7357c90e495173a2f"))])
  (hyperbole .
 	    [(8 0 0)
 	     ((emacs
