@@ -1,5 +1,5 @@
 hiddenquote is a kind of word puzzle where you have to read
-word definitions (the clues), and put the answer into a grid, using
+word definitions (the clues), and put the answers into a grid, using
 the provided syllables.  When the grid is complete, you should be able
 to read a quote in the highlighted cells.
 
@@ -16,7 +16,7 @@ Select the source you want to retrieve the puzzle from.
 With a prefix argument, the command will prompt for a specific ID number.
 
 Read the clues in the Definitions buffer, and complete each word with
-one character per cell to complete the puzzle.  For each work, mark the
+one character per cell to complete the puzzle.  For each word, mark the
 syllables it contains as used.
 Move around the buffer with the usual movement commands.
 Edit each character cell with the usual editing commands.

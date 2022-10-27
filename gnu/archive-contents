@@ -945,13 +945,14 @@
 		   ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
 		  (:url . "https://elpa.gnu.org/packages/ebdb-i18n-chn.html"))])
  (ediprolog .
-	    [(2 1)
-	     nil "Emacs Does Interactive Prolog" single
-	     ((:keywords "languages" "processes")
+	    [(2 2)
+	     nil "Emacs Does Interactive Prolog" tar
+	     ((:url . "https://www.metalevel.at/ediprolog/")
+	      (:keywords "languages" "processes")
+	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:authors
 	       ("Markus Triska" . "triska@metalevel.at"))
-	      (:maintainer "Markus Triska" . "triska@metalevel.at")
-	      (:url . "https://www.metalevel.at/ediprolog/"))])
+	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
       [(20221015)
        ((emacs
@@ -1477,15 +1478,16 @@
 	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	 (:url . "http://www.dr-qubit.org/emacs.php"))])
  (hiddenquote .
-	      [(1 1)
+	      [(1 2)
 	       ((emacs
 		 (25 1)))
 	       "Major mode for doing hidden quote puzzles" tar
 	       ((:url . "http://mauroaranda.com/puzzles/hidden-quote-puzzle/")
+		(:keywords "games")
 		(:maintainer "Mauro Aranda" . "maurooaranda@gmail.com")
 		(:authors
 		 ("Mauro Aranda" . "maurooaranda@gmail.com"))
-		(:keywords "games"))])
+		(:commit . "856438ee2950fa998561f71d40355a88cdb078b4"))])
  (highlight-escape-sequences .
 			     [(0 4)
 			      nil "Highlight escape sequences" single
