@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-pe/luarocks.el.git
 
 Updating /mnt/store/melpa/working/luarocks/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/emacs-pe/luarocks.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out cee27ba0716edf338077387969883226dd2b7484
+Built luarocks in 3.375s, finished at 2022-10-27T15:39:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Oct 27 15:39 packages/luarocks-20170430.2305.el
+4.0K -rw-r--r-- 1 root root  404 Oct 27 15:39 packages/luarocks-20170430.2305.entry

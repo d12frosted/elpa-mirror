@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/jojojames/media-thumbnail.git
 
 Updating /mnt/store/melpa/working/media-thumbnail/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/jojojames/media-thumbnail.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 14e626fe7ee714ab45c9e636d00a26e89aa2832a
+Built media-thumbnail in 3.828s, finished at 2022-10-27T15:41:10+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Oct 27 15:41 packages/media-thumbnail-20220827.2325.el
+4.0K -rw-r--r-- 1 root root 396 Oct 27 15:41 packages/media-thumbnail-20220827.2325.entry

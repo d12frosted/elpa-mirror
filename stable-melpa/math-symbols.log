@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/kawabata/math-symbols.git
 
 Updating /mnt/store/melpa/working/math-symbols/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/kawabata/math-symbols.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 091b81cb40ceaff97614999ffe85b572ace182f0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/math-symbols/
+  to /tmp/math-symbolsNKHOKe/math-symbols-20201005.2313
+    math-symbols.el -> math-symbols.el
+    unimathsymbols.txt -> unimathsymbols.txt
+Created math-symbols-20201005.2313.tar containing:
+  math-symbols-20201005.2313/
+  math-symbols-20201005.2313/math-symbols-pkg.el
+  math-symbols-20201005.2313/math-symbols.el
+  math-symbols-20201005.2313/unimathsymbols.txt
+Built math-symbols in 4.075s, finished at 2022-10-27T15:40:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  399 Oct 27 15:40 packages/math-symbols-20201005.2313.entry
+260K -rw-r--r-- 1 root root 260K Oct 27 15:40 packages/math-symbols-20201005.2313.tar

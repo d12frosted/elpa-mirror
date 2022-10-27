@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/bastibe/org-journal.git
 
 Updating /mnt/store/melpa/working/org-journal/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/bastibe/org-journal.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 1ea9e3b672ed384922ede6af96598446f3691873
+Built org-journal in 5.371s, finished at 2022-10-27T15:48:38+0000
+ ✓ Success:
+ 80K -rw-r--r-- 1 root root 79K Oct 27 15:48 packages/org-journal-20220920.1514.el
+4.0K -rw-r--r-- 1 root root 378 Oct 27 15:48 packages/org-journal-20220920.1514.entry

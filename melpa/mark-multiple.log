@@ -3,11 +3,26 @@ Fetcher: github
 Source:  https://github.com/magnars/mark-multiple.el.git
 
 Updating /mnt/store/melpa/working/mark-multiple/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/magnars/mark-multiple.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f6a53c7c5283d640ae718f4548b0fda78877a375
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mark-multiple/
+  to /tmp/mark-multipleB535zh/mark-multiple-20121118.1554
+    inline-string-rectangle.el -> inline-string-rectangle.el
+    mark-more-like-this.el -> mark-more-like-this.el
+    mark-multiple-pkg.el -> mark-multiple-pkg.el
+    mark-multiple.el -> mark-multiple.el
+    mm-pabbrev-integration.el -> mm-pabbrev-integration.el
+    rename-sgml-tag.el -> rename-sgml-tag.el
+Created mark-multiple-20121118.1554.tar containing:
+  mark-multiple-20121118.1554/
+  mark-multiple-20121118.1554/inline-string-rectangle.el
+  mark-multiple-20121118.1554/mark-more-like-this.el
+  mark-multiple-20121118.1554/mark-multiple-pkg.el
+  mark-multiple-20121118.1554/mark-multiple.el
+  mark-multiple-20121118.1554/mm-pabbrev-integration.el
+  mark-multiple-20121118.1554/rename-sgml-tag.el
+Built mark-multiple in 4.034s, finished at 2022-10-27T15:40:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 306 Oct 27 15:40 packages/mark-multiple-20121118.1554.entry
+ 32K -rw-r--r-- 1 root root 30K Oct 27 15:40 packages/mark-multiple-20121118.1554.tar

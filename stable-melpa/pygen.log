@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/JackCrawley/pygen.git
 
 Updating /mnt/store/melpa/working/pygen/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/JackCrawley/pygen.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 3a5d1d1a0640865b15be05cd1eeb33bb4793b622
+Built pygen in 4.251s, finished at 2022-10-27T15:57:05+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 50K Oct 27 15:57 packages/pygen-20161121.506.el
+4.0K -rw-r--r-- 1 root root 451 Oct 27 15:57 packages/pygen-20161121.506.entry

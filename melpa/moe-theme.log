@@ -3,11 +3,25 @@ Fetcher: github
 Source:  https://github.com/kuanyui/moe-theme.el.git
 
 Updating /mnt/store/melpa/working/moe-theme/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/kuanyui/moe-theme.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 786c5f9aefa38b36f6bee0aa56aaa8da00fa0924
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/moe-theme/
+  to /tmp/moe-theme6MPrUL/moe-theme-20220707.1110
+    moe-dark-theme.el -> moe-dark-theme.el
+    moe-light-theme.el -> moe-light-theme.el
+    moe-theme-flavours.el -> moe-theme-flavours.el
+    moe-theme-switcher.el -> moe-theme-switcher.el
+    moe-theme.el -> moe-theme.el
+Created moe-theme-20220707.1110.tar containing:
+  moe-theme-20220707.1110/
+  moe-theme-20220707.1110/moe-dark-theme.el
+  moe-theme-20220707.1110/moe-light-theme.el
+  moe-theme-20220707.1110/moe-theme-flavours.el
+  moe-theme-20220707.1110/moe-theme-pkg.el
+  moe-theme-20220707.1110/moe-theme-switcher.el
+  moe-theme-20220707.1110/moe-theme.el
+Built moe-theme in 3.607s, finished at 2022-10-27T15:42:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  357 Oct 27 15:42 packages/moe-theme-20220707.1110.entry
+180K -rw-r--r-- 1 root root 180K Oct 27 15:42 packages/moe-theme-20220707.1110.tar

@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/BonfaceKilz/ob-elm.git
 
 Updating /mnt/store/melpa/working/ob-elm/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/BonfaceKilz/ob-elm.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out d3a9fbc2f56416894c9aed65ea9a20cc1d98f15d
+Built ob-elm in 4.277s, finished at 2022-10-27T15:46:18+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.1K Oct 27 15:46 packages/ob-elm-20200528.1857.el
+4.0K -rw-r--r-- 1 root root  330 Oct 27 15:46 packages/ob-elm-20200528.1857.entry

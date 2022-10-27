@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/voxpupuli/puppet-mode.git
 
 Updating /mnt/store/melpa/working/puppet-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/voxpupuli/puppet-mode.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ab25cf379236f4e1bd4bc9c1d77a93c95800e9bf
+Built puppet-mode in 4.753s, finished at 2022-10-27T15:56:40+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 52K Oct 27 15:56 packages/puppet-mode-20210305.645.el
+4.0K -rw-r--r-- 1 root root 552 Oct 27 15:56 packages/puppet-mode-20210305.645.entry

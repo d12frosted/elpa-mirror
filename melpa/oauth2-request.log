@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/conao3/oauth2-request.el.git
 
 Updating /mnt/store/melpa/working/oauth2-request/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/conao3/oauth2-request.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 86ff048635e002b00e23d6bed2ec6f36c17bca8e
+Built oauth2-request in 3.672s, finished at 2022-10-27T15:46:02+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Oct 27 15:46 packages/oauth2-request-20210215.657.el
+4.0K -rw-r--r-- 1 root root  425 Oct 27 15:46 packages/oauth2-request-20210215.657.entry

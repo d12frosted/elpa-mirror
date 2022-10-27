@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/tumashu/share2computer.git
 
 Updating /mnt/store/melpa/working/share2computer/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/tumashu/share2computer.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 15da47625a800e3310b8dc714bd4e41e32966d6a
+Built share2computer in 3.890s, finished at 2022-10-27T16:02:17+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 10K Oct 27 16:02 packages/share2computer-20200316.31.el
+4.0K -rw-r--r-- 1 root root 370 Oct 27 16:02 packages/share2computer-20200316.31.entry

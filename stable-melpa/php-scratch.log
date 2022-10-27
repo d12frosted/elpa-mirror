@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/mallt/php-scratch.git
 
 Updating /mnt/store/melpa/working/php-scratch/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/mallt/php-scratch.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b6bfd279da8a8ac7fc30459485956f3fd5d02573
+Built php-scratch in 4.594s, finished at 2022-10-27T15:53:51+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.5K Oct 27 15:53 packages/php-scratch-20210706.459.el
+4.0K -rw-r--r-- 1 root root  443 Oct 27 15:53 packages/php-scratch-20210706.459.entry

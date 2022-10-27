@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/flexibeast/plisp-mode.git
 
 Updating /mnt/store/melpa/working/plisp-mode/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/flexibeast/plisp-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 59e682d77569b04e9fc80af9c4b05e4a997dbcec
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/plisp-mode/
+  to /tmp/plisp-mode2Kt1eB/plisp-mode-20200427.405
+    plisp-mode.el -> plisp-mode.el
+    inferior-plisp.el -> inferior-plisp.el
+Created plisp-mode-20200427.405.tar containing:
+  plisp-mode-20200427.405/
+  plisp-mode-20200427.405/inferior-plisp.el
+  plisp-mode-20200427.405/plisp-mode-pkg.el
+  plisp-mode-20200427.405/plisp-mode.el
+Built plisp-mode in 3.803s, finished at 2022-10-27T15:54:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 380 Oct 27 15:54 packages/plisp-mode-20200427.405.entry
+ 60K -rw-r--r-- 1 root root 60K Oct 27 15:54 packages/plisp-mode-20200427.405.tar

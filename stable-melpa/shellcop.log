@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/redguardtoo/shellcop.git
 
 Updating /mnt/store/melpa/working/shellcop/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/redguardtoo/shellcop.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 3f051e42288ddfe4cd7cd0ee62efad90227de24b
+Built shellcop in 4.354s, finished at 2022-10-27T16:02:25+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Oct 27 16:02 packages/shellcop-20220629.817.el
+4.0K -rw-r--r-- 1 root root 370 Oct 27 16:02 packages/shellcop-20220629.817.entry

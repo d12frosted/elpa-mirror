@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/purcell/emacs-nixpkgs-fmt.git
 
 Updating /mnt/store/melpa/working/nixpkgs-fmt/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/purcell/emacs-nixpkgs-fmt.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 83e03d6f20bdf79c1c448c15734367b1a7cc6b02
+Built nixpkgs-fmt in 8.433s, finished at 2022-10-27T15:45:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Oct 27 15:45 packages/nixpkgs-fmt-20200327.2302.el
+4.0K -rw-r--r-- 1 root root  426 Oct 27 15:45 packages/nixpkgs-fmt-20200327.2302.entry

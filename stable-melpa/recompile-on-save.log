@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/maio/recompile-on-save.el.git
 
 Updating /mnt/store/melpa/working/recompile-on-save/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/maio/recompile-on-save.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 92e11446869d878803d4f3dec5d2101380c12bb2
+Built recompile-on-save in 4.309s, finished at 2022-10-27T15:59:04+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Oct 27 15:59 packages/recompile-on-save-20151126.1446.el
+4.0K -rw-r--r-- 1 root root  489 Oct 27 15:59 packages/recompile-on-save-20151126.1446.entry

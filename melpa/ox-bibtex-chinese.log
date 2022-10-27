@@ -3,9 +3,23 @@ Fetcher: github
 Source:  https://github.com/tumashu/ox-bibtex-chinese.git
 
 Updating /mnt/store/melpa/working/ox-bibtex-chinese/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/tumashu/ox-bibtex-chinese.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 2ad2364399229144110db7ef6365ad0461d6a38c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ox-bibtex-chinese/
+  to /tmp/ox-bibtex-chinese746OQE/ox-bibtex-chinese-20170723.309
+    ox-bibtex-chinese-pkg.el -> ox-bibtex-chinese-pkg.el
+    ox-bibtex-chinese.el -> ox-bibtex-chinese.el
+    bibtex-styles => bibtex-styles
+Created ox-bibtex-chinese-20170723.309.tar containing:
+  ox-bibtex-chinese-20170723.309/
+  ox-bibtex-chinese-20170723.309/bibtex-styles/
+  ox-bibtex-chinese-20170723.309/bibtex-styles/GBT7714-2005-latex/
+  ox-bibtex-chinese-20170723.309/bibtex-styles/GBT7714-2005-latex/GBT7714-2005AYLang-UTF8.bst
+  ox-bibtex-chinese-20170723.309/bibtex-styles/GBT7714-2005-latex/GBT7714-2005NLang-UTF8.bst
+  ox-bibtex-chinese-20170723.309/ox-bibtex-chinese-pkg.el
+  ox-bibtex-chinese-20170723.309/ox-bibtex-chinese.el
+Built ox-bibtex-chinese in 7.734s, finished at 2022-10-27T15:51:23+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  370 Oct 27 15:51 packages/ox-bibtex-chinese-20170723.309.entry
+192K -rw-r--r-- 1 root root 190K Oct 27 15:51 packages/ox-bibtex-chinese-20170723.309.tar

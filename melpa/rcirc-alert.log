@@ -3,11 +3,21 @@ Fetcher: github
 Source:  https://github.com/csantosb/rcirc-alert.git
 
 Updating /mnt/store/melpa/working/rcirc-alert/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/csantosb/rcirc-alert.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 0adf8ff9c47023fec578f678424be62b0f49057f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rcirc-alert/
+  to /tmp/rcirc-alertXDRnta/rcirc-alert-20141127.1047
+    rcirc-alert.el -> rcirc-alert.el
+    xfrp_find_replace_pairs.el -> xfrp_find_replace_pairs.el
+    rcirc-alert.sh -> rcirc-alert.sh
+Created rcirc-alert-20141127.1047.tar containing:
+  rcirc-alert-20141127.1047/
+  rcirc-alert-20141127.1047/rcirc-alert-pkg.el
+  rcirc-alert-20141127.1047/rcirc-alert.el
+  rcirc-alert-20141127.1047/rcirc-alert.sh
+  rcirc-alert-20141127.1047/xfrp_find_replace_pairs.el
+Built rcirc-alert in 3.847s, finished at 2022-10-27T15:58:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 264 Oct 27 15:58 packages/rcirc-alert-20141127.1047.entry
+ 32K -rw-r--r-- 1 root root 30K Oct 27 15:58 packages/rcirc-alert-20141127.1047.tar

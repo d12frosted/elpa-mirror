@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/john2x/nameframe.git
 
 Updating /mnt/store/melpa/working/nameframe-projectile/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/john2x/nameframe.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 06d3400750c6b33ae215b9ac2922ee4dafd6b506
+Built nameframe-projectile in 4.297s, finished at 2022-10-27T15:43:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.2K Oct 27 15:43 packages/nameframe-projectile-20221023.957.el
+4.0K -rw-r--r-- 1 root root  406 Oct 27 15:43 packages/nameframe-projectile-20221023.957.entry

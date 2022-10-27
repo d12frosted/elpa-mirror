@@ -3,11 +3,25 @@ Fetcher: github
 Source:  https://github.com/ndw/ob-ml-marklogic.git
 
 Updating /mnt/store/melpa/working/ob-ml-marklogic/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/ndw/ob-ml-marklogic.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out d5660ad14f29e17cd26ae92eeb585b24030e9570
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-ml-marklogic/
+  to /tmp/ob-ml-marklogicvlF5rT/ob-ml-marklogic-20190312.1314
+    ob-ml-common.el -> ob-ml-common.el
+    ob-ml-javascript.el -> ob-ml-javascript.el
+    ob-ml-marklogic.el -> ob-ml-marklogic.el
+    ob-ml-sparql.el -> ob-ml-sparql.el
+    ob-ml-xquery.el -> ob-ml-xquery.el
+Created ob-ml-marklogic-20190312.1314.tar containing:
+  ob-ml-marklogic-20190312.1314/
+  ob-ml-marklogic-20190312.1314/ob-ml-common.el
+  ob-ml-marklogic-20190312.1314/ob-ml-javascript.el
+  ob-ml-marklogic-20190312.1314/ob-ml-marklogic-pkg.el
+  ob-ml-marklogic-20190312.1314/ob-ml-marklogic.el
+  ob-ml-marklogic-20190312.1314/ob-ml-sparql.el
+  ob-ml-marklogic-20190312.1314/ob-ml-xquery.el
+Built ob-ml-marklogic in 4.625s, finished at 2022-10-27T15:46:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 386 Oct 27 15:46 packages/ob-ml-marklogic-20190312.1314.entry
+ 32K -rw-r--r-- 1 root root 30K Oct 27 15:46 packages/ob-ml-marklogic-20190312.1314.tar

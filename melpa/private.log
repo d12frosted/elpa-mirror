@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/victorteokw/private.git
 
 Updating /mnt/store/melpa/working/private/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/victorteokw/private.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f57f1c2f6bfe900bd40b252688df4c6ed6a5f44b
+Built private in 5.294s, finished at 2022-10-27T15:55:44+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Oct 27 15:55 packages/private-20150122.157.el
+4.0K -rw-r--r-- 1 root root 406 Oct 27 15:55 packages/private-20150122.157.entry

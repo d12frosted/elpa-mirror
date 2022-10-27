@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/msnoigrs/ox-nikola.git
 
 Updating /mnt/store/melpa/working/ox-nikola/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/msnoigrs/ox-nikola.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 5bcbc1a38f6619f62294194f13ca0cd4ca14dd48
+Built ox-nikola in 5.126s, finished at 2022-10-27T15:51:46+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Oct 27 15:51 packages/ox-nikola-20151114.1116.el
+4.0K -rw-r--r-- 1 root root  449 Oct 27 15:51 packages/ox-nikola-20151114.1116.entry

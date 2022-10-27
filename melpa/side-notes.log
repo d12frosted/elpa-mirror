@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/rnkn/side-notes.git
 
 Updating /mnt/store/melpa/working/side-notes/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/rnkn/side-notes.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 41fe8544661a772f764a0924e04080f258053955
+Built side-notes in 4.223s, finished at 2022-10-27T16:02:47+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Oct 27 16:02 packages/side-notes-20210709.1403.el
+4.0K -rw-r--r-- 1 root root  396 Oct 27 16:02 packages/side-notes-20210709.1403.entry

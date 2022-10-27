@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/marcIhm/org-id-cleanup.git
 
 Updating /mnt/store/melpa/working/org-id-cleanup/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/marcIhm/org-id-cleanup.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b6bf79465cd31d66b547704903b8ba5fcd6dd108
+Built org-id-cleanup in 3.845s, finished at 2022-10-27T15:48:35+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 31K Oct 27 15:48 packages/org-id-cleanup-20220228.1653.el
+4.0K -rw-r--r-- 1 root root 403 Oct 27 15:48 packages/org-id-cleanup-20220228.1653.entry

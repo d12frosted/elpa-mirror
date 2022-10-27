@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/davep/obfusurl.el.git
 
 Updating /mnt/store/melpa/working/obfusurl/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/davep/obfusurl.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 7a5a41905000ce2ec1fd72509a5567e5fd9f47e5
+Built obfusurl in 3.071s, finished at 2022-10-27T15:46:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Oct 27 15:46 packages/obfusurl-20170809.1524.el
+4.0K -rw-r--r-- 1 root root  384 Oct 27 15:46 packages/obfusurl-20170809.1524.entry

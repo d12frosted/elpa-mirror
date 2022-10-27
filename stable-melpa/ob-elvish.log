@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/zzamboni/ob-elvish.git
 
 Updating /mnt/store/melpa/working/ob-elvish/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/zzamboni/ob-elvish.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 369181ceae1190bf971c71aebf9fc6133bd98c39
+Built ob-elvish in 4.776s, finished at 2022-10-27T15:46:20+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Oct 27 15:46 packages/ob-elvish-20180427.1900.el
+4.0K -rw-r--r-- 1 root root  422 Oct 27 15:46 packages/ob-elvish-20180427.1900.entry

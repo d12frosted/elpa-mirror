@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/ikirill/propfont-mixed.git
 
 Updating /mnt/store/melpa/working/propfont-mixed/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/ikirill/propfont-mixed.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 0b461ef4754a469610dba71874a34b6da42176bf
+Built propfont-mixed in 3.666s, finished at 2022-10-27T15:56:18+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.6K Oct 27 15:56 packages/propfont-mixed-20150113.2211.el
+4.0K -rw-r--r-- 1 root root  410 Oct 27 15:56 packages/propfont-mixed-20150113.2211.entry

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/knu/poly-ruby.el.git
 
 Updating /mnt/store/melpa/working/poly-ruby/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/knu/poly-ruby.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 794ebb926ace23e9c1398da934701951432dcea2
+Built poly-ruby in 3.672s, finished at 2022-10-27T15:54:53+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.1K Oct 27 15:54 packages/poly-ruby-20180905.929.el
+4.0K -rw-r--r-- 1 root root  397 Oct 27 15:54 packages/poly-ruby-20180905.929.entry

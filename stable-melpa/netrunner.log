@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/Kungsgeten/netrunner.git
 
 Updating /mnt/store/melpa/working/netrunner/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/Kungsgeten/netrunner.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out c64672992175c8c1073c0f56c2e471839db71a0f
+Built netrunner in 6.677s, finished at 2022-10-27T15:44:29+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Oct 27 15:44 packages/netrunner-20160910.2332.el
+4.0K -rw-r--r-- 1 root root 434 Oct 27 15:44 packages/netrunner-20160910.2332.entry

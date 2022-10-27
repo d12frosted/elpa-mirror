@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/ksqsf/pest-mode.git
 
 Updating /mnt/store/melpa/working/pest-mode/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/ksqsf/pest-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out e71e2f2730e926ee936ff7be15d912de27547e9e
+Built pest-mode in 4.155s, finished at 2022-10-27T15:53:29+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Oct 27 15:53 packages/pest-mode-20200321.504.el
+4.0K -rw-r--r-- 1 root root 350 Oct 27 15:53 packages/pest-mode-20200321.504.entry

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/rocky/emacs-loc-changes.git
 
 Updating /mnt/store/melpa/working/loc-changes/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/rocky/emacs-loc-changes.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 2db42905675e1740305f9884613bc48582601b8a
+Built loc-changes in 3.898s, finished at 2022-10-27T15:38:07+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.0K Oct 27 15:38 packages/loc-changes-20200722.1111.el
+4.0K -rw-r--r-- 1 root root  353 Oct 27 15:38 packages/loc-changes-20200722.1111.entry

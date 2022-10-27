@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/orgcandman/pcap-mode.git
 
 Updating /mnt/store/melpa/working/pcap-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/orgcandman/pcap-mode.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 52780669af0ade136f84d73f21b4dbb7ab655416
+Built pcap-mode in 4.550s, finished at 2022-10-27T15:52:59+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Oct 27 15:52 packages/pcap-mode-20161025.1448.el
+4.0K -rw-r--r-- 1 root root 368 Oct 27 15:52 packages/pcap-mode-20161025.1448.entry

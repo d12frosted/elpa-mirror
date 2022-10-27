@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/jeremy-compostella/pdfgrep.git
 
 Updating /mnt/store/melpa/working/pdfgrep/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/jeremy-compostella/pdfgrep.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out a4ca0a1e6521de93f28bb6736a5344b4974d144c
+Built pdfgrep in 4.201s, finished at 2022-10-27T15:53:11+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Oct 27 15:53 packages/pdfgrep-20210203.1730.el
+4.0K -rw-r--r-- 1 root root  430 Oct 27 15:53 packages/pdfgrep-20210203.1730.entry

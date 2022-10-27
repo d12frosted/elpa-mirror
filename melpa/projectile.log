@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/bbatsov/projectile.git
 
 Updating /mnt/store/melpa/working/projectile/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/bbatsov/projectile.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out f5a2a3ab268b905c796de255e04790e6e69a61ab
+Built projectile in 5.715s, finished at 2022-10-27T15:56:05+0000
+ ✓ Success:
+256K -rw-r--r-- 1 root root 255K Oct 27 05:50 packages/projectile-20221025.845.el
+4.0K -rw-r--r-- 1 root root  423 Oct 27 05:50 packages/projectile-20221025.845.entry
+260K -rw-r--r-- 1 root root 257K Oct 27 15:56 packages/projectile-20221027.1529.el
+4.0K -rw-r--r-- 1 root root  424 Oct 27 15:56 packages/projectile-20221027.1529.entry

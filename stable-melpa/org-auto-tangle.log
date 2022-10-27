@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/yilkalargaw/org-auto-tangle.git
 
 Updating /mnt/store/melpa/working/org-auto-tangle/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/yilkalargaw/org-auto-tangle.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 2494a6f78c9db5311123abc7cad119851a29a55c
+Built org-auto-tangle in 4.284s, finished at 2022-10-27T15:47:48+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Oct 27 15:47 packages/org-auto-tangle-20220812.2327.el
+4.0K -rw-r--r-- 1 root root  458 Oct 27 15:47 packages/org-auto-tangle-20220812.2327.entry

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/magnars/smart-forward.el.git
 
 Updating /mnt/store/melpa/working/smart-forward/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/magnars/smart-forward.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7b6dbfdbd4b646376a567c70e1a161545431b72b
+Built smart-forward in 5.727s, finished at 2022-10-27T16:04:02+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.1K Oct 27 16:04 packages/smart-forward-20140430.713.el
+4.0K -rw-r--r-- 1 root root  304 Oct 27 16:04 packages/smart-forward-20140430.713.entry

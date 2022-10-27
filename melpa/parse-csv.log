@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/mrc/el-csv.git
 
 Updating /mnt/store/melpa/working/parse-csv/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/mrc/el-csv.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 96bef1ffbc89ea12d13311c9fa239c5c3e864890
+Built parse-csv in 3.378s, finished at 2022-10-27T15:52:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Oct 27 15:52 packages/parse-csv-20160512.1723.el
+4.0K -rw-r--r-- 1 root root  413 Oct 27 15:52 packages/parse-csv-20160512.1723.entry

@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/nbfalcon/macrostep-geiser.git
 
 Updating /mnt/store/melpa/working/macrostep-geiser/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/nbfalcon/macrostep-geiser.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out f6a2d5bb96ade4f23df557649af87ebd0cc45125
+Built macrostep-geiser in 3.679s, finished at 2022-10-27T15:39:43+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Oct 27 15:39 packages/macrostep-geiser-20210717.801.el
+4.0K -rw-r--r-- 1 root root  425 Oct 27 15:39 packages/macrostep-geiser-20210717.801.entry

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/shg/ob-julia-vterm.el.git
 
 Updating /mnt/store/melpa/working/ob-julia-vterm/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/shg/ob-julia-vterm.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 1da59a806f88483063d3c0449d8927d76acd975a
+Built ob-julia-vterm in 4.413s, finished at 2022-10-27T15:46:30+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Oct 27 15:46 packages/ob-julia-vterm-20220903.554.el
+4.0K -rw-r--r-- 1 root root 445 Oct 27 15:46 packages/ob-julia-vterm-20220903.554.entry

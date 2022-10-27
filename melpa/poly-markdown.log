@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/polymode/poly-markdown.git
 
 Updating /mnt/store/melpa/working/poly-markdown/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/polymode/poly-markdown.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 81d648ce623c05727836dbee5cbd1dfe6fe850f1
+Built poly-markdown in 4.611s, finished at 2022-10-27T15:54:51+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Oct 27 15:54 packages/poly-markdown-20220117.2351.el
+4.0K -rw-r--r-- 1 root root  365 Oct 27 15:54 packages/poly-markdown-20220117.2351.entry

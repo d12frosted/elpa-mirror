@@ -3,11 +3,23 @@ Fetcher: github
 Source:  https://github.com/SpringHan/netease-cloud-music.el.git
 
 Updating /mnt/store/melpa/working/netease-cloud-music/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/SpringHan/netease-cloud-music.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f238d1d45bbeee32e0a8d169f39de4360be908f4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/netease-cloud-music/
+  to /tmp/netease-cloud-musici4vIcV/netease-cloud-music-20220305.1224
+    netease-cloud-music-comment.el -> netease-cloud-music-comment.el
+    netease-cloud-music-functions.el -> netease-cloud-music-functions.el
+    netease-cloud-music-ui.el -> netease-cloud-music-ui.el
+    netease-cloud-music.el -> netease-cloud-music.el
+Created netease-cloud-music-20220305.1224.tar containing:
+  netease-cloud-music-20220305.1224/
+  netease-cloud-music-20220305.1224/netease-cloud-music-comment.el
+  netease-cloud-music-20220305.1224/netease-cloud-music-functions.el
+  netease-cloud-music-20220305.1224/netease-cloud-music-pkg.el
+  netease-cloud-music-20220305.1224/netease-cloud-music-ui.el
+  netease-cloud-music-20220305.1224/netease-cloud-music.el
+Built netease-cloud-music in 4.560s, finished at 2022-10-27T15:44:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  392 Oct 27 15:44 packages/netease-cloud-music-20220305.1224.entry
+172K -rw-r--r-- 1 root root 170K Oct 27 15:44 packages/netease-cloud-music-20220305.1224.tar

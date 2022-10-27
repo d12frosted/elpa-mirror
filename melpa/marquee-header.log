@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/jcs-elpa/marquee-header.git
 
 Updating /mnt/store/melpa/working/marquee-header/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/jcs-elpa/marquee-header.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 14f490b8683bdce53a6272fcc28a9b4137f86a24
+Built marquee-header in 4.364s, finished at 2022-10-27T15:40:51+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Oct 27 15:40 packages/marquee-header-20220704.753.el
+4.0K -rw-r--r-- 1 root root  408 Oct 27 15:40 packages/marquee-header-20220704.753.entry

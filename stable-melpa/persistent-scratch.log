@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/Fanael/persistent-scratch.git
 
 Updating /mnt/store/melpa/working/persistent-scratch/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/Fanael/persistent-scratch.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 92f540e7d310ec2e0b636eff1033cf78f0d9eb40
+Built persistent-scratch in 4.100s, finished at 2022-10-27T15:53:19+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Oct 27 15:53 packages/persistent-scratch-20220620.408.el
+4.0K -rw-r--r-- 1 root root 405 Oct 27 15:53 packages/persistent-scratch-20220620.408.entry

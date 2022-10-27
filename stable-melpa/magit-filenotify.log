@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/ruediger/magit-filenotify.git
 
 Updating /mnt/store/melpa/working/magit-filenotify/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/ruediger/magit-filenotify.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out c0865b3c41af20b6cd89de23d3b0beb54c8401a4
+Built magit-filenotify in 5.021s, finished at 2022-10-27T15:39:54+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Oct 27 15:39 packages/magit-filenotify-20151116.2340.el
+4.0K -rw-r--r-- 1 root root 391 Oct 27 15:39 packages/magit-filenotify-20151116.2340.entry

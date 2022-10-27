@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/yveszoundi/emacs-rimero-theme.git
 
 Updating /mnt/store/melpa/working/rimero-theme/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/yveszoundi/emacs-rimero-theme.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out a2e706c2b34f749019979a133f08a2d94a1104b3
+Built rimero-theme in 6.158s, finished at 2022-10-27T16:00:07+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Oct 27 16:00 packages/rimero-theme-20180901.1348.el
+4.0K -rw-r--r-- 1 root root 447 Oct 27 16:00 packages/rimero-theme-20180901.1348.entry

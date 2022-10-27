@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/paddymcall/noXML-fold.git
 
 Updating /mnt/store/melpa/working/noxml-fold/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/paddymcall/noXML-fold.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 46c7f6a008672213238a9f8d7a416ce80916aa62
+Built noxml-fold in 4.169s, finished at 2022-10-27T15:45:42+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 51K Oct 27 15:45 packages/noxml-fold-20170823.1357.el
+4.0K -rw-r--r-- 1 root root 365 Oct 27 15:45 packages/noxml-fold-20170823.1357.entry

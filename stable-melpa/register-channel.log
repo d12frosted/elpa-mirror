@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/YangZhao11/register-channel.git
 
 Updating /mnt/store/melpa/working/register-channel/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/YangZhao11/register-channel.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ed7f563e92170b758dc878fcb5df88d46d5d44cc
+Built register-channel in 3.931s, finished at 2022-10-27T15:59:24+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Oct 27 15:59 packages/register-channel-20210120.1618.el
+4.0K -rw-r--r-- 1 root root 338 Oct 27 15:59 packages/register-channel-20210120.1618.entry

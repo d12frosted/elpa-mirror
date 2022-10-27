@@ -3,11 +3,20 @@ Fetcher: github
 Source:  https://github.com/purcell/package-lint.git
 
 Updating /mnt/store/melpa/working/package-lint/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/purcell/package-lint.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 4ea8318c1bf79ccb1b4658d58917bbd9f990c432
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/package-lint/
+  to /tmp/package-lint09oj9U/package-lint-20221003.1636
+    package-lint.el -> package-lint.el
+    data => data
+Created package-lint-20221003.1636.tar containing:
+  package-lint-20221003.1636/
+  package-lint-20221003.1636/data/
+  package-lint-20221003.1636/data/stdlib-changes
+  package-lint-20221003.1636/package-lint-pkg.el
+  package-lint-20221003.1636/package-lint.el
+Built package-lint in 4.251s, finished at 2022-10-27T15:52:10+0000
+ ✓ Success:
+ 4.0K -rw-r--r-- 1 root root   475 Oct 27 15:52 packages/package-lint-20221003.1636.entry
+1012K -rw-r--r-- 1 root root 1010K Oct 27 15:52 packages/package-lint-20221003.1636.tar

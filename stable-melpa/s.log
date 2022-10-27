@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/magnars/s.el.git
 
 Updating /mnt/store/melpa/working/s/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/magnars/s.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b4b8c03fcef316a27f75633fe4bb990aeff6e705
+Built s in 5.173s, finished at 2022-10-27T16:00:55+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 26K Oct 27 16:00 packages/s-20220902.1511.el
+4.0K -rw-r--r-- 1 root root 300 Oct 27 16:00 packages/s-20220902.1511.entry

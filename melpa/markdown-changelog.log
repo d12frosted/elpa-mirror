@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/plandes/markdown-changelog.git
 
 Updating /mnt/store/melpa/working/markdown-changelog/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/plandes/markdown-changelog.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 1a2c3a4c3e4196f2b5dbb145b01b4bc435a93a96
+Built markdown-changelog in 4.086s, finished at 2022-10-27T15:40:42+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Oct 27 15:40 packages/markdown-changelog-20200120.2253.el
+4.0K -rw-r--r-- 1 root root  414 Oct 27 15:40 packages/markdown-changelog-20200120.2253.entry

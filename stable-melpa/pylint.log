@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/PyCQA/pylint.git
 
 Updating /mnt/store/melpa/working/pylint/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/PyCQA/pylint.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 38d15c98316359c7b0b190f2245a3b2e2bf62109
+Built pylint in 17.957s, finished at 2022-10-27T15:57:30+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.0K Oct 27 15:57 packages/pylint-20210411.1931.el
+4.0K -rw-r--r-- 1 root root  282 Oct 27 15:57 packages/pylint-20210411.1931.entry

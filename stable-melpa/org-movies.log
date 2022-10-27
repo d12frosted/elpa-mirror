@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/teeann/org-movies.git
 
 Updating /mnt/store/melpa/working/org-movies/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/teeann/org-movies.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out e96fecaffa2924de64a507aa31d2934e667ee1ea
+Built org-movies in 4.444s, finished at 2022-10-27T15:48:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Oct 27 15:48 packages/org-movies-20210920.101.el
+4.0K -rw-r--r-- 1 root root  420 Oct 27 15:48 packages/org-movies-20210920.101.entry

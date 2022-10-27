@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/chrisdone/number.git
 
 Updating /mnt/store/melpa/working/number/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/chrisdone/number.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out bbc278d34dbcca83e70e3be855ec98b23debfb99
+Built number in 3.590s, finished at 2022-10-27T15:45:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Oct 27 15:45 packages/number-20170901.1312.el
+4.0K -rw-r--r-- 1 root root  135 Oct 27 15:45 packages/number-20170901.1312.entry

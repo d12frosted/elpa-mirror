@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/victorteokw/smart-mark.git
 
 Updating /mnt/store/melpa/working/smart-mark/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/victorteokw/smart-mark.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out d179cdc3f53001a5ce99d5095f493cdf3a792567
+Built smart-mark in 7.741s, finished at 2022-10-27T16:04:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Oct 27 16:04 packages/smart-mark-20150912.210.el
+4.0K -rw-r--r-- 1 root root  304 Oct 27 16:04 packages/smart-mark-20150912.210.entry

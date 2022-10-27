@@ -3,11 +3,22 @@ Fetcher: github
 Source:  https://github.com/joostkremers/pandoc-mode.git
 
 Updating /mnt/store/melpa/working/pandoc-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/joostkremers/pandoc-mode.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 0e1a50717599e813e2b872f2af9f40b2272793fd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pandoc-mode/
+  to /tmp/pandoc-modeH2dgG9/pandoc-mode-20220907.2117
+    pandoc-mode-utils.el -> pandoc-mode-utils.el
+    pandoc-mode.el -> pandoc-mode.el
+    pandoc-mode.info -> pandoc-mode.info
+Created pandoc-mode-20220907.2117.tar containing:
+  pandoc-mode-20220907.2117/
+  pandoc-mode-20220907.2117/dir
+  pandoc-mode-20220907.2117/pandoc-mode-pkg.el
+  pandoc-mode-20220907.2117/pandoc-mode-utils.el
+  pandoc-mode-20220907.2117/pandoc-mode.el
+  pandoc-mode-20220907.2117/pandoc-mode.info
+Built pandoc-mode in 4.129s, finished at 2022-10-27T15:52:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  443 Oct 27 15:52 packages/pandoc-mode-20220907.2117.entry
+192K -rw-r--r-- 1 root root 190K Oct 27 15:52 packages/pandoc-mode-20220907.2117.tar

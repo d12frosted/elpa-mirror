@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/jdormit/ob-graphql.git
 
 Updating /mnt/store/melpa/working/ob-graphql/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/jdormit/ob-graphql.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7c35419f9eec5dc44967cbcfa13c7135b9a96bfc
+Built ob-graphql in 3.710s, finished at 2022-10-27T15:46:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Oct 27 15:46 packages/ob-graphql-20201222.1515.el
+4.0K -rw-r--r-- 1 root root  485 Oct 27 15:46 packages/ob-graphql-20201222.1515.entry

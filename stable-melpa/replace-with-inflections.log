@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/knu/replace-with-inflections.el.git
 
 Updating /mnt/store/melpa/working/replace-with-inflections/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/knu/replace-with-inflections.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out d9201e047856492f282da65459b28aba25998dbb
+Built replace-with-inflections in 3.679s, finished at 2022-10-27T15:59:37+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.4K Oct 27 15:59 packages/replace-with-inflections-20180831.635.el
+4.0K -rw-r--r-- 1 root root  494 Oct 27 15:59 packages/replace-with-inflections-20180831.635.entry

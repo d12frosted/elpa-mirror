@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/marcelino-m/see-mode.git
 
 Updating /mnt/store/melpa/working/see-mode/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/marcelino-m/see-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out db9e4324f9dcc14d5125cb6a79d6c9fad5b14626
+Built see-mode in 4.579s, finished at 2022-10-27T16:01:40+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Oct 27 16:01 packages/see-mode-20180511.41.el
+4.0K -rw-r--r-- 1 root root 429 Oct 27 16:01 packages/see-mode-20180511.41.entry

@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-php/magic-filetype.el.git
 
 Updating /mnt/store/melpa/working/magic-filetype/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/emacs-php/magic-filetype.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 019494add5ff02dd36cb3f500142fc51125522cc
+Built magic-filetype in 4.003s, finished at 2022-10-27T15:39:46+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.1K Oct 27 15:39 packages/magic-filetype-20180219.1552.el
+4.0K -rw-r--r-- 1 root root  409 Oct 27 15:39 packages/magic-filetype-20180219.1552.entry

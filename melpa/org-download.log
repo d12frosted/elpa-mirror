@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/abo-abo/org-download.git
 
 Updating /mnt/store/melpa/working/org-download/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/abo-abo/org-download.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 19e166f0a8c539b4144cfbc614309d47a9b2a9b7
+Built org-download in 4.701s, finished at 2022-10-27T15:48:15+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Oct 27 15:48 packages/org-download-20220906.1929.el
+4.0K -rw-r--r-- 1 root root 381 Oct 27 15:48 packages/org-download-20220906.1929.entry

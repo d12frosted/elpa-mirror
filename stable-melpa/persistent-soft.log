@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/rolandwalker/persistent-soft.git
 
 Updating /mnt/store/melpa/working/persistent-soft/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/rolandwalker/persistent-soft.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out a1e0ddf2a12a6f18cab565dee250f070384cbe02
+Built persistent-soft in 3.983s, finished at 2022-10-27T15:53:19+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Oct 27 15:53 packages/persistent-soft-20150223.1853.el
+4.0K -rw-r--r-- 1 root root 438 Oct 27 15:53 packages/persistent-soft-20150223.1853.entry

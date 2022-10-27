@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/rolandwalker/simpleclip.git
 
 Updating /mnt/store/melpa/working/simpleclip/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/rolandwalker/simpleclip.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 023f239275115169c3a3637ad95fae4a036c005e
+Built simpleclip in 7.220s, finished at 2022-10-27T16:03:07+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Oct 27 16:03 packages/simpleclip-20220518.1251.el
+4.0K -rw-r--r-- 1 root root 378 Oct 27 16:03 packages/simpleclip-20220518.1251.entry

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/cmack/emacs-planet-theme.git
 
 Updating /mnt/store/melpa/working/planet-theme/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/cmack/emacs-planet-theme.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b0a310ff36565fe22224c407cf59569986698a32
+Built planet-theme in 3.748s, finished at 2022-10-27T15:54:20+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Oct 27 15:54 packages/planet-theme-20161031.217.el
+4.0K -rw-r--r-- 1 root root 410 Oct 27 15:54 packages/planet-theme-20161031.217.entry

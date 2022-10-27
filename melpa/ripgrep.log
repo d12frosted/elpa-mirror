@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/nlamirault/ripgrep.el.git
 
 Updating /mnt/store/melpa/working/ripgrep/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/nlamirault/ripgrep.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 872e250e8f93b8bb0a8a1de8bde17fd9bd116e31
+Built ripgrep in 5.320s, finished at 2022-10-27T16:00:07+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.2K Oct 27 16:00 packages/ripgrep-20220520.1410.el
+4.0K -rw-r--r-- 1 root root  423 Oct 27 16:00 packages/ripgrep-20220520.1410.entry

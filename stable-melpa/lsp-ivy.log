@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-ivy.git
 
 Updating /mnt/store/melpa/working/lsp-ivy/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/emacs-lsp/lsp-ivy.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 9ecf4dd9b1207109802bd1882aa621eb1c385106
+Built lsp-ivy in 8.685s, finished at 2022-10-27T15:39:04+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Oct 27 15:39 packages/lsp-ivy-20220831.1823.el
+4.0K -rw-r--r-- 1 root root  314 Oct 27 15:39 packages/lsp-ivy-20220831.1823.entry

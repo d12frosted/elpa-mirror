@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/cute-jumper/org-table-sticky-header.git
 
 Updating /mnt/store/melpa/working/org-table-sticky-header/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/cute-jumper/org-table-sticky-header.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out b65442857128ab04724aaa301e60aa874a31a798
+Built org-table-sticky-header in 3.705s, finished at 2022-10-27T15:49:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Oct 27 15:49 packages/org-table-sticky-header-20190924.506.el
+4.0K -rw-r--r-- 1 root root  369 Oct 27 15:49 packages/org-table-sticky-header-20190924.506.entry

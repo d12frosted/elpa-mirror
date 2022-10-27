@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/the-ted/org-mind-map.git
 
 Updating /mnt/store/melpa/working/org-mind-map/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/the-ted/org-mind-map.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 41df4b2e30455494f1848b4e06cc9208aa9e902b
+Built org-mind-map in 4.338s, finished at 2022-10-27T15:48:51+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 37K Oct 27 15:48 packages/org-mind-map-20180826.2340.el
+4.0K -rw-r--r-- 1 root root 464 Oct 27 15:48 packages/org-mind-map-20180826.2340.entry

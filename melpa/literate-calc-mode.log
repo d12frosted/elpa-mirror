@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/sulami/literate-calc-mode.el.git
 
 Updating /mnt/store/melpa/working/literate-calc-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/sulami/literate-calc-mode.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f5133e65d8ffdab918cdfc269ac0c067a0de5e9b
+Built literate-calc-mode in 4.183s, finished at 2022-10-27T15:37:53+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Oct 27 15:37 packages/literate-calc-mode-20220215.1814.el
+4.0K -rw-r--r-- 1 root root 413 Oct 27 15:37 packages/literate-calc-mode-20220215.1814.entry

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/conao3/ox-zenn.el.git
 
 Updating /mnt/store/melpa/working/ox-zenn/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/conao3/ox-zenn.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b53bd82116c9f7dbb5b476d2cfcc8ed0f3bc9c78
+Built ox-zenn in 4.207s, finished at 2022-10-27T15:52:03+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Oct 27 15:52 packages/ox-zenn-20200924.1607.el
+4.0K -rw-r--r-- 1 root root 403 Oct 27 15:52 packages/ox-zenn-20200924.1607.entry

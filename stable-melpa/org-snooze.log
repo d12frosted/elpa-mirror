@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/xueeinstein/org-snooze.el.git
 
 Updating /mnt/store/melpa/working/org-snooze/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/xueeinstein/org-snooze.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 8799adc14a20f3489063d279ff69312de3180bf9
+Built org-snooze in 4.445s, finished at 2022-10-27T15:49:46+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.8K Oct 27 15:49 packages/org-snooze-20181229.1424.el
+4.0K -rw-r--r-- 1 root root  344 Oct 27 15:49 packages/org-snooze-20181229.1424.entry

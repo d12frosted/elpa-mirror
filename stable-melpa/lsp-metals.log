@@ -3,9 +3,47 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-metals.git
 
 Updating /mnt/store/melpa/working/lsp-metals/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/emacs-lsp/lsp-metals.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 6af70181699c5470be34940ee16b44374cec2037
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-metals/
+  to /tmp/lsp-metalsAVVoZP/lsp-metals-20221014.853
+    lsp-metals-protocol.el -> lsp-metals-protocol.el
+    lsp-metals-treeview.el -> lsp-metals-treeview.el
+    lsp-metals.el -> lsp-metals.el
+    icons => icons
+Created lsp-metals-20221014.853.tar containing:
+  lsp-metals-20221014.853/
+  lsp-metals-20221014.853/icons/
+  lsp-metals-20221014.853/icons/book-dark.png
+  lsp-metals-20221014.853/icons/book-light.png
+  lsp-metals-20221014.853/icons/bug-dark.png
+  lsp-metals-20221014.853/icons/bug-light.png
+  lsp-metals-20221014.853/icons/class.png
+  lsp-metals-20221014.853/icons/discord-dark.png
+  lsp-metals-20221014.853/icons/discord-light.png
+  lsp-metals-20221014.853/icons/enum.png
+  lsp-metals-20221014.853/icons/field.png
+  lsp-metals-20221014.853/icons/github-dark.png
+  lsp-metals-20221014.853/icons/github-light.png
+  lsp-metals-20221014.853/icons/gitter-dark.png
+  lsp-metals-20221014.853/icons/gitter-light.png
+  lsp-metals-20221014.853/icons/interface.png
+  lsp-metals-20221014.853/icons/issue-opened-dark.png
+  lsp-metals-20221014.853/icons/issue-opened-light.png
+  lsp-metals-20221014.853/icons/logo.png
+  lsp-metals-20221014.853/icons/method.png
+  lsp-metals-20221014.853/icons/object.png
+  lsp-metals-20221014.853/icons/trait.png
+  lsp-metals-20221014.853/icons/twitter-dark.png
+  lsp-metals-20221014.853/icons/twitter-light.png
+  lsp-metals-20221014.853/icons/val.png
+  lsp-metals-20221014.853/icons/var.png
+  lsp-metals-20221014.853/lsp-metals-pkg.el
+  lsp-metals-20221014.853/lsp-metals-protocol.el
+  lsp-metals-20221014.853/lsp-metals-treeview.el
+  lsp-metals-20221014.853/lsp-metals.el
+Built lsp-metals in 7.664s, finished at 2022-10-27T15:39:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  700 Oct 27 15:39 packages/lsp-metals-20221014.853.entry
+120K -rw-r--r-- 1 root root 120K Oct 27 15:39 packages/lsp-metals-20221014.853.tar

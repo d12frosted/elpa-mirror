@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-sideline/sideline-flycheck.git
 
 Updating /mnt/store/melpa/working/sideline-flycheck/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/emacs-sideline/sideline-flycheck.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out a1fd5368acbc8cd15e00d23a0bf6f19d24f5c061
+Built sideline-flycheck in 4.066s, finished at 2022-10-27T16:02:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Oct 27 16:02 packages/sideline-flycheck-20220629.752.el
+4.0K -rw-r--r-- 1 root root  528 Oct 27 16:02 packages/sideline-flycheck-20220629.752.entry

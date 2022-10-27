@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/joeheyming/rbt.el.git
 
 Updating /mnt/store/melpa/working/rbt/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/joeheyming/rbt.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 32bfba9062a014e375451cf4203c29535b5efc1e
+Built rbt in 4.128s, finished at 2022-10-27T15:58:31+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.5K Oct 27 15:58 packages/rbt-20170202.2302.el
+4.0K -rw-r--r-- 1 root root  359 Oct 27 15:58 packages/rbt-20170202.2302.entry

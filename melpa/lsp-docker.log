@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-docker.git
 
 Updating /mnt/store/melpa/working/lsp-docker/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/emacs-lsp/lsp-docker.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 3ffd7729cdd748586734135e36713517e14a1578
+Built lsp-docker in 7.642s, finished at 2022-10-27T15:38:52+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Oct 27 15:38 packages/lsp-docker-20221025.1659.el
+4.0K -rw-r--r-- 1 root root 550 Oct 27 15:38 packages/lsp-docker-20221025.1659.entry

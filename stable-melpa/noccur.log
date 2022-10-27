@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/NicolasPetton/noccur.el.git
 
 Updating /mnt/store/melpa/working/noccur/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/NicolasPetton/noccur.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out fa91647a305e89561d3dbe53da002fff49abe0bb
+Built noccur in 4.219s, finished at 2022-10-27T15:45:16+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Oct 27 15:45 packages/noccur-20191015.719.el
+4.0K -rw-r--r-- 1 root root  300 Oct 27 15:45 packages/noccur-20191015.719.entry

@@ -3,11 +3,21 @@ Fetcher: github
 Source:  https://github.com/ahungry/org-jira.git
 
 Updating /mnt/store/melpa/working/org-jira/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/ahungry/org-jira.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 9510f2010750c5c74b6c1be7e06939afd64aa39b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-jira/
+  to /tmp/org-jiraZbAtZf/org-jira-20220725.1808
+    jiralib.el -> jiralib.el
+    org-jira.el -> org-jira.el
+    org-jira-sdk.el -> org-jira-sdk.el
+Created org-jira-20220725.1808.tar containing:
+  org-jira-20220725.1808/
+  org-jira-20220725.1808/jiralib.el
+  org-jira-20220725.1808/org-jira-pkg.el
+  org-jira-20220725.1808/org-jira-sdk.el
+  org-jira-20220725.1808/org-jira.el
+Built org-jira in 5.137s, finished at 2022-10-27T15:48:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  411 Oct 27 15:48 packages/org-jira-20220725.1808.entry
+180K -rw-r--r-- 1 root root 180K Oct 27 15:48 packages/org-jira-20220725.1808.tar

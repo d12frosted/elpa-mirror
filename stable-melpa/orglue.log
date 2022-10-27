@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/yoshinari-nomura/orglue.git
 
 Updating /mnt/store/melpa/working/orglue/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/yoshinari-nomura/orglue.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 9d5a8e24be9acb8c55bb4d6aa8b98e30e2677401
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/orglue/
+  to /tmp/orglue7E8OH6/orglue-20200411.311
+    orglue-publish.el -> orglue-publish.el
+    orglue.el -> orglue.el
+Created orglue-20200411.311.tar containing:
+  orglue-20200411.311/
+  orglue-20200411.311/orglue-pkg.el
+  orglue-20200411.311/orglue-publish.el
+  orglue-20200411.311/orglue.el
+Built orglue in 3.799s, finished at 2022-10-27T15:50:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 308 Oct 27 15:50 packages/orglue-20200411.311.entry
+ 32K -rw-r--r-- 1 root root 30K Oct 27 15:50 packages/orglue-20200411.311.tar

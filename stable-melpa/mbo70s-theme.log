@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsfodder/emacs-mbo70s-theme.git
 
 Updating /mnt/store/melpa/working/mbo70s-theme/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/emacsfodder/emacs-mbo70s-theme.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out bed3db8965708ed4e9482b224a9b084765c052f2
+Built mbo70s-theme in 4.332s, finished at 2022-10-27T15:41:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.2K Oct 27 15:41 packages/mbo70s-theme-20170808.1315.el
+4.0K -rw-r--r-- 1 root root  332 Oct 27 15:41 packages/mbo70s-theme-20170808.1315.entry

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/grafov/russian-holidays.git
 
 Updating /mnt/store/melpa/working/russian-holidays/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/grafov/russian-holidays.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b285a30f29d85c48e3ea4eb93972d34a090c167b
+Built russian-holidays in 3.936s, finished at 2022-10-27T16:00:47+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Oct 27 16:00 packages/russian-holidays-20170109.2140.el
+4.0K -rw-r--r-- 1 root root  353 Oct 27 16:00 packages/russian-holidays-20170109.2140.entry

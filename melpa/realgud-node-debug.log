@@ -3,9 +3,26 @@ Fetcher: github
 Source:  https://github.com/realgud/realgud-node-debug.git
 
 Updating /mnt/store/melpa/working/realgud-node-debug/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/realgud/realgud-node-debug.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 72e786359ce9dace1796b0d81a00e9340e9c90ad
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/realgud-node-debug/
+  to /tmp/realgud-node-debug0h57ON/realgud-node-debug-20190525.1634
+    realgud-node-debug.el -> realgud-node-debug.el
+    realgud-node-debug/core.el -> realgud-node-debug/core.el
+    realgud-node-debug/init.el -> realgud-node-debug/init.el
+    realgud-node-debug/node-debug.el -> realgud-node-debug/node-debug.el
+    realgud-node-debug/track-mode.el -> realgud-node-debug/track-mode.el
+Created realgud-node-debug-20190525.1634.tar containing:
+  realgud-node-debug-20190525.1634/
+  realgud-node-debug-20190525.1634/realgud-node-debug-pkg.el
+  realgud-node-debug-20190525.1634/realgud-node-debug.el
+  realgud-node-debug-20190525.1634/realgud-node-debug/
+  realgud-node-debug-20190525.1634/realgud-node-debug/core.el
+  realgud-node-debug-20190525.1634/realgud-node-debug/init.el
+  realgud-node-debug-20190525.1634/realgud-node-debug/node-debug.el
+  realgud-node-debug-20190525.1634/realgud-node-debug/track-mode.el
+Built realgud-node-debug in 4.313s, finished at 2022-10-27T15:58:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 491 Oct 27 15:58 packages/realgud-node-debug-20190525.1634.entry
+ 32K -rw-r--r-- 1 root root 30K Oct 27 15:58 packages/realgud-node-debug-20190525.1634.tar

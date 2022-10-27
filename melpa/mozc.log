@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/google/mozc.git
 
 Updating /mnt/store/melpa/working/mozc/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/google/mozc.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b8dc3b676c0443853bf55c3ab5b73db54132441d
+Built mozc in 20.567s, finished at 2022-10-27T15:43:13+0000
+ ✓ Success:
+ 80K -rw-r--r-- 1 root root 79K Oct 27 15:43 packages/mozc-20210306.1053.el
+4.0K -rw-r--r-- 1 root root 206 Oct 27 15:43 packages/mozc-20210306.1053.entry

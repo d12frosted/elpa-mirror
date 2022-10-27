@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/racer-rust/emacs-racer.git
 
 Updating /mnt/store/melpa/working/racer/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/racer-rust/emacs-racer.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 1e63e98626737ea9b662d4a9b1ffd6842b1c648c
+Built racer in 4.390s, finished at 2022-10-27T15:58:12+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 35K Oct 27 15:58 packages/racer-20210307.243.el
+4.0K -rw-r--r-- 1 root root 476 Oct 27 15:58 packages/racer-20210307.243.entry

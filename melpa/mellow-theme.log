@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsfodder/emacs-mellow-theme.git
 
 Updating /mnt/store/melpa/working/mellow-theme/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/emacsfodder/emacs-mellow-theme.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 2bdf18f05f5212b6f269d9a94afe2cf201766891
+Built mellow-theme in 3.921s, finished at 2022-10-27T15:41:12+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Oct 27 15:41 packages/mellow-theme-20170808.1317.el
+4.0K -rw-r--r-- 1 root root  326 Oct 27 15:41 packages/mellow-theme-20170808.1317.entry

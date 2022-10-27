@@ -3,11 +3,27 @@ Fetcher: github
 Source:  https://github.com/amake/macports.el.git
 
 Updating /mnt/store/melpa/working/macports/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/amake/macports.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out d1ff980233c33bda03b02462f49a9b27dde421a5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/macports/
+  to /tmp/macportsyKttgX/macports-20221020.1508
+    macports-core.el -> macports-core.el
+    macports-describe.el -> macports-describe.el
+    macports-installed.el -> macports-installed.el
+    macports-outdated.el -> macports-outdated.el
+    macports-select.el -> macports-select.el
+    macports.el -> macports.el
+Created macports-20221020.1508.tar containing:
+  macports-20221020.1508/
+  macports-20221020.1508/macports-core.el
+  macports-20221020.1508/macports-describe.el
+  macports-20221020.1508/macports-installed.el
+  macports-20221020.1508/macports-outdated.el
+  macports-20221020.1508/macports-pkg.el
+  macports-20221020.1508/macports-select.el
+  macports-20221020.1508/macports.el
+Built macports in 4.082s, finished at 2022-10-27T15:39:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 353 Oct 27 15:39 packages/macports-20221020.1508.entry
+ 60K -rw-r--r-- 1 root root 60K Oct 27 15:39 packages/macports-20221020.1508.tar

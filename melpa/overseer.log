@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/tonini/overseer.el.git
 
 Updating /mnt/store/melpa/working/overseer/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/tonini/overseer.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 02d49f582e80e36b4334c9187801c5ecfb027789
+Built overseer in 8.539s, finished at 2022-10-27T15:51:12+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.4K Oct 27 15:51 packages/overseer-20180226.619.el
+4.0K -rw-r--r-- 1 root root  433 Oct 27 15:51 packages/overseer-20180226.619.entry

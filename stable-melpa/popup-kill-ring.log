@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/waymondo/popup-kill-ring.git
 
 Updating /mnt/store/melpa/working/popup-kill-ring/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/waymondo/popup-kill-ring.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out dc50b62ae8b7c2675dde96bb410d9bf0e8643f6a
+Built popup-kill-ring in 4.219s, finished at 2022-10-27T15:55:09+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Oct 27 15:55 packages/popup-kill-ring-20131020.1854.el
+4.0K -rw-r--r-- 1 root root 441 Oct 27 15:55 packages/popup-kill-ring-20131020.1854.entry

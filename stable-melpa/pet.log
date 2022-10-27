@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/wyuenho/emacs-pet.git
 
 Updating /mnt/store/melpa/working/pet/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/wyuenho/emacs-pet.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 7620c18223f126c384dbf42b0b167a6066a81dd1
+Built pet in 4.000s, finished at 2022-10-27T15:53:30+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Oct 27 15:53 packages/pet-20220917.2111.el
+4.0K -rw-r--r-- 1 root root 414 Oct 27 15:53 packages/pet-20220917.2111.entry

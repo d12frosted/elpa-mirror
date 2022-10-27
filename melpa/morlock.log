@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/tarsius/morlock.git
 
 Updating /mnt/store/melpa/working/morlock/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/tarsius/morlock.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 9cb24413291beb1f4204765c77d65e78dcf83a3b
+Built morlock in 4.140s, finished at 2022-10-27T15:42:49+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Oct 27 15:42 packages/morlock-20220422.1616.el
+4.0K -rw-r--r-- 1 root root  390 Oct 27 15:42 packages/morlock-20220422.1616.entry

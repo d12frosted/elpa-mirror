@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/manage-minor-mode.git
 
 Updating /mnt/store/melpa/working/manage-minor-mode/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/emacsorphanage/manage-minor-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out f4b37fffec7b6608a597e6a3f6900634802807b4
+Built manage-minor-mode in 4.060s, finished at 2022-10-27T15:40:32+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Oct 27 15:40 packages/manage-minor-mode-20210108.1832.el
+4.0K -rw-r--r-- 1 root root 441 Oct 27 15:40 packages/manage-minor-mode-20210108.1832.entry

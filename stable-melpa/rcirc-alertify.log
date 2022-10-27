@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/fgallina/rcirc-alertify.git
 
 Updating /mnt/store/melpa/working/rcirc-alertify/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/fgallina/rcirc-alertify.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out ea5cafc55893f375eccbe013d12dbaa94bf6e259
+Built rcirc-alertify in 4.717s, finished at 2022-10-27T15:58:37+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Oct 27 15:58 packages/rcirc-alertify-20140407.119.el
+4.0K -rw-r--r-- 1 root root  356 Oct 27 15:58 packages/rcirc-alertify-20140407.119.entry

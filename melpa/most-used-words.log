@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/udyantw/most-used-words.git
 
 Updating /mnt/store/melpa/working/most-used-words/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/udyantw/most-used-words.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 40cfe032281611f69d804006d15bef46f93261b7
+Built most-used-words in 3.307s, finished at 2022-10-27T15:42:50+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Oct 27 15:42 packages/most-used-words-20200808.931.el
+4.0K -rw-r--r-- 1 root root  389 Oct 27 15:42 packages/most-used-words-20200808.931.entry

@@ -3,9 +3,27 @@ Fetcher: github
 Source:  https://github.com/rust-lang/rust-mode.git
 
 Updating /mnt/store/melpa/working/rust-mode/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/rust-lang/rust-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 1d24ca2e6c18cd036f00e930cca64f44db04fb67
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rust-mode/
+  to /tmp/rust-modeyen5yf/rust-mode-20220919.1051
+    rust-cargo.el -> rust-cargo.el
+    rust-compile.el -> rust-compile.el
+    rust-mode.el -> rust-mode.el
+    rust-playpen.el -> rust-playpen.el
+    rust-rustfmt.el -> rust-rustfmt.el
+    rust-utils.el -> rust-utils.el
+Created rust-mode-20220919.1051.tar containing:
+  rust-mode-20220919.1051/
+  rust-mode-20220919.1051/rust-cargo.el
+  rust-mode-20220919.1051/rust-compile.el
+  rust-mode-20220919.1051/rust-mode-pkg.el
+  rust-mode-20220919.1051/rust-mode.el
+  rust-mode-20220919.1051/rust-playpen.el
+  rust-mode-20220919.1051/rust-rustfmt.el
+  rust-mode-20220919.1051/rust-utils.el
+Built rust-mode in 4.593s, finished at 2022-10-27T16:00:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  332 Oct 27 16:00 packages/rust-mode-20220919.1051.entry
+100K -rw-r--r-- 1 root root 100K Oct 27 16:00 packages/rust-mode-20220919.1051.tar

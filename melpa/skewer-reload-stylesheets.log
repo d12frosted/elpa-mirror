@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/NateEag/skewer-reload-stylesheets.git
 
 Updating /mnt/store/melpa/working/skewer-reload-stylesheets/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/NateEag/skewer-reload-stylesheets.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 3207abca9551660407a6b009cb40fb32bbb550da
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/skewer-reload-stylesheets/
+  to /tmp/skewer-reload-stylesheetsBw6YZF/skewer-reload-stylesheets-20160725.1220
+    skewer-reload-stylesheets.el -> skewer-reload-stylesheets.el
+    skewer-reload-stylesheets.js -> skewer-reload-stylesheets.js
+Created skewer-reload-stylesheets-20160725.1220.tar containing:
+  skewer-reload-stylesheets-20160725.1220/
+  skewer-reload-stylesheets-20160725.1220/skewer-reload-stylesheets-pkg.el
+  skewer-reload-stylesheets-20160725.1220/skewer-reload-stylesheets.el
+  skewer-reload-stylesheets-20160725.1220/skewer-reload-stylesheets.js
+Built skewer-reload-stylesheets in 5.327s, finished at 2022-10-27T16:03:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 337 Oct 27 16:03 packages/skewer-reload-stylesheets-20160725.1220.entry
+ 20K -rw-r--r-- 1 root root 20K Oct 27 16:03 packages/skewer-reload-stylesheets-20160725.1220.tar

@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/alezost/make-color.el.git
 
 Updating /mnt/store/melpa/working/make-color/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/alezost/make-color.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out a1b34e95ccd3ebee4fba1489ab613d0b3078026d
+Built make-color in 4.242s, finished at 2022-10-27T15:40:24+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 29K Oct 27 15:40 packages/make-color-20140625.1150.el
+4.0K -rw-r--r-- 1 root root 400 Oct 27 15:40 packages/make-color-20140625.1150.entry

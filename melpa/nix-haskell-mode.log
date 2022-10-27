@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/matthewbauer/nix-haskell-mode.git
 
 Updating /mnt/store/melpa/working/nix-haskell-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/matthewbauer/nix-haskell-mode.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 68efbcbf949a706ecca6409506968ed2ef928a20
+Built nix-haskell-mode in 8.519s, finished at 2022-10-27T15:44:54+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Oct 27 15:44 packages/nix-haskell-mode-20190615.135.el
+4.0K -rw-r--r-- 1 root root 491 Oct 27 15:44 packages/nix-haskell-mode-20190615.135.entry

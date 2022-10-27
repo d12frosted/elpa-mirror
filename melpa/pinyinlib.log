@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/cute-jumper/pinyinlib.el.git
 
 Updating /mnt/store/melpa/working/pinyinlib/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/cute-jumper/pinyinlib.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 1772c79b6f319b26b6a394a8dda065be3ea4498d
+Built pinyinlib in 5.087s, finished at 2022-10-27T15:54:07+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 49K Oct 27 15:54 packages/pinyinlib-20200911.1723.el
+4.0K -rw-r--r-- 1 root root 345 Oct 27 15:54 packages/pinyinlib-20200911.1723.entry

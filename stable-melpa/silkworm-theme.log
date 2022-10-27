@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/mswift42/silkworm-theme.git
 
 Updating /mnt/store/melpa/working/silkworm-theme/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/mswift42/silkworm-theme.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out ff80e9294da0fb093e15097ac62153ef4a64a889
+Built silkworm-theme in 3.924s, finished at 2022-10-27T16:02:54+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Oct 27 16:02 packages/silkworm-theme-20210215.1120.el
+4.0K -rw-r--r-- 1 root root 256 Oct 27 16:02 packages/silkworm-theme-20210215.1120.entry

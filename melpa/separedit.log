@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/twlz0ne/separedit.el.git
 
 Updating /mnt/store/melpa/working/separedit/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/twlz0ne/separedit.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 328d792401f8f099472c4c35a2c085fbe18fd00d
+Built separedit in 5.158s, finished at 2022-10-27T16:01:56+0000
+ ✓ Success:
+ 88K -rw-r--r-- 1 root root 88K Oct 27 16:01 packages/separedit-20220924.225.el
+4.0K -rw-r--r-- 1 root root 490 Oct 27 16:01 packages/separedit-20220924.225.entry

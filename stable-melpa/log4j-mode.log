@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://git.code.sf.net/p/log4j-mode/code
 
 Updating /mnt/store/melpa/working/log4j-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.code.sf.net/p/log4j-mode/code/': Failed to connect to git.code.sf.net port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out a278948ea07ef8f4fdb6d389345a68b50de14fae
+Built log4j-mode in 6.111s, finished at 2022-10-27T15:38:16+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Oct 27 15:38 packages/log4j-mode-20160108.1918.el
+4.0K -rw-r--r-- 1 root root 365 Oct 27 15:38 packages/log4j-mode-20160108.1918.entry

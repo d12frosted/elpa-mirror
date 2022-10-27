@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/stacked-git/magit-stgit.git
 
 Updating /mnt/store/melpa/working/magit-stgit/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/stacked-git/magit-stgit.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out bf96fa0f40c087329ad7e6a3b1946de7df03559c
+Built magit-stgit in 5.275s, finished at 2022-10-27T15:40:08+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Oct 27 15:40 packages/magit-stgit-20220914.1349.el
+4.0K -rw-r--r-- 1 root root 367 Oct 27 15:40 packages/magit-stgit-20220914.1349.entry

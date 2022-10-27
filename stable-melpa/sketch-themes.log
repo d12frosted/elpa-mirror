@@ -3,11 +3,21 @@ Fetcher: github
 Source:  https://github.com/dawranliou/sketch-themes.git
 
 Updating /mnt/store/melpa/working/sketch-themes/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/dawranliou/sketch-themes.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 8a609ec8fbf12231ba67aab9fcbb6b3ad0420359
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sketch-themes/
+  to /tmp/sketch-themesv6dw2A/sketch-themes-20220404.1741
+    sketch-black-theme.el -> sketch-black-theme.el
+    sketch-themes.el -> sketch-themes.el
+    sketch-white-theme.el -> sketch-white-theme.el
+Created sketch-themes-20220404.1741.tar containing:
+  sketch-themes-20220404.1741/
+  sketch-themes-20220404.1741/sketch-black-theme.el
+  sketch-themes-20220404.1741/sketch-themes-pkg.el
+  sketch-themes-20220404.1741/sketch-themes.el
+  sketch-themes-20220404.1741/sketch-white-theme.el
+Built sketch-themes in 5.624s, finished at 2022-10-27T16:03:16+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 347 Oct 27 16:03 packages/sketch-themes-20220404.1741.entry
+ 20K -rw-r--r-- 1 root root 20K Oct 27 16:03 packages/sketch-themes-20220404.1741.tar

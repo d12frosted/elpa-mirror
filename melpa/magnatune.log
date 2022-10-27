@@ -3,11 +3,19 @@ Fetcher: github
 Source:  https://github.com/eikek/magnatune.el.git
 
 Updating /mnt/store/melpa/working/magnatune/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/eikek/magnatune.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 605b01505ba30589c77ebb4c96834b5072ccbdd4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magnatune/
+  to /tmp/magnatunea3JaxZ/magnatune-20151030.1935
+    magnatune-helm.el -> magnatune-helm.el
+    magnatune.el -> magnatune.el
+Created magnatune-20151030.1935.tar containing:
+  magnatune-20151030.1935/
+  magnatune-20151030.1935/magnatune-helm.el
+  magnatune-20151030.1935/magnatune-pkg.el
+  magnatune-20151030.1935/magnatune.el
+Built magnatune in 4.508s, finished at 2022-10-27T15:40:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 196 Oct 27 15:40 packages/magnatune-20151030.1935.entry
+ 80K -rw-r--r-- 1 root root 80K Oct 27 15:40 packages/magnatune-20151030.1935.tar

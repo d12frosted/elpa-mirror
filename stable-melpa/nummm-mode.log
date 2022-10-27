@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/agpchil/nummm-mode.git
 
 Updating /mnt/store/melpa/working/nummm-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/agpchil/nummm-mode.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 73b1aa8643d86197c82cd28acdaefcb48a1e0abe
+Built nummm-mode in 4.838s, finished at 2022-10-27T15:45:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Oct 27 15:45 packages/nummm-mode-20131117.1014.el
+4.0K -rw-r--r-- 1 root root  351 Oct 27 15:45 packages/nummm-mode-20131117.1014.entry

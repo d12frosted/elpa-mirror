@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/Khady/merlin-eldoc.git
 
 Updating /mnt/store/melpa/working/merlin-eldoc/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/Khady/merlin-eldoc.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out db7fab1eddfe34781b7e79694f8923b285698032
+Built merlin-eldoc in 5.094s, finished at 2022-10-27T15:41:21+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Oct 27 15:41 packages/merlin-eldoc-20190830.517.el
+4.0K -rw-r--r-- 1 root root 414 Oct 27 15:41 packages/merlin-eldoc-20190830.517.entry

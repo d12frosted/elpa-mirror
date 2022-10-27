@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/gongo/org-redmine.git
 
 Updating /mnt/store/melpa/working/org-redmine/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/gongo/org-redmine.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out a526c3ac802634486bf10de9c2283ccb1a30ec8d
+Built org-redmine in 4.031s, finished at 2022-10-27T15:49:27+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Oct 27 15:49 packages/org-redmine-20160711.1114.el
+4.0K -rw-r--r-- 1 root root 373 Oct 27 15:49 packages/org-redmine-20160711.1114.entry

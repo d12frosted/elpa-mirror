@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/alvarogonzalezsotillo/origami-predef.git
 
 Updating /mnt/store/melpa/working/origami-predef/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/alvarogonzalezsotillo/origami-predef.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out edcba971ba52a14f69a436ad47888827d7927982
+Built origami-predef in 7.298s, finished at 2022-10-27T15:50:39+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Oct 27 15:50 packages/origami-predef-20200615.1044.el
+4.0K -rw-r--r-- 1 root root  483 Oct 27 15:50 packages/origami-predef-20200615.1044.entry

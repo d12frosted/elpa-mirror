@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/jpablobr/emacs-monkeytype.git
 
 Updating /mnt/store/melpa/working/monkeytype/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/jpablobr/emacs-monkeytype.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out e72472d3c490c8e3ffc5ca7bf8e535e15bd867a7
+Built monkeytype in 4.523s, finished at 2022-10-27T15:42:36+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 57K Oct 27 15:42 packages/monkeytype-20210110.513.el
+4.0K -rw-r--r-- 1 root root 440 Oct 27 15:42 packages/monkeytype-20210110.513.entry

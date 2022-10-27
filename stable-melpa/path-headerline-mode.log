@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/7696122/path-headerline-mode.git
 
 Updating /mnt/store/melpa/working/path-headerline-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/7696122/path-headerline-mode.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out b5b2725c6a8b1cb592fc242b7dbbd54b4dff2e69
+Built path-headerline-mode in 4.322s, finished at 2022-10-27T15:52:54+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Oct 27 15:52 packages/path-headerline-mode-20140423.1332.el
+4.0K -rw-r--r-- 1 root root  322 Oct 27 15:52 packages/path-headerline-mode-20140423.1332.entry

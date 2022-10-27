@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/markgdawson/polybar-sesman.el.git
 
 Updating /mnt/store/melpa/working/polybar-sesman/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/markgdawson/polybar-sesman.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 5b8ff640ada92da98400206ba9a61140093a823f
+Built polybar-sesman in 4.468s, finished at 2022-10-27T15:54:58+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Oct 27 15:54 packages/polybar-sesman-20210901.1336.el
+4.0K -rw-r--r-- 1 root root 456 Oct 27 15:54 packages/polybar-sesman-20210901.1336.entry

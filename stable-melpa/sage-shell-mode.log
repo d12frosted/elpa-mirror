@@ -3,9 +3,25 @@ Fetcher: github
 Source:  https://github.com/sagemath/sage-shell-mode.git
 
 Updating /mnt/store/melpa/working/sage-shell-mode/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/sagemath/sage-shell-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 80fbb4ee9ed8507d22214ed7a4ffd135c9e8c7c8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sage-shell-mode/
+  to /tmp/sage-shell-mode5yEpsW/sage-shell-mode-20221020.1012
+    sage-shell-blocks.el -> sage-shell-blocks.el
+    sage-shell-mode.el -> sage-shell-mode.el
+    sage-shell-view.el -> sage-shell-view.el
+    emacs_sage_shell.py -> emacs_sage_shell.py
+    emacs_sage_shell_view.py -> emacs_sage_shell_view.py
+Created sage-shell-mode-20221020.1012.tar containing:
+  sage-shell-mode-20221020.1012/
+  sage-shell-mode-20221020.1012/emacs_sage_shell.py
+  sage-shell-mode-20221020.1012/emacs_sage_shell_view.py
+  sage-shell-mode-20221020.1012/sage-shell-blocks.el
+  sage-shell-mode-20221020.1012/sage-shell-mode-pkg.el
+  sage-shell-mode-20221020.1012/sage-shell-mode.el
+  sage-shell-mode-20221020.1012/sage-shell-view.el
+Built sage-shell-mode in 3.927s, finished at 2022-10-27T16:00:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  472 Oct 27 16:00 packages/sage-shell-mode-20221020.1012.entry
+280K -rw-r--r-- 1 root root 280K Oct 27 16:00 packages/sage-shell-mode-20221020.1012.tar

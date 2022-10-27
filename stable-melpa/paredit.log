@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://mumble.net/~campbell/git/paredit.git
 
 Updating /mnt/store/melpa/working/paredit/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://mumble.net/~campbell/git/paredit.git/': Failed to connect to mumble.net port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 42500e5d450c88a3b249b548be447577d8549b17
+Built paredit in 3.993s, finished at 2022-10-27T15:52:31+0000
+ ✓ Success:
+124K -rw-r--r-- 1 root root 121K Oct 27 15:52 packages/paredit-20220709.916.el
+4.0K -rw-r--r-- 1 root root  311 Oct 27 15:52 packages/paredit-20220709.916.entry

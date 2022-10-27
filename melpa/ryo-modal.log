@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/Kungsgeten/ryo-modal.git
 
 Updating /mnt/store/melpa/working/ryo-modal/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/Kungsgeten/ryo-modal.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 0a61eed4d2917422d6401b6abe2037c26dab658a
+Built ryo-modal in 5.016s, finished at 2022-10-27T16:00:53+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Oct 27 16:00 packages/ryo-modal-20220103.940.el
+4.0K -rw-r--r-- 1 root root 408 Oct 27 16:00 packages/ryo-modal-20220103.940.entry

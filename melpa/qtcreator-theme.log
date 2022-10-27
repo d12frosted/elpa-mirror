@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/LesleyLai/emacs-qtcreator-theme.git
 
 Updating /mnt/store/melpa/working/qtcreator-theme/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/LesleyLai/emacs-qtcreator-theme.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 515532b05063898459157d2ba5c10ec0d5a4b1bd
+Built qtcreator-theme in 6.017s, finished at 2022-10-27T15:57:53+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Oct 27 15:57 packages/qtcreator-theme-20201215.1523.el
+4.0K -rw-r--r-- 1 root root  412 Oct 27 15:57 packages/qtcreator-theme-20201215.1523.entry

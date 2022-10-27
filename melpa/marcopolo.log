@@ -3,11 +3,35 @@ Fetcher: github
 Source:  https://github.com/nlamirault/marcopolo.git
 
 Updating /mnt/store/melpa/working/marcopolo/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/nlamirault/marcopolo.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 85db828f2bb4346a811b3326349b1c6d0aae4601
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/marcopolo/
+  to /tmp/marcopoloCpH4Tz/marcopolo-20160421.1004
+    marcopolo-api.el -> marcopolo-api.el
+    marcopolo-custom.el -> marcopolo-custom.el
+    marcopolo-errors.el -> marcopolo-errors.el
+    marcopolo-hub.el -> marcopolo-hub.el
+    marcopolo-mode.el -> marcopolo-mode.el
+    marcopolo-registry.el -> marcopolo-registry.el
+    marcopolo-ui.el -> marcopolo-ui.el
+    marcopolo-utils.el -> marcopolo-utils.el
+    marcopolo-version.el -> marcopolo-version.el
+    marcopolo.el -> marcopolo.el
+Created marcopolo-20160421.1004.tar containing:
+  marcopolo-20160421.1004/
+  marcopolo-20160421.1004/marcopolo-api.el
+  marcopolo-20160421.1004/marcopolo-custom.el
+  marcopolo-20160421.1004/marcopolo-errors.el
+  marcopolo-20160421.1004/marcopolo-hub.el
+  marcopolo-20160421.1004/marcopolo-mode.el
+  marcopolo-20160421.1004/marcopolo-pkg.el
+  marcopolo-20160421.1004/marcopolo-registry.el
+  marcopolo-20160421.1004/marcopolo-ui.el
+  marcopolo-20160421.1004/marcopolo-utils.el
+  marcopolo-20160421.1004/marcopolo-version.el
+  marcopolo-20160421.1004/marcopolo.el
+Built marcopolo in 3.979s, finished at 2022-10-27T15:40:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 504 Oct 27 15:40 packages/marcopolo-20160421.1004.entry
+ 52K -rw-r--r-- 1 root root 50K Oct 27 15:40 packages/marcopolo-20160421.1004.tar

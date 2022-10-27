@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/myuhe/smartrep.el.git
 
 Updating /mnt/store/melpa/working/smartrep/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/myuhe/smartrep.el.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f0ff5a6d7b8603603598ae3045c98b011e58d86e
+Built smartrep in 3.866s, finished at 2022-10-27T16:04:20+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Oct 27 16:04 packages/smartrep-20150509.230.el
+4.0K -rw-r--r-- 1 root root  337 Oct 27 16:04 packages/smartrep-20150509.230.entry

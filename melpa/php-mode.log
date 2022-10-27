@@ -3,11 +3,35 @@ Fetcher: github
 Source:  https://github.com/emacs-php/php-mode.git
 
 Updating /mnt/store/melpa/working/php-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/emacs-php/php-mode.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 0526c4310ae9c6be8e70553b8d894f5e4e7f117e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/php-mode/
+  to /tmp/php-modeWt9SZD/php-mode-20221027.1506
+  ! lisp/php-align.el -> php-align.el
+  ! lisp/php-complete.el -> php-complete.el
+  ! lisp/php-defs.el -> php-defs.el
+  ! lisp/php-face.el -> php-face.el
+  ! lisp/php-local-manual.el -> php-local-manual.el
+  ! lisp/php-mode-debug.el -> php-mode-debug.el
+  ! lisp/php-mode.el -> php-mode.el
+  ! lisp/php-project.el -> php-project.el
+  ! lisp/php.el -> php.el
+Created php-mode-20221027.1506.tar containing:
+  php-mode-20221027.1506/
+  php-mode-20221027.1506/php-align.el
+  php-mode-20221027.1506/php-complete.el
+  php-mode-20221027.1506/php-defs.el
+  php-mode-20221027.1506/php-face.el
+  php-mode-20221027.1506/php-local-manual.el
+  php-mode-20221027.1506/php-mode-debug.el
+  php-mode-20221027.1506/php-mode-pkg.el
+  php-mode-20221027.1506/php-mode.el
+  php-mode-20221027.1506/php-project.el
+  php-mode-20221027.1506/php.el
+Built php-mode in 5.055s, finished at 2022-10-27T15:53:47+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  354 Oct 27 05:48 packages/php-mode-20221002.328.entry
+232K -rw-r--r-- 1 root root 230K Oct 27 05:48 packages/php-mode-20221002.328.tar
+4.0K -rw-r--r-- 1 root root  355 Oct 27 15:53 packages/php-mode-20221027.1506.entry
+232K -rw-r--r-- 1 root root 230K Oct 27 15:53 packages/php-mode-20221027.1506.tar

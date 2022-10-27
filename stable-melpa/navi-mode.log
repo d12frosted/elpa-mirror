@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/alphapapa/navi.git
 
 Updating /mnt/store/melpa/working/navi-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/alphapapa/navi.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out cf97e1e338815ad3a4d0bbbf4ff6dd1a4e322ca8
+Built navi-mode in 4.679s, finished at 2022-10-27T15:44:09+0000
+ ✓ Success:
+100K -rw-r--r-- 1 root root 98K Oct 27 15:44 packages/navi-mode-20201220.1727.el
+4.0K -rw-r--r-- 1 root root 317 Oct 27 15:44 packages/navi-mode-20201220.1727.entry
