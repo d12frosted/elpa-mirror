@@ -4,6 +4,8 @@
 
 ;; Author: Gunther Hagleitner
 ;; Version: 0.1
+;; Package-Version: 20150204.1108
+;; Package-Commit: 52a09955c2afc1807c0f37f1467ccfc1e1da690a
 ;; Keywords: games, entertainment, comms
 ;; URL: https://github.com/hagleitn/unicode-emoticons
 ;; Package-Requires: ()

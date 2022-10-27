@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-php/php-mode.git
 
 Updating /mnt/store/melpa/working/php-mode/
 Checking out origin/HEAD
-Checking out 0526c4310ae9c6be8e70553b8d894f5e4e7f117e
+Checking out c3c442a3fa8714b17f166fb1f60f3326d583a22e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/php-mode/
-  to /tmp/php-modeWt9SZD/php-mode-20221027.1506
+  to /tmp/php-modeTfvypc/php-mode-20221027.1651
   ! lisp/php-align.el -> php-align.el
   ! lisp/php-complete.el -> php-complete.el
   ! lisp/php-defs.el -> php-defs.el
@@ -17,21 +17,21 @@ Copying files (->) and directories (=>)
   ! lisp/php-mode.el -> php-mode.el
   ! lisp/php-project.el -> php-project.el
   ! lisp/php.el -> php.el
-Created php-mode-20221027.1506.tar containing:
-  php-mode-20221027.1506/
-  php-mode-20221027.1506/php-align.el
-  php-mode-20221027.1506/php-complete.el
-  php-mode-20221027.1506/php-defs.el
-  php-mode-20221027.1506/php-face.el
-  php-mode-20221027.1506/php-local-manual.el
-  php-mode-20221027.1506/php-mode-debug.el
-  php-mode-20221027.1506/php-mode-pkg.el
-  php-mode-20221027.1506/php-mode.el
-  php-mode-20221027.1506/php-project.el
-  php-mode-20221027.1506/php.el
-Built php-mode in 5.055s, finished at 2022-10-27T15:53:47+0000
+Created php-mode-20221027.1651.tar containing:
+  php-mode-20221027.1651/
+  php-mode-20221027.1651/php-align.el
+  php-mode-20221027.1651/php-complete.el
+  php-mode-20221027.1651/php-defs.el
+  php-mode-20221027.1651/php-face.el
+  php-mode-20221027.1651/php-local-manual.el
+  php-mode-20221027.1651/php-mode-debug.el
+  php-mode-20221027.1651/php-mode-pkg.el
+  php-mode-20221027.1651/php-mode.el
+  php-mode-20221027.1651/php-project.el
+  php-mode-20221027.1651/php.el
+Built php-mode in 4.303s, finished at 2022-10-27T19:28:19+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  354 Oct 27 05:48 packages/php-mode-20221002.328.entry
-232K -rw-r--r-- 1 root root 230K Oct 27 05:48 packages/php-mode-20221002.328.tar
 4.0K -rw-r--r-- 1 root root  355 Oct 27 15:53 packages/php-mode-20221027.1506.entry
 232K -rw-r--r-- 1 root root 230K Oct 27 15:53 packages/php-mode-20221027.1506.tar
+4.0K -rw-r--r-- 1 root root  355 Oct 27 19:28 packages/php-mode-20221027.1651.entry
+232K -rw-r--r-- 1 root root 230K Oct 27 19:28 packages/php-mode-20221027.1651.tar
