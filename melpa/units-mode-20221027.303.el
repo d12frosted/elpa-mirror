@@ -5,8 +5,8 @@
 ;; Author: Gaurav Atreya <allmanpride@gmail.com>
 ;; Maintainer:
 ;; URL: https://github.com/Atreyagaurav/units-mode
-;; Package-Version: 20221021.453
-;; Package-Commit: b6a154102a61a50f45d3b80ffaa4503cff5fc291
+;; Package-Version: 20221027.303
+;; Package-Commit: 10c8de24180f87b1a8a3b0a9b3fbb29eec925417
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 ;; Homepage: https://github.com/Atreyagaurav/units-mode
@@ -346,9 +346,13 @@
 (defun units-molar-weight (compound)
   "Calculate the molar weight of COMPOUND given formula."
   (interactive "sMolecular Formula: ")
-  (string-to-number
-   (units-convert (units-compound-composition compound)
-     "")))
+  (let ((mw (units-convert
+	     (units-compound-composition compound)
+	     "")))
+    (if (called-interactively-p 'any)
+	(message mw)
+      (string-to-number mw))))
+
 
 (define-minor-mode units-mode
   "Minor mode for Calculations related to units.")
