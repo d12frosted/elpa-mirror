@@ -3,45 +3,9 @@ Fetcher: github
 Source:  https://github.com/NixOS/nix-mode.git
 
 Updating /mnt/store/melpa/working/nix-mode/
-Checking out origin/HEAD
-Checking out 34d51e2731408b5b615f785a83faa3d6dc2a92a1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-modexVvwQ3/nix-mode-20220831.402
-    nix-build.el -> nix-build.el
-    nix-drv-mode.el -> nix-drv-mode.el
-    nix-edit.el -> nix-edit.el
-    nix-flake.el -> nix-flake.el
-    nix-format.el -> nix-format.el
-    nix-instantiate.el -> nix-instantiate.el
-    nix-log.el -> nix-log.el
-    nix-mode.el -> nix-mode.el
-    nix-prettify-mode.el -> nix-prettify-mode.el
-    nix-repl.el -> nix-repl.el
-    nix-search.el -> nix-search.el
-    nix-shebang.el -> nix-shebang.el
-    nix-shell.el -> nix-shell.el
-    nix-store.el -> nix-store.el
-    nix.el -> nix.el
-Created nix-mode-20220831.402.tar containing:
-  nix-mode-20220831.402/
-  nix-mode-20220831.402/nix-build.el
-  nix-mode-20220831.402/nix-drv-mode.el
-  nix-mode-20220831.402/nix-edit.el
-  nix-mode-20220831.402/nix-flake.el
-  nix-mode-20220831.402/nix-format.el
-  nix-mode-20220831.402/nix-instantiate.el
-  nix-mode-20220831.402/nix-log.el
-  nix-mode-20220831.402/nix-mode-pkg.el
-  nix-mode-20220831.402/nix-mode.el
-  nix-mode-20220831.402/nix-prettify-mode.el
-  nix-mode-20220831.402/nix-repl.el
-  nix-mode-20220831.402/nix-search.el
-  nix-mode-20220831.402/nix-shebang.el
-  nix-mode-20220831.402/nix-shell.el
-  nix-mode-20220831.402/nix-store.el
-  nix-mode-20220831.402/nix.el
-Built nix-mode in 5.950s, finished at 2022-10-27T05:39:26+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  384 Oct 27 05:39 packages/nix-mode-20220831.402.entry
-140K -rw-r--r-- 1 root root 140K Oct 27 05:39 packages/nix-mode-20220831.402.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/NixOS/nix-mode.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/casouri/nerdtab.git
 
 Updating /mnt/store/melpa/working/nerdtab/
-Checking out origin/HEAD
-Checking out 601d531fa3748db733fbdff157a0f1cdf8a66416
-Built nerdtab in 4.926s, finished at 2022-10-27T05:39:01+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Oct 27 05:39 packages/nerdtab-20180811.339.el
-4.0K -rw-r--r-- 1 root root 335 Oct 27 05:39 packages/nerdtab-20180811.339.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/casouri/nerdtab.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

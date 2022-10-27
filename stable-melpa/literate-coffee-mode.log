@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/literate-coffee-mode.git
 
 Updating /mnt/store/melpa/working/literate-coffee-mode/
-Checking out origin/HEAD
-Checking out ef34c3a5b813ef078d44c29887761950ab6821c7
-Built literate-coffee-mode in 2.848s, finished at 2022-10-27T05:32:40+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.8K Oct 27 05:32 packages/literate-coffee-mode-20170211.1515.el
-4.0K -rw-r--r-- 1 root root  389 Oct 27 05:32 packages/literate-coffee-mode-20170211.1515.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/emacsorphanage/literate-coffee-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

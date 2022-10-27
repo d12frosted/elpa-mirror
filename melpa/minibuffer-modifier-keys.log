@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/SpringHan/minibuffer-modifier-keys.git
 
 Updating /mnt/store/melpa/working/minibuffer-modifier-keys/
-Checking out origin/HEAD
-Checking out 944cdc01049f7e4b563675495f4d27cb018ca2f0
-Built minibuffer-modifier-keys in 4.344s, finished at 2022-10-27T05:36:39+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.6K Oct 27 05:36 packages/minibuffer-modifier-keys-20210823.713.el
-4.0K -rw-r--r-- 1 root root  385 Oct 27 05:36 packages/minibuffer-modifier-keys-20210823.713.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/SpringHan/minibuffer-modifier-keys.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

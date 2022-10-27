@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/rejeep/nvm.el.git
 
 Updating /mnt/store/melpa/working/nvm/
-Checking out origin/HEAD
-Checking out c214762fd6f539ec3e1fd8198cefbdb4b428b19c
-Built nvm in 3.619s, finished at 2022-10-27T05:40:33+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.3K Oct 27 05:40 packages/nvm-20210826.1000.el
-4.0K -rw-r--r-- 1 root root  423 Oct 27 05:40 packages/nvm-20210826.1000.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/rejeep/nvm.el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

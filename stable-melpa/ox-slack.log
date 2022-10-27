@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/titaniumbones/ox-slack.git
 
 Updating /mnt/store/melpa/working/ox-slack/
-Checking out origin/HEAD
-Checking out c55b003f4ac343d6c6d8ef7cbe01d0d100abac34
-Built ox-slack in 7.512s, finished at 2022-10-27T05:46:11+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Oct 27 05:46 packages/ox-slack-20200108.1546.el
-4.0K -rw-r--r-- 1 root root 381 Oct 27 05:46 packages/ox-slack-20200108.1546.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/titaniumbones/ox-slack.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/rubikitch/open-junk-file.git
 
 Updating /mnt/store/melpa/working/open-junk-file/
-Checking out origin/HEAD
-Checking out 558bec7372b0fed4c4cb6074ab906535fae615bd
-Built open-junk-file in 3.789s, finished at 2022-10-27T05:42:02+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Oct 27 05:42 packages/open-junk-file-20161210.1114.el
-4.0K -rw-r--r-- 1 root root  394 Oct 27 05:42 packages/open-junk-file-20161210.1114.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/rubikitch/open-junk-file.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/alphapapa/mosey.el.git
 
 Updating /mnt/store/melpa/working/mosey/
-Checking out origin/HEAD
-Checking out 2e3ac9d334fa2937ed5267193dfd25d8e1f14dc2
-Built mosey in 4.028s, finished at 2022-10-27T05:37:33+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.7K Oct 27 05:37 packages/mosey-20180614.1649.el
-4.0K -rw-r--r-- 1 root root  336 Oct 27 05:37 packages/mosey-20180614.1649.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/alphapapa/mosey.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

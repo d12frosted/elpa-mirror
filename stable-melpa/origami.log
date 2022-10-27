@@ -3,19 +3,11 @@ Fetcher: github
 Source:  https://github.com/gregsexton/origami.el.git
 
 Updating /mnt/store/melpa/working/origami/
-Checking out origin/HEAD
-Checking out e558710a975e8511b9386edc81cd6bdd0a5bda74
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/origami/
-  to /tmp/origamiY8k3ob/origami-20200331.1019
-    origami-parsers.el -> origami-parsers.el
-    origami.el -> origami.el
-Created origami-20200331.1019.tar containing:
-  origami-20200331.1019/
-  origami-20200331.1019/origami-parsers.el
-  origami-20200331.1019/origami-pkg.el
-  origami-20200331.1019/origami.el
-Built origami in 3.800s, finished at 2022-10-27T05:45:01+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 415 Oct 27 05:45 packages/origami-20200331.1019.entry
- 60K -rw-r--r-- 1 root root 60K Oct 27 05:45 packages/origami-20200331.1019.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/gregsexton/origami.el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

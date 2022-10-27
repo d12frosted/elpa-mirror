@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/Dragoncraft89/ropgadget-el.git
 
 Updating /mnt/store/melpa/working/ropgadget/
-Checking out origin/HEAD
-Checking out 03305f2d73d7092adab495c45b15c8f16f292c8f
-Built ropgadget in 3.794s, finished at 2022-10-27T05:54:25+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.0K Oct 27 05:54 packages/ropgadget-20221006.1105.el
-4.0K -rw-r--r-- 1 root root  324 Oct 27 05:54 packages/ropgadget-20221006.1105.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/Dragoncraft89/ropgadget-el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

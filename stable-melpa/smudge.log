@@ -3,35 +3,3 @@ Fetcher: github
 Source:  https://github.com/danielfm/smudge.git
 
 Updating /mnt/store/melpa/working/smudge/
-Checking out origin/HEAD
-Checking out 808f0ef172a80cf4a8ae6d58dfe385d28ecde28e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/smudge/
-  to /tmp/smudge3KyWet/smudge-20210326.2222
-    smudge-api.el -> smudge-api.el
-    smudge-apple.el -> smudge-apple.el
-    smudge-connect.el -> smudge-connect.el
-    smudge-controller.el -> smudge-controller.el
-    smudge-dbus.el -> smudge-dbus.el
-    smudge-device-select.el -> smudge-device-select.el
-    smudge-playlist.el -> smudge-playlist.el
-    smudge-remote.el -> smudge-remote.el
-    smudge-track.el -> smudge-track.el
-    smudge.el -> smudge.el
-Created smudge-20210326.2222.tar containing:
-  smudge-20210326.2222/
-  smudge-20210326.2222/smudge-api.el
-  smudge-20210326.2222/smudge-apple.el
-  smudge-20210326.2222/smudge-connect.el
-  smudge-20210326.2222/smudge-controller.el
-  smudge-20210326.2222/smudge-dbus.el
-  smudge-20210326.2222/smudge-device-select.el
-  smudge-20210326.2222/smudge-pkg.el
-  smudge-20210326.2222/smudge-playlist.el
-  smudge-20210326.2222/smudge-remote.el
-  smudge-20210326.2222/smudge-track.el
-  smudge-20210326.2222/smudge.el
-Built smudge in 7.379s, finished at 2022-10-27T05:58:40+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  322 Oct 27 05:58 packages/smudge-20210326.2222.entry
-100K -rw-r--r-- 1 root root 100K Oct 27 05:58 packages/smudge-20210326.2222.tar

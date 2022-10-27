@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/mgsb/emacs-pixelblaze.git
 
 Updating /mnt/store/melpa/working/pixelblaze/
-Checking out origin/HEAD
-Checking out 564a093f700a3292cbffb3887dd3a8d789f54e6d
-Built pixelblaze in 3.208s, finished at 2022-10-27T05:48:35+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 8.0K Oct 27 05:48 packages/pixelblaze-20220918.1925.el
-4.0K -rw-r--r-- 1 root root  467 Oct 27 05:48 packages/pixelblaze-20220918.1925.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/mgsb/emacs-pixelblaze.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/ndwarshuis/org-sql.git
 
 Updating /mnt/store/melpa/working/org-sql/
-Checking out origin/HEAD
-Checking out 43376abf46b897a9a862cfcc1c087f4b8688634c
-Built org-sql in 3.954s, finished at 2022-10-27T05:44:13+0000
- ✓ Success:
-168K -rw-r--r-- 1 root root 166K Oct 27 05:44 packages/org-sql-20220621.2252.el
-4.0K -rw-r--r-- 1 root root  464 Oct 27 05:44 packages/org-sql-20220621.2252.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/ndwarshuis/org-sql.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

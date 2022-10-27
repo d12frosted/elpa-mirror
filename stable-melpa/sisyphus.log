@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/magit/sisyphus.git
 
 Updating /mnt/store/melpa/working/sisyphus/
-Checking out origin/HEAD
-Checking out 64860faa0eba4bac8c794af4e8969c9458deb550
-Built sisyphus in 3.787s, finished at 2022-10-27T05:57:10+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.5K Oct 27 05:57 packages/sisyphus-20221013.1729.el
-4.0K -rw-r--r-- 1 root root  484 Oct 27 05:57 packages/sisyphus-20221013.1729.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/magit/sisyphus.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

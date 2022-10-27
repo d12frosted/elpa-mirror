@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/jackkamm/ob-reticulate.git
 
 Updating /mnt/store/melpa/working/ob-reticulate/
-Checking out origin/HEAD
-Checking out 56f4d74f5a2218927aeacce61442b373a0a189e3
-Built ob-reticulate in 3.979s, finished at 2022-10-27T05:41:18+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.2K Oct 27 05:41 packages/ob-reticulate-20210214.2229.el
-4.0K -rw-r--r-- 1 root root  427 Oct 27 05:41 packages/ob-reticulate-20210214.2229.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/jackkamm/ob-reticulate.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

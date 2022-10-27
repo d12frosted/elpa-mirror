@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/nex3/perspective-el.git
 
 Updating /mnt/store/melpa/working/perspective/
-Checking out origin/HEAD
-Checking out 8a69512639ae915c32c5055d1308ebf4b278266c
-Built perspective in 4.264s, finished at 2022-10-27T05:47:50+0000
- ✓ Success:
-100K -rw-r--r-- 1 root root 97K Oct 27 05:47 packages/perspective-20220921.346.el
-4.0K -rw-r--r-- 1 root root 463 Oct 27 05:47 packages/perspective-20220921.346.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/nex3/perspective-el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

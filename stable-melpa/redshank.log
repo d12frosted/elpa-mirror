@@ -3,19 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsattic/redshank.git
 
 Updating /mnt/store/melpa/working/redshank/
-Checking out origin/HEAD
-Checking out d059c5841044aa163664f8bf87c1d981bf0a04fe
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/redshank/
-  to /tmp/redshankUjTJ8Z/redshank-20180730.407
-    redshank-loader.el -> redshank-loader.el
-    redshank.el -> redshank.el
-Created redshank-20180730.407.tar containing:
-  redshank-20180730.407/
-  redshank-20180730.407/redshank-loader.el
-  redshank-20180730.407/redshank-pkg.el
-  redshank-20180730.407/redshank.el
-Built redshank in 4.003s, finished at 2022-10-27T05:53:22+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 319 Oct 27 05:53 packages/redshank-20180730.407.entry
- 52K -rw-r--r-- 1 root root 50K Oct 27 05:53 packages/redshank-20180730.407.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/emacsattic/redshank.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

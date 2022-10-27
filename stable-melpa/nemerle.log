@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/rsdn/nemerle.git
 
 Updating /mnt/store/melpa/working/nemerle/
-Checking out origin/HEAD
-Checking out 8818c5af5598e16ea59189e1e3245f0a3d7c78f0
-Built nemerle in 11.810s, finished at 2022-10-27T05:39:03+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 30K Oct 27 05:39 packages/nemerle-20161029.2023.el
-4.0K -rw-r--r-- 1 root root 323 Oct 27 05:39 packages/nemerle-20161029.2023.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/rsdn/nemerle.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

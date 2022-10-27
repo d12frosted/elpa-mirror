@@ -3,21 +3,9 @@ Fetcher: github
 Source:  https://github.com/nickdrozd/reazon.git
 
 Updating /mnt/store/melpa/working/reazon/
-Checking out origin/HEAD
-Checking out da3c4a8acf236eddb73348056e08bea330e868c0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/reazon/
-  to /tmp/reazoniENEgK/reazon-20211229.1733
-    reazon-perf.el -> reazon-perf.el
-    reazon-sudoku.el -> reazon-sudoku.el
-    reazon.el -> reazon.el
-Created reazon-20211229.1733.tar containing:
-  reazon-20211229.1733/
-  reazon-20211229.1733/reazon-perf.el
-  reazon-20211229.1733/reazon-pkg.el
-  reazon-20211229.1733/reazon-sudoku.el
-  reazon-20211229.1733/reazon.el
-Built reazon in 4.738s, finished at 2022-10-27T05:53:06+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 355 Oct 27 05:53 packages/reazon-20211229.1733.entry
- 40K -rw-r--r-- 1 root root 40K Oct 27 05:53 packages/reazon-20211229.1733.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/nickdrozd/reazon.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

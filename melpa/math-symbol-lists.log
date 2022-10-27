@@ -3,19 +3,11 @@ Fetcher: github
 Source:  https://github.com/vspinu/math-symbol-lists.git
 
 Updating /mnt/store/melpa/working/math-symbol-lists/
-Checking out origin/HEAD
-Checking out ac3eb053d3b576fcdd192b0ac6ad5090ea3a7079
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/math-symbol-lists/
-  to /tmp/math-symbol-lists7Q5Cta/math-symbol-lists-20220828.2047
-    math-symbol-lists.el -> math-symbol-lists.el
-    msl-build.el -> msl-build.el
-Created math-symbol-lists-20220828.2047.tar containing:
-  math-symbol-lists-20220828.2047/
-  math-symbol-lists-20220828.2047/math-symbol-lists-pkg.el
-  math-symbol-lists-20220828.2047/math-symbol-lists.el
-  math-symbol-lists-20220828.2047/msl-build.el
-Built math-symbol-lists in 3.795s, finished at 2022-10-27T05:35:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  415 Oct 27 05:35 packages/math-symbol-lists-20220828.2047.entry
-192K -rw-r--r-- 1 root root 190K Oct 27 05:35 packages/math-symbol-lists-20220828.2047.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/vspinu/math-symbol-lists.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

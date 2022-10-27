@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/vladimirlagunov/python-switch-quotes.git
 
 Updating /mnt/store/melpa/working/python-switch-quotes/
-Checking out origin/HEAD
-Checking out 93f1e9b40e061a6cea480139e8b1362b6404abd0
-Built python-switch-quotes in 5.371s, finished at 2022-10-27T05:51:36+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Oct 27 05:51 packages/python-switch-quotes-20161228.809.el
-4.0K -rw-r--r-- 1 root root  459 Oct 27 05:51 packages/python-switch-quotes-20161228.809.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/vladimirlagunov/python-switch-quotes.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

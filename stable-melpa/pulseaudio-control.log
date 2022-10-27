@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/flexibeast/pulseaudio-control.git
 
 Updating /mnt/store/melpa/working/pulseaudio-control/
-Checking out origin/HEAD
-Checking out 22f54ae7282b37eaec0231a21e60213a5dbc7172
-Built pulseaudio-control in 4.312s, finished at 2022-10-27T05:50:49+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Oct 27 05:50 packages/pulseaudio-control-20220418.742.el
-4.0K -rw-r--r-- 1 root root 535 Oct 27 05:50 packages/pulseaudio-control-20220418.742.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/flexibeast/pulseaudio-control.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

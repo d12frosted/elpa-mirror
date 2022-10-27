@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/tkf/emacs-request.git
 
 Updating /mnt/store/melpa/working/request/
-Checking out origin/HEAD
-Checking out 2c33e451879c4ea406a4a2e076636188eb4b9920
-Built request in 4.065s, finished at 2022-10-27T05:53:46+0000
- ✓ Success:
- 56K -rw-r--r-- 1 root root 54K Oct 27 05:53 packages/request-20221022.1122.el
-4.0K -rw-r--r-- 1 root root 338 Oct 27 05:53 packages/request-20221022.1122.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/tkf/emacs-request.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

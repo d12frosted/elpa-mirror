@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/a13/reverse-im.el.git
 
 Updating /mnt/store/melpa/working/reverse-im/
-Checking out origin/HEAD
-Checking out 40e841b9d5b72ac0872de4e3f08406cb80236706
-Built reverse-im in 3.787s, finished at 2022-10-27T05:53:58+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Oct 27 05:53 packages/reverse-im-20220922.1650.el
-4.0K -rw-r--r-- 1 root root 303 Oct 27 05:53 packages/reverse-im-20220922.1650.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/a13/reverse-im.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

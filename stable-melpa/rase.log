@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/m00natic/rase.git
 
 Updating /mnt/store/melpa/working/rase/
-Checking out origin/HEAD
-Checking out 59b5f7e8102570b65040e8d55781c7ea28de7338
-Built rase in 6.167s, finished at 2022-10-27T05:52:35+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.8K Oct 27 05:52 packages/rase-20120928.2045.el
-4.0K -rw-r--r-- 1 root root  366 Oct 27 05:52 packages/rase-20120928.2045.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/m00natic/rase.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

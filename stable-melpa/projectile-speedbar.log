@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/anshulverma/projectile-speedbar.git
 
 Updating /mnt/store/melpa/working/projectile-speedbar/
-Checking out origin/HEAD
-Checking out 93320e467ee78772065e599a5dba94889a77db22
-Built projectile-speedbar in 4.003s, finished at 2022-10-27T05:50:22+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.7K Oct 27 05:50 packages/projectile-speedbar-20190807.2010.el
-4.0K -rw-r--r-- 1 root root  508 Oct 27 05:50 packages/projectile-speedbar-20190807.2010.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/anshulverma/projectile-speedbar.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

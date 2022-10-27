@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/abo-abo/hydra.git
 
 Updating /mnt/store/melpa/working/lv/
-Checking out origin/HEAD
-Checking out 87873d788891029d9e44fa5458321d6a05849b94
-Built lv in 4.543s, finished at 2022-10-27T05:34:18+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.0K Oct 27 05:34 packages/lv-20200507.1518.el
-4.0K -rw-r--r-- 1 root root  199 Oct 27 05:34 packages/lv-20200507.1518.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/abo-abo/hydra.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

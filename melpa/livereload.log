@@ -3,19 +3,9 @@ Fetcher: github
 Source:  https://github.com/joaotavora/emacs-livereload.git
 
 Updating /mnt/store/melpa/working/livereload/
-Checking out origin/HEAD
-Checking out 1e501d7e46dbd476c2c7cc9d20b5ac9d41fb1955
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/livereload/
-  to /tmp/livereloadTWQEnj/livereload-20170629.650
-    livereload.el -> livereload.el
-    livereload.js -> livereload.js
-Created livereload-20170629.650.tar containing:
-  livereload-20170629.650/
-  livereload-20170629.650/livereload-pkg.el
-  livereload-20170629.650/livereload.el
-  livereload-20170629.650/livereload.js
-Built livereload in 4.397s, finished at 2022-10-27T05:32:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 356 Oct 27 05:32 packages/livereload-20170629.650.entry
- 80K -rw-r--r-- 1 root root 80K Oct 27 05:32 packages/livereload-20170629.650.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/joaotavora/emacs-livereload.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

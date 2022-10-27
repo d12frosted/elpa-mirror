@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/ageldama/moonshot.git
 
 Updating /mnt/store/melpa/working/moonshot/
-Checking out origin/HEAD
-Checking out ec37a12825888047a90d9ee8131aa4bea348edf7
-Built moonshot in 3.703s, finished at 2022-10-27T05:37:27+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Oct 27 05:37 packages/moonshot-20210627.2244.el
-4.0K -rw-r--r-- 1 root root 652 Oct 27 05:37 packages/moonshot-20210627.2244.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/ageldama/moonshot.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

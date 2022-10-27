@@ -3,21 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacsmirror/po-mode.git
 
 Updating /mnt/store/melpa/working/po-mode/
-Checking out origin/HEAD
-Checking out 25eb1bdca30ed25d2e5d51b9feeb28a3faff51ec
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/po-mode/
-  to /tmp/po-modeWRqbjk/po-mode-20200606.1404
-    po-compat.el -> po-compat.el
-    po-mode.el -> po-mode.el
-    start-po.el -> start-po.el
-Created po-mode-20200606.1404.tar containing:
-  po-mode-20200606.1404/
-  po-mode-20200606.1404/po-compat.el
-  po-mode-20200606.1404/po-mode-pkg.el
-  po-mode-20200606.1404/po-mode.el
-  po-mode-20200606.1404/start-po.el
-Built po-mode in 3.582s, finished at 2022-10-27T05:48:55+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  174 Oct 27 05:48 packages/po-mode-20200606.1404.entry
-152K -rw-r--r-- 1 root root 150K Oct 27 05:48 packages/po-mode-20200606.1404.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/emacsmirror/po-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

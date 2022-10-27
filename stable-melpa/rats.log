@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/ane/rats.el.git
 
 Updating /mnt/store/melpa/working/rats/
-Checking out origin/HEAD
-Checking out a6d55aebcc54f669c6c6ffedf84364c4097903cc
-Built rats in 6.037s, finished at 2022-10-27T05:52:35+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Oct 27 05:52 packages/rats-20170818.1013.el
-4.0K -rw-r--r-- 1 root root 320 Oct 27 05:52 packages/rats-20170818.1013.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/ane/rats.el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

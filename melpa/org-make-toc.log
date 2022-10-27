@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/alphapapa/org-make-toc.git
 
 Updating /mnt/store/melpa/working/org-make-toc/
-Checking out origin/HEAD
-Checking out 43d4a2490a048b01ca5a6f44c5b4f24a458dfc95
-Built org-make-toc in 4.543s, finished at 2022-10-27T05:43:19+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 23K Oct 27 05:43 packages/org-make-toc-20200409.1436.el
-4.0K -rw-r--r-- 1 root root 445 Oct 27 05:43 packages/org-make-toc-20200409.1436.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/alphapapa/org-make-toc.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

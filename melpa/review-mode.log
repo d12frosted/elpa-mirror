@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/kmuto/review-el.git
 
 Updating /mnt/store/melpa/working/review-mode/
-Checking out origin/HEAD
-Checking out 2b24db8d85a1c40dbd67be195caa79c9df1e0f4b
-Built review-mode in 4.258s, finished at 2022-10-27T05:54:00+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 39K Oct 27 05:54 packages/review-mode-20220817.1010.el
-4.0K -rw-r--r-- 1 root root 311 Oct 27 05:54 packages/review-mode-20220817.1010.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/kmuto/review-el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

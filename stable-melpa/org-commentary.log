@@ -3,28 +3,11 @@ Fetcher: github
 Source:  https://github.com/smaximov/org-commentary.git
 
 Updating /mnt/store/melpa/working/org-commentary/
-Checking out origin/HEAD
-Checking out 821ccb994811359c42f4e3d459e0e88849d42b75
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-commentary/
-  to /tmp/org-commentaryIHaXLk/org-commentary-20160802.637
-    org-commentary-cli.el -> org-commentary-cli.el
-    org-commentary-export.el -> org-commentary-export.el
-    org-commentary-headers.el -> org-commentary-headers.el
-    org-commentary-util.el -> org-commentary-util.el
-    org-commentary.el -> org-commentary.el
-    bin => bin
-Created org-commentary-20160802.637.tar containing:
-  org-commentary-20160802.637/
-  org-commentary-20160802.637/bin/
-  org-commentary-20160802.637/bin/org-doc
-  org-commentary-20160802.637/org-commentary-cli.el
-  org-commentary-20160802.637/org-commentary-export.el
-  org-commentary-20160802.637/org-commentary-headers.el
-  org-commentary-20160802.637/org-commentary-pkg.el
-  org-commentary-20160802.637/org-commentary-util.el
-  org-commentary-20160802.637/org-commentary.el
-Built org-commentary in 3.759s, finished at 2022-10-27T05:42:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 473 Oct 27 05:42 packages/org-commentary-20160802.637.entry
- 52K -rw-r--r-- 1 root root 50K Oct 27 05:42 packages/org-commentary-20160802.637.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/smaximov/org-commentary.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

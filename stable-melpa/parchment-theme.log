@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/ajgrf/parchment.git
 
 Updating /mnt/store/melpa/working/parchment-theme/
-Checking out origin/HEAD
-Checking out 95e8248edbdb01fedc7db4472bcce90d2d872106
-Built parchment-theme in 3.407s, finished at 2022-10-27T05:46:57+0000
- ✓ Success:
- 44K -rw-r--r-- 1 root root 41K Oct 27 05:46 packages/parchment-theme-20200910.2310.el
-4.0K -rw-r--r-- 1 root root 342 Oct 27 05:46 packages/parchment-theme-20200910.2310.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/ajgrf/parchment.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

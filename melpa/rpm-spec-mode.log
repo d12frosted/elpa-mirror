@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/stigbjorlykke/rpm-spec-mode.git
 
 Updating /mnt/store/melpa/working/rpm-spec-mode/
-Checking out origin/HEAD
-Checking out c1c38050c48ea330c7cea632b8785d66daeefb2b
-Built rpm-spec-mode in 4.670s, finished at 2022-10-27T05:54:28+0000
- ✓ Success:
- 56K -rw-r--r-- 1 root root 53K Oct 27 05:54 packages/rpm-spec-mode-20160710.1136.el
-4.0K -rw-r--r-- 1 root root 321 Oct 27 05:54 packages/rpm-spec-mode-20160710.1136.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/stigbjorlykke/rpm-spec-mode.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

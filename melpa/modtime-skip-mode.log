@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/jordonbiondo/modtime-skip-mode.git
 
 Updating /mnt/store/melpa/working/modtime-skip-mode/
-Checking out origin/HEAD
-Checking out c0e49523aa26b2263a8693691ac775988015f592
-Built modtime-skip-mode in 4.010s, finished at 2022-10-27T05:37:08+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.3K Oct 27 05:37 packages/modtime-skip-mode-20140128.2201.el
-4.0K -rw-r--r-- 1 root root  398 Oct 27 05:37 packages/modtime-skip-mode-20140128.2201.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/jordonbiondo/modtime-skip-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/istib/rainbow-blocks.git
 
 Updating /mnt/store/melpa/working/rainbow-blocks/
-Checking out origin/HEAD
-Checking out 83c4d6e77a1e25d3d2d124a4e90d5b084f3e15a5
-Built rainbow-blocks in 7.721s, finished at 2022-10-27T05:52:19+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Oct 27 05:52 packages/rainbow-blocks-20210715.1518.el
-4.0K -rw-r--r-- 1 root root 266 Oct 27 05:52 packages/rainbow-blocks-20210715.1518.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/istib/rainbow-blocks.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

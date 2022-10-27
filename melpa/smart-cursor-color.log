@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/7696122/smart-cursor-color.git
 
 Updating /mnt/store/melpa/working/smart-cursor-color/
-Checking out origin/HEAD
-Checking out d532f0b27e37cbd3bfc0be09d0b54aa38f1648f1
-Built smart-cursor-color in 4.699s, finished at 2022-10-27T05:57:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.0K Oct 27 05:57 packages/smart-cursor-color-20201207.2228.el
-4.0K -rw-r--r-- 1 root root  345 Oct 27 05:57 packages/smart-cursor-color-20201207.2228.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/7696122/smart-cursor-color.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

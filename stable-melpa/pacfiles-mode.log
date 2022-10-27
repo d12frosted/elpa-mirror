@@ -3,23 +3,11 @@ Fetcher: github
 Source:  https://github.com/UndeadKernel/pacfiles-mode.git
 
 Updating /mnt/store/melpa/working/pacfiles-mode/
-Checking out origin/HEAD
-Checking out 8d06f64abc98c3f3338560c8d6eb47719e034069
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pacfiles-mode/
-  to /tmp/pacfiles-modelUjRBL/pacfiles-mode-20200915.1815
-    pacfiles-buttons.el -> pacfiles-buttons.el
-    pacfiles-mode.el -> pacfiles-mode.el
-    pacfiles-utils.el -> pacfiles-utils.el
-    pacfiles-win.el -> pacfiles-win.el
-Created pacfiles-mode-20200915.1815.tar containing:
-  pacfiles-mode-20200915.1815/
-  pacfiles-mode-20200915.1815/pacfiles-buttons.el
-  pacfiles-mode-20200915.1815/pacfiles-mode-pkg.el
-  pacfiles-mode-20200915.1815/pacfiles-mode.el
-  pacfiles-mode-20200915.1815/pacfiles-utils.el
-  pacfiles-mode-20200915.1815/pacfiles-win.el
-Built pacfiles-mode in 6.399s, finished at 2022-10-27T05:46:30+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 457 Oct 27 05:46 packages/pacfiles-mode-20200915.1815.entry
- 40K -rw-r--r-- 1 root root 40K Oct 27 05:46 packages/pacfiles-mode-20200915.1815.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/UndeadKernel/pacfiles-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,23 +3,11 @@ Fetcher: github
 Source:  https://github.com/purescript-emacs/psc-ide-emacs.git
 
 Updating /mnt/store/melpa/working/psc-ide/
-Checking out origin/HEAD
-Checking out ce97d719458ea099b40c02f05b6609601c727e66
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/psc-ide/
-  to /tmp/psc-idesWAwti/psc-ide-20210219.2247
-    psc-ide-backported.el -> psc-ide-backported.el
-    psc-ide-flycheck.el -> psc-ide-flycheck.el
-    psc-ide-protocol.el -> psc-ide-protocol.el
-    psc-ide.el -> psc-ide.el
-Created psc-ide-20210219.2247.tar containing:
-  psc-ide-20210219.2247/
-  psc-ide-20210219.2247/psc-ide-backported.el
-  psc-ide-20210219.2247/psc-ide-flycheck.el
-  psc-ide-20210219.2247/psc-ide-pkg.el
-  psc-ide-20210219.2247/psc-ide-protocol.el
-  psc-ide-20210219.2247/psc-ide.el
-Built psc-ide in 3.530s, finished at 2022-10-27T05:50:40+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 658 Oct 27 05:50 packages/psc-ide-20210219.2247.entry
- 60K -rw-r--r-- 1 root root 60K Oct 27 05:50 packages/psc-ide-20210219.2247.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/purescript-emacs/psc-ide-emacs.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

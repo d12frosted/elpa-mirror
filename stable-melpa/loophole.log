@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/0x60df/loophole.git
 
 Updating /mnt/store/melpa/working/loophole/
-Checking out origin/HEAD
-Checking out e9473da457f90f84e3e91377b3fc280ca8d21c85
-Built loophole in 8.406s, finished at 2022-10-27T05:33:25+0000
- ✓ Success:
-236K -rw-r--r-- 1 root root 236K Oct 27 05:33 packages/loophole-20221023.1422.el
-4.0K -rw-r--r-- 1 root root  350 Oct 27 05:33 packages/loophole-20221023.1422.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/0x60df/loophole.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

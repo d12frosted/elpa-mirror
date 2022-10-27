@@ -3,55 +3,11 @@ Fetcher: github
 Source:  https://github.com/roadrunner1776/magik.git
 
 Updating /mnt/store/melpa/working/magik-mode/
-Checking out origin/HEAD
-Checking out 0ae427be02275054ec08cd6fc5259f38473120b3
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/magik-mode/
-  to /tmp/magik-modeoEVB3i/magik-mode-20220926.1228
-    magik-aliases.el -> magik-aliases.el
-    magik-cb-ac.el -> magik-cb-ac.el
-    magik-cb.el -> magik-cb.el
-    magik-electric.el -> magik-electric.el
-    magik-indent.el -> magik-indent.el
-    magik-keys.el -> magik-keys.el
-    magik-lint.el -> magik-lint.el
-    magik-loadlist.el -> magik-loadlist.el
-    magik-menu.el -> magik-menu.el
-    magik-mode.el -> magik-mode.el
-    magik-module.el -> magik-module.el
-    magik-msg.el -> magik-msg.el
-    magik-pragma.el -> magik-pragma.el
-    magik-product.el -> magik-product.el
-    magik-session-extras.el -> magik-session-extras.el
-    magik-session-filter.el -> magik-session-filter.el
-    magik-session.el -> magik-session.el
-    magik-template.el -> magik-template.el
-    magik-utils.el -> magik-utils.el
-    magik-version.el -> magik-version.el
-Created magik-mode-20220926.1228.tar containing:
-  magik-mode-20220926.1228/
-  magik-mode-20220926.1228/magik-aliases.el
-  magik-mode-20220926.1228/magik-cb-ac.el
-  magik-mode-20220926.1228/magik-cb.el
-  magik-mode-20220926.1228/magik-electric.el
-  magik-mode-20220926.1228/magik-indent.el
-  magik-mode-20220926.1228/magik-keys.el
-  magik-mode-20220926.1228/magik-lint.el
-  magik-mode-20220926.1228/magik-loadlist.el
-  magik-mode-20220926.1228/magik-menu.el
-  magik-mode-20220926.1228/magik-mode-pkg.el
-  magik-mode-20220926.1228/magik-mode.el
-  magik-mode-20220926.1228/magik-module.el
-  magik-mode-20220926.1228/magik-msg.el
-  magik-mode-20220926.1228/magik-pragma.el
-  magik-mode-20220926.1228/magik-product.el
-  magik-mode-20220926.1228/magik-session-extras.el
-  magik-mode-20220926.1228/magik-session-filter.el
-  magik-mode-20220926.1228/magik-session.el
-  magik-mode-20220926.1228/magik-template.el
-  magik-mode-20220926.1228/magik-utils.el
-  magik-mode-20220926.1228/magik-version.el
-Built magik-mode in 3.688s, finished at 2022-10-27T05:34:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  242 Oct 27 05:34 packages/magik-mode-20220926.1228.entry
-460K -rw-r--r-- 1 root root 460K Oct 27 05:34 packages/magik-mode-20220926.1228.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/roadrunner1776/magik.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

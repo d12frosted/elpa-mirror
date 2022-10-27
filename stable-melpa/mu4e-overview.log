@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/mkcms/mu4e-overview.git
 
 Updating /mnt/store/melpa/working/mu4e-overview/
-Checking out origin/HEAD
-Checking out 7daaa35a6d78feb83167e780a9c23da719c9051b
-Built mu4e-overview in 4.882s, finished at 2022-10-27T05:37:58+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Oct 27 05:37 packages/mu4e-overview-20200824.1549.el
-4.0K -rw-r--r-- 1 root root 368 Oct 27 05:37 packages/mu4e-overview-20200824.1549.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/mkcms/mu4e-overview.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

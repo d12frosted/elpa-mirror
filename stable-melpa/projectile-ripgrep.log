@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/nlamirault/ripgrep.el.git
 
 Updating /mnt/store/melpa/working/projectile-ripgrep/
-Checking out origin/HEAD
-Checking out b6bd5beb0c11348f1afd9486cbb451d0d2e3c45a
-Built projectile-ripgrep in 3.481s, finished at 2022-10-27T05:50:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.6K Oct 27 05:50 packages/projectile-ripgrep-20221013.541.el
-4.0K -rw-r--r-- 1 root root  488 Oct 27 05:50 packages/projectile-ripgrep-20221013.541.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/nlamirault/ripgrep.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

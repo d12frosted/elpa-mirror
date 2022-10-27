@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/Ruin0x11/lsp-intellij.git
 
 Updating /mnt/store/melpa/working/lsp-intellij/
-Checking out origin/HEAD
-Checking out cf30f0ac63bd0140e758840b8ab070e8313697b2
-Built lsp-intellij in 6.762s, finished at 2022-10-27T05:33:39+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 27K Oct 27 05:33 packages/lsp-intellij-20180831.2051.el
-4.0K -rw-r--r-- 1 root root 402 Oct 27 05:33 packages/lsp-intellij-20180831.2051.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/Ruin0x11/lsp-intellij.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

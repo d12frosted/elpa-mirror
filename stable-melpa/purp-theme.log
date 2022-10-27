@@ -3,25 +3,11 @@ Fetcher: github
 Source:  https://github.com/gnuvince/purp.git
 
 Updating /mnt/store/melpa/working/purp-theme/
-Checking out origin/HEAD
-Checking out 8d3510e1ed995b8323cd5205626ddde6386a76ca
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/purp-theme/
-  to /tmp/purp-theme3wMgPx/purp-theme-20210912.1940
-    blurb-theme.el -> blurb-theme.el
-    ega-theme.el -> ega-theme.el
-    purp-common.el -> purp-common.el
-    purp-light-theme.el -> purp-light-theme.el
-    purp-theme.el -> purp-theme.el
-Created purp-theme-20210912.1940.tar containing:
-  purp-theme-20210912.1940/
-  purp-theme-20210912.1940/blurb-theme.el
-  purp-theme-20210912.1940/ega-theme.el
-  purp-theme-20210912.1940/purp-common.el
-  purp-theme-20210912.1940/purp-light-theme.el
-  purp-theme-20210912.1940/purp-theme-pkg.el
-  purp-theme-20210912.1940/purp-theme.el
-Built purp-theme in 4.308s, finished at 2022-10-27T05:50:56+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 353 Oct 27 05:50 packages/purp-theme-20210912.1940.entry
- 32K -rw-r--r-- 1 root root 30K Oct 27 05:50 packages/purp-theme-20210912.1940.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/gnuvince/purp.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

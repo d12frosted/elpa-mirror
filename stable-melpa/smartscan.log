@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/mickeynp/smart-scan.git
 
 Updating /mnt/store/melpa/working/smartscan/
-Checking out origin/HEAD
-Checking out 234e077145710a174c20742de792b97ed2f965f6
-Built smartscan in 8.690s, finished at 2022-10-27T05:58:10+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Oct 27 05:58 packages/smartscan-20170211.2033.el
-4.0K -rw-r--r-- 1 root root  332 Oct 27 05:58 packages/smartscan-20170211.2033.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/mickeynp/smart-scan.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

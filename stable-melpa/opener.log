@@ -3,21 +3,9 @@ Fetcher: github
 Source:  https://github.com/0robustus1/opener.el.git
 
 Updating /mnt/store/melpa/working/opener/
-Checking out origin/HEAD
-Checking out ab75048b1073fb1b1452dabae94ab55e0cfb57c4
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/opener/
-  to /tmp/openerLpxWx5/opener-20161207.1810
-    opener.el -> opener.el
-    opener.texi -> opener.texi
-Generating /tmp/openerLpxWx5/opener-20161207.1810/opener.info
-Created opener-20161207.1810.tar containing:
-  opener-20161207.1810/
-  opener-20161207.1810/dir
-  opener-20161207.1810/opener-pkg.el
-  opener-20161207.1810/opener.el
-  opener-20161207.1810/opener.info
-Built opener in 7.044s, finished at 2022-10-27T05:42:08+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 404 Oct 27 05:42 packages/opener-20161207.1810.entry
- 20K -rw-r--r-- 1 root root 20K Oct 27 05:42 packages/opener-20161207.1810.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/0robustus1/opener.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

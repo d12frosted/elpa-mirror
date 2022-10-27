@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/repeater.git
 
 Updating /mnt/store/melpa/working/repeater/
-Checking out origin/HEAD
-Checking out 854b874542b186b2408cbc58ad0591fe8eb70b6c
-Built repeater in 4.043s, finished at 2022-10-27T05:53:39+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.0K Oct 27 05:53 packages/repeater-20180418.1212.el
-4.0K -rw-r--r-- 1 root root  370 Oct 27 05:53 packages/repeater-20180418.1212.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/xuchunyang/repeater.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

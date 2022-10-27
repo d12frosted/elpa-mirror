@@ -3,19 +3,11 @@ Fetcher: github
 Source:  https://github.com/pillar-markup/pillar-mode.git
 
 Updating /mnt/store/melpa/working/pillar/
-Checking out origin/HEAD
-Checking out 13a7f676544cc66005ccd8e6fc1c25e4ccd6f909
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pillar/
-  to /tmp/pillarrel9vo/pillar-20141112.1811
-    pillar-latex2pillar.el -> pillar-latex2pillar.el
-    pillar.el -> pillar.el
-Created pillar-20141112.1811.tar containing:
-  pillar-20141112.1811/
-  pillar-20141112.1811/pillar-latex2pillar.el
-  pillar-20141112.1811/pillar-pkg.el
-  pillar-20141112.1811/pillar.el
-Built pillar in 3.523s, finished at 2022-10-27T05:48:23+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 374 Oct 27 05:48 packages/pillar-20141112.1811.entry
- 32K -rw-r--r-- 1 root root 30K Oct 27 05:48 packages/pillar-20141112.1811.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/pillar-markup/pillar-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

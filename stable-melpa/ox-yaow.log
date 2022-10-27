@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/LaurenceWarne/ox-yaow.el.git
 
 Updating /mnt/store/melpa/working/ox-yaow/
-Checking out origin/HEAD
-Checking out 71d7cee736542f6504c4733d040601d2d2086443
-Built ox-yaow in 5.999s, finished at 2022-10-27T05:46:24+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Oct 27 05:46 packages/ox-yaow-20220629.1539.el
-4.0K -rw-r--r-- 1 root root 403 Oct 27 05:46 packages/ox-yaow-20220629.1539.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/LaurenceWarne/ox-yaow.el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

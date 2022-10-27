@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/purcell/page-break-lines.git
 
 Updating /mnt/store/melpa/working/page-break-lines/
-Checking out origin/HEAD
-Checking out 69caea070379f3324c530e96e06625c3cd097cb9
-Built page-break-lines in 4.247s, finished at 2022-10-27T05:46:44+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Oct 27 05:46 packages/page-break-lines-20210104.2224.el
-4.0K -rw-r--r-- 1 root root  423 Oct 27 05:46 packages/page-break-lines-20210104.2224.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/purcell/page-break-lines.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

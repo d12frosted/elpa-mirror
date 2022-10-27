@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/tigersoldier/lsp-javacomp.git
 
 Updating /mnt/store/melpa/working/lsp-javacomp/
-Checking out origin/HEAD
-Checking out 82aa4ad6ca03a74565c35e855b318b1887bcd89b
-Built lsp-javacomp in 6.990s, finished at 2022-10-27T05:33:49+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.8K Oct 27 05:33 packages/lsp-javacomp-20190124.1755.el
-4.0K -rw-r--r-- 1 root root  331 Oct 27 05:33 packages/lsp-javacomp-20190124.1755.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/tigersoldier/lsp-javacomp.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

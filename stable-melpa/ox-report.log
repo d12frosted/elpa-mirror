@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/DarkBuffalo/ox-report.git
 
 Updating /mnt/store/melpa/working/ox-report/
-Checking out origin/HEAD
-Checking out 029fac8d4c83cc8841ade0dfebc8b7d7508efbb2
-Built ox-report in 9.018s, finished at 2022-10-27T05:46:03+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 21K Oct 27 05:46 packages/ox-report-20220910.951.el
-4.0K -rw-r--r-- 1 root root 470 Oct 27 05:46 packages/ox-report-20220910.951.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/DarkBuffalo/ox-report.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

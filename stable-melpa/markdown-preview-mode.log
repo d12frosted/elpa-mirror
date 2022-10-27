@@ -3,21 +3,11 @@ Fetcher: github
 Source:  https://github.com/ancane/markdown-preview-mode.git
 
 Updating /mnt/store/melpa/working/markdown-preview-mode/
-Checking out origin/HEAD
-Checking out 85fbfec507a222326695a3b91ff7306d0c4f94c6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/markdown-preview-mode/
-  to /tmp/markdown-preview-modeVdyVvm/markdown-preview-mode-20221006.1601
-    markdown-preview-mode.el -> markdown-preview-mode.el
-    preview.html -> preview.html
-    favicon.ico -> favicon.ico
-Created markdown-preview-mode-20221006.1601.tar containing:
-  markdown-preview-mode-20221006.1601/
-  markdown-preview-mode-20221006.1601/favicon.ico
-  markdown-preview-mode-20221006.1601/markdown-preview-mode-pkg.el
-  markdown-preview-mode-20221006.1601/markdown-preview-mode.el
-  markdown-preview-mode-20221006.1601/preview.html
-Built markdown-preview-mode in 3.529s, finished at 2022-10-27T05:35:25+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 527 Oct 27 05:35 packages/markdown-preview-mode-20221006.1601.entry
- 52K -rw-r--r-- 1 root root 50K Oct 27 05:35 packages/markdown-preview-mode-20221006.1601.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/ancane/markdown-preview-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

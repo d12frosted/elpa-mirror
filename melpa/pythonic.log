@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/pythonic-emacs/pythonic.git
 
 Updating /mnt/store/melpa/working/pythonic/
-Checking out origin/HEAD
-Checking out c18a5bd8cb2ba59014b6b29b5bf1903bd2476a07
-Built pythonic in 6.581s, finished at 2022-10-27T05:51:39+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Oct 27 05:51 packages/pythonic-20220723.1741.el
-4.0K -rw-r--r-- 1 root root 416 Oct 27 05:51 packages/pythonic-20220723.1741.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/pythonic-emacs/pythonic.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

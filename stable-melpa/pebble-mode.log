@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/ArneBab/pebble-mode.git
 
 Updating /mnt/store/melpa/working/pebble-mode/
-Checking out origin/HEAD
-Checking out b256cebef2911021f0241364b4642357d5efd201
-Built pebble-mode in 3.535s, finished at 2022-10-27T05:47:36+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Oct 27 05:47 packages/pebble-mode-20221009.2113.el
-4.0K -rw-r--r-- 1 root root 345 Oct 27 05:47 packages/pebble-mode-20221009.2113.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/ArneBab/pebble-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

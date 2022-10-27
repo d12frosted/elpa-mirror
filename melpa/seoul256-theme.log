@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/anandpiyer/seoul256-emacs.git
 
 Updating /mnt/store/melpa/working/seoul256-theme/
-Checking out origin/HEAD
-Checking out 8e76d0207489964ef780420723d49e409f68f7d1
-Built seoul256-theme in 3.950s, finished at 2022-10-27T05:55:58+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Oct 27 05:55 packages/seoul256-theme-20180505.757.el
-4.0K -rw-r--r-- 1 root root 381 Oct 27 05:55 packages/seoul256-theme-20180505.757.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/anandpiyer/seoul256-emacs.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

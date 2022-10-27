@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/GuiltyDolphin/prompts.el.git
 
 Updating /mnt/store/melpa/working/prompts/
-Checking out origin/HEAD
-Checking out 1cd5e732ff2a86b47836eb7252e5b59cd4b6ab26
-Built prompts in 3.265s, finished at 2022-10-27T05:50:28+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.7K Oct 27 05:50 packages/prompts-20160916.1041.el
-4.0K -rw-r--r-- 1 root root  385 Oct 27 05:50 packages/prompts-20160916.1041.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/GuiltyDolphin/prompts.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

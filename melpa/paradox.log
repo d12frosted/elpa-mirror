@@ -3,27 +3,9 @@ Fetcher: github
 Source:  https://github.com/Malabarba/paradox.git
 
 Updating /mnt/store/melpa/working/paradox/
-Checking out origin/HEAD
-Checking out 96401577ed02f433debe7604e49afd478e9eda61
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/paradox/
-  to /tmp/paradox8j989O/paradox-20191011.1119
-    paradox-commit-list.el -> paradox-commit-list.el
-    paradox-core.el -> paradox-core.el
-    paradox-execute.el -> paradox-execute.el
-    paradox-github.el -> paradox-github.el
-    paradox-menu.el -> paradox-menu.el
-    paradox.el -> paradox.el
-Created paradox-20191011.1119.tar containing:
-  paradox-20191011.1119/
-  paradox-20191011.1119/paradox-commit-list.el
-  paradox-20191011.1119/paradox-core.el
-  paradox-20191011.1119/paradox-execute.el
-  paradox-20191011.1119/paradox-github.el
-  paradox-20191011.1119/paradox-menu.el
-  paradox-20191011.1119/paradox-pkg.el
-  paradox-20191011.1119/paradox.el
-Built paradox in 4.067s, finished at 2022-10-27T05:46:56+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  536 Oct 27 05:46 packages/paradox-20191011.1119.entry
-100K -rw-r--r-- 1 root root 100K Oct 27 05:46 packages/paradox-20191011.1119.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/Malabarba/paradox.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

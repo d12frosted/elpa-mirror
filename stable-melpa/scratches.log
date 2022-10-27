@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/victorteokw/scratches.git
 
 Updating /mnt/store/melpa/working/scratches/
-Checking out origin/HEAD
-Checking out 9441afe6396ca38f08029123fab5d87429cbf315
-Built scratches in 4.095s, finished at 2022-10-27T05:55:30+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.3K Oct 27 05:55 packages/scratches-20151006.416.el
-4.0K -rw-r--r-- 1 root root  354 Oct 27 05:55 packages/scratches-20151006.416.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/victorteokw/scratches.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

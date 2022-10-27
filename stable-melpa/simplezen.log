@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/magnars/simplezen.el.git
 
 Updating /mnt/store/melpa/working/simplezen/
-Checking out origin/HEAD
-Checking out 9f91554a3f7f4e9b2b5ec009effafbf12b091973
-Built simplezen in 4.096s, finished at 2022-10-27T05:57:09+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Oct 27 05:57 packages/simplezen-20130421.1000.el
-4.0K -rw-r--r-- 1 root root  331 Oct 27 05:57 packages/simplezen-20130421.1000.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/magnars/simplezen.el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

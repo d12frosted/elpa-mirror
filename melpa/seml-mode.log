@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/conao3/seml-mode.el.git
 
 Updating /mnt/store/melpa/working/seml-mode/
-Checking out origin/HEAD
-Checking out 7a9a8305f7b54ee59e4c29b33ef5fd4058ba4219
-Built seml-mode in 3.932s, finished at 2022-10-27T05:55:52+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Oct 27 05:55 packages/seml-mode-20200812.1027.el
-4.0K -rw-r--r-- 1 root root 505 Oct 27 05:55 packages/seml-mode-20200812.1027.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/conao3/seml-mode.el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

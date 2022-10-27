@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/xenodium/ob-swiftui.git
 
 Updating /mnt/store/melpa/working/ob-swiftui/
-Checking out origin/HEAD
-Checking out 31cfe991eb171bb0d2f53cf621be1b9d91573ac3
-Built ob-swiftui in 4.080s, finished at 2022-10-27T05:41:26+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.2K Oct 27 05:41 packages/ob-swiftui-20210618.856.el
-4.0K -rw-r--r-- 1 root root  394 Oct 27 05:41 packages/ob-swiftui-20210618.856.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/xenodium/ob-swiftui.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

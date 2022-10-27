@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/anler/remember-last-theme.git
 
 Updating /mnt/store/melpa/working/remember-last-theme/
-Checking out origin/HEAD
-Checking out 57e8e2a475ea89316dbb5c4d2ea047f56a2cbcdf
-Built remember-last-theme in 4.578s, finished at 2022-10-27T05:53:36+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.1K Oct 27 05:53 packages/remember-last-theme-20170619.2133.el
-4.0K -rw-r--r-- 1 root root  462 Oct 27 05:53 packages/remember-last-theme-20170619.2133.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/anler/remember-last-theme.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

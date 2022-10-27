@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/sanel/monroe.git
 
 Updating /mnt/store/melpa/working/monroe/
-Checking out origin/HEAD
-Checking out 8f809e4aa0a35ec2d1c880aacf59e6bc317a566f
-Built monroe in 4.416s, finished at 2022-10-27T05:37:24+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Oct 27 05:37 packages/monroe-20220915.1647.el
-4.0K -rw-r--r-- 1 root root 341 Oct 27 05:37 packages/monroe-20220915.1647.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/sanel/monroe.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

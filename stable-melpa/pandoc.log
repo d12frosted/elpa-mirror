@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/zonuexe/pandoc.el.git
 
 Updating /mnt/store/melpa/working/pandoc/
-Checking out origin/HEAD
-Checking out 198d262d09e30448f1672338b0b5a81cf75e1eaa
-Built pandoc in 3.746s, finished at 2022-10-27T05:46:51+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.0K Oct 27 05:46 packages/pandoc-20161128.1157.el
-4.0K -rw-r--r-- 1 root root  359 Oct 27 05:46 packages/pandoc-20161128.1157.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/zonuexe/pandoc.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

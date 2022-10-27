@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/brannala/sequed.git
 
 Updating /mnt/store/melpa/working/sequed/
-Checking out origin/HEAD
-Checking out c886981c46d199e1522f18c3fc15198ab8c9a02f
-Built sequed in 3.976s, finished at 2022-10-27T05:55:59+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 20K Oct 27 05:55 packages/sequed-20220115.743.el
-4.0K -rw-r--r-- 1 root root 333 Oct 27 05:55 packages/sequed-20220115.743.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/brannala/sequed.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

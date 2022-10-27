@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/travisjeffery/proced-narrow.git
 
 Updating /mnt/store/melpa/working/proced-narrow/
-Checking out origin/HEAD
-Checking out 0e2a4dfb072eb0369d0020b429e820ae620d325e
-Built proced-narrow in 3.941s, finished at 2022-10-27T05:50:07+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Oct 27 05:50 packages/proced-narrow-20190911.1818.el
-4.0K -rw-r--r-- 1 root root  418 Oct 27 05:50 packages/proced-narrow-20190911.1818.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/travisjeffery/proced-narrow.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

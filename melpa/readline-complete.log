@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/monsanto/readline-complete.el.git
 
 Updating /mnt/store/melpa/working/readline-complete/
-Checking out origin/HEAD
-Checking out 30c020c37b2741160cc37e656e13c85d826a0ebf
-Built readline-complete in 3.869s, finished at 2022-10-27T05:52:52+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Oct 27 05:52 packages/readline-complete-20150708.1437.el
-4.0K -rw-r--r-- 1 root root 295 Oct 27 05:52 packages/readline-complete-20150708.1437.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/monsanto/readline-complete.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

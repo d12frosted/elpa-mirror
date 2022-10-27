@@ -3,19 +3,9 @@ Fetcher: github
 Source:  https://github.com/tyler-dodge/org-runbook.git
 
 Updating /mnt/store/melpa/working/org-runbook/
-Checking out origin/HEAD
-Checking out d60aac9519e15fde8b2dc1de08e90856d5e02b42
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-runbook/
-  to /tmp/org-runbookz20LzM/org-runbook-20220512.1927
-    org-runbook-ivy.el -> org-runbook-ivy.el
-    org-runbook.el -> org-runbook.el
-Created org-runbook-20220512.1927.tar containing:
-  org-runbook-20220512.1927/
-  org-runbook-20220512.1927/org-runbook-ivy.el
-  org-runbook-20220512.1927/org-runbook-pkg.el
-  org-runbook-20220512.1927/org-runbook.el
-Built org-runbook in 4.505s, finished at 2022-10-27T05:44:07+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 344 Oct 27 05:44 packages/org-runbook-20220512.1927.entry
- 52K -rw-r--r-- 1 root root 50K Oct 27 05:44 packages/org-runbook-20220512.1927.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/tyler-dodge/org-runbook.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

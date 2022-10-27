@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/dfeich/org8-wikiexporters.git
 
 Updating /mnt/store/melpa/working/ox-tiddly/
-Checking out origin/HEAD
-Checking out 3377d8732aa916e736ce5822c7a9a4fbdc894e37
-Built ox-tiddly in 5.389s, finished at 2022-10-27T05:46:18+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.8K Oct 27 05:46 packages/ox-tiddly-20200927.857.el
-4.0K -rw-r--r-- 1 root root  417 Oct 27 05:46 packages/ox-tiddly-20200927.857.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/dfeich/org8-wikiexporters.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

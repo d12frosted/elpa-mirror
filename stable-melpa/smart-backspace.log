@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/itome/smart-backspace.git
 
 Updating /mnt/store/melpa/working/smart-backspace/
-Checking out origin/HEAD
-Checking out acb390628a181a993aa0d137624f2e5283efa6d9
-Built smart-backspace in 3.707s, finished at 2022-10-27T05:57:42+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.1K Oct 27 05:57 packages/smart-backspace-20171014.526.el
-4.0K -rw-r--r-- 1 root root  335 Oct 27 05:57 packages/smart-backspace-20171014.526.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/itome/smart-backspace.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

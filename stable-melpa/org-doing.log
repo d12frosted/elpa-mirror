@@ -3,20 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacsattic/org-doing.git
 
 Updating /mnt/store/melpa/working/org-doing/
-Checking out origin/HEAD
-Checking out 4819e75c827c2115bd28f3b3148d846aa64ccd9b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-doing/
-  to /tmp/org-doingJ8P3nx/org-doing-20161017.1620
-    org-doing.el -> org-doing.el
-    bin => bin
-Created org-doing-20161017.1620.tar containing:
-  org-doing-20161017.1620/
-  org-doing-20161017.1620/bin/
-  org-doing-20161017.1620/bin/org-doing
-  org-doing-20161017.1620/org-doing-pkg.el
-  org-doing-20161017.1620/org-doing.el
-Built org-doing in 3.902s, finished at 2022-10-27T05:42:44+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 304 Oct 27 05:42 packages/org-doing-20161017.1620.entry
- 12K -rw-r--r-- 1 root root 10K Oct 27 05:42 packages/org-doing-20161017.1620.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/emacsattic/org-doing.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/HKey/mozc-temp.git
 
 Updating /mnt/store/melpa/working/mozc-temp/
-Checking out origin/HEAD
-Checking out 7f5dd5fc8ceeca9b1822f7e056a4be67e2e74959
-Built mozc-temp in 4.717s, finished at 2022-10-27T05:37:41+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Oct 27 05:37 packages/mozc-temp-20160228.840.el
-4.0K -rw-r--r-- 1 root root  387 Oct 27 05:37 packages/mozc-temp-20160228.840.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/HKey/mozc-temp.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/jdodds/poe-lootfilter-mode.git
 
 Updating /mnt/store/melpa/working/poe-lootfilter-mode/
-Checking out origin/HEAD
-Checking out 5ef06684cb2b17b090ee1f303c2b789fa71bc106
-Built poe-lootfilter-mode in 3.698s, finished at 2022-10-27T05:49:02+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Oct 27 05:49 packages/poe-lootfilter-mode-20190330.1117.el
-4.0K -rw-r--r-- 1 root root  455 Oct 27 05:49 packages/poe-lootfilter-mode-20190330.1117.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/jdodds/poe-lootfilter-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

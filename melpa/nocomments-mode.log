@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/Lindydancer/nocomments-mode.git
 
 Updating /mnt/store/melpa/working/nocomments-mode/
-Checking out origin/HEAD
-Checking out 5a41a20cc44dfe4a9ea584354ed6dbc15dd92f46
-Built nocomments-mode in 6.545s, finished at 2022-10-27T05:39:48+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.8K Oct 27 05:39 packages/nocomments-mode-20170213.2037.el
-4.0K -rw-r--r-- 1 root root  303 Oct 27 05:39 packages/nocomments-mode-20170213.2037.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/Lindydancer/nocomments-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

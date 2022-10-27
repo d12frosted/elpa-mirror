@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/fourier/loccur.git
 
 Updating /mnt/store/melpa/working/loccur/
-Checking out origin/HEAD
-Checking out 01b7afa62589432a98171074abb8c5a1e089034a
-Built loccur in 3.973s, finished at 2022-10-27T05:32:55+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Oct 27 05:32 packages/loccur-20210224.2041.el
-4.0K -rw-r--r-- 1 root root 394 Oct 27 05:32 packages/loccur-20210224.2041.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/fourier/loccur.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

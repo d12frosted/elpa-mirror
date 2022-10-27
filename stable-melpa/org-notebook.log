@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/Rahi374/org-notebook.git
 
 Updating /mnt/store/melpa/working/org-notebook/
-Checking out origin/HEAD
-Checking out d90c4aeca2442161e6dd89de175561af85aace03
-Built org-notebook in 3.679s, finished at 2022-10-27T05:43:28+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.9K Oct 27 05:43 packages/org-notebook-20170322.452.el
-4.0K -rw-r--r-- 1 root root  377 Oct 27 05:43 packages/org-notebook-20170322.452.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/Rahi374/org-notebook.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

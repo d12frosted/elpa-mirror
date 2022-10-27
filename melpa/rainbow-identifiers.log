@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/Fanael/rainbow-identifiers.git
 
 Updating /mnt/store/melpa/working/rainbow-identifiers/
-Checking out origin/HEAD
-Checking out 19fbfded1baa98d12335f26f6d7b20e5ae44ce2e
-Built rainbow-identifiers in 5.891s, finished at 2022-10-27T05:52:25+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.5K Oct 27 05:52 packages/rainbow-identifiers-20141102.1526.el
-4.0K -rw-r--r-- 1 root root  400 Oct 27 05:52 packages/rainbow-identifiers-20141102.1526.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/Fanael/rainbow-identifiers.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

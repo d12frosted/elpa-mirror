@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/yanalunaterra/plain-theme.git
 
 Updating /mnt/store/melpa/working/plain-theme/
-Checking out origin/HEAD
-Checking out 2609a811335d58cfb73a65d6307c156fe09037d3
-Built plain-theme in 2.985s, finished at 2022-10-27T05:48:41+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.8K Oct 27 05:48 packages/plain-theme-20171124.410.el
-4.0K -rw-r--r-- 1 root root  183 Oct 27 05:48 packages/plain-theme-20171124.410.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/yanalunaterra/plain-theme.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

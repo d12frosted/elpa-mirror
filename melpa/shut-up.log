@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/cask/shut-up.git
 
 Updating /mnt/store/melpa/working/shut-up/
-Checking out origin/HEAD
-Checking out ff6f06f3b080ee833a25a22da8cb5b96e911dc77
-Built shut-up in 3.955s, finished at 2022-10-27T05:56:44+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.4K Oct 27 05:56 packages/shut-up-20210403.1249.el
-4.0K -rw-r--r-- 1 root root  351 Oct 27 05:56 packages/shut-up-20210403.1249.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/cask/shut-up.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

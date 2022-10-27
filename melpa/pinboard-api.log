@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/danieroux/pinboard-api-el.git
 
 Updating /mnt/store/melpa/working/pinboard-api/
-Checking out origin/HEAD
-Checking out b7b5214d0c35178f8dca08cf22d6ef3c21f0fce4
-Built pinboard-api in 3.490s, finished at 2022-10-27T05:48:23+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Oct 27 05:48 packages/pinboard-api-20140324.1148.el
-4.0K -rw-r--r-- 1 root root  368 Oct 27 05:48 packages/pinboard-api-20140324.1148.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/danieroux/pinboard-api-el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

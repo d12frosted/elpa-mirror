@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/agzam/mw-thesaurus.el.git
 
 Updating /mnt/store/melpa/working/mw-thesaurus/
-Checking out origin/HEAD
-Checking out bae48760b09f750359ef702875fdde783be2ce4d
-Built mw-thesaurus in 4.567s, finished at 2022-10-27T05:38:21+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Oct 27 05:38 packages/mw-thesaurus-20220822.2112.el
-4.0K -rw-r--r-- 1 root root 368 Oct 27 05:38 packages/mw-thesaurus-20220822.2112.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/agzam/mw-thesaurus.el.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

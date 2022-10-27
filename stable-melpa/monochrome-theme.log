@@ -3,19 +3,9 @@ Fetcher: github
 Source:  https://github.com/fxn/monochrome-theme.el.git
 
 Updating /mnt/store/melpa/working/monochrome-theme/
-Checking out origin/HEAD
-Checking out 9cf993670c9e8d198f41d840216e13280585b3e1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/monochrome-theme/
-  to /tmp/monochrome-themecPYIHZ/monochrome-theme-20140326.1050
-    monochrome-bright-theme.el -> monochrome-bright-theme.el
-    monochrome-theme.el -> monochrome-theme.el
-Created monochrome-theme-20140326.1050.tar containing:
-  monochrome-theme-20140326.1050/
-  monochrome-theme-20140326.1050/monochrome-bright-theme.el
-  monochrome-theme-20140326.1050/monochrome-theme-pkg.el
-  monochrome-theme-20140326.1050/monochrome-theme.el
-Built monochrome-theme in 3.774s, finished at 2022-10-27T05:37:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 292 Oct 27 05:37 packages/monochrome-theme-20140326.1050.entry
- 32K -rw-r--r-- 1 root root 30K Oct 27 05:37 packages/monochrome-theme-20140326.1050.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/fxn/monochrome-theme.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

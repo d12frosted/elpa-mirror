@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/easimonenko/mybuild-mode.git
 
 Updating /mnt/store/melpa/working/mybuild-mode/
-Checking out origin/HEAD
-Checking out 54e3c31e3b5f133eb8611a3759e59733b17e33e3
-Built mybuild-mode in 3.931s, finished at 2022-10-27T05:38:27+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.4K Oct 27 05:38 packages/mybuild-mode-20221007.1928.el
-4.0K -rw-r--r-- 1 root root  407 Oct 27 05:38 packages/mybuild-mode-20221007.1928.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/easimonenko/mybuild-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

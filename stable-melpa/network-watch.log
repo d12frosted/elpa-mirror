@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/jamiguet/network-watch.git
 
 Updating /mnt/store/melpa/working/network-watch/
-Checking out origin/HEAD
-Checking out d80b38dbec79f813c3949a8df8fb5f58d48b60ee
-Built network-watch in 4.255s, finished at 2022-10-27T05:39:05+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Oct 27 05:39 packages/network-watch-20171123.1146.el
-4.0K -rw-r--r-- 1 root root  416 Oct 27 05:39 packages/network-watch-20171123.1146.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/jamiguet/network-watch.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

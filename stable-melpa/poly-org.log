@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/polymode/poly-org.git
 
 Updating /mnt/store/melpa/working/poly-org/
-Checking out origin/HEAD
-Checking out 01fd0f4b7eaeabf070af831f4825993210f64f2e
-Built poly-org in 4.260s, finished at 2022-10-27T05:49:16+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Oct 27 05:49 packages/poly-org-20220201.1514.el
-4.0K -rw-r--r-- 1 root root  356 Oct 27 05:49 packages/poly-org-20220201.1514.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/polymode/poly-org.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128
