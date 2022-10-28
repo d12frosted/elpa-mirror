@@ -6,8 +6,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://git.sr.ht/~tarsius/notmuch-transient
 ;; Keywords: mail
-;; Package-Version: 20220503.1117
-;; Package-Commit: 341fe7f05efe68460451bd5cb7151ca6d8b8cfc8
+;; Package-Version: 20221028.1344
+;; Package-Commit: 757ee082a2228e70151468f049eee2f14ed1e8d2
 
 ;; Package-Requires: ((emacs "27.1") (compat "28.1.1.0") (notmuch "0.31.4"))
 
@@ -294,22 +294,22 @@ This is a replacement for `notmuch-tag-jump'."
   (format "Current tags: %s" (oref transient--prefix value)))
 
 (defun notmuch-tag-transient--setup (_)
-  (cl-mapcan (pcase-lambda (`(,key ,tags ,desc))
-               (when (symbolp tags)
-                 (setq tags (symbol-value tags)))
-               (transient--parse-child
-                'notmuch-tag-transient
-                (list (key-description key)
-                      desc
-                      (lambda ()
-                        (interactive)
-                        (notmuch-transient--do-tag
-                         (notmuch-transient-tag-infix--get-changes
-                          (transient-suffix-object)))
-                        (transient-init-value transient-current-prefix))
-                      :class 'notmuch-transient-tag-infix
-                      :tags tags)))
-             notmuch-tagging-keys))
+  (transient-parse-suffixes
+   'notmuch-tag-transient
+   (mapcar (pcase-lambda (`(,key ,tags ,desc))
+             (when (symbolp tags)
+               (setq tags (symbol-value tags)))
+             (list (key-description key)
+                   desc
+                   (lambda ()
+                     (interactive)
+                     (notmuch-transient--do-tag
+                      (notmuch-transient-tag-infix--get-changes
+                       (transient-suffix-object)))
+                     (transient-init-value transient-current-prefix))
+                   :class 'notmuch-transient-tag-infix
+                   :tags tags))
+           notmuch-tagging-keys)))
 
 (defclass notmuch-transient-tag-infix (transient-infix)
   ((transient :initform 'transient--do-exit)

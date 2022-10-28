@@ -4,8 +4,8 @@
 
 ;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
 ;; Version: 0.18
-;; Package-Version: 20221026.717
-;; Package-Commit: 05add40916f779a768b57ed138124915f5de4430
+;; Package-Version: 20221028.1404
+;; Package-Commit: 8f55a1c911d06b7d9696400f0741e63546932c28
 ;; Keywords: data comm database postgresql
 ;; URL: https://github.com/emarsden/pg-el
 ;; Package-Requires: ((emacs "26.1"))
@@ -864,6 +864,9 @@ PostgreSQL and Emacs. CON should no longer be used."
     ("_bool"        . ,'pg-boolarray-parser)
     ("_char"        . ,'pg-chararray-parser)
     ("_text"        . ,'pg-textarray-parser)
+    ("int4range"    . ,'pg-numrange-parser)
+    ("int8range"    . ,'pg-numrange-parser)
+    ("numrange"     . ,'pg-numrange-parser)
     ("money"        . ,'pg-text-parser)
     ("date"         . ,'pg-date-parser)
     ("timestamp"    . ,'pg-isodate-parser)
@@ -920,7 +923,7 @@ PostgreSQL and Emacs. CON should no longer be used."
     (unless (and (eql (aref str 0) ?{)
                  (eql (aref str (1- len)) ?}))
       (signal 'pg-protocol-error (list "Unexpected format for bool array")))
-    (let ((segments (split-string (cl-subseq str 1 (- len 1)) ",")))
+    (let ((segments (split-string (cl-subseq str 1 (1- len)) ",")))
       (apply #'vector (mapcar (lambda (x) (pg-bool-parser x nil)) segments)))))
 
 (defun pg-chararray-parser (str encoding)
@@ -928,7 +931,7 @@ PostgreSQL and Emacs. CON should no longer be used."
     (unless (and (eql (aref str 0) ?{)
                  (eql (aref str (1- len)) ?}))
       (signal 'pg-protocol-error (list "Unexpected format for char array")))
-    (let ((segments (split-string (cl-subseq str 1 (- len 1)) ",")))
+    (let ((segments (split-string (cl-subseq str 1 (1- len)) ",")))
       (apply #'vector (mapcar (lambda (x) (pg-text-parser x encoding)) segments)))))
 
 (defun pg-textarray-parser (str encoding)
@@ -936,8 +939,28 @@ PostgreSQL and Emacs. CON should no longer be used."
     (unless (and (eql (aref str 0) ?{)
                  (eql (aref str (1- len)) ?}))
       (signal 'pg-protocol-error (list "Unexpected format for text array")))
-    (let ((segments (split-string (cl-subseq str 1 (- len 1)) ",")))
+    (let ((segments (split-string (cl-subseq str 1 (1- len)) ",")))
       (apply #'vector (mapcar (lambda (x) (pg-text-parser x encoding)) segments)))))
+
+;; Something like "[10.4,20)". TODO: handle multirange types (from PostgreSQL v14)
+(defun pg-numrange-parser (str _encoding)
+  (if (string= "empty" str)
+      (list :range)
+    (let* ((len (length str))
+           (lower-type (aref str 0))
+           (upper-type (aref str (1- len))))
+      (unless (and (cl-find lower-type "[(")
+                   (cl-find upper-type ")]"))
+        (signal 'pg-protocol-error '("Unexpected format for numerical range")))
+      (let* ((segments (split-string (cl-subseq str 1 (1- len)) ","))
+             (lower-str (nth 0 segments))
+             (upper-str (nth 1 segments))
+             ;; if the number is empty, that's a NULL lower or upper bound
+             (lower (if (zerop (length lower-str)) nil (string-to-number lower-str)))
+             (upper (if (zerop (length upper-str)) nil (string-to-number upper-str))))
+        (unless (eql 2 (length segments))
+          (signal 'pg-protocol-error '("Unexpected number of elements in numerical range")))
+        (list :range lower-type lower upper-type upper)))))
 
 (defsubst pg-text-parser (str encoding)
   (if encoding

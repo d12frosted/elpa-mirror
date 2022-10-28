@@ -4,10 +4,10 @@ Source:  https://github.com/clojure-emacs/cider.git
 
 Updating /mnt/store/melpa/working/cider/
 Checking out origin/HEAD
-Checking out d08609feb7141b8dbece6abb958bddd4ef0129d5
+Checking out e9324acf81391f089932c657b70031ae3c3d0824
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cider/
-  to /tmp/ciderHNbhDw/cider-20221026.1100
+  to /tmp/ciderci9bUK/cider-20221028.1025
     cider-apropos.el -> cider-apropos.el
     cider-browse-ns.el -> cider-browse-ns.el
     cider-browse-spec.el -> cider-browse-spec.el
@@ -45,47 +45,49 @@ Copying files (->) and directories (=>)
     cider.el -> cider.el
     nrepl-client.el -> nrepl-client.el
     nrepl-dict.el -> nrepl-dict.el
-Created cider-20221026.1100.tar containing:
-  cider-20221026.1100/
-  cider-20221026.1100/cider-apropos.el
-  cider-20221026.1100/cider-browse-ns.el
-  cider-20221026.1100/cider-browse-spec.el
-  cider-20221026.1100/cider-cheatsheet.el
-  cider-20221026.1100/cider-classpath.el
-  cider-20221026.1100/cider-client.el
-  cider-20221026.1100/cider-clojuredocs.el
-  cider-20221026.1100/cider-common.el
-  cider-20221026.1100/cider-completion.el
-  cider-20221026.1100/cider-connection.el
-  cider-20221026.1100/cider-debug.el
-  cider-20221026.1100/cider-doc.el
-  cider-20221026.1100/cider-eldoc.el
-  cider-20221026.1100/cider-eval.el
-  cider-20221026.1100/cider-find.el
-  cider-20221026.1100/cider-format.el
-  cider-20221026.1100/cider-inspector.el
-  cider-20221026.1100/cider-jar.el
-  cider-20221026.1100/cider-macroexpansion.el
-  cider-20221026.1100/cider-mode.el
-  cider-20221026.1100/cider-ns.el
-  cider-20221026.1100/cider-overlays.el
-  cider-20221026.1100/cider-pkg.el
-  cider-20221026.1100/cider-popup.el
-  cider-20221026.1100/cider-profile.el
-  cider-20221026.1100/cider-repl-history.el
-  cider-20221026.1100/cider-repl.el
-  cider-20221026.1100/cider-resolve.el
-  cider-20221026.1100/cider-scratch.el
-  cider-20221026.1100/cider-selector.el
-  cider-20221026.1100/cider-stacktrace.el
-  cider-20221026.1100/cider-test.el
-  cider-20221026.1100/cider-tracing.el
-  cider-20221026.1100/cider-util.el
-  cider-20221026.1100/cider-xref.el
-  cider-20221026.1100/cider.el
-  cider-20221026.1100/nrepl-client.el
-  cider-20221026.1100/nrepl-dict.el
-Built cider in 7.521s, finished at 2022-10-28T09:10:45+0000
+Created cider-20221028.1025.tar containing:
+  cider-20221028.1025/
+  cider-20221028.1025/cider-apropos.el
+  cider-20221028.1025/cider-browse-ns.el
+  cider-20221028.1025/cider-browse-spec.el
+  cider-20221028.1025/cider-cheatsheet.el
+  cider-20221028.1025/cider-classpath.el
+  cider-20221028.1025/cider-client.el
+  cider-20221028.1025/cider-clojuredocs.el
+  cider-20221028.1025/cider-common.el
+  cider-20221028.1025/cider-completion.el
+  cider-20221028.1025/cider-connection.el
+  cider-20221028.1025/cider-debug.el
+  cider-20221028.1025/cider-doc.el
+  cider-20221028.1025/cider-eldoc.el
+  cider-20221028.1025/cider-eval.el
+  cider-20221028.1025/cider-find.el
+  cider-20221028.1025/cider-format.el
+  cider-20221028.1025/cider-inspector.el
+  cider-20221028.1025/cider-jar.el
+  cider-20221028.1025/cider-macroexpansion.el
+  cider-20221028.1025/cider-mode.el
+  cider-20221028.1025/cider-ns.el
+  cider-20221028.1025/cider-overlays.el
+  cider-20221028.1025/cider-pkg.el
+  cider-20221028.1025/cider-popup.el
+  cider-20221028.1025/cider-profile.el
+  cider-20221028.1025/cider-repl-history.el
+  cider-20221028.1025/cider-repl.el
+  cider-20221028.1025/cider-resolve.el
+  cider-20221028.1025/cider-scratch.el
+  cider-20221028.1025/cider-selector.el
+  cider-20221028.1025/cider-stacktrace.el
+  cider-20221028.1025/cider-test.el
+  cider-20221028.1025/cider-tracing.el
+  cider-20221028.1025/cider-util.el
+  cider-20221028.1025/cider-xref.el
+  cider-20221028.1025/cider.el
+  cider-20221028.1025/nrepl-client.el
+  cider-20221028.1025/nrepl-dict.el
+Built cider in 2.503s, finished at 2022-10-28T13:17:41+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  751 Oct 28 09:10 packages/cider-20221026.1100.entry
 900K -rw-r--r-- 1 root root 900K Oct 28 09:10 packages/cider-20221026.1100.tar
+4.0K -rw-r--r-- 1 root root  751 Oct 28 13:17 packages/cider-20221028.1025.entry
+900K -rw-r--r-- 1 root root 900K Oct 28 13:17 packages/cider-20221028.1025.tar

@@ -6,8 +6,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/attrap
-;; Package-Version: 20221019.2021
-;; Package-Commit: d5d913215c11737ea55175613e2bfd929945a4cc
+;; Package-Version: 20221028.1201
+;; Package-Commit: 8173cd6dde1989b5dcdb4bd047ee3073f4747891
 ;; Created: February 2018
 ;; Keywords: programming, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "25.1") (f "0.19.0") (s "1.11.0"))
@@ -443,8 +443,8 @@ Error is given as MSG and reported between POS and END."
                  (search-forward delete-no-paren (+ (length delete) pos))
                  (replace-match (nth 1 it) t)))
              replacements)))
-    (when (string-match "It could refer to either" msg) ;; ambiguous identifier
-     (let ((replacements (--map (nth 1 it) (s-match-strings-all  "‘\\([^‘]*\\)’," msg))))
+    (when (string-match "It could refer to" msg) ;; ambiguous identifier
+     (let ((replacements (--map (nth 1 it) (s-match-strings-all  (rx (identifier 1) ",") msg))))
        (--map (attrap-option (list 'rename it)
                 (apply #'delete-region (dante-ident-pos-at-point))
                 (insert it))
@@ -510,11 +510,13 @@ Error is given as MSG and reported between POS and END."
 
 (defun attrap-hlint-fixer (msg pos end)
   "Fixer for any hlint hint given as MSG and reported between POS and END."
+  (rx-let ((indented-line (seq space (* not-newline) "\n"))
+           (snippet (+ indented-line)))
   (cond
-   ((or
-     (s-matches? "Unused LANGUAGE pragma" msg)
-     (s-matches? "Use fewer LANGUAGE pragmas" msg))
-    (attrap-one-option 'kill-pragma
+   ((s-matches? (rx (or "Perhaps you should remove it."
+                        "Use fewer LANGUAGE pragmas"))
+                msg)
+    (attrap-one-option 'kill-unused
       (delete-region pos (+ 2 end))))
    ((s-matches? (rx "Redundant $") msg)
     (attrap-one-option 'kill-dollar
@@ -524,19 +526,17 @@ Error is given as MSG and reported between POS and END."
       (delete-region pos (1+ pos))
       (delete-region (1- end) end)))
    ((string-match
-     (rx "Found:\n  "
-         (group (+ anychar))
-         "\nPerhaps:\n  "
-         (group (+ anychar))
-         "[haskell-hlint]")
+     (rx "Found:\n"
+         (group snippet)
+         "Perhaps:\n"
+         (group snippet)
+         (? (seq "Note: " (+ not-newline) "\n"))
+         (* space) "[haskell-hlint]")
      msg)
     (let ((replacement (match-string 2 msg)))
       (attrap-one-option 'replace-as-hinted
         (delete-region pos (+ 1 end))
-        (insert (s-collapse-whitespace replacement)))))))
-     
-     
-
+        (insert (s-trim (s-collapse-whitespace replacement)))))))))
 
 (provide 'attrap)
 ;;; attrap.el ends here
