@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20221027.1619
-;; Package-Commit: 93c61a98f2ee983d856f1c419caea7fb2ab1ad19
+;; Package-Version: 20221028.738
+;; Package-Commit: 306df876d30eef8eb093fe880df9c2a3454d44a5
 ;; Keywords: project, convenience
 ;; Version: 2.7.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
@@ -457,7 +457,9 @@ it for functions working with buffers."
   :group 'projectile
   :type '(repeat string))
 
-(defcustom projectile-globally-ignored-buffers nil
+(defcustom projectile-globally-ignored-buffers
+  '("*scratch*"
+    "*lsp-log*")
   "A list of buffer-names ignored by projectile.
 
 You can use either exact buffer names or regular expressions.
@@ -823,27 +825,6 @@ If the value is nil, there is no limit to the opend buffers count."
   :group 'projectile
   :type 'integer
   :package-version '(projectile . "2.2.0"))
-
-(defcustom projectile-ignore-special-project-buffers t
-  "When t ignore special project buffers.
-
-See `projectile-ignored-project-buffers'."
-  :group 'projectile
-  :type 'boolean
-  :package-version '(projectile . "2.7.0"))
-
-(defcustom projectile-ignored-project-buffers
-  '(
-    "*scratch*"              ; Lisp Interaction Buffer
-    "*lsp-log*"              ; LSP Mode Troubleshooting Buffer
-    )
-  "A list of buffers considered that should never be killed or
-associated with any specific project.
-
-See `projectile-ignore-special-project-buffers'."
-  :group 'projectile
-  :type '(repeat string)
-  :package-version '(projectile . "2.7.0"))
 
 (defvar projectile-project-test-suffix nil
   "Use this variable to override the current project's test-suffix property.
@@ -1664,21 +1645,11 @@ If PROJECT is not specified the command acts on the current project."
                        default-directory)))
       (and (not (string-prefix-p " " (buffer-name buffer)))
            (not (projectile-ignored-buffer-p buffer))
-           (not (projectile-ignored-project-buffers-p buffer))
            directory
            (string-equal (file-remote-p directory)
                          (file-remote-p project-root))
            (not (string-match-p "^http\\(s\\)?://" directory))
            (string-prefix-p project-root (file-truename directory) (eq system-type 'windows-nt))))))
-
-(defun projectile-ignored-project-buffers-p (buffer)
-  "Check if BUFFER should never associated with any specific project"
-  (when projectile-ignore-special-project-buffers
-    (with-current-buffer buffer
-      (cl-some
-       (lambda (name)
-         (string-match-p name (buffer-name)))
-       projectile-ignored-project-buffers))))
 
 (defun projectile-ignored-buffer-p (buffer)
   "Check if BUFFER should be ignored.
@@ -4223,7 +4194,8 @@ installed to work."
 
 A thin wrapper around `xref-references-in-directory'."
   (interactive)
-  (when (fboundp 'xref-references-in-directory)
+  (when (and (fboundp 'xref-references-in-directory)
+             (fboundp 'xref--show-xrefs))
     (let ((project-root (projectile-acquire-root))
           (symbol (or symbol (read-from-minibuffer "Lookup in project: " (projectile-symbol-at-point)))))
       (xref--show-xrefs (xref-references-in-directory symbol project-root) nil))))

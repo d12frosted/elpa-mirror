@@ -965,7 +965,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "e80c5efd00214613e6837fa11036bf8463040529"))])
  (ef-themes .
-	    [(0 8 0)
+	    [(0 9 0)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -974,7 +974,7 @@
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "b79a67c2cdebe2e4885867187da5834b3ca740b1"))])
+	      (:commit . "c1b3d334f53b814d4a1052db7b43a7e13a6bade1"))])
  (eglot .
 	[(1 9)
 	 ((emacs
@@ -1965,15 +1965,18 @@
 	     ("David Engster" . "deng@randomsample.de"))
 	    (:maintainer "David Engster" . "deng@randomsample.de"))])
  (mmm-mode .
-	   [(0 5 8)
-	    ((cl-lib
+	   [(0 5 9)
+	    ((emacs
+	      (25 1))
+	     (cl-lib
 	      (0 2)))
 	    "Allow Multiple Major Modes in a buffer" tar
 	    ((:url . "https://github.com/purcell/mmm-mode")
+	     (:keywords "convenience" "faces" "languages" "tools")
 	     (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")
 	     (:authors
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
-	     (:keywords "convenience" "faces" "languages" "tools"))])
+	     (:commit . "d1c85e5e2cfc0cff3f63409b0ac15dd230568609"))])
  (modus-operandi-theme .
 		       [(0 13 2)
 			((emacs
@@ -1987,7 +1990,7 @@
 			  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 			 (:keywords "faces" "theme" "accessibility"))])
  (modus-themes .
-	       [(2 7 1)
+	       [(3 0 0)
 		((emacs
 		  (27 1)))
 		"Elegant, highly legible and customizable themes" tar
@@ -1996,7 +1999,7 @@
 		 (:maintainer "Modus-Themes Development" . "~protesilaos/modus-themes@lists.sr.ht")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "454e1a06a2c5194a81148df91da6ee441adb601b"))])
+		 (:commit . "1e7710d00f909900c9934d61113c43cb2229530f"))])
  (modus-vivendi-theme .
 		      [(0 13 2)
 		       ((emacs
@@ -2086,14 +2089,14 @@
 		(:keywords "convenience" "org-mode" "org-agenda")
 		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nano-modeline .
-		[(0 7 1)
+		[(0 7 2)
 		 ((emacs
 		   (27 1)))
 		 "N Λ N O modeline" tar
 		 ((:url . "https://github.com/rougier/nano-modeline")
 		  (:keywords "convenience" "mode-line" "header-line")
 		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-		  (:commit . "823161c8894996e5c8375249f467a422579a2947"))])
+		  (:commit . "61f62aa4716eae4fa89961955323d146e9791fca"))])
  (nano-theme .
 	     [(0 3 1)
 	      ((emacs
