@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "5.0.0"))
-;; Package-Version: 20221018.315
-;; Package-Commit: ed6c66dd80886b33872808938ea4a45c5770d262
+;; Package-Version: 20221028.104
+;; Package-Commit: 03998ba46321d27f195080824e86a44effccfccf
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -463,7 +463,6 @@
                   ("iPhone" . ,(all-the-icons-faicon "mobile" :face '(:foreground "SkyBlue")))
                   ("keyboard" . ,(all-the-icons-faicon "keyboard-o" :face '(:foreground "cyan")))
                   ("mouse" . ,(all-the-icons-faicon "mouse-pointer" :face '(:foreground "cyan")))
-                  ("arduino" . ,(all-the-icons-fileicon "arduino" :face '(:foreground "SkyBlue")))
                   ("Arduino" . ,(all-the-icons-fileicon "arduino" :face '(:foreground "SkyBlue")))
                   ("hardware" . ,(all-the-icons-material "devices_other" :face '(:foreground "SkyBlue")))
                   ("desktop" . ,(all-the-icons-faicon "desktop" :face '(:foreground "SkyBlue")))
@@ -566,7 +565,7 @@
                   ("Maya" . ,(all-the-icons-fileicon "maya" :face '(:foreground "LightSkyBlue")))
                   ;; ("CAD" . ,(all-the-icons-fileicon "kicad" :face '(:foreground "LightSkyBlue")))
                   ("CAD" . ,(all-the-icons-fileicon "openscad" :face '(:foreground "LightSkyBlue")))
-                  ("Labview" . ,(all-the-icons-fileicon "labview" :face '(:foreground "DarkTurquoise")))
+                  ("LabVIEW" . ,(all-the-icons-fileicon "labview" :face '(:foreground "DarkTurquoise")))
                   ("Audacity" . ,(all-the-icons-fileicon "audacity" :face '(:foreground "SandyBrown")))
                   ("Sketch" . ,(all-the-icons-fileicon "sketch" :face '(:foreground "DarkOrange")))
                   ("Sketchup" . ,(all-the-icons-fileicon "sketchup-layout" :face '(:foreground "DarkOrange")))
