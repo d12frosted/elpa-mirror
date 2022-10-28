@@ -1930,11 +1930,12 @@
 		  ("Xah Lee ( http://xahlee.info/ )"))
 		 (:commit . "b963cb78eb8dd5bdb7bf419e7d667d4299d9960e"))])
  (xml-rpc .
-	  [(1 6 15)
+	  [(1 6 16)
 	   nil "An elisp implementation of clientside XML-RPC" tar
 	   ((:url . "http://github.com/xml-rpc-el/xml-rpc-el")
 	    (:keywords "xml" "rpc" "network")
-	    (:maintainer "Mark A. Hershberger" . "mah@everybody.org"))])
+	    (:maintainer "Mark A. Hershberger" . "mah@everybody.org")
+	    (:commit . "fc0c82eb5c8a5d5d837a21bca50f7c8169165f03"))])
  (yaml-mode .
 	    [(0 0 15)
 	     ((emacs

@@ -4,10 +4,10 @@ Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
 Checking out origin/HEAD
-Checking out cd9ecdb4783ca0ff4487e49cd079f390d56281e7
+Checking out cc7cbb7bc41e0b1e2536ce656b4d10f6049f6729
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldev1oZqvW/eldev-20220908.2134
+  to /tmp/eldevjEMQNx/eldev-20221027.1936
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-ecukes.el -> eldev-ecukes.el
@@ -19,22 +19,24 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20220908.2134.tar containing:
-  eldev-20220908.2134/
-  eldev-20220908.2134/bin/
-  eldev-20220908.2134/bin/eldev
-  eldev-20220908.2134/bin/eldev.bat
-  eldev-20220908.2134/bin/eldev.ps1
-  eldev-20220908.2134/eldev-build.el
-  eldev-20220908.2134/eldev-buttercup.el
-  eldev-20220908.2134/eldev-ecukes.el
-  eldev-20220908.2134/eldev-ert.el
-  eldev-20220908.2134/eldev-pkg.el
-  eldev-20220908.2134/eldev-plugins.el
-  eldev-20220908.2134/eldev-util.el
-  eldev-20220908.2134/eldev-vc.el
-  eldev-20220908.2134/eldev.el
-Built eldev in 3.945s, finished at 2022-10-27T18:47:08+0000
+Created eldev-20221027.1936.tar containing:
+  eldev-20221027.1936/
+  eldev-20221027.1936/bin/
+  eldev-20221027.1936/bin/eldev
+  eldev-20221027.1936/bin/eldev.bat
+  eldev-20221027.1936/bin/eldev.ps1
+  eldev-20221027.1936/eldev-build.el
+  eldev-20221027.1936/eldev-buttercup.el
+  eldev-20221027.1936/eldev-ecukes.el
+  eldev-20221027.1936/eldev-ert.el
+  eldev-20221027.1936/eldev-pkg.el
+  eldev-20221027.1936/eldev-plugins.el
+  eldev-20221027.1936/eldev-util.el
+  eldev-20221027.1936/eldev-vc.el
+  eldev-20221027.1936/eldev.el
+Built eldev in 4.471s, finished at 2022-10-27T22:21:23+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  340 Oct 27 18:47 packages/eldev-20220908.2134.entry
 552K -rw-r--r-- 1 root root 550K Oct 27 18:47 packages/eldev-20220908.2134.tar
+4.0K -rw-r--r-- 1 root root  340 Oct 27 22:21 packages/eldev-20221027.1936.entry
+560K -rw-r--r-- 1 root root 560K Oct 27 22:21 packages/eldev-20221027.1936.tar

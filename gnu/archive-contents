@@ -1074,7 +1074,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "bd603d8f3b1bcff34aee2dc4b7b36dc7912b9b26"))])
  (ement .
-	[(0 4)
+	[(0 4 1)
 	 ((emacs
 	   (27 1))
 	  (map
@@ -1082,7 +1082,7 @@
 	  (plz
 	   (0 2))
 	  (taxy
-	   (0 12 1))
+	   (0 9))
 	  (taxy-magit-section
 	   (0 9))
 	  (svg-lib
@@ -1095,7 +1095,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "b06c78d1ba700857330520bc796c5a29018b7ec5"))])
+	  (:commit . "ebaeb41ec680c70876d720ed28d1816f8f226562"))])
  (emms .
        [(12)
 	((cl-lib

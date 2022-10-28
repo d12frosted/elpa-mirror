@@ -10,17 +10,38 @@ Table of Contents
 .. 1. Normal synchronous operation
 .. 2. Asynchronous example (cb-foo will be called when the methods returns)
 .. 3. Some real world working examples for fun and play
-..... 1. Check the temperature (celsius) outside jonas@codefactory.se's apartment
-..... 2. Fetch the latest NetBSD news the past 5 days from O'reillynet
+..... 1. Fetch the first state name from UserLand's server
+..... 2. Get a list of supported methods from a blog
+
+
+[https://elpa.nongnu.org/nongnu/xml-rpc.svg]
+[file:https://stable.melpa.org/packages/xml-rpc-badge.svg]
+[file:https://melpa.org/packages/xml-rpc-badge.svg]
+[https://github.com/xml-rpc-el/xml-rpc-el/workflows/CI/badge.svg]
+
+
+[https://elpa.nongnu.org/nongnu/xml-rpc.svg]
+<http://github.com/xml-rpc-el/xml-rpc-el>
+
+[file:https://stable.melpa.org/packages/xml-rpc-badge.svg]
+<https://stable.melpa.org/#/xml-rpc>
+
+[file:https://melpa.org/packages/xml-rpc-badge.svg]
+<https://melpa.org/#/xml-rpc>
+
+[https://github.com/xml-rpc-el/xml-rpc-el/workflows/CI/badge.svg]
+<https://github.com/xml-rpc-el/xml-rpc-el/actions>
 
 
 1 Commentary:
 ═════════════
 
-  This is an XML-RPC client implementation in elisp, capable of both
+  This is an [XML-RPC] client implementation in elisp, capable of both
   synchronous and asynchronous method calls (using the url package's
-  async retrieval functionality).  XML-RPC is remote procedure calls
-  over HTTP using XML to describe the function call and return values.
+  async retrieval functionality).
+
+  XML-RPC is remote procedure calls over HTTP using XML to describe the
+  function call and return values.
 
   xml-rpc.el represents XML-RPC datatypes as lisp values, automatically
   converting to and from the XML datastructures as needed, both for
@@ -28,12 +49,27 @@ Table of Contents
   fairly transparent to the lisp code.
 
 
+[XML-RPC] <http://xmlrpc.com/>
+
+
 2 Installation:
 ═══════════════
 
-  If you use ELPA (<http://tromey.com/elpa>), you can install via the
-  M-x package-list-packages interface. This is preferrable as you will
-  have access to updates automatically.
+  If you use [ELPA], and have configured the [MELPA] repository, then
+  `M-x package-install RET xml-rpc RET' interface. This is preferrable
+  as you will have access to updates automatically.
+
+  If you would like to use ELPA, but this is your first time to use it
+  or MELPA, then try evaluating the following code in emacs:
+  ┌────
+  │ (progn
+  │   (require 'package)
+  │   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+  │   (unless (package-installed-p 'xml-rpc)
+  │     (with-temp-buffer
+  │       (url-insert-file-contents "https://raw.githubusercontent.com/xml-rpc-el/xml-rpc-el/master/xml-rpc.el")
+  │       (package-install-from-buffer))))
+  └────
 
   Otherwise, just make sure this file in your load-path (usually
   `~/.emacs.d' is included) and put
@@ -43,13 +79,17 @@ Table of Contents
   in your `~/.emacs' or `~/.emacs.d/init.el' file.
 
 
+[ELPA] <http://elpa.gnu.org/>
+
+[MELPA] <https://melpa.org/>
+
+
 3 Requirements
 ══════════════
 
   xml-rpc.el uses the url package for http handling and `xml.el' for XML
-  parsing or, if you have Emacs 27 with `libxml' included, `libxml'. url
-  is a part of the W3 browser package.  The url package that is part of
-  Emacs 22+ works great.
+  parsing or, if you have Emacs 27+ with `libxml' included,
+  `libxml'. The url package that is part of Emacs works fine.
 
 
 4 Bug reports
@@ -113,29 +153,35 @@ Table of Contents
 6.3 Some real world working examples for fun and play
 ─────────────────────────────────────────────────────
 
-6.3.1 Check the temperature (celsius) outside jonas@codefactory.se's apartment
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+  These were last tested working on 2020-09-06.
+
+
+6.3.1 Fetch the first state name from UserLand's server
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ┌────
-  │ (xml-rpc-method-call
-  │      "http://flint.bengburken.net:80/xmlrpc/onewire_temp.php"
-  │      'onewire.getTemp)
+  │ (xml-rpc-method-call "http://betty.userland.com/rpc2"
+  │ 		     'examples.getStateName '(1))
+  └────
+
+  Results in:
+
+  ┌────
+  │ Alabama
   └────
 
 
-6.3.2 Fetch the latest NetBSD news the past 5 days from O'reillynet
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+6.3.2 Get a list of supported methods from a blog
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ┌────
-  │ (xml-rpc-method-call "http://www.oreillynet.com/meerkat/xml-rpc/server.php"
-  │ 		  'meerkat.getItems
-  │ 		  '(("channel" . 1024)
-  │ 		    ("search" . "/NetBSD/")
-  │ 		    ("time_period" . "5DAY")
-  │ 		    ("ids" . 0)
-  │ 		    ("descriptions" . 200)
-  │ 		    ("categories" . 0)
-  │ 		    ("channels" . 0)
-  │ 		    ("dates" . 0)
-  │ 		    ("num_items" . 5)))
+  │ (mapconcat (lambda (s) (when s s))
+  │   (xml-rpc-method-call "https://hexmode.wordpress.com/xmlrpc.php"
+  │ 		       'mt.supportedMethods)
+  │   ", ")
+  └────
+
+  Results in:
+  ┌────
+  │ wp.getUsersBlogs, wp.newPost, wp.editPost, wp.deletePost, wp.getPost, wp.getPosts, wp.newTerm, wp.editTerm, wp.deleteTerm, wp.getTerm, wp.getTerms, wp.getTaxonomy, wp.getTaxonomies, wp.getUser, wp.getUsers, wp.getProfile, wp.editProfile, wp.getPage, wp.getPages, wp.newPage, wp.deletePage, wp.editPage, wp.getPageList, wp.getAuthors, wp.getCategories, wp.getTags, wp.newCategory, wp.deleteCategory, wp.suggestCategories, wp.uploadFile, wp.deleteFile, wp.getCommentCount, wp.getPostStatusList, wp.getPageStatusList, wp.getPageTemplates, wp.getOptions, wp.setOptions, wp.getComment, wp.getComments, wp.deleteComment, wp.editComment, wp.newComment, wp.getCommentStatusList, wp.getMediaItem, wp.getMediaLibrary, wp.getPostFormats, wp.getPostType, wp.getPostTypes, wp.getRevisions, wp.restoreRevision, blogger.getUsersBlogs, blogger.getUserInfo, blogger.getPost, blogger.getRecentPosts, blogger.newPost, blogger.editPost, blogger.deletePost, metaWeblog.newPost, metaWeblog.editPost, metaWeblog.getPost, metaWeblog.getRecentPosts, metaWeblog.getCategories, metaWeblog.newMediaObject, metaWeblog.deletePost, metaWeblog.getUsersBlogs, mt.getCategoryList, mt.getRecentPostTitles, mt.getPostCategories, mt.setPostCategories, mt.supportedMethods, mt.supportedTextFilters, mt.getTrackbackPings, mt.publishPost, pingback.ping, pingback.extensions.getPingbacks, demo.sayHello, demo.addTwoNumbers, wpStats.get_key, wpStats.check_key, wpStats.get_blog_id, wpStats.get_site_id, wpStats.update_bloginfo, wpStats.update_postinfo, wpStats.ping_blog, wpStats.flush_posts, wpcom.get_user_blogids, wpcom.getFeatures, wpcom.addApplicationPassword, wpcom.blackberryUploadFile, wpcom.blackberryGetUploadingFileKeys, wpcom.getUsersSubs, wpcom.set_mobile_push_notification_settings, wpcom.get_mobile_push_notification_settings, wpcom.mobile_push_register_token, wpcom.mobile_push_unregister_token, wpcom.mobile_push_set_blogs_list, wpcom.mobile_push_win_phone_get_last_notification
   └────

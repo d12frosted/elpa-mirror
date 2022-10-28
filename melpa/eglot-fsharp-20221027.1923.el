@@ -4,8 +4,8 @@
 
 ;; Author: Jürgen Hötzel <juergen@hoetzel.info>
 ;; Package-Requires: ((emacs "27.1") (eglot "1.4") (fsharp-mode "1.10") (jsonrpc "1.0.14"))
-;; Package-Version: 20220630.2007
-;; Package-Commit: 185bfc2ca091cdd5d80ee798247d249076de2b30
+;; Package-Version: 20221027.1923
+;; Package-Commit: f8873096d24cac7b30419854347220f37345e780
 ;; Version: 1.10
 ;; Keywords: languages
 ;; URL: https://github.com/fsharp/emacs-fsharp-mode
@@ -53,9 +53,9 @@
           (const :tag "Latest release" latest)
           (string :tag "Version string")))
 
-(defcustom eglot-fsharp-server-verbose nil
-  "If non-nil include debug output in the server logs."
-  :type 'boolean)
+(defcustom eglot-fsharp-server-args '("--adaptive-lsp-server-enabled")
+  "Arguments for the fsautocomplete command when using `eglot-fsharp'."
+  :type '(repeat string))
 
 (defun eglot-fsharp--path-to-server ()
   "Return FsAutoComplete path."
@@ -127,11 +127,7 @@ Ensure FsAutoComplete is installed (when called INTERACTIVE)."
   (when interactive (eglot-fsharp--maybe-install))
   (when (file-exists-p (eglot-fsharp--path-to-server))
     (cons 'eglot-fsautocomplete (cons (eglot-fsharp--path-to-server)
-                                      (if eglot-fsharp-server-verbose
-			                  `("--background-service-enabled" "-v")
-            	                        `("--background-service-enabled"))))))
-
-
+                                      eglot-fsharp-server-args))))
 
 
 (defclass eglot-fsautocomplete (eglot-lsp-server) ()
