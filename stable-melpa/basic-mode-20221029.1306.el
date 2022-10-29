@@ -4,9 +4,9 @@
 
 ;; Author: Johan Dykstrom
 ;; Created: Sep 2017
-;; Version: 0.5.0
-;; Package-Version: 20221015.901
-;; Package-Commit: d270a692ed4a9c6b172d1215ee538ebaff947eab
+;; Version: 0.6.0
+;; Package-Version: 20221029.1306
+;; Package-Commit: fb54b023f384478ada8ee79e1b95a101082ec288
 ;; Keywords: basic, languages
 ;; URL: https://github.com/dykstrom/basic-mode
 ;; Package-Requires: ((seq "2.20") (emacs "25.1"))
@@ -70,9 +70,13 @@
 ;; The other line number features can be configured by customizing
 ;; the variables `basic-auto-number', `basic-renumber-increment' and
 ;; `basic-renumber-unnumbered-lines'.
+;;
+;; Whether syntax highlighting requires separators between keywords can be
+;; customized with variable `basic-syntax-highlighting-require-separator'.
 
 ;;; Change Log:
 
+;;  0.6.0  2022-10-22  Syntax highlighting without separators.
 ;;  0.5.0  2022-10-15  Breaking a comment creates a new comment line.
 ;;  0.4.6  2022-09-17  Auto-numbering handles digits after point.
 ;;  0.4.5  2022-09-10  Fix docs and REM syntax.
@@ -130,7 +134,7 @@ BASIC which used at most five digits for line numbers."
   :type 'integer
   :group 'basic)
 
-(defcustom basic-delete-trailing-whitespace 't
+(defcustom basic-delete-trailing-whitespace t
   "*Delete trailing whitespace while formatting code."
   :type 'boolean
   :group 'basic)
@@ -156,11 +160,17 @@ empty lines are never numbered."
   :type 'boolean
   :group 'basic)
 
+(defcustom basic-syntax-highlighting-require-separator t
+  "*If non-nil, only keywords separated by separators will be highlighted.
+If nil, keywords separated by numbers will also be highlighted."
+  :type 'boolean
+  :group 'basic)
+
 ;; ----------------------------------------------------------------------------
 ;; Variables:
 ;; ----------------------------------------------------------------------------
 
-(defconst basic-mode-version "0.5.0"
+(defconst basic-mode-version "0.6.0"
   "The current version of `basic-mode'.")
 
 (defconst basic-increase-indent-keywords-bol
@@ -222,8 +232,9 @@ beginning of a line or after a statement separator (:).")
 (defconst basic-keyword-regexp
   (regexp-opt '("as" "call" "def" "defbol" "defdbl" "defint" "defsng" "defstr"
                 "dim" "do" "else" "elseif" "end" "endif" "error" "exit" "fn"
-                "for" "gosub" "goto" "if" "loop" "next" "on" "step" "randomize"
-                "repeat" "return" "sub" "then" "to" "until" "wend" "while")
+                "for" "gosub" "go sub" "goto" "go to" "if" "loop" "next" "on"
+                "step" "randomize" "repeat" "return" "sub" "then" "to" "until"
+                "wend" "while")
               'symbols)
   "Regexp string of symbols to highlight as keywords.")
 
@@ -242,6 +253,10 @@ beginning of a line or after a statement separator (:).")
         (list basic-function-regexp 0 'font-lock-function-name-face)
         (list basic-builtin-regexp 0 'font-lock-builtin-face))
   "Describes how to syntax highlight keywords in `basic-mode' buffers.")
+
+(defconst basic-font-lock-syntax
+  '(("0123456789" . "."))
+  "Syntax alist used to set the Font Lock syntax table.")
 
 ;; ----------------------------------------------------------------------------
 ;; Indentation:
@@ -712,6 +727,89 @@ If VARIABLE is not found, return nil."
       positions)))
 
 ;; ----------------------------------------------------------------------------
+;; Word boundaries (based on subword-mode):
+;; ----------------------------------------------------------------------------
+
+(defconst basic-find-word-boundary-function-table
+  (let ((tab (make-char-table nil)))
+    (set-char-table-range tab t #'basic-find-word-boundary)
+    tab)
+  "Assigned to `find-word-boundary-function-table' when
+`basic-syntax-highlighting-require-separator' is nil; defers to
+`basic-find-word-boundary'.")
+
+(defconst basic-empty-char-table
+  (make-char-table nil)
+  "Assigned to `find-word-boundary-function-table' when
+custom word boundry functionality is not active.")
+
+(defvar basic-forward-function 'basic-forward-internal
+  "Function to call for forward movement.")
+
+(defvar basic-backward-function 'basic-backward-internal
+  "Function to call for backward movement.")
+
+(defvar basic-alpha-regexp
+  "[[:alpha:]$_.]+"
+  "Regexp used by `basic-forward-internal' and `basic-backward-internal'.")
+
+(defvar basic-not-alpha-regexp
+  "[^[:alpha:]$_.]+"
+  "Regexp used by `basic-forward-internal' and `basic-backward-internal'.")
+
+(defvar basic-digit-regexp
+  "[[:digit:]]+"
+  "Regexp used by `basic-forward-internal' and `basic-backward-internal'.")
+
+(defvar basic-not-digit-regexp
+  "[^[:digit:]]+"
+  "Regexp used by `basic-forward-internal' and `basic-backward-internal'.")
+
+(defun basic-find-word-boundary (pos limit)
+  "Catch-all handler in `basic-find-word-boundary-function-table'."
+  (let ((find-word-boundary-function-table basic-empty-char-table))
+    (save-match-data
+      (save-excursion
+        (save-restriction
+          (goto-char pos)
+          (if (< pos limit)
+              (progn
+                (narrow-to-region (point-min) limit)
+                (funcall basic-forward-function))
+            (narrow-to-region limit (point-max))
+            (funcall basic-backward-function))
+          (point))))))
+
+(defun basic-forward-internal ()
+  "Default implementation of forward movement."
+  (if (and (looking-at basic-alpha-regexp)
+           (save-excursion
+             (re-search-forward basic-alpha-regexp nil t))
+           (> (match-end 0) (point)))
+      (goto-char (match-end 0))
+    (if (and (looking-at basic-digit-regexp)
+             (save-excursion
+               (re-search-forward basic-digit-regexp nil t))
+             (> (match-end 0) (point)))
+        (goto-char (match-end 0)))))
+
+
+(defun basic-backward-internal ()
+  "Default implementation of backward movement."
+  (if (and (looking-at basic-alpha-regexp)
+           (save-excursion
+             (re-search-backward basic-not-alpha-regexp nil t)
+             (re-search-forward basic-alpha-regexp nil t))
+           (< (match-beginning 0) (point)))
+      (goto-char (match-beginning 0))
+    (if (and (looking-at basic-digit-regexp)
+             (save-excursion
+               (re-search-backward basic-not-digit-regexp nil t)
+               (re-search-forward basic-digit-regexp nil t))
+             (< (match-beginning 0) (point)))
+        (goto-char (match-beginning 0)))))
+
+;; ----------------------------------------------------------------------------
 ;; BASIC mode:
 ;; ----------------------------------------------------------------------------
 
@@ -766,12 +864,21 @@ The other line number features can be configured by customizing
 the variables `basic-auto-number', `basic-renumber-increment' and
 `basic-renumber-unnumbered-lines'.
 
+Whether syntax highlighting requires separators between keywords
+can be customized with variable
+`basic-syntax-highlighting-require-separator'.
+
 \\{basic-mode-map}"
   :group 'basic
   (add-hook 'xref-backend-functions #'basic-xref-backend nil t)
   (setq-local indent-line-function 'basic-indent-line)
   (setq-local comment-start "'")
-  (setq-local font-lock-defaults '(basic-font-lock-keywords nil t))
+  (if basic-syntax-highlighting-require-separator
+      (progn
+        (setq-local font-lock-defaults (list basic-font-lock-keywords nil t))
+        (setq-local find-word-boundary-function-table basic-empty-char-table))
+    (setq-local font-lock-defaults (list basic-font-lock-keywords nil t basic-font-lock-syntax))
+    (setq-local find-word-boundary-function-table basic-find-word-boundary-function-table))
   (unless font-lock-mode
     (font-lock-mode 1))
   (setq-local syntax-propertize-function

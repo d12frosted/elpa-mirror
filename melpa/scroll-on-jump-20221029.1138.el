@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-scroll-on-jump
-;; Package-Version: 20220708.211
-;; Package-Commit: 0cba79dcb28fd82abe9d1c1bbc00fd7655dcedf6
+;; Package-Version: 20221029.1138
+;; Package-Commit: b0525ea8812579b11428f3bd0cebc41dcb192ef0
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -140,6 +140,22 @@ Argument ALSO-MOVE-POINT When non-nil, move the POINT as well."
 (defun scroll-on-jump--interpolate-ease (a b factor)
   "Blend FACTOR between A and B using ease style curvature."
   (+ a (* (- b a) (- (* 3.0 factor factor) (* 2.0 factor factor factor)))))
+
+(defsubst scroll-on-jump--evil-visual-mode-workaround ()
+  "Workaround for `evil-mode' line-mode."
+  ;; Without this, the line mode point jumps back to the origin,
+  ;; the mark needs to be set to the `point'.
+  ;; https://github.com/emacs-evil/evil/issues/1708
+  (when
+    (and
+      (fboundp 'evil-visual-state-p)
+      (funcall 'evil-visual-state-p)
+      (fboundp 'evil-visual-type)
+      (eq (funcall 'evil-visual-type) 'line)
+      (boundp 'evil-visual-point))
+    (let ((mark (symbol-value 'evil-visual-point)))
+      (when (markerp mark)
+        (set-marker mark (point))))))
 
 
 ;; ---------------------------------------------------------------------------
@@ -518,7 +534,9 @@ Argument USE-WINDOW-START detects window scrolling when non-nil."
               (prog1 (goto-char point-next)
                 (redisplay t)))
             (t
-              (scroll-on-jump-auto-center window point-prev point-next))))))))
+              (scroll-on-jump-auto-center window point-prev point-next)))
+
+          (scroll-on-jump--evil-visual-mode-workaround))))))
 
 
 ;; ---------------------------------------------------------------------------

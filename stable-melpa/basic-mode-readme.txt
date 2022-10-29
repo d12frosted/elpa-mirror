@@ -42,3 +42,6 @@ Use a positive integer, such as 6, if you prefer right alignment.
 The other line number features can be configured by customizing
 the variables `basic-auto-number', `basic-renumber-increment' and
 `basic-renumber-unnumbered-lines'.
+
+Whether syntax highlighting requires separators between keywords can be
+customized with variable `basic-syntax-highlighting-require-separator'.

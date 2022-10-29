@@ -113,6 +113,11 @@ Entry points
     detailed information (attribute types, for example), it can be
     obtained from `pg-result' on a SELECT statement for that table.
 
+(pg-hstore-setup conn)
+    Prepare for the use of HSTORE datatypes. This function must be called
+    before using the HSTORE extension. It loads the extension if necessary,
+    and sets up the parsing support for HSTORE datatypes.
+
 (pg-lo-create conn . args) -> oid
     Create a new large object (BLOB, or binary large object in
     other DBMSes parlance) in the database to which we are

@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-scroll-on-drag
-;; Package-Version: 20220708.211
-;; Package-Commit: 6d4de55bb6b72aaec53b82b8f8cdccc5396d6bf5
+;; Package-Version: 20221029.1137
+;; Package-Commit: 124f26dc874fc6c75f6feeb31c882c3765476e68
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -144,6 +144,22 @@ Argument ALSO-MOVE-POINT When non-nil, move the POINT as well."
   (let ((inhibit-redisplay nil))
     (run-hooks 'scroll-on-drag-redisplay-hook)
     (redisplay)))
+
+(defsubst scroll-on-drag--evil-visual-mode-workaround ()
+  "Workaround for `evil-mode' line-mode."
+  ;; Without this, the line mode point jumps back to the origin,
+  ;; the mark needs to be set to the `point'.
+  ;; See: https://github.com/emacs-evil/evil/issues/1708
+  (when
+    (and
+      (fboundp 'evil-visual-state-p)
+      (funcall 'evil-visual-state-p)
+      (fboundp 'evil-visual-type)
+      (eq (funcall 'evil-visual-type) 'line)
+      (boundp 'evil-visual-point))
+    (let ((mark (symbol-value 'evil-visual-point)))
+      (when (markerp mark)
+        (set-marker mark (point))))))
 
 
 ;; ---------------------------------------------------------------------------
@@ -430,7 +446,9 @@ Returns true when scrolling took place, otherwise nil."
     (when has-scrolled-real
       (let ((inhibit-redisplay nil))
         (run-hooks 'scroll-on-drag-post-hook)
-        (run-window-scroll-functions this-window)))
+        (run-window-scroll-functions this-window))
+
+      (scroll-on-drag--evil-visual-mode-workaround))
 
     ;; Result so we know if any scrolling occurred,
     ;; allowing a fallback action on 'click'.

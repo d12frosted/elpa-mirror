@@ -6,8 +6,6 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-default-font-presets
-;; Package-Version: 20220731.2219
-;; Package-Commit: 80380aa053c78b7126275e269e80d8988ba3f1e3
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 

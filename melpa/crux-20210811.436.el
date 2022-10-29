@@ -4,8 +4,6 @@
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/crux
-;; Package-Version: 20210811.436
-;; Package-Commit: 6bfd212a7f7ae32e455802fde1f9e3f4fba932a0
 ;; Version: 0.4.0
 ;; Keywords: convenience
 ;; Package-Requires: ((seq "1.11"))
