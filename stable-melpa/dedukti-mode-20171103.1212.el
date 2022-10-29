@@ -4,6 +4,8 @@
 
 ;; Author: Raphaël Cauderlier
 ;; Version: 0.1
+;; Package-Version: 20171103.1212
+;; Package-Commit: d7c3505a1046187de3c3aeb144455078d514594e
 ;; License: CeCILL-B
 ;; Keywords: languages dedukti
 ;; URL: https://github.com/rafoo/dedukti-mode
