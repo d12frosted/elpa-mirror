@@ -7,22 +7,22 @@ Checking out origin/HEAD
 Checking out be3a768b7ac4c2e24b9d4aa6e9ac1d916cdc5a73
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/textmate-to-yas/
-  to /tmp/textmate-to-yasZnR5rS/textmate-to-yas-20160409.1708
+  to /tmp/textmate-to-yasifEU7D/textmate-to-yas-20160409.1708
     textmate-to-yas.el -> textmate-to-yas.el
     textmate-to-yas.texi -> textmate-to-yas.texi
     plutil.pl -> plutil.pl
-Generating /tmp/textmate-to-yasZnR5rS/textmate-to-yas-20160409.1708/textmate-to-yas.info
+Generating /tmp/textmate-to-yasifEU7D/textmate-to-yas-20160409.1708/textmate-to-yas.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi -o /tmp/textmate-to-yasZnR5rS/textmate-to-yas-20160409.1708/textmate-to-yas.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi -o /tmp/textmate-to-yasifEU7D/textmate-to-yas-20160409.1708/textmate-to-yas.info' exited with non-zero exit-code: 1
 
 /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi:60: raising the section level of @subsubsection which is too low
 /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi:76: raising the section level of @subsubsection which is too low
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/textmate-to-yasZnR5rS/textmate-to-yas-20160409.1708/textmate-to-yas.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/textmate-to-yasifEU7D/textmate-to-yas-20160409.1708/textmate-to-yas.info' exited with non-zero exit-code: 1
 
-install-info: No such file or directory for /tmp/textmate-to-yasZnR5rS/textmate-to-yas-20160409.1708/textmate-to-yas.info
+install-info: No such file or directory for /tmp/textmate-to-yasifEU7D/textmate-to-yas-20160409.1708/textmate-to-yas.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
 Created textmate-to-yas-20160409.1708.tar containing:
@@ -31,7 +31,7 @@ Created textmate-to-yas-20160409.1708.tar containing:
   textmate-to-yas-20160409.1708/plutil.pl
   textmate-to-yas-20160409.1708/textmate-to-yas-pkg.el
   textmate-to-yas-20160409.1708/textmate-to-yas.el
-Built textmate-to-yas in 7.229s, finished at 2022-10-28T22:55:51+0000
+Built textmate-to-yas in 6.869s, finished at 2022-10-29T02:29:49+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  348 Oct 28 22:55 packages/textmate-to-yas-20160409.1708.entry
-112K -rw-r--r-- 1 root root 110K Oct 28 22:55 packages/textmate-to-yas-20160409.1708.tar
+4.0K -rw-r--r-- 1 root root  348 Oct 29 02:29 packages/textmate-to-yas-20160409.1708.entry
+112K -rw-r--r-- 1 root root 110K Oct 29 02:29 packages/textmate-to-yas-20160409.1708.tar
