@@ -6,9 +6,9 @@
 ;; Maintainer: John Wiegley <johnw@newartisans.com>
 ;; Created: 16 Jun 2012
 ;; Modified: 29 Nov 2017
-;; Version: 2.4
-;; Package-Version: 20221026.1834
-;; Package-Commit: 5c95dcb1e8690ab5f15342dc9d4bedd599f1650f
+;; Version: 2.4.1
+;; Package-Version: 20221028.1858
+;; Package-Commit: 4095f1bdae7989981803d25a52384383116e6db6
 ;; Keywords: keys keybinding config dotemacs
 ;; URL: https://github.com/jwiegley/use-package
 

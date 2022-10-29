@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/diminish-buffer
-;; Package-Version: 20220704.648
-;; Package-Commit: 2069f27332a05608a5246684bc4d6850c14a4890
+;; Package-Version: 20221028.1921
+;; Package-Commit: 983854a90ae39ef5d4d7aecaea108dc64aa2a593
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience diminish hide buffer menu
@@ -36,7 +36,7 @@
 (require 'cl-lib)
 
 (defgroup diminish-buffer nil
-  "Diminish (hide) buffers from buffer-menu."
+  "Diminish (hide) buffers from `buffer-menu'."
   :prefix "diminish-buffer-"
   :group 'convenience
   :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/diminish-buffer"))
@@ -51,6 +51,12 @@
   '()
   "List of buffer mode that you want to hide in the `buffer-menu'."
   :type 'list
+  :group 'diminish-buffer)
+
+(defcustom diminish-buffer-refresh-instead-revert
+  t
+  "Refresh buffer instead revert."
+  :type 'boolean
   :group 'diminish-buffer)
 
 (defconst diminish-buffer-menu-name "*Buffer List*"
@@ -81,7 +87,7 @@
 
 ;;;###autoload
 (define-minor-mode diminish-buffer-mode
-  "Minor mode 'diminish-buffer-mode'."
+  "Minor mode `diminish-buffer-mode'."
   :global t
   :require 'diminish-buffer
   :group 'diminish-buffer
@@ -142,7 +148,9 @@ Override FNC and ARGS."
   (save-window-excursion
     (let ((inhibit-message t) message-log-max)
       (when (get-buffer diminish-buffer-menu-name)
-        (with-current-buffer diminish-buffer-menu-name (tabulated-list-revert))))
+        (with-current-buffer diminish-buffer-menu-name
+          (if diminish-buffer-refresh-instead-revert (buffer-menu)
+            (tabulated-list-revert)))))
     (bury-buffer)))
 
 (provide 'diminish-buffer)

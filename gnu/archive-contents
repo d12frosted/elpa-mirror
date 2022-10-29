@@ -219,6 +219,15 @@
 	   (:authors
 	    ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	   (:commit . "0cf8b60f62876f3e75653a5fb30d5d5cdd74c586"))])
+ (bind-key .
+	   [(2 4 1)
+	    nil "A simple way to manage personal keybindings" tar
+	    ((:url . "https://github.com/jwiegley/use-package")
+	     (:keywords "keys" "keybinding" "config" "dotemacs")
+	     (:maintainer "John Wiegley" . "johnw@newartisans.com")
+	     (:authors
+	      ("John Wiegley" . "johnw@newartisans.com"))
+	     (:commit . "4932ed21d40f9e8ad48ad2a1f086fdf9b3847ac9"))])
  (blist .
 	[(0 2)
 	 nil "Display bookmarks in an ibuffer way" tar
