@@ -2472,7 +2472,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "25d675307c03f720e592c3dc9a5a0ae8db0836eb"))])
  (phps-mode .
-	    [(0 4 25)
+	    [(0 4 26)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2481,7 +2481,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "585f638d3c16b1a0cae35ef341fbd61c63020e79"))])
+	      (:commit . "b68bcebea21fbbb123e4d4d8125181bf19fa4de0"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
@@ -3413,6 +3413,17 @@
 		   ("Tom Schutzer-Weissmann" . "tom.weissmann@gmail.com"))
 		  (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		  (:url . "https://code.google.com/p/url-http-ntlm/"))])
+ (url-scgi .
+	   [(0 7)
+	    ((emacs
+	      (25 1)))
+	    "SCGI support for url.el" tar
+	    ((:url . "https://github.com/skangas/url-scgi/")
+	     (:keywords "comm" "data" "processes" "scgi")
+	     (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
+	     (:authors
+	      ("Stefan Kangas" . "stefankangas@gmail.com"))
+	     (:commit . "ce5e1d5fd105ac425857923e7c403915ca436d0a"))])
  (validate .
 	   [(1 0 4)
 	    ((emacs

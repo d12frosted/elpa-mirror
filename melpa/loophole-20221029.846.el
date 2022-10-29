@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.2
-;; Package-Version: 20221023.1422
-;; Package-Commit: e9473da457f90f84e3e91377b3fc280ca8d21c85
+;; Package-Version: 20221029.846
+;; Package-Commit: 6801e98f74afdab00cfc1a543622c3f70d0c7864
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -1132,11 +1132,12 @@ buffer, use it instead of current buffer."
               (lambda ()
                 (interactive)
                 (funcall clean-buffer)
-                (if (functionp callback)
-                    (save-excursion
-                      (goto-char 1)
-                      (funcall callback (read (current-buffer)))))
-                (funcall clean-window)))
+                (unwind-protect
+                    (if (functionp callback)
+                        (save-excursion
+                          (goto-char 1)
+                          (funcall callback (read (current-buffer)))))
+                  (funcall clean-window))))
             (define-key (current-local-map) loophole-read-buffer-abort-key
               (lambda ()
                 (interactive)

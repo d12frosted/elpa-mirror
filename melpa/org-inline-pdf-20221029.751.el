@@ -6,10 +6,10 @@
 ;; Maintainer: Shigeaki Nishina
 ;; Created: November 30, 2020
 ;; URL: https://github.com/shg/org-inline-pdf.el
-;; Package-Version: 20220429.1012
-;; Package-Commit: b790818ecbb85cd6dee44754935eb12153a79679
+;; Package-Version: 20221029.751
+;; Package-Commit: 513c0badffcc65d618d43543abd72077e144fd22
 ;; Package-Requires: ((emacs "25.1") (org "9.4"))
-;; Version: 0.2c
+;; Version: 0.3
 ;; Keywords: org, outlines, hypermedia
 
 ;; This file is not part of GNU Emacs.
@@ -69,17 +69,36 @@
   ;; updated if the original code is changed.
   '(".jpeg" ".jpg" ".png" ".gif" ".svg" ".webp"))
 
+(defun org-inline-pdf--get-page-number ()
+  "Determine the page number of the pdf.
+
+You can use `#+attr_org: :page NUM' to specify the page number."
+  (let* ((case-fold-search t)
+         (datum (org-element-context))
+         (par (org-element-lineage datum '(paragraph)))
+         (attr-re "^[ \t]*#\\+attr_.*?: +.*?:page +\\(\\S-+\\)")
+         (par-end (org-element-property :post-affiliated par))
+         (attr-page-num
+          (if (and par
+                   (org-with-point-at
+                       (org-element-property :begin par)
+                     (re-search-forward attr-re par-end t)))
+              (match-string-no-properties 1)
+            "1")))
+    attr-page-num))
+
 (defun org-inline-pdf--make-preview-for-pdf (original-org--create-inline-image &rest arguments)
   "Make a SVG preview when the inline image is a PDF.
 This function is to be used as an `around' advice to
 `org--create-inline-image'.  The original function is passed in
 ORIGINAL-ORG--CREATE-INLINE-IMAGE and arguments in ARGUMENTS."
-  (let ((file (car arguments)))
+  (let ((file (car arguments))
+        (page-num (org-inline-pdf--get-page-number)))
     (apply original-org--create-inline-image
 	   (cons
 	    (if (member (file-name-extension file) '("pdf" "PDF"))
 		(let ((svg (org-babel-temp-file "org-inline-pdf-")))
-		  (call-process org-inline-pdf-make-preview-program nil nil nil file svg)
+		  (call-process org-inline-pdf-make-preview-program nil nil nil file svg page-num)
 		  svg)
 	      file)
 	    (cdr arguments)))))

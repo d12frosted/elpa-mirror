@@ -4,8 +4,8 @@
 
 ;; Author:  Marco Pawłowski
 ;; Keywords: convenience
-;; Package-Version: 20220419.2044
-;; Package-Commit: 396def174495cc77413e2065ef79658a02490dad
+;; Package-Version: 20221029.823
+;; Package-Commit: d587961ef0d5f9992cedef3b35b87b11d610a375
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "25.1") (consult "0.12"))
 ;; URL: https://gitlab.com/OlMon/consult-flyspell
@@ -104,7 +104,7 @@ will check buffer with `flyspell-buffer' first."
        :history t ;; disable history
        :sort nil
        :lookup 'consult--lookup-cdr
-       :state (consult--jump-state 'consult-preview-error))
+       :state (consult--jump-state))
       (when (boundp 'consult-flyspell-select-function)
         (funcall consult-flyspell-select-function))
       (if consult-flyspell-set-point-after-word
