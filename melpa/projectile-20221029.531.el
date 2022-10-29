@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20221028.738
-;; Package-Commit: 306df876d30eef8eb093fe880df9c2a3454d44a5
+;; Package-Version: 20221029.531
+;; Package-Commit: 2b21dd09062df4adb4114d167e3d27de1ef34919
 ;; Keywords: project, convenience
 ;; Version: 2.7.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
@@ -6027,7 +6027,7 @@ Otherwise behave as if called interactively.
     ;; and project.el expects them to be absolute.
     ;; FIXME: That's probably going to be very slow in large projects.
     (mapcar (lambda (f)
-              (concat f root))
+              (concat root f))
             (projectile-project-files root))))
 
 (defun project-projectile (dir)
