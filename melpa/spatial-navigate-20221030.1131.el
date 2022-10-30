@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-spatial-navigate
-;; Package-Version: 20220708.211
-;; Package-Commit: 6840ca694d281d39de76c1af0cb2ec526b40820a
+;; Package-Version: 20221030.1131
+;; Package-Commit: 4dd8a164f35affa322c67d9e65af8eda21f99775
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -47,12 +47,45 @@
   :group 'spatial-navigate
   :type 'boolean)
 
+
+;; ---------------------------------------------------------------------------
+;; Generic Functions
+
+(defun spatial-navigate--evil-visual-mode-workaround (state)
+  "Workaround for evil-visual line mode, STATE must be \\'pre or \\'post."
+  (when
+    (and
+      (fboundp 'evil-visual-state-p)
+      (funcall 'evil-visual-state-p)
+      (fboundp 'evil-visual-type)
+      (eq (funcall 'evil-visual-type) 'line)
+      (boundp 'evil-visual-point))
+    (let ((mark (symbol-value 'evil-visual-point)))
+      (when (markerp mark)
+        (cond
+          ;; Without this, `point' will be at the beginning of the line
+          ;; (from the pre command hook).
+          ((eq state 'pre)
+            (goto-char (marker-position mark)))
+          ;; Without this, the `point' wont move.
+          ;; See: https://github.com/emacs-evil/evil/issues/1708
+          ((eq state 'post)
+            (set-marker mark (point)))
+          (t
+            (error "Invalid input, internal error")))))))
+
+
+;; ---------------------------------------------------------------------------
+;; Private Functions
+
 (defun spatial-navigate--vertical-calc (dir is-block-cursor)
   "Calculate the next/previous vertical position based on DIR (-1 or 1).
 
 Argument IS-BLOCK-CURSOR causes the cursor to detect white-space using
 characters before and after the current cursor, this behaves in a way that
 is logical for a block cursor)."
+  (spatial-navigate--evil-visual-mode-workaround 'pre)
+
   (let
     (
       (result nil)
@@ -71,67 +104,66 @@ is logical for a block cursor)."
                 (not (memq ch (list ?\s ?\t)))))
             (t
               default)))))
-    (save-excursion
-      (while (null result)
+    (while (null result)
 
-        ;; Forward line and move to column.
-        (forward-line dir)
-        (setq lines (+ dir lines))
+      ;; Forward line and move to column.
+      (forward-line dir)
+      (setq lines (+ dir lines))
 
-        (let*
-          (
-            (col (move-to-column col-init))
-            (is-empty
-              (or
-                (< col col-init)
-                ;; End of the line is also considered empty.
-                (and (or (zerop col-init) is-block-cursor) (eolp))
-                (let*
-                  ( ;; Do this so we don't delimit on spaces between words.
-                    ;; Surrounded by spaces before and after.
-                    (pos-eol (line-end-position))
-                    (pos-bol (line-beginning-position))
+      (let*
+        (
+          (col (move-to-column col-init))
+          (is-empty
+            (or
+              (< col col-init)
+              ;; End of the line is also considered empty.
+              (and (or (zerop col-init) is-block-cursor) (eolp))
+              (let*
+                ( ;; Do this so we don't delimit on spaces between words.
+                  ;; Surrounded by spaces before and after.
+                  (pos-eol (line-end-position))
+                  (pos-bol (line-beginning-position))
 
-                    (is-fill-curr (funcall is-fill-fn (point) pos-bol pos-eol nil))
-                    (is-fill-prev (funcall is-fill-fn (+ (point) 1) pos-bol pos-eol is-fill-curr))
-                    (is-fill-next (funcall is-fill-fn (- (point) 1) pos-bol pos-eol is-fill-curr)))
+                  (is-fill-curr (funcall is-fill-fn (point) pos-bol pos-eol nil))
+                  (is-fill-prev (funcall is-fill-fn (+ (point) 1) pos-bol pos-eol is-fill-curr))
+                  (is-fill-next (funcall is-fill-fn (- (point) 1) pos-bol pos-eol is-fill-curr)))
 
-                  (cond
-                    ;; Check 3 characters, current char, before & after.
-                    ;; If there are two blanks before or after, this is considered not filled.
-                    (is-block-cursor
-                      (not (or is-fill-curr (and is-fill-prev is-fill-next))))
-
-                    ;; Check only 2 characters.
-                    (t
-                      (not (or is-fill-curr is-fill-prev))))))))
-
-          ;; Keep searching for whatever we encounter first.
-          (when is-first
-            (setq is-empty-state is-empty)
-            (setq is-first nil))
-
-          ;; Either set the result, or continue looping.
-          (cond
-            ((not (eq is-empty is-empty-state))
-              ;; We have hit a different state, stop!
-              (setq result
                 (cond
-                  (is-empty-state
-                    (cons lines (point)))
+                  ;; Check 3 characters, current char, before & after.
+                  ;; If there are two blanks before or after, this is considered not filled.
+                  (is-block-cursor
+                    (not (or is-fill-curr (and is-fill-prev is-fill-next))))
+
+                  ;; Check only 2 characters.
                   (t
-                    (cons lines-prev pos-prev)))))
-            ((eq pos-prev (point))
-              ;; Beginning or end, don't hang!
-              ;; Use the last valid state.
-              (setq result result-fallback))
-            (t ;; Keep looping.
-              ;; If we reach the beginning or end of the document,
-              ;; use the last time we reached a valid column.
-              (when (eq col col-init)
-                (setq result-fallback (cons lines (point))))
-              (setq lines-prev lines)
-              (setq pos-prev (point)))))))
+                    (not (or is-fill-curr is-fill-prev))))))))
+
+        ;; Keep searching for whatever we encounter first.
+        (when is-first
+          (setq is-empty-state is-empty)
+          (setq is-first nil))
+
+        ;; Either set the result, or continue looping.
+        (cond
+          ((not (eq is-empty is-empty-state))
+            ;; We have hit a different state, stop!
+            (setq result
+              (cond
+                (is-empty-state
+                  (cons lines (point)))
+                (t
+                  (cons lines-prev pos-prev)))))
+          ((eq pos-prev (point))
+            ;; Beginning or end, don't hang!
+            ;; Use the last valid state.
+            (setq result result-fallback))
+          (t ;; Keep looping.
+            ;; If we reach the beginning or end of the document,
+            ;; use the last time we reached a valid column.
+            (when (eq col col-init)
+              (setq result-fallback (cons lines (point))))
+            (setq lines-prev lines)
+            (setq pos-prev (point))))))
     result))
 
 
@@ -141,6 +173,8 @@ is logical for a block cursor)."
 Argument IS-BLOCK-CURSOR causes the cursor to detect white-space using
 characters before and after the current cursor, this behaves in a way that
 is logical for a block cursor)."
+  (spatial-navigate--evil-visual-mode-workaround 'pre)
+
   (let
     (
       (result nil)
@@ -160,75 +194,74 @@ is logical for a block cursor)."
             (t
               default)))))
 
-    (save-excursion
-      ;; This is needed once at the start, unlike line stepping.
-      (when
+    ;; This is needed once at the start, unlike line stepping.
+    (when
+      (cond
+        ((< dir 0)
+          (> pos-prev pos-bol))
+        (t
+          (<= pos-prev pos-eol)))
+      (forward-char dir))
+
+    (while (null result)
+      (let
+        (
+          (is-empty
+            (let*
+              ( ;; Do this so we don't delimit on spaces between words.
+                ;; Surrounded by spaces before and after.
+                (is-fill-curr (funcall is-fill-fn (point) pos-bol pos-eol nil))
+                (is-fill-prev (funcall is-fill-fn (+ (point) 1) pos-bol pos-eol is-fill-curr))
+                (is-fill-next (funcall is-fill-fn (- (point) 1) pos-bol pos-eol is-fill-curr)))
+              (not (or is-fill-curr (and is-fill-prev is-fill-next))))))
+
+        ;; Keep searching for whatever we encounter first.
+        (when is-first
+          (setq is-empty-state is-empty)
+          (setq is-first nil))
+
+        ;; Either set the result, or continue looping.
         (cond
-          ((< dir 0)
-            (> pos-prev pos-bol))
-          (t
-            (<= pos-prev pos-eol)))
-        (forward-char dir))
-
-      (while (null result)
-        (let
-          (
-            (is-empty
-              (let*
-                ( ;; Do this so we don't delimit on spaces between words.
-                  ;; Surrounded by spaces before and after.
-                  (is-fill-curr (funcall is-fill-fn (point) pos-bol pos-eol nil))
-                  (is-fill-prev (funcall is-fill-fn (+ (point) 1) pos-bol pos-eol is-fill-curr))
-                  (is-fill-next (funcall is-fill-fn (- (point) 1) pos-bol pos-eol is-fill-curr)))
-                (not (or is-fill-curr (and is-fill-prev is-fill-next))))))
-
-          ;; Keep searching for whatever we encounter first.
-          (when is-first
-            (setq is-empty-state is-empty)
-            (setq is-first nil))
-
-          ;; Either set the result, or continue looping.
-          (cond
-            ((not (eq is-empty is-empty-state))
-              ;; We have hit a different state, stop!
-              (setq result
-                (cond
-                  (is-block-cursor
-                    (cond
-                      (is-empty-state
-                        (point))
-                      (t
-                        pos-prev)))
-                  (t
-                    (cond
-                      ((> dir 0)
-                        (point))
-                      (t
-                        pos-prev))))))
-            ((eq pos-prev (point))
-              ;; Beginning or end, don't hang!
-              ;; Use the last valid state.
-              (setq result (point)))
-            ( ;; If we get out of range, use last usable point.
+          ((not (eq is-empty is-empty-state))
+            ;; We have hit a different state, stop!
+            (setq result
+              (cond
+                (is-block-cursor
+                  (cond
+                    (is-empty-state
+                      (point))
+                    (t
+                      pos-prev)))
+                (t
+                  (cond
+                    ((> dir 0)
+                      (point))
+                    (t
+                      pos-prev))))))
+          ((eq pos-prev (point))
+            ;; Beginning or end, don't hang!
+            ;; Use the last valid state.
+            (setq result (point)))
+          ( ;; If we get out of range, use last usable point.
+            (cond
+              ((< dir 0)
+                (< (point) pos-bol))
+              (t
+                (>= (point) pos-eol)))
+            ;; Beginning or end, don't hang!
+            ;; Use the last valid state.
+            (setq result pos-prev))
+          (t ;; Keep looping.
+            ;; If we reach the beginning or end of the document, we may need to use this.
+            (setq pos-prev (point))
+            (when
               (cond
                 ((< dir 0)
-                  (< (point) pos-bol))
+                  (> pos-prev pos-bol))
                 (t
-                  (>= (point) pos-eol)))
-              ;; Beginning or end, don't hang!
-              ;; Use the last valid state.
-              (setq result pos-prev))
-            (t ;; Keep looping.
-              ;; If we reach the beginning or end of the document, we may need to use this.
-              (setq pos-prev (point))
-              (when
-                (cond
-                  ((< dir 0)
-                    (> pos-prev pos-bol))
-                  (t
-                    (<= pos-prev pos-eol)))
-                ;; Forward character.
-                (forward-char dir)))))))
+                  (<= pos-prev pos-eol)))
+              ;; Forward character.
+              (forward-char dir))))))
     result))
 
 
@@ -237,15 +270,20 @@ is logical for a block cursor)."
 
 (defun spatial-navigate--vertical (dir is-block-cursor)
   "See `spatial-navigate--vertical-calc' for docs on DIR and IS-BLOCK-CURSOR."
-  (pcase-let ((`(,lines . ,pos-next) (spatial-navigate--vertical-calc dir is-block-cursor)))
+  (pcase-let
+    (
+      (`(,lines . ,pos-next)
+        (save-excursion (spatial-navigate--vertical-calc dir is-block-cursor))))
     (when (zerop lines)
       (user-error "Spatial-navigate: no lines to jump to!"))
 
-    (goto-char pos-next)))
+    (goto-char pos-next)
+
+    (spatial-navigate--evil-visual-mode-workaround 'post)))
 
 (defun spatial-navigate--horizontal (dir is-block-cursor)
   "See `spatial-navigate--horizontal-calc' for docs on DIR and IS-BLOCK-CURSOR."
-  (let ((pos-next (spatial-navigate--horizontal-calc dir is-block-cursor)))
+  (let ((pos-next (save-excursion (spatial-navigate--horizontal-calc dir is-block-cursor))))
 
     ;; Optionally skip over blank lines.
     (when spatial-navigate-wrap-horizontal-motion
@@ -264,7 +302,9 @@ is logical for a block cursor)."
     (when (zerop (- pos-next (point)))
       (user-error "Spatial-navigate: line limit reached!"))
 
-    (goto-char pos-next)))
+    (goto-char pos-next)
+
+    (spatial-navigate--evil-visual-mode-workaround 'post)))
 
 
 ;; ---------------------------------------------------------------------------

@@ -5,8 +5,8 @@
 ;; Author: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; Maintainer: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; URL: <https://github.com/saf-dmitry/taskpaper-mode>
-;; Package-Version: 20221027.1215
-;; Package-Commit: 40b9066cfb4bf4294eef03a713fac98008fdc48a
+;; Package-Version: 20221030.1048
+;; Package-Commit: 9620d66e568c0bbdf033a559bac578e235e66293
 ;; Keywords: outlines, notetaking, task management, productivity, taskpaper
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -706,7 +706,7 @@ Group 7 matches the closing parenthesis.")
 ;;;; Font Lock regexps
 
 (defconst taskpaper-task-regexp
-  "^[ \t]*\\(\\([-]\\) +\\([^\n]*\\)\\)$"
+  "^[ \t]*\\(\\(-\\) +\\([^\n]*\\)\\)$"
   "Regular expression matching task.
 Group 1 matches the whole task expression.
 Group 2 matches the task mark.
@@ -1938,7 +1938,7 @@ current file automatically push the old position onto the ring."
     (setq item (taskpaper-remove-indentation item))
     (setq item (taskpaper-remove-trailing-tags item))
     (cond ((string-match-p "^\\s-*$" item) nil)
-          ((string-match-p "^[-] " item) "task")
+          ((string-match-p "^- " item) "task")
           ((string-match-p ":$" item) "project")
           (t "note"))))
 
@@ -1962,7 +1962,7 @@ current file automatically push the old position onto the ring."
         (setq tags (match-string-no-properties 1 item)
               item (replace-match "" t nil item)))
       ;; Remove type formatting
-      (cond ((string-match "^[-] " item)
+      (cond ((string-match "^- " item)
              (setq item (replace-match "" t nil item)))
             ((string-match ":$" item)
              (setq item (replace-match "" t nil item)))
@@ -5176,7 +5176,7 @@ TaskPaper mode runs the normal hook `text-mode-hook', and then
               (concat "\f\\|[ \t]*$\\|\\(?:" outline-regexp "\\)"))
   (setq-local paragraph-separate "[ \t\f]*$")
   (setq-local auto-fill-inhibit-regexp outline-regexp)
-  (setq-local adaptive-fill-regexp "[ \t]*\\([-] \\)?")
+  (setq-local adaptive-fill-regexp "[ \t]*\\(- \\)?")
   ;; Font lock settings
   (taskpaper-set-font-lock-defaults)
   (setq-local font-lock-unfontify-region-function 'taskpaper-unfontify-region)
