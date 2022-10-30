@@ -1094,7 +1094,7 @@
 		   (:authors
 		    ("Christoph Paulik" . "cpaulik@gmail.com")))])
  (mentor .
-	 [(0 4)
+	 [(0 5)
 	  ((emacs
 	    (25 1))
 	   (xml-rpc
@@ -1102,14 +1102,16 @@
 	   (seq
 	    (1 11))
 	   (async
-	    (1 9 3)))
+	    (1 9 3))
+	   (url-scgi
+	    (0 7)))
 	  "Frontend for the rTorrent bittorrent client" tar
 	  ((:url . "https://github.com/skangas/mentor")
 	   (:keywords "comm" "processes" "bittorrent")
 	   (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
 	   (:authors
 	    ("Stefan Kangas" . "stefankangas@gmail.com"))
-	   (:commit . "4ce024e17bf8ae079b2cd67af475b3e636c82be1"))])
+	   (:commit . "480602f2ec5467aa2418ee98b328fb85d3b58d0c"))])
  (moe-theme .
 	    [(1 0 2)
 	     nil "A colorful eye-candy theme. Moe, moe, kyun!" tar

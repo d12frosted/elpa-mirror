@@ -1,11 +1,11 @@
 Package: log4j-mode
-Fetcher: git
-Source:  https://git.code.sf.net/p/log4j-mode/code
+Fetcher: github
+Source:  https://github.com/dykstrom/log4j-mode.git
 
 Updating /mnt/store/melpa/working/log4j-mode/
 Checking out origin/HEAD
-Checking out a278948ea07ef8f4fdb6d389345a68b50de14fae
-Built log4j-mode in 3.983s, finished at 2022-10-29T16:43:03+0000
+Checking out 30af0543adf69be646c7634f39c5617984086048
+Built log4j-mode in 4.050s, finished at 2022-10-30T00:13:21+0000
  ✓ Success:
- 36K -rw-r--r-- 1 root root 34K Oct 29 16:43 packages/log4j-mode-20160108.1918.el
-4.0K -rw-r--r-- 1 root root 365 Oct 29 16:43 packages/log4j-mode-20160108.1918.entry
+ 36K -rw-r--r-- 1 root root 34K Oct 30 00:13 packages/log4j-mode-20221029.1314.el
+4.0K -rw-r--r-- 1 root root 365 Oct 30 00:13 packages/log4j-mode-20221029.1314.entry

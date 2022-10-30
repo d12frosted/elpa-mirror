@@ -2107,14 +2107,14 @@
 		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
 		  (:commit . "61f62aa4716eae4fa89961955323d146e9791fca"))])
  (nano-theme .
-	     [(0 3 1)
+	     [(0 3 2)
 	      ((emacs
 		(27 1)))
 	      "N Λ N O theme" tar
 	      ((:url . "https://github.com/rougier/nano-theme")
 	       (:keywords "theme" "dark" "light")
 	       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-	       (:commit . "c4f296d349cf5ef2efd88d68535a4dbf577b9a87"))])
+	       (:commit . "047940983e5f5d3864a8ffec180c10fcd582af73"))])
  (nftables-mode .
 		[(1 1)
 		 ((emacs
@@ -3414,7 +3414,7 @@
 		  (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		  (:url . "https://code.google.com/p/url-http-ntlm/"))])
  (url-scgi .
-	   [(0 7)
+	   [(0 8)
 	    ((emacs
 	      (25 1)))
 	    "SCGI support for url.el" tar
@@ -3423,7 +3423,7 @@
 	     (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
 	     (:authors
 	      ("Stefan Kangas" . "stefankangas@gmail.com"))
-	     (:commit . "ce5e1d5fd105ac425857923e7c403915ca436d0a"))])
+	     (:commit . "6f517db0811e79f4f8a9e5b4c9c6f69999517215"))])
  (validate .
 	   [(1 0 4)
 	    ((emacs

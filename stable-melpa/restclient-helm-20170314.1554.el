@@ -6,8 +6,6 @@
 ;; Maintainer: Pavel Kurnosov <pashky@gmail.com>
 ;; Created: 01 Apr 2016
 ;; Keywords: http helm
-;; Package-Version: 20170314.1554
-;; Package-Commit: af7420085dd67ed08d199a2402e8ff3e996c3029
 ;; Package-Requires: ((restclient "0") (helm "1.9.4"))
 
 ;; This file is not part of GNU Emacs.
