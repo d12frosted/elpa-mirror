@@ -4,8 +4,8 @@
 ;; Author: Tiago Oliveira Weber
 ;; Maintainer: stardiviner (numbchild@gmail.com)
 ;; Version: 0.4
-;; Package-Version: 20220529.404
-;; Package-Commit: b1106ef2a74b2e88b294b05b83af22810feef4f6
+;; Package-Version: 20221030.217
+;; Package-Commit: 4d3ab60c2012aba2a5bd96a4d42dfeea0be6edac
 ;; Package-Requires: ((spice-mode "0.0.1") (org "8"))
 ;; Homepage: https://repo.or.cz/ob-spice.git
 
@@ -49,9 +49,9 @@
 
 (defun org-babel-expand-body:spice (body params)
   "Expand BODY according to PARAMS, return the expanded body."
-  (let* ((vars (mapcar #'cdr (if (fboundp 'org-babel--get-vars)
-                                 (org-babel--get-vars params)
-                               (org-babel-get-header params :var)))))
+  (let* ((vars (if (fboundp 'org-babel--get-vars)
+                   (org-babel--get-vars params)
+                 (mapcar #'cdr (org-babel-get-header params :var)))))
     (setq newbody "");
     (setq bodylinelist (split-string body "\n"))
     (dolist (line bodylinelist newbody)
@@ -127,9 +127,9 @@
 (defun org-babel-execute:spice (body params)
   "Execute a block of Spice code `BODY' with org-babel and `PARAMS'."
   (let ((body (org-babel-expand-body:spice body params))
-        (vars (mapcar #'cdr (if (fboundp 'org-babel--get-vars)
-                                (org-babel--get-vars params)
-                              (org-babel-get-header params :var)))))
+        (vars (if (fboundp 'org-babel--get-vars)
+                  (org-babel--get-vars params)
+                (mapcar #'cdr (org-babel-get-header params :var)))))
 
     ;;******************************
     ;; clean temporary files

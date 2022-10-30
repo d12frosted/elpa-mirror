@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-scroll-on-drag
-;; Package-Version: 20221029.1137
-;; Package-Commit: 124f26dc874fc6c75f6feeb31c882c3765476e68
+;; Package-Version: 20221029.2316
+;; Package-Commit: 5142486ee8a81a110d6038f0109e7173cd475bdf
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -28,7 +28,7 @@
 (defgroup scroll-on-drag nil "Configure smooth scrolling on drag." :group 'scrolling)
 
 (defcustom scroll-on-drag-style 'line-by-pixel
-  "The method of scrolling."
+  "The the method scrolling is calculated."
   :type '(choice (const :tag "Line" line) (const :tag "Line-By-Pixel" line-by-pixel)))
 
 (defcustom scroll-on-drag-delay 0.01 "Idle time between scroll updates (in seconds)." :type 'float)

@@ -3,8 +3,6 @@
 ;; Copyright 2011-2022 François-Xavier Bois
 
 ;; Version: 17.3.3
-;; Package-Version: 20221012.800
-;; Package-Commit: 4b8a695825fda366927894e498421f35fce1cbb9
 ;; Author: François-Xavier Bois
 ;; Maintainer: François-Xavier Bois <fxbois@gmail.com>
 ;; Package-Requires: ((emacs "23.1"))

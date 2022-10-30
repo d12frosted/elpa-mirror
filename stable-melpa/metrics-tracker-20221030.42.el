@@ -4,9 +4,9 @@
 
 ;; Author: Ian Martins <ianxm@jhu.edu>
 ;; URL: https://github.com/ianxm/emacs-tracker
-;; Package-Version: 20220713.1131
-;; Package-Commit: b524398c768227bc14fd12c833dcd4e22d66efd3
-;; Version: 0.3.12
+;; Package-Version: 20221030.42
+;; Package-Commit: ace35dfb6d00749a24993f3fb8f838938826b45e
+;; Version: 0.3.13
 ;; Keywords: calendar
 ;; Package-Requires: ((emacs "24.4") (seq "2.3"))
 
@@ -1225,7 +1225,7 @@ allow selection of multiple metrics and date ranges."
                                         start-date end-date graph-type graph-output))))
 
 ;;;###autoload
-(defun metrics-tracker-graph-render (graph-config)
+(defun metrics-tracker-graph-render (graph-config &optional report-name)
   "Programmatic way to get a graph of the requested metric.
 
 GRAPH-CONFIG [list] should be a list of all inputs needed to render a graph.
@@ -1286,7 +1286,7 @@ For example:
              (labels (metrics-tracker--choose-labels metric-names-str value-transform))
              ;; prepare the graph data from the bin data
              (data (metrics-tracker--format-data metric-names bin-data-all date-grouping start-date end-date graph-type)))
-        (metrics-tracker--make-gnuplot-config labels data date-grouping value-transform graph-type graph-output fname))
+        (metrics-tracker--make-gnuplot-config report-name labels data date-grouping value-transform graph-type graph-output fname))
 
       (save-current-buffer
         (metrics-tracker--setup-output-buffer)
@@ -1309,10 +1309,12 @@ For example:
 
       (metrics-tracker--show-output-buffer))))
 
-(defun metrics-tracker--make-gnuplot-config (labels data
+(defun metrics-tracker--make-gnuplot-config (report-name labels data
                                              date-grouping value-transform
                                              graph-type graph-output fname)
   "Write a gnuplot config (including inline data) to the (empty) current buffer.
+
+REPORT-NAME [string] graph title.
 
 LABELS [list string] series labels being plotted.
 
@@ -1334,7 +1336,12 @@ FNAME [string] filename of the temp file to write."
                 (_ "dumb")))
         (width (if (eq graph-output 'ascii) (1- (window-width)) (car metrics-tracker-graph-size)))
         (height (if (eq graph-output 'ascii) (1- (window-height)) (cdr metrics-tracker-graph-size)))
-        (title (if (= 1 (length labels)) (car labels) ""))
+        (title (cond
+                (report-name
+                 report-name)
+                ((= 1 (length labels))
+                 (car labels))
+                (t "")))
         (fg-color (if metrics-tracker-dark-mode "grey50" "grey10"))
         (bg-color (if metrics-tracker-dark-mode "grey10" "grey90")))
 
@@ -1449,7 +1456,7 @@ This prompts for which report (saved in
     (pcase report-type
       (`table (metrics-tracker-table-render report-config))
       (`cal (metrics-tracker-cal-render report-config))
-      (`graph (metrics-tracker-graph-render report-config)))))
+      (`graph (metrics-tracker-graph-render report-config report-name)))))
 
 (provide 'metrics-tracker)
 
