@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-scroll-on-drag
-;; Package-Version: 20221029.2316
-;; Package-Commit: 5142486ee8a81a110d6038f0109e7173cd475bdf
+;; Package-Version: 20221030.1149
+;; Package-Commit: d272c20a1b4099d964eaab63ad500d7732fbfdb2
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -145,11 +145,8 @@ Argument ALSO-MOVE-POINT When non-nil, move the POINT as well."
     (run-hooks 'scroll-on-drag-redisplay-hook)
     (redisplay)))
 
-(defsubst scroll-on-drag--evil-visual-mode-workaround ()
-  "Workaround for `evil-mode' line-mode."
-  ;; Without this, the line mode point jumps back to the origin,
-  ;; the mark needs to be set to the `point'.
-  ;; See: https://github.com/emacs-evil/evil/issues/1708
+(defun scroll-on-drag--evil-visual-mode-workaround (state)
+  "Workaround for evil-visual line mode, STATE must be \\'pre or \\'post."
   (when
     (and
       (fboundp 'evil-visual-state-p)
@@ -159,7 +156,17 @@ Argument ALSO-MOVE-POINT When non-nil, move the POINT as well."
       (boundp 'evil-visual-point))
     (let ((mark (symbol-value 'evil-visual-point)))
       (when (markerp mark)
-        (set-marker mark (point))))))
+        (cond
+          ;; Without this, `point' will be at the beginning of the line
+          ;; (from the pre command hook).
+          ((eq state 'pre)
+            (goto-char (marker-position mark)))
+          ;; Without this, the `point' wont move.
+          ;; See: https://github.com/emacs-evil/evil/issues/1708
+          ((eq state 'post)
+            (set-marker mark (point)))
+          (t
+            (error "Invalid input, internal error")))))))
 
 
 ;; ---------------------------------------------------------------------------
@@ -448,7 +455,7 @@ Returns true when scrolling took place, otherwise nil."
         (run-hooks 'scroll-on-drag-post-hook)
         (run-window-scroll-functions this-window))
 
-      (scroll-on-drag--evil-visual-mode-workaround))
+      (scroll-on-drag--evil-visual-mode-workaround 'post))
 
     ;; Result so we know if any scrolling occurred,
     ;; allowing a fallback action on 'click'.
@@ -464,6 +471,9 @@ when `scroll-on-drag-follow-mouse' is non-nil."
     (when scroll-on-drag-follow-mouse
       (setq scroll-win (posn-window (or (event-start event) last-input-event))))
 
+    ;; Typically moving the point is _not_ ok, however we know the post hook will handle this.
+    ;; in the case of evil visual line mode.
+    (scroll-on-drag--evil-visual-mode-workaround 'pre)
     (cond
       (scroll-win
         (with-selected-window scroll-win (scroll-on-drag-impl)))
