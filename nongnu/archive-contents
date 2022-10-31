@@ -1921,7 +1921,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(21 0 20221026102048)
+	       [(21 1 20221030165154)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -1930,7 +1930,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "b963cb78eb8dd5bdb7bf419e7d667d4299d9960e"))])
+		 (:commit . "4810b0ecb6be7f87c55d1f5ddd6e22ca1bb3efc6"))])
  (xml-rpc .
 	  [(1 6 16)
 	   nil "An elisp implementation of clientside XML-RPC" tar

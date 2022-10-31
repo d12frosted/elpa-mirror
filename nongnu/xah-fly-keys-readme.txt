@@ -70,7 +70,7 @@ the following standard keys with Control are supported:
 "C--" `text-scale-decrease'
 
 To disable both Control and Meta shortcut keys, add the following
-lines to you init.el before (require 'xah-fly-keys):
+lines to you init.el BEFORE loading xah-fly-keys:
 
 (setq xah-fly-use-control-key nil)
 (setq xah-fly-use-meta-key nil)
