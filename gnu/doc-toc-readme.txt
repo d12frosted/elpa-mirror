@@ -71,16 +71,13 @@ Table of Contents
   To use the pdf.tocgen functionality that software has to be installed
   (see <https://krasjet.com/voice/pdf.tocgen/>). For the other remaining
   functionality the package requires `pdftotext' (part of
-  poppler-utils), `pdfoutline' (part of [fntsample] or from [Github]
-  (not from Pypi as the package seems broken)) and `djvused' (part of
-  [http://djvu.sourceforge.net/]) command line utilities to be
+  poppler-utils), `pdfoutline' (part of [fntsample]) and `djvused' (part
+  of [http://djvu.sourceforge.net/]) command line utilities to be
   available. Extraction with OCR requires the `tesseract' command line
   utility to be available.
 
 
 [fntsample] <https://launchpad.net/ubuntu/bionic/+package/fntsample>
-
-[Github] <https://github.com/yutayamamoto/pdfoutline>
 
 [http://djvu.sourceforge.net/] <http://djvu.sourceforge.net/>
 

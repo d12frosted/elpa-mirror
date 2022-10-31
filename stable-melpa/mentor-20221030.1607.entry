@@ -1,0 +1,19 @@
+(mentor .
+	[(20221030 1607)
+	 ((emacs
+	   (25 1))
+	  (xml-rpc
+	   (1 6 15))
+	  (seq
+	   (1 11))
+	  (async
+	   (1 9 3))
+	  (url-scgi
+	   (0 8)))
+	 "Frontend for the rTorrent bittorrent client" tar
+	 ((:commit . "291ba7fd29aabcadb584feddc0b3ae4120713209")
+	  (:authors
+	   ("Stefan Kangas" . "stefankangas@gmail.com"))
+	  (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
+	  (:keywords "comm" "processes" "bittorrent")
+	  (:url . "https://github.com/skangas/mentor"))])
