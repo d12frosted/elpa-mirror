@@ -6,8 +6,8 @@
 ;; Maintainer: Thibault Polge <thibault@thb.lt>
 ;;
 ;; Keywords: frames
-;; Package-Version: 20211109.1601
-;; Package-Commit: d84adab82ca5f84847702671dd60c0377c82ccd9
+;; Package-Version: 20221031.1042
+;; Package-Commit: 2007416933e20d83afdc084445728153f2e573ad
 ;; Homepage: https://github.com/thblt/sway.el
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "27.1") (dash "2.18.1"))
@@ -77,11 +77,16 @@ This isn't easy, because:
    daemon's $SWAYSOCK can be obsolete.
  - But, lucky for us, client frames get a copy on the client's
    environment as a frame parameter!
- - But, stupid Emacs don't copy parameter copy on new frames
+ - But, stupid Emacs doesn't copy that parameter on new frames
    created from existing client frames, eg with
    \\[make-frame-command] (this is bug #47806).  This is why we
-   have the command `sway-socket-tracker-mode'."
+   have `sway-socket-tracker-mode'."
   (or (sway--validate-socket (getenv "SWAYSOCK" (selected-frame)))
+      ;; Note to self: on a never-pushed commit, I had an extra test:
+      ;; (when (frame-parameter nil 'environment)
+      ;; (getenv "SWAYSOCK" (selected-frame))))
+      ;; which was probably made useless by the introduction of
+      ;; `sway--validate-socket'.
       (sway--validate-socket (frame-parameter nil 'sway-socket))
       (sway--validate-socket (getenv "SWAYSOCK"))
       (error "Cannot find a valid Sway socket.")))
@@ -99,8 +104,8 @@ reasonably consistent."
 If HANDLER is a buffer, output is added to it.
 
 If HANDLER is a function, output is written to a temporary
-  buffer, then function is run on that buffer with point at the
-  beginning and its result is returned.
+buffer, then function is run on that buffer with point at the
+beginning and its result is returned.
 
 Otherwise, output is dropped."
   (let ((buffer (or
@@ -400,7 +405,8 @@ Replace `x-focus-frame' with an implementation that delegates to
 (defun sway-shackle-display-buffer-frame (buffer &optional _alist plist)
   "Show BUFFER in an Emacs frame, creating it if needed.
 
-_ALIST is ignored, PLIST as in Shackle."
+_ALIST is ignored, PLIST as in Shackle; also accepts a :dedicate
+argument for the undertaker.."
   (let* ((tree (sway-tree))
          (old-frame (sway-find-frame-window (selected-frame) tree))
          (sway (sway-find-frame-for-buffer buffer tree t))
