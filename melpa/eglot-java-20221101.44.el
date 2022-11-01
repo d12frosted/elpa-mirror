@@ -2,9 +2,9 @@
 
 ;; Copyright (C) 2019-2022 Yves Zoundi
 
-;; Version: 1.4
-;; Package-Version: 20220403.1815
-;; Package-Commit: da76eb69b3f86992d62302649a987f157b7b7371
+;; Version: 1.5
+;; Package-Version: 20221101.44
+;; Package-Commit: d7f82eb88fa8526ae7896aff864b01b222b3dbeb
 ;; Author: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; Maintainer: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; URL: https://github.com/yveszoundi/eglot-java
@@ -32,7 +32,17 @@
 ;; - Wizards for Spring starter, Maven and Gradle project creation
 ;; - Generic build command support for Maven and Gradle projects
 ;; - JUnit tests support, this hasn't been tested for a while...
-
+;;
+;; Add the following lines to your .emacs configuration;;
+;;
+;; (eval-after-load 'eglot-java
+;;  (progn
+;;    (require 'eglot-java)
+;;    ;; The prefix key will be associated to the keymap eglot-mode-map
+;;    ;; This is a customizable variable in the eglot-java group
+;;    (setq eglot-java-prefix-key "C-c l")
+;;    (setq eglot-java-default-bindings-enabled t)
+;;    '(eglot-java-init)))
 ;;
 ;;; Code:
 
@@ -47,7 +57,7 @@
 
 (defcustom eglot-java-eclipse-jdt-args
   '()
-  "Eclipse JDT arguments."
+  "Eclipse JDT JVM arguments."
   :type '(repeat string)
   :group 'eglot-java)
 
@@ -100,13 +110,13 @@
   :type 'string
   :group 'eglot-java)
 
-(defcustom eglot-java-default-bindings-enabled t
+(defcustom eglot-java-default-bindings-enabled nil
   "Enable default keybindings in `java-mode'."
   :type 'boolean
   :group 'eglot-java)
 
-(defcustom eglot-java-prefix-key "C-c l"
-  "Prefix key for eglot `java-mode' commands."
+(defcustom eglot-java-prefix-key nil
+  "Prefix key for eglot `java-mode' commands, that will be bound to the eglot-mode-map."
   :type 'string
   :group 'eglot-java)
 
@@ -214,7 +224,6 @@ If INTERACTIVE, prompt user for details."
   ((_server eglot-eclipse-jdt) (_cmd (eql java.apply.workspaceEdit)) arguments)
   "Eclipse JDT breaks spec and replies with edits as arguments."
   (mapc #'eglot--apply-workspace-edit arguments))
-
 
 (defun eglot-java--download-file (source-url dest-location)
   "Download a file from a URL at SOURCE-URL and save it to file at DEST-LOCATION."
@@ -443,12 +452,15 @@ import org.junit.jupiter.api.Test;\n\npublic class %s {\n\n}")))
   "Configure default behavior such as keybindings."
   (when (and eglot-java-default-bindings-enabled
              (derived-mode-p 'java-mode))
-    (define-key eglot-mode-map (eglot-java--kbd "n") #'eglot-java-file-new)
-    (define-key eglot-mode-map (eglot-java--kbd "x") #'eglot-java-run-main)
-    (define-key eglot-mode-map (eglot-java--kbd "t") #'eglot-java-run-test)
-    (define-key eglot-mode-map (eglot-java--kbd "N") #'eglot-java-project-new)
-    (define-key eglot-mode-map (eglot-java--kbd "T") #'eglot-java-project-build-task)
-    (define-key eglot-mode-map (eglot-java--kbd "R") #'eglot-java-project-build-refresh)))
+    (if (boundp 'eglot-java-prefix-key)
+        (progn
+          (define-key eglot-mode-map (eglot-java--kbd "n") #'eglot-java-file-new)
+          (define-key eglot-mode-map (eglot-java--kbd "x") #'eglot-java-run-main)
+          (define-key eglot-mode-map (eglot-java--kbd "t") #'eglot-java-run-test)
+          (define-key eglot-mode-map (eglot-java--kbd "N") #'eglot-java-project-new)
+          (define-key eglot-mode-map (eglot-java--kbd "T") #'eglot-java-project-build-task)
+          (define-key eglot-mode-map (eglot-java--kbd "R") #'eglot-java-project-build-refresh))
+      (user-error "Please customize the variable eglot-java-prefix-key. A valid value could be: C-c l"))))
 
 (defun eglot-java--spring-initializr-fetch-json (url)
   "Retrieve the Spring initializr JSON model from a given URL."
@@ -562,7 +574,7 @@ The buffer contains the raw HTTP response sent by the server."
       (set-process-sentinel (get-buffer-process b) #'eglot-java--project-new-process-sentinel))))
 
 (defun eglot-java--project-new-spring ()
-  "Create a new Spring java project using spring initializr.  User input parameters are extracted from the JSON structure."
+  "Create a new Spring java project using spring initializr. User input parameters are extracted from the JSON structure."
   (unless eglot-java-spring-starter-jsontext
     (eglot-java--spring-read-json)
     (while (not eglot-java-spring-starter-jsontext)
@@ -575,7 +587,7 @@ The buffer contains the raw HTTP response sent by the server."
                          (hash-table-keys eglot-java-spring-starter-jsontext)))
          (simple-params (mapcar
                          (lambda (p)
-                           (let ( (elem-type (gethash "type" (gethash p eglot-java-spring-starter-jsontext))) )
+                           (let ((elem-type (gethash "type" (gethash p eglot-java-spring-starter-jsontext))))
                              (cond ((or (string= "single-select" elem-type)
                                         (string= "action" elem-type))
                                     (list
@@ -614,21 +626,19 @@ The buffer contains the raw HTTP response sent by the server."
       (make-directory dest-dir t))
 
     (let ((large-file-warning-threshold nil)
-          (dest-file-name              (expand-file-name (concat (format-time-string "%Y-%m-%d_%N") ".zip")
-                                                         dest-dir))
-          (source-url                  (format "%s?%s"
-                                               eglot-java-spring-starter-url-starterzip
-                                               (url-build-query-string (append simple-params
-                                                                               (list
-                                                                                (list "dependencies"
-                                                                                      (mapconcat
-                                                                                       #'identity
-                                                                                       (nconc simple-deps)
-                                                                                       "," ))))))))
+          (dest-file-name (expand-file-name (concat (format-time-string "%Y-%m-%d_%N") ".zip")
+                                            dest-dir))
+          (source-url     (format "%s?%s"
+                                  eglot-java-spring-starter-url-starterzip
+                                  (url-build-query-string (append simple-params
+                                                                  (list
+                                                                   (list "dependencies"
+                                                                         (mapconcat
+                                                                          #'identity
+                                                                          (nconc simple-deps)
+                                                                          "," ))))))))
       (url-copy-file source-url dest-file-name t)
-
       (dired (file-name-directory dest-file-name))
-
       (revert-buffer))))
 
 (defun eglot-java--project-new-process-sentinel (process event)
