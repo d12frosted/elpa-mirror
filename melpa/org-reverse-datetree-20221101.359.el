@@ -3,9 +3,9 @@
 ;; Copyright (C) 2018-2020,2021,2022 Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
-;; Version: 0.4.1
-;; Package-Version: 20220929.1630
-;; Package-Commit: e4e13cc5e240f9b2717295f6df536d29a8ead108
+;; Version: 0.4.2-pre
+;; Package-Version: 20221101.359
+;; Package-Commit: baad58f351deb916afc8b49738bf7c21c0ff4c7e
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -63,6 +63,7 @@
 (defvar org-archive-subtree-add-inherited-tags)
 (defvar org-archive-file-header-format)
 (defvar org-refile-active-region-within-subtree)
+(defvar org-read-date-prefer-future)
 (declare-function project-roots "ext:project")
 (declare-function project-current "ext:project")
 (declare-function org-inlinetask-remove-END-maybe "ext:org-inlinetask")
@@ -215,6 +216,26 @@ refiling many entries to a single file."
                                     (const tree)
                                     (const canonical))))
 
+(defcustom org-reverse-datetree-prefer-future 'default
+  "Whether to assume a future date for incomplete date input.
+
+This variable overrides `org-read-date-prefer-future' inside the
+package.
+
+When the user enters an incomplete date, e.g. a month and a day
+but without a year, it may be either a future or a past date. If
+this variable is t, the package assumes it is a future date (in
+the next month or in the next year). If this variable is nil, the
+package assumes it is a past date (in this month or year).
+
+If the user uses the package archiving, nil value is recommended.
+
+A special value \\='default it uses the current value
+of `org-read-date-prefer-future'."
+  :type '(choice (const :tag "Future (check month and day)" t)
+                 (const :tag "Past (never)" nil)
+                 (const :tag "Use `org-read-date-prefer-future'" default)))
+
 (defvar-local org-reverse-datetree--file-headers nil
   "Alist of headers of the buffer.")
 
@@ -229,6 +250,18 @@ refiling many entries to a single file."
         "Encode TIME using `encode-time'."
         (apply #'encode-time time))
     (defalias 'org-reverse-datetree--encode-time #'encode-time)))
+
+;;;; Common utilities
+
+(defun org-reverse-datetree--read-date ()
+  "Wrap `org-read-date' for the package."
+  (let ((org-read-date-prefer-future
+         (if (eq org-reverse-datetree-prefer-future 'default)
+             org-read-date-prefer-future
+           org-reverse-datetree-prefer-future)))
+    (org-read-date nil t)))
+
+;;;; Basics
 
 (cl-defun org-reverse-datetree--find-or-prepend (level text
                                                        &key append-newline
@@ -690,7 +723,7 @@ see.
 
 When this function is called interactively, it asks for TIME using
 `org-read-date' and go to an entry of the date."
-  (interactive (list (org-read-date nil t nil)
+  (interactive (list (org-reverse-datetree--read-date)
                      :return nil))
   (unless (derived-mode-p 'org-mode)
     (user-error "Not in org-mode"))
@@ -711,7 +744,7 @@ ARGS are the arguments to
 see."
   (interactive)
   (apply #'org-reverse-datetree-goto-date-in-file
-         (org-read-date nil t nil)
+         (org-reverse-datetree--read-date)
          (cdr args)))
 
 (defun org-reverse-datetree--timestamp-to-time (s)
@@ -747,11 +780,11 @@ TIME can take the same value as
     (`nil
      (if org-reverse-datetree-entry-time
          (org-reverse-datetree--entry-time-2 org-reverse-datetree-entry-time)
-       (org-read-date nil t)))
+       (org-reverse-datetree--read-date)))
     ((guard (ignore-errors (float-time time)))
      time)
     ((or `t '(4))
-     (org-read-date nil t))
+     (org-reverse-datetree--read-date))
     ((pred consp)
      (catch 'entry-time
        (dolist (x (copy-sequence time))
@@ -779,7 +812,7 @@ TIME can take the same value as
                   (throw 'entry-time (org-reverse-datetree--timestamp-to-time
                                       (match-string 1)))))))
            (_ (error "Unknown pattern: %s" x))))
-       (org-read-date nil t)))
+       (org-reverse-datetree--read-date)))
     (_
      (error "Unsupported pattern: %s" time))))
 
