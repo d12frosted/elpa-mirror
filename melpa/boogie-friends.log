@@ -4,32 +4,36 @@ Source:  https://github.com/boogie-org/boogie-friends.git
 
 Updating /mnt/store/melpa/working/boogie-friends/
 Checking out origin/HEAD
-Checking out 8d1bafab5dffc3c63324b5306503943e67497ddc
+Checking out 2f7c74ba87945e69d088df1d53249aeba5f0910d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/boogie-friends/
-  to /tmp/boogie-friendsZH1l5j/boogie-friends-20220922.1942
+  to /tmp/boogie-friendsXSgTMn/boogie-friends-20221101.650
   ! emacs/boogie-friends-pkg.el -> boogie-friends-pkg.el
   ! emacs/boogie-friends.el -> boogie-friends.el
   ! emacs/boogie-mode.el -> boogie-mode.el
   ! emacs/dafny-docs.el -> dafny-docs.el
   ! emacs/dafny-mode.el -> dafny-mode.el
   ! emacs/inferior-dafny.el -> inferior-dafny.el
+  ! emacs/lsp-dafny.el -> lsp-dafny.el
   ! emacs/z3-smt2-mode.el -> z3-smt2-mode.el
   ! emacs/etc => etc
-Created boogie-friends-20220922.1942.tar containing:
-  boogie-friends-20220922.1942/
-  boogie-friends-20220922.1942/boogie-friends-pkg.el
-  boogie-friends-20220922.1942/boogie-friends.el
-  boogie-friends-20220922.1942/boogie-mode.el
-  boogie-friends-20220922.1942/dafny-docs.el
-  boogie-friends-20220922.1942/dafny-mode.el
-  boogie-friends-20220922.1942/etc/
-  boogie-friends-20220922.1942/etc/dafny-attributes
-  boogie-friends-20220922.1942/etc/dafny-docs.html.gz
-  boogie-friends-20220922.1942/etc/dafny-snippets
-  boogie-friends-20220922.1942/inferior-dafny.el
-  boogie-friends-20220922.1942/z3-smt2-mode.el
-Built boogie-friends in 4.472s, finished at 2022-11-01T06:41:34+0000
+Created boogie-friends-20221101.650.tar containing:
+  boogie-friends-20221101.650/
+  boogie-friends-20221101.650/boogie-friends-pkg.el
+  boogie-friends-20221101.650/boogie-friends.el
+  boogie-friends-20221101.650/boogie-mode.el
+  boogie-friends-20221101.650/dafny-docs.el
+  boogie-friends-20221101.650/dafny-mode.el
+  boogie-friends-20221101.650/etc/
+  boogie-friends-20221101.650/etc/dafny-attributes
+  boogie-friends-20221101.650/etc/dafny-docs.html.gz
+  boogie-friends-20221101.650/etc/dafny-snippets
+  boogie-friends-20221101.650/inferior-dafny.el
+  boogie-friends-20221101.650/lsp-dafny.el
+  boogie-friends-20221101.650/z3-smt2-mode.el
+Built boogie-friends in 5.137s, finished at 2022-11-01T10:24:22+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  570 Nov  1 06:41 packages/boogie-friends-20220922.1942.entry
 120K -rw-r--r-- 1 root root 120K Nov  1 06:41 packages/boogie-friends-20220922.1942.tar
+4.0K -rw-r--r-- 1 root root  569 Nov  1 10:24 packages/boogie-friends-20221101.650.entry
+140K -rw-r--r-- 1 root root 140K Nov  1 10:24 packages/boogie-friends-20221101.650.tar
