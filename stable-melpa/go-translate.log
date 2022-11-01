@@ -4,10 +4,10 @@ Source:  https://github.com/lorniu/go-translate.git
 
 Updating /mnt/store/melpa/working/go-translate/
 Checking out origin/HEAD
-Checking out 54b6a0cdaa5cdae7c7e588955db39a609e42c7e0
+Checking out c30363d0b592d933399e445b969da00ce5360c7c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/go-translate/
-  to /tmp/go-translate6pIF5d/go-translate-20221101.357
+  to /tmp/go-translate9TLTcf/go-translate-20221101.1311
     go-translate.el -> go-translate.el
     gts-core.el -> gts-core.el
     gts-engine-bing.el -> gts-engine-bing.el
@@ -16,18 +16,20 @@ Copying files (->) and directories (=>)
     gts-engine-google.el -> gts-engine-google.el
     gts-faces.el -> gts-faces.el
     gts-implements.el -> gts-implements.el
-Created go-translate-20221101.357.tar containing:
-  go-translate-20221101.357/
-  go-translate-20221101.357/go-translate-pkg.el
-  go-translate-20221101.357/go-translate.el
-  go-translate-20221101.357/gts-core.el
-  go-translate-20221101.357/gts-engine-bing.el
-  go-translate-20221101.357/gts-engine-deepl.el
-  go-translate-20221101.357/gts-engine-google-rpc.el
-  go-translate-20221101.357/gts-engine-google.el
-  go-translate-20221101.357/gts-faces.el
-  go-translate-20221101.357/gts-implements.el
-Built go-translate in 3.978s, finished at 2022-11-01T10:51:38+0000
+Created go-translate-20221101.1311.tar containing:
+  go-translate-20221101.1311/
+  go-translate-20221101.1311/go-translate-pkg.el
+  go-translate-20221101.1311/go-translate.el
+  go-translate-20221101.1311/gts-core.el
+  go-translate-20221101.1311/gts-engine-bing.el
+  go-translate-20221101.1311/gts-engine-deepl.el
+  go-translate-20221101.1311/gts-engine-google-rpc.el
+  go-translate-20221101.1311/gts-engine-google.el
+  go-translate-20221101.1311/gts-faces.el
+  go-translate-20221101.1311/gts-implements.el
+Built go-translate in 4.471s, finished at 2022-11-01T14:36:46+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  397 Nov  1 14:36 packages/go-translate-20221101.1311.entry
+112K -rw-r--r-- 1 root root 110K Nov  1 14:36 packages/go-translate-20221101.1311.tar
 4.0K -rw-r--r-- 1 root root  396 Nov  1 10:51 packages/go-translate-20221101.357.entry
 112K -rw-r--r-- 1 root root 110K Nov  1 10:51 packages/go-translate-20221101.357.tar

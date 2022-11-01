@@ -20,8 +20,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20220517.1814
-;; Package-Commit: f9ec1e730705f1fc8888f11a2b4ef1a4907e2f0b
+;; Package-Version: 20221101.1418
+;; Package-Commit: bfd496dad20bd34ffb0c2301c004a195262718c1
 ;; Author: Adrien Brochard
 ;; Keywords: todoist task todo comm
 ;; URL: https://github.com/abrochard/emacs-todoist
@@ -58,7 +58,7 @@
   (getenv "TODOIST_TOKEN"))
 
 (defconst todoist-url
-  "https://api.todoist.com/rest/v1")
+  "https://api.todoist.com/rest/v2")
 
 (defconst todoist-buffer-name
   "*todoist*")
