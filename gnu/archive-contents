@@ -1855,6 +1855,14 @@
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	  (:commit . "d8f18f74591ffcac6466409ac7cd29f90838b2fe"))])
+ (lv .
+     [(0 15 0)
+      nil "Other echo area" tar
+      ((:maintainer "Oleh Krehel")
+       (:authors
+	("Oleh Krehel"))
+       (:url . "https://elpa.gnu.org/packages/lv.html")
+       (:commit . "54e9db2b023e03b6f6b46aeec48ea74fd51d4e11"))])
  (map .
       [(3 3 1)
        ((emacs

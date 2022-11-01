@@ -4,6 +4,8 @@
 
 ;; Author: Justin Barclay <justinbarclay@gmail.com>
 ;; URL: https://github.com/justinbarclay/elegant-agenda-mode
+;; Package-Version: 20210115.353
+;; Package-Commit: 5cbc688584ba103ea3be7d7b30e5d94e52f59eb6
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces

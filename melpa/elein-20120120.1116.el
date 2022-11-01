@@ -5,6 +5,8 @@
 ;; Author: R.W. van 't Veer
 ;; Created: 2 Aug 2010
 ;; Keywords: tools processes
+;; Package-Version: 20120120.1116
+;; Package-Commit: d4c0c0491dbb7c90e953d7a16172107c37103605
 ;; Version: 0.2.2
 ;; URL: https://github.com/remvee/elein
 
