@@ -6,8 +6,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/attrap
-;; Package-Version: 20221101.1500
-;; Package-Commit: eedf6a34d39d4f3a5afd73876bb7290bacab652d
+;; Package-Version: 20221102.922
+;; Package-Commit: d63f0f8768feab161a309461e8b82a28c5897288
 ;; Created: February 2018
 ;; Keywords: programming, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "25.1") (f "0.19.0") (s "1.11.0"))
@@ -81,6 +81,7 @@
 
 (defcustom attrap-flymake-backends-alist
   '((dante-flymake . attrap-ghc-fixer)
+    (LaTeX-flymake . attrap-LaTeX-fixer)
     (attrap-flymake-hlint . attrap-hlint-fixer)
     (elisp-flymake-byte-compile . attrap-elisp-fixer)
     (elisp-flymake-checkdoc . attrap-elisp-fixer))
@@ -473,12 +474,12 @@ Error is given as MSG and reported between POS and END."
       ;; note there can be a kind annotation, not just a variable.
       (delete-region (point) (+ (point) (- (match-end 1) (match-beginning 1))))))
    ;;     Module ‘TensorFlow.GenOps.Core’ does not export ‘argmax’.
-   (when (string-match
-          (rx (or (seq "The " (? "qualified ") "import of " (identifier 1) " from module " (identifier 2) " is redundant")
-                  (seq "Module " (identifier 2) " does not export " (identifier 1))))
-          normalized-msg)
+   (when-let ((match (s-match (rx (or (seq "The " (? "qualified ") "import of " (identifier 1)
+                                           " from module " (identifier 2) " is redundant")
+                                      (seq "Module " (identifier 2) " does not export " (identifier 1))))
+                        normalized-msg)))
     (attrap-one-option 'delete-import
-      (let ((redundant (or (match-string 1 normalized-msg) (match-string 2 normalized-msg))))
+      (let ((redundant (nth 1 match)))
         (save-excursion
           (search-forward "(") ; the imported things are after the parenthesis
           (dolist (r (s-split ", " redundant t))
@@ -549,6 +550,21 @@ Error is given as MSG and reported between POS and END."
       (attrap-one-option 'replace-as-hinted
         (delete-region pos (+ 1 end))
         (insert (s-trim (s-collapse-whitespace replacement)))))))))
+
+(defun attrap-LaTeX-fixer (msg pos end)
+  (cond
+   ((s-matches? (rx "Non-breaking space (`~') should have been used.") msg)
+    (attrap-one-option 'non-breaking-space
+      (if (looking-at (rx space))
+          (delete-region pos (1+ pos))
+          (delete-region (save-excursion (skip-chars-backward "\n\t ") (point)) (point)))
+      (insert "~")))
+   ((s-matches? (rx "Delete this space to maintain correct pagereferences.") msg)
+    (attrap-one-option 'fix-space-pageref
+      (if (looking-back (rx bol (* space)))
+          (progn (skip-chars-backward "\n\t ")
+                 (insert "%"))
+        (delete-region (point) (save-excursion (skip-chars-forward " \t") (point))))))))
 
 (provide 'attrap)
 ;;; attrap.el ends here

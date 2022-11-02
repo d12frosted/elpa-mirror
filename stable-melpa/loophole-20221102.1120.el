@@ -4,9 +4,9 @@
 
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
-;; Version: 0.8.2
-;; Package-Version: 20221029.846
-;; Package-Commit: 6801e98f74afdab00cfc1a543622c3f70d0c7864
+;; Version: 0.8.3
+;; Package-Version: 20221102.1120
+;; Package-Commit: 24acca1a45d987093561f7294b7b1d1f738f23af
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -123,7 +123,6 @@ When the number of bound temporary keymaps is
 `loophole-temporary-map-max' or higher, generating new map
 overwrites the disabled earliest used one, unregistered one
 or enabled earliest used one."
-  :group 'loophole
   :type 'integer)
 
 (defcustom loophole-allow-keyboard-quit t
@@ -131,7 +130,6 @@ or enabled earliest used one."
 If binidng commands use reading key function other than
 `loophole-read-key' and its variant, this variable takes no
 effect."
-  :group 'loophole
   :type 'boolean)
 
 (defcustom loophole-decide-obtaining-method-after-read-key 'negative-argument
@@ -160,7 +158,6 @@ is for reading key.
 Besides, if decision is after reading key, optional
 :key property of obtaining method defined at other user
 options like `loophole-set-key-order' will be omitted."
-  :group 'loophole
   :type '(choice
           (const :tag "No" nil)
           (const :tag "Yes, only with negative-argument" negative-argument)
@@ -178,12 +175,10 @@ ordinary binding shades protected entry on binidng it,
 shader will be removed.  Thus, user can use protected
 entries as well as ordinary entries except for that they are
 write protected."
-  :group 'loophole
   :type 'boolean)
 
 (defcustom loophole-read-key-limit-time 1.0
   "Limit time in seconds for `loophole-read-key-with-time-limit'."
-  :group 'loophole
   :type 'number)
 
 (define-obsolete-variable-alias 'loophole-kmacro-by-read-key-finish-key
@@ -193,7 +188,6 @@ write protected."
 (defcustom loophole-read-key-termination-key (where-is-internal
                                               'keyboard-quit nil t)
   "Key sequence to finish `loophole-read-key-until-termination-key'."
-  :group 'loophole
   :type 'key-sequence)
 
 (defcustom loophole-read-buffer-inhibit-recursive-edit nil
@@ -204,32 +198,26 @@ and `signal' quit.  One of the utilities is a binidng
 CALLBACK with one argument a read form.
 By these utilities, user can work with the buffer as well as
 using `recursive-edit' while released from `recursive-edit'."
-  :group 'loophole
   :type 'boolean)
 
 (defcustom loophole-read-buffer-finish-key [?\C-c ?\C-c]
   "Key for finishing `loophole-read-buffer'."
-  :group 'loophole
   :type 'key-sequence)
 
 (defcustom loophole-read-buffer-abort-key [?\C-c ?\C-k]
   "Key for aborting `loophole-read-buffer'."
-  :group 'loophole
   :type 'key-sequence)
 
 (defcustom loophole-force-overwrite-bound-variable t
   "Flag if use bound variable and overwrite it without prompting."
-  :group 'loophole
   :type 'boolean)
 
 (defcustom loophole-force-make-variable-buffer-local t
   "Flag if `make-variable-buffer-local' is done without prompting."
-  :group 'loophole
   :type 'boolean)
 
 (defcustom loophole-force-unintern nil
   "Flag if `unintern' is done without prompting."
-  :group 'loophole
   :type 'boolean)
 
 (defcustom loophole-make-register-always-read-tag 'infer
@@ -237,7 +225,6 @@ using `recursive-edit' while released from `recursive-edit'."
 If non-nil, `loophole-register' always reads tag string,
 but if symbol infer is set, `loophole-register' try to infer
 tag string before asking."
-  :group 'loophole
   :type '(choice
           (const :tag "No" nil)
           (const :tag "Yes, but try to infer first" multiline)
@@ -246,17 +233,14 @@ tag string before asking."
 (defcustom loophole-make-describe-use-builtin nil
   "Flag if `loophole-describe' uses builtin `describe-keymap'.
 This option takes effect with Emacs 28 or later."
-  :group 'loophole
   :type 'boolean)
 
 (defcustom loophole-timer-default-time (* 60 60)
   "Default time in seconds for auto disabling timer."
-  :group 'loophole
   :type 'number)
 
 (defcustom loophole-editing-timer-default-time (* 60 5)
   "Default time in seconds for auto stopping editing timer."
-  :group 'loophole
   :type 'number)
 
 (defcustom loophole-command-by-lambda-form-format
@@ -270,7 +254,6 @@ Character sequence (#) indicates where cursor will be
 placed, and it will be removed when the format is inserted
 in the buffer."
   :risky t
-  :group 'loophole
   :type 'string)
 
 (define-obsolete-variable-alias 'loophole-kmacro-by-recursive-edit-map
@@ -292,7 +275,6 @@ Activity of this map is controled by
   'loophole-defining-kmacro-map-flag "0.8.2")
 (defcustom loophole-defining-kmacro-map-flag t
   "Non-nil means `loophole-defining-kmacro-map' is enabled."
-  :group 'loophole
   :type 'boolean)
 
 (define-obsolete-variable-alias 'loophole-kmacro-by-recursive-edit-map-tag
@@ -300,7 +282,6 @@ Activity of this map is controled by
 (defcustom loophole-defining-kmacro-map-tag
   "kmacro[End: \\[loophole-end-kmacro], Abort: \\[loophole-abort-kmacro]]"
   "Tag string for `loophole-defining-kmacro-map'."
-  :group 'loophole
   :type 'string)
 
 (defcustom loophole-alternative-read-key-function
@@ -316,7 +297,6 @@ prefix argument use this function to read key.
 For binding commands, and `loophole-set-key', this option
 does not take effect, becase they refer loophole-*-order
 which can specify more conplex rules to read key."
-  :group 'loophole
   :type 'function)
 
 (defcustom loophole-bind-entry-order
@@ -344,7 +324,6 @@ non-nil other than 'negative-argument, or while it is
 `negative-argument', :key property will be omitted and
 default `loophole-read-key' will be used for reading key."
   :risky t
-  :group 'loophole
   :type '(repeat sexp))
 
 (defcustom loophole-bind-command-order
@@ -374,7 +353,6 @@ non-nil, or while it is 'negative-argument and
 :key property will be omitted and default
 `loophole-read-key' will be used for reading key."
   :risky t
-  :group 'loophole
   :type '(repeat sexp))
 
 (defcustom loophole-bind-kmacro-order
@@ -405,7 +383,6 @@ non-nil other than 'negative-argument, or while it is
 `negative-argument', :key property will be omitted and
 default `loophole-read-key' will be used for reading key."
   :risky t
-  :group 'loophole
   :type '(repeat sexp))
 
 (defcustom loophole-bind-array-order
@@ -434,7 +411,6 @@ non-nil other than 'negative-argument, or while it is
 `negative-argument', :key property will be omitted and
 default `loophole-read-key' will be used for reading key."
   :risky t
-  :group 'loophole
   :type '(repeat sexp))
 
 (defcustom loophole-bind-keymap-order
@@ -464,7 +440,6 @@ non-nil other than 'negative-argument, or while it is
 `negative-argument', :key property will be omitted and
 default `loophole-read-key' will be used for reading key."
   :risky t
-  :group 'loophole
   :type '(repeat sexp))
 
 (defcustom loophole-bind-symbol-order
@@ -494,7 +469,6 @@ non-nil other than 'negative-argument, or while it is
 `negative-argument', :key property will be omitted and
 default `loophole-read-key' will be used for reading key."
   :risky t
-  :group 'loophole
   :type '(repeat sexp))
 
 (defcustom loophole-set-key-order
@@ -525,7 +499,6 @@ non-nil other than 'negative-argument, or while it is
 `negative-argument', :key property will be omitted and
 default `loophole-read-key' will be used for reading key."
   :risky t
-  :group 'loophole
   :type '(repeat sexp))
 
 (define-obsolete-variable-alias 'loophole-register-functions
@@ -534,7 +507,6 @@ default `loophole-read-key' will be used for reading key."
   "Hook for `loophole-register'.
 Functions added to this user option are called with one
 argument, registered map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-unregister-functions
@@ -543,7 +515,6 @@ argument, registered map variable."
   "Hook for `loophole-unregister'.
 Functions added to this user option are called with one
 argument, unregistered map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-prioritize-functions
@@ -552,7 +523,6 @@ argument, unregistered map variable."
   "Hook for `loophole-prioritize'.
 Functions added to this user option are called with one
 argument, prioritized map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-globalize-functions
@@ -561,7 +531,6 @@ argument, prioritized map variable."
   "Hook for `loophole-globalize'.
 Functions added to this user option are called with one
 argument, globalized map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-localize-functions
@@ -570,7 +539,6 @@ argument, globalized map variable."
   "Hook for `loophole-localize'.
 Functions added to this user option are called with one
 argument, localized map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-enable-functions
@@ -579,7 +547,6 @@ argument, localized map variable."
   "Hook for `loophole-enable'.
 Functions added to this user option are called with one
 argument, enabled map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-disable-functions
@@ -588,7 +555,6 @@ argument, enabled map variable."
   "Hook for `loophole-disable'.
 Functions added to this user option are called with one
 argument, disabled map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-start-editing-functions
@@ -597,7 +563,6 @@ argument, disabled map variable."
   "Hook for `loophole-start-editing'.
 Functions added to this user option are called with one
 argument, which is being edited map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-stop-editing-functions
@@ -606,7 +571,6 @@ argument, which is being edited map variable."
   "Hook for `loophole-stop-editing'.
 Functions added to this user option are called with one
 argument, which has been edited map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-globalize-editing-functions
@@ -615,7 +579,6 @@ argument, which has been edited map variable."
   "Hook for `loophole-globalize-editing'.
 Functions added to this user option are called with one
 argument, which is being edited map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-localize-editing-functions
@@ -624,7 +587,6 @@ argument, which is being edited map variable."
   "Hook for `loophole-localize-editing'.
 Functions added to this user option are called with one
 argument, which is being edited map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-name-functions
@@ -633,7 +595,6 @@ argument, which is being edited map variable."
   "Hook for `loophole-name'.
 Functions added to this user option are called with one
 argument, named new map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-merge-functions
@@ -642,7 +603,6 @@ argument, named new map variable."
   "Hook for `loophole-merge'.
 Functions added to this user option are called with one
 argument, merger map variable."
-  :group 'loophole
   :type 'hook)
 
 (define-obsolete-variable-alias 'loophole-duplicate-functions
@@ -652,12 +612,10 @@ argument, merger map variable."
 Functions added to this user option are called with two
 argument, first one is original map variable and second one
 is duplicated new map variable."
-  :group 'loophole
   :type 'hook)
 
 (defcustom loophole-read-buffer-set-up-hook nil
   "Hook run after the buffer for `loophole-read-buffer' is set up."
-  :group 'loophole
   :type 'hook)
 
 (defcustom loophole-bind-hook nil
@@ -665,7 +623,6 @@ is duplicated new map variable."
 Because binding commands including `loophole-set-key' and
 `loophole-unset-key' finally call `loophole-bind-entry',
 this hook is run with all of them."
-  :group 'loophole
   :type 'hook)
 
 (defcustom loophole-default-storage-file
@@ -673,7 +630,6 @@ this hook is run with all of them."
   "Default file path to storage Loophole maps.
 `loophole-save' and `loophole-load' use this user option if
 file is not specified by an argument."
-  :group 'loophole
   :type 'file)
 
 (defcustom loophole-make-load-overwrite-map 'temporary
@@ -688,7 +644,6 @@ If the value is non-nil but other than above, normal
 Loophole maps that look like loophole-*-map will be
 overwritten.
 If the value is nil, always ask user to overwrite a map."
-  :group 'loophole
   :type '(choice (const :tag "Temporary Loophole maps" temporary)
                  (const :tag "All registered maps" all)
                  (const nil)
@@ -703,27 +658,22 @@ When they print events stored in kmacro or array, this user
 option is referred to decide format.
 
 If nil, ordinary key event is printed as raw integer."
-  :group 'loophole
   :type 'boolean)
 
 (defcustom loophole-tag-sign "#"
   "String indicating tag string of Loophole map."
-  :group 'loophole
   :type 'string)
 
 (defcustom loophole-mode-lighter-base " L"
   "Lighter base string for mode line."
-  :group 'loophole
   :type 'string)
 
 (defcustom loophole-mode-lighter-editing-sign "+"
   "Lighter editing sign string for mode line."
-  :group 'loophole
   :type 'string)
 
 (defcustom loophole-mode-lighter-suspending-sign "-"
   "Lighter suspending sign string for mode line."
-  :group 'loophole
   :type 'string)
 
 (defcustom loophole-mode-lighter-use-face nil
@@ -742,7 +692,6 @@ eliminates help echos and clickable buttons.
               \\='mode-line-process
               \\='minor-mode-alist
               \"%n\" \")\" \"%]\" \" \"))"
-  :group 'loophole
   :type 'boolean)
 
 (defconst loophole-mode-lighter-preset-alist
@@ -850,23 +799,19 @@ these user options.
 Besides, they might be useful when you set your own lighter
 format."
   :risky t
-  :group 'loophole
   :type 'sexp)
 
 (defface loophole-using
   '((t :inherit error))
-  "Face used for section of lighter showing active Loophole map."
-  :group 'loophole)
+  "Face used for section of lighter showing active Loophole map.")
 
 (defface loophole-editing
   '((t))
-  "Face used for section of lighter showing editing Loophole map."
-  :group 'loophole)
+  "Face used for section of lighter showing editing Loophole map.")
 
 (defface loophole-suspending
   '((t :inherit shadow))
-  "Face used for suffixes of lighter while loophole is suspending."
-  :group 'loophole)
+  "Face used for suffixes of lighter while loophole is suspending.")
 
 ;;; Auxiliary functions
 
@@ -4245,7 +4190,6 @@ string of `loophole-mode-lighter'.
 Followings are the key bindings for Loophole commands.
 
 \\{loophole-mode-map}"
-  :group 'loophole
   :global t
   :lighter loophole-mode-lighter
   :keymap (let ((map (make-sparse-keymap)))
@@ -4836,7 +4780,6 @@ They setup some hooks.
 
 For more detailed customization, see documentation string of
 `loophole-turn-on-auto-prioritize'."
-  :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
          (if value
@@ -4855,7 +4798,6 @@ They setup some hooks.
 
 For more detailed customization, see documentation string of
 `loophole-turn-on-auto-stop-editing'."
-  :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
          (if value
@@ -4874,7 +4816,6 @@ They setup some hooks.
 
 For more detailed customization, see documentation string of
 `loophole-turn-on-auto-resume'."
-  :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
          (if value
@@ -4893,7 +4834,6 @@ They setup some hooks.
 
 For more detailed customization, see documentation string of
 `loophole-turn-on-auto-timer'."
-  :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
          (if value
@@ -4912,7 +4852,6 @@ They setup some hooks.
 
 For more detailed customization, see documentation string of
 `loophole-turn-on-auto-editing-timer'."
-  :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
          (if value
@@ -4939,7 +4878,6 @@ session.
 
 For more detailed customization, see documentation string of
 `loophole-turn-on-auto-start-editing-for-existing-binding'."
-  :group 'loophole
   :type 'sexp
   :set (lambda (symbol value)
          (if value
@@ -4981,7 +4919,6 @@ for this variable.  Use `custom-set-variables' or call
 `loophole-turn-off-idle-prioritize' manually.
 They setup idle timer."
   :risky t
-  :group 'loophole
   :type 'sexp
   :set (lambda (symbol value)
          (if value
@@ -5025,7 +4962,6 @@ for this variable.  Use `custom-set-variables' or call
 `loophole-turn-off-idle-save' manually.
 They setup idle timer."
   :risky t
-  :group 'loophole
   :type 'sexp
   :set (lambda (symbol value)
          (if value
@@ -5170,7 +5106,6 @@ multiline, multiline font lock is enabled.
 When using multiline, `jit-lock-contextually' should be
 non-nil on buffers containing Loophole forms like
 `loophole-define-map' to properly rehighlight forms."
-  :group 'loophole
   :type '(choice
           (const :tag "Disable font lock" nil)
           (const :tag "Enable font lock with support for multiline" multiline)
