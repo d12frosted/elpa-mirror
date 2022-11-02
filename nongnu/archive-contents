@@ -205,16 +205,6 @@
 		(:authors
 		 ("Chris Wanstrath" . "chris@ozmm.org"))
 		(:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
- (color-theme-tangotango .
-			 [(0 0 6)
-			  ((color-theme
-			    (6 6 1)))
-			  "Tango Palette color theme for Emacs." tar
-			  ((:url . "https://github.com/juba/color-theme-tangotango")
-			   (:keywords "tango" "palette" "color" "theme" "emacs")
-			   (:maintainer "Julien Barnier")
-			   (:authors
-			    ("Julien Barnier")))])
  (corfu-terminal .
 		 [(0 5)
 		  ((emacs
@@ -1584,14 +1574,14 @@
        ((:url . "https://github.com/joaotavora/sly")
 	(:keywords "languages" "lisp" "sly"))])
  (smartparens .
-	      [(17 2)
+	      [(1 11 0)
 	       nil "Automatic insertion, wrapping and paredit-like navigation with user defined pairs." tar
 	       ((:url . "https://github.com/Fuco1/smartparens")
 		(:keywords "abbrev" "convenience" "editing")
 		(:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
 		(:authors
 		 ("Matus Goljer" . "matus.goljer@gmail.com"))
-		(:commit . "8b6a3c3b31afd5b3f846e09859b5fc62eb06e7c1"))])
+		(:commit . "4873352b5d0a1c5142658122de1b6950b8fe7e4d"))])
  (solarized-theme .
 		  [(1 3 0)
 		   ((emacs

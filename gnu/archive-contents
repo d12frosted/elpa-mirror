@@ -19,7 +19,7 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (ada-mode .
-	   [(7 3 0)
+	   [(7 3 1)
 	    ((uniquify-files
 	      (1 0 1))
 	     (wisi
@@ -32,7 +32,7 @@
 	     (:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
 	     (:authors
 	      ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
-	     (:commit . "11a6a5a1da7048c440e17f185652d9ba283f8cf7"))])
+	     (:commit . "64acce8bda65d3409166a63be26fd21100ef54ce"))])
  (ada-ref-man .
 	      [(2020 1)
 	       nil "Ada Reference Manual 2012" tar
@@ -392,15 +392,6 @@
 	   (:authors
 	    ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	   (:url . "https://elpa.gnu.org/packages/cl-lib.html"))])
- (cl-print .
-	   [(1 0)
-	    ((emacs
-	      (25)))
-	    "CL-style generic printing" single
-	    ((:url . "http://elpa.gnu.org/packages/cl-print.html")
-	     (:authors
-	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (clipboard-collector .
 		      [(0 3)
 		       ((emacs
@@ -865,19 +856,6 @@
 	    (:authors
 	     ("Chong Yidong" . "cyd@gnu.org"))
 	    (:maintainer "Chong Yidong" . "cyd@gnu.org"))])
- (dtache .
-	 [(0 7)
-	  ((emacs
-	    (27 1))
-	   (detached
-	    (0 7)))
-	  "A package to launch, and manage, dtache processes" tar
-	  ((:url . "https://sr.ht/~niklaseklund/dtache.el/")
-	   (:keywords "convenience" "processes")
-	   (:maintainer "Niklas Eklund" . "niklas.eklund@posteo.net")
-	   (:authors
-	    ("Niklas Eklund" . "niklas.eklund@posteo.net"))
-	   (:commit . "b194f96af4e6298fe086a844115ea23300be7166"))])
  (dts-mode .
 	   [(1 0)
 	    ((emacs
@@ -1986,18 +1964,6 @@
 	     (:authors
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
 	     (:commit . "d1c85e5e2cfc0cff3f63409b0ac15dd230568609"))])
- (modus-operandi-theme .
-		       [(0 13 2)
-			((emacs
-			  (26 1))
-			 (modus-themes
-			  (1 2 4)))
-			"Accessible light theme (WCAG AAA) [DEPRECATED]" tar
-			((:url . "https://gitlab.com/protesilaos/modus-themes")
-			 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-			 (:authors
-			  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-			 (:keywords "faces" "theme" "accessibility"))])
  (modus-themes .
 	       [(3 0 0)
 		((emacs
@@ -2009,18 +1975,6 @@
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		 (:commit . "1e7710d00f909900c9934d61113c43cb2229530f"))])
- (modus-vivendi-theme .
-		      [(0 13 2)
-		       ((emacs
-			 (26 1))
-			(modus-themes
-			 (1 2 4)))
-		       "Accessible dark theme (WCAG AAA) [DEPRECATED]" tar
-		       ((:url . "https://gitlab.com/protesilaos/modus-themes")
-			(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-			(:authors
-			 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-			(:keywords "faces" "theme" "accessibility"))])
  (multi-mode .
 	     [(1 14)
 	      nil "support for multiple major modes" tar
