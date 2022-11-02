@@ -4,9 +4,9 @@
 ;; Author: Johan Claesson <johanwclaesson@gmail.com>
 ;; Maintainer: Johan Claesson <johanwclaesson@gmail.com>
 ;; URL: https://github.com/johanclaesson/picpocket
-;; Package-Version: 20210806.1135
-;; Package-Commit: 7e30e96c26b1ff0d374612534c3e09d309426252
-;; Version: 42
+;; Package-Version: 20221101.2104
+;; Package-Commit: 30942846bd8cb95a938a534ed9ed9efeff813b7c
+;; Version: 43
 ;; Keywords: multimedia
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -224,8 +224,17 @@ is non-nil."
   "Face for unavailable commands.")
 
 
-(defvar picpocket-filter-ignore-hyphens t
-  "If non-nil the filter ignores underscores and dashes.")
+(defcustom picpocket-filter-ignore-hyphens t
+  "If non-nil the filter ignores underscores and dashes."
+  :type 'boolean)
+
+(defcustom picpocket-filter-case-fold t
+  "Fold case for filter matching."
+  :type 'boolean)
+
+(defcustom picpocket-filter-substring nil
+  "When the filter is a substring of a tag that counts as a match."
+  :type 'boolean)
 
 
 (defcustom picpocket-fit :x-and-y
@@ -301,6 +310,10 @@ variable can be toggled with the command
 \\[picpocket-toggle-destination-dir] in the picpocket buffer."
   :type 'boolean)
 
+(defcustom picpocket-keep-moved-files nil
+  "If non-nil a pic stays in the current list after being moved."
+  :type 'boolean)
+
 (defcustom picpocket-thumbnail-size 5
   "The heigth of picpocket undo thumbnails.
 Specified in number of default line heigths."
@@ -343,7 +356,7 @@ This affects the commands `picpocket-scroll-some-*'."
 
 ;; PENDING some of these would make sense to convert to defcustom
 
-(defconst picpocket-version 42)
+(defconst picpocket-version 43)
 (defconst picpocket-buffer "*picpocket*")
 (defconst picpocket-undo-buffer "*picpocket-undo*")
 (defconst picpocket-list-buffer "*picpocket-list*")
@@ -664,18 +677,25 @@ This mode is not used directly.  Other modes inherit from this mode.
   "Major mode for the main *picpocket* buffer.
 
 \\{picpocket-mode-map}"
-  ;; PENDING
-  ;; :after-hook (picpocket-update-keymap)
   (picpocket-db-init)
   (picpocket-db-compile-tags-for-completion)
   (setq header-line-format (when picpocket-header
                              picpocket-header-line-format)
         vertical-scroll-bar nil
         cursor-type nil
-        left-fringe-width 0
-        right-fringe-width 0)
+        truncate-lines t)
+  (if (and (picpocket-fullscreen-p)
+           (eq (selected-frame) picpocket-frame))
+      ;; The picpocket fullscreen frame have no-special-glyphs true
+      ;; which allows having fringe width zero.  With
+      ;; no-special-glyphs nil and zero fringe then one char width of
+      ;; the window will be reserved for truncation/continuation
+      ;; glyphs and that area cannot be used by the image.
+      (setq left-fringe-width 0
+            right-fringe-width 0)
+    (setq left-fringe-width 1
+          right-fringe-width 1))
   ;; Call set-window-buffer to update the fringes.
-  ;; PENDING should call set-window-buffer in create function instead?
   (set-window-buffer (selected-window) (current-buffer))
   (when (eq (selected-frame) picpocket-frame)
     (setq mode-line-format nil))
@@ -706,12 +726,16 @@ This mode is not used directly.  Other modes inherit from this mode.
                       " [l - follow symlinks]"
                       " [t - dir-tags]"
                       " [n - thumbnails]"
+                      " [s - filter by substring]"
+                      " [k - keep moved]"
                       " [D - debug]"))))
     (define-key map [?d] #'picpocket-toggle-destination-dir)
     (define-key map [?r] #'picpocket-toggle-recursive)
     (define-key map [?l] #'picpocket-toggle-follow-symlinks)
     (define-key map [?t] #'picpocket-toggle-dir-tags)
     (define-key map [?n] #'picpocket-toggle-thumbnails)
+    (define-key map [?s] #'picpocket-toggle-filter-by-substring)
+    (define-key map [?k] #'picpocket-toggle-keep-moved-files)
     (define-key map [?D] #'picpocket-toggle-debug)
     map))
 
@@ -726,6 +750,8 @@ This mode is not used directly.  Other modes inherit from this mode.
                       " [l - follow symlinks]"
                       " [t - dir-tags]"
                       " [n - thumbnails]"
+                      " [s - filter by substring]"
+                      " [k - keep moved]"
                       " [D - debug]"))))
     (set-keymap-parent map picpocket-base-toggle-map)
     (define-key map [?f] #'picpocket-toggle-fullscreen-frame)
@@ -740,6 +766,8 @@ This mode is not used directly.  Other modes inherit from this mode.
   (define-key map [?p] #'picpocket-previous)
   (define-key map [?\s] #'picpocket-next)
   (define-key map [?n] #'picpocket-next)
+  (define-key map [(meta ?p)] #'picpocket-previous-directory)
+  (define-key map [(meta ?n)] #'picpocket-next-directory)
   (define-key map [?d] #'picpocket-dired)
   (define-key map [?v] #'picpocket-visit-file)
   (define-key map [?e] #'picpocket-edit-keystrokes)
@@ -1130,6 +1158,14 @@ ASK-FOR-DIR non-nil will also do that."
                "the current directory"
              picpocket-destination-dir)))
 
+(defun picpocket-toggle-keep-moved-files ()
+  "Toggle whether to keep pictures in the list after moving them."
+  (interactive)
+  (setq picpocket-keep-moved-files (not picpocket-keep-moved-files))
+  (message "%s moved files in the picture list" (if picpocket-keep-moved-files
+                                                    "Keep"
+                                                  "Do not keep")))
+
 (defun picpocket-toggle-thumbnails ()
   "Toggle thumbnails in list buffers.
 
@@ -1201,6 +1237,9 @@ this frame and go back to the old frame."
             (with-current-buffer mini-buffer
               (setq mode-line-format (default-value 'mode-line-format))))
           (with-current-buffer picpocket-buffer
+            (setq left-fringe-width 1
+                  right-fringe-width 1)
+            (set-window-buffer (selected-window) (current-buffer))
             (setq mode-line-format (default-value 'mode-line-format))))
       ;; Bury the picpocket buffer in the old frame.  This relieves
       ;; the display engine from updating that as well.  This is
@@ -1223,6 +1262,9 @@ this frame and go back to the old frame."
         (when mini-enabled
           (picpocket-add-mini-window))
         (with-current-buffer picpocket-buffer
+          (setq left-fringe-width 0
+                right-fringe-width 0)
+          (set-window-buffer (selected-window) (current-buffer))
           (setq mode-line-format nil)
           ;; PENDING use after-focus-change-function instead...?
           (with-no-warnings
@@ -1247,7 +1289,13 @@ this frame and go back to the old frame."
                   (minibuffer . nil)
                   (fullscreen . fullboth)
                   (foreground-color . ,foreground)
-                  (background-color . ,background)))))
+                  (background-color . ,background)
+                  ;; Having no-special-glyphs true allows having
+                  ;; fringe width zero.  With no-special-glyphs nil
+                  ;; and zero fringe then one char width of the window
+                  ;; will be reserved for truncation/continuation
+                  ;; glyphs and that area cannot be used by the image.
+                  (no-special-glyphs . t)))))
 
 
 (defun picpocket-focus ()
@@ -1336,16 +1384,17 @@ This hook make sure it is fitted to the picpocket frame."
         (picpocket-no-file "previous")))))
 
 (defun picpocket-previous-pic ()
-  (picpocket-when-let (pos (picpocket-previous-pos 'silent))
+  (picpocket-when-let (pos (picpocket-previous-pos nil 'silent))
     (picpocket-pos-current pos)))
 
-(defun picpocket-previous-pos (&optional silent)
+(defun picpocket-previous-pos (&optional pos silent)
+  (unless pos
+    (setq pos (picpocket-current-pos)))
   (let (printed)
     (prog1
-        (cl-loop for pic = (picpocket-safe-prev picpocket-current)
+        (cl-loop for pic = (picpocket-safe-prev (picpocket-pos-current pos))
                  then (picpocket-safe-prev pic)
-                 for index = (1- picpocket-index)
-                 then (1- index)
+                 for index = (1- (picpocket-pos-index pos)) then (1- index)
                  while pic
                  when (picpocket-filter-match-p pic)
                  return (make-picpocket-pos :current pic
@@ -1366,6 +1415,31 @@ This hook make sure it is fitted to the picpocket frame."
 (defun picpocket-safe-prev (pic)
   (when pic
     (picpocket-prev pic)))
+
+(defun picpocket-next-directory ()
+  "Move forward in the list until next directory."
+  (interactive)
+  (picpocket-command
+    (cl-loop with old-dir = (picpocket-dir)
+             for pos = (picpocket-current-pos) then (picpocket-next-pos pos)
+             unless pos
+             do (user-error "No next directory")
+             unless (string-equal (picpocket-dir (picpocket-pos-current pos))
+                                  old-dir)
+             return (picpocket-set-pos pos))))
+
+(defun picpocket-previous-directory ()
+  "Move backward in the list until previous directory."
+  (interactive)
+  (picpocket-command
+    (cl-loop with old-dir = (picpocket-dir)
+             for pos = (picpocket-current-pos) then (picpocket-previous-pos pos)
+             unless pos
+             do (user-error "No previous directory")
+             unless (string-equal (picpocket-dir (picpocket-pos-current pos))
+                                  old-dir)
+             return (picpocket-set-pos pos))))
+
 
 (defun picpocket-home ()
   "Move to the first picture in the current list."
@@ -1697,6 +1771,10 @@ The filter is a list of tags.  Only pictures with all the tags in
 the filter is shown.  To enter multiple tags separate them with
 spaces.
 
+If a tag in the filter is prefixed with a exclamation point (!)
+the meaning is inverted and only pictures without this tags is
+shown.
+
 If `picpocket-consider-dir-as-tag' is non-nil also the
 containing directory counts as a tag as far as the filter is
 concerned.
@@ -1719,23 +1797,42 @@ space-separated string."
   (picpocket-idle-f-restart #'picpocket-compute-filter-index)
   (picpocket-idle-f-restart #'picpocket-compute-filter-match-count))
 
+(defun picpocket-toggle-filter-by-substring ()
+  "Toggle that a substring match counts for filter."
+  (interactive)
+  (setq picpocket-filter-substring (not picpocket-filter-substring))
+  (message (if picpocket-filter-substring
+               "Filter by substring"
+             "Filter by full match"))
+  (when (picpocket-buffer-p)
+    (picpocket-update-buffers)))
+
 (defun picpocket-filter-match-p (pic)
   (or (null picpocket-filter)
-      (cl-subsetp (picpocket-remove-hyphens
-                   picpocket-filter)
-                  (picpocket-remove-hyphens
-                   (picpocket-all-tags pic)))))
+      (cl-loop with filter = (picpocket-prepare-filter-tags
+                              picpocket-filter)
+               with tags = (picpocket-prepare-filter-tags
+                            (picpocket-all-tags pic))
+               for f in filter
+               unless (picpocket-filter-word-match-p f tags) return nil
+               finally return t)))
 
-(defun picpocket-remove-hyphens (list-or-symbol)
-  (cond ((not picpocket-filter-ignore-hyphens)
-         list-or-symbol)
-        ((consp list-or-symbol)
-         (mapcar #'picpocket-remove-hyphens list-or-symbol))
-        (t (let ((str (symbol-name list-or-symbol)))
-             (if (string-match "[-_]" str)
-                 (let ((chars (string-to-list str)))
-                   (intern (apply #'string (delete ?- (delete ?_ chars)))))
-               list-or-symbol)))))
+(defun picpocket-prepare-filter-tags (tags)
+  (mapcar #'picpocket-prepare-filter-tag tags))
+
+(defun picpocket-prepare-filter-tag (tag)
+  (let ((s (symbol-name tag)))
+    (when picpocket-filter-ignore-hyphens
+      (setq s (delete ?- (delete ?_ s))))
+    (when picpocket-filter-case-fold
+      (setq s (downcase s)))))
+
+(defun picpocket-filter-word-match-p (f tags)
+  (if (eq (string-to-char f) ?!)
+      (not (picpocket-filter-word-match-p (string-remove-prefix "!" f) tags))
+    (if picpocket-filter-substring
+        (seq-some (lambda (tag) (string-match (regexp-quote f) tag)) tags)
+      (member f tags))))
 
 (defun picpocket-all-tags (pic)
   (delete-dups (append (picpocket-tags pic)
@@ -1946,7 +2043,7 @@ Scroll will also stop if any other command is invoked."
 (defun picpocket-vscroll (delta min max)
   (cl-loop for i = (window-vscroll nil t) then (+ i delta)
            do (set-window-vscroll nil i t)
-           do (sit-for 0.002)
+           do (sit-for 0)
            until (and min (<= i min))
            until (and max (>= i max))
            until (input-pending-p))
@@ -2288,7 +2385,11 @@ The length scrolled is the width of the picture multiplied with
 
 (defun picpocket-picture-file-p (file &optional verbose)
   (let ((case-fold-search t))
-    (cond ((not (file-regular-p file))
+    (cond ((not (file-exists-p file))
+           (when verbose
+             (message "Skipping %s which does not exist" file))
+           nil)
+          ((not (file-regular-p file))
            (when verbose
              (message "Skipping %s which is not a regular file" file))
            nil)
@@ -2627,7 +2728,7 @@ F is the picpocket command."
 
 (define-derived-mode picpocket-tab-mode tabulated-list-mode
   "picpocket-tab"
-  "Base mode for picpocket modes derived from tabulated-list-mode.
+  "Base mode for picpocket modes derived from `tabulated-list-mode'.
 
 \\{picpocket-tab-mode-map}"
   nil)
@@ -3513,6 +3614,10 @@ any Emacs.  Otherwise your edits may become overwritten.")
 (defun picpocket-db-count ()
   (hash-table-count picpocket-db))
 
+(defun picpocket-db-ensure-init ()
+  (unless picpocket-db
+    (picpocket-db-init)))
+
 (defun picpocket-db-init ()
   (make-directory picpocket-db-dir t)
   (let ((db (picpocket-db-read nil))
@@ -4046,6 +4151,7 @@ any Emacs.  Otherwise your edits may become overwritten.")
     (set-window-buffer mini-window mini-buffer)))
 ;; PENDING delete mode line in fullscreen...
 
+;; PENDING the name mini-buffer was taken a long time ago...
 (defun picpocket-update-mini-buffer ()
   (with-current-buffer (get-buffer-create picpocket-mini-buffer)
     (let (buffer-read-only)
@@ -4156,10 +4262,13 @@ any Emacs.  Otherwise your edits may become overwritten.")
       (revert-buffer))))
 
 (defun picpocket-ensure-picpocket-buffer ()
-  (unless (and (equal (buffer-name) picpocket-buffer)
-               (eq major-mode 'picpocket-mode))
+  (unless (picpocket-buffer-p)
     (error "%s requires picpocket mode" (or this-command
                                             "This"))))
+
+(defun picpocket-buffer-p ()
+  (and (equal (buffer-name) picpocket-buffer)
+       (eq major-mode 'picpocket-mode)))
 
 (defun picpocket-update-main-buffer ()
   (let ((s (cadr (picpocket-time (picpocket-do-update-main-buffer)))))
@@ -4274,11 +4383,9 @@ necessarily run with the picpocket window selected."
 
 (defun picpocket-current-window-size ()
   (cl-destructuring-bind (x0 y0 x1 y1) (window-inside-pixel-edges)
-    ;; For some reason Emacs 25.0 refuses to draw image in a right
-    ;; margin that seem to be (frame-char-width) pixels wide.
-    ;; Therefore subtract that.
-    (cons (- x1 x0 (frame-char-width))
+    (cons (- x1 x0)
           (- y1 y0))))
+
 
 (defun picpocket-create-image (pic canvas-size)
   (pcase-let ((`(,keyword . ,value) (picpocket-clock
@@ -5140,11 +5247,14 @@ the delete action, though)."
                              :trash-file trash-file
                              :sha (picpocket-sha-force pic))
     (picpocket-sha-force pic)
+    (clear-image-cache new-absfile)
     (rename-file old-absfile new-absfile t)
     (picpocket-tags-move-file pic old-absfile new-absfile)
     (cond ((or (eq action 'move)
                (equal old-file new-file))
-           (picpocket-list-delete pic)
+           (if picpocket-keep-moved-files
+               (picpocket-set-dir pic new-dir)
+             (picpocket-list-delete pic))
            (message "Moved %s to %s"
                     (file-name-nondirectory old-absfile)
                     (file-name-directory new-absfile)))
@@ -5152,7 +5262,9 @@ the delete action, though)."
            (picpocket-set-file pic new-file)
            (message "Renamed %s to %s" old-file new-file))
           (t
-           (picpocket-list-delete pic)
+           (if picpocket-keep-moved-files
+               (picpocket-set-absfile pic new-absfile)
+             (picpocket-list-delete pic))
            (message "Renamed and moved %s to %s" old-file new-absfile)))))
 
 (defun picpocket-undo-file-relocate-action (op)
@@ -5193,6 +5305,7 @@ the delete action, though)."
     (when (file-exists-p new-absfile)
       (setq trash-file (picpocket-trash-file new-absfile))
       (rename-file new-absfile trash-file))
+    (clear-image-cache new-absfile)
     (if (eq action 'copy)
         (copy-file old-absfile new-absfile t)
       (add-name-to-file old-absfile new-absfile t))

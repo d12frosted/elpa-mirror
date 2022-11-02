@@ -6,8 +6,8 @@
 ;; Maintainer: Thibault Polge <thibault@thb.lt>
 ;;
 ;; Keywords: frames
-;; Package-Version: 20221101.1708
-;; Package-Commit: 8a3487115eec5893d317254b423f2ce058f5f795
+;; Package-Version: 20221101.2243
+;; Package-Commit: 6268291a29da9c6165432f9bbdebf6bab13c72f5
 ;; Homepage: https://github.com/thblt/sway.el
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "27.1") (dash "2.18.1"))
@@ -321,9 +321,11 @@ TREE, VISIBLE-ONLY, FOCUSED-ONLY and return value are as in
 (defvar sway-undertaker-killer-commands
   (list 'bury-buffer
         'cvs-bury-buffer
+        'forge-post-cancel
         'magit-log-bury-buffer
         'magit-mode-bury-buffer
-        'quit-window)
+        'quit-window
+        'with-editor-cancel)
   "Commands the interpreter should interpret as a request to kill a frame.")
 
 (defun sway--undertaker (&optional frame)
@@ -456,6 +458,7 @@ argument for the undertaker.."
     (when (and sway-undertaker-mode
                (plist-get plist :dedicate)
                (not sway))
+
       (set-frame-parameter frame 'sway-dedicated buffer))
 
     ;; Return the window displaying buffer.
