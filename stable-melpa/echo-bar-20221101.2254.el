@@ -4,8 +4,8 @@
 
 ;; Author: Adam Tillou <qaiviq@gmail.com>
 ;; Keywords: convenience, tools
-;; Package-Version: 20221016.2230
-;; Package-Commit: 892893e4af761baa2988184a280cfb7ba7f972b2
+;; Package-Version: 20221101.2254
+;; Package-Commit: d0a24635da51502bdda9f5451793966fffef92a8
 ;; Version: 1.0.0
 ;; Homepage: https://github.com/qaiviq/echo-bar.el
 
@@ -142,6 +142,9 @@ If nil, don't update the echo bar automatically."
 (defun echo-bar-set-text (text)
   "Set the text displayed by the echo bar to TEXT."
   (let* ((wid (+ (string-width text) echo-bar-right-padding))
+         ;; Maximum length for the echo area message before wrap to next line
+         (max-len (- (frame-width) wid 5))
+         ;; Align the text to the correct width to make it right aligned
          (spc (propertize " " 'cursor 1 'display
                           `(space :align-to (- right-fringe ,wid)))))
 
@@ -150,11 +153,17 @@ If nil, don't update the echo bar automatically."
     ;; Add the correct text to each echo bar overlay
     (dolist (o echo-bar-overlays)
       (when (overlay-buffer o)
-        (overlay-put o 'after-string echo-bar-text)))
+
+        (with-current-buffer (overlay-buffer o)
+          ;; Wrap the text to the next line if the echo bar text is too long
+          (if (> (point-max) max-len)
+              (overlay-put o 'after-string (concat "\n" echo-bar-text))
+            (overlay-put o 'after-string echo-bar-text)))))
 
     ;; Display the text in Minibuf-0, as overlays don't show up
     (with-current-buffer (window-buffer
                           (minibuffer-window))
+      ;; Don't override existing text in minibuffer, such as ispell
       (when (get-text-property (point-min) 'echo-bar)
         (delete-region (point-min) (point-max)))
       (when (= (point-min) (point-max))
