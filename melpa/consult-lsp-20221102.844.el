@@ -2,8 +2,8 @@
 
 ;; Licence: MIT
 ;; Keywords: tools, completion, lsp
-;; Package-Version: 20221019.1321
-;; Package-Commit: 58b541476203fa68e9e7682531f2a10e11780857
+;; Package-Version: 20221102.844
+;; Package-Commit: f6fff70edb3a27726f9c61d3d81849df85f7ccbe
 ;; Author: Gerry Agbobada
 ;; Maintainer: Gerry Agbobada
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "5.0") (consult "0.16") (f "0.20.0"))
@@ -435,7 +435,7 @@ usable in the annotation-function."
                (to-flatten accumulator)
                (dolist (table to-flatten)
                  (push table accumulator)
-                 (when-let ((children (lsp-get table "children")))
+                 (when-let ((children (lsp-get table :children)))
                    (setq accumulator (rec-helper
                                       (append children nil) ; convert children from vector to list
                                       accumulator))))

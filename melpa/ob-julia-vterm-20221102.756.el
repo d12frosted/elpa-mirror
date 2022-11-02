@@ -1,4 +1,4 @@
-;;; ob-julia-vterm.el --- Babel Functions for Julia in VTerm -*- lexical-binding: t -*-
+;;; ob-julia-vterm.el --- Babel functions for Julia that work with julia-vterm -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2020-2022 Shigeaki Nishina
 
@@ -6,10 +6,10 @@
 ;; Maintainer: Shigeaki Nishina
 ;; Created: October 31, 2020
 ;; URL: https://github.com/shg/ob-julia-vterm.el
-;; Package-Version: 20220903.554
-;; Package-Commit: 1da59a806f88483063d3c0449d8927d76acd975a
+;; Package-Version: 20221102.756
+;; Package-Commit: e0069ff1d8ebf0be13cc24b980579577b5e343d8
 ;; Package-Requires: ((emacs "26.1") (julia-vterm "0.16") (queue "0.2"))
-;; Version: 0.2h
+;; Version: 0.2i
 ;; Keywords: julia, org, outlines, literate programming, reproducible research
 
 ;; This file is not part of GNU Emacs.
@@ -73,7 +73,7 @@ import Logging; let
             try
                 include(\"%s\")
             catch e
-                showerror(logger.stream, e)
+                showerror(logger.stream, e, catch_backtrace())
             end
         end
     end
@@ -109,7 +109,7 @@ import Logging; open(\"%s\", \"w\") do io
         end
         result
     catch e
-        msg = sprint(showerror, e)
+        msg = sprint(showerror, e, catch_backtrace())
         println(logger.stream, msg)
         println(msg)
     end

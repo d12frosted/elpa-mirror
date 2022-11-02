@@ -1,13 +1,13 @@
 (ob-julia-vterm .
-		[(20220903 554)
+		[(20221102 756)
 		 ((emacs
 		   (26 1))
 		  (julia-vterm
 		   (0 16))
 		  (queue
 		   (0 2)))
-		 "Babel Functions for Julia in VTerm" single
-		 ((:commit . "1da59a806f88483063d3c0449d8927d76acd975a")
+		 "Babel functions for Julia that work with julia-vterm" single
+		 ((:commit . "e0069ff1d8ebf0be13cc24b980579577b5e343d8")
 		  (:authors
 		   ("Shigeaki Nishina"))
 		  (:maintainer "Shigeaki Nishina")

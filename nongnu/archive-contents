@@ -818,9 +818,10 @@
 	      (:authors
 	       ("Natalie Weizenbaum")))])
  (haskell-mode .
-	       [(4 7 1)
+	       [(17 2)
 		nil "A Haskell editing mode" tar
 		((:url . "https://github.com/haskell/haskell-mode")
+		 (:keywords "faces" "files" "haskell")
 		 (:maintainer "1992      Simon Marlow")
 		 (:authors
 		  ("1992      Simon Marlow")
@@ -829,7 +830,7 @@
 		  ("2001-2002 Reuben Thomas (>=v1.4)")
 		  ("2003      Dave Love" . "fx@gnu.org")
 		  ("2016      Arthur Fayzrakhmanov"))
-		 (:keywords "faces" "files" "haskell"))])
+		 (:commit . "e72677668f5fc7cc148008e885a0f256e245dd43"))])
  (haskell-tng-mode .
 		   [(0 0 1)
 		    ((emacs
@@ -1583,13 +1584,14 @@
        ((:url . "https://github.com/joaotavora/sly")
 	(:keywords "languages" "lisp" "sly"))])
  (smartparens .
-	      [(4 7 1)
+	      [(17 2)
 	       nil "Automatic insertion, wrapping and paredit-like navigation with user defined pairs." tar
 	       ((:url . "https://github.com/Fuco1/smartparens")
+		(:keywords "abbrev" "convenience" "editing")
 		(:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
 		(:authors
 		 ("Matus Goljer" . "matus.goljer@gmail.com"))
-		(:keywords "abbrev" "convenience" "editing"))])
+		(:commit . "8b6a3c3b31afd5b3f846e09859b5fc62eb06e7c1"))])
  (solarized-theme .
 		  [(1 3 0)
 		   ((emacs
