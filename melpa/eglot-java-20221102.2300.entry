@@ -1,0 +1,15 @@
+(eglot-java .
+	    [(20221102 2300)
+	     ((emacs
+	       (26 1))
+	      (eglot
+	       (1 0))
+	      (jsonrpc
+	       (1 0 0)))
+	     "Java extension for the eglot LSP client" single
+	     ((:commit . "10d0b3b65adf83fbd939f973cafc5b5122536bb4")
+	      (:authors
+	       ("Yves Zoundi" . "yves_zoundi@hotmail.com"))
+	      (:maintainer "Yves Zoundi" . "yves_zoundi@hotmail.com")
+	      (:keywords "convenience" "languages")
+	      (:url . "https://github.com/yveszoundi/eglot-java"))])

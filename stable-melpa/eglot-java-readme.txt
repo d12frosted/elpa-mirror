@@ -1,17 +1,19 @@
-Java extension for eglot. Some of the key features include the following:
+Java extension for eglot.
+
+Some of the key features include the following:
 - Automatic installation of the Eclipse JDT LSP server.
 - Ability to pass JVM arguments to the Eclipse JDT LSP server (eglot-java-eclipse-jdt-args)
 - Wizards for Spring starter, Maven and Gradle project creation
 - Generic build command support for Maven and Gradle projects
 - JUnit tests support, this hasn't been tested for a while...
 
-Add the following lines to your .emacs configuration;;
+Below is a sample configuration for your emacs init file
 
-(eval-after-load 'eglot-java
- (progn
-   (require 'eglot-java)
-   ;; The prefix key will be associated to the keymap eglot-mode-map
-   ;; This is a customizable variable in the eglot-java group
-   (setq eglot-java-prefix-key "C-c l")
-   (setq eglot-java-default-bindings-enabled t)
-   '(eglot-java-init)))
+(add-hook 'java-mode-hook 'eglot-java-mode)
+(add-hook 'eglot-java-mode-hook (lambda ()
+  (define-key eglot-java-mode-map (kbd "C-c l n") #'eglot-java-file-new)
+  (define-key eglot-java-mode-map (kbd "C-c l x") #'eglot-java-run-main)
+  (define-key eglot-java-mode-map (kbd "C-c l t") #'eglot-java-run-test)
+  (define-key eglot-java-mode-map (kbd "C-c l N") #'eglot-java-project-new)
+  (define-key eglot-java-mode-map (kbd "C-c l T") #'eglot-java-project-build-task)
+  (define-key eglot-java-mode-map (kbd "C-c l R") #'eglot-java-project-build-refresh)))

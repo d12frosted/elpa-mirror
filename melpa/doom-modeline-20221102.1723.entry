@@ -1,0 +1,15 @@
+(doom-modeline .
+	       [(20221102 1723)
+		((emacs
+		  (25 1))
+		 (compat
+		  (28 1 1 1))
+		 (shrink-path
+		  (0 2 0)))
+		"A minimal and modern mode-line" tar
+		((:commit . "729c9a8eb7b8c4dd66265af0926c4c55d0152ae0")
+		 (:authors
+		  ("Vincent Zhang" . "seagle0128@gmail.com"))
+		 (:maintainer "Vincent Zhang" . "seagle0128@gmail.com")
+		 (:keywords "faces" "mode-line")
+		 (:url . "https://github.com/seagle0128/doom-modeline"))])
