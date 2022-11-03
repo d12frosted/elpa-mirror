@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/imake
 ;; Keywords: convenience
-;; Package-Version: 20220422.1611
-;; Package-Commit: 8dde269f35eb3d287799342227d1e5a077a33777
+;; Package-Version: 20221022.2233
+;; Package-Commit: d9b5cb5c0a5483e663cc3c345df7659ddf08b61e
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
@@ -75,8 +75,18 @@ regular expression \"^\t$(info make \\([^)]*\\))\" is expected."
             (insert-file-contents "Makefile"))
           (if (re-search-forward "^help:")
               (while (re-search-forward
-                      "^\t$(info make \\([^)]*\\))" nil t)
-                (push (match-string-no-properties 1) targets))
+                      "^\t$(info make \\(\\(\\([^ ]*\\) *\\)\\([^)]*\\)\\))"
+                      nil t)
+                (let ((name (match-string-no-properties 3)))
+                  (if (string-match-p "\\`\\[[^]]+\\]\\'" name)
+                      (let ((len (length (match-string 2)))
+                            (desc (match-string-no-properties 4)))
+                        (dolist (name (split-string (substring name 1 -1) "|"))
+                          (push (concat name
+                                        (make-string (- len (length name)) ?\s)
+                                        desc)
+                                targets)))
+                    (push (match-string-no-properties 1) targets))))
             (user-error "There is no help target"))
           (nreverse targets)))
     (user-error "There is no Makefile in %s" default-directory)))
