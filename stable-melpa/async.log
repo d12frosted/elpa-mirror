@@ -4,22 +4,24 @@ Source:  https://github.com/jwiegley/emacs-async.git
 
 Updating /mnt/store/melpa/working/async/
 Checking out origin/HEAD
-Checking out ffde304480421f497458077bf5d563504e1ba5dd
+Checking out 10cedd8ac7173e92a6822317f1782550199d2d6d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/async/
-  to /tmp/asyncN8J2nk/async-20221014.2225
+  to /tmp/asyncCUB6BQ/async-20221103.638
     async-bytecomp.el -> async-bytecomp.el
     async.el -> async.el
     dired-async.el -> dired-async.el
     smtpmail-async.el -> smtpmail-async.el
-Created async-20221014.2225.tar containing:
-  async-20221014.2225/
-  async-20221014.2225/async-bytecomp.el
-  async-20221014.2225/async-pkg.el
-  async-20221014.2225/async.el
-  async-20221014.2225/dired-async.el
-  async-20221014.2225/smtpmail-async.el
-Built async in 4.193s, finished at 2022-11-03T03:49:10+0000
+Created async-20221103.638.tar containing:
+  async-20221103.638/
+  async-20221103.638/async-bytecomp.el
+  async-20221103.638/async-pkg.el
+  async-20221103.638/async.el
+  async-20221103.638/dired-async.el
+  async-20221103.638/smtpmail-async.el
+Built async in 5.429s, finished at 2022-11-03T07:35:10+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 344 Nov  3 03:49 packages/async-20221014.2225.entry
  60K -rw-r--r-- 1 root root 60K Nov  3 03:49 packages/async-20221014.2225.tar
+4.0K -rw-r--r-- 1 root root 343 Nov  3 07:35 packages/async-20221103.638.entry
+ 60K -rw-r--r-- 1 root root 60K Nov  3 07:35 packages/async-20221103.638.tar
