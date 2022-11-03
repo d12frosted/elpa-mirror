@@ -22,8 +22,6 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20220909.2022
-;; Package-Commit: 723736950beafd7d611fa42790ffc41ec202abd9
 ;; Author: Adrien Brochard
 ;; Keywords: kubernetes k8s tools processes
 ;; URL: https://github.com/abrochard/kubel
