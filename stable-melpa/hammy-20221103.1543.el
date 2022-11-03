@@ -4,9 +4,9 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/hammy.el
-;; Package-Version: 20221031.1933
-;; Package-Commit: 5a4d058fba11bae5559bea8405832bc8339b623f
-;; Version: 0.2-pre
+;; Package-Version: 20221103.1543
+;; Package-Commit: e76cefa2d7c97bd4c3b15d0f452a755c71a88072
+;; Version: 0.2
 ;; Package-Requires: ((emacs "28.1") (ts "0.2.2"))
 ;; Keywords: convenience
 
@@ -463,13 +463,13 @@ the task should be clocked in)."
     ;; Not in an Org entry: offer a list to choose from.
     (org-clock-in '(4)))
   (let ((hammy (hammy-complete "Clock in with Hammy: " hammy-hammys)))
+    (unless (hammy-interval hammy)
+      (hammy-start hammy))
     (cl-macrolet ((pushfn (fn place)
                           `(cl-pushnew ,fn ,place :test #'equal)))
       (pushfn #'hammy--org-clock-in (hammy-interval-before (hammy-interval hammy)))
       (pushfn #'hammy--org-clock-out (hammy-interval-after (hammy-interval hammy)))
       (pushfn #'hammy--org-clock-out (hammy-stopped hammy)))
-    (unless (hammy-interval hammy)
-      (hammy-start hammy))
     hammy))
 
 (defun hammy-stop (hammy &optional quietly)

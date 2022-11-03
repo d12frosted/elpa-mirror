@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.7
-;; Package-Version: 20221102.2124
-;; Package-Commit: c514333f61dd6b6c444a92ae16e41edd57a1ab82
+;; Package-Version: 20221103.1037
+;; Package-Commit: 1a00905aac732ff565cd1f336fce0305115a66dc
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "27.1")(zk "0.3"))
@@ -867,8 +867,8 @@ If `zk-index-auto-scroll' is non-nil, show note in other window."
       (save-excursion
         ;; replace titles
         (goto-char (point-min))
-        (let ((ids (zk--id-list))
-              (zk-alist (zk--alist)))
+        (let* ((zk-alist (zk--alist))
+               (ids (zk--id-list nil zk-alist)))
           (while (re-search-forward zk-id-regexp nil t)
             (let* ((beg (line-beginning-position))
                    (end (line-end-position))
@@ -944,15 +944,15 @@ at point."
                (ignore-errors
                  (setq items (car (funcall zk-index-format-function files))))
              (setq items
-               (car
-                (funcall
-                 zk-index-format-function
-                 (list (zk--parse-id 'file-path files)))))))
+                   (car
+                    (funcall
+                     zk-index-format-function
+                     (list (zk--parse-id 'file-path files)))))))
           (files                        ; > 1 elements in files
            (setq items
-             (mapconcat
-                 #'identity
-               (funcall zk-index-format-function files) "\n")))
+                 (mapconcat
+                  #'identity
+                  (funcall zk-index-format-function files) "\n")))
           ((eq major-mode 'zk-index-mode) ; no elements in files
            (setq items (if (use-region-p)
                            (buffer-substring
@@ -967,10 +967,10 @@ at point."
                           (line-end-position)))))
           ((zk-file-p)                  ; no elements in files
            (setq items
-             (car
-              (funcall
-               zk-index-format-function
-               (list buffer-file-name)))))
+                 (car
+                  (funcall
+                   zk-index-format-function
+                   (list buffer-file-name)))))
           (t
            (user-error "Don't know how to send this to desktop")))
     (if (and zk-index-desktop-current
@@ -1049,14 +1049,18 @@ With prefix-argument, raise ZK-Desktop in other frame."
   (let ((inhibit-read-only t))
     (forward-line 1)
     (transpose-lines 1)
-    (forward-line -1)))
+    (forward-line -1)
+    (when zk-index-invisible-ids
+      (zk-index-desktop-make-buttons))))
 
 (defun zk-index-move-line-up ()
   "Move line at point up in ZK-Desktop buffer."
   (interactive)
   (let ((inhibit-read-only t))
     (transpose-lines 1)
-    (forward-line -2)))
+    (forward-line -2)
+    (when zk-index-invisible-ids
+      (zk-index-desktop-make-buttons))))
 
 (defun zk-index-desktop-delete-region-maybe ()
   "Maybe delete region in `zk-index-desktop-mode'."
