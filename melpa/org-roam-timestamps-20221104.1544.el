@@ -7,8 +7,8 @@
 ;; Created: September 27, 2021
 ;; Modified: September 27, 2021
 ;; Version: 1.0.0
-;; Package-Version: 20220111.1755
-;; Package-Commit: 604fdad0feb61419751d3d6b828cc443a99f418f
+;; Package-Version: 20221104.1544
+;; Package-Commit: c4ff1e2f5b0905b5caa917249aab56ddc1de1ab3
 ;; Keywords: calendar outlines files
 ;; Homepage: https://github.com/ThomasFKJorna/org-roam-timestamps/
 ;; Package-Requires: ((emacs "26.1") (org-roam "2.0.0"))
@@ -105,7 +105,7 @@ Defaults to one hour."
 Optionally checks the minimum time interval you want between mod times
 if you supply the current MTIME."
   (org-with-wide-buffer
-   (let ((pos (org-roam-node-point node))
+   (let ((pos (if node (org-roam-node-point node) (point-min)))
          (curr (org-roam-timestamps-decode (current-time))))
      (if (and org-roam-timestamps-remember-timestamps mtime)
          (when (> (org-roam-timestamps-subtract curr mtime t) org-roam-timestamps-minimum-gap)
@@ -115,7 +115,7 @@ if you supply the current MTIME."
 (defun org-roam-timestamps--get-mtime (node)
   "Get the mtime of the org-roam node NODE."
   (org-with-wide-buffer
-   (org-entry-get (org-roam-node-point node) "mtime")))
+   (org-entry-get (if node (org-roam-node-point node) (point-min)) "mtime")))
 
 (defun org-roam-timestamps--get-ctime (pos)
   "Return the current ctime for the node at point POS."
