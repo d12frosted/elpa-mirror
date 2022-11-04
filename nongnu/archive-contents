@@ -548,11 +548,9 @@
 	       ("Matus Goljer" . "matus.goljer@gmail.com"))
 	      (:commit . "6f9172376af4d399c7853cbdfdd7425348a878f9"))])
  (geiser .
-	 [(0 27)
+	 [(0 28)
 	  ((emacs
 	    (25 1))
-	   (transient
-	    (0 3))
 	   (project
 	    (0 8 1)))
 	  "GNU Emacs and Scheme talk to each other" tar
@@ -561,7 +559,7 @@
 	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 	   (:authors
 	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-	   (:commit . "af81e4fb1088d9ccbd36dcd541e29eb2770e4d87"))])
+	   (:commit . "04dbdacfeca0190856abad859360da4bb873f9dd"))])
  (geiser-chez .
 	      [(0 17)
 	       ((emacs
@@ -624,18 +622,20 @@
 		   ("András Simonyi" . "andras.simonyi@gmail.com"))
 		  (:keywords "languages" "gauche" "scheme" "geiser"))])
  (geiser-guile .
-	       [(0 26 1)
+	       [(0 28 0)
 		((emacs
 		  (25 1))
+		 (transient
+		  (0 3))
 		 (geiser
-		  (0 26 1)))
-		"Guile's implementation of the geiser protocols" tar
+		  (0 28)))
+		"Guile and Geiser talk to each other" tar
 		((:url . "https://gitlab.com/emacs-geiser/guile")
 		 (:keywords "languages" "guile" "scheme" "geiser")
 		 (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 		 (:authors
 		  ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-		 (:commit . "e540e14db538ed0d116a188569413f5aadd79180"))])
+		 (:commit . "f5e82dc0f5a076335f201885a7edbefaa1ad435f"))])
  (geiser-kawa .
 	      [(0 0 1)
 	       ((emacs

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/chmouel/isgd.el.git
 
 Updating /mnt/store/melpa/working/isgd/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/chmouel/isgd.el.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 764306dadd5a9213799081a48aba22f7c75cca9a
+Built isgd in 6.003s, finished at 2022-11-04T10:39:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Nov  4 10:39 packages/isgd-20150414.936.el
+4.0K -rw-r--r-- 1 root root  330 Nov  4 10:39 packages/isgd-20150414.936.entry
