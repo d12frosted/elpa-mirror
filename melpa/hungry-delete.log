@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/nflath/hungry-delete.git
 
 Updating /mnt/store/melpa/working/hungry-delete/
-Checking out origin/HEAD
-Checking out d919e555e5c13a2edf4570f3ceec84f0ade71657
-Built hungry-delete in 3.960s, finished at 2022-11-04T03:03:34+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.7K Nov  4 03:03 packages/hungry-delete-20210409.1643.el
-4.0K -rw-r--r-- 1 root root  315 Nov  4 03:03 packages/hungry-delete-20210409.1643.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/nflath/hungry-delete.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/12pt/ivy-phpunit.git
 
 Updating /mnt/store/melpa/working/ivy-phpunit/
-Checking out origin/HEAD
-Checking out ffedb0138d36564e8e36a28fd9bc71ea8944681f
-Built ivy-phpunit in 3.755s, finished at 2022-11-04T03:06:36+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Nov  4 03:06 packages/ivy-phpunit-20180219.915.el
-4.0K -rw-r--r-- 1 root root  405 Nov  4 03:06 packages/ivy-phpunit-20180219.915.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/12pt/ivy-phpunit.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

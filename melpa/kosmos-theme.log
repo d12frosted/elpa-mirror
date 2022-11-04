@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/habamax/kosmos-theme.git
 
 Updating /mnt/store/melpa/working/kosmos-theme/
-Checking out origin/HEAD
-Checking out 616456d2376a75dc31190ad65137d179fbad4336
-Built kosmos-theme in 4.113s, finished at 2022-11-04T03:09:09+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Nov  4 03:09 packages/kosmos-theme-20170502.1850.el
-4.0K -rw-r--r-- 1 root root 369 Nov  4 03:09 packages/kosmos-theme-20170502.1850.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/habamax/kosmos-theme.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

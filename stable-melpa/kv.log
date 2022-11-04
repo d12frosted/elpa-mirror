@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/nicferrier/emacs-kv.git
 
 Updating /mnt/store/melpa/working/kv/
-Checking out origin/HEAD
-Checking out 721148475bce38a70e0b678ba8aa923652e8900e
-Built kv in 3.909s, finished at 2022-11-04T03:09:21+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Nov  4 03:09 packages/kv-20140108.1534.el
-4.0K -rw-r--r-- 1 root root 297 Nov  4 03:09 packages/kv-20140108.1534.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/nicferrier/emacs-kv.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128
