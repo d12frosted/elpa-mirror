@@ -2,8 +2,8 @@
 
 ;; Authors: Juri Linkov <juri@jurta.org> (initial idea), Dmitry K. (packager and maintainer)
 ;; Package-Requires: ((emacs "25.1") (seq "2.23"))
-;; Package-Version: 20220922.1650
-;; Package-Commit: 40e841b9d5b72ac0872de4e3f08406cb80236706
+;; Package-Version: 20221103.2351
+;; Package-Commit: 542a3f7742d2f7878f1509bd193d137b5bba8e7b
 ;; Keywords: i18n
 ;; Homepage: https://github.com/a13/reverse-im.el
 ;; Version: 0.0.8
@@ -330,7 +330,7 @@ Translate all chars, unless `this-command' is not in `reverse-im-read-char-exclu
                          (characterp from)
                          (setq to from))))
                 keymap)
-    to))
+    (or to c)))
 
 (defun reverse-im--translate-char (c &optional strict)
   "Try to translate C using active translation.  Set STRICT if reverse translation is not needed."

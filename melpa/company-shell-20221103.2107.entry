@@ -1,5 +1,5 @@
 (company-shell .
-	       [(20220822 2014)
+	       [(20221103 2107)
 		((emacs
 		  (24 4))
 		 (company
@@ -9,7 +9,7 @@
 		 (cl-lib
 		  (0 5)))
 		"Company mode backend for shell functions" single
-		((:commit . "024c2172a0cc8f1b35f173e42fff5f2d938920fc")
+		((:commit . "e55b9000192f82e96fdc0f7ca1e8a868e67762a8")
 		 (:authors
 		  ("Alexander Miller" . "alexanderm@web.de"))
 		 (:maintainer "Alexander Miller" . "alexanderm@web.de")

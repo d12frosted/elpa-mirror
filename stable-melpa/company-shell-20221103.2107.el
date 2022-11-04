@@ -4,8 +4,8 @@
 
 ;; Author: Alexander Miller <alexanderm@web.de>
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12") (dash "2.12.0") (cl-lib "0.5"))
-;; Package-Version: 20220822.2014
-;; Package-Commit: 024c2172a0cc8f1b35f173e42fff5f2d938920fc
+;; Package-Version: 20221103.2107
+;; Package-Commit: e55b9000192f82e96fdc0f7ca1e8a868e67762a8
 ;; Homepage: https://github.com/Alexander-Miller/company-shell
 ;; Version: 1.3
 ;; Keywords: company, shell, auto-completion
@@ -177,11 +177,10 @@ Build it if necessary."
 
 (defun company-shell--build-fish-cache ()
   "Build the list of all fish shell completions."
-  (when (executable-find "fish")
+  (when-let ((shell-file-name (executable-find "fish")))
     (setq company-shell--fish-cache
           (-flatten (--map
                      (-> it
-                         (format "fish -c \"%s\"")
                          (shell-command-to-string)
                          (split-string "\n")
                          (sort #'string-lessp))
