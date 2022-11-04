@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.7
-;; Package-Version: 20221103.1037
-;; Package-Commit: 1a00905aac732ff565cd1f336fce0305115a66dc
+;; Package-Version: 20221104.1235
+;; Package-Commit: 63ff1ac99675747e2cfb3ab04c75e71671617132
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "27.1")(zk "0.3"))
@@ -246,9 +246,7 @@ Adds zk-id as an Embark target, and adds `zk-id-map' and
 (defun zk-index--format-candidates (&optional files format)
   "Return a list of FILES as formatted candidates, following FORMAT.
 
-FORMAT must be a `format-spec' template, wherein `%i' is replaced
-by the ID and `%t' by the title. It can be a string, such as \"%t
-[[%i]]\", or a variable whose value is a string. If nil,
+See `zk--format' for details about FORMAT. If nil,
 `zk-completion-at-point-format' will be used by default.
 
 FILES must be a list of filepaths. If nil, all files in
@@ -261,8 +259,7 @@ FILES must be a list of filepaths. If nil, all files in
                    (zk--directory-files)))
          (output))
     (dolist (file list)
-      (progn
-        (string-match (zk-file-name-regexp) file)
+      (when (string-match (zk-file-name-regexp) file)
         (let ((id (if zk-index-invisible-ids
                       (propertize (match-string 1 file) 'invisible t)
                     (match-string 1 file)))
@@ -270,10 +267,7 @@ FILES must be a list of filepaths. If nil, all files in
                       zk-file-name-separator
                       " "
                       (match-string 2 file))))
-          (when id
-            (push (format-spec format
-                               `((?i . ,id)(?t . ,title)))
-                  output)))))
+          (push (zk--format format id title) output))))
     output))
 
 ;;; Main Stack

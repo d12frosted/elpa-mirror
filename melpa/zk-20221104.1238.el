@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.5
-;; Package-Version: 20221103.1525
-;; Package-Commit: f46eb21b8864a9b724455d1fb83bcadf77c4ce9c
+;; Package-Version: 20221104.1238
+;; Package-Commit: 509b84e2eabb42f951e3a0a4f94218c285e3ac0c
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -79,6 +79,8 @@
   :group 'files
   :prefix "zk-")
 
+;; Fundamental variables
+
 (defcustom zk-directory nil
   "Main zk directory."
   :type 'string)
@@ -114,12 +116,6 @@ for example, the file-name will be in the form
 rendered with spaces."
   :type 'string)
 
-(defcustom zk-enable-link-buttons t
-  "When non-nil, valid zk-id links will be clickable buttons.
-Allows `zk-make-link-buttons' to be added to `find-file-hook', so
-buttons will be automatically created when a note is opened."
-  :type 'boolean)
-
 (defcustom zk-id-time-string-format "%Y%m%d%H%M"
   "Format for new zk IDs.
 For supported options, please consult `format-time-string'.
@@ -138,6 +134,8 @@ Set it so that it matches strings generated with
   "The regular expression used to search for tags."
   :type 'regexp)
 
+;; Function variables
+
 (defcustom zk-new-note-header-function #'zk-new-note-header
   "Function called by `zk-new-note' to insert header in a new note.
 A user-defined function should use `insert' to insert a string or
@@ -145,22 +143,6 @@ strings. The arguments NEW-ID, TITLE, and ORIG-ID can be used to
 those corresponding values from `zk-new-note' available for
 insertion. See `zk-new-note-header' for an example."
   :type 'function)
-
-(defcustom zk-new-note-link-insert 'ask
-  "Should `zk-new-note' insert link to new note at point?
-
-Options:
-1. t - Always insert a link
-2. `zk - Insert link only inside an existing note
-3. `ask - Ask user, yes or no
-4. nil - Never insert a link
-
-Calling `zk-new-note' with a prefix-argument inserts a link
-regardless of how `zk-new-note-link-insert' is set."
-  :type '(choice (const :tag "Always" t)
-                 (const :tag "Ask" ask)
-                 (const :tag "Only in zk notes" zk)
-                 (const :tag "Never" nil)))
 
 (defcustom zk-select-file-function #'zk--select-file
   "Function for performing completing read.
@@ -187,11 +169,56 @@ Must take a single STRING argument."
  'zk-tag-search-function' should be used instead"
                         "0.5")
 
+(defcustom zk-current-notes-function nil
+  "User-defined function for listing currently open notes.
+See `zk-current-notes' for details."
+  :type 'function)
+
+(defcustom zk-format-function nil
+  "User-defined function for formatting zk file information.
+The function should accept three variables: FORMAT-SPEC, ID, and
+TITLE. See `zk--format' for details."
+  :type 'function)
+
+;; Format variables
+
 (defcustom zk-link-format "[[%s]]"
   "Format for inserted links.
 Used in conjunction with `format', the string `%s' will be
 replaced by a note's ID."
   :type 'string)
+
+(defcustom zk-link-and-title-format "%t [[%i]]"
+  "Format for link and title when inserted to together.
+
+By default (when `zk-format-function' is nil), the string `%t' will be
+replaced by the note's title and `%i' will be replaced by its ID."
+  :type 'string)
+
+(defcustom zk-completion-at-point-format "[[%i]] %t"
+  "Format for completion table used by `zk-completion-at-point'.
+
+By default (when `zk-format-function' is nil), the string `%t' will be
+replaced by the note's title and `%i' will be replaced by its ID."
+  :type 'string)
+
+;; Link variables
+
+(defcustom zk-new-note-link-insert 'ask
+  "Should `zk-new-note' insert link to new note at point?
+
+Options:
+1. t - Always insert a link
+2. `zk - Insert link only inside an existing note
+3. `ask - Ask user, yes or no
+4. nil - Never insert a link
+
+Calling `zk-new-note' with a prefix-argument inserts a link
+regardless of how `zk-new-note-link-insert' is set."
+  :type '(choice (const :tag "Always" t)
+                 (const :tag "Ask" ask)
+                 (const :tag "Only in zk notes" zk)
+                 (const :tag "Never" nil)))
 
 (defcustom zk-link-and-title t
   "Should `zk-insert-link' insert both link and title?
@@ -207,28 +234,15 @@ by setting the variable `zk-link-and-title-format'."
                  (const :tag "Ask" ask)
                  (const :tag "Never" nil)))
 
-(defcustom zk-link-and-title-format "%t [[%i]]"
-  "Format for link and title when inserted to together.
-
-The string `%t' will be replaced by the note's title and `%i'
-will be replaced by its ID."
-  :type 'string)
+(defcustom zk-enable-link-buttons t
+  "When non-nil, valid zk-id links will be clickable buttons.
+Allows `zk-make-link-buttons' to be added to `find-file-hook', so
+buttons will be automatically created when a note is opened."
+  :type 'boolean)
 
 (defcustom zk-default-backlink nil
   "When non-nil, should be a single zk ID.
 See `zk-new-note' for details."
-  :type 'string)
-
-(defcustom zk-current-notes-function nil
-  "User-defined function for listing currently open notes.
-See `zk-current-notes' for details."
-  :type 'function)
-
-(defcustom zk-completion-at-point-format "[[%i]] %t"
-  "Format for completion table used by `zk-completion-at-point'.
-
-The string `%t' will be replaced by the note's title and `%i'
-will be replaced by its ID."
   :type 'string)
 
 (defvar zk-file-history nil)
@@ -275,7 +289,7 @@ Adds zk-id as an Embark target, and adds `zk-id-map' and
 
 (defun zk--singleton-p (list)
   "Return non-NIL if LIST is not null, is a list, and has a single element."
-  (and (not (null list))
+  (and list
        (listp list)
        (null (cdr list))))
 
@@ -766,6 +780,14 @@ Optionally call a custom function by setting the variable
 
 ;;; Insert Link
 
+(defun zk--format (format id title)
+  "Format ID and TITLE based on the `format-spec' FORMAT.
+If `zk-format-function' is set, call that function. Otherwise, replace
+the sequence `%t' with the TITLE and `%i' with the ID."
+  (if (functionp zk-format-function)
+      (funcall zk-format-function format id title)
+    (format-spec format `((?i . ,id) (?t . ,title)))))
+
 ;;;###autoload
 (defun zk-insert-link (id &optional title)
   "Insert link to note with ID and optional TITLE.
@@ -797,8 +819,7 @@ for additional configurations."
 
 (defun zk--insert-link-and-title (id title)
   "Insert zk ID and TITLE according to `zk-link-and-title-format'."
-  (insert (format-spec zk-link-and-title-format
-                       `((?i . ,id)(?t . ,title))))
+  (insert (zk--format zk-link-and-title-format id title))
   (when zk-enable-link-buttons
     (zk-make-button-before-point)))
 
@@ -807,28 +828,22 @@ for additional configurations."
 (defun zk--format-candidates (&optional files format)
   "Return a list of FILES as formatted candidates, following FORMAT.
 
-FORMAT must be a `format-spec' template, wherein `%i' is replaced
-by the ID and `%t' by the title. It can be a string, such as \"%t
-[[%i]]\", or a variable whose value is a string. If nil,
+See `zk--format' for details about FORMAT. If nil,
 `zk-completion-at-point-format' will be used by default.
 
-FILES must be a list of filepaths. If nil, all files in
-`zk-directory' will be returned as formatted candidates."
+FILES must be a list of filepaths. If nil, all files in `zk-directory'
+will be returned as formatted candidates."
   (let* ((format (or format
                      zk-completion-at-point-format))
          (list (or files
                    (zk--directory-files)))
          (output))
     (dolist (file list)
-      (progn
-        (string-match (zk-file-name-regexp) file)
+      (when (string-match (zk-file-name-regexp) file)
         (let ((id (match-string 1 file))
               (title (replace-regexp-in-string zk-file-name-separator " "
                                                (match-string 2 file))))
-          (when id
-            (push (format-spec format
-                               `((?i . ,id)(?t . ,title)))
-                  output)))))
+          (push (zk--format format id title) output))))
     output))
 
 (defun zk-completion-at-point ()
@@ -871,12 +886,10 @@ brackets \"[[\" initiates completion."
                     (zk--parse-file 'id arg))
                    (t (zk--id-at-point))))
          (title (zk--parse-id 'title id)))
-    (if id
-        (progn
-          (kill-new (format-spec zk-link-and-title-format
-                                 `((?i . ,id)(?t . ,title))))
-          (message "Link and title copied: %s" title))
-      (error "No valid zk-id"))))
+    (if (null id)
+        (error "No valid zk-id")
+      (kill-new (zk--format zk-link-and-title-format id title))
+      (message "Link and title copied: %s" title))))
 
 
 
