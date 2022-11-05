@@ -3,11 +3,11 @@
 ;; Copyright © 2022 Erick Navarro
 ;; Author: Erick Navarro <erick@navarro.io>
 ;; URL: https://github.com/erickgnavar/tree-sitter-ispell.el
-;; Package-Version: 20220704.340
-;; Package-Commit: 5cd63219bbef77eb002c7e7d0df30f5714ae69dc
+;; Package-Version: 20221105.713
+;; Package-Commit: 6d486371d641a809f44df21921e64ef381844e83
 ;; Version: 0.1.0
 ;; SPDX-License-Identifier: GNU General Public License v3.0 or later
-;; Package-Requires: ((emacs "25.1") (tree-sitter "0.15.0"))
+;; Package-Requires: ((emacs "26.1") (tree-sitter "0.15.0"))
 
 ;;; Commentary:
 ;; Run spell check against tree-sitter text nodes
@@ -42,12 +42,33 @@
   "Run ispell over the text of the received `NODE'."
   (ispell-region (tsc-node-start-position node) (tsc-node-end-position node)))
 
+(defun tree-sitter-ispell--convert-patterns-for-capture (raw-patterns)
+  "Convert `RAW-PATTERNS' to capture format."
+  (thread-last
+    raw-patterns
+    (seq-map (lambda (raw) (format "(%s) @%s" raw raw)))
+    (mapconcat 'identity)))
+
 ;;;###autoload
 (defun tree-sitter-ispell-run-at-point ()
   "Run ispell at current point if there is a text node."
   (interactive)
   (when-let ((node (tree-sitter-ispell--get-text-node-at-point)))
     (tree-sitter-ispell--run-ispell-on-node node)))
+
+;;;###autoload
+(defun tree-sitter-ispell-run-buffer ()
+  "Run ispell for every text node for the current buffer."
+  (interactive)
+  ;; we call tree-sitter-tree first because if the current buffer doesn't have support
+  ;; it will return nil and that will stop when-let* execution
+  (when-let* ((tree tree-sitter-tree)
+              (root-node (tsc-root-node tree))
+              (raw-patterns (alist-get major-mode tree-sitter-ispell-grammar-text-mapping))
+              (patterns (tree-sitter-ispell--convert-patterns-for-capture raw-patterns))
+              (query (tsc-make-query tree-sitter-language patterns))
+              (captures (tsc-query-captures query root-node #'tsc--buffer-substring-no-properties)))
+    (seq-map (lambda (capture) (tree-sitter-ispell--run-ispell-on-node (cdr capture))) captures)))
 
 (provide 'tree-sitter-ispell)
 
