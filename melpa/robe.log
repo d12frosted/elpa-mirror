@@ -4,35 +4,37 @@ Source:  https://github.com/dgutov/robe.git
 
 Updating /mnt/store/melpa/working/robe/
 Checking out origin/HEAD
-Checking out 993ae13791ba882076b644b0c8054b6e89e22dad
+Checking out a4085d7329d771b5cba02c8fe9bca2622ea31ed7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/robe/
-  to /tmp/robe6B4uAv/robe-20220731.2016
+  to /tmp/robeVHocta/robe-20221106.140
     ac-robe.el -> ac-robe.el
     company-robe.el -> company-robe.el
     robe.el -> robe.el
     lib => lib
-Created robe-20220731.2016.tar containing:
-  robe-20220731.2016/
-  robe-20220731.2016/ac-robe.el
-  robe-20220731.2016/company-robe.el
-  robe-20220731.2016/lib/
-  robe-20220731.2016/lib/robe.rb
-  robe-20220731.2016/lib/robe/
-  robe-20220731.2016/lib/robe/core_ext.rb
-  robe-20220731.2016/lib/robe/jvisor.rb
-  robe-20220731.2016/lib/robe/sash.rb
-  robe-20220731.2016/lib/robe/sash/
-  robe-20220731.2016/lib/robe/sash/const_locations.rb
-  robe-20220731.2016/lib/robe/sash/doc_for.rb
-  robe-20220731.2016/lib/robe/sash/includes_tracker.rb
-  robe-20220731.2016/lib/robe/scanners.rb
-  robe-20220731.2016/lib/robe/server.rb
-  robe-20220731.2016/lib/robe/type_space.rb
-  robe-20220731.2016/lib/robe/visor.rb
-  robe-20220731.2016/robe-pkg.el
-  robe-20220731.2016/robe.el
-Built robe in 8.537s, finished at 2022-11-06T00:06:16+0000
+Created robe-20221106.140.tar containing:
+  robe-20221106.140/
+  robe-20221106.140/ac-robe.el
+  robe-20221106.140/company-robe.el
+  robe-20221106.140/lib/
+  robe-20221106.140/lib/robe.rb
+  robe-20221106.140/lib/robe/
+  robe-20221106.140/lib/robe/core_ext.rb
+  robe-20221106.140/lib/robe/jvisor.rb
+  robe-20221106.140/lib/robe/sash.rb
+  robe-20221106.140/lib/robe/sash/
+  robe-20221106.140/lib/robe/sash/const_locations.rb
+  robe-20221106.140/lib/robe/sash/doc_for.rb
+  robe-20221106.140/lib/robe/sash/includes_tracker.rb
+  robe-20221106.140/lib/robe/scanners.rb
+  robe-20221106.140/lib/robe/server.rb
+  robe-20221106.140/lib/robe/type_space.rb
+  robe-20221106.140/lib/robe/visor.rb
+  robe-20221106.140/robe-pkg.el
+  robe-20221106.140/robe.el
+Built robe in 4.407s, finished at 2022-11-06T03:45:21+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 366 Nov  6 00:06 packages/robe-20220731.2016.entry
  92K -rw-r--r-- 1 root root 90K Nov  6 00:06 packages/robe-20220731.2016.tar
+4.0K -rw-r--r-- 1 root root 365 Nov  6 03:45 packages/robe-20221106.140.entry
+ 92K -rw-r--r-- 1 root root 90K Nov  6 03:45 packages/robe-20221106.140.tar
