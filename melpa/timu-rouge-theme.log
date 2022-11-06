@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/aimebertrand/timu-rouge-theme.git
 
 Updating /mnt/store/melpa/working/timu-rouge-theme/
-Checking out origin/HEAD
-Checking out bbfc8bbba01e5caa9d11628f0bc2276605c75901
-Built timu-rouge-theme in 4.297s, finished at 2022-11-06T07:34:20+0000
- ✓ Success:
- 92K -rw-r--r-- 1 root root 91K Nov  6 07:34 packages/timu-rouge-theme-20220717.2158.el
-4.0K -rw-r--r-- 1 root root 446 Nov  6 07:34 packages/timu-rouge-theme-20220717.2158.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/aimebertrand/timu-rouge-theme.git/': The requested URL returned error: 520
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

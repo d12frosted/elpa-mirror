@@ -3,10 +3,66 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/geiser.git
 
 Updating /mnt/store/melpa/working/geiser/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 520 curl 22 The requested URL returned error: 520
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 04dbdacfeca0190856abad859360da4bb873f9dd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser/
+  to /tmp/geiserx8n5gZ/geiser-20221104.426
+  ! elisp/geiser-autodoc.el -> geiser-autodoc.el
+  ! elisp/geiser-base.el -> geiser-base.el
+  ! elisp/geiser-capf.el -> geiser-capf.el
+  ! elisp/geiser-compile.el -> geiser-compile.el
+  ! elisp/geiser-completion.el -> geiser-completion.el
+  ! elisp/geiser-connection.el -> geiser-connection.el
+  ! elisp/geiser-custom.el -> geiser-custom.el
+  ! elisp/geiser-debug.el -> geiser-debug.el
+  ! elisp/geiser-doc.el -> geiser-doc.el
+  ! elisp/geiser-edit.el -> geiser-edit.el
+  ! elisp/geiser-eval.el -> geiser-eval.el
+  ! elisp/geiser-image.el -> geiser-image.el
+  ! elisp/geiser-impl.el -> geiser-impl.el
+  ! elisp/geiser-log.el -> geiser-log.el
+  ! elisp/geiser-menu.el -> geiser-menu.el
+  ! elisp/geiser-mode.el -> geiser-mode.el
+  ! elisp/geiser-popup.el -> geiser-popup.el
+  ! elisp/geiser-reload.el -> geiser-reload.el
+  ! elisp/geiser-repl.el -> geiser-repl.el
+  ! elisp/geiser-syntax.el -> geiser-syntax.el
+  ! elisp/geiser-table.el -> geiser-table.el
+  ! elisp/geiser-xref.el -> geiser-xref.el
+  ! elisp/geiser.el -> geiser.el
+  ! doc/dir -> dir
+  ! doc/geiser.texi -> geiser.texi
+Generating /tmp/geiserx8n5gZ/geiser-20221104.426/geiser.info
+Created geiser-20221104.426.tar containing:
+  geiser-20221104.426/
+  geiser-20221104.426/dir
+  geiser-20221104.426/geiser-autodoc.el
+  geiser-20221104.426/geiser-base.el
+  geiser-20221104.426/geiser-capf.el
+  geiser-20221104.426/geiser-compile.el
+  geiser-20221104.426/geiser-completion.el
+  geiser-20221104.426/geiser-connection.el
+  geiser-20221104.426/geiser-custom.el
+  geiser-20221104.426/geiser-debug.el
+  geiser-20221104.426/geiser-doc.el
+  geiser-20221104.426/geiser-edit.el
+  geiser-20221104.426/geiser-eval.el
+  geiser-20221104.426/geiser-image.el
+  geiser-20221104.426/geiser-impl.el
+  geiser-20221104.426/geiser-log.el
+  geiser-20221104.426/geiser-menu.el
+  geiser-20221104.426/geiser-mode.el
+  geiser-20221104.426/geiser-pkg.el
+  geiser-20221104.426/geiser-popup.el
+  geiser-20221104.426/geiser-reload.el
+  geiser-20221104.426/geiser-repl.el
+  geiser-20221104.426/geiser-syntax.el
+  geiser-20221104.426/geiser-table.el
+  geiser-20221104.426/geiser-xref.el
+  geiser-20221104.426/geiser.el
+  geiser-20221104.426/geiser.info
+Built geiser in 11.217s, finished at 2022-11-06T10:27:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  399 Nov  6 10:27 packages/geiser-20221104.426.entry
+320K -rw-r--r-- 1 root root 320K Nov  6 10:27 packages/geiser-20221104.426.tar

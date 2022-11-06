@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/dpk/nxml-uxml.git
 
 Updating /mnt/store/melpa/working/nxml-uxml/
-Checking out origin/HEAD
-Checking out 95bbd0018ab218b9f39f5bf1f1e809f60fbc3edc
-Built nxml-uxml in 7.477s, finished at 2022-11-06T07:10:44+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.3K Nov  6 07:10 packages/nxml-uxml-20220606.1213.el
-4.0K -rw-r--r-- 1 root root  356 Nov  6 07:10 packages/nxml-uxml-20220606.1213.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/dpk/nxml-uxml.git/': The requested URL returned error: 520
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

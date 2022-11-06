@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.3
-;; Package-Version: 20221106.626
-;; Package-Commit: 0c7afe1e8aad2d66720bdddc40da3a4267af7b0c
+;; Package-Version: 20221106.941
+;; Package-Commit: c78c95f6f9624f45839d6528a76bb3fe753e2c7b
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -2891,7 +2891,7 @@ buffer, window, frame...  will be omitted.
 If an optional argument TARGET is non-nil, saving target is
 changed according to the value of TARGET.
 When TARGET is a symbol named, named Loophole map, i.e.,
-loophole-*-name but not loophole-n-map will be saved.
+loophole-*-map but not loophole-n-map will be saved.
 When TARGET is a symbol all, all registered maps will be
 saved.
 When TARGET is a function, it will be used as a filter
@@ -3048,7 +3048,7 @@ be overwritten without asking.
 If an optional argument TARGET is non-nil, loading target is
 changed according to the value of TARGET.
 When TARGET is a symbol named,  named Loophole map, i.e.,
-loophole-*-name but not loophole-n-map will be loaded.
+loophole-*-map but not loophole-n-map will be loaded.
 When TARGET is a symbol all, all registered maps will be
 loaded.
 When TARGET is a function, it will be used as a filter
@@ -4942,7 +4942,7 @@ a duration time.
 Target specifier is passed to `loophole-save' as an argument
 TARGET through `loophople-turn-on-idle-save'.
 Therefore, when  target specifier is a symbol named, named
-Loophole map, i.e., loophole-*-name but not loophole-n-map
+Loophole map, i.e., loophole-*-map but not loophole-n-map
 will be saved.
 When target specifier is a symbol all, all registered maps
 will be saved.

@@ -3,10 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/elzair/punctuality-logger.git
 
 Updating /mnt/store/melpa/working/punctuality-logger/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 520 curl 22 The requested URL returned error: 520
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out d76c5d5589a4f8a94cc5537686d9a3b46ea7cc59
+Built punctuality-logger in 4.990s, finished at 2022-11-06T11:03:46+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Nov  6 11:03 packages/punctuality-logger-20141120.2031.el
+4.0K -rw-r--r-- 1 root root  412 Nov  6 11:03 packages/punctuality-logger-20141120.2031.entry
