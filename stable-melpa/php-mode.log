@@ -4,32 +4,36 @@ Source:  https://github.com/emacs-php/php-mode.git
 
 Updating /mnt/store/melpa/working/php-mode/
 Checking out origin/HEAD
-Checking out b559c80a1eb271c94de4639a3a02c93eaf81c81b
+Checking out 2bc4db007c4e6ccbc2d2e6e74fb54a1af0ead054
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/php-mode/
-  to /tmp/php-modeiqDpL8/php-mode-20221103.1623
+  to /tmp/php-modeoL40Fv/php-mode-20221105.2335
   ! lisp/php-align.el -> php-align.el
   ! lisp/php-complete.el -> php-complete.el
   ! lisp/php-defs.el -> php-defs.el
   ! lisp/php-face.el -> php-face.el
+  ! lisp/php-flymake.el -> php-flymake.el
   ! lisp/php-local-manual.el -> php-local-manual.el
   ! lisp/php-mode-debug.el -> php-mode-debug.el
   ! lisp/php-mode.el -> php-mode.el
   ! lisp/php-project.el -> php-project.el
   ! lisp/php.el -> php.el
-Created php-mode-20221103.1623.tar containing:
-  php-mode-20221103.1623/
-  php-mode-20221103.1623/php-align.el
-  php-mode-20221103.1623/php-complete.el
-  php-mode-20221103.1623/php-defs.el
-  php-mode-20221103.1623/php-face.el
-  php-mode-20221103.1623/php-local-manual.el
-  php-mode-20221103.1623/php-mode-debug.el
-  php-mode-20221103.1623/php-mode-pkg.el
-  php-mode-20221103.1623/php-mode.el
-  php-mode-20221103.1623/php-project.el
-  php-mode-20221103.1623/php.el
-Built php-mode in 4.806s, finished at 2022-11-05T09:15:57+0000
+Created php-mode-20221105.2335.tar containing:
+  php-mode-20221105.2335/
+  php-mode-20221105.2335/php-align.el
+  php-mode-20221105.2335/php-complete.el
+  php-mode-20221105.2335/php-defs.el
+  php-mode-20221105.2335/php-face.el
+  php-mode-20221105.2335/php-flymake.el
+  php-mode-20221105.2335/php-local-manual.el
+  php-mode-20221105.2335/php-mode-debug.el
+  php-mode-20221105.2335/php-mode-pkg.el
+  php-mode-20221105.2335/php-mode.el
+  php-mode-20221105.2335/php-project.el
+  php-mode-20221105.2335/php.el
+Built php-mode in 10.367s, finished at 2022-11-05T23:59:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  355 Nov  5 09:15 packages/php-mode-20221103.1623.entry
-232K -rw-r--r-- 1 root root 230K Nov  5 09:15 packages/php-mode-20221103.1623.tar
+4.0K -rw-r--r-- 1 root root  355 Nov  5 20:18 packages/php-mode-20221103.1623.entry
+232K -rw-r--r-- 1 root root 230K Nov  5 20:18 packages/php-mode-20221103.1623.tar
+4.0K -rw-r--r-- 1 root root  355 Nov  5 23:59 packages/php-mode-20221105.2335.entry
+240K -rw-r--r-- 1 root root 240K Nov  5 23:59 packages/php-mode-20221105.2335.tar

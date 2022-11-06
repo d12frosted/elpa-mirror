@@ -1,0 +1,36 @@
+Package: mint-mode
+Fetcher: github
+Source:  https://github.com/creatorrr/emacs-mint-mode.git
+
+Updating /mnt/store/melpa/working/mint-mode/
+Checking out origin/HEAD
+Checking out df81e04668de74740e252ddb0f34569b351b92b4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mint-mode/
+  to /tmp/mint-modeVgRVI7/mint-mode-20221031.411
+    mint-mode.el -> mint-mode.el
+    tokens => tokens
+Created mint-mode-20221031.411.tar containing:
+  mint-mode-20221031.411/
+  mint-mode-20221031.411/mint-mode-pkg.el
+  mint-mode-20221031.411/mint-mode.el
+  mint-mode-20221031.411/tokens/
+  mint-mode-20221031.411/tokens/html/
+  mint-mode-20221031.411/tokens/html/tags.txt
+  mint-mode-20221031.411/tokens/lang/
+  mint-mode-20221031.411/tokens/lang/blocks.txt
+  mint-mode-20221031.411/tokens/lang/compound-types.txt
+  mint-mode-20221031.411/tokens/lang/declarators.txt
+  mint-mode-20221031.411/tokens/lang/initializers.txt
+  mint-mode-20221031.411/tokens/lang/keywords.txt
+  mint-mode-20221031.411/tokens/lang/literal-types.txt
+  mint-mode-20221031.411/tokens/lang/operators.txt
+  mint-mode-20221031.411/tokens/lang/specifiers.txt
+  mint-mode-20221031.411/tokens/style/
+  mint-mode-20221031.411/tokens/style/colors.txt
+  mint-mode-20221031.411/tokens/style/properties.txt
+  mint-mode-20221031.411/tokens/style/units.txt
+Built mint-mode in 3.954s, finished at 2022-11-05T23:48:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 435 Nov  5 23:48 packages/mint-mode-20221031.411.entry
+ 40K -rw-r--r-- 1 root root 40K Nov  5 23:48 packages/mint-mode-20221031.411.tar
