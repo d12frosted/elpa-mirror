@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.3
-;; Package-Version: 20221102.1120
-;; Package-Commit: 24acca1a45d987093561f7294b7b1d1f738f23af
+;; Package-Version: 20221106.626
+;; Package-Commit: 0c7afe1e8aad2d66720bdddc40da3a4267af7b0c
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -4138,7 +4138,6 @@ function to modify it."
 
 ;;; Base control
 
-;;;###autoload
 (defun loophole-suspend ()
   "Suspend Loophole.
 To suspend Loophole, this function delete
@@ -4148,6 +4147,7 @@ To suspend Loophole, this function delete
         (delq 'loophole--map-alist emulation-mode-map-alists))
   (setq loophole--suspended t))
 
+;;;###autoload
 (defun loophole-resume ()
   "Resume Loophole.
 To resume Loophole, this functions add
