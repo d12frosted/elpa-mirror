@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/tuedachu/transfer-sh.el.git
 
 Updating /mnt/store/melpa/working/transfer-sh/
-Checking out origin/HEAD
-Checking out 0621a66d00ec91a209a542c10b158095088bd44d
-Built transfer-sh in 4.197s, finished at 2022-11-06T11:16:45+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Nov  6 11:16 packages/transfer-sh-20200601.1708.el
-4.0K -rw-r--r-- 1 root root 341 Nov  6 11:16 packages/transfer-sh-20200601.1708.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/tuedachu/transfer-sh.el.git/': The requested URL returned error: 520
+
+Command exited with non-zero exit-code: 128

@@ -3,11 +3,21 @@ Fetcher: gitlab
 Source:  https://gitlab.com/worr/cfn-mode.git
 
 Updating /mnt/store/melpa/working/cfn-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/worr/cfn-mode.git/': The requested URL returned error: 520
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 4cf56affe3035fda364109836e26499431095185
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cfn-mode/
+  to /tmp/cfn-modeghDOzv/cfn-mode-20220221.1029
+  ! cfn-mode/cfn-mode.el -> cfn-mode.el
+  ! cfn-mode/cfn-properties.dat -> cfn-properties.dat
+  ! cfn-mode/cfn-resources.dat -> cfn-resources.dat
+Created cfn-mode-20220221.1029.tar containing:
+  cfn-mode-20220221.1029/
+  cfn-mode-20220221.1029/cfn-mode-pkg.el
+  cfn-mode-20220221.1029/cfn-mode.el
+  cfn-mode-20220221.1029/cfn-properties.dat
+  cfn-mode-20220221.1029/cfn-resources.dat
+Built cfn-mode in 5.763s, finished at 2022-11-06T13:47:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 451 Nov  6 13:47 packages/cfn-mode-20220221.1029.entry
+ 60K -rw-r--r-- 1 root root 60K Nov  6 13:47 packages/cfn-mode-20220221.1029.tar

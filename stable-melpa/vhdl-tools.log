@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-elisp/vhdl-tools.git
 
 Updating /mnt/store/melpa/working/vhdl-tools/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/emacs-elisp/vhdl-tools.git/': The requested URL returned error: 520
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 9cb2354874608d971be407ad9299ed918a6c061a
+Built vhdl-tools in 4.828s, finished at 2022-11-06T15:00:04+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Nov  6 15:00 packages/vhdl-tools-20200330.1819.el
+4.0K -rw-r--r-- 1 root root 493 Nov  6 15:00 packages/vhdl-tools-20200330.1819.entry

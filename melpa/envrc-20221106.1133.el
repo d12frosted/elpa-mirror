@@ -4,10 +4,10 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: processes, tools
-;; Package-Commit: 433df846529f25074955791869797ec4e929d4aa
+;; Package-Commit: d55ee22573c83ccbb55b8df6360ef3c62d1ce244
 ;; Homepage: https://github.com/purcell/envrc
 ;; Package-Requires: ((seq "2") (emacs "25.1") (inheritenv "0.1"))
-;; Package-Version: 20221004.1254
+;; Package-Version: 20221106.1133
 ;; Package-X-Original-Version: 0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -287,7 +287,10 @@ also appear in PAIRS."
   (with-current-buffer buf
     (kill-local-variable 'exec-path)
     (kill-local-variable 'process-environment)
-    (kill-local-variable 'eshell-path-env)))
+    (when (derived-mode-p 'eshell-mode)
+      (if (fboundp 'eshell-set-path)
+          (eshell-set-path (butlast (exec-path)))
+        (kill-local-variable 'eshell-path-env)))))
 
 
 (defun envrc--apply (buf result)
@@ -303,7 +306,9 @@ also appear in PAIRS."
       (let ((path (getenv "PATH"))) ;; Get PATH from the merged environment: direnv may not have changed it
         (setq-local exec-path (parse-colon-path path))
         (when (derived-mode-p 'eshell-mode)
-          (setq-local eshell-path-env path))))))
+          (if (fboundp 'eshell-set-path)
+              (eshell-set-path path)
+            (setq-local eshell-path-env path)))))))
 
 (defun envrc--update-env (env-dir)
   "Refresh the state of the direnv in ENV-DIR and apply in all relevant buffers."

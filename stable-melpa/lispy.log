@@ -4,10 +4,10 @@ Source:  https://github.com/abo-abo/lispy.git
 
 Updating /mnt/store/melpa/working/lispy/
 Checking out origin/HEAD
-Checking out ef24a969e11acb0faf0a59eae0e9a6d280e73d29
+Checking out 1a1abcc233b7434bd615221fbcd27f7694bc5391
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lispy/
-  to /tmp/lispyic8TaJ/lispy-20221028.1725
+  to /tmp/lispybLAYeS/lispy-20221106.1304
     elpa.el -> elpa.el
     le-clojure.el -> le-clojure.el
     le-hy.el -> le-hy.el
@@ -25,26 +25,28 @@ Copying files (->) and directories (=>)
     lispy-clojure.clj -> lispy-clojure.clj
     lispy-clojure.cljs -> lispy-clojure.cljs
     lispy-python.py -> lispy-python.py
-Created lispy-20221028.1725.tar containing:
-  lispy-20221028.1725/
-  lispy-20221028.1725/elpa.el
-  lispy-20221028.1725/le-clojure.el
-  lispy-20221028.1725/le-hy.el
-  lispy-20221028.1725/le-js.el
-  lispy-20221028.1725/le-julia.el
-  lispy-20221028.1725/le-lisp.el
-  lispy-20221028.1725/le-python.el
-  lispy-20221028.1725/le-racket.el
-  lispy-20221028.1725/le-scheme.el
-  lispy-20221028.1725/lispy-clojure.clj
-  lispy-20221028.1725/lispy-clojure.cljs
-  lispy-20221028.1725/lispy-inline.el
-  lispy-20221028.1725/lispy-occur.el
-  lispy-20221028.1725/lispy-pkg.el
-  lispy-20221028.1725/lispy-python.py
-  lispy-20221028.1725/lispy-tags.el
-  lispy-20221028.1725/lispy.el
-Built lispy in 6.313s, finished at 2022-11-06T10:43:46+0000
+Created lispy-20221106.1304.tar containing:
+  lispy-20221106.1304/
+  lispy-20221106.1304/elpa.el
+  lispy-20221106.1304/le-clojure.el
+  lispy-20221106.1304/le-hy.el
+  lispy-20221106.1304/le-js.el
+  lispy-20221106.1304/le-julia.el
+  lispy-20221106.1304/le-lisp.el
+  lispy-20221106.1304/le-python.el
+  lispy-20221106.1304/le-racket.el
+  lispy-20221106.1304/le-scheme.el
+  lispy-20221106.1304/lispy-clojure.clj
+  lispy-20221106.1304/lispy-clojure.cljs
+  lispy-20221106.1304/lispy-inline.el
+  lispy-20221106.1304/lispy-occur.el
+  lispy-20221106.1304/lispy-pkg.el
+  lispy-20221106.1304/lispy-python.py
+  lispy-20221106.1304/lispy-tags.el
+  lispy-20221106.1304/lispy.el
+Built lispy in 5.144s, finished at 2022-11-06T14:25:16+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  430 Nov  6 10:43 packages/lispy-20221028.1725.entry
 520K -rw-r--r-- 1 root root 520K Nov  6 10:43 packages/lispy-20221028.1725.tar
+4.0K -rw-r--r-- 1 root root  430 Nov  6 14:25 packages/lispy-20221106.1304.entry
+520K -rw-r--r-- 1 root root 520K Nov  6 14:25 packages/lispy-20221106.1304.tar
