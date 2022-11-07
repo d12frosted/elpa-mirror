@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/aimebertrand/org-mac-link.git
 
 Updating /mnt/store/melpa/working/org-mac-link/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://gitlab.com/aimebertrand/org-mac-link.git/': The requested URL returned error: 520
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 0b18c1d070b9601cc65c40e902169e367e4348c9
+Built org-mac-link in 4.604s, finished at 2022-11-07T05:15:34+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 43K Nov  7 05:15 packages/org-mac-link-20220616.2340.el
+4.0K -rw-r--r-- 1 root root 677 Nov  7 05:15 packages/org-mac-link-20220616.2340.entry

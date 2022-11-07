@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/RobertCochran/neato-graph-bar.git
 
 Updating /mnt/store/melpa/working/neato-graph-bar/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/RobertCochran/neato-graph-bar.git/': The requested URL returned error: 525
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out a7ae35afd67911e8924f36e646bce0d3e3c1bbe6
+Built neato-graph-bar in 4.005s, finished at 2022-11-07T05:11:01+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Nov  7 05:11 packages/neato-graph-bar-20181130.1649.el
+4.0K -rw-r--r-- 1 root root 380 Nov  7 05:11 packages/neato-graph-bar-20181130.1649.entry

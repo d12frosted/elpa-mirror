@@ -3,23 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/zzamboni/ox-leanpub.git
 
 Updating /mnt/store/melpa/working/ox-leanpub/
-Checking out origin/HEAD
-Checking out 8a00843a2a58e0c43cb53080d1005c619e4a9c88
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ox-leanpub/
-  to /tmp/ox-leanpubwbDYkA/ox-leanpub-20201129.2027
-    ox-leanpub-book.el -> ox-leanpub-book.el
-    ox-leanpub-markdown.el -> ox-leanpub-markdown.el
-    ox-leanpub-markua.el -> ox-leanpub-markua.el
-    ox-leanpub.el -> ox-leanpub.el
-Created ox-leanpub-20201129.2027.tar containing:
-  ox-leanpub-20201129.2027/
-  ox-leanpub-20201129.2027/ox-leanpub-book.el
-  ox-leanpub-20201129.2027/ox-leanpub-markdown.el
-  ox-leanpub-20201129.2027/ox-leanpub-markua.el
-  ox-leanpub-20201129.2027/ox-leanpub-pkg.el
-  ox-leanpub-20201129.2027/ox-leanpub.el
-Built ox-leanpub in 4.430s, finished at 2022-11-07T01:39:23+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 500 Nov  7 01:39 packages/ox-leanpub-20201129.2027.entry
- 80K -rw-r--r-- 1 root root 80K Nov  7 01:39 packages/ox-leanpub-20201129.2027.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/zzamboni/ox-leanpub.git/': The requested URL returned error: 520
+
+Command exited with non-zero exit-code: 128

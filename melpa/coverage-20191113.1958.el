@@ -4,8 +4,6 @@
 
 ;; Author: Kieran Trezona-le Comte <trezona.lecomte@gmail.com>
 ;; Version: 0.5
-;; Package-Version: 20191113.1958
-;; Package-Commit: 6e3c6f2dcb759a76086adeeb1fdfe83e4f082482
 ;; Package-Requires: ((ov "1.0") (cl-lib "0.5"))
 ;; Created: 2016-01-21
 ;; Keywords: coverage metrics simplecov ruby rspec

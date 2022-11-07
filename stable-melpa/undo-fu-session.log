@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-undo-fu-session.git
 
 Updating /mnt/store/melpa/working/undo-fu-session/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-undo-fu-session.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 48544cb102fd3d761acf92598076b20bbb4075f9
+Built undo-fu-session in 4.559s, finished at 2022-11-07T05:37:39+0000
+ ✓ Success:
+ 28K -rwxr-xr-x 1 root root 27K Nov  7 05:37 packages/undo-fu-session-20220731.2356.el
+4.0K -rw-r--r-- 1 root root 416 Nov  7 05:37 packages/undo-fu-session-20220731.2356.entry

@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware-abandoned/test-case-mode.git
 
 Updating /mnt/store/melpa/working/test-case-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/emacs-weirdware-abandoned/test-case-mode.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 26e397c0f930b7eb0be413ef7dd257b1da052bec
+Built test-case-mode in 4.172s, finished at 2022-11-07T05:35:03+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 59K Nov  7 05:35 packages/test-case-mode-20130525.1434.el
+4.0K -rw-r--r-- 1 root root 367 Nov  7 05:35 packages/test-case-mode-20130525.1434.entry

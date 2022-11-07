@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/wordreference.el.git
 
 Updating /mnt/store/melpa/working/wordreference/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/martianh/wordreference.el.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 13c474678f1efbf56ae7ca6bda70566496ea3b80
+Built wordreference in 5.355s, finished at 2022-11-07T05:41:30+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 48K Nov  7 05:41 packages/wordreference-20220909.1548.el
+4.0K -rw-r--r-- 1 root root 434 Nov  7 05:41 packages/wordreference-20220909.1548.entry

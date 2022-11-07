@@ -4,8 +4,6 @@
 
 ;; Author: Takuto Wada <takuto.wada at gmail com>
 ;; Keywords: coverage, overlay
-;; Package-Version: 20190414.940
-;; Package-Commit: 0beae208d0e7d746a94385428bd61aa5cd7ea828
 ;; Homepage: https://github.com/twada/coverlay.el
 ;; Version: 3.0.2
 ;; Package-Requires: ((emacs "24.1") (cl-lib "0.5"))
