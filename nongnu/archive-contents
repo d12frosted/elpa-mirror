@@ -331,7 +331,7 @@
 		   ("Fanael Linithien" . "fanael4@gmail.com"))
 		  (:commit . "f80f63822ffae78de38dbe72cacaeb1aaa96c732"))])
  (editorconfig .
-	       [(0 9 0)
+	       [(0 9 1)
 		((cl-lib
 		  (0 5))
 		 (nadvice
@@ -343,7 +343,7 @@
 		 (:maintainer "EditorConfig Team" . "editorconfig@googlegroups.com")
 		 (:authors
 		  ("EditorConfig Team" . "editorconfig@googlegroups.com"))
-		 (:commit . "bcd377596fc0c5c315598adaa59fcd0455916f8d"))])
+		 (:commit . "3352e487809dda4a0366314e30c9efa431b61f79"))])
  (elixir-mode .
 	      [(2 4 0)
 	       ((emacs

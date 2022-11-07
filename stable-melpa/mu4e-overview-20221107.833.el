@@ -4,8 +4,8 @@
 
 ;; Author: Michał Krzywkowski <k.michal@zoho.com>
 ;; Keywords: mail, tools
-;; Package-Version: 20200824.1549
-;; Package-Commit: 7daaa35a6d78feb83167e780a9c23da719c9051b
+;; Package-Version: 20221107.833
+;; Package-Commit: 21d4fbf44f67b786a61072afd20065a56b3952a1
 ;; Version: 0.2.0
 ;; Homepage: https://github.com/mkcms/mu4e-overview
 ;; Package-Requires: ((emacs "26"))
@@ -196,8 +196,9 @@ passed to CALLBACK will be 0."
            process
            (lambda (proc _status)
              (unless (process-live-p proc)
+               (setq output (string-trim output))
                (save-match-data
-                 (when (string-match "^\\([0-9]+\\)\n$" output)
+                 (when (string-match "^\\([0-9]+\\)$" output)
                    (setq count (string-to-number
                                 (match-string 1 output)))))
                (if unread-only

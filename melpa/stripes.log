@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/stepnem/stripes-el.git
 
 Updating /mnt/store/melpa/working/stripes/
-Checking out origin/HEAD
-Checking out 618e40e0a9cf80decea32c8daecb1c9f6eae2991
-Built stripes in 7.977s, finished at 2022-11-07T05:33:04+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.3K Nov  7 05:33 packages/stripes-20220310.2237.el
-4.0K -rw-r--r-- 1 root root  434 Nov  7 05:33 packages/stripes-20220310.2237.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/stepnem/stripes-el.git/': The requested URL returned error: 520
+
+Command exited with non-zero exit-code: 128

@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/mu4e-query-fragments.el.git
 
 Updating /mnt/store/melpa/working/mu4e-query-fragments/
-Checking out origin/HEAD
-Checking out 8d93ede3772353e2dbc307de03e06e37ea6a0b6c
-Built mu4e-query-fragments in 3.917s, finished at 2022-11-07T05:09:56+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.2K Nov  7 05:09 packages/mu4e-query-fragments-20211030.2307.el
-4.0K -rw-r--r-- 1 root root  412 Nov  7 05:09 packages/mu4e-query-fragments-20211030.2307.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/wavexx/mu4e-query-fragments.el.git/': The requested URL returned error: 520
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

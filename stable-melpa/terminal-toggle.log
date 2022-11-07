@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mtekman/terminal-toggle.el.git
 
 Updating /mnt/store/melpa/working/terminal-toggle/
-Checking out origin/HEAD
-Checking out f824d634aef3600cb7a8e2ddf9e8444c6607c160
-Built terminal-toggle in 3.977s, finished at 2022-11-07T05:34:56+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Nov  7 05:34 packages/terminal-toggle-20190226.1510.el
-4.0K -rw-r--r-- 1 root root  356 Nov  7 05:34 packages/terminal-toggle-20190226.1510.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/mtekman/terminal-toggle.el.git/': The requested URL returned error: 520
+
+Command exited with non-zero exit-code: 128

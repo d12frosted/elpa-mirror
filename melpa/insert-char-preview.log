@@ -3,10 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/matsievskiysv/insert-char-preview.git
 
 Updating /mnt/store/melpa/working/insert-char-preview/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 520 curl 22 The requested URL returned error: 520
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 8f13262ebcb3f271f1d188584d04ca6d87214111
+Built insert-char-preview in 5.855s, finished at 2022-11-07T08:37:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Nov  7 08:37 packages/insert-char-preview-20201023.2108.el
+4.0K -rw-r--r-- 1 root root  373 Nov  7 08:37 packages/insert-char-preview-20201023.2108.entry

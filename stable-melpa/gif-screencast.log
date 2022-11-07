@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/Ambrevar/emacs-gif-screencast.git
 
 Updating /mnt/store/melpa/working/gif-screencast/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/Ambrevar/emacs-gif-screencast.git/': The requested URL returned error: 520
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out adec408e6adab2e8e057fe0ad828749f473bfb83
+Built gif-screencast in 4.784s, finished at 2022-11-07T12:03:33+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Nov  7 12:03 packages/gif-screencast-20220714.1300.el
+4.0K -rw-r--r-- 1 root root 399 Nov  7 12:03 packages/gif-screencast-20220714.1300.entry

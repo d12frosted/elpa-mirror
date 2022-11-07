@@ -3,54 +3,11 @@ Fetcher: github
 Source:  https://github.com/auto-complete/auto-complete.git
 
 Updating /mnt/store/melpa/working/auto-complete/
-Checking out origin/HEAD
-Checking out 57cb8f2ee32dff17ea1b4431fe5920272aa38d72
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/auto-complete/
-  to /tmp/auto-completeNnqzrK/auto-complete-20220105.439
-    auto-complete-config.el -> auto-complete-config.el
-    auto-complete-pkg.el -> auto-complete-pkg.el
-    auto-complete.el -> auto-complete.el
-    dict => dict
-Created auto-complete-20220105.439.tar containing:
-  auto-complete-20220105.439/
-  auto-complete-20220105.439/auto-complete-config.el
-  auto-complete-20220105.439/auto-complete-pkg.el
-  auto-complete-20220105.439/auto-complete.el
-  auto-complete-20220105.439/dict/
-  auto-complete-20220105.439/dict/ada-mode
-  auto-complete-20220105.439/dict/c++-mode
-  auto-complete-20220105.439/dict/c-mode
-  auto-complete-20220105.439/dict/caml-mode
-  auto-complete-20220105.439/dict/clojure-mode
-  auto-complete-20220105.439/dict/clojurescript-mode
-  auto-complete-20220105.439/dict/coq-mode
-  auto-complete-20220105.439/dict/css-mode
-  auto-complete-20220105.439/dict/erlang-mode
-  auto-complete-20220105.439/dict/ess-julia-mode
-  auto-complete-20220105.439/dict/go-mode
-  auto-complete-20220105.439/dict/haskell-mode
-  auto-complete-20220105.439/dict/java-mode
-  auto-complete-20220105.439/dict/js-mode
-  auto-complete-20220105.439/dict/julia-mode
-  auto-complete-20220105.439/dict/lua-mode
-  auto-complete-20220105.439/dict/nim-mode
-  auto-complete-20220105.439/dict/objc-mode
-  auto-complete-20220105.439/dict/octave-mode
-  auto-complete-20220105.439/dict/php-mode
-  auto-complete-20220105.439/dict/python-mode
-  auto-complete-20220105.439/dict/qml-mode
-  auto-complete-20220105.439/dict/ruby-mode
-  auto-complete-20220105.439/dict/scala-mode
-  auto-complete-20220105.439/dict/scheme-mode
-  auto-complete-20220105.439/dict/sclang-mode
-  auto-complete-20220105.439/dict/sh-mode
-  auto-complete-20220105.439/dict/swift-mode
-  auto-complete-20220105.439/dict/tcl-mode
-  auto-complete-20220105.439/dict/ts-mode
-  auto-complete-20220105.439/dict/tuareg-mode
-  auto-complete-20220105.439/dict/verilog-mode
-Built auto-complete in 4.528s, finished at 2022-11-07T08:00:11+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  411 Nov  7 08:00 packages/auto-complete-20220105.439.entry
-332K -rw-r--r-- 1 root root 330K Nov  7 08:00 packages/auto-complete-20220105.439.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/auto-complete/auto-complete.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

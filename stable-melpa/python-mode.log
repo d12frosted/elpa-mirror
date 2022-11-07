@@ -3,22 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/python-mode-devs/python-mode.git
 
 Updating /mnt/store/melpa/working/python-mode/
-Checking out origin/HEAD
-Checking out d0fd742a28e051b99490e48971dafd9766064553
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/python-mode/
-  to /tmp/python-modeHD0pGZ/python-mode-20221031.1030
-    python-mode.el -> python-mode.el
-    completion/pycomplete.el -> completion/pycomplete.el
-    completion/pycomplete.py -> completion/pycomplete.py
-Created python-mode-20221031.1030.tar containing:
-  python-mode-20221031.1030/
-  python-mode-20221031.1030/completion/
-  python-mode-20221031.1030/completion/pycomplete.el
-  python-mode-20221031.1030/completion/pycomplete.py
-  python-mode-20221031.1030/python-mode-pkg.el
-  python-mode-20221031.1030/python-mode.el
-Built python-mode in 5.468s, finished at 2022-11-07T05:24:09+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  500 Nov  7 05:24 packages/python-mode-20221031.1030.entry
-980K -rw-r--r-- 1 root root 980K Nov  7 05:24 packages/python-mode-20221031.1030.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/python-mode-devs/python-mode.git/': The requested URL returned error: 525
+
+Command exited with non-zero exit-code: 128

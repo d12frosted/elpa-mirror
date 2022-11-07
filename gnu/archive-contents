@@ -2512,7 +2512,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "e01a8f7e80c5c83dfcfb87b10e0213d4963e4d15"))])
  (pyim .
-       [(5 2 7)
+       [(5 2 8)
 	((emacs
 	  (25 1))
 	 (async
@@ -2526,7 +2526,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "8c4f7d40c05dc06b3c96c2955e5d72ec268f2b61"))])
+	 (:commit . "93fab3c9e8c2490687781d45c1cecead0bd3ecf2"))])
  (pyim-basedict .
 		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar
@@ -3325,6 +3325,19 @@
 	 (:authors
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
+ (triples .
+	  [(0 1)
+	   ((seq
+	     (2 0))
+	    (emacs
+	     (25)))
+	   "A flexible triple-based database for us in apps." tar
+	   ((:url . "https://github.com/ahyatt/triples")
+	    (:keywords "triples" "kg" "data" "sqlite")
+	    (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
+	    (:authors
+	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
+	    (:commit . "e91514ddd71fff76f8f92934a2c1d8cb7da789cc"))])
  (undo-tree .
 	    [(0 8 2)
 	     ((queue

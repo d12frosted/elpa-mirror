@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jagrg/org-emms.git
 
 Updating /mnt/store/melpa/working/org-emms/
-Checking out origin/HEAD
-Checking out 07a8917f3d628c32e5de1dbd118ac08203772533
-Built org-emms in 3.829s, finished at 2022-11-07T05:15:11+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Nov  7 05:15 packages/org-emms-20181010.1114.el
-4.0K -rw-r--r-- 1 root root  386 Nov  7 05:15 packages/org-emms-20181010.1114.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/jagrg/org-emms.git/': The requested URL returned error: 520
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

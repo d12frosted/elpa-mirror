@@ -3,19 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/gcode-mode.el.git
 
 Updating /mnt/store/melpa/working/gcode-mode/
-Checking out origin/HEAD
-Checking out 1f83845af4102efc5e5856b55bd5ad165b2f0cdd
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/gcode-mode/
-  to /tmp/gcode-modeVz9PE1/gcode-mode-20210522.1025
-    gcode-mode-doc.el -> gcode-mode-doc.el
-    gcode-mode.el -> gcode-mode.el
-Created gcode-mode-20210522.1025.tar containing:
-  gcode-mode-20210522.1025/
-  gcode-mode-20210522.1025/gcode-mode-doc.el
-  gcode-mode-20210522.1025/gcode-mode-pkg.el
-  gcode-mode-20210522.1025/gcode-mode.el
-Built gcode-mode in 3.848s, finished at 2022-11-07T04:48:41+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 408 Nov  7 04:48 packages/gcode-mode-20210522.1025.entry
- 60K -rw-r--r-- 1 root root 60K Nov  7 04:48 packages/gcode-mode-20210522.1025.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/wavexx/gcode-mode.el.git/': The requested URL returned error: 525
+
+Command exited with non-zero exit-code: 128
