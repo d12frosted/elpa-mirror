@@ -3,11 +3,31 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/guile.git
 
 Updating /mnt/store/melpa/working/geiser-guile/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/emacs-geiser/guile.git/': The requested URL returned error: 520
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f5e82dc0f5a076335f201885a7edbefaa1ad435f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-guile/
+  to /tmp/geiser-guileZiMQLZ/geiser-guile-20221104.427
+    geiser-guile.el -> geiser-guile.el
+    geiser-guile.texi -> geiser-guile.texi
+    src/geiser => src/geiser
+Generating /tmp/geiser-guileZiMQLZ/geiser-guile-20221104.427/geiser-guile.info
+Created geiser-guile-20221104.427.tar containing:
+  geiser-guile-20221104.427/
+  geiser-guile-20221104.427/dir
+  geiser-guile-20221104.427/geiser-guile-pkg.el
+  geiser-guile-20221104.427/geiser-guile.el
+  geiser-guile-20221104.427/geiser-guile.info
+  geiser-guile-20221104.427/src/
+  geiser-guile-20221104.427/src/geiser/
+  geiser-guile-20221104.427/src/geiser/completion.scm
+  geiser-guile-20221104.427/src/geiser/doc.scm
+  geiser-guile-20221104.427/src/geiser/emacs.scm
+  geiser-guile-20221104.427/src/geiser/evaluation.scm
+  geiser-guile-20221104.427/src/geiser/modules.scm
+  geiser-guile-20221104.427/src/geiser/utils.scm
+  geiser-guile-20221104.427/src/geiser/xref.scm
+Built geiser-guile in 7.158s, finished at 2022-11-06T21:30:35+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 451 Nov  6 21:30 packages/geiser-guile-20221104.427.entry
+ 72K -rw-r--r-- 1 root root 70K Nov  6 21:30 packages/geiser-guile-20221104.427.tar

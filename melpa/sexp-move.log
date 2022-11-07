@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/elzair/sexp-move.git
 
 Updating /mnt/store/melpa/working/sexp-move/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/elzair/sexp-move.git/': The requested URL returned error: 520
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 117f7a91ab7c25e438413753e916570122011ce7
+Built sexp-move in 4.913s, finished at 2022-11-06T22:11:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Nov  6 22:11 packages/sexp-move-20150915.1730.el
+4.0K -rw-r--r-- 1 root root  365 Nov  6 22:11 packages/sexp-move-20150915.1730.entry

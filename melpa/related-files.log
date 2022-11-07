@@ -1,0 +1,21 @@
+Package: related-files
+Fetcher: github
+Source:  https://github.com/DamienCassou/related-files.git
+
+Cloning https://github.com/DamienCassou/related-files.git to /mnt/store/melpa/working/related-files/
+Checking out origin/HEAD
+Checking out 4085ed9c235983e530da24cb1fbe33a5b7928ab3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/related-files/
+  to /tmp/related-filesjARmgC/related-files-20221101.1909
+    related-files-recipe.el -> related-files-recipe.el
+    related-files.el -> related-files.el
+Created related-files-20221101.1909.tar containing:
+  related-files-20221101.1909/
+  related-files-20221101.1909/related-files-pkg.el
+  related-files-20221101.1909/related-files-recipe.el
+  related-files-20221101.1909/related-files.el
+Built related-files in 3.232s, finished at 2022-11-06T22:07:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 363 Nov  6 22:07 packages/related-files-20221101.1909.entry
+ 40K -rw-r--r-- 1 root root 40K Nov  6 22:07 packages/related-files-20221101.1909.tar

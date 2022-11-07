@@ -1,13 +1,13 @@
 Package: eide
 Fetcher: git
-Source:  https://forge.chalec.org/hjuvi/eide.git
+Source:  https://forge.tedomum.net/hjuvi/eide.git
 
-Updating /mnt/store/melpa/working/eide/
+Cloning https://forge.tedomum.net/hjuvi/eide.git to /mnt/store/melpa/working/eide/
 Checking out origin/HEAD
-Checking out a32b9266414d9173dfa92fa44b17064ebb39522f
+Checking out e0a5deb627da9cf70f02229601a1ebe6d78cabc8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eide/
-  to /tmp/eideojI8uO/eide-20220531.452
+  to /tmp/eideauQb9G/eide-20221101.2045
   ! src/eide-compare.el -> eide-compare.el
   ! src/eide-config.el -> eide-config.el
   ! src/eide-display.el -> eide-display.el
@@ -23,24 +23,26 @@ Copying files (->) and directories (=>)
   ! src/eide.el -> eide.el
   ! src/themes/eide-dark-theme.el -> eide-dark-theme.el
   ! src/themes/eide-light-theme.el -> eide-light-theme.el
-Created eide-20220531.452.tar containing:
-  eide-20220531.452/
-  eide-20220531.452/eide-compare.el
-  eide-20220531.452/eide-config.el
-  eide-20220531.452/eide-dark-theme.el
-  eide-20220531.452/eide-display.el
-  eide-20220531.452/eide-edit.el
-  eide-20220531.452/eide-keys.el
-  eide-20220531.452/eide-light-theme.el
-  eide-20220531.452/eide-menu.el
-  eide-20220531.452/eide-pkg.el
-  eide-20220531.452/eide-popup.el
-  eide-20220531.452/eide-project.el
-  eide-20220531.452/eide-search.el
-  eide-20220531.452/eide-vc.el
-  eide-20220531.452/eide-windows.el
-  eide-20220531.452/eide.el
-Built eide in 4.467s, finished at 2022-11-06T13:57:33+0000
+Created eide-20221101.2045.tar containing:
+  eide-20221101.2045/
+  eide-20221101.2045/eide-compare.el
+  eide-20221101.2045/eide-config.el
+  eide-20221101.2045/eide-dark-theme.el
+  eide-20221101.2045/eide-display.el
+  eide-20221101.2045/eide-edit.el
+  eide-20221101.2045/eide-keys.el
+  eide-20221101.2045/eide-light-theme.el
+  eide-20221101.2045/eide-menu.el
+  eide-20221101.2045/eide-pkg.el
+  eide-20221101.2045/eide-popup.el
+  eide-20221101.2045/eide-project.el
+  eide-20221101.2045/eide-search.el
+  eide-20221101.2045/eide-vc.el
+  eide-20221101.2045/eide-windows.el
+  eide-20221101.2045/eide.el
+Built eide in 10.127s, finished at 2022-11-06T21:18:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  292 Nov  6 13:57 packages/eide-20220531.452.entry
-320K -rw-r--r-- 1 root root 320K Nov  6 13:57 packages/eide-20220531.452.tar
+4.0K -rw-r--r-- 1 root root  292 Nov  6 17:38 packages/eide-20220531.452.entry
+320K -rw-r--r-- 1 root root 320K Nov  6 17:38 packages/eide-20220531.452.tar
+4.0K -rw-r--r-- 1 root root  296 Nov  6 21:18 packages/eide-20221101.2045.entry
+320K -rw-r--r-- 1 root root 320K Nov  6 21:18 packages/eide-20221101.2045.tar

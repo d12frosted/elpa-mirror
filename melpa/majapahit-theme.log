@@ -3,22 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/franksn/majapahit-theme.git
 
 Updating /mnt/store/melpa/working/majapahit-theme/
-Checking out origin/HEAD
-Checking out 77c96df7619666b2102d90d452eeadf04adc89a6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/majapahit-theme/
-  to /tmp/majapahit-themeIJj4Vt/majapahit-theme-20160817.1848
-    majapahit-common.el -> majapahit-common.el
-    majapahit-dark-theme.el -> majapahit-dark-theme.el
-    majapahit-light-theme.el -> majapahit-light-theme.el
-    majapahit-theme-pkg.el -> majapahit-theme-pkg.el
-Created majapahit-theme-20160817.1848.tar containing:
-  majapahit-theme-20160817.1848/
-  majapahit-theme-20160817.1848/majapahit-common.el
-  majapahit-theme-20160817.1848/majapahit-dark-theme.el
-  majapahit-theme-20160817.1848/majapahit-light-theme.el
-  majapahit-theme-20160817.1848/majapahit-theme-pkg.el
-Built majapahit-theme in 4.676s, finished at 2022-11-06T14:27:28+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  159 Nov  6 14:27 packages/majapahit-theme-20160817.1848.entry
-132K -rw-r--r-- 1 root root 130K Nov  6 14:27 packages/majapahit-theme-20160817.1848.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/franksn/majapahit-theme.git/': The requested URL returned error: 520
+
+Command exited with non-zero exit-code: 128

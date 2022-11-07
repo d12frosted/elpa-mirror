@@ -3,10 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/cnngimenez/sqlite.el.git
 
 Updating /mnt/store/melpa/working/sqlite/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 520 curl 22 The requested URL returned error: 520
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out f3da716302c929b9df4ba0c281968f72a9d1d188
+Built sqlite in 4.892s, finished at 2022-11-06T22:14:15+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Nov  6 22:14 packages/sqlite-20201227.1822.el
+4.0K -rw-r--r-- 1 root root 305 Nov  6 22:14 packages/sqlite-20201227.1822.entry
