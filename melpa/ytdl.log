@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/tuedachu/ytdl.git
 
 Updating /mnt/store/melpa/working/ytdl/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://gitlab.com/tuedachu/ytdl.git/': The requested URL returned error: 525
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 23da64f5c38b8cb83dbbadf704171b86cc0fa937
+Built ytdl in 5.511s, finished at 2022-11-07T16:34:23+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 40K Nov  7 16:34 packages/ytdl-20210506.914.el
+4.0K -rw-r--r-- 1 root root 421 Nov  7 16:34 packages/ytdl-20210506.914.entry

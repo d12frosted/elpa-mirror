@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/drymerisnothere/nikola-el.git
 
 Updating /mnt/store/melpa/working/nikola/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://gitlab.com/drymerisnothere/nikola-el.git/': The requested URL returned error: 520
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 964715ac30943c9d6976999cad208dc60d09def0
+Built nikola in 4.877s, finished at 2022-11-07T19:42:44+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Nov  7 19:42 packages/nikola-20170703.2021.el
+4.0K -rw-r--r-- 1 root root 373 Nov  7 19:42 packages/nikola-20170703.2021.entry

@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/drymerisnothere/molecule-el.git
 
 Updating /mnt/store/melpa/working/molecule/
-Checking out origin/HEAD
-Checking out 2ef72b81d9aa24ea782b71a061a3abdad6cae162
-Built molecule in 4.299s, finished at 2022-11-07T15:59:54+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.9K Nov  7 15:59 packages/molecule-20180527.743.el
-4.0K -rw-r--r-- 1 root root  390 Nov  7 15:59 packages/molecule-20180527.743.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/drymerisnothere/molecule-el.git/': The requested URL returned error: 525
+
+Command exited with non-zero exit-code: 128

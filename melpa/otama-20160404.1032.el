@@ -6,6 +6,8 @@
 ;; Author:  Yoshinari Nomura <nom@quickhack.net>
 ;; Created: 2016-02-03
 ;; Version: 1.0.0
+;; Package-Version: 20160404.1032
+;; Package-Commit: b69e0740846ace7885b0c0717f7abe8d0419eefd
 ;; Keywords: database, org-mode
 ;; URL:
 ;; Package-Requires:

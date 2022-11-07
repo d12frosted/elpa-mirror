@@ -3,9 +3,19 @@ Fetcher: gitlab
 Source:  https://gitlab.com/oer/org-re-reveal.git
 
 Updating /mnt/store/melpa/working/org-re-reveal/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://gitlab.com/oer/org-re-reveal.git/': The requested URL returned error: 520
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 941aa4b94f4eb13cea23013126e84f335059dead
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-re-reveal/
+  to /tmp/org-re-revealhXZ58w/org-re-reveal-20221007.1714
+    org-re-reveal.el -> org-re-reveal.el
+    ox-re-reveal.el -> ox-re-reveal.el
+Created org-re-reveal-20221007.1714.tar containing:
+  org-re-reveal-20221007.1714/
+  org-re-reveal-20221007.1714/org-re-reveal-pkg.el
+  org-re-reveal-20221007.1714/org-re-reveal.el
+  org-re-reveal-20221007.1714/ox-re-reveal.el
+Built org-re-reveal in 4.953s, finished at 2022-11-07T19:47:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  346 Nov  7 19:47 packages/org-re-reveal-20221007.1714.entry
+132K -rw-r--r-- 1 root root 130K Nov  7 19:47 packages/org-re-reveal-20221007.1714.tar

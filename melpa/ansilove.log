@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/xgqt/emacs-ansilove.git
 
 Updating /mnt/store/melpa/working/ansilove/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://gitlab.com/xgqt/emacs-ansilove.git/': The requested URL returned error: 520
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 3e3f6e8baa2135b072855567e4a1fc599a2fc800
+Built ansilove in 5.445s, finished at 2022-11-07T18:52:46+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Nov  7 18:52 packages/ansilove-20220629.2339.el
+4.0K -rw-r--r-- 1 root root  379 Nov  7 18:52 packages/ansilove-20220629.2339.entry

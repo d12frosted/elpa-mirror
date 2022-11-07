@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacsomancer/equake.git
 
 Updating /mnt/store/melpa/working/equake/
-Checking out origin/HEAD
-Checking out 7aa2e1715e6ea286b08bb446d2d9915afa0fdf03
-Built equake in 5.801s, finished at 2022-11-07T15:31:01+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 45K Nov  7 15:31 packages/equake-20220627.2248.el
-4.0K -rw-r--r-- 1 root root 442 Nov  7 15:31 packages/equake-20220627.2248.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/emacsomancer/equake.git/': The requested URL returned error: 525
+
+Command exited with non-zero exit-code: 128
