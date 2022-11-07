@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/Ambrevar/emacs-fish-completion.git
 
 Updating /mnt/store/melpa/working/fish-completion/
-Checking out origin/HEAD
-Checking out 10384881817b5ae38cf6197a077a663420090d2c
-Built fish-completion in 4.621s, finished at 2022-11-07T11:58:31+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.9K Nov  7 11:58 packages/fish-completion-20191103.1210.el
-4.0K -rw-r--r-- 1 root root  382 Nov  7 11:58 packages/fish-completion-20191103.1210.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/Ambrevar/emacs-fish-completion.git/': The requested URL returned error: 520
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

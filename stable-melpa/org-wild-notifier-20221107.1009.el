@@ -5,8 +5,8 @@
 ;; Author: Artem Khramov <akhramov+emacs@pm.me>
 ;; Created: 6 Jan 2017
 ;; Version: 0.4.1
-;; Package-Version: 20221105.2056
-;; Package-Commit: 4e170958f315f0ddbd562338f9997443869b125b
+;; Package-Version: 20221107.1009
+;; Package-Commit: 544df8a78090411479495494f9de724c350649ac
 ;; Package-Requires: ((alert "1.2") (async "1.9.3") (dash "2.18.0") (emacs "24.4"))
 ;; Keywords: notification alert org org-agenda agenda
 ;; URL: https://github.com/akhramov/org-wild-notifier.el
@@ -131,6 +131,16 @@ options: 'high 'medium 'low"
 
 (defvar org-wild-notifier--last-check-time (seconds-to-time 0)
   "Last time checked for events.")
+
+(defun org-wild-notifier--time= (&rest list)
+  "Compare timestamps.
+Comparison is performed by converted each element of LIST onto string
+in order to ignore seconds."
+  (->> list
+       (--map (format-time-string "%d:%H:%M" it))
+       (-uniq)
+       (length)
+       (= 1)))
 
 (defun org-wild-notifier--today ()
   "Get the timestamp for the beginning of current day."

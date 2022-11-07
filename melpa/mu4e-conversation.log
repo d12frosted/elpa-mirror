@@ -4,10 +4,8 @@ Source:  https://gitlab.com/ambrevar/mu4e-conversation.git
 
 Updating /mnt/store/melpa/working/mu4e-conversation/
 
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
 
-Fetching origin
-fatal: unable to access 'https://gitlab.com/ambrevar/mu4e-conversation.git/': The requested URL returned error: 525
-error: Could not fetch origin
+fatal: unable to access 'https://gitlab.com/ambrevar/mu4e-conversation.git/': The requested URL returned error: 520
 
-Command exited with non-zero exit-code: 1
+Command exited with non-zero exit-code: 128

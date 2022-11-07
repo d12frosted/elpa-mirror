@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.8
-;; Package-Version: 20221104.1549
-;; Package-Commit: c124656c302343366acb5a85a6fdba28cbb0dd38
+;; Package-Version: 20221107.1204
+;; Package-Commit: 8cc0ca548f8fc1930bbc14b273b8a30df0c6327c
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "27.1")(zk "0.3"))
@@ -96,8 +96,6 @@ example."
     (define-key map (kbd "f") #'zk-index-focus)
     (define-key map (kbd "s") #'zk-index-search)
     (define-key map (kbd "g") #'zk-index-query-refresh)
-    (define-key map (kbd "d") #'zk-index-send-to-desktop)
-    (define-key map (kbd "D") #'zk-index-switch-to-desktop)
     (define-key map (kbd "c") #'zk-index-current-notes)
     (define-key map (kbd "i") #'zk-index-refresh)
     (define-key map (kbd "S") #'zk-index-sort-size)
@@ -144,13 +142,10 @@ Adds zk-id as an Embark target, and adds `zk-id-map' and
 `zk-file-map' to `embark-keymap-alist'."
   (with-eval-after-load 'embark
     (add-to-list 'embark-multitarget-actions 'zk-index)
-    (add-to-list 'embark-multitarget-actions 'zk-index-send-to-desktop)
     (add-to-list 'embark-multitarget-actions 'zk-copy-link-and-title)
     (add-to-list 'embark-multitarget-actions 'zk-follow-link-at-point)
     (add-to-list 'embark-target-finders 'zk-index-embark-target)
     (add-to-list 'embark-exporters-alist '(zk-file . zk-index))
-    (define-key zk-file-map (kbd "d") #'zk-index-send-to-desktop)
-    (define-key zk-id-map (kbd "d") #'zk-index-send-to-desktop)
     (define-key zk-id-map (kbd "i") #'zk-index-insert-link)))
 
 (defun zk-index-embark-target ()
@@ -643,7 +638,6 @@ Takes an option POS position argument."
   :global nil
   :keymap '(((kbd "n") . zk-index-next-line)
             ((kbd "p") . zk-index-previous-line)
-            ((kbd "d") . zk-index-send-to-desktop)
             ([remap read-only-mode] . zk-index-view-mode)
             ((kbd "q") . quit-window))
   (if zk-index-view-mode

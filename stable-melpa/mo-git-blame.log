@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mbunkus/mo-git-blame.git
 
 Updating /mnt/store/melpa/working/mo-git-blame/
-Checking out origin/HEAD
-Checking out 254a675eb794cdbbdef9fa2b4b7bb510b70089c0
-Built mo-git-blame in 6.772s, finished at 2022-11-07T08:46:35+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 37K Nov  7 08:46 packages/mo-git-blame-20160129.1759.el
-4.0K -rw-r--r-- 1 root root 313 Nov  7 08:46 packages/mo-git-blame-20160129.1759.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/mbunkus/mo-git-blame.git/': The requested URL returned error: 520
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

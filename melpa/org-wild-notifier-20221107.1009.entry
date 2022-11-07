@@ -1,5 +1,5 @@
 (org-wild-notifier .
-		   [(20221105 2056)
+		   [(20221107 1009)
 		    ((alert
 		      (1 2))
 		     (async
@@ -9,7 +9,7 @@
 		     (emacs
 		      (24 4)))
 		    "Customizable org-agenda notifications" single
-		    ((:commit . "4e170958f315f0ddbd562338f9997443869b125b")
+		    ((:commit . "544df8a78090411479495494f9de724c350649ac")
 		     (:authors
 		      ("Artem Khramov" . "akhramov+emacs@pm.me"))
 		     (:maintainer "Artem Khramov" . "akhramov+emacs@pm.me")

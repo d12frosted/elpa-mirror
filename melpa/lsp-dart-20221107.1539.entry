@@ -1,5 +1,5 @@
 (lsp-dart .
-	  [(20221102 122)
+	  [(20221107 1539)
 	   ((emacs
 	     (26 3))
 	    (lsp-treemacs
@@ -19,6 +19,6 @@
 	    (ht
 	     (2 2)))
 	   "Dart support lsp-mode" tar
-	   ((:commit . "62f98e7dcd76b304644400c212eb027ef90543a4")
+	   ((:commit . "1cd9e746789ba3bd9a838bb52ea43026b092a103")
 	    (:keywords "languages" "extensions")
 	    (:url . "https://emacs-lsp.github.io/lsp-dart"))])
