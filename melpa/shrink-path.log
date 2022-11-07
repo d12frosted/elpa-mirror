@@ -3,11 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/bennya/shrink-path.el.git
 
 Updating /mnt/store/melpa/working/shrink-path/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/bennya/shrink-path.el.git/': The requested URL returned error: 520
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out c14882c8599aec79a6e8ef2d06454254bb3e1e41
+Built shrink-path in 4.556s, finished at 2022-11-07T01:51:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Nov  7 01:51 packages/shrink-path-20190208.1335.el
+4.0K -rw-r--r-- 1 root root  375 Nov  7 01:51 packages/shrink-path-20190208.1335.entry

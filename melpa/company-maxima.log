@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sasanidas/maxima.git
 
 Updating /mnt/store/melpa/working/company-maxima/
-Checking out origin/HEAD
-Checking out f92eafd716ae6e36665bbf027309477c2efa336d
-Built company-maxima in 5.121s, finished at 2022-11-06T21:11:06+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.8K Nov  6 21:11 packages/company-maxima-20210520.2034.el
-4.0K -rw-r--r-- 1 root root  430 Nov  6 21:11 packages/company-maxima-20210520.2034.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.com/sasanidas/maxima.git/': The requested URL returned error: 525
+
+Command exited with non-zero exit-code: 128

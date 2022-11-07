@@ -4,8 +4,10 @@ Source:  https://gitlab.com/Vonfry/zoxide.el.git
 
 Updating /mnt/store/melpa/working/zoxide/
 
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
 
+Fetching origin
 fatal: unable to access 'https://gitlab.com/Vonfry/zoxide.el.git/': The requested URL returned error: 525
+error: Could not fetch origin
 
-Command exited with non-zero exit-code: 128
+Command exited with non-zero exit-code: 1

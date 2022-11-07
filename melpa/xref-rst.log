@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-xref-rst.git
 
 Updating /mnt/store/melpa/working/xref-rst/
-Checking out origin/HEAD
-Checking out e1dd4439e535185a0cd195bb392f70982cf5aadc
-Built xref-rst in 4.894s, finished at 2022-11-06T22:24:30+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Nov  6 22:24 packages/xref-rst-20220710.1033.el
-4.0K -rw-r--r-- 1 root root 359 Nov  6 22:24 packages/xref-rst-20220710.1033.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-xref-rst.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

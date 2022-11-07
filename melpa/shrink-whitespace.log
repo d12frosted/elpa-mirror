@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jcpetkovich/shrink-whitespace.el.git
 
 Updating /mnt/store/melpa/working/shrink-whitespace/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://gitlab.com/jcpetkovich/shrink-whitespace.el.git/': The requested URL returned error: 520
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 0407b89c142bd17e65edb666f35e2c6755bd0867
+Built shrink-whitespace in 4.164s, finished at 2022-11-07T01:51:06+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.4K Nov  7 01:51 packages/shrink-whitespace-20181003.321.el
+4.0K -rw-r--r-- 1 root root  414 Nov  7 01:51 packages/shrink-whitespace-20181003.321.entry

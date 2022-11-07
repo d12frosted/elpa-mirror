@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-utimeclock.git
 
 Updating /mnt/store/melpa/working/utimeclock/
-Checking out origin/HEAD
-Checking out 32994d27771f77a384b246e69a621c4d26e27f4f
-Built utimeclock in 4.926s, finished at 2022-11-06T22:20:22+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Nov  6 22:20 packages/utimeclock-20220710.1024.el
-4.0K -rw-r--r-- 1 root root 389 Nov  6 22:20 packages/utimeclock-20220710.1024.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-utimeclock.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
