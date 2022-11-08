@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/rolandwalker/back-button.git
 
 Updating /mnt/store/melpa/working/back-button/
-Checking out origin/HEAD
-Checking out f8783c98a7fefc1d0419959c1b462c7dcadce5a8
-Built back-button in 4.249s, finished at 2022-11-08T13:09:06+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 37K Nov  8 13:09 packages/back-button-20220827.1733.el
-4.0K -rw-r--r-- 1 root root 551 Nov  8 13:09 packages/back-button-20220827.1733.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/rolandwalker/back-button.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

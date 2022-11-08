@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/pidu/git-lens.git
 
 Updating /mnt/store/melpa/working/git-lens/
-Checking out origin/HEAD
-Checking out 347832fbdb75a0930aa3eef628ec0069a335f3b7
-Built git-lens in 5.135s, finished at 2022-11-08T13:34:50+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.2K Nov  8 13:34 packages/git-lens-20220922.710.el
-4.0K -rw-r--r-- 1 root root  400 Nov  8 13:34 packages/git-lens-20220922.710.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/pidu/git-lens.git/': Failed to connect to codeberg.org port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

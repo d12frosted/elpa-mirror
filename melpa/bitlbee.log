@@ -3,10 +3,11 @@ Fetcher: github
 Source:  https://github.com/pjones/bitlbee-el.git
 
 Updating /mnt/store/melpa/working/bitlbee/
-Checking out origin/HEAD
-Checking out f3342da46b0864ae8db4e82b553d9e617b090534
-Warning: bitlbee :files spec is equivalent to the default
-Built bitlbee in 3.995s, finished at 2022-11-08T13:10:08+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.3K Nov  8 13:10 packages/bitlbee-20151203.0.el
-4.0K -rw-r--r-- 1 root root  163 Nov  8 13:10 packages/bitlbee-20151203.0.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/pjones/bitlbee-el.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

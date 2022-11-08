@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.3
-;; Package-Version: 20221106.941
-;; Package-Commit: c78c95f6f9624f45839d6528a76bb3fe753e2c7b
+;; Package-Version: 20221108.1534
+;; Package-Commit: 581999e0a6895d5bc767693be660fdb140eecece
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -63,7 +63,7 @@ active or not.  KEYMAP is a keymap object.
 STATE-VARIABLE, KEYMAP and map-variable which holds KEYMAP
 must be unique for each element of this variable.")
 
-(defvar loophole--buffer-list nil
+(defvar loophole--buffer-list t
   "List of buffers on which Loophole variables have local value.
 Loophole mode maintains this variable as up to date.
 When Loophole mode is disabled, this variable is set as t
@@ -1537,18 +1537,18 @@ variable."
   (let ((filter (lambda (buffer)
                   (and (buffer-live-p buffer)
                        (with-current-buffer buffer
-                         (let ((no-local-variable
+                         (let ((hava-local-variable
                                 (seq-some
                                  #'local-variable-p
                                  (loophole-local-variable-if-set-list))))
-                           (when no-local-variable
+                           (unless hava-local-variable
                              (remove-hook
                               'change-major-mode-hook
                               #'loophole--follow-killing-local-variable t)
                              (remove-hook
                               'kill-buffer-hook
                               #'loophole--follow-killing-local-variable t))
-                           no-local-variable))))))
+                           hava-local-variable))))))
     (if (listp loophole--buffer-list)
         (setq loophole--buffer-list (seq-filter filter loophole--buffer-list))
       (seq-filter filter (buffer-list)))))

@@ -4,10 +4,10 @@ Source:  https://git.sr.ht/~niklaseklund/detached.el
 
 Updating /mnt/store/melpa/working/detached/
 Checking out origin/HEAD
-Checking out 7f70f00340f11d41fa3d561787386f3e70cef75b
+Checking out beaa9e1258e659adec65fd168897a0a829e63962
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/detached/
-  to /tmp/detachedkudAlq/detached-20221107.1803
+  to /tmp/detachedpWyzEh/detached-20221108.1500
     detached-compile.el -> detached-compile.el
     detached-consult.el -> detached-consult.el
     detached-dired.el -> detached-dired.el
@@ -20,23 +20,25 @@ Copying files (->) and directories (=>)
     detached-vterm.el -> detached-vterm.el
     detached.el -> detached.el
   ! doc/detached.info -> detached.info
-Created detached-20221107.1803.tar containing:
-  detached-20221107.1803/
-  detached-20221107.1803/detached-compile.el
-  detached-20221107.1803/detached-consult.el
-  detached-20221107.1803/detached-dired.el
-  detached-20221107.1803/detached-eshell.el
-  detached-20221107.1803/detached-extra.el
-  detached-20221107.1803/detached-init.el
-  detached-20221107.1803/detached-list.el
-  detached-20221107.1803/detached-org.el
-  detached-20221107.1803/detached-pkg.el
-  detached-20221107.1803/detached-shell.el
-  detached-20221107.1803/detached-vterm.el
-  detached-20221107.1803/detached.el
-  detached-20221107.1803/detached.info
-  detached-20221107.1803/dir
-Built detached in 4.821s, finished at 2022-11-08T13:18:46+0000
+Created detached-20221108.1500.tar containing:
+  detached-20221108.1500/
+  detached-20221108.1500/detached-compile.el
+  detached-20221108.1500/detached-consult.el
+  detached-20221108.1500/detached-dired.el
+  detached-20221108.1500/detached-eshell.el
+  detached-20221108.1500/detached-extra.el
+  detached-20221108.1500/detached-init.el
+  detached-20221108.1500/detached-list.el
+  detached-20221108.1500/detached-org.el
+  detached-20221108.1500/detached-pkg.el
+  detached-20221108.1500/detached-shell.el
+  detached-20221108.1500/detached-vterm.el
+  detached-20221108.1500/detached.el
+  detached-20221108.1500/detached.info
+  detached-20221108.1500/dir
+Built detached in 5.507s, finished at 2022-11-08T16:54:37+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  440 Nov  8 13:18 packages/detached-20221107.1803.entry
 192K -rw-r--r-- 1 root root 190K Nov  8 13:18 packages/detached-20221107.1803.tar
+4.0K -rw-r--r-- 1 root root  440 Nov  8 16:54 packages/detached-20221108.1500.entry
+192K -rw-r--r-- 1 root root 190K Nov  8 16:54 packages/detached-20221108.1500.tar
