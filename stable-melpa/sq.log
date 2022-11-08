@@ -3,9 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sequoia-pgp/sqel.git
 
 Updating /mnt/store/melpa/working/sq/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://gitlab.com/sequoia-pgp/sqel.git/': The requested URL returned error: 525
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out bb0d1756bb9c62bb999fa21e15949e28650c663e
+Built sq in 4.513s, finished at 2022-11-07T23:46:52+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Nov  7 23:46 packages/sq-20220717.2039.el
+4.0K -rw-r--r-- 1 root root  390 Nov  7 23:46 packages/sq-20220717.2039.entry

@@ -32,6 +32,7 @@ Editing Prolog code
 .. Aligning with multiple spaces
 .. Term-based editing and motion commands
 .. Definitions and references
+.. Predicate definition boundaries
 .. Following file specifications
 .. Loading buffers
 .. Using templates for creating new modules
@@ -463,20 +464,20 @@ Semantic highlighting
   response to changes in the buffer.
 
   At any point in a `sweeprolog-mode' buffer, the command `C-c C-c' (or
-  `M-x sweeprolog-colourise-buffer') can be used to update the cross
+  `M-x sweeprolog-analyze-buffer') can be used to update the cross
   reference cache and highlight the buffer accordingly.  When `flymake'
   integration is enabled, this command also updates the diagnostics for
   the current buffer (see [Examining diagnostics]).  This may be useful
   e.g. after defining a new predicate.
 
-  If the user option `sweeprolog-colourise-buffer-on-idle' is set to
+  If the user option `sweeprolog-analyze-buffer-on-idle' is set to
   non-nil (as it is by default), `sweeprolog-mode' also updates semantic
   highlighting in the buffer whenever Emacs is idle for a reasonable
   amount of time, unless the buffer is larger than the value of the
-  `sweeprolog-colourise-buffer-max-size' user option ( 100,000 by
+  `sweeprolog-analyze-buffer-max-size' user option ( 100,000 by
   default).  The minimum idle time to wait before automatically updating
   semantic highlighting can be set via the user option
-  `sweeprolog-colourise-buffer-min-interval'.
+  `sweeprolog-analyze-buffer-min-interval'.
 
   `sweep' defines three highlighting /styles/, each containing more than
   60 different faces (named sets of properties that determine the
@@ -693,6 +694,21 @@ Definitions and references
 [Find Identifiers in the Emacs manual] <info:emacs#Find Identifiers>
 
 [Imenu in the Emacs manual] <info:emacs#Imenu>
+
+
+Predicate definition boundaries
+───────────────────────────────
+
+  In `sweeprolog-mode', the commands `M-n'
+  (`sweeprolog-forward-predicate') and `M-p'
+  (`sweeprolog-backward-predicate') are available for quickly jumping to
+  the first line of the next or previous predicate definition in the
+  current buffer.
+
+  The command `M-h' (`sweeprolog-mark-predicate') marks the entire
+  predicate definition at point, along with its `PlDoc' comments if
+  there are any.  This can be followed, for example, with killing the
+  marked region to relocate the defined predicate by typing `M-h C-w'.
 
 
 Following file specifications
@@ -1422,14 +1438,6 @@ Improvements around editing Prolog
         `sweeprolog-mode' should provide a command for interactively
         inserting a new predicate definition, ideally with optional
         `PlDoc' comments (see [Documenting predicates]).
-
-  Add commands for narrowing and moving by predicate definitions
-        `sweeprolog-mode' should include commands for moving point to
-        the next/previous predicate definition.  We already have
-        commands for clause-based motion (`C-M-a', `C-M-e') but it would
-        be useful to have predicate-based variants as well.  These
-        commands could then be bound to `C-c C-n' for moving to the next
-        predicate definition and `C-c C-p' for moving to the previous.
 
   Improve the information provided for predicate completion candidates
         predicate completion with `C-M-i' should annotate each

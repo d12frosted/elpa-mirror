@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/jart/disaster.git
 
 Updating /mnt/store/melpa/working/disaster/
-Checking out origin/HEAD
-Checking out 0c13bd244cc43773af81e52ce73a55f199d58a61
-Built disaster in 3.880s, finished at 2022-11-07T19:05:55+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Nov  7 19:05 packages/disaster-20220904.449.el
-4.0K -rw-r--r-- 1 root root 456 Nov  7 19:05 packages/disaster-20220904.449.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/jart/disaster.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
