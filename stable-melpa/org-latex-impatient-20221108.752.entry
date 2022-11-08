@@ -1,0 +1,19 @@
+(org-latex-impatient .
+		     [(20221108 752)
+		      ((emacs
+			(26))
+		       (s
+			(1 8 0))
+		       (posframe
+			(0 8 0))
+		       (org
+			(9 3))
+		       (dash
+			(2 17 0)))
+		      "Preview org-latex Fragments Instantly via MathJax" single
+		      ((:commit . "2074d32ea0be80ac90ead79c3178692da67ef181")
+		       (:authors
+			("Sheng Yang" . "styang@fastmail.com"))
+		       (:maintainer "Sheng Yang" . "styang@fastmail.com")
+		       (:keywords "tex" "tools")
+		       (:url . "https://github.com/yangsheng6810/org-latex-instant-preview"))])
