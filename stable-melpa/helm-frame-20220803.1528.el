@@ -3,6 +3,8 @@
 ;; copyright © 2017 chee
 ;; author: chee <yay@chee.party>
 ;; keywords: lisp, helm, popup, frame
+;; Package-Version: 20220803.1528
+;; Package-Commit: 1b5e895e9199deeea049010e5fe4de7a338f41f3
 ;; version: 0.4.8
 ;; package-requires: ((emacs "24.4"))
 

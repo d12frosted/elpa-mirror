@@ -7,8 +7,6 @@
 ;; Created: February 17, 2021
 ;; Modified: May 6, 2021
 ;; Version: 1.0.0
-;; Package-Version: 20210525.2338
-;; Package-Commit: f283b6f6a7e8ad090405be57202caa3d3c424447
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: outlines, org, games, convenience, api
 ;; Homepage: https://github.com/repelliuss/org-gamedb

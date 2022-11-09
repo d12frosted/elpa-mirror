@@ -4,6 +4,8 @@
 
 ;; Author: Uros Perisic
 ;; URL: https://gitlab.com/jjzmajic/handle
+;; Package-Version: 20191029.856
+;; Package-Commit: e27b2d0b229923f81a2c8afa3e9c65ae9e84a0da
 ;;
 ;; Version: 0.1
 ;; Keywords: convenience

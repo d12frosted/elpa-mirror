@@ -4,8 +4,6 @@
 
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Version: 1.0.5
-;; Package-Version: 20200815.736
-;; Package-Commit: 98825efb73c4537f05f653ce40e639a220d2ee5d
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "26.1") (org "9.3") (mustache "0.23"))
 ;; URL: https://github.com/conao3/org-generate.el
