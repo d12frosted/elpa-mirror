@@ -2,8 +2,8 @@
 
 ;; Author: Ono Hiroko <azazabc123@gmail.com>
 ;; Keywords: tools, docs
-;; Package-Version: 20221109.419
-;; Package-Commit: 89a891f312da422918796996b31200410c4a9b92
+;; Package-Version: 20221109.1501
+;; Package-Commit: 2b5d53571bd30b75d4f5a642aa129055803a6bfb
 ;; Package-Requires: ((emacs "24.3"))
 ;; X-URL: https://github.com/kuanyui/tldr.el
 ;; Version: {{VERSION}}
@@ -47,6 +47,11 @@
   "The directory name of tldr."
   :group 'tldr
   :type 'string)
+
+(defcustom tldr-enable-annotations t
+  "Add description of each command in the *Completions* buffer."
+  :group 'tldr
+  :type 'boolean)
 
 (defcustom tldr-use-word-at-point
   nil
@@ -142,6 +147,8 @@ source."
   ""
   :group 'tldr)
 
+(defvar tldr-length-of-longest-command-name nil
+  "Length of the longest command name.")
 
 ;;;###autoload
 (defun tldr-update-docs ()
@@ -247,6 +254,16 @@ the default English language page."
       t
     (progn (message "unzip not found. Please install and run `tldr-update-docs' again.") nil)))
 
+(defun tldr-completion-annotation(command)
+  "Add description for command COMMAND in the *Completions* buffer."
+  (when-let ((file-path (and tldr-enable-annotations (tldr-get-file-path-from-command-name command))))
+    (with-temp-buffer
+      (insert-file-contents file-path)
+      (and (search-forward "> " (point-max) t 1)
+           (concat (make-string (- tldr-length-of-longest-command-name (length command)) ? )
+                   " -- "
+                   (buffer-substring-no-properties (point) (line-end-position)))))))
+
 ;;;###autoload
 (defun tldr (&optional cmd)
   "Lookup TLDR docs."
@@ -259,7 +276,9 @@ Please wait while the latest TLDR docs are downloaded...")
             (sit-for 3)
             (tldr-update-docs)
             (tldr)))
-    (let ((command (or cmd
+    (setq tldr-length-of-longest-command-name (apply #'max (mapcar #'length (tldr-get-commands-list))))
+    (let* ((completion-extra-properties '(:annotation-function tldr-completion-annotation))
+           (command (or cmd
                        (completing-read "TLDR: " (tldr-get-commands-list) nil t
                                         (when tldr-use-word-at-point (current-word))))))
       (if (string= "" command)
