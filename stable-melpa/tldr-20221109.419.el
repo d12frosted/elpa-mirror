@@ -2,8 +2,8 @@
 
 ;; Author: Ono Hiroko <azazabc123@gmail.com>
 ;; Keywords: tools, docs
-;; Package-Version: 20210921.1715
-;; Package-Commit: d3fd2a809a266c005915026799121c78e8b358f0
+;; Package-Version: 20221109.419
+;; Package-Commit: 89a891f312da422918796996b31200410c4a9b92
 ;; Package-Requires: ((emacs "24.3"))
 ;; X-URL: https://github.com/kuanyui/tldr.el
 ;; Version: {{VERSION}}
@@ -231,7 +231,7 @@ the default English language page."
                         (setq line (propertize (substring line 1 -1) 'face 'tldr-code-block))
                         ;; Add command face
                         (setq line (replace-regexp-in-string
-                                    (concat "^" command)
+                                    (concat "^" (regexp-quote command))
                                     (propertize command 'face 'tldr-command-itself)
                                     line 'fixedcase))
                         ;; Strip {{}} and add command argument face
