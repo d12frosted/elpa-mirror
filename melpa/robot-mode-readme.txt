@@ -64,3 +64,9 @@ To:
   https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#space-separated-format
 - Does NOT support the Pipe separated format or the reStructuredText
   format.
+
+### Notable changes
+
+Version 0.7.0
+
+- Add control structure indentation (IF/WHILE/FOR/TRY etc.).

@@ -4,8 +4,8 @@
 ;; Copyright (C) 2022 Marty Hiatt <martianhiatus AT riseup.net>
 ;;
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
-;; Package-Version: 20220909.1548
-;; Package-Commit: 13c474678f1efbf56ae7ca6bda70566496ea3b80
+;; Package-Version: 20221109.1339
+;; Package-Commit: 02d44e1ef05dc991fd964f70264a2fe362574843
 ;; Keywords: convenience, translate, wp, dictionary
 ;; URL: https://codeberg.org/martianh/wordreference.el
 ;; Version: 0.2
@@ -225,17 +225,19 @@ The elements are formatted as follows: \"Spanish-English\" \"esen\" \"es\" \"en\
 (defun wordreference--retrieve-parse-html (word &optional source target)
   "Query wordreference.com for WORD, and parse the HTML response.
 Optionally specify SOURCE and TARGET languages."
-  (let* ((url (wordreference--construct-url source target word)))
+  (let* ((url (wordreference--construct-url source target word))
+         (calling-buffer (current-buffer)))
     (url-retrieve url
-                  'wordreference--parse-async (list word source target))))
+                  'wordreference--parse-async (list word source target calling-buffer))))
 
-(defun wordreference--parse-async (_status word source target)
-  "Callback to parse query response for WORD from SOURCE to TARGET language."
+(defun wordreference--parse-async (_status word source target buffer)
+  "Callback to parse query response for WORD from SOURCE to TARGET language.
+BUFFER is the buffer that was current when we invoked the wordreference command."
   (let ((parsed (with-current-buffer (current-buffer)
                   (goto-char (point-min))
                   (libxml-parse-html-region
                    (search-forward "\n\n") (point-max)))))
-    (wordreference-print-translation-buffer word parsed source target)))
+    (wordreference-print-translation-buffer word parsed source target buffer)))
 
 (defun wordreference--get-tables (dom)
   "Get tables from parsed HTML response DOM."
@@ -411,10 +413,11 @@ example for an example, and other for everything else."
 
 ;; PRINTING:
 
-(defun wordreference-print-translation-buffer (word html-parsed &optional source target)
+(defun wordreference-print-translation-buffer (word html-parsed &optional source target buffer)
   "Print translation results in buffer.
 WORD is the search query, HTML-PARSED is what our query returned.
-SOURCE and TARGET are languages."
+SOURCE and TARGET are languages.
+BUFFER is the buffer that was current when we invoked the wordreference command."
   (with-current-buffer (get-buffer-create "*wordreference*")
     (let* ((inhibit-read-only t)
            (tables (wordreference--get-tables html-parsed))
@@ -479,7 +482,8 @@ SOURCE and TARGET are languages."
       (wordreference-prop-query-in-results word)
       (goto-char (point-min))))
   ;; handle searching again from wr:
-  (unless (equal (buffer-name (current-buffer)) "*wordreference*")
+  ;; because this is a callback, `current-buffer' = http response
+  (unless (equal (buffer-name buffer) "*wordreference*")
     (switch-to-buffer-other-window (get-buffer "*wordreference*")))
   (message "w/s: search again, ./,: next/prev heading, b: view in browser, TAB: jump to terms, C: copy search term, n: browse nearby entries, S: switch langs and search, l: search with linguee.com, c: browse on www.cntrl.fr."))
 
@@ -557,7 +561,7 @@ TRS is the list of table rows from the parsed HTML."
 (defun wordreference--cull-single-spaces-in-brackets (result)
   "Remove any spaces inside brackets from RESULT."
   (wordreference--cull-string
-   result 
+   result
    ;; alternative mega regex :
    ;; (we name both our groups 2 to always catch the match)
    "\\(([[:blank:]]+\\(?2:.*[[:alnum:]$]\\)[[:blank:]]?)\\|(\\(?2:.*?\\)[[:blank:]]+)\\)"
@@ -722,7 +726,7 @@ TERMS is plist of '((\"term\" \"conjunction-link\")).
                       term "'")))
 
 (defun wordreference--concat-also-found-string (also-found also-list)
-  ""
+  "Concatenate ALSO-FOUND heading and ALSO-LIST."
   (if (not also-list)
       ""
     (concat "\n"
@@ -811,7 +815,7 @@ From SOURCE language to TARGET language, as two letter language codes."
                  source target "&w=" word)))
     (url-retrieve
      url
-     (lambda (status)
+     (lambda (_status)
        (wordreference--parse-did-you-mean)))))
 
 (defun wordreference--parse-did-you-mean ()
@@ -865,7 +869,7 @@ From SOURCE language to TARGET language, as two letter language codes."
 ;; BUFFER, NAVIGATION etc.
 (defun wordreference-next-property (property value &optional prev recenter)
   "Move point to next PROPERTY matching VALUE.
-Optionally move to PREVious match, and optionally RECENTER the buffer."
+Optionally move to PREV ious match, and optionally RECENTER the buffer."
   (save-match-data
     (let ((match
            (save-excursion
@@ -1120,7 +1124,8 @@ Really only works for single French terms."
                                       (region-end)))))
 
 (defun wordreference-paste-to-search (&optional prefix)
-  "Call `wordreference-search' with the most recent killed text as input."
+  "Call `wordreference-search' with the most recent killed text as input.
+PREFIX is same as for that function."
   (interactive)
   (wordreference-search prefix (current-kill 0)))
 
@@ -1144,7 +1149,7 @@ With a PREFIX arg, prompt for source and target language pair."
 
 (defun wordreference--prompt-lang (type prefix)
   "Prompt for lang of TYPE 'source or 'target.
-Prefix is the prefix arg test."
+PREFIX is the prefix arg test."
   (if prefix
       (completing-read (if (eql type 'source)
                            "From source: "

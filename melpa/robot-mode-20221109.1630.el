@@ -6,10 +6,10 @@
 ;; Maintainer: Kalle Kankare <kalle.kankare@iki.fi>
 ;; Created: 26 Nov 2020
 ;; Keywords: languages files
-;; Package-Version: 20210425.1925
-;; Package-Commit: e7e9c4d4750d048ad771fa735621ad813fa9c128
+;; Package-Version: 20221109.1630
+;; Package-Commit: fb9be47a1d4e57a80ae2c0d4dff3eba2fe29ebdc
 ;; URL: https://github.com/kopoli/robot-mode
-;; Version: 0.6.1
+;; Version: 0.7.0
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -97,6 +97,12 @@
 ;; - Does NOT support the Pipe separated format or the reStructuredText
 ;;   format.
 
+;; ### Notable changes
+
+;; Version 0.7.0
+
+;; - Add control structure indentation (IF/WHILE/FOR/TRY etc.).
+
 ;;; Code:
 
 (require 'align)
@@ -125,12 +131,13 @@
     ("^\\*.*" . font-lock-keyword-face)
     ("\\[\\sw+\\]" . font-lock-constant-face)
     ("\\.\\.\\." . font-lock-constant-face)
-    ("^\\(Library\\|Resource\\|\\(Suite\\|Task\\|Test\\) \\(Setup\\|Teardown\\|Template\\|Timeout\\)\\|Variables\\):?\s-*\\(.*\\)"
+    ("^\\(Library\\|Resource\\|\\(Suite\\|Task\\|Test\\) \\(Setup\\|Teardown\\|Template\\|Timeout\\)\\|Variables\\):?\\s-*\\(.*\\)"
      (1 font-lock-preprocessor-face t) (4 font-lock-constant-face t))
-    ("^\\(Documentation\\|\\(Force \\|Default \\)Tags\\|Metadata\\):?\s-*\\(.*\\)"
+    ("^\\(Documentation\\|\\(Force \\|Default \\)Tags\\|Metadata\\):?\\s-*\\(.*\\)"
      (1 font-lock-preprocessor-face t) (3 font-lock-doc-face t))
     ("[@$&%]{\\([+-]?\\(0[xbo]\\)?[0-9.a-f]+\\|true\\|false\\|None\\|null\\|EMPTY\\|SPACE\\)}" . font-lock-constant-face)
-    ("[$]{{[^}]*}}" . font-lock-builtin-face)
+    ("\\([$]{{[^}]*}}\\)\\|^\\s-+\\(IF\\|ELSE IF\\|ELSE\\|END\\|FOR\\|WHILE\\|TRY\\|EXCEPT\\|RETURN\\|BREAK\\|CONTINUE\\)"
+     . font-lock-builtin-face)
     ("[@$&%]{[^}]*}" . font-lock-variable-name-face)
     ("^[[:alnum:]]+.*$" . font-lock-function-name-face))
   "Default `font-lock-keywords' for Robot mode.")
@@ -159,9 +166,9 @@
    start end))
 
 (defun robot-mode--back-to-previous-line ()
-  "Move point to the previous non-empty line."
+  "Move point to the previous non-empty, non-comment line."
   (beginning-of-line)
-  (re-search-backward "^\\s-*[[:graph:]]" nil t)
+  (re-search-backward "^\\s-*[^#[:space:][:cntrl:]]+" nil t)
   (back-to-indentation))
 
 (defun robot-mode-indent-line ()
@@ -175,44 +182,75 @@ Used as `indent-line-function' of the mode."
 	  (downcase (or (save-excursion
 			 (re-search-backward "^\\s-*\\*+\\s-*\\([a-zA-Z ]+\\)" nil t)
 			 (match-string-no-properties 1)) "")))
+
+	 ;; The non-indented contents of previous non-empty line
+	 previous-line
+
 	 ;; The amount of indent of previous non-empty line
 	 (previous-indent
 	  (save-excursion
 	    (robot-mode--back-to-previous-line)
-	    (- (point) (line-beginning-position)))))
+	    (setq previous-line (buffer-substring-no-properties
+				 (point) (line-end-position)))
+	    ;; Calculate the whitespace width, taking tabs into account.
+	    (string-width (buffer-substring-no-properties
+			   (line-beginning-position) (point)))))
 
-    (cond ((not (string-match "task.*\\|test case.*\\|keyword.*" section))
-	   ;; Indent only lines in the above sections
-	   (setq indent 0))
+	 ;; The non-indented contents of the current line
+	 current-line
 
-	  ;; Header line should not be indented
-	  ((save-excursion
-	     (back-to-indentation)
-	     (looking-at "\\*"))
-	   (setq indent 0))
+	 ;; The indentation level of the current line
+	 (current-indent
+	  (save-excursion
+	    (back-to-indentation)
+	    (setq current-line (buffer-substring-no-properties
+				(point) (line-end-position)))
+	    (string-width (buffer-substring-no-properties
+			   (line-beginning-position) (point))))))
 
-	  ;; Indent only lines that are inside keywords
-	  ((= previous-indent 0)
-	   (save-excursion
-	     (robot-mode--back-to-previous-line)
-	     (setq indent
-		   ;; If the previous line is not a header
-		   (cond ((not (looking-at "^\\*"))
-			  robot-mode-basic-offset)
-			 (t 0)))))
-	  (t
-	   ;; If previous line is indented, indent to that level
-	   (setq indent previous-indent)))
+    (setq indent
+	  (cond ((or
+		  ;; Don't indent if not in the below sections
+		  (not (string-match "task.*\\|test case.*\\|keyword.*" section))
+		  ;; Don't indent the section line
+		  (string-match "^\\*" current-line)
+		  ;; Don't indent the line after a section line
+		  (string-match "^\\*" previous-line))
+		 0)
+
+		;; If the current line contains an inline IF, don't increase indent
+		((string-match "^\\s-*IF\\s-\\{2,\\}[^[:space:]]+\\s-\\{2,\\}[^#[:space:]]" previous-line)
+		 previous-indent)
+
+		;; If previous line contains control structures, increase the
+		;; indentation level
+		((string-match "^\\s-*\\(IF\\|ELSE IF\\|ELSE\\|FOR\\|WHILE\\|TRY\\|EXCEPT\\)" previous-line)
+		 (+ previous-indent robot-mode-basic-offset))
+
+		;; Decrease indentation on control structures that end a block
+		((string-match"\\(END\\|ELSE IF\\|ELSE\\|EXCEPT\\)" current-line)
+		 (max robot-mode-basic-offset (- previous-indent robot-mode-basic-offset)))
+
+		;; If previous line is indented, indent to that level
+		((> previous-indent 0)
+		 previous-indent)
+
+		;; Otherwise indent to basic offset
+		(t
+		 robot-mode-basic-offset)))
 
     ;; Toggle indentation if the line is already indented
     (when (and (> indent 0)
-	       (= indent (- (point) (line-beginning-position))))
+	       (= indent current-indent))
       (setq indent 0))
 
-    ;; Do the actual indenting
+    ;; Always move back to indentation
     (back-to-indentation)
-    (delete-region (line-beginning-position)  (point))
-    (indent-to indent)))
+
+    ;; Do the actual indenting if indentation changed
+    (when (not (= indent current-indent))
+      (delete-region (line-beginning-position)  (point))
+      (indent-to indent))))
 
 (defun robot-mode-beginning-of-defun ()
   "Move the point to the beginning of the current defun.
@@ -254,7 +292,7 @@ Defuns are the steps of a keyword, test or task. This is used as
     (robot-mode-align beg end)))
 
 (defun robot-mode-align-region-or-defun ()
-  "Call `robot-mode-align' if region is active, otherwise call `robot-mode-align-defun'."
+  "Call `robot-mode-align' if region is active, otherwise `robot-mode-align-defun'."
   (interactive)
   (if (region-active-p)
       (robot-mode-align (region-beginning) (region-end))
@@ -289,7 +327,7 @@ Prefix the continuation with indentation, ellipsis and spacing."
 
 ;;;###autoload
 (define-derived-mode robot-mode prog-mode "Robot"
-  "Major mode for editing Robot framework files
+  "Major mode for editing Robot framework files.
 
 \\{robot-mode-map}"
 
