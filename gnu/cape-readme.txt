@@ -346,4 +346,4 @@ Table of Contents
   copyright assignment to the FSF.
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/cape.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/cape.html>

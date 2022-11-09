@@ -1,13 +1,13 @@
 (consult-flycheck .
-		  [(20221002 1838)
+		  [(20221109 842)
 		   ((consult
-		     (0 16))
+		     (0 20))
 		    (flycheck
 		     (31))
 		    (emacs
 		     (27 1)))
 		   "Provides the command `consult-flycheck'" single
-		   ((:commit . "1d43437c1f8305051954b972aa9dd18413b3379b")
+		   ((:commit . "7a10be316d728d3384fa25574a30857c53fb3655")
 		    (:authors
 		     ("Daniel Mendler and Consult contributors"))
 		    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")

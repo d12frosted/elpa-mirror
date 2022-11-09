@@ -4,10 +4,10 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; License: GPL-3.0-or-later
-;; Version: 0.8
-;; Package-Version: 20221002.1838
-;; Package-Commit: 1d43437c1f8305051954b972aa9dd18413b3379b
-;; Package-Requires: ((consult "0.16") (flycheck "31") (emacs "27.1"))
+;; Version: 0.9
+;; Package-Version: 20221109.842
+;; Package-Commit: 7a10be316d728d3384fa25574a30857c53fb3655
+;; Package-Requires: ((consult "0.20") (flycheck "31") (emacs "27.1"))
 ;; Homepage: https://github.com/minad/consult
 
 ;; This file is not part of GNU Emacs.
