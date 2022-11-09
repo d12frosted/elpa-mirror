@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/helpful
-;; Package-Version: 20221024.134
-;; Package-Commit: 60c1cd49f72e930b8796e5644bd222e8fc466740
+;; Package-Version: 20221108.2042
+;; Package-Commit: dc4e356b55212f67c7022f3aec4f5986a23d5d5e
 ;; Keywords: help, lisp
 ;; Version: 0.20
 ;; Package-Requires: ((emacs "25") (dash "2.18.0") (s "1.11.0") (f "0.20.0") (elisp-refs "1.2"))
@@ -1762,7 +1762,7 @@ POSITION-HEADS takes the form ((123 (defun foo)) (456 (defun bar)))."
       (with-temp-buffer
         (declare-function cl--generic-describe "cl-generic" (function))
         (cl--generic-describe func)
-        (setf (point) (point-min))
+        (goto-char (point-min))
         (when (re-search-forward "^Implementations:$" nil t)
           (setq content (buffer-substring (point) (point-max)))))
       (when content

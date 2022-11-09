@@ -4,10 +4,10 @@ Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
 Checking out origin/HEAD
-Checking out dc3f73c38a31567fce8db529da238151aa44c307
+Checking out 5d7986c65b57b83c57b4839e990444a1a5abebef
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevWdfCZU/eldev-20221101.2209
+  to /tmp/eldev3MIq2h/eldev-20221108.2153
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-doctor.el -> eldev-doctor.el
@@ -20,23 +20,25 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20221101.2209.tar containing:
-  eldev-20221101.2209/
-  eldev-20221101.2209/bin/
-  eldev-20221101.2209/bin/eldev
-  eldev-20221101.2209/bin/eldev.bat
-  eldev-20221101.2209/bin/eldev.ps1
-  eldev-20221101.2209/eldev-build.el
-  eldev-20221101.2209/eldev-buttercup.el
-  eldev-20221101.2209/eldev-doctor.el
-  eldev-20221101.2209/eldev-ecukes.el
-  eldev-20221101.2209/eldev-ert.el
-  eldev-20221101.2209/eldev-pkg.el
-  eldev-20221101.2209/eldev-plugins.el
-  eldev-20221101.2209/eldev-util.el
-  eldev-20221101.2209/eldev-vc.el
-  eldev-20221101.2209/eldev.el
-Built eldev in 6.828s, finished at 2022-11-08T16:58:48+0000
+Created eldev-20221108.2153.tar containing:
+  eldev-20221108.2153/
+  eldev-20221108.2153/bin/
+  eldev-20221108.2153/bin/eldev
+  eldev-20221108.2153/bin/eldev.bat
+  eldev-20221108.2153/bin/eldev.ps1
+  eldev-20221108.2153/eldev-build.el
+  eldev-20221108.2153/eldev-buttercup.el
+  eldev-20221108.2153/eldev-doctor.el
+  eldev-20221108.2153/eldev-ecukes.el
+  eldev-20221108.2153/eldev-ert.el
+  eldev-20221108.2153/eldev-pkg.el
+  eldev-20221108.2153/eldev-plugins.el
+  eldev-20221108.2153/eldev-util.el
+  eldev-20221108.2153/eldev-vc.el
+  eldev-20221108.2153/eldev.el
+Built eldev in 5.007s, finished at 2022-11-09T00:12:41+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 Nov  8 16:58 packages/eldev-20221101.2209.entry
-580K -rw-r--r-- 1 root root 580K Nov  8 16:58 packages/eldev-20221101.2209.tar
+4.0K -rw-r--r-- 1 root root  340 Nov  8 20:35 packages/eldev-20221101.2209.entry
+580K -rw-r--r-- 1 root root 580K Nov  8 20:35 packages/eldev-20221101.2209.tar
+4.0K -rw-r--r-- 1 root root  340 Nov  9 00:12 packages/eldev-20221108.2153.entry
+580K -rw-r--r-- 1 root root 580K Nov  9 00:12 packages/eldev-20221108.2153.tar
