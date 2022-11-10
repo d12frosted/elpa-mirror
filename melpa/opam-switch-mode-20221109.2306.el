@@ -1,12 +1,13 @@
 ;;; opam-switch-mode.el --- Select OCaml opam switches via a menu -*- lexical-binding: t; -*-
 ;;
-;; Copyright (C) 2021 Hendrik Tews
+;; Copyright (C) 2022  Hendrik Tews
+;; Copyright (C) 2022  Erik Martin-Dorel
 ;;
 ;; Authors: Hendrik Tews
-;; Maintainer: Hendrik Tews <hendrik@askra.de>
+;; Maintainer: proof-general-maintainers@groupes.renater.fr
 ;; URL: https://github.com/ProofGeneral/opam-switch-mode
-;; Package-Version: 20221101.1944
-;; Package-Commit: 5f3d2102ae6e38a4220e7c7c2d15acc795b94866
+;; Package-Version: 20221109.2306
+;; Package-Commit: dea35145a39b80b7d1df217395928d76abab0b13
 ;; Package-Requires: ((emacs "25.1"))
 ;; Version: 1.0-git
 ;;

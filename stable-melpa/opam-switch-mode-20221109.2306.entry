@@ -1,8 +1,8 @@
 (opam-switch-mode .
-		  [(20221101 1944)
+		  [(20221109 2306)
 		   ((emacs
 		     (25 1)))
 		   "Select OCaml opam switches via a menu" single
-		   ((:commit . "5f3d2102ae6e38a4220e7c7c2d15acc795b94866")
-		    (:maintainer "Hendrik Tews" . "hendrik@askra.de")
+		   ((:commit . "dea35145a39b80b7d1df217395928d76abab0b13")
+		    (:maintainer nil . "proof-general-maintainers@groupes.renater.fr")
 		    (:url . "https://github.com/ProofGeneral/opam-switch-mode"))])

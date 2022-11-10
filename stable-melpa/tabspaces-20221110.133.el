@@ -3,8 +3,8 @@
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
 ;; Version: 1.2
-;; Package-Version: 20220924.1805
-;; Package-Commit: 93a2b5650e4a75bc844251b1807ec0aa48ea27e9
+;; Package-Version: 20221110.133
+;; Package-Commit: 0f9726ae80384eb51d506cd5bee4c40430bd0439
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -257,7 +257,7 @@ default tabspace."
 
 (defun tabspaces-switch-to-buffer (buffer &optional norecord force-same-window)
   "Display the local buffer BUFFER in the selected window.
-This is the frame/tab-local equivilant to `switch-to-buffer'.
+This is the frame/tab-local equivalent to `switch-to-buffer'.
 The arguments NORECORD and FORCE-SAME-WINDOW are passed to `switch-to-buffer'."
   (interactive
    (list
@@ -346,6 +346,72 @@ If PROJECT does not exist, create it, along with a `project.todo' file, in its o
          (let ((pr (project--find-in-directory default-directory)))
            (project-remember-project pr)))))
 
+;;;; Tabspace Sessions
+
+(defconst tabspaces-session-header
+  ";; -------------------------------------------------------------------------
+;; Tabspaces Session File for Emacs
+;; -------------------------------------------------------------------------
+" "Header to place in Tabspaces session file.")
+
+(defcustom tabspaces-session t
+  "Whether to save tabspaces across sessions."
+  :group 'tabspaces
+  :type 'boolean)
+
+(defcustom tabspaces-session-auto-restore nil
+  "Whether to restore tabspaces on session startup."
+  :group 'tabspaces
+  :type 'boolean)
+
+(defcustom tabspaces-session-file (concat user-emacs-directory "tabsession.el")
+  "File for saving tabspaces session."
+  :group 'tabspaces
+  :type 'string)
+
+(defvar tabspaces--session-list nil
+  "Store `tabspaces' session tabs and buffers.")
+
+;; Helper functions
+(defun tabspaces--buffile (b)
+  "Get filename for buffers."
+  (cl-remove-if nil (buffer-file-name b)))
+
+(defun tabspaces--store-buffers (bufs)
+  "Make list of filenames."
+  (flatten-tree (mapcar #'tabspaces--buffile bufs)))
+
+;; Save session
+;;;###autoload
+(defun tabspaces-save-session ()
+  "Save tabspace name and buffers."
+  (interactive)
+  (cl-loop for tab in (tabspaces--list-tabspaces)
+           do (progn
+                (tab-bar-select-tab-by-name tab)
+                (add-to-list 'tabspaces--session-list (cons (tabspaces--store-buffers (tabspaces--buffer-list)) tab))))
+
+  ;; Write to file
+  (with-temp-file tabspaces-session-file
+    (point-min)
+    (insert ";; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-\n"
+            tabspaces-session-header
+            ";; Created " (current-time-string) "\n\n"
+            ";; Tabs and buffers:\n")
+    (insert "(setq tabspaces--session-list '" (format "%S" tabspaces--session-list) ")")))
+
+
+;; Restore session
+;;;###autoload
+(defun tabspaces-restore-session ()
+  "Restore tabspaces session."
+  (interactive)
+  (load-file tabspaces-session-file)
+  (cl-loop for elm in tabspaces--session-list do
+           (tabspaces-switch-or-create-workspace (cdr elm))
+           (mapcar #'find-file (car elm))))
+
+
 ;;;; Define Keymaps
 (defvar tabspaces-command-map
   (let ((map (make-sparse-keymap)))
@@ -385,14 +451,20 @@ This uses Emacs `tab-bar' and `project.el'."
            ;; Option to always use filtered buffers when minor mode is enabled.
            (when tabspaces-use-filtered-buffers-as-default
              ;; Remap switch-to-buffer
-             (define-key (current-global-map) [remap switch-to-buffer] #'tabspaces-switch-to-buffer))))
+             (define-key (current-global-map) [remap switch-to-buffer] #'tabspaces-switch-to-buffer)))
+         (when tabspaces-session
+           (add-hook 'kill-emacs-hook #'tabspaces-save-session))
+         (when tabspaces-session-auto-restore
+           (add-hook 'emacs-startup-hook #'tabspaces-restore-session)))
         (t
          ;; Remove all modifications
          (dolist (frame (frame-list))
            (tabspaces--reset-buffer-predicate frame))
          (define-key (current-global-map) [remap switch-to-buffer] nil)
          (setq tab-bar-tab-post-open-functions (remove #'tabspaces--tab-post-open-function tab-bar-tab-post-open-functions))
-         (remove-hook 'after-make-frame-functions #'tabspaces--set-buffer-predicate))))
+         (remove-hook 'after-make-frame-functions #'tabspaces--set-buffer-predicate)
+         (remove-hook 'kill-emacs-hook #'tabspaces-save-session)
+         (remove-hook 'emacs-startup-hook #'tabspaces-restore-session))))
 
 ;;; Provide
 (provide 'tabspaces)
