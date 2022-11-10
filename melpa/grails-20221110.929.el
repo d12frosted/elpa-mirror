@@ -4,8 +4,8 @@
 ;;
 ;; Authors: Alessandro Miliucci <lifeisfoo@gmail.com>
 ;; Version: 0.4.1
-;; Package-Version: 20220407.1847
-;; Package-Commit: 350869ecc4f429fc4e26f826d6050d068e724c5d
+;; Package-Version: 20221110.929
+;; Package-Commit: 3019f86e555ee94388795a0475cfa213e3897bbb
 ;; URL: https://github.com/lifeisfoo/emacs-grails
 ;; Package-Requires: ((emacs "24"))
 
@@ -113,7 +113,7 @@
 (defvar grails-urlmappings-by-version
   `((2 "conf/UrlMappings.groovy")
     (3 "controllers/UrlMappings.groovy")
-    (4 ,(concat "controllers/" grails-source-code-base-directory "/UrlMappings.groovy")
+    (4 ,(concat "controllers/" grails-source-code-base-directory "/UrlMappings.groovy"))
     (5 ,(concat "controllers/" grails-source-code-base-directory "/UrlMappings.groovy"))
     ))
 
@@ -121,7 +121,7 @@
 (defvar grails-bootstrap-by-version
   `((2 "conf/BootStrap.groovy")
     (3 "init/BootStrap.groovy")
-    (4 ,(concat "init/" grails-source-code-base-directory "/BootStrap.groovy")
+    (4 ,(concat "init/" grails-source-code-base-directory "/BootStrap.groovy"))
     (5 ,(concat "init/" grails-source-code-base-directory "/BootStrap.groovy"))
     ))
 
