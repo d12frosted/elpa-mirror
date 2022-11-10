@@ -6,8 +6,8 @@
 ;; Created: 24 Aug 2011
 ;; Updated: 16 Mar 2015
 ;; Version: 1.2
-;; Package-Version: 20220914.2051
-;; Package-Commit: 2c11cf9374f88bfc657764afe39ec7f6bad1779d
+;; Package-Version: 20221110.1614
+;; Package-Commit: 730184b7923a65241fdff695485a3ad432caf201
 ;; Package-Requires: ((gntp "0.1") (log4e "0.3.0") (cl-lib "0.5"))
 ;; Keywords: notification emacs message
 ;; X-URL: https://github.com/jwiegley/alert
@@ -678,7 +678,7 @@ This is found in the Growl Extras: http://growl.info/extras.php."
                         (cdr (assq (plist-get info :severity)
                                    alert-growl-priorities))))
              (args
-              (case system-type
+              (cl-case system-type
                 ('windows-nt (mapcar
                               (lambda (lst) (apply #'concat lst))
                               `(
@@ -693,11 +693,11 @@ This is found in the Growl Extras: http://growl.info/extras.php."
                     "--priority" priority)))))
         (if (and (plist-get info :persistent)
                  (not (plist-get info :never-persist)))
-            (case system-type
+            (cl-case system-type
               ('windows-nt (nconc args (list "/s:true")))
               (t (nconc args (list "--sticky")))))
         (let ((message (alert-encode-string (plist-get info :message))))
-          (case system-type
+          (cl-case system-type
             ('windows-nt (nconc args (list message)))
             (t (nconc args (list "--message" message)))))
         (apply #'call-process alert-growl-command nil nil nil args))

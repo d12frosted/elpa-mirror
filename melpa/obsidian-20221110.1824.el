@@ -4,10 +4,10 @@
 
 ;; Author: Mykhaylo Bilyanskyy
 ;; URL: https://github.com./licht1stein/obsidian.el
-;; Package-Version: 20221102.1643
-;; Package-Commit: 7365533a5d1abbecd2e3dfb1091a83196e2d8bde
+;; Package-Version: 20221110.1824
+;; Package-Commit: 749583cf04c8e703ff1e1094792c0a52d493c8ed
 ;; Keywords: obsidian, pkm, convenience
-;; Version: 1.1.7
+;; Version: 1.1.8
 ;; Package-Requires: ((emacs "27.2") (s "1.12.0") (dash "2.13") (markdown-mode "2.5") (elgrep "1.0.0") (yaml "0.5.1"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -50,7 +50,7 @@
 
 ;; Inspired by RamdaJS's tap function
 (defun obsidian-tap (a f)
-  "Evaluate (F A) for its side-effects but returns A."
+  "Evaluate (F A) for its side-effects but return A."
   (funcall f a)
   a)
 

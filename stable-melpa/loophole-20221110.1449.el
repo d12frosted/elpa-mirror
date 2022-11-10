@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.3
-;; Package-Version: 20221108.1534
-;; Package-Commit: 581999e0a6895d5bc767693be660fdb140eecece
+;; Package-Version: 20221110.1449
+;; Package-Commit: 5fdb2bf6fe04d8e121643638cfccfbe77761cace
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -61,7 +61,70 @@ looks like (STATE-VARIABLE . KEYMAP).  STATE-VARIABLE is a
 symbol whose boolean value represents if the KEYMAP is
 active or not.  KEYMAP is a keymap object.
 STATE-VARIABLE, KEYMAP and map-variable which holds KEYMAP
-must be unique for each element of this variable.")
+must be unique for each element of this variable.
+
+Set of map-variable, state-variable, and keymap object is a
+unit of temporary key bindings, called Loophole map.
+Variables and keymap can be referred each other via this
+variable, and `symbol-plist'.
+Map-variable has a property :loophole-state-variable,
+and state-variable has a property :loophole-map-variable.
+The values of those properties are as name suggests.
+This is to say,
+map-variable ---(symbol-plist)----> state-variable
+map-variable ---(symbol-value)----> keymap object
+state-variable -(symbol-plist)----> map-variable
+state-variable -(assq map-alist)--> keymap object
+keymap object --(rassq map-alist)-> state-variable
+
+Map-variable has other properties as well as
+:loophole-state-variable.  These keep the properties of the
+Loophole map.  All properties other than
+:loophole-state-variable are listed below.
+:loophole-tag : Tag string of the Loophole map.
+:loophole-protected-keymap : Keymap object which holds key
+  bindings for keymap entry.  The same object as the value
+  of this property is added to `keymap-parent', and thus
+  keymap entries in this property take effect while they are
+  not overwritten by binding command.  Value of this
+  property looks like
+  (keymap (keymap ... (key1 keymap ... body of entry1))
+          (keymap ... (key1 . undefined))
+          (keymap ... (key2 keymap ... body of entry2))
+          (keymap ... (key2 . undefined))
+          ...),
+  here, keymap object containing `undefined' is a wall for
+  the concerning key.  Owing to this wall, the key is shaded
+  and key bindings defined in the following entries whose
+  prefix key is the concerning key are not merged.
+:loophole-form-storage : Alist of a key and forms which
+  derives a entry of key binding.  This property is used for
+  key bindings whose entry should be a same object as
+  something other feature refers.  Loophole functions use
+  this property to properly restore such key bindings.
+  For example, `loohpole-load' refers this property and
+  performes binding for keymap object which is bound to
+  something variable.  As a result, both this key binding
+  and the variable shares the same keymap object.
+  Modification on that keymap via that variable is reflected
+  to the key binding of Loophole map.
+
+As mentioned above, Loophole uses `keymap-parent' of keymap
+object of Loophole map.  `loophole-base-map',
+:loophole-protected-keymap, or composed keymap of them may
+be set as parent.
+Note that, when registering keymap whose `keymap-parent' is
+not nil, Loophole handles it and compose it with
+`loophole-base-map'.  However, after registeration,
+manipulating `keymap-parent' may corrupt Loophole map.
+See the documentation string of `loophole-register' for
+detailes.
+
+This variable is a pivot of Loophole.
+Temporary key bindings take effect as this variable is
+added to `emulation-mode-map-alists'.
+The value of this variable is a major part of whole state of
+Loophole.")
 
 (defvar loophole--buffer-list t
   "List of buffers on which Loophole variables have local value.
@@ -815,6 +878,27 @@ format."
 
 ;;; Auxiliary functions
 
+(defun loophole-map-variable (state-variable)
+  "Return map-variable of STATE-VARIABLE."
+  (let ((map-variable (get state-variable :loophole-map-variable))
+        (keymap
+         (cdr (assq state-variable (default-value 'loophole--map-alist)))))
+    (if (and map-variable
+             (eq (symbol-value map-variable) keymap))
+        map-variable
+      (error "The argument is not valid state-variable: %s" state-variable))))
+
+(defun loophole-state-variable (map-variable)
+  "Return state-variable of MAP-VARIABLE."
+  (let* ((state-variable (get map-variable :loophole-state-variable))
+         (keymap
+          (cdr (assq state-variable (default-value 'loophole--map-alist)))))
+    (if (and state-variable
+             map-variable
+             (eq (symbol-value map-variable) keymap))
+        state-variable
+      (error "The argument is not valid map-variable: %s" map-variable))))
+
 (defun loophole-map-variable-list ()
   "Return list of all keymap variables for loophole.
 Elements are ordered according to `loophole--map-alist'."
@@ -1527,6 +1611,12 @@ added to the hooks above."
   (remove-hook 'kill-buffer-hook
                #'loophole--follow-killing-local-variable t))
 
+(defun loophole-tag-string (map-variable)
+  "Return tag string for MAP-VARIABLE."
+  (if (loophole-registered-p map-variable)
+      (get map-variable :loophole-tag)
+    (error "Specified argument is not valid map-variable: %s" map-variable)))
+
 (defun loophole-buffer-list ()
   "Return buffer list on which Loophole variables have local value.
 This function sanitize orphan hooks by side effect.
@@ -1558,11 +1648,13 @@ variable."
 If optional argument STATE-VARIABLE is not nil,
 Return non-nil if both MAP-VARIABLE and STATE-VARIABLE are
 registered, and they are associated."
-  (and (if state-variable
+  (and map-variable
+       (if state-variable
            (eq state-variable (get map-variable :loophole-state-variable))
          (setq state-variable (get map-variable :loophole-state-variable)))
        (eq map-variable (get state-variable :loophole-map-variable))
-       (assq state-variable (default-value 'loophole--map-alist))))
+       (eq (symbol-value map-variable)
+           (cdr (assq state-variable (default-value 'loophole--map-alist))))))
 
 ;;; Main functions
 
@@ -2126,7 +2218,7 @@ Introduced by `loophole-name'." named-map-variable)))
                     (format "New tag for keymap %s%s%s: "
                             arg-map-variable
                             loophole-tag-sign
-                            (get arg-map-variable :loophole-tag)))))
+                            (loophole-tag-string arg-map-variable)))))
      (list arg-map-variable arg-tag)))
   (unless (loophole-registered-p map-variable)
     (user-error "Specified map-variable %s is not registered" map-variable))

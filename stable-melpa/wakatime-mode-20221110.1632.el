@@ -6,8 +6,8 @@
 ;; Maintainer: Alan Hamlett <alan@wakatime.com>
 ;; Website: https://wakatime.com
 ;; Keywords: calendar, comm
-;; Package-Version: 20220621.616
-;; Package-Commit: 48234857e86391b687df6adf3551d02e62a6db23
+;; Package-Version: 20221110.1632
+;; Package-Commit: ef923829912c3854d230834f81083814b7c9d992
 ;; Version: 1.0.2
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -117,6 +117,9 @@ the wakatime subprocess occurs."
       (format "/usr/sbin/%s" program))
     ((file-exists-p (format "/sbin/%s" program))
       (format "/sbin/%s" program))
+    ;; For linux users
+    ((file-exists-p "~/.wakatime/wakatime-cli")
+      "~/.wakatime/wakatime-cli")
     ;; For windows 10+ fix to get wakatime-cli.exe
     ((file-exists-p (concat
 		(string-replace "\\" "/" (concat
@@ -145,7 +148,7 @@ the wakatime subprocess occurs."
   "Return client command executable and arguments.
    Set SAVEP to non-nil for write action."
   (format "%s--entity %s --plugin \"%s/%s\" --time %.2f%s%s"
-    (if (s-blank wakatime-cli-path) "wakatime-cli " (format "\"%s\" " wakatime-cli-path))
+    (if (s-blank wakatime-cli-path) "wakatime-cli " (format "%s " wakatime-cli-path))
     (shell-quote-argument (buffer-file-name (current-buffer)))
     wakatime-user-agent
     wakatime-version
@@ -174,7 +177,7 @@ the wakatime subprocess occurs."
          (when (memq (process-status process) '(exit signal))
            (kill-buffer (process-buffer process))
            (let ((exit-status (process-exit-status process)))
-             (when (and (not (= 0 exit-status)) (not (= 102 exit-status)))
+             (when (and (not (= 0 exit-status)) (not (= 102 exit-status)) (not (= 112 exit-status)))
                (when wakatime-disable-on-error
                  (wakatime-mode -1)
                  (global-wakatime-mode -1))
