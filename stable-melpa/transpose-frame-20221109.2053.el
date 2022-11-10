@@ -4,8 +4,8 @@
 
 ;; Author: S. Irie
 ;; Keywords: window
-;; Package-Version: 20220913.1749
-;; Package-Commit: 7b7f8a1582436749a57ebbba6ead716b5a0edddc
+;; Package-Version: 20221109.2053
+;; Package-Commit: 94c87794d53883a2358d13da264ad8dab9a52daa
 
 ;; This program is free software.
 
@@ -112,7 +112,6 @@
               (window-margins tree)
               (window-fringes tree)
               (window-dedicated-p tree)
-              (jit-lock-register tree)
               tree
               (eq tree (frame-selected-window frame)))
       (let* ((vertical (car tree))
@@ -147,7 +146,6 @@
           (set-window-margins window (caar config) (cdr (pop config)))
           (apply 'set-window-fringes window (pop config))
           (set-window-dedicated-p window (pop config))
-          (jit-lock-register window (pop config))
           (let* ((orig-window (pop config))
                  (ol-func (lambda (ol)
                             (when (eq (overlay-get ol 'window) orig-window)

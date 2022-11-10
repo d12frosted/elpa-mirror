@@ -4,8 +4,8 @@
 
 ;; Author: Peter Stiernström <peter@stiernstrom.se>
 ;; Version: 4.12
-;; Package-Version: 20220920.828
-;; Package-Commit: 77a3e7239fd8c194eee4b35f66f63bffdcd66ce6
+;; Package-Version: 20221109.2051
+;; Package-Commit: d8ffd0d7cc4ab3dd7de494c9ea36dfd99e2744fa
 ;; URL: https://gitlab.com/pidu/git-timemachine
 ;; Keywords: vc
 ;; Package-Requires: ((emacs "24.3") (transient "0.1.0"))
@@ -35,6 +35,11 @@
 (require 'vc-git)
 (require 'cl-lib)
 (require 'transient)
+
+(defgroup git-timemachine nil
+  "Walk through git revisions of a file."
+  :link '(url-link "https://codeberg.org/pidu/git-timemachine")
+  :group 'tools)
 
 (defcustom git-timemachine-abbreviation-length 12
   "Number of chars from the full sha1 hash to use for abbreviation."
