@@ -690,10 +690,20 @@ Definitions and references
   information about customizing `imenu', see [Imenu in the Emacs
   manual].
 
+  The command `M-x sweeprolog-xref-project-source-files' can be used to
+  update `sweep'’s cross reference data for all Prolog source files in
+  the current project, as determined by the function `project-current'
+  (see [Projects in the Emacs manual]).  When searching for references
+  to Prolog predicates with `M-?' (`xref-find-references'), this command
+  is invoked implicitly to ensure up to date references are found
+  throughout the current project.
+
 
 [Find Identifiers in the Emacs manual] <info:emacs#Find Identifiers>
 
 [Imenu in the Emacs manual] <info:emacs#Imenu>
+
+[Projects in the Emacs manual] <info:emacs#Projects>
 
 
 Predicate definition boundaries
@@ -1247,6 +1257,52 @@ Quick access to sweep commands
   As an example, with the above binding the `sweep' top-level can be
   accessed from anywhere with `C-c p t', which invokes the command
   `sweeprolog-top-level'.
+
+  The full list of keybindings in `sweeprolog-prefix-map' is given
+  below:
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Key    Command                                 Documentation                       
+  ────────────────────────────────────────────────────────────────────────────────────
+   `F'    `sweeprolog-set-prolog-flag'            [Setting Prolog Flags]              
+   `P'    `sweeprolog-pack-install'               [Installing Prolog packages]        
+   `R'    `sweeprolog-restart'                    [Prolog Initialization and Cleanup] 
+   `T'    `sweeprolog-list-top-levels'            [The Top-level Menu Buffer]         
+   `X'    `sweeprolog-xref-project-source-files'  [Definitions and References]        
+   `e'    `sweeprolog-view-messages'              [Examining Prolog Messages]         
+   `h p'  `sweeprolog-describe-predicate'         [Prolog Help]                       
+   `h m'  `sweeprolog-describe-module'            [Prolog Help]                       
+   `l'    `sweeprolog-load-buffer'                [Loading Buffers]                   
+   `m'    `sweeprolog-find-module'                [Finding Prolog Code]               
+   `p'    `sweeprolog-find-predicate'             [Finding Prolog Code]               
+   `t'    `sweeprolog-top-level'                  [The Prolog Top-level]              
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+[Setting Prolog Flags] See section Setting Prolog flags
+
+[Installing Prolog packages] See section Installing Prolog packages
+
+[Prolog Initialization and Cleanup] See section Prolog initialization
+and cleanup
+
+[The Top-level Menu Buffer] See section The Top-level Menu buffer
+
+[Definitions and References] See section Definitions and references
+
+[Examining Prolog Messages] See section Examining Prolog messages
+
+[Prolog Help] See section Prolog Help
+
+[Prolog Help] See section Prolog Help
+
+[Loading Buffers] See section Loading buffers
+
+[Finding Prolog Code] See section Finding Prolog code
+
+[Finding Prolog Code] See section Finding Prolog code
+
+[The Prolog Top-level] See section The Prolog top-level
 
 
 Examining Prolog messages

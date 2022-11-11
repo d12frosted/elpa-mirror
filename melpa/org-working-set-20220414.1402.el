@@ -4,6 +4,8 @@
 
 ;; Author: Marc Ihm <1@2484.de>
 ;; URL: https://github.com/marcIhm/org-working-set
+;; Package-Version: 20220414.1402
+;; Package-Commit: 6af54ed3a5d9bf90629223157803c42f5d3b152c
 ;; Version: 2.6.5
 ;; Package-Requires: ((org "9.3") (dash "2.12") (s "1.12") (emacs "26.3"))
 

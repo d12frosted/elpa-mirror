@@ -4,8 +4,8 @@
 
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; URL: https://github.com/astoff/buffer-env
-;; Package-Version: 20220811.1159
-;; Package-Commit: 9ccfbd07c4b2e2af38fe315ce7e3d905298d2fdd
+;; Package-Version: 20221110.2137
+;; Package-Commit: 1817692a5a7751601e8a96d905dc94bfa6b1d485
 ;; Keywords: processes, tools
 ;; Package-Requires: ((emacs "27.1") (compat "28.1"))
 ;; Version: 0.4
@@ -68,6 +68,8 @@
   '((".env" . "set -a && >&2 . \"$0\" && env -0")
     ("manifest.scm" . "guix shell -m \"$0\" -- env -0")
     ("guix.scm" . "guix shell -D -f \"$0\" -- env -0")
+    ("flake.nix" . "nix develop -c env -0")
+    ("shell.nix" . "nix-shell \"$0\" --run \"env -0\"")
     ("*" . ">&2 . \"$0\" && env -0"))
   "Alist of commands used to produce environment variables.
 For each entry, the car is a glob pattern and the cdr is a shell
