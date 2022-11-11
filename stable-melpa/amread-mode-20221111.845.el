@@ -3,9 +3,9 @@
 ;;; Time-stamp: <2020-06-23 23:44:49 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
-;; Package-Requires: ((emacs "24.3") (cl-lib "0.6.1"))
-;; Package-Commit: 82d45a6573d58881ba4089269a72610a59ce0a2c
-;; Package-Version: 20221111.517
+;; Package-Requires: ((emacs "24.3") (cl-lib "0.6.1") (pyim "5.2.8"))
+;; Package-Commit: 3ff235a6204e224d47cb0c99368e6a0f21bf8dce
+;; Package-Version: 20221111.845
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: wp
 ;; homepage: https://repo.or.cz/amread-mode.git
@@ -25,7 +25,7 @@
 ;; along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;; 
+;;;
 ;;; Usage
 ;;;
 ;;; 1. Launch amread-mode with command `amread-mode'.
@@ -33,6 +33,7 @@
 
 ;;; Code:
 (require 'cl-lib)
+(require 'pyim)
 
 
 (defcustom amread-word-speed 3.0
@@ -76,6 +77,12 @@
   :safe #'stringp
   :group 'amread-mode)
 
+(defcustom amread-voice-reader-language 'chinese
+  "Specifiy default language for voice reader."
+  :type 'symbol
+  :safe #'symbolp
+  :group 'amread-mode)
+
 (defface amread-highlight-face
   '((t :foreground "black" :background "ForestGreen"))
   "Face for amread-mode highlight."
@@ -106,20 +113,23 @@ It has three status values:
 ;; (macroexpand-1
 ;;  '(amread--voice-reader-status-wrapper (amread--word-update)))
 
-(defun amread--voice-read-text (text)
+(defun amread--voice-reader-read-text (text)
   "Read TEXT with voice command-line tool."
   (when (and amread-voice-reader-enabled
              (not (null text))
              (not (string-empty-p text)))
     (setq amread--voice-reader-proc-finished 'running)
-    
+
+    ;; detect language and switch language/voice.
+    (amread-voice-reader-switch-language-voice)
+
     ;; Synchronous Processes
     ;; (call-process-shell-command
     ;;  amread-voice-reader-command
     ;;  nil nil nil
     ;;  amread-voice-reader-command-options
     ;;  (shell-quote-argument text))
-    
+
     ;; Async Process
     (make-process
      :name "amread-voice-reader"
@@ -150,8 +160,12 @@ It has three status values:
       (setq amread--current-position (point))
       (overlay-put amread--overlay 'face 'amread-highlight-face)
       ;; read word text
-      (amread--voice-read-text word)
-      (skip-chars-forward "\s\t\n—"))))
+      (amread--voice-reader-read-text word)
+      (skip-chars-forward "\s\t\n—")
+      ;; when in nov.el ebook, auto navigate to next page.
+      (when (and (eobp) (eq major-mode 'nov-mode))
+        (nov-next-document)
+        (message "[amread] nov.el next page.")))))
 
 (defun amread--line-update ()
   "Scroll forward by line as step."
@@ -170,8 +184,12 @@ It has three status values:
         (move-overlay amread--overlay line-begin line-end))
       (overlay-put amread--overlay 'face 'amread-highlight-face)
       ;; read line text
-      (amread--voice-read-text line-text)
-      (forward-line 1))))
+      (amread--voice-reader-read-text line-text)
+      (forward-line 1)
+      ;; when in nov.el ebook, auto navigate to next page.
+      (when (and (eobp) (eq major-mode 'nov-mode))
+        (nov-next-document)
+        (message "[amread] nov.el next page.")))))
 
 (defun amread--update ()
   "Update and scroll forward under Emacs timer."
@@ -223,6 +241,12 @@ It has three status values:
   (read-only-mode 1)
   ;; if quit `amread--scroll-style-ask', then don't enable `amread-mode'.
   (or amread-scroll-style (amread--scroll-style-ask))
+  (setq amread--voice-reader-proc-finished 'not-started)
+  ;; select language
+  (setq amread-voice-reader-language
+        (intern
+         (completing-read "[amread] Select language: " '("chinese" "english"))))
+  ;; select scroll style
   (if (null amread-scroll-style)
       (user-error "User quited entering amread-mode.")
     ;; resume from paused position
@@ -239,7 +263,9 @@ It has three status values:
        (setq amread--timer
              (run-with-timer 1 amread-line-speed #'amread--update)))
       (t (user-error "Seems amread-mode is not normally started because of not selecting scroll style OR just not running.")))
-    (message "The amread-mode start reading...")))
+    ;; enable hydra
+    (hydra-amread/body)
+    (message "[amread] start reading...")))
 
 ;;;###autoload
 (defun amread-stop ()
@@ -252,7 +278,8 @@ It has three status values:
       (delete-overlay amread--overlay)))
   (setq amread-scroll-style nil)
   (read-only-mode -1)
-  (message "The amread-mode stopped reading."))
+  (hydra-keyboard-quit)
+  (message "[amread] stopped."))
 
 ;;;###autoload
 (defun amread-pause-or-resume ()
@@ -266,27 +293,73 @@ It has three status values:
 (defun amread-mode-quit ()
   "Disable `amread-mode'."
   (interactive)
-  (amread-mode -1))
+  (amread-mode -1)
+  (hydra-keyboard-quit))
 
 ;;;###autoload
 (defun amread-speed-up ()
   "Speed up `amread-mode'."
   (interactive)
-  (setq amread-word-speed (cl-incf amread-word-speed 0.2)))
+  (setq amread-word-speed (cl-incf amread-word-speed 0.2))
+  (message "[amread] word speed increased -> %s" amread-word-speed))
 
 ;;;###autoload
 (defun amread-speed-down ()
   "Speed down `amread-mode'."
   (interactive)
-  (setq amread-word-speed (cl-decf amread-word-speed 0.2)))
+  (setq amread-word-speed (cl-decf amread-word-speed 0.2))
+  (message "[amread] word speed decreased -> %s" amread-word-speed))
 
 ;;;###autoload
-(defun amread-toggle-voice-reading ()
+(defun amread-voice-reader-toggle ()
   "Toggle text voice reading."
   (interactive)
   (if amread-voice-reader-enabled
-      (setq amread-voice-reader-enabled nil)
-    (setq amread-voice-reader-enabled t)))
+      (progn
+        (setq amread-voice-reader-enabled nil)
+        (message "[amread] voice reader disabled."))
+    (setq amread-voice-reader-enabled t)
+    (message "[amread] voice reader enabled.")))
+
+(defun amread--voice-reader-detect-language (&optional string)
+  "Detect text language."
+  ;; Return t if STRING is a Chinese string.
+  (if-let ((string (or string (word-at-point))))
+      (cond
+       ;; `pyim-probe-auto-english'
+       ((null (pyim-probe-dynamic-english))
+        'chinese)
+       ((pyim-probe-dynamic-english)
+        'english)
+       ((string-match (format "\\cC\\{%s\\}" (length string)) string)
+        'chinese))
+    nil))
+
+;; (amread--voice-reader-detect-language "测试")
+;; (amread--voice-reader-detect-language "测试test")
+
+;;;###autoload
+(defun amread-voice-reader-switch-language-voice (&optional language)
+  "Switch voice reader LANGUAGE or voice."
+  (interactive "P")
+  (let ((language (or language
+                      (when (called-interactively-p 'interactive)
+                        (intern (completing-read "[amread] Select language: " '("chinese" "english"))))
+                      amread-voice-reader-language
+                      (amread--voice-reader-detect-language))))
+    (pcase amread-voice-reader-command
+      ("say"
+       (cl-case language
+         (chinese
+          (setq amread-voice-reader-command-options "--voice=Ting-Ting")
+          (message "[amread] voice reader switched to Chinese language/voice."))
+         (english
+          (setq amread-voice-reader-command-options "--voice=Ava")
+          (message "[amread] voice reader switched to English language/voice."))
+         (t
+          (let ((voice (completing-read "[amread] Select language/voice: " '("Ting-Ting" "Ava"))))
+            (setq amread-voice-reader-command-options (format "--voice=%s" voice))
+            (message "[amread] voice reader switched to language/voice <%s>." voice))))))))
 
 ;;;###autoload
 (defun amread-voice-reader-read-buffer ()
@@ -297,13 +370,13 @@ It has three status values:
     (save-restriction
       (widen)
       (goto-char (point-min))
-      (while (not (eobp))               ; <- main code
+      (while (not (eobp))
         (let* ((line-begin (line-beginning-position))
                (line-end (line-end-position))
                (line-text (buffer-substring-no-properties line-begin line-end)))
           ;; line processiqng
           (let ((amread-voice-reader-enabled t))
-            (amread--voice-reader-status-wrapper (amread--voice-read-text line-text)))
+            (amread--voice-reader-status-wrapper (amread--voice-reader-read-text line-text)))
           (forward-line 1))))))
 
 (defvar amread-mode-map
@@ -313,9 +386,27 @@ It has three status values:
     (define-key map [remap keyboard-quit] #'amread-mode-quit)
     (define-key map (kbd "+") #'amread-speed-up)
     (define-key map (kbd "-") #'amread-speed-down)
-    (define-key map (kbd "v") #'amread-toggle-voice-reading)
+    (define-key map (kbd "v") #'amread-voice-reader-toggle)
+    (define-key map (kbd "L") #'amread-voice-reader-switch-language-voice)
+    (define-key map (kbd ".") #'hydra-amread/body)
     map)
   "Keymap for `amread-mode' buffers.")
+
+(defhydra hydra-amread (:color green :hint nil :exit nil)
+  "
+^Control^                ^Adjust When Reading^
+^------------------^     ^-------------------------^
+_SPC_: pause/resume      _+_: speed up
+_q_: quit                _-_: speed down
+^ ^                      _v_: toggle voice reader
+^ ^                      _L_: switch language/voice
+"
+  ("SPC" amread-pause-or-resume :color blue)
+  ("q" amread-mode-quit :color red)
+  ("+" amread-speed-up :color blue)
+  ("-" amread-speed-down :color blue)
+  ("v" amread-voice-reader-toggle :color pink)
+  ("L" amread-voice-reader-switch-language-voice :color pink))
 
 ;;;###autoload
 (define-minor-mode amread-mode

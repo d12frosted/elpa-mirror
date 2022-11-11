@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 7e30c439729d5635ddd341ad5ab16f832a4619ea
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/speechd-el/
-  to /tmp/speechd-elh4owva/speechd-el-20220608.1422
+  to /tmp/speechd-el2BthdF/speechd-el-20220608.1422
     braille.el -> braille.el
     brltty.el -> brltty.el
     mmanager.el -> mmanager.el
@@ -27,11 +27,11 @@ Copying files (->) and directories (=>)
     gpl.texi -> gpl.texi
     speechd-el.cs.texi -> speechd-el.cs.texi
     speechd-el.texi -> speechd-el.texi
-Generating /tmp/speechd-elh4owva/speechd-el-20220608.1422/fdl.info
-Generating /tmp/speechd-elh4owva/speechd-el-20220608.1422/gpl.info
-Generating /tmp/speechd-elh4owva/speechd-el-20220608.1422/speechd-el.cs.info
+Generating /tmp/speechd-el2BthdF/speechd-el-20220608.1422/fdl.info
+Generating /tmp/speechd-el2BthdF/speechd-el-20220608.1422/gpl.info
+Generating /tmp/speechd-el2BthdF/speechd-el-20220608.1422/speechd-el.cs.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi -o /tmp/speechd-elh4owva/speechd-el-20220608.1422/speechd-el.cs.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi -o /tmp/speechd-el2BthdF/speechd-el-20220608.1422/speechd-el.cs.info' exited with non-zero exit-code: 1
 
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced {
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced }
@@ -39,12 +39,12 @@ Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/speechd-el/s
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/speechd-elh4owva/speechd-el-20220608.1422/speechd-el.cs.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/speechd-el2BthdF/speechd-el-20220608.1422/speechd-el.cs.info' exited with non-zero exit-code: 1
 
-install-info: No such file or directory for /tmp/speechd-elh4owva/speechd-el-20220608.1422/speechd-el.cs.info
+install-info: No such file or directory for /tmp/speechd-el2BthdF/speechd-el-20220608.1422/speechd-el.cs.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/speechd-elh4owva/speechd-el-20220608.1422/speechd-el.info
+Generating /tmp/speechd-el2BthdF/speechd-el-20220608.1422/speechd-el.info
 Created speechd-el-20220608.1422.tar containing:
   speechd-el-20220608.1422/
   speechd-el-20220608.1422/braille.el
@@ -66,7 +66,7 @@ Created speechd-el-20220608.1422.tar containing:
   speechd-el-20220608.1422/speechd-ssip.el
   speechd-el-20220608.1422/speechd-version.el
   speechd-el-20220608.1422/speechd.el
-Built speechd-el in 22.551s, finished at 2022-11-11T07:08:50+0000
+Built speechd-el in 25.073s, finished at 2022-11-11T10:45:29+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  290 Nov 11 07:08 packages/speechd-el-20220608.1422.entry
-452K -rw-r--r-- 1 root root 450K Nov 11 07:08 packages/speechd-el-20220608.1422.tar
+4.0K -rw-r--r-- 1 root root  290 Nov 11 10:45 packages/speechd-el-20220608.1422.entry
+452K -rw-r--r-- 1 root root 450K Nov 11 10:45 packages/speechd-el-20220608.1422.tar

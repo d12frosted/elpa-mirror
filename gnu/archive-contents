@@ -1174,7 +1174,7 @@
 		   ("Magnar Sveen" . "magnars@gmail.com"))
 		  (:keywords "marking" "region"))])
  (exwm .
-       [(0 26)
+       [(0 27)
 	((xelb
 	  (0 18)))
 	"Emacs X Window Manager" tar
@@ -1182,7 +1182,8 @@
 	 (:keywords "unix")
 	 (:maintainer "Adrián Medraño Calvo" . "adrian@medranocalvo.com")
 	 (:authors
-	  ("Chris Feng" . "chris.w.feng@gmail.com")))])
+	  ("Chris Feng" . "chris.w.feng@gmail.com"))
+	 (:commit . "e9cc0962cc478640afe3001e39ff32577d73d6a0"))])
  (f90-interface-browser .
 			[(1 1)
 			 nil "Parse and browse f90 interfaces" single

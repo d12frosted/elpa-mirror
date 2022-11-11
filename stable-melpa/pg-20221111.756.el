@@ -4,8 +4,8 @@
 
 ;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
 ;; Version: 0.18
-;; Package-Version: 20221029.1055
-;; Package-Commit: 5a6209750453b742c56482d0e9eb6dd8b251d43b
+;; Package-Version: 20221111.756
+;; Package-Commit: 3e79c965063bc15d1e2ed9a1c152ba603b84e68a
 ;; Keywords: data comm database postgresql
 ;; URL: https://github.com/emarsden/pg-el
 ;; Package-Requires: ((emacs "26.1"))
@@ -830,6 +830,7 @@ PostgreSQL and Emacs. CON should no longer be used."
     ("char"         . ,'pg-text-parser)
     ("char2"        . ,'pg-text-parser)
     ("char4"        . ,'pg-text-parser)
+    ("bpchar"       . ,'pg-text-parser)
     ("name"         . ,'pg-text-parser)
     ("char8"        . ,'pg-text-parser)
     ("char16"       . ,'pg-text-parser)
@@ -859,6 +860,7 @@ PostgreSQL and Emacs. CON should no longer be used."
     ("_numeric"     . ,'pg-floatarray-parser)
     ("_bool"        . ,'pg-boolarray-parser)
     ("_char"        . ,'pg-chararray-parser)
+    ("_bpchar"      . ,'pg-chararray-parser)
     ("_text"        . ,'pg-textarray-parser)
     ("int4range"    . ,'pg-numrange-parser)
     ("int8range"    . ,'pg-numrange-parser)
@@ -1601,11 +1603,20 @@ PostgreSQL returns the version as a string. CrateDB returns it as an integer."
       ((zerop i) accum)
     (cl-incf accum (* multiplier (pg-read-char connection)))))
 
-(defun pg-read-chars (connection howmany)
+(defun pg-read-chars-old (connection howmany)
   (cl-do ((i 0 (+ i 1))
           (chars (make-string howmany ?.)))
       ((= i howmany) chars)
     (aset chars i (pg-read-char connection))))
+
+(defun pg-read-chars (connection count)
+  (let* ((process (pgcon-process connection))
+         (start (pgcon-position connection))
+         (end (+ start count)))
+    (accept-process-output)
+    (prog1 (with-current-buffer (process-buffer process)
+             (buffer-substring start end))
+      (setf (pgcon-position connection) end))))
 
 ;; read a null-terminated string
 (defun pg-read-string (connection maxbytes)

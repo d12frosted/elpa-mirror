@@ -4,8 +4,8 @@
 
 ;; Author: Hans Sjunnesson <hans.sjunnesson@gmail.com>
 ;; Keywords: math
-;; Package-Version: 20220621.1228
-;; Package-Commit: b1d9905666eb075fb2f40d09beec272200f6eb3b
+;; Package-Version: 20221111.816
+;; Package-Commit: e3e8bbc70adf544022dfbd3e95b8904d70e71471
 ;; Version: 1.2
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -79,7 +79,7 @@ See https://products.wolframalpha.com/api/documentation/#width-mag"
 
 (defun wolfram--url-for-query (query)
   "Formats a WolframAlpha API url."
-  (format "http://api.wolframalpha.com/v2/query?appid=%s&input=%s&format=image,plaintext&parsetimeout=15&scantimeout=15&podtimeout=15&formattimeout=15&mag=%s"
+  (format "https://api.wolframalpha.com/v2/query?appid=%s&input=%s&format=image,plaintext&parsetimeout=15&scantimeout=15&podtimeout=15&formattimeout=15&mag=%s"
           wolfram-alpha-app-id
           (url-hexify-string query)
           wolfram-alpha-magnification-factor))

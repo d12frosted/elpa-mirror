@@ -4,8 +4,8 @@
 ;;; Author: Félix Baylac Jacqué <felix at alternativebit.fr>
 ;;; Maintainer: Félix Baylac Jacqué <felix at alternativebit.fr>
 ;;; Version: 0.2
-;; Package-Version: 20220726.813
-;; Package-Commit: f460f17c524db2c815966a0b1ffe86ac450d4908
+;; Package-Version: 20221111.1020
+;; Package-Commit: 98500ddde2d9c1e19ec319a7bab28bd2eb0dbcab
 ;;; Homepage: https://alternativebit.fr/projects/my-repo-pins/
 ;;; Package-Requires: ((emacs "26.1"))
 ;;; License:
@@ -144,8 +144,22 @@ Returns the git PROCESS object."
 (defun my-repo-pins--git-clone-in-dir (clone-url checkout-filepath &optional callback)
   "Clone the CLONE-URL repo at CHECKOUT-FILEPATH.
 
+Call CALLBACK with the git exit code once the git subprocess exits.
+Checks first whether or not CLONE-URL is valid using
+‘my-repo-pins--git-ls-remote-in-dir’ to prevent git clone from
+creating an empty directory at CHECKOUT-FILEPATH."
+  (my-repo-pins--git-ls-remote-in-dir
+   clone-url
+   (lambda (exit-code)
+     (if (eq exit-code 0)
+         (my-repo-pins--call-git-in-dir "~/" callback "clone" clone-url checkout-filepath)
+       (funcall callback exit-code)))))
+
+(defun my-repo-pins--git-ls-remote-in-dir (clone-url &optional callback)
+  "Check if a CLONE-URL is valid using git ls-remote.
+
 Call CALLBACK with no arguments once the git subprocess exists."
-  (my-repo-pins--call-git-in-dir "~/" callback "clone" clone-url checkout-filepath))
+  (my-repo-pins--call-git-in-dir "~/" callback "ls-remote" "-q" "--exit-code" clone-url))
 
 ;;===========================
 ;; Internal: builtin fetchers
@@ -724,6 +738,25 @@ url."
                         (find-file dest-dir)))))))
         (clone-ssh))))
 
+(defun my-repo-pins--clone-from-full-url (full-url &optional callback)
+  "Clone a repository from a fully-qualified FULL-URL git URL.
+
+CALLBACK is called once the git process exited. It takes a single
+exit-code parameter containing the process exit code."
+  (let*
+      ((code-root (my-repo-pins--safe-get-code-root))
+       (dest-dir (concat code-root (my-repo-pins--filepath-from-clone-url full-url))))
+    (if (not (file-directory-p dest-dir))
+        (my-repo-pins--git-clone-in-dir
+         full-url
+         dest-dir
+         (lambda (exit-code)
+           (if callback
+               (funcall callback exit-code))
+           (if (equal exit-code 0)
+               (find-file dest-dir)
+             (error "Cannot clone %s" full-url))))
+      (error "%s does not seem to be a valid git repository URL " full-url))))
 
 ;;=========================================
 ;; Internal: improving builtin autocomplete
@@ -770,9 +803,7 @@ USER-QUERY was the original query for this state update."
 
 
 (defun my-repo-pins--query-forge-fetchers (repo-query)
-  "Find repo matches to the relevant forges for REPO-QUERY then query forge.
-
-TODO: split that mess before 1.0. We shouldn't query here."
+  "Find repo matches to the relevant forges for REPO-QUERY then query forge."
   (let* ((parsed-repo-query (my-repo-pins--parse-repo-identifier repo-query))
          (repo-query-kind (alist-get 'tag parsed-repo-query)))
     (cond
@@ -792,19 +823,7 @@ TODO: split that mess before 1.0. We shouldn't query here."
                         (my-repo-pins--update-forges-state ,forge-str new-state ,repo-query)))))))
        my-repo-pins-forge-fetchers))
      ((equal repo-query-kind 'repo) (user-error "Can't checkout %s (for now), please specify a owner" repo-query))
-     ((equal repo-query-kind 'full-url)
-      (let*
-          ((code-root (my-repo-pins--safe-get-code-root))
-           (dest-dir (concat code-root (my-repo-pins--filepath-from-clone-url repo-query))))
-        (if (not (file-directory-p dest-dir))
-            (my-repo-pins--git-clone-in-dir
-             repo-query
-             dest-dir
-             (lambda (exit-code)
-               (if (equal exit-code 0)
-                   (find-file dest-dir)
-                 (error "Cannot clone %s" repo-query))))
-          (find-file dest-dir))))
+     ((equal repo-query-kind 'full-url) (my-repo-pins--clone-from-full-url repo-query))
      (t (error repo-query-kind)))))
 
 ;;=====================
