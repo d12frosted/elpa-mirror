@@ -6,8 +6,8 @@
 ;; Copyright (C) 2009-2012 Chris Done
 
 ;; Version: 1.0.10
-;; Package-Version: 20210820.1124
-;; Package-Commit: 0d03a59201383f37632f718012bd835222d11a8d
+;; Package-Version: 20221111.329
+;; Package-Commit: 63b6932603184956b5ea8919036d2b307b48d7fd
 ;; Author: Shin Aoyama <smihica@gmail.com>
 ;; URL: https://github.com/smihica/emmet-mode
 ;; Last-Updated: 2014-08-11 Mon
@@ -274,7 +274,7 @@ e. g. without semicolons")
   (let* ((style-attr-end "[^=][\"']")
          (style-attr-begin "style=[\"']")
          (style-tag-end "</style>")
-         (style-tag-begin "<style>"))
+         (style-tag-begin "<style.*>"))
     (and emmet-use-style-tag-and-attr-detection
          (or
           (emmet-check-if-between style-attr-begin style-attr-end) ; style attr

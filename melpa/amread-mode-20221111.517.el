@@ -4,8 +4,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "24.3") (cl-lib "0.6.1"))
-;; Package-Commit: 21f3cf796c08625cf70d534a990f4ae2273a5d4f
-;; Package-Version: 20220519.45
+;; Package-Commit: 82d45a6573d58881ba4089269a72610a59ce0a2c
+;; Package-Version: 20221111.517
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: wp
 ;; homepage: https://repo.or.cz/amread-mode.git
@@ -54,8 +54,30 @@
   :safe #'symbolp
   :group 'amread-mode)
 
+(defcustom amread-voice-reader-enabled t
+  "The initial state of voice reader."
+  :type 'boolean
+  :safe #'booleanp
+  :group 'amread-mode)
+
+(defcustom amread-voice-reader-command
+  (cl-case system-type
+    (darwin "say")
+    (gnu/linux (or (executable-find "espeak") (executable-find "festival")))
+    (windows-nt ))                      ; TODO
+  "The command for reading text."
+  :type 'string
+  :safe #'stringp
+  :group 'amread-mode)
+
+(defcustom amread-voice-reader-command-options ""
+  "Specify options for voice reader command."
+  :type 'string
+  :safe #'stringp
+  :group 'amread-mode)
+
 (defface amread-highlight-face
-  '((t :foreground "black" :background "orange"))
+  '((t :foreground "black" :background "ForestGreen"))
   "Face for amread-mode highlight."
   :group 'amread-mode)
 
@@ -63,12 +85,58 @@
 (defvar amread--current-position nil)
 (defvar amread--overlay nil)
 
+(defvar amread--voice-reader-proc-finished nil
+  "A process status variable indicate whether voice reader finished reading.
+It has three status values:
+- 'not-started :: process not started
+- 'running     :: process still running
+- 'finished    :: process finished")
+
+(defmacro amread--voice-reader-status-wrapper (body)
+  "A wrapper macro for detecting voice reader process status and execute BODY."
+  `(if amread-voice-reader-enabled
+       ;; wait for process finished, then jump to next word.
+       (cl-case amread--voice-reader-proc-finished
+         (not-started ,body)
+         (running (ignore))
+         (finished ,body)
+         (t (setq amread--voice-reader-proc-finished 'not-started)))
+     ,body))
+
+;; (macroexpand-1
+;;  '(amread--voice-reader-status-wrapper (amread--word-update)))
+
+(defun amread--voice-read-text (text)
+  "Read TEXT with voice command-line tool."
+  (when (and amread-voice-reader-enabled
+             (not (null text))
+             (not (string-empty-p text)))
+    (setq amread--voice-reader-proc-finished 'running)
+    
+    ;; Synchronous Processes
+    ;; (call-process-shell-command
+    ;;  amread-voice-reader-command
+    ;;  nil nil nil
+    ;;  amread-voice-reader-command-options
+    ;;  (shell-quote-argument text))
+    
+    ;; Async Process
+    (make-process
+     :name "amread-voice-reader"
+     :command (list amread-voice-reader-command amread-voice-reader-command-options text)
+     :sentinel (lambda (proc event)
+                 (if (string= event "finished\n")
+                     (setq amread--voice-reader-proc-finished 'finished)))
+     :buffer " *amread-voice-reader*"
+     :stderr " *amread-voice-reader*")))
+
 (defun amread--word-update ()
   "Scroll forward by word as step."
   (let* ((begin (point))
          ;; move point forward. NOTE This forwarding must be here before moving overlay forward.
          (_length (+ (skip-chars-forward "^\s\t\n—") (skip-chars-forward "—")))
-         (end (point)))
+         (end (point))
+         (word (buffer-substring-no-properties begin end)))
     (if (eobp)
         (progn
           (amread-mode -1)
@@ -81,12 +149,15 @@
         (move-overlay amread--overlay begin end))
       (setq amread--current-position (point))
       (overlay-put amread--overlay 'face 'amread-highlight-face)
+      ;; read word text
+      (amread--voice-read-text word)
       (skip-chars-forward "\s\t\n—"))))
 
 (defun amread--line-update ()
   "Scroll forward by line as step."
   (let* ((line-begin (line-beginning-position))
-         (line-end (line-end-position)))
+         (line-end (line-end-position))
+         (line-text (buffer-substring-no-properties line-begin line-end)))
     (if (eobp) ; reached end of buffer.
         (progn
           (amread-mode -1)
@@ -98,15 +169,17 @@
       (when amread--overlay
         (move-overlay amread--overlay line-begin line-end))
       (overlay-put amread--overlay 'face 'amread-highlight-face)
+      ;; read line text
+      (amread--voice-read-text line-text)
       (forward-line 1))))
 
 (defun amread--update ()
   "Update and scroll forward under Emacs timer."
   (cl-case amread-scroll-style
-    ('word
-     (amread--word-update))
-    ('line
-     (amread--line-update)
+    (word
+     (amread--voice-reader-status-wrapper (amread--word-update)))
+    (line
+     (amread--voice-reader-status-wrapper (amread--line-update))
      ;; Auto modify the running timer REPEAT seconds based on next line words length.
      (let* ((next-line-words (amread--get-next-line-words)) ; for English
             ;; TODO: Add Chinese text logic.
@@ -181,6 +254,7 @@
   (read-only-mode -1)
   (message "The amread-mode stopped reading."))
 
+;;;###autoload
 (defun amread-pause-or-resume ()
   "Pause or resume amread."
   (interactive)
@@ -188,20 +262,49 @@
       (amread-stop)
     (amread-start)))
 
+;;;###autoload
 (defun amread-mode-quit ()
   "Disable `amread-mode'."
   (interactive)
   (amread-mode -1))
 
+;;;###autoload
 (defun amread-speed-up ()
   "Speed up `amread-mode'."
   (interactive)
   (setq amread-word-speed (cl-incf amread-word-speed 0.2)))
 
+;;;###autoload
 (defun amread-speed-down ()
   "Speed down `amread-mode'."
   (interactive)
   (setq amread-word-speed (cl-decf amread-word-speed 0.2)))
+
+;;;###autoload
+(defun amread-toggle-voice-reading ()
+  "Toggle text voice reading."
+  (interactive)
+  (if amread-voice-reader-enabled
+      (setq amread-voice-reader-enabled nil)
+    (setq amread-voice-reader-enabled t)))
+
+;;;###autoload
+(defun amread-voice-reader-read-buffer ()
+  "Read current buffer text without timer highlight updating."
+  (interactive)
+  ;; loop over all lines of buffer.
+  (save-excursion
+    (save-restriction
+      (widen)
+      (goto-char (point-min))
+      (while (not (eobp))               ; <- main code
+        (let* ((line-begin (line-beginning-position))
+               (line-end (line-end-position))
+               (line-text (buffer-substring-no-properties line-begin line-end)))
+          ;; line processiqng
+          (let ((amread-voice-reader-enabled t))
+            (amread--voice-reader-status-wrapper (amread--voice-read-text line-text)))
+          (forward-line 1))))))
 
 (defvar amread-mode-map
   (let ((map (make-sparse-keymap)))
@@ -210,6 +313,7 @@
     (define-key map [remap keyboard-quit] #'amread-mode-quit)
     (define-key map (kbd "+") #'amread-speed-up)
     (define-key map (kbd "-") #'amread-speed-down)
+    (define-key map (kbd "v") #'amread-toggle-voice-reading)
     map)
   "Keymap for `amread-mode' buffers.")
 
