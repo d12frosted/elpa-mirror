@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
 ;; Keywords: convenience
-;; Package-Version: 20221025.2346
-;; Package-Commit: 8a556ddad8ff58db2d2e2fafd5a495815d23179b
+;; Package-Version: 20221027.346
+;; Package-Commit: cb277b8a84ca5857b607b3ff6132ee3663a57953
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
@@ -245,8 +245,12 @@ This variable has to be set before `no-littering' is loaded.")
     (setq gamegrid-user-score-file-directory (var "gamegrid-user-score/"))
     (eval-after-load 'gnus
       `(make-directory ,(var "gnus/dribble/") t))
+    (eval-after-load 'gnus
+      `(make-directory ,(etc "gnus/") t))
     (setq gnus-dribble-directory           (var "gnus/dribble/"))
     (setq gnus-init-file                   (etc "gnus/init.el"))
+    ;;; Gnus hardcodes newsrc.eld to be based on gnus-startup-file' :/
+    (setq gnus-startup-file                (etc "gnus/newsrc"))
     (setq ido-save-directory-list-file     (var "ido-save-directory-list.el"))
     (setq image-dired-db-file              (var "image-dired/db.el"))
     (setq image-dired-dir                  (var "image-dired/"))
