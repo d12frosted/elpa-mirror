@@ -22,8 +22,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20220909.2022
-;; Package-Commit: 723736950beafd7d611fa42790ffc41ec202abd9
+;; Package-Version: 20221112.240
+;; Package-Commit: ca6c3f84cefaf1287e432f2f3b4bdf630edd3bac
 ;; Author: Adrien Brochard
 ;; Keywords: kubernetes k8s tools processes
 ;; URL: https://github.com/abrochard/kubel
@@ -436,7 +436,7 @@ ENTRYLIST is the output of the parsed body."
   "Parse the body of kubectl get resource call into a list.
 
 BODY is the raw output of kubectl get resource."
-  (let* ((lines (nbutlast (split-string body "\n")))
+  (let* ((lines (or (nbutlast (split-string body "\n")) '("")))
          (header (car lines))
          ;; Cronjobs have a "LAST SCHEDULE" column, so need to split on 2+ whitespace chars.
          (starts (cl-loop for start = 0 then (match-end 0)
