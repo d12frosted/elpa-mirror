@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20221105.1641
-;; Package-Commit: 3de6bdc2ae6c5ce08bce3726cec936e4da5d9bad
+;; Package-Version: 20221112.914
+;; Package-Commit: 1ca2303eaa60abc3fda94bd54572a2a5f1ce7c16
 ;; Keywords: project, convenience
 ;; Version: 2.7.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
@@ -323,8 +323,7 @@ See `projectile-register-project-type'."
   :type '(repeat string))
 
 (defcustom projectile-project-root-files-bottom-up
-  '(".projectile" ; projectile project marker
-    ".git"        ; Git VCS root dir
+  '(".git"        ; Git VCS root dir
     ".hg"         ; Mercurial VCS root dir
     ".fslckout"   ; Fossil VCS root dir
     "_FOSSIL_"    ; Fossil VCS root DB on Windows
@@ -353,6 +352,7 @@ containing a root file."
 
 (defcustom projectile-project-root-functions
   '(projectile-root-local
+    projectile-root-marked
     projectile-root-bottom-up
     projectile-root-top-down
     projectile-root-top-down-recurring)
@@ -363,9 +363,17 @@ algorithm."
   :group 'projectile
   :type '(repeat function))
 
+(defcustom projectile-dirconfig-file
+  ".projectile"
+  "The file which serves both as a project marker and configuration file.
+This should _not_ be set via .dir-locals.el."
+  :group 'projectile
+  :type 'file
+  :package-version '(projectile . "2.7.0"))
+
 (defcustom projectile-dirconfig-comment-prefix
   nil
-  "Projectile config file (.projectile) comment start marker.
+  "`projectile-dirconfig-file` comment start marker.
 If specified, starting a line in a project's .projectile file with this
 character marks that line as a comment instead of a pattern.
 Similar to '#' in .gitignore files."
@@ -1201,6 +1209,10 @@ Return the first (topmost) matched directory or nil if not found."
      (cl-find-if (lambda (f) (projectile-file-exists-p (expand-file-name f dir)))
                  (or list projectile-project-root-files)))))
 
+(defun projectile-root-marked (dir)
+  "Identify a project root in DIR by search for `projectile-dirconfig-file`."
+  (projectile-root-bottom-up dir (list projectile-dirconfig-file)))
+
 (defun projectile-root-bottom-up (dir &optional list)
   "Identify a project root in DIR by bottom-up search for files in LIST.
 If LIST is nil, use `projectile-project-root-files-bottom-up' instead.
@@ -1948,7 +1960,7 @@ Unignored files/directories are not included."
 
 (defun projectile-dirconfig-file ()
   "Return the absolute path to the project's dirconfig file."
-  (expand-file-name ".projectile" (projectile-project-root)))
+  (expand-file-name projectile-dirconfig-file (projectile-project-root)))
 
 (defun projectile-parse-dirconfig-file ()
   "Parse project ignore file and return directories to ignore and keep.

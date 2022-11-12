@@ -30,7 +30,7 @@ subed
     it's a common data format, but you can use `subed-tsv-mode' to turn
     it on in a buffer.
 
-  <file:https://raw.githubusercontent.com/rndusr/subed/master/screenshot.jpg>
+  <file:https://raw.githubusercontent.com/sachac/subed/master/screenshot.jpg>
 
 
 [mpv] <https://mpv.io/>
@@ -38,11 +38,16 @@ subed
 Features
 ────────
 
-  • Quickly jump to next (`M-n') and previous (`M-p') subtitle text.
-  • Quickly jump to the beginning (`C-M-a') and end (`C-M-e') of the
-    current subtitle's text.
+  • Jump to next (`M-n') and previous (`M-p') subtitle text.
+  • Jump to the beginning (`C-M-a') and end (`C-M-e') of the current
+    subtitle's text.
+  • Merge subtitles with `M-m' (`subed-merge-dwim') and split them with
+    `M-.' (`subed-split-subtitle'). If the media file is playing in MPV,
+    use the current playback position. If not, use the relative position
+    in the subtitle text, or other functions listed in
+    `subed-split-subtitle-timestamp-functions'.
   • Insert subtitles evenly spaced throughout the available space
-    (`M-i') or right next the current subtitle (`C-M-i').  A prefix
+    (`M-i') or right next to the current subtitle (`C-M-i').  A prefix
     argument controls how many subtitles to insert and whether they are
     inserted before or after the current subtitle.
   • Kill subtitles (`M-k').
@@ -74,8 +79,8 @@ Features
   • Insert HTML-like tags (`C-c C-t C-t', with an optional attribute
     when prefixed by `C-u'), in particular italics (`C-c C-t C-i') or
     boldface (`C-c C-t C-b').
-  • Sort and re-number subtitles and remove any extra spaces and
-    newlines (`M-s').  This is done automatically every time the buffer
+  • SRT: Sort and re-number subtitles and remove any extra spaces and
+    newlines (`M-s'). This is done automatically every time the buffer
     is saved.
   • Trim subtitle overlaps with `M-x subed-trim-overlaps'. By default,
     this adjusts the stop time of overlapping subtitles to
@@ -84,7 +89,13 @@ Features
     happen automatically when buffers are loaded or saved, which time is
     adjusted, and how much time to leave between subtitles.
   • Convert between formats with `M-x subed-convert'.
+  • Load word timing data (ex: SRV2) using `M-x
+      subed-word-data-load-from-file'.
+  • Use `M-x subed-align' and [aeneas] to align your text or subtitles
+    with an audio file in order to get timestamps.
 
+
+[aeneas] <https://www.readbeyond.it/aeneas/>
 
 mpv integration (optional)
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
@@ -93,24 +104,33 @@ mpv integration (optional)
   but not on Microsoft Windows due to the lack of Unix-style sockets. On
   Microsoft Windows, you will not be able to synchronize with MPV.
 
-  • Open videos with `C-c C-v' or automatically when opening a subtitle
-    file if the video file is named like the subtitle file but with a
-    video extension (e.g. `.mkv' or `.avi').
+  • Automatically open the associated media file in MPV based on the
+    filename, open a media file manually with `C-c C-v'
+    (`subed-mpv-find-video'), or play media directly from a URL with
+    `C-c C-u' (`subed-mpv-play-video-from-url') .  This works for audio
+    files as well.
+  • Pause and resume video playback without leaving Emacs (`M-SPC').
+  • Jump to the current subtitle in the MPV player with `M-j'
+    (`subed-mpv-jump-to-current-subtitle'). Toggle looping over the
+    current subtitle with `C-c C-l'
+    (`subed-toggle-loop-over-current-subtitle').  Control how many
+    seconds to loop before or after the current subtitles by customizing
+    `subed-loop-seconds-before' and `subed-loop-seconds-after'.
+  • Use `C-c .' (`subed-toggle-sync-point-to-player') to toggle whether
+    the point should move to the currently playing subtitle.
+  • Use `C-c ,' (`subed-toggle-sync-player-to-point') to toggle whether
+    mpv should seek to the position of the current subtitle when the
+    point moves between subtitles.
   • Subtitles are automatically reloaded in mpv when the buffer is
     saved.
-  • Cursor and playback position are synchronized:
-    • Playback in mpv seeks to the position of the current subtitle as
-      the cursor moves between subtitles (`C-c ,').
-    • The cursor is moved to the currently relevant subtitle as the
-      video is playing (`C-c .').
   • Copy the current playback position as start (`C-c [') or stop (`C-c
     ]') time of the current subtitle.
   • Playback is paused or slowed down when a subtitle's text is edited
-         (`C-c C-p').
+      (`C-c C-p', `subed-toggle-pause-while-typing').
   • Loop over the current subtitle in mpv (`C-c C-l').
   • When a subtitle's start or stop time changes, mpv seeks to the
-    subtitle's start time (`C-c C-r').
-  • Pause video playback without leaving Emacs (`M-SPC').
+    subtitle's start time (`C-c C-r',
+    `subed-toggle-replay-adjusted-subtitle').
   • Move one frame forward or backward (`C-c C-f .' and `C-c C-f ,';
     pressing `,' or `.' afterwards moves by frames until any other key
     is pressed).
