@@ -5,12 +5,12 @@
 ;; Author: Radian LLC <contact+prescient@radian.codes>
 ;; Homepage: https://github.com/raxod502/prescient.el
 ;; Keywords: extensions
-;; Package-Version: 20220911.138
-;; Package-Commit: 928cc72ec3dca8e9a60d356b9b8ce896ec5ff621
+;; Package-Version: 20221112.344
+;; Package-Commit: c28bca2213efd2666b0328c29f2c26e9b603cc9a
 ;; Created: 7 May 2018
-;; Package-Requires: ((emacs "25.1") (prescient "5.2.1") (company "0.9.6"))
+;; Package-Requires: ((emacs "25.1") (prescient "6.0.0") (company "0.9.6"))
 ;; SPDX-License-Identifier: MIT
-;; Version: 5.2.1
+;; Version: 6.0.0
 
 ;;; Commentary:
 

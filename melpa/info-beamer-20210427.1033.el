@@ -4,8 +4,6 @@
 
 ;; Author: Daniel Kraus <daniel@kraus.my>
 ;; Version: 0.1
-;; Package-Version: 20210427.1033
-;; Package-Commit: 6b4cc29f1aec72d8e23b2c25a99cdd84e6cdc92b
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: tools, processes, comm
 ;; URL: https://github.com/dakra/info-beamer.el

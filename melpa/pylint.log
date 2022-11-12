@@ -1,11 +1,25 @@
 Package: pylint
 Fetcher: github
-Source:  https://github.com/PyCQA/pylint.git
+Source:  https://github.com/emacsorphanage/pylint.git
 
-Updating /mnt/store/melpa/working/pylint/
+Cloning https://github.com/emacsorphanage/pylint.git to /mnt/store/melpa/working/pylint/
 Checking out origin/HEAD
-Checking out 38d15c98316359c7b0b190f2245a3b2e2bf62109
-Built pylint in 13.394s, finished at 2022-11-11T21:27:14+0000
+Checking out 8958821959b7380ba762a29f607cfcacf3a5ca1f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pylint/
+  to /tmp/pylintqfNA7t/pylint-20221111.2150
+    pylint-flymake.el -> pylint-flymake.el
+    pylint.el -> pylint.el
+    epylint.py -> epylint.py
+Created pylint-20221111.2150.tar containing:
+  pylint-20221111.2150/
+  pylint-20221111.2150/epylint.py
+  pylint-20221111.2150/pylint-flymake.el
+  pylint-20221111.2150/pylint-pkg.el
+  pylint-20221111.2150/pylint.el
+Built pylint in 19.263s, finished at 2022-11-12T01:03:43+0000
  ✓ Success:
  12K -rw-r--r-- 1 root root 9.0K Nov 11 21:27 packages/pylint-20210411.1931.el
 4.0K -rw-r--r-- 1 root root  282 Nov 11 21:27 packages/pylint-20210411.1931.entry
+4.0K -rw-r--r-- 1 root root  279 Nov 12 01:03 packages/pylint-20221111.2150.entry
+ 32K -rw-r--r-- 1 root root  30K Nov 12 01:03 packages/pylint-20221111.2150.tar

@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20221025.101
-;; Package-Commit: b4aa52da76b46c3c1be44cf8b312b55a6082c104
+;; Package-Version: 20221112.328
+;; Package-Commit: a82e40c4508fe01c42e446da9a85936835097085
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.0
@@ -87,6 +87,12 @@ compatible with this option and formatters relying on them will crash."
   :type '(choice (const :tag "Run the formatter on the local machine" local)
                  (const :tag "Run the formatter on the remote machine" remote)
                  (const :tag "Disable formatting for remote buffers" cancel)))
+
+(defcustom apheleia-mode-lighter " Apheleia"
+  "Lighter for `apheleia-mode'."
+  :type '(choice :tag "Lighter" (const :tag "No lighter" nil) string)
+  :risky t
+  :group 'apheleia)
 
 (cl-defun apheleia--edit-distance-table (s1 s2)
   "Align strings S1 and S2 for minimum edit distance.
@@ -1322,6 +1328,16 @@ changes), CALLBACK, if provided, is invoked with no arguments."
   "Normal hook run after Apheleia formats a buffer successfully."
   :type 'hook)
 
+(defcustom apheleia-inhibit-functions nil
+  "List of functions that prevent Apheleia from turning on automatically.
+If one of these returns non-nil then `apheleia-mode' is not
+enabled in a buffer, even if `apheleia-global-mode' is on. You
+can still manually enable `apheleia-mode' in such a buffer.
+
+See also `apheleia-inhibit' for another way to accomplish a
+similar task."
+  :type '(repeat function))
+
 ;; Handle recursive references.
 (defvar apheleia-mode)
 
@@ -1358,13 +1374,31 @@ operating, to prevent an infinite loop.")
     "Minor mode for reformatting code on save without moving point.
 It is customized by means of the variables `apheleia-mode-alist'
 and `apheleia-formatters'."
-    :lighter " Apheleia"
+    :lighter apheleia-mode-lighter
     (if apheleia-mode
         (add-hook 'after-save-hook #'apheleia--format-after-save nil 'local)
       (remove-hook 'after-save-hook #'apheleia--format-after-save 'local)))
 
+
+  (defvar-local apheleia-inhibit nil
+    "Do not enable `apheleia-mode' automatically if non-nil.
+This is designed for use in .dir-locals.el.
+
+See also `apheleia-inhibit-functions'.")
+  (put 'apheleia-inhibit 'safe-local-variable #'booleanp)
+
+  (defun apheleia-mode-maybe ()
+    "Enable `apheleia-mode' if allowed by user configuration.
+This checks `apheleia-inhibit-functions' and `apheleia-inhibit'
+to see if it is allowed."
+    (unless (or
+             apheleia-inhibit
+             (run-hook-with-args-until-success
+              'apheleia-inhibit-functions))
+      (apheleia-mode)))
+
   (define-globalized-minor-mode apheleia-global-mode
-    apheleia-mode apheleia-mode)
+    apheleia-mode apheleia-mode-maybe)
 
   (put 'apheleia-mode 'safe-local-variable #'booleanp))
 

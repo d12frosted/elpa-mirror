@@ -6,11 +6,11 @@
 ;; Created: 23 Dec 2019
 ;; Homepage: https://github.com/radian-software/ctrlf
 ;; Keywords: extensions
-;; Package-Version: 20220911.6
-;; Package-Commit: e4bd61ef59f10b3c6bd480041396c21bf62174ec
+;; Package-Version: 20221112.340
+;; Package-Commit: 9b4cf6c79a961f2bfbb949805aa300fcf1eb40a6
 ;; Package-Requires: ((emacs "25.1"))
 ;; SPDX-License-Identifier: MIT
-;; Version: 1.5
+;; Version: 1.6
 
 ;;; Commentary:
 
