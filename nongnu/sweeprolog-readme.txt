@@ -974,8 +974,12 @@ Context-Based Term Insertion
         clause, insert a new clause below it.
   `sweeprolog-maybe-define-predicate'
         If point is over a call to an undefined predicate, insert a
-        definition for that predicate below the last clause of the
-        current predicate definition.
+        definition for that predicate.  By default, the new predicate
+        definition is inserted right below the last clause of the
+        current predicate definition.  The user option
+        `sweeprolog-new-predicate-location-function' can be customized
+        to control where this function inserts new predicate
+        definitions.
 
 
 Filling Holes

@@ -1,0 +1,11 @@
+(insecure-lock .
+	       [(20221111 2002)
+		((emacs
+		  (28 1)))
+		"Extensible screen lock framework" single
+		((:commit . "2750190c70ebf564fe142ab5ee7e44675609b06a")
+		 (:authors
+		  ("Qiantan Hong" . "qhong@alum.mit.edu"))
+		 (:maintainer "Qiantan Hong" . "qhong@alum.mit.edu")
+		 (:keywords "unix" "screensaver" "security")
+		 (:url . "https://github.com/BlueFlo0d/insecure-lock"))])

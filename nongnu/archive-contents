@@ -831,7 +831,7 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 8 8)
+       [(3 8 9)
 	((helm-core
 	  (3 8 8))
 	 (popup
@@ -841,9 +841,9 @@
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "0a9a1e32cf130d181b26e23919402c8c25f41996"))])
+	 (:commit . "dd72b3281afb38eaedd1e0015ab3c92d8ab7ef8f"))])
  (helm-core .
-	    [(3 8 8)
+	    [(3 8 9)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -853,7 +853,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "0a9a1e32cf130d181b26e23919402c8c25f41996"))])
+	      (:commit . "dd72b3281afb38eaedd1e0015ab3c92d8ab7ef8f"))])
  (highlight-parentheses .
 			[(2 1 1)
 			 ((emacs
@@ -1644,7 +1644,7 @@
 	   ("Random User"))
 	  (:commit . "fcd2299f365eb37ced4a838bd39aaefd6c6ac576"))])
  (sweeprolog .
-	     [(0 8 5)
+	     [(0 8 6)
 	      ((emacs
 		(28 1)))
 	      "Embedded SWI-Prolog" tar
@@ -1653,7 +1653,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "8d7379f7861c475317e0b099d42fde6890d1841d"))])
+	       (:commit . "87da262379c04ce604fd066c49aa2e39e82ea9f3"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs
@@ -1829,7 +1829,7 @@
 	      (:url . "https://elpa.nongnu.org/nongnu/vc-fossil.html")
 	      (:commit . "8ce6113aa272583130e5f929fefd67115c8f572a"))])
  (vcomplete .
-	    [(1 2 1)
+	    [(2 0)
 	     ((emacs
 	       (25 1)))
 	     "Visual completions" tar
@@ -1838,7 +1838,7 @@
 	      (:maintainer "Vcomplete Mailing List" . "~dsemy/vcomplete-devel@lists.sr.ht")
 	      (:authors
 	       ("Daniel Semyonov" . "daniel@dsemy.com"))
-	      (:commit . "8450b1befd46ac9754d57e2f98f150f33bb317ce"))])
+	      (:commit . "93ae3db40d07ae15e61d34c3c3870de5d2fce2de"))])
  (visual-fill-column .
 		     [(2 5)
 		      ((emacs
