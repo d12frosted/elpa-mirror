@@ -4,10 +4,10 @@ Source:  https://github.com/brotzeit/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
 Checking out origin/HEAD
-Checking out 79615c1556a423f83956f79f1c3bb56de22efed1
+Checking out 1b4c99d86f7e6bd4491ba31bbc402c5639b3fe1f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rustic/
-  to /tmp/rusticbQj7Qx/rustic-20221112.1735
+  to /tmp/rusticDCuSr7/rustic-20221113.1000
     rustic-babel.el -> rustic-babel.el
     rustic-cargo.el -> rustic-cargo.el
     rustic-clippy.el -> rustic-clippy.el
@@ -25,27 +25,29 @@ Copying files (->) and directories (=>)
     rustic-rustfmt.el -> rustic-rustfmt.el
     rustic-spellcheck.el -> rustic-spellcheck.el
     rustic.el -> rustic.el
-Created rustic-20221112.1735.tar containing:
-  rustic-20221112.1735/
-  rustic-20221112.1735/rustic-babel.el
-  rustic-20221112.1735/rustic-cargo.el
-  rustic-20221112.1735/rustic-clippy.el
-  rustic-20221112.1735/rustic-comint.el
-  rustic-20221112.1735/rustic-compile.el
-  rustic-20221112.1735/rustic-doc.el
-  rustic-20221112.1735/rustic-expand.el
-  rustic-20221112.1735/rustic-flycheck.el
-  rustic-20221112.1735/rustic-interaction.el
-  rustic-20221112.1735/rustic-lsp.el
-  rustic-20221112.1735/rustic-pkg.el
-  rustic-20221112.1735/rustic-playpen.el
-  rustic-20221112.1735/rustic-popup.el
-  rustic-20221112.1735/rustic-racer.el
-  rustic-20221112.1735/rustic-rustfix.el
-  rustic-20221112.1735/rustic-rustfmt.el
-  rustic-20221112.1735/rustic-spellcheck.el
-  rustic-20221112.1735/rustic.el
-Built rustic in 4.817s, finished at 2022-11-13T09:21:25+0000
+Created rustic-20221113.1000.tar containing:
+  rustic-20221113.1000/
+  rustic-20221113.1000/rustic-babel.el
+  rustic-20221113.1000/rustic-cargo.el
+  rustic-20221113.1000/rustic-clippy.el
+  rustic-20221113.1000/rustic-comint.el
+  rustic-20221113.1000/rustic-compile.el
+  rustic-20221113.1000/rustic-doc.el
+  rustic-20221113.1000/rustic-expand.el
+  rustic-20221113.1000/rustic-flycheck.el
+  rustic-20221113.1000/rustic-interaction.el
+  rustic-20221113.1000/rustic-lsp.el
+  rustic-20221113.1000/rustic-pkg.el
+  rustic-20221113.1000/rustic-playpen.el
+  rustic-20221113.1000/rustic-popup.el
+  rustic-20221113.1000/rustic-racer.el
+  rustic-20221113.1000/rustic-rustfix.el
+  rustic-20221113.1000/rustic-rustfmt.el
+  rustic-20221113.1000/rustic-spellcheck.el
+  rustic-20221113.1000/rustic.el
+Built rustic in 4.657s, finished at 2022-11-13T12:53:10+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  478 Nov 13 09:21 packages/rustic-20221112.1735.entry
 212K -rw-r--r-- 1 root root 210K Nov 13 09:21 packages/rustic-20221112.1735.tar
+4.0K -rw-r--r-- 1 root root  478 Nov 13 12:53 packages/rustic-20221113.1000.entry
+212K -rw-r--r-- 1 root root 210K Nov 13 12:53 packages/rustic-20221113.1000.tar

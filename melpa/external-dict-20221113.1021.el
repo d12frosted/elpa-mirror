@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25.1"))
-;; Package-Commit: 680c37f01e5205805dffeef05be00e2196886a8c
-;; Package-Version: 20220816.2136
+;; Package-Commit: c790489635a497cdb8f4277a982677c95479ffb0
+;; Package-Version: 20221113.1021
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: wp processes
 ;; homepage: https://repo.or.cz/external-dict.el.git
@@ -30,11 +30,11 @@
 
 (defcustom external-dict-cmd
   (cl-case system-type
-    ('gnu/linux
+    (gnu/linux
      (cond
       ((executable-find "goldendict")
        '(:dict-program "goldendict" :command-p t))))
-    ('darwin
+    (darwin
      (cond
       ((file-exists-p "/Applications/Bob.app")
        '(:dict-program "Bob" :command-p nil))
@@ -46,15 +46,14 @@
 
 (defcustom external-dict-read-cmd
   (cl-case system-type
-    ('gnu/linux
+    (gnu/linux
      (cl-case (plist-get external-dict-cmd :dict-program)
        ("goldendict" nil)
        (t
         (cond
          ((executable-find "festival") "festival")
-         ((executable-find "espeak") "espeak"))))
-     )
-    ('darwin
+         ((executable-find "espeak") "espeak")))))
+    (darwin
      (pcase (plist-get external-dict-cmd :dict-program)
        ("Bob" "say")
        ("goldendict" "say"))))
@@ -93,8 +92,8 @@ it will raise external dictionary main window."
   (interactive "P")
   (external-dict-goldendict--ensure)
   (let ((goldendict-cmd (cl-case system-type
-                          ('gnu/linux (executable-find "goldendict"))
-                          ('darwin (or (executable-find "GoldenDict") (executable-find "goldendict")))
+                          (gnu/linux (executable-find "goldendict"))
+                          (darwin (or (executable-find "GoldenDict") (executable-find "goldendict")))
                           (t (plist-get external-dict-cmd :dict-program)))))
     (if current-prefix-arg
         (save-excursion

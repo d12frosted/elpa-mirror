@@ -4,10 +4,10 @@ Source:  https://github.com/pdo/frimacs.git
 
 Updating /mnt/store/melpa/working/frimacs/
 Checking out origin/HEAD
-Checking out b35fdefb60ead4d7559131601c43761973762a9a
+Checking out ae3870ebced2fb92f7fac1aa0051f7e46b30d55b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/frimacs/
-  to /tmp/frimacsewFM4G/frimacs-20220723.1902
+  to /tmp/frimacstUhCzg/frimacs-20221113.1231
     frimacs-base.el -> frimacs-base.el
     frimacs-boot-mode.el -> frimacs-boot-mode.el
     frimacs-buffer-menu.el -> frimacs-buffer-menu.el
@@ -22,25 +22,27 @@ Copying files (->) and directories (=>)
     data/fricas-standard-domain-info.dat -> data/fricas-standard-domain-info.dat
     data/fricas-standard-operation-info.dat -> data/fricas-standard-operation-info.dat
     data/fricas-standard-package-info.dat -> data/fricas-standard-package-info.dat
-Created frimacs-20220723.1902.tar containing:
-  frimacs-20220723.1902/
-  frimacs-20220723.1902/data/
-  frimacs-20220723.1902/data/fricas-standard-category-info.dat
-  frimacs-20220723.1902/data/fricas-standard-domain-info.dat
-  frimacs-20220723.1902/data/fricas-standard-operation-info.dat
-  frimacs-20220723.1902/data/fricas-standard-package-info.dat
-  frimacs-20220723.1902/frimacs-base.el
-  frimacs-20220723.1902/frimacs-boot-mode.el
-  frimacs-20220723.1902/frimacs-buffer-menu.el
-  frimacs-20220723.1902/frimacs-domain-explorer.el
-  frimacs-20220723.1902/frimacs-help-mode.el
-  frimacs-20220723.1902/frimacs-input-mode.el
-  frimacs-20220723.1902/frimacs-pkg.el
-  frimacs-20220723.1902/frimacs-process-mode.el
-  frimacs-20220723.1902/frimacs-selector.el
-  frimacs-20220723.1902/frimacs-spad-mode.el
-  frimacs-20220723.1902/frimacs.el
-Built frimacs in 3.896s, finished at 2022-11-13T08:43:33+0000
+Created frimacs-20221113.1231.tar containing:
+  frimacs-20221113.1231/
+  frimacs-20221113.1231/data/
+  frimacs-20221113.1231/data/fricas-standard-category-info.dat
+  frimacs-20221113.1231/data/fricas-standard-domain-info.dat
+  frimacs-20221113.1231/data/fricas-standard-operation-info.dat
+  frimacs-20221113.1231/data/fricas-standard-package-info.dat
+  frimacs-20221113.1231/frimacs-base.el
+  frimacs-20221113.1231/frimacs-boot-mode.el
+  frimacs-20221113.1231/frimacs-buffer-menu.el
+  frimacs-20221113.1231/frimacs-domain-explorer.el
+  frimacs-20221113.1231/frimacs-help-mode.el
+  frimacs-20221113.1231/frimacs-input-mode.el
+  frimacs-20221113.1231/frimacs-pkg.el
+  frimacs-20221113.1231/frimacs-process-mode.el
+  frimacs-20221113.1231/frimacs-selector.el
+  frimacs-20221113.1231/frimacs-spad-mode.el
+  frimacs-20221113.1231/frimacs.el
+Built frimacs in 4.167s, finished at 2022-11-13T15:46:39+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  407 Nov 13 08:43 packages/frimacs-20220723.1902.entry
-240K -rw-r--r-- 1 root root 240K Nov 13 08:43 packages/frimacs-20220723.1902.tar
+4.0K -rw-r--r-- 1 root root  407 Nov 13 12:15 packages/frimacs-20220723.1902.entry
+240K -rw-r--r-- 1 root root 240K Nov 13 12:15 packages/frimacs-20220723.1902.tar
+4.0K -rw-r--r-- 1 root root  407 Nov 13 15:46 packages/frimacs-20221113.1231.entry
+240K -rw-r--r-- 1 root root 240K Nov 13 15:46 packages/frimacs-20221113.1231.tar
