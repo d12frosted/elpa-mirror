@@ -1635,6 +1635,15 @@
 		 (:authors
 		  ("Feng Shu" . "tumashu@163.com")
 		  ("Naoya Yamashita" . "conao3@gmail.com")))])
+ (jarchive .
+	   [(0 3 0)
+	    ((emacs
+	      (26 1)))
+	    "Open project dependencies in jar archives" tar
+	    ((:url . "https://git.sr.ht/~dannyfreeman/jarchive")
+	     (:keywords "tools" "languages" "jvm" "java" "clojure")
+	     (:maintainer "Danny Freeman" . "danny@dfreeman.email>")
+	     (:commit . "bfcc201cca1546c7646912956168e5e840c2d6a0"))])
  (javaimp .
 	  [(0 9 1)
 	   nil "Add and reorder Java import statements in Maven/Gradle projects" tar

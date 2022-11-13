@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.3
-;; Package-Version: 20221110.1449
-;; Package-Commit: 5fdb2bf6fe04d8e121643638cfccfbe77761cace
+;; Package-Version: 20221111.1517
+;; Package-Commit: a4f161f9ab582ac7cd92e8621530f3a30a59372e
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -5272,7 +5272,7 @@ TAG, GLOBAL and WITHOUT-BASE-MAP are passed to
 (defalias 'loophole-reveal #'loophole-enable)
 (defalias 'loophole-edit #'loophole-start-editing)
 (defalias 'loophole-break #'loophole-stop-editing)
-
+
 (provide 'loophole)
 
 ;;; loophole.el ends here

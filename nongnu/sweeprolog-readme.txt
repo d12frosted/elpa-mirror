@@ -942,9 +942,11 @@ Code Completion
         `completion-at-point' suggests matching variable names as
         completion candidates.
   Predicate completion
-        If the text before point can be completed to a predicate call,
-        `completion-at-point' suggests matching predicates as completion
-        candidates.
+        If point is at a callable position, `completion-at-point'
+        suggests matching predicates as completion candidates.
+  Atom completion
+        If point is at a non-callable, `completion-at-point' suggests
+        matching atoms as completion candidates.
 
 
 [Symbol Completion in the Emacs manual] <info:emacs#Symbol Completion>
@@ -1503,13 +1505,6 @@ Improvements around editing Prolog
         predicate completion with `C-M-i' should annotate each
         completion candidate with the names and modes of its arguments,
         when available.  E.g. say `foo(+Bar, -Baz)' instead of `foo/2'.
-
-  Improve the behavior of predicate completion in the middle of a functor
-        When invoking predicate completion in the middle of a functor,
-        e.g. `foo<|>bar(' (where `<|>' designates the location of the
-        cursor), we should take into account the part that comes after
-        the cursor and either restrict completion to candidates that
-        match it as a suffix, or delete it after completion.
 
   Make predicate completion aware of module-qualification
         predicate completion should detect when the prefix it’s trying
