@@ -2,10 +2,10 @@
 ;; Authors: Jeff Weiss <jweiss@protocol.ai>
 ;; Maintainer: Jeff Weiss <jweiss@protocol.ai>
 ;; URL: http://github.com/lurk-lang/lurk-emacs
-;; Package-Version: 20221107.1338
-;; Package-Commit: b341ffbf5959bbbc7dd33b35e207ce8b7bfbf565
+;; Package-Version: 20221113.219
+;; Package-Commit: 0eb856f771aa18e55db6b027c75b944a92c15464
 ;; Keywords: languages lurk lisp
-;; Version: 0.1.3
+;; Version: 0.1.5
 ;; SPDX-License-Identifier: Apache-2.0 AND MIT
 ;; Package-Requires: ((emacs "25.1"))
 ;;; Commentary:
@@ -26,16 +26,21 @@
 ;;   M-x lurk-repl
 
 ;;; Code:
-(defvar lurk-keywords
+(require 'comint)
+
+(defconst lurk-keywords
   '("lambda" "let" "letrec" "cons" "strcons" "hide" "begin" "car" "cdr"
     "commit" "num" "comm" "char" "eval" "open" "secret" "atom" "emit" "if"
     "current-env"))
+
+(defconst lurk-font-lock-keywords
+  `((,(regexp-opt lurk-keywords 'words) . (0 font-lock-keyword-face))))
 
 ;;;###autoload
 (define-derived-mode lurk-mode scheme-mode "Lurk"
   "Lurk mode is a major mode for editing Lurk files."
 
-  (setq font-lock-defaults '(lurk-font-lock-keywords)))
+  (add-hook 'lurk-mode-hook (lambda () (font-lock-add-keywords nil lurk-font-lock-keywords))))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.lurk\\'" . lurk-mode))
@@ -52,12 +57,14 @@
   (run-lisp lurk-executable)
   (rename-buffer "*lurk*"))
 
-(defvar lurk-font-lock-keywords
-  (list (cons (concat
-	       "("
-	       (regexp-opt lurk-keywords t)
-	       "\\>")
-	      font-lock-keyword-face)))
+(defun lurk-eval-last-sexp ()
+  "Send the last sexp to the lurk repl to be evaluated."
+  (interactive)
+  (append-to-buffer "*lurk*"
+		    (point)
+		    (save-excursion (backward-sexp) (point)))
+  (with-current-buffer "*lurk*"
+    (comint-send-input)))
 
 (provide 'lurk-mode)
 ;;; lurk-mode.el ends here
