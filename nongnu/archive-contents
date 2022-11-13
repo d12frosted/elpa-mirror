@@ -831,9 +831,9 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 8 9)
+       [(3 9 0)
 	((helm-core
-	  (3 8 8))
+	  (3 9 0))
 	 (popup
 	  (0 5 3)))
 	"Helm is an Emacs incremental and narrowing framework" tar
@@ -841,9 +841,9 @@
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "dd72b3281afb38eaedd1e0015ab3c92d8ab7ef8f"))])
+	 (:commit . "371df21b1e73be03b90028e2f5d8554f70a989b7"))])
  (helm-core .
-	    [(3 8 9)
+	    [(3 9 0)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -853,7 +853,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "dd72b3281afb38eaedd1e0015ab3c92d8ab7ef8f"))])
+	      (:commit . "371df21b1e73be03b90028e2f5d8554f70a989b7"))])
  (highlight-parentheses .
 			[(2 1 1)
 			 ((emacs
@@ -1368,7 +1368,7 @@
 	      (:authors
 	       ("Andreas Politz" . "politza@fh-trier.de")))])
  (php-mode .
-	   [(1 24 1)
+	   [(1 24 2)
 	    ((emacs
 	      (25 2)))
 	    "Major mode for editing PHP code" tar
@@ -1377,7 +1377,7 @@
 	     (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
 	     (:authors
 	      ("Eric James Michael Ritz"))
-	     (:commit . "ae3b0b184e096b8bd916516ae7db908dbb27ec1e"))])
+	     (:commit . "d63b8af8333b53ef05b1f9b9e066253497302a50"))])
  (popon .
 	[(0 11)
 	 ((emacs
@@ -1511,6 +1511,17 @@
 	      (:authors
 	       ("Natalie Weizenbaum"))
 	      (:keywords "markup" "language" "css"))])
+ (scad-mode .
+	    [(93 1)
+	     ((emacs
+	       (27 1)))
+	     "A major mode for editing OpenSCAD code" tar
+	     ((:url . "https://github.com/openscad/emacs-scad-mode")
+	      (:keywords "languages")
+	      (:maintainer "Len Trigg <lenbok@gmail.com>, Daniel Mendler" . "mail@daniel-mendler.de")
+	      (:authors
+	       ("Len Trigg, Łukasz Stelmach, zk_phi, Daniel Mendler"))
+	      (:commit . "3076e240bf4d0d754599592c9b4ee828e2271959"))])
  (scala-mode .
 	     [(0 23)
 	      nil "Major mode for editing Scala" tar

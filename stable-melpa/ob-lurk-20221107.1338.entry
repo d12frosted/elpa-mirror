@@ -1,0 +1,11 @@
+(ob-lurk .
+	 [(20221107 1338)
+	  ((emacs
+	    (25 1))
+	   (lurk-mode
+	    (0 1 2)))
+	  "Evaluate lurk code blocks in org mode" single
+	  ((:commit . "b341ffbf5959bbbc7dd33b35e207ce8b7bfbf565")
+	   (:maintainer "Jeff Weiss" . "jweiss@protocol.ai")
+	   (:keywords "languages" "lurk" "lisp")
+	   (:url . "http://github.com/lurk-lang/lurk-emacs"))])

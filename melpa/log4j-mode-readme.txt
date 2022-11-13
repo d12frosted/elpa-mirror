@@ -49,6 +49,9 @@ To customize the regular expressions used to identify log records for
 syntax highlighting, change the variables `log4j-match-error-regexp'
 etc.
 
+To customize whether to syntax highlight the complete log record, or just
+the matched keyword, change variable `log4j-highlight-only-keyword'.
+
 You can also customize the regular expressions that are used to find the
 beginning and end of multi-line log records. However, in many cases this
 will not be necessary. Log4j mode can automatically detect single-line and
