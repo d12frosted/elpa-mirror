@@ -1,0 +1,27 @@
+Package: gitstatus
+Fetcher: github
+Source:  https://github.com/igorepst/gitstatus-el.git
+
+Cloning https://github.com/igorepst/gitstatus-el.git to /mnt/store/melpa/working/gitstatus/
+Checking out origin/HEAD
+Checking out 6c5024ad76fa9bbf2e3bea8d03e77e1767fd3aee
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gitstatus/
+  to /tmp/gitstatusveWXVC/gitstatus-20221108.801
+    gitstatus-eshell.el -> gitstatus-eshell.el
+    gitstatus-pkg.el -> gitstatus-pkg.el
+    gitstatus.el -> gitstatus.el
+    gitstatusd.el -> gitstatusd.el
+    gitstatus.info -> gitstatus.info
+Created gitstatus-20221108.801.tar containing:
+  gitstatus-20221108.801/
+  gitstatus-20221108.801/dir
+  gitstatus-20221108.801/gitstatus-eshell.el
+  gitstatus-20221108.801/gitstatus-pkg.el
+  gitstatus-20221108.801/gitstatus.el
+  gitstatus-20221108.801/gitstatus.info
+  gitstatus-20221108.801/gitstatusd.el
+Built gitstatus in 3.599s, finished at 2022-11-13T19:21:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 380 Nov 13 19:21 packages/gitstatus-20221108.801.entry
+ 40K -rw-r--r-- 1 root root 40K Nov 13 19:21 packages/gitstatus-20221108.801.tar

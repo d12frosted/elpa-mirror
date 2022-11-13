@@ -1,0 +1,11 @@
+(scad-mode .
+	   [(20221113 1728)
+	    ((emacs
+	      (27 1)))
+	    "A major mode for editing OpenSCAD code" tar
+	    ((:commit . "d862a9ad8a570703709d096478494b6705d33ad0")
+	     (:authors
+	      ("Len Trigg, Łukasz Stelmach, zk_phi, Daniel Mendler"))
+	     (:maintainer "Len Trigg <lenbok@gmail.com>, Daniel Mendler" . "mail@daniel-mendler.de")
+	     (:keywords "languages")
+	     (:url . "https://github.com/openscad/emacs-scad-mode"))])
