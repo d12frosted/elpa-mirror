@@ -31,13 +31,6 @@ Load and initialize the repository
   (jarchive-setup))
 ```
 
-It can also be done in a hook (recommended)
-
-``` emacs-lisp
-(add-hook 'eglot-managed-mode-hook #'jarchive-setup)
-;; OR something like
-(add-hook 'clojure-mode-hook #'jarchive-setup)
-```
 or interactively, via `M-x jarchive-setup`.
 
 ## Working with Eglot
@@ -96,8 +89,10 @@ I have heard from other users that it also works with some unspecified java lang
 Any language server that provides jar: scheme URIs should be picked up by this package.
 If it doesn't, please let me know and I'd be happy to take a look.
 
-## Questions
+## Questions and Bugs
 
 Questions and patches can be submitted to the [mailing list](https://lists.sr.ht/~dannyfreeman/jarchive-dev).
+
+Bugs can be submitted here: [bug tracker](https://todo.sr.ht/~dannyfreeman/jarchive).
 Any bugs found should include steps to reproduce. 
 If possible, and example repository containing a project and instructions (or a nix shell) for installing the language servers would be appreciated.

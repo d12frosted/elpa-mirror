@@ -1,45 +1,69 @@
-Workroom provides named "workrooms" (or workspaces), somewhat similar to
-multiple desktops in GNOME.
+Workroom provides named "workrooms" (or workspaces), somewhat
+similar to multiple desktops in GNOME.
 
-Each workroom has own set of buffers, allowing you to work on multiple
-projects without getting lost in all buffers.
+Each workroom has own set of buffers, allowing you to work on
+multiple projects without getting lost in all buffers.
 
 Each workroom also has its own set of views.  Views are just named
 window configurations.  They allow you to switch to another window
-configuration without losing your well-planned current window setup.
+configuration without losing your well-planned window setup.
 
-You can also bookmark a workroom or all your workrooms to restore them
-at a later time, possibly in another Emacs session.
+You can also bookmark a workroom to restore them at a later time,
+possibly in another Emacs session.  You can also save your
+workrooms in your desktop.
+
+Usage
+═════
 
 There is always a workroom named "master", which contains all live
-buffers.  Removing any buffer from this workroom kills that buffer.  You
-can't kill, rename or bookmark this workroom, but you can customize the
-variable `workroom-default-room-name' to change its name.
+buffers.  Removing any buffer from this workroom kills that buffer.
+You can't kill this workroom, but you can customize the variable
+`workroom-default-room-name' to change its name.
 
 All the useful commands can be called with following key sequences:
 
-  Key        Command
-  --------------------------------------
-  C-x x s    `workroom-switch'
-  C-x x d    `workroom-kill-view'
-  C-x x D    `workroom-kill'
-  C-x x r    `workroom-rename-view'
-  C-x x R    `workroom-rename'
-  C-x x c    `workroom-clone-view'
-  C-x x C    `workroom-clone'
-  C-x x m    `workroom-bookmark'
-  C-x x M    `workroom-bookmark-all'
-  C-x x b    `workroom-switch-to-buffer'
-  C-x x a    `workroom-add-buffer'
-  C-x x k    `workroom-remove-buffer'
-  C-x x K    `workroom-kill-buffer'
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ Key          Command
+───────────────────────────────────────────
+ `C-x c s'    `workroom-switch'
+ `C-x c S'    `workroom-switch-view'
+ `C-x c d'    `workroom-kill'
+ `C-x c D'    `workroom-kill-view'
+ `C-x c C-d'  `workroom-kill-with-buffers'
+ `C-x c r'    `workroom-rename'
+ `C-x c R'    `workroom-rename-view'
+ `C-x c c'    `workroom-clone'
+ `C-x c C'    `workroom-clone-view'
+ `C-x c m'    `workroom-bookmark'
+ `C-x c M'    `workroom-bookmark-multiple'
+ `C-x c b'    `workroom-switch-to-buffer'
+ `C-x c a'    `workroom-add-buffer'
+ `C-x c k'    `workroom-kill-buffer'
+ `C-x c K'    `workroom-remove-buffer'
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Here the prefix key sequence is "C-x x", but you can customize
+Here the prefix key sequence is `C-x c', but you can customize
 `workroom-command-map-prefix' to change it.
 
-Adding and removing buffers to/from workrooms can become a burden.  You
-can automate this process by setting `buffers' slot of `workroom' to a
-function without arguments returning a list of live buffers.  That list
-of buffer will be used as the list of buffers of that workroom.  The
-default workroom is an example of this type of workroom, which uses
-`buffer-list' for the list of buffers.
+You might want to remap ~switch-to-buffer~, ~kill-buffer~ and other
+commands with Workroom-aware commands by adding something like the
+following to your init file:
+
+┌────
+│ (global-set-key [remap switch-to-buffer]
+│                 #'workroom-switch-to-buffer)
+│ (global-set-key [remap kill-buffer] #'workroom-kill-buffer)
+└────
+
+You can save all your workroom in your desktop by enabling
+`workroom-desktop-save-mode' mode.
+
+You can create a workroom containing only your project buffer with
+`workroom-switch-to-project-workroom'.  You can also enable
+`workroom-auto-project-workroom-mode', it'll switch to (creating if
+needed) the project's workroom when you open a file.
+
+If you want to completely automate managing workroom buffer list,
+check out the docstrings of `workroom-buffer-manager-function',
+`workroom-set-buffer-manager-function' and
+`workroom-buffer-manager-data'.

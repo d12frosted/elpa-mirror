@@ -4,8 +4,26 @@ Source:  https://codeberg.org/akib/emacs-workroom.git
 
 Updating /mnt/store/melpa/working/workroom/
 Checking out origin/HEAD
-Checking out e1092127bdf93d8f1ae0c58ec595d0181f606f1e
-Built workroom in 4.493s, finished at 2022-11-13T16:38:24+0000
+Checking out 9db06cc7e7f988a767508133f5c4bedcba5cb555
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/workroom/
+  to /tmp/workroomi4axCk/workroom-20221113.1802
+    workroom.el -> workroom.el
+    fdl.texi -> fdl.texi
+    gpl.texi -> gpl.texi
+    workroom.texi -> workroom.texi
+Generating /tmp/workroomi4axCk/workroom-20221113.1802/fdl.info
+Generating /tmp/workroomi4axCk/workroom-20221113.1802/gpl.info
+Generating /tmp/workroomi4axCk/workroom-20221113.1802/workroom.info
+Created workroom-20221113.1802.tar containing:
+  workroom-20221113.1802/
+  workroom-20221113.1802/dir
+  workroom-20221113.1802/fdl.info
+  workroom-20221113.1802/gpl.info
+  workroom-20221113.1802/workroom-pkg.el
+  workroom-20221113.1802/workroom.el
+  workroom-20221113.1802/workroom.info
+Built workroom in 15.975s, finished at 2022-11-13T23:45:28+0000
  ✓ Success:
- 44K -rw-r--r-- 1 root root 43K Nov 13 16:38 packages/workroom-20220608.1718.el
-4.0K -rw-r--r-- 1 root root 416 Nov 13 16:38 packages/workroom-20220608.1718.entry
+4.0K -rw-r--r-- 1 root root  442 Nov 13 23:45 packages/workroom-20221113.1802.entry
+240K -rw-r--r-- 1 root root 240K Nov 13 23:45 packages/workroom-20221113.1802.tar
