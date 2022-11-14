@@ -9,8 +9,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/dante
-;; Package-Version: 20221111.1506
-;; Package-Commit: cceb89bb218fb69371c41838c94a5c3270bf7448
+;; Package-Version: 20221114.913
+;; Package-Commit: f7560257e928105c45814be130fa9c0ac557d975
 ;; Created: October 2016
 ;; Keywords: haskell, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "27.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (flymake "1.0") (s "1.11.0") (lcr "1.5"))
@@ -357,7 +357,8 @@ and over."
 process."
   :start 'dante-check
   :predicate (lambda () dante-mode)
-  :modes '(haskell-mode haskell-literate-mode))
+  :modes '(haskell-mode haskell-literate-mode)
+  :working-directory (lambda (_checker) dante-ghci-path))
 
 (add-to-list 'flycheck-checkers 'haskell-dante)
 
@@ -860,7 +861,7 @@ The command block is indicated by the >>> symbol."
       (lcr-call dante-async-load-current-buffer t nil)
       (while (search-forward-regexp "[ \t]*--[ \t]+>>>" (line-end-position) t 1)
         ;; found a command; execute it and replace the result.
-        (let* ((cmd (buffer-substring-no-properties (point) (line-end-position))) 
+        (let* ((cmd (buffer-substring-no-properties (point) (line-end-position)))
                (res (lcr-call dante-async-call cmd)))
           (beginning-of-line)
           (forward-line)

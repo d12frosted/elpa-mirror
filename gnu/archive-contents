@@ -2485,14 +2485,14 @@
 	      ("Feng Shu" . "tumashu@163.com"))
 	     (:commit . "0c5e57ac870735cb780936b1efc4bdd17fe87112"))])
  (project .
-	  [(0 8 2)
+	  [(0 8 3)
 	   ((emacs
 	     (26 1))
 	    (xref
 	     (1 4 0)))
 	   "Operations on the current project" tar
 	   ((:url . "https://elpa.gnu.org/packages/project.html")
-	    (:commit . "ef6e518035fddf13547d7f1f945b5069a0fe6ea7"))])
+	    (:commit . "c0474ca21dd76cafbd1a04fd32d4a0bd42de6351"))])
  (psgml .
 	[(1 3 4)
 	 nil "SGML-editing mode with parsing support" tar
@@ -3042,7 +3042,7 @@
 		("Alex Harsanyi" . "AlexHarsanyi@gmail.com"))
 	       (:keywords "languages" "sql"))])
  (srht .
-       [(0 1)
+       [(0 2)
 	((emacs
 	  (27 1))
 	 (plz
@@ -3053,7 +3053,7 @@
 	 (:maintainer "Aleksandr Vityazev" . "avityazev@posteo.org")
 	 (:authors
 	  ("Aleksandr Vityazev" . "avityazev@posteo.org"))
-	 (:commit . "e4648260024bef41006bc77b18a598623e7d7201"))])
+	 (:commit . "5605a75111a9b1a1e67bd012bbf78fc6cb54f96b"))])
  (ssh-deploy .
 	     [(3 1 13)
 	      ((emacs
@@ -3401,6 +3401,19 @@
 	     (:authors
 	      ("Stefan Kangas" . "stefankangas@gmail.com"))
 	     (:commit . "6f517db0811e79f4f8a9e5b4c9c6f69999517215"))])
+ (use-package .
+	      [(2 4 4)
+	       ((emacs
+		 (24 3))
+		(bind-key
+		 (2 4)))
+	       "A configuration macro for simplifying your .emacs" tar
+	       ((:url . "https://github.com/jwiegley/use-package")
+		(:keywords "dotemacs" "startup" "speed" "config" "package")
+		(:maintainer "John Wiegley" . "johnw@newartisans.com")
+		(:authors
+		 ("John Wiegley" . "johnw@newartisans.com"))
+		(:commit . "942617d26e11d80d879ff23d2a8b477bd074a734"))])
  (validate .
 	   [(1 0 4)
 	    ((emacs

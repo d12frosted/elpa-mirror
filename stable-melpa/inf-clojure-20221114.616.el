@@ -6,8 +6,8 @@
 ;;       Olin Shivers <shivers@cs.cmu.edu>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/inf-clojure
-;; Package-Version: 20220807.2113
-;; Package-Commit: 59a9f0695f3d97a593f8d5ea04b51ea5dcb2718a
+;; Package-Version: 20221114.616
+;; Package-Commit: e5ce3839835b9b561fca5810f43f413c96c197d9
 ;; Keywords: processes, comint, clojure
 ;; Version: 3.2.1
 ;; Package-Requires: ((emacs "25.1") (clojure-mode "5.11"))
@@ -341,7 +341,8 @@ Either \"no process\" or \"buffer-name(repl-type)\""
     "no process"))
 
 (defvar inf-clojure-mode-map
-  (let ((map (copy-keymap comint-mode-map)))
+  (let ((map (make-sparse-keymap)))
+    (set-keymap-parent map comint-mode-map)
     (define-key map (kbd "C-x C-e") #'inf-clojure-eval-last-sexp)
     (define-key map (kbd "C-c C-l") #'inf-clojure-load-file)
     (define-key map (kbd "C-c C-a") #'inf-clojure-show-arglists)

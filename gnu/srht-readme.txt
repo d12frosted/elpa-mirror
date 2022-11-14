@@ -1,11 +1,16 @@
-0.0.1 Version 0.1.0
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+0.0.1 Version 0.2
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
 
 1 About
 ═══════
 
   GNU Emacs [sourcehut] API client.
+
+  `srht' provides bindings to the Sourcehut REST API as well as commands
+  for interacting with it. It currently supports two services:
+  `git.sr.ht' — git hosting and `paste.sr.ht' — ad-hoc text file
+  hosting.
 
 
 [sourcehut] <https://sr.ht>
@@ -19,7 +24,7 @@
 
   ┌────
   │ git clone https://git.sr.ht/~akagi/srht.el srht
-  │ cd srth
+  │ cd srht
   │ guix package -f guix.scm
   └────
 
@@ -35,9 +40,10 @@
 3 Setup
 ═══════
 
-  To use this client, you need to [generate] a personal access
-  token. This token will have unrestricted access to all sr.ht APIs and
-  can be used like a normal access token to authenticate API requests.
+  To use this client, you need to [generate] a personal access token
+  (Oauth not Oauth2). This token will have unrestricted access to all
+  sr.ht APIs and can be used like a normal access token to authenticate
+  API requests.
 
   After creating the token:
 
@@ -56,6 +62,12 @@
 
   ┌────
   │ (setq srht-username USERNAME)
+  └────
+
+  If you are using a self-hosted instanse:
+
+  ┌────
+  │ (setq srht-domain '(DOMAIN ...))
   └────
 
 
@@ -77,7 +89,25 @@
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-5 License
+5 Copyright assignment
+══════════════════════
+
+  This package is part of [GNU Emacs], being distributed in [GNU ELPA].
+  Contributions to this project must follow GNU guidelines, which means
+  that, as with other parts of Emacs, patches of more than a few lines
+  must be accompanied by having assigned copyright for the contribution
+  to the FSF.  Contributors who wish to do so may contact
+  [emacs-devel@gnu.org] to request the assignment form.
+
+
+[GNU Emacs] <https://www.gnu.org/software/emacs/>
+
+[GNU ELPA] <https://elpa.gnu.org/>
+
+[emacs-devel@gnu.org] <mailto:emacs-devel@gnu.org>
+
+
+6 License
 ═════════
 
   GPLv3
