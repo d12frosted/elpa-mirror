@@ -26,7 +26,30 @@ use.
 
 ;;; MELPA
 
-I'll work on this.
+You need to enable package installations from MELPA if you didn't already.
+/(See: https://melpa.org/#/getting-started)/
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+
+;;;; Interactively
+
+~M-x package-install RET org-rainbow-tags RET~
+
+;;;; With ~init.el~ or ~.emacs~
+
+(unless (package-installed-p 'org-rainbow-tags)
+  (package-install 'org-rainbow-tags))
+(require 'org-rainbow-tags)
+
+
+;;;; With ~use-package~
+
+(use-package org-rainbow-tags
+  :ensure t)
+
 
 ;; Usage
 
@@ -42,17 +65,6 @@ To see customization options, you can run ~M-x customize-group RET
 org-rainbow-tags RET~ or you can check ~(defcustom ...)~ lines in
 ~org-rainbow-tags.el~.
 
-Full ~straight.el~ + ~use-package~ example:
-
-(use-package org-rainbow-tags
-  :straight (:host github :repo "KaratasFurkan/org-rainbow-tags")
-  :custom
-  (org-rainbow-tags-extra-face-attributes
-   ;; Default is '(:weight 'bold)
-   '(:inverse-video t :box t :weight 'bold))
-  :hook
-  (org-mode . org-rainbow-tags-mode))
-
 If you don't like the auto-generated colors for your favorite tags, you can
 change the value of ~org-rainbow-tags-hash-start-index~ between 0-20. This
 variable decides which 12 characters of the hash of the tag should be taken
@@ -61,6 +73,18 @@ to generate the color.
 Example:
 
 (setq org-rainbow-tags-hash-start-index 10)
+
+Full ~use-package~ example:
+
+(use-package org-rainbow-tags
+  :ensure t
+  :custom
+  (org-rainbow-tags-hash-start-index 10)
+  (org-rainbow-tags-extra-face-attributes
+   ;; Default is '(:weight 'bold)
+   '(:inverse-video t :box t :weight 'bold))
+  :hook
+  (org-mode . org-rainbow-tags-mode))
 
 ;; Known Issues
 ~org-rainbow-tags-mode~ colorizes org tags when it's activated and also when

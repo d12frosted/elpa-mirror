@@ -1,0 +1,11 @@
+(glue .
+      [(20221114 1120)
+       ((emacs
+	 (24 1)))
+       "Emacs - Common Lisp interop using SLIME or SLY" single
+       ((:commit . "abfad405f240d9a89f792aae36efb3c2af43021f")
+	(:authors
+	 ("Gabor Poczkodi" . "hajovonta@gmail.com"))
+	(:maintainer "Gabor Poczkodi" . "hajovonta@gmail.com")
+	(:keywords "lisp" "emacs" "common" "lisp" "cl")
+	(:url . "https://git.sr.ht/~hajovonta/glue/"))])

@@ -4,10 +4,10 @@ Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
 Checking out origin/HEAD
-Checking out dbb2d6556b8d100633b8a8b71914df476279dc13
+Checking out a7bc26300122cf429e9d49ffc9c940b15ee55f73
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgMlUwjq/epkg-20221025.1206
+  to /tmp/epkgbJhAE0/epkg-20221114.1241
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-gelpa.el -> epkg-gelpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -17,21 +17,23 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkgMlUwjq/epkg-20221025.1206/epkg.info
-Created epkg-20221025.1206.tar containing:
-  epkg-20221025.1206/
-  epkg-20221025.1206/dir
-  epkg-20221025.1206/epkg-desc.el
-  epkg-20221025.1206/epkg-gelpa.el
-  epkg-20221025.1206/epkg-list.el
-  epkg-20221025.1206/epkg-melpa.el
-  epkg-20221025.1206/epkg-org.el
-  epkg-20221025.1206/epkg-pkg.el
-  epkg-20221025.1206/epkg-schemata.el
-  epkg-20221025.1206/epkg-utils.el
-  epkg-20221025.1206/epkg.el
-  epkg-20221025.1206/epkg.info
-Built epkg in 8.576s, finished at 2022-11-14T09:29:10+0000
+Generating /tmp/epkgbJhAE0/epkg-20221114.1241/epkg.info
+Created epkg-20221114.1241.tar containing:
+  epkg-20221114.1241/
+  epkg-20221114.1241/dir
+  epkg-20221114.1241/epkg-desc.el
+  epkg-20221114.1241/epkg-gelpa.el
+  epkg-20221114.1241/epkg-list.el
+  epkg-20221114.1241/epkg-melpa.el
+  epkg-20221114.1241/epkg-org.el
+  epkg-20221114.1241/epkg-pkg.el
+  epkg-20221114.1241/epkg-schemata.el
+  epkg-20221114.1241/epkg-utils.el
+  epkg-20221114.1241/epkg.el
+  epkg-20221114.1241/epkg.info
+Built epkg in 9.176s, finished at 2022-11-14T13:04:44+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  404 Nov 14 09:29 packages/epkg-20221025.1206.entry
 112K -rw-r--r-- 1 root root 110K Nov 14 09:29 packages/epkg-20221025.1206.tar
+4.0K -rw-r--r-- 1 root root  404 Nov 14 13:04 packages/epkg-20221114.1241.entry
+112K -rw-r--r-- 1 root root 110K Nov 14 13:04 packages/epkg-20221114.1241.tar
