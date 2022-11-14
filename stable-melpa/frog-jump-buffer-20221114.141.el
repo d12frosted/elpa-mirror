@@ -4,8 +4,8 @@
 
 ;; Author: Justin Talbott
 ;; URL: https://github.com/waymondo/frog-jump-buffer
-;; Package-Version: 20220414.1935
-;; Package-Commit: ff0cfe9cb4a60d855f0754b741a9417ee413dee0
+;; Package-Version: 20221114.141
+;; Package-Commit: ab830cb7a5af9429866ba88fb37589a0366d8bf2
 ;; Version: 0.1.5
 ;; Package-Requires: ((emacs "24") (avy "0.4.0") (dash "2.4.0") (frog-menu "0.2.8"))
 ;; License: GNU General Public License version 3, or (at your option) any later version
@@ -282,7 +282,7 @@ Each action is a list of the form: (KEY DESCRIPTION FILTER-FUNCTION)."
    (append frog-jump-buffer-ignore-buffers
            (list frog-jump-buffer-current-filter-function)
            (unless frog-jump-buffer-include-current-buffer
-             (list (buffer-name (current-buffer)))))))
+             (list (concat "^" (buffer-name (current-buffer)) "$"))))))
 
 (defun frog-jump-buffer-maybe-iconify-buffer-names (buffer-names)
   "Add an icon before each buffer name when `all-the-icons-ivy' is available."
