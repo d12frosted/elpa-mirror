@@ -4,8 +4,8 @@
 
 ;; Author: Ian Wahbe
 ;; URL: https://github.com/iwahbe/jsonian
-;; Package-Version: 20220708.1813
-;; Package-Commit: 7ad6d73aff49b346dc9f577ba8a450ac0a8d2aa5
+;; Package-Version: 20221114.251
+;; Package-Commit: a324bc66b00752607b6d2db00d798c81aff541f0
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -195,7 +195,7 @@ Otherwise it will parse back to the beginning of the file."
               ;; null literal
               ((eq (char-before) ?l) (jsonian--backward-null))
               ((bobp) (cl-return nil))
-              (t  (user-error "`jsonian--path': Unexpected character '%s'" (if (bobp) "BOB" (format "%c" (char-before)))))))))
+              (t  (jsonian--unexpected-char :backward "the end of a JSON value"))))))
 
 (defun jsonian--display-path (path &optional pretty)
   "Convert the reconstructed JSON path PATH to a string.
@@ -393,10 +393,7 @@ LITERAL is the string literal to be traversed."
                             i (1+ i)))
                     l))
            (backward-char ,(length literal))
-         (user-error ,(format "jsonian--backward-%s: expected \"%s\", found %s" literal literal "%s\"%s\"")
-                     (if (< (- (point) ,(length literal)) (point-min))
-                         "(BOB) " "")
-                     (buffer-substring-no-properties (max (point-min) (- (point) ,(length literal))) (point)))))
+         (jsonian--unexpected-char :backward ,(format "literal value \"%s\"" literal))))
      (defun ,(intern (format "jsonian--forward-%s" literal)) ()
        ,(format "Move forward over the literal \"%s\"" literal) ;
        (if (and (< (+ (point) ,(length literal)) (point-max))
@@ -407,11 +404,7 @@ LITERAL is the string literal to be traversed."
                     l))
            (dotimes (_ ,(length literal))
              (if (eolp) (forward-line) (forward-char)))
-         (user-error ,(format "jsonian--forward-%s: expected \"%s\", found %s" literal literal "\"%s\"%s")
-                     (buffer-substring-no-properties (point) (min (+ (point) ,(length literal)) (point-max)))
-                     (if (>= (+ (point) ,(length literal)) (point-max))
-                         " (EOF)"
-                       ""))))))
+         (jsonian--unexpected-char :forward ,(format "literal value \"%s\"" literal))))))
 
 (defmacro jsonian--defun-traverse (name &optional arg arg2)
   "Define a functions to traverse literals or predicate defined range.
@@ -734,10 +727,10 @@ PROPERTY defaults to `face'."
        ((eq (char-after) ?f) (jsonian--forward-false))
        ((eq (char-after) ?\{) (forward-list))
        ((eq (char-after) ?\[) (forward-list))
-       ((and (>= (char-after) ?0) (<= (char-after) ?9)) (jsonian--forward-number))
+       ((and (char-after) (>= (char-after) ?0) (<= (char-after) ?9)) (jsonian--forward-number))
        ((eq (char-after) ?,) (setq n (1- n)) (forward-char) (jsonian--forward-to-significant-char))
-       ((or (eq (char-after) ?\]) (= (char-after) ?\})) (setq done t))
-       (t (user-error "`jsonian--traverse-forward': Unexpected character '%c'" (char-after)))))
+       ((or (eq (char-after) ?\]) (eq (char-after) ?\})) (setq done t))
+       (t (jsonian--unexpected-char :forward "the beginning of a JSON value"))))
     (jsonian--forward-to-significant-char)
     (not done)))
 
@@ -1606,6 +1599,59 @@ The segment \"foo bar\" would end as \"foo bar\\\"]."
           (setq i (1+ i))
         (setq result t)))
     (substring first 0 i)))
+
+(defun jsonian--unexpected-char (direction &optional expecting)
+  "Signal a `user-error' that EXPECTING was expected, but not found.
+DIRECTION indicates if parsing is forward (:forward) or backward (:backward)."
+  (user-error
+   "%s: unexpected character '%s' at %d:%d%s\n%s"
+   (jsonian--enclosing-public-frame)
+   (let ((bound
+          (cond
+           ((eq direction :backward) (list #'bobp "BOB" #'char-before))
+           ((eq direction :forward) (list #'eobp "EOB" #'char-after))
+           (t (error "Expecting :forward or :backward, found %s" direction)))))
+     (if (funcall (car bound))
+         (cadr bound)
+       (let ((c (funcall (caddr bound))))
+         (cond
+          ((eq c ?\n) "\\n")
+          ((eq c ?\t) "\\t")
+          (t (format "%c" c))))))
+   (line-number-at-pos) (if (and (eq direction :backward) (> (current-column) 0))
+                            (1- (current-column))
+                          (current-column))
+   (if expecting
+       (format ": expecting %s" expecting)
+     "")
+   (let* ((column-start-pos (save-excursion (beginning-of-line) (point)))
+          (column-end-pos (save-excursion (end-of-line) (point)))
+          (window-start (max column-start-pos (- (point) 40)))
+          (window-end (min column-end-pos (+ (point) 40))))
+     (concat
+      (buffer-substring window-start window-end) "\n"
+      (make-string (let ((pos (- (point) window-start)))
+                     (if (and (eq direction :backward) (> pos 0))
+                         (1- pos)
+                       pos))
+                   ? )
+      "^"))))
+
+(defun jsonian--enclosing-public-frame ()
+  "The public jsonian- function that directly encloses the current stack frame."
+  ;; i=3 gets us to the function that called `jsonian--enclosing-public-frame'.
+  (let* ((i 3) (frame (backtrace-frame i))
+         ;; We take that function as a backup value
+         (ret-val (symbol-name (nth 1 frame))))
+    (while frame
+      (let ((fn-name (symbol-name (nth 1 frame))))
+        (if (and (string-prefix-p "jsonian-" fn-name)
+                 (not (string-prefix-p "jsonian--" fn-name)))
+            (setq ret-val fn-name
+                  frame nil)
+          (setq i (1+ i)
+                frame (backtrace-frame i)))))
+    ret-val))
 
 (provide 'jsonian)
 

@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://git.launchpad.net/global-tags.el
 
 Updating /mnt/store/melpa/working/global-tags/
-Checking out origin/HEAD
-Checking out aaa37da4c538f35a90149ef4ad3d8b0922af54ab
-Built global-tags in 10.720s, finished at 2022-11-14T02:29:58+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 29K Nov 14 02:29 packages/global-tags-20211120.347.el
-4.0K -rw-r--r-- 1 root root 508 Nov 14 02:29 packages/global-tags-20211120.347.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.launchpad.net/global-tags.el/': Failed to connect to git.launchpad.net port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
