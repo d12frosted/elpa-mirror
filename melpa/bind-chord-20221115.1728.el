@@ -4,8 +4,8 @@
 
 ;; Author: Justin Talbott <justin@waymondo.com>
 ;; Keywords: convenience, tools, extensions
-;; Package-Version: 20221026.1834
-;; Package-Commit: 5c95dcb1e8690ab5f15342dc9d4bedd599f1650f
+;; Package-Version: 20221115.1728
+;; Package-Commit: 09f210c5989454fa2c8729f4c0788c1d18c0ce22
 ;; URL: https://github.com/jwiegley/use-package
 ;; Version: 0.2.1
 ;; Package-Requires: ((bind-key "1.0") (key-chord "0.6"))
@@ -94,7 +94,8 @@ function symbol (unquoted)."
   "Bind multiple chords at once.
 
 Accepts keyword argument:
-:map - a keymap into which the keybindings should be added
+:map - a keymap or list of keymaps into which the keybindings should be
+       added
 
 The rest of the arguments are conses of keybinding string and a
 function symbol (unquoted)."

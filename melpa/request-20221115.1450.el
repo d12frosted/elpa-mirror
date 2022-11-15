@@ -6,8 +6,8 @@
 
 ;; Author: Takafumi Arakaki <aka.tkf at gmail.com>
 ;; URL: https://github.com/tkf/emacs-request
-;; Package-Version: 20221022.1122
-;; Package-Commit: 2c33e451879c4ea406a4a2e076636188eb4b9920
+;; Package-Version: 20221115.1450
+;; Package-Commit: eb66f05fe37f22228f470882b04a6362683975e1
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.3.3
 
@@ -243,6 +243,7 @@ Some arguments such as HEADERS is changed to the one actually
 passed to the backend.  Also, it has additional keywords such
 as URL which is the requested URL.")
 
+;;;###autoload
 (defun request-response-header (response field-name)
   "Fetch the values of RESPONSE header field named FIELD-NAME.
 
@@ -267,6 +268,7 @@ Examples::
 ;;    (see https://tools.ietf.org/html/rfc2616.html#section-4.2).
 ;;    Python's requests module does this too.
 
+;;;###autoload
 (defun request-response-headers (response)
   "Return RESPONSE headers as an alist.
 I would have chosen a function name that wasn't so suggestive that
@@ -329,7 +331,7 @@ Example::
   (request-cookie-alist \"127.0.0.1\" \"/\")  ; => ((\"key\" . \"value\") ...)"
   (funcall (request--choose-backend 'get-cookies) host localpart secure))
 
-
+;;;###autoload
 (cl-defun request (url &rest settings
                        &key
                        (params nil)
@@ -555,6 +557,7 @@ and requests.request_ (Python).
                        (buffer-substring (point-min) (min (1+ (point)) (point-max))))
           (delete-region (point-min) (min (1+ (point)) (point-max))))))))
 
+;;;###autoload
 (defun request-untrampify-filename (file)
   "Return FILE as the local file name."
   (or (file-remote-p file 'localname) file))
@@ -670,6 +673,7 @@ RESPONSE via ENCODING."
                  (request-response-settings response))
           (setq done-p t))))))
 
+;;;###autoload
 (defun request-abort (response)
   "Abort request for RESPONSE (the object returned by `request').
 Note that this function invoke ERROR and COMPLETE callbacks.
@@ -1147,6 +1151,7 @@ See info entries on sentinels regarding PROC and EVENT."
               (or error (and (numberp code) (>= code 400) `(error . (http ,code)))))
         (apply #'request--callback buffer settings))))))
 
+;;;###autoload
 (defun request-auto-revert-notify-rm-watch ()
   "Backport of M. Engdegard's fix of `auto-revert-notify-rm-watch'."
   (let ((desc auto-revert-notify-watch-descriptor)

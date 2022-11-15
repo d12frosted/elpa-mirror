@@ -4,8 +4,8 @@
 ;;; Author: Félix Baylac Jacqué <felix at alternativebit.fr>
 ;;; Maintainer: Félix Baylac Jacqué <felix at alternativebit.fr>
 ;;; Version: 0.2
-;; Package-Version: 20221111.1020
-;; Package-Commit: 98500ddde2d9c1e19ec319a7bab28bd2eb0dbcab
+;; Package-Version: 20221115.1729
+;; Package-Commit: e6d7d6c21c53d9120e54d5f68a6277f49acbe3bc
 ;;; Homepage: https://alternativebit.fr/projects/my-repo-pins/
 ;;; Package-Requires: ((emacs "26.1"))
 ;;; License:
@@ -401,7 +401,8 @@ or
   (cond
    ;; Full-url case
    ((or (string-match "^https?://.*/.*/.*$" query-str)
-        (string-match "^.*/.*/.*$" query-str))
+        (string-match "^.*/.*/.*$" query-str)
+        (string-match "^.*@.*:?.*$" query-str))
     `((tag . full-url) (full-url . ,query-str)))
    ;; owner/repo case
    ((string-match "^.*/.*$" query-str)

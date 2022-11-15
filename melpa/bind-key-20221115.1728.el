@@ -7,8 +7,8 @@
 ;; Created: 16 Jun 2012
 ;; Modified: 29 Nov 2017
 ;; Version: 2.4.1
-;; Package-Version: 20221114.2007
-;; Package-Commit: 87c03dffc79e7980468231a797c412d88aed9bc7
+;; Package-Version: 20221115.1728
+;; Package-Commit: 09f210c5989454fa2c8729f4c0788c1d18c0ce22
 ;; Keywords: keys keybinding config dotemacs
 ;; URL: https://github.com/jwiegley/use-package
 
@@ -250,12 +250,12 @@ In contrast to `define-key', this function removes the binding from the keymap."
   "Similar to `bind-key', but overrides any mode-specific bindings."
   `(bind-key ,key-name ,command override-global-map ,predicate))
 
-(defun bind-keys-form (args keymap)
+(defun bind-keys-form (args &rest keymaps)
   "Bind multiple keys at once.
 
 Accepts keyword arguments:
 :map MAP               - a keymap into which the keybindings should be
-                         added
+                         added, or a list of such keymaps
 :prefix KEY            - prefix key for these bindings
 :prefix-map MAP        - name of the prefix map that should be created
                          for these bindings
@@ -278,7 +278,7 @@ Accepts keyword arguments:
 
 The rest of the arguments are conses of keybinding string and a
 function symbol (unquoted)."
-  (let (map
+  (let (maps
         prefix-doc
         prefix-map
         prefix
@@ -295,20 +295,17 @@ function symbol (unquoted)."
       (while (and cont args)
         (if (cond ((and (eq :map (car args))
                         (not prefix-map))
-                   (setq map (cadr args)))
+                   (let ((arg (cadr args)))
+                     (setq maps (if (listp arg) arg (list arg)))))
                   ((eq :prefix-docstring (car args))
                    (setq prefix-doc (cadr args)))
-                  ((and (eq :prefix-map (car args))
-                        (not (memq map '(global-map
-                                         override-global-map))))
+                  ((eq :prefix-map (car args))
                    (setq prefix-map (cadr args)))
                   ((eq :repeat-docstring (car args))
                    (setq repeat-doc (cadr args)))
-                  ((and (eq :repeat-map (car args))
-                        (not (memq map '(global-map
-                                         override-global-map))))
+                  ((eq :repeat-map (car args))
                    (setq repeat-map (cadr args))
-                   (setq map repeat-map))
+                   (setq maps (list repeat-map)))
                   ((eq :continue (car args))
                    (setq repeat-type :continue
                          arg-change-func 'cdr))
@@ -337,7 +334,8 @@ function symbol (unquoted)."
     (when (and menu-name (not prefix))
       (error "If :menu-name is supplied, :prefix must be too"))
 
-    (unless map (setq map keymap))
+    (unless maps (setq maps keymaps))
+    (unless maps (setq maps (list nil)))
 
     ;; Process key binding arguments
     (let (first next)
@@ -351,50 +349,67 @@ function symbol (unquoted)."
             (setq first (list (car args))))
           (setq args (cdr args))))
 
-      (cl-flet
-          ((wrap (map bindings)
-                 (if (and map pkg (not (memq map '(global-map
-                                                   override-global-map))))
-                     `((if (boundp ',map)
+      (cl-labels
+          ((wrap (maps bindings)
+                 (if (and pkg
+                          (cl-every
+                           (lambda (map)
+                             (and map
+                                  (not (memq map '(global-map
+                                                   override-global-map)))))
+                           maps))
+                     `((if (mapcan 'boundp ',maps)
                            ,(macroexp-progn bindings)
                          (eval-after-load
                              ,(if (symbolp pkg) `',pkg pkg)
                            ',(macroexp-progn bindings))))
                    bindings)))
-
         (append
-         (when prefix-map
-           `((defvar ,prefix-map)
-             ,@(when prefix-doc `((put ',prefix-map 'variable-documentation ,prefix-doc)))
-             ,@(if menu-name
-                   `((define-prefix-command ',prefix-map nil ,menu-name))
-                 `((define-prefix-command ',prefix-map)))
-             ,@(if (and map (not (eq map 'global-map)))
-                   (wrap map `((bind-key ,prefix ',prefix-map ,map ,filter)))
-                 `((bind-key ,prefix ',prefix-map nil ,filter)))))
          (when repeat-map
            `((defvar ,repeat-map (make-sparse-keymap)
                ,@(when repeat-doc `(,repeat-doc)))))
-         (wrap map
-               (cl-mapcan
-                (lambda (form)
-                  (let ((fun (and (cdr form) (list 'function (cdr form)))))
-                    (if prefix-map
-                        `((bind-key ,(car form) ,fun ,prefix-map ,filter))
-                      (if (and map (not (eq map 'global-map)))
-                          ;; Only needed in this branch, since when
-                          ;; repeat-map is non-nil, map is always
-                          ;; non-nil
-                          `(,@(when (and repeat-map (not (eq repeat-type :exit)))
-                                `((put ,fun 'repeat-map ',repeat-map)))
-                            (bind-key ,(car form) ,fun ,map ,filter))
-                        `((bind-key ,(car form) ,fun nil ,filter))))))
-                first))
+         (if prefix-map
+             `((defvar ,prefix-map)
+               ,@(when prefix-doc `((put ',prefix-map 'variable-documentation ,prefix-doc)))
+               ,@(if menu-name
+                     `((define-prefix-command ',prefix-map nil ,menu-name))
+                   `((define-prefix-command ',prefix-map)))
+               ,@(cl-mapcan
+                  (lambda (map)
+                    (wrap (list map)
+                          `((bind-key ,prefix ',prefix-map ,map ,filter))))
+                  maps)
+               ,@(wrap maps
+                       (cl-mapcan
+                        (lambda (form)
+                          (let ((fun
+                                 (and (cdr form) (list 'function (cdr form)))))
+                            `((bind-key ,(car form) ,fun ,prefix-map ,filter))))
+                        first)))
+           (cl-mapcan
+            (lambda (map)
+              (wrap (list map)
+                    (cl-mapcan
+                     (lambda (form)
+                       (let ((fun (and (cdr form) (list 'function (cdr form)))))
+                         (if (and map (not (eq map 'global-map)))
+                             ;; Only needed in this branch, since when
+                             ;; repeat-map is non-nil, map is always
+                             ;; non-nil
+                             `(,@(when (and repeat-map
+                                            (not (eq repeat-type :exit)))
+                                   `((put ,fun 'repeat-map ',repeat-map)))
+                               (bind-key ,(car form) ,fun ,map ,filter))
+                           `((bind-key ,(car form) ,fun nil ,filter)))))
+                     first)))
+            maps))
          (when next
-           (bind-keys-form `(,@(when repeat-map `(:repeat-map ,repeat-map))
-                             ,@(if pkg
-                                   (cons :package (cons pkg next))
-                                 next)) map)))))))
+           (apply 'bind-keys-form
+                  `(,@(when repeat-map `(:repeat-map ,repeat-map))
+                    ,@(if pkg
+                          (cons :package (cons pkg next))
+                        next))
+                  maps)))))))
 
 ;;;###autoload
 (defmacro bind-keys (&rest args)
@@ -402,7 +417,7 @@ function symbol (unquoted)."
 
 Accepts keyword arguments:
 :map MAP               - a keymap into which the keybindings should be
-                         added
+                         added, or a list of such keymaps
 :prefix KEY            - prefix key for these bindings
 :prefix-map MAP        - name of the prefix map that should be created
                          for these bindings
