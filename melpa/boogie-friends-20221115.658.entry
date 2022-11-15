@@ -1,5 +1,5 @@
 (boogie-friends .
-		[(20221101 650)
+		[(20221115 658)
 		 ((cl-lib
 		   (0 5))
 		  (dash
@@ -11,7 +11,7 @@
 		  (company
 		   (0 8 12)))
 		 "A collection of programming modes for Boogie, Dafny, and Z3 (SMTLIB v2)." tar
-		 ((:commit . "2f7c74ba87945e69d088df1d53249aeba5f0910d")
+		 ((:commit . "5b32e4859823ed7f5e70fd5d2eac5d813a8e3e51")
 		  (:authors
 		   ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
 		  (:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com")
