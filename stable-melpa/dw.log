@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/integral-dw/dw-passphrase-generator.git
 
 Updating /mnt/store/melpa/working/dw/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/integral-dw/dw-passphrase-generator.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 8a564b2e2f052830bfa5f59fc24220b43cb223ed
+Built dw in 3.793s, finished at 2022-11-15T14:17:19+0000
+ ✓ Success:
+192K -rw-r--r-- 1 root root 191K Nov 15 14:17 packages/dw-20210331.2246.el
+4.0K -rw-r--r-- 1 root root  412 Nov 15 14:17 packages/dw-20210331.2246.entry
