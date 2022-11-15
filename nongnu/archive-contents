@@ -1429,6 +1429,16 @@
 	      (:authors
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
+ (racket-mode .
+	      [(1 0 20221108 123011)
+	       ((emacs
+		 (25 1)))
+	       "Racket editing, REPL, and more" tar
+	       ((:url . "https://www.racket-mode.com/")
+		(:maintainer "Greg Hendershott")
+		(:authors
+		 ("Greg Hendershott"))
+		(:commit . "HEAD"))])
  (rainbow-delimiters .
 		     [(2 1 5)
 		      nil "Highlight brackets according to their depth" tar

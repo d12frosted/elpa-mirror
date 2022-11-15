@@ -264,18 +264,18 @@
 	      ("Serghei Iakovlev" . "egrep@protonmail.ch"))
 	     (:keywords "languages"))])
  (boxy .
-       [(1 1 1)
+       [(1 1 2)
 	((emacs
 	  (26 1)))
 	"A boxy layout framework" tar
 	((:url . "https://gitlab.com/tygrdev/boxy")
 	 (:keywords "tools")
-	 (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
+	 (:maintainer "Taylor Grinn" . "grinntaylor@gmail.com")
 	 (:authors
-	  ("Tyler Grinn" . "tylergrinn@gmail.com"))
-	 (:commit . "350bc70ed16c4eccc3b20114347cbdc3591140f3"))])
+	  ("Taylor Grinn" . "grinntaylor@gmail.com"))
+	 (:commit . "f6477177f7a4b335decea379b147981a8ee58a19"))])
  (boxy-headings .
-		[(2 1 3)
+		[(2 1 4)
 		 ((emacs
 		   (26 1))
 		  (boxy
@@ -285,10 +285,10 @@
 		 "View org files in a boxy diagram" tar
 		 ((:url . "https://gitlab.com/tygrdev/boxy-headings")
 		  (:keywords "tools")
-		  (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
+		  (:maintainer "Taylor Grinn" . "grinntaylor@gmail.com")
 		  (:authors
-		   ("Tyler Grinn" . "tylergrinn@gmail.com"))
-		  (:commit . "66fc9e50f02d6dee546fa6923ca28f1f64db9065"))])
+		   ("Taylor Grinn" . "grinntaylor@gmail.com"))
+		  (:commit . "a1b67d1b52a34084200c036f493e0110acea3a6d"))])
  (brief .
 	[(5 87)
 	 nil "Brief Editor Emulator (Brief Mode)" tar
@@ -1636,14 +1636,14 @@
 		  ("Feng Shu" . "tumashu@163.com")
 		  ("Naoya Yamashita" . "conao3@gmail.com")))])
  (jarchive .
-	   [(0 6 0)
+	   [(0 8 0)
 	    ((emacs
 	      (26 1)))
 	    "Open project dependencies in jar archives" tar
 	    ((:url . "https://git.sr.ht/~dannyfreeman/jarchive")
 	     (:keywords "tools" "languages" "jvm" "java" "clojure")
 	     (:maintainer "Danny Freeman" . "danny@dfreeman.email")
-	     (:commit . "1f3a00fee6951ec57c948ae86b05018865ab3767"))])
+	     (:commit . "f05bd44af29055f28745f61f5345fb4afdc2b20b"))])
  (javaimp .
 	  [(0 9 1)
 	   nil "Add and reorder Java import statements in Maven/Gradle projects" tar
@@ -2265,7 +2265,7 @@
 		("Peter Münster" . "pmrb@free.fr"))
 	       (:commit . "3a9c55aabdd1204f032fc02fd64ef643e0f19ae6"))])
  (org-real .
-	   [(1 0 5)
+	   [(1 0 6)
 	    ((emacs
 	      (26 1))
 	     (boxy
@@ -2275,10 +2275,10 @@
 	    "Keep track of real things as org-mode links" tar
 	    ((:url . "https://gitlab.com/tygrdev/org-real")
 	     (:keywords "tools")
-	     (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
+	     (:maintainer "Taylor Grinn" . "grinntaylor@gmail.com")
 	     (:authors
-	      ("Tyler Grinn" . "tylergrinn@gmail.com"))
-	     (:commit . "435f6361207cf98bb1c5f4c8e8a987005ba21d41"))])
+	      ("Taylor Grinn" . "grinntaylor@gmail.com"))
+	     (:commit . "9ae5d4a2c576671e8f7ab20d202eefa65af51b25"))])
  (org-remark .
 	     [(1 0 5)
 	      ((emacs

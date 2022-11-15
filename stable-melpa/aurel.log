@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/alezost/aurel.git
 
 Updating /mnt/store/melpa/working/aurel/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/alezost/aurel.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out fc7ad208f43f8525f84a18941c9b55f956df8961
+Built aurel in 3.760s, finished at 2022-11-14T23:37:28+0000
+ ✓ Success:
+ 72K -rw-r--r-- 1 root root 70K Nov 14 23:37 packages/aurel-20170114.937.el
+4.0K -rw-r--r-- 1 root root 386 Nov 14 23:37 packages/aurel-20170114.937.entry

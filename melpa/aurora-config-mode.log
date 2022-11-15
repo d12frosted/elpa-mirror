@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/bdd/aurora-config-mode.el.git
 
 Updating /mnt/store/melpa/working/aurora-config-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/bdd/aurora-config-mode.el.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 8273ec7937a21b469b9dbb6c11714255b890f410
+Built aurora-config-mode in 3.442s, finished at 2022-11-14T23:37:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Nov 14 23:37 packages/aurora-config-mode-20180216.2302.el
+4.0K -rw-r--r-- 1 root root  413 Nov 14 23:37 packages/aurora-config-mode-20180216.2302.entry
