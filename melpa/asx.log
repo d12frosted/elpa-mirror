@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/ragone/asx.git
 
 Updating /mnt/store/melpa/working/asx/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/ragone/asx.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 5ca12cc51bb02b5926adf9a7976ba9ca08a1ea21
+Built asx in 4.160s, finished at 2022-11-15T06:49:26+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Nov 15 06:49 packages/asx-20191024.1100.el
+4.0K -rw-r--r-- 1 root root 362 Nov 15 06:49 packages/asx-20191024.1100.entry

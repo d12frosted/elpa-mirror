@@ -5,8 +5,8 @@
 ;; Author: Clément Pit-Claudel, Feng Shu, Lars Andersen <expez@expez.com>
 ;; Maintainer: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/company-posframe
-;; Package-Version: 20220906.933
-;; Package-Commit: b67ec1fa83229187fdf1d3dc5576f81a37a2b369
+;; Package-Version: 20221115.646
+;; Package-Commit: eefcc72179602f8e0d454405899b0cfa0e7788ec
 ;; Version: 0.6.0
 ;; Keywords: abbrev, convenience, matching
 ;; Package-Requires: ((emacs "26.0")(company "0.9.0")(posframe "0.9.0"))
@@ -101,12 +101,12 @@ Using current frame's font if it it nil."
   :group 'company-posframe
   :type 'string)
 
-(defcustom company-posframe-show-indicator t
+(defcustom company-posframe-show-indicator nil
   "Display an indicator for backends in the mode line of the posframe."
   :group 'company-posframe
   :type 'boolean)
 
-(defcustom company-posframe-show-metadata t
+(defcustom company-posframe-show-metadata nil
   "Display metadata (e.g. signature) of the selection below the visible candidates."
   :group 'company-posframe
   :type 'boolean)
@@ -121,11 +121,14 @@ Using current frame's font if it it nil."
   :group 'company-posframe
   :type 'integer)
 
-(defcustom company-posframe-backend-format-function #'company-posframe-format-backend-name-active-first
+(defcustom company-posframe-backend-format-function
+  #'company-posframe-format-backend-name-active-first
   "Function used to format each backend in the indicator."
   :group 'company-posframe
-  :type '(choice (const :tag "show in order" company-posframe-format-backend-name)
-                 (const :tag "show active backend first" company-posframe-format-backend-name-active-first)
+  :type '(choice (const :tag "show in order"
+                        company-posframe-format-backend-name)
+                 (const :tag "show active backend first"
+                        company-posframe-format-backend-name-active-first)
                  (function :tag "custom function" nil)))
 
 (defcustom company-posframe-quickhelp-delay 1
@@ -154,17 +157,20 @@ be triggered manually using `company-posframe-quickhelp-show'."
   "Face for the metadata footer (not the backend indicator).")
 
 (defface company-posframe-quickhelp
-  '((t :inherit default))
+  '((t :inherit company-tooltip))
   "Face for company-posframe-quickhelp doc.")
 
 (defface company-posframe-quickhelp-header
-  '((t :inherit header-line :box nil :extend t))
+  '((t :inherit company-tooltip-selection
+       :box nil
+       :extend t))
   "Face for company-posframe-quickhelp header.")
 
 (defvar company-posframe-buffer " *company-posframe-buffer*"
   "company-posframe's buffer which used by posframe.")
 
-(defvar company-posframe-quickhelp-buffer " *company-posframe-quickhelp-buffer*"
+(defvar company-posframe-quickhelp-buffer
+  " *company-posframe-quickhelp-buffer*"
   "The buffer which used by company-posframe-quickhelp.")
 
 (defvar-local company-posframe-quickhelp-timer nil
@@ -174,13 +180,12 @@ be triggered manually using `company-posframe-quickhelp-show'."
   "List of extra parameters passed to `posframe-show' in
   `company-posframe-show'.")
 
-(defvar company-posframe-poshandler #'company-posframe-show-at-prefix
+(defvar company-posframe-poshandler
+  #'company-posframe-show-at-prefix
   "Poshandler for the completion dialog.")
 
 (defvar company-posframe-quickhelp-show-params
   (list :poshandler #'company-posframe-quickhelp-right-poshandler
-        :border-width 1
-        :border-color "gray50"
         :timeout 60
         :no-properties nil)
   "List of parameters passed to `posframe-show'.")
@@ -223,11 +228,13 @@ be triggered manually using `company-posframe-quickhelp-show'."
   (let (active inactive)
     (dolist (backend company-backends)
       (if (eq backend company-backend)
-          (push (propertize (company-posframe-format-backend-name-active-first-helper backend)
-                            'face 'company-posframe-active-backend-name)
+          (push (propertize
+                 (company-posframe-format-backend-name-active-first-helper backend)
+                 'face 'company-posframe-active-backend-name)
                 active)
-        (push (propertize (company-posframe-format-backend-name-active-first-helper backend)
-                          'face 'company-posframe-inactive-backend-name)
+        (push (propertize
+               (company-posframe-format-backend-name-active-first-helper backend)
+               'face 'company-posframe-inactive-backend-name)
               inactive)))
     (mapconcat (lambda (elem)
                  (format "%s" elem))
@@ -237,7 +244,10 @@ be triggered manually using `company-posframe-quickhelp-show'."
   "Helper function for `company-posframe-format-backend-name-active-first`"
   (cl-typecase backend
     (symbol (string-remove-prefix "company-" (symbol-name backend)))
-    (list (format "[%s]" (mapconcat #'company-posframe-format-backend-name-active-first-helper backend "|")))
+    (list (format "[%s]"
+                  (mapconcat
+                   #'company-posframe-format-backend-name-active-first-helper
+                   backend "|")))
     (otherwise "-")))
 
 (defun company-posframe-format-backend-name (backends separator)
@@ -248,7 +258,9 @@ be triggered manually using `company-posframe-quickhelp-show'."
   "Helper function for `company-posframe-format-backend-name`"
   (propertize (cl-typecase backend
                 (symbol (string-remove-prefix "company-" (symbol-name backend)))
-                (list (format "[%s]" (mapconcat #'company-posframe-format-backend-name-helper backend "|")))
+                (list (format "[%s]" (mapconcat
+                                      #'company-posframe-format-backend-name-helper
+                                      backend "|")))
                 (otherwise "-"))
               'face (if (equal backend company-backend)
                         'company-posframe-active-backend-name
@@ -285,8 +297,12 @@ be triggered manually using `company-posframe-quickhelp-show'."
               (cdr company-lines)
             company-lines))
          (backend-names (when company-posframe-show-indicator
-                          (funcall company-posframe-backend-format-function company-backends company-posframe-backend-separator)))
-         (width (max (min (length (car lines)) company-tooltip-maximum-width) company-tooltip-minimum-width))
+                          (funcall company-posframe-backend-format-function
+                                   company-backends
+                                   company-posframe-backend-separator)))
+         (width (max (min (length (car lines))
+                          company-tooltip-maximum-width)
+                     company-tooltip-minimum-width))
          (contents (concat (mapconcat #'identity lines "\n")
                            (if meta
                                (concat "\n" (propertize (if (> (length meta) width)
@@ -304,9 +320,12 @@ be triggered manually using `company-posframe-quickhelp-show'."
     (remove-text-properties 0 (length contents) '(mouse-face nil) contents)
     (apply #'posframe-show buffer
            :string contents
-           :min-height (+ (+ height (if meta 1 0)) (if company-posframe-show-indicator 1 0))
-           :min-width (+ company-tooltip-minimum-width (* 2 company-tooltip-margin))
-           :max-width (+ company-tooltip-maximum-width (* 2 company-tooltip-margin))
+           :min-height (+ (+ height (if meta 1 0))
+                          (if company-posframe-show-indicator 1 0))
+           :min-width (+ company-tooltip-minimum-width
+                         (* 2 company-tooltip-margin))
+           :max-width (+ company-tooltip-maximum-width
+                         (* 2 company-tooltip-margin))
            :font company-posframe-font
            :background-color (face-attribute 'company-tooltip :background)
            :lines-truncate t
@@ -448,7 +467,8 @@ just grab the first candidate and press forward."
                (height
                 (max (+ company-tooltip-limit
                         (if company-posframe-show-indicator 1 0)
-                        (if company-posframe-show-metadata 1 0))
+                        (if company-posframe-show-metadata 1 0)
+                        1)
                      (with-current-buffer company-posframe-buffer
                        (frame-height posframe--frame)))))
           (lower-frame
@@ -466,7 +486,9 @@ just grab the first candidate and press forward."
 (defun company-posframe-quickhelp-right-poshandler (_info)
   (with-current-buffer company-posframe-buffer
     (let ((pos posframe--last-posframe-pixel-position))
-      (cons (+ (car pos) (+ company-posframe-quickhelp-x-offset (frame-pixel-width posframe--frame)))
+      (cons (+ (car pos)
+               company-posframe-quickhelp-x-offset
+               (frame-pixel-width posframe--frame))
             (cdr pos)))))
 
 (defun company-posframe-quickhelp-hide ()
@@ -519,7 +541,8 @@ just grab the first candidate and press forward."
         (advice-add #'company-pseudo-tooltip-unless-just-one-frontend
                     :around #'company-posframe-unless-just-one-frontend)
         ;; When user switches window, child-frame should be hidden.
-        (add-hook 'window-configuration-change-hook #'company-posframe-window-change)
+        (add-hook 'window-configuration-change-hook
+                  #'company-posframe-window-change)
         (message company-posframe-notification))
     (posframe-delete company-posframe-buffer)
     (posframe-delete company-posframe-quickhelp-buffer)
@@ -530,7 +553,8 @@ just grab the first candidate and press forward."
     (advice-remove #'company-pseudo-tooltip-unless-just-one-frontend
                    #'company-posframe-unless-just-one-frontend)
     (company-posframe-quickhelp-cancel-timer)
-    (remove-hook 'window-configuration-change-hook #'company-posframe-window-change)))
+    (remove-hook 'window-configuration-change-hook
+                 #'company-posframe-window-change)))
 
 (provide 'company-posframe)
 
