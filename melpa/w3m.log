@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-w3m/emacs-w3m.git
 
 Updating /mnt/store/melpa/working/w3m/
 Checking out origin/HEAD
-Checking out 1ee184aab337b662f9725378bd49bf3a29dd984c
+Checking out a12b89d59ff0ca4a28cc4124fe41cff5b24e53e8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mrY0WBe/w3m-20221108.22
+  to /tmp/w3mmIK3Ua/w3m-20221116.620
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -40,9 +40,9 @@ Copying files (->) and directories (=>)
   ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
   ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Generating /tmp/w3mrY0WBe/w3m-20221108.22/emacs-w3m-ja.info
+Generating /tmp/w3mmIK3Ua/w3m-20221116.620/emacs-w3m-ja.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mrY0WBe/w3m-20221108.22/emacs-w3m-ja.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mmIK3Ua/w3m-20221116.620/emacs-w3m-ja.info' exited with non-zero exit-code: 1
 
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
@@ -54,14 +54,14 @@ Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emac
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mrY0WBe/w3m-20221108.22/emacs-w3m-ja.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mmIK3Ua/w3m-20221116.620/emacs-w3m-ja.info' exited with non-zero exit-code: 1
 
-install-info: No such file or directory for /tmp/w3mrY0WBe/w3m-20221108.22/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mmIK3Ua/w3m-20221116.620/emacs-w3m-ja.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/w3mrY0WBe/w3m-20221108.22/emacs-w3m.info
+Generating /tmp/w3mmIK3Ua/w3m-20221116.620/emacs-w3m.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mrY0WBe/w3m-20221108.22/emacs-w3m.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mmIK3Ua/w3m-20221116.620/emacs-w3m.info' exited with non-zero exit-code: 1
 
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
@@ -72,89 +72,91 @@ Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/w3m/doc/emac
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mrY0WBe/w3m-20221108.22/emacs-w3m.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/w3mmIK3Ua/w3m-20221116.620/emacs-w3m.info' exited with non-zero exit-code: 1
 
-install-info: No such file or directory for /tmp/w3mrY0WBe/w3m-20221108.22/emacs-w3m.info
+install-info: No such file or directory for /tmp/w3mmIK3Ua/w3m-20221116.620/emacs-w3m.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Created w3m-20221108.22.tar containing:
-  w3m-20221108.22/
-  w3m-20221108.22/bookmark-w3m.el
-  w3m-20221108.22/dir
-  w3m-20221108.22/icons/
-  w3m-20221108.22/icons/antenna-up.png
-  w3m-20221108.22/icons/antenna-up.xpm
-  w3m-20221108.22/icons/back-disabled.png
-  w3m-20221108.22/icons/back-disabled.xpm
-  w3m-20221108.22/icons/back-up.png
-  w3m-20221108.22/icons/back-up.xpm
-  w3m-20221108.22/icons/copy-up.png
-  w3m-20221108.22/icons/copy-up.xpm
-  w3m-20221108.22/icons/db-history-up.png
-  w3m-20221108.22/icons/db-history-up.xpm
-  w3m-20221108.22/icons/forward-disabled.png
-  w3m-20221108.22/icons/forward-disabled.xpm
-  w3m-20221108.22/icons/forward-up.png
-  w3m-20221108.22/icons/forward-up.xpm
-  w3m-20221108.22/icons/history-up.png
-  w3m-20221108.22/icons/history-up.xpm
-  w3m-20221108.22/icons/home-up.png
-  w3m-20221108.22/icons/home-up.xpm
-  w3m-20221108.22/icons/image-up.png
-  w3m-20221108.22/icons/image-up.xpm
-  w3m-20221108.22/icons/open-up.png
-  w3m-20221108.22/icons/open-up.xpm
-  w3m-20221108.22/icons/parent-disabled.png
-  w3m-20221108.22/icons/parent-disabled.xpm
-  w3m-20221108.22/icons/parent-up.png
-  w3m-20221108.22/icons/parent-up.xpm
-  w3m-20221108.22/icons/reload-up.png
-  w3m-20221108.22/icons/reload-up.xpm
-  w3m-20221108.22/icons/save-up.png
-  w3m-20221108.22/icons/save-up.xpm
-  w3m-20221108.22/icons/search-up.png
-  w3m-20221108.22/icons/search-up.xpm
-  w3m-20221108.22/icons/spinner.gif
-  w3m-20221108.22/icons/state-00.png
-  w3m-20221108.22/icons/state-00.xpm
-  w3m-20221108.22/icons/state-01.png
-  w3m-20221108.22/icons/state-01.xpm
-  w3m-20221108.22/icons/state-10.png
-  w3m-20221108.22/icons/state-10.xpm
-  w3m-20221108.22/icons/state-11.png
-  w3m-20221108.22/icons/state-11.xpm
-  w3m-20221108.22/icons/weather-up.png
-  w3m-20221108.22/icons/weather-up.xpm
-  w3m-20221108.22/mime-w3m.el
-  w3m-20221108.22/w3m-antenna.el
-  w3m-20221108.22/w3m-bookmark.el
-  w3m-20221108.22/w3m-bug.el
-  w3m-20221108.22/w3m-cookie.el
-  w3m-20221108.22/w3m-dtree.el
-  w3m-20221108.22/w3m-ems.el
-  w3m-20221108.22/w3m-favicon.el
-  w3m-20221108.22/w3m-fb.el
-  w3m-20221108.22/w3m-filter.el
-  w3m-20221108.22/w3m-form.el
-  w3m-20221108.22/w3m-hist.el
-  w3m-20221108.22/w3m-image.el
-  w3m-20221108.22/w3m-lnum.el
-  w3m-20221108.22/w3m-mail.el
-  w3m-20221108.22/w3m-namazu.el
-  w3m-20221108.22/w3m-perldoc.el
-  w3m-20221108.22/w3m-pkg.el
-  w3m-20221108.22/w3m-proc.el
-  w3m-20221108.22/w3m-rss.el
-  w3m-20221108.22/w3m-save.el
-  w3m-20221108.22/w3m-search.el
-  w3m-20221108.22/w3m-session.el
-  w3m-20221108.22/w3m-symbol.el
-  w3m-20221108.22/w3m-tabmenu.el
-  w3m-20221108.22/w3m-util.el
-  w3m-20221108.22/w3m-weather.el
-  w3m-20221108.22/w3m.el
-  w3m-20221108.22/w3mhack.el
-Built w3m in 41.386s, finished at 2022-11-16T06:14:58+0000
+Created w3m-20221116.620.tar containing:
+  w3m-20221116.620/
+  w3m-20221116.620/bookmark-w3m.el
+  w3m-20221116.620/dir
+  w3m-20221116.620/icons/
+  w3m-20221116.620/icons/antenna-up.png
+  w3m-20221116.620/icons/antenna-up.xpm
+  w3m-20221116.620/icons/back-disabled.png
+  w3m-20221116.620/icons/back-disabled.xpm
+  w3m-20221116.620/icons/back-up.png
+  w3m-20221116.620/icons/back-up.xpm
+  w3m-20221116.620/icons/copy-up.png
+  w3m-20221116.620/icons/copy-up.xpm
+  w3m-20221116.620/icons/db-history-up.png
+  w3m-20221116.620/icons/db-history-up.xpm
+  w3m-20221116.620/icons/forward-disabled.png
+  w3m-20221116.620/icons/forward-disabled.xpm
+  w3m-20221116.620/icons/forward-up.png
+  w3m-20221116.620/icons/forward-up.xpm
+  w3m-20221116.620/icons/history-up.png
+  w3m-20221116.620/icons/history-up.xpm
+  w3m-20221116.620/icons/home-up.png
+  w3m-20221116.620/icons/home-up.xpm
+  w3m-20221116.620/icons/image-up.png
+  w3m-20221116.620/icons/image-up.xpm
+  w3m-20221116.620/icons/open-up.png
+  w3m-20221116.620/icons/open-up.xpm
+  w3m-20221116.620/icons/parent-disabled.png
+  w3m-20221116.620/icons/parent-disabled.xpm
+  w3m-20221116.620/icons/parent-up.png
+  w3m-20221116.620/icons/parent-up.xpm
+  w3m-20221116.620/icons/reload-up.png
+  w3m-20221116.620/icons/reload-up.xpm
+  w3m-20221116.620/icons/save-up.png
+  w3m-20221116.620/icons/save-up.xpm
+  w3m-20221116.620/icons/search-up.png
+  w3m-20221116.620/icons/search-up.xpm
+  w3m-20221116.620/icons/spinner.gif
+  w3m-20221116.620/icons/state-00.png
+  w3m-20221116.620/icons/state-00.xpm
+  w3m-20221116.620/icons/state-01.png
+  w3m-20221116.620/icons/state-01.xpm
+  w3m-20221116.620/icons/state-10.png
+  w3m-20221116.620/icons/state-10.xpm
+  w3m-20221116.620/icons/state-11.png
+  w3m-20221116.620/icons/state-11.xpm
+  w3m-20221116.620/icons/weather-up.png
+  w3m-20221116.620/icons/weather-up.xpm
+  w3m-20221116.620/mime-w3m.el
+  w3m-20221116.620/w3m-antenna.el
+  w3m-20221116.620/w3m-bookmark.el
+  w3m-20221116.620/w3m-bug.el
+  w3m-20221116.620/w3m-cookie.el
+  w3m-20221116.620/w3m-dtree.el
+  w3m-20221116.620/w3m-ems.el
+  w3m-20221116.620/w3m-favicon.el
+  w3m-20221116.620/w3m-fb.el
+  w3m-20221116.620/w3m-filter.el
+  w3m-20221116.620/w3m-form.el
+  w3m-20221116.620/w3m-hist.el
+  w3m-20221116.620/w3m-image.el
+  w3m-20221116.620/w3m-lnum.el
+  w3m-20221116.620/w3m-mail.el
+  w3m-20221116.620/w3m-namazu.el
+  w3m-20221116.620/w3m-perldoc.el
+  w3m-20221116.620/w3m-pkg.el
+  w3m-20221116.620/w3m-proc.el
+  w3m-20221116.620/w3m-rss.el
+  w3m-20221116.620/w3m-save.el
+  w3m-20221116.620/w3m-search.el
+  w3m-20221116.620/w3m-session.el
+  w3m-20221116.620/w3m-symbol.el
+  w3m-20221116.620/w3m-tabmenu.el
+  w3m-20221116.620/w3m-util.el
+  w3m-20221116.620/w3m-weather.el
+  w3m-20221116.620/w3m.el
+  w3m-20221116.620/w3mhack.el
+Built w3m in 27.047s, finished at 2022-11-16T09:58:00+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  178 Nov 16 06:14 packages/w3m-20221108.22.entry
 1.1M -rw-r--r-- 1 root root 1.1M Nov 16 06:14 packages/w3m-20221108.22.tar
+4.0K -rw-r--r-- 1 root root  179 Nov 16 09:57 packages/w3m-20221116.620.entry
+1.1M -rw-r--r-- 1 root root 1.1M Nov 16 09:57 packages/w3m-20221116.620.tar

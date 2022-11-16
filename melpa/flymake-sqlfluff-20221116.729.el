@@ -3,8 +3,8 @@
 ;; Copyright © 2022 Erick Navarro
 ;; Author: Erick Navarro <erick@navarro.io>
 ;; URL: https://github.com/erickgnavar/flymake-sqlfluff
-;; Package-Version: 20220925.2144
-;; Package-Commit: b76f335555c9a94ffc3d7281f3dca345de474eed
+;; Package-Version: 20221116.729
+;; Package-Commit: 8ce6b40ebcb3a90e23621e2e1b85e3d06bed5e76
 ;; Version: 0.1.0
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "27.1"))
@@ -51,21 +51,13 @@
   "Build a flymake diagnostic using ITEM data."
   (let* ((line (gethash "line_no" item))
          (column (gethash "line_pos" item))
-         (error-point (flymake-sqlfluff--get-position line column))
+         (region (flymake-diag-region (current-buffer) line column))
          (description (gethash "description" item)))
-    (flymake-make-diagnostic (current-buffer) error-point (1+ error-point) :error description)))
+    (flymake-make-diagnostic (current-buffer) (car region) (cdr region) :error description)))
 
 (defun flymake-sqlfluff--check-buffer ()
   "Generate a list of diagnostics for the current buffer."
   (flatten-list (mapcar (lambda (node) (mapcar #'flymake-sqlfluff-process-item (gethash "violations" node))) (json-parse-string (flymake-sqlfluff--get-raw-report)))))
-
-(defun flymake-sqlfluff--get-position (line column)
-  "Calculate position for the given LINE and COLUMN."
-  (save-excursion
-    (goto-char (point-min))
-    (forward-line (1- line))
-    (move-to-column column)
-    (point)))
 
 (defun flymake-sqlfluff--get-raw-report ()
   "Run sqlfluff on the current buffer and return a raw report."

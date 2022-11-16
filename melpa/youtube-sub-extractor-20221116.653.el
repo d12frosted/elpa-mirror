@@ -7,8 +7,8 @@
 ;; Created: October 02, 2022
 ;; Modified: October 02, 2022
 ;; Version: 0.0.1
-;; Package-Version: 20221104.239
-;; Package-Commit: 944519b75c9a0cc52bac375c74547c936d835cfa
+;; Package-Version: 20221116.653
+;; Package-Commit: d69f732299fdf256504e15767c1d7e5de771220e
 ;; Keywords: convenience multimedia
 ;; Homepage: https://github.com/agzam/youtube-sub-extractor.el
 ;; Package-Requires: ((emacs "27.1"))
@@ -26,6 +26,7 @@
 ;;; Code:
 
 (require 'cl-lib)
+(require 'subr-x)
 
 (defgroup youtube-sub-extractor nil
   "YouTube Subtitle Extractor."
@@ -154,7 +155,11 @@ Each is a timestamp, duration and the corresponding sub."
                   (list
                    (append
                     prev-el
-                    (list (replace-regexp-in-string tags-n-karaoke-rx "" nxt))))))
+                    (list
+                     (thread-last
+                       nxt
+                       (replace-regexp-in-string tags-n-karaoke-rx "")
+                       (replace-regexp-in-string "&nbsp;" "")))))))
 
                 (t acc))))
            (split-string subs-string "\n" :omit-nulls " *")

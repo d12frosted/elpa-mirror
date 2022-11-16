@@ -9,8 +9,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/dante
-;; Package-Version: 20221114.913
-;; Package-Commit: f7560257e928105c45814be130fa9c0ac557d975
+;; Package-Version: 20221116.840
+;; Package-Commit: 914d4f21252a66fe526abedebe24703bc73397d9
 ;; Created: October 2016
 ;; Keywords: haskell, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "27.1") (f "0.19.0") (flycheck "0.30") (company "0.9") (flymake "1.0") (s "1.11.0") (lcr "1.5"))
@@ -358,7 +358,7 @@ process."
   :start 'dante-check
   :predicate (lambda () dante-mode)
   :modes '(haskell-mode haskell-literate-mode)
-  :working-directory (lambda (_checker) dante-ghci-path))
+  :working-directory (lambda (_checker) dante-project-root)) ; dante-ghci-path is where cabal runs. But it's not initialised at the moment the function is called.  it should be possible to make the path absolute by using dante-ghci-path at the time that the error message is produced. Probably in `dante-fly-message`.
 
 (add-to-list 'flycheck-checkers 'haskell-dante)
 
@@ -750,7 +750,9 @@ Process state change: " change "
   "Name of the GHCi interaction buffer.
 First, if needed, initialize the GHCi invokation method.  Then construct the
 appropriate buffer name on this basis."
-  (unless dante-project-root (dante-initialize-method))
+  (unless (and dante-project-root
+               dante-command-line)
+    (dante-initialize-method))
   (concat "*dante:" dante-target ":" dante-project-root "*"))
 
 (defun dante-buffer-p ()
@@ -942,6 +944,7 @@ Or nil if BUFFER / TEMP-FILE are not relevant to the message."
     ;; Flymake bug: in fact, we would want to report all errors,
     ;; with buffer = (if (string= temp-file file) buffer (find-buffer-visiting file)),
     ;; but flymake actually ignores the buffer argument of flymake-make-diagnostic (?!).
+    ;; Note: GHCi messages are relative to dante-ghci-path, which is not necessarily the current path. This should be taken into account too.
     (when (string= temp-file file)
       (let* ((type-analysis
               (cl-destructuring-bind (typ msg-start) (s-split-up-to ":" first-line 1)

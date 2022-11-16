@@ -29,7 +29,9 @@ Editing Prolog code
 ..... Available styles
 ..... Highlighting occurrences of a variable
 ..... Quasi-quotation highlighting
-.. Aligning with multiple spaces
+.. Maintaining Code Layout
+..... Inserting the Right Number of Spaces
+..... Electric Layout mode
 .. Term-based editing and motion commands
 .. Definitions and references
 .. Predicate definition boundaries
@@ -44,7 +46,7 @@ Editing Prolog code
 .. Context-Based Term Insertion
 ..... Filling Holes
 Prolog Help
-The Prolog top-level
+The Prolog Top-Level
 .. Multiple top-levels
 .. The Top-level Menu buffer
 .. Sending signals to running top-levels
@@ -113,9 +115,9 @@ High-level architecture
 Installation
 ════════════
 
-  The dynamic Emacs module `sweep-module' is included in the SWI-Prolog
-  distribution from version 8.5.18.  For instructions on how to build
-  and install SWI-Prolog, see <https://www.swi-prolog.org/build/>.
+  The dynamic Emacs module `sweep-module' is included with SWI-Prolog
+  versions 8.5.18 and later.  For instructions on how to build and
+  install SWI-Prolog, see <https://www.swi-prolog.org/build/>.
 
   The `sweeprolog' Elisp package is available on NonGNU ELPA, to install
   `sweeprolog' simply type `M-x package-install RET sweeprolog RET'.
@@ -147,6 +149,19 @@ Getting started
 
   ┌────
   │ (require 'sweeprolog)
+  └────
+
+  `sweep' tries to find SWI-Prolog by looking for the `swipl' executable
+  in the directories listed in the Emacs variable `exec-path'.  When
+  Emacs is started from a shell, `exec-path' is initialized from the
+  shell’s `PATH' environment variable which normally includes the
+  location of `swipl' in common SWI-Prolog installations.  If the
+  `swipl' executable cannot be found via `exec-path', you can tell
+  `sweep' where to find it by setting the variable
+  `sweeprolog-swipl-path' to point to it:
+
+  ┌────
+  │ (setq sweeprolog-swipl-path "/path/to/swipl")
   └────
 
   All set!  `sweeprolog' automatically loads `sweep-module' and
@@ -564,12 +579,12 @@ Quasi-quotation highlighting
 <https://www.swi-prolog.org/pldoc/man?section=quasiquotations>
 
 
-Aligning with multiple spaces
-─────────────────────────────
+Maintaining Code Layout
+───────────────────────
 
-  By convention, if-then-else constructs are aligned such that each goal
-  starts at the fourth column after the /start/ of the opening
-  parenthesis or operator, as follows:
+  Some Prolog constructs, such as if-then-else constructs, have a
+  conventional /layout/, where each goal starts at the fourth column
+  after the /start/ of the opening parenthesis or operator, as follows:
 
   ┌────
   │ (   if
@@ -581,9 +596,18 @@ Aligning with multiple spaces
   └────
 
   To simplify maintaining the desired layout without manually counting
-  spaces, `sweep' provides a command that updates the whitespace around
-  point such that the next token is aligned to a (multiple of) four
-  columns from the start of the previous token.
+  spaces, `sweep' provides a command `sweeprolog-align-spaces' that
+  updates the whitespace around point such that the next token is
+  aligned to a (multiple of) four columns from the start of the previous
+  token, as well as a dedicated minor mode
+  `sweeprolog-electric-layout-mode' that adjusts whitespace around point
+  automatically as you type ([Electric Layout mode]).
+
+
+[Electric Layout mode] See section Electric Layout mode
+
+Inserting the Right Number of Spaces
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   To insert or update whitespace around point, use the command `M-x
   sweeprolog-align-spaces'.  For example, consider a `sweeprolog-mode'
@@ -607,12 +631,12 @@ Aligning with multiple spaces
   │ 	^
   └────
 
-  In Emacs 29, the command `M-x cycle-spacing' is extensible through a
-  list of callback functions stored in the variable
-  `cycle-spacing-actions'.  `sweep' leverages this facility and adds
-  `sweeprolog-align-spaces' as the first action of `cycle-spacing'.  To
-  inhibit `sweeprolog-mode' from doing so, set the user option
-  `sweeprolog-enable-cycle-spacing' to nil.
+  In Emacs 29, the command `M-x cycle-spacing' is extensible via a list
+  of callback functions stored in the variable `cycle-spacing-actions'.
+  `sweep' leverages this facility and adds `sweeprolog-align-spaces' as
+  the first action of `cycle-spacing'.  To inhibit `sweeprolog-mode'
+  from doing so, set the user option `sweeprolog-enable-cycle-spacing'
+  to nil.
 
   Moreover, in Emacs 29 `cycle-spacing' is bound by default to `M-SPC',
   thus aligning if-then-else and similar constructs only requires typing
@@ -630,6 +654,34 @@ Aligning with multiple spaces
 
 
 [The Emacs Initialization File] <info:emacs#Init File>
+
+
+Electric Layout mode
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The minor mode `sweeprolog-electric-layout-mode' adjusts whitespace
+  around point automatically as you type.  It works by examining the
+  context of point whenever a character is inserted in the current
+  buffer, and applying the following layout rules:
+
+  `PlDoc' Comments
+        Insert two consecutive spaces after the `%!' or `%%' starting a
+        `PlDoc' predicate documentation structured comment.
+  If-Then-Else
+        Insert spaces after a part of an if-then-else constructs such
+        that point is positioned four columns after its beginning.  The
+        specific tokens that trigger this rule are the opening
+        parenthesis `(' and the operators `;', `->' and `*->', and only
+        if they are inserted in a callable context, where an
+        if-then-else construct would normally appear.
+
+  To enable this mode in a `sweeprolog-mode' buffer, type `M-x
+  sweeprolog-electric-layout-mode'.  This step can be automated by
+  adding `sweeprolog-electric-layout-mode' to `sweeprolog-mode-hook'[1]:
+
+  ┌────
+  │ (add-hook 'sweeprolog-mode-hook #'sweeprolog-electric-layout-mode)
+  └────
 
 
 Term-based editing and motion commands
@@ -752,7 +804,7 @@ Loading buffers
   contents of a `sweeprolog-mode' buffer into the embedded SWI-Prolog
   runtime.  After a buffer is loaded, the predicates it defines can be
   queried from Elisp (see Querying Prolog) and from the `sweep'
-  top-level (see The Prolog top-level).  In `sweeprolog-mode' buffers,
+  top-level (see The Prolog Top-Level).  In `sweeprolog-mode' buffers,
   `sweeprolog-load-buffer' is bound by default to `C-c C-l'.  By default
   this command loads the current buffer if its major mode is
   `sweeprolog-mode', and prompts for an appropriate buffer otherwise.
@@ -992,7 +1044,7 @@ Filling Holes
   placeholders for the arguments of the head term (if any) and for the
   clause’s body.  These placeholders are simply anonymous variables
   (`_'), but they are annotated by the insertion functions with a
-  special text property[1] that allows `sweeprolog-mode' to recognize
+  special text property[2] that allows `sweeprolog-mode' to recognize
   them as “holes” needed to be filled.  After a term is inserted with
   `sweeprolog-insert-term-dwim', the region is set to the first hole and
   the cursor left at the its end.
@@ -1041,7 +1093,7 @@ Prolog Help
 [Help Mode in the Emacs manual] <info:emacs#Help Mode>
 
 
-The Prolog top-level
+The Prolog Top-Level
 ════════════════════
 
   `sweep' provides a classic Prolog top-level interface for interacting
@@ -1055,6 +1107,20 @@ The Prolog top-level
   the top-level buffer inherits the features present in other
   `comint-mode' derivatives, most of which are described in [the Emacs
   manual].
+
+  Each top-level buffer is connected to distinct Prolog thread running
+  in the same process as Emacs and the main Prolog runtime.  In the
+  current implementation, top-level buffers communicate with their
+  corresponding threads via local TCP connections.  On the first
+  invocation of `sweeprolog-top-level', `sweep' creates a TCP server
+  socket bound to a random port to accept incoming connections from
+  top-level buffers.  The TCP server only accepts connections from the
+  local machine, but note that _other users on the same host_ may be
+  able to connect to the TCP server socket and _get a Prolog top-level_.
+  This may pose a security problem when sharing a host with entrusted
+  users, hence `sweeprolog-top-level' _should not be used on shared
+  machines_.  This is the only `sweep' feature that should be avoided in
+  such cases.
 
 
 [the Emacs manual] <info:emacs#Shell Mode>
@@ -1308,7 +1374,7 @@ and cleanup
 
 [Finding Prolog Code] See section Finding Prolog code
 
-[The Prolog Top-level] See section The Prolog top-level
+[The Prolog Top-level] See section The Prolog Top-Level
 
 
 Examining Prolog messages
@@ -1603,5 +1669,8 @@ Concept index
 Footnotes
 ─────────
 
-[1] see [Text Properties in the Elisp manual] (<info:elisp#Text
+[1] For more information about major mode hooks in Emacs, which
+`sweeprolog-mode-hook' is one of, see [Hooks] (<info:emacs#Hooks>).
+
+[2] see [Text Properties in the Elisp manual] (<info:elisp#Text
 Properties>)
