@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/pidu/git-timemachine.git
 
 Updating /mnt/store/melpa/working/git-timemachine/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/pidu/git-timemachine.git/': GnuTLS recv error (-54): Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out d8ffd0d7cc4ab3dd7de494c9ea36dfd99e2744fa
+Built git-timemachine in 5.542s, finished at 2022-11-16T01:41:19+0000
+ ✓ Success:
+ 20K -rwxr-xr-x 1 root root 18K Nov 16 01:41 packages/git-timemachine-20221109.2051.el
+4.0K -rw-r--r-- 1 root root 423 Nov 16 01:41 packages/git-timemachine-20221109.2051.entry

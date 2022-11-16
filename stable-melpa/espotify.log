@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/espotify/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/jao/espotify.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ea6d6021e5acc550560325db2f09198839ee702f
+Built espotify in 4.178s, finished at 2022-11-16T01:32:14+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Nov 16 01:32 packages/espotify-20220121.2057.el
+4.0K -rw-r--r-- 1 root root 339 Nov 16 01:32 packages/espotify-20220121.2057.entry

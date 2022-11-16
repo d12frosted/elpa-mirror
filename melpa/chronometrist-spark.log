@@ -3,12 +3,19 @@ Fetcher: codeberg
 Source:  https://codeberg.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist-spark/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/dev
+Checking out 239f733dd8f784a5251ae253d350a99fb739da6e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chronometrist-spark/
+  to /tmp/chronometrist-spark9cLCC4/chronometrist-spark-20220321.349
+  ! elisp/chronometrist-spark.el -> chronometrist-spark.el
+  ! elisp/chronometrist-spark.org -> chronometrist-spark.org
+Created chronometrist-spark-20220321.349.tar containing:
+  chronometrist-spark-20220321.349/
+  chronometrist-spark-20220321.349/chronometrist-spark-pkg.el
+  chronometrist-spark-20220321.349/chronometrist-spark.el
+  chronometrist-spark-20220321.349/chronometrist-spark.org
+Built chronometrist-spark in 4.533s, finished at 2022-11-16T01:18:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 505 Nov 16 01:18 packages/chronometrist-spark-20220321.349.entry
+ 20K -rw-r--r-- 1 root root 20K Nov 16 01:18 packages/chronometrist-spark-20220321.349.tar

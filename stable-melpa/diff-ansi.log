@@ -3,11 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-diff-ansi.git
 
 Updating /mnt/store/melpa/working/diff-ansi/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-diff-ansi.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out c4f350da4302cd7d33343d83d5faaeae6795768f
+Built diff-ansi in 4.624s, finished at 2022-11-16T01:24:59+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Nov 16 01:24 packages/diff-ansi-20220731.2329.el
+4.0K -rw-r--r-- 1 root root 385 Nov 16 01:24 packages/diff-ansi-20220731.2329.entry

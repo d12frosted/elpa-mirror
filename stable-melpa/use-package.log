@@ -4,10 +4,10 @@ Source:  https://github.com/jwiegley/use-package.git
 
 Updating /mnt/store/melpa/working/use-package/
 Checking out origin/HEAD
-Checking out 09f210c5989454fa2c8729f4c0788c1d18c0ce22
+Checking out 149ecf4a5d55a459a570011444e72cea0a002eec
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/use-package/
-  to /tmp/use-packagekY99r8/use-package-20221115.1728
+  to /tmp/use-packageMYiN8X/use-package-20221115.2328
     use-package-bind-key.el -> use-package-bind-key.el
     use-package-core.el -> use-package-core.el
     use-package-delight.el -> use-package-delight.el
@@ -17,21 +17,23 @@ Copying files (->) and directories (=>)
     use-package-lint.el -> use-package-lint.el
     use-package.el -> use-package.el
     use-package.texi -> use-package.texi
-Generating /tmp/use-packagekY99r8/use-package-20221115.1728/use-package.info
-Created use-package-20221115.1728.tar containing:
-  use-package-20221115.1728/
-  use-package-20221115.1728/dir
-  use-package-20221115.1728/use-package-bind-key.el
-  use-package-20221115.1728/use-package-core.el
-  use-package-20221115.1728/use-package-delight.el
-  use-package-20221115.1728/use-package-diminish.el
-  use-package-20221115.1728/use-package-ensure.el
-  use-package-20221115.1728/use-package-jump.el
-  use-package-20221115.1728/use-package-lint.el
-  use-package-20221115.1728/use-package-pkg.el
-  use-package-20221115.1728/use-package.el
-  use-package-20221115.1728/use-package.info
-Built use-package in 8.053s, finished at 2022-11-15T22:49:47+0000
+Generating /tmp/use-packageMYiN8X/use-package-20221115.2328/use-package.info
+Created use-package-20221115.2328.tar containing:
+  use-package-20221115.2328/
+  use-package-20221115.2328/dir
+  use-package-20221115.2328/use-package-bind-key.el
+  use-package-20221115.2328/use-package-core.el
+  use-package-20221115.2328/use-package-delight.el
+  use-package-20221115.2328/use-package-diminish.el
+  use-package-20221115.2328/use-package-ensure.el
+  use-package-20221115.2328/use-package-jump.el
+  use-package-20221115.2328/use-package-lint.el
+  use-package-20221115.2328/use-package-pkg.el
+  use-package-20221115.2328/use-package.el
+  use-package-20221115.2328/use-package.info
+Built use-package in 7.161s, finished at 2022-11-16T02:30:19+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  474 Nov 15 22:49 packages/use-package-20221115.1728.entry
 140K -rw-r--r-- 1 root root 140K Nov 15 22:49 packages/use-package-20221115.1728.tar
+4.0K -rw-r--r-- 1 root root  474 Nov 16 02:30 packages/use-package-20221115.2328.entry
+140K -rw-r--r-- 1 root root 140K Nov 16 02:30 packages/use-package-20221115.2328.tar

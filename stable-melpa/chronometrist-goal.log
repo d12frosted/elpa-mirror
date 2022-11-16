@@ -3,12 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/contrapunctus/chronometrist-goal.git
 
 Updating /mnt/store/melpa/working/chronometrist-goal/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 6cb939d160f5d5966d7853aa23f3ed7c7ef9df44
+Built chronometrist-goal in 5.278s, finished at 2022-11-16T01:18:19+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Nov 16 01:18 packages/chronometrist-goal-20210510.1831.el
+4.0K -rw-r--r-- 1 root root 531 Nov 16 01:18 packages/chronometrist-goal-20210510.1831.entry
