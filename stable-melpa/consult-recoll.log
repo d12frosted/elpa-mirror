@@ -3,9 +3,12 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/consult-recoll.git
 
 Updating /mnt/store/melpa/working/consult-recoll/
-Checking out origin/HEAD
-Checking out 8d506e2d01f46fc6b0a0825efb90b062ad6fe3d4
-Built consult-recoll in 2.575s, finished at 2022-11-15T17:48:21+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Nov 15 17:48 packages/consult-recoll-20221014.2002.el
-4.0K -rw-r--r-- 1 root root 397 Nov 15 17:48 packages/consult-recoll-20221014.2002.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

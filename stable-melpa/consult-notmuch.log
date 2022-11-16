@@ -3,9 +3,12 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/consult-notmuch.git
 
 Updating /mnt/store/melpa/working/consult-notmuch/
-Checking out origin/HEAD
-Checking out 29e9a3d0d4ed2e8bcefbf009103f7e5665b6c260
-Built consult-notmuch in 37.798s, finished at 2022-11-15T17:48:50+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Nov 15 17:48 packages/consult-notmuch-20220929.2111.el
-4.0K -rw-r--r-- 1 root root 408 Nov 15 17:48 packages/consult-notmuch-20220929.2111.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

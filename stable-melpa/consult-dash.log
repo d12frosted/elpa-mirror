@@ -3,9 +3,12 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ravi/consult-dash.git
 
 Updating /mnt/store/melpa/working/consult-dash/
-Checking out origin/HEAD
-Checking out 0eb8e133a12570f482efcf367dcc7887c15def32
-Built consult-dash in 47.222s, finished at 2022-11-15T17:48:50+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.7K Nov 15 17:48 packages/consult-dash-20220621.226.el
-4.0K -rw-r--r-- 1 root root  434 Nov 15 17:48 packages/consult-dash-20220621.226.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

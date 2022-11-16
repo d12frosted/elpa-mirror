@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/acdw/electric-cursor.el.git
 
 Updating /mnt/store/melpa/working/electric-cursor/
-Checking out origin/HEAD
-Checking out 92f77b05fec80c5440a8b800b33345dabca13872
-Built electric-cursor in 227.022s, finished at 2022-11-15T18:00:20+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.3K Nov 15 18:00 packages/electric-cursor-20220108.2052.el
-4.0K -rw-r--r-- 1 root root  399 Nov 15 18:00 packages/electric-cursor-20220108.2052.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/acdw/electric-cursor.el.git/': The requested URL returned error: 504
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

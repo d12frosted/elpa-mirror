@@ -4,8 +4,8 @@
 
 ;; Author: Fritz Grabo <hello@fritzgrabo.com>
 ;; URL: https://github.com/fritzgrabo/tab-bar-echo-area
-;; Package-Version: 20211013.1942
-;; Package-Commit: d0d51ecbc5929eb7752b387c5bdfe4d879e78224
+;; Package-Version: 20221115.1953
+;; Package-Commit: 3ab62ca7db3c1d83f96b7971ea4b3b0101b51ae9
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: convenience
@@ -139,7 +139,8 @@ will be substituted with the list of fully processed tab names.")
 (defun tab-bar-echo-area-make-keymap ()
   "Make a keymap to use as the source of tabs to display."
   (let ((tab-bar-close-button-show nil)
-        (tab-bar-tab-hints nil))
+        (tab-bar-tab-hints nil)
+        (tab-bar-auto-width nil))
     (tab-bar-make-keymap)))
 
 (defvar tab-bar-echo-area--keymap-element-type-regex
