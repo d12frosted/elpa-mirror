@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-grammarly/flymake-grammarly
-;; Package-Version: 20220704.626
-;; Package-Commit: 4bbf93df6ca31a925417b656eec521f7b2c85681
+;; Package-Version: 20221116.1127
+;; Package-Commit: e3ed1a8bcb80a002a29fcc82e205d010bd9f3505
 ;; Version: 0.2.1
 ;; Package-Requires: ((emacs "26.1") (grammarly "0.3.0") (s "1.12.0"))
 ;; Keywords: convenience grammar check
@@ -142,15 +142,14 @@
            (flymake-grammarly--minified-string (buffer-string)))
     (flymake-grammarly--kill-timer)
     (setq flymake-grammarly--request-timer
-          (run-with-timer flymake-grammarly-check-time nil
-                          'flymake-grammarly--reset-request))))
+          (run-with-idle-timer flymake-grammarly-check-time nil
+                               'flymake-grammarly--reset-request))))
 
 (defun flymake-grammarly--encode-char (char-code)
   "Turn CHAR-CODE to character string."
   (cl-case char-code
     (4194208 (cons " " 2))
-    (4194201 (cons "'" 3))
-    (t nil)))
+    (4194201 (cons "'" 3))))
 
 (defun flymake-grammarly--html-to-text (html)
   "Turn HTML to text."
@@ -187,14 +186,15 @@
   "Check grammar for SOURCE-BUFFER document."
   (let (check-list)
     (dolist (data flymake-grammarly--point-data)
-      (let* ((pt-beg (flymake-grammarly--grab-info data "highlightBegin"))
-             (pt-end (flymake-grammarly--grab-info data "highlightEnd"))
+      (let* ((offset (point-min))  ; narrowed buffer
+             (pt-beg (+ offset (flymake-grammarly--grab-info data "highlightBegin")))
+             (pt-end (+ offset (flymake-grammarly--grab-info data "highlightEnd")))
              (exp (flymake-grammarly--grab-info data "explanation"))
              (card-desc (unless exp (flymake-grammarly--grab-info data "cardLayout groupDescription")))
              (desc (flymake-grammarly--html-to-text (or exp card-desc "")))
              (type (if exp (if (string-match-p "error" data) :error :warning) :warning)))
         (setq desc (flymake-grammarly--valid-description desc))
-        (push (flymake-make-diagnostic source-buffer (1+ pt-beg) (1+ pt-end) type desc) check-list)))
+        (push (flymake-make-diagnostic source-buffer pt-beg pt-end type desc) check-list)))
     check-list))
 
 (defun flymake-grammarly--apply-avoidance-rule (str)

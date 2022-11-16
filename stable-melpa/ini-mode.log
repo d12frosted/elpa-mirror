@@ -3,12 +3,9 @@ Fetcher: github
 Source:  https://github.com/Lindydancer/ini-mode.git
 
 Updating /mnt/store/melpa/working/ini-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; curl 35 gnutls_handshake() failed: Error in the pull function.
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 2194cfa2fd13196a37350ec20b3f00dcf6162b7c
+Built ini-mode in 4.112s, finished at 2022-11-16T12:59:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Nov 16 12:59 packages/ini-mode-20170424.909.el
+4.0K -rw-r--r-- 1 root root  323 Nov 16 12:59 packages/ini-mode-20170424.909.entry

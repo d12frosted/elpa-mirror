@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "28.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20221021.859
-;; Package-Commit: 0e72581a26a23b1fafd4983904f0904496395cd1
+;; Package-Version: 20221116.1016
+;; Package-Commit: c2dfe1b319ad1a3f94d5d2c59fea0b85f77e2ab0
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -199,7 +199,7 @@ You can install software `libmobi' to get command `mobitool'."
   :safe #'booleanp
   :group 'org-link-beautify)
 
-(defcustom org-link-beautify-archive-preview-alist
+(defcustom org-link-beautify-archive-preview-command-alist
   '(("zip" . "unzip -l")
     ("rar" . "unrar l")
     ("7z" . "7z l -ba") ; -ba - suppress headers; undocumented.
@@ -981,13 +981,13 @@ You can install software `libmobi' to get command `mobitool'.")
            ((and org-link-beautify-archive-preview
                  (equal type "file")
                  (file-exists-p path)
-                 (member extension (mapcar 'car org-link-beautify-archive-preview-alist)))
+                 (member extension (mapcar 'car org-link-beautify-archive-preview-command-alist)))
             ;; DEBUG:
             ;; (user-error "[org-link-beautify] cond -> archive file")
             ;; (if (null extension)
             ;;     (user-error "[org-link-beautify] archive file preview> extension: %s" extension))
             ;; (message "[org-link-beautify] archive file preview> path: %s" path)
-            (let ((command (cdr (assoc extension org-link-beautify-archive-preview-alist))))
+            (let ((command (cdr (assoc extension org-link-beautify-archive-preview-command-alist))))
               (org-link-beautify--preview-archive path command start end)))
            
            ;; file does not exist
