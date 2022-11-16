@@ -4,17 +4,27 @@
 
 ;; Author: Justin Talbott <justin@waymondo.com>
 ;; Keywords: convenience, tools, extensions
-;; Package-Version: 20221115.2328
-;; Package-Commit: 149ecf4a5d55a459a570011444e72cea0a002eec
+;; Package-Version: 20221116.1928
+;; Package-Commit: 41bf2aaf8854973d06f79ef69a638d0ef3ccf2bc
 ;; URL: https://github.com/jwiegley/use-package
 ;; Version: 0.2.1
 ;; Package-Requires: ((bind-key "1.0") (key-chord "0.6"))
 ;; Filename: bind-chord.el
-;; License: GNU General Public License version 3, or (at your option) any later version
-;;
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
 
 ;;; Code:
 

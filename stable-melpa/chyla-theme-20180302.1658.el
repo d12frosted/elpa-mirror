@@ -3,6 +3,8 @@
 ;; Copyright (C) 2018 Adam Chyła
 ;; Author: Adam Chyła <adam@chyla.org> https://chyla.org/
 ;; URL: https://github.com/chyla/ChylaThemeForEmacs
+;; Package-Version: 20180302.1658
+;; Package-Commit: ae5e7ecace2ab474151eb0ac5ef07fba2dc32f8a
 ;; Version: 0.1
 
 ;; This program is free software; you can redistribute it and/or modify

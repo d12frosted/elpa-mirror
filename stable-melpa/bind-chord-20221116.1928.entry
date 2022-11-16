@@ -1,11 +1,11 @@
 (bind-chord .
-	    [(20221115 2328)
+	    [(20221116 1928)
 	     ((bind-key
 	       (1 0))
 	      (key-chord
 	       (0 6)))
 	     "key-chord binding helper for use-package-chords" single
-	     ((:commit . "149ecf4a5d55a459a570011444e72cea0a002eec")
+	     ((:commit . "41bf2aaf8854973d06f79ef69a638d0ef3ccf2bc")
 	      (:authors
 	       ("Justin Talbott" . "justin@waymondo.com"))
 	      (:maintainer "Justin Talbott" . "justin@waymondo.com")
