@@ -4,10 +4,10 @@
 
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/emacs-hnreader/
-;; Package-Version: 20221116.433
-;; Package-Commit: 38ee74091ec65a46bb5c3dfa5b0cacc874bca676
+;; Package-Version: 20221117.335
+;; Package-Commit: 2f18e24a00f43bb50fb2ad777124a7fed95df007
 ;; Package-Requires: ((emacs "25.1") (promise "1.1") (request "0.3.0") (org "9.2"))
-;; Version: 0.2.3
+;; Version: 0.2.4
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -48,6 +48,7 @@
 ;; when viewing comments
 
 ;;; Changelog
+;; 0.2.4 2022-11-16 add reply link
 ;; 0.2.3 2022-11-14 add reply link
 ;; 0.2.2 2022-09-27 update css class grab for entry title
 ;; 0.2.1 2021-10-18 update css class grab for entry title
@@ -298,9 +299,10 @@ third one is 80.")
                         (hnreader--get-indent
                          (hnreader--get-img-tag-width comment))
                         (hnreader--get-comment-owner comment)))
-        (hnreader--print-node (hnreader--get-comment comment))
+        ;; append an empty p node and let shr deal with new line consistency
+        (hnreader--print-node (dom-append-child (hnreader--get-comment comment) '(p)))
         (when-let (reply (hnreader--get-reply comment))
-          (insert (format "\n[[https://news.ycombinator.com/%s][reply]]\n"
+          (insert (format "[[https://news.ycombinator.com/%s][reply]]\n"
                           reply))))
       (when more-link
         (insert "\n* " (format "[[elisp:(hnreader-comment \"%s\")][More]]" (concat "https://news.ycombinator.com/"
@@ -329,7 +331,7 @@ third one is 80.")
 (defun hnreader--it-to-it (it)
   "Map node to node.
 IT is an element in the DOM tree. Map to different IT when it is
-a, img or pre. Othewise just copy"
+a, img or pre. Otherwise copy"
   (if (and (listp it)
            (listp (cdr it))) ;; check for list but not cons
       (if (and (equal (car it) 'a)
@@ -342,7 +344,10 @@ a, img or pre. Othewise just copy"
 (defun hnreader--get-comment (comment-dom)
   "Get comment dom from COMMENT-DOM."
   ;; (dom-by-class comment-dom "^commtext"))
-  (hnreader--it-to-it (dom-by-class comment-dom "^commtext")))
+  ;; (setq thanh comment-dom)
+  (hnreader--it-to-it (dom-by-class comment-dom "^commtext"))
+  ;; (hnreader--it-to-it comment-dom)
+  )
 
 (defun hnreader--get-reply (comment-dom)
   (dom-attr (dom-by-tag (dom-by-class comment-dom "^reply$") 'a) 'href))
