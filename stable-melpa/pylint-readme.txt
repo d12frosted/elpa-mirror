@@ -1,4 +1,3 @@
-
 Specialized compile mode for pylint.  You may want to add the
 following to your init.el:
 
