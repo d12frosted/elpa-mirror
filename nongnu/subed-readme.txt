@@ -20,8 +20,9 @@ subed
 ═════
 
   subed is an Emacs major mode for editing subtitles while playing the
-  corresponding video with [mpv].  At the moment, the only supported
+  corresponding media file with [mpv]. At the moment, the only supported
   formats are:
+
   • SubRip ( `.srt')
   • WebVTT ( `.vtt' )
   • Advanced SubStation Alpha ( `.ass', experimental )
@@ -106,10 +107,11 @@ mpv integration (optional)
 
   • Automatically open the associated media file in MPV based on the
     filename, open a media file manually with `C-c C-v'
-    (`subed-mpv-find-video'), or play media directly from a URL with
-    `C-c C-u' (`subed-mpv-play-video-from-url') .  This works for audio
-    files as well.
-  • Pause and resume video playback without leaving Emacs (`M-SPC').
+    (`subed-mpv-play-from-file'), or play media directly from a URL with
+    `C-c C-u' (`subed-mpv-play-from-url') . You can customize the
+    automatic detection of files by changing `subed-video-extensions'
+    and `subed-audio-extensions'.
+  • Pause and resume playback without leaving Emacs (`M-SPC').
   • Jump to the current subtitle in the MPV player with `M-j'
     (`subed-mpv-jump-to-current-subtitle'). Toggle looping over the
     current subtitle with `C-c C-l'

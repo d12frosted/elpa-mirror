@@ -1,6 +1,6 @@
 The package provides a tree-based feed summary interface for
-elfeed. The tree can include individual feeds, searches, and
-groups. It mainly serves as an easier "jumping point" for elfeed,
+elfeed.  The tree can include individual feeds, searches, and
+groups.  It mainly serves as an easier "jumping point" for elfeed,
 so searching a subset of the elfeed database is one action away.
 
 `elfeed-summary' pops up the summary buffer.  The buffer shows

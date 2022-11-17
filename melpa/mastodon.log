@@ -4,10 +4,10 @@ Source:  https://codeberg.org/martianh/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
 Checking out origin/HEAD
-Checking out 1100d49cdd111de00bbd58292c30a2707a7dfb99
+Checking out 302f4828703313057823dfcc39d01ae00eb21e86
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonY9yu22/mastodon-20221115.1404
+  to /tmp/mastodonud9kvr/mastodon-20221117.850
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -21,23 +21,25 @@ Copying files (->) and directories (=>)
   ! lisp/mastodon-tl.el -> mastodon-tl.el
   ! lisp/mastodon-toot.el -> mastodon-toot.el
   ! lisp/mastodon.el -> mastodon.el
-Created mastodon-20221115.1404.tar containing:
-  mastodon-20221115.1404/
-  mastodon-20221115.1404/mastodon-async.el
-  mastodon-20221115.1404/mastodon-auth.el
-  mastodon-20221115.1404/mastodon-client.el
-  mastodon-20221115.1404/mastodon-discover.el
-  mastodon-20221115.1404/mastodon-http.el
-  mastodon-20221115.1404/mastodon-inspect.el
-  mastodon-20221115.1404/mastodon-media.el
-  mastodon-20221115.1404/mastodon-notifications.el
-  mastodon-20221115.1404/mastodon-pkg.el
-  mastodon-20221115.1404/mastodon-profile.el
-  mastodon-20221115.1404/mastodon-search.el
-  mastodon-20221115.1404/mastodon-tl.el
-  mastodon-20221115.1404/mastodon-toot.el
-  mastodon-20221115.1404/mastodon.el
-Built mastodon in 5.501s, finished at 2022-11-17T04:00:35+0000
+Created mastodon-20221117.850.tar containing:
+  mastodon-20221117.850/
+  mastodon-20221117.850/mastodon-async.el
+  mastodon-20221117.850/mastodon-auth.el
+  mastodon-20221117.850/mastodon-client.el
+  mastodon-20221117.850/mastodon-discover.el
+  mastodon-20221117.850/mastodon-http.el
+  mastodon-20221117.850/mastodon-inspect.el
+  mastodon-20221117.850/mastodon-media.el
+  mastodon-20221117.850/mastodon-notifications.el
+  mastodon-20221117.850/mastodon-pkg.el
+  mastodon-20221117.850/mastodon-profile.el
+  mastodon-20221117.850/mastodon-search.el
+  mastodon-20221117.850/mastodon-tl.el
+  mastodon-20221117.850/mastodon-toot.el
+  mastodon-20221117.850/mastodon.el
+Built mastodon in 6.738s, finished at 2022-11-17T11:29:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  497 Nov 17 04:00 packages/mastodon-20221115.1404.entry
-312K -rw-r--r-- 1 root root 310K Nov 17 04:00 packages/mastodon-20221115.1404.tar
+4.0K -rw-r--r-- 1 root root  497 Nov 17 07:43 packages/mastodon-20221115.1404.entry
+312K -rw-r--r-- 1 root root 310K Nov 17 07:43 packages/mastodon-20221115.1404.tar
+4.0K -rw-r--r-- 1 root root  496 Nov 17 11:29 packages/mastodon-20221117.850.entry
+312K -rw-r--r-- 1 root root 310K Nov 17 11:29 packages/mastodon-20221117.850.tar
