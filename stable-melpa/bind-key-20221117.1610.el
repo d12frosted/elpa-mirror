@@ -6,9 +6,10 @@
 ;; Maintainer: John Wiegley <johnw@newartisans.com>
 ;; Created: 16 Jun 2012
 ;; Version: 2.4.1
-;; Package-Version: 20221116.1929
-;; Package-Commit: f23d1d9a5a11626e2a90c221abf099b57df4b05b
-;; Keywords: keys keybinding config dotemacs
+;; Package-Version: 20221117.1610
+;; Package-Commit: 9090080b15486c3e337be254226efe7e5fde4c99
+;; Package-Requires: ((emacs "24.3"))
+;; Keywords: keys keybinding config dotemacs extensions
 ;; URL: https://github.com/jwiegley/use-package
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -518,8 +519,7 @@ function symbol (unquoted)."
                (command-desc (get-binding-description command))
                (was-command-desc (and was-command
                                       (get-binding-description was-command)))
-               (at-present-desc (get-binding-description at-present))
-               )
+               (at-present-desc (get-binding-description at-present)))
           (let ((line
                  (format
                   (format "%%-%ds%%-%ds%%s\n" (car bind-key-column-widths)

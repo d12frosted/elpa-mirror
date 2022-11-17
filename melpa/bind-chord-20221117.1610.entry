@@ -1,11 +1,13 @@
 (bind-chord .
-	    [(20221116 1928)
-	     ((bind-key
+	    [(20221117 1610)
+	     ((emacs
+	       (24 3))
+	      (bind-key
 	       (1 0))
 	      (key-chord
 	       (0 6)))
 	     "key-chord binding helper for use-package-chords" single
-	     ((:commit . "41bf2aaf8854973d06f79ef69a638d0ef3ccf2bc")
+	     ((:commit . "9090080b15486c3e337be254226efe7e5fde4c99")
 	      (:authors
 	       ("Justin Talbott" . "justin@waymondo.com"))
 	      (:maintainer "Justin Talbott" . "justin@waymondo.com")

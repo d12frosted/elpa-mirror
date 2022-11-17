@@ -4,11 +4,11 @@
 
 ;; Author: Justin Talbott <justin@waymondo.com>
 ;; Keywords: convenience, tools, extensions
-;; Package-Version: 20221116.1928
-;; Package-Commit: 41bf2aaf8854973d06f79ef69a638d0ef3ccf2bc
+;; Package-Version: 20221117.1610
+;; Package-Commit: 9090080b15486c3e337be254226efe7e5fde4c99
 ;; URL: https://github.com/jwiegley/use-package
 ;; Version: 0.2.1
-;; Package-Requires: ((bind-key "1.0") (key-chord "0.6"))
+;; Package-Requires: ((emacs "24.3") (bind-key "1.0") (key-chord "0.6"))
 ;; Filename: bind-chord.el
 
 ;; This program is free software; you can redistribute it and/or modify
