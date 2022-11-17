@@ -1,0 +1,11 @@
+(eldev .
+       [(20221116 2124)
+	((emacs
+	  (24 4)))
+	"Elisp development tool" tar
+	((:commit . "dc46059484cdd19274e70b73ca3962c26be2582e")
+	 (:authors
+	  ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
+	 (:maintainer "Paul Pogonyshev" . "pogonyshev@gmail.com")
+	 (:keywords "maint" "tools")
+	 (:url . "https://github.com/doublep/eldev"))])

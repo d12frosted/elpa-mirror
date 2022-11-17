@@ -5,8 +5,6 @@
 ;; Author: Tijs Mallaerts <tijs.mallaerts@gmail.com>
 
 ;; Package-Requires: ((emacs "25"))
-;; Package-Version: 20220918.514
-;; Package-Commit: b73cca120eb64538ab0666892a8b97b6d65b4d6b
 ;; Version: 0.0.2
 ;; URL: https://github.com/mallt/org-clock-today-mode
 

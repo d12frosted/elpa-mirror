@@ -12,6 +12,7 @@ Table of Contents
 
   [https://github.com/greghendershott/racket-mode/workflows/CI/badge.svg]
   [https://melpa.org/packages/racket-mode-badge.svg]
+  [https://elpa.nongnu.org/nongnu/racket-mode.svg]
   [https://img.shields.io/badge/Docs-Documentation-blue.svg]
 
   This provides a major mode to edit [Racket] source files, as well as a
@@ -26,6 +27,9 @@ Table of Contents
 
 [https://melpa.org/packages/racket-mode-badge.svg]
 <https://melpa.org/#/racket-mode>
+
+[https://elpa.nongnu.org/nongnu/racket-mode.svg]
+<https://elpa.nongnu.org/nongnu/racket-mode.html>
 
 [https://img.shields.io/badge/Docs-Documentation-blue.svg]
 <https://www.racket-mode.com/>
