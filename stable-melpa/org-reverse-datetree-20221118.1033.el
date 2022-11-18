@@ -4,8 +4,8 @@
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.4.2-pre
-;; Package-Version: 20221114.1713
-;; Package-Commit: 67aecbbb55b2e0d1c435e686ac46c37038a981d0
+;; Package-Version: 20221118.1033
+;; Package-Commit: a8ac1bc977efe6ee4c8d0d2ea6e2a6df8ba48fe1
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -1029,9 +1029,6 @@ A prefix argument FIND-DONE should be treated as in
              (tr-org-odd-levels-only org-odd-levels-only)
              (this-buffer (current-buffer))
              (current-time (current-time))
-             (time (format-time-string
-                    (substring (cdr org-time-stamp-formats) 1 -1)
-                    current-time))
              (file (or (buffer-file-name (buffer-base-buffer))
                        (error "No file associated to buffer")))
              (afile (org-reverse-datetree--archive-file file))
@@ -1042,9 +1039,12 @@ A prefix argument FIND-DONE should be treated as in
                            ((find-buffer-visiting afile))
                            ((find-file-noselect afile))
                            (t (error "Cannot access file \"%s\"" afile))))
-             (archive-time (org-reverse-datetree--encode-time
-                            (org-parse-time-string
-                             (or (org-entry-get nil "CLOSED" t) time)))))
+             (closed (org-entry-get nil "CLOSED" t))
+             (archive-time (if closed
+                               (and (string-match org-ts-regexp-inactive closed)
+                                    (org-reverse-datetree--encode-time
+                                     (org-parse-time-string (match-string 1 closed))))
+                             current-time)))
         (save-excursion
           (org-back-to-heading t)
           ;; Get context information that will be lost by moving the
