@@ -1,5 +1,5 @@
 (elfeed-org .
-	    [(20220529 1958)
+	    [(20221118 852)
 	     ((elfeed
 	       (1 1 1))
 	      (org
@@ -11,7 +11,7 @@
 	      (cl-lib
 	       (0 5)))
 	     "Configure elfeed with one or more org-mode files" single
-	     ((:commit . "d28c858303e60dcb3a6eb18ea85ee3cb9e3dd623")
+	     ((:commit . "3242ec0519800a58f20480c8a6e3b3337d137084")
 	      (:authors
 	       ("Remy Honig" . "remyhonig@gmail.com"))
 	      (:maintainer "Remy Honig" . "remyhonig@gmail.com")

@@ -5,8 +5,8 @@
 ;; Author: Clément Pit-Claudel, Feng Shu, Lars Andersen <expez@expez.com>
 ;; Maintainer: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/company-posframe
-;; Package-Version: 20221115.646
-;; Package-Commit: eefcc72179602f8e0d454405899b0cfa0e7788ec
+;; Package-Version: 20221118.824
+;; Package-Commit: ab58972c2cebc5ecf68c4cdd140c3aed2c68f42b
 ;; Version: 0.6.0
 ;; Keywords: abbrev, convenience, matching
 ;; Package-Requires: ((emacs "26.0")(company "0.9.0")(posframe "0.9.0"))
@@ -391,7 +391,7 @@ COMMAND: See `company-frontends'."
 (defun company-posframe-quickhelp-skip-footers-backwards ()
   "Skip backwards over footers and blank lines."
   (beginning-of-line)
-  (while (and (not (= (point-at-eol) (point-min)))
+  (while (and (not (= (line-end-position) (point-min)))
               (or
                ;; [back] appears at the end of the help elisp help buffer
                (looking-at-p "\\[back\\]")

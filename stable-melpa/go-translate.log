@@ -4,10 +4,10 @@ Source:  https://github.com/lorniu/go-translate.git
 
 Updating /mnt/store/melpa/working/go-translate/
 Checking out origin/HEAD
-Checking out dbdbafc3fe9ab4f0c5023212b6e8dcfbde6a4cf9
+Checking out b6260aa10941ed893bbe1798edcc34dde22ca529
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/go-translate/
-  to /tmp/go-translatero7ADG/go-translate-20221117.1521
+  to /tmp/go-translateq7cbxJ/go-translate-20221118.838
     go-translate.el -> go-translate.el
     gts-core.el -> gts-core.el
     gts-engine-bing.el -> gts-engine-bing.el
@@ -18,20 +18,22 @@ Copying files (->) and directories (=>)
     gts-engine-youdao.el -> gts-engine-youdao.el
     gts-faces.el -> gts-faces.el
     gts-implements.el -> gts-implements.el
-Created go-translate-20221117.1521.tar containing:
-  go-translate-20221117.1521/
-  go-translate-20221117.1521/go-translate-pkg.el
-  go-translate-20221117.1521/go-translate.el
-  go-translate-20221117.1521/gts-core.el
-  go-translate-20221117.1521/gts-engine-bing.el
-  go-translate-20221117.1521/gts-engine-deepl.el
-  go-translate-20221117.1521/gts-engine-google-rpc.el
-  go-translate-20221117.1521/gts-engine-google.el
-  go-translate-20221117.1521/gts-engine-stardict.el
-  go-translate-20221117.1521/gts-engine-youdao.el
-  go-translate-20221117.1521/gts-faces.el
-  go-translate-20221117.1521/gts-implements.el
-Built go-translate in 6.130s, finished at 2022-11-18T05:50:23+0000
+Created go-translate-20221118.838.tar containing:
+  go-translate-20221118.838/
+  go-translate-20221118.838/go-translate-pkg.el
+  go-translate-20221118.838/go-translate.el
+  go-translate-20221118.838/gts-core.el
+  go-translate-20221118.838/gts-engine-bing.el
+  go-translate-20221118.838/gts-engine-deepl.el
+  go-translate-20221118.838/gts-engine-google-rpc.el
+  go-translate-20221118.838/gts-engine-google.el
+  go-translate-20221118.838/gts-engine-stardict.el
+  go-translate-20221118.838/gts-engine-youdao.el
+  go-translate-20221118.838/gts-faces.el
+  go-translate-20221118.838/gts-implements.el
+Built go-translate in 4.625s, finished at 2022-11-18T09:35:30+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  397 Nov 18 05:50 packages/go-translate-20221117.1521.entry
 112K -rw-r--r-- 1 root root 110K Nov 18 05:50 packages/go-translate-20221117.1521.tar
+4.0K -rw-r--r-- 1 root root  396 Nov 18 09:35 packages/go-translate-20221118.838.entry
+112K -rw-r--r-- 1 root root 110K Nov 18 09:35 packages/go-translate-20221118.838.tar
