@@ -4,18 +4,23 @@ Source:  https://github.com/kidd/org-gcal.el.git
 
 Updating /mnt/store/melpa/working/org-gcal/
 Checking out origin/HEAD
-Checking out 40291bec0cd0bf8a2f5db656e4d3077b256092ae
+Checking out 86faad251d3109a900661d40001f214cf51bc635
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-gcal/
-  to /tmp/org-gcalNFNrdq/org-gcal-20220809.1955
+  to /tmp/org-gcalWDl2Dx/org-gcal-20221119.0
+    oauth2-auto.el -> oauth2-auto.el
+    org-gcal-pkg.el -> org-gcal-pkg.el
     org-gcal.el -> org-gcal.el
     org-generic-id.el -> org-generic-id.el
-Created org-gcal-20220809.1955.tar containing:
-  org-gcal-20220809.1955/
-  org-gcal-20220809.1955/org-gcal-pkg.el
-  org-gcal-20220809.1955/org-gcal.el
-  org-gcal-20220809.1955/org-generic-id.el
-Built org-gcal in 4.463s, finished at 2022-11-18T13:45:09+0000
+Created org-gcal-20221119.0.tar containing:
+  org-gcal-20221119.0/
+  org-gcal-20221119.0/oauth2-auto.el
+  org-gcal-20221119.0/org-gcal-pkg.el
+  org-gcal-20221119.0/org-gcal.el
+  org-gcal-20221119.0/org-generic-id.el
+Built org-gcal in 5.003s, finished at 2022-11-19T00:58:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  504 Nov 18 13:45 packages/org-gcal-20220809.1955.entry
-120K -rw-r--r-- 1 root root 120K Nov 18 13:45 packages/org-gcal-20220809.1955.tar
+4.0K -rw-r--r-- 1 root root  504 Nov 18 21:15 packages/org-gcal-20220809.1955.entry
+120K -rw-r--r-- 1 root root 120K Nov 18 21:15 packages/org-gcal-20220809.1955.tar
+4.0K -rw-r--r-- 1 root root  566 Nov 19 00:58 packages/org-gcal-20221119.0.entry
+140K -rw-r--r-- 1 root root 140K Nov 19 00:58 packages/org-gcal-20221119.0.tar
