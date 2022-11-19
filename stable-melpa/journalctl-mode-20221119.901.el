@@ -4,8 +4,8 @@
 
 ;; Author: Sebastian Meisel <sebastian.meisel@gmail.com>
 ;; Version: 0.9
-;; Package-Version: 20201217.1625
-;; Package-Commit: c5bca1a5f42d2fe2a00fdf52fe480137ace971d3
+;; Package-Version: 20221119.901
+;; Package-Commit: c902ad94c2d043f620a44e4c9b1bd7f4d6f22229
 ;; Created:  June 1, 2020
 ;; Keywords: unix
 ;; Homepage: https://github.com/SebastianMeisel/journalctl-mode
@@ -15,7 +15,19 @@
 
 ;;; License:
 
-;; You can redistribute this program and/or modify it under the terms of the GNU General Public License version 2.
+;; This file is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published
+;; by the Free Software Foundation, either version 3 of the License,
+;; or (at your option) any later version.
+;;
+;; This file is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this file.  If not, see <https://www.gnu.org/licenses/>.
+
 
 ;;; Commentary:
 

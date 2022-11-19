@@ -4,8 +4,8 @@
 
 ;; Author: Ian Wahbe
 ;; URL: https://github.com/iwahbe/jsonian
-;; Package-Version: 20221114.251
-;; Package-Commit: a324bc66b00752607b6d2db00d798c81aff541f0
+;; Package-Version: 20221119.518
+;; Package-Commit: 1e8103c281bf7781bf3246d2049165d8966710c6
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -1018,9 +1018,9 @@ If PATH is supplied, navigate to it."
                 (completing-read "Select Element: " #'jsonian--find-completion nil t
                                  (save-excursion
                                    (jsonian--correct-starting-point)
-                                   (when-let* ((path (butlast (jsonian--reconstruct-path (jsonian--path t nil))))
+                                   (when-let* ((path (jsonian--reconstruct-path (jsonian--path t nil)))
                                                (display (jsonian--display-path path t)))
-                                     (concat display (jsonian--type-index-string (jsonian--node-type (jsonian--valid-path path))))))))))
+                                     display))))))
       ;; We know that the path is valid since we chose it from the list of valid paths presented
       (goto-char (jsonian--valid-path (jsonian--parse-path selection)))))
 
@@ -1057,7 +1057,7 @@ PREFIX is the string currently being completed against.
 CACHE is the value of `jsonian--cache' for the buffer being completed against."
   (let ((max-value (+ 8 (seq-reduce #'max (seq-map #'length paths) 0))))
     (mapcar (lambda (path)
-              (let* ((is-index (string-match-p "^[0-9]\\]$" path))
+              (let* ((is-index (string-match-p "^[0-9]+\\]$" path))
                      (full-path (append
                                  (butlast (jsonian--parse-path prefix))
                                  (jsonian--parse-path
@@ -1087,7 +1087,11 @@ PATHS is the list of returned paths."
             (prefix (jsonian--display-segment-end segment)))
       (sort
        (seq-filter (apply-partially #'string-prefix-p prefix) paths)
-       (lambda (x y) (< (string-distance prefix x) (string-distance prefix y))))
+       (if (seq-every-p (apply-partially #'string-match-p "^[0-9]+\]$") paths)
+           ;; We are in an array, and indexes are numbers like "42]". We should sort them low to high.
+           (lambda (x y) (< (string-to-number x) (string-to-number y)))
+         ;; We are in a map, our keys are arbitrary strings, we should sort by edit distance.
+         (lambda (x y) (< (string-distance prefix x) (string-distance prefix y)))))
     paths))
 
 (defun jsonian--completing-t (path predicate)
@@ -1111,7 +1115,7 @@ PATHS is the list of returned paths."
 (defun jsonian--completing-nil (path &optional predicate)
   "The nil component of `jsonian--find-completion'.
 PATH is a a list of path segments.  PREDICATE is a function that
-filters values It takes a string as argument.  According to the
+filters values.  It takes a string as argument.  According to the
 docs: The function should return nil if there are no matches; it
 should return t if the specified string is a unique and exact
 match; and it should return the longest common prefix substring

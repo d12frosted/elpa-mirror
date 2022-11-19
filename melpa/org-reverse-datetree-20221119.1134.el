@@ -4,8 +4,8 @@
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.4.2-pre
-;; Package-Version: 20221118.1033
-;; Package-Commit: a8ac1bc977efe6ee4c8d0d2ea6e2a6df8ba48fe1
+;; Package-Version: 20221119.1134
+;; Package-Commit: b6d6b7179019e87b13dfdfeef28037821ed4d01f
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -1066,7 +1066,12 @@ A prefix argument FIND-DONE should be treated as in
                     (olpath . ,(mapconcat #'identity
                                           (org-get-outline-path)
                                           "/"))
-                    (time . ,time)
+                    (time . ,(format-time-string
+                              (thread-last
+                                (org-time-stamp-format t)
+                                (string-remove-prefix "<")
+                                (string-remove-suffix ">"))
+                              current-time))
                     (todo . ,(org-entry-get (point) "TODO")))))
             ;; We first only copy, in case something goes wrong
             ;; we need to protect `this-command', to avoid kill-region sets it,
