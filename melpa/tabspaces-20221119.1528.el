@@ -2,9 +2,9 @@
 
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
-;; Version: 1.2
-;; Package-Version: 20221114.1744
-;; Package-Commit: f25bb670c0f7b3f7555634d19fcdd3eb979ac7c0
+;; Version: 1.3
+;; Package-Version: 20221119.1528
+;; Package-Commit: cf48657fbdb322bb059051737a2515e6f648b12c
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -477,6 +477,7 @@ If PROJECT does not exist, create it, along with a `project.todo' file, in its o
     (define-key map (kbd "r") 'tabspaces-remove-current-buffer)
     (define-key map (kbd "R") 'tabspaces-remove-selected-buffer)
     (define-key map (kbd "s") 'tabspaces-switch-or-create-workspace)
+    (define-key map (kbd "t") 'tabspaces-switch-buffer-and-tab)
     map)
   "Keymap for tabspace/workspace commands after `tabspaces-keymap-prefix'.")
 (fset 'tabspaces-command-map tabspaces-command-map)

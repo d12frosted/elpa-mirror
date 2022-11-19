@@ -6,8 +6,8 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;;         Peter Oliver <git@mavit.org.uk>
 ;; URL: https://github.com/emacs-languagetool/flycheck-languagetool
-;; Package-Version: 20220731.2301
-;; Package-Commit: 53b3e46d47a0e70fd2e5c49fea9134ee9aa41793
+;; Package-Version: 20221119.1624
+;; Package-Commit: 02299ff26adc7cbd9101ccface4437f67696f49e
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.14"))
 ;; Keywords: convenience grammar check
@@ -197,9 +197,13 @@ SOURCE-BUFFER is the buffer currently being checked.
 CALLBACK is passed from Flycheck."
   (let ((err (plist-get status :error)))
     (when err
-      (kill-buffer)
-      (error (funcall callback 'errored (error-message-string err))
-             (signal (car err) (cdr err)))))
+      (error
+       (funcall callback 'errored
+                (error-message-string
+                 (append err
+                         (list (progn
+                                 (goto-char (+ 1 url-http-end-of-headers))
+                                 (buffer-substring (point) (point-max))))))))))
 
   (set-buffer-multibyte t)
   (goto-char url-http-end-of-headers)
@@ -215,8 +219,7 @@ CALLBACK is passed from Flycheck."
            (apply #'flycheck-error-new-at `(,@x :checker languagetool)))
          (condition-case err
              (flycheck-languagetool--check-all results)
-           (error (funcall callback 'errored (error-message-string err))
-                  (signal (car err) (cdr err))))))))))
+           (error (funcall callback 'errored (error-message-string err))))))))))
 
 (defun flycheck-languagetool--start-server ()
   "Start the LanguageTool server if we didn’t already."

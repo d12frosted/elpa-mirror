@@ -2,8 +2,8 @@
 
 ;; Author: Nicolas Martyanoff <nicolas@n16f.net>
 ;; URL: https://github.com/galdor/rfc-mode
-;; Package-Version: 20221013.1342
-;; Package-Commit: 93208d44516e1f4c6e181ee5d374f2dbd7199d0c
+;; Package-Version: 20221117.1200
+;; Package-Commit: 36710c917552aae2df52fb38134a5b42f3e1d1bd
 ;; Version: 1.3.0
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -155,19 +155,24 @@ If nil (the default) then use e.g. *rfc21*, otherwise use e.g. rfc21.txt."
 
 (define-obsolete-function-alias 'rfc-mode-quit #'quit-window "rfc-mode-1.4")
 
+(defun rfc-mode-recenter ()
+  "Do the same as `recenter-top-bottom' would for the `top' position."
+  (let ((recenter-positions '(top)))
+    (recenter-top-bottom)))
+
 (defun rfc-mode-backward-page ()
   "Scroll to the previous page of the current buffer."
   (interactive)
   (backward-page)
   (rfc-mode-previous-header)
-  (recenter 0))
+  (rfc-mode-recenter))
 
 (defun rfc-mode-forward-page ()
   "Scroll to the next page of the current buffer."
   (interactive)
   (forward-page)
   (rfc-mode-previous-header)
-  (recenter 0))
+  (rfc-mode-recenter))
 
 (defun rfc-mode-goto-section (section)  ;FIXME: Why not use imenu for that?
   "Move point to SECTION."
@@ -191,7 +196,10 @@ Returns t if section is found, nil otherwise."
         (case-fold-search nil))
     (goto-char (point-min))
     (if (re-search-forward (concat "^" section) (point-max) t)
-        (progn (beginning-of-line) t)
+        (progn
+          (beginning-of-line)
+          (rfc-mode-recenter)
+          t)
       (goto-char curpos)
       nil)))
 
@@ -203,7 +211,9 @@ Returns t if section is found, nil otherwise."
     (if (looking-at rfc-mode-title-regexp)
         (forward-line 1))
     (if (re-search-forward rfc-mode-title-regexp (point-max) t n)
-        (beginning-of-line)
+        (progn
+          (beginning-of-line)
+          (rfc-mode-recenter))
       (goto-char (point-max))
       ;; The last line doesn't belong to any section.
       (forward-line -1))
@@ -217,7 +227,9 @@ Returns t if section is found, nil otherwise."
     (if (looking-at rfc-mode-title-regexp)
         (forward-line -1))
     (if (re-search-backward rfc-mode-title-regexp (point-min) t n)
-        (beginning-of-line)
+        (progn
+          (beginning-of-line)
+          (rfc-mode-recenter))
       (goto-char (point-min)))))
 
 ;;;###autoload

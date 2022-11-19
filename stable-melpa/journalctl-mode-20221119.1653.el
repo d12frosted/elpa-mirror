@@ -4,8 +4,8 @@
 
 ;; Author: Sebastian Meisel <sebastian.meisel@gmail.com>
 ;; Version: 0.9
-;; Package-Version: 20221119.901
-;; Package-Commit: c902ad94c2d043f620a44e4c9b1bd7f4d6f22229
+;; Package-Version: 20221119.1653
+;; Package-Commit: baaffdfd22a19afb1997ec3715d063186b80d3f5
 ;; Created:  June 1, 2020
 ;; Keywords: unix
 ;; Homepage: https://github.com/SebastianMeisel/journalctl-mode
@@ -133,11 +133,12 @@
   ""
   "Keeps filters as grep that shall be applied to journalctl's output.")
 
-(defvar journalctl-disk-usage
-  (concat
-   "Disk-usage: "
-   (shell-command-to-string "journalctl --disk-usage | egrep -o '[0-9.]+G'"))
-  "Disk-usage of  journalctl.")
+(defun journalctl--disk-usage ()
+  "Disk-usage of journalctl."
+  (let ((cmd-out (shell-command-to-string "journalctl --disk-usage")))
+    (if (string-match "[0-9.]+G" cmd-out)
+        (match-string 0 cmd-out)
+      "0G")))
 
 ;; functions
 
@@ -465,7 +466,7 @@ If OPT is set, remove this option."
 ;;;###autoload
 (define-derived-mode journalctl-mode fundamental-mode "journalctl"
   "Major mode for viewing journalctl output"
-  (setq mode-line-process journalctl-disk-usage)
+  (setq mode-line-process (concat " (disk usage: " (journalctl--disk-usage) ")"))
   ;; code for syntax highlighting
   (setq font-lock-defaults '((journalctl-font-lock-keywords))))
 
