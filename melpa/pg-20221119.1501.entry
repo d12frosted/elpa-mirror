@@ -1,9 +1,9 @@
 (pg .
-    [(20221111 756)
+    [(20221119 1501)
      ((emacs
        (26 1)))
      "Emacs Lisp socket-level interface to the PostgreSQL RDBMS" single
-     ((:commit . "3e79c965063bc15d1e2ed9a1c152ba603b84e68a")
+     ((:commit . "dbdae7d109c16ca4b2a6f6a5fe904c66697045cc")
       (:authors
        ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:maintainer "Eric Marsden" . "eric.marsden@risk-engineering.org")

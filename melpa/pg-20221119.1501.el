@@ -3,9 +3,9 @@
 ;; Copyright: (C) 1999-2002, 2022  Eric Marsden
 
 ;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
-;; Version: 0.18
-;; Package-Version: 20221111.756
-;; Package-Commit: 3e79c965063bc15d1e2ed9a1c152ba603b84e68a
+;; Version: 0.19
+;; Package-Version: 20221119.1501
+;; Package-Commit: dbdae7d109c16ca4b2a6f6a5fe904c66697045cc
 ;; Keywords: data comm database postgresql
 ;; URL: https://github.com/emarsden/pg-el
 ;; Package-Requires: ((emacs "26.1"))
@@ -612,7 +612,7 @@ Return a result structure which can be decoded using `pg-result'."
                ;; FIXME decode channel and payload?
                (message "Asynchronous notify %s:%s" channel payload)))
 
-            ;; Bind
+            ;; Bind -- should not receive this
             (?B
              (setf (pgcon-binaryp connection) t)
              (unless attributes
@@ -630,8 +630,6 @@ Return a result structure which can be decoded using `pg-result'."
             ;; DataRow
             (?D
              (setf (pgcon-binaryp connection) nil)
-             (unless attributes
-               (signal 'pg-protocol-error (list "Tuple received before metadata")))
              (let ((_msglen (pg-read-net-int connection 4)))
                (push (pg-read-tuple connection attributes) tuples)))
 

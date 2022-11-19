@@ -5,8 +5,8 @@
 ;; Author: Sylvain Rousseau <thisirs at gmail dot com>
 ;; Maintainer: Sylvain Rousseau <thisirs at gmail dot com>
 ;; URL: https://github.com/thisirs/find-temp-file.git
-;; Package-Version: 20200117.2254
-;; Package-Commit: 2bfcdba0d6a8a0e6faa080cb04ff0f7ed06491ba
+;; Package-Version: 20221119.1350
+;; Package-Commit: 601e39b052c66df4cd928cf7e308dd6a54769a99
 ;; Keywords: convenience
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -152,7 +152,7 @@ unique and recognizable name is automatically constructed."
   (let (file-name extension file-template template)
     (if (memq ?. (string-to-list extension-or-file))
         (setq file-name extension-or-file
-              extension (file-name-extension extension-or-file))
+              extension (or (file-name-extension extension-or-file) ""))
       (setq extension extension-or-file))
 
     (setq template
@@ -174,7 +174,7 @@ unique and recognizable name is automatically constructed."
                (?M . ,(let ((fun (assoc-default (concat "." extension)
                                                 auto-mode-alist
                                                 'string-match)))
-                        (or fun (default-value 'major-mode))))
+                        (symbol-name (or fun (default-value 'major-mode)))))
                (?D . ,(format-time-string "%Y-%m-%d"))
                (?N . "%N"))))
            find-temp-file-directory))
