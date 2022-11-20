@@ -5,8 +5,8 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-sideline/sideline-flymake
-;; Package-Version: 20221119.2034
-;; Package-Commit: 65260cdc8977eef5fcab2745b596244966851e67
+;; Package-Version: 20221120.743
+;; Package-Commit: 6ab3557fadfe832bd9ea3e4818012d3ea5c4759b
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "27.1") (sideline "0.1.0"))
 ;; Keywords: convenience flymake
@@ -70,10 +70,10 @@ Argument COMMAND is required in sideline backend."
 (defun sideline-flymake--get-errors ()
   "Return flymake errors."
   (cl-case sideline-flymake-display-mode
-    ('point (flymake-diagnostics (point)))
-    ('line (flymake-diagnostics (line-beginning-position) (line-end-position)))
+    (`point (flymake-diagnostics (point)))
+    (`line (flymake-diagnostics (line-beginning-position) (line-end-position)))
     (t (user-error "Invalid value of sideline-flymake-display-mode: %s"
-		   sideline-flymake-display-mode))))
+                   sideline-flymake-display-mode))))
 
 (defun sideline-flymake--show-errors (callback &rest _)
   "Execute CALLBACK to display with sideline."
@@ -83,8 +83,8 @@ Argument COMMAND is required in sideline backend."
         (let* ((text (flymake-diagnostic-text err))
                (type (flymake-diagnostic-type err))
                (face (cl-case type
-                       ('eglot-error 'error)
-                       ('eglot-warning 'warning)
+                       (`eglot-error 'error)
+                       (`eglot-warning 'warning)
                        (:error 'error)
                        (:warning 'warning)
                        (t 'success))))

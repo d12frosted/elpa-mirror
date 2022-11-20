@@ -306,7 +306,8 @@ Table of Contents
   │   "Enable Corfu in the minibuffer if `completion-at-point' is bound."
   │   (when (where-is-internal #'completion-at-point (list (current-local-map)))
   │     ;; (setq-local corfu-auto nil) ;; Enable/disable auto completion
-  │     (setq-local corfu-echo-delay nil) ;; Disable echo
+  │     (setq-local corfu-echo-delay nil ;; Disable automatic echo and popup
+  │ 		corfu-popupinfo-delay nil)
   │     (corfu-mode 1)))
   │ (add-hook 'minibuffer-setup-hook #'corfu-enable-in-minibuffer)
   └────
@@ -321,7 +322,9 @@ Table of Contents
   │   "Enable Corfu in the minibuffer if Vertico/Mct are not active."
   │   (unless (or (bound-and-true-p mct--active)
   │ 	      (bound-and-true-p vertico--input))
-  │     ;; (setq-local corfu-auto nil) Enable/disable auto completion
+  │     ;; (setq-local corfu-auto nil) ;; Enable/disable auto completion
+  │     (setq-local corfu-echo-delay nil ;; Disable automatic echo and popup
+  │ 		corfu-popupinfo-delay nil)
   │     (corfu-mode 1)))
   │ (add-hook 'minibuffer-setup-hook #'corfu-enable-always-in-minibuffer 1)
   └────

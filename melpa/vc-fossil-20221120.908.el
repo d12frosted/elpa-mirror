@@ -2,9 +2,9 @@
 
 ;; Author: Venkat Iyer <venkat@comit.com>
 ;; Maintainer: Alfred M. Szmidt <ams@gnu.org>
-;; Version: 20220707
-;; Package-Version: 20220607.617
-;; Package-Commit: 8ce6113aa272583130e5f929fefd67115c8f572a
+;; Version: 20221120
+;; Package-Version: 20221120.908
+;; Package-Commit: e059ca466cc8914757c6bdb26fa9cc6b0820a9c1
 
 ;; vc-fossil.el free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published
@@ -49,6 +49,7 @@
 ;; - receive-file (file rev)			??
 ;; - unregister (file)				OK
 ;; * checkin (files comment &optional rev)	OK
+;; - checkin-patch (patch-string comment)	??
 ;; * find-revision (file rev buffer)		OK
 ;; * checkout (file &optional rev)		OK
 ;; * revert (file &optional contents-done)	OK
@@ -89,7 +90,7 @@
 ;; - region-history (file buffer lfrom lto)	??
 ;; - region-history-mode ()			??
 ;; - mergebase (rev1 &optional rev2)		??
-;; TAG SYSTEM
+;; TAG/BRANCH SYSTEM
 ;; - create-tag (dir name branchp)		OK
 ;; - retrieve-tag (dir name update)		OK
 ;; MISCELLANEOUS
@@ -97,7 +98,7 @@
 ;; - root (file)				OK
 ;; - ignore (file &optional directory remove)	??
 ;; - ignore-completion-table (directory)	??
-;; - find-ignore-file file			OK
+;; - find-ignore-file (file)			OK
 ;; - previous-revision (file rev)		OK
 ;; - next-revision (file rev)			OK
 ;; - log-edit-mode ()				??
@@ -108,7 +109,8 @@
 ;; - extra-menu ()				??
 ;; - extra-dir-menu ()				??
 ;; - conflicted-files (dir)			??
-;; - repository-url (file-or-dir &optional remote-name) OK
+;; - repository-url (file-or-dir &optional remote-name)	OK
+;; - prepare-patch (rev)			??
 
 ;;; Code:
 
@@ -399,6 +401,8 @@ If nil, use the value of `vc-diff-switches'.  If t, use no switches."
 		 comment)
 		(vc-switches 'Fossil 'checkin))))
 
+;; - checkin-patch (patch-string comment)
+
 (defun vc-fossil-find-revision (file rev buffer)
   (apply #'vc-fossil--command buffer 0 file
 	 "cat"
@@ -468,7 +472,7 @@ This prompts for a branch to merge from."
 	(apply #'vc-fossil--command buffer 0 nil "timeline"
 	       (nconc
 		(when start-revision (list "before" start-revision))
-		(when limit (list "-n" (number-to-string limit)))
+		(when (numberp limit) (list "-n" (number-to-string limit)))
 		(list "-p" (file-relative-name (expand-file-name file))))))
       (goto-char (point-min)))))
 
@@ -526,7 +530,8 @@ This prompts for a branch to merge from."
 	     (rev1 (list "--from" rev1)))
 	    (vc-switches 'Fossil 'diff)))))
 
-;; - revision-completion-table (files)
+(defun vc-fossil-revision-completion-table (_files)
+  (vc-fossil--branches))
 
 (defconst vc-fossil-annotate-re
   "\\([[:word:]]+\\)\\s-+\\([-0-9]+\\)\\s-+[0-9]+: ")
@@ -554,7 +559,14 @@ This prompts for a branch to merge from."
 
 ;; - region-history-mode ()
 
-;; - mergebase (rev1 &optional rev2)
+(defun vc-fossil-mergebase (rev1 &optional rev2)
+  (unless rev2 (setq rev2 "trunk"))
+  (let* ((pivot (vc-fossil--run "test-find-pivot" rev1 rev2))
+	 (_pos (string-match "pivot=\\([0-9a-fA-F]+\\)" pivot))
+	 (base (match-string 1 pivot)))
+    (if base
+        base
+      (error "No common ancestor for merge base"))))
 
 ;; TAG SYSTEM
 
@@ -639,6 +651,8 @@ This prompts for a branch to merge from."
 (defun vc-fossil-repository-url (file-or-dir &optional remote-name)
   (let ((default-directory (vc-fossil-root file-or-dir)))
     (cadr (assoc (or remote-name "default") (vc-fossil--remotes)))))
+
+;; - prepare-patch (rev)
 
 ;; Useful functions for interacting with Fossil
 
