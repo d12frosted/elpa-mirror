@@ -5,11 +5,11 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 5 Dec 2015
 ;; Version: 0.2.0
-;; Package-Version: 20221111.1808
-;; Package-Commit: 6a6e3eb46b4ae380f9f56362d6525d6725fc1b0a
+;; Package-Version: 20221120.202
+;; Package-Commit: 2299cd731205906350d615021f99a66d7a8905c2
 ;; Keywords: tools php dependency manager
 ;; Homepage: https://github.com/zonuexe/composer.el
-;; Package-Requires: ((emacs "24.3") (s "1.9.0") (f "0.17") (seq "1.9") (php-runtime "0.1.0"))
+;; Package-Requires: ((emacs "25.1") (seq "1.9") (php-runtime "0.1.0"))
 ;; License: GPL-3.0-or-later
 
 ;; This file is NOT part of GNU Emacs.
@@ -49,15 +49,22 @@
 (require 'cl-lib)
 (require 'json)
 (require 'seq)
-(require 's)
-(require 'f)
+(require 'consult nil t)
+
+(eval-when-compile
+  (declare-function
+   consult--read "ext:consult"
+   (candidates &rest options &key
+               prompt predicate require-match history default
+               keymap category initial narrow add-history annotate
+               state preview-key sort lookup group inherit-input-method)))
 
 ;;; Variables
 (defvar composer-executable-bin nil
   "Path to `composer.phar' exec file.")
 
 (defvar composer-use-managed-phar nil
-  "Use composer.phar managed by Emacs package when `composer-use-managed-phar' is t.")
+  "When not-NIL, use `composer.phar' managed by Emacs package.")
 
 (defvar composer--async-use-compilation t)
 
@@ -66,18 +73,9 @@
 (defvar composer--quote-shell-argument t)
 
 (defvar composer-global-command nil
-  "Execute composer global command when `composer-global-command' is t.")
-
-(defvar composer-recent-version "1.10.7"
-  "Known latest version of `composer.phar'.")
+  "When not-NIL, execute composer global command.")
 
 (defconst composer-installer-url "https://getcomposer.org/installer")
-
-(defconst composer-unsafe-phar-url
-  "https://getcomposer.org/download/1.10.7/composer.phar")
-
-(defconst composer-unsafe-phar-md5sum
-  "66eea3af31cf357e2d8cac648abc21f3")
 
 (defconst composer-known-executable-names
   '("composer" "composer.phar"))
@@ -91,7 +89,7 @@
   :tag "Composer"
   :prefix "composer-")
 
-(defcustom composer-directory-to-managed-file (f-join user-emacs-directory "var")
+(defcustom composer-directory-to-managed-file (expand-file-name "var" user-emacs-directory)
   "Path to directory of `composer.phar' file managed by Emacs package."
   :type 'directory
   :group 'composer)
@@ -104,15 +102,6 @@
   '("init" "remove" "search")
   "List of sub commands of interactive execution."
   :type '(repeat string))
-
-(defcustom composer-unsafe-skip-verify-installer-signature nil
-  "This setting is risky.
-
-Please enable this setting at your own risk in an environment old Emacs or PHP linked with old OpenSSL."
-  :type 'boolean
-  :risky t
-  :group 'composer)
-
 
 ;;; Utility
 (defun composer-find-executable ()
@@ -132,14 +121,9 @@ Please enable this setting at your own risk in an environment old Emacs or PHP l
              return (list cmd))))
 
 (defun composer--find-composer-root (directory)
-  "Return directory path which include composer.json by `DIRECTORY'."
-  (let ((composer-json (f-join directory "composer.json")) parent)
-    (if (file-exists-p composer-json)
-        (concat (f-dirname composer-json) "/")
-      (setq parent (f-dirname directory))
-      (if (null parent)
-          nil
-        (composer--find-composer-root (f-dirname directory))))))
+  "Return path which include `composer.json' by DIRECTORY."
+  (or (locate-dominating-file directory "composer.json")
+      (locate-dominating-file directory "composer.lock")))
 
 (defun composer--make-command-string (sub-command args)
   "Return command string by `SUB-COMMAND' and `ARGS'."
@@ -163,8 +147,20 @@ Please enable this setting at your own risk in an environment old Emacs or PHP l
   args)
 
 (defun composer--parse-json (dir)
-  "Parse `composer.json' in `DIR'."
-  (json-read-file (f-join dir "composer.json")))
+  "Parse `composer.json' in DIR."
+  (json-read-file (expand-file-name "composer.json" dir)))
+
+(defun composer--parse-json-string (json)
+  "Parse `composer.json' from JSON string."
+  (with-temp-buffer
+    (insert json)
+    (goto-char (point-min))
+    (if (eval-when-compile (and (fboundp 'json-serialize)
+                                (fboundp 'json-parse-buffer)))
+        (with-no-warnings
+          (json-parse-buffer :object-type 'alist :array-type 'array))
+      (let ((json-object-type 'alist) (json-array-type 'vector))
+        (json-read-object)))))
 
 (defun composer--get-vendor-bin-dir ()
   "Return path to project bin dir."
@@ -176,29 +172,30 @@ Please enable this setting at your own risk in an environment old Emacs or PHP l
 
 (defun composer--get-vendor-bin-files ()
   "Return executable file names of `vendor/bin' dir."
-  (let* ((default-directory (or (composer--find-composer-root default-directory)
-                                default-directory))
-         (bin-dir (composer--get-vendor-bin-dir)))
-    (if (null bin-dir)
-        nil
-      (directory-files (f-join default-directory bin-dir) nil "\\`[^.]"))))
+  (let ((default-directory (or (composer--find-composer-root default-directory)
+                               default-directory))
+        path)
+    (when-let (bin-dir (composer--get-vendor-bin-dir))
+      (setq path (expand-file-name bin-dir default-directory))
+      (when (file-directory-p path)
+        (directory-files path nil "\\`[^.]")))))
 
 (defun composer--get-vendor-bin-path (command)
-  "Return executable file path by `COMMAND'."
+  "Return executable file path by COMMAND."
   (let* ((default-directory (or (composer--find-composer-root default-directory)
                                 default-directory))
          (bin-dir (composer--get-vendor-bin-dir))
-         (command-path (if (and bin-dir command) (f-join bin-dir command) nil)))
-    (if (not (and command-path (file-executable-p command-path)))
-        (error "%s command is not exists" command)
-      command-path)))
+         (command-path (if (and bin-dir command) (expand-file-name command bin-dir) nil)))
+    (if (and command-path (file-executable-p command-path))
+        command-path
+      (user-error "%s command is not exists" command))))
 
 (defun composer--get-scripts ()
   "Return script names in composer.json, excluding pre and post hooks."
-  (let ((output (composer--command-execute "run" "-l")))
-    (seq-filter (lambda (script) (not (member script '("pre" "post"))))
-                (mapcar (lambda (line) (car (s-split " " line t)))
-                        (s-split "\n" (cadr (s-split "Scripts:\n" output)))))))
+  (let ((output (composer--command-execute "run-script" "-l")))
+    (seq-filter (lambda (script) (not (or (null script) (member script '("pre" "post")))))
+                (mapcar (lambda (line) (car (split-string line " " t)))
+                        (split-string (or (cadr (split-string output "Scripts:\n")) "") "\n")))))
 
 (defun composer--command-async-execute (sub-command &rest args)
   "Asynchronous execute `composer.phar' command SUB-COMMAND by ARGS."
@@ -217,70 +214,79 @@ Please enable this setting at your own risk in an environment old Emacs or PHP l
         (compile (composer--make-command-string sub-command args) t)
       (replace-regexp-in-string
        "^.+getcomposer.org/xdebug\n" ""
-       (s-chomp
-        (shell-command-to-string (composer--make-command-string sub-command args)))))))
+       (string-trim-right (shell-command-to-string (composer--make-command-string sub-command args)))))))
 
 (defun composer--list-sub-commands ()
   "List `composer' sub commands."
-  (let ((output (composer--command-execute "list")))
-    (mapcar (lambda (line) (car (s-split-words line)))
-            (s-split "\n" (cadr (s-split "Available commands:\n" output))))))
+  (let ((output (composer--command-execute "list" "--format=json")))
+    (delq nil
+          (seq-map (lambda (command)
+                     (let ((name (cdr-safe (assq 'name command))))
+                       (when (and name (not (string-prefix-p "_" name)))
+                         (list name :description (cdr-safe (assq 'description command))))))
+                   (cdr-safe (assq 'commands (composer--parse-json-string output)))))))
+
+(defun composer--completion-read-sub-command (global)
+  "Completing read composer sum command.
+
+When GLOBAL is non-NIL, execute sub command in global context."
+  (let* ((commands (composer--list-sub-commands))
+         (prompt (if global "Composer (global) sub command: " "Composer sub command: ")))
+    (if (fboundp 'consult--read)
+        (let* ((max (seq-max (seq-map (lambda (cand) (length (car cand))) commands)))
+               (align (propertize " " 'display `(space :align-to (+ left ,max 4))))
+               (annotator (lambda (cand)
+                            (when-let (description (plist-get (cdr-safe (assoc-string cand commands)) :description))
+                              (concat align description)))))
+          (consult--read commands
+                         :prompt prompt
+                         :annotate annotator))
+      (completing-read prompt commands))))
 
 (defun composer--get-version ()
   "Return version string of composer."
-  (car-safe (s-match "[0-9]+\\.[0-9]+\\.[0-9]+" (composer--command-execute "--version"))))
+  (save-match-data
+    (let ((v (composer--command-execute "--version")))
+      (when (string-match "[0-9]+\\.[0-9]+\\.[0-9]+" v)
+        (match-string 0 v)))))
 
 (defun composer--get-global-dir ()
   "Return path to global composer directory."
   (seq-find
-   'file-exists-p
-   (seq-remove
-    'null
-    (list
-     (getenv "COMPOSER_HOME")
-     (when (eq system-type 'windows-nt) (f-join (getenv "APPDATA") "Composer"))
-     (when (getenv "XDG_CONFIG_HOME") (f-join (getenv "XDG_CONFIG_HOME") "composer"))
-     (when (getenv "HOME") (f-join (getenv "HOME") ".composer"))))))
+   #'file-exists-p
+   (delq
+    nil
+    (nconc
+     (list (getenv "COMPOSER_HOME")
+           (when (eval-when-compile (eq system-type 'windows-nt))
+             (expand-file-name "Composer" (getenv "APPDATA")))
+           (when-let (xdg-home (getenv "XDG_CONFIG_HOME")) (expand-file-name "composer") xdg-home))
+     (when-let (home (getenv "HOME"))
+       (list (expand-file-name ".config/composer" home)
+             (expand-file-name ".composer" home)))))))
 
 (defun composer--get-path-to-managed-composer-phar ()
   "Return path to `composer.phar' file managed by Emacs package."
   (let ((user-emacs-directory composer-directory-to-managed-file))
     (locate-user-emacs-file "./composer.phar")))
 
-(define-obsolete-function-alias 'composer--get-path-tomanaged-composer-phar 'composer--get-path-to-managed-composer-phar
-  "0.2.0")
-
 (defun composer--ensure-exist-managed-composer-phar ()
   "Install latest version of `composer.phar' if that was not installed."
   (let ((composer-executable-bin (composer--get-path-to-managed-composer-phar)))
-    (unless (and (file-exists-p composer-executable-bin)
-                 (version<= composer-recent-version (composer--get-version)))
-      (if composer-unsafe-skip-verify-installer-signature
-          (composer--unsafe-fallback-download-composer-phar composer-directory-to-managed-file)
-        (composer--download-composer-phar composer-directory-to-managed-file)))))
-
+    (unless (file-exists-p composer-executable-bin)
+      (composer--download-composer-phar composer-directory-to-managed-file))))
 
 (defun composer--hash-file-sha384 (path)
-  "Return SHA-384 hash of the file `PATH'."
+  "Return SHA-384 hash of the file PATH."
   (cond
-   ((and (fboundp 'secure-hash-algorithms)
-         (memq 'sha384 (secure-hash-algorithms)))
-    (secure-hash 'sha384 (f-read-bytes path)))
+   ((eval-when-compile (and (fboundp 'secure-hash-algorithms)
+                            (memq 'sha384 (secure-hash-algorithms))))
+    (secure-hash 'sha384 (with-temp-buffer
+                           (insert-file-contents-literally path)
+                           (buffer-substring-no-properties (point-min) (point-max)))))
    ((string= "1" (php-runtime-expr "in_array('sha384', hash_algos())"))
-    (s-trim (php-runtime-expr (format "hash_file('SHA384', '%s')" path))))
-   (t (error "No method for SHA-384 hash.  Please install latest version of Emacs or PHP linked with OpenSSL"))))
-
-(defun composer--unsafe-fallback-download-composer-phar (path-to-dest)
-  "Download composer.phar and copy to `PATH-TO-DEST' directory."
-  (let ((dest-filename (expand-file-name "composer.phar" path-to-dest))
-        actual-signature)
-    (php-runtime-eval (format "copy('%s', '%s');" composer-unsafe-phar-url dest-filename))
-    (setq actual-signature
-          (php-runtime-expr (format "md5_file('%s')" dest-filename)))
-    (unless (string= composer-unsafe-phar-md5sum actual-signature)
-      (php-runtime-expr (format "unlink('%s')" dest-filename))
-      (error "Invalid composer.phar md5 signature"))
-    (php-runtime-expr (format "chmod('%s', 0755)" dest-filename))))
+    (string-trim (php-runtime-expr (format "hash_file('SHA384', '%s')" path))))
+   (error "No method for SHA-384 hash.  Please install latest version of Emacs or PHP linked with OpenSSL")))
 
 (defun composer--download-composer-phar (path-to-dest)
   "Download composer.phar and copy to `PATH-TO-DEST' directory.
@@ -288,9 +294,9 @@ Please enable this setting at your own risk in an environment old Emacs or PHP l
 https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md"
   (unless (featurep 'php-runtime)
     (error "This feature requires `php-runtime' package"))
-  (let ((path-to-temp (f-join temporary-file-directory "composer-setup.php"))
+  (let ((path-to-temp (expand-file-name "composer-setup.php" temporary-file-directory))
         (expected-signature
-         (s-trim (php-runtime-eval "readfile('https://composer.github.io/installer.sig');")))
+         (string-trim (php-runtime-eval "readfile('https://composer.github.io/installer.sig');")))
         actual-signature)
     (php-runtime-eval (format "copy('%s', '%s');" composer-installer-url path-to-temp))
     (setq actual-signature (composer--hash-file-sha384 path-to-temp))
@@ -306,7 +312,7 @@ https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md"
 (defun composer-get-config (name)
   "Return config value by `NAME'."
   (let* ((default-directory (if composer-global-command (composer--get-global-dir) default-directory))
-         (output (s-lines (composer--command-execute "config" name))))
+         (output (split-string (composer--command-execute "config" name) "\n")))
     (if (eq 1 (length output)) (car output) nil)))
 
 ;; (composer--command-async-execute "require" "--dev" "phpunit/phpunit:^4.8")
@@ -322,10 +328,10 @@ https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md"
   "Retrurn path to Composer bin directory."
   (if composer-global-command
       (or (getenv "COMPOSER_BIN_DIR")
-          (f-join (composer--get-global-dir) "vendor/bin"))
+          (expand-file-name "vendor/bin" (composer--get-global-dir)))
     (let ((path (composer--find-composer-root default-directory)))
       (when path
-        (f-join path (composer-get-config "bin-dir"))))))
+        (expand-file-name (composer-get-config "bin-dir") path)))))
 
 ;;; Command
 
@@ -339,19 +345,25 @@ https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md"
 (defun composer-dump-autoload ()
   "Execute `composer.phar install' command."
   (interactive)
-  (let ((composer--async-use-compilation nil))
-    (composer--command-async-execute "dump-autoload")))
+  (prog1 t
+    (let ((output (composer--command-execute "dump-autoload")))
+      (when (called-interactively-p 'interactive)
+        (message "Composer: %s"
+                 (car-safe (last (split-string output "\n"))))))))
 
 ;;;###autoload
 (defun composer-require (is-dev &optional package)
-  "Execute `composer.phar require (--dev)' command.  Add --dev option if `IS-DEV' is t.  Require `PACKAGE' is package name."
+  "Execute `composer require' command.
+
+When IS-DEV is not-NIL, add `--dev' to option.
+Require PACKAGE is package name."
   (interactive "p")
   (when (called-interactively-p 'interactive)
     (setq is-dev (not (eq is-dev 1)))
     (setq package (read-string
                    (if is-dev "Input package name(dev): " "Input package name: "))))
   (unless package
-    (error "A argument `PACKAGE' is required"))
+    (user-error "An argument PACKAGE is required"))
   (let ((args (list package)))
     (when is-dev (push "--dev" args))
     (apply 'composer--command-async-execute "require" args)))
@@ -366,13 +378,13 @@ https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md"
 (defun composer-find-json-file ()
   "Open composer.json of the project."
   (interactive)
-  (find-file (f-join (composer--find-composer-root default-directory) "composer.json")))
+  (find-file (expand-file-name "composer.json" (composer--find-composer-root default-directory))))
 
 ;;;###autoload
 (defun composer-view-lock-file ()
   "Open composer.lock of the project."
   (interactive)
-  (find-file (f-join (composer--find-composer-root default-directory) "composer.lock"))
+  (find-file (expand-file-name "composer.lock" (composer--find-composer-root default-directory)))
   (view-mode))
 
 ;;;###autoload
@@ -393,15 +405,6 @@ https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md"
   (composer--command-async-execute "run-script" script))
 
 ;;;###autoload
-(defun composer-self-update ()
-  "Execute `composer.phar self-update' command."
-  (interactive)
-  (when (yes-or-no-p "Do composer self-update? ")
-    (composer--command-async-execute "self-update")))
-
-(make-obsolete 'composer-self-update 'composer "0.0.5")
-
-;;;###autoload
 (defun composer-setup-managed-phar (&optional force)
   "Setup `composer.phar'.  Force re-setup when `FORCE' option is non-NIL."
   (interactive "p")
@@ -415,16 +418,16 @@ https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md"
 
 ;;;###autoload
 (defun composer (global &optional sub-command option)
-  "Execute `composer.phar'.  Execute `global' sub command If GLOBAL is t.  Require SUB-COMMAND is composer sub command.  OPTION is optional commandline arguments."
+  "Execute `composer' SUB-COMMAND with OPTION arguments.
+
+When called with prefix argument GLOBAL, execute in global context."
   (interactive "p")
   (when (called-interactively-p 'interactive)
     (setq global (not (eq global 1)))
-    (setq sub-command (completing-read
-                       (if global "Composer (global) sub command: " "Composer sub command: ")
-                       (composer--list-sub-commands)))
+    (setq sub-command (composer--completion-read-sub-command global))
     (setq option (read-string (format "Input `composer %s' argument: " sub-command))))
   (unless sub-command
-    (error "A argument `SUB-COMMAND' is required"))
+    (error "An argument SUB-COMMAND is required"))
   (let ((composer--quote-shell-argument nil)
         (composer-global-command global)
         (composer--execute-interactive (member sub-command composer-interactive-sub-commands)))

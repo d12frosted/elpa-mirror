@@ -1,17 +1,13 @@
 (composer .
-	  [(20221111 1808)
+	  [(20221120 202)
 	   ((emacs
-	     (24 3))
-	    (s
-	     (1 9 0))
-	    (f
-	     (0 17))
+	     (25 1))
 	    (seq
 	     (1 9))
 	    (php-runtime
 	     (0 1 0)))
 	   "Interface to PHP Composer" single
-	   ((:commit . "6a6e3eb46b4ae380f9f56362d6525d6725fc1b0a")
+	   ((:commit . "2299cd731205906350d615021f99a66d7a8905c2")
 	    (:authors
 	     ("USAMI Kenta" . "tadsan@zonu.me"))
 	    (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
