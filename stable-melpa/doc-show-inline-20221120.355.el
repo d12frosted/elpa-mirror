@@ -6,11 +6,11 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-doc-show-inline
-;; Package-Version: 20220731.2330
-;; Package-Commit: 02f2187d815b480e316238e2b8568bccc5e38fdd
+;; Package-Version: 20221120.355
+;; Package-Commit: 2b566efe0c6bf1941c124a79b7bf4a973372ca6a
 ;; Keywords: convenience
 ;; Version: 0.1
-;; Package-Requires: ((emacs "26.2"))
+;; Package-Requires: ((emacs "27.1"))
 
 ;;; Commentary:
 
@@ -111,7 +111,12 @@ This hook is called instead of the mode hooks such as:
 `c-mode-hook' and `after-change-major-mode-hook'.")
 
 (defvar-local doc-show-inline-locations 'doc-show-inline-locations-default
-  "Scans the current buffer for locations that `xref' should look-up.")
+  "Scans the current buffer for locations that `xref' should look-up.
+The result of each item must be a (symbol . position) cons cell,
+where the symbol is a string used for the look-up and
+the position is it's beginning in the buffer.
+
+Note that this function may move the POINT without using `save-excursion'.")
 
 (defvar-local doc-show-inline-extract-doc 'doc-show-inline-extract-doc-default
   "Function to extract the doc-string given the destination buffer.
@@ -138,7 +143,7 @@ When unset, the :filter property from `doc-show-inline-mode-defaults' is used.")
 ;; Allow disabling for debugging.
 (defconst doc-show-inline--use-lookup-cache t)
 ;; Always set when the mode is active:
-;; - key: the symbol as a string (from `xref-backend-identifier-at-point'),
+;; - key: the symbol as a string (from `xref-backend-identifier-at-point' or from `imenu'),
 ;; - value: the syntax-highlighted string to display (from `doc-show-inline--doc-from-xref').
 (defvar-local doc-show-inline--lookup-cache nil)
 
@@ -439,7 +444,11 @@ the point should not be moved by this function."
       (pair nil)
       (mark nil)
       (imstack nil)
-      (result nil))
+      (result nil)
+
+      ;; As the results differ between back-ends, some custom handling is needed.
+      (xref-backend (xref-find-backend)))
+
     ;; Elements of alist are either ("name" . marker), or
     ;; ("submenu" ("name" . marker) ... ). The list can be
     ;; Arbitrarily nested.
@@ -464,8 +473,28 @@ the point should not be moved by this function."
                         (marker-position mark))
                       (t ;; Integer.
                         mark))))
+
                 (unless (or (and pos-beg (<= pos pos-beg)) (and pos-end (>= pos pos-end)))
-                  (push pos result))))))
+                  (goto-char pos)
+                  (let ((sym nil))
+                    (cond
+                      ((eq xref-backend 'eglot)
+                        ;; EGLOT mode has some differences.
+                        ;; - `xref-backend-identifier-at-point' isn't functional.
+                        ;; - The point is at the beginning of the line.
+                        ;; For this reason, it's necessary to search for `sym' & set the
+                        ;; position to this.
+                        (setq sym (car pair))
+                        (unless (looking-at-p (regexp-quote sym))
+                          ;; In most cases limiting by `line-end-position' is sufficient.
+                          (save-match-data
+                            (when (search-forward sym pos-end t)
+                              (setq pos (- (point) (length sym)))))))
+                      (t
+                        ;; This works for `xref-lsp'.
+                        (setq sym (xref-backend-identifier-at-point xref-backend))))
+
+                    (push (cons sym pos) result)))))))
         (t
           (setq alist (car imstack))
           (setq imstack (cdr imstack)))))
@@ -692,28 +721,17 @@ XREF-BACKEND is the back-end used to find this symbol."
                     buf))
 
                 (while points
-                  (let ((pos (pop points)))
+                  (pcase-let ((`(,sym . ,pos) (pop points)))
                     (cond
                       ((null (doc-show-inline--pos-in-overlays pos overlays-in-view))
                         (doc-show-inline--log-info
                           "symbol \"%s\" in %S at point %d is not in the overlay list"
-                          (save-excursion
-                            (goto-char pos)
-                            (xref-backend-identifier-at-point xref-backend))
+                          sym
                           (current-buffer)
                           pos))
                       (t
                         (goto-char pos)
-                        (let ((sym (xref-backend-identifier-at-point xref-backend)))
-                          (cond
-                            ((null sym)
-                              (doc-show-inline--log-fail
-                                "can't find symbol in %S at point %d using `xref-backend' %S"
-                                (current-buffer)
-                                pos
-                                xref-backend))
-                            (t
-                              (doc-show-inline--idle-handle-pos pos sym xref-backend)))))))))
+                        (doc-show-inline--idle-handle-pos pos sym xref-backend))))))
 
               ;; Close any buffers loaded only for the purpose of extracting text.
               (mapc 'kill-buffer temporary-buffers)))))
