@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/packed
 ;; Keywords: lisp
-;; Package-Version: 20220422.1626
-;; Package-Commit: 2d4ed03032b3ddc008182f48bd3b81dbda0cbefc
+;; Package-Version: 20221120.1407
+;; Package-Commit: c0d075fa02424b39bd5a3492167f914b8522f686
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
@@ -401,7 +401,8 @@ nil if not found."
 (defmacro packed-with-loaddefs (dest &rest body)
   (declare (indent 1))
   `(packed-without-mode-hooks
-     (require 'autoload)
+     (with-suppressed-warnings ((obsolete autoload))
+       (require 'autoload))
      (let ((generated-autoload-file ,dest) buf)
        (prog1 (progn ,@body)
          (while (setq buf (find-buffer-visiting generated-autoload-file))
