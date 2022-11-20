@@ -849,7 +849,7 @@ Using templates for creating new modules
   │ 
   │ :- module(foo, []).
   │ 
-  │ /** <module> foo
+  │ /** <module>
   │ 
   │ */
   │ 
@@ -996,12 +996,17 @@ Code Completion
   Predicate completion
         If point is at a callable position, `completion-at-point'
         suggests matching predicates as completion candidates.
+        Predicate calls are inserted as complete term.  If the chosen
+        predicate takes arguments, holes are inserted in their places
+        (see [Filling Holes]).
   Atom completion
         If point is at a non-callable, `completion-at-point' suggests
         matching atoms as completion candidates.
 
 
 [Symbol Completion in the Emacs manual] <info:emacs#Symbol Completion>
+
+[Filling Holes] See section Filling Holes
 
 
 Context-Based Term Insertion

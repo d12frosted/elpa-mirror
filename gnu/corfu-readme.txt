@@ -89,13 +89,13 @@ Table of Contents
     contain arbitrary characters, after inserting a space via `M-SPC'
     (configurable via `corfu-quit-at-boundary' and `corfu-separator').
   • Deferred completion style highlighting for performance.
-  • Support for candidate annotations and documentation in the echo
-    area.
+  • Support for candidate annotations (`annotation-function',
+    `affixation-function').
   • Deprecated candidates are crossed out in the display.
   • Icons can be provided by an external package via margin formatter
     functions.
-  • Extensions: Quick keys, Index keys, Sorting by history, Candidate
-    documentation
+  • Rich set of extensions: Quick keys, Index keys, Sorting by history,
+    Candidate documentation in echo area, popup or separate buffer
 
 
 [Orderless] <https://github.com/oantolin/orderless>
@@ -132,7 +132,6 @@ Table of Contents
   │   ;; (corfu-preview-current nil)    ;; Disable current candidate preview
   │   ;; (corfu-preselect-first nil)    ;; Disable candidate preselection
   │   ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
-  │   ;; (corfu-echo-documentation nil) ;; Disable documentation in the echo area
   │   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
   │ 
   │   ;; Enable Corfu only for certain modes.
@@ -306,7 +305,8 @@ Table of Contents
   │ (defun corfu-enable-in-minibuffer ()
   │   "Enable Corfu in the minibuffer if `completion-at-point' is bound."
   │   (when (where-is-internal #'completion-at-point (list (current-local-map)))
-  │     ;; (setq-local corfu-auto nil) Enable/disable auto completion
+  │     ;; (setq-local corfu-auto nil) ;; Enable/disable auto completion
+  │     (setq-local corfu-echo-delay nil) ;; Disable echo
   │     (corfu-mode 1)))
   │ (add-hook 'minibuffer-setup-hook #'corfu-enable-in-minibuffer)
   └────
@@ -502,11 +502,11 @@ Table of Contents
   minibuffer, since the minibuffer offers richer interaction
   features. In particular, [Embark] is available in the minibuffer, such
   that you can act on the candidates or export/collect the candidates to
-  a separate buffer. Hopefully we can also add Corfu-support to Embark
-  in the future, such that at least export/collect is possible directly
-  from Corfu. But in my opinion having the ability to transfer the Corfu
-  completion to the minibuffer is an even better feature, since further
-  completion can be performed there.
+  a separate buffer. We could add Corfu support to Embark in the future,
+  such that export/collect is possible directly from Corfu. But in my
+  opinion having the ability to transfer the Corfu completion to the
+  minibuffer is an even better feature, since further completion can be
+  performed there.
 
   The command `corfu-move-to-minibuffer' is defined here in terms of
   `consult-completion-in-region', which uses the minibuffer completion
@@ -558,18 +558,25 @@ Table of Contents
   separately, both `corfu.el' and the `corfu-*.el' extensions. Currently
   the following extensions come with the Corfu ELPA package:
 
-  • [corfu-history]: `corfu-history-mode' to remember selected
-    candidates and to improve sorting.
-  • [corfu-indexed]: `corfu-indexed-mode' to select indexed candidates
-    with prefix arguments.
+  • [corfu-echo]: `corfu-echo-mode' displays a brief candidate
+    documentation in the echo area.
+  • [corfu-history]: `corfu-history-mode' remembers selected candidates
+    and sorts the candidates by their history position.
+  • [corfu-indexed]: `corfu-indexed-mode' allows you to select indexed
+    candidates with prefix arguments.
   • [corfu-info]: Actions to access the candidate location and
     documentation.
+  • [corfu-popupinfo]: Display candidate documentation or source in a
+    popup next to the candidate menu.
   • [corfu-quick]: Commands to select using Avy-style quick keys.
 
   See the Commentary of those files for configuration details.
 
 
 [extensions/] <https://github.com/minad/corfu/tree/main/extensions>
+
+[corfu-echo]
+<https://github.com/minad/corfu/blob/main/extensions/corfu-echo.el>
 
 [corfu-history]
 <https://github.com/minad/corfu/blob/main/extensions/corfu-history.el>
@@ -579,6 +586,9 @@ Table of Contents
 
 [corfu-info]
 <https://github.com/minad/corfu/blob/main/extensions/corfu-info.el>
+
+[corfu-popupinfo]
+<https://github.com/minad/corfu/blob/main/extensions/corfu-popupinfo.el>
 
 [corfu-quick]
 <https://github.com/minad/corfu/blob/main/extensions/corfu-quick.el>
@@ -595,10 +605,6 @@ Table of Contents
   • [corfu-terminal]: The corfu-terminal package provides an
     overlay-based display for Corfu, such that you can use Corfu in
     terminal Emacs.
-
-  • [corfu-doc]: The corfu-doc package displays the candidate
-    documentation in a popup next to the Corfu popup, similar to
-    `company-quickhelp'.
 
   • [Orderless]: Corfu supports completion styles, including the
     advanced [Orderless] completion style, where the filtering
@@ -632,8 +638,6 @@ Table of Contents
 
 
 [corfu-terminal] <https://codeberg.org/akib/emacs-corfu-terminal>
-
-[corfu-doc] <https://github.com/galeo/corfu-doc>
 
 [Orderless] <https://github.com/oantolin/orderless>
 
