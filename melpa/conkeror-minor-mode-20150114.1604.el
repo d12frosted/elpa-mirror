@@ -4,6 +4,8 @@
 
 ;; Author: Artur Malabarba <bruce.connor.am@gmail.com>>
 ;; URL: http://github.com/Bruce-Connor/conkeror-minor-mode
+;; Package-Version: 20150114.1604
+;; Package-Commit: 476e81c27b056e21c192391fe674a2bf875466b0
 ;; Version: 1.6.2
 ;; Keywords: programming tools
 ;; Prefix: conkeror

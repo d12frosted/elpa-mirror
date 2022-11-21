@@ -1,0 +1,10 @@
+(engine-mode .
+	     [(20221120 2327)
+	      ((cl-lib
+		(0 5)))
+	      "Define and query search engines from within Emacs." single
+	      ((:commit . "b6fafabc688084c142fbc7df19a7be15f55f32f3")
+	       (:authors
+		("Harry R. Schwartz" . "hello@harryrschwartz.com"))
+	       (:maintainer "Harry R. Schwartz" . "hello@harryrschwartz.com")
+	       (:url . "https://github.com/hrs/engine-mode"))])
