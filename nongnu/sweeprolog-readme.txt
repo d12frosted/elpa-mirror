@@ -1191,14 +1191,20 @@ Sending signals to running top-levels
   arise a need to interrupt the query, either to inspect the state of
   the top-level or to free it for running other queries.  To signal a
   `sweep' top-level that it should stop executing the current query and
-  do something else instead, use the command `M-x
-  sweeprolog-top-level-signal'.  This command prompts for an active
+  do something else instead, use the command
+  `sweeprolog-top-level-signal'. This command prompts for an active
   `sweep' top-level buffer followed by a Prolog goal, and interrupts the
   top-level causing it to run the specified goal.
 
   In `sweeprolog-top-level-mode' buffers, the command
   `sweeprolog-top-level-signal-current' is available for signaling the
-  current top-level.  It is bound by default to `C-c C-c'.
+  current top-level.  It is bound by default to `C-c C-c'.  Normally,
+  this command signals the goal specified by the user option
+  `sweeprolog-top-level-signal-default-goal', which is set by default to
+  `trace', causing the top-level thread to enter trace mode (see [Trace
+  Mode in the SWI-Prolog manual]).  When called with a prefix argument
+  (`C-u C-c C-c'), `sweeprolog-top-level-signal-current' instead prompts
+  for a goal similarly to `sweeprolog-top-level-signal'.
 
   It is also possible to signal top-levels from the `sweep' Top-level
   Menu buffer with the command `sweeprolog-top-level-menu-signal' with
@@ -1208,6 +1214,9 @@ Sending signals to running top-levels
   For more information about interrupting threads in SWI-Prolog, see
   [Signaling threads in the SWI-Prolog manual].
 
+
+[Trace Mode in the SWI-Prolog manual]
+<https://www.swi-prolog.org/pldoc/man?section=trace-summary-trace-mode>
 
 [Signaling threads in the SWI-Prolog manual]
 <https://www.swi-prolog.org/pldoc/man?section=thread-signal>
