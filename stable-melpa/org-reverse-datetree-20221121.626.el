@@ -4,8 +4,8 @@
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.4.2-pre
-;; Package-Version: 20221119.1134
-;; Package-Commit: b6d6b7179019e87b13dfdfeef28037821ed4d01f
+;; Package-Version: 20221121.626
+;; Package-Commit: 127b168960296861f73f8e38247438ebdc575d1e
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -573,6 +573,9 @@ TEXT is a heading text."
   "Insert a pair of KEY and VALUE into the file header."
   (org-with-wide-buffer
    (goto-char (point-min))
+   (when (looking-at org-property-drawer-re)
+     (goto-char (match-end 0))
+     (beginning-of-line 2))
    (if (re-search-forward (concat (rx bol "#+")
                                   (regexp-quote key)
                                   (rx ":" (1+ space)))

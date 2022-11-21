@@ -4,8 +4,8 @@
 
 ;; Author: Ian Wahbe
 ;; URL: https://github.com/iwahbe/jsonian
-;; Package-Version: 20221119.518
-;; Package-Commit: 1e8103c281bf7781bf3246d2049165d8966710c6
+;; Package-Version: 20221121.522
+;; Package-Commit: 1d226db4da79d48427b623c2825e499030a6d50f
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -725,6 +725,7 @@ PROPERTY defaults to `face'."
        ((eq (char-after) ?:) (forward-char))
        ((eq (char-after) ?t) (jsonian--forward-true))
        ((eq (char-after) ?f) (jsonian--forward-false))
+       ((eq (char-after) ?n) (jsonian--forward-null))
        ((eq (char-after) ?\{) (forward-list))
        ((eq (char-after) ?\[) (forward-list))
        ((and (char-after) (>= (char-after) ?0) (<= (char-after) ?9)) (jsonian--forward-number))
@@ -1043,11 +1044,9 @@ TYPE is a flag specifying the type of completion."
      ((eq (car-safe type) 'boundaries)
       (cons 'boundaries (jsonian--completing-boundary str (cdr type))))
      ((eq type 'metadata)
-      (cons 'metadata (list
-                       (cons 'display-sort-function
-                             (apply-partially #'jsonian--completing-sort str))
-                       (cons 'affixation-function
-                             (apply-partially #'jsonian--completing-affixation str jsonian--cache)))))
+      (cons 'metadata `((display-sort-function . ,(apply-partially #'jsonian--completing-sort str))
+                       (affixation-function .
+                             ,(apply-partially #'jsonian--completing-affixation str jsonian--cache)))))
      (t (error "Unexpected type `%s'" type)))))
 
 (defun jsonian--completing-affixation (prefix cache paths)
@@ -1215,24 +1214,24 @@ is returned."
 (defun jsonian--node-preview (pos)
   "Provide a preview of the value of the node at POS."
   (cond
-((eq (char-after pos) ?\")
+   ((eq (char-after pos) ?\")
     ;; TODO: bound size of string
     (save-excursion
       (goto-char pos)
       (if-let (end (jsonian--pos-in-keyp t))
           (progn (goto-char end)
-                          (jsonian--forward-to-significant-char)
-                          (forward-char)
-                          (jsonian--forward-to-significant-char)
-                          (jsonian--node-preview (point)))
+                 (jsonian--forward-to-significant-char)
+                 (forward-char)
+                 (jsonian--forward-to-significant-char)
+                 (jsonian--node-preview (point)))
         (jsonian--forward-string)
         (buffer-substring pos (point)))))
-   ((or (eq (char-after pos) ?t)
-        (eq (char-after pos) ?n))
+   ((or (eq (char-after pos) ?t)  ; literal: true
+        (eq (char-after pos) ?n)) ; literal: null
     (buffer-substring pos (+ pos 4)))
-   ((eq (char-after pos) ?f)
+   ((eq (char-after pos) ?f)      ; literal: false
     (buffer-substring pos (+ pos 5)))
-   ((and (<= (char-after pos) ?9)
+   ((and (<= (char-after pos) ?9) ; number
          (>= (char-after pos) ?0))
     (buffer-substring pos (save-excursion
                             (goto-char pos)
@@ -1645,10 +1644,11 @@ DIRECTION indicates if parsing is forward (:forward) or backward (:backward)."
   "The public jsonian- function that directly encloses the current stack frame."
   ;; i=3 gets us to the function that called `jsonian--enclosing-public-frame'.
   (let* ((i 3) (frame (backtrace-frame i))
+         (disp (lambda (x) (if (symbolp x) (symbol-name x) (format "%s" x))))
          ;; We take that function as a backup value
-         (ret-val (symbol-name (nth 1 frame))))
+         (ret-val (funcall disp (nth 1 frame))))
     (while frame
-      (let ((fn-name (symbol-name (nth 1 frame))))
+      (let ((fn-name (funcall disp (nth 1 frame))))
         (if (and (string-prefix-p "jsonian-" fn-name)
                  (not (string-prefix-p "jsonian--" fn-name)))
             (setq ret-val fn-name

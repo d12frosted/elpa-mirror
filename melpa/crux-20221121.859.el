@@ -4,8 +4,8 @@
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/crux
-;; Package-Version: 20210811.436
-;; Package-Commit: 6bfd212a7f7ae32e455802fde1f9e3f4fba932a0
+;; Package-Version: 20221121.859
+;; Package-Commit: f8789f67a9d2e1eb31a0e4531aec9bb6d6ec1282
 ;; Version: 0.4.0
 ;; Keywords: convenience
 ;; Package-Requires: ((seq "1.11"))
@@ -39,6 +39,7 @@
 (require 'thingatpt)
 (require 'seq)
 (require 'tramp)
+(require 'subr-x)
 
 (declare-function dired-get-file-for-visit "dired")
 (declare-function org-element-property "org-element")
@@ -169,7 +170,7 @@ When in dired mode, open file under the cursor.
 With a prefix ARG always prompt for command to use."
   (interactive "P")
   (let* ((current-file-name
-          (if (eq major-mode 'dired-mode)
+          (if (derived-mode-p 'dired-mode)
               (dired-get-file-for-visit)
             buffer-file-name))
          (open (pcase system-type
@@ -226,7 +227,7 @@ If the process in that buffer died, ask to restart."
                              (apply crux-shell-func (list crux-shell-buffer-name)))
                            (format "*%s*" crux-shell-buffer-name))
   (when (and (null (get-buffer-process (current-buffer)))
-             (not (eq major-mode 'eshell-mode)) ; eshell has no process
+             (not (derived-mode-p 'eshell-mode)) ; eshell has no process
              (y-or-n-p "The process has died.  Do you want to restart it? "))
     (kill-buffer-and-window)
     (crux-visit-shell-buffer)))
@@ -415,14 +416,23 @@ there's a region, all lines that region covers will be duplicated."
 (defun crux-rename-file-and-buffer ()
   "Rename current buffer and if the buffer is visiting a file, rename it too."
   (interactive)
-  (let ((filename (buffer-file-name)))
-    (if (not (and filename (file-exists-p filename)))
-        (rename-buffer (read-from-minibuffer "New name: " (buffer-name)))
-      (let* ((new-name (read-file-name "New name: " (file-name-directory filename)))
-             (containing-dir (file-name-directory new-name)))
+  (when-let* ((filename (buffer-file-name))
+              (new-name (or (read-file-name "New name: " (file-name-directory filename) nil 'confirm)))
+              (containing-dir (file-name-directory new-name)))
+    ;; make sure the current buffer is saved and backed by some file
+    (when (or (buffer-modified-p) (not (file-exists-p filename)))
+      (if (y-or-n-p "Can't move file before saving it.  Would you like to save it now?")
+          (save-buffer)))
+    (if (get-file-buffer new-name)
+        (message "There already exists a buffer named %s" new-name)
+      (progn
         (make-directory containing-dir t)
         (cond
-         ((vc-backend filename) (vc-rename-file filename new-name))
+         ((vc-backend filename)
+          ;; vc-rename-file seems not able to cope with remote filenames?
+          (let ((vc-filename (if (tramp-tramp-file-p filename) (tramp-file-local-name filename) filename))
+                (vc-new-name (if (tramp-tramp-file-p new-name) (tramp-file-local-name filename) new-name)))
+            (vc-rename-file vc-filename vc-new-name)))
          (t
           (rename-file filename new-name t)
           (set-visited-file-name new-name t t)))))))
@@ -496,7 +506,7 @@ When invoke with C-u, the newly created file will be visited.
 (defun crux-view-url ()
   "Open a new buffer containing the contents of URL."
   (interactive)
-  (let* ((default (if (eq major-mode 'org-mode)
+  (let* ((default (if (derived-mode-p 'org-mode)
                       (org-element-property :raw-link (org-element-context))
                     (thing-at-point-url-at-point)))
          (url (read-from-minibuffer "URL: " default)))
@@ -556,7 +566,9 @@ See `file-attributes' for more info."
         (remote-host (file-remote-p default-directory 'host))
         (remote-localname (file-remote-p filename 'localname)))
     (find-alternate-file (format "/%s:root@%s:%s"
-                                 (or remote-method "sudo")
+                                 (or remote-method (if (executable-find "doas")
+						       "doas"
+						     "sudo"))
                                  (or remote-host "localhost")
                                  (or remote-localname filename)))))
 
@@ -573,7 +585,9 @@ buffer is not visiting a file."
             (remote-host (file-remote-p default-directory 'host))
             (remote-localname (file-remote-p default-directory 'localname)))
         (find-file (format "/%s:root@%s:%s"
-                           (or remote-method "sudo")
+                           (or remote-method (if (executable-find "doas")
+						       "doas"
+						     "sudo"))
                            (or remote-host "localhost")
                            (or remote-localname
                                (read-file-name "Find file (as root): ")))))
@@ -591,7 +605,7 @@ buffer is not visiting a file."
 Meant to be used as `find-file-hook'.
 See also `crux-reopen-as-root-mode'."
   (unless (or (tramp-tramp-file-p buffer-file-name)
-              (equal major-mode 'dired-mode)
+              (derived-mode-p 'dired-mode)
               (not (file-exists-p (file-name-directory buffer-file-name)))
               (file-writable-p buffer-file-name)
               (crux-file-owned-by-user-p buffer-file-name))
@@ -798,6 +812,16 @@ and the entire buffer (in the absense of a region)."
       (if mark-active
           (list (region-beginning) (region-end))
         (list (line-beginning-position) (line-beginning-position 2))))))
+
+(defmacro crux-with-region-or-sexp-or-line (func)
+  "When called with no active region, call FUNC on current sexp/string, or line."
+  `(defadvice ,func (before with-region-or-sexp-or-line activate compile)
+     (interactive
+      (cond
+       (mark-active (list (region-beginning) (region-end)))
+       ((in-string-p) (flatten-list (bounds-of-thing-at-point 'string)))
+       ((thing-at-point 'list) (flatten-list (bounds-of-thing-at-point 'list)))
+       (t (list (line-beginning-position) (line-beginning-position 2)))))))
 
 (defmacro crux-with-region-or-point-to-eol (func)
   "When called with no active region, call FUNC from the point to the end of line."
