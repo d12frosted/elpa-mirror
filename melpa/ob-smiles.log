@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://repo.or.cz/ob-smiles.git
 
 Updating /mnt/store/melpa/working/ob-smiles/
-Checking out origin/HEAD
-Checking out d178f3d4a7e3c1ca9910f0a063d2a3cfd97d8609
-Built ob-smiles in 4.667s, finished at 2022-11-22T06:38:02+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.7K Nov 22 06:38 packages/ob-smiles-20220221.1255.el
-4.0K -rw-r--r-- 1 root root  432 Nov 22 06:38 packages/ob-smiles-20220221.1255.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://repo.or.cz/ob-smiles.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

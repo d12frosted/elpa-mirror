@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20221003.1909
-;; Package-Commit: adef847adc38b9346ccb83df61ebc51e44776dc5
+;; Package-Version: 20221122.852
+;; Package-Commit: cb68e94c1493729ef4f083fb9e3f54626b5a9913
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -54,7 +54,7 @@
    `(secondary-selection ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
                                    :background "SkyBlue4"))))
    `(trailing-whitespace ((,class (:inherit error))))
-   `(cursor ((,class (:inherit default))))
+   `(cursor ((,class (:background "red"))))
    `(error ((,class (:weight bold :foreground "firebrick1"))))
    `(warning ((,class (:weight bold :foreground "DarkOrange"))))
    `(success ((,class (:weight bold :foreground "Green1"))))
@@ -120,6 +120,11 @@
    `(outline-8 ((t (nil))))
    `(markdown-header-face ((t (nil))))
    `(markdown-header-delimiter-face ((t (nil))))))
+
+;;;###autoload
+(when (and (boundp 'custom-theme-load-path) load-file-name)
+  (add-to-list 'custom-theme-load-path
+               (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'tok)
 

@@ -3,9 +3,9 @@ Fetcher: github
 Source:  https://github.com/ljos/ob-prolog.git
 
 Updating /mnt/store/melpa/working/ob-prolog/
-Checking out origin/HEAD
-Checking out 149abd3832fc5a6a1cb01a586a1622a8f25887dc
-Built ob-prolog in 4.168s, finished at 2022-11-22T06:37:55+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Nov 22 06:37 packages/ob-prolog-20190410.2130.el
-4.0K -rw-r--r-- 1 root root  357 Nov 22 06:37 packages/ob-prolog-20190410.2130.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/ljos/ob-prolog.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128
