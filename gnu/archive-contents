@@ -335,7 +335,7 @@
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
  (cape .
-       [(0 10)
+       [(0 11)
 	((emacs
 	  (27 1)))
 	"Completion At Point Extensions" tar
@@ -343,7 +343,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "4b32036a6c667b445dcc001fd70a01eee8baa924"))])
+	 (:commit . "8962e15381682544b268afd032661101692a3cd2"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -537,7 +537,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 31)
+	[(0 33)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -545,7 +545,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "01ddb3b13e7b32c640cce208fe3bdac04a3e5bb0"))])
+	  (:commit . "c75ed960f4c6c835abf574247406c244dbe62916"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
