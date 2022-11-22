@@ -3,11 +3,19 @@ Fetcher: github
 Source:  https://github.com/sagemath/ob-sagemath.git
 
 Updating /mnt/store/melpa/working/ob-sagemath/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/sagemath/ob-sagemath.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 79645bce0c25a650bae61e550434bed836995dce
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-sagemath/
+  to /tmp/ob-sagemathHBwm1b/ob-sagemath-20191106.828
+    ob-sagemath.el -> ob-sagemath.el
+    emacs_ob_sagemath.py -> emacs_ob_sagemath.py
+Created ob-sagemath-20191106.828.tar containing:
+  ob-sagemath-20191106.828/
+  ob-sagemath-20191106.828/emacs_ob_sagemath.py
+  ob-sagemath-20191106.828/ob-sagemath-pkg.el
+  ob-sagemath-20191106.828/ob-sagemath.el
+Built ob-sagemath in 4.089s, finished at 2022-11-22T13:59:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 470 Nov 22 13:59 packages/ob-sagemath-20191106.828.entry
+ 32K -rw-r--r-- 1 root root 30K Nov 22 13:59 packages/ob-sagemath-20191106.828.tar

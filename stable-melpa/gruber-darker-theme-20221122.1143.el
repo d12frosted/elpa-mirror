@@ -5,8 +5,8 @@
 
 ;; Author: Alexey Kutepov <reximkut@gmail.com>
 ;; URL: http://github.com/rexim/gruber-darker-theme
-;; Package-Version: 20220107.1815
-;; Package-Commit: 72278089c440d45c00fb8afcd53af82fd30f451b
+;; Package-Version: 20221122.1143
+;; Package-Commit: 6de7a37d7b18cf3f0ec51db799f4f2aa6e3e89ff
 ;; Version: 0.7
 
 ;; Permission is hereby granted, free of charge, to any person
@@ -96,8 +96,9 @@
    `(cursor ((t (:background ,gruber-darker-yellow))))
    `(default ((t ,(list :foreground gruber-darker-fg
                         :background gruber-darker-bg))))
-   `(fringe ((t ,(list :background gruber-darker-bg-1
+   `(fringe ((t ,(list :background nil
                        :foreground gruber-darker-bg+2))))
+   `(vertical-border ((t ,(list :foreground gruber-darker-bg+2))))
    `(link ((t (:foreground ,gruber-darker-niagara :underline t))))
    `(link-visited ((t (:foreground ,gruber-darker-wisteria :underline t))))
    `(match ((t (:background ,gruber-darker-bg+4))))
@@ -368,6 +369,21 @@
                                            :foreground gruber-darker-yellow))))
    `(whitespace-space-before-tab ((t ,(list :background gruber-darker-brown
                                             :foreground gruber-darker-brown))))
+
+   ;; tab-bar
+   `(tab-bar ((t (:background ,gruber-darker-bg+1 :foreground ,gruber-darker-bg+4))))
+   `(tab-bar-tab ((t (:background nil :foreground ,gruber-darker-yellow :weight bold))))
+   `(tab-bar-tab-inactive ((t (:background nil))))
+
+   ;; vterm / ansi-term
+   `(term-color-black ((t (:foreground ,gruber-darker-bg+3 :background ,gruber-darker-bg+4))))
+   `(term-color-red ((t (:foreground ,gruber-darker-red-1 :background ,gruber-darker-red-1))))
+   `(term-color-green ((t (:foreground ,gruber-darker-green :background ,gruber-darker-green))))
+   `(term-color-blue ((t (:foreground ,gruber-darker-niagara :background ,gruber-darker-niagara))))
+   `(term-color-yellow ((t (:foreground ,gruber-darker-yellow :background ,gruber-darker-yellow))))
+   `(term-color-magenta ((t (:foreground ,gruber-darker-wisteria :background ,gruber-darker-wisteria))))
+   `(term-color-cyan ((t (:foreground ,gruber-darker-quartz :background ,gruber-darker-quartz))))
+   `(term-color-white ((t (:foreground ,gruber-darker-fg :background ,gruber-darker-white))))
 
    ;;;;; company-mode
    `(company-tooltip ((t (:foreground ,gruber-darker-fg :background ,gruber-darker-bg+1))))
