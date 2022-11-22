@@ -1,11 +1,13 @@
 (workroom .
-	  [(20221121 1705)
+	  [(20221122 1755)
 	   ((emacs
 	     (25 1))
 	    (project
-	     (0 3 0)))
+	     (0 3 0))
+	    (compat
+	     (28 1 2 2)))
 	   "Named rooms for work without irrelevant distracting buffers" tar
-	   ((:commit . "a02bb2a3a66d38f5166dd1e7e04e2d490c72e243")
+	   ((:commit . "f9d88f211ce5a302688839ea7dbd71e424b0bb28")
 	    (:authors
 	     ("Akib Azmain Turja" . "akib@disroot.org"))
 	    (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
