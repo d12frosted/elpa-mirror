@@ -2,8 +2,8 @@
 ;;; ligo-mode.el --- A major mode for editing LIGO source code
 
 ;; Version: 0.2.0
-;; Package-Version: 20221031.1737
-;; Package-Commit: d3c28b3f98a12af5f68abe729d378a597b26ecd9
+;; Package-Version: 20221122.440
+;; Package-Commit: 5137f4a79fa51b1d7d62a581197b0d4b257a05b1
 ;; Author: LigoLang SASU
 ;; Url: https://gitlab.com/ligolang/ligo/-/tree/dev/tools/emacs
 ;; Keywords: languages
@@ -314,6 +314,7 @@
 		(,"\\b\\(const\\|var\\)\\b"
 			(1 font-lock-keyword-face)
 		)
+		(,"<[:space:]*" ())
 		(,"\\btype\\b" ( 1 font-lock-keyword-face))
 		(,":" ( 1 ligo-font-lock-operator-face))
 		(,":" ( 1 ligo-font-lock-operator-face))

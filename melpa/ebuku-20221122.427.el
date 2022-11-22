@@ -1,13 +1,13 @@
 ;;; ebuku.el --- Interface to the buku Web bookmark manager -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2022  Alexis <flexibeast@gmail.com>, Erik Sjöstrand <sjostrand.erik@gmail.com>, Junji Zhi [https://github.com/junjizhi]
+;; Copyright (C) 2019-2022  Alexis <flexibeast@gmail.com>, Erik Sjöstrand <sjostrand.erik@gmail.com>, Junji Zhi [https://github.com/junjizhi], Hilton Chain <hako@ultrarare.space>
 
-;; Author: Alexis <flexibeast@gmail.com>, Erik Sjöstrand <sjostrand.erik@gmail.com>, Junji Zhi [https://github.com/junjizhi]
+;; Author: Alexis <flexibeast@gmail.com>, Erik Sjöstrand <sjostrand.erik@gmail.com>, Junji Zhi [https://github.com/junjizhi], Hilton Chain <hako@ultrarare.space>
 ;; Maintainer: Alexis <flexibeast@gmail.com>
 ;; Created: 2019-11-07
 ;; URL: https://github.com/flexibeast/ebuku
-;; Package-Version: 20220725.832
-;; Package-Commit: 5b8bf34b8ea5d05f0b8dfc12bfea825f9cffbeda
+;; Package-Version: 20221122.427
+;; Package-Commit: 0c6cf404a49bd68800221446df186fffa0139325
 ;; Keywords: bookmarks,buku,data,web,www
 ;; Version: 0
 ;; Package-Requires: ((emacs "25.1"))
@@ -169,6 +169,7 @@
 ;;
 
 (require 'browse-url)
+(require 'map)
 
 (defgroup ebuku nil
   "Emacs interface to the buku bookmark manager."
@@ -402,11 +403,11 @@ Using `sqlite' rather than `buku' can be several times faster, but the
                                           "$")
                                   nil t)
           (let* ((bookmark))
-            (map-put bookmark 'index (match-string 1))
-            (map-put bookmark 'url (match-string 2))
-            (map-put bookmark 'title (match-string 3))
-            (map-put bookmark 'tags (split-string (match-string 4) "," t))
-            (map-put bookmark 'comment (match-string 5))
+            (setf (map-elt bookmark 'index) (match-string 1))
+            (setf (map-elt bookmark 'url) (match-string 2))
+            (setf (map-elt bookmark 'title) (match-string 3))
+            (setf (map-elt bookmark 'tags) (split-string (match-string 4) "," t))
+            (setf (map-elt bookmark 'comment) (match-string 5))
             (setq ebuku-bookmarks (cons bookmark ebuku-bookmarks))))))))
 
 (defun ebuku--collect-tags-via-sqlite ()
@@ -1013,22 +1014,22 @@ The bookmarks are fetched from buku with the following arguments:
           (if (or (string= "--print" type)
                   (string= "-p" type))
               (progn
-                (map-put data 'index (match-string 1))
-                (map-put data 'title (match-string 2)))
-            (map-put data 'title (match-string 2))
-            (map-put data 'index (match-string 3)))
+                (setf (map-elt data 'index) (match-string 1))
+                (setf (map-elt data 'title) (match-string 2)))
+            (setf (map-elt data 'title) (match-string 2))
+            (setf (map-elt data 'index) (match-string 3)))
           (re-search-forward "^\\s-+> \\([^\n]+\\)") ; URL
-          (map-put data 'url (match-string 1))
+          (setf (map-elt data 'url) (match-string 1))
           (forward-line)
           (when (looking-at "^\\s-+[+] \\(.+\\)$")
-            (map-put data 'comment (match-string 1))
+            (setf (map-elt data 'comment) (match-string 1))
             (forward-line))
           (when (looking-at "^\\s-+[#] \\(.+\\)$")
-            (map-put data 'tags (or (split-string
-                                     (or (match-string 1)
-                                         "")
-                                     "," t)
-                                    '())))
+            (setf (map-elt data 'tags) (or (split-string
+                                            (or (match-string 1)
+                                                "")
+                                            "," t)
+                                           '())))
           (push data results)))
       results)))
 
