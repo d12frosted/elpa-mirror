@@ -1,13 +1,13 @@
 (merlin-iedit .
-	      [(20220330 1736)
+	      [(20221123 1408)
 	       ((emacs
 		 (25 1))
 		(merlin
 		 (3))
 		(iedit
 		 (0 9)))
-	       "Merlin and iedit integration." single
-	       ((:commit . "b94e980b7d10830a83b73794a90b7b9ad04239dc")
+	       "Merlin and iedit integration" single
+	       ((:commit . "8bcab034a680f57ddf58092fda6288dc4caddd2a")
 		(:authors
 		 ("Simon Castellan <simon.castellan(_)iuwt.fr>")
 		 ("Frédéric Bour <frederic.bour(_)lakaban.net>")

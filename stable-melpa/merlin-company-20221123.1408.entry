@@ -1,13 +1,13 @@
 (merlin-company .
-		[(20210615 1208)
+		[(20221123 1408)
 		 ((emacs
 		   (25 1))
 		  (merlin
 		   (3))
 		  (company
 		   (0 9)))
-		 "Merlin and company mode integration." single
-		 ((:commit . "aa9a385e7b610b855911c4e544371725dd83511e")
+		 "Merlin and company mode integration" single
+		 ((:commit . "8bcab034a680f57ddf58092fda6288dc4caddd2a")
 		  (:authors
 		   ("Simon Castellan <simon.castellan(_)iuwt.fr>")
 		   ("Frédéric Bour <frederic.bour(_)lakaban.net>")

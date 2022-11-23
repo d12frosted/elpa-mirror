@@ -1,4 +1,4 @@
-;;; merlin-iedit.el --- Merlin and iedit integration.   -*- coding: utf-8; lexical-binding: t -*-
+;;; merlin-iedit.el --- Merlin and iedit integration   -*- coding: utf-8; lexical-binding: t -*-
 ;; Licensed under the MIT license.
 
 ;; Author: Simon Castellan <simon.castellan(_)iuwt.fr>
@@ -6,8 +6,8 @@
 ;;         Thomas Refis <thomas.refis(_)gmail.com>
 ;; Created: 27 June 2014
 ;; Version: 0.1
-;; Package-Version: 20220330.1736
-;; Package-Commit: b94e980b7d10830a83b73794a90b7b9ad04239dc
+;; Package-Version: 20221123.1408
+;; Package-Commit: 8bcab034a680f57ddf58092fda6288dc4caddd2a
 ;; Keywords: ocaml languages
 ;; Package-Requires: ((emacs "25.1") (merlin "3") (iedit "0.9"))
 ;; URL: http://github.com/ocaml/merlin
@@ -65,6 +65,4 @@ merlin-iedit-occurrences."
           (message r))))))
 
 (provide 'merlin-iedit)
-;;; merlin.el ends here
-
 ;;; merlin-iedit.el ends here

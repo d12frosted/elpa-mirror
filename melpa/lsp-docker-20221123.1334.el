@@ -4,8 +4,8 @@
 
 ;; Author: Ivan Yonchovski <yyoncho@gmail.com>
 ;; URL: https://github.com/emacs-lsp/lsp-docker
-;; Package-Version: 20221025.1659
-;; Package-Commit: 3ffd7729cdd748586734135e36713517e14a1578
+;; Package-Version: 20221123.1334
+;; Package-Commit: 1d08ab56b4064f0e4b56493d723ff947d0e3c3c1
 ;; Keywords: languages langserver
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1") (lsp-mode "6.2.1") (f "0.20.0") (yaml "0.2.0") (ht "2.0"))
@@ -73,14 +73,14 @@ Argument DOCKER-IMAGE-ID the docker container to run language servers with.
 Argument SERVER-COMMAND the language server command to run inside the container."
   (split-string
    (--doto (format "%s run --name %s --rm -i %s %s %s"
-		   lsp-docker-command
-		   docker-container-name
-		   (->> path-mappings
-			(-map (-lambda ((path . docker-path))
-				(format "-v %s:%s" path docker-path)))
-			(s-join " "))
-		   docker-image-id
-		   server-command))
+                   lsp-docker-command
+                   docker-container-name
+                   (->> path-mappings
+                        (-map (-lambda ((path . docker-path))
+                                (format "-v %s:%s" path docker-path)))
+                        (s-join " "))
+                   docker-image-id
+                   server-command))
    " "))
 
 (defun lsp-docker-exec-in-container (docker-container-name server-command)
@@ -102,13 +102,13 @@ Argument SERVER-COMMAND the command to execute inside the running container."
   (if-let ((client (copy-lsp--client (gethash server-id lsp-clients))))
       (progn
         (let ((docker-container-name-full
-	       (if lsp-docker-container-name-suffix
-		   (format "%s-%d"
-			   docker-container-name
-			   (if (numberp lsp-docker-container-name-suffix)
-			       (cl-incf lsp-docker-container-name-suffix)
-			     lsp-docker-container-name-suffix))
-		 docker-container-name)))
+               (if lsp-docker-container-name-suffix
+                   (format "%s-%d"
+                           docker-container-name
+                           (if (numberp lsp-docker-container-name-suffix)
+                               (cl-incf lsp-docker-container-name-suffix)
+                             lsp-docker-container-name-suffix))
+                 docker-container-name)))
           (setf (lsp--client-server-id client) docker-server-id
                 (lsp--client-uri->path-fn client) (-partial #'lsp-docker--uri->path
                                                             path-mappings
@@ -155,12 +155,12 @@ Argument SERVER-COMMAND the command to execute inside the running container."
   "Default list of client configurations.")
 
 (cl-defun lsp-docker-init-clients (&key
-					path-mappings
-					(docker-image-id "emacslsp/lsp-docker-langservers")
-					(docker-container-name "lsp-container")
-					(priority 10)
-					(client-packages lsp-docker-default-client-packages)
-					(client-configs lsp-docker-default-client-configs))
+                                        path-mappings
+                                        (docker-image-id "emacslsp/lsp-docker-langservers")
+                                        (docker-container-name "lsp-container")
+                                        (priority 10)
+                                        (client-packages lsp-docker-default-client-packages)
+                                        (client-configs lsp-docker-default-client-configs))
   "Loads the required client packages and registers the required clients to run with docker.
 
 :path-mappings is an alist of local paths and their mountpoints
@@ -207,7 +207,7 @@ otherwise optional.
 the docker container to run the language server."
   (seq-do (lambda (package) (require package nil t)) client-packages)
   (let ((default-docker-image-id docker-image-id)
-	(default-docker-container-name docker-container-name))
+        (default-docker-container-name docker-container-name))
     (seq-do (-lambda ((&plist :server-id :docker-server-id :docker-image-id :docker-container-name :server-command))
         (when (and docker-image-id (not docker-container-name))
           (user-error "Invalid client definition for server ID %S. You must specify a container name when specifying an image ID."

@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
 ;; Keywords: convenience
-;; Package-Version: 20221115.1628
-;; Package-Commit: e2d6ac4522981f4d5e49b405aa7623884c217197
+;; Package-Version: 20221123.1316
+;; Package-Commit: fea487d7cb0e9a09fcf0b522c91fbc89d57ef1bb
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
@@ -345,6 +345,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq elfeed-enclosure-default-dir     (var "elfeed/enclosures/"))
     (setq elfeed-score-score-file          (etc "elfeed/score/score.el"))
     (setq elfeed-autotag-files             (list (etc "elfeed/autotags.org")))
+    (setq elgrep-data-file                 (var "elgrep-data.el"))
     (setq elpher-bookmarks-file            (var "elpher-bookmarks.el"))
     (eval-after-load 'x-win
       (let ((session-dir (var "emacs-session/")))
