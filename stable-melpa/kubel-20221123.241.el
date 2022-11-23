@@ -22,8 +22,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20221112.240
-;; Package-Commit: ca6c3f84cefaf1287e432f2f3b4bdf630edd3bac
+;; Package-Version: 20221123.241
+;; Package-Commit: 5962d566db17ddfa25ac3120b4591df1d741e979
 ;; Author: Adrien Brochard
 ;; Keywords: kubernetes k8s tools processes
 ;; URL: https://github.com/abrochard/kubel
@@ -551,8 +551,9 @@ READONLY If true buffer will be in readonly mode(view-mode)."
 (defun kubel--get-resource-under-cursor ()
   "Utility function to get the name of the resource under the cursor.
 Strip the `*` prefix if the resource is selected"
-  (replace-regexp-in-string
-   "^\*" "" (aref (tabulated-list-get-entry) 0)))
+  (string-remove-suffix " (default)" ;; see https://github.com/abrochard/kubel/issues/106
+                        (replace-regexp-in-string
+                         "^\*" "" (aref (tabulated-list-get-entry) 0))))
 
 (defun kubel--get-context-namespace ()
   "Utility function to return the proper context and namespace arguments."
