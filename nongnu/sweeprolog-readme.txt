@@ -1047,12 +1047,19 @@ Filling Holes
   The default term insertion functions used by
   `sweeprolog-insert-term-dwim' create a new clause in the buffer, with
   placeholders for the arguments of the head term (if any) and for the
-  clause’s body.  These placeholders are simply anonymous variables
-  (`_'), but they are annotated by the insertion functions with a
-  special text property[2] that allows `sweeprolog-mode' to recognize
-  them as “holes” needed to be filled.  After a term is inserted with
-  `sweeprolog-insert-term-dwim', the region is set to the first hole and
-  the cursor left at the its end.
+  clause’s body.  These placeholders, called simply “holes”, represent
+  the Prolog terms that remain to be given by the user.  Holes are
+  written in the buffer as regular Prolog variables, but they are
+  annotated with a special text property[2] that allows
+  `sweeprolog-mode' to recognize them as holes needed to be filled.
+  After a term is inserted with `sweeprolog-insert-term-dwim', the
+  region is set to the first hole and the cursor left at the its end.
+
+  When the user option `sweeprolog-highlight-holes' is set to non-nil,
+  holes in Prolog buffers are highlighted with a dedicated face, making
+  them easily distinguishable from regular Prolog variables.  Hole
+  highlighting is enabled by default, to disable it customize
+  `sweeprolog-highlight-holes' to nil.
 
   To jump to the next hole in a `sweeprolog-mode' buffer, use the
   command `C-c C-i' (`M-x sweeprolog-forward-hole').  This command sets
@@ -1201,10 +1208,10 @@ Sending signals to running top-levels
   current top-level.  It is bound by default to `C-c C-c'.  Normally,
   this command signals the goal specified by the user option
   `sweeprolog-top-level-signal-default-goal', which is set by default to
-  `trace', causing the top-level thread to enter trace mode (see [Trace
-  Mode in the SWI-Prolog manual]).  When called with a prefix argument
-  (`C-u C-c C-c'), `sweeprolog-top-level-signal-current' instead prompts
-  for a goal similarly to `sweeprolog-top-level-signal'.
+  a predicate that interrupts the top-level thread returns control of
+  the top-level to the user.  When `sweeprolog-top-level-signal-current'
+  is called with a prefix argument (`C-u C-c C-c'), it prompts for the
+  goal.
 
   It is also possible to signal top-levels from the `sweep' Top-level
   Menu buffer with the command `sweeprolog-top-level-menu-signal' with
@@ -1214,9 +1221,6 @@ Sending signals to running top-levels
   For more information about interrupting threads in SWI-Prolog, see
   [Signaling threads in the SWI-Prolog manual].
 
-
-[Trace Mode in the SWI-Prolog manual]
-<https://www.swi-prolog.org/pldoc/man?section=trace-summary-trace-mode>
 
 [Signaling threads in the SWI-Prolog manual]
 <https://www.swi-prolog.org/pldoc/man?section=thread-signal>

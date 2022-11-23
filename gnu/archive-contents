@@ -2244,7 +2244,7 @@
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:keywords "convenience" "text" "org"))])
  (org-modern .
-	     [(0 5)
+	     [(0 6)
 	      ((emacs
 		(27 1)))
 	      "Modern looks for Org" tar
@@ -2252,7 +2252,7 @@
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "ed9d67d00f26148019acd67b4aac0e26360a33b1"))])
+	       (:commit . "e87ca8a9ec45fcfa2556028aa9feffb7bc3aecee"))])
  (org-notify .
 	     [(0 1 0)
 	      ((emacs
@@ -3510,7 +3510,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "86f08fb377e2b8f2df0614c48783bdce347f3758"))])
  (vertico .
-	  [(0 28)
+	  [(0 29)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
@@ -3518,7 +3518,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "31060942d65ccd3c1b488d8db497af5eda9ac7fc"))])
+	    (:commit . "cacb0bd76153790ba6ecc67921deed236c96371e"))])
  (vertico-posframe .
 		   [(0 5 4)
 		    ((emacs

@@ -18,7 +18,8 @@ Table of Contents
 7. Alternatives
 8. Resources
 9. Contributions
-10. Problematic completion commands
+10. Debugging Vertico
+11. Problematic completion commands
 .. 1. `org-refile'
 .. 2. `org-agenda-filter'
 .. 3. `tmm-menubar'
@@ -29,12 +30,12 @@ Table of Contents
 
 
 Vertico provides a performant and minimalistic vertical completion UI
-based on the default completion system. The main focus of Vertico is to
+based on the default completion system. The focus of Vertico is to
 provide a UI which behaves /correctly/ under all circumstances. By
 reusing the built-in facilities system, Vertico achieves /full
 compatibility/ with built-in Emacs completion commands and completion
 tables. Vertico only provides the completion UI but aims to be highly
-flexible, extensible and modular. Additional enhancements are available
+flexible, extendable and modular. Additional enhancements are available
 as [extensions] or [complementary packages]. The code base is small and
 maintainable. The main `vertico.el' package is only about 600 lines of
 code without white space and comments.
@@ -54,7 +55,8 @@ Table of Contents
 7. Alternatives
 8. Resources
 9. Contributions
-10. Problematic completion commands
+10. Debugging Vertico
+11. Problematic completion commands
 .. 1. `org-refile'
 .. 2. `org-agenda-filter'
 .. 3. `tmm-menubar'
@@ -415,7 +417,7 @@ Table of Contents
   since the buffer display allows you to get a better overview over the
   entire current buffer. But for other commands you want to keep using
   the default Vertico display. `vertico-multiform-mode' solves this
-  configuration problem!
+  configuration problem.
 
   ┌────
   │ ;; Enable vertico-multiform
@@ -729,7 +731,29 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 [GNU ELPA] <https://elpa.gnu.org/packages/vertico.html>
 
 
-10 Problematic completion commands
+10 Debugging Vertico
+════════════════════
+
+  When you observe an error in the `vertico--exhibit' post command hook,
+  you should install an advice to enforce debugging. This allows you to
+  obtain a stack trace in order to narrow down the location of the
+  error. The reason is that post command hooks are automatically
+  disabled (and not debugged) by Emacs. Otherwise Emacs could become
+  unusable, given that the hooks are executed after every command.
+
+  ┌────
+  │ (setq debug-on-error t)
+  │ 
+  │ (defun force-debug (func &rest args)
+  │   (condition-case e
+  │       (apply func args)
+  │     ((debug error) (signal (car e) (cdr e)))))
+  │ 
+  │ (advice-add #'vertico--exhibit :around #'force-debug)
+  └────
+
+
+11 Problematic completion commands
 ══════════════════════════════════
 
   Vertico is robust in most scenarios. However some completion commands
@@ -738,7 +762,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   other UIs and require minor workarounds.
 
 
-10.1 `org-refile'
+11.1 `org-refile'
 ─────────────────
 
   `org-refile' uses `org-olpath-completing-read' to complete the outline
@@ -776,7 +800,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-10.2 `org-agenda-filter'
+11.2 `org-agenda-filter'
 ────────────────────────
 
   Similar to `org-refile', the `org-agenda-filter' completion function
@@ -789,7 +813,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   would be `+tag<0:10'.
 
 
-10.3 `tmm-menubar'
+11.3 `tmm-menubar'
 ──────────────────
 
   The text menu bar works well with Vertico but always shows a
@@ -804,7 +828,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-10.4 `ffap-menu'
+11.4 `ffap-menu'
 ────────────────
 
   The command `ffap-menu' shows the `*Completions*' buffer by default
@@ -819,7 +843,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-10.5 `completion-table-dynamic'
+11.5 `completion-table-dynamic'
 ───────────────────────────────
 
   Dynamic completion tables (`completion-table-dynamic',
@@ -843,7 +867,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-10.6 Submitting the empty string
+11.6 Submitting the empty string
 ────────────────────────────────
 
   The commands `multi-occur', `auto-insert', `bbdb-create' read multiple
@@ -871,7 +895,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   possible by pressing `RET' only.
 
 
-10.7 Tramp hostname completion
+11.7 Tramp hostname completion
 ──────────────────────────────
 
   In combination with Orderless, hostnames are not made available for

@@ -4,7 +4,8 @@ Table of Contents
 1. Racket mode for GNU Emacs
 .. 1. Documentation
 .. 2. Contributing
-.. 3. Alternatives
+.. 3. Acknowledgments
+.. 4. Alternatives
 
 
 1 Racket mode for GNU Emacs
@@ -15,9 +16,9 @@ Table of Contents
   [https://elpa.nongnu.org/nongnu/racket-mode.svg]
   [https://img.shields.io/badge/Docs-Documentation-blue.svg]
 
-  This provides a major mode to edit [Racket] source files, as well as a
-  major mode for a Racket REPL. The edit/run experience is similar to
-  [DrRacket].
+  A variety of Emacs major and minor modes for [Racket]: edit, REPL,
+  check-syntax, debug, profile, logging, and more. The edit/run
+  experience is similar to [DrRacket].
 
   Compatible with *Emacs 25.1+* and *Racket 6.9+*.
 
@@ -50,17 +51,24 @@ Table of Contents
 1.2 Contributing
 ────────────────
 
-  Pull requests are welcome; please [read this].
-
-  [Acknowledgments].
+  Pull requests are welcome; please see [CONTRIBUTING.org].
 
 
-[read this] <file:CONTRIBUTING.org>
+[CONTRIBUTING.org]
+<https://github.com/greghendershott/racket-mode/blob/master/CONTRIBUTING.org>
 
-[Acknowledgments] <file:THANKS.org>
+
+1.3 Acknowledgments
+───────────────────
+
+  [THANKS.org].
 
 
-1.3 Alternatives
+[THANKS.org]
+<https://github.com/greghendershott/racket-mode/blob/master/THANKS.org>
+
+
+1.4 Alternatives
 ────────────────
 
   • Emacs' built-in `scheme-mode` major mode plus the minor modes
