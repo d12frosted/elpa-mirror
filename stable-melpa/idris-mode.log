@@ -4,10 +4,10 @@ Source:  https://github.com/idris-hackers/idris-mode.git
 
 Updating /mnt/store/melpa/working/idris-mode/
 Checking out origin/HEAD
-Checking out cc85f0e138db34cdc04af19c0ad7c1042f690204
+Checking out 993c862b7fcc97cca1b825d0acf424c70d72ce36
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/idris-mode/
-  to /tmp/idris-modeThKas0/idris-mode-20221122.920
+  to /tmp/idris-modeS7Wb6G/idris-mode-20221123.1112
     idris-commands.el -> idris-commands.el
     idris-common-utils.el -> idris-common-utils.el
     idris-compat.el -> idris-compat.el
@@ -34,36 +34,38 @@ Copying files (->) and directories (=>)
     idris-warnings.el -> idris-warnings.el
     inferior-idris.el -> inferior-idris.el
     logo-small.png -> logo-small.png
-Created idris-mode-20221122.920.tar containing:
-  idris-mode-20221122.920/
-  idris-mode-20221122.920/idris-commands.el
-  idris-mode-20221122.920/idris-common-utils.el
-  idris-mode-20221122.920/idris-compat.el
-  idris-mode-20221122.920/idris-core.el
-  idris-mode-20221122.920/idris-events.el
-  idris-mode-20221122.920/idris-highlight-input.el
-  idris-mode-20221122.920/idris-hole-list.el
-  idris-mode-20221122.920/idris-info.el
-  idris-mode-20221122.920/idris-ipkg-mode.el
-  idris-mode-20221122.920/idris-keys.el
-  idris-mode-20221122.920/idris-log.el
-  idris-mode-20221122.920/idris-mode-pkg.el
-  idris-mode-20221122.920/idris-mode.el
-  idris-mode-20221122.920/idris-navigate.el
-  idris-mode-20221122.920/idris-prover.el
-  idris-mode-20221122.920/idris-repl.el
-  idris-mode-20221122.920/idris-settings.el
-  idris-mode-20221122.920/idris-simple-indent.el
-  idris-mode-20221122.920/idris-syntax.el
-  idris-mode-20221122.920/idris-test-utils.el
-  idris-mode-20221122.920/idris-tests2.el
-  idris-mode-20221122.920/idris-tests3.el
-  idris-mode-20221122.920/idris-tree-info.el
-  idris-mode-20221122.920/idris-warnings-tree.el
-  idris-mode-20221122.920/idris-warnings.el
-  idris-mode-20221122.920/inferior-idris.el
-  idris-mode-20221122.920/logo-small.png
-Built idris-mode in 5.343s, finished at 2022-11-23T04:34:13+0000
+Created idris-mode-20221123.1112.tar containing:
+  idris-mode-20221123.1112/
+  idris-mode-20221123.1112/idris-commands.el
+  idris-mode-20221123.1112/idris-common-utils.el
+  idris-mode-20221123.1112/idris-compat.el
+  idris-mode-20221123.1112/idris-core.el
+  idris-mode-20221123.1112/idris-events.el
+  idris-mode-20221123.1112/idris-highlight-input.el
+  idris-mode-20221123.1112/idris-hole-list.el
+  idris-mode-20221123.1112/idris-info.el
+  idris-mode-20221123.1112/idris-ipkg-mode.el
+  idris-mode-20221123.1112/idris-keys.el
+  idris-mode-20221123.1112/idris-log.el
+  idris-mode-20221123.1112/idris-mode-pkg.el
+  idris-mode-20221123.1112/idris-mode.el
+  idris-mode-20221123.1112/idris-navigate.el
+  idris-mode-20221123.1112/idris-prover.el
+  idris-mode-20221123.1112/idris-repl.el
+  idris-mode-20221123.1112/idris-settings.el
+  idris-mode-20221123.1112/idris-simple-indent.el
+  idris-mode-20221123.1112/idris-syntax.el
+  idris-mode-20221123.1112/idris-test-utils.el
+  idris-mode-20221123.1112/idris-tests2.el
+  idris-mode-20221123.1112/idris-tests3.el
+  idris-mode-20221123.1112/idris-tree-info.el
+  idris-mode-20221123.1112/idris-warnings-tree.el
+  idris-mode-20221123.1112/idris-warnings.el
+  idris-mode-20221123.1112/inferior-idris.el
+  idris-mode-20221123.1112/logo-small.png
+Built idris-mode in 5.526s, finished at 2022-11-23T11:54:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  331 Nov 23 04:34 packages/idris-mode-20221122.920.entry
-332K -rw-r--r-- 1 root root 330K Nov 23 04:34 packages/idris-mode-20221122.920.tar
+4.0K -rw-r--r-- 1 root root  331 Nov 23 08:14 packages/idris-mode-20221122.920.entry
+332K -rw-r--r-- 1 root root 330K Nov 23 08:14 packages/idris-mode-20221122.920.tar
+4.0K -rw-r--r-- 1 root root  332 Nov 23 11:54 packages/idris-mode-20221123.1112.entry
+332K -rw-r--r-- 1 root root 330K Nov 23 11:54 packages/idris-mode-20221123.1112.tar
