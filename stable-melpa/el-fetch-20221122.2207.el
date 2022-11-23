@@ -23,8 +23,8 @@
 ;; Author: Maciej Barć <xgqt@riseup.net>
 ;; Homepage: https://gitlab.com/xgqt/emacs-el-fetch
 ;; Version: 3.1.0
-;; Package-Version: 20220622.2008
-;; Package-Commit: 15f6af6035ad1f159ac931268ec3431ce4cdf2ec
+;; Package-Version: 20221122.2207
+;; Package-Commit: 5cf7e32df03463853d41e0570d1c28e709fc8cf9
 ;; Package-Requires: ((emacs "25.1"))
 
 
@@ -193,8 +193,16 @@ Get path and size of user's Emacs directory."
 (defun el-fetch--info-emacs-pkgs ()
   "El-Fetch: packages part.
 Get installed Emacs Lisp packages the time that was taken to load them."
-  (format "%d pkgs (loaded in %s)"
-          (length package-activated-list) (emacs-init-time)))
+  (concat (when (bound-and-true-p package-alist)
+            (format "%d (standard) "
+                    (length package-activated-list)))
+          (when (boundp 'straight--profile-cache)
+            (format "%d (straight) "
+                    (hash-table-count straight--profile-cache)))
+          (when (fboundp 'elpaca--queued)
+            (format "%d (elpaca) "
+                    (length (elpaca--queued))))
+          (format "loaded in %s" (emacs-init-time))))
 
 (defun el-fetch--info-emacs-load-path ()
   "El-Fetch: load-path part.
