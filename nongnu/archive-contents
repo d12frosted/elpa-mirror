@@ -1479,15 +1479,15 @@
 	    (:authors
 	     ("Takafumi Arakaki <aka.tkf at gmail.com>")))])
  (rfc-mode .
-	   [(1 3 0)
+	   [(1 4 0)
 	    ((emacs
 	      (25 1)))
 	    "RFC document browser and viewer" tar
 	    ((:url . "https://github.com/galdor/rfc-mode")
-	     (:maintainer "Nicolas Martyanoff" . "khaelin@gmail.com")
+	     (:maintainer "Nicolas Martyanoff" . "nicolas@n16f.net")
 	     (:authors
-	      ("Nicolas Martyanoff" . "khaelin@gmail.com"))
-	     (:commit . "02546beecf4c495940885e7b7b911d84b12646ef"))])
+	      ("Nicolas Martyanoff" . "nicolas@n16f.net"))
+	     (:commit . "53ec006aa6aa4fae9c6c64004692aa3d01b38275"))])
  (rubocop .
 	  [(0 6 0)
 	   ((emacs
@@ -1665,7 +1665,7 @@
 	   ("Random User"))
 	  (:commit . "7842bb9f15f08ea3d223f98bf7be98d6d01be522"))])
  (sweeprolog .
-	     [(0 8 12)
+	     [(0 9 0)
 	      ((emacs
 		(28 1)))
 	      "Embedded SWI-Prolog" tar
@@ -1674,7 +1674,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "557d4c3eb29ffb535b09da4300aa9dde8c005949"))])
+	       (:commit . "c9a4291ea92d1c16dce4c42f2de606f04bf4c4fa"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs

@@ -109,7 +109,7 @@ The package also provides additional commands to interact with a session.
 | detached-rerun-session (r)          | Rerun a session                             |
 | detached-insert-session-command (i) | Insert the session's command at point       |
 | detached-copy-session-command (w)   | Copy the session's shell command            |
-| detached-copy-session (W)           | Copy the session's output                   |
+| detached-copy-session-output (W)    | Copy the session's output                   |
 | detached-kill-session (k)           | Kill an active session                      |
 | detached-delete-session (d)         | Delete an inactive session                  |
 
@@ -287,12 +287,12 @@ With `detached` there exist the possibility to use callback. This functionality 
         `(,@detached-shell-command-session-action
           :callback (lambda (session1)
                       (when (eq 'success (detached-session-status session1))
-                        (let ((default-directory (detached--session-working-directory session1))
+                        (let ((default-directory (detached-session-working-directory session1))
                               (detached-session-action
                                `(,@detached-shell-command-session-action
                                  :callback (lambda (session2)
                                              (when (eq 'success (detached-session-status session2))
-                                               (let ((default-directory (detached--session-working-directory session2)))
+                                               (let ((default-directory (detached-session-working-directory session2)))
                                                  (detached-start-session "ls -la" t)))))))
                           (detached-start-session "ls" t)))))))
   (detached-start-session "sleep 1" t))

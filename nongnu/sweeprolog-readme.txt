@@ -37,7 +37,7 @@ Editing Prolog code
 .. Predicate definition boundaries
 .. Following file specifications
 .. Loading buffers
-.. Using templates for creating new modules
+.. Creating New Modules
 .. Documenting predicates
 .. Displaying predicate documentation
 .. Examining diagnostics
@@ -45,6 +45,7 @@ Editing Prolog code
 .. Code Completion
 .. Context-Based Term Insertion
 ..... Filling Holes
+.. Writing Tests
 Prolog Help
 The Prolog Top-Level
 .. Multiple top-levels
@@ -820,8 +821,8 @@ Loading buffers
 <https://www.swi-prolog.org/pldoc/man?section=consulting>
 
 
-Using templates for creating new modules
-────────────────────────────────────────
+Creating New Modules
+────────────────────
 
   `sweep' integrates with the Emacs `auto-insert' facility to simplify
   creation of new SWI-Prolog modules.  `auto-insert' allows for
@@ -1078,6 +1079,37 @@ Filling Holes
 
 
 [Using Region in the Emacs manual] <info:emacs#Using Region>
+
+
+Writing Tests
+─────────────
+
+  SWI-Prolog includes the `PlUnit' unit testing framework[3], in which
+  unit tests are written in special blocks of Prolog code enclosed
+  within the directives `begin_tests/1' and `end_tests/1'.  To insert a
+  new block of unit tests (also known as a /test-set/) in a Prolog
+  buffer, use the command `M-x sweeprolog-plunit-testset-skeleton'.
+  This command prompts for a name to give the new test-set and inserts a
+  template such as the following:
+
+  ┌────
+  │ :- begin_tests(foo_regression_tests).
+  │ 
+  │ test() :- TestBody.
+  │ 
+  │ :- end_tests(foo_regression_tests).
+  └────
+
+  The cursor is left between the parentheses in `test()' head term and
+  the `TestBody' variable is marked as a hole (see [Filling Holes]).  To
+  insert another unit test, place point after a complete test case and
+  type `C-M-m' or `M-RET' to invoke `sweeprolog-insert-term-dwim' (see
+  [Context-Based Term Insertion]).
+
+
+[Filling Holes] See section Filling Holes
+
+[Context-Based Term Insertion] See section Context-Based Term Insertion
 
 
 Prolog Help
@@ -1692,3 +1724,6 @@ Footnotes
 
 [2] see [Text Properties in the Elisp manual] (<info:elisp#Text
 Properties>)
+
+[3] See [Prolog Unit Tests in the SWI-Prolog manual]
+(<https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/plunit.html%27)>).

@@ -35,10 +35,10 @@ enter the reference of the RFC document yourself.
 
 ## Screenshots
 ### Browser
-![Helm-based browser](img/helm-browser.png)
+![Helm-based browser](img/browser.png)
 
 ### Reader
 ![Reader](img/reader.png)
 
 ## Contact
-If you have an idea or a question, email me at <khaelin@gmail.com>.
+If you have an idea or a question, email me at <nicolas@n16f.net>.
