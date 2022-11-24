@@ -4,8 +4,8 @@
 
 ;; Author: Gabor Poczkodi <hajovonta@gmail.com>
 ;; URL: https://git.sr.ht/~hajovonta/glue/
-;; Package-Version: 20221114.1120
-;; Package-Commit: abfad405f240d9a89f792aae36efb3c2af43021f
+;; Package-Version: 20221124.802
+;; Package-Commit: 3ca71f9f81e0db1ae29a41e3667499bdfa5eeeef
 ;; Keywords: lisp emacs common lisp cl
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.1"))
@@ -132,6 +132,16 @@ Pass result of form as argument to CONTINUATION."
     (cond ((eq 'slime interaction) (glue--slime-send-async cl-form continuation))
           ((eq 'sly interaction) (glue--sly-send-async cl-form continuation)))))
 
+(defun glue-ensure-package (quicklisp-package)
+  "Ensure the given package is loaded into the image.
+Pass the package as symbol to QUICKLISP-PACKAGE."
+  (glue-send-sync `(unless
+                       (loop for p in (list-all-packages)
+                             when (equal (package-name p)
+                                         ,(upcase (symbol-name quicklisp-package)))
+                             collect p)
+                     (ql:quickload ',quicklisp-package))))
+
 ;; Two thread functions are provided. (glue-sbcl-thread) can be used
 ;; with SBCL only.  It has the advantage of not needing to load any
 ;; external libraries.  This starts a thread on SBCL side and returns
@@ -222,6 +232,7 @@ The library bordeaux-threads must be loaded into the image before usage.
 Pass name of thread as NAME-OF-THREAD.
 Pass valid CL form as CL-FORM."
   (let ((interaction (glue--precheck)))
+    (glue-ensure-package 'bordeaux-threads)
     (cond ((eq 'slime interaction) (glue--slime-bt-thread name-of-thread cl-form))
           ((eq 'sly interaction) (glue--sly-bt-thread name-of-thread cl-form)))))
 

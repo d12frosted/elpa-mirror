@@ -30,14 +30,29 @@ The default keybindings in the `pulseaudio-control' keymap are:
 
 * `+` : Increase the volume of the currently-selected sink by
   `pulseaudio-control-volume-step'
-  (`pulseaudio-control-increase-volume').
+  (`pulseaudio-control-increase-sink-volume').
+
+* `=` : Increase the volume of the currently-selected source by
+  `pulseaudio-control-volume-step'
+  (`pulseaudio-control-increase-source-volume').
 
 * `-` : Decrease the volume of the currently-selected sink by
   `pulseaudio-control-volume-step'
-  (`pulseaudio-control-decrease-volume').
+  (`pulseaudio-control-decrease-sink-volume').
+
+* `_` : Decrease the volume of the currently-selected source by
+  `pulseaudio-control-volume-step'
+  (`pulseaudio-control-decrease-source-volume').
 
 * `v` : Directly specify the volume of the currently-selected sink
-  (`pulseaudio-control-set-volume').  The value can be:
+  (`pulseaudio-control-set-sink-volume').  The value can be:
+
+  * a percentage, e.g. '10%';
+  * in decibels, e.g. '2dB';
+  * a linear factor, e.g. '0.9' or '1.1'.
+
+* `V` : Directly specify the volume of the currently-selected source
+  (`pulseaudio-control-set-source-volume').  The value can be:
 
   * a percentage, e.g. '10%';
   * in decibels, e.g. '2dB';
@@ -46,23 +61,41 @@ The default keybindings in the `pulseaudio-control' keymap are:
 * `m` : Toggle muting of the currently-selected sink
   (`pulseaudio-control-toggle-current-sink-mute').
 
+* `M` : Toggle muting of the currently-selected source
+  (`pulseaudio-control-toggle-current-source-mute').
+
 * `x` : Toggle muting of a sink, specified by index
   (`pulseaudio-control-toggle-sink-mute-by-index').
+
+* `X` : Toggle muting of a source, specified by index
+  (`pulseaudio-control-toggle-source-mute-by-index').
 
 * `e` : Toggle muting of a sink, specified by name
   (`pulseaudio-control-toggle-sink-mute-by-name').
 
+* `E` : Toggle muting of a source, specified by name
+  (`pulseaudio-control-toggle-source-mute-by-name').
+
 * `i` : Select a sink to be the current sink, specified by index
   (`pulseaudio-control-select-sink-by-index').
 
+* `I` : Select a source to be the current sink, specified by index
+  (`pulseaudio-control-select-source-by-index').
+
 * `n` : Select a sink to be the current sink, specified by name
   (`pulseaudio-control-select-sink-by-name').
+
+* `N` : Select a source to be the current source, specified by name
+  (`pulseaudio-control-select-source-by-name').
 
 * `d` : Display volume of the currently-selected sink
   (`pulseaudio-control-display-volume').
 
 * `]` : Toggle use of @DEFAULT_SINK@ for volume operations
-  (`pulseaudio-control-toggle-use-of-default-sink').
+  (`pulseaudio-control-default-sink-mode').
+
+* `[` : Toggle use of @DEFAULT_SOURCE@ for volume operations
+  (`pulseaudio-control-default-source-mode').
 
 Customisation options, including `pulseaudio-control-volume-step',
 are available via the `pulseaudio-control' customize-group.

@@ -1,7 +1,7 @@
 (pulseaudio-control .
-		    [(20221122 459)
+		    [(20221124 858)
 		     nil "Use `pactl' to manage PulseAudio volumes." single
-		     ((:commit . "76ec74ce2e72d4995e76ac15b61efd1820be256e")
+		     ((:commit . "d5f6073a1e6e2cace8dfe99aaeda2b5637db5258")
 		      (:authors
 		       ("Alexis <flexibeast@gmail.com>, Ellington Santos <ellingtonsantos@gmail.com>, Sergey Trofimov" . "sarg@sarg.org.ru"))
 		      (:maintainer "Alexis" . "flexibeast@gmail.com")
