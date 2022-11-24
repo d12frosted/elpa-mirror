@@ -2,8 +2,8 @@
 
 ;; Copyright (c) 2019 John Louis Del Rosario
 ;; Package-Requires: ((emacs "24") (groovy-mode "2.0"))
-;; Package-Commit: fa5545be1329df3067dcfd81749bbd99df070d6b
-;; Package-Version: 20220428.1113
+;; Package-Commit: 1d90c1ff8edc7ea88844af92a206e7c5f083b568
+;; Package-Version: 20221124.30
 ;; Package-X-Original-Version: 0.0.1
 ;; Homepage: https://github.com/john2x/jenkinsfile-mode
 ;;
@@ -34,6 +34,11 @@
   "URL to Jenkinsfile.vim source file."
   :group 'jenkinsfile-mode
   :type 'string)
+
+(defcustom jenkinsfile-mode-indent-offset 4
+  "Indentation width to use."
+  :group 'jenkinsfile-mode
+  :type 'integer)
 
 (defvar jenkinsfile-mode--file-section-keywords
   '("pipeline" "agent" "stages" "steps" "post"))
@@ -297,6 +302,7 @@ Run this manually when editing this file to get an updated the list of keywords.
   (add-hook 'completion-at-point-functions 'jenkinsfile-mode--option-compeletion-at-point nil 'local)
   (add-hook 'completion-at-point-functions 'jenkinsfile-mode--pipeline-step-compeletion-at-point nil 'local)
   (add-hook 'completion-at-point-functions 'jenkinsfile-mode--core-step-compeletion-at-point nil 'local)
+  (setq-local groovy-indent-offset jenkinsfile-mode-indent-offset)
   (with-eval-after-load 'company-keywords
     (add-to-list 'company-keywords-alist
                  `(jenkinsfile-mode . ,(append jenkinsfile-mode--file-section-keywords
