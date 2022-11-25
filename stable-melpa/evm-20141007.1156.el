@@ -5,6 +5,8 @@
 ;; Author: Johan Andersson <johan.rejeep@gmail.com>
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
 ;; Version: 0.4.2
+;; Package-Version: 20141007.1156
+;; Package-Commit: d0623b2355436a5fd9f7238b419782080c79196b
 ;; URL: http://github.com/rejeep/evm
 ;; Package-Requires: ((dash "2.3.0") (f "0.13.0"))
 

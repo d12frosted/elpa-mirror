@@ -2,8 +2,8 @@
 
 ;; Author: Derek Feichtinger <dfeich.gmail.com>
 ;; Keywords: convenience
-;; Package-Version: 20220515.849
-;; Package-Commit: 9201db80862d144459f1316d571842f5389a47eb
+;; Package-Version: 20221124.2304
+;; Package-Commit: 9d21d3a5ba2f8656aa23b8cb557017440f1b74e8
 ;; Package-Requires: ((org "8") (emacs "24.3"))
 ;; Homepage: https://github.com/dfeich/org-clock-convenience
 ;; Version: 1.3
@@ -328,8 +328,10 @@ the current agenda buffer."
 	  (let ((time (current-time)))
 	    (setq updated-ts (format-time-string
 			      (concat "["
-				      (substring (cdr org-time-stamp-formats)
-						 1 -1)
+				          (if (version<= org-version "9.5")
+                              (substring (cdr org-time-stamp-formats)
+						                 1 -1)
+                            (cdr org-time-stamp-formats))
 				      "]")
 			      time)
 		  updated-time (format-time-string "%H:%M" time)))
