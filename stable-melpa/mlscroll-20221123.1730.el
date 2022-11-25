@@ -5,8 +5,8 @@
 ;; Author: J.D. Smith
 ;; Homepage: https://github.com/jdtsmith/mlscroll
 ;; Package-Requires: ((emacs "27.1"))
-;; Package-Version: 20221101.1715
-;; Package-Commit: 101821ad61222e318d924aaebac091650ec2a047
+;; Package-Version: 20221123.1730
+;; Package-Commit: a453a54757ed720a3c5118d05c184cbce142303f
 ;; Version: 0.1.2
 ;; Keywords: convenience
 ;; Prefix: mlscroll
@@ -220,17 +220,18 @@ START-EVENT is the automatically passed mouse event."
 	 (mouse-fine-grained-tracking t)
 	 (xstart (mlscroll-scroll-to x lcr start-win))
 	 event end xnew)
-    (track-mouse
-      (setq track-mouse 'dragging)
-      (while (and (setq event (read-event))
-		  (mouse-movement-p event))
-	(setq end (event-end event)
-	      xnew (+ xstart (- (car (posn-x-y end)) xstart-abs)))
-	(when (and
-	       (eq (posn-area end) 'mode-line)
-	       (>= xnew 0)
-	       (<= xnew (- mlscroll-width mlscroll-border)))
-	  (mlscroll-scroll-to xnew nil start-win))))))
+    (unless (terminal-parameter nil 'xterm-mouse-mode)
+      (track-mouse
+	(setq track-mouse 'dragging)
+	(while (and (setq event (read-event))
+		    (mouse-movement-p event))
+	  (setq end (event-end event)
+		xnew (+ xstart (- (car (posn-x-y end)) xstart-abs)))
+	  (when (and
+		 (eq (posn-area end) 'mode-line)
+		 (>= xnew 0)
+		 (<= xnew (- mlscroll-width mlscroll-border)))
+	    (mlscroll-scroll-to xnew nil start-win)))))))
 
 (defun mlscroll--part-widths (&optional win)
   "Pixel widths of the bars (not including border).

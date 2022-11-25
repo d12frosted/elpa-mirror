@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out c9aef52121b458297e70bb50f49f7276b4a8d759
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/guix/
-  to /tmp/guixxvyRTf/guix-20210608.1653
+  to /tmp/guixxN7Dgd/guix-20210608.1653
   ! elisp/guix-about.el -> guix-about.el
   ! elisp/guix-auto-mode.el -> guix-auto-mode.el
   ! elisp/guix-build-log.el -> guix-build-log.el
@@ -55,7 +55,7 @@ Copying files (->) and directories (=>)
     images/guix-logo.svg -> images/guix-logo.svg
     scheme/emacs-guix => scheme/emacs-guix
     scheme/emacs-guix.scm -> scheme/emacs-guix.scm
-Generating /tmp/guixxvyRTf/guix-20210608.1653/emacs-guix.info
+Generating /tmp/guixxN7Dgd/guix-20210608.1653/emacs-guix.info
 Created guix-20210608.1653.tar containing:
   guix-20210608.1653/
   guix-20210608.1653/dir
@@ -126,7 +126,7 @@ Created guix-20210608.1653.tar containing:
   guix-20210608.1653/scheme/emacs-guix/system-generations.scm
   guix-20210608.1653/scheme/emacs-guix/system.scm
   guix-20210608.1653/scheme/emacs-guix/utils.scm
-Built guix in 11.536s, finished at 2022-11-24T09:58:15+0000
+Built guix in 15.116s, finished at 2022-11-24T20:56:56+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  435 Nov 24 09:58 packages/guix-20210608.1653.entry
-752K -rw-r--r-- 1 root root 750K Nov 24 09:58 packages/guix-20210608.1653.tar
+4.0K -rw-r--r-- 1 root root  435 Nov 24 20:56 packages/guix-20210608.1653.entry
+752K -rw-r--r-- 1 root root 750K Nov 24 20:56 packages/guix-20210608.1653.tar

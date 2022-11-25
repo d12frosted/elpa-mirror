@@ -4,8 +4,8 @@
 
 ;; Author: Taylor R. Campbell <campbell+paredit@mumble.net>
 ;; Version: 25beta
-;; Package-Version: 20220709.916
-;; Package-Commit: 42500e5d450c88a3b249b548be447577d8549b17
+;; Package-Version: 20221124.1905
+;; Package-Commit: 5615023023aea50683f5725284fb9bc6cbbd64ec
 ;; Created: 2005-07-31
 ;; Keywords: lisp
 
@@ -339,11 +339,13 @@ Paredit behaves badly if parentheses are unbalanced, so exercise
                 ("|(defun hello-world ...)"
                  ";;; |\n(defun hello-world ...)"))
 
-   ("C-j"       paredit-newline
+   (()          paredit-newline
                 ("(let ((n (frobbotz))) |(display (+ n 1)\nport))"
                  ,(concat "(let ((n (frobbotz)))"
                           "\n  |(display (+ n 1)"
                           "\n           port))")))
+   ("RET"       paredit-RET)
+   ("C-j"       paredit-C-j)
 
    "Deleting & Killing"
    (("C-d" ,@paredit-forward-delete-keys)
@@ -1009,6 +1011,43 @@ If in a comment and if followed by invalid structure, call
          ;; Indent the following S-expression, but don't signal an
          ;; error if there's only a closing delimiter after the point.
          (paredit-ignore-sexp-errors (indent-sexp)))))
+
+(defun paredit-electric-indent-mode-p ()
+  "True if Electric Indent Mode is on, false if not.
+Electric Indent Mode is generally not compatible with paredit and
+  users are advised to disable it, since paredit does essentially
+  everything it tries to do better.
+However, to mitigate the negative user experience of combining
+ Electric Indent Mode with paredit, the default key bindings for
+ RET and C-j in paredit are exchanged depending on whether
+ Electric Indent Mode is enabled."
+  (and (boundp 'electric-indent-mode)
+       electric-indent-mode))
+
+(defun paredit-RET ()
+  "Default key binding for RET in Paredit Mode.
+Normally, inserts a newline, like traditional Emacs RET.
+With Electric Indent Mode enabled, inserts a newline and indents
+  the new line, as well as any subexpressions of it on subsequent
+  lines."
+  (interactive)
+  (if (paredit-electric-indent-mode-p)
+      (let ((electric-indent-mode nil))
+        (paredit-newline))
+    (newline)))
+
+(defun paredit-C-j ()
+  "Default key binding for C-j in Paredit Mode.
+Normally, inserts a newline and indents
+  the new line, as well as any subexpressions of it on subsequent
+  lines.
+With Electric Indent Mode enabled, inserts a newline, like
+  traditional Emacs RET."
+  (interactive)
+  (if (paredit-electric-indent-mode-p)
+      (let ((electric-indent-mode nil))
+        (newline))
+    (paredit-newline)))
 
 (defun paredit-reindent-defun (&optional argument)
   "Reindent the definition that the point is on.
@@ -2160,17 +2199,22 @@ If the point is on an S-expression, such as a string or a symbol, not
   between them, that S-expression is considered to follow the point."
   (interactive "P")
   (save-excursion
-    (cond ((paredit-in-string-p)
-           (goto-char (car (paredit-string-start+end-points))))
-          ((paredit-in-char-p)
-           (backward-sexp))
-          ((paredit-in-comment-p)
-           (error "No S-expression to raise in comment.")))
     ;; Select the S-expressions we want to raise in a buffer substring.
-    (let* ((n (prefix-numeric-value argument))
-           (bound (scan-sexps (point) n))
+    (let* ((bound
+            (if (and (not argument) (paredit-region-active-p))
+                (progn (if (< (mark) (point))
+                           (paredit-check-region (mark) (point))
+                           (paredit-check-region (point) (mark)))
+                       (mark))
+              (cond ((paredit-in-string-p)
+                     (goto-char (car (paredit-string-start+end-points))))
+                    ((paredit-in-char-p)
+                     (backward-sexp))
+                    ((paredit-in-comment-p)
+                     (error "No S-expression to raise in comment.")))
+              (scan-sexps (point) (prefix-numeric-value argument))))
            (sexps
-            (if (< n 0)
+            (if (< bound (point))
                 (buffer-substring bound (paredit-point-at-sexp-end))
                 (buffer-substring (paredit-point-at-sexp-start) bound))))
       ;; Move up to the list we're raising those S-expressions out of and
