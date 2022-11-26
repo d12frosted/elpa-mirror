@@ -1100,11 +1100,11 @@ Writing Tests
   │ :- end_tests(foo_regression_tests).
   └────
 
-  The cursor is left between the parentheses in `test()' head term and
-  the `TestBody' variable is marked as a hole (see [Filling Holes]).  To
-  insert another unit test, place point after a complete test case and
-  type `C-M-m' or `M-RET' to invoke `sweeprolog-insert-term-dwim' (see
-  [Context-Based Term Insertion]).
+  The cursor is left between the parentheses of the `test()' head term,
+  and the `TestBody' variable is marked as a hole (see [Filling Holes]).
+  To insert another unit test, place point after a complete test case
+  and type `C-M-m' or `M-RET' to invoke `sweeprolog-insert-term-dwim'
+  (see [Context-Based Term Insertion]).
 
 
 [Filling Holes] See section Filling Holes
