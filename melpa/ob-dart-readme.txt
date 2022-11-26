@@ -9,7 +9,7 @@
 - Dart language installed - An implementation can be downloaded from
                             https://www.dartlang.org/downloads/
 - The dart executable is on the PATH
-- (Optional) Dart major mode -  Can be installed from MELPA
+- (Optional) Dart major mode from MELPA
 
 Notes:
   - Code follows / inspired by these previously supported org-languages,
