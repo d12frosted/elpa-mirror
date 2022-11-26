@@ -4,8 +4,8 @@
 
 ;; Author: Akib Azmain Turja <akib@disroot.org>
 ;; Version: 1.0
-;; Package-Version: 20220515.1719
-;; Package-Commit: ff3e10edbdf9b919747ec2ba3434d5858f5cc9fa
+;; Package-Version: 20221126.614
+;; Package-Commit: 1166673bcf284e3ccf6406b6f63432563878f637
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools, c
 ;; URL: https://codeberg.org/akib/emacs-gnu-indent
@@ -53,18 +53,17 @@
 ;; Autoload so that users can set it as file local variable without
 ;; warning.
 ;;;###autoload
-(progn
-  (defcustom gnu-indent-options nil
-    "Arguments to pass to GNU Indent."
-    :type '(repeat string)
-    :safe (lambda (val)
-            (let ((valid t))
-              (while (and valid val)
-                (unless (stringp (car val))
-                  (setq valid nil))
-                (setq val (cdr val)))
-              valid))
-    :group 'gnu-indent))
+(defcustom gnu-indent-options nil
+  "Arguments to pass to GNU Indent."
+  :type '(repeat string)
+  :safe (lambda (val)
+          (let ((valid t))
+            (while (and valid val)
+              (unless (stringp (car val))
+                (setq valid nil))
+              (setq val (cdr val)))
+            valid))
+  :group 'gnu-indent)
 
 ;;;###autoload
 (defun gnu-indent-region (beg end)
@@ -90,16 +89,14 @@ When called non-interactively, indent text between BEG and END."
             (send-region process beg end)
             (process-send-eof process)
             (redisplay)
-            (while (process-live-p process)
-              (sleep-for 0.01))
+            (while (accept-process-output process 0.01))
             (unless (eq (process-exit-status process) 0)
-              (display-buffer (process-buffer process))
+              (pop-to-buffer (process-buffer process))
               (error "GNU Indent exited with non-zero status"))
             (save-restriction
               (let ((inhibit-read-only t))
                 (narrow-to-region beg end)
-                (insert-file-contents temp-file nil nil nil
-                                      t))))
+                (insert-file-contents temp-file nil nil nil t))))
         (delete-file temp-file)))
     (when (called-interactively-p 'interactive)
       (message "Indenting...done"))))
@@ -114,7 +111,6 @@ When called non-interactively, indent text between BEG and END."
 (define-minor-mode gnu-indent-mode
   "Indent buffer automatically with GNU Indent."
   :lighter " GNU-Indent"
-  :keymap nil
   (if gnu-indent-mode
       (add-hook 'before-save-hook #'gnu-indent-buffer nil t)
     (remove-hook 'before-save-hook #'gnu-indent-buffer t)))

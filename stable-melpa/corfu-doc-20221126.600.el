@@ -4,8 +4,8 @@
 
 ;; Author: Yuwei Tian <ibluefocus@NOSPAM.gmail.com>
 ;; URL: https://github.com/galeo/corfu-doc
-;; Package-Version: 20220621.1554
-;; Package-Commit: da931367802d01e87e1e496ba5b51aa9126a705d
+;; Package-Version: 20221126.600
+;; Package-Commit: 09b224e1b9ccdf57e6264dcaa62fe5d422766a4a
 ;; Version: 0.7
 ;; Keywords: corfu popup documentation convenience
 ;; Package-Requires: ((emacs "27.1")(corfu "0.25"))
@@ -480,6 +480,11 @@ The optional CANDIDATE-INDEX is the the current completion candidate index."
   "Corfu doc minor mode."
   :global t
   :group 'corfu
+  (display-warning
+   'corfu-doc
+   "This package is now obsolete and superseded by the corfu built-in extension. \
+Please try to migrate."
+   :warning)
   (cond
     (corfu-doc-mode
      (corfu-doc--manual-popup-show)

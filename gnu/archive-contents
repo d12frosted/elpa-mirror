@@ -115,6 +115,16 @@
 	(:authors
 	 ("Per Abrahamsen" . "per.abrahamsen@gmail.com"))
 	(:maintainer "Per Abrahamsen" . "per.abrahamsen@gmail.com"))])
+ (altcaps .
+	  [(1 0 0)
+	   ((emacs
+	     (27 1)))
+	   "Apply alternating letter casing to convey sarcasm or mockery" tar
+	   ((:url . "https://git.sr.ht/~protesilaos/altcaps")
+	    (:maintainer "Altcaps Development" . "~protesilaos/altcaps@lists.sr.ht")
+	    (:authors
+	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
+	    (:commit . "ff932d3d7cd65d958f98d3924e98bf727c45549b"))])
  (ampc .
        [(0 2)
 	nil "Asynchronous Music Player Controller" single
