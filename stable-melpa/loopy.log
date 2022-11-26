@@ -4,10 +4,10 @@ Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
 Checking out origin/HEAD
-Checking out 771c1d1edd4dfec96b576b1d2b551e4aae066dc9
+Checking out 00645b461d2329cc875586a00d808ace5c660c64
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopy9eDLCi/loopy-20221125.2001
+  to /tmp/loopyPEsXqb/loopy-20221126.457
     loopy-commands.el -> loopy-commands.el
     loopy-iter.el -> loopy-iter.el
     loopy-misc.el -> loopy-misc.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
     loopy-vars.el -> loopy-vars.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Generating /tmp/loopy9eDLCi/loopy-20221125.2001/loopy.info
-Created loopy-20221125.2001.tar containing:
-  loopy-20221125.2001/
-  loopy-20221125.2001/dir
-  loopy-20221125.2001/loopy-commands.el
-  loopy-20221125.2001/loopy-iter.el
-  loopy-20221125.2001/loopy-misc.el
-  loopy-20221125.2001/loopy-pcase.el
-  loopy-20221125.2001/loopy-pkg.el
-  loopy-20221125.2001/loopy-seq.el
-  loopy-20221125.2001/loopy-vars.el
-  loopy-20221125.2001/loopy.el
-  loopy-20221125.2001/loopy.info
-Built loopy in 16.755s, finished at 2022-11-26T02:14:41+0000
+Generating /tmp/loopyPEsXqb/loopy-20221126.457/loopy.info
+Created loopy-20221126.457.tar containing:
+  loopy-20221126.457/
+  loopy-20221126.457/dir
+  loopy-20221126.457/loopy-commands.el
+  loopy-20221126.457/loopy-iter.el
+  loopy-20221126.457/loopy-misc.el
+  loopy-20221126.457/loopy-pcase.el
+  loopy-20221126.457/loopy-pkg.el
+  loopy-20221126.457/loopy-seq.el
+  loopy-20221126.457/loopy-vars.el
+  loopy-20221126.457/loopy.el
+  loopy-20221126.457/loopy.info
+Built loopy in 17.417s, finished at 2022-11-26T05:53:00+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  304 Nov 26 02:14 packages/loopy-20221125.2001.entry
 500K -rw-r--r-- 1 root root 500K Nov 26 02:14 packages/loopy-20221125.2001.tar
+4.0K -rw-r--r-- 1 root root  303 Nov 26 05:53 packages/loopy-20221126.457.entry
+500K -rw-r--r-- 1 root root 500K Nov 26 05:53 packages/loopy-20221126.457.tar
