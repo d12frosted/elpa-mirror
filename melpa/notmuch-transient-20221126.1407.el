@@ -6,8 +6,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://git.sr.ht/~tarsius/notmuch-transient
 ;; Keywords: mail
-;; Package-Version: 20221028.1344
-;; Package-Commit: 757ee082a2228e70151468f049eee2f14ed1e8d2
+;; Package-Version: 20221126.1407
+;; Package-Commit: 6cb27dec4b3eb7f83017a99254047d47be1e591d
 
 ;; Package-Requires: ((emacs "27.1") (compat "28.1.1.0") (notmuch "0.31.4"))
 
@@ -242,18 +242,18 @@ This is a replacement for `notmuch-jump-search'."
   (transient-setup 'notmuch-search-transient))
 
 (defun notmuch-search-transient--setup (_)
-  (cl-mapcan (lambda (search)
-               (let-alist (transient-plist-to-alist search)
-                 (and .key
-                      (transient--parse-child
-                       'notmuch-search-transient
-                       (list (key-description .key)
-                             .name
-                             (lambda ()
-                               (interactive)
-                               (notmuch-transient--search
-                                .search-type .query .sort-order)))))))
-             notmuch-saved-searches))
+  (transient-parse-suffixes
+   'notmuch-search-transient
+   (mapcar (lambda (search)
+             (let-alist (transient-plist-to-alist search)
+               (and .key
+                    (list (key-description .key)
+                          .name
+                          (lambda ()
+                            (interactive)
+                            (notmuch-transient--search
+                             .search-type .query .sort-order))))))
+           notmuch-saved-searches)))
 
 ;;;; Compatibility kludges
 

@@ -1,11 +1,11 @@
 (imake .
-       [(20221022 2233)
+       [(20221126 1429)
 	((emacs
 	  (25 1))
 	 (compat
 	  (28 1 1 0)))
 	"Simple, opinionated make target runner" single
-	((:commit . "d9b5cb5c0a5483e663cc3c345df7659ddf08b61e")
+	((:commit . "2beb3588a523d9ea1db5be3babd4d249702911f0")
 	 (:authors
 	  ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	 (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")

@@ -1,14 +1,11 @@
 This package provides the command `imake', which prompts for
-a `make' target and runs it in the current directory.
+make targets and runs them in the current directory.
 
-This is an opinionated command suitable for simple Makefiles
-such as those that can be found in the repositories of some
-Emacs packages.  The make targets to be offered as completion
-candidates have to be documented like so:
+If the `marginalia' package is available and some targets are
+documented as shown below, using one or more targets whose
+names begin with "help", then that documentation is shown.
 
-  help:
+  help helpall::
           $(info make lisp  - generate byte-code and autoloads)
+  helpall::
           $(info make clean - remove generated files)
-
-More precisely, a `help' target containing lines that match
-the regexp "^\t$(info make \\([^)]*\\))" is expected.
