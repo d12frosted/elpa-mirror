@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.5
-;; Package-Version: 20221016.1017
-;; Package-Commit: 7d7adf155760d33b8c391fbf1e99c5be85bab85a
+;; Package-Version: 20221127.454
+;; Package-Commit: 1203094cad705b4b9c861eee120e57a5a26e6ef1
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/tempel
 
@@ -456,7 +456,7 @@ This is meant to be a source in `tempel-template-sources'."
              for f in files collect
              (cons f (time-convert
                       (file-attribute-modification-time
-                       (file-attributes f))
+                       (file-attributes (file-truename f)))
                       'integer)))))
       (unless (equal (car tempel--path-templates) timestamps)
         (setq tempel--path-templates (cons timestamps

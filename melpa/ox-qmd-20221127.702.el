@@ -4,8 +4,8 @@
 
 ;; Author: 0x60DF <0x60DF@gmail.com>
 ;; URL: https://github.com/0x60df/ox-qmd
-;; Package-Version: 20221125.1557
-;; Package-Commit: 0502c024afa27c261cb21b7728f43fa87664f18c
+;; Package-Version: 20221127.702
+;; Package-Commit: 026e4bd227589b3500294a56c2eca43b3405f992
 ;; Version: 1.0.5
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: wp
@@ -77,6 +77,7 @@ When non-nil, `ox-qmd' do unfill paragraph"
                      (keyword . org--qmd-keyword)
                      (strike-through . org-qmd--strike-through)
                      (underline . org-qmd--undeline)
+                     (special-block . org-qmd--special-block)
                      (src-block . org-qmd--src-block)
                      (latex-fragment . org-qmd--latex-fragment)
                      (latex-environment . org-qmd--latex-environment)
@@ -142,6 +143,16 @@ channel."
          (suffix "```"))
     (concat prefix code suffix)))
 
+(defun org-qmd--special-block (special-block contents info)
+  "Transcode SPECIAL-BLOCK element into Qiita Markdown format.
+CONTENTS is nil.  INFO is a plist used as a communication
+channel."
+  (let* ((type (org-element-property :type special-block))
+         (label (if (member type '("note" "note-info" "note-warn" "note-alert"))
+                    (replace-regexp-in-string "-" " " type))))
+    (if label
+        (format ":::%s\n%s:::\n" label contents)
+      (org-md--convert-to-html special-block contents info))))
 
 (defun org-qmd--strike-through (_strike-through contents _info)
   "Transcode STRIKE-THROUGH element into Qiita Markdown format.
