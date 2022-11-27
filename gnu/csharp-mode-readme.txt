@@ -1,15 +1,16 @@
 Table of Contents
 ─────────────────
 
-1. csharp-mode
+1. Development status of this mode
+2. csharp-mode
 .. 1. Main features
 .. 2. tree-sitter support
 ..... 1. Using and evolving the tree-sitter functionality.
 .. 3. Usage
-2. Attribution
+3. Attribution
 .. 1. New focus
-3. ELPA
-4. License
+4. ELPA
+5. License
 
 
 [file:https://github.com/emacs-csharp/csharp-mode/workflows/Build%20&%20Test/badge.svg?branch=master]
@@ -31,7 +32,20 @@ Table of Contents
 <https://elpa.gnu.org/packages/csharp-mode.html>
 
 
-1 csharp-mode
+1 Development status of this mode
+═════════════════════════════════
+
+  This mode is now strictly in maintenance mode.  That means that /no/
+  new features will be added, and the mode itself will be moved into
+  core.  Thus development of support for C# will continue in core Emacs.
+  However, this repo will continue being available from (M)ELPA for some
+  time for backwards compatibility.  If you are running Emacs 29 or
+  larger you are advised to remove this package and rely on what's in
+  core.  Bug reports should be directed to the Emacs bug tracker after
+  Emacs 29 is released.
+
+
+2 csharp-mode
 ═════════════
 
   This is a mode for editing C# in emacs. It's using CC mode or
@@ -40,7 +54,7 @@ Table of Contents
 
 [tree-sitter] <https://github.com/ubolonton/emacs-tree-sitter>
 
-1.1 Main features
+2.1 Main features
 ─────────────────
 
   • font-lock and indent of C# syntax including:
@@ -56,7 +70,7 @@ Table of Contents
   • compilation-mode support for msbuild, devenv and xbuild.
 
 
-1.2 tree-sitter support
+2.2 tree-sitter support
 ───────────────────────
 
   You can enable experimental tree sitter support for indentation and
@@ -64,6 +78,7 @@ Table of Contents
   ┌────
   │ (use-package tree-sitter :ensure t)
   │ (use-package tree-sitter-langs :ensure t)
+  │ (use-package tree-sitter-indent :ensure t)
   │ 
   │ (use-package csharp-mode
   │   :ensure t
@@ -77,7 +92,7 @@ Table of Contents
   provided snippet above.
 
 
-1.2.1 Using and evolving the tree-sitter functionality.
+2.2.1 Using and evolving the tree-sitter functionality.
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   `tree-sitter' introduces a minor mode called `tree-sitter-debug-mode'
@@ -100,7 +115,7 @@ Table of Contents
   • `M-x revert-buffer' inside your `some-test-file.cs'
 
 
-1.3 Usage
+2.3 Usage
 ─────────
 
   This package is currently available on both ELPA and MELPA. Install
@@ -138,7 +153,7 @@ Table of Contents
 [eglot] <https://github.com/joaotavora/eglot>
 
 
-2 Attribution
+3 Attribution
 ═════════════
 
   This repo was a fork of the code originally developed by Dylan
@@ -148,7 +163,7 @@ Table of Contents
 
 [Google code] <https://code.google.com/p/csharpmode/>
 
-2.1 New focus
+3.1 New focus
 ─────────────
 
   The original csharp-mode repo contained lots of different code for
@@ -167,7 +182,7 @@ Table of Contents
 [extras-branch] <https://github.com/josteink/csharp-mode/tree/extras>
 
 
-3 ELPA
+4 ELPA
 ══════
 
   This package aims to stay as close to mainline emacs as it can.  As
@@ -175,7 +190,7 @@ Table of Contents
   significant size.
 
 
-4 License
+5 License
 ═════════
 
   The original project was licensed under [GPL v2+], but after a rewrite

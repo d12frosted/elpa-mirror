@@ -46,6 +46,7 @@ Editing Prolog code
 .. Context-Based Term Insertion
 ..... Filling Holes
 .. Writing Tests
+.. Managing Dependencies
 Prolog Help
 The Prolog Top-Level
 .. Multiple top-levels
@@ -1110,6 +1111,28 @@ Writing Tests
 [Filling Holes] See section Filling Holes
 
 [Context-Based Term Insertion] See section Context-Based Term Insertion
+
+
+Managing Dependencies
+─────────────────────
+
+  It is considered good practice for SWI-Prolog source files to
+  explicitly list their dependencies on predicates defined in other
+  files by using `autoload/2' and `use_module/2' directives.  To find
+  all implicitly autoloaded predicates in the current `sweeprolog-mode'
+  buffer and make the dependencies on them explicit, use the command
+  `M-x sweeprolog-update-dependencies' bound to `C-c C-u'.  This command
+  analyzes the current buffer and adds or updates `autoload/2' and
+  `use_module/2' as needed.
+
+  By default, when `flymake' integration is enabled (see [Examining
+  diagnostics]), calls to implicitly autoloaded predicates are marked
+  and reported as `flymake' diagnostics.  To inhibit `flymake' from
+  diagnosing implicit autoloads, customize the user option
+  `sweeprolog-note-implicit-autoloads' to nil.
+
+
+[Examining diagnostics] See section Examining diagnostics
 
 
 Prolog Help

@@ -1306,6 +1306,15 @@
 	    (:authors
 	     ("Codingteam" . "codingteam@conference.jabber.ru"))
 	    (:commit . "071d008ebd734f469b87597cbdd34139a92e5308"))])
+ (paredit .
+	  [(26)
+	   nil "minor mode for editing parentheses" tar
+	   ((:keywords "lisp")
+	    (:maintainer "Taylor R. Campbell" . "campbell@paredit.org")
+	    (:authors
+	     ("Taylor R. Campbell" . "campbell@paredit.org"))
+	    (:url . "https://elpa.nongnu.org/nongnu/paredit.html")
+	    (:commit . "72cc1f6055321a53021186b86d2f825167b81478"))])
  (parseclj .
 	   [(1 1 0)
 	    ((emacs
@@ -1665,7 +1674,7 @@
 	   ("Random User"))
 	  (:commit . "7842bb9f15f08ea3d223f98bf7be98d6d01be522"))])
  (sweeprolog .
-	     [(0 9 1)
+	     [(0 9 2)
 	      ((emacs
 		(28 1)))
 	      "Embedded SWI-Prolog" tar
@@ -1674,7 +1683,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "92cca7eb12069daf7113452c2826ac5b1c96bf4b"))])
+	       (:commit . "ad74fa17bba74d139d7e0ffb0d514f7246abed3d"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs
