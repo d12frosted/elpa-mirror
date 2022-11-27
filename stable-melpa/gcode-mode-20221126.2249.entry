@@ -1,0 +1,11 @@
+(gcode-mode .
+	    [(20221126 2249)
+	     ((emacs
+	       (24 4)))
+	     "Simple G-Code major mode" tar
+	     ((:commit . "94d2baf2ccbe24ef173e1b203aadb02b43ef2aa2")
+	      (:authors
+	       ("Yuri D'Elia" . "wavexx@thregr.org"))
+	      (:maintainer "Yuri D'Elia" . "wavexx@thregr.org")
+	      (:keywords "gcode" "languages" "highlight" "syntax")
+	      (:url . "https://gitlab.com/wavexx/gcode-mode.el"))])
