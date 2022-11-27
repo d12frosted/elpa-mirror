@@ -5,8 +5,8 @@
 ;; Author: Yujie Wen <yjwen.ty at gmail dot com>
 ;; Created: 2013-04-27
 ;; Version: 1.0
-;; Package-Version: 20221127.702
-;; Package-Commit: 2d5a04ddecd2c39efe6b46bfab26f7661e7750b4
+;; Package-Version: 20221127.814
+;; Package-Commit: f55c851bf6aeb1bb2a7f6cf0f2b7bd0e79c4a5a0
 ;; Package-Requires: ((org "8.3"))
 ;; Keywords: outlines, hypermedia, slideshow, presentation
 
@@ -346,7 +346,7 @@ Example:
   :group 'org-export-reveal
   :type 'list)
 
-(defcustom org-reveal-highlight-css "%r/lib/css/zenburn.css"
+(defcustom org-reveal-highlight-css "%r/plugin/highlight/zenburn.css"
   "Highlight.js CSS file."
   :group 'org-export-reveal
   :type 'string)

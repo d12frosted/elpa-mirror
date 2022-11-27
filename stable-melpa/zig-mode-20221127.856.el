@@ -1,8 +1,8 @@
 ;;; zig-mode.el --- A major mode for the Zig programming language -*- lexical-binding: t -*-
 
 ;; Version: 0.0.8
-;; Package-Version: 20220521.1148
-;; Package-Commit: dbc648f5bca8f3b9ca2cc7827f326f5530115144
+;; Package-Version: 20221127.856
+;; Package-Commit: a4e1ce7296c11e668487ed9962be358755b9a6fc
 ;; Author: Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>
 ;; Keywords: zig, languages
 ;; Package-Requires: ((emacs "24.3"))
@@ -79,7 +79,7 @@ If given a SOURCE, execute the CMD on it."
          (if source
              (mapconcat 'shell-quote-argument (cons source args) " ")
            args)))
-    (compile (concat zig-zig-bin " " cmd " " cmd-args))))
+    (compilation-start (concat zig-zig-bin " " cmd " " cmd-args))))
 
 ;;;###autoload
 (defun zig-toggle-format-on-save ()
