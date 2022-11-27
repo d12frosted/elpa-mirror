@@ -4,10 +4,11 @@
 
 ;; Author: Taylor R. Campbell <campbell@paredit.org>
 ;; Version: 27beta
-;; Package-Version: 20221127.1431
-;; Package-Commit: 568c4463dab14e999228ce72d3b35409e2132c58
+;; Package-Version: 20221127.1452
+;; Package-Commit: d700549d8aad684f1fabcfff565a9ad8b468199b
 ;; Created: 2005-07-31
 ;; Keywords: lisp
+;; URL: https://paredit.org
 
 ;; Paredit is free software: you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by
@@ -27,6 +28,16 @@
 ;;; Latest release: https://paredit.org/paredit.el
 ;;; Current development version: https://paredit.org/paredit-beta.el
 ;;; Release notes: https://paredit.org/NEWS
+
+;;; Commentary:
+
+;; Paredit keeps your parentheses balanced while editing.  Paredit Mode
+;; binds keys like `(', `)', and `"' to insert or delete parentheses
+;; and string quotes in balanced pairs as you're editing without
+;; getting in your way, augments editing keys like `C-k' to handle
+;; balanced expressions, and provides advanced commands for editing
+;; balanced expressions like splicing and joining while judiciously
+;; keeping the code you're working on indented.
 
 ;;; Install paredit by placing `paredit.el' in `/path/to/elisp', a
 ;;; directory of your choice, and adding to your .emacs file:

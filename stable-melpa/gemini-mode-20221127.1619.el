@@ -4,9 +4,9 @@
 
 ;; Author: Jason McBrayer <jmcbray@carcosa.net>, tastytea <tastytea@tastytea.de>, Étienne Deparis <etienne@depar.is>
 ;; Created: 20 May 2020
-;; Version: 1.1.2
-;; Package-Version: 20210909.1442
-;; Package-Commit: 60bd07b3a1e532c950c132673777ceb635c9960d
+;; Version: 1.2.0
+;; Package-Version: 20221127.1619
+;; Package-Commit: a7dd7c6ea4e036d0d5ecc4a5d284874c400f10ba
 ;; Keywords: languages
 ;; Homepage: https://git.carcosa.net/jmcbray/gemini.el
 ;; Package-Requires: ((emacs "24.4"))
@@ -65,6 +65,10 @@
   '((t :inherit font-lock-keyword-face))
   "Face for unordered list items in Gemini"
   :group 'gemini-mode)
+(defface gemini-preformatted-face
+  '((t :inherit (font-lock-builtin-face fixed-pitch)))
+  "Face for preformatted blocks in Gemini"
+  :group 'gemini-mode)
 
 (defcustom gemini-mode-hook 'turn-on-visual-line-mode
   "Normal hook run when entering Gemini mode. Usually used to set line
@@ -100,7 +104,7 @@ Used by ‘font-lock-defaults’ and ‘gemini-link-at-point’.")
     ;; preformatted must be declared first has it must absolutely be set
     ;; before any other face (for exemple to avoid a title inside a
     ;; preformatted block to hijack it).
-    `((,gemini-preformatted-regexp . 'font-lock-builtin-face)
+    `((,gemini-preformatted-regexp . 'gemini-preformatted-face)
       (,gemini-heading-rest-regexp . 'gemini-heading-face-rest)
       (,gemini-heading-3-regexp . 'gemini-heading-face-3)
       (,gemini-heading-2-regexp . 'gemini-heading-face-2)

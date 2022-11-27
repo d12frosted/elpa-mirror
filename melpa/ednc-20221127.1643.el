@@ -3,8 +3,8 @@
 
 ;; Author: Simon Nicolussi <sinic@sinic.name>
 ;; Version: 0.1
-;; Package-Version: 20220404.2105
-;; Package-Commit: d1a3c37235dd87e0bce6ffc75f5568218d6d83b4
+;; Package-Version: 20221127.1643
+;; Package-Commit: eafa35f5a3a016a6d3d11e23268d08e6b5bda2a7
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: unix
 ;; Homepage: https://github.com/sinic/ednc
@@ -41,6 +41,7 @@
 (require 'dbus)
 (require 'image)
 (require 'subr-x)
+(require 'mm-util)
 
 (defconst ednc-log-name "*ednc-log*")
 
@@ -313,7 +314,7 @@ The returned value is removed from HINTS if REMOVE-FLAG is non-nil."
     (if (eq (aref image-path 0) ?/)
         (with-temp-buffer
           (set-buffer-multibyte nil)
-          (ignore-errors (insert-file-contents-literally image-path))
+          (ignore-errors (mm-insert-file-contents image-path nil nil nil nil t))
           (unless (string-empty-p (buffer-string))
             (create-image (buffer-string) nil t)))
       (throw 'invalid (message "unsupported image path: %s" image-path)))))

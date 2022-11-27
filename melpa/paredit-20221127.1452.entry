@@ -1,8 +1,9 @@
 (paredit .
-	 [(20221127 1431)
+	 [(20221127 1452)
 	  nil "minor mode for editing parentheses" single
-	  ((:commit . "568c4463dab14e999228ce72d3b35409e2132c58")
+	  ((:commit . "d700549d8aad684f1fabcfff565a9ad8b468199b")
 	   (:authors
 	    ("Taylor R. Campbell" . "campbell@paredit.org"))
 	   (:maintainer "Taylor R. Campbell" . "campbell@paredit.org")
-	   (:keywords "lisp"))])
+	   (:keywords "lisp")
+	   (:url . "https://paredit.org"))])
