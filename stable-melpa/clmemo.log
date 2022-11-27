@@ -7,15 +7,15 @@ Checking out origin/HEAD
 Checking out f695c38c551f72f6ac5e1a82badc540c80d3b33b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clmemo/
-  to /tmp/clmemox4ToxB/clmemo-20220204.1345
+  to /tmp/clmemoaEBls1/clmemo-20220204.1345
     clmemo.el -> clmemo.el
   ! doc/clmemo.texi -> clmemo.texi
   ! doc/install.texi -> install.texi
   ! doc/news.texi -> news.texi
-Generating /tmp/clmemox4ToxB/clmemo-20220204.1345/clmemo.info
-Generating /tmp/clmemox4ToxB/clmemo-20220204.1345/install.info
+Generating /tmp/clmemoaEBls1/clmemo-20220204.1345/clmemo.info
+Generating /tmp/clmemoaEBls1/clmemo-20220204.1345/install.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemox4ToxB/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemoaEBls1/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
 
 /mnt/store/melpa/working/clmemo/doc/install.texi:45: warning: undefined flag: clmemo
 /mnt/store/melpa/working/clmemo/doc/install.texi:50: warning: undefined flag: clmemo
@@ -25,12 +25,12 @@ Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/clmemo/doc/i
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/clmemox4ToxB/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/clmemoaEBls1/clmemo-20220204.1345/install.info' exited with non-zero exit-code: 1
 
-install-info: No such file or directory for /tmp/clmemox4ToxB/clmemo-20220204.1345/install.info
+install-info: No such file or directory for /tmp/clmemoaEBls1/clmemo-20220204.1345/install.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/clmemox4ToxB/clmemo-20220204.1345/news.info
+Generating /tmp/clmemoaEBls1/clmemo-20220204.1345/news.info
 Created clmemo-20220204.1345.tar containing:
   clmemo-20220204.1345/
   clmemo-20220204.1345/clmemo-pkg.el
@@ -38,7 +38,7 @@ Created clmemo-20220204.1345.tar containing:
   clmemo-20220204.1345/clmemo.info
   clmemo-20220204.1345/dir
   clmemo-20220204.1345/news.info
-Built clmemo in 13.987s, finished at 2022-11-27T10:23:03+0000
+Built clmemo in 14.968s, finished at 2022-11-27T14:01:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  321 Nov 27 10:23 packages/clmemo-20220204.1345.entry
-132K -rw-r--r-- 1 root root 130K Nov 27 10:23 packages/clmemo-20220204.1345.tar
+4.0K -rw-r--r-- 1 root root  321 Nov 27 14:01 packages/clmemo-20220204.1345.entry
+132K -rw-r--r-- 1 root root 130K Nov 27 14:01 packages/clmemo-20220204.1345.tar
