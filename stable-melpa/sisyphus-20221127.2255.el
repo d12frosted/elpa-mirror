@@ -5,10 +5,10 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/magit/sisyphus
 ;; Keywords: git tools vc
-;; Package-Commit: 64860faa0eba4bac8c794af4e8969c9458deb550
+;; Package-Commit: 1018df74396211c42403e20f6e96dfdf39c2f582
 
-;; Package-Version: 20221013.1729
-;; Package-X-Original-Version: 0.1.0-git
+;; Package-Version: 20221127.2255
+;; Package-X-Original-Version: 0.1.0.50-git
 ;; Package-Requires: (
 ;;     (emacs "27")
 ;;     (compat "28.1.1.0")
@@ -56,28 +56,37 @@
 (transient-append-suffix 'magit-tag "r"
   '("g" "post release commit" sisyphus-bump-post-release))
 
+;;; Variables
+
+(defvar sisyphus--non-release-suffix ".50-git"
+  "String appended to version strings for non-release revisions.")
+
 ;;; Commands
 
 ;;;###autoload
-(defun sisyphus-create-release (version)
-  "Create a release commit, bumping version strings."
+(defun sisyphus-create-release (version &optional nocommit)
+  "Create a release commit, bumping version strings.
+With prefix argument NOCOMMIT, do not create a commit."
   (interactive (list (sisyphus--read-version)))
   (magit-with-toplevel
     (sisyphus--bump-changelog version)
     (sisyphus--bump-version version)
-    (sisyphus--commit (format "Release version %s" version))
-    (magit-show-commit "HEAD")))
+    (unless nocommit
+      (sisyphus--commit (format "Release version %s" version)))))
 
 ;;;###autoload
-(defun sisyphus-bump-post-release (version)
-  "Create a post-release commit, bumping version strings."
+(defun sisyphus-bump-post-release (version &optional nocommit)
+  "Create a post-release commit, bumping version strings.
+With prefix argument NOCOMMIT, do not create a commit."
   (interactive (list (and (file-exists-p (expand-file-name "CHANGELOG"))
-                          (sisyphus--read-version "Tentative next release"))))
+                          (sisyphus--read-version "Tentative next release"))
+                     current-prefix-arg))
   (magit-with-toplevel
     (sisyphus--bump-changelog version t)
-    (sisyphus--bump-version (concat (sisyphus--previous-version) "-git"))
-    (sisyphus--commit "Resume development")
-    (magit-show-commit "HEAD")))
+    (sisyphus--bump-version (concat (sisyphus--previous-version)
+                                    sisyphus--non-release-suffix))
+    (unless nocommit
+      (sisyphus--commit "Resume development"))))
 
 ;;; Macros
 
@@ -171,14 +180,20 @@
                       (and (equal lisp "lisp")
                            (directory-files "." t "-pkg\\.el\\'"))))
          (libs (cl-set-difference (directory-files lisp t "\\.el\\'") pkgs))
-         (orgs (directory-files docs t "\\.org\\'"))
+         (orgs (cl-delete "README.org" (directory-files docs t "\\.org\\'")
+                          :test #'equal :key #'file-name-nondirectory))
          (updates (mapcar (lambda (lib)
                             (list (intern
                                    (file-name-sans-extension
                                     (file-name-nondirectory lib)))
                                   version))
-                          libs)))
-    (mapc (##sisyphus--edit-package % version updates) pkgs)
+                          libs))
+         (pkg-updates (if (string-suffix-p sisyphus--non-release-suffix version)
+                          (let ((timestamp (format-time-string "%Y%m%d")))
+                            (mapcar (pcase-lambda (`(,pkg ,_)) (list pkg timestamp))
+                                    updates))
+                        updates)))
+    (mapc (##sisyphus--edit-package % version pkg-updates) pkgs)
     (mapc (##sisyphus--edit-library % version updates) libs)
     (mapc (##sisyphus--edit-manual  % version) orgs)))
 
@@ -241,7 +256,8 @@
   (magit-call-process "make" "texi"))
 
 (defun sisyphus--commit (msg)
-  (magit-stage-modified)
+  (let ((magit-inhibit-refresh t))
+    (magit-stage-1 "-u"))
   (magit-commit-create
    (list "--edit" "--message" msg
          (if (eq transient-current-command 'magit-tag)

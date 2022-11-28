@@ -4,8 +4,6 @@
 
 ;; Author: Vietor Liu <vietor.liu@gmail.com>
 ;; Version: 0.2.2
-;; Package-Version: 20221026.904
-;; Package-Commit: e8e04ece2f32d65b084974597bfe8077da3ddba0
 ;; Keywords: tools, convenience
 ;; Created: 2018-12-14
 ;; URL: https://github.com/vietor/agtags
