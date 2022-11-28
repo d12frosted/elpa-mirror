@@ -14,12 +14,14 @@ Table of Contents
 
 
 In this unfortunate world, many documentations are using various HTML
-based format, instead of using the excellent Texinfo and Info format.
-This makes integrating of these manuals with Emacs hard, although not
-impossible.
+based format, instead of using the excellent text-based formats like
+Texinfo and Info format.  This makes integrating of these manuals with
+Emacs hard, although not impossible.
 
 This package make tries to integrate one of those stupid formats,
 Devhelp, with Emacs.
+
+<file:./devhelp-demo.gif>
 
 
 1 Usage
@@ -63,7 +65,8 @@ Devhelp, with Emacs.
 
   ┌────
   │ (straight-use-package
-  │  '(devhelp :type git :repo "https://codeberg.org/akib/emacs-devhelp.git"))
+  │  '(devhelp :type git
+  │ 	   :repo "https://codeberg.org/akib/emacs-devhelp.git"))
   └────
 
 

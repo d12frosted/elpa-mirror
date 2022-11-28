@@ -24,8 +24,8 @@ difficult to spot, try changing its color, relying on
 1 Installation
 ══════════════
 
-  IWindow isn't available on any ELPA right now.  So, you have to follow
-  one of the following methods:
+  Hl-Column isn't available on any ELPA right now.  So, you have to
+  follow one of the following methods:
 
 
 1.1 Quelpa

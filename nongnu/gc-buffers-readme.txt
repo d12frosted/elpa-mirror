@@ -17,8 +17,7 @@ There are many packages that create temporary buffers but don't kill
 those buffers, either because they don't do that or any unhandled error
 prevents it from doing that.  Over time, these "garbage" buffer can pile
 up and eat up your memory.  For example, there were 1359 garbage buffers
-created by Flymake Emacs Lisp byte compiler backend over 5 days, which
-ate up half of my memory.
+created by Flymake Emacs Lisp byte compiler backend over 5 days.
 
 This package's purpose is to clear them automatically, so you can use
 your memory to edit more files, run more commands and to use other
@@ -64,4 +63,4 @@ programs.
   Clean garbage buffers with `M-x gc-buffers'.  To enable automatically
   doing this, do `M-x gc-buffers-mode'.
 
-  Don't let buggy packages to make Emacs "Emacs Makes A Computer Slow"!
+  Don't let buggy packages make Emacs "Emacs Makes A Computer Slow"!

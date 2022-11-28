@@ -29,6 +29,10 @@ any window with a few keystrokes.
   │ (global-set-key (kbd "C-x o") #'iwindow-select)
   └────
 
+  You can swap windows with `iwindow-swap'.  To delete a window, you can
+  use `iwindow-delete'.  And there is `iwindow-delete-others' to delete
+  all window except the chosen one.
+
 
 2 Installation
 ══════════════

@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `altcaps' (or `altcaps.el'), and provides every other piece
 of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.0.0,
-released on 2022-11-26.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.1.0,
+released on 2022-11-28.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.1.0-dev.
+Current development target is 1.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `altcaps'
 ⁃ Official manual: <https://protesilaos.com/emacs/altcaps>
@@ -37,8 +37,9 @@ Table of Contents
 .. 1. GNU ELPA package
 .. 2. Manual installation
 4. Sample configuration
-5. GNU Free Documentation License
-6. Indices
+5. Acknowledgements
+6. GNU Free Documentation License
+7. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -95,7 +96,7 @@ Table of Contents
   `altcaps-region'
         Convert region words between `BEG' and `END' to alternating
         case.  `BEG' and `END' are buffer positions.  When called
-        interactively, these are automatically determined as active
+        interactively, these are automatically determined as the active
         region’s boundaries, else the space between `mark' and `point'.
 
   `altcaps-dwim'
@@ -103,6 +104,39 @@ Table of Contents
         an active region, call `altcaps-region'.  Else invoke
         `altcaps-word' with optional `NUM', per that command’s
         functionality (read its documentation).
+
+  [ The following is part of 1.2.0-dev. ]
+
+  The user option `altcaps-force-character-casing' forces the given
+  letter casing for specified characters.  Its value is an alist of
+  `(CHARACTER . CASE)' pairs.  `CHARACTER' is a single character
+  (satisfies the `characterp' condition), while `CASE' is the `upcase'
+  or `downcase' symbol (code sample further below).
+
+  The idea is to always render certain characters in lower or upper
+  case, in consideration of their legibility in context.  For example,
+  the default altcaps algorithm produces this:
+
+  ┌────
+  │ iLlIcIt IlLiBeRaL sIlLiNeSs
+  └────
+
+
+  Whereas if the value of this variable declares `i' to always be
+  lowercase and `L' uppercase, then we get this:
+
+  ┌────
+  │ iLLiCiT iLLiBeRaL siLLiNeSs
+  └────
+
+
+  The code to do this:
+
+  ┌────
+  │ (setq altcaps-force-character-casing
+  │       '((?i . downcase)
+  │ 	(?l . upcase)))
+  └────
 
 
 3 Installation
@@ -166,6 +200,11 @@ Table of Contents
   ┌────
   │ (require 'altcaps)
   │ 
+  │ ;; Force letter casing for certain characters (for legibility).
+  │ (setq altcaps-force-character-casing
+  │       '((?i . downcase)
+  │ 	(?l . upcase)))
+  │ 
   │ ;; We do not bind any keys, but you are free to do so:
   │ (define-key global-map (kbd "C-x C-a") #'altcaps-dwim)
   │ 
@@ -177,20 +216,38 @@ Table of Contents
   └────
 
 
-5 GNU Free Documentation License
+5 Acknowledgements
+══════════════════
+
+  aLtCaPs is meant to be a collective effort.  Every bit of help
+  matters.
+
+  Author/maintainer
+        Protesilaos Stavrou.
+
+  Ideas and/or user feedback
+        Cédric Barreteau.
+
+  Cédric is the author of an `altcaps'-inspired package for NeoVim, from
+  whence I got the idea of forcing a given letter case for certain
+  characters (I do it with the `altcaps-force-character-casing' user
+  option): <https://github.com/cbarrete/nvim-altcaps>.
+
+
+6 GNU Free Documentation License
 ════════════════════════════════
 
 
-6 Indices
+7 Indices
 ═════════
 
-6.1 Function index
+7.1 Function index
 ──────────────────
 
 
-6.2 Variable index
+7.2 Variable index
 ──────────────────
 
 
-6.3 Concept index
+7.3 Concept index
 ─────────────────

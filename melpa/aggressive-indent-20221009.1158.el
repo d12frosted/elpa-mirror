@@ -4,6 +4,8 @@
 
 ;; Author: Artur Malabarba <emacs@endlessparentheses.com>
 ;; URL: https://github.com/Malabarba/aggressive-indent-mode
+;; Package-Version: 20221009.1158
+;; Package-Commit: f376cdc25de5c0f8c330f1e053557d95ca47a540
 ;; Version: 1.10.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: indent lisp maint tools

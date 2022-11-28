@@ -13,12 +13,12 @@ Table of Contents
 .. 3. Manual
 
 
-Mode lighters are indicator that make us aware that a mode is enable.
-This helpful, but when there are too many of them, it becomes a problem,
-because often lighters with the important information gets truncate due
-to the non-important lighters.  So we blow them, and they are usually
-the lighters of the important, perhaps indispensible, modes for you, so
-that you can see and focus on what matters.
+Mode lighters are indicator that make us aware that a mode is enabled.
+This is helpful, but when there are too many of them, it becomes a
+problem, because often lighters with the important information gets
+truncated due to the non-important lighters.  So we blow them, and they
+are usually the lighters of the important, perhaps indispensible, modes
+for you, so that you can see and focus on what matters.
 
 
 1 Usage

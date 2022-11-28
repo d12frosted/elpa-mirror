@@ -116,7 +116,7 @@
 	       (:keywords "bison-mode" "yacc-mode")
 	       (:url . "https://elpa.nongnu.org/nongnu/bison-mode.html"))])
  (blow .
-       [(0 1)
+       [(1 0)
 	((emacs
 	  (24 1)))
 	"Blow away mode lighters" tar
@@ -125,7 +125,7 @@
 	 (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	 (:authors
 	  ("Akib Azmain Turja" . "akib@disroot.org"))
-	 (:commit . "d6320770612110cec1ca243003254e8e1ea1fcab"))])
+	 (:commit . "19152095662c95bc73f1f25b8dcce432294b06a1"))])
  (boxquote .
 	   [(2 3)
 	    ((cl-lib
@@ -148,7 +148,7 @@
 	       ("Jorgen Schaefer" . "contact@jorgenschaefer.de"))
 	      (:commit . "eaa4b3ccd115a2bb25be98dc637950645d3adbae"))])
  (camera .
-	 [(0 1)
+	 [(0 2)
 	  ((emacs
 	    (25 1)))
 	  "Take picture with your camera" tar
@@ -157,7 +157,7 @@
 	   (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	   (:authors
 	    ("Akib Azmain Turja" . "akib@disroot.org"))
-	   (:commit . "81484db26b0317e8df6ce3dc3cb1000c3a727e1e"))])
+	   (:commit . "99ced5db8d59004edd90b12f88a5dd1a6044ac45"))])
  (caml .
        [(4 9)
 	((emacs
@@ -294,16 +294,16 @@
 	       ("https://github.com/bradyt/dart-mode/issues"))
 	      (:keywords "languages"))])
  (devhelp .
-	  [(0 1)
+	  [(1 0)
 	   ((emacs
 	     (27 1)))
 	   "Browse documentation in Devhelp format" tar
 	   ((:url . "https://codeberg.org/akib/emacs-devhelp")
-	    (:keywords "convenience")
+	    (:keywords "docs")
 	    (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	    (:authors
 	     ("Akib Azmain Turja" . "akib@disroot.org"))
-	    (:commit . "2e257e2d1271d88f09fd09661ba4b705febc1b3c"))])
+	    (:commit . "bebdb6a165bdc3bb6b357706d0ce58f57271d137"))])
  (diff-ansi .
 	    [(0 2)
 	     ((emacs
@@ -581,7 +581,7 @@
 	       ("Matus Goljer" . "matus.goljer@gmail.com"))
 	      (:commit . "6f9172376af4d399c7853cbdfdd7425348a878f9"))])
  (gc-buffers .
-	     [(0 1)
+	     [(1 0)
 	      ((emacs
 		(24 1)))
 	      "Kill garbage buffers automatically" tar
@@ -590,7 +590,7 @@
 	       (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	       (:authors
 		("Akib Azmain Turja" . "akib@disroot.org"))
-	       (:commit . "5593630e62ee5a272005aabbc62fa36747b88b8f"))])
+	       (:commit . "ce2ea016a67b200862788e81f0ff1f8f7e4e0454"))])
  (geiser .
 	 [(0 28 1)
 	  ((emacs
@@ -931,7 +931,7 @@
 		   ("Campbell Barton" . "ideasman42@gmail.com"))
 		  (:commit . "877e14c0645397aa8c1a45eb34ea70f3ecd21280"))])
  (hl-column .
-	    [(0 1)
+	    [(1 0)
 	     ((emacs
 	       (24 1)))
 	     "Highlight the current column" tar
@@ -940,7 +940,7 @@
 	      (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	      (:authors
 	       ("Akib Azmain Turja" . "akib@disroot.org"))
-	      (:commit . "ef8f34c8d7c555d196d260bc36a4fe6eead02ae4"))])
+	      (:commit . "2d3a3f551b52c07a11b9ea0f842ef39915911c55"))])
  (htmlize .
 	  [(1 57)
 	   nil "Convert buffer text and decorations to HTML." tar
@@ -1018,16 +1018,20 @@
 		  ("Campbell Barton" . "ideasman42@gmail.com"))
 		 (:commit . "de745de9ab7f67431a5ce493a63be68d408ec40e"))])
  (iwindow .
-	  [(0 1)
+	  [(1 0)
 	   ((emacs
-	     (26 1)))
+	     (24 3))
+	    (seq
+	     (2 23))
+	    (compat
+	     (28 1 2 2)))
 	   "Interactively manipulate windows" tar
 	   ((:url . "https://codeberg.org/akib/emacs-iwindow")
 	    (:keywords "frames")
 	    (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	    (:authors
 	     ("Akib Azmain Turja" . "akib@disroot.org"))
-	    (:commit . "285f40ff09ff359034ef151d5d9dd9385fcfb865"))])
+	    (:commit . "602387e56fb6850c7309573b678931b5a51c3ca8"))])
  (j-mode .
 	 [(1 1 1)
 	  nil "Major mode for editing J programs" tar
@@ -1180,6 +1184,17 @@
 	   (:authors
 	    ("Stefan Kangas" . "stefankangas@gmail.com"))
 	   (:commit . "480602f2ec5467aa2418ee98b328fb85d3b58d0c"))])
+ (minibar .
+	  [(0 2)
+	   ((emacs
+	     (27 2)))
+	   "Modular status bar in minibuffer" tar
+	   ((:url . "https://codeberg.org/akib/emacs-minibar")
+	    (:keywords "calendar" "hardware")
+	    (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	    (:authors
+	     ("Akib Azmain Turja" . "akib@disroot.org"))
+	    (:commit . "2f059a8f8a49495e611065bc01c94803c322fa86"))])
  (moe-theme .
 	    [(1 0 2)
 	     nil "A colorful eye-candy theme. Moe, moe, kyun!" tar
@@ -1846,16 +1861,16 @@
 		   (:authors
 		    ("Daniel Bordak" . "dbordak@fastmail.fm")))])
  (testcover-mark-line .
-		      [(0 1)
+		      [(0 2)
 		       ((emacs
-			 (28 1)))
+			 (25 1)))
 		       "Mark whole line with Testcover" tar
-		       ((:url . "https://codeberg.org/akib/emacs-eat")
+		       ((:url . "https://codeberg.org/akib/emacs-testcover-mark-line")
 			(:keywords "lisp" "utility")
 			(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 			(:authors
 			 ("Akib Azmain Turja" . "akib@disroot.org"))
-			(:commit . "4a748c5094cc4860b1f9ad4f72063590dd4e968d"))])
+			(:commit . "331791f3585fc3296300465ecd0f652829935224"))])
  (textile-mode .
 	       [(1 0 0)
 		nil "Textile markup editing major mode" tar

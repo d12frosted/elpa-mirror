@@ -1,6 +1,6 @@
-	      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	       GC BUFFERS - TAKE PICTURE WITH YOUR CAMERA
-	      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+		━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+		 CAMERA - TAKE PICTURE WITH YOUR CAMERA
+		━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Table of Contents
@@ -13,7 +13,8 @@ Table of Contents
 2. Usage
 
 
-This package allows you to take photos from Emacs.
+This package allows you to take photos using your camera/webcam from
+Emacs.
 
 
 1 Installation
@@ -44,7 +45,7 @@ This package allows you to take photos from Emacs.
 1.3 Manual
 ──────────
 
-  Download the `gc-buffers.el' file and put it in your `load-path'.
+  Download the `camera.el' file and put it in your `load-path'.
 
 
 2 Usage

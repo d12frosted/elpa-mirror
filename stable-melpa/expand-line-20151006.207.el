@@ -4,8 +4,6 @@
 
 ;; Author: Kai Yu <yeannylam@gmail.com>
 ;; Keywords:
-;; Package-Version: 20151006.207
-;; Package-Commit: 75a5d0241f35dd0748ab8ecb4ff16891535be372
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
