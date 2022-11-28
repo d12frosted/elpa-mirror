@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 2e8576188b1d0768fbf92c6bea2fb3fbed9f019f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil/
-  to /tmp/evilA5zruy/evil-20221122.1450
+  to /tmp/evilT32rSU/evil-20221122.1450
     evil-command-window.el -> evil-command-window.el
     evil-commands.el -> evil-commands.el
     evil-common.el -> evil-common.el
@@ -28,4 +28,31 @@ Copying files (->) and directories (=>)
     evil-vars.el -> evil-vars.el
     evil.el -> evil.el
   ! doc/build/texinfo/evil.texi -> evil.texi
-Generating /tmp/evilA5zruy/evil-20221122.1450/evil.info
+Generating /tmp/evilT32rSU/evil-20221122.1450/evil.info
+Created evil-20221122.1450.tar containing:
+  evil-20221122.1450/
+  evil-20221122.1450/dir
+  evil-20221122.1450/evil-command-window.el
+  evil-20221122.1450/evil-commands.el
+  evil-20221122.1450/evil-common.el
+  evil-20221122.1450/evil-core.el
+  evil-20221122.1450/evil-development.el
+  evil-20221122.1450/evil-digraphs.el
+  evil-20221122.1450/evil-ex.el
+  evil-20221122.1450/evil-integration.el
+  evil-20221122.1450/evil-jumps.el
+  evil-20221122.1450/evil-keybindings.el
+  evil-20221122.1450/evil-macros.el
+  evil-20221122.1450/evil-maps.el
+  evil-20221122.1450/evil-pkg.el
+  evil-20221122.1450/evil-repeat.el
+  evil-20221122.1450/evil-search.el
+  evil-20221122.1450/evil-states.el
+  evil-20221122.1450/evil-types.el
+  evil-20221122.1450/evil-vars.el
+  evil-20221122.1450/evil.el
+  evil-20221122.1450/evil.info
+Built evil in 12.852s, finished at 2022-11-28T19:33:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  338 Nov 28 19:33 packages/evil-20221122.1450.entry
+920K -rw-r--r-- 1 root root 920K Nov 28 19:33 packages/evil-20221122.1450.tar

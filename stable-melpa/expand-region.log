@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out b70feaa644310dc2d599dc277cd20a1f2b6446ac
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/expand-region/
-  to /tmp/expand-regionOxteAW/expand-region-20221030.957
+  to /tmp/expand-regionw8aCMT/expand-region-20221030.957
     cc-mode-expansions.el -> cc-mode-expansions.el
     clojure-mode-expansions.el -> clojure-mode-expansions.el
     cperl-mode-expansions.el -> cperl-mode-expansions.el
@@ -37,3 +37,38 @@ Copying files (->) and directories (=>)
     the-org-mode-expansions.el -> the-org-mode-expansions.el
     web-mode-expansions.el -> web-mode-expansions.el
     yaml-mode-expansions.el -> yaml-mode-expansions.el
+Created expand-region-20221030.957.tar containing:
+  expand-region-20221030.957/
+  expand-region-20221030.957/cc-mode-expansions.el
+  expand-region-20221030.957/clojure-mode-expansions.el
+  expand-region-20221030.957/cperl-mode-expansions.el
+  expand-region-20221030.957/css-mode-expansions.el
+  expand-region-20221030.957/enh-ruby-mode-expansions.el
+  expand-region-20221030.957/er-basic-expansions.el
+  expand-region-20221030.957/erlang-mode-expansions.el
+  expand-region-20221030.957/expand-region-core.el
+  expand-region-20221030.957/expand-region-custom.el
+  expand-region-20221030.957/expand-region-pkg.el
+  expand-region-20221030.957/expand-region.el
+  expand-region-20221030.957/feature-mode-expansions.el
+  expand-region-20221030.957/html-mode-expansions.el
+  expand-region-20221030.957/js-mode-expansions.el
+  expand-region-20221030.957/js2-mode-expansions.el
+  expand-region-20221030.957/jsp-expansions.el
+  expand-region-20221030.957/latex-mode-expansions.el
+  expand-region-20221030.957/nxml-mode-expansions.el
+  expand-region-20221030.957/octave-expansions.el
+  expand-region-20221030.957/python-el-expansions.el
+  expand-region-20221030.957/python-el-fgallina-expansions.el
+  expand-region-20221030.957/python-mode-expansions.el
+  expand-region-20221030.957/ruby-mode-expansions.el
+  expand-region-20221030.957/sml-mode-expansions.el
+  expand-region-20221030.957/subword-mode-expansions.el
+  expand-region-20221030.957/text-mode-expansions.el
+  expand-region-20221030.957/the-org-mode-expansions.el
+  expand-region-20221030.957/web-mode-expansions.el
+  expand-region-20221030.957/yaml-mode-expansions.el
+Built expand-region in 4.720s, finished at 2022-11-28T19:34:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  303 Nov 28 19:34 packages/expand-region-20221030.957.entry
+152K -rw-r--r-- 1 root root 150K Nov 28 19:34 packages/expand-region-20221030.957.tar
