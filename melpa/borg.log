@@ -4,24 +4,26 @@ Source:  https://github.com/emacscollective/borg.git
 
 Updating /mnt/store/melpa/working/borg/
 Checking out origin/HEAD
-Checking out e27463e68ac813fa2f5a98270dec0ae98de375d3
+Checking out 24167dfa6d29c7eb7e812a2ccb14227f78fcdbce
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/borg/
-  to /tmp/borgYOhzuD/borg-20221124.2315
+  to /tmp/borgEVqsdr/borg-20221127.2145
     borg-elpa.el -> borg-elpa.el
     borg.el -> borg.el
   ! docs/borg.texi -> borg.texi
     borg.mk -> borg.mk
-Generating /tmp/borgYOhzuD/borg-20221124.2315/borg.info
-Created borg-20221124.2315.tar containing:
-  borg-20221124.2315/
-  borg-20221124.2315/borg-elpa.el
-  borg-20221124.2315/borg-pkg.el
-  borg-20221124.2315/borg.el
-  borg-20221124.2315/borg.info
-  borg-20221124.2315/borg.mk
-  borg-20221124.2315/dir
-Built borg in 11.376s, finished at 2022-11-27T21:16:08+0000
+Generating /tmp/borgEVqsdr/borg-20221127.2145/borg.info
+Created borg-20221127.2145.tar containing:
+  borg-20221127.2145/
+  borg-20221127.2145/borg-elpa.el
+  borg-20221127.2145/borg-pkg.el
+  borg-20221127.2145/borg.el
+  borg-20221127.2145/borg.info
+  borg-20221127.2145/borg.mk
+  borg-20221127.2145/dir
+Built borg in 9.917s, finished at 2022-11-28T00:54:31+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  397 Nov 27 21:16 packages/borg-20221124.2315.entry
 132K -rw-r--r-- 1 root root 130K Nov 27 21:16 packages/borg-20221124.2315.tar
+4.0K -rw-r--r-- 1 root root  397 Nov 28 00:54 packages/borg-20221127.2145.entry
+132K -rw-r--r-- 1 root root 130K Nov 28 00:54 packages/borg-20221127.2145.tar
