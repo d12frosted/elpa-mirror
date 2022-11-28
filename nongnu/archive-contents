@@ -115,6 +115,17 @@
 		("Eric Beuscher" . "beuscher@eecs.tulane.edu"))
 	       (:keywords "bison-mode" "yacc-mode")
 	       (:url . "https://elpa.nongnu.org/nongnu/bison-mode.html"))])
+ (blow .
+       [(0 1)
+	((emacs
+	  (24 1)))
+	"Blow away mode lighters" tar
+	((:url . "https://codeberg.org/akib/emacs-blow")
+	 (:keywords "convenience")
+	 (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	 (:authors
+	  ("Akib Azmain Turja" . "akib@disroot.org"))
+	 (:commit . "d6320770612110cec1ca243003254e8e1ea1fcab"))])
  (boxquote .
 	   [(2 3)
 	    ((cl-lib
@@ -136,6 +147,17 @@
 	      (:authors
 	       ("Jorgen Schaefer" . "contact@jorgenschaefer.de"))
 	      (:commit . "eaa4b3ccd115a2bb25be98dc637950645d3adbae"))])
+ (camera .
+	 [(0 1)
+	  ((emacs
+	    (25 1)))
+	  "Take picture with your camera" tar
+	  ((:url . "https://codeberg.org/akib/emacs-camera")
+	   (:keywords "comm")
+	   (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	   (:authors
+	    ("Akib Azmain Turja" . "akib@disroot.org"))
+	   (:commit . "81484db26b0317e8df6ce3dc3cb1000c3a727e1e"))])
  (caml .
        [(4 9)
 	((emacs
@@ -271,6 +293,17 @@
 	      (:authors
 	       ("https://github.com/bradyt/dart-mode/issues"))
 	      (:keywords "languages"))])
+ (devhelp .
+	  [(0 1)
+	   ((emacs
+	     (27 1)))
+	   "Browse documentation in Devhelp format" tar
+	   ((:url . "https://codeberg.org/akib/emacs-devhelp")
+	    (:keywords "convenience")
+	    (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	    (:authors
+	     ("Akib Azmain Turja" . "akib@disroot.org"))
+	    (:commit . "2e257e2d1271d88f09fd09661ba4b705febc1b3c"))])
  (diff-ansi .
 	    [(0 2)
 	     ((emacs
@@ -547,6 +580,17 @@
 	      (:authors
 	       ("Matus Goljer" . "matus.goljer@gmail.com"))
 	      (:commit . "6f9172376af4d399c7853cbdfdd7425348a878f9"))])
+ (gc-buffers .
+	     [(0 1)
+	      ((emacs
+		(24 1)))
+	      "Kill garbage buffers automatically" tar
+	      ((:url . "https://codeberg.org/akib/emacs-gc-buffers")
+	       (:keywords "internal")
+	       (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	       (:authors
+		("Akib Azmain Turja" . "akib@disroot.org"))
+	       (:commit . "5593630e62ee5a272005aabbc62fa36747b88b8f"))])
  (geiser .
 	 [(0 28 1)
 	  ((emacs
@@ -724,6 +768,17 @@
 		 (:authors
 		  ("Elias Mårtenson" . "lokedhs@gmail.com"))
 		 (:commit . "deabf59d2375d4662221f8222e28caeb1be96428"))])
+ (gnu-indent .
+	     [(1 0)
+	      ((emacs
+		(27 2)))
+	      "Indent your code with GNU Indent" tar
+	      ((:url . "https://codeberg.org/akib/emacs-why-this")
+	       (:keywords "tools" "convenience" "vc")
+	       (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	       (:authors
+		("Akib Azmain Turja" . "akib@disroot.org"))
+	       (:commit . "6bb82ce89ed93222dd919bc65e0f46ac4aa13479"))])
  (gnuplot .
 	  [(0 8 0)
 	   ((emacs
@@ -875,6 +930,17 @@
 		  (:authors
 		   ("Campbell Barton" . "ideasman42@gmail.com"))
 		  (:commit . "877e14c0645397aa8c1a45eb34ea70f3ecd21280"))])
+ (hl-column .
+	    [(0 1)
+	     ((emacs
+	       (24 1)))
+	     "Highlight the current column" tar
+	     ((:url . "https://codeberg.org/akib/emacs-hl-column")
+	      (:keywords "convenience")
+	      (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	      (:authors
+	       ("Akib Azmain Turja" . "akib@disroot.org"))
+	      (:commit . "ef8f34c8d7c555d196d260bc36a4fe6eead02ae4"))])
  (htmlize .
 	  [(1 57)
 	   nil "Convert buffer text and decorations to HTML." tar
@@ -951,6 +1017,17 @@
 		  ("Sarah Iovan" . "sarah@hwaetageek.com")
 		  ("Campbell Barton" . "ideasman42@gmail.com"))
 		 (:commit . "de745de9ab7f67431a5ce493a63be68d408ec40e"))])
+ (iwindow .
+	  [(0 1)
+	   ((emacs
+	     (26 1)))
+	   "Interactively manipulate windows" tar
+	   ((:url . "https://codeberg.org/akib/emacs-iwindow")
+	    (:keywords "frames")
+	    (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	    (:authors
+	     ("Akib Azmain Turja" . "akib@disroot.org"))
+	    (:commit . "285f40ff09ff359034ef151d5d9dd9385fcfb865"))])
  (j-mode .
 	 [(1 1 1)
 	  nil "Major mode for editing J programs" tar
@@ -1674,7 +1751,7 @@
 	   ("Random User"))
 	  (:commit . "7842bb9f15f08ea3d223f98bf7be98d6d01be522"))])
  (sweeprolog .
-	     [(0 9 2)
+	     [(0 9 3)
 	      ((emacs
 		(28 1)))
 	      "Embedded SWI-Prolog" tar
@@ -1683,7 +1760,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "ad74fa17bba74d139d7e0ffb0d514f7246abed3d"))])
+	       (:commit . "f4e9d872c81bab6772025f2a481adbc25338f37f"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs
@@ -1768,6 +1845,17 @@
 		   (:maintainer "Daniel Bordak" . "dbordak@fastmail.fm")
 		   (:authors
 		    ("Daniel Bordak" . "dbordak@fastmail.fm")))])
+ (testcover-mark-line .
+		      [(0 1)
+		       ((emacs
+			 (28 1)))
+		       "Mark whole line with Testcover" tar
+		       ((:url . "https://codeberg.org/akib/emacs-eat")
+			(:keywords "lisp" "utility")
+			(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+			(:authors
+			 ("Akib Azmain Turja" . "akib@disroot.org"))
+			(:commit . "4a748c5094cc4860b1f9ad4f72063590dd4e968d"))])
  (textile-mode .
 	       [(1 0 0)
 		nil "Textile markup editing major mode" tar
@@ -1912,6 +2000,17 @@
 	  (:authors
 	   ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
 	  (:keywords "grep" "edit" "extensions"))])
+ (why-this .
+	   [(2 0 3)
+	    ((emacs
+	      (27 1)))
+	    "Why is this line here?  Ask version control" tar
+	    ((:url . "https://codeberg.org/akib/emacs-why-this")
+	     (:keywords "tools" "convenience" "vc")
+	     (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	     (:authors
+	      ("Akib Azmain Turja" . "akib@disroot.org"))
+	     (:commit . "2c8c35ca103b30180c77e0e7c7496318bb0d7176"))])
  (with-editor .
 	      [(3 2 0)
 	       ((emacs
@@ -1935,6 +2034,21 @@
 			  ("Ryan C. Thompson" . "rct@thompsonclan.org")
 			  ("Nikita Bloshchanevich" . "nikblos@outlook.com"))
 			 (:commit . "07bdfbe9ab9eab4a04ad02e98b011649a4f4e6a2"))])
+ (workroom .
+	   [(2 2 4)
+	    ((emacs
+	      (25 1))
+	     (project
+	      (0 3 0))
+	     (compat
+	      (28 1 2 2)))
+	    "Named rooms for work without irrelevant distracting buffers" tar
+	    ((:url . "https://codeberg.org/akib/emacs-workroom")
+	     (:keywords "tools" "convenience")
+	     (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	     (:authors
+	      ("Akib Azmain Turja" . "akib@disroot.org"))
+	     (:commit . "3b7b17e2ccfa935843c5cd60f9c71a956f9f5c49"))])
  (ws-butler .
 	    [(0 6)
 	     nil "Unobtrusively remove trailing whitespace." tar

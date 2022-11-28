@@ -1627,23 +1627,10 @@ Improvements around editing Prolog
         their `help-echo' property that says what kind of token this is,
         to expose the precise semantics of each token to the user.
 
-  Add a command for updating the dependencies for the current module
-        `sweeprolog-mode' should provide a command for adding and/or
-        updating `use_module/2' and `autoload/2' directives as needed
-        according to the predicates that the current buffer depends
-        on. The directives should be inserted in the appropriate
-        position, i.e. before the first predicate definition in the
-        buffer.
-
   Add a command for interactively inserting a new predicate
         `sweeprolog-mode' should provide a command for interactively
         inserting a new predicate definition, ideally with optional
         `PlDoc' comments (see [Documenting predicates]).
-
-  Improve the information provided for predicate completion candidates
-        predicate completion with `C-M-i' should annotate each
-        completion candidate with the names and modes of its arguments,
-        when available.  E.g. say `foo(+Bar, -Baz)' instead of `foo/2'.
 
   Make predicate completion aware of module-qualification
         predicate completion should detect when the prefix it’s trying
