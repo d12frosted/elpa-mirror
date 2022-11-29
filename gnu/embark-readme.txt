@@ -234,10 +234,10 @@ Table of Contents
     menu mode.
 
     If you use the grepping commands from the [Consult] package,
-    `consult-grep', `consult-git-grep' or `consult-ripgrep', then you'll
-    probably want to install and load the `embark-consult' package,
-    which adds support for exporting a list of grep results to an honest
-    grep-mode buffer, on which you can even use [wgrep] if you wish.
+    `consult-grep', `consult-git-grep' or `consult-ripgrep', then you
+    should install the `embark-consult' package, which adds support for
+    exporting a list of grep results to an honest grep-mode buffer, on
+    which you can even use [wgrep] if you wish.
 
   When in doubt choosing between exporting and collecting, a good rule
   of thumb is to always prefer `embark-export' since when an exporter to
@@ -374,11 +374,7 @@ Table of Contents
   │ 
   │ ;; Consult users will also want the embark-consult package.
   │ (use-package embark-consult
-  │   :ensure t
-  │   :after (embark consult)
-  │   :demand t ; only necessary if you have the hook below
-  │   ;; if you want to have consult previews as you move around an
-  │   ;; auto-updating embark collect buffer
+  │   :ensure t ; only need to install it, embark loads it after consult if found
   │   :hook
   │   (embark-collect-mode . consult-preview-at-point-mode))
   └────
@@ -391,8 +387,8 @@ Table of Contents
     installations of) GNOME to input emojis, and Emacs doesn't even get
     a chance to respond to the binding. You can select a different key
     binding for `embark-act' or use `ibus-setup' to change the shortcut
-    for emoji insertion (Emacs uses `C-x 8 e e', in case you want to set
-    the same one system-wide).
+    for emoji insertion (Emacs 29 will likely use `C-x 8 e e', in case
+    you want to set the same one system-wide).
   • The suggested alternative of `M-.' for `embark-dwim' is bound by
     default to `xref-find-definitions'. That is a very useful command
     but overwriting it with `embark-dwim' is sensible since in Embark's
@@ -926,8 +922,8 @@ Table of Contents
   │       (save-match-data
   │ 	(when (string-match "wikipedia:\\([[:alnum:]_]+\\)" str)
   │ 	  `(url 
-  │ 	    (format "https://en.wikipedia.org/wiki/%s"
-  │ 		    (match-string 1 str))
+  │ 	    ,(format "https://en.wikipedia.org/wiki/%s"
+  │ 		     (match-string 1 str))
   │ 	    ,beg . ,end))))))
   │ 
   │ (add-to-list 'embark-target-finders 'my-short-wikipedia-link)
@@ -1108,12 +1104,13 @@ Table of Contents
   preview functionality, for example `consult-buffer' will show you a
   quick preview of a buffer before you actually switch to it.
 
-  If you use both Consult and Embark you should absolutely install the
+  If you use both Consult and Embark you should install the
   `embark-consult' package which provides integration between the
   two. It provides exporters for several Consult commands and also
   tweaks the behavior of many Consult commands when used as actions with
   `embark-act' in subtle ways that you may not even notice, but make for
-  a smoother experience.
+  a smoother experience. You need only install it to get these benefits:
+  Embark will automatically load it after Consult if found.
 
   The `embark-consult' package provides the following exporters:
 

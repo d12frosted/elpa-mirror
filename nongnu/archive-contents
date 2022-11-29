@@ -1455,9 +1455,9 @@
 	     ("joddie <jonxfield at gmail.com>"))
 	    (:commit . "3a59d133d1ed9fd941ddecc85ee2a8e32be3d267"))])
  (pdf-tools .
-	    [(1 0)
+	    [(1 0 0)
 	     ((emacs
-	       (24 3))
+	       (26 3))
 	      (tablist
 	       (1 0))
 	      (let-alist
@@ -1465,9 +1465,10 @@
 	     "Support library for PDF documents" tar
 	     ((:url . "http://github.com/vedang/pdf-tools/")
 	      (:keywords "files" "multimedia")
-	      (:maintainer "Andreas Politz" . "politza@fh-trier.de")
+	      (:maintainer "Vedang Manerikar" . "vedang.manerikar@gmail.com")
 	      (:authors
-	       ("Andreas Politz" . "politza@fh-trier.de")))])
+	       ("Andreas Politz" . "mail@andreas-politz.de"))
+	      (:commit . "96703b2bb5c937afd05778086c43280b0593fe99"))])
  (php-mode .
 	   [(1 24 2)
 	    ((emacs
@@ -2016,7 +2017,7 @@
 	   ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
 	  (:keywords "grep" "edit" "extensions"))])
  (why-this .
-	   [(2 0 3)
+	   [(2 0 4)
 	    ((emacs
 	      (27 1)))
 	    "Why is this line here?  Ask version control" tar
@@ -2025,7 +2026,7 @@
 	     (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	     (:authors
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
-	     (:commit . "2c8c35ca103b30180c77e0e7c7496318bb0d7176"))])
+	     (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor .
 	      [(3 2 0)
 	       ((emacs

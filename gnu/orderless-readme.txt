@@ -42,13 +42,11 @@ Table of Contents
   front-end that provides a completion UI. Any completion style can be
   used with the default Emacs completion UI (sometimes called minibuffer
   tab completion), with the built-in Icomplete package (which is similar
-  to the more well-known Ido Mode), or with some third party minibuffer
-  completion frameworks such as [Vertico], [Selectrum] (in its default
-  configuration), or [icomplete-vertical] (note there is also a
-  /built-in/ package named icomplete-vertical in the unreleased version
-  28 of Emacs, which will eventually make the third party
-  icomplete-vertical obsolete —orderless works equally well with both
-  icomplete-vertical packages).
+  to the more well-known Ido Mode), the icomplete-vertical variant from
+  Emacs 28 (see the external [icomplete-vertical] package to get that
+  functionality on earlier versions of Emacs), or with some third party
+  minibuffer completion frameworks such as [Mct], [Vertico], or
+  [Selectrum] (in its default configuration).
 
   All the completion UIs just mentioned are for minibuffer completion,
   used when Emacs commands prompt the user in the minibuffer for some
@@ -72,14 +70,15 @@ Table of Contents
   directly, pressing `SPC' takes you out of completion, so comfortably
   using `orderless' with it takes a bit of configuration (see below).
 
-  If you use MELPA, the easiest way to install `orderless' is via
-  `package-install'. If you use both MELPA and `use-package', you can
-  use:
+  If you use ELPA or MELPA, the easiest way to install `orderless' is
+  via `package-install'. If you use `use-package', you can use:
 
   ┌────
   │ (use-package orderless
   │   :ensure t
-  │   :custom (completion-styles '(orderless)))
+  │   :custom
+  │   (completion-styles '(orderless basic))
+  │   (completion-category-overrides '((file (styles basic partial-completion)))))
   └────
 
   Alternatively, put `orderless.el' somewhere on your `load-path', and
@@ -87,17 +86,31 @@ Table of Contents
 
   ┌────
   │ (require 'orderless)
-  │ (setq completion-styles '(orderless))
+  │ (setq completion-styles '(orderless basic)
+  │       completion-category-overrides '((file (styles basic partial-completion))))
   └────
+
+  The `basic' completion style is specified as fallback in addition to
+  `orderless' in order to ensure that completion commands which rely on
+  dynamic completion tables, e.g., `completion-table-dynamic' or
+  `completion-table-in-turn', work correctly. Furthermore the `basic'
+  completion style needs to be tried /first/ (not as a fallback) for
+  TRAMP hostname completion to work. In order to achieve that, we add an
+  entry for the `file' completion category in the
+  `completion-category-overrides' variable. In addition, the
+  `partial-completion' style allows you to use wildcards for file
+  completion and partial paths, e.g., `/u/s/l' for `/usr/share/local'.
 
   Bug reports are highly welcome and appreciated!
 
 
+[icomplete-vertical] <https://github.com/oantolin/icomplete-vertical>
+
+[Mct] <https://gitlab.com/protesilaos/mct>
+
 [Vertico] <https://github.com/minad/vertico>
 
 [Selectrum] <https://github.com/raxod502/selectrum>
-
-[icomplete-vertical] <https://github.com/oantolin/icomplete-vertical>
 
 [Corfu] <https://github.com/minad/corfu>
 
@@ -367,6 +380,7 @@ Table of Contents
 
   ┌────
   │ (setq ivy-re-builders-alist '((t . orderless-ivy-re-builder)))
+  │ (add-to-list 'ivy-highlight-functions-alist '(orderless-ivy-re-builder . orderless-ivy-highlight))
   └────
 
 
@@ -425,6 +439,19 @@ Table of Contents
 
      (Aren't dynamically scoped variables and the advice system nifty?)
 
+  If you would like to use different `completion-styles' with
+  `company-capf' instead, you can add this to your config:
+
+  ┌────
+  │ ;; We follow a suggestion by company maintainer u/hvis:
+  │ ;; https://www.reddit.com/r/emacs/comments/nichkl/comment/gz1jr3s/
+  │ (defun company-completion-styles (capf-fn &rest args)
+  │   (let ((completion-styles '(basic partial-completion)))
+  │     (apply capf-fn args))
+  │ 
+  │ (advice-add 'company-capf :around #'company-completion-styles)
+  └────
+
 
 4 Related packages
 ══════════════════
@@ -451,7 +478,7 @@ Table of Contents
 
   ┌────
   │ (require 'helm)
-  │ (setq completion-styles '(helm))
+  │ (setq completion-styles '(helm basic))
   │ (icomplete-mode)
   └────
 
@@ -468,21 +495,18 @@ Table of Contents
 ─────────────
 
   The [prescient.el] library also provides matching of space-separated
-  components in any order and it can be used with either the [Selectrum]
-  or [Ivy] completion UIs (it does not offer a completion-style that
-  could be used with Emacs' default completion UI or with Icomplete).
-  The components can be matched literally, as regexps, as initialisms or
-  in the flex style (called "fuzzy" in prescient). In addition to
-  matching, `prescient.el' also supports sorting of candidates
-  (`orderless' leaves that up to the candidate source and the completion
-  UI).
+  components in any order. It offers a completion-style that can be used
+  with Emacs' default completion UI, Mct, Vertico or with
+  Icomplete. Furthermore Selectrum and Ivy are supported. The components
+  can be matched literally, as regexps, as initialisms or in the flex
+  style (called "fuzzy" in prescient). Prescient does not offer the same
+  flexibility as Orderless with its style dispatchers. However in
+  addition to matching, Prescient supports sorting of candidates, while
+  Orderless leaves that up to the candidate source and the completion
+  UI.
 
 
 [prescient.el] <https://github.com/raxod502/prescient.el>
-
-[Selectrum] <https://github.com/raxod502/selectrum>
-
-[Ivy] <https://github.com/abo-abo/swiper>
 
 
 4.3 Restricting to current matches in Icicles, Ido and Ivy

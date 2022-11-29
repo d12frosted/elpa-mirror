@@ -3,9 +3,9 @@
 ;; Copyright (C) 2022 Akib Azmain Turja.
 
 ;; Author: Akib Azmain Turja <akib@disroot.org>
-;; Version: 2.0.3
-;; Package-Version: 20221127.1853
-;; Package-Commit: c91458483345dafa425ff73d1192d5abae68bfb2
+;; Version: 2.0.4
+;; Package-Version: 20221129.817
+;; Package-Commit: 5203d9379afaf6703746823a580c804e1dd98e08
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: tools, convenience, vc
 ;; URL: https://codeberg.org/akib/emacs-why-this
@@ -371,11 +371,12 @@ TIME-FORMAT is used to format data."
   (while why-this--overlays
     (delete-overlay (pop why-this--overlays)))
   (when why-this-mode
-    (let* ((line (line-number-at-pos (if (use-region-p)
-                                         (region-end)
-                                       (point))))
-           (begin line)
-           (end (1+ line))
+    (let* ((begin (line-number-at-pos (if (use-region-p)
+                                          (region-beginning)
+                                        (point))))
+           (end (1+ (line-number-at-pos (if (use-region-p)
+                                            (region-end)
+                                          (point)))))
            (backend why-this--backend)
            (data (funcall backend 'line-data begin end)))
       (dolist (i (number-sequence 0 (- end begin 1)))

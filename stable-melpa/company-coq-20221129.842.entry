@@ -1,5 +1,5 @@
 (company-coq .
-	     [(20220314 526)
+	     [(20221129 842)
 	      ((cl-lib
 		(0 5))
 	       (dash
@@ -11,7 +11,7 @@
 	       (company-math
 		(1 1)))
 	      "A collection of extensions for Proof General's Coq mode" tar
-	      ((:commit . "a6e349e0131f676a885bd14c908fd26054b2df42")
+	      ((:commit . "6b1ca00b151c0b30b7492e43efc982a95e938ad1")
 	       (:authors
 		("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
 	       (:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com")
