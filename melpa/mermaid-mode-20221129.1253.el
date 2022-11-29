@@ -18,8 +18,8 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;; Version: 1.0
-;; Package-Version: 20221128.2131
-;; Package-Commit: 908116a6fba163b724a0be9d14d2df0f23b03e4c
+;; Package-Version: 20221129.1253
+;; Package-Commit: 75eed2cecc3b2be0f310c07a8b68fce1173aaa50
 ;; Author: Adrien Brochard
 ;; Keywords: mermaid graphs tools processes
 ;; URL: https://github.com/abrochard/mermaid-mode
@@ -216,7 +216,7 @@ DIAGRAM is a string of mermaid-js code to be displayed in the live-editor."
   (setq-local comment-start-skip "%%+ *"))
 
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.mmd\\" . mermaid-mode))
+(add-to-list 'auto-mode-alist '("\\.mmd\\'" . mermaid-mode))
 
 (provide 'mermaid-mode)
 ;;; mermaid-mode.el ends here
