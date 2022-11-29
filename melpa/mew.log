@@ -4,10 +4,10 @@ Source:  https://github.com/kazu-yamamoto/Mew.git
 
 Updating /mnt/store/melpa/working/mew/
 Checking out origin/HEAD
-Checking out 7e4dd83a1896f44e1b6c820263c850e3b33eec50
+Checking out 7ab02416029d0f15580efa3c4c3ff39f32d7c0ad
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mew/
-  to /tmp/mewgZppNj/mew-20221117.1310
+  to /tmp/mewCCEozf/mew-20221129.556
     mew-addrbook.el -> mew-addrbook.el
     mew-attach.el -> mew-attach.el
     mew-auth.el -> mew-auth.el
@@ -77,113 +77,115 @@ Copying files (->) and directories (=>)
     etc => etc
   ! info/mew.info -> mew.info
   ! info/mew.ja.info -> mew.ja.info
-Created mew-20221117.1310.tar containing:
-  mew-20221117.1310/
-  mew-20221117.1310/dir
-  mew-20221117.1310/etc/
-  mew-20221117.1310/etc/Mew.img
-  mew-20221117.1310/etc/Mew.png
-  mew-20221117.1310/etc/Mew.xbm
-  mew-20221117.1310/etc/Mew.xpm
-  mew-20221117.1310/etc/mew-Audio.xpm
-  mew-20221117.1310/etc/mew-Blank.xpm
-  mew-20221117.1310/etc/mew-External.xpm
-  mew-20221117.1310/etc/mew-Folder.xpm
-  mew-20221117.1310/etc/mew-Image.xpm
-  mew-20221117.1310/etc/mew-Octet-Stream.xpm
-  mew-20221117.1310/etc/mew-Postscript.xpm
-  mew-20221117.1310/etc/mew-Rfc822.xpm
-  mew-20221117.1310/etc/mew-Text.xpm
-  mew-20221117.1310/etc/mew-Unknown.xpm
-  mew-20221117.1310/etc/mew-Video.xpm
-  mew-20221117.1310/etc/mew-attach.xpm
-  mew-20221117.1310/etc/mew-cite.xpm
-  mew-20221117.1310/etc/mew-forward.xpm
-  mew-20221117.1310/etc/mew-inc.xpm
-  mew-20221117.1310/etc/mew-lock.xpm
-  mew-20221117.1310/etc/mew-next.xpm
-  mew-20221117.1310/etc/mew-pgp-enc.xpm
-  mew-20221117.1310/etc/mew-pgp-sigenc.xpm
-  mew-20221117.1310/etc/mew-pgp-sign.xpm
-  mew-20221117.1310/etc/mew-prev.xpm
-  mew-20221117.1310/etc/mew-queue.xpm
-  mew-20221117.1310/etc/mew-refile.xpm
-  mew-20221117.1310/etc/mew-reply.xpm
-  mew-20221117.1310/etc/mew-send.xpm
-  mew-20221117.1310/etc/mew-sep.xpm
-  mew-20221117.1310/etc/mew-show.xpm
-  mew-20221117.1310/etc/mew-write.xpm
-  mew-20221117.1310/etc/mew-yank.xpm
-  mew-20221117.1310/mew-addrbook.el
-  mew-20221117.1310/mew-attach.el
-  mew-20221117.1310/mew-auth.el
-  mew-20221117.1310/mew-blvs.el
-  mew-20221117.1310/mew-bq.el
-  mew-20221117.1310/mew-cache.el
-  mew-20221117.1310/mew-complete.el
-  mew-20221117.1310/mew-config.el
-  mew-20221117.1310/mew-const.el
-  mew-20221117.1310/mew-darwin.el
-  mew-20221117.1310/mew-decode.el
-  mew-20221117.1310/mew-demo.el
-  mew-20221117.1310/mew-draft.el
-  mew-20221117.1310/mew-edit.el
-  mew-20221117.1310/mew-encode.el
-  mew-20221117.1310/mew-env.el
-  mew-20221117.1310/mew-env0.el
-  mew-20221117.1310/mew-exec.el
-  mew-20221117.1310/mew-ext.el
-  mew-20221117.1310/mew-fib.el
-  mew-20221117.1310/mew-func.el
-  mew-20221117.1310/mew-gemacs.el
-  mew-20221117.1310/mew-header.el
-  mew-20221117.1310/mew-highlight.el
-  mew-20221117.1310/mew-imap.el
-  mew-20221117.1310/mew-imap2.el
-  mew-20221117.1310/mew-key.el
-  mew-20221117.1310/mew-lang-jp.el
-  mew-20221117.1310/mew-lang-kr.el
-  mew-20221117.1310/mew-lang-latin.el
-  mew-20221117.1310/mew-local.el
-  mew-20221117.1310/mew-mark.el
-  mew-20221117.1310/mew-message.el
-  mew-20221117.1310/mew-mime.el
-  mew-20221117.1310/mew-minibuf.el
-  mew-20221117.1310/mew-mule.el
-  mew-20221117.1310/mew-mule3.el
-  mew-20221117.1310/mew-net.el
-  mew-20221117.1310/mew-nntp.el
-  mew-20221117.1310/mew-nntp2.el
-  mew-20221117.1310/mew-passwd.el
-  mew-20221117.1310/mew-pgp.el
-  mew-20221117.1310/mew-pick.el
-  mew-20221117.1310/mew-pkg.el
-  mew-20221117.1310/mew-pop.el
-  mew-20221117.1310/mew-refile.el
-  mew-20221117.1310/mew-scan.el
-  mew-20221117.1310/mew-search.el
-  mew-20221117.1310/mew-smime.el
-  mew-20221117.1310/mew-smtp.el
-  mew-20221117.1310/mew-sort.el
-  mew-20221117.1310/mew-ssh.el
-  mew-20221117.1310/mew-ssl.el
-  mew-20221117.1310/mew-summary.el
-  mew-20221117.1310/mew-summary2.el
-  mew-20221117.1310/mew-summary3.el
-  mew-20221117.1310/mew-summary4.el
-  mew-20221117.1310/mew-syntax.el
-  mew-20221117.1310/mew-thread.el
-  mew-20221117.1310/mew-unix.el
-  mew-20221117.1310/mew-vars.el
-  mew-20221117.1310/mew-vars2.el
-  mew-20221117.1310/mew-vars3.el
-  mew-20221117.1310/mew-varsx.el
-  mew-20221117.1310/mew-virtual.el
-  mew-20221117.1310/mew-win32.el
-  mew-20221117.1310/mew.el
-  mew-20221117.1310/mew.info
-  mew-20221117.1310/mew.ja.info
-Built mew in 5.905s, finished at 2022-11-29T03:21:33+0000
+Created mew-20221129.556.tar containing:
+  mew-20221129.556/
+  mew-20221129.556/dir
+  mew-20221129.556/etc/
+  mew-20221129.556/etc/Mew.img
+  mew-20221129.556/etc/Mew.png
+  mew-20221129.556/etc/Mew.xbm
+  mew-20221129.556/etc/Mew.xpm
+  mew-20221129.556/etc/mew-Audio.xpm
+  mew-20221129.556/etc/mew-Blank.xpm
+  mew-20221129.556/etc/mew-External.xpm
+  mew-20221129.556/etc/mew-Folder.xpm
+  mew-20221129.556/etc/mew-Image.xpm
+  mew-20221129.556/etc/mew-Octet-Stream.xpm
+  mew-20221129.556/etc/mew-Postscript.xpm
+  mew-20221129.556/etc/mew-Rfc822.xpm
+  mew-20221129.556/etc/mew-Text.xpm
+  mew-20221129.556/etc/mew-Unknown.xpm
+  mew-20221129.556/etc/mew-Video.xpm
+  mew-20221129.556/etc/mew-attach.xpm
+  mew-20221129.556/etc/mew-cite.xpm
+  mew-20221129.556/etc/mew-forward.xpm
+  mew-20221129.556/etc/mew-inc.xpm
+  mew-20221129.556/etc/mew-lock.xpm
+  mew-20221129.556/etc/mew-next.xpm
+  mew-20221129.556/etc/mew-pgp-enc.xpm
+  mew-20221129.556/etc/mew-pgp-sigenc.xpm
+  mew-20221129.556/etc/mew-pgp-sign.xpm
+  mew-20221129.556/etc/mew-prev.xpm
+  mew-20221129.556/etc/mew-queue.xpm
+  mew-20221129.556/etc/mew-refile.xpm
+  mew-20221129.556/etc/mew-reply.xpm
+  mew-20221129.556/etc/mew-send.xpm
+  mew-20221129.556/etc/mew-sep.xpm
+  mew-20221129.556/etc/mew-show.xpm
+  mew-20221129.556/etc/mew-write.xpm
+  mew-20221129.556/etc/mew-yank.xpm
+  mew-20221129.556/mew-addrbook.el
+  mew-20221129.556/mew-attach.el
+  mew-20221129.556/mew-auth.el
+  mew-20221129.556/mew-blvs.el
+  mew-20221129.556/mew-bq.el
+  mew-20221129.556/mew-cache.el
+  mew-20221129.556/mew-complete.el
+  mew-20221129.556/mew-config.el
+  mew-20221129.556/mew-const.el
+  mew-20221129.556/mew-darwin.el
+  mew-20221129.556/mew-decode.el
+  mew-20221129.556/mew-demo.el
+  mew-20221129.556/mew-draft.el
+  mew-20221129.556/mew-edit.el
+  mew-20221129.556/mew-encode.el
+  mew-20221129.556/mew-env.el
+  mew-20221129.556/mew-env0.el
+  mew-20221129.556/mew-exec.el
+  mew-20221129.556/mew-ext.el
+  mew-20221129.556/mew-fib.el
+  mew-20221129.556/mew-func.el
+  mew-20221129.556/mew-gemacs.el
+  mew-20221129.556/mew-header.el
+  mew-20221129.556/mew-highlight.el
+  mew-20221129.556/mew-imap.el
+  mew-20221129.556/mew-imap2.el
+  mew-20221129.556/mew-key.el
+  mew-20221129.556/mew-lang-jp.el
+  mew-20221129.556/mew-lang-kr.el
+  mew-20221129.556/mew-lang-latin.el
+  mew-20221129.556/mew-local.el
+  mew-20221129.556/mew-mark.el
+  mew-20221129.556/mew-message.el
+  mew-20221129.556/mew-mime.el
+  mew-20221129.556/mew-minibuf.el
+  mew-20221129.556/mew-mule.el
+  mew-20221129.556/mew-mule3.el
+  mew-20221129.556/mew-net.el
+  mew-20221129.556/mew-nntp.el
+  mew-20221129.556/mew-nntp2.el
+  mew-20221129.556/mew-passwd.el
+  mew-20221129.556/mew-pgp.el
+  mew-20221129.556/mew-pick.el
+  mew-20221129.556/mew-pkg.el
+  mew-20221129.556/mew-pop.el
+  mew-20221129.556/mew-refile.el
+  mew-20221129.556/mew-scan.el
+  mew-20221129.556/mew-search.el
+  mew-20221129.556/mew-smime.el
+  mew-20221129.556/mew-smtp.el
+  mew-20221129.556/mew-sort.el
+  mew-20221129.556/mew-ssh.el
+  mew-20221129.556/mew-ssl.el
+  mew-20221129.556/mew-summary.el
+  mew-20221129.556/mew-summary2.el
+  mew-20221129.556/mew-summary3.el
+  mew-20221129.556/mew-summary4.el
+  mew-20221129.556/mew-syntax.el
+  mew-20221129.556/mew-thread.el
+  mew-20221129.556/mew-unix.el
+  mew-20221129.556/mew-vars.el
+  mew-20221129.556/mew-vars2.el
+  mew-20221129.556/mew-vars3.el
+  mew-20221129.556/mew-varsx.el
+  mew-20221129.556/mew-virtual.el
+  mew-20221129.556/mew-win32.el
+  mew-20221129.556/mew.el
+  mew-20221129.556/mew.info
+  mew-20221129.556/mew.ja.info
+Built mew in 6.221s, finished at 2022-11-29T06:59:58+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  247 Nov 29 03:21 packages/mew-20221117.1310.entry
 2.4M -rw-r--r-- 1 root root 2.4M Nov 29 03:21 packages/mew-20221117.1310.tar
+4.0K -rw-r--r-- 1 root root  246 Nov 29 06:59 packages/mew-20221129.556.entry
+2.4M -rw-r--r-- 1 root root 2.4M Nov 29 06:59 packages/mew-20221129.556.tar
