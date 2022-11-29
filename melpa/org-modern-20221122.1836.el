@@ -6,6 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.6
+;; Package-Version: 20221122.1836
+;; Package-Commit: e87ca8a9ec45fcfa2556028aa9feffb7bc3aecee
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 

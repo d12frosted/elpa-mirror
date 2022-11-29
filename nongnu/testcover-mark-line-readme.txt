@@ -10,7 +10,8 @@ Table of Contents
 1. Installation
 .. 1. Quelpa
 .. 2. Straight.el
-.. 3. Manual
+2. Usa
+.. 1. Manual
 
 
 Testcover is a visual code-coverage tool, that marks the form not
@@ -18,6 +19,8 @@ completed tested.  It only highlights the last character of a form,
 which sometimes don't attract attention and is hard to see, especially
 when your code is heavy highlighted.  This package highlights the whole
 line, which can easily get your attention.
+
+Enable with `M-x testcover-mark-line-mode', and you're done.
 
 
 1 Installation
@@ -49,7 +52,10 @@ line, which can easily get your attention.
   └────
 
 
-1.3 Manual
+2 Usa
+═════
+
+2.1 Manual
 ──────────
 
   Download the `testcover-mark-line.el' file and put it in your

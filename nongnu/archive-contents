@@ -1861,7 +1861,7 @@
 		   (:authors
 		    ("Daniel Bordak" . "dbordak@fastmail.fm")))])
  (testcover-mark-line .
-		      [(0 2)
+		      [(0 3)
 		       ((emacs
 			 (25 1)))
 		       "Mark whole line with Testcover" tar
@@ -1870,7 +1870,7 @@
 			(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 			(:authors
 			 ("Akib Azmain Turja" . "akib@disroot.org"))
-			(:commit . "331791f3585fc3296300465ecd0f652829935224"))])
+			(:commit . "36a2a9422dcdf6f01e842b153fa492c1604ca48b"))])
  (textile-mode .
 	       [(1 0 0)
 		nil "Textile markup editing major mode" tar
@@ -2050,7 +2050,7 @@
 			  ("Nikita Bloshchanevich" . "nikblos@outlook.com"))
 			 (:commit . "07bdfbe9ab9eab4a04ad02e98b011649a4f4e6a2"))])
  (workroom .
-	   [(2 2 4)
+	   [(2 2 5)
 	    ((emacs
 	      (25 1))
 	     (project
@@ -2063,7 +2063,7 @@
 	     (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	     (:authors
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
-	     (:commit . "3b7b17e2ccfa935843c5cd60f9c71a956f9f5c49"))])
+	     (:commit . "532835eda02c64a8b93437e8c3fb220e60859896"))])
  (ws-butler .
 	    [(0 6)
 	     nil "Unobtrusively remove trailing whitespace." tar
