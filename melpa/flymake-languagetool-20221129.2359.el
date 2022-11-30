@@ -5,8 +5,8 @@
 
 ;; Authors: Shen, Jen-Chieh <jcs090218@gmail.com>, Trey Peacock <git@treypeacock.com>
 ;; URL: https://github.com/emacs-languagetool/flymake-languagetool
-;; Package-Version: 20221128.1536
-;; Package-Commit: 3451ea5f5937bc1dbe3abacfd09c8998bb13af7c
+;; Package-Version: 20221129.2359
+;; Package-Commit: 4a3ab89a0f85caa88f058db20eab24a85b359c76
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "27.1") (s "1.9.0"))
 ;; Keywords: convenience grammar check
@@ -230,23 +230,18 @@ non-nil."
                                                   faces-to-ignore)
   "Return non-nil if faces at POS in SRC-BUF intersect FACES-TO-IGNORE."
   (let ((x (get-text-property pos 'face src-buf)))
-    (if (listp x)
-        (cl-intersection faces-to-ignore x)
-      (memq x faces-to-ignore))))
+    (cl-intersection faces-to-ignore (ensure-list x))))
 
 (defun flymake-languagetool--check-all (errors source-buffer)
   "Check grammar ERRORS for SOURCE-BUFFER document."
-  (let (check-list
-        (faces-to-ignore
-         (with-current-buffer source-buffer
-           (cdr (assoc major-mode flymake-languagetool-ignore-faces-alist)))))
+  (let ((faces (alist-get (buffer-local-value 'major-mode source-buffer)
+                          flymake-languagetool-ignore-faces-alist))
+        check-list)
     (dolist (error errors)
       (let-alist error
-        (when (or (null faces-to-ignore)
-                  (not (flymake-languagetool--ignore-at-pos-p
-                        (+ .offset 1)
-                        source-buffer
-                        faces-to-ignore)))
+        (unless (and faces (flymake-languagetool--ignore-at-pos-p
+                            (+ .offset 1)
+                            source-buffer faces))
           (push (flymake-make-diagnostic
                  source-buffer
                  (+ .offset 1)

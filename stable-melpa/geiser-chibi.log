@@ -3,22 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/chibi.git
 
 Updating /mnt/store/melpa/working/geiser-chibi/
-Checking out origin/HEAD
-Checking out 5a6a5a580ea45cd4974df21629a8d50cbe3d6e99
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/geiser-chibi/
-  to /tmp/geiser-chibizEM4QT/geiser-chibi-20211204.1938
-    geiser-chibi.el -> geiser-chibi.el
-    src/geiser => src/geiser
-Created geiser-chibi-20211204.1938.tar containing:
-  geiser-chibi-20211204.1938/
-  geiser-chibi-20211204.1938/geiser-chibi-pkg.el
-  geiser-chibi-20211204.1938/geiser-chibi.el
-  geiser-chibi-20211204.1938/src/
-  geiser-chibi-20211204.1938/src/geiser/
-  geiser-chibi-20211204.1938/src/geiser/geiser.scm
-  geiser-chibi-20211204.1938/src/geiser/geiser.sld
-Built geiser-chibi in 5.172s, finished at 2022-11-29T21:19:29+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 425 Nov 29 21:19 packages/geiser-chibi-20211204.1938.entry
- 32K -rw-r--r-- 1 root root 30K Nov 29 21:19 packages/geiser-chibi-20211204.1938.tar
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/emacs-geiser/chibi.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

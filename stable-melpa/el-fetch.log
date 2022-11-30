@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/xgqt/emacs-el-fetch.git
 
 Updating /mnt/store/melpa/working/el-fetch/
-Checking out origin/HEAD
-Checking out 5cf7e32df03463853d41e0570d1c28e709fc8cf9
-Built el-fetch in 5.472s, finished at 2022-11-29T21:08:14+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Nov 29 21:08 packages/el-fetch-20221122.2207.el
-4.0K -rw-r--r-- 1 root root 364 Nov 29 21:08 packages/el-fetch-20221122.2207.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/xgqt/emacs-el-fetch.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

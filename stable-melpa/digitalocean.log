@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/olymk2/emacs-digitalocean.git
 
 Updating /mnt/store/melpa/working/digitalocean/
-Checking out origin/HEAD
-Checking out 6c32d3593286e2a62d9afab0057c829407b0d1e8
-Built digitalocean in 4.067s, finished at 2022-11-29T21:04:20+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 17K Nov 29 21:04 packages/digitalocean-20190607.726.el
-4.0K -rw-r--r-- 1 root root 424 Nov 29 21:04 packages/digitalocean-20190607.726.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://gitlab.com/olymk2/emacs-digitalocean.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

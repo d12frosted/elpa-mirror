@@ -5,8 +5,8 @@
 ;; Author: Kevin Borling
 ;; Created: December 24, 2021
 ;; Version: 1.0.0
-;; Package-Version: 20221022.49
-;; Package-Commit: 188d74cb279537f476c6f35b4e4f966d38884314
+;; Package-Version: 20221130.127
+;; Package-Commit: 7c1e7eb0a004b5afd2c3241ccd07df08212c53f1
 ;; Keywords: custom themes, dark, faces
 ;; License: MIT
 ;; URL: https://github.com/kborling/uwu-theme
@@ -243,7 +243,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(match ((t (:background ,uwu-black :foreground ,uwu-bright-blue :weight bold))))
                           `(completions-annotations ((t (:foreground ,uwu-white))))
                           `(completions-common-part ((t (:foreground ,uwu-bright-blue))))
-                          `(completions-first-difference ((t (:foreground ,uwu-bright-white))))
+                          `(completions-first-difference ((t (:inherit bold :foreground ,uwu-white))))
                           ;; ido
                           `(ido-first-match ((t (:foreground ,uwu-blue :weight bold))))
                           `(ido-only-match ((t (:foreground ,uwu-green :weight bold))))
@@ -420,6 +420,18 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(powerline-active2 ((t (:background ,uwu-black :foreground ,uwu-white))))
                           `(powerline-inactive1 ((t (:background ,uwu-black :foreground ,uwu-comment))))
                           `(powerline-inactive2 ((t (:background ,uwu-black :foreground ,uwu-comment))))
+                          ;; consult
+                          `(consult-async-split ((t (:inherit warning))))
+                          `(consult-key ((t (:inherit uwu-magenta))))
+                          `(consult-line-number ((t (:foreground ,(if uwu-distinct-line-numbers uwu-white uwu-comment)
+                                                         ,@(when uwu-distinct-line-numbers
+                                                             (list :background uwu-black))))))
+                          `(consult-separator ((t (:foreground ,uwu-bright-black))))
+                          ;; embark
+                          `(embark-keybinding ((t (:foreground ,uwu-magenta))))
+                          `(embark-keybinding-repeat ((t (:inherit bold))))
+                          `(embark-collect-group-title ((t (:inherit bold :foreground ,uwu-green))))
+                          `(embark-collect-zebra-highlight ((t (:background ,uwu-black))))
                           ;; vertico
                           `(vertico-current ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))
