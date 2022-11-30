@@ -4,8 +4,8 @@
 
 ;; Author: Mark Oteiza <mvoteiza@udel.edu>
 ;; Version: 0.12.2
-;; Package-Version: 20210705.2152
-;; Package-Commit: a03a6f5c7b133e0a37896b6d993dd6d6d4532cc2
+;; Package-Version: 20221130.212
+;; Package-Commit: 243d5dc15917df2611fd0c9f288faea17a00a396
 ;; Package-Requires: ((emacs "24.4") (let-alist "1.0.5"))
 ;; Keywords: comm, tools
 
@@ -232,7 +232,7 @@ caching built in or is otherwise slow."
   (eval-when-compile
     (pcase-let*
         ((`(,sun ,mon ,tues ,wed ,thurs ,fri ,sat)
-          (cl-loop for x below 7 collect (lsh 1 x)))
+          (cl-loop for x below 7 collect (ash 1 x)))
          (weekday (logior mon tues wed thurs fri))
          (weekend (logior sat sun))
          (all (logior weekday weekend)))
@@ -339,12 +339,12 @@ caching built in or is otherwise slow."
 
 (defun transmission--move-to-content ()
   "Move the point to beginning of content after the headers."
-  (setf (point) (point-min))
+  (goto-char (point-min))
   (re-search-forward "^\r?\n" nil t))
 
 (defun transmission--content-finished-p ()
   "Return non-nil if all of the content has arrived."
-  (setf (point) (point-min))
+  (goto-char (point-min))
   (when (search-forward "Content-Length: " nil t)
     (let ((length (read (current-buffer))))
       (and (transmission--move-to-content)
@@ -900,9 +900,9 @@ If `transmission-geoip-function' has changed, reset `transmission-geoip-table'."
 
 (defun transmission-hamming-weight (byte)
   "Calculate the Hamming weight of BYTE."
-  (setq byte (- byte (logand (lsh byte -1) #x55555555)))
-  (setq byte (+ (logand byte #x33333333) (logand (lsh byte -2) #x33333333)))
-  (lsh (* (logand (+ byte (lsh byte -4)) #x0f0f0f0f) #x01010101) -24))
+  (setq byte (- byte (logand (ash byte -1) #x55555555)))
+  (setq byte (+ (logand byte #x33333333) (logand (ash byte -2) #x33333333)))
+  (ash (* (logand (+ byte (ash byte -4)) #x0f0f0f0f) #x01010101) -24))
 
 (defun transmission-count-bits (bytearray)
   "Calculate sum of Hamming weight of each byte in BYTEARRAY."
@@ -2101,7 +2101,7 @@ is constructed from TEST, BODY and the `tabulated-list-id' tagged as `<>'."
 (define-derived-mode transmission-peers-mode tabulated-list-mode "Transmission-Peers"
   "Major mode for viewing peer information.
 See the \"--peer-info\" option in transmission-remote(1) or
-https://github.com/transmission/transmission/wiki/Peer-Status-Text
+https://github.com/transmission/transmission/blob/main/docs/Peer-Status-Text.md
 for explanation of the peer flags."
   :group 'transmission
   (setq-local line-move-visual nil)

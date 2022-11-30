@@ -7,8 +7,8 @@
 ;; Created: July 7, 2016
 ;; Modified: May 19, 2022
 ;; Version: 1.0.1
-;; Package-Version: 20221125.2354
-;; Package-Commit: 9d063baef035e2b131b19e35ba21d60ab789c2a7
+;; Package-Version: 20221130.422
+;; Package-Commit: 5bf2d175aae90bb2844ef8a5c2708b7938eccad4
 ;; Keywords: languages
 ;; Homepage: http://github.org/mzimmerm/ob-dart
 ;; Package-Requires: ((emacs "24.4"))
@@ -103,25 +103,8 @@ Args:
                      by stdout.write() or print()"
   (org-babel-script-escape results))
 
-;; Variable which returns Dart code in String.
-;;
-;; The Dart code wraps Dart source between the org document's  #+begin_src and #+end_src,
-;;   in a Dart main() method. There are some added runZoned() tricks to either use
-;;   the printed strings or returned value as results of the #+begin_src and #+end_src
-;;   code.
-;;
-;; The above behaviour is controlled by an argument passed from elisp
-;;   to the during 'org-babel-eval dart-code argument'.
-;;
-;; In particular, if the passed argument (named results_collection_type in code) is:
-;;   - "output":
-;;     - Strings from Dart print() is send to the standart output,
-;;       and becomes the result
-;;   - "value":
-;;     - Value of the last statement converted to String  is send to the standart output,
-;;       and becomes the result.
 
-(defvar ob-dart-wrapper-method
+(defvar ob-dart-wrapper
   "
 //import 'dart:analysis_server';
 //import 'dart:analyzer';
@@ -203,8 +186,36 @@ void main(List args) {
     throw new Exception(\"Invalid collection type in results: ${results_collection_type}. Only one of [output/value] allowed.\");
   }
 
-}
-")
+}"
+
+"Documentation: Variable which returns Dart wrapper code as String.
+
+Used when the Dart snippet in Org source block
+does NOT contain a `main' method.  The returned Dart code wraps Dart
+source between #+begin_src and #+end_src, into a Dart main() method.
+
+If the passed argument to
+
+  `org-babel-eval dart-code argument'
+
+is:
+  - `output':
+    - The stdout from Dart print() in the snippet is send
+      to the standart output, and becomes the #+RESULT.
+  - `value':
+    - The stdout from Dart print() is blocked by the `runZoned'
+      method, and the `toString()' of the last `return lasExpression'
+      becomes the  #+RESULT."
+)
+
+;; todo-last
+;; (defvar ob-dart-with-main-snippet-wrapper
+;; "todo return this"
+;; "Documentation: wraps a ob-dart snippet containing main.
+;; For `:results output', in does not wrap, but replaces it's contents with the
+;; ob-dart snippet.
+;; For `:results value' it wraps the content of main() into runZoned()."
+;; )
 
 (defun ob-dart-evaluate (session body &optional result-type result-params)
   "Evaluate BODY in external Dart process.
@@ -227,7 +238,7 @@ Args:
 
   ;; Set the name src-file='src-file=/tmp/dart-RAND.dart'
   (let* ((src-file (org-babel-temp-file "dart-"))
-         (wrapper (format ob-dart-wrapper-method body)))
+         (wrapper (format ob-dart-wrapper body)))
     
     ;; Create 'temp-file' named 'src-file',
     ;;   and insert into it the Dart code from the source block

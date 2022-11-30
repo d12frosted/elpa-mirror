@@ -3,11 +3,19 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/gcode-mode.el.git
 
 Updating /mnt/store/melpa/working/gcode-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/wavexx/gcode-mode.el.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 94d2baf2ccbe24ef173e1b203aadb02b43ef2aa2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gcode-mode/
+  to /tmp/gcode-modek9XSBB/gcode-mode-20221126.2249
+    gcode-mode-doc.el -> gcode-mode-doc.el
+    gcode-mode.el -> gcode-mode.el
+Created gcode-mode-20221126.2249.tar containing:
+  gcode-mode-20221126.2249/
+  gcode-mode-20221126.2249/gcode-mode-doc.el
+  gcode-mode-20221126.2249/gcode-mode-pkg.el
+  gcode-mode-20221126.2249/gcode-mode.el
+Built gcode-mode in 3.758s, finished at 2022-11-30T04:37:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 408 Nov 30 04:37 packages/gcode-mode-20221126.2249.entry
+ 60K -rw-r--r-- 1 root root 60K Nov 30 04:37 packages/gcode-mode-20221126.2249.tar

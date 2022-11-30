@@ -4,8 +4,6 @@
 
 ;; Author: Tomoya Tanjo <ttanjo@gmail.com>
 ;; Keywords: eshell, extensions
-;; Package-Version: 20140107.1018
-;; Package-Commit: ea5da9ce8566ffe2e013f0e588701cb0825258b6
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
