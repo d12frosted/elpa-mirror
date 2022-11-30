@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-vs/line-reminder
-;; Package-Version: 20221017.747
-;; Package-Commit: 501b4739e422ca4859f47b9226e2ea292ecb6800
+;; Package-Version: 20221130.526
+;; Package-Commit: 61f5ade3a7b385fc8ef5d572dc45797c8966d4c9
 ;; Version: 0.5.1
 ;; Package-Requires: ((emacs "25.1") (indicators "0.0.4") (fringe-helper "1.0.1") (ov "1.0.6") (ht "2.0"))
 ;; Keywords: convenience annotation
@@ -522,7 +522,7 @@ and END."
        (lambda (line sign)
          (line-reminder--mark-line-by-linum line (line-reminder--get-face sign)))
        line-reminder--line-status)
-      (line-reminder--thumb-size-change))))
+      (line-reminder--thumb-render-buffer))))
 
 (defun line-reminder--before-change (beg end)
   "Do stuff before buffer is changed with BEG and END."
@@ -727,19 +727,17 @@ and END."
                        percent-line (floor percent-line)
                        added (ht-get guard percent-line))
                  ;; Prevent creating overlay twice on the same line
-                 (when (or (null added)
-                           ;; 'saved line can overwrite 'modified line
-                           (eq added 'modified))
+                 (when (null added)
                    (goto-char start-point)
                    (when (= (forward-line percent-line) 0)
                      (ht-set guard percent-line sign)
                      (line-reminder--thumb-create-ov face))))
                line-reminder--line-status))))))))
 
-(defun line-reminder--thumb-size-change (&rest _)
+(defun line-reminder--thumb-size-change (&optional frame &rest _)
   "Render thumbnail for all visible windows."
   (line-reminder--with-no-redisplay
-    (dolist (win (window-list)) (line-reminder--thumb-render-window win))))
+    (dolist (win (window-list frame)) (line-reminder--thumb-render-window win))))
 
 (defun line-reminder--thumb-scroll (&optional window &rest _)
   "Render thumbnail on WINDOW."

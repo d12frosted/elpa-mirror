@@ -1,5 +1,5 @@
 (evil-cleverparens .
-		   [(20170718 413)
+		   [(20221130 1034)
 		    ((evil
 		      (1 0))
 		     (paredit
@@ -11,9 +11,9 @@
 		     (dash
 		      (2 12 0)))
 		    "Evil friendly minor-mode for editing lisp." tar
-		    ((:commit . "9bce7cc5e2ab80adeafb0f1a579eb27bdb7a8d2f")
+		    ((:commit . "08510fe45fcbbce0eca222e11e611f8554ba1c1e")
 		     (:authors
 		      ("Olli Piepponen" . "opieppo@gmail.com"))
 		     (:maintainer "Olli Piepponen" . "opieppo@gmail.com")
 		     (:keywords "cleverparens" "parentheses" "evil" "paredit" "smartparens")
-		     (:url . "https://github.com/luxbock/evil-cleverparens"))])
+		     (:url . "https://github.com/emacs-evil/evil-cleverparens"))])

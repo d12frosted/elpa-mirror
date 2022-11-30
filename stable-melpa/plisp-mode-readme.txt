@@ -1,3 +1,7 @@
+*This project is currently unmaintained, and needs a new
+maintainer. If you wish to take maintainership, please email
+Alexis.*
+
 `plisp-mode' provides a major mode for PicoLisp programming.
 
 The `plisp-mode' in this package has been built from scratch, and
@@ -7,8 +11,6 @@ distribution](http://software-lab.de/down.html), or the more
 recently [updated version of that
 support](https://github.com/tj64/picolisp-mode). At this stage, the
 main advantages provided by this package are:
-
-* an actively maintained and supported system;
 
 * access to the PicoLisp reference documentation, including via
   Eldoc;

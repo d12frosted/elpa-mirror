@@ -1,11 +1,11 @@
-;;; html-to-hiccup.el --- Convert HTML to Hiccup syntax
+;;; html-to-hiccup.el --- Convert HTML to Hiccup syntax   -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016 Arne Brasseur, Jack Rusher
 
 ;; Author: Arne Brasseur <arne@arnebrasseur.net>
 ;; URL: https://github.com/plexus/html-to-hiccup
-;; Package-Version: 20211129.944
-;; Package-Commit: 97ecc8cce11f577ad4406da0367aa5eeec1bd8c6
+;; Package-Version: 20221130.1159
+;; Package-Commit: 28dabd103208045128751c3275c78eb8e68684d6
 ;; Version: 1.0
 ;; Created: 27 October 2016
 ;; Keywords: HTML Hiccup Clojure
@@ -53,8 +53,18 @@
 (require 'dash)
 (require 'subr-x)
 
+(defgroup html-to-hiccup nil
+  "Convert HTML to Hiccup syntax."
+  :prefix "html-to-hiccup-"
+  :group 'tools)
+
+(defcustom html-to-hiccup-use-shorthand-p t
+  "If non-nil, use shorthand notation for class attributes when possible."
+  :type 'boolean
+  :safe #'booleanp)
+
 (defun html-to-hiccup--sexp-to-hiccup-tag (elem tag-class?)
-  "Generate Hiccup for the HTML ELEM tag + id + (iff TAG-CLASS?)
+  "Generate Hiccup for the HTML ELEM tag + id + (if TAG-CLASS?)
 class shorthands."
   (let ((attrs (cadr elem)))
     (concat ":" (symbol-name (car elem))
@@ -86,8 +96,9 @@ when ATTRS-REMOVE-CLASS?."
   "Turn a html-sexp (as returned by libxml-parse-*) into a Hiccup element."
   (let* ((attrs (cadr html-sexp))
          (class (cdr (assoc 'class attrs)))
-         ;; not all class chars are valid for shorthand syntax
-         (tag-class-shorthand? (when class (not (s-contains? "/" class)))))
+         (tag-class-shorthand? (and html-to-hiccup-use-shorthand-p
+                                    ;; not all class chars are valid for shorthand syntax
+                                    (when class (not (s-contains? "/" class))))))
     (concat "["
             (html-to-hiccup--sexp-to-hiccup-tag html-sexp tag-class-shorthand?)
             (html-to-hiccup--sexp-to-hiccup-attrs attrs tag-class-shorthand?)
