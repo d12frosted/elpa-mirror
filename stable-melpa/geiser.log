@@ -4,10 +4,10 @@ Source:  https://gitlab.com/emacs-geiser/geiser.git
 
 Updating /mnt/store/melpa/working/geiser/
 Checking out origin/HEAD
-Checking out a29ad0533090e804f84b72c064a595b35c077977
+Checking out 47bb86d6829ffa81ec021ee6217379b216d95bfc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser/
-  to /tmp/geiser2SCeW5/geiser-20221127.507
+  to /tmp/geiserQjbfLG/geiser-20221130.1333
   ! elisp/geiser-autodoc.el -> geiser-autodoc.el
   ! elisp/geiser-base.el -> geiser-base.el
   ! elisp/geiser-capf.el -> geiser-capf.el
@@ -33,36 +33,38 @@ Copying files (->) and directories (=>)
   ! elisp/geiser.el -> geiser.el
   ! doc/dir -> dir
   ! doc/geiser.texi -> geiser.texi
-Generating /tmp/geiser2SCeW5/geiser-20221127.507/geiser.info
-Created geiser-20221127.507.tar containing:
-  geiser-20221127.507/
-  geiser-20221127.507/dir
-  geiser-20221127.507/geiser-autodoc.el
-  geiser-20221127.507/geiser-base.el
-  geiser-20221127.507/geiser-capf.el
-  geiser-20221127.507/geiser-compile.el
-  geiser-20221127.507/geiser-completion.el
-  geiser-20221127.507/geiser-connection.el
-  geiser-20221127.507/geiser-custom.el
-  geiser-20221127.507/geiser-debug.el
-  geiser-20221127.507/geiser-doc.el
-  geiser-20221127.507/geiser-edit.el
-  geiser-20221127.507/geiser-eval.el
-  geiser-20221127.507/geiser-image.el
-  geiser-20221127.507/geiser-impl.el
-  geiser-20221127.507/geiser-log.el
-  geiser-20221127.507/geiser-menu.el
-  geiser-20221127.507/geiser-mode.el
-  geiser-20221127.507/geiser-pkg.el
-  geiser-20221127.507/geiser-popup.el
-  geiser-20221127.507/geiser-reload.el
-  geiser-20221127.507/geiser-repl.el
-  geiser-20221127.507/geiser-syntax.el
-  geiser-20221127.507/geiser-table.el
-  geiser-20221127.507/geiser-xref.el
-  geiser-20221127.507/geiser.el
-  geiser-20221127.507/geiser.info
-Built geiser in 11.545s, finished at 2022-11-30T11:58:13+0000
+Generating /tmp/geiserQjbfLG/geiser-20221130.1333/geiser.info
+Created geiser-20221130.1333.tar containing:
+  geiser-20221130.1333/
+  geiser-20221130.1333/dir
+  geiser-20221130.1333/geiser-autodoc.el
+  geiser-20221130.1333/geiser-base.el
+  geiser-20221130.1333/geiser-capf.el
+  geiser-20221130.1333/geiser-compile.el
+  geiser-20221130.1333/geiser-completion.el
+  geiser-20221130.1333/geiser-connection.el
+  geiser-20221130.1333/geiser-custom.el
+  geiser-20221130.1333/geiser-debug.el
+  geiser-20221130.1333/geiser-doc.el
+  geiser-20221130.1333/geiser-edit.el
+  geiser-20221130.1333/geiser-eval.el
+  geiser-20221130.1333/geiser-image.el
+  geiser-20221130.1333/geiser-impl.el
+  geiser-20221130.1333/geiser-log.el
+  geiser-20221130.1333/geiser-menu.el
+  geiser-20221130.1333/geiser-mode.el
+  geiser-20221130.1333/geiser-pkg.el
+  geiser-20221130.1333/geiser-popup.el
+  geiser-20221130.1333/geiser-reload.el
+  geiser-20221130.1333/geiser-repl.el
+  geiser-20221130.1333/geiser-syntax.el
+  geiser-20221130.1333/geiser-table.el
+  geiser-20221130.1333/geiser-xref.el
+  geiser-20221130.1333/geiser.el
+  geiser-20221130.1333/geiser.info
+Built geiser in 12.185s, finished at 2022-11-30T15:37:57+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  399 Nov 30 11:58 packages/geiser-20221127.507.entry
 320K -rw-r--r-- 1 root root 320K Nov 30 11:58 packages/geiser-20221127.507.tar
+4.0K -rw-r--r-- 1 root root  400 Nov 30 15:37 packages/geiser-20221130.1333.entry
+320K -rw-r--r-- 1 root root 320K Nov 30 15:37 packages/geiser-20221130.1333.tar
