@@ -1,0 +1,209 @@
+		       ━━━━━━━━━━━━━━━━━━━━━━━━━
+			EAT: EMULATE A TERMINAL
+		       ━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Usage
+2. Installation
+.. 1. NonGNU ELPA Devel
+.. 2. Quelpa
+.. 3. Manual
+3. Comparison With Other Terminal Emulators
+.. 1. Term
+.. 2. Vterm
+.. 3. Coterm + Shell
+4. Acknowledgements
+
+
+Eat's name self-explainary, it stands for "Emulate A Terminal".  Eat is
+a terminal emulator.  It can run most (if not all) full-screen terminal
+programs, including Emacs.
+
+It is pretty fast, more than three times faster than Term, despite being
+implemented entirely in Emacs Lisp.  So fast that you can comfortably
+run Emacs inside Eat, or even use your Emacs as a terminal multiplexer.
+
+It has many feature that other Emacs terminal emulator still don't have,
+for example complete mouse support.
+
+It flickers less than other Emacs terminal emulator, so you get more
+performance and a smooth experience.
+
+
+1 Usage
+═══════
+
+  To start Eat, run `M-x eat'.  Eat has three keybinding modes:
+
+  • "emacs" mode: No special keybinding, except the following:
+
+    • `C-c C-j': Switch to semi-char mode.
+    • `C-c M-d': Switch to char mode.
+    • `C-c C-k': Kill process.
+
+  • "semi-char" mode: Most keys are bound to send the key to the
+    terminal, except the following keys: `C-\', `C-c', `C-x', `C-g',
+    `C-h', `C-M-c', `C-u', `C-q', `M-x', `M-:', `M-!', `M-&'.  The
+    following special keybinding are available:
+
+    • `C-q': Send next key to the terminal.
+    • `C-y': Like `yank', but send the text to the terminal.
+    • `M-y': Like `yank-pop', but send the text to the terminal.
+    • `C-c C-k': Kill process.
+
+  • "char" mode: All supported keys are bound to send the key to the
+    terminal, except `C-M-m' or `M-RET', which is bound to switch to
+    semi-char mode.
+
+  If you like Eshell, then there is a good news for you.  Eat integrates
+  with Eshell.  Eat has two global minor modes for Eshell:
+
+  • `eat-eshell-visual-command-mode': Run visual commands with Eat
+    instead of Term.
+
+  • `eat-eshell-mode': Run Eat inside Eshell.  After enabling this, you
+    can run full-screen terminal programs directly in Eshell.  You have
+    the above three keybinding modes here too, except that `C-c C-k' is
+    not special (i.e. not bound by Eat) in "emacs" mode and "line" mode.
+
+  You can add any of these to `eshell-first-time-mode-hook' like the
+  following:
+
+  ┌────
+  │ ;; For `eat-eshell-visual-command-mode'.
+  │ (add-hook 'eshell-first-time-mode-hook
+  │ 	  #'eat-eshell-visual-command-mode)
+  │ 
+  │ ;; For `eat-eshell-mode'.
+  │ (add-hook 'eshell-first-time-mode-hook #'eat-eshell-mode)
+  └────
+
+
+2 Installation
+══════════════
+
+  Eat requires at least Emacs 28.1 or above.
+
+
+2.1 NonGNU ELPA Devel
+─────────────────────
+
+  Eat is available on NonGNU ELPA Devel.  If you don't have the archive
+  setup put something like the following in your init file:
+
+  ┌────
+  │ (add-to-list 'package-archives
+  │ 	     '("nongnu-dev"
+  │ 	       . "https://elpa.nongnu.org/nongnu-devel/"))
+  └────
+
+
+2.2 Quelpa
+──────────
+
+  ┌────
+  │ (quelpa '(eat :fetcher git
+  │ 	      :url "https://codeberg.org/akib/emacs-eat.git"
+  │ 	      :files ("*.el" "dir"
+  │ 		      "*.info" "*.texi"
+  │ 		      "*.ti" ("e" "e/*")))
+  └────
+
+
+2.3 Manual
+──────────
+
+  Clone the repository and put it in your `load-path'.
+
+
+3 Comparison With Other Terminal Emulators
+══════════════════════════════════════════
+
+3.1 Term
+────────
+
+  Term is the Emacs built-in terminal emulator.  Its terminal emulation
+  is pretty good too.  But it's slow.  It is so slow that Eat can beat
+  native-compiled Term even without byte-compilation, and when Eat is
+  byte-compiled, Eat is more than three times fast.  Also, Term
+  flickers, just try to run `emacs -nw' in it.  It doesn't support
+  remote connections, for example over Tramp.  However, it has "line"
+  mode, which Eat still doesn't have.  If you want line mode in a
+  terminal, or use an old version of Emacs, you can use Term, but Coterm
+  + Shell is probably a better choice in case your Emacs version is 26.1
+  or above.
+
+
+3.2 Vterm
+─────────
+
+  Vterm is powered by a C library, libvterm.  For this reason, it can
+  process huge amount of text quickly.  It is about 1.5 times faster
+  than Eat (byte-compiled or native-compiled) (and about 2.75 faster
+  then Eat without byte-compilation).  But it doesn't have a char mode
+  (however you can make a char mode spending some effort).  And it too
+  flickers like Term, so despite being much faster that Eat, it seems to
+  be slow.  If you need your terminal to handle huge bursts (megabytes)
+  of data, you should Vterm.
+
+
+3.3 Coterm + Shell
+──────────────────
+
+  Coterm adds terminal emulation to Shell mode.  Although the terminal
+  Coterm emulates is same as Term, it is much faster, about three times,
+  just a bit slow than Eat.  However, it too flickers like other
+  terminals.  Since it's an upgrade to Shell, you get all the features
+  of Shell like "line" mode, completion using your favorite completion
+  UI (Company, Corfu, etc), etc.  Most of these features are available
+  in Eat-Eshell-Mode as Eshell is similar to Shell, however it's not
+  Shell mode.  Recommended if you like Shell.
+
+
+4 Acknowledgements
+══════════════════
+
+  This wouldn't have been possible if the following awesome softwares
+  didn't exist:
+
+  • [GNU Operating System]
+  • [St]
+  • [Kitty]
+  • [XTerm]
+  • [Linux-libre]
+  • [Term]
+  • [Coterm]
+  • [Shell]
+  • [Vterm]
+  • [Eshell]
+  • Numerous terminal programs
+  • And obviously, [GNU Emacs]
+
+
+[GNU Operating System] <https://gnu.org>
+
+[St] <https://st.suckless.org/>
+
+[Kitty] <https://sw.kovidgoyal.net/kitty/>
+
+[XTerm] <https://invisible-island.net/xterm/>
+
+[Linux-libre] <https://www.gnu.org/software/linux-libre/>
+
+[Term]
+<https://www.gnu.org/software/emacs/manual/html_node/emacs/Terminal-emulator.html>
+
+[Coterm] <https://repo.or.cz/emacs-coterm.git>
+
+[Shell]
+<https://www.gnu.org/software/emacs/manual/html_node/emacs/Interactive-Shell.html>
+
+[Vterm] <https://github.com/akermu/emacs-libvterm>
+
+[Eshell]
+<https://www.gnu.org/software/emacs/manual/html_node/eshell/index.html>
+
+[GNU Emacs] <https://www.gnu.org/software/emacs/>

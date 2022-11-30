@@ -2441,14 +2441,15 @@
 		   ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
 		  (:url . "http://elpa.gnu.org/packages/path-iterator.html"))])
  (peg .
-      [(1 0)
+      [(1 0 1)
        ((emacs
 	 (25)))
        "Parsing Expression Grammars in Emacs Lisp" tar
        ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
 	(:authors
 	 ("Helmut Eller" . "eller.helmut@gmail.com"))
-	(:url . "http://elpa.gnu.org/packages/peg.html"))])
+	(:url . "https://elpa.gnu.org/packages/peg.html")
+	(:commit . "90c9004a8347209f94a37c8d9506425721098402"))])
  (perl-doc .
 	   [(0 6)
 	    ((emacs
@@ -3297,7 +3298,7 @@
 	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
 	     (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
  (tramp .
-	[(2 5 3 3)
+	[(2 5 4)
 	 ((emacs
 	   (25 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -3306,7 +3307,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "b0bcbecc1c74bf9e19d6d71033f1bb92af77e314"))])
+	  (:commit . "12745adb7381cce671fc707946331b561e0cb372"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs

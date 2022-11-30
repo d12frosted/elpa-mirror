@@ -4,10 +4,10 @@ Source:  https://github.com/idris-hackers/idris-mode.git
 
 Updating /mnt/store/melpa/working/idris-mode/
 Checking out origin/HEAD
-Checking out 993c862b7fcc97cca1b825d0acf424c70d72ce36
+Checking out fdbd019cb284455f0e2e887a833f64c67b89c80f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/idris-mode/
-  to /tmp/idris-modeVv6cES/idris-mode-20221123.1112
+  to /tmp/idris-modeXiv3jx/idris-mode-20221129.1619
     idris-commands.el -> idris-commands.el
     idris-common-utils.el -> idris-common-utils.el
     idris-compat.el -> idris-compat.el
@@ -27,43 +27,41 @@ Copying files (->) and directories (=>)
     idris-simple-indent.el -> idris-simple-indent.el
     idris-syntax.el -> idris-syntax.el
     idris-test-utils.el -> idris-test-utils.el
-    idris-tests2.el -> idris-tests2.el
     idris-tests3.el -> idris-tests3.el
     idris-tree-info.el -> idris-tree-info.el
     idris-warnings-tree.el -> idris-warnings-tree.el
     idris-warnings.el -> idris-warnings.el
     inferior-idris.el -> inferior-idris.el
     logo-small.png -> logo-small.png
-Created idris-mode-20221123.1112.tar containing:
-  idris-mode-20221123.1112/
-  idris-mode-20221123.1112/idris-commands.el
-  idris-mode-20221123.1112/idris-common-utils.el
-  idris-mode-20221123.1112/idris-compat.el
-  idris-mode-20221123.1112/idris-core.el
-  idris-mode-20221123.1112/idris-events.el
-  idris-mode-20221123.1112/idris-highlight-input.el
-  idris-mode-20221123.1112/idris-hole-list.el
-  idris-mode-20221123.1112/idris-info.el
-  idris-mode-20221123.1112/idris-ipkg-mode.el
-  idris-mode-20221123.1112/idris-keys.el
-  idris-mode-20221123.1112/idris-log.el
-  idris-mode-20221123.1112/idris-mode-pkg.el
-  idris-mode-20221123.1112/idris-mode.el
-  idris-mode-20221123.1112/idris-navigate.el
-  idris-mode-20221123.1112/idris-prover.el
-  idris-mode-20221123.1112/idris-repl.el
-  idris-mode-20221123.1112/idris-settings.el
-  idris-mode-20221123.1112/idris-simple-indent.el
-  idris-mode-20221123.1112/idris-syntax.el
-  idris-mode-20221123.1112/idris-test-utils.el
-  idris-mode-20221123.1112/idris-tests2.el
-  idris-mode-20221123.1112/idris-tests3.el
-  idris-mode-20221123.1112/idris-tree-info.el
-  idris-mode-20221123.1112/idris-warnings-tree.el
-  idris-mode-20221123.1112/idris-warnings.el
-  idris-mode-20221123.1112/inferior-idris.el
-  idris-mode-20221123.1112/logo-small.png
-Built idris-mode in 7.195s, finished at 2022-11-29T14:08:25+0000
+Created idris-mode-20221129.1619.tar containing:
+  idris-mode-20221129.1619/
+  idris-mode-20221129.1619/idris-commands.el
+  idris-mode-20221129.1619/idris-common-utils.el
+  idris-mode-20221129.1619/idris-compat.el
+  idris-mode-20221129.1619/idris-core.el
+  idris-mode-20221129.1619/idris-events.el
+  idris-mode-20221129.1619/idris-highlight-input.el
+  idris-mode-20221129.1619/idris-hole-list.el
+  idris-mode-20221129.1619/idris-info.el
+  idris-mode-20221129.1619/idris-ipkg-mode.el
+  idris-mode-20221129.1619/idris-keys.el
+  idris-mode-20221129.1619/idris-log.el
+  idris-mode-20221129.1619/idris-mode-pkg.el
+  idris-mode-20221129.1619/idris-mode.el
+  idris-mode-20221129.1619/idris-navigate.el
+  idris-mode-20221129.1619/idris-prover.el
+  idris-mode-20221129.1619/idris-repl.el
+  idris-mode-20221129.1619/idris-settings.el
+  idris-mode-20221129.1619/idris-simple-indent.el
+  idris-mode-20221129.1619/idris-syntax.el
+  idris-mode-20221129.1619/idris-test-utils.el
+  idris-mode-20221129.1619/idris-tests3.el
+  idris-mode-20221129.1619/idris-tree-info.el
+  idris-mode-20221129.1619/idris-warnings-tree.el
+  idris-mode-20221129.1619/idris-warnings.el
+  idris-mode-20221129.1619/inferior-idris.el
+  idris-mode-20221129.1619/logo-small.png
+Built idris-mode in 4.513s, finished at 2022-11-29T21:28:51+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  332 Nov 29 14:08 packages/idris-mode-20221123.1112.entry
-332K -rw-r--r-- 1 root root 330K Nov 29 14:08 packages/idris-mode-20221123.1112.tar
+4.0K -rw-r--r-- 1 root root  332 Nov 29 21:28 packages/idris-mode-20221129.1619.entry
+320K -rw-r--r-- 1 root root 320K Nov 29 21:28 packages/idris-mode-20221129.1619.tar
