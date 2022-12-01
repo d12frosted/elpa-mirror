@@ -4,7 +4,9 @@
 
 ;; Author: Andrii Kolomoiets <andreyk.mad@gmail.com>
 ;; Keywords: languages, abbrev, convenience
-;; Package-Version: 1.0
+;; Package-Commit: 2f4099aa1330f87df4e9cd526de057ee9b71de6c
+;; Package-Version: 20200419.1237
+;; Package-X-Original-Version: 1.0
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/muffinmad/emacs-pdb-capf
 

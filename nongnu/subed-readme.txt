@@ -56,11 +56,11 @@ Features
     A prefix argument sets the number of milliseconds for the current
     session (e.g. `C-u 1000 M-[ M-[ M-[' decreases start time by 3
     seconds).
-  • Move the current subtitle or all marked subtitles forward (`C-M-n')
-    or backward (`C-M-p') in time without changing subtitle duration.  A
-    prefix argument sets the number of milliseconds for the current
-    session (e.g. `C-u 500 C-M-n C-M-n' moves the current subtitle 1
-    second forward).
+  • Move the current subtitle or all marked subtitles
+    (`subed-move-subtitles') forward (`C-M-n') or backward (`C-M-p') in
+    time without changing subtitle duration.  A prefix argument sets the
+    number of milliseconds for the current session (e.g. `C-u 500 C-M-n
+    C-M-n' moves the current subtitle 1 second forward).
   • Shift the current subtitle forward (`C-M-f') or backward (`C-M-b')
     together with all following subtitles.  This is basically a
     convenience shortcut for `C-SPC M-> C-M-n/p'.

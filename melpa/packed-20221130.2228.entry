@@ -1,0 +1,13 @@
+(packed .
+	[(20221130 2228)
+	 ((emacs
+	   (25 1))
+	  (compat
+	   (28 1 1 0)))
+	 "[DEPRECATED] Package manager agnostic Emacs Lisp package utilities" single
+	 ((:commit . "169064f7acfe198cc7dd43d02518b773691e1314")
+	  (:authors
+	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	  (:keywords "lisp")
+	  (:url . "https://github.com/emacscollective/packed"))])

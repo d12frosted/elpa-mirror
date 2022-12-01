@@ -1,0 +1,1220 @@
+	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+	    STANDARD-THEMES: LIKE THE DEFAULT THEME BUT MORE
+			       CONSISTENT
+
+			  Protesilaos Stavrou
+			  info@protesilaos.com
+	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+This manual, written by Protesilaos Stavrou, describes the Emacs package
+called `standard-themes', and provides every other piece of information
+pertinent to it.
+
+The documentation furnished herein corresponds to stable version 1.0.0,
+released on 2022-11-30.  Any reference to a newer feature which does not
+yet form part of the latest tagged commit, is explicitly marked as such.
+
+Current development target is 1.1.0-dev.
+
+⁃ Package name (GNU ELPA): `standard-themes'
+⁃ Official manual: <https://protesilaos.com/emacs/standard-themes>
+⁃ Git repo on SourceHut:
+  <https://git.sr.ht/~protesilaos/standard-themes>
+  • Mirrors:
+    ⁃ GitHub: <https://github.com/protesilaos/standard-themes>
+    ⁃ GitLab: <https://gitlab.com/protesilaos/standard-themes>
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/standard-themes>
+⁃ Backronym: Standard Themes Are Not Derivatives but the Affectionately
+  Reimagined Default … themes.
+
+If you are viewing the README.org version of this file, please note that
+the GNU ELPA machinery automatically generates an Info manual out of it.
+
+Table of Contents
+─────────────────
+
+1. COPYING
+2. About the Standard themes
+3. Installation
+.. 1. GNU ELPA package
+.. 2. Manual installation
+4. Sample configuration
+5. Customization options
+.. 1. Enable mixed fonts
+.. 2. Accented mode line
+.. 3. UI typeface
+.. 4. Bold constructs
+.. 5. Italic constructs
+.. 6. Fringe visibility
+.. 7. Link style
+.. 8. Option for command prompts
+.. 9. Option for headings
+.. 10. Style of region highlight
+6. Loading a theme
+7. Preview theme colors
+8. Use colors from the active Standard theme
+9. Do-It-Yourself customizations
+.. 1. The general approach to advanced DIY changes
+.. 2. A theme-agnostic hook for theme loading
+.. 3. Add support for hl-todo
+.. 4. Configure bold and italic faces
+.. 5. Tweak `org-modern' timestamps
+.. 6. Tweak goto-address-mode faces
+10. Faces defined by the Standard themes
+11. Supported packages or face groups
+.. 1. Explicitly supported packages or face groups
+.. 2. Implicitly supported packages or face groups
+.. 3. Packages that are hard to support
+12. GNU Free Documentation License
+13. Indices
+.. 1. Function index
+.. 2. Variable index
+.. 3. Concept index
+
+
+1 COPYING
+═════════
+
+  Copyright (C) 2022 Free Software Foundation, Inc.
+
+        Permission is granted to copy, distribute and/or modify
+        this document under the terms of the GNU Free
+        Documentation License, Version 1.3 or any later version
+        published by the Free Software Foundation; with no
+        Invariant Sections, with the Front-Cover Texts being “A
+        GNU Manual,” and with the Back-Cover Texts as in (a)
+        below.  A copy of the license is included in the section
+        entitled “GNU Free Documentation License.”
+
+        (a) The FSF’s Back-Cover Text is: “You have the freedom to
+        copy and modify this GNU manual.”
+
+
+2 About the Standard themes
+═══════════════════════════
+
+  The `standard-themes' are a pair of light and dark themes for GNU
+  Emacs.  They emulate the out-of-the-box looks of Emacs (which
+  technically do NOT constitute a theme) while bringing to them thematic
+  consistency, customizability, and extensibility.
+
+
+3 Installation
+══════════════
+
+
+
+
+3.1 GNU ELPA package
+────────────────────
+
+  The package is available as `standard-themes'.  Simply do:
+
+  ┌────
+  │ M-x package-refresh-contents
+  │ M-x package-install
+  └────
+
+
+  And search for it.
+
+  GNU ELPA provides the latest stable release.  Those who prefer to
+  follow the development process in order to report bugs or suggest
+  changes, can use the version of the package from the GNU-devel ELPA
+  archive.  Read:
+  <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
+
+
+3.2 Manual installation
+───────────────────────
+
+  Assuming your Emacs files are found in `~/.emacs.d/', execute the
+  following commands in a shell prompt:
+
+  ┌────
+  │ cd ~/.emacs.d
+  │ 
+  │ # Create a directory for manually-installed packages
+  │ mkdir manual-packages
+  │ 
+  │ # Go to the new directory
+  │ cd manual-packages
+  │ 
+  │ # Clone this repo, naming it "standard-themes"
+  │ git clone https://git.sr.ht/~protesilaos/standard-themes standard-themes
+  └────
+
+  Finally, in your `init.el' (or equivalent) evaluate this:
+
+  ┌────
+  │ ;; Make Elisp files in that directory available to the user.
+  │ (add-to-list 'load-path "~/.emacs.d/manual-packages/standard-themes")
+  └────
+
+  Everything is in place to set up the package.
+
+
+4 Sample configuration
+══════════════════════
+
+  ┌────
+  │ ;; Make customisations that affect Emacs faces BEFORE loading a theme
+  │ ;; (any change needs a theme re-load to take effect).
+  │ (require 'standard-themes)
+  │ 
+  │ ;; Read the doc string of each of those user options.  These are some
+  │ ;; sample values.
+  │ (setq standard-themes-bold-constructs t
+  │       standard-themes-italic-constructs t
+  │       standard-themes-mixed-fonts t
+  │       standard-themes-variable-pitch-ui t
+  │       standard-themes-mode-line-accented t
+  │ 
+  │       ;; Accepts a symbol value:
+  │       standard-themes-fringes 'subtle
+  │ 
+  │       ;; The following accept lists of properties
+  │       standard-themes-links '(neutral-underline)
+  │       standard-themes-region '(no-extend neutral intense)
+  │       standard-themes-prompts '(bold italic)
+  │ 
+  │       ;; more complex alist to set weight, height, and optional
+  │       ;; `variable-pitch' per heading level (t is for any level not
+  │       ;; specified):
+  │       standard-themes-headings
+  │       '((0 . (variable-pitch light 1.9))
+  │ 	(1 . (variable-pitch light 1.8))
+  │ 	(2 . (variable-pitch light 1.7))
+  │ 	(3 . (variable-pitch semilight 1.6))
+  │ 	(4 . (variable-pitch semilight 1.5))
+  │ 	(5 . (variable-pitch 1.4))
+  │ 	(6 . (variable-pitch 1.3))
+  │ 	(7 . (variable-pitch 1.2))
+  │ 	(t . (variable-pitch 1.1))))
+  │ 
+  │ ;; Disable all other themes to avoid awkward blending:
+  │ (mapc #'disable-theme custom-enabled-themes)
+  │ 
+  │ (load-theme 'standard-light :no-confirm)
+  │ 
+  │ (define-key global-map (kbd "<f5>") #'standard-themes-toggle)
+  └────
+
+
+5 Customization options
+═══════════════════════
+
+  The `standard-themes' provide user options which tweak secondary
+  aspects of the theme.  All customizations need to be evaluated before
+  loading a theme.  Any change after the theme has been loaded require a
+  re-load ([Loading a theme]).
+
+
+[Loading a theme] See section 6
+
+5.1 Enable mixed fonts
+──────────────────────
+
+  The user option `standard-themes-mixed-fonts' controls whether
+  strictly spacing-sensitive constructs inherit from `fixed-pitch' (a
+  monospaced font family).
+
+  By default (a `nil' value for this user option) no face inherits from
+  `fixed-pitch': they all use the default font family, regardless of
+  whether it is monospaced or not.
+
+  When `standard-themes-mixed-fonts' is set to a non-`nil' value, faces
+  such as for Org tables, inline code, code blocks, and the like, are
+  rendered in a monospaced font at all times.  The user can thus set
+  their default font family to a proportionately spaced font without
+  worrying about breaking the alignment of relevant elements, or if they
+  simply prefer the aesthetics of mixed mono and proportionately spaced
+  font families.
+
+  A temporary switch to a proportionately spaced font (known in Emacs as
+  `variable-pitch') can be enabled in the current buffer with the
+  activation of the built-in `variable-pitch-mode'.
+
+  To get consistent typography, the user may need to edit the font
+  family of the `fixed-pitch' and `variable-pitch' faces.  The
+  `fontaine' package on GNU ELPA (by Protesilaos) can be helpful in this
+  regard.
+
+
+5.2 Accented mode line
+──────────────────────
+
+  The user option `standard-themes-mode-line-accented' handles the
+  background color of the active mode line.  When the value is `nil',
+  the color is gray, while non-`nil' uses an accent value.
+
+
+5.3 UI typeface
+───────────────
+
+  The user option `standard-themes-variable-pitch-ui' controls whether
+  the elements of the User Interface (UI) use a proportionately spaced
+  font.  By default (a `nil' value), all UI elements use the default
+  font family.  When this user option is set to a non-`nil' value, all
+  UI elements will inherit the face `variable-pitch', thus rendering
+  them in a proportionately spaced font.
+
+  In this context, the UI elements are:
+
+  • `header-line'
+  • `mode-line' (active and inactive)
+  • `tab-bar-mode'
+  • `tab-line-mode'
+
+  To get consistent typography, the user may need to edit the font
+  family of the `fixed-pitch' and `variable-pitch' faces.  The
+  `fontaine' package on GNU ELPA (by Protesilaos) can be helpful in this
+  regard.
+
+
+5.4 Bold constructs
+───────────────────
+
+  The user option `standard-themes-bold-constructs' determines whether
+  select faces will inherit the `bold' face.  When the value is
+  non-`nil', a bold weight is applied to code constructs.  This affects
+  keywords, builtins, and a few other elements.
+
+  [Configure bold and italic faces].
+
+
+[Configure bold and italic faces] See section 9.4
+
+
+5.5 Italic constructs
+─────────────────────
+
+  The user option `standard-themes-italic-constructs' determines whether
+  select faces will inherit the `italic' face.  When the value is
+  non-`nil', an italic style is applied to code constructs.  This
+  affects comments, doc strings, and a few other minor elements.
+
+  [Configure bold and italic faces].
+
+
+[Configure bold and italic faces] See section 9.4
+
+
+5.6 Fringe visibility
+─────────────────────
+
+  The user option `standard-themes-fringes' controls the visibility and
+  intensity of the fringes.  With regular Emacs settings “Fringe” is a
+  small surface area to either side of the Emacs window: it is where
+  certain indicators are displayed, such as continuation lines.
+
+  When the value is `nil', do not apply a distinct background color.
+
+  With a value of `subtle', use a gray background color that is visible
+  yet close to the main background color.  This is the default style.
+
+  With `intense', use a more pronounced gray background color.
+
+
+5.7 Link style
+──────────────
+
+  The user option `standard-themes-links' controls the style of links.
+  The value is a list of properties, each designated by a symbol.  The
+  default (a `nil' value or an empty list) is a prominent text color,
+  typically blue, with an underline of the same color.
+
+  For the style of the underline, a `neutral-underline' property turns
+  the color of the line into a subtle gray, while the `no-underline'
+  property removes the line altogether.  If both of those are set, the
+  latter takes precedence.
+
+  For text coloration, a `faint' property desaturates the color of the
+  text and the underline, unless the underline is affected by the
+  aforementioned properties.
+
+  A `bold' property applies a heavy typographic weight to the text of
+  the link.
+
+  An `italic' property adds a slant to the link’s text (italic or
+  oblique forms, depending on the typeface).
+
+  Combinations of any of those properties are expressed as a list, like
+  in these examples:
+
+  ┌────
+  │ (faint)
+  │ (no-underline faint)
+  └────
+
+  The order in which the properties are set is not significant.
+
+  In user configuration files the form may look like this:
+
+  ┌────
+  │ (setq standard-themes-links '(neutral-underline faint))
+  └────
+
+  The placement of the underline, meaning its proximity to the text, is
+  controlled by `x-use-underline-position-properties',
+  `x-underline-at-descent-line', `underline-minimum-offset'.  Please
+  refer to their documentation strings.
+
+
+5.8 Option for command prompts
+──────────────────────────────
+
+  The user option `standard-themes-prompts' controls the style of all
+  prompts, such as those of the minibuffer and REPLs.
+
+  The value is a list of properties, each designated by a symbol.  The
+  default (a `nil' value or an empty list) means to only use an accented
+  foreground color.
+
+  The property `background' applies a background color to the prompt’s
+  text and adjusts the foreground accordingly.
+
+  The property `bold' makes the text use a bold typographic weight.
+  Similarly, `italic' adds a slant to the font’s forms (italic or
+  oblique forms, depending on the typeface).
+
+  Combinations of any of those properties are expressed as a list, like
+  in these examples:
+
+  ┌────
+  │ (background)
+  │ (bold italic)
+  │ (background bold italic)
+  └────
+
+  The order in which the properties are set is not significant.
+
+  In user configuration files the form may look like this:
+
+  ┌────
+  │ (setq standard-themes-prompts '(background bold))
+  └────
+
+
+5.9 Option for headings
+───────────────────────
+
+  The user option `standard-themes-headings' provides support for
+  individual heading styles for levels 0 through 8.
+
+  This is an alist that accepts a `(KEY . LIST-OF-VALUES)' combination.
+  The `KEY' is either a number, representing the heading’s level (0-8)
+  or `t', which pertains to the fallback style.  The fallback applies to
+  all heading levels that are not customized.
+
+  Level 0 is a special heading: it is used for what counts as a document
+  title or equivalent, such as the `#+TITLE' construct we find in Org
+  files.  Levels 1-8 are regular headings.
+
+  The list of values covers symbols that refer to properties, as
+  described below.  Here is a complete sample, followed by a
+  presentation of all available properties:
+
+  ┌────
+  │ (setq standard-themes-headings
+  │       '((1 . (light variable-pitch 1.5))
+  │ 	(2 . (regular 1.3))
+  │ 	(3 . (1.1))
+  │ 	(t . (variable-pitch))))
+  └────
+
+  By default (a `nil' value for this variable), all headings have a
+  normal typographic weight, a font family that is the same as the
+  `default' face (typically monospaced), and a height that is equal to
+  the `default' face’s height.
+
+  • A `variable-pitch' property changes the font family of the heading
+    to that of the `variable-pitch' face (normally a proportionately
+    spaced typeface).  Also check the `fontaine' package (by
+    Protesilaos) for tweaking fonts via faces.
+
+  • The symbol of a weight attribute adjusts the font of the heading
+    accordingly, such as `light', `semibold', etc.  Valid symbols are
+    defined in the variable `standard-themes-weights'.  The absence of a
+    weight means that no distinct weight will be used.
+
+  • A number, expressed as a floating point (e.g. 1.5), adjusts the
+    height of the heading to that many times the base font size.  The
+    default height is the same as 1.0, though it need not be explicitly
+    stated.  Instead of a floating point, an acceptable value can be in
+    the form of a cons cell like `(height . FLOAT)' or `(height FLOAT)',
+    where `FLOAT' is the given number.
+
+  Combinations of any of those properties are expressed as a list, like
+  in these examples:
+
+  ┌────
+  │ (semibold)
+  │ (variable-pitch semibold)
+  │ (variable-pitch semibold 1.3)
+  │ (variable-pitch semibold (height 1.3))   ; same as above
+  │ (variable-pitch semibold (height . 1.3)) ; same as above
+  └────
+
+  The order in which the properties are set is not significant.
+
+  In user configuration files the form may look like this:
+
+  ┌────
+  │ (setq standard-themes-headings
+  │       '((1 . (light variable-pitch 1.5))
+  │ 	(2 . (regular 1.3))
+  │ 	(3 . (1.1))
+  │ 	(t . (variable-pitch))))
+  └────
+
+  When defining the styles per heading level, it is possible to pass a
+  non-`nil' value (t) instead of a list of properties.  This will retain
+  the original aesthetic for that level.  For example:
+
+  ┌────
+  │ (setq standard-themes-headings
+  │       '((1 . t)           ; keep the default style
+  │ 	(2 . (variable-pitch 1.2))
+  │ 	(t . (variable-pitch)))) ; style for all unspecified headings
+  │ 
+  │ (setq standard-themes-headings
+  │       '((1 . (variable-pitch 1.6))
+  │ 	(2 . (1.3))
+  │ 	(t . t))) ; default style for all unspecified levels
+  └────
+
+
+5.10 Style of region highlight
+──────────────────────────────
+
+  The user option `standard-themes-region' controls the appearance of
+  the `region' face (the highlighted selection of an area).
+
+  The value it accepts is a list of symbols.
+
+  If `nil' or an empty list (the default), use a subtle background for
+  the region and preserve the color of selected text.
+
+  The `no-extend' symbol limits the highlighted area to the end of the
+  line, so that it does not reach the edge of the window.
+
+  The `neutral' symbol makes the highlighted area’s background gray (or
+  more gray, depending on the theme).
+
+  The `intense' symbol amplifies the intensity of the highlighted area’s
+  background color.  It also overrides any text color to keep it
+  legible.
+
+  Combinations of those symbols are expressed in any order.
+
+  In user configuration files the form may look like this:
+
+  ┌────
+  │ (setq standard-themes-region '(intense no-extend))
+  └────
+
+  Other examples:
+
+  ┌────
+  │ (setq standard-themes-region '(intense))
+  │ (setq standard-themes-region '(intense no-extend neutral))
+  └────
+
+
+6 Loading a theme
+═════════════════
+
+  Emacs can load and maintain enabled multiple themes at once.  This
+  typically leads to awkward styling and weird combinations.  The theme
+  looks broken and the designer’s intent is misunderstood.  Before
+  loading either of the `standard-themes', the user is encouraged to
+  disable all others:
+
+  ┌────
+  │ (mapc #'disable-theme custom-enabled-themes)
+  └────
+
+  Then load the theme of choice.  For example:
+
+  ┌────
+  │ (load-theme 'standard-light :no-confirm)
+  └────
+
+  The `:no-confirm' is optional.  It simply skips the step where Emacs
+  asks the user whether they are sure about loading the theme.
+
+  Consider adding code like the above to the user configuration file,
+  such as `init.el'.
+
+  As the Standard themes are extensible, another way to load the theme
+  of choice is to use either `standard-themes-load-dark' or
+  `standard-themes-load-light'.  These functions take care of (i)
+  disabling other themes, (ii) loading the specified Standard theme, and
+  (iii) running the `standard-themes-post-load-hook' which is useful for
+  do-it-yourself customizations ([The general approach to DIY changes]).
+  These two functions are also called by the command
+  `standard-themes-toggle'.
+
+
+[The general approach to DIY changes] See section 9.1
+
+
+7 Preview theme colors
+══════════════════════
+
+  The command `standard-themes-preview-colors' uses minibuffer
+  completion to select an item from the Standard themes and then
+  produces a buffer with previews of its color palette entries.  The
+  buffer has a naming scheme which reflects the given choice, like
+  `standard-light-preview-colors' for the `standard-light' theme.
+
+  The command `standard-themes-preview-colors-current' skips the
+  minibuffer selection process and just produces a preview for the
+  current Standard theme.
+
+
+8 Use colors from the active Standard theme
+═══════════════════════════════════════════
+
+  Advanced users may want to call color variables from the palette of
+  the active Standard theme.  The macro `standard-themes-with-colors'
+  supplies those to any form called inside of it.  For example:
+
+  ┌────
+  │ (standard-themes-with-colors
+  │   (list bg-main fg-main bg-mode-line))
+  │ ;; => ("#ffffff" "#000000" "#b3b3b3")
+  └────
+
+  The above return value is for `standard-light' when that is the active
+  Standard theme.  Switching to `standard-dark' and evaluating this code
+  anew will give us the relevant results for that theme:
+
+  ┌────
+  │ (standard-themes-with-colors
+  │   (list bg-main fg-main bg-mode-line cursor))
+  │ ;; => ("#000000" "#ffffff" "#505050")
+  └────
+
+  [Do-It-Yourself customizations].
+
+  The palette of each Standard theme is considered stable.  No removals
+  shall be made.  Though please note that some tweaks to individual hues
+  or color mapping are still possible.  At any rate, we will not
+  outright break any code that uses `standard-themes-with-colors'.
+
+
+[Do-It-Yourself customizations] See section 9
+
+
+9 Do-It-Yourself customizations
+═══════════════════════════════
+
+  This section shows how the user can tweak the Standard themes to their
+  liking, often by employing the `standard-themes-with-colors' macro
+  ([Use colors from the active Standard theme]).
+
+
+[Use colors from the active Standard theme] See section 8
+
+9.1 The general approach to advanced DIY changes
+────────────────────────────────────────────────
+
+  When the user wants to customize Emacs faces there are two
+  considerations they need to make if they care about robustness:
+
+  1. Do not hardcode color values, but instead use the relevant
+     variables from the Standard themes.
+  2. Make the changes persist through theme changes between the Standard
+     themes.
+
+  For point 1 we provide the `standard-themes-with-colors' macro, while
+  for point 2 we have the `standard-themes-post-load-hook'.  The hook
+  runs at the end of the command `standard-themes-toggle'.
+
+  [Use colors from the active Standard theme].
+
+  [A theme-agnostic hook for theme loading].
+
+  We need to wrap our code in the `standard-themes-with-colors' and
+  declare it as a function which we then add to the hook.  Here we show
+  the general approach of putting those pieces together.
+
+  To customize faces in a way that mirrors the Standard themes’ source
+  code, we use the built-in `custom-set-faces'.  The value it accepts
+  has the same syntax as that found in `standard-themes.el',
+  specifically the `standard-themes-faces' constant.  It thus is easy to
+  copy lines from there and tweak them.  Let’s pick a couple of
+  font-lock faces (used in all programming modes, among others):
+
+  ┌────
+  │ (defun my-standard-themes-custom-faces ()
+  │   "My customizations on top of the Standard themes.
+  │ This function is added to the `standard-themes-post-load-hook'."
+  │   (standard-themes-with-colors
+  │     (custom-set-faces
+  │      ;; These are the default specifications
+  │      `(font-lock-comment-face ((,c :inherit standard-themes-italic :foreground ,comment)))
+  │      `(font-lock-variable-name-face ((,c :foreground ,variable))))))
+  │ 
+  │ ;; Using the hook lets our changes persist when we use the commands
+  │ ;; `standard-themes-toggle', `standard-themes-load-dark',
+  │ ;; `standard-themes-load-light'.
+  │ (add-hook 'standard-themes-post-load-hook #'my-standard-themes-custom-faces)
+  └────
+
+  Each of the Standard themes has its own color palette and
+  corresponding mapping of values to constructs.  So the color of the
+  `comment' variable will differ between the themes.  For the purpose of
+  our demonstration, we make variables look like comments and comments
+  like variables:
+
+  ┌────
+  │ (defun my-standard-themes-custom-faces ()
+  │   "My customizations on top of the Standard themes.
+  │ This function is added to the `standard-themes-post-load-hook'."
+  │   (standard-themes-with-colors
+  │     (custom-set-faces
+  │      `(font-lock-comment-face ((,c :foreground ,variable)))
+  │      `(font-lock-variable-name-face ((,c :inherit standard-themes-italic :foreground ,comment))))))
+  │ 
+  │ ;; Using the hook lets our changes persist when we use the commands
+  │ ;; `standard-themes-toggle', `standard-themes-load-dark',
+  │ ;; `standard-themes-load-light'.
+  │ (add-hook 'standard-themes-post-load-hook #'my-standard-themes-custom-faces)
+  └────
+
+  All changes take effect when a theme is loaded again.  As such, it is
+  better to use either `standard-themes-load-dark' or
+  `standard-themes-load-light' at startup so that the function added to
+  the hook gets applied properly upon first load.  Like this:
+
+  ┌────
+  │ (defun my-standard-themes-custom-faces ()
+  │   "My customizations on top of the Standard themes.
+  │ This function is added to the `standard-themes-post-load-hook'."
+  │   (standard-themes-with-colors
+  │     (custom-set-faces
+  │      `(font-lock-comment-face ((,c :foreground ,variable)))
+  │      `(font-lock-variable-name-face ((,c :inherit standard-themes-italic :foreground ,comment))))))
+  │ 
+  │ ;; Using the hook lets our changes persist when we use the commands
+  │ ;; `standard-themes-toggle', `standard-themes-load-dark',
+  │ ;; `standard-themes-load-light'.
+  │ (add-hook 'standard-themes-post-load-hook #'my-standard-themes-custom-faces)
+  │ 
+  │ ;; Load the theme and run `standard-themes-post-load-hook'
+  │ (standard-themes-load-light) ; OR (standard-themes-load-dark)
+  └────
+
+  Please contact us if you have specific questions about this mechanism.
+  We are willing to help and shall provide comprehensive documentation
+  where necessary.
+
+
+[Use colors from the active Standard theme] See section 8
+
+[A theme-agnostic hook for theme loading] See section 9.2
+
+
+9.2 A theme-agnostic hook for theme loading
+───────────────────────────────────────────
+
+  The themes are designed with the intent to be useful to Emacs users of
+  varying skill levels, from beginners to experts.  This means that we
+  try to make things easier by not expecting anyone reading this
+  document to be proficient in Emacs Lisp or programming in general.
+
+  Such a case is with the use of the `standard-themes-post-load-hook',
+  which is called after the evaluation of any of the commands we provide
+  for loading a theme ([Loading a theme]).  We recommend using that hook
+  for advanced customizations, because (1) we know for sure that it is
+  available once the themes are loaded, and (2) anyone consulting this
+  manual, especially the sections on enabling and loading the themes,
+  will be in a good position to benefit from that hook.
+
+  Advanced users who have a need to switch between the Standard themes
+  and other items (e.g. the `modus-themes' and `ef-themes') will find
+  that such a hook does not meet their requirements: it only works with
+  the Standard themes and only with the functions they provide.
+
+  A theme-agnostic setup can be configured thus:
+
+  ┌────
+  │ (defvar after-enable-theme-hook nil
+  │    "Normal hook run after enabling a theme.")
+  │ 
+  │ (defun run-after-enable-theme-hook (&rest _args)
+  │    "Run `after-enable-theme-hook'."
+  │    (run-hooks 'after-enable-theme-hook))
+  │ 
+  │ (advice-add 'enable-theme :after #'run-after-enable-theme-hook)
+  └────
+
+  This creates the `after-enable-theme-hook' and makes it run after each
+  call to `enable-theme', which means that it will work for all themes
+  and also has the benefit that it does not depend on functions such as
+  `standard-themes-select' and the others mentioned in this manual.  The
+  function `enable-theme' is called internally by `load-theme', so the
+  hook works everywhere.
+
+  The downside of the theme-agnostic hook is that any functions added to
+  it will likely not be able to benefit from macro calls that read the
+  active theme, such as `standard-themes-with-colors' (the Modus and Ef
+  themes have an equivalent macro).  Not all Emacs themes have the same
+  capabilities.
+
+  In this document, we always mention `standard-themes-post-load-hook'
+  though the user can replace it with `after-enable-theme-hook' should
+  they need to (provided they understand the implications).
+
+
+[Loading a theme] See section 6
+
+
+9.3 Add support for hl-todo
+───────────────────────────
+
+  The `hl-todo' package provides the user option
+  `hl-todo-keyword-faces': it specifies an association list of `(KEYWORD
+  . COLOR-VALUE)' pairs.  There are no faces, which the theme could
+  style seamlessly.  As such, it rests on the user to specify
+  appropriate color values.  This can be done either by hardcoding
+  colors, which is inefficient, or by using the macro
+  `standard-themes-with-colors' ([The general approach to DIY changes]).
+  Here we show the latter method.
+
+  ┌────
+  │ (defun my-standard-themes-hl-todo-faces ()
+  │   "Configure `hl-todo-keyword-faces' with Standard themes colors.
+  │ The exact color values are taken from the active Standard theme."
+  │   (standard-themes-with-colors
+  │     (setq hl-todo-keyword-faces
+  │ 	  `(("HOLD" . ,yellow)
+  │ 	    ("TODO" . ,red)
+  │ 	    ("NEXT" . ,blue)
+  │ 	    ("THEM" . ,magenta)
+  │ 	    ("PROG" . ,cyan-warmer)
+  │ 	    ("OKAY" . ,green-warmer)
+  │ 	    ("DONT" . ,yellow-warmer)
+  │ 	    ("FAIL" . ,red-warmer)
+  │ 	    ("BUG" . ,red-warmer)
+  │ 	    ("DONE" . ,green)
+  │ 	    ("NOTE" . ,blue-warmer)
+  │ 	    ("KLUDGE" . ,cyan)
+  │ 	    ("HACK" . ,cyan)
+  │ 	    ("TEMP" . ,red)
+  │ 	    ("FIXME" . ,red-warmer)
+  │ 	    ("XXX+" . ,red-warmer)
+  │ 	    ("REVIEW" . ,red)
+  │ 	    ("DEPRECATED" . ,yellow)))))
+  │ 
+  │ (add-hook 'standard-themes-post-load-hook #'my-standard-themes-hl-todo-faces)
+  └────
+
+  To find the names of the color variables, the user can rely on the
+  commands for previewing the palette ([Preview theme colors]).
+
+
+[The general approach to DIY changes] See section 9.1
+
+[Preview theme colors] See section 7
+
+
+9.4 Configure bold and italic faces
+───────────────────────────────────
+
+  The Standard themes do not hardcode a `:weight' or `:slant' attribute
+  in the faces they cover.  Instead, they configure the generic faces
+  called `bold' and `italic' to use the appropriate styles and then
+  instruct all relevant faces that require emphasis to inherit from
+  them.
+
+  This practically means that users can change the particularities of
+  what it means for a construct to be bold/italic, by tweaking the
+  `bold' and `italic' faces.  Cases where that can be useful include:
+
+  ⁃ The default typeface does not have a variant with slanted glyphs
+    (e.g. Fira Mono/Code as of this writing on 2022-11-30), so the user
+    wants to add another family for the italics, such as Hack.
+
+  ⁃ The typeface of choice provides a multitude of weights and the user
+    prefers the light one by default.  To prevent the bold weight from
+    being too heavy compared to the light one, they opt to make `bold'
+    use a semibold weight.
+
+  ⁃ The typeface distinguishes between oblique and italic forms by
+    providing different font variants (the former are just slanted
+    versions of the upright forms, while the latter have distinguishing
+    features as well).  In this case, the user wants to specify the font
+    that applies to the `italic' face.
+
+  To achieve those effects, one must first be sure that the fonts they
+  use have support for those features.
+
+  In this example, we set the default font family to Fira Code, while we
+  choose to render italics in the Hack typeface (obviously one needs to
+  pick fonts that work in tandem):
+
+  ┌────
+  │ (set-face-attribute 'default nil :family "Fira Code" :height 110)
+  │ (set-face-attribute 'italic nil :family "Hack")
+  └────
+
+  And here we play with different weights, using Source Code Pro:
+
+  ┌────
+  │ (set-face-attribute 'default nil :family "Source Code Pro" :height 110 :weight 'light)
+  │ (set-face-attribute 'bold nil :weight 'semibold)
+  └────
+
+  To reset the font family, one can use this:
+
+  ┌────
+  │ (set-face-attribute 'italic nil :family 'unspecified)
+  └────
+
+  Consider the `fontaine' package on GNU ELPA (by Protesilaos) which
+  provides the means to configure font families via faces.
+
+
+9.5 Tweak `org-modern' timestamps
+─────────────────────────────────
+
+  The `org-modern' package uses faces and text properties to make Org
+  buffers more aesthetically pleasing.  It affects tables, timestamps,
+  lists, headings, and more.
+
+  In previous versions of the Standard themes, we mistakenly affected
+  one of its faces: the `org-modern-label'.  It changed the intended
+  looks and prevented the user option `org-modern-label-border' from
+  having its desired effect.  As such, we no longer override that face.
+
+  Users who were used to the previous design and who generally do not
+  configure the user options of `org-modern' may thus notice a change in
+  how clocktables (or generally tables with timestamps) are aligned.
+  The simplest solution is to instruct the mode to not prettify
+  timestamps, by setting the user option `org-modern-timestamp' to
+  `nil'.  For example, by adding this to the init file:
+
+  ┌────
+  │ (setq org-modern-timestamp nil)
+  └────
+
+  Alignment in tables will also depend on the use of proportionately
+  spaced fonts.  Enable the relevant option to work with those without
+  any further trouble ([Enable mixed fonts]).
+
+  For any further issues, you are welcome to ask for help.
+
+
+[Enable mixed fonts] See section 5.1
+
+
+9.6 Tweak goto-address-mode faces
+─────────────────────────────────
+
+  The built-in `goto-address-mode' uses heuristics to identify URLs and
+  email addresses in the current buffer.  It then applies a face to them
+  to change their style.  Some packages, such as `notmuch', use this
+  minor-mode automatically.
+
+  The faces are not declared with `defface', meaning that it is better
+  that the theme does not modify them.  The user is thus encouraged to
+  consider including this in their setup:
+
+  ┌────
+  │ (setq goto-address-url-face 'link
+  │       goto-address-url-mouse-face 'highlight
+  │       goto-address-mail-face 'link
+  │       goto-address-mail-mouse-face 'highlight)
+  └────
+
+  My personal preference is to set `goto-address-mail-face' to `nil',
+  because it otherwise adds too much visual noise to the buffer (email
+  addresses stand out more, due to the use of the uncommon `@'
+  caharacter but also because they are often enclosed in angled
+  brackets).
+
+
+10 Faces defined by the Standard themes
+═══════════════════════════════════════
+
+  The themes define some faces to make it possible to achieve
+  consistency between various groups of faces.  For example, all “marks
+  for selection” use the `standard-themes-mark-select' face.  If, say,
+  the user wants to edit this face to include an underline, the change
+  will apply to lots of packages, like Dired, Trashed, Ibuffer.
+
+  [Do-It-Yourself customizations].
+
+  All the faces defined by the themes:
+
+  ⁃ `standard-themes-bold'
+  ⁃ `standard-themes-fixed-pitch'
+  ⁃ `standard-themes-fringe-error'
+  ⁃ `standard-themes-fringe-info'
+  ⁃ `standard-themes-fringe-warning'
+  ⁃ `standard-themes-heading-0'
+  ⁃ `standard-themes-heading-1'
+  ⁃ `standard-themes-heading-2'
+  ⁃ `standard-themes-heading-3'
+  ⁃ `standard-themes-heading-4'
+  ⁃ `standard-themes-heading-5'
+  ⁃ `standard-themes-heading-6'
+  ⁃ `standard-themes-heading-7'
+  ⁃ `standard-themes-heading-8'
+  ⁃ `standard-themes-italic'
+  ⁃ `standard-themes-key-binding'
+  ⁃ `standard-themes-mark-delete'
+  ⁃ `standard-themes-mark-other'
+  ⁃ `standard-themes-mark-select'
+  ⁃ `standard-themes-ui-variable-pitch'
+  ⁃ `standard-themes-underline-error'
+  ⁃ `standard-themes-underline-info'
+  ⁃ `standard-themes-underline-warning'
+
+
+[Do-It-Yourself customizations] See section 9
+
+
+11 Supported packages or face groups
+════════════════════════════════════
+
+  The `standard-themes' will only ever support a curated list of
+  packages based on my judgement ([Packages that are hard to support]).
+  Nevertheless, the list of explicitly or implicitly supported packages
+  already covers everything most users need.
+
+
+[Packages that are hard to support] See section 11.3
+
+11.1 Explicitly supported packages or face groups
+─────────────────────────────────────────────────
+
+  • all basic faces
+  • all-the-icons
+  • all-the-icons-dired
+  • all-the-icons-ibuffer
+  • ansi-color
+  • auctex
+  • auto-dim-other-buffers
+  • bongo
+  • bookmark
+  • calendar and diary
+  • cider
+  • change-log and log-view (part of VC)
+  • chart
+  • clojure-mode
+  • company
+  • compilation
+  • completions
+  • consult
+  • corfu
+  • custom (`M-x customize')
+  • denote
+  • dictionary
+  • diff-hl
+  • diff-mode
+  • dired
+  • dired-subtree
+  • diredfl
+  • dirvish
+  • display-fill-column-indicator-mode
+  • doom-modeline
+  • ediff
+  • eglot
+  • eldoc
+  • elfeed
+  • embark
+  • epa
+  • eshell
+  • eww
+  • flycheck
+  • flymake
+  • flyspell
+  • font-lock
+  • git-commit
+  • git-rebase
+  • gnus
+  • hi-lock (`M-x highlight-regexp')
+  • ibuffer
+  • image-dired
+  • info
+  • isearch, occur, query-replace
+  • keycast
+  • lin
+  • line numbers (`display-line-numbers-mode' and global variant)
+  • magit
+  • man
+  • marginalia
+  • markdown-mode
+  • messages
+  • mode-line
+  • mu4e
+  • neotree
+  • notmuch
+  • olivetti
+  • orderless
+  • org
+  • org-habit
+  • org-modern
+  • outline-mode
+  • outline-minor-faces
+  • package (`M-x list-packages')
+  • perspective
+  • pulsar
+  • pulse
+  • rainbow-delimiters
+  • rcirc
+  • recursion-indicator
+  • regexp-builder (re-builder)
+  • ruler-mode
+  • shell-script-mode (sh-mode)
+  • show-paren-mode
+  • shr
+  • smerge
+  • tab-bar-mode
+  • tab-line-mode
+  • tempel
+  • term
+  • textsec
+  • transient
+  • trashed
+  • tree-sitter
+  • tty-menu
+  • vc (`vc-dir.el', `vc-hooks.el')
+  • vertico
+  • wgrep
+  • which-function-mode
+  • whitespace-mode
+  • widget
+  • writegood-mode
+  • woman
+
+
+11.2 Implicitly supported packages or face groups
+─────────────────────────────────────────────────
+
+  Those are known to work with the Standard themes either because their
+  colors are appropriate or because they inherit from basic faces which
+  the themes already cover:
+
+  • apropos
+  • dim-autoload
+  • hl-todo
+  • icomplete
+  • ido
+  • multiple-cursors
+  • paren-face
+  • which-key
+  • xref
+
+  Note that “implicitly supported” does not mean that they always fit in
+  perfectly.  If there are refinements we need to made, then we need to
+  intervene ([Explicitly supported packages or face groups]).
+
+
+[Explicitly supported packages or face groups] See section 11.1
+
+
+11.3 Packages that are hard to support
+──────────────────────────────────────
+
+  These are difficult to support due to their (i) incompatibility with
+  the design of the `standard-themes', (ii) complexity or multiple
+  points of entry, (iii) external dependencies, (iv) existence of better
+  alternatives in my opinion, or (v) inconsiderate use of color
+  out-of-the-box and implicit unwillingness to be good Emacs citizens:
+
+  avy
+        its UI is prone to visual breakage and is hard to style
+        correctly.
+
+  calibredb
+        has an external dependency that I don’t use.
+
+  ctrlf
+        use the built-in isearch or the `consult-line' command of
+        `consult'.
+
+  dired+
+        it is complex and makes inconsiderate use of color.
+
+  ein (Emacs IPython Notebook)
+        external dependency that I don’t use.
+
+  elfeed-goodies
+        depends on `powerline'…
+
+  ement.el
+        has an external dependency that I don’t use.
+
+  helm
+        it is complex and makes inconsiderate use of color.  Prefer the
+        `vertico', `consult', and `embark' packages.
+
+  info+
+        it is complex and makes inconsiderate use of color.
+
+  ivy/counsel/swiper
+        use the `vertico', `consult', and `embark' packages which are
+        designed to be compatible with standard Emacs mechanisms and are
+        modular.
+
+  lsp-mode
+        has external dependencies that I don’t use.
+
+  powerline
+        requires too many shades of background and generally violates
+        our expectation of how the mode-line is supposed to look by
+        placing the designated default background in unexpected places.
+
+  solaire
+        in principle, it is incompatible with practically every theme
+        that is not designed around it.  Emacs does not distinguish
+        between “UI” and “syntax” buffers.
+
+  spaceline
+        same as `powerline'.
+
+  sx
+        has an external dependency that I don’t use.
+
+  telega
+        has an external dependency that I don’t use (I don’t even have a
+        smartphone).
+
+  telephone-line
+        same as `powerline'.
+
+  treemacs
+        it has too many dependencies and does too many things.
+
+  web-mode
+        I don’t use all those Web technologies and cannot test this
+        properly without support from an expert.  It also defines lots
+        of faces that hardcode color values for no good reason.
+
+  The above list is non-exhaustive though you get the idea.
+
+
+12 GNU Free Documentation License
+═════════════════════════════════
+
+
+13 Indices
+══════════
+
+13.1 Function index
+───────────────────
+
+
+13.2 Variable index
+───────────────────
+
+
+13.3 Concept index
+──────────────────

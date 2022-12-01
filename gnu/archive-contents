@@ -3098,6 +3098,17 @@
 	       (:authors
 		("Christian Johansson" . "christian@cvj.se"))
 	       (:keywords "tools" "convenience"))])
+ (standard-themes .
+		  [(1 0 1)
+		   ((emacs
+		     (27 1)))
+		   "Like the default theme but more consistent" tar
+		   ((:url . "https://git.sr.ht/~protesilaos/standard-themes")
+		    (:keywords "faces" "theme" "accessibility")
+		    (:maintainer "Standard-Themes Development" . "~protesilaos/standard-themes@lists.sr.ht")
+		    (:authors
+		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
+		    (:commit . "d1921204c14a651f1bbba90722429a8835868f7a"))])
  (stream .
 	 [(2 2 5)
 	  ((emacs
