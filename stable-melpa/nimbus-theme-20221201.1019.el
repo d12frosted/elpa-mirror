@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.2.0
-;; Package-Version: 20221003.1934
-;; Package-Commit: 3afc9b9d5288f4125f19176888f7639c3ae64500
+;; Package-Version: 20221201.1019
+;; Package-Commit: 0dd87fefeb6f8c866f1d652c62aac95798b44e88
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -188,7 +188,7 @@
 
    ;;; Built-in
 
-   `(bookmark-face ((t (:foreground nil :background ,selection))))
+   `(bookmark-face ((t (:foreground unspecified :background ,selection))))
    `(button ((t (:foreground ,blue :underline t))))
    `(escape-glyph ((t (:foreground ,dark-blue))))
    `(header-line ((t (:background ,light-purple-bg :foreground ,fg))))
@@ -261,7 +261,7 @@
    `(avy-lead-face-2 ((t (:inherit avy-lead-face :background ,match))))
 
    ;; bm
-   `(bm-face ((t (:foreground nil :background ,teal-bg))))
+   `(bm-face ((t (:foreground unspecified :background ,teal-bg))))
    `(bm-fringe-face ((t (:inherit bm-face))))
    `(bm-fringe-persistent-face ((t (:inherit bm-persistent-face))))
    `(bm-persistent-face ((t (:inherit bookmark-face))))
@@ -309,9 +309,9 @@
    ;; custom
    `(custom-button ((t (:inherit button :underline nil :box t))))
    `(custom-button-mouse ((t (:inherit highlight :box t))))
-   `(custom-button-pressed ((t (:foreground nil :background nil))))
+   `(custom-button-pressed ((t (:foreground unspecified :background unspecified))))
    `(custom-button-pressed-unraised ((t (:foreground ,purple))))
-   `(custom-button-unraised ((t (:foreground nil :background nil))))
+   `(custom-button-unraised ((t (:foreground unspecified :background unspecified))))
    `(custom-changed ((t (:foreground ,red))))
    `(custom-comment ((t (:foreground ,bg :background ,yellow))))
    `(custom-comment-tag ((t (:foreground ,fg))))
@@ -560,13 +560,13 @@
    `(gnus-group-news-2 ((t (:foreground ,light-green :bold t))))
    `(gnus-group-news-2-empty ((t (:foreground ,light-green))))
    `(gnus-group-news-3 ((t (:bold t))))
-   `(gnus-group-news-3-empty ((t (:foreground nil :background nil))))
-   `(gnus-group-news-4 ((t (:foreground nil :bold t))))
-   `(gnus-group-news-4-empty ((t (:foreground nil :background nil))))
+   `(gnus-group-news-3-empty ((t (:foreground unspecified :background unspecified))))
+   `(gnus-group-news-4 ((t (:foreground unspecified :bold t))))
+   `(gnus-group-news-4-empty ((t (:foreground unspecified :background unspecified))))
    `(gnus-group-news-5 ((t (:bold t))))
-   `(gnus-group-news-5-empty ((t (:foreground nil :background nil))))
+   `(gnus-group-news-5-empty ((t (:foreground unspecified :background unspecified))))
    `(gnus-group-news-6 ((t (:bold t))))
-   `(gnus-group-news-6-empty ((t (:foreground nil :background nil))))
+   `(gnus-group-news-6-empty ((t (:foreground unspecified :background unspecified))))
    `(gnus-group-news-low ((t (:foreground ,lighter-green :bold t))))
    `(gnus-group-news-low-empty ((t (:foreground ,lighter-green))))
    `(gnus-header-content ((t (:inherit message-header-other))))
@@ -579,7 +579,7 @@
    `(gnus-server-denied ((t (:inherit error))))
    `(gnus-server-offline ((t (:inherit warning))))
    `(gnus-server-opened ((t (:inherit success))))
-   `(gnus-signature ((t (:background nil))))
+   `(gnus-signature ((t (:background unspecified))))
    `(gnus-splash ((t (:foreground "#cccccc"))))
    `(gnus-summary-cancelled ((t (:foreground ,bright-yellow :background ,black))))
    `(gnus-summary-high-ancient ((t (:foreground ,lighter-blue :bold t))))
@@ -591,7 +591,7 @@
    `(gnus-summary-low-read ((t (:foreground ,light-green))))
    `(gnus-summary-low-ticked ((t (:foreground ,pink))))
    `(gnus-summary-low-undownloaded ((t (:foreground ,gray))))
-   `(gnus-summary-low-unread ((t (:foreground nil :background nil))))
+   `(gnus-summary-low-unread ((t (:foreground unspecified :background unspecified))))
    `(gnus-summary-normal-ancient ((t (:inherit default))))
    `(gnus-summary-normal-read ((t (:foreground ,green))))
    `(gnus-summary-normal-ticked ((t (:foreground ,orange))))
@@ -610,7 +610,7 @@
    `(gnus-cite-9 ((t (:foreground ,rainbow-9))))
    `(gnus-cite-10 ((t (:foreground ,rainbow-1))))
    `(gnus-cite-11 ((t (:foreground ,rainbow-2))))
-   `(gnus-cite-attribution ((t (:foreground nil :background nil))))
+   `(gnus-cite-attribution ((t (:foreground unspecified :background unspecified))))
 
    ;; guide-key
    `(guide-key/prefix-command-face ((t (:foreground ,heading))))
@@ -893,7 +893,7 @@
 
    ;; neo-banner
    `(neo-banner-face ((t (:foreground ,blue :bold t))))
-   `(neo-button-face ((t (:foreground nil :background nil))))
+   `(neo-button-face ((t (:foreground unspecified :background unspecified))))
    `(neo-dir-link-face ((t (:foreground ,blue))))
    `(neo-expand-btn-face ((t (:foreground ,fg))))
    `(neo-file-link-face ((t (:foreground ,fg))))
@@ -909,7 +909,7 @@
    `(neo-vc-needs-update-face ((t (:underline t))))
    `(neo-vc-removed-face ((t (:foreground ,purple))))
    `(neo-vc-unlocked-changes-face ((t (:foreground ,red :background "Blue"))))
-   `(neo-vc-unregistered-face ((t (:foreground nil :background nil))))
+   `(neo-vc-unregistered-face ((t (:foreground unspecified :background unspecified))))
    `(neo-vc-up-to-date-face ((t (:foreground ,fg))))
 
    ;; nlinum
