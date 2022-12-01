@@ -7,8 +7,8 @@
 ;; Created: June 06, 2021
 ;; Modified: June 06, 2021
 ;; Version: 0.0.1
-;; Package-Version: 20221026.616
-;; Package-Commit: 4d8ae544ecf5414c7ddefcf15ca6c3de4f627ef5
+;; Package-Version: 20221130.2354
+;; Package-Commit: 4da28584a1b36b222e0e78d46fd8d46bbd9116c7
 ;; Keywords: convenient, lisp
 ;; Homepage: https://github.com/iyefrat/all-the-icons-completion
 ;; Package-Requires: ((emacs "26.1") (all-the-icons "5.0"))
@@ -83,7 +83,9 @@
 (autoload 'bookmark-get-filename "bookmark")
 (defun all-the-icons-completion-get-bookmark-icon (cand)
   "Return the icon for the candidate CAND of completion category bookmark."
-  (all-the-icons-completion-get-file-icon (bookmark-get-filename cand)))
+  (if-let (fname (bookmark-get-filename cand))
+      (all-the-icons-completion-get-file-icon fname)
+    (concat (all-the-icons-octicon "bookmark" :face 'all-the-icons-completion-dir-face) " ")))
 
 (defun all-the-icons-completion-completion-metadata-get (orig metadata prop)
   "Meant as :around advice for `completion-metadata-get', Add icons as prefix.
