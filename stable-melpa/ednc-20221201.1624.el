@@ -3,8 +3,8 @@
 
 ;; Author: Simon Nicolussi <sinic@sinic.name>
 ;; Version: 0.1
-;; Package-Version: 20221127.1643
-;; Package-Commit: eafa35f5a3a016a6d3d11e23268d08e6b5bda2a7
+;; Package-Version: 20221201.1624
+;; Package-Commit: bf17d22fa9bd1711709d84bb75ad49f746bfc9b7
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: unix
 ;; Homepage: https://github.com/sinic/ednc
@@ -40,8 +40,8 @@
 (require 'cl-lib)
 (require 'dbus)
 (require 'image)
-(require 'subr-x)
 (require 'mm-util)
+(require 'subr-x)
 
 (defconst ednc-log-name "*ednc-log*")
 
@@ -295,8 +295,9 @@ This function modifies the notification's hints."
       (when image
         (setf (image-property image :max-height) (line-pixel-height)
               (image-property image :ascent) 90)
-        (push (cons 'icon (propertize " " 'display image))
-              (ednc-notification-amendments new))))))
+        (push (cons 'icon (with-temp-buffer (insert-image image)
+                                            (buffer-string)))
+                    (ednc-notification-amendments new))))))
 
 (defun ednc--get-hint (hints key &optional remove-flag)
   "Return and delete from HINTS the value specified by KEY.
