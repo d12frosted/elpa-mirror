@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.8.1
-;; Package-Version: 20220914.934
-;; Package-Commit: f5d27ebd729837daec1311e353dcfc850202a945
+;; Package-Version: 20221202.1336
+;; Package-Commit: c5839098664104ade4dfcefa0ba716215c4f7812
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -1603,15 +1603,15 @@ Support`counsel-ack', `counsel-ag', `counsel-pt' and `counsel-rg', etc."
           (line (match-string 2 cand))
           (result (match-string 3 cand)))
       (format "%s:%s:%s"
-              (propertize file 'face 'compilation-info)
-              (propertize line 'face 'compilation-info)
+              (propertize file 'face 'ivy-grep-info)
+              (propertize line 'face 'ivy-grep-info)
               result)))
    ((string-match "\\(.+\\):\\(.+\\)(\\(.+\\))" cand)
     (let ((file (match-string 1 cand))
           (msg (match-string 2 cand))
           (err (match-string 3 cand)))
       (format "%s:%s(%s)"
-              (propertize file 'face 'compilation-info)
+              (propertize file 'face 'ivy-grep-info)
               msg
               (propertize err 'face 'error))))
    (t cand)))

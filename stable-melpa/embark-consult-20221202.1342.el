@@ -5,8 +5,8 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20221023.1636
-;; Package-Commit: f2a83a6db4fbbf171692ca751ff7175daec62cff
+;; Package-Version: 20221202.1342
+;; Package-Commit: 5fd7b2c1ed78a60bf55819e0917fe1deccf23fb0
 ;; Version: 0.6
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "27.1") (embark "0.17") (consult "0.17"))
@@ -147,8 +147,9 @@ The elements of LINES are assumed to be values of category `consult-line'."
   "Upgrade consult-location cheap markers to real markers.
 This function is meant to be added to `embark-collect-mode-hook'."
   (when (eq embark--type 'consult-location)
-    (mapc (lambda (entry) (consult--get-location (car entry)))
-          tabulated-list-entries)))
+    (dolist (entry tabulated-list-entries)
+      (when (car entry)
+        (consult--get-location (car entry))))))
 
 (setf (alist-get 'consult-location embark-exporters-alist)
       #'embark-consult-export-occur)
