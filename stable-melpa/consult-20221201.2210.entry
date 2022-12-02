@@ -1,11 +1,11 @@
 (consult .
-	 [(20221201 744)
+	 [(20221201 2210)
 	  ((emacs
 	    (27 1))
 	   (compat
 	    (28 1)))
 	  "Consulting completing-read" tar
-	  ((:commit . "016a92c513c0cd88507a11eac08a004c5e96bba8")
+	  ((:commit . "d948041c160bf30703c2e09cc9db415495b2206a")
 	   (:authors
 	    ("Daniel Mendler and Consult contributors"))
 	   (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")

@@ -3099,7 +3099,7 @@
 		("Christian Johansson" . "christian@cvj.se"))
 	       (:keywords "tools" "convenience"))])
  (standard-themes .
-		  [(1 0 1)
+		  [(1 0 2)
 		   ((emacs
 		     (27 1)))
 		   "Like the default theme but more consistent" tar
@@ -3108,7 +3108,7 @@
 		    (:maintainer "Standard-Themes Development" . "~protesilaos/standard-themes@lists.sr.ht")
 		    (:authors
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		    (:commit . "d1921204c14a651f1bbba90722429a8835868f7a"))])
+		    (:commit . "da876fc9e22a3240a9cd4a544b38e56e36ac7664"))])
  (stream .
 	 [(2 2 5)
 	  ((emacs
@@ -3381,7 +3381,7 @@
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
  (triples .
-	  [(0 1)
+	  [(0 1 1)
 	   ((seq
 	     (2 0))
 	    (emacs
@@ -3392,7 +3392,7 @@
 	    (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	    (:authors
 	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	    (:commit . "e91514ddd71fff76f8f92934a2c1d8cb7da789cc"))])
+	    (:commit . "54a0bbd81bda1c93bb024cc79728d9461af605b6"))])
  (undo-tree .
 	    [(0 8 2)
 	     ((queue

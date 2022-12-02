@@ -3,10 +3,10 @@
 ;; Copyright (C) 2014-2022  John Foerch <jjfoerch@gmail.com>
 
 ;; Author: John Foerch <jjfoerch@gmail.com>
-;; Version: 0.9.3
-;; Package-Version: 20221130.2146
-;; Package-Commit: 755a61c09be258f4ec419e30fe97fde0151625ef
-;; Date: 2022-11-28
+;; Version: 0.9.4
+;; Package-Version: 20221201.2332
+;; Package-Commit: 06795403c30f3b3c7b72d7cb5ca33c32d0aaee49
+;; Date: 2022-12-01
 ;; Keywords: languages
 
 ;; This program is free software; you can redistribute it and/or
