@@ -1263,7 +1263,7 @@
 	       (:keywords "languages" "nginx")
 	       (:url . "https://elpa.nongnu.org/nongnu/nginx-mode.html"))])
  (nix-mode .
-	   [(1 4 4)
+	   [(1 5 0)
 	    ((emacs
 	      (25 1))
 	     (magit-section
@@ -1274,7 +1274,7 @@
 	    ((:url . "https://github.com/NixOS/nix-mode")
 	     (:keywords "nix" "languages" "tools" "unix")
 	     (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
-	     (:commit . "e4e604ae3ac91748c4e7d51a591cb9ee60961b7c"))])
+	     (:commit . "54e5626829168e22126b233e079f04dff3c71b90"))])
  (oblivion-theme .
 		 [(0 1)
 		  ((emacs
@@ -1543,7 +1543,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20221130 125641)
+	      [(1 0 20221201 102945)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar

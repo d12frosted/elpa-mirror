@@ -6,6 +6,8 @@
 ;; luhuaei, zngguvnf, Qiantan Hong, Jonas Bernoulli, Théo Jacquin,
 ;; K. Scarlet, zsxh
 ;; URL: https://github.com/bastibe/org-static-blog
+;; Package-Version: 20221024.605
+;; Package-Commit: f830e027986df120be4f199f4f36b8f2948f3247
 ;; Version: 1.6.0
 ;; Package-Requires: ((emacs "24.3"))
 
