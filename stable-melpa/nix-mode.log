@@ -4,10 +4,10 @@ Source:  https://github.com/NixOS/nix-mode.git
 
 Updating /mnt/store/melpa/working/nix-mode/
 Checking out origin/HEAD
-Checking out 127d76202f10973e5af760fdb7804cc55cf51152
+Checking out 54e5626829168e22126b233e079f04dff3c71b90
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-modesVbxAG/nix-mode-20221109.17
+  to /tmp/nix-modepe27sS/nix-mode-20221202.228
     nix-build.el -> nix-build.el
     nix-drv-mode.el -> nix-drv-mode.el
     nix-edit.el -> nix-edit.el
@@ -23,25 +23,25 @@ Copying files (->) and directories (=>)
     nix-shell.el -> nix-shell.el
     nix-store.el -> nix-store.el
     nix.el -> nix.el
-Created nix-mode-20221109.17.tar containing:
-  nix-mode-20221109.17/
-  nix-mode-20221109.17/nix-build.el
-  nix-mode-20221109.17/nix-drv-mode.el
-  nix-mode-20221109.17/nix-edit.el
-  nix-mode-20221109.17/nix-flake.el
-  nix-mode-20221109.17/nix-format.el
-  nix-mode-20221109.17/nix-instantiate.el
-  nix-mode-20221109.17/nix-log.el
-  nix-mode-20221109.17/nix-mode-pkg.el
-  nix-mode-20221109.17/nix-mode.el
-  nix-mode-20221109.17/nix-prettify-mode.el
-  nix-mode-20221109.17/nix-repl.el
-  nix-mode-20221109.17/nix-search.el
-  nix-mode-20221109.17/nix-shebang.el
-  nix-mode-20221109.17/nix-shell.el
-  nix-mode-20221109.17/nix-store.el
-  nix-mode-20221109.17/nix.el
-Built nix-mode in 3.987s, finished at 2022-12-02T00:49:51+0000
+Created nix-mode-20221202.228.tar containing:
+  nix-mode-20221202.228/
+  nix-mode-20221202.228/nix-build.el
+  nix-mode-20221202.228/nix-drv-mode.el
+  nix-mode-20221202.228/nix-edit.el
+  nix-mode-20221202.228/nix-flake.el
+  nix-mode-20221202.228/nix-format.el
+  nix-mode-20221202.228/nix-instantiate.el
+  nix-mode-20221202.228/nix-log.el
+  nix-mode-20221202.228/nix-mode-pkg.el
+  nix-mode-20221202.228/nix-mode.el
+  nix-mode-20221202.228/nix-prettify-mode.el
+  nix-mode-20221202.228/nix-repl.el
+  nix-mode-20221202.228/nix-search.el
+  nix-mode-20221202.228/nix-shebang.el
+  nix-mode-20221202.228/nix-shell.el
+  nix-mode-20221202.228/nix-store.el
+  nix-mode-20221202.228/nix.el
+Built nix-mode in 3.838s, finished at 2022-12-02T08:04:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  383 Dec  2 00:49 packages/nix-mode-20221109.17.entry
-140K -rw-r--r-- 1 root root 140K Dec  2 00:49 packages/nix-mode-20221109.17.tar
+4.0K -rw-r--r-- 1 root root  384 Dec  2 08:04 packages/nix-mode-20221202.228.entry
+140K -rw-r--r-- 1 root root 140K Dec  2 08:04 packages/nix-mode-20221202.228.tar
