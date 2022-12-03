@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-lsp/emacs-ccls.git
 
 Updating /mnt/store/melpa/working/ccls/
 Checking out origin/HEAD
-Checking out 675a5704c14a27931e835a431beea3631d92e8e6
+Checking out 69f53d3697455e7f143febde17e2db142637f7dd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ccls/
-  to /tmp/ccls6lZx3k/ccls-20200820.308
+  to /tmp/cclsQ6ZRHW/ccls-20221202.1520
     ccls-call-hierarchy.el -> ccls-call-hierarchy.el
     ccls-code-lens.el -> ccls-code-lens.el
     ccls-common.el -> ccls-common.el
@@ -16,18 +16,18 @@ Copying files (->) and directories (=>)
     ccls-semantic-highlight.el -> ccls-semantic-highlight.el
     ccls-tree.el -> ccls-tree.el
     ccls.el -> ccls.el
-Created ccls-20200820.308.tar containing:
-  ccls-20200820.308/
-  ccls-20200820.308/ccls-call-hierarchy.el
-  ccls-20200820.308/ccls-code-lens.el
-  ccls-20200820.308/ccls-common.el
-  ccls-20200820.308/ccls-inheritance-hierarchy.el
-  ccls-20200820.308/ccls-member-hierarchy.el
-  ccls-20200820.308/ccls-pkg.el
-  ccls-20200820.308/ccls-semantic-highlight.el
-  ccls-20200820.308/ccls-tree.el
-  ccls-20200820.308/ccls.el
-Built ccls in 4.052s, finished at 2022-12-02T14:35:24+0000
+Created ccls-20221202.1520.tar containing:
+  ccls-20221202.1520/
+  ccls-20221202.1520/ccls-call-hierarchy.el
+  ccls-20221202.1520/ccls-code-lens.el
+  ccls-20221202.1520/ccls-common.el
+  ccls-20221202.1520/ccls-inheritance-hierarchy.el
+  ccls-20221202.1520/ccls-member-hierarchy.el
+  ccls-20221202.1520/ccls-pkg.el
+  ccls-20221202.1520/ccls-semantic-highlight.el
+  ccls-20221202.1520/ccls-tree.el
+  ccls-20221202.1520/ccls.el
+Built ccls in 5.451s, finished at 2022-12-03T01:28:48+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 379 Dec  2 14:35 packages/ccls-20200820.308.entry
- 72K -rw-r--r-- 1 root root 70K Dec  2 14:35 packages/ccls-20200820.308.tar
+4.0K -rw-r--r-- 1 root root 380 Dec  3 01:28 packages/ccls-20221202.1520.entry
+ 72K -rw-r--r-- 1 root root 70K Dec  3 01:28 packages/ccls-20221202.1520.tar
