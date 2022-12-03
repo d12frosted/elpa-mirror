@@ -1,5 +1,5 @@
 (rustic .
-	[(20221121 1224)
+	[(20221203 328)
 	 ((emacs
 	   (26 1))
 	  (rust-mode
@@ -23,7 +23,7 @@
 	  (xterm-color
 	   (1 6)))
 	 "Rust development environment" tar
-	 ((:commit . "0e61e5986da291b0755b65f701c595efb924cba6")
+	 ((:commit . "ab685bfcac7e549748bca22f3e87dd4779c06278")
 	  (:authors
 	   ("Mozilla"))
 	  (:maintainer "Mozilla")
