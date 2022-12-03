@@ -32,11 +32,11 @@ UI. Completions are either provided by commands like
 `dabbrev-completion' or by pluggable backends
 (`completion-at-point-functions', Capfs). Most programming language
 major modes implement a Capf. Furthermore the language server packages,
-[Eglot] and [Lsp-mode], use Capfs which talk to the LSP server to
-retrieve the completions. Corfu does not include its own completion
-backends. The Emacs built-in Capfs and the Capfs provided by other
-programming language packages are usually sufficient. A few additional
-Capfs and completion utilities are provided by the [Cape] package.
+Eglot and Lsp-mode, use Capfs which talk to the LSP server to retrieve
+the completions. Corfu does not include its own completion backends. The
+Emacs built-in Capfs and the Capfs provided by other programming
+language packages are usually sufficient. A few additional Capfs and
+completion utilities are provided by the [Cape] package.
 
 *NOTE*: Corfu uses child frames to show the popup and falls back to the
 default setting of the `completion-in-region-function' on non-graphical
@@ -62,10 +62,6 @@ Table of Contents
 
 
 [Vertico] <https://github.com/minad/vertico>
-
-[Eglot] <https://github.com/joaotavora/eglot>
-
-[Lsp-mode] <https://github.com/emacs-lsp/lsp-mode>
 
 [Cape] <https://github.com/minad/cape>
 
@@ -208,10 +204,11 @@ Table of Contents
   try.
 
   See also the [Corfu Wiki] and the [Cape manual] for additional Capf
-  configuration tips. The Lsp-mode configuration is documented in the
-  wiki. For more general documentation read the chapter about completion
-  in the [Emacs manual]. If you want to create your own Capfs, you can
-  find documentation about completion in the [Elisp manual].
+  configuration tips. The Eglot and Lsp-mode configurations are
+  documented in the wiki. For more general documentation read the
+  chapter about completion in the [Emacs manual]. If you want to create
+  your own Capfs, you can find documentation about completion in the
+  [Elisp manual].
 
 
 [GNU ELPA] <https://elpa.gnu.org/packages/corfu.html>

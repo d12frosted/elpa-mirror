@@ -512,7 +512,7 @@
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
 	   (:commit . "d533692182c084bad623977b69f9dc298255eaab"))])
  (consult .
-	  [(0 20)
+	  [(0 29)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -522,7 +522,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "d5b328637255ad6e7da4190ca15f3da040bbb606"))])
+	    (:commit . "c3608b1f634aebf8770ecb1d933a1ae9c34ecdf8"))])
  (consult-recoll .
 		 [(0 8)
 		  ((emacs
@@ -547,7 +547,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 33)
+	[(0 34)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -555,7 +555,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "c75ed960f4c6c835abf574247406c244dbe62916"))])
+	  (:commit . "de565e2a358eacc305420cfb590f07612ee6dfec"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
@@ -944,7 +944,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20221108)
+      [(20221203)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -953,7 +953,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "34d4e02b19e94a95648f125110a18c97414d547f"))])
+	(:commit . "2c95478cf6a26af5f0ab8ba100f3c2e5bdf67c5a"))])
  (ef-themes .
 	    [(0 10 0)
 	     ((emacs

@@ -159,6 +159,7 @@ Table of Contents
     • SPC Hidden buffers
     • * Modified buffers
     • f Files (Requires `recentf-mode')
+    • r File registers
     • m Bookmarks
     • p Project
     • Custom [other sources] configured in `consult-buffer-sources'.
@@ -257,9 +258,11 @@ Table of Contents
     be accessed by pressing `M-n'. When `consult-line' is bound to the
     `isearch-mode-map' and is invoked during a running Isearch, it will
     use the current Isearch string.
-  • `consult-line-multi': Search across multiple buffers. By default
-    search across project buffers. If invoked with a prefix argument
-    search across all buffers.  Behaves like `consult-line'.
+  • `consult-line-multi': Search dynamically across multiple buffers. By
+    default search across project buffers. If invoked with a prefix
+    argument search across all buffers. The candidates are computed on
+    demand based on the input. The command behaves like `consult-grep',
+    but operates on buffers instead of files.
   • `consult-multi-occur': Replacement for `multi-occur' which uses
     `completing-read-multiple'.
   • `consult-keep-lines': Replacement for `keep/flush-lines' which uses
@@ -372,9 +375,6 @@ Table of Contents
 1.11 Miscellaneous
 ──────────────────
 
-  • `consult-apropos': Replacement for `apropos' with completion. As a
-    better alternative, you can run `embark-export' from commands like
-    `M-x' or `describe-symbol'.
   • `consult-man': Find Unix man page, via Unix `apropos' or `man
     -k'. `consult-man' opens the selected man page using the Emacs `man'
     command.
@@ -473,11 +473,11 @@ Table of Contents
   │ (consult-customize
   │  consult-ripgrep consult-git-grep consult-grep
   │  consult-bookmark consult-recent-file consult-xref
-  │  consult--source-bookmark consult--source-recent-file
-  │  consult--source-project-recent-file
-  │  ;; my/command-wrapping-consult       ;; disable auto previews inside my command
-  │  ;; :preview-key '(:debounce 0.2 any) ;; Option 1: Delay preview
-  │  :preview-key (kbd "M-."))            ;; Option 2: Manual preview
+  │  consult--source-bookmark consult--source-file-register
+  │  consult--source-recent-file consult--source-project-recent-file
+  │  ;; my/command-wrapping-consult    ;; disable auto previews inside my command
+  │  :preview-key '(:debounce 0.4 any) ;; Option 1: Delay preview
+  │  ;; :preview-key (kbd "M-."))      ;; Option 2: Manual preview
   └────
 
   In this case one may wonder what the difference is between using an
@@ -675,8 +675,9 @@ Table of Contents
 
   ┌────
   │ (consult-customize
-  │  consult--source-bookmark consult--source-recent-file
-  │  consult--source-project-recent-file :preview-key (kbd "M-."))
+  │  consult--source-bookmark consult--source-file-register
+  │  consult--source-recent-file consult--source-project-recent-file
+  │  :preview-key (kbd "M-."))
   └────
 
   Sources can be added directly to the `consult-buffer-source' list for
@@ -853,7 +854,6 @@ Table of Contents
   │ 	 ("C-M-#" . consult-register)
   │ 	 ;; Other custom bindings
   │ 	 ("M-y" . consult-yank-pop)                ;; orig. yank-pop
-  │ 	 ("<help> a" . consult-apropos)            ;; orig. apropos-command
   │ 	 ;; M-g bindings (goto-map)
   │ 	 ("M-g e" . consult-compile-error)
   │ 	 ("M-g f" . consult-flymake)               ;; Alternative: consult-flycheck
@@ -920,13 +920,13 @@ Table of Contents
   │   ;; For some commands and buffer sources it is useful to configure the
   │   ;; :preview-key on a per-command basis using the `consult-customize' macro.
   │   (consult-customize
-  │    consult-theme
-  │    :preview-key '(:debounce 0.2 any)
+  │    consult-theme :preview-key '(:debounce 0.2 any)
   │    consult-ripgrep consult-git-grep consult-grep
   │    consult-bookmark consult-recent-file consult-xref
-  │    consult--source-bookmark consult--source-recent-file
-  │    consult--source-project-recent-file
-  │    :preview-key (kbd "M-."))
+  │    consult--source-bookmark consult--source-file-register
+  │    consult--source-recent-file consult--source-project-recent-file
+  │    ;; :preview-key (kbd "M-.")
+  │    :preview-key '(:debounce 0.4 any))
   │ 
   │   ;; Optionally configure the narrowing key.
   │   ;; Both < and C-+ work reasonably well.
@@ -1006,6 +1006,7 @@ Table of Contents
    consult-ripgrep-args              Command line arguments for ripgrep                    
    consult-themes                    List of themes to be presented for selection          
    consult-widen-key                 Widening key during completion                        
+   consult-yank-rotate               Rotate kill ring                                      
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
@@ -1101,7 +1102,7 @@ Table of Contents
 
   There exist many other fine completion UIs beside Vertico, which are
   supported by Consult. Give them a try and find out which interaction
-  model fits best for you!
+  model fits best for you.
 
   • The builtin completion UI, which pops up the `*Completions*' buffer.
   • The builtin `icomplete-vertical-mode' in Emacs 28.
@@ -1109,9 +1110,9 @@ Table of Contents
     which builds on the default completion UI (development currently
     [discontinued]).
 
-  You can integrated Consult with special programs or with other
-  packages in the wider Emacs ecosystem. You may want to install some of
-  theses packages depending on your preferences and requirements.
+  You can integrate Consult with special programs or with other packages
+  in the wider Emacs ecosystem. You may want to install some of theses
+  packages depending on your preferences and requirements.
 
   • [consult-ag]: Support for the [Silver Searcher] in the style of
     `consult-grep'.
@@ -1121,6 +1122,8 @@ Table of Contents
   • [consult-eglot]: Integration with Eglot (LSP client).
   • [consult-flycheck]: Additional Flycheck integration.
   • [consult-flyspell]: Additional Flyspell integration.
+  • [consult-git-log-grep]: Consult interface to git log.
+  • [consult-hatena-bookmark]: Access Hatena bookmarks.
   • [consult-ls-git]: List files from git via Consult.
   • [consult-lsp]: Integration with Lsp-mode (LSP client).
   • [consult-notmuch]: Access the [Notmuch] email system using Consult.
@@ -1201,6 +1204,12 @@ Table of Contents
 [consult-flycheck] <https://github.com/minad/consult-flycheck>
 
 [consult-flyspell] <https://gitlab.com/OlMon/consult-flyspell>
+
+[consult-git-log-grep]
+<https://github.com/ghosty141/consult-git-log-grep>
+
+[consult-hatena-bookmark]
+<https://github.com/Nyoho/consult-hatena-bookmark>
 
 [consult-ls-git] <https://github.com/rcj/consult-ls-git>
 
@@ -1411,6 +1420,8 @@ Table of Contents
   • [Robin Joy] ([consult-ls-git])
   • [Ravi R Kiran] [(consult-dash])
   • [Colin McLear] ([consult-notes])
+  • [Yukinori Kitadai] ([consult-hatena-bookmark])
+  • [ghosty141] ([consult-git-log-grep])
 
 
 [Counsel] <https://github.com/abo-abo/swiper#counsel>
@@ -1527,6 +1538,16 @@ Table of Contents
 [Colin McLear] <https://github.com/mclearc>
 
 [consult-notes] <https://github.com/mclear-tools/consult-notes>
+
+[Yukinori Kitadai] <https://github.com/Nyoho>
+
+[consult-hatena-bookmark]
+<https://github.com/Nyoho/consult-hatena-bookmark>
+
+[ghosty141] <https://github.com/ghosty141>
+
+[consult-git-log-grep]
+<https://github.com/ghosty141/consult-git-log-grep>
 
 
 8 Indices
