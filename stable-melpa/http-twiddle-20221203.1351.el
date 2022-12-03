@@ -7,8 +7,8 @@
 ;; Created: 1 Feb 2006
 ;; Adapted-By: Hasan Veldstra
 ;; Version: 1.0
-;; Package-Version: 20160801.1911
-;; Package-Commit: 46da2dbc40209925aa88ab19014ca982bcf9ac70
+;; Package-Version: 20221203.1351
+;; Package-Commit: c07e8620183ec710623db35e26dd839b84c56007
 ;; URL: https://github.com/hassy/http-twiddle/blob/master/http-twiddle.el
 ;; Keywords: HTTP, REST, SOAP
 
@@ -112,6 +112,14 @@ Use `http-twiddle-mode-send' (\\[http-twiddle-mode-send]) to send the request."
   '((lambda ()
       (use-local-map http-twiddle-response-mode-map)))
   "Major mode for interacting with HTTP responses.")
+
+(defun http-twiddle-tls-toggle ()
+  "Toggle TLS (https) on and off."
+  (interactive)
+  (setq http-twiddle-tls (not http-twiddle-tls))
+  (message (if http-twiddle-tls
+	       "http-twiddle TLS (https) on"
+	     "http-twiddle TLS (https) off")))
 
 (defun http-twiddle-connection-type ()
   "The type of network connection, either 'plain or 'tls."

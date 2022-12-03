@@ -4,7 +4,9 @@
 
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; Keywords: lisp, tool, log
-;; Package-Version: 20151102.1255
+;; Package-Commit: a67237d9813c7591614d95e2ef31cc5e5ed3f31b
+;; Package-Version: 20160724.2255
+;; Package-X-Original-Version: 20151102.1255
 ;; Version: 0.1
 ;; Package-Requires: ((eieio "1.3"))
 
