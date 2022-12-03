@@ -4,8 +4,8 @@
 
 ;; Author: Gabor Poczkodi <hajovonta@gmail.com>
 ;; URL: https://git.sr.ht/~hajovonta/glue/
-;; Package-Version: 20221202.2330
-;; Package-Commit: d5980bd3f69cffeba4e7bb964c48c1574d484a20
+;; Package-Version: 20221203.914
+;; Package-Commit: 36e9b217587b36ee5db771e3f45eb06d3c1c5900
 ;; Keywords: lisp emacs common lisp cl
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.1"))
@@ -236,33 +236,35 @@ Pass valid CL form as CL-FORM."
     (cond ((eq 'slime interaction) (glue--slime-bt-thread name-of-thread cl-form))
           ((eq 'sly interaction) (glue--sly-bt-thread name-of-thread cl-form)))))
 
-(defun glue--slime-bridge (emacs-variable cl-variable)
+;; glue-bridge periodically runs a function in CL and puts the results
+;; into an Emacs variable.
+
+(defun glue--slime-bridge (name-of-thread emacs-variable cl-form)
   "Internal function for SLIME bridge.
+Pass name of thread as NAME-OF-THREAD.
 Pass Emacs variable symbol as EMACS-VARIABLE.
-Pass CL variable symbol as CL-VARIABLE."
-    (let ((thread-name (format "%s" (gensym (format "%s-%s-bridge-" emacs-variable cl-variable))))
-          (sexp (format "(swank:eval-in-emacs `(setf %s ,%s))" emacs-variable cl-variable)))
-      (glue-bt-thread thread-name
-                      `(loop while t do (cl:eval (cl:read-from-string ,sexp))))))
+Pass valid CL form as CL-FORM."
+    (let ((sexp (format "(swank:eval-in-emacs `(setf %s ,%s))" emacs-variable cl-form)))
+      (glue-bt-thread name-of-thread `(loop while t do (cl:eval (cl:read-from-string ,sexp))))))
 
-(defun glue--sly-bridge (emacs-variable cl-variable)
+(defun glue--sly-bridge (name-of-thread emacs-variable cl-form)
   "Internal function for SLY bridge.
+Pass name of thread as NAME-OF-THREAD.
 Pass Emacs variable symbol as EMACS-VARIABLE.
-Pass CL variable symbol as CL-VARIABLE."
-  (let ((thread-name (format "%s" (gensym (format "%s-%s-bridge-" emacs-variable cl-variable))))
-          (sexp (format "(slynk:eval-in-emacs `(setf %s ,%s))" emacs-variable cl-variable)))
-      (glue-bt-thread thread-name
-                      `(loop while t do (cl:eval (cl:read-from-string ,sexp))))))
+Pass valid CL form as CL-FORM."
+  (let ((sexp (format "(slynk:eval-in-emacs `(setf %s ,%s))" emacs-variable cl-form)))
+      (glue-bt-thread name-of-thread `(loop while t do (cl:eval (cl:read-from-string ,sexp))))))
 
-(defun glue-bridge (emacs-variable cl-variable)
+(defun glue-bridge (name-of-thread emacs-variable cl-form)
   "Start a thread which connects the emacs-variable with cl-variable.
 Ensures that the value of emacs-variable always equals to cl-variable.
+Pass name of thread as NAME-OF-THREAD.
 Pass symbol of Emacs variable as EMACS-VARIABLE.
-Pass symbol of CL variable as CL-VARIABLE."
+Pass valid CL form as CL-FORM."
   (let ((interaction (glue--precheck)))
     (glue-ensure-package 'bordeaux-threads)
-    (cond ((eq 'slime interaction) (glue--slime-bridge emacs-variable cl-variable))
-          ((eq 'sly interaction) (glue--sly-bridge emacs-variable cl-variable)))))
+    (cond ((eq 'slime interaction) (glue--slime-bridge name-of-thread emacs-variable cl-form))
+          ((eq 'sly interaction) (glue--sly-bridge name-of-thread emacs-variable cl-form)))))
 
 (provide 'glue)
 ;;; glue.el ends here
