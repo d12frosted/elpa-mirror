@@ -4,6 +4,8 @@
 
 ;; Author: Dewdrops <v_v_4474@126.com>
 ;; URL: https://github.com/Dewdrops/isearch-dabbrev
+;; Package-Version: 20141224.622
+;; Package-Commit: 1efe7abba4923015cbc2462395deaec5446a9cc8
 ;; Version: 0.1
 ;; Keywords: dabbrev isearch
 ;; Package-Requires: ((cl-lib "0.5"))

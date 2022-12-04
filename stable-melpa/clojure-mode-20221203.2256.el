@@ -11,8 +11,8 @@
 ;;       Magnar Sveen <magnars@gmail.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20220928.557
-;; Package-Commit: 414157c3e523e80cc44dca8f86f1853122ee5f6b
+;; Package-Version: 20221203.2256
+;; Package-Commit: 3717e449dded7c8d9f50369bd34a19c077c2c538
 ;; Keywords: languages clojure clojurescript lisp
 ;; Version: 5.15.1
 ;; Package-Requires: ((emacs "25.1"))
@@ -191,10 +191,11 @@ For example, \[ is allowed in :db/id[:db.part/user]."
     "deps.edn"         ; Clojure CLI (a.k.a. tools.deps)
     "shadow-cljs.edn"  ; shadow-cljs
     "bb.edn"           ; babashka
+    "nbb.edn"          ; nbb
     )
   "A list of files, which identify a Clojure project's root.
 Out-of-the box `clojure-mode' understands lein, boot, gradle,
- shadow-cljs, tools.deps and babashka."
+ shadow-cljs, tools.deps, babashka and nbb."
   :type '(repeat string)
   :package-version '(clojure-mode . "5.0.0")
   :safe (lambda (value)
@@ -3221,7 +3222,9 @@ With universal argument \\[universal-argument], act on the \"top-level\" form."
   ;; boot build scripts are Clojure source files
   (add-to-list 'auto-mode-alist '("\\(?:build\\|profile\\)\\.boot\\'" . clojure-mode))
   ;; babashka scripts are Clojure source files
-  (add-to-list 'interpreter-mode-alist '("bb" . clojure-mode)))
+  (add-to-list 'interpreter-mode-alist '("bb" . clojure-mode))
+  ;; nbb scripts are ClojureScript source files
+  (add-to-list 'interpreter-mode-alist '("nbb" . clojurescript-mode)))
 
 (provide 'clojure-mode)
 
