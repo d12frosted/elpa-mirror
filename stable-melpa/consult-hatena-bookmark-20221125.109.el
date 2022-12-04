@@ -4,9 +4,9 @@
 
 ;; Author: Yukinori Kitadai
 ;; Package-Requires: ((emacs "27.1") (consult "0.9") (async-await "1.1"))
-;; Package-Version: 20221120.2352
-;; Package-Commit: c36bf73f242f42261a463d913f2b8d56d22754e3
-;; Version: 0.3.0
+;; Package-Version: 20221125.109
+;; Package-Commit: b85484b11705ebd896878d3ac7fdb12bc8c9637a
+;; Version: 0.3.1
 ;; URL: https://github.com/Nyoho/consult-hatena-bookmark
 
 ;; This program is free software: you can redistribute it and/or modify

@@ -1,11 +1,11 @@
 (bnf-mode .
-	  [(20200323 1348)
+	  [(20221204 1241)
 	   ((cl-lib
 	     (0 5))
 	    (emacs
 	     (24 3)))
 	   "Major mode for editing BNF grammars." tar
-	   ((:commit . "d88eef69ae66ea1ffa21a65317afe84c9ddb0814")
+	   ((:commit . "31b5fa2fd62cf74d8d085c10f2c3a1c5f1515ddb")
 	    (:authors
 	     ("Serghei Iakovlev" . "egrep@protonmail.ch"))
 	    (:maintainer "Serghei Iakovlev" . "egrep@protonmail.ch")
