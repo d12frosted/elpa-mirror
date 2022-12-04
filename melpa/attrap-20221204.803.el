@@ -6,8 +6,8 @@
 ;; Author: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; Maintainer: Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
 ;; URL: https://github.com/jyp/attrap
-;; Package-Version: 20221107.1434
-;; Package-Commit: 7cf39d3227d2e99bb2d627bb47fdd90c10a7675a
+;; Package-Version: 20221204.803
+;; Package-Commit: c00f4cc9409dc2fa8c0924f425b2840534b09221
 ;; Created: February 2018
 ;; Keywords: programming, tools
 ;; Package-Requires: ((dash "2.12.0") (emacs "25.1") (f "0.19.0") (s "1.11.0"))
@@ -474,6 +474,11 @@ Error is given as MSG and reported between POS and END."
       ;; note there can be a kind annotation, not just a variable.
       (delete-region (point) (+ (point) (- (match-end 1) (match-beginning 1))))))
    ;;     Module ‘TensorFlow.GenOps.Core’ does not export ‘argmax’.
+   (when-let ((m (s-match (rx "No module named " (identifier 1) " is imported.") msg)))
+     (attrap-one-option (list 'add-import (nth 1 m))
+       (goto-char 1)
+       (search-forward-regexp (rx "module" (*? anychar) "where"))
+       (insert "\n" "import " (nth 1 m) "\n")))
    (when-let ((match (s-match (rx (or (seq "The " (? "qualified ") "import of " (identifier 1)
                                            " from module " (identifier 2) " is redundant")
                                       (seq "Module " (identifier 2) " does not export " (identifier 1))))
@@ -501,7 +506,7 @@ Error is given as MSG and reported between POS and END."
        (progn
          (unless (looking-at
                   (rx "import" (+ space) module-name (? (+ space) "hiding") (* space)))
-           (error "import statement not found"))
+           (error "Import statement not found"))
          (goto-char (match-end 0))
          (when (looking-at "(") ; skip the import list if any
            (forward-sexp))
@@ -525,6 +530,14 @@ Error is given as MSG and reported between POS and END."
                                   "language extension to enable explicit-forall syntax")))
                      normalized-msg)
      (attrap-insert-language-pragma "ScopedTypeVariables"))
+   (when-let (match (s-match (rx "Fields of " (identifier 1) " not initialised: "
+                                 (group-n 2 (+ (not (any "•")))) "•")
+                             msg))
+     (attrap-one-option 'initialize-fields
+       (let ((fields (s-split "," (nth 2 match) t)))
+         (search-forward "{")
+         (dolist (f fields)
+           (insert (format ",%s = _\n" (s-trim f)))))))
    (--map (attrap-insert-language-pragma it)
           (--filter (s-matches? it normalized-msg) attrap-haskell-extensions))))))
 
@@ -564,9 +577,9 @@ Error is given as MSG and reported between POS and END."
         (delete-region pos (+ 1 end))
         (insert (s-trim (s-collapse-whitespace replacement)))))))))
 
-(defun attrap-LaTeX-fixer (msg pos end)
+(defun attrap-LaTeX-fixer (msg pos _end)
+
   (cond
-   
    ((s-matches? (rx "Use either `` or '' as an alternative to `\"'.")msg) 
     (list (attrap-option 'fix-open-dquote
             (delete-region pos (1+ pos))

@@ -17,8 +17,8 @@
 
 ;; Author: Sébastien Le Maguer <lemagues@tcd.ie>
 ;; URL: https://github.com/seblemaguer/flatfluc-theme
-;; Package-Version: 20220522.1657
-;; Package-Commit: 1679983d22a3b213262e09b3b25db75818a9d37a
+;; Package-Version: 20221204.939
+;; Package-Commit: 553167d27725d078f5c66ed7a31ca8ec9376dfd0
 ;; Keywords: lisp
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "26.1"))
@@ -34,7 +34,7 @@
 ;;; Code:
 
 (defconst fui-hint-ice "#c7ecee")
-(defconst fuit-soaring-eagle "#95afc0")
+(defconst fui-soaring-eagle "#4d687c")
 (defconst fui-turquoise "#1abc9c")
 (defconst fui-emerald "#2ecc71")
 (defconst fui-river "#3498db")
