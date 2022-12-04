@@ -87,6 +87,17 @@
 	      ((:url . "https://github.com/jasonm23/autothemer")
 	       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
 	       (:commit . "87a21019ed4f41a487a8af34467e0ebff19f365e"))])
+ (bash-completion .
+		  [(3 1 0)
+		   ((emacs
+		     (24 3)))
+		   "BASH completion for the shell buffer" tar
+		   ((:url . "http://github.com/szermatt/emacs-bash-completion")
+		    (:keywords "shell" "bash" "bash-completion")
+		    (:maintainer "Stephane Zermatten" . "szermatt@gmail.com")
+		    (:authors
+		     ("Stephane Zermatten" . "szermatt@gmx.net"))
+		    (:commit . "d47edb9d4142a22746009c1f680df93a4fefd107"))])
  (better-jumper .
 		[(1 0 1)
 		 ((emacs

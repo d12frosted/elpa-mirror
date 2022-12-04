@@ -32,13 +32,30 @@ should be consistent with `project-files'.
 
 This list can change in future versions.
 
-VC project:
+Transient project:
+
+An instance of this type can be returned by `project-current' if no
+project was detected automatically, and the user had to pick a
+directory manually.  The fileset it describes is the whole
+directory, with the exception of some standard ignored files and
+directories.  This type has little purpose otherwise, as the only
+generic function it provides an override for is `project-root'.
+
+VC-aware project:
 
 Originally conceived as an example implementation, now it's a
 relatively fast backend that delegates to 'git ls-files' or 'hg
 status' to list the project's files.  It honors the VC ignore
 files, but supports additions to the list using the user option
-`project-vc-ignores' (usually through .dir-locals.el).
+`project-vc-ignores' (usually through .dir-locals.el).  See the
+customization group `project-vc' for other options that control its
+behavior.
+
+If the repository is using any other VCS than Git or Hg, the file
+listing uses the default mechanism based on `find-program'.
+
+This project type can also be used for non-VCS controlled
+directories, see the variable `project-vc-extra-root-markers'.
 
 Utils:
 
