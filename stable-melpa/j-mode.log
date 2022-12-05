@@ -1,0 +1,25 @@
+Package: j-mode
+Fetcher: github
+Source:  https://github.com/zellio/j-mode.git
+
+Updating /mnt/store/melpa/working/j-mode/
+Checking out origin/HEAD
+Checking out e8725ac8af95498faabb2ca3ab3bd809a8f148e6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/j-mode/
+  to /tmp/j-modeaSzpzU/j-mode-20171224.1856
+    j-console.el -> j-console.el
+    j-font-lock.el -> j-font-lock.el
+    j-help.el -> j-help.el
+    j-mode.el -> j-mode.el
+Created j-mode-20171224.1856.tar containing:
+  j-mode-20171224.1856/
+  j-mode-20171224.1856/j-console.el
+  j-mode-20171224.1856/j-font-lock.el
+  j-mode-20171224.1856/j-help.el
+  j-mode-20171224.1856/j-mode-pkg.el
+  j-mode-20171224.1856/j-mode.el
+Built j-mode in 5.918s, finished at 2022-12-05T15:54:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 212 Dec  5 15:54 packages/j-mode-20171224.1856.entry
+ 32K -rw-r--r-- 1 root root 30K Dec  5 15:54 packages/j-mode-20171224.1856.tar
