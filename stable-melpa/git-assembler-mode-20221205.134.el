@@ -2,8 +2,8 @@
 
 ;; Author: Yuri D'Elia <wavexx@thregr.org>
 ;; Version: 0.1
-;; Package-Version: 20210207.1545
-;; Package-Commit: 1243bdc1a9cdc79802ece05c90731ee14e4f92c9
+;; Package-Version: 20221205.134
+;; Package-Commit: 3140ae3130174ed07427b51ce6ee6fb6e1e893f3
 ;; URL: https://gitlab.com/wavexx/git-assembler-mode.el
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: git, git-assembler, languages, highlight, syntax
@@ -77,24 +77,28 @@
   "Major mode for git-assembler configuration files."
 
   ;; comments
-  (modify-syntax-entry ?\# "<")
-  (modify-syntax-entry ?\n ">")
+  (setq-local comment-start "#"
+              comment-end "")
 
   ;; extra branch chars
   (modify-syntax-entry ?_ "w")
+  (modify-syntax-entry ?* "w")
 
   (font-lock-add-keywords
    nil
-   '(;; commands with TARGET BRANCH* syntax
-     ("^\\s-*\\(merge\\)\\s-+\\(\\sw+\\)"
+   '(;; comments
+     ("#[^\n]*" . 'font-lock-comment-face)
+     ;; commands with TARGET BRANCH* syntax
+     ("^\\s-*\\(merge\\)\\s-+\\(\\(\\(?:\\sw+/\\)+\\)?\\S-+\\)"
       (1 'git-assembler-command-face)
       (2 'git-assembler-target-face)
+      (3 'git-assembler-origin-face prepend t)
       ;; branches
-      ("\\s-+\\(\\(\\sw+/\\)?\\sw+\\)" nil nil
+      ("\\s-+\\(\\(\\(?:\\sw+/\\)+\\)?\\S-+\\)" nil nil
        (1 'git-assembler-branch-face)
        (2 'git-assembler-origin-face prepend t)))
      ;; commands with TARGET BASE syntax
-     ("^\\s-*\\(base\\|rebase\\|stage\\)\\s-+\\(\\sw+\\)\\s-+\\(\\(\\sw+/\\)?\\sw+\\)"
+     ("^\\s-*\\(base\\|rebase\\|stage\\)\\s-+\\(\\S-+\\)\\s-+\\(\\(\\(?:\\sw+/\\)+\\)?\\S-+\\)"
       (1 'git-assembler-command-face)
       (2 'git-assembler-target-face)
       (3 'git-assembler-base-face)
@@ -103,7 +107,7 @@
      ("^\\s-*\\(target\\)"
       (1 'git-assembler-command-face)
       ;; branches
-      ("\\s-+\\(\\sw+\\)" nil nil (1 'git-assembler-target-face))))))
+      ("\\s-+\\(\\S-+\\)" nil nil (1 'git-assembler-target-face))))))
 
 (provide 'git-assembler-mode)
 

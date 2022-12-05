@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/gemini.el.git
 
 Updating /mnt/store/melpa/working/gemini-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.carcosa.net/jmcbray/gemini.el.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out a7dd7c6ea4e036d0d5ecc4a5d284874c400f10ba
+Built gemini-mode in 6.747s, finished at 2022-12-05T04:40:35+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Dec  5 04:40 packages/gemini-mode-20221127.1619.el
+4.0K -rw-r--r-- 1 root root  552 Dec  5 04:40 packages/gemini-mode-20221127.1619.entry

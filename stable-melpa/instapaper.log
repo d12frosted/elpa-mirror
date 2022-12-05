@@ -3,11 +3,9 @@ Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/emacs-instapaper.git
 
 Updating /mnt/store/melpa/working/instapaper/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.carcosa.net/jmcbray/emacs-instapaper.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 4714ed1b014615f8213e6f93637e4ec1d9d5a37a
+Built instapaper in 3.669s, finished at 2022-12-05T04:50:47+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Dec  5 04:50 packages/instapaper-20110419.1355.el
+4.0K -rw-r--r-- 1 root root  343 Dec  5 04:50 packages/instapaper-20110419.1355.entry
