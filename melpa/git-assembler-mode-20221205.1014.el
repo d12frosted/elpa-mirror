@@ -2,8 +2,8 @@
 
 ;; Author: Yuri D'Elia <wavexx@thregr.org>
 ;; Version: 0.1
-;; Package-Version: 20221205.134
-;; Package-Commit: 3140ae3130174ed07427b51ce6ee6fb6e1e893f3
+;; Package-Version: 20221205.1014
+;; Package-Commit: e88d69d1fd93f166d8b31e02790a1d241fea44aa
 ;; URL: https://gitlab.com/wavexx/git-assembler-mode.el
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: git, git-assembler, languages, highlight, syntax
@@ -107,7 +107,9 @@
      ("^\\s-*\\(target\\)"
       (1 'git-assembler-command-face)
       ;; branches
-      ("\\s-+\\(\\S-+\\)" nil nil (1 'git-assembler-target-face))))))
+      ("\\s-+\\(\\(\\(?:\\sw+/\\)+\\)?\\S-+\\)" nil nil
+       (1 'git-assembler-target-face)
+       (2 'git-assembler-origin-face prepend t))))))
 
 (provide 'git-assembler-mode)
 

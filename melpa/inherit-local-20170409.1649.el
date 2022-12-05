@@ -4,8 +4,6 @@
 
 ;; Author: Shea Levy
 ;; URL: https://github.com/shlevy/inherit-local/tree-master/
-;; Package-Version: 20170409.1649
-;; Package-Commit: b1f4ff9c41f9d64e4adaf5adcc280b82f084cdc7
 ;; Version : 1.1.1
 ;; Package-Requires: ((emacs "24.3"))
 

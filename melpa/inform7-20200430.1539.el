@@ -3,8 +3,6 @@
 ;; Copyright (C) 2020 Ben Moon
 ;; Author: Ben Moon <software@guiltydolphin.com>
 ;; URL: https://github.com/GuiltyDolphin/inform7-mode
-;; Package-Version: 20200430.1539
-;; Package-Commit: a409bbc6f04264f7f00616a995fa6ecf59d33d0d
 ;; Git-Repository: git://github.com/GuiltyDolphin/inform7-mode.git
 ;; Created: 2020-04-11
 ;; Version: 0.1.1
