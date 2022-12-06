@@ -1,9 +1,9 @@
 ;;; parchment-theme.el --- Light theme inspired by Acme and Leuven -*- lexical-binding: t -*-
 
 ;; Author: Alex Griffin <a@ajgrf.com>
-;; URL: https://github.com/ajgrf/parchment
-;; Package-Version: 20200910.2310
-;; Package-Commit: 95e8248edbdb01fedc7db4472bcce90d2d872106
+;; URL: https://gitlab.com/ajgrf/parchment
+;; Package-Version: 20221206.1541
+;; Package-Commit: 07c9887be6e7d94a8546db625c7d62c54d2e5923
 ;; Version: 0.5.0-pre
 ;; Package-Requires: ((autothemer "0.2"))
 

@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221206.1203
-;; Package-Commit: dc504b2957beba3d4ab4d36eccfc9e695051786f
+;; Package-Version: 20221206.1604
+;; Package-Commit: 84999eb88ae1a1855a03b4d24d8fa72e22ad82a3
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
