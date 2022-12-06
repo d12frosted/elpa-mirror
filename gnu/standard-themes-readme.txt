@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the Emacs package
 called `standard-themes', and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.0.0,
-released on 2022-11-30.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.1.0,
+released on 2022-12-06.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.1.0-dev.
+Current development target is 1.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `standard-themes'
 ⁃ Official manual: <https://protesilaos.com/emacs/standard-themes>
@@ -401,26 +401,29 @@ Table of Contents
 ───────────────────────
 
   The user option `standard-themes-headings' provides support for
-  individual heading styles for levels 0 through 8.
+  individual heading styles for regular heading levels 0 through 8, as
+  well as the Org agenda headings.
 
   This is an alist that accepts a `(KEY . LIST-OF-VALUES)' combination.
-  The `KEY' is either a number, representing the heading’s level (0-8)
-  or `t', which pertains to the fallback style.  The fallback applies to
-  all heading levels that are not customized.
+  The `KEY' is either a number, representing the heading’s level (0
+  through 8) or `t', which pertains to the fallback style.  The named
+  keys `agenda-date' and `agenda-structure' apply to the Org agenda.
 
   Level 0 is a special heading: it is used for what counts as a document
-  title or equivalent, such as the `#+TITLE' construct we find in Org
+  title or equivalent, such as the `#+title' construct we find in Org
   files.  Levels 1-8 are regular headings.
 
-  The list of values covers symbols that refer to properties, as
-  described below.  Here is a complete sample, followed by a
-  presentation of all available properties:
+  The `LIST-OF-VALUES' covers symbols that refer to properties, as
+  described below.  Here is a complete sample with various stylistic
+  combinations, followed by a presentation of all available properties:
 
   ┌────
   │ (setq standard-themes-headings
   │       '((1 . (light variable-pitch 1.5))
   │ 	(2 . (regular 1.3))
   │ 	(3 . (1.1))
+  │ 	(agenda-date . (1.3))
+  │ 	(agenda-structure . (variable-pitch light 1.8))
   │ 	(t . (variable-pitch))))
   └────
 
@@ -1065,6 +1068,7 @@ Table of Contents
   • outline-minor-faces
   • package (`M-x list-packages')
   • perspective
+  • powerline
   • pulsar
   • pulse
   • rainbow-delimiters
@@ -1146,9 +1150,6 @@ Table of Contents
   ein (Emacs IPython Notebook)
         external dependency that I don’t use.
 
-  elfeed-goodies
-        depends on `powerline'…
-
   ement.el
         has an external dependency that I don’t use.
 
@@ -1167,18 +1168,10 @@ Table of Contents
   lsp-mode
         has external dependencies that I don’t use.
 
-  powerline
-        requires too many shades of background and generally violates
-        our expectation of how the mode-line is supposed to look by
-        placing the designated default background in unexpected places.
-
   solaire
         in principle, it is incompatible with practically every theme
         that is not designed around it.  Emacs does not distinguish
         between “UI” and “syntax” buffers.
-
-  spaceline
-        same as `powerline'.
 
   sx
         has an external dependency that I don’t use.
@@ -1186,9 +1179,6 @@ Table of Contents
   telega
         has an external dependency that I don’t use (I don’t even have a
         smartphone).
-
-  telephone-line
-        same as `powerline'.
 
   treemacs
         it has too many dependencies and does too many things.
