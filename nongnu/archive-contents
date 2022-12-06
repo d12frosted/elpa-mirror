@@ -1554,14 +1554,14 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20221201 102945)
+	      [(1 0 20221205 101826)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
 	       ((:url . "https://www.racket-mode.com/")
 		(:maintainer "Greg Hendershott")
 		(:authors
-		 ("Greg Hendershott"))
+		 ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
 		(:commit . "HEAD"))])
  (rainbow-delimiters .
 		     [(2 1 5)
