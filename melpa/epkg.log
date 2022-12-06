@@ -4,10 +4,10 @@ Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
 Checking out origin/HEAD
-Checking out 1161cb95eddd4f70e25531f1a9ca8a738570d3d2
+Checking out 0bcd76c4afbb140c80781efa229bb924a286020b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgi2Iqg9/epkg-20221130.2318
+  to /tmp/epkgEzNhLg/epkg-20221205.2051
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkgi2Iqg9/epkg-20221130.2318/epkg.info
-Created epkg-20221130.2318.tar containing:
-  epkg-20221130.2318/
-  epkg-20221130.2318/dir
-  epkg-20221130.2318/epkg-desc.el
-  epkg-20221130.2318/epkg-elpa.el
-  epkg-20221130.2318/epkg-list.el
-  epkg-20221130.2318/epkg-org.el
-  epkg-20221130.2318/epkg-pkg.el
-  epkg-20221130.2318/epkg-schemata.el
-  epkg-20221130.2318/epkg-utils.el
-  epkg-20221130.2318/epkg.el
-  epkg-20221130.2318/epkg.info
-Built epkg in 15.132s, finished at 2022-12-06T06:28:23+0000
+Generating /tmp/epkgEzNhLg/epkg-20221205.2051/epkg.info
+Created epkg-20221205.2051.tar containing:
+  epkg-20221205.2051/
+  epkg-20221205.2051/dir
+  epkg-20221205.2051/epkg-desc.el
+  epkg-20221205.2051/epkg-elpa.el
+  epkg-20221205.2051/epkg-list.el
+  epkg-20221205.2051/epkg-org.el
+  epkg-20221205.2051/epkg-pkg.el
+  epkg-20221205.2051/epkg-schemata.el
+  epkg-20221205.2051/epkg-utils.el
+  epkg-20221205.2051/epkg.el
+  epkg-20221205.2051/epkg.info
+Built epkg in 14.120s, finished at 2022-12-06T13:19:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  404 Dec  6 06:28 packages/epkg-20221130.2318.entry
-120K -rw-r--r-- 1 root root 120K Dec  6 06:28 packages/epkg-20221130.2318.tar
+4.0K -rw-r--r-- 1 root root  404 Dec  6 10:11 packages/epkg-20221130.2318.entry
+120K -rw-r--r-- 1 root root 120K Dec  6 10:11 packages/epkg-20221130.2318.tar
+4.0K -rw-r--r-- 1 root root  404 Dec  6 13:19 packages/epkg-20221205.2051.entry
+120K -rw-r--r-- 1 root root 120K Dec  6 13:19 packages/epkg-20221205.2051.tar

@@ -21,6 +21,7 @@ Usage,
 
   Run `mybigword-show-big-words-from-file'
   Run `mybigword-show-big-words-from-current-buffer'
+  Run `mybigword-big-words-in-current-window'
 
 
 Customize `mybigword-excluded-words' or `mybigword-personal-excluded-words' to

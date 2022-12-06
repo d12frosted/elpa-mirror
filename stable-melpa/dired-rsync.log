@@ -4,18 +4,22 @@ Source:  https://github.com/stsquad/dired-rsync.git
 
 Updating /mnt/store/melpa/working/dired-rsync/
 Checking out origin/HEAD
-Checking out e2c5a0a8f19a17040b348a1a56b8facce58c9fcd
+Checking out 0933362b518c436469263ec2ec7f6bdecf6cb81b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dired-rsync/
-  to /tmp/dired-rsyncQECHv1/dired-rsync-20221205.1242
+  to /tmp/dired-rsyncxxGDtZ/dired-rsync-20221206.246
     dired-rsync-ert.el -> dired-rsync-ert.el
+    dired-rsync-transient.el -> dired-rsync-transient.el
     dired-rsync.el -> dired-rsync.el
-Created dired-rsync-20221205.1242.tar containing:
-  dired-rsync-20221205.1242/
-  dired-rsync-20221205.1242/dired-rsync-ert.el
-  dired-rsync-20221205.1242/dired-rsync-pkg.el
-  dired-rsync-20221205.1242/dired-rsync.el
-Built dired-rsync in 4.605s, finished at 2022-12-06T06:23:00+0000
+Created dired-rsync-20221206.246.tar containing:
+  dired-rsync-20221206.246/
+  dired-rsync-20221206.246/dired-rsync-ert.el
+  dired-rsync-20221206.246/dired-rsync-pkg.el
+  dired-rsync-20221206.246/dired-rsync-transient.el
+  dired-rsync-20221206.246/dired-rsync.el
+Built dired-rsync in 4.539s, finished at 2022-12-06T13:14:15+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 393 Dec  6 06:22 packages/dired-rsync-20221205.1242.entry
- 32K -rw-r--r-- 1 root root 30K Dec  6 06:22 packages/dired-rsync-20221205.1242.tar
+4.0K -rw-r--r-- 1 root root 393 Dec  6 10:06 packages/dired-rsync-20221205.1242.entry
+ 32K -rw-r--r-- 1 root root 30K Dec  6 10:06 packages/dired-rsync-20221205.1242.tar
+4.0K -rw-r--r-- 1 root root 392 Dec  6 13:14 packages/dired-rsync-20221206.246.entry
+ 32K -rw-r--r-- 1 root root 30K Dec  6 13:14 packages/dired-rsync-20221206.246.tar

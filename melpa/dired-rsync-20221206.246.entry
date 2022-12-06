@@ -1,5 +1,5 @@
 (dired-rsync .
-	     [(20221205 1242)
+	     [(20221206 246)
 	      ((s
 		(1 12 0))
 	       (dash
@@ -7,7 +7,7 @@
 	       (emacs
 		(24)))
 	      "Allow rsync from dired buffers" tar
-	      ((:commit . "e2c5a0a8f19a17040b348a1a56b8facce58c9fcd")
+	      ((:commit . "0933362b518c436469263ec2ec7f6bdecf6cb81b")
 	       (:authors
 		("Alex Bennée" . "alex@bennee.com"))
 	       (:maintainer "Alex Bennée" . "alex@bennee.com")
