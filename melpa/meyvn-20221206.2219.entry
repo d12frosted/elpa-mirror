@@ -1,5 +1,5 @@
 (meyvn .
-       [(20220821 2242)
+       [(20221206 2219)
 	((emacs
 	  (25 1))
 	 (cider
@@ -11,11 +11,13 @@
 	 (dash
 	  (2 17))
 	 (parseedn
-	  (0 1 0))
+	  (1 1 0))
+	 (parseclj
+	  (1 1 0))
 	 (geiser
 	  (0 12)))
 	"Meyvn client" single
-	((:commit . "43b2061f907dda533abd3136dccdb1ce467ec6c0")
+	((:commit . "493e652b8fffcbed226f69a2ea82e6f9fc51ab08")
 	 (:authors
 	  ("Daniel Szmulewicz" . "daniel.szmulewicz@gmail.com"))
 	 (:maintainer "Daniel Szmulewicz" . "daniel.szmulewicz@gmail.com")

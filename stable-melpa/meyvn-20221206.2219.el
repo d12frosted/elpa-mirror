@@ -5,10 +5,10 @@
 ;; Author: Daniel Szmulewicz <daniel.szmulewicz@gmail.com>
 ;; Created: 2020-02-11
 ;; URL: https://github.com/danielsz/meyvn-el
-;; Package-Version: 20220821.2242
-;; Package-Commit: 43b2061f907dda533abd3136dccdb1ce467ec6c0
+;; Package-Version: 20221206.2219
+;; Package-Commit: 493e652b8fffcbed226f69a2ea82e6f9fc51ab08
 ;; Version: 1.1
-;; Package-Requires: ((emacs "25.1") (cider "0.23") (projectile "2.1") (s "1.12") (dash "2.17") (parseedn "0.1.0") (geiser "0.12"))
+;; Package-Requires: ((emacs "25.1") (cider "0.23") (projectile "2.1") (s "1.12") (dash "2.17") (parseedn "1.1.0") (parseclj "1.1.0") (geiser "0.12"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -40,6 +40,7 @@
 (require 'projectile)
 (require 's)
 (require 'dash)
+(require 'parseclj)
 (require 'parseedn)
 (require 'geiser)
 

@@ -1,13 +1,13 @@
-;;; nimbus-theme.el --- An awesome dark theme -*- lexical-binding: t; -*-
+;;; nimbus-theme.el --- Nimbus dark theme -*- lexical-binding: t; -*-
 ;;
 ;; Filename:    nimbus-theme.el
-;; Description: An awesome dark theme
+;; Description: Nimbus dark theme
 ;; Author:      Marcin Swieczkowski <marcin.swieczkowski@gmail.com>
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
-;; Version:     1.2.0
-;; Package-Version: 20221201.1019
-;; Package-Commit: 0dd87fefeb6f8c866f1d652c62aac95798b44e88
+;; Version:     1.3.0
+;; Package-Version: 20221206.2121
+;; Package-Commit: 178557148f2e132c79be25429d04c5b89f6535dd
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -17,7 +17,8 @@
 ;;
 ;; About:
 ;;
-;; The best dark theme for Emacs.
+;; Nimbus dark theme for Emacs. Beautiful, slightly retro, yet readable
+;; and easy on the eyes.
 ;;
 ;; See README.md for more info.
 ;;
