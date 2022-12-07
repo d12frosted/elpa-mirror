@@ -4,6 +4,8 @@
 
 ;; Author: Junpeng Qiu <qjpchmail@gmail.com>
 ;; Package-Requires: ((org "8.3.4"))
+;; Package-Version: 20170324.945
+;; Package-Commit: c88a75d9587c484ead18f7adf08592b09c1cceb0
 ;; Keywords: extensions
 
 ;; This program is free software; you can redistribute it and/or modify

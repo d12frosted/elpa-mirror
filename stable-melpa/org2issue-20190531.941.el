@@ -5,6 +5,8 @@
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; Created: 2016-03-24
 ;; Version: 0.1
+;; Package-Version: 20190531.941
+;; Package-Commit: 910b98c858762fd14b11d261626c5e979dde0833
 ;; Keywords: convenience, github, org
 ;; Package-Requires: ((org "8.0") (emacs "24.4") (ox-gfm "0.1") (gh "0.1") (s "20160405.920"))
 ;; URL: https://github.com/lujun9972/org2issue
