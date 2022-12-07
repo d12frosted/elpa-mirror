@@ -198,9 +198,8 @@ Prolog initialization and cleanup
 
   `sweep' loads and initializes Prolog on-demand at the first invocation
   of a command that requires the embedded Prolog.  The arguments used to
-  initialize Prolog in case are determined by the value of the
-  user-option `sweeprolog-init-args' which the user is free to extend
-  with e.g.:
+  initialize Prolog are then determined by the value of the user-option
+  `sweeprolog-init-args' which the user is free to extend with e.g.:
 
   ┌────
   │ (add-to-list 'sweeprolog-init-args "--stack-limit=512m")
@@ -211,12 +210,38 @@ Prolog initialization and cleanup
   set to `true', which indicates to SWI-Prolog that it is running under
   `sweep'.
 
+  It is also possible to specify initialization arguments to SWI-Prolog
+  by passing them as command line arguments to Emacs, which can be
+  convenient when using Emacs and `sweep' as an alternative for the
+  common shell-based interaction with SWI-Prolog.  This is achieved by
+  adding the flag `--swipl-args' followed by any number of arguments
+  intended for SWI-Prolog, with a single semicolon (“;”) argument
+  marking the end of the SWI-Prolog arguments, after which further
+  arguments are processed by Emacs as usual (see [Emacs Invocation] for
+  more information about Emacs’s command line options), for example:
+
+  ┌────
+  │ emacs --some-emacs-option --swipl-args -l foobar.pl \; --more-emacs-options
+  └────
+
+  In order for `sweep' to be able to handle Emacs’s command line
+  arguments, the function `sweeprolog-handle-command-line-args' must be
+  called before Emacs processes the `--swipl-args' argument.  This can
+  be ensured by calling it from the command line as well:
+
+  ┌────
+  │ emacs -f sweeprolog-handle-command-line-args --swipl-args -l foobar.pl \;
+  └────
+
   The embedded Prolog runtime can be reset using the command
   `sweeprolog-restart'.  This command cleans up the the Prolog state and
   resources, and starts it anew.  When called with a prefix argument
   (`C-u M-x sweeprolog-restart'), this command prompts the user for
   additional initialization arguments to pass to the embedded Prolog
   runtime on startup.
+
+
+[Emacs Invocation] <info:emacs#Emacs Invocation>
 
 
 Querying Prolog
@@ -1064,11 +1089,25 @@ Filling Holes
   `sweeprolog-highlight-holes' to nil.
 
   To jump to the next hole in a `sweeprolog-mode' buffer, use the
-  command `C-c C-i' (`M-x sweeprolog-forward-hole').  This command sets
-  up the region to cover the next hole after point leaving the cursor at
-  right after the hole.  To jump to the previous hole instead, call
+  command `M-x sweeprolog-forward-hole', bound by default to `C-c TAB'
+  (or `C-c C-i').  This command sets up the region to cover the next
+  hole after point leaving the cursor at right after the hole.  To jump
+  to the previous hole instead, use `sweeprolog-backward-hole' or call
   `sweeprolog-forward-hole' with a negative prefix argument (`C-- C-c
-  C-i').
+  TAB').
+
+  When the minor mode `sweeprolog-forward-hole-on-tab-mode' is enabled,
+  the `TAB' key is bound to a command moves to the next hole when called
+  in a properly indented line (otherwise it indents the line).  This
+  makes moving between holes in the buffer easier since `TAB' can be
+  used instead of `C-c TAB' in most cases.  To enable this mode in a
+  Prolog buffer, type `M-x sweeprolog-forward-hole-on-tab-mode-map'.
+  This step can be automated by adding
+  `sweeprolog-forward-hole-on-tab-mode' to `sweeprolog-mode-hook':
+
+  ┌────
+  │ (add-hook 'sweeprolog-mode-hook #'sweeprolog-forward-hole-on-tab-mode)
+  └────
 
   To “fill” a hole marked by one of the aforementioned commands, type
   `C-w' (`M-x kill-region') to kill the region and remove the
@@ -1307,8 +1346,8 @@ Completion in the top-level
   The `sweeprolog-top-level-mode', enabled in the `sweep' top-level
   buffer, integrates with the standard Emacs symbol completion mechanism
   to provide completion for predicate names.  To complete a partial
-  predicate name in the top-level prompt, use `C-M-i' (or `M-<TAB>').
-  For more information see [Symbol Completion in the Emacs manual].
+  predicate name in the top-level prompt, use `C-M-i' (or `M-TAB').  For
+  more information see [Symbol Completion in the Emacs manual].
 
 
 [Symbol Completion in the Emacs manual] <info:emacs#Symbol Completion>
@@ -1682,13 +1721,6 @@ General improvements
         directories containing SWI-Prolog `pack.pl' package definitions
         as root project directories.
 
-  Add command line arguments handling for Prolog flags
-        `sweep' should make it easy to specify Prolog initialization
-        arguments (see [Prolog initialization and cleanup]) already in
-        the Emacs command line invocation.  One way to achieve that
-        would be to extend `command-line-functions' with a custom
-        command line arguments handler.
-
   Extend the provided Elisp-Prolog interface
         Currently, the Elisp interface that `sweep' provides for
         querying Prolog only allows calling directly to predicates of
@@ -1699,9 +1731,6 @@ General improvements
 
 [Debug Adapter Protocol for SWI-Prolog]
 <https://github.com/eshelyaron/debug_adapter/blob/main/README.md>
-
-[Prolog initialization and cleanup] See section Prolog initialization
-and cleanup
 
 [Querying Prolog] See section Querying Prolog
 
