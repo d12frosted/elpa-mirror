@@ -6,8 +6,6 @@
 
 ;; Author: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/org2ctex
-;; Package-Version: 20200331.550
-;; Package-Commit: 2e40aa5e78b0562516f46f689e7b74cdf451cc2a
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4"))
 

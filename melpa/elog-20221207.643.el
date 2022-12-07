@@ -4,8 +4,10 @@
 
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; Keywords: lisp, tool, log
+;; Package-Version: 20221207.643
 ;; Package-Commit: a67237d9813c7591614d95e2ef31cc5e5ed3f31b
-;; Package-Version: 20160724.2255
+;; Package-Commit: e171d0ff0a21011124204d77111e5992b50b7007
+;; Package-X-Original-Version: 20160724.2255
 ;; Package-X-Original-Version: 20151102.1255
 ;; Version: 0.1
 ;; Package-Requires: ((eieio "1.3"))
@@ -31,7 +33,7 @@
 
 ;;; Code:
 
-(require 'cl)
+(require 'cl-lib)
 (require 'eieio)
 
 ;; define log serverity
@@ -81,19 +83,19 @@
   "An interface to special elog-object"
   :abstract t)
 
-(defmethod elog-insert-log ((log elog-object) serverity format &rest objects)
+(cl-defmethod elog-insert-log ((log elog-object) serverity format &rest objects)
   "do the actual logging job.")
 
-(defmethod elog-should-log-p ((log elog-object) serverity)
+(cl-defmethod elog-should-log-p ((log elog-object) serverity)
   " check if the log item should be recorded."
   (let ((l (oref log :serverity)))
     (and (integerp l)
          (<= serverity l))))
 
-(defmethod elog-close-log ((log elog-object))
+(cl-defmethod elog-close-log ((log elog-object))
   "do the cleanning job after log job is done.")
 
-(defmethod elog-log ((log elog-object) serverity ident string &rest objects)
+(cl-defmethod elog-log ((log elog-object) serverity ident string &rest objects)
   "do the log job if applicable"
   (when (elog-should-log-p log serverity)
     (mapc (lambda (func)
@@ -144,7 +146,7 @@ It will create two functions: `IDENT-log' used to do the log stuff and `IDENT-cl
 (defclass elog-message-object (elog-object)
   ())
 
-(defmethod elog-insert-log ((log elog-message-object) serverity format &rest objects)
+(cl-defmethod elog-insert-log ((log elog-message-object) serverity format &rest objects)
   (apply 'message format objects))
 
 ;; log for buffer
@@ -155,17 +157,17 @@ It will create two functions: `IDENT-log' used to do the log stuff and `IDENT-cl
            :custom string
            :initform nil)))
 
-(defmethod elog-should-log-p ((log elog-buffer-object) serverity)
+(cl-defmethod elog-should-log-p ((log elog-buffer-object) serverity)
   (and (oref log :buffer)
        (call-next-method)))
 
-(defmethod elog-insert-log ((log elog-buffer-object) serverity format &rest objects)
+(cl-defmethod elog-insert-log ((log elog-buffer-object) serverity format &rest objects)
   (let ((buffer (get-buffer-create (oref log :buffer))))
     (with-current-buffer buffer
       (goto-char (point-max))
       (insert (apply 'format format objects) "\n"))))
 
-(defmethod elog-close-log ((log elog-buffer-object))
+(cl-defmethod elog-close-log ((log elog-buffer-object))
   (when (buffer-live-p (get-buffer (oref log :buffer)))
     (kill-buffer (oref log :buffer))))
 
@@ -197,11 +199,11 @@ It will create two functions: `IDENT-log' used to do the log stuff and `IDENT-cl
          :custom (or null string)
          :initform nil)))
 
-(defmethod elog-should-log-p ((log elog-file-object) serverity)
+(cl-defmethod elog-should-log-p ((log elog-file-object) serverity)
   (and (oref log :file)
        (call-next-method)))
 
-(defmethod elog-insert-log ((log elog-file-object) serverity format &rest objects)
+(cl-defmethod elog-insert-log ((log elog-file-object) serverity format &rest objects)
   (let* ((msg (concat  (apply #'format format objects) "\n"))
          (file-or-symbol (oref log :file)) 
          (file (if (stringp file-or-symbol)
@@ -290,7 +292,7 @@ It will create two functions: `IDENT-log' used to do the log stuff and `IDENT-cl
              rest)
             (t (append (list key value) (elog--plist-remove rest prop)))))))
 
-(defmethod initialize-instance ((log elog-syslog-object) &optional args)
+(cl-defmethod initialize-instance ((log elog-syslog-object) &optional args)
   (let* ((host (plist-get args :host))
          (port (plist-get args :port))
          (conn (make-network-process :name (format "%s-%d" host port)
@@ -301,13 +303,13 @@ It will create two functions: `IDENT-log' used to do the log stuff and `IDENT-cl
          (slots (append (list :conn conn) rest-args)))
     (funcall #'call-next-method log slots)))
 
-(defmethod elog-should-log-p ((log elog-syslog-object) serverity)
+(cl-defmethod elog-should-log-p ((log elog-syslog-object) serverity)
   (let ((conn (oref log :conn)))
     (and (processp conn)
          (eq 'open (process-status conn))
          (call-next-method))))
 
-(defmethod elog-insert-log ((log elog-syslog-object) serverity format &rest objects)
+(cl-defmethod elog-insert-log ((log elog-syslog-object) serverity format &rest objects)
   (let* ((conn (oref log :conn))
          ;; create pri
          (facility (oref log :facility))
@@ -324,7 +326,7 @@ It will create two functions: `IDENT-log' used to do the log stuff and `IDENT-cl
          (package (format  "%s%s %s" pri header msg)))
     (process-send-string conn package)))
 
-(defmethod elog-close-log ((log elog-syslog-object))
+(cl-defmethod elog-close-log ((log elog-syslog-object))
   (when (processp (oref log :conn))
     (delete-process (oref log :conn))))
 

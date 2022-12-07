@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221207.50
-;; Package-Commit: 6e4d42805d8837338ecddb2798b5c86121992d84
+;; Package-Version: 20221207.401
+;; Package-Commit: 4f2a863da5b1a7947c18c09ea2c7ef1b6d3f6bd5
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -74,7 +74,8 @@
     (:transition             "TRANSITION"     nil ox-spectacle-transition)
     (:text-type              "TEXT_TYPE"      nil ox-spectacle-text-type)
     (:deck-props             "DECK_PROPS"     nil ox-spectacle-deck-props space)
-    (:export-level           "EXPORT_LEVEL"   1   ox-spectacle-export-level))
+    (:export-level           "EXPORT_LEVEL"   1   ox-spectacle-export-level)
+    (:with-special-strings   nil              nil))
 
   :translate-alist
   '((template        . ox-spectacle--template)
@@ -300,19 +301,19 @@ If PATH is remote, download it."
                  (base64-encode-string content 'no-line-break))))
     (format "data:image/%s,%s" type data)))
 
-(defun ox-spectacle--declare-components ()
-  "Return all components declared with #+DECLARE_COMPONENTS.
+(defun ox-spectacle--extern-components ()
+  "Return all components declared with #+EXTERN_COMPONENTS.
 It should be the components defined in buffer scripts or external."
   (save-excursion
     (goto-char (point-min))
     (let ((case-fold-search nil))
-      (when (and (re-search-forward "^\\(?:\\(#\\)\\+DECLARE_COMPONENTS:[ \t]*\\(.*\\)\\|\\(\\*\\)\\)" nil t)
+      (when (and (re-search-forward "^\\(?:\\(#\\)\\+EXTERN_COMPONENTS:[ \t]*\\(.*\\)\\|\\(\\*\\)\\)" nil t)
                  (string= (match-string 1) "#"))
         (split-string (string-trim (match-string 2)) " " t)))))
 
 (defun ox-spectacle--available-components ()
   "All components available."
-  (append ox-spectacle--components (ox-spectacle--declare-components)))
+  (append ox-spectacle--components (ox-spectacle--extern-components)))
 
 (defun ox-spectacle--get-headlines (element &optional with-self)
   "Collect all ancestor headlines of ELEMENT.
@@ -341,6 +342,10 @@ When ELEMENT is headline and WITH-SELF is t, then add itself to the result."
       (let ((a (org-trim s)))
         (if (org-string-nw-p a) (concat (or prefix " ") a suffix) ""))
     ""))
+
+(defun ox-spectacle--compat-attr-react-htm (attrs)
+  "Update ATTRS to make the final code complat with react-htm."
+  (replace-regexp-in-string "\\(=\\|\\.\\.\\.\\){" "\\1${" attrs))
 
 (defun ox-spectacle--make-attribute-string (attributes)
   "Override ‘org-html--make-attribute-string’, make ATTRIBUTES a string."
@@ -390,7 +395,7 @@ holding export options."
                      (ox-spectacle--filter-image (org-export-data (plist-get info :deck-props) info) info)))
          (decktag (when (string-match "^<\\([a-zA-Z0-9]+\\)>" (or (car (string-split deckprops)) ""))
                     (match-string 1 deckprops)))
-         (deckattr (string-replace "={" "=${" (if decktag (cl-subseq deckprops (+ 2 (length decktag))) deckprops)))
+         (deckattr (ox-spectacle--compat-attr-react-htm (if decktag (cl-subseq deckprops (+ 2 (length decktag))) deckprops)))
          (mkattr (lambda (key)
                    (let ((r (org-export-data (plist-get info (intern (format ":%s" key))) info)))
                      (if (> (length r) 0) (ox-spectacle--wa (format "%s=${%s}" key r)) "")))))
@@ -430,7 +435,7 @@ holding contextual information."
          (layout (org-element-property :LAYOUT headline))
          (regexp (format "\\(%s\\)" (mapconcat #'identity (ox-spectacle--available-components) "\\|")))
          (attrs (when-let ((s (ox-spectacle--wa (org-element-property :PROPS headline))))
-                  (string-replace "={" "=${" s)))
+                  (ox-spectacle--compat-attr-react-htm s)))
          (transition (when-let ((ts (org-element-property :TRANSITION headline)))
                        (concat " transition=" (if (string-prefix-p "{" ts) "$") ts)))
          (tag type)
@@ -459,15 +464,19 @@ holding contextual information."
         (when (and (null tag) (string-match (format "^<\\${\\(?:%s\\|SlideLayout\\.[a-zA-Z0-9]+\\)}\\( .*\\|\\)>$" regexp) title))
           (setq tag (match-string 1 title)
                 attrs (concat attrs (ox-spectacle--wa (match-string 2 title)))))
-        (setq attrs (ox-spectacle--filter-image attrs info))
+        ;; mosttop headline
         (when (= level 1)
-          (setq tag (if layout (format "SlideLayout.%s" layout) "Slide")))
+          (setq tag (if layout (format "SlideLayout.%s" layout) "Slide"))
+          (setq prefix (format "\n<!------ slide (id: slide-%s) begin ------>\n\n" id-suffix)))
+        ;; default Component used by headline
         (unless tag (setq tag "Box"))
+        ;; add id to Component is nessessary
         (when (string-match-p "Slide\\|FlexBox\\|Grid\\|SlideLayout" tag) ; only add id to these tags
           (setq id (concat " id='" (downcase tag) "-" id-suffix "'")))
-        (when (string-match-p "Slide" tag) ; add comment as delimiter line for every slide/slidelayout
-          (setq prefix (format "\n<!------ slide (id: slide-%s) begin ------>\n\n" id-suffix)))
+        ;; normalize
         (if (string-match-p regexp tag) (setq tag (format "${%s}" tag)))
+        (setq attrs (ox-spectacle--filter-image attrs info))
+        ;; final output
         (concat prefix "<" tag id attrs transition ">\n" contents "</" tag ">")))))
 
 (defun ox-spectacle--section (_section contents _info)
@@ -547,7 +556,7 @@ CONTENTS holds the contents of the item."
             priority (when-let ((s (match-string 1 contents)))
                        (if (string-equal s "A") nil s))
             attrs (when-let ((s (ox-spectacle--wa (match-string 2 contents))))
-                    (string-replace "={" "=${" s))
+                    (ox-spectacle--compat-attr-react-htm s))
             contents (cl-subseq contents (length (match-string 0 contents)))))
     (if appearp
         (concat "<${Appear}" (if priority (format " priority=${%s}" priority)) (ox-spectacle--wa attrs) ">"
@@ -708,7 +717,7 @@ contextual information."
                         (attrs (or (match-string 2 old) "")))
                     (if (string-prefix-p "/" tag)
                         (format "</${%s}>" (cl-subseq tag 1))
-                      (format "<${%s}%s>" tag (string-replace "={" "=${" attrs))))))
+                      (format "<${%s}%s>" tag (ox-spectacle--compat-attr-react-htm attrs))))))
               text t t))
   ;; add $ for plain html tag, make it can use react syntax
   (when (string-match-p (format "<\\(%s\\)[ \t]"
@@ -717,7 +726,7 @@ contextual information."
                                              "small" "ul" "ol" "li" "hr" "a" "img" "button")
                                            "\\|"))
                         text)
-    (setq text (string-replace "={" "=${" text)))
+    (setq text (ox-spectacle--compat-attr-react-htm text)))
   (let ((org-html-protect-char-alist nil))
     (setq text (org-html-plain-text text info))))
 
