@@ -1,5 +1,5 @@
 (epkg .
-      [(20221205 2051)
+      [(20221207 1555)
        ((emacs
 	 (25 1))
 	(compat
@@ -7,7 +7,7 @@
 	(closql
 	 (20210927)))
        "Browse the Emacsmirror package database" tar
-       ((:commit . "0bcd76c4afbb140c80781efa229bb924a286020b")
+       ((:commit . "b2e721bdcc9dbf25c8d2edfa36e90fc8d837ce9e")
 	(:authors
 	 ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")

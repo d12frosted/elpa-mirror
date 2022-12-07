@@ -4,10 +4,10 @@ Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
 Checking out origin/HEAD
-Checking out 0bcd76c4afbb140c80781efa229bb924a286020b
+Checking out b2e721bdcc9dbf25c8d2edfa36e90fc8d837ce9e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgc8aKJ1/epkg-20221205.2051
+  to /tmp/epkg5BuTsj/epkg-20221207.1555
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkgc8aKJ1/epkg-20221205.2051/epkg.info
-Created epkg-20221205.2051.tar containing:
-  epkg-20221205.2051/
-  epkg-20221205.2051/dir
-  epkg-20221205.2051/epkg-desc.el
-  epkg-20221205.2051/epkg-elpa.el
-  epkg-20221205.2051/epkg-list.el
-  epkg-20221205.2051/epkg-org.el
-  epkg-20221205.2051/epkg-pkg.el
-  epkg-20221205.2051/epkg-schemata.el
-  epkg-20221205.2051/epkg-utils.el
-  epkg-20221205.2051/epkg.el
-  epkg-20221205.2051/epkg.info
-Built epkg in 8.701s, finished at 2022-12-07T14:48:52+0000
+Generating /tmp/epkg5BuTsj/epkg-20221207.1555/epkg.info
+Created epkg-20221207.1555.tar containing:
+  epkg-20221207.1555/
+  epkg-20221207.1555/dir
+  epkg-20221207.1555/epkg-desc.el
+  epkg-20221207.1555/epkg-elpa.el
+  epkg-20221207.1555/epkg-list.el
+  epkg-20221207.1555/epkg-org.el
+  epkg-20221207.1555/epkg-pkg.el
+  epkg-20221207.1555/epkg-schemata.el
+  epkg-20221207.1555/epkg-utils.el
+  epkg-20221207.1555/epkg.el
+  epkg-20221207.1555/epkg.info
+Built epkg in 8.800s, finished at 2022-12-07T18:29:40+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  404 Dec  7 14:48 packages/epkg-20221205.2051.entry
 120K -rw-r--r-- 1 root root 120K Dec  7 14:48 packages/epkg-20221205.2051.tar
+4.0K -rw-r--r-- 1 root root  404 Dec  7 18:29 packages/epkg-20221207.1555.entry
+120K -rw-r--r-- 1 root root 120K Dec  7 18:29 packages/epkg-20221207.1555.tar
