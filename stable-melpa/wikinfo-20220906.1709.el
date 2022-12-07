@@ -4,6 +4,8 @@
 
 ;; Author: Nicholas Vollmer <progfolio@protonmail.com>
 ;; URL: https://github.com/progfolio/wikinfo
+;; Package-Version: 20220906.1709
+;; Package-Commit: bf395c9aaf6be7fda371be611005737d52417fec
 ;; Created: September 14, 2020
 ;; Keywords: org, convenience
 ;; Package-Requires: ((emacs "27.1"))

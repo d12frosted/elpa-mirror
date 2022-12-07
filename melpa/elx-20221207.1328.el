@@ -8,8 +8,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/elx
 ;; Keywords: docs libraries packages
-;; Package-Version: 20221130.2213
-;; Package-Commit: 918f8ee3c932b1c987b59daee3398f328bb5456b
+;; Package-Version: 20221207.1328
+;; Package-Commit: 0524c5cf08534ffb34b284f0c1cbc1c86dd149b4
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0") (llama "0.2.0"))
 
@@ -1332,10 +1332,9 @@ full name, the cdr is an email address."
         (and (goto-char (point-min))
              (re-search-forward
               "^(provide-me\\(?:[\s\t\n]+\"\\(.+\\)\"\\)?)" nil t)
-             (list (intern (concat (match-string 1)
-                                   (file-name-sans-extension
-                                    (file-name-nondirectory
-                                     buffer-file-name)))))))))
+             (list
+              (intern (concat (match-string 1)
+                              (elx--base-library-name buffer-file-name))))))))
 
 (defun elx-library-feature (file)
   "Return the first valid feature actually provided by FILE.
@@ -1352,7 +1351,7 @@ a library.  Not every Emacs lisp file has to provide a feature / be a
 library.  If a file lacks an expected feature then loading it using
 `require' still succeeds but causes an error."
   (let* ((file (expand-file-name file))
-         (sans (file-name-sans-extension (file-name-sans-extension file)))
+         (sans (elx--library-sans-extensions file))
          (last (file-name-nondirectory sans)))
     (cl-find-if (lambda (feature)
                   (setq feature (symbol-name feature))
@@ -1403,6 +1402,14 @@ library.  If a file lacks an expected feature then loading it using
            (regexp-opt load-file-rep-suffixes)
            "\\'")
    file))
+
+(defun elx--library-sans-extensions (file)
+  (let ((file (byte-compiler-base-file-name file)))
+    (and (string-match (concat (regexp-opt load-suffixes) "\\'") file)
+         (substring file 0 (match-beginning 0)))))
+
+(defun elx--base-library-name (file)
+  (elx--library-sans-extensions (file-name-nondirectory file)))
 
 (defun elx--ignore-directory-p (directory)
   (or (string-prefix-p "." (file-name-nondirectory
@@ -1521,12 +1528,8 @@ non-nil return nil."
                   (car match))))))
 
 (defun elx-main-library-2 (package libraries)
-  (cl-find-if (lambda (lib)
-                (equal (file-name-nondirectory
-                        (file-name-sans-extension
-                         (file-name-sans-extension
-                          (if (consp lib) (car lib) lib))))
-                       package))
+  (cl-find-if (##equal (elx--base-library-name (if (consp %) (car %) %))
+                       package)
               libraries))
 
 ;;; Utilities

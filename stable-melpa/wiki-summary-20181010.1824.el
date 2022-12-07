@@ -4,6 +4,8 @@
 
 ;; Author: Danny Gratzer
 ;; URL: https://github.com/jozefg/wiki-summary.el
+;; Package-Version: 20181010.1824
+;; Package-Commit: fa41ab6e50b3b80e54148af9d4bac18fd0405000
 ;; Keywords: wikipedia, utility
 ;; Package-Requires: ((emacs "24"))
 ;; Version: 0.1

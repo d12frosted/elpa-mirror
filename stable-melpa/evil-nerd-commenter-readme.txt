@@ -15,8 +15,8 @@ The last digit(s) of line number is parameter of the command.
 For example, `C-u 9 evilnc-quick-comment-or-uncomment-to-the-line` comments
 code from current line to line 99 if you current line is 91.
 
-Though this program could be used *independently*, though I highly recommend
-using it with Evil (https://bitbucket.org/lyro/evil/)
+Though this program could be used *independently*, it's recommended to
+us it with Evil.
 
 Evil makes you take advantage of power of Vi to comment lines.
 For example, you can press key `99,ci` to comment out 99 lines.
@@ -24,34 +24,24 @@ For example, you can press key `99,ci` to comment out 99 lines.
 Setup:
 
 If comma is your leader key, as most Vim users do, setup is one liner,
-(evilnc-default-hotkeys)
+  (evilnc-default-hotkeys)
 
-If you use evil-leader and its default leader key,
-insert below setup into your ~/.emacs instead,
+Or else you can set up key bindings of below commands by yourself.
+  `evilnc-comment-or-uncomment-lines'
+  `evilnc-quick-comment-or-uncomment-to-the-line'
+  `evilnc-comment-and-kill-ring-save'
+  `evilnc-copy-and-comment-lines'
+  `evilnc-comment-or-uncomment-paragraphs'
+  `evilnc-comment-box'
+  `evilnc-toggle-invert-comment-line-by-line'
+  `evilnc-copy-and-comment-operator'
+  `evilnc-comment-operator'
+  `evilnc-comment-or-uncomment-html-tag'
+  `evilnc-comment-or-uncomment-html-paragraphs'
 
-(global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
-
-(require 'evil-leader)
-(global-evil-leader-mode)
-(evil-leader/set-key
-  "ci" 'evilnc-comment-or-uncomment-lines
-  "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
-  "ll" 'evilnc-quick-comment-or-uncomment-to-the-line
-  ;; Or use `evilnc-comment-and-kill-ring-save' instead
-  "cc" 'evilnc-copy-and-comment-lines
-  "cp" 'evilnc-comment-or-uncomment-paragraphs
-  "cr" 'comment-or-uncomment-region
-  "cv" 'evilnc-toggle-invert-comment-line-by-line
-  "."  'evilnc-copy-and-comment-operator
-  "\\" 'evilnc-comment-operator)
-
-`evilnc-comment-or-uncomment-html-tag' comment/uncomment html tag(s).
-`evilnc-comment-or-uncomment-html-paragraphs' comment/uncomment paragraphs
-containing html tags.
-
-You can setup `evilnc-original-above-comment-when-copy-and-comment'
-to decide which style to use when `evilnc-copy-and-comment-lines'
-or `evilnc-copy-and-comment-operator',
+Set up `evilnc-original-above-comment-when-copy-and-comment'
+to decide which style to use in `evilnc-copy-and-comment-lines'
+and `evilnc-copy-and-comment-operator',
   - Place the commented out text above original text
   - Or place the original text above commented out text
 

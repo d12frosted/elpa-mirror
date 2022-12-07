@@ -5,9 +5,9 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/auto-compile
 ;; Keywords: compile convenience lisp
-;; Package-Commit: 7c6a942bcb0ed30177841bd8d2f4184e419eb59d
+;; Package-Commit: a80a8742bc322c67c32f32f9e7833817d1a126d2
 
-;; Package-Version: 20221130.1258
+;; Package-Version: 20221207.1301
 ;; Package-X-Original-Version: 1.7.2.50-git
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
@@ -514,11 +514,8 @@ Optionaly that suffix may be followed by one listed in
                   file))
 
 (defun auto-compile--byte-compile-source-file (file &optional must-exist)
-  (let ((standard (concat (file-name-sans-extension
-                           (if (fboundp 'byte-compiler-base-file-name)
-                               (byte-compiler-base-file-name file)
-                             (file-name-sans-extension file)))
-                          ".el"))
+  (let ((standard (file-name-with-extension
+                   (byte-compiler-base-file-name file) ".el"))
         (suffixes load-file-rep-suffixes)
         (file nil))
     (while (and (not file) suffixes)
