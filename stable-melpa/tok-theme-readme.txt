@@ -1,1 +1,1 @@
-Tok is a comfy dark monochromatic theme.
+Tok is a comfy light monochromatic theme.
