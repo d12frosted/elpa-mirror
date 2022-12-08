@@ -511,16 +511,16 @@
 		  ("Chen Bin" . "chenbin.sh@gmail.com"))
 		 (:commit . "7a2a7384b6e752a805d6fbb78cf9425e54c2b18b"))])
  (evil-nerd-commenter .
-		      [(3 5 8)
+		      [(3 6 0)
 		       ((emacs
-			 (25 1)))
+			 (26 1)))
 		       "Comment/uncomment lines efficiently. Like Nerd Commenter in Vim" tar
 		       ((:url . "http://github.com/redguardtoo/evil-nerd-commenter")
 			(:keywords "convenience" "evil")
 			(:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 			(:authors
 			 ("Chen Bin" . "chenbin.sh@gmail.com"))
-			(:commit . "9609fb170da00aeca1716b022d93e1cb68464a34"))])
+			(:commit . "8c0f23d46a3927b9f83c1c2c4590be53d0b740db"))])
  (evil-numbers .
 	       [(0 7)
 		((emacs

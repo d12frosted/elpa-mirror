@@ -9,8 +9,7 @@ Table of Contents
 3. Install
 4. Setup
 .. 1. Use recommended key bindings
-.. 2. Use evil-leader instead
-.. 3. Assign key bindings manually
+.. 2. Assign key bindings manually
 5. Usage
 .. 1. Commands and hotkeys
 ..... 1. evilnc-comment-or-uncomment-lines (RECOMMENDED)
@@ -25,7 +24,8 @@ Table of Contents
 ..... 10. evilnc-toggle-invert-comment-line-by-line
 ..... 11. evilnc-kill-to-line
 ..... 12. evilnc-comment-both-snippet-html
-..... 13. Use imenu to list and jump to comments in current file
+..... 13. evilnc-comment-box
+..... 14. Use imenu to list and jump to comments in current file
 .. 2. Examples
 ..... 1. Comment lines
 ..... 2. Comment region
@@ -147,42 +147,14 @@ Table of Contents
   Use `(evilnc-default-hotkeys nil t)' to use key binding only for evil
   mode if you want to define key bindings in Emacs mode by yourself.
 
-
-4.2 Use evil-leader instead
-───────────────────────────
-
-  Install [evil-leader according to its README].
-
-  Insert following code into you `~/.emacs',
-  ┌────
-  │ ;; Emacs key bindings
-  │ (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
-  │ (global-set-key (kbd "C-c l") 'evilnc-quick-comment-or-uncomment-to-the-line)
-  │ (global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
-  │ (global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
-  │ 
-  │ ;; Vim key bindings
-  │ (require 'evil-leader)
-  │ (global-evil-leader-mode)
-  │ (evil-leader/set-key
-  │   "ci" 'evilnc-comment-or-uncomment-lines
-  │   "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
-  │   "ll" 'evilnc-quick-comment-or-uncomment-to-the-line
-  │   "cc" 'evilnc-copy-and-comment-lines
-  │   "cp" 'evilnc-comment-or-uncomment-paragraphs
-  │   "cr" 'comment-or-uncomment-region
-  │   "cv" 'evilnc-toggle-invert-comment-line-by-line
-  │   "."  'evilnc-copy-and-comment-operator
-  │   "\\" 'evilnc-comment-operator ; if you prefer backslash key
-  │ )
-  └────
+  You can also use third party package [general.el] instead of calling
+  `evilnc-default-hotkeys'.
 
 
-[evil-leader according to its README]
-<https://github.com/cofi/evil-leader>
+[general.el] <https://github.com/noctuid/general.el>
 
 
-4.3 Assign key bindings manually
+4.2 Assign key bindings manually
 ────────────────────────────────
 
   Manual setup is necessary for certain major modes (matlab-mode, for
@@ -390,7 +362,17 @@ Table of Contents
 [Web-mode] <http://web-mode.org/>
 
 
-5.1.13 Use imenu to list and jump to comments in current file
+5.1.13 evilnc-comment-box
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Comment out N lines, putting it inside a box. N could be negative. If
+  N is nil, comment out current paragraph.  This command uses builtin
+  API `comment-box'.
+
+  The hotkey is ",cs" in evil-mode
+
+
+5.1.14 Use imenu to list and jump to comments in current file
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Please setup `imenu-create-index-function' to
