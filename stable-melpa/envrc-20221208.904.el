@@ -4,10 +4,10 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: processes, tools
-;; Package-Commit: c54bf9e6972c563d345e20571ffd44d7bfb56974
+;; Package-Commit: fd5847c01f6f371ccd4aeba7b6104d5ab7591ae2
 ;; Homepage: https://github.com/purcell/envrc
 ;; Package-Requires: ((seq "2") (emacs "25.1") (inheritenv "0.1"))
-;; Package-Version: 20221118.1647
+;; Package-Version: 20221208.904
 ;; Package-X-Original-Version: 0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -289,7 +289,7 @@ also appear in PAIRS."
     (kill-local-variable 'process-environment)
     (when (derived-mode-p 'eshell-mode)
       (if (fboundp 'eshell-set-path)
-          (eshell-set-path (butlast (exec-path)))
+          (eshell-set-path (butlast exec-path))
         (kill-local-variable 'eshell-path-env)))))
 
 

@@ -48,7 +48,7 @@ Eventually it will be removed (with some advanced notice).
 
 With it enabled, things like this will open up `page.clj` in a read-only buffer.
 
-``` emacs-lisp
+```emacs-lisp
 (find-file "jar:file:///.m2/repository/hiccup/hiccup/1.0.5/hiccup-1.0.5.jar!/hiccup/page.clj")
 ```
 
