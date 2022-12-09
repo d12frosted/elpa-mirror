@@ -4,14 +4,13 @@ Source:  https://github.com/kostafey/ejc-sql.git
 
 Updating /mnt/store/melpa/working/ejc-sql/
 Checking out origin/HEAD
-Checking out 83f39df28f9812773bf89d7af1caf5e7950fb84e
+Checking out c236f79b48c0f4691500723841a9d356203a4b13
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ejc-sql/
-  to /tmp/ejc-sqlItgTVM/ejc-sql-20221101.922
+  to /tmp/ejc-sqltc9ba6/ejc-sql-20221208.2116
     ejc-autocomplete.el -> ejc-autocomplete.el
     ejc-company.el -> ejc-company.el
     ejc-completion-common.el -> ejc-completion-common.el
-    ejc-direx.el -> ejc-direx.el
     ejc-doc.el -> ejc-doc.el
     ejc-eldoc.el -> ejc-eldoc.el
     ejc-flx.el -> ejc-flx.el
@@ -24,48 +23,47 @@ Copying files (->) and directories (=>)
     project.clj -> project.clj
     src => src
     snippets => snippets
-Created ejc-sql-20221101.922.tar containing:
-  ejc-sql-20221101.922/
-  ejc-sql-20221101.922/ejc-autocomplete.el
-  ejc-sql-20221101.922/ejc-company.el
-  ejc-sql-20221101.922/ejc-completion-common.el
-  ejc-sql-20221101.922/ejc-direx.el
-  ejc-sql-20221101.922/ejc-doc.el
-  ejc-sql-20221101.922/ejc-eldoc.el
-  ejc-sql-20221101.922/ejc-flx.el
-  ejc-sql-20221101.922/ejc-format.el
-  ejc-sql-20221101.922/ejc-interaction.el
-  ejc-sql-20221101.922/ejc-lib.el
-  ejc-sql-20221101.922/ejc-result-buffer.el
-  ejc-sql-20221101.922/ejc-result-mode.el
-  ejc-sql-20221101.922/ejc-sql-pkg.el
-  ejc-sql-20221101.922/ejc-sql.el
-  ejc-sql-20221101.922/project.clj
-  ejc-sql-20221101.922/snippets/
-  ejc-sql-20221101.922/snippets/sql-mode/
-  ejc-sql-20221101.922/snippets/sql-mode/alter.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/begin.snippet
-  ejc-sql-20221101.922/snippets/sql-mode/delete.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/grant.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/inner.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/insert.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/left.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/revoke.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/right.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/select.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/update.yasnippet
-  ejc-sql-20221101.922/snippets/sql-mode/where.yasnippet
-  ejc-sql-20221101.922/src/
-  ejc-sql-20221101.922/src/ejc_sql/
-  ejc-sql-20221101.922/src/ejc_sql/cache.clj
-  ejc-sql-20221101.922/src/ejc_sql/classpath.clj
-  ejc-sql-20221101.922/src/ejc_sql/connect.clj
-  ejc-sql-20221101.922/src/ejc_sql/deps_resolver.clj
-  ejc-sql-20221101.922/src/ejc_sql/keywords.clj
-  ejc-sql-20221101.922/src/ejc_sql/lib.clj
-  ejc-sql-20221101.922/src/ejc_sql/output.clj
-  ejc-sql-20221101.922/src/ejc_sql/structure.clj
-Built ejc-sql in 4.280s, finished at 2022-12-08T16:30:53+0000
+Created ejc-sql-20221208.2116.tar containing:
+  ejc-sql-20221208.2116/
+  ejc-sql-20221208.2116/ejc-autocomplete.el
+  ejc-sql-20221208.2116/ejc-company.el
+  ejc-sql-20221208.2116/ejc-completion-common.el
+  ejc-sql-20221208.2116/ejc-doc.el
+  ejc-sql-20221208.2116/ejc-eldoc.el
+  ejc-sql-20221208.2116/ejc-flx.el
+  ejc-sql-20221208.2116/ejc-format.el
+  ejc-sql-20221208.2116/ejc-interaction.el
+  ejc-sql-20221208.2116/ejc-lib.el
+  ejc-sql-20221208.2116/ejc-result-buffer.el
+  ejc-sql-20221208.2116/ejc-result-mode.el
+  ejc-sql-20221208.2116/ejc-sql-pkg.el
+  ejc-sql-20221208.2116/ejc-sql.el
+  ejc-sql-20221208.2116/project.clj
+  ejc-sql-20221208.2116/snippets/
+  ejc-sql-20221208.2116/snippets/sql-mode/
+  ejc-sql-20221208.2116/snippets/sql-mode/alter.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/begin.snippet
+  ejc-sql-20221208.2116/snippets/sql-mode/delete.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/grant.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/inner.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/insert.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/left.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/revoke.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/right.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/select.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/update.yasnippet
+  ejc-sql-20221208.2116/snippets/sql-mode/where.yasnippet
+  ejc-sql-20221208.2116/src/
+  ejc-sql-20221208.2116/src/ejc_sql/
+  ejc-sql-20221208.2116/src/ejc_sql/cache.clj
+  ejc-sql-20221208.2116/src/ejc_sql/classpath.clj
+  ejc-sql-20221208.2116/src/ejc_sql/connect.clj
+  ejc-sql-20221208.2116/src/ejc_sql/deps_resolver.clj
+  ejc-sql-20221208.2116/src/ejc_sql/keywords.clj
+  ejc-sql-20221208.2116/src/ejc_sql/lib.clj
+  ejc-sql-20221208.2116/src/ejc_sql/output.clj
+  ejc-sql-20221208.2116/src/ejc_sql/structure.clj
+Built ejc-sql in 4.070s, finished at 2022-12-09T03:29:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  453 Dec  8 16:30 packages/ejc-sql-20221101.922.entry
-220K -rw-r--r-- 1 root root 220K Dec  8 16:30 packages/ejc-sql-20221101.922.tar
+4.0K -rw-r--r-- 1 root root  429 Dec  9 03:29 packages/ejc-sql-20221208.2116.entry
+220K -rw-r--r-- 1 root root 220K Dec  9 03:29 packages/ejc-sql-20221208.2116.tar

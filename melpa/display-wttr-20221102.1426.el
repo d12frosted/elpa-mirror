@@ -5,6 +5,8 @@
 ;; Author: Jose G Perez Taveras <josegpt27@gmail.com>
 ;; Maintainer: Jose G Perez Taveras <josegpt27@gmail.com>
 ;; Version: 2.1.0
+;; Package-Version: 20221102.1426
+;; Package-Commit: 7062953d034e27c297d58748cf74dad552aa2873
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/josegpt/display-wttr
 ;; SPDX-License-Identifier: GPL-3.0-only
