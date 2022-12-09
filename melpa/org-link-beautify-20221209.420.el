@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "28.1") (all-the-icons "5.0.0"))
-;; Package-Version: 20221205.1041
-;; Package-Commit: 581ef299b732e00b6b9c13e797a55e0be18859e1
+;; Package-Version: 20221209.420
+;; Package-Commit: 098684c0fd8b9c9d940122faf96f62f579d98699
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-link-beautify.git
@@ -616,7 +616,7 @@ You can install software `libmobi' to get command `mobitool'.")
    ;; for Linux, use `ffmpegthumbnailer'
    ((and (eq system-type 'gnu/linux) (executable-find "ffmpegthumbnailer")) "ffmpegthumbnailer")
    ;; for general, use `ffmpeg'
-   ;; $ ffmpeg -ss 00:09:00 video.avi -vcodec png -vframes 1 -an -f rawvideo -s 119x64 out.png
+   ;; $ ffmpeg -i video.mp4 -ss 00:01:00.000 -vframes 1 -vcodec png -an -f rawvideo -s 119x64 out.png
    ((executable-find "ffmpeg") "ffmpeg"))
   "Find available video thumbnailer command.")
 
@@ -651,11 +651,11 @@ You can install software `libmobi' to get command `mobitool'.")
            (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
              (org-link-beautify--notify-generate-thumbnail-failed video-file thumbnail-file)))
           ("ffmpeg"
-           ;; $ ffmpeg -ss 00:09:00 video.avi -vcodec png -vframes 1 -an -f rawvideo -s 119x64 out.png
+           ;; $ ffmpeg -i video.mp4 -ss 00:01:00.000 -vframes 1 -vcodec png -an -f rawvideo -s 119x64 out.png
            (start-process
             proc-name proc-buffer
-            "ffmpeg" "-s" "00:09:00" video-file "-vcodec" "png" "-vframes" "1" "-an" "-f" "rawvideo" "-s" (number-to-string thumbnail-size)
-            thumbnail-file)
+            "ffmpeg" "-i" video-file "-ss" "00:01:00.000" "-vframes" "1"
+            "-vcodec" "png" "-an" "-f" "rawvideo" "-s" (number-to-string thumbnail-size) thumbnail-file)
            (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail-file)))
              (org-link-beautify--notify-generate-thumbnail-failed video-file thumbnail-file))))))
     (org-link-beautify--add-overlay-marker start end)

@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221208.2350
-;; Package-Commit: d0af6488e232ea1736440df074d559182d723823
+;; Package-Version: 20221209.318
+;; Package-Commit: d4b0cd0337651100420cabfd3c5a6d3b67cd2308
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -610,12 +610,41 @@ CONTENTS is the contents of the list."
 (defun ox-spectacle--item (_item contents _info)
   "Transcode an _ITEM element from Org to HTML.
 CONTENTS holds the contents of the item."
-  (let (flags)
-    ;; <A>, <NUM>: make it Appear
-    (when (string-match "^<\\([A0-9]\\(?:[^>]*\\|$\\)\\)>" contents)
-      (setq flags (match-string 1 contents))
-      (setq contents (cl-subseq contents (length (match-string 0 contents)))))
-    (setq contents (concat "<${ListItem}>" (string-trim contents) "</${ListItem}>"))
+  (let (len flags props (contents (or contents "")))
+    ;; <A>, <NUM>: make it Appear; pass proper props to ListItem or Appear
+    (when (string-match "^<\\([^>]*\\)>" contents)
+      (setq props (string-trim (match-string 1 contents)))
+      (setq len (+ (length props) 2))
+      (when (string-match "^\\([A-Z0-9]\\)[ \t]+" props)
+        (setq flags (match-string 1 props))
+        (setq props (string-trim (cl-subseq props 1)))
+        (setq props
+              (with-temp-buffer
+                (insert props)
+                (goto-char (point-min))
+                ;; seperate props, some pass to Appear, others to ListItem
+                (while (re-search-forward
+                        (format "[ \t]+\\(%s\\)\\(=\\|[ \t]\\)"
+                                (mapconcat #'identity
+                                           '("priority" "alwaysVisible" "activeStyle" "inactiveStyle")
+                                           "\\|"))
+                        nil t)
+                  (when (string-equal (match-string 2) "=")
+                    (save-match-data
+                      (if (re-search-forward "[ \t][a-z][a-zA-Z0-9]+\\(?:=\\|[ \t]\\)" nil t)
+                          (goto-char (match-beginning 0))
+                        (goto-char (point-max)))))
+                  (setq flags (concat flags
+                                      (ox-spectacle--wa
+                                       (buffer-substring-no-properties
+                                        (match-beginning 0) (point)))))
+                  (delete-region (match-beginning 0) (point)))
+                (ox-spectacle--wa (buffer-string)))))
+      (setq contents (cl-subseq contents len)))
+    (setq contents (concat "<${ListItem}"
+                           (if props (ox-spectacle--wa (ox-spectacle--compat-props-react-htm props))) ">"
+                           (string-trim contents)
+                           "</${ListItem}>"))
     (ox-spectacle--maybe-appear contents flags)))
 
 (defun ox-spectacle--table (table contents _info)
@@ -728,7 +757,8 @@ INFO is a plist holding contextual information.  See
   "Transcode a PARAGRAPH element from Org to HTML.
 CONTENTS is the contents of the paragraph, as a string.  INFO is
 the plist used as a communication channel."
-  (let* ((headline (org-element-lineage paragraph '(headline)))
+  (let* ((case-fold-search nil)
+         (headline (org-element-lineage paragraph '(headline)))
          (props (org-export-read-attribute :attr_html paragraph))
          (type (plist-get (ox-spectacle--pop-from-plist props :type) :type))
          (props (ox-spectacle--wa (org-html--make-attribute-string props)))
@@ -767,29 +797,30 @@ the plist used as a communication channel."
   "Transcode a TEXT string from Org to HTML.
 TEXT is the string to transcode.  INFO is a plist holding
 contextual information."
-  ;; wrap Component with ${}, and add nessessary $ to its props
-  ;; don't forget SlideLayout.Xxx
-  (setq text (replace-regexp-in-string
-              (format "<\\(/?%s\\|SlideLayout\\.[a-zA-Z0-9]+\\)\\(\\(?: \\|$\\)[^>]*\\|\\)>"
-                      (mapconcat #'identity (ox-spectacle--available-components) "\\|"))
-              (lambda (old)
-                (save-match-data
-                  (let ((tag (match-string 1 old))
-                        (props (or (match-string 2 old) "")))
-                    (if (string-prefix-p "/" tag)
-                        (format "</${%s}>" (cl-subseq tag 1))
-                      (format "<${%s}%s>" tag (ox-spectacle--compat-props-react-htm props))))))
-              text t t))
-  ;; add $ for plain html tag, make it can use react syntax
-  (when (string-match-p (format "<\\(%s\\)[ \t]"
-                                (mapconcat #'identity
-                                           '("h1" "h2" "h3" "h4" "h5" "div" "section" "p" "span"
-                                             "small" "ul" "ol" "li" "hr" "a" "img" "button")
-                                           "\\|"))
-                        text)
-    (setq text (ox-spectacle--compat-props-react-htm text)))
-  (let ((org-html-protect-char-alist nil))
-    (setq text (org-html-plain-text text info))))
+  (let ((case-fold-search nil))
+    ;; wrap Component with ${}, and add nessessary $ to its props
+    ;; don't forget SlideLayout.Xxx
+    (setq text (replace-regexp-in-string
+                (format "<\\(/?%s\\|SlideLayout\\.[a-zA-Z0-9]+\\)\\(\\(?: \\|$\\)[^>]*\\|\\)>"
+                        (mapconcat #'identity (ox-spectacle--available-components) "\\|"))
+                (lambda (old)
+                  (save-match-data
+                    (let ((tag (match-string 1 old))
+                          (props (or (match-string 2 old) "")))
+                      (if (string-prefix-p "/" tag)
+                          (format "</${%s}>" (cl-subseq tag 1))
+                        (format "<${%s}%s>" tag (ox-spectacle--compat-props-react-htm props))))))
+                text t t))
+    ;; add $ for plain html tag, make it can use react syntax
+    (when (string-match-p (format "<\\(%s\\)[ \t]"
+                                  (mapconcat #'identity
+                                             '("h1" "h2" "h3" "h4" "h5" "div" "section" "p" "span"
+                                               "small" "ul" "ol" "li" "hr" "a" "img" "button")
+                                             "\\|"))
+                          text)
+      (setq text (ox-spectacle--compat-props-react-htm text)))
+    (let ((org-html-protect-char-alist nil))
+      (setq text (org-html-plain-text text info)))))
 
 (defun ox-spectacle--latex-fragment (latex-fragment _contents info)
   "Transcode a LATEX-FRAGMENT object from Org to HTML.
