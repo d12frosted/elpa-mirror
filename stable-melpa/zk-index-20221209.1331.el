@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.8
-;; Package-Version: 20221121.1227
-;; Package-Commit: 8fd5182712b192b7cfe545a03be25ab67e1e9efb
+;; Package-Version: 20221209.1331
+;; Package-Commit: 34fb7d2efffe3f0a9318da3fd3a055e805518b3d
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "27.1")(zk "0.3"))
@@ -264,6 +264,7 @@ Optionally refresh with FILES, using FORMAT-FN, SORT-FN, BUF-NAME."
 (defun zk-index--insert (candidates)
   "Insert CANDIDATES into ZK-Index."
   (when (eq major-mode 'zk-index-mode)
+    (garbage-collect)
     (dolist (file candidates)
       (insert (concat zk-index-prefix file "\n")))
     (goto-char (point-min))
@@ -293,7 +294,7 @@ Optionally refresh with FILES, using FORMAT-FN, SORT-FN, BUF-NAME."
               (re-search-forward id)
               (replace-match
                (propertize id 'invisible t)))
-              (goto-char (match-end 0))))))))
+            (goto-char (match-end 0))))))))
 
 ;;;; Utilities
 
@@ -343,7 +344,7 @@ Optionally refresh with FILES, using FORMAT-FN, SORT-FN, BUF-NAME."
   (with-current-buffer (or buf-name
                            zk-index-buffer-name)
     (if (< (count-lines (point-min) (point-max))
-           (length (zk--id-list)))
+           (length (zk--directory-files)))
         t nil)))
 
 ;;; Index Search and Focus Functions

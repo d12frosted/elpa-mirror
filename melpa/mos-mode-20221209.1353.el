@@ -1,8 +1,8 @@
 ;;; mos-mode.el --- MOS toolkit usage -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/themkat/mos-mode
-;; Package-Version: 20221204.1932
-;; Package-Commit: e6e3df3e1ea0a94848d09aa72eb214e5dc3b77ef
+;; Package-Version: 20221209.1353
+;; Package-Commit: 770f49417e8ad7dbf382c8691f6f689d793b9314
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4") (lsp-mode "8.0.0") (dap-mode "0.7") (dash "2.19.1") (ht "2.3"))
 
@@ -37,6 +37,27 @@
   "Path to the mos executable."
   :group 'mos-mode
   :type 'string)
+
+;; auto download related
+(defcustom mos-download-url
+  (format "https://github.com/datatrash/mos/releases/download/0.8.2/%s"
+          (pcase system-type
+            ('gnu/linux "mos-0.8.2-x86_64-unknown-linux-musl.tar.gz")
+            ('darwin "mos-0.8.2-x86_64-apple-darwin.tar.gz")
+            ('windows-nt "mos-0.8.2-x86_64-pc-windows-msvc.zip")))
+  "Automatic download url for the mos executable"
+  :type 'string
+  :group 'mos-mode)
+
+(defcustom mos-executable-store-path (f-join lsp-server-install-dir
+                                             "mos"
+                                             (if (eq system-type 'windows-nt)
+                                                 "mos.exe"
+                                               "mos"))
+  "The path to where the automatic download of mos is stored"
+  :type 'file
+  :group 'mos-mode)
+
 
 (defcustom mos-vice-executable-path (executable-find "x64sc")
   "Path to the VICE executable (either x64 or x64sc)."
@@ -189,44 +210,25 @@ NO-DEBUG denotes if it should be a regular session or a debug session."
 
 
 ;; download if dependency not present
-;; TODO: FIX! NOT WORKING AT THE MOMENT!
-;; (defcustom mos-download-url
-;;   (string-join (list "https://github.com/datatrash/mos/releases/download/0.7.5/mos-0.7.5-x86_64-"
-;;                      (cond ((string-equal "darwin" system-type) "apple-darwin.tar.gz")
-;;                      ((string-equal "gnu/linux" system-type) "unknown-linux-musl.tar.gz")
-;;                      ((string-equal "windows-nt" system-type) "pc-windows-msvc.zip"))))
-  
-;;   "Download URL for the mos executable"
-;;   :group 'mos-mode
-;;   :type 'string)
-
-;; (defvar mos-lsp-download-path (f-join lsp-server-install-dir "mos" "mos"))
-
-;; (lsp-dependency
-;;  'mos
-;;  (list :system mos-lsp-download-path)
-;;  (list :download
-;;        :url mos-download-url
-;;        ;; TODO: should there be a way to unpack tar.gz in lsp-mode? maybe make a pr for that instead fo hacky shit here...
-;;        :decompress (if (string-equal "windows-nt" system-type) :zip :tgz)
-;;        :store-path (f-join lsp-server-install-dir
-;;                            "mos"
-;;                            "mos")
-;;        :binary-path mos-lsp-download-path
-;;        :set-executable? t))
+(lsp-dependency 'mos
+                `(:download :url ,mos-download-url
+                            :decompress :targz
+                            :store-path ,mos-executable-store-path
+                            :set-executable? t))
 
 (lsp-register-client
  (make-lsp-client
-  :new-connection (lsp-stdio-connection (lambda () (list mos-executable-path "-v" "lsp")))
+  :new-connection (lsp-stdio-connection (lambda () (list (or mos-executable-path
+                                                        mos-executable-store-path)
+                                                    "-v" "lsp")))
   :activation-fn (lsp-activate-on "mos")
   :major-modes '(mos-mode)
   :priority -1
   :server-id 'mos-ls
   :action-handlers (ht ("mos.runSingleTest" (mos-debug-test t))
                        ("mos.debugSingleTest" (mos-debug-test nil)))
-  ;; :download-server-fn (lambda (_client callback error-callback _update?)
-  ;;                       (lsp-package-ensure 'mos callback error-callback)
-  ))
+  :download-server-fn (lambda (_client callback error-callback _update?)
+                        (lsp-package-ensure 'mos callback error-callback))))
 
 (defun mos-mode-populate-debug-args (conf)
   "Populate default settings for debug adapter.

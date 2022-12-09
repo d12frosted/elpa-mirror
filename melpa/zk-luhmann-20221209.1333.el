@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20220820.1643
-;; Package-Commit: 304536486ccae8129dd681265d199062f2026891
+;; Package-Version: 20221209.1333
+;; Package-Commit: 70ca24dbf9786fd7ec2ddfa5567a8fcb05c0ee9c
 ;; Homepage: https://github.com/localauthor/zk-luhmann
 ;; Package-Requires: ((emacs "25.1")(zk "0.4")(zk-index "0.6"))
 
@@ -70,12 +70,14 @@
   "Enable indented view in ZK-Index."
   :type 'boolean)
 
-(defvar zk-luhmann-id-regexp (concat zk-luhmann-id-prefix
-                                     "\\([0-9a-zA-Z"
-                                     zk-luhmann-id-delimiter
-                                     "]*\\)"
-                                     zk-luhmann-id-postfix)
-  "Regexp to match Luhmann-IDs.")
+(defmacro zk-luhmann-id-regexp ()
+  "Make regexp to match Luhmann-IDs.
+Based on defcustoms `zk-luhmann-id-prefix', `zk-luhmann-id-postfix', and `zk-luhmann-id-delimiter'."
+  '(concat zk-luhmann-id-prefix
+           "\\([0-9a-zA-Z"
+           zk-luhmann-id-delimiter
+           "]*\\)"
+           zk-luhmann-id-postfix))
 
 
 ;;; Luhmann ID Support
@@ -115,11 +117,11 @@
   (sort list
         (lambda (a b)
           (let* ((a-list
-                  (when (string-match zk-luhmann-id-regexp a)
+                  (when (string-match (zk-luhmann-id-regexp) a)
                     (split-string (match-string 1 a)
                                   zk-luhmann-id-delimiter)))
                  (b-list
-                  (when (string-match zk-luhmann-id-regexp b)
+                  (when (string-match (zk-luhmann-id-regexp) b)
                     (split-string (match-string 1 b)
                                   zk-luhmann-id-delimiter)))
                  (count 0)
@@ -221,13 +223,14 @@ Passes ARGS to `zk-index'."
 
 (defun zk-luhmann-index--insert (candidates)
   "Insert CANDIDATES into ZK-Index."
+  (garbage-collect)
   (let (lid-index)
     (dolist (file candidates)
       (let* ((id (progn
                    (string-match zk-id-regexp file)
                    (match-string 0 file)))
              (lid (progn
-                    (string-match zk-luhmann-id-regexp file)
+                    (string-match (zk-luhmann-id-regexp) file)
                     (match-string 0 file)))
              (reg (concat "[^"
                           (regexp-quote zk-luhmann-id-delimiter)
@@ -350,7 +353,7 @@ Passes ARGS to `zk-index'."
   (interactive)
   (when (eq major-mode 'zk-index-mode)
     (beginning-of-line)
-    (unless (re-search-forward zk-luhmann-id-regexp
+    (unless (re-search-forward (zk-luhmann-id-regexp)
                                (line-end-position) t)
       (error "Not a Luhmann note"))
     (zk-index--reset-mode-line)
