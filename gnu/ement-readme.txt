@@ -23,17 +23,19 @@ Table of Contents
 .. 3. Encrypted room support through Pantalaimon
 3. Rationale
 4. Changelog
-.. 1. 0.4.1
-.. 2. 0.4
-.. 3. 0.3.1
-.. 4. 0.3
-.. 5. 0.2.1
-.. 6. 0.2
-.. 7. 0.1.4
-.. 8. 0.1.3
-.. 9. 0.1.2
-.. 10. 0.1.1
-.. 11. 0.1
+.. 1. 0.5.1
+.. 2. 0.5
+.. 3. 0.4.1
+.. 4. 0.4
+.. 5. 0.3.1
+.. 6. 0.3
+.. 7. 0.2.1
+.. 8. 0.2
+.. 9. 0.1.4
+.. 10. 0.1.3
+.. 11. 0.1.2
+.. 12. 0.1.1
+.. 13. 0.1
 5. Development
 .. 1. Copyright Assignment
 .. 2. Matrix spec in Org format
@@ -428,7 +430,40 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.4.1
+4.1 0.5.1
+─────────
+
+  *Fixes*
+  ⁃ Autoload `ement-directory' commands.
+  ⁃ Faces in `ement-directory' listings.
+
+
+4.2 0.5
+───────
+
+  *Additions*
+  ⁃ Present "joined-and-left" and "rejoined-and-left" membership event
+    pairs as such.
+  ⁃ Process and show rooms' canonical alias events.
+
+  *Changes*
+  ⁃ The [taxy.el]-based room list, with programmable, smart grouping, is
+    now the default `ement-room-list'.  (The old,
+    `tabulated-list-mode'-based room list is available as
+    `ement-tabulated-room-list'.)
+  ⁃ When selecting a room to view with completion, don't offer spaces.
+  ⁃ When selecting a room with completion, empty aliases and topics are
+    omitted instead of being displayed as nil.
+
+  *Fixes*
+  ⁃ Use of send-message filter when replying.
+  ⁃ Replies may be written in compose buffers.
+
+
+[taxy.el] <https://github.com/alphapapa/taxy.el>
+
+
+4.3 0.4.1
 ─────────
 
   *Fixes*
@@ -436,7 +471,7 @@ Feel free to join us in the chat room:
     marker's position again.
 
 
-4.2 0.4
+4.4 0.4
 ───────
 
   *Additions*
@@ -467,7 +502,7 @@ Feel free to join us in the chat room:
   ⁃ Highlighting of `@room' mentions.
 
 
-4.3 0.3.1
+4.5 0.3.1
 ─────────
 
   *Fixes*
@@ -475,7 +510,7 @@ Feel free to join us in the chat room:
     local user, the room is considered read).
 
 
-4.4 0.3
+4.6 0.3
 ───────
 
   *Additions*
@@ -503,14 +538,14 @@ Feel free to join us in the chat room:
   ⁃ Compatibility with Emacs 27.
 
 
-4.5 0.2.1
+4.7 0.2.1
 ─────────
 
   *Fixes*
   ⁃ Info manual export filename.
 
 
-4.6 0.2
+4.8 0.2
 ───────
 
   *Changes*
@@ -545,15 +580,15 @@ Feel free to join us in the chat room:
 [Julien Roy] <https://github.com/MrRoy>
 
 
-4.7 0.1.4
+4.9 0.1.4
 ─────────
 
   *Fixed*
   ⁃ Info manual directory headers.
 
 
-4.8 0.1.3
-─────────
+4.10 0.1.3
+──────────
 
   *Fixed*
 
@@ -562,8 +597,8 @@ Feel free to join us in the chat room:
     re-enabled in a future release.)
 
 
-4.9 0.1.2
-─────────
+4.11 0.1.2
+──────────
 
   *Fixed*
   ⁃ Function `ement-room-sync' correctly updates room-list buffers.
@@ -579,7 +614,7 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.10 0.1.1
+4.12 0.1.1
 ──────────
 
   *Fixed*
@@ -589,7 +624,7 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.11 0.1
+4.13 0.1
 ────────
 
   After almost two years of development, the first tagged release.
