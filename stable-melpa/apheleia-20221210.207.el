@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20221127.217
-;; Package-Commit: 049b724858c5c6f43a7a0831ddc2d85920dcd0c3
+;; Package-Version: 20221210.207
+;; Package-Commit: deab8fb972f0cbc03c6a5409564435121b5db9c2
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.1
@@ -958,6 +958,8 @@ being run, for diagnostic purposes."
     (elm-format . ("elm-format" "--yes" "--stdin"))
     (fish-indent . ("fish_indent"))
     (gofmt . ("gofmt"))
+    (gofumpt . ("gofumpt"))
+    (goimports . ("goimports"))
     (google-java-format . ("google-java-format" "-"))
     (isort . ("isort" "-"))
     (lisp-indent . apheleia-indent-lisp-buffer)

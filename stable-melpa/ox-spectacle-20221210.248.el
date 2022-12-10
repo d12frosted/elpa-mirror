@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221210.130
-;; Package-Commit: 6dec38af7039863afc22437eca38ae3db091a7dc
+;; Package-Version: 20221210.248
+;; Package-Commit: 1c656b78531dbba72141250678d548ca27cfaece
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -35,22 +35,20 @@
 ;;
 ;; Org-Mode + React, powerful! Have a try, you will like it :)
 ;;
-;; First, make sure your emacs and org-mode is ok.
+;; First, open your Emacs.
 ;;
-;; Second, you should learn some html and react.
-;;
-;; Then, install this, and add to your config file:
+;; Then, install this and load it:
 ;;
 ;;   (require 'ox-spectacle)
 ;;
-;; All ready.
+;; That's all.
 ;;
 ;; Create one org file, put your ideas there.
 ;; Then export them to a html file and open it with `C-c C-e s o`.
 ;;
 ;; The amazing presentation is in front of you. Enjoy it.
 ;;
-;; View README.org for detail.
+;; View README.md for detail.
 
 ;;; Code:
 
@@ -621,7 +619,7 @@ CONTENTS is the contents of the list."
 CONTENTS holds the contents of the item."
   (let (len flags props (contents (or contents "")))
     ;; <A>, <NUM>: make it Appear; pass proper props to ListItem or Appear
-    (when (string-match "^<\\([^>]*\\)>" contents)
+    (when (string-match "^<\\([^>\\$][^>]*\\)>" contents)
       (setq props (string-trim (match-string 1 contents)))
       (setq len (+ (length props) 2))
       (when (string-match "^\\([A-Z0-9]\\)\\([ \t]\\|$\\)+" props)
@@ -777,6 +775,7 @@ the plist used as a communication channel."
          (stepperp (string-match-p "<Stepper.*>" (or (org-element-property :raw-value headline) "")))
          tag)
     (if (or stepperp
+            (or (string-equal type "no") (string-equal type "raw"))
             (eq parentype 'item)
             (eq parentype 'quote-block)
             (org-html-standalone-image-p paragraph info))

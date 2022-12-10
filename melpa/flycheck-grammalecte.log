@@ -3,23 +3,9 @@ Fetcher: git
 Source:  https://git.umaneti.net/flycheck-grammalecte/
 
 Updating /mnt/store/melpa/working/flycheck-grammalecte/
-Checking out origin/HEAD
-Checking out 314de13247710410f11d060a214ac4f400c02a71
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/flycheck-grammalecte/
-  to /tmp/flycheck-grammalectetKO6uA/flycheck-grammalecte-20220822.2307
-    flycheck-grammalecte.el -> flycheck-grammalecte.el
-    grammalecte.el -> grammalecte.el
-    conjugueur.py -> conjugueur.py
-    flycheck_grammalecte.py -> flycheck_grammalecte.py
-Created flycheck-grammalecte-20220822.2307.tar containing:
-  flycheck-grammalecte-20220822.2307/
-  flycheck-grammalecte-20220822.2307/conjugueur.py
-  flycheck-grammalecte-20220822.2307/flycheck-grammalecte-pkg.el
-  flycheck-grammalecte-20220822.2307/flycheck-grammalecte.el
-  flycheck-grammalecte-20220822.2307/flycheck_grammalecte.py
-  flycheck-grammalecte-20220822.2307/grammalecte.el
-Built flycheck-grammalecte in 5.909s, finished at 2022-12-10T01:29:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 482 Dec 10 01:29 packages/flycheck-grammalecte-20220822.2307.entry
- 60K -rw-r--r-- 1 root root 60K Dec 10 01:29 packages/flycheck-grammalecte-20220822.2307.tar
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.umaneti.net/flycheck-grammalecte/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+
+Command exited with non-zero exit-code: 128
