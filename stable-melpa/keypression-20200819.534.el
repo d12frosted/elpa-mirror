@@ -4,8 +4,6 @@
 
 ;; Author: chuntaro <chuntaro@sakura-games.jp>
 ;; Keywords: key, screencast, tools
-;; Package-Version: 20200819.534
-;; Package-Commit: 9427241f3fa539e4b5ad7581a05eb7e49f2cf518
 ;; Version: 1.0.5
 ;; Homepage: https://github.com/chuntaro/emacs-keypression
 ;; Package-Requires: ((emacs "26.3"))

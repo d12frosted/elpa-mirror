@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20221205.1922
-;; Package-Commit: 1f6b52a8cc253bc2df9c5f11a40571fe2b535b59
+;; Package-Version: 20221210.1608
+;; Package-Commit: c156ffe5f3c979ab89fd941658e840801078d091
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.19"))
 ;; Keywords: languages util
@@ -1486,12 +1486,15 @@ STATUS and ERROR-OUTPUT come from the formatter."
 (defun format-all--save-line-number (thunk)
   "Internal helper function to run THUNK and go back to the same line."
   (let ((old-line-number (line-number-at-pos))
-        (old-column (current-column)))
+        (old-column (current-column))
+        (old-window (selected-window))
+        (old-window-start (window-start)))
     (funcall thunk)
     (goto-char (point-min))
     (forward-line (1- old-line-number))
     (let ((line-length (- (point-at-eol) (point-at-bol))))
-      (goto-char (+ (point) (min old-column line-length))))))
+      (goto-char (+ (point) (min old-column line-length))))
+    (set-window-start old-window old-window-start)))
 
 (defun format-all--run-chain (language chain region)
   "Internal function to run a formatter CHAIN on the current buffer.

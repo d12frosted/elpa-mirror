@@ -3,6 +3,8 @@
 
 ;; Author: Adam Svanberg
 ;; URL: https://github.com/adsva/fantom-emacs-theme
+;; Package-Version: 20200328.604
+;; Package-Commit: 2c1c7fd53086c2ff86ee0961642c3b58e2343c08
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 ;; Created with emacs-theme-generator, https://github.com/mswift42/theme-creator.
