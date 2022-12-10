@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221210.248
-;; Package-Commit: 1c656b78531dbba72141250678d548ca27cfaece
+;; Package-Version: 20221210.549
+;; Package-Commit: 37560751a54284a4af24c4b16b839ad71e103aa3
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -619,7 +619,7 @@ CONTENTS is the contents of the list."
 CONTENTS holds the contents of the item."
   (let (len flags props (contents (or contents "")))
     ;; <A>, <NUM>: make it Appear; pass proper props to ListItem or Appear
-    (when (string-match "^<\\([^>\\$][^>]*\\)>" contents)
+    (when (string-match "^<\\([^>$][^>]*\\)>" (car (split-string contents "\n")))
       (setq props (string-trim (match-string 1 contents)))
       (setq len (+ (length props) 2))
       (when (string-match "^\\([A-Z0-9]\\)\\([ \t]\\|$\\)+" props)
