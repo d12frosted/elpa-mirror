@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221211.1105
-;; Package-Commit: e065692730fb0e460582f5dc8292087e683a0e87
+;; Package-Version: 20221211.1213
+;; Package-Commit: 65981377ff503073f86cc6c94efbe7cc2cee8373
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -139,7 +139,7 @@
 (defcustom ox-spectacle-export-level 0
   "Export policy.
 0 for normal, 1 for embed scripts, 2 for embed images,
-3 for embed scripts and images."
+3 for embed all scripts and images, that is, all-in-one/self-contained."
   :type 'integer)
 
 (defcustom ox-spectacle-scripts
@@ -514,17 +514,17 @@ holding contextual information."
              (layout (org-element-property :LAYOUT headline))
              (tag type)
              (id (mapconcat #'number-to-string (org-export-get-headline-number headline info) "_"))
-             (regexp (format "\\(%s\\)" (mapconcat #'identity (ox-spectacle--available-components info) "\\|")))
+             (regexp (format "\\(?:%s\\)" (mapconcat #'identity (ox-spectacle--available-components info) "\\|")))
              prefix inline-tag inline-props inline-prefix inline-suffix)
         ;; headline with <Component props> declaration has the highest priority
-        (when (string-match (format "<\\${\\(?:%s\\|SlideLayout\\.[a-zA-Z0-9]+\\)}\\( [^>]*\\|\\)>\\(\\(?:<.*>\\)?\\)$" regexp) title)
+        (when (string-match (format "<\\${\\(%s\\(?:\\.[A-Z][a-zA-Z0-9]+\\)*\\)}\\( [^>]*\\|\\)>\\(\\(?:<.*>\\)?\\)$" regexp) title)
           (setq inline-tag (match-string 1 title)
                 inline-props (ox-spectacle--wa (match-string 2 title))
                 inline-prefix (match-string 3 title)) ; deal multiple Components on headline
           (with-temp-buffer
             (insert inline-prefix)
             (goto-char (point-min))
-            (while (re-search-forward "<${\\([A-Z][a-zA-Z0-9]+}\\)" nil t)
+            (while (re-search-forward "<${\\([A-Z][a-zA-Z0-9]+\\(?:\\.[A-Z][a-zA-Z0-9]+\\)*}\\)" nil t)
               (setq inline-suffix (concat " </${" (match-string 1) "}>" inline-suffix)))))
         ;; top-most headline, should be a Slide or SlideLayout
         (when (= level 1)
@@ -570,7 +570,7 @@ contextual information."
          (root (car (ox-spectacle--get-headlines element))))
     ;; catch scripts under <config> section and others with ':type config' above
     (if (or (and flags (string-equal-ignore-case flags "config"))
-            (string-equal-ignore-case (org-element-property :raw-value root) "<config>"))
+            (string-equal-ignore-case (or (org-element-property :raw-value root) "") "<config>"))
         (progn
           (pcase lang
             ("html" (setq ox-spectacle--extra-header
