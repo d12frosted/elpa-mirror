@@ -8,7 +8,7 @@ Table of Contents
 
 1. Usage
 2. Installation
-.. 1. NonGNU ELPA Devel
+.. 1. NonGNU ELPA
 .. 2. Quelpa
 .. 3. Manual
 3. Comparison With Other Terminal Emulators
@@ -26,11 +26,13 @@ It is pretty fast, more than three times faster than Term, despite being
 implemented entirely in Emacs Lisp.  So fast that you can comfortably
 run Emacs inside Eat, or even use your Emacs as a terminal multiplexer.
 
-It has many feature that other Emacs terminal emulator still don't have,
-for example complete mouse support.
+It has many features that other Emacs terminal emulator still don't
+have, for example complete mouse support, shell integration, etc.
 
 It flickers less than other Emacs terminal emulator, so you get more
 performance and a smooth experience.
+
+To get the most out of Eat, you should also setup shell integration.
 
 
 1 Usage
@@ -69,17 +71,21 @@ performance and a smooth experience.
     the above three keybinding modes here too, except that `C-c C-k' is
     not special (i.e. not bound by Eat) in "emacs" mode and "line" mode.
 
-  You can add any of these to `eshell-first-time-mode-hook' like the
-  following:
+  You can add any of these to `eshell-load-hook' like the following:
 
   ┌────
-  │ ;; For `eat-eshell-visual-command-mode'.
-  │ (add-hook 'eshell-first-time-mode-hook
-  │ 	  #'eat-eshell-visual-command-mode)
-  │ 
   │ ;; For `eat-eshell-mode'.
-  │ (add-hook 'eshell-first-time-mode-hook #'eat-eshell-mode)
+  │ (add-hook 'eshell-load-hook #'eat-eshell-mode)
+  │ 
+  │ ;; For `eat-eshell-visual-command-mode'.
+  │ (add-hook 'eshell-load-hook #'eat-eshell-visual-command-mode)
   └────
+
+  To setup shell integration for GNU Bash, put the following at the end
+  of your `.bashrc':
+
+  #+begin_src sh [ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \ source
+  "$EAT_SHELL_INTEGRATION_DIR/bash" #+end_src sh
 
 
 2 Installation
@@ -88,16 +94,15 @@ performance and a smooth experience.
   Eat requires at least Emacs 28.1 or above.
 
 
-2.1 NonGNU ELPA Devel
-─────────────────────
+2.1 NonGNU ELPA
+───────────────
 
-  Eat is available on NonGNU ELPA Devel.  If you don't have the archive
-  setup put something like the following in your init file:
+  Eat is available on NonGNU ELPA.  If you don't have the archive setup,
+  put something like the following in your init file:
 
   ┌────
   │ (add-to-list 'package-archives
-  │ 	     '("nongnu-dev"
-  │ 	       . "https://elpa.nongnu.org/nongnu-devel/"))
+  │ 	     '("nongnu" . "https://elpa.nongnu.org/nongnu/"))
   └────
 
 
@@ -106,10 +111,11 @@ performance and a smooth experience.
 
   ┌────
   │ (quelpa '(eat :fetcher git
-  │ 	      :url "https://codeberg.org/akib/emacs-eat.git"
-  │ 	      :files ("*.el" "dir"
-  │ 		      "*.info" "*.texi"
-  │ 		      "*.ti" ("e" "e/*")))
+  │ 	      :url "/home/akib/projects/emacs-eat"
+  │ 	      :files ("*.el" ("term" "term/*.el") "*.texi"
+  │ 		      "*.ti" ("e" "e/*")
+  │ 		      ("integration" "integration/*")
+  │ 		      (:exclude ".dir-locals.el" "*-tests.el"))))
   └────
 
 

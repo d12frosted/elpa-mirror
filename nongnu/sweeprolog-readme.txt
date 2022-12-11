@@ -925,15 +925,25 @@ Documenting predicates
   `sweeprolog-document-predicate-at-point' leaves the cursor at the end
   of the newly inserted documentation comment for the user to extend or
   edit it if needed.  To add another comment line, use `M-j'
-  (`comment-indent-new-line') which starts a new line with the comment
-  prefix filled in.  To reformat the current paragraph of `PlDoc'
-  comments, use `M-q' (`fill-paragraph').
+  (`default-indent-new-line') which starts a new line with the comment
+  prefix filled in.  Emacs also has other powerful built-in features for
+  working with comments in code buffers that you can leverage to edit
+  `PlDoc' comments.  For full details, see [Manipulating Comments].
+  Furthermore you can make use of the rich support Emacs provides for
+  editing natural language text when working on `PlDoc' comments.  For
+  example, to nicely format a paragraph of text, use `M-q'
+  (`fill-paragraph').  Many useful commands for editing text are
+  documented in [Commands for Human Languages], which see.
 
   For more information about `PlDoc' and source documentation in
   SWI-Prolog, see [the PlDoc manual].
 
 
 [Comment Commands in the Emacs manual] <info:emacs#Comment Commands>
+
+[Manipulating Comments] <info:emacs#Comments>
+
+[Commands for Human Languages] <info:emacs#Text>
 
 [the PlDoc manual]
 <https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/pldoc.html%27)>

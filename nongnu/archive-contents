@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 8 2)
+	   [(1 8 3)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "02bc30d041934ce8d6092a7f80325e6e4a875f95"))])
+	     (:commit . "6c6946c6a59492eb94bcf680b2db6b144d441115"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -365,7 +365,7 @@
 		 ("Arne Jørgensen" . "arne@arnested.dk"))
 		(:commit . "ed90b0c4d808365e9ae9f16cc8a96eff17815621"))])
  (eat .
-      [(0 1 1)
+      [(0 2 1)
        ((emacs
 	 (28 1)))
        "Emulate A Terminal, in a region, in a buffer and in Eshell" tar
@@ -374,7 +374,7 @@
 	(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	(:authors
 	 ("Akib Azmain Turja" . "akib@disroot.org"))
-	(:commit . "16d9a5074fb3887caa90a56f546ce316d6ac9f2d"))])
+	(:commit . "ab52caff526593f94ee16120d7f4493d2bb3dfa8"))])
  (edit-indirect .
 		[(0 1 10)
 		 ((emacs
@@ -1554,7 +1554,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20221205 101826)
+	      [(1 0 20221210 113935)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
@@ -1789,7 +1789,7 @@
 	   ("Random User"))
 	  (:commit . "7563c61b7e152e0c7e06387edf98809c08cb134f"))])
  (sweeprolog .
-	     [(0 9 4)
+	     [(0 9 5)
 	      ((emacs
 		(28 1)))
 	      "Embedded SWI-Prolog" tar
@@ -1798,7 +1798,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "0e324b3216ff031104fefbdb23e081d88ed1e7f6"))])
+	       (:commit . "6eab93747210a3cdb21a20789db157ac61312b86"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs
