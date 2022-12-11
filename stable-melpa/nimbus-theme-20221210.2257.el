@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.3.0
-;; Package-Version: 20221206.2121
-;; Package-Commit: 178557148f2e132c79be25429d04c5b89f6535dd
+;; Package-Version: 20221210.2257
+;; Package-Commit: 5caf48fec49adc5578cdf55b621994787d1982a9
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -1242,7 +1242,7 @@
 
 ;;;###autoload
 (defun nimbus-theme()
-  "Apply 'nimbus-theme'."
+  "Apply ‘nimbus-theme’."
   (interactive)
   (load-theme 'nimbus t))
 

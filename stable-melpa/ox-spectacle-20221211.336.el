@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221210.1016
-;; Package-Commit: d307a7f1e84d0511d363e0819bcec77e0cfba810
+;; Package-Version: 20221211.336
+;; Package-Commit: fa3bb3461cfb08c2ec955b82e4c6473e65d5566b
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -73,7 +73,8 @@
     (:slide-opts             "SLIDE_OPTS"        nil ox-spectacle-slide-opts space)
     (:text-opts              "TEXT_OPTS"         nil ox-spectacle-text-opts space)
     (:export-level           "EXPORT_LEVEL"      0   ox-spectacle-export-level)
-    (:extern-components      "EXTERN_COMPONENTS" nil)
+    (:extern-components      "EXTERN_COMPONENTS" nil ox-spectacle-extern-components split)
+    (:extra-scripts          "EXTRA_SCRIPTS"     nil ox-spectacle-extra-scripts split)
     (:html-doctype           nil                 nil ox-spectacle--doctype)
     (:with-special-strings   nil                 nil))
 
@@ -154,8 +155,12 @@ You can replace them with your CDN version or local version."
   :type '(repeat string))
 
 (defcustom ox-spectacle-extra-scripts nil
-  "Optional scripts you maybe used in the slides.
+  "Other scripts you maybe used in the slides.
 You can config your-own/third-party scripts used by the slides here."
+  :type '(repeat string))
+
+(defcustom ox-spectacle-extern-components nil
+  "Declare the components you create or import to make the parser work properly."
   :type '(repeat string))
 
 (defcustom ox-spectacle-default-template
@@ -181,7 +186,7 @@ You can config your-own/third-party scripts used by the slides here."
 (defvar-local ox-spectacle--user-templates nil)
 
 (defconst ox-spectacle--html-tags
-  '("h1" "h2" "h3" "h4" "h5" "div" "section" "p" "span"
+  '("h1" "h2" "h3" "h4" "h5" "div" "section" "p" "span" "canvas"
     "small" "ul" "ol" "li" "hr" "a" "img" "button"))
 
 (defconst ox-spectacle--components
@@ -279,7 +284,7 @@ You can config your-own/third-party scripts used by the slides here."
 INFO is a plist holding export options.
 When FORCENEW is t then try to refresh the cache."
   (let ((lv (ox-spectacle--export-level info))
-        (scripts (append ox-spectacle-scripts ox-spectacle-extra-scripts)))
+        (scripts (append ox-spectacle-scripts (plist-get info :extra-scripts))))
     (if (or (= lv 1) (>= lv 3))
         (let* ((name (md5 (mapconcat #'identity scripts)))
                (file (format ox-spectacle-cache-file-tpl name)))
@@ -331,19 +336,24 @@ then filter the props."
                 info))))
       (cons tag (if (> (length props) 0) props)))))
 
-(defun ox-spectacle--extern-components ()
-  "Return all components declared with #+EXTERN_COMPONENTS.
-It should be the components defined in buffer scripts or external."
-  (save-excursion
-    (goto-char (point-min))
-    (let ((case-fold-search nil))
-      (when (and (re-search-forward "^\\(?:\\(#\\)\\+EXTERN_COMPONENTS:[ \t]*\\(.*\\)\\|\\(\\*\\)\\)" nil t)
-                 (string= (match-string 1) "#"))
-        (split-string (string-trim (match-string 2)) " " t)))))
-
-(defun ox-spectacle--available-components ()
-  "All components available."
-  (append ox-spectacle--components (ox-spectacle--extern-components)))
+(defun ox-spectacle--available-components (&optional info)
+  "All components available.
+If INFO is not nil, get those from it directly.
+INFO is a plist holding contextual information."
+  (let ((externals (if info (plist-get info :extern-components)
+                     (save-excursion
+                       (save-restriction
+                         (let (s)
+                           (widen)
+                           (goto-char (point-min))
+                           (while (not (eobp))
+                             (let ((line (buffer-substring-no-properties
+                                          (line-beginning-position) (line-end-position))))
+                               (when (string-match "^#\\+EXTERN_COMPONENTS:\\(.*\\)" line)
+                                 (setq s (concat s " " (match-string 1 line)))))
+                             (forward-line))
+                           (if s (split-string (string-trim s)))))))))
+    (append ox-spectacle--components externals)))
 
 (defun ox-spectacle--get-headlines (element &optional with-self)
   "Collect all ancestor headlines of ELEMENT.
@@ -456,7 +466,7 @@ holding export options."
     (format ox-spectacle--page-html
             (org-export-data (plist-get info :title) info)
             (ox-spectacle--wa (org-html--build-mathjax-config info) "\n<!-- MathJax Setup -->\n\n" "\n")
-            (ox-spectacle--wa (ox-spectacle--make-scripts info) "\n<!-- core scripts -->\n\n" "\n")
+            (ox-spectacle--wa (ox-spectacle--make-scripts info) "\n<!-- scripts -->\n\n" "\n")
             (ox-spectacle--wa ox-spectacle--extra-header "\n<!-- extra head catch from the org file -->\n\n" "\n")
             (ox-spectacle--wa ox-spectacle--extra-css "\n<!-- extra css catch from the org file -->\n\n<style>\n" "\n</style>\n")
             (mapconcat #'identity ox-spectacle--components ", ")
@@ -506,7 +516,7 @@ holding contextual information."
              (layout (org-element-property :LAYOUT headline))
              (tag type)
              (id (mapconcat #'number-to-string (org-export-get-headline-number headline info) "_"))
-             (regexp (format "\\(%s\\)" (mapconcat #'identity (ox-spectacle--available-components) "\\|")))
+             (regexp (format "\\(%s\\)" (mapconcat #'identity (ox-spectacle--available-components info) "\\|")))
              prefix inline-tag inline-props inline-prefix inline-suffix)
         ;; headline with <Component props> declaration has the highest priority
         (when (string-match (format "<\\${\\(?:%s\\|SlideLayout\\.[a-zA-Z0-9]+\\)}\\( [^>]*\\|\\)>\\(\\(?:<.*>\\)?\\)$" regexp) title)
@@ -775,7 +785,7 @@ the plist used as a communication channel."
          (type (cadr (ox-spectacle--pop-from-plist props :type)))
          (props (ox-spectacle--wa (org-html--make-attribute-string props)))
          (regexp-html (format "\\(%s\\)" (mapconcat #'identity ox-spectacle--html-tags "\\|")))
-         (regexp-comp (format "\\(%s\\)" (mapconcat #'identity (ox-spectacle--available-components) "\\|")))
+         (regexp-comp (format "\\(\\(%s\\)\\(\\.[A-Z][a-zA-Z0-9]+\\)*\\)" (mapconcat #'identity (ox-spectacle--available-components info) "\\|")))
          (parentype (org-element-type (org-export-get-parent paragraph)))
          (hd-raw (or (org-element-property :raw-value headline) ""))
          (notep (string-match-p "<notes.*>" hd-raw))
@@ -788,8 +798,8 @@ the plist used as a communication channel."
             (org-html-standalone-image-p paragraph info))
         contents
       ;; if <Element> style, insert props into proper place directly, same as plain html paragraph
-      (let ((firstline (car (split-string contents "\n")))
-            (reg (format "^[ \t]*</?\\(\\${%s}\\|%s\\)\\([ \t]\\|$\\)" regexp-comp regexp-html)))
+      (let ((firstline (car (split-string contents "\n" t)))
+            (reg (format "^[ \t]*</?\\(\\${%s}\\|%s\\)\\([ \t]\\|/?>\\)" regexp-comp regexp-html)))
         (when (string-match-p reg firstline)
           (setq contents (with-temp-buffer
                            (insert contents)
@@ -808,7 +818,8 @@ the plist used as a communication channel."
         (if (= (length props) 0) (setq props text-props)))
       ;; add ${} for component tag
       (if (string-match-p regexp-comp (or tag "")) (setq tag (format "${%s}" tag)))
-      (if tag (format "<%s%s>%s</%s>" tag props (string-trim contents) tag) contents))))
+      (if tag (format "<%s%s>%s</%s>" tag props (string-trim contents) tag)
+        (ox-spectacle--wa contents "\n")))))
 
 (defun ox-spectacle--plain-text (text info)
   "Transcode a TEXT string from Org to HTML.
@@ -816,10 +827,10 @@ TEXT is the string to transcode.  INFO is a plist holding
 contextual information."
   (let ((case-fold-search nil))
     ;; wrap Component with ${}, and add nessessary $ to its props
-    ;; don't forget SlideLayout.Xxx
     (setq text (replace-regexp-in-string
-                (format "<\\(/?%s\\|SlideLayout\\.[a-zA-Z0-9]+\\)\\(\\(?: \\|$\\)[^>]*\\|\\)>"
-                        (mapconcat #'identity (ox-spectacle--available-components) "\\|"))
+                (concat (format "<\\(/?\\(?:\\(?:%s\\)\\(?:\\.[A-Z][a-zA-Z0-9]+\\)?\\)\\)"
+                                (mapconcat #'identity (ox-spectacle--available-components info) "\\|"))
+                        "\\(\\(?: \\|$\\)[^>]*\\|\\)>")
                 (lambda (old)
                   (save-match-data
                     (let ((tag (match-string 1 old))

@@ -1,0 +1,25 @@
+Package: jedi-core
+Fetcher: github
+Source:  https://github.com/tkf/emacs-jedi.git
+
+Updating /mnt/store/melpa/working/jedi-core/
+Checking out origin/HEAD
+Checking out ecb53487c6131d39931ab2927e4b77e9cbfb7204
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jedi-core/
+  to /tmp/jedi-coredxlpAw/jedi-core-20210503.1315
+    jedi-core.el -> jedi-core.el
+    jediepcserver.py -> jediepcserver.py
+    Makefile -> Makefile
+    setup.py -> setup.py
+Created jedi-core-20210503.1315.tar containing:
+  jedi-core-20210503.1315/
+  jedi-core-20210503.1315/Makefile
+  jedi-core-20210503.1315/jedi-core-pkg.el
+  jedi-core-20210503.1315/jedi-core.el
+  jedi-core-20210503.1315/jediepcserver.py
+  jedi-core-20210503.1315/setup.py
+Built jedi-core in 3.870s, finished at 2022-12-11T03:30:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 406 Dec 11 03:30 packages/jedi-core-20210503.1315.entry
+ 80K -rw-r--r-- 1 root root 80K Dec 11 03:30 packages/jedi-core-20210503.1315.tar

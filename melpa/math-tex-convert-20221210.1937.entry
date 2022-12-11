@@ -1,5 +1,5 @@
 (math-tex-convert .
-		  [(20220918 1850)
+		  [(20221210 1937)
 		   ((emacs
 		     (26 1))
 		    (math-symbol-lists
@@ -7,7 +7,7 @@
 		    (auctex
 		     (12 1)))
 		   "Convert LaTeX macros to unicode and back" tar
-		   ((:commit . "91a9588f0d2d145f1695a531cc8bba8ec0adee3b")
+		   ((:commit . "8b174d05e8e5269322a1ee90f94cf1ed018d4976")
 		    (:authors
 		     ("Enrico Flor" . "enrico@eflor.net"))
 		    (:maintainer "Enrico Flor" . "enrico@eflor.net")
