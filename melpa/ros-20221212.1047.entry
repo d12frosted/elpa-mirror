@@ -1,0 +1,11 @@
+(ros .
+     [(20221212 1047)
+      ((emacs
+	(25 1)))
+      "Package to write code for ROS systems" single
+      ((:commit . "b437e46bee8f64eec1b8e61f86476977dab6cdb4")
+       (:authors
+	("Max Beutelspacher <https://github.com/mtb>"))
+       (:maintainer "Max Beutelspacher" . "max@beutelspacher.eu")
+       (:keywords "convenience" "tools")
+       (:url . "https://github.com/DerBeutlin/ros.el"))])

@@ -7,9 +7,11 @@ Updating /mnt/store/melpa/working/eri/
 Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
 
 Fetching origin
-error: cannot lock ref 'refs/remotes/origin/dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1': 'refs/remotes/origin/dependabot' exists; cannot create 'refs/remotes/origin/dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1'
 From https://github.com/agda/agda
+   b5105f41c..03466cc50  master        -> origin/master
+error: cannot lock ref 'refs/remotes/origin/dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1': 'refs/remotes/origin/dependabot' exists; cannot create 'refs/remotes/origin/dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1'
  ! [new branch]          dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1 -> origin/dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1  (unable to update local ref)
+   2732015ca..2d776b7cb  release-2.6.3 -> origin/release-2.6.3
 error: Could not fetch origin
 
 Command exited with non-zero exit-code: 1

@@ -5,6 +5,8 @@
 ;;         Vincent Zhang <seagle0128@gmail.com>
 ;; Created: July 16 2019
 ;; Version: 0.7
+;; Package-Version: 20221121.1215
+;; Package-Commit: 29808f3fd73cb795e68703ebc56108c377554aaf
 ;; Keywords: macos, windows, linux, themes, tools, faces
 ;; URL: https://github.com/LionyxML/auto-dark-emacs
 ;; Package-Requires: ((emacs "24.4"))
