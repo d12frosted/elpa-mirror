@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-xref-rst
-;; Package-Version: 20220710.1033
-;; Package-Commit: e1dd4439e535185a0cd195bb392f70982cf5aadc
+;; Package-Version: 20221211.2226
+;; Package-Commit: 9e44a70a59949893f89b14de69a5fedb6370a64f
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "28.1"))
 
@@ -554,8 +554,7 @@ This is done relative to CURRENT-PROJECT-ROOT or CURRENT-DIR."
             (user-error
               (concat
                 error-prefix
-                (format
-                  "could not find any references to %S under %S within %d files!"
+                (format "could not find any references to %S under %S within %d files!"
                   rst-role-data
                   current-project-root
                   (length all-files))))))
@@ -643,8 +642,7 @@ This is done relative to CURRENT-PROJECT-ROOT or CURRENT-DIR."
               (user-error
                 (concat
                   error-prefix
-                  (format
-                    "could not find any references to %S under %S within %d files!"
+                  (format "could not find any references to %S under %S within %d files!"
                     rst-terms-data
                     current-project-root
                     (length all-files)))))))
@@ -667,8 +665,7 @@ This is done relative to CURRENT-PROJECT-ROOT or CURRENT-DIR."
         (user-error
           (concat
             "RST usage: "
-            (format
-              "unable to determine a reference type from %S"
+            (format "unable to determine a reference type from %S"
               (substring-no-properties symbol))))))
 
     xrefs))
