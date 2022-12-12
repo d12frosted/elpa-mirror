@@ -3,9 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-spatial-navigate.git
 
 Updating /mnt/store/melpa/working/spatial-navigate/
-Checking out origin/HEAD
-Checking out 4dd8a164f35affa322c67d9e65af8eda21f99775
-Built spatial-navigate in 4.649s, finished at 2022-12-12T02:02:20+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Dec 12 02:02 packages/spatial-navigate-20221030.1131.el
-4.0K -rw-r--r-- 1 root root 402 Dec 12 02:02 packages/spatial-navigate-20221030.1131.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-spatial-navigate.git/': SSL: certificate subject name (*.codeberg.page) does not match target host name 'codeberg.org'
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

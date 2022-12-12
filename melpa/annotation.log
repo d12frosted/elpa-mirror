@@ -3,9 +3,15 @@ Fetcher: github
 Source:  https://github.com/agda/agda.git
 
 Updating /mnt/store/melpa/working/annotation/
-Checking out origin/HEAD
-Checking out aa5e3a127bf17a8c80d947f3c286758a36dadc36
-Built annotation in 19.681s, finished at 2022-12-12T00:50:35+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Dec 12 00:50 packages/annotation-20200914.644.el
-4.0K -rw-r--r-- 1 root root 224 Dec 12 00:50 packages/annotation-20200914.644.entry
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+From https://github.com/agda/agda
+   b5105f41c6..03466cc503  master        -> origin/master
+error: cannot lock ref 'refs/remotes/origin/dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1': 'refs/remotes/origin/dependabot' exists; cannot create 'refs/remotes/origin/dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1'
+ ! [new branch]            dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1 -> origin/dependabot/github_actions/dev-drprasad/delete-tag-and-release-0.2.1  (unable to update local ref)
+   2732015ca0..2d776b7cb1  release-2.6.3 -> origin/release-2.6.3
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

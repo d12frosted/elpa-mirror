@@ -1104,6 +1104,15 @@
 		 ("Shodai Yokoyama" . "quantumcars@gmail.com"))
 		(:url . "https://elpa.nongnu.org/nongnu/kotlin-mode.html")
 		(:commit . "d92c3b773473e9fe15f61f6177e4fbf097aadd05"))])
+ (lorem-ipsum .
+	      [(0 3)
+	       nil "Insert dummy pseudo Latin text" tar
+	       ((:url . "https://github.com/jschaf/emacs-lorem-ipsum")
+		(:keywords "tools" "language" "convenience")
+		(:maintainer "Joe Schafer" . "joe@jschaf.com")
+		(:authors
+		 ("Jean-Philippe Theberge" . "jphil21@sourceforge.net"))
+		(:commit . "63e5e5f21c2ed41bfa7c921ee3a0aff159dd5a3c"))])
  (lua-mode .
 	   [(20210802)
 	    ((emacs
