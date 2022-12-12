@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221212.1248
-;; Package-Commit: 2673497fcb064b1bfe17b851f5743b2054b1bc94
+;; Package-Version: 20221212.1602
+;; Package-Commit: 6120ad00a8ae066b4a15f15d0abeb0f323916a57
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -84,6 +84,8 @@
     (headline        . ox-spectacle--headline)
     (section         . ox-spectacle--section)
     (src-block       . ox-spectacle--src-block)
+    (example-block   . ox-spectacle--example-block)
+    (fixed-width     . ox-spectacle--fixed-width)
     (quote-block     . ox-spectacle--quote-block)
     (center-block    . ox-spectacle--center-block)
     (code            . ox-spectacle--code)
@@ -520,9 +522,13 @@ holding contextual information."
                  prefix inline-tag inline-props inline-prefix inline-suffix)
             ;; headline with <Component props> declaration has the highest priority
             (when (string-match (format "<\\${\\(%s\\(?:\\.[A-Z][a-zA-Z0-9]+\\)*\\)}\\( [^>]*\\|\\)>\\(\\(?:<.*>\\)?\\)$" regexp) title)
-              (setq inline-tag (match-string 1 title)
-                    inline-props (ox-spectacle--wa (match-string 2 title))
-                    inline-prefix (match-string 3 title)) ; deal multiple Components on headline
+              (let ((tt (match-string 1 title)))
+                ;; special case, <FlexBox/Box/Grid/Appear> on slide headline, wrapper
+                (if (member tt (list "FlexBox" "Box" "Grid" "Appear"))
+                    (setq inline-prefix (match-string 0 title))
+                  (setq inline-tag (match-string 1 title)
+                        inline-props (ox-spectacle--wa (match-string 2 title))
+                        inline-prefix (match-string 3 title)))) ; deal multiple Components on headline
               (with-temp-buffer
                 (insert inline-prefix)
                 (goto-char (point-min))
@@ -584,12 +590,34 @@ contextual information."
           "")
       ;; others, make it a CodePane
       (let ((contents
-             (format "<${Box}%s>\n<${CodePane}%s%s%s>\n${`\n%s\n`}\n</${CodePane}>\n</${Box}>"
-                     props
+             (format "%s<${CodePane}%s%s%s>\n${`\n%s\n`}\n</${CodePane}>%s"
+                     (if (string-empty-p props) "" (format "<${Box}%s>\n" props))
                      (if lang (concat " language='" lang "'") "")
                      (if linum "" (concat " showLineNumbers=${false}"))
-                     code-props code)))
+                     code-props code
+                     (if (string-empty-p props) "" "\n</${Box}>"))))
         (ox-spectacle--maybe-appear contents flags)))))
+
+(defun ox-spectacle--example-block (example-block _contents info)
+  "Transcode a EXAMPLE-BLOCK element from Org to HTML. CONTENTS is nil.
+INFO is a plist holding contextual information."
+  (let ((attributes (org-export-read-attribute :attr_html example-block)))
+    (if (plist-get attributes :textarea)
+	    (org-html--textarea-block example-block)
+      (concat "<div className='example'>\n"
+              (ox-spectacle--src-block
+               example-block
+               (org-html-format-code example-block info)
+               info)
+              "\n</div>"))))
+
+(defun ox-spectacle--fixed-width (fixed-width _contents _info)
+  "Transcode a FIXED-WIDTH element from Org to HTML.
+CONTENTS is nil. INFO is a plist holding contextual information."
+  (format "<div className=\"example fixed-width\"><${CodePane} showLineNumbers=${false}>\n%s</${CodePane}></div>"
+	      (org-html-do-format-code
+	       (org-remove-indentation
+	        (org-element-property :value fixed-width)))))
 
 (defun ox-spectacle--quote-block (quote-block contents _info)
   "Transcode a QUOTE-BLOCK element from Org to HTML.
