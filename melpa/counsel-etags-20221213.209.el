@@ -4,8 +4,8 @@
 
 ;; Author: Chen Bin <chenbin dot sh AT gmail dot com>
 ;; URL: http://github.com/redguardtoo/counsel-etags
-;; Package-Version: 20221211.2237
-;; Package-Commit: b7fbab5aad0d8575087d1b66fd9a572272890a07
+;; Package-Version: 20221213.209
+;; Package-Commit: a65c03d2a82bae2571993b77b980f2f27c138ecb
 ;; Package-Requires: ((emacs "26.1") (counsel "0.13.4"))
 ;; Keywords: tools, convenience
 ;; Version: 1.10.1
@@ -1114,7 +1114,7 @@ Use TAGNAME-RE to search in current buffer with BOUND in ROOT-DIR."
                                    (beginning-of-line)
                                    (counsel-etags-push-one-candidate cands
                                                                      tagname-re
-                                                                     (point-at-eol)
+                                                                     (line-end-position)
                                                                      root-dir))))
     (and cands (nreverse cands))))
 
@@ -1504,7 +1504,7 @@ Tags might be sorted by comparing tag's path with CURRENT-FILE."
           (let* ((name (car c)))
             (goto-char (point-min))
             (counsel-etags-forward-line (cdr c))
-            (when (search-forward name (point-at-eol) t)
+            (when (search-forward name (line-end-position) t)
               (forward-char (- (length name))))
             (push (cons name (point-marker)) imenu-items))))
 

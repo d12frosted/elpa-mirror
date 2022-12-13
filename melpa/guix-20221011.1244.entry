@@ -1,5 +1,5 @@
 (guix .
-      [(20210608 1653)
+      [(20221011 1244)
        ((emacs
 	 (24 3))
 	(dash
@@ -13,7 +13,7 @@
 	(edit-indirect
 	 (0 1 4)))
        "Interface for GNU Guix" tar
-       ((:commit . "c9aef52121b458297e70bb50f49f7276b4a8d759")
+       ((:commit . "cf5b7a402ea503c3dcda85a86b9a6c6dd01896e0")
 	(:authors
 	 ("Alex Kost" . "alezost@gmail.com"))
 	(:maintainer "Alex Kost" . "alezost@gmail.com")

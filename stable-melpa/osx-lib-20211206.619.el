@@ -4,9 +4,11 @@
 ;;
 ;; Author: Raghav Kumar Gautam <raghav@apache.org>
 ;; URL: https://github.com/raghavgautam/osx-lib
+;; Package-Commit: 7afdb57edd5725e8a66f841a90fa571a4cbb81e7
 ;; Keywords: Apple, AppleScript, OSX, Finder, Emacs, Elisp, VPN, Speech
 ;; Package-Requires: ((emacs "24.4"))
-;; Package-Version: 0.1
+;; Package-Version: 20211206.619
+;; Package-X-Original-Version: 0.1
 ;;; Commentary:
 ;; Provides functions for:
 ;;   1. Running Apple Script / osascript
