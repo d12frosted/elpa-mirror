@@ -77,6 +77,14 @@
 		((:url . "https://github.com/stardiviner/arduino-mode")
 		 (:maintainer "stardiviner" . "numbchild@gmail.com")
 		 (:keywords "languages" "arduino"))])
+ (auto-dim-other-buffers .
+			 [(2 1 1)
+			  nil "Makes windows without focus less prominent" tar
+			  ((:url . "https://github.com/mina86/auto-dim-other-buffers.el")
+			   (:maintainer "Michal Nazarewicz" . "mina86@mina86.com")
+			   (:authors
+			    ("Michal Nazarewicz" . "mina86@mina86.com"))
+			   (:commit . "33b5f88b799a17947c266b04ad59462c5aeb4ed7"))])
  (autothemer .
 	     [(0 2 14)
 	      ((dash
@@ -473,6 +481,19 @@
 		 (:authors
 		  ("edkolev" . "evgenysw@gmail.com"))
 		 (:commit . "7801d9204cd57d5aec11ef43b15357a431cf025c"))])
+ (evil-iedit-state .
+		   [(1 3)
+		    ((evil
+		      (1 0 9))
+		     (iedit
+		      (0 9 9 9)))
+		    "Evil states to interface iedit mode." tar
+		    ((:url . "https://github.com/syl20bnr/evil-iedit-state")
+		     (:keywords "convenience" "editing" "evil" "iedit" "mnemonic")
+		     (:maintainer "Sylvain Benner" . "sylvain.benner@gmail.com")
+		     (:authors
+		      ("Sylvain Benner" . "sylvain.benner@gmail.com"))
+		     (:commit . "44c64c71692e5b2f608ad3e3c537ec0a0e0ea0f8"))])
  (evil-indent-plus .
 		   [(1 0 1)
 		    ((evil
@@ -544,6 +565,28 @@
 		    (:maintainer "Bailey Ling")
 		    (:authors
 		     ("Bailey Ling")))])
+ (flx .
+      [(0 6 2)
+       ((cl-lib
+	 (0 3)))
+       "fuzzy matching with good sorting" tar
+       ((:url . "https://github.com/lewang/flx")
+	(:maintainer "Le Wang")
+	(:authors
+	 ("Le Wang"))
+	(:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
+ (flx-ido .
+	  [(0 6 2)
+	   ((flx
+	     (0 1))
+	    (cl-lib
+	     (0 3)))
+	   "flx integration for ido" tar
+	   ((:url . "https://github.com/lewang/flx")
+	    (:maintainer "Le Wang")
+	    (:authors
+	     ("Le Wang"))
+	    (:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
  (flymake-kondor .
 		 [(0 1 3)
 		  ((emacs
@@ -854,6 +897,14 @@
 		 (:authors
 		  ("David Vazquez Pua" . "davazp@gmail.com"))
 		 (:commit . "fe8d7e2db5581cd0cb7a69563bc44f0669f76322"))])
+ (gruber-darker-theme .
+		      [(0 7)
+		       nil "Gruber Darker color theme for Emacs 24." tar
+		       ((:url . "http://github.com/rexim/gruber-darker-theme")
+			(:maintainer "Alexey Kutepov" . "reximkut@gmail.com")
+			(:authors
+			 ("Alexey Kutepov" . "reximkut@gmail.com"))
+			(:commit . "13e13ea1e2ebd146f279058970835b35de811531"))])
  (gruvbox-theme .
 		[(1 30 1)
 		 ((autothemer
@@ -2096,6 +2147,15 @@
 	     (:authors
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
 	     (:commit . "532835eda02c64a8b93437e8c3fb220e60859896"))])
+ (writegood-mode .
+		 [(2 2 0)
+		  nil "Polish up poor writing on the fly" tar
+		  ((:url . "http://github.com/bnbeckwith/writegood-mode")
+		   (:keywords "writing" "weasel-words" "grammar")
+		   (:maintainer "Benjamin Beckwith")
+		   (:authors
+		    ("Benjamin Beckwith"))
+		   (:commit . "d54eadeedb8bf3aa0e0a584c0a7373c69644f4b8"))])
  (ws-butler .
 	    [(0 6)
 	     nil "Unobtrusively remove trailing whitespace." tar
@@ -2114,6 +2174,17 @@
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
 		 (:commit . "e5ac096b1585c2c28e8d4ce543aec6ae840cac14"))])
+ (xkcd .
+       [(1 1)
+	((json
+	  (1 3)))
+	"View xkcd from Emacs" tar
+	((:url . "https://github.com/vibhavp/emacs-xkcd")
+	 (:keywords "xkcd" "webcomic")
+	 (:maintainer "Vibhav Pant" . "vibhavp@gmail.com")
+	 (:authors
+	  ("Vibhav Pant" . "vibhavp@gmail.com"))
+	 (:commit . "ca3eed560361fad276a1e1c6fd0104ce902f358a"))])
  (xml-rpc .
 	  [(1 6 16)
 	   nil "An elisp implementation of clientside XML-RPC" tar

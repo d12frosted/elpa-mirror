@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018 Adam Chyła
 ;; Author: Adam Chyła <adam@chyla.org> https://chyla.org/
 ;; URL: https://github.com/chyla/ChylaThemeForEmacs
-;; Package-Version: 20221204.1527
-;; Package-Commit: 6a442a02fdb2ff4c24841ecbd92e4bd5fac3d9ee
+;; Package-Version: 20221213.1012
+;; Package-Commit: b24d0379516857ccf75caff9ae1d00b820c9a6f6
 ;; Version: 0.1
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -146,7 +146,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(region ((,class (:background ,chyla-selection))
              (t :inverse-video t)))
    `(secondary-selection ((t (:background ,chyla-white))))
-   `(trailing-whitespace ((t (:background ,chyla-string))))
+   `(trailing-whitespace ((t (:background ,chyla-diff-removed-highlight))))
    `(vertical-border ((t (:foreground ,chyla-border))))
 ;;;;; font lock
    `(font-lock-builtin-face ((t (:foreground ,chyla-keyword))))
