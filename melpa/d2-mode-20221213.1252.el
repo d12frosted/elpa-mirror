@@ -19,8 +19,8 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;; Version: 1.0
-;; Package-Version: 20221205.421
-;; Package-Commit: ab2120c756bcb74580afb35e643d44b28a6f255d
+;; Package-Version: 20221213.1252
+;; Package-Commit: d57d5405645192ae3291dad9c64197c5b72ee852
 ;; Author: Andor Kesselman
 ;; Keywords: d2 graphs tools processes
 ;; URL: https://github.com/andorsk/d2-mode
@@ -116,8 +116,8 @@
                        (error "D2 requires a \":file\" header argument")))
          (temp-file (org-babel-temp-file "d2-"))
          (cmd (concat (shell-quote-argument d2-location)
-                      " -o " (org-babel-process-file-name out-file)
-                      " -i " temp-file
+                      " " temp-file
+                      " " (org-babel-process-file-name out-file)
                       " " d2-flags)))
     (with-temp-file temp-file (insert body))
     (org-babel-eval cmd "")
