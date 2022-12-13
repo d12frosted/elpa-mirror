@@ -6,8 +6,8 @@
 ;; Created: 24 Aug 2011
 ;; Updated: 16 Mar 2015
 ;; Version: 1.2
-;; Package-Version: 20221110.1614
-;; Package-Commit: 730184b7923a65241fdff695485a3ad432caf201
+;; Package-Version: 20221213.1619
+;; Package-Commit: c762380ff71c429faf47552a83605b2578656380
 ;; Package-Requires: ((gntp "0.1") (log4e "0.3.0") (cl-lib "0.5"))
 ;; Keywords: notification emacs message
 ;; X-URL: https://github.com/jwiegley/alert
@@ -886,12 +886,12 @@ From https://github.com/julienXX/terminal-notifier."
                        (alert-encode-string (plist-get info :title)))))
   (alert-message-notify info))
 
-(when (fboundp 'mac-do-applescript)
+(when (fboundp 'do-applescript)
   ;; Use built-in AppleScript support when possible.
   (defun alert-osx-notifier-notify (info)
-    (mac-do-applescript (format "display notification %S with title %S"
-                                (alert-encode-string (plist-get info :message))
-                                (alert-encode-string (plist-get info :title))))
+    (do-applescript (format "display notification %S with title %S"
+                            (alert-encode-string (plist-get info :message))
+                            (alert-encode-string (plist-get info :title))))
     (alert-message-notify info)))
 
 (alert-define-style 'osx-notifier :title "Notify using native OSX notification" :notifier #'alert-osx-notifier-notify)
