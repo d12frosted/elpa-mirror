@@ -2,12 +2,12 @@ Package: guix
 Fetcher: git
 Source:  https://git.savannah.gnu.org/git/guix/emacs-guix.git
 
-Cloning https://git.savannah.gnu.org/git/guix/emacs-guix.git to /mnt/store/melpa/working/guix/
+Updating /mnt/store/melpa/working/guix/
 Checking out origin/HEAD
 Checking out cf5b7a402ea503c3dcda85a86b9a6c6dd01896e0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/guix/
-  to /tmp/guixNA59df/guix-20221011.1244
+  to /tmp/guixgPwfgX/guix-20221011.1244
   ! elisp/guix-about.el -> guix-about.el
   ! elisp/guix-auto-mode.el -> guix-auto-mode.el
   ! elisp/guix-build-log.el -> guix-build-log.el
@@ -55,7 +55,7 @@ Copying files (->) and directories (=>)
     images/guix-logo.svg -> images/guix-logo.svg
     scheme/emacs-guix => scheme/emacs-guix
     scheme/emacs-guix.scm -> scheme/emacs-guix.scm
-Generating /tmp/guixNA59df/guix-20221011.1244/emacs-guix.info
+Generating /tmp/guixgPwfgX/guix-20221011.1244/emacs-guix.info
 Created guix-20221011.1244.tar containing:
   guix-20221011.1244/
   guix-20221011.1244/dir
@@ -126,9 +126,7 @@ Created guix-20221011.1244.tar containing:
   guix-20221011.1244/scheme/emacs-guix/system-generations.scm
   guix-20221011.1244/scheme/emacs-guix/system.scm
   guix-20221011.1244/scheme/emacs-guix/utils.scm
-Built guix in 14.911s, finished at 2022-12-13T03:46:01+0000
+Built guix in 13.597s, finished at 2022-12-13T07:30:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  435 Dec 13 00:01 packages/guix-20210608.1653.entry
-752K -rw-r--r-- 1 root root 750K Dec 13 00:01 packages/guix-20210608.1653.tar
-4.0K -rw-r--r-- 1 root root  435 Dec 13 03:46 packages/guix-20221011.1244.entry
-760K -rw-r--r-- 1 root root 760K Dec 13 03:46 packages/guix-20221011.1244.tar
+4.0K -rw-r--r-- 1 root root  435 Dec 13 07:30 packages/guix-20221011.1244.entry
+760K -rw-r--r-- 1 root root 760K Dec 13 07:30 packages/guix-20221011.1244.tar
