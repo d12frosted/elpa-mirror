@@ -7,8 +7,6 @@
 ;; Created: 2018-02-16
 ;; Modified: 2018-07-05
 ;; Version: 0.1
-;; Package-Version: 20180705.1501
-;; Package-Commit: b95b6a7ed9289637cb512232470633b330ca9713
 ;; URL: https://gitlab.com/andersjohansson/org-outline-numbering
 ;; Package-Requires: ((emacs "24") (org "8.3") (cl-lib "0.6") (ov "1.0.6"))
 ;; Keywords: wp, convenience
