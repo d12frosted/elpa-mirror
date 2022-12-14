@@ -11,8 +11,8 @@
 ;;       Magnar Sveen <magnars@gmail.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20221203.2256
-;; Package-Commit: 3717e449dded7c8d9f50369bd34a19c077c2c538
+;; Package-Version: 20221214.912
+;; Package-Commit: e94165d3b8743bf530a8f389aba3459cfa7a352b
 ;; Keywords: languages clojure clojurescript lisp
 ;; Version: 5.15.1
 ;; Package-Requires: ((emacs "25.1"))
@@ -779,7 +779,12 @@ Called by `imenu--generic-function'."
       (let (found?
             (deftype (match-string 2))
             (start (point)))
-        (down-list)
+        ;; ignore user-error from down-list when called from inside a string or comment
+        ;; TODO: a better workaround would be to wrap it in
+        ;; unless (ppss-comment-or-string-start (syntax-ppss)) instead of ignore-errors,
+        ;; but ppss-comment-or-string-start is only available since Emacs 27
+        (ignore-errors
+          (down-list))
         (forward-sexp)
         (while (not found?)
           (ignore-errors
