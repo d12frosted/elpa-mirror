@@ -5,8 +5,8 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20221202.1342
-;; Package-Commit: 5fd7b2c1ed78a60bf55819e0917fe1deccf23fb0
+;; Package-Version: 20221213.1920
+;; Package-Commit: 34272d51c519d99e0e1be989382aca33ae7bc662
 ;; Version: 0.6
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "27.1") (embark "0.17") (consult "0.17"))
@@ -157,6 +157,8 @@ This function is meant to be added to `embark-collect-mode-hook'."
 
 ;;; Support for consult-grep
 
+(defvar grep-mode-line-matches)
+(defvar grep-num-matches-found)
 (defvar wgrep-header/footer-parser)
 (declare-function wgrep-setup "ext:wgrep")
 
@@ -167,12 +169,25 @@ This function is meant to be added to `embark-collect-mode-hook'."
 
 (defun embark-consult-export-grep (lines)
   "Create a grep mode buffer listing LINES."
-  (let ((buf (generate-new-buffer "*Embark Export Grep*")))
+  (let ((buf (generate-new-buffer "*Embark Export Grep*"))
+        (count 0)
+        prop)
     (with-current-buffer buf
       (insert (propertize "Exported grep results:\n\n" 'wgrep-header t))
       (dolist (line lines) (insert line "\n"))
       (goto-char (point-min))
+      (while (setq prop (text-property-search-forward
+                         'face 'consult-highlight-match t))
+        (cl-incf count)
+        (put-text-property (prop-match-beginning prop)
+                           (prop-match-end prop)
+                           'font-lock-face
+                           'match))
+      (goto-char (point-min))
       (grep-mode)
+      (when (> count 0)
+        (setq-local grep-num-matches-found count
+                    mode-line-process grep-mode-line-matches))
       ;; Make this buffer current for next/previous-error
       (setq next-error-last-buffer buf)
       ;; Set up keymap before possible wgrep-setup, so that wgrep

@@ -5,8 +5,8 @@
 ;; Author: Jason L. Shiffer <jshiffer@zerotao.com>
 ;; Maintainer: Jason L. Shiffer <jshiffer@zerotao.com>
 ;; Version: 0.0
-;; Package-Version: 20221208.1313
-;; Package-Commit: d62637e6fa0e0b3450aa9c68a1d76d44ea9d6d8f
+;; Package-Version: 20221213.2047
+;; Package-Commit: 380e7814acb7de490a3b5729c3b943f875bc6a73
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: extensions
 ;; URL: https://boxes.thomasjensen.com
@@ -79,6 +79,9 @@
   :type '(alist :key-type symbol :value-type string)
   :group 'boxes)
 
+(defconst boxes-minimum-version "2.1.0"
+  "Minimum required version of `boxes' to support querying the available box types.")
+
 (defvar boxes-history nil
   "Boxes types history.")
 
@@ -89,12 +92,15 @@
   "List of types available to the current boxes implementation, nil if not set yet.")
 
 (defun boxes-types ()
-  "Return the list of types available to the current boxes implementation."
-  (or boxes-types-list
-      (setq boxes-types-list
-            (let ((types (process-lines boxes-command "-q" "(all)")))
-              (mapcar (lambda(type) (replace-regexp-in-string " *\(alias\) *$" "" type))
-                      types)))))
+  "Return the list of types available to the current boxes implementation.
+Signal error if a supported version of `boxes' is not available."
+  (condition-case nil
+      (or boxes-types-list
+          (setq boxes-types-list
+                (let ((types (process-lines boxes-command "-q" "(all)")))
+                  (mapcar (lambda(type) (replace-regexp-in-string " *\(alias\) *$" "" type))
+                          types))))
+    (error (error "Please install Boxes %s or later" boxes-minimum-version))))
 
 (defun boxes-default-type (mode)
   "Get the default box type for the given buffer major MODE."
@@ -115,12 +121,20 @@
 ;;;###autoload
 (defun boxes-command-on-region (start end type &optional remove)
   "Create or Remove boxes from a region.
-To create a box select a region, hit \\[boxes-command-on-region] & enter a box type.
-Box type selection uses tab completion on the supported types.
-To remove a box simply prefix a 1 to the call, eg
-M-1 \\[boxes-command-on-region] will remove a box from a region.
-When calling from Lisp, supply the region START & END and the box TYPE to
-create a box.  Specifying a non-nil value for REMOVE, removes the box."
+
+To create a box select a region, hit \\[boxes-command-on-region]
+& enter a box type.  Box type selection uses tab completion on
+the supported types.
+
+To remove a box simply prefix a 1 to the call, eg M-1
+\\[boxes-command-on-region] will remove a box from a region.
+
+Note that interactive use requires `boxes' >= 2.1.0 to support
+querying the supported types.
+
+When calling from Lisp, supply the region START & END and the box
+TYPE to create a box.  Specifying a non-nil value for REMOVE,
+removes the box."
   (interactive (let ((string
 		      (completing-read (format "Box type (%s): " boxes-default-type)
 				       (boxes-types) nil t nil 'boxes-history boxes-default-type)))

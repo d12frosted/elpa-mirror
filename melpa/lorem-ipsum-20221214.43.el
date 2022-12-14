@@ -5,8 +5,8 @@
 ;; Author: Jean-Philippe Theberge (jphil21@sourceforge.net)
 ;; Maintainer: Joe Schafer (joe@jschaf.com)
 ;; Version: 0.3
-;; Package-Version: 20221211.2246
-;; Package-Commit: 63e5e5f21c2ed41bfa7c921ee3a0aff159dd5a3c
+;; Package-Version: 20221214.43
+;; Package-Commit: a7433a1360691c6791ad373bb7c0fa89e21e4dc0
 ;; Keywords: tools, language, convenience
 ;; URL: https://github.com/jschaf/emacs-lorem-ipsum
 
@@ -41,7 +41,7 @@
 ;;
 ;; (lorem-ipsum-use-default-bindings)
 ;;
-;; This will setup the folling keybindings:
+;; This will setup the following keybindings:
 ;;
 ;; C-c l p: lorem-ipsum-insert-paragraphs
 ;; C-c l s: lorem-ipsum-insert-sentences

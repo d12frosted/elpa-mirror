@@ -4,10 +4,10 @@
 
 ;; Author: Alexander Miller <alexanderm@web.de>
 ;; Package-Requires: ((emacs "25.3"))
-;; Package-Version: 20220704.1920
-;; Package-Commit: c5938a4f4ed23cf543f73d24e0a6f53272bdcd4a
+;; Package-Version: 20221213.2206
+;; Package-Commit: 1bbb646ea07deb1bd2daa4c6eb36e0f65aac40b0
 ;; Homepage: https://github.com/Alexander-Miller/mu4e-column-faces
-;; Version: 1.2
+;; Version: 1.2.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -96,7 +96,7 @@
   "Face for `:size' columns."
   :group 'mu4e-column-faces)
 
-(defface mu4e-column-faces-thead-subject
+(defface mu4e-column-faces-thread-subject
   '((t :inherit font-lock-type-face))
   "Face for `:thread-subject' columns."
   :group 'mu4e-column-faces)
@@ -111,7 +111,17 @@
 
 Value must be a function that takes two arguments:
 - the column
-- the mu4e message object"
+- the mu4e message object
+
+The return value should be the face used for the column.
+
+For example if you want to define a face for one custom column you can do this:
+
+ (defun special-column-face-handler (column _message)
+   (when (eq column :my-custom-column)
+     '(background \"green\")))
+
+ (setf mu4e-column-faces-custom-column-handler #'special-column-face-handler)"
   :group 'mu4e-column-faces
   :type 'function)
 
@@ -119,11 +129,25 @@ Value must be a function that takes two arguments:
   "Function to optionally further adjust mu4e's column faces.
 Can for example be used to assign different faces to different email accounts.
 
-Value must be a function that takes 2 arguments:
+Value must be a function that takes 4 arguments:
 - the so far assigned face
 - the column
 - the column's value
-- the mu4e message object"
+- the mu4e message object
+
+The return value should be the new face for the column (or just the old face
+if nothing should change).
+
+For example to use a special face for emails from the emacs-devel mailing list
+you can do this:
+
+ (defun mailing-list-face-handler (face column value _message)
+   (if (and (eq column :mailing-list)
+            (equal value \"emacs-devel\"))
+       '(:background \"red\")
+     face))
+
+ (setf mu4e-column-faces-adjust-face #'mailing-list-face-handler)"
   :group 'mu4e-column-faces
   :type 'function)
 
