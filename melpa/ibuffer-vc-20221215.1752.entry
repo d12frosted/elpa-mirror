@@ -1,11 +1,9 @@
 (ibuffer-vc .
-	    [(20221214 1454)
+	    [(20221215 1752)
 	     ((emacs
-	       (24 1))
-	      (cl-lib
-	       (0 2)))
+	       (25 1)))
 	     "Group ibuffer's list by VC project, or show VC status" single
-	     ((:commit . "13cb2721be7ebcb5447a768f13d370674dfb7f29")
+	     ((:commit . "9204001d1c5ca39409485c1574fd315b0e137a92")
 	      (:authors
 	       ("Steve Purcell" . "steve@sanityinc.com"))
 	      (:maintainer "Steve Purcell" . "steve@sanityinc.com")

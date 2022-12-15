@@ -4,9 +4,9 @@
 ;;
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: convenience
-;; Package-Version: 20221214.1454
-;; Package-Commit: 13cb2721be7ebcb5447a768f13d370674dfb7f29
-;; Package-Requires: ((emacs "24.1") (cl-lib "0.2"))
+;; Package-Version: 20221215.1752
+;; Package-Commit: 9204001d1c5ca39409485c1574fd315b0e137a92
+;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/purcell/ibuffer-vc
 ;; Version: 0
 ;;
@@ -148,7 +148,7 @@ If the file is not under version control, nil is returned instead."
     "Toggle current view to buffers with vc root dir QUALIFIER."
   (:description "vc root dir"
                 :reader (ibuffer-vc-read-filter))
-  (ibuffer-awhen (ibuffer-vc-root buf)
+  (when-let ((it (ibuffer-vc-root buf)))
     (equal qualifier it)))
 
 ;;;###autoload

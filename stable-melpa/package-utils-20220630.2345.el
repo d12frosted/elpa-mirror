@@ -2,6 +2,8 @@
 
 ;; Author: Philippe Vaucher <philippe.vaucher@gmail.com>
 ;; URL: https://github.com/Silex/package-utils
+;; Package-Version: 20220630.2345
+;; Package-Commit: 0168172062467b1bff913ea955b2ef709b43ecfa
 ;; Keywords: package, convenience
 ;; Version: 1.0.1
 ;; Package-Requires: ((restart-emacs "0.1.1"))
