@@ -3,8 +3,8 @@
 ;; Copyright (C) 2020 Jordan Besly
 ;;
 ;; Version: 0.1.0
-;; Package-Version: 20200619.1653
-;; Package-Commit: 554594dc7ebb976e45632b8738b103ad048bf879
+;; Package-Version: 20221215.1427
+;; Package-Commit: 6741bf65cf9b9bc896ab1cc3c384573e8ffe5f96
 ;; URL: https://github.com/p3r7/clojure-essential-ref
 ;; Package-Requires: ((emacs "24")(cider "0.24.0"))
 ;;
@@ -672,6 +672,7 @@
 
 ;; COMMANDS
 
+;;;###autoload
 (defun clojure-essential-ref (&optional arg)
   "Open Clojure documentation for symbol.
 
@@ -691,6 +692,7 @@ opposite of what that option dictates."
       (error "Need to pass an argument when called non-interactively"))
     (funcall clojure-essential-ref-default-browse-fn arg)))
 
+;;;###autoload
 (defun clojure-essential-ref-web (&optional arg)
   "Open Clojure documentation for symbol in the default web browser.
 

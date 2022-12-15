@@ -3,8 +3,8 @@
 ;; Copyright (C) 2020 Jordan Besly
 ;;
 ;; Version: 0.1.0
-;; Package-Version: 20200719.608
-;; Package-Commit: e05d61b96f6469a93f52015b7ad5deadf616139e
+;; Package-Version: 20221215.1427
+;; Package-Commit: 6741bf65cf9b9bc896ab1cc3c384573e8ffe5f96
 ;; URL: https://github.com/p3r7/clojure-essential-ref
 ;; Package-Requires: ((emacs "24")(dash "2.16.0")(nov "0.3.1")(clojure-essential-ref "0.1.0"))
 ;;
@@ -76,6 +76,7 @@
 
 ;; COMMAND
 
+;;;###autoload
 (defun clojure-essential-ref-nov (&optional arg)
   "Open Clojure documentation for symbol in local ebook.
 

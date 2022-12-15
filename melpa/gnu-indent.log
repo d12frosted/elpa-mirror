@@ -3,9 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/akib/emacs-gnu-indent.git
 
 Updating /mnt/store/melpa/working/gnu-indent/
-Checking out origin/HEAD
-Checking out f31dbe60478b6270bb57b6b05998df8eec56f801
-Built gnu-indent in 5.343s, finished at 2022-12-15T11:52:01+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Dec 15 11:52 packages/gnu-indent-20221127.2112.el
-4.0K -rw-r--r-- 1 root root  403 Dec 15 11:52 packages/gnu-indent-20221127.2112.entry
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/akib/emacs-gnu-indent.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128
