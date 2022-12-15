@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov
 ;; URL: https://github.com/bbatsov/helm-projectile
-;; Package-Version: 20220820.826
-;; Package-Commit: 5813f7286533990783546c9c39c184faa034d1f1
+;; Package-Version: 20221215.613
+;; Package-Commit: 35a2111d00c0c0c9d8743280d3f1243bb217118a
 ;; Created: 2011-31-07
 ;; Keywords: project, convenience
 ;; Version: 1.1.0-snapshot
@@ -101,7 +101,8 @@ This needs to be set before loading helm-projectile.el."
     (reverse ret)))
 
 (defun helm-projectile-hack-actions (actions &rest prescription)
-  "Given a Helm action list and a prescription, return a hacked Helm action list, after applying the PRESCRIPTION.
+  "Given a Helm action list and a prescription, return a hacked Helm action list.
+Optionally applies the PRESCRIPTION beforehand.
 
 The Helm action list ACTIONS is of the form:
 
@@ -303,14 +304,14 @@ Previews the contents of a file in a temporary buffer."
                          (set-auto-mode))
                        (font-lock-ensure)
                        (setq inhibit-read-only nil)))
-      (if (and (helm-attr 'previewp)
-               (string= candidate (helm-attr 'current-candidate)))
+      (if (and (helm-get-attr 'previewp)
+               (string= candidate (helm-get-attr 'current-candidate)))
           (progn
             (kill-buffer buf)
-            (helm-attrset 'previewp nil))
+            (helm-set-attr 'previewp nil))
         (preview candidate)
-        (helm-attrset 'previewp t)))
-    (helm-attrset 'current-candidate candidate)))
+        (helm-set-attr 'previewp t)))
+    (helm-set-attr 'current-candidate candidate)))
 
 (defun helm-projectile-find-files-eshell-command-on-file-action (candidate)
   (interactive)
@@ -678,11 +679,11 @@ Meant to be added to `helm-cleanup-hook', from which it removes
                          ;; If a new buffer is longer that this value
                          ;; this value will be updated
                          (setq helm-buffer-max-len-mode (cdr result))))))
-   (candidates :initform helm-projectile-buffers-list-cache)
+   (candidates :initform 'helm-projectile-buffers-list-cache)
    (matchplugin :initform nil)
    (match :initform 'helm-buffers-match-function)
    (persistent-action :initform 'helm-buffers-list-persistent-action)
-   (keymap :initform helm-buffer-map)
+   (keymap :initform 'helm-buffer-map)
    (volatile :initform t)
    (persistent-help
     :initform
@@ -809,8 +810,9 @@ With a prefix ARG invalidates the cache first."
 ;;;###autoload
 (defun helm-projectile-find-other-file (&optional flex-matching)
   "Switch between files with the same name but different extensions using Helm.
-With FLEX-MATCHING, match any file that contains the base name of current file.
-Other file extensions can be customized with the variable `projectile-other-file-alist'."
+With FLEX-MATCHING, match any file that contains the base name of
+current file.  Other file extensions can be customized with the
+variable `projectile-other-file-alist'."
   (interactive "P")
   (let* ((project-root (projectile-project-root))
          (other-files (projectile-get-other-files (buffer-file-name)

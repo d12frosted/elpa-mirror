@@ -1,0 +1,23 @@
+Package: helm-ext
+Fetcher: github
+Source:  https://github.com/cute-jumper/helm-ext.git
+
+Updating /mnt/store/melpa/working/helm-ext/
+Checking out origin/HEAD
+Checking out c30f7772ec577a5ce1de3215f0507826e0725a69
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-ext/
+  to /tmp/helm-extbfwOg6/helm-ext-20200722.107
+    helm-ext-ff.el -> helm-ext-ff.el
+    helm-ext-minibuffer.el -> helm-ext-minibuffer.el
+    helm-ext.el -> helm-ext.el
+Created helm-ext-20200722.107.tar containing:
+  helm-ext-20200722.107/
+  helm-ext-20200722.107/helm-ext-ff.el
+  helm-ext-20200722.107/helm-ext-minibuffer.el
+  helm-ext-20200722.107/helm-ext-pkg.el
+  helm-ext-20200722.107/helm-ext.el
+Built helm-ext in 3.968s, finished at 2022-12-15T11:55:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 331 Dec 15 11:55 packages/helm-ext-20200722.107.entry
+ 40K -rw-r--r-- 1 root root 40K Dec 15 11:55 packages/helm-ext-20200722.107.tar

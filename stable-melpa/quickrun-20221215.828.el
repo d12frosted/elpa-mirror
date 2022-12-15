@@ -6,8 +6,8 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; Maintainer: Jen-Chieh Shen <jcs090218@gmail.com>
 ;; URL: https://github.com/emacsorphanage/quickrun
-;; Package-Version: 20221214.1547
-;; Package-Commit: 3d1d9d03ca47c3c64de25fd3024b4c8e5ab70c17
+;; Package-Version: 20221215.828
+;; Package-Commit: 7a89313c07a21eae9cd69a1a98e2a134d559e04f
 ;; Version: 2.3.1
 ;; Package-Requires: ((emacs "26.1") (ht "2.0"))
 ;; Keywords: tools
@@ -684,7 +684,7 @@ if you set your own language configuration.")
 (defun quickrun--pop-to-buffer (buf cb)
   "Not documented."
   (let ((win (selected-window)))
-    (pop-to-buffer quickrun--buffer-name
+    (pop-to-buffer buf
                    `((display-buffer-in-direction)
                      (dedicated . t)))
     (funcall cb)
@@ -1526,7 +1526,6 @@ With double prefix argument(C-u C-u), run in compile-only-mode."
   (let* ((orig-src quickrun--executed-file)
          (cmd-key (quickrun--command-key orig-src)))
     (quickrun--set-default-directory cmd-key)
-    (quickrun--kill-quickrun-buffer)
     (unless (local-variable-p 'quickrun--last-cmd-key)
       (make-local-variable 'quickrun--last-cmd-key))
     (setq quickrun--last-cmd-key cmd-key)
