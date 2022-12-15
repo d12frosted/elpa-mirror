@@ -5,8 +5,6 @@
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; Created: 21 August 2013
 ;; Version: 0.5
-;; Package-Version: 20210724.2247
-;; Package-Commit: 2b68472f4007a73908c3b242e83ac5a7587967ff
 ;; Package-Requires: ((dash "1.2.0") (s "1.11.0"))
 
 ;;; Commentary:

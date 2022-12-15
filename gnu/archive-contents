@@ -3186,7 +3186,7 @@
 	    ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	   (:keywords "matching"))])
  (sxhkdrc-mode .
-	       [(0 1 1)
+	       [(0 1 4)
 		((emacs
 		  (27 1)))
 		"Major mode for sxhkdrc files (Simple X Hot Key Daemon)" tar
@@ -3194,7 +3194,7 @@
 		 (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "e4880eb1bd9da0026878b099e3d07162632700c7"))])
+		 (:commit . "95b2c324f8ab66f1ca9eaee89fda54a535e06d6a"))])
  (system-packages .
 		  [(1 0 11)
 		   ((emacs

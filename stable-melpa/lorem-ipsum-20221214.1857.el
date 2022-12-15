@@ -4,9 +4,9 @@
 
 ;; Author: Jean-Philippe Theberge (jphil21@sourceforge.net)
 ;; Maintainer: Joe Schafer (joe@jschaf.com)
-;; Version: 0.3
-;; Package-Version: 20221214.43
-;; Package-Commit: a7433a1360691c6791ad373bb7c0fa89e21e4dc0
+;; Version: 0.4
+;; Package-Version: 20221214.1857
+;; Package-Commit: 4e87a899868e908a7a9e1812831d76c8d072f885
 ;; Keywords: tools, language, convenience
 ;; URL: https://github.com/jschaf/emacs-lorem-ipsum
 
@@ -72,7 +72,6 @@
 ;;;###autoload
 (defun lorem-ipsum-use-default-bindings ()
   "Use the default keybindings of `C-c l [spl]'."
-  (interactive)
   (global-set-key (kbd "C-c l s") 'lorem-ipsum-insert-sentences)
   (global-set-key (kbd "C-c l p") 'lorem-ipsum-insert-paragraphs)
   (global-set-key (kbd "C-c l l") 'lorem-ipsum-insert-list))
@@ -179,9 +178,6 @@ If NUM is non-nil, insert NUM paragraphs."
     (lorem-ipsum-insert-paragraphs (- num 1))))
 
 ;;;###autoload
-(defalias 'Lorem-ipsum-insert-paragraphs 'lorem-ipsum-insert-paragraphs)
-
-;;;###autoload
 (defun lorem-ipsum-insert-sentences (&optional num)
   "Insert lorem ipsum sentences into buffer.
 If NUM is non-nil, insert NUM sentences."
@@ -192,9 +188,6 @@ If NUM is non-nil, insert NUM sentences."
  	     (nth (random (length lorem-ipsum-text)) lorem-ipsum-text)))
 	(insert (concat (nth (random (length para)) para) lorem-ipsum-sentence-separator)))
       (lorem-ipsum-insert-sentences (- num 1))))
-
-;;;###autoload
-(defalias 'Lorem-ipsum-insert-sentences 'lorem-ipsum-insert-sentences)
 
 ;;;###autoload
 (defun lorem-ipsum-insert-list (&optional num)
@@ -212,7 +205,14 @@ If NUM is non-nil, insert NUM list items."
     (insert lorem-ipsum-list-end)))
 
 ;;;###autoload
-(defalias 'Lorem-ipsum-insert-list 'lorem-ipsum-insert-list)
+(define-obsolete-function-alias 'Lorem-ipsum-insert-paragraphs
+  'lorem-ipsum-insert-paragraphs "29.1")
+;;;###autoload
+(define-obsolete-function-alias 'Lorem-ipsum-insert-sentences
+  'lorem-ipsum-insert-sentences "29.1")
+;;;###autoload
+(define-obsolete-function-alias 'Lorem-ipsum-insert-list
+  'lorem-ipsum-insert-list "29.1")
 
 (provide 'lorem-ipsum)
 
