@@ -26,14 +26,9 @@ table-like environment you want to edit when they are called.
 
 The keybinding set by default in the transient prefix are inspired
 to some extent by Emacs defaults.  If you want to change these
-keybindings or change the layout of the transient interface in any
-way you should redefine the transient prefix in your configuration
-(or define a new one with another name), by taking inspiration from
-the one defined in this file (the macro that does that is called
-transient-define-prefix).  Check out the documentation transient.el
-and
-
-  M-x describe-function transient-define-prefix
+keybindings you should change the value of the variable
+latex-table-wizard-transient-keys.  See the info page for
+explanations.
 
 By default, the syntax this package expects is the one of standards
 LaTeX tabular environments, whereby "&" separates columns and "\\"
@@ -55,4 +50,4 @@ cons cell to latex-table-wizard-new-environments-alist:
  '("mytable" . (:col '("\\COL") :row '("\\ROW") :lines '("myhline")))
 
 Each value is a list of strings to allow for more than one macro to
-have the same function.
+have the same function.  See the info page for explanations.
