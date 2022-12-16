@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20221215.1559
-;; Package-Commit: c8b781a34b1e6e342804f40c5141ebdb04e8390b
+;; Package-Version: 20221216.843
+;; Package-Commit: 2cb1ab1ce9f399d82950473a595023063bc839b0
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -45,7 +45,7 @@
 
 (let ((class '((class color) (min-colors 89)))
       (sun "#ffd22a") (light-sun "#ffe995")
-      (bg "#fffae6") (fg "#444444"))
+      (bg "#ffffff") (fg "#000000"))
   (custom-theme-set-faces
    'tok
    ;; Basic faces
@@ -53,15 +53,15 @@
    `(highlight ((,class (:background ,light-sun))))
    `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
                       :background ,sun))))
-   `(secondary-selection ((t (:inherit region))))
+   `(secondary-selection ((,class (:inherit region))))
    `(trailing-whitespace ((,class (:inherit error))))
    `(cursor ((,class (:background "red"))))
    `(error ((,class (:weight bold :foreground "firebrick1"))))
    `(warning ((,class (:weight bold :foreground "DarkOrange"))))
    `(success ((,class (:weight bold :foreground "Green1"))))
    `(minibuffer-prompt ((,class (:foreground "medium blue"))))
-   `(fringe ((t (nil))))
-   `(button ((t (:underline t))))
+   `(fringe ((,class (nil))))
+   `(button ((,class (:underline t))))
 
    ;; Line-numbes
    `(line-number-current-line ((,class (:inherit highlight))))
@@ -71,56 +71,56 @@
    (when (>= emacs-major-version 29)
      `(mode-line-active ((,class (:inherit mode-line)))))
    `(mode-line-inactive ((,class (:weight light :foreground ,fg :background ,light-sun))))
-   `(mode-line-highlight ((t (nil))))
+   `(mode-line-highlight ((,class (nil))))
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-buffer-id ((,class (:weight bold))))
 
    ;; Font-lock
-   `(font-lock-comment-face ((,class (:foreground "gray65" :slant italic))))
+   `(font-lock-comment-face ((,class (:foreground "gray50" :slant italic))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-string-face ((,class (:slant italic))))
    `(font-lock-doc-face ((, class(:inherit font-lock-comment-face))))
-   `(font-lock-doc-markup-face ((t (nil))))
-   `(font-lock-keyword-face ((t (nil))))
-   `(font-lock-builtin-face ((t (nil))))
-   `(font-lock-function-name-face ((t (nil))))
-   `(font-lock-variable-name-face ((t (nil))))
-   `(font-lock-type-face ((t (nil))))
-   `(font-lock-constant-face ((t (nil))))
-   `(font-lock-warning-face ((t (nil))))
-   `(font-lock-negation-char-face ((t (nil))))
+   `(font-lock-doc-markup-face ((,class (nil))))
+   `(font-lock-keyword-face ((,class (nil))))
+   `(font-lock-builtin-face ((,class (nil))))
+   `(font-lock-function-name-face ((,class (nil))))
+   `(font-lock-variable-name-face ((,class (nil))))
+   `(font-lock-type-face ((,class (nil))))
+   `(font-lock-constant-face ((,class (nil))))
+   `(font-lock-warning-face ((,class (nil))))
+   `(font-lock-negation-char-face ((,class (nil))))
    `(font-lock-preprocessor-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-regexp-grouping-backslash ((t (nil))))
-   `(font-lock-regexp-grouping-construct ((t (nil))))
+   `(font-lock-regexp-grouping-backslash ((,class (nil))))
+   `(font-lock-regexp-grouping-construct ((,class (nil))))
 
    ;; Flymake
    `(flymake-error ((,class (:underline (:style wave :color "red")))))
    `(flymake-warning ((,class (:underline (:style wave :color "DarkOrange")))))
-   `(flymake-note ((t (nil))))
+   `(flymake-note ((,class (nil))))
 
    ;; sh
-   `(sh-heredoc ((t (nil))))
-   `(sh-quoted-exec ((t (nil))))
+   `(sh-heredoc ((,class (nil))))
+   `(sh-quoted-exec ((,class (nil))))
 
    ;; Outline
-   `(outline-1 ((t (nil))))
-   `(outline-2 ((t (nil))))
-   `(outline-3 ((t (nil))))
-   `(outline-4 ((t (nil))))
-   `(outline-5 ((t (nil))))
-   `(outline-6 ((t (nil))))
-   `(outline-7 ((t (nil))))
-   `(outline-8 ((t (nil))))
+   `(outline-1 ((,class (nil))))
+   `(outline-2 ((,class (nil))))
+   `(outline-3 ((,class (nil))))
+   `(outline-4 ((,class (nil))))
+   `(outline-5 ((,class (nil))))
+   `(outline-6 ((,class (nil))))
+   `(outline-7 ((,class (nil))))
+   `(outline-8 ((,class (nil))))
 
    ;; Terraform
-   `(terraform--resource-name-face ((t (nil))))
-   `(terraform--resource-type-face ((t (nil))))
+   `(terraform--resource-name-face ((,class (nil))))
+   `(terraform--resource-type-face ((,class (nil))))
 
    ;; Markdown
-   `(markdown-header-face ((t (nil))))
-   `(markdown-header-delimiter-face ((t (nil))))
-   `(markdown-metadata-key-face ((t (:inherit font-lock-comment-face))))
-   `(markdown-metadata-value-face ((t (:inherit font-lock-comment-face))))))
+   `(markdown-header-face ((,class (nil))))
+   `(markdown-header-delimiter-face ((,class (nil))))
+   `(markdown-metadata-key-face ((,class (:inherit font-lock-comment-face))))
+   `(markdown-metadata-value-face ((,class (:inherit font-lock-comment-face))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)

@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/snow.el
-;; Package-Version: 20221215.1800
-;; Package-Commit: 86dec51b102f6c30effda3936034a7e82135aae6
+;; Package-Version: 20221216.942
+;; Package-Commit: f415e8af3d7a4016c1f84964669d84d58d4b4d15
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: games
@@ -179,6 +179,12 @@ snow, displayed with these characters."
   "Maximum wind velocity."
   :type 'float)
 
+(defface snow-flake '((t :inherit default))
+  "Face used for snowflakes.
+Certain fonts may cause a jittery appearance due to the size of
+the snowflake glyph.  If you notice this problem, try changing
+the font used for this face.")
+
 ;;;; Commands
 
 ;;;###autoload
@@ -265,7 +271,7 @@ prefix), advance snow frames manually by pressing \"SPC\"."
                 ((pred (< 50)) "*")
                 ((pred (< 10)) ".")
                 (_ "."))
-              'face (list :foreground (snow-flake-color mass))))
+              'face (list :inherit 'snow-flake :foreground (snow-flake-color mass))))
 
 (defsubst snow-flake-within-sides-p (flake)
   "Return non-nil if FLAKE is within window's sides."
