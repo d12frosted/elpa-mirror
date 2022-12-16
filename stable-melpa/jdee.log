@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 8cfe5788348c1f370058ccc0ec01b45300a36c98
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jdee/
-  to /tmp/jdeeSxYXll/jdee-20191102.1426
+  to /tmp/jdeemZizYa/jdee-20191102.1426
     beanshell.el -> beanshell.el
     efc.el -> efc.el
     jcomplete.el -> jcomplete.el
@@ -67,19 +67,16 @@ Copying files (->) and directories (=>)
     jdee-run.el -> jdee-run.el
     jdee-stacktrace.el -> jdee-stacktrace.el
     jdee-stat.el -> jdee-stat.el
+    jdee-test.el -> jdee-test.el
     jdee-util.el -> jdee-util.el
     jdee-which-method.el -> jdee-which-method.el
     jdee-widgets.el -> jdee-widgets.el
     jdee-wiz.el -> jdee-wiz.el
     jdee-xref.el -> jdee-xref.el
     jdee.el -> jdee.el
-  ! doc/jdee.texi -> jdee.texi
-    jdee-test.el -> jdee-test.el
-Generating /tmp/jdeeSxYXll/jdee-20191102.1426/jdee.info
 Created jdee-20191102.1426.tar containing:
   jdee-20191102.1426/
   jdee-20191102.1426/beanshell.el
-  jdee-20191102.1426/dir
   jdee-20191102.1426/efc.el
   jdee-20191102.1426/jcomplete.el
   jdee-20191102.1426/jdee-abbrev.el
@@ -146,8 +143,7 @@ Created jdee-20191102.1426.tar containing:
   jdee-20191102.1426/jdee-wiz.el
   jdee-20191102.1426/jdee-xref.el
   jdee-20191102.1426/jdee.el
-  jdee-20191102.1426/jdee.info
-Built jdee in 18.854s, finished at 2022-12-15T19:41:05+0000
+Built jdee in 5.644s, finished at 2022-12-16T03:16:32+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  409 Dec 15 19:41 packages/jdee-20191102.1426.entry
-1.8M -rw-r--r-- 1 root root 1.8M Dec 15 19:41 packages/jdee-20191102.1426.tar
+4.0K -rw-r--r-- 1 root root  409 Dec 16 03:16 packages/jdee-20191102.1426.entry
+1.7M -rw-r--r-- 1 root root 1.7M Dec 16 03:16 packages/jdee-20191102.1426.tar

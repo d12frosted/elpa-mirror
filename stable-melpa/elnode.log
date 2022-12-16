@@ -7,10 +7,7 @@ Checking out origin/melpa
 Checking out 29ef0f51a65a24fca7fdcdb4140d2e4556e4bb29
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elnode/
-  to /tmp/elnode0WjVrc/elnode-20190702.1509
-    .git => .git
-    COPYING -> COPYING
-    README.creole -> README.creole
+  to /tmp/elnodee3xmlu/elnode-20190702.1509
     default-webserver-image.png -> default-webserver-image.png
     default-webserver-test.html -> default-webserver-test.html
     default-wiki-index.creole -> default-wiki-index.creole
@@ -24,53 +21,6 @@ Copying files (->) and directories (=>)
     elnode.el -> elnode.el
 Created elnode-20190702.1509.tar containing:
   elnode-20190702.1509/
-  elnode-20190702.1509/.git/
-  elnode-20190702.1509/.git/FETCH_HEAD
-  elnode-20190702.1509/.git/HEAD
-  elnode-20190702.1509/.git/ORIG_HEAD
-  elnode-20190702.1509/.git/branches/
-  elnode-20190702.1509/.git/config
-  elnode-20190702.1509/.git/description
-  elnode-20190702.1509/.git/hooks/
-  elnode-20190702.1509/.git/hooks/applypatch-msg.sample
-  elnode-20190702.1509/.git/hooks/commit-msg.sample
-  elnode-20190702.1509/.git/hooks/fsmonitor-watchman.sample
-  elnode-20190702.1509/.git/hooks/post-update.sample
-  elnode-20190702.1509/.git/hooks/pre-applypatch.sample
-  elnode-20190702.1509/.git/hooks/pre-commit.sample
-  elnode-20190702.1509/.git/hooks/pre-merge-commit.sample
-  elnode-20190702.1509/.git/hooks/pre-push.sample
-  elnode-20190702.1509/.git/hooks/pre-rebase.sample
-  elnode-20190702.1509/.git/hooks/pre-receive.sample
-  elnode-20190702.1509/.git/hooks/prepare-commit-msg.sample
-  elnode-20190702.1509/.git/hooks/push-to-checkout.sample
-  elnode-20190702.1509/.git/hooks/update.sample
-  elnode-20190702.1509/.git/index
-  elnode-20190702.1509/.git/info/
-  elnode-20190702.1509/.git/info/exclude
-  elnode-20190702.1509/.git/logs/
-  elnode-20190702.1509/.git/logs/HEAD
-  elnode-20190702.1509/.git/logs/refs/
-  elnode-20190702.1509/.git/logs/refs/heads/
-  elnode-20190702.1509/.git/logs/refs/heads/master
-  elnode-20190702.1509/.git/logs/refs/remotes/
-  elnode-20190702.1509/.git/logs/refs/remotes/origin/
-  elnode-20190702.1509/.git/logs/refs/remotes/origin/HEAD
-  elnode-20190702.1509/.git/objects/
-  elnode-20190702.1509/.git/objects/info/
-  elnode-20190702.1509/.git/objects/pack/
-  elnode-20190702.1509/.git/objects/pack/pack-1731513e45cfd335ff9d290ca6f0515101b9866a.idx
-  elnode-20190702.1509/.git/objects/pack/pack-1731513e45cfd335ff9d290ca6f0515101b9866a.pack
-  elnode-20190702.1509/.git/packed-refs
-  elnode-20190702.1509/.git/refs/
-  elnode-20190702.1509/.git/refs/heads/
-  elnode-20190702.1509/.git/refs/heads/master
-  elnode-20190702.1509/.git/refs/remotes/
-  elnode-20190702.1509/.git/refs/remotes/origin/
-  elnode-20190702.1509/.git/refs/remotes/origin/HEAD
-  elnode-20190702.1509/.git/refs/tags/
-  elnode-20190702.1509/COPYING
-  elnode-20190702.1509/README.creole
   elnode-20190702.1509/default-webserver-image.png
   elnode-20190702.1509/default-webserver-test.html
   elnode-20190702.1509/default-wiki-index.creole
@@ -82,7 +32,7 @@ Created elnode-20190702.1509.tar containing:
   elnode-20190702.1509/elnode-testsupport.el
   elnode-20190702.1509/elnode-wiki.el
   elnode-20190702.1509/elnode.el
-Built elnode in 5.046s, finished at 2022-12-15T19:17:16+0000
+Built elnode in 4.291s, finished at 2022-12-16T02:53:18+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  437 Dec 15 19:17 packages/elnode-20190702.1509.entry
-2.4M -rw-r--r-- 1 root root 2.4M Dec 15 19:17 packages/elnode-20190702.1509.tar
+4.0K -rw-r--r-- 1 root root  437 Dec 16 02:53 packages/elnode-20190702.1509.entry
+200K -rw-r--r-- 1 root root 200K Dec 16 02:53 packages/elnode-20190702.1509.tar

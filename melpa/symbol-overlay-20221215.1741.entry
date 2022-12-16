@@ -1,0 +1,13 @@
+(symbol-overlay .
+		[(20221215 1741)
+		 ((emacs
+		   (24 3))
+		  (seq
+		   (2 2)))
+		 "Highlight symbols with keymap-enabled overlays" single
+		 ((:commit . "f18493673d1c9870f6b44e2dbdbe8b0b739d1526")
+		  (:authors
+		   ("wolray" . "wolray@foxmail.com"))
+		  (:maintainer "wolray" . "wolray@foxmail.com")
+		  (:keywords "faces" "matching")
+		  (:url . "https://github.com/wolray/symbol-overlay/"))])

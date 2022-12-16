@@ -6,6 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-buffer-revert-all
+;; Package-Version: 20221212.1123
+;; Package-Commit: 3898b1315b1ba2cae5b83a3f515c6874cd1e960b
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.3"))
 

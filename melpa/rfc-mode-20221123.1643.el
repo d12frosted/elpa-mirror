@@ -2,6 +2,8 @@
 
 ;; Author: Nicolas Martyanoff <nicolas@n16f.net>
 ;; URL: https://github.com/galdor/rfc-mode
+;; Package-Version: 20221123.1643
+;; Package-Commit: 53ec006aa6aa4fae9c6c64004692aa3d01b38275
 ;; Version: 1.4.0
 ;; Package-Requires: ((emacs "25.1"))
 

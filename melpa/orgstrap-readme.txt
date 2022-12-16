@@ -12,7 +12,7 @@ to simplify authoring of orgstrapped files.  For more details see
 README.org which is also the literate source for this orgstrap.el
 file in the git repo at
 https://github.com/tgbugs/orgstrap/blob/master/README.org
-or whever you can find git:c1b28526ef9931654b72dff559da2205feb87f75
+or wherever you can find git:c1b28526ef9931654b72dff559da2205feb87f75
 
 Code in an orgstrap block is usually meant to be executed directly by its
 containing Org file.  However, if the code is something that will be reused
