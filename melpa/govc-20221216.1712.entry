@@ -1,5 +1,5 @@
 (govc .
-      [(20220509 1455)
+      [(20221216 1712)
        ((emacs
 	 (24 3))
 	(dash
@@ -11,9 +11,9 @@
 	(json-mode
 	 (1 6 0)))
        "Interface to govc for managing VMware ESXi and vCenter" single
-       ((:commit . "72c2000c01b73c884f1f94df52765762e187b1de")
+       ((:commit . "c82a709c50c0cd1ae560dd4c8da2d5b266114c50")
 	(:authors
 	 ("The govc developers"))
 	(:maintainer "The govc developers")
 	(:keywords "convenience")
-	(:url . "https://github.com/vmware/govmomi/tree/master/govc/emacs"))])
+	(:url . "https://github.com/vmware/govmomi/tree/main/govc/emacs"))])

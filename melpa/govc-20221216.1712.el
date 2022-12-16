@@ -1,9 +1,9 @@
 ;;; govc.el --- Interface to govc for managing VMware ESXi and vCenter
 
 ;; Author: The govc developers
-;; URL: https://github.com/vmware/govmomi/tree/master/govc/emacs
-;; Package-Version: 20220509.1455
-;; Package-Commit: 72c2000c01b73c884f1f94df52765762e187b1de
+;; URL: https://github.com/vmware/govmomi/tree/main/govc/emacs
+;; Package-Version: 20221216.1712
+;; Package-Commit: c82a709c50c0cd1ae560dd4c8da2d5b266114c50
 ;; Keywords: convenience
 ;; Version: 0.18.0
 ;; Package-Requires: ((emacs "24.3") (dash "1.5.0") (s "1.9.0") (magit-popup "2.0.50") (json-mode "1.6.0"))

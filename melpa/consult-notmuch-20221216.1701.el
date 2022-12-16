@@ -3,10 +3,10 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: mail
-;; Package-Version: 20220929.2111
-;; Package-Commit: 29e9a3d0d4ed2e8bcefbf009103f7e5665b6c260
+;; Package-Version: 20221216.1701
+;; Package-Commit: d0d4129d45ccceddaeeaa3631eb42d5dd09a758b
 ;; License: GPL-3.0-or-later
-;; Version: 0.8
+;; Version: 0.8.1
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (notmuch "0.31"))
 ;; Homepage: https://codeberg.org/jao/consult-notmuch
 
@@ -68,8 +68,8 @@ Supported fields are: date, authors, subject, count and tags."
 (defun consult-notmuch--command (input)
   "Construct a search command for emails containing INPUT."
   (if consult-notmuch-show-single-message
-      `("notmuch" "show" "--body=false" ,input)
-    `("notmuch" "search" ,input)))
+      `(,notmuch-command "show" "--body=false" ,input)
+    `(,notmuch-command "search" ,input)))
 
 (defun consult-notmuch--search (&optional initial)
   "Perform an asynchronous notmuch search via `consult--read'.
@@ -281,7 +281,7 @@ If given, use INITIAL as the starting point of the query."
 
 (defun consult-notmuch--address-command (input)
   "Spec for an async command querying a notmuch address with INPUT."
-  `("notmuch" "address" "--format=text" ,input))
+  `(,notmuch-command "address" "--format=text" ,input))
 
 (defun consult-notmuch-address-compose (address)
   "Compose an email to a given ADDRESS."
