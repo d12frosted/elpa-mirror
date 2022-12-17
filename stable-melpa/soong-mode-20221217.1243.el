@@ -4,11 +4,11 @@
 
 ;; Author: Sergey Bobrenok <bobrofon@gmail.com>
 ;; Keywords: languages
-;; Package-Version: 20221121.1930
-;; Package-Commit: 7a8fa60f5c9431aa061248646dad377183b51f7c
+;; Package-Version: 20221217.1243
+;; Package-Commit: bf3dc1070b368b413958f54fbe9bcc2aaf77b56f
 ;; URL: https://github.com/bobrofon/soong-mode
 ;; Package-Requires: ((emacs "27.1"))
-;; Version: 0.1.2-snapshot
+;; Version: 1.0.0
 
 ;; This file is not part of GNU Emacs.
 
