@@ -8,6 +8,7 @@ subed
 ..... Installing the subed package from NonGNU Elpa
 ..... Manual installation
 ..... use-package configuration
+..... straight configuration
 .. Getting started
 .. Troubleshooting
 ..... subed-mpv: Service name too long
@@ -226,6 +227,20 @@ use-package configuration
   │    ;; Break lines at 40 characters
   │   (add-hook 'subed-mode-hook (lambda () (setq-local fill-column 40))))
   └────
+
+
+straight configuration
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  If you use [straight.el], you can install subed with the following
+  recipe:
+
+  ┌────
+  │ (straight-use-package '(subed :type git :host github :repo "sachac/subed" :files ("subed/*.el")))
+  └────
+
+
+[straight.el] <https://github.com/radian-software/straight.el>
 
 
 Getting started
