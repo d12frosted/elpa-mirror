@@ -3,9 +3,9 @@
 ;; SPDX-License-Identifier: ISC
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-ascii-table
-;; Package-Version: 20201019.700
-;; Package-Commit: 4f68ad0b36c365c0652756691ab1703d0d46b4b4
-;; Package-Requires: ((emacs "24.3") (cl-lib "0.5"))
+;; Package-Version: 20221217.1317
+;; Package-Commit: 3c41379869ef5e44b3596a5a8235fe9672d4e608
+;; Package-Requires: ((emacs "24.3"))
 ;; Version: 0.1.0
 ;; Keywords: help tools
 ;;
@@ -41,7 +41,7 @@ Otherwise their names NUL .. DEL are shown.")
 
 (defun ascii-table--binary (codepoint)
   "Internal helper to format CODEPOINT in binary."
-  (setq codepoint (logand codepoint #x7F))
+  (cl-assert (<= 0 codepoint #x7F))
   (string (+ ?0 (logand 1 (lsh codepoint -6)))
           (+ ?0 (logand 1 (lsh codepoint -5)))
           (+ ?0 (logand 1 (lsh codepoint -4)))
@@ -49,6 +49,33 @@ Otherwise their names NUL .. DEL are shown.")
           (+ ?0 (logand 1 (lsh codepoint -2)))
           (+ ?0 (logand 1 (lsh codepoint -1)))
           (+ ?0 (logand 1 (lsh codepoint -0)))))
+
+(defun ascii-table--class-face (class)
+  "Internal helper to get face for character CLASS."
+  (cl-case class
+    (control font-lock-keyword-face)
+    (punct font-lock-preprocessor-face)
+    (digit font-lock-function-name-face)
+    (upper font-lock-variable-name-face)
+    (lower font-lock-variable-name-face)
+    (t nil)))
+
+(defun ascii-table--character-class (codepoint)
+  "Internal helper to classify CODEPOINT."
+  (cond ((< codepoint #x00) nil)
+        ((< codepoint #x20) 'control)
+        ((= codepoint #x20) 'space)
+        ((< codepoint #x30) 'punct)
+        ((< codepoint #x3a) 'digit)
+        ((< codepoint #x41) 'punct)
+        ((< codepoint #x47) 'upper)
+        ((< codepoint #x5b) 'upper)
+        ((< codepoint #x61) 'punct)
+        ((< codepoint #x67) 'lower)
+        ((< codepoint #x7b) 'lower)
+        ((< codepoint #x7f) 'punct)
+        ((= codepoint #x7f) 'control)
+        (t nil)))
 
 (defun ascii-table--control-caret (codepoint)
   "Internal helper to format CODEPOINT in caret notation."
@@ -84,7 +111,7 @@ one for the name or other representation."
   (let* ((codepoints 128)
          (rows (ceiling codepoints codepoints/row))
          (cols (* 2 codepoints/row))
-         (table (make-vector (* 2 rows cols) "")))
+         (table (make-vector (* 2 rows cols) (cons "" nil))))
     (cl-do
         ((codepoint 0 (1+ codepoint)))
         ((= codepoint codepoints) table)
@@ -99,11 +126,13 @@ one for the name or other representation."
                          ((nil) (ascii-table--control-name codepoint))
                          (caret (ascii-table--control-caret codepoint)))
                        (string codepoint)))
+             (face (ascii-table--class-face
+                    (ascii-table--character-class codepoint)))
              (row  (mod codepoint rows))
              (col  (truncate codepoint rows))
              (cell (* 2 (+ (* codepoints/row row) col))))
-        (aset table (+ 0 cell) code)
-        (aset table (+ 1 cell) name)))))
+        (aset table (+ 0 cell) (cons code 'font-lock-comment-face))
+        (aset table (+ 1 cell) (cons name face))))))
 
 (defun ascii-table--column-widths (table cols)
   "Internal helper to compute column widths needed for TABLE.
@@ -114,9 +143,11 @@ Assume the table is formatted using COLS columns."
     (cl-do
         ((cell 0 (1+ cell)))
         ((= cell cells) widths)
-      (let ((col (mod cell cols)))
-        (let ((width (length (aref table cell))))
-          (aset widths col (max (aref widths col) width)))))))
+      (let* ((col (mod cell cols))
+             (pair (aref table cell))
+             (contents (car pair))
+             (width (length contents)))
+        (aset widths col (max (aref widths col) width))))))
 
 (defun ascii-table--width-limit ()
   "Internal helper to get narrowest window width for ASCII table."
@@ -158,14 +189,23 @@ Assume the table is formatted using COLS columns."
           (cl-dotimes (row rows)
             (cl-dotimes (col cols)
               (let* ((cell (+ col (* row cols)))
-                     (contents (aref table cell))
+                     (pair (aref table cell))
+                     (contents (car pair))
+                     (face (cdr pair))
                      (col-width (aref widths col))
                      (pad-amount (max 0 (- col-width (length contents))))
                      (pad (make-string pad-amount ? ))
                      (right-justify-p (= 0 (mod col 2))))
                 (unless (= col 0) (insert "  "))
-                (if right-justify-p (insert pad contents)
-                  (insert contents pad))))
+                (when right-justify-p
+                  (insert pad))
+                (let ((start (point)))
+                  (insert contents)
+                  (let* ((end (point))
+                         (overlay (make-overlay start end)))
+                    (overlay-put overlay 'face face)))
+                (unless right-justify-p
+                  (insert pad))))
             (insert "\n"))
           (cl-return))))
     (goto-char (point-min))))

@@ -5,8 +5,8 @@
 ;; Author: Titus von der Malsburg <malsburg@posteo.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/emacs-helm/helm-mu
-;; Package-Version: 20220920.1200
-;; Package-Commit: b9865a3a8ba8af572fcf12d975ea04dc9437c1a2
+;; Package-Version: 20221217.1642
+;; Package-Commit: 0c4605458e40098d5427fcd8327682a93d780911
 ;; Version: 1.0.0
 ;; Package-Requires: ((helm "1.5.5"))
 
@@ -277,7 +277,7 @@ by appending a `*' to the pattern input by the user"
         (mucmd (concat mu4e-mu-binary
                        " find "
                        helm-mu-command-arguments
-                       " -f $'i\td\tf\tt\ts' --sortfield=d --maxnum=%d --reverse --format=sexp %s 2>/dev/null "))
+                       " -f $'i\td\tf\tt\ts' --sortfield=date --maxnum=%d --reverse --format=sexp %s 2>/dev/null "))
         (sedcmd (concat helm-mu-gnu-sed-program
                         " -e ':a;N;$!ba;s/\\n\\(\\t\\|\\()\\)\\)/ \\2/g'"))
         (pattern (helm-mu-get-search-pattern)))
