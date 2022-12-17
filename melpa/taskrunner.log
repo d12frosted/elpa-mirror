@@ -3,11 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-taskrunner/emacs-taskrunner.git
 
 Updating /mnt/store/melpa/working/taskrunner/
-Checking out origin/HEAD
 Checking out 716323aff410b4d864d137c9ebe4bbb5b8587f5e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/taskrunner/
-  to /tmp/taskrunnereOgEfa/taskrunner-20190916.1608
+  to /tmp/taskrunnerTS7i9B/taskrunner-20190916.1608
     taskrunner-clang.el -> taskrunner-clang.el
     taskrunner-general.el -> taskrunner-general.el
     taskrunner-java.el -> taskrunner-java.el
@@ -31,7 +30,7 @@ Created taskrunner-20190916.1608.tar containing:
   taskrunner-20190916.1608/taskrunner-static-targets.el
   taskrunner-20190916.1608/taskrunner-web.el
   taskrunner-20190916.1608/taskrunner.el
-Built taskrunner in 4.136s, finished at 2022-12-16T19:02:47+0000
+Built taskrunner in 4.123s, finished at 2022-12-17T02:35:38+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  571 Dec 16 19:02 packages/taskrunner-20190916.1608.entry
-100K -rw-r--r-- 1 root root 100K Dec 16 19:02 packages/taskrunner-20190916.1608.tar
+4.0K -rw-r--r-- 1 root root  571 Dec 17 02:35 packages/taskrunner-20190916.1608.entry
+100K -rw-r--r-- 1 root root 100K Dec 17 02:35 packages/taskrunner-20190916.1608.tar

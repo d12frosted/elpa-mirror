@@ -3,29 +3,28 @@ Fetcher: github
 Source:  https://github.com/atykhonov/google-translate.git
 
 Updating /mnt/store/melpa/working/google-translate/
-Checking out origin/HEAD
-Checking out f893b680311fedb1dd735bf5b3be7af1ed1583be
+Checking out e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/google-translate/
-  to /tmp/google-translatelT6cqt/google-translate-20220920.35
-    .bump-version.el -> .bump-version.el
+  to /tmp/google-translatexofAre/google-translate-20220921.245
     google-translate-backend.el -> google-translate-backend.el
     google-translate-core-ui.el -> google-translate-core-ui.el
     google-translate-core.el -> google-translate-core.el
     google-translate-default-ui.el -> google-translate-default-ui.el
     google-translate-smooth-ui.el -> google-translate-smooth-ui.el
     google-translate.el -> google-translate.el
-Created google-translate-20220920.35.tar containing:
-  google-translate-20220920.35/
-  google-translate-20220920.35/.bump-version.el
-  google-translate-20220920.35/google-translate-backend.el
-  google-translate-20220920.35/google-translate-core-ui.el
-  google-translate-20220920.35/google-translate-core.el
-  google-translate-20220920.35/google-translate-default-ui.el
-  google-translate-20220920.35/google-translate-pkg.el
-  google-translate-20220920.35/google-translate-smooth-ui.el
-  google-translate-20220920.35/google-translate.el
-Built google-translate in 8.276s, finished at 2022-12-16T18:17:25+0000
+Created google-translate-20220921.245.tar containing:
+  google-translate-20220921.245/
+  google-translate-20220921.245/google-translate-backend.el
+  google-translate-20220921.245/google-translate-core-ui.el
+  google-translate-20220921.245/google-translate-core.el
+  google-translate-20220921.245/google-translate-default-ui.el
+  google-translate-20220921.245/google-translate-pkg.el
+  google-translate-20220921.245/google-translate-smooth-ui.el
+  google-translate-20220921.245/google-translate.el
+Built google-translate in 3.591s, finished at 2022-12-17T01:49:42+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  433 Dec 16 18:17 packages/google-translate-20220920.35.entry
-100K -rw-r--r-- 1 root root 100K Dec 16 18:17 packages/google-translate-20220920.35.tar
+4.0K -rw-r--r-- 1 root root  433 Dec 16 22:04 packages/google-translate-20220920.35.entry
+100K -rw-r--r-- 1 root root 100K Dec 16 22:04 packages/google-translate-20220920.35.tar
+4.0K -rw-r--r-- 1 root root  434 Dec 17 01:49 packages/google-translate-20220921.245.entry
+100K -rw-r--r-- 1 root root 100K Dec 17 01:49 packages/google-translate-20220921.245.tar

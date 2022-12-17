@@ -3,11 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-mode.git
 
 Updating /mnt/store/melpa/working/lsp-mode/
-Checking out origin/HEAD
 Checking out c4a6f24a439d552995e3db1120eb5a99433683f0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-mode/
-  to /tmp/lsp-modeL0GTD7/lsp-mode-20221216.1619
+  to /tmp/lsp-modeG5Je7N/lsp-mode-20221216.1619
     lsp-completion.el -> lsp-completion.el
     lsp-diagnostics.el -> lsp-diagnostics.el
     lsp-dired.el -> lsp-dired.el
@@ -201,9 +200,7 @@ Created lsp-mode-20221216.1619.tar containing:
   lsp-mode-20221216.1619/lsp-yaml.el
   lsp-mode-20221216.1619/lsp-zig.el
   lsp-mode-20221216.1619/lsp.el
-Built lsp-mode in 7.814s, finished at 2022-12-16T18:32:23+0000
+Built lsp-mode in 6.616s, finished at 2022-12-17T02:04:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  538 Dec 16 14:44 packages/lsp-mode-20221216.1059.entry
-1.3M -rw-r--r-- 1 root root 1.3M Dec 16 14:44 packages/lsp-mode-20221216.1059.tar
-4.0K -rw-r--r-- 1 root root  538 Dec 16 18:32 packages/lsp-mode-20221216.1619.entry
-1.3M -rw-r--r-- 1 root root 1.3M Dec 16 18:32 packages/lsp-mode-20221216.1619.tar
+4.0K -rw-r--r-- 1 root root  538 Dec 17 02:04 packages/lsp-mode-20221216.1619.entry
+1.3M -rw-r--r-- 1 root root 1.3M Dec 17 02:04 packages/lsp-mode-20221216.1619.tar

@@ -5,7 +5,7 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-reverse-theme
 ;; Package-Version: 20141205.145
-;; Package-Commit: 13d0821a4ec5ece7e6a81f50d2a1a7e7ad21394d
+;; Package-Commit: 3105c950bcb51c662c79b59ca102ef662c2b0be0
 ;; Version: 0.03
 
 ;; This program is free software; you can redistribute it and/or modify

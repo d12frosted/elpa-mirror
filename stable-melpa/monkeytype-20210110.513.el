@@ -6,7 +6,7 @@
 ;; Maintainer: Pablo Barrantes <xjpablobrx@gmail.com>
 ;; Version: 0.1.3
 ;; Package-Version: 20210110.513
-;; Package-Commit: e72472d3c490c8e3ffc5ca7bf8e535e15bd867a7
+;; Package-Commit: 0e949d08198c0bd003f1d5c8cdceb7e36bef22f7
 ;; Keywords: games
 ;; URL: https://github.com/jpablobr/emacs-monkeytype
 ;; Package-Requires: ((emacs "25.1") (scrollable-quick-peek "0.1.0"))

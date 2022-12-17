@@ -3,11 +3,10 @@ Fetcher: github
 Source:  https://github.com/jwiegley/use-package.git
 
 Updating /mnt/store/melpa/working/use-package/
-Checking out origin/HEAD
 Checking out bcf0984cf55b70fe6896c6a15f61df92b24f8ffd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/use-package/
-  to /tmp/use-package3R3W1o/use-package-20221209.2013
+  to /tmp/use-packageLVZuDa/use-package-20221209.2013
     use-package-bind-key.el -> use-package-bind-key.el
     use-package-core.el -> use-package-core.el
     use-package-delight.el -> use-package-delight.el
@@ -19,9 +18,9 @@ Copying files (->) and directories (=>)
     doclicense.texi -> doclicense.texi
     docstyle.texi -> docstyle.texi
     use-package.texi -> use-package.texi
-Generating /tmp/use-package3R3W1o/use-package-20221209.2013/doclicense.info
-Generating /tmp/use-package3R3W1o/use-package-20221209.2013/docstyle.info
-Generating /tmp/use-package3R3W1o/use-package-20221209.2013/use-package.info
+Generating /tmp/use-packageLVZuDa/use-package-20221209.2013/doclicense.info
+Generating /tmp/use-packageLVZuDa/use-package-20221209.2013/docstyle.info
+Generating /tmp/use-packageLVZuDa/use-package-20221209.2013/use-package.info
 Created use-package-20221209.2013.tar containing:
   use-package-20221209.2013/
   use-package-20221209.2013/dir
@@ -37,7 +36,7 @@ Created use-package-20221209.2013.tar containing:
   use-package-20221209.2013/use-package-pkg.el
   use-package-20221209.2013/use-package.el
   use-package-20221209.2013/use-package.info
-Built use-package in 16.047s, finished at 2022-12-16T19:06:45+0000
+Built use-package in 16.117s, finished at 2022-12-17T02:39:54+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  487 Dec 16 19:06 packages/use-package-20221209.2013.entry
-232K -rw-r--r-- 1 root root 230K Dec 16 19:06 packages/use-package-20221209.2013.tar
+4.0K -rw-r--r-- 1 root root  487 Dec 17 02:39 packages/use-package-20221209.2013.entry
+232K -rw-r--r-- 1 root root 230K Dec 17 02:39 packages/use-package-20221209.2013.tar

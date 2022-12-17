@@ -1,9 +1,0 @@
-(imapfilter .
-	    [(20180318 2027)
-	     nil "run the imapfilter executable" single
-	     ((:commit . "5e842a8c60ba98f344edf1b1e65f5a480ed938ed")
-	      (:authors
-	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
-	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
-	      (:keywords "mail")
-	      (:url . "https://github.com/tarsius/imapfilter"))])

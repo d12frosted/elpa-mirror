@@ -3,11 +3,10 @@ Fetcher: github
 Source:  https://github.com/ProofGeneral/PG.git
 
 Updating /mnt/store/melpa/working/proof-general/
-Checking out origin/HEAD
 Checking out bbbb1e2604996513cd05f54da1b8ef059a8e8968
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/proof-general/
-  to /tmp/proof-general5sEbRe/proof-general-20221130.946
+  to /tmp/proof-generalQkTEtt/proof-general-20221130.946
     proof-general.el -> proof-general.el
   ! doc/dir -> dir
   ! doc/PG-adapting.texi -> PG-adapting.texi
@@ -39,8 +38,8 @@ Copying files (->) and directories (=>)
     pghaskell => pghaskell
     pgocaml => pgocaml
     pgshell => pgshell
-Generating /tmp/proof-general5sEbRe/proof-general-20221130.946/PG-adapting.info
-Generating /tmp/proof-general5sEbRe/proof-general-20221130.946/ProofGeneral.info
+Generating /tmp/proof-generalQkTEtt/proof-general-20221130.946/PG-adapting.info
+Generating /tmp/proof-generalQkTEtt/proof-general-20221130.946/ProofGeneral.info
 Created proof-general-20221130.946.tar containing:
   proof-general-20221130.946/
   proof-general-20221130.946/AUTHORS
@@ -176,7 +175,7 @@ Created proof-general-20221130.946.tar containing:
   proof-general-20221130.946/qrhl/
   proof-general-20221130.946/qrhl/qrhl-input.el
   proof-general-20221130.946/qrhl/qrhl.el
-Built proof-general in 43.712s, finished at 2022-12-16T18:51:19+0000
+Built proof-general in 34.867s, finished at 2022-12-17T02:24:07+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  296 Dec 16 18:51 packages/proof-general-20221130.946.entry
-2.7M -rw-r--r-- 1 root root 2.7M Dec 16 18:51 packages/proof-general-20221130.946.tar
+4.0K -rw-r--r-- 1 root root  296 Dec 17 02:24 packages/proof-general-20221130.946.entry
+2.7M -rw-r--r-- 1 root root 2.7M Dec 17 02:24 packages/proof-general-20221130.946.tar

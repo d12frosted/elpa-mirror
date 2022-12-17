@@ -3,23 +3,24 @@ Fetcher: github
 Source:  https://github.com/dylan-lang/dylan-emacs-support.git
 
 Updating /mnt/store/melpa/working/dime/
-Checking out origin/HEAD
-Checking out 040c8ebc884305fd4ff980d21c68946fa74b095a
+Checking out d85409dc3cba57a390ca85da95822f8078ecbfa2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dime/
-  to /tmp/dimeki2bzd/dime-20210329.604
+  to /tmp/dimex67RrH/dime-20210613.1431
     dime-browse.el -> dime-browse.el
     dime-note-tree.el -> dime-note-tree.el
     dime-repl.el -> dime-repl.el
     dime.el -> dime.el
-Created dime-20210329.604.tar containing:
-  dime-20210329.604/
-  dime-20210329.604/dime-browse.el
-  dime-20210329.604/dime-note-tree.el
-  dime-20210329.604/dime-pkg.el
-  dime-20210329.604/dime-repl.el
-  dime-20210329.604/dime.el
-Built dime in 4.682s, finished at 2022-12-16T17:59:34+0000
+Created dime-20210613.1431.tar containing:
+  dime-20210613.1431/
+  dime-20210613.1431/dime-browse.el
+  dime-20210613.1431/dime-note-tree.el
+  dime-20210613.1431/dime-pkg.el
+  dime-20210613.1431/dime-repl.el
+  dime-20210613.1431/dime.el
+Built dime in 4.209s, finished at 2022-12-17T01:31:20+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  210 Dec 16 17:59 packages/dime-20210329.604.entry
-352K -rw-r--r-- 1 root root 350K Dec 16 17:59 packages/dime-20210329.604.tar
+4.0K -rw-r--r-- 1 root root  210 Dec 16 21:45 packages/dime-20210329.604.entry
+352K -rw-r--r-- 1 root root 350K Dec 16 21:45 packages/dime-20210329.604.tar
+4.0K -rw-r--r-- 1 root root  211 Dec 17 01:31 packages/dime-20210613.1431.entry
+352K -rw-r--r-- 1 root root 350K Dec 17 01:31 packages/dime-20210613.1431.tar

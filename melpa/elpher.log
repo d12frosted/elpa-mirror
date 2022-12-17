@@ -3,22 +3,21 @@ Fetcher: git
 Source:  https://thelambdalab.xyz/git/elpher.git
 
 Updating /mnt/store/melpa/working/elpher/
-Checking out origin/HEAD
 Checking out b5269970249871a8889950a3e47bdff51eb0420c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elpher/
-  to /tmp/elpherV62nvE/elpher-20220809.253
+  to /tmp/elpherBzc8Ch/elpher-20220809.253
     elpher-pkg.el -> elpher-pkg.el
     elpher.el -> elpher.el
     elpher.texi -> elpher.texi
-Generating /tmp/elpherV62nvE/elpher-20220809.253/elpher.info
+Generating /tmp/elpherBzc8Ch/elpher-20220809.253/elpher.info
 Created elpher-20220809.253.tar containing:
   elpher-20220809.253/
   elpher-20220809.253/dir
   elpher-20220809.253/elpher-pkg.el
   elpher-20220809.253/elpher.el
   elpher-20220809.253/elpher.info
-Built elpher in 13.706s, finished at 2022-12-16T18:04:24+0000
+Built elpher in 10.164s, finished at 2022-12-17T01:36:32+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  351 Dec 16 18:04 packages/elpher-20220809.253.entry
-160K -rw-r--r-- 1 root root 160K Dec 16 18:04 packages/elpher-20220809.253.tar
+4.0K -rw-r--r-- 1 root root  351 Dec 17 01:36 packages/elpher-20220809.253.entry
+160K -rw-r--r-- 1 root root 160K Dec 17 01:36 packages/elpher-20220809.253.tar

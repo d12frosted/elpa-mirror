@@ -3,11 +3,10 @@ Fetcher: github
 Source:  https://github.com/tromey/emacs-status.git
 
 Updating /mnt/store/melpa/working/status/
-Checking out origin/HEAD
 Checking out b62c74bf272566f82a68622f29fb9edafea0f241
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/status/
-  to /tmp/statusyKRha7/status-20151230.1408
+  to /tmp/statusoRg4hp/status-20151230.1408
     emms-status.el -> emms-status.el
     erc-status.el -> erc-status.el
     status.el -> status.el
@@ -23,7 +22,7 @@ Created status-20151230.1408.tar containing:
   status-20151230.1408/status-pkg.el
   status-20151230.1408/status.el
   status-20151230.1408/status.py
-Built status in 6.310s, finished at 2022-12-16T19:00:42+0000
+Built status in 4.063s, finished at 2022-12-17T02:33:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 292 Dec 16 19:00 packages/status-20151230.1408.entry
- 32K -rw-r--r-- 1 root root 30K Dec 16 19:00 packages/status-20151230.1408.tar
+4.0K -rw-r--r-- 1 root root 292 Dec 17 02:33 packages/status-20151230.1408.entry
+ 32K -rw-r--r-- 1 root root 30K Dec 17 02:33 packages/status-20151230.1408.tar

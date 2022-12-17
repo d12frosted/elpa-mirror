@@ -1,34 +1,31 @@
 This package provides you with commands to smartly navigate and
-edit LaTeX table-like environments with a transient.el-based
-interface.  Table-like environments are portions of text delimited
-by a pair of matching "\begin" and "\end" macros that organize
-output text into aligned colums.
+edit large and complex LaTeX table-like environments with a
+transient.el-based interface.  Table-like environments are portions
+of text delimited by a pair of matching "\begin" and "\end" macros
+that organize output text into aligned colums.
 
-With this package you can navigate and edit these tables easily
-even if the source text is not aligned (although there is a command
-to align them), because you will have movement commands that
-specfically target cells in the four directions of motion in a
-logical way.  This means that these movement and edit commands see
-the table as a set of pairs of values (for column and row) instead
-of as a buffer substring.
+The entry point of the package is
 
-This package tries to be smart and parse the table without being
-fooled by the presence of embedded environments and embedded tables
-(that is, a table inside of the cell of a table).
+    M-x latex-table-wizard
 
-The only command you need to remember (and perhaps bind a
-conveniente key to) is latex-table-wizard-do.  This command calls a
-transient prefix called latex-table-wizard-prefix, so that all the
-other commands will be available from a prompt in the echo area.
-All the commands provided by this package (including
-latex-table-wizard-do) assume that point is inside of the
-table-like environment you want to edit when they are called.
+while point is inside of a table(-like) environment.  From there, you
+can do several things such as:
+
++ navigate "logically" (that is, move by cells);
++ insert or kill rows or column;
++ move arbitrary cells or groups of cells around;
++ align the table in different ways (however alignment is not needed
+  for the functionalities above).
+
+Standard LaTeX2e table environments are supported out of the box, but
+you can define additional ones.  The entry point for customization is
+
+    M-x latex-table-wizard-customize
 
 The keybinding set by default in the transient prefix are inspired
 to some extent by Emacs defaults.  If you want to change these
 keybindings you should change the value of the variable
-latex-table-wizard-transient-keys.  See the info page for
-explanations.
+latex-table-wizard-transient-keys.
 
 By default, the syntax this package expects is the one of standards
 LaTeX tabular environments, whereby "&" separates columns and "\\"
@@ -50,4 +47,6 @@ cons cell to latex-table-wizard-new-environments-alist:
  '("mytable" . (:col '("\\COL") :row '("\\ROW") :lines '("myhline")))
 
 Each value is a list of strings to allow for more than one macro to
-have the same function.  See the info page for explanations.
+have the same function.
+
+See the Info page for a complete overview of the package.

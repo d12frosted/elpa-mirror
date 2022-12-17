@@ -3,19 +3,18 @@ Fetcher: github
 Source:  https://github.com/quelpa/quelpa.git
 
 Updating /mnt/store/melpa/working/quelpa/
-Checking out origin/HEAD
-Checking out e3826145d6aacc63ba3ab9b280f4675e86361b29
+Checking out 2679416acb15471cf92fa4d3f536d1b5a3450f90
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/quelpa/
-  to /tmp/quelpawGxOGa/quelpa-20221120.2019
+  to /tmp/quelpaiTuG0Q/quelpa-20221216.1900
     bootstrap.el -> bootstrap.el
     quelpa.el -> quelpa.el
-Created quelpa-20221120.2019.tar containing:
-  quelpa-20221120.2019/
-  quelpa-20221120.2019/bootstrap.el
-  quelpa-20221120.2019/quelpa-pkg.el
-  quelpa-20221120.2019/quelpa.el
-Built quelpa in 4.308s, finished at 2022-12-16T18:52:07+0000
+Created quelpa-20221216.1900.tar containing:
+  quelpa-20221216.1900/
+  quelpa-20221216.1900/bootstrap.el
+  quelpa-20221216.1900/quelpa-pkg.el
+  quelpa-20221216.1900/quelpa.el
+Built quelpa in 5.709s, finished at 2022-12-17T02:25:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 353 Dec 16 18:52 packages/quelpa-20221120.2019.entry
- 92K -rw-r--r-- 1 root root 90K Dec 16 18:52 packages/quelpa-20221120.2019.tar
+4.0K -rw-r--r-- 1 root root 353 Dec 17 02:25 packages/quelpa-20221216.1900.entry
+ 92K -rw-r--r-- 1 root root 90K Dec 17 02:25 packages/quelpa-20221216.1900.tar

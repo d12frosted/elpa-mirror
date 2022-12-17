@@ -3,42 +3,43 @@ Fetcher: gitlab
 Source:  https://gitlab.com/unrealemacs/ue.el.git
 
 Updating /mnt/store/melpa/working/ue/
-Checking out origin/HEAD
-Checking out f0726b5aa3268a00794ca3380c0f0e15d0b72674
+Checking out 7819d5b78e5b52a09b36c634ce404dc8bc3711ef
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ue/
-  to /tmp/uewYLL2V/ue-20210929.1258
+  to /tmp/uemmbWaw/ue-20210929.1301
     ue.el -> ue.el
     snippets => snippets
-Created ue-20210929.1258.tar containing:
-  ue-20210929.1258/
-  ue-20210929.1258/snippets/
-  ue-20210929.1258/snippets/ue-mode/
-  ue-20210929.1258/snippets/ue-mode/.yas-make-groups
-  ue-20210929.1258/snippets/ue-mode/.yas-setup.el
-  ue-20210929.1258/snippets/ue-mode/UE/
-  ue-20210929.1258/snippets/ue-mode/UE/Event/
-  ue-20210929.1258/snippets/ue-mode/UE/Event/udoncomponentbeginoverlap
-  ue-20210929.1258/snippets/ue-mode/UE/Event/uioncomponentbeginoverlap
-  ue-20210929.1258/snippets/ue-mode/UE/Event/usoncomponentbeginoverlap
-  ue-20210929.1258/snippets/ue-mode/UE/Logging/
-  ue-20210929.1258/snippets/ue-mode/UE/Logging/uld
-  ue-20210929.1258/snippets/ue-mode/UE/Logging/uli
-  ue-20210929.1258/snippets/ue-mode/UE/Logging/ull
-  ue-20210929.1258/snippets/ue-mode/UE/Misc/
-  ue-20210929.1258/snippets/ue-mode/UE/Misc/ucds
-  ue-20210929.1258/snippets/ue-mode/UE/Misc/utext
-  ue-20210929.1258/snippets/ue-mode/UE/UFUNCTION/
-  ue-20210929.1258/snippets/ue-mode/UE/UFUNCTION/uff
-  ue-20210929.1258/snippets/ue-mode/UE/UFUNCTION/ufp
-  ue-20210929.1258/snippets/ue-mode/UE/UPROPERTY/
-  ue-20210929.1258/snippets/ue-mode/UE/UPROPERTY/upc
-  ue-20210929.1258/snippets/ue-mode/UE/UPROPERTY/upe
-  ue-20210929.1258/snippets/ue-mode/UE/UPROPERTY/ups
-  ue-20210929.1258/snippets/ue-mode/UE/UPROPERTY/upv
-  ue-20210929.1258/ue-pkg.el
-  ue-20210929.1258/ue.el
-Built ue in 6.413s, finished at 2022-12-16T19:05:54+0000
+Created ue-20210929.1301.tar containing:
+  ue-20210929.1301/
+  ue-20210929.1301/snippets/
+  ue-20210929.1301/snippets/ue-mode/
+  ue-20210929.1301/snippets/ue-mode/.yas-make-groups
+  ue-20210929.1301/snippets/ue-mode/.yas-setup.el
+  ue-20210929.1301/snippets/ue-mode/UE/
+  ue-20210929.1301/snippets/ue-mode/UE/Event/
+  ue-20210929.1301/snippets/ue-mode/UE/Event/udoncomponentbeginoverlap
+  ue-20210929.1301/snippets/ue-mode/UE/Event/uioncomponentbeginoverlap
+  ue-20210929.1301/snippets/ue-mode/UE/Event/usoncomponentbeginoverlap
+  ue-20210929.1301/snippets/ue-mode/UE/Logging/
+  ue-20210929.1301/snippets/ue-mode/UE/Logging/uld
+  ue-20210929.1301/snippets/ue-mode/UE/Logging/uli
+  ue-20210929.1301/snippets/ue-mode/UE/Logging/ull
+  ue-20210929.1301/snippets/ue-mode/UE/Misc/
+  ue-20210929.1301/snippets/ue-mode/UE/Misc/ucds
+  ue-20210929.1301/snippets/ue-mode/UE/Misc/utext
+  ue-20210929.1301/snippets/ue-mode/UE/UFUNCTION/
+  ue-20210929.1301/snippets/ue-mode/UE/UFUNCTION/uff
+  ue-20210929.1301/snippets/ue-mode/UE/UFUNCTION/ufp
+  ue-20210929.1301/snippets/ue-mode/UE/UPROPERTY/
+  ue-20210929.1301/snippets/ue-mode/UE/UPROPERTY/upc
+  ue-20210929.1301/snippets/ue-mode/UE/UPROPERTY/upe
+  ue-20210929.1301/snippets/ue-mode/UE/UPROPERTY/ups
+  ue-20210929.1301/snippets/ue-mode/UE/UPROPERTY/upv
+  ue-20210929.1301/ue-pkg.el
+  ue-20210929.1301/ue.el
+Built ue in 4.774s, finished at 2022-12-17T02:39:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 463 Dec 16 19:05 packages/ue-20210929.1258.entry
- 72K -rw-r--r-- 1 root root 70K Dec 16 19:05 packages/ue-20210929.1258.tar
+4.0K -rw-r--r-- 1 root root 463 Dec 16 22:52 packages/ue-20210929.1258.entry
+ 72K -rw-r--r-- 1 root root 70K Dec 16 22:52 packages/ue-20210929.1258.tar
+4.0K -rw-r--r-- 1 root root 463 Dec 17 02:39 packages/ue-20210929.1301.entry
+ 72K -rw-r--r-- 1 root root 70K Dec 17 02:39 packages/ue-20210929.1301.tar

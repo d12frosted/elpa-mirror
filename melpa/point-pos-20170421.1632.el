@@ -6,7 +6,7 @@
 ;; Created: 24 Aug 2012
 ;; Version: 0.1
 ;; Package-Version: 20170421.1632
-;; Package-Commit: f4126b64567a81e7f22058f09d56c63b2ff06632
+;; Package-Commit: 4cd0f8c8d1296c5c64f708b6a5835e8520c51b68
 ;; URL: https://github.com/alezost/point-pos.el
 ;; Keywords: tools convenience
 

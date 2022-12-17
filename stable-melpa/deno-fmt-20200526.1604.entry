@@ -1,0 +1,10 @@
+(deno-fmt .
+	  [(20200526 1604)
+	   ((emacs
+	     (24)))
+	   "Minor mode for using deno fmt on save" single
+	   ((:commit . "ccae334361b9f83b687f040bcdfdc2a58c78059f")
+	    (:authors
+	     ("Russell Clarey <http://github/rclarey>"))
+	    (:maintainer "Russell Clarey <http://github/rclarey>")
+	    (:url . "https://github.com/russell/deno-emacs"))])

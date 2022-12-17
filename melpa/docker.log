@@ -3,11 +3,10 @@ Fetcher: github
 Source:  https://github.com/Silex/docker.el.git
 
 Updating /mnt/store/melpa/working/docker/
-Checking out origin/HEAD
 Checking out cc0046e6a557dce0ccc4108dd22e04f21ba8b0dc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker/
-  to /tmp/dockerigHMjR/docker-20221023.1201
+  to /tmp/dockerDXJLfe/docker-20221023.1201
     docker-compose.el -> docker-compose.el
     docker-container.el -> docker-container.el
     docker-core.el -> docker-core.el
@@ -33,7 +32,7 @@ Created docker-20221023.1201.tar containing:
   docker-20221023.1201/docker-utils.el
   docker-20221023.1201/docker-volume.el
   docker-20221023.1201/docker.el
-Built docker in 4.208s, finished at 2022-12-16T18:00:56+0000
+Built docker in 4.213s, finished at 2022-12-17T01:32:39+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  478 Dec 16 18:00 packages/docker-20221023.1201.entry
-100K -rw-r--r-- 1 root root 100K Dec 16 18:00 packages/docker-20221023.1201.tar
+4.0K -rw-r--r-- 1 root root  478 Dec 17 01:32 packages/docker-20221023.1201.entry
+100K -rw-r--r-- 1 root root 100K Dec 17 01:32 packages/docker-20221023.1201.tar
