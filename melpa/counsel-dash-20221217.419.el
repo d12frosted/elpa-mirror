@@ -4,8 +4,8 @@
 
 ;; Author: Nathan Kot <nk@nathankot.com>
 ;; Version: 0.1.3
-;; Package-Version: 20200103.1411
-;; Package-Commit: 370d5f6f14b5294d0eb717f7b2a6a8e93df1ed24
+;; Package-Version: 20221217.419
+;; Package-Commit: 04117bffc8badd85c9f4fdb17648fd56e83fe832
 ;; Package-Requires: ((emacs "24.4") (dash-docs "1.4.0") (counsel "0.8.0") (cl-lib "0.5"))
 ;; Keywords: dash, ivy, counsel
 ;; URL: https://github.com/nathankot/counsel-dash
@@ -29,7 +29,7 @@
   :group 'ivy)
 
 ; Aliases are used so that we can provide a common interface, irrespective of
-; any library changes in the future (e.g if helm-dash de-couples itself into two libraries.)
+; any library changes in the future.
 
 (defvaralias 'counsel-dash-docsets-path 'dash-docs-docsets-path)
 (defvaralias 'counsel-dash-docsets-url 'dash-docs-docsets-url)
