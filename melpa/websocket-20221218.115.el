@@ -5,8 +5,8 @@
 ;; Author: Andrew Hyatt <ahyatt@gmail.com>
 ;; Homepage: https://github.com/ahyatt/emacs-websocket
 ;; Keywords: Communication, Websocket, Server
-;; Package-Version: 20210110.17
-;; Package-Commit: 34e11124fdd9d73e431499ba8a6b6a8023519664
+;; Package-Version: 20221218.115
+;; Package-Commit: 8604982b1207fafdef7ecdc4ba54541c1ea87212
 ;; Version: 1.13
 ;; Package-Requires: ((cl-lib "0.5"))
 ;;
@@ -722,6 +722,7 @@ to the websocket protocol.
 
           (when (and (member status '(closed failed exit signal))
                      (not (eq 'closed (websocket-ready-state websocket))))
+            (setf (websocket-ready-state websocket) 'closed)
             (websocket-try-callback 'websocket-on-close 'on-close websocket))))))
 
 (defun websocket-ensure-handshake (url conn key protocols extensions custom-header-alist nowait)
