@@ -1,6 +1,7 @@
 lua-mode provides support for editing Lua, including automatic
 indentation, syntactical font-locking, running interactive shell,
-interacting with `hs-minor-mode' and online documentation lookup.
+Flymake checks with luacheck, interacting with `hs-minor-mode' and
+online documentation lookup.
 
 The following variables are available for customization (see more via
 `M-x customize-group lua`):
@@ -43,6 +44,10 @@ These are variables/commands for interaction with the Lua process:
 - Cmd `lua-send-defun': send current top-level function
 - Cmd `lua-send-region': send active region
 - Cmd `lua-restart-with-whole-file': restart REPL and send whole buffer
+
+To enable on-the-fly linting, make sure you have the luacheck
+program installed (available from luarocks) and activate
+`flymake-mode'.
 
 See "M-x apropos-command ^lua-" for a list of commands.
 See "M-x customize-group lua" for a list of customizable variables.

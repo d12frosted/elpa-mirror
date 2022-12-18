@@ -1165,11 +1165,12 @@
 		 ("Jean-Philippe Theberge" . "jphil21@sourceforge.net"))
 		(:commit . "4e87a899868e908a7a9e1812831d76c8d072f885"))])
  (lua-mode .
-	   [(20210802)
+	   [(20221027)
 	    ((emacs
 	      (24 3)))
 	    "a major-mode for editing Lua scripts" tar
-	    ((:url . "http://immerrr.github.com/lua-mode")
+	    ((:url . "https://immerrr.github.io/lua-mode")
+	     (:keywords "languages" "processes" "tools")
 	     (:maintainer "2011-2013 immerrr" . "immerrr+lua@gmail.com")
 	     (:authors
 	      ("2011-2013 immerrr" . "immerrr+lua@gmail.com")
@@ -1182,7 +1183,7 @@
 	      ("with tons of assistance from")
 	      ("Paul Du Bois" . "pld-lua@gelatinous.com")
 	      ("Aaron Smith" . "aaron-lua@gelatinous.com"))
-	     (:keywords "languages" "processes" "tools"))])
+	     (:commit . "1cb83e691627fb92290d452cb08b6c5f73fe19b6"))])
  (macrostep .
 	    [(0 9)
 	     ((cl-lib
