@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/minions
 ;; Keywords: convenience
-;; Package-Version: 20220422.1615
-;; Package-Commit: b0427eea174adb494efc9fa212c22021861d3f76
+;; Package-Version: 20221218.1256
+;; Package-Commit: f7c4767f259bcee0ed39a1846de1818913b274d7
 
 ;; Package-Requires: ((emacs "25.2") (compat "28.1.1.0"))
 
@@ -168,7 +168,7 @@ mouse-1: Display minor mode menu
 mouse-2: Show help for minor mode
 mouse-3: Toggle minor modes"
                         local-map ,mode-line-minor-mode-keymap)
-          " "
+          '(:eval (and (not (member minions-mode-line-lighter '("" nil))) " "))
           '(:eval (propertize minions-mode-line-lighter
                               'face minions-mode-line-face
                               'mouse-face 'mode-line-highlight

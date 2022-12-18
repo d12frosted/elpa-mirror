@@ -5,8 +5,6 @@
 ;; Author: John Wiegley <jwiegley@gmail.com>
 ;; Created: 13 Jun 2012
 ;; Version: 1.0
-;; Package-Version: 20170106.755
-;; Package-Commit: 263a8cd4582c81bfc29d7db37d5267e2488b148c
 ;; Keywords: helm
 ;; Package-Requires: ((helm "1.6.9"))
 ;; X-URL: https://github.com/jwiegley/springboard
