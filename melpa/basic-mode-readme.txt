@@ -2,6 +2,16 @@ This package provides a major mode for editing BASIC code.  Features
 include syntax highlighting and indentation, as well as support for
 auto-numbering and renumering of code lines.
 
+The base mode provides basic functionality and is normally only used
+to derive sub modes for different BASIC dialects, see for example
+`basic-generic-mode'.  For a list of available sub modes, please see
+https://github.com/dykstrom/basic-mode, or the end of the source code
+file.
+
+By default, basic-mode will open BASIC files in the generic sub mode.
+To change this, you can use a file variable, or associate BASIC files
+with another sub mode in `auto-mode-alist'.
+
 You can format the region, or the entire buffer, by typing C-c C-f.
 
 When line numbers are turned on, hitting the return key will insert
@@ -21,8 +31,8 @@ https://melpa.org.
 To install manually, place basic-mode.el in your load-path, and add
 the following lines of code to your init file:
 
-(autoload 'basic-mode "basic-mode" "Major mode for editing BASIC code." t)
-(add-to-list 'auto-mode-alist '("\\.bas\\'" . basic-mode))
+(autoload 'basic-generic-mode "basic-mode" "Major mode for editing BASIC code." t)
+(add-to-list 'auto-mode-alist '("\\.bas\\'" . basic-generic-mode))
 
 Configuration:
 

@@ -13,66 +13,66 @@ Table of Contents
 ─────────────────
 
 Overview
-.. High-level architecture
+.. Architecture
 Installation
-Getting started
-Prolog initialization and cleanup
+Getting Started
+Initialization
 Querying Prolog
-.. Conversion of Elisp objects to Prolog terms
-.. Conversion of Prolog terms to Elisp objects
-.. Example - counting solutions for a Prolog predicate in Elisp
-.. Calling Elisp function inside Prolog queries
-Editing Prolog code
+.. Elisp to Prolog
+.. Prolog to Elisp
+.. Example Query
+.. Call Back to Elisp
+Editing Prolog Code
 .. Indentation
-..... Indentation rules
-.. Semantic highlighting
-..... Available styles
-..... Highlighting occurrences of a variable
-..... Quasi-quotation highlighting
-.. Maintaining Code Layout
-..... Inserting the Right Number of Spaces
+..... Indentation Rules
+.. Highlighting
+..... Available Styles
+..... Highlight Variables
+..... Quasi-Quotation
+.. Code Layout
+..... Aligning Spaces
 ..... Electric Layout mode
-.. Term-based editing and motion commands
-.. Definitions and references
-.. Predicate definition boundaries
-.. Following file specifications
-.. Loading buffers
+.. Term-based Editing
+.. Cross References
+.. Predicate Boundaries
+.. File Specifications
+.. Loading Buffers
 .. Creating New Modules
-.. Documenting predicates
-.. Displaying predicate documentation
-.. Examining diagnostics
-.. Exporting predicates
+.. Documenting Code
+.. Showing Prolog Docs
+.. Showing Errors
+.. Exporting Predicates
 .. Code Completion
-.. Context-Based Term Insertion
+.. Insert Term DWIM
 ..... Filling Holes
 .. Writing Tests
-.. Managing Dependencies
+.. Code Dependencies
 Prolog Help
 The Prolog Top-Level
-.. Multiple top-levels
-.. The Top-level Menu buffer
-.. Sending signals to running top-levels
-.. Top-level history
-.. Completion in the top-level
-Finding Prolog code
-.. Prolog file specification expansion
-.. Built-in Native Predicates
-Quick access to sweep commands
-Examining Prolog messages
-Setting Prolog flags
-Installing Prolog packages
+.. Multiple Top-Levels
+.. Top-level Menu
+.. Top-Level Signaling
+.. Top-level History
+.. Top-level Completion
+Finding Prolog Code
+.. File Spec Expansion
+.. Native Predicates
+Quick Access Keymap
+Prolog Messages
+Prolog Flags
+Prolog Packages
 Contributing
-.. Setting up sweep for local development
-.. Submitting patches and bug reports
-Things to do
-.. Improvements around editing Prolog
-.. Improvements around running Prolog
-.. General improvements
+.. Developing Sweep
+.. Submitting Patches
+Things To Do
+.. Editing Improvements
+.. Running Improvements
+.. General Improvements
 Indices
-.. Function index
-.. Variable index
-.. Keystroke index
-.. Concept index
+.. Function Index
+.. Variable Index
+.. Keystroke Index
+.. Concept Index
 
 
 Overview
@@ -401,12 +401,27 @@ Indentation
   line at point.  `sweeprolog-mode' supports the standard Emacs
   interface for indentation by arranging for `sweeprolog-indent-line' to
   be called whenever a line should be indented, notably after pressing
-  `TAB'.  For more a full description of the available commands and
-  options that pertain to indentation, see [Indentation in the Emacs
-  manual].
+  `TAB'.  For a full description of the available commands and options
+  that pertain to indentation, see [Indentation] in the Emacs manual.
+
+  The user option `sweeprolog-indent-offset' specifies how many columns
+  lines are indented with.  The standard Emacs variable
+  `indent-tabs-mode' determines if indentation can use tabs or only
+  spaces.  You may sometimes want to adjust these options to match the
+  indentation style used in an existing Prolog codebase, the command
+  `sweeprolog-infer-indent-style' can do that for you by analyzing the
+  contents of the current buffer and updating the buffer-local values of
+  `sweeprolog-indent-offset' and `indent-tabs-mode' accordingly.
+  Consider adding `sweeprolog-infer-indent-style' to
+  `sweeprolog-mode-hook' to have it set up the indentation style
+  automatically in all `sweeprolog-mode' buffers:
+
+  ┌────
+  │ (add-hook 'sweeprolog-mode-hook #'sweeprolog-infer-indent-style)
+  └────
 
 
-[Indentation in the Emacs manual] <info:emacs#Indentation>
+[Indentation] <info:emacs#Indentation>
 
 Indentation rules
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
@@ -434,7 +449,7 @@ Indentation rules
      │ 	    ).
      └────
 
-  1. If the current line is the first non-comment line of a clause body,
+  4. If the current line is the first non-comment line of a clause body,
      indent to the starting column of the head term plus the value of
      the user option `sweeprolog-indent-offset' (by default, four extra
      columns).
@@ -452,7 +467,7 @@ Indentation rules
      │        ).
      └────
 
-  2. If the current line starts with the right hand side operand of an
+  5. If the current line starts with the right hand side operand of an
      infix operator, indent to the starting column of the first operand
      in the chain of infix operators of the same precedence.
 
@@ -469,7 +484,7 @@ Indentation rules
      │ 	     5.
      └────
 
-  3. If the last non-comment line ends with a functor and its opening
+  6. If the last non-comment line ends with a functor and its opening
      parenthesis, indent to the starting column of the functor plus
      `sweeprolog-indent-offset'.
 
@@ -480,7 +495,7 @@ Indentation rules
      │     arg1, ...
      └────
 
-  4. If the last non-comment line ends with a prefix operator, indent to
+  7. If the last non-comment line ends with a prefix operator, indent to
      starting column of the operator plus `sweeprolog-indent-offset'.
 
      This rule yields the following layout:
