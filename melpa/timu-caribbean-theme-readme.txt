@@ -52,10 +52,17 @@ II. Configuration
         (customize-set-variable 'timu-caribbean-scale-org-level-2 1.4)
         (customize-set-variable 'timu-caribbean-scale-org-level-3 1.2)
 
-  B. "Intense" colors for org-mode
-    To emphasize some elements in org-mode.
+  B. "Intense" colors for `org-mode'
+    To emphasize some elements in `org-mode'.
     You can set a variable to make some faces more "intense".
 
     By default the intense colors are turned off.
     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
-      (customize-set-variable 'timu-caribbean-org-insense-colors t)
+      (customize-set-variable 'timu-caribbean-org-intense-colors t)
+
+  C. Border for the `mode-line'
+    You can set a variable to add a border to the `mode-line'.
+
+    By default the border is turned off.
+    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+      (customize-set-variable 'timu-caribbean-mode-line-border t)

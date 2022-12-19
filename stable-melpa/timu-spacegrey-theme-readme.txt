@@ -19,7 +19,7 @@ I. Installation
         (load-theme 'timu-spacegrey t))
 
 II. Configuration
-  1. Dark and light fravour
+  A. Dark and light fravour
     By default the theme is `dark', to setup the `light' flavour:
 
     - Change the variable `timu-spacegrey-flavour' in the Customization Interface.
@@ -30,7 +30,7 @@ II. Configuration
     - add the following to your `~/.emacs.d/init.el' or `~/.emacs'
       (setq timu-spacegrey-flavour "light")
 
-  2. Scaling
+  B. Scaling
     You can now scale some faces (in `org-mode' for now):
 
     - `org-document-info'
@@ -44,7 +44,7 @@ II. Configuration
     By default the scaling is turned off.
     To setup the scaling add the following to your `~/.emacs.d/init.el' or `~/.emacs':
 
-    a. Default scaling
+    1. Default scaling
       This will turn on default values of scaling in the theme.
 
         (customize-set-variable 'timu-spacegrey-scale-org-document-title t)
@@ -53,7 +53,7 @@ II. Configuration
         (customize-set-variable 'timu-spacegrey-scale-org-level-2 t)
         (customize-set-variable 'timu-spacegrey-scale-org-level-3 t)
 
-    b. Custom scaling
+    2. Custom scaling
       You can choose your own scaling values as well.
       The following is a somewhat exaggerated example.
 
@@ -63,10 +63,17 @@ II. Configuration
         (customize-set-variable 'timu-spacegrey-scale-org-level-2 1.4)
         (customize-set-variable 'timu-spacegrey-scale-org-level-3 1.2)
 
-  3. "Intense" colors for org-mode
+  C. "Intense" colors for `org-mode'
     To emphasize some elements in org-mode.
     You can set a variable to make some faces more "intense".
 
     By default the intense colors are turned off.
     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
-      (customize-set-variable 'timu-spacegrey-org-insense-colors t)
+      (customize-set-variable 'timu-spacegrey-org-intense-colors t)
+
+  D. Border for the `mode-line'
+    You can set a variable to add a border to the mode-line.
+
+    By default the border is turned off.
+    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+      (customize-set-variable 'timu-spacegrey-mode-line-border t)

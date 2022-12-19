@@ -6,9 +6,9 @@
 ;; Maintainer: Aimé Bertrand <aime.bertrand@macowners.club>
 ;; Created: 06 Jun 2021
 ;; Keywords: faces themes
-;; Package-Version: 20221203.1855
-;; Package-Commit: f4b14e3005951f62989e05f67d9c70632163ddef
-;; Version: 2.3
+;; Package-Version: 20221219.1709
+;; Package-Commit: 3111d2e6ed769408d529f1743c1adead34b46b60
+;; Version: 2.4
 ;; Package-Requires: ((emacs "25.1"))
 ;; Homepage: https://gitlab.com/aimebertrand/timu-spacegrey-theme
 
@@ -59,7 +59,7 @@
 ;;         (load-theme 'timu-spacegrey t))
 ;;
 ;; II. Configuration
-;;   1. Dark and light fravour
+;;   A. Dark and light fravour
 ;;     By default the theme is `dark', to setup the `light' flavour:
 ;;
 ;;     - Change the variable `timu-spacegrey-flavour' in the Customization Interface.
@@ -70,7 +70,7 @@
 ;;     - add the following to your `~/.emacs.d/init.el' or `~/.emacs'
 ;;       (setq timu-spacegrey-flavour "light")
 ;;
-;;   2. Scaling
+;;   B. Scaling
 ;;     You can now scale some faces (in `org-mode' for now):
 ;;
 ;;     - `org-document-info'
@@ -84,7 +84,7 @@
 ;;     By default the scaling is turned off.
 ;;     To setup the scaling add the following to your `~/.emacs.d/init.el' or `~/.emacs':
 ;;
-;;     a. Default scaling
+;;     1. Default scaling
 ;;       This will turn on default values of scaling in the theme.
 ;;
 ;;         (customize-set-variable 'timu-spacegrey-scale-org-document-title t)
@@ -93,7 +93,7 @@
 ;;         (customize-set-variable 'timu-spacegrey-scale-org-level-2 t)
 ;;         (customize-set-variable 'timu-spacegrey-scale-org-level-3 t)
 ;;
-;;     b. Custom scaling
+;;     2. Custom scaling
 ;;       You can choose your own scaling values as well.
 ;;       The following is a somewhat exaggerated example.
 ;;
@@ -103,13 +103,21 @@
 ;;         (customize-set-variable 'timu-spacegrey-scale-org-level-2 1.4)
 ;;         (customize-set-variable 'timu-spacegrey-scale-org-level-3 1.2)
 ;;
-;;   3. "Intense" colors for org-mode
+;;   C. "Intense" colors for `org-mode'
 ;;     To emphasize some elements in org-mode.
 ;;     You can set a variable to make some faces more "intense".
 ;;
 ;;     By default the intense colors are turned off.
 ;;     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
-;;       (customize-set-variable 'timu-spacegrey-org-insense-colors t)
+;;       (customize-set-variable 'timu-spacegrey-org-intense-colors t)
+;;
+;;   D. Border for the `mode-line'
+;;     You can set a variable to add a border to the mode-line.
+;;
+;;     By default the border is turned off.
+;;     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+;;       (customize-set-variable 'timu-spacegrey-mode-line-border t)
+
 
 ;;; Code:
 
@@ -153,13 +161,13 @@
 
 (defcustom timu-spacegrey-flavour "dark"
   "Variable to control the variant of the theme.
-Possinle values: `dark' or `light'."
+Possible values: `dark' or `light'."
   :type 'string
   :group 'timu-spacegrey-theme)
 
 (defcustom timu-spacegrey-scale-org-document-info nil
   "Variable to control the scale of the `org-document-info' faces.
-Possible Values: t, number or nil. When t, use theme default height."
+Possible values: t, number or nil. When t, use theme default height."
   :type '(choice
           (const :tag "No scaling" nil)
           (const :tag "Theme default scaling" t)
@@ -168,7 +176,7 @@ Possible Values: t, number or nil. When t, use theme default height."
 
 (defcustom timu-spacegrey-scale-org-document-title nil
   "Variable to control the scale of the `org-document-title' faces.
-Possible Values: t, number or nil. When t, use theme default height."
+Possible values: t, number or nil. When t, use theme default height."
   :type '(choice
           (const :tag "No scaling" nil)
           (const :tag "Theme default scaling" t)
@@ -177,7 +185,7 @@ Possible Values: t, number or nil. When t, use theme default height."
 
 (defcustom timu-spacegrey-scale-org-level-1 nil
   "Variable to control the scale of the `org-level-1' faces.
-Possible Values: t, number or nil. When t, use theme default height."
+Possible values: t, number or nil. When t, use theme default height."
   :type '(choice
           (const :tag "No scaling" nil)
           (const :tag "Theme default scaling" t)
@@ -186,7 +194,7 @@ Possible Values: t, number or nil. When t, use theme default height."
 
 (defcustom timu-spacegrey-scale-org-level-2 nil
   "Variable to control the scale of the `org-level-2' faces.
-Possible Values: t, number or nil. When t, use theme default height."
+Possible values: t, number or nil. When t, use theme default height."
   :type '(choice
           (const :tag "No scaling" nil)
           (const :tag "Theme default scaling" t)
@@ -195,32 +203,57 @@ Possible Values: t, number or nil. When t, use theme default height."
 
 (defcustom timu-spacegrey-scale-org-level-3 nil
   "Variable to control the scale of the `org-level-3' faces.
-Possible Values: t, number or nil. When t, use theme default height."
+Possible values: t, number or nil. When t, use theme default height."
   :type '(choice
           (const :tag "No scaling" nil)
           (const :tag "Theme default scaling" t)
           (number :tag "Your custom scaling"))
   :group 'timu-spacegrey-theme)
 
-(defun timu-spacegrey-do-scale (control default-height)
-  "Function for scaling the face to the FACE-HEIGHT.
-Uses `timu-spacegrey-scale-faces' for the value of CONTROL."
+(defun timu-spacegrey-do-scale (custom-height default-height)
+  "Function for scaling the face to the DEFAULT-HEIGHT or CUSTOM-HEIGHT.
+Uses `timu-spacegrey-scale-faces' for the value of CUSTOM-HEIGHT."
   (cond
-   ((numberp control) (list :height control))
-   ((eq t control) (list :height default-height))
-   ((eq nil control) (list :height 1.0))
+   ((numberp custom-height) (list :height custom-height))
+   ((eq t custom-height) (list :height default-height))
+   ((eq nil custom-height) (list :height 1.0))
    (t nil)))
 
-(defcustom timu-spacegrey-org-insense-colors nil
-  "Variable to control \"intensity\" of `org-mode' colors."
+(defcustom timu-spacegrey-org-intense-colors nil
+  "Variable to control \"intensity\" of `org-mode' header colors."
   :type 'boolean
   :group 'timu-spacegrey-theme)
 
-(defun timu-spacegrey-set-intense-org-colors (olcolor bgcolor)
+(defun timu-spacegrey-set-intense-org-colors (overline-color background-color)
   "Function Adding intense colors to `org-mode'.
-OLCOLOR changes the `overline' color and BGCOLOR changes the `background' color."
-  (if (eq t timu-spacegrey-org-insense-colors)
-      (list :overline olcolor :background bgcolor)))
+OVERLINE-COLOR changes the `overline' color.
+BACKGROUND-COLOR changes the `background' color."
+  (if (eq t timu-spacegrey-org-intense-colors)
+      (list :overline overline-color :background background-color)))
+
+(defcustom timu-spacegrey-mode-line-border nil
+  "Variable to control the border of `mode-line'.
+With a value of t the mode-line has a border."
+  :type 'boolean
+  :group 'timu-spacegrey-theme)
+
+(defun timu-spacegrey-set-mode-line-active-border (dbox lbox)
+  "Function adding a border to the `mode-line' of the active window.
+DBOX supplies the border color of the dark `timu-spacegrey-flavour'.
+LBOX supplies the border color of the light `timu-spacegrey-flavour'."
+  (if (eq t timu-spacegrey-mode-line-border)
+      (if (equal "dark" timu-spacegrey-flavour)
+          (list :box dbox)
+        (list :box lbox))))
+
+(defun timu-spacegrey-set-mode-line-inactive-border (dbox lbox)
+  "Function adding a border to the `mode-line' of the inactive window.
+DBOX supplies the border color of the dark `timu-spacegrey-flavour'.
+LBOX supplies the border color of the light `timu-spacegrey-flavour'."
+  (if (eq t timu-spacegrey-mode-line-border)
+      (if (equal "dark" timu-spacegrey-flavour)
+          (list :box dbox)
+        (list :box lbox))))
 
 (deftheme timu-spacegrey
   "Custom theme inspired by the spacegray theme in Sublime Text.
@@ -1288,11 +1321,11 @@ Sourced other themes to get information about font faces for packages.")
      `(mmm-special-submode-face ((,class (:background ,green))))
 
 ;;;; mode-line - dark
-     `(mode-line ((,class (:background ,bg-other :foreground ,fg :distant-foreground ,bg))))
+     `(mode-line ((,class (,@(timu-spacegrey-set-mode-line-active-border spacegrey5 fg) :background ,bg-other :foreground ,fg :distant-foreground ,bg))))
      `(mode-line-buffer-id ((,class (:weight bold))))
      `(mode-line-emphasis ((,class (:foreground ,orange :distant-foreground ,bg))))
      `(mode-line-highlight ((,class (:foreground ,magenta :weight bold :underline ,darkcyan))))
-     `(mode-line-inactive ((,class (:background ,bg-other :foreground ,spacegrey5 :distant-foreground ,bg-other))))
+     `(mode-line-inactive ((,class (,@(timu-spacegrey-set-mode-line-inactive-border spacegrey4 spacegrey7) :background ,bg-other :foreground ,spacegrey5 :distant-foreground ,bg-other))))
 
 ;;;; mu4e - dark
      `(mu4e-forwarded-face ((,class (:foreground ,yellow))))
@@ -1434,7 +1467,7 @@ Sourced other themes to get information about font faces for packages.")
      `(org-date ((,class (:foreground ,yellow))))
      `(org-default ((,class (:background ,bg :foreground ,fg))))
      `(org-document-info ((,class (:foreground ,orange ,@(timu-spacegrey-do-scale timu-spacegrey-scale-org-document-info 1.2) ,@(timu-spacegrey-set-intense-org-colors bg bg-other)))))
-     `(org-document-title ((,class (:foreground ,orange :weight bold ,@(timu-spacegrey-do-scale timu-spacegrey-scale-org-document-info 1.3) ,@(timu-spacegrey-set-intense-org-colors orange bg-other)))))
+     `(org-document-title ((,class (:foreground ,orange :weight bold ,@(timu-spacegrey-do-scale timu-spacegrey-scale-org-document-title 1.3) ,@(timu-spacegrey-set-intense-org-colors orange bg-other)))))
      `(org-done ((,class (:foreground ,spacegrey5))))
      `(org-ellipsis ((,class (:underline nil :background nil :foreground ,grey))))
      `(org-footnote ((,class (:foreground ,orange))))
@@ -2919,11 +2952,11 @@ Sourced other themes to get information about font faces for packages.")
      `(mmm-special-submode-face ((,class (:background ,green))))
 
 ;;;; mode-line - light
-     `(mode-line ((,class (:background ,spacegrey8 :foreground ,fg :distant-foreground ,bg))))
+     `(mode-line ((,class (,@(timu-spacegrey-set-mode-line-active-border spacegrey5 spacegrey4) :background ,spacegrey8 :foreground ,fg :distant-foreground ,orange))))
      `(mode-line-buffer-id ((,class (:foreground ,fg :weight bold))))
-     `(mode-line-emphasis ((,class (:foreground ,orange :distant-foreground ,bg))))
+     `(mode-line-emphasis ((,class (:foreground ,darkcyan :distant-foreground ,bg))))
      `(mode-line-highlight ((,class (:foreground ,magenta  :weight bold :underline ,darkcyan))))
-     `(mode-line-inactive ((,class (:background ,spacegrey8 :foreground ,spacegrey5 :distant-foreground ,bg-other))))
+     `(mode-line-inactive ((,class (,@(timu-spacegrey-set-mode-line-inactive-border spacegrey4 spacegrey7) :background ,bg-other :foreground ,spacegrey7 :distant-foreground ,bg-other))))
 
 ;;;; mu4e - light
      `(mu4e-forwarded-face ((,class (:foreground ,yellow))))
@@ -3065,7 +3098,7 @@ Sourced other themes to get information about font faces for packages.")
      `(org-date ((,class (:foreground ,yellow))))
      `(org-default ((,class (:background ,bg :foreground ,fg))))
      `(org-document-info ((,class (:foreground ,orange ,@(timu-spacegrey-do-scale timu-spacegrey-scale-org-document-info 1.2) ,@(timu-spacegrey-set-intense-org-colors bg l-orange)))))
-     `(org-document-title ((,class (:foreground ,orange :weight bold ,@(timu-spacegrey-do-scale timu-spacegrey-scale-org-document-info 1.3) ,@(timu-spacegrey-set-intense-org-colors orange l-orange)))))
+     `(org-document-title ((,class (:foreground ,orange :weight bold ,@(timu-spacegrey-do-scale timu-spacegrey-scale-org-document-title 1.3) ,@(timu-spacegrey-set-intense-org-colors orange l-orange)))))
      `(org-done ((,class (:foreground ,spacegrey5))))
      `(org-ellipsis ((,class (:underline nil :background nil :foreground ,grey))))
      `(org-footnote ((,class (:foreground ,orange))))
