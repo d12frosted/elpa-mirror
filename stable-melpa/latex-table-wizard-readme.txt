@@ -11,14 +11,15 @@ The entry point of the package is
 while point is inside of a table(-like) environment.  From there, you
 can do several things such as:
 
-+ navigate "logically" (that is, move by cells);
-+ insert or kill rows or column;
-+ move arbitrary cells or groups of cells around;
-+ align the table in different ways (however alignment is not needed
-  for the functionalities above).
+  + navigate "logically" (that is, move by cells);
+  + insert or kill rows or column;
+  + move arbitrary cells or groups of cells around;
+  + align the table in different ways (however alignment is not
+    needed for the functionalities above).
 
-Standard LaTeX2e table environments are supported out of the box, but
-you can define additional ones.  The entry point for customization is
+Standard LaTeX2e table environments are supported out of the box,
+but you can define additional ones.  The entry point for
+customization is
 
     M-x latex-table-wizard-customize
 
@@ -37,14 +38,16 @@ define a new table like environment whose name is "mytable", whose
 column and row separators are strings like "\COL" and "\ROW", and
 the LaTeX macro to add a horizontal line is "\myhline{}":
 
- \begin{mytable}
-     ...
- \end{mytable}
+   \begin{mytable}
+       ...
+   \end{mytable}
 
 For latex-table-wizard to handle this table, just add the following
 cons cell to latex-table-wizard-new-environments-alist:
 
- '("mytable" . (:col '("\\COL") :row '("\\ROW") :lines '("myhline")))
+   '("mytable" . (:col '("\\COL")
+                  :row '("\\ROW")
+                  :lines '("myhline")))
 
 Each value is a list of strings to allow for more than one macro to
 have the same function.

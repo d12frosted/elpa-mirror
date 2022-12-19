@@ -3,26 +3,26 @@ Fetcher: github
 Source:  https://github.com/rust-lang/rust-mode.git
 
 Updating /mnt/store/melpa/working/rust-mode/
-Checking out 1d24ca2e6c18cd036f00e930cca64f44db04fb67
+Checking out 839bf7b1e1e335c8ba8f04b247eb84076be0c50a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rust-mode/
-  to /tmp/rust-moderXrO1W/rust-mode-20220919.1051
+  to /tmp/rust-mode0aVMSH/rust-mode-20221218.1704
     rust-cargo.el -> rust-cargo.el
     rust-compile.el -> rust-compile.el
     rust-mode.el -> rust-mode.el
     rust-playpen.el -> rust-playpen.el
     rust-rustfmt.el -> rust-rustfmt.el
     rust-utils.el -> rust-utils.el
-Created rust-mode-20220919.1051.tar containing:
-  rust-mode-20220919.1051/
-  rust-mode-20220919.1051/rust-cargo.el
-  rust-mode-20220919.1051/rust-compile.el
-  rust-mode-20220919.1051/rust-mode-pkg.el
-  rust-mode-20220919.1051/rust-mode.el
-  rust-mode-20220919.1051/rust-playpen.el
-  rust-mode-20220919.1051/rust-rustfmt.el
-  rust-mode-20220919.1051/rust-utils.el
-Built rust-mode in 4.409s, finished at 2022-12-18T16:04:58+0000
+Created rust-mode-20221218.1704.tar containing:
+  rust-mode-20221218.1704/
+  rust-mode-20221218.1704/rust-cargo.el
+  rust-mode-20221218.1704/rust-compile.el
+  rust-mode-20221218.1704/rust-mode-pkg.el
+  rust-mode-20221218.1704/rust-mode.el
+  rust-mode-20221218.1704/rust-playpen.el
+  rust-mode-20221218.1704/rust-rustfmt.el
+  rust-mode-20221218.1704/rust-utils.el
+Built rust-mode in 4.593s, finished at 2022-12-19T06:43:36+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  332 Dec 18 16:04 packages/rust-mode-20220919.1051.entry
-100K -rw-r--r-- 1 root root 100K Dec 18 16:04 packages/rust-mode-20220919.1051.tar
+4.0K -rw-r--r-- 1 root root  332 Dec 19 06:43 packages/rust-mode-20221218.1704.entry
+100K -rw-r--r-- 1 root root 100K Dec 19 06:43 packages/rust-mode-20221218.1704.tar

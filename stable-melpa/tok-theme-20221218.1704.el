@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20221216.843
-;; Package-Commit: 2cb1ab1ce9f399d82950473a595023063bc839b0
+;; Package-Version: 20221218.1704
+;; Package-Commit: db48bc084575447f3ba600d4cca8f6f192fbc817
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -75,6 +75,9 @@
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-buffer-id ((,class (:weight bold))))
 
+   ;; Header
+   `(header-line ((,class (:inherit mode-line-inactive :box nil))))
+
    ;; Font-lock
    `(font-lock-comment-face ((,class (:foreground "gray50" :slant italic))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
@@ -93,10 +96,8 @@
    `(font-lock-regexp-grouping-backslash ((,class (nil))))
    `(font-lock-regexp-grouping-construct ((,class (nil))))
 
-   ;; Flymake
-   `(flymake-error ((,class (:underline (:style wave :color "red")))))
-   `(flymake-warning ((,class (:underline (:style wave :color "DarkOrange")))))
-   `(flymake-note ((,class (nil))))
+   ;; ERC
+   `(erc-timestamp-face ((,class (:foreground "black"))))
 
    ;; sh
    `(sh-heredoc ((,class (nil))))
