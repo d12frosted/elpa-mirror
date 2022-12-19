@@ -3,15 +3,6 @@
 		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. What is vertico-posframe
-2. How to enable vertico-posframe
-3. Tips
-.. 1. How to show fringe to vertico-posframe
-
-
 
 
 

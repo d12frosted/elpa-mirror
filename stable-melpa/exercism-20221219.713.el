@@ -7,8 +7,8 @@
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Created: September 15, 2022
 ;; Version: 0.0.0
-;; Package-Version: 20221030.2058
-;; Package-Commit: 22b270047541a8173467d0e929e318b9f8606c3c
+;; Package-Version: 20221219.713
+;; Package-Commit: bfa546a1da7005b3df8ebd99851db4b306d56d6c
 ;; Keywords: exercism, convenience
 ;; Homepage: https://github.com/anonimitoraf/exercism.el
 ;; Package-Requires: ((emacs "27.1") (dash "2.19.1") (a "1.0.0") (s "1.13.1") (request "0.3.2") (async "1.9.6") (async-await "1.1") (persist "0.5") (transient "0.3.7"))
@@ -37,6 +37,7 @@
 (defvar exercism--shell-cmd)
 
 (persist-defvar exercism--current-track nil "Current track.")
+(persist-defvar exercism--transient-name "Exercism (no track selected yet)" "Title for transient")
 
 (defcustom exercism-executable "exercism"
   "Executable name/location."
@@ -234,9 +235,13 @@ EXERCISE should be a list with the shape `(slug exercise-data)'."
         (when (file-exists-p exercise-dir)
           (find-file exercise-dir))))))
 
+(add-variable-watcher 'exercism--current-track
+                      (lambda (_ newval _ _)
+                        (setq exercism--transient-name (format "Exercism actions (current track: %s)" newval))))
+
 (transient-define-prefix exercism ()
   "Bring up the Exercism action menu."
-  [,(format "Exercism actions (current track: %s)" (or exercism--current-track "N/A"))
+  [exercism--transient-name
    ("c" "Configure" exercism-configure)
    ("t" "Set current track" exercism-set-track)
    ("o" "Open an exercise" exercism-open-exercise)

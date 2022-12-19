@@ -2,8 +2,8 @@ Major mode for viewing certificates, CRLs, and other PKI-related files.
 
 Uses OpenSSL for viewing PEM and DER encoded PKI entities.
 
-Prerequisites: OpenSSL. Customize the variable `x509-openssl-cmd' to name
-the openssl binary. Defaults are "openssl" on Linux (assuming it's on PATH)
+Prerequisites: OpenSSL.  Customize the variable `x509-openssl-cmd' to name
+the openssl binary.  Defaults are "openssl" on Linux (assuming it's on PATH)
 and "C:/Program Files/Git/mingw64/bin/openssl.exe" on Windows (assuming Git
 for Windows is installed in its default location).
 
@@ -17,7 +17,7 @@ M-x `x509-dwim' tries to guess what view-function to call.  It falls back to
 `x509-viewasn1' if it fails.
 
 If point is at the beginning of, or in, a PEM region, all view functions,
-including `x509-dwim', tries extra hard to use that region as input. This
+including `x509-dwim', tries extra hard to use that region as input.  This
 often works even when there is other data ahead and after region and if the
 region is indented or the lines are quoted.
 
