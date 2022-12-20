@@ -4,8 +4,6 @@
 
 ;; Author: Chunyang Xu <xuchunyang.me@gmail.com>
 ;; URL: https://github.com/xuchunyang/plur
-;; Package-Version: 20160504.924
-;; Package-Commit: 5bdd3b9a2f0624414bd596e798644713cd1545f0
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 

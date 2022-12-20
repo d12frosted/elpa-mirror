@@ -3,24 +3,6 @@
 		━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. What is posframe?
-2. Installation
-3. Usage
-.. 1. Create a posframe
-..... 1. Simple way
-..... 2. Advanced way
-..... 3. Arguments
-.. 2. Hide a posframe
-.. 3. Hide all posframes
-.. 4. Delete a posframe
-.. 5. Delete all posframes
-.. 6. posframe-arghandler
-.. 7. Mouse banish
-
-
 
 
 

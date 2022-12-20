@@ -28,7 +28,26 @@
 3 Tips
 ══════
 
-3.1 How to show fringe to vertico-posframe
+3.1 How to let vertico-posframe work well with vertico-multiform.
+─────────────────────────────────────────────────────────────────
+
+  ┌────
+  │ (setq vertico-multiform-commands
+  │       '((consult-line
+  │          posframe
+  │          (vertico-posframe-poshandler . posframe-poshandler-frame-top-center)
+  │          (vertico-posframe-border-width . 10)
+  │          ;; NOTE: This is useful when emacs is used in both in X and
+  │          ;; terminal, for posframe do not work well in terminal, so
+  │          ;; vertico-buffer-mode will be used as fallback at the
+  │          ;; moment.
+  │          (vertico-posframe-fallback-mode . vertico-buffer-mode))
+  │         (t posframe)))
+  │ (vertico-multiform-mode 1)
+  └────
+
+
+3.2 How to show fringe to vertico-posframe
 ──────────────────────────────────────────
 
   ┌────
