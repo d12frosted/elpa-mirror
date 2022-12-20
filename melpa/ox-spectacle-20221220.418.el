@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221217.1000
-;; Package-Commit: 2f34f9c775a436b9554d0354c3e9c3ca915fcddd
+;; Package-Version: 20221220.418
+;; Package-Commit: b615a5d9865a857e6a2b2ad9a44077f9731809d3
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -558,13 +558,14 @@ holding contextual information."
                  (id (mapconcat #'number-to-string (org-export-get-headline-number headline info) "_"))
                  (regexp (format "\\(?:%s\\)" (mapconcat #'identity (ox-spectacle--available-components info) "\\|")))
                  (slide-headline-p (or (= level 1) (string-equal (org-element-property :LAYOUT (org-element-lineage headline '(headline))) "top")))
-                 prefix inline-tag inline-props inline-prefix inline-suffix)
+                 prefix inline-tag inline-props inline-prefix inline-suffix slide-title)
             ;; headline with <Component props> declaration has the highest priority
             (when (string-match (format "<\\${\\(%s\\(?:\\.[A-Z][a-zA-Z0-9]+\\)*\\)}\\( [^>]*\\|\\)>\\(\\(?:<.*>\\)?\\)$" regexp) title)
               (let ((tt (match-string 1 title)))
                 ;; special case, <FlexBox/Box/Grid/Appear..> on slide headline, wrapper
                 (if (and slide-headline-p (string-match-p "Box\\|Grid\\|Appear" tt))
-                    (setq inline-prefix (match-string 0 title))
+                    (setq inline-prefix (match-string 0 title)
+                          slide-title (cl-subseq title 0 (- -1 (length inline-prefix))))
                   (setq inline-tag (match-string 1 title)
                         inline-props (ox-spectacle--wa (match-string 2 title))
                         inline-prefix (match-string 3 title)))) ; deal multiple Components on headline
@@ -583,7 +584,9 @@ holding contextual information."
                       (layout (setq tag (format "SlideLayout.%s" layout)))
                       (type (setq tag type)))
                 (unless tag (setq tag (or slide-tag "Slide")))
-                (if (= (length props) 0) (setq props slide-props)))
+                (if (= (length props) 0) (setq props slide-props))
+                (unless (string-match-p " title=" props)
+                  (setq props (concat (format " title='%s'" (or slide-title title)) props))))
               (setq prefix (format "\n<!------ slide (%s) begin ------>\n\n" id)))
             ;; default Component used by headline
             (unless tag

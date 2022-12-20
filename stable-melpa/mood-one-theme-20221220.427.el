@@ -1,12 +1,12 @@
-;;; mood-one-theme.el --- A dark color scheme inspired by the Doom One theme. -*- lexical-binding: t; -*-
+;;; mood-one-theme.el --- A dark color scheme inspired by the Doom One theme -*- lexical-binding: t; -*-
 
 ;; Author: Jessie Hildebrandt <jessieh.net>
 ;; Homepage: https://gitlab.com/jessieh/mood-one-theme
 ;; Keywords: mode-line faces
-;; Package-Version: 20220613.114
-;; Package-Commit: 033910aaf1bb41f384d1b5b96d55975d1378a34b
+;; Package-Version: 20221220.427
+;; Package-Commit: 1a6bbe3c9344979f216d411472bf953cff825394
 ;; Version: 1.2.1
-;; Package-Requires: ((emacs "24.4"))
+;; Package-Requires: ((emacs "27.1"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -17,6 +17,7 @@
 ;;
 ;; Features offered:
 ;; * Beautiful dark color scheme inspired by the Doom One theme
+;; * Automatic 256-color mode support
 ;; * Custom fringe bitmaps for line continuations, visual-line-mode, diff-hl, flycheck, and flymake
 ;; * Custom configuration for neotree
 ;; * Lightweight with no dependencies
@@ -55,75 +56,97 @@
 
 ;;; Code:
 
+;; -------------------------------------------------------------------------- ;;
 ;;
-;; Theme definition
+;; Byte-compiler declarations
 ;;
+;; -------------------------------------------------------------------------- ;;
+
+;; ---------------------------------- ;;
+;; External variable defs
+;; ---------------------------------- ;;
+
+(defvar neotree-dir-button-keymap)
+(defvar neotree-file-button-keymap)
+(defvar neo-global--window)
+
+;; ---------------------------------- ;;
+;; External function decls
+;; ---------------------------------- ;;
+
+(declare-function flycheck-redefine-standard-error-levels "flycheck" (&optional margin-str fringe-bitmap))
+
+(declare-function neo-path--file-short-name "neotree" (file))
+(declare-function neo-buffer--node-list-set "neotree" (line-num path))
+(declare-function neo-buffer--newline-and-begin "neotree" ())
+(declare-function neo-global--select-window "neotree" ())
+(declare-function neo-buffer--insert-root-entry "neotree" (node))
+(declare-function neo-buffer--insert-dir-entry "neotree" (node depth expanded))
+(declare-function neo-buffer--insert-file-entry "neotree" (node depth))
+
+;; -------------------------------------------------------------------------- ;;
+;;
+;; Theme code
+;;
+;; -------------------------------------------------------------------------- ;;
 
 (deftheme mood-one
   "A dark color scheme inspired by the Doom One theme.")
 
-;;
-;; Helper functions
-;;
+(let* ((class '((class color) (min-colors 256)))
 
-(defun mood-one-theme--true-color-p ()
-  "Return 't' if the frame is capable of displaying true colors."
-  (or
-   (display-graphic-p)
-   (>= (tty-display-color-cells) 16777216)))
+       ;; Layout/sizing
+       (mode-line-padding 8)
 
-;;
-;; Color definitions
-;;
+       ;; Feature availability
+       (true-color-available-p (or (daemonp)
+                                   (display-graphic-p)
+                                   (>= (tty-display-color-cells) 16777216)))
 
-(let ((class '((class color) (min-colors 256)))
+       ;; Base (Background) Colors
+       (bg (if true-color-available-p "#282c30" "#1c1c1c"))
+       (bg-alt (if true-color-available-p "#212428" "#121212"))
+       (base-0 (if true-color-available-p "#1c2024" "#080808"))
+       (base-1 (if true-color-available-p "#1c1f20" "#1c1c1c"))
+       (base-2 (if true-color-available-p "#202325" "#262626"))
+       (base-3 (if true-color-available-p "#232729" "#262626"))
+       (base-4 (if true-color-available-p "#3f4445" "#3a3a3a"))
+       (base-5 (if true-color-available-p "#5b6265" "#585858"))
+       (base-6 (if true-color-available-p "#73797b" "#767676"))
+       (base-7 (if true-color-available-p "#9ca0a5" "#949494"))
+       (base-8 (if true-color-available-p "#dfdfdf" "#d0d0d0"))
+       (fg (if true-color-available-p "#c0c4d2" "#d7d7ff"))
+       (fg-alt (if true-color-available-p "#5b6265" "#4e4e4e"))
 
-      ;; Layout/Sizing
-      (mode-line-padding 8)
+       ;; Foreground Colors
+       (gray (if true-color-available-p "#3f444a" "#444444"))
+       (red (if true-color-available-p "#ff6c6b" "#ff5f5f"))
+       (orange (if true-color-available-p "#da8548" "#d75f00"))
+       (green (if true-color-available-p "#98be65" "#5faf5f"))
+       (teal (if true-color-available-p "#4db5bd" "#00afaf"))
+       (yellow (if true-color-available-p "#ecbe7b" "#ffd787"))
+       (blue (if true-color-available-p "#51afef" "#5fafff"))
+       (dark-blue (if true-color-available-p "#2257a0" "#005faf"))
+       (magenta (if true-color-available-p "#c678dd" "#af5fff"))
+       (pink (if true-color-available-p "#d9aeee" "#d7afff"))
+       (violet (if true-color-available-p "#a9a1e1" "#afafff"))
+       (cyan (if true-color-available-p "#46d9ff" "#00d7ff"))
+       (dark-cyan (if true-color-available-p "#5699af" "#5f87af")))
 
-      ;; Base (Background) Colors
-      (bg (if (mood-one-theme--true-color-p) "#282c30" "#1c1c1c"))
-      (bg-alt (if (mood-one-theme--true-color-p) "#212428" "#121212"))
-      (base-0 (if (mood-one-theme--true-color-p) "#1c2024" "#080808"))
-      (base-1 (if (mood-one-theme--true-color-p) "#1c1f20" "#1c1c1c"))
-      (base-2 (if (mood-one-theme--true-color-p) "#202325" "#262626"))
-      (base-3 (if (mood-one-theme--true-color-p) "#232729" "#262626"))
-      (base-4 (if (mood-one-theme--true-color-p) "#3f4445" "#3a3a3a"))
-      (base-5 (if (mood-one-theme--true-color-p) "#5b6265" "#585858"))
-      (base-6 (if (mood-one-theme--true-color-p) "#73797b" "#767676"))
-      (base-7 (if (mood-one-theme--true-color-p) "#9ca0a5" "#949494"))
-      (base-8 (if (mood-one-theme--true-color-p) "#dfdfdf" "#d0d0d0"))
-      (fg (if (mood-one-theme--true-color-p) "#c0c4d2" "#d7d7ff"))
-      (fg-alt (if (mood-one-theme--true-color-p) "#5b6265" "#4e4e4e"))
-
-      ;; Foreground Colors
-      (gray (if (mood-one-theme--true-color-p) "#3f444a" "#444444"))
-      (red (if (mood-one-theme--true-color-p) "#ff6c6b" "#ff5f5f"))
-      (orange (if (mood-one-theme--true-color-p) "#da8548" "#d75f00"))
-      (green (if (mood-one-theme--true-color-p) "#98be65" "#5faf5f"))
-      (teal (if (mood-one-theme--true-color-p) "#4db5bd" "#00afaf"))
-      (yellow (if (mood-one-theme--true-color-p) "#ecbe7b" "#ffd787"))
-      (blue (if (mood-one-theme--true-color-p) "#51afef" "#5fafff"))
-      (dark-blue (if (mood-one-theme--true-color-p) "#2257a0" "#005faf"))
-      (magenta (if (mood-one-theme--true-color-p) "#c678dd" "#af5fff"))
-      (pink (if (mood-one-theme--true-color-p) "#d9aeee" "#d7afff"))
-      (violet (if (mood-one-theme--true-color-p) "#a9a1e1" "#afafff"))
-      (cyan (if (mood-one-theme--true-color-p) "#46d9ff" "#00d7ff"))
-      (dark-cyan (if (mood-one-theme--true-color-p) "#5699af" "#5f87af")))
-
-  ;; Face Definitions
   (custom-theme-set-faces
    'mood-one
+
+   ;; ---------------------------------- ;;
+   ;; Core Emacs faces
+   ;; ---------------------------------- ;;
 
    ;; default face
    `(default ((,class (:background ,bg :foreground ,fg))))
 
-   ;; generic faces
+   ;; Emacs faces
    `(error ((,class (:foreground ,red))))
    `(warning ((,class (:foreground ,yellow))))
    `(success ((,class (:foreground ,green))))
-
-   ;; emacs faces
    `(fringe ((,class (:inherit 'default :foreground ,base-4))))
    `(region ((,class (:background ,base-4 :foreground nil :distant-foreground ,fg))))
    `(highlight ((,class (:background ,blue :foreground ,base-0 :distant-foreground ,base-8))))
@@ -163,11 +186,21 @@
    `(mode-line-emphasis ((,class (:foreground ,blue))))
    `(mode-line-highlight ((,class (:foreground ,fg))))
    `(mode-line-buffer-id ((,class (:foreground ,violet :weight bold))))
-   `(header-line ((,class (:inherit 'mode-line-inactive))))
+   `(header-line ((,class (:inherit 'mode-line-inactive :foreground ,base-7))))
 
-   ;; ===============================
-   ;; -- built-in packages/plugins --
-   ;; ===============================
+   ;; ---------------------------------- ;;
+   ;; Internal/built-in packages
+   ;; ---------------------------------- ;;
+
+   ;; ansi-colors
+   `(ansi-color-black ((,class (:background ,base-0 :foreground ,base-0))))
+   `(ansi-color-red ((,class (:background ,red :foreground ,red))))
+   `(ansi-color-green ((,class (:background ,green :foreground ,green))))
+   `(ansi-color-yellow ((,class (:background ,yellow :foreground ,yellow))))
+   `(ansi-color-blue ((,class (:background ,blue :foreground ,blue))))
+   `(ansi-color-magenta ((,class (:background ,magenta :foreground ,magenta))))
+   `(ansi-color-cyan ((,class (:background ,cyan :foreground ,cyan))))
+   `(ansi-color-white ((,class (:background ,base-8 :foreground ,base-8))))
 
    ;; cperl
    `(cperl-array-face ((,class (:inherit 'font-lock-variable-name-face :weight bold))))
@@ -320,6 +353,16 @@
    `(message-mml ((,class (:foreground ,base-5 :slant italic))))
    `(message-cited-text ((,class (:foreground ,magenta))))
 
+   ;; outline
+   `(outline-1 ((,class (:foreground ,blue :weight bold))))
+   `(outline-2 ((,class (:foreground ,magenta :weight bold))))
+   `(outline-3 ((,class (:foreground ,violet :weight bold))))
+   `(outline-4 ((,class (:foreground ,blue :weight bold))))
+   `(outline-5 ((,class (:foreground ,magenta :weight bold))))
+   `(outline-6 ((,class (:foreground ,blue :weight bold))))
+   `(outline-7 ((,class (:foreground ,magenta :weight bold))))
+   `(outline-8 ((,class (:foreground ,blue :weight bold))))
+
    ;; pulse
    `(pulse-highlight-start-face ((,class (:background ,base-5 :extend t))))
 
@@ -337,26 +380,14 @@
    `(tab-bar-tab ((,class (:inherit 'tab-line-tab))))
    `(tab-bar-tab-inactive ((,class (:inherit 'tab-line-tab-inactive))))
 
-   ;; term
-   `(term ((,class (:foreground ,fg))))
-   `(term-bold ((,class (:weight bold))))
-   `(term-color-black ((,class (:background ,base-0 :foreground ,base-0))))
-   `(term-color-red ((,class (:background ,red :foreground ,red))))
-   `(term-color-green ((,class (:background ,green :foreground ,green))))
-   `(term-color-yellow ((,class (:background ,yellow :foreground ,yellow))))
-   `(term-color-blue ((,class (:background ,blue :foreground ,blue))))
-   `(term-color-magenta ((,class (:background ,magenta :foreground ,magenta))))
-   `(term-color-cyan ((,class (:background ,cyan :foreground ,cyan))))
-   `(term-color-white ((,class (:background ,base-8 :foreground ,base-8))))
-
    ;; window-divider
    `(window-divider ((,class (:inherit 'vertical-border))))
    `(window-divider-first-pixel ((,class (:inherit 'window-divider))))
    `(window-divider-last-pixel ((,class (:inherit 'window-divider))))
 
-   ;; ===============================
-   ;; -- external packages/plugins --
-   ;; ===============================
+   ;; ---------------------------------- ;;
+   ;; External packages
+   ;; ---------------------------------- ;;
 
    ;; anzu
    `(anzu-mode-line ((,class (:foreground ,blue))))
@@ -536,24 +567,15 @@
    `(magit-branch-remote ((,class (:foreground ,green))))
    `(magit-cherry-equivalent ((,class (:foreground ,violet))))
    `(magit-cherry-unmatched ((,class (:foreground ,cyan))))
-   ;; magit-diff-added
-   ;; magit-diff-added-highlight
-   ;; magit-diff-base
-   ;; magit-diff-base-highlight
-   ;; magit-diff-context
-   ;; magit-diff-context-highlight
    `(magit-diff-file-heading ((,class (:foreground ,fg :weight bold))))
    `(magit-diff-file-heading-selection ((,class (:background ,dark-blue :foreground ,magenta :weight bold))))
-   ;; magit-magit-diff-hunk-heading
    `(magit-diff-hunk-heading-highlight ((,class (:background ,violet :foreground ,bg :weight bold))))
-   ;; magit-diff-removed
-   ;; magit-diff-removed-highlight
    `(magit-diff-lines-heading ((,class (:background ,red :foreground ,yellow))))
    `(magit-diffstat-added ((,class (:foreground ,green))))
    `(magit-diffstat-removed ((,class (:foreground ,red))))
    `(magit-dimmed ((,class (:foreground ,base-5))))
    `(magit-hash ((,class (:foreground ,base-5))))
-   `(magit-header-line ((,class (:background ,dark-blue :foreground ,base-8 :weight bold :box (:line-width 3 :color ,dark-blue)))))
+   `(magit-header-line ((,class (:background ,bg-alt :foreground ,base-7 :box (:line-width ,mode-line-padding :color ,base-7)))))
    `(magit-log-author ((,class (:foreground ,orange))))
    `(magit-log-date ((,class (:foreground ,blue))))
    `(magit-log-graph ((,class (:foreground ,base-5))))
@@ -702,33 +724,42 @@
    ;; yasnippet
    `(yas-field-highlight-face ((,class (:inherit 'match))))))
 
+;; -------------------------------------------------------------------------- ;;
 ;;
-;; Neotree functions
+;; Neotree configuration
 ;;
+;; -------------------------------------------------------------------------- ;;
 
-(defun mood-one-theme-neotree-hidden-dir-p (dirname)
+;; ---------------------------------- ;;
+;; Internal functions
+;; ---------------------------------- ;;
+
+(defun mood-one-theme--neotree-hidden-dir-p (dirname)
+  "Return non-nil if DIRNAME should be considered hidden."
   (string-prefix-p "." dirname))
 
-(defun mood-one-theme-neotree-hidden-file-p (filename)
+(defun mood-one-theme--neotree-hidden-file-p (filename)
+  "Return non-nil if FILENAME should be considered hidden."
   (or (string-prefix-p "." filename)
       (and (string-prefix-p "#" filename)
            (string-suffix-p "#" filename))))
 
-(defun mood-one-theme-neotree-insert-root (node)
+(defun mood-one-theme--neotree-insert-root (node)
+  "Insert root directory NODE at point."
   (insert
-   (concat
-    " "
-    (propertize
-     "🖿"
-     'face '(:inherit (neo-root-dir-face) :height 1.5))
-    (propertize
-     (concat " " (or (neo-path--file-short-name node) "-") " \n")
-     'face '(:inherit (neo-root-dir-face) :height 1.0)))))
+   " "
+   (propertize
+    "🖿"
+    'face '(:inherit (neo-root-dir-face) :height 1.5))
+   (propertize
+    (concat " " (or (neo-path--file-short-name node) "-") " \n")
+    'face '(:inherit (neo-root-dir-face) :height 1.0))))
 
-(defun mood-one-theme-neotree-insert-dir (node depth expanded)
+(defun mood-one-theme--neotree-insert-dir (node depth expanded)
+  "Insert directory NODE with indentation level DEPTH and state EXPANDED at point."
   (let ((short-name (neo-path--file-short-name node))
         (face '(:inherit (neo-dir-link-face))))
-    (when (mood-one-theme-neotree-hidden-dir-p short-name)
+    (when (mood-one-theme--neotree-hidden-dir-p short-name)
       (setq face '(:inherit (shadow neo-dir-link-face))))
     (insert-char ?\s (* (- depth 1) 2))
     (insert (propertize
@@ -742,10 +773,11 @@
     (neo-buffer--node-list-set nil node)
     (neo-buffer--newline-and-begin)))
 
-(defun mood-one-theme-neotree-insert-file (node depth)
+(defun mood-one-theme--neotree-insert-file (node depth)
+  "Insert file NODE with indentation level DEPTH at point."
   (let ((short-name (neo-path--file-short-name node))
         (face '(:inherit (neo-file-link-face))))
-    (when (mood-one-theme-neotree-hidden-file-p short-name)
+    (when (mood-one-theme--neotree-hidden-file-p short-name)
       (setq face '(:inherit shadow neo-file-link-face)))
     (insert-char ?\s (* (- depth 1) 2))
     (insert (propertize "   " 'face face))
@@ -757,20 +789,35 @@
     (neo-buffer--node-list-set nil node)
     (neo-buffer--newline-and-begin)))
 
+;; ---------------------------------- ;;
+;; Setup function
+;; ---------------------------------- ;;
+
 ;;;###autoload
 (defun mood-one-theme-neotree-configuration-enable ()
   "Enable custom mood-one configuration for use with neotree."
-  (progn
-    (advice-add #'neo-global--select-window :after (lambda () (visual-line-mode 0) (set-window-fringes neo-global--window 0 0)))
-    (advice-add #'neo-buffer--insert-root-entry :override #'mood-one-theme-neotree-insert-root)
-    (advice-add #'neo-buffer--insert-dir-entry :override #'mood-one-theme-neotree-insert-dir)
-    (advice-add #'neo-buffer--insert-file-entry :override #'mood-one-theme-neotree-insert-file)))
+  (advice-add #'neo-global--select-window :after (lambda ()
+                                                   (setq-local line-spacing 3
+                                                               mode-line-format nil
+                                                               auto-hscroll-mode nil
+                                                               buffer-display-table (make-display-table))
+                                                   (visual-line-mode -1)
+                                                   (set-window-fringes neo-global--window 0 0)
+                                                   (set-display-table-slot buffer-display-table 'truncation 8230)))
+  (advice-add #'neo-buffer--insert-root-entry :override #'mood-one-theme--neotree-insert-root)
+  (advice-add #'neo-buffer--insert-dir-entry :override #'mood-one-theme--neotree-insert-dir)
+  (advice-add #'neo-buffer--insert-file-entry :override #'mood-one-theme--neotree-insert-file))
 
+;; -------------------------------------------------------------------------- ;;
 ;;
-;; Fringe bitmap functions
+;; Arrow fringe bitmaps configuration
 ;;
+;; -------------------------------------------------------------------------- ;;
 
-;; arrow fringe bitmaps
+;; ---------------------------------- ;;
+;; Bitmap definitions
+;; ---------------------------------- ;;
+
 (defconst mood-one-theme--right-arrow-bmp
   (vector #b00000000
           #b00000000
@@ -781,6 +828,7 @@
           #b00110000
           #b00000000)
   "Bitmap used to overwrite Emacs's right line-continuation fringe bitmap.")
+
 (defconst mood-one-theme--left-arrow-bmp
   (vector #b00000000
           #b00000000
@@ -791,6 +839,7 @@
           #b00001100
           #b00000000)
   "Bitmap used to overwrite Emacs's left line-continuation fringe bitmap.")
+
 (defconst mood-one-theme--down-arrow-bmp
   (vector #b00000000
           #b00000000
@@ -801,19 +850,33 @@
           #b00111100
           #b00011000)
   "Bitmap used to overwrite Emac's right line-wrapping fringe bitmap.")
+
 (defconst mood-one-theme--empty-bmp
   (vector #b0)
   "Bitmap used to overwrite Emac's left line-wrapping fringe bitmap.")
 
+;; ---------------------------------- ;;
+;; Setup function
+;; ---------------------------------- ;;
+
 ;;;###autoload
 (defun mood-one-theme-arrow-fringe-bmp-enable ()
-  "Enable custom mood-one fringe bitmaps to replace the default line continuation and line wrap arrows."
+  "Replace the default line continuation and line wrap arrows with custom bitmaps."
   (define-fringe-bitmap 'right-arrow mood-one-theme--right-arrow-bmp)
   (define-fringe-bitmap 'left-arrow mood-one-theme--left-arrow-bmp)
   (define-fringe-bitmap 'right-curly-arrow mood-one-theme--down-arrow-bmp)
   (define-fringe-bitmap 'left-curly-arrow mood-one-theme--empty-bmp))
 
-;; diff-hl fringe bitmap
+;; -------------------------------------------------------------------------- ;;
+;;
+;; diff-hl fringe bitmaps configuration
+;;
+;; -------------------------------------------------------------------------- ;;
+
+;; ---------------------------------- ;;
+;; Bitmap definitions
+;; ---------------------------------- ;;
+
 (defvar mood-one-theme--diff-hl-bmp
   (define-fringe-bitmap 'mood-one-theme--diff-hl-bmp
     (vector #b11100000)
@@ -821,12 +884,30 @@
     '(center t))
   "Fringe bitmap for use with `diff-hl'.")
 
+;; ---------------------------------- ;;
+;; User-facing function
+;; ---------------------------------- ;;
+
 ;;;###autoload
 (defun mood-one-theme-diff-hl-fringe-bmp-function (_type _pos)
   "Fringe bitmap function for use as `diff-hl-fringe-bmp-function'."
   mood-one-theme--diff-hl-bmp)
 
-;; flycheck/flymake fringe bitmaps
+;; -------------------------------------------------------------------------- ;;
+;;
+;; flycheck/flymake fringe bitmaps configuration
+;;
+;; -------------------------------------------------------------------------- ;;
+
+;; ---------------------------------- ;;
+;; Bitmap definitions
+;; ---------------------------------- ;;
+
+(defconst mood-one-theme--dot-bmp
+  (vector #b01100000
+          #b01100000)
+  "Bitmap used to overwrite flycheck's continuation fringe bitmap.")
+
 (define-fringe-bitmap 'mood-one-theme--marker-bmp
   (vector #b11100000
           #b11110000
@@ -835,10 +916,10 @@
           #b11111000
           #b11110000
           #b11100000))
-(defconst mood-one-theme--dot-bmp
-  (vector #b01100000
-          #b01100000)
-  "Bitmap used to overwrite flycheck's continuation fringe bitmap.")
+
+;; ---------------------------------- ;;
+;; Flycheck setup function
+;; ---------------------------------- ;;
 
 ;;;###autoload
 (defun mood-one-theme-flycheck-fringe-bmp-enable ()
@@ -846,26 +927,35 @@
   (flycheck-redefine-standard-error-levels nil 'mood-one-theme--marker-bmp)
   (define-fringe-bitmap 'flycheck-fringe-bitmap-continuation mood-one-theme--dot-bmp))
 
+;; ---------------------------------- ;;
+;; Flymake setup function
+;; ---------------------------------- ;;
+
 ;;;###autoload
 (defun mood-one-theme-flymake-fringe-bmp-enable ()
   "Enable custom mood-one fringe bitmaps for use with flymake."
-  (progn
-    (setq-default flymake-error-bitmap '(mood-one-theme--marker-bmp compilation-error))
-    (setq-default flymake-warning-bitmap '(mood-one-theme--marker-bmp compilation-warning))
-    (setq-default flymake-note-bitmap '(mood-one-theme--marker-bmp compilation-info))))
+  (setq-default flymake-error-bitmap '(mood-one-theme--marker-bmp compilation-error))
+  (setq-default flymake-warning-bitmap '(mood-one-theme--marker-bmp compilation-warning))
+  (setq-default flymake-note-bitmap '(mood-one-theme--marker-bmp compilation-info)))
 
+;; -------------------------------------------------------------------------- ;;
 ;;
+;; Provide theme
+;;
+;; -------------------------------------------------------------------------- ;;
+
+;; ---------------------------------- ;;
 ;; Register theme folder location
-;;
+;; ---------------------------------- ;;
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-;;
-;; Provide mood-one-theme
-;;
+;; ---------------------------------- ;;
+;; Provide theme/package
+;; ---------------------------------- ;;
 
 (provide-theme 'mood-one)
 (provide 'mood-one-theme)
