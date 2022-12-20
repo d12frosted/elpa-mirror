@@ -1,7 +1,8 @@
 Snap-indent provides simple automatic indentation (and optional formatting)
-when yanking/pasting text.
+when yanking/pasting text. It was inspired by `auto-indent-mode', and is
+designed for improved simplicity, flexibility, and interoperability.
 
-snap-indent-mode is an Emacs minor mode that enables the following
+`snap-indent-mode' is an Emacs minor mode that enables the following
 features:
 
 - Indent inserted text according to major mode on yank/paste

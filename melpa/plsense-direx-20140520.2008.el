@@ -4,6 +4,8 @@
 
 ;; Author: Hiroaki Otsu <ootsuhiroaki@gmail.com>
 ;; Keywords: perl, convenience
+;; Package-Version: 20140520.2008
+;; Package-Commit: 8a2f465264c74e04524cc789cdad0190ace43f6c
 ;; URL: https://github.com/aki2o/plsense-direx
 ;; Version: 0.2.0
 ;; Package-Requires: ((direx "0.1alpha") (plsense "0.3.2") (log4e "0.2.0") (yaxception "0.3.2"))

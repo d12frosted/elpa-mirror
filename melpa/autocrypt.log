@@ -3,24 +3,26 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~pkal/autocrypt
 
 Updating /mnt/store/melpa/working/autocrypt/
-Checking out 9e393f869a276c7d7d52b89f0bab79a70455fefa
+Checking out dd400cbbdfa14e6127f29cf9b562a8948ff3fafd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/autocrypt/
-  to /tmp/autocrypt9HdDKc/autocrypt-20220827.1746
+  to /tmp/autocryptvZOGVb/autocrypt-20221220.1654
     autocrypt-gnus.el -> autocrypt-gnus.el
     autocrypt-message.el -> autocrypt-message.el
     autocrypt-mu4e.el -> autocrypt-mu4e.el
     autocrypt-rmail.el -> autocrypt-rmail.el
     autocrypt.el -> autocrypt.el
-Created autocrypt-20220827.1746.tar containing:
-  autocrypt-20220827.1746/
-  autocrypt-20220827.1746/autocrypt-gnus.el
-  autocrypt-20220827.1746/autocrypt-message.el
-  autocrypt-20220827.1746/autocrypt-mu4e.el
-  autocrypt-20220827.1746/autocrypt-pkg.el
-  autocrypt-20220827.1746/autocrypt-rmail.el
-  autocrypt-20220827.1746/autocrypt.el
-Built autocrypt in 8.828s, finished at 2022-12-20T11:10:32+0000
+Created autocrypt-20221220.1654.tar containing:
+  autocrypt-20221220.1654/
+  autocrypt-20221220.1654/autocrypt-gnus.el
+  autocrypt-20221220.1654/autocrypt-message.el
+  autocrypt-20221220.1654/autocrypt-mu4e.el
+  autocrypt-20221220.1654/autocrypt-pkg.el
+  autocrypt-20221220.1654/autocrypt-rmail.el
+  autocrypt-20221220.1654/autocrypt.el
+Built autocrypt in 3.869s, finished at 2022-12-20T18:31:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 383 Dec 20 11:10 packages/autocrypt-20220827.1746.entry
- 40K -rw-r--r-- 1 root root 40K Dec 20 11:10 packages/autocrypt-20220827.1746.tar
+4.0K -rw-r--r-- 1 root root 383 Dec 20 14:51 packages/autocrypt-20220827.1746.entry
+ 40K -rw-r--r-- 1 root root 40K Dec 20 14:51 packages/autocrypt-20220827.1746.tar
+4.0K -rw-r--r-- 1 root root 383 Dec 20 18:31 packages/autocrypt-20221220.1654.entry
+ 40K -rw-r--r-- 1 root root 40K Dec 20 18:31 packages/autocrypt-20221220.1654.tar
