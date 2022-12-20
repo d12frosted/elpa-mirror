@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 8 3)
+	   [(1 8 4)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "6c6946c6a59492eb94bcf680b2db6b144d441115"))])
+	     (:commit . "65c47283462667baa5e4c284f0cb2b314ebf3ec1"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -312,6 +312,17 @@
 	      (:authors
 	       ("https://github.com/bradyt/dart-mode/issues"))
 	      (:keywords "languages"))])
+ (denote-refs .
+	      [(0 1)
+	       ((emacs
+		 (28 1)))
+	       "Show links and backlinks in Denote notes" tar
+	       ((:url . "https://codeberg.org/akib/emacs-denote-refs")
+		(:keywords "hypermedia" "outlines" "files")
+		(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+		(:authors
+		 ("Akib Azmain Turja" . "akib@disroot.org"))
+		(:commit . "c41007596ec4f8fa665ee8dd7437faddbc0f1b34"))])
  (devhelp .
 	  [(1 0)
 	   ((emacs

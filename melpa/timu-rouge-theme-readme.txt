@@ -19,7 +19,7 @@ I. Installation
         (load-theme 'timu-rouge t))
 
 II. Configuration
-  1. Scalling
+  A. Scaling
     You can now scale some faces (in `org-mode' for now):
 
     - `org-document-info'
@@ -33,7 +33,7 @@ II. Configuration
     By default the scaling is turned off.
     To setup the scaling add the following to your `~/.emacs.d/init.el' or `~/.emacs':
 
-    a. Default scaling
+    1. Default scaling
       This will turn on default values of scaling in the theme.
 
         (customize-set-variable 'timu-rouge-scale-org-document-title t)
@@ -42,7 +42,7 @@ II. Configuration
         (customize-set-variable 'timu-rouge-scale-org-level-2 t)
         (customize-set-variable 'timu-rouge-scale-org-level-3 t)
 
-    b. Custom scaling
+    2. Custom scaling
       You can choose your own scaling values as well.
       The following is a somewhat exaggerated example.
 
@@ -52,10 +52,10 @@ II. Configuration
         (customize-set-variable 'timu-rouge-scale-org-level-2 1.4)
         (customize-set-variable 'timu-rouge-scale-org-level-3 1.2)
 
-  1. "Intense" colors for org-mode
+  B. "Intense" colors for org-mode
     To emphasize some elements in org-mode.
-    You can set a variable to me some faces more "intense".
+    You can set a variable to make some faces more "intense".
 
     By default the intense colors are turned off.
     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
-      (customize-set-variable 'timu-rouge-org-insense-colors t)
+      (customize-set-variable 'timu-rouge-org-intense-colors t)

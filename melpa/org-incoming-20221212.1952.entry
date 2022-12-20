@@ -1,0 +1,17 @@
+(org-incoming .
+	      [(20221212 1952)
+	       ((emacs
+		 (24 4))
+		(dash
+		 (2 19 1))
+		(datetime
+		 (0 7 2))
+		(s
+		 (1 13 1)))
+	       "Sort incoming PDFs into your org files" single
+	       ((:commit . "76b2f2a0b9dcd6153b98a95d2bec28ec577bd792")
+		(:authors
+		 ("Lukas Barth" . "mail@tinloaf.de"))
+		(:maintainer "Lukas Barth" . "mail@tinloaf.de")
+		(:keywords "files")
+		(:url . "https://github.com/tinloaf/org-incoming"))])
