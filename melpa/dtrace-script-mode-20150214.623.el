@@ -1,4 +1,6 @@
 ;;; dtrace-script-mode.el --- DTrace code editing commands for Emacs
+;; Package-Version: 20150214.623
+;; Package-Commit: a92f76c65b9fb64d448e503b4ea7ff06085be8ee
 
 ;;; Commentary:
 

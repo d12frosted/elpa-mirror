@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
-Checking out 510d52fc7724f82bc11f5774a32ba7216d7a239b
+Checking out 68faab734bff388f7e53d3dbea321878684002c8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevJ6T50G/eldev-20221219.2032
+  to /tmp/eldevrZnqMr/eldev-20221219.2107
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-doctor.el -> eldev-doctor.el
@@ -19,25 +19,23 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20221219.2032.tar containing:
-  eldev-20221219.2032/
-  eldev-20221219.2032/bin/
-  eldev-20221219.2032/bin/eldev
-  eldev-20221219.2032/bin/eldev.bat
-  eldev-20221219.2032/bin/eldev.ps1
-  eldev-20221219.2032/eldev-build.el
-  eldev-20221219.2032/eldev-buttercup.el
-  eldev-20221219.2032/eldev-doctor.el
-  eldev-20221219.2032/eldev-ecukes.el
-  eldev-20221219.2032/eldev-ert.el
-  eldev-20221219.2032/eldev-pkg.el
-  eldev-20221219.2032/eldev-plugins.el
-  eldev-20221219.2032/eldev-util.el
-  eldev-20221219.2032/eldev-vc.el
-  eldev-20221219.2032/eldev.el
-Built eldev in 4.740s, finished at 2022-12-19T20:45:40+0000
+Created eldev-20221219.2107.tar containing:
+  eldev-20221219.2107/
+  eldev-20221219.2107/bin/
+  eldev-20221219.2107/bin/eldev
+  eldev-20221219.2107/bin/eldev.bat
+  eldev-20221219.2107/bin/eldev.ps1
+  eldev-20221219.2107/eldev-build.el
+  eldev-20221219.2107/eldev-buttercup.el
+  eldev-20221219.2107/eldev-doctor.el
+  eldev-20221219.2107/eldev-ecukes.el
+  eldev-20221219.2107/eldev-ert.el
+  eldev-20221219.2107/eldev-pkg.el
+  eldev-20221219.2107/eldev-plugins.el
+  eldev-20221219.2107/eldev-util.el
+  eldev-20221219.2107/eldev-vc.el
+  eldev-20221219.2107/eldev.el
+Built eldev in 6.697s, finished at 2022-12-20T04:04:15+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 Dec 19 17:02 packages/eldev-20221218.2216.entry
-600K -rw-r--r-- 1 root root 600K Dec 19 17:02 packages/eldev-20221218.2216.tar
-4.0K -rw-r--r-- 1 root root  340 Dec 19 20:45 packages/eldev-20221219.2032.entry
-600K -rw-r--r-- 1 root root 600K Dec 19 20:45 packages/eldev-20221219.2032.tar
+4.0K -rw-r--r-- 1 root root  340 Dec 20 04:04 packages/eldev-20221219.2107.entry
+600K -rw-r--r-- 1 root root 600K Dec 20 04:04 packages/eldev-20221219.2107.tar
