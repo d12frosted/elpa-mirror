@@ -3,21 +3,6 @@
 		       ━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Usage
-2. Installation
-.. 1. NonGNU ELPA
-.. 2. Quelpa
-.. 3. Manual
-3. Comparison With Other Terminal Emulators
-.. 1. Term
-.. 2. Vterm
-.. 3. Coterm + Shell
-4. Acknowledgements
-
-
 Eat's name self-explainary, it stands for "Emulate A Terminal".  Eat is
 a terminal emulator.  It can run most (if not all) full-screen terminal
 programs, including Emacs.
@@ -111,9 +96,10 @@ To get the most out of Eat, you should also setup shell integration.
 
   ┌────
   │ (quelpa '(eat :fetcher git
-  │ 	      :url "/home/akib/projects/emacs-eat"
+  │ 	      :url "https://codeberg.org/akib/emacs-eat"
   │ 	      :files ("*.el" ("term" "term/*.el") "*.texi"
-  │ 		      "*.ti" ("e" "e/*")
+  │ 		      "*.ti" ("terminfo/e" "terminfo/e/*")
+  │ 		      ("terminfo/65" "terminfo/65/*")
   │ 		      ("integration" "integration/*")
   │ 		      (:exclude ".dir-locals.el" "*-tests.el"))))
   └────

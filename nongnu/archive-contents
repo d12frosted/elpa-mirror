@@ -384,7 +384,7 @@
 		 ("Arne Jørgensen" . "arne@arnested.dk"))
 		(:commit . "ed90b0c4d808365e9ae9f16cc8a96eff17815621"))])
  (eat .
-      [(0 3)
+      [(0 3 1)
        ((emacs
 	 (28 1)))
        "Emulate A Terminal, in a region, in a buffer and in Eshell" tar
@@ -393,7 +393,7 @@
 	(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	(:authors
 	 ("Akib Azmain Turja" . "akib@disroot.org"))
-	(:commit . "d87392e571b6cb19f794bacffb510e7828a8db4b"))])
+	(:commit . "fcc02df1050a67fd6233d326e117b3e3684d31cf"))])
  (edit-indirect .
 		[(0 1 10)
 		 ((emacs
