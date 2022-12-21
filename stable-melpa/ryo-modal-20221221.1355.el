@@ -5,8 +5,8 @@
 
 ;; Author: Erik Sjöstrand <sjostrand.erik@gmail.com>
 ;; URL: http://github.com/Kungsgeten/ryo-modal
-;; Package-Version: 20220103.940
-;; Package-Commit: 0a61eed4d2917422d6401b6abe2037c26dab658a
+;; Package-Version: 20221221.1355
+;; Package-Commit: b9e6a0f33b9e2aeb6088accd23ed312083d8f707
 ;; Keywords: convenience, modal, keys
 ;; Version: 0.45
 ;; Package-Requires: ((emacs "25.1"))
@@ -127,18 +127,19 @@ keymap       Similarly to list, each keybinding of provided keymap
 ARGS should be of the form [:keyword option]... if TARGET is a kbd-string
 or a command.  The following keywords exist:
 
-:name      A string, naming the binding.  If ommited get name from TARGET.
-:exit      If t then exit `ryo-modal-mode' after the command.
-:read      If t then prompt for a string to insert after the command.
-:mode      If set to a major or minor mode symbol (e.g. 'org-mode) the key will
-           only be bound in that mode.
-:norepeat  If t then do not become a target of `ryo-modal-repeat'.
-:then      Can be a quoted list of additional commands that will be run after
-           the TARGET.  These will not be shown in the name of the binding.
-           (use :name to give it a nickname).
-:first     Similar to :then, but is run before the TARGET.
-:mc-all    If t the binding's command will be added to `mc/cmds-to-run-for-all'.
-           If 0 the binding's command will be added to `mc/cmds-to-run-once'.
+:name        A string, naming the binding.  If ommited get name from TARGET.
+:exit        If t then exit `ryo-modal-mode' after the command.
+:read        If t then prompt for a string to insert after the command.
+:mode        If set to a major or minor mode symbol (e.g. 'org-mode) the key will
+             only be bound in that mode.
+:norepeat    If t then do not become a target of `ryo-modal-repeat'.
+:then        Can be a quoted list of additional commands that will be run after
+             the TARGET.  These will not be shown in the name of the binding.
+             (use :name to give it a nickname).
+:first       Similar to :then, but is run before the TARGET.
+:mc-all      If t the binding's command will be added to `mc/cmds-to-run-for-all'.
+             If 0 the binding's command will be added to `mc/cmds-to-run-once'.
+:properties  Take list of pairs (PROPNAME . VALUE) describing properties of TARGET symbol.
 
 If any ARGS other han :mode, :norepeat or :mc-all are given, a
 new command named ryo:<hash>:<name> will be created. This is to
@@ -266,6 +267,13 @@ make sure the name of the created command is unique."
               (add-to-list 'ryo-modal-mode-keymaps mode))
             (define-key (eval (intern map-name)) (kbd key) func))
         (define-key ryo-modal-mode-map (kbd key) func))
+      (when-let ((props (plist-get args :properties)))
+        (mapcar
+         (lambda (pair)
+           (let ((propname (car pair))
+                 (value (cdr pair)))
+             (put func propname value)))
+         props))
       (add-to-list 'ryo-modal-bindings-list `(,key ,name ,@args))))))
 
 ;;;###autoload

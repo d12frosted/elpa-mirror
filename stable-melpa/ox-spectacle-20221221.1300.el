@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221220.1320
-;; Package-Commit: aad65c5f681608760e30d4021d3a0f642cc91d36
+;; Package-Version: 20221221.1300
+;; Package-Commit: 6421db007258c7dd42a7295424a4ac314635e6af
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -552,13 +552,13 @@ holding contextual information."
            (t "")))
       (let ((layout (org-element-property :LAYOUT headline)))
         ;; if layout is top, then headlines under it will be a slide page
-        (if (string-match-p "^top$" layout) contents
+        (if (and layout (string-match-p "^top$" layout)) contents
           (let* ((props (ox-spectacle--wa (org-element-property :PROPS headline)))
                  (type (org-element-property :TYPE headline))
                  (tag type)
                  (headnums (org-export-get-headline-number headline info))
                  (regexp (format "\\(?:%s\\)" (mapconcat #'identity (ox-spectacle--available-components info) "\\|")))
-                 (slide-headline-p (or (= level 1) (string-match-p "^top$" (org-element-property :LAYOUT (org-element-lineage headline '(headline))))))
+                 (slide-headline-p (or (= level 1) (string-match-p "^top$" (or (org-element-property :LAYOUT (org-element-lineage headline '(headline))) ""))))
                  prefix inline-tag inline-props inline-prefix inline-suffix slide-title)
             ;; headline with <Component.Xxx props> declaration has the highest priority
             (when (string-match (format "<\\${\\(%s\\(?:\\.[A-Z][a-zA-Z0-9]+\\)*\\)}\\( [^>]*\\|\\)>\\(\\(?:<.*>\\)?\\)$" regexp) title)
@@ -700,6 +700,9 @@ holding contextual information."
 (defun ox-spectacle--verbatim (verbatim contents info)
   "Transcode VERBATIM from Org to HTML.
 CONTENTS is the contents, INFO is a plist holding export options."
+  (let ((v (org-element-property :value verbatim)))
+    (setq v (replace-regexp-in-string "\\(`\\|\\$\\)" "\\\\\\1" v))
+    (org-element-put-property verbatim :value v))
   (ox-spectacle--code verbatim contents info))
 
 (defun ox-spectacle--plain-list (plain-list contents info)
