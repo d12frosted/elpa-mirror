@@ -3,12 +3,8 @@ Fetcher: git
 Source:  https://gitea.petton.fr/nico/json-process-client.git
 
 Updating /mnt/store/melpa/working/json-process-client/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: 502 Bad Gateway
-fatal: unable to access 'https://gitea.petton.fr/nico/json-process-client.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 373b2cc7e3d26dc00594e0b2c1bb66815aad2826
+Built json-process-client in 5.792s, finished at 2022-12-21T10:12:16+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Dec 21 10:12 packages/json-process-client-20210525.733.el
+4.0K -rw-r--r-- 1 root root 435 Dec 21 10:12 packages/json-process-client-20210525.733.entry
