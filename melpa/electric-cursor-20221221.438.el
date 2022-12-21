@@ -7,8 +7,8 @@
 ;; License: ISC
 ;; SPDX-License-Identifier: ISC
 ;; Version: 0.2
-;; Package-Version: 20220108.2052
-;; Package-Commit: 92f77b05fec80c5440a8b800b33345dabca13872
+;; Package-Version: 20221221.438
+;; Package-Commit: bc09aa8c5d3cc32e3e6452cbf8018fc1ea772b73
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: terminals, frames
 ;; URL: https://github.com/duckwork/electric-cursor
@@ -48,9 +48,9 @@
   "Alist of modes and cursors to apply to them.
 The car of each of element is a mode or hook, and the cdr is the
 `cursor-type', which see."
-  :type '(alist :key-type (choice (function :tag "Mode")
+  :type `(alist :key-type (choice (function :tag "Mode")
                                   (hook :tag "Mode hook"))
-                :value-type (get 'cursor-type 'custom-type)))
+                :value-type ,(get 'cursor-type 'custom-type)))
 
 (defcustom electric-cursor-default-cursor (alist-get t electric-cursor-alist)
   "The cursor to use when no modes in `electric-cursor-alist' are active.
