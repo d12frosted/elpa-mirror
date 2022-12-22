@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221221.1300
-;; Package-Commit: 6421db007258c7dd42a7295424a4ac314635e6af
+;; Package-Version: 20221222.646
+;; Package-Commit: bbc491911fc49a5a35e9c09e56c9b6ba1b74d08b
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -87,6 +87,8 @@
     (section         . ox-spectacle--section)
     (src-block       . ox-spectacle--src-block)
     (example-block   . ox-spectacle--example-block)
+    (verse-block     . ox-spectacle--verse-block)
+    (special-block   . ox-spectacle--special-block)
     (fixed-width     . ox-spectacle--fixed-width)
     (quote-block     . ox-spectacle--quote-block)
     (center-block    . ox-spectacle--center-block)
@@ -668,12 +670,42 @@ INFO is a plist holding contextual information."
                info)
               "\n</div>"))))
 
-(defun ox-spectacle--fixed-width (fixed-width _contents _info)
-  "Transcode a FIXED-WIDTH element from Org to HTML."
-  (format "<div className=\"example fixed-width\"><${CodePane} showLineNumbers=${false}>\n%s</${CodePane}></div>"
-          (org-html-do-format-code
-           (org-remove-indentation
-            (org-element-property :value fixed-width)))))
+(defun ox-spectacle--verse-block (verse-block contents info)
+  "Transcode a VERSE-BLOCK element from Org to HTML.
+CONTENTS is verse block contents. INFO is a plist holding
+contextual information."
+  (ox-spectacle--paragraph
+   verse-block
+   ;; Replace leading white spaces with non-breaking spaces.
+   (replace-regexp-in-string
+    "^[ \t]+" (lambda (m) (org-html--make-string (length m) "${'\u00A0'}"))
+    ;; Replace each newline character with line break. Also
+    ;; remove any trailing "br" close-tag so as to avoid duplicates.
+    (let* ((br (org-html-close-tag "br" nil info))
+           (re (format "\\(?:%s\\)?[ \t]*\n" (regexp-quote br))))
+      (replace-regexp-in-string
+       re (concat br "\n")
+       ;; make $ and ` work normally. see react-htm for details
+       (replace-regexp-in-string "\\(`\\|\\$\\)" "\\\\\\1" contents))))
+   info))
+
+(defun ox-spectacle--special-block (special-block contents info)
+  "Transcode a SPECIAL-BLOCK element from Org to HTML.
+CONTENTS holds the contents of the block. INFO is a plist
+holding contextual information."
+  (let* ((type (org-element-property :type special-block))
+         (params (org-element-property :parameters special-block))
+         (props (org-export-read-attribute :attr_html special-block))
+         (flags (cadr (ox-spectacle--pop-from-plist props :type)))
+         (tag (if-let ((c (cl-find-if
+                           (lambda (c) (string-match-p (concat "^" c "$") type))
+                           (ox-spectacle--available-components))))
+                  (concat "${" c "}")
+                type))
+         (props (concat (if params (ox-spectacle--filter-props params))
+                        (ox-spectacle--wa (ox-spectacle--make-attribute-string props info)))))
+    (ox-spectacle--maybe-appear (format "<%s%s>\n%s</%s>" tag props contents tag)
+                                flags)))
 
 (defun ox-spectacle--quote-block (quote-block contents info)
   "Transcode a QUOTE-BLOCK element from Org to HTML.
@@ -690,15 +722,22 @@ holding contextual information."
   "Transcode a _CENTER-BLOCK element from Org to HTML.
 CONTENTS holds the contents of the block. INFO is a plist
 holding contextual information."
-  (format "<${FlexBox} alignItems=\"center\"><div>\n%s\n</div></${FlexBox}>" contents))
+  (format "<${FlexBox} alignItems=\"center\">\n%s\n</${FlexBox}>" contents))
+
+(defun ox-spectacle--fixed-width (fixed-width _contents _info)
+  "Transcode a :FIXED-WIDTH element from Org to HTML."
+  (format "<div className=\"example fixed-width\"><${CodePane} showLineNumbers=${false}>\n%s</${CodePane}></div>"
+          (org-html-do-format-code
+           (org-remove-indentation
+            (org-element-property :value fixed-width)))))
 
 (defun ox-spectacle--code (code _contents _info)
-  "Transcode CODE from Org to HTML."
+  "Transcode ~CODE~ from Org to HTML."
   (format "<${CodeSpan}>${`%s`}</${CodeSpan}>"
           (org-element-property :value code)))
 
 (defun ox-spectacle--verbatim (verbatim contents info)
-  "Transcode VERBATIM from Org to HTML.
+  "Transcode =VERBATIM= from Org to HTML.
 CONTENTS is the contents, INFO is a plist holding export options."
   (let ((v (org-element-property :value verbatim)))
     (setq v (replace-regexp-in-string "\\(`\\|\\$\\)" "\\\\\\1" v))
@@ -947,13 +986,12 @@ CONTENTS is nil. INFO is a plist holding contextual information."
      ((string= key "SPLIT")
       (pcase value
         ("t" "#spectacle-splitter#")
-        (otherwise
-         (let ((parsed (progn
-                         (string-match "^\\([0-9\\.]+\\)?\\(.*\\)" value)
-                         (cons (match-string 1 value) (match-string 2 value)))))
-           (format "<${Box} height=\"%s\"%s></${Box}>"
-                   (if (car parsed) (format "%sem" (car parsed)) "5px")
-                   (ox-spectacle--filter-props (cdr parsed) info)))))))))
+        (_ (let ((parsed (progn
+                           (string-match "^\\([0-9\\.]+\\)?\\(.*\\)" value)
+                           (cons (match-string 1 value) (match-string 2 value)))))
+             (format "<${Box} height=\"%s\"%s></${Box}>"
+                     (if (car parsed) (format "%sem" (car parsed)) "5px")
+                     (ox-spectacle--filter-props (cdr parsed) info)))))))))
 
 
 ;;; Mode
