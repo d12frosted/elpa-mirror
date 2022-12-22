@@ -2,10 +2,10 @@
 
 ;; Author: Tom Gillespie
 ;; URL: https://github.com/tgbugs/orgstrap
-;; Package-Version: 20221216.131
-;; Package-Commit: fff0ab9167a7fd4cdc094c27dd9312f194b38500
+;; Package-Version: 20221222.1709
+;; Package-Commit: 013140099253637615bdd63c475bbc348ef727d0
 ;; Keywords: lisp org org-mode bootstrap
-;; Version: 1.5.1
+;; Version: 1.5.2
 ;; Package-Requires: ((emacs "24.4"))
 
 ;;;; License and Commentary
@@ -1201,10 +1201,10 @@ If no elvs are found goto `point-max' instead."
     (beginning-of-line)))
 
 (defconst orgstrap--shebang-body
-  "{ __p=$(mktemp -d);touch ${__p}/=;chmod +x ${__p}/=;__op=$PATH;PATH=${__p}:$PATH;} > ${null=\"/dev/null\"}\n$file= $MyInvocation.MyCommand.Source\n$ErrorActionPreference= \"SilentlyContinue\"\nfile=$0\nargs=\n$ErrorActionPreference= \"Continue\"\n{ PATH=$__op;rm ${__p}/=;rmdir ${__p};} > $null\nemacs -batch -no-site-file -eval \"(let (vc-follow-symlinks) (defun orgstrap--confirm-eval (l _) (not (memq (intern l) '(elisp emacs-lisp)))) (let ((file (pop argv)) enable-local-variables) (find-file-literally file) (end-of-line) (when (eq (char-before) ?\\^m) (let ((coding-system-for-read 'utf-8)) (revert-buffer nil t t)))) (let ((enable-local-eval t) (enable-local-variables :all) (major-mode 'org-mode)) (require 'org) (org-set-regexps-and-options) (hack-local-variables)))\" \"${file}\" -- ${args} \"${@}\"\nexit\n<# powershell open"
+  "set -e \"-C\" \"-e\" \"-e\"\n{ null=/dev/null;} > \"${null:=/dev/null}\"\n{ args=;file=;MyInvocation=;__p=$(mktemp -d);touch ${__p}/=;chmod +x ${__p}/=;__op=$PATH;PATH=${__p}:$PATH;} > \"${null}\"\n$file = $MyInvocation.MyCommand.Source\n{ file=$0;PATH=$__op;rm ${__p}/=;rmdir ${__p};} > \"${null}\"\nemacs -batch -no-site-file -eval \"(let (vc-follow-symlinks) (defun orgstrap--confirm-eval (l _) (not (memq (intern l) '(elisp emacs-lisp)))) (let ((file (pop argv)) enable-local-variables) (find-file-literally file) (end-of-line) (when (eq (char-before) ?\\^m) (let ((coding-system-for-read 'utf-8)) (revert-buffer nil t t)))) (let ((enable-local-eval t) (enable-local-variables :all) (major-mode 'org-mode)) (require 'org) (org-set-regexps-and-options) (hack-local-variables)))\" \"${file}\" -- ${args} \"${@}\"\nexit\n<# powershell open"
   "Shebang block body content.")
 
-(defun orgstrap--add-shebang-block ()
+(defun orgstrap--add-shebang-block (&optional update)
   "Add a shebang block to the current buffer."
   ;; goto correct location
   ;; create empty bash block
@@ -1214,20 +1214,30 @@ If no elvs are found goto `point-max' instead."
   (let ((block-name "orgstrap-shebang")
         (header-args '((eval . never) (results . none) (exports . none))))
     (if (org-babel-find-named-block block-name)
-        (warn "A shebang block already exists. Not adding.")
-      (save-excursion
-        (orgstrap--before-first-dull)
-        (insert "\n#+name: " block-name "\n")
-        (insert "#+begin_src bash")
-        (mapc (lambda (header-arg-value)
-                (insert " :" (symbol-name (car header-arg-value))
-                        " " (symbol-name (cdr header-arg-value))))
-              header-args)
-        (insert "\n#+end_src\n")
-        (orgstrap-update-src-block "orgstrap-shebang" orgstrap--shebang-body)
+        (if update
+            (orgstrap-update-src-block "orgstrap-shebang" orgstrap--shebang-body)
+          (warn "A shebang block already exists. Not adding."))
+      (if update
+          (warn "A shebang block does not exist. Not updating.")
+        (save-excursion
+          (orgstrap--before-first-dull)
+          (insert "\n#+name: " block-name "\n")
+          (insert "#+begin_src bash")
+          (mapc (lambda (header-arg-value)
+                  (insert " :" (symbol-name (car header-arg-value))
+                          " " (symbol-name (cdr header-arg-value))))
+                header-args)
+          (insert "\n#+end_src\n")
+          (orgstrap-update-src-block "orgstrap-shebang" orgstrap--shebang-body)
 
-        (orgstrap--goto-elvs)
-        (insert "# close powershell comment #>\n")))))
+          (orgstrap--goto-elvs)
+          (insert "# close powershell comment #>\n"))))))
+
+(defun orgstrap-update-shebang-block (&optional universal-argument)
+  "Update an existing shebang block. UNIVERSAL-ARGUMENT is ignored."
+  (interactive "P")
+  (ignore universal-argument)
+  (orgstrap--add-shebang-block 'update))
 
 ;; init user facing functions
 

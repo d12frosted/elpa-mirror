@@ -19,9 +19,9 @@
 ;; Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
 ;; USA
 
-;; Version: 0.10
-;; Package-Version: 20220903.901
-;; Package-Commit: c1995b1a2ea09d7a2af69edcc2a47f5b6d217d5f
+;; Version: 0.11
+;; Package-Version: 20221222.1650
+;; Package-Commit: 141daaa4b0dc07fe25423609dcd14441a9f2613e
 ;; Author: Sibi Prabakaran
 ;; Keywords: just justfile tools processes
 ;; URL: https://github.com/psibi/justl.el
@@ -42,6 +42,8 @@
 ;; Alternatively, if you want to just execute a recipe, call
 ;;
 ;; M-x justl-exec-recipe-in-dir
+;;
+;; To execute default recipe, call justl-exec-default-recipe
 ;;
 ;; Shortcuts:
 ;;
@@ -474,7 +476,8 @@ and output of process."
 
 (defun justl--justfile-from-arg (arg)
   "Return justfile filepath from ARG."
-  (car (cdr (s-split "--justfile=" arg))))
+  (when arg
+    (car (cdr (s-split "--justfile=" arg)))))
 
 (defun justl--get-recipies-with-desc (justfile)
   "Return all the recipies in JUSTFILE with description."
@@ -507,6 +510,11 @@ and output of process."
   (let* ((recipies (completing-read "Recipies: " (justl--get-recipies)
                                      nil nil nil nil "default")))
     (justl--exec-without-justfile justl-executable (list recipies))))
+
+(defun justl-exec-default-recipe ()
+  "Execute default recipe."
+  (interactive)
+  (justl--exec-without-justfile justl-executable nil))
 
 (defvar justl-mode-map
   (let ((map (make-sparse-keymap)))

@@ -7,8 +7,8 @@
 ;; Contributions from Kyle Meyer
 ;; Created: 8 Mar 2015
 ;; Version: 0.2
-;; Package-Version: 20220531.1457
-;; Package-Commit: c8b667e17bfe3e63221f822c5c4d58c8fb4fea90
+;; Package-Version: 20221222.1426
+;; Package-Commit: c9d8b5249c1b3814da062ed9976e4137d6e8d869
 ;; Keywords: pydoc, python
 ;; Homepage: https://github.com/statmobile/pydoc
 
@@ -60,6 +60,12 @@
 
 (defcustom pydoc-python-command "python"
   "The command to use to execute python code."
+  :type 'string
+  :group 'pydoc)
+
+
+(defcustom pydoc-pip-version-command "pip --version"
+  "The command to use to get the pip version."
   :type 'string
   :group 'pydoc)
 
@@ -473,7 +479,7 @@ Adapted from `help-make-xrefs'."
 
 (defun pydoc-pip-version ()
   "Return a list of (major minor revision) for the pip version."
-  (let* ((output (shell-command-to-string "pip --version"))
+  (let* ((output (shell-command-to-string pydoc-pip-version-command))
 	 (string-version (nth 1 (split-string output " " t)))
 	 (string-major-minor-rev (split-string string-version "\\.")))
     (mapcar

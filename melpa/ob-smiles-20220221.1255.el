@@ -2,6 +2,8 @@
 ;;; -*- coding: utf-8 -*-
 
 ;; Keywords: org babel SMILES
+;; Package-Version: 20220221.1255
+;; Package-Commit: d178f3d4a7e3c1ca9910f0a063d2a3cfd97d8609
 ;; Version: 0.0.1
 ;; Package-Requires: ((smiles-mode "0.0.1") (org "8"))
 ;; Homepage: https://repo.or.cz/ob-smiles.git

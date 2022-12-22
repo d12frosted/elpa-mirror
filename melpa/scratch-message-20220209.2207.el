@@ -5,8 +5,8 @@
 ;; Author: Sylvain Rousseau <thisirs at gmail dot com>
 ;; Maintainer: Sylvain Rousseau <thisirs at gmail dot com>
 ;; URL: https://github.com/thisirs/scratch-message.git
-;; Package-Version: 20211221.1527
-;; Package-Commit: efb2db33e52e5d4a4f1bafbd8b459a3b91c3c87a
+;; Package-Version: 20220209.2207
+;; Package-Commit: 0d4198f6effd8f118bf03ee4979f566041ef6a9b
 ;; Keywords: util scratch
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -276,7 +276,8 @@ newlines at the end of the message."
           (save-excursion
             (if (marker-position scratch-message-beg-marker)
                 (goto-char (marker-position scratch-message-beg-marker))
-              (goto-char (point-max))
+              (goto-char (point-min))
+              (search-forward (or initial-scratch-message "") nil t)
               (or (bolp) (insert "\n"))
               (save-excursion (insert "\n\n\n")))
             (set-marker scratch-message-beg-marker (point))

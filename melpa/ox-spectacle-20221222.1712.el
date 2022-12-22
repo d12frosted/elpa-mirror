@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221222.646
-;; Package-Commit: bbc491911fc49a5a35e9c09e56c9b6ba1b74d08b
+;; Package-Version: 20221222.1712
+;; Package-Commit: c4e274b9ff59dd7c4995d83d48c37df1e5021fb4
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -365,7 +365,7 @@ If url is remote, download it! INFO is a plist holding contextual information."
 
 (defun ox-spectacle--props-compat-react-htm (props)
   "Make PROPS compat with react-htm syntax, that is, add $ if nessesary."
-  (replace-regexp-in-string "\\(=\\|\\.\\.\\.\\){" "\\1${" props))
+  (if props (replace-regexp-in-string "\\(=\\|\\.\\.\\.\\){" "\\1${" props)))
 
 (defun ox-spectacle--filter-props (props &optional info)
   "Apply all filters to PROPS to make it compat with Spectacle.
@@ -674,20 +674,43 @@ INFO is a plist holding contextual information."
   "Transcode a VERSE-BLOCK element from Org to HTML.
 CONTENTS is verse block contents. INFO is a plist holding
 contextual information."
-  (ox-spectacle--paragraph
-   verse-block
-   ;; Replace leading white spaces with non-breaking spaces.
-   (replace-regexp-in-string
-    "^[ \t]+" (lambda (m) (org-html--make-string (length m) "${'\u00A0'}"))
-    ;; Replace each newline character with line break. Also
-    ;; remove any trailing "br" close-tag so as to avoid duplicates.
-    (let* ((br (org-html-close-tag "br" nil info))
-           (re (format "\\(?:%s\\)?[ \t]*\n" (regexp-quote br))))
-      (replace-regexp-in-string
-       re (concat br "\n")
-       ;; make $ and ` work normally. see react-htm for details
-       (replace-regexp-in-string "\\(`\\|\\$\\)" "\\\\\\1" contents))))
-   info))
+  (let* ((props (org-export-read-attribute :attr_html verse-block))
+         (flags (cadr (ox-spectacle--pop-from-plist props :type)))
+         (regexp-comp (format "\\(\\(%s\\)\\(\\.[A-Z][a-zA-Z0-9]+\\)*\\)" (mapconcat #'identity (ox-spectacle--available-components info) "\\|")))
+         tag tag-props)
+    ;; Wrap the contens with specific Component or Text. Make it Appear if nessesary
+    (if (and flags (not (string-match-p "^\\([A0-9]\\)[ \t]*\\(.*\\)$" flags)))
+        (setq tag (car (split-string flags nil t))
+              tag-props (if (string= tag flags) nil (ox-spectacle--filter-props (cl-subseq flags (length tag)))))
+      (if-let ((text-opts (ox-spectacle--extract-options :text-opts info)))
+          (setq tag (car text-opts)
+                tag-props (ox-spectacle--wa (cdr text-opts)))
+        (setq tag "Text" tag-props nil)))
+    (if (string-match-p regexp-comp (or tag "")) (setq tag (format "${%s}" tag)))
+    (setq contents (format "<div className='verse'%s><%s%s>%s</%s></div>"
+                           (ox-spectacle--wa (ox-spectacle--make-attribute-string props info))
+                           tag (ox-spectacle--wa (ox-spectacle--filter-props tag-props info))
+                           ;; Replace leading white spaces with non-breaking spaces.
+                           (replace-regexp-in-string
+                            "^[ \t]+" (lambda (m) (org-html--make-string (length m) "${'\u00A0'}"))
+                            ;; Replace each newline character with line break. Also
+                            ;; remove any trailing "br" close-tag so as to avoid duplicates.
+                            (let* ((br (org-html-close-tag "br" nil info))
+                                   (re (format "\\(?:%s\\)?[ \t]*\n" (regexp-quote br))))
+                              (replace-regexp-in-string
+                               re (concat br "\n")
+                               ;; make $ < and ` work normally. see react-htm for details
+                               (with-temp-buffer
+                                 (insert contents)
+                                 (goto-char (point-min))
+                                 (while (not (eobp))
+                                   (unless (looking-at "^[ \t]*<[a-zA-Z\\$/].*>")
+                                     (replace-regexp-in-region "\\(`\\|\\$\\)" "\\\\\\1" (line-beginning-position) (line-end-position))
+                                     (replace-regexp-in-region "<" "${'<'}" (line-beginning-position) (line-end-position)))
+                                   (forward-line 1))
+                                 (buffer-string)))))
+                           tag))
+    (ox-spectacle--maybe-appear contents flags)))
 
 (defun ox-spectacle--special-block (special-block contents info)
   "Transcode a SPECIAL-BLOCK element from Org to HTML.
@@ -702,27 +725,34 @@ holding contextual information."
                            (ox-spectacle--available-components))))
                   (concat "${" c "}")
                 type))
-         (props (concat (if params (ox-spectacle--filter-props params))
-                        (ox-spectacle--wa (ox-spectacle--make-attribute-string props info)))))
-    (ox-spectacle--maybe-appear (format "<%s%s>\n%s</%s>" tag props contents tag)
-                                flags)))
+         (contents (format "<%s%s>\n%s</%s>" tag
+                           (concat (if params (ox-spectacle--filter-props params))
+                                   (ox-spectacle--wa (ox-spectacle--make-attribute-string props info)))
+                           contents tag)))
+    (ox-spectacle--maybe-appear contents flags)))
 
 (defun ox-spectacle--quote-block (quote-block contents info)
   "Transcode a QUOTE-BLOCK element from Org to HTML.
 CONTENTS holds the contents of the block. INFO is a plist
 holding contextual information."
   (let* ((props (org-export-read-attribute :attr_html quote-block))
-         (appear-flags (cadr (ox-spectacle--pop-from-plist props :type)))
-         (sprops (ox-spectacle--wa (ox-spectacle--make-attribute-string props info))))
-    (ox-spectacle--maybe-appear
-     (format "<${Quote}%s>%s</${Quote}>" sprops contents)
-     appear-flags)))
+         (flags (cadr (ox-spectacle--pop-from-plist props :type)))
+         (contents (format "<${Quote}%s>%s</${Quote}>"
+                           (ox-spectacle--wa (ox-spectacle--make-attribute-string props info))
+                           contents)))
+    (ox-spectacle--maybe-appear contents flags)))
 
-(defun ox-spectacle--center-block (_center-block contents _info)
-  "Transcode a _CENTER-BLOCK element from Org to HTML.
+(defun ox-spectacle--center-block (center-block contents info)
+  "Transcode a CENTER-BLOCK element from Org to HTML.
 CONTENTS holds the contents of the block. INFO is a plist
 holding contextual information."
-  (format "<${FlexBox} alignItems=\"center\">\n%s\n</${FlexBox}>" contents))
+  (let* ((props (org-export-read-attribute :attr_html center-block))
+         (flags (cadr (ox-spectacle--pop-from-plist props :type)))
+         (contents (concat
+                    "<${FlexBox} margin='0 auto' flexDirection='column' justifyContent='flex-start' alignItems='center'"
+                    (ox-spectacle--wa (ox-spectacle--make-attribute-string props info))
+                    ">\n" contents "\n</${FlexBox}>")))
+    (ox-spectacle--maybe-appear contents flags)))
 
 (defun ox-spectacle--fixed-width (fixed-width _contents _info)
   "Transcode a :FIXED-WIDTH element from Org to HTML."
@@ -740,6 +770,7 @@ holding contextual information."
   "Transcode =VERBATIM= from Org to HTML.
 CONTENTS is the contents, INFO is a plist holding export options."
   (let ((v (org-element-property :value verbatim)))
+    ;; make ` and $ literal, display normal
     (setq v (replace-regexp-in-string "\\(`\\|\\$\\)" "\\\\\\1" v))
     (org-element-put-property verbatim :value v))
   (ox-spectacle--code verbatim contents info))
@@ -749,12 +780,11 @@ CONTENTS is the contents, INFO is a plist holding export options."
 CONTENTS is the contents of the list, INFO is a plist
 holding export options."
   (let* ((ordered (eq (org-element-property :type plain-list) 'ordered))
-         (props (ox-spectacle--wa
-                 (ox-spectacle--make-attribute-string
-                  (org-export-read-attribute :attr_html plain-list)
-                  info)))
+         (props (org-export-read-attribute :attr_html plain-list))
          (tag (if ordered "OrderedList" "UnorderedList")))
-    (format "<${%s}%s>\n%s</${%s}>\n" tag props contents tag)))
+    (format "<${%s}%s>\n%s</${%s}>\n" tag
+            (ox-spectacle--wa (ox-spectacle--make-attribute-string props info))
+            contents tag)))
 
 (defun ox-spectacle--item (_item contents info)
   "Transcode an _ITEM element from Org to HTML.
@@ -801,10 +831,11 @@ holding export options."
   "Transcode a TABLE element from Org to HTML.
 CONTENTS is the contents of the table, INFO is a plist holding export options."
   (let* ((props (org-export-read-attribute :attr_html table))
-         (appear-flags (cadr (ox-spectacle--pop-from-plist props :type)))
-         (sprops (ox-spectacle--wa (ox-spectacle--make-attribute-string props info)))
-         (result (format "<${Table}%s>\n%s</${Table}>" sprops contents)))
-    (ox-spectacle--maybe-appear result appear-flags)))
+         (flags (cadr (ox-spectacle--pop-from-plist props :type)))
+         (contents (format "<${Table}%s>\n%s</${Table}>"
+                           (ox-spectacle--wa (ox-spectacle--make-attribute-string props info))
+                           contents)))
+    (ox-spectacle--maybe-appear contents flags)))
 
 (defun ox-spectacle--table-row (table-row contents info)
   "Transcode a TABLE-ROW element from Org to HTML.
@@ -837,11 +868,12 @@ PATH maybe a remote url or local file. PROPS and INFO are list."
   (let* ((lv (ox-spectacle--export-level info))
          (src (if (>= lv 2) (ox-spectacle--data-uri path) path))
          (type (cadr (ox-spectacle--pop-from-plist props :type)))
+         (width (if (string-suffix-p "svg" src) "" " max-width=\"100%\""))
          (contents (org-html-close-tag
                     "${Image}"
                     (concat
                      (ox-spectacle--make-attribute-string props info)
-                     (format " src=\"%s\" alt=\"%s\"" src (file-name-nondirectory path)))
+                     (format " src=\"%s\" alt=\"%s\"%s" src (file-name-nondirectory path) width))
                     info)))
     (ox-spectacle--maybe-appear contents type)))
 
@@ -911,19 +943,28 @@ the plist used as a communication channel."
          (props (ox-spectacle--wa (ox-spectacle--make-attribute-string props info)))
          (regexp-html (format "\\(%s\\)" (mapconcat #'identity ox-spectacle--html-tags "\\|")))
          (regexp-comp (format "\\(\\(%s\\)\\(\\.[A-Z][a-zA-Z0-9]+\\)*\\)" (mapconcat #'identity (ox-spectacle--available-components info) "\\|")))
-         (parentype (org-element-type (org-export-get-parent paragraph)))
+         (parent (org-export-get-parent paragraph))
+         (parentype (org-element-type parent))
          (hd-raw (or (org-element-property :raw-value headline) ""))
          (notep (string-match-p "<notes.*>" hd-raw))
          (stepperp (string-match-p "<Stepper.*>" hd-raw))
          tag)
-    (if (or stepperp
-            (or (string-equal type "no") (string-equal type "raw"))
-            (eq parentype 'item)
-            (eq parentype 'quote-block)
-            (org-html-standalone-image-p paragraph info))
-        contents
+    (cond
+     ((or stepperp
+          (cl-member parentype '(item quote-block))
+          (cl-member type '("no" "raw") :test 'string=)
+          (org-html-standalone-image-p paragraph info))
+      contents)
+     ((and (member parentype '(center-block)) ;; ignore empty lines begin/end of the block
+           (or (eq (org-element-property :begin paragraph)
+                   (org-element-property :contents-begin parent))
+               (eq (org-element-property :end paragraph)
+                   (org-element-property :contents-end parent)))
+           (string-match-p "\n+" contents))
+      "")
+     (t
       ;; if <Element> style, insert props into proper place directly, same as plain html paragraph
-      (let ((firstline (car (split-string contents "\n" t)))
+      (let ((firstline (or (car (split-string contents "\n" t)) ""))
             (reg (format "^[ \t]*</?\\(\\${%s}\\|%s\\)\\([ \t]\\|/?>\\)" regexp-comp regexp-html)))
         (when (string-match-p reg firstline)
           (setq contents (with-temp-buffer
@@ -944,7 +985,7 @@ the plist used as a communication channel."
       ;; add ${} for component tag
       (if (string-match-p regexp-comp (or tag "")) (setq tag (format "${%s}" tag)))
       (if tag (format "<%s%s>%s</%s>" tag props (string-trim contents) tag)
-        (ox-spectacle--wa contents "\n")))))
+        (ox-spectacle--wa contents "\n"))))))
 
 (defun ox-spectacle--plain-text (text info)
   "Transcode a TEXT string from Org to HTML.

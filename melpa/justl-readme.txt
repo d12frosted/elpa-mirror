@@ -11,6 +11,8 @@ Alternatively, if you want to just execute a recipe, call
 
 M-x justl-exec-recipe-in-dir
 
+To execute default recipe, call justl-exec-default-recipe
+
 Shortcuts:
 
 On the just screen, place your cursor on a recipe
