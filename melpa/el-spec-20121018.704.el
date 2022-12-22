@@ -25,8 +25,6 @@
 
 ;; Author: Yuuki Arisawa <yuuki.ari@gmail.com>
 ;; URL: https://github.com/uk-ar/el-spec
-;; Package-Version: 20121018.704
-;; Package-Commit: 1dbc465401d4aea5560318c4f13ff30920a0718d
 ;; Created: 4 July 2012
 ;; Version: 0.2
 ;; Keywords: test

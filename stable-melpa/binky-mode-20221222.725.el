@@ -3,9 +3,9 @@
 ;; Copyright (C) 2022 liuyinz
 
 ;; Author: liuyinz <liuyinz95@gmail.com>
-;; Version: 1.0.0
-;; Package-Version: 20221219.1545
-;; Package-Commit: ee6d482e9a27ce1721ef3b716aa76de714b7c665
+;; Version: 1.1.0
+;; Package-Version: 20221222.725
+;; Package-Commit: b430ad8b6bcc03830cd910d0540e149f68780cf8
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/liuyinz/binky-mode
@@ -193,7 +193,7 @@ If nil, disable the highlight feature."
 (defcustom binky-margin-string "\x2691"
   "Which string to show as margin indicator.
 If nil, mark character would be used instead.  Recommendation as follow:
-\\x2590 => ▐, \\x2665 => ♥, \\x2630 => ☰, \\x2691 => ⚑, \\x221a => √, \x229b => ⊛."
+\\x2590 => ▐, \\x2665 => ♥, \\x2630 => ☰, \\x2691 => ⚑, \\x221a => √, \\x229b => ⊛."
   :type '(choice string (const :tag "Use mark character" nil))
   :group 'binky)
 
@@ -211,6 +211,7 @@ If nil, mark character would be used instead.  Recommendation as follow:
 (defface binky-preview-column-mark-auto
   '((t :inherit font-lock-function-name-face
        :bold t
+       :italic nil
        :inverse-video nil))
   "Face used to highlight the auto mark of record in preview."
   :group 'binky)
@@ -218,6 +219,7 @@ If nil, mark character would be used instead.  Recommendation as follow:
 (defface binky-preview-column-mark-back
   '((t :inherit font-lock-type-face
        :bold t
+       :italic nil
        :inverse-video nil))
   "Face used to highlight the back mark of record in preview."
   :group 'binky)
@@ -225,6 +227,7 @@ If nil, mark character would be used instead.  Recommendation as follow:
 (defface binky-preview-column-mark-manual
   '((t :inherit font-lock-keyword-face
        :bold t
+       :italic nil
        :inverse-video nil))
   "Face used to highlight the mark of record in preview."
   :group 'binky)
@@ -267,6 +270,11 @@ If nil, mark character would be used instead.  Recommendation as follow:
 (defface binky-highlight-jump
   '((t :inherit highlight :extend t))
   "Face used to highlight the line jumped to."
+  :group 'binky)
+
+(defface binky-highlight-view
+  '((t :inherit diff-refine-changed :extend t))
+  "Face used to highlight the line viewd."
   :group 'binky)
 
 (defface binky-highlight-warn
@@ -316,11 +324,22 @@ MARK is a lowercase letter between a-z.  INFO is a marker or a list of form
 (defvar-local binky-highlight-overlay nil
   "Overlay used to highlight the line operated on.")
 
+(defvar-local binky-margin-width-orig 'unset
+  "Default margin width of user setting.")
+
 (defvar binky-current-buffer nil
   "Buffer where binky command called from.")
 
-(defvar-local binky-margin-width-orig 'unset
-  "Default margin width of user setting.")
+(defvar binky-current-type nil
+  "Type of `last-input-event'.")
+
+(defvar binky--mark-available nil
+  "List of legal marks used in all records.")
+
+(defvar binky--mark-manual nil
+  "List of legal marks used in manual records.")
+
+
 
 ;;; Functions
 
@@ -368,6 +387,17 @@ ARGS format is as same as `format' command."
   "Return value of `binky-frequency' of buffer which MARKER points to."
   (or (buffer-local-value 'binky-frequency (marker-buffer marker)) 0))
 
+(defun binky--marker-equal-p (x y &optional distance)
+  "Return non-nil if marker X and Y equal.
+When they are in same buffer and line distance is no more larger than
+DISTANCE."
+  (and (markerp x) (markerp y)
+       (eq (marker-buffer x) (marker-buffer y))
+       (with-current-buffer (marker-buffer x)
+         (<= (abs (- (line-number-at-pos x 'absolute)
+                     (line-number-at-pos y 'absolute)))
+             (or distance binky-record-distance 0)))))
+
 (defun binky--record-normalize (record)
   "Return RECORD in normalized style (mark name line mode context position)."
   (if-let* ((info (cdr record))
@@ -384,16 +414,16 @@ ARGS format is as same as `format' command."
               pos))
     record))
 
-(defun binky--record-prop-get (record prop)
-  "Return the property PROP of RECORD, or nil if none."
-  (let ((record (binky--record-normalize record)))
-    (cl-case prop
-      (mark (nth 0 record))
-      (name (nth 1 record))
-      (line (nth 2 record))
-      (mode (nth 3 record))
-      (context (nth 4 record))
-      (position (nth 5 record)))))
+;; (defun binky--record-prop-get (record prop)
+;;   "Return the property PROP of RECORD, or nil if none."
+;;   (let ((record (binky--record-normalize record)))
+;;     (cl-case prop
+;;       (mark (nth 0 record))
+;;       (name (nth 1 record))
+;;       (line (nth 2 record))
+;;       (mode (nth 3 record))
+;;       (context (nth 4 record))
+;;       (position (nth 5 record)))))
 
 (defun binky--record-aggregate (style)
   "Return aggregated records accroding to STYLE."
@@ -419,14 +449,13 @@ ARGS format is as same as `format' command."
                                 (eq (cdr x) (cdr binky-back-record))))
                           (append binky-alist binky-auto-alist)))))))
 
-(defun binky--record-duplicated-p (marker)
-  "Return non-nil if MARKER' line uncoverd in records.
-Only when the line MARKER has larger disatance than any"
+(defun binky--record-duplicated-p (marker &optional distance)
+  "Return non-nil if MARKER equals with any record of `binky-alist'.
+When the line MARKER at has no larger distance with DISTANCE, return that
+record."
   (cl-some (lambda (x)
              (and (markerp (cdr x))
-                  (<= (abs (- (binky--record-prop-get (cons nil marker) 'line)
-                              (binky--record-prop-get x 'line)))
-                      binky-record-distance)
+                  (binky--marker-equal-p marker (cdr x) distance)
                   x))
            binky-alist))
 
@@ -451,10 +480,7 @@ Only when the line MARKER has larger disatance than any"
           (unless (cl-some #'funcall filters)
             (push (point-marker) result))))
       ;; delete marker duplicated with `binky-alist'
-      (setq result (cl-remove-if (lambda (m)
-                                   (let ((binky-record-distance 0))
-                                     (binky--record-duplicated-p m)))
-                                 result))
+      (setq result (cl-remove-if (lambda (m) (binky--record-duplicated-p m 0)) result))
       (cl-case binky-record-sort-by
         (recency
          (setq result (reverse result)))
@@ -558,12 +584,17 @@ Only when the line MARKER has larger disatance than any"
                    (propertize (symbol-name (car x)) 'face 'binky-preview-header)))
 		   (binky--preview-column))))
 
-(defun binky-preview (&optional force)
-  "Preview records of marked positions in `binky-preview-buffer'.
-When there is no window currently showing the buffer or FORCE is non-nil,
-popup the window on the side `binky-preview-side'."
-  (when (or force
-			(not (get-buffer-window binky-preview-buffer)))
+(defun binky-preview (&optional action)
+  "Toggle preview window on the side `binky-preview-side'.
+If optional arg ACTION is `close', close preview, if it's `redisplay',
+redisplay the preview.  If it's nil, toggle the preview."
+  (if (or (eq action 'close)
+          (and (null action)
+               (get-buffer-window binky-preview-buffer)))
+      (let* ((buf binky-preview-buffer)
+             (win (get-buffer-window buf)))
+        (and (window-live-p win) (delete-window win))
+        (and (get-buffer buf) (kill-buffer buf)))
 	(with-current-buffer-window
 		binky-preview-buffer
 		(cons 'display-buffer-in-side-window
@@ -654,27 +685,83 @@ face `binky-preview-shadow' is used instead."
                 (intern (concat "binky-preview-column-mark-"
                                 (symbol-name (binky--mark-type mark)))))))
 
-(defun binky--mark-type (&optional mark)
-  "Return type of MARK or `last-input-event'.
+(defun binky--mark-available ()
+  "Genrate and return available mark list for jumping."
+  (or binky--mark-available
+      (setq binky--mark-available
+            (cl-remove-if
+             (lambda (x) (memq x (list ?? binky-mark-quit nil)))
+             (cl-remove-duplicates
+              (cl-union (number-sequence ?a ?z)
+                        (cons binky-mark-back binky-mark-auto)))))))
+
+(defun binky--mark-manual ()
+  "Generate and return legal mark list for manual."
+  (or binky--mark-manual
+      (setq binky--mark-manual
+            (cl-set-difference (number-sequence ?a ?z)
+                               (append (list binky-mark-quit binky-mark-back)
+                                       binky-mark-auto)))))
+
+(defun binky--mark-type (mark &optional refresh)
+  "Return type of MARK and update `binky-current-type' if REFRESH is non-nil.
 The `quit' means to quit the command and preview.
 The `help' means to preview records if not exist.
 The `back' means to jump back last position.
 The `auto' means to jump to auto marked buffers.
 The `manual' means to operate on records manually.
 The `delete' means to delete existing mark by uppercase."
-  (let ((char (or mark last-input-event)))
-    (cond
-     ((memq char (cons binky-mark-quit '(?\C-g ?\C-\[ escape))) 'quit)
-     ((memq char (cons help-char help-event-list)) 'help)
-     ((equal char binky-mark-back) 'back)
-     ((memq char binky-mark-auto) 'auto)
-     ((and (characterp char) (<= 97 char 122)) 'manual)
-     ((and (characterp char) (<= 65 char 90)) 'delete)
-     (t nil))))
+  (let ((type (cond
+               ((memq mark (cons binky-mark-quit '(?\C-\[ escape))) 'quit)
+               ((memq mark help-event-list) 'help)
+               ((equal mark binky-mark-back) 'back)
+               ((memq mark binky-mark-auto) 'auto)
+               ((memq mark (binky--mark-manual)) 'manual)
+               ((memq (downcase mark) (binky--mark-manual)) 'shift)
+               ((equal (binky--mark-prefix mark) "C") 'ctrl)
+               ((equal (binky--mark-prefix mark) "M") 'alt)
+               (t nil))))
+    (and refresh (setq binky-current-type type))
+    type))
 
 (defun binky--mark-get (mark)
   "Return INFO if (MARK . INFO) found in records, or return nil."
   (alist-get mark (binky--record-aggregate 'sum)))
+
+(defun binky--mark-prefix (mark)
+  "Return prefix of MARK if exists.
+Prefix would be \"C\" (ctrl) or \"M\" (alt)."
+  (when-let* ((str (single-key-description mark t))
+              ((string-match "\\(C\\|M\\)-\\(.\\)" str))
+              ((memq (string-to-char (match-string 2 str)) (binky--mark-available))))
+    (match-string 1 str)))
+
+(defun binky--mark-read (prompt &optional keep-alive)
+  "Read and return a MARK possibly with preview.
+Prompt with the string PROMPT and  may display a window listing existing
+records after `binky-preview-delay' seconds.  When KEEP-ALIVE is non-nil,
+preview buffer keep alive.
+
+If `help-char' (or a member of `help-event-list') is pressed, display preview
+window regardless.  Press \\[keyboard-quit] to quit."
+  (setq binky-current-buffer (current-buffer))
+  ;; (setq binky-current-type nil)
+  (and keep-alive (binky-preview 'redisplay))
+  (let ((timer (when (and (numberp binky-preview-delay)
+                          (null keep-alive))
+		         (run-with-timer binky-preview-delay nil
+                                 (apply-partially #'binky-preview 'redisplay)))))
+    (unwind-protect
+        (progn
+		  (while (memq (binky--mark-type (read-key prompt) 'refresh) '(help nil))
+            (and (eq binky-current-type 'help) (binky-preview)))
+		  (if (eq binky-current-type 'quit)
+              (keyboard-quit)
+            (downcase (string-to-char (nreverse (single-key-description
+                                                 last-input-event t))))))
+	  (and (timerp timer) (cancel-timer timer))
+      (when (or (eq binky-current-type 'quit) (null keep-alive))
+        (binky-preview 'close)))))
 
 (defun binky--mark-add (mark)
   "Add (MARK . MARKER) into records."
@@ -702,8 +789,7 @@ The `delete' means to delete existing mark by uppercase."
 
 (defun binky--mark-delete (mark)
   "Delete (MARK . INFO) from `binky-alist'."
-  (let* ((mark (downcase mark))
-         (info (binky--mark-get mark)))
+  (let ((info (binky--mark-get mark)))
     (cond
      ((not (eq (binky--mark-type mark) 'manual))
       (binky--message mark 'illegal))
@@ -730,39 +816,25 @@ The `delete' means to delete existing mark by uppercase."
 		  (find-file (car info))
 		  (goto-char (car (last info))))
         (binky-highlight 'jump)
-        (when (characterp binky-mark-back)
+        (when (and (characterp binky-mark-back)
+                   (not (binky--marker-equal-p last (point-marker) 0)))
           (setq binky-back-record (cons binky-mark-back last))
           (run-hooks 'binky-back-record-update-hook)))
     (binky--message mark 'non-exist)))
 
-(defun binky--mark-read (prompt &optional keep-alive)
-  "Read and return a MARK possibly with preview.
-Prompt with the string PROMPT and  may display a window listing existing
-records after `binky-preview-delay' seconds.  When KEEP-ALIVE is non-nil,
-preview buffer keep alive.
-
-If `help-char' (or a member of `help-event-list') is pressed, display preview
-window regardless.  Press \\[keyboard-quit] to quit."
-  (setq binky-current-buffer (current-buffer))
-  (and keep-alive (binky-preview 'force))
-  (let ((timer (when (numberp binky-preview-delay)
-		         (run-with-timer binky-preview-delay nil #'binky-preview))))
-    (unwind-protect
-        (progn
-		  (while (memq (binky--mark-type
-					    (read-key prompt))
-                       '(help nil))
-            (and (eq (binky--mark-type) 'help) (binky-preview)))
-		  (if (eq (binky--mark-type) 'quit)
-              (keyboard-quit)
-            last-input-event))
-	  (and (timerp timer) (cancel-timer timer))
-      (when (or (eq (binky--mark-type) 'quit)
-                (null keep-alive))
-	    (let* ((buf binky-preview-buffer)
-               (win (get-buffer-window buf)))
-          (and (window-live-p win) (delete-window win))
-          (and (get-buffer buf) (kill-buffer buf)))))))
+(defun binky--mark-view (mark)
+  "View the point in other window according to MARK."
+  (if-let ((info (binky--mark-get mark)))
+      (progn
+        (unless (markerp info) (find-file-noselect (car info)))
+        (let* ((info (binky--mark-get mark))
+               (buf (marker-buffer info))
+               (pop-up-windows t))
+          (save-selected-window
+            (pop-to-buffer buf t 'norecord)
+            (goto-char info)
+            (binky-highlight 'view))))
+    (binky--message mark 'non-exist)))
 
 ;;; Commands
 
@@ -774,23 +846,30 @@ window regardless.  Press \\[keyboard-quit] to quit."
 
 ;;;###autoload
 (defun binky-delete (mark)
-  "Delete the record according to MARK."
+  "Delete the record MARK."
   (interactive (list (binky--mark-read "Delete:")))
   (binky--mark-delete mark))
 
 ;;;###autoload
 (defun binky-jump (mark)
-  "Jump to point according to record of MARK."
+  "Jump to point of record MARK."
   (interactive (list (binky--mark-read "Jump:")))
   (binky--mark-jump mark))
+
+;;;###autoload
+(defun binky-view (mark)
+  "View the point of record MARK in other window."
+  (interactive (list (binky--mark-read "View:")))
+  (binky--mark-view mark))
 
 ;;;###autoload
 (defun binky-binky (mark &optional keep-alive)
   "Add, delete or jump records with MARK in one command.
 
-If MARK exists, then call `binky-jump'.
-If MARK doesn't exist, then call `binky-add'.
-If MARK is uppercase, and the lowercase exists, then call `binky-delete'.
+If MARK prefix is shift+, then call `binky-delete'.
+If MARK prefix is ctrl+, then call `binky-view'.
+If MARK prefix is nil and exists, then call `binky-jump'.
+If MARK prefix is nil and doesn't exist, then call `binky-add'.
 
 Interactively, KEEP-ALIVE is the prefix argument.  With no prefix argument,
 it works as same as single command.  With a prefix argument, preview the
@@ -802,13 +881,15 @@ records with no delay and keep alive until \\[keyboard-quit] pressed."
                                     'default))
                       current-prefix-arg)
                      current-prefix-arg))
-  (if (binky--mark-get mark)
-	  (binky--mark-jump mark)
-    (if (eq (binky--mark-type mark) 'manual)
-        (binky--mark-add mark)
-      (binky--mark-delete mark)))
+  (cl-case binky-current-type
+    (shift (binky--mark-delete mark))
+    (ctrl (binky--mark-view mark))
+    (t (if (binky--mark-get mark)
+	       (binky--mark-jump mark)
+         (and (eq binky-current-type 'manual)
+              (binky--mark-add mark)))))
   (when keep-alive
-    (binky-preview 'force)
+    (binky-preview 'redisplay)
     (call-interactively #'binky-binky)))
 
 ;;;###autoload

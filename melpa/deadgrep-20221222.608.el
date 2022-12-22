@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/deadgrep
-;; Package-Version: 20221101.2055
-;; Package-Commit: f687ca31f8d3bd8ebf05165b080b50ba724ce9bf
+;; Package-Version: 20221222.608
+;; Package-Commit: 9da7183e60c75bacefd44025fc5e5335b7c5862a
 ;; Keywords: tools
 ;; Version: 0.13
 ;; Package-Requires: ((emacs "25.1") (dash "2.12.0") (s "1.11.0") (spinner "1.7.3"))
@@ -670,6 +670,7 @@ to obtain ripgrep results."
     (push "--no-heading" args)
     (push "--no-column" args)
     (push "--with-filename" args)
+    (push "--no-config" args)
 
     (cond
      ((eq search-type 'string)
