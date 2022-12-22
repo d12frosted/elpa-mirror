@@ -3,6 +3,8 @@
 ;;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
 ;;; Copyright: (C) 2001-2022  Eric Marsden
 ;;; Keywords: printing, hardware
+;; Package-Version: 20220830.1336
+;; Package-Commit: 21d3b3fd5d1e655126ee03dac9d6b46cad9deef6
 ;;; URL: https://github.com/emarsden/ipp-el
 ;;; Version: 0.7
 ;;; Package-Requires: ((cl-lib "0.5") (emacs "24.1"))

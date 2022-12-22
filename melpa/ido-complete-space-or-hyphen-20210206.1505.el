@@ -4,6 +4,8 @@
 ;;         Ian Yang <me (at) iany.me>
 ;; Maintainer: Ryan C. Thompson <rct@thompsonclan.org>
 ;; Keywords: ido, completion, convenience
+;; Package-Version: 20210206.1505
+;; Package-Commit: d1244243e042b8d5b6b991db752a17a44ea169bc
 ;; Filename: ido-complete-space-or-hyphen.el
 ;; Version: 1.3
 ;; URL: https://github.com/DarwinAwardWinner/ido-complete-space-or-hyphen

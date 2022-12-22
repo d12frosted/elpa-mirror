@@ -3,41 +3,41 @@ Fetcher: github
 Source:  https://github.com/merrickluo/liberime.git
 
 Updating /mnt/store/melpa/working/liberime/
-Checking out bbd032c6aa438c240deaf5cefab51c8591029098
+Checking out 70ad2e6e1f0ff74fc8b9b5177b9aba645a18e546
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/liberime/
-  to /tmp/liberimeUABBsq/liberime-20221129.616
+  to /tmp/liberimelIsJjG/liberime-20221222.1141
     liberime.el -> liberime.el
     src => src
     emacs-module => emacs-module
     LICENSE -> LICENSE
     Makefile -> Makefile
     README.org -> README.org
-Created liberime-20221129.616.tar containing:
-  liberime-20221129.616/
-  liberime-20221129.616/LICENSE
-  liberime-20221129.616/Makefile
-  liberime-20221129.616/README.org
-  liberime-20221129.616/emacs-module/
-  liberime-20221129.616/emacs-module/26/
-  liberime-20221129.616/emacs-module/26/emacs-module.h
-  liberime-20221129.616/emacs-module/27/
-  liberime-20221129.616/emacs-module/27/emacs-module.h
-  liberime-20221129.616/emacs-module/28/
-  liberime-20221129.616/emacs-module/28/emacs-module.h
-  liberime-20221129.616/emacs-module/29/
-  liberime-20221129.616/emacs-module/29/emacs-module.h
-  liberime-20221129.616/emacs-module/30/
-  liberime-20221129.616/emacs-module/30/emacs-module.h
-  liberime-20221129.616/liberime-pkg.el
-  liberime-20221129.616/liberime.el
-  liberime-20221129.616/src/
-  liberime-20221129.616/src/init.c
-  liberime-20221129.616/src/interface.c
-  liberime-20221129.616/src/interface.h
-  liberime-20221129.616/src/liberime-core.c
-  liberime-20221129.616/src/liberime-core.h
-Built liberime in 4.351s, finished at 2022-12-22T08:34:48+0000
+Created liberime-20221222.1141.tar containing:
+  liberime-20221222.1141/
+  liberime-20221222.1141/LICENSE
+  liberime-20221222.1141/Makefile
+  liberime-20221222.1141/README.org
+  liberime-20221222.1141/emacs-module/
+  liberime-20221222.1141/emacs-module/26/
+  liberime-20221222.1141/emacs-module/26/emacs-module.h
+  liberime-20221222.1141/emacs-module/27/
+  liberime-20221222.1141/emacs-module/27/emacs-module.h
+  liberime-20221222.1141/emacs-module/28/
+  liberime-20221222.1141/emacs-module/28/emacs-module.h
+  liberime-20221222.1141/emacs-module/29/
+  liberime-20221222.1141/emacs-module/29/emacs-module.h
+  liberime-20221222.1141/emacs-module/30/
+  liberime-20221222.1141/emacs-module/30/emacs-module.h
+  liberime-20221222.1141/liberime-pkg.el
+  liberime-20221222.1141/liberime.el
+  liberime-20221222.1141/src/
+  liberime-20221222.1141/src/init.c
+  liberime-20221222.1141/src/interface.c
+  liberime-20221222.1141/src/interface.h
+  liberime-20221222.1141/src/liberime-core.c
+  liberime-20221222.1141/src/liberime-core.h
+Built liberime in 4.443s, finished at 2022-12-22T15:57:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  325 Dec 22 08:34 packages/liberime-20221129.616.entry
-232K -rw-r--r-- 1 root root 230K Dec 22 08:34 packages/liberime-20221129.616.tar
+4.0K -rw-r--r-- 1 root root  326 Dec 22 15:57 packages/liberime-20221222.1141.entry
+232K -rw-r--r-- 1 root root 230K Dec 22 15:57 packages/liberime-20221222.1141.tar

@@ -3,9 +3,9 @@
 ;; Author: Jessie Hildebrandt <jessieh.net>
 ;; Homepage: https://gitlab.com/jessieh/adwaita-dark-theme
 ;; Keywords: mode-line faces
-;; Package-Version: 20221222.1110
-;; Package-Commit: 77a28aea38726dc4a3fcac208cc9e7a07c4f6636
-;; Version: 1.0.0
+;; Package-Version: 20221222.1215
+;; Package-Commit: 40a375c8b86b58dddcd95e8dc654f127a6a3b910
+;; Version: 1.1.0
 ;; Package-Requires: ((emacs "27.1"))
 
 ;; This file is not part of GNU Emacs.
@@ -192,7 +192,7 @@
    `(tooltip ((,class (:background ,base-3 :foreground ,fg))))
    `(secondary-selection ((,class (:background ,gray))))
    `(fill-column-indicator ((,class (:foreground ,base-3))))
-   `(match ((,class (:background ,base-0 :foreground ,green :weight bold))))
+   `(match ((,class (:foreground ,green :weight bold))))
    `(trailing-whitespace ((,class (:background ,red))))
    `(nobreak-space ((,class (:inherit default :underline t))))
    `(nobreak-hyphen ((,class (:inherit nobreak-space))))
@@ -293,7 +293,7 @@
    `(custom-themed ((,class (:foreground ,yellow))))
    `(custom-invalid ((,class (:foreground ,red :bold bold))))
    `(custom-variable-obsolete ((,class (:foreground ,gray))))
-   `(custom-state ((,class (:foreground ,green :bold bold))))
+   `(custom-state ((,class (:foreground ,green))))
    `(custom-changed ((,class (:foreground ,blue))))
 
    ;; diff-mode
@@ -301,7 +301,7 @@
    `(diff-changed ((,class (:foreground ,yellow))))
    `(diff-context ((,class (:foreground ,fg-alt))))
    `(diff-removed ((,class (:foreground ,red))))
-   `(diff-header ((,class (:foreground ,base-7 :weight bold))))
+   `(diff-header ((,class (:foreground ,base-8 :weight bold))))
    `(diff-file-header ((,class (:foreground ,fg))))
    `(diff-hunk-header ((,class (:foreground ,base-7))))
    `(diff-indicator-added ((,class (:inherit diff-added :bold t))))
@@ -323,10 +323,10 @@
    `(dired-warning ((,class (:foreground ,yellow))))
 
    ;; ediff
-   `(ediff-fine-diff-A ((,class (:background ,base-4 :weight bold)))) ;; bg blend 0.7
+   `(ediff-fine-diff-A ((,class (:background ,base-4 :weight bold))))
    `(ediff-fine-diff-B ((,class (:inherit ediff-fine-diff-A))))
    `(ediff-fine-diff-C ((,class (:inherit ediff-find-diff-A))))
-   `(ediff-current-diff-A ((,class (:background ,base-2)))) ;; bg blend 0.2
+   `(ediff-current-diff-A ((,class (:background ,base-2))))
    `(ediff-current-diff-B ((,class (:inherit ediff-current-diff-A))))
    `(ediff-current-diff-C ((,class (:inherit ediff-current-diff-A))))
    `(ediff-even-diff-A ((,class (:inherit hl-line))))
@@ -696,9 +696,10 @@
    `(magit-reflog-remote ((,class (:foreground ,cyan))))
    `(magit-reflog-reset ((,class (:inherit error))))
    `(magit-refname ((,class (:foreground ,base-5))))
-   `(magit-section-heading ((,class (:foreground ,base-7 :weight bold :box ,(when flat-button-available-p '(:line-width 4 :style flat-button))))))
+   `(magit-section-heading ((,class (:foreground ,base-8 :weight bold :box ,(when flat-button-available-p '(:line-width 4 :style flat-button))))))
    `(magit-section-heading-selection ((,class (:foreground ,base-8 :weight bold))))
    `(magit-section-highlight ((,class (:inherit hl-line))))
+   `(magit-section-secondary-heading ((,class (:foreground ,base-7 :weight bold))))
    `(magit-sequence-drop ((,class (:foreground ,red))))
    `(magit-sequence-head ((,class (:foreground ,blue))))
    `(magit-sequence-part ((,class (:foreground ,orange))))
@@ -711,9 +712,8 @@
    `(magit-signature-untrusted ((,class (:foreground ,yellow))))
    `(magit-tag ((,class (:foreground ,fg-alt))))
    `(magit-filename ((,class (:foreground ,violet))))
-   `(magit-section-secondary-heading ((,class (:foreground ,violet :weight bold))))
-   `(git-commit-summary ((,class (:foreground ,base-8 :weight bold))))
-   `(git-commit-overlong-summary ((,class (:foreground ,base-7 :weight bold :strike-through t))))
+   `(git-commit-summary ((,class (:foreground ,base-8))))
+   `(git-commit-overlong-summary ((,class (:foreground ,base-7 :strike-through t))))
    `(git-commit-nonempty-second-line ((,class (:foreground ,base-7 :strike-through t))))
    `(git-commit-known-pseudo-header ((,class (:inherit git-commit-pseudo-header))))
    `(git-commit-comment-heading ((,class (:foreground ,base-7))))
@@ -741,7 +741,7 @@
    `(nav-flash-face ((,class (:background ,dark-blue :foreground ,base-8 :weight bold))))
 
    ;; neotree
-   `(neo-root-dir-face ((,class (:inherit bold :foreground ,base-8))))
+   `(neo-root-dir-face ((,class (:foreground ,base-8 :weight bold))))
    `(neo-file-link-face ((,class (:foreground ,fg))))
    `(neo-dir-link-face ((,class (:foreground ,fg :foreground ,base-7))))
    `(neo-expand-btn-face ((,class (:foreground ,blue))))
@@ -817,7 +817,7 @@
    `(undo-tree-visualizer-register-face ((,class (:foreground ,yellow))))
 
    ;; vertico
-   `(vertico-current ((,class (:inherit hl-line :background ,base-3 :weight bold))))
+   `(vertico-current ((,class (:background ,base-3 :weight bold))))
 
    ;; vundo
    `(vundo-default ((,class (:background ,bg-alt))))

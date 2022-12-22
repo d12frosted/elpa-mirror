@@ -4,8 +4,6 @@
 
 ;; Author: hrkrshnn
 ;; Keywords: solidity, literate programming, reproducible research, languages
-;; Package-Version: 20220213.1910
-;; Package-Commit: 7e3e6cb2d7ec9269514e80248c7ec85c04dbbf89
 ;; Homepage: https://github.com/hrkrshnn/ob-solidity
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4") (solidity-mode "0.1.10"))

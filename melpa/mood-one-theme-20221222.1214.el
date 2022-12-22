@@ -3,9 +3,9 @@
 ;; Author: Jessie Hildebrandt <jessieh.net>
 ;; Homepage: https://gitlab.com/jessieh/mood-one-theme
 ;; Keywords: mode-line faces
-;; Package-Version: 20221220.427
-;; Package-Commit: 1a6bbe3c9344979f216d411472bf953cff825394
-;; Version: 1.2.1
+;; Package-Version: 20221222.1214
+;; Package-Commit: dfbc81900737d3382a340feeed24d2bcd9bdedb0
+;; Version: 1.2.2
 ;; Package-Requires: ((emacs "27.1"))
 
 ;; This file is not part of GNU Emacs.

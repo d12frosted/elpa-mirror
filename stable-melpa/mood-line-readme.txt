@@ -1,14 +1,14 @@
 
-mood-line is a minimal mode-line configuration that aims to replicate
-some of the features of the doom-modeline package.
+mood-line is a minimal mode line configuration that aims to replicate
+some of the features of the more advanced doom-modeline package.
 
 Features offered:
 * Clean, minimal design
+* Customizable glyph sets
 * Anzu and multiple-cursors counter
 * Version control status indicator
-* Flycheck status indicator
-* Flymake support
+* Custom Flycheck/Flymake indicator
 * Lightweight with no dependencies
 
-To enable mood-line:
+To activate mood-line:
 (mood-line-mode)
