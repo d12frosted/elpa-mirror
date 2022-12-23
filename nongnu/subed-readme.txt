@@ -1,22 +1,3 @@
-Table of Contents
-─────────────────
-
-subed
-.. Features
-..... mpv integration (optional)
-.. Installation
-..... Installing the subed package from NonGNU Elpa
-..... Manual installation
-..... use-package configuration
-..... straight configuration
-.. Getting started
-.. Troubleshooting
-..... subed-mpv: Service name too long
-.. Important change in v1.0.0
-.. Contributions
-.. License
-
-
 subed
 ═════
 
