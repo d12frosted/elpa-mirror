@@ -4,6 +4,8 @@
 ;;
 ;; Author: Evgeniy Kazakov <evgeniy.kazakov@gmail.com>
 ;; URL: https://github.com/ekazakov/swap-buffers
+;; Package-Version: 20150506.2139
+;; Package-Commit: 46ab31359b70d935add6c6e9533443116dc51103
 ;; Keywords: window swap buffer exchange
 ;; Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
 ;;

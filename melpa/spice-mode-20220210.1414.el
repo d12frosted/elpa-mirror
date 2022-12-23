@@ -5,6 +5,8 @@
 ;;         Emmanuel Rouat <emmanuel.rouat@wanadoo.fr> 1997-
 ;;         Carlin J. Vieri, MIT AI Lab <cvieri@ai.mit.edu> 1994
 ;; Keywords: spice, spice2g6, spice3, eldo, hspice, layla, mondriaan, fasthenry, CDL, spectre compatibility, netlist editing
+;; Package-Version: 20220210.1414
+;; Package-Commit: f55c2b6dd35caace0ec7250b5c7b5d119235a23d
 ;; Package-Requires: ((emacs "24.3"))
 ;; Filename: spice-mode.el
 ;; Version: 1.2.25
