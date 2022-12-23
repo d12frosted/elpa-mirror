@@ -3,16 +3,6 @@
 	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Configuration
-2. Information shown by the annotators
-3. Adding custom annotators or classifiers
-4. Disabling annotators, builtin or lightweight annotators
-5. Contributions
-
-
 This package provides `marginalia-mode' which adds marginalia to the
 minibuffer completions. [Marginalia] are marks or annotations placed at
 the margin of the page of a book or in this case helpful colorful
@@ -97,20 +87,21 @@ Table of Contents
   *IMPORTANT NOTICE FOR PACKAGE AUTHORS*: The intention of the
   Marginalia package is to give the user means to overwrite completion
   categories and to add custom annotators for existing commands in their
-  user configuration. Marginalia is a user facing package and is not
-  intended to be used as a library. Therefore Marginalia does not expose
-  library functions as part of its public API. If you add your own
-  completion commands to your package we recommend to specify an
+  user configuration. *Marginalia is a user facing package and is not
+  intended to be used as a library*. Therefore Marginalia does not
+  expose library functions as part of its public API. If you add your
+  own completion commands to your package we recommend to specify an
   `annotation-function' or an `affixation-function', avoiding the
   Marginalia dependency this way. The `annotation-function' and
-  `affixation-function' are documented in the [Elisp manual]. There is
-  an exception to our recommendation: If you want to implement
-  annotations for an existing package `hypothetic.el', which does not
-  have annotations and where annotations cannot be added, then the
-  creation of a `marginalia-hypothetic.el' package is a good idea, since
-  Marginalia provides the facilities to enhance existing commands from
-  the outside. If you have questions feel free to ask on the Marginalia
-  issue tracker!
+  `affixation-function' are documented in the [Elisp manual]. If you use
+  `consult--read', you can specify an `:annotate' keyword
+  argument. There is an exception to our recommendation: If you want to
+  implement annotations for an existing package `hypothetic.el', which
+  does not have annotations and where annotations cannot be added, then
+  the creation of a `marginalia-hypothetic.el' package is a good idea,
+  since Marginalia provides the facilities to enhance existing commands
+  from the outside. If you have questions feel free to ask on the
+  Marginalia issue tracker.
 
   Commands that support minibuffer completion use a completion table of
   all the available candidates. Candidates are associated with a

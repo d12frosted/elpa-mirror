@@ -3,32 +3,6 @@
 	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Features
-2. Key bindings
-3. Configuration
-.. 1. Completion styles and TAB completion
-.. 2. Completion-at-point and completion-in-region
-4. Extensions
-.. 1. Configure Vertico per command or completion category
-5. Complementary packages
-6. Child frames and Popups
-7. Alternatives
-8. Resources
-9. Contributions
-10. Debugging Vertico
-11. Problematic completion commands
-.. 1. `org-refile'
-.. 2. `org-agenda-filter'
-.. 3. `tmm-menubar'
-.. 4. `ffap-menu'
-.. 5. `completion-table-dynamic'
-.. 6. Submitting the empty string
-.. 7. Tramp hostname completion
-
-
 Vertico provides a performant and minimalistic vertical completion UI
 based on the default completion system. The focus of Vertico is to
 provide a UI which behaves /correctly/ under all circumstances. By
@@ -634,16 +608,14 @@ Table of Contents
     `mct-region-mode'. Note that Mct development is currently
     [discontinued] due to recent changes of the default completion UI on
     the Emacs master branch.
-  • [Selectrum]: Selectrum is the predecessor of Vertico, since it
-    directly inspired Vertico. Vertico was designed specifically to
-    address the technical shortcomings of Selectrum. Selectrum is not
-    fully compatible with every Emacs completion command and dynamic
-    completion tables ([selectrum#481]), since it uses its own filtering
-    infrastructure, which deviates from the standard Emacs completion
-    facilities. Therefore Selectrum is getting deprecated in favor of
-    Vertico ([vertico#237], [selectrum#598)]. Furthermore, Vertico was
-    designed with flexibility in mind via its [extensions]. See the
-    [migration guide] if you plan to migrate from Selectrum to Vertico.
+  • [Selectrum]: Selectrum is the predecessor of Vertico has been
+    deprecated in favor of Vertico. See the [migration guide] if you
+    want to migrate from Selectrum to Vertico. Vertico was designed
+    specifically to address the technical shortcomings of
+    Selectrum. Selectrum is not fully compatible with every Emacs
+    completion command and dynamic completion tables, since it uses its
+    own filtering infrastructure, which deviates from the standard Emacs
+    completion facilities.
   • Icomplete: Emacs 28 comes with a builtin `icomplete-vertical-mode',
     which is a more bare-bone than Vertico. Vertico offers more
     flexibility thanks to its [extensions].
@@ -656,18 +628,10 @@ Table of Contents
 
 [Selectrum] <https://github.com/radian-software/selectrum>
 
-[selectrum#481]
-<https://github.com/radian-software/selectrum/issues/481>
-
-[vertico#237] <https://github.com/minad/vertico/issues/237>
-
-[selectrum#598)]
-<https://github.com/radian-software/selectrum/issues/598>
-
-[extensions] See section 4
-
 [migration guide]
 <https://github.com/minad/vertico/wiki/Migrating-from-Selectrum-to-Vertico>
+
+[extensions] See section 4
 
 
 8 Resources
