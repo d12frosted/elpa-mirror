@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221222.1712
-;; Package-Commit: c4e274b9ff59dd7c4995d83d48c37df1e5021fb4
+;; Package-Version: 20221223.1228
+;; Package-Commit: 64fe474b9ff5d651ffbafa4766ee54fd67cb2f73
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -191,6 +191,8 @@ policy working. You can set this on a per-file basis using #+EXTRA_SCRIPTS:."
 
 (defvar ox-spectacle--extra-header nil)
 
+(defvar ox-spectacle--extra-html nil)
+
 (defvar ox-spectacle--images nil)
 
 (defvar ox-spectacle--user-templates nil)
@@ -266,7 +268,7 @@ policy working. You can set this on a per-file basis using #+EXTRA_SCRIPTS:."
 
     /* presentation rendered, all finished */
 
-  </script>
+  </script>%s
 </body>
 </html>")
 
@@ -485,6 +487,7 @@ currently used."
   (setq ox-spectacle--extra-css nil
         ox-spectacle--extra-javascript nil
         ox-spectacle--extra-header nil
+        ox-spectacle--extra-html nil
         ox-spectacle--images nil
         ox-spectacle--user-templates nil)
   (org-html-infojs-install-script exp-plist backend))
@@ -521,7 +524,8 @@ holding export options."
             (funcall mkattr 'template)
             (funcall mkattr 'transition)
             (string-trim body)
-            (or deck-tag "Deck"))))
+            (or deck-tag "Deck")
+            (ox-spectacle--wa ox-spectacle--extra-html "\n\n<!-- extra html catch from the org file -->\n\n" "\n"))))
 
 (defun ox-spectacle--inner-template (contents _info)
   "Return body of document string after HTML conversion.
@@ -537,7 +541,7 @@ holding contextual information."
         (level (org-element-property :level headline))
         (headlines (ox-spectacle--get-headlines headline t)))
     ;; the special <config> section
-    (if (string-equal (downcase (org-element-property :raw-value (car headlines))) "<config>")
+    (if (string-match-p "^[ \t]*<\\(config\\|configure\\|configuration\\)>" (org-element-property :raw-value (car headlines)))
         (let ((tpl-regexp "^<t\\(?:emplate\\|\\)>[ \t]*\\([a-zA-Z][a-zA-Z0-9]+\\)"))
           (cond
            ;; take <template> section as a template definition
@@ -552,16 +556,20 @@ holding contextual information."
            ((and (> level 2) (string-match-p tpl-regexp (org-element-property :raw-value (cadr headlines)))) contents)
            ;; others, ignore. Catch src-blocks under it in `ox-spectacle--src-block'
            (t "")))
-      (let ((layout (org-element-property :LAYOUT headline)))
-        ;; if layout is top, then headlines under it will be a slide page
-        (if (and layout (string-match-p "^top$" layout)) contents
-          (let* ((props (ox-spectacle--wa (org-element-property :PROPS headline)))
-                 (type (org-element-property :TYPE headline))
-                 (tag type)
+      (let* ((layout (org-element-property :LAYOUT headline))
+             (topp (lambda (&optional h)
+                     (or (string-match-p "^top$" (or (if h (org-element-property :LAYOUT h) layout) ""))
+                         (string-match-p "<top>$" (if h (org-export-data (org-element-property :title h) info) title)))))
+             (current-top-p (funcall topp))
+             (title (replace-regexp-in-string "[ \t]*<top>$" "" title)))
+        ;; if type is Top, then headlines under it will be a slide page
+        (if current-top-p contents
+          (let* ((type (org-element-property :TYPE headline))
+                 (props (ox-spectacle--wa (org-element-property :PROPS headline)))
                  (headnums (org-export-get-headline-number headline info))
                  (regexp (format "\\(?:%s\\)" (mapconcat #'identity (ox-spectacle--available-components info) "\\|")))
-                 (slide-headline-p (or (= level 1) (string-match-p "^top$" (or (org-element-property :LAYOUT (org-element-lineage headline '(headline))) ""))))
-                 prefix inline-tag inline-props inline-prefix inline-suffix slide-title)
+                 (slide-headline-p (or (= level 1) (funcall topp (org-element-lineage headline '(headline)))))
+                 (tag type) prefix inline-tag inline-props inline-prefix inline-suffix slide-title)
             ;; headline with <Component.Xxx props> declaration has the highest priority
             (when (string-match (format "<\\${\\(%s\\(?:\\.[A-Z][a-zA-Z0-9]+\\)*\\)}\\( [^>]*\\|\\)>\\(\\(?:<.*>\\)?\\)$" regexp) title)
               (let ((tt (match-string 1 title)))
@@ -605,7 +613,7 @@ holding contextual information."
             (if (string-match-p regexp tag) (setq tag (format "${%s}" tag)))
             (setq props (ox-spectacle--filter-props props info))
             ;; work with #+split: t, wrap every part with <Box>
-            (let ((cs (split-string contents "#spectacle-splitter#" t)))
+            (let ((cs (if contents (split-string contents "#spectacle-splitter#" t))))
               (when (> (length cs) 1)
                 (setq contents (mapconcat (lambda (c) (concat "\n<${Box}>\n" (string-trim c) "\n</${Box}>\n")) cs))))
             ;; final output
@@ -625,6 +633,7 @@ INFO is a plist holding contextual information."
          (props (org-export-read-attribute :attr_html element))
          (code-props (ox-spectacle--pop-from-plist props :showLineNumbers :highlightRanges :stepIndex :theme))
          (flags (cadr (ox-spectacle--pop-from-plist props :type)))
+         (postp (car (ox-spectacle--pop-from-plist props :post))) ; :type config :post
          (props (ox-spectacle--wa (ox-spectacle--make-attribute-string props info)))
          (code-props (ox-spectacle--wa (ox-spectacle--make-attribute-string code-props info)))
          (root (car (ox-spectacle--get-headlines element)))
@@ -634,8 +643,11 @@ INFO is a plist holding contextual information."
             (string-equal (downcase (or (org-element-property :raw-value root) "")) "<config>"))
         (progn
           (pcase lang
-            ("html" (setq ox-spectacle--extra-header
-                          (concat ox-spectacle--extra-header "\n\n" code)))
+            ("html" (if postp
+                        (setq ox-spectacle--extra-html
+                              (concat ox-spectacle--extra-html "\n\n" code))
+                      (setq ox-spectacle--extra-header
+                            (concat ox-spectacle--extra-header "\n\n" code))))
             ("css" (setq ox-spectacle--extra-css
                          (concat ox-spectacle--extra-css "\n" code)))
             ((or "js" "javascript") (setq ox-spectacle--extra-javascript
@@ -960,7 +972,7 @@ the plist used as a communication channel."
                    (org-element-property :contents-begin parent))
                (eq (org-element-property :end paragraph)
                    (org-element-property :contents-end parent)))
-           (string-match-p "\n+" contents))
+           (string-match-p "^\n+$" contents))
       "")
      (t
       ;; if <Element> style, insert props into proper place directly, same as plain html paragraph
