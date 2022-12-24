@@ -1,24 +1,14 @@
 ;;; org-zettelkasten.el --- Helper functions to use Zettelkasten in org-mode  -*- lexical-binding: t; -*-
 
 ;; Author: Yann Herklotz <yann@ymhg.org>
-;; URL: https://github.com/ymherklotz/emacs-zettelkasten
-;; Package-Version: 20220819.2335
-;; Package-Commit: c1f3ca9368a43638de7a0e78a0dceaa0f8943c37
+;; Created: 2021
 ;; Version: 0.3.0
+;; Package-Version: 20221224.1144
+;; Package-Commit: d1309fe7f770a865441b91c1c8327036c307ef54
 ;; Package-Requires: ((emacs "24.3") (org "9.0"))
 ;; Keywords: files, hypermedia, Org, notes
+;; Homepage: https://github.com/ymherklotz/emacs-zettelkasten
 
-;;; Commentary:
-
-;; These functions allow for the use of the zettelkasten method in org-mode.
-;;
-;; It uses the CUSTOM_ID property to store a permanent ID to the note,
-;; which are organised in the same fashion as the notes by Luhmann.
-
-;;; License:
-
-;; Copyright (C) 2020-2022  Yann Herklotz
-;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
@@ -31,6 +21,13 @@
 ;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; These functions allow for the use of the zettelkasten method in org-mode.
+;;
+;; It uses the CUSTOM_ID property to store a permanent ID to the note,
+;; which are organised in the same fashion as the notes by Luhmann.
 
 ;;; Code:
 
@@ -121,9 +118,17 @@ NEWHEADING: function used to create the heading and set the current
   (org-set-property "modified" (format-time-string
                                 (org-time-stamp-format t t))))
 
+(defun org-zettelkasten-search-current-id ()
+  "Search for references to the current ID the `org-zettelkasten'
+directory."
+  (interactive)
+  (let ((current-id (org-entry-get nil "CUSTOM_ID")))
+    (lgrep (concat "[:[]." current-id "]") "*.org" org-zettelkasten-directory)))
+
 (defvar org-zettelkasten-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map "n" #'org-zettelkasten-create-dwim)
+    (define-key map "C-s" #'org-zettelkasten-search-current-id)
     map))
 
 (defvar org-zettelkasten-minor-mode-map
@@ -135,8 +140,9 @@ NEWHEADING: function used to create the heading and set the current
 ;;;###autoload
 (define-minor-mode org-zettelkasten-mode
   "Enable the keymaps to be used with zettelkasten."
-  :lighter " org-zettelkasten"
+  :lighter " ZK"
   :keymap org-zettelkasten-minor-mode-map)
 
 (provide 'org-zettelkasten)
+
 ;;; org-zettelkasten.el ends here

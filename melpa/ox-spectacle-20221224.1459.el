@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221223.1228
-;; Package-Commit: 64fe474b9ff5d651ffbafa4766ee54fd67cb2f73
+;; Package-Version: 20221224.1459
+;; Package-Commit: 82f189f759d760064c158de2803d54277a8f93eb
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -167,6 +167,16 @@ The your-own or third-party scripts should set here to make the embeded export
 policy working. You can set this on a per-file basis using #+EXTRA_SCRIPTS:."
   :type '(repeat string))
 
+(defcustom ox-spectacle-initial-style "
+::-webkit-scrollbar { width: 5px; height: 80%; }
+::-webkit-scrollbar-track { background: rgb(179, 177, 177); border-radius: 5px; }
+::-webkit-scrollbar-thumb { background: rgb(136, 136, 136); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover  { background: rgb(100, 100, 100); border-radius: 5px; }
+::-webkit-scrollbar-thumb:active { background: rgb(68, 68, 68); border-radius: 5px; }
+"
+  "CSS style add to the slides by default."
+  :type 'string)
+
 (defcustom ox-spectacle-extern-components nil
   "Declare the components you create or import to make the parser work properly."
   :type '(repeat string))
@@ -185,17 +195,12 @@ policy working. You can set this on a per-file basis using #+EXTRA_SCRIPTS:."
 
 (defvar ox-spectacle--doctype "xhtml")
 
-(defvar ox-spectacle--extra-css nil)
-
-(defvar ox-spectacle--extra-javascript nil)
-
-(defvar ox-spectacle--extra-header nil)
-
-(defvar ox-spectacle--extra-html nil)
-
 (defvar ox-spectacle--images nil)
-
-(defvar ox-spectacle--user-templates nil)
+(defvar ox-spectacle--frags-css nil)
+(defvar ox-spectacle--frags-script nil)
+(defvar ox-spectacle--frags-header nil)
+(defvar ox-spectacle--frags-html nil)
+(defvar ox-spectacle--frags-template nil)
 
 (defconst ox-spectacle--html-tags
   '("h1" "h2" "h3" "h4" "h5" "div" "section" "p" "span" "canvas"
@@ -226,12 +231,17 @@ policy working. You can set this on a per-file basis using #+EXTRA_SCRIPTS:."
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
   <title>%s</title>
+
 %s%s%s%s%s
 </head>
 
 <body>
-  <div id='root'></div>
-  <script type='module'>
+%s
+</body>
+</html>")
+
+(defconst ox-spectacle--page-model-script
+  "  <script type='module'>
 
     /* imports */
 
@@ -268,9 +278,7 @@ policy working. You can set this on a per-file basis using #+EXTRA_SCRIPTS:."
 
     /* presentation rendered, all finished */
 
-  </script>%s
-</body>
-</html>")
+  </script>")
 
 
 ;;; Utils
@@ -484,12 +492,12 @@ INFO is a plist."
   "Do some initialization work.
 EXP-PLIST is a plist containing export options. BACKEND is the export back-end
 currently used."
-  (setq ox-spectacle--extra-css nil
-        ox-spectacle--extra-javascript nil
-        ox-spectacle--extra-header nil
-        ox-spectacle--extra-html nil
-        ox-spectacle--images nil
-        ox-spectacle--user-templates nil)
+  (setq ox-spectacle--images nil
+        ox-spectacle--frags-css nil
+        ox-spectacle--frags-script nil
+        ox-spectacle--frags-header nil
+        ox-spectacle--frags-html nil
+        ox-spectacle--frags-template nil)
   (org-html-infojs-install-script exp-plist backend))
 
 (defun ox-spectacle--parse-tree-filter (data _backend info)
@@ -500,32 +508,49 @@ currently used."
   "Return complete document string after HTML conversion.
 BODY is the transcoded contents string. INFO is a plist
 holding export options."
-  (let* ((deck-opts (ox-spectacle--extract-options :deck-opts info t))
-         (deck-tag (car deck-opts))
-         (deck-props (cdr deck-opts))
-         (mkattr (lambda (key)
-                   (let ((r (org-export-data (plist-get info (intern (format ":%s" key))) info)))
-                     (if (> (length r) 0) (ox-spectacle--wa (format "%s=${%s}" key r)) "")))))
-    (format ox-spectacle--page-html
-            (org-export-data (plist-get info :title) info)
-            (ox-spectacle--wa (org-html--build-mathjax-config info) "\n<!-- MathJax Setup -->\n\n" "\n")
-            (ox-spectacle--wa (ox-spectacle--make-scripts-section info) "\n<!-- scripts -->\n\n" "\n")
-            (ox-spectacle--wa (ox-spectacle--make-images-section) "\n<!-- images -->\n\n" "\n")
-            (ox-spectacle--wa ox-spectacle--extra-header "\n<!-- extra head catch from the org file -->\n\n" "\n")
-            (ox-spectacle--wa ox-spectacle--extra-css "\n<!-- extra css catch from the org file -->\n\n<style>\n" "\n</style>\n")
-            (mapconcat #'identity ox-spectacle--components ", ")
-            (mapconcat #'identity ox-spectacle--utils ", ")
-            ox-spectacle-default-template
-            (ox-spectacle--wa ox-spectacle--user-templates "\n    /* user templates defined in org file */\n\n" "\n")
-            (ox-spectacle--wa ox-spectacle--extra-javascript "\n    /* user scripts defined in org file */\n\n" "\n")
-            (or deck-tag "Deck")
-            (ox-spectacle--wa deck-props)
-            (funcall mkattr 'theme)
-            (funcall mkattr 'template)
-            (funcall mkattr 'transition)
-            (string-trim body)
-            (or deck-tag "Deck")
-            (ox-spectacle--wa ox-spectacle--extra-html "\n\n<!-- extra html catch from the org file -->\n\n" "\n"))))
+  (cl-flet ((mkattr (key)
+              (let ((r (org-export-data (plist-get info (intern (format ":%s" key))) info)))
+                (if (> (length r) 0) (ox-spectacle--wa (format "%s=${%s}" key r)) "")))
+            (joinfrags (type prefix &optional suffix separator)
+              (let* ((frags (symbol-value type))
+                     (joined (mapconcat #'identity frags (or separator "\n"))))
+                (ox-spectacle--wa joined prefix (or suffix "\n")))))
+    (let* ((deck-opts (ox-spectacle--extract-options :deck-opts info t))
+           (deck-tag (car deck-opts))
+           (deck-props (cdr deck-opts))
+           (model-script (format ox-spectacle--page-model-script
+                                 (mapconcat #'identity ox-spectacle--components ", ")
+                                 (mapconcat #'identity ox-spectacle--utils ", ")
+                                 ox-spectacle-default-template
+                                 (joinfrags 'ox-spectacle--frags-template "\n    /* user templates defined in org file */\n\n")
+                                 (joinfrags 'ox-spectacle--frags-script "\n    /* user scripts defined in org file */\n\n")
+                                 (or deck-tag "Deck")
+                                 (ox-spectacle--wa deck-props)
+                                 (mkattr 'theme)
+                                 (mkattr 'template)
+                                 (mkattr 'transition)
+                                 (string-trim body)
+                                 (or deck-tag "Deck")))
+           (page-body (with-temp-buffer
+                        (insert (joinfrags 'ox-spectacle--frags-html ""))
+                        (goto-char (point-min))
+                        (if (re-search-forward " id=['\"]root['\"]" nil t)
+                            (progn
+                              (end-of-line)
+                              (insert "\n" model-script "\n"))
+                          (insert "  <div id=\"root\"></div>\n" model-script "\n"))
+                        (buffer-string))))
+      (format ox-spectacle--page-html
+              (org-export-data (plist-get info :title) info)
+              (ox-spectacle--wa (org-html--build-mathjax-config info) "\n<!-- MathJax Setup -->\n\n" "\n")
+              (ox-spectacle--wa (ox-spectacle--make-scripts-section info) "\n<!-- scripts -->\n\n" "\n")
+              (ox-spectacle--wa (ox-spectacle--make-images-section) "\n<!-- images -->\n\n" "\n")
+              (ox-spectacle--wa (concat ox-spectacle-initial-style
+                                        (joinfrags 'ox-spectacle--frags-css
+                                                   "\n/* extra css catch from the org file */\n\n" "\n"))
+                                "\n<!-- styles -->\n\n<style>\n\n" "\n\n</style>\n")
+              (joinfrags 'ox-spectacle--frags-header "\n<!-- extra head catch from the org file -->\n\n" "\n" "\n\n")
+              page-body))))
 
 (defun ox-spectacle--inner-template (contents _info)
   "Return body of document string after HTML conversion.
@@ -536,26 +561,27 @@ CONTENTS is the transcoded contents string."
   "Transcode a HEADLINE element from Org to HTML.
 CONTENTS holds the contents of the headline. INFO is a plist
 holding contextual information."
-  (let ((case-fold-search t)
-        (title (org-export-data (org-element-property :title headline) info))
-        (level (org-element-property :level headline))
-        (headlines (ox-spectacle--get-headlines headline t)))
+  (let* ((title (org-export-data (org-element-property :title headline) info))
+         (level (org-element-property :level headline))
+         (headlines (ox-spectacle--get-headlines headline t))
+         (rtitle (org-element-property :raw-value (car headlines))))
     ;; the special <config> section
-    (if (string-match-p "^[ \t]*<\\(config\\|configure\\|configuration\\)>" (org-element-property :raw-value (car headlines)))
-        (let ((tpl-regexp "^<t\\(?:emplate\\|\\)>[ \t]*\\([a-zA-Z][a-zA-Z0-9]+\\)"))
-          (cond
-           ;; take <template> section as a template definition
-           ((and (= level 2) (string-match tpl-regexp title))
-            (if-let ((name (match-string 1 title)))
-                (setq ox-spectacle--user-templates
-                      (concat ox-spectacle--user-templates
-                              "\n    let " name " = ({ slideNumber, numberOfSlides }) => html`\n"
-                              contents "`;\n"))
-              (user-error "No name found on <Config/Template>")))
-           ;; sections under <template>, return directly
-           ((and (> level 2) (string-match-p tpl-regexp (org-element-property :raw-value (cadr headlines)))) contents)
-           ;; others, ignore. Catch src-blocks under it in `ox-spectacle--src-block'
-           (t "")))
+    (if (string-match "^[ \t]*<config\\([ =-]?\\)>" rtitle)
+        (if (= 1 (length (match-string 1 rtitle))) "" ; mute <config> when flag set
+          (let ((tpl-regexp "^<t\\(?:emplate\\|\\)>[ \t]*\\([a-zA-Z][a-zA-Z0-9]+\\)"))
+            (cond
+             ;; take <template> section as a template definition
+             ((and (= level 2) (string-match tpl-regexp title))
+              (if-let ((name (match-string 1 title)))
+                  (prog1 ""
+                    (setq ox-spectacle--frags-template
+                          (append ox-spectacle--frags-template
+                                  (list (concat "\n    let " name " = ({ slideNumber, numberOfSlides }) => html`\n" contents "`;")))))
+                (user-error "No name found on <Config/Template>")))
+             ;; sections under <template>, return directly
+             ((and (> level 2) (string-match-p tpl-regexp (org-element-property :raw-value (cadr headlines)))) contents)
+             ;; others, ignore. catch src-blocks under it in `ox-spectacle--src-block'
+             (t ""))))
       (let* ((layout (org-element-property :LAYOUT headline))
              (topp (lambda (&optional h)
                      (or (string-match-p "^top$" (or (if h (org-element-property :LAYOUT h) layout) ""))
@@ -633,26 +659,20 @@ INFO is a plist holding contextual information."
          (props (org-export-read-attribute :attr_html element))
          (code-props (ox-spectacle--pop-from-plist props :showLineNumbers :highlightRanges :stepIndex :theme))
          (flags (cadr (ox-spectacle--pop-from-plist props :type)))
-         (postp (car (ox-spectacle--pop-from-plist props :post))) ; :type config :post
          (props (ox-spectacle--wa (ox-spectacle--make-attribute-string props info)))
          (code-props (ox-spectacle--wa (ox-spectacle--make-attribute-string code-props info)))
-         (root (car (ox-spectacle--get-headlines element)))
          (tag "CodePane"))
-    ;; catch scripts under <config> section and others with ':type config' above
-    (if (or (and flags (string-equal (downcase flags) "config"))
-            (string-equal (downcase (or (org-element-property :raw-value root) "")) "<config>"))
-        (progn
-          (pcase lang
-            ("html" (if postp
-                        (setq ox-spectacle--extra-html
-                              (concat ox-spectacle--extra-html "\n\n" code))
-                      (setq ox-spectacle--extra-header
-                            (concat ox-spectacle--extra-header "\n\n" code))))
-            ("css" (setq ox-spectacle--extra-css
-                         (concat ox-spectacle--extra-css "\n" code)))
-            ((or "js" "javascript") (setq ox-spectacle--extra-javascript
-                                          (concat ox-spectacle--extra-javascript "\n" code))))
-          "")
+    ;; catch fragments under <config> section and others with ':type config' above
+    ;; with <config-> or :type config-, then will muted it
+    (if-let* ((rtitle (org-element-property :raw-value (car (ox-spectacle--get-headlines element))))
+              (muteflg (or (and flags (string-match "^config\\([ =-]?\\)$" flags) (match-string 1 flags))
+                           (and rtitle (string-match "^[ \t]*<config\\([ =-]?\\)>" rtitle) (match-string 1 rtitle)))))
+        (prog1 ""
+          (pcase (and (= (length muteflg) 0) lang)
+            ("css" (setq ox-spectacle--frags-css (append ox-spectacle--frags-css (list code))))
+            ((or "js" "javascript") (setq ox-spectacle--frags-script (append ox-spectacle--frags-script (list code))))
+            ("html" (setq ox-spectacle--frags-header (append ox-spectacle--frags-header (list code))))
+            ("mhtml" (setq ox-spectacle--frags-html (append ox-spectacle--frags-html (list code))))))
       ;; others, make it a CodePane or CustomCodePane
       (when (and flags (string-match "^\\([A-Z][[:alnum:]]+\\)\\(.*\\)" flags))
         (setq tag (match-string 1 flags)
@@ -880,12 +900,12 @@ PATH maybe a remote url or local file. PROPS and INFO are list."
   (let* ((lv (ox-spectacle--export-level info))
          (src (if (>= lv 2) (ox-spectacle--data-uri path) path))
          (type (cadr (ox-spectacle--pop-from-plist props :type)))
-         (width (if (string-suffix-p "svg" src) "" " max-width=\"100%\""))
+         (width (if (string-suffix-p "svg" src) "" " width=\"100%\""))
          (contents (org-html-close-tag
                     "${Image}"
                     (concat
-                     (ox-spectacle--make-attribute-string props info)
-                     (format " src=\"%s\" alt=\"%s\"%s" src (file-name-nondirectory path) width))
+                     (format "src=\"%s\" alt=\"%s\"%s" src (file-name-nondirectory path) width)
+                     (ox-spectacle--wa (ox-spectacle--make-attribute-string props info)))
                     info)))
     (ox-spectacle--maybe-appear contents type)))
 
@@ -931,7 +951,7 @@ INFO is a plist holding contextual information."
         (if (equal (org-element-type destination) 'headline)
             (let* ((headlines (cl-remove-if
                                ;; make sure ignore <config> section
-                               (lambda (hl) (string-equal (downcase (org-element-property :raw-value hl)) "<config>"))
+                               (lambda (hl) (string-match-p "^[ \t]*<config.?>" (org-element-property :raw-value hl)))
                                (org-export-collect-headlines info 1)))
                    (idx (cl-position destination headlines :test #'equal))
                    (desc (if (and (org-export-numbered-headline-p loc info) (not desc))
@@ -964,9 +984,25 @@ the plist used as a communication channel."
     (cond
      ((or stepperp
           (cl-member parentype '(item quote-block))
-          (cl-member type '("no" "raw") :test 'string=)
-          (org-html-standalone-image-p paragraph info))
+          (cl-member type '("no" "raw") :test 'string=))
       contents)
+     ((org-html-standalone-image-p paragraph info)
+      (let ((caption (let ((c (org-export-data (org-export-get-caption paragraph) info)))
+                       (if (not (org-string-nw-p c)) "" (format "  <figcaption>%s</figcaption>\n" c))))
+            (class-name nil))
+        (with-temp-buffer
+          (insert contents)
+          (goto-char (point-min))
+          (when (re-search-forward "{Image}.*\\( className=.[^'\"]+.\\)" nil t)
+            (setq class-name (match-string 1))
+            (delete-region (match-beginning 1) (match-end 1)))
+          (goto-char (point-min))
+          (re-search-forward "<\\${Image}" nil t)
+          (beginning-of-line)
+          (insert "<figure" (or class-name "") ">\n  ")
+          (or (re-search-forward " />" nil t) (goto-char (point-max)))
+          (insert "\n" caption "</figure>")
+          (buffer-string))))
      ((and (member parentype '(center-block)) ;; ignore empty lines begin/end of the block
            (or (eq (org-element-property :begin paragraph)
                    (org-element-property :contents-begin parent))
@@ -1058,7 +1094,7 @@ CONTENTS is nil. INFO is a plist holding contextual information."
                   (cond ((equal (char-after p) ?<) (+ p 1))
                         ((equal (char-before p) ?/) p))))
          (end (cdr bds))
-         (cands (append '("config" "template") (ox-spectacle--available-components))))
+         (cands (append '("template") (ox-spectacle--available-components))))
     (when (and start (> end start))
       (list start end (completion-table-case-fold cands) ::exclusive 'no))))
 

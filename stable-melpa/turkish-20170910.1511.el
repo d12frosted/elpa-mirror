@@ -4,8 +4,6 @@
 ;; Author: Deniz Yüret
 ;; Maintainer: Emre Sevinç <emre.sevinc@gmail.com>
 ;; Keywords: turkish, languages, automatic, conversion
-;; Package-Version: 20170910.1511
-;; Package-Commit: 9831a316c176bb21a1b91226323ea4133163e00c
 ;; URL: http://www.denizyuret.com/2006/11/emacs-turkish-mode.html
 
 ;; This file is not part of GNU Emacs.
