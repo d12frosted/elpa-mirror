@@ -3,8 +3,10 @@
 ;; Copyright (C) 2016
 
 ;; Author:  <lompik@oriontabArch>
-;; Package-Version: 0.0.1
+;; Package-Version: 20210105.542
+;; Package-X-Original-Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4") (helm "1.9.2") (with-editor "2.5.0"))
+;; Package-Commit: 8b26ab2d3a5b08c1e03c9312818512d7492bbc9a
 ;; Keywords: convenience
 
 ;; This program is free software; you can redistribute it and/or modify
