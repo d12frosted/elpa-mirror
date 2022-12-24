@@ -3,8 +3,6 @@
 
 ;; Author: Lee Hinman <lee _AT_ writequit.org>
 ;; URL: https://github.com/dakrone/dakrone-light-theme
-;; Package-Version: 20170808.2140
-;; Package-Commit: 06f198dc8b4ca7421990b30a23d89c8e0b8c5de4
 ;; Version: 1.0.0
 ;; Keywords: color themes faces
 ;; This file is not part of GNU Emacs.

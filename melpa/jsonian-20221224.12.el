@@ -4,8 +4,8 @@
 
 ;; Author: Ian Wahbe
 ;; URL: https://github.com/iwahbe/jsonian
-;; Package-Version: 20221121.522
-;; Package-Commit: 1d226db4da79d48427b623c2825e499030a6d50f
+;; Package-Version: 20221224.12
+;; Package-Commit: d2665a8ed9335ca980b3f382e1d1af978f4ded3f
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -124,7 +124,7 @@ ALLOW-TAGS is non nil.  When STOP-AT-VALID is non-nil,
 Otherwise it will parse back to the beginning of the file."
   ;; The number of previously encountered objects in this list (if we
   ;; are in a list).
-  (let ((index 0) close)
+  (let ((index 0))
     ;; We are not in the middle of a string, so we can now safely check for
     ;; the string property without false positives.
     (cl-loop 'while (not (bobp))
@@ -132,10 +132,11 @@ Otherwise it will parse back to the beginning of the file."
              (cond
               ;; Enclosing object
               ((eq (char-before) ?\{)
-               (cl-return (cons 'object
-                                (unless stop-at-valid
-                                  (backward-char)
-                                  (jsonian--path t stop-at-valid)))))
+               (if stop-at-valid
+                   (cl-return nil)
+                 (backward-char)
+                 (setq index 0
+                       allow-tags t)))
               ;; Enclosing array
               ((eq (char-before) ?\[)
                (cl-return (cons index
@@ -147,10 +148,10 @@ Otherwise it will parse back to the beginning of the file."
                 (eq (char-before) ?\])
                 (eq (char-before) ?\}))
                (backward-char)
-               (setq close (1- (scan-lists (point) 1 1)))
-               (when (< close (line-end-position))
-                 (goto-char (1+ close))
-                 (backward-list))
+               (let ((close (1- (scan-lists (point) 1 1))))
+                 (when (< close (line-end-position))
+                   (goto-char (1+ close))
+                   (backward-list)))
                (backward-char))
 
               ;; In a list or object
@@ -171,7 +172,6 @@ Otherwise it will parse back to the beginning of the file."
                    (error "Could not find tag"))
                  (when (= (car tag-region) (point-min))
                    (user-error "Before tag '\"%s\"' expected something, found beginning of buffer" tag-text))
-                 (goto-char (1- (car tag-region)))
                  (when allow-tags
                    ;; To avoid blowing the recursion limit, we only collect tags
                    ;; (and recurse on them) when we need to.
@@ -274,17 +274,11 @@ A segment is considered simple if and only if it does not contain any
 
 (defun jsonian--reconstruct-path (input)
   "Cleanup INPUT as the result of `jsonian--path'."
-  (let (path seen-key)
+  (let (path)
     (seq-do (lambda (element)
-              (cond
-               ((stringp element)
-                (unless seen-key (setq path (cons element path)
-                                       seen-key t)))
-               ((equal element 'object) ;; A marker element, does nothing
-                (setq seen-key nil))
-               (t
-                (setq seen-key nil
-                      path (cons element path)))))
+              (if (or (stringp element) (numberp element))
+                  (setq path (cons element path))
+                (error "Unexpected element %s of type %s" element (type-of element))))
             input)
     path))
 
@@ -356,11 +350,10 @@ If ARG is not nil, move to the ARGth enclosing item."
 (defun jsonian--enclosing-object-or-array ()
   "Go to the enclosing object/array of `point'."
   (jsonian--correct-starting-point)
-  (let ((result (car-safe (jsonian--path nil t))))
-    (when (or (numberp result)
-              (equal result 'object))
-      (unless (bobp) (backward-char))
-      result)))
+  (jsonian--path nil t)
+  (when (member (char-before) '(?\[ ?\{))
+    (unless (bobp) (backward-char))
+    t))
 
 (defmacro jsonian--defun-predicate-traversal (name arg-list predicate)
   "Define `jsonian--forward-NAME' and `jsonian--backward-NAME'.

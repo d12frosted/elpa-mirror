@@ -5,8 +5,8 @@
 ;; Author: Debanjum Singh Solanky <debanjum@gmail.com>
 ;; Description: Natural, Incremental Search for your Second Brain
 ;; Keywords: search, org-mode, outlines, markdown, beancount, ledger, image
-;; Package-Version: 20221219.2102
-;; Package-Commit: 23ca5a2d43a4e31d4384cba084d794e5daa5f869
+;; Package-Version: 20221223.2208
+;; Package-Commit: 08dc5e3324997196ac1f2f87f99d81d81b3323c6
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/debanjum/khoj/tree/master/src/interface/emacs
@@ -43,8 +43,8 @@
 ;;    pip install khoj-assistant
 ;; 2. Start, Configure Khoj Server
 ;;    khoj
-;; 3. Install khoj.el
-;;    (use-package khoj :bind ("C-c s" . 'khoj))
+;; 3. Install khoj.el from MELPA Stable
+;;    (use-package khoj :pin melpa-stable :bind ("C-c s" . 'khoj))
 
 ;;; Code:
 
