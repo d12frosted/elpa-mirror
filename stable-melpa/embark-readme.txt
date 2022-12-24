@@ -60,7 +60,7 @@ completions of your input.  Embark provides three commands to work
 on candidate sets:
 
 - The `embark-act-all' command runs the same action on each of the
-  current candidates. It is just like using `embark-act' on each
+  current candidates.  It is just like using `embark-act' on each
   candidate in turn.
 
 - The `embark-collect' command produces a buffer listing all
