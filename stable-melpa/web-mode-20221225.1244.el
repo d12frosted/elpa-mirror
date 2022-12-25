@@ -2,9 +2,9 @@
 
 ;; Copyright 2011-2023 François-Xavier Bois
 
-;; Version: 17.3.7
-;; Package-Version: 20221224.1731
-;; Package-Commit: 18e4ef2061e12fc4cc96fdc2caf2760a85dec248
+;; Version: 17.3.8
+;; Package-Version: 20221225.1244
+;; Package-Commit: 9f1701c029cfbdd4299efbda10bee6dcbb5e56af
 ;; Author: François-Xavier Bois
 ;; Maintainer: François-Xavier Bois <fxbois@gmail.com>
 ;; Package-Requires: ((emacs "23.1"))
@@ -25,7 +25,7 @@
 
 ;;---- CONSTS ------------------------------------------------------------------
 
-(defconst web-mode-version "17.3.7"
+(defconst web-mode-version "17.3.8"
   "Web Mode version.")
 
 ;;---- GROUPS ------------------------------------------------------------------
@@ -5600,6 +5600,7 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
 ;; STATES: attr
 ;; (0)nil (1)space (2)name (3)space-before (4)equal (5)space-after
 ;; (6)value-uq (7)value-sq (8)value-dq (9)value-bq : jsx attr={}
+;; (10)value-block
 
 (defun web-mode-attr-skip (limit)
 
@@ -5658,6 +5659,7 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
         ((or (and (= state 8) (eq ?\" char) (not escaped))
              (and (= state 7) (eq ?\' char) (not escaped))
              (and (= state 9) (eq ?\} char) (= brace-depth 1))
+             (and (= state 10) (get-text-property pos 'block-end))
              )
          (setq attrs (+ attrs (web-mode-attr-scan pos state char name-beg name-end val-beg attr-flags equal-offset tag-flags)))
          (setq state 0
@@ -5667,6 +5669,10 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
                name-end nil
                val-beg nil)
          )
+
+        ((and (member state '(4 5)) (get-text-property pos 'block-beg))
+         (setq val-beg pos)
+         (setq state 10))
 
         ((and (member state '(4 5)) (member char '(?\' ?\" ?\{)))
          (setq val-beg pos)
@@ -8771,6 +8777,14 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
                 (string-match-p "^%" curr-line))
            (when debug (message "I140(%S) mason" pos))
            (setq offset 0))
+
+          ((and (string= web-mode-engine "razor")
+                (string-match-p "^\\([{}]\\|else\\)" curr-line))
+           (when debug (message "I142(%S) razor" pos))
+           (save-excursion
+             (web-mode-block-previous)
+             (setq offset (current-indentation))
+             ))
 
           ((and (string= web-mode-engine "django")
                 (string-match-p "^#" curr-line))

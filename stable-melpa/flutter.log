@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/amake/flutter.el.git
 
 Updating /mnt/store/melpa/working/flutter/
-Checking out 49506681cd2d80713af5a04a2d33b8e6d89e3b96
+Checking out 684f15ea19c4a7947eda945cb6e58a67baec8e90
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flutter/
-  to /tmp/flutterUaFyHk/flutter-20220526.1214
+  to /tmp/flutterwMDSQU/flutter-20221225.944
     flutter.el -> flutter.el
     flutter-project.el -> flutter-project.el
     flutter-l10n.el -> flutter-l10n.el
-Created flutter-20220526.1214.tar containing:
-  flutter-20220526.1214/
-  flutter-20220526.1214/flutter-l10n.el
-  flutter-20220526.1214/flutter-pkg.el
-  flutter-20220526.1214/flutter-project.el
-  flutter-20220526.1214/flutter.el
-Built flutter in 3.987s, finished at 2022-12-25T09:26:21+0000
+Created flutter-20221225.944.tar containing:
+  flutter-20221225.944/
+  flutter-20221225.944/flutter-l10n.el
+  flutter-20221225.944/flutter-pkg.el
+  flutter-20221225.944/flutter-project.el
+  flutter-20221225.944/flutter.el
+Built flutter in 4.846s, finished at 2022-12-25T13:04:01+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 318 Dec 25 09:26 packages/flutter-20220526.1214.entry
  32K -rw-r--r-- 1 root root 30K Dec 25 09:26 packages/flutter-20220526.1214.tar
+4.0K -rw-r--r-- 1 root root 317 Dec 25 13:04 packages/flutter-20221225.944.entry
+ 32K -rw-r--r-- 1 root root 30K Dec 25 13:04 packages/flutter-20221225.944.tar
