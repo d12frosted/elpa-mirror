@@ -48,7 +48,7 @@ then scroll left and right in the buffer to see all the columns.
 The following commands are available to interact with an inferior
 q[con] process/buffer.  `C-c C-l' sends a single line, `C-c C-f'
 sends the surrounding function, `C-c C-r' sends the selected region
-and `C-c C-b' sends the whole buffer. If prefixed with `C-u C-u',
+and `C-c C-b' sends the whole buffer.  If prefixed with `C-u C-u',
 or pressing `C-c M-j' `C-c M-f' `C-c M-r' respectively, will also
 switch point to the active q process buffer for direct interaction.
 
