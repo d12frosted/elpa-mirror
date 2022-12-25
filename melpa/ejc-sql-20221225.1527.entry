@@ -1,5 +1,5 @@
 (ejc-sql .
-	 [(20221208 2116)
+	 [(20221225 1527)
 	  ((emacs
 	    (26 3))
 	   (clomacs
@@ -9,7 +9,7 @@
 	   (spinner
 	    (1 7 3)))
 	  "Emacs SQL client uses Clojure JDBC." tar
-	  ((:commit . "c236f79b48c0f4691500723841a9d356203a4b13")
+	  ((:commit . "c02e5c6c5bf98b62af456ddbc9f14bfd39f04333")
 	   (:authors
 	    ("Kostafey" . "kostafey@gmail.com"))
 	   (:maintainer "Kostafey" . "kostafey@gmail.com")

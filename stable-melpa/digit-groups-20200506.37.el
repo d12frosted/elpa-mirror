@@ -2,8 +2,6 @@
 
 ;; Author: Michael D. Adams <http://michaeldadams.org>
 ;; URL: https://github.com/adamsmd/digit-groups/
-;; Package-Version: 20200506.37
-;; Package-Commit: 7b81930cad19b8b7913b7eedbcb498964bfdcbdb
 ;; License: MIT
 ;; Version: 0.2
 ;; Package-Requires: ((dash "2.11.0"))

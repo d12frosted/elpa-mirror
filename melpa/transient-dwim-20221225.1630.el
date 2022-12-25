@@ -3,9 +3,9 @@
 ;; Copyright (C) 2020  Naoya Yamashita
 
 ;; Author: Naoya Yamashita <conao3@gmail.com>
-;; Version: 1.0.8
-;; Package-Version: 20220425.1331
-;; Package-Commit: 7b6e70fb49b9d18106748202011863ebc39b864a
+;; Version: 1.0.9
+;; Package-Version: 20221225.1630
+;; Package-Commit: cb5e0d35729fc6448553b7a17fc5c843f00e8c1d
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "26.1") (transient "0.1"))
 ;; URL: https://github.com/conao3/transient-dwim.el
@@ -137,7 +137,7 @@ The following %-sequences are supported:
             (dep-pkgs-url  (mapcar (lambda (elm) (alist-get 'url elm)) dep-pkgs-info)))
         (format-spec
          docstringspec
-         `((?p . ,pkg)
+         `((?p . ,(symbol-name pkg))
            (?P . ,(if dep-pkgs-info
                       (cl-loop for elm in dep-pkgs-name
                                for i from 1

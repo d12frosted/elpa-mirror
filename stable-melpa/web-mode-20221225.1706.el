@@ -3,8 +3,8 @@
 ;; Copyright 2011-2023 François-Xavier Bois
 
 ;; Version: 17.3.8
-;; Package-Version: 20221225.1244
-;; Package-Commit: 9f1701c029cfbdd4299efbda10bee6dcbb5e56af
+;; Package-Version: 20221225.1706
+;; Package-Commit: d377a2b873661d0e4d8b378948839543b2e33a55
 ;; Author: François-Xavier Bois
 ;; Maintainer: François-Xavier Bois <fxbois@gmail.com>
 ;; Package-Requires: ((emacs "23.1"))
@@ -7964,6 +7964,7 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
        (web-mode-make-tag-overlays)
        (setq len (length (get-text-property (caar ctx) 'tag-name)))
        (move-overlay web-mode-overlay-tag-start (+ (caar ctx) 1) (+ (caar ctx) 1 len))
+       (move-overlay web-mode-overlay-tag-end (+ (cadr ctx) 1) (+ (cadr ctx) 1 len)) ;; #1257
        )
       (t
        (web-mode-make-tag-overlays)
