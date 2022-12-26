@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221226.13
-;; Package-Commit: 0bbe9778a91a6e5014bff5ac8e8e8630880ea15a
+;; Package-Version: 20221226.53
+;; Package-Commit: 9f7425ecdd907eedd64886c975448fe8e81ba1a1
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -169,7 +169,6 @@ policy working. You can set this on a per-file basis using #+EXTRA_SCRIPTS:."
 
 (defcustom ox-spectacle-initial-style "
 .codepane {}
-.codepane pre {}
 .split-container {
   display: flex; flex-flow: column nowrap; justify-content: flex-start;
   align-items: stretch; height: inherit; max-height: 100vh;

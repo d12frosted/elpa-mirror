@@ -9,6 +9,8 @@
 
 ;; Author: Gareth Rees <gdr@garethrees.org>
 ;; URL: https://github.com/gareth-rees/p4.el
+;; Package-Version: 20150721.1937
+;; Package-Commit: eff047caa75dbe4965defca9d1212454cdb755d5
 ;; Version: 12.0
 
 ;;; Commentary:

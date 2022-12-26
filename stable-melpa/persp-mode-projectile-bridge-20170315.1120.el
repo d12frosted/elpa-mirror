@@ -4,6 +4,8 @@
 ;;
 ;; Author: Constantin Kulikov (Bad_ptr) <zxnotdead@gmail.com>
 ;; Version: 0.1
+;; Package-Version: 20170315.1120
+;; Package-Commit: f6453cd7b8b4352c06e771706f2c5b7e2cdff1ce
 ;; Package-Requires: ((persp-mode "2.9") (projectile "0.13.0") (cl-lib "0.5"))
 ;; Date: 2017/03/04 10:10:41
 ;; License: GPL either version 3 or any later version

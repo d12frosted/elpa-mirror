@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-spell-fu
-;; Package-Version: 20221213.158
-;; Package-Commit: 9594f275c486666acad6bd05ba322380175a1fcd
+;; Package-Version: 20221226.400
+;; Package-Commit: 068391893cb56df1c6ae432cf320644b25022963
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -385,7 +385,6 @@ Optional argument BODY runs with the depth override."
 
 (defmacro spell-fu--setq-expand-range-to-line-boundaries (pos-beg pos-end)
   "Set POS-BEG the the line beginning, POS-END to the line end."
-  (declare (indent 1))
   ;; Ignore field boundaries.
   (let ((inhibit-field-text-motion t))
     `
@@ -1130,14 +1129,16 @@ Return t when the word has been removed."
 
     (with-demoted-errors "spell-fu-reset: %S"
       (dolist (buf buffers-in-mode)
-        (with-current-buffer buf (spell-fu--mode-disable))))
+        (with-current-buffer buf
+          (spell-fu--mode-disable))))
 
     (when (file-directory-p spell-fu-directory)
       (delete-directory spell-fu-directory t nil))
 
     (with-demoted-errors "spell-fu-reset: %S"
       (dolist (buf buffers-in-mode)
-        (with-current-buffer buf (spell-fu--mode-enable))))
+        (with-current-buffer buf
+          (spell-fu--mode-enable))))
 
     (message "spell-fu: reset complete%s"
       (cond
