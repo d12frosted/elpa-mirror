@@ -1,22 +1,3 @@
-Table of Contents
-─────────────────
-
-1. Overview
-2. Supported schemes
-3. Installation
-..... 1. Using ELPA
-..... 2. From a repository checkout
-4. Basic configuration
-.. 1. Completion at point
-.. 2. Macro expansion with macrostep-geiser
-5. Quick key reference
-.. 1. In Scheme buffers:
-.. 2. In the REPL
-.. 3. In the documentation browser:
-.. 4. In backtrace (evaluation/compile result) buffers:
-6. How to support a new scheme implementation
-
-
 1 Overview
 ══════════
 
