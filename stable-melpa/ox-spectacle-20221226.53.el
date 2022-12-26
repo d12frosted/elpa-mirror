@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221224.1459
-;; Package-Commit: 82f189f759d760064c158de2803d54277a8f93eb
+;; Package-Version: 20221226.53
+;; Package-Commit: 9f7425ecdd907eedd64886c975448fe8e81ba1a1
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -168,6 +168,11 @@ policy working. You can set this on a per-file basis using #+EXTRA_SCRIPTS:."
   :type '(repeat string))
 
 (defcustom ox-spectacle-initial-style "
+.codepane {}
+.split-container {
+  display: flex; flex-flow: column nowrap; justify-content: flex-start;
+  align-items: stretch; height: inherit; max-height: 100vh;
+}
 ::-webkit-scrollbar { width: 5px; height: 80%; }
 ::-webkit-scrollbar-track { background: rgb(179, 177, 177); border-radius: 5px; }
 ::-webkit-scrollbar-thumb { background: rgb(136, 136, 136); border-radius: 5px; }
@@ -641,7 +646,9 @@ holding contextual information."
             ;; work with #+split: t, wrap every part with <Box>
             (let ((cs (if contents (split-string contents "#spectacle-splitter#" t))))
               (when (> (length cs) 1)
-                (setq contents (mapconcat (lambda (c) (concat "\n<${Box}>\n" (string-trim c) "\n</${Box}>\n")) cs))))
+                (setq contents (mapconcat (lambda (c)
+                                            (concat "\n<div className='split-container'>\n"
+                                                    (string-trim c) "\n</div>\n")) cs))))
             ;; final output
             (concat prefix "<" tag props ">\n" inline-prefix contents inline-suffix "</" tag ">")))))))
 
@@ -657,7 +664,7 @@ INFO is a plist holding contextual information."
          (code (org-element-property :value element))
          (linum (org-element-property :number-lines element))
          (props (org-export-read-attribute :attr_html element))
-         (code-props (ox-spectacle--pop-from-plist props :showLineNumbers :highlightRanges :stepIndex :theme))
+         (code-props (ox-spectacle--pop-from-plist props :showLineNumbers :highlightRanges :stepIndex :theme :style))
          (flags (cadr (ox-spectacle--pop-from-plist props :type)))
          (props (ox-spectacle--wa (ox-spectacle--make-attribute-string props info)))
          (code-props (ox-spectacle--wa (ox-spectacle--make-attribute-string code-props info)))

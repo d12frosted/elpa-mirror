@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/snow.el
-;; Package-Version: 20221225.2027
-;; Package-Commit: f42ffdf07f1dc950cd7cb50813792516a87189b1
+;; Package-Version: 20221225.2110
+;; Package-Commit: 35ea06f19047ac99eaff9663cb035491c4a13e07
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: games
@@ -323,15 +323,24 @@ Or return t if outside buffer, or nil if it didn't land."
                               (snow-flake-pos-below flake))))
         ;; A position exists below the flake and within the buffer.
         (let ((char-below (char-after pos-below)))
-          (cond ((equal snow-pile-full-char char-below)
-                 ;; The flake landed on a full pile: return its current
-                 ;; position.
+          (cond ((equal ?  char-below)
+                 ;; The flake is above non-empty space.
+                 nil)
+                ((equal snow-pile-full-char char-below)
+                 ;; The flake is above a full pile: return its current
+                 ;; position so it lands and starts a new pile.
                  (snow-flake-pos flake))
-                ((and (not (equal ?  char-below))
-                      (>= snow-flake-land-chance (cl-random 1.0)))
-                 ;; The flake is above a non-empty position and chanced
-                 ;; to land on it: return the position below it.
-                 pos-below))))))
+                ((get-text-property pos-below 'snow)
+                 ;; The flake is above a partially full pile of snow:
+                 ;; return the position below so it lands and adds to
+                 ;; the pile.
+                 pos-below)
+                ;; The flake is above a non-snow terrain feature.
+                ((>= snow-flake-land-chance (cl-random 1.0))
+                 ;; The flake chanced to land.
+                 pos-below)
+                ;; The flake kept falling.
+                (t nil))))))
 
 (defun snow--update-buffer (buffer)
   "Update snow in BUFFER."

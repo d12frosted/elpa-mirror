@@ -3,8 +3,8 @@
 ;; Copyright 2011-2023 François-Xavier Bois
 
 ;; Version: 17.3.8
-;; Package-Version: 20221225.1809
-;; Package-Commit: 109ec8ee3020c824713cbd8131f048d17aadbfc9
+;; Package-Version: 20221225.2142
+;; Package-Commit: 53bed1e6a8554da877c27ffad6bd65113dc758e3
 ;; Author: François-Xavier Bois
 ;; Maintainer: François-Xavier Bois <fxbois@gmail.com>
 ;; Package-Requires: ((emacs "23.1"))
@@ -4133,7 +4133,7 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
                        (web-mode-sf tagclose)
                        (setq part-end (match-beginning 0))
                        (> part-end part-beg))
-              ;;(message "end=%S" (point))
+              ;;(message "tagopen=%S tagclose=%S end=%S" tagopen tagclose (point))
               (put-text-property part-beg part-end
                                  'part-side
                                  (cond
@@ -5552,6 +5552,9 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
                ) ;cond
              ) ;let
            ) ;script
+          ((string= tname "i18n")
+           (setq element-content-type "javascript"
+                 part-close-tag "</i18n>"))
           ((and (string= tname "template") (string-match-p " lang" (buffer-substring-no-properties tbeg tend)))
            (let (template)
              (setq template (buffer-substring-no-properties tbeg tend)
