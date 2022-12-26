@@ -19,7 +19,7 @@ I. Installation
         (load-theme 'timu-spacegrey t))
 
 II. Configuration
-  A. Dark and light fravour
+  A. Dark and light flavour
     By default the theme is `dark', to setup the `light' flavour:
 
     - Change the variable `timu-spacegrey-flavour' in the Customization Interface.
@@ -77,3 +77,13 @@ II. Configuration
     By default the border is turned off.
     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
       (customize-set-variable 'timu-spacegrey-mode-line-border t)
+
+III. Utility functions
+  A. Toggle dark and light flavour of the theme
+      M-x timu-spacegrey-toggle-dark-light RET.
+
+  B. Toggle between intense and non intense colors for `org-mode'
+      M-x timu-spacegrey-toggle-org-colors-intensity RET.
+
+  C. Toggle between borders and no borders for the `mode-line'
+      M-x timu-spacegrey-toggle-mode-line-border RET.

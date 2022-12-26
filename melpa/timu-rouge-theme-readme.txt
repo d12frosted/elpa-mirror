@@ -59,3 +59,10 @@ II. Configuration
     By default the intense colors are turned off.
     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
       (customize-set-variable 'timu-rouge-org-intense-colors t)
+
+III. Utility functions
+  A. Toggle between intense and non intense colors for `org-mode'
+      M-x timu-rouge-toggle-org-colors-intensity RET.
+
+  B. Toggle between borders and no borders for the `mode-line'
+      M-x timu-rouge-toggle-mode-line-border RET.

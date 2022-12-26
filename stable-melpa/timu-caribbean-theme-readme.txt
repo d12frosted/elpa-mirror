@@ -66,3 +66,10 @@ II. Configuration
     By default the border is turned off.
     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
       (customize-set-variable 'timu-caribbean-mode-line-border t)
+
+III. Utility functions
+  A. Toggle between intense and non intense colors for `org-mode'
+      M-x timu-caribbean-toggle-org-colors-intensity RET.
+
+  B. Toggle between borders and no borders for the `mode-line'
+      M-x timu-caribbean-toggle-mode-line-border RET.

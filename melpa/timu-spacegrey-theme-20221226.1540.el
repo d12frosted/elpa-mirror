@@ -6,9 +6,9 @@
 ;; Maintainer: Aimé Bertrand <aime.bertrand@macowners.club>
 ;; Created: 06 Jun 2021
 ;; Keywords: faces themes
-;; Package-Version: 20221226.1517
-;; Package-Commit: 6eca6dfd7553f25702d4bc8351efe83bbe1f3c94
-;; Version: 2.4
+;; Package-Version: 20221226.1540
+;; Package-Commit: 5ee021f45bb042aad6d97f6c8118452093ffba64
+;; Version: 2.5
 ;; Package-Requires: ((emacs "25.1"))
 ;; Homepage: https://gitlab.com/aimebertrand/timu-spacegrey-theme
 
@@ -59,7 +59,7 @@
 ;;         (load-theme 'timu-spacegrey t))
 ;;
 ;; II. Configuration
-;;   A. Dark and light fravour
+;;   A. Dark and light flavour
 ;;     By default the theme is `dark', to setup the `light' flavour:
 ;;
 ;;     - Change the variable `timu-spacegrey-flavour' in the Customization Interface.
@@ -117,6 +117,16 @@
 ;;     By default the border is turned off.
 ;;     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
 ;;       (customize-set-variable 'timu-spacegrey-mode-line-border t)
+;;
+;; III. Utility functions
+;;   A. Toggle dark and light flavour of the theme
+;;       M-x timu-spacegrey-toggle-dark-light RET.
+;;
+;;   B. Toggle between intense and non intense colors for `org-mode'
+;;       M-x timu-spacegrey-toggle-org-colors-intensity RET.
+;;
+;;   C. Toggle between borders and no borders for the `mode-line'
+;;       M-x timu-spacegrey-toggle-mode-line-border RET.
 
 
 ;;; Code:

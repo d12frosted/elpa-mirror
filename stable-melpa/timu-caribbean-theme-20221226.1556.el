@@ -6,9 +6,9 @@
 ;; Maintainer: Aimé Bertrand <aime.bertrand@macowners.club>
 ;; Created: 2022-11-13
 ;; Keywords: faces themes
-;; Package-Version: 20221219.1713
-;; Package-Commit: 60e08b991fdc236f5c493ba8527e216174e32c20
-;; Version: 1.4
+;; Package-Version: 20221226.1556
+;; Package-Commit: af60151fe35bd1c780b7c4a37032699989ee6162
+;; Version: 1.5
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://gitlab.com/aimebertrand/timu-caribbean-theme
 
@@ -106,6 +106,13 @@
 ;;     By default the border is turned off.
 ;;     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
 ;;       (customize-set-variable 'timu-caribbean-mode-line-border t)
+;;
+;; III. Utility functions
+;;   A. Toggle between intense and non intense colors for `org-mode'
+;;       M-x timu-caribbean-toggle-org-colors-intensity RET.
+;;
+;;   B. Toggle between borders and no borders for the `mode-line'
+;;       M-x timu-caribbean-toggle-mode-line-border RET.
 
 
 ;;; Code:
@@ -306,6 +313,26 @@ BOXCOLOR supplies the border color."
 BOXCOLOR supplies the border color."
   (if (eq t timu-caribbean-mode-line-border)
         (list :box boxcolor)))
+
+;;;###autoload
+(defun timu-caribbean-toggle-org-colors-intensity ()
+  "Toggle between intense and non intense colors for `org-mode'.
+Customize `timu-caribbean-org-intense-colors' the to achieve this."
+  (interactive)
+  (if (eq t timu-caribbean-org-intense-colors)
+      (customize-set-variable 'timu-caribbean-org-intense-colors nil)
+    (customize-set-variable 'timu-caribbean-org-intense-colors t))
+  (load-theme (car custom-enabled-themes) t))
+
+;;;###autoload
+(defun timu-caribbean-toggle-mode-line-border ()
+  "Toggle between borders and no borders for the `mode-line'.
+Customize `timu-caribbean-mode-line-border' the to achieve this."
+  (interactive)
+  (if (eq t timu-caribbean-mode-line-border)
+      (customize-set-variable 'timu-caribbean-mode-line-border nil)
+    (customize-set-variable 'timu-caribbean-mode-line-border t))
+  (load-theme (car custom-enabled-themes) t))
 
 (deftheme timu-caribbean
   "Color theme with cyan as a dominant color.
