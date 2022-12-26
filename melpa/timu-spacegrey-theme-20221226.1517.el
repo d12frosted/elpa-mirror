@@ -6,8 +6,8 @@
 ;; Maintainer: Aimé Bertrand <aime.bertrand@macowners.club>
 ;; Created: 06 Jun 2021
 ;; Keywords: faces themes
-;; Package-Version: 20221219.1709
-;; Package-Commit: 3111d2e6ed769408d529f1743c1adead34b46b60
+;; Package-Version: 20221226.1517
+;; Package-Commit: 6eca6dfd7553f25702d4bc8351efe83bbe1f3c94
 ;; Version: 2.4
 ;; Package-Requires: ((emacs "25.1"))
 ;; Homepage: https://gitlab.com/aimebertrand/timu-spacegrey-theme
@@ -254,6 +254,35 @@ LBOX supplies the border color of the light `timu-spacegrey-flavour'."
       (if (equal "dark" timu-spacegrey-flavour)
           (list :box dbox)
         (list :box lbox))))
+
+;;;###autoload
+(defun timu-spacegrey-toggle-dark-light ()
+  "Toggle between \"dark\" and \"light\" `timu-spacegrey-flavour'."
+  (interactive)
+  (if (equal "dark" timu-spacegrey-flavour)
+      (customize-set-variable 'timu-spacegrey-flavour "light")
+    (customize-set-variable 'timu-spacegrey-flavour "dark"))
+  (load-theme (car custom-enabled-themes) t))
+
+;;;###autoload
+(defun timu-spacegrey-toggle-org-colors-intensity ()
+  "Toggle between intense and non intense colors for `org-mode'.
+Customize `timu-spacegrey-org-intense-colors' the to achieve this. "
+  (interactive)
+  (if (eq t timu-spacegrey-org-intense-colors)
+      (customize-set-variable 'timu-spacegrey-org-intense-colors nil)
+    (customize-set-variable 'timu-spacegrey-org-intense-colors t))
+  (load-theme (car custom-enabled-themes) t))
+
+;;;###autoload
+(defun timu-spacegrey-toggle-mode-line-border ()
+  "Toggle between borders and no borders for the `mode-line'.
+Customize `timu-spacegrey-mode-line-border' the to achieve this. "
+  (interactive)
+  (if (eq t timu-spacegrey-mode-line-border)
+      (customize-set-variable 'timu-spacegrey-mode-line-border nil)
+    (customize-set-variable 'timu-spacegrey-mode-line-border t))
+  (load-theme (car custom-enabled-themes) t))
 
 (deftheme timu-spacegrey
   "Custom theme inspired by the spacegray theme in Sublime Text.
@@ -762,6 +791,7 @@ Sourced other themes to get information about font faces for packages.")
 
 ;;;; doom-modeline - dark
      `(doom-modeline-bar-inactive ((,class (:background nil))))
+     `(doom-modeline-buffer-modified ((,class (:foreground ,red :weight bold))))
      `(doom-modeline-eldoc-bar ((,class (:background ,green))))
      `(doom-modeline-evil-emacs-state ((,class (:foreground ,cyan :weight bold))))
      `(doom-modeline-evil-insert-state ((,class (:foreground ,red :weight bold))))
@@ -1174,9 +1204,9 @@ Sourced other themes to get information about font faces for packages.")
      `(linum-relative-current-face ((,class (:foreground ,fg))))
 
 ;;;; lsp-mode - dark
-     `(lsp-face-highlight-read ((,class (:foreground ,yellow :weight bold :underline ,yellow))))
-     `(lsp-face-highlight-textual ((,class (:foreground ,yellow :weight bold :underline ,yellow))))
-     `(lsp-face-highlight-write ((,class (:foreground ,yellow :weight bold :underline ,yellow))))
+     `(lsp-face-highlight-read ((,class (:foreground ,yellow :weight bold :underline ,yellow ))))
+     `(lsp-face-highlight-textual ((,class (:foreground ,yellow :weight bold))))
+     `(lsp-face-highlight-write ((,class (:foreground ,yellow :weight bold :underline ,yellow ))))
      `(lsp-headerline-breadcrumb-separator-face ((,class (:foreground ,fg-other))))
      `(lsp-ui-doc-background ((,class (:background ,bg-other :foreground ,fg))))
      `(lsp-ui-peek-filename ((,class (:weight bold))))
@@ -2393,6 +2423,7 @@ Sourced other themes to get information about font faces for packages.")
 
 ;;;; doom-modeline - light
      `(doom-modeline-bar-inactive ((,class (:background nil))))
+     `(doom-modeline-buffer-modified ((,class (:foreground ,red :weight bold))))
      `(doom-modeline-eldoc-bar ((,class (:background ,green))))
      `(doom-modeline-evil-emacs-state ((,class (:foreground ,cyan :weight bold))))
      `(doom-modeline-evil-insert-state ((,class (:foreground ,red :weight bold))))
@@ -2805,9 +2836,9 @@ Sourced other themes to get information about font faces for packages.")
      `(linum-relative-current-face ((,class (:foreground ,fg))))
 
 ;;;; lsp-mode - light
-     `(lsp-face-highlight-read ((,class (:foreground ,fg :background ,yellow :weight bold))))
-     `(lsp-face-highlight-textual ((,class (::foreground ,fg background ,yellow :weight bold))))
-     `(lsp-face-highlight-write ((,class (::foreground ,fg background ,yellow :weight bold))))
+     `(lsp-face-highlight-read ((,class (:foreground ,darkcyan :weight bold :underline ,darkcyan))))
+     `(lsp-face-highlight-textual ((,class (:foreground ,darkcyan :weight bold))))
+     `(lsp-face-highlight-write ((,class (:foreground ,darkcyan :weight bold :underline ,darkcyan))))
      `(lsp-headerline-breadcrumb-separator-face ((,class (:foreground ,fg-other))))
      `(lsp-ui-doc-background ((,class (:background ,bg-other :foreground ,fg))))
      `(lsp-ui-peek-filename ((,class (:foreground ,fg :weight bold))))

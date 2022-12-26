@@ -4,11 +4,11 @@
 
 ;; Author: Goichi Hirakawa <gooichi@gyazsquare.com>
 ;; URL: https://github.com/GyazSquare/flycheck-swift3
-;; Package-Version: 20221225.901
-;; Package-Commit: 0e6f73e7272c1444de5872799f5153482563a054
+;; Package-Version: 20221226.1302
+;; Package-Commit: b30d8f35ff60a1a7f32bf0d0110d0cd1322bf47f
 ;; Version: 3.1.2
 ;; Keywords: convenience, languages, tools
-;; Package-Requires: ((emacs "24.4") (flycheck "26"))
+;; Package-Requires: ((emacs "25.1") (flycheck "26"))
 
 ;; This file is not part of GNU Emacs.
 
