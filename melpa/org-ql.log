@@ -3,27 +3,29 @@ Fetcher: github
 Source:  https://github.com/alphapapa/org-ql.git
 
 Updating /mnt/store/melpa/working/org-ql/
-Checking out d253b123cf5bf869857ef978e40e2d42c2d301f4
+Checking out 36ff9854ce4a8573386e7073fa2e8084dc06c0fe
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-ql/
-  to /tmp/org-ql4AH58F/org-ql-20221210.233
+  to /tmp/org-qlTjev6c/org-ql-20221225.1809
     org-ql-completing-read.el -> org-ql-completing-read.el
     org-ql-find.el -> org-ql-find.el
     org-ql-search.el -> org-ql-search.el
     org-ql-view.el -> org-ql-view.el
     org-ql.el -> org-ql.el
     org-ql.info -> org-ql.info
-Created org-ql-20221210.233.tar containing:
-  org-ql-20221210.233/
-  org-ql-20221210.233/dir
-  org-ql-20221210.233/org-ql-completing-read.el
-  org-ql-20221210.233/org-ql-find.el
-  org-ql-20221210.233/org-ql-pkg.el
-  org-ql-20221210.233/org-ql-search.el
-  org-ql-20221210.233/org-ql-view.el
-  org-ql-20221210.233/org-ql.el
-  org-ql-20221210.233/org-ql.info
-Built org-ql in 5.763s, finished at 2022-12-25T17:13:01+0000
+Created org-ql-20221225.1809.tar containing:
+  org-ql-20221225.1809/
+  org-ql-20221225.1809/dir
+  org-ql-20221225.1809/org-ql-completing-read.el
+  org-ql-20221225.1809/org-ql-find.el
+  org-ql-20221225.1809/org-ql-pkg.el
+  org-ql-20221225.1809/org-ql-search.el
+  org-ql-20221225.1809/org-ql-view.el
+  org-ql-20221225.1809/org-ql.el
+  org-ql-20221225.1809/org-ql.info
+Built org-ql in 4.318s, finished at 2022-12-25T20:50:58+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  611 Dec 25 17:13 packages/org-ql-20221210.233.entry
 300K -rw-r--r-- 1 root root 300K Dec 25 17:13 packages/org-ql-20221210.233.tar
+4.0K -rw-r--r-- 1 root root  612 Dec 25 20:50 packages/org-ql-20221225.1809.entry
+300K -rw-r--r-- 1 root root 300K Dec 25 20:50 packages/org-ql-20221225.1809.tar

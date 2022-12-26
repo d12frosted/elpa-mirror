@@ -3,8 +3,8 @@
 ;; Copyright 2011-2023 François-Xavier Bois
 
 ;; Version: 17.3.8
-;; Package-Version: 20221225.1706
-;; Package-Commit: d377a2b873661d0e4d8b378948839543b2e33a55
+;; Package-Version: 20221225.1809
+;; Package-Commit: 109ec8ee3020c824713cbd8131f048d17aadbfc9
 ;; Author: François-Xavier Bois
 ;; Maintainer: François-Xavier Bois <fxbois@gmail.com>
 ;; Package-Requires: ((emacs "23.1"))
@@ -6793,7 +6793,10 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
   (let (sub1 sub2 sub3 continue char keywords token-type face beg end (buffer (current-buffer)))
 
     ;; NOTE: required for blocks inside tag attrs
-    (remove-list-of-text-properties reg-beg reg-end '(font-lock-face))
+    ;; NOTE: ajout de face dans la liste pour sucharger la couleur définie par
+    ;;       un prealable web-mode-fontity-part (2022-12-25 #1230)
+    (remove-list-of-text-properties reg-beg reg-end '(font-lock-face face))
+    ;;(message "reg-beg=%S reg-end=%S" reg-beg reg-end)
 
     (goto-char reg-beg)
 
@@ -9663,17 +9666,23 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
   )
 
 (defun web-mode-javascript-indentation (pos initial-column language-offset language &optional limit)
-  (let (open-ctx indentation offset sub)
+  (let (open-ctx open-pos indentation offset sub block-pos)
     (setq open-ctx (web-mode-bracket-up pos language limit))
+    ;;(message "%S" open-ctx)
     ;;(message "pos(%S) initial-column(%S) language-offset(%S) language(%S) limit(%S)" pos initial-column language-offset language limit)
     ;;(message "javascript-indentation: %S\nchar=%c" open-ctx (plist-get open-ctx :char))
     (setq indentation (plist-get open-ctx :indentation))
     (when (and initial-column (> initial-column indentation))
-      (setq indentation initial-column)
-      )
+      (setq indentation initial-column))
     (setq case-fold-search nil) ; #1006
+    (when open-ctx
+      (setq open-pos (plist-get open-ctx :pos)))
+    (setq block-pos (web-mode-inside-block-control pos))
+    ;;(message "bracket-pos=%S block-pos=%S" open-pos block-pos)
     (cond
-      ((or (null open-ctx) (null (plist-get open-ctx :pos)))
+      ((and block-pos (or (null open-pos) (> block-pos open-pos))) ;; #1230
+       (setq offset (+ indentation language-offset)))
+      ((null open-pos)
        (setq offset initial-column))
       ((and (member language '("javascript" "jsx" "ejs"))
             (eq (plist-get open-ctx :char) ?\{)
