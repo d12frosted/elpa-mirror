@@ -3,5 +3,7 @@ A minor-mode to integrate 'citar' and 'denote'.
 
 Provides the following functionality:
 
-1. Link notes to bibliographic entries with citation key in front matter.
-2. Use Citar to create and access bibliographic notes
+1. Create new bibliographic note: 'citar-create-note'.
+2. Open existing bibliographic notes: 'citar-open-notes'.
+3. Convert existing note to bibliographic note: 'citar-denote-add-citekey'.
+4. Open attachments, URLs or other associated notes: 'citar-denote-dwim'.

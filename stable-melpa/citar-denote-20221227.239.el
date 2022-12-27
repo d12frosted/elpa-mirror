@@ -5,9 +5,9 @@
 ;; Author: Peter Prevos <peter@prevos.net>
 ;; Maintainer: Peter Prevos <peter@prevos.net>
 ;; Homepage: https://github.com/pprevos/citar-denote
-;; Version: 1.1.0
-;; Package-Version: 20221219.2218
-;; Package-Commit: 488af29418611f28637b715375137afa60e5d2f8
+;; Version: 1.2.0
+;; Package-Version: 20221227.239
+;; Package-Commit: 4928ff861d96e597e420588078d0f44ea19d9a0a
 ;; Package-Requires: ((emacs "28.1") (citar "1.0") (denote "1.2"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -31,8 +31,10 @@
 ;;
 ;; Provides the following functionality:
 ;; 
-;; 1. Link notes to bibliographic entries with citation key in front matter.
-;; 2. Use Citar to create and access bibliographic notes
+;; 1. Create new bibliographic note: 'citar-create-note'.
+;; 2. Open existing bibliographic notes: 'citar-open-notes'.
+;; 3. Convert existing note to bibliographic note: 'citar-denote-add-citekey'.
+;; 4. Open attachments, URLs or other associated notes: 'citar-denote-dwim'.
 ;;
 ;;; Code:
 
@@ -48,10 +50,22 @@
   :group 'citar-denote
   :type '(repeat string))
 
-(defvar citar-denote-file-type (or denote-file-type 'org)
+(defcustom citar-denote-file-type (or denote-file-type 'org)
   "File Type used by Citar-Denote.
 Default is `denote-file-type' or org if the former is nil.  Users
-can use another file type for their bibliographic notes.")
+can use another file type for their bibliographic notes."
+  :group 'citar-denote
+  :type '(choice
+          (const :tag "Unspecified (defaults to Org)" nil)
+          (const :tag "Org mode (default)" org)
+          (const :tag "Markdown (YAML front matter)" markdown-yaml)
+          (const :tag "Markdown (TOML front matter)" markdown-toml)
+          (const :tag "Plain text" text)))
+
+(defcustom citar-denote-subdir 'nil
+  "Ask for a subdirectory when creating a new bibliographic note."
+  :group 'citar-denote
+  :type 'boolean)
 
 (defvar citar-denote-file-types
   `((org
@@ -82,6 +96,8 @@ PROPERTY-LIST is a plist that consists of three elements:
 The default assumes \"_bib\" tag is part of the file name.
 Configurable with `citar-denote-keyword'.")
 
+;; Citar integration
+
 (defconst citar-denote-config
   (list :name "Denote"
         :category 'file
@@ -99,6 +115,8 @@ Configurable with `citar-denote-keyword'.")
 
 (defvar citar-notes-sources)
 
+;; Auxiliary functions
+
 (defun citar-denote-reference-format (file-type)
   "Return the reference format associated to FILE-TYPE."
   (plist-get
@@ -110,12 +128,6 @@ Configurable with `citar-denote-keyword'.")
   (plist-get
    (alist-get file-type citar-denote-file-types)
    :reference-regex))
-
-(defun citar-denote-frontmatter-end (file-type)
-  "Return the reference regex associated to FILE-TYPE."
-  (plist-get
-   (alist-get file-type citar-denote-file-types)
-   :frontmatter-end))
 
 (defun citar-denote-keywords-prompt ()
   "Prompt for one or more keywords and include `citar-denote-keyword'."
@@ -129,48 +141,51 @@ Configurable with `citar-denote-keyword'.")
 (defun citar-denote-add-reference (key file-type)
   "Add reference property with KEY in front matter with FILE-TYPE."
   (save-excursion (goto-char (point-min))
-  (re-search-forward "^\n" nil t)
-  (forward-line -1)
-  (if (not (eq file-type 'org))
-      (forward-line -1))
-  (insert (format (citar-denote-reference-format file-type) key))))
+                  (re-search-forward "^\n" nil t)
+                  (forward-line -1)
+                  (if (not (eq file-type 'org))
+                      (forward-line -1))
+                  (insert (format (citar-denote-reference-format file-type) key))))
 
 (defun citar-denote-create-note (key &optional _entry)
   "Create a bibliography note for `KEY' with properties `ENTRY'.
-The file type for the note to be created is determined by user
-option `denote-file-type'."
-  (let ((denote-file-type citar-denote-file-type))
-    (denote
-     (read-string "Title: " (citar-get-value "title" key))
-     (citar-denote-keywords-prompt))
-    (citar-denote-add-reference key denote-file-type)))
 
-(defun citar-denote-retrieve-reference-key-value (file file-type)
-  "Return cite key value from FILE front matter per FILE-TYPE."
+The file type for the note to be created is determined by `denote-file-type'.
+When `citar-denote-subdir' is non-nil, prompt for a subdirectory."
+  (denote
+   (read-string "Title: " (citar-get-value "title" key))
+   (citar-denote-keywords-prompt)
+   citar-denote-file-type
+   (when citar-denote-subdir (denote-subdirectory-prompt)))
+  (citar-denote-add-reference key citar-denote-file-type))
+
+(defun citar-denote-retrieve-keys (file)
+  "Return cite key value(s) from FILE front matter."
   (with-temp-buffer
     (insert-file-contents file)
     (goto-char (point-min))
-    (when (re-search-forward (citar-denote-reference-regex file-type) nil t 1)
-      (funcall (denote--title-value-reverse-function file-type)
-               (buffer-substring-no-properties (point) (line-end-position))))))
+    (let ((trims "[ \t\n\r]+")
+          (file-type (denote-filetype-heuristics file)))
+      (when (re-search-forward (citar-denote-reference-regex file-type) nil t 1)
+        (split-string
+         (string-trim
+          (buffer-substring-no-properties (point) (line-end-position))
+          trims trims) ";")))))
 
 (defun citar-denote-get-notes (&optional keys)
-  "Return Denote files associated with the `KEYS' list.
-Return a hash table mapping elements of `KEY'` to associated notes.
-If `KEYS' is omitted, return notes for all Denote files tagged with
+  "Return Denote files associated with the `KEYS' citation keys.
+If `KEYS' is omitted, return all Denote files tagged with
 `citar-denote-keyword'."
   (let ((files (make-hash-table :test 'equal)))
     (prog1 files
       (dolist (file (denote-directory-files-matching-regexp
                      citar-denote-files-regexp))
-        ;; TODO: add denote-file-is-note-p to exclude attachments.
-        (let ((key-in-file (citar-denote-retrieve-reference-key-value
-                            file (denote-filetype-heuristics file))))
-          (if keys (dolist (key keys)
-                     (when (string= key key-in-file)
-                       (push file (gethash key-in-file files))))
-            ;; FIX: If optional arg keys are not provided.
-            (push file (gethash key-in-file files)))))
+        (let ((key-in-file (citar-denote-retrieve-keys file)))
+          (dolist (key key-in-file)
+            (if keys (dolist (k keys)
+                       (when (string= k key)
+                         (push file (gethash key files))))
+              (push file (gethash key files))))))
       (maphash (lambda (key filelist)
                  (puthash key (nreverse filelist) files))
                files))))
@@ -182,24 +197,43 @@ See documentation for `citar-has-notes'."
     (unless (hash-table-empty-p notes)
       (lambda (citekey) (and (gethash citekey notes) t)))))
 
+;; Interactive functions
+
 (defun citar-denote-dwim ()
   "Open the Citar menu related to the citation key in a bibliographic note.
 This function provides access to related additional notes, attachments and URLs."
   (interactive)
-  (if-let ((citekey (citar-denote-retrieve-reference-key-value
-                     buffer-file-name
-                     (denote-filetype-heuristics buffer-file-name))))
-      (citar-run-default-action (list citekey))
-    (user-error "No citation key found")))
+  ;; Any citation keys in the note?
+  (if-let ((keys (citar-denote-retrieve-keys (buffer-file-name))))
+      ;; Check if citation keys are in the bibliography
+      (if-let
+          (keys? (not (seq-every-p 'null
+                                   (mapcar (lambda (key)
+                                             (gethash key (citar-get-entries)))
+                                           keys))))
+          (citar-open keys)
+        (user-error "Citation key(s) not in bibliography"))
+    (user-error "No reference citation key found in current buffer")))
 
 (defun citar-denote-add-citekey ()
-  "Select citation key and convert denote buffer to bibliographic note."
+  "Add citation key to existing or convert to bibliographic note."
   (interactive)
-  (let ((file-type (denote-filetype-heuristics buffer-file-name))
-        (citekey (car (citar-select-refs))))
-    (citar-denote-add-reference citekey file-type)
-    (denote-keywords-add (list citar-denote-keyword))))
+  (let ((file-type (denote-filetype-heuristics (buffer-file-name)))
+        (citekeys (citar-select-refs)))
+    ;; Check whether reference line already exists
+    (if-let (keys (citar-denote-retrieve-keys (buffer-file-name)))
+        ;; Append reference list
+        (save-excursion
+          (goto-char (point-min))
+          (re-search-forward (citar-denote-reference-regex file-type))
+          (end-of-line)
+          (insert (concat ";" (mapconcat 'identity citekeys ";"))))
+      ;; New citation keys
+      (progn (citar-denote-add-reference
+              (mapconcat 'identity citekeys ";") file-type)
+             (denote-keywords-add (list citar-denote-keyword))))))
 
+;; Initialise minor mode
 (defun citar-denote-setup ()
   "Setup `citar-denote-mode'."
   (citar-register-notes-source
