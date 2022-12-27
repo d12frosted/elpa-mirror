@@ -4,6 +4,8 @@
 
 ;; Author: Mikhail Pontus <mpontus@gmail.com>
 ;; URL: https://github.com/mpontus/bolt-mode
+;; Package-Version: 20180310.810
+;; Package-Commit: 85a5a752bfbebb4aed884326c25db64c000e9934
 ;; Version: 0.1
 ;; Keywords: languages
 ;; Package-Requires: ((emacs "24.3"))

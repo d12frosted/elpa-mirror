@@ -6,7 +6,7 @@ Swift repository <https://github.com/apple/swift/>.
 Features:
 
 - Apple swift-mode.el support
-- Apple Swift 5.4 support
+- Apple Swift 5.7 support
   If you use the toolchain option, you can use the old version of Swift.
 - The `xcrun' command support (only on macOS)
 

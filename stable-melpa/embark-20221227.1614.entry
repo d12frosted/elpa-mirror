@@ -1,0 +1,11 @@
+(embark .
+	[(20221227 1614)
+	 ((emacs
+	   (26 1)))
+	 "Conveniently act on minibuffer completions" tar
+	 ((:commit . "aa5af9f1c46b089c89cb788f23b67d83a4dc4f41")
+	  (:authors
+	   ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
+	  (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
+	  (:keywords "convenience")
+	  (:url . "https://github.com/oantolin/embark"))])
