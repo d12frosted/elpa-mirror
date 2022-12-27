@@ -3,17 +3,19 @@ Fetcher: github
 Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/git-commit/
-Checking out 3cf308c1c4cdb9404e3d3c6f9935ad9f628311d9
+Checking out 8fd16d34068c54c1a0a6edcdccf60be1075a6915
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/git-commit/
-  to /tmp/git-commitjwsesr/git-commit-20221127.2227
+  to /tmp/git-commitftof8o/git-commit-20221226.2207
   ! lisp/git-commit.el -> git-commit.el
   ! lisp/git-commit-pkg.el -> git-commit-pkg.el
-Created git-commit-20221127.2227.tar containing:
-  git-commit-20221127.2227/
-  git-commit-20221127.2227/git-commit-pkg.el
-  git-commit-20221127.2227/git-commit.el
-Built git-commit in 8.009s, finished at 2022-12-26T21:51:00+0000
+Created git-commit-20221226.2207.tar containing:
+  git-commit-20221226.2207/
+  git-commit-20221226.2207/git-commit-pkg.el
+  git-commit-20221226.2207/git-commit.el
+Built git-commit in 5.200s, finished at 2022-12-27T01:29:33+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 655 Dec 26 21:50 packages/git-commit-20221127.2227.entry
  52K -rw-r--r-- 1 root root 50K Dec 26 21:50 packages/git-commit-20221127.2227.tar
+4.0K -rw-r--r-- 1 root root 655 Dec 27 01:29 packages/git-commit-20221226.2207.entry
+ 52K -rw-r--r-- 1 root root 50K Dec 27 01:29 packages/git-commit-20221226.2207.tar
