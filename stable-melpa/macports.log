@@ -3,26 +3,28 @@ Fetcher: github
 Source:  https://github.com/amake/macports.el.git
 
 Updating /mnt/store/melpa/working/macports/
-Checking out 664a015db68c754a12f757cf8fb3eed6d02114f0
+Checking out 9fc515dfd84d8c173bfb29da88eefd0fbdf8b820
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/macports/
-  to /tmp/macportsBOQFZI/macports-20221222.1254
+  to /tmp/macportsw0sI3N/macports-20221227.910
     macports-core.el -> macports-core.el
     macports-describe.el -> macports-describe.el
     macports-installed.el -> macports-installed.el
     macports-outdated.el -> macports-outdated.el
     macports-select.el -> macports-select.el
     macports.el -> macports.el
-Created macports-20221222.1254.tar containing:
-  macports-20221222.1254/
-  macports-20221222.1254/macports-core.el
-  macports-20221222.1254/macports-describe.el
-  macports-20221222.1254/macports-installed.el
-  macports-20221222.1254/macports-outdated.el
-  macports-20221222.1254/macports-pkg.el
-  macports-20221222.1254/macports-select.el
-  macports-20221222.1254/macports.el
-Built macports in 7.468s, finished at 2022-12-27T09:07:29+0000
+Created macports-20221227.910.tar containing:
+  macports-20221227.910/
+  macports-20221227.910/macports-core.el
+  macports-20221227.910/macports-describe.el
+  macports-20221227.910/macports-installed.el
+  macports-20221227.910/macports-outdated.el
+  macports-20221227.910/macports-pkg.el
+  macports-20221227.910/macports-select.el
+  macports-20221227.910/macports.el
+Built macports in 6.421s, finished at 2022-12-27T13:02:12+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 353 Dec 27 09:07 packages/macports-20221222.1254.entry
  60K -rw-r--r-- 1 root root 60K Dec 27 09:07 packages/macports-20221222.1254.tar
+4.0K -rw-r--r-- 1 root root 352 Dec 27 13:02 packages/macports-20221227.910.entry
+ 60K -rw-r--r-- 1 root root 60K Dec 27 13:02 packages/macports-20221227.910.tar

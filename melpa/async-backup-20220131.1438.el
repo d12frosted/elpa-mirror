@@ -3,6 +3,8 @@
 ;; Author: contrapunctus <xmpp:contrapunctus@jabjab.de>
 ;; Maintainer: contrapunctus <xmpp:contrapunctus@jabjab.de>
 ;; Keywords: files
+;; Package-Version: 20220131.1438
+;; Package-Commit: 6ddb39fe77d66cdef48b87cb0d0554ad7d132308
 ;; Homepage: https://tildegit.org/contrapunctus/async-backup
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.0.1
