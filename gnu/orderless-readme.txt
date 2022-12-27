@@ -3,28 +3,6 @@
 			      ━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Overview
-2. Customization
-.. 1. Component matching styles
-..... 1. Style dispatchers
-.. 2. Component separator regexp
-.. 3. Defining custom orderless styles
-.. 4. Faces for component matches
-.. 5. Pattern compiler
-.. 6. Interactively changing the configuration
-3. Integration with other completion UIs
-.. 1. Ivy
-.. 2. Selectrum
-.. 3. Company
-4. Related packages
-.. 1. Ivy and Helm
-.. 2. Prescient
-.. 3. Restricting to current matches in Icicles, Ido and Ivy
-
-
 
 
 
@@ -384,7 +362,19 @@ Table of Contents
   └────
 
 
-3.2 Selectrum
+3.2 Helm
+────────
+
+  To use `orderless' from Helm, simply configure `orderless' as you
+  would for completion UIs that use Emacs completion stlyes and add this
+  to your Helm configuration:
+
+  ┌────
+  │ (setq helm-completion-style 'emacs)
+  └────
+
+
+3.3 Selectrum
 ─────────────
 
   Recent versions of Selectrum default to using whatever completion
@@ -400,8 +390,10 @@ Table of Contents
   If you use the above configuration, only the visible candidates are
   highlighted, which is a litte more efficient.
 
+  Note that Selectrum has been deprecated in favor of Vertico.
 
-3.3 Company
+
+3.4 Company
 ───────────
 
   Company comes with a `company-capf' backend that uses the
