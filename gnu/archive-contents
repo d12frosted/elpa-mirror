@@ -476,7 +476,7 @@
 		  ("Jan Tatarik" . "jan.tatarik@gmail.com"))
 		 (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net"))])
  (company-math .
-	       [(1 5)
+	       [(1 5 1)
 		((company
 		  (0 8 0))
 		 (math-symbol-lists
@@ -487,7 +487,7 @@
 		 (:maintainer "Vitalie Spinu" . "spinuvit@gmail.com")
 		 (:authors
 		  ("Vitalie Spinu" . "spinuvit@gmail.com"))
-		 (:commit . "3e1bd33f5a5a3fe4afc834919a4ad36c34f5ce98"))])
+		 (:commit . "3eb006874e309ff4076d947fcbd61bb6806aa508"))])
  (company-statistics .
 		     [(0 2 3)
 		      ((emacs
