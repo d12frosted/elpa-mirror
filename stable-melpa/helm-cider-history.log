@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/Kungi/helm-cider-history.git
 
 Updating /mnt/store/melpa/working/helm-cider-history/
-Checking out c391fcb2e162a02001605a0b9449783575a831fd
-Built helm-cider-history in 3.903s, finished at 2022-12-28T14:45:22+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.9K Dec 28 14:45 packages/helm-cider-history-20150719.2120.el
-4.0K -rw-r--r-- 1 root root  443 Dec 28 14:45 packages/helm-cider-history-20150719.2120.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/Kungi/helm-cider-history.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

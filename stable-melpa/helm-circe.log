@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/lesharris/helm-circe.git
 
 Updating /mnt/store/melpa/working/helm-circe/
-Checking out 9091651d9fdd8d49d8ff6f9dcf3a2ae416c9f15a
-Built helm-circe in 4.459s, finished at 2022-12-28T14:45:23+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.8K Dec 28 14:45 packages/helm-circe-20160207.652.el
-4.0K -rw-r--r-- 1 root root  472 Dec 28 14:45 packages/helm-circe-20160207.652.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/lesharris/helm-circe.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

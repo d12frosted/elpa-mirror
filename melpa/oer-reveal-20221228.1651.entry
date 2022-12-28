@@ -1,0 +1,13 @@
+(oer-reveal .
+	    [(20221228 1651)
+	     ((emacs
+	       (24 4))
+	      (org-re-reveal
+	       (3 1 0)))
+	     "OER with reveal.js, plugins, and org-re-reveal" tar
+	     ((:commit . "9094638d2d3dd3548bd111e6f47157f775160748")
+	      (:authors
+	       ("Jens Lechtenbörger"))
+	      (:maintainer "Jens Lechtenbörger")
+	      (:keywords "hypermedia" "tools" "slideshow" "presentation" "oer")
+	      (:url . "https://gitlab.com/oer/oer-reveal"))])
