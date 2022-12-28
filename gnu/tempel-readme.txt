@@ -3,26 +3,14 @@
 		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Template expansion
-2. Configuration
-3. Template file format
-4. Template syntax
-5. Adding template sources
-6. Hooking into the Abbrev mechanism
-7. Binding important templates to a key
-8. Alternatives
-9. Contributions
-
-
 Tempel is a tiny template package for Emacs, which uses the syntax of
 the Emacs Tempo library. Tempo is an ancient temple of the church of
 Emacs. It is 27 years old, but still in good shape since it successfully
 resisted change over the decades. However it may look a bit dusty here
 and there. Therefore we present Tempel, a modernized implementation of
-Tempo.
+Tempo. Tempel integrates well with the standard
+`completion-at-point-functions' mechanism which is used by Emacs for
+in-buffer completion.
 
 Table of Contents
 ─────────────────
@@ -31,11 +19,12 @@ Table of Contents
 2. Configuration
 3. Template file format
 4. Template syntax
-5. Adding template sources
-6. Hooking into the Abbrev mechanism
-7. Binding important templates to a key
-8. Alternatives
-9. Contributions
+5. Defining custom elements
+6. Adding template sources
+7. Hooking into the Abbrev mechanism
+8. Binding important templates to a key
+9. Alternatives
+10. Contributions
 
 
 1 Template expansion
@@ -53,15 +42,16 @@ Table of Contents
   ⁃ `tempel-insert' selects a template by name and insert it into the
     current buffer.
 
-  For the completion at point commands `tempel-complete' and
-  `tempel-expand', you may want to give my [Corfu] completion at point
-  popup UI a try. After inserting the template you can move between the
-  visible template fields with the keys `M-{', `M-}' or `C-up/down'
-  which are normally bound to `forward/backward-paragraph'. Tempel
-  temporarily remaps these commands to `tempel-next/previous'. The key
-  bindings are defined in the `tempel-map' keymap. You can customize
-  them there. As soon as you move before (behind) the first (last)
-  field, the fields are finalized.
+  For the commands `tempel-complete' and `tempel-expand', you may want
+  to give my [Corfu] completion at point popup UI a try. After inserting
+  the template you can move between the visible template fields with the
+  keys `M-{', `M-}' or `C-up/down' which are normally bound to
+  `forward/backward-paragraph'. Tempel temporarily remaps these commands
+  to `tempel-next/previous'. As soon as you move before (behind) the
+  first (last) field, the fields are finalized. The key bindings are
+  defined in the `tempel-map' keymap. I recommend that you inspect the
+  `tempel-map' and look at the provided key bindings. You can customize
+  the key bindings there.
 
 
 [Corfu] <https://github.com/minad/corfu>
@@ -72,7 +62,9 @@ Table of Contents
 
   The package is available on GNU ELPA and MELPA and can be installed
   with `package-install'. The following example configuration relies on
-  `use-package'.
+  `use-package'. For some ready-made templates check out the package
+  [tempel-collection]. The collection is not comprehensive yet, but will
+  certainly grow thanks to contributions.
 
   ┌────
   │ ;; Configure Tempel
@@ -108,11 +100,18 @@ Table of Contents
   │   ;; (global-tempel-abbrev-mode)
   │ )
   │ 
+  │ ;; Optional: Add tempel-collection.
+  │ ;; The package is young and doesn't have comprehensive coverage.
+  │ (use-package tempel-collection)
+  │ 
   │ ;; Optional: Use the Corfu completion UI
   │ (use-package corfu
   │   :init
   │   (global-corfu-mode))
   └────
+
+
+[tempel-collection] <https://github.com/Crandel/tempel-collection>
 
 
 3 Template file format
@@ -257,9 +256,9 @@ Table of Contents
     containing template when jumped to.
   • `r>' Acts like `r', but indent region.
   • `n>' Inserts a newline and indents.
-  • `&' Insert newline if there is only whitespace between line start
-    and point.
-  • `%' Insert newline if there is only whitespace between point and
+  • `&' Insert newline unless there is only whitespace between line
+    start and point.
+  • `%' Insert newline unless there is only whitespace between point and
     line end.
   • `o' Like `%' but leaves the point before newline.
   • `(s NAME)' Inserts a named field.
@@ -283,7 +282,36 @@ Table of Contents
   Use caution with templates which execute arbitrary code!
 
 
-5 Adding template sources
+5 Defining custom elements
+══════════════════════════
+
+  Tempel supports custom user elements via the configuration variable
+  `tempel-user-elements'. As a demonstration we add the element `(i
+  template)' to include templates by name in another template.
+
+  ┌────
+  │ (defun tempel-include (elt)
+  │   (when (eq (car-safe elt) 'i)
+  │     (if-let (template (alist-get (cadr elt) (tempel--templates)))
+  │ 	(cons 'l template)
+  │       (message "Template %s not found" (cadr elt))
+  │       nil)))
+  │ (add-to-list 'tempel-user-elements #'tempel-include)
+  └────
+
+  The following example templates uses the newly defined include
+  element.
+
+  ┌────
+  │ (header ";;; " (or (buffer-file-name) (buffer-name)) " -- " p
+  │ 	" -*- lexical-binding: t -*-" n n)
+  │ (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
+  │ 	 ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name))) " ends here" n)
+  │ (package (i header) r n n (i provide))
+  └────
+
+
+6 Adding template sources
 ═════════════════════════
 
   Tempel offers a flexible mechanism for providing the templates, which
@@ -307,7 +335,7 @@ Table of Contents
   └────
 
 
-6 Hooking into the Abbrev mechanism
+7 Hooking into the Abbrev mechanism
 ═══════════════════════════════════
 
   Tempel can hook into Abbrev by enabling the `tempel-abbrev-mode' in a
@@ -316,7 +344,7 @@ Table of Contents
   to `C-x ''.
 
 
-7 Binding important templates to a key
+8 Binding important templates to a key
 ══════════════════════════════════════
 
   Important templates can be bound to a key with the small utility macro
@@ -340,20 +368,20 @@ Table of Contents
 [general] <https://github.com/noctuid/general>
 
 
-8 Alternatives
+9 Alternatives
 ══════════════
 
-  Tempel does not come with readily available snippet collections,
-  unlike the YASnippet library. Try Tempel if you like small and simple
+  There are plenty of alternative packages which provide abbreviation or
+  snippet expansion. Try Tempel if you like small and simple
   packages. With Tempel you write your templates in Lisp syntax, which
   from my perspective fits well to the hackable nature of Emacs. Tempel
   took inspiration from the [Tempo-Snippets] package by Nikolaj
   Schumacher ([GitHub link]).
 
-  There are plenty of alternative packages which provide abbreviation or
-  snippet expansion.
+  List of alternatives (built-in or separate packages):
 
   • abbrev.el: Abbreviation expansion, builtin
+  • expand.el: Abbreviation expansion, builtin
   • skeleton.el: Lisp syntax for templates, builtin
   • tempo.el: Lisp syntax for templates, builtin
   • [aas.el]: Auto activating snippets
@@ -361,10 +389,10 @@ Table of Contents
   • [laas.el]: Latex auto activating snippets
   • [muban.el]: Lightweight template expansion
   • [placeholder.el]: Treat buffers as templates
-  • [skempo.el]: Unifies the Skeleton and Tempo configuration
-  • [snippet.el]: Original snippet mode
-  • [tempo-snippets.el]: snippet.el-like interface for Tempo
-  • [yasnippet.el]: The most popular template system
+  • [skempo.el]: Unifies Skeleton and Tempo configuration
+  • [snippet.el]: Original snippet mode, with inline expansion
+  • [tempo-snippets.el]: Interface like snippet.el for Tempo
+  • [yasnippet.el]: Template system inspired by Textmate snippets
 
 
 [Tempo-Snippets] <https://nschum.de/src/emacs/tempo-snippets/>
@@ -390,8 +418,8 @@ Table of Contents
 [yasnippet.el] <https://github.com/joaotavora/yasnippet>
 
 
-9 Contributions
-═══════════════
+10 Contributions
+════════════════
 
   Since this package is part of [GNU ELPA] contributions require a
   copyright assignment to the FSF.
