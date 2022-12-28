@@ -1,0 +1,11 @@
+(go-mode .
+	 [(20221227 2320)
+	  ((emacs
+	    (26 1)))
+	  "Major mode for the Go programming language" single
+	  ((:commit . "f03998154bbed359f1912284a49b598fef074406")
+	   (:authors
+	    ("The go-mode Authors"))
+	   (:maintainer "The go-mode Authors")
+	   (:keywords "languages" "go")
+	   (:url . "https://github.com/dominikh/go-mode.el"))])
