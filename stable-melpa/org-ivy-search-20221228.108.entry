@@ -1,0 +1,15 @@
+(org-ivy-search .
+		[(20221228 108)
+		 ((emacs
+		   (25 1))
+		  (ivy
+		   (0 10 0))
+		  (org
+		   (0 10 0)))
+		 "Full text search for org files powered by ivy" single
+		 ((:commit . "241d51acc76fc576fd975428c5d1768a33c18bb4")
+		  (:authors
+		   ("Huming Chen" . "chenhuming@gmail.com"))
+		  (:maintainer "Huming Chen" . "chenhuming@gmail.com")
+		  (:keywords "convenience" "tool" "org")
+		  (:url . "https://github.com/beacoder/org-ivy-search"))])
