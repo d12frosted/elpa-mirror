@@ -1,12 +1,12 @@
 ;;; counsel-tramp.el --- Tramp ivy interface for ssh, docker, vagrant -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2017-2019 by Masashı Mıyaura
+;; Copyright (C) 2017-2023 by Masashi Miyaura
 
-;; Author: Masashı Mıyaura
+;; Author: Masashi Miyaura
 ;; URL: https://github.com/masasam/emacs-counsel-tramp
-;; Package-Version: 20210518.1153
-;; Package-Commit: 76719eebb791920272c69e75e234f05a815bb5c2
-;; Version: 0.7.5
+;; Package-Version: 20221228.1403
+;; Package-Commit: f63bf0bc765480676094102013218254ea17727f
+;; Version: 0.7.6
 ;; Package-Requires: ((emacs "24.3") (counsel "0.10"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -27,6 +27,7 @@
 ;; counsel-tramp provides interfaces of Tramp
 ;; You can also use tramp with counsel interface as root
 ;; If you use it with docker-tramp, you can also use docker with counsel interface
+;; If you use Emacs version >= 29.0.60 then docker-tramp is no longer necessary as this functionality is built-in to Tramp.
 ;; If you use it with vagrant-tramp, you can also use vagrant with counsel interface
 
 ;;; Code:
@@ -156,7 +157,7 @@ Kill all remote buffers."
 	      (push
 	       (concat "/" counsel-tramp-default-method ":" hostuser "@" hostname "#" port "|sudo:root@" hostname ":/")
 	       hosts))))))
-    (when (and (require 'docker-tramp nil t) (ignore-errors (apply #'process-lines "pgrep" (list "-f" "docker"))))
+    (when (and (or (version<= "29.0.60" emacs-version) (require 'docker-tramp nil t)) (ignore-errors (apply #'process-lines "pgrep" (list "-f" "docker"))))
       (cl-loop for line in (cdr (ignore-errors (apply #'process-lines "docker" (list "ps"))))
 	       for info = (reverse (split-string line "[[:space:]]+" t))
 	       collect (progn (push
@@ -211,7 +212,7 @@ You can connect your server with tramp"
   (interactive)
   (unless (file-exists-p "~/.ssh/config")
     (error "There is no ~/.ssh/config"))
-  (when (require 'docker-tramp nil t)
+  (when (or (version<= "29.0.60" emacs-version) (require 'docker-tramp nil t))
     (unless (executable-find "docker")
       (error "'docker' is not installed")))
   (when (require 'vagrant-tramp nil t)

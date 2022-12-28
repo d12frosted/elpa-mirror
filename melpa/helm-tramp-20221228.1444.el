@@ -1,12 +1,12 @@
 ;;; helm-tramp.el --- Tramp helm interface for ssh, docker, vagrant -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2017-2019 by Masashı Mıyaura
+;; Copyright (C) 2017-2023 by Masashi Miyaura
 
-;; Author: Masashı Mıyaura
+;; Author: Masashi Miyaura
 ;; URL: https://github.com/masasam/emacs-helm-tramp
-;; Package-Version: 20190616.125
-;; Package-Commit: 924b5516270b3933e847562e8e14e3888dd24184
-;; Version: 1.3.9
+;; Package-Version: 20221228.1444
+;; Package-Commit: 10711393c05272112e1585dca87ebeb0ea5b114d
+;; Version: 1.3.10
 ;; Package-Requires: ((emacs "24.3") (helm "2.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -27,6 +27,7 @@
 ;; helm-tramp provides interfaces of Tramp
 ;; You can also use tramp with helm interface as root
 ;; If you use it with docker-tramp, you can also use docker with helm interface
+;; If you use Emacs version >= 29.0.60 then docker-tramp is no longer necessary as this functionality is built-in to Tramp
 ;; If you use it with vagrant-tramp, you can also use vagrant with helm interface
 
 ;;; Code:
@@ -156,7 +157,7 @@ Kill all remote buffers."
 	      (push
 	       (concat "/" helm-tramp-default-method ":" hostuser "@" hostname "#" port "|sudo:root@" hostname ":/")
 	       hosts))))))
-    (when (require 'docker-tramp nil t)
+    (when (and (or (version<= "29.0.60" emacs-version) (require 'docker-tramp nil t)) (ignore-errors (apply #'process-lines "pgrep" (list "-f" "docker"))))
       (cl-loop for line in (cdr (ignore-errors (apply #'process-lines "docker" (list "ps"))))
 	       for info = (reverse (split-string line "[[:space:]]+" t))
 	       collect (progn (push
@@ -228,7 +229,7 @@ You can connect your server with tramp"
   (interactive)
   (unless (file-exists-p "~/.ssh/config")
     (error "There is no ~/.ssh/config"))
-  (when (require 'docker-tramp nil t)
+  (when (or (version<= "29.0.60" emacs-version) (require 'docker-tramp nil t))
     (unless (executable-find "docker")
       (error "'docker' is not installed")))
   (when (require 'vagrant-tramp nil t)

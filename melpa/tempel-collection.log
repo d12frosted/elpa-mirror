@@ -3,24 +3,27 @@ Fetcher: github
 Source:  https://github.com/Crandel/tempel-collection.git
 
 Updating /mnt/store/melpa/working/tempel-collection/
-Checking out cd9529b2a2fdfd49010117d2a1fc49adf9725051
+Checking out 4a49cebd0be30115f132a217b00bd0d55d58daa6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tempel-collection/
-  to /tmp/tempel-collectionpZWDkQ/tempel-collection-20221220.637
+  to /tmp/tempel-collectionr1nzEq/tempel-collection-20221228.1347
     tempel-collection.el -> tempel-collection.el
     templates => templates
-Created tempel-collection-20221220.637.tar containing:
-  tempel-collection-20221220.637/
-  tempel-collection-20221220.637/tempel-collection-pkg.el
-  tempel-collection-20221220.637/tempel-collection.el
-  tempel-collection-20221220.637/templates/
-  tempel-collection-20221220.637/templates/emacs-lisp.eld
-  tempel-collection-20221220.637/templates/fundamental.eld
-  tempel-collection-20221220.637/templates/go.eld
-  tempel-collection-20221220.637/templates/org.eld
-  tempel-collection-20221220.637/templates/rust.eld
-  tempel-collection-20221220.637/templates/sh.eld
-Built tempel-collection in 6.120s, finished at 2022-12-28T11:47:22+0000
+Created tempel-collection-20221228.1347.tar containing:
+  tempel-collection-20221228.1347/
+  tempel-collection-20221228.1347/tempel-collection-pkg.el
+  tempel-collection-20221228.1347/tempel-collection.el
+  tempel-collection-20221228.1347/templates/
+  tempel-collection-20221228.1347/templates/emacs-lisp.eld
+  tempel-collection-20221228.1347/templates/fundamental.eld
+  tempel-collection-20221228.1347/templates/go.eld
+  tempel-collection-20221228.1347/templates/java.eld
+  tempel-collection-20221228.1347/templates/org.eld
+  tempel-collection-20221228.1347/templates/rust.eld
+  tempel-collection-20221228.1347/templates/sh.eld
+Built tempel-collection in 4.389s, finished at 2022-12-28T15:27:14+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 544 Dec 28 11:47 packages/tempel-collection-20221220.637.entry
  20K -rw-r--r-- 1 root root 20K Dec 28 11:47 packages/tempel-collection-20221220.637.tar
+4.0K -rw-r--r-- 1 root root 545 Dec 28 15:27 packages/tempel-collection-20221228.1347.entry
+ 20K -rw-r--r-- 1 root root 20K Dec 28 15:27 packages/tempel-collection-20221228.1347.tar
