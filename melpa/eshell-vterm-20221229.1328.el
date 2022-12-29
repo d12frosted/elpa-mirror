@@ -4,8 +4,8 @@
 ;; Maintainer: Illia Ostapyshyn <ilya.ostapyshyn@gmail.com>
 ;; Created: 2021-06-29
 ;; Version: 0.1
-;; Package-Version: 20220506.1212
-;; Package-Commit: 4e8589fcaf6243011a76b4816e7689d913927aab
+;; Package-Version: 20221229.1328
+;; Package-Commit: e96c30ad5e7d63b778fc3232e81b090b63b13277
 ;; Package-Requires: ((emacs "27.1") (vterm "0.0.1"))
 ;; Keywords: eshell, vterm, terminals, shell, visual, tools, processes
 ;; URL: https://github.com/iostapyshyn/eshell-vterm
@@ -49,11 +49,13 @@ allowed.  In case ARGS is nil, a new VTerm session is created."
              (args (flatten-tree
                     (eshell-stringify-list (append (cdr interp)
                                                    (cdr args)))))
-             (args (mapconcat #'identity args " "))
+             (args (mapconcat #'shell-quote-argument args " "))
              (term-buf (generate-new-buffer
                         (concat "*" (file-name-nondirectory program) "*")))
              (eshell-buf (current-buffer))
-             (vterm-shell (concat (file-local-name program) " " args)))
+             (vterm-shell (concat (shell-quote-argument
+                                   (file-local-name program))
+                                  " " args)))
         (save-current-buffer
           (switch-to-buffer term-buf)
           (vterm-mode)

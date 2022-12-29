@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/brotzeit/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
-Checking out 6f5324903bb3e4f716fe04a3ea766614390ef918
+Checking out 492372435444ebe358c6157bd42d7eb792d4c66d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rustic/
-  to /tmp/rusticMkcTLk/rustic-20221229.950
+  to /tmp/rusticlffvAN/rustic-20221229.1543
     rustic-babel.el -> rustic-babel.el
     rustic-cargo.el -> rustic-cargo.el
     rustic-clippy.el -> rustic-clippy.el
@@ -17,36 +17,36 @@ Copying files (->) and directories (=>)
     rustic-flycheck.el -> rustic-flycheck.el
     rustic-interaction.el -> rustic-interaction.el
     rustic-lsp.el -> rustic-lsp.el
-    rustic-playpen.el -> rustic-playpen.el
+    rustic-playground.el -> rustic-playground.el
     rustic-popup.el -> rustic-popup.el
     rustic-racer.el -> rustic-racer.el
     rustic-rustfix.el -> rustic-rustfix.el
     rustic-rustfmt.el -> rustic-rustfmt.el
     rustic-spellcheck.el -> rustic-spellcheck.el
     rustic.el -> rustic.el
-Created rustic-20221229.950.tar containing:
-  rustic-20221229.950/
-  rustic-20221229.950/rustic-babel.el
-  rustic-20221229.950/rustic-cargo.el
-  rustic-20221229.950/rustic-clippy.el
-  rustic-20221229.950/rustic-comint.el
-  rustic-20221229.950/rustic-compile.el
-  rustic-20221229.950/rustic-doc.el
-  rustic-20221229.950/rustic-expand.el
-  rustic-20221229.950/rustic-flycheck.el
-  rustic-20221229.950/rustic-interaction.el
-  rustic-20221229.950/rustic-lsp.el
-  rustic-20221229.950/rustic-pkg.el
-  rustic-20221229.950/rustic-playpen.el
-  rustic-20221229.950/rustic-popup.el
-  rustic-20221229.950/rustic-racer.el
-  rustic-20221229.950/rustic-rustfix.el
-  rustic-20221229.950/rustic-rustfmt.el
-  rustic-20221229.950/rustic-spellcheck.el
-  rustic-20221229.950/rustic.el
-Built rustic in 5.236s, finished at 2022-12-29T13:38:20+0000
+Created rustic-20221229.1543.tar containing:
+  rustic-20221229.1543/
+  rustic-20221229.1543/rustic-babel.el
+  rustic-20221229.1543/rustic-cargo.el
+  rustic-20221229.1543/rustic-clippy.el
+  rustic-20221229.1543/rustic-comint.el
+  rustic-20221229.1543/rustic-compile.el
+  rustic-20221229.1543/rustic-doc.el
+  rustic-20221229.1543/rustic-expand.el
+  rustic-20221229.1543/rustic-flycheck.el
+  rustic-20221229.1543/rustic-interaction.el
+  rustic-20221229.1543/rustic-lsp.el
+  rustic-20221229.1543/rustic-pkg.el
+  rustic-20221229.1543/rustic-playground.el
+  rustic-20221229.1543/rustic-popup.el
+  rustic-20221229.1543/rustic-racer.el
+  rustic-20221229.1543/rustic-rustfix.el
+  rustic-20221229.1543/rustic-rustfmt.el
+  rustic-20221229.1543/rustic-spellcheck.el
+  rustic-20221229.1543/rustic.el
+Built rustic in 5.441s, finished at 2022-12-29T17:21:54+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  478 Dec 29 09:46 packages/rustic-20221228.1123.entry
-212K -rw-r--r-- 1 root root 210K Dec 29 09:46 packages/rustic-20221228.1123.tar
+4.0K -rw-r--r-- 1 root root  478 Dec 29 17:21 packages/rustic-20221229.1543.entry
+212K -rw-r--r-- 1 root root 210K Dec 29 17:21 packages/rustic-20221229.1543.tar
 4.0K -rw-r--r-- 1 root root  477 Dec 29 13:38 packages/rustic-20221229.950.entry
 212K -rw-r--r-- 1 root root 210K Dec 29 13:38 packages/rustic-20221229.950.tar
