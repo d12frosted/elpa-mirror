@@ -4,9 +4,9 @@
 ;; Description: Recurring org-mode tasks.
 ;; Author:      Marcin Swieczkowski <marcin.swieczkowski@gmail.com>
 ;; Created:     Fri Feb 15 2019
-;; Version:     1.3.1
-;; Package-Version: 20221227.1042
-;; Package-Commit: 9ad0ea553713f9da3db790afe28f50cfc4a06be6
+;; Version:     1.3.2
+;; Package-Version: 20221229.1101
+;; Package-Commit: fa2a37d50229346929fa70b56c9d7cc34bc628ae
 ;; Package-Requires: ((emacs "24.1") (org "9.0"))
 ;; URL:         https://github.com/mrcnski/org-recur
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -214,13 +214,13 @@ Will reschedule, or optionally complete and archive, the task."
 (defun org-recur-agenda--turn-on ()
   "Highlight regexp in agenda."
   (org-recur--highlight-agenda)
-  (add-hook 'org-agenda-finalize-hook 'org-recur--highlight-agenda)
-  (add-hook 'org-agenda-mode-hook 'org-recur-agenda-mode))
+  (add-hook 'org-agenda-finalize-hook #'org-recur--highlight-agenda)
+  (add-hook 'org-agenda-mode-hook #'org-recur-agenda-mode))
 (defun org-recur-agenda--turn-off ()
   "Unhighlight regexp in agenda."
   (unhighlight-regexp org-recur--regexp)
-  (remove-hook 'org-agenda-finalize-hook 'org-recur--highlight-agenda)
-  (remove-hook 'org-agenda-mode-hook 'org-recur-agenda-mode))
+  (remove-hook 'org-agenda-finalize-hook #'org-recur--highlight-agenda)
+  (remove-hook 'org-agenda-mode-hook #'org-recur-agenda-mode))
 
 ;; Autoloads
 

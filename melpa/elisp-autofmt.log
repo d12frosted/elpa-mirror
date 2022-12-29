@@ -3,20 +3,22 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-elisp-autofmt.git
 
 Updating /mnt/store/melpa/working/elisp-autofmt/
-Checking out 685386cb3b2b2a988f325435c252f9ebbbbdc8c2
+Checking out 983ecc268719c423f6fd3608eee75f351419951e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elisp-autofmt/
-  to /tmp/elisp-autofmtOkdBjw/elisp-autofmt-20221228.1255
+  to /tmp/elisp-autofmtfrpj0u/elisp-autofmt-20221229.1127
     elisp-autofmt.el -> elisp-autofmt.el
     elisp-autofmt.py -> elisp-autofmt.py
     elisp-autofmt.overrides.json -> elisp-autofmt.overrides.json
-Created elisp-autofmt-20221228.1255.tar containing:
-  elisp-autofmt-20221228.1255/
-  elisp-autofmt-20221228.1255/elisp-autofmt-pkg.el
-  elisp-autofmt-20221228.1255/elisp-autofmt.el
-  elisp-autofmt-20221228.1255/elisp-autofmt.overrides.json
-  elisp-autofmt-20221228.1255/elisp-autofmt.py
-Built elisp-autofmt in 4.826s, finished at 2022-12-29T08:56:22+0000
+Created elisp-autofmt-20221229.1127.tar containing:
+  elisp-autofmt-20221229.1127/
+  elisp-autofmt-20221229.1127/elisp-autofmt-pkg.el
+  elisp-autofmt-20221229.1127/elisp-autofmt.el
+  elisp-autofmt-20221229.1127/elisp-autofmt.overrides.json
+  elisp-autofmt-20221229.1127/elisp-autofmt.py
+Built elisp-autofmt in 5.292s, finished at 2022-12-29T12:43:28+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  346 Dec 29 08:56 packages/elisp-autofmt-20221228.1255.entry
 120K -rw-r--r-- 1 root root 120K Dec 29 08:56 packages/elisp-autofmt-20221228.1255.tar
+4.0K -rw-r--r-- 1 root root  346 Dec 29 12:43 packages/elisp-autofmt-20221229.1127.entry
+120K -rw-r--r-- 1 root root 120K Dec 29 12:43 packages/elisp-autofmt-20221229.1127.tar
