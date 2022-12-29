@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/dgutov/mmm-mode.git
 
 Updating /mnt/store/melpa/working/mmm-mode/
-Checking out 8725cfc12bded653d52a6a223c4d34bec2b1d538
+Checking out 171bf6395b8a95a2d08d41fa38cc1799025d3916
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mmm-mode/
-  to /tmp/mmm-modeNaN2L7/mmm-mode-20221102.2236
+  to /tmp/mmm-modeOGB5CX/mmm-mode-20221228.1931
     mmm-auto.el -> mmm-auto.el
     mmm-class.el -> mmm-class.el
     mmm-cmds.el -> mmm-cmds.el
@@ -25,30 +25,32 @@ Copying files (->) and directories (=>)
     mmm-utils.el -> mmm-utils.el
     mmm-vars.el -> mmm-vars.el
     mmm.texi -> mmm.texi
-Generating /tmp/mmm-modeNaN2L7/mmm-mode-20221102.2236/mmm.info
-Created mmm-mode-20221102.2236.tar containing:
-  mmm-mode-20221102.2236/
-  mmm-mode-20221102.2236/dir
-  mmm-mode-20221102.2236/mmm-auto.el
-  mmm-mode-20221102.2236/mmm-class.el
-  mmm-mode-20221102.2236/mmm-cmds.el
-  mmm-mode-20221102.2236/mmm-compat.el
-  mmm-mode-20221102.2236/mmm-cweb.el
-  mmm-mode-20221102.2236/mmm-defaults.el
-  mmm-mode-20221102.2236/mmm-erb.el
-  mmm-mode-20221102.2236/mmm-mason.el
-  mmm-mode-20221102.2236/mmm-mode-pkg.el
-  mmm-mode-20221102.2236/mmm-mode.el
-  mmm-mode-20221102.2236/mmm-myghty.el
-  mmm-mode-20221102.2236/mmm-noweb.el
-  mmm-mode-20221102.2236/mmm-region.el
-  mmm-mode-20221102.2236/mmm-rpm.el
-  mmm-mode-20221102.2236/mmm-sample.el
-  mmm-mode-20221102.2236/mmm-univ.el
-  mmm-mode-20221102.2236/mmm-utils.el
-  mmm-mode-20221102.2236/mmm-vars.el
-  mmm-mode-20221102.2236/mmm.info
-Built mmm-mode in 17.721s, finished at 2022-12-28T18:40:36+0000
+Generating /tmp/mmm-modeOGB5CX/mmm-mode-20221228.1931/mmm.info
+Created mmm-mode-20221228.1931.tar containing:
+  mmm-mode-20221228.1931/
+  mmm-mode-20221228.1931/dir
+  mmm-mode-20221228.1931/mmm-auto.el
+  mmm-mode-20221228.1931/mmm-class.el
+  mmm-mode-20221228.1931/mmm-cmds.el
+  mmm-mode-20221228.1931/mmm-compat.el
+  mmm-mode-20221228.1931/mmm-cweb.el
+  mmm-mode-20221228.1931/mmm-defaults.el
+  mmm-mode-20221228.1931/mmm-erb.el
+  mmm-mode-20221228.1931/mmm-mason.el
+  mmm-mode-20221228.1931/mmm-mode-pkg.el
+  mmm-mode-20221228.1931/mmm-mode.el
+  mmm-mode-20221228.1931/mmm-myghty.el
+  mmm-mode-20221228.1931/mmm-noweb.el
+  mmm-mode-20221228.1931/mmm-region.el
+  mmm-mode-20221228.1931/mmm-rpm.el
+  mmm-mode-20221228.1931/mmm-sample.el
+  mmm-mode-20221228.1931/mmm-univ.el
+  mmm-mode-20221228.1931/mmm-utils.el
+  mmm-mode-20221228.1931/mmm-vars.el
+  mmm-mode-20221228.1931/mmm.info
+Built mmm-mode in 12.040s, finished at 2022-12-28T22:26:36+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  439 Dec 28 18:40 packages/mmm-mode-20221102.2236.entry
 312K -rw-r--r-- 1 root root 310K Dec 28 18:40 packages/mmm-mode-20221102.2236.tar
+4.0K -rw-r--r-- 1 root root  439 Dec 28 22:26 packages/mmm-mode-20221228.1931.entry
+312K -rw-r--r-- 1 root root 310K Dec 28 22:26 packages/mmm-mode-20221228.1931.tar

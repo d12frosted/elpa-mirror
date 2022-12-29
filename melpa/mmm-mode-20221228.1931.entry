@@ -1,11 +1,11 @@
 (mmm-mode .
-	  [(20221102 2236)
+	  [(20221228 1931)
 	   ((emacs
 	     (25 1))
 	    (cl-lib
 	     (0 2)))
 	   "Allow Multiple Major Modes in a buffer" tar
-	   ((:commit . "8725cfc12bded653d52a6a223c4d34bec2b1d538")
+	   ((:commit . "171bf6395b8a95a2d08d41fa38cc1799025d3916")
 	    (:authors
 	     ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
 	    (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")

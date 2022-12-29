@@ -3,28 +3,30 @@ Fetcher: github
 Source:  https://github.com/editorconfig/editorconfig-emacs.git
 
 Updating /mnt/store/melpa/working/editorconfig/
-Checking out ffd331da5f760723c09e8bc9dd45602a1f5ec488
+Checking out b8043702f3d977db0e030c6c64ee4a810cad5f45
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/editorconfig/
-  to /tmp/editorconfig3plxJy/editorconfig-20221223.124
+  to /tmp/editorconfig3hfK38/editorconfig-20221228.2146
     editorconfig-conf-mode.el -> editorconfig-conf-mode.el
     editorconfig-core-handle.el -> editorconfig-core-handle.el
     editorconfig-core.el -> editorconfig-core.el
     editorconfig-fnmatch.el -> editorconfig-fnmatch.el
     editorconfig.el -> editorconfig.el
   ! doc/editorconfig.texi -> editorconfig.texi
-Generating /tmp/editorconfig3plxJy/editorconfig-20221223.124/editorconfig.info
-Created editorconfig-20221223.124.tar containing:
-  editorconfig-20221223.124/
-  editorconfig-20221223.124/dir
-  editorconfig-20221223.124/editorconfig-conf-mode.el
-  editorconfig-20221223.124/editorconfig-core-handle.el
-  editorconfig-20221223.124/editorconfig-core.el
-  editorconfig-20221223.124/editorconfig-fnmatch.el
-  editorconfig-20221223.124/editorconfig-pkg.el
-  editorconfig-20221223.124/editorconfig.el
-  editorconfig-20221223.124/editorconfig.info
-Built editorconfig in 10.250s, finished at 2022-12-28T18:07:56+0000
+Generating /tmp/editorconfig3hfK38/editorconfig-20221228.2146/editorconfig.info
+Created editorconfig-20221228.2146.tar containing:
+  editorconfig-20221228.2146/
+  editorconfig-20221228.2146/dir
+  editorconfig-20221228.2146/editorconfig-conf-mode.el
+  editorconfig-20221228.2146/editorconfig-core-handle.el
+  editorconfig-20221228.2146/editorconfig-core.el
+  editorconfig-20221228.2146/editorconfig-fnmatch.el
+  editorconfig-20221228.2146/editorconfig-pkg.el
+  editorconfig-20221228.2146/editorconfig.el
+  editorconfig-20221228.2146/editorconfig.info
+Built editorconfig in 9.026s, finished at 2022-12-28T21:51:20+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  426 Dec 28 18:07 packages/editorconfig-20221223.124.entry
 100K -rw-r--r-- 1 root root 100K Dec 28 18:07 packages/editorconfig-20221223.124.tar
+4.0K -rw-r--r-- 1 root root  427 Dec 28 21:51 packages/editorconfig-20221228.2146.entry
+100K -rw-r--r-- 1 root root 100K Dec 28 21:51 packages/editorconfig-20221228.2146.tar

@@ -105,7 +105,23 @@ To get the most out of Eat, you should also setup shell integration.
   └────
 
 
-2.3 Manual
+2.3 Straight.el
+───────────────
+
+  ┌────
+  │ (straight-use-package
+  │  '(eat :type git
+  │        :host codeberg
+  │        :repo "akib/emacs-eat"
+  │        :files ("*.el" ("term" "term/*.el") "*.texi"
+  │ 	       "*.ti" ("terminfo/e" "terminfo/e/*")
+  │ 	       ("terminfo/65" "terminfo/65/*")
+  │ 	       ("integration" "integration/*")
+  │ 	       (:exclude ".dir-locals.el" "*-tests.el"))))
+  └────
+
+
+2.4 Manual
 ──────────
 
   Clone the repository and put it in your `load-path'.

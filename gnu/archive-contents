@@ -1381,13 +1381,14 @@
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:url . "http://elpa.gnu.org/packages/gnu-elpa.html"))])
  (gnu-elpa-keyring-update .
-			  [(2019 3)
+			  [(2022 12)
 			   nil "Update Emacs's GPG keyring for GNU ELPA" tar
-			   ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
+			   ((:keywords "maint" "tools")
+			    (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
 			    (:authors
 			     ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-			    (:keywords "maint" "tools")
-			    (:url . "http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html"))])
+			    (:url . "https://elpa.gnu.org/packages/gnu-elpa-keyring-update.html")
+			    (:commit . "685192692f809e3d8c336e27170a2b819925202f"))])
  (gnugo .
 	[(3 1 2)
 	 ((ascii-art-to-unicode
