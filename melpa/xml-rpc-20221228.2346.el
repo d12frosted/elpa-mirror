@@ -9,8 +9,8 @@
 ;; Maintainer: Mark A. Hershberger <mah@everybody.org>
 ;; Original Author: Daniel Lundin <daniel@codefactory.se>
 ;; Version: 1.6.16
-;; Package-Version: 20221027.1812
-;; Package-Commit: de58ee692a459d7e0e8d3df004eda2686f749d3f
+;; Package-Version: 20221228.2346
+;; Package-Commit: 8272789df8a4deab4de7d50e63b73b7d0543bc7f
 ;; Created: May 13 2001
 ;; Keywords: xml rpc network comm
 ;; Package-Requires: ((emacs "24.1"))
@@ -362,7 +362,7 @@ functions in xml.el."
 
 (defsubst xml-rpc-response-errorp (response)
   "An `xml-rpc-method-call' result value is always a list, where the first
-element in RESPONSE is either nil or if an error occured, a cons pair
+element in RESPONSE is either nil or if an error occurred, a cons pair
 according to (errnum . \"Error string\")."
   (eq 'fault (car-safe (caddar response))))
 
@@ -412,7 +412,7 @@ the parsed XML response is returned."
 
 If ASYNC-CALLBACK-FUNCTION is non-nil, the request will be performed
 asynchronously and ASYNC-CALLBACK-FUNCTION should be a callback function to
-be called when the reuest is finished.  ASYNC-CALLBACK-FUNCTION is called with
+be called when the request is finished.  ASYNC-CALLBACK-FUNCTION is called with
 a single argument being an xml.el style XML list.
 
 It returns an XML list containing the method response from the XML-RPC server,
@@ -510,7 +510,7 @@ or nil if called with ASYNC-CALLBACK-FUNCTION."
          ((listp elem)
           (setq result (append result (list (xml-rpc-clean elem)))))
 
-         ;; everthing else, as is.
+         ;; everything else, as is.
          (t
           (setq result (append result (list elem))))))
       result))
