@@ -3,8 +3,8 @@
 ;; Author: Jessie Hildebrandt <jessieh.net>
 ;; Homepage: https://gitlab.com/jessieh/adwaita-dark-theme
 ;; Keywords: mode-line faces
-;; Package-Version: 20221222.1215
-;; Package-Commit: 40a375c8b86b58dddcd95e8dc654f127a6a3b910
+;; Package-Version: 20221229.632
+;; Package-Commit: d63e6665567b39d33ef11b6d8b89e59f72e074e2
 ;; Version: 1.1.0
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -732,6 +732,7 @@
    `(paren-face-no-match ((,class (:inherit show-paren-mismatch))))
 
    ;; mood-line
+   `(mood-line-buffer-status-narrowed ((,class (:foreground ,base-7))))
    `(mood-line-status-info ((,class (:foreground ,teal))))
 
    ;; multiple-cursors

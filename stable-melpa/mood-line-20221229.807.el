@@ -3,9 +3,9 @@
 ;; Author: Jessie Hildebrandt <jessieh.net>
 ;; Homepage: https://gitlab.com/jessieh/mood-line
 ;; Keywords: mode-line faces
-;; Package-Version: 20221222.1122
-;; Package-Commit: 1943158fc9fe5838f02e619039fa7b05cf118f8c
-;; Version: 2.0.0
+;; Package-Version: 20221229.807
+;; Package-Commit: c30d6e79c56ab07e58d7a82528864638c6e936dd
+;; Version: 2.1.0
 ;; Package-Requires: ((emacs "25.1"))
 
 ;; This file is not part of GNU Emacs.
@@ -50,6 +50,13 @@
 ;; Byte-compiler declarations
 ;;
 ;; -------------------------------------------------------------------------- ;;
+
+;; ---------------------------------- ;;
+;; Compile time requirements
+;; ---------------------------------- ;;
+
+(eval-when-compile
+  (require 'flymake))
 
 ;; ---------------------------------- ;;
 ;; External variable defs
@@ -267,7 +274,22 @@ The `Face' may be either a face symbol or a property list of key-value pairs
 
 (defface mood-line-buffer-name
   '((t (:inherit (mode-line-buffer-id))))
-  "Face used for the `buffer-name'."
+  "Face used for displaying the value of `buffer-name'."
+  :group 'mood-line-faces)
+
+(defface mood-line-buffer-status-modified
+  '((t (:inherit (error) :weight normal)))
+  "Face used for the ':buffer-modified' buffer status indicator."
+  :group 'mood-line-faces)
+
+(defface mood-line-buffer-status-read-only
+  '((t (:inherit (shadow) :weight normal)))
+  "Face used for the ':buffer-read-only' buffer status indicator."
+  :group 'mood-line-faces)
+
+(defface mood-line-buffer-status-narrowed
+  '((t (:inherit (font-lock-doc-face) :weight normal)))
+  "Face used for the ':buffer-narrowed' buffer status indicator."
   :group 'mood-line-faces)
 
 (defface mood-line-major-mode
@@ -305,10 +327,11 @@ The `Face' may be either a face symbol or a property list of key-value pairs
   "Face used for less important mode line elements."
   :group 'mood-line-faces)
 
-(defface mood-line-modified
-  '((t (:inherit (error) :weight normal)))
-  "Face used for the ':buffer-modified' indicator."
-  :group 'mood-line-faces)
+;; ---------------------------------- ;;
+;; Obsolete faces
+;; ---------------------------------- ;;
+
+(define-obsolete-face-alias 'mood-line-modified 'mood-line-buffer-status-modified "2.1.0")
 
 ;; -------------------------------------------------------------------------- ;;
 ;;
@@ -695,26 +718,32 @@ Checkers checked, in order: `flycheck', `flymake'."
 ;; ---------------------------------- ;;
 
 (defun mood-line-segment-buffer-status ()
-  "Return an indicator for buffer status."
-  (if (buffer-file-name)
-      (concat (cond
-               ((and (buffer-modified-p)
-                     (buffer-narrowed-p))
+  "Return an indicator representing the status of the current buffer."
+  (concat (if (buffer-file-name (buffer-base-buffer))
+              (cond
+               ((and (buffer-narrowed-p)
+                     (buffer-modified-p))
                 (propertize (mood-line--get-glyph :buffer-narrowed)
-                            'face 'mood-line-modified))
+                            'face 'mood-line-buffer-status-modified))
+               ((and (buffer-narrowed-p)
+                     buffer-read-only)
+                (propertize (mood-line--get-glyph :buffer-narrowed)
+                            'face 'mood-line-buffer-status-read-only))
+               ((buffer-narrowed-p)
+                (propertize (mood-line--get-glyph :buffer-narrowed)
+                            'face 'mood-line-buffer-status-narrowed))
                ((buffer-modified-p)
                 (propertize (mood-line--get-glyph :buffer-modified)
-                            'face 'mood-line-modified))
-               ((or buffer-read-only
-                    (buffer-narrowed-p))
-                (propertize (mood-line--get-glyph :buffer-narrowed)
-                            'face 'mood-line-unimportant))
+                            'face 'mood-line-buffer-status-modified))
                (buffer-read-only
                 (propertize (mood-line--get-glyph :buffer-read-only)
-                            'face 'mood-line-unimportant))
+                            'face 'mood-line-buffer-status-read-only))
                (t " "))
-              " ")
-    "  "))
+            (if (buffer-narrowed-p)
+                (propertize (mood-line--get-glyph :buffer-narrowed)
+                            'face 'mood-line-buffer-status-narrowed)
+              " "))
+          " "))
 
 ;; ---------------------------------- ;;
 ;; Buffer name segment
@@ -730,7 +759,7 @@ Checkers checked, in order: `flycheck', `flymake'."
 ;; ---------------------------------- ;;
 
 (defun mood-line-segment-cursor-position ()
-  "Display the current cursor position."
+  "Display the position of the cursor in the current buffer."
   (concat "%l:%c"
           (when mood-line-show-cursor-point
             (propertize (format ":%d" (point))
@@ -743,8 +772,9 @@ Checkers checked, in order: `flycheck', `flymake'."
 ;; ---------------------------------- ;;
 
 (defun mood-line-segment-eol ()
-  "Display the EOL style of the current buffer."
-  (when mood-line-show-eol-style
+  "Display the EOL type for the coding system of the current buffer."
+  (when (and mood-line-show-eol-style
+             buffer-file-coding-system)
     (pcase (coding-system-eol-type buffer-file-coding-system)
       (0 "LF  ")
       (1 "CRLF  ")
@@ -755,15 +785,16 @@ Checkers checked, in order: `flycheck', `flymake'."
 ;; ---------------------------------- ;;
 
 (defun mood-line-segment-encoding ()
-  "Display the encoding and EOL style of the buffer."
-  (when mood-line-show-encoding-information
-    (concat (let ((sys (coding-system-plist buffer-file-coding-system)))
+  "Display the name of the coding system of the current buffer."
+  (when (and mood-line-show-encoding-information
+             buffer-file-coding-system)
+    (concat (let ((coding-system (coding-system-plist buffer-file-coding-system)))
               (cond
-               ((memq (plist-get sys :category)
+               ((memq (plist-get coding-system :category)
                       '(coding-category-undecided coding-category-utf-8))
                 "UTF-8")
                (t
-                (upcase (symbol-name (plist-get sys :name))))))
+                (upcase (symbol-name (plist-get coding-system :name))))))
             "  ")))
 
 ;; ---------------------------------- ;;
