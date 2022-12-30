@@ -3,3 +3,34 @@ Fetcher: github
 Source:  https://github.com/hlolli/csound-mode.git
 
 Updating /mnt/store/melpa/working/csound-mode/
+Checking out b68ab01fd95c84a19c0a23d7e326d1031c418025
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/csound-mode/
+  to /tmp/csound-modeS8Ve9Q/csound-mode-20221229.2346
+    csound-eldoc.el -> csound-eldoc.el
+    csound-font-lock.el -> csound-font-lock.el
+    csound-indentation.el -> csound-indentation.el
+    csound-mode.el -> csound-mode.el
+    csound-opcodes.el -> csound-opcodes.el
+    csound-repl-interaction.el -> csound-repl-interaction.el
+    csound-repl.el -> csound-repl.el
+    csound-score.el -> csound-score.el
+    csound-skeleton.el -> csound-skeleton.el
+    csound-util.el -> csound-util.el
+Created csound-mode-20221229.2346.tar containing:
+  csound-mode-20221229.2346/
+  csound-mode-20221229.2346/csound-eldoc.el
+  csound-mode-20221229.2346/csound-font-lock.el
+  csound-mode-20221229.2346/csound-indentation.el
+  csound-mode-20221229.2346/csound-mode-pkg.el
+  csound-mode-20221229.2346/csound-mode.el
+  csound-mode-20221229.2346/csound-opcodes.el
+  csound-mode-20221229.2346/csound-repl-interaction.el
+  csound-mode-20221229.2346/csound-repl.el
+  csound-mode-20221229.2346/csound-score.el
+  csound-mode-20221229.2346/csound-skeleton.el
+  csound-mode-20221229.2346/csound-util.el
+Built csound-mode in 5.083s, finished at 2022-12-30T03:34:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  486 Dec 30 03:34 packages/csound-mode-20221229.2346.entry
+332K -rw-r--r-- 1 root root 330K Dec 30 03:34 packages/csound-mode-20221229.2346.tar
