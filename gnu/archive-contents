@@ -2541,14 +2541,15 @@
 	   ((:url . "https://elpa.gnu.org/packages/project.html")
 	    (:commit . "04b7e01885db04e0512f5a5519ad2ac5b3dd2180"))])
  (psgml .
-	[(1 3 4)
+	[(1 3 5)
 	 nil "SGML-editing mode with parsing support" tar
-	 ((:maintainer "Lennart Staflin" . "lstaflin@gmail.com")
+	 ((:keywords "languages")
+	  (:maintainer "Lennart Staflin" . "lstaflin@gmail.com")
 	  (:authors
 	   ("Lennart Staflin" . "lenst@lysator.liu.se")
 	   ("James Clark" . "jjc@clark.com"))
-	  (:keywords "languages")
-	  (:url . "http://elpa.gnu.org/packages/psgml.html"))])
+	  (:url . "https://elpa.gnu.org/packages/psgml.html")
+	  (:commit . "697fcf7d80513257d90b7331297495bb9e01003d"))])
  (pspp-mode .
 	    [(1 1)
 	     nil "Major mode for editing PSPP files" single

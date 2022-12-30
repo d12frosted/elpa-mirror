@@ -3,8 +3,18 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jessieh/mood-line.git
 
 Updating /mnt/store/melpa/working/mood-line/
-Checking out c30d6e79c56ab07e58d7a82528864638c6e936dd
-Built mood-line in 4.634s, finished at 2022-12-30T00:32:29+0000
+Checking out e42ee24e236d470c930179b6af5f15d6a0aab9f8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mood-line/
+  to /tmp/mood-linelP1sYx/mood-line-20221230.600
+    mood-line-segment-indentation.el -> mood-line-segment-indentation.el
+    mood-line.el -> mood-line.el
+Created mood-line-20221230.600.tar containing:
+  mood-line-20221230.600/
+  mood-line-20221230.600/mood-line-pkg.el
+  mood-line-20221230.600/mood-line-segment-indentation.el
+  mood-line-20221230.600/mood-line.el
+Built mood-line in 6.837s, finished at 2022-12-30T11:40:40+0000
  ✓ Success:
- 36K -rw-r--r-- 1 root root 34K Dec 30 00:32 packages/mood-line-20221229.807.el
-4.0K -rw-r--r-- 1 root root 394 Dec 30 00:32 packages/mood-line-20221229.807.entry
+4.0K -rw-r--r-- 1 root root 391 Dec 30 11:40 packages/mood-line-20221230.600.entry
+ 52K -rw-r--r-- 1 root root 50K Dec 30 11:40 packages/mood-line-20221230.600.tar

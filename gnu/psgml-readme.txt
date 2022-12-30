@@ -7,7 +7,7 @@ This is an ALPHA release.
 
 ** Catalog files now can contain SYSTEM and OVERRIDE 
 as per OASIS Technical Resolution 9401:1997 
-<http://www.oasis-open.org/specs/a401.htm>
+<https://www.oasis-open.org/specs/a401.htm>
 
   SYSTEM sysid file
 
