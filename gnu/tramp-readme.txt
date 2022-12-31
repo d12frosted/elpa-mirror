@@ -1,4 +1,4 @@
-Installing TRAMP via GNU ELPA
+Installing Tramp via GNU ELPA
 *****************************
 
 Tramp stands for "Transparent Remote (file) Access, Multiple Protocol".
@@ -22,11 +22,11 @@ installed with, you must recompile the package:
 
    * Remove all byte-compiled Tramp files
 
-          $ rm -f ~/.emacs.d/elpa/tramp-2.5.4/tramp*.elc
+          $ rm -f ~/.emacs.d/elpa/tramp-2.6.0/tramp*.elc
 
    * Start Emacs with Tramp's source files
 
-          $ emacs -L ~/.emacs.d/elpa/tramp-2.5.4 -l tramp
+          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.0 -l tramp
 
      This should not give you the error.
 
