@@ -4,8 +4,8 @@
 
 ;; Author: ksqsf <i@ksqsf.moe>
 ;; URL: https://github.com/ksqsf/pest-mode
-;; Package-Version: 20221230.1443
-;; Package-Commit: 4a367a0fb9f9ac9cff8b1798335f6248d4cb3467
+;; Package-Version: 20221231.15
+;; Package-Commit: 8023a92ce59c34dcd1587cbd85ed144f206ddb89
 ;; Keywords: languages
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.3"))
@@ -101,7 +101,8 @@
       (back-to-indentation)
       (let* ((ppss (syntax-ppss))
              (depth (car ppss))
-             (paren-start-pos (cadr ppss))
+             (paren-start-pos (or (cadr ppss)
+                                  (line-beginning-position)))
              (base (* 4 depth))
              (rule-sep-limit (max paren-start-pos (line-beginning-position)))
              (rule-sep (save-excursion
