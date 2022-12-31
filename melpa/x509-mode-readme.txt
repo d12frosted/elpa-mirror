@@ -25,3 +25,10 @@ Use C-u prefix with any command for editing the command arguments.
 
 When in a x509 buffer, use keys `e' and `t' to edit current command or
 toggle between x509-asn1-mode and x509-mode respectively.
+
+In `x509-asn1-mode', keys `d' and `s' does asn1parse -offset (mnemonic
+"down")
+or -strparse.  `u' undoes the last `d' or `s'.
+
+Also in `x509-asn1-mode', key `x' displays a buffer in `hexl-mode' that
+follows the current line in the asn1 buffer.  Inspired by `rmsbolt-mode'.
