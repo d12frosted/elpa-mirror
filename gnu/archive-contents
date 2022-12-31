@@ -345,7 +345,7 @@
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
  (cape .
-       [(0 11)
+       [(0 12)
 	((emacs
 	  (27 1)))
 	"Completion At Point Extensions" tar
@@ -353,7 +353,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "8962e15381682544b268afd032661101692a3cd2"))])
+	 (:commit . "0bbe3620d6b04f07124b6cde3d979252bdc5782d"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -2290,7 +2290,7 @@
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:keywords "convenience" "text" "org"))])
  (org-modern .
-	     [(0 6)
+	     [(0 7)
 	      ((emacs
 		(27 1)))
 	      "Modern looks for Org" tar
@@ -2298,7 +2298,7 @@
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "e87ca8a9ec45fcfa2556028aa9feffb7bc3aecee"))])
+	       (:commit . "c9c0c5135a66382f55681bc84f3a2658a7c8ac76"))])
  (org-notify .
 	     [(0 1 0)
 	      ((emacs
@@ -2382,7 +2382,7 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(0 8)
+      [(0 9)
        ((emacs
 	 (27 1)))
        "OpenStreetMap viewer" tar
@@ -2390,7 +2390,7 @@
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "563d9646b1f8df37cefcec5d51d20249eba407da"))])
+	(:commit . "7a7be6ce999a9abd5d2e6a90f21d9626c73880c5"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs

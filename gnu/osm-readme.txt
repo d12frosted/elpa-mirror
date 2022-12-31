@@ -3,6 +3,15 @@
 	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
+Osm.el is a tile-based map viewer, with a responsive movable and
+zoomable display. The map can be controlled with the keyboard or with
+the mouse. The viewer fetches the map tiles in parallel from tile
+servers via the `curl' program.  The package comes with a list of
+multiple preconfigured tile servers. You can bookmark your favorite
+locations using regular Emacs bookmarks or create links from Org files
+to locations. Furthermore the package provides commands to search for
+locations by name and to open and display GPX tracks.
+
 Table of Contents
 ─────────────────
 
@@ -14,33 +23,10 @@ Table of Contents
 6. Contributions
 
 
-<https://github.com/minad/osm/blob/screenshots/osm.png?raw=true> The map
-data is © [OpenStreetMap] contributors, licensed under the [ODbL] The
-map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
-
-Osm.el is a tile-based map viewer, with a responsive moveable and
-zoomable display. The map can be controlled with the keyboard or with
-the mouse. The viewer fetches the map tiles in parallel from tile
-servers via the `curl' program.  The package comes with a list of
-multiple preconfigured tile servers. You can bookmark your favorite
-locations using regular Emacs bookmarks or create links from Org files
-to locations. Furthermore the package provides commands to search for
-locations by name and to open and display GPX tracks.
-
-
-[OpenStreetMap] <https://www.openstreetmap.org/copyright>
-
-[ODbL] <https://opendatacommons.org/licenses/odbl/>
-
-[OpenTopoMap] <https://opentopomap.org/about>
-
-[CC-BY-SA.] <https://creativecommons.org/licenses/by-sa/3.0/>
-
-
 1 Features
 ══════════
 
-  • Responsive, zoomable and moveable map display
+  • Responsive, zoomable and movable map display
   • Display of tracks and POIs from GPX file
   • Parallel fetching of tiles with curl
   • Moving in large and small steps
@@ -57,11 +43,11 @@ locations by name and to open and display GPX tracks.
 ═══════════════
 
   The package is available on GNU ELPA and can be installed with
-  `package-install'.  Note that osm.el requires Emacs 27 and depends on
-  the external `curl' program.  Emacs must be built with libxml,
-  libjansson, librsvg, libjpeg and libpng support. The following is an
-  example configuration which relies on `use-package'.  Please take a
-  look at the [wiki] for additional configuration.
+  `package-install'.  Note that Osm.el requires Emacs 27 and depends on
+  the external `curl' program.  Emacs must be built with `libxml',
+  `libjansson', `librsvg', `libjpeg' and `libpng' support. The following
+  is an example configuration which relies on `use-package'.  Please
+  take a look at the [wiki] for additional configuration.
 
   ┌────
   │ (use-package osm
@@ -102,20 +88,22 @@ locations by name and to open and display GPX tracks.
   Click on a link or press `RET' to jump to the location. These links
   work in Org buffers in Emacs. Furthermore you can open Org links in
   arbitary buffers with `org-open-at-point-global'. I recommend binding
-  this command to a key, e.g, `C-c o'.
+  this command to a key, e.g., `C-c o'.
 
-  • 
-  • 
-  • 
-  • 
-  • 
-  • Address link: <osm:Tour Eiffel, Av. Gustave Eiffel, Paris>
+  ┌────
+  │ [[osm:opentopomap:41.869560826994544,12.45849609375,6][Italia, 41.87° 12.46° OpenTopoMap]]
+  │ [[osm:51.48950698022105,-0.144195556640625,11][London, England, 51.49° -0.14°]]
+  │ [[osm:cyclosm:55.686875255964424,12.569732666015625,12][København, Danmark, 55.69° 12.57° CyclOSM]]
+  │ [[osm:stamen-watercolor:40.72956780913898,-73.97918701171875,12][New York, United States, 40.73° -73.98° Stamen Watercolor]]
+  │ [[osm:opentopomap:27.961656050984658,86.89224243164062,13][Mount Everest, 27.96° 86.89° OpenTopoMap]]
+  │ <osm:Tour Eiffel, Av. Gustave Eiffel, Paris> (Address link)
+  └────
 
 
 ◊ 3.0.0.2 Elisp link examples
 
   Place the point behind the closing parenthesis and press `C-x C-e' to
-  jump to the location. The Elisp links can be used in arbitary text
+  jump to the location. The Elisp links can be used in arbitrary text
   files. Since they are Elisp s-expressions they can be easily
   manipulated programatically.
 
@@ -186,4 +174,4 @@ locations by name and to open and display GPX tracks.
   copyright assignment to the FSF.
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/osm.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/osm.html>

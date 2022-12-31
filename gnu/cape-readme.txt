@@ -3,19 +3,6 @@
 		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Available Capfs
-2. Configuration
-3. Experimental features
-.. 1. Company adapter
-.. 2. Super-Capf - Merging multiple Capfs
-.. 3. Capf-Buster - Cache busting
-.. 4. Other Capf transformers
-4. Contributions
-
-
 Cape provides Completion At Point Extensions which can be used in
 combination with the [Corfu] completion UI or the default completion
 UI. The completion backends used by `completion-at-point' are so called
@@ -43,11 +30,11 @@ Table of Contents
 
 1. Available Capfs
 2. Configuration
-3. Experimental features
+3. CAPF adapters and transformers
 .. 1. Company adapter
 .. 2. Super-Capf - Merging multiple Capfs
 .. 3. Capf-Buster - Cache busting
-.. 4. Other Capf transformers
+.. 4. Capf transformers
 4. Contributions
 
 
@@ -59,7 +46,8 @@ Table of Contents
 1 Available Capfs
 ═════════════════
 
-  ⁃ `cape-dabbrev': Complete word from current buffers
+  ⁃ `cape-dabbrev': Complete word from current buffers (see also
+    `dabbrev-capf' on Emacs 29)
   ⁃ `cape-file': Complete file name
   ⁃ `cape-history': Complete from Eshell, Comint or minibuffer history
   ⁃ `cape-keyword': Complete programming language keyword
@@ -126,8 +114,8 @@ Table of Contents
   └────
 
 
-3 Experimental features
-═══════════════════════
+3 CAPF adapters and transformers
+════════════════════════════════
 
 3.1 Company adapter
 ───────────────────
@@ -262,8 +250,8 @@ Table of Contents
   └────
 
 
-3.4 Other Capf transformers
-───────────────────────────
+3.4 Capf transformers
+─────────────────────
 
   Cape provides a set of additional Capf transformation functions, which
   are mostly meant to used by experts to fine tune the Capf behavior and
@@ -280,6 +268,8 @@ Table of Contents
     silence it.
   • `cape-wrap-purify', `cape-capf-purify': Purify a broken Capf and
     ensure that it does not modify the buffer.
+  • `cape-wrap-nonexclusive', `cape-capf-nonexclusive:' Mark Capf as
+    non-exclusive.
   • `cape-wrap-noninterruptible', `cape-capf-noninterruptible:' Protect
     a Capf which does not like to be interrupted.
   • `cape-wrap-case-fold', `cape-capf-case-fold': Create a Capf which is
@@ -290,6 +280,10 @@ Table of Contents
     predicate to a Capf.
   • `cape-wrap-prefix-length', `cape-capf-prefix-length': Enforce a
     minimal prefix length.
+  • `cape-wrap-inside-comment', `cape-capf-inside-comment': Ensure that
+    Capf triggers only inside comment.
+  • `cape-wrap-inside-string', `cape-capf-inside-string': Ensure that
+    Capf triggers only inside a string literal.
 
   In the following we show a few example configurations, which have come
   up on the [Cape] or [Corfu issue tracker] or the [Corfu wiki.] I use
