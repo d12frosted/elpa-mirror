@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/emacs-gnuplot/gnuplot.git
 
 Updating /mnt/store/melpa/working/gnuplot/
-Checking out fe7ce76d797b34214178ac8e470f2fa9a63b2520
+Checking out b57caf808ed86865a650bf44f00cb96e2d643405
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnuplot/
-  to /tmp/gnuplotQ3ermr/gnuplot-20221112.2049
+  to /tmp/gnuplotkqtblm/gnuplot-20230101.1354
     gnuplot.el -> gnuplot.el
     gnuplot-gui.el -> gnuplot-gui.el
     gnuplot-context.el -> gnuplot-context.el
-Created gnuplot-20221112.2049.tar containing:
-  gnuplot-20221112.2049/
-  gnuplot-20221112.2049/gnuplot-context.el
-  gnuplot-20221112.2049/gnuplot-gui.el
-  gnuplot-20221112.2049/gnuplot-pkg.el
-  gnuplot-20221112.2049/gnuplot.el
-Built gnuplot in 4.525s, finished at 2023-01-01T11:49:51+0000
+Created gnuplot-20230101.1354.tar containing:
+  gnuplot-20230101.1354/
+  gnuplot-20230101.1354/gnuplot-context.el
+  gnuplot-20230101.1354/gnuplot-gui.el
+  gnuplot-20230101.1354/gnuplot-pkg.el
+  gnuplot-20230101.1354/gnuplot.el
+Built gnuplot in 5.908s, finished at 2023-01-01T15:28:42+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  428 Jan  1 11:49 packages/gnuplot-20221112.2049.entry
 252K -rw-r--r-- 1 root root 250K Jan  1 11:49 packages/gnuplot-20221112.2049.tar
+4.0K -rw-r--r-- 1 root root  428 Jan  1 15:28 packages/gnuplot-20230101.1354.entry
+252K -rw-r--r-- 1 root root 250K Jan  1 15:28 packages/gnuplot-20230101.1354.tar
