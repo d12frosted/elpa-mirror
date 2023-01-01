@@ -5,6 +5,8 @@
 
 ;; Author: Alexey Kutepov <reximkut@gmail.com>
 ;; URL: http://github.com/rexim/gruber-darker-theme
+;; Package-Version: 20221122.1143
+;; Package-Commit: 6de7a37d7b18cf3f0ec51db799f4f2aa6e3e89ff
 ;; Version: 0.7
 
 ;; Permission is hereby granted, free of charge, to any person

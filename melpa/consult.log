@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/minad/consult.git
 
 Updating /mnt/store/melpa/working/consult/
-Checking out 16b2dc5e34c8a500adbee394b42c0e0d7fd24ad8
+Checking out 93091590b2a2029bcecce3fa355f8857a8775836
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/consult/
-  to /tmp/consult8UXPql/consult-20221228.1633
+  to /tmp/consulttL6m4y/consult-20230101.1107
     consult-compile.el -> consult-compile.el
     consult-flymake.el -> consult-flymake.el
     consult-icomplete.el -> consult-icomplete.el
@@ -16,19 +16,21 @@ Copying files (->) and directories (=>)
     consult-vertico.el -> consult-vertico.el
     consult-xref.el -> consult-xref.el
     consult.el -> consult.el
-Created consult-20221228.1633.tar containing:
-  consult-20221228.1633/
-  consult-20221228.1633/consult-compile.el
-  consult-20221228.1633/consult-flymake.el
-  consult-20221228.1633/consult-icomplete.el
-  consult-20221228.1633/consult-imenu.el
-  consult-20221228.1633/consult-org.el
-  consult-20221228.1633/consult-pkg.el
-  consult-20221228.1633/consult-register.el
-  consult-20221228.1633/consult-vertico.el
-  consult-20221228.1633/consult-xref.el
-  consult-20221228.1633/consult.el
-Built consult in 4.747s, finished at 2023-01-01T07:45:17+0000
+Created consult-20230101.1107.tar containing:
+  consult-20230101.1107/
+  consult-20230101.1107/consult-compile.el
+  consult-20230101.1107/consult-flymake.el
+  consult-20230101.1107/consult-icomplete.el
+  consult-20230101.1107/consult-imenu.el
+  consult-20230101.1107/consult-org.el
+  consult-20230101.1107/consult-pkg.el
+  consult-20230101.1107/consult-register.el
+  consult-20230101.1107/consult-vertico.el
+  consult-20230101.1107/consult-xref.el
+  consult-20230101.1107/consult.el
+Built consult in 5.186s, finished at 2023-01-01T11:29:04+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  352 Jan  1 07:45 packages/consult-20221228.1633.entry
 272K -rw-r--r-- 1 root root 270K Jan  1 07:45 packages/consult-20221228.1633.tar
+4.0K -rw-r--r-- 1 root root  352 Jan  1 11:29 packages/consult-20230101.1107.entry
+272K -rw-r--r-- 1 root root 270K Jan  1 11:29 packages/consult-20230101.1107.tar

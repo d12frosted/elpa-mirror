@@ -4,6 +4,8 @@
 
 ;; Author: Akisute <akisute3@gmail.com>
 ;; Version: 0.1
+;; Package-Version: 20131228.1414
+;; Package-Commit: 3bcd125b44f5a707588ae3868777d91192351523
 ;; Package-Requires: ((helm "1.0"))
 ;; Keywords: helm, dired, zsh
 
