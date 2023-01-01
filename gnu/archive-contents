@@ -2502,7 +2502,7 @@
 	      ("Daiki Ueno" . "ueno@gnu.org"))
 	     (:maintainer "Daiki Ueno" . "ueno@gnu.org"))])
  (plz .
-      [(0 2 1)
+      [(0 3)
        ((emacs
 	 (26 3)))
        "HTTP library" tar
@@ -2511,7 +2511,7 @@
 	(:maintainer "Adam Porter" . "adam@alphapapa.net")
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
-	(:commit . "80aeae0d201b06088d4b7543a603d97bdbccb948"))])
+	(:commit . "ecd1de2a7967bd8bc61737078d717d0ee050b344"))])
  (poker .
 	[(0 2)
 	 nil "Texas hold 'em poker" single

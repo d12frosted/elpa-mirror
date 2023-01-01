@@ -3,27 +3,6 @@
 				━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Installation
-.. 1. GNU ELPA
-.. 2. Manual
-2. Usage
-.. 1. Examples
-.. 2. Functions
-.. 3. Queueing
-.. 4. Tips
-3. Changelog
-.. 1. 0.2.1
-.. 2. 0.2
-.. 3. 0.1
-4. Credits
-5. Development
-.. 1. Copyright assignment
-6. License
-
-
 [file:http://elpa.gnu.org/packages/plz.svg]
 
 `plz' is an HTTP library for Emacs.  It uses `curl' as a backend, which
@@ -244,21 +223,40 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.2.1
+3.1 0.3
+───────
+
+  *Additions*
+  ⁃ Handle HTTP proxy headers from Curl. ([#2].  Thanks to [Alan Third]
+    and [Sawyer Zheng] for reporting.)
+
+  *Fixes*
+  ⁃ Replaced words not in Ispell's default dictionaries (so `checkdoc'
+    linting succeeds).
+
+
+[#2] <https://github.com/alphapapa/plz.el/issues/2>
+
+[Alan Third] <https://github.com/alanthird>
+
+[Sawyer Zheng] <https://github.com/sawyerzheng>
+
+
+3.2 0.2.1
 ─────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.2 0.2
+3.3 0.2
 ───────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.3 0.1
+3.4 0.1
 ───────
 
   Initial release.
