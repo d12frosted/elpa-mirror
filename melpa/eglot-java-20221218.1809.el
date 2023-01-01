@@ -3,8 +3,6 @@
 ;; Copyright (C) 2019-2023 Yves Zoundi
 
 ;; Version: 1.7
-;; Package-Version: 20221218.1809
-;; Package-Commit: e6a9d5cc63f679833c19df8120533c8f42498a51
 ;; Author: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; Maintainer: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; URL: https://github.com/yveszoundi/eglot-java
