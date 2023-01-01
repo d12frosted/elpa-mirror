@@ -3,3 +3,26 @@ Fetcher: github
 Source:  https://github.com/knu/emacsc.git
 
 Updating /mnt/store/melpa/working/emacsc/
+Checking out f7634a86c3643a6432dda3897bd524957cf9ff1f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emacsc/
+  to /tmp/emacsclFzgbE/emacsc-20221105.1715
+  ! lisp/ediff-batch.el -> ediff-batch.el
+  ! lisp/emacsc.el -> emacsc.el
+    bin => bin
+Created emacsc-20221105.1715.tar containing:
+  emacsc-20221105.1715/
+  emacsc-20221105.1715/bin/
+  emacsc-20221105.1715/bin/dired
+  emacsc-20221105.1715/bin/ediff
+  emacsc-20221105.1715/bin/ediff-merge
+  emacsc-20221105.1715/bin/emacsc
+  emacsc-20221105.1715/bin/evil
+  emacsc-20221105.1715/bin/magit
+  emacsc-20221105.1715/ediff-batch.el
+  emacsc-20221105.1715/emacsc-pkg.el
+  emacsc-20221105.1715/emacsc.el
+Built emacsc in 5.388s, finished at 2023-01-01T07:54:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 300 Jan  1 07:54 packages/emacsc-20221105.1715.entry
+ 40K -rw-r--r-- 1 root root 40K Jan  1 07:54 packages/emacsc-20221105.1715.tar

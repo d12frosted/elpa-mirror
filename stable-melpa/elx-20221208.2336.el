@@ -8,6 +8,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/elx
 ;; Keywords: docs libraries packages
+;; Package-Version: 20221208.2336
+;; Package-Commit: 27846ebfec114552b6737dd4be37898e594c0f4c
 
 ;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0") (llama "0.2.0"))
 
