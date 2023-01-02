@@ -71,7 +71,14 @@ II. Configuration
     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
       (customize-set-variable 'timu-spacegrey-org-intense-colors t)
 
-  D. Border for the `mode-line'
+  D. Muted colors for the dark flavour
+    You can set muted colors for the dark flavour of the theme.
+
+    By default muted colors are turned off.
+    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+      (customize-set-variable 'timu-spacegrey-muted-colors t)
+
+  E. Border for the `mode-line'
     You can set a variable to add a border to the mode-line.
 
     By default the border is turned off.
