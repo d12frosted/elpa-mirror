@@ -16,7 +16,7 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with emacs-ansilove.  If not, see <https://www.gnu.org/licenses/>.
 
-;; Copyright (c) 2022, Maciej Barć <xgqt@riseup.net>
+;; Copyright (c) 2022-2023, Maciej Barć <xgqt@riseup.net>
 ;; Licensed under the GNU GPL v3 License
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -24,8 +24,8 @@
 ;; Author: Maciej Barć <xgqt@riseup.net>
 ;; Homepage: https://gitlab.com/xgqt/emacs-ansilove/
 ;; Version: 1.0.1
-;; Package-Version: 20221222.1932
-;; Package-Commit: 6d92fbb70f5a1bd08833bac0a722814872658375
+;; Package-Version: 20230101.1857
+;; Package-Commit: bd3b2491c6cce1868aa6f58b19812ab47ff8bf8d
 ;; Keywords: multimedia
 ;; Package-Requires: ((emacs "26.1"))
 

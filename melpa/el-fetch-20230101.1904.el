@@ -16,7 +16,7 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with el-fetch.  If not, see <https://www.gnu.org/licenses/>.
 
-;; Copyright (c) 2022, Maciej Barć <xgqt@riseup.net>
+;; Copyright (c) 2022-2023, Maciej Barć <xgqt@riseup.net>
 ;; Licensed under the GNU GPL v3 License
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -24,8 +24,8 @@
 ;; Author: Maciej Barć <xgqt@riseup.net>
 ;; Homepage: https://gitlab.com/xgqt/emacs-el-fetch
 ;; Version: 3.2.1
-;; Package-Version: 20221222.1930
-;; Package-Commit: f499d4ae6b3e0abdeee97ca234bafa5a2873806d
+;; Package-Version: 20230101.1904
+;; Package-Commit: 65186b28cba1a8f95c655856073894724b806e2e
 ;; Package-Requires: ((emacs "25.1"))
 
 

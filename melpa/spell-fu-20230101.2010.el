@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-spell-fu
-;; Package-Version: 20221230.1036
-;; Package-Commit: f22630ec3ad4c722c4380047d7659ba6ffcf65d9
+;; Package-Version: 20230101.2010
+;; Package-Commit: 174d40f8f6e1652a4d1f7cd838600748b959e3e6
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -50,6 +50,8 @@
 (require 'faces)
 ;; For variables we read `ispell-personal-dictionary' local dictionary, etc.
 (require 'ispell)
+;; For `string-blank-p'.
+(require 'subr-x)
 
 
 ;; ---------------------------------------------------------------------------
@@ -191,11 +193,13 @@ Notes:
 ;; Developer note, don't use this for logging the checking of individual words,
 ;; that is far too verbose, this is mainly for checking why dictionaries aren't
 ;; being properly initialized.
+
 (defmacro spell-fu--debug-message (fmt &rest args)
   "Debug message logging passing FMT and ARGS to `message'."
-  (when spell-fu-debug
+  ;; When emacs 28.2 support is dropped,
+  ;; this can simply check `spell-fu-debug', see: #36.
+  (when (bound-and-true-p spell-fu-debug)
     `(apply 'message (list (concat "spell-fu-debug: " ,fmt) ,@args))))
-
 
 ;; ---------------------------------------------------------------------------
 ;; Dictionary Utility Functions
@@ -1636,7 +1640,7 @@ Argument DICT-FILE is the absolute path to the dictionary."
 ;;;###autoload
 (defun spell-fu-buffer-session-localwords-update ()
   "Refresh after changing `spell-fu-buffer-session-localwords'."
-  (when spell-fu-mode
+  (when (bound-and-true-p spell-fu-mode)
     (spell-fu--buffer-localwords-update-impl)))
 
 ;; ---------------------------------------------------------------------------

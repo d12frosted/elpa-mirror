@@ -3405,7 +3405,7 @@
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
  (triples .
-	  [(0 1 2)
+	  [(0 2)
 	   ((seq
 	     (2 0))
 	    (emacs
@@ -3416,7 +3416,7 @@
 	    (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	    (:authors
 	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	    (:commit . "d40e1754aed2affea1b09c5df5ae6120557ff1a5"))])
+	    (:commit . "ac12a6b7feb665c7ac80aebdf44523024a8e5c92"))])
  (undo-tree .
 	    [(0 8 2)
 	     ((queue

@@ -789,16 +789,16 @@ Holes
   `C-c C-m' (or `C-c RET') in `sweeprolog-mode' buffers, prompts for a
   functor and an arity and inserts a corresponding term with holes in
   place of the term’s arguments.  It leaves point right after the first
-  hole, sets the mark to its start and activates region such that the
-  hole is marked.  Call `sweeprolog-insert-term-with-holes' again to
-  replace the active region which now covers the first hole with another
-  term, that may again contain further holes.  That way you can
-  incrementally write down a Prolog term, including whole clauses, by
-  working down the syntactic structure of the term and maintaining its
-  all the while.  Without a prefix argument,
+  hole, sets the mark to its start and activates the region such that
+  the hole is marked.  Call `sweeprolog-insert-term-with-holes' again to
+  replace the active region, which now covers the first hole, with
+  another term, that may again contain further holes.  That way you can
+  incrementally write a Prolog term, including whole clauses, by working
+  down the syntactic structure of the term and maintaining its
+  correctness all the while.  Without a prefix argument,
   `sweeprolog-insert-term-with-holes' prompts for the functor and the
-  arity to use.  A non-negative prefix argument, e.g. `C-2 C-c C-m' or
-  `C-u C-c C-m', is taken as to be the inserted term’s arity and in this
+  arity to use.  A non-negative prefix argument, such as `C-2 C-c C-m'
+  or `C-u C-c C-m', is taken to be the inserted term’s arity and in this
   case `sweeprolog-insert-term-with-holes' only prompts for the functor
   to insert.  A negative prefix argument, `C-- C-c C-m', inserts only a
   single hole without prompting for a functor.  To further help with
@@ -1024,9 +1024,24 @@ Documenting predicates
   `PlDoc' comments for predicates in `sweeprolog-mode' buffers.  This
   command, bound by default to `C-c C-d', finds the beginning of the
   predicate definition under or right above the current cursor location,
-  and inserts formatted `PlDoc' comments while prompting the user to
-  interactively fill in the argument modes, determinism specification,
-  and initial contents of the predicate documentation.
+  and inserts a formatted `PlDoc' comment.  This command fills in
+  initial argument modes, determinism specification, and optionally a
+  summary line for the documented predicate.  There are different ways
+  in which `sweeprolog-document-predicate-at-point' can obtain the
+  needed initial documentation information, depending on the value of
+  the user option `sweeprolog-read-predicate-documentation-function'
+  which specifies a function to retrieve this information.  The default
+  function prompts you to insert the parameters one by one via the
+  minibuffer.  Alternatively, you can use holes (see [Holes]) for the
+  predicate’s argument modes and determinism specifiers by setting this
+  option to `sweeprolog-read-predicate-documentation-with-holes', as
+  follows:
+
+  ┌────
+  │ (setq sweeprolog-read-predicate-documentation-function
+  │       #'sweeprolog-read-predicate-documentation-with-holes)
+  └────
+
   `sweeprolog-document-predicate-at-point' leaves the cursor at the end
   of the newly inserted documentation comment for the user to extend or
   edit it if needed.  To add another comment line, use `M-j'
@@ -1045,6 +1060,8 @@ Documenting predicates
 
 
 [Comment Commands in the Emacs manual] <info:emacs#Comment Commands>
+
+[Holes] See section Holes
 
 [Manipulating Comments] <info:emacs#Comments>
 

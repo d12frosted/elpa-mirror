@@ -3,18 +3,6 @@
 			       ━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Installing
-2. Maturity
-3. Types and Schema
-4. The triples concept
-5. Setting and retrieving
-6. Predicates, with type and without
-7. Using direct SQL access
-
-
 The `triples' module is a standard database module designed for use in
 other emacs modules.  It works with either the builtin sqlite in Emacs
 29 or the [emacsql] module, and provides a simple way of storing
@@ -24,7 +12,9 @@ The module has wrappers for most common operations, but it is
 anticipated that occasionally client modules would need to make their
 own sqlite calls.  Many different database instances can be handled by
 the `triples' module.  It is expected that clients supply the database
-connection.
+connection.  However, a standard triples database can be used, which is
+defined in `triples-default-database-filename', and used when no
+filename is used to connect to by clients of the triples library.
 
 
 [emacsql] <https://github.com/magit/emacsql>
@@ -50,8 +40,11 @@ connection.
   parts will determine the priority in which they get built.
 
 
-3 Types and Schema
-══════════════════
+3 Using the `triples' library
+═════════════════════════════
+
+3.1 Types and Schema
+────────────────────
 
   `triples' employs a design in which each entity can be a member of
   many /types/, and each /type/ has multiple /properties/.  The
@@ -89,8 +82,8 @@ connection.
   after next.
 
 
-4 The triples concept
-═════════════════════
+3.2 The triples concept
+───────────────────────
 
   A triple is a unit of data consisting of a /subject/, a /predicate/,
   an /object/, and, optionally, internal metadata about the unit.  The
@@ -113,8 +106,29 @@ connection.
   the object and `manager' is the predicate.
 
 
-5 Setting and retrieving
-════════════════════════
+3.3 Connecting
+──────────────
+
+  Before a database can be used, it should be connected with.  This is
+  done by the `triples-connect' function, which can be called with a
+  filename or without.  If a filename isn't given, a default one for the
+  triples library, given in `triples-default-database-filename' is used.
+  This provides a standard database for those that want to take
+  advantage of the possibilities of having data from different sources
+  that can build on each other.
+
+  An example of using this standard database is simply:
+  ┌────
+  │ (let ((db (triples-connect)))
+  │   (do-something-with db)
+  │   (do-something-else-with db))
+  └────
+  You could also use a global variable to hold the database connection,
+  if you need the database to be active during many user actions.
+
+
+3.4 Setting and retrieving
+──────────────────────────
 
   A subject can be set all at once (everything about the subject), or
   dealt with per-type.  For example, the following are equivalent:
@@ -165,8 +179,8 @@ connection.
     type.
 
 
-6 Predicates, with type and without
-═══════════════════════════════════
+3.5 Predicates, with type and without
+─────────────────────────────────────
 
   Sometimes the triples library will require predicates that are without
   type, and sometimes with type, or "combined predicates".  The rule is
@@ -179,8 +193,8 @@ connection.
   types, the type is returned as combined predicates.
 
 
-7 Using direct SQL access
-═════════════════════════
+3.6 Using direct SQL access
+───────────────────────────
 
   Sometimes clients of this library need to do something with the
   database, and the higher-level triples functionality doesn't help.  If
@@ -209,3 +223,25 @@ connection.
   please follow the coding patterns for the functions above in writing
   it, so that the code works with both Emacs 29's builtin sqlite, and
   `emacsql'.
+
+
+4 Using `triples' to develop apps with shared data
+══════════════════════════════════════════════════
+
+  One possibility that arises from a design with entities (in triples
+  terms, subjects) having multiple decomposable types like is done in
+  the `triples' library is the possibility of many modules using the
+  same database, each one adding their own data, but being able to make
+  use out of each other's data.
+
+  For example, in the examples above we have a simple system for storing
+  data about people and employees.  If another module adds a type for
+  annotations, now you can potentially annotate any entity, including
+  people and employees.  If another module adds functionality to store
+  and complete on email addresses, now people, employees, and
+  potentially types added by other modules such as organizations could
+  have email addresses.
+
+  If this seems to fit your use case, you may want to try to just use
+  the default database.  The downside of this is that nothing prevents
+  other modules from changing, corrupting or deleting your data.
