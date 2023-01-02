@@ -4,8 +4,8 @@
 
 ;; Author: liuyinz <liuyinz95@gmail.com>
 ;; Version: 1.1.0
-;; Package-Version: 20230101.1628
-;; Package-Commit: b1f12ead26ec4886354c5ee498e598305901dce8
+;; Package-Version: 20230102.705
+;; Package-Commit: 6aea48d587b2c378c8ba3f0483b9b93120816c82
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/liuyinz/binky-mode
@@ -468,16 +468,14 @@ record."
     (run-hooks 'binky-back-record-update-hook))
   ;; update auto marked records
   (let* ((marks (remove binky-mark-back binky-mark-auto))
-         (len (length marks))
-         (result (list))
-         (filters (append binky-exclude-functions
-                          '(binky--exclude-mode-p
-                            binky--exclude-regexp-p))))
-    (when (> len 0)
-      ;; remove current-buffer
-      (cl-dolist (buf (nthcdr 1 (buffer-list)))
+         (result (list)))
+    (when (> (length marks) 0)
+      ;; remove current-buffer and last buffer(if current-buffer if minibuffer)
+      (cl-dolist (buf (nthcdr (if (minibufferp (current-buffer)) 2 1) (buffer-list)))
         (with-current-buffer buf
-          (unless (cl-some #'funcall filters)
+          (unless (cl-some #'funcall (append binky-exclude-functions
+                                             '(binky--exclude-mode-p
+                                               binky--exclude-regexp-p)))
             (push (point-marker) result))))
       ;; delete marker duplicated with `binky-alist'
       (setq result (cl-remove-if (lambda (m) (binky--record-duplicated-p m 0)) result))

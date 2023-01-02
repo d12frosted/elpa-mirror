@@ -4,8 +4,8 @@
 
 ;; Author: wolray <wolray@foxmail.com>
 ;; Version: 4.1
-;; Package-Version: 20221215.1741
-;; Package-Commit: f18493673d1c9870f6b44e2dbdbe8b0b739d1526
+;; Package-Version: 20230102.952
+;; Package-Commit: 37de0a1c81c79d5a4bba417b545516122024ca12
 ;; URL: https://github.com/wolray/symbol-overlay/
 ;; Keywords: faces, matching
 ;; Package-Requires: ((emacs "24.3") (seq "2.2"))
@@ -238,20 +238,19 @@ You can re-bind the commands to any keys you prefer.")
 If SYMBOL is non-nil, get the overlays that belong to it.
 DIR is an integer.
 If EXCLUDE is non-nil, get all overlays excluding those belong to SYMBOL."
-  (if (= dir 0)
-      (overlays-in (point-min) (point-max))
-    (let ((overlays (cond ((< dir 0) (overlays-in (point-min) (point)))
-                          ((> dir 0) (overlays-in (point) (point-max))))))
-      (seq-filter
-       (lambda (ov)
-         (let ((value (overlay-get ov 'symbol))
-               (end (overlay-end ov)))
-           (and value
-                (or (> dir 0) (< end (point)))
-                (or (not symbol)
-                    (if (string= value symbol) (not exclude)
-                      (and exclude (not (string= value ""))))))))
-       overlays))))
+  (let ((overlays (cond ((= dir 0) (overlays-in (point-min) (point-max)))
+                        ((< dir 0) (overlays-in (point-min) (point)))
+                        ((> dir 0) (overlays-in (point) (point-max))))))
+    (seq-filter
+     (lambda (ov)
+       (let ((value (overlay-get ov 'symbol))
+             (end (overlay-end ov)))
+         (and value
+              (or (>= dir 0) (< end (point)))
+              (or (not symbol)
+                  (if (string= value symbol) (not exclude)
+                    (and exclude (not (string= value ""))))))))
+     overlays)))
 
 (defun symbol-overlay-get-symbol (&optional noerror)
   "Get the symbol at point.
