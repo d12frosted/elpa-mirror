@@ -52,3 +52,10 @@ add the following snippet to your Emacs configuration to set up
 this key binding:
 
    (global-set-key (kbd "M-h") 'my-repo-pins)
+
+The my-repo-pins-open-function variable can be customized if you
+would prefer to land in some other program than Dired.  Good
+candidates might be the builtin 'vc-dir or 'magit-status if you use
+the popular Magit package:
+
+   (setq my-repo-pins-open-function 'vc-dir)

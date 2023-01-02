@@ -1,9 +1,9 @@
 (helm-mu .
-	 [(20221217 1642)
+	 [(20230102 1148)
 	  ((helm
 	    (1 5 5)))
-	  "Helm sources for searching emails and contacts." single
-	  ((:commit . "0c4605458e40098d5427fcd8327682a93d780911")
+	  "Helm search for e-mails and contacts in mu4e" single
+	  ((:commit . "2422f57ed40d998ac6f085f93b24223c91cefaf7")
 	   (:authors
 	    ("Titus von der Malsburg" . "malsburg@posteo.de"))
 	   (:maintainer "Titus von der Malsburg" . "malsburg@posteo.de")

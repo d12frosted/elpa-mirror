@@ -1,12 +1,12 @@
-;;; helm-mu.el --- Helm sources for searching emails and contacts. -*- lexical-binding: t -*-
+;;; helm-mu.el --- Helm search for e-mails and contacts in mu4e -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2013 Titus von der Malsburg <malsburg@posteo.de>
 
 ;; Author: Titus von der Malsburg <malsburg@posteo.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/emacs-helm/helm-mu
-;; Package-Version: 20221217.1642
-;; Package-Commit: 0c4605458e40098d5427fcd8327682a93d780911
+;; Package-Version: 20230102.1148
+;; Package-Commit: 2422f57ed40d998ac6f085f93b24223c91cefaf7
 ;; Version: 1.0.0
 ;; Package-Requires: ((helm "1.5.5"))
 
@@ -31,13 +31,15 @@
 ;; to get instant results even for huge maildirs. It also provides
 ;; search operators similar to Google mail, e.g:
 ;;
-;;     from:Peter to:Anne flag:attach search term
+;;     from:Adam to:Eve flag:attach vacation photos
 ;;
 ;; See the Github page for details and install instructions:
 ;;
 ;;  https://github.com/emacs-helm/helm-mu
 ;;
 ;; News:
+;; - 2022-12-17: To override mu4e’s default search function, you now
+;;   have to use: (define-key mu4e-search-minor-mode-map "s" 'helm-mu)
 ;;
 ;; - 2016-05-31: Added two new actions in helm-mu-contacts: 1. Insert
 ;;   selected contacts at point. 2) Copy selected contacts to
