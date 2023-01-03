@@ -1,14 +1,13 @@
 (editorconfig .
-	      [(20221228 2146)
+	      [(20230103 1143)
 	       ((emacs
-		 (24))
-		(cl-lib
-		 (0 5))
+		 (26 1))
 		(nadvice
 		 (0 3)))
 	       "EditorConfig Emacs Plugin" tar
-	       ((:commit . "b8043702f3d977db0e030c6c64ee4a810cad5f45")
+	       ((:commit . "5a80a5a11edf891f29354bcde090918527a80ba2")
 		(:authors
 		 ("EditorConfig Team" . "editorconfig@googlegroups.com"))
 		(:maintainer "EditorConfig Team" . "editorconfig@googlegroups.com")
+		(:keywords "convenience" "editorconfig")
 		(:url . "https://github.com/editorconfig/editorconfig-emacs#readme"))])

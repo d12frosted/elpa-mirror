@@ -225,6 +225,47 @@ filename is used to connect to by clients of the triples library.
   `emacsql'.
 
 
+3.7 Backups
+───────────
+
+  If your application wants to back up your database, the function
+  `triples-backup' provides the capability to do so safely.  It can be
+  called like:
+  ┌────
+  │ (triples-backup db db-file 3)
+  └────
+  Where `db' is the database, `db-file' is the filename where that
+  database is stored, and `3' is the number of most recent backup files
+  to keep.  All older backup files will be deleted.  The backup is
+  stored where other emacs file backups are kept, defined by
+  `backup-directory-alist'.
+
+  The `triples-backups' module provides a way to backup a database in a
+  way defined in the database itself (so multiple clients of the same
+  database can work in a sane way together).  The number of backups to
+  be kept, along with the "strategy" of when we want backups to happen
+  is defined once per database.
+  ┌────
+  │ ;; Set up a backup configuration if none exists.
+  │ (require 'triples-backups)
+  │ (unless (triples-backups-configuration db)
+  │   (triples-backups-setup db 3 'daily))
+  └────
+
+  Once this is set up, whenever a change happens, simply call
+  `triples-backups-maybe-backup' with the database and the filename
+  where the database was opened from, which will back up the database if
+  appropriate.  This should be done after any important database write,
+  once the action, at the application level, is finished.  The triples
+  module doesn't know when an appropriate point would be, so this is up
+  to the client to run.
+  ┌────
+  │ (defun my-package-add-data (data)
+  │   (my-package-write-new-data package-db data)
+  │   (triples-backups-maybe-backup db db-filename))
+  └────
+
+
 4 Using `triples' to develop apps with shared data
 ══════════════════════════════════════════════════
 

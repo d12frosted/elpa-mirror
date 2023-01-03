@@ -9,8 +9,6 @@
 ;;         Kyle Hargraves <pd@krh.me>
 ;; Maintainer: Dmitry Gutov <dgutov@yandex.ru>
 ;; URL: http://github.com/nonsequitur/inf-ruby
-;; Package-Version: 20221016.2238
-;; Package-Commit: c6192178941b46754fdb50405f344481c8ef2fd1
 ;; Created: 8 April 1998
 ;; Keywords: languages ruby
 ;; Version: 2.6.2

@@ -6,8 +6,6 @@
 ;; Maintainer: Fermin Munoz <fmfs@posteo.net>
 ;; Created: 24 Sep 2021
 ;; Version: 0.2.0
-;; Package-Version: 20220924.1040
-;; Package-Commit: 423b84fe4cc6944e36971225b3e19c888e7e4690
 ;; Keywords: islisp, lisp, programming
 ;; URL: https://gitlab.com/sasanidas/islisp-mode
 ;; Package-Requires: ((emacs "26.3") (islisp-mode "0.2"))

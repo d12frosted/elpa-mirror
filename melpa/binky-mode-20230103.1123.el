@@ -4,8 +4,8 @@
 
 ;; Author: liuyinz <liuyinz95@gmail.com>
 ;; Version: 1.1.0
-;; Package-Version: 20230102.705
-;; Package-Commit: 6aea48d587b2c378c8ba3f0483b9b93120816c82
+;; Package-Version: 20230103.1123
+;; Package-Commit: a4f01e1203b73ad2b9192736ea3138cd2a4dc1f6
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/liuyinz/binky-mode
@@ -596,13 +596,9 @@ redisplay the preview.  If it's nil, toggle the preview."
 	(with-current-buffer-window
 		binky-preview-buffer
 		(cons 'display-buffer-in-side-window
-			  `((dedicated     . t)
-				(side          . ,binky-preview-side)
-				(preserve-size . (,(binky--preview-horizontal-p) . t))
-                (,(if (binky--preview-horizontal-p)
-                      'window-width
-                    'window-height)
-                 . fit-window-to-buffer)))
+			  `((side          . ,binky-preview-side)
+                (window-height . fit-window-to-buffer)
+                (window-width  . fit-window-to-buffer)))
         nil
       (progn
         (setq cursor-in-non-selected-windows nil

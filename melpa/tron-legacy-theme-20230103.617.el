@@ -4,8 +4,8 @@
 
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/tron-legacy-emacs-theme
-;; Package-Version: 20220610.1746
-;; Package-Commit: 72655ce5ea0580cc23966821d2813e4d5e961f93
+;; Package-Version: 20230103.617
+;; Package-Commit: 710c5ef80835cc2f6fb40e51f782ab531048f86e
 ;; Version: 2.0.0
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -556,6 +556,11 @@
 
    ;;;;; highlight thing
    `(highlight-thing                          ((t (:inherit highlight-symbol-face))))
+   
+   ;;;;; tab-bar-mode
+   `(tab-bar                                  ((t (:background ,bg0))))
+   `(tab-bar-tab                              ((t (:foreground ,fg0 :background ,bg0 :weight bold :box nil))))
+   `(tab-bar-tab-inactive                     ((t (:foreground ,fg0 :background ,bg0 :box nil))))
 
    ;;;;; tree-sitter
    `(tree-sitter-hl-face:method.call          ((t (:inherit font-lock-function-name-face))))

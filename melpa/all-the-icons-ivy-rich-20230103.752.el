@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.8.1
-;; Package-Version: 20230103.329
-;; Package-Commit: e3139e91f78659a5aa71f05fa92bd0abfe56804b
+;; Package-Version: 20230103.752
+;; Package-Commit: 696ac9a49623b4c11fdead5df80f1374878ecff2
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -1023,6 +1023,21 @@ This value is adjusted depending on the `window-width'."
       (ivy-rich-candidate (:face all-the-icons-ivy-rich-string-face)))
      :delimiter "\t")
 
+    lsp-install-server
+    (:columns
+     ((all-the-icons-ivy-rich-lsp-icon)
+      (ivy-rich-candidate))
+     :delimiter "\t")
+    lsp-update-server
+    (:columns
+     ((all-the-icons-ivy-rich-lsp-icon)
+      (ivy-rich-candidate))
+     :delimiter "\t")
+    lsp-uninstall-server
+    (:columns
+     ((all-the-icons-ivy-rich-lsp-icon)
+      (ivy-rich-candidate))
+     :delimiter "\t")
     lsp-ivy-workspace-folders-remove
     (:columns
      ((all-the-icons-ivy-rich-dir-icon)
@@ -1940,6 +1955,12 @@ Support`counsel-ack', `counsel-ag', `counsel-pt' and `counsel-rg', etc."
   (when (all-the-icons-ivy-rich-icon-displayable)
     (all-the-icons-ivy-rich--format-icon
      (all-the-icons-octicon "key" :height 0.8 :v-adjust -0.05))))
+
+(defun all-the-icons-ivy-rich-lsp-icon (_cand)
+  "Display lsp icon in `ivy-rich'."
+  (when (all-the-icons-ivy-rich-icon-displayable)
+    (all-the-icons-ivy-rich--format-icon
+     (all-the-icons-faicon "rocket" :height 0.8 :v-adjust -0.05 :face 'all-the-icons-lgreen))))
 
 
 ;;
