@@ -1,0 +1,11 @@
+(spdx .
+      [(20230103 110)
+       ((emacs
+	 (24 4)))
+       "Insert SPDX license and copyright headers" tar
+       ((:commit . "5a4947690ee9060db5a9fd5f8c9a530ce383d907")
+	(:authors
+	 ("Zhiwei Chen" . "condy0919@gmail.com"))
+	(:maintainer "Zhiwei Chen" . "condy0919@gmail.com")
+	(:keywords "license" "tools")
+	(:url . "https://github.com/condy0919/spdx.el"))])

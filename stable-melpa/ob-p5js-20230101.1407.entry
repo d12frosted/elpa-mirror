@@ -1,0 +1,11 @@
+(ob-p5js .
+	 [(20230101 1407)
+	  ((emacs
+	    (25 1)))
+	  "Support for p5js in org-babel" single
+	  ((:commit . "f4456b6533bcf2d41caffb267721ef00a0ef16c2")
+	   (:authors
+	    ("Alejandro Gallo" . "aamsgallo@gmail.com"))
+	   (:maintainer "Alejandro Gallo" . "aamsgallo@gmail.com")
+	   (:keywords "javascript" "graphics" "multimedia" "p5js" "processing" "org-babel")
+	   (:url . "https://github.com/alejandrogallo/p5js"))])

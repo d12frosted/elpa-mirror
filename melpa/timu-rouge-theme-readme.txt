@@ -60,6 +60,20 @@ II. Configuration
     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
       (customize-set-variable 'timu-rouge-org-intense-colors t)
 
+  C. Muted colors for the theme
+    You can set muted colors for the theme.
+
+    By default muted colors are turned off.
+    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+      (customize-set-variable 'timu-rouge-muted-colors t)
+
+  D. Border for the `mode-line'
+    You can set a variable to add a border to the mode-line.
+
+    By default the border is turned off.
+    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+      (customize-set-variable 'timu-rouge-mode-line-border t)
+
 III. Utility functions
   A. Toggle between intense and non intense colors for `org-mode'
       M-x timu-rouge-toggle-org-colors-intensity RET.
