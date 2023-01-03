@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-php/php-mode.git
 
 Updating /mnt/store/melpa/working/php-mode/
-Checking out 59f0ed3b33de37b7f1c9b39e82497d77fd6be536
+Checking out cf9481ccb7fbd50847e5a8c1da37f68771c2532e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/php-mode/
-  to /tmp/php-modeGjz6gf/php-mode-20230101.1753
+  to /tmp/php-modeHfkXwd/php-mode-20230103.1226
   ! lisp/php-align.el -> php-align.el
   ! lisp/php-complete.el -> php-complete.el
   ! lisp/php-defs.el -> php-defs.el
@@ -17,20 +17,22 @@ Copying files (->) and directories (=>)
   ! lisp/php-mode.el -> php-mode.el
   ! lisp/php-project.el -> php-project.el
   ! lisp/php.el -> php.el
-Created php-mode-20230101.1753.tar containing:
-  php-mode-20230101.1753/
-  php-mode-20230101.1753/php-align.el
-  php-mode-20230101.1753/php-complete.el
-  php-mode-20230101.1753/php-defs.el
-  php-mode-20230101.1753/php-face.el
-  php-mode-20230101.1753/php-flymake.el
-  php-mode-20230101.1753/php-local-manual.el
-  php-mode-20230101.1753/php-mode-debug.el
-  php-mode-20230101.1753/php-mode-pkg.el
-  php-mode-20230101.1753/php-mode.el
-  php-mode-20230101.1753/php-project.el
-  php-mode-20230101.1753/php.el
-Built php-mode in 5.524s, finished at 2023-01-03T08:52:11+0000
+Created php-mode-20230103.1226.tar containing:
+  php-mode-20230103.1226/
+  php-mode-20230103.1226/php-align.el
+  php-mode-20230103.1226/php-complete.el
+  php-mode-20230103.1226/php-defs.el
+  php-mode-20230103.1226/php-face.el
+  php-mode-20230103.1226/php-flymake.el
+  php-mode-20230103.1226/php-local-manual.el
+  php-mode-20230103.1226/php-mode-debug.el
+  php-mode-20230103.1226/php-mode-pkg.el
+  php-mode-20230103.1226/php-mode.el
+  php-mode-20230103.1226/php-project.el
+  php-mode-20230103.1226/php.el
+Built php-mode in 7.185s, finished at 2023-01-03T12:34:30+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  355 Jan  3 08:52 packages/php-mode-20230101.1753.entry
 240K -rw-r--r-- 1 root root 240K Jan  3 08:52 packages/php-mode-20230101.1753.tar
+4.0K -rw-r--r-- 1 root root  355 Jan  3 12:34 packages/php-mode-20230103.1226.entry
+240K -rw-r--r-- 1 root root 240K Jan  3 12:34 packages/php-mode-20230103.1226.tar

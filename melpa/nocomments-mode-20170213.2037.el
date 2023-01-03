@@ -4,8 +4,6 @@
 
 ;; Author: Anders Lindgren
 ;; Version: 0.1.2
-;; Package-Version: 20170213.2037
-;; Package-Commit: 5a41a20cc44dfe4a9ea584354ed6dbc15dd92f46
 ;; Created: 2016-05-23
 ;; URL: https://github.com/Lindydancer/nocomments-mode
 
