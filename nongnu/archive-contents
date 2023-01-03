@@ -2091,7 +2091,7 @@
 	       ("Daniel Semyonov" . "daniel@dsemy.com"))
 	      (:commit . "93ae3db40d07ae15e61d34c3c3870de5d2fce2de"))])
  (visual-fill-column .
-		     [(2 5)
+		     [(2 5 1)
 		      ((emacs
 			(25 1)))
 		      "fill-column for visual-line-mode" tar
@@ -2099,7 +2099,7 @@
 		       (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
 		       (:authors
 			("Joost Kremers" . "joostkremers@fastmail.fm"))
-		       (:commit . "afaad5ac6b15cdf9f362662538e35d48578e218a"))])
+		       (:commit . "695a59789209c42fa08a5bce92963ee32f4455be"))])
  (web-mode .
 	   [(17 3 8)
 	    ((emacs

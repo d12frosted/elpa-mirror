@@ -514,7 +514,7 @@
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
 	   (:commit . "d533692182c084bad623977b69f9dc298255eaab"))])
  (consult .
-	  [(0 29)
+	  [(0 30)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -524,7 +524,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "c3608b1f634aebf8770ecb1d933a1ae9c34ecdf8"))])
+	    (:commit . "2d73a36e07e390d957adb117b41db51b5b5a6209"))])
  (consult-recoll .
 		 [(0 8)
 		  ((emacs
@@ -1563,7 +1563,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 8)
+	    [(0 9)
 	     ((emacs
 	       (27 1)))
 	     "Tool for inspection of Emacs Lisp objects" tar
@@ -1572,7 +1572,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "155794ebd620f4c7319f6013d671dcd519f43d33"))])
+	      (:commit . "83db8f170b1760bfeae0f86fd26701c40360bfcc"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs

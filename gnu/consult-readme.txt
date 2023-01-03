@@ -3,40 +3,6 @@
 	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Available commands
-.. 1. Virtual Buffers
-.. 2. Editing
-.. 3. Register
-.. 4. Navigation
-.. 5. Search
-.. 6. Grep and Find
-.. 7. Compilation
-.. 8. Histories
-.. 9. Modes
-.. 10. Org Mode
-.. 11. Miscellaneous
-2. Special features
-.. 1. Live previews
-.. 2. Narrowing and grouping
-.. 3. Asynchronous search
-.. 4. Multiple sources
-.. 5. Embark integration
-3. Configuration
-.. 1. Use-package example
-.. 2. Custom variables
-.. 3. Fine-tuning
-4. Recommended packages
-5. Bug reports
-6. Contributions
-7. Acknowledgments
-8. Indices
-.. 1. Function index
-.. 2. Concept index
-
-
 Consult provides practical commands based on the Emacs completion
 function [completing-read]. Completion allows you to quickly select an
 item from a list of candidates. Consult offers in particular an advanced
@@ -96,10 +62,11 @@ Table of Contents
 .. 2. Custom variables
 .. 3. Fine-tuning
 4. Recommended packages
-5. Bug reports
-6. Contributions
-7. Acknowledgments
-8. Indices
+5. Auxiliary packages
+6. Bug reports
+7. Contributions
+8. Acknowledgments
+9. Indices
 .. 1. Function index
 .. 2. Concept index
 
@@ -263,8 +230,6 @@ Table of Contents
     argument search across all buffers. The candidates are computed on
     demand based on the input. The command behaves like `consult-grep',
     but operates on buffers instead of files.
-  • `consult-multi-occur': Replacement for `multi-occur' which uses
-    `completing-read-multiple'.
   • `consult-keep-lines': Replacement for `keep/flush-lines' which uses
     the current completion style for filtering the buffer. The function
     updates the buffer while typing. In particular `consult-keep-lines'
@@ -378,8 +343,6 @@ Table of Contents
   • `consult-man': Find Unix man page, via Unix `apropos' or `man
     -k'. `consult-man' opens the selected man page using the Emacs `man'
     command.
-  • `consult-file-externally': Select a file and open it externally,
-    e.g. using `xdg-open' on Linux.
   • `consult-theme': Select a theme and disable all currently enabled
     themes.  Supports live preview of the theme while scrolling through
     the candidates.
@@ -872,7 +835,6 @@ Table of Contents
   │ 	 ("M-s r" . consult-ripgrep)
   │ 	 ("M-s l" . consult-line)
   │ 	 ("M-s L" . consult-line-multi)
-  │ 	 ("M-s m" . consult-multi-occur)
   │ 	 ("M-s k" . consult-keep-lines)
   │ 	 ("M-s u" . consult-focus-lines)
   │ 	 ;; Isearch integration
@@ -1110,6 +1072,34 @@ Table of Contents
     which builds on the default completion UI (development currently
     [discontinued]).
 
+  Note that all packages are independent and can be exchanged with
+  alternative components, since there exist no hard
+  dependencies. Furthermore it is possible to get started with only
+  default completion and Consult and add more components later to the
+  mix. For example you can omit Marginalia if you don't need
+  annotations. I highly recommend the Embark package, but in order to
+  familiarize yourself with the other components, you can first start
+  without it - or you could use with Embark right away and add the other
+  components later on.
+
+
+[vertico] <https://github.com/minad/vertico>
+
+[marginalia] <https://github.com/minad/marginalia>
+
+[embark and embark-consult] <https://github.com/oantolin/embark>
+
+[orderless] <https://github.com/oantolin/orderless>
+
+[mct by Protesilaos Stavrou] <https://git.sr.ht/~protesilaos/mct>
+
+[discontinued]
+<https://protesilaos.com/codelog/2022-04-14-emacs-discontinue-mct/>
+
+
+5 Auxiliary packages
+════════════════════
+
   You can integrate Consult with special programs or with other packages
   in the wider Emacs ecosystem. You may want to install some of theses
   packages depending on your preferences and requirements.
@@ -1117,6 +1107,7 @@ Table of Contents
   • [consult-ag]: Support for the [Silver Searcher] in the style of
     `consult-grep'.
   • [consult-company]: Completion at point using the [Company] backends.
+  • [consult-codesearch]: Integration with [Code Search].
   • [consult-dir]: Directory jumper using Consult multi sources.
   • [consult-dash]: Consult interface to [Dash documentation]
   • [consult-eglot]: Integration with Eglot (LSP client).
@@ -1161,29 +1152,6 @@ Table of Contents
     via `embark-export'.
   • [all-the-icons-completion]: Icons for the completion UI.
 
-  Note that all packages are independent and can be exchanged with
-  alternative components, since there exist no hard
-  dependencies. Furthermore it is possible to get started with only
-  default completion and Consult and add more components later to the
-  mix. For example you can omit Marginalia if you don't need
-  annotations. I highly recommend the Embark package, but in order to
-  familiarize yourself with the other components, you can first start
-  without it - or you could use with Embark right away and add the other
-  components later on.
-
-
-[vertico] <https://github.com/minad/vertico>
-
-[marginalia] <https://github.com/minad/marginalia>
-
-[embark and embark-consult] <https://github.com/oantolin/embark>
-
-[orderless] <https://github.com/oantolin/orderless>
-
-[mct by Protesilaos Stavrou] <https://git.sr.ht/~protesilaos/mct>
-
-[discontinued]
-<https://protesilaos.com/codelog/2022-04-14-emacs-discontinue-mct/>
 
 [consult-ag] <https://github.com/yadex205/consult-ag>
 
@@ -1192,6 +1160,10 @@ Table of Contents
 [consult-company] <https://github.com/mohkale/consult-company>
 
 [Company] <https://github.com/company-mode/company-mode>
+
+[consult-codesearch] <https://github.com/youngker/consult-codesearch.el>
+
+[Code Search] <https://github.com/google/codesearch>
 
 [consult-dir] <https://github.com/karthink/consult-dir>
 
@@ -1264,7 +1236,7 @@ Table of Contents
 <https://github.com/iyefrat/all-the-icons-completion>
 
 
-5 Bug reports
+6 Bug reports
 ═════════════
 
   If you find a bug or suspect that there is a problem with Consult,
@@ -1332,7 +1304,7 @@ Table of Contents
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Lexical-Binding.html>
 
 
-6 Contributions
+7 Contributions
 ═══════════════
 
   Consult is a community effort, please participate in the discussions.
@@ -1357,7 +1329,7 @@ Table of Contents
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
 
-7 Acknowledgments
+8 Acknowledgments
 ═════════════════
 
   This package took inspiration from [Counsel] by Oleh Krehel. Some of
@@ -1422,6 +1394,7 @@ Table of Contents
   • [Colin McLear] ([consult-notes])
   • [Yukinori Kitadai] ([consult-hatena-bookmark])
   • [ghosty141] ([consult-git-log-grep])
+  • [YoungJoo Lee] ([consult-codesearch])
 
 
 [Counsel] <https://github.com/abo-abo/swiper#counsel>
@@ -1549,13 +1522,17 @@ Table of Contents
 [consult-git-log-grep]
 <https://github.com/ghosty141/consult-git-log-grep>
 
+[YoungJoo Lee] <https://github.com/youngker>
 
-8 Indices
+[consult-codesearch] <https://github.com/youngker/consult-codesearch.el>
+
+
+9 Indices
 ═════════
 
-8.1 Function index
+9.1 Function index
 ──────────────────
 
 
-8.2 Concept index
+9.2 Concept index
 ─────────────────
