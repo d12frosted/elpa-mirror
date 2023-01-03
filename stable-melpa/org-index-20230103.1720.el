@@ -1,12 +1,12 @@
-;;; org-index.el --- A personal adaptive index for org  -*- lexical-binding: t; -*-
+;; org-index.el --- A personal adaptive index for org  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2011-2022 Free Software Foundation, Inc.
+;; Copyright (C) 2011-2023 Free Software Foundation, Inc.
 
 ;; Author: Marc Ihm <1@2484.de>
 ;; URL: https://github.com/marcIhm/org-index
-;; Package-Version: 20220801.928
-;; Package-Commit: 9ca02c4e7a38c788b70a1f5364ab505695335bd3
-;; Version: 7.4.3
+;; Package-Version: 20230103.1720
+;; Package-Commit: d919b9e2ef8c0f814455b82ffea080e872b89c72
+;; Version: 7.4.4
 ;; Package-Requires: ((org "9.3") (dash "2.12") (s "1.12") (emacs "26.3"))
 
 ;; This file is not part of GNU Emacs.
@@ -93,6 +93,7 @@
 ;;  - Fill column last-accessed if empty
 ;;  - Negotiated with checkdoc, package-lint and byte-compile-file
 ;;  - Interpret '[[' in yank text as org-mode links
+;;  - Fix for index-maintainance
 ;;
 ;;  Version 7.3
 ;;
@@ -257,7 +258,7 @@
 (defvar oidx--check-count-interval 86400 "Number of seconds between checks for linecount in index; see `oidx--last-count-check'.")
 
 ;; Version of this package
-(defvar org-index-version "7.4.2" "Version of `org-index', format is major.minor.bugfix, where \"major\" are incompatible changes and \"minor\" are new features.")
+(defvar org-index-version "7.4.4" "Version of `org-index', format is major.minor.bugfix, where \"major\" are incompatible changes and \"minor\" are new features.")
 
 ;; customizable options
 (defgroup org-index nil
@@ -434,7 +435,7 @@ edit the index table.  The number of columns shown during occur is
 determined by `org-index-occur-columns'.  Using both features allows to
 ignore columns during search.
 
-This is version 7.4.2 of org-index.el.
+This is version 7.4.4 of org-index.el.
 
 The function `org-index' is the main interactive function of this
 package and its main entry point; it will present you with a list
@@ -2258,15 +2259,18 @@ Argument TOPIC"
           list)))
 
 
-(defun oidx--second-word-of-line ()
+(defun oidx--topic-word-in-line ()
   "Get second word of current line."
-  (nth 1 (split-string (buffer-substring (point-at-bol) (point-at-eol)))))
+  (let ((str (buffer-substring (point-at-bol) (point-at-eol))))
+    (or (string-match "^ +- +\\(.*\\) +actions:" str)
+        (error "Internal error: could not match line as expected"))
+    (s-trim (match-string 1 str))))
 
 
 (defun oidx--index-checks-multi-occur (topic)
   "Action `multi-occur' in index checks.
 Argument TOPIC is either ref or id."
-  (let ((text (oidx--second-word-of-line))
+  (let ((text (oidx--topic-word-in-line))
         (buna "*Occur*"))
     (ignore-errors
       (delete-window (get-buffer-window))
@@ -2278,12 +2282,13 @@ Argument TOPIC is either ref or id."
 
 
 (defun oidx--index-checks-goto-index (topic)
-  "Action `multi-occur' in index checks.
+  "Action `goto index' in index checks.
 Argument TOPIC is either ref or id."
-  (let ((text (oidx--second-word-of-line)))
+  (let ((text (oidx--topic-word-in-line)))
     (oidx--enter-index-to-stay)
-    (oidx--go 'topic text)
-    (message "In index table at matching %s" (symbol-name topic))))
+    (if (oidx--go topic text)
+        (message "In index table at matching %s" (symbol-name topic))
+      (message "In index table, but could not find %s %s" (symbol-name topic) text))))
 
 
 (defun oidx--find-duplicates (column)
@@ -2305,7 +2310,7 @@ Argument TOPIC is either ref or id."
 
 (defun oidx--find-missing-ids ()
   "Helper for `oidx--index-checks': Go through table and find missing IDs."
-  (let (id dups)
+  (let (id miss)
 
     (with-current-buffer oidx--buffer
       (save-excursion
@@ -2313,9 +2318,9 @@ Argument TOPIC is either ref or id."
         (while (org-match-line org-table-line-regexp)
           (when (setq id (oidx--get-or-set-field 'id))
             (or (oidx--id-find id t)
-                (push id dups)))
+                (push id miss)))
           (forward-line))))
-    dups))
+    miss))
 
 
 (defun oidx--count-empty-lines-below-end-of-table ()

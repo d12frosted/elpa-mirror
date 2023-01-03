@@ -1,10 +1,10 @@
 ;;; ob-p5js.el --- Support for p5js in org-babel
 
-;; Licence: MIT
+;; SPDX-License-Identifier: MIT
 ;; Author: Alejandro Gallo <aamsgallo@gmail.com>
 ;; Version: 1.0
-;; Package-Version: 20230101.1407
-;; Package-Commit: f4456b6533bcf2d41caffb267721ef00a0ef16c2
+;; Package-Version: 20230103.1356
+;; Package-Commit: c9f89c8b588cdb0c021a875b8f9fc91be7e39de8
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: javascript, graphics, multimedia, p5js, processing, org-babel
 ;; URL: https://github.com/alejandrogallo/p5js

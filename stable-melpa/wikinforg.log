@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/progfolio/wikinforg.git
 
 Updating /mnt/store/melpa/working/wikinforg/
-Checking out 6ed4463e1b119497dbde1454a9e60b41f2626bd3
-Built wikinforg in 4.149s, finished at 2023-01-03T12:55:33+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.2K Jan  3 12:55 packages/wikinforg-20220906.1711.el
-4.0K -rw-r--r-- 1 root root  462 Jan  3 12:55 packages/wikinforg-20220906.1711.entry
+
+Command '' exited with non-zero exit-code: 128
+
+error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128

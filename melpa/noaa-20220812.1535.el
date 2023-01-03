@@ -3,6 +3,8 @@
 ;; Copyright (C) 2017 - 2022 David Thompson
 ;; Author: David Thompson
 ;; Version: 0.1
+;; Package-Version: 20220812.1535
+;; Package-Commit: c691e770da0f1ed5b83c656087dfbc2ff231bef7
 ;; Keywords: calendar
 ;; Homepage: https://github.com/thomp/noaa
 ;; URL: https://github.com/thomp/noaa
