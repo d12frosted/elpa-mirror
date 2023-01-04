@@ -3,8 +3,8 @@
 ;; Copyright (C) 2015 by Bailey Ling
 ;; Author: Bailey Ling
 ;; URL: https://github.com/bling/fzf.el
-;; Package-Version: 20220726.2216
-;; Package-Commit: 21912ebc7e1084aa88c9d8b7715e782a3978ed23
+;; Package-Version: 20230104.440
+;; Package-Commit: 286e8ee8f4e41ae807a3cbc9218d5945413394ef
 ;; Filename: fzf.el
 ;; Description: A front-end for fzf
 ;; Created: 2015-09-18
@@ -189,16 +189,17 @@ If DIRECTORY is provided, it is prepended to the result of fzf."
     (make-term fzf/executable "sh" nil "-c" sh-cmd)
     (switch-to-buffer buf)
     (and (fboundp #'turn-off-evil-mode) (turn-off-evil-mode))
-    (linum-mode 0)
+    (when (not (version<= "28.0.50" emacs-version))
+      (linum-mode 0))
     (visual-line-mode 0)
 
     ;; disable various settings known to cause artifacts, see #1 for more details
-    (setq-local scroll-margin 0
-                scroll-conservatively 0
-                term-suppress-hard-newline t
-                show-trailing-whitespace nil
-                display-line-numbers nil
-                truncate-lines t)
+    (setq-local scroll-margin 0)
+    (setq-local scroll-conservatively 0)
+    (setq-local term-suppress-hard-newline t)
+    (setq-local show-trailing-whitespace nil)
+    (setq-local display-line-numbers nil)
+    (setq-local truncate-lines t)
     (face-remap-add-relative 'mode-line '(:box nil))
 
     (term-char-mode)
@@ -329,10 +330,11 @@ selected result from `fzf`. DIRECTORY is the directory to start in"
 )
 
 ;;;###autoload
-(defun fzf-find-file-in-dir (directory)
-  (interactive "sDirectory: ")
-  (fzf-find-file directory)
-)
+(defun fzf-find-file-in-dir (&optional directory)
+  (interactive)
+  (let ((dir (or directory
+                 (read-directory-name "Directory: " fzf/directory-start))))
+    (fzf-find-file dir)))
 
 ;;;###autoload
 (defun fzf-git-grep ()

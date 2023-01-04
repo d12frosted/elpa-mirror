@@ -1,8 +1,8 @@
 ;;; zig-mode.el --- A major mode for the Zig programming language -*- lexical-binding: t -*-
 
 ;; Version: 0.0.8
-;; Package-Version: 20230101.835
-;; Package-Commit: 4356724434037504d9b823220070a98d921bad3e
+;; Package-Version: 20230104.538
+;; Package-Commit: 1a4446af7777d04ca2d243681ac63b8c8b7f677b
 ;; Author: Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>
 ;; Keywords: zig, languages
 ;; Package-Requires: ((emacs "24.3") (reformatter "0.6"))
@@ -380,7 +380,7 @@ This is written mainly to be used as `end-of-defun-function' for Zig."
                   ;; expression from the previous line, false otherwise.
                   (is-expr-continutation
                    (and
-                    (not (looking-at "[]});]"))
+                    (not (looking-at "[]});]\\|else"))
                     (save-excursion
                       (zig-skip-backwards-past-whitespace-and-comments)
                       (when (> (point) 1)
