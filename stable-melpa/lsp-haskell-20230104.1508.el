@@ -1,8 +1,8 @@
 ;;; lsp-haskell.el --- Haskell support for lsp-mode
 
 ;; Version: 1.1
-;; Package-Version: 20230102.1912
-;; Package-Commit: c5d3bc2223f16b59eb39906affefeb08f13b918f
+;; Package-Version: 20230104.1508
+;; Package-Commit: 3249cde75fb411f95fe173c222b848182fd0b752
 ;; Package-Requires: ((emacs "24.3") (lsp-mode "3.0") (haskell-mode "16.1"))
 ;; Keywords: haskell
 ;; URL: https://github.com/emacs-lsp/lsp-haskell
@@ -138,6 +138,12 @@
   :group 'lsp-haskell-plugins
   :type 'boolean
   :lsp-path "haskell.plugin.retrie.globalOn")
+(defcustom-lsp lsp-haskell-plugin-stan-global-on
+  t
+  "Enables stan plugin"
+  :group 'lsp-haskell-plugins
+  :type 'boolean
+  :lsp-path "haskell.plugin.stan.globalOn")
 (defcustom-lsp lsp-haskell-plugin-tactics-global-on
   t
   "Enables Wingman (tactics) plugin"

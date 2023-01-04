@@ -4,8 +4,8 @@
 
 ;; Author: liuyinz <liuyinz95@gmail.com>
 ;; Version: 1.1.0
-;; Package-Version: 20230104.1305
-;; Package-Commit: ec94dae9779825487c3bb2c145dc43a2369b01d2
+;; Package-Version: 20230104.1604
+;; Package-Commit: b30a05f67a3c725f4257378de081b5d6fafde999
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/liuyinz/binky-mode
@@ -243,12 +243,12 @@ If nil, mark character would be used instead.  Recommendation as follow:
   :group 'binky)
 
 (defface binky-preview-column-line
-  '((t :inherit font-lock-variable-name-face))
+  '((t :inherit font-lock-keyword-face))
   "Face used to highlight the line number of record in preview."
   :group 'binky)
 
 (defface binky-preview-column-mode
-  '((t :inherit font-lock-type-face))
+  '((t :inherit font-lock-function-name-face))
   "Face used to highlight the major mode of record in preview."
   :group 'binky)
 
@@ -564,7 +564,7 @@ record."
                                ((and (eq x 'name)
                                      (equal (file-name-nondirectory
                                              (buffer-name binky-current-buffer)) y))
-                                'binky-preview-header)
+                                'binky-preview-column-name-same)
                                (t nil))))
                (cons x (if (or shadow (facep column-face))
                            (propertize y 'face (or cond-face column-face)) y))))
@@ -604,7 +604,8 @@ redisplay the preview.  If it's nil, toggle the preview."
         (setq cursor-in-non-selected-windows nil
 		      mode-line-format nil
 		      truncate-lines t)
-        (setq-local fit-window-to-buffer-horizontally t)
+        (setq-local fit-window-to-buffer-horizontally t
+                    window-min-height 1)
         (let* ((total (mapcar #'binky--preview-propertize
                               (binky--record-aggregate 'preview)))
 		       (back (and binky-back-record
