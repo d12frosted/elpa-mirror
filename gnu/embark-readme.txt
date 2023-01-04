@@ -4,36 +4,6 @@
 	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Overview
-.. 1. Acting on targets
-.. 2. The default action on a target
-.. 3. Working with sets of possible targets
-..... 1. `embark-live' a live-updating variant of `embark-collect'
-.. 4. Switching to a different command without losing what you've typed
-2. Quick start
-3. Advanced configuration
-.. 1. Showing information about available targets and actions
-.. 2. Selecting commands via completions instead of key bindings
-.. 3. Quitting the minibuffer after an action
-.. 4. Running some setup after injecting the target
-.. 5. Running hooks before or after an action
-.. 6. Creating your own keymaps
-.. 7. Defining actions for new categories of targets
-..... 1. New minibuffer target example - tab-bar tabs
-..... 2. New target example in regular buffers - short Wikipedia links
-4. How does Embark call the actions?
-.. 1. Non-interactive functions as actions
-5. Embark, Marginalia and Consult
-.. 1. Marginalia
-.. 2. Consult
-6. Resources
-7. Contributions
-8. Acknowledgments
-
-
 
 
 
@@ -253,10 +223,9 @@ Table of Contents
   key bindings for these (although you can, of course!), just a key
   binding for `embark-act'.
 
-  Reverting an Embark Collect or Embark Export buffer has slightly
-  unusual behavior if the buffer was obtained by running
-  `embark-collect' or `embark-export' from within a minibuffer
-  completion session. In that case reverting just restarts the
+  In Embark Collect or Embark Export buffers that were obtained by
+  running `embark-collect' or `embark-export' from within a minibuffer
+  completion session, `g' is bound to a command that restarts the
   completion session, that is, the command that opened the minibuffer is
   run again and the minibuffer contents restored. You can then interact
   normally with the command, perhaps editing the minibuffer contents,
@@ -636,22 +605,23 @@ Table of Contents
   entered at that prompt!
 
 
-3.5 Running hooks before or after an action
-───────────────────────────────────────────
+3.5 Running hooks before, after or around an action
+───────────────────────────────────────────────────
 
-  Embark has two variables, `embark-pre-action-hooks' and
-  `embark-post-action-hooks', which are alists associating commands to
-  hooks that should run before or after the command is used as an
-  action. As with, `embark-target-injection-hooks', there are two
-  special keys for the alists: `t' designates the default hook to run
-  when no specific hook is specified for a command; and the hook
-  associated to `:always' runs regardless.
+  Embark has three variables, `embark-pre-action-hooks',
+  `embark-post-action-hooks' and `embark-around-action-hooks', which are
+  alists associating commands to hooks that should run before or after
+  or as around advice for the command when used as an action. As with
+  `embark-target-injection-hooks', there are two special keys for the
+  alists: `t' designates the default hook to run when no specific hook
+  is specified for a command; and the hook associated to `:always' runs
+  regardless.
 
   The default values of those variables are fairly extensive, adding
   creature comforts to make running actions a smooth experience. Embark
   comes with several functions intended to be added to these hooks, and
-  used in the default values of `embark-pre-action-hooks' and
-  `embark-post-action-hooks'.
+  used in the default values of `embark-pre-action-hooks',
+  `embark-post-action-hooks' and `embark-around-action-hooks'.
 
   For pre-action hooks:
 
@@ -660,17 +630,6 @@ Table of Contents
         action. This is used be default for commands deemed "dangerous",
         or, more accurately, hard to undo, such as `delete-file' and
         `kill-buffer'.
-
-  `embark--mark-target'
-        Mark the target as an active region. Most targets at point
-        outside the minibuffer report which region of the buffer they
-        correspond to (this is the information used by
-        `embark-highlight-indicator' to know what portion of the buffer
-        to highlight); this function marks that region. It is useful as
-        a pre action hook for commands that expect a region to be
-        marked, for example, it is used by default for `indent-region'
-        so that it works on s-expression targets, or for `fill-region'
-        so that it works on paragraph targets.
 
   `embark--unmark-target'
         Unmark the active region. Use this for commands you want to act
@@ -697,24 +656,12 @@ Table of Contents
         s-expression from anywhere inside it and still use
         `eval-last-sexp' as an action.
 
-  `embark--narrow-to-target'
-        Narrow buffer to current target. Use this as a pre-action hook
-        to localize the effect of actions that don't already work on
-        just the region. In the default configuration it is used for
-        `repunctuate-sentences'.
-
   `embark--xref-push-markers'
         Push the current location on the xref marker stack. Use this for
         commands that take you somewhere and for which you'd like to be
         able to come back to where you were using
         `xref-pop-marker-stack'. This is used by default for
         `find-library'.
-
-  `embark--cd'
-        Run the action with `default-directory' set to the directory
-        associated to the current target. The target should be of type
-        `file', `buffer', `bookmark' or `library', and the associated
-        directory is what you'd expect in each case.
 
   For post-action hooks:
 
@@ -725,6 +672,35 @@ Table of Contents
         a completion candidate; for example the default value of
         `embark-post-action-hooks' uses it for `delete-file',
         `kill-buffer', `rename-file', `rename-buffer', etc.
+
+  For around-action hooks:
+
+  `embark--mark-target'
+        Save existing mark and point location, mark the target and run
+        the action. Most targets at point outside the minibuffer report
+        which region of the buffer they correspond to (this is the
+        information used by `embark-highlight-indicator' to know what
+        portion of the buffer to highlight); this function marks that
+        region. It is useful as an around action hook for commands that
+        expect a region to be marked, for example, it is used by default
+        for `indent-region' so that it works on s-expression targets, or
+        for `fill-region' so that it works on paragraph targets.
+
+  `embark--cd'
+        Run the action with `default-directory' set to the directory
+        associated to the current target. The target should be of type
+        `file', `buffer', `bookmark' or `library', and the associated
+        directory is what you'd expect in each case.
+
+  `embark--narrow-to-target'
+        Run the action with buffer narrowed to current target. Use this
+        as an around hook to localize the effect of actions that don't
+        already work on just the region. In the default configuration it
+        is used for `repunctuate-sentences'.
+
+  `embark--save-excursion'
+        Run the action restoring point at the end.  The current default
+        configuration doesn't use this but it is available for users.
 
 
 3.6 Creating your own keymaps
@@ -1127,11 +1103,12 @@ Table of Contents
     `previous-error' to navigate among matches, and, if you install the
     [wgrep] package, you can use it to edit the matches in place.
 
-  In both cases, pressing `g' to revert the exported buffer will rerun
-  the Consult command you had exported from and re-enter the input you
-  had typed. You can then proceed to re-export if that's what you want,
-  but you can also edit the input changing the search terms or simply
-  cancel if you see you are done with that search.
+  In both cases, pressing `g' will rerun the Consult command you had
+  exported from and re-enter the input you had typed (which is similar
+  to reverting but a little more flexible). You can then proceed to
+  re-export if that's what you want, but you can also edit the input
+  changing the search terms or simply cancel if you see you are done
+  with that search.
 
   The `embark-consult' also contains some candidates collectors that
   allow you to run `embark-live' to get a live-updating table of
