@@ -3,21 +3,21 @@ Fetcher: github
 Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/magit-section/
-Checking out 3cf308c1c4cdb9404e3d3c6f9935ad9f628311d9
+Checking out f47b68929f01a1b8299f3160b0ab02d69d59fcb7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magit-section/
-  to /tmp/magit-sectionI2taR2/magit-section-20221127.2227
+  to /tmp/magit-sectionIXyYY2/magit-section-20230103.2224
   ! lisp/magit-section.el -> magit-section.el
   ! lisp/magit-section-pkg.el -> magit-section-pkg.el
   ! docs/magit-section.texi -> magit-section.texi
-Generating /tmp/magit-sectionI2taR2/magit-section-20221127.2227/magit-section.info
-Created magit-section-20221127.2227.tar containing:
-  magit-section-20221127.2227/
-  magit-section-20221127.2227/dir
-  magit-section-20221127.2227/magit-section-pkg.el
-  magit-section-20221127.2227/magit-section.el
-  magit-section-20221127.2227/magit-section.info
-Built magit-section in 10.560s, finished at 2023-01-03T19:46:04+0000
+Generating /tmp/magit-sectionIXyYY2/magit-section-20230103.2224/magit-section.info
+Created magit-section-20230103.2224.tar containing:
+  magit-section-20230103.2224/
+  magit-section-20230103.2224/dir
+  magit-section-20230103.2224/magit-section-pkg.el
+  magit-section-20230103.2224/magit-section.el
+  magit-section-20230103.2224/magit-section.info
+Built magit-section in 10.264s, finished at 2023-01-04T03:11:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Jan  3 19:46 packages/magit-section-20221127.2227.entry
-112K -rw-r--r-- 1 root root 110K Jan  3 19:46 packages/magit-section-20221127.2227.tar
+4.0K -rw-r--r-- 1 root root  401 Jan  4 03:11 packages/magit-section-20230103.2224.entry
+112K -rw-r--r-- 1 root root 110K Jan  4 03:11 packages/magit-section-20230103.2224.tar

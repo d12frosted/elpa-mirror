@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/purcell/whole-line-or-region.git
 
 Updating /mnt/store/melpa/working/whole-line-or-region/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out ba193b2034388bbc384cb04093150fca56f7e262
+Built whole-line-or-region in 4.271s, finished at 2023-01-04T03:46:44+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jan  4 03:46 packages/whole-line-or-region-20201214.650.el
+4.0K -rw-r--r-- 1 root root 450 Jan  4 03:46 packages/whole-line-or-region-20201214.650.entry
