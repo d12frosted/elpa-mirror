@@ -4,8 +4,8 @@
 
 ;; Author: Ian Wahbe
 ;; URL: https://github.com/iwahbe/jsonian
-;; Package-Version: 20221224.12
-;; Package-Commit: d2665a8ed9335ca980b3f382e1d1af978f4ded3f
+;; Package-Version: 20230104.931
+;; Package-Commit: 6670e80dab2b126038b670a0d4e5c8ad8f76202b
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -77,6 +77,11 @@ nil means that `jsonian-mode' will infer the correct indentation."
   "A major mode for editing JSON with comments."
   :prefix "jsonian-c-" :group 'jsonian)
 
+;; Hoisted because it must be declared before use.
+(defvar-local jsonian--cache nil
+  "The buffer local cache of known locations in the current JSON file.
+`jsonian--cache' is invalidated on buffer change.")
+
 
 ;; Manipulating and verifying JSON paths.
 ;;
@@ -116,6 +121,25 @@ b. leveraging C code whenever possible."
           (kill-new display))
         result))))
 
+(defun jsonian--cached-path (head allow-tags stop-at-valid)
+  "Compute `jsonian-path' with assistance from `jsonian--cache'.
+HEAD is the current nearest known path segment at `point'.  See
+the docstring for `jsonian-path' for behavior of ALLOW-TAGS and
+STOP-AT-VALID."
+  (jsonian--ensure-cache)
+  (if (and (not allow-tags) (not stop-at-valid))
+      ;; We are in the tag state where we accept cached values
+      (if-let* ((p (point))
+                (node (gethash p (jsonian--cache-locations jsonian--cache))))
+          ;; We have retrieved a cached value, so return it
+          (reverse (jsonian--cached-node-path node))
+        ;; Else cache the value and return it
+        (let ((r (cons head (jsonian--path allow-tags stop-at-valid))))
+          (jsonian--cache-node p (reverse r))
+          r))
+    ;; Otherwise performed the un-cached compute
+    (cons head (jsonian--path allow-tags stop-at-valid))))
+
 (defun jsonian--path (allow-tags stop-at-valid)
   "Helper function for `jsonian-path'.
 Will pick up object level tags at the current level of if
@@ -130,6 +154,7 @@ Otherwise it will parse back to the beginning of the file."
     (cl-loop 'while (not (bobp))
              (jsonian--backward-to-significant-char)
              (cond
+              ;;
               ;; Enclosing object
               ((eq (char-before) ?\{)
                (if stop-at-valid
@@ -139,10 +164,12 @@ Otherwise it will parse back to the beginning of the file."
                        allow-tags t)))
               ;; Enclosing array
               ((eq (char-before) ?\[)
-               (cl-return (cons index
-                                (unless stop-at-valid
-                                  (backward-char)
-                                  (jsonian--path t stop-at-valid)))))
+               (cl-return
+                (if stop-at-valid
+                   (list index)
+                  (backward-char)
+                  (jsonian--cached-path index t stop-at-valid))))
+              ;;
               ;; Skipping over a complete node (either a array or a object)
               ((or
                 (eq (char-before) ?\])
@@ -153,12 +180,12 @@ Otherwise it will parse back to the beginning of the file."
                    (goto-char (1+ close))
                    (backward-list)))
                (backward-char))
-
+              ;;
               ;; In a list or object
               ((eq (char-before) ?,)
                (backward-char)
                (setq index (1+ index)))
-
+              ;;
               ;; Object tag
               ((eq (char-before) ?:)
                (backward-char)
@@ -175,23 +202,26 @@ Otherwise it will parse back to the beginning of the file."
                  (when allow-tags
                    ;; To avoid blowing the recursion limit, we only collect tags
                    ;; (and recurse on them) when we need to.
-                   (cl-return (cons tag-text (jsonian--path nil stop-at-valid))))))
+                   (cl-return (jsonian--cached-path tag-text nil stop-at-valid)))))
+              ;;
               ;; Found a string value, ignore
               ((eq (char-before) ?\")
                (jsonian--backward-string 'font-lock-string-face))
-
               ;; NOTE: I'm making a choice to parse non-string literals instead of ignoring
               ;; other characters. This ensures the partial parse is strict.
-
+              ;;
               ;; Found a number value, ignore
               ((and (char-before) (<= (char-before) ?9) (>= (char-before) ?0))
                (jsonian--backward-number))
+              ;;
               ;; Boolean literal: true
               ((and (eq (char-before) ?e)
                     (eq (char-before (1- (point))) ?u))
                (jsonian--backward-true))
+              ;;
               ;; Boolean literal: false
               ((eq (char-before) ?e) (jsonian--backward-false))
+              ;;
               ;; null literal
               ((eq (char-before) ?l) (jsonian--backward-null))
               ((bobp) (cl-return nil))
@@ -901,10 +931,6 @@ It should *not* be toggled manually."
 ;; All cached data is stored in the buffer local variable `jsonian--cache'.  It
 ;; is invalidated after the buffer is changed.
 
-(defvar-local jsonian--cache nil
-  "The buffer local cache of known locations in the current JSON file.
-`jsonian--cache' is invalidated on buffer change.")
-
 (defun jsonian--handle-change (&rest args)
   "Handle a change in the buffer.
 `jsonian--handle-change' is designed to be called from the
@@ -912,7 +938,7 @@ It should *not* be toggled manually."
   (ignore args)
   (setq jsonian--cache nil))
 
-(cl-defstruct jsonian--cache
+(cl-defstruct (jsonian--cache (:copier nil))
   "The jsonian node cache.  O(1) lookup is supported via either location or path."
   (locations (make-hash-table :test 'eql)   :documentation "A map of locations to nodes.")
   (paths     (make-hash-table :test 'equal) :documentation "A map of paths to locations."))
@@ -922,7 +948,9 @@ It should *not* be toggled manually."
   (children nil :documentation "A list of the locations of child nodes.
 If non-nil, the child nodes should exist in cache.
 If the node is a leaf node, CHILDREN may be set to `'leaf'.")
-  (segment nil :documentation "The last segment in the path to this node.")
+  (path nil :documentation "The full path to this node.")
+  (segment nil :documentation "The last segment in the path to this node. `segment' should
+be equal to the last element of `path'.")
   (type nil :documentation "The type of the node (as a string), used for display purposes.")
   (preview nil :documentation "A preview of the value, containing test properties."))
 
@@ -944,7 +972,7 @@ PREVIEW is a (fontified) string preview of the node."
   (let ((existing (or
                    (gethash location
                             (jsonian--cache-locations jsonian--cache))
-                   (make-jsonian--cached-node))))
+                   (make-jsonian--cached-node :path path))))
   (when children
     (setf (jsonian--cached-node-children existing) (mapcar #'cdr children)))
   (if segment
