@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-vs/line-reminder
-;; Package-Version: 20230101.1048
-;; Package-Commit: 2166378349e2b84722d246da91867d58b4ea6e83
+;; Package-Version: 20230104.1211
+;; Package-Commit: 41a22589ebc3843f6736669a4517014800f09e16
 ;; Version: 0.5.1
 ;; Package-Requires: ((emacs "25.1") (indicators "0.0.4") (fringe-helper "1.0.1") (ov "1.0.6") (ht "2.0"))
 ;; Keywords: convenience annotation
@@ -286,34 +286,7 @@ If optional argument THUMBNAIL is non-nil, return in thumbnail faces."
   "Remove the indicator on LINE."
   (save-excursion
     (line-reminder--goto-line line)
-    (line-reminder--ind-remove-indicator (point))))
-
-(defun line-reminder--ind-delete-dups ()
-  "Remove duplicates for indicators overlay once."
-  (when (line-reminder--use-indicators-p)
-    (let (record-lst new-lst mkr (mkr-pos -1))
-      (dolist (ind ind-managed-absolute-indicators)
-        (setq mkr (car ind)
-              mkr-pos (marker-position mkr))
-        (if (memq mkr-pos record-lst)
-            (remove-overlays mkr-pos mkr-pos 'ind-indicator-absolute t)
-          (push mkr-pos record-lst)
-          (push ind new-lst)))
-      (setq ind-managed-absolute-indicators new-lst))))
-
-(defun line-reminder--ind-remove-indicator (pos)
-  "Remove the indicator to position POS."
-  (save-excursion
-    (goto-char pos)
-    (let ((start-pt (1+ (line-beginning-position))) (end-pt (line-end-position))
-          remove-inds)
-      (dolist (ind ind-managed-absolute-indicators)
-        (let* ((mkr (car ind)) (mkr-pos (marker-position mkr)))
-          (when (and (>= mkr-pos start-pt) (<= mkr-pos end-pt))
-            (push ind remove-inds))))
-      (dolist (ind remove-inds)
-        (setq ind-managed-absolute-indicators (remove ind ind-managed-absolute-indicators)))
-      (remove-overlays start-pt end-pt 'ind-indicator-absolute t))))
+    (remove-overlays (line-beginning-position) (line-end-position) 'ind-indicator-absolute t)))
 
 (defun line-reminder--add-change-line (line)
   "Add LINE with `modified' flag."
@@ -461,6 +434,12 @@ and END."
 (defun line-reminder--shift-all-lines (start delta)
   "Shift all `change`/`saved` lines by from START line with DELTA."
   (unless (zerop delta)
+    ;; Clean up all indicators before shifting!
+    (when (line-reminder--use-indicators-p)
+      (ht-map (lambda (line _sign)
+                (when (< start line)
+                  (line-reminder--ind-remove-indicator-at-line line)))
+              line-reminder--line-status))
     (let ((new-ht (ht-create)))
       (ht-map (lambda (line sign)
                 (if (< start line)
@@ -529,7 +508,6 @@ and END."
     ;; If buffer consider virtual buffer like `*scratch*`, then always
     ;; treat it as modified
     (setq line-reminder--undo-cancel-p (and (buffer-file-name) undo-in-progress))
-    (line-reminder--ind-delete-dups)
     (setq line-reminder--before-max-pt (point-max)
           line-reminder--before-max-linum (line-reminder--line-number-at-pos (point-max))
           line-reminder--before-begin-pt beg

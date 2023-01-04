@@ -4,8 +4,8 @@
 
 ;; Author: liuyinz <liuyinz95@gmail.com>
 ;; Version: 1.1.0
-;; Package-Version: 20230103.1123
-;; Package-Commit: a4f01e1203b73ad2b9192736ea3138cd2a4dc1f6
+;; Package-Version: 20230104.1305
+;; Package-Commit: ec94dae9779825487c3bb2c145dc43a2369b01d2
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/liuyinz/binky-mode
@@ -748,7 +748,10 @@ window regardless.  Press \\[keyboard-quit] to quit."
     (unwind-protect
         (progn
 		  (while (memq (binky--mark-type (read-key prompt) 'refresh) '(help nil))
-            (and (eq binky-current-type 'help) (binky-preview)))
+            (if (eq binky-current-type 'help)
+                (binky-preview)
+              (binky--message last-input-event 'illegal)
+              (sit-for 0.3 'nodisp)))
 		  (if (eq binky-current-type 'quit)
               (keyboard-quit)
             (downcase (string-to-char (nreverse (single-key-description
@@ -880,8 +883,9 @@ records with no delay and keep alive until \\[keyboard-quit] pressed."
     (ctrl (binky--mark-view mark))
     (t (if (binky--mark-get mark)
 	       (binky--mark-jump mark)
-         (and (eq binky-current-type 'manual)
-              (binky--mark-add mark)))))
+         (if (eq binky-current-type 'manual)
+             (binky--mark-add mark)
+           (binky--message mark 'illegal)))))
   (when keep-alive
     (binky-preview 'redisplay)
     (call-interactively #'binky-binky)))

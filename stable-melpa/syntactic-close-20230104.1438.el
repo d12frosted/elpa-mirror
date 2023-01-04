@@ -4,8 +4,8 @@
 ;; Maintainer: Emacs User Group Berlin <emacs-berlin@emacs-berlin.org>
 
 ;; Version: 0.1
-;; Package-Version: 20220618.817
-;; Package-Commit: 28410740e42ad9bb84416164406269b177fb49fa
+;; Package-Version: 20230104.1438
+;; Package-Commit: e497a9438e19aa9490218323f15ead45e40c80b8
 
 ;; URL: https://github.com/emacs-berlin/syntactic-close
 
@@ -78,7 +78,7 @@
   :type '(repeat character)
   :group 'sytactic-close)
 
-(defcustom syntactic-close-paired-openers (list ?‘ ?< ?\( ?\[ ?{ ?\〈 ?\⦑ ?\⦓ ?\【 ?\⦗ ?\⸤ ?\「 ?\《 ?\⦕ ?\⸨ ?\⧚ ?\｛ ?\（ ?\［ ?\｟ ?\｢ ?\❰ ?\❮ ?\“ ?\‘ ?\❲ ?\⟨ ?\⟪ ?\⟮ ?\⟦ ?\⟬ ?\❴ ?\❪ ?\❨ ?\❬ ?\᚛ ?\〈 ?\⧼ ?\⟅ ?\⸦ ?\﹛ ?\﹙ ?\﹝ ?\⁅ ?\⦏ ?\⦍ ?\⦋ ?\₍ ?\⁽ ?\༼ ?\༺ ?\⸢ ?\〔 ?\『 ?\⦃ ?\〖 ?\⦅ ?\〚 ?\〘 ?\⧘ ?\⦉ ?\⦇)
+(defcustom syntactic-close-paired-openers (list ?< ?\( ?\[ ?{ ?\〈 ?\⦑ ?\⦓ ?\【 ?\⦗ ?\⸤ ?\「 ?\《 ?\⦕ ?\⸨ ?\⧚ ?\｛ ?\（ ?\［ ?\｟ ?\｢ ?\❰ ?\❮ ?\“ ?\‘ ?\❲ ?\⟨ ?\⟪ ?\⟮ ?\⟦ ?\⟬ ?\❴ ?\❪ ?\❨ ?\❬ ?\᚛ ?\〈 ?\⧼ ?\⟅ ?\⸦ ?\﹛ ?\﹙ ?\﹝ ?\⁅ ?\⦏ ?\⦍ ?\⦋ ?\₍ ?\⁽ ?\༼ ?\༺ ?\⸢ ?\〔 ?\『 ?\⦃ ?\〖 ?\⦅ ?\〚 ?\〘 ?\⧘ ?\⦉ ?\⦇)
   "Specify the delimiter char."
   :type '(repeat character)
   :group 'sytactic-close)
@@ -295,7 +295,6 @@ Otherwise switch it off."
   "For example return \"}\" for \"{\" but keep \"\\\"\".
 Argument ERG character to complement."
   (pcase erg
-    (?‘ ?’)
     (?` ?')
     (?< ?>)
     (?> ?<)
@@ -503,7 +502,7 @@ Optional argument LIMIT bound."
 	 (unary-delimiter-chars syntactic-close-unary-delimiter-chars)
 	 (paired-delimiters-strg (concat (cl-map 'string 'identity syntactic-close-paired-openers) (cl-map 'string 'identity syntactic-close-paired-closers)))
 	 (stack stack)
-	 closer done escapes padding)
+	 closer done escapes padding erg)
     (save-restriction
       (narrow-to-region limit orig)
       (while (and (not (bobp)) (not closer)(not done) (<= limit (1- (point))))
@@ -635,8 +634,7 @@ Optional argument ORG read ‘org-mode’."
 
 (defun syntactic-close--braced-inside-string (pos)
   "Return the brace(s) if existing inside a string at point."
-  (let ((orig (point))
-	(counter 0))
+  (let ((counter 0))
     (while (and (or (eq (char-before) ?})(< 0 (abs (skip-chars-backward "^{}" (1+ pos))))))
       (if (eq (char-before) ?})
 	  (setq counter (1- counter))
@@ -689,7 +687,9 @@ Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
   "Ruby specific close.
 
 Argument PPS is result of a call to function ‘parse-partial-sexp’"
-  (cond ((ignore-errors (and (< (nth 1 pps) (nth 8 pps))(syntactic-close--string-before-list-maybe pps))))
+  (cond ((looking-back "#{[_[:alpha:]][_[:alnum:]]*" (line-beginning-position))
+         "}")
+        ((ignore-errors (and (< (nth 1 pps) (nth 8 pps))(syntactic-close--string-before-list-maybe pps))))
 	((and (or (nth 1 pps) (nth 3 pps)) (syntactic-close-pure-syntax-intern pps)))
 	(t (syntactic-close--ruby))))
 
@@ -713,7 +713,8 @@ Argument PPS is result of a call to function ‘parse-partial-sexp’"
       (syntactic-close-generic-forms pps))
      ((nth 1 pps)
       (syntactic-close-pure-syntax pps))
-     (t (syntactic-close--generic nil nil pps)))))
+     (t (syntactic-close--generic nil nil pps))
+     )))
 
 (defun syntactic-close--semicolon-modes (pps)
   "Close specific modes.
@@ -851,15 +852,15 @@ Optional argument BEG sets the lesser border.
 Argument PPS, the result of ‘parse-partial-sexp’."
   (interactive "p*")
   (let* ((orig (copy-marker (point)))
-	(beg (or beg (syntactic-close--point-min)))
-	(pps (or pps (parse-partial-sexp beg (point))))
-	(iact (or iact arg))
-	(arg (or arg 1)))
+	 (beg (or beg (syntactic-close--point-min)))
+	 (pps (or pps (parse-partial-sexp beg (point))))
+	 (iact (or iact arg))
+	 (arg (or arg 1)))
     (pcase (prefix-numeric-value arg)
       (4 (while (syntactic-close-intern (setq orig (copy-marker (point))) beg iact pps))
 	 (< orig (point)))
-      (_ (syntactic-close-intern orig beg iact pps)))
-       (< orig (point))))
+      (_ (syntactic-close-intern orig beg iact pps)
+         (< orig (point))))))
 
 (provide 'syntactic-close)
 ;;; syntactic-close.el ends here
