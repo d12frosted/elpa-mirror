@@ -5,9 +5,9 @@
 ;; Author: Debanjum Singh Solanky <debanjum@gmail.com>
 ;; Description: Natural, Incremental Search for your Second Brain
 ;; Keywords: search, org-mode, outlines, markdown, beancount, ledger, image
-;; Package-Version: 20230104.2347
-;; Package-Commit: 3d1199540c507e3c318f3b825bc08421e4619726
-;; Version: 0.2.1
+;; Package-Version: 20230105.1624
+;; Package-Commit: abd035e2fab173a463faf2976c3b8400885b2c4b
+;; Version: 0.2.2
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/debanjum/khoj/tree/master/src/interface/emacs
 
@@ -116,9 +116,9 @@ NO-PAGING FILTER))
        "C-x M  | music\n"))))
 
 (defvar khoj--rerank nil "Track when re-rank of results triggered.")
-(defun khoj--search-markdown () "Set search-type to 'markdown'." (interactive) (setq khoj--search-type "markdown"))
-(defun khoj--search-org () "Set search-type to 'org-mode'." (interactive) (setq khoj--search-type "org"))
-(defun khoj--search-ledger () "Set search-type to 'ledger'." (interactive) (setq khoj--search-type "ledger"))
+(defun khoj--search-markdown () "Set search-type to `markdown'." (interactive) (setq khoj--search-type "markdown"))
+(defun khoj--search-org () "Set search-type to `org-mode'." (interactive) (setq khoj--search-type "org"))
+(defun khoj--search-ledger () "Set search-type to `ledger'." (interactive) (setq khoj--search-type "ledger"))
 (defun khoj--search-images () "Set search-type to image." (interactive) (setq khoj--search-type "image"))
 (defun khoj--search-music () "Set search-type to music." (interactive) (setq khoj--search-type "music"))
 (defun khoj--improve-rank () "Use cross-encoder to rerank search results." (interactive) (khoj--incremental-search t))
@@ -166,7 +166,7 @@ Use `which-key` if available, else display simple message in echo area"
             json-response))))
 
 (defun khoj--extract-entries-as-org (json-response query)
-  "Convert JSON-RESPONSE, QUERY from API to 'org-mode' entries."
+  "Convert JSON-RESPONSE, QUERY from API to `org-mode' entries."
   ;; remove leading (, ) or SPC from extracted entries string
   (replace-regexp-in-string
    "^[\(\) ]" ""
