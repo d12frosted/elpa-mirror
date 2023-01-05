@@ -3,6 +3,8 @@
 ;; Author: contrapunctus <xmpp:contrapunctus@jabber.fr>
 ;; Maintainer: contrapunctus <xmpp:contrapunctus@jabber.fr>
 ;; Keywords: calendar
+;; Package-Version: 20210510.1831
+;; Package-Commit: 6cb939d160f5d5966d7853aa23f3ed7c7ef9df44
 ;; Homepage: https://tildegit.org/contrapunctus/chronometrist-goal
 ;; Package-Requires: ((emacs "25.1") (alert "1.2") (chronometrist "0.7.0"))
 ;; Version: 0.2.1
