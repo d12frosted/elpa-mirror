@@ -4,8 +4,8 @@
 
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
 ;; Version: 0.6.1
-;; Package-Version: 20220902.654
-;; Package-Commit: 2d3374a1b758a04f08f75b2a5fe05e99989077c1
+;; Package-Version: 20230104.1922
+;; Package-Commit: be90bc9084b384d8a728d68f69da09171ca26d3c
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/unhammer/org-mru-clock
 ;; Keywords: convenience, calendar
@@ -463,6 +463,7 @@ For use with embark and similar."
 
 (eval-when-compile
   ;; Ensure we can dynamically let-bind this even when compiled with lexical-let
+  (defvar vertico-sort-function)
   (defvar selectrum-should-sort)
   (defvar selectrum-should-sort-p))
 
@@ -473,6 +474,7 @@ For use with embark and similar."
   (let ((require-match (not org-mru-clock-capture-if-no-match))
         (collection (org-mru-clock--collection))
         ;; Ensure we keep our mru sort order:
+        (vertico-sort-function nil)
         (selectrum-should-sort nil)
         (selectrum-should-sort-p nil))
     (when-let ((choice (funcall org-mru-clock-completing-read

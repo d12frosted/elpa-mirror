@@ -4,8 +4,8 @@
 
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
 ;; Version: 0.4.0
-;; Package-Version: 20220902.658
-;; Package-Commit: ebaa2389d20bc5fe1796f895f1faedcfc99026d0
+;; Package-Version: 20230104.1924
+;; Package-Commit: 5a4a28710dedef939dd8f1a743c5626e40271842
 ;; URL: https://github.com/unhammer/gnus-recent
 ;; Package-Requires: ((emacs "25.3.2"))
 ;; Keywords: convenience, mail
@@ -378,9 +378,18 @@ For use with embark and similar."
                       (cl-remove-if (lambda (p) (eq (car p) t))
                                     embark-keymap-alist)))))
 
+(eval-when-compile
+  ;; Ensure we can dynamically let-bind this even when compiled with lexical-let
+  (defvar vertico-sort-function)
+  (defvar selectrum-should-sort)
+  (defvar selectrum-should-sort-p))
+
 (defun gnus-recent--completing-read ()
   "Pick an article using `completing-read'."
-  (let* ((selectrum-should-sort-p nil)
+  ;; Ensure we keep our recently-read sort order:
+  (let* ((vertico-sort-function nil)
+         (selectrum-should-sort nil)
+         (selectrum-should-sort-p nil)
          (options (append (when gnus-recent-include-unsent
                             (gnus-recent--unsent-articles-list))
                           gnus-recent--articles-list)))

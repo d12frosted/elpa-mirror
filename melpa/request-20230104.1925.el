@@ -6,8 +6,8 @@
 
 ;; Author: Takafumi Arakaki <aka.tkf at gmail.com>
 ;; URL: https://github.com/tkf/emacs-request
-;; Package-Version: 20221115.1450
-;; Package-Commit: eb66f05fe37f22228f470882b04a6362683975e1
+;; Package-Version: 20230104.1925
+;; Package-Commit: 6ddb4fc4d8a0746ee2dfd8473af315ebe8f6215b
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.3.3
 
@@ -501,9 +501,8 @@ and requests.request_ (Python).
                      "request-default-error-callback: %s %s"
                      url symbol-status))))
     (setq settings (plist-put settings :error error)))
-  (unless (or (stringp data)
-              (null data)
-              (assoc-string "Content-Type" headers t))
+  (when (and (consp data)
+             (not (assoc-string "Content-Type" headers t)))
     (setq data (request--urlencode-alist data))
     (setq settings (plist-put settings :data data)))
   (when params
