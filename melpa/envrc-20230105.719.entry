@@ -1,5 +1,5 @@
 (envrc .
-       [(20221208 932)
+       [(20230105 719)
 	((seq
 	  (2))
 	 (emacs
@@ -7,7 +7,7 @@
 	 (inheritenv
 	  (0 1)))
 	"Support for `direnv' that operates buffer-locally" single
-	((:commit . "417285c4e259abab8ae43e2d72b0e1110563efbc")
+	((:commit . "1954e8c0b5c8440ea9852eeb7c046a677fa544f6")
 	 (:authors
 	  ("Steve Purcell" . "steve@sanityinc.com"))
 	 (:maintainer "Steve Purcell" . "steve@sanityinc.com")

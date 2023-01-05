@@ -1,11 +1,11 @@
 ;;; stock-tracker.el --- Track stock price -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2022 Huming Chen
+;; Copyright (C) 2019-2023 Huming Chen
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20221230.650
-;; Package-Commit: 90b55a3f531b2fd80c364741ca9a5e557b7036e6
+;; Package-Version: 20230105.503
+;; Package-Commit: 327488e0f1232616bf33ab1a69da1a53aca25371
 ;; Version: 0.1.7
 ;; Created: 2019-08-18
 ;; Keywords: convenience, stock, finance

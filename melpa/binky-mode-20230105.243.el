@@ -4,8 +4,8 @@
 
 ;; Author: liuyinz <liuyinz95@gmail.com>
 ;; Version: 1.1.0
-;; Package-Version: 20230104.1604
-;; Package-Commit: b30a05f67a3c725f4257378de081b5d6fafde999
+;; Package-Version: 20230105.243
+;; Package-Commit: a289a5894484b14247cfea3bc3d16cc2380cccd7
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/liuyinz/binky-mode
@@ -600,28 +600,28 @@ redisplay the preview.  If it's nil, toggle the preview."
                 (window-height . fit-window-to-buffer)
                 (window-width  . fit-window-to-buffer)))
         nil
-      (progn
-        (setq cursor-in-non-selected-windows nil
-		      mode-line-format nil
-		      truncate-lines t)
-        (setq-local fit-window-to-buffer-horizontally t
-                    window-min-height 1)
-        (let* ((total (mapcar #'binky--preview-propertize
-                              (binky--record-aggregate 'preview)))
-		       (back (and binky-back-record
-					      (binky--preview-propertize binky-back-record)))
-		       (dup (and back (rassoc (cdr back) (cdr total)))))
-          (erase-buffer)
-	      ;; insert header if non-nil
-	      (when (and (cl-some #'integerp (mapcar #'cdr (binky--preview-column)))
-			         binky-preview-show-header)
-	        (insert (binky--preview-header)))
-	      (when dup
-	        (setf (cdar dup)
-			      (concat (substring (cdar back) -1)
-					      (substring (cdar dup) 1))))
-          (dolist (record (if dup (cdr total) total))
-            (insert (binky--preview-extract record))))))))
+      (let* ((total (mapcar #'binky--preview-propertize
+                            (binky--record-aggregate 'preview)))
+		     (back (and binky-back-record
+					    (binky--preview-propertize binky-back-record)))
+		     (dup (and back (rassoc (cdr back) (cdr total)))))
+        (erase-buffer)
+	    ;; insert header if non-nil
+	    (when (and (cl-some #'integerp (mapcar #'cdr (binky--preview-column)))
+			       binky-preview-show-header)
+	      (insert (binky--preview-header)))
+	    (when dup
+	      (setf (cdar dup)
+			    (concat (substring (cdar back) -1)
+					    (substring (cdar dup) 1))))
+        (dolist (record (if dup (cdr total) total))
+          (insert (binky--preview-extract record))))
+      (setq-local window-min-height 1)
+      (setq-local fit-window-to-buffer-horizontally t)
+      (setq-local cursor-in-non-selected-windows nil)
+	  (setq-local mode-line-format nil)
+	  (setq-local truncate-lines t)
+      (setq-local buffer-read-only t))))
 
 (defun binky--margin-spec (&optional mark)
   "Return margin display string according to MARK if provided."

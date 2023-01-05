@@ -1,11 +1,11 @@
 ;;; org-ivy-search.el --- Full text search for org files powered by ivy -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2021-2022 Huming Chen
+;; Copyright (C) 2021-2023 Huming Chen
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/org-ivy-search
-;; Package-Version: 20221228.108
-;; Package-Commit: 241d51acc76fc576fd975428c5d1768a33c18bb4
+;; Package-Version: 20230105.503
+;; Package-Commit: 7d1a5c6dc4c9a8f37acfbb285407a0d2fdcca993
 ;; Version: 0.1.1
 ;; Created: 2021-03-12
 ;; Keywords: convenience, tool, org
