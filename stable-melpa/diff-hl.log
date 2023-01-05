@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/dgutov/diff-hl.git
 
 Updating /mnt/store/melpa/working/diff-hl/
-Checking out 68fb280b300c5d8460cc7b9183e29fb3ec604136
+Checking out 8f2e4eb345f0639c8fc41e3f7576f77ba6987655
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/diff-hl/
-  to /tmp/diff-hlQGgjvI/diff-hl-20221007.2147
+  to /tmp/diff-hlRJMzOs/diff-hl-20230104.2203
     diff-hl-amend.el -> diff-hl-amend.el
     diff-hl-dired.el -> diff-hl-dired.el
     diff-hl-flydiff.el -> diff-hl-flydiff.el
@@ -15,18 +15,20 @@ Copying files (->) and directories (=>)
     diff-hl-show-hunk-posframe.el -> diff-hl-show-hunk-posframe.el
     diff-hl-show-hunk.el -> diff-hl-show-hunk.el
     diff-hl.el -> diff-hl.el
-Created diff-hl-20221007.2147.tar containing:
-  diff-hl-20221007.2147/
-  diff-hl-20221007.2147/diff-hl-amend.el
-  diff-hl-20221007.2147/diff-hl-dired.el
-  diff-hl-20221007.2147/diff-hl-flydiff.el
-  diff-hl-20221007.2147/diff-hl-inline-popup.el
-  diff-hl-20221007.2147/diff-hl-margin.el
-  diff-hl-20221007.2147/diff-hl-pkg.el
-  diff-hl-20221007.2147/diff-hl-show-hunk-posframe.el
-  diff-hl-20221007.2147/diff-hl-show-hunk.el
-  diff-hl-20221007.2147/diff-hl.el
-Built diff-hl in 4.756s, finished at 2023-01-04T21:30:06+0000
+Created diff-hl-20230104.2203.tar containing:
+  diff-hl-20230104.2203/
+  diff-hl-20230104.2203/diff-hl-amend.el
+  diff-hl-20230104.2203/diff-hl-dired.el
+  diff-hl-20230104.2203/diff-hl-flydiff.el
+  diff-hl-20230104.2203/diff-hl-inline-popup.el
+  diff-hl-20230104.2203/diff-hl-margin.el
+  diff-hl-20230104.2203/diff-hl-pkg.el
+  diff-hl-20230104.2203/diff-hl-show-hunk-posframe.el
+  diff-hl-20230104.2203/diff-hl-show-hunk.el
+  diff-hl-20230104.2203/diff-hl.el
+Built diff-hl in 4.106s, finished at 2023-01-05T01:11:00+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  378 Jan  4 21:30 packages/diff-hl-20221007.2147.entry
 112K -rw-r--r-- 1 root root 110K Jan  4 21:30 packages/diff-hl-20221007.2147.tar
+4.0K -rw-r--r-- 1 root root  378 Jan  5 01:10 packages/diff-hl-20230104.2203.entry
+112K -rw-r--r-- 1 root root 110K Jan  5 01:10 packages/diff-hl-20230104.2203.tar

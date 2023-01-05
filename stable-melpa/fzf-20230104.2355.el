@@ -3,8 +3,8 @@
 ;; Copyright (C) 2015 by Bailey Ling
 ;; Author: Bailey Ling
 ;; URL: https://github.com/bling/fzf.el
-;; Package-Version: 20230104.440
-;; Package-Commit: 286e8ee8f4e41ae807a3cbc9218d5945413394ef
+;; Package-Version: 20230104.2355
+;; Package-Commit: 5e3da8ca9d761f385592c6dfe22c412167a61625
 ;; Filename: fzf.el
 ;; Description: A front-end for fzf
 ;; Created: 2015-09-18
@@ -91,7 +91,7 @@ See `fzf/action-find-file-with-line` for details on how output is parsed."
 
 (defcustom fzf/position-bottom t
   "Set the position of the fzf window. Set to nil to position on top."
-  :type 'bool
+  :type 'boolean
   :group 'fzf)
 
 (defconst fzf/buffer-name "*fzf*"
@@ -124,7 +124,7 @@ configuration.")
 
 ; Awkward internal, global variable to save the reference to the 'term-handle-exit hook so it can be
 ; deleted
-(setq fzf-hook nil)
+(defvar fzf-hook nil)
 
 (defun fzf-close()
   (interactive)
@@ -168,10 +168,13 @@ If DIRECTORY is provided, it is prepended to the result of fzf."
     ;; This gets added back in `fzf/start`
     (advice-remove 'term-handle-exit (fzf/after-term-handle-exit directory action))))
 
+(defvar term-exec-hook)               ; prevent byte-compiler warning
+(defvar term-suppress-hard-newline)   ; prevent byte-compiler warning
+
 (defun fzf/start (directory action &optional custom-args)
   (require 'term)
 
-  ; Clean up existing fzf
+  ;; Clean up existing fzf
   (fzf-close)
 
   (window-configuration-to-register fzf/window-register)
@@ -188,7 +191,7 @@ If DIRECTORY is provided, it is prepended to the result of fzf."
     (when fzf/position-bottom (other-window 1))
     (make-term fzf/executable "sh" nil "-c" sh-cmd)
     (switch-to-buffer buf)
-    (and (fboundp #'turn-off-evil-mode) (turn-off-evil-mode))
+    (and (fboundp 'turn-off-evil-mode) (turn-off-evil-mode))
     (when (not (version<= "28.0.50" emacs-version))
       (linum-mode 0))
     (visual-line-mode 0)
@@ -202,7 +205,7 @@ If DIRECTORY is provided, it is prepended to the result of fzf."
     (setq-local truncate-lines t)
     (face-remap-add-relative 'mode-line '(:box nil))
 
-    (term-char-mode)
+    (and (fboundp 'term-char-mode) (term-char-mode))
     (setq fzf-hook (fzf/after-term-handle-exit directory action)
           mode-line-format (format "   FZF  %s" (or directory "")))))
 
@@ -218,7 +221,8 @@ If DIRECTORY is provided, it is prepended to the result of fzf."
          (f (expand-file-name (nth 0 parts))))
     (when (file-exists-p f)
       (find-file f)
-      (goto-line (string-to-number (nth 1 parts))))
+      (goto-char (point-min))
+      (forward-line (string-to-number (nth 1 parts))))
   )
 )
 
@@ -299,10 +303,13 @@ selected result from `fzf`. DIRECTORY is the directory to start in"
   ;    (fzf/resolve-directory directory)))
   (cond
    (directory directory)
-   ((fboundp #'projectile-project-root) (condition-case err (projectile-project-root) (error default-directory)))
-   (t default-directory)
-  )
-)
+   ((fboundp 'projectile-project-root)
+     (condition-case err
+        (projectile-project-root)
+      (error "Error: default-directory: %s; %s"
+             default-directory
+             (error-message-string err))))
+   (t default-directory)))
 
 
 ;;;###autoload
@@ -347,9 +354,15 @@ selected result from `fzf`. DIRECTORY is the directory to start in"
 
 ;;;###autoload
 (defun fzf-recentf ()
+  "Start a fzf session with the list of recently opened files."
   (interactive)
-  (fzf-with-entries recentf-list #'fzf/action-find-file)
-)
+  (if (bound-and-true-p recentf-list)
+      (fzf-with-entries recentf-list #'fzf/action-find-file)
+    (user-error "No recently opened files.%s"
+                (if (boundp 'recentf-list)
+                    ""
+                  " recentf-mode is not active!"))))
+
 
 ;;;###autoload
 (defun fzf-grep (&optional search directory as-filter)
@@ -441,7 +454,10 @@ If `thing-at-point` is not a symbol, read input interactively."
   "Starts an fzf session at the root of the current projectile project."
   (interactive)
   (require 'projectile)
-  (fzf/start (or (projectile-project-root) default-directory) #'fzf/action-find-file))
+  (if (fboundp 'projectile-project-root)
+      (fzf/start (or (projectile-project-root) default-directory)
+                 #'fzf/action-find-file)
+    (error "projectile-project-root is not bound")))
 
 (defun fzf/test ()
   (fzf-with-entries
