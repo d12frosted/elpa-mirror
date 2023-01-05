@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-bookmark-in-project
-;; Package-Version: 20221230.1055
-;; Package-Commit: fafad5f376418cb032e2ab48a08bffc3924b08ec
+;; Package-Version: 20230105.1129
+;; Package-Commit: 5c365ed74d40c8f7765a89b455e12b4e61a7209e
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -298,8 +298,7 @@ using `default-directory' as a fallback."
           (when (< 1 lines-rel)
             (let ((lines-all (count-lines pos-best pos-next)))
               (setq text
-                    (concat
-                     text " [" (bookmark-in-project--repr-precent lines-rel lines-all) "]")))))
+                    (concat text " [" (bookmark-in-project--repr-precent lines-rel lines-all) "]")))))
 
         text))
      (t ;; No context, show the percent in the file.
@@ -651,8 +650,7 @@ Returning the next bookmark or nil."
          (i-best
           (bookmark-in-project--nth-vec filepath-current filepath-pi-list-pairs
                                         :test
-                                        (lambda (self other)
-                                          (string-equal self (car other))))))
+                                        (lambda (self other) (string-equal self (car other))))))
 
     ;; It's possible there is only one buffer, in that case do nothing.
     ;; We could check the file exists.
@@ -845,8 +843,7 @@ Returning the next bookmark or nil."
 
         (when bookmark-current-bookmark
           (setq bm-current-bookmark-new
-                (bookmark-in-project--remap-name
-                 bookmark-alist bm-list bookmark-current-bookmark))))
+                (bookmark-in-project--remap-name bookmark-alist bm-list bookmark-current-bookmark))))
 
       ;; Set the expanded name back.
       (when bm-current-bookmark-new

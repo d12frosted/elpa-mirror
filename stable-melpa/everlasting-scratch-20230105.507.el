@@ -1,11 +1,11 @@
 ;;; everlasting-scratch.el --- The *scratch* that lasts forever -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2022 Huming Chen
+;; Copyright (C) 2022-2023 Huming Chen
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/everlasting-scratch
-;; Package-Version: 20220412.921
-;; Package-Commit: b3f8339f9564a1926bd8b71c163fa7660cc3b1f4
+;; Package-Version: 20230105.507
+;; Package-Commit: 1b7dac779501dcd988552aa6455a5be89e8b0562
 ;; Version: 0.1.0
 ;; Created: 2022-04-01
 ;; Keywords: convenience, tool
