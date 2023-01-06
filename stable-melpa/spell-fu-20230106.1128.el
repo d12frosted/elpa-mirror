@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-spell-fu
-;; Package-Version: 20230105.2255
-;; Package-Commit: 6084069e1014196667cc94c0244398450559c05d
+;; Package-Version: 20230106.1128
+;; Package-Commit: 74c932d102e328bff10b433690d84c63200fe702
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -23,15 +23,15 @@
 ;; Write the following code to your .emacs file:
 ;;
 ;;   (require 'spell-fu)
-;;   (global-spell-fu-mode-mode)
+;;   (spell-fu-global-mode)
 ;;
 ;; Or with `use-package':
 ;;
 ;;   (use-package spell-fu)
-;;   (global-spell-fu-mode-mode)
+;;   (spell-fu-global-mode)
 ;;
 ;; If you prefer to enable this per-mode, you may do so using
-;; mode hooks instead of calling `global-spell-fu-mode-mode'.
+;; mode hooks instead of calling `spell-fu-global-mode'.
 ;; The following example enables this for org-mode:
 ;;
 ;;   (add-hook 'org-mode-hook
@@ -52,7 +52,6 @@
 (require 'ispell)
 ;; For `string-blank-p'.
 (require 'subr-x)
-
 
 ;; ---------------------------------------------------------------------------
 ;; Custom Variables
@@ -86,7 +85,12 @@ Call `spell-fu-buffer-session-localwords-refresh' after run-time modifications."
 ;;;###autoload
 (put 'spell-fu-buffer-session-localwords 'safe-local-variable #'spell-fu-list-of-strings-p)
 
-(defvar-local global-spell-fu-ignore-buffer nil
+(define-obsolete-variable-alias
+  'global-spell-fu-ignore-buffer
+  'spell-fu-global-ignore-buffer
+  "0.4")
+
+(defvar-local spell-fu-global-ignore-buffer nil
   "When non-nil, the global mode will not be enabled for this buffer.
 This variable can also be a predicate function, in which case
 it'll be called with one parameter (the buffer in question), and
@@ -158,7 +162,6 @@ Notes:
 
 - You may explicitly mark a range as incorrect using
   `spell-fu-mark-incorrect' which takes the range to mark as arguments.")
-
 
 ;; ---------------------------------------------------------------------------
 ;; Internal Variables
@@ -1718,18 +1721,20 @@ Argument DICT-FILE is the absolute path to the dictionary."
          ;; Not explicitly ignored.
          (not (memq major-mode spell-fu-ignore-modes))
          ;; Optionally check if a function is used.
-         (or (null global-spell-fu-ignore-buffer)
+         (or (null spell-fu-global-ignore-buffer)
              (cond
-              ((functionp global-spell-fu-ignore-buffer)
-               (not (funcall global-spell-fu-ignore-buffer (current-buffer))))
+              ((functionp spell-fu-global-ignore-buffer)
+               (not (funcall spell-fu-global-ignore-buffer (current-buffer))))
               (t
                nil))))
     (spell-fu-mode 1)))
 
 ;;;###autoload
-(define-globalized-minor-mode global-spell-fu-mode
+(define-globalized-minor-mode spell-fu-global-mode
   spell-fu-mode
   spell-fu--mode-turn-on)
+
+(define-obsolete-function-alias 'global-spell-fu-mode #'spell-fu-global-mode "0.4")
 
 (provide 'spell-fu)
 ;;; spell-fu.el ends here

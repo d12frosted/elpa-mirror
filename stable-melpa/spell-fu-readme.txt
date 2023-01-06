@@ -7,15 +7,15 @@ This package checks the spelling of on-screen text.
 Write the following code to your .emacs file:
 
   (require 'spell-fu)
-  (global-spell-fu-mode-mode)
+  (spell-fu-global-mode)
 
 Or with `use-package':
 
   (use-package spell-fu)
-  (global-spell-fu-mode-mode)
+  (spell-fu-global-mode)
 
 If you prefer to enable this per-mode, you may do so using
-mode hooks instead of calling `global-spell-fu-mode-mode'.
+mode hooks instead of calling `spell-fu-global-mode'.
 The following example enables this for org-mode:
 
   (add-hook 'org-mode-hook

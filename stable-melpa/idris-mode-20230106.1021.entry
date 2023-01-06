@@ -1,5 +1,5 @@
 (idris-mode .
-	    [(20230105 955)
+	    [(20230106 1021)
 	     ((emacs
 	       (24))
 	      (prop-menu
@@ -7,6 +7,6 @@
 	      (cl-lib
 	       (0 5)))
 	     "Major mode for editing Idris code" tar
-	     ((:commit . "a060688b5c3518f515a1e5e7da0621c15fb009d1")
+	     ((:commit . "253e2ad90985c83c5cb06bae0b1cb931c88a6c89")
 	      (:keywords "languages")
 	      (:url . "https://github.com/idris-hackers/idris-mode"))])
