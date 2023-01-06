@@ -47,6 +47,7 @@ Editing Prolog Code
 .. Insert Term DWIM
 .. Writing Tests
 .. Code Dependencies
+.. Term Search
 Prolog Help
 The Prolog Top-Level
 .. Multiple Top-Levels
@@ -1257,6 +1258,25 @@ Managing Dependencies
 
 
 [Examining diagnostics] See section Examining diagnostics
+
+
+Term Search
+───────────
+
+  You can search for Prolog terms matching a given search term with the
+  command `M-x sweeprolog-term-search'.  This command, bound by default
+  to `C-c C-s' in `sweeprolog-mode' buffers, prompts for a Prolog term
+  to search for and finds terms in the current buffer that the search
+  term subsumes.  For example, to find if-then-else constructs in the
+  current buffer do `C-c C-s _ -> _ ; _ RET'.
+
+  All matching terms in the buffer are highlighted and the cursor moves
+  to the beginning of the next match after point.  Typing `C-s'
+  immediately after a successful search invokes the command
+  `sweeprolog-term-search-repeat-forward' which moves forward to the
+  next match.  Likewise, typing `C-r' after a successful term search
+  invokes the command `sweeprolog-term-search-repeat-backward' which
+  moves backward to the previous match.
 
 
 Prolog Help
