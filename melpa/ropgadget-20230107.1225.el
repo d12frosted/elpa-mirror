@@ -2,8 +2,8 @@
 
 ;; Homepage: https://github.com/Dragoncraft89/ropgadget-el
 ;; Keywords: tools ctf pwn rop
-;; Package-Version: 20221006.1105
-;; Package-Commit: 03305f2d73d7092adab495c45b15c8f16f292c8f
+;; Package-Version: 20230107.1225
+;; Package-Commit: 10e9d6f66de1ee805d871c59f4acc078b66747a3
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.4") (transient "0.3.6"))
 ;; Copyright (C) 2021  Florian Kothmeier
@@ -42,14 +42,14 @@
 (require 'transient)
 
 ;;; Code:
-(define-derived-mode ropgadget-mode special-mode "ROPgadget")
-
 (defvar ropgadget-mode-map
   (let ((mode-map (make-sparse-keymap)))
     (define-key mode-map (kbd "f") #'ropgadget-filter)
     (define-key mode-map (kbd "n") #'next-line)
     (define-key mode-map (kbd "p") #'previous-line)
     mode-map))
+
+(define-derived-mode ropgadget-mode special-mode "ROPgadget")
 
 (defface ropgadget-address '((t :foreground "blue")) "Face for display of addresses in ropgadget buffers." :group 'ropgadget)
 (defface ropgadget-address-separator '((t :foreground "white")) "Face for display of the separating ``:'' between addresses and the first instruction in ropgadget buffers." :group 'ropgadget)

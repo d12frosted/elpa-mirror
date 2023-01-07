@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-spell-fu
-;; Package-Version: 20230106.1128
-;; Package-Commit: 74c932d102e328bff10b433690d84c63200fe702
+;; Package-Version: 20230107.1144
+;; Package-Commit: 3caf7047ea8373b5f26b99e8b73e5da55df46a70
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
