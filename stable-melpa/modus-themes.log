@@ -3,10 +3,10 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~protesilaos/modus-themes
 
 Updating /mnt/store/melpa/working/modus-themes/
-Checking out 63e9e799f47791ac4cfae6bf9c08d85998345db4
+Checking out 4455e93bc52f5cd5231152a9be4cf50a14fa22b7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/modus-themes/
-  to /tmp/modus-themesd1AywK/modus-themes-20230105.309
+  to /tmp/modus-themesOLW5rb/modus-themes-20230107.527
     modus-operandi-deuteranopia-theme.el -> modus-operandi-deuteranopia-theme.el
     modus-operandi-theme.el -> modus-operandi-theme.el
     modus-operandi-tinted-theme.el -> modus-operandi-tinted-theme.el
@@ -16,21 +16,23 @@ Copying files (->) and directories (=>)
     modus-vivendi-tinted-theme.el -> modus-vivendi-tinted-theme.el
   ! doc/modus-themes.info -> modus-themes.info
   ! doc/doclicense.texi -> doclicense.texi
-Generating /tmp/modus-themesd1AywK/modus-themes-20230105.309/doclicense.info
-Created modus-themes-20230105.309.tar containing:
-  modus-themes-20230105.309/
-  modus-themes-20230105.309/dir
-  modus-themes-20230105.309/doclicense.info
-  modus-themes-20230105.309/modus-operandi-deuteranopia-theme.el
-  modus-themes-20230105.309/modus-operandi-theme.el
-  modus-themes-20230105.309/modus-operandi-tinted-theme.el
-  modus-themes-20230105.309/modus-themes-pkg.el
-  modus-themes-20230105.309/modus-themes.el
-  modus-themes-20230105.309/modus-themes.info
-  modus-themes-20230105.309/modus-vivendi-deuteranopia-theme.el
-  modus-themes-20230105.309/modus-vivendi-theme.el
-  modus-themes-20230105.309/modus-vivendi-tinted-theme.el
-Built modus-themes in 9.772s, finished at 2023-01-07T03:00:28+0000
+Generating /tmp/modus-themesOLW5rb/modus-themes-20230107.527/doclicense.info
+Created modus-themes-20230107.527.tar containing:
+  modus-themes-20230107.527/
+  modus-themes-20230107.527/dir
+  modus-themes-20230107.527/doclicense.info
+  modus-themes-20230107.527/modus-operandi-deuteranopia-theme.el
+  modus-themes-20230107.527/modus-operandi-theme.el
+  modus-themes-20230107.527/modus-operandi-tinted-theme.el
+  modus-themes-20230107.527/modus-themes-pkg.el
+  modus-themes-20230107.527/modus-themes.el
+  modus-themes-20230107.527/modus-themes.info
+  modus-themes-20230107.527/modus-vivendi-deuteranopia-theme.el
+  modus-themes-20230107.527/modus-vivendi-theme.el
+  modus-themes-20230107.527/modus-vivendi-tinted-theme.el
+Built modus-themes in 10.097s, finished at 2023-01-07T06:55:52+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  449 Jan  7 03:00 packages/modus-themes-20230105.309.entry
 540K -rw-r--r-- 1 root root 540K Jan  7 03:00 packages/modus-themes-20230105.309.tar
+4.0K -rw-r--r-- 1 root root  449 Jan  7 06:55 packages/modus-themes-20230107.527.entry
+552K -rw-r--r-- 1 root root 550K Jan  7 06:55 packages/modus-themes-20230107.527.tar
