@@ -1270,16 +1270,31 @@ Term Search
   term subsumes.  It highlights all matching terms in the buffer and
   moves the cursor to the beginning of the next match after point.  For
   example, to find if-then-else constructs in the current buffer do `C-c
-  C-s _ -> _ ; _ RET'.  You can further refine the search with an
-  arbitrary Prolog goal that variables in the search term should satisfy
-  by invoking `sweeprolog-term-search' with a prefix argument
-  (i.e. typing `C-u C-c C-c').
+  C-s _ -> _ ; _ RET'.
+
+  While prompting for a search term in the minibuffer, this command
+  populates the “future history” with the Prolog terms at point, with
+  the most nested term at point on top.  Typing `M-n' once in the
+  minibuffer fills it the innermost term at point, typing `M-n' again
+  cycles up the syntax tree at point filling the minibuffer with larger
+  terms, up until the top-term at point.  For more information about
+  minibuffer history commands, see [Minibuffer History] in the Emacs
+  manual.
+
+  If you invoke `sweeprolog-term-search' with a prefix argument, e.g. by
+  typing `C-u C-c C-c', you can further refine the search with an
+  arbitrary Prolog goal for filtering out search results that fail it.
+  The given goal runs for each matching term, it may use variables from
+  the search term to refer to subterms of the matching term.
 
   Typing `C-s' immediately after a successful search invokes the command
   `sweeprolog-term-search-repeat-forward' which moves forward to the
   next match.  Likewise, typing `C-r' after a successful term search
   invokes the command `sweeprolog-term-search-repeat-backward' which
   moves backward to the previous match.
+
+
+[Minibuffer History] <info:emacs#Minibuffer History>
 
 
 Prolog Help
@@ -1774,11 +1789,6 @@ Improvements around editing Prolog
         their `help-echo' property that says what kind of token this is,
         to expose the precise semantics of each token to the user.
 
-  Add a command for interactively inserting a new predicate
-        `sweeprolog-mode' should provide a command for interactively
-        inserting a new predicate definition, ideally with optional
-        `PlDoc' comments (see [Documenting predicates]).
-
   Make predicate completion aware of module-qualification
         predicate completion should detect when the prefix it’s trying
         to complete starts with a module-qualification `foo:ba<|>' and
@@ -1800,9 +1810,6 @@ Improvements around editing Prolog
         └────
 
         And decide whether or not to apply the fragment.
-
-
-[Documenting predicates] See section Documenting predicates
 
 
 Improvements around running Prolog
