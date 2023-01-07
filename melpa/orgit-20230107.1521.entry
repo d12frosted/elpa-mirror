@@ -1,0 +1,17 @@
+(orgit .
+       [(20230107 1521)
+	((emacs
+	  (25 1))
+	 (compat
+	  (28 1 1 0))
+	 (magit
+	  (3 0))
+	 (org
+	  (9 4)))
+	"Support for Org links to Magit buffers" single
+	((:commit . "b0ba871b69c02ef349c28c0f00deee70e723c1d8")
+	 (:authors
+	  ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	 (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	 (:keywords "hypermedia" "vc")
+	 (:url . "https://github.com/magit/orgit"))])

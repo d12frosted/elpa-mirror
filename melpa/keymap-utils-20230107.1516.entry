@@ -1,0 +1,13 @@
+(keymap-utils .
+	      [(20230107 1516)
+	       ((emacs
+		 (25 1))
+		(compat
+		 (28 1 1 0)))
+	       "Keymap utilities" single
+	       ((:commit . "a34632ecf158b8b08d56328f677a276045ce917f")
+		(:authors
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:keywords "convenience" "extensions")
+		(:url . "https://github.com/tarsius/keymap-utils"))])

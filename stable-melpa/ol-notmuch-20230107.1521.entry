@@ -1,0 +1,17 @@
+(ol-notmuch .
+	    [(20230107 1521)
+	     ((emacs
+	       (25 1))
+	      (compat
+	       (28 1 1 0))
+	      (notmuch
+	       (0 32))
+	      (org
+	       (9 4 5)))
+	     "Links to notmuch messages" single
+	     ((:commit . "5964a2bae17d75e5d80858c5d96a0c4db038efac")
+	      (:authors
+	       ("Matthieu Lemerre" . "racin@free.fr"))
+	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	      (:keywords "hypermedia" "mail")
+	      (:url . "https://git.sr.ht/~tarsius/ol-notmuch"))])
