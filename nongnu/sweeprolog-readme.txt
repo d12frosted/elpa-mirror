@@ -1267,12 +1267,15 @@ Term Search
   command `M-x sweeprolog-term-search'.  This command, bound by default
   to `C-c C-s' in `sweeprolog-mode' buffers, prompts for a Prolog term
   to search for and finds terms in the current buffer that the search
-  term subsumes.  For example, to find if-then-else constructs in the
-  current buffer do `C-c C-s _ -> _ ; _ RET'.
+  term subsumes.  It highlights all matching terms in the buffer and
+  moves the cursor to the beginning of the next match after point.  For
+  example, to find if-then-else constructs in the current buffer do `C-c
+  C-s _ -> _ ; _ RET'.  You can further refine the search with an
+  arbitrary Prolog goal that variables in the search term should satisfy
+  by invoking `sweeprolog-term-search' with a prefix argument
+  (i.e. typing `C-u C-c C-c').
 
-  All matching terms in the buffer are highlighted and the cursor moves
-  to the beginning of the next match after point.  Typing `C-s'
-  immediately after a successful search invokes the command
+  Typing `C-s' immediately after a successful search invokes the command
   `sweeprolog-term-search-repeat-forward' which moves forward to the
   next match.  Likewise, typing `C-r' after a successful term search
   invokes the command `sweeprolog-term-search-repeat-backward' which

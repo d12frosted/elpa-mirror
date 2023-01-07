@@ -512,17 +512,17 @@
 	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "8a32564247ad3baee571252a2004c3d347962d01"))])
  (consult .
-	  [(0 30)
+	  [(0 31)
 	   ((emacs
 	     (27 1))
 	    (compat
-	     (28 1)))
+	     (29 1 0 1)))
 	   "Consulting completing-read" tar
 	   ((:url . "https://github.com/minad/consult")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "2d73a36e07e390d957adb117b41db51b5b5a6209"))])
+	    (:commit . "2e1c45d1bda9b4c9746d2a4f107b9689218d1083"))])
  (consult-recoll .
 		 [(0 8)
 		  ((emacs

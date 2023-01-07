@@ -3,17 +3,17 @@
 	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Consult provides practical commands based on the Emacs completion
-function [completing-read]. Completion allows you to quickly select an
-item from a list of candidates. Consult offers in particular an advanced
-buffer switching command `consult-buffer' to switch between buffers and
-recently opened files. Furthermore Consult provides multiple search
-commands, an asynchronous `consult-grep' and `consult-ripgrep', and the
-line-based search command `consult-line'. Some of the Consult commands
-are enhanced versions of built-in Emacs commands. For example the
-command `consult-imenu' presents a flat list of the Imenu with [live
-preview], [grouping and narrowing]. Please take a look at the [full list
-of commands].
+Consult provides search and navigation commands based on the Emacs
+completion function [completing-read]. Completion allows you to quickly
+select an item from a list of candidates. Consult offers asynchronous
+and interactive `consult-grep' and `consult-ripgrep' commands, and the
+line-based search command `consult-line'.  Furthermore Consult provides
+an advanced buffer switching command `consult-buffer' to switch between
+buffers, recently opened files, bookmarks and buffer-like candidates
+from other sources. Some of the Consult commands are enhanced versions
+of built-in Emacs commands. For example the command `consult-imenu'
+presents a flat list of the Imenu with [live preview], [grouping and
+narrowing].  Please take a look at the [full list of commands].
 
 Consult is fully compatible with completion systems centered around the
 standard Emacs `completing-read' API, notably the default completion
