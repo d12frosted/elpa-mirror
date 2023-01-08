@@ -2061,7 +2061,7 @@
 	     ("Campbell Barton" . "ideasman42@gmail.com"))
 	    (:commit . "46de023b5f8ddb989eeff7665feeec2877d8eda8"))])
  (undo-fu-session .
-		  [(0 2)
+		  [(0 4)
 		   ((emacs
 		     (28 1)))
 		   "Persistent undo, available between sessions" tar
@@ -2070,7 +2070,7 @@
 		    (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
 		    (:authors
 		     ("Campbell Barton" . "ideasman42@gmail.com"))
-		    (:commit . "e2043f8350970e1a9ef06a94956a733826cdf32b"))])
+		    (:commit . "e6cf0dca6ae598b1c752dec7bdc18daeac88acec"))])
  (vc-fossil .
 	    [(20221120)
 	     nil "VC backend for the fossil sofware configuraiton management system" tar
