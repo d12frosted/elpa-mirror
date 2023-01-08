@@ -1,0 +1,10 @@
+(scroll-on-jump .
+		[(20230108 12)
+		 ((emacs
+		   (26 2)))
+		 "Scroll when jumping to a new point" single
+		 ((:commit . "44a7654089d71a016469fe496d8ebc48bc305f41")
+		  (:authors
+		   ("Campbell Barton" . "ideasman42@gmail.com"))
+		  (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		  (:url . "https://codeberg.com/ideasman42/emacs-scroll-on-jump"))])
