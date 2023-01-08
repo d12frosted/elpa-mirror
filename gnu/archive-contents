@@ -501,7 +501,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(29 1 0 1)
+	 [(29 1 1 0)
 	  ((emacs
 	    (24 4)))
 	  "Emacs Lisp Compatibility Library" tar
@@ -510,7 +510,7 @@
 	   (:maintainer "Daniel Mendler <mail@daniel-mendler.de>, Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "8a32564247ad3baee571252a2004c3d347962d01"))])
+	   (:commit . "887ec71fa3a90bc0d333ae9c333436148e909dbd"))])
  (consult .
 	  [(0 31)
 	   ((emacs
@@ -3404,7 +3404,7 @@
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
  (triples .
-	  [(0 2 1)
+	  [(0 2 2)
 	   ((seq
 	     (2 0))
 	    (emacs
@@ -3415,7 +3415,7 @@
 	    (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	    (:authors
 	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	    (:commit . "bf65ed2b311a6a13632ae758b054dc52fa292b90"))])
+	    (:commit . "7d7904e6decebc7c9861d38a9443127bf66a1643"))])
  (undo-tree .
 	    [(0 8 2)
 	     ((queue
