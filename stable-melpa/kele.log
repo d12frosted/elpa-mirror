@@ -1,0 +1,20 @@
+Package: kele
+Fetcher: github
+Source:  https://github.com/jinnovation/kele.el.git
+
+Cloning https://github.com/jinnovation/kele.el.git to /mnt/store/melpa/working/kele/
+Checking out 37329e0613fee414f10bf5bf63d922630f2cf60e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kele/
+  to /tmp/keleHFlBdo/kele-20230108.2235
+    kele-fnr.el -> kele-fnr.el
+    kele.el -> kele.el
+Created kele-20230108.2235.tar containing:
+  kele-20230108.2235/
+  kele-20230108.2235/kele-fnr.el
+  kele-20230108.2235/kele-pkg.el
+  kele-20230108.2235/kele.el
+Built kele in 4.370s, finished at 2023-01-09T12:10:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 470 Jan  9 12:10 packages/kele-20230108.2235.entry
+ 40K -rw-r--r-- 1 root root 40K Jan  9 12:10 packages/kele-20230108.2235.tar

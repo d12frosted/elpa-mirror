@@ -7,6 +7,8 @@
 ;; Maintainer:      Mark A. Hershberger <mah@everybody.org>
 ;; Created:         September 08, 2001
 ;; Keywords:        personality, identity, news, mail, gnus
+;; Package-Version: 20150316.42
+;; Package-Commit: 9447d3ccb4c0e75d0468899cccff7aa249657bac
 ;; Version:         1.6
 ;; Latest Version:  http://github.com/hexmode/gnus-alias/
 

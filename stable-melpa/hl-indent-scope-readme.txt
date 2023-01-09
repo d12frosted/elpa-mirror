@@ -5,4 +5,4 @@ Tabs are currently not supported.
 
 ; Usage
 
-(hl-indent-scope-mode) ;; activate in the current buffer.
+(hl-indent-scope-mode) ; Activate in the current buffer.

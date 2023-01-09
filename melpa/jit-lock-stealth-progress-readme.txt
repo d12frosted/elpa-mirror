@@ -4,5 +4,5 @@ This can the be displayed in the mode-line to indicate the state of fontificatio
 
 ; Usage
 
-(jit-lock-stealth-progress-mode) ;; Expose jit-lock-progress.
+(jit-lock-stealth-progress-mode) ; Expose jit-lock-progress.
 This will show the value of `jit-lock-stealth-progress-info' in the mode-line.
