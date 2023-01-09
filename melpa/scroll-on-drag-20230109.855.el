@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-scroll-on-drag
-;; Package-Version: 20230109.536
-;; Package-Commit: 95eb18fc0ee4d32db7e502b2715c7bfcccb112e6
+;; Package-Version: 20230109.855
+;; Package-Commit: 35aacce270a70e7174ae5e047b8f1fdf9c7e08dd
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -261,11 +261,10 @@ Returns true when scrolling took place, otherwise nil."
                (copysign
                 ;; Clamp so converting to int won't fail.
                 (min 1e+18
-                     (*
-                      (expt
-                       (* f-abs scroll-on-drag-motion-scale)
-                       (+ 1.0 (* f-abs scroll-on-drag-motion-accelerate)))
-                      this-frame-char-height-as-float))
+                     (* (expt
+                         (* f-abs scroll-on-drag-motion-scale)
+                         (+ 1.0 (* f-abs scroll-on-drag-motion-accelerate)))
+                        this-frame-char-height-as-float))
                 f)))))
 
          ;; Calls 'timer-update-fn'.

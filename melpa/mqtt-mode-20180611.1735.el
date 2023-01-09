@@ -4,8 +4,6 @@
 
 ;; Author: Andreas Müller <code@0x7.ch>
 ;; Keywords: tools
-;; Package-Version: 20180611.1735
-;; Package-Commit: 613e70e9b9940e635e779994b5c83f86eb62c8e6
 ;; Version: 0.1.0
 ;; URL: https://github.com/andrmuel/mqtt-mode
 ;; Package-Requires: ((emacs "25") (dash "2.12.0"))

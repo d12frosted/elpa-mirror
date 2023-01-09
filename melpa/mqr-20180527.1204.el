@@ -8,8 +8,6 @@
 ;; Author: Tino Calancha <tino.calancha@gmail.com>
 ;; Maintainer: Tino Calancha <tino.calancha@gmail.com>
 ;; URL: https://github.com/calancha/multi-replace
-;; Package-Version: 20180527.1204
-;; Package-Commit: 4ade19d4620b8b61340290bf63fa56d5e493859f
 ;; Keywords: convenience, extensions, lisp
 ;; Created: Sat May 12 22:09:30 JST 2018
 ;; Version: 0.2.3

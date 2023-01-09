@@ -6,8 +6,8 @@
 ;;         Christian Schwarzgruber
 
 ;; URL: http://github.com/bastibe/org-journal
-;; Package-Version: 20221209.2122
-;; Package-Commit: 9c1e60a91d1497df94bc3d183276395295e7815b
+;; Package-Version: 20230109.1217
+;; Package-Commit: c84f1a771933d662695c20b73832a6415b7d3603
 ;; Version: 2.1.2
 ;; Package-Requires: ((emacs "25.1") (org "9.1"))
 
@@ -507,7 +507,8 @@ before it will be deposed."
     initially (setq format (regexp-quote (replace-regexp-in-string "%F" "%Y-%m-%d" format t)))
     for (fmt . rx) in org-journal--format-rx-alist
     do (setq format (replace-regexp-in-string fmt rx format t))
-    finally return format))
+    ;; Ignore extra timestamp elements rather than erroring out
+    finally return (replace-regexp-in-string "[]>]$" "[A-z0-9: ]*\\&" format)))
 
 (defvar org-journal--created-re "^ *:CREATED: +.*$"  "Regex to find created property.")
 

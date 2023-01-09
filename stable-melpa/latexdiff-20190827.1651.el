@@ -5,6 +5,8 @@
 ;; Author: Launay Gaby <gaby.launay@tutanota.com>
 ;; Maintainer: Launay Gaby <gaby.launay@tutanota.com>
 ;; Package-Requires: ((emacs "24.4"))
+;; Package-Version: 20190827.1651
+;; Package-Commit: 56d0b240867527d1b43d3ddec14059361929b971
 ;; Version: 0.1.0
 ;; Keywords: tex, vc, tools, git, helm
 ;; URL: http://github.com/galaunay/latexdiff.el

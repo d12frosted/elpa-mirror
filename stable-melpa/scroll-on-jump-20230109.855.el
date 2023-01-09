@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.com/ideasman42/emacs-scroll-on-jump
-;; Package-Version: 20230109.536
-;; Package-Commit: ba70d6b1f505b2c4feb8df9a3e0677cca00c5541
+;; Package-Version: 20230109.855
+;; Package-Commit: 0c93159942e454c587c59049c72bd4d9f75bd2c5
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -165,9 +165,8 @@ Moving the point when ALSO-MOVE-POINT is set."
         ;; For motion less than a window, scale down the time allowed.
         ;; This means moving a short distance wont be given the full time.
         (time-limit
-         (*
-          scroll-on-jump-duration
-          (min 1.0 (/ (float (abs lines-scroll)) (float (window-body-height window))))))
+         (* scroll-on-jump-duration
+            (min 1.0 (/ (float (abs lines-scroll)) (float (window-body-height window))))))
         (use-curve scroll-on-jump-use-curve))
 
     ;; Animated scrolling (early exit on input to avoid annoying lag).
@@ -237,9 +236,8 @@ Argument ALSO-MOVE-POINT moves the point while scrolling."
         ;; For motion less than a window, scale down the time allowed.
         ;; This means moving a short distance wont be given the full time.
         (time-limit
-         (*
-          scroll-on-jump-duration
-          (min 1.0 (/ (float (abs lines-scroll)) (float (window-body-height window))))))
+         (* scroll-on-jump-duration
+            (min 1.0 (/ (float (abs lines-scroll)) (float (window-body-height window))))))
         (use-curve scroll-on-jump-use-curve)
         (char-height (frame-char-height (window-frame window))))
 
