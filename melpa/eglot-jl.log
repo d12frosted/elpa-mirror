@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/non-Jedi/eglot-jl.git
 
 Updating /mnt/store/melpa/working/eglot-jl/
-Checking out b18dcd670ec19df0dd4001646363e549b5ed7342
+Checking out 3e66d604b66a35290c686194de7cb39b113ab20a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eglot-jl/
-  to /tmp/eglot-jlu0dIya/eglot-jl-20230106.1517
+  to /tmp/eglot-jlKkBpEg/eglot-jl-20230109.1720
     eglot-jl.el -> eglot-jl.el
     eglot-jl.jl -> eglot-jl.jl
     Manifest.toml -> Manifest.toml
     Project.toml -> Project.toml
-Created eglot-jl-20230106.1517.tar containing:
-  eglot-jl-20230106.1517/
-  eglot-jl-20230106.1517/Manifest.toml
-  eglot-jl-20230106.1517/Project.toml
-  eglot-jl-20230106.1517/eglot-jl-pkg.el
-  eglot-jl-20230106.1517/eglot-jl.el
-  eglot-jl-20230106.1517/eglot-jl.jl
-Built eglot-jl in 4.087s, finished at 2023-01-09T15:34:59+0000
+Created eglot-jl-20230109.1720.tar containing:
+  eglot-jl-20230109.1720/
+  eglot-jl-20230109.1720/Manifest.toml
+  eglot-jl-20230109.1720/Project.toml
+  eglot-jl-20230109.1720/eglot-jl-pkg.el
+  eglot-jl-20230109.1720/eglot-jl.el
+  eglot-jl-20230109.1720/eglot-jl.jl
+Built eglot-jl in 4.461s, finished at 2023-01-09T19:24:48+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 475 Jan  9 15:34 packages/eglot-jl-20230106.1517.entry
  20K -rw-r--r-- 1 root root 20K Jan  9 15:34 packages/eglot-jl-20230106.1517.tar
+4.0K -rw-r--r-- 1 root root 475 Jan  9 19:24 packages/eglot-jl-20230109.1720.entry
+ 20K -rw-r--r-- 1 root root 20K Jan  9 19:24 packages/eglot-jl-20230109.1720.tar
