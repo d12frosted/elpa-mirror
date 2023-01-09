@@ -1,25 +1,3 @@
-Table of Contents
-─────────────────
-
-1. Gnorb
-.. 1. Known bugs/issues
-..... 1. Gnus Registry
-..... 2. Multiple Associations
-.. 2. Installation
-.. 3. Roadmap
-..... 1. More fully utilize nngnorb
-..... 2. Comprehensive views of related information
-..... 3. Consider consolidating posting styles, personas, etc
-.. 4. To do list
-..... 1. TODO Agenda date-span message search
-..... 2. TODO Collect BBDB messages by thread
-..... 3. TODO Automatic org-tagging for BBDB contacts
-..... 4. TODO gnorb-bbdb-view
-..... 5. DONE Gnus message tagging
-..... 6. DONE Email subtree export to doc and rtf
-..... 7. DONE Capture to child/subtree trigger actions
-
-
 1 Gnorb
 ═══════
 

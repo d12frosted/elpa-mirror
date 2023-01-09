@@ -1,1 +1,1 @@
-Tok is a calm theme with saffron color scheme.
+Tok is a minimal and calm theme with saffron color scheme.

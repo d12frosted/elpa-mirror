@@ -1,9 +1,9 @@
-;;; tok-theme.el --- Calm theme with saffron color scheme -*- lexical-binding: t; -*-
+;;; tok-theme.el --- Minimal and calm theme with saffron color scheme -*- lexical-binding: t; -*-
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230108.1645
-;; Package-Commit: 1c1d5250a56caa7308c4b35d75dd628a2dde3273
+;; Package-Version: 20230108.1817
+;; Package-Commit: 63b862f6029536791a0e0f9ecb5688acef7801fe
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -36,12 +36,12 @@
 
 ;;; Commentary:
 
-;; Tok is a calm theme with saffron color scheme.
+;; Tok is a minimal and calm theme with saffron color scheme.
 
 ;;; Code:
 
 (deftheme tok
-  "Calm theme with saffron color scheme")
+  "Minimal and calm theme with saffron color scheme")
 
 (let ((class '((class color) (min-colors 89)))
       (dark-saffron "#6e5406") (saffron "#f4c430") (light-saffron "#f8d979")
@@ -102,7 +102,7 @@
    `(font-lock-regexp-grouping-construct ((,class (nil))))
 
    ;; ERC
-   `(erc-timestamp-face ((,class (:foreground "black"))))
+   `(erc-timestamp-face ((,class (:foreground nil))))
 
    ;; sh
    `(sh-heredoc ((,class (nil))))
@@ -121,6 +121,12 @@
    ;; Terraform
    `(terraform--resource-name-face ((,class (nil))))
    `(terraform--resource-type-face ((,class (nil))))
+
+   ;; Magit
+   `(magit-diff-added ((,class (:background "#ddffdd"))))
+   `(magit-diff-removed ((,class (:background "#ffdddd"))))
+   `(magit-diff-added-highlight ((,class (:background "#cceecc"))))
+   `(magit-diff-removed-highlight ((,class (:background "#eecccc"))))
 
    ;; Markdown
    `(markdown-header-face ((,class (:inherit outline-1))))

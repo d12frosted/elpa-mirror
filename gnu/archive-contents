@@ -1363,7 +1363,7 @@
 		  (:keywords "gnome" "c" "coding style")
 		  (:url . "http://elpa.gnu.org/packages/gnome-c-style.html"))])
  (gnorb .
-	[(1 6 10)
+	[(1 6 11)
 	 ((cl-lib
 	   (0 5)))
 	 "Glue code between Gnus, Org, and BBDB" tar
@@ -1371,7 +1371,8 @@
 	  (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
 	  (:authors
 	   ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-	  (:url . "https://elpa.gnu.org/packages/gnorb.html"))])
+	  (:url . "https://elpa.gnu.org/packages/gnorb.html")
+	  (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnu-elpa .
 	   [(1 1)
 	    nil "Advertize GNU ELPA packages" tar

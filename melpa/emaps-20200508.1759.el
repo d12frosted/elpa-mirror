@@ -16,8 +16,6 @@
 ;; Copyright (C) 2016-2018, 2020 Ben Moon
 ;; Author: Ben Moon <software@guiltydolphin.com>
 ;; URL: https://github.com/GuiltyDolphin/emaps
-;; Package-Version: 20200508.1759
-;; Package-Commit: 7c561f3ded2015ed3774e5784059d6601082743e
 ;; Git-Repository: git://github.com/GuiltyDolphin/emaps.git
 ;; Created: 2016-06-20
 ;; Version: 0.2.0
