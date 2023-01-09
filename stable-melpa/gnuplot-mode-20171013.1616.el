@@ -4,8 +4,6 @@
 ;;
 ;; Authors: Mike McCourt <mkmcc@astro.berkeley.edu>
 ;; URL: https://github.com/mkmcc/gnuplot-mode
-;; Package-Version: 20171013.1616
-;; Package-Commit: 601f6392986f0cba332c87678d31ae0d0a496ce7
 ;; Version: 1.2.0
 ;; Keywords: gnuplot, plotting
 

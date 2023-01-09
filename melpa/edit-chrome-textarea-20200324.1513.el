@@ -5,6 +5,8 @@
 ;; Author: Xu Chunyang
 ;; Homepage: https://github.com/xuchunyang/edit-chrome-textarea.el
 ;; Package-Requires: ((emacs "25.1") (websocket "1.4"))
+;; Package-Version: 20200324.1513
+;; Package-Commit: 302659e92b7ef88824691905df3f926766f64729
 ;; Keywords: tools
 ;; Version: 0
 

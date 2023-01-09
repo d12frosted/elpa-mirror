@@ -1,0 +1,10 @@
+(default-font-presets .
+  [(20230109 536)
+   ((emacs
+     (26 1)))
+   "Support selecting fonts from a list of presets" single
+   ((:commit . "2beb6a46e6f083e62027d15ffec72d06ecd77b78")
+    (:authors
+     ("Campbell Barton" . "ideasman42@gmail.com"))
+    (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+    (:url . "https://codeberg.org/ideasman42/emacs-default-font-presets"))])

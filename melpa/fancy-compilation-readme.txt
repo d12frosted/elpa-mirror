@@ -4,4 +4,4 @@ from a terminal into Emacs, setting defaults accordingly.
 
 ; Usage
 
-(fancy-compilation-mode) ;; Activate for future compilation.
+(fancy-compilation-mode) ; Activate for future compilation.
