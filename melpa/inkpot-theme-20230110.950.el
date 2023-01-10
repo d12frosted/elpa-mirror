@@ -4,8 +4,8 @@
 ;; Author: Sarah Iovan <sarah@hwaetageek.com>
 ;;         Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-inkpot-theme
-;; Package-Version: 20230109.536
-;; Package-Commit: e902c096f59a58cd40f0114f0281902be394e831
+;; Package-Version: 20230110.950
+;; Package-Commit: fa0746d927ad205b2f17589e67703c18f42aacf4
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -43,8 +43,7 @@
       ;; (ip-orange-dark+12.3 "#ad7b20") ; bg:doxygenComment
       (ip-orange-bright "#cd8b00") ; fg:Comment
       (ip-orange-light "#df9f2d") ; fg:Underlined
-      ;; (ip-orange-light+11.7 "#fdd090") ; fg:doxygenParam fg:doxygenPrev fg:doxygenSmallSpecial
-      ;;                                     fg:doxygenSpecial
+      ;; (ip-orange-light+11.7 "#fdd090") ; fg:doxygenParam fg:doxygenPrev fg:doxygenSmallSpecial fg:doxygenSpecial
 
       (ip-brown-mid "#ad7b57") ; bg:Search
       ;; (ip-brown-mid+12.6 "#cd8b60") ; bg:IncSearch
@@ -74,11 +73,9 @@
       (ip-slate-dark "#1e1e27") ; bg:Normal
       (ip-slate-dark+7.6 "#2e2e37") ; bg:CursorLine
       (ip-slate-dark+7.9 "#2e2e3f") ; bg:MBENormal bg:MBEChanged bg:PmenuSel
-      (ip-slate-dark+15.7 "#3e3e5e") ; bg:StatusLine bg:User1 bg:User2
-      ;;                                bg:StatusLineNC bg:VertSplit
+      (ip-slate-dark+15.7 "#3e3e5e") ; bg:StatusLine bg:User1 bg:User2 bg:StatusLineNC bg:VertSplit
 
-      (ip-slate-mid "#4e4e8f") ; bg:MBEVisibleNormal bg:MBEVisibleChanged bg:Visual bg:Pmenu
-      ;;                          bg:MatchParen
+      (ip-slate-mid "#4e4e8f") ; bg:MBEVisibleNormal bg:MBEVisibleChanged bg:Visual bg:Pmenu bg:MatchParen
       (ip-slate-light "#7070a0") ; fg:User2
       (ip-slate-light+5.5 "#7e7eae") ; fg:ModeMsg fg:MoreMsg
       (ip-slate-light+5.9 "#6e6eaf") ; bg:WildMenu bg:PmenuSbar bg:PmenuThumb
@@ -92,20 +89,19 @@
       ;; (ip-purple-mid "#4a2a4a") ; bg:DiffText
 
       ;; (ip-pink-dark-3.9 "#cc66cc") ; sp:SpellRare
-      (ip-pink-dark "#c080d0") ; fg:Special fg:SpecialChar fg:perlSpecialMatch
-      ;;                          fg:perlSpecialString fg:cSpecialCharacter fg:cFormat fg:Conceal
+      (ip-pink-dark "#c080d0") ; fg:Special fg:SpecialChar fg:perlSpecialMatch fg:perlSpecialString
+      ;;                         fg:cSpecialCharacter fg:cFormat fg:Conceal
       (ip-pink-light "#ff8bff") ; fg:Identifier fg:Type
 
       ;; Tones.
       (ip-grey+18 "#2e2e2e") ; bg:FoldColumn bg:LineNr bg:ColorColumn
       (ip-grey+19 "#303030") ; fg:IncSearch fg:Search fg:Todo
-      (ip-grey+25 "#404040") ; fg:Cursor fg:lCursor fg:CursorIM bg:String bg:SpecialChar
-      ;;                        bg:perlSpecialMatch bg:perlSpecialString bg:cSpecialCharacter
-      ;;                        bg:cFormat
+      (ip-grey+25 "#404040") ; fg:Cursor fg:lCursor fg:CursorIM bg:String bg:SpecialChar bg:perlSpecialMatch
+      ;;                       bg:perlSpecialString bg:cSpecialCharacter bg:cFormat
       (ip-grey+73 "#b9b9b9") ; fg:StatusLine fg:StatusLineNC fg:VertSplit
       ;; (ip-grey+81 "#cfcfcd") ; fg:MBEVisibleNormal
-      (ip-grey+93 "#eeeeee") ; fg:WildMenu fg:MBEChanged fg:MBEVisibleChanged fg:Visual
-      ;;                        fg:Pmenu fg:PmenuSel fg:PmenuSbar fg:PmenuThumb
+      (ip-grey+93 "#eeeeee") ; fg:WildMenu fg:MBEChanged fg:MBEVisibleChanged fg:Visual fg:Pmenu fg:PmenuSel
+      ;;                       fg:PmenuSbar fg:PmenuThumb
 
       (ip-black "#000000") ; bg:Normal
       (ip-white "#ffffff") ; fg:ErrorMsg fg:WarningMsg
@@ -119,6 +115,7 @@
          nil))))
 
   (custom-theme-set-faces
+   ;; Theme name.
    'inkpot
 
    ;; Basic coloring.
@@ -130,9 +127,7 @@
    `(highlight ((t (:background ,ip-grey+25))))
    `(region ((t (:foreground ,ip-white :background ,ip-slate-mid))))
    ;; Match GVIM secondary selection (which is the background inverted).
-   `(secondary-selection
-     ((t
-       (:foreground ,ip-slate-dark-inverted :inverse-video t))))
+   `(secondary-selection ((t (:foreground ,ip-slate-dark-inverted :inverse-video t))))
    ;; Success output.
    `(success ((t (:foreground ,ip-green-bright))))
    `(warning ((t (:foreground ,ip-white :background ,ip-brown-mid+13))))
@@ -143,63 +138,37 @@
    `(link ((t (:foreground ,ip-pink-light))))
    `(link-visited ((t (:foreground ,ip-pink-dark)))) ; Not a vim color, just a little darker.
    ;; FIXME.
-   `(widget-field
-     ((t
-       (:foreground ,ip-pink-dark :background ,ip-yellow-bright))))
+   `(widget-field ((t (:foreground ,ip-pink-dark :background ,ip-yellow-bright))))
    ;; Follow other window border colors (mode-line in this case), don't blend in with the fringe.
-   `(scroll-bar
-     ((t
-       (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7))))
+   `(scroll-bar ((t (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7))))
 
    ;; Default (font-lock)
    `(font-lock-builtin-face ((t (:foreground ,ip-pink-light))))
    `(font-lock-comment-face ((t (:foreground ,ip-orange-bright))))
-   `(font-lock-comment-delimiter-face
-     ((t
-       (:inherit font-lock-comment-face))))
+   `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-doc-face ((t (:foreground ,ip-blue-bright)))) ; Alternate comment face.
    `(font-lock-doc-markup-face ((t (:foreground ,ip-cyan-mid))))
    `(font-lock-constant-face ((t (:foreground ,ip-cyan-mid))))
    `(font-lock-function-name-face ((t (:foreground ,ip-pink-dark))))
    `(font-lock-keyword-face ((t (:foreground ,ip-blue-bright))))
    `(font-lock-preprocessor-face ((t (:foreground ,ip-cyan-mid))))
-   `(font-lock-string-face
-     ((t
-       (:foreground ,ip-brown-light :background ,ip-grey+25))))
+   `(font-lock-string-face ((t (:foreground ,ip-brown-light :background ,ip-grey+25))))
    `(font-lock-type-face ((t (:foreground ,ip-pink-light))))
    '(font-lock-variable-name-face ((t nil)))
-   `(font-lock-warning-face
-     ((t
-       (:foreground ,ip-white :background ,ip-red-dark))))
+   `(font-lock-warning-face ((t (:foreground ,ip-white :background ,ip-red-dark))))
 
    `(font-lock-negation-char-face ((t (:foreground ,ip-cream-light)))) ; currently no change.
-   `(font-lock-regexp-grouping-construct
-     ((t
-       (:foreground ,ip-blue-bright :weight bold))))
-   `(font-lock-regexp-grouping-backslash
-     ((t
-       (:foreground ,ip-pink-dark :weight bold))))
+   `(font-lock-regexp-grouping-construct ((t (:foreground ,ip-blue-bright :weight bold))))
+   `(font-lock-regexp-grouping-backslash ((t (:foreground ,ip-pink-dark :weight bold))))
 
    ;; Mode line.
    ;; Follow GVIM, inactive mode-line isn't bold.
-   `(header-line
-     ((t
-       (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 :bold t ,@box-outline))))
-   `(header-line-inactive
-     ((t
-       (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 ,@box-outline))))
-   `(mode-line
-     ((t
-       (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 ,@box-outline))))
-   `(mode-line-active
-     ((t
-       (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 :bold t ,@box-outline))))
-   `(mode-line-inactive
-     ((t
-       (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 ,@box-outline))))
-   `(mode-line-buffer-id
-     ((t
-       (:foreground ,ip-grey+73 :bold nil ,@box-outline))))
+   `(header-line ((t (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 :bold t ,@box-outline))))
+   `(header-line-inactive ((t (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 ,@box-outline))))
+   `(mode-line ((t (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 ,@box-outline))))
+   `(mode-line-active ((t (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 :bold t ,@box-outline))))
+   `(mode-line-inactive ((t (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 ,@box-outline))))
+   `(mode-line-buffer-id ((t (:foreground ,ip-grey+73 :bold nil ,@box-outline))))
 
 
    `(hl-line ((t (:background ,ip-slate-dark+7.6))))
@@ -208,28 +177,18 @@
    `(show-paren-match ((t (:background ,ip-slate-mid))))
    `(show-paren-match-expression ((t (:background ,ip-slate-dark+7.9))))
    ;; GVIM doesn't contain this color, use error color.
-   `(show-paren-mismatch
-     ((t
-       (:foreground ,ip-white :background ,ip-red-dark))))
+   `(show-paren-mismatch ((t (:foreground ,ip-white :background ,ip-red-dark))))
 
    ;; Note: original theme doesn't show different colors here,
    ;; simply use bold for 'isearch'.
-   `(isearch
-     ((t
-       (:foreground ,ip-grey+19 :background ,ip-brown-mid :bold t))))
+   `(isearch ((t (:foreground ,ip-grey+19 :background ,ip-brown-mid :bold t))))
    `(isearch-fail ((t (:foreground ,ip-white :background ,ip-red-light))))
-   `(lazy-highlight
-     ((t
-       (:foreground ,ip-grey+19 :background ,ip-brown-mid))))
+   `(lazy-highlight ((t (:foreground ,ip-grey+19 :background ,ip-brown-mid))))
 
    `(minibuffer-prompt ((t (:foreground ,ip-slate-light+5.5 :bold t))))
 
-   `(line-number
-     ((t
-       (:foreground ,ip-slate-lite+17.7 :background ,ip-grey+18))))
-   `(line-number-current-line
-     ((t
-       (:foreground ,ip-yellow-bright :background ,ip-slate-dark :bold t))))
+   `(line-number ((t (:foreground ,ip-slate-lite+17.7 :background ,ip-grey+18))))
+   `(line-number-current-line ((t (:foreground ,ip-yellow-bright :background ,ip-slate-dark :bold t))))
 
    ;; white-space.
    '(whitespace-trailing ((nil (:background "#343443"))))
@@ -237,20 +196,12 @@
    '(whitespace-tab ((nil (:foreground "#434357"))))
 
    ;; xref mode.
-   `(xref-line-number
-     ((t
-       (:foreground ,ip-slate-lite+17.7 :background ,ip-grey+18))))
+   `(xref-line-number ((t (:foreground ,ip-slate-lite+17.7 :background ,ip-grey+18))))
 
    ;; tab-bar-mode.
-   `(tab-bar
-     ((t
-       (:foreground ,ip-grey+73 :background ,ip-slate-dark+7.6 :bold t))))
-   `(tab-bar-tab
-     ((t
-       (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 ,@box-outline))))
-   `(tab-bar-tab-inactive
-     ((t
-       (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 :bold nil :italic t))))
+   `(tab-bar ((t (:foreground ,ip-grey+73 :background ,ip-slate-dark+7.6 :bold t))))
+   `(tab-bar-tab ((t (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 ,@box-outline))))
+   `(tab-bar-tab-inactive ((t (:foreground ,ip-grey+73 :background ,ip-slate-dark+15.7 :bold nil :italic t))))
 
    ;; which-func (shows in the mode-line).
    `(which-func ((t (:foreground ,ip-grey+73 :bold t))))
@@ -272,54 +223,28 @@
 
    ;; Headers:
    ;; These are displayed grouped.
-   `(diff-header
-     ((t
-       (:foreground ,ip-brown-light+30.9 :background ,ip-grey+18))))
+   `(diff-header ((t (:foreground ,ip-brown-light+30.9 :background ,ip-grey+18))))
    ;; Use the same colors, too many tones here makes diff headers overly busy.
-   `(diff-index
-     ((t
-       (:foreground ,ip-brown-light+30.9 :background ,ip-grey+25))))
-   `(diff-file-header
-     ((t
-       (:foreground ,ip-brown-light+30.9 :background ,ip-grey+25))))
+   `(diff-index ((t (:foreground ,ip-brown-light+30.9 :background ,ip-grey+25))))
+   `(diff-file-header ((t (:foreground ,ip-brown-light+30.9 :background ,ip-grey+25))))
    ;; These are displayed side-by-side, a rare exception where a black
    ;; background is useful to visually separate content.
-   `(diff-hunk-header
-     ((t
-       (:foreground ,ip-cyan-mid :background ,ip-black))))
-   `(diff-function
-     ((t
-       (:foreground ,ip-yellow-bright :background ,ip-black))))
+   `(diff-hunk-header ((t (:foreground ,ip-cyan-mid :background ,ip-black))))
+   `(diff-function ((t (:foreground ,ip-yellow-bright :background ,ip-black))))
 
    ;; ediff-mode
-   `(ediff-current-diff-A
-     ((t
-       (:foreground ,ip-cream-light :background ,ip-red-mid))))
-   `(ediff-current-diff-Ancestor
-     ((t
-       (:foreground ,ip-cream-light :background ,ip-red-mid))))
-   `(ediff-current-diff-B
-     ((t
-       (:foreground ,ip-cream-light :background ,ip-green-mid))))
-   `(ediff-current-diff-C
-     ((t
-       (:foreground ,ip-cream-light :background ,ip-cyan-dark))))
+   `(ediff-current-diff-A ((t (:foreground ,ip-cream-light :background ,ip-red-mid))))
+   `(ediff-current-diff-Ancestor ((t (:foreground ,ip-cream-light :background ,ip-red-mid))))
+   `(ediff-current-diff-B ((t (:foreground ,ip-cream-light :background ,ip-green-mid))))
+   `(ediff-current-diff-C ((t (:foreground ,ip-cream-light :background ,ip-cyan-dark))))
    `(ediff-even-diff-A ((t (:background ,ip-slate-dark+7.6))))
    `(ediff-even-diff-Ancestor ((t (:background ,ip-slate-dark+7.6))))
    `(ediff-even-diff-B ((t (:background ,ip-slate-dark+7.6))))
    `(ediff-even-diff-C ((t (:background ,ip-slate-dark+7.6))))
-   `(ediff-fine-diff-A
-     ((t
-       (:foreground ,ip-cream-light :background ,ip-red-light :weight bold))))
-   `(ediff-fine-diff-Ancestor
-     ((t
-       (:foreground ,ip-cream-light :background ,ip-red-light weight bold))))
-   `(ediff-fine-diff-B
-     ((t
-       (:foreground ,ip-cream-light :background ,ip-green-bright :weight bold))))
-   `(ediff-fine-diff-C
-     ((t
-       (:foreground ,ip-cream-light :background ,ip-cyan-mid :weight bold))))
+   `(ediff-fine-diff-A ((t (:foreground ,ip-cream-light :background ,ip-red-light :weight bold))))
+   `(ediff-fine-diff-Ancestor ((t (:foreground ,ip-cream-light :background ,ip-red-light weight bold))))
+   `(ediff-fine-diff-B ((t (:foreground ,ip-cream-light :background ,ip-green-bright :weight bold))))
+   `(ediff-fine-diff-C ((t (:foreground ,ip-cream-light :background ,ip-cyan-mid :weight bold))))
    `(ediff-odd-diff-A ((t (:background ,ip-slate-dark+15.7))))
    `(ediff-odd-diff-Ancestor ((t (:background ,ip-slate-dark+15.7))))
    `(ediff-odd-diff-B ((t (:background ,ip-slate-dark+15.7))))
@@ -329,9 +254,7 @@
    `(dired-directory ((t (:foreground ,ip-green-bright))))
    `(dired-header ((t (:foreground ,ip-orange-bright))))
    `(dired-symlink ((t (:foreground ,ip-yellow-bright :bold t))))
-   `(dired-broken-symlink
-     ((t
-       (:foreground ,ip-yellow-bright :background ,ip-red-dark :bold t))))
+   `(dired-broken-symlink ((t (:foreground ,ip-yellow-bright :background ,ip-red-dark :bold t))))
 
    `(w3m-anchor ((t (:foreground ,ip-pink-dark))))
    `(info-xref ((t (:foreground ,ip-cyan-mid))))
@@ -349,9 +272,7 @@
    `(gnus-group-mail-3-face ((t (:foreground ,ip-orange-bright :bold t))))
    `(gnus-group-mail-3 ((t (:foreground ,ip-orange-bright :bold t))))
    `(gnus-group-mail-low-empty-face ((t (:foreground ,ip-slate-lite+17.7))))
-   `(gnus-group-mail-low-face
-     ((t
-       (:foreground,ip-slate-lite+17.7 :bold t))))
+   `(gnus-group-mail-low-face ((t (:foreground,ip-slate-lite+17.7 :bold t))))
    `(gnus-group-news-1-empty-face ((t (:foreground ,ip-pink-dark))))
    `(gnus-group-news-1-face ((t (:foreground ,ip-pink-dark :bold t))))
    `(gnus-group-news-2-empty-face ((t (:foreground ,ip-cyan-mid))))
@@ -360,49 +281,33 @@
    '(gnus-group-news-3-empty ((t (:foreground "#506dbd"))))
    `(gnus-group-news-3-face ((t (:foreground ,ip-orange-bright :bold t))))
    `(gnus-group-news-low-empty-face ((t (:foreground,ip-slate-lite+17.7))))
-   `(gnus-group-news-low-face
-     ((t
-       (:foreground,ip-slate-lite+17.7 :bold t))))
+   `(gnus-group-news-low-face ((t (:foreground,ip-slate-lite+17.7 :bold t))))
    '(gnus-header-name-face ((t (:foreground "#ab60ed" :bold t))))
    `(gnus-header-from ((t (:foreground ,ip-orange-bright :bold t))))
    `(gnus-header-subject ((t (:foreground ,ip-blue-bright))))
    `(gnus-header-content ((t (:foreground ,ip-cyan-mid :italic t))))
-   `(gnus-header-newsgroups-face
-     ((t
-       (:foreground ,ip-pink-light :bold t :italic t))))
+   `(gnus-header-newsgroups-face ((t (:foreground ,ip-pink-light :bold t :italic t))))
    '(gnus-signature-face ((t (:foreground "#708090" :italic t))))
    `(gnus-summary-cancelled-face ((t (:foreground ,ip-orange-bright))))
    `(gnus-summary-cancelled ((t (:foreground ,ip-orange-bright))))
    '(gnus-summary-high-ancient-face ((t (:foreground "#ab60ed" :bold t))))
    `(gnus-summary-high-read-face ((t (:foreground ,ip-pink-dark :bold t))))
    `(gnus-summary-high-ticked-face ((t (:foreground ,ip-red-mid :bold t))))
-   `(gnus-summary-high-unread-face
-     ((t
-       (:foreground ,ip-brown-light :bold t))))
-   `(gnus-summary-low-ancient-face
-     ((t
-       (:foreground ,ip-pink-dark :italic t))))
+   `(gnus-summary-high-unread-face ((t (:foreground ,ip-brown-light :bold t))))
+   `(gnus-summary-low-ancient-face ((t (:foreground ,ip-pink-dark :italic t))))
    '(gnus-summary-low-read-face ((t (:foreground "#ab60ed" :italic t))))
    `(gnus-summary-low-ticked-face ((t (:foreground ,ip-red-mid :italic t))))
-   `(gnus-summary-low-unread-face
-     ((t
-       (:foreground ,ip-brown-light :italic t))))
-   `(gnus-summary-normal-ancient-face
-     ((t
-       (:foreground ,ip-slate-lite+17.7))))
+   `(gnus-summary-low-unread-face ((t (:foreground ,ip-brown-light :italic t))))
+   `(gnus-summary-normal-ancient-face ((t (:foreground ,ip-slate-lite+17.7))))
    '(gnus-summary-normal-read-face ((t (:foreground "#2e3436"))))
    '(gnus-summary-normal-read ((t (:foreground "#2e3436"))))
    `(gnus-summary-normal-ticked-face ((t (:foreground ,ip-red-mid))))
    `(gnus-summary-normal-unread-face ((t (:foreground ,ip-brown-light))))
-   `(gnus-summary-selected
-     ((t
-       (:foreground ,ip-brown-light :background ,ip-grey+25))))
+   `(gnus-summary-selected ((t (:foreground ,ip-brown-light :background ,ip-grey+25))))
    `(gnus-header-from ((t (:foreground ,ip-orange-bright :bold t))))
    '(message-header-name-face ((t (:foreground "#ab60ed"))))
    '(message-header-name ((t (:foreground "#ab60ed"))))
-   `(message-header-newsgroups-face
-     ((t
-       (:foreground ,ip-pink-light :bold t italic t))))
+   `(message-header-newsgroups-face ((t (:foreground ,ip-pink-light :bold t italic t))))
    `(message-header-other-face ((t (:foreground ,ip-cyan-mid))))
    `(message-header-other ((t (:foreground ,ip-cyan-mid))))
    `(message-header-xheader-face ((t (:foreground ,ip-cyan-mid))))
@@ -420,9 +325,7 @@
 
    ;; Org-Mode.
    '(org-hide ((t (:foreground "#708090"))))
-   `(org-level-1
-     ((t
-       (:foreground ,ip-slate-lite+17.7 :height 1.0 :bold t))))
+   `(org-level-1 ((t (:foreground ,ip-slate-lite+17.7 :height 1.0 :bold t))))
    `(org-level-2 ((t (:foreground ,ip-cyan-mid :height 1.0 :bold nil))))
    `(org-level-3 ((t (:foreground ,ip-orange-light :height 1.0 :bold t))))
    `(org-level-4 ((t (:foreground ,ip-red-mid :height 1.0 :bold nil))))
@@ -430,9 +333,7 @@
    `(org-footnote ((t (:underline t :foreground ,ip-orange-dark))))
    '(org-link ((t (:underline t :foreground "#708090"))))
    `(org-special-keyword ((t (:foreground ,ip-orange-dark))))
-   `(org-verbatim
-     ((t
-       (:foreground ,ip-brown-light :background ,ip-grey+25))))
+   `(org-verbatim ((t (:foreground ,ip-brown-light :background ,ip-grey+25))))
    `(org-code ((t (:foreground ,ip-brown-light :background ,ip-grey+25))))
    '(org-block ((t (:foreground "#708090"))))
    '(org-quote ((t (:inherit org-block :slant italic))))
@@ -442,12 +343,8 @@
    `(org-warning ((t (:underline t :foreground ,ip-cyan-mid))))
    `(org-agenda-structure ((t (:weight bold :foreground ,ip-red-mid))))
    `(org-agenda-date ((t (:foreground ,ip-cyan-mid))))
-   `(org-agenda-date-weekend
-     ((t
-       (:weight normal :foreground,ip-slate-lite+17.7))))
-   `(org-agenda-date-today
-     ((t
-       (:weight bold :foreground ,ip-orange-bright))))
+   `(org-agenda-date-weekend ((t (:weight normal :foreground,ip-slate-lite+17.7))))
+   `(org-agenda-date-today ((t (:weight bold :foreground ,ip-orange-bright))))
 
    ;; reStructuredText.
    `(rst-external ((t (:foreground ,ip-pink-light))))
@@ -510,33 +407,19 @@
    `(magit-commit-mark-unread-face ((t (:foreground ,ip-green-bright))))
 
    ;; auto-complete (melpa).
-   `(ac-candidate-face
-     ((t
-       (:foreground ,ip-white :background ,ip-slate-mid))))
-   `(ac-selection-face
-     ((t
-       (:foreground ,ip-white :background ,ip-slate-dark+7.9 :weight bold))))
+   `(ac-candidate-face ((t (:foreground ,ip-white :background ,ip-slate-mid))))
+   `(ac-selection-face ((t (:foreground ,ip-white :background ,ip-slate-dark+7.9 :weight bold))))
 
    ;; ivy (melpa).
-   `(ivy-current-match
-     ((t
-       (:foreground ,ip-white :background ,ip-slate-mid))))
+   `(ivy-current-match ((t (:foreground ,ip-white :background ,ip-slate-mid))))
    ;; highlight matching chars (same as isearch).
-   `(ivy-minibuffer-match-face-2
-     ((t
-       (:foreground ,ip-grey+19 :background ,ip-brown-mid))))
+   `(ivy-minibuffer-match-face-2 ((t (:foreground ,ip-grey+19 :background ,ip-brown-mid))))
 
    ;; company (melpa).
-   `(company-tooltip
-     ((t
-       (:foreground ,ip-white :background ,ip-slate-mid))))
-   `(company-tooltip-selection
-     ((t
-       (:background ,ip-slate-dark+7.9 :weight bold))))
+   `(company-tooltip ((t (:foreground ,ip-white :background ,ip-slate-mid))))
+   `(company-tooltip-selection ((t (:background ,ip-slate-dark+7.9 :weight bold))))
    `(company-tooltip-annotation ((t (:foreground ,ip-cream-light))))
-   `(company-tooltip-common
-     ((t
-       (:foreground ,ip-grey+19 :background ,ip-brown-mid))))
+   `(company-tooltip-common ((t (:foreground ,ip-grey+19 :background ,ip-brown-mid))))
 
    `(company-scrollbar-bg ((t (:background ,ip-slate-light+5.9))))
    ;; Not based on original theme, could change.
@@ -547,9 +430,7 @@
 
    ;; fancy-dabbrev (melpa).
    ;; Colors selected from the palette to be a balance: not too intrusive, not too faded.
-   `(fancy-dabbrev-preview-face
-     ((t
-       (:foreground ,ip-slate-light+5.5 :background ,ip-slate-dark+7.6))))
+   `(fancy-dabbrev-preview-face ((t (:foreground ,ip-slate-light+5.5 :background ,ip-slate-dark+7.6))))
 
    ;; neotree (melpa).
    `(neo-banner-face ((t (:foreground ,ip-orange-bright))))
@@ -560,12 +441,8 @@
    `(neo-file-link-face ((t (:foreground ,ip-cream-light))))
 
    ;; highlight-indent-guides (melpa).
-   `(highlight-indent-guides-odd-face
-     ((t
-       (:background ,ip-slate-dark+15.7))))
-   `(highlight-indent-guides-even-face
-     ((t
-       (:background ,ip-slate-dark+7.9))))
+   `(highlight-indent-guides-odd-face ((t (:background ,ip-slate-dark+15.7))))
+   `(highlight-indent-guides-even-face ((t (:background ,ip-slate-dark+7.9))))
 
    ;; hl-indent-scope (melpa).
    `(hl-indent-scope-odd-face ((t (:background ,ip-slate-dark+15.7))))
@@ -590,13 +467,11 @@
 
 ;;;###autoload
 (when load-file-name
-  (add-to-list
-   'custom-theme-load-path
-   (file-name-as-directory (file-name-directory load-file-name))))
+  (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'inkpot)
 ;; Local Variables:
-;; fill-column: 99
+;; fill-column: 120
 ;; indent-tabs-mode: nil
 ;; End:
 ;;; inkpot-theme.el ends here

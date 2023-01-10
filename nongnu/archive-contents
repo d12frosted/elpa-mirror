@@ -1017,15 +1017,15 @@
 			   ("Nikolaj Schumacher <bugs * nschum de>"))
 			  (:commit . "438a1cb2563e2a2496be4678cc0df8d5b22caf5d"))])
  (hl-block-mode .
-		[(0 1)
+		[(0 2)
 		 ((emacs
 		   (26 1)))
 		 "Highlighting nested blocks" tar
-		 ((:url . "https://codeberg.com/ideasman42/emacs-hl-block-mode")
+		 ((:url . "https://codeberg.org/ideasman42/emacs-hl-block-mode")
 		  (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
 		  (:authors
 		   ("Campbell Barton" . "ideasman42@gmail.com"))
-		  (:commit . "877e14c0645397aa8c1a45eb34ea70f3ecd21280"))])
+		  (:commit . "760e02b5fd66812e701c12292a1f00bde3c1c46c"))])
  (hl-column .
 	    [(1 0)
 	     ((emacs
@@ -2051,15 +2051,15 @@
 		 (:authors
 		  ("Mark Tran" . "mark.tran@gmail.com")))])
  (undo-fu .
-	  [(0 4)
+	  [(0 5)
 	   ((emacs
 	     (25 1)))
 	   "Undo helper with redo" tar
-	   ((:url . "https://codeberg.com/ideasman42/emacs-undo-fu")
+	   ((:url . "https://codeberg.org/ideasman42/emacs-undo-fu")
 	    (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
 	    (:authors
 	     ("Campbell Barton" . "ideasman42@gmail.com"))
-	    (:commit . "46de023b5f8ddb989eeff7665feeec2877d8eda8"))])
+	    (:commit . "57615408f9bd70247d2b2844a1946a00300ef5bb"))])
  (undo-fu-session .
 		  [(0 4)
 		   ((emacs

@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20230109.536
-;; Package-Commit: c68a71048c5cae5585d9a0a6459cffe20f2e7d45
+;; Package-Version: 20230110.953
+;; Package-Commit: fc26fe16d86006f1c524d180b955286f48941b4e
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -64,6 +64,7 @@
       (ob-aluminium6+5 "#3a4144"))
 
   (custom-theme-set-faces
+   ;; Theme name.
    'oblivion
 
    ;; Basic coloring.
@@ -74,9 +75,7 @@
    `(fringe ((t (:background ,ob-aluminium5 :foreground ,ob-aluminium2))))
    `(highlight ((t (:background ,ob-aluminium5))))
    `(region ((t (:foreground ,ob-aluminium1 :background ,ob-aluminium4))))
-   `(secondary-selection
-     ((t
-       (:foreground ,ob-chocolate2 :inverse-video t))))
+   `(secondary-selection ((t (:foreground ,ob-chocolate2 :inverse-video t))))
    ;; Success output.
    `(success ((t (:foreground ,ob-chameleon1))))
    `(warning ((t (:foreground ,ob-aluminium1 :background ,ob-plum1))))
@@ -88,17 +87,13 @@
    `(link-visited ((t (:foreground ,ob-plum2)))) ; Not a GEdit color, just a little darker.
    `(widget-field ((t (:foreground ,ob-plum2 :background ,ob-butter1)))) ; FIXME
    ;; Follow other window border colors (mode-line in this case), don't blend in with the fringe.
-   `(scroll-bar
-     ((t
-       (:foreground ,ob-aluminium4 :background ,ob-aluminium6))))
+   `(scroll-bar ((t (:foreground ,ob-aluminium4 :background ,ob-aluminium6))))
 
 
    ;; Default (font-lock)
    `(font-lock-builtin-face ((t (:foreground ,ob-skyblue1))))
    `(font-lock-comment-face ((t (:foreground ,ob-aluminium4))))
-   `(font-lock-comment-delimiter-face
-     ((t
-       (:inherit font-lock-comment-face))))
+   `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-doc-face ((t (:foreground ,ob-skyblue1-2-blend)))) ; Alternate comment face.
    ;; This doesn't have an equivalent for GEdit.
    `(font-lock-doc-markup-face ((t (:foreground ,ob-plum1))))
@@ -109,34 +104,18 @@
    `(font-lock-string-face ((t (:foreground ,ob-butter2))))
    `(font-lock-type-face ((t (:foreground ,ob-chameleon1))))
    `(font-lock-variable-name-face ((t (:foreground ,ob-orange1))))
-   `(font-lock-warning-face
-     ((t
-       (:foreground ,ob-aluminium1 :background ,ob-plum1))))
+   `(font-lock-warning-face ((t (:foreground ,ob-aluminium1 :background ,ob-plum1))))
 
    `(font-lock-negation-char-face ((t (:foreground ,ob-aluminium2)))) ; currently no change.
-   `(font-lock-regexp-grouping-construct
-     ((t
-       (:foreground ,ob-orange1 :weight bold))))
-   `(font-lock-regexp-grouping-backslash
-     ((t
-       (:foreground ,ob-orange2 :weight bold))))
+   `(font-lock-regexp-grouping-construct ((t (:foreground ,ob-orange1 :weight bold))))
+   `(font-lock-regexp-grouping-backslash ((t (:foreground ,ob-orange2 :weight bold))))
 
    ;; Mode line.
-   `(header-line
-     ((t
-       (:foreground ,ob-aluminium6 :background ,ob-aluminium3))))
-   `(header-line-inactive
-     ((t
-       (:foreground ,ob-aluminium6 :background ,ob-aluminium4))))
-   `(mode-line
-     ((t
-       (:foreground ,ob-aluminium6 :background ,ob-aluminium4))))
-   `(mode-line-active
-     ((t
-       (:foreground ,ob-aluminium6 :background ,ob-aluminium3))))
-   `(mode-line-inactive
-     ((t
-       (:foreground ,ob-aluminium6 :background ,ob-aluminium4))))
+   `(header-line ((t (:foreground ,ob-aluminium6 :background ,ob-aluminium3))))
+   `(header-line-inactive ((t (:foreground ,ob-aluminium6 :background ,ob-aluminium4))))
+   `(mode-line ((t (:foreground ,ob-aluminium6 :background ,ob-aluminium4))))
+   `(mode-line-active ((t (:foreground ,ob-aluminium6 :background ,ob-aluminium3))))
+   `(mode-line-inactive ((t (:foreground ,ob-aluminium6 :background ,ob-aluminium4))))
    `(mode-line-buffer-id ((t (:foreground ,ob-aluminium6+5))))
 
    `(hl-line ((t (:background ,ob-aluminium5))))
@@ -147,53 +126,34 @@
    `(show-paren-match ((t (:foreground ,ob-chocolate2 :bold t))))
    `(show-paren-match-expression ((t (:foreground ,ob-chocolate2))))
    ;; No equivalent from GEdit.
-   `(show-paren-mismatch
-     ((t
-       (:foreground ,ob-scarletred2 :background ,ob-aluminium6-scarletred3-blend))))
+   `(show-paren-mismatch ((t (:foreground ,ob-scarletred2 :background ,ob-aluminium6-scarletred3-blend))))
 
    ;; Note: original theme doesn't show different colors here,
    ;; simply use bold for 'isearch'.
-   `(isearch
-     ((t
-       (:foreground ,ob-aluminium1 :background ,ob-aluminium4 :bold t))))
+   `(isearch ((t (:foreground ,ob-aluminium1 :background ,ob-aluminium4 :bold t))))
    `(isearch-fail ((t (:foreground ,ob-white :background ,ob-scarletred1))))
-   `(lazy-highlight
-     ((t
-       (:foreground ,ob-aluminium1 :background ,ob-chameleon3))))
+   `(lazy-highlight ((t (:foreground ,ob-aluminium1 :background ,ob-chameleon3))))
 
    `(minibuffer-prompt ((t (:foreground ,ob-aluminium2 :bold t))))
 
    `(line-number ((t (:foreground ,ob-aluminium5 :background ,ob-black))))
    ;; GEdit is same color but bold, this is _NOT_ bright enough.
-   `(line-number-current-line
-     ((t
-       (:background ,ob-black :foreground ,ob-butter2 :bold t))))
+   `(line-number-current-line ((t (:background ,ob-black :foreground ,ob-butter2 :bold t))))
 
    ;; white-space.
    `(whitespace-trailing ((nil (:background ,ob-aluminium4))))
    `(whitespace-space ((nil (:foreground ,ob-aluminium4))))
-   `(whitespace-tab
-     ((nil
-       (:background ,ob-aluminium6+5 :foreground ,ob-aluminium4))))
+   `(whitespace-tab ((nil (:background ,ob-aluminium6+5 :foreground ,ob-aluminium4))))
 
    ;; xref mode.
-   `(xref-line-number
-     ((t
-       (:background ,ob-aluminium6+16 :foreground ,ob-aluminium4))))
+   `(xref-line-number ((t (:background ,ob-aluminium6+16 :foreground ,ob-aluminium4))))
 
    ;; tab-bar-mode.
-   `(tab-bar
-     ((t
-       (:bold t :foreground ,ob-aluminium3 :background ,ob-aluminium6+5))))
+   `(tab-bar ((t (:bold t :foreground ,ob-aluminium3 :background ,ob-aluminium6+5))))
    `(tab-bar-tab
      ((t
-       (:foreground
-        ,ob-aluminium3
-        :background ,ob-aluminium6+16
-        :box (:line-width -1 :color ,ob-aluminium4)))))
-   `(tab-bar-tab-inactive
-     ((t
-       (:bold nil :italic t :foreground ,ob-aluminium3 :background ,ob-aluminium6+16))))
+       (:foreground ,ob-aluminium3 :background ,ob-aluminium6+16 :box (:line-width -1 :color ,ob-aluminium4)))))
+   `(tab-bar-tab-inactive ((t (:bold nil :italic t :foreground ,ob-aluminium3 :background ,ob-aluminium6+16))))
 
    ;; which-func (shows in the mode-line).
    `(which-func ((t (:bold t :foreground ,ob-aluminium3))))
@@ -210,58 +170,32 @@
    `(diff-removed ((t (:background ,ob-aluminium6-as-red))))
    ;; Refine colors for emacs 27+.
    `(diff-refine-added ((t (:background ,ob-aluminium6-chameleon3-blend))))
-   `(diff-refine-removed
-     ((t
-       (:background ,ob-aluminium6-scarletred3-blend))))
+   `(diff-refine-removed ((t (:background ,ob-aluminium6-scarletred3-blend))))
 
    ;; Headers:
    ;; These are displayed grouped.
-   `(diff-header
-     ((t
-       (:foreground ,ob-aluminium1 :background ,ob-aluminium6+16))))
+   `(diff-header ((t (:foreground ,ob-aluminium1 :background ,ob-aluminium6+16))))
    ;; Use the same colors, too many tones here makes diff headers overly busy.
-   `(diff-index
-     ((t
-       (:foreground ,ob-aluminium1 :background ,ob-aluminium6+16))))
-   `(diff-file-header
-     ((t
-       (:foreground ,ob-aluminium1 :background ,ob-aluminium6+16))))
+   `(diff-index ((t (:foreground ,ob-aluminium1 :background ,ob-aluminium6+16))))
+   `(diff-file-header ((t (:foreground ,ob-aluminium1 :background ,ob-aluminium6+16))))
    ;; These are displayed side-by-side, a rare exception where a black
    ;; background is useful to visually separate content.
-   `(diff-hunk-header
-     ((t
-       (:foreground ,ob-skyblue1 :background ,ob-black))))
+   `(diff-hunk-header ((t (:foreground ,ob-skyblue1 :background ,ob-black))))
    `(diff-function ((t (:foreground ,ob-butter1 :background ,ob-black))))
 
    ;; ediff-mode
-   `(ediff-current-diff-A
-     ((t
-       (:foreground ,ob-aluminium2 :background ,ob-scarletred2))))
-   `(ediff-current-diff-Ancestor
-     ((t
-       (:foreground ,ob-aluminium2 :background ,ob-scarletred2))))
-   `(ediff-current-diff-B
-     ((t
-       (:foreground ,ob-aluminium2 :background ,ob-chameleon2))))
-   `(ediff-current-diff-C
-     ((t
-       (:foreground ,ob-aluminium2 :background ,ob-skyblue1))))
+   `(ediff-current-diff-A ((t (:foreground ,ob-aluminium2 :background ,ob-scarletred2))))
+   `(ediff-current-diff-Ancestor ((t (:foreground ,ob-aluminium2 :background ,ob-scarletred2))))
+   `(ediff-current-diff-B ((t (:foreground ,ob-aluminium2 :background ,ob-chameleon2))))
+   `(ediff-current-diff-C ((t (:foreground ,ob-aluminium2 :background ,ob-skyblue1))))
    `(ediff-even-diff-A ((t (:background ,ob-aluminium6+5))))
    `(ediff-even-diff-Ancestor ((t (:background ,ob-aluminium6+5))))
    `(ediff-even-diff-B ((t (:background ,ob-aluminium6+5))))
    `(ediff-even-diff-C ((t (:background ,ob-aluminium6+5))))
-   `(ediff-fine-diff-A
-     ((t
-       (:foreground ,ob-aluminium2 :background ,ob-scarletred1 :weight bold))))
-   `(ediff-fine-diff-Ancestor
-     ((t
-       (:foreground ,ob-aluminium2 :background ,ob-scarletred1 weight bold))))
-   `(ediff-fine-diff-B
-     ((t
-       (:foreground ,ob-aluminium2 :background ,ob-chameleon1 :weight bold))))
-   `(ediff-fine-diff-C
-     ((t
-       (:foreground ,ob-aluminium2 :background ,ob-skyblue1 :weight bold))))
+   `(ediff-fine-diff-A ((t (:foreground ,ob-aluminium2 :background ,ob-scarletred1 :weight bold))))
+   `(ediff-fine-diff-Ancestor ((t (:foreground ,ob-aluminium2 :background ,ob-scarletred1 weight bold))))
+   `(ediff-fine-diff-B ((t (:foreground ,ob-aluminium2 :background ,ob-chameleon1 :weight bold))))
+   `(ediff-fine-diff-C ((t (:foreground ,ob-aluminium2 :background ,ob-skyblue1 :weight bold))))
    `(ediff-odd-diff-A ((t (:background ,ob-aluminium6+16))))
    `(ediff-odd-diff-Ancestor ((t (:background ,ob-aluminium6+16))))
    `(ediff-odd-diff-B ((t (:background ,ob-aluminium6+16))))
@@ -277,9 +211,7 @@
    `(dired-directory ((t (:foreground ,ob-chameleon1))))
    `(dired-header ((t (:foreground ,ob-chocolate2))))
    `(dired-symlink ((t (:bold t :foreground ,ob-butter1))))
-   `(dired-broken-symlink
-     ((t
-       (:bold t :foreground ,ob-butter1 :background ,ob-scarletred2))))
+   `(dired-broken-symlink ((t (:bold t :foreground ,ob-butter1 :background ,ob-scarletred2))))
 
    ;; Haskell.
    `(haskell-operator-face ((t (:foreground ,ob-white))))
@@ -295,12 +227,8 @@
    `(org-footnote ((t (:foreground ,ob-orange2 :underline t))))
    `(org-link ((t (:foreground ,ob-aluminium3 :underline t))))
    `(org-special-keyword ((t (:foreground ,ob-orange2))))
-   `(org-verbatim
-     ((t
-       (:foreground ,ob-chocolate1 :background ,ob-aluminium6+16))))
-   `(org-code
-     ((t
-       (:inherit font-lock-string-face :background ,ob-aluminium6+16))))
+   `(org-verbatim ((t (:foreground ,ob-chocolate1 :background ,ob-aluminium6+16))))
+   `(org-code ((t (:inherit font-lock-string-face :background ,ob-aluminium6+16))))
    `(org-block ((t (:foreground ,ob-aluminium3))))
    `(org-quote ((t (:inherit org-block :slant italic))))
    `(org-verse ((t (:inherit org-block :slant italic))))
@@ -309,9 +237,7 @@
    `(org-warning ((t (:foreground ,ob-chameleon1 :underline t))))
    `(org-agenda-structure ((t (:foreground ,ob-scarletred1 :weight bold))))
    `(org-agenda-date ((t (:foreground ,ob-chameleon1))))
-   `(org-agenda-date-weekend
-     ((t
-       (:foreground ,ob-skyblue1 :weight normal))))
+   `(org-agenda-date-weekend ((t (:foreground ,ob-skyblue1 :weight normal))))
    `(org-agenda-date-today ((t (:foreground ,ob-butter2 :weight bold))))
 
    ;; reStructuredText.
@@ -321,9 +247,7 @@
    '(rst-emphasis1 ((t (:italic t))))
    '(rst-emphasis2 ((t (:weight bold t))))
    `(rst-reference ((t (:foreground ,ob-plum1))))
-   `(rst-literal
-     ((t
-       (:inherit font-lock-string-face :background ,ob-aluminium6+16))))
+   `(rst-literal ((t (:inherit font-lock-string-face :background ,ob-aluminium6+16))))
    ;; titles baseline.
    `(rst-adornment ((t (:foreground ,ob-butter3))))
 
@@ -335,9 +259,7 @@
    `(rst-level-6 ((t (:foreground ,ob-butter3))))
 
    ;; `markdown-mode`.
-   `(markdown-inline-code-face
-     ((t
-       (:inherit font-lock-string-face :background ,ob-aluminium6+16))))
+   `(markdown-inline-code-face ((t (:inherit font-lock-string-face :background ,ob-aluminium6+16))))
    `(markdown-header-face-1 ((t (:foreground ,ob-butter3))))
    `(markdown-header-face-2 ((t (:foreground ,ob-butter3))))
    `(markdown-header-face-3 ((t (:foreground ,ob-butter3))))
@@ -379,21 +301,13 @@
    `(ivy-current-match ((t (:inherit region))))
    `(ivy-grep-info ((t (:foreground ,ob-plum1))))
    ;; highlight matching chars (same as isearch).
-   `(ivy-minibuffer-match-face-2
-     ((t
-       (:background ,ob-chocolate3 :foreground ,ob-aluminium6+16))))
+   `(ivy-minibuffer-match-face-2 ((t (:background ,ob-chocolate3 :foreground ,ob-aluminium6+16))))
 
    ;; company (melpa).
-   `(company-tooltip
-     ((t
-       (:background ,ob-aluminium4 :foreground ,ob-white))))
-   `(company-tooltip-selection
-     ((t
-       (:background ,ob-aluminium6+5 :weight bold))))
+   `(company-tooltip ((t (:background ,ob-aluminium4 :foreground ,ob-white))))
+   `(company-tooltip-selection ((t (:background ,ob-aluminium6+5 :weight bold))))
    `(company-tooltip-annotation ((t (:foreground ,ob-aluminium2))))
-   `(company-tooltip-common
-     ((t
-       (:foreground ,ob-aluminium6+16 :background ,ob-chocolate3))))
+   `(company-tooltip-common ((t (:foreground ,ob-aluminium6+16 :background ,ob-chocolate3))))
 
    `(company-scrollbar-bg ((t (:background ,ob-aluminium4))))
    ;; Not based on original theme, could change.
@@ -404,9 +318,7 @@
 
    ;; fancy-dabbrev (melpa).
    ;; Colors selected from the palette to be a balance: not too intrusive, not too faded.
-   `(fancy-dabbrev-preview-face
-     ((t
-       (:foreground ,ob-aluminium4 :background ,ob-aluminium6+5))))
+   `(fancy-dabbrev-preview-face ((t (:foreground ,ob-aluminium4 :background ,ob-aluminium6+5))))
 
    ;; neotree (melpa).
    `(neo-banner-face ((t (:foreground ,ob-chocolate2))))
@@ -443,13 +355,11 @@
 
 ;;;###autoload
 (when load-file-name
-  (add-to-list
-   'custom-theme-load-path
-   (file-name-as-directory (file-name-directory load-file-name))))
+  (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'oblivion)
 ;; Local Variables:
-;; fill-column: 99
+;; fill-column: 120
 ;; indent-tabs-mode: nil
 ;; End:
 ;;; oblivion-theme.el ends here
