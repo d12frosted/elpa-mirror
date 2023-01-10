@@ -5,8 +5,8 @@
 ;; Author: Nicolas P. Rougier <Nicolas.Rougier@inria.fr>
 ;; Homepage: https://github.com/rougier/svg-tag-mode
 ;; Keywords: convenience
-;; Package-Version: 20230109.901
-;; Package-Commit: 3630fb0f291950cfd05c780f6126ae2c0a145294
+;; Package-Version: 20230110.1824
+;; Package-Commit: 9f5c2cb862fcba96f247b85fdd1b7dffff7af93a
 ;; Version: 0.3.2
 
 ;; Package-Requires: ((emacs "27.1") (svg-lib "0.2"))
@@ -160,11 +160,16 @@ string as argument and returns a SVG tag."
 
 (defun svg-tag--face-attribute (face attribute)
   "Return the value of FACE's ATTRIBUTE in the selected frame.
-FACE can either be a face or a property list."
+FACE can either be a face, property list (i.e., an anonymous
+face), or a string (assumed to be the foreground attribute). If
+ATTRIBUTE is not specified in FACE, then use the corresponding
+attribute from ``svg-tag-default-face''."
   (if (facep face)
       (face-attribute face attribute nil 'default)
-    (or (plist-get face attribute)
-        (face-attribute 'svg-tag-default-face attribute nil 'default))))
+    (if (and (stringp face) (eq attribute :foreground))
+        face
+      (or (plist-get face attribute)
+          (face-attribute 'svg-tag-default-face attribute nil 'default)))))
 
 
 (defun svg-tag-make (tag &optional &rest args)
@@ -179,8 +184,8 @@ FACE can either be a face or a property list."
   :end (integer) specifies the last index of the tag substring to
                  take into account (default nil)
 
-  :face (face) indicates the face or property list to use to compute 
-               foreground & background color. (default 'default)
+  :face (face) indicates the face, property list or string to use to 
+               compute foreground & background color. (default 'default)
 
   :inverse (bool) indicates whether to inverse foreground &
                   background color (default nil)

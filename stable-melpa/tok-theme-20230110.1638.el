@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230110.1339
-;; Package-Commit: 2f33ab75d36bd83304d344704c6c0a0082821ca3
+;; Package-Version: 20230110.1638
+;; Package-Commit: 4a92602354324119f0748e9ae3ae08caeb66c32a
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -64,7 +64,7 @@
    `(error ((,class (:weight bold :foreground "firebrick1"))))
    `(warning ((,class (:weight bold :foreground "DarkOrange"))))
    `(success ((,class (:weight bold :foreground "Green1"))))
-   `(minibuffer-prompt ((,class (:foreground "cyan"))))
+   `(minibuffer-prompt ((,class (:foreground ,saffron))))
    `(fringe ((,class (nil))))
    `(button ((,class (:underline t))))
 
