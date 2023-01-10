@@ -6,9 +6,9 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-hl-block-mode
-;; Package-Version: 20230109.536
-;; Package-Commit: 4a8ef878d848b78b1e7030c5c3624c0461abb5ce
-;; Version: 0.1
+;; Package-Version: 20230110.439
+;; Package-Commit: 760e02b5fd66812e701c12292a1f00bde3c1c46c
+;; Version: 0.2
 ;; Package-Requires: ((emacs "26.1"))
 
 ;;; Commentary:
@@ -17,8 +17,8 @@
 
 ;;; Usage
 
-;; (hl-block-mode)        ; activate in the current buffer.
-;; (global-hl-block-mode) ; activate globally for all buffers.
+;; (hl-block-mode)        ; Activate in the current buffer.
+;; (hl-block-global-mode) ; Activate globally for all buffers.
 
 ;;; Code:
 
@@ -421,9 +421,11 @@ Argument BLOCK-LIST represents start-end ranges of braces."
     (hl-block--mode-disable))))
 
 ;;;###autoload
-(define-globalized-minor-mode global-hl-block-mode
+(define-globalized-minor-mode hl-block-global-mode
   hl-block-mode
   hl-block--mode-turn-on)
+
+(define-obsolete-function-alias 'global-hl-block-mode #'hl-block-global-mode "0.2")
 
 (provide 'hl-block-mode)
 ;; Local Variables:

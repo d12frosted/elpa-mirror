@@ -1,13 +1,11 @@
 (ergoemacs-mode .
-		[(20230109 2029)
+		[(20230110 522)
 		 ((emacs
 		   (24 1))
 		  (cl-lib
-		   (0 5))
-		  ("nadvice"
-		   (0)))
+		   (0 5)))
 		 "Emacs mode based on common modern interface and ergonomics." tar
-		 ((:commit . "868382a650081fc22e84a45801500f1cba34cca0")
+		 ((:commit . "3ee58fd4471f79fc4c06ff1a35793173fe45661c")
 		  (:authors
 		   ("Xah Lee" . "xah@xahlee.org")
 		   ("David Capello" . "davidcapello@gmail.com")

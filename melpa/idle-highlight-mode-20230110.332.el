@@ -6,9 +6,9 @@
 ;; Author: Phil Hagelberg, Cornelius Mika, Campbell Barton
 ;; Maintainer: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-idle-highlight-mode
-;; Package-Version: 20230109.2313
-;; Package-Commit: 9fd6ecbcfa5c940e62720a489d799fd1588b3053
-;; Version: 1.1.3
+;; Package-Version: 20230110.332
+;; Package-Commit: ad303ce2ed4ce6a833f3b1155ba8dcaf64e9f9fa
+;; Version: 1.1.4
 ;; Created: 2008-05-13
 ;; Keywords: convenience
 ;; EmacsWiki: IdleHighlight
@@ -89,13 +89,17 @@ See documentation for `skip-syntax-forward', nil to ignore."
   "List of major-modes to exclude when `idle-highlight' has been enabled globally."
   :type '(repeat symbol))
 
-(defvar-local global-idle-highlight-ignore-buffer nil
+(define-obsolete-variable-alias
+  'global-idle-highlight-ignore-buffer
+  'idle-highlight-global-ignore-buffer
+  "1.1.4")
+
+(defvar-local idle-highlight-global-ignore-buffer nil
   "When non-nil, the global mode will not be enabled for this buffer.
 This variable can also be a predicate function, in which case
 it'll be called with one parameter (the buffer in question), and
 it should return non-nil to make Global `idle-highlight' Mode not
 check this buffer.")
-
 
 ;; ---------------------------------------------------------------------------
 ;; Internal Variables
@@ -414,10 +418,10 @@ should be the result of `idle-highlight--word-at-point-args'."
          ;; Not explicitly ignored.
          (not (memq major-mode idle-highlight-ignore-modes))
          ;; Optionally check if a function is used.
-         (or (null global-idle-highlight-ignore-buffer)
+         (or (null idle-highlight-global-ignore-buffer)
              (cond
-              ((functionp global-idle-highlight-ignore-buffer)
-               (not (funcall global-idle-highlight-ignore-buffer (current-buffer))))
+              ((functionp idle-highlight-global-ignore-buffer)
+               (not (funcall idle-highlight-global-ignore-buffer (current-buffer))))
               (t
                nil))))
     (idle-highlight-mode 1)))
@@ -438,10 +442,11 @@ should be the result of `idle-highlight--word-at-point-args'."
     (idle-highlight--disable))))
 
 ;;;###autoload
-(define-globalized-minor-mode global-idle-highlight-mode
-
+(define-globalized-minor-mode idle-highlight-global-mode
   idle-highlight-mode
   idle-highlight--turn-on)
+
+(define-obsolete-function-alias 'global-idle-highlight-mode #'idle-highlight-global-mode "1.1.4")
 
 (provide 'idle-highlight-mode)
 ;; Local Variables:
