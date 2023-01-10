@@ -1,0 +1,11 @@
+(idle-highlight-mode .
+		     [(20230109 2313)
+		      ((emacs
+			(27 1)))
+		      "Highlight the word the point is on" single
+		      ((:commit . "9fd6ecbcfa5c940e62720a489d799fd1588b3053")
+		       (:authors
+			("Phil Hagelberg, Cornelius Mika, Campbell Barton"))
+		       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		       (:keywords "convenience")
+		       (:url . "https://codeberg.org/ideasman42/emacs-idle-highlight-mode"))])
