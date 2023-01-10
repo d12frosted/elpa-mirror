@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230108.1817
-;; Package-Commit: 63b862f6029536791a0e0f9ecb5688acef7801fe
+;; Package-Version: 20230110.1339
+;; Package-Commit: 2f33ab75d36bd83304d344704c6c0a0082821ca3
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -44,8 +44,8 @@
   "Minimal and calm theme with saffron color scheme")
 
 (let ((class '((class color) (min-colors 89)))
-      (dark-saffron "#6e5406") (saffron "#f4c430") (light-saffron "#f8d979")
-      (bg "#fffefd") (fg "#110d01") (comment "#7f7f7f"))
+      (dark-saffron "#231b02") (saffron "#f4c430")
+      (fg "#fffefd") (bg "#110d01") (comment "#7f7f7f"))
   (custom-theme-set-faces
    'tok
    ;; In case you're using this theme in terminal, let the terminal
@@ -56,15 +56,15 @@
      `(default ((,class (:foreground ,fg :background ,bg)))))
    
    ;; Basic faces
-   `(highlight ((,class (:background ,light-saffron))))
+   `(highlight ((,class (:foreground ,fg :background ,dark-saffron))))
    `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
-                      :foreground ,fg :background ,saffron))))
+                      :foreground ,bg :background ,saffron))))
    `(secondary-selection ((,class (:inherit region))))
    `(trailing-whitespace ((,class (:inherit error))))
    `(error ((,class (:weight bold :foreground "firebrick1"))))
    `(warning ((,class (:weight bold :foreground "DarkOrange"))))
    `(success ((,class (:weight bold :foreground "Green1"))))
-   `(minibuffer-prompt ((,class (:foreground "medium blue"))))
+   `(minibuffer-prompt ((,class (:foreground "cyan"))))
    `(fringe ((,class (nil))))
    `(button ((,class (:underline t))))
 
@@ -72,21 +72,21 @@
    `(line-number-current-line ((,class (:inherit highlight))))
 
    ;; Mode-line
-   `(mode-line ((,class (:foreground ,fg :background ,saffron :box (:line-width -1 :style released-button)))))
+   `(mode-line ((,class (:foreground ,fg :background "black" :box (:line-width -1 :style released-button)))))
    (when (>= emacs-major-version 29)
      `(mode-line-active ((,class (:inherit mode-line)))))
-   `(mode-line-inactive ((,class (:weight light :foreground ,fg :background ,light-saffron))))
+   `(mode-line-inactive ((,class (:weight light :foreground ,fg :background "gray10"))))
    `(mode-line-highlight ((,class (nil))))
    `(mode-line-emphasis ((,class (:weight bold))))
-   `(mode-line-buffer-id ((,class (:weight bold))))
+   `(mode-line-buffer-id ((,class (:weight bold :foreground ,saffron))))
 
    ;; Header
    `(header-line ((,class (:inherit mode-line-inactive :box nil))))
 
    ;; Font-lock
-   `(font-lock-comment-face ((,class (:foreground ,comment))))
+   `(font-lock-comment-face ((,class (:foreground ,saffron))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-string-face ((,class (:foreground ,dark-saffron))))
+   `(font-lock-string-face ((,class (nil))))
    `(font-lock-doc-face ((, class(:inherit font-lock-comment-face))))
    `(font-lock-doc-markup-face ((,class (nil))))
    `(font-lock-keyword-face ((,class (nil))))
@@ -109,7 +109,7 @@
    `(sh-quoted-exec ((,class (nil))))
 
    ;; Outline
-   `(outline-1 ((,class (:foreground ,dark-saffron))))
+   `(outline-1 ((,class (:foreground ,saffron))))
    `(outline-2 ((,class (:inherit outline-1))))
    `(outline-3 ((,class (:inherit outline-1))))
    `(outline-4 ((,class (:inherit outline-1))))
@@ -121,12 +121,6 @@
    ;; Terraform
    `(terraform--resource-name-face ((,class (nil))))
    `(terraform--resource-type-face ((,class (nil))))
-
-   ;; Magit
-   `(magit-diff-added ((,class (:background "#ddffdd"))))
-   `(magit-diff-removed ((,class (:background "#ffdddd"))))
-   `(magit-diff-added-highlight ((,class (:background "#cceecc"))))
-   `(magit-diff-removed-highlight ((,class (:background "#eecccc"))))
 
    ;; Markdown
    `(markdown-header-face ((,class (:inherit outline-1))))

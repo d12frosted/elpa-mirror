@@ -3,9 +3,9 @@
 ;; Copyright (C) 2012 Constantin Kulikov
 
 ;; Author: Constantin Kulikov (Bad_ptr) <zxnotdead@gmail.com>
-;; Version: 3.0.6
-;; Package-Version: 20220909.836
-;; Package-Commit: 67be9feeb02613ea97f0de9eb5b792b193f073bc
+;; Version: 3.0.7
+;; Package-Version: 20230110.1045
+;; Package-Commit: df95ea710e2a72f7a88293b72137acb0ca024d90
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: perspectives, session, workspace, persistence, windows, buffers, convenience
 ;; URL: https://github.com/Bad-ptr/persp-mode.el
@@ -1768,7 +1768,7 @@ the selected window to a wrong buffer.")
                            `(funcall (with-no-warnings ',load-function)
                                      savelist default-load-fun
                                      (with-no-warnings ',after-load-function))
-                         `(funcall default-load-fun savelist))))))
+                         `(funcall (eval default-load-fun t) savelist))))))
               append)))
 
 ;;;###autoload
@@ -3504,6 +3504,13 @@ Return `NAME'."
                            (and retlst
                                 (concat
                                  "< " (mapconcat #'identity retlst " ") " >"))
+                           (and persp-toggle-read-buffer-filter-keys
+                                (concat
+                                 " [`"
+                                 (help-key-description
+                                  persp-toggle-read-buffer-filter-keys
+                                  nil)
+                                 "' toggles filter]"))
                            ": ")
                    buffer-names predicate require-match nil nil default))
             (cl-case not-finished
@@ -4159,5 +4166,10 @@ of the perspective %S can't be saved."
 
 
 (provide 'persp-mode)
+
+
+;; Local Variables:
+;; indent-tabs-mode: nil
+;; End:
 
 ;;; persp-mode.el ends here
