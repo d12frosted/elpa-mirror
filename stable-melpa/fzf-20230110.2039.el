@@ -3,8 +3,8 @@
 ;; Copyright (C) 2015 by Bailey Ling
 ;; Author: Bailey Ling
 ;; URL: https://github.com/bling/fzf.el
-;; Package-Version: 20230110.113
-;; Package-Commit: 35cfdb7bfe57f2b9a7d9f2af6f71eaf0121ba514
+;; Package-Version: 20230110.2039
+;; Package-Commit: d4c77f055835ede2dde4f0cfe918dd562344edec
 ;; Filename: fzf.el
 ;; Description: A front-end for fzf
 ;; Created: 2015-09-18
@@ -558,18 +558,24 @@ reduce the search space, instead of using fzf to filter (but not narrow)."
     (fzf--start directory action)))
 
 ;; Public utility
-(defun fzf-with-entries (entries action &optional directory)
+(defun fzf-with-entries (entries action &optional directory validator)
   "Run `fzf` with the list ENTRIES as input.
 
 ACTION is a function that takes a single argument, which is the
 selected result from `fzf`.
-If DIRECTORY is specified, fzf is run from that directory."
-  (if entries
-      (fzf-with-command
-       (concat "echo \""
-               (mapconcat (lambda (x) x) entries "\n") "\"")
-       action directory)
-    (user-error "No input entries specified")))
+If DIRECTORY is specified, fzf is run from that directory.
+If VALIDATOR is specified it must be a function with the same signature as
+`fzf--validate-filename' and it will be used as a item validator. If VALIDATOR
+is nil, the default, then the `fzf--pass-through' validator is used (doing
+no validation."
+  (let ((fzf--target-validator (or validator
+                                   (function fzf--pass-through))))
+    (if entries
+        (fzf-with-command
+         (concat "echo \""
+                 (mapconcat (lambda (x) x) entries "\n") "\"")
+         action directory)
+      (user-error "No input entries specified"))))
 
 ;;;###autoload
 (defun fzf-directory ()
