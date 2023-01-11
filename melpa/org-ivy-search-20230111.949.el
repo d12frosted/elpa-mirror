@@ -4,9 +4,9 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/org-ivy-search
-;; Package-Version: 20230111.334
-;; Package-Commit: 47eaa5c91a107c4867af8cba17cb1195353a39cb
-;; Version: 0.1.2
+;; Package-Version: 20230111.949
+;; Package-Commit: 54e44c643540a58559fa4c8365fd57859349fe7a
+;; Version: 0.1.3
 ;; Created: 2021-03-12
 ;; Keywords: convenience, tool, org
 ;; Package-Requires: ((emacs "25.1") (ivy "0.10.0") (org "0.10.0"))
@@ -37,6 +37,7 @@
 ;;
 ;; 0.1.1 Use insert-file-contents to support chinese word.
 ;; 0.1.2 Don't limit search view by org outline level
+;; 0.1.3 Advice ivy-set-index/ivy--exhibit instead of ivy-previous-line/ivy-next-line
 
 ;;; Code:
 
@@ -88,8 +89,8 @@ Otherwise, get the symbol at point, as a string."
         (org-ivy-search-selected-window (frame-selected-window))
         (org-ivy-search-created-buffers ())
         (org-ivy-search-previous-buffers (buffer-list)))
-    (advice-add 'ivy-previous-line :after #'org-ivy-search-iterate-action)
-    (advice-add 'ivy-next-line :after #'org-ivy-search-iterate-action)
+    (advice-add 'ivy-set-index :after #'org-ivy-search-iterate-action)
+    (advice-add 'ivy--exhibit :after #'org-ivy-search-iterate-action)
     (add-hook 'minibuffer-exit-hook #'org-ivy-search-quit)
     (ivy-read "Org ivy search: " #'org-ivy-search-function
               :initial-input keyword
@@ -179,8 +180,7 @@ Otherwise, get the symbol at point, as a string."
 (defun org-ivy-search-iterate-action (&optional arg)
   "Preview agenda content while looping agenda, ignore ARG."
   (save-selected-window
-    (when-let ((ignore arg)
-               (is-map-valid org-ivy-search-index-to-item-alist)
+    (when-let ((is-map-valid org-ivy-search-index-to-item-alist)
                (item-found (assoc ivy--index org-ivy-search-index-to-item-alist))
                (item-content (cdr item-found))
                (location (get-text-property 0 'location item-content)))
@@ -190,13 +190,14 @@ Otherwise, get the symbol at point, as a string."
   "Quit `org-ivy-search'."
   (let ((configuration org-ivy-search-window-configuration)
         (selected-window org-ivy-search-selected-window))
-    (advice-remove 'ivy-previous-line #'org-ivy-search-iterate-action)
-    (advice-remove 'ivy-next-line #'org-ivy-search-iterate-action)
+    (advice-remove 'ivy-set-index #'org-ivy-search-iterate-action)
+    (advice-remove 'ivy--exhibit #'org-ivy-search-iterate-action)
     (remove-hook 'minibuffer-exit-hook #'org-ivy-search-quit)
     (set-window-configuration configuration)
     (select-window selected-window)
     (mapc 'kill-buffer-if-not-modified org-ivy-search-created-buffers)
-    (setq org-ivy-search-created-buffers ())))
+    (setq org-ivy-search-created-buffers ()
+          org-ivy-search-index-to-item-alist nil)))
 
 
 (provide 'org-ivy-search)
