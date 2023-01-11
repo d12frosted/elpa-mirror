@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/org-ivy-search
-;; Package-Version: 20230111.949
-;; Package-Commit: 54e44c643540a58559fa4c8365fd57859349fe7a
+;; Package-Version: 20230111.1016
+;; Package-Commit: e46fd0cdf1af40c2e53c822ab0cbaa4469d0d744
 ;; Version: 0.1.3
 ;; Created: 2021-03-12
 ;; Keywords: convenience, tool, org
@@ -38,6 +38,7 @@
 ;; 0.1.1 Use insert-file-contents to support chinese word.
 ;; 0.1.2 Don't limit search view by org outline level
 ;; 0.1.3 Advice ivy-set-index/ivy--exhibit instead of ivy-previous-line/ivy-next-line
+;;       Restore previous window line-number as well
 
 ;;; Code:
 
@@ -56,6 +57,9 @@
 
 (defvar org-ivy-search-selected-window nil
   "The currently selected window.")
+
+(defvar org-ivy-search-selected-window-line-nb nil
+  "The currently selected window line number.")
 
 (defvar org-ivy-search-created-buffers ()
   "List of newly created buffers.")
@@ -87,6 +91,7 @@ Otherwise, get the symbol at point, as a string."
   (interactive (list (org-ivy-search--dwim-at-point)))
   (let ((org-ivy-search-window-configuration (current-window-configuration))
         (org-ivy-search-selected-window (frame-selected-window))
+        (org-ivy-search-selected-window-line-nb (line-number-at-pos))
         (org-ivy-search-created-buffers ())
         (org-ivy-search-previous-buffers (buffer-list)))
     (advice-add 'ivy-set-index :after #'org-ivy-search-iterate-action)
@@ -195,6 +200,7 @@ Otherwise, get the symbol at point, as a string."
     (remove-hook 'minibuffer-exit-hook #'org-ivy-search-quit)
     (set-window-configuration configuration)
     (select-window selected-window)
+    (goto-line org-ivy-search-selected-window-line-nb)
     (mapc 'kill-buffer-if-not-modified org-ivy-search-created-buffers)
     (setq org-ivy-search-created-buffers ()
           org-ivy-search-index-to-item-alist nil)))

@@ -3,4 +3,10 @@ Fetcher: hg
 Source:  https://hg.sr.ht/~arnebab/kanban.el
 
 Updating /mnt/store/melpa/working/kanban/
-Wrong type argument: stringp, nil
+
+Command '' exited with non-zero exit-code: 255
+
+pulling from https://hg.sr.ht/~arnebab/kanban.el
+abort: HTTP Error 504: Gateway Time-out
+
+Command exited with non-zero exit-code: 255

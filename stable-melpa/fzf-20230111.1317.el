@@ -3,8 +3,8 @@
 ;; Copyright (C) 2015 by Bailey Ling
 ;; Author: Bailey Ling
 ;; URL: https://github.com/bling/fzf.el
-;; Package-Version: 20230110.2039
-;; Package-Commit: d4c77f055835ede2dde4f0cfe918dd562344edec
+;; Package-Version: 20230111.1317
+;; Package-Commit: 909768f3b990913372407106cb9a94f81f85c6ff
 ;; Filename: fzf.el
 ;; Description: A front-end for fzf
 ;; Created: 2015-09-18
@@ -488,7 +488,7 @@ The returned lambda requires extra context information:
               (progn
                 (find-file fname)
                 (goto-char (point-min))
-                (forward-line (- line 1)))
+                (forward-line (1- line)))
             (error "Found non-existing file: '%s'" fname)))
       (error "Nothing matching! Is regexp ok?: '%s'" regexp))))
 
@@ -557,6 +557,23 @@ reduce the search space, instead of using fzf to filter (but not narrow)."
         (fzf--start directory action args))
     (fzf--start directory action)))
 
+;; Internal helper function
+(defun fzf--with-command-and-args (command action
+                                           &optional fzf-append-args
+                                           directory)
+  "Execute FZF on the output of COMMAND."
+  ;; TO-DO clarify docstring
+  (if command
+      (let
+          ((process-environment (cons
+                                 (concat "FZF_DEFAULT_COMMAND=" command "")
+                                 process-environment))
+           (args (if fzf-append-args
+                     (concat fzf/args " " fzf-append-args)
+                   fzf/args)))
+        (fzf--start directory action args))
+    (fzf--start directory action)))
+
 ;; Public utility
 (defun fzf-with-entries (entries action &optional directory validator)
   "Run `fzf` with the list ENTRIES as input.
@@ -610,6 +627,9 @@ Example usage:
       (error default-directory)))
    (t default-directory)))
 
+;; ---------------------------------------------------------------------------
+;; Operations on Buffers
+
 ;;;###autoload
 (defun fzf-switch-buffer ()
   "Switch buffer selecting them with fzf."
@@ -621,6 +641,34 @@ Example usage:
       (lambda (x) (not (string-prefix-p " " x)))
       (mapcar (function buffer-name) (buffer-list)))
      (lambda (x) (set-window-buffer nil x)))))
+
+
+;; Internal helper function
+(defun fzf--action-goto-line (target)
+  "Extract line number from TARGET then jump to that line.
+
+TARGET is a line produced by 'cat -n'."
+  (let ((parts (split-string (string-trim-left target) " ")))
+    (goto-char (point-min))
+    (forward-line (1- (string-to-number (nth 0 parts))))))
+
+;;;###autoload
+(defun fzf-find-in-buffer ()
+  "Fuzzy search the current buffer visiting a file."
+  (interactive)
+  (if (buffer-file-name)
+      (progn
+        (when (buffer-modified-p)
+          (when (y-or-n-p (format "Save modified %S first? " (current-buffer)))
+            (save-buffer)))
+        (let ((fzf--target-validator (fzf--use-validator
+                                      (function fzf--pass-through))))
+          (fzf--with-command-and-args (concat "cat -n " buffer-file-name " | tac")
+		                      (function fzf--action-goto-line)
+                                      "--exact")))
+    (user-error "Buffer %S is not visiting a file!" (current-buffer))))
+
+;; ---------------------------------------------------------------------------
 
 ;;;###autoload
 (defun fzf-find-file (&optional directory)
@@ -657,7 +705,7 @@ Example usage:
                     " recentf-mode is not active!")))))
 
 ;;;###autoload
-(defun fzf-grep (&optional search directory as-filter)
+(defun fzf-grep (&optional search directory as-filter file-pattern)
   "FZF search filtered on a grep search result.
 
 - SEARCH is the end of the grep command line;  typically holding the regexp
@@ -686,7 +734,10 @@ File name & Line extraction:
          (action #'fzf--action-find-file-with-line)
          (pattern (or search
                       (read-from-minibuffer (concat fzf/grep-command ": "))))
-         (cmd (concat fzf/grep-command " " pattern))
+         (cmd (concat fzf/grep-command
+                      " "
+                      pattern
+                      file-pattern))
          (fzf--extractor-list (fzf--use-extractor
                                (list fzf--file-lnum-regexp 1 2))))
     (fzf-with-command cmd action dir as-filter pattern)))
@@ -727,27 +778,41 @@ The same note applies here."
 (defun fzf-grep-dwim ()
   "Call `fzf-grep` on `symbol-at-point`.
 
-If `thing-at-point` is not a symbol, read input interactively.
+If there's no symbol at point (as identified by
+`thing-at-point'), prompt for one.
 
-See note about file & line extraction in `fzf-grep'.
-The same note applies here."
+See note about file & line extraction in `fzf-grep'.  The same
+note applies here.
+
+Current limitation: only works with search program that does not
+require a file pattern, like rg.  'grep -rnH' does not work
+here."
   (interactive)
-  (if (symbol-at-point)
-      (fzf-grep (thing-at-point 'symbol))
-    (fzf-grep)))
+  (let ((file-pattern (when (string-match-p "^grep " fzf/grep-command)
+                        " *")))
+    (if (symbol-at-point)
+        (fzf-grep (thing-at-point 'symbol) nil nil file-pattern)
+      (fzf-grep nil nil file-pattern))))
 
 ;;;###autoload
 (defun fzf-grep-dwim-with-narrowing ()
   "Call `fzf-grep` on `symbol-at-point`, with grep as the narrowing filter.
 
-If `thing-at-point` is not a symbol, read input interactively.
+If there's no symbol at point (as identified by
+`thing-at-point'), prompt for one.
 
-See note about file & line extraction in `fzf-grep'.
-The same note applies here."
+See note about file & line extraction in `fzf-grep'.  The same
+note applies here.
+
+Current limitation: only works with search program that does not
+require a file pattern, like rg.  'grep -rnH' does not work
+here."
   (interactive)
-  (if (symbol-at-point)
-      (fzf-grep (thing-at-point 'symbol) nil t)
-    (fzf-grep nil nil t)))
+  (let ((file-pattern (when (string-match-p "^grep " fzf/grep-command)
+                        " *")))
+    (if (symbol-at-point)
+        (fzf-grep (thing-at-point 'symbol) nil t file-pattern)
+      (fzf-grep nil nil t file-pattern))))
 
 ;; ---------------------------------------------------------------------------
 ;; VCS Support

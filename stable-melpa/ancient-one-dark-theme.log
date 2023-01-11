@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/sigvt/ancient-one-dark-emacs.git
 
 Updating /mnt/store/melpa/working/ancient-one-dark-theme/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/sigvt/ancient-one-dark-emacs.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out a0eaa8bce0ffc25d1469af48a74e80f820bab0ab
+Built ancient-one-dark-theme in 4.229s, finished at 2023-01-11T13:04:03+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jan 11 13:04 packages/ancient-one-dark-theme-20211030.1358.el
+4.0K -rw-r--r-- 1 root root 358 Jan 11 13:04 packages/ancient-one-dark-theme-20211030.1358.entry

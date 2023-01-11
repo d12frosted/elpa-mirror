@@ -3,15 +3,10 @@ Fetcher: hg
 Source:  https://hg.sr.ht/~zck/org-parser
 
 Updating /mnt/store/melpa/working/org-parser/
-Checking out fd4cb7035ff649378cc968b1ec2c386b5c565706
 
 Command '' exited with non-zero exit-code: 255
 
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
+pulling from https://hg.sr.ht/~zck/org-parser
+abort: HTTP Error 504: Gateway Time-out
 
 Command exited with non-zero exit-code: 255

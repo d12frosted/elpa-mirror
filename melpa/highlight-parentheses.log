@@ -3,8 +3,11 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tsdh/highlight-parentheses.el
 
 Updating /mnt/store/melpa/working/highlight-parentheses/
-Checking out 438a1cb2563e2a2496be4678cc0df8d5b22caf5d
-Built highlight-parentheses in 5.770s, finished at 2023-01-11T09:52:01+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jan 11 09:52 packages/highlight-parentheses-20220408.845.el
-4.0K -rw-r--r-- 1 root root 391 Jan 11 09:52 packages/highlight-parentheses-20220408.845.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.sr.ht/~tsdh/highlight-parentheses.el/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
