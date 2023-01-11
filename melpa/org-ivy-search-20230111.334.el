@@ -4,9 +4,9 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/org-ivy-search
-;; Package-Version: 20230105.503
-;; Package-Commit: 7d1a5c6dc4c9a8f37acfbb285407a0d2fdcca993
-;; Version: 0.1.1
+;; Package-Version: 20230111.334
+;; Package-Commit: 47eaa5c91a107c4867af8cba17cb1195353a39cb
+;; Version: 0.1.2
 ;; Created: 2021-03-12
 ;; Keywords: convenience, tool, org
 ;; Package-Requires: ((emacs "25.1") (ivy "0.10.0") (org "0.10.0"))
@@ -36,6 +36,7 @@
 ;;; Change Log:
 ;;
 ;; 0.1.1 Use insert-file-contents to support chinese word.
+;; 0.1.2 Don't limit search view by org outline level
 
 ;;; Code:
 
@@ -90,7 +91,7 @@ Otherwise, get the symbol at point, as a string."
     (advice-add 'ivy-previous-line :after #'org-ivy-search-iterate-action)
     (advice-add 'ivy-next-line :after #'org-ivy-search-iterate-action)
     (add-hook 'minibuffer-exit-hook #'org-ivy-search-quit)
-    (ivy-read "Org agenda search: " #'org-ivy-search-agenda-search-function
+    (ivy-read "Org ivy search: " #'org-ivy-search-function
               :initial-input keyword
               :dynamic-collection t
               :caller #'org-ivy-search-view
@@ -118,7 +119,7 @@ Otherwise, get the symbol at point, as a string."
     (org-ivy-search-visit-agenda-location location)))
 
 ;; modified from org-search-view
-(defun org-ivy-search-agenda-search-function (string)
+(defun org-ivy-search-function (string)
   "Show all entries in agenda files that contain STRING."
   (or (ivy-more-chars)
       (progn
@@ -154,21 +155,11 @@ Otherwise, get the symbol at point, as a string."
                       ;; real match happens here
                       (while (re-search-forward string nil t)
                         (org-back-to-heading t)
-                        (while (and (not (zerop org-agenda-search-view-max-outline-level))
-                                    (> (org-reduced-level (org-outline-level))
-                                       org-agenda-search-view-max-outline-level)
-                                    (forward-line -1)
-                                    (org-back-to-heading t)))
                         (skip-chars-forward "* ")
                         (setq beg (point-at-bol)
                               beg1 (point)
                               end (progn
                                     (outline-next-heading)
-                                    (while (and (not (zerop org-agenda-search-view-max-outline-level))
-                                                (> (org-reduced-level (org-outline-level))
-                                                   org-agenda-search-view-max-outline-level)
-                                                (forward-line 1)
-                                                (outline-next-heading)))
                                     (point)))
                         (goto-char beg)
                         ;; save found text and its location
