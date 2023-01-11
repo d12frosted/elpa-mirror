@@ -3,11 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~yoctocell/peertube
 
 Updating /mnt/store/melpa/working/peertube/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.sr.ht/~yoctocell/peertube/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out bb529db154596e86327829edbd7144b67cf72255
+Built peertube in 7.165s, finished at 2023-01-11T18:02:02+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jan 11 18:02 packages/peertube-20210101.1007.el
+4.0K -rw-r--r-- 1 root root 417 Jan 11 18:02 packages/peertube-20210101.1007.entry

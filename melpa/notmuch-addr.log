@@ -3,11 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/notmuch-addr
 
 Updating /mnt/store/melpa/working/notmuch-addr/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.sr.ht/~tarsius/notmuch-addr/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out f43d4170e7c3c819b4b64f3dd39d6d758e8c1e9c
+Built notmuch-addr in 5.963s, finished at 2023-01-11T17:53:09+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jan 11 17:53 packages/notmuch-addr-20230107.1520.el
+4.0K -rw-r--r-- 1 root root  422 Jan 11 17:53 packages/notmuch-addr-20230107.1520.entry

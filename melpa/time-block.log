@@ -3,11 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/time-block-command
 
 Updating /mnt/store/melpa/working/time-block/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.sr.ht/~swflint/time-block-command/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 5e2c7c050378307e25f3964e082c5ee531ae00b2
+Built time-block in 8.190s, finished at 2023-01-11T18:18:44+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jan 11 18:18 packages/time-block-20221102.1811.el
+4.0K -rw-r--r-- 1 root root 454 Jan 11 18:18 packages/time-block-20221102.1811.entry

@@ -3,10 +3,4 @@ Fetcher: hg
 Source:  https://hg.sr.ht/~arnebab/wisp
 
 Updating /mnt/store/melpa/working/wisp-mode/
-
-Command '' exited with non-zero exit-code: 255
-
-pulling from https://hg.sr.ht/~arnebab/wisp
-abort: HTTP Error 504: Gateway Time-out
-
-Command exited with non-zero exit-code: 255
+Wrong type argument: stringp, nil

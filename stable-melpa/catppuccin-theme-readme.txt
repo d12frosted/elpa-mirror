@@ -1,1 +1,1 @@
-A sweet color theme available for a number of editors.
+🍄 Soothing pastel theme for Emacs

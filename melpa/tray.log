@@ -3,11 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/tray
 
 Updating /mnt/store/melpa/working/tray/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.sr.ht/~tarsius/tray/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 51dd4752f4d1d7c36eb584e024d4db27e72ceeac
+Built tray in 4.357s, finished at 2023-01-11T18:19:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Jan 11 18:19 packages/tray-20230107.1532.el
+4.0K -rw-r--r-- 1 root root  389 Jan 11 18:19 packages/tray-20230107.1532.entry

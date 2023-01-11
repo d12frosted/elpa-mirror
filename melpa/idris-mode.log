@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/idris-hackers/idris-mode.git
 
 Updating /mnt/store/melpa/working/idris-mode/
-Checking out f69b32d689907a1a13cd524eb87d5b6679aeaf76
+Checking out bb26a215664473cb68906c3febe0e8a6ab346796
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/idris-mode/
-  to /tmp/idris-mode6nbYXv/idris-mode-20230111.1059
+  to /tmp/idris-modei4PQMx/idris-mode-20230111.1444
     idris-commands.el -> idris-commands.el
     idris-common-utils.el -> idris-common-utils.el
     idris-compat.el -> idris-compat.el
@@ -25,46 +25,42 @@ Copying files (->) and directories (=>)
     idris-settings.el -> idris-settings.el
     idris-simple-indent.el -> idris-simple-indent.el
     idris-syntax.el -> idris-syntax.el
-    idris-test-utils.el -> idris-test-utils.el
-    idris-tests3.el -> idris-tests3.el
     idris-tree-info.el -> idris-tree-info.el
     idris-warnings-tree.el -> idris-warnings-tree.el
     idris-warnings.el -> idris-warnings.el
     idris-xref.el -> idris-xref.el
     inferior-idris.el -> inferior-idris.el
     logo-small.png -> logo-small.png
-Created idris-mode-20230111.1059.tar containing:
-  idris-mode-20230111.1059/
-  idris-mode-20230111.1059/idris-commands.el
-  idris-mode-20230111.1059/idris-common-utils.el
-  idris-mode-20230111.1059/idris-compat.el
-  idris-mode-20230111.1059/idris-core.el
-  idris-mode-20230111.1059/idris-events.el
-  idris-mode-20230111.1059/idris-highlight-input.el
-  idris-mode-20230111.1059/idris-hole-list.el
-  idris-mode-20230111.1059/idris-info.el
-  idris-mode-20230111.1059/idris-ipkg-mode.el
-  idris-mode-20230111.1059/idris-keys.el
-  idris-mode-20230111.1059/idris-log.el
-  idris-mode-20230111.1059/idris-mode-pkg.el
-  idris-mode-20230111.1059/idris-mode.el
-  idris-mode-20230111.1059/idris-navigate.el
-  idris-mode-20230111.1059/idris-prover.el
-  idris-mode-20230111.1059/idris-repl.el
-  idris-mode-20230111.1059/idris-settings.el
-  idris-mode-20230111.1059/idris-simple-indent.el
-  idris-mode-20230111.1059/idris-syntax.el
-  idris-mode-20230111.1059/idris-test-utils.el
-  idris-mode-20230111.1059/idris-tests3.el
-  idris-mode-20230111.1059/idris-tree-info.el
-  idris-mode-20230111.1059/idris-warnings-tree.el
-  idris-mode-20230111.1059/idris-warnings.el
-  idris-mode-20230111.1059/idris-xref.el
-  idris-mode-20230111.1059/inferior-idris.el
-  idris-mode-20230111.1059/logo-small.png
-Built idris-mode in 5.875s, finished at 2023-01-11T13:44:30+0000
+Created idris-mode-20230111.1444.tar containing:
+  idris-mode-20230111.1444/
+  idris-mode-20230111.1444/idris-commands.el
+  idris-mode-20230111.1444/idris-common-utils.el
+  idris-mode-20230111.1444/idris-compat.el
+  idris-mode-20230111.1444/idris-core.el
+  idris-mode-20230111.1444/idris-events.el
+  idris-mode-20230111.1444/idris-highlight-input.el
+  idris-mode-20230111.1444/idris-hole-list.el
+  idris-mode-20230111.1444/idris-info.el
+  idris-mode-20230111.1444/idris-ipkg-mode.el
+  idris-mode-20230111.1444/idris-keys.el
+  idris-mode-20230111.1444/idris-log.el
+  idris-mode-20230111.1444/idris-mode-pkg.el
+  idris-mode-20230111.1444/idris-mode.el
+  idris-mode-20230111.1444/idris-navigate.el
+  idris-mode-20230111.1444/idris-prover.el
+  idris-mode-20230111.1444/idris-repl.el
+  idris-mode-20230111.1444/idris-settings.el
+  idris-mode-20230111.1444/idris-simple-indent.el
+  idris-mode-20230111.1444/idris-syntax.el
+  idris-mode-20230111.1444/idris-tree-info.el
+  idris-mode-20230111.1444/idris-warnings-tree.el
+  idris-mode-20230111.1444/idris-warnings.el
+  idris-mode-20230111.1444/idris-xref.el
+  idris-mode-20230111.1444/inferior-idris.el
+  idris-mode-20230111.1444/logo-small.png
+Built idris-mode in 6.771s, finished at 2023-01-11T17:38:08+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  332 Jan 11 09:53 packages/idris-mode-20230106.1021.entry
-320K -rw-r--r-- 1 root root 320K Jan 11 09:53 packages/idris-mode-20230106.1021.tar
 4.0K -rw-r--r-- 1 root root  332 Jan 11 13:44 packages/idris-mode-20230111.1059.entry
 320K -rw-r--r-- 1 root root 320K Jan 11 13:44 packages/idris-mode-20230111.1059.tar
+4.0K -rw-r--r-- 1 root root  332 Jan 11 17:38 packages/idris-mode-20230111.1444.entry
+312K -rw-r--r-- 1 root root 310K Jan 11 17:38 packages/idris-mode-20230111.1444.tar

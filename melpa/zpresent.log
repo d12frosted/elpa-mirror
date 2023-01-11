@@ -3,10 +3,15 @@ Fetcher: hg
 Source:  https://hg.sr.ht/~zck/zpresent
 
 Updating /mnt/store/melpa/working/zpresent/
+Checking out 406967322b7692492a5942d901335d626cace4d0
 
 Command '' exited with non-zero exit-code: 255
 
-pulling from https://hg.sr.ht/~zck/zpresent
-abort: HTTP Error 504: Gateway Time-out
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
 
 Command exited with non-zero exit-code: 255

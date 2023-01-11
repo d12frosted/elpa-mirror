@@ -3,11 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tomterl/repl-toggle
 
 Updating /mnt/store/melpa/working/repl-toggle/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.sr.ht/~tomterl/repl-toggle/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out e05996b4a2b988f93ccce67f933cfad00064360f
+Built repl-toggle in 4.595s, finished at 2023-01-11T18:08:37+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jan 11 18:08 packages/repl-toggle-20220920.752.el
+4.0K -rw-r--r-- 1 root root 357 Jan 11 18:08 packages/repl-toggle-20220920.752.entry

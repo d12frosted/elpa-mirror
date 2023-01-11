@@ -3,11 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~iank/spray
 
 Updating /mnt/store/melpa/working/spray/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.sr.ht/~iank/spray/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 69fe48e7bb079e3011476b9f4eb6ac9ae94d6d9b
+Built spray in 4.691s, finished at 2023-01-11T18:15:08+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jan 11 18:15 packages/spray-20160304.2220.el
+4.0K -rw-r--r-- 1 root root 314 Jan 11 18:15 packages/spray-20160304.2220.entry
