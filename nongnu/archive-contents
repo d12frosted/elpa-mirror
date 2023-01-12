@@ -1088,7 +1088,7 @@
 		(:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 		(:commit . "151b20ba9d3ae39b88f91aecbab98bd5a5215f1a"))])
  (inf-ruby .
-	   [(2 6 2)
+	   [(2 7 0)
 	    ((emacs
 	      (24 3)))
 	    "Run a Ruby process in a buffer" tar
@@ -1101,7 +1101,7 @@
 	      ("Cornelius Mika" . "cornelius.mika@gmail.com")
 	      ("Dmitry Gutov" . "dgutov@yandex.ru")
 	      ("Kyle Hargraves" . "pd@krh.me"))
-	     (:commit . "eb7bf95d5b03bdb9b28647c89ea0a73e35fe0ad1"))])
+	     (:commit . "997b3c5f9d9d7ff72b1a1cbdb55b1f575748a9ca"))])
  (inkpot-theme .
 	       [(0 1)
 		((emacs

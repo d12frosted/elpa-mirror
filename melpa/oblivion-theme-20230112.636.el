@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20230110.953
-;; Package-Commit: fc26fe16d86006f1c524d180b955286f48941b4e
+;; Package-Version: 20230112.636
+;; Package-Commit: 751687dd6163593fca2b21bb06a75ac2597de055
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -151,8 +151,7 @@
    ;; tab-bar-mode.
    `(tab-bar ((t (:bold t :foreground ,ob-aluminium3 :background ,ob-aluminium6+5))))
    `(tab-bar-tab
-     ((t
-       (:foreground ,ob-aluminium3 :background ,ob-aluminium6+16 :box (:line-width -1 :color ,ob-aluminium4)))))
+     ((t (:foreground ,ob-aluminium3 :background ,ob-aluminium6+16 :box (:line-width -1 :color ,ob-aluminium4)))))
    `(tab-bar-tab-inactive ((t (:bold nil :italic t :foreground ,ob-aluminium3 :background ,ob-aluminium6+16))))
 
    ;; which-func (shows in the mode-line).

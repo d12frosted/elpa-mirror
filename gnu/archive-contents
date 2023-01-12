@@ -19,11 +19,13 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (ada-mode .
-	   [(7 3 1)
+	   [(8 0 3)
 	    ((uniquify-files
 	      (1 0 1))
 	     (wisi
-	      (4 0 0))
+	      (4 1 1))
+	     (gnat-compiler
+	      (1 0 0))
 	     (emacs
 	      (25 3)))
 	    "major-mode for editing Ada sources" tar
@@ -32,7 +34,7 @@
 	     (:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
 	     (:authors
 	      ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
-	     (:commit . "64acce8bda65d3409166a63be26fd21100ef54ce"))])
+	     (:commit . "6daaf0ccbe572ef1a9e7355d5c4bbf86a9e4ae75"))])
  (ada-ref-man .
 	      [(2020 1)
 	       nil "Ada Reference Manual 2012" tar

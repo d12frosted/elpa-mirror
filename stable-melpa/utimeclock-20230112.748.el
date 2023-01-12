@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-utimeclock
-;; Package-Version: 20230109.536
-;; Package-Commit: c00a11c61236b15c6d5213b1b008744e8496922a
+;; Package-Version: 20230112.748
+;; Package-Commit: 79596042b922442bc8768ef84b60ff68aa93a74f
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -284,8 +284,7 @@ This takes `utimeclock-extract-line-multi' into account."
 PREFIX will be added to the beginning of the new line."
   (save-excursion
     (move-to-column fill-column)
-    (when (save-match-data
-            (search-backward " " (line-beginning-position) t 1))
+    (when (save-match-data (search-backward " " (line-beginning-position) t 1))
       (forward-char 1)
       (insert utimeclock-line-separator "\n" prefix " "))))
 

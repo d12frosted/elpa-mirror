@@ -1,21 +1,24 @@
-Emacs Ada mode version 7.3.0
+Emacs Ada mode version 8.0.1
 
 Ada mode provides auto-casing, fontification, navigation, and
 indentation for Ada source code files.
 
-Cross-reference information output by the compiler is used to provide
-powerful code navigation (jump to definition, find all uses, show
-overriding, etc). By default, only the AdaCore GNAT compiler is
-supported; other compilers can be supported. Ada mode uses gpr_query
-to query compiler-generated cross reference information. 
+Cross-reference via Emacs xref can use an xref backend provided by the
+gpr-query package, or a language server via the eglot package; they
+must be installed separately. Ada mode uses whichever of these is
+found on PATH, defaulting to gpr-query.
 
-Ada mode uses a parser to provide fontification, navigation, and
-indentation. The parser is implemented in Ada, is fast enough even for very 
-large files (via partial parsing), and recovers from almost all syntax
+Ada mode uses a parser to provide fontification, single-file
+navigation, and indentation. Ada mode allows using eglot as the
+backend for these, but the current version of AdaCore
+ada_language_server only supports single and multi-file navigation.
+The wisi parser backend supports all Ada mode functions, is
+implemented in Ada, is fast enough even for very large files (via
+partial or incremental parsing), and recovers from almost all syntax
 errors.
 
-gpr_query and the parser are provided as Ada source code that must be
-compiled and installed:
+The wisi parser is provided as Ada source code that must be compiled and
+installed, either directly or via Alire (https://alire.ada.dev/):
 
 cd ~/.emacs.d/elpa/ada-mode-i.j.k
 ./build.sh
@@ -24,8 +27,7 @@ cd ~/.emacs.d/elpa/ada-mode-i.j.k
 install.sh can take an option "--prefix=<dir>" to set the installation
 directory.
 
-See ada-mode.info section Installation for more information on
-installing; you may need additional packages.
+Both shell scripts use Alire if the 'alr' executable is found in PATH.
 
 Ada mode will be automatically loaded when you open a file
 with a matching extension (default *.ads, *.adb).

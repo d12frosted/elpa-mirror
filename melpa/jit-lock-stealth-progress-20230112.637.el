@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-jit-lock-stealth-progress
-;; Package-Version: 20230109.859
-;; Package-Commit: cbf01b1ed6966ddd57bfec690f539f501f2b06fc
+;; Package-Version: 20230112.637
+;; Package-Commit: de1b82e4846ed7271c6b007a6e30868d53efab50
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "28.1"))
 
@@ -100,8 +100,7 @@ With a customized mode-line it may be preferable to include
   "Wrapper for `jit-lock-stealth-fontify' as (ORIG-FN ARGS) to set progress."
   (let* ((this-progress-buffer (current-buffer))
          (is-first
-          (or (null
-               (buffer-local-boundp 'jit-lock-stealth-progress-info this-progress-buffer))
+          (or (null (buffer-local-boundp 'jit-lock-stealth-progress-info this-progress-buffer))
               (null (memq this-progress-buffer jit-lock-stealth-buffers))
               (null jit-lock-stealth-progress--range-done)))
          (did-font-lock-run nil)
@@ -137,11 +136,7 @@ With a customized mode-line it may be preferable to include
                       (cdr jit-lock-stealth-progress--range-done)
                       (car jit-lock-stealth-progress--range-done))))
                 (let ((progress
-                       (* 100.0
-                          (- 1.0
-                             (/ (float
-                                 (- range-full range-done))
-                                range-full)))))
+                       (* 100.0 (- 1.0 (/ (float (- range-full range-done)) range-full)))))
                   (setq-local
                    jit-lock-stealth-progress-info
                    (format jit-lock-stealth-progress-info-format progress))))
