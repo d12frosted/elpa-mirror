@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20221226.53
-;; Package-Commit: 9f7425ecdd907eedd64886c975448fe8e81ba1a1
+;; Package-Version: 20230112.1442
+;; Package-Commit: fb8afa6d4d32271c0b18679c285abf2fd3323db2
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -397,7 +397,7 @@ Parse and return them as cons. If NORMED non-nil, apply the filters on props."
   (setq opts (org-export-data (plist-get info opts) info))
   (when (> (length opts) 0)
     (let (tag props (case-fold-search nil))
-      (let ((tg (car (string-split opts))))
+      (let ((tg (car (split-string opts))))
         (when (and tg (string-match-p "^\\([A-Z][^=]+\\|[a-z][a-z0-9]*\\)$" tg))
           (setq tag tg)))
       (setq props (string-trim (cl-subseq opts (length tag))))

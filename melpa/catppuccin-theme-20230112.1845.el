@@ -8,8 +8,8 @@
 ;; Author: nyxkrage
 ;; Original-Author: film42
 ;; Version: 1.0.0
-;; Package-Version: 20230112.1407
-;; Package-Commit: 4c871a07d4ddc76eb89fdb0518fe671c3c08feba
+;; Package-Version: 20230112.1845
+;; Package-Commit: d352e86660207360c6e81784ed047e7595981853
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
@@ -282,7 +282,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (mode-line-inactive
                 :background ,ctp-mantle :inverse-video nil :foreground ,ctp-surface2)
                (read-multiple-choice-face :inherit completions-first-difference)
-               (region :inherit hl-line :extend t)
+               (region :background ,ctp-surface0 :extend t)
                (shadow :foreground ,ctp-surface2)
                (success :foreground ,ctp-green)
                (warning :foreground ,ctp-peach)
@@ -851,10 +851,6 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (centaur-tabs-close-mouse-face :foreground ,ctp-red :background ,ctp-surface1)
                (centaur-tabs-modified-marker-selected :inherit centaur-tabs-selected-modified)
                (centaur-tabs-modified-marker-unselected :inherit centaur-tabs-unselected-modified)
-               ;; telephone-line
-               (telephone-line-accent-active :background ,catppuccin-bg :foreground ,catppuccin-pink)
-               (telephone-line-accent-inactive :background ,bg2 :foreground ,catppuccin-purple)
-               (telephone-line-unimportant :background ,catppuccin-bg :foreground ,catppuccin-comment)
                ;; term
                (term :foreground ,ctp-text :background ,ctp-base)
                (term-color-black ,@(if (eq catppuccin-flavor 'latte)

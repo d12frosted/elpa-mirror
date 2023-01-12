@@ -4,8 +4,8 @@
 
 ;; Author: Johannes Maier <johannes.maier@mailbox.org>
 ;; Version: 0.1
-;; Package-Version: 20221004.1251
-;; Package-Commit: 81ede3eb8f0fb4854ec3a9d2350f98dfd03163d4
+;; Package-Version: 20230112.1308
+;; Package-Commit: 12b0721a8fbebea74bd83aadb2a25bc856704686
 ;; Homepage: https://github.com/kenranunderscore/emacs-naga-theme
 ;; Keywords: faces themes
 ;; Package-Requires: ((emacs "24.1"))
@@ -183,7 +183,7 @@ The default style is green text in a green box."
       (org-done (:foreground ,fg :weight bold))
       (org-headline-todo (:foreground ,orange-red))
       (org-headline-done (:foreground ,comment :strike-through t))
-      (org-document-title (:foreground ,cyan))
+      (org-document-title (:foreground ,cyan :weight bold))
       (org-document-info (:foreground ,cyan))
       (org-verbatim (:foreground ,purple))
       (org-code (:foreground ,string))
