@@ -6,8 +6,6 @@
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;;
 ;; URL: https://github.com/abo-abo/auto-yasnippet
-;; Package-Version: 20220927.857
-;; Package-Commit: 7ef65b8e128bcf8afc52a702402c7943839abfb9
 ;; Version: 1.0.0
 ;; Package-Requires: ((yasnippet "0.14.0") (emacs "25.1"))
 ;;
