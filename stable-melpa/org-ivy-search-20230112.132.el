@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/org-ivy-search
-;; Package-Version: 20230111.1541
-;; Package-Commit: 79e70a36d9eb9acd77f0d3ca4b3a8c3c6ded2b31
+;; Package-Version: 20230112.132
+;; Package-Commit: b514a1dd3bdc5917825abcd19f9dc77b2bf39c6c
 ;; Version: 0.1.3
 ;; Created: 2021-03-12
 ;; Keywords: convenience, tool, org
@@ -112,7 +112,8 @@ Otherwise, get the symbol at point, as a string."
              (is-valid-file (file-exists-p file-name))
              (is-valid-nb (integerp line-nb)))
     (find-file-read-only-other-window file-name)
-    (with-no-warnings (forward-line (1- line-nb))
+    (with-no-warnings (goto-char (point-min))
+                      (forward-line (1- line-nb))
                       (pulse-momentary-highlight-region (line-beginning-position) (line-end-position)))
     (unless (member
              (buffer-name (window-buffer))
@@ -201,6 +202,7 @@ Otherwise, get the symbol at point, as a string."
     (remove-hook 'minibuffer-exit-hook #'org-ivy-search-quit)
     (set-window-configuration configuration)
     (select-window selected-window)
+    (goto-char (point-min))
     (forward-line (1- org-ivy-search-selected-window-line-nb))
     (mapc 'kill-buffer-if-not-modified org-ivy-search-created-buffers)
     (setq org-ivy-search-created-buffers ()

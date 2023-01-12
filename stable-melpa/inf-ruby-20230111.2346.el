@@ -9,11 +9,11 @@
 ;;         Kyle Hargraves <pd@krh.me>
 ;; Maintainer: Dmitry Gutov <dgutov@yandex.ru>
 ;; URL: http://github.com/nonsequitur/inf-ruby
-;; Package-Version: 20221016.2238
-;; Package-Commit: c6192178941b46754fdb50405f344481c8ef2fd1
+;; Package-Version: 20230111.2346
+;; Package-Commit: 997b3c5f9d9d7ff72b1a1cbdb55b1f575748a9ca
 ;; Created: 8 April 1998
 ;; Keywords: languages ruby
-;; Version: 2.6.2
+;; Version: 2.7.0
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -296,12 +296,20 @@ The following commands are available:
 
 \\{inf-ruby-mode-map}"
   (setq comint-prompt-regexp inf-ruby-prompt-pattern)
-  (ruby-mode-variables)
+
+  (setq-local comment-start "# ")
+  (setq-local comment-end "")
+  (setq-local comment-column ruby-comment-column)
+  (setq-local comment-start-skip "#+ *")
+
+  (setq-local parse-sexp-ignore-comments t)
+  (setq-local parse-sexp-lookup-properties t)
+
   (when (bound-and-true-p ruby-use-smie)
-    (set (make-local-variable 'smie-forward-token-function)
-         #'inf-ruby-smie--forward-token)
-    (set (make-local-variable 'smie-backward-token-function)
-         #'inf-ruby-smie--backward-token))
+    (smie-setup ruby-smie-grammar #'ruby-smie-rules
+                :forward-token  #'inf-ruby-smie--forward-token
+                :backward-token #'inf-ruby-smie--backward-token))
+
   (add-hook 'comint-output-filter-functions 'inf-ruby-output-filter nil t)
   (setq comint-get-old-input 'inf-ruby-get-old-input)
   (set (make-local-variable 'compilation-error-regexp-alist)
