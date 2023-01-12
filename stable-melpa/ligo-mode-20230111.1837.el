@@ -2,8 +2,8 @@
 ;;; ligo-mode.el --- A major mode for editing LIGO source code
 
 ;; Version: 0.2.0
-;; Package-Version: 20221122.440
-;; Package-Commit: 5137f4a79fa51b1d7d62a581197b0d4b257a05b1
+;; Package-Version: 20230111.1837
+;; Package-Commit: cc47f579920be5fbff1e8b00402841c1c9faf441
 ;; Author: LigoLang SASU
 ;; Url: https://gitlab.com/ligolang/ligo/-/tree/dev/tools/emacs
 ;; Keywords: languages
@@ -245,11 +245,10 @@
   (interactive)
   (add-to-list 'lsp-language-id-configuration '(ligo-pascal-mode . "ligo"))
   (add-to-list 'lsp-language-id-configuration '(ligo-caml-mode . "ligo"))
-  (add-to-list 'lsp-language-id-configuration '(ligo-reason-mode . "ligo"))
   (lsp-register-client
    (make-lsp-client
     :new-connection (lsp-stdio-connection `(,ligo-squirrel-bin))
-    :major-modes '(ligo-pascal-mode ligo-caml-mode ligo-reason-mode)
+    :major-modes '(ligo-pascal-mode ligo-caml-mode)
     :server-id 'ligo)))
 (defun ligo-syntax-table ()
 	"Syntax table"
@@ -442,94 +441,5 @@
 
 (add-to-list 'auto-mode-alist '("\\.mligo\\'" . ligo-caml-mode))
 (provide 'mligo-mode)
-(defun religo-syntax-table ()
-	"Syntax table"
-	(let ((st (make-syntax-table)))
-	(modify-syntax-entry ?_ "w" st)
-	(modify-syntax-entry ?' "_" st)
-	(modify-syntax-entry ?. "'" st)
-	(modify-syntax-entry ?^ "." st)
-	(modify-syntax-entry ?# "." st)
-	(modify-syntax-entry ?< "." st)
-	(modify-syntax-entry ?> "." st)
-	(modify-syntax-entry ?/ "." st)
-	(modify-syntax-entry ?* "." st)
-	(modify-syntax-entry ?- "." st)
-	(modify-syntax-entry ?+ "." st)
-	(modify-syntax-entry ?! "." st)
-	(modify-syntax-entry ?\" "\"" st)
-	(modify-syntax-entry ?* ". 23" st)
-	(modify-syntax-entry ?
- "> b" st)
-	(modify-syntax-entry ?/ ". 124b" st)
-	st))
-
-(defvar religo-font-lock-defaults
-	`(
-		(,"\\[@.*\\]"
-			. ligo-font-lock-attribute-face
-		)
-		(,"^\\(#[a-zA-Z]+\\)"
-			. font-lock-preprocessor-face
-		)
-		(,"\\b\\(switch\\|if\\|else\\|assert\\|failwith\\)\\b"
-			. ligo-font-lock-conditional-face
-		)
-		(,"\\bmodule\\b"
-			(1 font-lock-keyword-face)
-		)
-		(,"\\b\\(let\\)\\b[:space:]*\\(\\brec\\b\\|\\)[:space:]*\\b\\([a-zA-Z$_][a-zA-Z0-9$_]*\\)\\b"
-			(1 font-lock-keyword-face)
-			(2 ligo-font-lock-storage-class-face)
-			(3 font-lock-variable-name-face)
-		)
-		(,"\\b[-+]?\\([0-9]+\\)\\(n\\|\\tz\\|tez\\|mutez\\|\\)\\b"
-			. ligo-font-lock-number-face
-		)
-		(,"\\b\\(-\\|+\\|/\\|mod\\|land\\|lor\\|lxor\\|lsl\\|lsr\\|&&\\|||\\|<\\|>\\|!=\\|<=\\|>=\\)\\b"
-			. ligo-font-lock-operator-face
-		)
-		(,","
-		)
-		(,"\\b\\([A-Z][a-zA-Z0-9_$]*\\)\\b"
-			(1 ligo-font-lock-structure-face)
-		)
-		(,"\\b\\([a-z$_][a-zA-Z0-9$_]*\\)\\b"
-			(1 font-lock-variable-name-face)
-		)
-		(,"{" ())
-		(,"\\b\\([a-zA-Z$_][a-zA-Z0-9$_]*\\)\\b[:space:]*:" ( 2 ligo-font-lock-operator-face))
-		(,"\\btype\\b" ( 1 font-lock-keyword-face))
-		(,":" ( 1 ligo-font-lock-operator-face))
-		(,"\\(=>\\|\\.\\||\\)"
-			. ligo-font-lock-operator-face
-		)
-		(,"\\b[a-z_][a-zA-Z0-9]\\*\\b"
-			. font-lock-type-face
-		)
-		(,"'\\b[a-z_][a-zA-Z0-9]\\*\\b"
-			. font-lock-type-face
-		)
-		(,"\\(" ())
-		(,"\\b\\([0-9]+\\)\\b"
-			. ligo-font-lock-number-face
-		)
-		(,"{" ())
-	)
-	"Syntax highlighting rules for religo")
-(defun religo-reload ()
-	"Reload the religo-mode code and re-apply the default major mode in the current buffer."
-	(interactive)
-	(unload-feature 'religo-mode)
-	(require 'religo-mode)
-	(normal-mode))
-
-(define-derived-mode ligo-reason-mode prog-mode "religo"
-	"Major mode for writing religo code."
-	(setq font-lock-defaults '(religo-font-lock-defaults))
-	(set-syntax-table (religo-syntax-table)))
-
-(add-to-list 'auto-mode-alist '("\\.religo\\'" . ligo-reason-mode))
-(provide 'religo-mode)
 
 ;;; ligo-mode.el ends here

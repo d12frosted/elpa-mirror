@@ -5,8 +5,8 @@
 ;; Author: Elric Milon <whirm_REMOVETHIS__@gmx.com>
 ;; Created: 20 January 2017
 ;; Version: 0.1
-;; Package-Version: 20230106.1542
-;; Package-Commit: 0dd0ace8f2670529ace58a29ba9ddc5579dcb1ec
+;; Package-Version: 20230111.1907
+;; Package-Commit: a2a6abb9a7f85c6fb15ce327459ec3c8ff780188
 ;; Package-Requires: ((flycheck "0.20"))
 
 ;;; Commentary:
@@ -45,7 +45,7 @@
 See URL `https://github.com/shyiko/ktlint'."
   :command ("ktlint" "--stdin")
   :error-patterns
-  ((error line-start "<stdin>:" line ":" column ": " (message) line-end))
+  ((error line-start "<stdin>:" line ":" column ": " (message) "(" (id (1+ (not ")"))) ")" line-end))
   :modes (kotlin-mode kotlin-ts-mode)
   :standard-input t)
 

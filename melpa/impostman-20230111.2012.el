@@ -1,13 +1,13 @@
 ;;; impostman.el --- Import Postman collections  -*- lexical-binding: t -*-
 
-;; Copyright (C) 2020-2022 Sébastien Helleu <flashcode@flashtux.org>
+;; Copyright (C) 2020-2023 Sébastien Helleu <flashcode@flashtux.org>
 
 ;; Author: Sébastien Helleu <flashcode@flashtux.org>
 ;; Maintainer: Sébastien Helleu <flashcode@flashtux.org>
 ;; Created: 2020-12-24
 ;; Keywords: tools
-;; Package-Version: 20220818.1845
-;; Package-Commit: 16ee00e35e9ee82bb06c6feafb148d98165f822f
+;; Package-Version: 20230111.2012
+;; Package-Commit: 936575500f733c2428ba878f9400f3eef8c9645e
 ;; URL: https://github.com/flashcode/impostman
 ;; Version: 0.3.0-snapshot
 ;; Package-Requires: ((emacs "27.1"))

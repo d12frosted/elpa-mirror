@@ -1,11 +1,3 @@
-Table of Contents
-─────────────────
-
-1. Install Org
-2. Join the GNU Project
-3. License
-
-
 This is a distribution of Org Mode, a major mode for keeping notes,
 authoring documents, computational notebooks, literate programming,
 maintaining to-do lists, planning projects, and more — in a fast and

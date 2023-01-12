@@ -1,5 +1,5 @@
 (symex .
-       [(20221111 2236)
+       [(20230111 1835)
 	((emacs
 	  (25 1))
 	 (lispy
@@ -15,11 +15,9 @@
 	 (hydra
 	  (0 15 0))
 	 (seq
-	  (2 22))
-	 (undo-tree
-	  (0 7 5)))
+	  (2 22)))
 	"An evil way to edit Lisp symbolic expressions as trees" tar
-	((:commit . "32f4d28fd115c0ba417f48afafef62a6cc0c264c")
+	((:commit . "47b5296cf357eb0fc94b531e0126740aa168ed8d")
 	 (:authors
 	  ("Siddhartha Kasivajhula" . "sid@countvajhula.com"))
 	 (:maintainer "Siddhartha Kasivajhula" . "sid@countvajhula.com")
