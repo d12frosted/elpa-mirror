@@ -3,8 +3,6 @@
 ;; Author: Benjamin Beckwith
 ;; Created: 2010-8-12
 ;; Version: 2.2.0
-;; Package-Version: 20220511.2109
-;; Package-Commit: d54eadeedb8bf3aa0e0a584c0a7373c69644f4b8
 ;; Last-Updated: 2015-03-25
 ;; URL: http://github.com/bnbeckwith/writegood-mode
 ;; Keywords: writing weasel-words grammar

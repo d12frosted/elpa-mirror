@@ -3,6 +3,8 @@
 
 ;; Author: Sean McLaughlin <seanmcl@gmail.com>
 ;; Version: 0.1
+;; Package-Version: 20170724.254
+;; Package-Commit: 488add79eb3fc8ec02aedaa997fe1ed9e5c3e638
 ;; Keywords: languages, TQL
 ;; Package-Requires: ((emacs "24"))
 
