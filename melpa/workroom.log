@@ -3,3 +3,26 @@ Fetcher: codeberg
 Source:  https://codeberg.org/akib/emacs-workroom.git
 
 Updating /mnt/store/melpa/working/workroom/
+Checking out a00e8561cb2c06416346b455298bd9f6620b7d8c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/workroom/
+  to /tmp/workroomb2b7z2/workroom-20221212.1037
+    workroom.el -> workroom.el
+    fdl.texi -> fdl.texi
+    gpl.texi -> gpl.texi
+    workroom.texi -> workroom.texi
+Generating /tmp/workroomb2b7z2/workroom-20221212.1037/fdl.info
+Generating /tmp/workroomb2b7z2/workroom-20221212.1037/gpl.info
+Generating /tmp/workroomb2b7z2/workroom-20221212.1037/workroom.info
+Created workroom-20221212.1037.tar containing:
+  workroom-20221212.1037/
+  workroom-20221212.1037/dir
+  workroom-20221212.1037/fdl.info
+  workroom-20221212.1037/gpl.info
+  workroom-20221212.1037/workroom-pkg.el
+  workroom-20221212.1037/workroom.el
+  workroom-20221212.1037/workroom.info
+Built workroom in 19.412s, finished at 2023-01-13T19:58:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  473 Jan 13 19:58 packages/workroom-20221212.1037.entry
+240K -rw-r--r-- 1 root root 240K Jan 13 19:58 packages/workroom-20221212.1037.tar

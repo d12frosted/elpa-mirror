@@ -3,3 +3,38 @@ Fetcher: github
 Source:  https://github.com/nnicandro/emacs-zmq.git
 
 Updating /mnt/store/melpa/working/zmq/
+Checking out af5299d80715b1083a18145e9c84ef9563020676
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zmq/
+  to /tmp/zmqop8yCk/zmq-20220510.1820
+    zmq.el -> zmq.el
+    Makefile -> Makefile
+    src => src
+Created zmq-20220510.1820.tar containing:
+  zmq-20220510.1820/
+  zmq-20220510.1820/Makefile
+  zmq-20220510.1820/src/
+  zmq-20220510.1820/src/Makefile.am
+  zmq-20220510.1820/src/configure.ac
+  zmq-20220510.1820/src/constants.c
+  zmq-20220510.1820/src/context.c
+  zmq-20220510.1820/src/context.h
+  zmq-20220510.1820/src/core.c
+  zmq-20220510.1820/src/core.h
+  zmq-20220510.1820/src/emacs-module.h
+  zmq-20220510.1820/src/emacs-zmq.c
+  zmq-20220510.1820/src/emacs-zmq.h
+  zmq-20220510.1820/src/msg.c
+  zmq-20220510.1820/src/msg.h
+  zmq-20220510.1820/src/poll.c
+  zmq-20220510.1820/src/poll.h
+  zmq-20220510.1820/src/socket.c
+  zmq-20220510.1820/src/socket.h
+  zmq-20220510.1820/src/util.c
+  zmq-20220510.1820/src/util.h
+  zmq-20220510.1820/zmq-pkg.el
+  zmq-20220510.1820/zmq.el
+Built zmq in 4.058s, finished at 2023-01-13T20:00:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  404 Jan 13 20:00 packages/zmq-20220510.1820.entry
+152K -rw-r--r-- 1 root root 150K Jan 13 20:00 packages/zmq-20220510.1820.tar

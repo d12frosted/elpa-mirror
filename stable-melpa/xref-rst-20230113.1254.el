@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-xref-rst
-;; Package-Version: 20230113.1019
-;; Package-Commit: 25a1a5d502e53a7cd599704bf26737b178a680ff
+;; Package-Version: 20230113.1254
+;; Package-Commit: 40ca17371ccf475cf043e293ccaa9f372a4d412c
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "28.1"))
 
@@ -31,6 +31,18 @@
 (require 'vc) ; For `vc-backend' and related functions.
 (require 'xref) ; For `xref' integration.
 (require 'map) ; For `map-elt'.
+
+
+;; ---------------------------------------------------------------------------
+;; Compatibility
+
+(when (version< emacs-version "29.1")
+  (defsubst pos-bol (&optional n)
+    "Return the position at the line beginning."
+    (line-beginning-position n))
+  (defsubst pos-eol (&optional n)
+    "Return the position at the line end."
+    (line-end-position n)))
 
 
 ;; ---------------------------------------------------------------------------

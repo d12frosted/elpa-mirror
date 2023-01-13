@@ -1,9 +1,11 @@
 (cape .
-      [(20230112 1447)
+      [(20230113 1550)
        ((emacs
-	 (27 1)))
+	 (27 1))
+	(compat
+	 (29 1 1 0)))
        "Completion At Point Extensions" tar
-       ((:commit . "8841d1d21c64061d34fe35c46c05b661421cdab1")
+       ((:commit . "bbc399e4724c86d80ee04c5d3af1567683c2b87c")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
