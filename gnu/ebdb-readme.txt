@@ -1,9 +1,3 @@
-Table of Contents
-─────────────────
-
-1. EBDB
-
-
 1 EBDB
 ══════
 
