@@ -4,8 +4,6 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; Version: 0.3
-;; Package-Version: 20191129.2040
-;; Package-Commit: d82478d56568f60b3a82fd010b3ca0bab2ef5dc9
 ;; URL: https://github.com/Wilfred/tco.el
 ;; Package-Requires: ((dash "1.2.0") (emacs "24.3"))
 

@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-cycle-at-point.git
 
 Updating /mnt/store/melpa/working/cycle-at-point/
-Checking out 1188a6491b69dca752887d8bac1131c57a3805a2
+Checking out 648f36bded4db02f5040beee4de866b7e31fc2b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cycle-at-point/
-  to /tmp/cycle-at-pointzEEvv5/cycle-at-point-20230109.536
+  to /tmp/cycle-at-pointEVgQTb/cycle-at-point-20230113.1016
     cycle-at-point-find-alphabet.el -> cycle-at-point-find-alphabet.el
     cycle-at-point-find-integer.el -> cycle-at-point-find-integer.el
     cycle-at-point-preset-c++-mode.el -> cycle-at-point-preset-c++-mode.el
@@ -16,19 +16,21 @@ Copying files (->) and directories (=>)
     cycle-at-point-preset-lang-en.el -> cycle-at-point-preset-lang-en.el
     cycle-at-point-preset-python-mode.el -> cycle-at-point-preset-python-mode.el
     cycle-at-point.el -> cycle-at-point.el
-Created cycle-at-point-20230109.536.tar containing:
-  cycle-at-point-20230109.536/
-  cycle-at-point-20230109.536/cycle-at-point-find-alphabet.el
-  cycle-at-point-20230109.536/cycle-at-point-find-integer.el
-  cycle-at-point-20230109.536/cycle-at-point-pkg.el
-  cycle-at-point-20230109.536/cycle-at-point-preset-c++-mode.el
-  cycle-at-point-20230109.536/cycle-at-point-preset-c-mode.el
-  cycle-at-point-20230109.536/cycle-at-point-preset-cmake-mode.el
-  cycle-at-point-20230109.536/cycle-at-point-preset-emacs-lisp-mode.el
-  cycle-at-point-20230109.536/cycle-at-point-preset-lang-en.el
-  cycle-at-point-20230109.536/cycle-at-point-preset-python-mode.el
-  cycle-at-point-20230109.536/cycle-at-point.el
-Built cycle-at-point in 4.935s, finished at 2023-01-13T07:14:12+0000
+Created cycle-at-point-20230113.1016.tar containing:
+  cycle-at-point-20230113.1016/
+  cycle-at-point-20230113.1016/cycle-at-point-find-alphabet.el
+  cycle-at-point-20230113.1016/cycle-at-point-find-integer.el
+  cycle-at-point-20230113.1016/cycle-at-point-pkg.el
+  cycle-at-point-20230113.1016/cycle-at-point-preset-c++-mode.el
+  cycle-at-point-20230113.1016/cycle-at-point-preset-c-mode.el
+  cycle-at-point-20230113.1016/cycle-at-point-preset-cmake-mode.el
+  cycle-at-point-20230113.1016/cycle-at-point-preset-emacs-lisp-mode.el
+  cycle-at-point-20230113.1016/cycle-at-point-preset-lang-en.el
+  cycle-at-point-20230113.1016/cycle-at-point-preset-python-mode.el
+  cycle-at-point-20230113.1016/cycle-at-point.el
+Built cycle-at-point in 10.650s, finished at 2023-01-13T11:03:00+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 426 Jan 13 07:14 packages/cycle-at-point-20230109.536.entry
  40K -rw-r--r-- 1 root root 40K Jan 13 07:14 packages/cycle-at-point-20230109.536.tar
+4.0K -rw-r--r-- 1 root root 427 Jan 13 11:02 packages/cycle-at-point-20230113.1016.entry
+ 40K -rw-r--r-- 1 root root 40K Jan 13 11:02 packages/cycle-at-point-20230113.1016.tar

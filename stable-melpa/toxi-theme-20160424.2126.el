@@ -4,8 +4,6 @@
 ;;
 ;; Author: Karsten Schmidt <info@postspectacular.com>
 ;; URL: http://bitbucket.org/postspectacular/toxi-theme/
-;; Package-Version: 20160424.2126
-;; Package-Commit: 9e572c6e149249b96f64722cf6f86c3aaf5f2ede
 ;; Version: 0.1.2
 ;; Package-Requires: ((emacs "24"))
 ;;

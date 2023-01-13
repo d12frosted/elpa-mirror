@@ -2,6 +2,8 @@
 
 ;; Author: Joe Heyming <joeheyming@gmail.com>
 ;; Version: 0.3
+;; Package-Version: 20170202.2302
+;; Package-Commit: 32bfba9062a014e375451cf4203c29535b5efc1e
 ;; Keywords: reviewboard, rbt
 ;; Package-Requires: ((popup "0.5.3") (magit "20160128.1201"))
 ;;

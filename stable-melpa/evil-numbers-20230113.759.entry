@@ -1,0 +1,13 @@
+(evil-numbers .
+	      [(20230113 759)
+	       ((emacs
+		 (24 1))
+		(evil
+		 (1 2 0)))
+	       "Increment/decrement numbers like in VIM" single
+	       ((:commit . "743e60549c1efea562e3fc8d6cd713e2ce7653b3")
+		(:authors
+		 ("Michael Markert" . "markert.michael@googlemail.com"))
+		(:maintainer "Julia Path" . "julia@jpath.de")
+		(:keywords "convenience" "tools")
+		(:url . "http://github.com/juliapath/evil-numbers"))])
