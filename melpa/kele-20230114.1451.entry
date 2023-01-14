@@ -1,0 +1,25 @@
+(kele .
+      [(20230114 1451)
+       ((emacs
+	 (27 1))
+	(async
+	 (1 9 7))
+	(dash
+	 (2 19 1))
+	(f
+	 (0 20 0))
+	(ht
+	 (2 3))
+	(plz
+	 (0 3))
+	(request
+	 (0 3 2))
+	(yaml
+	 (0 5 1)))
+       "Interface with Kubernetes" tar
+       ((:commit . "d96b8948ee4e721a2eeaa277a6e067f2e6988c0e")
+	(:authors
+	 ("Jonathan Jin" . "me@jonathanj.in"))
+	(:maintainer "Jonathan Jin" . "me@jonathanj.in")
+	(:keywords "kubernetes" "tools")
+	(:url . "https://github.com/jinnovation/kele.el"))])
