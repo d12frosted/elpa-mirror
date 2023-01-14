@@ -4,8 +4,8 @@
 ;; Copyright (C) 2022 Marty Hiatt <martianhiatus AT riseup.net>
 ;;
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
-;; Package-Version: 20221121.1318
-;; Package-Commit: 5c1bb812ac68be341b87c119cce89aab314b8f05
+;; Package-Version: 20230114.1021
+;; Package-Commit: 2f825879cf28953feab597f5565c2f07c668d982
 ;; Keywords: convenience, translate, wp, dictionary
 ;; URL: https://codeberg.org/martianh/wordreference.el
 ;; Version: 0.2
@@ -257,7 +257,7 @@ BUFFER is the buffer that was current when we invoked the wordreference command.
   "Get all word tables from list of TABLES."
   (let ((word-tables))
     (dolist (x tables (reverse word-tables))
-      (when (equal (dom-attr x 'class) "WRD")
+      (when (string-prefix-p "WRD" (dom-attr x 'class))
         (push x word-tables)))))
 
 (defun wordreference--get-trs (word-table)

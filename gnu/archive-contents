@@ -503,7 +503,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(29 1 1 0)
+	 [(29 1 1 1)
 	  ((emacs
 	    (24 4)))
 	  "Emacs Lisp Compatibility Library" tar
@@ -512,7 +512,7 @@
 	   (:maintainer "Daniel Mendler <mail@daniel-mendler.de>, Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "887ec71fa3a90bc0d333ae9c333436148e909dbd"))])
+	   (:commit . "57295d30c8c62470558ddfde6ce5926de47a091c"))])
  (consult .
 	  [(0 31)
 	   ((emacs
@@ -3796,6 +3796,17 @@
 	   ("Leo Liu" . "sdl.web@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/xclip.html")
 	  (:commit . "5b54645cab438e133e27b4690c57066f8271a992"))])
+ (xeft .
+       [(3 2)
+	((emacs
+	  (26 0)))
+	"Deft feat. Xapian" tar
+	((:url . "https://git.sr.ht/~casouri/xeft")
+	 (:keywords "applications" "note" "searching")
+	 (:maintainer "Yuan Fu" . "casouri@gmail.com")
+	 (:authors
+	  ("Yuan Fu" . "casouri@gmail.com"))
+	 (:commit . "4bdb052d815b67dff327bc976c73d81c94040d75"))])
  (xelb .
        [(0 18)
 	((emacs

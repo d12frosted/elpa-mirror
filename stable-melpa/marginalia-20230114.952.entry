@@ -1,9 +1,11 @@
 (marginalia .
-	    [(20230101 1109)
+	    [(20230114 952)
 	     ((emacs
-	       (27 1)))
+	       (27 1))
+	      (compat
+	       (29 1 1 1)))
 	     "Enrich existing commands with completion annotations" single
-	     ((:commit . "077fcfb548eaa076c08431b0d712ea947d42c66c")
+	     ((:commit . "1afd567e506016eb29fdd941ac47f87025cf8c4e")
 	      (:authors
 	       ("Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de"))
 	      (:maintainer "Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de")
