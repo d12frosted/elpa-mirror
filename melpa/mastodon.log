@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
-Checking out 56fb980cb9e7cfc1e13e45312c964be8a0fd3e90
+Checking out 480a1637007ff63792ae509f3659b2b7be2abb89
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonKigYti/mastodon-20230113.831
+  to /tmp/mastodonikbMLo/mastodon-20230114.1343
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -21,24 +21,26 @@ Copying files (->) and directories (=>)
   ! lisp/mastodon-tl.el -> mastodon-tl.el
   ! lisp/mastodon-toot.el -> mastodon-toot.el
   ! lisp/mastodon.el -> mastodon.el
-Created mastodon-20230113.831.tar containing:
-  mastodon-20230113.831/
-  mastodon-20230113.831/mastodon-async.el
-  mastodon-20230113.831/mastodon-auth.el
-  mastodon-20230113.831/mastodon-client.el
-  mastodon-20230113.831/mastodon-discover.el
-  mastodon-20230113.831/mastodon-http.el
-  mastodon-20230113.831/mastodon-inspect.el
-  mastodon-20230113.831/mastodon-iso.el
-  mastodon-20230113.831/mastodon-media.el
-  mastodon-20230113.831/mastodon-notifications.el
-  mastodon-20230113.831/mastodon-pkg.el
-  mastodon-20230113.831/mastodon-profile.el
-  mastodon-20230113.831/mastodon-search.el
-  mastodon-20230113.831/mastodon-tl.el
-  mastodon-20230113.831/mastodon-toot.el
-  mastodon-20230113.831/mastodon.el
-Built mastodon in 7.406s, finished at 2023-01-14T10:26:59+0000
+Created mastodon-20230114.1343.tar containing:
+  mastodon-20230114.1343/
+  mastodon-20230114.1343/mastodon-async.el
+  mastodon-20230114.1343/mastodon-auth.el
+  mastodon-20230114.1343/mastodon-client.el
+  mastodon-20230114.1343/mastodon-discover.el
+  mastodon-20230114.1343/mastodon-http.el
+  mastodon-20230114.1343/mastodon-inspect.el
+  mastodon-20230114.1343/mastodon-iso.el
+  mastodon-20230114.1343/mastodon-media.el
+  mastodon-20230114.1343/mastodon-notifications.el
+  mastodon-20230114.1343/mastodon-pkg.el
+  mastodon-20230114.1343/mastodon-profile.el
+  mastodon-20230114.1343/mastodon-search.el
+  mastodon-20230114.1343/mastodon-tl.el
+  mastodon-20230114.1343/mastodon-toot.el
+  mastodon-20230114.1343/mastodon.el
+Built mastodon in 12.779s, finished at 2023-01-14T14:12:43+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  496 Jan 14 10:26 packages/mastodon-20230113.831.entry
 380K -rw-r--r-- 1 root root 380K Jan 14 10:26 packages/mastodon-20230113.831.tar
+4.0K -rw-r--r-- 1 root root  497 Jan 14 14:12 packages/mastodon-20230114.1343.entry
+380K -rw-r--r-- 1 root root 380K Jan 14 14:12 packages/mastodon-20230114.1343.tar
