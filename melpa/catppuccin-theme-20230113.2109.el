@@ -8,8 +8,8 @@
 ;; Author: nyxkrage
 ;; Original-Author: film42
 ;; Version: 1.0.0
-;; Package-Version: 20230112.1845
-;; Package-Commit: d352e86660207360c6e81784ed047e7595981853
+;; Package-Version: 20230113.2109
+;; Package-Commit: 300e7ba1d5b4225db4f9f2d451eac1238073d3ba
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
@@ -918,7 +918,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (web-mode-html-attr-value-face :foreground ,ctp-green)
                (web-mode-html-tag-face :foreground ,ctp-mauve)
                (web-mode-keyword-face :foreground ,undef)
-               (web-mode-string-face :foreground ,font-lock-string-face)
+               (web-mode-string-face :inherit font-lock-string-face)
                (web-mode-type-face :inherit font-lock-type-face)
                (web-mode-warning-face :inherit warning)
                ;; which-func

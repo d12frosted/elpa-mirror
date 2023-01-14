@@ -7,8 +7,8 @@
 ;; Created: June 14, 2022
 ;; Modified: July 3, 2022
 ;; Version: 1.0.1
-;; Package-Version: 20221024.146
-;; Package-Commit: b1f76283d435812d08a616db36dc17d949464487
+;; Package-Version: 20230113.2304
+;; Package-Commit: e084416fa3e7f91bb429edbf7ff1585aa5674367
 ;; Keywords: languages yuck eww widgets
 ;; Homepage: https://github.com/mmcjimsey26/yuck-mode
 ;; Package-Requires: ((emacs "25.1"))
@@ -98,6 +98,8 @@
     ;; ";" - comment start
     (modify-syntax-entry ?\; "<" table)
     (modify-syntax-entry ?\n ">" table)
+    
+    (modify-syntax-entry ?\: "'" table)
     
     ;; open and closing parens
     (modify-syntax-entry ?\( "()" table)

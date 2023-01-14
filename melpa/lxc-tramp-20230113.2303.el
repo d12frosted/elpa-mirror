@@ -1,13 +1,13 @@
 ;;; lxc-tramp.el --- TRAMP integration for LXC containers  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2018 montag451
+;; Copyright (C) 2018-2023 montag451
 
 ;; Author: montag451
 ;; URL: https://github.com/montag451/lxc-tramp
-;; Package-Version: 20200414.1445
-;; Package-Commit: 1585e55a5deb89e2f4e30a0ad9e0f121d1e0ebcb
+;; Package-Version: 20230113.2303
+;; Package-Commit: 7446fdeac276b01e5e65bf826928bd262dd404d8
 ;; Keywords: lxc, convenience
-;; Version: 1.0.0
+;; Version: 1.1.0
 ;; Package-Requires: ((emacs "24") (cl-lib "0.6"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -55,10 +55,20 @@
   :link '(url-link :tag "GitHub" "https://github.com/montag451/lxc-tramp")
   :link '(emacs-commentary-link :tag "Commentary" "lxc-tramp"))
 
+(defconst lxc-tramp-method "lxc"
+  "Method to connect lxc containers.")
+
+(defun lxc-tramp--update-method ()
+  (when-let ((params (alist-get lxc-tramp-method tramp-methods nil nil 'equal)))
+    (setf (alist-get 'tramp-login-program params) (list lxc-tramp-lxc-attach-executable))))
+
 (defcustom lxc-tramp-lxc-attach-executable "lxc-attach"
   "Path to lxc-attach executable."
   :type 'string
-  :group 'lxc-tramp)
+  :group 'lxc-tramp
+  :set (lambda (sym value)
+         (set-default-toplevel-value sym value)
+         (lxc-tramp--update-method)))
 
 (defcustom lxc-tramp-lxc-ls-executable "lxc-ls"
   "Path to lxc-ls executable."
@@ -69,12 +79,8 @@
   '((lxc-tramp--parse-running-containers  ""))
   "Default list of (FUNCTION FILE) pairs to be examined for lxc method.")
 
-(defconst lxc-tramp-method "lxc"
-  "Method to connect lxc containers.")
-
 (defun lxc-tramp--process-lines (program &optional delete-trailing-ws &rest args)
   "A version of `process-lines' that use `process-file'.
-
 Contrary to `process-lines', this function uses `process-file'
 instead of `call-process'.  PROGRAM is the program to execute,
 see the documentation of `process-lines' for further information.
@@ -97,17 +103,11 @@ similarly to `process-lines'"
         (nreverse lines)))))
 
 (defun lxc-tramp--running-containers (&optional ignored)
-  "List running containers.
-
-TRAMP call this function with a filename which is IGNORED."
+  "List running containers."
   (lxc-tramp--process-lines lxc-tramp-lxc-ls-executable t "--running" "-1"))
 
 (defun lxc-tramp--parse-running-containers (&optional ignored)
-  "Return a list of (user host) tuples.
-
-TRAMP calls this function with a filename which is IGNORED.  The
-user is an empty string because the lxc TRAMP method uses bash
-to connect to the default user containers."
+  "Return a list of (user host) tuples."
   (cl-loop for name in (lxc-tramp--running-containers)
            collect (list "" name)))
 
@@ -118,9 +118,9 @@ to connect to the default user containers."
                `(,lxc-tramp-method
                  (tramp-login-program ,lxc-tramp-lxc-attach-executable)
                  (tramp-login-args (("--clear-env")
-                                    ("-v") ("HOME=/root")
-                                    ("-n") ("%h")
-                                    ("--") ("su - %u")))
+                                    ("-v" "HOME=/root")
+                                    ("-n" "%h")
+                                    ("--" "su" "-" "%u")))
                  (tramp-remote-shell "/bin/sh")
                  (tramp-remote-shell-args ("-i" "-c")))))
 

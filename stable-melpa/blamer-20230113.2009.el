@@ -4,10 +4,10 @@
 
 ;; Author: Artur Yaroshenko <artawower@protonmail.com>
 ;; URL: https://github.com/artawower/blamer.el
-;; Package-Version: 20221129.1644
-;; Package-Commit: 4e0eb1a835c92ee40edac0fdd4c39a53729004d9
+;; Package-Version: 20230113.2009
+;; Package-Commit: d1d5f2dc4d9cd5a47c47b55abb1f3b38911cc2d0
 ;; Package-Requires: ((emacs "27.1") (posframe "1.1.7"))
-;; Version: 0.5.0
+;; Version: 0.5.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -390,7 +390,7 @@ Will show the available `blamer-bindings'."
 (defun blamer--get-line-number-column-width ()
   "Return char size of left line numbers when line numbers enabled."
   (if (bound-and-true-p display-line-numbers-mode)
-      (+ (or (ignore-errors (line-number-display-width)) 0) 0)
+      (+ (or (ignore-errors (round (line-number-display-width 'columns))) 0) 0)
     0))
 
 (defun blamer--plist-merge (&rest plists)
