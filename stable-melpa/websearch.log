@@ -3,22 +3,20 @@ Fetcher: gitlab
 Source:  https://gitlab.com/xgqt/emacs-websearch.git
 
 Updating /mnt/store/melpa/working/websearch/
-Checking out e00bf63cfa6a9080c70b8438ff85a74752773181
+Checking out 5d2664ec166c5d54890fd14c238268775c829301
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/websearch/
-  to /tmp/websearchux5Wsk/websearch-20230113.2228
+  to /tmp/websearch96VPuA/websearch-20230113.2330
     websearch-custom.el -> websearch-custom.el
     websearch-mode.el -> websearch-mode.el
     websearch.el -> websearch.el
-Created websearch-20230113.2228.tar containing:
-  websearch-20230113.2228/
-  websearch-20230113.2228/websearch-custom.el
-  websearch-20230113.2228/websearch-mode.el
-  websearch-20230113.2228/websearch-pkg.el
-  websearch-20230113.2228/websearch.el
-Built websearch in 5.803s, finished at 2023-01-13T23:45:55+0000
+Created websearch-20230113.2330.tar containing:
+  websearch-20230113.2330/
+  websearch-20230113.2330/websearch-custom.el
+  websearch-20230113.2330/websearch-mode.el
+  websearch-20230113.2330/websearch-pkg.el
+  websearch-20230113.2330/websearch.el
+Built websearch in 5.323s, finished at 2023-01-14T07:15:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 378 Jan 13 19:57 packages/websearch-20230101.1905.entry
- 32K -rw-r--r-- 1 root root 30K Jan 13 19:57 packages/websearch-20230101.1905.tar
-4.0K -rw-r--r-- 1 root root 378 Jan 13 23:45 packages/websearch-20230113.2228.entry
- 40K -rw-r--r-- 1 root root 40K Jan 13 23:45 packages/websearch-20230113.2228.tar
+4.0K -rw-r--r-- 1 root root 378 Jan 14 07:15 packages/websearch-20230113.2330.entry
+ 40K -rw-r--r-- 1 root root 40K Jan 14 07:15 packages/websearch-20230113.2330.tar

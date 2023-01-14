@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/drym-org/symex.el.git
 
 Updating /mnt/store/melpa/working/symex/
-Checking out 47b5296cf357eb0fc94b531e0126740aa168ed8d
+Checking out 055ff24cb0aab6a0ea929dd681a734997d5e0f95
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/symex/
-  to /tmp/symex4rIH4g/symex-20230111.1835
+  to /tmp/symex4vCTHF/symex-20230114.56
     symex-computations.el -> symex-computations.el
     symex-custom.el -> symex-custom.el
     symex-data.el -> symex-data.el
@@ -23,38 +23,48 @@ Copying files (->) and directories (=>)
     symex-interface-scheme.el -> symex-interface-scheme.el
     symex-interop.el -> symex-interop.el
     symex-misc.el -> symex-misc.el
+    symex-primitives-lisp.el -> symex-primitives-lisp.el
     symex-primitives.el -> symex-primitives.el
+    symex-transformations-lisp.el -> symex-transformations-lisp.el
+    symex-transformations-ts.el -> symex-transformations-ts.el
     symex-transformations.el -> symex-transformations.el
     symex-traversals.el -> symex-traversals.el
+    symex-ts.el -> symex-ts.el
     symex-ui.el -> symex-ui.el
+    symex-utils-ts.el -> symex-utils-ts.el
     symex-utils.el -> symex-utils.el
     symex.el -> symex.el
-Created symex-20230111.1835.tar containing:
-  symex-20230111.1835/
-  symex-20230111.1835/symex-computations.el
-  symex-20230111.1835/symex-custom.el
-  symex-20230111.1835/symex-data.el
-  symex-20230111.1835/symex-dsl.el
-  symex-20230111.1835/symex-evaluator.el
-  symex-20230111.1835/symex-evil-support.el
-  symex-20230111.1835/symex-evil.el
-  symex-20230111.1835/symex-hydra.el
-  symex-20230111.1835/symex-interface-arc.el
-  symex-20230111.1835/symex-interface-clojure.el
-  symex-20230111.1835/symex-interface-common-lisp.el
-  symex-20230111.1835/symex-interface-elisp.el
-  symex-20230111.1835/symex-interface-racket.el
-  symex-20230111.1835/symex-interface-scheme.el
-  symex-20230111.1835/symex-interop.el
-  symex-20230111.1835/symex-misc.el
-  symex-20230111.1835/symex-pkg.el
-  symex-20230111.1835/symex-primitives.el
-  symex-20230111.1835/symex-transformations.el
-  symex-20230111.1835/symex-traversals.el
-  symex-20230111.1835/symex-ui.el
-  symex-20230111.1835/symex-utils.el
-  symex-20230111.1835/symex.el
-Built symex in 4.443s, finished at 2023-01-13T23:39:14+0000
+Created symex-20230114.56.tar containing:
+  symex-20230114.56/
+  symex-20230114.56/symex-computations.el
+  symex-20230114.56/symex-custom.el
+  symex-20230114.56/symex-data.el
+  symex-20230114.56/symex-dsl.el
+  symex-20230114.56/symex-evaluator.el
+  symex-20230114.56/symex-evil-support.el
+  symex-20230114.56/symex-evil.el
+  symex-20230114.56/symex-hydra.el
+  symex-20230114.56/symex-interface-arc.el
+  symex-20230114.56/symex-interface-clojure.el
+  symex-20230114.56/symex-interface-common-lisp.el
+  symex-20230114.56/symex-interface-elisp.el
+  symex-20230114.56/symex-interface-racket.el
+  symex-20230114.56/symex-interface-scheme.el
+  symex-20230114.56/symex-interop.el
+  symex-20230114.56/symex-misc.el
+  symex-20230114.56/symex-pkg.el
+  symex-20230114.56/symex-primitives-lisp.el
+  symex-20230114.56/symex-primitives.el
+  symex-20230114.56/symex-transformations-lisp.el
+  symex-20230114.56/symex-transformations-ts.el
+  symex-20230114.56/symex-transformations.el
+  symex-20230114.56/symex-traversals.el
+  symex-20230114.56/symex-ts.el
+  symex-20230114.56/symex-ui.el
+  symex-20230114.56/symex-utils-ts.el
+  symex-20230114.56/symex-utils.el
+  symex-20230114.56/symex.el
+Built symex in 4.403s, finished at 2023-01-14T07:09:01+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  583 Jan 13 23:39 packages/symex-20230111.1835.entry
-200K -rw-r--r-- 1 root root 200K Jan 13 23:39 packages/symex-20230111.1835.tar
+4.0K -rw-r--r-- 1 root root  629 Jan 14 07:09 packages/symex-20230114.56.entry
+240K -rw-r--r-- 1 root root 240K Jan 14 07:09 packages/symex-20230114.56.tar

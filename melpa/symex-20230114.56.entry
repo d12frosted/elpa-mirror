@@ -1,7 +1,11 @@
 (symex .
-       [(20230111 1835)
+       [(20230114 56)
 	((emacs
 	  (25 1))
+	 (tsc
+	  (0 15 2))
+	 (tree-sitter
+	  (0 15 2))
 	 (lispy
 	  (0 26 0))
 	 (paredit
@@ -17,7 +21,7 @@
 	 (seq
 	  (2 22)))
 	"An evil way to edit Lisp symbolic expressions as trees" tar
-	((:commit . "47b5296cf357eb0fc94b531e0126740aa168ed8d")
+	((:commit . "055ff24cb0aab6a0ea929dd681a734997d5e0f95")
 	 (:authors
 	  ("Siddhartha Kasivajhula" . "sid@countvajhula.com"))
 	 (:maintainer "Siddhartha Kasivajhula" . "sid@countvajhula.com")

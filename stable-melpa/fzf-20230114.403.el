@@ -3,8 +3,8 @@
 ;; Copyright (C) 2015 by Bailey Ling
 ;; Author: Bailey Ling
 ;; URL: https://github.com/bling/fzf.el
-;; Package-Version: 20230113.56
-;; Package-Commit: 048bc51d382d4899afb4153a69bb393bd69bee0b
+;; Package-Version: 20230114.403
+;; Package-Commit: 1d80e76df0899e26196aea150c29fba95fc73ed6
 ;; Filename: fzf.el
 ;; Description: A front-end for fzf
 ;; Created: 2015-09-18
@@ -494,7 +494,9 @@ The returned lambda requires extra context information:
       ;; Kill the fzf buffer and restore the previous window configuration.
       (kill-buffer fzf/buffer-name)
       (jump-to-register fzf--window-register)
-      (message (format "FZF exited with code %s" exit-code))
+      (if (string= exit-code "0")
+          (message "FZF selection: %s" target)
+        (user-error "FZF error: %s" exit-code))
       ;; Extract file/line from fzf only if fzf was successful.
       (when (string= "0" exit-code)
         ;; Re-Establish the fzf--extractor-list required by original caller
