@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.0
-;; Package-Version: 20230114.952
-;; Package-Commit: 1afd567e506016eb29fdd941ac47f87025cf8c4e
+;; Package-Version: 20230114.1758
+;; Package-Commit: 5259a563e391dbf11521aaf68bde643a3d65c067
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.1.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -757,10 +757,8 @@ The string is transformed according to `marginalia--bookmark-type-transforms'."
        ((bookmark-get-filename bm)
         :truncate -0.5 :face 'marginalia-file-name)
        ((unless (or (not front) (string= front ""))
-          (concat (string-trim
-                   (replace-regexp-in-string
-                    "[ \t]+" " "
-                    (string-replace "\n" "\\\\n" front)))
+          (concat (string-clean-whitespace
+                   (string-replace "\n" "\\n" front))
                   (marginalia--ellipsis)))
         :truncate -0.3 :face 'marginalia-documentation)))))
 

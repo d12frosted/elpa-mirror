@@ -3,9 +3,9 @@
 ;; Copyright (C) 2022 Markus Läll
 ;;
 ;; URL: https://github.com/eyeinsky/org-anki
-;; Package-Version: 20230114.1654
-;; Package-Commit: 0e530b7a8955ca335b9d0718c429a847c8710b10
-;; Version: 2.0.0
+;; Package-Version: 20230114.2155
+;; Package-Commit: 1a4d78ec3e36b7768a0101377e5349a9ae7bcaf1
+;; Version: 2.0.1
 ;; Author: Markus Läll <markus.l2ll@gmail.com>
 ;; Keywords: outlines, flashcards, memory
 ;; Package-Requires: ((emacs "27.1") (request "0.3.2") (dash "2.17") (promise "1.1"))
@@ -422,20 +422,25 @@ be removed from the Anki app, return actions that do that."
 
 (defun org-anki--handle-pair (pair)
   ;; :: ((Note, Action), Result) -> IO ()
-  (let*
-      ((note-with-action (car pair))
-       (note (car note-with-action))
-       (action (cdr note-with-action))
-       (result (car (cdr pair))))
-    (cond
-     ;; added note
-     ((equal "addNote" (assoc-default "action" action))
-      (save-excursion
-        (goto-char (org-anki--note-point note))
-        (org-set-property org-anki-prop-note-id (number-to-string result))))
-     ;; update note
-     ((equal "updateNoteFields" (assoc-default "action" action))
-      (message "org-anki: note succesfully updated: %s" (org-anki--note-maybe-id note))))))
+  (-let*
+      ((((note . action) result &rest _) pair)
+       (action-value  (assoc-default "action" action))
+       (error-msg (and (listp result)
+                       (assoc-default 'error result))))
+    (if error-msg
+        ;; report error
+        (org-anki--report-error "Couldn't add note, received error: %s" error-msg)
+      (cond
+       ;; added note
+       ((equal "addNote" action-value)
+        (save-excursion
+          (goto-char (org-anki--note-point note))
+          (org-set-property org-anki-prop-note-id (number-to-string result))))
+       ;; update note: do nothing but message success
+       ((equal "updateNoteFields" action-value)
+        (message
+         "org-anki: note succesfully updated: %s"
+         (org-anki--note-maybe-id note)))))))
 
 (defun org-anki--existing-tags (notes)
   ;; :: [Note] -> Promise (AList Id [Tag])
@@ -451,6 +456,7 @@ be removed from the Anki app, return actions that do that."
          (funcall resolve nil))))))
 
 (defun org-anki--execute-api-actions (note-action-pairs)
+  ;; :: [(Note, Action)] -> IO ()
   (let ((actions (--map (cdr it) note-action-pairs)))
     (org-anki-connect-request
      (org-anki--multi actions)
@@ -479,7 +485,7 @@ be removed from the Anki app, return actions that do that."
           (org-anki--existing-tags notes)
         (then
          (lambda (all-existing-tags)
-           (let*
+           (-let*
                (
                 ;; Calculate added and updated notes
                 (new-and-existing
@@ -489,8 +495,7 @@ be removed from the Anki app, return actions that do that."
                      ((org-anki--note-maybe-id note) (cons :right note))
                      (t                              (cons :left note))))
                   notes))
-                (new (car new-and-existing))      ;; [Note]
-                (existing (cdr new-and-existing)) ;; [Note]
+                ((new . existing) new-and-existing) ;; [Note]
                 (additions (--map (cons it (org-anki--create-note-single it)) new))      ;; [(Note, Action)]
                 (updates   (--map (cons it (org-anki--update-note-single it)) existing)) ;; [(Note, Action)]
 
