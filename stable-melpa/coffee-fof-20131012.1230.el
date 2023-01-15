@@ -3,6 +3,8 @@
 
 ;; Author: Yasuyki Oka <yasuyk@gmail.com>
 ;; Keywords: coffee-mode
+;; Package-Version: 20131012.1230
+;; Package-Commit: 211529594bc074721c6cbc4edb73a63cc05f89ac
 ;; Version: DEV
 ;; Package-Requires: ((coffee-mode "0.4.1"))
 ;; URL: http://github.com/yasuyk/coffee-fof

@@ -1,11 +1,11 @@
 ;;; my-repo-pins.el --- Keep your git repositories organized -*- lexical-binding: t -*-
 
-;;; Copyright (C) 2022 Félix Baylac Jacqué
+;;; Copyright (C) 2022-2023 Félix Baylac Jacqué
 ;;; Author: Félix Baylac Jacqué <felix at alternativebit.fr>
 ;;; Maintainer: Félix Baylac Jacqué <felix at alternativebit.fr>
-;;; Version: 0.2
-;; Package-Version: 20230102.1308
-;; Package-Commit: 765629e4c6f846e20bd0fa7ff4580e25f35f2835
+;;; Version: 0.4
+;; Package-Version: 20230115.1103
+;; Package-Commit: fe7c50f5a1d8b3c7c796868a4fa82bffc00ff9ed
 ;;; Homepage: https://alternativebit.fr/projects/my-repo-pins/
 ;;; Package-Requires: ((emacs "26.1"))
 ;;; License:
@@ -875,16 +875,20 @@ USER-QUERY was the original query for this state update."
 If the project is not in the ‘my-repo-pins-code-root’ yet, check it out from the
 available forge sources."
   (interactive)
-  (let ((user-query
+  (let* ((user-query
          (my-repo-pins--completing-read-or-custom
            "Jump to project: "
-           (my-repo-pins--get-code-root-projects (my-repo-pins--safe-get-code-root) my-repo-pins-max-depth))))
+           (my-repo-pins--get-code-root-projects (my-repo-pins--safe-get-code-root) my-repo-pins-max-depth)))
+         (query-local-path (concat (my-repo-pins--safe-get-code-root)
+                                   (my-repo-pins--filepath-from-clone-url (cdr user-query)))))
     (cond
      ((equal (car user-query) 'in-collection)
       (let ((selected-project-absolute-path (concat (my-repo-pins--safe-get-code-root) (cdr user-query))))
         (my-repo-pins--open selected-project-absolute-path)))
      ((equal (car user-query) 'user-provided)
-      (my-repo-pins--clone-project (cdr user-query))))))
+      (if (file-directory-p query-local-path)
+          (my-repo-pins--open query-local-path)
+        (my-repo-pins--clone-project (cdr user-query)))))))
 
 
 (provide 'my-repo-pins)

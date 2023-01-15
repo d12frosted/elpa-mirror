@@ -2,10 +2,10 @@
 
 ;; Author: Alvaro Ramirez
 ;; Package-Requires: ((emacs "25.1") (company "0.8.0") (org "9.2.0"))
-;; Package-Version: 20220809.2027
-;; Package-Commit: 29a2edb35e18c2627dcfa0641852a55d9639263c
+;; Package-Version: 20230115.1202
+;; Package-Commit: aee601a2bfcc86d26e762eeb84e5e42573f8c5ca
 ;; URL: https://github.com/xenodium/company-org-block
-;; Version: 0.4
+;; Version: 0.5
 
 ;; This package is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -52,9 +52,9 @@
 (defcustom company-org-block-edit-style 'auto
   "Customize how to enter edit mode after block is inserted."
   :type '(choice
-	  (const :tag "inline: no edit mode invoked after insertion" inline)
-	  (const :tag "prompt: ask before entering edit mode" prompt)
-	  (const :tag "auto: automatically enter edit mode" auto)))
+          (const :tag "inline: no edit mode invoked after insertion" inline)
+          (const :tag "prompt: ask before entering edit mode" prompt)
+          (const :tag "auto: automatically enter edit mode" auto)))
 
 (defcustom company-org-block-auto-indent t
   "If t, automatically indent source block using `org-indent-line'.
@@ -63,6 +63,7 @@ Otherwise, insert block at cursor position."
 
 (defvar company-org-block--regexp "<\\([^ ]*\\)")
 
+;;;###autoload
 (defun company-org-block (command &optional arg &rest _ignored)
   "A company completion backend for org blocks.
 
@@ -73,6 +74,7 @@ COMMAND and ARG are sent by company itself."
     (prefix (when (derived-mode-p 'org-mode)
               (company-org-block--grab-symbol-cons)))
     (candidates (company-org-block--candidates arg))
+    (doc-buffer (company-org-block--doc-buffer arg))
     (post-completion
      (company-org-block--expand arg))))
 
@@ -117,6 +119,17 @@ COMMAND and ARG are sent by company itself."
   "Check if there is a TEMPLATE available for completion."
   (seq-contains (map-values org-structure-template-alist)
                 template))
+
+(defun company-org-block--doc-buffer (candidate)
+  "Return doc for CANDIDATE."
+  (when (string-equal candidate "src")
+    (setq candidate ""))
+  (let ((company-org-block-edit-style 'inline))
+    (company-doc-buffer
+     (with-temp-buffer
+       (insert "<" candidate)
+       (company-org-block--expand candidate)
+       (buffer-string)))))
 
 (defun company-org-block--expand (insertion)
   "Replace INSERTION with generated source block."
@@ -195,7 +208,7 @@ and returns:
 
 \" :exports both :results output\""
   (let ((lang-headers-var (intern
-			   (concat "org-babel-default-header-args:" lang))))
+                           (concat "org-babel-default-header-args:" lang))))
     (if (boundp lang-headers-var)
         (seq-reduce (lambda (value element)
                       (format "%s %s %s"
