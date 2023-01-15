@@ -3,20 +3,20 @@ Fetcher: github
 Source:  https://github.com/minad/osm.git
 
 Updating /mnt/store/melpa/working/osm/
-Checking out d3f1340a160c539e0c7370545d417fc7a0402659
+Checking out 16d67f0521b2478e36880868c73dc6628ab2d8b2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/osm/
-  to /tmp/osm0bGV7U/osm-20230114.2200
+  to /tmp/osmZ0WXy6/osm-20230115.429
     osm-ol.el -> osm-ol.el
     osm.el -> osm.el
-Created osm-20230114.2200.tar containing:
-  osm-20230114.2200/
-  osm-20230114.2200/osm-ol.el
-  osm-20230114.2200/osm-pkg.el
-  osm-20230114.2200/osm.el
-Built osm in 3.932s, finished at 2023-01-15T01:31:34+0000
+Created osm-20230115.429.tar containing:
+  osm-20230115.429/
+  osm-20230115.429/osm-ol.el
+  osm-20230115.429/osm-pkg.el
+  osm-20230115.429/osm.el
+Built osm in 4.717s, finished at 2023-01-15T05:17:29+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 356 Jan 14 21:52 packages/osm-20230114.1331.entry
- 72K -rw-r--r-- 1 root root 70K Jan 14 21:52 packages/osm-20230114.1331.tar
 4.0K -rw-r--r-- 1 root root 356 Jan 15 01:31 packages/osm-20230114.2200.entry
  72K -rw-r--r-- 1 root root 70K Jan 15 01:31 packages/osm-20230114.2200.tar
+4.0K -rw-r--r-- 1 root root 355 Jan 15 05:17 packages/osm-20230115.429.entry
+ 72K -rw-r--r-- 1 root root 70K Jan 15 05:17 packages/osm-20230115.429.tar

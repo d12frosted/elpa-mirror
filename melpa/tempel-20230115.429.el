@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.6
-;; Package-Version: 20230114.1311
-;; Package-Commit: eaaa2ca90d98af770d8246fae351b81bdf8a4adf
+;; Package-Version: 20230115.429
+;; Package-Commit: 44e514142800d70c303356dd8c0a04b773dee20e
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.1.1"))
 ;; Homepage: https://github.com/minad/tempel
 
@@ -166,8 +166,8 @@ may be named with `tempel--name' or carry an evaluatable Lisp expression
 (defun tempel--annotate (templates width ellipsis sep name)
   "Annotate template NAME given the list of TEMPLATES.
 WIDTH, SEP and ELLIPSIS configure the formatting."
-  (when-let* ((name (intern-soft name))
-              (elts (cdr (assoc name templates))))
+  (when-let ((name (intern-soft name))
+             (elts (cdr (assoc name templates))))
     (concat sep
             (truncate-string-to-width
              (replace-regexp-in-string
@@ -189,8 +189,8 @@ WIDTH, SEP and ELLIPSIS configure the formatting."
 TEMPLATES is the list of templates.
 REGION are the current region bouns"
   (unless (eq status 'exact)
-    (when-let* ((sym (intern-soft name))
-                (template (alist-get sym templates)))
+    (when-let ((sym (intern-soft name))
+               (template (alist-get sym templates)))
       (tempel--delete-word name)
       (when tempel-trigger-prefix
         (tempel--delete-word tempel-trigger-prefix))
@@ -549,8 +549,8 @@ This is meant to be a source in `tempel-template-sources'."
              (cl-return)))
   ;; If the current field is marked as "quitting", disable its
   ;; containing template right away.
-  (when-let* ((ov (tempel--field-at-point))
-              ((overlay-get ov 'tempel--quit)))
+  (when-let ((ov (tempel--field-at-point))
+             ((overlay-get ov 'tempel--quit)))
     (tempel--done (overlay-get ov 'tempel--field))))
 
 (defun tempel-previous (arg)
@@ -639,12 +639,12 @@ If INTERACTIVE is nil the function acts like a capf."
   (interactive (list t))
   (if interactive
       (tempel--interactive #'tempel-expand)
-    (when-let* ((templates (tempel--templates))
-                (bounds (tempel--prefix-bounds))
-                (name (buffer-substring-no-properties
-                       (car bounds) (cdr bounds)))
-                (sym (intern-soft name))
-                (template (assq sym templates)))
+    (when-let ((templates (tempel--templates))
+               (bounds (tempel--prefix-bounds))
+               (name (buffer-substring-no-properties
+                      (car bounds) (cdr bounds)))
+               (sym (intern-soft name))
+               (template (assq sym templates)))
       (setq templates (list template))
       (list (car bounds) (cdr bounds)
             (tempel--completion-table templates)
