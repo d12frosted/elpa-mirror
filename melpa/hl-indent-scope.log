@@ -3,26 +3,28 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-hl-indent-scope.git
 
 Updating /mnt/store/melpa/working/hl-indent-scope/
-Checking out bcb33696c8a127d554d68a0a96db2b1a25efb76e
+Checking out ebd14e0c01fb068de4751b31bd6b28df35ace2ab
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hl-indent-scope/
-  to /tmp/hl-indent-scopeC79HMq/hl-indent-scope-20230113.1254
+  to /tmp/hl-indent-scopeL6bTPU/hl-indent-scope-20230115.633
     hl-indent-scope-preset-c++-mode.el -> hl-indent-scope-preset-c++-mode.el
     hl-indent-scope-preset-c-mode.el -> hl-indent-scope-preset-c-mode.el
     hl-indent-scope-preset-cmake-mode.el -> hl-indent-scope-preset-cmake-mode.el
     hl-indent-scope-preset-glsl-mode.el -> hl-indent-scope-preset-glsl-mode.el
     hl-indent-scope-preset-python-mode.el -> hl-indent-scope-preset-python-mode.el
     hl-indent-scope.el -> hl-indent-scope.el
-Created hl-indent-scope-20230113.1254.tar containing:
-  hl-indent-scope-20230113.1254/
-  hl-indent-scope-20230113.1254/hl-indent-scope-pkg.el
-  hl-indent-scope-20230113.1254/hl-indent-scope-preset-c++-mode.el
-  hl-indent-scope-20230113.1254/hl-indent-scope-preset-c-mode.el
-  hl-indent-scope-20230113.1254/hl-indent-scope-preset-cmake-mode.el
-  hl-indent-scope-20230113.1254/hl-indent-scope-preset-glsl-mode.el
-  hl-indent-scope-20230113.1254/hl-indent-scope-preset-python-mode.el
-  hl-indent-scope-20230113.1254/hl-indent-scope.el
-Built hl-indent-scope in 4.730s, finished at 2023-01-15T04:54:17+0000
+Created hl-indent-scope-20230115.633.tar containing:
+  hl-indent-scope-20230115.633/
+  hl-indent-scope-20230115.633/hl-indent-scope-pkg.el
+  hl-indent-scope-20230115.633/hl-indent-scope-preset-c++-mode.el
+  hl-indent-scope-20230115.633/hl-indent-scope-preset-c-mode.el
+  hl-indent-scope-20230115.633/hl-indent-scope-preset-cmake-mode.el
+  hl-indent-scope-20230115.633/hl-indent-scope-preset-glsl-mode.el
+  hl-indent-scope-20230115.633/hl-indent-scope-preset-python-mode.el
+  hl-indent-scope-20230115.633/hl-indent-scope.el
+Built hl-indent-scope in 9.718s, finished at 2023-01-15T08:47:52+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 369 Jan 15 04:54 packages/hl-indent-scope-20230113.1254.entry
  72K -rw-r--r-- 1 root root 70K Jan 15 04:54 packages/hl-indent-scope-20230113.1254.tar
+4.0K -rw-r--r-- 1 root root 368 Jan 15 08:47 packages/hl-indent-scope-20230115.633.entry
+ 72K -rw-r--r-- 1 root root 70K Jan 15 08:47 packages/hl-indent-scope-20230115.633.tar
