@@ -1,0 +1,14 @@
+(hass .
+      [(20230116 1400)
+       ((emacs
+	 (25 1))
+	(request
+	 (0 3 3))
+	(websocket
+	 (1 13)))
+       "Interact with Home Assistant" tar
+       ((:commit . "45fe5899230163a6dbf1f5ef51649a599368ef0d")
+	(:authors
+	 ("Ben Whitley"))
+	(:maintainer "Ben Whitley")
+	(:url . "https://github.com/purplg/hass"))])

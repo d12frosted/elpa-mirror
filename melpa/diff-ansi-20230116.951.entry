@@ -1,0 +1,10 @@
+(diff-ansi .
+	   [(20230116 951)
+	    ((emacs
+	      (27 1)))
+	    "Display diff's using alternative diffing tools" single
+	    ((:commit . "213612dcd8d556cb63aeb6c0b5e03da064ffc3b3")
+	     (:authors
+	      ("Campbell Barton" . "ideasman42@gmail.com"))
+	     (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+	     (:url . "https://codeberg.org/ideasman42/emacs-diff-ansi"))])
