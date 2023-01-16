@@ -8,8 +8,8 @@
 ;;               Michael Markert <markert.michael@gmail.com>
 ;;               Julia Path <julia@jpath.de>
 ;; URL: http://github.com/juliapath/evil-numbers
-;; Package-Version: 20230113.1321
-;; Package-Commit: 5ddc167f28f75fa59e65f3167d12228c4d2c8a05
+;; Package-Version: 20230116.546
+;; Package-Commit: af8d71b3bcb99505675968db617dfd19a132e22b
 ;; Git-Repository: git://github.com/juliapath/evil-numbers.git
 ;; Created: 2011-09-02
 ;; Version: 0.7
@@ -101,8 +101,7 @@
 
 (defcustom evil-numbers-pad-default nil
   "Whether numbers are padded by default."
-  :type 'boolean
-  :options '(nil t))
+  :type 'boolean)
 
 (defcustom evil-numbers-separator-chars nil
   "Support separator characters in numeric literals for visual grouping.
@@ -125,8 +124,7 @@ Otherwise nil will disable this functionality."
   "When non-nil, recognize numbers directly before the cursor.
 
 This doesn't match VIM's behavior."
-  :type 'boolean
-  :options '(nil t))
+  :type 'boolean)
 
 ;; ---------------------------------------------------------------------------
 ;; Internal Variables
