@@ -4,8 +4,6 @@
 
 ;; Author: Ian Wahbe
 ;; URL: https://github.com/iwahbe/jsonian
-;; Package-Version: 20230104.931
-;; Package-Commit: 6670e80dab2b126038b670a0d4e5c8ad8f76202b
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 

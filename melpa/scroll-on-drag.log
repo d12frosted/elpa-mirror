@@ -3,12 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-scroll-on-drag.git
 
 Updating /mnt/store/melpa/working/scroll-on-drag/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; curl 7 GnuTLS recv error (-110): The TLS connection was non-properly terminated.
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out b5ed8d35b13e00f1d2dfa2d1184b565732098d82
+Built scroll-on-drag in 7.129s, finished at 2023-01-16T00:45:54+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jan 16 00:45 packages/scroll-on-drag-20230115.633.el
+4.0K -rw-r--r-- 1 root root 351 Jan 16 00:45 packages/scroll-on-drag-20230115.633.entry
