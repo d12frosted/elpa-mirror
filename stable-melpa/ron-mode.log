@@ -3,8 +3,12 @@ Fetcher: codeberg
 Source:  https://codeberg.org/Hutzdog/ron-mode.git
 
 Updating /mnt/store/melpa/working/ron-mode/
-Checking out c5e0454b9916d6b73adc15dab8abbb0b0a68ea22
-Built ron-mode in 4.842s, finished at 2023-01-15T17:03:24+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Jan 15 17:03 packages/ron-mode-20200830.1554.el
-4.0K -rw-r--r-- 1 root root  396 Jan 15 17:03 packages/ron-mode-20200830.1554.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 502 curl 22 The requested URL returned error: 502
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

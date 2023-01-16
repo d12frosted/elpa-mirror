@@ -96,16 +96,16 @@
 	       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
 	       (:commit . "87a21019ed4f41a487a8af34467e0ebff19f365e"))])
  (bash-completion .
-		  [(3 1 0)
+		  [(3 1 1)
 		   ((emacs
-		     (24 3)))
-		   "BASH completion for the shell buffer" tar
+		     (25 3)))
+		   "Bash completion for the shell buffer" tar
 		   ((:url . "http://github.com/szermatt/emacs-bash-completion")
-		    (:keywords "shell" "bash" "bash-completion")
+		    (:keywords "convenience" "unix")
 		    (:maintainer "Stephane Zermatten" . "szermatt@gmail.com")
 		    (:authors
 		     ("Stephane Zermatten" . "szermatt@gmx.net"))
-		    (:commit . "d47edb9d4142a22746009c1f680df93a4fefd107"))])
+		    (:commit . "a021468eec8ff8cacb74a9ea595d3587186e29ea"))])
  (better-jumper .
 		[(1 0 1)
 		 ((emacs
@@ -313,7 +313,7 @@
 	       ("https://github.com/bradyt/dart-mode/issues"))
 	      (:keywords "languages"))])
  (denote-refs .
-	      [(0 1 1)
+	      [(0 1 2)
 	       ((emacs
 		 (28 1))
 		(denote
@@ -324,7 +324,7 @@
 		(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 		(:authors
 		 ("Akib Azmain Turja" . "akib@disroot.org"))
-		(:commit . "92bef1bc0086bc1cd8db24ec659792638fd7ecf3"))])
+		(:commit . "9ae49c8770a83eed92c58be45a4c96fa927cbe6f"))])
  (devhelp .
 	  [(1 0)
 	   ((emacs
@@ -1884,7 +1884,7 @@
 	   ("Random User"))
 	  (:commit . "28a75a6f6803e5c5d121c4d36ef403e8832fbf1f"))])
  (sweeprolog .
-	     [(0 11 2)
+	     [(0 11 3)
 	      ((emacs
 		(28 1)))
 	      "Embedded SWI-Prolog" tar
@@ -1893,7 +1893,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "e540d05a79748b8c41f021d0fd798bd863d223d3"))])
+	       (:commit . "40c3ba312d865f71983aacf0563448c0e0e31030"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs

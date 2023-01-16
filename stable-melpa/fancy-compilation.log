@@ -3,9 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-fancy-compilation.git
 
 Updating /mnt/store/melpa/working/fancy-compilation/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-fancy-compilation.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out 889e77c899cbf28673915b7b0161d45734bfdcb7
+Built fancy-compilation in 8.141s, finished at 2023-01-15T23:57:11+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jan 15 23:57 packages/fancy-compilation-20230109.536.el
+4.0K -rw-r--r-- 1 root root 390 Jan 15 23:57 packages/fancy-compilation-20230109.536.entry
