@@ -3434,18 +3434,18 @@
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
  (triples .
-	  [(0 2 2)
+	  [(0 2 3)
 	   ((seq
 	     (2 0))
 	    (emacs
-	     (25)))
-	   "A flexible triple-based database for us in apps." tar
+	     (28 1)))
+	   "A flexible triple-based database for use in apps" tar
 	   ((:url . "https://github.com/ahyatt/triples")
 	    (:keywords "triples" "kg" "data" "sqlite")
 	    (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	    (:authors
 	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	    (:commit . "7d7904e6decebc7c9861d38a9443127bf66a1643"))])
+	    (:commit . "780f8369ff8b346423b5a33884d13dcdf4e53c01"))])
  (undo-tree .
 	    [(0 8 2)
 	     ((queue
