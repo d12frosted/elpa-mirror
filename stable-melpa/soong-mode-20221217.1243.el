@@ -4,6 +4,8 @@
 
 ;; Author: Sergey Bobrenok <bobrofon@gmail.com>
 ;; Keywords: languages
+;; Package-Version: 20221217.1243
+;; Package-Commit: bf3dc1070b368b413958f54fbe9bcc2aaf77b56f
 ;; URL: https://github.com/bobrofon/soong-mode
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 1.0.0

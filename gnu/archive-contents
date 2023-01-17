@@ -503,7 +503,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(29 1 1 1)
+	 [(29 1 2 0)
 	  ((emacs
 	    (24 4)))
 	  "Emacs Lisp Compatibility Library" tar
@@ -512,7 +512,7 @@
 	   (:maintainer "Daniel Mendler <mail@daniel-mendler.de>, Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "57295d30c8c62470558ddfde6ce5926de47a091c"))])
+	   (:commit . "b64eaff775fdca48f1ac226fb84b4b6538ca18f2"))])
  (consult .
 	  [(0 31)
 	   ((emacs
@@ -3162,6 +3162,16 @@
 	    ("Nicolas Petton" . "nicolas@petton.fr"))
 	   (:keywords "stream" "laziness" "sequences")
 	   (:url . "http://elpa.gnu.org/packages/stream.html"))])
+ (substitute .
+	     [(0 1 2)
+	      ((emacs
+		(27 1)))
+	      "Efficiently replace targets in the buffer or context" tar
+	      ((:url . "https://git.sr.ht/~protesilaos/substitute")
+	       (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
+	       (:authors
+		("Protesilaos Stavrou" . "info@protesilaos.com"))
+	       (:commit . "731cb688e2c4312f3b1e19a01e685ba08cedd124"))])
  (svg .
       [(1 1)
        ((emacs

@@ -1,5 +1,5 @@
 (hass .
-      [(20230116 1400)
+      [(20230116 2220)
        ((emacs
 	 (25 1))
 	(request
@@ -7,7 +7,7 @@
 	(websocket
 	 (1 13)))
        "Interact with Home Assistant" tar
-       ((:commit . "45fe5899230163a6dbf1f5ef51649a599368ef0d")
+       ((:commit . "033d11b07e0f8bb68b348a12d5ae13fabea56c73")
 	(:authors
 	 ("Ben Whitley"))
 	(:maintainer "Ben Whitley")

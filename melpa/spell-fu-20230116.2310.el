@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-spell-fu
-;; Package-Version: 20230116.951
-;; Package-Commit: 9f63b57c33d3ee74e9f58e089f984b386f8e8449
+;; Package-Version: 20230116.2310
+;; Package-Commit: 0637dada65891d567d73bf0e1a10db8526dca2d4
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -1518,10 +1518,9 @@ Argument DICT-FILE is the absolute path to the dictionary."
   (let ((word-table
          ;; Reuse the previous table if possible.
          (and spell-fu--buffer-localwords-global-cache-table-map
-              (gethash
-               spell-fu-buffer-session-localwords
-               spell-fu--buffer-localwords-global-cache-table-map
-               nil))))
+              (gethash spell-fu-buffer-session-localwords
+                       spell-fu--buffer-localwords-global-cache-table-map
+                       nil))))
 
     (unless word-table
       (setq word-table

@@ -9,7 +9,6 @@ Both `hass-host' and `hass-apikey' must be set to use this package.
 (setq hass-insecure t) ; If using HTTP and not HTTPS
 (setq hass-port 8123) ; If using a different port other than the default 8123
 (setq hass-apikey "APIKEY-GOES-IN-HERE") ; Required.  See below.
-(hass-setup)
 
 Getting an API Key:
 Ensure that your Home Assistant instance is configured to support API calls by following the

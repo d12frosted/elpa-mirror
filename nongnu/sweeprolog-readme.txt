@@ -29,6 +29,7 @@ Editing Prolog Code
 ..... Available Styles
 ..... Highlight Variables
 ..... Quasi-Quotation
+.. Hover for Help
 .. Code Layout
 ..... Aligning Spaces
 ..... Electric Layout mode
@@ -736,6 +737,54 @@ Quasi-quotation highlighting
 <https://www.swi-prolog.org/pldoc/man?section=quasiquotations>
 
 
+Hover for Help
+──────────────
+
+  In the [Semantic Highlighting] section we talked about how Sweep
+  performs semantic analysis to determine the meaning of different terms
+  in different contexts and highlight them accordingly.  Beyond
+  highlighting, Sweep can also tell you explicitly what different tokens
+  in Prolog code mean by annotating them with a textual description
+  that’s displayed when you hover over them with the mouse.
+
+  User Option: sweeprolog-enable-help-echo
+        If non-nil, annotate Prolog tokens with help text via the
+        `help-echo' text property. Defaults to `t'.
+  Key: C-h . (display-local-help)
+        Display the `help-echo' text of the token at point in the echo
+        area.
+
+  If the user option `sweeprolog-enable-help-echo' is non-nil, as it is
+  by default, `sweeprolog-mode' annotates tokens with a short
+  description of their meaning in that specific context.  This is done
+  by adding the `help-echo' text property to different parts of the
+  buffer based on semantic analysis.  The `help-echo' text is
+  automatically displayed at the mouse tooltip when you hover over
+  different tokens in the buffer.
+
+  Alternatively, you can display the `help-echo' text for the token at
+  point in the echo area by typing `C-h .' (`C-h' followed by dot).
+
+  The `help-echo' description of file specification in import directives
+  is especially useful as it tells you which predicates that the current
+  buffer uses actually come from the imported file.  For example, if we
+  have a Prolog file with the following contents:
+
+  ┌────
+  │ :- use_module(library(lists)).
+  │ 
+  │ foo(Foo, Bar) :- flatten(Bar, Baz), member(Foo, Baz).
+  └────
+
+  Then hovering over `library(lists)' shows:
+
+        Dependency on /usr/local/lib/swipl/library/lists.pl,
+        resolves calls to flatten/2, member/2
+
+
+[Semantic Highlighting] See section Semantic Highlighting
+
+
 Maintaining Code Layout
 ───────────────────────
 
@@ -917,7 +966,7 @@ Holes
   of missing terms that the user can later fill in, essentially they
   represent source-level unknown terms and their presence satisfies the
   Prolog parser.  Holes are written in the buffer as regular Prolog
-  variables, but they are annotated with a special text property[1] that
+  variables, but they are annotated with a special text property that
   allows Sweep to recognize them as holes needed to be filled.
 
   Key: C-c RET (sweeprolog-insert-term-with-holes)
@@ -1432,7 +1481,7 @@ Context-Based Term Insertion
 Writing Tests
 ─────────────
 
-  SWI-Prolog includes the `PlUnit' unit testing framework[2], in which
+  SWI-Prolog includes the `PlUnit' unit testing framework[1], in which
   unit tests are written in special blocks of Prolog code enclosed
   within the directives `begin_tests/1' and `end_tests/1'.  To insert a
   new block of unit tests (also known as a /test-set/) in a Prolog
@@ -2169,8 +2218,5 @@ Concept index
 Footnotes
 ─────────
 
-[1] see [Text Properties in the Elisp manual] (<info:elisp#Text
-Properties>)
-
-[2] See [Prolog Unit Tests in the SWI-Prolog manual]
+[1] See [Prolog Unit Tests in the SWI-Prolog manual]
 (<https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/plunit.html%27)>).

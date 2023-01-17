@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/purplg/hass.git
 
 Updating /mnt/store/melpa/working/hass/
-Checking out 45fe5899230163a6dbf1f5ef51649a599368ef0d
+Checking out 033d11b07e0f8bb68b348a12d5ae13fabea56c73
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hass/
-  to /tmp/hassRB2tUl/hass-20230116.1400
+  to /tmp/hassQv3lUZ/hass-20230116.2220
     hass-dash.el -> hass-dash.el
     hass-websocket.el -> hass-websocket.el
     hass.el -> hass.el
-Created hass-20230116.1400.tar containing:
-  hass-20230116.1400/
-  hass-20230116.1400/hass-dash.el
-  hass-20230116.1400/hass-pkg.el
-  hass-20230116.1400/hass-websocket.el
-  hass-20230116.1400/hass.el
-Built hass in 4.481s, finished at 2023-01-16T19:27:00+0000
+Created hass-20230116.2220.tar containing:
+  hass-20230116.2220/
+  hass-20230116.2220/hass-dash.el
+  hass-20230116.2220/hass-pkg.el
+  hass-20230116.2220/hass-websocket.el
+  hass-20230116.2220/hass.el
+Built hass in 4.798s, finished at 2023-01-16T23:13:49+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 310 Jan 16 19:26 packages/hass-20230116.1400.entry
  52K -rw-r--r-- 1 root root 50K Jan 16 19:26 packages/hass-20230116.1400.tar
+4.0K -rw-r--r-- 1 root root 310 Jan 16 23:13 packages/hass-20230116.2220.entry
+ 52K -rw-r--r-- 1 root root 50K Jan 16 23:13 packages/hass-20230116.2220.tar
