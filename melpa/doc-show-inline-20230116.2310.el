@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-doc-show-inline
-;; Package-Version: 20230116.951
-;; Package-Commit: 3dcd1bab4afdefb8c85c92fd9d05157b51a0c258
+;; Package-Version: 20230116.2310
+;; Package-Commit: 641c2c8bf55ec4a0f9da8dd99b95cd1464997a66
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -217,12 +217,11 @@ Where positive brighten and negative numbers darken."
       (let ((ov (pop overlays)))
         (let ((face-prop (overlay-get ov 'face)))
           (when face-prop
-            (add-face-text-property
-             (max (- (overlay-start ov) pos-beg) 0)
-             (min (- (overlay-end ov) pos-beg) text-length)
-             face-prop
-             t
-             text)))))
+            (add-face-text-property (max (- (overlay-start ov) pos-beg) 0)
+                                    (min (- (overlay-end ov) pos-beg) text-length)
+                                    face-prop
+                                    t
+                                    text)))))
     text))
 
 

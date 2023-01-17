@@ -8,8 +8,8 @@
 ;;               Michael Markert <markert.michael@gmail.com>
 ;;               Julia Path <julia@jpath.de>
 ;; URL: http://github.com/juliapath/evil-numbers
-;; Package-Version: 20230116.948
-;; Package-Commit: ee2c0279ea3eaa84cf92cdd0c9527de4a5113b04
+;; Package-Version: 20230117.53
+;; Package-Commit: 8724645c84dc310f6155eec452913bb79c0c44b3
 ;; Git-Repository: git://github.com/juliapath/evil-numbers.git
 ;; Created: 2011-09-02
 ;; Version: 0.7
@@ -548,9 +548,9 @@ Return non-nil on success, leaving the point at the end of the number."
    (evil-numbers--inc-at-pt-impl-with-match-chars
     `(("+-" \?) ("0" 1) ("xX" 1) ("[:xdigit:]" + ,evil-numbers-separator-chars))
     ;; Sign, number groups & base.
-    1 4
-    ;; Base and other arguments.
-    16 beg end padded t range-check-fn number-xform-fn
+    1 4 16
+    ;; Other arguments.
+    beg end padded t range-check-fn number-xform-fn
     ;; Decode & encode callbacks.
     #'identity #'identity)
 

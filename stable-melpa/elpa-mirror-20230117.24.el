@@ -4,8 +4,8 @@
 
 ;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: http://github.com/redguardtoo/elpa-mirror
-;; Package-Version: 20230116.942
-;; Package-Commit: ed36c470cfb6f370dd42dd07182de2be2cf122e6
+;; Package-Version: 20230117.24
+;; Package-Commit: 4ef6cc917025ae7690ab734751e54d879407c6dd
 ;; Package-Requires: ((emacs "25.1"))
 ;; Version: 2.2.1
 ;; Keywords: tools
@@ -323,6 +323,11 @@ command compatible with BSD tar instead of GNU tar."
              (eq system-type 'windows-nt))
     (setq elpamr-tar-executable (elpamr--win-executable-find elpamr-tar-executable))))
 
+(defun elpamr-delete-directory (directory)
+  "Delete DIRECTORY."
+  (ignore-errors
+    (delete-directory directory t)))
+
 ;;;###autoload
 (defun elpamr-create-mirror-for-installed (&optional output-directory recreate-directory)
   "Export installed packages into a new directory.
@@ -382,7 +387,7 @@ will be deleted and recreated."
     (when (and recreate-directory
                (file-directory-p output-directory))
       (elpamr--log-message "Re-creating %s" output-directory)
-      (delete-directory output-directory t))
+      (elpamr-delete-directory output-directory))
 
     ;; Create output directory if it does not exist.
     (unless (file-directory-p output-directory)
@@ -421,7 +426,7 @@ will be deleted and recreated."
                      pkg-dir))
           (setq cnt (1+ cnt)))
         ;; clean up temp directory
-        (delete-directory tmp-dir t))
+        (elpamr-delete-directory tmp-dir))
 
       ;; output archive-contents
       (elpamr--log-message "Creating archive-contents...")
