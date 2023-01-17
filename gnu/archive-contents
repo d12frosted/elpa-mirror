@@ -3510,18 +3510,18 @@
 	      ("Stefan Kangas" . "stefankangas@gmail.com"))
 	     (:commit . "6f517db0811e79f4f8a9e5b4c9c6f69999517215"))])
  (use-package .
-	      [(2 4 4)
+	      [(2 4 5)
 	       ((emacs
 		 (24 3))
 		(bind-key
 		 (2 4)))
 	       "A configuration macro for simplifying your .emacs" tar
 	       ((:url . "https://github.com/jwiegley/use-package")
-		(:keywords "dotemacs" "startup" "speed" "config" "package")
+		(:keywords "dotemacs" "startup" "speed" "config" "package" "extensions")
 		(:maintainer "John Wiegley" . "johnw@newartisans.com")
 		(:authors
 		 ("John Wiegley" . "johnw@newartisans.com"))
-		(:commit . "942617d26e11d80d879ff23d2a8b477bd074a734"))])
+		(:commit . "c8d548097278683c94eced742a1a1bea387ced2d"))])
  (validate .
 	   [(1 0 4)
 	    ((emacs

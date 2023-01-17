@@ -3,18 +3,20 @@ Fetcher: github
 Source:  https://github.com/beacoder/call-graph.git
 
 Updating /mnt/store/melpa/working/call-graph/
-Checking out ea557a4be47e19706d09a9619748288b9e183f0e
+Checking out f2849d394427d5753fc1ded1533922f84a5da73f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/call-graph/
-  to /tmp/call-graphqRqMY5/call-graph-20230116.759
+  to /tmp/call-graphpBRM8s/call-graph-20230117.926
     call-graph.el -> call-graph.el
     cg-support.el -> cg-support.el
-Created call-graph-20230116.759.tar containing:
-  call-graph-20230116.759/
-  call-graph-20230116.759/call-graph-pkg.el
-  call-graph-20230116.759/call-graph.el
-  call-graph-20230116.759/cg-support.el
-Built call-graph in 7.364s, finished at 2023-01-17T06:14:43+0000
+Created call-graph-20230117.926.tar containing:
+  call-graph-20230117.926/
+  call-graph-20230117.926/call-graph-pkg.el
+  call-graph-20230117.926/call-graph.el
+  call-graph-20230117.926/cg-support.el
+Built call-graph in 4.350s, finished at 2023-01-17T10:01:26+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 514 Jan 17 06:14 packages/call-graph-20230116.759.entry
  52K -rw-r--r-- 1 root root 50K Jan 17 06:14 packages/call-graph-20230116.759.tar
+4.0K -rw-r--r-- 1 root root 514 Jan 17 10:01 packages/call-graph-20230117.926.entry
+ 52K -rw-r--r-- 1 root root 50K Jan 17 10:01 packages/call-graph-20230117.926.tar
