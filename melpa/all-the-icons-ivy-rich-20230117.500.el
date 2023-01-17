@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.8.1
-;; Package-Version: 20230109.1028
-;; Package-Commit: 8d45142334728d53274ee7f0a214aa84732ad5b2
+;; Package-Version: 20230117.500
+;; Package-Commit: 709e0b5e136449aad1423878e9968b8b90a58b15
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -1046,6 +1046,12 @@ This value is adjusted depending on the `window-width'."
       (all-the-icons-ivy-rich-project-file-modification-time (:face all-the-icons-ivy-rich-time-face)))
      :delimiter "\t")
 
+    ivy-magit-todos
+    (:columns
+     ((all-the-icons-ivy-rich-magit-todos-icon)
+      (all-the-icons-ivy-rich-magit-todos-transformer))
+     :delimiter "\t")
+
     treemacs-projectile
     (:columns
      ((all-the-icons-ivy-rich-project-icon)
@@ -1661,6 +1667,15 @@ Support`counsel-ack', `counsel-ag', `counsel-pt' and `counsel-rg', etc."
               (propertize err 'face 'error))))
    (t cand)))
 
+(defun all-the-icons-ivy-rich-magit-todos-transformer (cand)
+  "Transform `magit-todos' result (CAND)."
+  (let* ((strs (split-string cand " "))
+         (file (car strs))
+         (desc (cdr strs)))
+    (format "%s %s"
+            (propertize file 'face 'ivy-grep-info)
+            (string-join desc " "))))
+
 ;;
 ;; Icons
 ;;
@@ -1714,6 +1729,11 @@ Support`counsel-ack', `counsel-ag', `counsel-pt' and `counsel-rg', etc."
        (if (or (null icon) (symbolp icon))
            (all-the-icons-faicon "file-o" :face 'all-the-icons-dsilver :height 0.9 :v-adjust 0.0)
          (propertize icon 'display '(raise 0.0)))))))
+
+(defun all-the-icons-ivy-rich-magit-todos-icon (cand)
+  "Display file icon in `magit-todos'."
+  (when (all-the-icons-ivy-rich-icon-displayable)
+    (all-the-icons-ivy-rich-file-icon (nth 0 (split-string cand " ")))))
 
 (defun all-the-icons-ivy-rich-dir-icon (_cand)
   "Display project icon in `ivy-rich'."

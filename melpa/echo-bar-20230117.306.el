@@ -4,8 +4,8 @@
 
 ;; Author: Adam Tillou <qaiviq@gmail.com>
 ;; Keywords: convenience, tools
-;; Package-Version: 20221101.2254
-;; Package-Commit: d0a24635da51502bdda9f5451793966fffef92a8
+;; Package-Version: 20230117.306
+;; Package-Commit: 171b68149c325ddec4e981c7da502da2744ab697
 ;; Version: 1.0.0
 ;; Homepage: https://github.com/qaiviq/echo-bar.el
 
@@ -139,9 +139,24 @@ If nil, don't update the echo bar automatically."
   ;; Remove the setup function from the minibuffer hook
   (remove-hook 'minibuffer-setup-hook #'echo-bar--minibuffer-setup))
 
+;; TODO: Use function `string-pixel-width' after 29.1
+(defun echo-bar--string-pixel-width (str)
+  "Return the width of STR in pixels."
+  (if (fboundp #'string-pixel-width)
+      (string-pixel-width str)
+    (require 'shr)
+    (shr-string-pixel-width str)))
+
+(defun echo-bar--str-len (str)
+  "Calculate STR in pixel width."
+  (let ((width (frame-char-width))
+        (len (echo-bar--string-pixel-width str)))
+    (+ (/ len width)
+       (if (zerop (% len width)) 0 1))))  ; add one if exceeed
+
 (defun echo-bar-set-text (text)
   "Set the text displayed by the echo bar to TEXT."
-  (let* ((wid (+ (string-width text) echo-bar-right-padding))
+  (let* ((wid (+ (echo-bar--str-len text) echo-bar-right-padding))
          ;; Maximum length for the echo area message before wrap to next line
          (max-len (- (frame-width) wid 5))
          ;; Align the text to the correct width to make it right aligned

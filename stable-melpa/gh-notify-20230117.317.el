@@ -7,8 +7,8 @@
 
 ;; Modified: 2021-11-26
 ;; Version: 0.1.0
-;; Package-Version: 20211126.638
-;; Package-Commit: 8937f64092ea3b7e2cea2d61c12fde8e0f5e7917
+;; Package-Version: 20230117.317
+;; Package-Commit: e1afdd49deb8ddf1a988e8d3fa699b06dfa92f5f
 ;; Author: Bas Alberts <bas@anti.computer>
 ;;         xristos <xristos@sdf.org>
 ;;
@@ -1474,6 +1474,7 @@ Browse issue or PR on prefix P."
         (browse-url url))
     (message "Can't browse to this notification!")))
 
+;;;###autoload
 (defun gh-notify ()
   "Magit/Forge notification juggling."
   (interactive)
