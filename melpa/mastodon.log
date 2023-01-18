@@ -3,9 +3,42 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/martianh/mastodon.el.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out bf7a1b445003f7e15d1e2b38f7635de142df19d1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mastodon/
+  to /tmp/mastodonpBTey6/mastodon-20230116.1511
+  ! lisp/mastodon-async.el -> mastodon-async.el
+  ! lisp/mastodon-auth.el -> mastodon-auth.el
+  ! lisp/mastodon-client.el -> mastodon-client.el
+  ! lisp/mastodon-discover.el -> mastodon-discover.el
+  ! lisp/mastodon-http.el -> mastodon-http.el
+  ! lisp/mastodon-inspect.el -> mastodon-inspect.el
+  ! lisp/mastodon-iso.el -> mastodon-iso.el
+  ! lisp/mastodon-media.el -> mastodon-media.el
+  ! lisp/mastodon-notifications.el -> mastodon-notifications.el
+  ! lisp/mastodon-profile.el -> mastodon-profile.el
+  ! lisp/mastodon-search.el -> mastodon-search.el
+  ! lisp/mastodon-tl.el -> mastodon-tl.el
+  ! lisp/mastodon-toot.el -> mastodon-toot.el
+  ! lisp/mastodon.el -> mastodon.el
+Created mastodon-20230116.1511.tar containing:
+  mastodon-20230116.1511/
+  mastodon-20230116.1511/mastodon-async.el
+  mastodon-20230116.1511/mastodon-auth.el
+  mastodon-20230116.1511/mastodon-client.el
+  mastodon-20230116.1511/mastodon-discover.el
+  mastodon-20230116.1511/mastodon-http.el
+  mastodon-20230116.1511/mastodon-inspect.el
+  mastodon-20230116.1511/mastodon-iso.el
+  mastodon-20230116.1511/mastodon-media.el
+  mastodon-20230116.1511/mastodon-notifications.el
+  mastodon-20230116.1511/mastodon-pkg.el
+  mastodon-20230116.1511/mastodon-profile.el
+  mastodon-20230116.1511/mastodon-search.el
+  mastodon-20230116.1511/mastodon-tl.el
+  mastodon-20230116.1511/mastodon-toot.el
+  mastodon-20230116.1511/mastodon.el
+Built mastodon in 6.972s, finished at 2023-01-18T13:23:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  497 Jan 18 13:23 packages/mastodon-20230116.1511.entry
+380K -rw-r--r-- 1 root root 380K Jan 18 13:23 packages/mastodon-20230116.1511.tar

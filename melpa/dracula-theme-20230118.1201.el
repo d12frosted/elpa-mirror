@@ -7,8 +7,8 @@
 ;; Maintainer: Étienne Deparis <etienne@depar.is>
 ;; Author: film42
 ;; Version: 1.7.0
-;; Package-Version: 20220821.1717
-;; Package-Commit: fdf057f5e80037814098dc8bb67888886c89a761
+;; Package-Version: 20230118.1201
+;; Package-Commit: be1dd97ef3968bef25b9de89e7dc1251f5aaee10
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/dracula/emacs
 
@@ -153,6 +153,8 @@ read it before opening a new issue about your will.")
                (font-lock-function-name-face :foreground ,dracula-green :weight bold)
                (font-lock-keyword-face :foreground ,dracula-pink :weight bold)
                (font-lock-negation-char-face :foreground ,dracula-cyan)
+               (font-lock-number-face :foreground ,dracula-purple)
+               (font-lock-operator-face :foreground ,dracula-pink)
                (font-lock-preprocessor-face :foreground ,dracula-orange)
                (font-lock-reference-face :inherit font-lock-constant-face) ;; obsolete
                (font-lock-regexp-grouping-backslash :foreground ,dracula-cyan)
@@ -163,6 +165,8 @@ read it before opening a new issue about your will.")
                (font-lock-warning-face :inherit warning :background ,bg2)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,dracula-pink)
+               ;; bookmarks
+               (bookmark-face :foreground ,dracula-pink)
                ;; company
                (company-echo-common :foreground ,dracula-bg :background ,dracula-fg)
                (company-preview :background ,dracula-current :foreground ,other-blue)
@@ -228,6 +232,9 @@ read it before opening a new issue about your will.")
                (diredp-link-priv :foreground ,dracula-orange)
                (diredp-autofile-name :foreground ,dracula-yellow)
                (diredp-tagged-autofile-name :foreground ,dracula-yellow)
+               ;; eglot
+               (eglot-diagnostic-tag-unnecessary-face :inherit warning)
+               (eglot-diagnostic-tag-deprecated-face :inherit warning :strike-through t)
                ;; eldoc-box
                (eldoc-box-border :background ,dracula-current)
                (eldoc-box-body :background ,dracula-current)

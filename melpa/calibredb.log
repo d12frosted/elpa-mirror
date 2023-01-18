@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/chenyanming/calibredb.el.git
 
 Updating /mnt/store/melpa/working/calibredb/
-Checking out 105ba9afd91c92b285587a74eb9a26b29c610752
+Checking out 0ea8ccc41bbf4c6d105d9d2eddffa25d040f0e8d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/calibredb/
-  to /tmp/calibredb62tu0d/calibredb-20230116.938
+  to /tmp/calibredbb2PypO/calibredb-20230118.954
     calibredb-annotation.el -> calibredb-annotation.el
     calibredb-consult.el -> calibredb-consult.el
     calibredb-core.el -> calibredb-core.el
@@ -22,25 +22,27 @@ Copying files (->) and directories (=>)
     calibredb-transient.el -> calibredb-transient.el
     calibredb-utils.el -> calibredb-utils.el
     calibredb.el -> calibredb.el
-Created calibredb-20230116.938.tar containing:
-  calibredb-20230116.938/
-  calibredb-20230116.938/calibredb-annotation.el
-  calibredb-20230116.938/calibredb-consult.el
-  calibredb-20230116.938/calibredb-core.el
-  calibredb-20230116.938/calibredb-dired.el
-  calibredb-20230116.938/calibredb-faces.el
-  calibredb-20230116.938/calibredb-helm.el
-  calibredb-20230116.938/calibredb-ivy.el
-  calibredb-20230116.938/calibredb-library.el
-  calibredb-20230116.938/calibredb-opds.el
-  calibredb-20230116.938/calibredb-org.el
-  calibredb-20230116.938/calibredb-pkg.el
-  calibredb-20230116.938/calibredb-search.el
-  calibredb-20230116.938/calibredb-show.el
-  calibredb-20230116.938/calibredb-transient.el
-  calibredb-20230116.938/calibredb-utils.el
-  calibredb-20230116.938/calibredb.el
-Built calibredb in 3.796s, finished at 2023-01-18T08:52:29+0000
+Created calibredb-20230118.954.tar containing:
+  calibredb-20230118.954/
+  calibredb-20230118.954/calibredb-annotation.el
+  calibredb-20230118.954/calibredb-consult.el
+  calibredb-20230118.954/calibredb-core.el
+  calibredb-20230118.954/calibredb-dired.el
+  calibredb-20230118.954/calibredb-faces.el
+  calibredb-20230118.954/calibredb-helm.el
+  calibredb-20230118.954/calibredb-ivy.el
+  calibredb-20230118.954/calibredb-library.el
+  calibredb-20230118.954/calibredb-opds.el
+  calibredb-20230118.954/calibredb-org.el
+  calibredb-20230118.954/calibredb-pkg.el
+  calibredb-20230118.954/calibredb-search.el
+  calibredb-20230118.954/calibredb-show.el
+  calibredb-20230118.954/calibredb-transient.el
+  calibredb-20230118.954/calibredb-utils.el
+  calibredb-20230118.954/calibredb.el
+Built calibredb in 4.023s, finished at 2023-01-18T12:39:33+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  542 Jan 18 08:52 packages/calibredb-20230116.938.entry
 232K -rw-r--r-- 1 root root 230K Jan 18 08:52 packages/calibredb-20230116.938.tar
+4.0K -rw-r--r-- 1 root root  542 Jan 18 12:39 packages/calibredb-20230118.954.entry
+232K -rw-r--r-- 1 root root 230K Jan 18 12:39 packages/calibredb-20230118.954.tar

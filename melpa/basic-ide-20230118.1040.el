@@ -5,8 +5,8 @@
 ;; Author: Fermin MF <fmfs@posteo.net>
 ;; Created: 20 Feb 2020
 ;; Version: 0.0.3
-;; Package-Version: 20200429.1104
-;; Package-Commit: d1d25c35cf899d58ead9377bf678a553c835c719
+;; Package-Version: 20230118.1040
+;; Package-Commit: e33036f838e61b647927165e81be5d5b855e0518
 ;; Keywords: languages, basic
 ;; URL: https://gitlab.com/sasanidas/emacs-c64-basic-ide
 ;; Package-Requires: ((emacs "25") (basic-mode "0.4.2") (company "0.9.12") (flycheck "0.22") (dash "2.12.0") (f "0.17.0"))
@@ -140,6 +140,22 @@ USE-REGION and OUTPUT-BUFFER-NAME."
 ;; Vice functions:
 ;; ----------------------------------------------------------------------------
 
+(defun basic-ide-make-netcat (host port)
+  "An easy way to create a stream that is compatible with netcat. Returns the stream."
+  (make-network-process
+   :name "Netcatproc"
+   :host host
+   :service port
+   :type nil))
+
+(defun basic-ide-netcat-send (string &optional port)
+  "Enables the same functionality as netcat -N (openbsd's netcat), but within emacs. No need to have netcat installed."
+  (if (null port)
+      (setq port 6510))
+  (let ((netcat-stream (basic-ide-make-netcat "127.0.0.1" port)))
+    (process-send-string netcat-stream string)
+    (delete-process netcat-stream)))
+
 (defun basic-ide-vice-start-session ()
   "Start a vice session and open the emulator.
 https://vice-emu.sourceforge.net/ ."
@@ -154,25 +170,21 @@ Execute the command `basic-ide-vice-start-session' first."
     (progn
       (shell-command-to-string (concat basic-ide-petcat-executable " -wsimon -o "
 				       (shell-quote-argument prg--temp-file) " "
-				       (shell-quote-argument (buffer-file-name)) ))
-      (shell-command-to-string  "echo 'cl' | netcat -N  localhost 6510 ")
-      (shell-command-to-string (concat "echo" " 'l \"" (shell-quote-argument prg--temp-file)
-				       "\" 0' | netcat -N localhost 6510")))))
+				       (shell-quote-argument (buffer-file-name))))
+      (basic-ide-netcat-send "'cl'")
+      (basic-ide-netcat-send (concat "'l \"" (shell-quote-argument prg--temp-file)
+     				     "\" 0'")))))
 
 (defun basic-ide-vice-load-simon-basic ()
   "Basic IDE enables simon's basic commands for VICE emulator."
   (interactive)
-  (shell-command-to-string (concat  "echo " "'attach \"" basic-ide-vice-simon-disk "\" 8' | netcat -N localhost 6510 "))
-  (shell-command-to-string   "echo 'load \"*\" 8' | netcat -N localhost 6510 "))
+  (basic-ide-netcat-send (concat "'attach \"" basic-ide-vice-simon-disk "\" 8'"))
+  (basic-ide-netcat-send "'load \"*\" 8'"))
 
 (defun basic-ide-vice-reset ()
   "Basic IDE restart the current VICE session."
   (interactive)
-  (shell-command-to-string  "echo 'reset 0' | netcat -N localhost 6510 "))
-
-
-
-
+  (basic-ide-netcat-send "'reset 0'"))
 
 ;; ----------------------------------------------------------------------------
 ;; Flycheck checker:

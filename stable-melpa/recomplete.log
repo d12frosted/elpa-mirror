@@ -3,11 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-recomplete.git
 
 Updating /mnt/store/melpa/working/recomplete/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-recomplete.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 837965094aa55bbba9a62f9612e59c5440cbfc71
+Built recomplete in 7.171s, finished at 2023-01-18T13:42:38+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jan 18 13:42 packages/recomplete-20230109.536.el
+4.0K -rw-r--r-- 1 root root 381 Jan 18 13:42 packages/recomplete-20230109.536.entry
