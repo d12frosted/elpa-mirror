@@ -3163,7 +3163,7 @@
 	   (:keywords "stream" "laziness" "sequences")
 	   (:url . "http://elpa.gnu.org/packages/stream.html"))])
  (substitute .
-	     [(0 1 2)
+	     [(0 1 4)
 	      ((emacs
 		(27 1)))
 	      "Efficiently replace targets in the buffer or context" tar
@@ -3171,7 +3171,7 @@
 	       (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
 	       (:authors
 		("Protesilaos Stavrou" . "info@protesilaos.com"))
-	       (:commit . "731cb688e2c4312f3b1e19a01e685ba08cedd124"))])
+	       (:commit . "df1d0dee119496d2d74aa8077ecc061ba3eebe73"))])
  (svg .
       [(1 1)
        ((emacs

@@ -84,12 +84,11 @@ What I do not like about those packages is that they are visually
 "busy".  Oftentimes, I want to perform a replacement in some context
 with multiple occurrences of a given target.  Using either of those
 echoes my input across all occurrences, resulting in a dance of sorts
-within the buffer as texts moves around.  I find that disorienting.
-Beside that, I do not need the visual feedback as I already know what
-I want to do: the default minimalist presentation of `substitute`
-provides all the information I need.
+as text moves around.  I find it disorienting.  Beside that, I do not
+need the visual feedback as I already know what I want to do: the
+default minimalist presentation of `substitute` provides all the
+information I need.
 
 Otherwise, this package is small and limited in scope.  Beside
-`substitute`, I also use, keyboard macros, `query-replace`, and,
-rarely `rectangle-mark-mode` in tandem with `string-rectangle`.  I
-have no need for `multiple-cursors` or `iedit`.
+`substitute`, I also use keyboard macros, `query-replace`, and
+`rectangle-mark-mode` in tandem with `string-rectangle`.
