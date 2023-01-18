@@ -4,8 +4,8 @@
 
 ;; Author: Damien Cassou <damien@cassou.me>, Nicolas Petton <nicolas@petton.fr>
 ;; Url: https://gitlab.petton.fr/DamienCassou/desktop-environment
-;; Package-Version: 20220425.1834
-;; Package-Commit: 2863dc3d66aed9052c8af39cc8c8c264be300560
+;; Package-Version: 20230118.820
+;; Package-Commit: 3b1fe3816ffaef16d210939dc74bd19e0024ff64
 ;; Package-requires: ((emacs "25.1"))
 ;; Version: 0.5.0
 
@@ -244,7 +244,7 @@ replacing the placeholder %d with the prefix argument."
 (defun desktop-environment--shell-command-to-string (command)
   "Execute shell command COMMAND locally and return its output as a string."
    (let ((default-directory temporary-file-directory))
-      (shell-command-to-string command)))
+      (string-trim (shell-command-to-string command))))
 
 ;;; Helper functions - brightness
 

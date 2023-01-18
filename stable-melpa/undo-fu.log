@@ -3,8 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-undo-fu.git
 
 Updating /mnt/store/melpa/working/undo-fu/
-Checking out d59bba01de48a808a42d6e29e011ef641cdb6a77
-Built undo-fu in 4.739s, finished at 2023-01-18T06:22:51+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jan 18 06:22 packages/undo-fu-20230109.2256.el
-4.0K -rw-r--r-- 1 root root 338 Jan 18 06:22 packages/undo-fu-20230109.2256.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-undo-fu.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128
