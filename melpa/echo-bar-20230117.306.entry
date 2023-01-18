@@ -1,9 +1,0 @@
-(echo-bar .
-	  [(20230117 306)
-	   nil "Turn the echo area into a custom status bar" single
-	   ((:commit . "171b68149c325ddec4e981c7da502da2744ab697")
-	    (:authors
-	     ("Adam Tillou" . "qaiviq@gmail.com"))
-	    (:maintainer "Adam Tillou" . "qaiviq@gmail.com")
-	    (:keywords "convenience" "tools")
-	    (:url . "https://github.com/qaiviq/echo-bar.el"))])

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
-Checking out 370be888c7992551ee016ccc6eccdccbb2760183
+Checking out f6895d8768314b7a4691c984468c2ec6a0e08b32
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevlZphLd/eldev-20230116.1827
+  to /tmp/eldevUYvfHf/eldev-20230117.2135
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-doctor.el -> eldev-doctor.el
@@ -19,23 +19,23 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20230116.1827.tar containing:
-  eldev-20230116.1827/
-  eldev-20230116.1827/bin/
-  eldev-20230116.1827/bin/eldev
-  eldev-20230116.1827/bin/eldev.bat
-  eldev-20230116.1827/bin/eldev.ps1
-  eldev-20230116.1827/eldev-build.el
-  eldev-20230116.1827/eldev-buttercup.el
-  eldev-20230116.1827/eldev-doctor.el
-  eldev-20230116.1827/eldev-ecukes.el
-  eldev-20230116.1827/eldev-ert.el
-  eldev-20230116.1827/eldev-pkg.el
-  eldev-20230116.1827/eldev-plugins.el
-  eldev-20230116.1827/eldev-util.el
-  eldev-20230116.1827/eldev-vc.el
-  eldev-20230116.1827/eldev.el
-Built eldev in 6.842s, finished at 2023-01-17T17:48:11+0000
+Created eldev-20230117.2135.tar containing:
+  eldev-20230117.2135/
+  eldev-20230117.2135/bin/
+  eldev-20230117.2135/bin/eldev
+  eldev-20230117.2135/bin/eldev.bat
+  eldev-20230117.2135/bin/eldev.ps1
+  eldev-20230117.2135/eldev-build.el
+  eldev-20230117.2135/eldev-buttercup.el
+  eldev-20230117.2135/eldev-doctor.el
+  eldev-20230117.2135/eldev-ecukes.el
+  eldev-20230117.2135/eldev-ert.el
+  eldev-20230117.2135/eldev-pkg.el
+  eldev-20230117.2135/eldev-plugins.el
+  eldev-20230117.2135/eldev-util.el
+  eldev-20230117.2135/eldev-vc.el
+  eldev-20230117.2135/eldev.el
+Built eldev in 4.507s, finished at 2023-01-18T01:31:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 Jan 17 17:48 packages/eldev-20230116.1827.entry
-600K -rw-r--r-- 1 root root 600K Jan 17 17:48 packages/eldev-20230116.1827.tar
+4.0K -rw-r--r-- 1 root root  340 Jan 18 01:31 packages/eldev-20230117.2135.entry
+600K -rw-r--r-- 1 root root 600K Jan 18 01:31 packages/eldev-20230117.2135.tar

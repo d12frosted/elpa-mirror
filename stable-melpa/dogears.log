@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/alphapapa/dogears.el.git
 
 Updating /mnt/store/melpa/working/dogears/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/alphapapa/dogears.el.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 5b8a85d03ca17d8b8185868fdbacf320784026d5
+Built dogears in 5.046s, finished at 2023-01-18T01:28:33+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jan 18 01:28 packages/dogears-20220829.441.el
+4.0K -rw-r--r-- 1 root root 376 Jan 18 01:28 packages/dogears-20220829.441.entry

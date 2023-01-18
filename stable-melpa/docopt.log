@@ -3,11 +3,32 @@ Fetcher: github
 Source:  https://github.com/r0man/docopt.el.git
 
 Updating /mnt/store/melpa/working/docopt/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/r0man/docopt.el.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out a7f5b4a8b1a43552067ce27bce6080a509c92cff
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/docopt/
+  to /tmp/docopttLLFdZ/docopt-20220319.1912
+  ! src/docopt-abbrev.el -> docopt-abbrev.el
+  ! src/docopt-analyzer.el -> docopt-analyzer.el
+  ! src/docopt-argv.el -> docopt-argv.el
+  ! src/docopt-ast.el -> docopt-ast.el
+  ! src/docopt-generic.el -> docopt-generic.el
+  ! src/docopt-parser.el -> docopt-parser.el
+  ! src/docopt-transient.el -> docopt-transient.el
+  ! src/docopt-util.el -> docopt-util.el
+  ! src/docopt.el -> docopt.el
+Created docopt-20220319.1912.tar containing:
+  docopt-20220319.1912/
+  docopt-20220319.1912/docopt-abbrev.el
+  docopt-20220319.1912/docopt-analyzer.el
+  docopt-20220319.1912/docopt-argv.el
+  docopt-20220319.1912/docopt-ast.el
+  docopt-20220319.1912/docopt-generic.el
+  docopt-20220319.1912/docopt-parser.el
+  docopt-20220319.1912/docopt-pkg.el
+  docopt-20220319.1912/docopt-transient.el
+  docopt-20220319.1912/docopt-util.el
+  docopt-20220319.1912/docopt.el
+Built docopt in 4.436s, finished at 2023-01-18T01:28:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  489 Jan 18 01:28 packages/docopt-20220319.1912.entry
+140K -rw-r--r-- 1 root root 140K Jan 18 01:28 packages/docopt-20220319.1912.tar
