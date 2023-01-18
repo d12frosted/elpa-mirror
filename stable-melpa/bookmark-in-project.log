@@ -3,8 +3,12 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-bookmark-in-project.git
 
 Updating /mnt/store/melpa/working/bookmark-in-project/
-Checking out a1630443887c7fa190411c45269bde575f0807c5
-Built bookmark-in-project in 5.097s, finished at 2023-01-18T12:38:21+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 39K Jan 18 12:38 packages/bookmark-in-project-20230116.1206.el
-4.0K -rw-r--r-- 1 root root 439 Jan 18 12:38 packages/bookmark-in-project-20230116.1206.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; curl 7 GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
