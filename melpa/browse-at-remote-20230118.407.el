@@ -4,11 +4,11 @@
 ;;
 ;; Author:     Rustem Muslimov <r.muslimov@gmail.com>
 ;; Version:    0.15.0
-;; Package-Version: 20230104.658
-;; Package-Commit: d81643c975e77d506fe2eb931229739c162adb5d
+;; Package-Version: 20230118.407
+;; Package-Commit: c020975a891438e278ad1855213d4f3d62c9fccb
 ;; Keywords:   github, gitlab, bitbucket, gist, stash, phabricator, sourcehut, pagure
 ;; Homepage:   https://github.com/rmuslimov/browse-at-remote
-;; Package-Requires: ((f "0.17.2") (s "1.9.0") (cl-lib "0.5"))
+;; Package-Requires: ((f "0.20.0") (s "1.9.0") (cl-lib "0.5"))
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
