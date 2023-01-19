@@ -1591,7 +1591,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 10)
+	    [(0 11)
 	     ((emacs
 	       (27 1)))
 	     "Tool for inspection of Emacs Lisp objects" tar
@@ -1600,7 +1600,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "f02263e1b670bd4fe706c7b07a523fc9718a55f6"))])
+	      (:commit . "eb6045861787aa8e47271ed287eb496926ef4f16"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
@@ -1699,14 +1699,14 @@
 		  ("Feng Shu" . "tumashu@163.com")
 		  ("Naoya Yamashita" . "conao3@gmail.com")))])
  (jarchive .
-	   [(0 9 0)
+	   [(0 10 0)
 	    ((emacs
 	      (26 1)))
 	    "Open project dependencies in jar archives" tar
 	    ((:url . "https://git.sr.ht/~dannyfreeman/jarchive")
 	     (:keywords "tools" "languages" "jvm" "java" "clojure")
 	     (:maintainer "Danny Freeman" . "danny@dfreeman.email")
-	     (:commit . "9f14b742fce3d3379c41dfca3039c80e6fe8c53a"))])
+	     (:commit . "2e4a4bee2ad2715f4c364706acd10c25009d8df5"))])
  (javaimp .
 	  [(0 9 1)
 	   nil "Add and reorder Java import statements in Maven/Gradle projects" tar

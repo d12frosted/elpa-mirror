@@ -35,6 +35,9 @@ With raw prefix argument (usually C-u), the clipboard is not
 cleared, so you can repeat the copy operation in another dired
 buffer.
 
+The copy or move operation is asynchronous if `dired-async-mode'
+is activated.
+
 Bookmarks
 ---------
 

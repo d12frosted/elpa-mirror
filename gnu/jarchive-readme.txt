@@ -73,9 +73,11 @@ so that the transient lsp server that is started when opening the file is closed
 
 ## Language server compatibility
 
-I personally only test this with [clojure-lsp](https://clojure-lsp.io/).
+I personally only test Jarchive with [clojure-lsp](https://clojure-lsp.io/).
 
-I have heard from other users that it also works with some unspecified java language server. 
+Users report that Jarchive works well with the Java LSP server
+[java-language-server](https://github.com/georgewfraser/java-language-server).
+
 I do know that it does not work with `JDTLS` at them moment, which requires all clients to implement custom language server extensions and a complicated non-standard URI scheme to open files in JARs.
 
 Any language server that provides jar: scheme URIs should be picked up by this package.

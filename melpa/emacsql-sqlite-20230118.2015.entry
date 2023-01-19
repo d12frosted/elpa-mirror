@@ -1,0 +1,12 @@
+(emacsql-sqlite .
+		[(20230118 2015)
+		 ((emacs
+		   (25 1))
+		  (emacsql
+		   (3 1 1)))
+		 "EmacSQL back-end for SQLite" tar
+		 ((:commit . "93885039e99cf7b6bdcefa0fbe8fa69b34c57f71")
+		  (:authors
+		   ("Christopher Wellons" . "wellons@nullprogram.com"))
+		  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		  (:url . "https://github.com/magit/emacsql"))])
