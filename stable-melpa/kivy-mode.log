@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/kivy/kivy.git
 
 Updating /mnt/store/melpa/working/kivy-mode/
-Checking out 023bd79b90f9831b45bb8eb449346648aa5fe5f8
-Built kivy-mode in 8.271s, finished at 2023-01-19T00:42:32+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.7K Jan 19 00:42 packages/kivy-mode-20220306.810.el
-4.0K -rw-r--r-- 1 root root  277 Jan 19 00:42 packages/kivy-mode-20220306.810.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/kivy/kivy.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

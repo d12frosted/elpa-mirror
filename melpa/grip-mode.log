@@ -3,8 +3,12 @@ Fetcher: github
 Source:  https://github.com/seagle0128/grip-mode.git
 
 Updating /mnt/store/melpa/working/grip-mode/
-Checking out e1e8ee952f75cdca93327b6e7dcd79244ca66bc0
-Built grip-mode in 7.791s, finished at 2023-01-19T11:39:08+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.5K Jan 19 11:39 packages/grip-mode-20221003.1518.el
-4.0K -rw-r--r-- 1 root root  436 Jan 19 11:39 packages/grip-mode-20221003.1518.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

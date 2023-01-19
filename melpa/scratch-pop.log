@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/zk-phi/scratch-pop.git
 
 Updating /mnt/store/melpa/working/scratch-pop/
-Checking out 545badcd840dd50b39dd7dfa37459c6f71d02ea6
-Built scratch-pop in 5.151s, finished at 2023-01-19T08:32:25+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.6K Jan 19 08:32 packages/scratch-pop-20200910.226.el
-4.0K -rw-r--r-- 1 root root  289 Jan 19 08:32 packages/scratch-pop-20200910.226.entry
+
+Command '' exited with non-zero exit-code: 128
+
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/nex3/sass-mode.git
 
 Updating /mnt/store/melpa/working/sass-mode/
-Checking out 247a0d4b509f10b28e4687cd8763492bca03599b
-Built sass-mode in 4.368s, finished at 2023-01-19T08:32:01+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Jan 19 08:32 packages/sass-mode-20190502.53.el
-4.0K -rw-r--r-- 1 root root  396 Jan 19 08:32 packages/sass-mode-20190502.53.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/nex3/sass-mode.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

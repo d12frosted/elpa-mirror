@@ -3,23 +3,11 @@ Fetcher: github
 Source:  https://github.com/abo-abo/pamparam.git
 
 Updating /mnt/store/melpa/working/pamparam/
-Checking out 0ba91149095bee8c43688c68f83f4d365fbe6771
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pamparam/
-  to /tmp/pamparamqROO1g/pamparam-20210105.1513
-    pamparam.el -> pamparam.el
-    doc => doc
-Created pamparam-20210105.1513.tar containing:
-  pamparam-20210105.1513/
-  pamparam-20210105.1513/doc/
-  pamparam-20210105.1513/doc/sets/
-  pamparam-20210105.1513/doc/sets/capitals/
-  pamparam-20210105.1513/doc/sets/capitals/capitals.org
-  pamparam-20210105.1513/doc/sets/clojure/
-  pamparam-20210105.1513/doc/sets/clojure/clojure.org
-  pamparam-20210105.1513/pamparam-pkg.el
-  pamparam-20210105.1513/pamparam.el
-Built pamparam in 3.876s, finished at 2023-01-19T00:59:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 482 Jan 19 00:59 packages/pamparam-20210105.1513.entry
- 72K -rw-r--r-- 1 root root 70K Jan 19 00:59 packages/pamparam-20210105.1513.tar
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/abo-abo/pamparam.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

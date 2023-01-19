@@ -3,8 +3,12 @@ Fetcher: github
 Source:  https://github.com/alexmurray/flycheck-cstyle.git
 
 Updating /mnt/store/melpa/working/flycheck-cstyle/
-Checking out 002699f83253ea8e1a509a9ab6d0fce1a1650f73
-Built flycheck-cstyle in 4.131s, finished at 2023-01-19T04:06:53+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Jan 19 04:06 packages/flycheck-cstyle-20160905.2341.el
-4.0K -rw-r--r-- 1 root root  387 Jan 19 04:06 packages/flycheck-cstyle-20160905.2341.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

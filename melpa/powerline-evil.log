@@ -3,18 +3,11 @@ Fetcher: github
 Source:  https://github.com/johnson-christopher/powerline-evil.git
 
 Updating /mnt/store/melpa/working/powerline-evil/
-Checking out b77e2cf571e9990734f2b30d826f3a362b559fd1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/powerline-evil/
-  to /tmp/powerline-evilnxkYsR/powerline-evil-20190603.340
-    powerline-evil-themes.el -> powerline-evil-themes.el
-    powerline-evil.el -> powerline-evil.el
-Created powerline-evil-20190603.340.tar containing:
-  powerline-evil-20190603.340/
-  powerline-evil-20190603.340/powerline-evil-pkg.el
-  powerline-evil-20190603.340/powerline-evil-themes.el
-  powerline-evil-20190603.340/powerline-evil.el
-Built powerline-evil in 4.630s, finished at 2023-01-19T12:10:43+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 463 Jan 19 12:10 packages/powerline-evil-20190603.340.entry
- 20K -rw-r--r-- 1 root root 20K Jan 19 12:10 packages/powerline-evil-20190603.340.tar
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/johnson-christopher/powerline-evil.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

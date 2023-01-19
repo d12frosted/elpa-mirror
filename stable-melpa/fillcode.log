@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/snarfed/fillcode.git
 
 Updating /mnt/store/melpa/working/fillcode/
-Checking out 4d206982b6aaa493d709c84aea206cabb8b4038c
-Built fillcode in 7.389s, finished at 2023-01-19T04:05:29+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 28K Jan 19 04:05 packages/fillcode-20200524.2226.el
-4.0K -rw-r--r-- 1 root root 334 Jan 19 04:05 packages/fillcode-20200524.2226.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/snarfed/fillcode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

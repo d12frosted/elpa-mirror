@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/10sr/fuzzy-finder-el.git
 
 Updating /mnt/store/melpa/working/fuzzy-finder/
-Checking out 915a281fc8e50df84dcc205f9357e8314d60fa54
-Built fuzzy-finder in 5.008s, finished at 2023-01-19T00:28:19+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jan 19 00:28 packages/fuzzy-finder-20210906.217.el
-4.0K -rw-r--r-- 1 root root 354 Jan 19 00:28 packages/fuzzy-finder-20210906.217.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/10sr/fuzzy-finder-el.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

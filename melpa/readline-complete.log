@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/monsanto/readline-complete.el.git
 
 Updating /mnt/store/melpa/working/readline-complete/
-Checking out 30c020c37b2741160cc37e656e13c85d826a0ebf
-Built readline-complete in 3.723s, finished at 2023-01-19T08:29:35+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jan 19 08:29 packages/readline-complete-20150708.1437.el
-4.0K -rw-r--r-- 1 root root 295 Jan 19 08:29 packages/readline-complete-20150708.1437.entry
+
+Command '' exited with non-zero exit-code: 128
+
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128

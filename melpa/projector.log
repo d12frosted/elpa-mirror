@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/waymondo/projector.el.git
 
 Updating /mnt/store/melpa/working/projector/
-Checking out 1d0f2d307591ea50888d31dcae7e463e2ada1316
-Built projector in 4.172s, finished at 2023-01-19T08:26:58+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jan 19 08:26 packages/projector-20211112.1514.el
-4.0K -rw-r--r-- 1 root root 427 Jan 19 08:26 packages/projector-20211112.1514.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/waymondo/projector.el.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

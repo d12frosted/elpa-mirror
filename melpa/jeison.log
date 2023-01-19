@@ -3,8 +3,12 @@ Fetcher: github
 Source:  https://github.com/SavchenkoValeriy/jeison.git
 
 Updating /mnt/store/melpa/working/jeison/
-Checking out 775b45657728c91f24f7508dfbc4d81a92b8e053
-Built jeison in 4.017s, finished at 2023-01-19T11:48:03+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 17K Jan 19 11:48 packages/jeison-20190721.1651.el
-4.0K -rw-r--r-- 1 root root 283 Jan 19 11:48 packages/jeison-20190721.1651.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

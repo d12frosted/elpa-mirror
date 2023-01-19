@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/philiparvidsson/GitHub-Modern-Theme-for-Emacs.git
 
 Updating /mnt/store/melpa/working/github-modern-theme/
-Checking out a7e7b8e5e9c122138e79e837caf9b7299e748d44
-Built github-modern-theme in 3.606s, finished at 2023-01-19T00:29:42+0000
- ✓ Success:
- 76K -rw-r--r-- 1 root root 75K Jan 19 00:29 packages/github-modern-theme-20171109.1251.el
-4.0K -rw-r--r-- 1 root root 395 Jan 19 00:29 packages/github-modern-theme-20171109.1251.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/philiparvidsson/GitHub-Modern-Theme-for-Emacs.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

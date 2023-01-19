@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/fgeller/highlight-thing.el.git
 
 Updating /mnt/store/melpa/working/highlight-thing/
-Checking out b9bb6e49fc20d2e1f688c2645f6f6653208145de
-Built highlight-thing in 4.039s, finished at 2023-01-19T00:36:07+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jan 19 00:36 packages/highlight-thing-20221126.2305.el
-4.0K -rw-r--r-- 1 root root 408 Jan 19 00:36 packages/highlight-thing-20221126.2305.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/fgeller/highlight-thing.el.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

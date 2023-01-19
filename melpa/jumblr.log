@@ -3,22 +3,10 @@ Fetcher: github
 Source:  https://github.com/mkmcc/jumblr.git
 
 Updating /mnt/store/melpa/working/jumblr/
-Checking out 34533dfb9db8538c005f4eaffafeff7ed193729f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/jumblr/
-  to /tmp/jumblrd5jVzd/jumblr-20170727.2043
-    jumblr.el -> jumblr.el
-    dict => dict
-Created jumblr-20170727.2043.tar containing:
-  jumblr-20170727.2043/
-  jumblr-20170727.2043/dict/
-  jumblr-20170727.2043/dict/easy.txt
-  jumblr-20170727.2043/dict/expert.txt
-  jumblr-20170727.2043/dict/hard.txt
-  jumblr-20170727.2043/dict/medium.txt
-  jumblr-20170727.2043/jumblr-pkg.el
-  jumblr-20170727.2043/jumblr.el
-Built jumblr in 3.689s, finished at 2023-01-19T11:48:57+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  256 Jan 19 11:48 packages/jumblr-20170727.2043.entry
-1.7M -rw-r--r-- 1 root root 1.7M Jan 19 11:48 packages/jumblr-20170727.2043.tar
+
+Command '' exited with non-zero exit-code: 128
+
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128

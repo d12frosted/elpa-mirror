@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/emacs-php/robots-txt-mode.git
 
 Updating /mnt/store/melpa/working/robots-txt-mode/
-Checking out 8bf67285a25a6756607354d184e36583f2847e7d
-Built robots-txt-mode in 4.490s, finished at 2023-01-19T08:31:11+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.7K Jan 19 08:31 packages/robots-txt-mode-20190812.1858.el
-4.0K -rw-r--r-- 1 root root  365 Jan 19 08:31 packages/robots-txt-mode-20190812.1858.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/emacs-php/robots-txt-mode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

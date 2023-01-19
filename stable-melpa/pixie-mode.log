@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/johnwalker/pixie-mode.git
 
 Updating /mnt/store/melpa/working/pixie-mode/
-Checking out a40c2632cfbe948852a5cdcfd44e6a65db11834d
-Built pixie-mode in 9.027s, finished at 2023-01-19T01:01:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Jan 19 01:01 packages/pixie-mode-20180626.541.el
-4.0K -rw-r--r-- 1 root root  413 Jan 19 01:01 packages/pixie-mode-20180626.541.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/johnwalker/pixie-mode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

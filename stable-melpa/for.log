@@ -1,0 +1,28 @@
+Package: for
+Fetcher: github
+Source:  https://github.com/usaoc/elisp-for.git
+
+Updating /mnt/store/melpa/working/for/
+Checking out 3556d3693288a552a0962ee01ad7ec71caeb0dc8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/for/
+  to /tmp/for6Vq69j/for-20221218.1023
+    for-helper.el -> for-helper.el
+    for-iteration.el -> for-iteration.el
+    for-sequence.el -> for-sequence.el
+    for.el -> for.el
+    for.texi -> for.texi
+Generating /tmp/for6Vq69j/for-20221218.1023/for.info
+Created for-20221218.1023.tar containing:
+  for-20221218.1023/
+  for-20221218.1023/dir
+  for-20221218.1023/for-helper.el
+  for-20221218.1023/for-iteration.el
+  for-20221218.1023/for-pkg.el
+  for-20221218.1023/for-sequence.el
+  for-20221218.1023/for.el
+  for-20221218.1023/for.info
+Built for in 13.366s, finished at 2023-01-19T15:23:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  366 Jan 19 15:23 packages/for-20221218.1023.entry
+140K -rw-r--r-- 1 root root 140K Jan 19 15:23 packages/for-20221218.1023.tar

@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/mola-T/signal.git
 
 Updating /mnt/store/melpa/working/signal/
-Checking out aa58327e2297df921d72a0370468b48663efd438
-Built signal in 3.478s, finished at 2023-01-19T08:33:54+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jan 19 08:33 packages/signal-20160816.1438.el
-4.0K -rw-r--r-- 1 root root  356 Jan 19 08:33 packages/signal-20160816.1438.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/mola-T/signal.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

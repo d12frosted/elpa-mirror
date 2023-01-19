@@ -3,8 +3,12 @@ Fetcher: github
 Source:  https://github.com/lepisma/org-books.git
 
 Updating /mnt/store/melpa/working/org-books/
-Checking out 9f4ec4a981bfc5eebff993c3ad49a4bed26aebd1
-Built org-books in 5.392s, finished at 2023-01-19T00:55:03+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jan 19 00:55 packages/org-books-20210408.1913.el
-4.0K -rw-r--r-- 1 root root 565 Jan 19 00:55 packages/org-books-20210408.1913.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

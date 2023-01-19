@@ -3,20 +3,11 @@ Fetcher: github
 Source:  https://github.com/purplg/hass.git
 
 Updating /mnt/store/melpa/working/hass/
-Checking out 033d11b07e0f8bb68b348a12d5ae13fabea56c73
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hass/
-  to /tmp/hassPOiLYO/hass-20230116.2220
-    hass-dash.el -> hass-dash.el
-    hass-websocket.el -> hass-websocket.el
-    hass.el -> hass.el
-Created hass-20230116.2220.tar containing:
-  hass-20230116.2220/
-  hass-20230116.2220/hass-dash.el
-  hass-20230116.2220/hass-pkg.el
-  hass-20230116.2220/hass-websocket.el
-  hass-20230116.2220/hass.el
-Built hass in 4.002s, finished at 2023-01-19T00:32:46+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 310 Jan 19 00:32 packages/hass-20230116.2220.entry
- 52K -rw-r--r-- 1 root root 50K Jan 19 00:32 packages/hass-20230116.2220.tar
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/purplg/hass.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

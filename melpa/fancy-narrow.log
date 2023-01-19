@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/Malabarba/fancy-narrow.git
 
 Updating /mnt/store/melpa/working/fancy-narrow/
-Checking out 9f4a587f6a5a387271fb665e13f59d41fd42504c
-Built fancy-narrow in 4.732s, finished at 2023-01-19T11:30:08+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Jan 19 11:30 packages/fancy-narrow-20171031.16.el
-4.0K -rw-r--r-- 1 root root 387 Jan 19 11:30 packages/fancy-narrow-20171031.16.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/Malabarba/fancy-narrow.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

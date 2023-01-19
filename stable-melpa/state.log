@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/thisirs/state.git
 
 Updating /mnt/store/melpa/working/state/
-Checking out 8cd9210f17c1b134274a7352b996839aed9a7d8c
-Built state in 5.311s, finished at 2023-01-19T01:14:01+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Jan 19 01:14 packages/state-20200727.1227.el
-4.0K -rw-r--r-- 1 root root 375 Jan 19 01:14 packages/state-20200727.1227.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/thisirs/state.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

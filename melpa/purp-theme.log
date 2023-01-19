@@ -3,24 +3,13 @@ Fetcher: github
 Source:  https://github.com/gnuvince/purp.git
 
 Updating /mnt/store/melpa/working/purp-theme/
-Checking out 8d3510e1ed995b8323cd5205626ddde6386a76ca
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/purp-theme/
-  to /tmp/purp-themeU4MlJd/purp-theme-20210912.1940
-    blurb-theme.el -> blurb-theme.el
-    ega-theme.el -> ega-theme.el
-    purp-common.el -> purp-common.el
-    purp-light-theme.el -> purp-light-theme.el
-    purp-theme.el -> purp-theme.el
-Created purp-theme-20210912.1940.tar containing:
-  purp-theme-20210912.1940/
-  purp-theme-20210912.1940/blurb-theme.el
-  purp-theme-20210912.1940/ega-theme.el
-  purp-theme-20210912.1940/purp-common.el
-  purp-theme-20210912.1940/purp-light-theme.el
-  purp-theme-20210912.1940/purp-theme-pkg.el
-  purp-theme-20210912.1940/purp-theme.el
-Built purp-theme in 4.201s, finished at 2023-01-19T08:27:33+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 353 Jan 19 08:27 packages/purp-theme-20210912.1940.entry
- 32K -rw-r--r-- 1 root root 30K Jan 19 08:27 packages/purp-theme-20210912.1940.tar
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/gnuvince/purp.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

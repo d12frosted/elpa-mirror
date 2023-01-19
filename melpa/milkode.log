@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/ongaeshi/emacs-milkode.git
 
 Updating /mnt/store/melpa/working/milkode/
-Checking out ba97e2aeefa1d9d0b3835bf08edd0de248b0c513
-Built milkode in 4.144s, finished at 2023-01-19T11:55:48+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jan 19 11:55 packages/milkode-20140927.529.el
-4.0K -rw-r--r-- 1 root root  277 Jan 19 11:55 packages/milkode-20140927.529.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/ongaeshi/emacs-milkode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

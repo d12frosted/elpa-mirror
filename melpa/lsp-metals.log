@@ -3,46 +3,13 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-metals.git
 
 Updating /mnt/store/melpa/working/lsp-metals/
-Checking out 9a5c8b0e636e6796e5ce8ccea040a583856fb1f5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lsp-metals/
-  to /tmp/lsp-metalsYcSl3M/lsp-metals-20221102.1628
-    lsp-metals-protocol.el -> lsp-metals-protocol.el
-    lsp-metals-treeview.el -> lsp-metals-treeview.el
-    lsp-metals.el -> lsp-metals.el
-    icons => icons
-Created lsp-metals-20221102.1628.tar containing:
-  lsp-metals-20221102.1628/
-  lsp-metals-20221102.1628/icons/
-  lsp-metals-20221102.1628/icons/book-dark.png
-  lsp-metals-20221102.1628/icons/book-light.png
-  lsp-metals-20221102.1628/icons/bug-dark.png
-  lsp-metals-20221102.1628/icons/bug-light.png
-  lsp-metals-20221102.1628/icons/class.png
-  lsp-metals-20221102.1628/icons/discord-dark.png
-  lsp-metals-20221102.1628/icons/discord-light.png
-  lsp-metals-20221102.1628/icons/enum.png
-  lsp-metals-20221102.1628/icons/field.png
-  lsp-metals-20221102.1628/icons/github-dark.png
-  lsp-metals-20221102.1628/icons/github-light.png
-  lsp-metals-20221102.1628/icons/gitter-dark.png
-  lsp-metals-20221102.1628/icons/gitter-light.png
-  lsp-metals-20221102.1628/icons/interface.png
-  lsp-metals-20221102.1628/icons/issue-opened-dark.png
-  lsp-metals-20221102.1628/icons/issue-opened-light.png
-  lsp-metals-20221102.1628/icons/logo.png
-  lsp-metals-20221102.1628/icons/method.png
-  lsp-metals-20221102.1628/icons/object.png
-  lsp-metals-20221102.1628/icons/trait.png
-  lsp-metals-20221102.1628/icons/twitter-dark.png
-  lsp-metals-20221102.1628/icons/twitter-light.png
-  lsp-metals-20221102.1628/icons/val.png
-  lsp-metals-20221102.1628/icons/var.png
-  lsp-metals-20221102.1628/lsp-metals-pkg.el
-  lsp-metals-20221102.1628/lsp-metals-protocol.el
-  lsp-metals-20221102.1628/lsp-metals-treeview.el
-  lsp-metals-20221102.1628/lsp-metals.el
-Built lsp-metals in 4.301s, finished at 2023-01-19T11:53:18+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  701 Jan 19 11:53 packages/lsp-metals-20221102.1628.entry
-120K -rw-r--r-- 1 root root 120K Jan 19 11:53 packages/lsp-metals-20221102.1628.tar
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/emacs-lsp/lsp-metals.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

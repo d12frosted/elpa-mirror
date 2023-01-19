@@ -3,8 +3,12 @@ Fetcher: github
 Source:  https://github.com/rymndhng/jest-test-mode.git
 
 Updating /mnt/store/melpa/working/jest-test-mode/
-Checking out 3126c5c5c5632da639ea34867a7342d4410d78aa
-Built jest-test-mode in 4.383s, finished at 2023-01-19T00:40:44+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.7K Jan 19 00:40 packages/jest-test-mode-20220722.1947.el
-4.0K -rw-r--r-- 1 root root  363 Jan 19 00:40 packages/jest-test-mode-20220722.1947.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

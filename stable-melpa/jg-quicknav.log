@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/jeffgran/jg-quicknav.git
 
 Updating /mnt/store/melpa/working/jg-quicknav/
-Checking out c8d53e774d63e68a944092c08a026b57da741038
-Built jg-quicknav in 4.081s, finished at 2023-01-19T00:40:46+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 27K Jan 19 00:40 packages/jg-quicknav-20170809.130.el
-4.0K -rw-r--r-- 1 root root 421 Jan 19 00:40 packages/jg-quicknav-20170809.130.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/jeffgran/jg-quicknav.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

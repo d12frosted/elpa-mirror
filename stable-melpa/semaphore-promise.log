@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/webnf/semaphore.el.git
 
 Updating /mnt/store/melpa/working/semaphore-promise/
-Checking out 9cdfef91cc0293371af549ad41027aa5b73f30a4
-Built semaphore-promise in 3.754s, finished at 2023-01-19T01:09:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Jan 19 01:09 packages/semaphore-promise-20190607.2115.el
-4.0K -rw-r--r-- 1 root root  477 Jan 19 01:09 packages/semaphore-promise-20190607.2115.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/webnf/semaphore.el.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

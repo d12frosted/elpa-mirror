@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/damon-kwok/modern-sh.git
 
 Updating /mnt/store/melpa/working/modern-sh/
-Checking out 8ebebe77304aa8170f7af809e7564c79d3bd45da
-Built modern-sh in 7.474s, finished at 2023-01-19T00:49:32+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Jan 19 00:49 packages/modern-sh-20211101.1001.el
-4.0K -rw-r--r-- 1 root root 344 Jan 19 00:49 packages/modern-sh-20211101.1001.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/damon-kwok/modern-sh.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

@@ -1,4 +1,4 @@
-- Use both the seletor and the shortcut key to switch themes/font.
+- Use both the selector and the shortcut key to switch themes/font.
 - Load previous theme/font/font-size after restarting the Emacs.
 - Each theme can be configured individually.
 - Download unused themes automatically with package.el.

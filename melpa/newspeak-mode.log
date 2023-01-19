@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/danielsz/newspeak-mode.git
 
 Updating /mnt/store/melpa/working/newspeak-mode/
-Checking out f76aee3a1f7ff032ed9ef2d3a092f84c8c985e19
-Built newspeak-mode in 5.814s, finished at 2023-01-19T11:59:08+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jan 19 11:59 packages/newspeak-mode-20211011.1425.el
-4.0K -rw-r--r-- 1 root root 351 Jan 19 11:59 packages/newspeak-mode-20211011.1425.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/danielsz/newspeak-mode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

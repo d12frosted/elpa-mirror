@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/galdor/rfc-mode.git
 
 Updating /mnt/store/melpa/working/rfc-mode/
-Checking out 53ec006aa6aa4fae9c6c64004692aa3d01b38275
-Built rfc-mode in 5.397s, finished at 2023-01-19T01:07:31+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 20K Jan 19 01:07 packages/rfc-mode-20221123.1643.el
-4.0K -rw-r--r-- 1 root root 345 Jan 19 01:07 packages/rfc-mode-20221123.1643.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/galdor/rfc-mode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

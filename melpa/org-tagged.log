@@ -3,8 +3,12 @@ Fetcher: github
 Source:  https://github.com/gizmomogwai/org-tagged.git
 
 Updating /mnt/store/melpa/working/org-tagged/
-Checking out 4b0174473772fca976426e982bb3f4a3037c1e37
-Built org-tagged in 4.573s, finished at 2023-01-19T12:05:01+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.5K Jan 19 12:05 packages/org-tagged-20220926.2048.el
-4.0K -rw-r--r-- 1 root root  541 Jan 19 12:05 packages/org-tagged-20220926.2048.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

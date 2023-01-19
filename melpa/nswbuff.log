@@ -3,8 +3,12 @@ Fetcher: github
 Source:  https://github.com/joostkremers/nswbuff.git
 
 Updating /mnt/store/melpa/working/nswbuff/
-Checking out 7633674c89e3dbfc0c07cd7fd8b1d206ed4859d3
-Built nswbuff in 4.610s, finished at 2023-01-19T11:59:58+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 32K Jan 19 11:59 packages/nswbuff-20220426.2050.el
-4.0K -rw-r--r-- 1 root root 483 Jan 19 11:59 packages/nswbuff-20220426.2050.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

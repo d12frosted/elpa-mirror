@@ -3,8 +3,12 @@ Fetcher: github
 Source:  https://github.com/hlissner/emacs-solaire-mode.git
 
 Updating /mnt/store/melpa/working/solaire-mode/
-Checking out 8af65fbdc50b25ed3214da949b8a484527c7cc14
-Built solaire-mode in 4.111s, finished at 2023-01-19T01:12:41+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 21K Jan 19 01:12 packages/solaire-mode-20211213.102.el
-4.0K -rw-r--r-- 1 root root 443 Jan 19 01:12 packages/solaire-mode-20211213.102.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

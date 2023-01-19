@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/lurdan/ob-typescript.git
 
 Updating /mnt/store/melpa/working/ob-typescript/
-Checking out 85cef0317d70b6b5f170b0fd30605850172f61b0
-Built ob-typescript in 4.135s, finished at 2023-01-19T00:53:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.7K Jan 19 00:53 packages/ob-typescript-20190910.946.el
-4.0K -rw-r--r-- 1 root root  403 Jan 19 00:53 packages/ob-typescript-20190910.946.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/lurdan/ob-typescript.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,8 +3,12 @@ Fetcher: github
 Source:  https://github.com/anticomputer/ovpn-mode.git
 
 Updating /mnt/store/melpa/working/ovpn-mode/
-Checking out 4492098c771d094dd0661a5bc6906f65fb530825
-Built ovpn-mode in 3.449s, finished at 2023-01-19T12:06:05+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 48K Jan 19 12:06 packages/ovpn-mode-20210403.440.el
-4.0K -rw-r--r-- 1 root root 395 Jan 19 12:06 packages/ovpn-mode-20210403.440.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
