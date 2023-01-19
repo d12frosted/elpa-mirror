@@ -3,12 +3,8 @@ Fetcher: github
 Source:  https://github.com/dunmaksim/emacs-russian-techwriter-input-method.git
 
 Updating /mnt/store/melpa/working/russian-techwriter/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 1d86134d04ecf2305969c7546ead7ad425cd7243
+Built russian-techwriter in 4.971s, finished at 2023-01-19T19:56:30+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jan 19 19:56 packages/russian-techwriter-20221229.822.el
+4.0K -rw-r--r-- 1 root root  442 Jan 19 19:56 packages/russian-techwriter-20221229.822.entry

@@ -3,19 +3,11 @@ Fetcher: github
 Source:  https://github.com/joostkremers/writeroom-mode.git
 
 Updating /mnt/store/melpa/working/writeroom-mode/
-Checking out a736205c194d7525feb1e1f10f4186c7b2b62bef
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/writeroom-mode/
-  to /tmp/writeroom-modeMwR7Oq/writeroom-mode-20220426.2046
-    writeroom-mode.el -> writeroom-mode.el
-    writeroom-mode.info -> writeroom-mode.info
-Created writeroom-mode-20220426.2046.tar containing:
-  writeroom-mode-20220426.2046/
-  writeroom-mode-20220426.2046/dir
-  writeroom-mode-20220426.2046/writeroom-mode-pkg.el
-  writeroom-mode-20220426.2046/writeroom-mode.el
-  writeroom-mode-20220426.2046/writeroom-mode.info
-Built writeroom-mode in 4.483s, finished at 2023-01-19T12:31:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 424 Jan 19 12:31 packages/writeroom-mode-20220426.2046.entry
- 60K -rw-r--r-- 1 root root 60K Jan 19 12:31 packages/writeroom-mode-20220426.2046.tar
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/joostkremers/writeroom-mode.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/redguardtoo/gmail2bbdb.git
 
 Updating /mnt/store/melpa/working/gmail2bbdb/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out a84fa385cfaec7fc5f1518c368e52722da139f99
+Built gmail2bbdb in 4.313s, finished at 2023-01-19T19:16:04+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Jan 19 19:16 packages/gmail2bbdb-20170423.1144.el
+4.0K -rw-r--r-- 1 root root  404 Jan 19 19:16 packages/gmail2bbdb-20170423.1144.entry

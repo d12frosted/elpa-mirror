@@ -1,15 +1,15 @@
 (ouroboros .
-	   [(20221210 1155)
+	   [(20221229 1731)
 	    ((emacs
 	      (27 1))
 	     (dash
 	      (2 19 0))
 	     (cbor
-	      (0 2 2))
+	      (0 2 3))
 	     (bech32
 	      (0 2 1)))
 	    "Ouroboros network mini-protocol" single
-	    ((:commit . "587d6d740d15b5721d5a24b40e8bd3382f97a548")
+	    ((:commit . "fb7d4deee41816bf6d79004b2301a1275fa87402")
 	     (:authors
 	      ("Oscar Najera <https://oscarnajera.com>"))
 	     (:maintainer "Oscar Najera" . "hi@oscarnajera.com")

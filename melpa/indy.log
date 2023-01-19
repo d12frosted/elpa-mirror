@@ -3,13 +3,8 @@ Fetcher: github
 Source:  https://github.com/kwrooijen/indy.git
 
 Updating /mnt/store/melpa/working/indy/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/kwrooijen/indy.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out abc5bee424780ad2de5520f8fefbf8e120c0d9ed
+Built indy in 4.107s, finished at 2023-01-19T19:25:20+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Jan 19 19:25 packages/indy-20190807.625.el
+4.0K -rw-r--r-- 1 root root  378 Jan 19 19:25 packages/indy-20190807.625.entry

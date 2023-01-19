@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/jbr/sibilant-mode.git
 
 Updating /mnt/store/melpa/working/sibilant-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out 5baf8c3e80ee0736c7298a2a17fb615ba5ac0d2d
+Built sibilant-mode in 4.040s, finished at 2023-01-19T19:58:35+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jan 19 19:58 packages/sibilant-mode-20151119.2145.el
+4.0K -rw-r--r-- 1 root root  329 Jan 19 19:58 packages/sibilant-mode-20151119.2145.entry

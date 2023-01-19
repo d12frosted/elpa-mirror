@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/conao3/leaf-defaults.el.git
 
 Updating /mnt/store/melpa/working/leaf-defaults/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out 96ce39d4f16736f1e654e24eac16a2603976c724
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leaf-defaults/
+  to /tmp/leaf-defaultsjyGTQj/leaf-defaults-20210301.118
+    leaf-defaults-recipe.el -> leaf-defaults-recipe.el
+    leaf-defaults.el -> leaf-defaults.el
+Created leaf-defaults-20210301.118.tar containing:
+  leaf-defaults-20210301.118/
+  leaf-defaults-20210301.118/leaf-defaults-pkg.el
+  leaf-defaults-20210301.118/leaf-defaults-recipe.el
+  leaf-defaults-20210301.118/leaf-defaults.el
+Built leaf-defaults in 3.936s, finished at 2023-01-19T19:30:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 415 Jan 19 19:30 packages/leaf-defaults-20210301.118.entry
+ 20K -rw-r--r-- 1 root root 20K Jan 19 19:30 packages/leaf-defaults-20210301.118.tar

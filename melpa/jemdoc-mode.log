@@ -3,12 +3,8 @@ Fetcher: github
 Source:  https://github.com/drdv/jemdoc-mode.git
 
 Updating /mnt/store/melpa/working/jemdoc-mode/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 529b4d4681e1198b9892f340fdd6c3f1592a047a
+Built jemdoc-mode in 4.791s, finished at 2023-01-19T19:27:21+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 33K Jan 19 19:27 packages/jemdoc-mode-20170704.2027.el
+4.0K -rw-r--r-- 1 root root 416 Jan 19 19:27 packages/jemdoc-mode-20170704.2027.entry

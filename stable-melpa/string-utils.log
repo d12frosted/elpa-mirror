@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/rolandwalker/string-utils.git
 
 Updating /mnt/store/melpa/working/string-utils/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out 8b56e1f79d2de46d1e9b5e24d889e9f4c3cc85d4
+Built string-utils in 4.482s, finished at 2023-01-19T20:02:45+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 41K Jan 19 20:02 packages/string-utils-20140508.2041.el
+4.0K -rw-r--r-- 1 root root 380 Jan 19 20:02 packages/string-utils-20140508.2041.entry

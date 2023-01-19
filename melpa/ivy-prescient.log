@@ -3,12 +3,8 @@ Fetcher: github
 Source:  https://github.com/radian-software/prescient.el.git
 
 Updating /mnt/store/melpa/working/ivy-prescient/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 72b023f5fc1ae2bbf2f51f1786cc012d40671bf4
+Built ivy-prescient in 4.961s, finished at 2023-01-19T19:26:44+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jan 19 19:26 packages/ivy-prescient-20221216.112.el
+4.0K -rw-r--r-- 1 root root 420 Jan 19 19:26 packages/ivy-prescient-20221216.112.entry

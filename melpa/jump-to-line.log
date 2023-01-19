@@ -3,12 +3,8 @@ Fetcher: github
 Source:  https://github.com/ongaeshi/jump-to-line.git
 
 Updating /mnt/store/melpa/working/jump-to-line/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 01ef8c3529d85e6c59cc20840acbc4a8e8325bc8
+Built jump-to-line in 3.856s, finished at 2023-01-19T19:28:16+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Jan 19 19:28 packages/jump-to-line-20130122.1653.el
+4.0K -rw-r--r-- 1 root root  288 Jan 19 19:28 packages/jump-to-line-20130122.1653.entry

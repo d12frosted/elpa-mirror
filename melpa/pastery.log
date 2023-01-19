@@ -3,12 +3,24 @@ Fetcher: github
 Source:  https://github.com/diasbruno/pastery.el.git
 
 Updating /mnt/store/melpa/working/pastery/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 4493be98b743b4d062cb4e00760125e394a55022
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pastery/
+  to /tmp/pastery9PJueD/pastery-20171114.349
+    pastery-buffer.el -> pastery-buffer.el
+    pastery-data.el -> pastery-data.el
+    pastery-list-mode.el -> pastery-list-mode.el
+    pastery-net.el -> pastery-net.el
+    pastery.el -> pastery.el
+Created pastery-20171114.349.tar containing:
+  pastery-20171114.349/
+  pastery-20171114.349/pastery-buffer.el
+  pastery-20171114.349/pastery-data.el
+  pastery-20171114.349/pastery-list-mode.el
+  pastery-20171114.349/pastery-net.el
+  pastery-20171114.349/pastery-pkg.el
+  pastery-20171114.349/pastery.el
+Built pastery in 4.271s, finished at 2023-01-19T19:47:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 382 Jan 19 19:47 packages/pastery-20171114.349.entry
+ 20K -rw-r--r-- 1 root root 20K Jan 19 19:47 packages/pastery-20171114.349.tar

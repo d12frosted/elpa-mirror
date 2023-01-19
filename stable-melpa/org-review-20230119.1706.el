@@ -4,8 +4,8 @@
 ;;
 ;; Author: Alan Schmitt <alan.schmitt@polytechnique.org>
 ;; URL: https://github.com/brabalan/org-review
-;; Package-Version: 20220411.1205
-;; Package-Commit: 466f7d8f183f226f1e665cf806cb094471903d9c
+;; Package-Version: 20230119.1706
+;; Package-Commit: 77211e40db8a9558b866f5660c7127922b459e6c
 ;; Version: 0.3
 ;; Keywords: org review
 
@@ -196,9 +196,10 @@ specified by FMT."
    propname
    (cond
     ((eq fmt 'inactive)
-     (concat "[" (substring date 1 -1) "]"))
-    ((eq fmt 'active) date)
-    (t (substring date 1 -1)))))
+     (concat "[" date "]"))
+    ((eq fmt 'active)
+     (concat "<" date ">"))
+    (t date))))
 
 ;;;###autoload
 (defun org-review-insert-last-review (&optional prompt)

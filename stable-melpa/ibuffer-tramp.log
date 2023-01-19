@@ -3,13 +3,8 @@ Fetcher: github
 Source:  https://github.com/svend/ibuffer-tramp.git
 
 Updating /mnt/store/melpa/working/ibuffer-tramp/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/svend/ibuffer-tramp.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out bcad0bda3a67f55d1be936bf8fa9ef735fe1e3f3
+Built ibuffer-tramp in 5.114s, finished at 2023-01-19T19:24:13+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.4K Jan 19 19:24 packages/ibuffer-tramp-20180127.2122.el
+4.0K -rw-r--r-- 1 root root  353 Jan 19 19:24 packages/ibuffer-tramp-20180127.2122.entry

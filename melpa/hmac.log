@@ -3,13 +3,8 @@ Fetcher: github
 Source:  https://github.com/grimnebulin/emacs-hmac.git
 
 Updating /mnt/store/melpa/working/hmac/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/grimnebulin/emacs-hmac.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out f2b99a9a10becfff207cf9418c6dce78364b1a4b
+Built hmac in 5.741s, finished at 2023-01-19T19:22:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jan 19 19:22 packages/hmac-20201004.1819.el
+4.0K -rw-r--r-- 1 root root  291 Jan 19 19:22 packages/hmac-20201004.1819.entry

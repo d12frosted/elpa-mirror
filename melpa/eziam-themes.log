@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/thblt/eziam-theme-emacs.git
 
 Updating /mnt/store/melpa/working/eziam-themes/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out 7fba717293072d0afdbd1c45351ddf47b26b3064
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eziam-themes/
+  to /tmp/eziam-themesG1e7fV/eziam-themes-20221121.1609
+    eziam-dark-theme.el -> eziam-dark-theme.el
+    eziam-dusk-theme.el -> eziam-dusk-theme.el
+    eziam-light-theme.el -> eziam-light-theme.el
+    eziam-themes-pkg.el -> eziam-themes-pkg.el
+    eziam-themes.el -> eziam-themes.el
+Created eziam-themes-20221121.1609.tar containing:
+  eziam-themes-20221121.1609/
+  eziam-themes-20221121.1609/eziam-dark-theme.el
+  eziam-themes-20221121.1609/eziam-dusk-theme.el
+  eziam-themes-20221121.1609/eziam-light-theme.el
+  eziam-themes-20221121.1609/eziam-themes-pkg.el
+  eziam-themes-20221121.1609/eziam-themes.el
+Built eziam-themes in 4.037s, finished at 2023-01-19T19:08:33+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  353 Jan 19 19:08 packages/eziam-themes-20221121.1609.entry
+112K -rw-r--r-- 1 root root 110K Jan 19 19:08 packages/eziam-themes-20221121.1609.tar

@@ -5,10 +5,10 @@
 ;; Author: Oscar Najera <https://oscarnajera.com>
 ;; Maintainer: Oscar Najera <hi@oscarnajera.com>
 ;; Version: 0.1.0
-;; Package-Version: 20221210.1155
-;; Package-Commit: 587d6d740d15b5721d5a24b40e8bd3382f97a548
+;; Package-Version: 20221229.1731
+;; Package-Commit: fb7d4deee41816bf6d79004b2301a1275fa87402
 ;; Homepage: https://github.com/Titan-C/cardano.el
-;; Package-Requires: ((emacs "27.1") (dash "2.19.0") (cbor "0.2.2") (bech32 "0.2.1"))
+;; Package-Requires: ((emacs "27.1") (dash "2.19.0") (cbor "0.2.3") (bech32 "0.2.1"))
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
@@ -368,13 +368,6 @@ Specify the NETWORK-MAGIC."
     (pp obj (current-buffer))
     (emacs-lisp-mode)
     (display-buffer (current-buffer))))
-
-(ert-deftest ouroboros-hand-shake ()
-  (let* ((con (ouroboros-connect "/tmp/listen.ouroboros" 1097911063)))
-    (ouroboros-local con 'acquire 'tip)
-    (ouroboros-local con 'query [0 [2 [1]]]) ;; Era
-    (ouroboros-local con 'release)
-    (ouroboros-local con 'done)))
 
 (provide 'ouroboros)
 ;;; ouroboros.el ends here

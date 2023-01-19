@@ -3,12 +3,8 @@ Fetcher: github
 Source:  https://github.com/Fuco1/letcheck.git
 
 Updating /mnt/store/melpa/working/letcheck/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out edf188ca2f85349e971b83f164c6484264e79426
+Built letcheck in 4.133s, finished at 2023-01-19T19:30:55+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jan 19 19:30 packages/letcheck-20160202.1948.el
+4.0K -rw-r--r-- 1 root root  365 Jan 19 19:30 packages/letcheck-20160202.1948.entry

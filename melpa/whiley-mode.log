@@ -3,8 +3,13 @@ Fetcher: github
 Source:  https://github.com/Whiley/WhileyEmacsMode.git
 
 Updating /mnt/store/melpa/working/whiley-mode/
-Checking out e7cc4759d46be589d421a2235af6771bcde9ae33
-Built whiley-mode in 5.039s, finished at 2023-01-19T12:30:20+0000
- ✓ Success:
-4.0K -rwxr-xr-x 1 root root 3.3K Jan 19 12:30 packages/whiley-mode-20220501.2219.el
-4.0K -rw-r--r-- 1 root root  404 Jan 19 12:30 packages/whiley-mode-20220501.2219.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/Whiley/WhileyEmacsMode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/superbobry/io-mode.git
 
 Updating /mnt/store/melpa/working/io-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out fd65ae769093defcf554d6d637eba6e6dfc29f56
+Built io-mode in 4.276s, finished at 2023-01-19T19:25:58+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jan 19 19:25 packages/io-mode-20161004.756.el
+4.0K -rw-r--r-- 1 root root 363 Jan 19 19:25 packages/io-mode-20161004.756.entry

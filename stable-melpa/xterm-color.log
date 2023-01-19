@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/atomontage/xterm-color.git
 
 Updating /mnt/store/melpa/working/xterm-color/
-Checking out b9b1f84fb10fff5261702e38bf15b3ae75a4b6bb
-Built xterm-color in 4.112s, finished at 2023-01-19T12:31:44+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 38K Jan 19 12:31 packages/xterm-color-20200605.2017.el
-4.0K -rw-r--r-- 1 root root 378 Jan 19 12:31 packages/xterm-color-20200605.2017.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/atomontage/xterm-color.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

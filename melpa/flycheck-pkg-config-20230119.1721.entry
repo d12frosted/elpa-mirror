@@ -1,5 +1,5 @@
 (flycheck-pkg-config .
-		     [(20200409 501)
+		     [(20230119 1721)
 		      ((dash
 			(2 8 0))
 		       (s
@@ -7,7 +7,7 @@
 		       (flycheck
 			(29)))
 		      "configure flycheck using pkg-config" single
-		      ((:commit . "b76b24ea1f4800f5fb96ce9c6c4788e0e63133d3")
+		      ((:commit . "c4e4028f6621187365b7362566ac2786206765a1")
 		       (:authors
 			("Wilfred Hughes" . "me@wilfred.me.uk"))
 		       (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk")

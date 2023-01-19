@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; Keywords: flycheck
-;; Package-Version: 20200409.501
-;; Package-Commit: b76b24ea1f4800f5fb96ce9c6c4788e0e63133d3
+;; Package-Version: 20230119.1721
+;; Package-Commit: c4e4028f6621187365b7362566ac2786206765a1
 ;; Version: 0.3
 ;; Package-Requires: ((dash "2.8.0") (s "1.9.0") (flycheck "29"))
 
@@ -37,6 +37,13 @@
 (require 'flycheck)
 
 (defvar flycheck-pkg-config--libs nil)
+
+(defcustom flycheck-pkg-config-path-vars
+  '(flycheck-clang-include-path
+    flycheck-gcc-include-path
+    flycheck-cppcheck-include-path)
+  "System include path variables to be configured."
+  :type '(repeat (symbol :tag "Include Path Variable")))
 
 (defun flycheck-pkg-config--ignore-case-less-p (s1 s2)
   (string< (downcase s1) (downcase s2)))
@@ -75,17 +82,11 @@ when checking the current buffer."
 
   (let* (;; Find the include paths, e.g. "-I/usr/lib/foo"
          (include-paths (flycheck-pkg-config--include-paths lib-name)))
-    ;; Only set in this buffer.
-    (make-local-variable 'flycheck-clang-include-path)
-    (make-local-variable 'flycheck-gcc-include-path)
-    (make-local-variable 'flycheck-cppcheck-include-path)
-    ;; Add include paths unless already present.
-    (setq flycheck-clang-include-path
-          (-union flycheck-clang-include-path include-paths))
-    (setq flycheck-gcc-include-path
-          (-union flycheck-gcc-include-path include-paths))
-    (setq flycheck-cppcheck-include-path
-          (-union flycheck-cppcheck-include-path include-paths))
+    (dolist (path-var flycheck-pkg-config-path-vars)
+      ;; Only set in this buffer.
+      (make-local-variable path-var)
+      ;; Add include paths unless already present.
+      (set path-var (-union (eval path-var) include-paths)))
     (message "Added to include paths: %s"
              (s-join " " (--map (format "\"%s\"" it) include-paths)))))
 

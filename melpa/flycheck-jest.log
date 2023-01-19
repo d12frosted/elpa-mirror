@@ -3,13 +3,8 @@ Fetcher: github
 Source:  https://github.com/jojojames/flycheck-jest.git
 
 Updating /mnt/store/melpa/working/flycheck-jest/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/jojojames/flycheck-jest.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 8181c5d2e1318c6ddcff21c6f3f6d76413545645
+Built flycheck-jest in 4.442s, finished at 2023-01-19T19:11:29+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.6K Jan 19 19:11 packages/flycheck-jest-20220530.1418.el
+4.0K -rw-r--r-- 1 root root  338 Jan 19 19:11 packages/flycheck-jest-20220530.1418.entry
