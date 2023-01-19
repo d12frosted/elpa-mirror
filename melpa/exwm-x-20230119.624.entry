@@ -1,5 +1,5 @@
 (exwm-x .
-	[(20210419 950)
+	[(20230119 624)
 	 ((cl-lib
 	   (0 5))
 	  (async
@@ -7,7 +7,7 @@
 	  (exwm
 	   (0 22)))
 	 "A derivative wm based on EXWM (emacs x window manager)" tar
-	 ((:commit . "2ab026f407b011a8e8380c889990e85e69cb3a4e")
+	 ((:commit . "1e2bbfca872ad76eaa8f1c00d17762bed256881a")
 	  (:authors
 	   ("Feng Shu" . "tumashu@163.com"))
 	  (:maintainer "Feng Shu" . "tumashu@163.com")

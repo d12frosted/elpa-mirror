@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.6
-;; Package-Version: 20230115.429
-;; Package-Commit: 44e514142800d70c303356dd8c0a04b773dee20e
+;; Package-Version: 20230119.541
+;; Package-Commit: 30def371d8282cfc60b1d90debd08f6240eba37c
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.1.1"))
 ;; Homepage: https://github.com/minad/tempel
 
@@ -702,7 +702,9 @@ If called interactively, select a template with `completing-read'."
 ;;;###autoload
 (defmacro tempel-key (key template-or-name &optional map)
   "Bind KEY to TEMPLATE-OR-NAME in MAP."
-  `(define-key ,(or map 'global-map) ,(kbd key)
+  (unless (key-valid-p key)
+    (error "Invalid key %s" key))
+  `(define-key ,(or map 'global-map) ,(key-parse key)
      ,(if (consp template-or-name)
           `(lambda ()
              (interactive)

@@ -4,8 +4,8 @@
 
 ;; Author: Ankur Dave <ankurdave@gmail.com>
 ;; Url: https://github.com/ankurdave/color-identifiers-mode
-;; Package-Version: 20230118.1527
-;; Package-Commit: 2410db5f82d91546c0c1897d39fe20ac58961cb9
+;; Package-Version: 20230119.533
+;; Package-Commit: 9273979be4e2753755187a73cb7ea745cfb061d6
 ;; Created: 24 Jan 2014
 ;; Version: 1.1
 ;; Keywords: faces, languages
@@ -208,8 +208,7 @@ For cc-mode support within color-identifiers-mode."
         (identifier-faces (color-identifiers:curr-identifier-faces)))
     ;; Entities that cc-mode highlighted as variables
     (save-excursion
-      (goto-char (point-min))
-      (let ((next-change (next-property-change (point))))
+      (let ((next-change (next-property-change (point-min))))
         (while next-change
           (goto-char next-change)
           (let ((face-at-point (get-text-property (point) 'face)))
@@ -238,6 +237,8 @@ For cc-mode support within color-identifiers-mode."
               "\\_<\\([a-zA-Z_$]\\(?:\\s_\\|\\sw\\)*\\)"
               (nil font-lock-variable-name-face))))
 
+(color-identifiers:set-declaration-scan-fn
+ 'js2-mode 'color-identifiers:cc-mode-get-declarations)
 (add-to-list
  'color-identifiers:modes-alist
  `(js2-mode . (,color-identifiers:re-not-inside-class-access
@@ -256,6 +257,8 @@ For cc-mode support within color-identifiers-mode."
                   "\\_<\\([a-zA-Z_$]\\(?:\\s_\\|\\sw\\)*\\)"
                   (nil font-lock-variable-name-face js2-function-param))))
 
+(color-identifiers:set-declaration-scan-fn
+ 'js2-jsx-mode 'color-identifiers:cc-mode-get-declarations)
 (add-to-list
  'color-identifiers:modes-alist
  `(js2-jsx-mode . (,color-identifiers:re-not-inside-class-access
@@ -345,8 +348,7 @@ arguments, loops (for .. in), or for comprehensions."
           (wrong-type-argument nil))))
     ;; Entities that python-mode highlighted as variables
     (save-excursion
-      (goto-char (point-min))
-      (let ((next-change (next-property-change (point))))
+      (let ((next-change (next-property-change (point-min))))
         (while next-change
           (goto-char next-change)
           (let ((face-at-point (get-text-property (point) 'face)))
@@ -779,30 +781,27 @@ not applied. If supplied, iteration only continues if CONTINUE-P
 evaluates to true."
   (let ((identifier-context-re (nth 1 color-identifiers:colorize-behavior))
         (identifier-re (nth 2 color-identifiers:colorize-behavior))
-        (identifier-faces
-         (if (functionp (nth 3 color-identifiers:colorize-behavior))
-             (funcall (nth 3 color-identifiers:colorize-behavior))
-           (nth 3 color-identifiers:colorize-behavior)))
+        (identifier-faces (color-identifiers:curr-identifier-faces))
         (identifier-exclusion-re (nth 4 color-identifiers:colorize-behavior)))
     ;; Skip forward to the next identifier that matches all four conditions
     (condition-case nil
         (while (and (< (point) limit)
                     (if continue-p (funcall continue-p) t))
-          (if (not (or (memq (get-text-property (point) 'face) identifier-faces)
-                       (let ((flface-prop (get-text-property (point) 'font-lock-face)))
-                         (and flface-prop (memq flface-prop identifier-faces)))
-                       (get-text-property (point) 'color-identifiers:fontified)))
-              (goto-char (next-property-change (point) nil limit))
-            (if (not (and (looking-back identifier-context-re (line-beginning-position))
-                          (or (not identifier-exclusion-re) (not (looking-at identifier-exclusion-re)))
-                          (looking-at identifier-re)))
-                (progn
-                  (forward-char)
-                  (re-search-forward identifier-re limit)
-                  (goto-char (match-beginning 0)))
-              ;; Found an identifier. Run `fn' on it
-              (funcall fn (match-beginning 1) (match-end 1))
-              (goto-char (match-end 1)))))
+          (if (or (memq (get-text-property (point) 'face) identifier-faces)
+                  (let ((flface-prop (get-text-property (point) 'font-lock-face)))
+                    (and flface-prop (memq flface-prop identifier-faces)))
+                  (get-text-property (point) 'color-identifiers:fontified))
+              (if (and (looking-back identifier-context-re (line-beginning-position))
+                       (or (not identifier-exclusion-re) (not (looking-at identifier-exclusion-re)))
+                       (looking-at identifier-re))
+                  (progn
+                    ;; Found an identifier. Run `fn' on it
+                    (funcall fn (match-beginning 1) (match-end 1))
+                    (goto-char (match-end 1)))
+                (forward-char)
+                (re-search-forward identifier-re limit)
+                (goto-char (match-beginning 0)))
+            (goto-char (next-property-change (point) nil limit))))
       (search-failed nil))))
 
 (defun color-identifiers:colorize (limit)
