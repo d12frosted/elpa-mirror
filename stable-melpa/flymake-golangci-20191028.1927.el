@@ -5,6 +5,8 @@
 
 ;; Author: Jorge Javier Araya Navarro <jorgejavieran@yahoo.com.mx>
 ;; URL: https://gitlab.com/shackra/flymake-golangci
+;; Package-Version: 20191028.1927
+;; Package-Commit: dfc31a1a6ae3f087b49fe6f5f21b3866780aa91c
 ;; Version: 0
 ;; Package-Requires: ((flymake-easy "0.1") (emacs "24"))
 

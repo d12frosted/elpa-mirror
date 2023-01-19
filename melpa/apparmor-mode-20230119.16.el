@@ -5,9 +5,9 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/apparmor-mode
-;; Package-Version: 20220930.1134
-;; Package-Commit: 9b0ba33995172044068fa2609d97b1015f9fb513
-;; Version: 0.3
+;; Package-Version: 20230119.16
+;; Package-Commit: 3a566b13a41e1cedfaeeea9cd5e187fb68aa7010
+;; Version: 0.4
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This file is not part of GNU Emacs.
@@ -37,7 +37,6 @@
 ;;   - not (ie just a subset?)  if we use regexps above then
 ;;   - should probably keep full regexps here so can reuse
 ;; - expand highlighting of mount rules (options=...) similar to dbus
-;; - add flymake support via "apparmor_parser -Q -K </path/to/profile>"
 ;; - add tests via ert etc
 
 ;;;; Setup
@@ -306,7 +305,6 @@
         :command '("apparmor_parser"
                   "-Q" ;; skip kernel load
                   "-K" ;; skip cache
-                  "-T" ;; skip read cache
                   source)
         :error-patterns '((error line-start "AppArmor parser error at line "
                                  line ": " (message)
@@ -343,7 +341,7 @@
         :name "apparmor-mode-flymake" :noquery t :connection-type 'pipe
         ;; Make output go to a temporary buffer.
         :buffer (generate-new-buffer " *apparmor-mode-flymake*")
-        :command '("apparmor_parser" "-Q" "-K" "-T" "/dev/stdin")
+        :command '("apparmor_parser" "-Q" "-K" "/dev/stdin")
         :sentinel
         (lambda (proc _event)
           (when (memq (process-status proc) '(exit signal))

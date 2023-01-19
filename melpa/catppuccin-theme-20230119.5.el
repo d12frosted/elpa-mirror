@@ -8,8 +8,8 @@
 ;; Author: nyxkrage
 ;; Original-Author: film42
 ;; Version: 1.0.0
-;; Package-Version: 20230117.1450
-;; Package-Commit: 9b967fb3389315053e3a24893873eb7bd8d15594
+;; Package-Version: 20230119.5
+;; Package-Commit: 2f2f11db61305c0d967e803387b1fcbd017cbc18
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
@@ -278,9 +278,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (match :background ,ctp-surface1 :foreground ,ctp-text)
                (menu :background ,ctp-current :inverse-video nil :foreground ,ctp-text)
                (minibuffer-prompt :weight normal :foreground ,ctp-subtext0)
-               (mode-line :background ,ctp-base nil :foreground ,ctp-text)
+               (mode-line :background ,ctp-mantle nil :foreground ,ctp-text)
                (mode-line-inactive
-                :background ,ctp-mantle :inverse-video nil :foreground ,ctp-surface2)
+                :background ,ctp-crust :inverse-video nil :foreground ,ctp-overlay0)
                (read-multiple-choice-face :inherit completions-first-difference)
                (region :background ,ctp-surface0 :extend t)
                (shadow :foreground ,ctp-surface2)
@@ -294,9 +294,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (solaire-default-face :background ,ctp-mantle :foreground ,ctp-text)
                (solaire-fringe-face :background ,ctp-mantle :foreground ,ctp-surface1)
                (solaire-line-number-face :foreground ,ctp-surface1 :background ,ctp-mantle)
-               (solaire-mode-line-face :background ,ctp-mantle nil :foreground ,ctp-text)
+               (solaire-mode-line-face :background ,ctp-crust nil :foreground ,ctp-text)
                (solaire-mode-line-inactive-face
-                :background ,ctp-crust :inverse-video nil :foreground ,ctp-surface2)
+                :background ,ctp-crust :inverse-video nil :foreground ,ctp-subtext1)
                (solaire-header-line-face :inherit 'solaire-mode-line-face)
 
                ;; evil

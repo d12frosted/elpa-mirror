@@ -4,8 +4,8 @@
 
 ;; Author: Wojciech Siewierski
 ;; URL: https://github.com/vifon/hyperlist-mode
-;; Package-Version: 20200515.2209
-;; Package-Commit: 00af994deda061fa95ad0046510eb6a2672c99aa
+;; Package-Version: 20230119.28
+;; Package-Commit: 480dbf33ca72e7b5fade952aaf0d5a5eb43acb1d
 ;; Keywords: outlines
 ;; Version: 0.9
 ;; Package-Requires: ((emacs "24"))
@@ -82,6 +82,20 @@
     (((background dark))  :foreground "#444"))
   "Face for the leading outline stars in Hyperlists.")
 
+(defvar hyperlist-mode-font-lock-keywords
+  '(("^\\*\\([^*].*\\)" 1 'hyperlist-toplevel)
+    ("\\[[^]]*\\]" . 'hyperlist-condition)
+    ("\"[^\"]*\"" . 'hyperlist-quote)
+    ("([^)]*)" . 'hyperlist-paren)
+    ("<[^>]*>" . 'hyperlist-ref)
+    ("\\b[A-Z]+:" . 'hyperlist-operator)
+    ("^\\** *\\(?:\\[[^]]*\\] *\\)?\\(\\(?:\\w\\| \\)+\\w:\\)" 1 'hyperlist-tag)
+    ("\\_<\\(#\\w+\\)\\_>" 1 'hyperlist-hashtag)
+    ("^\\*+" . 'hyperlist-stars)
+    ("\\W\\(\\*.*\\*\\)\\W" 1 'bold)
+    ("\\W\\(/.*/\\)\\W" 1 'italic)
+    ("\\W\\(_.*_\\)\\W" 1 'underline)))
+
 (defvar hyperlist-mode-syntax-table
   (let ((st (make-syntax-table)))
     (modify-syntax-entry ?\" "\"" st)
@@ -95,18 +109,7 @@
 (define-derived-mode hyperlist-mode outline-mode "Hyperlist"
   "A major-mode for Hyperlists by Geir Isene."
   (setq font-lock-defaults
-        '((("^\\*\\([^*].*\\)" 1 'hyperlist-toplevel)
-           ("\\[[^]]*\\]" . 'hyperlist-condition)
-           ("\"[^\"]*\"" . 'hyperlist-quote)
-           ("([^)]*)" . 'hyperlist-paren)
-           ("<[^>]*>" . 'hyperlist-ref)
-           ("\\b[A-Z]+:" . 'hyperlist-operator)
-           ("^\\** *\\(?:\\[[^]]*\\] *\\)?\\(\\(?:\\w\\| \\)+\\w:\\)" 1 'hyperlist-tag)
-           ("\\_<\\(#\\w+\\)\\_>" 1 'hyperlist-hashtag)
-           ("^\\*+" . 'hyperlist-stars)
-           ("\\W\\(\\*.*\\*\\)\\W" 1 'bold)
-           ("\\W\\(/.*/\\)\\W" 1 'italic)
-           ("\\W\\(_.*_\\)\\W" 1 'underline))
+        '(hyperlist-mode-font-lock-keywords
           t)))
 
 (add-to-list 'auto-mode-alist '("\\.hl\\'" . hyperlist-mode))

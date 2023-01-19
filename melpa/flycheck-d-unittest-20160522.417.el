@@ -4,6 +4,8 @@
 
 ;; Author: Tomoya Tanjo <ttanjo@gmail.com>
 ;; URL: https://github.com/tom-tan/flycheck-d-unittest/
+;; Package-Version: 20160522.417
+;; Package-Commit: 3e614f23cb4a5566fd7988dbcaaf254af81c7718
 ;; Package-Requires: ((flycheck "0.21-cvs1") (dash "1.4.0"))
 ;; Keywords: flycheck, d
 
