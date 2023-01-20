@@ -1,5 +1,5 @@
 (cardano-tx .
-	    [(20221210 1155)
+	    [(20230105 11)
 	     ((emacs
 	       (27 1))
 	      (f
@@ -13,17 +13,17 @@
 	      (helm
 	       (3 6 2))
 	      (cbor
-	       (0 2 0))
+	       (0 2 3))
 	      (bech32
 	       (0 2 1))
 	      (readable-numbers
 	       (0 1 0))
 	      (emacsql
 	       (3 0 0))
-	      (emacsql-sqlite3
-	       (1 0 2)))
+	      (emacsql-sqlite
+	       (3 1 1)))
 	     "Cardano transaction editor" tar
-	     ((:commit . "362989453e94def0f8863b7d3193fe87499a3cad")
+	     ((:commit . "6ce650972d949228b17dc03c6ff809f67f22f35a")
 	      (:authors
 	       ("Oscar Najera <https://oscarnajera.com>"))
 	      (:maintainer "Oscar Najera" . "hi@oscarnajera.com")

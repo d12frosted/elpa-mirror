@@ -3,13 +3,8 @@ Fetcher: github
 Source:  https://github.com/kiwanami/emacs-window-layout.git
 
 Updating /mnt/store/melpa/working/window-layout/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/kiwanami/emacs-window-layout.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out cd2e4f967b610c2bbef53182829e47250d027056
+Built window-layout in 4.471s, finished at 2023-01-20T00:00:22+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 35K Jan 20 00:00 packages/window-layout-20170215.33.el
+4.0K -rw-r--r-- 1 root root 308 Jan 20 00:00 packages/window-layout-20170215.33.entry

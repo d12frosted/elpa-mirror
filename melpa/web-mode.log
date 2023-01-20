@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/fxbois/web-mode.git
 
 Updating /mnt/store/melpa/working/web-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out 53bed1e6a8554da877c27ffad6bd65113dc758e3
+Built web-mode in 7.315s, finished at 2023-01-19T23:59:35+0000
+ ✓ Success:
+568K -rw-r--r-- 1 root root 565K Jan 19 23:59 packages/web-mode-20221225.2142.el
+4.0K -rw-r--r-- 1 root root  350 Jan 19 23:59 packages/web-mode-20221225.2142.entry

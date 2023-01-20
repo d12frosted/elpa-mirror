@@ -1,11 +1,9 @@
 (cbor .
-      [(20221210 1131)
+      [(20221225 1909)
        ((emacs
-	 (25 1))
-	(dash
-	 (2 19 0)))
+	 (25 1)))
        "CBOR utilities" single
-       ((:commit . "34dd1d5659e104eba56b3ef2d5e32e49f83cce7b")
+       ((:commit . "b369e8ac68c4cbabeb3a57f7db6bd44341523d72")
 	(:authors
 	 ("Oscar Najera <https://oscarnajera.com>"))
 	(:maintainer "Oscar Najera" . "hi@oscarnajera.com")

@@ -5,8 +5,8 @@
 ;; Author: Oscar Najera <https://github.com/titan>
 ;; Maintainer: Oscar Najera <hi@oscarnajera.com>
 ;; Version: 0.2.0
-;; Package-Version: 20221210.1131
-;; Package-Commit: 34dd1d5659e104eba56b3ef2d5e32e49f83cce7b
+;; Package-Version: 20230105.11
+;; Package-Commit: 6ce650972d949228b17dc03c6ff809f67f22f35a
 ;; Homepage: https://github.com/Titan-C/cardano.el
 ;; Package-Requires: ((emacs "27.1") (yaml "0.1.0") (dash "2.19.0") (yaml-mode "0.0.15") (readable-numbers "0.1.0") (cardano-tx "0.1.0"))
 
@@ -32,15 +32,18 @@
 ;; Provide an interface to the cardano-wallet service
 ;;; Code:
 
+(require 'dash)
 (require 'hex-util)
+(require 'subr-x)
 (require 'url)
 (require 'yaml)
-(require 'dash)
 (require 'yaml-mode)
 (require 'readable-numbers)
 (require 'cardano-tx-utils)
+(require 'cardano-tx-assets)
 (require 'cardano-tx-address)
 (require 'cardano-tx-db)
+(require 'cardano-tx-hw)
 (require 'cardano-tx)
 
 ;; Silence byte-compiler.
@@ -53,10 +56,6 @@
 (defcustom cardano-wallet-url nil
   "Cardano wallet URL with port."
   :type 'string)
-
-(defvar-local cardano-wallet-tx--wallet nil
-  "Hash-table containing active wallet information.
-This is only available on TX preview buffers.")
 
 (defvar-local cardano-wallet-current nil
   "Actively selected wallet.")
@@ -83,69 +82,15 @@ If JSON-DATA default to post unless METHOD is defined."
   "Show whatever is the response JSON."
   (with-current-buffer (get-buffer-create "*Cardano wallet response*")
     (erase-buffer)
-    (insert (yaml-encode json))
     (yaml-mode)
+    (insert (yaml-encode json))
     (readable-numbers-mode)
-    (display-buffer (current-buffer))))
-
-;;; Wallet addresses management
-
-(defun cardano-wallet-addresses--refresh ()
-  "Refresh the address list."
-  (let ((known-addrs
-         (emacsql (cardano-tx-db)
-                  [:select [raw id monitor note] :from addresses
-                   :where (in raw $v1)]
-                  (cl-map 'vector (lambda (it) (cardano-tx-get-in it "id"))
-                          cardano-wallet--buffer-response))))
-    (->> cardano-wallet--buffer-response
-         (seq-map (lambda (res)
-                    (let* ((deriv (-> (cardano-tx-get-in res "derivation_path")
-                                      (seq-drop 2) ;; remove standard 1852H/1815H
-                                      (string-join "/")))
-                           (state (cardano-tx-get-in res "state"))
-                           (address (cardano-tx-get-in res "id"))
-                           (db-info (cardano-tx-get-in known-addrs address)))
-                      (list (or (car db-info) deriv)
-                            (vector
-                             (if (elt db-info 1) "YES" "NO")
-                             address
-                             (substring address -8)
-                             (concat
-                              (if (string= state "used")
-                                  (propertize deriv 'face 'font-lock-keyword-face)
-                                deriv)
-                              (-some--> db-info (elt it 2)
-                                        (string-remove-prefix deriv it)
-                                        (cardano-tx-nw-p it)
-                                        (format " -- %s" it))))))))
-         (setq tabulated-list-entries))))
-
-(defun cardano-wallet-address--refresh-query (&optional _arg _noconfirm)
-  "Query for registered addresses and `revert-buffer'."
-  (cardano-wallet
-   (format "wallets/%s/addresses" (cardano-tx-get-in cardano-wallet-current "id"))
-   (lambda (json-response)
-     (with-current-buffer (get-buffer "*Cardano Wallet Addresses*")
-       (setq cardano-wallet--buffer-response json-response)
-       (run-hooks 'tabulated-list-revert-hook)
-       (tabulated-list-print 'remember)))))
-
-(defun cardano-wallet-addresses (wallet)
-  "Show addresses for WALLET."
-  (interactive (list (cardano-wallet--get-row-source)))
-  (with-current-buffer (get-buffer-create "*Cardano Wallet Addresses*")
-    (cardano-tx-db-addresses-mode)
-    (setq-local cardano-wallet-current wallet)
-    (add-hook 'tabulated-list-revert-hook #'cardano-wallet-addresses--refresh nil t)
-    (setq revert-buffer-function #'cardano-wallet-address--refresh-query)
-    (cardano-wallet-address--refresh-query)
     (display-buffer (current-buffer))))
 
 (defun cardano-wallet-readable-number (amount)
   "AMOUNT as an underscore separated readable string."
   (let ((ref (number-to-string amount)))
-    (if (> 4 (length ref))
+    (if (<= (length ref) 4)
         ref
       (let ((start (if (= 0 (string-match (rx (+ (= 3 digit)) eol) ref))
                        3 (match-beginning 0))))
@@ -156,15 +101,6 @@ If JSON-DATA default to post unless METHOD is defined."
                  (number-sequence start (1- (match-end 0)) 3)))
          "_")))))
 
-(defun cardano-wallet-sort-readable-number (column)
-  "Generate a sort function for `tabulated-list' readable number at COLUMN."
-  (cl-flet ((value (lambda (entry)
-                     (thread-last
-                       (aref (cadr entry) column)
-                       (replace-regexp-in-string "_" "")
-                       (string-to-number)))))
-    (lambda (e1 e2) (> (value e1) (value e2)))))
-
 (defun cardano-wallet-print-col (value)
   "Format VALUE for column."
   (pcase value
@@ -172,14 +108,159 @@ If JSON-DATA default to post unless METHOD is defined."
     ((pred stringp) value)
     (n (format "%S" n))))
 
+;;; Wallet addresses management
+(defun cardano-wallet--derive-files-for-keys (key-list)
+  "Derive for KEY-LIST."
+  (thread-last
+    key-list
+    (emacsql (cardano-tx-db)
+             [:with used-keys [fingerprint path-tail desc] :as [:values $v1]
+              :select [data path-tail] :from used-keys
+              :join master-keys mk
+              :where (and (not (in desc [:select description :from typed-files]))
+                          (= mk:fingerprint used-keys:fingerprint))
+              :order-by [(asc data)]])
+    (mapc (-lambda ((key path-tail))
+            (cardano-tx-address--new-hd-key key path-tail)))))
+
+(defun cardano-wallet--derive-and-load (fingerprint key-list)
+  "Derive for KEY-LIST and load account of FINGERPRINT."
+  (when (cardano-wallet--derive-files-for-keys key-list)
+    (cardano-tx-address-hw-load
+     (format "[%s]%%" fingerprint)
+     (if (string= "--testnet-magic" (car cardano-tx-cli-network-args)) 0 1))))
+
+(defun cardano-wallet-addresses--refresh ()
+  "Refresh the address list."
+  (thread-last
+    cardano-wallet--buffer-response
+    (mapcar
+     (-lambda ((&alist 'id 'derivation_path))
+       (vector id (string-join (seq-drop derivation_path 3) "/"))))
+    (emacsql (cardano-tx-db)
+             [:with wallet [addr path] :as [:values $v1]
+              :select [monitor addr note path] :from wallet
+              :left-join addresses :on (= addr raw)])
+    (seq-map
+     (-lambda ((monitor address note path))
+       (list path
+             (vector
+              (if monitor "YES" "NO")
+              address
+              (substring address -8)
+              (or note path)))))
+    (setq tabulated-list-entries)))
+
+(defun cardano-wallet-address--refresh-query (&optional _arg _noconfirm)
+  "Query for registered addresses and `revert-buffer'."
+  (cardano-wallet
+   (format "wallets/%s/addresses" (cardano-wallet-id cardano-wallet-current))
+   (lambda (json-response)
+     (with-current-buffer (get-buffer "*Cardano Wallet Addresses*")
+       (setq cardano-wallet--buffer-response json-response)
+       (run-hooks 'tabulated-list-revert-hook)
+       (tabulated-list-print 'remember)))))
+
+(defun cardano-wallet-derive-files-for-address ()
+  "For address in line, derive and save verification key.  Register address."
+  (interactive)
+  (when-let ((fingerprint
+              (-some-> cardano-wallet-current
+                (cardano-wallet-id)
+                (substring 0 8))))
+    (cardano-wallet--derive-and-load
+     fingerprint
+     (list (cardano-tx-hw--key-spec fingerprint (tabulated-list-get-id))))
+    (forward-line)
+    (cardano-wallet-addresses--refresh)
+    (tabulated-list-print t)))
+
+(defun cardano-wallet-addresses (wallet)
+  "Show addresses for WALLET."
+  (interactive (list (tabulated-list-get-id)))
+  (with-current-buffer (get-buffer-create "*Cardano Wallet Addresses*")
+    (cardano-tx-db-addresses-mode)
+    (setq-local cardano-wallet-current wallet)
+    (use-local-map (copy-keymap cardano-tx-db-addresses-mode-map))
+    (local-set-key "i" #'cardano-wallet-derive-files-for-address)
+    (add-hook 'tabulated-list-revert-hook #'cardano-wallet-addresses--refresh nil t)
+    (setq revert-buffer-function #'cardano-wallet-address--refresh-query)
+    (cardano-wallet-address--refresh-query)
+    (display-buffer (current-buffer))))
+
+(defun cardano-wallet-addresses--keys-left-to-register (wallet-id)
+  "Register missing the keys for used addresses from WALLET-ID."
+  (cardano-wallet
+   (format "wallets/%s/addresses" wallet-id)
+   (lambda (json)
+     (let ((fingerprint (substring wallet-id 0 8)))
+       (thread-last
+         json
+         (mapcar
+          (-lambda ((&alist 'state 'derivation_path))
+            (when (string= state "used")
+              (cardano-tx-hw--key-spec fingerprint (string-join (seq-drop derivation_path 3) "/")))))
+         (delq nil)
+         (cardano-wallet--derive-and-load fingerprint))))))
+
+;;; Wallet Main Control
+(defun cardano-wallet-sort-readable-number (column)
+  "Generate a sort function for `tabulated-list' readable number at COLUMN."
+  (cl-flet ((value (entry)
+                   (thread-last
+                     (aref (cadr entry) column)
+                     (replace-regexp-in-string "_" "")
+                     (string-to-number))))
+    (lambda (e1 e2) (> (value e1) (value e2)))))
+
+(cl-defstruct (cardano-wallet (:constructor cardano-wallet--create)
+                              (:copier nil))
+  "Wallet information"
+  id
+  name
+  balance
+  rewards
+  assets
+  delegation)
+
+(defun cardano-wallet-total (entry)
+  "Total available balance of ENTRY."
+  (+ (cardano-wallet-balance entry)
+     (cardano-wallet-rewards entry)))
+
+(defun cardano-wallet-parse (entry)
+  "Extract from json ENTRY into struct."
+  (cardano-wallet--create
+   :id (cardano-tx-get-in entry "id")
+   :name (cardano-tx-get-in entry "name")
+   :balance (cardano-tx-get-in entry "balance" "available" "quantity")
+   :rewards (cardano-tx-get-in entry "balance" "reward" "quantity")
+   :assets     (cardano-tx-get-in entry "assets" "total")
+   :delegation (cardano-tx-get-in entry "delegation" "active" "target")))
+
+(defun cardano-wallet-sort (slot)
+  "Return function to sort entries by SLOT."
+  (cl-flet ((vals (entry) (funcall (cl-ecase slot
+                                     (balance #'cardano-wallet-balance)
+                                     (rewards #'cardano-wallet-rewards)
+                                     (total #'cardano-wallet-total))
+                                   (car entry))))
+    (lambda (e1 e2)
+      (< (vals e1) (vals e2)))))
+
 (defun cardano-wallet--balance-row (entry)
   "Extract values from ENTRY to display a balance row."
-  (list (cardano-tx-get-in entry "balance" "total" "quantity")
-        (cardano-tx-get-in entry "balance" "available" "quantity")
-        (cardano-tx-get-in entry "balance" "reward" "quantity")
-        (if (seq-empty-p (cardano-tx-get-in entry "assets" "total"))
-            "NO" "YES")
-        (cardano-tx-get-in entry "delegation" "active" "target")))
+  (let ((balance (cardano-wallet-balance entry))
+        (rewards (cardano-wallet-rewards entry)))
+    (vector
+     (cardano-wallet-name entry)
+     (cardano-wallet-id entry)
+     (cardano-wallet-readable-number (+ balance rewards))
+     (cardano-wallet-readable-number balance)
+     (cardano-wallet-readable-number rewards)
+     (if (seq-empty-p (cardano-wallet-assets entry))
+         "NO" "YES")
+     (or (cardano-wallet-delegation entry) "None"))))
 
 (defun cardano-wallet-balances--refresh ()
   "Query Cardano Wallet for wallet balances then refresh buffer with new entries."
@@ -188,26 +269,12 @@ If JSON-DATA default to post unless METHOD is defined."
    (lambda (json-response)
      (with-current-buffer (get-buffer-create "*Cardano Wallet balances*")
        (->> json-response
-            (setq cardano-wallet--buffer-response)
+            (seq-map #'cardano-wallet-parse)
             (seq-map
-             (lambda (res)
-               (let ((name (cardano-tx-get-in res "name"))
-                     (id (cardano-tx-get-in res "id")))
-                 (list id (cl-map 'vector
-                                  #'cardano-wallet-print-col
-                                  (append (list name id)
-                                          (cardano-wallet--balance-row res)))))))
-
+             (lambda (entry)
+               (list entry (cardano-wallet--balance-row entry))))
             (setq tabulated-list-entries))
        (tabulated-list-print 'remember)))))
-
-(defun cardano-wallet--get-row-source ()
-  "Find originating data for table row."
-  (seq-find (lambda (elt)
-              (string=
-               (cardano-tx-get-in elt "id")
-               (tabulated-list-get-id)))
-            cardano-wallet--buffer-response))
 
 (defvar cardano-wallet-balances-mode-map
   (let ((map (make-sparse-keymap)))
@@ -221,14 +288,13 @@ If JSON-DATA default to post unless METHOD is defined."
 (define-derived-mode cardano-wallet-balances-mode tabulated-list-mode "*Wallet Balances*"
   "Major mode for managing wallets."
   :interactive nil
-  (cl-flet ((sorter (lambda (col) (cardano-wallet-sort-readable-number col))))
-    (setq tabulated-list-format `[("Name" 10 t)
-                                  ("ID" 10 t)
-                                  ("Total" 15 ,(sorter 2) :right-align t)
-                                  ("Available" 15 ,(sorter 3) :right-align t)
-                                  ("Reward" 13 ,(sorter 4) :right-align t)
-                                  ("Assets" 6 t)
-                                  ("Delegation" 0 t)]))
+  (setq tabulated-list-format `[("Name" 26 t)
+                                ("ID" 10 t)
+                                ("Total" 15 ,(cardano-wallet-sort 'total) :right-align t)
+                                ("Available" 15 ,(cardano-wallet-sort 'balance) :right-align t)
+                                ("Reward" 13 ,(cardano-wallet-sort 'rewards) :right-align t)
+                                ("Assets" 6 t)
+                                ("Delegation" 0 t)])
   (add-hook 'tabulated-list-revert-hook #'cardano-wallet-balances--refresh nil t)
   (tabulated-list-init-header))
 
@@ -251,7 +317,8 @@ If JSON-DATA default to post unless METHOD is defined."
       :prompt "Wallet: "
       :sources (helm-build-sync-source
                    "wallet"
-                 :candidates (--map (cons (cardano-tx-get-in it "name") it)
+                 :candidates (--map (cons (cardano-tx-get-in it "name")
+                                          (cardano-wallet-parse it))
                                     json)
                  :action (helm-make-actions
                           "Payment" #'cardano-wallet-tx-new
@@ -262,9 +329,9 @@ If JSON-DATA default to post unless METHOD is defined."
 
 (defun cardano-wallet-describe (wallet)
   "Pop buffer describing WALLET."
-  (interactive (list (cardano-wallet--get-row-source)))
+  (interactive (list (tabulated-list-get-id)))
   (cardano-wallet
-   (format "wallets/%s/" (cardano-tx-get-in wallet "id"))
+   (format "wallets/%s/" (cardano-wallet-id wallet))
    #'cardano-wallet-show))
 
 ;;; Wallet transactions
@@ -302,7 +369,7 @@ If JSON-DATA default to post unless METHOD is defined."
 (define-derived-mode cardano-wallet-tx-log-mode tabulated-list-mode "*Wallet Transaction Log*"
   "Major mode for working with addresses."
   :interactive nil
-  (cl-flet ((sorter (lambda (col) (cardano-wallet-sort-readable-number col))))
+  (cl-flet ((sorter (col) (cardano-wallet-sort-readable-number col)))
     (setq tabulated-list-format `[("Date" 20 t)
                                   ("Hash" 10 t)
                                   ("Fee" 13 ,(sorter 2) :right-align t)
@@ -314,34 +381,33 @@ If JSON-DATA default to post unless METHOD is defined."
 
 (defun cardano-wallet-tx-log--refresh ()
   "Refresh the transaction log entry list."
-  (let ((annotations
-         (emacsql (cardano-tx-db) [:select * :from tx-annotation :where (in txid $v1)]
-                  (vconcat (--map (cardano-tx-get-in it "id")
-                                  cardano-wallet--buffer-response)))))
-    (->> cardano-wallet--buffer-response
-         (seq-map
-          (lambda (res)
-            (let ((date (cardano-tx-get-in res "inserted_at" "time"))
-                  (id (cardano-tx-get-in res "id"))
-                  (net-amount (cardano-tx-get-in res "amount" "quantity")))
-              (list id
-                    (cl-map 'vector
-                            #'cardano-wallet-print-col
-                            (list date id
-                                  (cardano-tx-get-in res "fee" "quantity")
-                                  (if (string= "incoming" (cardano-tx-get-in res "direction"))
-                                      net-amount
-                                    (propertize (cardano-wallet-print-col net-amount)
-                                                'face 'font-lock-keyword-face))
-                                  (-> (alist-get id annotations '("") nil #'string=)
-                                      car (split-string "\n") car)))))))
-         (setq tabulated-list-entries))))
+  (->> cardano-wallet--buffer-response
+       (seq-map
+        (lambda (res)
+          (vector
+           (cardano-tx-get-in res "id")
+           (cardano-tx-get-in res "inserted_at" "time")
+           (cardano-wallet-readable-number (cardano-tx-get-in res "fee" "quantity"))
+           (apply #'propertize
+                  (cardano-wallet-readable-number (cardano-tx-get-in res "amount" "quantity"))
+                  (unless (string= "incoming" (cardano-tx-get-in res "direction"))
+                    (list 'face 'font-lock-keyword-face))))))
+       (emacsql (cardano-tx-db)
+                [:with log [id date fee amount] :as [:values $v1]
+                 :select [id date fee amount (funcall ifnull annotation "")] :from tx-annotation
+                 :right-join log :on (= id txid)
+                 :order-by [(desc date)]])
+       (seq-map
+        (-lambda ((id date fee amount annotation))
+          (list id
+                (vector date id fee amount (car (split-string annotation "\n"))))))
+       (setq tabulated-list-entries)))
 
 (defun cardano-wallet-tx-log--refresh-query (&optional _arg _noconfirm)
   "Query for registered transactions and `revert-buffer'."
   (cardano-wallet
    (format "wallets/%s/transactions"
-           (cardano-tx-get-in cardano-wallet-current "id"))
+           (cardano-wallet-id cardano-wallet-current))
    (lambda (json-response)
      (with-current-buffer (get-buffer "*Cardano Wallet Transactions*")
        (setq cardano-wallet--buffer-response json-response)
@@ -350,7 +416,7 @@ If JSON-DATA default to post unless METHOD is defined."
 
 (defun cardano-wallet-tx-log (wallet)
   "Show Transactions in WALLET."
-  (interactive (list (cardano-wallet--get-row-source)))
+  (interactive (list (tabulated-list-get-id)))
   (with-current-buffer (get-buffer-create "*Cardano Wallet Transactions*")
     (cardano-wallet-tx-log-mode)
     (setq-local cardano-wallet-current wallet)
@@ -362,7 +428,7 @@ If JSON-DATA default to post unless METHOD is defined."
   "Show TX-HASH from WALLET-ID."
   (interactive
    (list
-    (cardano-tx-get-in cardano-wallet-current "id")
+    (cardano-wallet-id cardano-wallet-current)
     (aref (tabulated-list-get-entry) 1)))
   (cardano-wallet
    (format "wallets/%s/transactions/%s" wallet-id tx-hash)
@@ -403,31 +469,82 @@ If JSON-DATA default to post unless METHOD is defined."
    (list :name name
          :account_public_key xpub)))
 
+(defun cardano-wallet-hw-register ()
+  "Register a new wallet from the known extended public key accounts."
+  (interactive)
+  (seq-let (name _id _fingerprint _note data) (cardano-tx-hw--master-keys)
+    (cardano-tx-address--new-hd-key data "2/0")
+    (thread-last
+      data
+      (bech32-decode)
+      (cdr)
+      (apply #'unibyte-string)
+      (encode-hex-string)
+      (cardano-wallet-monitor (car (split-string name))))))
+
 (defun cardano-wallet-delete (wallet)
   "Delete WALLET."
-  (interactive (list (cardano-wallet--get-row-source)))
-  (let ((wallet-id (cardano-tx-get-in wallet "id")))
+  (interactive (list (tabulated-list-get-id)))
+  (let ((wallet-id (cardano-wallet-id wallet)))
     (when (yes-or-no-p (format "Really delete wallet '%s' with id '%s'?"
-                               (upcase (cardano-tx-get-in wallet "name")) wallet-id))
+                               (upcase (cardano-wallet-name wallet)) wallet-id))
       (cardano-wallet
        (concat "wallets/" wallet-id)
-       (lambda (_x) (message "Wallet %s deleted." wallet-id))
+       (lambda (_x)
+         (message "Wallet %s deleted." wallet-id)
+         (cardano-wallet-balances--refresh)
+         (tabulated-list-print))
        "DELETE"))))
+
+(defun cardano-wallet-process-tx (wallet json)
+  "From HW WALLET and JSON response of wallet-tx constructor sign all inputs."
+  (interactive
+   (list cardano-wallet-current cardano-wallet--buffer-response))
+  (let ((filename (cardano-wallet--write-tx (cardano-tx-get-in json 'transaction))))
+    (thread-last
+      (cardano-tx-get-in json 'coin_selection 'inputs)
+      (mapcar
+       (-lambda ((&alist 'derivation_path))
+         (cardano-tx-hw--key-spec
+          (substring (cardano-wallet-id wallet) 0 8)
+          (string-join (seq-drop derivation_path 3) "/"))))
+      (cardano-tx-hw--signing-files)
+      (list nil)
+      (cardano-tx-sign filename)
+      (cardano-tx-submit)
+      (run-at-time 30 nil #'cardano-wallet-addresses--keys-left-to-register (cardano-wallet-id wallet)))))
 
 (defun cardano-wallet-tx-finish ()
   "Process buffer into a transaction, sign it and open PREVIEW."
   (interactive)
-  (let* ((input-data (cardano-tx--input-buffer))
+  (let* ((wallet cardano-wallet-current)
+         (input-data (cardano-tx--input-buffer))
          (outputs (cardano-tx-get-in input-data 'outputs))
-         (tx-buffer (current-buffer)))
+         (hw-p (when (string-match (rx "[" (= 8 hex) "]HW") (cardano-wallet-name cardano-wallet-current))
+                 "Hardware Wallet")))
     (cardano-wallet
-     (concat "wallets/"
-             (cardano-tx-get-in cardano-wallet-tx--wallet "id")
-             "/transactions")
-     (lambda (json) (cardano-wallet-show json) (kill-buffer tx-buffer))
+     (format "wallets/%s/transactions%s"
+             (cardano-wallet-id wallet)
+             (if hw-p "-construct" ""))
+     (lambda (json)
+       (let ((window (cardano-wallet-show json)))
+         (when hw-p
+           (with-current-buffer (window-buffer window)
+             (setq-local cardano-wallet--buffer-response json)
+             (setq-local cardano-wallet-current wallet)
+             (local-set-key (kbd "C-c C-s") #'cardano-wallet-process-tx)))))
      "POST"
      `(:payments ,(cl-map 'vector #'cardano-wallet-payment outputs)
-       :passphrase ,(read-passwd "Password to unlock your wallet: ")))))
+       :encoding "base16"
+       :passphrase ,(or hw-p (read-passwd "Password to unlock your wallet: "))))))
+
+(defun cardano-wallet--write-tx (cborHex)
+  "Write CBORHEX as transaction file."
+  (let ((type "Unwitnessed Tx BabbageEra")
+        (description "Ledger Cddl Format")
+        (filename (make-temp-file "cardano-tx-")))
+    (cardano-tx-write-json (cardano-tx-alist type description cborHex) filename)
+    filename))
 
 (defun cardano-wallet-payment (tx-out)
   "Build payment object from TX-OUT."
@@ -449,15 +566,14 @@ If JSON-DATA default to post unless METHOD is defined."
 
 (defun cardano-wallet-tx-new (wallet)
   "Open an editor to create a new transaction for WALLET."
-  (interactive (list (cardano-wallet--get-row-source)))
+  (interactive (list (tabulated-list-get-id)))
   (with-current-buffer (generate-new-buffer "*Cardano tx*")
     (insert "# -*- mode: cardano-tx; -*-\n\n")
     (cardano-tx-mode)
-    (setq-local cardano-wallet-tx--wallet wallet)
+    (setq-local cardano-wallet-current wallet)
     (yas-expand-snippet (yas-lookup-snippet 'wallet-spend))
     (use-local-map (copy-keymap cardano-tx-mode-map))
     (local-set-key (kbd "C-c C-c") #'cardano-wallet-tx-finish)
-    (local-set-key (kbd "C-c C-s") nil)
     (message "Press %s to build and send transaction."
              (substitute-command-keys "\\[cardano-wallet-tx-finish]"))
     (switch-to-buffer (current-buffer))))
@@ -465,18 +581,17 @@ If JSON-DATA default to post unless METHOD is defined."
 (defun cardano-wallet-tx-assets-pick ()
   "Load assets available on wallet to `kill-ring'."
   (interactive)
-  (->> (cardano-tx-get-in cardano-wallet-tx--wallet "assets" "total")
+  (->> (cardano-wallet-assets cardano-wallet-current)
        (--map
-        (concat "      " ;; ident
-                (cardano-tx-get-in it "policy_id")
-                ":\n        "
-                (let ((assetname (decode-hex-string
-                                  (cardano-tx-get-in it "asset_name"))))
-                  (if (cardano-tx-nw-p assetname) assetname "\"\"")) ": "
-                (number-to-string
-                 (cardano-tx-get-in it "quantity")) "\n"))
+        (let ((policy (cardano-tx-get-in it "policy_id"))
+              (assetname (decode-hex-string (cardano-tx-get-in it "asset_name")))
+              (quantity (cardano-tx-get-in it "quantity")))
+          (list (format "%s:\n%S: %d" policy assetname quantity)
+                policy assetname quantity)))
        (cardano-tx-pick "Assets")
-       (string-join)
+       (cardano-tx-assets-group-tokens)
+       (cardano-tx-assets-format-tokens)
+       (replace-regexp-in-string "^" "      ")
        (kill-new)))
 
 (provide 'cardano-wallet)

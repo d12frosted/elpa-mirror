@@ -3,12 +3,8 @@ Fetcher: github
 Source:  https://github.com/abrochard/walkman.git
 
 Updating /mnt/store/melpa/working/walkman/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out f5021a4d9f16a2013e67a9fa7c121f87bf030203
+Built walkman in 4.518s, finished at 2023-01-19T23:59:12+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jan 19 23:59 packages/walkman-20221007.1937.el
+4.0K -rw-r--r-- 1 root root 423 Jan 19 23:59 packages/walkman-20221007.1937.entry

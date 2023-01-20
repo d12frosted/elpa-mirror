@@ -1,5 +1,5 @@
 (cardano-wallet .
-		[(20221210 1131)
+		[(20230105 11)
 		 ((emacs
 		   (27 1))
 		  (yaml
@@ -13,7 +13,7 @@
 		  (cardano-tx
 		   (0 1 0)))
 		 "Interact with cardano wallet" single
-		 ((:commit . "34dd1d5659e104eba56b3ef2d5e32e49f83cce7b")
+		 ((:commit . "6ce650972d949228b17dc03c6ff809f67f22f35a")
 		  (:authors
 		   ("Oscar Najera <https://github.com/titan>"))
 		  (:maintainer "Oscar Najera" . "hi@oscarnajera.com")
