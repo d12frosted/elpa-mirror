@@ -4,8 +4,8 @@
 
 ;; Author:  <author>
 ;; Keywords: convenience
-;; Package-Version: 20221225.2242
-;; Package-Commit: ffaeed4b0020876a64704b4d7a94dc98721fc381
+;; Package-Version: 20230120.622
+;; Package-Commit: 6ca1aabc6c60c8722bc5dca4aedbc033b1d9fff5
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "28.1") (auto-compile "1.2.0") (dash "2.18.0"))
 ;; Homepage: http://github.com/positron-solutions/elisp-repo-kit
@@ -283,7 +283,7 @@ clobbered."
                  (default-directory dir))
             (when (file-exists-p dest)
               (erk--nze
-               (call-process git-bin nil output nil "rm" dest)
+               (call-process git-bin nil output nil "rm" "-f" dest)
                (format "Could not delete: %s" dest)))
             (erk--nze
              (call-process git-bin nil output nil "mv" src dest)
@@ -389,8 +389,12 @@ itself, as a quine and for forking as a new template repository."
                      (call-process git-bin nil output nil "checkout" rev)
                      (format "Checkout %s failed." rev)))
           (erk--nze
-           (call-process git-bin nil output nil "remote" "rm" "origin")
-           "Removal of remote failed.")
+           (call-process "rm" nil output nil "-rf" ".git")
+           "Removing old history failed.")
+          (erk--nze
+           (call-process git-bin nil output nil "init") "Git initialization failed.")
+          (erk--nze
+           (call-process git-bin nil output nil "add" ".") "Git add all failed.")
           (erk--nze
            (call-process git-bin nil output nil "remote" "add" "origin"
                          (format "git@github.com:%s/%s.git"

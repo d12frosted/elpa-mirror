@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230116.1001
-;; Package-Commit: b31743c9f7f3c1589be646c3972cc163b072c007
+;; Package-Version: 20230120.515
+;; Package-Commit: 36c35e4dbd6a5e9f4b3cc5c2bddf22cfac715099
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -132,7 +132,8 @@
    `(markdown-header-face ((,class (:inherit outline-1))))
    `(markdown-header-delimiter-face ((t (nil))))
    `(markdown-metadata-key-face ((,class (:inherit font-lock-comment-face))))
-   `(markdown-metadata-value-face ((,class (:inherit font-lock-comment-face))))))
+   `(markdown-metadata-value-face ((,class (:inherit font-lock-comment-face))))
+   `(markdown-blockquote-face ((,class (:foreground ,light-grey))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
