@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/jorgenschaefer/emacs-buttercup.git
 
 Updating /mnt/store/melpa/working/buttercup/
-Checking out 21ded874f7af380b593776eac06a87cf7f7ae439
+Checking out 07a52c99695845a0089e828d43da154c0ba0c178
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/buttercup/
-  to /tmp/buttercupkIhMlc/buttercup-20221227.1857
+  to /tmp/buttercup2CsYmq/buttercup-20230119.2337
     buttercup-compat.el -> buttercup-compat.el
     buttercup.el -> buttercup.el
     bin => bin
-Created buttercup-20221227.1857.tar containing:
-  buttercup-20221227.1857/
-  buttercup-20221227.1857/bin/
-  buttercup-20221227.1857/bin/buttercup
-  buttercup-20221227.1857/bin/buttercup.bat
-  buttercup-20221227.1857/buttercup-compat.el
-  buttercup-20221227.1857/buttercup-pkg.el
-  buttercup-20221227.1857/buttercup.el
-Built buttercup in 4.524s, finished at 2023-01-19T22:39:01+0000
+Created buttercup-20230119.2337.tar containing:
+  buttercup-20230119.2337/
+  buttercup-20230119.2337/bin/
+  buttercup-20230119.2337/bin/buttercup
+  buttercup-20230119.2337/bin/buttercup.bat
+  buttercup-20230119.2337/buttercup-compat.el
+  buttercup-20230119.2337/buttercup-pkg.el
+  buttercup-20230119.2337/buttercup.el
+Built buttercup in 5.541s, finished at 2023-01-20T02:28:08+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  374 Jan 19 22:39 packages/buttercup-20221227.1857.entry
 112K -rw-r--r-- 1 root root 110K Jan 19 22:39 packages/buttercup-20221227.1857.tar
+4.0K -rw-r--r-- 1 root root  374 Jan 20 02:28 packages/buttercup-20230119.2337.entry
+112K -rw-r--r-- 1 root root 110K Jan 20 02:28 packages/buttercup-20230119.2337.tar

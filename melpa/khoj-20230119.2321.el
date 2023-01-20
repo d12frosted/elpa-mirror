@@ -5,8 +5,8 @@
 ;; Author: Debanjum Singh Solanky <debanjum@gmail.com>
 ;; Description: Natural, Incremental Search for your Second Brain
 ;; Keywords: search, org-mode, outlines, markdown, beancount, ledger, image
-;; Package-Version: 20230119.611
-;; Package-Commit: b58dd82141d6ae2d452cde6aeb6d66e4bc1d9754
+;; Package-Version: 20230119.2321
+;; Package-Commit: 7516435a0ba5229968582869dd5da59b4900413c
 ;; Version: 0.2.2
 ;; Package-Requires: ((emacs "27.1") (transient "0.3.0"))
 ;; URL: https://github.com/debanjum/khoj/tree/master/src/interface/emacs
@@ -392,7 +392,7 @@ Render results in BUFFER-NAME."
   ;; set content type to last used or based on current buffer or to default
   :init-value (lambda (obj) (oset obj value (format "--content-type=%s" (or khoj--content-type (khoj--buffer-name-to-content-type (buffer-name))))))
   ;; dynamically set choices to content types enabled on khoj backend
-  :choices (mapcar #'symbol-name (khoj--get-enabled-content-types)))
+  :choices (or (ignore-errors (mapcar #'symbol-name (khoj--get-enabled-content-types))) '("org" "markdown" "ledger" "music" "image")))
 
 (transient-define-suffix khoj--search-command (&optional args)
   (interactive (list (transient-args transient-current-command)))

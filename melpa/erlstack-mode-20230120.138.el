@@ -2,8 +2,8 @@
 
 ;; Author: k32
 ;; Keywords: tools, erlang
-;; Package-Version: 20220617.2049
-;; Package-Commit: a4a30f74e48894ccfdefc073a9e1b005ee632017
+;; Package-Version: 20230120.138
+;; Package-Commit: 15ff3797d817361da3c2e65ba7014cceed50c7a3
 ;; Version: 0.2.0
 ;; Homepage: https://github.com/k32/erlstack-mode
 ;; Package-Requires: ((emacs "25.1") (dash "2.12.0"))
@@ -142,7 +142,8 @@
     erlstack-locate-otp
     erlstack-locate-abspath
     erlstack-locate-existing-buffer)
-  "A hook that is used to locate source code paths of Erlang modules."
+  "List of functions used to search the source code of the Erlang modules.
+Search runs these functions until one of them returns a result."
   :options '(erlstack-locate-abspath
              erlstack-locate-otp
              erlstack-locate-projectile
@@ -161,7 +162,7 @@ alternative"
   :type 'hook)
 
 (defcustom erlstack-lookup-window 300
-  "Size of lookup window."
+  "Size of the lookup window."
   :group 'erlstack
   :type 'integer)
 
@@ -174,6 +175,14 @@ alternative"
   "Overlay delay, in seconds"
   :group 'erlstack
   :type 'float)
+
+(defcustom erlstack-popup-window-alist
+  '((display-buffer-reuse-window . nil)
+    (display-buffer-reuse-mode-window . (mode . erlang))
+    (display-buffer-pop-up-window . (inhibit-same-window . t)))
+  "`display-buffer' alist used for the erlstack-mode preview window."
+  :type 'sexp
+  :group 'erlstack)
 
 ;;; Faces:
 
@@ -229,7 +238,7 @@ alternative"
                                  (line-beginning-position)
                                  (line-end-position)))
     (overlay-put erlstack--code-overlay 'face 'erlstack-active-frame)
-    (setq erlstack--code-window (display-buffer erlstack--code-buffer `(nil . ((inhibit-same-window . ,pop-up-windows)))))
+    (setq erlstack--code-window (display-buffer erlstack--code-buffer erlstack-popup-window-alist))
     (setq erlstack--code-window-active t)
     (set-window-point erlstack--code-window erlstack--code-buffer-posn)))
 
@@ -369,13 +378,12 @@ drectory or `nil' otherwise."
 (defun erlstack-locate-otp (query _line)
   "Try searching for module QUERY in the OTP sources."
   (let ((query- (file-name-nondirectory query)))
-    (if (not (string= "" erlstack-otp-src-path))
-        (erlstack--cache-otp-files
-         query-
-         `(directory-files-recursively erlstack-otp-src-path
-                                       ,(concat "^" query- "$")))
-      (message "erlstack-mode: OTP path not specified")
-      nil)))
+    (when (and (string> erlstack-otp-src-path "")
+               (file-directory-p erlstack-otp-src-path))
+      (erlstack--cache-otp-files
+       query-
+       `(directory-files-recursively erlstack-otp-src-path
+                                     ,(concat "^" query- "$"))))))
 
 (erlstack-define-cache global projectile
   :test 'equal)
@@ -407,6 +415,7 @@ the line of the code"
  :lighter " \u2622"
  :global t
  :require 'erlstack-mode
+ :group 'erlstack
  (if erlstack-mode
      (add-hook 'post-command-hook #'erlstack-run-at-point)
    (remove-hook 'post-command-hook #'erlstack-run-at-point)))
