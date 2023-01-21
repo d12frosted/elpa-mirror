@@ -1,1 +1,1 @@
-logcat interface for emacs
+logcat interface for Emacs

@@ -5,8 +5,8 @@
 
 ;; Authors: Shen, Jen-Chieh <jcs090218@gmail.com>, Trey Peacock <git@treypeacock.com>
 ;; URL: https://github.com/emacs-languagetool/flymake-languagetool
-;; Package-Version: 20221231.1658
-;; Package-Commit: d995f90aac2d10baa617f4de5c6e40bc37e63f76
+;; Package-Version: 20230121.314
+;; Package-Commit: 718b71ad1beabd7318df7b325f7316a24a821ef9
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "27.1") (s "1.9.0"))
 ;; Keywords: convenience grammar check
@@ -240,12 +240,12 @@ non-nil."
     (dolist (error errors)
       (let-alist error
         (unless (and faces (flymake-languagetool--ignore-at-pos-p
-                            (+ .offset 1)
+                            (+ .offset (point-min))
                             source-buffer faces))
           (push (flymake-make-diagnostic
                  source-buffer
-                 (+ .offset 1)
-                 (+ .offset .length 1)
+                 (+ .offset (point-min))
+                 (+ .offset .length (point-min))
                  (if flymake-languagetool-use-categories
                      (map-elt flymake-languagetool-category-map
                               .rule.category.id)

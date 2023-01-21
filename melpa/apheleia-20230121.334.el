@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20221224.1704
-;; Package-Commit: 5ebd6bf5819fbf2adfa18162f270825e6ca4379c
+;; Package-Version: 20230121.334
+;; Package-Commit: 93d2b30dd08c43edde6bdbbd36f42da751bc0975
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.1
@@ -1165,7 +1165,6 @@ function: %s" command)))
     (rustic-mode . rustfmt)
     (rust-mode . rustfmt)
     (scss-mode . prettier-scss)
-    (sh-mode . shfmt)
     (terraform-mode . terraform)
     (TeX-latex-mode . latexindent)
     (TeX-mode . latexindent)
