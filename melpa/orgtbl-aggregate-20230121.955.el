@@ -1,4 +1,4 @@
-;;; orgtbl-aggregate.el --- Create an aggregated Org table from another one  -*- coding:utf-8;-*-
+;;; orgtbl-aggregate.el --- Create an aggregated Org table from another one  -*- coding:utf-8; lexical-binding: t;-*-
 
 ;; Copyright (C) 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022  Thierry Banel
 
@@ -11,11 +11,13 @@
 ;;   Uwe Brauer
 ;;   Peking Duck
 ;;   Bill Hunker
+;; Package-Requires: ((emacs "26.1"))
+;; Package-Version: 20230121.955
+;; Package-Commit: 0620da55379ff2ee9fa7a90b2c4e4a933b779619
 
 ;; Version: 1.0
-;; Package-Version: 20220928.1944
-;; Package-Commit: 068973339af3714ea015501f0fcc35014f255c1a
-;; Keywords: org, table, aggregation, filtering
+;; Keywords: data, extensions
+;; URL: https://github.com/tbanel/orgaggregate/blob/master/README.org
 
 ;; orgtbl-aggregate is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -72,7 +74,7 @@
 ;; #+END
 ;;
 ;; A wizard can be used:
-;; M-x org-insert-dblock:aggregate
+;; M-x orgtbl-aggregate-insert-dblock-aggregate
 ;;
 ;; Full documentation here:
 ;;   https://github.com/tbanel/orgaggregate/blob/master/README.org
@@ -95,24 +97,27 @@
 ;; a cons at the head of the list is used for housekeeping
 ;; the actual list is (cdr ls)
 
-(defsubst -appendable-list-create ()
+(defsubst orgtbl-aggregate--list-create ()
+  "Create an appendable list."
   (let ((x (cons nil nil)))
     (setcar x x)))
 
-(defmacro -appendable-list-append (ls value)
+(defmacro orgtbl-aggregate--list-append (ls value)
+  "Append VALUE at the end of LS in O(1) time."
   `(setcar ,ls (setcdr (car ,ls) (cons ,value nil))))
 
-(defmacro -appendable-list-get (ls)
+(defmacro orgtbl-aggregate--list-get (ls)
+  "Return the regular Lisp list from LS."
   `(cdr ,ls))
 
-(defmacro pop-simple (place)
-  "like pop, but without returning (car place)"
+(defmacro orgtbl-aggregate--pop-simple (place)
+  "Like (pop PLACE), but without returning (car PLACE)."
   `(setq ,place (cdr ,place)))
 
-(defmacro orgtbl-pop-leading-hline (table)
-  "Remove leading hlines from the table, if any" 
+(defmacro orgtbl-aggregate--pop-leading-hline (table)
+  "Remove leading hlines from TABLE, if any."
   `(while (not (listp (car ,table)))
-     (pop-simple ,table)))
+     (orgtbl-aggregate--pop-simple ,table)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; The function (org-table-to-lisp) have been greatly enhanced
@@ -121,9 +126,8 @@
 ;; this function is copied here with a slightly different name
 ;; It has also undergone near 2x speedup
 
-(defun org-table-to-lisp-post-9-4 (&optional txt)
+(defun orgtbl-aggregate--table-to-lisp-post-9-4 (&optional txt)
   "Convert the table at point to a Lisp structure.
-
 The structure will be a list.  Each item is either the symbol `hline'
 for a horizontal separator line, or a list of field values as strings.
 The table is taken from the parameter TXT, or from the buffer at point."
@@ -132,7 +136,7 @@ The table is taken from the parameter TXT, or from the buffer at point."
 	(buffer-disable-undo)
         (insert txt)
         (goto-char (point-min))
-        (org-table-to-lisp-post-9-4))
+        (orgtbl-aggregate--table-to-lisp-post-9-4))
     (save-excursion
       (goto-char (org-table-begin))
       (let ((inhibit-changing-match-data t)
@@ -160,7 +164,7 @@ The table is taken from the parameter TXT, or from the buffer at point."
 ;; generic enough to be detached from the orgtbl-aggregate package.
 ;; For the time being, they are here.
 
-(defun orgtbl-list-local-tables ()
+(defun orgtbl-aggregate--list-local-tables ()
   "Search for available tables in the current file."
   (interactive)
   (let ((tables))
@@ -175,9 +179,9 @@ The table is taken from the parameter TXT, or from the buffer at point."
 	(push (match-string-no-properties 1) tables)))
     tables))
 
-(defun orgtbl-get-distant-table (name-or-id)
-  "Find a table in the current buffer named NAME-OR-ID
-and returns it as a lisp list of lists.
+(defun orgtbl-aggregate--get-distant-table (name-or-id)
+  "Find a table in the current buffer named NAME-OR-ID.
+Return it as a Lisp list of lists.
 An horizontal line is translated as the special symbol `hline'."
   (unless (stringp name-or-id)
     (setq name-or-id (format "%s" name-or-id)))
@@ -212,16 +216,16 @@ An horizontal line is translated as the special symbol `hline'."
 	(unless (and (re-search-forward "^\\(\\*+ \\)\\|[ \t]*|" nil t)
 		     (not (match-beginning 1)))
 	  (user-error "Cannot find a table at NAME or ID %s" name-or-id))
-	(org-table-to-lisp-post-9-4)))))
+	(orgtbl-aggregate--table-to-lisp-post-9-4)))))
 
-(defun split-string-with-quotes (string)
-  "Like `split-string', but also allows single or double quotes
-to protect space characters, and also single quotes to protect
-double quotes and the other way around"
+(defun orgtbl-aggregate--split-string-with-quotes (string)
+  "Like (split-string STRING), but with quote protection.
+Single and double quotes protect space characters,
+and also single quotes protect double quotes
+and the other way around."
   (let ((l (length string))
 	(start 0)
-	(result (-appendable-list-create))
-	)
+	(result (orgtbl-aggregate--list-create)))
     (save-match-data
       (while (and (< start l)
 		  (string-match
@@ -233,13 +237,14 @@ double quotes and the other way around"
 			 (seq ?\" (* (not (any ?\"))) ?\")
 			 (not (any " '\""))))))
 		   string start))
-	(-appendable-list-append result (match-string 1 string))
-	(setq start (match-end 1))
-	))
-    (-appendable-list-get result)))
+	(orgtbl-aggregate--list-append result (match-string 1 string))
+	(setq start (match-end 1))))
+    (orgtbl-aggregate--list-get result)))
 
-(defun orgtbl-colname-to-int (colname table &optional err)
-  "Convert the column name into an integer (first column is numbered 1)
+(defun orgtbl-aggregate--colname-to-int (colname table &optional err)
+  "Convert the COLNAME into an integer.
+COLNAME is a column name of TABLE.
+The first column is numbered 1.
 COLNAME may be:
 - a dollar form, like $5 which is converted to 5
 - an alphanumeric name which appears in the column header (if any)
@@ -261,7 +266,7 @@ otherwise nil is returned."
        colname)
       (setq colname (match-string 1 colname)))
   ;; skip first hlines if any
-  (orgtbl-pop-leading-hline table)
+  (orgtbl-aggregate--pop-leading-hline table)
   (cond ((equal colname "")
 	 (and err (user-error "Empty column name")))
 	((equal colname "hline")
@@ -282,21 +287,20 @@ otherwise nil is returned."
 	   err
 	   (user-error "Column %s not found in table" colname))))))
 
-(defun orgtbl-insert--make-spaces (n spaces-cache)
-  "Makes a string of N spaces.
-Caches results to avoid re-allocating again and again
-the same string"
+(defun orgtbl-aggregate--insert-make-spaces (n spaces-cache)
+  "Make a string of N spaces.
+Caches results into SPACES-CACHE to avoid re-allocating
+again and again the same string."
   (if (< n (length spaces-cache))
       (or (aref spaces-cache n)
 	  (aset spaces-cache n (make-string n ? )))
     (make-string n ? )))
 
-(defun orgtbl-insert-elisp-table (table)
+(defun orgtbl-aggregate--insert-elisp-table (table)
   "Insert TABLE in current buffer at point.
 TABLE is a list of lists of cells.  The list may contain the
 special symbol 'hline to mean an horizontal line."
-  (let* ((nbrows (length table))
-	 (nbcols (cl-loop
+  (let* ((nbcols (cl-loop
 		  for row in table
 		  maximize (if (listp row) (length row) 0)))
 	 (maxwidths  (make-list nbcols 1))
@@ -331,7 +335,7 @@ special symbol 'hline to mean an horizontal line."
 	     (setcar nu (< (car nu) (* org-table-number-fraction ne))))
 
     ;; inactivating jit-lock-after-change boosts performance a lot
-    (cl-letf (((symbol-function 'jit-lock-after-change) (lambda (a b c)) ))
+    (cl-letf (((symbol-function 'jit-lock-after-change) (lambda (_a _b _c)) ))
       ;; insert well padded and aligned cells at current buffer position
       (cl-loop for row in table
 	       do
@@ -354,10 +358,10 @@ special symbol 'hline to mean an horizontal line."
 			       ;; left alignment
 			       else if nu
 			       collect cell and
-			       collect (orgtbl-insert--make-spaces pad spaces-cache)
+			       collect (orgtbl-aggregate--insert-make-spaces pad spaces-cache)
 			       ;; right alignment
 			       else
-			       collect (orgtbl-insert--make-spaces pad spaces-cache) and
+			       collect (orgtbl-aggregate--insert-make-spaces pad spaces-cache) and
 			       collect cell
 			       collect " ")
 		    (cl-loop for bar = "|" then "+"
@@ -367,17 +371,17 @@ special symbol 'hline to mean an horizontal line."
 		  (list "|\n"))
 		 ""))))))
 
-(defun orgtbl-get-header-table (table &optional asstring)
-  "Return the header of TABLE as a list of column names. When
-ASSTRING is true, the result is a string which concatenates the
-names of the columns.  TABLE may be a lisp list of rows, or the
+(defun orgtbl-aggregate--get-header-table (table &optional asstring)
+  "Return the header of TABLE as a list of column names.
+When ASSTRING is true, the result is a string which concatenates the
+names of the columns.  TABLE may be a Lisp list of rows, or the
 name or id of a distant table.  The function takes care of
-possibly missing headers, and in this case returns a list of $1,
-$2, $3... column names.  Actual column names which are not fully
-alphanumeric are quoted."
+possibly missing headers, and in this case returns a list
+of $1, $2, $3... column names.
+Actual column names which are not fully alphanumeric are quoted."
   (unless (consp table)
-    (setq table (orgtbl-get-distant-table table)))
-  (orgtbl-pop-leading-hline table)
+    (setq table (orgtbl-aggregate--get-distant-table table)))
+  (orgtbl-aggregate--pop-leading-hline table)
   (let ((header
 	 (if (memq 'hline table)
 	     (cl-loop for x in (car table)
@@ -385,7 +389,7 @@ alphanumeric are quoted."
 		      (if (string-match "^[[:word:]_$.]+$" x)
 			  x
 			(format "\"%s\"" x)))
-	   (cl-loop for x in (car table)
+	   (cl-loop for _x in (car table)
 		    for i from 1
 		    collect (format "$%s" i)))))
     (if asstring
@@ -395,10 +399,34 @@ alphanumeric are quoted."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; The venerable Calc is used thoroughly by the Aggregate package.
 ;; A few bugs were found.
-;; The fixes are here for the time being
+;; They have been fixed in recent versions of Emacs
+;; Uncomment the fixes if needed
+;(defun math-max-list (a b)
+;  (if b
+;      (if (or (Math-anglep (car b)) (eq (caar b) 'date)
+;	      (and (eq (car (car b)) 'intv) (math-intv-constp (car b)))
+;	      (math-infinitep (car b)))
+;	  (math-max-list (math-max a (car b)) (cdr b))
+;	(math-reject-arg (car b) 'anglep))
+;    a))
+;
+;(defun math-min-list (a b)
+;  (if b
+;      (if (or (Math-anglep (car b)) (eq (caar b) 'date)
+;	      (and (eq (car (car b)) 'intv) (math-intv-constp (car b)))
+;	      (math-infinitep (car b)))
+;	  (math-min-list (math-min a (car b)) (cdr b))
+;	(math-reject-arg (car b) 'anglep))
+;    a))
+;; End of Calc fixes
 
-(defun orgtbl-post-process (table post)
-  "Post-process the aggregated TABLE according to the :post header
+;; The *this* variable is accessible to the user.
+;; It refers to the aggregated table before it is "printed"
+;; into the buffer, so that it can be post-processed.
+(defvar *this*)
+
+(defun orgtbl-aggregate--post-process (table post)
+  "Post-process the aggregated TABLE according to the :post header.
 POST might be:
 - a reference to a babel-block, for example:
   :post \"myprocessor(inputtable=*this*)\"
@@ -425,7 +453,7 @@ with an Org Mode table."
 	  (org-babel-ref-resolve post)
 	(error
 	 (message "error: %S" err)
-	 (orgtbl-post-process table (read post))))))
+	 (orgtbl-aggregate--post-process table (read post))))))
    ((listp post)
     (let ((*this* table))
       (eval post)))
@@ -433,49 +461,32 @@ with an Org Mode table."
 
 (require 'calc-arith)
 
-(defun math-max-list (a b)
-  (if b
-      (if (or (Math-anglep (car b)) (eq (caar b) 'date)
-	      (and (eq (car (car b)) 'intv) (math-intv-constp (car b)))
-	      (math-infinitep (car b)))
-	  (math-max-list (math-max a (car b)) (cdr b))
-	(math-reject-arg (car b) 'anglep))
-    a))
-
-(defun math-min-list (a b)
-  (if b
-      (if (or (Math-anglep (car b)) (eq (caar b) 'date)
-	      (and (eq (car (car b)) 'intv) (math-intv-constp (car b)))
-	      (math-infinitep (car b)))
-	  (math-min-list (math-min a (car b)) (cdr b))
-	(math-reject-arg (car b) 'anglep))
-    a))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; The Org Table Aggregation package really begins here
 
-(defun orgtbl-to-aggregated-replace-colnames-nth (table expression)
-  "Replace occurrences of column names in lisp EXPRESSION with
-forms like (nth N row), N being the numbering of columns.  Doing
-so, the EXPRESSION is ready to be computed against a table row."
+(defun orgtbl-aggregate--replace-colnames-nth (table expression)
+  "Replace occurrences of column names in Lisp EXPRESSION.
+Replacements are forms like (nth N row),
+N being the numbering of columns.
+Doing so, EXPRESSION is ready to be computed against a TABLE row."
   (cond
    ((listp expression)
     (cons (car expression)
 	  (cl-loop for x in (cdr expression)
 		   collect
-		   (orgtbl-to-aggregated-replace-colnames-nth table x))))
+		   (orgtbl-aggregate--replace-colnames-nth table x))))
    ((numberp expression)
     expression)
    (t
-    (let ((n (orgtbl-colname-to-int expression table)))
+    (let ((n (orgtbl-aggregate--colname-to-int expression table)))
       (if n
-	  (list 'nth n 'row)
+	  (list 'nth n 'orgtbl-aggregate--row)
 	expression)))))
 
 ;; dynamic binding
-(defvar orgtbl-aggregate-var-keycols)
+(defvar orgtbl-aggregate--var-keycols)
 
-(cl-defstruct outcol
+(cl-defstruct orgtbl-aggregate--outcol
   formula	; user-entered formula to compute output cells
   format	; user-entered formatter of output cell
   sort		; user-entered sorting instruction for output column
@@ -487,13 +498,15 @@ so, the EXPRESSION is ready to be computed against a table row."
   key		; is this output column a key-column?
   )
 
-(defun orgtbl-aggregate-parse-col (col table)
-  "COL is a column specification. It is a string text:
+(defun orgtbl-aggregate--parse-col (col table)
+  "Parse COL specification into an ORGTBL-AGGREGATE--OUTCOL structure.
+COL is a column specification.  It is a string text:
 \"formula;formatter;^sorting;<invisible>;'alternate_name'\"
-This function parses it into a (outcol) structure
 If there is no formatter or sorting or other specifier,
-nil is given in place. The other fields of outcol are
-filled here too, and nowhere else."
+nil is given in place. The other fields of orgtbl-aggregate--OUTCOL are
+filled here too, and nowhere else.
+TABLE is used to convert a column name
+into the column number."
   ;; parse user specification
   (unless (string-match
 	   (rx
@@ -543,11 +556,11 @@ filled here too, and nowhere else."
 			  "min" "max" "prod" "pvar" "sdev" "psdev"
 			  "corr" "cov" "pcov" "count" "span" "var"))
 		       ;; aggregate functions with or without the leading "v"
-		       ;; sum(X) and vsum(X) are equivalent
+		       ;; for example, sum(X) and vsum(X) are equivalent
 		       (format "v%s" var)
 		     var)
 		 ;; replace VAR if it is a column name
-		 (let ((i (orgtbl-colname-to-int
+		 (let ((i (orgtbl-aggregate--colname-to-int
 			   var
 			   table)))
 		   (if i
@@ -583,11 +596,11 @@ filled here too, and nowhere else."
 		     (+ (any word "_$."))))
 		eol)
 	       formula)
-	      (orgtbl-colname-to-int formula table t))))
+	      (orgtbl-aggregate--colname-to-int formula table t))))
 
-    (if key (push key orgtbl-aggregate-var-keycols))
+    (if key (push key orgtbl-aggregate--var-keycols))
 
-    (make-outcol
+    (make-orgtbl-aggregate--outcol
      :formula      formula
      :format       format
      :sort         sort
@@ -599,87 +612,108 @@ filled here too, and nowhere else."
      :key          key)))
 
 ;; dynamic binding
-(defvar orgtbl-aggregate-columns-sorting)
+(defvar orgtbl-aggregate--columns-sorting)
 
-(cl-defstruct sorting
+(cl-defstruct orgtbl-aggregate--sorting
   strength
   colnum
   ascending
   extract
   compare)
 
-(defun orgtbl-aggregate-prepare-sorting (aggcols)
-  "Creates a liste of columns to be sorted into
-orgtbl-aggregate-columns-sorting.
-The liste contains sorting specifications as follows:
-(sorting-strength
- column-number
- ascending-descending
- extract-function
- compare-function)
-- sorting-strength is a number telling what column should be
+(defun orgtbl-aggregate--prepare-sorting (aggcols)
+  "Create a list of columns to be sorted.
+Columns are searched into AGGCOLS.
+The resulting list will be used by
+`orgtbl-aggregate--columns-sorting'.
+The list contains sorting specifications as follows:
+  . sorting strength
+  . column number
+  . ascending descending
+  . extract function
+  . compare function
+- sorting strength is a number telling what column should be
   considered first:
   . lower number are considered first
   . nil are condirered last
-- column-number is as in the user specification
+- column number is as in the user specification
   1 is the first user specified column
-- ascending-descending is nil for ascending, t for descending
-- extract-function converts the input cell (which is a string)
+- ascending descending is nil for ascending, t for descending
+- extract function converts the input cell (which is a string)
   into a comparable value
-- compare-function compares two cells and answers nil if
-  the first cell must come before the second"
+- compare function compares two cells and answers nil if
+  the first cell must come before the second."
   (cl-loop for col in aggcols
-	   for sorting = (outcol-sort col)
+	   for sorting = (orgtbl-aggregate--outcol-sort col)
 	   for colnum from 0
 	   if sorting
 	   do (progn
-		(unless (string-match (rx bol (group (any "aAnNtTfF")) (group (* (any num))) eol) sorting)
-		  (user-error "Bad sorting specification: ^%s, expecting a/A/n/N/t/T and an optional number" sorting))
-		(-appendable-list-append
-		 orgtbl-aggregate-columns-sorting
-		 (let ((strength 
+		(unless (string-match
+                         (rx bol (group (any "aAnNtTfF")) (group (* (any num))) eol)
+                         sorting)
+		  (user-error
+                   "Bad sorting specification: ^%s, expecting a/A/n/N/t/T and an optional number"
+                   sorting))
+		(orgtbl-aggregate--list-append
+		 orgtbl-aggregate--columns-sorting
+		 (let ((strength
 			(if (equal (match-string 2 sorting) "")
 			    nil
 			  (string-to-number (match-string 2 sorting)))))
 		   (pcase (match-string 1 sorting)
-		     ("a" (record 'sorting strength colnum nil 'identity                        'string-lessp))
-		     ("A" (record 'sorting strength colnum t   'identity                        'string-lessp))
-		     ("n" (record 'sorting strength colnum nil 'string-to-number                '<           ))
-		     ("N" (record 'sorting strength colnum t   'string-to-number                '<           ))
-		     ("t" (record 'sorting strength colnum nil 'orgtbl-aggregate-string-to-time '<           ))
-		     ("T" (record 'sorting strength colnum t   'orgtbl-aggregate-string-to-time '<           ))
+		     ("a" (record 'orgtbl-aggregate--sorting strength colnum nil #'identity              #'string-lessp))
+		     ("A" (record 'orgtbl-aggregate--sorting strength colnum t   #'identity              #'string-lessp))
+		     ("n" (record 'orgtbl-aggregate--sorting strength colnum nil #'string-to-number                 #'<))
+		     ("N" (record 'orgtbl-aggregate--sorting strength colnum t   #'string-to-number                 #'<))
+		     ("t" (record 'orgtbl-aggregate--sorting strength colnum nil #'orgtbl-aggregate--string-to-time #'<))
+		     ("T" (record 'orgtbl-aggregate--sorting strength colnum t   #'orgtbl-aggregate--string-to-time #'<))
 		     ((or "f" "F") (user-error "f/F sorting specification not (yet) implemented"))
 		     (_ (user-error "Bad sorting specification ^%s" sorting)))))))
 
   ;; major sorting columns must come before minor sorting columns
-  (setq orgtbl-aggregate-columns-sorting
-	(sort (-appendable-list-get orgtbl-aggregate-columns-sorting)
+  (setq orgtbl-aggregate--columns-sorting
+	(sort (orgtbl-aggregate--list-get orgtbl-aggregate--columns-sorting)
 	      (lambda (a b)
-		(if      (null (sorting-strength a))
-		    (and (null (sorting-strength b))
-			 (<      (sorting-colnum   a) (sorting-colnum   b)))
-		  (or    (null (sorting-strength b))
-		         (<      (sorting-strength a) (sorting-strength b))
-			 (and (= (sorting-strength a) (sorting-strength b))
-			      (< (sorting-colnum   a) (sorting-colnum   b)))))))
-	))
+		(if      (null   (orgtbl-aggregate--sorting-strength a))
+		    (and (null   (orgtbl-aggregate--sorting-strength b))
+			 (<      (orgtbl-aggregate--sorting-colnum   a)
+                                 (orgtbl-aggregate--sorting-colnum   b)))
+		  (or    (null   (orgtbl-aggregate--sorting-strength b))
+		         (<      (orgtbl-aggregate--sorting-strength a)
+                                 (orgtbl-aggregate--sorting-strength b))
+			 (and (= (orgtbl-aggregate--sorting-strength a)
+                                 (orgtbl-aggregate--sorting-strength b))
+			      (< (orgtbl-aggregate--sorting-colnum   a)
+                                 (orgtbl-aggregate--sorting-colnum   b)))))))))
 
-(defun orgtbl-to-aggregated-table-add-group (groups hgroups row aggcond)
+;; escape lexical binding to eval user given
+;; Lisp expression
+(defvar orgtbl-aggregate--row)
+
+(defun orgtbl-aggregate--table-add-group (groups hgroups row aggcond)
   "Add the source ROW to the GROUPS of rows.
 If ROW fits a group within GROUPS, then it is added at the end
-of this group. Otherwise a new group is added at the end of GROUPS,
-containing this single ROW."
+of this group.
+Otherwise a new group is added at the end of GROUPS,
+containing this single ROW.
+AGGCOND is a formula which is evaluated against ROW.
+If nil, ROW is just discarded.
+HGROUPS contains the same information as GROUPS, stored in
+a hash-table, whereas GROUPS is a Lisp list."
   (and (or (not aggcond)
-	   (eval aggcond)) ;; this eval need the variable 'row to have a value
+	   (let ((orgtbl-aggregate--row row))
+             ;; this eval need the variable 'orgtbl-aggregate--row
+             ;; to have a value
+             (eval aggcond)))
        (let ((gr (gethash row hgroups)))
 	 (unless gr
-	   (setq gr (-appendable-list-create))
+	   (setq gr (orgtbl-aggregate--list-create))
 	   (puthash row gr hgroups)
-	   (-appendable-list-append groups gr))
-	 (-appendable-list-append gr row))))
+	   (orgtbl-aggregate--list-append groups gr))
+	 (orgtbl-aggregate--list-append gr row))))
 
-(defun orgtbl-aggregate-read-calc-expr (expr)
-  "Interpret a string as either an org date or a calc expression"
+(defun orgtbl-aggregate--read-calc-expr (expr)
+  "Interpret EXPR (a string) as either an org date or a calc expression."
   (cond
    ;; nil happens when a table is malformed
    ;; some columns are missing in some rows
@@ -721,10 +755,9 @@ containing this single ROW."
      (calcFunc-expand
       (math-read-expr expr))))))
 
-(defun orgtbl-aggregate-hash-test-equal (row1 row2)
-  "Are two rows from the source table equal regarding the
-key columns?"
-  (cl-loop for idx in orgtbl-aggregate-var-keycols
+(defun orgtbl-aggregate--hash-test-equal (row1 row2)
+  "Are ROW1 & ROW2 equal regarding the key columns?"
+  (cl-loop for idx in orgtbl-aggregate--var-keycols
 	   always (string= (nth idx row1) (nth idx row2))))
 
 ;; for hashes, try to stay within the 2^29 fixnums
@@ -732,45 +765,46 @@ key columns?"
 ;; { prime_next 123 ==> 127 }
 ;; { prime_prev ((2^29 - 256) / 127 ) ==> 4227323 }
 
-(defun orgtbl-aggregate-hash-test-hash (row)
-  "Compute a hash code from key columns."
+(defun orgtbl-aggregate--hash-test-hash (row)
+  "Compute a hash code for ROW from key columns."
   (let ((h 45235))
-    (cl-loop for idx in orgtbl-aggregate-var-keycols
+    (cl-loop for idx in orgtbl-aggregate--var-keycols
 	     do
 	     (cl-loop for c across (nth idx row)
 		      do (setq h (% (* (+ h c) 127) 4227323))))
     h))
 
-(defun orgtbl-create-table-aggregated (table params)
-  "Convert the source TABLE, which is a list of lists of cells,
-into an aggregated table compliant with the columns
-specifications (in PARAMS entry :cols), ignoring source rows
-which do not pass the filter (in PARAMS entry :cond)."
-  (orgtbl-pop-leading-hline table)
+(defun orgtbl-aggregate--create-table-aggregated (table params)
+  "Convert the source TABLE into an aggregated table.
+The source TABLE is a list of lists of cells.
+The resulting table follows the specifications,
+found in PARAMS entry :cols, ignoring source rows
+which do not pass the filter found in PARAMS entry :cond."
+  (orgtbl-aggregate--pop-leading-hline table)
   (define-hash-table-test
-    'orgtbl-aggregate-hash-test-name
-    'orgtbl-aggregate-hash-test-equal
-    'orgtbl-aggregate-hash-test-hash)
-  (let ((groups (-appendable-list-create))
-	(hgroups (make-hash-table :test 'orgtbl-aggregate-hash-test-name))
+    'orgtbl-aggregate--hash-test-name
+    #'orgtbl-aggregate--hash-test-equal
+    #'orgtbl-aggregate--hash-test-hash)
+  (let ((groups (orgtbl-aggregate--list-create))
+	(hgroups (make-hash-table :test 'orgtbl-aggregate--hash-test-name))
 	(aggcols (plist-get params :cols))
 	(aggcond (plist-get params :cond))
 	(hline   (plist-get params :hline))
 	;; a global variable, passed to the sort predicate
-	(orgtbl-aggregate-columns-sorting (-appendable-list-create))
+	(orgtbl-aggregate--columns-sorting (orgtbl-aggregate--list-create))
 	;; another global variable
-	(orgtbl-aggregate-var-keycols))
+	(orgtbl-aggregate--var-keycols))
     (unless aggcols
-      (setq aggcols (orgtbl-get-header-table table)))
+      (setq aggcols (orgtbl-aggregate--get-header-table table)))
     (if (stringp aggcols)
-	(setq aggcols (split-string-with-quotes aggcols)))
+	(setq aggcols (orgtbl-aggregate--split-string-with-quotes aggcols)))
     (cl-loop for col on aggcols
-	     do (setcar col (orgtbl-aggregate-parse-col (car col) table)))
+	     do (setcar col (orgtbl-aggregate--parse-col (car col) table)))
     (when aggcond
       (if (stringp aggcond)
 	  (setq aggcond (read aggcond)))
       (setq aggcond
-	    (orgtbl-to-aggregated-replace-colnames-nth table aggcond)))
+	    (orgtbl-aggregate--replace-colnames-nth table aggcond)))
     (setq hline
 	  (cond ((null hline)
 		 0)
@@ -783,18 +817,20 @@ which do not pass the filter (in PARAMS entry :cond)."
 		((string-match-p "[0-9]+" hline)
 		 (string-to-number hline))
 		(t
-		 (user-error ":hline parameter should be 0, 1, 2, 3, ... or yes, t, no, nil, not %S" hline))))
+		 (user-error
+                  ":hline parameter should be 0, 1, 2, 3, ... or yes, t, no, nil, not %S"
+                  hline))))
 
     ;; special case: no sorting column but :hline 1 required
     ;; then a hidden hline column is added
     (if (and (> hline 0)
 	     (cl-loop for col in aggcols
-		      never (outcol-sort col)))
+		      never (orgtbl-aggregate--outcol-sort col)))
 	(push
-	 (orgtbl-aggregate-parse-col "hline;^n;<>" table)
+	 (orgtbl-aggregate--parse-col "hline;^n;<>" table)
 	 aggcols))
 
-    (orgtbl-aggregate-prepare-sorting aggcols)
+    (orgtbl-aggregate--prepare-sorting aggcols)
 
     ; split table into groups of rows
     (cl-loop with b = 0
@@ -807,86 +843,88 @@ which do not pass the filter (in PARAMS entry :cond)."
 		    (setq b (1+ b)
 			  bs (number-to-string b)))
 		   ((listp row)
-		    (orgtbl-to-aggregated-table-add-group
+		    (orgtbl-aggregate--table-add-group
 		     groups
 		     hgroups
 		     (cons bs row)
 		     aggcond))))
     
     (let ((result ;; pre-allocate all resulting rows
-	   (cl-loop for x in (-appendable-list-get groups)
-		    collect (-appendable-list-create)))
+	   (cl-loop for _x in (orgtbl-aggregate--list-get groups)
+		    collect (orgtbl-aggregate--list-create)))
 	  (all-$list
-	   (cl-loop for x in (-appendable-list-get groups)
+	   (cl-loop for _x in (orgtbl-aggregate--list-get groups)
 		    collect (make-vector (length (car table)) nil))))
       
       ;; inactivating those two functions boosts performance
       (cl-letf (((symbol-function 'math-read-preprocess-string) #'identity)
-		((symbol-function 'calc-input-angle-units) (lambda (x) nil)))
+		((symbol-function 'calc-input-angle-units) (lambda (_x) nil)))
 	;; do aggregation
 	(cl-loop for coldesc in aggcols
 		 do
-		 (orgtbl-to-aggregated-compute-sums-on-one-column
-		  table groups result coldesc all-$list)))
+		 (orgtbl-aggregate--compute-sums-on-one-column
+                  groups result coldesc all-$list)))
 
       ;; sort table according to columns described in
-      ;; orgtbl-aggregate-columns-sorting
-      (if orgtbl-aggregate-columns-sorting ;; are there sorting instructions?
-	  (setq result (sort result #'orgtbl-aggregate-sort-predicate)))
+      ;; orgtbl-aggregate--columns-sorting
+      (if orgtbl-aggregate--columns-sorting ;; are there sorting instructions?
+	  (setq result (sort result #'orgtbl-aggregate--sort-predicate)))
 
       ;; add hlines if requested
       (if (> hline 0)
-	  (orgtbl-aggregate-add-hlines result hline))
+	  (orgtbl-aggregate--add-hlines result hline))
 
       ;; add a header to the resulting table with column names
       ;; as they appear in :cols but without decorations
       (setq result
 	    (cons
-	     (cons nil
-		   (cl-loop for column in aggcols
-			    collect (or
-				     (outcol-name    column)
-				     (outcol-formula column))))
+	     (cons
+              nil
+	      (cl-loop for column in aggcols
+		       collect (or
+				(orgtbl-aggregate--outcol-name    column)
+				(orgtbl-aggregate--outcol-formula column))))
 	     (cons 'hline result)))
 
       ;; remove invisible columns by modifying the table in-place
-      ;; beware! it assumes that the actual list in -appendable-lists
-      ;; is pointed to by the cdr of the -appendable-list
+      ;; beware! it assumes that the actual list in orgtbl-aggregate--lists
+      ;; is pointed to by the cdr of the orgtbl-aggregate--list
       (if (cl-loop for col in aggcols
-		   thereis (outcol-invisible col))
+		   thereis (orgtbl-aggregate--outcol-invisible col))
 	  (cl-loop for row in result
 		   if (consp row)
 		   do (cl-loop for col in aggcols
 			       with cel = row
-			       if (outcol-invisible col)
+			       if (orgtbl-aggregate--outcol-invisible col)
 			       do    (setcdr cel (cddr cel))
-			       else do (pop-simple cel))))
+			       else do (orgtbl-aggregate--pop-simple cel))))
 
       ;; change appendable-lists to regular lists
       (cl-loop for row on result
 	       if (consp (car row))
-	       do (setcar row (-appendable-list-get (car row))))
+	       do (setcar row (orgtbl-aggregate--list-get (car row))))
 
       result)))
 
-(defun orgtbl-aggregate-sort-predicate (linea lineb)
+(defun orgtbl-aggregate--sort-predicate (linea lineb)
   "Compares LINEA & LINEB (which are Org Mode table rows)
-according to orgtbl-aggregate-columns-sorting instructions.
+according to orgtbl-aggregate--columns-sorting instructions.
 Return nil if LINEA already comes before LINEB."
-  (setq linea (-appendable-list-get linea))
-  (setq lineb (-appendable-list-get lineb))
-  (cl-loop for col in orgtbl-aggregate-columns-sorting
-	   for colnum  = (sorting-colnum    col)
-	   for desc    = (sorting-ascending col)
-	   for extract = (sorting-extract   col)
-	   for compare = (sorting-compare   col)
+  (setq linea (orgtbl-aggregate--list-get linea))
+  (setq lineb (orgtbl-aggregate--list-get lineb))
+  (cl-loop for col in orgtbl-aggregate--columns-sorting
+	   for colnum  = (orgtbl-aggregate--sorting-colnum    col)
+	   for desc    = (orgtbl-aggregate--sorting-ascending col)
+	   for extract = (orgtbl-aggregate--sorting-extract   col)
+	   for compare = (orgtbl-aggregate--sorting-compare   col)
 	   for cola = (funcall extract (nth colnum (if desc lineb linea)))
 	   for colb = (funcall extract (nth colnum (if desc linea lineb)))
 	   thereis (funcall compare cola colb)
 	   until   (funcall compare colb cola)))
 
-(defun orgtbl-aggregate-string-to-time (f)
-  "Borrowed from org-table.el"
+(defun orgtbl-aggregate--string-to-time (f)
+  "Interprete the string F into a duration in minutes.
+The code was borrowed from org-table.el."
   (cond ((string-match org-ts-regexp-both f)
 	 (float-time
 	  (org-time-string-to-time (match-string 0 f))))
@@ -895,28 +933,30 @@ Return nil if LINEA already comes before LINEB."
 	 (org-duration-to-minutes (match-string 0 f)))
 	(t 0)))
 
-(defun orgtbl-aggregate-add-hlines (result hline)
-  "Adds hlines to RESULT between different blocks of rows.
-Rows are compared on the first HLINE cells
-of major sorting columns.
+(defun orgtbl-aggregate--add-hlines (result hline)
+  "Add hlines to RESULT between different blocks of rows.
+HLINE is a small number (1 or 2 or 3, maybe more)
+which gives the number of sorted columns to consider
+to split rows blocks with hlines.
 hlines are added in-place"
   (let ((colnums
-	 (cl-loop for col in orgtbl-aggregate-columns-sorting
+	 (cl-loop for col in orgtbl-aggregate--columns-sorting
 		  for n from 1 to hline
-		  collect (sorting-colnum col))))
+		  collect (orgtbl-aggregate--sorting-colnum col))))
     (cl-loop for row on result
 	     unless
 	     (or (null oldrow)
 		 (cl-loop for c in colnums
-			  always (equal
-				  (nth c (-appendable-list-get (car row)))
-				  (nth c (-appendable-list-get (car oldrow))))))
+			  always
+                          (equal
+			   (nth c (orgtbl-aggregate--list-get (car row)))
+			   (nth c (orgtbl-aggregate--list-get (car oldrow))))))
 	     do (setcdr oldrow (cons 'hline (cdr oldrow)))
 	     for oldrow = row)))
 
-(defun orgtbl-aggregate-fmt-settings (fmt)
-  "Converts the FMT user-given format into
-the FMT-SETTINGS assoc list"
+(defun orgtbl-aggregate--fmt-settings (fmt)
+  "Convert the FMT user-given format.
+Result is the FMT-SETTINGS assoc list."
   (let ((fmt-settings (plist-put () :fmt nil)))
     (when fmt
       ;; the following code was freely borrowed from org-table-eval-formula
@@ -967,9 +1007,11 @@ the FMT-SETTINGS assoc list"
 	(plist-put fmt-settings :fmt fmt)))
     fmt-settings))
 
-(defmacro orgtbl-aggregate-calc-setting (setting &optional setting0)
-  "Helper function to retrieve a Calc setting either from
-org-calc-default-modes or from the setting itself"
+(defmacro orgtbl-aggregate--calc-setting (setting &optional setting0)
+  "Retrieve a Calc setting.
+The setting comes either from `org-calc-default-modes'
+or from SETTING itself.
+SETTING0 is a default to use if both fail."
   ;; plist-get would be fine, except that there is no way
   ;; to distinguish a value of nil from no value
   ;; so we fallback to memq
@@ -977,89 +1019,104 @@ org-calc-default-modes or from the setting itself"
      (if x (cadr x)
        (or ,setting ,setting0))))
 
-(defun orgtbl-to-aggregated-compute-sums-on-one-column (table groups result coldesc all-$list)
-  "COLDESC is a formula given by the user in :cols, with an optional format.
-This function applies the formula over all groups of rows.
-Common Calc settings and formats are pre-computed before actually computing sums,
-because they are the same for all groups.
-RESULT is the list of expected resulting rows. At the beginning, all rows are
-empty lists. A cell is appended to every rows at each call of this function."
+(defun orgtbl-aggregate--compute-sums-on-one-column (groups result coldesc all-$list)
+  "Apply COLDESC over all GROUPS of rows.
+COLDESC is a formula given by the user in :cols,
+with an optional format.
+Common Calc settings and formats are pre-computed before
+actually computing sums, because they are the same for all groups.
+RESULT is the list of expected resulting rows.
+At the beginning, all rows are empty lists.
+A cell is appended to every row at each call of this function."
 
   ;; within this (let), we locally set Calc settings that must be active
   ;; for all the calls to Calc:
-  ;; (orgtbl-aggregate-read-calc-expr) and (math-format-value)
-  (let ((calc-internal-prec 	      (orgtbl-aggregate-calc-setting calc-internal-prec))
-	(calc-float-format  	      (orgtbl-aggregate-calc-setting calc-float-format ))
-	(calc-angle-mode    	      (orgtbl-aggregate-calc-setting calc-angle-mode   ))
-	(calc-prefer-frac   	      (orgtbl-aggregate-calc-setting calc-prefer-frac  ))
-	(calc-symbolic-mode 	      (orgtbl-aggregate-calc-setting calc-symbolic-mode))
-	(calc-date-format   	      (orgtbl-aggregate-calc-setting calc-date-format '(YYYY "-" MM "-" DD " " www (" " hh ":" mm))))
-	(calc-display-working-message (orgtbl-aggregate-calc-setting calc-display-working-message))
+  ;; (orgtbl-aggregate--read-calc-expr) and (math-format-value)
+  (let ((calc-internal-prec
+ 	 (orgtbl-aggregate--calc-setting calc-internal-prec))
+	(calc-float-format
+  	 (orgtbl-aggregate--calc-setting calc-float-format ))
+	(calc-angle-mode
+    	 (orgtbl-aggregate--calc-setting calc-angle-mode   ))
+	(calc-prefer-frac
+   	 (orgtbl-aggregate--calc-setting calc-prefer-frac  ))
+	(calc-symbolic-mode
+ 	 (orgtbl-aggregate--calc-setting calc-symbolic-mode))
+	(calc-date-format
+   	 (orgtbl-aggregate--calc-setting calc-date-format '(YYYY "-" MM "-" DD " " www (" " hh ":" mm))))
+	(calc-display-working-message
+         (orgtbl-aggregate--calc-setting calc-display-working-message))
 	(fmt-settings nil)
 	(case-fold-search nil))
 
     ;; get that out of the (let) because its purpose is to override
     ;; what the (let) has set
-    (setq fmt-settings (orgtbl-aggregate-fmt-settings (outcol-format coldesc)))
+    (setq fmt-settings
+          (orgtbl-aggregate--fmt-settings
+           (orgtbl-aggregate--outcol-format coldesc)))
 
-    (cl-loop for group in (-appendable-list-get groups)
+    (cl-loop for group in (orgtbl-aggregate--list-get groups)
 	     for row in result
 	     for $list in all-$list
 	     do
-	     (-appendable-list-append
+	     (orgtbl-aggregate--list-append
 	      row
-	      (orgtbl-to-aggregated-compute-one-sum
-	       table
+	      (orgtbl-aggregate--compute-one-sum
 	       group
 	       coldesc
 	       fmt-settings
 	       $list)))))
 
-(defun orgtbl-to-aggregated-compute-one-sum (table group coldesc fmt-settings $list)
-  "Apply a user given formula to one group of input rows.
-The formula is contained in coldesc-formula-frux.
-Column names have been replaced by Frux(3) forms.
+(defun orgtbl-aggregate--compute-one-sum (group coldesc fmt-settings $list)
+  "Apply a user given formula to one GROUP of input rows.
+COLDESC is a structure where several parameters are packed:
+see (cl-defstruct orgtbl-aggregate--outcol ...).
+Those parameters all describe a single column.
+The formula is contained in COLDESC-formula-frux.
+Column names have been replaced by Frux(1), Frux(2), Frux(3)... forms.
 Those Frux(N) froms are placeholders that will be replaced
 by Calc vectors of values extracted from the input table,
 in column N.
-coldesc-involved is a list of columns numbers used by coldesc-formula-frux.
+COLDESC-involved is a list of columns numbers used by COLDESC-formula-frux.
 $LIST is a Lisp-vector of Calc-vectors of values from the input table
 parsed by Calc. $LIST acts as a cache. When a value is missing, it is
 computed, and stored in $LIST. But if there is already a value,
 a re-computation is saved.
+FMT-SETTINGS are formatter settings computed by
+`orgtbl-aggregate--fmt-settings', from user given formatting instructions.
 Return an output cell.
 When coldesc-key is non-nil, then a key-column is considered,
 and a cell from any row in the group is returned."
   (cond
    ;; key column
-   ((outcol-key coldesc)
-    (nth (outcol-key coldesc)
-	 (car (-appendable-list-get group))))
+   ((orgtbl-aggregate--outcol-key coldesc)
+    (nth (orgtbl-aggregate--outcol-key coldesc)
+	 (car (orgtbl-aggregate--list-get group))))
    ;; do not evaluate
    ((plist-get fmt-settings :noeval)
-    (outcol-formula$ coldesc))
+    (orgtbl-aggregate--outcol-formula$ coldesc))
    ;; vlist($3) alone, without parenthesis or other decoration
    ((string-match
      (rx bos (? ?v) "list"
 	 (* (any " \t")) "(" (* (any " \t"))
 	 "$" (group (+ (any "0-9")))
 	 (* (any " \t")) ")" (* (any " \t")) eos)
-     (outcol-formula$ coldesc))
+     (orgtbl-aggregate--outcol-formula$ coldesc))
     (mapconcat
      #'identity
      (cl-loop with i =
-	      (string-to-number (match-string 1 (outcol-formula$ coldesc)))
-	      for row in (-appendable-list-get group)
+	      (string-to-number
+               (match-string 1 (orgtbl-aggregate--outcol-formula$ coldesc)))
+	      for row in (orgtbl-aggregate--list-get group)
 	      collect (nth i row))
      ", "))
    (t
     ;; all other cases: handle them to Calc
-    (let ((calc-dollar-values
-	   (orgtbl-to-aggregated-make-calc-$-list
-	    table
+    (let ((calc-dollar-values-oo
+	   (orgtbl-aggregate--make-calc-$-list
 	    group
 	    fmt-settings
-	    (outcol-involved coldesc)
+	    (orgtbl-aggregate--outcol-involved coldesc)
 	    $list))
 	  (calc-command-flags nil)
 	  (calc-next-why nil)
@@ -1071,10 +1128,10 @@ and a cell from any row in the group is returned."
 	       (calcFunc-expand	  ; yes, double expansion
 		(calcFunc-expand  ; otherwise it is not fully expanded
 		 (math-simplify
-		  (orgtbl-to-aggregated-defrux
-		    (outcol-formula-frux coldesc)
-		    calc-dollar-values
-		    (length (-appendable-list-get group)))))))
+		  (orgtbl-aggregate--defrux
+		    (orgtbl-aggregate--outcol-formula-frux coldesc)
+		    calc-dollar-values-oo
+		    (length (orgtbl-aggregate--list-get group)))))))
 	      1000)))
 	(cond
 	 ((plist-get fmt-settings :fmt)
@@ -1085,40 +1142,42 @@ and a cell from any row in the group is returned."
 	   (plist-get fmt-settings :duration-output-format)))
 	 (t ev)))))))
 
-(defun orgtbl-to-aggregated-defrux (formula-frux calc-dollar-values count)
-  "Replaces all Frux(N) expressions in FORMULA-FRUX with
-Calc-vectors found in CALC-DOLLAR-VALUES. It also replaces
-vcount() forms with the actual number of rows in the current group"
+(defun orgtbl-aggregate--defrux (formula-frux calc-dollar-values-oo count)
+  "Replace all Frux(N) expressions in FORMULA-FRUX.
+Replace with Calc-vectors found in CALC-DOLLAR-VALUES.
+Also replace vcount() forms with the actual number of rows
+in the current group, given by COUNT."
   (cond
    ((not (consp formula-frux))
     formula-frux)
    ((memq (car formula-frux) '(calcFunc-Frux calcFunc-FRUX))
-    (nth (1- (cadr formula-frux)) calc-dollar-values))
+    (nth (1- (cadr formula-frux)) calc-dollar-values-oo))
    ((eq (car formula-frux) 'calcFunc-vcount)
     count)
    (t
     (cl-loop
      for x in formula-frux
-     collect (orgtbl-to-aggregated-defrux x calc-dollar-values count)))))
+     collect (orgtbl-aggregate--defrux x calc-dollar-values-oo count)))))
 
-(defun orgtbl-to-aggregated-make-calc-$-list (table group fmt-settings involved $list)
+(defun orgtbl-aggregate--make-calc-$-list (group fmt-settings involved $list)
   "Prepare a list of vectors that will use to replace Frux(N) expressions.
-Frux(1) will be replaced by the first element of list, Frux(2) by the second an so on.
-The vectors follow the Calc syntax: (vec a b c ...). They contain values
-extracted from rows of the current GROUP. Vectors are created only for
-column numbers in INVOLVED.
-In FMT-SETTINGS, :KEEP-EMPTY is a flag to tell whether an empty cell
+Frux(1) will be replaced by the first element of list,
+Frux(2) by the second an so on.
+The vectors follow the Calc syntax: (vec a b c ...).
+They contain values extracted from rows of the current GROUP.
+Vectors are created only for column numbers in INVOLVED.
+In FMT-SETTINGS, :keep-empty is a flag to tell whether an empty cell
 should be converted to NAN or ignored.
-:NUMBERS is a flag to replace non numeric values by 0."
+:numbers is a flag to replace non numeric values by 0."
   (cl-loop
    for i in involved
    unless (aref $list (1- i))
    do (aset
        $list (1- i)
        (cons 'vec
-	     (cl-loop for row in (-appendable-list-get group)
+	     (cl-loop for row in (orgtbl-aggregate--list-get group)
 		      collect
-		      (orgtbl-aggregate-read-calc-expr (nth i row))))))
+		      (orgtbl-aggregate--read-calc-expr (nth i row))))))
   (cl-loop
    for vec across $list
    for i from 1
@@ -1141,8 +1200,8 @@ should be converted to NAN or ignored.
 
 ;;;###autoload
 (defun orgtbl-to-aggregated-table (table params)
-  "Convert the orgtbl-mode TABLE to another orgtbl-mode table
-with material aggregated.
+  "Convert the Org Mode TABLE to an aggregated version.
+The resulting table contains aggregated material.
 Grouping of rows is done for identical values of grouping columns.
 For each group, aggregation (sum, mean, etc.) is done for other columns.
   
@@ -1153,6 +1212,8 @@ The destination must be specified somewhere in the same file
 with a block like this:
   #+BEGIN RECEIVE ORGTBL destination
   #+END RECEIVE ORGTBL destination
+
+PARAMS are parameters given in the #+ORGTBL: SEND line.
 
 :cols     gives the specifications of the resulting columns.
           It is a space-separated list of column specifications.
@@ -1213,29 +1274,35 @@ add a line like this one before your table
 then add somewhere in the same file the following lines:
 ,#+BEGIN RECEIVE ORGTBL aggregatedtable
 ,#+END RECEIVE ORGTBL aggregatedtable
-Type C-c C-c into your source table
+Type \\<org-mode-map> & \\[org-ctrl-c-ctrl-c] into your source table
 
 Note:
  This is the 'push' mode for aggregating a table.
  To use the 'pull' mode, look at the org-dblock-write:aggregate function.
-"
+
+Note:
+ The name `orgtbl-to-aggregated-table' follows the Org Mode standard
+ with functions like `orgtbl-to-csv', `orgtbl-to-html'..."
   (interactive)
   (let ((aggregated-table
-	 (orgtbl-post-process
-	  (orgtbl-create-table-aggregated table params)
+	 (orgtbl-aggregate--post-process
+	  (orgtbl-aggregate--create-table-aggregated table params)
 	  (plist-get params :post))))
     (with-temp-buffer
       (buffer-disable-undo)
-      (orgtbl-insert-elisp-table aggregated-table)
+      (orgtbl-aggregate--insert-elisp-table aggregated-table)
       (buffer-substring-no-properties (point-min) (1- (point-max))))))
 
 ;; aggregation in Pull mode
 
 ;;;###autoload
 (defun org-dblock-write:aggregate (params)
-  "Creates a table which is the aggregation of material from another table.
+  "Create a table which is the aggregation of material from another table.
 Grouping of rows is done for identical values of grouping columns.
 For each group, aggregation (sum, mean, etc.) is done for other columns.
+
+PARAMS contains user parameters given on the #+BEGIN: aggregate line,
+as follow:
 
 :table    name of the source table
 
@@ -1277,7 +1344,7 @@ For each group, aggregation (sum, mean, etc.) is done for other columns.
              corr(COL1,COL2)  compute the linear correlation of two columns
 
 :cond     optional
-          a lisp expression to filter out rows in the source table
+          a Lisp expression to filter out rows in the source table
           when the expression evaluate to nil for a given row of the source table,
           then this row is discarded in the resulting table
           Example:
@@ -1296,13 +1363,17 @@ Example:
 - Create an empty dynamic block like this:
   #+BEGIN: aggregate :table originaltable :cols \"sum(X) Q sum(Y) mean(Z) sum(X*X)\"
   #+END
-- Type C-c C-c over the BEGIN line
+- Type \\<org-mode-map> & \\[org-ctrl-c-ctrl-c] over the BEGIN line
   this fills in the block with an aggregated table
 
 Note:
  This is the 'pull' mode for aggregating a table.
- To use the 'push' mode, look at the orgtbl-to-aggregated-table function.
-"
+ To use the 'push' mode,
+ look at the `orgtbl-to-aggregated-table' function.
+
+Note:
+ The name `org-dblock-write:aggregate' is constrained
+ by the `org-update-dblock' function."
   (interactive)
   (let ((formula (plist-get params :formula))
 	(content (plist-get params :content))
@@ -1311,20 +1382,24 @@ Note:
     (if (and content
 	     (let ((case-fold-search t))
 	       (string-match
-		(rx bos (* (any " \t")) (group "#+" (? "tbl") "name:" (* not-newline)))
+		(rx bos
+                    (* (any " \t"))
+                    (group "#+" (? "tbl") "name:" (* not-newline)))
 		content)))
 	(insert (match-string 1 content) "\n"))
-    (orgtbl-insert-elisp-table
-     (orgtbl-post-process
-      (orgtbl-create-table-aggregated
-       (orgtbl-get-distant-table (plist-get params :table))
+    (orgtbl-aggregate--insert-elisp-table
+     (orgtbl-aggregate--post-process
+      (orgtbl-aggregate--create-table-aggregated
+       (orgtbl-aggregate--get-distant-table (plist-get params :table))
        params)
       post))
     (delete-char -1) ;; remove trailing \n which Org Mode will add again
     (if (and content
 	     (let ((case-fold-search t))
 	       (string-match
-		(rx bol (* (any " \t")) (group "#+tblfm:" (* not-newline)))
+		(rx bol
+                    (* (any " \t"))
+                    (group "#+tblfm:" (* not-newline)))
 		content)))
 	(setq tblfm (match-string 1 content)))
     (when (stringp formula)
@@ -1341,20 +1416,25 @@ Note:
 	    (org-table-recalculate 'iterate)
 	  (args-out-of-range nil))))))
 
+;; This variable contains history of user entered
+;; :cols and :cond parameters, so that they can be entered
+;; again or edited
 (defvar orgtbl-aggregate-history-cols ())
 
 ;;;###autoload
-(defun org-insert-dblock:aggregate ()
+(defun orgtbl-aggregate-insert-dblock-aggregate ()
   "Wizard to interactively insert an aggregate dynamic block."
   (interactive)
   (let* ((table
 	  (completing-read
 	   "Table name: "
-	   (orgtbl-list-local-tables)
+	   (orgtbl-aggregate--list-local-tables)
 	   nil
 	   'confirm))
 	 (header
-	  (condition-case err (orgtbl-get-header-table table t)
+	  (condition-case
+              _err
+              (orgtbl-aggregate--get-header-table table t)
 	    (t "$1 $2 $3 $4 ...")))
 	 (aggcols
 	  (replace-regexp-in-string
@@ -1377,27 +1457,30 @@ Note:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; The Transposition package
 
-(defun orgtbl-create-table-transposed (table cols aggcond)
-  "Convert the source TABLE, which is a list of lists of cells,
-into a transposed table compliant with the COLS source columns list,
-ignoring source rows which do not pass the AGGCOND.
+(defun orgtbl-aggregate--create-table-transposed (table cols aggcond)
+  "Convert the source TABLE to a tranposed version.
+TABLE is a list of lists of cells.
+COLS gives the source columns that should become rows.
 If COLS is nil, all source columns are taken.
-If AGGCOND is nil, all source rows are taken"
+AGGCOND is a Lisp expression given bu the user.  It is evaluated
+against each row.  If the result is nil, the row is ignored.
+If AGGCOND is nil, all source rows are taken."
   (if (stringp cols)
-      (setq cols (split-string-with-quotes cols)))
+      (setq cols (orgtbl-aggregate--split-string-with-quotes cols)))
   (setq cols
         (if cols
 	    (cl-loop for column in cols
 		     collect
-		     (orgtbl-colname-to-int column table t))
+		     (orgtbl-aggregate--colname-to-int column table t))
           (let ((head table))
-	    (orgtbl-pop-leading-hline head)
-	    (cl-loop for x in (car head)
+	    (orgtbl-aggregate--pop-leading-hline head)
+	    (cl-loop for _x in (car head)
 		     for i from 1
 		     collect i))))
   (if aggcond
-      (setq aggcond (orgtbl-to-aggregated-replace-colnames-nth table aggcond)))
-  (let ((result (cl-loop for x in cols collect (list t)))
+      (setq aggcond
+            (orgtbl-aggregate--replace-colnames-nth table aggcond)))
+  (let ((result (cl-loop for _x in cols collect (list t)))
         (nhline 0))
     (cl-loop for row in table
 	     do
@@ -1412,7 +1495,7 @@ If AGGCOND is nil, all source rows are taken"
 		do
 		(nconc r (list (if (eq row 'hline) "" (nth spec row)))))))
     (cl-loop for row in result
-	     do (pop-simple row)
+	     do (orgtbl-aggregate--pop-simple row)
 	     collect
 	     (if (cl-loop for x in row
 			  always (equal "" x))
@@ -1421,11 +1504,14 @@ If AGGCOND is nil, all source rows are taken"
 
 ;;;###autoload
 (defun orgtbl-to-transposed-table (table params)
-  "Convert the orgtbl-mode TABLE to a transposed version.
+  "Convert the Org Mode TABLE to a transposed version.
 Rows become columns, columns become rows.
 
-The source table must contain sending directives with the following format:
+The source table must contain sending directives with
+the following format:
 #+ORGTBL: SEND destination orgtbl-to-transposed-table :cols ... :cond ...
+
+PARAMS are the user given parameters found in the #+ORGTBL: SEND line
 
 The destination must be specified somewhere in the same file
 with a bloc like this:
@@ -1442,11 +1528,13 @@ with a bloc like this:
 
 :cond     optional
           a lisp expression to filter out rows in the source table
-          when the expression evaluate to nil for a given row of the source table,
-          then this row is discarded in the resulting table
+          when the expression evaluate to nil for a given row of
+          the source table, then this row is discarded in the
+          resulting table.
           Example:
              (equal Q \"b\")
-          Which means: keep only source rows for which the column Q has the value b
+          Which means: keep only source rows for which the column Q
+          has the value b
 
 Columns in the source table may be in the dollar form,
 for example $3 to name the 3th column,
@@ -1464,29 +1552,36 @@ with a block like this:
   #+BEGIN RECEIVE ORGTBL destination_table_name
   #+END RECEIVE ORGTBL destination_table_name
 
-Type C-c C-c in the source table to re-create the transposed version.
+Type \\<org-mode-map> & \\[org-ctrl-c-ctrl-c] in the source
+table to re-create the transposed version.
 
 Note:
  This is the 'push' mode for transposing a table.
  To use the 'pull' mode, look at the org-dblock-write:transpose function.
-"
+
+Note:
+ The name `orgtbl-to-transposed-table' follows the Org Mode standard
+ with functions like `orgtbl-to-csv', `orgtbl-to-html'..."
   (interactive)
   (let ((transposed-table
-	 (orgtbl-post-process
-	  (orgtbl-create-table-transposed
+	 (orgtbl-aggregate--post-process
+	  (orgtbl-aggregate--create-table-transposed
 	   table
 	   (plist-get params :cols)
 	   (plist-get params :cond))
 	  (plist-get params :post))))
     (with-temp-buffer
       (buffer-disable-undo)
-      (orgtbl-insert-elisp-table transposed-table)
+      (orgtbl-aggregate--insert-elisp-table transposed-table)
       (buffer-substring-no-properties (point-min) (1- (point-max))))))
 
 ;;;###autoload
 (defun org-dblock-write:transpose (params)
-  "Create a transposed version of the orgtbl TABLE
+  "Create a transposed version of an Org Mode table.
 Rows become columns, columns become rows.
+
+PARAMS are the user given parameters found in the
+#+BEGIN: transpose line
 
 :table    names the source table
 
@@ -1496,15 +1591,16 @@ Rows become columns, columns become rows.
           - names as they appear in the first row of the source table
           - $N forms, starting from $1
           - the special hline column which is the numbering of
-            blocks separated by horizontal lines in the source table
+            blocks separated by horizontal lines in the source table.
 
 :cond     optional
-          a lisp expression to filter out rows in the source table
-          when the expression evaluate to nil for a given row of the source table,
-          then this row is discarded in the resulting table
+          a Lisp expression to filter out rows in the source table
+          when the expression evaluate to nil for a given row of the
+          source table, then this row is discarded in the resulting table.
           Example:
              (equal q \"b\")
-          Which means: keep only source rows for which the column q has the value b
+          Which means: keep only source rows for which the column q
+          has the value b.
 
 Columns in the source table may be in the dollar form,
 for example $3 to name the 3th column,
@@ -1518,15 +1614,18 @@ Horizontal lines are converted to empty columns,
 and the other way around.
 
 - Create an empty dynamic block like this:
-  #+BEGIN: aggregate :table originaltable
+  #+BEGIN: transpose :table originaltable
   #+END
-- Type C-c C-c over the BEGIN line
+- Type \\<org-mode-map> & \\[org-ctrl-c-ctrl-c] over the BEGIN line
   this fills in the block with the transposed table
 
 Note:
  This is the 'pull' mode for transposing a table.
  To use the 'push' mode, look at the orgtbl-to-transposed-table function.
-"
+
+Note:
+ The name `org-dblock-write:transpose' is constrained
+ by the `org-update-dblock' function."
   (interactive)
   (let ((formula (plist-get params :formula))
 	(content (plist-get params :content))
@@ -1535,13 +1634,15 @@ Note:
     (if (and content
 	     (let ((case-fold-search t))
 	       (string-match
-		(rx bos (* (any " \t")) (group "#+" (? "tbl") "name:" (* not-newline)))
+		(rx bos
+                    (* (any " \t"))
+                    (group "#+" (? "tbl") "name:" (* not-newline)))
 		content)))
 	(insert (match-string 1 content) "\n"))
-    (orgtbl-insert-elisp-table
-     (orgtbl-post-process
-      (orgtbl-create-table-transposed
-       (orgtbl-get-distant-table (plist-get params :table))
+    (orgtbl-aggregate--insert-elisp-table
+     (orgtbl-aggregate--post-process
+      (orgtbl-aggregate--create-table-transposed
+       (orgtbl-aggregate--get-distant-table (plist-get params :table))
        (plist-get params :cols)
        (plist-get params :cond))
       post))
@@ -1567,17 +1668,17 @@ Note:
 	  (args-out-of-range nil))))))
 
 ;;;###autoload
-(defun org-insert-dblock:transpose ()
+(defun orgtbl-aggregate-insert-dblock-transpose ()
   "Wizard to interactively insert a transpose dynamic block."
   (interactive)
   (let* ((table
 	  (completing-read
 	   "Table name: "
-	   (orgtbl-list-local-tables)
+	   (orgtbl-aggregate--list-local-tables)
 	   nil
 	   'confirm))
 	 (header
-	  (condition-case err (orgtbl-get-header-table table t)
+	  (condition-case _err (orgtbl-aggregate--get-header-table table t)
 	    (t "$1 $2 $3 $4 ...")))
 	 (aggcols
 	  (replace-regexp-in-string
@@ -1607,9 +1708,9 @@ Note:
 ;; Insert a dynamic bloc with the C-c C-x x dispatcher
 ;;;###autoload
 (eval-after-load 'org
-  '(when (fboundp 'org-dynamic-block-define)
-     (org-dynamic-block-define "aggregate" #'org-insert-dblock:aggregate)
-     (org-dynamic-block-define "transpose" #'org-insert-dblock:transpose)))
+  '(when (fboundp #'org-dynamic-block-define) ;; found in Emacs 27.1
+     (org-dynamic-block-define "aggregate" #'orgtbl-aggregate-insert-dblock-aggregate)
+     (org-dynamic-block-define "transpose" #'orgtbl-aggregate-insert-dblock-transpose)))
 
 (provide 'orgtbl-aggregate)
 ;;; orgtbl-aggregate.el ends here
