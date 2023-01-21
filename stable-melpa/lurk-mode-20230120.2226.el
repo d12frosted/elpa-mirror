@@ -2,10 +2,10 @@
 ;; Authors: Jeff Weiss <jweiss@protocol.ai>
 ;; Maintainer: Jeff Weiss <jweiss@protocol.ai>
 ;; URL: http://github.com/lurk-lang/lurk-emacs
-;; Package-Version: 20221122.2058
-;; Package-Commit: bd7cf661ccb31bfbfab542018c361bd79064d4f4
+;; Package-Version: 20230120.2226
+;; Package-Commit: 59a3f956944a5ddd43cfd57deeff6b647fc46554
 ;; Keywords: languages lurk lisp
-;; Version: 0.1.7
+;; Version: 0.1.8
 ;; SPDX-License-Identifier: Apache-2.0 AND MIT
 ;; Package-Requires: ((emacs "25.1"))
 ;;; Commentary:
@@ -32,7 +32,7 @@
 
 ;;; Code:
 (require 'comint)
-
+(require 'inf-lisp)
 (defconst lurk-keywords
   '("lambda" "let" "letrec" "cons" "strcons" "hide" "begin" "car" "cdr"
     "commit" "num" "comm" "char" "eval" "open" "secret" "atom" "emit" "if"
@@ -60,10 +60,35 @@
   :group 'lurk)
 
 ;;;###autoload
+(defun inferior-lurk (cmd)
+  "Run an inferior Lurk process, input and output via buffer `*inferior-lurk*'.
+If there is a process already running in `*inferior-lurk*', just switch
+to that buffer.
+
+With argument, allows you to edit the command line (default is value
+of `inferior-lisp-program').  Runs the hooks from
+`inferior-lisp-mode-hook' (after the `comint-mode-hook' is run).
+
+If any parts of the command name contains spaces, they should be
+quoted using shell quote syntax.
+
+\(Type \\[describe-mode] in the process buffer for a list of commands.)"
+  (interactive (list (if current-prefix-arg
+			 (read-string "Run lisp: " inferior-lisp-program)
+		       inferior-lisp-program)))
+  (if (not (comint-check-proc "*inferior-lurk*"))
+      (let ((cmdlist (split-string-shell-command cmd)))
+	(set-buffer (apply (function make-comint)
+			   "inferior-lurk" (car cmdlist) nil (cdr cmdlist)))
+	(inferior-lisp-mode)))
+  (setq inferior-lisp-buffer "*inferior-lurk*")
+  (pop-to-buffer-same-window "*inferior-lurk*"))
+
+;;;###autoload
 (defun lurk-repl ()
   "Start lurk repl using the binary specified in `lurk-executable'."
   (interactive)
-  (run-lisp lurk-executable)
+  (inferior-lurk lurk-executable)
   (rename-buffer "*lurk*"))
 
 (defun lurk-eval-last-sexp ()
