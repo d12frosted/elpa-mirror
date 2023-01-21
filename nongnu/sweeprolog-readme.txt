@@ -49,6 +49,7 @@ Editing Prolog Code
 .. Writing Tests
 .. Code Dependencies
 .. Term Search
+.. Context Menu
 Prolog Help
 The Prolog Top-Level
 .. Multiple Top-Levels
@@ -1589,6 +1590,44 @@ Term Search
 [Minibuffer History] <info:emacs#Minibuffer History>
 
 
+Context Menu
+────────────
+
+  In addition to the keybindings that Sweep provides for invoking its
+  commands, it integrates with Emacs’s standard Context Menu minor mode
+  to provide contextual menus that you operate with the mouse.
+
+  Command: context-menu-mode
+        Toggle Context Menu mode.  When enabled, clicking the mouse
+        button `down-mouse-3' (i.e. right-click) activates a menu whose
+        contents depends on its surrounding context.
+  Variable: sweeprolog-context-menu-functions
+        List of functions that create Context Menu entries for Prolog
+        tokens.  Each function should receive as its arguments the menu
+        that is being created, the Prolog token’s description, its start
+        position, its end position, and the position of the mouse click.
+        It should alter the menu according to that context.
+
+  To enable Context Menu, type `M-x context-menu-mode' or add a call to
+  `(context-menu-mode)' in your Emacs initialization file to enable it
+  in all future sessions.  You access the context menu by right-clicking
+  anywhere in Emacs.  If you do it in a `sweeprolog-mode' buffer, you
+  can invoke several Prolog-specific commands based on where you click
+  in the buffer.
+
+  If you right-click on a Prolog file specification or module name,
+  Sweep suggests visiting it either in the current window or in another.
+  If you right-click on a predicate, it lets you view its documentation
+  in dedicated buffer.
+
+  You can further extend and customize the context menu that
+  `sweeprolog-mode' provides by adding functions to the variable
+  `sweeprolog-context-menu-functions'.  Each function on this list
+  receives the menu that is being created and a description of the
+  clicked Prolog token, and it can extend the menu with entries before
+  it’s displayed.
+
+
 Prolog Help
 ═══════════
 
@@ -2104,7 +2143,7 @@ Things to do
 ════════════
 
   While Sweep is ready to be used for effective editing of Prolog code,
-  there some further improvements that we want to pursue:
+  some improvements remain to be pursued:
 
 
 Improvements around editing Prolog
@@ -2123,16 +2162,6 @@ Improvements around editing Prolog
         It may be useful to indicate in the mode line whether the
         current `sweeprolog-mode' buffer has been loaded into the Prolog
         runtime and/or if its cross-reference data is up to date.
-
-  Provide right-click (`mouse-3') menus with `context-menu-mode'
-        To accommodate users who prefer a mouse-based workflow,
-        `sweeprolog-mode' should provide context-aware right-click menus
-        by integrating with `context-menu-mode'.
-
-  Provide descriptions for tokens by setting their `help-echo' propety
-        We should annotate tokens in Prolog code with a short text in
-        their `help-echo' property that says what kind of token this is,
-        to expose the precise semantics of each token to the user.
 
   Make predicate completion aware of module-qualification
         predicate completion should detect when the prefix it’s trying
