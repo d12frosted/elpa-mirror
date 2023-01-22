@@ -9,7 +9,7 @@
  First steps/quick start:
  - install, configure and run vdirsyncer
  - install and configure khal
- - customize the values for default calendar, capture file and import file for khalel
+ - customize the values for capture file and import file for khalel
  - call `khalel-add-capture-template' to set up a capture template
  - import events through `khalel-import-events',
    edit them through `khalel-edit-calendar-event' or create new ones through `org-capture'

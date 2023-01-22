@@ -6,9 +6,9 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.0
-;; Package-Version: 20230121.858
-;; Package-Commit: 2758f88db6baa6a2410ec4abb193d4dd5ba61773
-;; Package-Requires: ((emacs "27.1") (compat "29.1.1.1"))
+;; Package-Version: 20230122.1118
+;; Package-Commit: 18b3fcfba0c4af8b7bcff99ebf5891e8c0037bca
+;; Package-Requires: ((emacs "27.1") (compat "29.1.3.0"))
 ;; Homepage: https://github.com/minad/marginalia
 
 ;; This file is part of GNU Emacs.
