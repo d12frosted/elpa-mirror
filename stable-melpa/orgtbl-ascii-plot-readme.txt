@@ -1,9 +1,17 @@
+Notice! ----------------------------------
+This package is now part of Org Mode.
+It is no longer needed as a separate Melpa package.
+
+Standard key-binding is now `C-c " a`.
+-------------------------------------------
+
+
 Detailed documentation is here:
 http://orgmode.org/worg/org-contrib/orgtbl-ascii-plot.html
 
 Put the cursor in a column containing numerical values
 of an Org-Mode table,
-type C-c p
+type C-c " a
 A new column is added with a bar plot.
 When the table is refreshed (C-u C-c *),
 the plot is updated to reflect the new values.

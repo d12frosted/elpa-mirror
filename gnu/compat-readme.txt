@@ -10,6 +10,7 @@ documentation string to make sure.
 Not every function provided in newer versions of Emacs is provided
 here.  Some depend on new features from the core, others cannot be
 implemented to a meaningful degree.  Please consult the Compat
-manual for details.  The main audience for this library are not
-regular users, but package maintainers.  Therefore commands and
-user options are usually not implemented here.
+manual for details regarding the usage of the Compat library and
+the provided functionality.  The main audience for this library are
+not regular users, but package maintainers.  Therefore no commands,
+user-facing modes or user options are implemented here.
