@@ -3,26 +3,28 @@ Fetcher: codeberg
 Source:  https://codeberg.org/akib/emacs-workroom.git
 
 Updating /mnt/store/melpa/working/workroom/
-Checking out dcd02cb06ee450796c1b8d7385efc853827648e3
+Checking out b6b06463ee7b5d66ec56fc1195836c0c27c6b6f4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/workroom/
-  to /tmp/workroomMNn6zA/workroom-20230122.1115
+  to /tmp/workroom6ibVAg/workroom-20230122.1645
     workroom.el -> workroom.el
     fdl.texi -> fdl.texi
     gpl.texi -> gpl.texi
     workroom.texi -> workroom.texi
-Generating /tmp/workroomMNn6zA/workroom-20230122.1115/fdl.info
-Generating /tmp/workroomMNn6zA/workroom-20230122.1115/gpl.info
-Generating /tmp/workroomMNn6zA/workroom-20230122.1115/workroom.info
-Created workroom-20230122.1115.tar containing:
-  workroom-20230122.1115/
-  workroom-20230122.1115/dir
-  workroom-20230122.1115/fdl.info
-  workroom-20230122.1115/gpl.info
-  workroom-20230122.1115/workroom-pkg.el
-  workroom-20230122.1115/workroom.el
-  workroom-20230122.1115/workroom.info
-Built workroom in 21.365s, finished at 2023-01-22T15:24:14+0000
+Generating /tmp/workroom6ibVAg/workroom-20230122.1645/fdl.info
+Generating /tmp/workroom6ibVAg/workroom-20230122.1645/gpl.info
+Generating /tmp/workroom6ibVAg/workroom-20230122.1645/workroom.info
+Created workroom-20230122.1645.tar containing:
+  workroom-20230122.1645/
+  workroom-20230122.1645/dir
+  workroom-20230122.1645/fdl.info
+  workroom-20230122.1645/gpl.info
+  workroom-20230122.1645/workroom-pkg.el
+  workroom-20230122.1645/workroom.el
+  workroom-20230122.1645/workroom.info
+Built workroom in 21.553s, finished at 2023-01-22T18:59:55+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  473 Jan 22 15:24 packages/workroom-20230122.1115.entry
 240K -rw-r--r-- 1 root root 240K Jan 22 15:24 packages/workroom-20230122.1115.tar
+4.0K -rw-r--r-- 1 root root  473 Jan 22 18:59 packages/workroom-20230122.1645.entry
+240K -rw-r--r-- 1 root root 240K Jan 22 18:59 packages/workroom-20230122.1645.tar

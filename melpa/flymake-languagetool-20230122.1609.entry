@@ -1,10 +1,8 @@
 (flymake-languagetool .
-		      [(20230121 314)
+		      [(20230122 1609)
 		       ((emacs
-			 (27 1))
-			(s
-			 (1 9 0)))
+			 (27 1)))
 		       "Flymake support for LanguageTool" single
-		       ((:commit . "718b71ad1beabd7318df7b325f7316a24a821ef9")
+		       ((:commit . "ad8c724147d5a3a9f6ee59e0c7581e68fba4a2f8")
 			(:keywords "convenience" "grammar" "check")
 			(:url . "https://github.com/emacs-languagetool/flymake-languagetool"))])

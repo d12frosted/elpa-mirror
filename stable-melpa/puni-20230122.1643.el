@@ -6,8 +6,8 @@
 ;; Maintainer: Hao Wang <amaikinono@gmail.com>
 ;; Created: 08 Aug 2021
 ;; Keywords: convenience, lisp, tools
-;; Package-Version: 20230120.451
-;; Package-Commit: 3a7258e0e375e26a56caf494a14a12ac33ce7eea
+;; Package-Version: 20230122.1643
+;; Package-Commit: 93a25f73112752eff17d52fd99485199d8babee6
 ;; Homepage: https://github.com/AmaiKinono/puni
 ;; Version: 0
 ;; Package-Requires: ((emacs "26.1"))
@@ -1485,6 +1485,19 @@ Continue? "))
     (user-error "No active region")))
 
 ;;;###autoload
+(defun puni-kill-region (beg end)
+  "Kill region (from BEG to END).
+When this will cause unbalanced state, ask the user to confirm,
+unless `puni-confirm-when-delete-unbalanced-active-region'."
+  (interactive "r")
+  (when (or (not puni-confirm-when-delete-unbalanced-active-region)
+            (puni-region-balance-p beg end)
+            (y-or-n-p "Delete the region will cause unbalanced state.  \
+Continue? "))
+    (setq this-command 'kill-region)
+    (puni-delete-region beg end 'kill)))
+
+;;;###autoload
 (defun puni-kill-active-region ()
   "Kill active region.
 When this will cause unbalanced state, ask the user to confirm,
@@ -1493,12 +1506,7 @@ unless `puni-confirm-when-delete-unbalanced-active-region'."
   (if (use-region-p)
       (let ((beg (region-beginning))
             (end (region-end)))
-        (when (or (not puni-confirm-when-delete-unbalanced-active-region)
-                  (puni-region-balance-p beg end)
-                  (y-or-n-p "Delete the region will cause unbalanced state.  \
-Continue? "))
-          (setq this-command 'kill-region)
-          (puni-delete-region beg end 'kill)))
+        (puni-kill-region beg end))
     (user-error "No active region")))
 
 ;;;;; Char
@@ -2565,7 +2573,7 @@ S-expression."
     (define-key map (kbd "C-k") 'puni-kill-line)
     (define-key map (kbd "C-S-k") 'puni-backward-kill-line)
     (define-key map (kbd "C-c DEL") 'puni-force-delete)
-    (define-key map (kbd "C-w") 'puni-kill-active-region)
+    (define-key map (kbd "C-w") 'puni-kill-region)
     (define-key map (kbd "C-M-f") 'puni-forward-sexp)
     (define-key map (kbd "C-M-b") 'puni-backward-sexp)
     (define-key map (kbd "C-M-a") 'puni-beginning-of-sexp)
