@@ -3,4 +3,10 @@ Fetcher: hg
 Source:  https://hg.serna.eu/emacs/lms
 
 Updating /mnt/store/melpa/working/lms/
-Wrong type argument: stringp, nil
+
+Command '' exited with non-zero exit-code: 255
+
+pulling from https://hg.serna.eu/emacs/lms
+abort: HTTP Error 502: Bad Gateway
+
+Command exited with non-zero exit-code: 255
