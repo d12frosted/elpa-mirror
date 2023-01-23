@@ -59,6 +59,7 @@ The Prolog Top-Level
 .. Top-level Completion
 .. Follow Messages
 .. Send to Top-level
+Async Queries
 Finding Prolog Code
 .. File Spec Expansion
 .. Native Predicates
@@ -1128,6 +1129,9 @@ Following File Specifications
   Key: C-c C-o (sweeprolog-find-file-at-point)
         Resolve file specification at point and visit the specified
         file.
+  Function: sweeprolog-file-at-point &optional point
+        Return the file name specified by the Prolog file specification
+        at POINT.
 
   You can follow file specifications that occur in `sweeprolog-mode'
   buffers with `C-c C-o' (or `M-x sweeprolog-find-file-at-point')
@@ -1141,6 +1145,17 @@ Following File Specifications
 
   With point in any position inside `library(lists)', typing `C-c C-o'
   will open the `lists.pl' file in the Prolog library.
+
+  Sweep also extends Emacs’s `file-name-at-point-functions' hook with
+  the function `sweeprolog-file-at-point' that returns the resolved
+  Prolog file specification at point, if any.  Emacs uses this hook to
+  populate the “future history” of minibuffer prompts that read file
+  names, such as the one you get when you type `C-x C-f' (`find-file').
+  In particular this means that if point is in a Prolog file
+  specification, you can type `M-n' after `C-x C-f' to populate the
+  minibuffer with the corresponding file name.  You can then go ahead
+  and visit the file by typing `RET', or you can edit the minibuffer
+  contents and visit a nearby file instead.
 
   For more information about file specifications in SWI-Prolog, see
   [absolute_file_name/3] in the SWI-Prolog manual.
@@ -1859,6 +1874,47 @@ Sending Goals to the Top-level
   prompt, which you can access with `M-n' in the minibuffer.
 
 
+Executing Prolog Asynchronously
+═══════════════════════════════
+
+  Sweep provides a facility for executing Prolog goals in separate
+  threads and capturing their output in Emacs buffers as it is produced.
+  You can use this for running queries without blocking Emacs.
+
+  Key: C-c C-& (sweeprolog-async-goal)
+        Execute a Prolog goal asynchronously and display its output in a
+        dedicated buffer.
+
+  The command `M-x sweeprolog-async-goal', bound to `C-c C-&' in
+  `sweeprolog-mode' buffers, prompts for a Prolog goal and executes it
+  in a new Prolog thread, redirecting its output and error streams to an
+  Emacs buffer that gets updated asynchronously.
+
+  This is similar in nature to running asynchronous shell commands with
+  the standard `M-&' (`async-shell-command') or `M-x compile', expect
+  that `sweeprolog-async-goal' runs a Prolog goal instead of a shell
+  command.  For more information about these commands see [Single Shell]
+  and [Compilation] in the Emacs manual.
+
+  The output buffer that `sweeprolog-async-goal' creates uses a
+  dedicated mode called /Sweep Async Output mode/.  This mode is derived
+  from the standard Compilation mode, it provides all of the usual
+  commands documented in [Compilation Mode].  Notably, you can run the
+  same query again by typing `g' (`sweeprolog-async-goal-restart') in
+  the output buffer.  To interrupt the goal running in the current
+  output buffer, press `C-c C-k' (`kill-compilation').
+
+  _Compatibility note_: asynchronous queries use pipe processes that
+  require Emacs 28 or later and SWI-Prolog 9.1.4 or later.
+
+
+[Single Shell] <info:emacs#Single Shell>
+
+[Compilation] <info:emacs#Compilation>
+
+[Compilation Mode] <info:emacs#Compilation Mode>
+
+
 Finding Prolog code
 ═══════════════════
 
@@ -1876,7 +1932,7 @@ Finding Prolog code
 Prolog file specification expansion
 ───────────────────────────────────
 
-  Sweep defines a handler for the Emacs function `expand-file-file' that
+  Sweep defines a handler for the Emacs function `expand-file-name' that
   recognizes Prolog file specifications, such as `library(lists)', and
   expands them to their corresponding absolute paths.  This means that
   one can use Prolog file specifications with Emacs’s standard
@@ -1965,6 +2021,7 @@ Quick access to sweep commands
    `p'    `sweeprolog-find-predicate'             [Finding Prolog Code]               
    `q'    `sweeprolog-top-level-send-goal'        [Sending Goals to the Top-level]    
    `t'    `sweeprolog-top-level'                  [The Prolog Top-level]              
+   `&'    `sweeprolog-async-goal'                 [Executing Prolog Asynchronously]   
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
@@ -1995,6 +2052,9 @@ and Cleanup
 Top-level
 
 [The Prolog Top-level] See section The Prolog Top-Level
+
+[Executing Prolog Asynchronously] See section Executing Prolog
+Asynchronously
 
 
 Examining Prolog messages

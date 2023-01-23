@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.6
-;; Package-Version: 20230122.1702
-;; Package-Commit: adb99a74abdb327d579f064b4326ec4b6f8607dc
+;; Package-Version: 20230123.822
+;; Package-Commit: d3f44ccf213d058bb6f28c3895fd1f588e331d5d
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.3.0"))
 ;; Homepage: https://github.com/minad/tempel
 
@@ -169,7 +169,8 @@ may be named with `tempel--name' or carry an evaluatable Lisp expression
       (and (not (car noinsert))
            (propertize (symbol-name name) 'face 'completions-annotations)))
      ('> #(" " 0 1 (face completions-annotations)))
-     ((or 'n 'n> '& '% 'o) #("\n" 0 1 (face completions-annotations)))
+     ('n> #("\n " 0 2 (face completions-annotations)))
+     ((or 'n '& '% 'o) #("\n" 0 1 (face completions-annotations)))
      (_ #("_" 0 1 (face shadow))))))
 
 (defun tempel--annotate (templates width ellipsis sep name)
@@ -183,14 +184,17 @@ WIDTH, SEP and ELLIPSIS configure the formatting."
                   (tempel--print-template elts))
                  width 0 ?\s ellipsis))))
 
-(defun tempel--doc-buffer (templates name)
-  "Create doc buffer for template NAME given the list of TEMPLATES."
+(defun tempel--info-buffer (templates fun name)
+  "Create info buffer for template NAME.
+FUN inserts the info into the buffer.
+TEMPLATES is the list of templates."
   (when-let ((name (intern-soft name))
              (elts (cdr (assoc name templates))))
-    (with-current-buffer (get-buffer-create " *tempel-doc*")
-      (erase-buffer)
-      (insert (tempel--print-template elts))
-      (current-buffer))))
+    (with-current-buffer (get-buffer-create " *tempel-info*")
+      (setq buffer-read-only t)
+      (let ((inhibit-read-only t))
+        (erase-buffer)
+        (funcall fun elts)))))
 
 (defun tempel--delete-word (word)
   "Delete WORD before point."
@@ -686,7 +690,15 @@ If INTERACTIVE is nil the function acts like a capf."
               :exit-function (apply-partially #'tempel--exit templates region)
               :company-prefix-length (and tempel-trigger-prefix t)
               :company-doc-buffer
-              (apply-partially #'tempel--doc-buffer templates)
+              (apply-partially #'tempel--info-buffer templates
+                               (lambda (elts)
+                                 (insert (tempel--print-template elts))
+                                 (current-buffer)))
+              :company-location
+              (apply-partially #'tempel--info-buffer templates
+                               (lambda (elts)
+                                 (pp elts (current-buffer))
+                                 (list (current-buffer))))
               :annotation-function
               (and tempel-complete-annotation
                    (apply-partially #'tempel--annotate

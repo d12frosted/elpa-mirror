@@ -2561,14 +2561,14 @@
 	      ("Feng Shu" . "tumashu@163.com"))
 	     (:commit . "aa88860a16e28a311f81e18f1d9ed2e7d9e33991"))])
  (project .
-	  [(0 9 4)
+	  [(0 9 5)
 	   ((emacs
 	     (26 1))
 	    (xref
 	     (1 4 0)))
 	   "Operations on the current project" tar
 	   ((:url . "https://elpa.gnu.org/packages/project.html")
-	    (:commit . "f16cc7c49c7f341558fda08bd14e2c1b7e80baf5"))])
+	    (:commit . "67ee627c38d5817a091a89e0a356fb8028c70e1a"))])
  (psgml .
 	[(1 3 5)
 	 nil "SGML-editing mode with parsing support" tar
@@ -3163,7 +3163,7 @@
 	   (:keywords "stream" "laziness" "sequences")
 	   (:url . "http://elpa.gnu.org/packages/stream.html"))])
  (substitute .
-	     [(0 1 4)
+	     [(0 1 5)
 	      ((emacs
 		(27 1)))
 	      "Efficiently replace targets in the buffer or context" tar
@@ -3171,7 +3171,7 @@
 	       (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
 	       (:authors
 		("Protesilaos Stavrou" . "info@protesilaos.com"))
-	       (:commit . "df1d0dee119496d2d74aa8077ecc061ba3eebe73"))])
+	       (:commit . "3c80ceeb4fc536588c0e64c0ef609d1ed297c61f"))])
  (svg .
       [(1 1)
        ((emacs
