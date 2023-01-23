@@ -1,5 +1,5 @@
 (eglot-java .
-	    [(20221218 1809)
+	    [(20230122 2144)
 	     ((emacs
 	       (26 1))
 	      (eglot
@@ -7,7 +7,7 @@
 	      (jsonrpc
 	       (1 0 0)))
 	     "Java extension for the eglot LSP client" single
-	     ((:commit . "e6a9d5cc63f679833c19df8120533c8f42498a51")
+	     ((:commit . "472bf005b1dfa92464257fcfdebefa1fe91a586f")
 	      (:authors
 	       ("Yves Zoundi" . "yves_zoundi@hotmail.com"))
 	      (:maintainer "Yves Zoundi" . "yves_zoundi@hotmail.com")

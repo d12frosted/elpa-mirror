@@ -2,9 +2,9 @@
 
 ;; Copyright (C) 2019-2023 Yves Zoundi
 
-;; Version: 1.7
-;; Package-Version: 20221218.1809
-;; Package-Commit: e6a9d5cc63f679833c19df8120533c8f42498a51
+;; Version: 1.8
+;; Package-Version: 20230122.2144
+;; Package-Commit: 472bf005b1dfa92464257fcfdebefa1fe91a586f
 ;; Author: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; Maintainer: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; URL: https://github.com/yveszoundi/eglot-java
@@ -26,7 +26,7 @@
 
 ;;; Commentary:
 
-;; Java extension for eglot. 
+;; Java extension for eglot.
 ;;
 ;; Some of the key features include the following:
 ;; - Automatic installation of the Eclipse JDT LSP server.
@@ -44,10 +44,15 @@
 ;;   - Edit directly your gradle/wrapper/gradle-wrapper.properties
 ;;   - or download the matching Gradle version for your JVM and run: gradle wrapper
 ;;
+;; If for any reason, you want to prevent "eglot-java" from modifying the "eglot-server-programs" variable,
+;; you can toggle the value of the variable "eglot-java-eglot-server-programs-manual-updates"
+;; - upstream "eglot" could change the syntax of programs associations without notice and it will break this package
+;; - you may want fine-grained control over how "eglot-java" behaves accordingly to your emacs customization
+;;
 ;; Below is a sample configuration for your emacs init file
 ;;
 ;; (add-hook 'java-mode-hook 'eglot-java-mode)
-;; (add-hook 'eglot-java-mode-hook (lambda ()                                        
+;; (add-hook 'eglot-java-mode-hook (lambda ()
 ;;   (define-key eglot-java-mode-map (kbd "C-c l n") #'eglot-java-file-new)
 ;;   (define-key eglot-java-mode-map (kbd "C-c l x") #'eglot-java-run-main)
 ;;   (define-key eglot-java-mode-map (kbd "C-c l t") #'eglot-java-run-test)
@@ -65,6 +70,12 @@
   "Interaction with a Java language server via eglot."
   :prefix "eglot-java-"
   :group 'eglot)
+
+(defcustom eglot-java-eglot-server-programs-manual-updates
+  nil
+  "Do not try to automatically update eglot-server-programs"
+  :type 'boolean
+  :group 'eglot-java)
 
 (defcustom eglot-java-eclipse-jdt-args
   '()
@@ -155,8 +166,8 @@
                             (file-name-directory
                              (file-chase-links (executable-find "javac"))))))))
           `(:settings (:java (:home ,home)
-                       :import (:gradle (:enabled t)
-                                        :wrapper (:enabled t))))
+                             :import (:gradle (:enabled t)
+                                              :wrapper (:enabled t))))
         (ignore (eglot--warn "JAVA_HOME env var not set")))))
 
 (defun eglot--eclipse-jdt-contact (interactive)
@@ -715,12 +726,28 @@ The buffer contains the raw HTTP response sent by the server."
   (eglot-ensure))
 
 (defun eglot-java--init ()
-  "Initialize the library for use with the Eclipse JDT language server."  
-  (unless (eq 'eglot-java--eclipse-contact (assq 'java-mode eglot-server-programs))
-    (setcdr (assq 'java-mode eglot-server-programs) #'eglot-java--eclipse-contact))
-
-  (unless (member 'eglot-java--project-try project-find-functions)
-    (add-hook 'project-find-functions  #'eglot-java--project-try)))
+  "Initialize the library for use with the Eclipse JDT language server."
+  (progn
+    (unless eglot-java-eglot-server-programs-manual-updates
+      (let ((existing-java-related-assocs (mapcan (lambda (item)
+                                                    (if (listp (car item))
+                                                        (when (member 'java-mode (car item))
+                                                          (car item))
+                                                      (when (eq 'java-mode (car item))
+                                                        (cons (car item) nil))))
+                                                  eglot-server-programs)))
+        (if existing-java-related-assocs
+            (progn
+              (let ((eff-existing-java-related-assocs (if (= 1 (length existing-java-related-assocs))
+                                                          (if (assq existing-java-related-assocs eglot-server-programs)
+                                                              existing-java-related-assocs
+                                                            (car existing-java-related-assocs))
+                                                        existing-java-related-assocs)))
+                (unless (eq 'eglot-java--eclipse-contact (assq eff-existing-java-related-assocs eglot-server-programs))
+                  (setcdr (assoc eff-existing-java-related-assocs eglot-server-programs) 'eglot-java--eclipse-contact))))
+          (add-to-list eglot-server-programs 'java-mode 'eglot-java--eclipse-contact))))
+    (unless (member 'eglot-java--project-try project-find-functions)
+      (add-hook 'project-find-functions  #'eglot-java--project-try))))
 
 (defvar eglot-java-mode-map (make-sparse-keymap))
 
@@ -731,7 +758,7 @@ The buffer contains the raw HTTP response sent by the server."
   :init-value nil
   ;; The indicator for the mode line.
   :lighter nil
-  (progn    
+  (progn
     (eglot-java--init)
     (when eglot-java-mode
       (eglot-java--ensure))))

@@ -1,0 +1,13 @@
+(julia-ts-mode .
+	       [(20230117 1945)
+		((emacs
+		  (29))
+		 (julia-mode
+		  (0 4)))
+		"Major mode for Julia source code using tree-sitter" single
+		((:commit . "c620db6899ae180cd5b058f24c8832becd05fcb5")
+		 (:authors
+		  ("Ronan Arraes Jardim Chagas"))
+		 (:maintainer "Ronan Arraes Jardim Chagas")
+		 (:keywords "julia" "languages" "tree-sitter")
+		 (:url . "https://github.com/ronisbr/julia-ts-mode"))])

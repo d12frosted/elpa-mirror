@@ -1,0 +1,11 @@
+(protobuf-ts-mode .
+		  [(20230118 1430)
+		   ((emacs
+		     (29)))
+		   "Tree sitter support for Protocol Buffers (proto3 only)" single
+		   ((:commit . "b65dc2379915fc846ff2578be5b652081bea193b")
+		    (:authors
+		     ("ookami" . "mail@ookami.one"))
+		    (:maintainer "ookami" . "mail@ookami.one")
+		    (:keywords "protobuf" "languages" "tree-sitter")
+		    (:url . "https://git.ookami.one/cgit/protobuf-ts-mode"))])

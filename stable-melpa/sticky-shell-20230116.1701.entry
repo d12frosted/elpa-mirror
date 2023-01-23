@@ -1,0 +1,11 @@
+(sticky-shell .
+	      [(20230116 1701)
+	       ((emacs
+		 (24 4)))
+	       "Minor mode that displays the latest shell-prompt in a header" single
+	       ((:commit . "66310eadb69cf229e1b0a104bd024092123dddf3")
+		(:authors
+		 ("Andrew De Angelis" . "bobodeangelis@gmail.com"))
+		(:maintainer "Andrew De Angelis" . "bobodeangelis@gmail.com")
+		(:keywords "processes" "terminals" "tools")
+		(:url . "https://github.com/andyjda/sticky-shell"))])
