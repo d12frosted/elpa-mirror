@@ -1,9 +1,11 @@
 (recursion-indicator .
-		     [(20230121 901)
+		     [(20230122 2118)
 		      ((emacs
-			(27 1)))
+			(27 1))
+		       (compat
+			(29 1 3 0)))
 		      "Recursion indicator" single
-		      ((:commit . "86cc7bc8ca15bfaa2b767ff332c1f72d1b4975cf")
+		      ((:commit . "98afcefafb084e8df6567231e6878ef493faa70c")
 		       (:authors
 			("Daniel Mendler"))
 		       (:maintainer "Daniel Mendler")

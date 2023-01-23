@@ -6,9 +6,9 @@
 ;; Created: 2020
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20230121.901
-;; Package-Commit: 86cc7bc8ca15bfaa2b767ff332c1f72d1b4975cf
-;; Package-Requires: ((emacs "27.1"))
+;; Package-Version: 20230122.2118
+;; Package-Commit: 98afcefafb084e8df6567231e6878ef493faa70c
+;; Package-Requires: ((emacs "27.1") (compat "29.1.3.0"))
 ;; Homepage: https://github.com/minad/recursion-indicator
 
 ;; This file is not part of GNU Emacs.
@@ -31,6 +31,8 @@
 ;; Recursion indicator for the mode line
 
 ;;; Code:
+
+(require 'compat)
 
 (defgroup recursion-indicator nil
   "Recursion indicator for the mode line."
@@ -55,7 +57,7 @@
   "Arrow indicating minibuffer recursion."
   :type 'string)
 
-(defvar recursion-indicator--minibuffer-depths nil
+(defvar recursion-indicator--mb-depths nil
   "Minibuffer depths.")
 
 (defvar recursion-indicator--cache nil
@@ -69,40 +71,69 @@
         (cdr recursion-indicator--cache)
       (dotimes (i depth)
         (setq str (concat
-                   (if (memq (1+ i) recursion-indicator--minibuffer-depths)
+                   (if (memq (1+ i) recursion-indicator--mb-depths)
                        (propertize recursion-indicator-minibuffer 'face 'recursion-indicator-minibuffer)
                      (propertize recursion-indicator-general 'face 'recursion-indicator-general))
                    str)))
       (when str
-        (setq str (propertize (concat "[" str "] ") 'help-echo "Recursive edit, type C-M-c to get out")))
+        (setq str (propertize
+                   (concat "[" str "] ")
+                   'help-echo "Recursive edit, type C-M-c to get out")))
       (setq recursion-indicator--cache (cons depth str))
       str)))
 
-(defun recursion-indicator--minibuffer-setup ()
+(defun recursion-indicator--mb-setup ()
   "Minibuffer setup hook."
-  (push (recursion-depth) recursion-indicator--minibuffer-depths)
+  (push (recursion-depth) recursion-indicator--mb-depths)
   (setq recursion-indicator--cache nil)
   (run-at-time 0 nil #'force-mode-line-update 'all))
 
-(defun recursion-indicator--minibuffer-exit ()
+(defun recursion-indicator--mb-exit ()
   "Minibuffer exit hook."
-  (pop recursion-indicator--minibuffer-depths)
+  (pop recursion-indicator--mb-depths)
   (setq recursion-indicator--cache nil))
+
+(defun recursion-indicator-exit (arg)
+  "Enter recursive edit if prefix ARG is non-nil, otherwise exit.
+When entering a new recursive editing session the window
+configuration will be saved.  It will be restored the as soon as
+the recursive editing session is left."
+  (interactive "P")
+  (let ((depth (recursion-depth)))
+    (cond
+     (arg
+      (message "Recursion depth: %s" (1+ depth))
+      (save-window-excursion (recursive-edit)))
+     ((memq depth recursion-indicator--mb-depths)
+      (abort-recursive-edit))
+     (t
+      (when (> depth 0)
+        (message "Recursion depth: %s" (1- depth)))
+      (exit-recursive-edit)))))
+
+(defvar-keymap recursion-indicator-map
+  :doc "Global keymap used by `recursion-indicator-mode'."
+  "<remap> <abort-recursive-edit>" #'recursion-indicator-exit
+  "<remap> <exit-recursive-edit>" #'recursion-indicator-exit)
 
 ;;;###autoload
 (define-minor-mode recursion-indicator-mode
-  "Show the recursion level in the mode-line."
+  "Show the recursion depth in the mode-line."
+  :keymap recursion-indicator-map
   :global t
-  (setq mode-line-misc-info (assq-delete-all 'recursion-indicator-mode mode-line-misc-info))
-  (remove-hook 'minibuffer-setup-hook #'recursion-indicator--minibuffer-setup)
-  (remove-hook 'minibuffer-exit-hook #'recursion-indicator--minibuffer-exit)
-  (when recursion-indicator-mode
+  (setq recursion-indicator--cache nil)
+  (cond
+   (recursion-indicator-mode
     ;; Use a high priority such that the indicator reflects the minibuffer recursion
     ;; status even if Emacs is redisplayed in another minibuffer setup hook.
-    (add-hook 'minibuffer-setup-hook #'recursion-indicator--minibuffer-setup -99)
-    (add-hook 'minibuffer-exit-hook #'recursion-indicator--minibuffer-exit)
-    (push '(recursion-indicator-mode (:eval (recursion-indicator--string))) mode-line-misc-info)
-    (setq recursion-indicator--cache nil)))
+    (add-hook 'minibuffer-setup-hook #'recursion-indicator--mb-setup -99)
+    (add-hook 'minibuffer-exit-hook #'recursion-indicator--mb-exit)
+    (setf (alist-get 'recursion-indicator-mode mode-line-misc-info)
+          '((:eval (recursion-indicator--string)))))
+   (t
+    (remove-hook 'minibuffer-setup-hook #'recursion-indicator--mb-setup)
+    (remove-hook 'minibuffer-exit-hook #'recursion-indicator--mb-exit)
+    (setf (alist-get 'recursion-indicator-mode mode-line-misc-info nil t) nil))))
 
 (provide 'recursion-indicator)
 ;;; recursion-indicator.el ends here

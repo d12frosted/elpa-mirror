@@ -1,5 +1,5 @@
 (epkg .
-      [(20230114 1258)
+      [(20230122 1904)
        ((emacs
 	 (25 1))
 	(compat
@@ -9,7 +9,7 @@
 	(llama
 	 (0 2 0)))
        "Browse the Emacsmirror package database" tar
-       ((:commit . "88f377e63c5e858c8cdacc75f413fd2899259d4f")
+       ((:commit . "361c2545443e9b8e89090b2d3ad8558d41f3ed70")
 	(:authors
 	 ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")

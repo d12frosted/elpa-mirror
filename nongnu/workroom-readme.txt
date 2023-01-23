@@ -4,16 +4,6 @@
 	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Install
-.. 1. MELPA
-.. 2. Quelpa
-.. 3. Straight.el
-2. Usage
-
-
 Workroom provides named "workrooms" (or workspaces), somewhat similar to
 multiple desktops in GNOME.
 
@@ -110,3 +100,11 @@ Workroom integrates with:
   check out the docstrings of `workroom-buffer-manager-function',
   `workroom-set-buffer-manager-function' and
   `workroom-buffer-manager-data'.
+
+  There's a Info manual available with more information, which can be
+  accessed with `C-h i m Workroom', also available [here on the
+  internet].
+
+
+[here on the internet]
+<https://elpa.nongnu.org/nongnu-devel/doc/workroom.html>

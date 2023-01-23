@@ -25,20 +25,21 @@ To get the most out of Eat, you should also setup shell integration.
 
   To start Eat, run `M-x eat'.  Eat has three keybinding modes:
 
-  • "emacs" mode: No special keybinding, except the following:
-
-    • `C-c C-j': Switch to semi-char mode.
-    • `C-c M-d': Switch to char mode.
-    • `C-c C-k': Kill process.
-
-  • "semi-char" mode: Most keys are bound to send the key to the
-    terminal, except the following keys: `C-\', `C-c', `C-x', `C-g',
-    `C-h', `C-M-c', `C-u', `C-q', `M-x', `M-:', `M-!', `M-&'.  The
-    following special keybinding are available:
+  • "semi-char" mode: This is the default keybinding mode.  Most keys
+    are bound to send the key to the terminal, except the following
+    keys: `C-\', `C-c', `C-x', `C-g', `C-h', `C-M-c', `C-u', `C-q',
+    `M-x', `M-:', `M-!', `M-&'.  The following special keybinding are
+    available:
 
     • `C-q': Send next key to the terminal.
     • `C-y': Like `yank', but send the text to the terminal.
     • `M-y': Like `yank-pop', but send the text to the terminal.
+    • `C-c C-k': Kill process.
+
+  • "emacs" mode: No special keybinding, except the following:
+
+    • `C-c C-j': Switch to semi-char mode.
+    • `C-c M-d': Switch to char mode.
     • `C-c C-k': Kill process.
 
   • "char" mode: All supported keys are bound to send the key to the
@@ -71,6 +72,13 @@ To get the most out of Eat, you should also setup shell integration.
 
   #+begin_src sh [ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \ source
   "$EAT_SHELL_INTEGRATION_DIR/bash" #+end_src sh
+
+  There's a Info manual available with more information, which can be
+  accessed with `C-h i m Eat', also available [here on the internet].
+
+
+[here on the internet]
+<https://elpa.nongnu.org/nongnu-devel/doc/eat.html>
 
 
 2 Installation

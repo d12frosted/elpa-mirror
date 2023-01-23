@@ -4,8 +4,8 @@
 ;; Maintainer: Emacs User Group Berlin <emacs-berlin@emacs-berlin.org>
 
 ;; Version: 0.1
-;; Package-Version: 20230104.1438
-;; Package-Commit: e497a9438e19aa9490218323f15ead45e40c80b8
+;; Package-Version: 20230122.1946
+;; Package-Commit: 9686e48edd6223a64ee7cc70ca2adb636992297e
 
 ;; URL: https://github.com/emacs-berlin/syntactic-close
 
@@ -693,6 +693,15 @@ Argument PPS is result of a call to function ‘parse-partial-sexp’"
 	((and (or (nth 1 pps) (nth 3 pps)) (syntactic-close-pure-syntax-intern pps)))
 	(t (syntactic-close--ruby))))
 
+(defun syntactic-close-scala-another-filter-clause ()
+  (when (looking-back "^[ \t]+if[ \t].*" (line-beginning-position))
+    (back-to-indentation)
+    (let ((indent (current-column))
+          done)
+      (while (and (progn (forward-line 1) (back-to-indentation) (eq (current-column) indent)))
+        (when (looking-at "if[ \t]")(setq done t)))
+      done)))
+
 (defun syntactic-close-scala-close (&optional pps)
   "Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
   (interactive "*")
@@ -701,7 +710,9 @@ Argument PPS is result of a call to function ‘parse-partial-sexp’"
      ((nth 8 pps)
       (syntactic-close-generic-forms pps))
      ((nth 1 pps)
-      (syntactic-close-pure-syntax pps))
+      (if (save-excursion (syntactic-close-scala-another-filter-clause))
+          ";"
+      (syntactic-close-pure-syntax pps)))
      (t (syntactic-close--generic nil nil pps)))))
 
 (defun syntactic-close-shell-close (&optional pps)
