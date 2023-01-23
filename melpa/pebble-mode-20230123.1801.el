@@ -8,8 +8,8 @@
 ;; Author: Florian Mounier aka paradoxxxzero
 ;; Author: Arne Babenhauserheide
 ;; Version: 0.3
-;; Package-Version: 20221009.2113
-;; Package-Commit: b256cebef2911021f0241364b4642357d5efd201
+;; Package-Version: 20230123.1801
+;; Package-Commit: bcbc76aa89196338f12a8ddfe4486edf83c19c5e
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -33,6 +33,8 @@
 ;;        indentation (working with sgml)
 
 ;; It follows pebbles syntax reference: https://pebbletemplates.io/wiki/guide/basic-usage/
+
+;; Implementation sponsored by my employer Disy Informationssysteme GmbH. Thank you!
 
 ;; pebble-mode is based on jinja2-mode by Florian Mounier
 

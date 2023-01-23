@@ -4,8 +4,6 @@
 
 ;; Author: Daniils Petrovs <thedanpetrov@gmail.com>
 ;; URL: https://github.com/DaniruKun/siri-shortcuts.el
-;; Package-Version: 20211229.1833
-;; Package-Commit: 190f242f71e071adfd89fa1f2f6ea22b62afd133
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "25.2"))
 ;; Keywords: convenience multimedia

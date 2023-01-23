@@ -6,6 +6,8 @@
 ;;         Thomas Refis <thomas.refis(_)gmail.com>
 ;; Created: 15 May 2015
 ;; Version: 0.1
+;; Package-Version: 20221123.1408
+;; Package-Commit: 8bcab034a680f57ddf58092fda6288dc4caddd2a
 ;; Keywords: ocaml languages
 ;; Package-Requires: ((emacs "25.1") (merlin "3") (auto-complete "1.5"))
 ;; URL: http://github.com/ocaml/merlin
