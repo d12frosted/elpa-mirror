@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/DogLooksGood/emacs-rime.git
 
 Updating /mnt/store/melpa/working/rime/
-Checking out 74f3dff40e66c65388a9471eecbc1d9aca5612f7
+Checking out 0a50c918d2de56aa401a68ba37394446c6fc9ed6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rime/
-  to /tmp/rimerajnhe/rime-20221112.1341
+  to /tmp/rime6PjgHK/rime-20230123.1017
     rime-predicates.el -> rime-predicates.el
     rime.el -> rime.el
     lib.c -> lib.c
     Makefile -> Makefile
-Created rime-20221112.1341.tar containing:
-  rime-20221112.1341/
-  rime-20221112.1341/Makefile
-  rime-20221112.1341/lib.c
-  rime-20221112.1341/rime-pkg.el
-  rime-20221112.1341/rime-predicates.el
-  rime-20221112.1341/rime.el
-Built rime in 3.569s, finished at 2023-01-23T09:11:21+0000
+Created rime-20230123.1017.tar containing:
+  rime-20230123.1017/
+  rime-20230123.1017/Makefile
+  rime-20230123.1017/lib.c
+  rime-20230123.1017/rime-pkg.el
+  rime-20230123.1017/rime-predicates.el
+  rime-20230123.1017/rime.el
+Built rime in 5.503s, finished at 2023-01-23T12:48:59+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 394 Jan 23 09:11 packages/rime-20221112.1341.entry
  72K -rw-r--r-- 1 root root 70K Jan 23 09:11 packages/rime-20221112.1341.tar
+4.0K -rw-r--r-- 1 root root 394 Jan 23 12:48 packages/rime-20230123.1017.entry
+ 72K -rw-r--r-- 1 root root 70K Jan 23 12:48 packages/rime-20230123.1017.tar

@@ -10,8 +10,8 @@
 ;; Maintainer: FENTON, Alex <a-fent@github>
 ;; Created: 2014-07-20
 ;; Version: 1.210925
-;; Package-Version: 20220705.1036
-;; Package-Commit: 1beb7c04d1879d72a2e95aaaa59d7ef4e75b7c9d
+;; Package-Version: 20230123.924
+;; Package-Commit: 824d3707bb51e31249a7550a3e759e5fbb5207e5
 ;; Package-Requires: ((org "8.2") (emacs "24.4") (dash "2.8") (ht "2.0"))
 ;; Keywords: tools
 ;; URL: https://github.com/a-fent/ox-pandoc
