@@ -5,9 +5,9 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/message-attachment-reminder
-;; Package-Version: 20200428.124
-;; Package-Commit: 02d7e66e55729d294f92881530f58a6a7364a78c
-;; Version: 0.1
+;; Package-Version: 20230124.520
+;; Package-Commit: 975381d6e7c6771c462e73abd3398a4ed2a9b86b
+;; Version: 0.2
 ;; Package-Requires: ((emacs "24.1"))
 
 ;; This file is not part of GNU Emacs.
@@ -60,6 +60,7 @@
                 "I have attached"
                 "I've attached"
                 "find attached"
+                "in the attached"
                 "see attached"
                 "see attachment"
                 "see the attachment"
@@ -71,7 +72,8 @@
                 "I've enclosed"
                 "find enclosed"
                 "see enclosed"
-                "see the enclosed"))
+                "see the enclosed"
+                "in the enclosed"))
   "Regular expression to match possible attachment reminder hints.
 When found in the composed message and there are no attachments
 present, will cause `message-attachment-reminder-warning' to be

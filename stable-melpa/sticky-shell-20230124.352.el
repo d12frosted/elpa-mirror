@@ -5,8 +5,8 @@
 ;; Author: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; Maintainer: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; URL: https://github.com/andyjda/sticky-shell
-;; Package-Version: 20230124.220
-;; Package-Commit: 08057b8534095cfa2fda5fd9bff866e27143d26c
+;; Package-Version: 20230124.352
+;; Package-Commit: 7990b928031a3f8fa01b9a25776788df050402b4
 ;; Version: 1.0.1
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: processes, terminals, tools
@@ -36,13 +36,14 @@
 ;;
 ;; To enable the mode, run `sticky-shell-mode' in any shell buffer.
 ;;
-;; The mode can be set globally (for all shell buffers)
-;; with `sticky-shell-global-mode'.
+;; To enable the mode globally (for all shell buffers)
+;; run `sticky-shell-global-mode'.
 ;;
 ;; Because headers have to fit within one line, sometimes the final part of the
 ;; prompt is not visible. To ensure that the prompt's beginning and end are
 ;; always both visible, you can use `sticky-shell-shorten-header-mode'.
-;; If you'd like the shorten-header mode to be enabled by default, you should
+;;
+;; If you'd like this shorten-header mode to be enabled by default, you should
 ;; add `sticky-shell-shorten-header-set-mode' to `sticky-shell-mode-hook'
 
 ;;; Code:
