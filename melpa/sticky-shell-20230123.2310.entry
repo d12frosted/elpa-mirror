@@ -1,9 +1,9 @@
 (sticky-shell .
-	      [(20230116 1701)
+	      [(20230123 2310)
 	       ((emacs
 		 (24 4)))
-	       "Minor mode that displays the latest shell-prompt in a header" single
-	       ((:commit . "66310eadb69cf229e1b0a104bd024092123dddf3")
+	       "Minor mode to keep track of previous prompt in your shell" single
+	       ((:commit . "b8666d0b9d98bae06aca49b6127a0eb909762b53")
 		(:authors
 		 ("Andrew De Angelis" . "bobodeangelis@gmail.com"))
 		(:maintainer "Andrew De Angelis" . "bobodeangelis@gmail.com")

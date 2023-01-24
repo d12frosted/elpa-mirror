@@ -1,12 +1,12 @@
-;;; sticky-shell.el --- Minor mode that displays the latest shell-prompt in a header -*- lexical-binding: t; -*-
+;;; sticky-shell.el --- Minor mode to keep track of previous prompt in your shell  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022  Andrew De Angelis
 
 ;; Author: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; Maintainer: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; URL: https://github.com/andyjda/sticky-shell
-;; Package-Version: 20230116.1701
-;; Package-Commit: 66310eadb69cf229e1b0a104bd024092123dddf3
+;; Package-Version: 20230123.2310
+;; Package-Commit: b8666d0b9d98bae06aca49b6127a0eb909762b53
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: processes, terminals, tools
@@ -26,12 +26,12 @@
 ;;; Commentary:
 
 ;; This package provides a minor mode that creates a header in a shell buffer.
-;; The header shows a previous prompt according to the value of
+;; The header shows a previous prompt according to the customizable value of
 ;; `sticky-shell-get-prompt'.
 ;; This is most useful when working with many lines of output:
-;; setting `sticky-shell-get-prompt' to `sticky-shell-prompt-above-visible'
-;; will ensure that the command corresponding to the top output-line
-;; is always visible.
+;; you can ensure that the command corresponding to the top output-line
+;; is always visible by setting `sticky-shell-get-prompt' to
+;; `sticky-shell-prompt-above-visible' (its default value).
 ;; The mode can be set globally (for all shell buffers)
 ;; with `sticky-shell-global-mode'.
 

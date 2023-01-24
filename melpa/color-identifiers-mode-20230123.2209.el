@@ -4,8 +4,8 @@
 
 ;; Author: Ankur Dave <ankurdave@gmail.com>
 ;; Url: https://github.com/ankurdave/color-identifiers-mode
-;; Package-Version: 20230119.533
-;; Package-Commit: 9273979be4e2753755187a73cb7ea745cfb061d6
+;; Package-Version: 20230123.2209
+;; Package-Commit: fa2df5840ff619256da1aa2cf0fd3101124cee7f
 ;; Created: 24 Jan 2014
 ;; Version: 1.1
 ;; Keywords: faces, languages
@@ -193,42 +193,38 @@ SCAN-FN."
 
 ;;; MAJOR MODE SUPPORT =========================================================
 
-;; Scala
-(add-to-list
- 'color-identifiers:modes-alist
- `(scala-mode . (,color-identifiers:re-not-inside-class-access
-                 "\\_<\\([[:lower:]]\\([_]??[[:lower:][:upper:]\\$0-9]+\\)*\\(_+[#:<=>@!%&*+/?\\\\^|~-]+\\|_\\)?\\)"
-                 (nil scala-font-lock:var-face font-lock-variable-name-face tree-sitter-hl-face:variable))))
-
-;; C/C++
-(defun color-identifiers:cc-mode-get-declarations ()
-  "Extract a list of identifiers declared in the current buffer.
-For cc-mode support within color-identifiers-mode."
+(defun color-identifiers:get-declarations ()
+  "Extract a list of identifiers declared in the current buffer."
   (let ((result (make-hash-table :test 'equal))
         (identifier-faces (color-identifiers:curr-identifier-faces)))
-    ;; Entities that cc-mode highlighted as variables
+    ;; Entities that major mode highlighted as variables
     (save-excursion
       (let ((next-change (next-property-change (point-min))))
         (while next-change
           (goto-char next-change)
           (let ((face-at-point (get-text-property (point) 'face)))
             (when (or (and face-at-point (memq face-at-point identifier-faces))
-                      ;; If we fontified it in the past, assume it should
-                      ;; continue to be fontified. This avoids alternating
-                      ;; between fontified and unfontified.
+                      ;; If we fontified X in the past, keep X in the list for
+                      ;; consistency. Otherwise `scan-identifiers' will stop
+                      ;; colorizing new Xes while older ones remain colorized.
                       (get-text-property (point) 'color-identifiers:fontified))
               (puthash (substring-no-properties (symbol-name (symbol-at-point))) t result)))
           (setq next-change (next-property-change (point))))))
     (hash-table-keys result)))
 
 (dolist (maj-mode '(c-mode c++-mode java-mode rust-mode rustic-mode meson-mode typescript-mode cuda-mode tsx-ts-mode typescript-ts-mode))
-  (color-identifiers:set-declaration-scan-fn
-   maj-mode 'color-identifiers:cc-mode-get-declarations)
   (add-to-list
    'color-identifiers:modes-alist
    `(,maj-mode . (""
                   "\\_<\\([a-zA-Z_$]\\(?:\\s_\\|\\sw\\)*\\)"
                   (nil font-lock-variable-name-face tree-sitter-hl-face:variable)))))
+
+;; Scala
+(add-to-list
+ 'color-identifiers:modes-alist
+ `(scala-mode . (,color-identifiers:re-not-inside-class-access
+                 "\\_<\\([[:lower:]]\\([_]??[[:lower:][:upper:]\\$0-9]+\\)*\\(_+[#:<=>@!%&*+/?\\\\^|~-]+\\|_\\)?\\)"
+                 (nil scala-font-lock:var-face font-lock-variable-name-face tree-sitter-hl-face:variable))))
 
 ;;; JavaScript
 (add-to-list
@@ -237,8 +233,6 @@ For cc-mode support within color-identifiers-mode."
               "\\_<\\([a-zA-Z_$]\\(?:\\s_\\|\\sw\\)*\\)"
               (nil font-lock-variable-name-face))))
 
-(color-identifiers:set-declaration-scan-fn
- 'js2-mode 'color-identifiers:cc-mode-get-declarations)
 (add-to-list
  'color-identifiers:modes-alist
  `(js2-mode . (,color-identifiers:re-not-inside-class-access
@@ -257,8 +251,6 @@ For cc-mode support within color-identifiers-mode."
                   "\\_<\\([a-zA-Z_$]\\(?:\\s_\\|\\sw\\)*\\)"
                   (nil font-lock-variable-name-face js2-function-param))))
 
-(color-identifiers:set-declaration-scan-fn
- 'js2-jsx-mode 'color-identifiers:cc-mode-get-declarations)
 (add-to-list
  'color-identifiers:modes-alist
  `(js2-jsx-mode . (,color-identifiers:re-not-inside-class-access
@@ -326,7 +318,7 @@ For cc-mode support within color-identifiers-mode."
 For Python support within color-identifiers-mode.  Supports
 function arguments and variable assignment, but not yet lambda
 arguments, loops (for .. in), or for comprehensions."
-  (let ((result nil)
+  (let ((result (make-hash-table :test 'equal))
         (identifier-faces (color-identifiers:curr-identifier-faces)))
     ;; Function arguments
     (save-excursion
@@ -344,7 +336,7 @@ arguments, loops (for .. in), or for comprehensions."
                        (params (-map (lambda (token)
                                        (car (split-string (symbol-name token) "[=:]")))
                                      args-filtered)))
-                  (setq result (append params result)))))
+                  (dolist (param params) (puthash param t result)))))
           (wrong-type-argument nil))))
     ;; Entities that python-mode highlighted as variables
     (save-excursion
@@ -357,10 +349,9 @@ arguments, loops (for .. in), or for comprehensions."
                       ;; continue to be fontified. This avoids alternating
                       ;; between fontified and unfontified.
                       (get-text-property (point) 'color-identifiers:fontified))
-              (push (substring-no-properties (symbol-name (symbol-at-point))) result)))
+              (puthash (substring-no-properties (symbol-name (symbol-at-point))) t result)))
           (setq next-change (next-property-change (point))))))
-    (delete-dups result)
-    result))
+    (hash-table-keys result)))
 (color-identifiers:set-declaration-scan-fn
  'python-mode 'color-identifiers:python-get-declarations)
 
@@ -539,9 +530,13 @@ incompatible with Emacs Lisp syntax, such as reader macros (#)."
                    "\\_<\\(\\(?:\\s_\\|\\sw\\)+\\)"
                    (nil))))
 
+(add-to-list
+ 'color-identifiers:modes-alist
+ `(clojurescript-mode . (""
+                         "\\_<\\(\\(?:\\s_\\|\\sw\\)+\\)"
+                         (nil))))
+
 (dolist (maj-mode '(tuareg-mode sml-mode))
-  (color-identifiers:set-declaration-scan-fn
-   maj-mode 'color-identifiers:cc-mode-get-declarations)
   (add-to-list
    'color-identifiers:modes-alist
    `(,maj-mode . (""
@@ -732,17 +727,8 @@ major mode, identifiers are saved to
   (if (color-identifiers:get-declaration-scan-fn major-mode)
       (funcall (color-identifiers:get-declaration-scan-fn major-mode))
     ;; When no scan function is registered, fall back to
-    ;; `color-identifiers:scan-identifiers', which returns all identifiers
-    (save-excursion
-      (goto-char (point-min))
-      (catch 'input-pending
-        (let ((result (make-hash-table :test 'equal)))
-          (color-identifiers:scan-identifiers
-           (lambda (start end)
-             (puthash (buffer-substring-no-properties start end) t result))
-           (point-max)
-           (lambda () (if (input-pending-p) (throw 'input-pending nil) t)))
-          (hash-table-keys result))))))
+    ;; `color-identifiers:get-declarations', which returns all identifiers
+    (color-identifiers:get-declarations)))
 
 (defun color-identifiers:refontify ()
   "Refontify the buffer using font-lock."
@@ -789,8 +775,7 @@ evaluates to true."
                     (if continue-p (funcall continue-p) t))
           (if (or (memq (get-text-property (point) 'face) identifier-faces)
                   (let ((flface-prop (get-text-property (point) 'font-lock-face)))
-                    (and flface-prop (memq flface-prop identifier-faces)))
-                  (get-text-property (point) 'color-identifiers:fontified))
+                    (and flface-prop (memq flface-prop identifier-faces))))
               (if (and (looking-back identifier-context-re (line-beginning-position))
                        (or (not identifier-exclusion-re) (not (looking-at identifier-exclusion-re)))
                        (looking-at identifier-re))
