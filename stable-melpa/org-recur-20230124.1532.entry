@@ -1,11 +1,13 @@
 (org-recur .
-	   [(20221229 1101)
+	   [(20230124 1532)
 	    ((emacs
 	      (24 1))
 	     (org
-	      (9 0)))
+	      (9 0))
+	     (dash
+	      (2 7 0)))
 	    "Recurring org-mode tasks" single
-	    ((:commit . "fa2a37d50229346929fa70b56c9d7cc34bc628ae")
+	    ((:commit . "628099883a63d219f76cd9631cc914fe6ec8a3e3")
 	     (:authors
 	      ("Marcin Swieczkowski" . "marcin.swieczkowski@gmail.com"))
 	     (:maintainer "Marcin Swieczkowski" . "marcin.swieczkowski@gmail.com")

@@ -10,8 +10,8 @@
 ;; Maintainer: FENTON, Alex <a-fent@github>
 ;; Created: 2014-07-20
 ;; Version: 1.210925
-;; Package-Version: 20230123.924
-;; Package-Commit: 824d3707bb51e31249a7550a3e759e5fbb5207e5
+;; Package-Version: 20230124.1615
+;; Package-Commit: 16b0dfd2a671f9259fc294d8daa43cb7d688bec2
 ;; Package-Requires: ((org "8.2") (emacs "24.4") (dash "2.8") (ht "2.0"))
 ;; Keywords: tools
 ;; URL: https://github.com/a-fent/ox-pandoc
@@ -95,6 +95,11 @@
   `(choice (const t) (const nil)
            (alist :key-type (choice ,@(--map `(const ,it) org-pandoc-valid-options))
                   :value-type (choice (const t) (const nil) string))))
+
+;; For exporting with ox-pandoc, the "LABEL" attribute is preserved and
+;; not, as in other exporters, normalised to "NAME"
+(defconst org-pandoc-element-keyword-translation-alist
+	  (--remove (equal "LABEL" (car it) ) org-element-keyword-translation-alist))
 
 (defcustom org-pandoc-options '((standalone . t)) ;; (mathjax . t) (parse-raw . t)
   "Pandoc options."
@@ -1474,9 +1479,10 @@ t means output to buffer."
   (unless (executable-find org-pandoc-command)
     (error "Pandoc (version 1.12.4 or later) can not be found"))
   (setq org-pandoc-format format)
-  (org-export-to-file 'pandoc (org-export-output-file-name
-                               (concat (make-temp-name ".tmp") ".org") s)
-    a s v b e (lambda (f) (org-pandoc-run-to-buffer-or-file f format s buf-or-open))))
+  (let ((org-element-keyword-translation-alist org-pandoc-element-keyword-translation-alist))
+	(org-export-to-file 'pandoc (org-export-output-file-name
+									  (concat (make-temp-name ".tmp") ".org") s)
+		   a s v b e (lambda (f) (org-pandoc-run-to-buffer-or-file f format s buf-or-open)))))
 
 (defun org-pandoc--has-caption-p (element _info)
   "Non-nil when ELEMENT has a caption affiliated keyword.
@@ -1484,35 +1490,6 @@ INFO is a plist used as a communication channel.  This function
 is meant to be used as a predicate for `org-export-get-ordinal'."
   (org-element-property :caption element))
 
-(defun org-pandoc-set-caption-title (element info fmt pred)
-  "Manually sets a numbered leader for the caption.
-Works around a bug in pandoc (present in at least up-to and
-including pandoc 1.18) which doesn't number things like Tables
-and Figures.  ELEMENT is the org-mode element.  INFO is a plist
-holding contextual information.  FMT is the format of the caption
-label, e.g., \"Table %d:\", or \"Figure %d:\".  PRED is a
-predicate function used by org-mode to keep track of
-table/figure/etc. numbers."
-  (let* ((caption (org-element-property :caption element))
-         (name (org-element-property :name element))
-         (name-target (when name (concat "<<" name ">>"))))
-    ;; caption is, e.g. "(((#("Testing table" 0 13 (:parent #8)))))"
-    ;; name is a link target, e.g., tab:test-table
-    ;; (cl-caaar caption) is then, e.g., "Testing table"
-    ;; name-target would be, e.g., "<<tab:test-table>>"
-    (when caption
-      (if (member org-pandoc-format '(beamer beamer-pdf latex latex-pdf))
-          (push name-target (caar caption))
-        ;; Get sequence number of current src-block among every
-        ;; src-block with a caption.  Additionally translate the caption
-        ;; label into the local language.
-        (let* ((reference (org-export-get-ordinal element info nil pred))
-               (title-fmt (org-export-translate fmt :utf-8 info))
-               (new-name-target (concat (format title-fmt reference) " " name-target)))
-          ;; Set the text of the caption to have, e.g., 'Table <num>:
-          ;; ' prepended. Also add a target for any hyperlinks to this
-          ;; table. Pandoc doesn't pick up #+LABEL: or #+NAME: elements.
-          (push new-name-target (caar caption)))))))
 
 (defun org-pandoc--numbered-equation-p (element _info)
   "Non-nil when ELEMENT is a numbered latex equation environment.
@@ -1572,11 +1549,8 @@ INFO is a plist holding contextual information."
       ;; a "\qquad" space, ala pandoc-crossref
       ;; (https://github.com/lierdakil/pandoc-crossref)
       (when (org-pandoc--numbered-equation-p latex-env info)
-        (let ((reference (org-export-get-ordinal
-                          latex-env info nil
-                          #'org-pandoc--numbered-equation-p)))
           (setq replacement-str
-                (format "\n$$\\1 \\\\qquad (%d)$$" reference))))
+                (format "\n$$\\1$$"))))
 
       ;; For equations with a named links target (`#+NAME:' block), add
       ;; the target to the top of the equation
@@ -1688,9 +1662,7 @@ holding contextual information."
   "Transcode a TABLE element from Org to Pandoc.
 CONTENTS is the contents of the table.  INFO is a plist holding
 contextual information."
-  (org-pandoc-set-caption-title table info "Table %d:"
-                                #'org-pandoc--has-caption-p)
-  ;; Export the table with it's modified caption
+  ;; Export the table
   (org-export-expand table contents t))
 
 (defun org-pandoc-template (contents info)
@@ -1759,10 +1731,6 @@ Option table is created in this stage."
   "Transcode a PARAGRAPH element from Org to Pandoc.
 CONTENTS is the contents of the paragraph, as a string.  INFO is
 the plist used as a communication channel."
-  (when (org-html-standalone-image-p paragraph info)
-    ;; Standalone image.
-    (org-pandoc-set-caption-title paragraph info "Figure %d:"
-                                  #'org-html-standalone-image-p))
   ;; Export the paragraph verbatim. Like `org-org-identity', but also
   ;; preserves #+ATTR_* tags in the output.
   (org-export-expand paragraph contents t))
@@ -1771,9 +1739,7 @@ the plist used as a communication channel."
   "Transcode a SRC-BLOCK element from Org to Pandoc.
 CONTENTS is the contents of the table. INFO is a plist holding
 contextual information."
-  (org-pandoc-set-caption-title src-block info "Listing %d:"
-                                #'org-pandoc--has-caption-p)
-  ;; Export the src-block with it's modified caption
+  ;; Export the src-block
   (org-export-expand src-block contents t))
 
 (defun org-pandoc-export-block (export-block contents info)
@@ -1882,7 +1848,8 @@ Called on completion of an asynchronous pandoc process."
      (display-warning 'ox-pandoc (format "Signal Received. %s" message)))
     (exit
      (dolist (file (process-get process 'files))
-       (if (and file (file-exists-p file)) (delete-file file)))
+       ;; (if (and file (file-exists-p file)) (delete-file file))
+	   )
      (let ((exit-status (process-exit-status process))
            (buffer (process-buffer process))
            (output-file (process-get process 'output-file))

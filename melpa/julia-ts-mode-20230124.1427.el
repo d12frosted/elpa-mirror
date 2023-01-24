@@ -5,8 +5,8 @@
 ;; Author           : Ronan Arraes Jardim Chagas
 ;; Created          : December 2022
 ;; Keywords         : julia languages tree-sitter
-;; Package-Version: 20230117.1945
-;; Package-Commit: c620db6899ae180cd5b058f24c8832becd05fcb5
+;; Package-Version: 20230124.1427
+;; Package-Commit: d78307d95a2a97abc54c918eb8feffa62b26673b
 ;; Package-Requires : ((emacs "29") (julia-mode "0.4"))
 ;; URL              : https://github.com/ronisbr/julia-ts-mode
 ;; Version          : 0.2.0
@@ -155,7 +155,7 @@ Otherwise, the indentation is:
    `((quote_expression) @julia-ts-quoted-symbol-face
      ((identifier) @font-lock-builtin-face
       (:match
-       "^\\(:?NaN\\|NaN16\\|NaN32\\|NaN64\\|nothing\\|missing\\|undef\\)$"
+       "^\\(:?NaN\\|NaN16\\|NaN32\\|NaN64\\|Inf\\|Inf16\\|Inf32\\|Inf64\\|nothing\\|missing\\|undef\\)$"
        @font-lock-builtin-face)))
 
    :language 'julia
@@ -188,6 +188,7 @@ Otherwise, the indentation is:
    `((abstract_definition) @font-lock-keyword-face
      (break_statement) @font-lock-keyword-face
      (continue_statement) @font-lock-keyword-face
+     (for_binding "in" @font-lock-keyword-face)
      (import_statement ["import" "using"] @font-lock-keyword-face)
      ((vector_expression
        (range_expression
@@ -209,9 +210,16 @@ Otherwise, the indentation is:
 
    :language 'julia
    :feature 'operator
-   `((let_binding "=" @font-lock-type-face)
+   `((adjoint_expression "'" @font-lock-type-face)
+     (let_binding "=" @font-lock-type-face)
+     (for_binding ["=" "∈"] @font-lock-type-face)
+     (function_expression "->" @font-lock-type-face)
      (operator) @font-lock-type-face
-     (ternary_expression ["?" ":"] @font-lock-type-face))
+     (slurp_parameter "..." @font-lock-type-face)
+     (splat_expression "..." @font-lock-type-face)
+     (ternary_expression ["?" ":"] @font-lock-type-face)
+     (type_clause ["<:", ">:"] @font-lock-type-face)
+     (["." "::"] @font-lock-type-face))
 
    :language 'julia
    :feature 'string
