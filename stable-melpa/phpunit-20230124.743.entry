@@ -1,5 +1,5 @@
 (phpunit .
-	 [(20220704 1554)
+	 [(20230124 743)
 	  ((s
 	    (1 12 0))
 	   (f
@@ -11,7 +11,7 @@
 	   (emacs
 	    (24 3)))
 	  "Launch PHP unit tests using phpunit" tar
-	  ((:commit . "02020d4b3e5ae9fdb82be9203fa6d330adcbc0eb")
+	  ((:commit . "4a36906344c0abc11f48cc08cd8d50a9f46963f8")
 	   (:authors
 	    ("Nicolas Lamirault" . "nicolas.lamirault@gmail.com")
 	    ("Eric Hansen" . "hansen.c.eric@gmail.com"))
