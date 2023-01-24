@@ -12,8 +12,8 @@
 ;;   Peking Duck
 ;;   Bill Hunker
 ;; Package-Requires: ((emacs "26.1"))
-;; Package-Version: 20230122.802
-;; Package-Commit: 9b83a074418c1e6463abf9bd6273d74fad4ef4fa
+;; Package-Version: 20230124.1042
+;; Package-Commit: 72b7d3f106ad84c339adc3f768cd1554ba786663
 
 ;; Version: 1.0
 ;; Keywords: data, extensions
@@ -324,8 +324,8 @@ special symbol 'hline to mean an horizontal line."
 		      do (setcar nu (1+ (car nu)))
 		      unless (equal cellnp "")
 		      do (setcar ne (1+ (car ne)))
-		      if (< (car mx) (length cellnp))
-		      do (setcar mx (length cellnp))))
+		      if (< (car mx) (string-width cellnp))
+		      do (setcar mx (string-width cellnp))))
 
     ;; change meaning of numbers from quantity of cells with numbers
     ;; to flags saying whether alignment should be left (number alignment)
@@ -350,7 +350,7 @@ special symbol 'hline to mean an horizontal line."
 		      (cl-loop for cell in row
 			       for mx in maxwidths
 			       for nu in numbers
-			       for pad = (- mx (length cell))
+			       for pad = (- mx (string-width cell))
 			       collect "| "
 			       ;; no alignment
 			       if (<= pad 0)
