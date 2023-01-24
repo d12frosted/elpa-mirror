@@ -5,8 +5,8 @@
 ;; Author: Debanjum Singh Solanky <debanjum@gmail.com>
 ;; Description: Natural, Incremental Search for your Second Brain
 ;; Keywords: search, org-mode, outlines, markdown, beancount, ledger, image
-;; Package-Version: 20230122.2145
-;; Package-Commit: 013c7c10a4de41cc08373d18b40ab53ab511adc6
+;; Package-Version: 20230123.2340
+;; Package-Commit: 477ef28e086e3f40805c2c8643ae41e723a96496
 ;; Version: 0.2.6
 ;; Package-Requires: ((emacs "27.1") (transient "0.3.0"))
 ;; URL: https://github.com/debanjum/khoj/tree/master/src/interface/emacs
@@ -52,6 +52,7 @@
 (require 'json)
 (require 'transient)
 (require 'outline)
+(eval-when-compile (require 'subr-x)) ;; for string-trim before Emacs 28.2
 
 
 ;; -------------------------
@@ -387,35 +388,32 @@ Use `which-key` if available, else display simple message in echo area"
 
 (defun khoj--get-current-outline-entry-text ()
   "Get text under current outline section."
-  (with-current-buffer (current-buffer)
-    ;; jump to cursor in current buffer
-    (goto-char (point))
-    ;; trim leading whitespaces from text
-    (replace-regexp-in-string
-     "^[ \t\n]*" ""
-     ;; trim trailing whitespaces from text
-     (replace-regexp-in-string
-      "[ \t\n]*$" ""
-      ;; get text of current outline entry
-      (buffer-substring-no-properties
-       (save-excursion (outline-previous-heading) (point))
-       (save-excursion (outline-next-heading) (point)))))))
+  (string-trim
+   ;; get text of current outline entry
+   (cond
+    ;; when at heading of entry
+    ((looking-at outline-regexp)
+     (buffer-substring-no-properties
+      (point)
+      (save-excursion (outline-next-heading) (point))))
+    ;; when within entry
+    (t (buffer-substring-no-properties
+        (save-excursion (outline-previous-heading) (point))
+        (save-excursion (outline-next-heading) (point)))))))
 
 (defun khoj--get-current-paragraph-text ()
-  "Get text in current paragraph at point."
-  (with-current-buffer (current-buffer)
-    ;; jump to cursor in current buffer
-    (goto-char (point))
-    ;; trim leading whitespaces from text
-    (replace-regexp-in-string
-     "^[ \t\n]*" ""
-    ;; trim trailing whitespaces from text
-     (replace-regexp-in-string
-      "[ \t\n]*$" ""
-      ;; get text of current entry
-      (buffer-substring-no-properties
-       (save-excursion (backward-paragraph) (point))
-       (save-excursion (forward-paragraph) (point)))))))
+  "Get trimmed text in current paragraph at point.
+Paragraph only starts at first text after blank line."
+  (string-trim
+   (cond
+    ;; when at end of a middle paragraph
+    ((and (looking-at paragraph-start) (not (equal (point) (point-min))))
+     (buffer-substring-no-properties
+      (save-excursion (backward-paragraph) (point))
+      (point)))
+    ;; else
+    (t (thing-at-point 'paragraph t)))))
+
 
 (defun khoj--find-similar (&optional content-type)
   "Find items of CONTENT-TYPE in khoj index similar to text surrounding point."

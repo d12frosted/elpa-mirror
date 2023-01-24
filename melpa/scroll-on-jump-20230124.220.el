@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.com/ideasman42/emacs-scroll-on-jump
-;; Package-Version: 20230122.748
-;; Package-Commit: 54b48665fcdffaba028de2f7713914f08ee2f0ba
+;; Package-Version: 20230124.220
+;; Package-Commit: 7b4d7966275bdf8587c62ae9c203dfa068677d2c
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -42,9 +42,19 @@
   "Use smooth (pixel) scrolling, otherwise scroll by lines."
   :type 'boolean)
 
-(defcustom scroll-on-jump-use-curve t
-  "Apply a curve to the scroll speed, starting and ending slow."
-  :type 'boolean)
+(defcustom scroll-on-jump-curve 'smooth
+  "The the method scrolling is calculated."
+  :type
+  '(choice
+    (const :tag "Smooth in/out, starts & ends slow" smooth)
+    (const :tag "Smooth in, starts slow" smooth-in)
+    (const :tag "Smooth out, ends slow" smooth-out)
+    (const :tag "Linear" linear)))
+
+(defcustom scroll-on-jump-curve-power 3.0
+  "The strength of the curve (when set to linear).
+A value of 1.0 is linear, values between 2 and 8 work well."
+  :type 'float)
 
 (defcustom scroll-on-jump-mode-line-format nil
   "The `mode-line-format' to use or nil to leave the `mode-line-format' unchanged.
@@ -137,10 +147,6 @@ Argument ALSO-MOVE-POINT When non-nil, move the POINT as well."
    (t
     (cons 0 0))))
 
-(defun scroll-on-jump--interpolate-ease (a b factor)
-  "Blend FACTOR between A and B using ease style curvature."
-  (+ a (* (- b a) (- (* 3.0 factor factor) (* 2.0 factor factor factor)))))
-
 (defsubst scroll-on-jump--evil-visual-mode-workaround ()
   "Workaround for `evil-mode' line-mode."
   ;; Without this, the line mode point jumps back to the origin,
@@ -157,8 +163,57 @@ Argument ALSO-MOVE-POINT When non-nil, move the POINT as well."
 
 
 ;; ---------------------------------------------------------------------------
-;; Internal Logic
+;; Internal Interpolation Functions
 
+(defsubst scroll-on-jump--interp-linear-impl (a b factor)
+  "Internal macro for to blend A, B by FACTOR."
+  (+ a (* (- b a) factor)))
+
+(defun scroll-on-jump--interp-linear (a b factor)
+  "Blend FACTOR between A and B using linear curvature."
+  (scroll-on-jump--interp-linear-impl a b factor))
+
+(defun scroll-on-jump--interp-ease-in (a b factor)
+  "Blend FACTOR between A and B using ease-in curvature."
+  (scroll-on-jump--interp-linear-impl a b (expt factor scroll-on-jump-curve-power)))
+
+(defun scroll-on-jump--interp-ease-out (a b factor)
+  "Blend FACTOR between A and B using ease-in curvature."
+  (scroll-on-jump--interp-linear-impl
+   a b (- 1.0 (expt (- 1.0 factor) scroll-on-jump-curve-power))))
+
+(defun scroll-on-jump--interp-ease-in-out (a b factor)
+  "Blend FACTOR between A and B using ease-in-out curvature."
+  (cond
+   ((< factor 0.5)
+    (let ((f (* (expt (* factor 2.0) scroll-on-jump-curve-power) 0.5)))
+      (scroll-on-jump--interp-linear-impl a b f)))
+   (t
+    (let ((f (- 1.0 (* (expt (* (- 1.0 factor) 2.0) scroll-on-jump-curve-power) 0.5))))
+      (scroll-on-jump--interp-linear-impl a b f)))))
+
+(defun scroll-on-jump--interp-fn-get (curve)
+  "Return the interpolation function associated with CURVE."
+  (cond
+   ((<= scroll-on-jump-curve-power 1.0)
+    ;; A curve of 1.0 is linear by definition,
+    ;; also catches users entering in bad values (negative numbers for e.g.)
+    ;; that will only cause problems.
+    #'scroll-on-jump--interp-linear)
+   (t
+    (pcase curve
+      ('linear #'scroll-on-jump--interp-linear)
+      ('smooth #'scroll-on-jump--interp-ease-in-out)
+      ('smooth-in #'scroll-on-jump--interp-ease-in)
+      ('smooth-out #'scroll-on-jump--interp-ease-out)
+      (_
+       (message "Unknown curve (%S), using linear" curve)
+       ;; Fall back to linear (as good an option as any).
+       #'scroll-on-jump--interp-linear)))))
+
+
+;; ---------------------------------------------------------------------------
+;; Internal Logic
 
 (defun scroll-on-jump--immediate-scroll (window lines-scroll _dir)
   "Non animated scroll for WINDOW to move LINES-SCROLL."
@@ -173,7 +228,7 @@ Moving the point when ALSO-MOVE-POINT is set."
         (time-limit
          (* scroll-on-jump-duration
             (min 1.0 (/ (float (abs lines-scroll)) (float (window-body-height window))))))
-        (use-curve scroll-on-jump-use-curve))
+        (interp-fn (scroll-on-jump--interp-fn-get scroll-on-jump-curve)))
 
     ;; Animated scrolling (early exit on input to avoid annoying lag).
     (cond
@@ -190,13 +245,7 @@ Moving the point when ALSO-MOVE-POINT is set."
                   (step
                    (let* ((time-elapsed (float-time (time-subtract (current-time) time-init)))
                           (factor (min 1.0 (/ time-elapsed time-limit)))
-                          (lines-target
-                           (floor
-                            (cond
-                             (use-curve
-                              (scroll-on-jump--interpolate-ease 0.0 lines-scroll-abs factor))
-                             (t
-                              (* lines-scroll-abs factor)))))
+                          (lines-target (floor (funcall interp-fn 0.0 lines-scroll-abs factor)))
                           (lines-remainder (- lines-target lines-done-abs)))
                      ;; Step result, we must move at least one line.
                      (* dir (max 1 lines-remainder)))))
@@ -218,7 +267,9 @@ Moving the point when ALSO-MOVE-POINT is set."
             ;; the caller moves the point to the final location.
             (when (< lines-done-abs lines-scroll-abs)
               ;; Force `redisplay', without this redrawing can be a little choppy.
-              (redisplay t)))
+              (redisplay t)
+              ;; FIXME: for some reason a short sleep is needed to prevent choppy scrolling.
+              (sit-for 0.01)))
           (setq is-early-exit nil))
 
         ;; Re-enable when editing logic.
@@ -244,7 +295,7 @@ Argument ALSO-MOVE-POINT moves the point while scrolling."
         (time-limit
          (* scroll-on-jump-duration
             (min 1.0 (/ (float (abs lines-scroll)) (float (window-body-height window))))))
-        (use-curve scroll-on-jump-use-curve)
+        (interp-fn (scroll-on-jump--interp-fn-get scroll-on-jump-curve))
         (char-height (frame-char-height (window-frame window))))
 
     ;; Animated scrolling (early exit on input to avoid annoying lag).
@@ -272,13 +323,7 @@ Argument ALSO-MOVE-POINT moves the point while scrolling."
                   (step
                    (let* ((time-elapsed (float-time (time-subtract (current-time) time-init)))
                           (factor (min 1.0 (/ time-elapsed time-limit)))
-                          (px-target
-                           (floor
-                            (cond
-                             (use-curve
-                              (scroll-on-jump--interpolate-ease 0.0 px-scroll-abs factor))
-                             (t
-                              (* px-scroll-abs factor)))))
+                          (px-target (floor (funcall interp-fn 0.0 px-scroll-abs factor)))
                           (px-remainder (- px-target px-done-abs)))
                      (* dir px-remainder))))
 
@@ -303,7 +348,10 @@ Argument ALSO-MOVE-POINT moves the point while scrolling."
             ;; the caller moves the point to the final location.
             (when (< px-done-abs px-scroll-abs)
               ;; Force `redisplay', without this redrawing can be a little choppy.
-              (redisplay t)))
+              (goto-char (1+ (point)))
+              (redisplay t)
+              ;; FIXME: for some reason a short sleep is needed to prevent choppy scrolling.
+              (sit-for 0.01)))
           (setq is-early-exit nil))
 
         (cond
