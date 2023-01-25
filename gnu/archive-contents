@@ -19,22 +19,22 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (ada-mode .
-	   [(8 0 3)
+	   [(8 0 4)
 	    ((uniquify-files
-	      (1 0 1))
+	      (1 0 4))
 	     (wisi
-	      (4 1 1))
+	      (4 2 2))
 	     (gnat-compiler
-	      (1 0 0))
+	      (1 0 1))
 	     (emacs
 	      (25 3)))
 	    "major-mode for editing Ada sources" tar
-	    ((:url . "http://www.nongnu.org/ada-mode/")
+	    ((:url . "https://www.nongnu.org/ada-mode/")
 	     (:keywords "languages" "ada")
 	     (:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
 	     (:authors
 	      ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
-	     (:commit . "6daaf0ccbe572ef1a9e7355d5c4bbf86a9e4ae75"))])
+	     (:commit . "977b0e0eeb746c7e2f35697d5b925ca97efa4936"))])
  (ada-ref-man .
 	      [(2020 1)
 	       nil "Ada Reference Manual 2012" tar
@@ -1357,7 +1357,7 @@
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (gnat-compiler .
-		[(1 0 1)
+		[(1 0 2)
 		 ((emacs
 		   (25 3))
 		  (wisi
@@ -1367,7 +1367,7 @@
 		  (:authors
 		   ("Stephen Leake" . "stephen_leake@member.fsf.org"))
 		  (:url . "https://elpa.gnu.org/packages/gnat-compiler.html")
-		  (:commit . "959c4d359637d6ddabba5a531266c3bc95df5745"))])
+		  (:commit . "49774d33dc26ee75944a7380180cd748881e3a3f"))])
  (gnome-c-style .
 		[(0 1)
 		 nil "minor mode for editing GNOME-style C source code" tar
@@ -1434,6 +1434,20 @@
 	     ("Damien Cassou" . "damien@cassou.me"))
 	    (:maintainer "Damien Cassou" . "damien@cassou.me")
 	    (:url . "https://gitlab.petton.fr/DamienCassou/desktop-environment"))])
+ (gpr-mode .
+	   [(1 0 3)
+	    ((emacs
+	      (25 3))
+	     (wisi
+	      (4 2 2))
+	     (gnat-compiler
+	      (1 0 1)))
+	    "Major mode for editing GNAT project files" tar
+	    ((:url . "https://stephe-leake.org/ada/wisitoken.html")
+	     (:maintainer "Stephen Leake" . "stephen_leake@member.fsf.org")
+	     (:authors
+	      ("Stephen Leake" . "stephen_leake@member.fsf.org"))
+	     (:commit . "9676e6361ef38fd953835b405ccccdf0d0c5517b"))])
  (gpr-query .
 	    [(1 0 2)
 	     ((emacs
@@ -3764,7 +3778,7 @@
 		("Bastien" . "bzg@gnu.org"))
 	       (:maintainer "Bastien" . "bzg@gnu.org"))])
  (wisi .
-       [(4 2 1)
+       [(4 2 2)
 	((emacs
 	  (25 3))
 	 (seq
@@ -3775,7 +3789,7 @@
 	 (:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
 	 (:authors
 	  ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
-	 (:commit . "decea1307cc18e7596468cca20c626b4c67d1f31"))])
+	 (:commit . "a12d5248783d9c98d46c66c8fd3607fceb47b36d"))])
  (wisitoken-grammar-mode .
 			 [(1 2 0)
 			  ((wisi

@@ -10,8 +10,8 @@
 ;; Maintainer: FENTON, Alex <a-fent@github>
 ;; Created: 2014-07-20
 ;; Version: 1.210925
-;; Package-Version: 20230124.1615
-;; Package-Commit: 16b0dfd2a671f9259fc294d8daa43cb7d688bec2
+;; Package-Version: 20230124.1831
+;; Package-Commit: 2be8a74d71c12860a073e7a2e2c423c5415285e8
 ;; Package-Requires: ((org "8.2") (emacs "24.4") (dash "2.8") (ht "2.0"))
 ;; Keywords: tools
 ;; URL: https://github.com/a-fent/ox-pandoc
@@ -1550,7 +1550,7 @@ INFO is a plist holding contextual information."
       ;; (https://github.com/lierdakil/pandoc-crossref)
       (when (org-pandoc--numbered-equation-p latex-env info)
           (setq replacement-str
-                (format "\n$$\\1$$"))))
+                (format "\n$$\\1$$")))
 
       ;; For equations with a named links target (`#+NAME:' block), add
       ;; the target to the top of the equation

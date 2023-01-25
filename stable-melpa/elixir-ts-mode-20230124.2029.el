@@ -4,8 +4,8 @@
 
 ;; Author           : Wilhelm H Kirschbaum
 ;; Version          : 1.0
-;; Package-Version: 20230122.2151
-;; Package-Commit: 2afb36461aeca6994023861491ab6faf35903a7a
+;; Package-Version: 20230124.2029
+;; Package-Commit: ec412323f3caae87ee5d1e7c09d3c0298602f07a
 ;; URL              : https://github.com/wkirschbaum/elixir-ts-mode
 ;; Package-Requires : ((emacs "29") (heex-ts-mode "1.0"))
 ;; Created          : November 2022
@@ -267,6 +267,7 @@
                   (back-to-indentation)
                   (point))
               (point)))) 0)
+       ((node-is "^]") parent-bol 0)
        ((node-is "^|>$") parent-bol 0)
        ((node-is "^|$") parent-bol 0)
        ((node-is "^}$") parent-bol 0)
@@ -274,7 +275,6 @@
         (lambda (_node parent &rest _)
           (elixir-ts-mode--call-parent-start parent))
         0)
-       ((node-is "^]$") parent-bol 0)
        ((node-is "^else_block$") grand-parent 0)
        ((node-is "^catch_block$") grand-parent 0)
        ((node-is "^rescue_block$") grand-parent 0)
@@ -284,11 +284,25 @@
        ((parent-is "^rescue_block$") parent ,offset)
        ((parent-is "^rescue_block$") parent ,offset)
        ((parent-is "^after_block$") parent ,offset)
+       ((parent-is "^tuple$") parent-bol ,offset)
+       ((parent-is "^list$") parent-bol ,offset)
+       ((parent-is "^pair$") parent ,offset)
+       ((parent-is "^map_content$") parent-bol 0)
+       ((parent-is "^map$") parent-bol ,offset)
        ((node-is "^stab_clause$") parent-bol ,offset)
        ((query ,elixir-ts-mode--capture-operator-parent) grand-parent 0)
        ((node-is "^when$") parent 0)
        ((node-is "^keywords$") parent-bol ,offset)
-       ((parent-is "^body$") parent-bol ,offset)
+       ((parent-is "^body$")
+        (lambda (node parent _)
+          (save-excursion
+            ;; the grammar adds a comment outside of the body, so we have to indent
+            ;; to the grand-parent if it is available
+            (goto-char (treesit-node-start
+                        (or (treesit-node-parent parent) (parent))))
+            (back-to-indentation)
+            (point)))
+        ,offset)
        ((parent-is "^arguments$")
         ;; the first argument must indent ,offset from start of call
         ;; otherwise indent should be the same as the first argument
@@ -316,7 +330,6 @@
                 (elixir-ts-mode--call-parent-start parent)
               (treesit-node-start top-level))))
         (lambda (node parent _)
-          ;; (message "%s %s" node parent)
           (cond
            ((equal (treesit-node-type parent) "do_block")
             ,offset)
@@ -332,29 +345,26 @@
               (equal (treesit-node-type node) "binary_operator")))))
         ,offset)
        ((node-is "^pair$") first-sibling 0)
-       ((parent-is "^tuple$")
-        ;; the first argument must indent ,offset from {
-        ;; otherwise indent should be the same as the first argument
-        (lambda (node parent _bol &rest _)
-          (let ((first-child
-                 (treesit-node-child parent 0 t)))
-            (if (treesit-node-eq node first-child)
-                (save-excursion
-                  (goto-char (treesit-node-start parent))
-                  (back-to-indentation)
-                  (point))
-              (treesit-node-start first-child))))
-        (lambda (node parent rest)
-          ;; if first-child offset otherwise don't
-          (if (treesit-node-eq
-               (treesit-node-child parent 0 t)
-               node)
-              ,offset
-            0)))
-       ((parent-is "^list$") parent-bol ,offset)
-       ((parent-is "^pair$") parent ,offset)
-       ((parent-is "^map_content$") parent-bol 0)
-       ((parent-is "^map$") parent-bol ,offset)
+       ;; ((parent-is "^tuple$")
+       ;;  ;; the first argument must indent ,offset from {
+       ;;  ;; otherwise indent should be the same as the first argument
+       ;;  ;; if there are no elements indent same as first-child
+       ;;  (lambda (node parent _bol &rest _)
+       ;;    (let ((first-child
+       ;;           (treesit-node-child parent 0 t)))
+       ;;      (if (or (null first-child) (treesit-node-eq first-child node))
+       ;;          (save-excursion
+       ;;            (goto-char (treesit-node-start parent))
+       ;;            (back-to-indentation)
+       ;;            (point))
+       ;;        (treesit-node-start first-child))))
+       ;;  (lambda (node parent rest)
+       ;;    ;; if first-child offset otherwise don't
+       ;;    (let ((first-child (treesit-node-child parent 0 t)))
+       ;;      (message "%s" first-child)
+       ;;      (if (or (null first-child) (treesit-node-eq first-child node))
+       ;;          ,offset
+       ;;        0))))
        ((query ,elixir-ts-mode--capture-anonymous-function-end) parent-bol 0)
        ((node-is "^end$")
         (lambda (_node parent &rest _)
@@ -367,7 +377,10 @@
        ((parent-is "^catch_block$") parent ,offset)
        ((parent-is "^keywords$") parent-bol 0)
        ((node-is "^call$") parent-bol ,offset)
-       (no-node parent-bol ,offset)))))
+       ((node-is "^comment$") parent-bol ,offset)
+       ;; prev-line is for some reason is one pos behind, so adding
+       ;; using prev-line, not parent will handle some strange ERROR states
+       (no-node parent-bol 2)))))
 
 ;; reference:
 ;; https://github.com/elixir-lang/tree-sitter-elixir/blob/main/queries/highlights.scm
@@ -536,6 +549,15 @@
      `((escape_sequence) @elixir-ts-font-string-escape-face)))
   "Tree-sitter font-lock settings.")
 
+(defun elixir-ts-mode--forward-sexp (&optional arg)
+  (interactive "^p")
+  (or arg (setq arg 1))
+  (funcall
+   (if (> arg 0) #'treesit-end-of-thing #'treesit-beginning-of-thing)
+   ;; do we exclude rather? most tokens we would like to match
+   (rx (or "call" "list" "tuple" "pair" "string" "atom" "pair" "alias" "key"))
+   (abs arg)))
+
 (defun elixir-ts-mode--treesit-anchor-grand-parent-bol (_n parent &rest _)
   "Return the beginning of non-space characters for the parent node of PARENT."
   (save-excursion
@@ -665,6 +687,8 @@ Return nil if NODE is not a defun node or doesn't have a name."
     (treesit-parser-create 'elixir)
 
     (setq-local treesit-font-lock-settings elixir-ts-mode--font-lock-settings)
+
+    (setq-local forward-sexp-function #'elixir-ts-mode--forward-sexp)
 
     (setq-local treesit-simple-indent-rules
                 (append elixir-ts-mode--indent-rules heex-ts-mode--indent-rules))

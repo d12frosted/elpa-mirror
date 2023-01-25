@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/andras-simonyi/citeproc-el.git
 
 Updating /mnt/store/melpa/working/citeproc/
-Checking out 121efe540303ded2ebf486281e6fd472966e7cbe
+Checking out 3e9dcf0c29b47fd3bfe267ab4f87ff746a45096a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citeproc/
-  to /tmp/citeproc70RPhh/citeproc-20230116.1635
+  to /tmp/citeprocFZXLLf/citeproc-20230124.1850
     citeproc-biblatex.el -> citeproc-biblatex.el
     citeproc-bibtex.el -> citeproc-bibtex.el
     citeproc-choose.el -> citeproc-choose.el
@@ -33,36 +33,38 @@ Copying files (->) and directories (=>)
     citeproc-term.el -> citeproc-term.el
     citeproc-test-human.el -> citeproc-test-human.el
     citeproc.el -> citeproc.el
-Created citeproc-20230116.1635.tar containing:
-  citeproc-20230116.1635/
-  citeproc-20230116.1635/citeproc-biblatex.el
-  citeproc-20230116.1635/citeproc-bibtex.el
-  citeproc-20230116.1635/citeproc-choose.el
-  citeproc-20230116.1635/citeproc-cite.el
-  citeproc-20230116.1635/citeproc-context.el
-  citeproc-20230116.1635/citeproc-date.el
-  citeproc-20230116.1635/citeproc-disamb.el
-  citeproc-20230116.1635/citeproc-formatters.el
-  citeproc-20230116.1635/citeproc-generic-elements.el
-  citeproc-20230116.1635/citeproc-itemdata.el
-  citeproc-20230116.1635/citeproc-itemgetters.el
-  citeproc-20230116.1635/citeproc-lib.el
-  citeproc-20230116.1635/citeproc-locale.el
-  citeproc-20230116.1635/citeproc-macro.el
-  citeproc-20230116.1635/citeproc-name.el
-  citeproc-20230116.1635/citeproc-number.el
-  citeproc-20230116.1635/citeproc-pkg.el
-  citeproc-20230116.1635/citeproc-prange.el
-  citeproc-20230116.1635/citeproc-proc.el
-  citeproc-20230116.1635/citeproc-rt.el
-  citeproc-20230116.1635/citeproc-s.el
-  citeproc-20230116.1635/citeproc-sort.el
-  citeproc-20230116.1635/citeproc-style.el
-  citeproc-20230116.1635/citeproc-subbibs.el
-  citeproc-20230116.1635/citeproc-term.el
-  citeproc-20230116.1635/citeproc-test-human.el
-  citeproc-20230116.1635/citeproc.el
-Built citeproc in 4.975s, finished at 2023-01-24T17:22:50+0000
+Created citeproc-20230124.1850.tar containing:
+  citeproc-20230124.1850/
+  citeproc-20230124.1850/citeproc-biblatex.el
+  citeproc-20230124.1850/citeproc-bibtex.el
+  citeproc-20230124.1850/citeproc-choose.el
+  citeproc-20230124.1850/citeproc-cite.el
+  citeproc-20230124.1850/citeproc-context.el
+  citeproc-20230124.1850/citeproc-date.el
+  citeproc-20230124.1850/citeproc-disamb.el
+  citeproc-20230124.1850/citeproc-formatters.el
+  citeproc-20230124.1850/citeproc-generic-elements.el
+  citeproc-20230124.1850/citeproc-itemdata.el
+  citeproc-20230124.1850/citeproc-itemgetters.el
+  citeproc-20230124.1850/citeproc-lib.el
+  citeproc-20230124.1850/citeproc-locale.el
+  citeproc-20230124.1850/citeproc-macro.el
+  citeproc-20230124.1850/citeproc-name.el
+  citeproc-20230124.1850/citeproc-number.el
+  citeproc-20230124.1850/citeproc-pkg.el
+  citeproc-20230124.1850/citeproc-prange.el
+  citeproc-20230124.1850/citeproc-proc.el
+  citeproc-20230124.1850/citeproc-rt.el
+  citeproc-20230124.1850/citeproc-s.el
+  citeproc-20230124.1850/citeproc-sort.el
+  citeproc-20230124.1850/citeproc-style.el
+  citeproc-20230124.1850/citeproc-subbibs.el
+  citeproc-20230124.1850/citeproc-term.el
+  citeproc-20230124.1850/citeproc-test-human.el
+  citeproc-20230124.1850/citeproc.el
+Built citeproc in 5.213s, finished at 2023-01-24T21:21:11+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  569 Jan 24 17:22 packages/citeproc-20230116.1635.entry
 280K -rw-r--r-- 1 root root 280K Jan 24 17:22 packages/citeproc-20230116.1635.tar
+4.0K -rw-r--r-- 1 root root  569 Jan 24 21:21 packages/citeproc-20230124.1850.entry
+280K -rw-r--r-- 1 root root 280K Jan 24 21:21 packages/citeproc-20230124.1850.tar
