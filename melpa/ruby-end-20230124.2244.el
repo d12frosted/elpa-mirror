@@ -4,9 +4,9 @@
 
 ;; Author: Johan Andersson <johan.rejeep@gmail.com>
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
-;; Version: 0.4.1
-;; Package-Version: 20141215.1223
-;; Package-Commit: 648b81af136a581bcef387744d93c011d9cdf54b
+;; Version: 0.4.2
+;; Package-Version: 20230124.2244
+;; Package-Commit: 3a8152e42af085ab4c1274e98c8550f68d19fe89
 ;; Keywords: speed, convenience, ruby
 ;; URL: http://github.com/rejeep/ruby-end
 
@@ -49,6 +49,7 @@
 ;;; Code:
 
 (require 'ruby-mode)
+(require 'edmacro)
 
 (defvar ruby-end-expand-spc-key "SPC"
   "Space key name.")
@@ -69,12 +70,12 @@
   "Keymap for `ruby-end-mode'.")
 
 (defcustom ruby-end-check-statement-modifiers t
-  "*Disable or enable expansion (insertion of end) for statement modifiers"
+  "Disable or enable expansion (insertion of end) for statement modifiers.q"
   :type 'boolean
   :group 'ruby)
 
 (defcustom ruby-end-insert-newline t
-  "*Disable or enable additional newline in between statement and end"
+  "Disable or enable additional newline in between statement and end."
   :type 'boolean
   :group 'ruby)
 
@@ -91,16 +92,15 @@ When nil, any `last-command' will do."
 
 (defconst ruby-end-expand-prefix-check-modifiers-re
   "^\\s-*"
-  "Prefix for regular expression to prevent expansion with statement modifiers")
+  "Prefix for regular expression to prevent expansion with statement modifiers.")
 
 (defconst ruby-end-expand-prefix-re
   "\\(?:^\\|\\s-+\\)"
-  "Prefix for regular expression")
+  "Prefix for regular expression.")
 
 (defconst ruby-end-expand-keywords-before-re
   "\\(?:^\\|\\s-+\\)\\(?:do\\|def\\|class\\|module\\|case\\|for\\|begin\\)"
   "Regular expression matching blocks before point.")
-
 
 (defconst ruby-end-expand-after-re
   "\\s-*$"
@@ -161,16 +161,15 @@ When nil, any `last-command' will do."
          (memq last-command ruby-end-expand-only-for-last-commands))
      (ruby-end-code-at-point-p)
      (or
-      (looking-back ruby-end-expand-statement-modifiers-before-re)
-      (looking-back ruby-end-expand-keywords-before-re))
+      (looking-back ruby-end-expand-statement-modifiers-before-re
+                    (line-beginning-position))
+      (looking-back ruby-end-expand-keywords-before-re
+                    (line-beginning-position)))
      (looking-at ruby-end-expand-after-re))))
 
 (defun ruby-end-code-at-point-p ()
   "Check if point is code, or comment or string."
-  (let ((properties (text-properties-at (point))))
-    (and
-     (null (memq 'font-lock-string-face properties))
-     (null (memq 'font-lock-comment-face properties)))))
+  (not (nth 8 (syntax-ppss))))
 
 ;;;###autoload
 (define-minor-mode ruby-end-mode
@@ -183,6 +182,8 @@ When nil, any `last-command' will do."
 (add-hook 'ruby-mode-hook 'ruby-end-mode)
 ;;;###autoload
 (add-hook 'enh-ruby-mode-hook 'ruby-end-mode)
+;;;###autoload
+(add-hook 'ruby-ts-mode-hook 'ruby-end-mode)
 
 (provide 'ruby-end)
 
