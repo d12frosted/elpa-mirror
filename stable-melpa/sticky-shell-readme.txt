@@ -13,7 +13,7 @@ To enable the mode globally (for all shell buffers)
 run `sticky-shell-global-mode'.
 
 Because headers have to fit within one line, sometimes the final part of the
-prompt is not visible. To ensure that the prompt's beginning and end are
+prompt is not visible.  To ensure that the prompt's beginning and end are
 always both visible, you can use `sticky-shell-shorten-header-mode'.
 
 If you'd like this shorten-header mode to be enabled by default, you should

@@ -5,8 +5,8 @@
 ;; Author: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; Maintainer: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; URL: https://github.com/andyjda/sticky-shell
-;; Package-Version: 20230124.352
-;; Package-Commit: 7990b928031a3f8fa01b9a25776788df050402b4
+;; Package-Version: 20230125.1441
+;; Package-Commit: 8abe99255cf8a4bf86a5d459ee501fb66de31ad7
 ;; Version: 1.0.1
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: processes, terminals, tools
@@ -40,7 +40,7 @@
 ;; run `sticky-shell-global-mode'.
 ;;
 ;; Because headers have to fit within one line, sometimes the final part of the
-;; prompt is not visible. To ensure that the prompt's beginning and end are
+;; prompt is not visible.  To ensure that the prompt's beginning and end are
 ;; always both visible, you can use `sticky-shell-shorten-header-mode'.
 ;;
 ;; If you'd like this shorten-header mode to be enabled by default, you should
