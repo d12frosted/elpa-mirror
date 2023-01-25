@@ -8,8 +8,6 @@
 ;;               Michael Markert <markert.michael@gmail.com>
 ;;               Julia Path <julia@jpath.de>
 ;; URL: http://github.com/juliapath/evil-numbers
-;; Package-Version: 20230117.53
-;; Package-Commit: 8724645c84dc310f6155eec452913bb79c0c44b3
 ;; Git-Repository: git://github.com/juliapath/evil-numbers.git
 ;; Created: 2011-09-02
 ;; Version: 0.7

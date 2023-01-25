@@ -1,14 +1,14 @@
 ;;; langtool.el --- Grammar check utility using LanguageTool
 
-;; Copyright (C) 2011-2020 Masahiro Hayashi
+;; Copyright (C) 2011-2020,2022 Masahiro Hayashi
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: docs
-;; Package-Version: 20200529.230
-;; Package-Commit: 8276eccc5587bc12fd205ee58a7a982f0a136e41
+;; Package-Version: 20230125.433
+;; Package-Commit: 24d5a330e30ecfb76efa3471351cfcbd3e1b67ee
 ;; URL: https://github.com/mhayashi1120/Emacs-langtool
 ;; Emacs: GNU Emacs 24 or later
-;; Version: 2.2.1
+;; Version: 2.2.2
 ;; Package-Requires: ((cl-lib "0.3"))
 
 ;; This program is free software; you can redistribute it and/or
@@ -32,11 +32,31 @@
 
 ;; Install LanguageTool version 3.0 or later (and java)
 ;; https://languagetool.org/
-
+;;
 ;; Put this file into load-path'ed directory, and byte compile it if
 ;; desired. And put the following expression into your ~/.emacs.
 ;;
 ;;     (require 'langtool)
+
+;; ## NOTE (2023-01-25)
+;;
+;; Confirmed working on following environment
+;;
+;; ### Java
+;;
+;; `java --version`
+;;
+;; > openjdk 17.0.4 2022-07-19
+;; > OpenJDK Runtime Environment (build 17.0.4+8-Debian-1deb11u1)
+;; > OpenJDK 64-Bit Server VM (build 17.0.4+8-Debian-1deb11u1, mixed mode, sharing)
+;;
+;; ### LanguageTool
+;;
+;; Can be downloaded from [here](https://languagetool.org/download/) 
+;;
+;; `java -jar languagetool-commandline.jar --version`
+;;
+;; > LanguageTool version 6.0 (2022-12-29 12:13:11 +0000, e44dbb0)
 
 ;; ## Settings (required):
 ;;
@@ -155,7 +175,7 @@
 
 ;; * Show LanguageTool report automatically by `popup'
 ;;   This idea come from:
-;;   https://laclefyoshi.hatenablog.com/entry/20150912/langtool_popup
+;;   http://d.hatena.ne.jp/LaclefYoshi/20150912/langtool_popup
 ;;
 ;;     (defun langtool-autoshow-detail-popup (overlays)
 ;;       (when (require 'popup nil t)
@@ -1287,12 +1307,12 @@ Ordinary no need to change this."
   (langtool--clear-buffer-overlays)
   (let (proc)
     (cl-ecase (langtool--checker-mode)
-      ('commandline
+      ((commandline)
        ;; Ensure adapter is closed. That has been constructed other checker-mode.
        (langtool-adapter-ensure-terminate)
        (let ((file (langtool-command--maybe-create-temp-file begin finish)))
          (setq proc (langtool-command--invoke-process file begin finish lang))))
-      ('client-server
+      ((client-server)
        (langtool-server--ensure-running)
        (setq langtool-mode-line-server-process
              (propertize ":server" 'face compilation-info-face))
@@ -1300,7 +1320,7 @@ Ordinary no need to change this."
                  (lambda ()
                    (setq langtool-mode-line-server-process nil)))
        (setq proc (langtool-client--invoke-process begin finish lang)))
-      ('http-client
+      ((http-client)
        (langtool-adapter-ensure-terminate)
        ;; Construct new adapter each check.
        ;; Since maybe change customize variable in a Emacs session.
@@ -1320,7 +1340,7 @@ Ordinary no need to change this."
   (let ((cell (and (listp mode-line-process) ; Check type
                    (rassoc '(langtool-mode-line-message) mode-line-process))))
     (when cell
-      (remq cell mode-line-process)))
+      (setq mode-line-process (remq cell mode-line-process))))
   (when (and langtool-buffer-process
              (processp langtool-buffer-process))
     ;; TODO buffer killed, error. if process is local process (e.g. urllib)
@@ -1333,11 +1353,11 @@ Ordinary no need to change this."
 
 (defun langtool--check-command ()
   (cl-ecase (langtool--checker-mode)
-    ('commandline
+    ((commandline)
      (langtool-command--check-command))
-    ('client-server
+    ((client-server)
      (langtool-server--check-command))
-    ('http-client
+    ((http-client)
      (langtool-http-client-check-command))))
 
 (defun langtool--brief-execute (langtool-args parser)
