@@ -3,18 +3,20 @@ Fetcher: github
 Source:  https://github.com/kwrooijen/cargo.el.git
 
 Updating /mnt/store/melpa/working/cargo/
-Checking out d2720c8dc7ac3b18ce112a886d3b8696797d01cb
+Checking out 225fdb846c702a193e58a98c1585bb3586a9aa86
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cargo/
-  to /tmp/cargoGqmtfc/cargo-20221025.810
+  to /tmp/cargoLr02Ft/cargo-20230125.1253
     cargo-process.el -> cargo-process.el
     cargo.el -> cargo.el
-Created cargo-20221025.810.tar containing:
-  cargo-20221025.810/
-  cargo-20221025.810/cargo-pkg.el
-  cargo-20221025.810/cargo-process.el
-  cargo-20221025.810/cargo.el
-Built cargo in 4.203s, finished at 2023-01-25T11:53:01+0000
+Created cargo-20230125.1253.tar containing:
+  cargo-20230125.1253/
+  cargo-20230125.1253/cargo-pkg.el
+  cargo-20230125.1253/cargo-process.el
+  cargo-20230125.1253/cargo.el
+Built cargo in 4.008s, finished at 2023-01-25T15:34:55+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 301 Jan 25 11:53 packages/cargo-20221025.810.entry
  52K -rw-r--r-- 1 root root 50K Jan 25 11:53 packages/cargo-20221025.810.tar
+4.0K -rw-r--r-- 1 root root 302 Jan 25 15:34 packages/cargo-20230125.1253.entry
+ 52K -rw-r--r-- 1 root root 50K Jan 25 15:34 packages/cargo-20230125.1253.tar
