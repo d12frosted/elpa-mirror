@@ -8,11 +8,9 @@ M-x xah-fly-keys to toggle the mode on/off.
 
 Important command/insert mode switch keys:
 
-xah-fly-command-mode-activate (press <home> or F8 or Alt+Space or
-Ctrl+Space or menu key)
+xah-fly-command-mode-activate (press ESC or <home> or F8 or Alt+Space or Ctrl+Space or menu key)
 
-xah-fly-insert-mode-activate (when in command mode, press qwerty
-letter key f.)
+xah-fly-insert-mode-activate (when in command mode, press qwerty letter key f.)
 
 When in command mode:
 
