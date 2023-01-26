@@ -3,8 +3,8 @@
 ;; Author: Jessie Hildebrandt <jessieh.net>
 ;; Homepage: https://gitlab.com/jessieh/adwaita-dark-theme
 ;; Keywords: mode-line faces
-;; Package-Version: 20221230.557
-;; Package-Commit: a1faa94ddc6c01fb04bd63a6095c38d1c1c34753
+;; Package-Version: 20221230.1920
+;; Package-Commit: 99951619c5661efce1d54b98c1df5ccad5153f0c
 ;; Version: 1.1.0
 ;; Package-Requires: ((emacs "27.1"))
 ;;
@@ -153,34 +153,35 @@
 
        ;; Background colors
        ;; [True color | 256-compatible]
-       (bg (if true-color-available-p "#1e1e1e" "gray12"))             ; #1f1f1f
-       (bg-alt (if true-color-available-p "#242424" "gray14"))         ; #242424
-       (base-0 (if true-color-available-p "#202020" "gray13"))         ; #212121
-       (base-1 (if true-color-available-p "#262626" "gray15"))         ; #262626
-       (base-2 (if true-color-available-p "#292929" "gray16"))         ; #292929
-       (base-3 (if true-color-available-p "#303030" "gray19"))         ; #303030
-       (base-4 (if true-color-available-p "#454545" "gray27"))         ; #454545
-       (base-5 (if true-color-available-p "#656565" "gray40"))         ; #666666
-       (base-6 (if true-color-available-p "#7b7b7b" "gray48"))         ; #7a7a7a
-       (base-7 (if true-color-available-p "#a5a5a5" "gray65"))         ; #a6a6a6
-       (base-8 (if true-color-available-p "#dfdfdf" "gray87"))         ; #dedede
+       (bg (if true-color-available-p "#1e1e1e" "gray12"))               ; #1f1f1f
+       (bg-alt (if true-color-available-p "#242424" "gray14"))           ; #242424
+       (base-0 (if true-color-available-p "#202020" "gray13"))           ; #212121
+       (base-1 (if true-color-available-p "#262626" "gray15"))           ; #262626
+       (base-2 (if true-color-available-p "#292929" "gray16"))           ; #292929
+       (base-3 (if true-color-available-p "#303030" "gray19"))           ; #303030
+       (base-4 (if true-color-available-p "#454545" "gray27"))           ; #454545
+       (base-5 (if true-color-available-p "#656565" "gray40"))           ; #666666
+       (base-6 (if true-color-available-p "#7b7b7b" "gray48"))           ; #7a7a7a
+       (base-7 (if true-color-available-p "#a5a5a5" "gray65"))           ; #a6a6a6
+       (base-8 (if true-color-available-p "#dfdfdf" "gray87"))           ; #dedede
 
        ;; Foreground colors
        ;; [True color | 256-compatible]
-       (fg (if true-color-available-p "#deddda" "gray86"))             ; #dbdbdb
-       (fg-alt (if true-color-available-p "#77767b" "gray47"))         ; #787878
-       (gray (if true-color-available-p "#3d3846" "gray23"))           ; #3b3b3b
-       (red (if true-color-available-p "#ff6c6b" "indianred2"))        ; #ee6363
-       (orange (if true-color-available-p "#ffa348" "orange2"))        ; #ee9a00
-       (green (if true-color-available-p "#54d18c" "seagreen3"))       ; #43cd80
-       (teal (if true-color-available-p "#5bc8af" "mediumaquamarine")) ; #66cdaa
-       (yellow (if true-color-available-p "#f8e45c" "gold2"))          ; #eec900
-       (blue (if true-color-available-p "#64a6f4" "steelblue2"))       ; #5cacee
-       (dark-blue (if true-color-available-p "#1a5fb4" "dodgerblue4")) ; #104e8b
-       (magenta (if true-color-available-p "#dd80de" "orchid3"))       ; #cd69c9
-       (pink (if true-color-available-p "#edb8ee" "plum"))             ; #dda0dd
-       (violet (if true-color-available-p "#7d8ac7" "mediumpurple3"))  ; #8968cd
-       (cyan (if true-color-available-p "#7ee5ff" "mediumturquoise"))) ; #48d1cc
+       (fg (if true-color-available-p "#deddda" "gray86"))               ; #dbdbdb
+       (fg-alt (if true-color-available-p "#77767b" "gray47"))           ; #787878
+       (gray (if true-color-available-p "#3d3846" "gray23"))             ; #3b3b3b
+       (red (if true-color-available-p "#ff6c6b" "indianred2"))          ; #ee6363
+       (orange (if true-color-available-p "#ffa348" "orange2"))          ; #ee9a00
+       (dark-orange (if true-color-available-p "#db6b1a" "darkorange3")) ; #cd6600
+       (green (if true-color-available-p "#54d18c" "seagreen3"))         ; #43cd80
+       (teal (if true-color-available-p "#5bc8af" "mediumaquamarine"))   ; #66cdaa
+       (yellow (if true-color-available-p "#f8e45c" "gold2"))            ; #eec900
+       (blue (if true-color-available-p "#64a6f4" "steelblue2"))         ; #5cacee
+       (dark-blue (if true-color-available-p "#1a5fb4" "dodgerblue4"))   ; #104e8b
+       (magenta (if true-color-available-p "#dd80de" "orchid3"))         ; #cd69c9
+       (pink (if true-color-available-p "#edb8ee" "plum"))               ; #dda0dd
+       (violet (if true-color-available-p "#7d8ac7" "mediumpurple3"))    ; #8968cd
+       (cyan (if true-color-available-p "#7ee5ff" "mediumturquoise")))   ; #48d1cc
 
   (custom-theme-set-faces
    'adwaita-dark
@@ -220,21 +221,21 @@
 
    ;; font-lock
    `(font-lock-builtin-face ((,class (:foreground ,violet))))
+   `(font-lock-doc-face ((,class (:foreground ,base-6))))
    `(font-lock-comment-face ((,class (:foreground ,base-5))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-doc-face ((,class (:inherit font-lock-comment-face :foreground ,base-6))))
    `(font-lock-constant-face ((,class (:foreground ,violet))))
-   `(font-lock-function-name-face ((,class (:foreground ,blue))))
-   `(font-lock-keyword-face ((,class (:inherit bold :foreground ,orange))))
+   `(font-lock-variable-name-face ((,class (:foreground unspecified))))
+   `(font-lock-function-name-face ((,class (:foreground unspecified))))
+   `(font-lock-keyword-face ((,class (:foreground ,orange :weight bold))))
+   `(font-lock-type-face ((,class (:foreground ,teal :weight bold))))
    `(font-lock-string-face ((,class (:foreground ,teal))))
-   `(font-lock-type-face ((,class (:foreground ,teal))))
-   `(font-lock-variable-name-face ((,class (:foreground ,fg))))
    `(font-lock-warning-face ((,class (:inherit warning))))
-   `(font-lock-negation-char-face ((,class (:inherit bold :foreground ,blue))))
-   `(font-lock-preprocessor-face ((,class (:inherit bold :foreground ,violet))))
-   `(font-lock-preprocessor-char-face ((,class (:inherit bold :foreground ,violet))))
-   `(font-lock-regexp-grouping-backslash ((,class (:inherit bold :foreground ,teal))))
-   `(font-lock-regexp-grouping-construct ((,class (:inherit bold :foreground ,teal))))
+   `(font-lock-preprocessor-face ((,class (:foreground ,dark-orange))))
+   `(font-lock-preprocessor-char-face ((,class (:foreground ,violet :weight bold))))
+   `(font-lock-negation-char-face ((,class (:foreground unspecified :weight bold))))
+   `(font-lock-regexp-grouping-backslash ((,class (:foreground ,teal :weight bold))))
+   `(font-lock-regexp-grouping-construct ((,class (:foreground ,teal :weight bold))))
 
    ;; mode-line/header-line
    `(mode-line ((,class (:background ,base-3 :foreground ,fg :box (:line-width ,mode-line-padding :color ,base-3)))))

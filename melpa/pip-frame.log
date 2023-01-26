@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://git.zamazal.org/pdm/pip-frame
 
 Updating /mnt/store/melpa/working/pip-frame/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.zamazal.org/pdm/pip-frame/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
-
-Command exited with non-zero exit-code: 128
+Checking out 8c396a11f532a1beb594b65e99e594f1e9f1c2c8
+Built pip-frame in 5.104s, finished at 2023-01-26T04:22:27+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.9K Jan 26 04:22 packages/pip-frame-20220802.1914.el
+4.0K -rw-r--r-- 1 root root  372 Jan 26 04:22 packages/pip-frame-20220802.1914.entry

@@ -3,8 +3,6 @@
 ;;; Copyright (C) 2014 Heikki Lehvaslaiho
 
 ;; URL: https://github.com/heikkil/org-dropbox
-;; Package-Version: 20150114.509
-;; Package-Commit: 2dc677a770c9e82f928ad8e97a7707eb368e58ed
 ;; Author: Heikki Lehvaslaiho <heikki.lehvaslaiho@gmail.com>
 ;; Version: 20141219
 ;; Package-Requires: ((dash "2.2") (names "20150000") (emacs "24"))

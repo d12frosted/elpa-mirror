@@ -4,8 +4,6 @@
 
 ;; Author: justin talbott <justin@waymondo.com>
 ;; Keywords: convenience
-;; Package-Version: 20171228.119
-;; Package-Commit: f73ebd91399c5760ad52c6ad9033de1066042003
 ;; URL: https://github.com/waymondo/org-repo-todo
 ;; Version: 0.0.3
 
