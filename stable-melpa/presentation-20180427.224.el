@@ -4,6 +4,8 @@
 
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Keywords: environment, faces, frames
+;; Package-Version: 20180427.224
+;; Package-Commit: b1948e6d8b37b6df9290d77d181e1b1d58dd33c0
 ;; Created: 7 Apr 2018
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.5"))

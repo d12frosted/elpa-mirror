@@ -5,8 +5,6 @@
 ;;
 ;; Author:     Rustem Muslimov <r.muslimov@gmail.com>
 ;; Version:    0.1.0
-;; Package-Version: 20170531.1209
-;; Package-Commit: 0c8a66faca4b35158d0b5885472cb75286039167
 ;; Keywords:   python, convenience, smart-operator
 ;; Package-Requires: ((s "1.9.0"))
 

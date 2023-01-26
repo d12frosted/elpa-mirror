@@ -5,8 +5,8 @@
 ;; Author: Alex Bennée <alex@bennee.com>
 ;; Maintainer: Alex Bennée <alex@bennee.com>
 ;; Version: 0.6
-;; Package-Version: 20221220.1024
-;; Package-Commit: fa7cbb69930fe7fb07367a9f2c75812cbddfa628
+;; Package-Version: 20230126.1144
+;; Package-Commit: 5496bc00f7a32a9d3e54e395f29d44e9df771567
 ;; Package-Requires: ((s "1.12.0") (dash "2.0.0") (emacs "25.1"))
 ;; Homepage: https://github.com/stsquad/dired-rsync
 ;;
@@ -264,8 +264,13 @@ information and update the dired-rsync-modeline-status."
             ;; Insert the text, advancing the process marker.
             (goto-char old-process-mark)
             (insert string)
-            (set-marker (process-mark proc) (point)))
-          (if moving (goto-char (process-mark proc))))))))
+            (set-marker (process-mark proc) (point))
+            ;; Delete old text upto the newline
+            (goto-char (point-max))
+            (when (search-backward "\r")
+              (delete-region (point-min) (+ 1 (match-beginning 0)))))
+          (if moving
+              (goto-char (process-mark proc))))))))
 
 
 (defun dired-rsync--do-run (command details)
@@ -281,9 +286,7 @@ information and update the dired-rsync-modeline-status."
 		       :sentinel (lambda (proc desc)
 				   (dired-rsync--sentinel proc desc details))
 		       :filter (lambda (proc string)
-				 (dired-rsync--filter proc string)))
-		 (when (eq window-system 'ns)
-		   (list :coding 'mac))))
+				 (dired-rsync--filter proc string)))))
   (dired-rsync--update-modeline))
 
 (defun dired-rsync--remote-to-from-local-cmd (sfiles dest)
