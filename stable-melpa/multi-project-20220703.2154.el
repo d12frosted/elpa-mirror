@@ -4,8 +4,6 @@
 
 ;; Author: Shawn Ellis <shawn.ellis17@gmail.com>
 ;; Version: 0.0.43
-;; Package-Version: 20220703.2154
-;; Package-Commit: 43a30f9578dc2f5acd4fc2941bedaa031b942b81
 ;; Package-Requires: ((emacs "25"))
 ;; URL: https://hg.osdn.net/view/multi-project/multi-project
 ;; Keywords: convenience project management

@@ -6,8 +6,8 @@
 
 ;; Author: Takafumi Arakaki <aka.tkf at gmail.com>
 ;; URL: https://github.com/tkf/emacs-request
-;; Package-Version: 20230104.1925
-;; Package-Commit: 6ddb4fc4d8a0746ee2dfd8473af315ebe8f6215b
+;; Package-Version: 20230126.17
+;; Package-Commit: f26ea54c44f6d801d5f03c478668dbd22874b0c0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.3.3
 
@@ -900,22 +900,25 @@ BUG: Simultaneous requests are a known cause of cookie-jar corruption."
             for (name . item) in files
             collect "--form"
             collect
-            (apply #'format "%s=@%s;filename=%s%s"
+            (apply #'format "%s=%s%s;filename=%s%s"
                    (cond ((stringp item)
-                          (list name item (file-name-nondirectory item) ""))
+                          (list name "@" item (file-name-nondirectory item) ""))
                          ((bufferp item)
                           (if stdin-p
                               (error (concat "request--curl-command-args: "
                                              "only one buffer or data entry permitted"))
                             (setq stdin-p t))
-                          (list name "-" (buffer-name item) ""))
+                          (list name "@" "-" (buffer-name item) ""))
                          ((listp item)
                           (unless (plist-get (cdr item) :file)
                             (if stdin-p
                                 (error (concat "request--curl-command-args: "
                                                "only one buffer or data entry permitted"))
                               (setq stdin-p t)))
-                          (list name (or (plist-get (cdr item) :file) "-") (car item)
+                          (list name
+                                (if (plist-get (cdr item) :use-contents) "<" "@")
+                                (or (plist-get (cdr item) :file) "-")
+                                (car item)
                                 (if (plist-get (cdr item) :mime-type)
                                     (format ";type=%s" (plist-get (cdr item) :mime-type))
                                   "")))
@@ -949,9 +952,12 @@ posting fields, FILES containing one or more lists of the form
   (NAME . BUFFER)
   (NAME . (FILENAME :buffer BUFFER))
   (NAME . (FILENAME :data DATA))
+  (NAME . (FILENAME :file FILE :use-contents t))
 with NAME and FILENAME defined by curl(1)'s overwrought `--form` switch format,
 TIMEOUT in seconds, RESPONSE a mandatory struct, ENCODING, and SEMAPHORE,
-an internal semaphore.
+an internal semaphore.  Adding `:use-contents t` sends a text field
+with the file's contents as opposed to attaching a file as described
+in curl(1).
 
 Redirection handling strategy
 -----------------------------

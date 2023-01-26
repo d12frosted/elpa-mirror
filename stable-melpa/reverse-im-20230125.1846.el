@@ -2,8 +2,8 @@
 
 ;; Authors: Juri Linkov <juri@jurta.org> (initial idea), Dmitry K. (packager and maintainer)
 ;; Package-Requires: ((emacs "25.1") (seq "2.23"))
-;; Package-Version: 20221103.2351
-;; Package-Commit: 542a3f7742d2f7878f1509bd193d137b5bba8e7b
+;; Package-Version: 20230125.1846
+;; Package-Commit: 83c639756357c6b154842997b86e63c583ff8ff4
 ;; Keywords: i18n
 ;; Homepage: https://github.com/a13/reverse-im.el
 ;; Version: 0.0.8
@@ -271,8 +271,9 @@ Example usage: (reverse-im-activate \"ukrainian-computer\")"
   "Check whether COMMAND does match `this-command'."
   (or (and (symbolp command)
            (eq this-command command))
-      (let ((this-command-name (symbol-name this-command)))
-        (when (stringp command)
+      (when (and (stringp command)
+                 (symbolp this-command))
+        (let ((this-command-name (symbol-name this-command)))
           (string-match-p command this-command-name)))))
 
 (defun reverse-im-read-char-include (orig-fun &rest args)

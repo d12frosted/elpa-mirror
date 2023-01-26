@@ -4,6 +4,8 @@
 
 ;; Author: Bruno Félix Rezende Ribeiro <oitofelix@gnu.org>
 ;; Keywords: help
+;; Package-Version: 20200328.1450
+;; Package-Commit: 87fb263b18717538fd04878e3358e1e720415db8
 ;; Package: info-rename-buffer
 ;; Homepage: https://github.com/oitofelix/info-rename-buffer
 ;; Version: 20200328.1147
