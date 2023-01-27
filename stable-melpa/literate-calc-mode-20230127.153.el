@@ -3,8 +3,8 @@
 ;; Author: Robin Schroer
 ;; Maintainer: Robin Schroer
 ;; Version: 0.1
-;; Package-Version: 20221220.2151
-;; Package-Commit: db6a73f22d8a4f6561c87619ad7437e7a77f34d5
+;; Package-Version: 20230127.153
+;; Package-Commit: 900bdd12c0a6e6874f60b0df99a72fd329873ea1
 ;; Homepage: https://github.com/sulami/literate-calc-mode.el
 ;; Package-Requires: ((emacs "25.1") (s "1.12.0"))
 ;; Keywords: calc, languages, tools
@@ -49,7 +49,9 @@
   :group 'editing
   :prefix "literate-calc-mode-")
 
-(defcustom literate-calc-mode-inhibit-line-functions '(literate-calc-mode-inhibit-in-src-blocks)
+(defcustom literate-calc-mode-inhibit-line-functions
+  '(literate-calc-mode-inhibit-in-src-blocks
+    literate-calc-mode-inhibit-in-latex)
   "Hook functions called for each line to test whether to inhibit calculation.
 
 If any of these functions returns non-nil, overlays will not be displayed."
@@ -83,6 +85,12 @@ buffers larger than this, as measured by `buffer-size'."
   (and (derived-mode-p #'org-mode)
        (memq (org-element-type (org-element-context))
              '(inline-src-block src-block))))
+
+(defun literate-calc-mode-inhibit-in-latex ()
+  "Return non-nil if point is in a latex fragment or environment."
+  (and (derived-mode-p #'org-mode)
+       (memq (org-element-type (org-element-context))
+             '(latex-fragment latex-environment))))
 
 (defvar-local literate-calc-minor-mode nil)
 (defvar-local literate-calc--scope (list))
