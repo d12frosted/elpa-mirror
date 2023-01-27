@@ -2555,6 +2555,16 @@
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
 	(:commit . "ecd1de2a7967bd8bc61737078d717d0ee050b344"))])
+ (poke .
+       [(3 0)
+	((emacs
+	  (25)))
+	"Emacs meets GNU poke!" tar
+	((:url . "https://www.jemarch.net/poke")
+	 (:maintainer "Jose E. Marchesi" . "jemarch@gnu.org")
+	 (:authors
+	  ("Jose E. Marchesi" . "jemarch@gnu.org"))
+	 (:commit . "bc0bd9e618a468bbb0d0a68cdc2462db43b5b689"))])
  (poker .
 	[(0 2)
 	 nil "Texas hold 'em poker" single
@@ -2875,6 +2885,15 @@
 		  (:authors
 		   ("Yoni Rabkin" . "yrk@gnu.org"))
 		  (:commit . "b76ae2828b12efc5f45f51ba873489e049a70924"))])
+ (ruby-end .
+	   [(0 4 3)
+	    nil "Automatic insertion of end blocks for Ruby" tar
+	    ((:url . "http://github.com/rejeep/ruby-end")
+	     (:keywords "speed" "convenience" "ruby")
+	     (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")
+	     (:authors
+	      ("Johan Andersson" . "johan.rejeep@gmail.com"))
+	     (:commit . "fe39d34ba7a43d522c7bdc47406935611e782ca3"))])
  (rudel .
 	[(0 3 2)
 	 ((emacs
