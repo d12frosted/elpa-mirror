@@ -3,8 +3,20 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-langtool.git
 
 Updating /mnt/store/melpa/working/langtool/
-Checking out 24d5a330e30ecfb76efa3471351cfcbd3e1b67ee
-Built langtool in 4.755s, finished at 2023-01-27T10:38:11+0000
+Checking out 69dc4f71dd06fe36f8335deb6d5caf980cda2d45
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/langtool/
+  to /tmp/langtoolAPhbrV/langtool-20230127.839
+    langtool-popup.el -> langtool-popup.el
+    langtool.el -> langtool.el
+Created langtool-20230127.839.tar containing:
+  langtool-20230127.839/
+  langtool-20230127.839/langtool-pkg.el
+  langtool-20230127.839/langtool-popup.el
+  langtool-20230127.839/langtool.el
+Built langtool in 4.193s, finished at 2023-01-27T14:18:32+0000
  ✓ Success:
  60K -rw-r--r-- 1 root root 59K Jan 27 10:38 packages/langtool-20230125.433.el
 4.0K -rw-r--r-- 1 root root 397 Jan 27 10:38 packages/langtool-20230125.433.entry
+4.0K -rw-r--r-- 1 root root 394 Jan 27 14:18 packages/langtool-20230127.839.entry
+ 72K -rw-r--r-- 1 root root 70K Jan 27 14:18 packages/langtool-20230127.839.tar

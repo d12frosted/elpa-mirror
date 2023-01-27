@@ -8,6 +8,8 @@ desired. And put the following expression into your ~/.emacs.
 
     (require 'langtool)
 
+Or use Melpa (https://melpa.org/)
+
 ## NOTE (2023-01-25)
 
 Confirmed working on following environment
@@ -86,7 +88,7 @@ testing, so please open issue when the ssl/tls connection is not working.
     (global-set-key "\C-x4W" 'langtool-check-done)
     (global-set-key "\C-x4l" 'langtool-switch-default-language)
     (global-set-key "\C-x44" 'langtool-show-message-at-point)
-    (global-set-key "\C-x4c" 'langtool-correct-buffer)
+    (global-set-key "\C-x4c" 'langtool-interactive-correction)
 
 * Default language is detected by LanguageTool automatically.
   Please set `langtool-default-language` if you need specific language.
@@ -143,21 +145,8 @@ testing, so please open issue when the ssl/tls connection is not working.
 
     M-x langtool-show-message-at-point
 
-* Show LanguageTool report automatically by `popup'
-  This idea come from:
-  http://d.hatena.ne.jp/LaclefYoshi/20150912/langtool_popup
-
-    (defun langtool-autoshow-detail-popup (overlays)
-      (when (require 'popup nil t)
-        ;; Do not interrupt current popup
-        (unless (or popup-instances
-                    ;; suppress popup after type `C-g' .
-                    (memq last-command '(keyboard-quit)))
-          (let ((msg (langtool-details-error-message overlays)))
-            (popup-tip msg)))))
-
-    (setq langtool-autoshow-message-function
-          'langtool-autoshow-detail-popup)
+* You can use extension package `langtool-popup` in this repository.
+  To show automatically popup the cursor.
 
 * To finish checking. All langtool marker is removed.
 
