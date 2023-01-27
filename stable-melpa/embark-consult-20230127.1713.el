@@ -5,8 +5,8 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20230126.1728
-;; Package-Commit: ba30b46502a90baec42e51f0e8017e7a4997c4f4
+;; Package-Version: 20230127.1713
+;; Package-Commit: df0dba318989b467e2d5ba35deb62bef24f5edb7
 ;; Version: 0.6
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "27.1") (embark "0.17") (consult "0.17"))
@@ -282,6 +282,8 @@ This function is meant to be added to `embark-collect-mode-hook'."
 
 (setf (alist-get 'consult-man embark-default-action-overrides)
       #'embark-consult-man)
+
+(declare-function consult-info--action "ext:consult-info")
 
 (defun embark-consult-info (cand)
   (consult-info--action cand)

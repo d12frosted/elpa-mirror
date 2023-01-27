@@ -4,11 +4,11 @@
 
 ;; Author: Sergey Kostyaev <feo.me@ya.ru>
 ;; Keywords: languages
-;; Package-Version: 20210816.1215
-;; Package-Commit: 35df36dcd555233ee1a618c0f6a58ce6db4154d9
+;; Package-Version: 20230127.1422
+;; Package-Commit: f84f4177af7fcbe10ce2116d5417ad5f0485034b
 ;; Url: https://github.com/s-kostyaev/go-gen-test
 ;; Version: 1.0.0
-;; Package-Requires: ((emacs "24.3") (s "1.12"))
+;; Package-Requires: ((emacs "24.4"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -29,7 +29,6 @@
 ;; You should install `gotests' for use it.
 
 ;;; Code:
-(require 's)
 (require 'simple)
 
 (defgroup go-gen-test nil
@@ -92,7 +91,7 @@
           (if go-gen-test-enable-subtests "" " -nosubtests")
 	  (if go-gen-test-use-testify " -template testify" "")
           (if go-gen-test-exclude
-              (format " -excl %s"(s-join "|" go-gen-test-exclude))
+              (format " -excl %s"(string-join go-gen-test-exclude "|"))
             "")))
 
 ;;;###autoload
@@ -110,7 +109,7 @@ You can customize this behavior with `go-gen-test-default-functions'."
        (format "%s -only %s %s"
                (go-gen-test-base-command)
                (shell-quote-argument
-                (s-join "|" (go-gen-test-functions start end)))
+                (string-join (go-gen-test-functions start end) "|"))
                (shell-quote-argument (buffer-file-name)))
      (format "%s %s %s"
              (go-gen-test-base-command)
@@ -118,7 +117,7 @@ You can customize this behavior with `go-gen-test-default-functions'."
              (shell-quote-argument (buffer-file-name))))
    "*gotests*")
   (deactivate-mark)
-  (if (s-suffix-p "_test.go" (buffer-file-name))
+  (if (string-suffix-p "_test.go" (buffer-file-name))
       (revert-buffer nil t)
     (funcall go-gen-test-open-function
              (format "%s_test.go" (file-name-base (buffer-file-name))))))
@@ -134,7 +133,7 @@ Generate tests for all functions."
            (go-gen-test-base-command)
            (shell-quote-argument (buffer-file-name)))
    "*gotests*")
-  (if (s-suffix-p "_test.go" (buffer-file-name))
+  (if (string-suffix-p "_test.go" (buffer-file-name))
       (revert-buffer nil t)
     (funcall go-gen-test-open-function
              (format "%s_test.go" (file-name-base (buffer-file-name))))))
@@ -150,7 +149,7 @@ Generate tests for all exported functions."
            (go-gen-test-base-command)
            (shell-quote-argument (buffer-file-name)))
    "*gotests*")
-  (if (s-suffix-p "_test.go" (buffer-file-name))
+  (if (string-suffix-p "_test.go" (buffer-file-name))
       (revert-buffer nil t)
     (funcall go-gen-test-open-function
              (format "%s_test.go" (file-name-base (buffer-file-name))))))

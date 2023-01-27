@@ -1,11 +1,9 @@
 (go-gen-test .
-	     [(20210816 1215)
+	     [(20230127 1422)
 	      ((emacs
-		(24 3))
-	       (s
-		(1 12)))
+		(24 4)))
 	      "Generate tests for go code with gotests" single
-	      ((:commit . "35df36dcd555233ee1a618c0f6a58ce6db4154d9")
+	      ((:commit . "f84f4177af7fcbe10ce2116d5417ad5f0485034b")
 	       (:authors
 		("Sergey Kostyaev" . "feo.me@ya.ru"))
 	       (:maintainer "Sergey Kostyaev" . "feo.me@ya.ru")
