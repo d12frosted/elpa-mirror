@@ -1,12 +1,10 @@
 (himalaya .
-	  [(20230109 2241)
+	  [(20230128 1429)
 	   ((emacs
 	     (27 1)))
 	   "Interface for the himalaya email client" single
-	   ((:commit . "dd90eed0780675baa0dd8f9e35fa0618561ba783")
+	   ((:commit . "1e4b77833a3fcb67fd4c3a85ff290a8fb7724452")
 	    (:authors
-	     ("Dante Catalfamo")
-	     ("soywod" . "clement.douin@posteo.net"))
+	     ("Dante Catalfamo"))
 	    (:maintainer "Dante Catalfamo")
-	    (:keywords "mail" "comm")
 	    (:url . "https://github.com/dantecatalfamo/himalaya-emacs"))])
