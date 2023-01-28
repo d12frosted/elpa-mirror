@@ -968,7 +968,7 @@
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	      (:commit . "35201e49e8c3f5d1a2d6c17cb1697a9e18529a9a"))])
  (eglot .
-	[(1 10)
+	[(1 11)
 	 ((emacs
 	   (26 3))
 	  (jsonrpc
@@ -978,7 +978,7 @@
 	  (project
 	   (0 9 3))
 	  (xref
-	   (1 0 1))
+	   (1 4 0))
 	  (eldoc
 	   (1 11 0))
 	  (seq
@@ -991,7 +991,7 @@
 	  (:maintainer "João Távora" . "joaotavora@gmail.com")
 	  (:authors
 	   ("João Távora" . "joaotavora@gmail.com"))
-	  (:commit . "7575c85efd27f3a4e8e968d0bef1c63d6a2b8d84"))])
+	  (:commit . "f72a394716f4373dbbdc79ad0816da90bdb032a1"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -1605,7 +1605,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 14)
+	    [(0 15)
 	     ((emacs
 	       (27 1)))
 	     "Tool for inspection of Emacs Lisp objects" tar
@@ -1614,7 +1614,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "d31d2afc1502ac3f56d06d8342139f94f3131f0d"))])
+	      (:commit . "cab7ea001baa54eff6393f171e9ef1f69258d5ac"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs

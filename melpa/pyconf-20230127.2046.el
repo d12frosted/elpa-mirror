@@ -3,9 +3,9 @@
 ;; Copyright (C) 2022 Andrew Favia
 ;; Author: Andrew Favia <drewlinguistics01 at gmail dot com>
 ;; Version: 0.1.0
-;; Package-Version: 20221112.1827
-;; Package-Commit: c49dbd71e69a3840344f644030f087688e73e31e
-;; Package-Requires: ((pyvenv "1.21") (emacs "28.1") (transient "0.3.7"))
+;; Package-Version: 20230127.2046
+;; Package-Commit: f78e7f269210c7d7e06001752d87c8fbfd8b9084
+;; Package-Requires: ((pyvenv "1.21") (emacs "28.1") (transient "0.3.7") (pyenv-mode "0.1.0"))
 ;; Keywords: processes, python
 ;; URL: https://github.com/andcarnivorous/pyconf
 ;;
@@ -65,33 +65,56 @@
 (require 'subr-x)
 (require 'pyvenv)
 (require 'transient)
+(require 'pyenv-mode)
 
 (defvar pyconf-config-list '())
 
-(defun pyconf-run-python-proc (command-s path-to-file exec-dir &optional params venv env-vars)
+(defun pyconf-run-python-proc (command-s path-to-file exec-dir &optional params venv pyenv-version env-vars)
   "Execute COMMAND-S pointing to PATH-TO-FILE.
 Set the `default-directory' to EXEC-DIR if provided and pass the
-PARAMS given.  Load with `pyvenv' the VENV virtualenv if provided
-and set the ENV-VARS if provided."
-  (let ((venv (or venv nil))
-        (params (or params nil))
+PARAMS given.  Load with `pyvenv' the VENV virtualenv if provided,
+othersiwe if PYENV-VERSION is provided use `pyenv'.
+finally, set the ENV-VARS if provided."
+  (let ((venv (pyconf--is-empty-string venv))
+        (params (pyconf--is-empty-string params))
         (env-vars (or env-vars nil))
+        (pyenv-version (pyconf--is-empty-string pyenv-version))
         (cached-venv nil)
         (built-env-vars nil))
-    (when venv
-      (if pyvenv-virtual-env
-          (setq cached-venv pyvenv-virtual-env))
-      (pyconf-activate-venv venv))
+    (when (or venv pyenv-version)
+      (if (or pyvenv-virtual-env (pyenv-mode-version))
+          (setq cached-venv (or pyvenv-virtual-env (pyenv-mode-version))))
+      (pyconf-venv-or-pyenv venv pyenv-version))
     (if (> (length env-vars) 0)
         (setq built-env-vars (string-join env-vars " ")))
     (let ((default-directory exec-dir))
+      (pyconf--run-shell-command built-env-vars command-s path-to-file params))
+    (if cached-venv
+        (pyconf-venv-or-pyenv venv pyenv-version)
+      (pyvenv-deactivate))))
+
+(defun pyconf--run-shell-command (built-env-vars command-s path-to-file params)
+  "Run given COMMAND-S preceded by BUILT-ENV-VARS and followed by PATH-TO-FILE and PARAMS."
       (async-shell-command
        (string-join (list built-env-vars command-s path-to-file params) " ") (format "*PyConf %s*" path-to-file)))
-    (when cached-venv
-      (pyconf-activate-venv cached-venv))
-    (pyvenv-deactivate)))
 
-(defun pyconf-activate-venv (venv)
+(defun pyconf-venv-or-pyenv (venv pyenv-version)
+  "Check if only one of VENV or PYENV-VERSION is nil and activate."
+  (cond ((and venv pyenv-version)
+         (error "Pyconf Configuration cannot have both a pyenv and a venv reference"))
+        ((not venv)
+         (pyconf-pyenv-activate pyenv-version))
+        ((not pyenv-version)
+         (pyconf-venv-activate venv))
+        ((and (not venv) (not pyenv-version))
+         (message "no venv or pyenv passed"))))
+
+(defun pyconf-pyenv-activate (pyenv-version)
+  "Unset any active pyenv version and then set it to PYENV-VERSION."
+  (pyenv-mode-unset)
+  (pyenv-mode-set pyenv-version))
+
+(defun pyconf-venv-activate (venv)
   "Activate given VENV after deactivating any eventual active one."
   (pyvenv-deactivate)
   (pyvenv-activate venv))
@@ -117,6 +140,10 @@ and set the ENV-VARS if provided."
                 :type string
                 :custom string
                 :initform "")
+   (pyconf-pyenv :initarg :pyconf-pyenv
+                  :type string
+                  :custom string
+                  :initform "")
    (pyconf-env-vars :initarg :pyconf-env-vars
                     :type list
                     :custom list
@@ -129,6 +156,7 @@ and set the ENV-VARS if provided."
                           (slot-value pyconf-config-obj 'pyconf-path-to-exec)
                           (slot-value pyconf-config-obj 'pyconf-params)
                           (slot-value pyconf-config-obj 'pyconf-venv)
+                          (slot-value pyconf-config-obj 'pyconf-pyenv)
                           (slot-value pyconf-config-obj 'pyconf-env-vars)))
 
 (defun pyconf-start (choice)
@@ -160,13 +188,17 @@ and set the ENV-VARS if provided."
         (config-file-path (or (transient-arg-value "--file-path=" args) (buffer-file-name)))
         (config-exec-path (or (transient-arg-value "--path=" args) (file-name-directory buffer-file-name)))
         (config-params (or (transient-arg-value "--params=" args) ""))
-        (config-venv (or (transient-arg-value "--venv=" args) "")))
+        (config-venv (or (transient-arg-value "--venv=" args) ""))
+        (config-pyenv (or (transient-arg-value "--pyenv=" args) ""))
+        (config-env-vars (or (transient-arg-value "--env-vars=" args) "")))
     (pyconf-add-configurations (list (pyconf-config :name config-name
                                                  :pyconf-exec-command config-command
                                                  :pyconf-file-to-exec config-file-path
                                                  :pyconf-path-to-exec config-exec-path
                                                  :pyconf-params config-params
-                                                 :pyconf-venv config-venv)))))
+                                                 :pyconf-venv config-venv
+                                                 :pyconf-pyenv config-pyenv
+                                                 :pyconf-env-vars config-env-vars)))))
 
 (transient-define-suffix pyconf-transient-execute (&optional args)
   "Execute a non-persistent pyconf configuration given the necessary parameters."
@@ -179,13 +211,17 @@ and set the ENV-VARS if provided."
         (config-file-path (or (transient-arg-value "--file-path=" args) (buffer-file-name)))
         (config-exec-path (or (transient-arg-value "--path=" args) (file-name-directory buffer-file-name)))
         (config-params (or (transient-arg-value "--params=" args) ""))
-        (config-venv (or (transient-arg-value "--venv=" args) "")))
+        (config-venv (or (transient-arg-value "--venv=" args) ""))
+        (config-pyenv (or (transient-arg-value "--pyenv=" args) ""))
+        (config-env-vars (or (transient-arg-value "--env-vars=" args) "")))
     (pyconf-execute-config (pyconf-config :name config-name
                                            :pyconf-exec-command config-command
                                            :pyconf-file-to-exec config-file-path
                                            :pyconf-path-to-exec config-exec-path
                                            :pyconf-params config-params
-                                           :pyconf-venv config-venv))))
+                                           :pyconf-venv config-venv
+                                           :pyconf-pyenv config-pyenv
+                                           :pyconf-env-vars (pyconf--split-vars-string config-env-vars)))))
 
 (defun pyconf-prefix-init (obj)
   "Load dynamically default values and set OBJ value slot.
@@ -206,10 +242,22 @@ https://stackoverflow.com/questions/28196228/emacs-how-to-get-directory-of-curre
    ("-p" "execution path" "--path=" :always-read t)
    ("-v" "virtualenv" "--venv=" :always-read t)
    ("--params" "parameters" "--params=" :always-read t)
+   ("-e" "envvars" "--env-vars=" :always-read t)
+   ("--pyenv" "pyenv-version" "--pyenv=" :always-read t)
    ]
   ["Actions"
    [(pyconf-transient-save)
     (pyconf-transient-execute)]])
+
+(defun pyconf--is-empty-string (input-string)
+  "Check return INPUT-STRING if it is not empty."
+  (or (if (not (string= "" input-string))
+          input-string
+        nil)))
+
+(defun pyconf--split-vars-string (vars-string)
+  "Split a VARS-STRING containing environment variables comma separated into a list."
+  (split-string vars-string ","))
 
 (provide 'pyconf)
 

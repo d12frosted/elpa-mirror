@@ -1,13 +1,15 @@
 (pyconf .
-	[(20221112 1827)
+	[(20230127 2046)
 	 ((pyvenv
 	   (1 21))
 	  (emacs
 	   (28 1))
 	  (transient
-	   (0 3 7)))
+	   (0 3 7))
+	  (pyenv-mode
+	   (0 1 0)))
 	 "Set up python execution configurations like dap-mode ones" single
-	 ((:commit . "c49dbd71e69a3840344f644030f087688e73e31e")
+	 ((:commit . "f78e7f269210c7d7e06001752d87c8fbfd8b9084")
 	  (:authors
 	   ("Andrew Favia <drewlinguistics01 at gmail dot com>"))
 	  (:maintainer "Andrew Favia <drewlinguistics01 at gmail dot com>")
