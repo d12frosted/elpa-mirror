@@ -10,8 +10,8 @@
 ;; Maintainer: FENTON, Alex <a-fent@github>
 ;; Created: 2014-07-20
 ;; Version: 1.210925
-;; Package-Version: 20230124.1831
-;; Package-Commit: 2be8a74d71c12860a073e7a2e2c423c5415285e8
+;; Package-Version: 20230128.1219
+;; Package-Commit: 66c32cca4f6047dd7e0f77f10bd565a2d83d4729
 ;; Package-Requires: ((org "8.2") (emacs "24.4") (dash "2.8") (ht "2.0"))
 ;; Keywords: tools
 ;; URL: https://github.com/a-fent/ox-pandoc
@@ -1848,7 +1848,7 @@ Called on completion of an asynchronous pandoc process."
      (display-warning 'ox-pandoc (format "Signal Received. %s" message)))
     (exit
      (dolist (file (process-get process 'files))
-       ;; (if (and file (file-exists-p file)) (delete-file file))
+	   (if (and file (file-exists-p file)) (delete-file file))
 	   )
      (let ((exit-status (process-exit-status process))
            (buffer (process-buffer process))

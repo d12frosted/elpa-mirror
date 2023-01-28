@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.6-alpha
-;; Package-Version: 20230125.518
-;; Package-Commit: b094ae0ac9f670862803c09b859ce63e14138c61
+;; Package-Version: 20230128.1027
+;; Package-Commit: 0f7eae811308f92b8681b5411f7a5035d1fcd5a7
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -8607,7 +8607,8 @@ This can be toggled with `markdown-toggle-inline-images'
 or \\[markdown-toggle-inline-images]."
   (interactive)
   (mapc #'delete-overlay markdown-inline-image-overlays)
-  (setq markdown-inline-image-overlays nil))
+  (setq markdown-inline-image-overlays nil)
+  (when (fboundp 'clear-image-cache) (clear-image-cache)))
 
 (defcustom markdown-display-remote-images nil
   "If non-nil, download and display remote images.

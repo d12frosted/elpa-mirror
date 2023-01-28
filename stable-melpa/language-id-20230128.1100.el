@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-language-id
-;; Package-Version: 20221025.541
-;; Package-Commit: 40ceb1f23d4419e8fdb2808c2c71dd46e541c4c4
+;; Package-Version: 20230128.1100
+;; Package-Commit: c1fd0fa31e196cf02f5352f026a83cfd7913f652
 ;; Version: 0.19
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: languages util
@@ -134,7 +134,7 @@
     ("Awk" awk-mode)
     ("Bazel" bazel-mode)
     ("BibTeX" bibtex-mode)
-    ("C" c-mode)
+    ("C" c-mode c-ts-mode)
     ("C#" csharp-mode)
     ("C++" c++-mode)
     ("Cabal Config" haskell-cabal-mode)
