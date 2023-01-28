@@ -18,8 +18,8 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;; Version: 1.0
-;; Package-Version: 20221129.1253
-;; Package-Commit: 75eed2cecc3b2be0f310c07a8b68fce1173aaa50
+;; Package-Version: 20230128.110
+;; Package-Commit: 57f584de3ff0ad9b12412c5be10a7e50bd024bce
 ;; Author: Adrien Brochard
 ;; Keywords: mermaid graphs tools processes
 ;; URL: https://github.com/abrochard/mermaid-mode
@@ -125,9 +125,8 @@ STR is the declaration."
           (cons (- l (line-number-at-pos)) (current-indentation))
         (cons -1 -1)))))
 
-(defun mermaid-indent-line ()
-  "Indent the current line."
-  (interactive)
+(defun mermaid--calculate-desired-indentation ()
+  "Determine the indentation level that this line should have."
   (save-excursion
     (end-of-line)
     (let ((graph (mermaid--locate-declaration "^graph\\|sequenceDiagram"))
@@ -135,16 +134,20 @@ STR is the declaration."
           (both (mermaid--locate-declaration "^graph \\|^sequenceDiagram$\\|subgraph \\|loop \\|alt \\|opt"))
           (else (mermaid--locate-declaration "else "))
           (end (mermaid--locate-declaration "^ *end *$")))
-      (indent-line-to
-       (cond ((equal (car graph) 0) 0) ;; this is a graph declaration
-             ((equal (car end) 0) (cdr subgraph)) ;; this is "end", indent to nearest subgraph
-             ((equal (car subgraph) 0) (+ 4 (cdr graph))) ;; this is a subgraph
-             ((equal (car else) 0) (cdr subgraph)) ;; this is "else:, indent to nearest alt
-             ;; everything else
-             ((< (car end) 0) (+ 4 (cdr both))) ;; no end in sight
-             ((< (car both) (car end)) (+ 4 (cdr both))) ;; (sub)graph declaration closer, +4
-             (t (cdr end)) ;; end declaration closer, same indent
-             )))))
+      (cond ((equal (car graph) 0) 0) ;; this is a graph declaration
+            ((equal (car end) 0) (cdr subgraph)) ;; this is "end", indent to nearest subgraph
+            ((equal (car subgraph) 0) (+ 4 (cdr graph))) ;; this is a subgraph
+            ((equal (car else) 0) (cdr subgraph)) ;; this is "else:, indent to nearest alt
+            ;; everything else
+            ((< (car end) 0) (+ 4 (cdr both))) ;; no end in sight
+            ((< (car both) (car end)) (+ 4 (cdr both))) ;; (sub)graph declaration closer, +4
+            (t (cdr end)) ;; end declaration closer, same indent
+            ))))
+
+(defun mermaid-indent-line ()
+  "Indent the current line."
+  (interactive)
+  (indent-line-to (mermaid--calculate-desired-indentation)))
 
 (defun mermaid-compile ()
   "Compile the current mermaid file using mmdc."
