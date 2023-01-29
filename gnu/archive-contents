@@ -2526,7 +2526,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "25d675307c03f720e592c3dc9a5a0ae8db0836eb"))])
  (phps-mode .
-	    [(0 4 30)
+	    [(0 4 32)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2535,7 +2535,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "5fd766964d3a7c777cb95b47c46ba0e20af207df"))])
+	      (:commit . "45fac686b50d2453eefef1f1cd3eb13529fd141b"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
@@ -3174,15 +3174,16 @@
 	  ("Aleksandr Vityazev" . "avityazev@posteo.org"))
 	 (:commit . "5605a75111a9b1a1e67bd012bbf78fc6cb54f96b"))])
  (ssh-deploy .
-	     [(3 1 13)
+	     [(3 1 14)
 	      ((emacs
 		(25)))
 	      "Deployment via Tramp, global or per directory." tar
 	      ((:url . "https://github.com/cjohansson/emacs-ssh-deploy")
+	       (:keywords "tools" "convenience")
 	       (:maintainer "Christian Johansson" . "christian@cvj.se")
 	       (:authors
 		("Christian Johansson" . "christian@cvj.se"))
-	       (:keywords "tools" "convenience"))])
+	       (:commit . "94b56c0428fa0c788578161edc9e7992b13cd400"))])
  (standard-themes .
 		  [(1 1 0)
 		   ((emacs

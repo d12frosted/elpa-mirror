@@ -1,11 +1,11 @@
 (libelcouch .
-	    [(20200923 1836)
+	    [(20230129 1000)
 	     ((emacs
 	       (26 1))
 	      (request
 	       (0 3 0)))
 	     "Communication with CouchDB" single
-	     ((:commit . "5ae35266c9a2eb33f0c708bc8c0687339cee9133")
+	     ((:commit . "595697f4199519dd018fe489e885f237c54b0675")
 	      (:authors
 	       ("Damien Cassou" . "damien@cassou.me"))
 	      (:maintainer "Damien Cassou" . "damien@cassou.me")

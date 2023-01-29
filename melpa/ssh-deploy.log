@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/cjohansson/emacs-ssh-deploy.git
 
 Updating /mnt/store/melpa/working/ssh-deploy/
-Checking out 9311f9b4f8d25ce54fb7da9bf59d955fed366a4d
+Checking out 94b56c0428fa0c788578161edc9e7992b13cd400
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ssh-deploy/
-  to /tmp/ssh-deploy3qWALz/ssh-deploy-20220126.658
+  to /tmp/ssh-deploy54a0Zz/ssh-deploy-20230129.903
     ssh-deploy-diff-mode.el -> ssh-deploy-diff-mode.el
     ssh-deploy-hydra.el -> ssh-deploy-hydra.el
     ssh-deploy.el -> ssh-deploy.el
-Created ssh-deploy-20220126.658.tar containing:
-  ssh-deploy-20220126.658/
-  ssh-deploy-20220126.658/ssh-deploy-diff-mode.el
-  ssh-deploy-20220126.658/ssh-deploy-hydra.el
-  ssh-deploy-20220126.658/ssh-deploy-pkg.el
-  ssh-deploy-20220126.658/ssh-deploy.el
-Built ssh-deploy in 3.787s, finished at 2023-01-29T04:36:32+0000
+Created ssh-deploy-20230129.903.tar containing:
+  ssh-deploy-20230129.903/
+  ssh-deploy-20230129.903/ssh-deploy-diff-mode.el
+  ssh-deploy-20230129.903/ssh-deploy-hydra.el
+  ssh-deploy-20230129.903/ssh-deploy-pkg.el
+  ssh-deploy-20230129.903/ssh-deploy.el
+Built ssh-deploy in 4.086s, finished at 2023-01-29T11:55:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  429 Jan 29 04:36 packages/ssh-deploy-20220126.658.entry
-100K -rw-r--r-- 1 root root 100K Jan 29 04:36 packages/ssh-deploy-20220126.658.tar
+4.0K -rw-r--r-- 1 root root  429 Jan 29 08:16 packages/ssh-deploy-20220126.658.entry
+100K -rw-r--r-- 1 root root 100K Jan 29 08:16 packages/ssh-deploy-20220126.658.tar
+4.0K -rw-r--r-- 1 root root  429 Jan 29 11:55 packages/ssh-deploy-20230129.903.entry
+100K -rw-r--r-- 1 root root 100K Jan 29 11:55 packages/ssh-deploy-20230129.903.tar

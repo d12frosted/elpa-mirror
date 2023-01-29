@@ -1,9 +1,9 @@
 (ssh-deploy .
-	    [(20220126 658)
+	    [(20230129 903)
 	     ((emacs
 	       (25)))
 	     "Deployment via Tramp, global or per directory." tar
-	     ((:commit . "9311f9b4f8d25ce54fb7da9bf59d955fed366a4d")
+	     ((:commit . "94b56c0428fa0c788578161edc9e7992b13cd400")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")

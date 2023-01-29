@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.com/ideasman42/emacs-scroll-on-jump
-;; Package-Version: 20230124.220
-;; Package-Commit: 7b4d7966275bdf8587c62ae9c203dfa068677d2c
+;; Package-Version: 20230129.612
+;; Package-Commit: 6a9b9ecc0dcfabb9ca560393bfe5aa21c6063c16
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -348,7 +348,6 @@ Argument ALSO-MOVE-POINT moves the point while scrolling."
             ;; the caller moves the point to the final location.
             (when (< px-done-abs px-scroll-abs)
               ;; Force `redisplay', without this redrawing can be a little choppy.
-              (goto-char (1+ (point)))
               (redisplay t)
               ;; FIXME: for some reason a short sleep is needed to prevent choppy scrolling.
               (sit-for 0.01)))

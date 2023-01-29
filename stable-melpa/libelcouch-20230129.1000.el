@@ -1,11 +1,11 @@
 ;;; libelcouch.el --- Communication with CouchDB  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2018  Damien Cassou
+;; Copyright (C) 2018-2023  Damien Cassou
 
 ;; Author: Damien Cassou <damien@cassou.me>
 ;; Keywords: tools
-;; Package-Version: 20200923.1836
-;; Package-Commit: 5ae35266c9a2eb33f0c708bc8c0687339cee9133
+;; Package-Version: 20230129.1000
+;; Package-Commit: 595697f4199519dd018fe489e885f237c54b0675
 ;; Url: https://gitlab.petton.fr/elcouch/libelcouch/
 ;; Package-requires: ((emacs "26.1") (request "0.3.0"))
 ;; Version: 0.11.0
@@ -138,26 +138,41 @@ considered to have failed."
   "Return DATABASE."
   database)
 
-(cl-defgeneric libelcouch-entity-url (entity)
-  "Return the URL of ENTITY."
+(cl-defun libelcouch-entity-weburl (entity)
+  "Return the URL of the web application to edit ENTITY."
+  (format "%s/_utils/#database%s%s"
+          (libelcouch--instance-url (libelcouch-entity-instance entity))
+          (libelcouch-entity-baseurl entity)
+          (if (equal (type-of entity) 'libelcouch-database)
+              "/_all_docs"
+            "")))
+
+(cl-defun libelcouch-entity-url (entity)
+  "Return the API URL of ENTITY."
+  (format "%s%s"
+          (libelcouch--instance-url (libelcouch-entity-instance entity))
+          (libelcouch-entity-baseurl entity)))
+
+(cl-defgeneric libelcouch-entity-baseurl (entity)
+  "Return the base URL of ENTITY."
   (format "%s/%s"
-          (libelcouch-entity-url (libelcouch-entity-parent entity))
+          (libelcouch-entity-baseurl (libelcouch-entity-parent entity))
           (libelcouch-entity-name entity)))
 
-(cl-defmethod libelcouch-entity-url ((instance libelcouch-instance))
-  "Return the URL of INSTANCE."
-  (libelcouch--instance-url instance))
+(cl-defmethod libelcouch-entity-baseurl ((_ libelcouch-instance))
+  "Return the base URL of INSTANCE."
+  "")
 
-(cl-defmethod libelcouch-entity-url ((design-document libelcouch-design-document))
-  "Return the URL of DESIGN-DOCUMENT."
+(cl-defmethod libelcouch-entity-baseurl ((design-document libelcouch-design-document))
+  "Return the base URL of DESIGN-DOCUMENT."
   (format "%s/_design/%s"
-          (libelcouch-entity-url (libelcouch-entity-parent design-document))
+          (libelcouch-entity-baseurl (libelcouch-entity-parent design-document))
           (libelcouch-entity-name design-document)))
 
-(cl-defmethod libelcouch-entity-url ((view libelcouch-view))
-  "Return the URL of VIEW."
+(cl-defmethod libelcouch-entity-baseurl ((view libelcouch-view))
+  "Return the base URL of VIEW."
   (format "%s/_view/%s"
-          (libelcouch-entity-url (libelcouch-entity-parent view))
+          (libelcouch-entity-baseurl (libelcouch-entity-parent view))
           (libelcouch-entity-name view)))
 
 (defun libelcouch-entity-from-url (url)
@@ -381,6 +396,10 @@ If REVISION is not the latest, signal an error."
    document
    (lambda (revision)
      (libelcouch-document-delete document revision function))))
+
+(defun libelcouch-browse-weburl (entity)
+  "Open ENTITY in a web browser."
+  (browse-url (libelcouch-entity-weburl entity)))
 
 (provide 'libelcouch)
 ;;; libelcouch.el ends here

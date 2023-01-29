@@ -8,6 +8,8 @@
 ;; Maintainer: Akinori MUSHA <knu@iDaemons.org>
 ;; Created: 6 Mar 2005
 ;; URL: https://github.com/ruby/elisp-ruby-electric
+;; Package-Version: 20200328.1528
+;; Package-Commit: f2323cd9b5df3b34aa9810ba8109502824925d23
 ;; Keywords: languages ruby
 ;; License: The same license terms as Ruby
 ;; Version: 2.3.3
