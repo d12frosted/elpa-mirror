@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ocaml/caml-mode.git
 
 Updating /mnt/store/melpa/working/caml/
-Checking out a970f303065fe176a920db0466dacf3e2a20b56b
+Checking out 959a5a27bfdbaa43a9ff99be136d62e0798f5e01
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/caml/
-  to /tmp/camliq7DOk/caml-20220928.835
+  to /tmp/camlkmevme/caml-20230129.1145
     caml-font-old.el -> caml-font-old.el
     caml-font.el -> caml-font.el
     caml-help.el -> caml-help.el
@@ -14,17 +14,17 @@ Copying files (->) and directories (=>)
     caml.el -> caml.el
     camldebug.el -> camldebug.el
     inf-caml.el -> inf-caml.el
-Created caml-20220928.835.tar containing:
-  caml-20220928.835/
-  caml-20220928.835/caml-font-old.el
-  caml-20220928.835/caml-font.el
-  caml-20220928.835/caml-help.el
-  caml-20220928.835/caml-pkg.el
-  caml-20220928.835/caml-types.el
-  caml-20220928.835/caml.el
-  caml-20220928.835/camldebug.el
-  caml-20220928.835/inf-caml.el
-Built caml in 6.104s, finished at 2023-01-29T10:48:19+0000
+Created caml-20230129.1145.tar containing:
+  caml-20230129.1145/
+  caml-20230129.1145/caml-font-old.el
+  caml-20230129.1145/caml-font.el
+  caml-20230129.1145/caml-help.el
+  caml-20230129.1145/caml-pkg.el
+  caml-20230129.1145/caml-types.el
+  caml-20230129.1145/caml.el
+  caml-20230129.1145/camldebug.el
+  caml-20230129.1145/inf-caml.el
+Built caml in 4.255s, finished at 2023-01-29T18:26:37+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  460 Jan 29 10:48 packages/caml-20220928.835.entry
-212K -rw-r--r-- 1 root root 210K Jan 29 10:48 packages/caml-20220928.835.tar
+4.0K -rw-r--r-- 1 root root  461 Jan 29 18:26 packages/caml-20230129.1145.entry
+212K -rw-r--r-- 1 root root 210K Jan 29 18:26 packages/caml-20230129.1145.tar

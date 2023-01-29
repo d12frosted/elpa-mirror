@@ -1,0 +1,12 @@
+(tree-sitter-ispell .
+		    [(20230129 1727)
+		     ((emacs
+		       (26 1))
+		      (tree-sitter
+		       (0 15 0)))
+		     "Run ispell on tree-sitter text nodes" single
+		     ((:commit . "c37b612757d798cab6ac3e5f553cc45d3b48a4a2")
+		      (:authors
+		       ("Erick Navarro" . "erick@navarro.io"))
+		      (:maintainer "Erick Navarro" . "erick@navarro.io")
+		      (:url . "https://github.com/erickgnavar/tree-sitter-ispell.el"))])
