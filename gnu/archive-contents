@@ -1449,19 +1449,19 @@
 	      ("Stephen Leake" . "stephen_leake@member.fsf.org"))
 	     (:commit . "9676e6361ef38fd953835b405ccccdf0d0c5517b"))])
  (gpr-query .
-	    [(1 0 2)
+	    [(1 0 3)
 	     ((emacs
 	       (25 3))
 	      (wisi
-	       (4 2 0))
+	       (4 2 2))
 	      (gnat-compiler
-	       (1 0 1)))
+	       (1 0 2)))
 	     "Minor mode for navigating sources using gpr_query" tar
 	     ((:maintainer "Stephen Leake" . "stephen_leake@member.fsf.org")
 	      (:authors
 	       ("Stephen Leake" . "stephen_leake@member.fsf.org"))
 	      (:url . "https://elpa.gnu.org/packages/gpr-query.html")
-	      (:commit . "92ac06f23d02c94aa89a1a5364776ea7df15d581"))])
+	      (:commit . "ada0d0afcefe88b66b9cc53de5d76db661bfb2d7"))])
  (graphql .
 	  [(0 1 2)
 	   ((emacs
@@ -3055,14 +3055,14 @@
 		("Michael Heerdegen" . "michael_heerdegen@web.de"))
 	       (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de"))])
  (sml-mode .
-	   [(6 10)
+	   [(6 11)
 	    ((emacs
 	      (24 3))
 	     (cl-lib
 	      (0 5)))
-	    "Major mode for editing (Standard) ML" single
-	    ((:url . "http://elpa.gnu.org/packages/sml-mode.html")
-	     (:keywords "sml")
+	    "Major mode for editing (Standard) ML" tar
+	    ((:keywords "sml")
+	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
 	     (:authors
 	      ("Lars Bo Nielsen")
 	      ("	Olin Shivers")
@@ -3071,7 +3071,8 @@
 	      ("	Matthew Morley" . "mjm@scs.leeds.ac.uk")
 	      ("	Matthias Blume" . "blume@cs.princeton.edu")
 	      ("	(Stefan Monnier)" . "monnier@iro.umontreal.ca"))
-	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
+	     (:url . "https://elpa.gnu.org/packages/sml-mode.html")
+	     (:commit . "072e3eedf703209f8f2937aff51ca02c627dee8e"))])
  (so-long .
 	  [(1 1 2)
 	   ((emacs

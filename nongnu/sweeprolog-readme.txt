@@ -35,6 +35,10 @@ Editing Prolog Code
 ..... Electric Layout mode
 .. Term-based Editing
 .. Holes
+..... Terms with Holes
+..... Jumping to Holes
+..... Filling Holes
+..... Highlighting Holes
 .. Cross References
 .. Predicate Boundaries
 .. File Specifications
@@ -957,6 +961,9 @@ Term-based editing and motion commands
 Holes
 ─────
 
+  /Holes/ are Prolog variables that some Sweep commands use as
+  placeholder for other terms.
+
   When writing Prolog code in the usual way of typing in one character
   at a time, the buffer text is often found in a syntactically incorrect
   state while you edit it.  This happens for example right after you
@@ -971,19 +978,34 @@ Holes
   variables, but they are annotated with a special text property that
   allows Sweep to recognize them as holes needed to be filled.
 
+  See [Inserting Terms with Holes] for a command that uses holes to let
+  you write syntactically correct Prolog terms incrementally.  Several
+  other Sweep commands insert holes in place of unknown terms, including
+  `C-M-i' (see [Code Completion]), `C-M-m' (see [Context-Based Term
+  Insertion]) and `M-x sweeprolog-plunit-testset-skeleton' (see [Writing
+  Tests]).
+
+
+[Inserting Terms with Holes] See section Inserting Terms with Holes
+
+[Code Completion] See section Code Completion
+
+[Context-Based Term Insertion] See section Context-Based Term Insertion
+
+[Writing Tests] See section Writing Tests
+
+Inserting Terms with Holes
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Use the command `C-c RET' to add a term to the buffer at point while
+  keeping it syntactically correct.  You don’t need to give the entire
+  term at once, only its functor and arity.  Sweep automatically inserts
+  holes for the arguments (if any), which you can incrementally fill one
+  after the other.
+
   Key: C-c RET (sweeprolog-insert-term-with-holes)
         Insert a Prolog term with a given functor and arity at point,
         using holes for arguments.
-  Key: C-c TAB (sweeprolog-forward-hole)
-        Move point to the next hole in the buffer.
-  Key: C-c S-TAB (sweeprolog-backward-hole)
-        Move point to the previous hole in the buffer.
-  User Option: sweeprolog-highlight-holes
-        If non-nil, highlight holes in `sweeprolog-mode' buffers with a
-        dedicated face.  Defaults to `t'.
-  Command: sweeprolog-forward-hole-on-tab-mode
-        Toggle moving to the next hole in the buffer with `TAB' if the
-        current line is already properly indented.
 
   The main command for inserting terms with holes is `M-x
   sweeprolog-insert-term-with-holes'.  This command, bound by default to
@@ -1008,24 +1030,43 @@ Holes
   surrounding tokens.  If you call it at the end of a term that doesn’t
   have a closing fullstop, it adds the fullstop after the inserted term.
 
-  Several other Sweep commands insert holes in place of unknown terms,
-  including `C-M-i' (see [Code Completion]), `C-M-m' (see [Context-Based
-  Term Insertion]) and `M-x sweeprolog-plunit-testset-skeleton' (see
-  [Writing Tests]).
 
-  When the user option `sweeprolog-highlight-holes' is set to non-nil,
-  holes in Prolog buffers are highlighted with a dedicated face, making
-  them easily distinguishable from regular Prolog variables.  Hole
-  highlighting is enabled by default, to disable it customize
-  `sweeprolog-highlight-holes' to nil.
+Jumping to Holes
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Use these commands to move between holes in the current Prolog buffer:
+
+  Key: C-c TAB (sweeprolog-forward-hole)
+        Move point to the next hole in the buffer and select it as the
+        region.  With numeric prefix argument /n/, move forward over /n/
+        - 1 holes and select the next one.
+  Key: C-c S-TAB (sweeprolog-backward-hole)
+        Move point to the previous hole in the buffer and select it as
+        the region.  With numeric prefix argument /n/, move backward
+        over /n/ - 1 holes and select the next one.
+  Key: C-0 C-c TAB (sweeprolog-count-holes)
+        Display the number of holes that are present in the buffer.
+  Command: sweeprolog-forward-hole-on-tab-mode
+        Toggle moving to the next hole in the buffer with `TAB' if the
+        current line is already properly indented.
 
   To jump to the next hole in a `sweeprolog-mode' buffer, use the
   command `M-x sweeprolog-forward-hole', bound by default to `C-c TAB'
   (or `C-c C-i').  This command sets up the region to cover the next
   hole after point leaving the cursor at right after the hole.  To jump
-  to the previous hole instead, use `sweeprolog-backward-hole' or call
-  `sweeprolog-forward-hole' with a negative prefix argument (`C-- C-c
-  TAB').
+  to the previous hole use `C-c S-TAB' (`sweeprolog-backward-hole'), or
+  call `sweeprolog-forward-hole' with a negative prefix argument (`C--
+  C-c TAB').
+
+  You can also call `sweeprolog-forward-hole' and
+  `sweeprolog-backward-hole' with a numeric prefix argument to jump over
+  the specified number of holes.  For example, typing `C-3 C-c TAB'
+  skips the next two holes in the buffer and selects the third as the
+  region.  As a special case, if you call these commands with a zero
+  prefix argument (`C-0 C-c TAB'), they invoke the command
+  `sweeprolog-count-holes' instead of jumping.  This command counts how
+  many holes are left in the current buffer and reports its finding via
+  a message in the echo area.
 
   When the minor mode `sweeprolog-forward-hole-on-tab-mode' is enabled,
   the `TAB' key is bound to a command moves to the next hole when called
@@ -1040,22 +1081,57 @@ Holes
   │ (add-hook 'sweeprolog-mode-hook #'sweeprolog-forward-hole-on-tab-mode)
   └────
 
-  To “fill” a hole marked by one of the aforementioned commands, either
-  use `C-c C-m' as described above or type `C-w' (`M-x kill-region') to
-  kill the region and remove the placeholder variable, and then insert
-  Prolog code as usual.  As an alternative to manually killing the
-  region with `C-w', with `delete-selection-mode' enabled the
-  placeholder is automatically deleted when you insert a character while
-  the region is active (see also [Using Region in the Emacs manual]).
+
+Filling Holes
+╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Filling a hole means replacing it in the buffer with a Prolog term.
+  The simplest way to fill a hole is how you would replace any other
+  piece of text in Emacs–select it as the region, kill it (for example,
+  with `C-w') and insert another Prolog term in its place.  For more
+  information about the region, see [Mark] in the Emacs manual.
+
+  Yanking a hole with `C-y' (`yank') after you kill it removes the
+  special hole property and inserts it as a plain variable.  This is can
+  be useful if you want to keep the variable name that Sweep chose for
+  the hole–simply press `C-w C-y' with the hole marked.
+
+  As an alternative to manually killing the region with `C-w', if you
+  enable Delete Selection mode (`M-x delete-selection-mode'), the hole
+  is automatically removed as soon as you start typing while its marked.
+  For more information about Delete Selection mode, see [Using Region]
+  in the Emacs manual.
+
+  Most Sweep commands that insert holes also move to the first hole they
+  insert and select it as the region for you to fill it.  Similarly,
+  jumping to the next hole in the buffer with `C-c TAB' also selects it.
+  The command `C-c RET', described in [Inserting Terms with Holes], is
+  specifically intended for filling holes by deleting the selected hole
+  and inserting a Prolog term at once.
 
 
-[Code Completion] See section Code Completion
+[Mark] <info:emacs#Mark>
 
-[Context-Based Term Insertion] See section Context-Based Term Insertion
+[Using Region] <info:emacs#Using Region>
 
-[Writing Tests] See section Writing Tests
+[Inserting Terms with Holes] See section Inserting Terms with Holes
 
-[Using Region in the Emacs manual] <info:emacs#Using Region>
+
+Highlighting Holes
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Sweep highlights holes in Prolog buffer by default so you can easily
+  identify missing terms.
+
+  User Option: sweeprolog-highlight-holes
+        If non-nil, highlight holes in `sweeprolog-mode' buffers with a
+        dedicated face.  By default, this is set to `t'.
+
+  When the user option `sweeprolog-highlight-holes' is set to non-nil,
+  holes in Prolog buffers are highlighted with a dedicated face, making
+  them easily distinguishable from regular Prolog variables.  Hole
+  highlighting is enabled by default, to disable it customize
+  `sweeprolog-highlight-holes' to nil.
 
 
 Definitions and References
@@ -1424,9 +1500,9 @@ Code Completion
   `sweeprolog-mode' empowers Emacs’s standard `completion-at-point'
   command, bound by default to `C-M-i' and `M-TAB', with context-aware
   completion for Prolog terms.  For background about completion-at-point
-  in Emacs, see [Symbol Completion in the Emacs manual].
+  in Emacs, see [Symbol Completion] in the Emacs manual.
 
-  In `sweeprolog-mode' buffers, the following enhancements are provided:
+  Sweep provides the following Prolog-specific completion facilities:
 
   Variable name completion
         If the text before point can be completed to one or more
@@ -1440,11 +1516,11 @@ Code Completion
         predicate takes arguments, holes are inserted in their places
         (see [Holes]).
   Atom completion
-        If point is at a non-callable, `completion-at-point' suggests
-        matching atoms as completion candidates.
+        If point is at a non-callable position, `completion-at-point'
+        suggests matching atoms as completion candidates.
 
 
-[Symbol Completion in the Emacs manual] <info:emacs#Symbol Completion>
+[Symbol Completion] <info:emacs#Symbol Completion>
 
 [Holes] See section Holes
 
