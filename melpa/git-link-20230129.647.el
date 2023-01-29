@@ -3,8 +3,8 @@
 ;; Copyright (C) 2013-2020 Skye Shaw and others
 ;; Author: Skye Shaw <skye.shaw@gmail.com>
 ;; Version: 0.8.6
-;; Package-Version: 20230115.529
-;; Package-Commit: ab55572b485e5daa4873d806463b9318f9bd605a
+;; Package-Version: 20230129.647
+;; Package-Commit: 2fdc6fde9db78df3719743f073a37be6e779a5f2
 ;; Keywords: git, vc, github, bitbucket, gitlab, sourcehut, aws, azure, convenience
 ;; URL: http://github.com/sshaw/git-link
 ;; Package-Requires: ((emacs "24.3"))
@@ -736,7 +736,7 @@ return (FILENAME . REVISION) otherwise nil."
   'git-link-homepage-svannah 'git-link-homepage-savannah "cf947f9")
 
 (defun git-link--select-remote ()
-  (if current-prefix-arg
+  (if (equal '(4) current-prefix-arg)
       (git-link--read-remote)
     (git-link--remote)))
 
@@ -757,8 +757,11 @@ or active region. The URL will be added to the kill ring.  If
 With a prefix argument of - generate a link without line number(s).
 Also see `git-link-use-single-line-number'.
 
-With any other prefix argument prompt for the remote's name.
-Defaults to \"origin\"."
+With a single prefix argument prompt for the remote's name.
+Defaults to \"origin\".
+
+With a double prefix argument invert the value of
+`git-link-use-commit'."
   (interactive
    (if (equal '- current-prefix-arg)
        (list (git-link--remote) nil nil)
@@ -801,7 +804,9 @@ Defaults to \"origin\"."
                          (if (or (git-link--using-git-timemachine)
                                  (git-link--using-magit-blob-mode)
                                  vc-revison
-                                 git-link-use-commit)
+                                 (if (equal '(16) current-prefix-arg)
+                                     (not git-link-use-commit)
+                                   git-link-use-commit))
                              nil
                            (url-hexify-string branch))
                          commit

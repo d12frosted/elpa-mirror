@@ -3,8 +3,8 @@
 ;; Copyright © 2022 Erick Navarro
 ;; Author: Erick Navarro <erick@navarro.io>
 ;; URL: https://github.com/erickgnavar/tree-sitter-ispell.el
-;; Package-Version: 20221105.713
-;; Package-Commit: 6d486371d641a809f44df21921e64ef381844e83
+;; Package-Version: 20230129.327
+;; Package-Commit: 0f2fd722df3e5480694ebce56109432c8b73333f
 ;; Version: 0.1.0
 ;; SPDX-License-Identifier: GNU General Public License v3.0 or later
 ;; Package-Requires: ((emacs "26.1") (tree-sitter "0.15.0"))
@@ -44,10 +44,7 @@
 
 (defun tree-sitter-ispell--convert-patterns-for-capture (raw-patterns)
   "Convert `RAW-PATTERNS' to capture format."
-  (thread-last
-    raw-patterns
-    (seq-map (lambda (raw) (format "(%s) @%s" raw raw)))
-    (mapconcat 'identity)))
+  (mapconcat 'identity (seq-map (lambda (raw) (format "(%s) @%s" raw raw)) raw-patterns)))
 
 ;;;###autoload
 (defun tree-sitter-ispell-run-at-point ()

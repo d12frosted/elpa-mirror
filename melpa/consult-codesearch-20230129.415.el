@@ -4,8 +4,8 @@
 
 ;; Author: Youngjoo Lee <youngker@gmail.com>
 ;; URL: https://github.com/youngker/consult-codesearch
-;; Package-Version: 20221220.1153
-;; Package-Commit: 5dd9de752c77bc9a07c960bcecb83e9d05855ce9
+;; Package-Version: 20230129.415
+;; Package-Commit: 7b666ab50d120b25272183d921d581e01e77789a
 ;; Version: 0.1
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "27.1") (codesearch "1") (consult "0.20"))
@@ -68,12 +68,12 @@
                (`(,re . ,hl)
                 (funcall consult--regexp-compiler arg 'extended ignore-case)))
     (when re
-      `(:command (,@cmd
-                  ,@opts
-                  ,(let ((jre (consult--join-regexps re 'extended)))
-                     (if files-with-matchs (concat "(?i)" jre) jre))
-                  ,@(and files-with-matchs '("$")))
-        :highlight ,hl))))
+      (cons (append cmd opts
+                    (let ((jre (consult--join-regexps re 'extended)))
+                      (if files-with-matchs
+                          (list (concat "(?i)" jre) "$")
+                        (list jre))))
+            hl))))
 
 (defun consult-codesearch--set-index (dir)
   "Set CSEARCHINDEX variable in DIR."

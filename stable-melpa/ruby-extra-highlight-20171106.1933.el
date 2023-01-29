@@ -4,8 +4,6 @@
 
 ;; Author: Anders Lindgren
 ;; Keywords: languages, faces
-;; Package-Version: 20171106.1933
-;; Package-Commit: 83942d18eae361998d24c1c523b308eea821f048
 ;; Created: 2017-09-05
 ;; Version: 0.0.0
 ;; URL: https://github.com/Lindydancer/ruby-extra-highlight
