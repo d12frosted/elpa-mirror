@@ -3,8 +3,6 @@
 ;; Author: Štěpán Němec <stepnem@gmail.com>
 ;; Created: 2019-08-17 09:37:50 Saturday +0200
 ;; URL: https://gitlab.com/stepnem/magit-vcsh-el
-;; Package-Version: 20190817.2014
-;; Package-Commit: fcff128cdbe3ef547dc64f2496cb6405b8ee21ca
 ;; Keywords: vc, files, magit
 ;; License: public domain
 ;; Version: 0.4.1

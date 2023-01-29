@@ -3,32 +3,35 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out d07baee1aaa89a3786b0b7202e5d12dda77618f9
+Checking out 85b817f000d922c8e98865bb621b7432dfc0e938
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopy32Kqol/loopy-20230123.346
+  to /tmp/loopyvtTTp2/loopy-20230129.151
     loopy-commands.el -> loopy-commands.el
     loopy-iter.el -> loopy-iter.el
     loopy-misc.el -> loopy-misc.el
     loopy-pcase.el -> loopy-pcase.el
+    loopy-pkg.el -> loopy-pkg.el
     loopy-seq.el -> loopy-seq.el
     loopy-vars.el -> loopy-vars.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Generating /tmp/loopy32Kqol/loopy-20230123.346/loopy.info
-Created loopy-20230123.346.tar containing:
-  loopy-20230123.346/
-  loopy-20230123.346/dir
-  loopy-20230123.346/loopy-commands.el
-  loopy-20230123.346/loopy-iter.el
-  loopy-20230123.346/loopy-misc.el
-  loopy-20230123.346/loopy-pcase.el
-  loopy-20230123.346/loopy-pkg.el
-  loopy-20230123.346/loopy-seq.el
-  loopy-20230123.346/loopy-vars.el
-  loopy-20230123.346/loopy.el
-  loopy-20230123.346/loopy.info
-Built loopy in 19.056s, finished at 2023-01-29T00:28:45+0000
+Generating /tmp/loopyvtTTp2/loopy-20230129.151/loopy.info
+Created loopy-20230129.151.tar containing:
+  loopy-20230129.151/
+  loopy-20230129.151/dir
+  loopy-20230129.151/loopy-commands.el
+  loopy-20230129.151/loopy-iter.el
+  loopy-20230129.151/loopy-misc.el
+  loopy-20230129.151/loopy-pcase.el
+  loopy-20230129.151/loopy-pkg.el
+  loopy-20230129.151/loopy-seq.el
+  loopy-20230129.151/loopy-vars.el
+  loopy-20230129.151/loopy.el
+  loopy-20230129.151/loopy.info
+Built loopy in 27.315s, finished at 2023-01-29T04:08:50+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  303 Jan 29 00:28 packages/loopy-20230123.346.entry
 500K -rw-r--r-- 1 root root 500K Jan 29 00:28 packages/loopy-20230123.346.tar
+4.0K -rw-r--r-- 1 root root  326 Jan 29 04:08 packages/loopy-20230129.151.entry
+500K -rw-r--r-- 1 root root 500K Jan 29 04:08 packages/loopy-20230129.151.tar

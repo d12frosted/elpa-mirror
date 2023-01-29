@@ -4,7 +4,7 @@ Install LanguageTool version 3.0 or later (and java)
 https://languagetool.org/
 
 Put this file into load-path'ed directory, and byte compile it if
-desired. And put the following expression into your ~/.emacs.
+desired.  And put the following expression into your ~/.emacs.
 
     (require 'langtool)
 
@@ -37,7 +37,7 @@ langtool.el have 3 types of client.
 1. Command line
 
  This setting should be set, if you use rest of clients, to get full of
- completion support. And you should be set the variables before load
+ completion support.  And you should be set the variables before load
  this library.
 
     (setq langtool-language-tool-jar "/path/to/languagetool-commandline.jar")
@@ -58,7 +58,7 @@ You can set a script that hold java setting (e.g. Gentoo):
 
 2. HTTP server & client
 
- You can use HTTP server implementation. This is very fast after listen server,
+ You can use HTTP server implementation.  This is very fast after listen server,
  but has security risk if there are multiple user on a same host.
 
     (setq langtool-language-tool-server-jar "/path/to/languagetool-server.jar")
@@ -75,7 +75,7 @@ If you have running HTTP LanguageTool server instance on any machine:
           langtool-http-server-port 8082)
 
 Now testing although, that running instance is working under HTTPSServer or via
-general ssl support (e.g. nginx) following may be working. Again, this is now
+general ssl support (e.g. nginx) following may be working.  Again, this is now
 testing, so please open issue when the ssl/tls connection is not working.
 
     (setq langtool-http-server-stream-type 'tls)
@@ -102,7 +102,7 @@ testing, so please open issue when the ssl/tls connection is not working.
 
     (setq langtool-java-bin "/path/to/java")
 
-* Maybe your LanguageTool have launcher. (e.g. Gentoo)
+* Maybe your LanguageTool have launcher.  (e.g. Gentoo)
   You need to set `langtool-bin'.
   See https://github.com/mhayashi1120/Emacs-langtool/issues/24
 
@@ -131,7 +131,7 @@ testing, so please open issue when the ssl/tls connection is not working.
 
     M-x langtool-check
 
-  Check with different language. You can complete supported language
+  Check with different language.  You can complete supported language
   with C-i/TAB
 
     C-u M-x langtool-check
@@ -148,6 +148,6 @@ testing, so please open issue when the ssl/tls connection is not working.
 * You can use extension package `langtool-popup` in this repository.
   To show automatically popup the cursor.
 
-* To finish checking. All langtool marker is removed.
+* To finish checking.  All langtool marker is removed.
 
     M-x langtool-check-done
