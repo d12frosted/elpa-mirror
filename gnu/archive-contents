@@ -302,13 +302,18 @@
 		   ("Taylor Grinn" . "grinntaylor@gmail.com"))
 		  (:commit . "a1b67d1b52a34084200c036f493e0110acea3a6d"))])
  (brief .
-	[(5 87)
-	 nil "Brief Editor Emulator (Brief Mode)" tar
-	 ((:maintainer "Luke Lee" . "luke.yx.lee@gmail.com")
+	[(5 88 22)
+	 ((nadvice
+	   (0 3))
+	  (cl-lib
+	   (0 5)))
+	 "Brief Editor Emulator (Brief Mode)" tar
+	 ((:keywords "brief" "emulations" "crisp")
+	  (:maintainer "Luke Lee" . "luke.yx.lee@gmail.com")
 	  (:authors
 	   ("Luke Lee" . "luke.yx.lee@gmail.com"))
-	  (:keywords "brief" "emulations" "crisp")
-	  (:url . "http://elpa.gnu.org/packages/brief.html"))])
+	  (:url . "https://elpa.gnu.org/packages/brief.html")
+	  (:commit . "362d6296717af611be20cb56592d495c01ea7a00"))])
  (buffer-env .
 	     [(0 4)
 	      ((emacs
