@@ -1047,16 +1047,18 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (embark .
-	 [(0 19)
+	 [(0 20)
 	  ((emacs
-	    (26 1)))
+	    (26 1))
+	   (compat
+	    (29 1 3 0)))
 	  "Conveniently act on minibuffer completions" tar
 	  ((:url . "https://github.com/oantolin/embark")
 	   (:keywords "convenience")
 	   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 	   (:authors
 	    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-	   (:commit . "0908eea9c6708605fe3a9718c8274a6711b6acb0"))])
+	   (:commit . "5d9fc9c56261cf0cdebeead19cc2702098fe5138"))])
  (embark-consult .
 		 [(0 6)
 		  ((emacs
@@ -2636,9 +2638,9 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "e01a8f7e80c5c83dfcfb87b10e0213d4963e4d15"))])
  (pyim .
-       [(5 2 9)
+       [(5 3 0)
 	((emacs
-	  (25 1))
+	  (27 1))
 	 (async
 	  (1 6))
 	 (xr
@@ -2650,7 +2652,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "65af410a6671725727593e2ea2767a97bdeb79b0"))])
+	 (:commit . "20b633aab16a31ffd1ca642ebaf329f0ad7c79d7"))])
  (pyim-basedict .
 		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar
@@ -3547,16 +3549,16 @@
 		  (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		  (:url . "https://code.google.com/p/url-http-ntlm/"))])
  (url-scgi .
-	   [(0 8)
+	   [(0 9)
 	    ((emacs
-	      (25 1)))
+	      (24 3)))
 	    "SCGI support for url.el" tar
 	    ((:url . "https://github.com/skangas/url-scgi/")
 	     (:keywords "comm" "data" "processes" "scgi")
 	     (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
 	     (:authors
 	      ("Stefan Kangas" . "stefankangas@gmail.com"))
-	     (:commit . "6f517db0811e79f4f8a9e5b4c9c6f69999517215"))])
+	     (:commit . "ccf30c3647cd6a560cadc795bd92769c0a0c9de9"))])
  (use-package .
 	      [(2 4 5)
 	       ((emacs

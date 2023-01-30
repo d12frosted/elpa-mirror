@@ -160,28 +160,30 @@
   │ ;; (require 'pyim-dregcache)
   │ ;; (setq pyim-dcache-backend 'pyim-dregcache)
   │ 
+  │ ;; 加载 basedict 拼音词库。
   │ (pyim-basedict-enable)
   │ 
+  │ ;; 将 Emacs 默认输入法设置为 pyim.
   │ (setq default-input-method "pyim")
   │ 
-  │ ;; 显示5个候选词。
+  │ ;; 显示 5 个候选词。
   │ (setq pyim-page-length 5)
   │ 
-  │ ;; 金手指设置，可以将光标处的编码，比如：拼音字符串，转换为中文。
+  │ ;; 金手指设置，可以将光标处的编码（比如：拼音字符串）转换为中文。
   │ (global-set-key (kbd "M-j") 'pyim-convert-string-at-point)
   │ 
   │ ;; 按 "C-<return>" 将光标前的 regexp 转换为可以搜索中文的 regexp.
   │ (define-key minibuffer-local-map (kbd "C-<return>") 'pyim-cregexp-convert-at-point)
   │ 
-  │ ;; 我使用全拼
+  │ ;; 设置 pyim 默认使用的输入法策略，我使用全拼。
   │ (pyim-default-scheme 'quanpin)
   │ ;; (pyim-default-scheme 'wubi)
   │ ;; (pyim-default-scheme 'cangjie)
   │ 
-  │ ;; 我使用云拼音
+  │ ;; 设置 pyim 是否使用云拼音
   │ ;; (setq pyim-cloudim 'baidu)
   │ 
-  │ ;; pyim 探针设置
+  │ ;; 设置 pyim 探针
   │ ;; 设置 pyim 探针设置，这是 pyim 高级功能设置，可以实现 *无痛* 中英文切换 :-)
   │ ;; 我自己使用的中英文动态切换规则是：
   │ ;; 1. 光标只有在注释里面时，才可以输入中文。
@@ -687,8 +689,9 @@
   下面两个函数可以将中文字符串转换的拼音字符串或者列表，用于 emacs-lisp
   编程。
 
-  1. `pyim-cstring-to-pinyin' （考虑多音字）
-  2. `pyim-cstring-to-pinyin-simple' （不考虑多音字）
+  1. `pyim-cstring-to-pinyin' （尽可能处理多音字，但有可能得到多个拼音）
+  2. `pyim-cstring-to-pinyin-simple' （尽可能处理多音字，但是只从可能的
+     拼音中获取第一个拼音）
 
 
 12.12 中文分词

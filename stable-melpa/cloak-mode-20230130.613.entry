@@ -1,0 +1,10 @@
+(cloak-mode .
+	    [(20230130 613)
+	     ((emacs
+	       (27 1)))
+	     "A minor mode to cloak sensitive values" single
+	     ((:commit . "ca0896dfd0a0ee549150233ebd96aa0f65b56afb")
+	      (:authors
+	       ("Erick Navarro" . "erick@navarro.io"))
+	      (:maintainer "Erick Navarro" . "erick@navarro.io")
+	      (:url . "https://github.com/erickgnavar/cloak-mode"))])
