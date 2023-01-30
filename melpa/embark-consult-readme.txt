@@ -1,4 +1,4 @@
-This package provides integration between Embark and Consult. The package
+This package provides integration between Embark and Consult.  The package
 will be loaded automatically by Embark.
 
 Some of the functionality here was previously contained in Embark
@@ -19,7 +19,7 @@ configuration is necessary.
 Additionally this package contains some functionality that has
 never been in Embark: access to Consult preview from auto-updating
 Embark Collect buffer that is associated to an active minibuffer
-for a Consult command. For information on Consult preview, see
+for a Consult command.  For information on Consult preview, see
 Consult's info manual or its readme on GitHub.
 
 If you always want the minor mode enabled whenever it possible use:
@@ -29,5 +29,5 @@ If you always want the minor mode enabled whenever it possible use:
 If you don't want the minor mode automatically on and prefer to
 trigger the consult previews manually use this instead:
 
-(define-key embark-collect-mode-map (kbd "C-j")
+(keymap-set embark-collect-mode-map "C-j"
   #'consult-preview-at-point)

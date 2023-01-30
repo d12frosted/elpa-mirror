@@ -1,13 +1,13 @@
 (embark-consult .
-		[(20230127 1713)
+		[(20230130 1249)
 		 ((emacs
 		   (27 1))
 		  (embark
-		   (0 17))
+		   (0 20))
 		  (consult
 		   (0 17)))
 		 "Consult integration for Embark" single
-		 ((:commit . "df0dba318989b467e2d5ba35deb62bef24f5edb7")
+		 ((:commit . "ccb7e3a718e43a8b056208ece4646d0b921668e5")
 		  (:authors
 		   ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		  (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")

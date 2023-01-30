@@ -4,8 +4,8 @@
 
 ;; Author: A.I. <merrick@luois.me>
 ;; Keywords: language tools
-;; Package-Version: 20221102.1343
-;; Package-Commit: 6e5addff47bac15f99d8efcff2191818dd71d7b4
+;; Package-Version: 20230130.1152
+;; Package-Commit: 9cdcd64cdbbfc61a3075d967662f4911d902d9e4
 ;; Version: 0.2
 ;; Package-Requires: ((lsp-mode "7.1") (f "0.20.0") (emacs "26.1"))
 ;; Keywords: tailwindcss
@@ -42,7 +42,7 @@
   :type 'boolean
   :group 'lsp-tailwindcss)
 
-(defcustom lsp-tailwindcss-server-version "0.9.1"
+(defcustom lsp-tailwindcss-server-version "0.9.7"
   "Specify the version of tailwindcss intellisence."
   :type 'string
   :group 'lsp-tailwindcss)

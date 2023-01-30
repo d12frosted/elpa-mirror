@@ -2,8 +2,8 @@
 
 ;; Licence: MIT
 ;; Keywords: tools, completion, lsp
-;; Package-Version: 20221102.844
-;; Package-Commit: f6fff70edb3a27726f9c61d3d81849df85f7ccbe
+;; Package-Version: 20230130.1014
+;; Package-Commit: 771cfad7c383d9dbbb5559a9439cb4de127d2fe6
 ;; Author: Gerry Agbobada
 ;; Maintainer: Gerry Agbobada
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "5.0") (consult "0.16") (f "0.20.0"))
@@ -419,6 +419,7 @@ usable in the annotation-function."
      :annotate (funcall consult-lsp-symbols-annotate-builder-function)
      :require-match t
      :history t
+     :add-history (consult--async-split-thingatpt 'symbol)
      :initial (consult--async-split-initial initial)
      :category 'consult-lsp-symbols
      :lookup #'consult--lookup-candidate
