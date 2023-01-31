@@ -18,8 +18,8 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;; Version: 1.0
-;; Package-Version: 20230128.110
-;; Package-Commit: 57f584de3ff0ad9b12412c5be10a7e50bd024bce
+;; Package-Version: 20230131.1601
+;; Package-Commit: f0c9b5202d70bce783494a971d3c67d4700cff53
 ;; Author: Adrien Brochard
 ;; Keywords: mermaid graphs tools processes
 ;; URL: https://github.com/abrochard/mermaid-mode
@@ -129,9 +129,9 @@ STR is the declaration."
   "Determine the indentation level that this line should have."
   (save-excursion
     (end-of-line)
-    (let ((graph (mermaid--locate-declaration "^graph\\|sequenceDiagram"))
+    (let ((graph (mermaid--locate-declaration "^graph\\|sequenceDiagram\\|^gantt"))
           (subgraph (mermaid--locate-declaration "subgraph \\|loop \\|alt \\|opt"))
-          (both (mermaid--locate-declaration "^graph \\|^sequenceDiagram$\\|subgraph \\|loop \\|alt \\|opt"))
+          (both (mermaid--locate-declaration "^graph \\|^sequenceDiagram$\\|subgraph \\|loop \\|alt \\|opt\\|^gantt"))
           (else (mermaid--locate-declaration "else "))
           (end (mermaid--locate-declaration "^ *end *$")))
       (cond ((equal (car graph) 0) 0) ;; this is a graph declaration

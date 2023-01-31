@@ -5,8 +5,8 @@
 ;; Author: Bastien Guerry <bzg@gnu.org>
 ;; Maintainer: Benedict Wang <foss@bhw.name>
 ;; Version: 0.0.1
-;; Package-Version: 20230116.2203
-;; Package-Commit: 09fb4c92d99e0ce077dfe26beac0754f70f0fc64
+;; Package-Version: 20230129.1538
+;; Package-Commit: 81e2eea65e0654e9022f3f732b6cf9dc942423d1
 ;; Package-Requires: ((emacs "26.1") (org "9.3"))
 ;; Keywords: org, wp, blog, feed, rss
 ;; Homepage: https://github.com/benedicthw/ox-rss.git
@@ -246,7 +246,9 @@ communication channel."
 	     (hl-home (file-name-as-directory (plist-get info :html-link-home)))
 	     (hl-pdir (plist-get info :publishing-directory))
 	     (hl-perm (org-element-property :RSS_PERMALINK headline))
-	     (anchor (org-export-get-reference headline info))
+	     (anchor
+              (or (org-element-property :CUSTOM_ID headline)
+                  (org-export-get-reference headline info)))
 	     (category (org-rss-plain-text
 			(or (org-element-property :CATEGORY headline) "") info))
 	     (pubdate0 (org-element-property :PUBDATE headline))
