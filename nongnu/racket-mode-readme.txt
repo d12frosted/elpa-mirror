@@ -1,13 +1,3 @@
-Table of Contents
-─────────────────
-
-1. Racket mode for GNU Emacs
-.. 1. Documentation
-.. 2. Contributing
-.. 3. Acknowledgments
-.. 4. Alternatives
-
-
 1 Racket mode for GNU Emacs
 ═══════════════════════════
 

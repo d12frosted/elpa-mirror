@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/spebern/paste-of-code.el.git
 
 Updating /mnt/store/melpa/working/paste-of-code/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/spebern/paste-of-code.el.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 92d258e8ec98598d847ecab82903f9224c7c2050
+Built paste-of-code in 4.077s, finished at 2023-01-30T22:45:03+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.4K Jan 30 22:45 packages/paste-of-code-20170709.2355.el
+4.0K -rw-r--r-- 1 root root  344 Jan 30 22:45 packages/paste-of-code-20170709.2355.entry

@@ -1047,9 +1047,9 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (embark .
-	 [(0 20)
+	 [(0 21)
 	  ((emacs
-	    (26 1))
+	    (27 1))
 	   (compat
 	    (29 1 3 0)))
 	  "Conveniently act on minibuffer completions" tar
@@ -1058,7 +1058,7 @@
 	   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 	   (:authors
 	    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-	   (:commit . "5d9fc9c56261cf0cdebeead19cc2702098fe5138"))])
+	   (:commit . "784ce24a1ad37459041418182af49565cad4974b"))])
  (embark-consult .
 		 [(0 6)
 		  ((emacs
@@ -2533,7 +2533,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "25d675307c03f720e592c3dc9a5a0ae8db0836eb"))])
  (phps-mode .
-	    [(0 4 32)
+	    [(0 4 33)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2542,7 +2542,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "45fac686b50d2453eefef1f1cd3eb13529fd141b"))])
+	      (:commit . "a1aaad619a8b77eecff5faaad0ef0262eb70e9bf"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
@@ -3422,7 +3422,7 @@
 	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
 	     (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
  (tramp .
-	[(2 6 0)
+	[(2 6 0 1)
 	 ((emacs
 	   (26 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -3431,7 +3431,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "f1e00a4adb4de8f322f48cceec7e5c8bd3b298b6"))])
+	  (:commit . "5fafba6a17fe68ee657e5a8b2dba34e8d5723ff6"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs

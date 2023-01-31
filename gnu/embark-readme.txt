@@ -706,24 +706,23 @@
 3.6 Creating your own keymaps
 ─────────────────────────────
 
-  All internal keymaps are defined with a helper macro
-  `embark-define-keymap' that you can use to define your own keymaps,
-  whether they are for new categories in `embark-keymap-alist' or for
-  any other purpose! For example a simple version of the file action
+  All internal keymaps are defined with the standard helper macro
+  `defvar-keymap'. For example a simple version of the file action
   keymap could be defined as follows:
 
   ┌────
-  │ (embark-define-keymap embark-file-map
-  │   "Example keymap with a few file actions"
-  │   ("d" delete-file)
-  │   ("r" rename-file)
-  │   ("c" copy-file))
+  │ (defvar-keymap embark-file-map
+  │   :doc "Example keymap with a few file actions"
+  │   :parent embark-general-map
+  │   "d" #'delete-file
+  │   "r" #'rename-file
+  │   "c" #'copy-file)
   └────
 
-  Remember also that these action keymaps are perfectly normal Emacs
-  keymaps, and do not need to be created with this helper macro. You can
-  use the built-in `define-key', or your favorite external package such
-  as `bind-key' or `general.el' to manage them.
+  These action keymaps are perfectly normal Emacs keymaps.  You may want
+  to inherit from the `embark-general-map' if you want to access the
+  default Embark actions. Note that `embark-collect' and `embark-export'
+  are also made available via `embark-general-map'.
 
 
 3.7 Defining actions for new categories of targets
@@ -830,11 +829,12 @@
   the kill-ring, which you get for free). Then this will do:
 
   ┌────
-  │ (embark-define-keymap embark-tab-actions
-  │   "Keymap for actions for tab-bar tabs (when mentioned by name)."
-  │   ("s" tab-bar-select-tab-by-name)
-  │   ("r" tab-bar-rename-tab-by-name)
-  │   ("k" tab-bar-close-tab-by-name))
+  │ (defvar-keymap embark-tab-actions
+  │   :doc "Keymap for actions for tab-bar tabs (when mentioned by name)."
+  │   :parent embark-general-map
+  │   "s" #'tab-bar-select-tab-by-name
+  │   "r" #'tab-bar-rename-tab-by-name
+  │   "k" #'tab-bar-close-tab-by-name)
   │ 
   │ (add-to-list 'embark-keymap-alist '(tab . embark-tab-actions))
   └────
@@ -897,7 +897,7 @@
   │ 	   (str (buffer-substring-no-properties beg end)))
   │       (save-match-data
   │ 	(when (string-match "wikipedia:\\([[:alnum:]_]+\\)" str)
-  │ 	  `(url 
+  │ 	  `(url
   │ 	    ,(format "https://en.wikipedia.org/wiki/%s"
   │ 		     (match-string 1 str))
   │ 	    ,beg . ,end))))))
@@ -974,10 +974,10 @@
   │   (interactive)
   │   (message "I don't prompt you for input and thus ignore the target!"))
   │ 
-  │ (define-key embark-symbol-map "X1" #'example-action-command1)
-  │ (define-key embark-symbol-map "X2" #'example-action-command2)
-  │ (define-key embark-symbol-map "X3" #'example-action-command3)
-  │ (define-key embark-symbol-map "X4" #'example-action-command4)
+  │ (keymap-set embark-symbol-map "X 1" #'example-action-command1)
+  │ (keymap-set embark-symbol-map "X 2" #'example-action-command2)
+  │ (keymap-set embark-symbol-map "X 3" #'example-action-command3)
+  │ (keymap-set embark-symbol-map "X 4" #'example-action-command4)
   └────
 
   Also note that if you are using the key bindings to call actions, you
@@ -1000,7 +1000,7 @@
   │ (defun example-action-function (target)
   │   (message "The target was `%s'." target))
   │ 
-  │ (define-key embark-symbol-map "X4" #'example-action-function)
+  │ (keymap-set embark-symbol-map "X 4" #'example-action-function)
   └────
 
   Note that normally binding non-interactive functions in a keymap is
