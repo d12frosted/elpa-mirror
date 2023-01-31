@@ -5,8 +5,8 @@
 ;; Author: d_m <d_m@plastic-idolatry.com>
 ;; Homepage: https://github.com/non/uxntal-mode
 ;; Version: 0.2
-;; Package-Version: 20220502.154
-;; Package-Commit: 3fa793964f287d448e3e2b53fd812803c5f5890e
+;; Package-Version: 20230131.235
+;; Package-Commit: aaaa7a7ac24eb142c68f691185166327ec1e4520
 ;; Package-Requires: ((emacs "27.1"))
 ;; SPDX-License-Identifier: Apache-2.0
 
@@ -41,11 +41,7 @@
 (defconst uxntal-mode-sublabel-define-re
   (rx (group bow "&" (1+ (not (in space))) eow)))
 
-;; raw characters like 'a or '[
-(defconst uxntal-mode-raw-char-re
-  (rx (group bow "'" (in "!-~") eow)))
-
-;; raw strings like "foo or "a-b-c-d-e
+;; raw strings like "x or "foo or "a-b-c-d-e
 (defconst uxntal-mode-raw-str-re
   (rx (group bow "\"" (1+ (in "!-~")) eow)))
 
@@ -62,13 +58,19 @@
   (rx (group bow "$" (repeat 1 4 (in "0-9a-f")) eow)))
 
 ;; addresses such as .foo ,bar ;baz :qux
-(defconst uxntal-mode-addr-zeropage-re
+(defconst uxntal-mode-addr-zpg-re
   (rx (group bow "." (1+ (not (in space))) eow)))
-(defconst uxntal-mode-addr-relative-re
+(defconst uxntal-mode-addr-rel-re
   (rx (group bow "," (1+ (not (in space))) eow)))
-(defconst uxntal-mode-addr-absolute-re
+(defconst uxntal-mode-addr-abs-re
   (rx (group bow ";" (1+ (not (in space))) eow)))
-(defconst uxntal-mode-addr-raw-re
+(defconst uxntal-mode-addr-raw-zpg-re
+  (rx (group bow "_" (1+ (not (in space))) eow)))
+(defconst uxntal-mode-addr-raw-rel-re
+  (rx (group bow "-" (1+ (not (in space))) eow)))
+(defconst uxntal-mode-addr-raw-abs-re
+  (rx (group bow "=" (1+ (not (in space))) eow)))
+(defconst uxntal-mode-addr-raw-abs-re-legacy
   (rx (group bow ":" (1+ (not (in space))) eow)))
 
 ;; literal numbers like #ff or #abcd
@@ -86,6 +88,18 @@
        (repeat 2 (in "0-9a-f"))
        (\? (repeat 2 (in "0-9a-f")))
        eow)))
+
+;; jci: jump conditional instant
+(defconst uxntal-mode-jci-re
+  (rx (group bow "?" (1+ (not (in space))) eow)))
+
+;; jmi: jump instant
+(defconst uxntal-mode-jmi-re
+  (rx (group bow "!" (1+ (not (in space))) eow)))
+
+;; jsi: jump stash return instant
+(defconst uxntal-mode-jsi-re
+  (rx (group bow (1+ (not (in space))) eow)))
 
 ;; tal instructions like ADD or JMP2r
 (defconst uxntal-mode-inst-re
@@ -108,10 +122,13 @@
    ;; macros (%)
    (list uxntal-mode-macro-define-re 1 font-lock-keyword-face)
    ;; addresses (. , ; :)
-   (list uxntal-mode-addr-zeropage-re 1 font-lock-variable-name-face)
-   (list uxntal-mode-addr-relative-re 1 font-lock-variable-name-face)
-   (list uxntal-mode-addr-absolute-re 1 font-lock-variable-name-face)
-   (list uxntal-mode-addr-raw-re 1 font-lock-variable-name-face)
+   (list uxntal-mode-addr-zpg-re 1 font-lock-variable-name-face)
+   (list uxntal-mode-addr-rel-re 1 font-lock-variable-name-face)
+   (list uxntal-mode-addr-abs-re 1 font-lock-variable-name-face)
+   (list uxntal-mode-addr-raw-zpg-re 1 font-lock-variable-name-face)
+   (list uxntal-mode-addr-raw-rel-re 1 font-lock-variable-name-face)
+   (list uxntal-mode-addr-raw-abs-re 1 font-lock-variable-name-face)
+   (list uxntal-mode-addr-raw-abs-re-legacy 1 font-lock-variable-name-face)
    ;; labels (@ &)
    (list uxntal-mode-label-define-re 1 font-lock-function-name-face)
    (list uxntal-mode-sublabel-define-re 1 font-lock-function-name-face)
@@ -124,10 +141,13 @@
    (list uxntal-mode-inst-re 1 font-lock-builtin-face)
    ;; constant numbers (#)
    (list uxntal-mode-number-re 1 font-lock-constant-face)
-   ;; raw values (' ")
+   ;; raw values (")
    (list uxntal-mode-raw-number-re 1 font-lock-string-face)
-   (list uxntal-mode-raw-char-re 1 font-lock-string-face)
-   (list uxntal-mode-raw-str-re 1 font-lock-string-face))
+   (list uxntal-mode-raw-str-re 1 font-lock-string-face)
+   ;; immediate jumps (? ! [])
+   (list uxntal-mode-jci-re 1 font-lock-keyword-face)
+   (list uxntal-mode-jmi-re 1 font-lock-keyword-face)
+   (list uxntal-mode-jsi-re 1 font-lock-keyword-face))
   "Level one font lock.")
 
 ;; create the syntax table which powers some highlighting decisions.
@@ -319,17 +339,22 @@
      ((string-match uxntal-mode-include-re w) (message "%s is an include" w))
      ((string-match uxntal-mode-label-define-re w) (message "%s is a label definition" w))
      ((string-match uxntal-mode-sublabel-define-re w) (message "%s is a sublabel definition" w))
-     ((string-match uxntal-mode-raw-char-re w) (message "%s is a raw char" w))
      ((string-match uxntal-mode-raw-str-re w) (message "%s is a raw string" w))
      ((string-match uxntal-mode-absolute-pad-re w) (message "%s is an absolute pad (%d)" w (funcall dec1)))
      ((string-match uxntal-mode-relative-pad-re w) (message "%s is a relative pad (+%d)" w (funcall dec1)))
-     ((string-match uxntal-mode-addr-zeropage-re w) (message "%s is a zero-page address" w))
-     ((string-match uxntal-mode-addr-relative-re w) (message "%s is a relative address" w))
-     ((string-match uxntal-mode-addr-absolute-re w) (message "%s is an absolute address" w))
-     ((string-match uxntal-mode-addr-raw-re w) (message "%s is a raw address" w))
+     ((string-match uxntal-mode-addr-zpg-re w) (message "%s is a zero-page address" w))
+     ((string-match uxntal-mode-addr-rel-re w) (message "%s is a relative address" w))
+     ((string-match uxntal-mode-addr-abs-re w) (message "%s is an absolute address" w))
+     ((string-match uxntal-mode-addr-raw-zpg-re w) (message "%s is a raw zero-page address" w))
+     ((string-match uxntal-mode-addr-raw-rel-re w) (message "%s is a raw relative address" w))
+     ((string-match uxntal-mode-addr-raw-abs-re w) (message "%s is a raw absolute address" w))
+     ((string-match uxntal-mode-addr-raw-abs-re-legacy w) (message "%s is a legacy raw absolute address" w))
      ((string-match uxntal-mode-number-re w) (message "%s is a number (%d)" w (funcall dec1)))
      ((string-match uxntal-mode-raw-number-re w) (message "%s is a raw number (%d)" w (funcall dec)))
      ((string-match uxntal-mode-inst-re w) (uxntal-decode-instruction w))
+     ((string-match uxntal-mode-jci-re w) (message "%s is an instant conditional jump" w))
+     ((string-match uxntal-mode-jmi-re w) (message "%s is an instant jump" w))
+     ((string-match uxntal-mode-jsi-re w) (message "%s is an instant jump-stash-return" w))
      (t (message "Unknown word: `%s'" w)))))
 
 (provide 'uxntal-mode)
