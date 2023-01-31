@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/org-ivy-search
-;; Package-Version: 20230116.752
-;; Package-Commit: 96ae3d36b1bad2bfe8f3b2cd0b0882701f596ac8
+;; Package-Version: 20230131.552
+;; Package-Commit: 27308329b71a7fcc7a1067e28c1bd4e48af3109d
 ;; Version: 0.1.4
 ;; Created: 2021-03-12
 ;; Keywords: convenience, tool, org
@@ -188,6 +188,7 @@ Otherwise, get the symbol at point, as a string."
   "Preview agenda content while looping agenda, ignore ARG."
   (save-selected-window
     (ignore arg)
+    (deactivate-mark)
     (when-let ((is-map-valid org-ivy-search-index-to-item-alist)
                (item-found (assoc ivy--index org-ivy-search-index-to-item-alist))
                (item-content (cdr item-found))
