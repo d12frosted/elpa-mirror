@@ -1047,7 +1047,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (embark .
-	 [(0 21)
+	 [(0 21 1)
 	  ((emacs
 	    (27 1))
 	   (compat
@@ -1058,7 +1058,7 @@
 	   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 	   (:authors
 	    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-	   (:commit . "784ce24a1ad37459041418182af49565cad4974b"))])
+	   (:commit . "63013c2d3ef4dccc95167218ccbf4f401e489c3e"))])
  (embark-consult .
 		 [(0 6)
 		  ((emacs
@@ -3213,7 +3213,7 @@
 	   (:keywords "stream" "laziness" "sequences")
 	   (:url . "http://elpa.gnu.org/packages/stream.html"))])
  (substitute .
-	     [(0 1 5)
+	     [(0 1 6)
 	      ((emacs
 		(27 1)))
 	      "Efficiently replace targets in the buffer or context" tar
@@ -3221,7 +3221,7 @@
 	       (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
 	       (:authors
 		("Protesilaos Stavrou" . "info@protesilaos.com"))
-	       (:commit . "3c80ceeb4fc536588c0e64c0ef609d1ed297c61f"))])
+	       (:commit . "0605b995b60048a5eeb12edcc7e1d20663f019f6"))])
  (svg .
       [(1 1)
        ((emacs

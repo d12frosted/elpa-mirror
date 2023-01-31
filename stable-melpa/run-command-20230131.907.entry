@@ -1,9 +1,9 @@
 (run-command .
-	     [(20220821 1421)
+	     [(20230131 907)
 	      ((emacs
 		(27 1)))
-	      "Run an external command from a context-dependent list" single
-	      ((:commit . "0ac25bc1acae652ffb58c48a3853cd1dcd7b40a4")
+	      "Run an external command from a context-dependent list" tar
+	      ((:commit . "e44bc5fb9712303150906f05ce7dd41c8c184aea")
 	       (:authors
 		("Massimiliano Mirra" . "hyperstruct@gmail.com"))
 	       (:maintainer "Massimiliano Mirra" . "hyperstruct@gmail.com")

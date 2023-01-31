@@ -3,8 +3,36 @@ Fetcher: github
 Source:  https://github.com/bard/emacs-run-command.git
 
 Updating /mnt/store/melpa/working/run-command/
-Checking out 0ac25bc1acae652ffb58c48a3853cd1dcd7b40a4
-Built run-command in 4.531s, finished at 2023-01-31T06:37:38+0000
+Checking out e44bc5fb9712303150906f05ce7dd41c8c184aea
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/run-command/
+  to /tmp/run-command6iYtmf/run-command-20230131.907
+    run-command-core.el -> run-command-core.el
+    run-command-runner-compile.el -> run-command-runner-compile.el
+    run-command-runner-eat.el -> run-command-runner-eat.el
+    run-command-runner-term.el -> run-command-runner-term.el
+    run-command-runner-vterm.el -> run-command-runner-vterm.el
+    run-command-selector-completing-read.el -> run-command-selector-completing-read.el
+    run-command-selector-helm.el -> run-command-selector-helm.el
+    run-command-selector-ivy.el -> run-command-selector-ivy.el
+    run-command-util.el -> run-command-util.el
+    run-command.el -> run-command.el
+Created run-command-20230131.907.tar containing:
+  run-command-20230131.907/
+  run-command-20230131.907/run-command-core.el
+  run-command-20230131.907/run-command-pkg.el
+  run-command-20230131.907/run-command-runner-compile.el
+  run-command-20230131.907/run-command-runner-eat.el
+  run-command-20230131.907/run-command-runner-term.el
+  run-command-20230131.907/run-command-runner-vterm.el
+  run-command-20230131.907/run-command-selector-completing-read.el
+  run-command-20230131.907/run-command-selector-helm.el
+  run-command-20230131.907/run-command-selector-ivy.el
+  run-command-20230131.907/run-command-util.el
+  run-command-20230131.907/run-command.el
+Built run-command in 4.698s, finished at 2023-01-31T10:28:46+0000
  ✓ Success:
  20K -rw-r--r-- 1 root root 18K Jan 31 06:37 packages/run-command-20220821.1421.el
 4.0K -rw-r--r-- 1 root root 432 Jan 31 06:37 packages/run-command-20220821.1421.entry
+4.0K -rw-r--r-- 1 root root 428 Jan 31 10:28 packages/run-command-20230131.907.entry
+ 52K -rw-r--r-- 1 root root 50K Jan 31 10:28 packages/run-command-20230131.907.tar
