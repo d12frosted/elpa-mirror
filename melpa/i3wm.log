@@ -3,11 +3,8 @@ Fetcher: git
 Source:  https://git.flintfam.org/swf-projects/emacs-i3.git
 
 Updating /mnt/store/melpa/working/i3wm/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.flintfam.org/swf-projects/emacs-i3.git/': Failed to connect to git.flintfam.org port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 71391dc61063fee77ad174f3b2ca25c60b41009e
+Built i3wm in 5.379s, finished at 2023-01-31T13:46:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jan 31 13:46 packages/i3wm-20170822.1438.el
+4.0K -rw-r--r-- 1 root root  358 Jan 31 13:46 packages/i3wm-20170822.1438.entry
