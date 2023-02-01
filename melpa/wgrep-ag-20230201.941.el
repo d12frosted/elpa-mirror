@@ -4,12 +4,12 @@
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: grep edit extensions
-;; Package-Version: 20200217.1028
-;; Package-Commit: 253f93d2764b16a877ae83ecdba692c88eaded24
+;; Package-Version: 20230201.941
+;; Package-Commit: 3faf2e429ee36f1c71cd637f0a550d31c5a0bf56
 ;; Package-Requires: ((wgrep "2.3.2"))
 ;; URL: http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep-ag.el
 ;; Emacs: GNU Emacs 25 or later
-;; Version: 2.3.3
+;; Version: 2.3.4
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -69,14 +69,14 @@ when you manage to call ag with --nogroup.")
     (goto-char (point-min))
     ;; Look for the first useful result line.
     (if (re-search-forward (concat wgrep-ag-grouped-result-file-regexp
-				   "\\|"
-				   wgrep-ag-ungrouped-result-regexp))
-	(add-text-properties (point-min) (line-beginning-position)
-			     '(read-only t wgrep-header t))
+                                   "\\|"
+                                   wgrep-ag-ungrouped-result-regexp))
+        (add-text-properties (point-min) (line-beginning-position)
+                             '(read-only t wgrep-header t))
       ;; No results in this buffer, let's mark the whole thing as
       ;; header.
       (add-text-properties (point-min) (point-max)
-			   '(read-only t wgrep-header t)))
+                           '(read-only t wgrep-header t)))
 
     ;; OK, header dealt with. Now let's try find the footer.
     (goto-char (point-max))
@@ -89,7 +89,7 @@ when you manage to call ag with --nogroup.")
     ;; footer.
     (when (zerop (forward-line 1))
       (add-text-properties (point) (point-max)
-			   '(read-only t wgrep-footer t)))))
+                           '(read-only t wgrep-footer t)))))
 
 (defun wgrep-ag-parse-command-results ()
   ;; Note that this function is called with the buffer narrowed to
