@@ -4,8 +4,6 @@
 
 ;; Author: John Foerch <jjfoerch@gmail.com>
 ;; Version: 0.9.4
-;; Package-Version: 20221201.2332
-;; Package-Commit: 06795403c30f3b3c7b72d7cb5ca33c32d0aaee49
 ;; Date: 2022-12-01
 ;; Keywords: languages
 

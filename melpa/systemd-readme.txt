@@ -9,4 +9,5 @@ Supports completion of directives and sections in either units or
 network configuration.  Both a completer for
 `completion-at-point-functions' and a company backend are provided.
 The latter can be enabled by adding `company-mode' to
-`systemd-mode-hook'.
+`systemd-mode-hook' and adding `systemd-company-backend' to
+`company-backends'.

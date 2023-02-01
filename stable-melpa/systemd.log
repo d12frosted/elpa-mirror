@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/holomorph/systemd-mode.git
 
 Updating /mnt/store/melpa/working/systemd/
-Checking out b6ae63a236605b1c5e1069f7d3afe06ae32a7bae
+Checking out 8742607120fbc440821acbc351fda1e8e68a8806
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/systemd/
-  to /tmp/systemdzqY9gb/systemd-20210209.2052
+  to /tmp/systemdJFdHRP/systemd-20230201.302
     systemd.el -> systemd.el
     network-directives.txt -> network-directives.txt
     nspawn-directives.txt -> nspawn-directives.txt
     unit-directives.txt -> unit-directives.txt
-Created systemd-20210209.2052.tar containing:
-  systemd-20210209.2052/
-  systemd-20210209.2052/network-directives.txt
-  systemd-20210209.2052/nspawn-directives.txt
-  systemd-20210209.2052/systemd-pkg.el
-  systemd-20210209.2052/systemd.el
-  systemd-20210209.2052/unit-directives.txt
-Built systemd in 3.758s, finished at 2023-02-01T01:46:16+0000
+Created systemd-20230201.302.tar containing:
+  systemd-20230201.302/
+  systemd-20230201.302/network-directives.txt
+  systemd-20230201.302/nspawn-directives.txt
+  systemd-20230201.302/systemd-pkg.el
+  systemd-20230201.302/systemd.el
+  systemd-20230201.302/unit-directives.txt
+Built systemd in 3.872s, finished at 2023-02-01T05:27:59+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 306 Feb  1 01:46 packages/systemd-20210209.2052.entry
  40K -rw-r--r-- 1 root root 40K Feb  1 01:46 packages/systemd-20210209.2052.tar
+4.0K -rw-r--r-- 1 root root 305 Feb  1 05:27 packages/systemd-20230201.302.entry
+ 40K -rw-r--r-- 1 root root 40K Feb  1 05:27 packages/systemd-20230201.302.tar
