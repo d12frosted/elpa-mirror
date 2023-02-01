@@ -4,8 +4,8 @@
 
 ;; Author: Lukas Barth <mail@tinloaf.de>
 ;; Version: 0.1
-;; Package-Version: 20221212.1952
-;; Package-Commit: 76b2f2a0b9dcd6153b98a95d2bec28ec577bd792
+;; Package-Version: 20230201.1439
+;; Package-Commit: 27a0eaa51eea8054a1d673b0757c1ac8f45bf014
 ;; Package-Requires: ((emacs "24.4") (dash "2.19.1") (datetime "0.7.2") (s "1.13.1"))
 ;; Keywords: files
 ;; URL: https://github.com/tinloaf/org-incoming
@@ -71,7 +71,19 @@
 (defvar org-incoming--w-date nil "The current date form widget.")
 
 (defvar org-incoming--cur-source nil
-  "The source filename for the currently processed PDF.")
+  "The source filename for the currently processed PDF.
+
+This file name may be set to a temporary file if the source
+file is preprocessed through some shell command.  See
+`org-incoming--cur-source-original' for the unmodified file
+name.")
+
+(defvar org-incoming--cur-source-original nil
+  "The origial source filename for the currently processed PDF.
+
+This file name might not be the PDF file that ends up being moved
+to the destination if a shell command preprocessed the PDF file.
+For the preprocessed PDF file, check `org-incoming--cur-source'.")
 
 (defvar org-incoming--cur-phase 'inactive
   "The phase that org-incoming is currently in.
@@ -98,6 +110,27 @@ current item was cancelled and the next one should be loaded.")
 (defvar org-incoming--skipped '()
   "List of file paths (of incoming PDF files) that were skipped in this \
 session.")
+
+(defcustom org-incoming-preprocessing-cmd nil
+  "A shell command that will be run on the PDF file.
+
+The string given here will be formatted using `s-format' and then
+passed to your OS's shell to be run.  It will be run before the
+query phase.  Any output from the shell command will be written
+to the buffer *org-incoming-cmd*.
+
+The available fields for formatting are:
+
+${src} - The full path to the source PDF file
+${dst} - Full path to a (not yet existing) target file name
+
+The shell command must not modify the source file pointed to by
+'src', and produce a (possibly modified) file at 'dst'.
+
+Note that the original file will NOT be stored, but only the
+preprocessed file will be moved into the target PDF directory."
+  :group 'org-incoming
+  :type '(string))
 
 (defcustom org-incoming-annotation-template "
 #+TITLE: ${title}
@@ -213,9 +246,9 @@ Pass the widget as WIDGET.  Returns nil as success and calls `widget-put
 :error' on error."
   (-let (((_sec _min _hour day mon year _dow _dst _tz)
           (parse-time-string (widget-value widget))))
-    (if (not (or (eq year nil)
-                 (eq mon nil)
-                 (eq day nil)))
+    (if (not (or (null year)
+                 (null mon)
+                 (null day)))
         nil ;; This is 'success'
       ;; Else: Set the error message
       (widget-put widget :error "Invalid date")
@@ -250,6 +283,31 @@ a :SETTING-NAME in the current folder pair plist."
 
 A sanitized name does not contain any problematic characters."
   (replace-regexp-in-string "[#<>$+%/\\!`&'|{}?\"=:]" "_" fname))
+
+(defun org-incoming--run-preprocessing ()
+  "Run the preprocessing step defined in the preprocessing-cmd."
+  (let* ((raw-cmd (org-incoming--get-setting "preprocessing-cmd"))
+         (dst (format "%s/preprocessed.pdf" org-incoming--cur-tempdir))
+         (context `(("src" . ,org-incoming--cur-source)
+                    ("dst" . ,dst)))
+         (output-buf (get-buffer-create "*org-incoming-cmd*"))
+         (shell-command-dont-erase-buffer nil)
+         (formatted-cmd (s-format raw-cmd 'aget context)))
+
+    ;; We sometimes have the problem that emacs still has its default directory
+    ;; set to the temporary directory from a previous file. If we invoke
+    ;; shell-command in this state, changing the shell's cwd to that
+    ;; (nonexistent) directory will fail. To avoid this, we just change into the
+    ;; current temporary directory here.
+    (cd org-incoming--cur-tempdir)
+     
+    (message "Executing %s" formatted-cmd)
+    (shell-command formatted-cmd output-buf output-buf)
+
+    (unless (file-exists-p dst)
+      (error "Preprocessing command did not create expected output file!"))
+
+    (setq org-incoming--cur-source dst)))
 
 (defun org-incoming--cleanup-tempdir (&optional force)
   "Clean up the temporary directory created for by `org-incoming--new-tempdir'.
@@ -350,7 +408,7 @@ processed again."
   (when (eq org-incoming--cur-phase 'named)
     (org-incoming--cleanup-tempdir 't))
 
-  (add-to-list 'org-incoming--skipped org-incoming--cur-source)
+  (add-to-list 'org-incoming--skipped org-incoming--cur-source-original)
   (setq org-incoming--cur-phase 'skipped)
 
   (org-incoming--next))
@@ -461,7 +519,7 @@ This initializes the form for the PDF file at FILENAME."
     (erase-buffer)
     (remove-overlays)
 
-    (widget-insert (format "File: %s\n\n" org-incoming--cur-source))
+    (widget-insert (format "File: %s\n\n" org-incoming--cur-source-original))
     (widget-insert "Title: ")
     (setq org-incoming--w-name (widget-create 'editable-field
                                               :size 20
@@ -508,6 +566,12 @@ This initializes the form for the PDF file at FILENAME."
                                           org-incoming--cur-pdf-target)
     (org-incoming--permissive-rename-file org-incoming--cur-annotation-file
                                           org-incoming--cur-annotation-target)
+    (when (not (string= org-incoming--cur-source org-incoming--cur-source-original))
+      ;; The PDF file was preprocessed and org-incoming--cur-source actually
+      ;; contains the path to the temporary, preprocessed file. We moved that
+      ;; to the target, thus we can now delete the original.
+      (delete-file org-incoming--cur-source-original 't))
+      
 
     (setq org-incoming--cur-phase 'stored)
     (org-incoming--next)))
@@ -524,11 +588,18 @@ Loads the file pointed to by FILENAME."
   (message "Loading %s" filename)
 
   (setq org-incoming--cur-source filename)
+  (setq org-incoming--cur-source-original filename)
+
+  (org-incoming--new-tempdir)
+  
+  (unless (eq (org-incoming--get-setting "preprocessing-cmd") nil)
+    (org-incoming--run-preprocessing))
+
   (when (and (bound-and-true-p org-incoming--pdf-buf)
              (buffer-live-p org-incoming--pdf-buf))
     (set-buffer org-incoming--pdf-buf))
 
-  (setq org-incoming--pdf-buf (find-file-noselect filename))
+  (setq org-incoming--pdf-buf (find-file-noselect org-incoming--cur-source))
   ;;    (display-buffer-same-window org-incoming--pdf-buf '())
   (display-buffer org-incoming--pdf-buf '(display-buffer-same-window . ()))
   (set-buffer org-incoming--pdf-buf)
@@ -648,8 +719,6 @@ Sets title and date from CUR-NAME and CUR-DATE."
       (error "File '%s' exists" target-pdfname))
     (when (file-exists-p target-filename)
       (error "File '%s' exists" target-filename))
-
-    (org-incoming--new-tempdir)
 
     (setq org-incoming--cur-annotation-target target-filename)
     (setq org-incoming--cur-pdf-target target-pdfname)

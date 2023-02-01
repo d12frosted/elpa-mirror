@@ -1,5 +1,5 @@
 (org-incoming .
-	      [(20221212 1952)
+	      [(20230201 1439)
 	       ((emacs
 		 (24 4))
 		(dash
@@ -9,7 +9,7 @@
 		(s
 		 (1 13 1)))
 	       "Sort incoming PDFs into your org files" single
-	       ((:commit . "76b2f2a0b9dcd6153b98a95d2bec28ec577bd792")
+	       ((:commit . "27a0eaa51eea8054a1d673b0757c1ac8f45bf014")
 		(:authors
 		 ("Lukas Barth" . "mail@tinloaf.de"))
 		(:maintainer "Lukas Barth" . "mail@tinloaf.de")
