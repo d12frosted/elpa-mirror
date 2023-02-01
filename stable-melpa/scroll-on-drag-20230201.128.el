@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-scroll-on-drag
-;; Package-Version: 20230122.800
-;; Package-Commit: 9836df8c628d2b496ca62cf37d3a029af819bc11
+;; Package-Version: 20230201.128
+;; Package-Commit: 12101b8cae16ef7d22013aa131d8d7c2808b5f48
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -48,7 +48,9 @@
 
 (defcustom scroll-on-drag-style 'line-by-pixel
   "The the method scrolling is calculated."
-  :type '(choice (const :tag "Line" line) (const :tag "Line-By-Pixel" line-by-pixel)))
+  :type
+  '(choice (const :tag "Line" line)
+           (const :tag "Line-By-Pixel" line-by-pixel)))
 
 (defcustom scroll-on-drag-delay 0.01
   "Idle time between scroll updates (in seconds)."
@@ -531,5 +533,6 @@ Optional argument BODY Hello."
 ;; Local Variables:
 ;; fill-column: 99
 ;; indent-tabs-mode: nil
+;; elisp-autofmt-format-quoted: nil
 ;; End:
 ;;; scroll-on-drag.el ends here

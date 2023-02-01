@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-utimeclock
-;; Package-Version: 20230116.951
-;; Package-Commit: df83b6c812d77036bda70d82aa6a80bf7fa49c95
+;; Package-Version: 20230201.143
+;; Package-Commit: b5cdcc022dfe248f1fe7d85e735dd7d9434d200a
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -77,8 +77,9 @@ This controls the values entered as well as behavior wrapping time values."
 (defcustom utimeclock-time-precision 'minutes
   "The precision of report time in."
   :type
-  '(choice
-    (const :tag "Hours" hours) (const :tag "Minutes" minutes) (const :tag "Seconds" seconds)))
+  '(choice (const :tag "Hours" hours)
+           (const :tag "Minutes" minutes)
+           (const :tag "Seconds" seconds)))
 
 
 ;; ---------------------------------------------------------------------------
@@ -493,5 +494,6 @@ ensure `utimeclock-time-prefix' text."
 ;; Local Variables:
 ;; fill-column: 99
 ;; indent-tabs-mode: nil
+;; elisp-autofmt-format-quoted: nil
 ;; End:
 ;;; utimeclock.el ends here

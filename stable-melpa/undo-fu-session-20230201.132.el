@@ -7,8 +7,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.com/ideasman42/emacs-undo-fu-session
-;; Package-Version: 20230116.951
-;; Package-Commit: 26137114b1fa99c6370398a6586447b2e9132340
+;; Package-Version: 20230201.132
+;; Package-Commit: 58e44834e5f105fdb03c313fd6a9e015cd0815c6
 ;; Keywords: convenience
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "28.1"))
@@ -72,13 +72,12 @@
 After changing, run `undo-fu-session-compression-update'
 to convert existing files to the newly selected format."
   :type
-  '(choice
-    (const :tag "BZip2" bz2)
-    (const :tag "GZip" gz)
-    (const :tag "XZ" xz)
-    (const :tag "Z-Standard" zst)
+  '(choice (const :tag "BZip2" bz2)
+           (const :tag "GZip" gz)
+           (const :tag "XZ" xz)
+           (const :tag "Z-Standard" zst)
 
-    (const :tag "No Compression" nil)))
+           (const :tag "No Compression" nil)))
 
 (defcustom undo-fu-session-incompatible-files '()
   "List of REGEXP or FUNCTION for matching files to ignore for undo session."
@@ -728,5 +727,6 @@ Argument PENDING-LIST an `pending-undo-list' compatible list."
 ;; Local Variables:
 ;; fill-column: 99
 ;; indent-tabs-mode: nil
+;; elisp-autofmt-format-quoted: nil
 ;; End:
 ;;; undo-fu-session.el ends here
