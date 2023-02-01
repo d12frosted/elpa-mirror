@@ -164,14 +164,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "53addd02fbad33765f508f8e6254ebd44e1f81e5"))])
  (auctex .
-	 [(13 1 8)
+	 [(13 1 9)
 	  ((emacs
 	    (25 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "ebd714ef815b6ab8b9b947b884a210fa14df3a47"))])
+	   (:commit . "6d4b412b6989763d717b70cb0fdab6b4d52fb1c0"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single
@@ -302,7 +302,7 @@
 		   ("Taylor Grinn" . "grinntaylor@gmail.com"))
 		  (:commit . "a1b67d1b52a34084200c036f493e0110acea3a6d"))])
  (brief .
-	[(5 88 22)
+	[(5 88 22 1)
 	 ((nadvice
 	   (0 3))
 	  (cl-lib
@@ -313,7 +313,7 @@
 	  (:authors
 	   ("Luke Lee" . "luke.yx.lee@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/brief.html")
-	  (:commit . "362d6296717af611be20cb56592d495c01ea7a00"))])
+	  (:commit . "400a0715513deb6617c89e4ec7a4aacbe4b7f558"))])
  (buffer-env .
 	     [(0 4)
 	      ((emacs
