@@ -5,6 +5,8 @@
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; Created: 2015-12-01
 ;; Version: 0.1
+;; Package-Version: 20190908.44
+;; Package-Commit: e8cc9b27c79d3ecc252267c082ab8e9c82eab264
 ;; Package-Requires: ((cl-lib "0.5"))
 ;; Keywords: convenience, usability
 

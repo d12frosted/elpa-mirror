@@ -7,8 +7,7 @@ in `systemd.el`.
 Installation
 ------------
 
-Available as the `systemd` package on MELPA <http://melpa.org/> and
-marmalade <https://marmalade-repo.org/>.
+Available as the `systemd` package on MELPA <https://melpa.org/>.
 
 In Emacs, one can locally install as a package with `make dist` and
 

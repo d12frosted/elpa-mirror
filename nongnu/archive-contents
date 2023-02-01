@@ -1935,15 +1935,16 @@
 		    ("wolray" . "wolray@foxmail.com"))
 		   (:commit . "d1464042783e252f5cac1fcac82fee16fc3534db"))])
  (systemd .
-	  [(1 6)
+	  [(1 6 1)
 	   ((emacs
 	     (24 4)))
 	   "Major mode for editing systemd units" tar
-	   ((:maintainer "Mark Oteiza" . "mvoteiza@udel.edu")
+	   ((:keywords "tools" "unix")
+	    (:maintainer "Mark Oteiza" . "mvoteiza@udel.edu")
 	    (:authors
 	     ("Mark Oteiza" . "mvoteiza@udel.edu"))
-	    (:keywords "tools" "unix")
-	    (:url . "https://elpa.nongnu.org/nongnu/systemd.html"))])
+	    (:url . "https://elpa.nongnu.org/nongnu/systemd.html")
+	    (:commit . "8742607120fbc440821acbc351fda1e8e68a8806"))])
  (tablist .
 	  [(1 0)
 	   ((emacs
@@ -2126,13 +2127,14 @@
 	     (:authors
 	      ("Elis \"etu\" Hirwing" . "elis@hirwing.se")))])
  (wgrep .
-	[(2 3 3)
+	[(2 3 4)
 	 nil "Writable grep buffer and apply the changes to files" tar
 	 ((:url . "http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep.el")
+	  (:keywords "grep" "edit" "extensions")
 	  (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")
 	  (:authors
 	   ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
-	  (:keywords "grep" "edit" "extensions"))])
+	  (:commit . "3faf2e429ee36f1c71cd637f0a550d31c5a0bf56"))])
  (why-this .
 	   [(2 0 4)
 	    ((emacs
