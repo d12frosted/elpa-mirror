@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/felko/neuron-mode.git
 
 Updating /mnt/store/melpa/working/neuron-mode/
-Checking out 33bc73f9a2ef1c6855bb12fec08e15a8cf4a6c6e
-Built neuron-mode in 7.330s, finished at 2023-02-02T07:45:49+0000
- ✓ Success:
- 52K -rw-r--r-- 1 root root 51K Feb  2 07:45 packages/neuron-mode-20220718.827.el
-4.0K -rw-r--r-- 1 root root 499 Feb  2 07:45 packages/neuron-mode-20220718.827.entry
+
+Command '' exited with non-zero exit-code: 128
+
+error: RPC failed; curl 35 gnutls_handshake() failed: Error in the pull function.
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128

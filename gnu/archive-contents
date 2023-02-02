@@ -3776,15 +3776,16 @@
 	       ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
 	      (:keywords "news" "hypermedia" "blog" "feed" "rss" "atom"))])
  (websocket .
-	    [(1 13 1)
+	    [(1 14)
 	     ((cl-lib
 	       (0 5)))
 	     "Emacs WebSocket client and server" tar
 	     ((:url . "https://github.com/ahyatt/emacs-websocket")
+	      (:keywords "communication" "websocket" "server")
 	      (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	      (:authors
 	       ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	      (:keywords "communication" "websocket" "server"))])
+	      (:commit . "1f086f14f0f55f55eafd09f404f48e924157c1d1"))])
  (which-key .
 	    [(3 6 0)
 	     ((emacs

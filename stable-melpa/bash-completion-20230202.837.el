@@ -5,8 +5,8 @@
 ;; Author: Stephane Zermatten <szermatt@gmx.net>
 ;; Maintainer: Stephane Zermatten <szermatt@gmail.com>
 ;; Version: 3.1.1
-;; Package-Version: 20230201.1810
-;; Package-Commit: ffb3f88aaf0db92ea4a2b6c60ea11d4a19245852
+;; Package-Version: 20230202.837
+;; Package-Commit: 584a3b3aa3b7d0f680e174c601ffa59ddbb7168d
 ;; Keywords: convenience, unix
 ;; URL: http://github.com/szermatt/emacs-bash-completion
 ;; Package-Requires: ((emacs "25.3"))
@@ -115,7 +115,6 @@
 (require 'comint)
 (require 'cl-lib)
 (require 'shell)
-(require 'rx)
 
 ;;; Customization
 (defgroup bash-completion nil
