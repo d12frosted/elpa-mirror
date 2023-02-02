@@ -4,9 +4,9 @@
 
 ;; Author: Roman Gonzalez <romanandreg@gmail.com>
 ;; Maintainer: Roman Gonzalez <romanandreg@gmail.com>
-;; Version: 0.0.3
-;; Package-Version: 20190116.1557
-;; Package-Commit: ac5997971972a9251f140b5542d82790ca4a43b4
+;; Version: 0.0.5
+;; Package-Version: 20230202.318
+;; Package-Commit: 2bbaaae56ae53e68a8bcc7bc2cfe830a14843b4d
 ;; Package-Requires: ((evil "1.0.9") (dash "2.10"))
 ;; Keywords: evil
 
@@ -176,13 +176,19 @@ the result of calling that function."
       ;; add new overlay to view
       (evil-visual-mark-overlay-put char new-overlay))))
 
-(defadvice evil-set-marker (around compile)
+(defun evil-set-marker--visual-mark-update (orig-fun &rest args)
   "Listens when an evil marker is being created/updated.
 
 This updates the overlays that show the evil marks on buffer."
-  (let ((char    (ad-get-arg 0))
-        (marker  ad-do-it))
+  (let ((char    (car args))
+        (marker  (apply orig-fun args)))
     (evil-visual-mark-update-mark char marker)))
+
+(defun evil-delete-marks--visual-mark-update (&rest args)
+  "Listens when evil markers are being deleted.
+
+This deletes the corresponding overlays."
+  (evil-visual-mark-render))
 
 ;;;###autoload
 (define-minor-mode evil-visual-mark-mode
@@ -190,12 +196,14 @@ This updates the overlays that show the evil marks on buffer."
   :global t
   (if evil-visual-mark-mode
       (progn
-        (ad-activate 'evil-set-marker)
+        (advice-add 'evil-set-marker :around #'evil-set-marker--visual-mark-update)
+        (advice-add 'evil-delete-marks :after #'evil-delete-marks--visual-mark-update)
         (add-hook 'evil-normal-state-exit-hook 'evil-visual-mark-hide)
         (add-hook 'evil-normal-state-entry-hook 'evil-visual-mark-show)
         (evil-visual-mark-render))
     (progn
-      (ad-deactivate 'evil-set-marker)
+      (advice-remove 'evil-set-marker #'evil-set-marker--visual-mark-update)
+      (advice-remove 'evil-delete-marks #'evil-delete-marks--visual-mark-update)
       (remove-hook 'evil-normal-state-exit-hook 'evil-visual-mark-hide)
       (remove-hook 'evil-normal-state-entry-hook 'evil-visual-mark-show)
       (evil-visual-mark-cleanup))))
