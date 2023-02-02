@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://bitbucket.org/MikeWoolley/brf-mode
 
 Updating /mnt/store/melpa/working/brf/
-Checking out 8f86b980d450e44cd29d24e66c30ff079c6b9982
+Checking out 41209150d67dc3c48c2b02686d2f77cbb0760c72
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/brf/
-  to /tmp/brfqxpzKN/brf-20220807.1438
+  to /tmp/brfze54Nb/brf-20230202.1719
     brf-bookmark.el -> brf-bookmark.el
     brf-compat.el -> brf-compat.el
     brf-editing.el -> brf-editing.el
@@ -17,21 +17,23 @@ Copying files (->) and directories (=>)
     brf-window.el -> brf-window.el
     brf.el -> brf.el
     brf-mode.info -> brf-mode.info
-Created brf-20220807.1438.tar containing:
-  brf-20220807.1438/
-  brf-20220807.1438/brf-bookmark.el
-  brf-20220807.1438/brf-compat.el
-  brf-20220807.1438/brf-editing.el
-  brf-20220807.1438/brf-marking.el
-  brf-20220807.1438/brf-menu.el
-  brf-20220807.1438/brf-mode.info
-  brf-20220807.1438/brf-movement.el
-  brf-20220807.1438/brf-pkg.el
-  brf-20220807.1438/brf-undo.el
-  brf-20220807.1438/brf-window.el
-  brf-20220807.1438/brf.el
-  brf-20220807.1438/dir
-Built brf in 8.363s, finished at 2023-02-02T10:49:06+0000
+Created brf-20230202.1719.tar containing:
+  brf-20230202.1719/
+  brf-20230202.1719/brf-bookmark.el
+  brf-20230202.1719/brf-compat.el
+  brf-20230202.1719/brf-editing.el
+  brf-20230202.1719/brf-marking.el
+  brf-20230202.1719/brf-menu.el
+  brf-20230202.1719/brf-mode.info
+  brf-20230202.1719/brf-movement.el
+  brf-20230202.1719/brf-pkg.el
+  brf-20230202.1719/brf-undo.el
+  brf-20230202.1719/brf-window.el
+  brf-20230202.1719/brf.el
+  brf-20230202.1719/dir
+Built brf in 4.898s, finished at 2023-02-02T18:36:24+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  444 Feb  2 10:49 packages/brf-20220807.1438.entry
-100K -rw-r--r-- 1 root root 100K Feb  2 10:49 packages/brf-20220807.1438.tar
+4.0K -rw-r--r-- 1 root root  444 Feb  2 14:42 packages/brf-20230202.1240.entry
+112K -rw-r--r-- 1 root root 110K Feb  2 14:42 packages/brf-20230202.1240.tar
+4.0K -rw-r--r-- 1 root root  444 Feb  2 18:36 packages/brf-20230202.1719.entry
+112K -rw-r--r-- 1 root root 110K Feb  2 18:36 packages/brf-20230202.1719.tar

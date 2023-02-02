@@ -1,0 +1,19 @@
+(evil-cleverparens .
+		   [(20230202 1750)
+		    ((evil
+		      (1 0))
+		     (paredit
+		      (1))
+		     (smartparens
+		      (1 6 1))
+		     (emacs
+		      (24 4))
+		     (dash
+		      (2 12 0)))
+		    "Evil friendly minor-mode for editing lisp." tar
+		    ((:commit . "eaa6d7e2b7a3bc720baa4992ef75c24c1b080388")
+		     (:authors
+		      ("Olli Piepponen" . "opieppo@gmail.com"))
+		     (:maintainer "Olli Piepponen" . "opieppo@gmail.com")
+		     (:keywords "convenience" "emulations")
+		     (:url . "https://github.com/emacs-evil/evil-cleverparens"))])
