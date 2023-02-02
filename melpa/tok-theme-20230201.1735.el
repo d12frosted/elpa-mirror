@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230120.515
-;; Package-Commit: 36c35e4dbd6a5e9f4b3cc5c2bddf22cfac715099
+;; Package-Version: 20230201.1735
+;; Package-Commit: c9cfb35c613100d14703d6283e8b9bc3b78133ee
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -44,14 +44,15 @@
   "Minimal, calm and dark theme for Emacs")
 
 (let ((class '((class color) (min-colors 89)))
-      (dark-grey "#141414") (grey "#525252") (light-grey "#a3a3a3")
-      (fg "#cccccc") (bg "#000"))
+      (dark-grey "#212121") (grey "#333333") (light-grey "#666666")
+      (cursor "#de0000")
+      (fg "#dedede") (bg "#121212"))
   (custom-theme-set-faces
    'tok
    ;; In case you're using this theme in terminal, let the terminal
    ;; emulator define these.
    (when (display-graphic-p)
-     `(cursor ((,class (:background "red")))))
+     `(cursor ((,class (:background ,cursor)))))
    (when (display-graphic-p) ; Have to call `when' here due to reasons.
      `(default ((,class (:foreground ,fg :background ,bg)))))
 
@@ -64,7 +65,7 @@
    `(error ((,class (:weight bold :foreground "firebrick1"))))
    `(warning ((,class (:weight bold :foreground "DarkOrange"))))
    `(success ((,class (:weight bold :foreground "Green1"))))
-   `(minibuffer-prompt ((,class (:foreground ,light-grey))))
+   `(minibuffer-prompt ((,class (:foreground "white"))))
    `(fringe ((t (nil))))
    `(button ((,class (:underline t))))
 
@@ -73,10 +74,10 @@
    `(line-number-current-line ((,class (:inherit highlight))))
 
    ;; Mode-line
-   `(mode-line ((,class (:foreground "#fff" :background "grey5" :box (:line-width -1 :style released-button)))))
+   `(mode-line ((,class (:foreground "white" :background "black" :box (:line-width -1 :style released-button)))))
    (when (>= emacs-major-version 29)
      `(mode-line-active ((,class (:inherit mode-line)))))
-   `(mode-line-inactive ((,class (:weight light :foreground "grey90" :background "grey10"))))
+   `(mode-line-inactive ((,class (:weight light :foreground ,light-grey :background ,dark-grey))))
    `(mode-line-highlight ((t (nil))))
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-buffer-id ((,class (:weight bold))))
@@ -85,9 +86,9 @@
    `(header-line ((,class (:inherit mode-line-inactive :box nil))))
 
    ;; Font-lock
-   `(font-lock-comment-face ((,class (:foreground "#fff" :weight bold))))
+   `(font-lock-comment-face ((,class (:foreground ,light-grey))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-string-face ((,class (:foreground "#fff"))))
+   `(font-lock-string-face ((,class (:foreground "white"))))
    `(font-lock-doc-face ((, class(:inherit font-lock-comment-face))))
    `(font-lock-doc-markup-face ((t (nil))))
    `(font-lock-keyword-face ((t (nil))))

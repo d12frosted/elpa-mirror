@@ -1,5 +1,5 @@
 (rg .
-    [(20221117 1908)
+    [(20230201 1819)
      ((emacs
        (25 1))
       (transient
@@ -7,7 +7,7 @@
       (wgrep
        (2 1 10)))
      "A search tool based on ripgrep" tar
-     ((:commit . "14d4c6a754d127c5cacd58fb66bb0992faff68e4")
+     ((:commit . "e7afc1573922dd6ec8e8ccd178e054ff8c99e5bf")
       (:authors
        ("David Landell" . "david.landell@sunnyhill.email")
        ("Roland McGrath" . "roland@gnu.org"))

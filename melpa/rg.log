@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/dajva/rg.el.git
 
 Updating /mnt/store/melpa/working/rg/
-Checking out 14d4c6a754d127c5cacd58fb66bb0992faff68e4
+Checking out e7afc1573922dd6ec8e8ccd178e054ff8c99e5bf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rg/
-  to /tmp/rgwFoq8H/rg-20221117.1908
+  to /tmp/rg1Yfcbo/rg-20230201.1819
     rg-header.el -> rg-header.el
     rg-history.el -> rg-history.el
     rg-ibuffer.el -> rg-ibuffer.el
@@ -17,21 +17,21 @@ Copying files (->) and directories (=>)
     rg.el -> rg.el
     wgrep-rg.el -> wgrep-rg.el
     rgel.info -> rgel.info
-Created rg-20221117.1908.tar containing:
-  rg-20221117.1908/
-  rg-20221117.1908/dir
-  rg-20221117.1908/rg-header.el
-  rg-20221117.1908/rg-history.el
-  rg-20221117.1908/rg-ibuffer.el
-  rg-20221117.1908/rg-info-hack.el
-  rg-20221117.1908/rg-isearch.el
-  rg-20221117.1908/rg-menu.el
-  rg-20221117.1908/rg-pkg.el
-  rg-20221117.1908/rg-result.el
-  rg-20221117.1908/rg.el
-  rg-20221117.1908/rgel.info
-  rg-20221117.1908/wgrep-rg.el
-Built rg in 7.525s, finished at 2023-02-01T16:44:21+0000
+Created rg-20230201.1819.tar containing:
+  rg-20230201.1819/
+  rg-20230201.1819/dir
+  rg-20230201.1819/rg-header.el
+  rg-20230201.1819/rg-history.el
+  rg-20230201.1819/rg-ibuffer.el
+  rg-20230201.1819/rg-info-hack.el
+  rg-20230201.1819/rg-isearch.el
+  rg-20230201.1819/rg-menu.el
+  rg-20230201.1819/rg-pkg.el
+  rg-20230201.1819/rg-result.el
+  rg-20230201.1819/rg.el
+  rg-20230201.1819/rgel.info
+  rg-20230201.1819/wgrep-rg.el
+Built rg in 4.414s, finished at 2023-02-02T00:20:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  501 Feb  1 16:44 packages/rg-20221117.1908.entry
-212K -rw-r--r-- 1 root root 210K Feb  1 16:44 packages/rg-20221117.1908.tar
+4.0K -rw-r--r-- 1 root root  501 Feb  2 00:20 packages/rg-20230201.1819.entry
+212K -rw-r--r-- 1 root root 210K Feb  2 00:20 packages/rg-20230201.1819.tar

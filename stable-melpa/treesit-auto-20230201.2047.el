@@ -4,8 +4,8 @@
 
 ;; Author: Robb Enzmann <robbenzmann@gmail.com>
 ;; Keywords: treesitter auto automatic major mode fallback convenience
-;; Package-Version: 20230131.1253
-;; Package-Commit: 01ae4d8e42af784bb5dbc466eaa89ba6ec819ca6
+;; Package-Version: 20230201.2047
+;; Package-Commit: 84e3db069e3f5d499766694ec793d3f05f015a41
 ;; URL: https://github.com/renzmann/treesit-auto.git
 ;; Version: 0.2.3
 ;; Package-Requires: ((emacs "29.0"))
@@ -134,7 +134,7 @@ Returns `non-nil' if install was completed without error."
                  (yes-or-no-p (format "Tree-sitter grammar for %s is missing.  Would you like to install it from %s? "
                                       (symbol-name lang)
                                       (car repo))))
-                (t) nil)
+                (t))
       (message "Installing the tree-sitter grammar for %s" lang)
       ;; treesit-install-language-grammar will return nil if the
       ;; operation succeeded and 't if a warning was sent to the
