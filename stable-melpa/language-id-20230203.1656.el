@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-language-id
-;; Package-Version: 20230128.1100
-;; Package-Commit: c1fd0fa31e196cf02f5352f026a83cfd7913f652
+;; Package-Version: 20230203.1656
+;; Package-Commit: 11f75c047f323948dd2c07ba41e5f2264dd8785a
 ;; Version: 0.19
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: languages util
@@ -63,6 +63,7 @@
     ("JSON"
      json-mode
      jsonian-mode
+     json-ts-mode
      (web-mode
       (web-mode-content-type "json")
       (web-mode-engine "none")))
@@ -97,12 +98,14 @@
     ;; buffers using TypeScript/TSX as JavaScript/JSX.
     ("TSX"
      typescript-tsx-mode
+     tsx-ts-mode
      (web-mode
       (web-mode-content-type "jsx")
       (web-mode-engine "none")
       (language-id--file-name-extension ".tsx")))
     ("TypeScript"
      typescript-mode
+     typescript-ts-mode
      (web-mode
       (web-mode-content-type "javascript")
       (web-mode-engine "none")
@@ -135,15 +138,16 @@
     ("Bazel" bazel-mode)
     ("BibTeX" bibtex-mode)
     ("C" c-mode c-ts-mode)
-    ("C#" csharp-mode)
-    ("C++" c++-mode)
+    ("C#" csharp-mode csharp-ts-mode)
+    ("C++" c++-mode c++-ts-mode)
     ("Cabal Config" haskell-cabal-mode)
     ("Clojure" clojurescript-mode clojurec-mode clojure-mode)
-    ("CMake" cmake-mode)
+    ("CMake" cmake-mode cmake-ts-mode)
     ("Common Lisp" lisp-mode)
     ("Crystal" crystal-mode)
     ("CSS"
      css-mode
+     css-ts-mode
      (web-mode
       (web-mode-content-type "css")
       (web-mode-engine "none")))
@@ -151,7 +155,7 @@
     ("D" d-mode)
     ("Dart" dart-mode)
     ("Dhall" dhall-mode)
-    ("Dockerfile" dockerfile-mode)
+    ("Dockerfile" dockerfile-mode dockerfile-ts-mode)
     ("EJS"
      (web-mode
       (web-mode-content-type "html")
@@ -165,7 +169,7 @@
     ("Fortran" fortran-mode)
     ("Fortran Free Form" f90-mode)
     ("GLSL" glsl-mode)
-    ("Go" go-mode)
+    ("Go" go-mode go-ts-mode)
     ("GraphQL" graphql-mode)
     ("Haskell" haskell-mode)
     ("HCL" hcl-mode)
@@ -185,8 +189,9 @@
      (web-mode
       (web-mode-content-type "html")
       (web-mode-engine "erb")))
-    ("Java" java-mode)
+    ("Java" java-mode java-ts-mode)
     ("JavaScript"
+     js-ts-mode
      (js-mode
       (flow-minor-mode nil))
      (js2-mode
@@ -202,6 +207,7 @@
       (web-mode-engine "erb")))
     ("JSON"
      json-mode
+     json-ts-mode
      (web-mode
       (web-mode-content-type "json")
       (web-mode-engine "none")))
@@ -226,20 +232,20 @@
     ("Perl" cperl-mode perl-mode)
     ("Protocol Buffer" protobuf-mode)
     ("PureScript" purescript-mode)
-    ("Python" python-mode)
+    ("Python" python-mode python-ts-mode)
     ("R"
      ess-r-mode
      (ess-mode
       (ess-dialect "R")))
     ("Racket" racket-mode)
-    ("Ruby" enh-ruby-mode ruby-mode)
-    ("Rust" rust-mode rustic-mode)
+    ("Ruby" enh-ruby-mode ruby-mode ruby-ts-mode)
+    ("Rust" rust-mode rustic-mode rust-ts-mode)
     ("Scala" scala-mode)
     ("Scheme" scheme-mode)
-    ("Shell" sh-mode)
+    ("Shell" sh-mode bash-ts-mode)
     ("SQL" sql-mode)
     ("Swift" swift-mode swift3-mode)
-    ("TOML" toml-mode conf-toml-mode)
+    ("TOML" toml-mode conf-toml-mode toml-ts-mode)
     ("V" v-mode)
     ("Verilog" verilog-mode)
     ("XML"
@@ -248,7 +254,7 @@
      (web-mode
       (web-mode-content-type "xml")
       (web-mode-engine "none")))
-    ("YAML" yaml-mode)
+    ("YAML" yaml-mode yaml-ts-mode)
     ("Zig" zig-mode))
   "Internal table of programming language definitions.")
 

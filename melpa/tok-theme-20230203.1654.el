@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230202.1604
-;; Package-Commit: 13b38e1c0a2854112ebdcdef63d97f1663b3cc9c
+;; Package-Version: 20230203.1654
+;; Package-Commit: b096aa66a704e5c851b9285315fe931e2a8b605c
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -45,7 +45,7 @@
 
 (let ((class '((class color) (min-colors 89)))
       (dark-grey "#212121") (grey "#333333") (light-grey "#4d4d4d")
-      (dark-red "#610000")(red "#de0000")
+      (dark-red "#610000") (red "#de0000")
       (fg "#bfbfbf") (bg "#121212"))
   (custom-theme-set-faces
    'tok
@@ -133,7 +133,7 @@
    `(markdown-header-delimiter-face ((t (nil))))
    `(markdown-metadata-key-face ((,class (:inherit font-lock-comment-face))))
    `(markdown-metadata-value-face ((,class (:inherit font-lock-comment-face))))
-   `(markdown-blockquote-face ((,class (:foreground ,light-grey))))))
+   `(markdown-blockquote-face ((t (nil))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
