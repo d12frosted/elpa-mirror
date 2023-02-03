@@ -3,8 +3,8 @@
 ;; Author: Jessie Hildebrandt <jessieh.net>
 ;; Homepage: https://gitlab.com/jessieh/adwaita-dark-theme
 ;; Keywords: mode-line faces
-;; Package-Version: 20230126.1050
-;; Package-Commit: d137551c5a9e13d311eda625a09f94543ec7bbb6
+;; Package-Version: 20230203.143
+;; Package-Commit: 35d35f51723f820eaa3d5262bb0f7c02b502943d
 ;; Version: 1.1.0
 ;; Package-Requires: ((emacs "27.1"))
 ;;
@@ -790,6 +790,13 @@
    `(rainbow-delimiters-depth-9-face ((,class (:foreground ,(if adwaita-dark-theme-gray-rainbow-delimiters base-7 violet)))))
    `(rainbow-delimiters-unmatched-face ((,class (:foreground ,red :weight ultra-bold))))
    `(rainbow-delimiters-mismatched-face ((,class (:inherit rainbow-delimiters-unmatched-face))))
+
+   ;; sly
+   `(sly-action-face ((,class (:inherit link))))
+   `(sly-mrepl-prompt-face ((,class (:inherit font-lock-type-face))))
+   `(sly-mrepl-output-face ((,class (:inherit font-lock-doc-face))))
+   `(sly-mrepl-note-face ((,class (:inherit font-lock-comment-face))))
+   `(sly-db-section-face ((,class (:foreground ,base-8 :weight bold :box ,(when flat-button-available-p '(:line-width 4 :style flat-button))))))
 
    ;; smartparens
    `(sp-pair-overlay-face ((,class (:background ,base-4))))

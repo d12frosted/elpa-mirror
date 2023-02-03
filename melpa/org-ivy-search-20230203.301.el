@@ -4,9 +4,9 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/org-ivy-search
-;; Package-Version: 20230131.552
-;; Package-Commit: 27308329b71a7fcc7a1067e28c1bd4e48af3109d
-;; Version: 0.1.4
+;; Package-Version: 20230203.301
+;; Package-Commit: 278e98a4f2103919ede49a77d9b7c5e4ade945a7
+;; Version: 0.1.5
 ;; Created: 2021-03-12
 ;; Keywords: convenience, tool, org
 ;; Package-Requires: ((emacs "25.1") (ivy "0.10.0") (org "0.10.0"))
@@ -40,6 +40,7 @@
 ;; 0.1.3 Advice ivy-set-index/ivy--exhibit instead of ivy-previous-line/ivy-next-line
 ;;       Restore previous window line-number as well
 ;; 0.1.4 Restore previous cursor position
+;; 0.1.5 Replace mapc/mapcar with cl-loop to improve performance
 
 ;;; Code:
 
@@ -118,7 +119,8 @@ Otherwise, get the symbol at point, as a string."
                       (pulse-momentary-highlight-region (line-beginning-position) (line-end-position)))
     (unless (member
              (buffer-name (window-buffer))
-             (mapcar (function buffer-name) org-ivy-search-previous-buffers))
+             (cl-loop for buffer in org-ivy-search-previous-buffers
+                      collect (buffer-name buffer)))
       (add-to-list 'org-ivy-search-created-buffers (window-buffer)))))
 
 (defun org-ivy-search-action (agenda-location)
@@ -205,7 +207,8 @@ Otherwise, get the symbol at point, as a string."
     (set-window-configuration configuration)
     (select-window selected-window)
     (goto-char org-ivy-search-selected-window-position)
-    (mapc 'kill-buffer-if-not-modified org-ivy-search-created-buffers)
+    (cl-loop for buffer in org-ivy-search-created-buffers
+             do (kill-buffer-if-not-modified buffer))
     (setq org-ivy-search-created-buffers ()
           org-ivy-search-index-to-item-alist nil)))
 
