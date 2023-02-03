@@ -2,8 +2,8 @@
 
 ;; Author: k32
 ;; Keywords: tools, erlang
-;; Package-Version: 20230120.138
-;; Package-Commit: 15ff3797d817361da3c2e65ba7014cceed50c7a3
+;; Package-Version: 20230202.1955
+;; Package-Commit: b0fa450da826b7b9fcfe9b0b209955735830eb38
 ;; Version: 0.2.0
 ;; Homepage: https://github.com/k32/erlstack-mode
 ;; Package-Requires: ((emacs "25.1") (dash "2.12.0"))
@@ -177,9 +177,9 @@ alternative"
   :type 'float)
 
 (defcustom erlstack-popup-window-alist
-  '((display-buffer-reuse-window . nil)
-    (display-buffer-reuse-mode-window . (mode . erlang))
-    (display-buffer-pop-up-window . (inhibit-same-window . t)))
+  '((display-buffer-reuse-window display-buffer-reuse-mode-window display-buffer-pop-up-window)
+    ((mode . erlang)
+     (inhibit-same-window . t)))
   "`display-buffer' alist used for the erlstack-mode preview window."
   :type 'sexp
   :group 'erlstack)
