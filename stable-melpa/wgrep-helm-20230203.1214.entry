@@ -1,9 +1,11 @@
 (wgrep-helm .
-	    [(20210322 2148)
-	     ((wgrep
-	       (2 1 1)))
-	     "Writable helm-grep-mode buffer and apply the changes to files" single
-	     ((:commit . "4c2f345b9b6b46a2257544acb8c4d92d418f443c")
+	    [(20230203 1214)
+	     ((emacs
+	       (25 1))
+	      (wgrep
+	       (3 0 0)))
+	     "Writable helm-grep-mode buffer" single
+	     ((:commit . "b4d69280d8a6a5ded1597e02afbaa811a160383b")
 	      (:authors
 	       ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
 	      (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")

@@ -1,7 +1,9 @@
 (wgrep .
-       [(20230201 941)
-	nil "Writable grep buffer and apply the changes to files" single
-	((:commit . "3faf2e429ee36f1c71cd637f0a550d31c5a0bf56")
+       [(20230203 1214)
+	((emacs
+	  (25 1)))
+	"Writable grep buffer" single
+	((:commit . "b4d69280d8a6a5ded1597e02afbaa811a160383b")
 	 (:authors
 	  ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
 	 (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")

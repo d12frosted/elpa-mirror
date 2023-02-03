@@ -1,15 +1,15 @@
-;;; wgrep-ag.el --- Writable ag buffer and apply the changes to files
+;;; wgrep-ag.el --- Writable ag buffer -*- lexical-binding: t -*-
 
-;; Copyright (C) 2010-2020 Masahiro Hayashi
+;; Copyright (C) 2010-2020,2023 Masahiro Hayashi
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: grep edit extensions
-;; Package-Version: 20230201.941
-;; Package-Commit: 3faf2e429ee36f1c71cd637f0a550d31c5a0bf56
-;; Package-Requires: ((wgrep "2.3.2"))
+;; Package-Version: 20230203.1214
+;; Package-Commit: b4d69280d8a6a5ded1597e02afbaa811a160383b
+;; Package-Requires: ((emacs "25.1") (wgrep "3.0.0"))
 ;; URL: http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep-ag.el
 ;; Emacs: GNU Emacs 25 or later
-;; Version: 2.3.4
+;; Version: 3.0.0
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -64,7 +64,7 @@
 You get \"ungrouped results\" when `ag-group-matches' is false or
 when you manage to call ag with --nogroup.")
 
-(defun wgrep-ag-prepare-header/footer ()
+(defun wgrep-ag-prepare-header&footer ()
   (save-excursion
     (goto-char (point-min))
     ;; Look for the first useful result line.
@@ -167,8 +167,8 @@ when you manage to call ag with --nogroup.")
 
 ;;;###autoload
 (defun wgrep-ag-setup ()
-  (set (make-local-variable 'wgrep-header/footer-parser)
-       'wgrep-ag-prepare-header/footer)
+  (set (make-local-variable 'wgrep-header&footer-parser)
+       'wgrep-ag-prepare-header&footer)
   (set (make-local-variable 'wgrep-results-parser)
        'wgrep-ag-parse-command-results)
   (wgrep-setup-internal))
