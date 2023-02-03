@@ -5,8 +5,8 @@
 ;; Author: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; Maintainer: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; URL: https://github.com/andyjda/sticky-shell
-;; Package-Version: 20230125.1441
-;; Package-Commit: 8abe99255cf8a4bf86a5d459ee501fb66de31ad7
+;; Package-Version: 20230203.558
+;; Package-Commit: 60fa3cbf17572426eca4bc970f597fc31e5369c3
 ;; Version: 1.0.1
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: processes, terminals, tools
@@ -45,19 +45,31 @@
 ;;
 ;; If you'd like this shorten-header mode to be enabled by default, you should
 ;; add `sticky-shell-shorten-header-set-mode' to `sticky-shell-mode-hook'
+;;
+;; `sticky-shell-mode' currently supports any mode derived from the following:
+;; `shell-mode', `eshell-mode', `term-mode', `vterm-mode'.
+;; It should be easy to add support for additional modes:
+;; see `sticky-shell-supported-modes'.
+;;
+;; Note that `sticky-shell-shorten-header-mode' doesn't work properly in
+;; `term-mode' and `vterm-mode'. This is not because of an issue with
+;; `sticky-shell-shorten-header-mode' itself, but because `sticky-shell-mode'
+;; uses `(thing-at-point 'line)' to read a prompt: in terminal modes, this
+;; function returns a line within the borders of a window rather than up to the
+;; first newline character. The result is that the header will always be cut-off
+;; at the window-border.
+;; Right now I'd rather keep this general implementation simple rather than
+;; overfit for these particular modes.
+;; You can always define your own `sticky-shell-get-prompt' function that works
+;; as desired: if this function returns a string that doesn't fit fully within
+;; one line, `sticky-shell-shorten-header-mode' would work as usual.
 
 ;;; Code:
-(eval-when-compile
-  (require 'eshell)
-  (require 'comint))
 
-(declare-function eshell-previous-prompt "ext:eshell")
-(declare-function comint-previous-prompt "ext:comint")
-
+;;;; core
 (defgroup sticky-shell nil
   "Display a sticky header with latest shell-prompt."
   :group 'terminals)
-
 
 (defcustom sticky-shell-get-prompt
   #'sticky-shell-prompt-above-visible
@@ -69,6 +81,32 @@ Available values are: `sticky-shell-latest-prompt',
 or you can write your own function and assign it to this variable."
   :group 'sticky-shell
   :type 'function)
+
+;; supported modes
+(declare-function eshell-previous-prompt "ext:eshell")
+(declare-function comint-previous-prompt "ext:comint")
+(declare-function term-previous-prompt "ext:term")
+(declare-function vterm-previous-prompt "ext:vterm")
+
+(defcustom sticky-shell-supported-modes
+  (list
+   'eshell-mode #'eshell-previous-prompt
+   'comint-mode #'comint-previous-prompt
+   'term-mode #'term-previous-prompt
+   'vterm-mode #'vterm-previous-prompt)
+  "Property-list: each supported mode paired with its previous-prompt function.
+This list is checked by `sticky-shell-mode' when setting the value of
+`sticky-shell-previous-prompt-function'.
+Note that some of these functions, like `vterm-previous-prompt',
+require you to set the prompt's regexp first.
+See the functions' own documentation for more info"
+  :group 'sticky-shell
+  :type 'plist)
+
+(defvar sticky-shell-previous-prompt-function
+  #'comint-previous-prompt
+  "Function called to retrieve the previous propmt.
+Varies depending on which mode the current major-mode is derived from.")
 
 (defface sticky-shell-shorten-header-ellipsis
   '((t :inherit default))
@@ -85,9 +123,7 @@ or you can write your own function and assign it to this variable."
   "Move to end of Nth previous prompt in the buffer.
 Depending on the current mode, call `comint-previous-prompt'
 or `eshell-previous-prompt'."
-  (if (derived-mode-p 'eshell-mode)
-      (eshell-previous-prompt n)
-    (comint-previous-prompt n)))
+  (funcall sticky-shell-previous-prompt-function n))
 
 ;;;; get prompt
 (defun sticky-shell-latest-prompt ()
@@ -186,7 +222,16 @@ Which prompt to pick depends on the value of `sticky-shell-get-prompt'."
   (if sticky-shell-mode
       (setq-local header-line-format
                   '(:eval ; question: why do we use :eval instead of `eval' here??
-                    (funcall sticky-shell-get-prompt)))
+                    (funcall sticky-shell-get-prompt))
+                  sticky-shell-previous-prompt-function
+                  ;; TODO: is plist-get the best approach here?
+                  ;; the fact we have to use _ignored_args makes it kinda hacky
+                  (or (plist-get
+                       sticky-shell-supported-modes nil
+                       (lambda (mode _ignored_arg)
+                         (derived-mode-p mode)))
+                      ;; default to `comint-previous-prompt'
+                      #'comint-previous-prompt))
     (setq-local header-line-format nil
                 sticky-shell-shorten-header-mode nil)))
 
@@ -196,8 +241,10 @@ Which prompt to pick depends on the value of `sticky-shell-get-prompt'."
 
 (defun sticky-shell--global-on ()
   "Enable `sticky-shell-mode' if appropriate for the buffer."
-  (when (or (derived-mode-p 'comint-mode)
-            (derived-mode-p 'eshell-mode))
+  (when (plist-get
+         sticky-shell-supported-modes nil
+         (lambda (mode _ignored_arg)
+           (derived-mode-p mode)))
     (sticky-shell-mode +1)))
 
 

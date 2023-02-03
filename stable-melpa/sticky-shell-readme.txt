@@ -18,3 +18,21 @@ always both visible, you can use `sticky-shell-shorten-header-mode'.
 
 If you'd like this shorten-header mode to be enabled by default, you should
 add `sticky-shell-shorten-header-set-mode' to `sticky-shell-mode-hook'
+
+`sticky-shell-mode' currently supports any mode derived from the following:
+`shell-mode', `eshell-mode', `term-mode', `vterm-mode'.
+It should be easy to add support for additional modes:
+see `sticky-shell-supported-modes'.
+
+Note that `sticky-shell-shorten-header-mode' doesn't work properly in
+`term-mode' and `vterm-mode'. This is not because of an issue with
+`sticky-shell-shorten-header-mode' itself, but because `sticky-shell-mode'
+uses `(thing-at-point 'line)' to read a prompt: in terminal modes, this
+function returns a line within the borders of a window rather than up to the
+first newline character. The result is that the header will always be cut-off
+at the window-border.
+Right now I'd rather keep this general implementation simple rather than
+overfit for these particular modes.
+You can always define your own `sticky-shell-get-prompt' function that works
+as desired: if this function returns a string that doesn't fit fully within
+one line, `sticky-shell-shorten-header-mode' would work as usual.
