@@ -1,5 +1,5 @@
 (consult-lsp .
-	     [(20230130 1014)
+	     [(20230204 851)
 	      ((emacs
 		(27 1))
 	       (lsp-mode
@@ -9,7 +9,7 @@
 	       (f
 		(0 20 0)))
 	      "LSP-mode Consult integration" single
-	      ((:commit . "771cfad7c383d9dbbb5559a9439cb4de127d2fe6")
+	      ((:commit . "37169e2695570aedc26431ca649ed2f0ab62ec1a")
 	       (:authors
 		("Gerry Agbobada"))
 	       (:maintainer "Gerry Agbobada")

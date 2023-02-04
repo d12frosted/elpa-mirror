@@ -2,8 +2,8 @@
 
 ;; Licence: MIT
 ;; Keywords: tools, completion, lsp
-;; Package-Version: 20230130.1014
-;; Package-Commit: 771cfad7c383d9dbbb5559a9439cb4de127d2fe6
+;; Package-Version: 20230204.851
+;; Package-Commit: 37169e2695570aedc26431ca649ed2f0ab62ec1a
 ;; Author: Gerry Agbobada
 ;; Maintainer: Gerry Agbobada
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "5.0") (consult "0.16") (f "0.20.0"))
@@ -85,7 +85,8 @@
 
 ;;;; Customization
 (defcustom consult-lsp-diagnostics-transformer-function #'consult-lsp--diagnostics--transformer
-  "Function that transform LSP-mode diagnostic from a (file diag) pair to a candidate for `consult-lsp-diagnostics'."
+  "Function that transform LSP-mode diagnostic from a (file diag) pair
+to a candidate for `consult-lsp-diagnostics'."
   :type 'function
   :group 'consult-lsp)
 
@@ -95,7 +96,8 @@
   :group 'consult-lsp)
 
 (defcustom consult-lsp-symbols-transformer-function #'consult-lsp--symbols--transformer
-  "Function that transform LSP symbols from symbol-info to a candidate for `consult-lsp-symbols'."
+  "Function that transform LSP symbols from symbol-info
+to a candidate for `consult-lsp-symbols'."
   :type 'function
   :group 'consult-lsp)
 
@@ -105,7 +107,8 @@
   :group 'consult-lsp)
 
 (defcustom consult-lsp-file-symbols-transformer-function #'consult-lsp--file-symbols--transformer
-  "Function that transform LSP file symbols from symbol-info to a candidate for `consult-lsp-file-symbols'."
+  "Function that transform LSP file symbols from symbol-info
+ to a candidate for `consult-lsp-file-symbols'."
   :type 'function
   :group 'consult-lsp)
 
@@ -154,6 +157,33 @@ It MUST have a \"Other\" category for everything that is not listed."
   :group 'consult-lsp
   :type '(alist :key-type character :value-type string))
 
+
+
+;;;; Inner functions
+;; These helpers are mostly verbatim copies of consult internal functions that are needed,
+;; but are unstable and would break if relied upon
+(defun consult-lsp--marker-from-line-column (buffer line column)
+  "Get marker in BUFFER from LINE and COLUMN."
+  (when (buffer-live-p buffer)
+    (with-current-buffer buffer
+      (save-restriction
+        (save-excursion
+          (widen)
+          (goto-char (point-min))
+          ;; Location data might be invalid by now!
+          (ignore-errors
+            (forward-line (1- line))
+            (forward-char column))
+          (point-marker))))))
+
+(defun consult-lsp--format-file-line-match (file line &optional match)
+  "Format string FILE:LINE:MATCH with faces."
+  (setq line (number-to-string line)
+        match (concat file ":" line (and match ":") match)
+        file (length file))
+  (put-text-property 0 file 'face 'consult-file match)
+  (put-text-property (1+ file) (+ 1 file (length line)) 'face 'consult-line-number match)
+  match)
 
 
 ;;;; Diagnostics
@@ -211,7 +241,7 @@ CURRENT-WORKSPACE? has the same meaning as in `lsp-diagnostics'."
 
 (defun consult-lsp--diagnostics--diagnostic-marker (file diag)
   "Return a marker in FILE at the beginning of DIAG."
-  (consult--position-marker
+  (consult-lsp--marker-from-line-column
    file
    (lsp-translate-line (1+ (lsp:position-line (lsp:range-start (lsp:diagnostic-range diag)))))
    (lsp-translate-column (1+ (lsp:position-character (lsp:range-start (lsp:diagnostic-range diag)))))))
@@ -220,7 +250,7 @@ CURRENT-WORKSPACE? has the same meaning as in `lsp-diagnostics'."
   "Transform LSP-mode diagnostics from a pair FILE DIAG to a candidate."
   (propertize
    (format "%-60.60s"
-           (consult--format-location
+           (consult-lsp--format-file-line-match
             (if-let ((wks (lsp-workspace-root file)))
                 (f-relative file wks)
               file)
@@ -253,14 +283,16 @@ in candidates."
       (when (eq action 'exit)
         (funcall open))
       (funcall jump action
-               (when cand (consult--position-marker
+               (when cand (consult-lsp--marker-from-line-column
                            (and (car cand) (funcall (if (eq action 'finish) #'find-file open) (car cand)))
                            (lsp-translate-line (1+ (lsp:position-line (lsp:range-start (lsp:diagnostic-range (cdr cand))))))
                            (lsp-translate-column (1+ (lsp:position-character (lsp:range-start (lsp:diagnostic-range (cdr cand))))))))))))
 
 ;;;###autoload
 (defun consult-lsp-diagnostics (arg)
-  "Query LSP-mode diagnostics. When ARG is set through prefix, query all workspaces."
+  "Query LSP-mode diagnostics.
+
+When ARG is set through prefix, query all workspaces."
   (interactive "P")
   (let ((all-workspaces? arg))
     (consult--read (consult-lsp--diagnostics--flatten-diagnostics consult-lsp-diagnostics-transformer-function (not all-workspaces?))
@@ -296,7 +328,7 @@ in candidates."
       (funcall jump action
                (when cand (let* ((location (lsp:symbol-information-location cand))
                                  (uri (lsp:location-uri location)))
-                            (consult--position-marker
+                            (consult-lsp--marker-from-line-column
                              (and uri (funcall (if (eq action 'finish) #'find-file open) (lsp--uri-to-path uri)))
                              (thread-first location
                                            (lsp:location-range)
@@ -350,19 +382,19 @@ in candidates."
    ;;   (it uses a cache where candidates are caching keys through `marginalia--cached')
    (format "%s — %s"
            (lsp:symbol-information-name symbol-info)
-           (consult--format-location
+           (consult-lsp--format-file-line-match
             (let ((file
                    (lsp--uri-to-path (lsp:location-uri (lsp:symbol-information-location symbol-info)))))
               (if-let ((wks (lsp-workspace-root file)))
                   (f-relative file wks)
                 file))
             (thread-first symbol-info
-              (lsp:symbol-information-location)
-              (lsp:location-range)
-              (lsp:range-start)
-              (lsp:position-line)
-              (1+)
-              (lsp-translate-line))))
+                          (lsp:symbol-information-location)
+                          (lsp:location-range)
+                          (lsp:range-start)
+                          (lsp:position-line)
+                          (1+)
+                          (lsp-translate-line))))
    'consult--type (consult-lsp--symbols--kind-to-narrow symbol-info)
    'consult--candidate symbol-info
    'consult--details (lsp:document-symbol-detail? symbol-info)))
