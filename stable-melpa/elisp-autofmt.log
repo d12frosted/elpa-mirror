@@ -3,20 +3,22 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-elisp-autofmt.git
 
 Updating /mnt/store/melpa/working/elisp-autofmt/
-Checking out cb9808b42041725290cbdda69e43174c38463cee
+Checking out a33340ccee2bed8aa15db6024721a29b1bffcd01
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elisp-autofmt/
-  to /tmp/elisp-autofmtNLjkA1/elisp-autofmt-20230203.3
+  to /tmp/elisp-autofmtonMrsK/elisp-autofmt-20230204.1214
     elisp-autofmt.el -> elisp-autofmt.el
     elisp-autofmt.py -> elisp-autofmt.py
     elisp-autofmt.overrides.json -> elisp-autofmt.overrides.json
-Created elisp-autofmt-20230203.3.tar containing:
-  elisp-autofmt-20230203.3/
-  elisp-autofmt-20230203.3/elisp-autofmt-pkg.el
-  elisp-autofmt-20230203.3/elisp-autofmt.el
-  elisp-autofmt-20230203.3/elisp-autofmt.overrides.json
-  elisp-autofmt-20230203.3/elisp-autofmt.py
-Built elisp-autofmt in 6.816s, finished at 2023-02-04T09:09:38+0000
+Created elisp-autofmt-20230204.1214.tar containing:
+  elisp-autofmt-20230204.1214/
+  elisp-autofmt-20230204.1214/elisp-autofmt-pkg.el
+  elisp-autofmt-20230204.1214/elisp-autofmt.el
+  elisp-autofmt-20230204.1214/elisp-autofmt.overrides.json
+  elisp-autofmt-20230204.1214/elisp-autofmt.py
+Built elisp-autofmt in 7.030s, finished at 2023-02-04T13:01:13+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  343 Feb  4 09:09 packages/elisp-autofmt-20230203.3.entry
 160K -rw-r--r-- 1 root root 160K Feb  4 09:09 packages/elisp-autofmt-20230203.3.tar
+4.0K -rw-r--r-- 1 root root  346 Feb  4 13:01 packages/elisp-autofmt-20230204.1214.entry
+172K -rw-r--r-- 1 root root 170K Feb  4 13:01 packages/elisp-autofmt-20230204.1214.tar
