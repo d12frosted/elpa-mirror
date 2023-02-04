@@ -4,8 +4,8 @@
 
 ;; Author: Isa Mert Gurbuz <isamertgurbuz@gmail.com>
 ;; Version: 3.0.0
-;; Package-Version: 20230123.1635
-;; Package-Commit: b4b6270f517eba0a38ade79709e9710e306a3ea3
+;; Package-Version: 20230203.2159
+;; Package-Commit: a45a2a01a7e629c9126b444d952fe71bcc9a262f
 ;; Homepage: https://github.com/isamert/empv.el
 ;; License: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "28.1"))
@@ -1010,7 +1010,7 @@ Example:
       (write-file filename))))
 
 ;;;###autoload
-(defun empv-playtlist-save-to-file (filename)
+(defun empv-playlist-save-to-file (filename)
   "Save the current playlist to FILENAME."
   (interactive "FSave playlist to: ")
   (empv--playlist-apply #'empv--playlist-save-to-file filename))

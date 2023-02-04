@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20230127.314
-;; Package-Commit: 2520f14e1fadb9174e506db157df3adaedc63ed4
+;; Package-Version: 20230204.7
+;; Package-Commit: a74cd991a6c97b6cde13be640ed84b7918476b5e
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.1
@@ -762,7 +762,8 @@ cmd is to be run."
            ;; remote.
            (remote-match (equal run-on-remote remote))
            (stdin (or stdin-buffer (current-buffer)))
-           (npx nil))
+           (npx nil)
+           (command (apply #'list command)))
       ;; TODO: Support arbitrary package managers, not just NPM.
       (when (memq 'npx command)
         (setq npx t)
