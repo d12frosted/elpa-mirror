@@ -1,15 +1,15 @@
 (consult-eglot .
-	       [(20220409 1238)
+	       [(20230204 1550)
 		((emacs
 		  (27 1))
 		 (eglot
 		  (1 7))
 		 (consult
-		  (0 16))
+		  (0 31))
 		 (project
 		  (0 3 0)))
 		"A consulting-read interface for eglot" single
-		((:commit . "0da8801dd8435160ce1f62ad8066bd52e38f5cbd")
+		((:commit . "a577cac39800ec3d5d3461f405eebe6913ec38d6")
 		 (:authors
 		  ("mohsin kaleem" . "mohkale@kisara.moe"))
 		 (:maintainer "Mohsin Kaleem")
