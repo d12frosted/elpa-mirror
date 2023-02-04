@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 8 4)
+	   [(1 8 5)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "65c47283462667baa5e4c284f0cb2b314ebf3ec1"))])
+	     (:commit . "fb8e51da6ab37b6df2ac2b6a8555f3aa6b589fd6"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -2127,14 +2127,16 @@
 	     (:authors
 	      ("Elis \"etu\" Hirwing" . "elis@hirwing.se")))])
  (wgrep .
-	[(2 3 4)
-	 nil "Writable grep buffer and apply the changes to files" tar
+	[(3 0 0)
+	 ((emacs
+	   (25 1)))
+	 "Writable grep buffer and apply the changes to files" tar
 	 ((:url . "http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep.el")
 	  (:keywords "grep" "edit" "extensions")
 	  (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")
 	  (:authors
 	   ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
-	  (:commit . "3faf2e429ee36f1c71cd637f0a550d31c5a0bf56"))])
+	  (:commit . "2d1c0509215499e927817b0d7d3f133db678e010"))])
  (why-this .
 	   [(2 0 4)
 	    ((emacs

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/jwiegley/use-package.git
 
 Updating /mnt/store/melpa/working/use-package/
-Checking out bcf0984cf55b70fe6896c6a15f61df92b24f8ffd
+Checking out 77945e002f11440eae72d8730d3de218163d551e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/use-package/
-  to /tmp/use-package1jMeT5/use-package-20221209.2013
+  to /tmp/use-packagefCB27y/use-package-20230203.2004
     use-package-bind-key.el -> use-package-bind-key.el
     use-package-core.el -> use-package-core.el
     use-package-delight.el -> use-package-delight.el
@@ -18,25 +18,27 @@ Copying files (->) and directories (=>)
     doclicense.texi -> doclicense.texi
     docstyle.texi -> docstyle.texi
     use-package.texi -> use-package.texi
-Generating /tmp/use-package1jMeT5/use-package-20221209.2013/doclicense.info
-Generating /tmp/use-package1jMeT5/use-package-20221209.2013/docstyle.info
-Generating /tmp/use-package1jMeT5/use-package-20221209.2013/use-package.info
-Created use-package-20221209.2013.tar containing:
-  use-package-20221209.2013/
-  use-package-20221209.2013/dir
-  use-package-20221209.2013/doclicense.info
-  use-package-20221209.2013/docstyle.info
-  use-package-20221209.2013/use-package-bind-key.el
-  use-package-20221209.2013/use-package-core.el
-  use-package-20221209.2013/use-package-delight.el
-  use-package-20221209.2013/use-package-diminish.el
-  use-package-20221209.2013/use-package-ensure.el
-  use-package-20221209.2013/use-package-jump.el
-  use-package-20221209.2013/use-package-lint.el
-  use-package-20221209.2013/use-package-pkg.el
-  use-package-20221209.2013/use-package.el
-  use-package-20221209.2013/use-package.info
-Built use-package in 18.099s, finished at 2023-02-03T19:08:11+0000
+Generating /tmp/use-packagefCB27y/use-package-20230203.2004/doclicense.info
+Generating /tmp/use-packagefCB27y/use-package-20230203.2004/docstyle.info
+Generating /tmp/use-packagefCB27y/use-package-20230203.2004/use-package.info
+Created use-package-20230203.2004.tar containing:
+  use-package-20230203.2004/
+  use-package-20230203.2004/dir
+  use-package-20230203.2004/doclicense.info
+  use-package-20230203.2004/docstyle.info
+  use-package-20230203.2004/use-package-bind-key.el
+  use-package-20230203.2004/use-package-core.el
+  use-package-20230203.2004/use-package-delight.el
+  use-package-20230203.2004/use-package-diminish.el
+  use-package-20230203.2004/use-package-ensure.el
+  use-package-20230203.2004/use-package-jump.el
+  use-package-20230203.2004/use-package-lint.el
+  use-package-20230203.2004/use-package-pkg.el
+  use-package-20230203.2004/use-package.el
+  use-package-20230203.2004/use-package.info
+Built use-package in 17.846s, finished at 2023-02-03T22:51:02+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  487 Feb  3 19:08 packages/use-package-20221209.2013.entry
 232K -rw-r--r-- 1 root root 230K Feb  3 19:08 packages/use-package-20221209.2013.tar
+4.0K -rw-r--r-- 1 root root  487 Feb  3 22:51 packages/use-package-20230203.2004.entry
+232K -rw-r--r-- 1 root root 230K Feb  3 22:51 packages/use-package-20230203.2004.tar
