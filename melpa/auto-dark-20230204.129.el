@@ -6,8 +6,8 @@
 ;;         Jonathan Arnett <jonathan.arnett@protonmail.com>
 ;; Created: July 16 2019
 ;; Version: 0.9
-;; Package-Version: 20230104.29
-;; Package-Commit: 88f4eb448525c8e11d00daa77ec8595b0863fd92
+;; Package-Version: 20230204.129
+;; Package-Commit: ca90fc638cfaf70d5e0b82657d3d26cd0b289059
 ;; Keywords: macos, windows, linux, themes, tools, faces
 ;; URL: https://github.com/LionyxML/auto-dark-emacs
 ;; Package-Requires: ((emacs "24.4"))
@@ -93,12 +93,13 @@ this is less efficient, but works for non-GUI Emacs."
 
 (defun auto-dark--is-dark-mode-dbus ()
   "Use Emacs built-in D-Bus function to determine if dark theme is enabled."
-  (eq 1 (caar (dbus-call-method
-               :session
-               "org.freedesktop.portal.Desktop"
-               "/org/freedesktop/portal/desktop"
-               "org.freedesktop.portal.Settings" "Read"
-               "org.freedesktop.appearance" "color-scheme"))))
+  (eq 1 (caar (dbus-ignore-errors
+                (dbus-call-method
+                 :session
+                 "org.freedesktop.portal.Desktop"
+                 "/org/freedesktop/portal/desktop"
+                 "org.freedesktop.portal.Settings" "Read"
+                 "org.freedesktop.appearance" "color-scheme")))))
 
 (defun auto-dark--is-dark-mode-powershell ()
   "Invoke powershell using Emacs using external shell command."
