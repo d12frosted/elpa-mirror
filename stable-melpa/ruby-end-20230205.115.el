@@ -1,12 +1,12 @@
-;;; ruby-end.el --- Automatic insertion of end blocks for Ruby
+;;; ruby-end.el --- Automatic insertion of end blocks for Ruby  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2010-2015, 2017, 2023  Free Software Foundation, Inc.
+;; Copyright (C) 2010-2023  Free Software Foundation, Inc.
 
 ;; Author: Johan Andersson <johan.rejeep@gmail.com>
 ;; Maintainer: Dmitry Gutov <dgutov@yandex.ru>
 ;; Version: 0.4.3
-;; Package-Version: 20230126.1627
-;; Package-Commit: fe39d34ba7a43d522c7bdc47406935611e782ca3
+;; Package-Version: 20230205.115
+;; Package-Commit: 1c87e214de6a75936b89ab50ee5fe522b87b009e
 ;; Keywords: speed, convenience, ruby
 ;; URL: http://github.com/rejeep/ruby-end
 
@@ -43,7 +43,6 @@
 ;;; Code:
 
 (require 'ruby-mode)
-(require 'edmacro)
 
 (defvar ruby-end-expand-spc-key "SPC"
   "Space key name.")
@@ -56,10 +55,10 @@
 
 (defvar ruby-end-mode-map
   (let ((map (make-sparse-keymap))
-        (spc (read-kbd-macro ruby-end-expand-spc-key))
-        (ret (read-kbd-macro ruby-end-expand-ret-key)))
-    (define-key map spc 'ruby-end-space)
-    (define-key map ret 'ruby-end-return)
+        (spc (kbd ruby-end-expand-spc-key))
+        (ret (kbd ruby-end-expand-ret-key)))
+    (define-key map spc #'ruby-end-space)
+    (define-key map ret #'ruby-end-return)
     map)
   "Keymap for `ruby-end-mode'.")
 
@@ -122,11 +121,13 @@ When nil, any `last-command' will do."
    (t
     (ruby-end-fallback ruby-end-expand-ret-key))))
 
+(defvar ruby-end-mode)
+
 (defun ruby-end-fallback (key)
   "Execute function that KEY was bound to before `ruby-end-mode'."
   (let ((ruby-end-mode nil))
     (call-interactively
-     (key-binding (edmacro-parse-keys key) t))))
+     (key-binding (kbd key) t))))
 
 (defun ruby-end-insert-end ()
   "Closes block by inserting end."
@@ -168,16 +169,14 @@ When nil, any `last-command' will do."
 ;;;###autoload
 (define-minor-mode ruby-end-mode
   "Automatic insertion of end blocks for Ruby."
-  :init-value nil
-  :lighter " end"
-  :keymap ruby-end-mode-map)
+  :lighter " end")
 
 ;;;###autoload
-(add-hook 'ruby-mode-hook 'ruby-end-mode)
+(add-hook 'ruby-mode-hook #'ruby-end-mode)
 ;;;###autoload
-(add-hook 'enh-ruby-mode-hook 'ruby-end-mode)
+(add-hook 'enh-ruby-mode-hook #'ruby-end-mode)
 ;;;###autoload
-(add-hook 'ruby-ts-mode-hook 'ruby-end-mode)
+(add-hook 'ruby-ts-mode-hook #'ruby-end-mode)
 
 (provide 'ruby-end)
 

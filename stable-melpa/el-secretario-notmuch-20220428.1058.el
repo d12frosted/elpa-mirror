@@ -7,8 +7,8 @@
 ;; Created: September 20, 2020
 ;; Modified: October 17, 2020
 ;; Version: 0.0.1
-;; Package-Version: 20220426.1905
-;; Package-Commit: c28a4f42829ed1f96a17abb63a8616216db913a5
+;; Package-Version: 20220428.1058
+;; Package-Commit: c4e21ac5a9be2b2ea6cf7c153a6fae48c78a61b9
 ;; Keywords: convenience mail
 ;; Homepage: https://git.sr.ht/~zetagon/el-secretario
 ;; Package-Requires: ((emacs "27.1") (el-secretario "0.0.1") (notmuch "0.3.1"))
@@ -69,10 +69,14 @@ OBJ BACKWARDS."
 
 (cl-defmethod el-secretario-source-next-item ((_obj el-secretario-notmuch-source))
   "See `el-secretario-source.el'."
-  (el-secretario-notmuch-show-next-thread))
+  (if (el-secretario-notmuch-show-next-thread)
+      (el-secretario-activate-keymap)
+    (el-secretario--next-source)))
 (cl-defmethod el-secretario-source-previous-item ((_obj el-secretario-notmuch-source))
   "See `el-secretario-source.el'."
-  (el-secretario-notmuch-show-next-thread t))
+  (if (el-secretario-notmuch-show-next-thread t)
+      (el-secretario-activate-keymap)
+    (el-secretario--previous-source)))
 
 (defun el-secretario-notmuch-advance-and-archive ()
   "Advance through thread and archive.
@@ -116,37 +120,34 @@ results instead."
     (when (buffer-live-p parent-buffer)
       (switch-to-buffer parent-buffer)
       (and (if previous
-	       (if (notmuch-search-previous-thread)
-                   t
-                 (el-secretario--previous-source)
-                 nil)
+	       (notmuch-search-previous-thread)
 	     (notmuch-search-next-thread))
-	   (el-secretario-notmuch--search-show-thread previous)))))
+	   (el-secretario-notmuch--search-show-thread)))))
 
 
 (defun el-secretario-notmuch--search-show-thread (&optional elide-toggle)
   "Wrapper-function around `notmuch-search-show-thread'.
 
-Like `notmuch-search-show-thread' but call
-`el-secretario--next-source' if there are no more mail.
+Like `notmuch-search-show-thread' but return nil
+if there are no more mail, and non-nil otherwise.
+
 Pass ELIDE-TOGGLE to `notmuch-search-show-thread'."
   (interactive "P")
   ;; This code is copied and adapted from notmuch.
   (let ((thread-id (notmuch-search-find-thread-id))
         (subject (notmuch-search-find-subject)))
     (if (> (length thread-id) 0)
-        (progn (notmuch-show thread-id
-                             elide-toggle
-                             (current-buffer)
-                             notmuch-search-query-string
-                             ;; Name the buffer based on the subject.
-                             (concat "*"
-                                     (truncate-string-to-width
-                                      subject 30 nil nil t)
-                                     "*"))
-               (el-secretario-activate-keymap))
+        (notmuch-show thread-id
+                      elide-toggle
+                      (current-buffer)
+                      notmuch-search-query-string
+                      ;; Name the buffer based on the subject.
+                      (concat "*"
+                              (truncate-string-to-width
+                               subject 30 nil nil t)
+                              "*"))
       (message "End of search results.")
-      (el-secretario--next-source))))
+      nil)))
 
 (provide 'el-secretario-notmuch)
 ;;; el-secretario-notmuch.el ends here
