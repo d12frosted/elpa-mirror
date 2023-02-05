@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/nnicandro/emacs-jupyter.git
 
 Updating /mnt/store/melpa/working/jupyter/
-Checking out 16cbda79167b4e2f2c6b61b218658f0f660d97f9
+Checking out bc3b78be4333bb7a51e262018f7e6dcded621c41
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jupyter/
-  to /tmp/jupytersNZvpf/jupyter-20230204.2258
+  to /tmp/jupyter2YFgwf/jupyter-20230205.224
     jupyter-R.el -> jupyter-R.el
     jupyter-base.el -> jupyter-base.el
     jupyter-c++.el -> jupyter-c++.el
@@ -41,52 +41,50 @@ Copying files (->) and directories (=>)
     Makefile -> Makefile
     widget.html -> widget.html
     js => js
-Created jupyter-20230204.2258.tar containing:
-  jupyter-20230204.2258/
-  jupyter-20230204.2258/Makefile
-  jupyter-20230204.2258/js/
-  jupyter-20230204.2258/js/Makefile
-  jupyter-20230204.2258/js/emacs-jupyter.js
-  jupyter-20230204.2258/js/index.js
-  jupyter-20230204.2258/js/manager.js
-  jupyter-20230204.2258/js/package.json
-  jupyter-20230204.2258/js/webpack.config.js
-  jupyter-20230204.2258/jupyter-R.el
-  jupyter-20230204.2258/jupyter-base.el
-  jupyter-20230204.2258/jupyter-c++.el
-  jupyter-20230204.2258/jupyter-channel-ioloop-comm.el
-  jupyter-20230204.2258/jupyter-channel-ioloop.el
-  jupyter-20230204.2258/jupyter-channel.el
-  jupyter-20230204.2258/jupyter-client.el
-  jupyter-20230204.2258/jupyter-comm-layer.el
-  jupyter-20230204.2258/jupyter-env.el
-  jupyter-20230204.2258/jupyter-ioloop-comm.el
-  jupyter-20230204.2258/jupyter-ioloop.el
-  jupyter-20230204.2258/jupyter-javascript.el
-  jupyter-20230204.2258/jupyter-julia.el
-  jupyter-20230204.2258/jupyter-kernel-manager.el
-  jupyter-20230204.2258/jupyter-kernel-process-manager.el
-  jupyter-20230204.2258/jupyter-kernelspec.el
-  jupyter-20230204.2258/jupyter-messages.el
-  jupyter-20230204.2258/jupyter-mime.el
-  jupyter-20230204.2258/jupyter-org-client.el
-  jupyter-20230204.2258/jupyter-org-extensions.el
-  jupyter-20230204.2258/jupyter-pkg.el
-  jupyter-20230204.2258/jupyter-python.el
-  jupyter-20230204.2258/jupyter-repl.el
-  jupyter-20230204.2258/jupyter-rest-api.el
-  jupyter-20230204.2258/jupyter-server-ioloop.el
-  jupyter-20230204.2258/jupyter-server.el
-  jupyter-20230204.2258/jupyter-tramp.el
-  jupyter-20230204.2258/jupyter-widget-client.el
-  jupyter-20230204.2258/jupyter-zmq-channel-ioloop.el
-  jupyter-20230204.2258/jupyter-zmq-channel.el
-  jupyter-20230204.2258/jupyter.el
-  jupyter-20230204.2258/ob-jupyter.el
-  jupyter-20230204.2258/widget.html
-Built jupyter in 5.029s, finished at 2023-02-05T00:59:41+0000
+Created jupyter-20230205.224.tar containing:
+  jupyter-20230205.224/
+  jupyter-20230205.224/Makefile
+  jupyter-20230205.224/js/
+  jupyter-20230205.224/js/Makefile
+  jupyter-20230205.224/js/emacs-jupyter.js
+  jupyter-20230205.224/js/index.js
+  jupyter-20230205.224/js/manager.js
+  jupyter-20230205.224/js/package.json
+  jupyter-20230205.224/js/webpack.config.js
+  jupyter-20230205.224/jupyter-R.el
+  jupyter-20230205.224/jupyter-base.el
+  jupyter-20230205.224/jupyter-c++.el
+  jupyter-20230205.224/jupyter-channel-ioloop-comm.el
+  jupyter-20230205.224/jupyter-channel-ioloop.el
+  jupyter-20230205.224/jupyter-channel.el
+  jupyter-20230205.224/jupyter-client.el
+  jupyter-20230205.224/jupyter-comm-layer.el
+  jupyter-20230205.224/jupyter-env.el
+  jupyter-20230205.224/jupyter-ioloop-comm.el
+  jupyter-20230205.224/jupyter-ioloop.el
+  jupyter-20230205.224/jupyter-javascript.el
+  jupyter-20230205.224/jupyter-julia.el
+  jupyter-20230205.224/jupyter-kernel-manager.el
+  jupyter-20230205.224/jupyter-kernel-process-manager.el
+  jupyter-20230205.224/jupyter-kernelspec.el
+  jupyter-20230205.224/jupyter-messages.el
+  jupyter-20230205.224/jupyter-mime.el
+  jupyter-20230205.224/jupyter-org-client.el
+  jupyter-20230205.224/jupyter-org-extensions.el
+  jupyter-20230205.224/jupyter-pkg.el
+  jupyter-20230205.224/jupyter-python.el
+  jupyter-20230205.224/jupyter-repl.el
+  jupyter-20230205.224/jupyter-rest-api.el
+  jupyter-20230205.224/jupyter-server-ioloop.el
+  jupyter-20230205.224/jupyter-server.el
+  jupyter-20230205.224/jupyter-tramp.el
+  jupyter-20230205.224/jupyter-widget-client.el
+  jupyter-20230205.224/jupyter-zmq-channel-ioloop.el
+  jupyter-20230205.224/jupyter-zmq-channel.el
+  jupyter-20230205.224/jupyter.el
+  jupyter-20230205.224/ob-jupyter.el
+  jupyter-20230205.224/widget.html
+Built jupyter in 7.862s, finished at 2023-02-05T08:32:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  437 Feb  4 21:09 packages/jupyter-20230204.212.entry
-700K -rw-r--r-- 1 root root 700K Feb  4 21:09 packages/jupyter-20230204.212.tar
-4.0K -rw-r--r-- 1 root root  438 Feb  5 00:59 packages/jupyter-20230204.2258.entry
-700K -rw-r--r-- 1 root root 700K Feb  5 00:59 packages/jupyter-20230204.2258.tar
+4.0K -rw-r--r-- 1 root root  437 Feb  5 08:32 packages/jupyter-20230205.224.entry
+700K -rw-r--r-- 1 root root 700K Feb  5 08:32 packages/jupyter-20230205.224.tar

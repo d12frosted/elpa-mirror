@@ -7,8 +7,6 @@
 ;;
 ;; Author: Christian Wittern <cwittern@gmail.com>
 ;; URL: https://github.com/cwittern/helm-charinfo
-;; Package-Version: 20170810.1231
-;; Package-Commit: 91798a49dc115342a7e01e48b264e9a0bf5ea414
 ;; Version: 0.01
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "24") (helm "1.7.0") (cl-lib "0.5"))

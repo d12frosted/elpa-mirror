@@ -1,0 +1,18 @@
+(jupyter .
+	 [(20230205 224)
+	  ((emacs
+	    (26))
+	   (zmq
+	    (0 10 3))
+	   (cl-lib
+	    (0 5))
+	   (simple-httpd
+	    (1 5 0))
+	   (websocket
+	    (1 9)))
+	  "Jupyter" tar
+	  ((:commit . "bc3b78be4333bb7a51e262018f7e6dcded621c41")
+	   (:authors
+	    ("Nathaniel Nicandro" . "nathanielnicandro@gmail.com"))
+	   (:maintainer "Nathaniel Nicandro" . "nathanielnicandro@gmail.com")
+	   (:url . "https://github.com/dzop/emacs-jupyter"))])

@@ -2533,7 +2533,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "25d675307c03f720e592c3dc9a5a0ae8db0836eb"))])
  (phps-mode .
-	    [(0 4 33)
+	    [(0 4 34)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2542,7 +2542,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "a1aaad619a8b77eecff5faaad0ef0262eb70e9bf"))])
+	      (:commit . "f13607bf1ea82fd2618edaacf20c2c023be5763d"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
@@ -3859,16 +3859,16 @@
 	  (:url . "https://elpa.gnu.org/packages/xclip.html")
 	  (:commit . "5b54645cab438e133e27b4690c57066f8271a992"))])
  (xeft .
-       [(3 2)
+       [(3 3)
 	((emacs
 	  (26 0)))
 	"Deft feat. Xapian" tar
-	((:url . "https://git.sr.ht/~casouri/xeft")
+	((:url . "https://sr.ht/~casouri/xeft")
 	 (:keywords "applications" "note" "searching")
 	 (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	 (:authors
 	  ("Yuan Fu" . "casouri@gmail.com"))
-	 (:commit . "4bdb052d815b67dff327bc976c73d81c94040d75"))])
+	 (:commit . "ea4fa859c1129243b15f259a10e67ea274c5ef63"))])
  (xelb .
        [(0 18)
 	((emacs

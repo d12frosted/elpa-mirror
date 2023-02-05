@@ -4,8 +4,6 @@
 
 ;; Author:  Thore Goll <thoregoll@googlemail.com>
 ;; Keywords: catkin, helm, build, tools, ROS
-;; Package-Version: 20190425.1520
-;; Package-Commit: a3422346eb46e66a947a75f9e1b9975a672036be
 ;; Package-Requires: ((emacs "24.3") (helm "0") (xterm-color "0"))
 ;; Homepage: https://github.com/gollth/helm-catkin
 ;; Version: 1.1
