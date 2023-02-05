@@ -3,8 +3,6 @@
 ;; Copyright (C) 2008-2020 Stephen Bach
 ;;
 ;; Version: 3.2
-;; Package-Version: 20200602.228
-;; Package-Commit: 75233eff9c961b9e99db0e0c50b6720850b595ec
 ;; Keywords: convenience, files, matching, tools
 ;; URL: https://github.com/sjbach/lusty-emacs
 ;; Package-Requires: ((emacs "25.1"))
