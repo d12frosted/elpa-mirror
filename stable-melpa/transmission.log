@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/holomorph/transmission.git
 
 Updating /mnt/store/melpa/working/transmission/
-Checking out 243d5dc15917df2611fd0c9f288faea17a00a396
-Built transmission in 4.204s, finished at 2023-02-05T12:54:41+0000
- ✓ Success:
-104K -rw-r--r-- 1 root root 103K Feb  5 12:54 packages/transmission-20221130.212.el
-4.0K -rw-r--r-- 1 root root  350 Feb  5 12:54 packages/transmission-20221130.212.entry
+
+Command '' exited with non-zero exit-code: 128
+
+error: RPC failed; curl 35 gnutls_handshake() failed: Error in the pull function.
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128

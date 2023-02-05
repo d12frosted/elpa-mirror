@@ -2,9 +2,7 @@
 
 ;; Author: Fanael Linithien <fanael4@gmail.com>
 ;; URL: https://github.com/Fanael/persistent-scratch
-;; Package-Commit: f9c1361ad69073af8133174f9e37b594df9be361
-;; Package-Version: 20230113.318
-;; Package-X-Original-Version: 0.3.8
+;; Package-Version: 0.3.8
 ;; Package-Requires: ((emacs "24"))
 
 ;; This file is NOT part of GNU Emacs.
