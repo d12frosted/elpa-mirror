@@ -5,8 +5,8 @@
 ;; Author: Łukasz Gruner <lukasz@gruner.lu>
 ;; Maintainer: Łukasz Gruner <lukasz@gruner.lu>
 ;; Version: 2
-;; Package-Version: 20190816.25
-;; Package-Commit: 90aeb73bedba63ac9efb9cad8e7444feb8b40261
+;; Package-Version: 20230204.1432
+;; Package-Commit: f8fa515eb3e195760b022b5f635b413221451f9a
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://bitbucket.org/ukaszg/aria2-mode
 ;; Created: 19/10/2014
@@ -56,6 +56,12 @@ remove the entry if the new value is `eql' to DEFAULT."
     :group 'execute
     :prefix "aria2-")
 
+(defcustom aria2-start-rpc-server nil
+    "Whether aria2c should be started when enable aria2-mode.
+If nil Emacs will reattach itself to the process on entering downloads list."
+    :type 'boolean
+    :group 'aria2)
+
 (defcustom aria2-kill-process-on-emacs-exit nil
     "Whether aria2c should be stopped when exiting Emacs.
 If nil Emacs will reattach itself to the process on entering downloads list."
@@ -73,7 +79,8 @@ If nil Emacs will reattach itself to the process on entering downloads list."
     :group 'aria2)
 
 (defcustom aria2-session-file (expand-file-name "aria2c.session" user-emacs-directory)
-    "Name of session file.  Will be used with \"--save-session\" and \"--input-file\" options."
+    "Name of session file.  Will be used with \"--save-session\"
+and \"--input-file\" options."
     :type 'file
     :group 'aria2)
 
@@ -97,19 +104,21 @@ If nil Emacs will reattach itself to the process on entering downloads list."
     :group 'aria2)
 
 (defcustom aria2-custom-args nil
-    "Additional arguments for aria2c.  This should be a list of strings.  See aria2c manual for supported options."
+    "Additional arguments for aria2c.  This should be a list of strings.
+See aria2c manual for supported options."
     :type '(repeat (string :tag "Commandline argument."))
     :group 'aria2)
 
 (defcustom aria2-add-evil-quirks nil
     "If t adds aria2-mode to emacs states, and binds \C-w.")
 
+(defcustom aria2-cc-file (expand-file-name "aria2-controller.eieio" user-emacs-directory)
+    "File used to persist controller status between Emacs restarts."
+    :type 'file
+    :group 'aria2)
+
 (defvar aria2--debug nil
     "Should json commands and replies be printed.")
-
-(defconst aria2--cc-file
-    (expand-file-name "aria2-controller.eieio" user-emacs-directory)
-    "File used to persist controller status between Emacs restarts.")
 
 ;;; Faces definitions start here.
 
@@ -243,7 +252,7 @@ If nil Emacs will reattach itself to the process on entering downloads list."
             :type string
             :docstring "Url on which aria2c listens for JSON RPC requests.")
         (secret :initarg :secret
-            :initform aria2-rcp-secret
+            :initform (concat aria2-rcp-secret)
             :type string
             :docstring "Secret value used for authentication with the aria2c process, for use with --rpc-secret= switch.")
         (pid :initarg :pid
@@ -263,6 +272,7 @@ If nil Emacs will reattach itself to the process on entering downloads list."
 (defmethod is-process-running ((this aria2-controller))
     "Returns status of aria2c process."
     (with-slots (pid) this
+        (when aria2--debug (message "aria2 pid %d" pid))
         (when (and
                   (< 0 pid)
                   (aria2--is-aria-process-p pid))
@@ -294,7 +304,8 @@ If nil Emacs will reattach itself to the process on entering downloads list."
 
 (defmethod make-request ((this aria2-controller) method &rest params)
     "Calls a remote METHOD with PARAMS. Returns response alist."
-    (run-process this)
+    (when aria2-start-rpc-server
+        (run-process this))
     (let (
              (url-request-method "POST")
              (url-request-data (json-encode-alist
@@ -566,7 +577,8 @@ Returns a pair of numbers denoting amount of files deleted and files inserted."
     "One of :fast :normal :slow or nil if not refreshing. Used to manage refresh timers.")
 
 (defun aria2--manage-refresh-timer ()
-    "Restarts `aria2--refresh-timer' on different intervals, depending on focus and buffer visibility."
+    "Restarts `aria2--refresh-timer' on different intervals,
+depending on focus and buffer visibility."
     (let ((buf (get-buffer aria2-list-buffer-name)))
         (cl-flet ((retimer (refresh speed)
                       (when aria2--refresh-timer (cancel-timer aria2--refresh-timer))
@@ -580,7 +592,7 @@ Returns a pair of numbers denoting amount of files deleted and files inserted."
                      (not (eq aria2--current-buffer-refresh-speed :normal)))
                     (retimer aria2-refresh-normal :normal))
                 ((not (eq aria2--current-buffer-refresh-speed :slow)) ; list is in the background
-                    (retimer aria2-refresh-slow :slow)))))))
+                    (retimer aria2-refresh-slow :slow))))))
 
 (defun aria2--stop-timer ()
     "Stop timer if any."
@@ -602,9 +614,9 @@ Returns a pair of numbers denoting amount of files deleted and files inserted."
     "Persist controller settings, or clear state when aria2c isn't running."
     (aria2--stop-timer)
     (if (and aria2--cc (is-process-running aria2--cc))
-        (eieio-persistent-save aria2--cc aria2--cc-file)
-        (when (file-exists-p aria2--cc-file)
-            (delete-file aria2--cc-file))))
+        (eieio-persistent-save aria2--cc aria2-cc-file)
+        (when (file-exists-p aria2-cc-file)
+            (delete-file aria2-cc-file))))
 
 (defun aria2--kill-on-exit ()
     "Stops aria2c process."
@@ -669,10 +681,23 @@ Returns a pair of numbers denoting amount of files deleted and files inserted."
                 (addMetalink aria2--cc chosen-file))))
     (revert-buffer))
 
-(defvar aria2-dialog-map
+(defun aria2-dialog-cancel ()
+  (interactive)
+  (setq aria2--url-list-widget nil)
+  (switch-to-buffer aria2-list-buffer-name)
+  (kill-buffer aria2-url-list-buffer-name))
+
+(defun aria2-dialog-submit ()
+  (interactive)
+  (addUri aria2--cc (widget-value aria2--url-list-widget))
+  (aria2-dialog-cancel))
+
+(defvar aria2-dialog-mode-map
     (let ((map (make-sparse-keymap)))
         (set-keymap-parent map widget-keymap)
         (define-key map [mouse-1] 'widget-button-click)
+        (define-key map (kbd "C-c C-c") 'aria2-dialog-submit)
+        (define-key map (kbd "C-c C-k") 'aria2-dialog-cancel)
         map))
 
 (defvar aria2--url-list-widget nil)
@@ -694,6 +719,7 @@ Returns a pair of numbers denoting amount of files deleted and files inserted."
     (aria2-dialog-mode)
     (let ((inhibit-read-only t)) (erase-buffer))
     (remove-overlays)
+    (setq header-line-format (substitute-command-keys "Add urls, then download with `\\[aria2-dialog-submit]', or cancel with `\\[aria2-dialog-cancel]'"))
     (widget-insert "Please input urls to download.\n\n")
     (widget-insert "Non \"magnet:\" urls must be mirrors pointing to the same file.\n\n")
     (setq aria2--url-list-widget
@@ -706,21 +732,13 @@ Returns a pair of numbers denoting amount of files deleted and files inserted."
                  :value "")))
     (widget-insert "\n\n")
     (widget-create 'push-button
-        :notify (lambda (&rest ignore)
-                    (setq aria2--url-list-widget nil)
-                    (switch-to-buffer aria2-list-buffer-name)
-                    (kill-buffer aria2-url-list-buffer-name))
-        "Cancel")
+        :notify (lambda (&rest ignore) (aria2-dialog-cancel))
+                   "Cancel")
     (widget-insert "  ")
     (widget-create 'push-button
-        :notify (lambda (&rest ignore)
-                    (addUri aria2--cc (widget-value aria2--url-list-widget))
-                    (setq aria2--url-list-widget nil)
-                    (switch-to-buffer aria2-list-buffer-name)
-                    (kill-buffer aria2-url-list-buffer-name))
+        :notify (lambda (&rest ignore) (aria2-dialog-submit))
         "Download")
     (widget-insert "\n")
-    (use-local-map aria2-dialog-map)
     (widget-setup)
     (goto-char (point-min))
     (widget-forward 3))
@@ -844,10 +862,12 @@ With prefix remove all applicable downloads."
     ;; try to load controller state from file
     (unless aria2--cc
         (condition-case nil
-            (setq aria2--cc (eieio-persistent-read aria2--cc-file aria2-controller))
+            (setq aria2--cc (eieio-persistent-read aria2-cc-file aria2-controller))
             (error (setq aria2--cc (make-instance aria2-controller
                                        "aria2-controller"
-                                       :file aria2--cc-file)))))
+                                       :file aria2-cc-file)))))
+    (when aria2-start-rpc-server
+        (run-process this))
     ;; kill process or save state on exit
     (if aria2-kill-process-on-emacs-exit
         (add-hook 'kill-emacs-hook 'aria2--kill-on-exit)

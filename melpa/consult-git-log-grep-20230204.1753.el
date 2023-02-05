@@ -5,8 +5,8 @@
 ;; Author: Ghosty
 ;; Homepage: https://github.com/Ghosty141/consult-git-log-grep
 ;; Keywords: git convenience
-;; Package-Version: 20221117.1938
-;; Package-Commit: 1d58fd3d6b1d7baeacbb0d1a09cee440397f5552
+;; Package-Version: 20230204.1753
+;; Package-Commit: 30dfcad5745a6b9882d94fec75d38c345a1eff89
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "27.1") (consult "0.16"))
 
@@ -87,18 +87,18 @@
   "Build the command using INPUT and supply the highlight function."
   (pcase-let ((`(,arg . ,opts) (consult--command-split input)))
     (unless (string-blank-p arg)
-      (list :command (append (list
-                              "git"
-                              "--no-pager"
-                              "log"
-                              ;; use git log's formattings padding/truncating for
-                              ;; better performance (less lisp string processing)
-                              "--pretty=format:%H@@@%<(76,mtrunc)%s@@@%aN@@@%ad"
-                              "--date=format:%Y-%m-%d %H:%M:%S"
-                              "-i"
-                              "--grep")
-                             (list arg) opts)
-            :highlight (cdr (consult--default-regexp-compiler input 'ignore-case t))))))
+      (cons (append (list
+                     "git"
+                     "--no-pager"
+                     "log"
+                     ;; use git log's formattings padding/truncating for
+                     ;; better performance (less lisp string processing)
+                     "--pretty=format:%H@@@%<(76,mtrunc)%s@@@%aN@@@%ad"
+                     "--date=format:%Y-%m-%d %H:%M:%S"
+                     "-i"
+                     "--grep")
+                    (list arg) opts)
+            (cdr (consult--default-regexp-compiler input 'ignore-case t))))))
 
 (defun consult-git-log-grep-result-annotator (cand)
   "Annotate the current candidate CAND using its text-properties."

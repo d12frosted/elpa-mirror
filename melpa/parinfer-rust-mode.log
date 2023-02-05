@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/justinbarclay/parinfer-rust-mode.git
 
 Updating /mnt/store/melpa/working/parinfer-rust-mode/
-Checking out 398f3dc4d17c277a4bf9b883cc534f13f2611828
+Checking out 332c7f47426f0519dc5c24dda82afdb1aa8b61ee
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parinfer-rust-mode/
-  to /tmp/parinfer-rust-modeOFl4ji/parinfer-rust-mode-20221209.1619
+  to /tmp/parinfer-rust-modeNxtfZs/parinfer-rust-mode-20230204.1915
     parinfer-rust-changes.el -> parinfer-rust-changes.el
     parinfer-rust-helper.el -> parinfer-rust-helper.el
     parinfer-rust-mode.el -> parinfer-rust-mode.el
-Created parinfer-rust-mode-20221209.1619.tar containing:
-  parinfer-rust-mode-20221209.1619/
-  parinfer-rust-mode-20221209.1619/parinfer-rust-changes.el
-  parinfer-rust-mode-20221209.1619/parinfer-rust-helper.el
-  parinfer-rust-mode-20221209.1619/parinfer-rust-mode-pkg.el
-  parinfer-rust-mode-20221209.1619/parinfer-rust-mode.el
-Built parinfer-rust-mode in 3.250s, finished at 2023-02-04T17:37:52+0000
+Created parinfer-rust-mode-20230204.1915.tar containing:
+  parinfer-rust-mode-20230204.1915/
+  parinfer-rust-mode-20230204.1915/parinfer-rust-changes.el
+  parinfer-rust-mode-20230204.1915/parinfer-rust-helper.el
+  parinfer-rust-mode-20230204.1915/parinfer-rust-mode-pkg.el
+  parinfer-rust-mode-20230204.1915/parinfer-rust-mode.el
+Built parinfer-rust-mode in 4.416s, finished at 2023-02-04T21:29:13+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 448 Feb  4 17:37 packages/parinfer-rust-mode-20221209.1619.entry
  52K -rw-r--r-- 1 root root 50K Feb  4 17:37 packages/parinfer-rust-mode-20221209.1619.tar
+4.0K -rw-r--r-- 1 root root 448 Feb  4 21:29 packages/parinfer-rust-mode-20230204.1915.entry
+ 52K -rw-r--r-- 1 root root 50K Feb  4 21:29 packages/parinfer-rust-mode-20230204.1915.tar
