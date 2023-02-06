@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/grip-mode
 ;; Version: 2.3.2
-;; Package-Version: 20221003.1518
-;; Package-Commit: e1e8ee952f75cdca93327b6e7dcd79244ca66bc0
+;; Package-Version: 20230206.323
+;; Package-Commit: bdee160db6ab8c988bb0de95ad306ff8b793ec67
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, markdown, preview
 
@@ -131,8 +131,6 @@ Use default browser if nil."
   (if grip-url-browser
       (let ((browse-url-generic-program grip-url-browser)
             (browse-url-generic-args grip-url-args))
-        (ignore browse-url-generic-program)
-        (ignore browse-url-generic-args)
         (browse-url-generic url))
     (browse-url url)))
 
