@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/javaguirre/ghost-blog-emacs.git
 
 Updating /mnt/store/melpa/working/ghost-blog/
-Checking out 71b358643cc9a2db1bf752281ff94aba9b59e4cc
-Built ghost-blog in 3.971s, finished at 2023-02-06T10:42:04+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Feb  6 10:42 packages/ghost-blog-20171023.742.el
-4.0K -rw-r--r-- 1 root root  410 Feb  6 10:42 packages/ghost-blog-20171023.742.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/javaguirre/ghost-blog-emacs.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

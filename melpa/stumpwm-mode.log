@@ -1,10 +1,22 @@
 Package: stumpwm-mode
-Fetcher: git
-Source:  https://git.savannah.nongnu.org/git/stumpwm.git
+Fetcher: github
+Source:  https://github.com/stumpwm/stumpwm-contrib.git
 
-Updating /mnt/store/melpa/working/stumpwm-mode/
-Checking out 4d0603e52b5bab993b3be63e3654c74f641e677d
-Built stumpwm-mode in 4.235s, finished at 2023-02-06T11:28:14+0000
+Cloning https://github.com/stumpwm/stumpwm-contrib.git to /mnt/store/melpa/working/stumpwm-mode/
+Checking out 333d210cacc7ebac76e14dfc8c0139f0e399c9a7
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/stumpwm-mode/
+  to /tmp/stumpwm-modeK293A4/stumpwm-mode-20171027.214
+  ! util/swm-emacs/stumpwm-mode.el -> stumpwm-mode.el
+  ! util/swm-emacs/stumpwm-utils.el -> stumpwm-utils.el
+Created stumpwm-mode-20171027.214.tar containing:
+  stumpwm-mode-20171027.214/
+  stumpwm-mode-20171027.214/stumpwm-mode-pkg.el
+  stumpwm-mode-20171027.214/stumpwm-mode.el
+  stumpwm-mode-20171027.214/stumpwm-utils.el
+Built stumpwm-mode in 9.537s, finished at 2023-02-06T19:03:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Feb  6 11:28 packages/stumpwm-mode-20140222.1929.el
-4.0K -rw-r--r-- 1 root root  253 Feb  6 11:28 packages/stumpwm-mode-20140222.1929.entry
+4.0K -rw-r--r-- 1 root root 2.4K Feb  6 15:15 packages/stumpwm-mode-20140222.1929.el
+4.0K -rw-r--r-- 1 root root  253 Feb  6 15:15 packages/stumpwm-mode-20140222.1929.entry
+4.0K -rw-r--r-- 1 root root  249 Feb  6 19:03 packages/stumpwm-mode-20171027.214.entry
+ 12K -rw-r--r-- 1 root root  10K Feb  6 19:03 packages/stumpwm-mode-20171027.214.tar

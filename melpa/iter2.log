@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/doublep/iter2.git
 
 Updating /mnt/store/melpa/working/iter2/
-Checking out 5ea6ba6effc4b71e7a4aed16b3f42408f9064c01
-Built iter2 in 4.547s, finished at 2023-02-06T10:52:31+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 57K Feb  6 10:52 packages/iter2-20221104.1938.el
-4.0K -rw-r--r-- 1 root root 362 Feb  6 10:52 packages/iter2-20221104.1938.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/doublep/iter2.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
