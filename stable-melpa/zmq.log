@@ -3,38 +3,40 @@ Fetcher: github
 Source:  https://github.com/nnicandro/emacs-zmq.git
 
 Updating /mnt/store/melpa/working/zmq/
-Checking out 5477aa9f7a1c471f00c8f4cb915c13e7405e32a2
+Checking out 4166424e3615147b1e9361a0588c1fb6b81cb5e5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/zmq/
-  to /tmp/zmq63AzIT/zmq-20230201.222
+  to /tmp/zmqMyWPpe/zmq-20230206.339
     zmq.el -> zmq.el
     Makefile -> Makefile
     src => src
-Created zmq-20230201.222.tar containing:
-  zmq-20230201.222/
-  zmq-20230201.222/Makefile
-  zmq-20230201.222/src/
-  zmq-20230201.222/src/Makefile.am
-  zmq-20230201.222/src/configure.ac
-  zmq-20230201.222/src/constants.c
-  zmq-20230201.222/src/context.c
-  zmq-20230201.222/src/context.h
-  zmq-20230201.222/src/core.c
-  zmq-20230201.222/src/core.h
-  zmq-20230201.222/src/emacs-module.h
-  zmq-20230201.222/src/emacs-zmq.c
-  zmq-20230201.222/src/emacs-zmq.h
-  zmq-20230201.222/src/msg.c
-  zmq-20230201.222/src/msg.h
-  zmq-20230201.222/src/poll.c
-  zmq-20230201.222/src/poll.h
-  zmq-20230201.222/src/socket.c
-  zmq-20230201.222/src/socket.h
-  zmq-20230201.222/src/util.c
-  zmq-20230201.222/src/util.h
-  zmq-20230201.222/zmq-pkg.el
-  zmq-20230201.222/zmq.el
-Built zmq in 5.056s, finished at 2023-02-05T16:48:13+0000
+Created zmq-20230206.339.tar containing:
+  zmq-20230206.339/
+  zmq-20230206.339/Makefile
+  zmq-20230206.339/src/
+  zmq-20230206.339/src/Makefile.am
+  zmq-20230206.339/src/configure.ac
+  zmq-20230206.339/src/constants.c
+  zmq-20230206.339/src/context.c
+  zmq-20230206.339/src/context.h
+  zmq-20230206.339/src/core.c
+  zmq-20230206.339/src/core.h
+  zmq-20230206.339/src/emacs-module.h
+  zmq-20230206.339/src/emacs-zmq.c
+  zmq-20230206.339/src/emacs-zmq.h
+  zmq-20230206.339/src/msg.c
+  zmq-20230206.339/src/msg.h
+  zmq-20230206.339/src/poll.c
+  zmq-20230206.339/src/poll.h
+  zmq-20230206.339/src/socket.c
+  zmq-20230206.339/src/socket.h
+  zmq-20230206.339/src/util.c
+  zmq-20230206.339/src/util.h
+  zmq-20230206.339/zmq-pkg.el
+  zmq-20230206.339/zmq.el
+Built zmq in 3.992s, finished at 2023-02-06T04:05:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  403 Feb  5 16:48 packages/zmq-20230201.222.entry
-152K -rw-r--r-- 1 root root 150K Feb  5 16:48 packages/zmq-20230201.222.tar
+4.0K -rw-r--r-- 1 root root  403 Feb  6 00:19 packages/zmq-20230201.222.entry
+152K -rw-r--r-- 1 root root 150K Feb  6 00:19 packages/zmq-20230201.222.tar
+4.0K -rw-r--r-- 1 root root  403 Feb  6 04:05 packages/zmq-20230206.339.entry
+152K -rw-r--r-- 1 root root 150K Feb  6 04:05 packages/zmq-20230206.339.tar

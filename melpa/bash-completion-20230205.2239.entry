@@ -1,0 +1,11 @@
+(bash-completion .
+		 [(20230205 2239)
+		  ((emacs
+		    (25 3)))
+		  "Bash completion for the shell buffer" single
+		  ((:commit . "639aba28fb26d735942f9877acfb9e67fc459658")
+		   (:authors
+		    ("Stephane Zermatten" . "szermatt@gmx.net"))
+		   (:maintainer "Stephane Zermatten" . "szermatt@gmail.com")
+		   (:keywords "convenience" "unix")
+		   (:url . "http://github.com/szermatt/emacs-bash-completion"))])

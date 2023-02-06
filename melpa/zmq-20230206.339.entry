@@ -1,0 +1,13 @@
+(zmq .
+     [(20230206 339)
+      ((cl-lib
+	(0 5))
+       (emacs
+	(26)))
+      "ZMQ bindings in elisp" tar
+      ((:commit . "4166424e3615147b1e9361a0588c1fb6b81cb5e5")
+       (:authors
+	("Nathaniel Nicandro" . "nathanielnicandro@gmail.com"))
+       (:maintainer "Nathaniel Nicandro" . "nathanielnicandro@gmail.com")
+       (:keywords "comm")
+       (:url . "https://github.com/nnicandro/emacs-zmq"))])
