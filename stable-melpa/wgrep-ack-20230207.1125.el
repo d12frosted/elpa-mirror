@@ -5,11 +5,11 @@
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Contributor: Ivan Andrus <darthandrus@gmail.com>
 ;; Keywords: grep edit extensions
-;; Package-Version: 20230203.1214
-;; Package-Commit: b4d69280d8a6a5ded1597e02afbaa811a160383b
+;; Package-Version: 20230207.1125
+;; Package-Commit: edf768732a56840db6879706b64c5773c316d619
 ;; Package-Requires: ((emacs "25.1") (wgrep "3.0.0"))
 ;; URL: http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep-ack.el
-;; Emacs: GNU Emacs 22 or later
+;; Emacs: GNU Emacs 25 or later
 ;; Version: 1.0.0
 
 ;; This program is free software; you can redistribute it and/or

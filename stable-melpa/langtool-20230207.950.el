@@ -4,11 +4,11 @@
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: docs
-;; Package-Version: 20230207.317
-;; Package-Commit: 02f55e8d8be83a6f9465ec49c2a6728b16ae80d3
+;; Package-Version: 20230207.950
+;; Package-Commit: fc6c046af1c5e4e55331414387865f65afb1bd3c
 ;; URL: https://github.com/mhayashi1120/Emacs-langtool
 ;; Emacs: GNU Emacs 24 or later
-;; Version: 2.3.4
+;; Version: 2.3.7
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or
@@ -268,7 +268,7 @@ This java command holds LanguageTool process.
 Otherwise, function which return above value.
 
 e.g. ( Described at http://wiki.languagetool.org/command-line-options )
-\(setq langtool-java-user-arguments '(\"-Dfile.encoding=UTF-8\"))"
+\(setq langtool-java-user-arguments \\='(\"-Dfile.encoding=UTF-8\"))"
   :group 'langtool
   :type '(choice
           (repeat string)
@@ -500,7 +500,7 @@ Call just before POST with `application/x-www-form-urlencoded'."
              (cons (point) (+ (point) length)))
         (and (looking-at regexp)
              (cons (match-beginning 1) (match-end 1)))
-        (let ((beg (min (point-at-bol) (- (point) 20))))
+        (let ((beg (min (line-beginning-position) (- (point) 20))))
           (cl-loop while (and (not (bobp))
                               (<= beg (point)))
                    ;; backward just sentence length to search sentence after point
@@ -1010,7 +1010,7 @@ Ordinary no need to change this."
             (goto-char (point-min))
             (setq errmsg
                   (format "LanguageTool exited abnormally with code %d (%s)"
-                          code (buffer-substring (point) (point-at-eol))))))
+                          code (buffer-substring (point) (line-end-position))))))
         (kill-buffer pbuf))
        (t
         (setq errmsg "Buffer was dead")))
@@ -1354,7 +1354,8 @@ Ordinary no need to change this."
        (when (and command args
                   (executable-find command)
                   (= (langtool--with-java-environ
-                      (apply #'call-process command nil t nil args) 0)))
+                      (apply #'call-process command nil t nil args))
+                     0))
          (goto-char (point-min))
          (funcall parser))))
     (_

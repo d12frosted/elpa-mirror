@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.0
-;; Package-Version: 20230206.2022
-;; Package-Commit: 46cd60a1e010eda57c05a585e8707f9d146f96fb
+;; Package-Version: 20230207.1206
+;; Package-Commit: 00f2986d031baf1afaea45c64df81a76936509d2
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.3.0"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -384,11 +384,16 @@ FACE is the name of the face, with which the field should be propertized."
 
 (defmacro marginalia--fields (&rest fields)
   "Format annotation FIELDS as a string with separators in between."
-  `(concat
-    #(" " 0 1 (marginalia--align t))
-    ,@(mapcan (lambda (field)
-                `(marginalia-separator (marginalia--field ,@field)))
-              fields)))
+  (let ((left t))
+    (cons 'concat
+          (mapcan
+           (lambda (field)
+             (if (not (eq (car field) :left))
+                 `(,@(when left (setq left nil) `(#(" " 0 1 (marginalia--align t))))
+                   marginalia-separator (marginalia--field ,@field))
+               (unless left (error "Left fields must come first"))
+               `((marginalia--field ,@(cdr field)))))
+           fields))))
 
 (defun marginalia--documentation (str)
   "Format documentation string STR."
@@ -537,15 +542,14 @@ t cl-type"
 (defun marginalia-annotate-symbol (cand)
   "Annotate symbol CAND with its documentation string."
   (when-let (sym (intern-soft cand))
-    (concat
-     (marginalia-annotate-binding cand)
-     (marginalia--fields
-      ((marginalia--symbol-class sym) :face 'marginalia-type)
-      ((cond
-        ((fboundp sym) (marginalia--function-doc sym))
-        ((facep sym) (documentation-property sym 'face-documentation))
-        (t (documentation-property sym 'variable-documentation)))
-       :truncate 1.0 :face 'marginalia-documentation)))))
+    (marginalia--fields
+     (:left (marginalia-annotate-binding cand))
+     ((marginalia--symbol-class sym) :face 'marginalia-type)
+     ((cond
+       ((fboundp sym) (marginalia--function-doc sym))
+       ((facep sym) (documentation-property sym 'face-documentation))
+       (t (documentation-property sym 'variable-documentation)))
+      :truncate 1.0 :face 'marginalia-documentation))))
 
 (defun marginalia-annotate-command (cand)
   "Annotate command CAND with its documentation string.
@@ -572,14 +576,13 @@ keybinding since CAND includes it."
   "Annotate function CAND with its documentation string."
   (when-let (sym (intern-soft cand))
     (when (fboundp sym)
-      (concat
-       (marginalia-annotate-binding cand)
-       (marginalia--fields
-        ((marginalia--symbol-class sym) :face 'marginalia-type)
-        ((marginalia--function-args sym) :face 'marginalia-value
-         :truncate 0.5)
-        ((marginalia--function-doc sym) :truncate 1.0
-         :face 'marginalia-documentation))))))
+      (marginalia--fields
+       (:left (marginalia-annotate-binding cand))
+       ((marginalia--symbol-class sym) :face 'marginalia-type)
+       ((marginalia--function-args sym) :face 'marginalia-value
+        :truncate 0.5)
+       ((marginalia--function-doc sym) :truncate 1.0
+        :face 'marginalia-documentation)))))
 
 (defun marginalia--variable-value (sym)
   "Return the variable value of SYM as string."
@@ -696,14 +699,13 @@ keybinding since CAND includes it."
 (defun marginalia-annotate-char (cand)
   "Annotate character CAND with its general character category and character code."
   (when-let (char (char-from-name cand t))
-    (concat
-     (format #(" (%c)" 1 5 (face marginalia-char)) char)
-     (marginalia--fields
-      (char :format "%06X" :face 'marginalia-number)
-      ((char-code-property-description
-        'general-category
-        (get-char-code-property char 'general-category))
-       :width 30 :face 'marginalia-documentation)))))
+    (marginalia--fields
+     (:left char :format" (%c)" :face 'marginalia-char)
+     (char :format "%06X" :face 'marginalia-number)
+     ((char-code-property-description
+       'general-category
+       (get-char-code-property char 'general-category))
+      :width 30 :face 'marginalia-documentation))))
 
 (defun marginalia-annotate-minor-mode (cand)
   "Annotate minor-mode CAND with status and documentation string."
@@ -1071,19 +1073,18 @@ These annotations are skipped for remote paths."
       ;; NOTE: When the buffer key is present in the window state
       ;; it is added in front of the window buffer list and gets duplicated.
       (when (cadr (assq 'buffer ws)) (pop bufs))
-      (concat
-       (format #(" (%s)" 0 5 (face marginalia-key)) index)
-       (marginalia--fields
-        ((if (eq (car tab) 'current-tab)
-             (length (window-list nil 'no-minibuf))
-           (length bufs))
-         :format "win:%s" :face 'marginalia-size)
-        ((or (alist-get 'group tab) 'none)
-         :format "group:%s" :face 'marginalia-type :truncate 20)
-        ((if (eq (car tab) 'current-tab)
-             "(current tab)"
-           (string-join bufs " "))
-         :face 'marginalia-documentation))))))
+      (marginalia--fields
+       (:left index :format " (%s)" :face 'marginalia-key)
+       ((if (eq (car tab) 'current-tab)
+            (length (window-list nil 'no-minibuf))
+          (length bufs))
+        :format "win:%s" :face 'marginalia-size)
+       ((or (alist-get 'group tab) 'none)
+        :format "group:%s" :face 'marginalia-type :truncate 20)
+       ((if (eq (car tab) 'current-tab)
+            "(current tab)"
+          (string-join bufs " "))
+        :face 'marginalia-documentation)))))
 
 (defun marginalia-classify-by-command-name ()
   "Lookup category for current command."
