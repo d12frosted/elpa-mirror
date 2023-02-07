@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-magit-commit-mark
-;; Package-Version: 20230116.951
-;; Package-Commit: 6b4f520b50ec6d59af4b1d422a9cb9a2fb404be8
+;; Package-Version: 20230207.542
+;; Package-Commit: 9075f9499e653051ca8a86ad17ee704b6171e14f
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "28.1") (magit "3.3.0"))
 
@@ -598,20 +598,28 @@ ARG is the bit which is toggled, defaulting to 1 (read/unread)."
   "Jump to the next unread message."
   (interactive)
   (let ((bit magit-commit-mark--bitflag-read))
-    (when (magit-commit-mark--step-to-bit 1 nil bit)
+    (cond
+     ((magit-commit-mark--step-to-bit 1 nil bit)
       (when magit-commit-mark-on-skip-to-unread
         (magit-commit-mark--commit-at-point-action-on-bit-bol 'set bit))
-      t)))
+      t)
+     (t
+      (message "No unread commits in view (next)")
+      nil))))
 
 ;;;###autoload
 (defun magit-commit-mark-prev-unread ()
   "Jump to the previous unread message."
   (interactive)
   (let ((bit magit-commit-mark--bitflag-read))
-    (when (magit-commit-mark--step-to-bit -1 nil bit)
+    (cond
+     ((magit-commit-mark--step-to-bit -1 nil bit)
       (when magit-commit-mark-on-skip-to-unread
         (magit-commit-mark--commit-at-point-action-on-bit-bol 'set bit))
-      t)))
+      t)
+     (t
+      (message "No unread commits in view (previous)")
+      nil))))
 
 ;;;###autoload
 (define-minor-mode magit-commit-mark-mode

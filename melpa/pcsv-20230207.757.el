@@ -2,11 +2,11 @@
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: data
-;; Package-Version: 20230203.1330
-;; Package-Commit: f77f94500ffae0414d82f0e22b8ce7ddfc11a0e6
+;; Package-Version: 20230207.757
+;; Package-Commit: 4b5e801d213a460a6cb3cb2997a0a6cd33c7bc58
 ;; URL: https://github.com/mhayashi1120/Emacs-pcsv
 ;; Emacs: GNU Emacs 24 or later
-;; Version: 1.3.8
+;; Version: 1.3.9
 ;; Package-Requires: ((emacs "24.1"))
 
 ;; This program is free software; you can redistribute it and/or
@@ -112,7 +112,7 @@
 ;; 2. read just a char in a loop
 ;; 3. hybrid of 1. and 2.
 
-;; first version of pcsv.el was 1. 
+;; first version of pcsv.el was 1.
 ;;   but this version call too many `replace-regexp-in-string' to replace `"' (double quote).
 ;; next pcsv.el was 2.
 ;;   this version slow down when parsing huge csv.
