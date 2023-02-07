@@ -5,6 +5,8 @@
 ;; Author: Nicholas M. Van Horn <nvanhorn@protonmail.com>
 ;; Homepage: https://github.com/n3mo/cyberpunk-theme.el
 ;; Keywords: color theme cyberpunk
+;; Package-Version: 20200601.1632
+;; Package-Commit: 81004fc774d373777d426926fc11abcf1e7ab334
 ;; Version: 1.22
 
 ;; This file is free software; you can redistribute it and/or modify

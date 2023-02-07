@@ -12,17 +12,17 @@ To enable the mode, run `sticky-shell-mode' in any shell buffer.
 To enable the mode globally (for all shell buffers)
 run `sticky-shell-global-mode'.
 
+`sticky-shell-mode' currently supports any mode derived from the following:
+`shell-mode', `eshell-mode', `term-mode', `vterm-mode'.
+It should be easy to add support for additional modes:
+see `sticky-shell-supported-modes'.
+
 Because headers have to fit within one line, sometimes the final part of the
 prompt is not visible.  To ensure that the prompt's beginning and end are
 always both visible, you can use `sticky-shell-shorten-header-mode'.
 
 If you'd like this shorten-header mode to be enabled by default, you should
 add `sticky-shell-shorten-header-set-mode' to `sticky-shell-mode-hook'
-
-`sticky-shell-mode' currently supports any mode derived from the following:
-`shell-mode', `eshell-mode', `term-mode', `vterm-mode'.
-It should be easy to add support for additional modes:
-see `sticky-shell-supported-modes'.
 
 Note that `sticky-shell-shorten-header-mode' doesn't work properly in
 `term-mode' and `vterm-mode'. This is not because of an issue with

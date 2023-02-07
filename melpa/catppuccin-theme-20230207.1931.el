@@ -8,8 +8,8 @@
 ;; Author: nyxkrage
 ;; Original-Author: film42
 ;; Version: 1.0.0
-;; Package-Version: 20230207.1445
-;; Package-Commit: 6c762d1f298e50ceaef8c5182054b09ab0ce4128
+;; Package-Version: 20230207.1931
+;; Package-Commit: a438b3dde17dd4e5b8237df4bcf3354a0842b98d
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
@@ -986,7 +986,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (whitespace-trailing :inherit trailing-whitespace)
                ;; yard-mode
                (yard-tag-face :inherit font-lock-builtin-face)
-               (yard-directive-face :inherit font-lock-builtin-face))))
+               (yard-directive-face :inherit font-lock-builtin-face)
+               ;; line-reminder
+               (line-reminder-modified-sign-face :foreground ,ctp-green))))
 
   (apply #'custom-theme-set-faces
          'catppuccin

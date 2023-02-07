@@ -5,8 +5,8 @@
 ;; Author: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; Maintainer: Andrew De Angelis <bobodeangelis@gmail.com>
 ;; URL: https://github.com/andyjda/sticky-shell
-;; Package-Version: 20230203.558
-;; Package-Commit: 60fa3cbf17572426eca4bc970f597fc31e5369c3
+;; Package-Version: 20230207.1454
+;; Package-Commit: 030535451b7c12eea3a94dfc1a439b8baa96944b
 ;; Version: 1.0.1
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: processes, terminals, tools
@@ -39,17 +39,17 @@
 ;; To enable the mode globally (for all shell buffers)
 ;; run `sticky-shell-global-mode'.
 ;;
+;; `sticky-shell-mode' currently supports any mode derived from the following:
+;; `shell-mode', `eshell-mode', `term-mode', `vterm-mode'.
+;; It should be easy to add support for additional modes:
+;; see `sticky-shell-supported-modes'.
+;;
 ;; Because headers have to fit within one line, sometimes the final part of the
 ;; prompt is not visible.  To ensure that the prompt's beginning and end are
 ;; always both visible, you can use `sticky-shell-shorten-header-mode'.
 ;;
 ;; If you'd like this shorten-header mode to be enabled by default, you should
 ;; add `sticky-shell-shorten-header-set-mode' to `sticky-shell-mode-hook'
-;;
-;; `sticky-shell-mode' currently supports any mode derived from the following:
-;; `shell-mode', `eshell-mode', `term-mode', `vterm-mode'.
-;; It should be easy to add support for additional modes:
-;; see `sticky-shell-supported-modes'.
 ;;
 ;; Note that `sticky-shell-shorten-header-mode' doesn't work properly in
 ;; `term-mode' and `vterm-mode'. This is not because of an issue with
