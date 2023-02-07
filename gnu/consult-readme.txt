@@ -50,7 +50,8 @@ Table of Contents
 .. 8. Histories
 .. 9. Modes
 .. 10. Org Mode
-.. 11. Miscellaneous
+.. 11. Help
+.. 12. Miscellaneous
 2. Special features
 .. 1. Live previews
 .. 2. Narrowing and grouping
@@ -337,12 +338,38 @@ Table of Contents
     and recursive editing.
 
 
-1.11 Miscellaneous
-──────────────────
+1.11 Help
+─────────
 
   • `consult-man': Find Unix man page, via Unix `apropos' or `man
     -k'. `consult-man' opens the selected man page using the Emacs `man'
     command.
+  • `consult-info': Full text search through info pages. If the command
+    is invoked from within an `*info*' buffer, it will search through
+    the current manual. You may want to create your own commands which
+    search through a predefined set of info pages, for example:
+  ┌────
+  │ (defun consult-info-emacs ()
+  │   "Search through Emacs info pages."
+  │   (interactive)
+  │   (consult-info "emacs" "efaq" "elisp" "cl" "compat"))
+  │ 
+  │ (defun consult-info-org ()
+  │   "Search through the Org info page."
+  │   (interactive)
+  │   (consult-info "org"))
+  │ 
+  │ (defun consult-info-completion ()
+  │   "Search through completion info pages."
+  │   (interactive)
+  │   (consult-info "vertico" "consult" "marginalia" "orderless" "embark"
+  │ 		"corfu" "cape" "tempel"))
+  └────
+
+
+1.12 Miscellaneous
+──────────────────
+
   • `consult-theme': Select a theme and disable all currently enabled
     themes.  Supports live preview of the theme while scrolling through
     the candidates.
@@ -419,8 +446,8 @@ Table of Contents
 
   • Automatic and immediate `'any'
   • Automatic and delayed `(list :debounce 0.5 'any)'
-  • Manual and immediate `(kbd "M-.")'
-  • Manual and delayed `(list :debounce 0.5 (kbd "M-."))'
+  • Manual and immediate `"M-."'
+  • Manual and delayed `(list :debounce 0.5 "M-.")'
   • Disabled `nil'
 
   A safe recommendation is to leave automatic immediate previews enabled
@@ -440,7 +467,7 @@ Table of Contents
   │  consult--source-recent-file consult--source-project-recent-file
   │  ;; my/command-wrapping-consult    ;; disable auto previews inside my command
   │  :preview-key '(:debounce 0.4 any) ;; Option 1: Delay preview
-  │  ;; :preview-key (kbd "M-."))      ;; Option 2: Manual preview
+  │  ;; :preview-key "M-.")            ;; Option 2: Manual preview
   └────
 
   In this case one may wonder what the difference is between using an
@@ -461,9 +488,9 @@ Table of Contents
   │ ;; Preview immediately on M-., on up/down after 0.5s, on any other key after 1s
   │ (consult-customize consult-theme
   │ 		   :preview-key
-  │ 		   (list (kbd "M-.")
-  │ 			 :debounce 0.5 (kbd "<up>") (kbd "<down>")
-  │ 			 :debounce 1 'any))
+  │ 		   '("M-."
+  │ 		     :debounce 0.5 "<up>" "<down>"
+  │ 		     :debounce 1 any))
   └────
 
 
@@ -640,7 +667,7 @@ Table of Contents
   │ (consult-customize
   │  consult--source-bookmark consult--source-file-register
   │  consult--source-recent-file consult--source-project-recent-file
-  │  :preview-key (kbd "M-."))
+  │  :preview-key "M-.")
   └────
 
   Sources can be added directly to the `consult-buffer-source' list for
@@ -801,9 +828,12 @@ Table of Contents
   │ (use-package consult
   │   ;; Replace bindings. Lazily loaded due by `use-package'.
   │   :bind (;; C-c bindings (mode-specific-map)
+  │ 	 ("C-c M-x" . consult-mode-command)
   │ 	 ("C-c h" . consult-history)
-  │ 	 ("C-c m" . consult-mode-command)
   │ 	 ("C-c k" . consult-kmacro)
+  │ 	 ("C-c m" . consult-man)
+  │ 	 ("C-c i" . consult-info)
+  │ 	 ([remap Info-search] . consult-info)
   │ 	 ;; C-x bindings (ctl-x-map)
   │ 	 ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complex-command
   │ 	 ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
@@ -877,8 +907,8 @@ Table of Contents
   │   ;; Optionally configure preview. The default value
   │   ;; is 'any, such that any key triggers the preview.
   │   ;; (setq consult-preview-key 'any)
-  │   ;; (setq consult-preview-key (kbd "M-."))
-  │   ;; (setq consult-preview-key (list (kbd "<S-down>") (kbd "<S-up>")))
+  │   ;; (setq consult-preview-key "M-.")
+  │   ;; (setq consult-preview-key '("S-<down>" "S-<up>"))
   │   ;; For some commands and buffer sources it is useful to configure the
   │   ;; :preview-key on a per-command basis using the `consult-customize' macro.
   │   (consult-customize
@@ -887,12 +917,12 @@ Table of Contents
   │    consult-bookmark consult-recent-file consult-xref
   │    consult--source-bookmark consult--source-file-register
   │    consult--source-recent-file consult--source-project-recent-file
-  │    ;; :preview-key (kbd "M-.")
+  │    ;; :preview-key "M-."
   │    :preview-key '(:debounce 0.4 any))
   │ 
   │   ;; Optionally configure the narrowing key.
   │   ;; Both < and C-+ work reasonably well.
-  │   (setq consult-narrow-key "<") ;; (kbd "C-+")
+  │   (setq consult-narrow-key "<") ;; "C-+"
   │ 
   │   ;; Optionally make narrowing help available in the minibuffer.
   │   ;; You may want to use `embark-prefix-help-command' or which-key instead.
@@ -900,16 +930,17 @@ Table of Contents
   │ 
   │   ;; By default `consult-project-function' uses `project-root' from project.el.
   │   ;; Optionally configure a different project root function.
-  │   ;; There are multiple reasonable alternatives to chose from.
   │   ;;;; 1. project.el (the default)
   │   ;; (setq consult-project-function #'consult--default-project--function)
-  │   ;;;; 2. projectile.el (projectile-project-root)
+  │   ;;;; 2. vc.el (vc-root-dir)
+  │   ;; (setq consult-project-function (lambda (_) (vc-root-dir)))
+  │   ;;;; 3. locate-dominating-file
+  │   ;; (setq consult-project-function (lambda (_) (locate-dominating-file "." ".git")))
+  │   ;;;; 4. projectile.el (projectile-project-root)
   │   ;; (autoload 'projectile-project-root "projectile")
   │   ;; (setq consult-project-function (lambda (_) (projectile-project-root)))
-  │   ;;;; 3. vc.el (vc-root-dir)
-  │   ;; (setq consult-project-function (lambda (_) (vc-root-dir)))
-  │   ;;;; 4. locate-dominating-file
-  │   ;; (setq consult-project-function (lambda (_) (locate-dominating-file "." ".git")))
+  │   ;;;; 5. No project support
+  │   ;; (setq consult-project-function nil)
   │ )
   └────
 
@@ -1007,13 +1038,13 @@ Table of Contents
   │  ;; Disable preview for `consult-theme' completely.
   │  consult-theme :preview-key nil
   │  ;; Set preview for `consult-buffer' to key `M-.'
-  │  consult-buffer :preview-key (kbd "M-.")
+  │  consult-buffer :preview-key "M-."
   │  ;; For `consult-line' change the prompt and specify multiple preview
   │  ;; keybindings. Note that you should bind <S-up> and <S-down> in the
   │  ;; `minibuffer-local-completion-map' or `vertico-map' to the commands which
   │  ;; select the previous or next candidate.
   │  consult-line :prompt "Search: "
-  │  :preview-key (list (kbd "<S-down>") (kbd "<S-up>")))
+  │  :preview-key '("S-<down>" "S-<up>"))
   └────
 
   The configuration values are evaluated at runtime, just before the
@@ -1242,17 +1273,19 @@ Table of Contents
   If you find a bug or suspect that there is a problem with Consult,
   please carry out the following steps:
 
-  1. *Update all the relevant packages to the newest version*.  This
-     includes Consult, Vertico or other completion UIs, Marginalia,
-     Embark and Orderless.
-  2. Either use the default completion UI or ensure that exactly one of
+  1. *Search through the issue tracker* if your issue has been reported
+     before (and has been resolved eventually) in the meantime.
+  2. *Update all the relevant packages to the newest version*. This
+     includes Consult, Compat, Vertico or other completion UIs,
+     Marginalia, Embark and Orderless.
+  3. Either use the default completion UI or ensure that exactly one of
      `vertico-mode', `mct-mode', or `icomplete-mode' is enabled. The
-     unsupported modes `ivy-mode', `helm-mode' and `ido-ubiquitous-mode'
-     must be disabled.
-  3. Ensure that the `completion-styles' variable is properly
+     unsupported modes `selectrum-mode', `ivy-mode', `helm-mode' and
+     `ido-ubiquitous-mode' must be disabled.
+  4. Ensure that the `completion-styles' variable is properly
      configured. Try to set `completion-styles' to a list including
      `substring' or `orderless'.
-  4. Try to reproduce the issue by starting a bare bone Emacs instance
+  5. Try to reproduce the issue by starting a bare bone Emacs instance
      with `emacs -Q' on the command line. Execute the following minimal
      code snippets in the scratch buffer. This way we can exclude side
      effects due to configuration settings. If other packages are

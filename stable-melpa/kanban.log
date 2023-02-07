@@ -3,4 +3,15 @@ Fetcher: hg
 Source:  https://hg.sr.ht/~arnebab/kanban.el
 
 Updating /mnt/store/melpa/working/kanban/
-Wrong type argument: stringp, nil
+Checking out 9b588f94efb5a784c9bc10ad66f424b253c5fe5e
+
+Command '' exited with non-zero exit-code: 255
+
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command exited with non-zero exit-code: 255
