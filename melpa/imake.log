@@ -3,5 +3,12 @@ Fetcher: github
 Source:  https://github.com/tarsius/imake.git
 
 Updating /mnt/store/melpa/working/imake/
-Checking out 428db7ea0589a7b53c992b58ece1fa223e91c157
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

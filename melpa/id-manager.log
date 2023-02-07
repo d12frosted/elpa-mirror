@@ -3,5 +3,9 @@ Fetcher: github
 Source:  https://github.com/kiwanami/emacs-id-manager.git
 
 Updating /mnt/store/melpa/working/id-manager/
-Checking out 14ebc35db298aac4dedc8aa188bc46bacab81f3b
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/kiwanami/emacs-id-manager.git/': The requested URL returned error: 504
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,8 @@
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
 ;; Version: 1.3
-;; Package-Version: 20221119.1528
-;; Package-Commit: cf48657fbdb322bb059051737a2515e6f648b12c
+;; Package-Version: 20230206.2325
+;; Package-Commit: 74f940fd57d5d51e3ec5131f6ef563546be8bcc1
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -440,6 +440,8 @@ If PROJECT does not exist, create it, along with a `project.todo' file, in its o
 (defun tabspaces-save-session ()
   "Save tabspace name and buffers."
   (interactive)
+  ;; Start from an empty list.
+  (setq tabspaces--session-list nil)
   (cl-loop for tab in (tabspaces--list-tabspaces)
            do (progn
                 (tab-bar-select-tab-by-name tab)
@@ -461,9 +463,20 @@ If PROJECT does not exist, create it, along with a `project.todo' file, in its o
   "Restore tabspaces session."
   (interactive)
   (load-file tabspaces-session-file)
+  ;; Start looping through the session list, but ensure to start from a
+  ;; temporary buffer "*tabspaces--placeholder*" in order not to pollute the
+  ;; buffer list with the final buffer from the previous tab.
+  (cl-loop for elm in tabspaces--session-list do
+           (switch-to-buffer "*tabspaces--placeholder*")
+           (tabspaces-switch-or-create-workspace (cdr elm))
+           (mapc #'find-file (car elm)))
+  ;; Once the session list is restored, remove the temporary buffer from the
+  ;; buffer list.
   (cl-loop for elm in tabspaces--session-list do
            (tabspaces-switch-or-create-workspace (cdr elm))
-           (mapcar #'find-file (car elm))))
+           (tabspaces-remove-selected-buffer "*tabspaces--placeholder*"))
+  ;; Finally, kill the temporary buffer to clean up.
+  (kill-buffer "*tabspaces--placeholder*"))
 
 
 ;;;; Define Keymaps
