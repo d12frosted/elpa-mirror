@@ -4,11 +4,11 @@
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: docs
-;; Package-Version: 20230131.312
-;; Package-Commit: 3f391b55b8e7cde00fe82b54e2cca6ff883bb203
+;; Package-Version: 20230207.317
+;; Package-Commit: 02f55e8d8be83a6f9465ec49c2a6728b16ae80d3
 ;; URL: https://github.com/mhayashi1120/Emacs-langtool
 ;; Emacs: GNU Emacs 24 or later
-;; Version: 2.3.3
+;; Version: 2.3.4
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or
@@ -445,7 +445,7 @@ Call just before POST with `application/x-www-form-urlencoded'."
       (with-current-buffer buf
         (goto-char (point-max))
         (insert "---------- [" key "] ----------\n")
-        (insert (apply 'format fmt args) "\n")))))
+        (insert (apply #'format fmt args) "\n")))))
 
 (defun langtool--chomp (s)
   (if (string-match "\\(?:\\(\r\n\\)+\\|\\(\n\\)+\\)\\'" s)
@@ -633,7 +633,7 @@ Call just before POST with `application/x-www-form-urlencoded'."
       (if (overlay-get ov 'langtool-suggestions)
           (concat
            " -> ("
-           (mapconcat 'identity (overlay-get ov 'langtool-suggestions) ", ")
+           (mapconcat #'identity (overlay-get ov 'langtool-suggestions) ", ")
            ")")
         "")))
    overlays "\n"))
@@ -651,7 +651,7 @@ Call just before POST with `application/x-www-form-urlencoded'."
           (concat
            "Suggestions: "
            (mapconcat
-            'identity
+            #'identity
             (overlay-get ov 'langtool-suggestions)
             "; "))
         "")))
@@ -722,11 +722,11 @@ Ordinary no need to change this."
         (locals langtool-local-disabled-rules))
     (cond
      ((stringp custom)
-      (mapconcat 'identity
+      (mapconcat #'identity
                  (cons custom locals)
                  ","))
      (t
-      (mapconcat 'identity
+      (mapconcat #'identity
                  (append custom locals)
                  ",")))))
 
@@ -757,7 +757,7 @@ Ordinary no need to change this."
   (generate-new-buffer " *Langtool* "))
 
 (defun langtool--sentence-to-fuzzy (sentence)
-  (mapconcat 'regexp-quote
+  (mapconcat #'regexp-quote
              ;; this sentence is reported by LanguageTool
              (split-string sentence " +")
              ;; LanguageTool interpreted newline as space.
@@ -854,7 +854,7 @@ Ordinary no need to change this."
              ((consp checks)
               (langtool--create-overlay version (car checks))
               (run-with-idle-timer
-               1 nil 'langtool--lazy-apply-checks
+               1 nil #'langtool--lazy-apply-checks
                proc version (cdr checks)))
              (t
               (let ((source (process-get proc 'langtool-source-buffer)))
@@ -955,7 +955,7 @@ Ordinary no need to change this."
       (langtool--debug "Command" "%s: %s" command args)
       (let* ((buffer (langtool--process-create-client-buffer))
              (proc (langtool--with-java-environ
-                    (apply 'start-process "LanguageTool" buffer command args))))
+                    (apply #'start-process "LanguageTool" buffer command args))))
         (set-process-filter proc 'langtool-command--process-filter)
         (set-process-sentinel proc 'langtool-command--process-sentinel)
         (process-put proc 'langtool-source-buffer (current-buffer))
@@ -1145,7 +1145,7 @@ Ordinary no need to change this."
       (langtool--debug "HTTPServer" "%s: %s" bin args)
       (let* ((buffer (get-buffer-create " *LangtoolHttpServer* "))
              (proc (apply
-                    'start-process
+                    #'start-process
                     "LangtoolHttpServer" buffer
                     bin
                     args)))
@@ -1354,7 +1354,7 @@ Ordinary no need to change this."
        (when (and command args
                   (executable-find command)
                   (= (langtool--with-java-environ
-                      (apply 'call-process command nil t nil args) 0)))
+                      (apply #'call-process command nil t nil args) 0)))
          (goto-char (point-min))
          (funcall parser))))
     (_
@@ -1544,7 +1544,7 @@ Ordinary no need to change this."
 ;;
 
 (defcustom langtool-autoshow-message-function
-  'langtool-autoshow-default-message
+  #'langtool-autoshow-default-message
   "Function with one argument which displaying error overlays reported
  by LanguageTool. These overlays hold some useful properties:
  `langtool-simple-message', `langtool-rule-id', `langtool-suggestions' .
@@ -1598,7 +1598,7 @@ See the Commentary section for `popup' implementation."
     (setq langtool-autoshow--timer
           (run-with-idle-timer
            (langtool-autoshow--idle-delay) t 'langtool-autoshow--maybe)))
-  (add-hook 'kill-buffer-hook 'langtool-autoshow-cleanup-timer-maybe nil t))
+  (add-hook 'kill-buffer-hook #'langtool-autoshow-cleanup-timer-maybe nil t))
 
 (defun langtool-autoshow-cleanup-timer-maybe ()
   (unless (langtool-working-p)
@@ -1615,7 +1615,7 @@ See the Commentary section for `popup' implementation."
         (set
          (append
           '(("auto" . auto))
-          (or (mapcar 'list (langtool--available-languages))
+          (or (mapcar #'list (langtool--available-languages))
               (mapcar (lambda (x) (list (car x))) locale-language-names)))))
     (let ((key (completing-read "Lang: " set)))
       (or (cdr (assoc key set)) key))))
@@ -1654,7 +1654,7 @@ Goto previous error."
     (if (null msgs)
         (message "No errors")
       (langtool--show-message-buffer
-       (mapconcat 'identity msgs "\n")))))
+       (mapconcat #'identity msgs "\n")))))
 
 (defun langtool-check-done ()
   "Finish LanguageTool process and cleanup existing colorized texts."
@@ -1664,7 +1664,7 @@ Goto previous error."
   (message "Cleaned up LanguageTool."))
 
 ;;;###autoload
-(defalias 'langtool-check 'langtool-check-buffer)
+(defalias 'langtool-check #'langtool-check-buffer)
 
 ;;;###autoload
 (defun langtool-check-buffer (&optional lang)

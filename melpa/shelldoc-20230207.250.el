@@ -1,11 +1,11 @@
-;;; shelldoc.el --- shell command editing support with man page.
+;;; shelldoc.el --- shell command editing support with man page. -*- lexical-binding: t -*-
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: applications
-;; Package-Version: 20200513.1206
-;; Package-Commit: fa69f67b6229fad3f31d936955ca8d1982009b77
+;; Package-Version: 20230207.250
+;; Package-Commit: 178d78d08e94b273b23ab1a32c5be509fdfe2286
 ;; URL: http://github.com/mhayashi1120/Emacs-shelldoc
-;; Version: 0.1.3
+;; Version: 0.2.0
 ;; Package-Requires: ((cl-lib "0.3") (s "1.9.0"))
 
 ;; This program is free software; you can redistribute it and/or
@@ -138,10 +138,11 @@ If you need to read default, set to nil."
 (defun shelldoc--call-man-to-string (args)
   (shelldoc--man-environ
    (when (= (apply
-             'call-process
+             #'call-process
              manual-program
              nil t nil
-             args) 0)
+             args)
+            0)
      (buffer-string))))
 
 (defun shelldoc--read-manpage (name)
@@ -154,15 +155,15 @@ If you need to read default, set to nil."
     ;; 1. Executable programs or shell commands
     ;; 8. System administration commands (usually only for root)
     (setq args (append
-                (list "-S" (or shelldoc--man-section "1:8")))
-                args))
+                args
+                (list "-S" (or shelldoc--man-section "1:8"))))
     (setq args (append args (list name)))
     (shelldoc--call-man-to-string args)))
 
 (defun shelldoc--manpage-exists-p (name)
-  (let* ((args (list
-                (list "-S" (or shelldoc--man-section "1:8")))
-                "--where" name))
+  (let* ((args (append
+                (list "-S" (or shelldoc--man-section "1:8"))
+                (list "--where" name)))
          (out (shelldoc--call-man-to-string args)))
     (and out (s-trim out))))
 
@@ -409,7 +410,7 @@ See the `shelldoc--git-commands-filter' as sample."
 
 (defun shelldoc--windows-bigger-order ()
   (mapcar
-   'car
+   #'car
    (sort
     (mapcar
      (lambda (w)
@@ -539,7 +540,7 @@ See the `shelldoc--git-commands-filter' as sample."
 
 ;; to prepare man buffer to complete options.
 (defun shelldoc--prepare-popup-buffer ()
-  (cl-destructuring-bind (cmd-before cmd-after)
+  (cl-destructuring-bind (cmd-before _cmd-after)
       (shelldoc--parse-current-command-line)
     (let ((cmd (shelldoc--guess-manpage-name cmd-before)))
       (when cmd
@@ -553,7 +554,7 @@ See the `shelldoc--git-commands-filter' as sample."
 
 ;; prepare man buffer and popup window.
 (defun shelldoc--print-command-info ()
-  (cl-destructuring-bind (cmd-before cmd-after)
+  (cl-destructuring-bind (cmd-before _cmd-after)
       (shelldoc--parse-current-command-line)
     (let ((cmd (shelldoc--guess-manpage-name cmd-before))
           (clear (lambda ()
@@ -577,12 +578,11 @@ See the `shelldoc--git-commands-filter' as sample."
                   words)
               (cond
                ((eq strategy 'common-unix)
-                (cl-destructuring-bind (cmd-before2 cmd-after2)
+                (cl-destructuring-bind (cmd-before2 _cmd-after2)
                     ;; fallback command-line parsing after detect
                     ;; option parsing rule.
                     (shelldoc--parse-current-command-line t)
-                  (setq cmd-before cmd-before2)
-                  (setq cmd-after cmd-after2))
+                  (setq cmd-before cmd-before2))
                 (setq words (shelldoc--split-compound-option cmd-before)))
                (t
                 (setq words cmd-before)))
@@ -609,7 +609,7 @@ See the `shelldoc--git-commands-filter' as sample."
 (defconst shelldoc--man-option-re
   (eval-when-compile
     (mapconcat
-     'identity
+     #'identity
      '(
        ;; general option segment start
        "^\\(?:[\s\t]*\\(-[^\s\t\n,]+\\)\\)"
@@ -695,12 +695,12 @@ Toggle between default locale and todo"
 (defun shelldoc-isearch-forward-document ()
   "Incremental search text in document buffer."
   (interactive)
-  (shelldoc--invoke-function 'isearch-forward))
+  (shelldoc--invoke-function #'isearch-forward))
 
 (defun shelldoc-isearch-backward-document ()
   "Incremental search text in document buffer."
   (interactive)
-  (shelldoc--invoke-function 'isearch-backward))
+  (shelldoc--invoke-function #'isearch-backward))
 
 (defun shelldoc-toggle-doc-window ()
   "Toggle shelldoc popup window is show/hide."
@@ -799,8 +799,10 @@ Toggle between default locale and todo"
     (setq shelldoc-minor-mode-map map)))
 
 (define-minor-mode shelldoc-minor-mode
-  ""
-  nil nil shelldoc-minor-mode-map
+  "Activate shelldoc popup in current buffer."
+  :init-value nil
+  :lighter nil
+  :keymap shelldoc-minor-mode-map
   (cond
    (shelldoc-minor-mode
     (add-hook 'kill-buffer-hook 'shelldoc--cleanup-when-kill-buffer)

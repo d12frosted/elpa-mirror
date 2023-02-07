@@ -4,11 +4,11 @@
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: docs
-;; Package-Version: 20230206.859
-;; Package-Commit: e0666f000c11571f96582f0a1dd75d6e29e74703
+;; Package-Version: 20230207.319
+;; Package-Commit: 25b23a2dc592cdfe498740af87d975f7ef23a854
 ;; URL: https://github.com/mhayashi1120/Emacs-langtool
 ;; Emacs: GNU Emacs 25 or later
-;; Version: 1.1.0
+;; Version: 1.1.1
 ;; Package-Requires: ((emacs "25.1") (popup "0.5.9") (langtool "2.3.2"))
 
 ;; This program is free software; you can redistribute it and/or
@@ -34,7 +34,6 @@
 ;; desired.  And put the following expression into your ~/.emacs.
 ;;
 ;;     (require 'langtool-popup)
-;;     (setq langtool-autoshow-message-function #'langtool-popup-autoshow)
 ;;
 ;; Or use Melpa (https://melpa.org/)
 
@@ -59,7 +58,7 @@
       (popup-tip msg))))
 
 ;; To keep Compat
-(defalias 'langtool-popup-autoshow-detail 'langtool-popup-autoshow)
+(defalias 'langtool-popup-autoshow-detail #'langtool-popup-autoshow)
 
 (setq langtool-autoshow-message-function #'langtool-popup-autoshow)
 

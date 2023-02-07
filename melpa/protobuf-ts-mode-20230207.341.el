@@ -2,8 +2,8 @@
 
 ;; Author           : ookami <mail@ookami.one>
 ;; Version          : 1.0
-;; Package-Version: 20230118.1430
-;; Package-Commit: b65dc2379915fc846ff2578be5b652081bea193b
+;; Package-Version: 20230207.341
+;; Package-Commit: 3076f25bd5ce05f4a4a5840506c3a5a2c0e839d9
 ;; URL              : https://git.ookami.one/cgit/protobuf-ts-mode
 ;; Package-Requires : ((emacs "29"))
 ;; Keywords         : protobuf languages tree-sitter
@@ -96,11 +96,9 @@
     (treesit-parser-create 'proto)
 
     ;; Comments
-    (setq-local comment-start "/* ")
-    (setq-local comment-end "*/ ")
-    (setq-local comment-start-skip (rx (or (seq "/" (+ "/"))
-                                           (seq "/" (+ "*")))
-                                       (* (syntax whitespace))))
+    (setq-local comment-start "// ")
+    (setq-local comment-end "")
+    (setq-local comment-start-skip (rx "//" (* (syntax whitespace))))
 
     ;; Font-lock
     (setq-local treesit-font-lock-settings protobuf-ts-mode--font-lock-settings)
@@ -114,7 +112,7 @@
                 `(("Service" "\\`service_name\\'" nil nil)
                   ("RPC" "\\`rpc_name\\'" nil nil)
                   ("Message" "\\`message_name\\'" nil nil)
-                  ("Enum" "\\`enum_name'" nil nil)))
+                  ("Enum" "\\`enum_name\\'" nil nil)))
 
     ;; Indent
     (setq-local treesit-simple-indent-rules protobuf-ts-mode--indent-rules)
