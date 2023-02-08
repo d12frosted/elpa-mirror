@@ -6,8 +6,8 @@
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;;
 ;; URL: https://github.com/abo-abo/auto-yasnippet
-;; Package-Version: 20220927.857
-;; Package-Commit: 7ef65b8e128bcf8afc52a702402c7943839abfb9
+;; Package-Version: 20230208.331
+;; Package-Commit: 6a9e406d0d7f9dfd6dff7647f358cb05a0b1637e
 ;; Version: 1.0.0
 ;; Package-Requires: ((yasnippet "0.14.0") (emacs "25.1"))
 ;;
@@ -498,8 +498,8 @@ and will be used for consecutive `aya-expand' commands.
 When PREFIX is given, the corresponding field number is
 modified to make it the current point after expansion."
   (interactive "p")
-  (unless (> (length aya-history)
-             (user-error "Nothing in aya-history to expand")))
+  (unless (> (length aya-history) 0)
+             (user-error "Nothing in aya-history to expand"))
   (setq aya-current (completing-read "Select aya-snippet: " aya-history))
   (aya-expand prefix))
 

@@ -4,6 +4,8 @@
 
 ;; Author: Kevin W. van Rooijen <kevin.van.rooijen@attichacker.com>
 ;; Keywords: transpose, convenience
+;; Package-Version: 20150405.716
+;; Package-Commit: 667327602004794de97214cf336ac61650ef75b7
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
