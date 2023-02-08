@@ -1,9 +1,9 @@
-;;; tok-theme.el --- Dark and vibrant theme for Emacs -*- lexical-binding: t; -*-
+;;; tok-theme.el --- Minimal, calm and dark theme for Emacs -*- lexical-binding: t; -*-
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230205.2022
-;; Package-Commit: 96562e2b1f502c3a5fc6f69737e0a9c6b9ed2a77
+;; Package-Version: 20230203.1654
+;; Package-Commit: b096aa66a704e5c851b9285315fe931e2a8b605c
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -36,19 +36,17 @@
 
 ;;; Commentary:
 
-;; Tok is a dark and vibrant theme for Emacs.
+;; Tok is a minimal, calm and dark theme for Emacs.
 
 ;;; Code:
 
 (deftheme tok
-  "Dark and vibrant theme for Emacs")
+  "Minimal, calm and dark theme for Emacs")
 
 (let ((class '((class color) (min-colors 89)))
       (dark-grey "#212121") (grey "#333333") (light-grey "#4d4d4d")
-      (red "#de0000") (blue "#0000de") (green "#00de00")
-      (cyan "#00dede")  (yellow "#dede00") (green "#00de00")
-      (magenta "#de00de") (orange "#de9000")
-      (fg "#dedede") (bg "#121212"))
+      (dark-red "#610000") (red "#de0000")
+      (fg "#bfbfbf") (bg "#121212"))
   (custom-theme-set-faces
    'tok
    ;; In case you're using this theme in terminal, let the terminal
@@ -61,18 +59,18 @@
    ;; Basic faces
    `(highlight ((,class (:background ,dark-grey))))
    `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
-                      :foreground ,fg :background ,blue))))
+                      :background ,dark-red))))
    `(secondary-selection ((,class (:inherit region))))
-   `(trailing-whitespace ((t (nil))))
-   `(error ((,class (:foreground ,red))))
-   `(warning ((,class (:weight bold :foreground ,orange))))
-   `(success ((,class (:weight bold :foreground ,green))))
+   `(trailing-whitespace ((,class (:inherit error))))
+   `(error ((,class (:weight bold :foreground "firebrick1"))))
+   `(warning ((,class (:weight bold :foreground "DarkOrange"))))
+   `(success ((,class (:weight bold :foreground "Green1"))))
    `(fringe ((t (nil))))
    `(button ((,class (:underline t))))
 
    ;; Line-numbes
    `(line-number ((,class (:foreground ,light-grey))))
-   `(line-number-current-line ((,class (:inherit highlight))))
+   `(line-number-current-line ((,class (:foreground "white"))))
 
    ;; Mode-line
    `(mode-line ((,class (:foreground "white" :background "black" :box (:line-width -1 :style released-button)))))
@@ -87,30 +85,29 @@
    `(header-line ((,class (:inherit mode-line-inactive :box nil))))
 
    ;; Font-lock
-   `(font-lock-comment-face ((,class (:foreground ,cyan))))
+   `(font-lock-comment-face ((,class (:foreground "white" :weight bold))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-string-face ((,class (:foreground ,green))))
+   `(font-lock-string-face ((,class (:foreground "white"))))
    `(font-lock-doc-face ((, class(:inherit font-lock-comment-face))))
    `(font-lock-doc-markup-face ((t (nil))))
-   `(font-lock-keyword-face ((,class (:foreground ,red))))
-   `(font-lock-builtin-face ((,class (:foreground ,yellow))))
+   `(font-lock-keyword-face ((t (nil))))
+   `(font-lock-builtin-face ((t (nil))))
    `(font-lock-function-name-face ((t (nil))))
    `(font-lock-variable-name-face ((t (nil))))
-   `(font-lock-type-face ((,class (:inherit font-lock-keyword-face))))
-   `(font-lock-constant-face ((,class (:foreground ,yellow))))
-   `(font-lock-warning-face ((,class (:inherit error))))
+   `(font-lock-type-face ((t (nil))))
+   `(font-lock-constant-face ((t (nil))))
+   `(font-lock-warning-face ((t (nil))))
    `(font-lock-negation-char-face ((t (nil))))
-   `(font-lock-preprocessor-face ((,class (:foreground ,magenta))))
+   `(font-lock-preprocessor-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-regexp-grouping-backslash ((t (nil))))
    `(font-lock-regexp-grouping-construct ((t (nil))))
 
    ;; Dired
-   `(dired-directory ((,class (:foreground ,cyan))))
-   `(dired-symlink ((,class (:foreground ,magenta))))
-   `(dired-broken-symlink ((,class (:foreground ,red))))
+   `(dired-directory ((,class (:foreground "cyan"))))
+   `(dired-symlink ((,class (:foreground "magenta"))))
+   `(dired-broken-symlink ((,class (:foreground "red"))))
 
    ;; ERC
-   `(erc-nick-default-face ((,class (:foreground ,red))))
    `(erc-timestamp-face ((,class (:foreground nil))))
 
    ;; sh
@@ -136,14 +133,7 @@
    `(markdown-header-delimiter-face ((t (nil))))
    `(markdown-metadata-key-face ((,class (:inherit font-lock-comment-face))))
    `(markdown-metadata-value-face ((,class (:inherit font-lock-comment-face))))
-   `(markdown-blockquote-face ((t (nil))))
-   `(markdown-pre-face ((t (nil))))
-
-   ;; Eglot
-   `(eglot-mode-line ((t (nil))))
-
-   ;; Magit
-   `(git-commit-summary ((,class (:inherit font-lock-constant-face))))))
+   `(markdown-blockquote-face ((t (nil))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)

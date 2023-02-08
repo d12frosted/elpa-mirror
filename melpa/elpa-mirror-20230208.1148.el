@@ -4,10 +4,10 @@
 
 ;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: http://github.com/redguardtoo/elpa-mirror
-;; Package-Version: 20230117.24
-;; Package-Commit: 4ef6cc917025ae7690ab734751e54d879407c6dd
+;; Package-Version: 20230208.1148
+;; Package-Commit: 9d7cfbf72ef8c7cd014c91e5bb3d8fbebda56140
 ;; Package-Requires: ((emacs "25.1"))
-;; Version: 2.2.1
+;; Version: 2.2.2
 ;; Keywords: tools
 ;;
 ;; This file is not part of GNU Emacs.
@@ -294,7 +294,7 @@ command compatible with BSD tar instead of GNU tar."
 (defun elpamr-version ()
   "Current version."
   (interactive)
-  (message "2.2.1"))
+  (message "2.2.2"))
 
 (defun elpamr--win-executable-find (exe)
   "Find EXE on windows."
@@ -319,9 +319,15 @@ command compatible with BSD tar instead of GNU tar."
 
 (defun elpamr-double-check-executable ()
   "Make sure `elpamr-tar-executable' is executable."
-  (when (and (not (file-executable-p elpamr-tar-executable))
-             (eq system-type 'windows-nt))
-    (setq elpamr-tar-executable (elpamr--win-executable-find elpamr-tar-executable))))
+  (when (eq system-type 'windows-nt)
+
+    (cond
+     (elpamr-tar-executable
+      (unless (executable-find elpamr-tar-executable)
+        (setq elpamr-tar-executable (elpamr--win-executable-find elpamr-tar-executable))))
+
+     ((executable-find "tar")
+      (setq elpamr-tar-executable "tar")))))
 
 (defun elpamr-delete-directory (directory)
   "Delete DIRECTORY."
