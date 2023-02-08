@@ -1046,16 +1046,16 @@
 	     ("Hrvoje Niksic" . "hniksic@gmail.com"))
 	    (:keywords "hypermedia" "extensions"))])
  (idle-highlight-mode .
-		      [(1 1 3)
+		      [(1 1 4)
 		       ((emacs
 			 (27 1)))
 		       "Highlight the word the point is on" tar
-		       ((:url . "https://codeberg.com/ideasman42/emacs-idle-highlight-mode")
+		       ((:url . "https://codeberg.org/ideasman42/emacs-idle-highlight-mode")
 			(:keywords "convenience")
-			(:maintainer "Phil Hagelberg, Cornelius Mika, Campbell Barton")
+			(:maintainer "Campbell Barton" . "ideasman42@gmail.com")
 			(:authors
 			 ("Phil Hagelberg, Cornelius Mika, Campbell Barton"))
-			(:commit . "f71e57554071a398dbc0e2d48a71908cf13541b4"))])
+			(:commit . "8ded8426e9fb6e2637c25d52184f6333dfa157ad"))])
  (idris-mode .
 	     [(1 1 0)
 	      ((emacs
@@ -2203,7 +2203,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(22 8 20230127142338)
+	       [(22 9 20230207171612)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -2212,7 +2212,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "b47253a138a764569bf569be29b96509316bf8b7"))])
+		 (:commit . "17e19e3deeff6eb7e959550087d9edea69ff828c"))])
  (xkcd .
        [(1 1)
 	((json

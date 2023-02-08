@@ -508,16 +508,18 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(29 1 3 2)
+	 [(29 1 3 3)
 	  ((emacs
-	    (24 4)))
+	    (24 4))
+	   (seq
+	    (2 3)))
 	  "Emacs Lisp Compatibility Library" tar
 	  ((:url . "https://github.com/emacs-compat/compat")
 	   (:keywords "lisp")
 	   (:maintainer "Daniel Mendler <mail@daniel-mendler.de>, Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "62da199f0a9c2f8917bfe74b3ec1882f9d6a9d02"))])
+	   (:commit . "df6a4370df454971e9bf39da65256646133a2b6e"))])
  (consult .
 	  [(0 32)
 	   ((emacs
