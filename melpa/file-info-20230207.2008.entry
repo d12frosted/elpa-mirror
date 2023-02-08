@@ -1,0 +1,14 @@
+(file-info .
+	   [(20230207 2008)
+	    ((emacs
+	      (28 1))
+	     (hydra
+	      (0 15 0))
+	     (browse-at-remote
+	      (0 15 0)))
+	    "Show pretty information about current file" single
+	    ((:commit . "f3987af53b89835750c48dd13a80dc88ececd71c")
+	     (:authors
+	      ("Artur Yaroshenko" . "artawower@protonmail.com"))
+	     (:maintainer "Artur Yaroshenko" . "artawower@protonmail.com")
+	     (:url . "https://github.com/artawower/file-info.el"))])
