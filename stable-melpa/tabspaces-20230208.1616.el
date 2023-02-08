@@ -3,8 +3,8 @@
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
 ;; Version: 1.3
-;; Package-Version: 20230206.2325
-;; Package-Commit: 74f940fd57d5d51e3ec5131f6ef563546be8bcc1
+;; Package-Version: 20230208.1616
+;; Package-Commit: 68f3bf8300996b5ede3fc2e423332a9e90c67bb5
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -310,7 +310,7 @@ tab."
            dupe)
       (dolist (tab (tabspaces--list-tabspaces) tabcand)
         (when (member buffer (mapcar #'buffer-name (tabspaces--buffer-list nil (tab-bar--tab-index-by-name tab))))
-          (add-to-list 'tabcand tab)))
+          (push tabcand tab)))
       (progn
         (tab-bar-switch-to-tab (completing-read "Select tab: " tabcand))
         (tabspaces-switch-to-buffer buffer)))
@@ -368,8 +368,9 @@ If FRAME is nil, use the current frame."
 ;;;###autoload
 (defun tabspaces-open-or-create-project-and-workspace (&optional project)
   "Open PROJECT from `project--list' in its own workspace.
-If PROJECT is already open in its own workspace, switch to that workspace.
-If PROJECT does not exist, create it, along with a `project.todo' file, in its own workspace."
+If PROJECT is already open in its own workspace, switch to that
+workspace. If PROJECT does not exist, create it, along with a
+`project.todo' file, in its own workspace."
   (interactive
    (if (eq project--list 'unset)
        (call-interactively #'project-switch-project)
@@ -455,7 +456,6 @@ If PROJECT does not exist, create it, along with a `project.todo' file, in its o
             ";; Created " (current-time-string) "\n\n"
             ";; Tabs and buffers:\n")
     (insert "(setq tabspaces--session-list '" (format "%S" tabspaces--session-list) ")")))
-
 
 ;; Restore session
 ;;;###autoload
