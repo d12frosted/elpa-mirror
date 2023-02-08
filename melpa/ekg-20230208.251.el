@@ -5,15 +5,15 @@
 ;; Author: Andrew Hyatt <ahyatt@gmail.com>
 ;; Homepage: https://github.com/ahyatt/ekg
 ;; Package-Requires: ((triples "0.2.3") (emacs "28.1"))
-;; Package-Version: 20230204.2254
-;; Package-Commit: 0866967de1aa1a7ced4167d2f025835e730f47d9
+;; Package-Version: 20230208.251
+;; Package-Commit: cc006504788585382b325fa6d9dbdf26de79fd0b
 ;; Keywords: outlines, hypermedia
-;; Version: 0.0
+;; Version: 0.1
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;;
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
-;; published by the Free Software Foundation; either version 2 of the
+;; published by the Free Software Foundation; either version 3 of the
 ;; License, or (at your option) any later version.
 ;;
 ;; This program is distributed in the hope that it will be useful, but
@@ -596,7 +596,7 @@ Argument FINISHED is non-nil if the user has chosen a completion."
   (let ((end (save-excursion
                (skip-chars-forward "^,\t\n")
                (point)))
-	    (start (save-excursion
+        (start (save-excursion
                  (skip-chars-backward "^,\t\n")
                  (point))))
     (list start end (completion-table-dynamic
