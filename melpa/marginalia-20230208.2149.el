@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.0
-;; Package-Version: 20230208.2124
-;; Package-Commit: d0e800cd8dfc3c27a648a24cb9a49be4bbee0ce4
+;; Package-Version: 20230208.2149
+;; Package-Commit: 6d48ed54be87969e3ce53a24dbc63ec72ec6a91a
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.3.0"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -365,10 +365,14 @@ for performance profiling of the annotators.")
                     (get-text-property (1- (length str)) 'face str)))
          (ell (if face
                   (propertize (marginalia--ellipsis) 'face face)
-                (marginalia--ellipsis))))
-    (if (< width 0)
-        (nreverse (truncate-string-to-width (reverse str) (- width) 0 ?\s ell))
-      (truncate-string-to-width str width 0 ?\s ell))))
+                (marginalia--ellipsis)))
+         (trunc
+          (if (< width 0)
+              (nreverse (truncate-string-to-width (reverse str) (- width) 0 ?\s ell))
+            (truncate-string-to-width str width 0 ?\s ell))))
+    (unless (string-prefix-p str trunc)
+      (put-text-property 0 (length trunc) 'help-echo str trunc))
+    trunc))
 
 (cl-defmacro marginalia--field (field &key truncate face width format)
   "Format FIELD as a string according to some options.
@@ -516,7 +520,7 @@ t cl-type"
            (and (get s 'cl--class) '("t" . "cl-type")))))) ;; cl-find-class, cl--find-class
     (setq class (delq nil class))
     (propertize
-     (format "%-6s" (mapconcat #'car class ""))
+     (format " %-6s" (mapconcat #'car class ""))
      'help-echo
      (mapconcat (pcase-lambda (`(,x . ,y)) (concat x " " y)) class "\n"))))
 
@@ -883,14 +887,12 @@ component of a full file path."
          ;; File owner at the left
          ((marginalia--file-owner attrs) :face 'marginalia-file-owner)
          ((marginalia--file-modes attrs))
-         ((file-size-human-readable (file-attribute-size attrs))
-          :face 'marginalia-size :width -7)
+         ((marginalia--file-size attrs) :face 'marginalia-size :width -7)
          ((marginalia--time (file-attribute-modification-time attrs))
           :face 'marginalia-date :width -12))
       (marginalia--fields
        ((marginalia--file-modes attrs))
-       ((file-size-human-readable (file-attribute-size attrs))
-        :face 'marginalia-size :width -7)
+       ((marginalia--file-size attrs) :face 'marginalia-size :width -7)
        ((marginalia--time (file-attribute-modification-time attrs))
         :face 'marginalia-date :width -12)
        ;; File owner at the right
@@ -914,6 +916,11 @@ These annotations are skipped for remote paths."
       (format "%s:%s"
               (or (user-login-name uid) uid)
               (or (group-name gid) gid)))))
+
+(defun marginalia--file-size (attrs)
+  "Return formatted file size given ATTRS."
+  (propertize (file-size-human-readable (file-attribute-size attrs))
+              'help-echo (number-to-string (file-attribute-size attrs))))
 
 (defun marginalia--file-modes (attrs)
   "Return fontified file modes given the ATTRS."
@@ -969,9 +976,11 @@ These annotations are skipped for remote paths."
 
 (defun marginalia--time (time)
   "Format file age TIME, suitably for use in annotations."
-  (if (< (float-time (time-since time)) marginalia-max-relative-age)
-      (marginalia--time-relative time)
-    (marginalia--time-absolute time)))
+  (propertize
+   (if (< (float-time (time-since time)) marginalia-max-relative-age)
+       (marginalia--time-relative time)
+     (marginalia--time-absolute time))
+   'help-echo (format-time-string "%Y-%m-%d %T" time)))
 
 (defvar-local marginalia--project-root 'unset)
 (defun marginalia--project-root ()

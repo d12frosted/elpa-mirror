@@ -4,8 +4,8 @@
 
 ;; Author: Fritz Grabo <hello@fritzgrabo.com>
 ;; URL: https://github.com/fritzgrabo/flymake-cspell
-;; Package-Version: 20230130.826
-;; Package-Commit: a091e43445db649a6df0ae4e09520fcb1dad5526
+;; Package-Version: 20230208.2155
+;; Package-Commit: c68bf7eef99ddb2fbd780f175e869df2db5d768f
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: wp
@@ -28,7 +28,7 @@
 ;;; Commentary:
 
 ;; A Flymake backend for "CSpell -- A Spell Checker for Code!" by
-;; Street Side Software. See https://cspell.org for documentation and
+;; Street Side Software.  See https://cspell.org for documentation and
 ;; customization options.
 
 ;;; Code:
@@ -39,9 +39,25 @@
 (eval-when-compile
   (require 'cl-lib))
 
+(defvar flymake-cspell-cspell-command "cspell"
+  "Name of the cspell command to execute.")
+
+(defvar flymake-cspell--cspell-version nil
+  "Version of cspell found on the system.
+Retrieved and cached when flymake-cspell is first set up for a buffer.")
+
 (defvar flymake-cspell--format-diag-string
   "Unknown word: %s. Did you mean %s?"
-  "Used to format an unknown word and its suggestions for display.")
+  "Format string used to display an unknown word and its suggestions.")
+
+(defvar-local flymake-cspell--proc nil
+  "The cspell process for the current buffer.")
+
+(defvar-local flymake-cspell--file-excluded nil
+  "Whether the current buffer is excluded in cspell.
+A non-nil value means that the buffer was found to be excluded by
+cspell and that flymake will no longer attempt to spell-check it.
+Reset the variable or re-open the buffer's file to retry.")
 
 (defvar-local flymake-cspell--cspell-language-id nil
   "Cspell language id to use for the current buffer.")
@@ -79,69 +95,39 @@
  ("typescript" typescript-ts-mode tsx-ts-mode)
  ("yaml" yaml-mode yaml-ts-mode))
 
-(defvar-local flymake-cspell--proc nil
-  "A buffer-local variable handling the cspell process for flymake.")
-
-(defvar-local flymake-cspell--file-excluded 'unchecked
-  "Whether the current buffer is excluded in cspell.
-
-A value of `'unchecked' means that the check for exclusion has
-not run yet for the buffer.  A nil value means that the buffer
-should be checked.  Any other value means that the buffer is
-excluded in cspell.")
-
-(defun flymake-cspell--check (report-fn &rest _args)
+(defun flymake-cspell--check-buffer (report-fn &rest _args)
   "Run cspell for current buffer; REPORT-FN is flymake's callback function."
   (when (process-live-p flymake-cspell--proc)
     (kill-process flymake-cspell--proc))
 
-  (let ((checked-buffer (current-buffer)))
-    (unless (buffer-file-name)
-      (setq flymake-cspell--file-excluded nil))
-    (if (eq flymake-cspell--file-excluded 'unchecked)
-        (flymake-cspell--run-for-file
-         (buffer-file-name)
-         (lambda (results)
-           (if (string-match-p "Files checked: 0" results)
-               (setq flymake-cspell--file-excluded t)
-             (setq flymake-cspell--file-excluded nil)
-             (funcall report-fn (flymake-cspell--build-diags checked-buffer results)))))
-      (if (null flymake-cspell--file-excluded)
-          (flymake-cspell--run-for-buffer
-           checked-buffer
-           (lambda (results)
-             (funcall report-fn (flymake-cspell--build-diags checked-buffer results))))))))
-
-(defun flymake-cspell--run-for-file (file-name fn)
-  "Run cspell for FILE-NAME and pass its output into FN."
-  (setq flymake-cspell--proc (flymake-cspell--run file-name fn)))
-
-(defun flymake-cspell--run-for-buffer (buffer fn)
-  "Run cspell for the contents of BUFFER and pass its output into FN."
-  (with-current-buffer buffer
-    (save-restriction
-      (widen)
-      (setq flymake-cspell--proc (flymake-cspell--run "stdin" fn))
+  (unless flymake-cspell--file-excluded
+    (let* ((buffer (current-buffer))
+           (resource (if (buffer-file-name) (format "stdin://%s" (buffer-file-name)) "stdin"))
+           (language-id (or flymake-cspell--cspell-language-id "auto"))
+           (command `(,flymake-cspell-cspell-command "lint" "--no-progress" "--no-color" "--show-suggestions" "--reporter" "default" "--language-id" ,language-id ,resource)))
+      (save-restriction
+        (widen)
+        (setq flymake-cspell--proc
+              (make-process
+               :name "flymake-cspell-check-buffer"
+               :noquery t
+               :buffer (generate-new-buffer " *flymake-cspell*") ;; note the leading space
+               :command command
+               :connection-type 'pipe
+               :sentinel
+               (lambda (proc _event)
+                 (when (eq 'exit (process-status proc))
+                   (unwind-protect
+                       (if (eq proc flymake-cspell--proc)
+                           (let ((results (with-current-buffer (process-buffer proc) (buffer-string))))
+                             (if (string-match-p "Files checked: 0" results)
+                                 (with-current-buffer buffer
+                                   (setq flymake-cspell--file-excluded t))
+                               (funcall report-fn (flymake-cspell--build-diags buffer results))))
+                         (flymake-log :warning "Canceling obsolete check %s" proc))
+                     (kill-buffer (process-buffer proc))))))))
       (process-send-string flymake-cspell--proc (buffer-string))
       (process-send-eof flymake-cspell--proc))))
-
-(defun flymake-cspell--run (input fn)
-  "Run cspell for INPUT (file name or \"stdin\") and pass its output into FN."
-  (make-process
-   :name "flymake-cspell-check-buffer"
-   :noquery t
-   :buffer (generate-new-buffer " *flymake-cspell*")
-   :command `("cspell" "lint" "--no-progress" "--no-color" "--show-suggestions" "--language-id" ,(or flymake-cspell--cspell-language-id "auto") ,input)
-   :connection-type 'pipe
-   :sentinel
-   (lambda (proc _event)
-     (when (eq 'exit (process-status proc))
-       (unwind-protect
-           (if (eq proc flymake-cspell--proc)
-               (let ((results (with-current-buffer (process-buffer proc) (buffer-string))))
-                 (funcall fn results))
-             (flymake-log :warning "Canceling obsolete check %s" proc))
-         (kill-buffer (process-buffer proc)))))))
 
 (defun flymake-cspell--build-diags (buffer results)
   "Build a list of flymake diagnostics in BUFFER from cspell output in RESULTS."
@@ -183,17 +169,29 @@ excluded in cspell.")
               errors)))
     (nreverse errors)))
 
+(defun flymake-cspell--cspell-version ()
+  "Retrieve (cached) version of `cspell`."
+  (or flymake-cspell--cspell-version
+      (let* ((command (format "%s --version" flymake-cspell-cspell-command))
+             (version (string-trim (shell-command-to-string command))))
+        (setq flymake-cspell--cspell-version version))))
+
 ;;;###autoload
 (defun flymake-cspell-setup ()
   "Enable the spell checker for the current buffer."
   (interactive)
 
-  (unless (executable-find "cspell")
+  (unless (executable-find flymake-cspell-cspell-command)
     (error "Cannot find cspell executable"))
 
-  (unless (memq 'flymake-cspell--check flymake-diagnostic-functions)
+  (let ((cspell-required-version "6.21.0")
+        (cspell-version (flymake-cspell--cspell-version)))
+    (if (version< cspell-version cspell-required-version)
+        (error "Flymake-cspell requires cspell version \"%s\" or higher; found \"%s\"" cspell-required-version cspell-version)))
+
+  (unless (memq 'flymake-cspell--check-buffer flymake-diagnostic-functions)
     (make-local-variable 'flymake-diagnostic-functions)
-    (push 'flymake-cspell--check flymake-diagnostic-functions)))
+    (push 'flymake-cspell--check-buffer flymake-diagnostic-functions)))
 
 (provide 'flymake-cspell)
 

@@ -5,9 +5,9 @@
 ;; Author: Debanjum Singh Solanky <debanjum@gmail.com>
 ;; Description: Natural, Incremental Search for your Second Brain
 ;; Keywords: search, org-mode, outlines, markdown, beancount, ledger, image
-;; Package-Version: 20230126.2213
-;; Package-Commit: 2e13e156259d06c2fcb7986b66595a8be0c66ea7
-;; Version: 0.2.6
+;; Package-Version: 20230208.2324
+;; Package-Commit: 215235efd26abe12001f64b88edbbaf53c4ebed0
+;; Version: 0.3.0
 ;; Package-Requires: ((emacs "27.1") (transient "0.3.0"))
 ;; URL: https://github.com/debanjum/khoj/tree/master/src/interface/emacs
 

@@ -4,8 +4,6 @@
 
 ;; Author:  <LiShizhen gsu4017@gmail.com>
 ;; Version: 1.0
-;; Package-Version: 20211130.1235
-;; Package-Commit: 16101d5e6ce19bbcc8badf4422a95db457160999
 ;; URL: https://github.com/liShiZhensPi/baidu-translate
 ;; Package-Requires: ((unicode-escape "1.1"))
 

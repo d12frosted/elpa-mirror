@@ -1,11 +1,11 @@
 ;;; starlit-theme.el --- Deep blue dark theme with bright colors from the starlit sky  -*- lexical-binding: t -*-
 
-;; Copyright (C) 2022-2022
+;; Copyright (C) 2022-2023
 
 ;; Author: Jonas Jelten <jj@sft.lol>
 ;; Keywords: faces
-;; Package-Version: 20221107.1632
-;; Package-Commit: 5f0e9deecfa95e241e4b3957e976b2471ba219f1
+;; Package-Version: 20230209.21
+;; Package-Commit: f910112a76f0ec62f7150a3a2d4f1337a1809ff7
 ;; URL: https://github.com/SFTtech/starlit-emacs
 ;; Version: 0.1
 
@@ -422,7 +422,7 @@ in the theme."
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
-;; rainbow-mode: t
+;; eval: (rainbow-mode 1)
 ;; End:
 
 ;;; starlit-theme.el ends here
