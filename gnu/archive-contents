@@ -19,13 +19,13 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (ada-mode .
-	   [(8 0 4)
+	   [(8 0 5)
 	    ((uniquify-files
 	      (1 0 4))
 	     (wisi
 	      (4 2 2))
 	     (gnat-compiler
-	      (1 0 1))
+	      (1 0 2))
 	     (emacs
 	      (25 3)))
 	    "major-mode for editing Ada sources" tar
@@ -34,7 +34,7 @@
 	     (:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
 	     (:authors
 	      ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
-	     (:commit . "977b0e0eeb746c7e2f35697d5b925ca97efa4936"))])
+	     (:commit . "8660d5e9b2219208e5d43b979f5fb57fbb518924"))])
  (ada-ref-man .
 	      [(2020 1)
 	       nil "Ada Reference Manual 2012" tar
@@ -640,7 +640,7 @@
 		 ("Theodor Thornhill" . "theo@thornhill.no"))
 		(:commit . "d8b058c9e9d0429ea7e81d121ce19b064bd7e0f5"))])
  (csv-mode .
-	   [(1 21)
+	   [(1 22)
 	    ((emacs
 	      (27 1))
 	     (cl-lib
@@ -651,7 +651,7 @@
 	     (:authors
 	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
-	     (:commit . "d10d68c382e17960fc9aaef072fd18a23ea92a86"))])
+	     (:commit . "db8a3e3aef31d35ce5bd1fd09127a3bbfdd0c340"))])
  (cursory .
 	  [(0 3 0)
 	   ((emacs
@@ -2535,7 +2535,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "25d675307c03f720e592c3dc9a5a0ae8db0836eb"))])
  (phps-mode .
-	    [(0 4 36)
+	    [(0 4 37)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2544,7 +2544,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "98ce94d2d69afc3f9b093f9401e40068f48fab42"))])
+	      (:commit . "a32f68a0d490555fc692f58a780fbdaec0df08b4"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single

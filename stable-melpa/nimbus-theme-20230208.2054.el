@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.3.0
-;; Package-Version: 20230112.1931
-;; Package-Commit: 1f777e1aa7c20a5d9e09e80f2549b6506dc15acf
+;; Package-Version: 20230208.2054
+;; Package-Commit: d820827642fb64988866bfdc2a44a5d5a036e195
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/mrcnski/nimbus-theme
 ;; Keywords:    faces
@@ -1137,7 +1137,8 @@
    `(tree-sitter-hl-face:constant.builtin ((t (:foreground ,number))))
    `(tree-sitter-hl-face:function.call ((t (:foreground ,dark-green))))
    `(tree-sitter-hl-face:number ((t (:foreground ,number))))
-   `(tree-sitter-hl-face:operator ((t (:foreground ,operator))))
+   ;; `(tree-sitter-hl-face:operator ((t (:foreground ,operator))))
+   `(tree-sitter-hl-face:operator ((t (:foreground ,fg))))
    `(tree-sitter-hl-face:property ((t (:foreground ,property))))
 
    ;; twittering

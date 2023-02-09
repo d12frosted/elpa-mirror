@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.0
-;; Package-Version: 20230207.1206
-;; Package-Commit: 00f2986d031baf1afaea45c64df81a76936509d2
+;; Package-Version: 20230208.2124
+;; Package-Commit: d0e800cd8dfc3c27a648a24cb9a49be4bbee0ce4
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.3.0"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -472,42 +472,53 @@ l local (L modified compared to default value)
 Other:
 a face
 t cl-type"
-  (format
-   "%-6s"
-   (concat
-    (when (fboundp s)
-      (concat
-       (cond
-        ((get s 'pure) "p")
-        ((get s 'side-effect-free) "s"))
-       (cond
-        ((commandp s) (if (get s 'interactive-only) "C" "c"))
-        ((cl-generic-p s) "g")
-        ((macrop (symbol-function s)) "m")
-        ((special-form-p (symbol-function s)) "M")
-        (t "f"))
-       (and (autoloadp (symbol-function s)) "@")
-       (and (marginalia--advised s) "!")
-       (and (symbolp (symbol-function s)) "&")
-       (and (get s 'byte-obsolete-info) "-")))
-    (when (boundp s)
-      (concat
-       (when (local-variable-if-set-p s)
-         (if (ignore-errors
-               (not (equal (symbol-value s)
-                           (default-value s))))
-             "L" "l"))
-       (if (custom-variable-p s)
-           (if (ignore-errors
-                 (not (equal
-                       (symbol-value s)
-                       (eval (car (get s 'standard-value))))))
-               "U" "u")
-         "v")
-       (ignore-errors (and (not (eq (indirect-variable s) s)) "&"))
-       (and (get s 'byte-obsolete-variable) "-")))
-    (and (facep s) "a")
-    (and (get s 'cl--class) "t")))) ;; cl-find-class, cl--find-class
+  (let ((class
+         (append
+          (when (fboundp s)
+            (list
+             (cond
+              ((get s 'pure) '("p" . "pure"))
+              ((get s 'side-effect-free) '("s" . "side-effect-free")))
+             (cond
+              ((commandp s)
+               (if (get s 'interactive-only)
+                   '("C" . "interactive-only command")
+                 '("c" . "command")))
+              ((cl-generic-p s) '("g" . "cl-generic"))
+              ((macrop (symbol-function s)) '("m" . "macro"))
+              ((special-form-p (symbol-function s)) '("M" . "special-form"))
+              (t '("f" . "function")))
+             (and (autoloadp (symbol-function s)) '("@" . "autoload"))
+             (and (marginalia--advised s) '("!" . "advised"))
+             (and (symbolp (symbol-function s))
+                  (cons "&" (format "alias for `%s'" (symbol-function s))))
+             (and (get s 'byte-obsolete-info) '("-" . "obsolete"))))
+          (when (boundp s)
+            (list
+             (when (local-variable-if-set-p s)
+               (if (ignore-errors
+                     (not (equal (symbol-value s)
+                                 (default-value s))))
+                   '("L" . "local, modified from global")
+                 '("l" . "local, unmodified")))
+             (if (custom-variable-p s)
+                 (if (ignore-errors
+                       (not (equal (symbol-value s)
+                                   (eval (car (get s 'standard-value))))))
+                     '("U" . "custom, modified from standard")
+                   '("u" . "custom, unmodified"))
+               '("v" . "variable"))
+             (and (not (eq (ignore-errors (indirect-variable s)) s))
+                  (cons "&" (format "alias for `%s'" (ignore-errors (indirect-variable s)))))
+             (and (get s 'byte-obsolete-variable) '("-" . "obsolete"))))
+          (list
+           (and (facep s) '("a" . "face"))
+           (and (get s 'cl--class) '("t" . "cl-type")))))) ;; cl-find-class, cl--find-class
+    (setq class (delq nil class))
+    (propertize
+     (format "%-6s" (mapconcat #'car class ""))
+     'help-echo
+     (mapconcat (pcase-lambda (`(,x . ,y)) (concat x " " y)) class "\n"))))
 
 (defun marginalia--function-doc (sym)
   "Documentation string of function SYM."

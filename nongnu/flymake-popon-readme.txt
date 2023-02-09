@@ -4,16 +4,6 @@
 	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Installation
-.. 1. Package
-.. 2. Quelpa
-.. 3. Straight.el
-2. Usage
-
-
 This package shows Flymake diagnostics on cursor hover.  This works on
 both graphical and non-graphical displays.
 

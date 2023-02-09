@@ -58,3 +58,14 @@ see the major mode documentation below.
 The global minor mode `csv-field-index-mode' provides display of
 the current field index in the mode line, cf. `line-number-mode'
 and `column-number-mode'.  It is on by default.
+
+See also:
+
+the standard GNU Emacs 21 packages align.el, which will align
+columns within a region, and delim-col.el, which helps to prettify
+columns in a text region or rectangle;
+
+csv.el by Ulf Jasper <ulf.jasper at web.de>, which provides
+functions for reading/parsing comma-separated value files and is
+available at http://de.geocities.com/ulf_jasper/emacs.html (and in
+the gnu.emacs.sources archives).
