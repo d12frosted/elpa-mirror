@@ -4,8 +4,6 @@
 
 ;; Author: Sven Knurr <git@tuxproject.de>
 ;; URL: https://github.com/dertuxmalwieder/logpad.el
-;; Package-Version: 20201113.917
-;; Package-Commit: 2955c6e3de40bd1e84acb4c16c7690b210f82bec
 ;; Keywords: files outlines notepad
 ;; Version: 1.0.2
 
