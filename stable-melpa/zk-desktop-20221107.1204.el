@@ -6,8 +6,6 @@
 ;; Created: November 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20221107.1204
-;; Package-Commit: 8cc0ca548f8fc1930bbc14b273b8a30df0c6327c
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "25.1")(zk "0.3")(zk-index "0.8"))
