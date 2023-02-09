@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20230112.1442
-;; Package-Commit: fb8afa6d4d32271c0b18679c285abf2fd3323db2
+;; Package-Version: 20230209.315
+;; Package-Commit: b5d6f26bc507e79bc3b948acef7bf94b683c4f14
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -1221,6 +1221,153 @@ Return output file name."
    (org-publish-org-to 'spectacle filename
                        (concat "." (or (plist-get plist :html-extension) org-html-extension "html"))
                        plist pub-dir)))
+
+(defun ox-spectacle-helper ()
+  "Some tips."
+  (interactive)
+  (with-current-buffer (get-buffer-create "*spectacle-helper*")
+    (unless (> (buffer-size) 0)
+      (insert "Basic rules:
+
+  - Top-level headline is rendered to <Slide>, can be config/change like this:
+
+      :layout: <SlideLayout>/top
+      :props: backgroundImage=\"url(...)\"
+
+  - Other headlines is rendered by default as <Box>, set like this:
+
+      :type: FlexBox
+      :props: ...
+
+  - Headline can be declared as:
+
+      * headline description <Grid props...>
+      * children of this headline will be a slide <Top>
+
+  - Paragraph can be set by attr_html:
+
+      #+ATTR_HTML: :type Heading :margin {5}
+      This is a paragraph
+
+  - Others (but not all):
+
+      #+SPLIT: t|2
+      * <config>
+      ** <template> template-name
+
+You can define global options like this:
+
+  #+TITLE: DEMO
+  #+THEME: theme1
+  #+TRANSITION: ts1
+  #+TEMPLATE: tp1
+
+  #+DECK_OPTS: expertMode={true} overviewMode={false}
+  #+DECK_OPTS: useAnimations={true} autoPlay={false} autoPlayInterval={2000}
+  #+DECK_OPTS: onSlideClick={(e,s) => console.log('current slide: ' + s)}
+  #+DECK_OPTS: backdropStyle={{border: '0px solid skyblue'}}
+  #+SLIDE_OPTS: MySlide backgroundColor='white'
+  #+TEXT_OPTS: MyText color='grey' fontSize={30}
+
+  #+EXTRA_SCRIPTS: https://unpkg.com/recharts/umd/Recharts.js
+  #+EXTERN_COMPONENTS: MyDeck MyLink Recharts
+  #+EXPORT_LEVEL: 3
+
+Press [f12] and use Spectacle.defaultTheme to show the default theme:
+
+  {
+      \"size\": {
+          \"width\": 1366,
+          \"height\": 768,
+          \"maxCodePaneHeight\": 200
+      },
+      \"colors\": {
+          \"primary\": \"#ebe5da\",
+          \"secondary\": \"#fc6986\",
+          \"tertiary\": \"#1e2852\",
+          \"quaternary\": \"#ffc951\",
+          \"quinary\": \"#8bddfd\"
+      },
+      \"fonts\": {
+          \"header\": \"\\\"Helvetica Neue\\\", Helvetica, Arial, sans-serif\",
+          \"text\": \"\\\"Helvetica Neue\\\", Helvetica, Arial, sans-serif\",
+          \"monospace\": \"\\\"Consolas\\\", \\\"Menlo\\\", monospace\"
+      },
+      \"fontSizes\": {
+          \"h1\": \"72px\",
+          \"h2\": \"64px\",
+          \"h3\": \"56px\",
+          \"text\": \"44px\",
+          \"monospace\": \"20px\"
+      },
+      \"space\": [
+          16,
+          24,
+          32
+      ]
+  }
+
+Then you can define your own theme and use it:
+
+  let theme1 = { ...defaultTheme, { space: [ 22, 23, 24] } }
+
+This is the defaultTransition:
+
+  let ts1 = {
+      \"from\": {
+          \"transform\": \"translateX(100%)\"
+      },
+      \"enter\": {
+          \"transform\": \"translateX(0%)\"
+      },
+      \"leave\": {
+          \"transform\": \"translateX(-100%)\"
+      }
+  }
+
+This is a demo template:
+
+  let tp1 = ({ slideNumber, numberOfSlides }) => html`
+      <${FlexBox} position='absolute' bottom=${0} right=${0} opacity=${0.3}>
+        <${Progress} size=${8} />
+        <${Text} fontSize=${15}>${slideNumber}/${numberOfSlides}</${Text}>
+      </${FlexBox}>`;
+
+Components can be defined like this:
+
+  const MySlide = (props) => {
+      return html`<${Slide} ...${props}>
+                    <${Text} className='x'> ${props.title} </{Text}>
+                    <div className='x'> ${props.children} </div>
+                  </${Slide}>`;
+
+  const RowGrid = (props) => {
+      const n = props.n || 2;
+      return html`<${Grid} gridTemplateColumns=${'minmax(100px, 1fr) '.repeat(n).trim()} ...${props}></${Grid}>`
+  };
+
+  // use above source block with ':type ScCodePane'
+  const ScCodePane = (props) => {
+      return html`<${Box} className='x'><${CodePane} ...${props}></${CodePane}></${Box}>`;
+  }
+
+Don't forget to regist them before use:
+
+  #+extern_components: MySlide RowGrid ScCodePane
+
+Some css code to make scrollbar beautiful, use when nessessary:
+
+  ::-webkit-scrollbar { width: 5px; height: 80%; }
+  ::-webkit-scrollbar-track { background: rgb(179, 177, 177); border-radius: 5px; }
+  ::-webkit-scrollbar-thumb { background: rgb(136, 136, 136); border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover  { background: rgb(100, 100, 100); border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:active { background: rgb(68, 68, 68); border-radius: 5px; }
+
+")
+      (goto-char (point-min))
+      (set-buffer-modified-p nil)
+      (special-mode))
+    (pop-to-buffer (current-buffer))))
 
 
 (provide 'ox-spectacle)

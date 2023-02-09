@@ -2,8 +2,8 @@
 
 ;; Licence: MIT
 ;; Keywords: tools, completion, lsp
-;; Package-Version: 20230204.851
-;; Package-Commit: 37169e2695570aedc26431ca649ed2f0ab62ec1a
+;; Package-Version: 20230209.714
+;; Package-Commit: f8db3252c0daa41225ba4ed1c0d178b281cd3e90
 ;; Author: Gerry Agbobada
 ;; Maintainer: Gerry Agbobada
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "5.0") (consult "0.16") (f "0.20.0"))
@@ -522,6 +522,7 @@ usable in the annotation-function."
                              symb-info-name))))
          marker
          (1+ lbeg)
+         marker
          'consult--type (consult-lsp--symbols--kind-to-narrow symbol)
          'consult--name (lsp:symbol-information-name symbol)
          'consult--details (lsp:document-symbol-detail? symbol))))))
