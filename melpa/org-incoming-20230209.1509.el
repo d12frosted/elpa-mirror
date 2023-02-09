@@ -4,8 +4,8 @@
 
 ;; Author: Lukas Barth <mail@tinloaf.de>
 ;; Version: 0.1
-;; Package-Version: 20230201.1439
-;; Package-Commit: 27a0eaa51eea8054a1d673b0757c1ac8f45bf014
+;; Package-Version: 20230209.1509
+;; Package-Commit: 5c5a5cc034a0b9ed808e5cbbf4876d489a6c7d28
 ;; Package-Requires: ((emacs "24.4") (dash "2.19.1") (datetime "0.7.2") (s "1.13.1"))
 ;; Keywords: files
 ;; URL: https://github.com/tinloaf/org-incoming
@@ -405,8 +405,7 @@ processed again."
   (when (buffer-live-p org-incoming--org-buf)
     (kill-buffer org-incoming--org-buf))
 
-  (when (eq org-incoming--cur-phase 'named)
-    (org-incoming--cleanup-tempdir 't))
+  (org-incoming--cleanup-tempdir 't)
 
   (add-to-list 'org-incoming--skipped org-incoming--cur-source-original)
   (setq org-incoming--cur-phase 'skipped)

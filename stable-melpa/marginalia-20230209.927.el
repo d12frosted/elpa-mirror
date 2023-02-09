@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.0
-;; Package-Version: 20230208.2149
-;; Package-Commit: 6d48ed54be87969e3ce53a24dbc63ec72ec6a91a
+;; Package-Version: 20230209.927
+;; Package-Commit: bb0a5241ee472c8f6b5f554207de4124a1ccb71a
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.3.0"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -1134,7 +1134,7 @@ This runs through the `marginalia-prompt-categories' alist
 looking for a regexp that matches the prompt."
   (when-let (prompt (minibuffer-prompt))
     (setq prompt
-          (replace-regexp-in-string "(.*default.*)\\|\\[.*\\]" "" prompt))
+          (replace-regexp-in-string "(.*?default.*?)\\|\\[.*?\\]" "" prompt))
     (cl-loop for (regexp . category) in marginalia-prompt-categories
              when (string-match-p regexp prompt)
              return category)))

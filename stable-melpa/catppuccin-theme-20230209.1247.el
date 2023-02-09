@@ -8,8 +8,8 @@
 ;; Author: nyxkrage
 ;; Original-Author: film42
 ;; Version: 1.0.0
-;; Package-Version: 20230207.2057
-;; Package-Commit: 66c71ebfb89d1eafb0fc67ee03a4a1b9a7e7217a
+;; Package-Version: 20230209.1247
+;; Package-Commit: 196fb42de256ff1e233b90c8916d63f9b7095070
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
@@ -216,7 +216,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                       (lambda (i) (string-to-number (substring color i (+ i 2)) 16))
                       '(1 3 5))))
        (rgb-to-hex (lambda (r g b)
-                     (format "#%x%x%x" r g b)))
+                     (format "#%02x%02x%02x" r g b)))
        (rnd (lambda (n) (round (+ .5 n)))))
 
   (defun catppuccin-lighten (color value)

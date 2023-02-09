@@ -4,8 +4,8 @@
 
 ;; Author: Adam Tillou <qaiviq@gmail.com>
 ;; Keywords: convenience, tools
-;; Package-Version: 20230117.650
-;; Package-Commit: 626d01a336f59acf58d56960627bb6dfd27be267
+;; Package-Version: 20230209.1350
+;; Package-Commit: 03cae6d045636948d8b47979d85774e39556f9e1
 ;; Version: 1.0.0
 ;; Homepage: https://github.com/qaiviq/echo-bar.el
 
@@ -115,6 +115,7 @@ If nil, don't update the echo bar automatically."
   ;; Start the timer to automatically update
   (when echo-bar-update-interval
     (run-with-timer 0 echo-bar-update-interval 'echo-bar-update))
+  (echo-bar-update) ;; Update immediately
 
   ;; Add the setup function to the minibuffer hook
   (when echo-bar-minibuffer
@@ -174,7 +175,7 @@ If nil, don't update the echo bar automatically."
 
         (with-current-buffer (overlay-buffer o)
           ;; Wrap the text to the next line if the echo bar text is too long
-          (if (> (point-max) max-len)
+          (if (> (mod (point-max) (frame-width)) max-len)
               (overlay-put o 'after-string (concat "\n" echo-bar-text))
             (overlay-put o 'after-string echo-bar-text)))))
 
@@ -210,7 +211,8 @@ overlays."
 (defun echo-bar-update ()
   "Get new text to be displayed from `echo-bar-default-function`."
   (interactive)
-  (echo-bar-set-text (funcall echo-bar-function)))
+  (when echo-bar-mode
+    (echo-bar-set-text (funcall echo-bar-function))))
 
 (defun echo-bar-default-function ()
   "The default function to use for the contents of the echo bar.
