@@ -1,9 +1,9 @@
 (treesit-auto .
-	      [(20230207 1942)
+	      [(20230209 2222)
 	       ((emacs
 		 (29 0)))
-	       "Automatically use tree-sitter enhanced major modes when available" single
-	       ((:commit . "e9217216bf3b5c729ae19719bfb0f3394ebf7cda")
+	       "Automatically use tree-sitter enhanced major modes" single
+	       ((:commit . "70bc85b7b907e2b5d4d692d263c3153068a1065e")
 		(:authors
 		 ("Robb Enzmann" . "robbenzmann@gmail.com"))
 		(:maintainer "Robb Enzmann" . "robbenzmann@gmail.com")

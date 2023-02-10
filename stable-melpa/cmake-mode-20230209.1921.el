@@ -1,8 +1,8 @@
 ;;; cmake-mode.el --- major-mode for editing CMake sources
 
 ;; Package-Requires: ((emacs "24.1"))
-;; Package-Version: 20230202.1820
-;; Package-Commit: 2a0c105cf08190284b288057c693eeddef5066fc
+;; Package-Version: 20230209.1921
+;; Package-Commit: 29bcbcab4fe3750d7529f49e9d71768c76a23a47
 
 ; Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
 ; file Copyright.txt or https://cmake.org/licensing for details.
