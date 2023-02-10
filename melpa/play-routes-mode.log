@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/brocode/play-routes-mode.git
 
 Updating /mnt/store/melpa/working/play-routes-mode/
-Checking out ef8230932f7bb96643febbd6872c522932f9571a
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/brocode/play-routes-mode.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
