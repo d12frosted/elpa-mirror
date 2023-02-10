@@ -2,9 +2,9 @@
 
 ;; Author: Samuel W. Flint <swflint@flintfam.org>
 ;; URL: https://git.sr.ht/~swflint/time-block
-;; Package-Version: 20221102.1811
-;; Package-Commit: 5e2c7c050378307e25f3964e082c5ee531ae00b2
-;; Version: 1.2.1
+;; Package-Version: 20230210.136
+;; Package-Commit: e0dcf6eb13871df41b081b9cdaadced722c3ba54
+;; Version: 1.2.2
 ;; Package-Requires: ((emacs "25.1") (ts "0.1"))
 ;; Keywords: tools, productivity, convenience
 ;; SPDX-FileCopyrightText: 2022 Samuel W. Flint <swflint@flintfam.org>
@@ -95,7 +95,7 @@
 ;;
 ;; Commands can also be manually advised.  This can be done to prevent
 ;; only certain cases from happening.  For instance, I use the following
-;; code to delay myself from editing my emacs configuration during the
+;; code to delay myself from editing my Emacs configuration during the
 ;; workday.
 ;;
 ;; (defun my/buffer-sets-around-advice (orig name)
@@ -114,8 +114,11 @@
 ;; Variables:
 
 (defgroup time-block ()
-  "Variables controlling `time-block' functionality."
-  :group 'applications)
+  "Block running groups of commands using the current day and time."
+  :group 'applications
+  :link '(url-link :tag "Homepage" "https://git.sr.ht/~swflint/time-block-command")
+  :link '(emacs-library-link :tag "Library Source" "time-block.el")
+  :prefix "time-block-")
 
 (defcustom time-block-groups nil
   "Define time blocking groups.
@@ -147,7 +150,11 @@ Saturday   6"
 (make-obsolete-variable 'time-block-command-groups 'time-block-groups "time-block 0.1.0")
 
 (defcustom time-block-skip-on-holidays-p nil
-  "If t skip checking for time blocking on holidays.  Default to nil."
+  "How holidays should be skipped when blocking commands.
+
+If nil, no holidays will be skipped; if t, all holidays will be
+skipped; if a list, only those holidays in the list will be
+skipped; if a regexp, only holidays matching will be skipped."
   :group 'time-block
   :type '(choice (const :tag "Continue blocking on holidays" nil)
                  (regexp :tag "Matching regexp")

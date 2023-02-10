@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20230209.315
-;; Package-Commit: b5d6f26bc507e79bc3b948acef7bf94b683c4f14
+;; Package-Version: 20230210.113
+;; Package-Commit: 0bca84ff6d3c49e4ca1bf5c3922ed261aafa3635
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -1242,7 +1242,7 @@ Return output file name."
   - Headline can be declared as:
 
       * headline description <Grid props...>
-      * children of this headline will be a slide <Top>
+      * child of this headline will be a Slide <Top>
 
   - Paragraph can be set by attr_html:
 
@@ -1257,7 +1257,6 @@ Return output file name."
 
 You can define global options like this:
 
-  #+TITLE: DEMO
   #+THEME: theme1
   #+TRANSITION: ts1
   #+TEMPLATE: tp1
@@ -1273,7 +1272,7 @@ You can define global options like this:
   #+EXTERN_COMPONENTS: MyDeck MyLink Recharts
   #+EXPORT_LEVEL: 3
 
-Press [f12] and use Spectacle.defaultTheme to show the default theme:
+Press [f12] and use `Spectacle.defaultTheme` to show the default theme:
 
   {
       \"size\": {
@@ -1325,7 +1324,7 @@ This is the defaultTransition:
       }
   }
 
-This is a demo template:
+You can define your own template like this:
 
   let tp1 = ({ slideNumber, numberOfSlides }) => html`
       <${FlexBox} position='absolute' bottom=${0} right=${0} opacity=${0.3}>
@@ -1346,12 +1345,11 @@ Components can be defined like this:
       return html`<${Grid} gridTemplateColumns=${'minmax(100px, 1fr) '.repeat(n).trim()} ...${props}></${Grid}>`
   };
 
-  // use above source block with ':type ScCodePane'
-  const ScCodePane = (props) => {
+  const ScCodePane = (props) => { // :type ScCodePane
       return html`<${Box} className='x'><${CodePane} ...${props}></${CodePane}></${Box}>`;
   }
 
-Don't forget to regist them before use:
+Don't forget to regist the components before use:
 
   #+extern_components: MySlide RowGrid ScCodePane
 

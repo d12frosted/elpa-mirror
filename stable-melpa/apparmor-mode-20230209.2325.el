@@ -5,9 +5,9 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/apparmor-mode
-;; Package-Version: 20230119.16
-;; Package-Commit: 3a566b13a41e1cedfaeeea9cd5e187fb68aa7010
-;; Version: 0.4
+;; Package-Version: 20230209.2325
+;; Package-Commit: 3b641de4e34fb4a0594a461254f1454973b6b7aa
+;; Version: 0.5
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This file is not part of GNU Emacs.
@@ -118,7 +118,7 @@
                                                  (regexp-opt apparmor-mode-capabilities)
                                                  "\\s-*\\)*"))
 
-(defvar apparmor-mode-variable-name-regexp "@{[[:alpha:]]+}")
+(defvar apparmor-mode-variable-name-regexp "@{[[:alpha:]_]+}")
 
 (defvar apparmor-mode-variable-regexp
   (concat "^\\s-*\\(" apparmor-mode-variable-name-regexp "\\)\\s-*\\(\\+?=\\)\\s-*\\([[:graph:]]+\\)\\(\\s-+\\([[:graph:]]+\\)\\)?\\s-*\\(#.*\\)?$"))
@@ -172,8 +172,8 @@
    ","))
 
 (defvar apparmor-mode-font-lock-defaults
-  `(((,(regexp-opt apparmor-mode-keywords 'words) . font-lock-keyword-face)
-     (,(regexp-opt apparmor-mode-rlimit-types 'words) . font-lock-type-face)
+  `(((,(regexp-opt apparmor-mode-keywords 'symbols) . font-lock-keyword-face)
+     (,(regexp-opt apparmor-mode-rlimit-types 'symbols) . font-lock-type-face)
      ;; comma at end-of-line
      (",\\s-*$" . 'font-lock-builtin-face)
      ;; TODO be more specific about where these are valid

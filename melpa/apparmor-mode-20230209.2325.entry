@@ -1,9 +1,9 @@
 (apparmor-mode .
-	       [(20230119 16)
+	       [(20230209 2325)
 		((emacs
 		  (26 1)))
 		"Major mode for editing AppArmor policy files" single
-		((:commit . "3a566b13a41e1cedfaeeea9cd5e187fb68aa7010")
+		((:commit . "3b641de4e34fb4a0594a461254f1454973b6b7aa")
 		 (:authors
 		  ("Alex Murray" . "murray.alex@gmail.com"))
 		 (:maintainer "Alex Murray" . "murray.alex@gmail.com")

@@ -1,11 +1,11 @@
-;;; buffer-sets.el --- Sets of Buffers for Buffer Management
+;;; buffer-sets.el --- Sets of Buffers for Buffer Management -*- lexical-binding: t -*-
 
-;; Copyright (C) 2016, 2022 Samuel W. Flint
+;; Copyright (C) 2016, 2022--2023 Samuel W. Flint
 
 ;; Author: Samuel W. Flint <swflint@flintfam.org>
-;; Version: 3.5
-;; Package-Version: 20221102.1813
-;; Package-Commit: e14026496655562ebd191ba25fad59ca8948c9bb
+;; Version: 3.7.2
+;; Package-Version: 20230210.122
+;; Package-Commit: cdc66804b8a1ec7ddf94d99c7f24b801148b64df
 ;; Package-Requires: ((cl-lib "0.5"))
 ;; Keywords: buffer-management
 ;; URL: https://git.sr.ht/~swflint/buffer-sets
@@ -110,8 +110,11 @@
 ;;; Variables and structures
 
 (defgroup buffer-sets ()
-  "Settings related to `buffer-groups'."
-  :group 'applications)
+  "Load and unload sets of buffers with ease."
+  :group 'applications
+  :link '(url-link :tag "Homepage" "https://git.sr.ht/~swflint/buffer-sets")
+  :link '(emacs-library-link :tag "Library Source" "buffer-sets.el")
+  :prefix "buffer-sets-")
 
 (defcustom buffer-sets nil
   "Description of buffer sets."
@@ -119,6 +122,7 @@
   :type '(alist :key-value (string :tag "Buffer Set Name")
                 :value-type (alist
                              :options (((const :tag "Files" :files) (repeat (string :tag "File Name")))
+                                       ((const :tag "Description" :description) string)
                                        ((const :tag "Select Buffer?" :select) (string :tag "Buffer Name"))
                                        ((const :tag "Run on apply" :on-apply) sexp)
                                        ((const :tag "Run on remove" :on-remove) sexp)))))
@@ -174,6 +178,10 @@ nil (don't save)"
 
 ;; Utility functions
 
+(defun buffer-sets-get-set (name)
+  "Get the definition for buffer-set NAME."
+  (cdr (assoc name buffer-sets #'string=)))
+
 (defun buffer-sets-buffer-in-set-p (buffer-set buffer)
   "Is BUFFER in BUFFER-SET?"
   (when-let ((buffers (cl-rest (assoc buffer-set buffer-sets-sets-to-buffers #'string=))))
@@ -198,14 +206,31 @@ nil (don't save)"
                      :test #'string=))
 
 
+;; Completion
+
+(defun buffer-sets-completion-annotate (indent-to name)
+  "Annotate buffer set NAME, indenting to INDENT-TO."
+  (when-let ((definition (buffer-sets-get-set name))
+             (description (cdr (assoc :description definition))))
+    (let ((spaces-to-add (- indent-to (length name))))
+      (format "%s%s"
+              (make-string spaces-to-add ?\N{Space})
+              description))))
+
+(defun buffer-sets-completing-read (prompt items)
+  "PROMPT for item in ITEMS using annotated completions."
+  (let* ((longest (apply #'max (mapcar #'length items)))
+         (completion-extra-properties (list :annotation-function
+                                            (apply-partially #'buffer-sets-completion-annotate (+ 4 longest)))))
+    (completing-read prompt items nil t)))
+
+
 ;; Commands
 
 (defun buffer-sets-load-buffer-set (name)
   "Load the buffer-set NAME."
-  (interactive (list (completing-read "Buffer Set: "
-                                      (buffer-sets-unloaded-buffer-sets)
-                                      nil t)))
-  (if-let ((definition (cdr (assoc name buffer-sets #'string=))))
+  (interactive (list (buffer-sets-completing-read "Buffer Set: " (buffer-sets-unloaded-buffer-sets))))
+  (if-let ((definition (buffer-sets-get-set name)))
       (progn
         (mapc #'(lambda (x)
                   (buffer-sets-associate-buffer-with-set name (find-file-noselect x)))
@@ -221,9 +246,9 @@ nil (don't save)"
 
 (defun buffer-sets-unload-buffer-set (name)
   "Unload buffer-set NAME."
-  (interactive (list (completing-read "Buffer Set: " buffer-sets-loaded-sets nil t)))
+  (interactive (list (buffer-sets-completing-read "Buffer Set: " buffer-sets-loaded-sets)))
   (if-let ((buffers (cl-rest (assoc name buffer-sets-sets-to-buffers #'string=)))
-           (definition (cdr (assoc name buffer-sets #'string=))))
+           (definition (buffer-sets-get-set name)))
       (progn
         (mapc #'(lambda (buf)
                   (when (buffer-live-p buf)
@@ -244,9 +269,7 @@ nil (don't save)"
 
 (defun buffer-sets-reload-buffer-set (buffer-set)
   "Reload BUFFER-SET."
-  (interactive (list (completing-read "Buffer Set: "
-                                      (buffer-sets-unloaded-buffer-sets)
-                                      nil t)))
+  (interactive (list (buffer-sets-completing-read "Buffer Set: " (buffer-sets-unloaded-buffer-sets))))
   (buffer-sets-unload-buffer-set buffer-set)
   (buffer-sets-load-buffer-set buffer-set)
   (message "Reloaded buffer set %s." buffer-set))
@@ -397,7 +420,7 @@ string, and `buffer-sets-save-method' is `:file'."
 (with-eval-after-load 'ibuf-macs
   (define-ibuffer-filter in-buffer-set
       "Check to see if a buffer is in a given buffer-set."
-    (:reader  (completing-read "Set Name: " buffer-sets-loaded-sets))
+    (:reader  (buffer-sets-completing-read "Buffer Set: " buffer-sets-loaded-sets))
     (buffer-sets-buffer-in-set-p qualifier buf)))
 
 (provide 'buffer-sets)
