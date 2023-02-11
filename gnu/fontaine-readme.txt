@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `fontaine' (or `fontaine.el'), and provides every other
 piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.4.0,
-released on 2022-09-07.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.0.0,
+released on 2023-02-11.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.5.0-dev.
+Current development target is 1.1.0-dev.
 
 ⁃ Package name (GNU ELPA): `fontaine'
 ⁃ Official manual: <https://protesilaos.com/emacs/fontaine>
@@ -25,6 +25,8 @@ Current development target is 0.5.0-dev.
     ⁃ GitHub: <https://github.com/protesilaos/fontaine>
     ⁃ GitLab: <https://gitlab.com/protesilaos/fontaine>
 ⁃ Mailing list: <https://lists.sr.ht/~protesilaos/fontaine>
+⁃ Backronym: Fonts, Ornaments, and Neat Typography Are Irrelevant in
+  Non-graphical Emacs.
 
 Table of Contents
 ─────────────────
@@ -32,6 +34,7 @@ Table of Contents
 1. COPYING
 2. Overview
 .. 1. Shared and implicit fallback values for presets
+.. 2. Inherit the properties of another named preset
 3. Installation
 .. 1. GNU ELPA package
 .. 2. Manual installation
@@ -48,7 +51,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022 Free Software Foundation, Inc.
+  Copyright (C) 2022-2023 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -171,6 +174,8 @@ Table of Contents
 
 2.1 Shared and implicit fallback values for presets
 ───────────────────────────────────────────────────
+
+  [Inherit the properties of another named preset].
 
   The user option `fontaine-presets' may look like this (though check
   its default value before you make any edits):
@@ -404,6 +409,65 @@ Table of Contents
   │ 	 :variable-pitch-family "FiraGO"
   │ 	 :variable-pitch-height 1.05)))
   └────
+
+
+[Inherit the properties of another named preset] See section 2.2
+
+
+2.2 Inherit the properties of another named preset
+──────────────────────────────────────────────────
+
+  [Shared and implicit fallback values for presets].
+
+  When defining multiple presets, we may need to duplicate properties
+  and then make tweaks to individual values.  Suppose we want to have
+  two distinct presets for presentations: one is for coding related
+  demonstrations and the other for prose.  Both must have some common
+  styles, but must define distinct font families each of which is
+  suitable for the given task.  In this case, we do not want to fall
+  back to the generic `t' preset (per the default behaviour) and we also
+  do not wish to duplicate properties manually, potentially making
+  mistakes in the process.  Fontaine thus provides a method of
+  inheriting a named preset’s properties by using the `:inherit'
+  property with a value that references the name of another preset
+  (technically, the `car' of that list).  Here is the idea:
+
+  ┌────
+  │ (setq fontaine-presets
+  │       '((regular
+  │ 	 :default-height 100)
+  │ 	(code-demo
+  │ 	 :default-family "Source Code Pro"
+  │ 	 :default-weight semilight
+  │ 	 :default-height 170
+  │ 	 :variable-pitch-family "Sans"
+  │ 	 :bold-weight extrabold)
+  │ 	(prose-demo
+  │ 	 :inherit code-demo ; copy the `code-demo' properties
+  │ 	 :default-family "Sans"
+  │ 	 :variable-pitch-family "Serif"
+  │ 	 :default-height 220)
+  │ 	(t
+  │ 	 :default-family "Monospace"
+  │ 	 ;; more generic fallback properties here...
+  │ 	 )))
+  └────
+
+  In this scenario, the `regular' preset gets all its properties from
+  the `t' preset.  We omit them here in the interest of brevity (see the
+  default value of `fontaine-presets' and its documentation for the
+  details).  In turn, the `code-demo' specifies more properties and
+  falls back to `t' for any property not explicitly referenced therein.
+  Finally, the `prose-demo' copies everything in `code-demo', overrides
+  every property it specifies, and falls back to `t' for every other
+  property.
+
+  In the interest of simplicity, Fontaine does not support recursive
+  inheritance.  If there is a compelling need for it, we can add it in
+  future versions.
+
+
+[Shared and implicit fallback values for presets] See section 2.1
 
 
 3 Installation

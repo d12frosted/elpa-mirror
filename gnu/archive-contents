@@ -1270,7 +1270,7 @@
 		       ("Manuel Uberti" . "manuel.uberti@inventati.org"))
 		      (:commit . "9c68ee881f18f554f0ab5bbf5bee1a4b753d792b"))])
  (fontaine .
-	   [(0 4 1)
+	   [(1 0 0)
 	    ((emacs
 	      (27 1)))
 	    "Set font configurations using presets" tar
@@ -1278,7 +1278,7 @@
 	     (:maintainer "Fontaine Development" . "~protesilaos/fontaine@lists.sr.ht")
 	     (:authors
 	      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	     (:commit . "e7c6c0a172ffc51d16d7df77a528b87e183531a6"))])
+	     (:commit . "10c4fa74e56edbb1e9c5209d8189cfa30cbd8512"))])
  (frame-tabs .
 	     [(1 1)
 	      nil "show buffer tabs in side window" single
@@ -1614,7 +1614,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 19)
+	    [(0 20)
 	     ((emacs
 	       (27 1)))
 	     "Tool for inspection of Emacs Lisp objects" tar
@@ -1623,7 +1623,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "0766ce48dfbf193df73a1fd343a84a9d41ded8ba"))])
+	      (:commit . "61fd1dc7e321525cca11a5a899c631f745b2cf31"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
@@ -3281,7 +3281,7 @@
 	    ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	   (:keywords "matching"))])
  (sxhkdrc-mode .
-	       [(0 1 5)
+	       [(1 0 0)
 		((emacs
 		  (27 1)))
 		"Major mode for sxhkdrc files (Simple X Hot Key Daemon)" tar
@@ -3289,7 +3289,7 @@
 		 (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "d41bb1f9f5fc5ea8ba629052dc87a809fb16750b"))])
+		 (:commit . "112970f8d2355c0cfa0269bb92cd1ecc18790bc9"))])
  (system-packages .
 		  [(1 0 11)
 		   ((emacs
