@@ -5,8 +5,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-insert-random
-;; Package-Version: 20220622.1653
-;; Package-Commit: 049567eeca639017ac2db786cefaf38af7273654
+;; Package-Version: 20230212.856
+;; Package-Commit: c9746c34955c9081cb69c87cfe0c75b62370e432
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.5"))
 ;; Keywords: convenience
@@ -123,12 +123,25 @@ This variable does not affect non-interactive use.")
          (interactive (list (insert-random--count current-prefix-arg)))
          (insert-random ,symbol count)))))
 
+;;;###autoload
 (insert-random--define insert-random-lowercase "az")
+
+;;;###autoload
 (insert-random--define insert-random-uppercase "AZ")
+
+;;;###autoload
 (insert-random--define insert-random-alphabetic "azAZ")
+
+;;;###autoload
 (insert-random--define insert-random-alphanumeric "azAZ09")
+
+;;;###autoload
 (insert-random--define insert-random-digits "09")
+
+;;;###autoload
 (insert-random--define insert-random-hex-uppercase "09AF")
+
+;;;###autoload
 (insert-random--define insert-random-hex-lowercase "09af")
 
 (provide 'insert-random)

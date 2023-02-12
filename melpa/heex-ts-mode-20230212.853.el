@@ -4,8 +4,8 @@
 
 ;; Author           : Wilhelm H Kirschbaum
 ;; Version          : 1.0
-;; Package-Version: 20230210.757
-;; Package-Commit: 6b8f675d754dc615c4ae6d0a94ddbae5f12fba43
+;; Package-Version: 20230212.853
+;; Package-Commit: 7aea9ebd08f24c8f9b51849b01071439eaa8e62a
 ;; URL              : https://github.com/wkirschbaum/elixir-ts-mode
 ;; Package-Requires : ((emacs "29"))
 ;; Created          : November 2022
@@ -123,7 +123,17 @@
 (defvar heex-ts-mode--indent-rules
   (let ((offset heex-ts-mode-indent-offset))
     `((heex
-       ((parent-is "fragment") point-min 0)
+       ((parent-is "fragment")
+        (lambda (node parent &rest _)
+          ;; if heex is embedded indent to parent
+          ;; otherwise indent to the bol
+          (if (eq (treesit-language-at (point-min)) 'heex)
+              (point-min)
+            (save-excursion
+              (goto-char (treesit-node-start parent))
+              (back-to-indentation)
+              (point))
+            )) 0)
        ((node-is "end_tag") parent-bol 0)
        ((node-is "end_component") parent-bol 0)
        ((node-is "end_slot") parent-bol 0)

@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.6-alpha
-;; Package-Version: 20230128.1027
-;; Package-Commit: 0f7eae811308f92b8681b5411f7a5035d1fcd5a7
+;; Package-Version: 20230212.1208
+;; Package-Commit: c765b73b370f0fcaaa3cee28b2be69652e2d2c39
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -9204,6 +9204,11 @@ This function assumes point is on a table."
         (push (buffer-substring-no-properties cur (point-max)) ret))
       (nreverse ret))))
 
+(defsubst markdown--is-delimiter-row (line)
+  (and (string-match-p "\\`[ \t]*|[ \t]*[-:]" line)
+       (cl-loop for c across line
+                always (member c '(?| ?- ?: ?\t ? )))))
+
 (defun markdown-table-align ()
   "Align table at point.
 This function assumes point is on a table."
@@ -9216,9 +9221,10 @@ This function assumes point is on a table."
             ;; Store table indent
             (indent (progn (looking-at "[ \t]*") (match-string 0)))
             ;; Split table in lines and save column format specifier
-            (lines (mapcar (lambda (l)
-                             (if (string-match-p "\\`[ \t]*|[ \t]*[-:]" l)
-                                 (progn (setq fmtspec (or fmtspec l)) nil) l))
+            (lines (mapcar (lambda (line)
+                             (if (markdown--is-delimiter-row line)
+                                 (progn (setq fmtspec (or fmtspec line)) nil)
+                               line))
                            (markdown--split-string (buffer-substring begin end) "\n")))
             ;; Split lines in cells
             (cells (mapcar (lambda (l) (markdown--table-line-to-columns l))

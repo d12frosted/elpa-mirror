@@ -5,8 +5,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-insert-random
-;; Package-Version: 20220622.1653
-;; Package-Commit: 049567eeca639017ac2db786cefaf38af7273654
+;; Package-Version: 20230212.1313
+;; Package-Commit: 1d97e5c349fc085a621d8370529bc6ce7bc94b07
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.5"))
 ;; Keywords: convenience
@@ -130,6 +130,14 @@ This variable does not affect non-interactive use.")
 (insert-random--define insert-random-digits "09")
 (insert-random--define insert-random-hex-uppercase "09AF")
 (insert-random--define insert-random-hex-lowercase "09af")
+
+;;;###autoload (autoload 'insert-random-lowercase "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-uppercase "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-alphabetic "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-alphanumeric "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-digits "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-hex-uppercase "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-hex-lowercase "insert-random" nil t)
 
 (provide 'insert-random)
 

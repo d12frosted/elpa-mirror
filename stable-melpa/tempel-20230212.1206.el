@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.6
-;; Package-Version: 20230123.822
-;; Package-Commit: d3f44ccf213d058bb6f28c3895fd1f588e331d5d
+;; Package-Version: 20230212.1206
+;; Package-Commit: 3aa9ce8b00278aa80dcabe93f10d0d9144362c48
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.3.0"))
 ;; Homepage: https://github.com/minad/tempel
 
@@ -205,7 +205,7 @@ TEMPLATES is the list of templates."
 (defun tempel--exit (templates region name status)
   "Exit function for completion for template NAME and STATUS.
 TEMPLATES is the list of templates.
-REGION are the current region bouns"
+REGION are the current region bounds."
   (unless (eq status 'exact)
     (when-let ((sym (intern-soft name))
                (template (alist-get sym templates)))

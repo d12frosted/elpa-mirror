@@ -2,8 +2,6 @@
 
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; URL: https://github.com/nlamirault/emacs-gitlab
-;; Package-Version: 20181228.826
-;; Package-Commit: 8c2324c02119500f094c2f92dfaba4c9977ce1ba
 ;; Version: 0.1.0
 ;; Keywords: gitlab, ivy
 
