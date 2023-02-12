@@ -2,9 +2,9 @@
 
 ;; Copyright (C) 2019-2023 Yves Zoundi
 
-;; Version: 1.8
-;; Package-Version: 20230122.2144
-;; Package-Commit: 472bf005b1dfa92464257fcfdebefa1fe91a586f
+;; Version: 1.9
+;; Package-Version: 20230211.2128
+;; Package-Commit: 4b8734f6fdf5f4d68803ed6cc2e4c82efe74e6bd
 ;; Author: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; Maintainer: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; URL: https://github.com/yveszoundi/eglot-java
@@ -142,35 +142,38 @@
 (declare-function tar-untar-buffer "tar-mode" ())
 (declare-function xml-get-children "xml" (node child-name))
 
-(defclass eglot-eclipse-jdt (eglot-lsp-server) ()
+(defclass eglot-java-eclipse-jdt (eglot-lsp-server) ()
   :documentation "Eclipse's Java Development Tools Language Server.")
 
-(cl-defmethod eglot-initialization-options ((server eglot-eclipse-jdt))
+(cl-defmethod eglot-initialization-options ((server eglot-java-eclipse-jdt))
   "Passes through required jdt initialization options."
-  `(:workspaceFolders
-    [,@(cl-delete-duplicates
-        (mapcar #'eglot--path-to-uri
-                (let* ((root (project-root (eglot--project server))))
-                  (cons root
-                        (mapcar
-                         #'file-name-directory
-                         (append
-                          (file-expand-wildcards (concat root "*/pom.xml"))
-                          (file-expand-wildcards (concat root "*/build.gradle"))
-                          (file-expand-wildcards (concat root "*/.project")))))))
-        :test #'string=)]
-    ,@(if-let ((home (or (getenv "JAVA_HOME")
-                         (ignore-errors
-                           (expand-file-name
-                            ".."
-                            (file-name-directory
-                             (file-chase-links (executable-find "javac"))))))))
-          `(:settings (:java (:home ,home)
-                             :import (:gradle (:enabled t)
-                                              :wrapper (:enabled t))))
-        (ignore (eglot--warn "JAVA_HOME env var not set")))))
+  ;; TODO Allow hooks for settings such as extendedClientCapabilities
+  `(:extendedClientCapabilities (:classFileContentsSupport t)
+                                :workspaceFolders
+                                [,@(cl-delete-duplicates
+                                    (mapcar #'eglot--path-to-uri
+                                            (let* ((root (project-root (eglot--project server))))
+                                              (cons root
+                                                    (mapcar
+                                                     #'file-name-directory
+                                                     (append
+                                                      (file-expand-wildcards (concat root "*/pom.xml"))
+                                                      (file-expand-wildcards (concat root "*/build.gradle"))
+                                                      (file-expand-wildcards (concat root "*/.project")))))))
+                                    :test #'string=)]
 
-(defun eglot--eclipse-jdt-contact (interactive)
+                                ,@(if-let ((home (or (getenv "JAVA_HOME")
+                                                     (ignore-errors
+                                                       (expand-file-name
+                                                        ".."
+                                                        (file-name-directory
+                                                         (file-chase-links (executable-find "javac"))))))))
+                                      `(:settings (:java (:home ,home)
+                                                         :import (:gradle (:enabled t)
+                                                                          :wrapper (:enabled t))))
+                                    (ignore (eglot--warn "JAVA_HOME env var not set")))))
+
+(defun eglot-java--eclipse-jdt-contact (interactive)
   "Return a contact for connecting to eclipse.jdt.ls server, as a cons cell.
 If INTERACTIVE, prompt user for details."
   (cl-labels
@@ -208,7 +211,7 @@ If INTERACTIVE, prompt user for details."
            (workspace
             (expand-file-name (md5 (project-root (eglot--current-project)))
                               (locate-user-emacs-file
-                               "eglot-eclipse-jdt-cache"))))
+                               "eglot-java-eclipse-jdt-cache"))))
       (unless jar
         (setq jar
               (cl-find-if #'is-the-jar
@@ -221,7 +224,7 @@ If INTERACTIVE, prompt user for details."
         (setenv "CLASSPATH" (concat (getenv "CLASSPATH") path-separator jar)))
       (unless (file-directory-p workspace)
         (make-directory workspace t))
-      (cons 'eglot-eclipse-jdt
+      (cons 'eglot-java-eclipse-jdt
             (nconc
              (list
               (executable-find "java")
@@ -235,7 +238,7 @@ If INTERACTIVE, prompt user for details."
               "-data" workspace))))))
 
 (cl-defmethod eglot-execute-command
-  ((_server eglot-eclipse-jdt) (_cmd (eql java.apply.workspaceEdit)) arguments)
+  ((_server eglot-java-eclipse-jdt) (_cmd (eql java.apply.workspaceEdit)) arguments)
   "Eclipse JDT breaks spec and replies with edits as arguments."
   (mapc #'eglot--apply-workspace-edit arguments))
 
@@ -281,7 +284,7 @@ Otherwise returns nil"
   (let ((cp (getenv "CLASSPATH")))
     (setenv "CLASSPATH" (concat cp path-separator (eglot-java--find-equinox-launcher)))
     (unwind-protect
-        (eglot--eclipse-jdt-contact nil)
+        (eglot-java--eclipse-jdt-contact nil)
       (setenv "CLASSPATH" cp))))
 
 (defun eglot-java--project-name-maven (root)
@@ -316,6 +319,17 @@ Otherwise the basename of the folder ROOT will be returned."
                         '("'" "\"")
                         :initial-value gradle-settings)))
       (file-name-nondirectory (directory-file-name (file-name-directory build-file))))))
+
+(defun eglot-java--make-path (root-dir &rest path-elements)
+  (let ((new-path          (expand-file-name (if (listp root-dir)
+                                                 (car root-dir)
+                                               root-dir)))
+        (new-path-elements (if (listp root-dir)
+                               (rest root-dir)
+                             path-elements)))
+    (dolist (p new-path-elements)
+      (setq new-path (concat (file-name-as-directory new-path) p)))
+    new-path))
 
 (defun eglot-java--project-name (root)
   "Return the Java project name stored in a given folder ROOT."
@@ -728,6 +742,10 @@ The buffer contains the raw HTTP response sent by the server."
 (defun eglot-java--init ()
   "Initialize the library for use with the Eclipse JDT language server."
   (progn
+    (unless eglot-java-jdt-uri-handling-patch-applied
+      (eglot-java--jdthandler-patch-eglot)
+      (setq eglot-java-jdt-uri-handling-patch-applied t))
+
     (unless eglot-java-eglot-server-programs-manual-updates
       (let ((existing-java-related-assocs (mapcan (lambda (item)
                                                     (if (listp (car item))
@@ -750,6 +768,62 @@ The buffer contains the raw HTTP response sent by the server."
       (add-hook 'project-find-functions  #'eglot-java--project-try))))
 
 (defvar eglot-java-mode-map (make-sparse-keymap))
+
+(defun eglot-java--jdt-uri-handler (operation &rest args)
+  "Support Eclipse jdtls `jdt://' uri scheme."
+  (let* ((uri (car args))
+         (cache-dir (expand-file-name ".eglot-java" (temporary-file-directory)))
+         (source-file
+          (expand-file-name
+           (eglot-java--make-path
+            cache-dir
+            (save-match-data
+              (when (string-match "jdt://contents/\\(.*?\\)/\\(.*\\)\.class\\?" uri)
+                (format "%s.java" (replace-regexp-in-string "/" "." (match-string 2 uri) t t))))))))
+    (unless (file-readable-p source-file)
+      (let ((content (jsonrpc-request (eglot-current-server) :java/classFileContents (list :uri uri)))
+            (metadata-file (format "%s.%s.metadata"
+                                   (file-name-directory source-file)
+                                   (file-name-base source-file))))
+        (unless (file-directory-p cache-dir) (make-directory cache-dir t))
+        (with-temp-file source-file (insert content))
+        (with-temp-file metadata-file (insert uri))))
+    source-file))
+
+(add-to-list 'file-name-handler-alist '("\\`jdt://" . eglot-java--jdt-uri-handler))
+
+(defvar eglot-java-jdt-uri-handling-patch-applied nil "Whether or not JDT uri handling is already patched.")
+
+(defun eglot-java--wrap-legacy-eglot--path-to-uri (original-fn &rest args)
+  "Hack until eglot is updated.
+ARGS is a list with one element, a file path or potentially a URI.
+If path is a jar URI, don't parse. If it is not a jar call ORIGINAL-FN."
+  (let ((path (file-truename (car args))))
+    (if (equal "jdt" (url-type (url-generic-parse-url path)))
+        path
+      (apply original-fn args))))
+
+(defun eglot-java--wrap-legacy-eglot--uri-to-path (original-fn &rest args)
+  "Hack until eglot is updated.
+ARGS is a list with one element, a URI.
+If URI is a jar URI, don't parse and let the `jdthandler--file-name-handler'
+handle it. If it is not a jar call ORIGINAL-FN."
+  (let ((uri (car args)))
+    (if (string= "file" (url-type (url-generic-parse-url uri)))
+        (apply original-fn args)
+      uri)))
+
+(defun eglot-java--jdthandler-patch-eglot ()
+  "Patch old versions of Eglot to work with Jdthandler."
+  (interactive) ;; TODO Remove when eglot is updated in melpa
+  ;; See also https://debbugs.gnu.org/cgi/bugreport.cgi?bug=58790
+  ;; See also https://git.savannah.gnu.org/gitweb/?p=emacs.git;a=blob;f=lisp/progmodes/eglot.el#l1558
+  (unless (or (and (advice-member-p #'eglot-java--wrap-legacy-eglot--path-to-uri 'eglot--path-to-uri)
+                   (advice-member-p #'eglot-java--wrap-legacy-eglot--uri-to-path 'eglot--uri-to-path))
+              (<= 29 emacs-major-version))
+    (advice-add 'eglot--path-to-uri :around #'eglot-java--wrap-legacy-eglot--path-to-uri)
+    (advice-add 'eglot--uri-to-path :around #'eglot-java--wrap-legacy-eglot--uri-to-path)
+    (message "[eglot-java--jdthandler-patch-eglot] Eglot successfully patched.")))
 
 ;;;###autoload
 (define-minor-mode eglot-java-mode

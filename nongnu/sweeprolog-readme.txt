@@ -16,6 +16,7 @@ Overview
 .. Architecture
 Installation
 Getting Started
+Discovering Sweep
 Initialization
 Querying Prolog
 .. Elisp to Prolog
@@ -55,6 +56,7 @@ Editing Prolog Code
 .. Term Search
 .. Context Menu
 .. Renaming Variables
+.. Numbered Variables
 Prolog Help
 The Prolog Top-Level
 .. Multiple Top-Levels
@@ -195,6 +197,51 @@ Getting Started
   └────
 
 
+Discovering Sweep
+═════════════════
+
+  Sweep comes with many useful commands and features for working with
+  SWI-Prolog.  This section lists suggested ways for you to get to know
+  the provided commands and make the most out of Sweep.
+
+  The main documentation resource for Sweep is this very manual.  It
+  describes almost every command and customization option that Sweep
+  provides.  Since Sweep includes many features, describing all them
+  makes this manual longer then you’d probably want to read upfront.
+  Instead it’s recommended that you skim this manual to get an idea of
+  the available features, and then return to it as a reference during
+  your work with Sweep.
+
+  To open this manual from within Emacs, type `C-h i' (`info') to open
+  the Info reader, followed by `d m sweep RET' to go to the top Info
+  directory and select the Sweep manual.  Sweep also provides a
+  convenient command for opening the manual:
+
+  Command: sweeprolog-info-manual
+        Display the Sweep manual in Info.
+
+  To open the relevant part of the manual for a specific command that
+  you want to learn more about, type `C-h F' followed by the name of
+  that command.  For example, typing `C-h F sweeprolog-info-manual RET'
+  brings up this manual section in Info.  If the command you’re
+  interested in is bound to a key sequence, you can go to its Info node
+  by typing `C-h K' followed by the key sequence that invokes it.
+
+  Other than the text in this manual, Sweep commands and user options
+  have Elisp documentation strings that describe them individually.  The
+  various Emacs Help commands (`C-h k', `C-h f', `C-h v', etc.) display
+  these documentation strings in a dedicated Help buffer (see [Help] in
+  the Emacs manual).  From the Help buffer, you can jump to the relevant
+  Info node typing `i' (`help-goto-info') to read more about related
+  commands and customization options.
+
+  You can also view an HTML version of this manual online at
+  <https://eshelyaron.com/sweep.html>.
+
+
+[Help] <info:emacs#Help>
+
+
 Prolog Initialization and Cleanup
 ═════════════════════════════════
 
@@ -308,7 +355,7 @@ Querying Prolog
         Cut the last Prolog query.  This releases any resources reserved
         for it and makes further calls to `sweeprolog-next-solution'
         invalid until you open a new query.
-  Function: sweeprolog-cut-query
+  Function: sweeprolog-close-query
         Close the last Prolog query.  Similar to `sweeprolog-cut-query'
         expect that any unifications created by the last query are
         dropped.
@@ -456,17 +503,23 @@ Editing Prolog code
   modify the Emacs variable `auto-mode-alist' accordingly:
 
   ┌────
-  │ (add-to-list 'auto-mode-alist '("\\.pl\\'"   . sweeprolog-mode))
-  │ (add-to-list 'auto-mode-alist '("\\.plt\\'"  . sweeprolog-mode))
+  │ (add-to-list 'auto-mode-alist '("\\.plt?\\'"  . sweeprolog-mode))
   └────
 
   For more information about how Emacs chooses a major mode to use when
   you visit a file, see [Choosing Modes] in the Emacs manual.
 
+  To list all of the commands available in a `sweeprolog-mode' buffer,
+  type `C-h m' (`describe-mode').  When Menu Bar mode is enabled, you
+  can run many of these commands via the Sweep menu.  For more
+  information about Menu Bar mode, see [Menu Bars] in the Emacs manual.
+
 
 [Hooks] <info:emacs#Hooks>
 
 [Choosing Modes] <info:emacs#Choosing Modes>
+
+[Menu Bars] <info:emacs#Menu Bars>
 
 Indentation
 ───────────
@@ -669,8 +722,9 @@ Available Styles
   3. The `dark' style mimics the colors used in the SWI-Prolog built-in
      editor in dark mode.
 
-  - Style of faces to use for semantic highlighting in `sweeprolog-mode'
-    buffers.  Defaults to `nil'.
+  User Option: sweeprolog-faces-style
+        Style of faces to use for semantic highlighting in
+        `sweeprolog-mode' buffers.  Defaults to `nil'.
 
   To choose a style, customize the user option `sweeprolog-faces-style'
   with `M-x customize-option RET sweeprolog-faces-style RET'.  The new
@@ -1692,7 +1746,7 @@ Context Menu
   Command: context-menu-mode
         Toggle Context Menu mode.  When enabled, clicking the mouse
         button `down-mouse-3' (i.e. right-click) activates a menu whose
-        contents depends on its surrounding context.
+        contents depend on its surrounding context.
   Variable: sweeprolog-context-menu-functions
         List of functions that create Context Menu entries for Prolog
         tokens.  Each function should receive as its arguments the menu
@@ -1711,7 +1765,9 @@ Context Menu
   Sweep suggests visiting it either in the current window or in another.
   If you right-click on a predicate, it lets you view its documentation
   in a dedicated buffer (see also [Prolog Help]).  For variables, it
-  suggests to renaming (see .
+  enables the `Rename Variable' menu entry that you can use to rename
+  the variable you click on across its containing clause (see [Renaming
+  Variables]).
 
   You can further extend and customize the context menu that
   `sweeprolog-mode' provides by adding functions to the variable
@@ -1723,6 +1779,8 @@ Context Menu
 
 [Prolog Help] See section Prolog Help
 
+[Renaming Variables] See section Renaming Variables
+
 
 Renaming Variables
 ──────────────────
@@ -1732,6 +1790,11 @@ Renaming Variables
 
   Key: C-c C-r (sweeprolog-rename-variable)
         Rename a variable across the topmost Prolog term at point.
+  User Option: sweeprolog-rename-variable-allow-existing
+        If non-nil, allow selecting an existing variable name as the new
+        name of a variable being renamed with
+        `sweeprolog-rename-variable'.  If it is the symbol `confirm',
+        allow but ask for confirmation first.  Defaults to `confirm'.
 
   The command `sweeprolog-rename-variable', bound to `C-c C-r', prompts
   for two variable names and replaces all occurrences of the first
@@ -1740,10 +1803,109 @@ Renaming Variables
   variable names in the current term, and it uses the variable at point
   as its default.
 
+  The user option `sweeprolog-rename-variable-allow-existing' controls
+  what happens if the second (new) variable name that you insert in the
+  minibuffer already occurs in the current clause.  By default it is set
+  to `confirm', which says to ask for confirmation before selecting an
+  existing variable name as the new name.  This is because renaming a
+  variable to another existing variable name potentially alters the
+  semantics of the term by merging the two variables.  Other
+  alternatives for this user option are `t' for allowing such merges
+  without confirmation, and `nil' for refusing them altogether.
+
   If Context Menu mode is enabled, you can also rename variables by
   right-clicking on them with the mouse and selecting `Rename Variable'
   from the top of the context menu.  See [Context Menu] for more
   information about context menus in Sweep.
+
+
+[Context Menu] See section Context Menu
+
+
+Numbered Variables
+──────────────────
+
+  A widespread convention in Prolog is using a common prefix with a
+  numeric suffix to name related variables, such as `Foo0', `Foo1',
+  etc..  Sweep provides convenient commands for managing such /numbered
+  variable/ sequences consistently:
+
+  Key: C-c C-+ (sweeprolog-increment-numbered-variables)
+        Prompt for a numbered variable and increment it and all numbered
+        variables with the same base name and a greater number in the
+        current clause.
+  Key: C-c C– (sweeprolog-decrement-numbered-variables)
+        Prompt for a numbered variable and decrement it and all numbered
+        variables with the same base name and a greater number in the
+        current clause.
+
+  Numbering variables is often used to convey the order in which they
+  are bound.  For example:
+
+  ┌────
+  │ %!  process(+State0, -State) is det.
+  │ 
+  │ process(State0, State) :-
+  │     foo(State0, State1),
+  │     bar(State2, State1),
+  │     baz(State2, State).
+  └────
+
+  Here `State0' and `State' are respectively the input and output
+  arguments of `process/2', and `State1' and `State2' represent
+  intermediary stages between them.
+
+  The command `C-c C-+' (`sweeprolog-increment-numbered-variables')
+  prompts you for a numbered variable in the current clause, and
+  increments the number of that variable along with all other numbered
+  variables with the same base name and a greater number.  You can use
+  it to “make room” for another intermediary variable between two
+  sequentially numbered variables.  If you call this command with point
+  on a numeric variable, it suggests that variable as the default
+  choice.  If you call this command with a prefix argument, it
+  increments by the numeric value of the prefix argument, otherwise it
+  increments by one.
+
+  For instance, typing `C-c C-+ State1 RET' with point anywhere in the
+  definition of `process/2' from the above example results in the
+  following code:
+
+  ┌────
+  │ process(State0, State) :-
+  │     foo(State0, State2),
+  │     bar(State3, State2),
+  │     baz(State3, State).
+  └────
+
+  Note how all occurrences of `State1' are replaced with `State2', while
+  occurrences of `State2' are replaced with `State3'.  The overall
+  semantics of the clause doesn’t change, but we can now replace the
+  call to `foo/2' with two goals and reintroduce `State1' as an
+  intermediary result between them while keeping our numbering
+  consistent, e.g.:
+
+  ┌────
+  │ process(State0, State) :-
+  │     one(State0, State1), two(State1, State2),
+  │     bar(State3, State2),
+  │     baz(State3, State).
+  └────
+
+  If Context Menu mode is enabled, you can also invoke
+  `sweeprolog-increment-numbered-variables' by right-clicking on a
+  numbered variables and selecting `Increment Variable Numbers' from the
+  context menu.  See [Context Menu].
+
+  The command `C-c C--' (`sweeprolog-decrement-numbered-variables') is
+  similar to `C-c C-+' except it decrements all numbered variables
+  starting with a given numbered variable rather than incrementing them.
+  You can use this function after you delete a numbered variable,
+  leaving you with a gap in the variable numbering sequence, to
+  decrement the following numbered variables accordingly.
+
+  After invoking either `C-c C--' or `C-c C-+', you can continue to
+  decrement or increment the same set of numbered variables by repeating
+  with `-' and `+'.
 
 
 [Context Menu] See section Context Menu
