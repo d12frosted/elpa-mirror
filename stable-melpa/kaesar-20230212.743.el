@@ -1,13 +1,13 @@
-;;; kaesar.el --- Another AES algorithm encrypt/decrypt string with password.
+;;; kaesar.el --- AES algorithm encrypt/decrypt -*- lexical-binding: t -*-
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: data
-;; Package-Version: 20160128.1008
-;; Package-Commit: d087075cb1a46c2c85cd075220e09b2eaef9b86e
+;; Package-Version: 20230212.743
+;; Package-Commit: d62b18e888d69d27b0b74cf47224a1ac204dfb0b
 ;; URL: https://github.com/mhayashi1120/Emacs-kaesar
-;; Emacs: GNU Emacs 23 or later
-;; Version: 0.9.3
-;; Package-Requires: ((cl-lib "0.3"))
+;; Emacs: GNU Emacs 24.3 or later
+;; Version: 0.9.4
+;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -201,8 +201,7 @@ from memory."
   '(
     (aes-128 4 4 10)
     (aes-192 6 4 12)
-    (aes-256 8 4 14)
-    ))
+    (aes-256 8 4 14)))
 
 ;; Block size
 (eval-and-compile
@@ -251,8 +250,7 @@ from memory."
       ;; Cipher FeedBack
       (cfb
        kaesar--cfb-encrypt kaesar--cfb-decrypt
-       nil ,kaesar--Block)
-      )))
+       nil ,kaesar--Block))))
 
 (eval-and-compile
   (defconst kaesar--pkcs5-salt-length 8))
@@ -368,7 +366,7 @@ from memory."
   (defsubst kaesar--load-unibytes! (state unibyte-string pos)
     (let* ((len (length unibyte-string))
            (end-pos (min len (+ pos kaesar--Block)))
-           (state (kaesar--load-state! state unibyte-string pos))
+           (_ (kaesar--load-state! state unibyte-string pos))
            (rest (if (and (= len end-pos)
                           (< (- end-pos pos) kaesar--Block))
                      nil end-pos)))
@@ -378,7 +376,7 @@ from memory."
   (defsubst kaesar--load-encbytes! (state unibyte-string pos)
     (let* ((len (length unibyte-string))
            (end-pos (min len (+ pos kaesar--Block)))
-           (state (kaesar--load-state! state unibyte-string pos))
+           (_ (kaesar--load-state! state unibyte-string pos))
            (rest (if (= len end-pos) nil end-pos)))
       rest)))
 
@@ -405,10 +403,10 @@ from memory."
            do (aset salt i (random ?\x100))
            finally return salt))
 
-(defun kaesar--key-md5-digest (hash data)
+(defun kaesar--key-digest-update (hasher hash data)
   (cl-loop with unibytes = (apply 'kaesar--unibyte-string data)
-           with md5-hash = (md5 unibytes)
-           for v across (kaesar--hex-to-vector md5-hash)
+           with digest-result = (funcall hasher unibytes)
+           for v across (kaesar--hex-to-vector digest-result)
            for i from 0
            do (aset hash i v)))
 
@@ -449,7 +447,7 @@ from memory."
 
 (defun kaesar--openssl-prepend-salt (salt encrypt-string)
   (concat
-   (string-as-unibyte kaesar--openssl-magic-word)
+   (encode-coding-string kaesar--openssl-magic-word 'ascii)
    (apply 'kaesar--unibyte-string (append salt nil))
    encrypt-string))
 
@@ -471,7 +469,7 @@ from memory."
                (setq context (append context data nil))
                (when salt
                  (setq context (append context salt nil)))
-               (kaesar--key-md5-digest hash context))
+               (kaesar--key-digest-update #'md5 hash context))
              (let ((i 0))
                (cl-loop for j from ki below (length key)
                         while (< i (length hash))
@@ -496,7 +494,7 @@ from memory."
 ;; 4.1 Addition
 (eval-when-compile
   (defun kaesar--add (&rest numbers)
-    (apply 'logxor numbers)))
+    (apply #'logxor numbers)))
 
 ;; 4.2 Multiplication
 ;; 4.2.1 xtime
@@ -533,7 +531,7 @@ from memory."
 (eval-when-compile
   (defun kaesar--multiply-0 (byte1 byte2)
     (let ((table (aref kaesar--multiply-log byte1)))
-      (apply 'kaesar--add
+      (apply #'kaesar--add
              (cl-loop for i from 0 to 7
                       unless (zerop (logand byte2 (lsh 1 i)))
                       collect (aref table i))))))
@@ -1090,7 +1088,7 @@ from memory."
 ;;
 
 (defun kaesar--key-make-block (expanded-key)
-  (cl-loop for xs on expanded-key by (lambda (x) (nthcdr 4 xs))
+  (cl-loop for xs on expanded-key by (lambda (_x) (nthcdr 4 xs))
            collect (vector (nth 0 xs) (nth 1 xs) (nth 2 xs) (nth 3 xs))
            into res
            finally return (vconcat res)))

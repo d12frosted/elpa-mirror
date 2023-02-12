@@ -1,13 +1,13 @@
-;;; kaesar-file.el --- Encrypt/Decrypt file by AES with password.
+;;; kaesar-file.el --- AES encrypt/decrypt file -*- lexical-binding: t -*-
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: data, files
-;; Package-Version: 20160128.1008
-;; Package-Commit: d087075cb1a46c2c85cd075220e09b2eaef9b86e
+;; Package-Version: 20230212.743
+;; Package-Commit: d62b18e888d69d27b0b74cf47224a1ac204dfb0b
 ;; URL: https://github.com/mhayashi1120/Emacs-kaesar
-;; Emacs: GNU Emacs 22 or later
+;; Emacs: GNU Emacs 24.3 or later
 ;; Version: 0.9.1
-;; Package-Requires: ((kaesar "0.1.1"))
+;; Package-Requires: ((emacs "24.3") (kaesar "0.1.1"))
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as

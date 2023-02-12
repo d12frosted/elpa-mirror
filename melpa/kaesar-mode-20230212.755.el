@@ -1,13 +1,13 @@
-;;; kaesar-mode.el --- Encrypt/Decrypt buffer by AES with password.
+;;; kaesar-mode.el --- AES encrypt/decrypt buffer -*- lexical-binding: t -*-
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: data, convenience
-;; Package-Version: 20160128.1008
-;; Package-Commit: d087075cb1a46c2c85cd075220e09b2eaef9b86e
+;; Package-Version: 20230212.755
+;; Package-Commit: 48b7160a817cb1e430726e1d2243d921c3f0508f
 ;; URL: https://github.com/mhayashi1120/Emacs-kaesar
-;; Emacs: GNU Emacs 22 or later
-;; Version: 0.9.1
-;; Package-Requires: ((kaesar "0.1.4") (cl-lib "0.3"))
+;; Emacs: GNU Emacs 24.3 or later
+;; Version: 0.9.3
+;; Package-Requires: ((emacs "24.3") (kaesar "0.1.4"))
 
 (defconst kaesar-mode-version "0.9.0")
 
@@ -142,11 +142,12 @@
 ;;TODO volatile password to suppress core file contains this.
 ;; TODO really volatile this value??
 (defun kaesar-mode--volatile-password ()
-  (string-as-unibyte
+  (encode-coding-string
    (format "%s:%s:%s"
            (emacs-pid)
            (format-time-string "%s" after-init-time)
-           (format-time-string "%s" before-init-time))))
+           (format-time-string "%s" before-init-time))
+   'ascii))
 
 (defun kaesar-mode--cleanup-backups (file)
   (cl-loop for b in (find-backup-file-name file)
@@ -228,7 +229,7 @@
 
 ;; re-open encrypted file
 (defun kaesar-mode--decrypt-buffer ()
-  (cl-destructuring-bind (cs algorithm mode version data)
+  (cl-destructuring-bind (cs algorithm mode _version data)
       ;; buffer may be a multibyte buffer.
       ;; re read buffer from file.
       (kaesar-mode--read-encrypt-data)
@@ -249,7 +250,7 @@
       ;;TODO should call interface function?
       (when mode
         (with-demoted-errors
-          (funcall mode))
+            (funcall mode))
         (unless kaesar-mode
           (kaesar-mode 1))))))
 
@@ -375,7 +376,7 @@ todo `kaesar-mode-cache-password'
       (kaesar-mode--save-buffer))
     (when (kaesar-mode--buffer-have-header-p)
       (let ((done nil))
-        (condition-case quit
+        (condition-case _quit
             (while (not done)
               (condition-case err
                   (progn
