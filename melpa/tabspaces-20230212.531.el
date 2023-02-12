@@ -2,9 +2,9 @@
 
 ;; Author: Colin McLear <mclear@fastmail.com>
 ;; Maintainer: Colin McLear
-;; Version: 1.3
-;; Package-Version: 20230208.1616
-;; Package-Commit: 68f3bf8300996b5ede3fc2e423332a9e90c67bb5
+;; Version: 1.4
+;; Package-Version: 20230212.531
+;; Package-Commit: 6975c51a2154604db70fd38eba27cf784cc3c4a6
 ;; Package-Requires: ((emacs "27.1") (project "0.8.1"))
 ;; Keywords: convenience, frames
 ;; Homepage: https://github.com/mclear-tools/tabspaces
@@ -154,6 +154,11 @@ non-nil, then specify a tab index in the given frame."
     (seq-filter #'buffer-live-p list)))
 
 ;;;; Project Workspace Helper Functions
+
+;;;###autoload
+(defun tabspaces--current-tab-name ()
+  "Get name of current tab."
+  (cdr (assq 'name (tab-bar--current-tab))))
 
 ;;;###autoload
 (defun tabspaces--list-tabspaces ()
@@ -372,34 +377,45 @@ If PROJECT is already open in its own workspace, switch to that
 workspace. If PROJECT does not exist, create it, along with a
 `project.todo' file, in its own workspace."
   (interactive
+   ;; Select project from completing-read
    (if (eq project--list 'unset)
        (call-interactively #'project-switch-project)
-     (list
-      (completing-read "Project Name: " project--list))))
-  (cond ((member (list project) project--list)
-         (if (member (file-name-nondirectory (directory-file-name project)) (tabspaces--list-tabspaces))
-             (tab-switch (file-name-nondirectory (directory-file-name project)))
+     (list (completing-read "Project Name: " project--list))))
+  ;; Set vars
+  (let* ((project-switch-commands #'project-find-file)
+         (pname (file-name-nondirectory (directory-file-name project)))
+         (session (concat project "." pname "-tabspaces-session.el")))
+    ;; Set conditions: 1. if project & tab exist then switch to it
+    (cond ((and (member (list project) project--list)
+                (member pname (tabspaces--list-tabspaces)))
+           (tab-switch pname))
+          ;; 2. if project but not tab exists open tabspace & check for session to restore, otherwise start session
+          ((and (member (list project) project--list)
+                (not (member pname (tabspaces--list-tabspaces))))
            (tab-bar-new-tab)
-           (let ((project-switch-commands #'project-find-file))
-             (project-switch-project project))
-           (tab-bar-rename-tab (tabspaces--name-tab-by-project-or-default))))
-        (t
-         (tab-bar-new-tab)
-         (setq default-directory project)
-         (ignore-errors (mkdir project t))
-         (if (featurep 'magit)
-             (magit-init project)
-           (call-interactively #'vc-create-repo))
-         (delete-other-windows)
-         (with-temp-buffer (write-file "project-todo.org"))
-         (if (featurep 'magit)
-             (magit-status-setup-buffer)
-           (project-vc-dir))
-         (dired-jump-other-window)
-         (tab-bar-rename-tab (file-name-nondirectory (directory-file-name (vc-root-dir))))
-         ;; make sure project.el remembers new project
-         (let ((pr (project--find-in-directory default-directory)))
-           (project-remember-project pr)))))
+           (tab-bar-rename-tab pname)
+           (let ((default-directory project))
+             (if (file-exists-p session)
+                 (tabspaces-restore-session session)
+               (project-find-file))))
+          ;; 3. Open new tab and create project
+          (t
+           (tab-bar-new-tab)
+           (setq default-directory project)
+           (ignore-errors (mkdir project t))
+           (if (featurep 'magit)
+               (magit-init project)
+             (call-interactively #'vc-create-repo))
+           (delete-other-windows)
+           (with-temp-buffer (write-file "project-todo.org"))
+           (if (featurep 'magit)
+               (magit-status-setup-buffer)
+             (project-vc-dir))
+           (dired-jump-other-window)
+           (tab-bar-rename-tab (file-name-nondirectory (directory-file-name (vc-root-dir))))
+           ;; make sure project.el remembers new project
+           (let ((pr (project--find-in-directory default-directory)))
+             (project-remember-project pr))))))
 
 ;;;; Tabspace Sessions
 
@@ -436,18 +452,23 @@ workspace. If PROJECT does not exist, create it, along with a
   "Make list of filenames."
   (flatten-tree (mapcar #'tabspaces--buffile bufs)))
 
-;; Save session
+;; Save global session
 ;;;###autoload
 (defun tabspaces-save-session ()
   "Save tabspace name and buffers."
   (interactive)
   ;; Start from an empty list.
   (setq tabspaces--session-list nil)
-  (cl-loop for tab in (tabspaces--list-tabspaces)
-           do (progn
-                (tab-bar-select-tab-by-name tab)
-                (add-to-list 'tabspaces--session-list (cons (tabspaces--store-buffers (tabspaces--buffer-list)) tab))))
-
+  (let ((curr (tab-bar--current-tab-index)))
+    ;; loop over tabs
+    (cl-loop for tab in (tabspaces--list-tabspaces)
+             do (progn
+                  (tab-bar-select-tab-by-name tab)
+                  (setq tabspaces--session-list
+                        (append tabspaces--session-list
+                                (list (cons (tabspaces--store-buffers (tabspaces--buffer-list)) tab))))))
+    ;; As tab-bar-select-tab starts counting from 1, we need to add 1 to the index.
+    (tab-bar-select-tab (+ curr 1)))
   ;; Write to file
   (with-temp-file tabspaces-session-file
     (point-min)
@@ -457,11 +478,52 @@ workspace. If PROJECT does not exist, create it, along with a
             ";; Tabs and buffers:\n")
     (insert "(setq tabspaces--session-list '" (format "%S" tabspaces--session-list) ")")))
 
+;; Save current project session
+(defun tabspaces-save-current-project-session ()
+  "Save tabspace name and buffers for current tab & project."
+  (interactive)
+  (let ((tabspaces--session-list nil) ;; Start from an empty list.
+        (ctab (tabspaces--current-tab-name))
+        (current-session (with-current-buffer (buffer-name)
+                           (concat (vc-root-dir) "." (tabspaces--current-tab-name) "-tabspaces-session.el"))))
+    ;; Get buffers
+    (add-to-list 'tabspaces--session-list (cons (tabspaces--store-buffers (tabspaces--buffer-list)) ctab))
+    ;; Write to file
+    (with-temp-file current-session
+      (point-min)
+      (insert ";; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-\n"
+              tabspaces-session-header
+              ";; Created " (current-time-string) "\n\n"
+              ";; Tab and buffers:\n")
+      (insert "(setq tabspaces--session-list '" (format "%S" tabspaces--session-list) ")"))))
+
 ;; Restore session
 ;;;###autoload
-(defun tabspaces-restore-session ()
+(defun tabspaces-restore-session (&optional session)
   "Restore tabspaces session."
   (interactive)
+  (load-file (or session
+                 tabspaces-session-file))
+  ;; Start looping through the session list, but ensure to start from a
+  ;; temporary buffer "*tabspaces--placeholder*" in order not to pollute the
+  ;; buffer list with the final buffer from the previous tab.
+  (cl-loop for elm in tabspaces--session-list do
+           (switch-to-buffer "*tabspaces--placeholder*")
+           (tabspaces-switch-or-create-workspace (cdr elm))
+           (mapc #'find-file (car elm)))
+  ;; Once the session list is restored, remove the temporary buffer from the
+  ;; buffer list.
+  (cl-loop for elm in tabspaces--session-list do
+           (tabspaces-switch-or-create-workspace (cdr elm))
+           (tabspaces-remove-selected-buffer "*tabspaces--placeholder*"))
+  ;; Finally, kill the temporary buffer to clean up.
+  (kill-buffer "*tabspaces--placeholder*"))
+
+;; Restore session used for startup
+(defun tabspaces--restore-session-on-startup ()
+  "Restore tabspaces session on startup.
+Unlike the interactive restore, this function does more clean up to remove
+unnecessary tab."
   (load-file tabspaces-session-file)
   ;; Start looping through the session list, but ensure to start from a
   ;; temporary buffer "*tabspaces--placeholder*" in order not to pollute the
@@ -475,6 +537,15 @@ workspace. If PROJECT does not exist, create it, along with a
   (cl-loop for elm in tabspaces--session-list do
            (tabspaces-switch-or-create-workspace (cdr elm))
            (tabspaces-remove-selected-buffer "*tabspaces--placeholder*"))
+  ;; If the tab restore started from an empty tab (e.g. at startup), remove the
+  ;; tab by name of "*tabspaces--placeholder*".
+  ;; NOTE When restore is interactively called, it is possible that an unnamed
+  ;; tab to be incorrectly closed as we call `switch-to-buffer', which would
+  ;; make the tab name to be "*tabspaces--placeholder*". At the startup, this
+  ;; shouldn't be an issue, but conduct a simple check before closing the tab.
+  (if (eq (tab-bar--tab-index-by-name "*tabspaces--placeholder*") 0)
+      ;; tab-bar-close-tab counts from 1.
+      (tab-bar-close-tab 1))
   ;; Finally, kill the temporary buffer to clean up.
   (kill-buffer "*tabspaces--placeholder*"))
 
@@ -523,7 +594,7 @@ This uses Emacs `tab-bar' and `project.el'."
          (when tabspaces-session
            (add-hook 'kill-emacs-hook #'tabspaces-save-session))
          (when tabspaces-session-auto-restore
-           (add-hook 'emacs-startup-hook #'tabspaces-restore-session)))
+           (add-hook 'emacs-startup-hook #'tabspaces--restore-session-on-startup)))
         (t
          ;; Remove all modifications
          (dolist (frame (frame-list))
