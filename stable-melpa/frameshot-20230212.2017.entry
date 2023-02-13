@@ -1,0 +1,13 @@
+(frameshot .
+	   [(20230212 2017)
+	    ((emacs
+	      (25 3))
+	     (compat
+	      (29 1 3 4)))
+	    "Take screenshots of a frame" single
+	    ((:commit . "96f2cc9a0cb672b1989022caa290218c8024a376")
+	     (:authors
+	      ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	     (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	     (:keywords "multimedia")
+	     (:url . "https://github.com/tarsius/frameshot"))])

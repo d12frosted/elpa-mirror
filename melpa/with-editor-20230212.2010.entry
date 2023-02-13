@@ -1,0 +1,13 @@
+(with-editor .
+	     [(20230212 2010)
+	      ((emacs
+		(25 1))
+	       (compat
+		(29 1 3 4)))
+	      "Use the Emacsclient as $EDITOR" tar
+	      ((:commit . "e5ba1cab376e71e7a858dd4855365a57c4ddb40d")
+	       (:authors
+		("Jonas Bernoulli" . "jonas@bernoul.li"))
+	       (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	       (:keywords "processes" "terminals")
+	       (:url . "https://github.com/magit/with-editor"))])

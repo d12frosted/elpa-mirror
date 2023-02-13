@@ -1,0 +1,19 @@
+(sisyphus .
+	  [(20230212 2012)
+	   ((emacs
+	     (27))
+	    (compat
+	     (29 1 3 4))
+	    (elx
+	     (1 6 0))
+	    (llama
+	     (0 3 0))
+	    (magit
+	     (3 4 0)))
+	   "Create releases of Emacs packages" single
+	   ((:commit . "0bbd23bd789e361a3101b962172f1df7464ee977")
+	    (:authors
+	     ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	    (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	    (:keywords "git" "tools" "vc")
+	    (:url . "https://github.com/magit/sisyphus"))])

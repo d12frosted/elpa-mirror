@@ -1,0 +1,17 @@
+(orglink .
+	 [(20230212 2013)
+	  ((emacs
+	    (25 1))
+	   (compat
+	    (29 1 3 4))
+	   (org
+	    (9 5))
+	   (seq
+	    (2 23)))
+	  "Use Org Mode links in other modes" single
+	  ((:commit . "e5e9b9361a66f800b033d5c00c6a8961598ac855")
+	   (:authors
+	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	   (:keywords "hypermedia")
+	   (:url . "https://github.com/tarsius/orglink"))])
