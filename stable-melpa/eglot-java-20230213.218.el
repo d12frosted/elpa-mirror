@@ -2,9 +2,9 @@
 
 ;; Copyright (C) 2019-2023 Yves Zoundi
 
-;; Version: 1.9
-;; Package-Version: 20230211.2128
-;; Package-Commit: 4b8734f6fdf5f4d68803ed6cc2e4c82efe74e6bd
+;; Version: 1.10
+;; Package-Version: 20230213.218
+;; Package-Commit: ff0f9515d78f94b8dfe158bf9a2c4f52216504c0
 ;; Author: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; Maintainer: Yves Zoundi <yves_zoundi@hotmail.com>
 ;; URL: https://github.com/yveszoundi/eglot-java
@@ -809,9 +809,10 @@ ARGS is a list with one element, a URI.
 If URI is a jar URI, don't parse and let the `jdthandler--file-name-handler'
 handle it. If it is not a jar call ORIGINAL-FN."
   (let ((uri (car args)))
-    (if (string= "file" (url-type (url-generic-parse-url uri)))
-        (apply original-fn args)
-      uri)))
+    (if (and (stringp uri)
+             (string= "jdt" (url-type (url-generic-parse-url uri))))
+        uri
+      (apply original-fn args))))
 
 (defun eglot-java--jdthandler-patch-eglot ()
   "Patch old versions of Eglot to work with Jdthandler."

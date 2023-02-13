@@ -3,5 +3,13 @@ Fetcher: github
 Source:  https://github.com/DarwinAwardWinner/mac-pseudo-daemon.git
 
 Updating /mnt/store/melpa/working/mac-pseudo-daemon/
-Checking out 564b006835facc4a8df247d8a47ab1030d7e7beb
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/DarwinAwardWinner/mac-pseudo-daemon.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

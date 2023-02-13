@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/hawk/lux.git
 
 Updating /mnt/store/melpa/working/lux-mode/
-Checking out f9335e885611c2a5d65c449facdad72c28b3ff9c
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/hawk/lux.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

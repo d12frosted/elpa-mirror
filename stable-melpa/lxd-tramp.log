@@ -3,5 +3,12 @@ Fetcher: github
 Source:  https://github.com/onixie/lxd-tramp.git
 
 Updating /mnt/store/melpa/working/lxd-tramp/
-Checking out f335c76245f62b02cf67a9376eca6f3863c8a75a
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

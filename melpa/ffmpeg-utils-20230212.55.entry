@@ -1,0 +1,12 @@
+(ffmpeg-utils .
+	      [(20230212 55)
+	       ((emacs
+		 (25 1))
+		(alert
+		 (1 2))
+		(transient
+		 (0 1 0)))
+	       "FFmpeg command utilities wrappers" single
+	       ((:commit . "7ae311d235514b7b5bf12dc2c214856856c2c411")
+		(:keywords "multimedia")
+		(:url . "https://repo.or.cz/ffmpeg-utils.git"))])

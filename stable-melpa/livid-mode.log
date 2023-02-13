@@ -3,5 +3,13 @@ Fetcher: github
 Source:  https://github.com/pandeiro/livid-mode.git
 
 Updating /mnt/store/melpa/working/livid-mode/
-Checking out dfe5212fa64738bc4138bfebf349fbc8bc237c26
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/pandeiro/livid-mode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

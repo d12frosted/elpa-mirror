@@ -3,23 +3,13 @@ Fetcher: github
 Source:  https://github.com/amake/macports.el.git
 
 Updating /mnt/store/melpa/working/macports/
-Checking out f8c4c2902eecce6d1d2cb87217db233cb2d35d91
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/macports/
-  to /tmp/macportsyi7t2e/macports-20230131.2344
-    macports-core.el -> macports-core.el
-    macports-describe.el -> macports-describe.el
-    macports-installed.el -> macports-installed.el
-    macports-outdated.el -> macports-outdated.el
-    macports-select.el -> macports-select.el
-    macports.el -> macports.el
-Created macports-20230131.2344.tar containing:
-  macports-20230131.2344/
-  macports-20230131.2344/macports-core.el
-  macports-20230131.2344/macports-describe.el
-  macports-20230131.2344/macports-installed.el
-  macports-20230131.2344/macports-outdated.el
-  macports-20230131.2344/macports-pkg.el
-  macports-20230131.2344/macports-select.el
-  macports-20230131.2344/macports.el
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/amake/macports.el.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

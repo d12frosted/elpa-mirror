@@ -3,5 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-php/magic-filetype.el.git
 
 Updating /mnt/store/melpa/working/magic-filetype/
-Checking out 019494add5ff02dd36cb3f500142fc51125522cc
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 128
+
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128

@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/phillord/lentic-server.git
 
 Updating /mnt/store/melpa/working/lentic-server/
-Checking out 8e809fafbb27a98f815b544d9d9ee15843eb6a36
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/phillord/lentic-server.git/': The requested URL returned error: 504
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

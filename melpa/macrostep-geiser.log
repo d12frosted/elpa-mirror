@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/nbfalcon/macrostep-geiser.git
 
 Updating /mnt/store/melpa/working/macrostep-geiser/
-Checking out f6a2d5bb96ade4f23df557649af87ebd0cc45125
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/nbfalcon/macrostep-geiser.git/': The requested URL returned error: 504
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
