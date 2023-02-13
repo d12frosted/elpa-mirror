@@ -24,8 +24,8 @@
 
 ;; Author: Ayrat Badykov <ayratin555@gmail.com>
 ;; URL: https://github.com/ayrat555/cargo-mode
-;; Package-Version: 20230211.456
-;; Package-Commit: 431e0bef23dc21825b68f6a1f51d6be5a9f41302
+;; Package-Version: 20230213.401
+;; Package-Commit: 6e128f08692aae5723122e039e8871a57141e868
 ;; Version  : 0.0.1
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "25.1"))
@@ -284,7 +284,7 @@ If PREFIX is non-nil, prompt for additional params."
 (define-minor-mode cargo-minor-mode
   "Cargo minor mode.  Used to hold keybindings for `cargo-mode'.
 \\{cargo-minor-mode-map}"
-  :int-value nil
+  :init-value nil
   :lighter " cargo"
   :keymap cargo-minor-mode-map)
 

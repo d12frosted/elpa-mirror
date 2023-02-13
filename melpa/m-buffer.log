@@ -3,11 +3,19 @@ Fetcher: github
 Source:  https://github.com/phillord/m-buffer-el.git
 
 Updating /mnt/store/melpa/working/m-buffer/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/phillord/m-buffer-el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out d2e35bf9293367f1a2d19f259f32a35bd9f4788b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/m-buffer/
+  to /tmp/m-bufferDShnyv/m-buffer-20220719.1850
+    m-buffer-at.el -> m-buffer-at.el
+    m-buffer-macro.el -> m-buffer-macro.el
+    m-buffer.el -> m-buffer.el
+    m-buffer-doc.org -> m-buffer-doc.org
+Created m-buffer-20220719.1850.tar containing:
+  m-buffer-20220719.1850/
+  m-buffer-20220719.1850/m-buffer-at.el
+  m-buffer-20220719.1850/m-buffer-doc.org
+  m-buffer-20220719.1850/m-buffer-macro.el
+  m-buffer-20220719.1850/m-buffer-pkg.el
+  m-buffer-20220719.1850/m-buffer.el
+Searching for program: No such file or directory, convert

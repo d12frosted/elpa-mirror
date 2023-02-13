@@ -1,11 +1,11 @@
 (merlin-eldoc .
-	      [(20190830 517)
+	      [(20230213 555)
 	       ((emacs
 		 (24 4))
 		(merlin
 		 (3 0)))
 	       "eldoc for OCaml and Reason" single
-	       ((:commit . "db7fab1eddfe34781b7e79694f8923b285698032")
+	       ((:commit . "bf8edc63d85b35e4def352fa7ce4ea39f43e1fd8")
 		(:authors
 		 ("Louis Roché" . "louis@louisroche.net"))
 		(:maintainer "Louis Roché" . "louis@louisroche.net")

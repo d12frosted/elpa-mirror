@@ -5,8 +5,8 @@
 ;; Author: Louis Roché <louis@louisroche.net>
 ;; Created: 27 April 2018
 ;; Version: 1.3
-;; Package-Version: 20190830.517
-;; Package-Commit: db7fab1eddfe34781b7e79694f8923b285698032
+;; Package-Version: 20230213.555
+;; Package-Commit: bf8edc63d85b35e4def352fa7ce4ea39f43e1fd8
 ;; Keywords: merlin ocaml languages eldoc
 ;; Homepage: https://github.com/khady/merlin-eldoc
 ;; Package-Requires: ((emacs "24.4") (merlin "3.0"))
@@ -227,7 +227,7 @@ before to call this function."
 
 (defun merlin-eldoc--fontify (s)
   "Fontify the string S."
-  (merlin/display-in-type-buffer s)
+  (merlin-display-in-type-buffer s)
   (with-current-buffer merlin-type-buffer-name
     (font-lock-fontify-region (point-min) (point-max))
     (buffer-string)))
@@ -504,8 +504,8 @@ Occurrences and position are meant to be used by
 
 (defun merlin-eldoc--occurrences ()
   "Produce list of BOUNDS (of the form (START . END)) of occurrences of the symbol at point."
-  (merlin/call "occurrences"
-               "-identifier-at" (merlin/unmake-point (point))))
+  (merlin-call "occurrences"
+               "-identifier-at" (merlin-unmake-point (point))))
 
 (defun merlin-eldoc--highlight-occurrence (bounds face)
   "Create an overlay on BOUNDS (of the form (START . END)) and give FACE."
@@ -567,8 +567,8 @@ Occurrences and position are meant to be used by
   "Return a string with expected types for function application."
   (interactive)
   (when merlin-eldoc-function-arguments
-    (let* ((data (merlin/call "complete-prefix"
-                              "-position" (merlin/unmake-point (point))
+    (let* ((data (merlin-call "complete-prefix"
+                              "-position" (merlin-unmake-point (point))
                               "-prefix" ""
                               "-doc" "n"))
            (context (cdr (assoc 'context data)))

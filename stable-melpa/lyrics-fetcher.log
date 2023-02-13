@@ -3,11 +3,19 @@ Fetcher: github
 Source:  https://github.com/SqrtMinusOne/lyrics-fetcher.el.git
 
 Updating /mnt/store/melpa/working/lyrics-fetcher/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/SqrtMinusOne/lyrics-fetcher.el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out a3be34b0153c2c056dc4b55bbc5fbdc2d9f87549
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lyrics-fetcher/
+  to /tmp/lyrics-fetcherpdZTIN/lyrics-fetcher-20220717.1716
+    lyrics-fetcher-analyze.el -> lyrics-fetcher-analyze.el
+    lyrics-fetcher-genius.el -> lyrics-fetcher-genius.el
+    lyrics-fetcher-neteasecloud.el -> lyrics-fetcher-neteasecloud.el
+    lyrics-fetcher.el -> lyrics-fetcher.el
+Created lyrics-fetcher-20220717.1716.tar containing:
+  lyrics-fetcher-20220717.1716/
+  lyrics-fetcher-20220717.1716/lyrics-fetcher-analyze.el
+  lyrics-fetcher-20220717.1716/lyrics-fetcher-genius.el
+  lyrics-fetcher-20220717.1716/lyrics-fetcher-neteasecloud.el
+  lyrics-fetcher-20220717.1716/lyrics-fetcher-pkg.el
+  lyrics-fetcher-20220717.1716/lyrics-fetcher.el
+Searching for program: No such file or directory, convert
