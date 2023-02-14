@@ -25,8 +25,8 @@
 ;; Created: 28 Oct 2002
 ;; Last modified: 25 Januari 2020
 ;; Version: 0.4.2
-;; Package-Version: 20230211.1551
-;; Package-Commit: 19d08c6d2af26bbdf479eb068150ee16b06bbeec
+;; Package-Version: 20230213.1945
+;; Package-Commit: a3cbfa969051dd638a993e1962e2b965067896f6
 ;; Package-Requires: ((emacs "25.0"))
 ;; Keywords: mode dot dot-language dotlanguage graphviz graphs att
 
@@ -194,7 +194,7 @@ You can use `%s' in this string, and it will be substituted by the buffer name."
   :type 'boolean
   :group 'graphviz)
 
-(defcustom graphviz-dot-indent-width tab-width
+(defcustom graphviz-dot-indent-width standard-indent
   "*Indentation width in Graphviz Dot mode buffers."
   :type 'integer
   :group 'graphviz)

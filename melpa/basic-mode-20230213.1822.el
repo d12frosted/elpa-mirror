@@ -5,8 +5,8 @@
 ;; Author: Johan Dykstrom
 ;; Created: Sep 2017
 ;; Version: 1.0.3
-;; Package-Version: 20230211.1647
-;; Package-Commit: 3acc68adbbce91b480926181a5f9bbacfad23e1d
+;; Package-Version: 20230213.1822
+;; Package-Commit: 361dc1ea54bca3ab7a9ff36b64874dbe5c383382
 ;; Keywords: basic, languages
 ;; URL: https://github.com/dykstrom/basic-mode
 ;; Package-Requires: ((seq "2.20") (emacs "25.1"))
@@ -452,7 +452,7 @@ non-blank character after the line number."
     ;; Indent line
     (indent-line-to column)
     ;; Add line number again
-    (unless (string-empty-p line-number)
+    (unless (string= line-number "")
       (untabify beg (point)))
     (beginning-of-line)
 
