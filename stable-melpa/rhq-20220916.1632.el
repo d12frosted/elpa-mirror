@@ -4,8 +4,6 @@
 
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: tools, extensions
-;; Package-Version: 20220916.1632
-;; Package-Commit: 7d9c5dee2e493eb0c5d41afca1b6049de8c2a26d
 
 ;; Version: 0.7.1
 ;; Package-Requires: ((emacs "24.4"))
@@ -334,6 +332,10 @@ It automatically reload projects from rhq and put it into
      :history file-name-history
      :state consult--file-state
      :items rhq-get-project-list)
+  "Project file candidate source for `consult-buffer'.")
+
+(provide 'rhq)
+;;; rhq.el ends here
   "Project file candidate source for `consult-buffer'.")
 
 (provide 'rhq)

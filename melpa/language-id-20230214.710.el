@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-language-id
-;; Package-Version: 20230203.1656
-;; Package-Commit: 11f75c047f323948dd2c07ba41e5f2264dd8785a
+;; Package-Version: 20230214.710
+;; Package-Commit: 302533245972d9bc7722328742247d2b2b225e01
 ;; Version: 0.19
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: languages util
@@ -160,7 +160,7 @@
      (web-mode
       (web-mode-content-type "html")
       (web-mode-engine "ejs")))
-    ("Elixir" elixir-mode)
+    ("Elixir" elixir-mode elixir-ts-mode)
     ("Elm" elm-mode)
     ("Emacs Lisp" emacs-lisp-mode)
     ("Erlang" erlang-mode)
@@ -182,6 +182,7 @@
       (web-mode-content-type "html")
       (web-mode-engine "none")))
     ("HTML+EEX"
+     heex-ts-mode
      (web-mode
       (web-mode-content-type "html")
       (web-mode-engine "elixir")))

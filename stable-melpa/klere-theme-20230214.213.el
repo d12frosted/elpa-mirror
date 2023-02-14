@@ -5,8 +5,8 @@
 ;; Author: Wamm K. D. <jaft.r@outlook.com>
 ;; Homepage: https://codeberg.org/WammKD/emacs-klere-theme
 ;; Version: 0.1
-;; Package-Version: 20221101.805
-;; Package-Commit: 6f63bbf71653ec94ccc3693141f031eb6902b25f
+;; Package-Version: 20230214.213
+;; Package-Commit: 61d2cd649a1cf57ce61063f76b395f21f358372e
 ;; Package-Requires: ((emacs "24"))
 ;; Started with emacs-theme-generator, https://github.com/mswift42/theme-creator.
 
@@ -69,7 +69,9 @@
        (org-green                      "#339443")
        (org-purple                     "#653394")
        (org-teal                       "#33948A")
-       (silky-gray                     "#343A44"))
+       (silky-gray                     "#343A44")
+       (magit-add                      "#22aa22") ;; #00cd00
+       (magit-remove                   "#aa2222"))
    (custom-theme-set-faces
    'klere
         `(default                                  ((,class (:background ,bg2 :foreground ,fg1))))
@@ -193,14 +195,18 @@
         `(magit-hunk-heading                       ((,class (:background ,bg4))))
         `(magit-section-highlight                  ((,class (:background ,bg4))))
         `(magit-hunk-heading-highlight             ((,class (:background ,bg4))))
+        `(magit-diff-added                         ((,class (:foreground "#DDFFDD" :background ,org-green))))
+        `(magit-diff-added-highlight               ((,class (:foreground "#CCEECC" :background ,magit-add))))
+        `(magit-diff-removed                       ((,class (:foreground "#FFDDDD" :background ,magit-remove))))
+        `(magit-diff-removed-highlight             ((,class (:foreground "#EECCCC" :background ,magit-remove))))
         `(magit-diff-context-highlight             ((,class (:foreground "gray50"  :background ,bg4))))
         `(magit-diffstat-added                     ((,class (:foreground ,type))))
         `(magit-diffstat-removed                   ((,class (:foreground ,var))))
-        `(magit-process-ok                         ((,class (:foreground ,func :weight bold))))
+        `(magit-process-ok                         ((,class (:foreground ,func    :weight bold))))
         `(magit-process-ng                         ((,class (:foreground ,warning :weight bold))))
-        `(magit-branch                             ((,class (:foreground ,const :weight bold))))
+        `(magit-branch                             ((,class (:foreground ,const   :weight bold))))
         `(magit-log-author                         ((,class (:foreground ,fg3))))
-        `(magit-hash                               ((,class (:foreground ,fg2))))
+        `(magit-hash                               ((,class (:foreground ,org-purple :bold t))))
         `(magit-diff-file-header                   ((,class (:foreground ,fg2 :background ,bg4))))
         `(lazy-highlight                           ((,class (:foreground ,fg2 :background ,bg4))))
         `(term                                     ((,class (:foreground ,fg1 :background ,bg1))))
