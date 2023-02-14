@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; Version: 2.4
-;; Package-Version: 20221031.705
-;; Package-Commit: ef768ccdeb8159814628ab0e2714e7dc8d9674fa
+;; Package-Version: 20230214.1632
+;; Package-Commit: 3c1677f1bf2ded2ab07edffb7d17def5d2b5b6f6
 ;; Keywords: hash table, hash map, hash
 ;; Package-Requires: ((dash "2.12.0"))
 
@@ -134,6 +134,21 @@ for the final key, which may return any value."
 
 (defalias 'ht-update 'ht-update!)
 
+(define-inline ht-update-with! (table key updater &optional default)
+  "Update the value of KEY in TABLE with UPDATER.
+If the value does not exist, do nothing, unless DEFAULT is
+non-nil, in which case act as if the value is DEFAULT.
+
+UPDATER receives one argument, the value, and its return value
+becomes the new value of KEY."
+  (inline-quote
+   (let* ((not-found-symbol (make-symbol "ht--not-found"))
+          (v (gethash ,key ,table
+                      (or ,default not-found-symbol))))
+     (unless (eq v not-found-symbol)
+       (prog1 nil
+         (puthash ,key (funcall ,updater v) ,table))))))
+
 (defun ht-merge (&rest tables)
   "Crete a new tables that includes all the key-value pairs from TABLES.
 If multiple have tables have the same key, the value in the last
@@ -201,10 +216,11 @@ variables key and value bound."
 (defun ht-select-keys (table keys)
   "Return a copy of TABLE with only the specified KEYS."
   (declare (side-effect-free t))
-  (let (result)
+  (let ((not-found-symbol (make-symbol "ht--not-found"))
+        result)
     (setq result (make-hash-table :test (hash-table-test table)))
     (dolist (key keys result)
-      (if (not (equal (gethash key table 'key-not-found) 'key-not-found))
+      (if (not (equal (gethash key table not-found-symbol) not-found-symbol))
           (puthash key (gethash key table) result)))))
 
 (defun ht->plist (table)
@@ -294,7 +310,7 @@ FUNCTION is called with two arguments, KEY and VALUE."
     results))
 
 (defun ht-reject! (function table)
-  "Delete entries from TABLE for which FUNCTION returns a falsy value.
+  "Delete entries from TABLE for which FUNCTION returns non-nil.
 
 FUNCTION is called with two arguments, KEY and VALUE."
   (ht-each
