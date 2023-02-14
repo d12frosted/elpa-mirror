@@ -1,11 +1,11 @@
 (slime-repl-ansi-color .
-		       [(20200712 1226)
+		       [(20230214 1453)
 			((emacs
 			  (24))
 			 (slime
 			  (2 3 1)))
 			"Turn on ANSI colors in REPL output;" single
-			((:commit . "e38c7958d9657e41c426b4e96938b3f604238795")
+			((:commit . "9e8af90490332217e45d7568f1690df3f4e25d4b")
 			 (:authors
 			  ("Max Mikhanosha" . "max@openchat.com"))
 			 (:maintainer "Augustin Fabre" . "augustin@augfab.fr")

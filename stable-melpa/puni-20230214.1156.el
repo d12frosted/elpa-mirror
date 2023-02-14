@@ -6,8 +6,8 @@
 ;; Maintainer: Hao Wang <amaikinono@gmail.com>
 ;; Created: 08 Aug 2021
 ;; Keywords: convenience, lisp, tools
-;; Package-Version: 20230214.1128
-;; Package-Commit: 9d944ea3ae4bd5313b748b3e543460c1dd1bb2d6
+;; Package-Version: 20230214.1156
+;; Package-Commit: a39a4ecac7279bed1a150a895bbc80baa7272888
 ;; Homepage: https://github.com/AmaiKinono/puni
 ;; Version: 0
 ;; Package-Requires: ((emacs "26.1"))
@@ -1474,44 +1474,52 @@ When this will cause unbalanced state, ask the user to confirm,
 unless `puni-confirm-when-delete-unbalanced-active-region' is
 nil."
   (interactive)
-  (if (use-region-p)
-      (let ((beg (region-beginning))
-            (end (region-end)))
-        (when (or (not puni-confirm-when-delete-unbalanced-active-region)
-                  (puni-region-balance-p beg end)
-                  (y-or-n-p "Delete the region will cause unbalanced state.  \
+  (unless (use-region-p) (user-error "No active region"))
+  (if (bound-and-true-p rectangle-mark-mode)
+      (funcall region-extract-function 'delete-only)
+    (let ((beg (region-beginning))
+          (end (region-end)))
+      (when (or (not puni-confirm-when-delete-unbalanced-active-region)
+                (puni-region-balance-p beg end)
+                (y-or-n-p "Delete the region will cause unbalanced state.  \
 Continue? "))
-          (puni-delete-region beg end)))
-    (user-error "No active region")))
+        (puni-delete-region beg end)))))
 
 ;;;###autoload
-(defun puni-kill-region (beg end)
-  "Kill region (from BEG to END).
+(defun puni-kill-region ()
+  "Kill text between point and mark.
 When this will cause unbalanced state, ask the user to confirm,
-unless `puni-confirm-when-delete-unbalanced-active-region'."
-  (interactive "r")
+unless `puni-confirm-when-delete-unbalanced-active-region'.
+
+When `rectangle-mark-mode' is enabled, kill the marked
+rectangular region instead."
+  (interactive)
   (if (bound-and-true-p rectangle-mark-mode)
       ;; There is a rectangular region active.  The user probably
       ;; knows what they are doing, defer to the stock `kill-region'
       ;; function for it to handle the rectangular region.
-      (kill-region beg end 'region)
-    (when (or (not puni-confirm-when-delete-unbalanced-active-region)
-              (puni-region-balance-p beg end)
-              (y-or-n-p "Delete the region will cause unbalanced state.  \
+      (kill-region nil nil 'region)
+    (let ((beg (region-beginning))
+          (end (region-end)))
+      (when (or (not puni-confirm-when-delete-unbalanced-active-region)
+                (puni-region-balance-p beg end)
+                (y-or-n-p "Delete the region will cause unbalanced state.  \
   Continue? "))
-      (setq this-command 'kill-region)
-      (puni-delete-region beg end 'kill))))
+        (setq this-command 'kill-region)
+        (puni-delete-region beg end 'kill)))))
 
 ;;;###autoload
 (defun puni-kill-active-region ()
   "Kill active region.
 When this will cause unbalanced state, ask the user to confirm,
-unless `puni-confirm-when-delete-unbalanced-active-region'."
+unless `puni-confirm-when-delete-unbalanced-active-region' is
+nil.
+
+When `rectangle-mark-mode' is enabled, kill the marked
+rectangular region instead."
   (interactive)
   (if (use-region-p)
-      (let ((beg (region-beginning))
-            (end (region-end)))
-        (puni-kill-region beg end))
+      (puni-kill-region)
     (user-error "No active region")))
 
 ;;;;; Char

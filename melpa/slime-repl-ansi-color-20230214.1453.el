@@ -3,8 +3,8 @@
 ;; Author: Max Mikhanosha <max@openchat.com>
 ;; Maintainer: Augustin Fabre <augustin@augfab.fr>
 ;; Package-Requires: ((emacs "24") (slime "2.3.1"))
-;; Package-Version: 20200712.1226
-;; Package-Commit: e38c7958d9657e41c426b4e96938b3f604238795
+;; Package-Version: 20230214.1453
+;; Package-Commit: 9e8af90490332217e45d7568f1690df3f4e25d4b
 ;; Keywords: lisp
 ;; URL: https://gitlab.com/augfab/slime-repl-ansi-color
 ;; Version: 0.1
@@ -35,8 +35,7 @@
 
 (define-minor-mode slime-repl-ansi-color-mode
   "Process ANSI colors in Lisp output."
-  nil
-  :lighter " SlimeANSI")
+  :lighter " color")
 
 (define-slime-contrib slime-repl-ansi-color
   "Turn on ANSI colors in REPL output"
