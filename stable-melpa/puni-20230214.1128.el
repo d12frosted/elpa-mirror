@@ -6,8 +6,8 @@
 ;; Maintainer: Hao Wang <amaikinono@gmail.com>
 ;; Created: 08 Aug 2021
 ;; Keywords: convenience, lisp, tools
-;; Package-Version: 20230122.1643
-;; Package-Commit: 93a25f73112752eff17d52fd99485199d8babee6
+;; Package-Version: 20230214.1128
+;; Package-Commit: 9d944ea3ae4bd5313b748b3e543460c1dd1bb2d6
 ;; Homepage: https://github.com/AmaiKinono/puni
 ;; Version: 0
 ;; Package-Requires: ((emacs "26.1"))
@@ -1490,12 +1490,17 @@ Continue? "))
 When this will cause unbalanced state, ask the user to confirm,
 unless `puni-confirm-when-delete-unbalanced-active-region'."
   (interactive "r")
-  (when (or (not puni-confirm-when-delete-unbalanced-active-region)
-            (puni-region-balance-p beg end)
-            (y-or-n-p "Delete the region will cause unbalanced state.  \
-Continue? "))
-    (setq this-command 'kill-region)
-    (puni-delete-region beg end 'kill)))
+  (if (bound-and-true-p rectangle-mark-mode)
+      ;; There is a rectangular region active.  The user probably
+      ;; knows what they are doing, defer to the stock `kill-region'
+      ;; function for it to handle the rectangular region.
+      (kill-region beg end 'region)
+    (when (or (not puni-confirm-when-delete-unbalanced-active-region)
+              (puni-region-balance-p beg end)
+              (y-or-n-p "Delete the region will cause unbalanced state.  \
+  Continue? "))
+      (setq this-command 'kill-region)
+      (puni-delete-region beg end 'kill))))
 
 ;;;###autoload
 (defun puni-kill-active-region ()

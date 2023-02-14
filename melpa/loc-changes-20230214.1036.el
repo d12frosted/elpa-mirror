@@ -4,8 +4,8 @@
 
 ;; Author: Rocky Bernstein <rocky@gnu.org>
 ;; Version: 1.2
-;; Package-Version: 20200722.1111
-;; Package-Commit: 2db42905675e1740305f9884613bc48582601b8a
+;; Package-Version: 20230214.1036
+;; Package-Commit: 622371e432f50626aaac82f8ee2841f71685b0fb
 ;; URL: https://github.com/rocky/emacs-loc-changes
 ;; Compatibility: GNU Emacs 24.x
 
@@ -36,6 +36,12 @@
 ;; warnings which refer to file and line positions.
 
 ;;; Code:
+
+;; Press C-x C-e at the end of the next line configure the program in GNU emacs
+;; for building via "make" to get set up.
+;; (compile (format "EMACSLOADPATH=:%s ./autogen.sh" "."))
+;; After that you can run:
+;; (compile "make check")
 
 (eval-when-compile (require 'cl))
 

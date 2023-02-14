@@ -1,7 +1,7 @@
 (load-relative .
-	       [(20201130 2202)
-		nil "Relative file load (within a multi-file Emacs package)" tar
-		((:commit . "ff2a827144353d29d70392fd95c14c15df207011")
+	       [(20230214 1032)
+		nil "Relative file load (within a multi-file Emacs package)" single
+		((:commit . "b7987c265a64435299d6b02f960ed2c894c4a145")
 		 (:authors
 		  ("Rocky Bernstein" . "rocky@gnu.org"))
 		 (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
