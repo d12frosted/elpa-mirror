@@ -3,62 +3,14 @@ Fetcher: git
 Source:  https://scm.osdn.net/gitroot/howm/howm.git
 
 Updating /mnt/store/melpa/working/howm/
-Checking out f4b2c9ec980062d6c1eb57d8633fa0a1b7204b7c
-Warning: howm :files spec is equivalent to the default
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/howm/
-  to /tmp/howmd26bwF/howm-20230129.1012
-    action-lock.el -> action-lock.el
-    bcomp.el -> bcomp.el
-    cheat-font-lock.el -> cheat-font-lock.el
-    gfunc.el -> gfunc.el
-    honest-report.el -> honest-report.el
-    howm-backend.el -> howm-backend.el
-    howm-common.el -> howm-common.el
-    howm-date.el -> howm-date.el
-    howm-lang-en.el -> howm-lang-en.el
-    howm-lang-fr.el -> howm-lang-fr.el
-    howm-lang-ja.el -> howm-lang-ja.el
-    howm-menu-en.el -> howm-menu-en.el
-    howm-menu-fr.el -> howm-menu-fr.el
-    howm-menu-ja.el -> howm-menu-ja.el
-    howm-menu.el -> howm-menu.el
-    howm-misc.el -> howm-misc.el
-    howm-mkmenu.el -> howm-mkmenu.el
-    howm-mode.el -> howm-mode.el
-    howm-reminder.el -> howm-reminder.el
-    howm-vars.el -> howm-vars.el
-    howm-view.el -> howm-view.el
-    howm.el -> howm.el
-    iigrep.el -> iigrep.el
-    illusion.el -> illusion.el
-    riffle.el -> riffle.el
-Created howm-20230129.1012.tar containing:
-  howm-20230129.1012/
-  howm-20230129.1012/action-lock.el
-  howm-20230129.1012/bcomp.el
-  howm-20230129.1012/cheat-font-lock.el
-  howm-20230129.1012/gfunc.el
-  howm-20230129.1012/honest-report.el
-  howm-20230129.1012/howm-backend.el
-  howm-20230129.1012/howm-common.el
-  howm-20230129.1012/howm-date.el
-  howm-20230129.1012/howm-lang-en.el
-  howm-20230129.1012/howm-lang-fr.el
-  howm-20230129.1012/howm-lang-ja.el
-  howm-20230129.1012/howm-menu-en.el
-  howm-20230129.1012/howm-menu-fr.el
-  howm-20230129.1012/howm-menu-ja.el
-  howm-20230129.1012/howm-menu.el
-  howm-20230129.1012/howm-misc.el
-  howm-20230129.1012/howm-mkmenu.el
-  howm-20230129.1012/howm-mode.el
-  howm-20230129.1012/howm-pkg.el
-  howm-20230129.1012/howm-reminder.el
-  howm-20230129.1012/howm-vars.el
-  howm-20230129.1012/howm-view.el
-  howm-20230129.1012/howm.el
-  howm-20230129.1012/iigrep.el
-  howm-20230129.1012/illusion.el
-  howm-20230129.1012/riffle.el
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

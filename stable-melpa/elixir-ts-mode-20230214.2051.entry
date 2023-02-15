@@ -1,0 +1,13 @@
+(elixir-ts-mode .
+		[(20230214 2051)
+		 ((emacs
+		   (29))
+		  (heex-ts-mode
+		   (1 0)))
+		 "Major mode for Elixir with tree-sitter support" single
+		 ((:commit . "84edeaf5beb6fa72cfbc5641d736b16a32607a78")
+		  (:authors
+		   ("Wilhelm H Kirschbaum"))
+		  (:maintainer "Wilhelm H Kirschbaum")
+		  (:keywords "elixir" "languages" "tree-sitter")
+		  (:url . "https://github.com/wkirschbaum/elixir-ts-mode"))])

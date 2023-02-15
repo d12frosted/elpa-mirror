@@ -3,15 +3,10 @@ Fetcher: hg
 Source:  https://hg.osdn.net/view/multi-project/multi-project
 
 Updating /mnt/store/melpa/working/multi-project/
-Checking out 43a30f9578dc2f5acd4fc2941bedaa031b942b81
 
 Command '' exited with non-zero exit-code: 255
 
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
+pulling from https://hg.osdn.net/view/multi-project/multi-project
+abort: HTTP Error 504: Gateway Timeout
 
 Command exited with non-zero exit-code: 255
