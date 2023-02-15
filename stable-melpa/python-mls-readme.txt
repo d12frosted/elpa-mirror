@@ -11,7 +11,8 @@ Features:
   fontification for dramatic speedup.
 - Up/Down arrow history browsing with and without block movement
   (try shift arrow).
-- Saves and restore (multi-line) command history.
+- Saves and restore (multi-line) command history, separated per
+  buffer name.
 - Directly kill/yank multi-line code blocks to & from Python
   buffers.
 

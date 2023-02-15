@@ -4,8 +4,8 @@
 ;; Copyright (C) 2022 Marty Hiatt <martianhiatus AT riseup.net>
 ;;
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
-;; Package-Version: 20230114.1021
-;; Package-Commit: 2f825879cf28953feab597f5565c2f07c668d982
+;; Package-Version: 20230214.1735
+;; Package-Commit: 8ccda3422fc30fba23602327cc8e7de9f53bfa1d
 ;; Keywords: convenience, translate, wp, dictionary
 ;; URL: https://codeberg.org/martianh/wordreference.el
 ;; Version: 0.2
@@ -147,6 +147,7 @@
     (define-key map (kbd "RET") #'wordreference-return-search-word)
     (define-key map (kbd "v") #'wordreference-paste-to-search)
     (define-key map (kbd "S") #'wordreference-switch-source-target-and-search)
+    (define-key map (kbd "r") #'wordreference-browse-term-reverso)
     map)
   "Keymap for wordreference mode.")
 
@@ -483,7 +484,7 @@ BUFFER is the buffer that was current when we invoked the wordreference command.
   ;; because this is a callback, `current-buffer' = http response
   (unless (equal (buffer-name buffer) "*wordreference*")
     (switch-to-buffer-other-window (get-buffer "*wordreference*")))
-  (message "w/s: search again, ./,: next/prev heading, b: view in browser, TAB: jump to terms, C: copy search term, n: browse nearby entries, S: switch langs and search, l: search with linguee.com, c: browse on www.cntrl.fr."))
+  (message "w/s: search again, ./,: next/prev heading, b: view in browser, TAB: jump to terms, C: copy search term, n: browse nearby entries, S: switch langs and search, l: search with linguee.com, c: browse on www.cntrl.fr, r: search with reverso.el."))
 
 (defun wordreference-prop-query-in-results (query)
   "Propertize string QUERY in results buffer."
@@ -1160,7 +1161,7 @@ Requires `sdcv' to be installed, and the XMLittre dictionary."
 (defun wordreference--get-region ()
   "Get current region for new search."
   (if (and (equal major-mode 'pdf-view-mode)
-           (region-active-p))
+           (pdf-view-active-region-p))
       (car (pdf-view-active-region-text))
     (when (use-region-p)
       (buffer-substring-no-properties (region-beginning)

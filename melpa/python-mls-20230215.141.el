@@ -5,8 +5,8 @@
 ;; Author: J.D. Smith
 ;; Homepage: https://github.com/jdtsmith/python-mls
 ;; Package-Requires: ((emacs "27.1"))
-;; Package-Version: 20230211.1525
-;; Package-Commit: 88024d9691029660934eb066400d27d110ae348c
+;; Package-Version: 20230215.141
+;; Package-Commit: a2ce8032c2e7a21cc5f279a7f06a6795e3a9f069
 ;; Keywords: languages, processes
 ;; Version: 0.1.6
 
@@ -25,7 +25,8 @@
 ;;   fontification for dramatic speedup.
 ;; - Up/Down arrow history browsing with and without block movement
 ;;   (try shift arrow).
-;; - Saves and restore (multi-line) command history.
+;; - Saves and restore (multi-line) command history, separated per
+;;   buffer name.
 ;; - Directly kill/yank multi-line code blocks to & from Python
 ;;   buffers.
 
@@ -174,7 +175,9 @@ Omits extra newlines at end, and preserves (some) text properties."
   (let* ((bof (field-beginning))
 	 (field-prop (get-char-property bof 'field))
 	 (str (if (not field-prop) ; regular input
-		  (field-string bof)
+		  (if (and comint-last-output-start
+			   (>= bof comint-last-output-start))
+		      (field-string bof) "")
 		(comint-bol)
 		(buffer-substring
 		 (point)
@@ -182,9 +185,9 @@ Omits extra newlines at end, and preserves (some) text properties."
 		     (line-end-position)
 		   (field-end))))))
     (remove-text-properties 0 (length str)
-			    '(fontified nil
-					font-lock-face  nil
-					help-echo nil mouse-face nil)
+			    '( fontified nil
+			       font-lock-face  nil
+			       help-echo nil mouse-face nil)
 			    str)
     (string-trim-right str "[\n\r]+")))
 
