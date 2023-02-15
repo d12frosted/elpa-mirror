@@ -17,7 +17,7 @@ Table of Contents
 
 1. Features
 2. Configuration
-3. Bookmarks, Org and Elisp links
+3. Bookmarks, Org links, Geo urls and Elisp links
 4. Commands and Key Bindings
 5. Related projects
 6. Contributions
@@ -34,7 +34,7 @@ Table of Contents
   • Map scale indicator
   • Go to coordinate
   • Search for location by name
-  • Org and Elisp link support
+  • Org link, Geo url and Elisp link support
   • Bookmarked positions with pins
   • Multiple preconfigured tile servers
 
@@ -73,31 +73,44 @@ Table of Contents
 [wiki] <https://github.com/minad/osm/wiki>
 
 
-3 Bookmarks, Org and Elisp links
-════════════════════════════════
+3 Bookmarks, Org links, Geo urls and Elisp links
+════════════════════════════════════════════════
 
-  To store a bookmark press the key `b', to store Org/Elisp links press
-  the keys `l' or `e' respectively. You can also use a custom binding,
-  e.g., `C-c l'. Then the link can be inserted into an Org buffer with
-  `C-c C-l'. Bookmarks and Org links can be created at point with the
-  mouse, see `osm-bookmark-set-click' and `osm-org-link-click'.
+  There exist multiple methods to store the current location.
+
+  • `b': Create a bookmark of the current location.
+  • `l': Store an Org link to the current location. The link can the be
+    inserted into an Org buffer with `C-c C-l'.
+  • `u': Save the geo url of the current location in the kill ring. The
+    url can be inserted in another buffer via `C-y'.
+  • `C-u u': Save an Elisp link to the current location in the kill
+    ring.
+
+  Bookmarks and Org links can be created at point with the mouse, see
+  `osm-bookmark-set-click' and `osm-org-link-click'.
 
 
 ◊ 3.0.0.1 Org link examples
 
   Click on a link or press `RET' to jump to the location. These links
   work in Org buffers in Emacs. Furthermore you can open Org links in
-  arbitary buffers with `org-open-at-point-global'. I recommend binding
-  this command to a key, e.g., `C-c o'.
+  arbitrary buffers with `org-open-at-point-global'. I recommend binding
+  the command to a convenient key, e.g., `C-c o'. The format of the
+  links complies with the [geo URI scheme] defined by [RFC 5870].
 
   ┌────
-  │ [[osm:opentopomap:41.869560826994544,12.45849609375,6][Italia, 41.87° 12.46° OpenTopoMap]]
-  │ [[osm:51.48950698022105,-0.144195556640625,11][London, England, 51.49° -0.14°]]
-  │ [[osm:cyclosm:55.686875255964424,12.569732666015625,12][København, Danmark, 55.69° 12.57° CyclOSM]]
-  │ [[osm:stamen-watercolor:40.72956780913898,-73.97918701171875,12][New York, United States, 40.73° -73.98° Stamen Watercolor]]
-  │ [[osm:opentopomap:27.961656050984658,86.89224243164062,13][Mount Everest, 27.96° 86.89° OpenTopoMap]]
-  │ <osm:Tour Eiffel, Av. Gustave Eiffel, Paris> (Address link)
+  │ [[geo:41.869560826994544,12.45849609375;z=6;s=opentopomap][Italia, 41.87° 12.46° OpenTopoMap]]
+  │ [[geo:51.48950698022105,-0.144195556640625;z=11][London, England, 51.49° -0.14°]]
+  │ [[geo:55.686875255964424,12.569732666015625;z=12;s=cyclosm][København, Danmark, 55.69° 12.57° CyclOSM]]
+  │ [[geo:40.72956780913898,-73.97918701171875;z=12;s=stamen-watercolor][New York, United States, 40.73° -73.98° Stamen Watercolor]]
+  │ [[geo:27.961656050984658,86.89224243164062;z=13;s=opentopomap][Mount Everest, 27.96° 86.89° OpenTopoMap]]
+  │ <geo:Tour Eiffel, Av. Gustave Eiffel, Paris> (Address link)
   └────
+
+
+  [geo URI scheme] <https://en.wikipedia.org/wiki/Geo_URI_scheme>
+
+  [RFC 5870] <https://datatracker.ietf.org/doc/html/rfc5870>
 
 
 ◊ 3.0.0.2 Elisp link examples
@@ -108,11 +121,11 @@ Table of Contents
   manipulated programatically.
 
   ┌────
-  │ (osm 41.869561 12.458496 6 opentopomap "Lazio, Italia")
+  │ (osm 41.869561 12.458496 6 'opentopomap "Lazio, Italia")
   │ (osm 51.489507 -0.144196 11 "London, Greater London, England, SW1A 2DX, United Kingdom")
-  │ (osm 55.686875 12.569733 12 cyclosm "København, Københavns Kommune, Region Hovedstaden, 1357, Danmark")
-  │ (osm 40.729568 -73.979187 12 stamen-watercolor "New York County, New York, United States")
-  │ (osm 27.961656 86.892242 13 opentopomap "Khumjung, Khumbupasanglahmu, सोलुखुम्बु, Province #1, Nepal")
+  │ (osm 55.686875 12.569733 12 'cyclosm "København, Københavns Kommune, Region Hovedstaden, 1357, Danmark")
+  │ (osm 40.729568 -73.979187 12 'stamen-watercolor "New York County, New York, United States")
+  │ (osm 27.961656 86.892242 13 'opentopomap "Khumjung, Khumbupasanglahmu, सोलुखुम्बु, Province #1, Nepal")
   │ (osm "Tour Eiffel, Av. Gustave Eiffel, Paris") ;; Address link
   └────
 
@@ -148,7 +161,7 @@ Table of Contents
   • `x': `osm-gpx-show' - Show tracks and POIs from GPX file
   • `X': `osm-gpx-hide' - Hide overlays from GPX file
   • `l': `org-store-link' - Store Org link
-  • `e': `osm-elisp-link' - Store Elisp link in the kill ring
+  • `u': `osm-save-url' - Save geo url in the kill ring
   • `b': `osm-bookmark-set' - Set bookmark
   • `n': `osm-bookmark-rename' - Rename selected bookmark
   • `j': `osm-bookmark-jump' - Jump to bookmark

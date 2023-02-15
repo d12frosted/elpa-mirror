@@ -31,7 +31,7 @@
   applied by `org-modern-mode', e.g., the block brackets in the fringe.
 
   Bug reports, improvement or style proposals are welcome! Maybe some
-  more Org elements deserve styling or alternative stylings should be
+  more Org elements deserve styling or alternative styles should be
   offered?
 
   The tag style of `org-modern' is inspired by Nicholas Rougier's
@@ -53,6 +53,19 @@
   lists. `org-superstar' relies on character composition, while
   `org-modern' uses text properties, which are considered more
   future-proof.
+
+
+[example.org] <file:example.org>
+
+[modus-operandi] <https://protesilaos.com/emacs/modus-themes>
+
+[svg-tag-mode] <https://github.com/rougier/svg-tag-mode>
+
+[org-superstar] <https://github.com/integral-dw/org-superstar-mode>
+
+
+2 Configuration
+═══════════════
 
   The package is available on GNU ELPA and MELPA. You can install the
   package with `package-install'. Then `org-modern' can be enabled
@@ -123,16 +136,7 @@
   └────
 
 
-[example.org] <file:example.org>
-
-[modus-operandi] <https://protesilaos.com/emacs/modus-themes>
-
-[svg-tag-mode] <https://github.com/rougier/svg-tag-mode>
-
-[org-superstar] <https://github.com/integral-dw/org-superstar-mode>
-
-
-2 Contributions
+3 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a

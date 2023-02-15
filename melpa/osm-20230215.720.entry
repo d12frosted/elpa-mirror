@@ -1,0 +1,12 @@
+(osm .
+     [(20230215 720)
+      ((emacs
+	(27 1))
+       (compat
+	(29 1 3 4)))
+      "OpenStreetMap viewer" tar
+      ((:commit . "c3fbc813f2e76c71056bf6e28ae3a997f33718d1")
+       (:authors
+	("Daniel Mendler" . "mail@daniel-mendler.de"))
+       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+       (:url . "https://github.com/minad/osm"))])

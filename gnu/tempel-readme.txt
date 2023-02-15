@@ -7,8 +7,9 @@ Tempel is a tiny template package for Emacs, which uses the syntax of
 the Emacs Tempo library. Tempo is an ancient temple of the church of
 Emacs. It is 27 years old, but still in good shape since it successfully
 resisted change over the decades. However it may look a bit dusty here
-and there. Therefore we present Tempel, a modernized implementation of
-Tempo. Tempel integrates well with the standard
+and there. Therefore we present Tempel, a new implementation of Tempo
+with inline expansion and integration with recent Emacs
+facilities. Tempel takes advantage of the standard
 `completion-at-point-functions' mechanism which is used by Emacs for
 in-buffer completion.
 
@@ -148,10 +149,44 @@ Table of Contents
   │ 
   │ latex-mode
   │ 
+  │ (abstract "\\begin{abstract}\n" r> n> "\\end{abstract}")
+  │ (align "\\begin{align}\n" r> n> "\\end{align}")
+  │ (alignn "\\begin{align*}\n" r> n> "\\end{align*}")
+  │ (gather "\\begin{gather}\n" r> n> "\\end{gather}")
+  │ (gatherr "\\begin{gather*}\n" r> n> "\\end{gather*}")
+  │ (appendix "\\begin{appendix}\n" r> n> "\\end{appendix}")
   │ (begin "\\begin{" (s env) "}" r> n> "\\end{" (s env) "}")
-  │ (frac "\\frac{" p "}{" q "}")
+  │ (center "\\begin{center}\n" r> n> "\\end{center}")
+  │ (displaymath "\\begin{displaymath}\n" r> n> "\\end{displaymath}")
+  │ (document "\\begin{document}\n" r> n> "\\end{document}")
   │ (enumerate "\\begin{enumerate}\n\\item " r> n> "\\end{enumerate}")
+  │ (equation "\\begin{equation}" r> n> "\\end{equation}")
+  │ (flushleft "\\begin{flushleft}" r> n> "\\end{flushleft}")
+  │ (flushright "\\begin{flushright}" r> n> "\\end{flushright}")
+  │ (frac "\\frac{" p "}{" q "}")
+  │ (fussypar "\\begin{fussypar}" r> n> "\\end{fussypar}")
   │ (itemize "\\begin{itemize}\n\\item " r> n> "\\end{itemize}")
+  │ (letter "\\begin{letter}\n" r> n> "\\end{letter}")
+  │ (math "\\begin{math}\n" r> n> "\\end{math}")
+  │ (minipage "\\begin{minipage}[t]{0.5\linewidth}\n" r> n> "\\end{minipage}")
+  │ (quotation "\\begin{quotation}\n" r> n> "\\end{quotation}")
+  │ (quote "\\begin{quote}\n" r> n> "\\end{quote}")
+  │ (sloppypar "\\begin{sloppypar}\n" r> n> "\\end{sloppypar}")
+  │ (theindex "\\begin{theindex}\n" r> n> "\\end{theindex}")
+  │ (trivlist "\\begin{trivlist}\n" r> n> "\\end{trivlist}")
+  │ (verbatim "\\begin{verbatim}\n" r> n> "\\end{verbatim}")
+  │ (verbatimm "\\begin{verbatim*}\n" r> n> "\\end{verbatim*}")
+  │ 
+  │ texinfo-mode
+  │ 
+  │ (defmac "@defmac " p n> r> "@end defmac")
+  │ (defun "@defun " p n> r> "@end defun")
+  │ (defvar "@defvar " p n> r> "@end defvar")
+  │ (example "@example " p n> r> "@end example")
+  │ (lisp "@lisp " p n> r> "@end lisp")
+  │ (bullet "@itemize @bullet{}" n> r> "@end itemize")
+  │ (code "@code{" p "}")
+  │ (var "@var{" p "}")
   │ 
   │ lisp-mode emacs-lisp-mode ;; Specify multiple modes
   │ 
@@ -173,13 +208,14 @@ Table of Contents
   │ (fun "(defun " p " (" p ")\n  \"" p "\"" n> r> ")")
   │ (iflet "(if-let (" p ")" n> r> ")")
   │ (whenlet "(when-let (" p ")" n> r> ")")
-  │ (iflet* "(if-let* (" p ")" n> r> ")")
-  │ (whenlet* "(when-let* (" p ")" n> r> ")")
-  │ (andlet* "(and-let* (" p ")" n> r> ")")
+  │ (whilelet "(while-let (" p ")" n> r> ")")
+  │ (andlet "(and-let* (" p ")" n> r> ")")
   │ (cond "(cond" n "(" q "))" >)
   │ (pcase "(pcase " (p "scrutinee") n "(" q "))" >)
   │ (let "(let (" p ")" n> r> ")")
-  │ (let* "(let* (" p ")" n> r> ")")
+  │ (lett "(let* (" p ")" n> r> ")")
+  │ (pcaselet "(pcase-let (" p ")" n> r> ")")
+  │ (pcaselett "(pcase-let* (" p ")" n> r> ")")
   │ (rec "(letrec (" p ")" n> r> ")")
   │ (dotimes "(dotimes (" p ")" n> r> ")")
   │ (dolist "(dolist (" p ")" n> r> ")")
@@ -187,8 +223,12 @@ Table of Contents
   │ (command "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive" p ")" n> r> ")")
   │ (advice "(defun " (p "adv" name) " (&rest app)" n> p n> "(apply app))" n>
   │ 	"(advice-add #'" (p "fun") " " (p ":around") " #'" (s name) ")")
+  │ (header ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │ 	" -- " p " -*- lexical-binding: t -*-" n
+  │ 	";;; Commentary:" n ";;; Code:" n n)
   │ (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
-  │ 	 ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name))) " ends here" n)
+  │ 	 ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │ 	 " ends here" n)
   │ 
   │ eshell-mode
   │ 
@@ -202,11 +242,14 @@ Table of Contents
   │ 
   │ text-mode
   │ 
+  │ (box "┌─" (make-string (length str) ?─) "─┐" n
+  │      "│ " (s str)                       " │" n
+  │      "└─" (make-string (length str) ?─) "─┘" n)
+  │ (abox "+-" (make-string (length str) ?-) "-+" n
+  │       "| " (s str)                       " |" n
+  │       "+-" (make-string (length str) ?-) "-+" n)
   │ (cut "--8<---------------cut here---------------start------------->8---" n r n
   │      "--8<---------------cut here---------------end--------------->8---" n)
-  │ (asciibox "+-" (make-string (length str) ?-) "-+" n
-  │ 	  "| " (s str)                       " |" n
-  │ 	  "+-" (make-string (length str) ?-) "-+" n)
   │ (rot13 (p "plain text" text) n "----" n (rot13 text))
   │ (calc (p "taylor(sin(x),x=0,3)" formula) n "----" n (format "%s" (calc-eval formula)))
   │ 
@@ -225,14 +268,24 @@ Table of Contents
   │ 
   │ org-mode
   │ 
-  │ (title "#+title: " p n "#+author: Daniel Mendler" n "#+language: en" n n)
-  │ (quote "#+begin_quote" n> r> n> "#+end_quote")
-  │ (example "#+begin_example" n> r> n> "#+end_example")
-  │ (center "#+begin_center" n> r> n> "#+end_center")
-  │ (comment "#+begin_comment" n> r> n> "#+end_comment")
-  │ (verse "#+begin_verse" n> r> n> "#+end_verse")
-  │ (src "#+begin_src " p n> r> n> "#+end_src" :post (org-edit-src-code))
+  │ (caption "#+caption: ")
+  │ (drawer ":" p ":" n r ":end:")
+  │ (begin "#+begin_" (s name) n> r> n "#+end_" name)
+  │ (quote "#+begin_quote" n> r> n "#+end_quote")
+  │ (sidenote "#+begin_sidenote" n> r> n "#+end_sidenote")
+  │ (marginnote "#+begin_marginnote" n> r> n "#+end_marginnote")
+  │ (example "#+begin_example" n> r> n "#+end_example")
+  │ (center "#+begin_center" n> r> n "#+end_center")
+  │ (ascii "#+begin_export ascii" n> r> n "#+end_export")
+  │ (html "#+begin_export html" n> r> n "#+end_export")
+  │ (latex "#+begin_export latex" n> r> n "#+end_export")
+  │ (comment "#+begin_comment" n> r> n "#+end_comment")
+  │ (verse "#+begin_verse" n> r> n "#+end_verse")
+  │ (src "#+begin_src " q n> r> n "#+end_src")
+  │ (gnuplot "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n> r> n "#+end_src" :post (org-edit-src-code))
   │ (elisp "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
+  │ (inlsrc "src_" p "{" q "}")
+  │ (title "#+title: " p n "#+author: Daniel Mendler" n "#+language: en")
   │ 
   │ ;; Local Variables:
   │ ;; mode: lisp-data
@@ -389,7 +442,7 @@ Table of Contents
   • [laas.el]: Latex auto activating snippets
   • [muban.el]: Lightweight template expansion
   • [placeholder.el]: Treat buffers as templates
-  • [skempo.el]: Unifies Skeleton and Tempo configuration
+  • [tempo-abbrev.el]: Abbrev integration for Tempo
   • [snippet.el]: Original snippet mode, with inline expansion
   • [tempo-snippets.el]: Interface like snippet.el for Tempo
   • [yasnippet.el]: Template system inspired by Textmate snippets
@@ -409,7 +462,7 @@ Table of Contents
 
 [placeholder.el] <https://github.com/oantolin/placeholder>
 
-[skempo.el] <https://github.com/xFA25E/skempo>
+[tempo-abbrev.el] <https://github.com/xFA25E/tempo-abbrev>
 
 [snippet.el] <https://github.com/pkazmier/snippet.el>
 

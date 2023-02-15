@@ -192,9 +192,10 @@ Table of Contents
   /Throw multiple Capfs under the Cape and get a Super-Capf!/
 
   Cape supports merging multiple Capfs using the function
-  `cape-super-capf'. This feature is experimental and should only be
-  used in special scenarios.  *Don't use cape-super-capf if you are not
-  100% sure that you need it!*
+  `cape-super-capf'.  *This feature is EXPERIMENTAL and should only be
+  used in special scenarios. Don't use cape-super-capf if you are not
+  100% sure that you need it! If you decide to use the function, you are
+  on UNSUPPORTED TERRITORY.*
 
   Note that `cape-super-capf' is not needed if you want to use multiple
   Capfs which are tried one by one, e.g., it is perfectly possible to
@@ -260,8 +261,8 @@ Table of Contents
   bind the Capfs created by the Capf transformers with `defalias' to a
   function symbol.
 
-  • `cape-interactive-capf': Create a Capf which can be called
-    interactively.
+  • `cape-interactive-capf', `cape-interactive': Create a Capf which can
+    be called interactively.
   • `cape-wrap-accept-all', `cape-capf-accept-all': Create a Capf which
     accepts every input as valid.
   • `cape-wrap-silent', `cape-capf-silent': Wrap a chatty Capf and
@@ -290,10 +291,12 @@ Table of Contents
   some of these tweaks in my personal configuration.
 
   ┌────
-  │ ;; Example 1: Sanitize the `pcomplete-completions-at-point' Capf.
-  │ ;; The Capf has undesired side effects on Emacs 28 and earlier.
-  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
-  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify)
+  │ ;; Example 1: Sanitize the `pcomplete-completions-at-point' Capf.  The Capf has
+  │ ;; undesired side effects on Emacs 28 and earlier.  These advices are not needed
+  │ ;; on Emacs 29 and newer.
+  │ (when (< emacs-major-version 29)
+  │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
+  │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
   │ 
   │ ;; Example 2: Configure a Capf with a specific auto completion prefix length
   │ (setq-local completion-at-point-functions
@@ -303,19 +306,17 @@ Table of Contents
   │ (defalias 'cape-dabbrev-min-2 (cape-capf-prefix-length #'cape-dabbrev 2))
   │ (setq-local completion-at-point-functions (list #'cape-dabbrev-min-2))
   │ 
-  │ ;; Example 4: Define a defensive Dabbrev Capf, which accepts all inputs.
-  │ ;; If you use Corfu and `corfu-auto=t', the first candidate won't be auto
-  │ ;; selected even if `corfu-preselect-first=t'! You can use this instead of
-  │ ;; `cape-dabbrev'.
+  │ ;; Example 4: Define a defensive Dabbrev Capf, which accepts all inputs.  If you
+  │ ;; use Corfu and `corfu-auto=t', the first candidate won't be auto selected even
+  │ ;; if `corfu-preselect=first'. You can use this instead of `cape-dabbrev'.
   │ (defun my-cape-dabbrev-accept-all ()
   │   (cape-wrap-accept-all #'cape-dabbrev))
   │ (add-to-list 'completion-at-point-functions #'my-cape-dabbrev-accept-all)
   │ 
-  │ ;; Example 5: Define interactive Capf which can be bound to a key.
-  │ ;; Here we wrap the `elisp-completion-at-point' such that we can
-  │ ;; complete Elisp code explicitly in arbitrary buffers.
-  │ (global-set-key (kbd "C-c p e")
-  │ 		(cape-interactive-capf #'elisp-completion-at-point))
+  │ ;; Example 5: Define interactive Capf which can be bound to a key.  Here we wrap
+  │ ;; the `elisp-completion-at-point' such that we can complete Elisp code
+  │ ;; explicitly in arbitrary buffers.
+  │ (keymap-global-set "C-c p e" (cape-interactive-capf #'elisp-completion-at-point))
   │ 
   │ ;; Example 6: Ignore :keywords in Elisp completion.
   │ (defun ignore-elisp-keywords (sym)
