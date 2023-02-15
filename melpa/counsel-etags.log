@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/redguardtoo/counsel-etags.git
 
 Updating /mnt/store/melpa/working/counsel-etags/
-Checking out a65c03d2a82bae2571993b77b980f2f27c138ecb
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/redguardtoo/counsel-etags.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

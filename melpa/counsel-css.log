@@ -3,5 +3,9 @@ Fetcher: github
 Source:  https://github.com/hlissner/emacs-counsel-css.git
 
 Updating /mnt/store/melpa/working/counsel-css/
-Checking out 8e9c0515fc952452eee786d8ebb43d48ea86c9f8
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/hlissner/emacs-counsel-css.git/': GnuTLS recv error (-54): Error in the pull function.
+
+Command exited with non-zero exit-code: 128

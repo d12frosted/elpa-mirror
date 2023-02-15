@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/d12frosted/counsel-osx-app.git
 
 Updating /mnt/store/melpa/working/counsel-osx-app/
-Checking out 5cc93ec684f837dc31ce20e7625407f2c0445691
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/d12frosted/counsel-osx-app.git/': Failed to connect to github.com port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

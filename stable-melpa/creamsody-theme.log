@@ -3,19 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacsfodder/emacs-theme-creamsody.git
 
 Updating /mnt/store/melpa/working/creamsody-theme/
-Checking out ac27451f395d1718a05de636dde9a69a2f0cd558
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/creamsody-theme/
-  to /tmp/creamsody-themeETC1p4/creamsody-theme-20220912.851
-    creamsody-dark-theme.el -> creamsody-dark-theme.el
-    creamsody-darker-theme.el -> creamsody-darker-theme.el
-    creamsody-theme.el -> creamsody-theme.el
-    creamsody.el -> creamsody.el
-Created creamsody-theme-20220912.851.tar containing:
-  creamsody-theme-20220912.851/
-  creamsody-theme-20220912.851/creamsody-dark-theme.el
-  creamsody-theme-20220912.851/creamsody-darker-theme.el
-  creamsody-theme-20220912.851/creamsody-theme-pkg.el
-  creamsody-theme-20220912.851/creamsody-theme.el
-  creamsody-theme-20220912.851/creamsody.el
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/emacsfodder/emacs-theme-creamsody.git/': Failed to connect to github.com port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

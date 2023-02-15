@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/FelipeLema/emacs-counsel-gtags.git
 
 Updating /mnt/store/melpa/working/counsel-gtags/
-Checking out 1d52eaeffeb60266434d4f7416a108ca058fde91
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/FelipeLema/emacs-counsel-gtags.git/': Failed to connect to github.com port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

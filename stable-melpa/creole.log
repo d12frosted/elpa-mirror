@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/nicferrier/elwikicreole.git
 
 Updating /mnt/store/melpa/working/creole/
-Checking out 7d5cffe93857f6c75ca09ac79c0e47b8d4410e53
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/nicferrier/elwikicreole.git/': Failed to connect to github.com port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

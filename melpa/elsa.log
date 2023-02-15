@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-elsa/Elsa.git
 
 Updating /mnt/store/melpa/working/elsa/
-Checking out df6629b4ce6be966a649273ca5644f0501bef9cf
+Checking out 87ae076ef09854da1108ed6424e73dfee9d51ade
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elsa/
-  to /tmp/elsaVhZrfS/elsa-20230213.1902
+  to /tmp/elsaU898HJ/elsa-20230215.1521
     Elsafile.el -> Elsafile.el
     elsa-analyser.el -> elsa-analyser.el
     elsa-check.el -> elsa-check.el
@@ -24,6 +24,7 @@ Copying files (->) and directories (=>)
     elsa-font-lock.el -> elsa-font-lock.el
     elsa-functions.el -> elsa-functions.el
     elsa-log.el -> elsa-log.el
+    elsa-methods.el -> elsa-methods.el
     elsa-pkg.el -> elsa-pkg.el
     elsa-reader.el -> elsa-reader.el
     elsa-rules-list.el -> elsa-rules-list.el
@@ -42,43 +43,44 @@ Copying files (->) and directories (=>)
     elsa-variable.el -> elsa-variable.el
     elsa.el -> elsa.el
     bin => bin
-Created elsa-20230213.1902.tar containing:
-  elsa-20230213.1902/
-  elsa-20230213.1902/Elsafile.el
-  elsa-20230213.1902/bin/
-  elsa-20230213.1902/bin/elsa
-  elsa-20230213.1902/bin/elsa.bat
-  elsa-20230213.1902/elsa-analyser.el
-  elsa-20230213.1902/elsa-check.el
-  elsa-20230213.1902/elsa-dependencies.el
-  elsa-20230213.1902/elsa-english.el
-  elsa-20230213.1902/elsa-error.el
-  elsa-20230213.1902/elsa-extension-builtin.el
-  elsa-20230213.1902/elsa-extension-cl.el
-  elsa-20230213.1902/elsa-extension-dash.el
-  elsa-20230213.1902/elsa-extension-eieio.el
-  elsa-20230213.1902/elsa-extension-elsa.el
-  elsa-20230213.1902/elsa-extension-flycheck.el
-  elsa-20230213.1902/elsa-extension-seq.el
-  elsa-20230213.1902/elsa-extension-subr.el
-  elsa-20230213.1902/elsa-font-lock.el
-  elsa-20230213.1902/elsa-functions.el
-  elsa-20230213.1902/elsa-log.el
-  elsa-20230213.1902/elsa-pkg.el
-  elsa-20230213.1902/elsa-reader.el
-  elsa-20230213.1902/elsa-rules-list.el
-  elsa-20230213.1902/elsa-ruleset.el
-  elsa-20230213.1902/elsa-scope.el
-  elsa-20230213.1902/elsa-state.el
-  elsa-20230213.1902/elsa-type-algebra.el
-  elsa-20230213.1902/elsa-type-helpers.el
-  elsa-20230213.1902/elsa-typed-builtin.el
-  elsa-20230213.1902/elsa-typed-cl.el
-  elsa-20230213.1902/elsa-typed-eieio.el
-  elsa-20230213.1902/elsa-typed-subr.el
-  elsa-20230213.1902/elsa-typed-syntax.el
-  elsa-20230213.1902/elsa-typed-thingatpt.el
-  elsa-20230213.1902/elsa-types.el
-  elsa-20230213.1902/elsa-variable.el
-  elsa-20230213.1902/elsa.el
+Created elsa-20230215.1521.tar containing:
+  elsa-20230215.1521/
+  elsa-20230215.1521/Elsafile.el
+  elsa-20230215.1521/bin/
+  elsa-20230215.1521/bin/elsa
+  elsa-20230215.1521/bin/elsa.bat
+  elsa-20230215.1521/elsa-analyser.el
+  elsa-20230215.1521/elsa-check.el
+  elsa-20230215.1521/elsa-dependencies.el
+  elsa-20230215.1521/elsa-english.el
+  elsa-20230215.1521/elsa-error.el
+  elsa-20230215.1521/elsa-extension-builtin.el
+  elsa-20230215.1521/elsa-extension-cl.el
+  elsa-20230215.1521/elsa-extension-dash.el
+  elsa-20230215.1521/elsa-extension-eieio.el
+  elsa-20230215.1521/elsa-extension-elsa.el
+  elsa-20230215.1521/elsa-extension-flycheck.el
+  elsa-20230215.1521/elsa-extension-seq.el
+  elsa-20230215.1521/elsa-extension-subr.el
+  elsa-20230215.1521/elsa-font-lock.el
+  elsa-20230215.1521/elsa-functions.el
+  elsa-20230215.1521/elsa-log.el
+  elsa-20230215.1521/elsa-methods.el
+  elsa-20230215.1521/elsa-pkg.el
+  elsa-20230215.1521/elsa-reader.el
+  elsa-20230215.1521/elsa-rules-list.el
+  elsa-20230215.1521/elsa-ruleset.el
+  elsa-20230215.1521/elsa-scope.el
+  elsa-20230215.1521/elsa-state.el
+  elsa-20230215.1521/elsa-type-algebra.el
+  elsa-20230215.1521/elsa-type-helpers.el
+  elsa-20230215.1521/elsa-typed-builtin.el
+  elsa-20230215.1521/elsa-typed-cl.el
+  elsa-20230215.1521/elsa-typed-eieio.el
+  elsa-20230215.1521/elsa-typed-subr.el
+  elsa-20230215.1521/elsa-typed-syntax.el
+  elsa-20230215.1521/elsa-typed-thingatpt.el
+  elsa-20230215.1521/elsa-types.el
+  elsa-20230215.1521/elsa-variable.el
+  elsa-20230215.1521/elsa.el
 Searching for program: No such file or directory, convert

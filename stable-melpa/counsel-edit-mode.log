@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/tyler-dodge/counsel-edit-mode.git
 
 Updating /mnt/store/melpa/working/counsel-edit-mode/
-Checking out 00ee3fd5cb88021fc4a58b038407e21398607c3c
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/tyler-dodge/counsel-edit-mode.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

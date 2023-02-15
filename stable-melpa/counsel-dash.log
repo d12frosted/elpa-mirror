@@ -3,5 +3,9 @@ Fetcher: github
 Source:  https://github.com/dash-docs-el/counsel-dash.git
 
 Updating /mnt/store/melpa/working/counsel-dash/
-Checking out 04117bffc8badd85c9f4fdb17648fd56e83fe832
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/dash-docs-el/counsel-dash.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

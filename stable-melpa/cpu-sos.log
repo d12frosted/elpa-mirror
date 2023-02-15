@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/oitofelix/cpu-sos.git
 
 Updating /mnt/store/melpa/working/cpu-sos/
-Checking out 1594b76d4ad3a6e3c471d82da366226d156e6226
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/oitofelix/cpu-sos.git/': Failed to connect to github.com port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

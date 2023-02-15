@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/akirak/counsel-org-clock.git
 
 Updating /mnt/store/melpa/working/counsel-org-clock/
-Checking out a32bb85205e877cc57f62765c225e8b288536918
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/akirak/counsel-org-clock.git/': Failed to connect to github.com port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
