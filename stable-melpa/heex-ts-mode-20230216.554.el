@@ -3,9 +3,9 @@
 ;; Copyright (C) 2022, 2023 Wilhelm H Kirschbaum
 
 ;; Author           : Wilhelm H Kirschbaum
-;; Version          : 1.0
-;; Package-Version: 20230214.2036
-;; Package-Commit: 5af669ce4239bf8a807a6a853425da16f7e55795
+;; Version          : 1.1
+;; Package-Version: 20230216.554
+;; Package-Commit: 3eecf4dad47a4cb6d92d730021e72cefda267539
 ;; URL              : https://github.com/wkirschbaum/elixir-ts-mode
 ;; Package-Requires : ((emacs "29"))
 ;; Created          : November 2022
@@ -49,6 +49,12 @@
 (defconst heex-ts-mode--brackets
   '("%>" "--%>" "-->" "/>" "<!" "<!--" "<" "<%!--" "<%" "<%#"
     "<%%=" "<%=" "</" "</:" "<:" ">" "{" "}"))
+
+(defconst heex-ts-mode-sexp-regexp
+  (rx bol
+      (or "directive" "tag" "component" "slot"
+          "attribute" "attribute_value" "quoted_attribute_value")
+      eol))
 
 (defconst heex-ts-mode--brackets-vector
   (apply #'vector heex-ts-mode--brackets))
@@ -180,9 +186,7 @@ Return nil if NODE is not a defun node or doesn't have a name."
   (or arg (setq arg 1))
   (funcall
    (if (> arg 0) #'treesit-end-of-thing #'treesit-beginning-of-thing)
-   (rx bol
-       (or "attribute" "directive" "tag" "component" "slot")
-       eol)
+   heex-ts-mode-sexp-regexp
    (abs arg)))
 
 ;;;###autoload

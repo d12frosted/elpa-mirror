@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20230216.218
-;; Package-Commit: 9f1ee0385a96aecfd40b920b37df2b137a8de402
+;; Package-Version: 20230216.301
+;; Package-Commit: 4f2e4cd925d479904ab18c73613893ebac1b58b9
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.1
@@ -768,8 +768,6 @@ cmd is to be run."
       (when (memq 'npx command)
         (setq npx t)
         (setq command (remq 'npx command)))
-      (unless (stringp (car command))
-        (error "Command cannot start with %S" (car command)))
       (when (and npx remote-match)
         (when-let ((project-dir
                     (locate-dominating-file

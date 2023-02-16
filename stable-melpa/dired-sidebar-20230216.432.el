@@ -5,8 +5,8 @@
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Maintainer: James Nguyen <james@jojojames.com>
 ;; URL: https://github.com/jojojames/dired-sidebar
-;; Package-Version: 20220618.237
-;; Package-Commit: f08bf15cb6cb3c44102731f50ffd812d8d68316c
+;; Package-Version: 20230216.432
+;; Package-Commit: 5569d3b53585f5413cf87a694650d0fd6e040803
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "25.1") (dired-subtree "0.0.1"))
 ;; Keywords: dired, files, tools
@@ -108,8 +108,18 @@ This only takes effect if on a local connection. (e.g. Not Tramp)"
                  (const vscode)))
 
 (defcustom dired-sidebar-width 35
-  "Width of the `dired-sidebar' buffer."
+  "Width of the `dired-sidebar' buffer.
+This option does not have effect if `dired-sidebar-resize-on-open' is nil.
+If you set `dired-sidebar-resize-on-open' to nil, you can customize `dired-sidebar-display-alist'
+to control the width anyway."
   :type 'integer
+  :group 'dired-sidebar)
+
+(defcustom dired-sidebar-window-fixed 'width
+  "Whether the width or height of the sidebar window should be fixed (to prevent from resizing)."
+  :type '(choice (const nil)
+                 (const width)
+                 (const height))
   :group 'dired-sidebar)
 
 (defcustom dired-sidebar-refresh-on-project-switch t
@@ -263,6 +273,11 @@ with a prefix arg or when `dired-sidebar-find-file-alt' is called."
   :type 'boolean
   :group 'dired-sidebar)
 
+(defcustom dired-sidebar-resize-on-open t
+  "When dired sidebar window is showed, automatically adjust its width according to `dired-sidebar-width'"
+  :type 'boolean
+  :group 'dired-sidebar)
+
 (defcustom dired-sidebar-recenter-cursor-on-tui-update nil
   "Whether or not to center cursor when updating tui interface."
   :type 'boolean
@@ -413,7 +428,7 @@ Works around marker pointing to wrong buffer in Emacs 25."
     (advice-add 'wdired-change-to-wdired-mode
                 :around 'dired-sidebar-wdired-change-to-wdired-mode-advice))
 
-  (setq window-size-fixed 'width)
+  (setq window-size-fixed dired-sidebar-window-fixed)
 
   ;; Match backgrounds.
   (setq-local dired-subtree-use-backgrounds nil)
@@ -656,9 +671,10 @@ This is dependent on `dired-subtree-cycle'."
       (when dired-sidebar-no-delete-other-windows
         (set-window-parameter window 'no-delete-other-windows t))
       (set-window-dedicated-p window t)
-      (with-selected-window window
-        (let ((window-size-fixed))
-          (dired-sidebar-set-width dired-sidebar-width))))
+      (when dired-sidebar-resize-on-open
+        (with-selected-window window
+          (let ((window-size-fixed))
+            (dired-sidebar-set-width dired-sidebar-width)))))
     (with-current-buffer buffer
       (if (eq major-mode 'dired-sidebar-mode)
           (dired-build-subdir-alist)

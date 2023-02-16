@@ -3,8 +3,8 @@
 ;; Copyright (C) 2013-2022 Skye Shaw and others
 ;; Author: Skye Shaw <skye.shaw@gmail.com>
 ;; Version: 0.9.0
-;; Package-Version: 20230216.255
-;; Package-Commit: ec52602fd9bc37f46e0d1de1efb144c8849f072d
+;; Package-Version: 20230216.300
+;; Package-Commit: d3ba912079e0ca5fd727b1f617791c6ae1e0da82
 ;; Keywords: git, vc, github, bitbucket, gitlab, sourcehut, aws, azure, convenience
 ;; URL: http://github.com/sshaw/git-link
 ;; Package-Requires: ((emacs "24.3"))
@@ -196,7 +196,8 @@
   :group 'git-link)
 
 (defcustom git-link-open-in-browser nil
-  "If non-nil also open link with this `browse-url-*' function."
+  "If t also open the link via `browse-url'.  To use an alternate
+function set to that function's symbol."
   :type '(choice boolean function)
   :group 'git-link)
 

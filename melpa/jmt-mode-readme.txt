@@ -25,10 +25,10 @@ Installation
 
          The `interpreter-mode-alist` entry is for source-launch files encoded with a shebang. [SLS]
 
-  For a working example of manual installation, see the relevant lines
-  of `http://reluk.ca/.config/emacs/lisp/initialization.el`, and follow the reference there.
+  For a working example of manual installation, see the relevant lines of the file
+  `http://reluk.ca/.config/emacs/lisp/initialization.el` and follow the reference there.
 
-Changes to Emacs
+Changes made to Emacs
 
   This package applies monkey patches to the runtime session that redefine parts of built-in packages
   CC Mode and Font Lock.  The patches are applied on first entrance to `jmt-mode`.  Most of them apply
