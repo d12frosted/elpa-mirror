@@ -1,10 +1,10 @@
 ;;; git-link.el --- Get the GitHub/Bitbucket/GitLab URL for a buffer location -*- lexical-binding: t -*-
 
-;; Copyright (C) 2013-2020 Skye Shaw and others
+;; Copyright (C) 2013-2022 Skye Shaw and others
 ;; Author: Skye Shaw <skye.shaw@gmail.com>
-;; Version: 0.8.6
-;; Package-Version: 20230215.1436
-;; Package-Commit: 87e294b73ef77a583717bcb63eb5db25a9437dab
+;; Version: 0.9.0
+;; Package-Version: 20230216.255
+;; Package-Commit: ec52602fd9bc37f46e0d1de1efb144c8849f072d
 ;; Keywords: git, vc, github, bitbucket, gitlab, sourcehut, aws, azure, convenience
 ;; URL: http://github.com/sshaw/git-link
 ;; Package-Requires: ((emacs "24.3"))
@@ -37,6 +37,13 @@
 
 ;;; Change Log:
 
+;; 2023-02-15 - v0.9.0
+;; * Add support for GoogleSource (thanks Peter Becich)
+;; * Add plain=1 to force showing a non rendered GitHub links (thanks Erick Navarro)
+;; * Add prefix arg to override git-link-use-commit when calling git-link (thanks Nacho Barrientos)
+;; * Fix git-link-homepage for Bitbucket (Issue #97 thanks Sibi Prabakaran)
+;; * Fix the Codeberg links to line ranges (Issue #109 thanks Wojciech Siewierski)
+;;
 ;; 2022-02-17 - v0.8.6
 ;; * Fix URL escaping of pathnames on Emacs < 27 (Issue #93 thanks David Ongaro)
 ;;

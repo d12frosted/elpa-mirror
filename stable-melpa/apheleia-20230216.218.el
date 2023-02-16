@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20230204.7
-;; Package-Commit: a74cd991a6c97b6cde13be640ed84b7918476b5e
+;; Package-Version: 20230216.218
+;; Package-Commit: 9f1ee0385a96aecfd40b920b37df2b137a8de402
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.1
@@ -1036,6 +1036,11 @@ then the first string element of the command list is resolved
 inside node_modules/.bin if such a directory exists anywhere
 above the current `default-directory'.
 
+Any list elements that are not strings and not any of the special
+symbols mentioned above will be evaluated when the formatter is
+invoked, and spliced into the list. A form can evaluate either to
+a string or to a list of strings.
+
 The \"scripts/formatters\" subdirectory of the Apheleia source
 repository is automatically prepended to $PATH (variable
 `exec-path', to be specific) when invoking external formatters.
@@ -1143,6 +1148,7 @@ function: %s" command)))
     (css-ts-mode . prettier-css)
     (dart-mode . dart-format)
     (elixir-mode . mix-format)
+    (elixir-ts-mode . mix-format)
     (elm-mode . elm-format)
     (fish-mode . fish-indent)
     (go-mode . gofmt)
