@@ -1,0 +1,17 @@
+(sideline-flycheck .
+		   [(20230216 859)
+		    ((emacs
+		      (27 1))
+		     (sideline
+		      (0 1 1))
+		     (flycheck
+		      (0 14))
+		     (ht
+		      (2 4)))
+		    "Show flycheck errors with sideline" single
+		    ((:commit . "1f2f82d4383718a8dd2aff40cffafce4a8d0aca1")
+		     (:authors
+		      ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		     (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		     (:keywords "convenience" "flycheck")
+		     (:url . "https://github.com/emacs-sideline/sideline-flycheck"))])

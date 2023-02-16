@@ -3199,7 +3199,7 @@
 		("Christian Johansson" . "christian@cvj.se"))
 	       (:commit . "94b56c0428fa0c788578161edc9e7992b13cd400"))])
  (standard-themes .
-		  [(1 1 0)
+		  [(1 2 0)
 		   ((emacs
 		     (27 1)))
 		   "Like the default theme but more consistent" tar
@@ -3208,7 +3208,7 @@
 		    (:maintainer "Standard-Themes Development" . "~protesilaos/standard-themes@lists.sr.ht")
 		    (:authors
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		    (:commit . "56551daac67f904b9975dc5bc027e77ba243937c"))])
+		    (:commit . "b594df646b99d55acba3ccff3109bd322a3278f0"))])
  (stream .
 	 [(2 2 5)
 	  ((emacs

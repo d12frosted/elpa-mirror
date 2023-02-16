@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the Emacs package
 called `standard-themes', and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.1.0,
-released on 2022-12-06.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.2.0,
+released on 2023-02-16.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.2.0-dev.
+Current development target is 1.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `standard-themes'
 ⁃ Official manual: <https://protesilaos.com/emacs/standard-themes>
@@ -41,33 +41,37 @@ Table of Contents
 .. 2. Manual installation
 4. Sample configuration
 5. Customization options
-.. 1. Enable mixed fonts
-.. 2. Accented mode line
-.. 3. UI typeface
-.. 4. Bold constructs
-.. 5. Italic constructs
-.. 6. Fringe visibility
-.. 7. Link style
-.. 8. Option for command prompts
-.. 9. Option for headings
-.. 10. Style of region highlight
+.. 1. Disable other themes
+.. 2. Enable mixed fonts
+.. 3. Accented mode line
+.. 4. UI typeface
+.. 5. Bold constructs
+.. 6. Italic constructs
+.. 7. Fringe visibility
+.. 8. Link style
+.. 9. Option for command prompts
+.. 10. Option for headings
+.. 11. Style of region highlight
+.. 12. Palette overrides
 6. Loading a theme
 7. Preview theme colors
 8. Use colors from the active Standard theme
 9. Do-It-Yourself customizations
-.. 1. The general approach to advanced DIY changes
-.. 2. A theme-agnostic hook for theme loading
-.. 3. Add support for hl-todo
-.. 4. Configure bold and italic faces
-.. 5. Tweak `org-modern' timestamps
-.. 6. Tweak goto-address-mode faces
+.. 1. Get a single color from the palette
+.. 2. The general approach to advanced DIY changes
+.. 3. A theme-agnostic hook for theme loading
+.. 4. Add support for hl-todo
+.. 5. Configure bold and italic faces
+.. 6. Tweak `org-modern' timestamps
+.. 7. Tweak goto-address-mode faces
 10. Faces defined by the Standard themes
 11. Supported packages or face groups
 .. 1. Explicitly supported packages or face groups
 .. 2. Implicitly supported packages or face groups
 .. 3. Packages that are hard to support
-12. GNU Free Documentation License
-13. Indices
+12. Acknowledgements
+13. GNU Free Documentation License
+14. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -76,7 +80,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022 Free Software Foundation, Inc.
+  Copyright (C) 2022-2023 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -213,7 +217,32 @@ Table of Contents
 
 [Loading a theme] See section 6
 
-5.1 Enable mixed fonts
+5.1 Disable other themes
+────────────────────────
+
+  The user option `standard-themes-disable-other-themes' controls which
+  themes to disable when loading a Standard theme ([Loading a theme]).
+
+  When the value is non-nil, the command `standard-themes-toggle' as
+  well as the functions `standard-themes-load-dark' and
+  `standard-themes-load-light', will disable all other themes while
+  loading the specified Standard theme.  This is done to ensure that
+  Emacs does not blend two or more themes: such blends lead to awkward
+  results that undermine the work of the designer.
+
+  When the value is nil, the aforementioned command and functions will
+  only disable the other Standard theme.
+
+  This option is provided because Emacs themes are not necessarily
+  limited to colors/faces: they can consist of an arbitrary set of
+  customizations.  Users who use such customization bundles must set
+  this variable to a nil value.
+
+
+[Loading a theme] See section 6
+
+
+5.2 Enable mixed fonts
 ──────────────────────
 
   The user option `standard-themes-mixed-fonts' controls whether
@@ -242,7 +271,7 @@ Table of Contents
   regard.
 
 
-5.2 Accented mode line
+5.3 Accented mode line
 ──────────────────────
 
   The user option `standard-themes-mode-line-accented' handles the
@@ -250,7 +279,7 @@ Table of Contents
   the color is gray, while non-`nil' uses an accent value.
 
 
-5.3 UI typeface
+5.4 UI typeface
 ───────────────
 
   The user option `standard-themes-variable-pitch-ui' controls whether
@@ -273,7 +302,7 @@ Table of Contents
   regard.
 
 
-5.4 Bold constructs
+5.5 Bold constructs
 ───────────────────
 
   The user option `standard-themes-bold-constructs' determines whether
@@ -284,10 +313,10 @@ Table of Contents
   [Configure bold and italic faces].
 
 
-[Configure bold and italic faces] See section 9.4
+[Configure bold and italic faces] See section 9.5
 
 
-5.5 Italic constructs
+5.6 Italic constructs
 ─────────────────────
 
   The user option `standard-themes-italic-constructs' determines whether
@@ -298,10 +327,10 @@ Table of Contents
   [Configure bold and italic faces].
 
 
-[Configure bold and italic faces] See section 9.4
+[Configure bold and italic faces] See section 9.5
 
 
-5.6 Fringe visibility
+5.7 Fringe visibility
 ─────────────────────
 
   The user option `standard-themes-fringes' controls the visibility and
@@ -317,7 +346,7 @@ Table of Contents
   With `intense', use a more pronounced gray background color.
 
 
-5.7 Link style
+5.8 Link style
 ──────────────
 
   The user option `standard-themes-links' controls the style of links.
@@ -362,7 +391,7 @@ Table of Contents
   refer to their documentation strings.
 
 
-5.8 Option for command prompts
+5.9 Option for command prompts
 ──────────────────────────────
 
   The user option `standard-themes-prompts' controls the style of all
@@ -397,8 +426,8 @@ Table of Contents
   └────
 
 
-5.9 Option for headings
-───────────────────────
+5.10 Option for headings
+────────────────────────
 
   The user option `standard-themes-headings' provides support for
   individual heading styles for regular heading levels 0 through 8, as
@@ -489,7 +518,7 @@ Table of Contents
   └────
 
 
-5.10 Style of region highlight
+5.11 Style of region highlight
 ──────────────────────────────
 
   The user option `standard-themes-region' controls the appearance of
@@ -526,6 +555,78 @@ Table of Contents
   └────
 
 
+5.12 Palette overrides
+──────────────────────
+
+  The Standard themes define their own color palette as well as semantic
+  color mappings.  The former is the set of color values such as what
+  shade of blue to use.  The latter refers to associations between a
+  color value and a syntactic construct, such as a `variable' for
+  variables in programming modes or `heading-1' for level 1 headings in
+  Org and others.
+
+  The definition is stored in the variable `NAME-palette', where `NAME'
+  is the symbol of the theme, such as `standard-light'.  Overrides for
+  those associations are specified in the variable
+  `NAME-palette-overrides'.
+
+  The variable `standard-themes-common-palette-overrides' is available
+  for shared values.  It is advised to only use this for mappings that
+  do not specify a color value directly.  This way, the text remains
+  legible by getting the theme-specific color value it needs.
+
+  All associations take the form of `(KEY VALUE)' pairs.  For example,
+  the `standard-light-palette' contains `(blue-warmer "#3a5fcd")'.
+  Semantic color mappings are the same, though the `VALUE' is one of the
+  named colors of the theme.  For instance, `standard-light-palette'
+  maps the aforementioned like `(link blue-warmer)'.
+
+  The easiest way to learn about a theme’s definition is to use the
+  command `describe-variable' (bound to `C-h v' by default) and then
+  search for the `NAME-palette'.  The resulting Help buffer will look
+  like this:
+
+  ┌────
+  │ standard-light-palette is a variable defined in ‘standard-light-theme.el’.
+  │ 
+  │ Its value is shown below.
+  │ 
+  │ The ‘standard-light’ palette.
+  │ 
+  │   This variable may be risky if used as a file-local variable.
+  │ 
+  │ Value:
+  │ ((bg-main "#ffffff")
+  │  (fg-main "#000000")
+  │  (bg-dim "#ededed")
+  │ 
+  │ [... Shortened for the purposes of this manual.]
+  └────
+
+  The user can study this information to identify the overrides they
+  wish to make.  Then they can specify them and re-load the theme for
+  changes to take effect.  Sample of how to override a color value and a
+  semantic mapping:
+
+  ┌────
+  │ (setq standard-light-palette-overrides
+  │       '((blue-warmer "#5230ff") ; original value is #3a5fcd
+  │ 	(variable blue-warmer))) ; original value is yellow-cooler
+  └────
+
+  The overrides can contain as many associations as the user needs.
+
+  Changes to color values are reflected in the preview of the theme’s
+  palette ([Preview theme colors]).  They are shown at the top of the
+  buffer.  In the above example, the first instance of `blue-warmer' is
+  the override and the second is the original one.
+
+  Contact me if you need further help with this.
+
+
+[Preview theme colors] See section 7
+
+
 6 Loading a theme
 ═════════════════
 
@@ -533,7 +634,7 @@ Table of Contents
   typically leads to awkward styling and weird combinations.  The theme
   looks broken and the designer’s intent is misunderstood.  Before
   loading either of the `standard-themes', the user is encouraged to
-  disable all others:
+  disable all others ([Disable other themes]):
 
   ┌────
   │ (mapc #'disable-theme custom-enabled-themes)
@@ -561,7 +662,9 @@ Table of Contents
   `standard-themes-toggle'.
 
 
-[The general approach to DIY changes] See section 9.1
+[Disable other themes] See section 5.1
+
+[The general approach to DIY changes] See section 9.2
 
 
 7 Preview theme colors
@@ -576,6 +679,28 @@ Table of Contents
   The command `standard-themes-preview-colors-current' skips the
   minibuffer selection process and just produces a preview for the
   current Standard theme.
+
+  When called with a prefix argument (`C-u' with the default key
+  bindings), these commands will show a preview of the palette’s
+  semantic color mappings instead of the named colors.
+
+  Aliases for those commands are `standard-themes-list-colors' and
+  `standard-themes-list-colors-current'.
+
+  Overrides to color values are reflected in the buffers produced by the
+  aforementioned commands ([Palette overrides]).
+
+  Each row shows a foreground and background coloration using the
+  underlying value it references.  For example a line with `#b3303a' (a
+  shade of red) will show red text followed by a stripe with that same
+  color as a backdrop.
+
+  The name of the buffer describes the given Standard theme and what the
+  contents are, such as `*standard-light-list-colors*' for named colors
+  and `=*standard-light-list-mappings*' for the semantic color mappings.
+
+
+[Palette overrides] See section 5.12
 
 
 8 Use colors from the active Standard theme
@@ -622,7 +747,68 @@ Table of Contents
 
 [Use colors from the active Standard theme] See section 8
 
-9.1 The general approach to advanced DIY changes
+9.1 Get a single color from the palette
+───────────────────────────────────────
+
+  [The general approach to advanced DIY changes].
+
+  The fuction `standard-themes-get-color-value' can be called from Lisp
+  to return the value of a color from the active Standard theme palette.
+  It takea a `COLOR' argument and an optional `OVERRIDES'.
+
+  `COLOR' is a symbol that represents a named color entry in the
+  palette.
+
+  [Preview theme colors].
+
+  If the value is the name of another color entry in the palette (so a
+  mapping), this function recurs until it finds the underlying color
+  value.
+
+  With an optional `OVERRIDES' argument as a non-nil value, it accounts
+  for palette overrides.  Else it reads only the default palette.
+
+  [Palette overrides].
+
+  With optional `THEME' as a symbol among `standard-themes-collection',
+  use the palette of that item.  Else use the current Standard theme.
+
+  If `COLOR' is not present in the palette, this function returns the
+  `unspecified' symbol, which is safe when used as a face attribute’s
+  value.
+
+  An example with `standard-light' to show how this function behaves
+  with/without overrides and when recursive mappings are introduced.
+
+  ┌────
+  │ ;; Here we show the recursion of palette mappings.  In general, it is
+  │ ;; better for the user to specify named colors to avoid possible
+  │ ;; confusion with their configuration, though those still work as
+  │ ;; expected.
+  │ (setq standard-themes-common-palette-overrides
+  │       '((cursor red)
+  │ 	(prompt cursor)
+  │ 	(variable prompt)))
+  │ 
+  │ ;; Ignore the overrides and get the original value.
+  │ (standard-themes-get-color-value 'variable)
+  │ ;; => "#a0522d"
+  │ 
+  │ ;; Read from the overrides and deal with any recursion to find the
+  │ ;; underlying value.
+  │ (standard-themes-get-color-value 'variable :overrides)
+  │ ;; => "#b3303a"
+  └────
+
+
+[The general approach to advanced DIY changes] See section 9.2
+
+[Preview theme colors] See section 7
+
+[Palette overrides] See section 5.12
+
+
+9.2 The general approach to advanced DIY changes
 ────────────────────────────────────────────────
 
   When the user wants to customize Emacs faces there are two
@@ -719,10 +905,10 @@ Table of Contents
 
 [Use colors from the active Standard theme] See section 8
 
-[A theme-agnostic hook for theme loading] See section 9.2
+[A theme-agnostic hook for theme loading] See section 9.3
 
 
-9.2 A theme-agnostic hook for theme loading
+9.3 A theme-agnostic hook for theme loading
 ───────────────────────────────────────────
 
   The themes are designed with the intent to be useful to Emacs users of
@@ -777,7 +963,7 @@ Table of Contents
 [Loading a theme] See section 6
 
 
-9.3 Add support for hl-todo
+9.4 Add support for hl-todo
 ───────────────────────────
 
   The `hl-todo' package provides the user option
@@ -821,12 +1007,12 @@ Table of Contents
   commands for previewing the palette ([Preview theme colors]).
 
 
-[The general approach to DIY changes] See section 9.1
+[The general approach to DIY changes] See section 9.2
 
 [Preview theme colors] See section 7
 
 
-9.4 Configure bold and italic faces
+9.5 Configure bold and italic faces
 ───────────────────────────────────
 
   The Standard themes do not hardcode a `:weight' or `:slant' attribute
@@ -883,7 +1069,7 @@ Table of Contents
   provides the means to configure font families via faces.
 
 
-9.5 Tweak `org-modern' timestamps
+9.6 Tweak `org-modern' timestamps
 ─────────────────────────────────
 
   The `org-modern' package uses faces and text properties to make Org
@@ -913,10 +1099,10 @@ Table of Contents
   For any further issues, you are welcome to ask for help.
 
 
-[Enable mixed fonts] See section 5.1
+[Enable mixed fonts] See section 5.2
 
 
-9.6 Tweak goto-address-mode faces
+9.7 Tweak goto-address-mode faces
 ─────────────────────────────────
 
   The built-in `goto-address-mode' uses heuristics to identify URLs and
@@ -1191,20 +1377,36 @@ Table of Contents
   The above list is non-exhaustive though you get the idea.
 
 
-12 GNU Free Documentation License
+12 Acknowledgements
+═══════════════════
+
+  This project is meant to be a collective effort.  Every bit of help
+  matters.
+
+  Author/maintainer
+        Protesilaos Stavrou.
+
+  Contributions to code
+        Clemens Radermacher.
+
+  Ideas and/or user feedback
+        Fritz Grabo, Manuel Uberti, Tassilo Horn.
+
+
+13 GNU Free Documentation License
 ═════════════════════════════════
 
 
-13 Indices
+14 Indices
 ══════════
 
-13.1 Function index
+14.1 Function index
 ───────────────────
 
 
-13.2 Variable index
+14.2 Variable index
 ───────────────────
 
 
-13.3 Concept index
+14.3 Concept index
 ──────────────────
