@@ -8,7 +8,7 @@ Installation
   should activate for any loaded file that has either a `.java` extension or `java` shebang.
   Alternatively you may want to install the mode manually:
 
-      1. Put a copy of the present file on your load path.
+      1. Put a copy of `jmt-mode.el` on your load path.
          https://www.gnu.org/software/emacs/manual/html_node/elisp/Library-Search.html
 
       2. Optionally compile that copy.  E.g. load it into an Emacs buffer and type
@@ -26,7 +26,21 @@ Installation
          The `interpreter-mode-alist` entry is for source-launch files encoded with a shebang. [SLS]
 
   For a working example of manual installation, see the relevant lines of the file
-  `http://reluk.ca/.config/emacs/lisp/initialization.el` and follow the reference there.
+  `http://reluk.ca/.config/emacs/lisp/initialization.el`.
+
+Customization
+
+  To see a list of customizeable faces, enter a `jmt-mode` buffer (or otherwise load `jmt-mode`)
+  and type `M-x customize-group <RET> jmt <RET>`.  Alternatively, look through the `defface`
+  definitions in `jmt-mode.el`.
+
+  For reference, a working example of customization is available:
+
+      • The author’s `~/.Xresources` — http://reluk.ca/.Xresources
+      • Corresponding screen shots:
+           Untamed    — http://reluk.ca/project/Java/Emacs/screen_shot/1_before.png
+           Tamed      — http://reluk.ca/project/Java/Emacs/screen_shot/2_after.png
+           Customized — http://reluk.ca/project/Java/Emacs/screen_shot/3_after_customization.png
 
 Changes made to Emacs
 
