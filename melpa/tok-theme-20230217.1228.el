@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230216.2029
-;; Package-Commit: e92283aeb426bc80565f74bba54b5a0a6023ed1e
+;; Package-Version: 20230217.1228
+;; Package-Commit: 11dc65b08b960fd1c65fde4c6402b2240387d30e
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -44,48 +44,47 @@
   "Minimal, calm and dark theme for Emacs")
 
 (let ((class '((class color) (min-colors 89)))
-      (dark-grey "#212121") (grey "#333333") (light-grey "#4d4d4d")
-      (red "#de0000")
-      (fg "#dedede") (bg "#121212"))
+      (fg              "#eeeeee")
+      (bg              "#121212")
+      (primary         "#212121")
+      (primary-light   "#484848")
+      (secondary       "#88ffff"))
   (custom-theme-set-faces
    'tok
    ;; In case you're using this theme in terminal, let the terminal
    ;; emulator define these.
    (when (display-graphic-p)
-     `(cursor ((,class (:background ,red)))))
+     `(cursor ((,class (:background "red")))))
    (when (display-graphic-p) ; Have to call `when' here due to reasons.
      `(default ((,class (:foreground ,fg :background ,bg)))))
 
    ;; Basic faces
-   `(highlight ((,class (:background ,dark-grey))))
+   `(highlight ((,class (:background ,primary))))
    `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
-                      :background ,light-grey))))
+                      :background ,primary-light))))
    `(secondary-selection ((,class (:inherit region))))
-   `(trailing-whitespace ((,class (:inherit error))))
-   `(error ((,class (:weight bold :foreground "firebrick1"))))
-   `(warning ((,class (:weight bold :foreground "DarkOrange"))))
-   `(success ((,class (:weight bold :foreground "Green1"))))
+   `(trailing-whitespace ((,class (:background "hotpink"))))
+   `(error ((,class (:weight bold :foreground "red"))))
+   `(warning ((,class (:weight bold :foreground "orange"))))
+   `(success ((,class (:weight bold :foreground "green"))))
    `(fringe ((t (nil))))
    `(button ((,class (:underline t))))
 
    ;; Line-numbes
-   `(line-number ((,class (:foreground ,light-grey))))
+   `(line-number ((,class (:foreground ,primary-light))))
    `(line-number-current-line ((,class (:inherit highlight))))
 
    ;; Mode-line
-   `(mode-line ((,class (:foreground "white" :background "black" :box (:line-width -1 :style released-button)))))
+   `(mode-line ((,class (:foreground ,fg :background ,primary :box (:line-width -1 :style released-button)))))
    (when (>= emacs-major-version 29)
      `(mode-line-active ((,class (:inherit mode-line)))))
-   `(mode-line-inactive ((,class (:weight light :foreground ,fg :background ,dark-grey))))
+   `(mode-line-inactive ((,class (:weight light :foreground ,primary-light :background "black"))))
    `(mode-line-highlight ((t (nil))))
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-buffer-id ((,class (:weight bold))))
 
-   ;; Header
-   `(header-line ((,class (:inherit mode-line-inactive :box nil))))
-
    ;; Font-lock
-   `(font-lock-comment-face ((,class (:foreground "white" :weight bold))))
+   `(font-lock-comment-face ((,class (:foreground ,secondary))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-string-face ((t (nil))))
    `(font-lock-doc-face ((, class(:inherit font-lock-comment-face))))
@@ -96,7 +95,7 @@
    `(font-lock-variable-name-face ((t (nil))))
    `(font-lock-type-face ((t (nil))))
    `(font-lock-constant-face ((t (nil))))
-   `(font-lock-warning-face ((t (nil))))
+   `(font-lock-warning-face ((,class (:inherit error))))
    `(font-lock-negation-char-face ((t (nil))))
    `(font-lock-preprocessor-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-regexp-grouping-backslash ((t (nil))))

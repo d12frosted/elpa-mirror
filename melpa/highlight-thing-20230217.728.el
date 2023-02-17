@@ -4,8 +4,8 @@
 
 ;; Author: Felix Geller <fgeller@gmail.com>
 ;; Keywords: highlight thing symbol
-;; Package-Version: 20221126.2305
-;; Package-Commit: b9bb6e49fc20d2e1f688c2645f6f6653208145de
+;; Package-Version: 20230217.728
+;; Package-Commit: ad788d7a7ee9eb287a8cca3adb21510b89270dca
 ;; URL: https://github.com/fgeller/highlight-thing.el
 
 ;; This file is not part of GNU Emacs.
@@ -227,15 +227,16 @@ functionality."
 
 (defun highlight-thing-buffer-do (buf regex)
   (with-current-buffer buf
-    (save-restriction
-      (widen)
-      (cond ((highlight-thing-should-narrow-to-defun-p)
-	     (narrow-to-defun))
-	    ((highlight-thing-should-narrow-to-region-p)
-	     (let ((bounds (highlight-thing-narrow-bounds)))
-	       (narrow-to-region (car bounds) (cdr bounds)))))
-      (highlight-thing-call-highlight-regexp regex)
-      (when highlight-thing-exclude-thing-under-point (highlight-thing-remove-overlays-at-point regex)))))
+    (save-excursion
+      (save-restriction
+        (widen)
+        (cond ((highlight-thing-should-narrow-to-defun-p)
+               (narrow-to-defun))
+              ((highlight-thing-should-narrow-to-region-p)
+               (let ((bounds (highlight-thing-narrow-bounds)))
+                 (narrow-to-region (car bounds) (cdr bounds)))))
+        (highlight-thing-call-highlight-regexp regex)
+        (when highlight-thing-exclude-thing-under-point (highlight-thing-remove-overlays-at-point regex))))))
 
 (defun highlight-thing-call-highlight-regexp (regex)
   (unless (string= "" regex)
