@@ -44,6 +44,8 @@ Editing Prolog Code
 .. Predicate Boundaries
 .. File Specifications
 .. Loading Buffers
+.. Setting Breakpoints
+..... Breakpoint Menu
 .. Creating New Modules
 .. Documenting Code
 .. Showing Prolog Docs
@@ -1316,12 +1318,79 @@ Loading Buffers
   `sweeprolog-mode' buffer, invoke `sweeprolog-load-buffer' with a
   prefix argument (`C-u C-c C-l').
 
+  The mode line displays the work “Loaded” next to the “Sweep” major
+  mode indicator if the current buffer has is loaded and it hasn’t been
+  modified since.  See [Mode Line] in the Emacs manual for more
+  information about the mode line.
+
   More relevant information about loading code in SWI-Prolog can be
   found in [Loading Prolog source files] in the SWI-Prolog manual.
 
 
+[Mode Line] <info:emacs#Mode Line>
+
 [Loading Prolog source files]
 <https://www.swi-prolog.org/pldoc/man?section=consulting>
+
+
+Setting Breakpoints
+───────────────────
+
+  You can set /breakpoints/ in `sweeprolog-mode' buffers to have
+  SWI-Prolog break before specific goals in the code (see [Breakpoints]
+  in the SWI-Prolog manual).
+
+  Key: C-c C-b (sweeprolog-set-breakpoint)
+        Set a breakpoint.
+  User Option: sweeprolog-highlight-breakpoints
+        If non-nil, highlight breakpoints in `sweeprolog-mode' buffers.
+        Defaults to `t'.
+
+  The command `sweeprolog-set-breakpoint', bound to `C-c C-b', sets a
+  breakpoint at the position of the cursor.  If you call it with a
+  positive prefix argument (e.g. `C-u C-c C-b'), it creates a
+  conditional breakpoint with a condition goal that you insert in the
+  minibuffer.  If you call it with a non-positive prefix argument
+  (e.g. `C-0 C-c C-b'), it deletes the breakpoint at point instead.
+
+  When Context Menu mode is enabled, you can also create and delete
+  breakpoints in `sweeprolog-mode' buffers through right-click context
+  menus (see [Context Menu]).
+
+  By default, Sweep highlights terms with active breakpoints in
+  `sweeprolog-mode' buffers.  To inhibit breakpoint highlighting,
+  customize the user option `sweeprolog-highlight-breakpoints' to `nil'.
+
+
+[Breakpoints]
+<https://www.swi-prolog.org/pldoc/man?section=trace-breakpoints>
+
+[Context Menu] See section Context Menu
+
+Breakpoint Menu
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Sweep provides a /breakpoint menu/ that lets you manage breakpoints
+  across your codebase.
+
+  Command: sweeprolog-list-breakpoints
+        Display a list of active breakpoints.
+
+  To open the breakpoint menu, type `M-x sweeprolog-list-breakpoints'.
+  This command opens the breakpoint menu in the `*Sweep Breakpoints*'
+  buffer.  The major mode of this buffer is Sweep Breakpoint Menu, which
+  is a special mode that includes useful commands for managing Prolog
+  breakpoints:
+
+  Key: RET (sweeprolog-breakpoint-menu-find)
+        Go to the position of the breakpoint corresponding to the
+        breakpoint menu entry at point.
+  Key: o (sweeprolog-breakpoint-menu-find-other-window)
+        Show the position of the breakpoint corresponding to the
+        breakpoint menu entry at point, in another window.
+  Key: c (sweeprolog-breakpoint-menu-set-condition)
+        Set the condition goal for the breakpoint corresponding to the
+        breakpoint menu entry at point.
 
 
 Creating New Modules
@@ -1673,12 +1742,33 @@ Managing Dependencies
   Key: C-c C-u (sweeprolog-update-dependencies)
         Add explicit dependencies for implicitly autoloaded predicates
         in the current buffer.
+  User Option: sweeprolog-dependency-directive
+        Determines which Prolog directive to use in
+        `sweeprolog-update-dependencies' when adding new directives.
+        The value of this user option is one of the symbols
+        `use-module', `autoload' or `infer'.  If it is `use-module',
+        `sweeprolog-update-dependencies' adds `use_module/2' directives,
+        `autoload' means to add `autoload/2' directives, and `infer'
+        says to infer which directive to use based on the existing
+        dependency directives in the buffer, if any.  Defaults to
+        `infer'.
   User Option: sweeprolog-note-implicit-autoloads
         If non-nil, have Flymake complain about implicitly autoloaded
         predicates in `sweeprolog-mode' buffers.
 
-  This command analyzes the current buffer and adds or updates
-  `autoload/2' and `use_module/2' as needed.
+  The command `sweeprolog-update-dependencies', bound to `C-c C-u',
+  analyzes the current buffer and adds or updates `autoload/2' and
+  `use_module/2' as needed.
+
+  When this command adds a new directive, rather than updating an
+  existing one, it can use either `autoload/2' or `use_module/2' to
+  declare the new dependency based on the value of the user option
+  `sweeprolog-dependency-directive'.  If you set this option is to
+  `use-module', new dependencies use the `use_module/2' directive.  If
+  it’s `autoload', new dependencies use `autoload/2'.  If it’s `infer',
+  as it is by default, new dependencies use `autoload/2' unless the
+  buffer already contains dependency directives and they are all
+  `use_module/2' directives, in which case they also use `use_module/2'.
 
   By default, when Flymake integration is enabled (see [Examining
   diagnostics]), calls to implicitly autoloaded predicates are marked
@@ -2276,6 +2366,7 @@ Quick access to sweep commands
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    Key    Command                                 Documentation                       
   ────────────────────────────────────────────────────────────────────────────────────
+   `B'    `sweeprolog-list-breakpoints'           [Breakpoint Menu]                   
    `F'    `sweeprolog-set-prolog-flag'            [Setting Prolog Flags]              
    `P'    `sweeprolog-pack-install'               [Installing Prolog packages]        
    `R'    `sweeprolog-restart'                    [Prolog Initialization and Cleanup] 
@@ -2292,6 +2383,8 @@ Quick access to sweep commands
    `&'    `sweeprolog-async-goal'                 [Executing Prolog Asynchronously]   
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+
+[Breakpoint Menu] See section Breakpoint Menu
 
 [Setting Prolog Flags] See section Setting Prolog flags
 
@@ -2485,11 +2578,6 @@ Improvements around editing Prolog
         to inherit user-set hooks and modifications, but careful
         consideration is required to make sure `sweeprolog-mode'
         overrides all conflicting `prolog-mode' features.
-
-  Reflect buffer status in the mode line
-        It may be useful to indicate in the mode line whether the
-        current `sweeprolog-mode' buffer has been loaded into the Prolog
-        runtime and/or if its cross-reference data is up to date.
 
   Make predicate completion aware of module-qualification
         predicate completion should detect when the prefix it’s trying

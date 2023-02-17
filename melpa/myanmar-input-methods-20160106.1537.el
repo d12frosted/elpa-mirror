@@ -5,8 +5,6 @@
 ;; Created: 06 Jul 2015
 ;; Last-Updated: 16 Jul 2015
 ;; Version: 0.0.2
-;; Package-Version: 20160106.1537
-;; Package-Commit: 9d4e0d6358c61bde7a2274e430ef71683faea32e
 ;; Keywords: Myanmar, Unicode, Keyboard
 ;; Homepage: http://github.com/yelinkyaw/emacs-myanmar-input-methods
 
