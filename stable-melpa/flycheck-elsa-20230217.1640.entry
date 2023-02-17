@@ -1,11 +1,13 @@
 (flycheck-elsa .
-	       [(20230211 1720)
+	       [(20230217 1640)
 		((emacs
 		  (25))
+		 (flycheck
+		  (0 14))
 		 (seq
 		  (2 0)))
-		"Flycheck for Elsa." tar
-		((:commit . "b3c81d9b64e805bdc9e72798212a07cc07ccc1ef")
+		"Flycheck for Elsa" tar
+		((:commit . "d60db9544d0c4213f2478bcea0fd0e668e31cf34")
 		 (:authors
 		  ("Matúš Goljer" . "matus.goljer@gmail.com"))
 		 (:maintainer "Matúš Goljer" . "matus.goljer@gmail.com")
