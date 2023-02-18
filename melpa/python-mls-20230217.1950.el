@@ -5,10 +5,10 @@
 ;; Author: J.D. Smith
 ;; Homepage: https://github.com/jdtsmith/python-mls
 ;; Package-Requires: ((emacs "27.1"))
-;; Package-Version: 20230215.141
-;; Package-Commit: a2ce8032c2e7a21cc5f279a7f06a6795e3a9f069
+;; Package-Version: 20230217.1950
+;; Package-Commit: 945f19455ae60e9b30910980142f67da91d9f001
 ;; Keywords: languages, processes
-;; Version: 0.1.6
+;; Version: 0.1.7
 
 ;;; Commentary:
 

@@ -3,24 +3,6 @@
 	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Features
-2. Installation and Configuration
-.. 1. Auto completion
-.. 2. Completing in the minibuffer
-.. 3. Completing in the Eshell or Shell
-.. 4. Orderless completion
-.. 5. TAB-and-Go completion
-.. 6. Transfer completion to the minibuffer
-3. Key bindings
-4. Extensions
-5. Complementary packages
-6. Alternatives
-7. Contributions
-
-
 Corfu enhances completion at point with a small completion popup. The
 current candidates are shown in a popup below or above the point. Corfu
 is the minimalistic `completion-in-region' counterpart of the [Vertico]
@@ -126,7 +108,7 @@ Table of Contents
   │   ;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
   │   ;; (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
   │   ;; (corfu-preview-current nil)    ;; Disable current candidate preview
-  │   ;; (corfu-preselect-first nil)    ;; Disable candidate preselection
+  │   ;; (corfu-preselect 'prompt)      ;; Preselect the prompt
   │   ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
   │   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
   │ 
@@ -310,15 +292,16 @@ Table of Contents
   └────
 
   You can also enable Corfu more generally for every minibuffer, as long
-  as no other completion UI is active. If you use Mct or Vertico as your
-  main minibuffer completion UI, the following snippet should yield the
-  desired result.
+  as no completion UI is active. In the following example we check for
+  Mct and Vertico.  Furthermore we ensure that Corfu is not enabled if a
+  password is read from the minibuffer.
 
   ┌────
   │ (defun corfu-enable-always-in-minibuffer ()
   │   "Enable Corfu in the minibuffer if Vertico/Mct are not active."
   │   (unless (or (bound-and-true-p mct--active)
-  │ 	      (bound-and-true-p vertico--input))
+  │ 	      (bound-and-true-p vertico--input)
+  │ 	      (eq (current-local-map) read-passwd-map))
   │     ;; (setq-local corfu-auto nil) ;; Enable/disable auto completion
   │     (setq-local corfu-echo-delay nil ;; Disable automatic echo and popup
   │ 		corfu-popupinfo-delay nil)
@@ -361,36 +344,40 @@ Table of Contents
   │ (advice-add #'corfu-insert :after #'corfu-send-shell)
   └────
 
-  Shell completion uses the flexible `Pcomplete' mechanism internally,
+  Shell completion uses the flexible Pcomplete mechanism internally,
   which allows you to program the completions per shell command. If you
-  want to know more, look into this [blog post], which shows how to
-  configure Pcomplete for git commands. I recommend the [pcmpl-args]
-  package which extends Pcomplete with completion support and helpful
-  annotation support for more commands. Similar to the Fish shell,
-  pcmpl-args uses man page parsing and –help output parsing to
-  dynamically generate completions. This package brings Eshell
-  completion to another level!
+  want to know more, look into the [blog post], which shows how to
+  configure Pcomplete for git commands.  Since Emacs 29, Pcomplete
+  offers the `pcomplete-from-help' function which parses the `--help'
+  output of a command and produces completions. This functionality is
+  similar to the Fish shell, which also takes advantage of `--help' to
+  dynamically generate completions.
 
-  Unfortunately Pcomplete has a few technical issues, which we can work
-  around with the [Cape] library (Completion at point extensions). Cape
-  provides wrappers, which sanitize the Pcomplete function. Ideally the
-  bugs in Pcomplete should be fixed upstream. *For now these two advices
-  are strongly recommended to achieve a sane Eshell experience.*
+  Unfortunately Pcomplete had a few technical issues on Emacs 28 and
+  older. We can work around the issues with the [Cape] library
+  (Completion at point extensions).  Cape provides wrappers which
+  sanitize the Pcomplete function. If you use Emacs 28 or older
+  installing these advices is strongly recommend such that Pcomplete
+  works properly. On Emacs 29 the advices are not necessary anymore,
+  since almost all of the related bugs have been fixed. I therefore
+  recommend to remove the advices on Emacs 29 and eventually report any
+  remaining Pcomplete issues upstream, such that they can be fixed at
+  the root.
 
   ┌────
-  │ ;; Silence the pcomplete capf, no errors or messages!
-  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
+  │ ;; The advices are only needed on Emacs 28 and older.
+  │ (when (< emacs-major-version 29)
+  │   ;; Silence the pcomplete capf, no errors or messages!
+  │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
   │ 
-  │ ;; Ensure that pcomplete does not write to the buffer
-  │ ;; and behaves as a pure `completion-at-point-function'.
-  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify)
+  │   ;; Ensure that pcomplete does not write to the buffer
+  │   ;; and behaves as a pure `completion-at-point-function'.
+  │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
   └────
 
 
 [blog post]
 <https://www.masteringemacs.org/article/pcomplete-context-sensitive-completion-emacs>
-
-[pcmpl-args] <https://github.com/JonWaltman/pcmpl-args.el>
 
 [Cape] <https://github.com/minad/cape>
 
@@ -479,8 +466,8 @@ Table of Contents
   │ (use-package corfu
   │   ;; TAB-and-Go customizations
   │   :custom
-  │   (corfu-cycle t)             ;; Enable cycling for `corfu-next/previous'
-  │   (corfu-preselect-first nil) ;; Disable candidate preselection
+  │   (corfu-cycle t)           ;; Enable cycling for `corfu-next/previous'
+  │   (corfu-preselect 'prompt) ;; Always preselect the prompt
   │ 
   │   ;; Use TAB for cycling, default is `corfu-complete'.
   │   :bind
@@ -518,7 +505,7 @@ Table of Contents
   │   (let ((completion-extra-properties corfu--extra)
   │ 	completion-cycle-threshold completion-cycling)
   │     (apply #'consult-completion-in-region completion-in-region--data)))
-  │ (define-key corfu-map "\M-m" #'corfu-move-to-minibuffer)
+  │ (keymap-set corfu-map "M-m" #'corfu-move-to-minibuffer)
   └────
 
 
@@ -532,6 +519,8 @@ Table of Contents
   popup is shown. The keymap defines the following remappings and
   bindings:
 
+  • `move-beginning-of-line' -> `corfu-prompt-beginning'
+  • `move-end-of-line' -> `corfu-prompt-end'
   • `beginning-of-buffer' -> `corfu-first'
   • `end-of-buffer' -> `corfu-last'
   • `scroll-down-command' -> `corfu-scroll-down'
@@ -624,12 +613,6 @@ Table of Contents
     styled SVG icons based on monochromatic icon sets like material
     design.
 
-  • [pcmpl-args]: Extend the Eshell/Shell Pcomplete mechanism with
-    support for many more commands. Similar to the Fish shell, Pcomplete
-    uses man page parsing to dynamically retrieve the completions and
-    helpful annotations. This package brings Eshell completions to
-    another level!
-
   • [Tempel]: Tiny template/snippet package with templates in Lisp
     syntax, which can be used in conjunction with Corfu.
 
@@ -644,8 +627,6 @@ Table of Contents
 [Cape] <https://github.com/minad/cape>
 
 [kind-icon] <https://github.com/jdtsmith/kind-icon>
-
-[pcmpl-args] <https://github.com/JonWaltman/pcmpl-args.el>
 
 [Tempel] <https://github.com/minad/tempel>
 

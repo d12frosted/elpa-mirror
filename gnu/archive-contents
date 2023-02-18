@@ -558,15 +558,17 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 34)
+	[(0 35)
 	 ((emacs
-	   (27 1)))
+	   (27 1))
+	  (compat
+	   (29 1 3 4)))
 	 "Completion Overlay Region FUnction" tar
 	 ((:url . "https://github.com/minad/corfu")
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "de565e2a358eacc305420cfb590f07612ee6dfec"))])
+	  (:commit . "b4fcdd2f59c18141fa1ef8edf5925e714862b654"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
@@ -1963,15 +1965,17 @@
 	(:url . "https://elpa.gnu.org/packages/map.html")
 	(:commit . "9da2efb670574b473ab864ae0456b4f1b38e680b"))])
  (marginalia .
-	     [(1 0)
+	     [(1 1)
 	      ((emacs
-		(27 1)))
+		(27 1))
+	       (compat
+		(29 1 3 4)))
 	      "Enrich existing commands with completion annotations" tar
 	      ((:url . "https://github.com/minad/marginalia")
 	       (:maintainer "Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "4c8f6b8848cc47d70431adb74864967cc5986895"))])
+	       (:commit . "ccf573e2145d9deb9d734432351eefc87fc1bc16"))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" single
@@ -3677,15 +3681,17 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "2c2ecb46b0ad3e841ac9551e3a80d02893cdf6ec"))])
  (vertico .
-	  [(1 0)
+	  [(1 1)
 	   ((emacs
-	     (27 1)))
+	     (27 1))
+	    (compat
+	     (29 1 3 4)))
 	   "VERTical Interactive COmpletion" tar
 	   ((:url . "https://github.com/minad/vertico")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "af1c893f3891902162e32f73f062213436636567"))])
+	    (:commit . "01f0fc07d1831f00ebc64550867a0fa6eedb1fb7"))])
  (vertico-posframe .
 		   [(0 6 0)
 		    ((emacs

@@ -37,7 +37,7 @@ Table of Contents
 .. 4. `ffap-menu'
 .. 5. `completion-table-dynamic'
 .. 6. Submitting the empty string
-.. 7. Tramp hostname completion
+.. 7. Tramp hostname and username completion
 
 
 [extensions] See section 4
@@ -215,9 +215,9 @@ Table of Contents
   `completion-cycle-threshold'.
 
   ┌────
-  │ (define-key vertico-map "?" #'minibuffer-completion-help)
-  │ (define-key vertico-map (kbd "M-RET") #'minibuffer-force-complete-and-exit)
-  │ (define-key vertico-map (kbd "M-TAB") #'minibuffer-complete)
+  │ (keymap-set vertico-map "?" #'minibuffer-completion-help)
+  │ (keymap-set vertico-map "M-RET" #'minibuffer-force-complete-and-exit)
+  │ (keymap-set vertico-map "M-TAB" #'minibuffer-complete)
   └────
 
   The `orderless' completion style does not support completion of a
@@ -413,21 +413,21 @@ Table of Contents
   └────
 
   Temporary toggling between the different display modes is
-  possible. Bind the following commands:
+  possible. The following commands are bound by default in the
+  `vertico-multiform-map'. You can of course change these bindings if
+  you like.
 
-  ┌────
-  │ (define-key vertico-map "\M-V" #'vertico-multiform-vertical)
-  │ (define-key vertico-map "\M-G" #'vertico-multiform-grid)
-  │ (define-key vertico-map "\M-F" #'vertico-multiform-flat)
-  │ (define-key vertico-map "\M-R" #'vertico-multiform-reverse)
-  │ (define-key vertico-map "\M-U" #'vertico-multiform-unobtrusive)
-  └────
+  • `M-V' -> `vertico-multiform-vertical'
+  • `M-G' -> `vertico-multiform-grid'
+  • `M-F' -> `vertico-multiform-flat'
+  • `M-R' -> `vertico-multiform-reverse'
+  • `M-U' -> `vertico-multiform-unobtrusive'
 
-  You can use your own functions or even lambdas to configure the
-  completion behavior per command or per completion category. The
-  function must have the calling convention of a mode, i.e., it takes a
-  single argument, which is either 1 to turn on the mode and -1 to turn
-  off the mode.
+  For special configuration you can use your own functions or even
+  lambdas to configure the completion behavior per command or per
+  completion category.  Functions must have the calling convention of a
+  mode, i.e., take a single argument, which is either 1 to turn on the
+  mode and -1 to turn off the mode.
 
   ┌────
   │ ;; Configure `consult-outline' as a scaled down TOC in a separate buffer
@@ -605,19 +605,17 @@ Table of Contents
     the advantage that you can interact freely with the candidates and
     jump around with Isearch or Avy. On the other hand it necessarily
     causes a slowdown. Mct supports completion in region via its
-    `mct-region-mode'. Note that Mct development is currently
-    [discontinued] due to recent changes of the default completion UI on
-    the Emacs master branch.
+    `mct-region-mode'. Note that Mct development has been [discontinued]
+    due to recent developments of the default completion UI in Emacs 29.
   • [Selectrum]: Selectrum is the predecessor of Vertico has been
-    deprecated in favor of Vertico. See the [migration guide] if you
-    want to migrate from Selectrum to Vertico. Vertico was designed
-    specifically to address the technical shortcomings of
-    Selectrum. Selectrum is not fully compatible with every Emacs
-    completion command and dynamic completion tables, since it uses its
-    own filtering infrastructure, which deviates from the standard Emacs
-    completion facilities.
+    deprecated in favor of Vertico. Read the [migration guide] when
+    migrating from Selectrum.  Vertico was designed specifically to
+    address the technical shortcomings of Selectrum. Selectrum is not
+    fully compatible with every Emacs completion command and dynamic
+    completion tables, since it uses its own filtering infrastructure,
+    which deviates from the standard Emacs completion facilities.
   • Icomplete: Emacs 28 comes with a builtin `icomplete-vertical-mode',
-    which is a more bare-bone than Vertico. Vertico offers more
+    which is a more bare-bone than Vertico. Vertico offers additional
     flexibility thanks to its [extensions].
 
 
@@ -702,7 +700,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   you should install an advice to enforce debugging. This allows you to
   obtain a stack trace in order to narrow down the location of the
   error. The reason is that post command hooks are automatically
-  disabled (and not debugged) by Emacs. Otherwise Emacs could become
+  disabled (and not debugged) by Emacs. Otherwise Emacs would become
   unusable, given that the hooks are executed after every command.
 
   ┌────
@@ -800,10 +798,11 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   buffer can be disabled as follows.
 
   ┌────
-  │ (advice-add #'ffap-menu-ask :around (lambda (&rest args)
-  │ 				 (cl-letf (((symbol-function #'minibuffer-completion-help)
-  │ 					    #'ignore))
-  │ 				   (apply args))))
+  │ (advice-add #'ffap-menu-ask :around
+  │ 	    (lambda (&rest args)
+  │ 	      (cl-letf (((symbol-function #'minibuffer-completion-help)
+  │ 			 #'ignore))
+  │ 		(apply args))))
   └────
 
 
@@ -811,13 +810,14 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 ───────────────────────────────
 
   Dynamic completion tables (`completion-table-dynamic',
-  `completion-table-in-turn', etc.) should work well with
-  Vertico. However the requirement is that the `basic' completion style
-  is enabled. The `basic' style performs prefix filtering by passing the
-  input to the completion table (or the dynamic completion table
-  function). The `basic' completion style must not necessarily be
-  configured with highest priority, it can also come after other
-  completion styles like `orderless', `substring' or `flex'.
+  `completion-table-in-turn', …) should work well with Vertico. The only
+  requirement is that the `basic' completion style is enabled. The
+  `basic' style performs prefix filtering by passing the input to the
+  completion table (or the dynamic completion table function). The
+  `basic' completion style must not necessarily be configured with
+  highest priority, it can also come after other completion styles like
+  `orderless', `substring' or `flex', as is also recommended by the
+  Orderless documentation because of `completion-table-dynamic'.
 
   ┌────
   │ (setq completion-styles '(basic))
@@ -859,22 +859,32 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   possible by pressing `RET' only.
 
 
-11.7 Tramp hostname completion
-──────────────────────────────
+11.7 Tramp hostname and username completion
+───────────────────────────────────────────
 
-  In combination with Orderless, hostnames are not made available for
-  completion after entering `/ssh:'. In order to avoid this problem, the
-  `basic' completion style should be specified for the file completion
-  category, such that `basic' is tried before `orderless'.
+  *NOTE:* On upcoming Emacs 30 and the upcoming Tramp 2.6.0.2 the
+  workarounds described in this section will likely become unnecessary,
+  since the Tramp maintainer improved the relevant completion
+  tables. Confirmation would be welcome if you already use a very recent
+  build of Emacs master.
+
+  In combination with Orderless or other non-prefix completion styles
+  like `substring' or `flex', host names and user names are not made
+  available for completion after entering `/ssh:'. In order to avoid
+  this problem, the `basic' completion style should be specified for the
+  file completion category, such that `basic' is tried before
+  `orderless'. This can be achieved by putting `basic' first in the
+  completion style overrides for the file completion category.
 
   ┌────
   │ (setq completion-styles '(orderless basic)
   │       completion-category-overrides '((file (styles basic partial-completion))))
   └────
 
-  For users who are familiar with the `completion-style' machinery: You
-  may also define a custom completion style which sets in only for
-  remote files!
+  For users who are familiar with the `completion-style' machinery and
+  who want to dig a bit deeper. You may also define a custom completion
+  style which sets in only for remote files. This way `orderless' will
+  stay the preferred style in most cases.
 
   ┌────
   │ (defun basic-remote-try-completion (string table pred point)

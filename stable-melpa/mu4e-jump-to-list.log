@@ -3,5 +3,12 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/mu4e-jump-to-list.el.git
 
 Updating /mnt/store/melpa/working/mu4e-jump-to-list/
-Checking out cf19684d2333cb0cda7f6b62c7607144baa49310
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: Internal Server Error
+fatal: unable to access 'https://gitlab.com/wavexx/mu4e-jump-to-list.el.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

@@ -5,9 +5,9 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
-;; Version: 1.0
-;; Package-Version: 20230216.939
-;; Package-Commit: 040be8354cabf793251879fd47335d73e209a963
+;; Version: 1.1
+;; Package-Version: 20230217.2050
+;; Package-Commit: ccf573e2145d9deb9d734432351eefc87fc1bc16
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.3.4"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -629,7 +629,7 @@ keybinding since CAND includes it."
         ;; Emacs 29 comes with callable objects or object closures (OClosures)
         ((guard (and (fboundp 'oclosure-type) (oclosure-type val)))
          (format (propertize "#<oclosure %s>" 'face 'marginalia-function)
-		 (and (fboundp 'oclosure-type) (oclosure-type val))))
+                 (and (fboundp 'oclosure-type) (oclosure-type val))))
         ((pred byte-code-function-p) (propertize "#<byte-code-function>" 'face 'marginalia-function))
         ((and (pred functionp) (pred symbolp))
          ;; NOTE: We are not consistent here, values are generally printed unquoted. But we
