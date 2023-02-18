@@ -3,7 +3,9 @@
 ;;
 ;; Author: Göktuğ Kayaalp
 ;; Keywords: theme paper
-;; Package-Version: 2.0
+;; Package-Commit: c5c3761b1edbb8afe24425d8610aa368a762ff63
+;; Package-Version: 20230124.2301
+;; Package-X-Original-Version: 2.0
 ;; Package-Requires: ((emacs "24"))
 ;; URL: https://dev.gkayaalp.com/elisp/index.html#paper
 ;;

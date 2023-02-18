@@ -5,10 +5,10 @@
 ;; Author: Johan Andersson <johan.rejeep@gmail.com>
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
 ;; Version: 0.3.3
-;; Package-Version: 20160905.1300
-;; Package-Commit: ef854367d469c6eff459d24a544addd21a4fbd23
+;; Package-Version: 20230218.910
+;; Package-Commit: 57c18a48f1a01d8174298eaab4fcf3b2c6549291
 ;; Keywords: test
-;; Package-Requires: ((s "1.7.0") (dash "2.2.0") (f "0.12.1"))
+;; Package-Requires: ((emacs "25") (s "1.7.0") (dash "2.2.0") (f "0.12.1"))
 ;; URL: http://github.com/ecukes/espuds
 
 ;; This file is NOT part of GNU Emacs.
