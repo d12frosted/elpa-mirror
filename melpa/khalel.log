@@ -3,12 +3,15 @@ Fetcher: gitlab
 Source:  https://gitlab.com/hperrey/khalel.git
 
 Updating /mnt/store/melpa/working/khalel/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: Internal Server Error
-fatal: unable to access 'https://gitlab.com/hperrey/khalel.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out fbd4b4d6ae8f152140674e843ed7d82d223d52fe
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/khalel/
+  to /tmp/khalelvLujPj/khalel-20230122.1139
+    khalel-icalendar.el -> khalel-icalendar.el
+    khalel.el -> khalel.el
+Created khalel-20230122.1139.tar containing:
+  khalel-20230122.1139/
+  khalel-20230122.1139/khalel-icalendar.el
+  khalel-20230122.1139/khalel-pkg.el
+  khalel-20230122.1139/khalel.el
+Searching for program: No such file or directory, convert
