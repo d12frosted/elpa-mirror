@@ -6,9 +6,9 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Created: 2020
-;; Version: 0.2
-;; Package-Version: 20230212.27
-;; Package-Commit: d80e0fc3d654c2823f9daf9d021a690b929cdec0
+;; Version: 0.3
+;; Package-Version: 20230218.1710
+;; Package-Commit: b715ff51e4b80c3c5487e7be6deadb1bb1497af6
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/goggles
 
