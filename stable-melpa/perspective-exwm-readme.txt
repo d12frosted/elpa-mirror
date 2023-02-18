@@ -8,6 +8,8 @@ a look at its docstring for more info.
 Other useful functions are:
 - `perspective-exwm-cycle-exwm-buffers-backward' and
   `perspective-exwm-cycle-exwm-buffers-backward'
+- `perspective-exwm-cycle-all-buffers-backward' and
+  `perspective-exwm-cycle-all-buffers-forward'
 - `perspective-exwm-switch-perspective'
 - `perspective-exwm-copy-to-workspace' and
   `perspective-exwm-move-to-workspace'

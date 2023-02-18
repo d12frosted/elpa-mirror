@@ -5,9 +5,9 @@
 
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
-;; Version: 0.1.4
-;; Package-Version: 20230105.2046
-;; Package-Commit: 7d5f0922a350c91e3b8cd68522ef6b3bb6f35843
+;; Version: 0.2.0
+;; Package-Version: 20230218.1358
+;; Package-Commit: 01d51f5c92a30b65e8346582ed1ce6513570bb0a
 ;; Package-Requires: ((emacs "27.1") (burly "0.2-pre") (exwm "0.26") (perspective "2.17"))
 ;; Homepage: https://github.com/SqrtMinusOne/perspective-exwm.el
 
@@ -38,6 +38,8 @@
 ;; Other useful functions are:
 ;; - `perspective-exwm-cycle-exwm-buffers-backward' and
 ;;   `perspective-exwm-cycle-exwm-buffers-backward'
+;; - `perspective-exwm-cycle-all-buffers-backward' and
+;;   `perspective-exwm-cycle-all-buffers-forward'
 ;; - `perspective-exwm-switch-perspective'
 ;; - `perspective-exwm-copy-to-workspace' and
 ;;   `perspective-exwm-move-to-workspace'
@@ -64,8 +66,8 @@
   "A function to return the current EXWM window title."
   exwm-title)
 
-(defcustom perspective-exwm-get-exwm-buffer-name #'perspective-exwm--get-class
-  "A function to get the EXWM buffer title.
+(defcustom perspective-exwm-get-buffer-name #'perspective-exwm--get-class
+  "Retrieve buffer name for the cycle commands.
 
 Meant to be ran in the context of the target buffer, e.g. with
 `with-current-buffer'.
@@ -76,6 +78,12 @@ The two default options are:
   :group 'perspective-exwm
   :type 'function
   :options '(perspective-exwm--get-class perspective-exwm--get-title))
+
+(defcustom perspective-exwm-cycle-max-message-length
+  (- (frame-width) 10)
+  "Maximum length of the message displayed by the cycle commands."
+  :group 'perspective-exwm
+  :type 'integer)
 
 (defcustom perspective-exwm-override-initial-name nil
   "Set initial perspective name for a particular EXWM workspace."
@@ -107,13 +115,84 @@ Used in `perspective-exwm-switch-perspective'."
 Used in `perspective-exwm-switch-perspective'."
   :group 'perspective-exwm)
 
-(defun perspective-exwm--cycle-exwm-buffers (dir)
-  "Cycle EXWM buffers in the current perspective.
+(defun perspective-exwm--cycle-get-message (all-buffers cycle-buffers)
+  "Return the display message for the buffer cycling commands.
+
+ALL-BUFFERS is the list of all buffers in the current perspective.
+CYCLE-BUFFERS are the buffers to cycle through."
+  ;; Iterate over all buffers
+  (cl-loop with seen-current = nil
+           for buf in all-buffers
+           for name = (with-current-buffer buf
+                        (or (funcall perspective-exwm-get-buffer-name)
+                            (buffer-name)))
+           for is-current = (eq (current-buffer) buf)
+           for is-skip = (not (member buf cycle-buffers))
+           if is-current do (setq seen-current t)
+           if is-current
+           collect (concat "[" (propertize name 'face 'perspective-exwm-cycle-current-face) "] ") into current-list
+           else if is-skip
+           collect (concat "[" (propertize name 'face 'perspective-exwm-cycle-skip-face) "] ") into skip-list
+           else if seen-current
+           collect (format " %s " name) into after-list
+           else
+           collect (format " %s " name) into before-list
+           ;; 4 list:
+           ;; - current-list - current buffers
+           ;; - skip-list - buffers displayed in other windows
+           ;; - before-list - buffers before current
+           ;; - after-list - buffers after current
+           ;; We want to display them in the following order:
+           ;; skip-list before-list current-list after-list
+           ;; And trim before-list and after-list to fit the message
+           ;; length; that means trimming the end of before-list and
+           ;; the beginning of after-list.
+           finally return
+           (let* ((skip-msg (mapconcat #'identity skip-list ""))
+                  (current-msg (mapconcat #'identity current-list ""))
+                  (len (+ (length skip-msg) (length current-msg) 8))
+                  (before-stack (reverse before-list))
+                  (after-stack after-list))
+             ;; Length of nil is 0 :'(
+             (cl-loop for before-elem-len = (if before-stack (length (car before-stack)) 10000)
+                      for after-elem-len = (if after-stack (length (car after-stack)) 10000)
+                      while (and (or before-stack after-stack)
+                                 (< (+ len (min before-elem-len after-elem-len)) perspective-exwm-cycle-max-message-length))
+                      for before = (when (and before-stack
+                                              (< (+ len before-elem-len) perspective-exwm-cycle-max-message-length))
+                                     (pop before-stack))
+                      if before collect before into before-msg-list
+                      if before do (setq len (+ len before-elem-len))
+                      for after = (when (and after-stack
+                                             (< (+ len after-elem-len) perspective-exwm-cycle-max-message-length))
+                                    (pop after-stack))
+                      if after concat after into after-msg
+                      if after do (setq len (+ len after-elem-len))
+                      finally return
+                      (concat
+                       skip-msg
+                       (when before-stack
+                         (format " (%s) "
+                                 (propertize (number-to-string (length before-stack))
+                                             'face 'perspective-exwm-cycle-skip-face)))
+                       (mapconcat #'identity (reverse before-msg-list) "")
+                       current-msg
+                       after-msg
+                       (when after-stack
+                         (format " (%s) "
+                                 (propertize (number-to-string (length after-stack))
+                                             'face 'perspective-exwm-cycle-skip-face))))))))
+
+(defun perspective-exwm--cycle-exwm-buffers (dir &optional all)
+  "Cycle buffers in the current perspective.
 
 DIR is either 'forward or 'backward.  A buffer is skipped if it is
 already displayed in some other window of the current
 perspective.  The buffer name comes from
-`perspective-exwm-get-exwm-buffer-name'.
+`perspective-exwm-get-buffer-name'.
+
+If ALL is nil, then cycle only EXWM buffers.  Otherwise, cycle
+all.
 
 The function prints out the state to the messages.  The current
 buffer after the switch is highlighted with `warning', skipped
@@ -124,7 +203,7 @@ buffer is highlighted with `persp-selected-face'"
           (cl-loop for buf in (persp-current-buffers)
                    for is-another = (and (get-buffer-window buf) (not (eq current buf)))
                    if (and (buffer-live-p buf)
-                           (eq 'exwm-mode (buffer-local-value 'major-mode buf))
+                           (or all (eq 'exwm-mode (buffer-local-value 'major-mode buf)))
                            (not (string-match-p ignore-rx (buffer-name buf))))
                    collect buf into all-buffers
                    and if (not is-another) collect buf into cycle-buffers
@@ -139,19 +218,8 @@ buffer is highlighted with `persp-selected-face'"
                           (length cycle-buffers)))
              (next-buffer (nth next-pos cycle-buffers)))
         (switch-to-buffer next-buffer)
-        (message
-         "%s"
-         (cl-loop for buf in all-buffers
-                  for name = (with-current-buffer buf (funcall perspective-exwm-get-exwm-buffer-name))
-                  for is-current = (eq (current-buffer) buf)
-                  for is-skip = (not (member buf cycle-buffers))
-                  if is-current
-                  concat (concat "[" (propertize name 'face 'perspective-exwm-cycle-current-face) "] ") into res
-                  else if is-skip
-                  concat (concat "[" (propertize name 'face 'perspective-exwm-cycle-skip-face) "] ") into res
-                  else
-                  concat (format " %s  " name) into res
-                  finally return res))))))
+        (let ((msg (perspective-exwm--cycle-get-message all-buffers cycle-buffers)))
+          (message msg))))))
 
 ;;;###autoload
 (defun perspective-exwm-cycle-exwm-buffers-forward ()
@@ -170,6 +238,18 @@ Take a look at `perspective-exwm--cycle-exwm-buffers' for more
 detail."
   (interactive)
   (perspective-exwm--cycle-exwm-buffers 'backward))
+
+;;;###autoload
+(defun perspective-exwm-cycle-all-buffers-forward ()
+  "Cycle all buffers in the current perspective forward."
+  (interactive)
+  (perspective-exwm--cycle-exwm-buffers 'forward t))
+
+;;;###autoload
+(defun perspective-exwm-cycle-all-buffers-backward ()
+  "Cycle all buffers in the current perspective backward."
+  (interactive)
+  (perspective-exwm--cycle-exwm-buffers 'backward t))
 
 ;;;###autoload
 (defun perspective-exwm-switch-perspective ()
