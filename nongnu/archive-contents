@@ -868,17 +868,16 @@
 		("Akib Azmain Turja" . "akib@disroot.org"))
 	       (:commit . "6bb82ce89ed93222dd919bc65e0f46ac4aa13479"))])
  (gnuplot .
-	  [(0 8 0)
+	  [(0 8 1)
 	   ((emacs
-	     (24 3)))
+	     (25 1)))
 	   "Major-mode and interactive frontend for gnuplot" tar
-	   ((:url . "https://github.com/emacsorphanage/gnuplot")
-	    (:maintainer "Bruce Ravel" . "bruceravel1@gmail.com")
+	   ((:url . "https://github.com/emacs-gnuplot/gnuplot")
+	    (:keywords "data" "gnuplot" "plotting")
+	    (:maintainer "Maxime Tréca <maxime@gmail.com>, Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
-	     ("Jon Oddie")
-	     ("Bruce Ravel")
-	     ("Phil Type"))
-	    (:keywords "data" "gnuplot" "plotting"))])
+	     ("Jon Oddie, Bruce Ravel, Phil Type"))
+	    (:commit . "663a89d263d4f26b996796d01b6a3b783449e0f5"))])
  (go-mode .
 	  [(1 6 0)
 	   ((emacs

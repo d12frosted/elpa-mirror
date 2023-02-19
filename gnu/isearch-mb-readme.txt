@@ -3,15 +3,6 @@
 	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Keybindings
-2. Some customization ideas
-3. Interaction with other isearch extensions
-4. Contributing
-
-
 This Emacs package provides an alternative isearch UI based on the
 minibuffer. This allows editing the search string in arbitrary ways
 without any special maneuver; unlike standard isearch, cursor motion
@@ -56,7 +47,7 @@ isearch-mb-mode RET'.
 
   ┌────
   │ (setq-default
-  │  ;; Match count next to the minibuffer prompt
+  │  ;; Show match count next to the minibuffer prompt
   │  isearch-lazy-count t
   │  ;; Don't be stingy with history; default is to keep just 16 entries
   │  search-ring-max 200
