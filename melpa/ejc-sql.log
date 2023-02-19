@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/kostafey/ejc-sql.git
 
 Updating /mnt/store/melpa/working/ejc-sql/
-Checking out c1d68769861ee920cf0b2ae71ce2b6cac4313c73
+Checking out c9a602efd4b3a1b607c630e55e3124d4a63048fb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ejc-sql/
-  to /tmp/ejc-sqlSd70K7/ejc-sql-20230209.1734
+  to /tmp/ejc-sqlQc1dib/ejc-sql-20230219.605
     ejc-autocomplete.el -> ejc-autocomplete.el
     ejc-company.el -> ejc-company.el
     ejc-completion-common.el -> ejc-completion-common.el
@@ -22,44 +22,44 @@ Copying files (->) and directories (=>)
     project.clj -> project.clj
     src => src
     snippets => snippets
-Created ejc-sql-20230209.1734.tar containing:
-  ejc-sql-20230209.1734/
-  ejc-sql-20230209.1734/ejc-autocomplete.el
-  ejc-sql-20230209.1734/ejc-company.el
-  ejc-sql-20230209.1734/ejc-completion-common.el
-  ejc-sql-20230209.1734/ejc-doc.el
-  ejc-sql-20230209.1734/ejc-eldoc.el
-  ejc-sql-20230209.1734/ejc-flx.el
-  ejc-sql-20230209.1734/ejc-format.el
-  ejc-sql-20230209.1734/ejc-interaction.el
-  ejc-sql-20230209.1734/ejc-lib.el
-  ejc-sql-20230209.1734/ejc-result-buffer.el
-  ejc-sql-20230209.1734/ejc-result-mode.el
-  ejc-sql-20230209.1734/ejc-sql-pkg.el
-  ejc-sql-20230209.1734/ejc-sql.el
-  ejc-sql-20230209.1734/project.clj
-  ejc-sql-20230209.1734/snippets/
-  ejc-sql-20230209.1734/snippets/sql-mode/
-  ejc-sql-20230209.1734/snippets/sql-mode/alter.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/begin.snippet
-  ejc-sql-20230209.1734/snippets/sql-mode/delete.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/grant.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/inner.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/insert.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/left.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/revoke.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/right.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/select.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/update.yasnippet
-  ejc-sql-20230209.1734/snippets/sql-mode/where.yasnippet
-  ejc-sql-20230209.1734/src/
-  ejc-sql-20230209.1734/src/ejc_sql/
-  ejc-sql-20230209.1734/src/ejc_sql/cache.clj
-  ejc-sql-20230209.1734/src/ejc_sql/classpath.clj
-  ejc-sql-20230209.1734/src/ejc_sql/connect.clj
-  ejc-sql-20230209.1734/src/ejc_sql/deps_resolver.clj
-  ejc-sql-20230209.1734/src/ejc_sql/keywords.clj
-  ejc-sql-20230209.1734/src/ejc_sql/lib.clj
-  ejc-sql-20230209.1734/src/ejc_sql/output.clj
-  ejc-sql-20230209.1734/src/ejc_sql/structure.clj
+Created ejc-sql-20230219.605.tar containing:
+  ejc-sql-20230219.605/
+  ejc-sql-20230219.605/ejc-autocomplete.el
+  ejc-sql-20230219.605/ejc-company.el
+  ejc-sql-20230219.605/ejc-completion-common.el
+  ejc-sql-20230219.605/ejc-doc.el
+  ejc-sql-20230219.605/ejc-eldoc.el
+  ejc-sql-20230219.605/ejc-flx.el
+  ejc-sql-20230219.605/ejc-format.el
+  ejc-sql-20230219.605/ejc-interaction.el
+  ejc-sql-20230219.605/ejc-lib.el
+  ejc-sql-20230219.605/ejc-result-buffer.el
+  ejc-sql-20230219.605/ejc-result-mode.el
+  ejc-sql-20230219.605/ejc-sql-pkg.el
+  ejc-sql-20230219.605/ejc-sql.el
+  ejc-sql-20230219.605/project.clj
+  ejc-sql-20230219.605/snippets/
+  ejc-sql-20230219.605/snippets/sql-mode/
+  ejc-sql-20230219.605/snippets/sql-mode/alter.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/begin.snippet
+  ejc-sql-20230219.605/snippets/sql-mode/delete.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/grant.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/inner.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/insert.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/left.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/revoke.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/right.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/select.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/update.yasnippet
+  ejc-sql-20230219.605/snippets/sql-mode/where.yasnippet
+  ejc-sql-20230219.605/src/
+  ejc-sql-20230219.605/src/ejc_sql/
+  ejc-sql-20230219.605/src/ejc_sql/cache.clj
+  ejc-sql-20230219.605/src/ejc_sql/classpath.clj
+  ejc-sql-20230219.605/src/ejc_sql/connect.clj
+  ejc-sql-20230219.605/src/ejc_sql/deps_resolver.clj
+  ejc-sql-20230219.605/src/ejc_sql/keywords.clj
+  ejc-sql-20230219.605/src/ejc_sql/lib.clj
+  ejc-sql-20230219.605/src/ejc_sql/output.clj
+  ejc-sql-20230219.605/src/ejc_sql/structure.clj
 Searching for program: No such file or directory, convert

@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20230216.301
-;; Package-Commit: 4f2e4cd925d479904ab18c73613893ebac1b58b9
+;; Package-Version: 20230219.100
+;; Package-Commit: 972b9906bf6d23f5a8e92129a4572a906bdfe45e
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.1
@@ -943,6 +943,7 @@ being run, for diagnostic purposes."
   '((bean-format . ("bean-format"))
     (black . ("black" "-"))
     (brittany . ("brittany"))
+    (caddyfmt . ("caddy" "fmt" "-"))
     (clang-format . ("clang-format"
                      "-assume-filename"
                      (or (buffer-file-name)
@@ -1135,6 +1136,7 @@ function: %s" command)))
     (bash-ts-mode . shfmt)
     (beancount-mode . bean-format)
     (c++-ts-mode . clang-format)
+    (caddyfile-mode . caddyfmt)
     (cc-mode . clang-format)
     (c-mode . clang-format)
     (c-ts-mode . clang-format)
