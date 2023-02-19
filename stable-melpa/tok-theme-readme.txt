@@ -1,1 +1,1 @@
-Tok is a minimal, calm and dark theme for Emacs.
+Tok is a dark but vibrant theme for Emacs.
