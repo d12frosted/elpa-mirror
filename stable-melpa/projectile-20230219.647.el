@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20221122.2032
-;; Package-Commit: 14beeaee7a77601aee4d4982811f6a27f696403c
+;; Package-Version: 20230219.647
+;; Package-Commit: fd257811c46f89f53143dd0ccbc134fc9459d6bb
 ;; Keywords: project, convenience
 ;; Version: 2.7.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -3322,6 +3322,12 @@ a manual COMMAND-TYPE command is created with
                                   :test "poetry run python -m unittest discover"
                                   :test-prefix "test_"
                                   :test-suffix "_test")
+(projectile-register-project-type 'python-toml '("pyproject.toml")
+                                  :project-file "pyproject.toml"
+                                  :compile "python -m build"
+                                  :test "python -m unittest discover"
+                                  :test-prefix "test_"
+                                  :test-suffix "_test")
 ;; Java & friends
 (projectile-register-project-type 'maven '("pom.xml")
                                   :project-file "pom.xml"
@@ -3472,6 +3478,11 @@ a manual COMMAND-TYPE command is created with
                                   :test "pub run test"
                                   :run "dart"
                                   :test-suffix "_test.dart")
+
+;; Elm
+(projectile-register-project-type 'elm '("elm.json")
+                                  :project-file "elm.json"
+                                  :compile "elm make")
 
 ;; OCaml
 (projectile-register-project-type 'ocaml-dune '("dune-project")

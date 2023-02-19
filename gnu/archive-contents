@@ -777,7 +777,7 @@
 	       ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp"))])
  (diff-hl .
-	  [(1 9 1)
+	  [(1 9 2)
 	   ((cl-lib
 	     (0 2))
 	    (emacs
@@ -788,7 +788,7 @@
 	    (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")
 	    (:authors
 	     ("Dmitry Gutov" . "dgutov@yandex.ru"))
-	    (:commit . "8f2e4eb345f0639c8fc41e3f7576f77ba6987655"))])
+	    (:commit . "d20f16bf5eadd66e775f215e800f25caddae8cb5"))])
  (diffview .
 	   [(1 0)
 	    nil "View diffs in side-by-side format" single
