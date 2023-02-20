@@ -1,0 +1,13 @@
+Extensions for Verilog Mode:
+ - Tree-sitter support (requires Emacs 29)
+ - Improve syntax highlighting
+ - Hierarchy extraction and visualization via Verilog-Perl `vhier'
+ - LSP configuration for `lsp-mode' and `eglot'
+ - Support for many linters in `flycheck'
+ - Improve `imenu': detect instances and support methods inside classes
+ - Navigate through instances in a module
+ - Jump to definition/reference of module at point
+ - Beautify modules: indent and align parameters and ports (interactively and in batch)
+ - Extended collection of custom and `yasnippet' templates insertion via `hydra'
+ - Setup `company' to complete with verilog keywords
+ - Wrapper functions to make `kill-word' stop at underscores without breaking indentation
