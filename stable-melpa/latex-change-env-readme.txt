@@ -1,7 +1,11 @@
 This package provides a way to modify LaTeX environments, macros, as
 well as inline and display maths mode (seeing them as an environment
-of sorts).  Thus, henceforth the world "environment" shall usually
-refer to all of these notions.
+of sorts).  There exists a [blog post], which includes some moving
+pictures that showcase the functionality of this package.
+
+Note that, in the sequel, "environment" shall usually refer to LaTeX
+environments, macros, as well as inline and display maths mode—not
+just to LaTeX environments themselves.
 
 Refer to the README for a full account of the package's
 functionality, as well as how to install it.  Briefly:
@@ -10,8 +14,7 @@ functionality, as well as how to install it.  Briefly:
   invoked from inside an environments—pops up a list of possible
   actions, as defined by the `latex-change-env-options' variable.
   There is also the option to cycle through arguments in
-  `latex-change-env-cycle', which depends on the `math-delimiters'
-  package.
+  `latex-change-env-cycle', which depends on [math-delimiters].
 
 + Labels are changed/deleted in a previous way, with an option to
   edit the respective label across the whole project; see below.
@@ -29,3 +32,6 @@ functionality, as well as how to install it.  Briefly:
 
 + If you're customizing `latex-change-env-edit-labels-in-project', we
   also depend on project.el, meaning Emacs 27.1 and up.
+
+[blog post]: https://tony-zorman.com/posts/latex-change-env-0.3.html
+[math-delimiters]: https://github.com/oantolin/math-delimiters
