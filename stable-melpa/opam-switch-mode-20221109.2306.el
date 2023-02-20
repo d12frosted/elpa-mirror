@@ -6,8 +6,6 @@
 ;; Authors: Hendrik Tews
 ;; Maintainer: proof-general-maintainers@groupes.renater.fr
 ;; URL: https://github.com/ProofGeneral/opam-switch-mode
-;; Package-Version: 20221109.2306
-;; Package-Commit: dea35145a39b80b7d1df217395928d76abab0b13
 ;; Package-Requires: ((emacs "25.1"))
 ;; Version: 1.0-git
 ;;

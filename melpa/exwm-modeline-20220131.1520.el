@@ -7,6 +7,8 @@
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.3
+;; Package-Version: 20220131.1520
+;; Package-Commit: 86bce1d91089b9a1517e1abfca86bac47be91be3
 ;; Package-Requires: ((emacs "27.1") (exwm "0.26"))
 ;; Homepage: https://github.com/SqrtMinusOne/exwm-modeline
 
