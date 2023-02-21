@@ -5,5 +5,5 @@ Extensions for VHDL Mode:
  - Additional options for `flycheck' linters
  - Improve `imenu': detect instances
  - Navigate through instances in a module
- - Jump to definition/reference of module at point via `ggtags' and `xref'
+ - Jump to definition/reference of module at point
  - Templates insertion via `hydra'

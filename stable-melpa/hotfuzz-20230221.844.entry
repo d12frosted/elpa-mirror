@@ -1,0 +1,11 @@
+(hotfuzz .
+	 [(20230221 844)
+	  ((emacs
+	    (27 1)))
+	  "Fuzzy completion style" single
+	  ((:commit . "90d95663f9ff667786b71071a039502d873ef4aa")
+	   (:authors
+	    ("Axel Forsman" . "axelsfor@gmail.com"))
+	   (:maintainer "Axel Forsman" . "axelsfor@gmail.com")
+	   (:keywords "matching")
+	   (:url . "https://github.com/axelf4/hotfuzz"))])
