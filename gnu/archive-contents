@@ -3693,7 +3693,7 @@
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	    (:commit . "01f0fc07d1831f00ebc64550867a0fa6eedb1fb7"))])
  (vertico-posframe .
-		   [(0 7 0)
+		   [(0 7 1)
 		    ((emacs
 		      (26 0))
 		     (posframe
@@ -3706,7 +3706,7 @@
 		     (:maintainer "Feng Shu" . "tumashu@163.com")
 		     (:authors
 		      ("Feng Shu" . "tumashu@163.com"))
-		     (:commit . "3422b66dd197c25c5038c3159c714aea384a85e4"))])
+		     (:commit . "c74d4e0662af135807e6c8a976def184faf71d55"))])
  (vigenere .
 	   [(1 0)
 	    ((emacs
@@ -3920,12 +3920,12 @@
 	("Mattias Engdegård" . "mattiase@acm.org"))
        (:commit . "74906f6d104b7daae162dc32684e0443e80fdb03"))])
  (xref .
-       [(1 6 1)
+       [(1 6 2)
 	((emacs
 	  (26 1)))
 	"Cross-referencing commands" tar
 	((:url . "https://elpa.gnu.org/packages/xref.html")
-	 (:commit . "8a36a0f44aafc10f1d10e23d5371bf19ee344b41"))])
+	 (:commit . "b5bea14ca178b9f0c3944a9a14363c9923853814"))])
  (yasnippet .
 	    [(0 14 0)
 	     ((cl-lib
