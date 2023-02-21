@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-elsa/Elsa.git
 
 Updating /mnt/store/melpa/working/elsa/
-Checking out f96b4fcd6dba8b6bbc6bc20d4d9064a52b4f7820
+Checking out 2776cd0c0617f99cac2da3da764d2f221f62ff2a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elsa/
-  to /tmp/elsa6wgn94/elsa-20230218.2015
+  to /tmp/elsaQ3qcyt/elsa-20230220.2011
     Elsafile.el -> Elsafile.el
     elsa-analyser.el -> elsa-analyser.el
     elsa-check.el -> elsa-check.el
@@ -45,47 +45,48 @@ Copying files (->) and directories (=>)
     elsa-variable.el -> elsa-variable.el
     elsa.el -> elsa.el
     bin => bin
-Created elsa-20230218.2015.tar containing:
-  elsa-20230218.2015/
-  elsa-20230218.2015/Elsafile.el
-  elsa-20230218.2015/bin/
-  elsa-20230218.2015/bin/elsa
-  elsa-20230218.2015/bin/elsa-lsp
-  elsa-20230218.2015/bin/elsa.bat
-  elsa-20230218.2015/elsa-analyser.el
-  elsa-20230218.2015/elsa-check.el
-  elsa-20230218.2015/elsa-dependencies.el
-  elsa-20230218.2015/elsa-english.el
-  elsa-20230218.2015/elsa-error.el
-  elsa-20230218.2015/elsa-extension-builtin.el
-  elsa-20230218.2015/elsa-extension-cl.el
-  elsa-20230218.2015/elsa-extension-dash.el
-  elsa-20230218.2015/elsa-extension-eieio.el
-  elsa-20230218.2015/elsa-extension-elsa.el
-  elsa-20230218.2015/elsa-extension-flycheck.el
-  elsa-20230218.2015/elsa-extension-seq.el
-  elsa-20230218.2015/elsa-extension-subr.el
-  elsa-20230218.2015/elsa-font-lock.el
-  elsa-20230218.2015/elsa-functions.el
-  elsa-20230218.2015/elsa-log.el
-  elsa-20230218.2015/elsa-lsp-core.el
-  elsa-20230218.2015/elsa-lsp.el
-  elsa-20230218.2015/elsa-methods.el
-  elsa-20230218.2015/elsa-pkg.el
-  elsa-20230218.2015/elsa-reader.el
-  elsa-20230218.2015/elsa-rules-list.el
-  elsa-20230218.2015/elsa-ruleset.el
-  elsa-20230218.2015/elsa-scope.el
-  elsa-20230218.2015/elsa-state.el
-  elsa-20230218.2015/elsa-type-algebra.el
-  elsa-20230218.2015/elsa-type-helpers.el
-  elsa-20230218.2015/elsa-typed-builtin.el
-  elsa-20230218.2015/elsa-typed-cl.el
-  elsa-20230218.2015/elsa-typed-eieio.el
-  elsa-20230218.2015/elsa-typed-subr.el
-  elsa-20230218.2015/elsa-typed-syntax.el
-  elsa-20230218.2015/elsa-typed-thingatpt.el
-  elsa-20230218.2015/elsa-types.el
-  elsa-20230218.2015/elsa-variable.el
-  elsa-20230218.2015/elsa.el
+Created elsa-20230220.2011.tar containing:
+  elsa-20230220.2011/
+  elsa-20230220.2011/Elsafile.el
+  elsa-20230220.2011/bin/
+  elsa-20230220.2011/bin/elsa
+  elsa-20230220.2011/bin/elsa-lsp
+  elsa-20230220.2011/bin/elsa-lsp.bat
+  elsa-20230220.2011/bin/elsa.bat
+  elsa-20230220.2011/elsa-analyser.el
+  elsa-20230220.2011/elsa-check.el
+  elsa-20230220.2011/elsa-dependencies.el
+  elsa-20230220.2011/elsa-english.el
+  elsa-20230220.2011/elsa-error.el
+  elsa-20230220.2011/elsa-extension-builtin.el
+  elsa-20230220.2011/elsa-extension-cl.el
+  elsa-20230220.2011/elsa-extension-dash.el
+  elsa-20230220.2011/elsa-extension-eieio.el
+  elsa-20230220.2011/elsa-extension-elsa.el
+  elsa-20230220.2011/elsa-extension-flycheck.el
+  elsa-20230220.2011/elsa-extension-seq.el
+  elsa-20230220.2011/elsa-extension-subr.el
+  elsa-20230220.2011/elsa-font-lock.el
+  elsa-20230220.2011/elsa-functions.el
+  elsa-20230220.2011/elsa-log.el
+  elsa-20230220.2011/elsa-lsp-core.el
+  elsa-20230220.2011/elsa-lsp.el
+  elsa-20230220.2011/elsa-methods.el
+  elsa-20230220.2011/elsa-pkg.el
+  elsa-20230220.2011/elsa-reader.el
+  elsa-20230220.2011/elsa-rules-list.el
+  elsa-20230220.2011/elsa-ruleset.el
+  elsa-20230220.2011/elsa-scope.el
+  elsa-20230220.2011/elsa-state.el
+  elsa-20230220.2011/elsa-type-algebra.el
+  elsa-20230220.2011/elsa-type-helpers.el
+  elsa-20230220.2011/elsa-typed-builtin.el
+  elsa-20230220.2011/elsa-typed-cl.el
+  elsa-20230220.2011/elsa-typed-eieio.el
+  elsa-20230220.2011/elsa-typed-subr.el
+  elsa-20230220.2011/elsa-typed-syntax.el
+  elsa-20230220.2011/elsa-typed-thingatpt.el
+  elsa-20230220.2011/elsa-types.el
+  elsa-20230220.2011/elsa-variable.el
+  elsa-20230220.2011/elsa.el
 Searching for program: No such file or directory, convert

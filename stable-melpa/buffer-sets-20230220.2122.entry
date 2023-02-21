@@ -1,0 +1,11 @@
+(buffer-sets .
+	     [(20230220 2122)
+	      ((cl-lib
+		(0 5)))
+	      "Sets of Buffers for Buffer Management" single
+	      ((:commit . "ac40dc72ffd9073f8425e833fda7d29cbce581c4")
+	       (:authors
+		("Samuel W. Flint" . "swflint@flintfam.org"))
+	       (:maintainer "Samuel W. Flint" . "swflint@flintfam.org")
+	       (:keywords "buffer-management")
+	       (:url . "https://git.sr.ht/~swflint/buffer-sets"))])
