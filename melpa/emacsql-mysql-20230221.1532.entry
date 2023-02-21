@@ -1,0 +1,12 @@
+(emacsql-mysql .
+	       [(20230221 1532)
+		((emacs
+		  (25 1))
+		 (emacsql
+		  (20230220)))
+		"EmacSQL back-end for MySQL" single
+		((:commit . "f0249f655fd1a2c066c5a1b3daa93c80c5ed9865")
+		 (:authors
+		  ("Christopher Wellons" . "wellons@nullprogram.com"))
+		 (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		 (:url . "https://github.com/magit/emacsql"))])
