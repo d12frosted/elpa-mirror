@@ -1,13 +1,11 @@
 (langtool-popup .
-		[(20230207 319)
+		[(20230222 401)
 		 ((emacs
 		   (25 1))
 		  (popup
-		   (0 5 9))
-		  (langtool
-		   (2 3 2)))
+		   (0 5 9)))
 		 "Popup message extension for langtool.el" single
-		 ((:commit . "25b23a2dc592cdfe498740af87d975f7ef23a854")
+		 ((:commit . "d86101eafe9a994eb0425e08e7c1795e9cb0cd42")
 		  (:authors
 		   ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
 		  (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")

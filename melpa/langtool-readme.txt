@@ -145,7 +145,7 @@ testing, so please open issue when the ssl/tls connection is not working.
 
     M-x langtool-show-message-at-point
 
-* You can use extension package `langtool-popup` in this repository.
+* You can optionally use extension package `langtool-popup` in this repository.
   To show automatically popup the cursor.
 
 * To finish checking.  All langtool marker is removed.

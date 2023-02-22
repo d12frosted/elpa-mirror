@@ -4,12 +4,12 @@
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: docs
-;; Package-Version: 20230207.319
-;; Package-Commit: 25b23a2dc592cdfe498740af87d975f7ef23a854
+;; Package-Version: 20230222.401
+;; Package-Commit: d86101eafe9a994eb0425e08e7c1795e9cb0cd42
 ;; URL: https://github.com/mhayashi1120/Emacs-langtool
 ;; Emacs: GNU Emacs 25 or later
-;; Version: 1.1.1
-;; Package-Requires: ((emacs "25.1") (popup "0.5.9") (langtool "2.3.2"))
+;; Version: 1.1.2
+;; Package-Requires: ((emacs "25.1") (popup "0.5.9"))
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -45,7 +45,8 @@
 ;;; Code:
 
 (require 'popup)
-(require 'langtool)
+
+(declare-function langtool-details-error-message "langtool")
 
 (defun langtool-popup-autoshow (overlays)
   "Popup LanguageTool message (on OVERLAYS) with `popup`."
@@ -60,7 +61,10 @@
 ;; To keep Compat
 (defalias 'langtool-popup-autoshow-detail #'langtool-popup-autoshow)
 
+(defvar langtool-autoshow-message-function)
 (setq langtool-autoshow-message-function #'langtool-popup-autoshow)
+
+(declare-function langtool-autoshow-default-message "langtool")
 
 ;; To restore default while `unload-feature'
 (defun langtool-popup-unload-function ()

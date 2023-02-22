@@ -4,11 +4,11 @@
 
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: docs
-;; Package-Version: 20230207.950
-;; Package-Commit: fc6c046af1c5e4e55331414387865f65afb1bd3c
+;; Package-Version: 20230222.326
+;; Package-Commit: 416abc7d1c1cbb31a9bddad458366215bad0089b
 ;; URL: https://github.com/mhayashi1120/Emacs-langtool
 ;; Emacs: GNU Emacs 24 or later
-;; Version: 2.3.7
+;; Version: 2.3.8
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or
@@ -175,7 +175,7 @@
 ;;
 ;;     M-x langtool-show-message-at-point
 
-;; * You can use extension package `langtool-popup` in this repository.
+;; * You can optionally use extension package `langtool-popup` in this repository.
 ;;   To show automatically popup the cursor.
 
 ;; * To finish checking.  All langtool marker is removed.

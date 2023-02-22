@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: http://github.com/alphapapa/magit-todos
-;; Package-Version: 20220822.2224
-;; Package-Commit: c5030cc27c7c1a48db52b0134bf2648a59a43176
+;; Package-Version: 20230222.132
+;; Package-Commit: c6f3fd03aa5b750636c2647253f21cc03329566c
 ;; Version: 1.6-pre
 ;; Package-Requires: ((emacs "26.1") (async "1.9.2") (dash "2.13.0") (f "0.17.2") (hl-todo "1.9.0") (magit "2.13.0") (pcre2el "1.8") (s "1.12.0") (transient "0.2.0"))
 ;; Keywords: magit, vc
@@ -558,7 +558,8 @@ Match items are a list of `magit-todos-item' found in PROCESS's buffer for RESUL
                       ;; FIXME: This may raise multiple warnings per file.
                       (error (if (string= "Stack overflow in regexp matcher" (error-message-string err))
                                  (let ((filename (buffer-substring (point) (1- (re-search-forward ":")))))
-                                   (display-warning 'magit-todos (concat "File has lines too long for Emacs to search.  Consider excluding it from scans: " filename)))
+                                   (display-warning 'magit-todos (concat "File has lines too long for Emacs to search.  Consider excluding it from scans: " filename))
+                                   nil)
                                (signal (car err) (cdr err)))))
           (push it items))
         (forward-line 1)))
