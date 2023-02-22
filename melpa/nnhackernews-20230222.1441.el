@@ -4,8 +4,8 @@
 
 ;; Authors: dickmao <github id: dickmao>
 ;; Version: 0.1.0
-;; Package-Version: 20230221.1840
-;; Package-Commit: 585cbf4dd3937e7f88b5ed8e2d518e009f589ec8
+;; Package-Version: 20230222.1441
+;; Package-Commit: bf0ff5d4a079004f937e7440ba282c156f24dced
 ;; Keywords: news
 ;; URL: https://github.com/dickmao/nnhackernews
 ;; Package-Requires: ((emacs "25.2") (request "0.3.3") (dash "2.18.1") (anaphora "1.0.4"))
@@ -1355,7 +1355,7 @@ prevent querying out."
            (newsrc-mark-ranges-shifted
             (mapcar (lambda (what-ranges)
                       (cl-case (car what-ranges)
-                        ('seen `(seen (1 . ,(length remaining))))
+                        (seen `(seen (1 . ,(length remaining))))
                         (t (cons (car what-ranges)
                                  (nnhackernews--shift-ranges delta (cdr what-ranges))))))
                     newsrc-mark-ranges)))
