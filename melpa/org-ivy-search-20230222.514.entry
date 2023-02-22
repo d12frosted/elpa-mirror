@@ -1,13 +1,15 @@
 (org-ivy-search .
-		[(20230220 812)
+		[(20230222 514)
 		 ((emacs
 		   (25 1))
 		  (ivy
 		   (0 10 0))
 		  (org
-		   (0 10 0)))
+		   (0 10 0))
+		  (beacon
+		   (1 3 4)))
 		 "Full text search for org files powered by ivy" single
-		 ((:commit . "e7170ff613734f24edace3309d69e23ef73f4b0f")
+		 ((:commit . "7f2afd8c196e3723ae6ac4dd229367ece9acd3bf")
 		  (:authors
 		   ("Huming Chen" . "chenhuming@gmail.com"))
 		  (:maintainer "Huming Chen" . "chenhuming@gmail.com")
