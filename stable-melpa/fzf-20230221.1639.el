@@ -3,8 +3,8 @@
 ;; Copyright (C) 2015 by Bailey Ling
 ;; Author: Bailey Ling
 ;; URL: https://github.com/bling/fzf.el
-;; Package-Version: 20230114.403
-;; Package-Commit: 1d80e76df0899e26196aea150c29fba95fc73ed6
+;; Package-Version: 20230221.1639
+;; Package-Commit: 6ba10122d590786d8fa9e98db1610d74fa3f159e
 ;; Filename: fzf.el
 ;; Description: A front-end for fzf
 ;; Created: 2015-09-18
@@ -418,15 +418,15 @@ The ANSI color sequences are filtered when Emacs runs in termcap mode."
 ;; Internal helper function
 (defun fzf--close()
   "Cleanup hooks and process."
-  ; Remove hook first so it doesn't trigger when process is killed
+  ;; Remove hook first so it doesn't trigger when process is killed
   (when fzf--hook (advice-remove 'term-handle-exit fzf--hook))
   (setq fzf--hook nil)
+  ;; Kill process so user isn't prompted
+  (let ((process-name (file-name-nondirectory fzf/executable)))
+    (when (get-process process-name)
+      (delete-process (get-process process-name))))
 
-  ; Kill process so user isn't prompted
-  (when (get-process fzf/executable)
-    (delete-process (get-process fzf/executable)))
-
-  ; Kill buffer and restore window
+  ;; Kill buffer and restore window
   (when (get-buffer fzf/buffer-name)
     (kill-buffer fzf/buffer-name)
     (jump-to-register fzf--window-register)))
@@ -543,7 +543,8 @@ The returned lambda requires extra context information:
       (setq default-directory (or directory "")))
     (split-window-vertically window-height)
     (when fzf/position-bottom (other-window 1))
-    (make-term fzf/executable "sh" nil "-c" sh-cmd)
+    (make-term (file-name-nondirectory fzf/executable)
+               "sh" nil "-c" sh-cmd)
     (switch-to-buffer buf)
 
     ;; Disable minor modes that interfere with rendering while fzf is running

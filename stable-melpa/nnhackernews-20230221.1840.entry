@@ -1,5 +1,5 @@
 (nnhackernews .
-	      [(20220604 2100)
+	      [(20230221 1840)
 	       ((emacs
 		 (25 2))
 		(request
@@ -9,6 +9,6 @@
 		(anaphora
 		 (1 0 4)))
 	       "Gnus backend for Hacker News" single
-	       ((:commit . "ec99d579b9fa26fdb5f5e00dfd77e968ed8386f0")
+	       ((:commit . "585cbf4dd3937e7f88b5ed8e2d518e009f589ec8")
 		(:keywords "news")
 		(:url . "https://github.com/dickmao/nnhackernews"))])

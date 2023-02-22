@@ -4,8 +4,8 @@
 
 ;; Authors: dickmao <github id: dickmao>
 ;; Version: 0.1.0
-;; Package-Version: 20220604.2100
-;; Package-Commit: ec99d579b9fa26fdb5f5e00dfd77e968ed8386f0
+;; Package-Version: 20230221.1840
+;; Package-Commit: 585cbf4dd3937e7f88b5ed8e2d518e009f589ec8
 ;; Keywords: news
 ;; URL: https://github.com/dickmao/nnhackernews
 ;; Package-Requires: ((emacs "25.2") (request "0.3.3") (dash "2.18.1") (anaphora "1.0.4"))
@@ -1279,9 +1279,9 @@ prevent querying out."
       (erase-buffer)
       (if-let ((header (nnhackernews--get-header article-number group)))
           (let* ((mail-header (nnhackernews--make-header article-number))
-               (score (cdr (assq 'X-Hackernews-Score (mail-header-extra mail-header))))
-               (permalink (cdr (assq 'X-Hackernews-Permalink (mail-header-extra mail-header))))
-               (body (nnhackernews--massage (nnhackernews--get-body header server))))
+                 (score (cdr (assq 'X-Hackernews-Score (mail-header-extra mail-header))))
+                 (permalink (cdr (assq 'X-Hackernews-Permalink (mail-header-extra mail-header))))
+                 (body (nnhackernews--massage (nnhackernews--get-body header server))))
           (when body
             (insert
              "Newsgroups: " group "\n"
@@ -1569,11 +1569,13 @@ We do this for the benefit of `nnheader-report'."
 (defun nnhackernews--browse-story (&rest _args)
   "What happens when I click on hackernews Subject."
   (-when-let* ((group-article gnus-article-current)
-               (url (plist-get (nnhackernews--retrieve-root
-                                (nnhackernews--get-header
-                                 (cdr group-article)
-                                 (gnus-group-real-name (car group-article))))
-                           :url)))
+               (url (or (gnus-fetch-original-field "Archived-At")
+                        (plist-get (nnhackernews--retrieve-root
+                                    (nnhackernews--get-header
+                                     (cdr group-article)
+                                     (gnus-group-real-name
+                                      (car group-article))))
+                                   :url))))
     (browse-url url)))
 
 (defun nnhackernews--header-button-alist ()

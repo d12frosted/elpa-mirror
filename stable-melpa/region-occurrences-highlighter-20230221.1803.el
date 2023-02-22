@@ -2,10 +2,10 @@
 
 ;; Author: Álvaro González Sotillo <alvarogonzalezsotillo@gmail.com>
 ;; URL: https://github.com/alvarogonzalezsotillo/region-occurrences-highlighter
-;; Package-Version: 20200815.1555
-;; Package-Commit: 51e4c51e6078ebf0681e65f7dea4f328f0c91cfe
+;; Package-Version: 20230221.1803
+;; Package-Commit: 9c2a3193ccf32f8fa48578a6b8826b2959dac120
 ;; Package-Requires: ((emacs "24"))
-;; Version: 1.3
+;; Version: 1.5
 ;; Keywords: convenience
 
 ;; This file is not part of GNU Emacs.
@@ -27,6 +27,14 @@
 
 ;;; News:
 ;;
+;;;; Changes since v1.4:
+;;
+;; - Added `region-occurrences-highlighter-all-visible-buffers' and `region-occurrences-highlighter-case-fold-search'
+;;
+;;;; Changes since v1.3:
+;;
+;; - Added global minor mode (thanks to Jen-Chieh Shen)
+;;
 ;;;; Changes since v1.2:
 ;;
 ;; - Added `region-occurrences-highlighter-nav-mode' (thanks to Thomas Fini Hansen)
@@ -45,7 +53,7 @@
 (require 'hi-lock)
 
 (defvar region-occurrences-highlighter--previous-region nil)
-(make-variable-buffer-local 'region-occurrences-highlighter--previous-region)
+;;(make-variable-buffer-local 'region-occurrences-highlighter--previous-region)
 
 (defgroup region-occurrences-highlighter-group nil
   "Region occurrences highlighter."
@@ -56,6 +64,17 @@
   '((t (:inverse-video t)))
   "Face for occurrences of current region.")
 
+(defcustom region-occurrences-highlighter-case-fold-search t
+  "Non-nil means highlightings will ignore case (see `case-fold-search')."
+  :type 'boolean)
+
+(defcustom region-occurrences-highlighter-max-buffer-size 999999
+  "If the buffer size is bigger, don't perform highlighting due to performance reasons."
+  :type 'integer)
+
+(defcustom region-occurrences-highlighter-all-visible-buffers t
+  "If non nil, region is highlighted in buffers of all visible windows."
+  :type 'boolean)
 
 (defcustom region-occurrences-highlighter-max-size 300
   "Maximum length of region of which highlight occurrences."
@@ -89,7 +108,7 @@
 
 ;;;###autoload
 (define-minor-mode region-occurrences-highlighter-mode
-  "Highlight the current region and its occurrences, a la Visual Code"
+  "Highlight the current region and its occurrences, a la Visual Code."
   :group region-occurrences-highlighter-group
 
   (remove-hook 'post-command-hook #'region-occurrences-highlighter--change-hook t)
@@ -110,7 +129,11 @@
 
   ;;; REMOVE PREVIOUS HIGHLIGHTED REGION
   (when region-occurrences-highlighter--previous-region
-    (unhighlight-regexp region-occurrences-highlighter--previous-region)
+
+    (region-occurrences-highlighter--update-buffers
+     region-occurrences-highlighter--previous-region
+     nil)
+    
     (setq region-occurrences-highlighter--previous-region nil)
     (region-occurrences-highlighter-nav-mode -1))
 
@@ -123,9 +146,43 @@
             (end (region-end)))
         (when (region-occurrences-highlighter--accept begin end)
           (let ((str (regexp-quote (buffer-substring-no-properties begin end))))
+
+            (region-occurrences-highlighter--update-buffers
+             region-occurrences-highlighter--previous-region
+             str)
+            
             (setq region-occurrences-highlighter--previous-region str)
-            (highlight-regexp str 'region-occurrences-highlighter-face)
             (region-occurrences-highlighter-nav-mode 1)))))))
+
+(defun region-occurrences-highlighter--buffers-to-highlight ()
+  "Return a list of the buffers where the highlighting will be performed, honoring `region-occurrences-highlighter-all-visible-buffers'."
+  (if region-occurrences-highlighter-all-visible-buffers
+      (let ((buffers nil)
+            (current-frame (selected-frame)))
+        (dolist (frame (frame-list))
+          (with-selected-frame frame
+            (walk-windows (lambda (window)
+                            (let ((buffer (window-buffer window)))
+                              (when (not (member buffer buffers))
+                                (push buffer buffers)))))))
+        (select-frame current-frame)
+        buffers)
+    (list (current-buffer))))
+
+(defun region-occurrences-highlighter--update-buffers(previous-region current-region)
+  "Update the highlightings in all buffers but the current buffer."
+  (let* (
+         (case-fold-search region-occurrences-highlighter-case-fold-search)
+         (previous (if (and  previous-region case-fold-search) (downcase previous-region) previous-region))
+         (current (if (and current-region case-fold-search) (downcase current-region) current-region)))
+    (dolist (buffer (region-occurrences-highlighter--buffers-to-highlight))
+      (with-current-buffer buffer
+        (when previous
+          (unhighlight-regexp previous))
+        (when current
+          (if (< (buffer-size) region-occurrences-highlighter-max-buffer-size)
+              (highlight-regexp current 'region-occurrences-highlighter-face)
+            (warn "Buffer too big for region-occurrences-highlighter: %s (see region-occurrences-highlighter-max-buffer-size)" buffer)))))))
 
 (defvar region-occurrences-highlighter-nav-mode-map
   (make-sparse-keymap)
@@ -139,14 +196,22 @@
 (defun region-occurrences-highlighter-next ()
   "Jump to the next highlighted region."
   (interactive)
-  (region-occurrences-highlighter-jump 1))
+  (region-occurrences-highlighter--jump 1))
+
+
 
 (defun region-occurrences-highlighter-prev ()
   "Jump to the previous highlighted region."
   (interactive)
-  (region-occurrences-highlighter-jump -1))
+  (region-occurrences-highlighter--jump -1))
 
 (defun region-occurrences-highlighter-jump (dir)
+  "The function `region-occurrences-highlighter-jump' was not private (--) in previous version."
+  (region-occurrences-highlighter--jump dir))
+
+(make-obsolete 'region-occurrences-highlighter-jump 'region-occurrences-highlighter--jump "Version 1.5")
+
+(defun region-occurrences-highlighter--jump (dir)
   "Jump to the next or previous highlighted region.
 DIR has to be 1 or -1."
   (if region-occurrences-highlighter--previous-region
@@ -154,7 +219,7 @@ DIR has to be 1 or -1."
       ;; versa, we need to exchange point and mark in order to not hit
       ;; the current region when searching.
       (let ((swap (if (< (point) (mark)) (eq dir 1) (eq dir -1)))
-            (case-fold-search nil))
+            (case-fold-search region-occurrences-highlighter-case-fold-search))
         (when swap
           (exchange-point-and-mark))
         (if (re-search-forward region-occurrences-highlighter--previous-region nil t dir)
