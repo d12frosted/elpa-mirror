@@ -1,51 +1,33 @@
-The Modus themes conform with the highest standard for color-contrast
-accessibility between background and foreground values (WCAG AAA).
-This file contains all customization variables, helper functions,
-interactive commands, and face specifications.  Please refer to the
-official Info manual for further documentation (distributed with the
-themes, or available at: <https://protesilaos.com/emacs/modus-themes>).
+# Modus themes for GNU Emacs
 
-The themes share the following customization variables:
+IMAGES HERE: <https://protesilaos.com/emacs/modus-themes-pictures>.
 
-    modus-themes-completions                    (alist)
-    modus-themes-headings                       (alist)
-    modus-themes-org-agenda                     (alist)
-    modus-themes-bold-constructs                (boolean)
-    modus-themes-deuteranopia                   (boolean)
-    modus-themes-inhibit-reload                 (boolean)
-    modus-themes-intense-mouseovers             (boolean)
-    modus-themes-italic-constructs              (boolean)
-    modus-themes-mixed-fonts                    (boolean)
-    modus-themes-subtle-line-numbers            (boolean)
-    modus-themes-variable-pitch-ui              (boolean)
-    modus-themes-box-buttons                    (choice)
-    modus-themes-diffs                          (choice)
-    modus-themes-fringes                        (choice)
-    modus-themes-hl-line                        (choice)
-    modus-themes-lang-checkers                  (choice)
-    modus-themes-links                          (choice)
-    modus-themes-mail-citations                 (choice)
-    modus-themes-markup                         (choice)
-    modus-themes-mode-line                      (choice)
-    modus-themes-org-blocks                     (choice)
-    modus-themes-paren-match                    (choice)
-    modus-themes-prompts                        (choice)
-    modus-themes-region                         (choice)
-    modus-themes-syntax                         (choice)
+Highly accessible themes, conforming with the highest standard for
+colour contrast between background and foreground values (WCAG AAA).
+They also are optimised for users with red-green colour deficiency.
 
-There also exist two unique customization variables for overriding
-color palette values.  The specifics are documented in the manual.
-The symbols are:
+The themes are very customisable and provide support for a very wide
+range of packages.  Their manual is detailed so that new users can get
+started, while it also provides custom code for all sorts of more
+advanced customisations.
 
-    modus-themes-operandi-color-overrides       (alist)
-    modus-themes-vivendi-color-overrides        (alist)
+Since August 2020, the original Modus themes (`modus-operandi`,
+`modus-vivendi`) are built into Emacs version 28 or higher.  Emacs 28
+ships with `modus-themes` version `1.6.0`.  Emacs 29 includes version
+`3.0.0`.  Emacs 30 provides a newer, refactored version that
+thoroughly refashions how the themes are implemented and customized.
+Such major versions are not backward-compatible due to the limited
+resources at my disposal to support multiple versions of Emacs and of
+the themes across the years.
 
-Check the manual for all supported packages (there are hundreds of
-them).
-
-For a complete view of the project, also refer to the following files
-(should be distributed in the same repository/directory as the
-current item):
-
-- modus-operandi-theme.el    (Light theme)
-- modus-vivendi-theme.el     (Dark theme)
++ Package name (GNU ELPA): `modus-themes`
++ Official manual: <https://protesilaos.com/emacs/modus-themes>
++ Change log: <https://protesilaos.com/emacs/modus-themes-changelog>
++ Colour palette: <https://protesilaos.com/emacs/modus-themes-colors>
++ Sample pictures: <https://protesilaos.com/emacs/modus-themes-pictures>
++ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/modus-themes>
+  - Mirrors:
+    + GitHub: <https://github.com/protesilaos/modus-themes>
+    + GitLab: <https://gitlab.com/protesilaos/modus-themes>
++ Mailing list: <https://lists.sr.ht/~protesilaos/modus-themes>
++ Backronym: My Old Display Unexpectedly Sharpened ... themes
