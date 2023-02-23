@@ -1,0 +1,11 @@
+(julia-formatter .
+		 [(20230222 2243)
+		  ((emacs
+		    (27 1)))
+		  "Use JuliaFormatter.jl for julia code" single
+		  ((:commit . "9390974fa6d0317b4f604b71523071feb2f2150a")
+		   (:authors
+		    ("Felipe Lema" . "felipe.lema@mortemale.org"))
+		   (:maintainer "Felipe Lema" . "felipe.lema@mortemale.org")
+		   (:keywords "convenience" "tools")
+		   (:url . "https://codeberg.org/FelipeLema/julia-formatter.el"))])

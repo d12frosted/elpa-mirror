@@ -1,0 +1,12 @@
+(emacsql-psql .
+	      [(20230222 1914)
+	       ((emacs
+		 (25 1))
+		(emacsql
+		 (20230220)))
+	       "EmacSQL back-end for PostgreSQL via psql" single
+	       ((:commit . "0bcf526c48bed7004db7ff2fdc340ce018273d3e")
+		(:authors
+		 ("Christopher Wellons" . "wellons@nullprogram.com"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:url . "https://github.com/magit/emacsql"))])
