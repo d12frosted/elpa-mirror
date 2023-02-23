@@ -3,5 +3,9 @@ Fetcher: github
 Source:  https://github.com/akirak/mozc-posframe.git
 
 Updating /mnt/store/melpa/working/mozc-cand-posframe/
-Checking out 1d07d5055381008ccbb29b97315d140e09a7ee95
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/akirak/mozc-posframe.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

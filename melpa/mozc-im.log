@@ -3,5 +3,11 @@ Fetcher: github
 Source:  https://github.com/d5884/mozc-im.git
 
 Updating /mnt/store/melpa/working/mozc-im/
-Checking out df614a1076c28a11551fb3e822868bae47e855a5
-Searching for program: No such file or directory, convert
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/d5884/mozc-im.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
