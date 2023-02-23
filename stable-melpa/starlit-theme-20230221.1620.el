@@ -4,8 +4,8 @@
 
 ;; Author: Jonas Jelten <jj@sft.lol>
 ;; Keywords: faces
-;; Package-Version: 20230209.21
-;; Package-Commit: f910112a76f0ec62f7150a3a2d4f1337a1809ff7
+;; Package-Version: 20230221.1620
+;; Package-Commit: 5ef623020e6a2d43ac82a2a9b71c434d4e8a0585
 ;; URL: https://github.com/SFTtech/starlit-emacs
 ;; Version: 0.1
 
@@ -157,6 +157,8 @@ in the theme."
        `(secondary-selection ((,colorful (:background ,.current-line))))
        `(shadow ((,colorful (:foreground ,.comment))))
        `(success ((,colorful (:foreground ,.greenlight))))
+       `(tab-bar ((,colorful (:foreground ,.foreground :background ,.backgroundlight))))
+       `(tooltip ((,colorful (:foreground ,.foreground :background ,.backgroundgreen))))
        `(underline ((,colorful (:underline t))))
        `(warning ((,colorful (:foreground ,.orange))))
 
@@ -367,6 +369,7 @@ in the theme."
        `(undo-tree-visualizer-current-face ((,colorful (:foreground ,.green :weight bold))))
        `(undo-tree-visualizer-default-face ((,colorful (:foreground ,.foreground))))
        `(undo-tree-visualizer-register-face ((,colorful (:foreground ,.yellow))))
+       `(vertico-current ((,colorful (:background ,.backgroundgreenhighlight))))
        `(which-func ((,colorful (:foreground ,.blue :background unspecified))))
        `(whitespace-empty ((,colorful (:foreground ,.red :inverse-video t :underline nil))))
        `(whitespace-hspace ((,colorful (:background unspecified :foreground ,.selection))))

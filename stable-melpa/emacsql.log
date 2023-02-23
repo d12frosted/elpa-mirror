@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/emacsql.git
 
 Updating /mnt/store/melpa/working/emacsql/
-Checking out 497971121afcadbae6246fb842d1e6d22e3c05ad
+Checking out c4399789fb2226386b3bce6674b6fcba2cc002c5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emacsql/
-  to /tmp/emacsqlEwGdZj/emacsql-20230222.1938
+  to /tmp/emacsqlYrOFVq/emacsql-20230223.1119
     emacsql-compiler.el -> emacsql-compiler.el
     emacsql-mysql.el -> emacsql-mysql.el
     emacsql-pg.el -> emacsql-pg.el
@@ -16,16 +16,22 @@ Copying files (->) and directories (=>)
     emacsql-sqlite-module.el -> emacsql-sqlite-module.el
     emacsql-sqlite.el -> emacsql-sqlite.el
     emacsql.el -> emacsql.el
-Created emacsql-20230222.1938.tar containing:
-  emacsql-20230222.1938/
-  emacsql-20230222.1938/emacsql-compiler.el
-  emacsql-20230222.1938/emacsql-mysql.el
-  emacsql-20230222.1938/emacsql-pg.el
-  emacsql-20230222.1938/emacsql-pkg.el
-  emacsql-20230222.1938/emacsql-psql.el
-  emacsql-20230222.1938/emacsql-sqlite-builtin.el
-  emacsql-20230222.1938/emacsql-sqlite-common.el
-  emacsql-20230222.1938/emacsql-sqlite-module.el
-  emacsql-20230222.1938/emacsql-sqlite.el
-  emacsql-20230222.1938/emacsql.el
+    sqlite => sqlite
+Created emacsql-20230223.1119.tar containing:
+  emacsql-20230223.1119/
+  emacsql-20230223.1119/emacsql-compiler.el
+  emacsql-20230223.1119/emacsql-mysql.el
+  emacsql-20230223.1119/emacsql-pg.el
+  emacsql-20230223.1119/emacsql-pkg.el
+  emacsql-20230223.1119/emacsql-psql.el
+  emacsql-20230223.1119/emacsql-sqlite-builtin.el
+  emacsql-20230223.1119/emacsql-sqlite-common.el
+  emacsql-20230223.1119/emacsql-sqlite-module.el
+  emacsql-20230223.1119/emacsql-sqlite.el
+  emacsql-20230223.1119/emacsql.el
+  emacsql-20230223.1119/sqlite/
+  emacsql-20230223.1119/sqlite/Makefile
+  emacsql-20230223.1119/sqlite/emacsql.c
+  emacsql-20230223.1119/sqlite/sqlite3.c
+  emacsql-20230223.1119/sqlite/sqlite3.h
 Searching for program: No such file or directory, convert
