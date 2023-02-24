@@ -5,8 +5,6 @@
 ;; Author: Anders Lindgren
 ;; Created: 2015-09-10
 ;; Version: 0.0.0
-;; Package-Version: 20171027.1851
-;; Package-Commit: 97ae8480c257ba573ca3d06dbf602f9b23c41d38
 ;; Keywords: convenience
 ;; URL: https://github.com/Lindydancer/dynamic-spaces
 
