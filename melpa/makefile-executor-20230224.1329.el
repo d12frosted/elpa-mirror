@@ -1,13 +1,13 @@
 ;;; makefile-executor.el --- Commands for conveniently running makefile targets -*- lexical-binding: t -*-
 
-;; Copyright (C) 2017 Lowe Thiderman
+;; Copyright (C) 2017 Olivia Thiderman
 
-;; Author: Lowe Thiderman <lowe.thiderman@gmail.com>
-;; URL: https://github.com/thiderman/makefile-executor.el
-;; Package-Commit: 170d14d834a0d163cd618d642d4580ff75b014be
-;; Package-Version: 20220928.936
-;; Package-X-Original-Version: 20220906
-;; Version: 0.2.0
+;; Author: Olivia Thiderman <olivia@thiderman.org>
+;; URL: https://github.com/Olivia5k/makefile-executor.el
+;; Package-Commit: d1d98eaf522a767561f6c7cbd8d2526be58b3ec5
+;; Package-Version: 20230224.1329
+;; Package-X-Original-Version: 20230224
+;; Version: 0.3.0
 ;; Package-Requires: ((emacs "27.1") (dash "2.11.0") (f "0.11.0") (s "1.10.0"))
 ;; Keywords: processes
 
@@ -99,38 +99,20 @@ Bindings in `makefile-mode':
   "Regexp of paths that should be filtered when looking for Makefiles."
   :type 'string)
 
-;; Based on http://stackoverflow.com/a/26339924/983746
-(defvar makefile-executor-list-target-code
-  (format
-   ".PHONY: %s\n%s:\n	@$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ \"^[#.]\") {print $$1}}' | sort | grep -E -v -e '^[^[:alnum:]]' -e '^$@$$'\n"
-   makefile-executor-special-target makefile-executor-special-target)
-  "Target used to list all other Makefile targets.")
-
 (defun makefile-executor-get-targets (filename)
   "Return a list of all the targets of a Makefile.
 
-To list them in a computed manner, a new special target is added,
-the buffer is written to a temporary Makefile which is executed
-with the special target.
+To list them in a computed manner, print the Makefile database
+using `make -p` and process the output.
 
 Optional argument FILENAME defaults to current buffer."
-  (let* ((file (make-temp-file "makefile"))
-         (makefile-contents
-          (concat
-           (with-temp-buffer
-             (insert-file-contents filename)
-             (buffer-string))
-           "\n\n"
-           makefile-executor-list-target-code)))
-
-    (f-write-text makefile-contents 'utf-8 file)
-
-    (let ((out (shell-command-to-string
-                (format "make -f %s %s"
-                        (shell-quote-argument file)
-                        makefile-executor-special-target))))
-      (delete-file file)
-      (s-split "\n" out t))))
+  (s-split "\n"
+    (shell-command-to-string
+     ;; Based on http://stackoverflow.com/a/26339924/983746
+     (format "make -pRrq -f %s -C %s : 2>/dev/null | awk -v RS= -F: '/(^|\\n)# Files(\\n|$)/,/(^|\\n)# Finished Make data base/ {if ($1 !~ \"^[#.]\") {print $1}}' | sort | grep -E -v -e '^[^[:alnum:]]'"
+           (shell-quote-argument filename)
+           (shell-quote-argument (file-name-directory filename))))
+    t))
 
 (defun makefile-executor-select-target (&optional filename)
   "Prompt the user for a Makefile target.

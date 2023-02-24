@@ -1,12 +1,12 @@
 ;;; diffview.el --- View diffs in side-by-side format -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2013-2015, Mitchel Humpherys
+;; Copyright (C) 2013-2016 Free Software Foundation, Inc.
 
 ;; Author: Mitchel Humpherys <mitch.special@gmail.com>
 ;; Maintainer: Mitchel Humpherys <mitch.special@gmail.com>
 ;; Keywords: convenience, diff
-;; Package-Version: 20220322.2334
-;; Package-Commit: bba07de698b519c143bffb57143a780b3dac299d
+;; Package-Version: 20230224.1916
+;; Package-Commit: 8f07c0ff4a1acef990589df0d3e32288f19c9d71
 ;; Version: 1.0
 ;; URL: https://github.com/mgalgs/diffview-mode
 

@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/closql
 ;; Keywords: extensions
-;; Package-Version: 20230220.1944
-;; Package-Commit: b670b88c6f2785ddfdff91439ceb332b1bf8a8ce
+;; Package-Version: 20230224.1619
+;; Package-Commit: 0a7226331ff1f96142199915c0ac7940bac4afdd
 
 ;; Package-Requires: (
 ;;     (emacs "25.1")
@@ -294,9 +294,9 @@
              (prog1 db (emacsql db [:pragma (= foreign-keys on)]))))
       (let ((db-init (not (and file (file-exists-p file))))
             (db (make-instance class :file file)))
-        (when (and (slot-boundp db 'process)
-                   (processp (oref db process)))
-          (set-process-query-on-exit-flag (oref db process) nil))
+        (when (and (slot-boundp db 'handle)
+                   (processp (oref db handle)))
+          (set-process-query-on-exit-flag (oref db handle) nil))
         (when debug
           (emacsql-enable-debugging db))
         (emacsql db [:pragma (= foreign-keys on)])

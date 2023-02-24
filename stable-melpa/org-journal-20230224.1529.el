@@ -6,8 +6,8 @@
 ;;         Christian Schwarzgruber
 
 ;; URL: http://github.com/bastibe/org-journal
-;; Package-Version: 20230109.1217
-;; Package-Commit: c84f1a771933d662695c20b73832a6415b7d3603
+;; Package-Version: 20230224.1529
+;; Package-Commit: 64a1fbc504269f407b9270cc2c4c5e34a85508c0
 ;; Version: 2.1.2
 ;; Package-Requires: ((emacs "25.1") (org "9.1"))
 
@@ -484,7 +484,7 @@ before it will be deposed."
 (defun org-journal-is-journal ()
   "Determine if file is a journal file."
   (and (buffer-file-name)
-       (string-match (org-journal--dir-and-file-format->pattern) (buffer-file-name))))
+       (string-match (org-journal--dir-and-file-format->pattern) (file-truename (buffer-file-name)))))
 
 ;; Open files in `org-journal-mode' if `org-journal-is-journal' returns true.
 (add-to-list 'magic-mode-alist '(org-journal-is-journal . org-journal-mode))
