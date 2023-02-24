@@ -1,0 +1,12 @@
+(emacsql-sqlite-builtin .
+			[(20230224 1201)
+			 ((emacs
+			   (29))
+			  (emacsql
+			   (20230220)))
+			 "EmacSQL back-end for SQLite using builtin support" single
+			 ((:commit . "7c533fb6c27c3a10b6ab05bddf663e37c109e459")
+			  (:authors
+			   ("Jonas Bernoulli" . "jonas@bernoul.li"))
+			  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+			  (:url . "https://github.com/magit/emacsql"))])
