@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20221210.1608
-;; Package-Commit: c156ffe5f3c979ab89fd941658e840801078d091
+;; Package-Version: 20230223.2008
+;; Package-Commit: c6f33e6efb55b5e5112d3d1366fea910d3629de2
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.19"))
 ;; Keywords: languages util
@@ -31,7 +31,7 @@
 ;; - Bazel Starlark (buildifier)
 ;; - BibTeX (Emacs)
 ;; - C/C++/Objective-C (clang-format, astyle)
-;; - C# (clang-format, astyle)
+;; - C# (clang-format, astyle, csharpier)
 ;; - Cabal (cabal-fmt)
 ;; - Caddyfile (caddy fmt)
 ;; - Clojure/ClojureScript (zprint, node-cljfmt)
@@ -129,7 +129,7 @@
     ("Bazel" buildifier)
     ("BibTeX" emacs-bibtex)
     ("C" clang-format)
-    ("C#" clang-format)
+    ("C#" csharpier)
     ("C++" clang-format)
     ("Cabal Config" cabal-fmt)
     ("Clojure" zprint)
@@ -769,6 +769,13 @@ Consult the existing formatters for examples of BODY."
   (:languages "Crystal")
   (:features)
   (:format (format-all--buffer-easy executable "tool" "format" "-")))
+
+(define-format-all-formatter csharpier
+  (:executable "dotnet-csharpier")
+  (:install "dotnet install -g csharpier")
+  (:languages "C#")
+  (:features)
+  (:format (format-all--buffer-easy executable "--write-stdout")))
 
 (define-format-all-formatter dart-format
   (:executable "dart")

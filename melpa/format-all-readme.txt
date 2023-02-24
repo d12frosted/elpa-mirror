@@ -16,7 +16,7 @@ Supported languages:
 - Bazel Starlark (buildifier)
 - BibTeX (Emacs)
 - C/C++/Objective-C (clang-format, astyle)
-- C# (clang-format, astyle)
+- C# (clang-format, astyle, csharpier)
 - Cabal (cabal-fmt)
 - Caddyfile (caddy fmt)
 - Clojure/ClojureScript (zprint, node-cljfmt)

@@ -4,8 +4,8 @@
 
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/jetbrains-darcula-emacs-theme
-;; Package-Version: 20210602.1430
-;; Package-Commit: f57c359044ff1fa90db62a60b6691ff8d65c82f3
+;; Package-Version: 20230223.1901
+;; Package-Commit: 46f153385e50998826ca13e18056c6a972768cfd
 ;; Version: 1.0.0
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -317,7 +317,7 @@
    `(helm-source-go-package-godoc-description ((,class (:foreground ,str))))
    `(helm-bookmark-w3m                        ((,class (:foreground ,type))))
 
-   `(web-mode-html-bracket-face               ((,class (:foreground ,jb-yellow))))
+   `(web-mode-html-tag-bracket-face           ((,class (:foreground ,jb-yellow))))
    `(web-mode-html-tag-face                   ((,class (:foreground ,jb-yellow))))
    `(web-mode-html-attr-name-face             ((,class (:foreground ,var))))
    `(web-mode-html-attr-value-face            ((,class (:foreground ,str))))
