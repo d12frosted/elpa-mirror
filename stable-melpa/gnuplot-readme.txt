@@ -1,5 +1,5 @@
 This is a major mode for composing gnuplot scripts and displaying
-their results using gnuplot. It supports features of recent Gnuplot
+their results using gnuplot.  It supports features of recent Gnuplot
 versions (5.0 and up), but should also work fine with older
 versions.
 
