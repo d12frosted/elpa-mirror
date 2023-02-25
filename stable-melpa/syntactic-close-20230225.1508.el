@@ -4,8 +4,8 @@
 ;; Maintainer: Emacs User Group Berlin <emacs-berlin@emacs-berlin.org>
 
 ;; Version: 0.1
-;; Package-Version: 20230225.1245
-;; Package-Commit: 39f3e7bff17bfd74992c099c14fa05ea89969fc7
+;; Package-Version: 20230225.1508
+;; Package-Commit: 290d18e12b4c485292c4e3feb3e2e4848706aa57
 
 ;; URL: https://github.com/emacs-berlin/syntactic-close
 
@@ -278,9 +278,13 @@ but have no specific treatment at the moment."
 
 (defvar syntactic-close-verbose-p nil)
 
-(defvar syntactic-close-assignment-re   "^[^:]*[^ =\t:]+[ \t]+=[ \t]+[^=]+")
+(defvar syntactic-close-assignment-re   "^[^:]*[^ =\t:]+[ \t]+=[ \t]+[^=]+" "")
 
 (setq syntactic-close-assignment-re     "^[^:]*[^ =\t:]+[ \t]+=[ \t]+[^=]+")
+
+(defvar syntactic-close-funcdef-re   "^[ \t]*def[ \t]+[[:alnum:]_]+([^()]+)" "")
+
+(setq syntactic-close-funcdef-re     "^[ \t]*def[ \t]+[[:alnum:]_]+([^()]+)")
 
 (unless (boundp 'py-block-re)
   (defvar py-block-re "[ \t]*\\_<\\(class\\|def\\|async def\\|async for\\|for\\|if\\|try\\|while\\|with\\|async with\\)\\_>[:( \n\t]*"
@@ -908,6 +912,10 @@ Source: Odersky, Spoon, Venners: Programming in Scala"
         (syntactic-close-pure-syntax pps)))
      ((looking-back syntactic-close-assignment-re (line-beginning-position))
       (unless (eq (char-before) ?\;) ";"))
+     ((and (looking-back syntactic-close-funcdef-re (line-beginning-position))
+           (eq (char-before) 41))
+      ":")
+
      (t (syntactic-close--generic nil nil pps)))))
 
 (defun syntactic-close-shell-close (&optional pps)

@@ -3,8 +3,8 @@
 ;; Copyright (C) 2022 Andrew Favia
 ;; Author: Andrew Favia <drewlinguistics01 at gmail dot com>
 ;; Version: 0.1.0
-;; Package-Version: 20230127.2046
-;; Package-Commit: f78e7f269210c7d7e06001752d87c8fbfd8b9084
+;; Package-Version: 20230225.1741
+;; Package-Commit: 25adcbdc007011f2b6f4b5b0a6748298ab229fc2
 ;; Package-Requires: ((pyvenv "1.21") (emacs "28.1") (transient "0.3.7") (pyenv-mode "0.1.0"))
 ;; Keywords: processes, python
 ;; URL: https://github.com/andcarnivorous/pyconf
@@ -177,6 +177,10 @@ finally, set the ENV-VARS if provided."
   (dolist (configuration-item configurations-list)
     (pyconf-add-config configuration-item)))
 
+(defun pyconf--eval-env-vars (vars-list)
+  "Evaluate elisp code stored in a string."
+  (eval (car (read-from-string vars-list))))
+
 (transient-define-suffix pyconf-transient-save (&optional args)
   "Save a pyconf configuration given the necessary parameters."
   :key "s"
@@ -190,7 +194,7 @@ finally, set the ENV-VARS if provided."
         (config-params (or (transient-arg-value "--params=" args) ""))
         (config-venv (or (transient-arg-value "--venv=" args) ""))
         (config-pyenv (or (transient-arg-value "--pyenv=" args) ""))
-        (config-env-vars (or (transient-arg-value "--env-vars=" args) "")))
+        (config-env-vars (or (pyconf--eval-env-vars (transient-arg-value "--env-vars=" args)) '())))
     (pyconf-add-configurations (list (pyconf-config :name config-name
                                                  :pyconf-exec-command config-command
                                                  :pyconf-file-to-exec config-file-path
@@ -213,7 +217,7 @@ finally, set the ENV-VARS if provided."
         (config-params (or (transient-arg-value "--params=" args) ""))
         (config-venv (or (transient-arg-value "--venv=" args) ""))
         (config-pyenv (or (transient-arg-value "--pyenv=" args) ""))
-        (config-env-vars (or (transient-arg-value "--env-vars=" args) "")))
+        (config-env-vars (or (pyconf--eval-env-vars (transient-arg-value "--env-vars=" args) ""))))
     (pyconf-execute-config (pyconf-config :name config-name
                                            :pyconf-exec-command config-command
                                            :pyconf-file-to-exec config-file-path
