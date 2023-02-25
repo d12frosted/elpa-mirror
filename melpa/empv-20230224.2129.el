@@ -4,8 +4,8 @@
 
 ;; Author: Isa Mert Gurbuz <isamertgurbuz@gmail.com>
 ;; Version: 3.0.0
-;; Package-Version: 20230203.2159
-;; Package-Commit: a45a2a01a7e629c9126b444d952fe71bcc9a262f
+;; Package-Version: 20230224.2129
+;; Package-Commit: d3742510160487fa2c73d46b4b21b8fd0f86f8e1
 ;; Homepage: https://github.com/isamert/empv.el
 ;; License: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "28.1"))
@@ -97,19 +97,19 @@ commands if this variable is nil."
   :type 'string
   :group 'empv)
 
-(defcustom empv-audio-dir (or (getenv "$XDG_MUSIC_DIR") "~/Music")
+(defcustom empv-audio-dir (or (getenv "XDG_MUSIC_DIR") "~/Music")
   "The directory that you keep your music in."
-  :type 'string
+  :type 'directory
   :group 'empv)
 
-(defcustom empv-video-dir (or (getenv "$XDG_VIDEOS_DIR") "~/Videos")
+(defcustom empv-video-dir (or (getenv "XDG_VIDEOS_DIR") "~/Videos")
   "The directory that you keep your videos in."
-  :type 'string
+  :type 'directory
   :group 'empv)
 
 (defcustom empv-playlist-dir empv-audio-dir
   "The directory that you keep your playlists in."
-  :type 'string
+  :type 'directory
   :group 'empv)
 
 (defcustom empv-radio-channels
@@ -120,17 +120,18 @@ commands if this variable is nil."
     ("SomaFM - Vaporwaves" . "https://somafm.com/vaporwaves.pls"))
   "List of radio channels -- or any other type of streamable.
 Elements should pair in the form of: `(\"Channel name\" . \"stream-address\")'"
-  :type 'list
+  :type '(alist :key-type (string :tag "Channel Name")
+                :value-type (string :tag "stream-address"))
   :group 'empv)
 
 (defcustom empv-video-file-extensions '("mkv" "mp4" "avi" "mov")
   "List of video file extensions."
-  :type 'list
+  :type '(repeat (string :tag "Extension"))
   :group 'empv)
 
 (defcustom empv-audio-file-extensions '("mp3" "ogg" "wav" "m4a" "flac" "aac")
-  "List of video file extensions."
-  :type 'list
+  "List of audio file extensions."
+  :type '(repeat (string :tag "Extension"))
   :group 'empv)
 
 (defcustom empv-max-directory-search-depth 6
@@ -142,13 +143,13 @@ Elements should pair in the form of: `(\"Channel name\" . \"stream-address\")'"
   "Base directory.
 Functions that shows directory-selection-prompts starts in this
 directory.  nil means starting in `default-directory'."
-  :type 'string
+  :type '(choice directory (const :tag "Default Directory" nil))
   :group 'empv)
 
 (defcustom empv-log-events-to-file nil
   "Log all events to given file.
 Supply a path to enable logging.  nil means no logging."
-  :type 'string
+  :type '(choice file (const :tag "No Logging" nil))
   :group 'empv)
 
 (defcustom empv-radio-log-format
@@ -164,7 +165,7 @@ replaced with their current values at the time of calling.
 (defcustom empv-radio-log-file
   "~/logged-radio-songs.org"
   "The file that is used by `empv-log-current-radio-song-name'."
-  :type 'string
+  :type 'file
   :group 'empv)
 
 (defcustom empv-allow-insecure-connections

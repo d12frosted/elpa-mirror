@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20230219.647
-;; Package-Commit: fd257811c46f89f53143dd0ccbc134fc9459d6bb
+;; Package-Version: 20230224.2116
+;; Package-Commit: 4f657d4b16c1db892fcda7de94cd13db1b5568d0
 ;; Keywords: project, convenience
 ;; Version: 2.7.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -357,7 +357,7 @@ containing a root file."
     projectile-root-top-down
     projectile-root-top-down-recurring)
   "A list of functions for finding project root folders.
-The functions will be ran until one of them returns a project folder.
+The functions will be run until one of them returns a project folder.
 Reordering the default functions will alter the project discovery
 algorithm."
   :group 'projectile

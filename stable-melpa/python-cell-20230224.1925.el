@@ -4,8 +4,8 @@
 ;; Author: Thomas Hisch <t.hisch@gmail.com>
 ;; Maintainer: Thomas Hisch <t.hisch@gmail.com>
 ;; URL: https://github.com/thisch/python-cell.el
-;; Package-Version: 20220105.2315
-;; Package-Commit: 9a111dcee0cbb5922662bfecb37b6983b740950a
+;; Package-Version: 20230224.1925
+;; Package-Commit: cb8e6381b1fab16bcf475d115bb22fef503bea32
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "25.1"))
 ;; Created: 2013-07-05
@@ -73,11 +73,11 @@
   :type 'face
   :group 'python-cell
   :set (lambda (symbol value)
-   (set symbol value)
-   (dolist (buffer (buffer-list))
-     (with-current-buffer buffer
-       (when python-cell-overlay
-         (overlay-put python-cell-overlay 'face python-cell-highlight-face))))))
+         (set symbol value)
+         (dolist (buffer (buffer-list))
+           (with-current-buffer buffer
+             (when python-cell-overlay
+               (overlay-put python-cell-overlay 'face python-cell-highlight-face))))))
 
 (defcustom python-cell-sticky-flag nil
   "Non-nil means the Python-Cell mode highlight appears in all windows.
@@ -202,12 +202,9 @@ It should return nil if there's no region to be highlighted."
 
 (defun python-cell-move (overlay)
   "Move the Python-Cell overlay."
-  (let* ((tmp (python-cell-range-function))
-         (b   (car tmp))
-         (e   (cdr tmp)))
-    (if tmp
-        (move-overlay overlay b e)
-      (move-overlay overlay 1 1))))
+  (if-let ((start-end (python-cell-range-function)))
+      (move-overlay overlay (car start-end) (cdr start-end))
+    (move-overlay overlay 1 1)))
 
 (defun python-cell-setup-cellhighlight ()
   ;; In case `kill-all-local-variables' is called.
