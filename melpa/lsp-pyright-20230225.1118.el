@@ -4,8 +4,8 @@
 
 ;; Author: Arif Rezai, Vincent Zhang, Andrew Christianson
 ;; Version: 0.2.0
-;; Package-Version: 20221201.1501
-;; Package-Commit: 4cd2adbb32287278d9d9da59a3212a53ecdf8036
+;; Package-Version: 20230225.1118
+;; Package-Commit: 54a2acddfdd7c3d31cb804a042305a3c6e60cf81
 ;; Package-Requires: ((emacs "26.1") (lsp-mode "7.0") (dash "2.18.0") (ht "2.0"))
 ;; Homepage: https://github.com/emacs-lsp/lsp-pyright
 ;; Keywords: languages, tools, lsp
@@ -234,7 +234,7 @@ Current LSP WORKSPACE should be passed in."
   :major-modes '(python-mode python-ts-mode)
   :server-id 'pyright
   :multi-root lsp-pyright-multi-root
-  :priority 3
+  :priority 2
   :initialized-fn (lambda (workspace)
                     (with-lsp-workspace workspace
                       ;; we send empty settings initially, LSP server will ask for the
@@ -243,6 +243,27 @@ Current LSP WORKSPACE should be passed in."
                        (make-hash-table :test 'equal))))
   :download-server-fn (lambda (_client callback error-callback _update?)
                         (lsp-package-ensure 'pyright callback error-callback))
+  :notification-handlers (lsp-ht ("pyright/beginProgress" 'lsp-pyright--begin-progress-callback)
+                                 ("pyright/reportProgress" 'lsp-pyright--report-progress-callback)
+                                 ("pyright/endProgress" 'lsp-pyright--end-progress-callback))))
+
+(lsp-register-client
+ (make-lsp-client
+  :new-connection
+  (lsp-tramp-connection (lambda ()
+                          (cons (executable-find "pyright-langserver" t)
+                                lsp-pyright-langserver-command-args)))
+  :major-modes '(python-mode python-ts-mode)
+  :server-id 'pyright-remote
+  :multi-root lsp-pyright-multi-root
+  :remote? t
+  :priority 1
+  :initialized-fn (lambda (workspace)
+                    (with-lsp-workspace workspace
+                      ;; we send empty settings initially, LSP server will ask for the
+                      ;; configuration of each workspace folder later separately
+                      (lsp--set-configuration
+                       (make-hash-table :test 'equal))))
   :notification-handlers (lsp-ht ("pyright/beginProgress" 'lsp-pyright--begin-progress-callback)
                                  ("pyright/reportProgress" 'lsp-pyright--report-progress-callback)
                                  ("pyright/endProgress" 'lsp-pyright--end-progress-callback))))

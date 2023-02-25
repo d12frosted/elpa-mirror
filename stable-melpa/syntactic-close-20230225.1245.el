@@ -4,8 +4,8 @@
 ;; Maintainer: Emacs User Group Berlin <emacs-berlin@emacs-berlin.org>
 
 ;; Version: 0.1
-;; Package-Version: 20230221.937
-;; Package-Commit: 830fc4d4fb5d31a018d32319c6e0d2dc29e3de34
+;; Package-Version: 20230225.1245
+;; Package-Commit: 39f3e7bff17bfd74992c099c14fa05ea89969fc7
 
 ;; URL: https://github.com/emacs-berlin/syntactic-close
 
@@ -278,9 +278,9 @@ but have no specific treatment at the moment."
 
 (defvar syntactic-close-verbose-p nil)
 
-(defvar syntactic-close-assignment-re   ".*[^ =\t]+[ \t]+=[ \t]+[^=]+")
+(defvar syntactic-close-assignment-re   "^[^:]*[^ =\t:]+[ \t]+=[ \t]+[^=]+")
 
-(setq syntactic-close-assignment-re   ".*[^ =\t]+[ \t]+=[ \t]+[^=]+")
+(setq syntactic-close-assignment-re     "^[^:]*[^ =\t:]+[ \t]+=[ \t]+[^=]+")
 
 (unless (boundp 'py-block-re)
   (defvar py-block-re "[ \t]*\\_<\\(class\\|def\\|async def\\|async for\\|for\\|if\\|try\\|while\\|with\\|async with\\)\\_>[:( \n\t]*"
@@ -719,16 +719,12 @@ Optional argument ORG read ‘org-mode’."
              "}"
            (char-to-string (syntactic-close--return-complement-char-maybe (char-after)))))))
 
-;; (defun syntactic-close--check-singlequotecounter (singlequotecounter singlequotecounter)
-;;   (cond ((and (< 0 singlequotecounter) (eq (char-after) ?'))
-;;          (char-to-string (syntactic-close--return-complement-char-maybe (char-after))))))
-
 (defun syntactic-close--discard-closed-braced ()
   (interactive)
   (save-excursion
     (let ((bracecounter 0))
       (while
-          (and 
+          (and
            (not (< 0 bracecounter))
            (re-search-backward "[{}]" (line-beginning-position) t))
         (unless (syntactic-close--escaped-p)
@@ -894,20 +890,25 @@ Source: Odersky, Spoon, Venners: Programming in Scala"
            (setq done t)))
     done))
 
-(defun syntactic-close-scala-close (pps)
-"Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
-(interactive "*")
-(let* ((pps (or pps (parse-partial-sexp (point-min) (point)))))
-  (cond
-   ((nth 8 pps)
-    (syntactic-close-generic-forms pps))
-   ((nth 1 pps)
-    (if (save-excursion (syntactic-close-scala-another-filter-clause pps))
-        (unless (eq (char-before) ?\;) ";")
-      (syntactic-close-pure-syntax pps)))
-   ((looking-back syntactic-close-assignment-re (line-beginning-position))
-    (unless (eq (char-before) ?\;) ";"))
-   (t (syntactic-close--generic nil nil pps)))))
+(defun syntactic-close-scala-close (&optional pps)
+  "Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
+  (interactive "*")
+  (let* ((pps (or pps (parse-partial-sexp (point-min) (point)))))
+    (cond
+     ((nth 8 pps)
+      (syntactic-close-generic-forms pps))
+     ((nth 1 pps)
+      (if (save-excursion (syntactic-close-scala-another-filter-clause pps))
+          (if (and (not (eq (char-before) ?\;))
+                   (or
+                    (eq (char-before) 41)
+                    (looking-back syntactic-close-assignment-re (line-beginning-position))))
+              ";"
+            (syntactic-close-pure-syntax pps))
+        (syntactic-close-pure-syntax pps)))
+     ((looking-back syntactic-close-assignment-re (line-beginning-position))
+      (unless (eq (char-before) ?\;) ";"))
+     (t (syntactic-close--generic nil nil pps)))))
 
 (defun syntactic-close-shell-close (&optional pps)
   "Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
