@@ -4,8 +4,8 @@
 
 ;; Author: Tom Willemse <tom@ryuslash.org>
 ;; Keywords: faces
-;; Package-Version: 20221024.20
-;; Package-Commit: 59cf53110ed73344c7f96da8136b88b039b69602
+;; Package-Version: 20230225.740
+;; Package-Commit: ba9427329ac49fa2e060da2c16507feed62ad890
 ;; Version: 6.2.0
 ;; URL: http://projects.ryuslash.org/yoshi-theme/
 
@@ -565,6 +565,9 @@
    `(rpm-spec-package-face ((t (:foreground ,fgred))))
    `(rpm-spec-ghost-face ((t (:foreground ,fgred))))
    `(rpm-spec-section-face ((t (:foreground ,fgyellow :underline t))))
+
+   ;; vterm
+   `(vterm-color-black ((t (:background ,yoshi-2 :inherit term-color-black))))
 
    ;; Window dividers
    `(window-divider ((t (:foreground ,yoshi-2))))

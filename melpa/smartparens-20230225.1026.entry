@@ -1,11 +1,11 @@
 (smartparens .
-	     [(20230219 1728)
+	     [(20230225 1026)
 	      ((dash
 		(2 13 0))
 	       (cl-lib
 		(0 3)))
 	      "Automatic insertion, wrapping and paredit-like navigation with user defined pairs." tar
-	      ((:commit . "f0c863268d296e38d4b5374f4c165cf9a823cd8c")
+	      ((:commit . "1d5cd5e8d46e182b935f8cd3cf29c8c4410aab0a")
 	       (:authors
 		("Matus Goljer" . "matus.goljer@gmail.com"))
 	       (:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
