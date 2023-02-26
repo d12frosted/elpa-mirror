@@ -1,11 +1,11 @@
 (minions .
-	 [(20230212 2213)
+	 [(20230225 2046)
 	  ((emacs
 	    (25 2))
 	   (compat
 	    (29 1 3 4)))
 	  "A minor-mode menu for the mode line" single
-	  ((:commit . "c5e8b65620558409a79766e86e3e8263cef765df")
+	  ((:commit . "41b63d03e133b16a171938c7965bf850612222c0")
 	   (:authors
 	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")

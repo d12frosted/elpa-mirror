@@ -4,8 +4,8 @@
 
 ;; Author: Isa Mert Gurbuz <isamertgurbuz@gmail.com>
 ;; Version: 3.0.0
-;; Package-Version: 20230224.2129
-;; Package-Commit: d3742510160487fa2c73d46b4b21b8fd0f86f8e1
+;; Package-Version: 20230225.1914
+;; Package-Commit: 05be118e3d0997a141f62602f2355f7da9685131
 ;; Homepage: https://github.com/isamert/empv.el
 ;; License: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "28.1"))
@@ -1005,15 +1005,20 @@ Example:
   (with-temp-buffer
     (insert (mapconcat #'identity playlist "\n"))
     (let* ((pl-name-regex "empv-playlist-\\(?1:[[:digit:]]+\\)\\.m3u")
-           (pl-last (file-name-sans-extension (car (last (directory-files empv-playlist-dir nil pl-name-regex)))))
-           (num (if (null pl-last) 0 (1+ (string-to-number (if (string-match pl-name-regex pl-last) (match-string 1 pl-last) "0")))))
+           (files (directory-files empv-playlist-dir nil "empv-playlist-\\(?1:[[:digit:]]+\\)\\.m3u"))
+           (pl-last (when files (file-name-sans-extension (car (last files)))))
+           (num (if pl-last (1+ (string-to-number (if (string-match pl-name-regex pl-last) (match-string 1 pl-last) "0"))) 0))
            (filename (or filename (expand-file-name (format "empv-playlist-%d.m3u" num) empv-playlist-dir))))
       (write-file filename))))
 
 ;;;###autoload
-(defun empv-playlist-save-to-file (filename)
+(defun empv-playlist-save-to-file (&optional filename)
   "Save the current playlist to FILENAME."
-  (interactive "FSave playlist to: ")
+  (interactive
+   (list
+    (let ((fname (read-file-name "Save playlist to: " (file-name-as-directory empv-playlist-dir))))
+      (when (and fname (not (string-empty-p fname)))
+        fname))))
   (empv--playlist-apply #'empv--playlist-save-to-file filename))
 
 
@@ -1148,7 +1153,7 @@ finishes."
   "Find and return YouTube url for ITEM."
   (let ((video-id (alist-get 'videoId item))
         (playlist-id (alist-get 'playlistId item)))
-    (format "https://youtu.be/%s=%s%s%s"
+    (format "https://youtube.com/%s=%s%s%s"
             (if video-id "watch?v" "playlist?list")
             (or video-id playlist-id)
             empv--title-sep

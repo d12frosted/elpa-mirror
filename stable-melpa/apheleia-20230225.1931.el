@@ -6,11 +6,11 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20230219.100
-;; Package-Commit: 972b9906bf6d23f5a8e92129a4572a906bdfe45e
+;; Package-Version: 20230225.1931
+;; Package-Commit: ffa8d5865118bb33299a429e9c25577a79410542
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
-;; Version: 3.1
+;; Version: 3.2
 
 ;;; Commentary:
 
