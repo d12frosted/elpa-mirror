@@ -2,9 +2,9 @@
 
 ;; Copyright (C) 2021-2023 Chen Bin
 ;;
-;; Version: 0.1.1
-;; Package-Version: 20230116.805
-;; Package-Commit: 763f28b2d132ed94bb57ca08ef12ff1454b7f7d3
+;; Version: 0.1.2
+;; Package-Version: 20230226.320
+;; Package-Commit: 0a00b9f5a86a54324f88c7d27b603f136ee2fb0b
 
 ;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
 ;; URL: http://github.com/redguardtoo/shenshou
@@ -327,21 +327,17 @@ If it's empty, user is required to provide password during login process."
       (setq video-info (plist-put video-info :moviekind "tv"))
       (setq video-info (plist-put video-info :query (shenshou-process-query name)))
       (setq video-info (plist-put video-info :season (match-string 2 name)))
-      (setq video-info (plist-put video-info :episode (match-string 3 name)))
-      (setq video-info (plist-put video-info :team (shenshou-trim (match-string 4 name)))))
+      (setq video-info (plist-put video-info :episode (match-string 3 name))))
 
      ((string-match shenshou-tvshow-regex-2 name)
       (setq video-info (plist-put video-info :moviekind "tv"))
       (setq video-info (plist-put video-info :query (shenshou-process-query name)))
-      (setq video-info (plist-put video-info :season (match-string 2 name)))
-      (setq video-info (plist-put video-info :episode (match-string 3 name)))
-      (setq video-info (plist-put video-info :team (shenshou-trim (match-string 4 name)))))
+      (setq video-info (plist-put video-info :season (match-string 2 name))))
 
      ((string-match shenshou-movie-regex-1 name)
       (setq video-info (plist-put video-info :moviekind "movie"))
       (setq video-info (plist-put video-info :query (shenshou-process-query name)))
-      (setq video-info (plist-put video-info :movieyear (match-string 2 name)))
-      (setq video-info (plist-put video-info :team (shenshou-trim (match-string 3 name)))))
+      (setq video-info (plist-put video-info :movieyear (match-string 2 name))))
 
      (t
       (setq video-info (plist-put video-info :moviekind "unknown"))
@@ -354,16 +350,18 @@ If it's empty, user is required to provide password during login process."
 
     video-info))
 
-(defun shenshou-params-from-videos (video-file)
-  "Generate rpc parameters from VIDEO-FILE."
-  (let* (rlt video-info extra)
+(defun shenshou-params-from-videos (video-file user-input-p)
+  "Generate rpc parameters from VIDEO-FILE.
+If USER-INPUT-P is t, user can input query."
+  (let* (rlt video-info extra query)
     (cond
      ;; guess info from base file name
      ((setq video-info (shenshou-guess-video-info video-file))
-
+      (setq query (plist-get video-info :query))
+      (when user-input-p
+        (setq query (read-string "Please input query: " query)))
       (setq extra (shenshou-format-struct-member "query"
-                                                 (format "<string>%s</string>"
-                                                         (plist-get video-info :query))))
+                                                 (format "<string>%s</string>" query)))
 
       (when (string= (plist-get video-info :moviekind) "tv")
         (setq extra (concat extra
@@ -432,12 +430,18 @@ If FILTER-LEVEL is 2, do more checking on movie name."
       (setq movie-year-match-p
             (or (not (plist-get video-info :movieyear))
                 (string= movie-year (plist-get video-info :movieyear))))
+      (when shenshou-debug
+        (message "movie-year=%s movie-year-match-p=%s"
+                 movie-year
+                 movie-year-match-p))
       (cond
        ((eq filter-level 0)
         (setq ok-p t))
        ((eq filter-level 1)
         (setq ok-p (and movie-release-name movie-year-match-p)))
        ((eq filter-level 2)
+        (when shenshou-debug
+          (message "movie-fuzzy-name=%s movie-release-name=%s" movie-fuzzy-name movie-release-name))
         (setq ok-p (and movie-release-name
                         (string-match (concat "^" movie-fuzzy-name)
                                       (downcase movie-release-name))
@@ -460,12 +464,13 @@ If FILTER-LEVEL is 2, do more checking on movie name."
 
     subtitles))
 
-(defun shenshou-search-subtitles (video-file)
-  "Search subtitles of VIDEO-FILE."
+(defun shenshou-search-subtitles (video-file user-input-p)
+  "Search subtitles of VIDEO-FILE.
+If USER-INPUT-P is t, user can input query."
   ;; @see https://trac.opensubtitles.org/projects/opensubtitles/wiki/XmlRpcSearchSubtitles
   (let* ((post-data (shenshou-xml-rpc-post-data "SearchSubtitles"
                                                 (concat (shenshou-format-param (format "<string>%s</string>" (car shenshou-token)))
-                                                        (shenshou-params-from-videos video-file))))
+                                                        (shenshou-params-from-videos video-file user-input-p))))
          (xml-tree (shenshou-xml-rpc-call post-data))
          candidates
          subtitles)
@@ -517,8 +522,9 @@ If FILTER-LEVEL is 2, do more checking on movie name."
               "srt"))))
 
 ;;;###autoload
-(defun shenshou-download-subtitle-internal (video-file)
-  "Download subtitle of VIDEO-FILE."
+(defun shenshou-download-subtitle-internal (video-file user-input-p)
+  "Download subtitle of VIDEO-FILE.
+If USER-INPUT-P is t, user can input query."
   ;; @see http://blog.likewise.org/2013/09/using-curl-to-access-bugzillas-xml-rpc-api/
   (let* (subtitles selected token-p)
 
@@ -531,7 +537,7 @@ If FILTER-LEVEL is 2, do more checking on movie name."
 
     (when token-p
       ;; search subtitles
-      (setq subtitles (shenshou-search-subtitles video-file))
+      (setq subtitles (shenshou-search-subtitles video-file user-input-p))
       (when shenshou-debug
         (message "shenshou-search-subtitles returns: %s" subtitles))
 
@@ -576,19 +582,24 @@ If FILTER-LEVEL is 2, do more checking on movie name."
                   videos))))
 
 ;;;###autoload
-(defun shenshou-download-subtitle ()
+(defun shenshou-download-subtitle (&optional user-input-p)
   "Download subtitles of video files.
 If current buffer is Dired buffer, marked videos will be processed.
-Or else user need specify the video to process."
-  (interactive)
+Or else user need specify the video to process.
+If USER-INPUT-P is t, user can input query."
+  (interactive "P")
   (let* ((videos (shenshou-get-videos)))
 
     (cond
      ((> (length videos) 0)
-      (message "Fetching subtitles of %d video(s) ..." (length videos))
+      (message "Fetching subtitles of %d video(s) ..."
+               (length videos))
+
       (dolist (v videos)
-        ;; make sure full path is passed because directory name might be used too
-        (shenshou-download-subtitle-internal (file-truename v))))
+        ;; make sure full path is passed because parent directory
+        ;; name might be used too
+        (shenshou-download-subtitle-internal (file-truename v)
+                                             user-input-p)))
 
      (t
       (message "No video files are selected.")))))
