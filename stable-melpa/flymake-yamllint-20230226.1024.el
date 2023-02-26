@@ -5,8 +5,8 @@
 ;; Author: Martin Kjær Jørgensen <mkj@gotu.dk>
 ;; Created: 26 November 2021
 ;; Version: 0.1.4
-;; Package-Version: 20220531.913
-;; Package-Commit: f269e6614993f3c56d545e7d7b225ca2ba1da342
+;; Package-Version: 20230226.1024
+;; Package-Commit: 020d2a33568c8069801db9dd6992b8961a58de8d
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/shaohme/flymake-yamllint
 ;;; Commentary:
@@ -54,6 +54,11 @@
   "Name of `yamllint' executable."
   :type 'string)
 
+(defcustom flymake-yamllint-arguments
+  nil
+  "A list of strings to pass to the yamllint program as arguments."
+  :type '(repeat (string :tag "Argument")))
+
 (defvar-local flymake-yamllint--proc nil)
 
 (defun flymake-yamllint (report-fn &rest _args)
@@ -75,7 +80,7 @@
          (make-process
           :name "flymake-yamllint" :noquery t :connection-type 'pipe
           :buffer (generate-new-buffer " *flymake-yamllint*")
-          :command (list flymake-yamllint--executable-path "-" "-f" "parsable")
+          :command `(,flymake-yamllint--executable-path ,@flymake-yamllint-arguments "-f" "parsable" "-")
           :sentinel
           (lambda (proc _event)
             (when (eq 'exit (process-status proc))

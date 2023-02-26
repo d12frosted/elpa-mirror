@@ -232,7 +232,7 @@
 	    ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	   (:commit . "0cf8b60f62876f3e75653a5fb30d5d5cdd74c586"))])
  (beframe .
-	  [(0 1 7)
+	  [(0 1 8)
 	   ((emacs
 	     (28 1)))
 	   "Isolate buffers per frame" tar
@@ -240,7 +240,7 @@
 	    (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
 	    (:authors
 	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	    (:commit . "287a5cbdfe346ddd09c4e5d988820779f4668f28"))])
+	    (:commit . "6f9c6322a285bc75191853ac0c7e2fefff0ac354"))])
  (bind-key .
 	   [(2 4 1)
 	    nil "A simple way to manage personal keybindings" tar
@@ -3445,7 +3445,7 @@
 	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
 	     (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
  (tramp .
-	[(2 6 0 1)
+	[(2 6 0 2)
 	 ((emacs
 	   (26 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -3454,7 +3454,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "5fafba6a17fe68ee657e5a8b2dba34e8d5723ff6"))])
+	  (:commit . "34d1f57ed0ac8a13a33ebd3f058f8e00f5b81346"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs

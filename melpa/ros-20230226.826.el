@@ -6,11 +6,11 @@
 ;; Maintainer: Max Beutelspacher <max@beutelspacher.eu>
 ;; Created: February 14, 2021
 ;; Version: 1.0.0
-;; Package-Version: 20221212.1047
-;; Package-Commit: b437e46bee8f64eec1b8e61f86476977dab6cdb4
+;; Package-Version: 20230226.826
+;; Package-Commit: a0d33da83424deeea484565a13c6930bda9b176a
 ;; Keywords: convenience tools
 ;; Homepage: https://github.com/DerBeutlin/ros.el
-;; Package-Requires: ((emacs "25.1"))
+;; Package-Requires: ((emacs "27.1"))
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
@@ -83,6 +83,41 @@
   (let ((cached-value (cdr (assoc key (cdr (assoc (ros-cache-key) ros-cache))))))
     (if cached-value cached-value (when generate (progn (ros-cache-store key (funcall generate)) (ros-cache-load key))))))
 
+(defun ros-ignore-package ()
+  (interactive)
+  (ros-ignore-package--helper))
+
+(defun ros-unignore-package ()
+  (interactive)
+  (ros-ignore-package--helper t))
+
+(defun ros-ignore-package--helper (&optional remove)
+  (let* ((locations  (ros-list-package-locations))
+         (candidates (seq-filter (lambda (package) (if (file-exists-p (concat (file-name-as-directory (cdr (assoc package locations))) "COLCON_IGNORE")) remove (not remove))) (kvalist->keys locations)))
+         (package-to-ignore (completing-read (concat "Package(s) to " (when remove "un") "ignore: ") (append '("ALL") candidates) nil t nil nil)))
+    (if (string= package-to-ignore "ALL") (mapc (lambda (loc) (ros-ignore-package--ignore-one loc remove)) (kvalist->values locations) ) (ros-ignore-package--ignore-one (cdr (assoc package-to-ignore locations)) remove))))
+
+(defun ros-ignore-package--ignore-one (location &optional remove)
+  (let ((filename (concat (file-name-as-directory location) "COLCON_IGNORE")))
+    (if remove (when (file-exists-p filename) (delete-file filename nil)) (unless (file-exists-p filename) (make-empty-file filename)))))
+
+
+(defun ros-clean-package (package)
+  (interactive (list (ros-completing-read-package)))
+  (when (y-or-n-p (format "Clean package %s?" package))
+    (mapc (lambda (subfolder) (delete-directory (concat (ros-current-tramp-prefix) (ros-current-workspace) "/" subfolder "/" package) t)) '("install" "build"))))
+
+(defun ros-clean-workspace ()
+  (interactive )
+  (let ((path (concat (ros-current-tramp-prefix) (ros-current-workspace))))
+    (when (y-or-n-p (format "Clean workspace %s?" path))
+      (mapc (lambda (subfolder) (delete-directory (concat path  "/" subfolder) t)) '("install" "build" "log")))))
+
+(defun ros-clean-test-results (package)
+  (interactive (list (ros-completing-read-package t)))
+  (let ((delete-function (lambda (package) (delete-directory (concat (ros-current-tramp-prefix) (ros-current-workspace) "/build/" package "/test_results") t))))
+    (if (string= package "ALL") (mapc delete-function (ros-list-packages)) (apply delete-function (list package)))))
+
 (defun ros-cache-clean ()
   (interactive)
   (setq ros-cache nil))
@@ -108,8 +143,8 @@
 (defun ros-shell-command-to-string (cmd &optional use-default-directory)
   (let ((path (if use-default-directory default-directory (concat (ros-current-tramp-prefix) "~"))))
     (with-shell-interpreter
-     :path path
-     :form (s-trim (shell-command-to-string (format "/bin/bash  -c \"%s && %s\" | sed -r \"s/\x1B\\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g\"" (ros-current-source-command) cmd))))))
+      :path path
+      :form (s-trim (shell-command-to-string (format "/bin/bash  -c \"%s && %s\" | sed -r \"s/\x1B\\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g\"" (ros-current-source-command) cmd))))))
 
 (defun ros-shell-command-to-list (cmd)
   (split-string (ros-shell-command-to-string cmd) "\n" t  "[\s\f\t\n\r\v\\]+"))
@@ -140,10 +175,10 @@
     (setq ros-current-workspace (nth (cl-position (completing-read "Workspace: " descriptions nil t nil nil (when ros-current-workspace (ros-workspace-to-string ros-current-workspace))) descriptions :test #'equal)  ros-workspaces))))
 
 
-(defun ros-completing-read-package ()
+(defun ros-completing-read-package (&optional add-catch-all)
   (let ((packages (ros-list-packages))
         (current-package (ros-current-package)))
-    (completing-read "Package: " packages nil t nil nil (when (member current-package packages) current-package))))
+    (completing-read "Package: " (if add-catch-all (append '("ALL") packages) packages)  nil t nil nil (when (member current-package packages) current-package))))
 
 (defun ros-completing-read-package-path ()
   (let* ((locations (ros-list-package-locations))
@@ -407,7 +442,7 @@
 (defun ros-get-tcr-command (package)
   (let ((default-directory (cdr (assoc package (ros-list-package-locations)))))
     (let ((git-root-dir (vc-root-dir)))
-      (format "&& (cd %s && git commit -am \"TCR\"; echo \"Commit\" && cd - && exit 0) || (cd %s && git reset --hard HEAD; echo \"Revert\" &&  cd - && exit 1) " git-root-dir git-root-dir))))
+      (format "&& (cd %s && git commit -am \"chore: TCR\"; echo \"Commit\" && cd - && exit 0) || (cd %s && git reset --hard HEAD; echo \"Revert\" &&  cd - && exit 1) " git-root-dir git-root-dir))))
 
 
 (defun ros-colcon-build-package (package &optional flags test use-tcr)
@@ -527,18 +562,20 @@
 
 (defhydra hydra-ros-main (:color blue :hint nil :foreign-keys warn)
   "
-_c_: Compile   _t_: Test   _w_: Set Workspace  _p_: packages
-_m_: Messages  _s_: Srvs   _a_: Actions        _x_: Clean Cache
+_c_: Compile   _t_: Test   _w_: Set Workspace  _p_: packages     _i_: ignore
+_m_: Messages  _s_: Srvs   _a_: Actions        _x_: Clean
 "
   ("c" ros-colcon-build-transient)
   ("t" ros-colcon-test-transient)
   ("w" ros-set-workspace)
   ("p" hydra-ros-packages/body)
+  ("i" hydra-ros-ignore/body)
   ("m" hydra-ros-messages/body)
   ("s" hydra-ros-srvs/body)
   ("a" hydra-ros-actions/body)
-  ("x" ros-cache-clean)
+  ("x" hydra-ros-clean/body)
   ("q" nil "quit" :color blue))
+
 
 (defhydra hydra-ros-packages (:color blue :hint nil :foreign-keys warn)
   "
@@ -586,7 +623,28 @@ _I_: Insert import statement for action type
   ("q" nil "quit hydra")
   ("^" hydra-ros-main/body "Go back"))
 
+(defhydra hydra-ros-ignore (:color blue :hint nil :foreign-keys warn)
 
+  "
+_+_: Ignore a package type at point               _-_: Unignore an ignored package
+"
+  ("+" ros-ignore-package)
+  ("-" ros-unignore-package)
+  ("q" nil "quit hydra")
+  ("^" hydra-ros-main/body "Go back"))
+
+(defhydra hydra-ros-clean (:color blue :hint nil :foreign-keys warn)
+
+  "
+_w_: Clean workspace    _p_: Clean package
+_c_: Clean cache        _t_: Test Results
+"
+  ("w" ros-clean-workspace)
+  ("p" ros-clean-package)
+  ("c" ros-cache-clean)
+  ("t" ros-clean-test-results)
+  ("q" nil "quit hydra")
+  ("^" hydra-ros-main/body "Go back"))
 
 (provide 'ros)
 ;;; ros.el ends here

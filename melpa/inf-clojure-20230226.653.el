@@ -6,8 +6,8 @@
 ;;       Olin Shivers <shivers@cs.cmu.edu>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/inf-clojure
-;; Package-Version: 20221114.616
-;; Package-Commit: e5ce3839835b9b561fca5810f43f413c96c197d9
+;; Package-Version: 20230226.653
+;; Package-Commit: fb9b5ea55f9ef02be32660cc29df15023968fb78
 ;; Keywords: processes, comint, clojure
 ;; Version: 3.2.1
 ;; Package-Requires: ((emacs "25.1") (clojure-mode "5.11"))
@@ -276,6 +276,16 @@ Checks the mode and that there is a live process."
         (push (buffer-name b) repl-buffers)))
     repl-buffers))
 
+(defun inf-clojure--prompt-repl-buffer (prompt)
+  "Prompt the user to select an inf-clojure repl buffer.
+PROMPT is a string to prompt the user.
+Returns nil when no buffer is selected."
+  (let ((repl-buffers (inf-clojure-repls)))
+    (if (> (length repl-buffers) 0)
+        (when-let ((repl-buffer (completing-read prompt repl-buffers nil t)))
+          (get-buffer repl-buffer))
+      (user-error "No buffers have an inf-clojure process"))))
+
 (defun inf-clojure-set-repl (always-ask)
   "Set an inf-clojure buffer as the active (default) REPL.
 If in a REPL buffer already, use that unless a prefix is used (or
@@ -283,14 +293,13 @@ ALWAYS-ASK).  Otherwise get a list of all active inf-clojure
 REPLS and offer a choice.  It's recommended to rename REPL
 buffers after they are created with `rename-buffer'."
   (interactive "P")
-  (if (and (not always-ask)
-           (inf-clojure-repl-p))
-      (setq inf-clojure-buffer (current-buffer))
-    (let ((repl-buffers (inf-clojure-repls)))
-     (if (> (length repl-buffers) 0)
-         (when-let ((repl-buffer (completing-read "Select default REPL: " repl-buffers nil t)))
-           (setq inf-clojure-buffer (get-buffer repl-buffer)))
-       (user-error "No buffers have an inf-clojure process")))))
+  (when-let ((new-repl-buffer
+              (if (or always-ask
+                      (not (inf-clojure-repl-p)))
+                  (inf-clojure--prompt-repl-buffer "Select default REPL: ")
+                (current-buffer))))
+    (setq inf-clojure-buffer new-repl-buffer)
+    (message "Current inf-clojure REPL set to %s" new-repl-buffer)))
 
 (defvar inf-clojure--repl-type-lock nil
   "Global lock for protecting against proc filter race conditions.

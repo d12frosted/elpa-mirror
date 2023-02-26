@@ -4,8 +4,8 @@
 
 ;; Author: Ankur Dave <ankurdave@gmail.com>
 ;; Url: https://github.com/ankurdave/color-identifiers-mode
-;; Package-Version: 20230210.2047
-;; Package-Commit: 9fd09481bbcdb35712d974d5bc3667f5a5900ddb
+;; Package-Version: 20230226.1111
+;; Package-Commit: 88e4cc7c9bcb443a40fa4ad1ecd45183521f483e
 ;; Created: 24 Jan 2014
 ;; Version: 1.1
 ;; Keywords: faces, languages
@@ -732,9 +732,9 @@ major mode, identifiers are saved to
 
 (defun color-identifiers:refontify ()
   "Refontify the buffer using font-lock."
-  (if (fboundp 'font-lock-flush)
-      (font-lock-flush)
-    (when font-lock-mode
+  (when font-lock-mode
+    (if (fboundp 'font-lock-flush)
+        (font-lock-flush)
       (with-no-warnings
         (font-lock-fontify-buffer)))))
 
