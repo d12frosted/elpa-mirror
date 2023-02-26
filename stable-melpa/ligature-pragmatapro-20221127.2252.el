@@ -2,6 +2,8 @@
 
 ;; Author: Yuri D'Elia <wavexx@thregr.org>
 ;; Version: 0.1
+;; Package-Version: 20221127.2252
+;; Package-Commit: 85f7b15a5cf5f2ee843bc0469e03602a0251c275
 ;; URL: https://gitlab.com/wavexx/ligature-pragmatapro.el
 ;; Package-Requires: ((emacs "28") (ligature "1.0"))
 ;; Keywords: faces, fonts, ligatures, programming-ligatures

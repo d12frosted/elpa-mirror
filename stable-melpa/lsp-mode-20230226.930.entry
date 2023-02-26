@@ -1,5 +1,5 @@
 (lsp-mode .
-	  [(20230223 2002)
+	  [(20230226 930)
 	   ((emacs
 	     (26 3))
 	    (dash
@@ -17,7 +17,7 @@
 	    (eldoc
 	     (1 11)))
 	   "LSP mode" tar
-	   ((:commit . "7a50934cbbe0aec1a1a054e7d13fce804a1708c6")
+	   ((:commit . "b45dea4f601b8c4d139b16ae7f471f1527fb26ff")
 	    (:authors
 	     ("Vibhav Pant, Fangrui Song, Ivan Yonchovski"))
 	    (:maintainer "Vibhav Pant, Fangrui Song, Ivan Yonchovski")

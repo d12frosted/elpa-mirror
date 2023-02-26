@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "5.0.0"))
-;; Package-Version: 20221211.941
-;; Package-Commit: 5eb75d86c143c1801c71b54fe0da832affc3adc3
+;; Package-Version: 20230226.857
+;; Package-Commit: 7f4a0321278642e5c94dbd39246afe9fd29d1798
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -336,7 +336,9 @@
                   ("audio" . ,(all-the-icons-faicon "file-audio-o" :face '(:foreground "LightGray")))
                   ("movie" . ,(all-the-icons-material "movie" :face '(:foreground "LightGray")))
                   ("book" . ,(all-the-icons-octicon "book" :face '(:foreground "LightGray")))
+                  ("ebook" . ,(all-the-icons-octicon "book" :face '(:foreground "LightSkyBlue")))
                   ("magazine" . ,(all-the-icons-faicon "file-text" :face '(:foreground "LightSkyBlue")))
+                  ("Ezine" . ,(all-the-icons-faicon "file-text" :face '(:foreground "LightSkyBlue")))
                   ("comic" . ,(all-the-icons-faicon "file-image-o" :face '(:foreground "LightGray")))
                   ("bookmark" . ,(all-the-icons-material "bookmark" :face '(:foreground "LightGray")))
                   ("plot" . ,(all-the-icons-faicon "bar-chart" :face '(:foreground "chartreuse")))
