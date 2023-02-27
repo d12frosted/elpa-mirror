@@ -2,13 +2,13 @@
 
 ;; Copyright (C) 2022 Kanon Kakuno
 
-;; Author: Kanon Kakuno <yadex205@outlook.jp>
+;; Author: Kanon Kakuno <yadex205@outlook.jp> and contributors
 ;; Homepage: https://github.com/yadex205/consult-ag
-;; Package-Requires: ((emacs "27.1") (consult "0.16"))
-;; Package-Version: 20220419.1721
-;; Package-Commit: 2460ae6829e86c9f1186a852304d919526838cb8
+;; Package-Requires: ((emacs "27.1") (consult "0.32"))
+;; Package-Version: 20230227.406
+;; Package-Commit: 9eb4df265aedf2628a714610c2ade6d2f21de053
 ;; SPDX-License-Identifier: MIT
-;; Version: 0.1.2
+;; Version: 0.2.0
 
 ;; This file is not part of GNU Emacs.
 
@@ -50,7 +50,7 @@ FIND-FILE is the file open function, defaulting to `find-file`."
     (let ((file (get-text-property 0 'filename cand))
           (row (string-to-number (get-text-property 0 'row cand)))
           (column (- (string-to-number (get-text-property 0 'column cand)) 1)))
-      (consult--position-marker (funcall (or find-file #'find-file) file) row column))))
+      (consult--marker-from-line-column (funcall (or find-file #'find-file) file) row column))))
 
 (defun consult-ag--grep-state ()
   "Not documented."
@@ -65,11 +65,11 @@ FIND-FILE is the file open function, defaulting to `find-file`."
 (defun consult-ag (&optional target initial)
   "Consult ag for query in TARGET file(s) with INITIAL input."
   (interactive)
-  (let* ((prompt-dir (consult--directory-prompt "Consult ag: " target))
-         (default-directory (cdr prompt-dir)))
+  (pcase-let* ((`(,prompt ,paths ,dir) (consult--directory-prompt "Consult ag: " target))
+               (default-directory dir))
     (consult--read (consult--async-command #'consult-ag--builder
                      (consult--async-map #'consult-ag--format))
-                   :prompt (car prompt-dir)
+                   :prompt prompt
                    :lookup #'consult--lookup-member
                    :state (consult-ag--grep-state)
                    :initial (consult--async-split-initial initial)

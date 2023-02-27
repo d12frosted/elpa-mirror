@@ -4,8 +4,8 @@
 
 ;; Author: Anton Hibl <antonhibl11@gmail.com>
 ;; URL: https://github.com/antonhibl/gptai
-;; Package-Version: 20230224.840
-;; Package-Commit: fde04c9905de2a7ded5a1590e8296fee801d313a
+;; Package-Version: 20230227.553
+;; Package-Commit: 114d69dfdb3ee02ca2d23065a47207f383b091fd
 ;; Keywords: comm, convenience
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.1"))
@@ -64,7 +64,10 @@
 ;; default values for local variables
 (defvar gptai-base-url "https://api.openai.com/v1/completions")
 (defvar gptai-model nil)
-(defvar gptai-api-key nil)
+(defcustom gptai-api-key ""
+  "API key for OpenAI."
+  :type 'string
+  :group 'gptai)
 (defvar url-http-end-of-headers)
 (defvar gptai-image)
 (defvar gptai-images)

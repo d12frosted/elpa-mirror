@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.6-alpha
-;; Package-Version: 20230212.1208
-;; Package-Commit: c765b73b370f0fcaaa3cee28b2be69652e2d2c39
+;; Package-Version: 20230227.342
+;; Package-Commit: f4567202bbe76a211e454525e6d093a86a1cef14
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -882,8 +882,9 @@ Group 6 matches the closing square brackets.")
   (concat "\\(" (regexp-opt markdown-uri-types) ":[^]\t\n\r<>; ]+\\)")
   "Regular expression for matching inline URIs.")
 
+;; CommanMark specification says scheme length is 2-32 characters
 (defconst markdown-regex-angle-uri
-  (concat "\\(<\\)\\(" (regexp-opt markdown-uri-types) ":[^]\t\n\r<>,;()]+\\)\\(>\\)")
+  (concat "\\(<\\)\\([a-z][a-z0-9.+-]\\{1,31\\}:[^]\t\n\r<>,;()]+\\)\\(>\\)")
   "Regular expression for matching inline URIs in angle brackets.")
 
 (defconst markdown-regex-email
