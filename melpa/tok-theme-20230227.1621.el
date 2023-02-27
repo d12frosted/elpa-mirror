@@ -1,9 +1,9 @@
-;;; tok-theme.el --- Minimal, calm and dark theme for Emacs -*- lexical-binding: t; -*-
+;;; tok-theme.el --- Minimal, calm and light theme for Emacs -*- lexical-binding: t; -*-
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230227.1357
-;; Package-Commit: f0d7193595c9b19e3b96d19c3b2f39456872bf26
+;; Package-Version: 20230227.1621
+;; Package-Commit: abf60a5bc6254152c67aa167d0c02957838c93d1
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -36,19 +36,17 @@
 
 ;;; Commentary:
 
-;; Tok is a minimal, calm and dark theme for Emacs.
+;; Tok is a minimal, calm and light theme for Emacs.
 
 ;;; Code:
 
 (deftheme tok
-  "Minimal, calm and dark theme for Emacs")
+  "Minimal, calm and light theme for Emacs")
 
 (let ((class '((class color) (min-colors 89)))
-      (fg     "#dedede")
-      (bg     "#121212")
-      (grey-1 "#212121")
-      (grey-2 "#484848")
-      (comment "#757575"))
+      (fg "#212121") (bg "#ffffff")
+      (cyan "#b2ebf2")
+      (grey "#eeeeee") (dark-grey "#bcbcbc"))
   (custom-theme-set-faces
    'tok
    ;; In case you're using this theme in terminal, let the terminal
@@ -59,32 +57,33 @@
      `(default ((,class (:foreground ,fg :background ,bg)))))
 
    ;; Basic faces
-   `(highlight ((,class (:background ,grey-1))))
+   `(highlight ((,class (:background ,grey))))
    `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
-                      :background ,grey-2))))
+                      :background ,cyan))))
    `(secondary-selection ((,class (:inherit region))))
    `(trailing-whitespace ((,class (:background "hotpink"))))
    `(error ((,class (:weight bold :foreground "red"))))
-   `(warning ((,class (:weight bold :foreground "orange"))))
+   `(warning ((,class (:weight bold :foreground "amber"))))
    `(success ((,class (:weight bold :foreground "green"))))
    `(fringe ((t (nil))))
    `(button ((,class (:underline t))))
 
    ;; Line-numbes
-   `(line-number ((,class (:foreground ,grey-2))))
+   `(line-number ((,class (:foreground ,dark-grey))))
    `(line-number-current-line ((,class (:inherit highlight))))
 
    ;; Mode-line
-   `(mode-line ((,class (:foreground ,fg :background ,grey-1 :box (:line-width -1 :style released-button)))))
+   `(mode-line ((,class (:foreground ,fg :background ,grey :box (:line-width -1 :style released-button)))))
    (when (>= emacs-major-version 29)
      `(mode-line-active ((,class (:inherit mode-line)))))
-   `(mode-line-inactive ((,class (:weight light :foreground ,grey-2 :background "black"))))
+   `(mode-line-inactive ((,class (:weight light :foreground ,fg
+                                          :background ,dark-grey))))
    `(mode-line-highlight ((t (nil))))
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-buffer-id ((,class (:weight bold))))
 
    ;; Font-lock
-   `(font-lock-comment-face ((,class (:foreground ,comment))))
+   `(font-lock-comment-face ((,class (:weight bold))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-string-face ((t (nil))))
    `(font-lock-doc-face ((, class(:inherit font-lock-comment-face))))
@@ -102,7 +101,7 @@
    `(font-lock-regexp-grouping-construct ((t (nil))))
 
    ;; Dired
-   `(dired-directory ((,class (:foreground "cyan"))))
+   `(dired-directory ((,class (:foreground "blue"))))
    `(dired-symlink ((,class (:foreground "magenta"))))
    `(dired-broken-symlink ((,class (:foreground "red"))))
 

@@ -5,8 +5,8 @@
 ;; Author: Julien Danjou <julien@danjou.info>
 ;; Maintainer: stardiviner <numbchild@gmail.com>
 ;; Keywords: contacts, org-mode, outlines, hypermedia, calendar
-;; Package-Version: 20221221.431
-;; Package-Commit: bb4032eb12c20d34555a4e670f28696cf31a7b54
+;; Package-Version: 20230227.1417
+;; Package-Commit: ae45b9413e24abdc431d12858dced54e0dee6e39
 ;; Version: 1.1
 ;; Package-Requires: ((emacs "27.1") (org "9.3.4"))
 ;; Homepage: https://repo.or.cz/org-contacts.git
@@ -902,6 +902,7 @@ This adds `org-contacts-gnus-check-mail-address' and
   (add-hook 'gnus-article-prepare-hook #'org-contacts-gnus-check-mail-address)
   (add-hook 'gnus-article-prepare-hook #'org-contacts-gnus-store-last-mail))
 
+;;;###autoload
 (defun org-contacts-setup-completion-at-point ()
   "Add `org-contacts-message-complete-function' as a new function
 to complete the thing at point."
