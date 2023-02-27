@@ -5,8 +5,8 @@
 
 Installation
 
-  If you install this package using a package manager, then already `brec-mode` should activate
-  for any `.brec` file you load.  Alternatively you may want to install the mode manually:
+  If you install this package from MELPA using a package manager, then already `brec-mode` should
+  activate for any `.brec` file you load.  Alternatively you may want to install the mode manually:
 
       1. Put a copy of `brec-mode.el` on your load path.
          https://www.gnu.org/software/emacs/manual/html_node/elisp/Library-Search.html
