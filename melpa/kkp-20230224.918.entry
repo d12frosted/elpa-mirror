@@ -1,0 +1,13 @@
+(kkp .
+     [(20230224 918)
+      ((emacs
+	(27 1))
+       (compat
+	(29 1 3 4)))
+      "Enable support for the Kitty Keyboard Protocol" single
+      ((:commit . "7e1c1d5f1e43b3d0d34f1e164a5c5e32c2c09ac2")
+       (:authors
+	("Benjamin Orthen" . "contact@orthen.net"))
+       (:maintainer "Benjamin Orthen" . "contact@orthen.net")
+       (:keywords "terminals")
+       (:url . "https://github.com/benjaminor/kkp"))])
