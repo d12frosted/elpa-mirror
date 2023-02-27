@@ -4,8 +4,8 @@
 
 ;; Author: Isa Mert Gurbuz <isamertgurbuz@gmail.com>
 ;; Version: 3.0.0
-;; Package-Version: 20230225.1914
-;; Package-Commit: 05be118e3d0997a141f62602f2355f7da9685131
+;; Package-Version: 20230226.2322
+;; Package-Commit: 4e42b9b066ff0cd970328d769d736655be635e7e
 ;; Homepage: https://github.com/isamert/empv.el
 ;; License: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "28.1"))
@@ -98,16 +98,18 @@ commands if this variable is nil."
   :group 'empv)
 
 (defcustom empv-audio-dir (or (getenv "XDG_MUSIC_DIR") "~/Music")
-  "The directory that you keep your music in."
-  :type 'directory
+  "The directory (or list of directories) that you keep your music in."
+  :type '(choice (directory :tag "Audio directory")
+                 (list :tag "List of audio directories"))
   :group 'empv)
 
 (defcustom empv-video-dir (or (getenv "XDG_VIDEOS_DIR") "~/Videos")
-  "The directory that you keep your videos in."
-  :type 'directory
+  "The directory (or list of directories) that you keep your videos in."
+  :type '(choice (directory :tag "Video directory")
+                 (list :tag "List of video directories"))
   :group 'empv)
 
-(defcustom empv-playlist-dir empv-audio-dir
+(defcustom empv-playlist-dir (or (getenv "XDG_MUSIC_DIR") "~/Music")
   "The directory that you keep your playlists in."
   :type 'directory
   :group 'empv)
@@ -1225,7 +1227,7 @@ VIDEO-ID can be either a YouTube URL or just a YouTube ID."
 
 ;;; Videos and music
 
-(defun empv--find-files (path extensions &optional depth)
+(defun empv--find-files-1 (path extensions &optional depth)
   "Find files with given EXTENSIONS under given PATH.
 PROMPT is shown when `completing-read' is called."
   (let ((default-directory path))
@@ -1237,6 +1239,12 @@ PROMPT is shown when `completing-read' is called."
       (shell-command-to-string)
       (empv-flipcall #'split-string "\n")
       (empv-seq-init))))
+
+(defun empv--find-files (path extensions &optional depth)
+  "Like `empv--find-files-1' but PATH can be a list."
+  (if (listp path)
+      (seq-mapcat (lambda (it) (empv--find-files-1 it extensions depth)) (seq-filter (lambda (it) (file-directory-p it)) path))
+    (empv--find-files-1 path extensions depth)))
 
 (defun empv--select-file (prompt path extensions &optional depth)
   "Select a file interactively under given PATH.
