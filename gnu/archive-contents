@@ -3014,7 +3014,7 @@
 	     ("Michael R. Mauger" . "michael@mauger.com"))
 	    (:url . "https://elpa.gnu.org/packages/shelisp.html"))])
  (shell-command+ .
-		 [(2 4 1)
+		 [(2 4 2)
 		  ((emacs
 		    (24 3)))
 		  "An extended shell-command" tar
@@ -3023,7 +3023,7 @@
 		   (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
 		   (:authors
 		    ("Philip Kaludercic" . "philipk@posteo.net"))
-		   (:commit . "ba5a0faab4e9e0bd8344bb042edd6169491502ce"))])
+		   (:commit . "7121adb48e6fb5f03030701b9f1e25b929cb3cd3"))])
  (shen-mode .
 	    [(0 1)
 	     nil "A major mode for editing shen source code" tar
