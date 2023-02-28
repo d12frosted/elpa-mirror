@@ -4,8 +4,8 @@
 
 ;; Author: Ankur Dave <ankurdave@gmail.com>
 ;; Url: https://github.com/ankurdave/color-identifiers-mode
-;; Package-Version: 20230226.1111
-;; Package-Commit: 88e4cc7c9bcb443a40fa4ad1ecd45183521f483e
+;; Package-Version: 20230227.2357
+;; Package-Commit: 8575632fec5740b3ef331953edfaba169b06322d
 ;; Created: 24 Jan 2014
 ;; Version: 1.1
 ;; Keywords: faces, languages
@@ -80,6 +80,8 @@ major mode")
               (print "Major mode is not supported by color-identifiers, disabling")
               (color-identifiers-mode -1))
           (color-identifiers:regenerate-colors)
+          (when (null color-identifiers:color-index-for-identifier)
+            (setq color-identifiers:color-index-for-identifier (make-hash-table :test 'equal)))
           (color-identifiers:refresh)
           (add-to-list 'font-lock-extra-managed-props 'color-identifiers:fontified)
           (font-lock-add-keywords nil '((color-identifiers:colorize . default)) t)
@@ -660,7 +662,7 @@ Colors are output to `color-identifiers:colors'."
                       (apply 'color-rgb-to-hex rgb)))
                   chosens)))))
 
-(defvar-local color-identifiers:color-index-for-identifier (make-hash-table :test 'equal)
+(defvar-local color-identifiers:color-index-for-identifier nil
   "Hashtable of identifier-index pairs for internal use.
 The index refers to `color-identifiers:colors'. Only used when
 `color-identifiers-coloring-method' is `sequential'.")

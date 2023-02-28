@@ -2,8 +2,6 @@
 
 ;; Author: SeungKi Kim <tttuuu888@gmail.com>
 ;; URL: https://github.com/tttuuu888/korean-holidays
-;; Package-Version: 20190102.1558
-;; Package-Commit: 3f90ed86f46f8e5533f23baa40e2513ac497ca2b
 ;; Version: 0.1.0
 ;; Keywords: calendar
 

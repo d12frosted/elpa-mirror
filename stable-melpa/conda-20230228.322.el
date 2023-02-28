@@ -3,9 +3,9 @@
 ;; Copyright (C) 2016-2022 Rami Chowdhury
 ;; Author: Rami Chowdhury <rami.chowdhury@gmail.com>
 ;; URL: http://github.com/necaris/conda.el
-;; Package-Commit: 28f51e49fd25abff14c1b46dea196a90a77ced64
+;; Package-Commit: f90598f54af78469e61497560ddad05344810a35
 ;; Version: 0.4
-;; Package-Version: 20230221.1603
+;; Package-Version: 20230228.322
 ;; Package-X-Original-Version: 0.4
 ;; Keywords: languages, local, tools, python, environment, conda
 ;; Package-Requires: ((emacs "25.1") (pythonic "0.1.0") (dash "2.13.0") (s "1.11.0") (f "0.18.2"))
@@ -272,10 +272,10 @@ Set for the lifetime of the process.")
 
 (defun conda--infer-env-from-buffer ()
   "Search up the project tree for an `environment.yml` defining a conda env."
-  (let ((working-file-or-dir (or (buffer-file-name) default-directory)))
-    (when working-file-or-dir
-      (conda--get-name-from-env-yml (conda--find-env-yml (f-dirname working-file-or-dir)))
-        (working-dir (or default-directory (f-dirname filename))))
+  (let* ((filename (buffer-file-name))
+         (working-dir (if filename
+                          (f-dirname filename)
+                        default-directory)))
     (when working-dir
       (or
        (conda--get-name-from-env-yml (conda--find-env-yml working-dir))
@@ -283,7 +283,7 @@ Set for the lifetime of the process.")
             conda-activate-base-by-default
             (alist-get 'auto_activate_base (conda--get-config)))
            "base"
-         nil)))))
+	 nil)))))
 
 (cl-defstruct conda-env-params
   "Parameters necessary for (de)activating a Conda environment."
