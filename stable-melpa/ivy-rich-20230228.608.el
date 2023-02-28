@@ -5,8 +5,8 @@
 ;; Author: Yevgnen Koh <wherejoystarts@gmail.com>
 ;; Homepage: https://github.com/Yevgnen/ivy-rich
 ;; Package-Requires: ((emacs "25.1") (ivy "0.13.0"))
-;; Package-Version: 20210409.931
-;; Package-Commit: 600b8183ed0be8668dcc548cc2c8cb94b001363b
+;; Package-Version: 20230228.608
+;; Package-Commit: 4fdd4669d69c9e8248b361b6e069b27d10e809e4
 ;; Version: 0.1.6
 ;; Keywords: convenience, ivy
 
@@ -392,7 +392,7 @@ or /a/…/f.el."
         ;; if valid filename, i.e. buffer visiting file:
         (if fn
             ;; return containing directory
-            (directory-file-name fn)
+            (file-name-directory fn)
           ;; else if mode explicitly offering list-buffers-directory, return that; else nil.
           ;; buffers that don't explicitly visit files, but would like to show a filename,
           ;; e.g. magit or dired, set the list-buffers-directory variable

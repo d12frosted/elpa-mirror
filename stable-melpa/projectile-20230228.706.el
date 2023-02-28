@@ -1,11 +1,11 @@
 ;;; projectile.el --- Manage and navigate projects in Emacs easily -*- lexical-binding: t -*-
 
-;; Copyright © 2011-2022 Bozhidar Batsov <bozhidar@batsov.dev>
+;; Copyright © 2011-2023 Bozhidar Batsov <bozhidar@batsov.dev>
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20230224.2116
-;; Package-Commit: 4f657d4b16c1db892fcda7de94cd13db1b5568d0
+;; Package-Version: 20230228.706
+;; Package-Commit: 5143d32abd92ed111dc0cb69bf21946de7c6eadc
 ;; Keywords: project, convenience
 ;; Version: 2.7.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -5174,7 +5174,8 @@ with a prefix ARG."
 
 Normally you'll be prompted for a compilation command, unless
 variable `compilation-read-command'.  You can force the prompt
-with a prefix ARG."
+with a prefix ARG.  Per project default command can be set through
+`projectile-project-compilation-cmd'."
   (interactive "P")
   (let ((command (projectile-compilation-command (projectile-compilation-dir)))
         (command-map (if (projectile--cache-project-commands-p) projectile-compilation-cmd-map)))
