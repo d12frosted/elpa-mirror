@@ -1,5 +1,5 @@
 (org-ref .
-	 [(20230224 1257)
+	 [(20230301 1259)
 	  ((org
 	    (9 4))
 	   (dash
@@ -23,7 +23,7 @@
 	   (ox-pandoc
 	    (0)))
 	  "citations, cross-references and bibliographies in org-mode" tar
-	  ((:commit . "01b7f5cbd56639bee0333ef7c344c3b8db21fdf1")
+	  ((:commit . "348cb860e5cfc2b32870e826218df16cf90e7d75")
 	   (:authors
 	    ("John Kitchin" . "jkitchin@andrew.cmu.edu"))
 	   (:maintainer "John Kitchin" . "jkitchin@andrew.cmu.edu")
