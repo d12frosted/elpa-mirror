@@ -6,9 +6,9 @@
 ;; Created: 03 October 2001. (as utility functions in my `.emacs' file.)
 ;;          14 March   2010. (re-written as library `volatile-highlights.el')
 ;; Keywords: emulations convenience wp
-;; Package-Version: 20230220.1415
-;; Package-Commit: 513c8b73cd3bc06cb9936a100468c227f649851c
-;; Revision: $Id: 3e53e0dd17fc797ad36fbe50562ee3e2abcc8ccb $
+;; Package-Version: 20230301.1402
+;; Package-Commit: fcf6e2778454ce514c189a7d1fe70e03ad81c325
+;; Revision: $Id: 1a65157904ec58ed515858a20cbebcde528a51db $
 ;; URL: http://www.emacswiki.org/emacs/download/volatile-highlights.el
 ;; GitHub: http://github.com/k-talo/volatile-highlights.el
 ;; Version: 1.15
@@ -551,11 +551,11 @@ extensions."
          ;; Three items
          (cl-assert (stringp (cl-first items)))
          (cl-assert (stringp (cl-second items)))
-         (cl-assert (stringp (third items)))
+         (cl-assert (stringp (cl-third items)))
          (apply 'format "%s, %s, and %s" items))
         (t
          ;; 4 or more items
-         (format "%s, %s" (cl-first items) (vhl/.make-list-string (rest items)))))))
+         (format "%s, %s" (cl-first items) (vhl/.make-list-string (cl-rest items)))))))
 
 ;; The following makes it trivial to define simple vhl extensions
 (defmacro vhl/define-extension (name &rest functions)

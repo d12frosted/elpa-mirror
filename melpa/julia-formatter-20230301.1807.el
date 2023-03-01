@@ -4,8 +4,8 @@
 
 ;; Author: Felipe Lema <felipe.lema@mortemale.org>
 ;; Keywords: convenience, tools
-;; Package-Version: 20230223.509
-;; Package-Commit: 5ffd8b745ea3f4f54b5ab243c1220bbb2f17e77a
+;; Package-Version: 20230301.1807
+;; Package-Commit: 6297a3e6b4b24ec0158b43b886be346043c2772f
 ;; Package-Requires: ((emacs "27.1") (session-async "0.0.4"))
 ;; URL: https://codeberg.org/FelipeLema/julia-formatter.el
 ;; Version: 0.3
@@ -225,7 +225,7 @@ If it's up and running, do nothing."
                           `("julia")
                           (when (julia-formatter--should-use-image)
                             `("--sysimage=formatter_service_sysimage.so"))
-                          `("ensure_compiled_and_launch.jl"))
+                          `("formatter_service.jl"))
                          :connection-type 'pipe
                          :coding 'utf-8-emacs-unix
                          :noquery t

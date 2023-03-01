@@ -1,11 +1,11 @@
 (julia-formatter .
-		 [(20230223 509)
+		 [(20230301 1807)
 		  ((emacs
 		    (27 1))
 		   (session-async
 		    (0 0 4)))
 		  "Use JuliaFormatter.jl for julia code" single
-		  ((:commit . "5ffd8b745ea3f4f54b5ab243c1220bbb2f17e77a")
+		  ((:commit . "6297a3e6b4b24ec0158b43b886be346043c2772f")
 		   (:authors
 		    ("Felipe Lema" . "felipe.lema@mortemale.org"))
 		   (:maintainer "Felipe Lema" . "felipe.lema@mortemale.org")

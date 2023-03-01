@@ -1,8 +1,8 @@
 ;;; flymake-eslint.el --- A Flymake backend for Javascript using eslint  -*- lexical-binding: t; -*-
 
 ;; Version: 1.6.0
-;; Package-Version: 20221002.2307
-;; Package-Commit: efbf9e1fcc6ba4959c4ad0435742c96099f4f96f
+;; Package-Version: 20230301.1441
+;; Package-Commit: 82b1345c699172b6092e13be2c4cc10551d88b90
 ;; Author: Dan Orzechowski
 ;; Contributor: Terje Larsen
 ;; URL: https://github.com/orzechowskid/flymake-eslint
@@ -174,7 +174,7 @@ argument."
                       ,(buffer-file-name source-buffer)
                       ,@(flymake-eslint--executable-args))
            :sentinel
-           (lambda (proc &rest ignored)
+           (lambda (proc &rest _ignored)
              ;; do stuff upon child process termination
              (when (and (eq 'exit (process-status proc))
                         ;; make sure we're not using a deleted buffer

@@ -3,4 +3,4 @@ syntax highlighting, indentation function and formatting.
 
 Format the current buffer with terraform-format-buffer. To always
 format terraform buffers when saving, use:
-  (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
+  (setq terraform-format-on-save t)
