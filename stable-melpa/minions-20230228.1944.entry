@@ -1,0 +1,13 @@
+(minions .
+	 [(20230228 1944)
+	  ((emacs
+	    (25 2))
+	   (compat
+	    (29 1 3 4)))
+	  "A minor-mode menu for the mode line" single
+	  ((:commit . "199b6022f82dc54e7cd58ca302810e16dc506b53")
+	   (:authors
+	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	   (:keywords "convenience")
+	   (:url . "https://github.com/tarsius/minions"))])

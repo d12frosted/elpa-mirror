@@ -1,0 +1,17 @@
+(mastodon .
+	  [(20230228 2031)
+	   ((emacs
+	     (27 1))
+	    (request
+	     (0 3 0))
+	    (persist
+	     (0 4))
+	    (ts
+	     (0 3)))
+	   "Client for Mastodon, a federated social network" tar
+	   ((:commit . "b9368c00359bc6407048669539957a45cac47297")
+	    (:authors
+	     ("Johnson Denen" . "johnson.denen@gmail.com")
+	     ("Marty Hiatt" . "martianhiatus@riseup.net"))
+	    (:maintainer "Marty Hiatt" . "martianhiatus@riseup.net")
+	    (:url . "https://codeberg.org/martianh/mastodon.el"))])
