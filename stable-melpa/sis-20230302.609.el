@@ -1,8 +1,8 @@
 ;;; sis.el --- Less manual switch for native or OS input source (input method). -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/laishulu/emacs-smart-input-source
-;; Package-Version: 20230228.1620
-;; Package-Commit: c9ce1031ea5ee033aee8542e035fa7ca174dab3f
+;; Package-Version: 20230302.609
+;; Package-Commit: b1f8e11fe40d13bcaf554635aed005415968853d
 ;; Created: March 27th, 2020
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "25.1") (terminal-focus-reporting "0.0"))
@@ -869,13 +869,14 @@ Only used for `terminal-focus-reporting'."
          (sis--string-match-p "^magit.*:" (buffer-name buffer)))
         (;; special buffer
          lambda (buffer)
-         (and (sis--string-match-p "^\*" (buffer-name buffer))
-              (not (sis--string-match-p "^\*new\*"
-                                        (downcase (buffer-name buffer))))
-              (not (sis--string-match-p "^\*dashboard\*"
-                                        (downcase (buffer-name buffer))))
-              (not (sis--string-match-p "^\*scratch\*"
-                                        (downcase (buffer-name buffer)))))))
+         (let ((normalized-buffer-name
+                (downcase (string-trim (buffer-name buffer)))))
+           (and (sis--string-match-p "^\*" normalized-buffer-name)
+                (not (sis--string-match-p "^\*new\*" normalized-buffer-name))
+                (not (sis--string-match-p "^\*dashboard\*"
+                                          normalized-buffer-name))
+                (not (sis--string-match-p "^\*scratch\*"
+                                          normalized-buffer-name))))))
   "Predicates on buffers to disable prefix overriding.")
 
 (defsubst sis--prefix-override-buffer-disable-p (buffer)
