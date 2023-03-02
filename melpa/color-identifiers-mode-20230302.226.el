@@ -4,8 +4,8 @@
 
 ;; Author: Ankur Dave <ankurdave@gmail.com>
 ;; Url: https://github.com/ankurdave/color-identifiers-mode
-;; Package-Version: 20230301.36
-;; Package-Commit: f4e06c9a24fb6063e6d42453221a4e0a1aa3ef05
+;; Package-Version: 20230302.226
+;; Package-Commit: 1bc474bdbb1086a73638effde51f37a9da748173
 ;; Created: 24 Jan 2014
 ;; Version: 1.1
 ;; Keywords: faces, languages
@@ -576,7 +576,7 @@ For Emacs Lisp support within color-identifiers-mode."
 ;;; PACKAGE INTERNALS ==========================================================
 
 (defvar color-identifiers:colors nil
-  "List of generated hex colors for internal use.")
+  "Vector of generated hex colors for internal use.")
 
 (defun color-identifiers:get-declaration-scan-fn (mode)
   "See `color-identifiers:set-declaration-scan-fn'."
@@ -625,11 +625,11 @@ Colors are output to `color-identifiers:colors'."
                (best (-max-by (lambda (x y) (> (cdr x) (cdr y))) min-dists)))
           (funcall choose-candidate (car best))))
       (setq color-identifiers:colors
-            (-map (lambda (lab)
-                    (let* ((srgb (apply 'color-lab-to-srgb lab))
-                           (rgb (mapcar 'color-clamp srgb)))
-                      (apply 'color-rgb-to-hex rgb)))
-                  chosens)))))
+            (vconcat (-map (lambda (lab)
+                             (let* ((srgb (apply 'color-lab-to-srgb lab))
+                                    (rgb (mapcar 'color-clamp srgb)))
+                               (apply 'color-rgb-to-hex rgb)))
+                           chosens))))))
 
 (defvar-local color-identifiers:color-index-for-identifier nil
   "Hashtable of identifier-index pairs for internal use.
@@ -747,7 +747,7 @@ be colored."
    ((eq color-identifiers-coloring-method 'sequential)
     (let ((index (gethash identifier color-identifiers:color-index-for-identifier)))
       (when index
-        (nth index color-identifiers:colors))))
+        (aref color-identifiers:colors index))))
    ((eq color-identifiers-coloring-method 'hash)
     ;; If there is a declaration scan function for this major mode, the
     ;; candidate identifier should only be colored if it is in the memoized list
@@ -758,8 +758,8 @@ be colored."
 
 (defun color-identifiers:hash-identifier (identifier)
   "Return a color for IDENTIFIER based on its hash."
-  (nth (% (abs (sxhash identifier)) color-identifiers:num-colors)
-       color-identifiers:colors))
+  (aref color-identifiers:colors
+        (% (abs (sxhash identifier)) color-identifiers:num-colors)))
 
 (defun color-identifiers:scan-identifiers (fn limit)
   "Run FN on all candidate identifiers from point up to LIMIT.
