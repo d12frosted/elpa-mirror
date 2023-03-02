@@ -1,9 +1,9 @@
-;;; tok-theme.el --- Dark and vibrant theme for Emacs -*- lexical-binding: t; -*-
+;;; tok-theme.el --- Minimal, calm and light theme for Emacs -*- lexical-binding: t; -*-
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230302.824
-;; Package-Commit: b356aa5db7eda45b9c2be2a32c58b84d46916370
+;; Package-Version: 20230302.1538
+;; Package-Commit: 9e06cfccb4332d9bfe52c2c1b26f6263e8bd2977
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -36,24 +36,14 @@
 
 ;;; Commentary:
 
-;; Tok is a dark and vibrant theme for Emacs.
+;; Tok is a minimal, calm and light theme for Emacs.
 
 ;;; Code:
 
 (deftheme tok
-  "Dark and vibrant theme for Emacs")
+  "Minimal, calm and light theme for Emacs")
 
-(let ((class '((class color) (min-colors 89)))
-      (fg "#fff") (bg "#000")
-      (red "#ff5252")
-      (pink "#ff4489")
-      (purple "#ba44ff")
-      (indigo "#5d44ff")
-      (blue "#40c4ff")
-      (cyan "#84ffff")
-      (green "#b2ff59")
-      (yellow "#ffff00")
-      (orange "#ffba44"))
+(let ((class '((class color) (min-colors 89))))
   (custom-theme-set-faces
    'tok
    ;; In case you're using this theme in terminal, let the terminal
@@ -61,55 +51,56 @@
    (when (display-graphic-p)
      `(cursor ((,class (:background "red")))))
    (when (display-graphic-p) ; Have to call `when' here due to reasons.
-     `(default ((,class (:foreground ,fg :background ,bg)))))
+     `(default ((,class (:foreground "black" :background "white")))))
 
    ;; Basic faces
-   `(highlight ((,class (:background "grey10"))))
+   `(highlight ((,class (:background "grey95"))))
    `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
-                      :background "grey35"))))
+                      :background "cyan3"))))
    `(secondary-selection ((,class (:inherit region))))
    `(trailing-whitespace ((,class (:background "hotpink"))))
    `(error ((,class (:weight bold :foreground "red"))))
    `(warning ((,class (:weight bold :foreground "orange"))))
    `(success ((,class (:weight bold :foreground "green"))))
-   `(fringe ((t (nil))))
+   `(fringe ((,class (:background "grey95"))))
    `(button ((,class (:underline t))))
+   `(vertical-border ((,class (:foreground "grey80"))))
 
    ;; Line-numbes
-   `(line-number ((,class (:foreground "grey30"))))
-   `(line-number-current-line ((,class (:inherit highlight))))
+   `(line-number ((,class (:foreground "grey70" :background "grey95"))))
+   `(line-number-current-line ((,class (:foreground "black" :background "grey95"))))
 
    ;; Mode-line
-   `(mode-line ((,class (:foreground ,fg :background ,bg :box (:line-width -1 :style released-button)))))
+   `(mode-line ((,class (:foreground "black" :background "grey95" :box (:line-width -1 :style released-button)))))
    (when (>= emacs-major-version 29)
      `(mode-line-active ((,class (:inherit mode-line)))))
    `(mode-line-inactive ((,class (:weight light
-                                          :foreground "grey50"
-                                          :background "grey10"))))
+                                          :foreground "grey20"
+                                          :background "grey90"))))
    `(mode-line-highlight ((t (nil))))
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-buffer-id ((,class (:weight bold))))
 
    ;; Font-lock
-   `(font-lock-comment-face ((,class (:foreground ,green))))
+   `(font-lock-comment-face ((,class (:weight bold :foreground "green4"))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-string-face ((,class (:foreground ,orange))))
-   `(font-lock-doc-face ((, class(:inherit font-lock-comment-face))))
+   `(font-lock-string-face ((t (nil))))
+   `(font-lock-doc-face ((t (nil))))
    `(font-lock-doc-markup-face ((t (nil))))
-   `(font-lock-keyword-face ((,class (:foreground ,blue))))
-   `(font-lock-builtin-face ((,class (:foreground ,cyan))))
-   `(font-lock-function-name-face ((,class (:foreground ,cyan))))
+   `(font-lock-keyword-face ((t (nil))))
+   `(font-lock-builtin-face ((t (nil))))
+   `(font-lock-function-name-face ((t (nil))))
    `(font-lock-variable-name-face ((t (nil))))
-   `(font-lock-type-face ((,class (:foreground ,blue))))
-   `(font-lock-constant-face ((,class (:foreground ,cyan))))
-   `(font-lock-warning-face ((,class (:inherit error))))
+   `(font-lock-type-face ((t (nil))))
+   `(font-lock-constant-face ((t (nil))))
+   `(font-lock-warning-face ((t (nil))))
    `(font-lock-negation-char-face ((t (nil))))
    `(font-lock-preprocessor-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-regexp-grouping-backslash ((t (nil))))
    `(font-lock-regexp-grouping-construct ((t (nil))))
 
    ;; Dired
-   `(dired-directory ((,class (:foreground "cyan"))))
+   `(dired-directory ((,class (:foreground "blue"))))
    `(dired-symlink ((,class (:foreground "magenta"))))
    `(dired-broken-symlink ((,class (:foreground "red"))))
 
@@ -124,7 +115,7 @@
    `(org-block ((t (nil))))
 
    ;; Outline
-   `(outline-1 ((,class (:inherit font-lock-comment-face))))
+   `(outline-1 ((,class (:weight bold))))
    `(outline-2 ((,class (:inherit outline-1))))
    `(outline-3 ((,class (:inherit outline-1))))
    `(outline-4 ((,class (:inherit outline-1))))
@@ -132,6 +123,11 @@
    `(outline-6 ((,class (:inherit outline-1))))
    `(outline-7 ((,class (:inherit outline-1))))
    `(outline-8 ((,class (:inherit outline-1))))
+
+   ;; Show paren
+   `(show-paren-match ((,class (:background "green"))))
+   `(show-paren-match-expression ((,class (:inherit show-paren-match))))
+   `(show-paren-mismatch ((,class (:foreground "white" :background "purple"))))
 
    ;; Terraform
    `(terraform--resource-name-face ((t (nil))))

@@ -2,8 +2,8 @@
 ;;; ligo-mode.el --- A major mode for editing LIGO source code
 
 ;; Version: 0.2.0
-;; Package-Version: 20230227.2202
-;; Package-Commit: f14a12fa6a6af8a0980dbae8b7bbd50e3d741ece
+;; Package-Version: 20230302.1616
+;; Package-Commit: d1073474efc9e0a020a4bcdf5e0c12a217265a3a
 ;; Author: LigoLang SASU
 ;; Url: https://gitlab.com/ligolang/ligo/-/tree/dev/tools/emacs
 ;; Keywords: languages
@@ -229,8 +229,8 @@
   "Support for LIGO code.";  :link '(url-link "https://www.ligolang.org/")
   :group 'languages)
 
-(defcustom ligo-squirrel-bin "ligo-squirrel"
-  "Path to LIGO language server executable."
+(defcustom ligo-bin "ligo"
+  "Path to LIGO executable."
   :type 'string
    :group 'ligo)
 ;; Forward declarations for byte compiler
@@ -241,13 +241,13 @@
 
 ;;;###autoload
 (defun ligo-setup-lsp ()
-  "Set up an LSP backend for ligo that will use `ligo-squirrel-bin'."
+  "Set up an LSP backend for ligo that will use `ligo-bin'."
   (interactive)
   (add-to-list 'lsp-language-id-configuration '(ligo-pascal-mode . "ligo"))
   (add-to-list 'lsp-language-id-configuration '(ligo-caml-mode . "ligo"))
   (lsp-register-client
    (make-lsp-client
-    :new-connection (lsp-stdio-connection `(,ligo-squirrel-bin))
+    :new-connection (lsp-stdio-connection `(,ligo-bin "lsp"))
     :major-modes '(ligo-pascal-mode ligo-caml-mode)
     :server-id 'ligo)))
 (defun ligo-syntax-table ()
@@ -298,7 +298,7 @@
 		)
 		(,";"
 		)
-		(,"\\b\\(of)\\b"
+		(,"\\b\\(of\\)\\b"
 			(1 font-lock-keyword-face)
 		)
 		(,"\\b\\(is)\\b"
@@ -398,7 +398,7 @@
 		)
 		(,";"
 		)
-		(,"\\b\\(of)\\b"
+		(,"\\b\\(of\\)\\b"
 			(1 font-lock-keyword-face)
 		)
 		(,"\\b\\(fun\\)\\b" ( 1 ligo-font-lock-statement-face))
