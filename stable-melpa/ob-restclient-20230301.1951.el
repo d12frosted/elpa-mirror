@@ -4,8 +4,8 @@
 
 ;; Author: Alf Lervåg
 ;; Keywords: literate programming, reproducible research
-;; Package-Version: 20220819.2228
-;; Package-Commit: 1b021ce1c67c97fa1aa4d2c0816edb7add129e48
+;; Package-Version: 20230301.1951
+;; Package-Commit: ded3b7eb7b0592328a7a08ecce6f25278cba4a1d
 ;; Homepage: https://github.com/alf/ob-restclient.el
 ;; Version: 0.02
 ;; Package-Requires: ((restclient "0"))
@@ -84,13 +84,15 @@ This function is called by `org-babel-execute-src-block'"
       (when (equal (buffer-name) (buffer-string))
         (error "Restclient encountered an error"))
 
-       (when-let* ((jq-header (assoc :jq params))
-                  (jq-path "jq"))
+      (when-let* ((jq-header (assoc :jq params))
+                  (jq-path "jq")
+		  (jq-args (or (cdr (assoc :jq-args params)) "")))
         (shell-command-on-region
          (point-min)
          (point-max)
-         (format "%s %s" org-babel-restclient--jq-path
-                         (shell-quote-argument (cdr jq-header)))
+         (format "%s %s--args %s" org-babel-restclient--jq-path
+		 (if (assq :jq-args params) (format "%s " jq-args) "")
+                 (shell-quote-argument (cdr jq-header)))
          (current-buffer)
          t))
 

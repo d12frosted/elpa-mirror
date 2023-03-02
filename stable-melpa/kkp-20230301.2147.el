@@ -5,12 +5,11 @@
 ;; Author: Benjamin Orthen <contact@orthen.net>
 ;; Maintainer: Benjamin Orthen <contact@orthen.net>
 ;; Keywords: terminals
-;; Package-Version: 20230224.918
-;; Package-Commit: 7e1c1d5f1e43b3d0d34f1e164a5c5e32c2c09ac2
+;; Package-Version: 20230301.2147
+;; Package-Commit: 38440c0b64c12299dcf789622d59d1c9b85fca9e
 ;; Version: 0.2
 ;; URL: https://github.com/benjaminor/kkp
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.3.4"))
-
 
 ;; This file is not part of GNU Emacs.
 
@@ -29,7 +28,13 @@
 
 ;;; Commentary:
 
-;; The Kitty Keyboard Protocol (KKP) is documented here: https://sw.kovidgoyal.net/kitty/keyboard-protocol
+;; kkp.el enables support for the Kitty Keyboard Protocol in Emacs.
+;; This protocol is documented here:
+;; https://sw.kovidgoyal.net/kitty/keyboard-protocol. It provides an
+;; alternative, improved way to transmit keyboard input from a
+;; terminal to Emacs running in that terminal.
+
+;;; Code:
 
 ;; kitty modifier encoding
 ;; shift     0b1         (1)
@@ -48,7 +53,7 @@
 ;; - CSI {ABCDEFHPQRS}
 ;; - CSI 1; modifier {ABCDEFHPQRS}
 
-;;; Code:
+
 (require 'cl-lib)
 (require 'compat)
 (require 'term/xterm)
@@ -85,7 +90,6 @@ Possible values are the keys in `kkp--progressive-enhancement-flags'."
 It is one of the symbols `shift', `alt', `control', `super',
 `hyper', `meta', `caps-lock' or `num-lock'."
   :type kkp--modifiers)
-
 
 (defcustom kkp-alt-modifier 'meta
   "This variable describes the behavior of the alt key.
