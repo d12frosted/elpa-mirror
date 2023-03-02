@@ -232,7 +232,7 @@
 	    ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	   (:commit . "0cf8b60f62876f3e75653a5fb30d5d5cdd74c586"))])
  (beframe .
-	  [(0 1 8)
+	  [(0 1 10)
 	   ((emacs
 	     (28 1)))
 	   "Isolate buffers per frame" tar
@@ -240,7 +240,7 @@
 	    (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
 	    (:authors
 	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	    (:commit . "6f9c6322a285bc75191853ac0c7e2fefff0ac354"))])
+	    (:commit . "aa3783c92dabfa74386aa0ceebf74b48862d7b81"))])
  (bind-key .
 	   [(2 4 1)
 	    nil "A simple way to manage personal keybindings" tar
@@ -1807,7 +1807,7 @@
 	   ("Ivan Kanis" . "ivan@kanis.fr"))
 	  (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
  (kind-icon .
-	    [(0 1 9)
+	    [(0 2 0)
 	     ((emacs
 	       (27 1))
 	      (svg-lib
@@ -1818,7 +1818,7 @@
 	      (:maintainer "J.D. Smith" . "jdtsmith@gmail.com")
 	      (:authors
 	       ("J.D. Smith" . "jdtsmith@gmail.com"))
-	      (:commit . "8a740ca4f2b14773aedd0849b682c40d3a616cbe"))])
+	      (:commit . "47b72281e2d339926b192574ccade8e5ca14c282"))])
  (kiwix .
 	[(1 1 5)
 	 ((emacs
@@ -3517,7 +3517,7 @@
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
  (triples .
-	  [(0 2 5)
+	  [(0 2 6)
 	   ((seq
 	     (2 0))
 	    (emacs
@@ -3528,7 +3528,7 @@
 	    (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	    (:authors
 	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	    (:commit . "8a48e2b2f48a5d733e104ee9beec63d09cb734b5"))])
+	    (:commit . "1626dc4c8ecf9b7492cf540495d2ffa1be2ecbba"))])
  (undo-tree .
 	    [(0 8 2)
 	     ((queue
