@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230302.1538
-;; Package-Commit: 9e06cfccb4332d9bfe52c2c1b26f6263e8bd2977
+;; Package-Version: 20230303.1924
+;; Package-Commit: 5ceaecbaf359745d7bc6d407535895b7e84217c1
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -85,7 +85,7 @@
    `(font-lock-comment-face ((,class (:weight bold :foreground "green4"))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-string-face ((t (nil))))
-   `(font-lock-doc-face ((t (nil))))
+   `(font-lock-doc-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-doc-markup-face ((t (nil))))
    `(font-lock-keyword-face ((t (nil))))
    `(font-lock-builtin-face ((t (nil))))
