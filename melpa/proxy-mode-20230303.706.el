@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25"))
-;; Package-Commit: 586331c68482c7e7eacbed987cb541780df3ada1
-;; Package-Version: 20230303.313
+;; Package-Commit: eca6f0b8a17fcf9eb961ed0426f57a5b7ca4e1f6
+;; Package-Version: 20230303.706
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: comm proxy
 ;; homepage: https://repo.or.cz/proxy-mode.git
@@ -50,7 +50,7 @@
   :group 'proxy-mode)
 
 (defcustom proxy-mode-url-proxy-services
-  (unless (default-value 'proxy-mode-url-proxy-services)
+  (unless (default-value 'url-proxy-services)
     '(("http"  . "127.0.0.1:7890")
       ("https" . "127.0.0.1:7890")
       ("ftp"   . "127.0.0.1:7890")
@@ -80,7 +80,6 @@
   (setenv "HTTP_PROXY"  proxy-mode-env-http-service)
   (setenv "HTTPS_PROXY" proxy-mode-env-http-service)
   (setq proxy-mode-proxy-type 'env-http-proxy)
-  (getenv "HTTP_PROXY")
 
   ;; TODO: how to `setenv' buffer locally?
   ;; this will make `proxy-mode-env-proxy-enable' invalid.
@@ -148,16 +147,16 @@ NOTE: it only works for http:// connections. Not work for https:// connections."
 (defun proxy-mode-enable ()
   "Enable proxy-mode."
   (cl-case proxy-mode-proxy-type
-    ('emacs-url-proxy (proxy-mode-url-proxy-enable))
-    ('emacs-socks-proxy (proxy-mode-socks-proxy-enable))
-    ('env-http-proxy (proxy-mode-env-proxy-enable))))
+    (emacs-url-proxy (proxy-mode-url-proxy-enable))
+    (emacs-socks-proxy (proxy-mode-socks-proxy-enable))
+    (env-http-proxy (proxy-mode-env-proxy-enable))))
 
 (defun proxy-mode-disable ()
   "Disable proxy-mode."
-  (pcase proxy-mode-proxy-type
-    ('emacs-url-proxy (proxy-mode-url-proxy-disable))
-    ('emacs-socks-proxy (proxy-mode-socks-proxy-disable))
-    ('env-http-proxy (proxy-mode--env-proxy-disable))))
+  (cl-case proxy-mode-proxy-type
+    (emacs-url-proxy (proxy-mode-url-proxy-disable))
+    (emacs-socks-proxy (proxy-mode-socks-proxy-disable))
+    (env-http-proxy (proxy-mode--env-proxy-disable))))
 
 (defvar proxy-mode-map nil)
 

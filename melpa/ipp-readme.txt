@@ -26,6 +26,8 @@ menus via the front panel or its HTTP interface, or by analyzing DNS Service Dis
   * Lexmark MS312dn with a path component of "/ipp/print" (IPP URL of the form
     "ipp://10.0.0.1:631/ipp/print" or "ipps://10.0.0.1:443/ipp/print")
 
+  * Brother DCP-1610W, with an empty path component
+
   * Xerox Document Centre 460 ST, with empty path component.
 
   * Epson AL-MX300 and AL-M310DN with a path component of "/Epson_IPP_Printer" (so an

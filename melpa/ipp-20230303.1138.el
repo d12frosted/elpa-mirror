@@ -3,8 +3,8 @@
 ;;; Author: Eric Marsden <eric.marsden@risk-engineering.org>
 ;;; Copyright: (C) 2001-2022  Eric Marsden
 ;;; Keywords: printing, hardware
-;; Package-Version: 20220830.1336
-;; Package-Commit: 21d3b3fd5d1e655126ee03dac9d6b46cad9deef6
+;; Package-Version: 20230303.1138
+;; Package-Commit: 8011ef4f550ebfbeefcacc1196a103580c730cfe
 ;;; URL: https://github.com/emarsden/ipp-el
 ;;; Version: 0.7
 ;;; Package-Requires: ((cl-lib "0.5") (emacs "24.1"))
@@ -58,6 +58,8 @@
 ;;
 ;;   * Lexmark MS312dn with a path component of "/ipp/print" (IPP URL of the form
 ;;     "ipp://10.0.0.1:631/ipp/print" or "ipps://10.0.0.1:443/ipp/print")
+;;
+;;   * Brother DCP-1610W, with an empty path component
 ;;
 ;;   * Xerox Document Centre 460 ST, with empty path component.
 ;;
