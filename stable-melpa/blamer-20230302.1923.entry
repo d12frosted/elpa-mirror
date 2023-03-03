@@ -1,0 +1,12 @@
+(blamer .
+	[(20230302 1923)
+	 ((emacs
+	   (27 1))
+	  (posframe
+	   (1 1 7)))
+	 "Show git blame info about current line" single
+	 ((:commit . "0494ef497a96cb50f83f941887666fc8ca10905f")
+	  (:authors
+	   ("Artur Yaroshenko" . "artawower@protonmail.com"))
+	  (:maintainer "Artur Yaroshenko" . "artawower@protonmail.com")
+	  (:url . "https://github.com/artawower/blamer.el"))])

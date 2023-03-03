@@ -1,0 +1,11 @@
+(kmacro-x .
+	  [(20230303 200)
+	   ((emacs
+	     (27 2)))
+	   "Keyboard macro helpers and extensions" tar
+	   ((:commit . "cb34d079488d0bc21df482fb77cda846cf3b8326")
+	    (:authors
+	     ("Wojciech Siewierski"))
+	    (:maintainer "Wojciech Siewierski")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/vifon/kmacro-x.el"))])

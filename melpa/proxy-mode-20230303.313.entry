@@ -1,0 +1,8 @@
+(proxy-mode .
+	    [(20230303 313)
+	     ((emacs
+	       (25)))
+	     "A minor mode to toggle proxy." single
+	     ((:commit . "586331c68482c7e7eacbed987cb541780df3ada1")
+	      (:keywords "comm" "proxy")
+	      (:url . "https://repo.or.cz/proxy-mode.git"))])
