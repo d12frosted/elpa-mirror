@@ -3,15 +3,24 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out a4c03f170a6aa0e691e4732f34204952ccef03f8
+Checking out 77fd7a825557bdf6581fc23761dce36246a3b6de
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgsnDTEv/ekg-20230223.328
+  to /tmp/ekg5KTADA/ekg-20230303.2232
+    ekg-embedding.el -> ekg-embedding.el
     ekg-org-roam.el -> ekg-org-roam.el
     ekg.el -> ekg.el
-Created ekg-20230223.328.tar containing:
-  ekg-20230223.328/
-  ekg-20230223.328/ekg-org-roam.el
-  ekg-20230223.328/ekg-pkg.el
-  ekg-20230223.328/ekg.el
+  ! doc/doclicense.texi -> doclicense.texi
+  ! doc/ekg.texi -> ekg.texi
+Generating /tmp/ekg5KTADA/ekg-20230303.2232/doclicense.info
+Generating /tmp/ekg5KTADA/ekg-20230303.2232/ekg.info
+Created ekg-20230303.2232.tar containing:
+  ekg-20230303.2232/
+  ekg-20230303.2232/dir
+  ekg-20230303.2232/doclicense.info
+  ekg-20230303.2232/ekg-embedding.el
+  ekg-20230303.2232/ekg-org-roam.el
+  ekg-20230303.2232/ekg-pkg.el
+  ekg-20230303.2232/ekg.el
+  ekg-20230303.2232/ekg.info
 Searching for program: No such file or directory, convert
