@@ -3,8 +3,6 @@
 
 ;; Author: Dave Pearson <davep@davep.org>
 ;; Version: 1.0
-;; Package-Version: 20200926.1418
-;; Package-Commit: 69b4ec1d6d2ad95c9e59dacb43224abbec7a8989
 ;; Keywords: files, data
 ;; URL: https://github.com/davep/2bit.el
 ;; Package-Requires: ((emacs "24.3"))

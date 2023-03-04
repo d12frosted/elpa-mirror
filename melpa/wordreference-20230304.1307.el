@@ -4,8 +4,8 @@
 ;; Copyright (C) 2022 Marty Hiatt <martianhiatus AT riseup.net>
 ;;
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
-;; Package-Version: 20230214.1735
-;; Package-Commit: 8ccda3422fc30fba23602327cc8e7de9f53bfa1d
+;; Package-Version: 20230304.1307
+;; Package-Commit: ea741be7ff0979552f7dfb591596075add0293b7
 ;; Keywords: convenience, translate, wp, dictionary
 ;; URL: https://codeberg.org/martianh/wordreference.el
 ;; Version: 0.2
@@ -339,9 +339,10 @@ followed by a list of textual results returned by
     (cl-loop
      for x in text-string-split
      when x
-     collect (wordreference--cull-conj-arrows
-              (s-collapse-whitespace
-               (string-trim x))))))
+     collect (thread-first x
+                           (string-trim)
+                           (s-collapse-whitespace)
+                           (wordreference--cull-conj-arrows)))))
 
 (defun wordreference-build-to-fr-td (td)
   "Build a TD when it is of type FrWrd or ToWrd."
@@ -520,9 +521,10 @@ BUFFER is the buffer that was current when we invoked the wordreference command.
 (defun wordreference-print-tables (tables)
   "Print a list of TABLES."
   (cl-loop for x in tables
-           collect (wordreference-print-trs-results
-                    (wordreference-collect-trs-results-list
-                     (wordreference--get-trs x)))))
+           collect (thread-first x
+                                 (wordreference--get-trs)
+                                 (wordreference-collect-trs-results-list)
+                                 (wordreference-print-trs-results))))
 
 (defun wordreference-print-trs-results (trs)
   "Print a section heading followed by its definitions.
@@ -577,13 +579,14 @@ TRS is the list of table rows from the parsed HTML."
 (defun wordreference--process-sense-string (str)
   "Remove unwanted characters from a context/sense string STR."
   (when str
-    (string-trim
-     (s-collapse-whitespace
-      (wordreference--cull-single-spaces-in-brackets
-       (wordreference--cull-space-between-brackets
-        str)))
-     "[ \\t\\n\\r ]+" ;; add our friend  
-     "[ \\t\\n\\r ]+")))
+    (thread-first
+      str
+      (wordreference--cull-space-between-brackets)
+      (wordreference--cull-single-spaces-in-brackets)
+      (s-collapse-whitespace)
+      (string-trim
+       "[ \\t\\n\\r ]+" ;; add our friend  
+       "[ \\t\\n\\r ]+"))))
 
 (defun wordreference-print-single-definition (def)
   "Print a single definition DEF in the buffer.

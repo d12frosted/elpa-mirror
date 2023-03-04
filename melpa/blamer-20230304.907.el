@@ -4,8 +4,8 @@
 
 ;; Author: Artur Yaroshenko <artawower@protonmail.com>
 ;; URL: https://github.com/artawower/blamer.el
-;; Package-Version: 20230302.1923
-;; Package-Commit: 0494ef497a96cb50f83f941887666fc8ca10905f
+;; Package-Version: 20230304.907
+;; Package-Commit: a8c4b8c3c8b3add17b10b7323c86228e322513c3
 ;; Package-Requires: ((emacs "27.1") (posframe "1.1.7"))
 ;; Version: 0.6.0
 
@@ -363,9 +363,8 @@ Will show the available `blamer-bindings'."
 
 (defun blamer--git-exist-p ()
   "Return t if .git exist."
-  (when-let* ((file-name (blamer--get-local-name (buffer-file-name)))
-              (git-exist-stdout (apply #'vc-git--run-command-string nil blamer--git-repo-cmd)))
-    (string-match "^true" git-exist-stdout)))
+  (when-let* ((file-name (blamer--get-local-name (buffer-file-name))))
+    (vc-backend file-name)))
 
 (defun blamer--clear-overlay ()
   "Clear last overlay."
@@ -1011,11 +1010,12 @@ will appear after BLAMER-IDLE-TIME.  It works only inside git repo"
                blamer-author-formatter
                is-git-repo)
       (setq-local blamer--current-author (replace-regexp-in-string "\n\\'" "" (apply #'vc-git--run-command-string nil blamer--git-author-cmd))))
-    (if (and blamer-mode (buffer-file-name) is-git-repo)
-        (progn
-          (add-hook 'post-command-hook #'blamer--try-render nil t)
-          (add-hook 'window-state-change-hook #'blamer--try-render nil t))
-      (blamer--reset-state))))
+    (when (and (buffer-file-name) is-git-repo)
+      (if blamer-mode
+          (progn
+            (add-hook 'post-command-hook #'blamer--try-render nil t)
+            (add-hook 'window-state-change-hook #'blamer--try-render nil t))
+        (blamer--reset-state)))))
 
 ;;;###autoload
 (define-globalized-minor-mode
