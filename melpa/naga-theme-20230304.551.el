@@ -4,8 +4,8 @@
 
 ;; Author: Johannes Maier <johannes.maier@mailbox.org>
 ;; Version: 0.1
-;; Package-Version: 20230215.623
-;; Package-Commit: 508bf3505e9bf60163b68056b89c084df97b48aa
+;; Package-Version: 20230304.551
+;; Package-Commit: 3b5a6eb800a78df66a8e1c08c2465110ec36c10c
 ;; Homepage: https://github.com/kenranunderscore/emacs-naga-theme
 ;; Keywords: faces themes
 ;; Package-Requires: ((emacs "24.1"))
@@ -57,6 +57,14 @@ The default style is green text in a green box."
           (const :tag "Golden box" golden-box)
           (const :tag "Filled green" filled-green)))
 
+(defcustom naga-theme-use-lighter-org-block-background t
+  "Whether to set a background for the `org-block' face.
+The default is to use a slightly lighter color than the usual
+background.  Setting this to `nil' means blocks have no special
+background color."
+  :group 'naga-theme
+  :type 'boolean)
+
 (defmacro create-theme-colors ()
   "Expects the color variables to be bound."
   '(mapcar
@@ -95,7 +103,7 @@ The default style is green text in a green box."
       (mode-line-buffer-id (:weight bold))
       (mode-line-emphasis (:weight bold))
       (mode-line-inactive (:box "#555555" :background ,bg :foreground ,comment))
-      (isearch (:foreground ,bg :weight semi-bold :background ,fg))
+      (isearch (:foreground ,bg :weight semi-bold :background ,gold))
       (lazy-highlight (:foreground ,fg :background "blue3"))
       (show-paren-match (:foreground ,bg :background ,red))
       (show-paren-mismatch (:foreground "red" :background ,dark-blue))
@@ -187,7 +195,9 @@ The default style is green text in a green box."
       (org-document-info (:foreground ,cyan))
       (org-verbatim (:foreground ,purple))
       (org-code (:foreground ,string))
-      (org-block (:background ,block))
+      (org-block (:background ,(if naga-theme-use-lighter-org-block-background
+                                   block
+                                 bg)))
       (org-block-begin-line (:slant oblique :foreground ,comment-dark))
       (org-block-end-line (:slant oblique :foreground ,comment-dark))
       (org-special-keyword (:foreground ,comment))
