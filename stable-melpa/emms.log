@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://git.savannah.gnu.org/git/emms.git
 
 Updating /mnt/store/melpa/working/emms/
-Checking out 43c61412492229eb641fe572c89c826d8fcf64d9
+Checking out 4136e8bbfa2d676b5ab2df0d5450048299429e9a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emms/
-  to /tmp/emmsyDXpsT/emms-20230206.1841
+  to /tmp/emmsP0wL67/emms-20230302.1807
     emms-bookmarks.el -> emms-bookmarks.el
     emms-browser.el -> emms-browser.el
     emms-cache.el -> emms-cache.el
@@ -63,65 +63,65 @@ Copying files (->) and directories (=>)
     emms-volume.el -> emms-volume.el
     emms.el -> emms.el
   ! doc/emms.texinfo -> emms.texinfo
-Generating /tmp/emmsyDXpsT/emms-20230206.1841/emms.info
-Created emms-20230206.1841.tar containing:
-  emms-20230206.1841/
-  emms-20230206.1841/dir
-  emms-20230206.1841/emms-bookmarks.el
-  emms-20230206.1841/emms-browser.el
-  emms-20230206.1841/emms-cache.el
-  emms-20230206.1841/emms-compat.el
-  emms-20230206.1841/emms-cue.el
-  emms-20230206.1841/emms-history.el
-  emms-20230206.1841/emms-i18n.el
-  emms-20230206.1841/emms-info-exiftool.el
-  emms-20230206.1841/emms-info-libtag.el
-  emms-20230206.1841/emms-info-metaflac.el
-  emms-20230206.1841/emms-info-mp3info.el
-  emms-20230206.1841/emms-info-native.el
-  emms-20230206.1841/emms-info-ogginfo.el
-  emms-20230206.1841/emms-info-opusinfo.el
-  emms-20230206.1841/emms-info-tinytag.el
-  emms-20230206.1841/emms-info.el
-  emms-20230206.1841/emms-jack.el
-  emms-20230206.1841/emms-last-played.el
-  emms-20230206.1841/emms-later-do.el
-  emms-20230206.1841/emms-librefm-scrobbler.el
-  emms-20230206.1841/emms-librefm-stream.el
-  emms-20230206.1841/emms-lyrics.el
-  emms-20230206.1841/emms-maint.el
-  emms-20230206.1841/emms-mark.el
-  emms-20230206.1841/emms-metaplaylist-mode.el
-  emms-20230206.1841/emms-mode-line-icon.el
-  emms-20230206.1841/emms-mode-line.el
-  emms-20230206.1841/emms-mpris.el
-  emms-20230206.1841/emms-pkg.el
-  emms-20230206.1841/emms-player-mpd.el
-  emms-20230206.1841/emms-player-mpg321-remote.el
-  emms-20230206.1841/emms-player-mplayer.el
-  emms-20230206.1841/emms-player-mpv.el
-  emms-20230206.1841/emms-player-simple.el
-  emms-20230206.1841/emms-player-vlc.el
-  emms-20230206.1841/emms-player-xine.el
-  emms-20230206.1841/emms-playing-time.el
-  emms-20230206.1841/emms-playlist-limit.el
-  emms-20230206.1841/emms-playlist-mode.el
-  emms-20230206.1841/emms-playlist-sort.el
-  emms-20230206.1841/emms-score.el
-  emms-20230206.1841/emms-setup.el
-  emms-20230206.1841/emms-show-all.el
-  emms-20230206.1841/emms-source-file.el
-  emms-20230206.1841/emms-source-playlist.el
-  emms-20230206.1841/emms-stream-info.el
-  emms-20230206.1841/emms-streams.el
-  emms-20230206.1841/emms-tag-editor.el
-  emms-20230206.1841/emms-tag-tracktag.el
-  emms-20230206.1841/emms-url.el
-  emms-20230206.1841/emms-volume-amixer.el
-  emms-20230206.1841/emms-volume-mixerctl.el
-  emms-20230206.1841/emms-volume-pulse.el
-  emms-20230206.1841/emms-volume-sndioctl.el
-  emms-20230206.1841/emms-volume.el
-  emms-20230206.1841/emms.el
-  emms-20230206.1841/emms.info
+Generating /tmp/emmsP0wL67/emms-20230302.1807/emms.info
+Created emms-20230302.1807.tar containing:
+  emms-20230302.1807/
+  emms-20230302.1807/dir
+  emms-20230302.1807/emms-bookmarks.el
+  emms-20230302.1807/emms-browser.el
+  emms-20230302.1807/emms-cache.el
+  emms-20230302.1807/emms-compat.el
+  emms-20230302.1807/emms-cue.el
+  emms-20230302.1807/emms-history.el
+  emms-20230302.1807/emms-i18n.el
+  emms-20230302.1807/emms-info-exiftool.el
+  emms-20230302.1807/emms-info-libtag.el
+  emms-20230302.1807/emms-info-metaflac.el
+  emms-20230302.1807/emms-info-mp3info.el
+  emms-20230302.1807/emms-info-native.el
+  emms-20230302.1807/emms-info-ogginfo.el
+  emms-20230302.1807/emms-info-opusinfo.el
+  emms-20230302.1807/emms-info-tinytag.el
+  emms-20230302.1807/emms-info.el
+  emms-20230302.1807/emms-jack.el
+  emms-20230302.1807/emms-last-played.el
+  emms-20230302.1807/emms-later-do.el
+  emms-20230302.1807/emms-librefm-scrobbler.el
+  emms-20230302.1807/emms-librefm-stream.el
+  emms-20230302.1807/emms-lyrics.el
+  emms-20230302.1807/emms-maint.el
+  emms-20230302.1807/emms-mark.el
+  emms-20230302.1807/emms-metaplaylist-mode.el
+  emms-20230302.1807/emms-mode-line-icon.el
+  emms-20230302.1807/emms-mode-line.el
+  emms-20230302.1807/emms-mpris.el
+  emms-20230302.1807/emms-pkg.el
+  emms-20230302.1807/emms-player-mpd.el
+  emms-20230302.1807/emms-player-mpg321-remote.el
+  emms-20230302.1807/emms-player-mplayer.el
+  emms-20230302.1807/emms-player-mpv.el
+  emms-20230302.1807/emms-player-simple.el
+  emms-20230302.1807/emms-player-vlc.el
+  emms-20230302.1807/emms-player-xine.el
+  emms-20230302.1807/emms-playing-time.el
+  emms-20230302.1807/emms-playlist-limit.el
+  emms-20230302.1807/emms-playlist-mode.el
+  emms-20230302.1807/emms-playlist-sort.el
+  emms-20230302.1807/emms-score.el
+  emms-20230302.1807/emms-setup.el
+  emms-20230302.1807/emms-show-all.el
+  emms-20230302.1807/emms-source-file.el
+  emms-20230302.1807/emms-source-playlist.el
+  emms-20230302.1807/emms-stream-info.el
+  emms-20230302.1807/emms-streams.el
+  emms-20230302.1807/emms-tag-editor.el
+  emms-20230302.1807/emms-tag-tracktag.el
+  emms-20230302.1807/emms-url.el
+  emms-20230302.1807/emms-volume-amixer.el
+  emms-20230302.1807/emms-volume-mixerctl.el
+  emms-20230302.1807/emms-volume-pulse.el
+  emms-20230302.1807/emms-volume-sndioctl.el
+  emms-20230302.1807/emms-volume.el
+  emms-20230302.1807/emms.el
+  emms-20230302.1807/emms.info
 Searching for program: No such file or directory, convert

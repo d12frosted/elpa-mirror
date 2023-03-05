@@ -6,8 +6,8 @@
 ;; Maintainer: Max Beutelspacher <max@beutelspacher.eu>
 ;; Created: February 14, 2021
 ;; Version: 1.0.0
-;; Package-Version: 20230226.826
-;; Package-Commit: a0d33da83424deeea484565a13c6930bda9b176a
+;; Package-Version: 20230305.1312
+;; Package-Commit: f06fdba4bc5a98b15b620d2d737c9bb3720ef593
 ;; Keywords: convenience tools
 ;; Homepage: https://github.com/DerBeutlin/ros.el
 ;; Package-Requires: ((emacs "27.1"))
@@ -89,10 +89,11 @@
 
 (defun ros-unignore-package ()
   (interactive)
-  (ros-ignore-package--helper t))
+  (ros-ignore-package--helper t)
+  (ros-cache-clean))
 
 (defun ros-ignore-package--helper (&optional remove)
-  (let* ((locations  (ros-list-package-locations))
+  (let* ((locations  (ros-list-package-locations remove))
          (candidates (seq-filter (lambda (package) (if (file-exists-p (concat (file-name-as-directory (cdr (assoc package locations))) "COLCON_IGNORE")) remove (not remove))) (kvalist->keys locations)))
          (package-to-ignore (completing-read (concat "Package(s) to " (when remove "un") "ignore: ") (append '("ALL") candidates) nil t nil nil)))
     (if (string= package-to-ignore "ALL") (mapc (lambda (loc) (ros-ignore-package--ignore-one loc remove)) (kvalist->values locations) ) (ros-ignore-package--ignore-one (cdr (assoc package-to-ignore locations)) remove))))
@@ -156,8 +157,14 @@
   (let ((components (split-string line)))
     (list (car components) (concat (file-name-as-directory  (ros-current-workspace)) (cl-second components)))))
 
-(defun ros-list-package-locations ()
-  (ros-cache-load "package-locations" (lambda nil (kvplist->alist (apply #'append (mapcar 'ros-parse-colcon-list-line (ros-shell-command-to-list (format "cd %s && colcon list" (ros-current-workspace)))))))))
+(defun ros-list-package-locations (&optional include-ignored)
+  (if include-ignored
+      (mapcar (lambda (path)
+                (cons (file-name-nondirectory path) path))
+              (mapcar (lambda (path)
+                        (directory-file-name (file-name-directory path)))
+                      (mapcar (lambda (path) (concat (ros-current-tramp-prefix) path)) (ros-shell-command-to-list (format " find %s -iname \"package.xml\"" (concat (ros-current-workspace) "/src"))))))
+    (ros-cache-load "package-locations" (lambda nil (kvplist->alist (apply #'append (mapcar 'ros-parse-colcon-list-line (ros-shell-command-to-list (format "cd %s && colcon list" (ros-current-workspace))))))))))
 
 (defun ros-package-files (package-name)
   (ros-cache-load (concat "package" "_" package-name)
@@ -626,7 +633,7 @@ _I_: Insert import statement for action type
 (defhydra hydra-ros-ignore (:color blue :hint nil :foreign-keys warn)
 
   "
-_+_: Ignore a package type at point               _-_: Unignore an ignored package
+_+_: Ignore a package                _-_: Unignore an ignored package
 "
   ("+" ros-ignore-package)
   ("-" ros-unignore-package)
