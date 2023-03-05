@@ -109,9 +109,11 @@ Advanced usage:
 
         [[func:main]]
 
-    line: navigates to a line number
+    line: navigates to a line number, with negative integers
+    counting backward from the last line
 
         [[line:12]]
+        [[line:-12]]
 
     visit: may be combined with other schemes:
 
@@ -184,13 +186,6 @@ Advanced usage:
 
 [[<Compatibility and Requirements]]
 
-    GNU Emacs version 24.5-devel     : not tested
-    GNU Emacs version 24.4           : yes
-    GNU Emacs version 24.3           : yes
-    GNU Emacs version 23.3           : yes
-    GNU Emacs version 22.2           : yes, with some limitations
-    GNU Emacs version 21.x and lower : unknown
-
     Requires button-lock.el
 
     Uses if present: nav-flash.el, back-button.el
@@ -202,6 +197,9 @@ Advanced usage:
     instead of comment-only modes, check if comment syntax is present
     in buffer as is done in fixmee-mode, and use syntax-ppss rather
     than regexp to detect comment context
+
+    avoid mistaking common construct if [[ ... for a link in commented-
+    out shell code
 
     support kbd-help property
 
@@ -220,8 +218,6 @@ Advanced usage:
 
     wiki-nav-external-link-pattern might be replaced with functions
     from url-util
-
-    visit:-1 counts from end of file
 
     keyboard analog for double-click
 
@@ -243,11 +239,9 @@ Advanced usage:
         regexp:
         elisp:
 
-    wiki-nav-links can be optimized by tracking which buffers are
-    completely fontified - doesn't font-lock do that?
-
-    similarly, speed up wiki-nav-find-any-link by remembering if
-    the buffer is fontified, or switch to searching by regexp
+    consider speeding up wiki-nav-find-any-link by switching to
+    direct regexp search, if the optimization of
+    `wiki-nav-maybe-fontify-entire-buffer' is not sufficient.
 
     version of wiki-nav-find-any-link that does not wrap
 
@@ -268,14 +262,14 @@ Redistribution and use in source and binary forms, with or
 without modification, are permitted provided that the following
 conditions are met:
 
-   1. Redistributions of source code must retain the above
-      copyright notice, this list of conditions and the following
-      disclaimer.
+  1. Redistributions of source code must retain the above
+     copyright notice, this list of conditions and the following
+     disclaimer.
 
-   2. Redistributions in binary form must reproduce the above
-      copyright notice, this list of conditions and the following
-      disclaimer in the documentation and/or other materials
-      provided with the distribution.
+  2. Redistributions in binary form must reproduce the above
+     copyright notice, this list of conditions and the following
+     disclaimer in the documentation and/or other materials
+     provided with the distribution.
 
 This software is provided by Roland Walker "AS IS" and any express
 or implied warranties, including, but not limited to, the implied

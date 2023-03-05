@@ -18,7 +18,7 @@ By highlighting each argument, CMake scripts becomes much easier to
 read, and also to write.
 
 This package is aware of all built-in CMake functions, as provided
-by CMake 3.22.1.  In addition, it allows you to add function
+by CMake 3.26.1.  In addition, it allows you to add function
 signatures for your own functions.
 
 The following is colored:
