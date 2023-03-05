@@ -1478,16 +1478,16 @@
 		  (:authors
 		   ("D. Williams" . "d.williams@posteo.net")))])
  (org-tree-slide .
-		 [(2 8 18)
+		 [(2 8 19)
 		  ((emacs
-		    (24 4)))
+		    (25 2)))
 		  "A presentation tool for org-mode" tar
 		  ((:url . "https://github.com/takaxp/org-tree-slide")
 		   (:keywords "convenience" "org-mode" "presentation" "narrowing")
 		   (:maintainer "Takaaki ISHIKAWA <takaxp at ieee dot org>")
 		   (:authors
 		    ("Takaaki ISHIKAWA <takaxp at ieee dot org>"))
-		   (:commit . "1fb3ecb637d0baff40dff7965dcac63b9674377b"))])
+		   (:commit . "07906356f0b8d8ac51645b0994b8108deb53003d"))])
  (orgit .
 	[(1 8 0)
 	 ((emacs
@@ -2202,7 +2202,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(22 12 20230301220803)
+	       [(22 12 20230305005921)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -2211,7 +2211,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "9a1f56a9ec2a23515bde8a4f47399ac2043d6850"))])
+		 (:commit . "ed4733bcea72591772c97bf1bf50f20982c87836"))])
  (xkcd .
        [(1 1)
 	((json

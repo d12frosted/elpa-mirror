@@ -3,34 +3,7 @@
 		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-			 [2020-06-05 Fri 23:39]
-
-
-Table of Contents
-─────────────────
-
-1. 1. What's this?
-.. 1. 1-1. Related packages
-2. 2. Install
-.. 1. 2.1 el-get recipe
-.. 2. 2.2 MELPA
-.. 3. 2.2 Requirements
-.. 4. 2.3 additional package (moom.el)
-3. 3. Recommended settings
-4. 4. Profiles
-.. 1. 4-1. `Simple'
-.. 2. 4-2. `Presentation'
-.. 3. 4-3. `TODO Pursuit with narrowing'
-5. 5. User variables
-.. 1. 5-1. Useful settings for experts
-6. 6. Functions
-.. 1. Control functions
-.. 2. Startup options
-.. 3. Toggle variables
-.. 4. Batch setting of user variables
-.. 5. Hooks
-7. 7. History
-8. 8. Contact
+			 [2021-10-10 Sun 02:05]
 
 
 [http://melpa.org/packages/org-tree-slide-badge.svg]
@@ -379,7 +352,39 @@ Table of Contents
   configurations
 
 
-7 7. History
+7 7. Additional settings
+════════════════════════
+
+7.1 Hide org-meta-line
+──────────────────────
+
+  The following code could be useful if you want to make `#+' lines
+  invisible during presentation.
+
+  ┌────
+  │ (with-eval-after-load "org-tree-slide"
+  │   (defvar my-hide-org-meta-line-p nil)
+  │   (defun my-hide-org-meta-line ()
+  │     (interactive)
+  │     (setq my-hide-org-meta-line-p t)
+  │     (set-face-attribute 'org-meta-line nil
+  │ 					  :foreground (face-attribute 'default :background)))
+  │   (defun my-show-org-meta-line ()
+  │     (interactive)
+  │     (setq my-hide-org-meta-line-p nil)
+  │     (set-face-attribute 'org-meta-line nil :foreground nil))
+  │ 
+  │   (defun my-toggle-org-meta-line ()
+  │     (interactive)
+  │     (if my-hide-org-meta-line-p
+  │ 	      (my-show-org-meta-line) (my-hide-org-meta-line)))
+  │ 
+  │   (add-hook 'org-tree-slide-play-hook #'my-hide-org-meta-line)
+  │   (add-hook 'org-tree-slide-stop-hook #'my-show-org-meta-line))
+  └────
+
+
+8 8. History
 ════════════
 
   see also [ChangeLog] for details
@@ -403,7 +408,7 @@ Table of Contents
 <https://github.com/takaxp/org-tree-slide/blob/master/ChangeLog>
 
 
-8 8. Contact
+9 9. Contact
 ════════════
 
   The author is Takaaki ISHIKAWA (takaxp@ieee.org).  Feel free to email
@@ -411,3 +416,27 @@ Table of Contents
 
 
 [@takaxp] <https://twitter.com/#!/takaxp>
+
+
+10 10. Videos
+═════════════
+
+  We can watch some videos that kindly introduce `org-tree-slide.el':
+  • [Emacs Tips - How to Give Presentations with Org Mode] (presented by
+    [System Crafters])
+  • [Show presentation using Org Mode] (presented by [Blackberry Boy])
+
+  Thank you!
+
+
+[Emacs Tips - How to Give Presentations with Org Mode]
+<https://www.youtube.com/watch?v=vz9aLmxYJB0>
+
+[System Crafters]
+<https://www.youtube.com/channel/UCAiiOTio8Yu69c3XnR7nQBQ>
+
+[Show presentation using Org Mode]
+<https://www.youtube.com/watch?v=uSwJQIGMyPk>
+
+[Blackberry Boy]
+<https://www.youtube.com/channel/UC0ds7DW6IIl7mXcyz5vMEHQ>
