@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; Version: 1.5
-;; Package-Version: 20230305.1908
-;; Package-Commit: 1e73b47698d42dc70892e6375fed86195588b5ab
+;; Package-Version: 20230306.218
+;; Package-Commit: 993eb7f1a02cb29c812fd38c231b11e2dc3560b6
 ;; Keywords: lisp
 ;; Package-Requires: ((dash "2.12.0") (s "1.11.0"))
 
@@ -132,12 +132,12 @@ Internal implementation detail.")
 
 (defun elisp-refs--proper-list-p (val)
   "Is VAL a proper list?"
-  (if (fboundp 'format-proper-list-p)
-      ;; Emacs stable.
-      (with-no-warnings (format-proper-list-p val))
-    ;; Function was renamed in Emacs master:
-    ;; http://git.savannah.gnu.org/cgit/emacs.git/commit/?id=2fde6275b69fd113e78243790bf112bbdd2fe2bf
-    (with-no-warnings (proper-list-p val))))
+  (if (fboundp 'proper-list-p)
+      ;; `proper-list-p' was added in Emacs 27.1.
+      ;; http://git.savannah.gnu.org/cgit/emacs.git/commit/?id=2fde6275b69fd113e78243790bf112bbdd2fe2bf
+      (with-no-warnings (proper-list-p val))
+    ;; Earlier Emacs versions only had format-proper-list-p.
+    (with-no-warnings (format-proper-list-p val))))
 
 (defun elisp-refs--walk (buffer form start-pos end-pos symbol match-p &optional path)
   "Walk FORM, a nested list, and return a list of sublists (with
