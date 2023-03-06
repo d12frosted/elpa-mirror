@@ -62,7 +62,7 @@ Supported languages:
 - Racket (raco-fmt)
 - Reason (bsrefmt)
 - ReScript (rescript)
-- Ruby (rubocop, rufo, standardrb)
+- Ruby (rubocop, rufo, standardrb, stree)
 - Rust (rustfmt)
 - Scala (scalafmt)
 - Shell script (beautysh, shfmt)

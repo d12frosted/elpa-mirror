@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20230228.706
-;; Package-Commit: 5143d32abd92ed111dc0cb69bf21946de7c6eadc
+;; Package-Version: 20230306.636
+;; Package-Commit: 76475745fb408fa716b2b43c436ba07a56836f89
 ;; Keywords: project, convenience
 ;; Version: 2.7.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -85,7 +85,7 @@
 (declare-function ggtags-update-tags "ext:ggtags")
 (declare-function ripgrep-regexp "ext:ripgrep")
 (declare-function rg-run "ext:rg")
-(declare-function vterm "ext:vterm")
+(declare-function vterm-other-window "ext:vterm")
 (declare-function vterm-send-return "ext:vterm")
 (declare-function vterm-send-string "ext:vterm")
 
@@ -3006,6 +3006,13 @@ it acts on the current project."
   :type 'function
   :package-version '(projectile . "1.0.0"))
 
+(defun projectile-nimble-project-p (&optional dir)
+  "Check if a project contains a Nimble project marker.
+Nim projects that use Nimble contain a <projectname>.nimble file.
+When DIR is specified it checks DIR's project, otherwise
+it acts on the current project."
+  (projectile-verify-file-wildcard "?*.nimble" dir))
+
 ;;;; Constant signifying opting out of CMake preset commands.
 (defconst projectile--cmake-no-preset "*no preset*")
 
@@ -3185,6 +3192,14 @@ a manual COMMAND-TYPE command is created with
                                   :compile "dotnet build"
                                   :run "dotnet run"
                                   :test "dotnet test")
+(projectile-register-project-type 'nim-nimble #'projectile-nimble-project-p
+                                  :project-file "?*.nimble"
+                                  :compile "nimble --noColor build --colors:off"
+                                  :install "nimble --noColor install --colors:off"
+                                  :test "nimble --noColor test -d:nimUnittestColor:off --colors:off"
+                                  :run "nimble --noColor run --colors:off"
+                                  :src-dir "src"
+                                  :test-dir "tests")
 ;; File-based detection project types
 
 ;; Universal
@@ -4479,7 +4494,7 @@ Use a prefix argument ARG to indicate creation of a new process instead."
       (unless (require 'vterm nil 'noerror)
         (error "Package 'vterm' is not available"))
       (projectile-with-default-dir project
-        (vterm buffer)))
+        (vterm-other-window buffer)))
     (switch-to-buffer buffer)))
 
 (defun projectile-files-in-project-directory (directory)

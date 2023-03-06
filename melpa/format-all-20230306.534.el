@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20230223.2008
-;; Package-Commit: c6f33e6efb55b5e5112d3d1366fea910d3629de2
+;; Package-Version: 20230306.534
+;; Package-Commit: 91ea3c16f594294b8064e61c4b14c5264d88e24d
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.19"))
 ;; Keywords: languages util
@@ -77,7 +77,7 @@
 ;; - Racket (raco-fmt)
 ;; - Reason (bsrefmt)
 ;; - ReScript (rescript)
-;; - Ruby (rubocop, rufo, standardrb)
+;; - Ruby (rubocop, rufo, standardrb, stree)
 ;; - Rust (rustfmt)
 ;; - Scala (scalafmt)
 ;; - Shell script (beautysh, shfmt)
@@ -882,7 +882,7 @@ Consult the existing formatters for examples of BODY."
     'emacs-lisp-mode
     (if region
         (lambda () (indent-region (car region) (cdr region)))
-        (lambda () (indent-region (point-min) (point-max)))))))
+      (lambda () (indent-region (point-min) (point-max)))))))
 
 (define-format-all-formatter erb-format
   (:executable "erb-format")
@@ -1196,7 +1196,7 @@ Consult the existing formatters for examples of BODY."
    (format-all--buffer-easy
     executable "format" "-stdin"
     (let ((ext (if (not (buffer-file-name)) ""
-                   (file-name-extension (buffer-file-name)))))
+                 (file-name-extension (buffer-file-name)))))
       (concat "." (if (equal ext "") "res" ext))))))
 
 (define-format-all-formatter rubocop
@@ -1356,6 +1356,17 @@ Consult the existing formatters for examples of BODY."
       (list "--linerange" (format "%d,%d"
                                   (line-number-at-pos (car region))
                                   (line-number-at-pos (cdr region))))))))
+
+(define-format-all-formatter stree
+  (:executable "stree")
+  (:install "gem install syntax_tree:'>=2.0.1'")
+  (:languages "Ruby")
+  (:features)
+  (:format
+   (format-all--buffer-hard-ruby
+    "stree" '(0 1) nil '(".streerc")
+    executable
+    "format")))
 
 (define-format-all-formatter taplo-fmt
   (:executable "taplo")
@@ -1668,7 +1679,7 @@ The PROMPT argument works as for `format-all-buffer'."
    (let ((prompt (if current-prefix-arg 'always t)))
      (if (use-region-p)
          (list (region-beginning) (region-end) prompt)
-         (error "The region is not active now"))))
+       (error "The region is not active now"))))
   (format-all--buffer-or-region prompt (cons start end)))
 
 ;;;###autoload
