@@ -1766,6 +1766,19 @@
 		(:authors
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
+ (jit-spell .
+	    [(0 1)
+	     ((emacs
+	       (27 1))
+	      (compat
+	       (29 1)))
+	     "Just-in-time spell checking" tar
+	     ((:url . "https://github.com/astoff/jit-spell")
+	      (:keywords "tools" "wp")
+	      (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
+	      (:authors
+	       ("Augusto Stoffel" . "arstoffel@gmail.com"))
+	      (:commit . "0411d64169b5cef74c7b1c404dd1661596a7d1f8"))])
  (js2-mode .
 	   [(20220710)
 	    ((emacs

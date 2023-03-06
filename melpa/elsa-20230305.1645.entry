@@ -1,0 +1,21 @@
+(elsa .
+      [(20230305 1645)
+       ((emacs
+	 (25 1))
+	(trinary
+	 (0))
+	(f
+	 (0))
+	(dash
+	 (2 14))
+	(cl-lib
+	 (0 3))
+	(lsp-mode
+	 (0)))
+       "Emacs Lisp Static Analyser" tar
+       ((:commit . "1fb0f698d9305bcfb501aca1ae9476979ed67117")
+	(:authors
+	 ("Matúš Goljer" . "matus.goljer@gmail.com"))
+	(:maintainer "Matúš Goljer" . "matus.goljer@gmail.com")
+	(:keywords "languages" "lisp")
+	(:url . "https://github.com/emacs-elsa/Elsa"))])
