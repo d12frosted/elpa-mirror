@@ -3,5 +3,6 @@ Minor mode to sync document's position with Librera Reader (book/documents reade
 Supported modes:
 - doc-view
 - pdf-tools
+- fb2-reader-mode (experimental)
 
 See repo's readme for installation and setup instructions!
