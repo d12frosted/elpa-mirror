@@ -6,8 +6,8 @@
 ;;         Jonathan Arnett <jonathan.arnett@protonmail.com>
 ;; Created: July 16 2019
 ;; Version: 0.9
-;; Package-Version: 20230204.129
-;; Package-Commit: ca90fc638cfaf70d5e0b82657d3d26cd0b289059
+;; Package-Version: 20230307.17
+;; Package-Commit: dcb5b4e6da8553c43b8ad7aff51de477980e23d8
 ;; Keywords: macos, windows, linux, themes, tools, faces
 ;; URL: https://github.com/LionyxML/auto-dark-emacs
 ;; Package-Requires: ((emacs "24.4"))
@@ -231,7 +231,7 @@ Remove theme change callback registered with D-Bus."
   "Toggle `auto-dark-mode' on or off."
   :group 'auto-dark
   :global t
-  :lighter "AD"
+  :lighter " AD"
   (if auto-dark-mode
       (progn
         (unless auto-dark-detection-method
