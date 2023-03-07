@@ -5,8 +5,8 @@
 ;; Author: lorniu <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; URL: https://github.com/lorniu/ox-spectacle
-;; Package-Version: 20230210.113
-;; Package-Commit: 0bca84ff6d3c49e4ca1bf5c3922ed261aafa3635
+;; Package-Version: 20230307.316
+;; Package-Commit: 85c617200587eb3f7954c278b6cde44f8d43fd87
 ;; Package-Requires: ((emacs "28.1") (org "8.3"))
 ;; Keywords: convenience
 ;; Version: 2.0
@@ -488,6 +488,14 @@ INFO is a plist."
   "Add advices to BODY."
   `(cl-letf (((symbol-function 'string-trim) 'org-trim)
              ((symbol-function 'org-html--make-attribute-string) 'ox-spectacle--make-attribute-string))
+     ;; Force the use of sub/superscript syntax like 'aaa_{3}' to avoid accidental escaping of _ and ^ in links (#6)
+     ;; No better solution found for supressing sub/superscript easily, because it's hardcode in 'org-element' parser
+     (setq-local org-match-substring-regexp
+                 (concat
+                  "\\(\\S-\\)\\([_^]\\)\\("
+                  "\\(?:" (org-create-multibrace-regexp "{" "}" org-match-sexp-depth) "\\)"
+                  "\\|"
+                  "\\(?:" (org-create-multibrace-regexp "(" ")" org-match-sexp-depth) "\\)\\)"))
      ,@body))
 
 

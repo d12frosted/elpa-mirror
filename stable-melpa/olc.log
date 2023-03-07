@@ -3,12 +3,17 @@ Fetcher: git
 Source:  https://gitlab.liu.se/davby02/olc.git
 
 Updating /mnt/store/melpa/working/olc/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: GitLab is not responding
-fatal: unable to access 'https://gitlab.liu.se/davby02/olc.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out d2dc62dbc3cf6460cc12bd96857a988bc80ac37e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/olc/
+  to /tmp/olceBurol/olc-20200818.1221
+    olc.el -> olc.el
+    olc.info -> olc.info
+    olc.texi -> olc.texi
+Created olc-20200818.1221.tar containing:
+  olc-20200818.1221/
+  olc-20200818.1221/dir
+  olc-20200818.1221/olc-pkg.el
+  olc-20200818.1221/olc.el
+  olc-20200818.1221/olc.info
+Searching for program: No such file or directory, convert

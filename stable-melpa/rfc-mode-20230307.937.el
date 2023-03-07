@@ -2,8 +2,8 @@
 
 ;; Author: Nicolas Martyanoff <nicolas@n16f.net>
 ;; URL: https://github.com/galdor/rfc-mode
-;; Package-Version: 20230302.1422
-;; Package-Commit: 01b37d63e498eab3ac6ad2588777438cfd4d7f60
+;; Package-Version: 20230307.937
+;; Package-Commit: c938c8134e7434b623ebfd92ad22586205cb1c92
 ;; Version: 1.4.0
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -447,7 +447,7 @@ ENTRY is a RFC index entry in the browser."
   (let* ((number-string (match-string 1 string))
          (number (string-to-number number-string))
          (title (match-string 2 string)))
-    (when (zerop member)
+    (when (zerop number)
       (error "Invalid index entry number: %S" number-string))
     (let ((entry (list :number number :title title)))
       (when (string-match "(Status: \\([^)]+\\))" string)

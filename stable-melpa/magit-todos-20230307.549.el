@@ -4,9 +4,9 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: http://github.com/alphapapa/magit-todos
-;; Package-Version: 20230222.132
-;; Package-Commit: c6f3fd03aa5b750636c2647253f21cc03329566c
-;; Version: 1.6-pre
+;; Package-Version: 20230307.549
+;; Package-Commit: 7724259a008144b8cfc6cacdae3e764f207a03e7
+;; Version: 1.6
 ;; Package-Requires: ((emacs "26.1") (async "1.9.2") (dash "2.13.0") (f "0.17.2") (hl-todo "1.9.0") (magit "2.13.0") (pcre2el "1.8") (s "1.12.0") (transient "0.2.0"))
 ;; Keywords: magit, vc
 
@@ -158,6 +158,8 @@ A time value as returned by `current-time'.")
 (defvar magit-todos-section-heading "TODOs"
   "Allows overriding of section heading.")
 
+(defvar org-odd-levels-only)
+
 ;;;; Customization
 
 (defgroup magit-todos nil
@@ -250,7 +252,9 @@ which the keys are the keywords.
 When set, sets `magit-todos-search-regexp' to the appropriate
 regular expression."
   :type '(choice (repeat :tag "Custom list" string)
-                 (const :tag "Keywords from `hl-todo'" hl-todo-keyword-faces)
+                 (const :tag "Keywords from `hl-todo'"
+                        :doc "Note that the keywords in `hl-todo-keyword-faces' are treated by it as regexps, while this package treats them as strings.  If this doesn't meet your needs, please use another option.  See <https://github.com/alphapapa/magit-todos/issues/101>."
+                        hl-todo-keyword-faces)
                  (variable :tag "List variable"))
   :set (lambda (option value)
          (set-default option value)
@@ -274,7 +278,9 @@ regular expression."
                  (const :tag "Never" never)))
 
 (defcustom magit-todos-buffer-item-factor 10
-  "Multiply `magit-todos-auto-group-items' and `magit-todos-max-items' by this factor in dedicated `magit-todos' buffers."
+  "Adjustment to item grouping in dedicated `magit-todos' buffers.
+Multiplies `magit-todos-auto-group-items' and
+`magit-todos-max-items' by this factor."
   :type 'integer)
 
 (defcustom magit-todos-group-by '(magit-todos-item-keyword magit-todos-item-filename)
@@ -310,6 +316,27 @@ this in a directory-local variable for certain projects."
                  (const :tag "Repo root directory only" 0)
                  (integer :tag "N levels below the repo root")))
 
+(defcustom magit-todos-insert-after '(bottom)
+  "Where to insert the TODOs section in the Magit status buffer.
+The TODOs section is inserted after the first of these sections
+found, or at the bottom if none exist.  Specific sections may be
+chosen, using the first symbol returned by evaluating
+\"(magit-section-ident (magit-current-section))\" in the status
+buffer with point on the desired section, e.g. `recent' for the
+\"Recent commits\" section.  Note that this may not work exactly
+as desired when the built-in scanner is used."
+  :type '(repeat
+          (choice (const :tag "Top" top)
+                  (const :tag "Bottom" bottom)
+                  (const :tag "Recent commits" unpushed)
+                  (const :tag "Untracked files" untracked)
+                  (const :tag "Unstaged files" unstaged)
+                  (const :tag "Staged files" staged)
+                  (const :tag "Stashes" stashes)
+                  (const :tag "Pull requests (Forge)" pullreqs)
+                  (const :tag "Issues (Forge)" issues)
+                  (symbol :tag "Specified section"))))
+
 (defcustom magit-todos-insert-at 'bottom
   "Insert the to-dos section after this section in the Magit status buffer.
 Specific sections may be chosen, using the first symbol returned
@@ -322,7 +349,15 @@ used."
                  (const :tag "Bottom" bottom)
                  (const :tag "After untracked files" untracked)
                  (const :tag "After unstaged files" unstaged)
-                 (symbol :tag "After selected section")))
+                 (symbol :tag "After selected section"))
+  :set (lambda (option value)
+         ;; For convenience, we set the new option with the appropriate value (but,
+         ;; of course, this won't work for users who set it directly with `setq'.)
+         ;; TODO: Remove this option in 1.8.
+         (ignore option)
+         (custom-set-variables `(magit-todos-insert-after ',(list value)
+                                                          'now nil "Changed by setter of obsolete option `magit-todos-insert-at'"))))
+(make-obsolete-variable 'magit-todos-insert-at 'magit-todos-insert-after "1.6")
 
 (defcustom magit-todos-exclude-globs '(".git/")
   "Glob patterns to exclude from searches."
@@ -359,6 +394,12 @@ from the \"topic2\" branch, this option could be set to
 (defcustom magit-todos-submodule-list nil
   "Show submodule to-do list."
   :type 'boolean)
+
+(defcustom magit-todos-filename-filter nil
+  "Filter applied to filenames."
+  :type '(choice (const :tag "None (show filename relative to repo)" nil)
+                 (function-item :tag "Basename" file-name-nondirectory)
+                 (function :tag "Custom function")))
 
 ;;;; Commands
 
@@ -497,6 +538,29 @@ Type \\[magit-diff-show-or-scroll-up] to peek at the item at point."
 
 ;;;; Functions
 
+(defun magit-todos--section-end (condition)
+  "Return end position of section matching CONDITION, or nil.
+CONDITION may be one accepted by `magit-section-match', or `top'
+or `bottom', which are handled specially."
+  (cl-labels ((find-section
+               (condition) (save-excursion
+                             (goto-char (point-min))
+                             (ignore-errors
+                               (cl-loop until (magit-section-match condition)
+                                        do (magit-section-forward)
+                                        finally return (magit-current-section))))))
+    (save-excursion
+      (goto-char (point-min))
+      (pcase condition
+        ('top (when-let ((section (or (find-section 'tags)
+                                      (find-section 'tag)
+                                      (find-section 'branch))))
+                ;; Add 1 to leave blank line after top sections.
+                (1+ (oref section end))))
+        ('bottom (oref (-last-item (oref magit-root-section children)) end))
+        (_ (when-let ((section (find-section condition)))
+             (oref section end)))))))
+
 (defun magit-todos--coalesce-groups (groups)
   "Return GROUPS, coalescing any groups with `equal' keys.
 GROUPS should be an alist.  Assumes that each group contains
@@ -540,7 +604,8 @@ Chooses automatically in order defined in `magit-todos-scanners'."
 
 (cl-defun magit-todos--scan-callback (&key callback magit-status-buffer results-regexp process &allow-other-keys)
   "Call CALLBACK with arguments MAGIT-STATUS-BUFFER and match items.
-Match items are a list of `magit-todos-item' found in PROCESS's buffer for RESULTS-REGEXP."
+Match items are a list of `magit-todos-item' found in PROCESS's
+buffer for RESULTS-REGEXP."
   (funcall callback magit-status-buffer
            (with-current-buffer (process-buffer process)
              (magit-todos--buffer-items results-regexp))))
@@ -709,13 +774,6 @@ If BRANCH-P is non-nil, do not update `magit-todos-item-cache',
     (message "`magit-todos--insert-items-callback': Callback called for deleted buffer"))
   (let* ((items (magit-todos--sort items))
          (num-items (length items))
-         (group-fns (pcase magit-todos-auto-group-items
-                      ('never nil)
-                      ('always magit-todos-group-by)
-                      ((pred integerp) (when (> num-items magit-todos-auto-group-items)
-                                         magit-todos-group-by))
-                      (_ (error "Invalid value for magit-todos-auto-group-items"))))
-         (magit-todos-show-filenames (not (member 'magit-todos-item-filename group-fns)))
          (magit-section-show-child-count t)
          ;; HACK: "For internal use only."  But this makes collapsing the new section work!
          (magit-insert-section--parent magit-root-section)
@@ -737,17 +795,22 @@ If BRANCH-P is non-nil, do not update `magit-todos-item-cache',
           ;; Insert items
           (goto-char (point-min))
           ;; Go to insertion position
-          (pcase magit-todos-insert-at
-            ('top (cl-loop for ((this-section . _) . _) = (magit-section-ident (magit-current-section))
-                           until (not (member this-section '(branch tags)))
-                           do (magit-section-forward)))
-            ('bottom (goto-char (oref (-last-item (oref magit-root-section children)) end)))
-            (_ (magit-todos--skip-section (vector '* magit-todos-insert-at))))
+          (goto-char (or (cl-loop for section in magit-todos-insert-after
+                                  for pos = (magit-todos--section-end section)
+                                  when pos return pos)
+                         (magit-todos--section-end 'bottom)))
           ;; Insert section
-          (let ((reminder (if magit-todos-update
-                              "" ; Automatic updates: no reminder
-                            ;; Manual updates: remind user
-                            " (update manually)")))
+          (let* ((group-fns (pcase magit-todos-auto-group-items
+                              ('never nil)
+                              ('always magit-todos-group-by)
+                              ((pred integerp) (when (> num-items magit-todos-auto-group-items)
+                                                 magit-todos-group-by))
+                              (_ (error "Invalid value for magit-todos-auto-group-items"))))
+                 (magit-todos-show-filenames (not (member 'magit-todos-item-filename group-fns)))
+                 (reminder (if magit-todos-update
+                               ""      ; Automatic updates: no reminder
+                             ;; Manual updates: remind user
+                             " (update manually)")))
             (if (not items)
                 (unless magit-todos-update
                   ;; Manual updates: Insert section to remind user
@@ -762,7 +825,6 @@ If BRANCH-P is non-nil, do not update `magit-todos-item-cache',
                                :group-fns group-fns
                                :items items
                                :depth 0)))
-                (insert "\n")
                 (magit-todos--set-visibility :section section :num-items num-items)))))))))
 
 (cl-defun magit-todos--insert-groups (&key depth group-fns heading type items)
@@ -824,7 +886,11 @@ sections."
                                                   (if (= 1 (length group-fns))
                                                       ":" ; Let Magit add the count.
                                                     ;; Add count ourselves.
-                                                    (concat " " (format "(%s)" (length items))))))))))
+                                                    (concat " " (format "(%s)" (length items)))))))
+                          (when (= 0 depth)
+                            ;; Insert a blank line only in the body of the top-level section, so it
+                            ;; will appear only when the section is expanded, matching other sections.
+                            (insert "\n")))))
           (magit-todos--set-visibility :depth depth :num-items (length items) :section section)
           ;; Add top-level section to root section's children
           (when (= 0 depth)
@@ -858,6 +924,8 @@ sections."
                       (let* ((filename (propertize (magit-todos-item-filename item) 'face 'magit-filename))
                              (string (--> (concat indent
                                                   (when magit-todos-show-filenames
+                                                    (when magit-todos-filename-filter
+                                                      (setf filename (funcall magit-todos-filename-filter filename)))
                                                     (concat filename " "))
                                                   (funcall (if (s-suffix? ".org" filename)
                                                                #'magit-todos--format-org
@@ -892,20 +960,6 @@ automatically hidden halves at each deeper level."
            (magit-section-hide section)
          ;; Not hidden: show section manually (necessary for some reason)
          (magit-section-show section)))))
-
-(defun magit-todos--skip-section (condition)
-  "Move past the section matching CONDITION.
-See `magit-section-match'."
-  (goto-char (point-min))
-  (cl-loop until (magit-section-match condition)
-           do (magit-section-forward))
-  (cl-loop until (not (magit-section-match condition))
-           do (condition-case nil
-                  ;; `magit-section-forward' raises an error when there are no more sections.
-                  (magit-section-forward)
-                (error (progn
-                         (goto-char (1- (point-max)))
-                         (cl-return))))))
 
 (cl-defun magit-todos--line-item (regexp &optional filename)
   "Return item on current line, parsing current buffer with REGEXP.
@@ -1172,15 +1226,18 @@ It also adds the scanner to the customization variable
        ;; FIXME: That is confusing.
 
        (cl-defun ,scan-fn-symbol (&key magit-status-buffer directory depth heading sync callback)
-         ,(format "Scan for to-dos with %s, then call `%s'.
-MAGIT-STATUS-BUFFER is what it says.  DIRECTORY is the directory in which to run the scan.  DEPTH should be an integer, typically the value of `magit-todos-depth'.  HEADING is passed to `%s'.
+         ,(format "Scan for to-dos with %s.
+Then calls CALLBACK.  MAGIT-STATUS-BUFFER is what it says.  DIRECTORY
+is the directory in which to run the scan.  DEPTH should be an
+integer, typically the value of `magit-todos-depth'.  HEADING is
+passed to CALLBACK.
 
 When SYNC is nil, the scanner process is returned, and CALLBACK
 is a function which is called by the process sentinel with one
 argument, a list of match items.
 
 When SYNC is non-nil, match items are returned."
-                  name callback callback)
+                  name-without-spaces)
          (let* ((process-connection-type 'pipe)
                 (directory (f-relative directory default-directory))
                 (extra-args (when ,extra-args-var
