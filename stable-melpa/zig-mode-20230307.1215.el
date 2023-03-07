@@ -1,8 +1,8 @@
 ;;; zig-mode.el --- A major mode for the Zig programming language -*- lexical-binding: t -*-
 
 ;; Version: 0.0.8
-;; Package-Version: 20230121.1229
-;; Package-Commit: 3cf8ccb55156677b77e0cafbafee8f63dcebfd49
+;; Package-Version: 20230307.1215
+;; Package-Commit: 2013d39ee9a62449263939bc8c33a128fe1e90f0
 ;; Author: Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>
 ;; Keywords: zig, languages
 ;; Package-Requires: ((emacs "24.3") (reformatter "0.6"))
@@ -520,7 +520,7 @@ This is written mainly to be used as `end-of-defun-function' for Zig."
     (zig-format-on-save-mode 1)))
 
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(zig\\|zon\\)\\'" . zig-mode))
 
 (provide 'zig-mode)
 ;;; zig-mode.el ends here
