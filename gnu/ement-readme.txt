@@ -122,6 +122,7 @@ Feel free to join us in the chat room:
      • `ement-room-send-image' to send an image.
      • `ement-room-set-topic' to set a room's topic.
      • `ement-room-occur' to search in a room's known events.
+     • `ement-room-override-name' to override a room's display name.
      • `ement-ignore-user' to ignore a user (or with interactive
        prefix, un-ignore).
      • `ement-room-set-message-format' to set a room's message format
@@ -210,6 +211,7 @@ Feel free to join us in the chat room:
   ⁃ Set topic: `r t'
   ⁃ Set message format: `r f'
   ⁃ Set notification rules: `r n'
+  ⁃ Override display name: `r N'
   ⁃ Tag/untag room: `r T'
 
   *Room membership*
@@ -391,7 +393,77 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.5.2
+4.1 0.7
+───────
+
+  *Additions*
+
+  ⁃ Command `ement-room-override-name' sets a local override for a
+    room's display name.  (Especially helpful for 1:1 rooms and bridged
+    rooms.  See [MSC3015].)
+
+  *Changes*
+
+  ⁃ Improve display of room tombstones (displayed at top and bottom of
+    buffer, and new room ID is linked to join).
+  ⁃ Use descriptive prompts in `ement-leave-room' and
+    `ement-forget-room' commands.
+
+  *Fixes*
+
+  ⁃ Command `ement-view-space' when called from a room buffer.  (Thanks
+    to [Richard Brežák] for reporting.)
+  ⁃ Don't call `display-buffer' when reverting room list buffer.  (Fixes
+    [#121].  Thanks to [mekeor] for reporting.)
+  ⁃ Retry sync for network timeouts.  (Accidentally broken in v0.6.)
+
+  *Internal*
+
+  ⁃ Function `ement-put-account-data' accepts `:room' argument to put on
+    a room's account data.
+
+
+[MSC3015]
+<https://github.com/matrix-org/matrix-spec-proposals/pull/3015#issuecomment-1451017296>
+
+[Richard Brežák] <https://github.com/MagicRB>
+
+[#121] <https://github.com/alphapapa/ement.el/issues/121>
+
+[mekeor] <https://github.com/mekeor>
+
+
+4.2 0.6
+───────
+
+  *Additions*
+  ⁃ Command `ement-view-space' to view a space's rooms in a directory
+    buffer.
+
+  *Changes*
+  ⁃ Improve `ement-describe-room' command (formatting, bindings).
+
+  *Fixes*
+  ⁃ Retry sync for HTTP 502 "Bad Gateway" errors.
+  ⁃ Formatting of unban events.
+  ⁃ Update password authentication according to newer Matrix spec.
+    (Fixes compatibility with Conduit servers.  [#66].  Thanks to
+    [Travis Peacock], [Arto Jantunen], and [Stephen D].)
+  ⁃ Image scaling issues.  (Thanks to [Visuwesh].)
+
+
+[#66] <https://github.com/alphapapa/ement.el/issues/66>
+
+[Travis Peacock] <https://github.com/tpeacock19>
+
+[Arto Jantunen] <https://github.com/viiru->
+
+[Stephen D] <https://github.com/scd31>
+
+[Visuwesh] <https://github.com/vizs>
+
+
+4.3 0.5.2
 ─────────
 
   *Fixes*
@@ -399,7 +471,7 @@ Feel free to join us in the chat room:
     homeserver is slow to respond).
 
 
-4.2 0.5.1
+4.4 0.5.1
 ─────────
 
   *Fixes*
@@ -407,7 +479,7 @@ Feel free to join us in the chat room:
   ⁃ Faces in `ement-directory' listings.
 
 
-4.3 0.5
+4.5 0.5
 ───────
 
   *Additions*
@@ -432,7 +504,7 @@ Feel free to join us in the chat room:
 [taxy.el] <https://github.com/alphapapa/taxy.el>
 
 
-4.4 0.4.1
+4.6 0.4.1
 ─────────
 
   *Fixes*
@@ -440,7 +512,7 @@ Feel free to join us in the chat room:
     marker's position again.
 
 
-4.5 0.4
+4.7 0.4
 ───────
 
   *Additions*
@@ -471,7 +543,7 @@ Feel free to join us in the chat room:
   ⁃ Highlighting of `@room' mentions.
 
 
-4.6 0.3.1
+4.8 0.3.1
 ─────────
 
   *Fixes*
@@ -479,7 +551,7 @@ Feel free to join us in the chat room:
     local user, the room is considered read).
 
 
-4.7 0.3
+4.9 0.3
 ───────
 
   *Additions*
@@ -507,15 +579,15 @@ Feel free to join us in the chat room:
   ⁃ Compatibility with Emacs 27.
 
 
-4.8 0.2.1
-─────────
+4.10 0.2.1
+──────────
 
   *Fixes*
   ⁃ Info manual export filename.
 
 
-4.9 0.2
-───────
+4.11 0.2
+────────
 
   *Changes*
   ⁃ Read receipts are re-enabled.  (They're now implemented with a
@@ -549,14 +621,14 @@ Feel free to join us in the chat room:
 [Julien Roy] <https://github.com/MrRoy>
 
 
-4.10 0.1.4
+4.12 0.1.4
 ──────────
 
   *Fixed*
   ⁃ Info manual directory headers.
 
 
-4.11 0.1.3
+4.13 0.1.3
 ──────────
 
   *Fixed*
@@ -566,7 +638,7 @@ Feel free to join us in the chat room:
     re-enabled in a future release.)
 
 
-4.12 0.1.2
+4.14 0.1.2
 ──────────
 
   *Fixed*
@@ -583,7 +655,7 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.13 0.1.1
+4.15 0.1.1
 ──────────
 
   *Fixed*
@@ -593,7 +665,7 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.14 0.1
+4.16 0.1
 ────────
 
   After almost two years of development, the first tagged release.
