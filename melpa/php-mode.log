@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-php/php-mode.git
 
 Updating /mnt/store/melpa/working/php-mode/
-Checking out a399e6a531255a2274db906cbb207e486f16b314
+Checking out 8e874a8fd8fbcf05fa7e6ddce2208514e90e7e81
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/php-mode/
-  to /tmp/php-modeTIHGBr/php-mode-20230305.2120
+  to /tmp/php-modeURip6Q/php-mode-20230308.1304
   ! lisp/php-align.el -> php-align.el
   ! lisp/php-complete.el -> php-complete.el
   ! lisp/php-defs.el -> php-defs.el
@@ -18,21 +18,23 @@ Copying files (->) and directories (=>)
   ! lisp/php-mode.el -> php-mode.el
   ! lisp/php-project.el -> php-project.el
   ! lisp/php.el -> php.el
-Created php-mode-20230305.2120.tar containing:
-  php-mode-20230305.2120/
-  php-mode-20230305.2120/php-align.el
-  php-mode-20230305.2120/php-complete.el
-  php-mode-20230305.2120/php-defs.el
-  php-mode-20230305.2120/php-face.el
-  php-mode-20230305.2120/php-flymake.el
-  php-mode-20230305.2120/php-format.el
-  php-mode-20230305.2120/php-local-manual.el
-  php-mode-20230305.2120/php-mode-debug.el
-  php-mode-20230305.2120/php-mode-pkg.el
-  php-mode-20230305.2120/php-mode.el
-  php-mode-20230305.2120/php-project.el
-  php-mode-20230305.2120/php.el
-Built php-mode in 5.120s, finished at 2023-03-08T09:41:28+0000
+Created php-mode-20230308.1304.tar containing:
+  php-mode-20230308.1304/
+  php-mode-20230308.1304/php-align.el
+  php-mode-20230308.1304/php-complete.el
+  php-mode-20230308.1304/php-defs.el
+  php-mode-20230308.1304/php-face.el
+  php-mode-20230308.1304/php-flymake.el
+  php-mode-20230308.1304/php-format.el
+  php-mode-20230308.1304/php-local-manual.el
+  php-mode-20230308.1304/php-mode-debug.el
+  php-mode-20230308.1304/php-mode-pkg.el
+  php-mode-20230308.1304/php-mode.el
+  php-mode-20230308.1304/php-project.el
+  php-mode-20230308.1304/php.el
+Built php-mode in 5.877s, finished at 2023-03-08T13:37:24+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  355 Mar  8 09:41 packages/php-mode-20230305.2120.entry
 252K -rw-r--r-- 1 root root 250K Mar  8 09:41 packages/php-mode-20230305.2120.tar
+4.0K -rw-r--r-- 1 root root  355 Mar  8 13:37 packages/php-mode-20230308.1304.entry
+252K -rw-r--r-- 1 root root 250K Mar  8 13:37 packages/php-mode-20230308.1304.tar
