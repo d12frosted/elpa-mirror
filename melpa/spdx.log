@@ -3,15 +3,20 @@ Fetcher: github
 Source:  https://github.com/condy0919/spdx.el.git
 
 Updating /mnt/store/melpa/working/spdx/
-Checking out 510679fd72ace18c5fc0c7d5f25c1fe67ba14c6f
+Checking out 390fbeaac9745651e0f81508a154533be5ea6567
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/spdx/
-  to /tmp/spdxVq8qcc/spdx-20230306.121
+  to /tmp/spdxFOMg5g/spdx-20230308.122
     spdx-data.el -> spdx-data.el
     spdx.el -> spdx.el
-Created spdx-20230306.121.tar containing:
-  spdx-20230306.121/
-  spdx-20230306.121/spdx-data.el
-  spdx-20230306.121/spdx-pkg.el
-  spdx-20230306.121/spdx.el
-Searching for program: No such file or directory, convert
+Created spdx-20230308.122.tar containing:
+  spdx-20230308.122/
+  spdx-20230308.122/spdx-data.el
+  spdx-20230308.122/spdx-pkg.el
+  spdx-20230308.122/spdx.el
+Built spdx in 4.283s, finished at 2023-03-08T05:58:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 364 Mar  8 00:58 packages/spdx-20230306.121.entry
+ 32K -rw-r--r-- 1 root root 30K Mar  8 00:58 packages/spdx-20230306.121.tar
+4.0K -rw-r--r-- 1 root root 364 Mar  8 05:58 packages/spdx-20230308.122.entry
+ 32K -rw-r--r-- 1 root root 30K Mar  8 05:58 packages/spdx-20230308.122.tar

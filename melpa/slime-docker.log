@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/slime-docker/
 Checking out c7d073720f2bd8e9f72a20309fff2afa4c4e798d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/slime-docker/
-  to /tmp/slime-dockerwI6Zju/slime-docker-20210426.1422
+  to /tmp/slime-dockerrTDhoW/slime-docker-20210426.1422
     slime-docker.el -> slime-docker.el
     bin => bin
 Created slime-docker-20210426.1422.tar containing:
@@ -15,4 +15,7 @@ Created slime-docker-20210426.1422.tar containing:
   slime-docker-20210426.1422/bin/docker-run-ssh-agent-helper
   slime-docker-20210426.1422/slime-docker-pkg.el
   slime-docker-20210426.1422/slime-docker.el
-Searching for program: No such file or directory, convert
+Built slime-docker in 5.351s, finished at 2023-03-08T05:56:32+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 351 Mar  8 05:56 packages/slime-docker-20210426.1422.entry
+ 40K -rw-r--r-- 1 root root 40K Mar  8 05:56 packages/slime-docker-20210426.1422.tar
