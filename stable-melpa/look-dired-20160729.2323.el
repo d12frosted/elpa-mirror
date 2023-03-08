@@ -7,8 +7,6 @@
 ;; Copyleft (Ↄ) 2013, Joe Bloggs, all rites reversed.
 ;; Created: 2013-05-11 20:39:19
 ;; Version: 20151110.1832
-;; Package-Version: 20160729.2323
-;; Package-Commit: 9bfa4e5e6f3810705b6426c88493ea0bf6b15640
 ;; Last-Updated: 2013-05-11 20:39:19
 ;;           By: Joe Bloggs
 ;; URL: https://github.com/vapniks/look-dired

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-elsa/Elsa.git
 
 Updating /mnt/store/melpa/working/elsa/
-Checking out 1fb0f698d9305bcfb501aca1ae9476979ed67117
+Checking out 71e8b3f2e79878b2df9990ecabd7eb3b740f23b4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elsa/
-  to /tmp/elsa0xwVtd/elsa-20230305.1645
+  to /tmp/elsaH5HXlw/elsa-20230306.2246
     Elsafile.el -> Elsafile.el
     elsa-analyser.el -> elsa-analyser.el
     elsa-check.el -> elsa-check.el
@@ -50,53 +50,53 @@ Copying files (->) and directories (=>)
     elsa-variable.el -> elsa-variable.el
     elsa.el -> elsa.el
     bin => bin
-Created elsa-20230305.1645.tar containing:
-  elsa-20230305.1645/
-  elsa-20230305.1645/Elsafile.el
-  elsa-20230305.1645/bin/
-  elsa-20230305.1645/bin/elsa
-  elsa-20230305.1645/bin/elsa-lsp
-  elsa-20230305.1645/bin/elsa-lsp.bat
-  elsa-20230305.1645/bin/elsa.bat
-  elsa-20230305.1645/elsa-analyser.el
-  elsa-20230305.1645/elsa-check.el
-  elsa-20230305.1645/elsa-declare.el
-  elsa-20230305.1645/elsa-dependencies.el
-  elsa-20230305.1645/elsa-english.el
-  elsa-20230305.1645/elsa-error.el
-  elsa-20230305.1645/elsa-explainer.el
-  elsa-20230305.1645/elsa-extension-builtin.el
-  elsa-20230305.1645/elsa-extension-cl.el
-  elsa-20230305.1645/elsa-extension-dash.el
-  elsa-20230305.1645/elsa-extension-eieio.el
-  elsa-20230305.1645/elsa-extension-elsa.el
-  elsa-20230305.1645/elsa-extension-flycheck.el
-  elsa-20230305.1645/elsa-extension-seq.el
-  elsa-20230305.1645/elsa-extension-subr.el
-  elsa-20230305.1645/elsa-font-lock.el
-  elsa-20230305.1645/elsa-form.el
-  elsa-20230305.1645/elsa-functions.el
-  elsa-20230305.1645/elsa-log.el
-  elsa-20230305.1645/elsa-lsp-core.el
-  elsa-20230305.1645/elsa-lsp.el
-  elsa-20230305.1645/elsa-methods.el
-  elsa-20230305.1645/elsa-pkg.el
-  elsa-20230305.1645/elsa-reader.el
-  elsa-20230305.1645/elsa-rules-list.el
-  elsa-20230305.1645/elsa-ruleset.el
-  elsa-20230305.1645/elsa-scope.el
-  elsa-20230305.1645/elsa-state.el
-  elsa-20230305.1645/elsa-type-algebra.el
-  elsa-20230305.1645/elsa-type-helpers.el
-  elsa-20230305.1645/elsa-type.el
-  elsa-20230305.1645/elsa-typed-builtin.el
-  elsa-20230305.1645/elsa-typed-cl.el
-  elsa-20230305.1645/elsa-typed-eieio.el
-  elsa-20230305.1645/elsa-typed-subr.el
-  elsa-20230305.1645/elsa-typed-syntax.el
-  elsa-20230305.1645/elsa-typed-thingatpt.el
-  elsa-20230305.1645/elsa-types-simple.el
-  elsa-20230305.1645/elsa-types.el
-  elsa-20230305.1645/elsa-variable.el
-  elsa-20230305.1645/elsa.el
+Created elsa-20230306.2246.tar containing:
+  elsa-20230306.2246/
+  elsa-20230306.2246/Elsafile.el
+  elsa-20230306.2246/bin/
+  elsa-20230306.2246/bin/elsa
+  elsa-20230306.2246/bin/elsa-lsp
+  elsa-20230306.2246/bin/elsa-lsp.bat
+  elsa-20230306.2246/bin/elsa.bat
+  elsa-20230306.2246/elsa-analyser.el
+  elsa-20230306.2246/elsa-check.el
+  elsa-20230306.2246/elsa-declare.el
+  elsa-20230306.2246/elsa-dependencies.el
+  elsa-20230306.2246/elsa-english.el
+  elsa-20230306.2246/elsa-error.el
+  elsa-20230306.2246/elsa-explainer.el
+  elsa-20230306.2246/elsa-extension-builtin.el
+  elsa-20230306.2246/elsa-extension-cl.el
+  elsa-20230306.2246/elsa-extension-dash.el
+  elsa-20230306.2246/elsa-extension-eieio.el
+  elsa-20230306.2246/elsa-extension-elsa.el
+  elsa-20230306.2246/elsa-extension-flycheck.el
+  elsa-20230306.2246/elsa-extension-seq.el
+  elsa-20230306.2246/elsa-extension-subr.el
+  elsa-20230306.2246/elsa-font-lock.el
+  elsa-20230306.2246/elsa-form.el
+  elsa-20230306.2246/elsa-functions.el
+  elsa-20230306.2246/elsa-log.el
+  elsa-20230306.2246/elsa-lsp-core.el
+  elsa-20230306.2246/elsa-lsp.el
+  elsa-20230306.2246/elsa-methods.el
+  elsa-20230306.2246/elsa-pkg.el
+  elsa-20230306.2246/elsa-reader.el
+  elsa-20230306.2246/elsa-rules-list.el
+  elsa-20230306.2246/elsa-ruleset.el
+  elsa-20230306.2246/elsa-scope.el
+  elsa-20230306.2246/elsa-state.el
+  elsa-20230306.2246/elsa-type-algebra.el
+  elsa-20230306.2246/elsa-type-helpers.el
+  elsa-20230306.2246/elsa-type.el
+  elsa-20230306.2246/elsa-typed-builtin.el
+  elsa-20230306.2246/elsa-typed-cl.el
+  elsa-20230306.2246/elsa-typed-eieio.el
+  elsa-20230306.2246/elsa-typed-subr.el
+  elsa-20230306.2246/elsa-typed-syntax.el
+  elsa-20230306.2246/elsa-typed-thingatpt.el
+  elsa-20230306.2246/elsa-types-simple.el
+  elsa-20230306.2246/elsa-types.el
+  elsa-20230306.2246/elsa-variable.el
+  elsa-20230306.2246/elsa.el
 Searching for program: No such file or directory, convert
