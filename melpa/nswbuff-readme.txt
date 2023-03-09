@@ -41,7 +41,8 @@ switching.  If this function returns nil, the buffers returned by
 `nswbuff-exclude-buffer-regexps', `nswbuff-exclude-mode-regexp' and
 `nswbuff-include-buffer-regexps'.
 
-One function already provided that makes use of this option is
-`nswbuff-projectile-buffer-list', which returns the buffers of the current
-[Projectile](http://batsov.com/projectile/) project plus any buffers in
-`(buffer-list)' that match `nswbuff-include-buffer-regexps'.
+Two functions already provided that makes use of this option are
+`nswbuff-project-buffer-list' and `nswbuff-projectile-buffer-list', which
+return the buffers of the current project according to the built-in
+`project.el' or [Projectile](http://batsov.com/projectile/),
+respectively.

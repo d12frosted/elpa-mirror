@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/tumashu/pyim.git
 
 Updating /mnt/store/melpa/working/pyim/
-Checking out d0a8687150e05b88bcd84a8213bf112a6d804d43
+Checking out 19b69679d0a83829e5470644e3fd4a7660afbf63
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pyim/
-  to /tmp/pyim0lhpEq/pyim-20230308.225
+  to /tmp/pyimfC35SE/pyim-20230309.716
     pyim-autoselector.el -> pyim-autoselector.el
     pyim-candidates.el -> pyim-candidates.el
     pyim-cloudim.el -> pyim-cloudim.el
@@ -36,39 +36,41 @@ Copying files (->) and directories (=>)
     pyim-pymap.el -> pyim-pymap.el
     pyim-scheme.el -> pyim-scheme.el
     pyim.el -> pyim.el
-Created pyim-20230308.225.tar containing:
-  pyim-20230308.225/
-  pyim-20230308.225/pyim-autoselector.el
-  pyim-20230308.225/pyim-candidates.el
-  pyim-20230308.225/pyim-cloudim.el
-  pyim-20230308.225/pyim-codes.el
-  pyim-20230308.225/pyim-common.el
-  pyim-20230308.225/pyim-cregexp-utils.el
-  pyim-20230308.225/pyim-cregexp.el
-  pyim-20230308.225/pyim-cstring-utils.el
-  pyim-20230308.225/pyim-cstring.el
-  pyim-20230308.225/pyim-dcache.el
-  pyim-20230308.225/pyim-dhashcache.el
-  pyim-20230308.225/pyim-dict-manager.el
-  pyim-20230308.225/pyim-dict.el
-  pyim-20230308.225/pyim-dregcache.el
-  pyim-20230308.225/pyim-entered.el
-  pyim-20230308.225/pyim-imobjs.el
-  pyim-20230308.225/pyim-indicator.el
-  pyim-20230308.225/pyim-liberime.el
-  pyim-20230308.225/pyim-outcome.el
-  pyim-20230308.225/pyim-page.el
-  pyim-20230308.225/pyim-pinyin.el
-  pyim-20230308.225/pyim-pkg.el
-  pyim-20230308.225/pyim-preview.el
-  pyim-20230308.225/pyim-probe.el
-  pyim-20230308.225/pyim-process.el
-  pyim-20230308.225/pyim-punctuation.el
-  pyim-20230308.225/pyim-pymap-utils.el
-  pyim-20230308.225/pyim-pymap.el
-  pyim-20230308.225/pyim-scheme.el
-  pyim-20230308.225/pyim.el
-Built pyim in 4.961s, finished at 2023-03-09T05:29:23+0000
+Created pyim-20230309.716.tar containing:
+  pyim-20230309.716/
+  pyim-20230309.716/pyim-autoselector.el
+  pyim-20230309.716/pyim-candidates.el
+  pyim-20230309.716/pyim-cloudim.el
+  pyim-20230309.716/pyim-codes.el
+  pyim-20230309.716/pyim-common.el
+  pyim-20230309.716/pyim-cregexp-utils.el
+  pyim-20230309.716/pyim-cregexp.el
+  pyim-20230309.716/pyim-cstring-utils.el
+  pyim-20230309.716/pyim-cstring.el
+  pyim-20230309.716/pyim-dcache.el
+  pyim-20230309.716/pyim-dhashcache.el
+  pyim-20230309.716/pyim-dict-manager.el
+  pyim-20230309.716/pyim-dict.el
+  pyim-20230309.716/pyim-dregcache.el
+  pyim-20230309.716/pyim-entered.el
+  pyim-20230309.716/pyim-imobjs.el
+  pyim-20230309.716/pyim-indicator.el
+  pyim-20230309.716/pyim-liberime.el
+  pyim-20230309.716/pyim-outcome.el
+  pyim-20230309.716/pyim-page.el
+  pyim-20230309.716/pyim-pinyin.el
+  pyim-20230309.716/pyim-pkg.el
+  pyim-20230309.716/pyim-preview.el
+  pyim-20230309.716/pyim-probe.el
+  pyim-20230309.716/pyim-process.el
+  pyim-20230309.716/pyim-punctuation.el
+  pyim-20230309.716/pyim-pymap-utils.el
+  pyim-20230309.716/pyim-pymap.el
+  pyim-20230309.716/pyim-scheme.el
+  pyim-20230309.716/pyim.el
+Built pyim in 5.580s, finished at 2023-03-09T09:27:18+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  477 Mar  9 05:29 packages/pyim-20230308.225.entry
 520K -rw-r--r-- 1 root root 520K Mar  9 05:29 packages/pyim-20230308.225.tar
+4.0K -rw-r--r-- 1 root root  477 Mar  9 09:27 packages/pyim-20230309.716.entry
+520K -rw-r--r-- 1 root root 520K Mar  9 09:27 packages/pyim-20230309.716.tar
