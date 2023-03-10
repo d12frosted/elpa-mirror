@@ -1,38 +1,5 @@
-Table of Contents
-─────────────────
-
-1. org-journal
-.. 1. Synopsis
-.. 2. Installation
-.. 3. Quickstart
-.. 4. Basic Usage
-.. 5. Setup and customization
-..... 1. Journal Directory and Files
-..... 2. Journal File Content
-..... 3. An example setup
-.. 6. Advanced Usage
-..... 1. Searching the Journal
-..... 2. Carry Over
-..... 3. Encryption
-..... 4. Agenda and Scheduling
-..... 5. Journal Capture Template
-..... 6. Caching of journal dates
-.. 7. FAQ
-..... 1. Can I use weekly/monthly/yearly journal entries instead of daily ones?
-..... 2. Can I have multiple journals?
-..... 3. Can I use org-journal with Spacemacs?
-..... 4. Some key-bindings in org-journal conflict with org-mode key bindings
-..... 5. Opening journal entries from the calendar are not editable
-..... 6. Can I insert some text on a newly created journal file?
-..... 7. Can I do more powerful things on a newly created journal entry?
-.. 8. Convenient `org-journal' Snippet Extensions
-..... 1. Kill journal buffer after saving buffer (By [@dhruvparamhans])
-.. 9. Contributors
-.. 10. Contributing to `org-journal'
-.. 11. Changelog
-
-
 [file:https://travis-ci.org/bastibe/org-journal.svg?branch=master]
+[https://elpa.nongnu.org/nongnu/org-journal.svg]
 [file:http://melpa.org/packages/org-journal-badge.svg]
 [file:http://stable.melpa.org/packages/org-journal-badge.svg]
 
@@ -41,6 +8,9 @@ Table of Contents
 
 [file:https://travis-ci.org/bastibe/org-journal.svg?branch=master]
 <https://travis-ci.org/bastibe/org-journal>
+
+[https://elpa.nongnu.org/nongnu/org-journal.svg]
+<https://elpa.nongnu.org/nongnu/org-journal.html>
 
 [file:http://melpa.org/packages/org-journal-badge.svg]
 <http://melpa.org/#/org-journal>
@@ -151,8 +121,8 @@ Table of Contents
 1.2 Installation
 ────────────────
 
-  `org-journal' is available through [marmalade], [melpa] and
-  [melpa-stable]. So installation should be trivial:
+  `org-journal' is available through [NonGNU ELPA], [MELPA] and [MELPA
+  Stable]. So installation should be trivial:
 
   ┌────
   │ M-x package-install org-journal
@@ -160,25 +130,34 @@ Table of Contents
 
   Then add `(require 'org-journal)' to your `.emacs'.
 
+  *Note!* If you are using `org-mode' version 9.6 consider customizing
+   the variable `org-element-use-cache' and setting it to `nil' to
+   workaround [an issue where journal items are not properly carried
+   over to the next day]
 
-[marmalade] <http://marmalade-repo.org/>
 
-[melpa] <http://melpa.milkbox.net/>
+[NonGNU ELPA] <https://elpa.nongnu.org/>
 
-[melpa-stable] <http://melpa-stable.milkbox.net/>
+[MELPA] <https://melpa.org/>
+
+[MELPA Stable] <https://stable.melpa.org/>
+
+[an issue where journal items are not properly carried over to the next
+day] <https://github.com/bastibe/org-journal/issues/406>
 
 
 1.3 Quickstart
 ──────────────
 
-  Doing `M-x org-journal-new-entry' (or `C-c C-j') will immediately
-  create a journal directory in the default path (customized using the
-  `org-journal-dir' variable), open or create a file in
-  `org-journal-mode', and insert a template for a new journal entry.
+  Doing `M-x org-journal-new-entry' will immediately create a journal
+  directory in the default path (customized using the `org-journal-dir'
+  variable), open or create a file in `org-journal-mode', and insert a
+  template for a new journal entry.
 
-  The same command with a prefix argument (`C-u C-c C-j') will do
-  everything mentioned while skipping entry creation, which is useful
-  for looking at the current journal file.
+  The same command with a prefix argument (`C-u M-x
+  org-journal-new-entry') will do everything mentioned while skipping
+  entry creation, which is useful for looking at the current journal
+  file.
 
 
 1.4 Basic Usage
@@ -296,8 +275,22 @@ Table of Contents
     │ (setq org-journal-file-header 'org-journal-file-header-func)
     └────
 
+  • `org-journal-hide-entries-p' - a boolean (defaults to `true') that
+    will hide previous journal entries if true. Can be set to `nil' to
+    show previous entries.
 
-1.5.3 An example setup
+
+1.5.3 `org-journal' behavior
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Customization options related to `org-journal' itself:
+
+  • `org-journal-mode-hook' - List of functions to run when
+    `org-journal-mode' is loaded. By default this is set to
+    `'(turn-on-visual-line-mode org-journal-default-enable-encryption)'.
+
+
+1.5.4 An example setup
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   A very basic example of customization.
@@ -593,15 +586,6 @@ Table of Contents
   • `C-c C-b' (`org-journal-open-previous-entry') with
     `org-backward-heading-same-level'
   • `C-c C-j' (`org-journal-new-entry') with `org-goto'
-
-  When working in an org-journal buffer the following org-mode key
-  bindings are overwritten:
-  • `C-c C-s' (`org-schedule') with `org-journal-search'
-  • `C-c C-f' (`org-forward-heading-same-level') with
-    `org-journal-open-next-entry'
-  • `C-c C-b' (`org-backward-heading-same-level') with
-    `org-journal-open-previous-entry'
-  • `C-c C-j' (`org-goto') with `org-journal-new-entry'
 
   To workaround this, you can use user bindings of the form `C-c ?',
   where `?' can be any letter, to call the org-journal functions. This

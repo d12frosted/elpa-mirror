@@ -1434,7 +1434,7 @@
 	       ("Paul Sexton" . "eeeickythump@gmail.com"))
 	      (:commit . "4c114489e682e514e79701045d541ab6f3dc3fb4"))])
  (org-journal .
-	      [(2 1 2)
+	      [(2 2 0)
 	       ((emacs
 		 (25 1))
 		(org
@@ -1444,7 +1444,8 @@
 		(:maintainer "Bastian Bechtold")
 		(:authors
 		 ("Bastian Bechtold")
-		 ("Christian Schwarzgruber")))])
+		 ("Christian Schwarzgruber"))
+		(:commit . "18df4d5ae5e15580df42562c143d007c6d28d75f"))])
  (org-mime .
 	   [(0 3 2)
 	    ((emacs

@@ -750,6 +750,18 @@
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "7c425a2d0988f3fae603434c1f8044be8293d517"))])
+ (denote-menu .
+	      [(1 0 0)
+	       ((emacs
+		 (28 1))
+		(denote
+		 (1 2 0)))
+	       "View denote files in a tabulated list." tar
+	       ((:maintainer "Mohamed Suliman" . "sulimanm@tcd.ie")
+		(:authors
+		 ("Mohamed Suliman" . "sulimanm@tcd.ie"))
+		(:url . "https://elpa.gnu.org/packages/denote-menu.html")
+		(:commit . "3bd7cf7d126d4493df17715aec3e7a9046efdc8c"))])
  (detached .
 	   [(0 10 1)
 	    ((emacs
@@ -1631,7 +1643,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 20)
+	    [(0 22)
 	     ((emacs
 	       (27 1)))
 	     "Tool for inspection of Emacs Lisp objects" tar
@@ -1640,7 +1652,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "61fd1dc7e321525cca11a5a899c631f745b2cf31"))])
+	      (:commit . "37be751ada1f20c6d725ac8f570499b84b9b2eaf"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
