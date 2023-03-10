@@ -4,8 +4,8 @@
 
 ;; Author: Jen-Chieh Shen
 ;; URL: https://github.com/emacs-vs/vs-dark-theme
-;; Package-Version: 20221231.1702
-;; Package-Commit: 636f4db45aa4dac1cda09b54757fdc3584ce6697
+;; Package-Version: 20230310.914
+;; Package-Commit: 1bbf3d580856610a5fe600da9c28ed17e8b4691d
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -80,7 +80,7 @@
  `(highlight-doxygen-type       ((t :foreground "SteelBlue")))
  `(highlight-doxygen-variable   ((t :foreground "gold4")))
 
- `(tree-sitter-hl-face:tag                 ((t :foreground "#D7A552")))
+ `(tree-sitter-hl-face:tag                 ((t :foreground "#569CD6")))
  `(tree-sitter-hl-face:type.builtin        ((t :foreground "#17A0FB")))
  `(tree-sitter-hl-face:type                ((t :foreground "#38EFCA")))
  `(tree-sitter-hl-face:function            ((t :foreground "#D2D2D2")))

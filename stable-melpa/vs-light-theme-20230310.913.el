@@ -4,8 +4,8 @@
 
 ;; Author: Jen-Chieh Shen
 ;; URL: https://github.com/emacs-vs/vs-light-theme
-;; Package-Version: 20221231.1702
-;; Package-Commit: 988b649dcb9074719c7fd0ad3f289cf2995d7635
+;; Package-Version: 20230310.913
+;; Package-Commit: 5accd5c1e4581005a0859cf7d85b0191b6b7a30b
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -80,7 +80,7 @@
  `(highlight-doxygen-type       ((t :foreground "SteelBlue")))
  `(highlight-doxygen-variable   ((t :foreground "gold4")))
 
- `(tree-sitter-hl-face:tag                 ((t :foreground "#900022")))
+ `(tree-sitter-hl-face:tag                 ((t :foreground "#800000")))
  `(tree-sitter-hl-face:type.builtin        ((t :foreground "#0000FF")))
  `(tree-sitter-hl-face:type                ((t :foreground "#2B91AF")))
  `(tree-sitter-hl-face:function            ((t :foreground "black")))

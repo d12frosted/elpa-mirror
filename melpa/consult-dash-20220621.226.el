@@ -4,8 +4,6 @@
 
 ;; Author: Ravi R Kiran <lists.ravi@gmail.com>
 ;; Keywords: consult, dash, docs
-;; Package-Version: 20220621.226
-;; Package-Commit: 0eb8e133a12570f482efcf367dcc7887c15def32
 ;; Created: 2022
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "27.2") (dash-docs "1.4.0") (consult "0.16"))
