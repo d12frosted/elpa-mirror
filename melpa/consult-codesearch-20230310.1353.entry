@@ -1,0 +1,15 @@
+(consult-codesearch .
+		    [(20230310 1353)
+		     ((emacs
+		       (27 1))
+		      (codesearch
+		       (1))
+		      (consult
+		       (0 20)))
+		     "Consult interface for codesearch" single
+		     ((:commit . "94d3236114f0186365cdfd77c219a3dd5ed22f14")
+		      (:authors
+		       ("Youngjoo Lee" . "youngker@gmail.com"))
+		      (:maintainer "Youngjoo Lee" . "youngker@gmail.com")
+		      (:keywords "tools")
+		      (:url . "https://github.com/youngker/consult-codesearch"))])

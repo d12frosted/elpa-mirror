@@ -1,5 +1,5 @@
 (org-ql .
-	[(20230309 1100)
+	[(20230310 1225)
 	 ((emacs
 	   (26 1))
 	  (dash
@@ -23,7 +23,7 @@
 	  (ts
 	   (0 2 -1)))
 	 "Org Query Language, search command, and agenda-like view" tar
-	 ((:commit . "e5e9daab0757b485df14e10fc52c2ace2c1abd3b")
+	 ((:commit . "aadddc4d84a72fa80d3bf909c9a3a4cbce53cd93")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")

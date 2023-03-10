@@ -1,11 +1,11 @@
 (load-bash-alias .
-		 [(20230107 1737)
+		 [(20230310 1100)
 		  ((emacs
 		    (24 1))
 		   (seq
 		    (2 16)))
 		  "Convert bash aliases into eshell ones" single
-		  ((:commit . "68cfd70c339c5213c513f7b802b6b50598c9a159")
+		  ((:commit . "5eb9d32c355e8ad85474c80b7610a5ac7fbd124c")
 		   (:authors
 		    ("Davide Restivo" . "davide.restivo@yahoo.it"))
 		   (:maintainer "Davide Restivo" . "davide.restivo@yahoo.it")

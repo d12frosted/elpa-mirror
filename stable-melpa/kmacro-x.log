@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/vifon/kmacro-x.el.git
 
 Updating /mnt/store/melpa/working/kmacro-x/
-Checking out 83b54f219e50049ad7b61230cb8b5afd7467b9c9
+Checking out b1a6206556d8f9d4a7522d5218094b7325ff8507
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kmacro-x/
-  to /tmp/kmacro-xEBg3MF/kmacro-x-20230309.2034
+  to /tmp/kmacro-xnGYxAh/kmacro-x-20230310.1138
     kmacro-x-mc-extra.el -> kmacro-x-mc-extra.el
     kmacro-x-mc-legacy.el -> kmacro-x-mc-legacy.el
     kmacro-x-mc.el -> kmacro-x-mc.el
     kmacro-x.el -> kmacro-x.el
-Created kmacro-x-20230309.2034.tar containing:
-  kmacro-x-20230309.2034/
-  kmacro-x-20230309.2034/kmacro-x-mc-extra.el
-  kmacro-x-20230309.2034/kmacro-x-mc-legacy.el
-  kmacro-x-20230309.2034/kmacro-x-mc.el
-  kmacro-x-20230309.2034/kmacro-x-pkg.el
-  kmacro-x-20230309.2034/kmacro-x.el
-Built kmacro-x in 3.969s, finished at 2023-03-10T08:51:22+0000
+Created kmacro-x-20230310.1138.tar containing:
+  kmacro-x-20230310.1138/
+  kmacro-x-20230310.1138/kmacro-x-mc-extra.el
+  kmacro-x-20230310.1138/kmacro-x-mc-legacy.el
+  kmacro-x-20230310.1138/kmacro-x-mc.el
+  kmacro-x-20230310.1138/kmacro-x-pkg.el
+  kmacro-x-20230310.1138/kmacro-x.el
+Built kmacro-x in 3.925s, finished at 2023-03-10T12:46:16+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 341 Mar 10 08:51 packages/kmacro-x-20230309.2034.entry
  32K -rw-r--r-- 1 root root 30K Mar 10 08:51 packages/kmacro-x-20230309.2034.tar
+4.0K -rw-r--r-- 1 root root 341 Mar 10 12:46 packages/kmacro-x-20230310.1138.entry
+ 32K -rw-r--r-- 1 root root 30K Mar 10 12:46 packages/kmacro-x-20230310.1138.tar
