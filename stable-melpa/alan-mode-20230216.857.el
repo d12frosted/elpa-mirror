@@ -5,8 +5,6 @@
 ;; Author: Paul van Dam <pvandam@kjerner.com>
 ;; Maintainer: Paul van Dam <pvandam@kjerner.com>
 ;; Version: 1.0.0
-;; Package-Version: 20230216.857
-;; Package-Commit: 723cf8e8d7e00c1498935553c46f459aa1d26135
 ;; Created: 13 October 2017
 ;; URL: https://github.com/Kjerner/AlanForEmacs
 ;; Homepage: https://alan-platform.com/

@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018 Yuan Fu
 
 ;; Version: 1.10
-;; Package-Version: 20230309.521
-;; Package-Commit: eec688c1fcebf63bacd28a5fc584f174b8d635aa
+;; Package-Version: 20230309.2354
+;; Package-Commit: 41c2ac8b3b45c632e1fa97315277423c0743147a
 
 ;; Author: Yuan Fu <casouri@gmail.com>
 ;; URL: https://github.com/casouri/eldoc-box
@@ -518,22 +518,27 @@ Trailing newlines doesn’t count."
 (defun eldoc-box--eldoc-message-function (str &rest args)
   "Front-end for eldoc.
 Display STR in childframe and ARGS works like `message'."
-  (when (and (stringp str) (not (equal str "")))
+  (when (stringp str)
     (let* ((doc (string-trim-right (apply #'format str args)))
            (single-line-p (and eldoc-box-only-multi-line
                                (eq (eldoc-box--count-newlines doc) 0))))
-      (unless single-line-p
+      (when (and (not (equal doc ""))
+                 (not single-line-p))
         (eldoc-box--display doc)
         (setq eldoc-box--last-point (point))
         ;; Why a timer? ElDoc is mainly used in minibuffer,
         ;; where the text is constantly being flushed by other commands
         ;; so ElDoc doesn't try very hard to cleanup
-        (when eldoc-box--cleanup-timer (cancel-timer eldoc-box--cleanup-timer))
-        ;; this function is also called by `eldoc-pre-command-refresh-echo-area'
-        ;; in `pre-command-hook', which means the timer is reset before every
-        ;; command if `eldoc-box-hover-mode' is on and `eldoc-last-message' is not nil.
+        (when eldoc-box--cleanup-timer
+          (cancel-timer eldoc-box--cleanup-timer))
+        ;; This function is also called by
+        ;; `eldoc-pre-command-refresh-echo-area' in
+        ;; `pre-command-hook', which means the timer is reset before
+        ;; every command if `eldoc-box-hover-mode' is on and
+        ;; `eldoc-last-message' is not nil.
         (setq eldoc-box--cleanup-timer
-              (run-with-timer eldoc-box-cleanup-interval nil #'eldoc-box--maybe-cleanup)))
+              (run-with-timer eldoc-box-cleanup-interval
+                              nil #'eldoc-box--maybe-cleanup)))
       ;; Return nil to stop ‘eldoc--message’ from running, because
       ;; this function is added as a ‘:before-while’ advice.
       single-line-p)))
@@ -720,12 +725,13 @@ height."
                          'invisible t))
     ;; Special entities.
     (goto-char (point-min))
-    (while (re-search-forward (rx (or "&lt;" "&gt;")) nil t)
+    (while (re-search-forward (rx (or "&lt;" "&gt;" "&nbsp;")) nil t)
       (put-text-property (match-beginning 0) (match-end 0)
                          'display
                          (pcase (match-string 0)
                            ("&lt;" "<")
-                           ("&gt;" ">"))))))
+                           ("&gt;" ">")
+                           ("&nbsp;" " "))))))
 
 ;;;; Tab-bar compatibility
 

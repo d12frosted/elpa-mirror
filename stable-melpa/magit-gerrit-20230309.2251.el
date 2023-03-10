@@ -4,8 +4,8 @@
 ;;
 ;; Author: Brian Fransioli <assem@terranpro.org>
 ;; URL: https://github.com/emacsorphanage/magit-gerrit
-;; Package-Version: 20210831.1453
-;; Package-Commit: 9104713f6ea918e9faaf25f2cc182c65029db936
+;; Package-Version: 20230309.2251
+;; Package-Commit: a97521574c5b7d4b7ab89e25c358c87fd5b1887f
 ;; Package-Requires: ((emacs "25.1") (magit "2.90.1") (transient "0.3.0"))
 ;;
 ;; This program is free software; you can redistribute it and/or
@@ -510,7 +510,7 @@ Succeed even if branch already exist
 (transient-append-suffix 'magit-dispatch "%"
   (list magit-gerrit-popup-prefix "Gerrit" 'magit-gerrit-popup))
 
-(transient-define-prefix magit-gerrit-copy-review-popup
+(transient-define-prefix magit-gerrit-copy-review-popup ()
   "Popup console for copy review to clipboard."
   ["Copy review"
    ("C" "url and commit message" magit-gerrit-copy-review-url-commit-message)
