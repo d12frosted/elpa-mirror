@@ -7,7 +7,8 @@ Common usage
 inspire.el provides two main entry functions for searching on inspirehep:
 `inspire-literature-search` for literature lookup,
 and `inspire-author-search` for author lookup.
-inspire.el will then pop-up a list of records where one can browse and examine detailed information for each record.
+inspire.el will then pop-up a list of records where one can browse and examine
+detailed information for each record.
 The SPIRES syntax (https://help.inspirehep.net/knowledge-base/inspire-paper-search)
 is available for `inspire-literature-search` function.
 
@@ -21,7 +22,9 @@ Other useful commands and their default bindings:
 `a` `inspire-record-author-lookup` : look up for a author profile in current record
 `r` `inspire-reference-search` : look up for references of the current record
 `c` `inspire-citation-search` : look up for citations of the current record
-`[` `inspire-previous-search`, `]` `inspire-next-search` : navigate through the search history
+`[` `inspire-previous-search`
+`]` `inspire-next-search` : navigate through the search history
 `q` `inspire-exit` : exit the record list
 
-Some texts in the record or author information buffer are clickable and will preform corresponding action when clicked upon.
+Some texts in the record or author information buffer are clickable and will preform
+corresponding action when clicked upon.

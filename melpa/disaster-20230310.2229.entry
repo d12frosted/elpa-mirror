@@ -1,0 +1,12 @@
+(disaster .
+	  [(20230310 2229)
+	   ((emacs
+	     (27)))
+	   "Disassemble C, C++ or Fortran code under cursor" single
+	   ((:commit . "50232ae95dd3dd149a82fc1b136c191c9ba9f0f4")
+	    (:authors
+	     ("Justine Tunney" . "jtunney@gmail.com")
+	     ("Abdelhak Bougouffa" . "abougouffa@fedoraproject.org"))
+	    (:maintainer "Abdelhak Bougouffa" . "abougouffa@fedoraproject.org")
+	    (:keywords "tools" "c")
+	    (:url . "https://github.com/jart/disaster"))])

@@ -14,4 +14,4 @@ Purpose:
 
 Setup:
 
- org-id-cleanup should be installed with package.el
+ org-id-cleanup should be installed with package.el or use-package
