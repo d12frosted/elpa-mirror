@@ -3,17 +3,3 @@ Fetcher: github
 Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/git-commit/
-Checking out 76fe46c098498deab54b6c5b11731e970040a52b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/git-commit/
-  to /tmp/git-commitfoldlu/git-commit-20230220.1901
-  ! lisp/git-commit.el -> git-commit.el
-  ! lisp/git-commit-pkg.el -> git-commit-pkg.el
-Created git-commit-20230220.1901.tar containing:
-  git-commit-20230220.1901/
-  git-commit-20230220.1901/git-commit-pkg.el
-  git-commit-20230220.1901/git-commit.el
-Built git-commit in 6.041s, finished at 2023-03-11T08:16:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 655 Mar 11 08:16 packages/git-commit-20230220.1901.entry
- 52K -rw-r--r-- 1 root root 50K Mar 11 08:16 packages/git-commit-20230220.1901.tar

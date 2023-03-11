@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/museoa/bqn-mode.git
 
 Updating /mnt/store/melpa/working/bqn-mode/
-Checking out 53e99ff81993be389b0955aee7a6cdf12dfa1605
+Checking out 8dd46215c4534a057758bd4ef15173d2820cefa7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/bqn-mode/
-  to /tmp/bqn-modeTv7QzF/bqn-mode-20230311.143
+  to /tmp/bqn-modeoMeFmm/bqn-mode-20230311.1245
     bqn-comint.el -> bqn-comint.el
     bqn-glyph-mode.el -> bqn-glyph-mode.el
     bqn-help.el -> bqn-help.el
@@ -17,20 +17,22 @@ Copying files (->) and directories (=>)
     bqn-symbols-doc.el -> bqn-symbols-doc.el
     bqn-symbols.el -> bqn-symbols.el
     bqn-syntax.el -> bqn-syntax.el
-Created bqn-mode-20230311.143.tar containing:
-  bqn-mode-20230311.143/
-  bqn-mode-20230311.143/bqn-comint.el
-  bqn-mode-20230311.143/bqn-glyph-mode.el
-  bqn-mode-20230311.143/bqn-help.el
-  bqn-mode-20230311.143/bqn-key-prefix.el
-  bqn-mode-20230311.143/bqn-keymap-mode.el
-  bqn-mode-20230311.143/bqn-mode-map.el
-  bqn-mode-20230311.143/bqn-mode-pkg.el
-  bqn-mode-20230311.143/bqn-mode.el
-  bqn-mode-20230311.143/bqn-symbols-doc.el
-  bqn-mode-20230311.143/bqn-symbols.el
-  bqn-mode-20230311.143/bqn-syntax.el
-Built bqn-mode in 3.909s, finished at 2023-03-11T11:43:27+0000
+Created bqn-mode-20230311.1245.tar containing:
+  bqn-mode-20230311.1245/
+  bqn-mode-20230311.1245/bqn-comint.el
+  bqn-mode-20230311.1245/bqn-glyph-mode.el
+  bqn-mode-20230311.1245/bqn-help.el
+  bqn-mode-20230311.1245/bqn-key-prefix.el
+  bqn-mode-20230311.1245/bqn-keymap-mode.el
+  bqn-mode-20230311.1245/bqn-mode-map.el
+  bqn-mode-20230311.1245/bqn-mode-pkg.el
+  bqn-mode-20230311.1245/bqn-mode.el
+  bqn-mode-20230311.1245/bqn-symbols-doc.el
+  bqn-mode-20230311.1245/bqn-symbols.el
+  bqn-mode-20230311.1245/bqn-syntax.el
+Built bqn-mode in 4.771s, finished at 2023-03-11T15:40:23+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  335 Mar 11 15:40 packages/bqn-mode-20230311.1245.entry
+132K -rw-r--r-- 1 root root 130K Mar 11 15:40 packages/bqn-mode-20230311.1245.tar
 4.0K -rw-r--r-- 1 root root  334 Mar 11 11:43 packages/bqn-mode-20230311.143.entry
 132K -rw-r--r-- 1 root root 130K Mar 11 11:43 packages/bqn-mode-20230311.143.tar

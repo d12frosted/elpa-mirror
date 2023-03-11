@@ -13,3 +13,6 @@ multiple queries as a list and we will match on all of them, ranked
 on which ones comes up first in the file.
 You can find more info in the  README.md file at
 https://github.com/meain/evil-textobj-tree-sitter
+
+This package also provides with thing-at-point functions for common
+textobjects like functions, loops, conditionals etc.
