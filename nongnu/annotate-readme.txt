@@ -333,6 +333,18 @@
 [this thread] <https://github.com/bastibe/annotate.el/issues/68>
 
 
+6.2 annotate-toggle-annotation-text
+───────────────────────────────────
+
+  Shows or hides annotation's text under cursor.
+
+
+6.3 annotate-toggle-all-annotations-text
+────────────────────────────────────────
+
+  Shows or hides the annotation's text in the whole buffer.
+
+
 7 More documentation
 ════════════════════
 

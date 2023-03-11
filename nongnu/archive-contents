@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 8 5)
+	   [(1 9 0)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "fb8e51da6ab37b6df2ac2b6a8555f3aa6b589fd6"))])
+	     (:commit . "44349cef8bd8383ff7955c66c3b2f5492b3b8914"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -1873,7 +1873,7 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 1 0)
+	[(1 2 0)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
@@ -1882,7 +1882,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:authors
 	   ("Random User"))
-	  (:commit . "43fcde0c3aad7e897f1fdb9be46b320e2d2335bf"))])
+	  (:commit . "089d9f33db9e34512352b1344627cdb20b967409"))])
  (sweeprolog .
 	     [(0 17 0)
 	      ((emacs
@@ -2203,7 +2203,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(22 12 20230305005921)
+	       [(23 0 20230310115257)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -2212,7 +2212,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "ed4733bcea72591772c97bf1bf50f20982c87836"))])
+		 (:commit . "a590cf24998b44e0d1e3d5b8660fc6da8b51e1c0"))])
  (xkcd .
        [(1 1)
 	((json
