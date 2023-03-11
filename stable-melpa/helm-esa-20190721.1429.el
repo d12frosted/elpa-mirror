@@ -4,8 +4,6 @@
 
 ;; Author: Takashi Masuda <masutaka.net@gmail.com>
 ;; URL: https://github.com/masutaka/emacs-helm-esa
-;; Package-Version: 20190721.1429
-;; Package-Commit: d93b4af404346870cb2cf9c257d055332ef3f577
 ;; Version: 1.1.0
 ;; Package-Requires: ((emacs "26.2") (helm "3.2") (request "0.3.0"))
 

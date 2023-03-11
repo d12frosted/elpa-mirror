@@ -2,8 +2,6 @@
 
 ;; Author: Maxim Kim <habamax@gmail.com>
 ;; Url: https://github.com/habamax/habamax-theme
-;; Package-Version: 20181001.850
-;; Package-Commit: 6e86a1b23b6e2aaf40d4374b5673da00a28be447
 ;; Package-Requires: ((emacs "24"))
 
 ;;; Commentary:
