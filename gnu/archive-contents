@@ -1643,7 +1643,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 24)
+	    [(0 27)
 	     ((emacs
 	       (27 1)))
 	     "Tool for inspection of Emacs Lisp objects" tar
@@ -1652,7 +1652,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "0cc5ff76c4aa9a203a9a142552c8dcc610b8cc24"))])
+	      (:commit . "d6f462d8eae8895deb01ecd649628a295791e6de"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
@@ -1779,7 +1779,7 @@
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (jit-spell .
-	    [(0 1)
+	    [(0 2)
 	     ((emacs
 	       (27 1))
 	      (compat
@@ -1790,7 +1790,7 @@
 	      (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	      (:authors
 	       ("Augusto Stoffel" . "arstoffel@gmail.com"))
-	      (:commit . "0411d64169b5cef74c7b1c404dd1661596a7d1f8"))])
+	      (:commit . "c0340baa13ec381f88191bfa9f95d6f4199503fc"))])
  (js2-mode .
 	   [(20220710)
 	    ((emacs

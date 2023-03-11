@@ -42,33 +42,32 @@ package-install RET jit-spell RET'.
   └────
 
   To pick a spell checker and dictionaries, jit-spell uses Emacs's
-  built-in ispell support code.  Try `M-x customize-group ispell RET' to
-  see a listing of all possible settings.
+  built-in ispell support code.  For instance,
+  `ispell-change-dictionary' temporarily changes the dictionary of the
+  current buffer.  Try also `M-x customize-group RET ispell RET' to see
+  a listing of all possible settings.
 
 
 2 Major mode support
 ════════════════════
 
-  Some major modes require special settings to avoid checking irrelevant
-  parts of the buffer.
+  Often there are regions of the buffer that should be ignored for
+  spell-checking purposes.  In most cases, no additional configuration
+  is necessary.
 
-  The simplest mechanism to achieve that is the user option
+  The simplest mechanism to make adjustments is the user option
   `jit-spell-ignored-faces'.  Any word fontified with one of these faces
-  is ignored for spell-checking purposes.  To find out which faces are
-  present on a given character, you can use `M-x describe-char'.
+  in this list ignored by jit-spell.  To find out which faces are
+  present on a given character, you can use the `describe-char' command.
 
   In all programming language modes, spell checking is restricted to
-  comments, docstring and strings.  This can be modified by customizing
+  comments, docstrings and strings.  This can be modified by customizing
   the variable `jit-spell-prog-mode-faces'.
-
-  Some modes, such as Org and TeX-related modes, require more extensive
-  adaptations.  This is not yet provided as I am evaluating the possible
-  approaches.
 
 
 3 Contributing
 ══════════════
 
-  Discussions, suggestions and code contributions are welcome! Since
+  Discussions, suggestions and code contributions are welcome!  Since
   this package is part of GNU ELPA, contributions require a copyright
   assignment to the FSF.
