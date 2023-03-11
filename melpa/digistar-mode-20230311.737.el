@@ -1,12 +1,12 @@
 ;;; digistar-mode.el --- major mode for Digistar scripts
 
-;; Copyright (C) 2014-2022  John Foerch <jjfoerch@gmail.com>
+;; Copyright (C) 2014-2023  John Foerch <jjfoerch@gmail.com>
 
 ;; Author: John Foerch <jjfoerch@gmail.com>
-;; Version: 0.9.4
-;; Package-Version: 20221201.2332
-;; Package-Commit: 06795403c30f3b3c7b72d7cb5ca33c32d0aaee49
-;; Date: 2022-12-01
+;; Version: 0.9.5
+;; Package-Version: 20230311.737
+;; Package-Commit: c16ec189f8acee79a0df19c9f5e505f4ddf9f05f
+;; Date: 2023-01-05
 ;; Keywords: languages
 
 ;; This program is free software; you can redistribute it and/or
@@ -158,10 +158,9 @@ aliaes in `digistar-path-aliases'."
           (seq-find (lambda (x)
                       (string-prefix-p (concat (downcase (cdr x)) "/") lcpath))
                     digistar-path-aliases)))
-    (cond
-     (found
-      (concat (car found) "/" (substring path (1+ (length (cdr found))))))
-     (t path))))
+    (if found
+        (concat (car found) "/" (substring path (1+ (length (cdr found)))))
+      path)))
 
 
 ;;
@@ -350,7 +349,7 @@ timestamp and S-SPC inserts a relative timestamp."
 (defvar digistar-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map [remap indent-for-tab-command] 'digistar-indent-for-tab-command)
-    (define-key map (kbd "C-c C-f") 'digistar-insert-filepath)
+    (define-key map (kbd "C-c TAB") 'digistar-insert-filepath)
     (define-key map (kbd "C-c C-l") 'digistar-show-lis-file)
     (define-key map (kbd "C-c C-p") 'digistar-play-script)
     (define-key map (kbd "C-c C-t") 'digistar-show-absolute-time)
@@ -543,6 +542,82 @@ timestamps to column 0 and commands with a tab."
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.ds\\'" . digistar-mode))
+
+
+;;
+;; Digistar MRSLog mode
+;;
+
+(defface digistar-mrslog-timestamp
+  '((t :background "gray10" :foreground "gray50"))
+  ""
+  :group 'digistar-faces)
+(defvar digistar-mrslog-timestamp-face 'digistar-mrslog-timestamp)
+
+(defface digistar-mrslog-time
+  '((t :inherit digistar-mrslog-timestamp :foreground "lightblue"))
+  ""
+  :group 'digistar-faces)
+(defvar digistar-mrslog-time-face 'digistar-mrslog-time)
+
+(defvar digistar-mrslog-mode-map
+  (let ((map (make-sparse-keymap)))
+    map)
+  "The keymap for digistar-mrslog-mode.")
+
+(defvar digistar-mrslog-syntax-table
+  (let ((table (make-syntax-table)))
+    table)
+  "The syntax table for font-lock in digistar-mrslog-mode.")
+
+
+(defvar digistar-mrslog-line-re
+  (rx-to-string
+   `(: bol
+       (group (1+ num) ?/ (1+ num) ?/ (1+ num)) ;; date
+       (1+ space)
+       (group (1+ num) ?: (1+ num) ?: (1+ num)) ;; time
+       (1+ space)
+       (group (or "AM" "PM")))))
+
+(defun digistar-mrslog-highlight-line (limit)
+  (let (class0b class0e
+        file0b file0e
+        dur0b dur0e dur1b dur1e)
+    (when (re-search-forward digistar-mrslog-line-re limit t)
+      ;; (pcase-let ((`(,g0b ,g0e)
+      ;;              (match-data)))
+      ;;   (set-match-data
+      ;;    (list g0b g0e))
+      ;;   t)
+      t)))
+
+(defvar digistar-mrslog-font-lock-keywords
+  `(;; timestamps
+    (,(rx-to-string `(: (regexp ,digistar-mrslog-line-re) ?: space))
+     (0 digistar-mrslog-timestamp-face))
+
+    (digistar-mrslog-highlight-line
+     (2 digistar-mrslog-time-face t t) ;; time
+     )
+    )
+  "A font-lock-keywords table for digistar-mrslog-mode.  See
+  `font-lock-defaults'.")
+
+;;;###autoload
+(define-derived-mode digistar-mrslog-mode fundamental-mode
+  "Digistar MRSLog"
+  "A major mode for Digistar MRSLog files.
+
+\\{digistar-mrslog-mode-map}"
+  :syntax-table digistar-mrslog-syntax-table
+
+  ;; Syntax Highlighting
+  (setq font-lock-defaults (list digistar-mrslog-font-lock-keywords t t)))
+
+
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.mrslog\\.txt\\'" . digistar-mrslog-mode))
 
 
 (provide 'digistar-mode)

@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "5.0.0"))
-;; Package-Version: 20230306.2247
-;; Package-Commit: b0341f709f60fa294f3826f7e8a503cad9dfcfc4
+;; Package-Version: 20230311.428
+;; Package-Commit: c918ecbbf51f126696426221bf77ffc763b7f543
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -63,6 +63,10 @@
   "Whether auto add tags to heading."
   :type 'boolean
   :safe #'booleanp)
+
+(defvar org-tag-beautify--surrogate-strings-original
+  (default-value 'org-pretty-tags-surrogate-strings)
+  "Store `org-pretty-tags-surrogate-strings' default value for restoring.")
 
 (defun org-tag-beautify-set-common-tag-icons ()
   "Display most common tag as icon."
@@ -270,7 +274,7 @@
                   ("health" . ,(all-the-icons-faicon "medkit" :face '(:foreground "LightGray")))
                   ("law" . ,(all-the-icons-faicon "gavel" :face '(:foreground "LightGray")))
                   ("court" . ,(all-the-icons-faicon "balance-scale" :face '(:foreground "LightGray")))
-                  ("lawer" . ,(all-the-icons-faicon "black-tie" :face '(:foreground "DodgerBlue")))
+                  ("lawyer" . ,(all-the-icons-faicon "black-tie" :face '(:foreground "DodgerBlue")))
                   ("building" . ,(all-the-icons-faicon "building-o" :face '(:foreground "LightGray")))
                   ("government" . ,(all-the-icons-faicon "building-o" :face '(:foreground "SlateGray2")))
                   ("school" . ,(all-the-icons-material "school" :face '(:foreground "black")))
@@ -1040,6 +1044,12 @@
                       ("zambia" . ,(create-image (concat dir "zambia.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
                       ("zimbabwe" . ,(create-image (concat dir "zimbabwe.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width)))))))
 
+(defun org-tag-beautify-set-unicode-tag-icons ()
+  "Display tag as Unicode emoji."
+  (setq org-pretty-tags-surrogate-strings
+        (append org-pretty-tags-surrogate-strings
+                `(("DIY" . "🧰") ("gene" . "🧬")))))
+
 ;;======================== auto add tags based on `org-attach' file types. ========================
 (defvar org-attach-attach--smart-tags-alist
   '(;; video formats
@@ -1078,6 +1088,30 @@
                                                   :from-end t)))
         (org-set-tags new-tags-list)))))
 
+(defun org-tag-beautify-auto-smart-tag-enable ()
+  "Enable auto add tags based on `org-attach-commands' attached file types."
+  (when org-tag-beautify-auto-add-tags
+    ;; for [C-c C-a] `org-attach-commands'
+    (advice-add 'org-attach-attach :around #'org-attach-attach--auto-add-smart-tag)))
+
+(defun org-tag-beautify-auto-smart-tag-disable ()
+  "Disable auto add tags."
+  (advice-remove 'org-attach-attach #'org-attach-attach--auto-add-smart-tag))
+
+;;========================================== org-tag-alist ==========================================
+
+(defun org-tag-beautify-add-tags-to-list ()
+  "Add org-tag-beautify tags to `org-tag-alist' for `org-set-tags-command' completion."
+  (with-eval-after-load 'org
+    (setq org-tag-alist
+          (append org-tag-alist
+                  (append
+                   '((:startgrouptag)) '(("icons"))
+                   '((:grouptags)) (mapcar 'list (mapcar 'car org-pretty-tags-surrogate-strings))
+                   '((:endgrouptag)))))))
+
+;;============================================ minor mode ===========================================
+
 (defun org-tag-beautify-enable ()
   "Enable `org-tag-beautify'."
   (setq org-pretty-tags-surrogate-strings nil)
@@ -1085,27 +1119,15 @@
   (org-tag-beautify-set-programming-tag-icons)
   (org-tag-beautify-set-internet-company-tag-icons)
   (org-tag-beautify-set-countries-tag-icons)
+  (org-tag-beautify-set-unicode-tag-icons)
   (org-pretty-tags-global-mode 1)
-  
-  ;; Add upper tags to `org-tag-alist' for `org-set-tags-command' completion.
-  (with-eval-after-load 'org
-    (setq org-tag-alist
-          (append org-tag-alist
-                  (append
-                   '((:startgrouptag)) '(("icons"))
-                   '((:grouptags)) (mapcar 'list (mapcar 'car org-pretty-tags-surrogate-strings))
-                   '((:endgrouptag))))))
-  
-  ;; auto add tags based on `org-attach-commands' attached file types.
-  (when org-tag-beautify-auto-add-tags
-    ;; [C-c C-a] `org-attach-commands'
-    (advice-add 'org-attach-attach :around #'org-attach-attach--auto-add-smart-tag)))
+  (org-tag-beautify-auto-smart-tag-enable))
 
 (defun org-tag-beautify-disable ()
   "Disable `org-tag-beautify'."
-  (setq org-pretty-tags-surrogate-strings nil)
+  (setq org-pretty-tags-surrogate-strings org-tag-beautify--surrogate-strings-original)
   (org-pretty-tags-global-mode -1)
-  (advice-remove 'org-attach-attach #'org-attach-attach--auto-add-smart-tag))
+  (org-tag-beautify-auto-smart-tag-disable))
 
 ;;;###autoload
 (define-minor-mode org-tag-beautify-mode

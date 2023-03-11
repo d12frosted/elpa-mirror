@@ -10,8 +10,8 @@
 ;; Maintainer: Joost Kremers <joostkremers@fastmail.fm>
 ;; Created: 18 May 2017
 ;; Keywords: extensions convenience
-;; Package-Commit: e0690f0c31d29754f9e34a25631b472e4e97cb2e
-;; Package-Version: 20230309.713
+;; Package-Commit: dfea30e33ddb212a0d537bc927b4bcdf3ebe2cd1
+;; Package-Version: 20230311.154
 ;; Package-X-Original-Version: 1.3
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/joostkremers/nswbuff
@@ -90,6 +90,8 @@
 (require 'timer)
 (require 'seq)
 (require 'subr-x)
+
+(declare-function projectile-project-buffers "ext:projectile.el" (&optional project))
 
 ;;; Options
 
@@ -268,12 +270,12 @@ windows can be deleted before switching:
 
 \(defun my-vm-mode-hook ()
   \"Delete other windows before a switch.\"
-  (make-local-hook 'swbuff-pre-switch-hook)
-  (add-hook 'swbuff-pre-switch-hook #'delete-other-windows t t))
+  (make-local-hook \\='swbuff-pre-switch-hook)
+  (add-hook \\='swbuff-pre-switch-hook #\\='delete-other-windows t t))
 
-\(add-hook 'vm-mode-hook              #'my-vm-mode-hook)
-\(add-hook 'vm-summary-mode-hook      #'my-vm-mode-hook)
-\(add-hook 'vm-presentation-mode-hook #'my-vm-mode-hook)"
+\(add-hook \\='vm-mode-hook              #\\='my-vm-mode-hook)
+\(add-hook \\='vm-summary-mode-hook      #\\='my-vm-mode-hook)
+\(add-hook \\='vm-presentation-mode-hook #\\='my-vm-mode-hook)"
   :group 'nswbuff
   :type 'hook)
 
@@ -355,7 +357,7 @@ timer changes the current window.")
 (defvar nswbuff-status-buffer nil
   "The status buffer.")
 
-(defvar nswbuff-display-timer nil "The timer used to remove the status window after 'nswbuff-clear-delay'.")
+(defvar nswbuff-display-timer nil "The timer used to remove the status window after `nswbuff-clear-delay'.")
 
 (defvar nswbuff-override-map
   (let ((map (make-sparse-keymap)))

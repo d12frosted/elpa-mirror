@@ -8,8 +8,8 @@
 ;;; Maintainer: Chen Bin <chenbin.sh AT gmail DOT com>
 ;;; Created: 15 Feb 2014
 ;;; Version: 1.2.0
-;; Package-Version: 20221201.1150
-;; Package-Commit: 30e521ada5806ab780f68e09529715acb88f32cd
+;; Package-Version: 20230311.230
+;; Package-Commit: b788bf5d57ad6b902c4096b666c6d78ceff7c116
 ;;; URL: https://github.com/redguardtoo/js-comint
 ;;; Package-Requires: ((emacs "24.3"))
 ;;; Keywords: javascript, node, inferior-mode, convenience
@@ -361,8 +361,8 @@ The environment variable \"NODE_PATH\" is setup by `js-comint-module-paths'."
 
 (defun js-comint-send-string (str)
   "Send STR to repl."
-  (let ((lines (string-lines str)))
-    (if (length= lines 1)
+  (let ((lines (split-string str "\r\n")))
+    (if (= (length lines) 1)
 	(comint-send-string (js-comint-get-process)
 			    (concat str "\n"))
       (comint-send-string (js-comint-get-process)
