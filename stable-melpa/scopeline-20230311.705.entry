@@ -1,0 +1,10 @@
+(scopeline .
+	   [(20230311 705)
+	    ((emacs
+	      (26 1))
+	     (tree-sitter
+	      (0 15 0)))
+	    "Show scope info of blocks in buffer at end of scope" single
+	    ((:commit . "e8ac4b44292f48bc13435da49d69a290a741a53e")
+	     (:keywords "scope" "context" "tree-sitter" "convenience")
+	     (:url . "https://github.com/meain/scopeline.el"))])

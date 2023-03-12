@@ -533,17 +533,17 @@
 	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "7a9c37f1b371b2c144b9d76e1f6333032d9f9179"))])
  (consult .
-	  [(0 32)
+	  [(0 33)
 	   ((emacs
 	     (27 1))
 	    (compat
-	     (29 1 3 2)))
+	     (29 1 4 0)))
 	   "Consulting completing-read" tar
 	   ((:url . "https://github.com/minad/consult")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "0759dd12bb2290480644a7ec34118f67718074ad"))])
+	    (:commit . "fd00979d2fbfad66960c621e9fc140eb8c6a06f3"))])
  (consult-recoll .
 		 [(0 8)
 		  ((emacs
@@ -3719,17 +3719,17 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "2c2ecb46b0ad3e841ac9551e3a80d02893cdf6ec"))])
  (vertico .
-	  [(1 1)
+	  [(1 2)
 	   ((emacs
 	     (27 1))
 	    (compat
-	     (29 1 3 4)))
+	     (29 1 4 0)))
 	   "VERTical Interactive COmpletion" tar
 	   ((:url . "https://github.com/minad/vertico")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "01f0fc07d1831f00ebc64550867a0fa6eedb1fb7"))])
+	    (:commit . "3386763b717415840fd58929cc2ca056e0eb10d5"))])
  (vertico-posframe .
 		   [(0 7 2)
 		    ((emacs

@@ -1,0 +1,11 @@
+(compile-multi .
+	       [(20230311 1951)
+		((emacs
+		  (28 0)))
+		"A multi target interface to compile" single
+		((:commit . "e475a0477e49d5ca48703bea874dfeea786b9af5")
+		 (:authors
+		  ("mohsin kaleem" . "mohkale@kisara.moe"))
+		 (:maintainer "mohsin kaleem" . "mohkale@kisara.moe")
+		 (:keywords "tools" "compile" "build")
+		 (:url . "https://github.com/mohkale/compile-multi"))])

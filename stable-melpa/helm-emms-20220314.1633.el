@@ -4,6 +4,8 @@
 
 ;; Author: Thierry Volpiatto <thierry.volpiatto@gmail.com>
 ;; Version: 1.3
+;; Package-Version: 20220314.1633
+;; Package-Commit: aefa44ab77808626c4951be2df49a2eab7820805
 ;; Package-Requires: ((helm "1.5") (emms "6.0") (cl-lib "0.5") (emacs "24.1"))
 ;; Keywords: multimedia, emms
 ;; URL: https://github.com/emacs-helm/helm-emms

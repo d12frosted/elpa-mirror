@@ -165,7 +165,7 @@ Table of Contents
   │ (use-package orderless
   │   :init
   │   ;; Configure a custom style dispatcher (see the Consult wiki)
-  │   ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
+  │   ;; (setq orderless-style-dispatchers '(+orderless-consult-dispatch orderless-affix-dispatch)
   │   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
   │   (setq completion-styles '(orderless basic)
   │ 	completion-category-defaults nil
@@ -175,9 +175,9 @@ Table of Contents
   The `basic' completion style is specified as fallback in addition to
   `orderless' in order to ensure that completion commands which rely on
   dynamic completion tables, e.g., `completion-table-dynamic' or
-  `completion-table-in-turn', work correctly. See `+orderless-dispatch'
-  in the [Consult wiki] for an advanced Orderless style
-  dispatcher. Additionally enable `partial-completion' for file path
+  `completion-table-in-turn', work correctly. See the [Consult wiki] for
+  my advanced Orderless configuration with style
+  dispatchers. Additionally enable `partial-completion' for file path
   expansion. `partial-completion' is important for file wildcard
   support. Multiple files can be opened at once with `find-file' if you
   enter a wildcard. You may also give the `initials' completion style a
@@ -191,7 +191,8 @@ Table of Contents
 
 [GNU ELPA] <https://elpa.gnu.org/packages/vertico.html>
 
-[Consult wiki] <https://github.com/minad/consult/wiki>
+[Consult wiki]
+<https://github.com/minad/consult/wiki#minads-orderless-configuration>
 
 [Vertico Wiki] <https://github.com/minad/vertico/wiki>
 
@@ -785,7 +786,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   you may also overwrite the default F10 keybinding.
 
   ┌────
-  │ (global-set-key [f10] #'tmm-menubar)
+  │ (keymap-global-set "<f10>" #'tmm-menubar)
   │ (advice-add #'tmm-add-prompt :after #'minibuffer-hide-completions)
   └────
 

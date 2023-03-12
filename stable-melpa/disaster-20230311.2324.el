@@ -1,14 +1,14 @@
 ;;; disaster.el --- Disassemble C, C++ or Fortran code under cursor -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2013-2022 Justine Tunney.
+;; Copyright (C) 2013-2023 Justine Tunney.
 
 ;; Author: Justine Tunney <jtunney@gmail.com>
 ;;         Abdelhak Bougouffa <abougouffa@fedoraproject.org>
 ;; Maintainer: Abdelhak Bougouffa <abougouffa@fedoraproject.org>
 ;; Created: 2013-03-02
 ;; Version: 1.0
-;; Package-Version: 20230310.2229
-;; Package-Commit: 50232ae95dd3dd149a82fc1b136c191c9ba9f0f4
+;; Package-Version: 20230311.2324
+;; Package-Commit: 16bba9afb92aacf06c088c29ba47813b65a80d87
 ;; Package-Requires: ((emacs "27"))
 ;; Keywords: tools c
 ;; URL: https://github.com/jart/disaster

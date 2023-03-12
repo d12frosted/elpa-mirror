@@ -268,15 +268,17 @@ Table of Contents
     of matches. This is particularly useful if you are using an advanced
     completion style like orderless. `consult-grep' supports preview. If
     the `consult-project-function' returns non-nil, `consult-grep'
-    searches the current project directory. Otherwise the
+    searches the current project directory.  Otherwise the
     `default-directory' is searched. If `consult-grep' is invoked with
-    prefix argument `C-u M-s g', you can specify the directory manually.
+    prefix argument `C-u M-s g', you can specify one or more
+    comma-separated files and directories manually.
   • `consult-find', `consult-locate': Find file by matching the path
     against a regexp.  Like for `consult-grep', either the project root
     or the current directory is the root directory for the search. The
     input string is treated similarly to `consult-grep', where the first
     part is passed to find, and the second part is used for Emacs
-    filtering.
+    filtering.  Prefix arguments to `consult-find' work just like those
+    for the consult grep commands.
 
 
 1.7 Compilation
@@ -1275,17 +1277,20 @@ Table of Contents
 
   1. *Search through the issue tracker* if your issue has been reported
      before (and has been resolved eventually) in the meantime.
-  2. *Update all the relevant packages to the newest version*. This
-     includes Consult, Compat, Vertico or other completion UIs,
-     Marginalia, Embark and Orderless.
-  3. Either use the default completion UI or ensure that exactly one of
+  2. *Remove all packages involved in the suspected bug from your
+      installation.*
+  3. *Reinstall the newest version of all relevant packages*. Updating
+     alone is not sufficient, since package.el is known to cause
+     miscompilation. The list of packages includes Consult, Compat,
+     Vertico or other completion UIs, Marginalia, Embark and Orderless.
+  4. Either use the default completion UI or ensure that exactly one of
      `vertico-mode', `mct-mode', or `icomplete-mode' is enabled. The
-     unsupported modes `selectrum-mode', `ivy-mode', `helm-mode' and
-     `ido-ubiquitous-mode' must be disabled.
-  4. Ensure that the `completion-styles' variable is properly
+     unsupported modes `selectrum-mode', `ivy-mode', `helm-mode',
+     `ido-mode' and `ido-ubiquitous-mode' must be disabled.
+  5. Ensure that the `completion-styles' variable is properly
      configured. Try to set `completion-styles' to a list including
      `substring' or `orderless'.
-  5. Try to reproduce the issue by starting a bare bone Emacs instance
+  6. Try to reproduce the issue by starting a bare bone Emacs instance
      with `emacs -Q' on the command line. Execute the following minimal
      code snippets in the scratch buffer. This way we can exclude side
      effects due to configuration settings. If other packages are
@@ -1392,6 +1397,7 @@ Table of Contents
   • [Aymeric Agon-Rambosson]
   • [Geoffrey Lessel]
   • [Piotr Kwiecinski]
+  • [Robert Weiner]
 
   Advice and useful discussions:
   • [Clemens Radermacher]
@@ -1471,6 +1477,8 @@ Table of Contents
 [Geoffrey Lessel] <https://github.com/geolessel>
 
 [Piotr Kwiecinski] <https://github.com/piotrkwiecinski>
+
+[Robert Weiner] <https://github.com/rswgnu>
 
 [Protesilaos Stavrou] <https://protesilaos.com>
 
