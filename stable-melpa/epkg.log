@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out 62f4763fdf6d372d0fa28ad18d5ae84112798c61
+Checking out e2021f6cff73902bec79b19c492ea2c5930cdc50
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgTyAQKj/epkg-20230222.1304
+  to /tmp/epkg6NKAjO/epkg-20230312.1644
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -15,20 +15,22 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkgTyAQKj/epkg-20230222.1304/epkg.info
-Created epkg-20230222.1304.tar containing:
-  epkg-20230222.1304/
-  epkg-20230222.1304/dir
-  epkg-20230222.1304/epkg-desc.el
-  epkg-20230222.1304/epkg-elpa.el
-  epkg-20230222.1304/epkg-list.el
-  epkg-20230222.1304/epkg-org.el
-  epkg-20230222.1304/epkg-pkg.el
-  epkg-20230222.1304/epkg-schemata.el
-  epkg-20230222.1304/epkg-utils.el
-  epkg-20230222.1304/epkg.el
-  epkg-20230222.1304/epkg.info
-Built epkg in 10.122s, finished at 2023-03-12T15:34:06+0000
+Generating /tmp/epkg6NKAjO/epkg-20230312.1644/epkg.info
+Created epkg-20230312.1644.tar containing:
+  epkg-20230312.1644/
+  epkg-20230312.1644/dir
+  epkg-20230312.1644/epkg-desc.el
+  epkg-20230312.1644/epkg-elpa.el
+  epkg-20230312.1644/epkg-list.el
+  epkg-20230312.1644/epkg-org.el
+  epkg-20230312.1644/epkg-pkg.el
+  epkg-20230312.1644/epkg-schemata.el
+  epkg-20230312.1644/epkg-utils.el
+  epkg-20230312.1644/epkg.el
+  epkg-20230312.1644/epkg.info
+Built epkg in 10.189s, finished at 2023-03-12T19:29:23+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  447 Mar 12 15:34 packages/epkg-20230222.1304.entry
 120K -rw-r--r-- 1 root root 120K Mar 12 15:34 packages/epkg-20230222.1304.tar
+4.0K -rw-r--r-- 1 root root  447 Mar 12 19:29 packages/epkg-20230312.1644.entry
+120K -rw-r--r-- 1 root root 120K Mar 12 19:29 packages/epkg-20230312.1644.tar

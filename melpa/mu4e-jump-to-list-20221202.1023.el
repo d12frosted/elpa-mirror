@@ -2,6 +2,8 @@
 
 ;; Author: Yuri D'Elia <wavexx@thregr.org>
 ;; Version: 1.0
+;; Package-Version: 20221202.1023
+;; Package-Commit: cf19684d2333cb0cda7f6b62c7607144baa49310
 ;; URL: https://gitlab.com/wavexx/mu4e-jump-to-list.el
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.5"))
 ;; Keywords: mu4e, mail, convenience
