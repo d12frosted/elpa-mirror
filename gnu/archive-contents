@@ -2387,15 +2387,17 @@
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:keywords "convenience" "text" "org"))])
  (org-modern .
-	     [(0 8)
+	     [(0 9)
 	      ((emacs
-		(27 1)))
+		(27 1))
+	       (compat
+		(29 1 4 0)))
 	      "Modern looks for Org" tar
 	      ((:url . "https://github.com/minad/org-modern")
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "42fdbd2d27f5a8652593577a200eeea96555d018"))])
+	       (:commit . "b614ad31d72c49f9eb29d3836995fd7fb0d1fd4a"))])
  (org-notify .
 	     [(0 1 0)
 	      ((emacs
