@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20230225.1931
-;; Package-Commit: ffa8d5865118bb33299a429e9c25577a79410542
+;; Package-Version: 20230311.2346
+;; Package-Commit: 60f897a3a08533688bb476ecefe87e16d7a2e24f
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.2
@@ -963,7 +963,7 @@ being run, for diagnostic purposes."
     (google-java-format . ("google-java-format" "-"))
     (isort . ("isort" "-"))
     (lisp-indent . apheleia-indent-lisp-buffer)
-    (ktlint . ("ktlint" "--stdin" "-F"))
+    (ktlint . ("ktlint" "--log-level=none" "--stdin" "-F"))
     (latexindent . ("latexindent" "--logfile=/dev/null"))
     (mix-format . ("mix" "format" "-"))
     (nixfmt . ("nixfmt"))

@@ -1,5 +1,5 @@
 (verilog-ext .
-	     [(20230220 1852)
+	     [(20230311 2156)
 	      ((emacs
 		(28 1))
 	       (verilog-mode
@@ -25,9 +25,11 @@
 	       (imenu-list
 		(0 9))
 	       (outshine
-		(3 1 -1)))
-	      "Verilog Extensions" tar
-	      ((:commit . "6872a42791c5105bfe1de1d63abae537559c7ca9")
+		(3 1 -1))
+	       (async
+		(1 9 7)))
+	      "SystemVerilog Extensions" tar
+	      ((:commit . "7f6e907c9691409070136e13ebd579392eed10c2")
 	       (:authors
 		("Gonzalo Larumbe" . "gonzalomlarumbe@gmail.com"))
 	       (:maintainer "Gonzalo Larumbe" . "gonzalomlarumbe@gmail.com")

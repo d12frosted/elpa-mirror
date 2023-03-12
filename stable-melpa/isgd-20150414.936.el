@@ -4,8 +4,6 @@
 ;; Copyright (C) 2015  Chmouel Boudjnah <chmouel@chmouel.com>
 
 ;; Version: 20150414
-;; Package-Version: 20150414.936
-;; Package-Commit: 764306dadd5a9213799081a48aba22f7c75cca9a
 ;; Author: Chmouel Boudjnah <chmouel@chmouel.com>
 ;; URL: https://github.com/chmouel/isgd.el
 

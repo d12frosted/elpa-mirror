@@ -1,0 +1,15 @@
+(pd-remote .
+	   [(20230307 2259)
+	    ((emacs
+	      (24 3))
+	     (faust-mode
+	      (0 6))
+	     (lua-mode
+	      (20210802)))
+	    "Pd remote control helper" single
+	    ((:commit . "e944426a4d59a31ee913c8547a1ff66c2f7fe82a")
+	     (:authors
+	      ("Albert Graef" . "aggraef@gmail.com"))
+	     (:maintainer "Albert Graef" . "aggraef@gmail.com")
+	     (:keywords "multimedia" "pure-data")
+	     (:url . "https://github.com/agraef/pd-remote"))])
