@@ -4,8 +4,8 @@
 
 ;; Author           : Wilhelm H Kirschbaum
 ;; Version          : 1.2
-;; Package-Version: 20230312.1003
-;; Package-Commit: 6f55e2ce2c12d9a61e89064d23a7947eb7ab8d61
+;; Package-Version: 20230312.1426
+;; Package-Commit: cadbfd3f2985326bcad31e18d4064c965d4a7ba9
 ;; URL              : https://github.com/wkirschbaum/elixir-ts-mode
 ;; Package-Requires : ((emacs "29") (heex-ts-mode "1.2"))
 ;; Created          : November 2022
@@ -57,6 +57,7 @@
 (declare-function treesit-node-start "treesit.c")
 (declare-function treesit-query-compile "treesit.c")
 (declare-function treesit-node-eq "treesit.c")
+(declare-function treesit-node-prev-sibling "treesit.c")
 (declare-function treesit-install-language-grammar "treesit.el")
 
 (defgroup elixir-ts nil
@@ -177,6 +178,41 @@
         (goto-char bol)
         (line-beginning-position)))))
 
+(defun elixir-ts--argument-indent-offset (node _parent &rest _)
+  "Return the argument offset position for NODE."
+  (if (treesit-node-prev-sibling node t) 0 elixir-ts-indent-offset))
+
+(defun elixir-ts--argument-indent-anchor (node parent &rest _)
+  "Return the argument anchor position for NODE and PARENT."
+  (let ((first-sibling (treesit-node-child parent 0 t)))
+    (if (and first-sibling (not (treesit-node-eq first-sibling node)))
+        (treesit-node-start first-sibling)
+      (elixir-ts--parent-expression-start node parent))))
+
+(defun elixir-ts--parent-expression-start (_node parent &rest _)
+  "Return the indentation expression start for NODE and PARENT."
+  ;; If the parent is the first expression on the line return the
+  ;; parent start of node position, otherwise use the parent call
+  ;; start if available.
+  (if (eq (treesit-node-start parent)
+          (save-excursion
+            (goto-char (treesit-node-start parent))
+            (back-to-indentation)
+            (point)))
+      (treesit-node-start parent)
+    (let ((expr-parent
+           (treesit-parent-until
+            parent
+            (lambda (n)
+              (member (treesit-node-type n)
+                      '("call" "binary_operator" "keywords" "list"))))))
+      (save-excursion
+        (goto-char (treesit-node-start expr-parent))
+        (back-to-indentation)
+        (if (looking-at "|>")
+            (point)
+          (treesit-node-start expr-parent))))))
+
 (defvar elixir-ts--indent-rules
   (let ((offset elixir-ts-indent-offset))
     `((elixir
@@ -193,14 +229,11 @@
                   (point))
               (point))))
         0)
-       ((node-is "^]") parent-bol 0)
        ((node-is "^|>$") parent-bol 0)
        ((node-is "^|$") parent-bol 0)
-       ((node-is "^}$") parent-bol 0)
-       ((node-is "^)$")
-        (lambda (_node parent &rest _)
-          (elixir-ts--call-parent-start parent))
-        0)
+       ((node-is "^]$") ,'elixir-ts--parent-expression-start 0)
+       ((node-is "^}$") ,'elixir-ts--parent-expression-start 0)
+       ((node-is "^)$") ,'elixir-ts--parent-expression-start 0)
        ((node-is "^else_block$") grand-parent 0)
        ((node-is "^catch_block$") grand-parent 0)
        ((node-is "^rescue_block$") grand-parent 0)
@@ -210,11 +243,18 @@
        ((parent-is "^rescue_block$") parent ,offset)
        ((parent-is "^rescue_block$") parent ,offset)
        ((parent-is "^after_block$") parent ,offset)
-       ((parent-is "^tuple$") parent-bol ,offset)
-       ((parent-is "^list$") parent-bol ,offset)
+       ((parent-is "^access_call$")
+        ,'elixir-ts--argument-indent-anchor
+        ,'elixir-ts--argument-indent-offset)
+       ((parent-is "^tuple$")
+        ,'elixir-ts--argument-indent-anchor
+        ,'elixir-ts--argument-indent-offset)
+       ((parent-is "^list$")
+        ,'elixir-ts--argument-indent-anchor
+        ,'elixir-ts--argument-indent-offset)
        ((parent-is "^pair$") parent ,offset)
        ((parent-is "^map_content$") parent-bol 0)
-       ((parent-is "^map$") parent-bol ,offset)
+       ((parent-is "^map$") ,'elixir-ts--parent-expression-start ,offset)
        ((node-is "^stab_clause$") parent-bol ,offset)
        ((query ,elixir-ts--capture-operator-parent) grand-parent 0)
        ((node-is "^when$") parent 0)
@@ -230,20 +270,12 @@
             (point)))
         ,offset)
        ((parent-is "^arguments$")
-        ;; If there is no previous sibling indent
-        ;; to the call parent, otherwise
-        ;; indent to the same column as the prev-sibling.
-        (lambda (node parent &rest _)
-          (let ((prev-sibling (treesit-node-prev-sibling node t)))
-          (if prev-sibling
-              (treesit-node-start prev-sibling)
-            (elixir-ts--call-parent-start parent))))
-        (lambda (node parent &rest _)
-          (if (treesit-node-prev-sibling node t) 0 ,offset)))
+        ,'elixir-ts--argument-indent-anchor
+        ,'elixir-ts--argument-indent-offset)
        ;; Handle incomplete maps when parent is ERROR.
        ((n-p-gp "^binary_operator$" "ERROR" nil) parent-bol 0)
        ;; When there is an ERROR, just indent to prev-line.
-       ((parent-is "ERROR") prev-line 1)
+       ((parent-is "ERROR") prev-line 0)
        ((node-is "^binary_operator$")
         (lambda (node parent &rest _)
           (let ((top-level
@@ -253,7 +285,7 @@
                     (equal (treesit-node-type node)
                            "binary_operator")))))
             (if (treesit-node-eq top-level node)
-                (elixir-ts--call-parent-start parent)
+                (elixir-ts--parent-expression-start node parent)
               (treesit-node-start top-level))))
         (lambda (node parent _)
           (cond
@@ -272,10 +304,7 @@
         ,offset)
        ((node-is "^pair$") first-sibling 0)
        ((query ,elixir-ts--capture-anonymous-function-end) parent-bol 0)
-       ((node-is "^end$")
-        (lambda (_node parent &rest _)
-          (elixir-ts--call-parent-start parent))
-        0)
+       ((node-is "^end$") standalone-parent 0)
        ((parent-is "^do_block$") grand-parent ,offset)
        ((parent-is "^anonymous_function$")
         elixir-ts--treesit-anchor-grand-parent-bol ,offset)
@@ -460,22 +489,6 @@
      :embed 'heex
      :host 'elixir
      '((sigil (sigil_name) @name (:match "^[HF]$" @name) (quoted_content) @heex)))))
-
-(defun elixir-ts--call-parent-start (node)
-  "Return the closest parent of NODE that is of type call."
-  (let ((call-parent
-         (or (treesit-parent-until
-              node
-              (lambda (n)
-                (equal (treesit-node-type n) "call")))
-             node)))
-    (save-excursion
-      (goto-char (treesit-node-start call-parent))
-      (back-to-indentation)
-      ;; For pipes we ignore the call indentation.
-      (if (looking-at "|>")
-          (point)
-        (treesit-node-start call-parent)))))
 
 (defun elixir-ts--forward-sexp (&optional arg)
   "Move forward across one balanced expression (sexp).

@@ -3,10 +3,10 @@
 ;; Copyright (C) 2014-2023  John Foerch <jjfoerch@gmail.com>
 
 ;; Author: John Foerch <jjfoerch@gmail.com>
-;; Version: 0.9.5
-;; Package-Version: 20230311.737
-;; Package-Commit: c16ec189f8acee79a0df19c9f5e505f4ddf9f05f
-;; Date: 2023-01-05
+;; Version: 0.9.6
+;; Package-Version: 20230312.1508
+;; Package-Commit: 508d3e6220b812ce18bf473c6fdc2b726aa27bb4
+;; Date: 2023-03-12
 ;; Keywords: languages
 
 ;; This program is free software; you can redistribute it and/or
@@ -560,6 +560,12 @@ timestamps to column 0 and commands with a tab."
   :group 'digistar-faces)
 (defvar digistar-mrslog-time-face 'digistar-mrslog-time)
 
+(defface digistar-mrslog-mrs
+  '((t :foreground "gray50"))
+  ""
+  :group 'digistar-faces)
+(defvar digistar-mrslog-mrs-face 'digistar-mrslog-mrs)
+
 (defvar digistar-mrslog-mode-map
   (let ((map (make-sparse-keymap)))
     map)
@@ -567,40 +573,58 @@ timestamps to column 0 and commands with a tab."
 
 (defvar digistar-mrslog-syntax-table
   (let ((table (make-syntax-table)))
+    (modify-syntax-entry ?\" "<" table)
+    (modify-syntax-entry ?$ "<" table)
+    (modify-syntax-entry ?\n ">" table)
     table)
   "The syntax table for font-lock in digistar-mrslog-mode.")
-
 
 (defvar digistar-mrslog-line-re
   (rx-to-string
    `(: bol
-       (group (1+ num) ?/ (1+ num) ?/ (1+ num)) ;; date
-       (1+ space)
-       (group (1+ num) ?: (1+ num) ?: (1+ num)) ;; time
-       (1+ space)
-       (group (or "AM" "PM")))))
+       (group
+        (group (1+ num) ?/ (1+ num) ?/ (1+ num)) ;; date
+        (1+ space)
+        (group (1+ num) ?: (1+ num) ?: (1+ num)) ;; time
+        (1+ space)
+        (group (or "AM" "PM"))
+        ?: space)
+       (regexp ".*"))))
 
-(defun digistar-mrslog-highlight-line (limit)
-  (let (class0b class0e
-        file0b file0e
-        dur0b dur0e dur1b dur1e)
-    (when (re-search-forward digistar-mrslog-line-re limit t)
-      ;; (pcase-let ((`(,g0b ,g0e)
-      ;;              (match-data)))
-      ;;   (set-match-data
-      ;;    (list g0b g0e))
-      ;;   t)
-      t)))
+(defvar digistar-mrslog-oid-re
+  (rx-to-string
+   `(: (group "OID") ?: space
+       (group (1+ (any num))) space ?: space
+       (group (1+ (any alpha))) space ?: space
+       (group (1+ (any alpha))) space ?: space)))
+
+(defvar digistar-mrslog-oid-source-re
+      (rx-to-string
+       `(: (group (1+ (any alpha))) space ?: space
+           (group (1+ (any alpha))) space ?: space
+           )))
 
 (defvar digistar-mrslog-font-lock-keywords
-  `(;; timestamps
-    (,(rx-to-string `(: (regexp ,digistar-mrslog-line-re) ?: space))
-     (0 digistar-mrslog-timestamp-face))
+  (let ((override t)
+        (laxmatch t))
+    `((,digistar-mrslog-line-re
+       (1 digistar-mrslog-timestamp-face)
+       (3 digistar-mrslog-time-face ,override)
 
-    (digistar-mrslog-highlight-line
-     (2 digistar-mrslog-time-face t t) ;; time
-     )
-    )
+       ;; OID entries
+       (,digistar-mrslog-oid-re ;; anchored match
+        (goto-char (match-end 1)) nil
+        (1 digistar-mrslog-mrs-face)
+        (2 digistar-mrslog-mrs-face)
+        (3 digistar-mrslog-mrs-face)
+        (4 font-lock-constant-face))
+
+       ;; MRS entries
+       (".*"                    ;; anchored match
+        (goto-char (match-end 1)) nil
+        (0 digistar-mrslog-mrs-face))
+       )))
+
   "A font-lock-keywords table for digistar-mrslog-mode.  See
   `font-lock-defaults'.")
 
@@ -613,7 +637,7 @@ timestamps to column 0 and commands with a tab."
   :syntax-table digistar-mrslog-syntax-table
 
   ;; Syntax Highlighting
-  (setq font-lock-defaults (list digistar-mrslog-font-lock-keywords t t)))
+  (setq font-lock-defaults (list digistar-mrslog-font-lock-keywords nil t)))
 
 
 ;;;###autoload

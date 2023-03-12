@@ -1,11 +1,11 @@
 ;;; scopeline.el --- Show scope info of blocks in buffer at end of scope -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/meain/scopeline.el
-;; Package-Version: 20230311.705
-;; Package-Commit: e8ac4b44292f48bc13435da49d69a290a741a53e
+;; Package-Version: 20230312.1217
+;; Package-Commit: 5b6376f1ecbc84f932044d8d980e1b62361c723c
 ;; Keywords: scope, context, tree-sitter, convenience
 ;; SPDX-License-Identifier: Apache-2.0
-;; Package-Requires: ((emacs "26.1") (tree-sitter "0.15.0"))
+;; Package-Requires: ((emacs "26.1"))
 ;; Version: 0.1
 
 ;;; Commentary:
@@ -31,10 +31,10 @@
 (require 'subr-x)
 (defvar scopeline--can-use-elisp-treesitter
   (require 'tree-sitter nil t)
-  "If non-nil, we are can make use of elisp-treesitter instead of builtin.")
+  "If non-nil, we are can make use of elisp-tree-sitter instead of builtin.")
 (defvar scopeline--can-use-builtin-treesit
   (require 'treesit nil t)
-  "If non-nil, we are can make use of elisp-treesitter instead of builtin.")
+  "If non-nil, we are can make use of builtin treesit instead of elisp-tree-sitter.")
 
 (defgroup scopeline nil
   "Show info about the block at the end of the block."

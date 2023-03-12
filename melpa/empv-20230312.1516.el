@@ -1,11 +1,11 @@
-;;; empv.el --- An interface for MPV -*- lexical-binding: t; -*-
+;;; empv.el --- A multimedia player/manager, YouTube interface -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022  Isa Mert Gurbuz
 
 ;; Author: Isa Mert Gurbuz <isamertgurbuz@gmail.com>
 ;; Version: 3.0.0
-;; Package-Version: 20230226.2322
-;; Package-Commit: 4e42b9b066ff0cd970328d769d736655be635e7e
+;; Package-Version: 20230312.1516
+;; Package-Commit: 5826975d6c891fabb1dd5b994025970bb43f6bb5
 ;; Homepage: https://github.com/isamert/empv.el
 ;; License: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "28.1"))
@@ -25,7 +25,18 @@
 
 ;;; Commentary:
 
-;; An Emacs interface for MPV
+;; An Emacs media player, based on mpv. More precisely this package
+;; provides somewhat comprehensive interface to mpv with bunch of
+;; convenient functionality like an embedded radio manager, YouTube
+;; interface, local music/video library manager etc.
+
+;; Lots of interactive functions are at your disposal. To view the
+;; most essential ones, type `M-x describe-keymap empv-map`. It is
+;; advised that you bind this keymap to a key for convenience.
+
+;; Additionally, empv has versatile customization options. For an
+;; overview of all customization options, do `M-x customize-group
+;; empv`.
 
 ;;; Code:
 
