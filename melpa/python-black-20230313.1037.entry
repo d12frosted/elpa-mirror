@@ -1,5 +1,5 @@
 (python-black .
-	      [(20221103 1759)
+	      [(20230313 1037)
 	       ((emacs
 		 (25))
 		(dash
@@ -7,7 +7,7 @@
 		(reformatter
 		 (0 3)))
 	       "Reformat Python using python-black" single
-	       ((:commit . "e1bbf574a952562ddeadb0caa42c44016136c2c9")
+	       ((:commit . "0714b0007c0b620f88ed9cc91035caea43f3d75f")
 		(:authors
 		 ("wouter bolsterlee" . "wouter@bolsterl.ee"))
 		(:maintainer "wouter bolsterlee" . "wouter@bolsterl.ee")

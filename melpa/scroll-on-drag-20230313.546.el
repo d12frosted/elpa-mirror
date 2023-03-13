@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-scroll-on-drag
-;; Package-Version: 20230201.128
-;; Package-Commit: 12101b8cae16ef7d22013aa131d8d7c2808b5f48
+;; Package-Version: 20230313.546
+;; Package-Commit: 179c2acecc48d3ceca4b449b2a225d684002bb32
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -257,7 +257,20 @@ Returns true when scrolling took place, otherwise nil."
             nil)))
 
          ;; Restore indent (lost when scrolling).
-         (restore-column (current-column))
+         (this-column (current-column))
+         ;; Restore column (may be nil.)
+         (restore-column
+          (or goal-column
+              (cond
+               ((and temporary-goal-column
+                     (memq last-command (list 'next-line 'previous-line 'line-move)))
+                (cond
+                 ((consp temporary-goal-column)
+                  (car temporary-goal-column))
+                 (t
+                  temporary-goal-column)))
+               (t
+                nil))))
 
          (mouse-y-fn
           (cond
@@ -459,8 +472,14 @@ Returns true when scrolling took place, otherwise nil."
       (setq has-scrolled nil))
 
     ;; Restore indent level if possible.
-    (when (and has-scrolled (> restore-column 0))
-      (move-to-column restore-column))
+    (when has-scrolled
+      (unless restore-column
+        (setq temporary-goal-column this-column)
+        (setq restore-column this-column))
+      (when (> restore-column 0)
+        (move-to-column restore-column))
+      ;; Needed so `temporary-goal-column' is respected in the future.
+      (setq this-command 'line-move))
 
     (when has-scrolled-real
       (let ((inhibit-redisplay nil))

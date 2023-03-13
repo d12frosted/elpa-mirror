@@ -2,8 +2,8 @@
 
 ;; Author: wouter bolsterlee <wouter@bolsterl.ee>
 ;; Keywords: languages
-;; Package-Version: 20221103.1759
-;; Package-Commit: e1bbf574a952562ddeadb0caa42c44016136c2c9
+;; Package-Version: 20230313.1037
+;; Package-Commit: 0714b0007c0b620f88ed9cc91035caea43f3d75f
 ;; URL: https://github.com/wbolster/emacs-python-black
 ;; Package-Requires: ((emacs "25") (dash "2.16.0") (reformatter "0.3"))
 ;; Version: 1.2.0
@@ -95,9 +95,15 @@ DISPLAY-ERRORS is non-nil, shows a buffer if the formatting fails."
       (python-black-region (region-beginning) (region-end) display-errors)
     (python-black-statement display-errors)))
 
+(declare-function org-in-block-p "org" (names))
+(declare-function org-src--contents-area "org-src" (datum))
+(declare-function org-element-at-point "org-element" (&optional pom cached-only))
+
 ;;;###autoload
 (defun python-black-org-mode-block (&optional display-errors)
-  "Reformats the current org-mode source block."
+  "Reformats the current `org-mode' source block.
+When called interactively, or with prefix argument
+DISPLAY-ERRORS, shows a buffer if the formatting fails."
   (interactive)
   (unless (org-in-block-p '("src" "example"))
     (user-error "Not in a source block"))
