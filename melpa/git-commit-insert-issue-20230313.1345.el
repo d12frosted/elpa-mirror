@@ -4,8 +4,8 @@
 
 ;; Author: Vindarel
 ;; URL: https://gitlab.com/emacs-stuff/git-commit-insert-issue/
-;; Package-Version: 20210107.2018
-;; Package-Commit: 6cfb8b4b5b23ae881cf3d005da4d7f60d91cd2cd
+;; Package-Version: 20230313.1345
+;; Package-Commit: e1d80a6571d211c6ced88524b5dbb09aa7620c13
 ;; Keywords: tools, vc, github, gitlab, bitbucket, commit, issues
 ;; Version: 0.4.1
 ;; Package-Requires: ((emacs "25") (projectile "0") (s "0") (ghub "0") (bitbucket "0"))
@@ -36,6 +36,9 @@
 (require 'glab)
 (require 'projectile)  ;; update, 2020: now only used to get the project root. Alternatives?
 (require 's)
+
+;; originally in cl.el, it's deprecated. Should be cadr or cl-second.
+(defalias 'second #'cadr)
 
 (defvar git-commit-insert-issue-github-keywords '("Fixes" "fixes" "fix" "fixed"
                                 "close" "closes" "closed"

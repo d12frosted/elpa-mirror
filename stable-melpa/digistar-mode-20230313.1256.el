@@ -3,10 +3,10 @@
 ;; Copyright (C) 2014-2023  John Foerch <jjfoerch@gmail.com>
 
 ;; Author: John Foerch <jjfoerch@gmail.com>
-;; Version: 0.9.7
-;; Package-Version: 20230313.243
-;; Package-Commit: 829ef911a549c31a46e4f556e2dddc3f2d3500b4
-;; Date: 2023-03-12
+;; Version: 0.9.8
+;; Package-Version: 20230313.1256
+;; Package-Commit: 2bb1076778468d90a132c04f7b8455fb887b6bfe
+;; Date: 2023-03-13
 ;; Keywords: languages
 
 ;; This program is free software; you can redistribute it and/or
@@ -599,7 +599,7 @@ timestamps to column 0 and commands with a tab."
   (rx-to-string
    `(: (group "OID") ?: space
        (group (1+ (any num))) space ?: space
-       (group (1+ (any alpha))) space ?: space
+       (group (1+ (any alnum))) space ?: space
        (group (1+ (any alpha))) space ?: space)))
 
 (defvar digistar-mrslog-cmdecho-re

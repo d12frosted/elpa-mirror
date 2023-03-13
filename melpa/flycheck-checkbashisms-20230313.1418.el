@@ -5,8 +5,8 @@
 
 ;; Author: Cuong Le <cuong.manhle.vn@gmail.com>
 ;; Keywords: convenience, tools, sh, unix
-;; Package-Version: 20190403.218
-;; Package-Commit: 2e386775f1a0eb5d80e5d70e98474ee32ecafb24
+;; Package-Version: 20230313.1418
+;; Package-Commit: ca8f11679c77d6702f34e773bdde185ceb47a05d
 ;; Version: 1.4-git
 ;; URL: https://github.com/cuonglm/flycheck-checkbashisms
 ;; Package-Requires: ((emacs "24") (flycheck "0.25"))
@@ -50,7 +50,7 @@
 (require 'flycheck)
 
 (defgroup flycheck-checkbashisms nil
-  "checkbashisms intergrate with flycheck"
+  "`checkbashisms' intergration for flycheck."
   :prefix "flycheck-checkbashisms"
   :group 'flycheck
   :link '(url-link :tag "Github" "https://github.com/cuonglm/flycheck-checkbashisms"))
@@ -59,7 +59,7 @@
 (defvar sh-shell)                       ; From sh-script, for shell checker predicate
 
 (flycheck-def-option-var flycheck-checkbashisms-newline nil sh-checkbashisms
-  "Check for 'echo -n' usage"
+  "Check for `echo -n' usage"
   :safe #'booleanp
   :type 'boolean)
 

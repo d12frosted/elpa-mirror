@@ -1,11 +1,11 @@
 (flycheck-checkbashisms .
-			[(20190403 218)
+			[(20230313 1418)
 			 ((emacs
 			   (24))
 			  (flycheck
 			   (0 25)))
 			 "checkbashisms checker for flycheck" single
-			 ((:commit . "2e386775f1a0eb5d80e5d70e98474ee32ecafb24")
+			 ((:commit . "ca8f11679c77d6702f34e773bdde185ceb47a05d")
 			  (:authors
 			   ("Cuong Le" . "cuong.manhle.vn@gmail.com"))
 			  (:maintainer "Cuong Le" . "cuong.manhle.vn@gmail.com")
