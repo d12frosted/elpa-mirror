@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25.1"))
-;; Package-Commit: 68ab3e5f78239774d1710874e8a68e3f8498cee3
-;; Package-Version: 20230228.828
+;; Package-Commit: 7ef87709c09792dfa6332fb41a6ec1edd917120a
+;; Package-Version: 20230313.118
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: wp processes
 ;; homepage: https://repo.or.cz/external-dict.el.git
@@ -70,6 +70,7 @@ If the value is a command string, it will invoke the command to read the word."
   (cond
    ((region-active-p)
     (let ((text (buffer-substring-no-properties (mark) (point))))
+      (deactivate-mark)
       `(:type :text :text ,text)))
    ((and (thing-at-point 'word)
          (not (string-blank-p (substring-no-properties (thing-at-point 'word)))))
@@ -102,6 +103,7 @@ If the value is a command string, it will invoke the command to read the word."
           ((not (string-blank-p (substring-no-properties (thing-at-point 'word))))
            (substring-no-properties (thing-at-point 'word)))
           (t (read-string "[external-dict.el] Query word in macOS Dictionary.app: ")))))
+  (deactivate-mark)
   (shell-command (format "open dict://\"%s\"" word))
   (external-dict-read-word word))
 

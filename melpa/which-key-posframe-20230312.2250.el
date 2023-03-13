@@ -5,8 +5,8 @@
 ;; Author: Yanghao Xie
 ;; Maintainer: Yanghao Xie <yhaoxie@gmail.com>
 ;; URL: https://github.com/yanghaoxie/which-key-posframe
-;; Package-Version: 20220804.1311
-;; Package-Commit: 421cbfbe5d43ca8a48ecb18ea6d3d95f9ca6e9e6
+;; Package-Version: 20230312.2250
+;; Package-Commit: d2ed514467417029b931e97aad555f4ef39a3fc8
 ;; Version: 0.2.0
 ;; Keywords: convenience, bindings, tooltip
 ;; Package-Requires: ((emacs "26.0") (posframe "0.4.3") (which-key "3.3.2"))
@@ -138,7 +138,8 @@ characters respectably."
     (setq which-key-custom-popup-max-dimensions-function
           'which-key-posframe--max-dimensions))
    (t
-    (posframe-delete which-key--buffer)
+    (when which-key--buffer
+      (posframe-delete which-key--buffer))
     (setq which-key-popup-type
           which-key-popup-type--previous)
     (setq which-key-custom-show-popup-function

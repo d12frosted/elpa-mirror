@@ -4,8 +4,6 @@
 
 ;; Author: Francesc Rocher <francesc.rocher@gmail.com>
 ;; URL: http://github.com/rocher/persp-fr
-;; Package-Version: 20191108.754
-;; Package-Commit: 1adbb6a9f9a4db580a9b7ed8b4091738e01345e6
 ;; Version: 0.0.5
 ;; Package-Requires: ((emacs "25.1") (persp-mode "2.9.6") (dash "2.13.0"))
 ;; Keywords: perspectives, workspace, windows, convenience

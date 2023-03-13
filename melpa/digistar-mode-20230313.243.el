@@ -3,9 +3,9 @@
 ;; Copyright (C) 2014-2023  John Foerch <jjfoerch@gmail.com>
 
 ;; Author: John Foerch <jjfoerch@gmail.com>
-;; Version: 0.9.6
-;; Package-Version: 20230312.1508
-;; Package-Commit: 508d3e6220b812ce18bf473c6fdc2b726aa27bb4
+;; Version: 0.9.7
+;; Package-Version: 20230313.243
+;; Package-Commit: 829ef911a549c31a46e4f556e2dddc3f2d3500b4
 ;; Date: 2023-03-12
 ;; Keywords: languages
 
@@ -566,18 +566,22 @@ timestamps to column 0 and commands with a tab."
   :group 'digistar-faces)
 (defvar digistar-mrslog-mrs-face 'digistar-mrslog-mrs)
 
+(defface digistar-mrslog-cmdecho-time
+  '((t :foreground "lightblue"))
+  ""
+  :group 'digistar-faces)
+(defvar digistar-mrslog-cmdecho-time-face 'digistar-mrslog-cmdecho-time)
+
+(defface digistar-mrslog-cmdecho-pathname
+  '((t :foreground "chartreuse3"))
+  ""
+  :group 'digistar-faces)
+(defvar digistar-mrslog-cmdecho-pathname-face 'digistar-mrslog-cmdecho-pathname)
+
 (defvar digistar-mrslog-mode-map
   (let ((map (make-sparse-keymap)))
     map)
   "The keymap for digistar-mrslog-mode.")
-
-(defvar digistar-mrslog-syntax-table
-  (let ((table (make-syntax-table)))
-    (modify-syntax-entry ?\" "<" table)
-    (modify-syntax-entry ?$ "<" table)
-    (modify-syntax-entry ?\n ">" table)
-    table)
-  "The syntax table for font-lock in digistar-mrslog-mode.")
 
 (defvar digistar-mrslog-line-re
   (rx-to-string
@@ -598,26 +602,112 @@ timestamps to column 0 and commands with a tab."
        (group (1+ (any alpha))) space ?: space
        (group (1+ (any alpha))) space ?: space)))
 
-(defvar digistar-mrslog-oid-source-re
-      (rx-to-string
-       `(: (group (1+ (any alpha))) space ?: space
-           (group (1+ (any alpha))) space ?: space
-           )))
+(defvar digistar-mrslog-cmdecho-re
+  (rx-to-string
+   `(: (group (1+ graphic))                     ;; script name
+       (? (1+ space) (group (0+ (any num ?.)))) ;; script timestamp
+       ?: space
+       (group (*? (not (any ?$ ?\"))))
+       (? (or (group ?\$ (* anychar))
+           (group ?\" (* anychar))
+           (group "dur" (? "ation") space (1+ (any ?. num))
+                  (? space (1+ (any ?. num)) (? space (1+ (any ?. num))))
+                  )
+           ))
+       eol)))
+
+(defun digistar-mrslog-highlight-oid-line (limit)
+  (let ((whole-match-b (point))
+        (whole-match-e limit))
+    (when (re-search-forward digistar-mrslog-oid-re limit t)
+      (let ((oid-common-e (match-end 0))
+            (oid-b (match-beginning 1))
+            (oid-e (match-end 1))
+            (oid-id-b (match-beginning 2))
+            (oid-id-e (match-end 2))
+            (oid-name-b (match-beginning 3))
+            (oid-name-e (match-end 3))
+            (category-b (match-beginning 4))
+            (category-e (match-end 4))
+            (category (match-string 4))
+            status-b status-e warning-b warning-e
+            error-b error-e
+            cmdecho-script-b cmdecho-script-e
+            cmdecho-time-b cmdecho-time-e
+            cmdecho-command-b cmdecho-command-e
+            cmdecho-pathname-b cmdecho-pathname-e
+            cmdecho-string-b cmdecho-string-e
+            cmdecho-duration-b cmdecho-duration-e)
+
+        ;; status warning error
+        (cond
+         ((string= "CmdEcho" category)
+          (when (re-search-forward digistar-mrslog-cmdecho-re limit t)
+            (setq cmdecho-script-b (match-beginning 1)
+                  cmdecho-script-e (match-end 1)
+                  cmdecho-time-b (match-beginning 2)
+                  cmdecho-time-e (match-end 2)
+                  cmdecho-command-b (match-beginning 3)
+                  cmdecho-command-e (match-end 3)
+                  cmdecho-pathname-b (match-beginning 4)
+                  cmdecho-pathname-e (match-end 4)
+                  cmdecho-string-b (match-beginning 5)
+                  cmdecho-string-e (match-end 5)
+                  cmdecho-duration-b (match-beginning 6)
+                  cmdecho-duration-e (match-end 6))))
+         ((member category '("Status" "SystemStatus" "LogOnly"))
+          (setq status-b oid-common-e
+                status-e whole-match-e))
+         ((string= "Warning" category)
+          (setq warning-b oid-common-e
+                warning-e whole-match-e))
+         ((string= "Error" category)
+          (setq error-b oid-common-e
+                error-e whole-match-e)))
+
+        (forward-line)
+        (set-match-data
+         (list whole-match-b whole-match-e
+               oid-b oid-e
+               oid-id-b oid-id-e
+               oid-name-b oid-name-e
+               category-b category-e
+               status-b status-e
+               warning-b (point)
+               error-b error-e
+               cmdecho-script-b cmdecho-script-e
+               cmdecho-time-b cmdecho-time-e
+               cmdecho-command-b cmdecho-command-e
+               cmdecho-pathname-b cmdecho-pathname-e
+               cmdecho-string-b cmdecho-string-e
+               cmdecho-duration-b cmdecho-duration-e))
+        t))))
 
 (defvar digistar-mrslog-font-lock-keywords
   (let ((override t)
         (laxmatch t))
     `((,digistar-mrslog-line-re
        (1 digistar-mrslog-timestamp-face)
-       (3 digistar-mrslog-time-face ,override)
+       (3 digistar-mrslog-time-face ,override nil)
 
        ;; OID entries
-       (,digistar-mrslog-oid-re ;; anchored match
+       (digistar-mrslog-highlight-oid-line ;; anchored match
         (goto-char (match-end 1)) nil
-        (1 digistar-mrslog-mrs-face)
-        (2 digistar-mrslog-mrs-face)
-        (3 digistar-mrslog-mrs-face)
-        (4 font-lock-constant-face))
+        ; (0 font-lock-keyword-face) ;; whole line
+        (1 digistar-mrslog-mrs-face ,override) ;; OID
+        (2 digistar-mrslog-mrs-face ,override) ;; OID ID
+        (3 digistar-mrslog-mrs-face ,override) ;; OID Name
+        (4 font-lock-keyword-face ,override) ;; Message Category
+        (5 digistar-mrslog-mrs-face ,override ,laxmatch) ;; status
+        (6 'warning ,override ,laxmatch) ;; warning
+        (7 'error ,override ,laxmatch) ;; error
+        (8 font-lock-constant-face ,override ,laxmatch) ;; CmdEcho script name
+        (9 digistar-mrslog-cmdecho-time-face ,override ,laxmatch) ;; CmdEcho timestamp
+        ; (10 'error ,override ,laxmatch) ;; CmdEcho command
+        (11 digistar-mrslog-cmdecho-pathname-face ,override ,laxmatch) ;; CmdEcho pathname
+        (12 font-lock-string-face ,override ,laxmatch) ;; CmdEcho string
+        (13 font-lock-type-face ,override ,laxmatch) ;; CmdEcho duration
+        )
 
        ;; MRS entries
        (".*"                    ;; anchored match
@@ -634,10 +724,9 @@ timestamps to column 0 and commands with a tab."
   "A major mode for Digistar MRSLog files.
 
 \\{digistar-mrslog-mode-map}"
-  :syntax-table digistar-mrslog-syntax-table
 
   ;; Syntax Highlighting
-  (setq font-lock-defaults (list digistar-mrslog-font-lock-keywords nil t)))
+  (setq font-lock-defaults (list digistar-mrslog-font-lock-keywords t t)))
 
 
 ;;;###autoload

@@ -18,7 +18,3 @@ d2 differs from most standard languages in that:
 
 - `d2-mode' is also recommended for syntax highlighting and formatting,
   however it is not required.
-
-; TODO
-
-- Provide better error feedback.

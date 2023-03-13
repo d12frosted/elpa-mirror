@@ -4,8 +4,8 @@
 
 ;; Author: Xavier Capaldi
 ;; URL: https://github.com/xcapaldi/ob-d2
-;; Package-Version: 20230312.231
-;; Package-Commit: be7dbf497732caaf17c420c19c08d0323725305d
+;; Package-Version: 20230313.157
+;; Package-Commit: 6de310b93382530726961b1da6d9d3e2f6e25d8e
 ;; Keywords: languages
 ;; Version: 0.0.3
 ;; Created: 26th Dec 2022
@@ -49,7 +49,7 @@
 ;; - `d2-mode' is also recommended for syntax highlighting and formatting,
 ;;   however it is not required.
 
-;;; TODO
+;;; TODO:
 
 ;; - Provide better error feedback.
 
