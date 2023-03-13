@@ -1207,15 +1207,16 @@
 	      ("Aaron Smith" . "aaron-lua@gelatinous.com"))
 	     (:commit . "1cb83e691627fb92290d452cb08b6c5f73fe19b6"))])
  (macrostep .
-	    [(0 9)
+	    [(0 9 1)
 	     ((cl-lib
 	       (0 5)))
 	     "interactive macro expander" tar
-	     ((:url . "https://github.com/joddie/macrostep")
-	      (:maintainer "joddie" . "j.j.oddie@gmail.com")
+	     ((:url . "https://github.com/emacsorphanage/macrostep")
+	      (:keywords "lisp" "languages" "macro" "debugging")
+	      (:maintainer "Jon Oddie" . "j.j.oddie@gmail.com")
 	      (:authors
-	       ("joddie" . "j.j.oddie@gmail.com"))
-	      (:keywords "lisp" "languages" "macro" "debugging"))])
+	       ("Jon Oddie" . "j.j.oddie@gmail.com"))
+	      (:commit . "c7369e402c7de5dcb77aec1f16504cad1ca741d5"))])
  (magit .
 	[(3 3 0)
 	 ((emacs

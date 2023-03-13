@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/grtcdr/darkman.el.git
 
 Updating /mnt/store/melpa/working/darkman/
-Checking out 47ae0f5bbd71477e5a242fecd4c86edc8aa26155
+Checking out 31cf4b6f5000a394d14a73b0286b9a83f8c943a9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/darkman/
-  to /tmp/darkmanVkkTxe/darkman-20230306.52
+  to /tmp/darkmanMB0vyt/darkman-20230312.2217
     darkman.el -> darkman.el
   ! doc/darkman.texi -> darkman.texi
-Generating /tmp/darkmanVkkTxe/darkman-20230306.52/darkman.info
-Created darkman-20230306.52.tar containing:
-  darkman-20230306.52/
-  darkman-20230306.52/darkman-pkg.el
-  darkman-20230306.52/darkman.el
-  darkman-20230306.52/darkman.info
-  darkman-20230306.52/dir
-Built darkman in 9.513s, finished at 2023-03-12T19:21:11+0000
+Generating /tmp/darkmanMB0vyt/darkman-20230312.2217/darkman.info
+Created darkman-20230312.2217.tar containing:
+  darkman-20230312.2217/
+  darkman-20230312.2217/darkman-pkg.el
+  darkman-20230312.2217/darkman.el
+  darkman-20230312.2217/darkman.info
+  darkman-20230312.2217/dir
+Built darkman in 7.364s, finished at 2023-03-12T23:17:43+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 363 Mar 12 19:21 packages/darkman-20230306.52.entry
  20K -rw-r--r-- 1 root root 20K Mar 12 19:21 packages/darkman-20230306.52.tar
+4.0K -rw-r--r-- 1 root root 365 Mar 12 23:17 packages/darkman-20230312.2217.entry
+ 20K -rw-r--r-- 1 root root 20K Mar 12 23:17 packages/darkman-20230312.2217.tar
