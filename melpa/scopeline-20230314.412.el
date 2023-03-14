@@ -1,8 +1,8 @@
 ;;; scopeline.el --- Show scope info of blocks in buffer at end of scope -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/meain/scopeline.el
-;; Package-Version: 20230314.339
-;; Package-Commit: 0afaee9437b5e840a87af8bc1759397ffbd39245
+;; Package-Version: 20230314.412
+;; Package-Commit: eb6441667c12952d31a3c0f4e6b84fa408b97b90
 ;; Keywords: scope, context, tree-sitter, convenience
 ;; SPDX-License-Identifier: Apache-2.0
 ;; Package-Requires: ((emacs "26.1"))
@@ -79,7 +79,9 @@
     (js-mode . ("function" "function_declaration" "if_statement" "for_statement" "while_statement"))
     (js2-mode . ("function" "function_declaration" "if_statement" "for_statement" "while_statement"))
     (js3-mode . ("function" "function_declaration" "if_statement" "for_statement" "while_statement"))
+    (typescript-mode . ("function" "function_declaration" "if_statement" "for_statement" "while_statement"))
     (json-mode . ("pair"))
+    (toml-mode . ("pair"))
     (mhtml-mode . ("element"))
     (nix-mode . ("bind"))
     (python-mode . ("function_definition" "if_statement" "for_statement"))

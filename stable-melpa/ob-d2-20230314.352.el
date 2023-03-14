@@ -4,8 +4,8 @@
 
 ;; Author: Xavier Capaldi
 ;; URL: https://github.com/xcapaldi/ob-d2
-;; Package-Version: 20230313.157
-;; Package-Commit: 6de310b93382530726961b1da6d9d3e2f6e25d8e
+;; Package-Version: 20230314.352
+;; Package-Commit: 5d197f8225a9fb4da997235b231abe30049c6825
 ;; Keywords: languages
 ;; Version: 0.0.3
 ;; Created: 26th Dec 2022
@@ -43,7 +43,7 @@
 ;;; Requirements:
 
 ;; - You must have d2 installed and d2 should be in your `exec-path'. If not,
-;;   feel free to modify `org-babel-d2-command' to the location of your d2
+;;   feel free to modify `ob-d2-command' to the location of your d2
 ;;   command.
 ;;
 ;; - `d2-mode' is also recommended for syntax highlighting and formatting,

@@ -4,8 +4,8 @@
 
 ;; Author: Albert Graef <aggraef@gmail.com>
 ;; Keywords: multimedia, pure-data
-;; Package-Version: 20230307.2259
-;; Package-Commit: e944426a4d59a31ee913c8547a1ff66c2f7fe82a
+;; Package-Version: 20230314.428
+;; Package-Commit: dcd68097d2b7468303517d91cb76682bfb47db63
 ;; Version: 1.2.0
 ;; Package-Requires: ((emacs "24.3") (faust-mode "0.6") (lua-mode "20210802"))
 ;; URL: https://github.com/agraef/pd-remote
