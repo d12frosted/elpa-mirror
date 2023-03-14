@@ -11,8 +11,8 @@
 ;;       Magnar Sveen <magnars@gmail.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20230314.538
-;; Package-Commit: b2bc009659a3012fc5c8f54cfe26f8d27c89fdaa
+;; Package-Version: 20230314.758
+;; Package-Commit: 906d6a47a646d1191eaead6f8e1ae0810aa9b626
 ;; Keywords: languages clojure clojurescript lisp
 ;; Version: 5.16.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -860,7 +860,8 @@ any number of matches of `clojure--sym-forbidden-rest-chars'."))
                               "defna"
                               ;; Third party
                               "deftask"
-                              "defstate"))
+                              "defstate"
+                              "defproject"))
                 "\\)\\>")
        (1 font-lock-keyword-face))
       ;; Top-level variable definition

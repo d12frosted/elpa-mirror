@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/proof-general/
 Checking out bf43cfb39a6deaea56a96d8e889e91319ec4dbc1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/proof-general/
-  to /tmp/proof-generalfcEHGQ/proof-general-20230308.2247
+  to /tmp/proof-generalmRFlkz/proof-general-20230308.2247
     proof-general.el -> proof-general.el
   ! doc/dir -> dir
   ! doc/PG-adapting.texi -> PG-adapting.texi
@@ -38,8 +38,8 @@ Copying files (->) and directories (=>)
     pghaskell => pghaskell
     pgocaml => pgocaml
     pgshell => pgshell
-Generating /tmp/proof-generalfcEHGQ/proof-general-20230308.2247/PG-adapting.info
-Generating /tmp/proof-generalfcEHGQ/proof-general-20230308.2247/ProofGeneral.info
+Generating /tmp/proof-generalmRFlkz/proof-general-20230308.2247/PG-adapting.info
+Generating /tmp/proof-generalmRFlkz/proof-general-20230308.2247/ProofGeneral.info
 Created proof-general-20230308.2247.tar containing:
   proof-general-20230308.2247/
   proof-general-20230308.2247/AUTHORS
@@ -175,7 +175,7 @@ Created proof-general-20230308.2247.tar containing:
   proof-general-20230308.2247/qrhl/
   proof-general-20230308.2247/qrhl/qrhl-input.el
   proof-general-20230308.2247/qrhl/qrhl.el
-Built proof-general in 39.874s, finished at 2023-03-14T07:54:54+0000
+Built proof-general in 37.789s, finished at 2023-03-14T11:51:45+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  297 Mar 14 07:54 packages/proof-general-20230308.2247.entry
-2.7M -rw-r--r-- 1 root root 2.7M Mar 14 07:54 packages/proof-general-20230308.2247.tar
+4.0K -rw-r--r-- 1 root root  297 Mar 14 11:51 packages/proof-general-20230308.2247.entry
+2.7M -rw-r--r-- 1 root root 2.7M Mar 14 11:51 packages/proof-general-20230308.2247.tar

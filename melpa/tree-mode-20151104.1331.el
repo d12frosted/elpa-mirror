@@ -2,8 +2,10 @@
 ;; Copyright 2007 Ye Wenbin
 ;;
 ;; Author: wenbinye@163.com
-;; Package-Version: 1.1.1.1
+;; Package-Version: 20151104.1331
+;; Package-X-Original-Version: 1.1.1.1
 ;; Version: $Id: tree-mode.el,v 1.1.1.1 2007-03-13 13:16:10 ywb Exp $
+;; Package-Commit: b06078826d5875d74b0e7b7ac47b0d0917610534
 ;; Keywords: help, convenience, widget
 ;; 
 ;; This file is part of PDE (Perl Development Environment).
