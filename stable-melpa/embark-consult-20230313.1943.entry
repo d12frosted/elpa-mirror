@@ -1,0 +1,15 @@
+(embark-consult .
+		[(20230313 1943)
+		 ((emacs
+		   (27 1))
+		  (embark
+		   (0 20))
+		  (consult
+		   (0 17)))
+		 "Consult integration for Embark" single
+		 ((:commit . "0c6903cb0b51437a88bb32a82ab0c5ad6d626b85")
+		  (:authors
+		   ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
+		  (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
+		  (:keywords "convenience")
+		  (:url . "https://github.com/oantolin/embark"))])

@@ -11,4 +11,4 @@ to your init file:
 Use it with: M-x chemtable
 
 Please, email me your comments, bugs, improvements or opinions on
-this package to sergi.ruiz.trepat@gmail.com
+this package to sergi@aloe-associacio.org

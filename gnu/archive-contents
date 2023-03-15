@@ -1001,7 +1001,7 @@
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	      (:commit . "1d7e6e78df914e8829e6511a935616b0895403ae"))])
  (eglot .
-	[(1 11)
+	[(1 12)
 	 ((emacs
 	   (26 3))
 	  (jsonrpc
@@ -1009,9 +1009,9 @@
 	  (flymake
 	   (1 2 1))
 	  (project
-	   (0 9 3))
+	   (0 9 8))
 	  (xref
-	   (1 4 0))
+	   (1 6 2))
 	  (eldoc
 	   (1 11 0))
 	  (seq
@@ -1024,7 +1024,7 @@
 	  (:maintainer "João Távora" . "joaotavora@gmail.com")
 	  (:authors
 	   ("João Távora" . "joaotavora@gmail.com"))
-	  (:commit . "f72a394716f4373dbbdc79ad0816da90bdb032a1"))])
+	  (:commit . "ba22a2c346b4a8cc992333037f6a30303a928a56"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -1817,7 +1817,7 @@
 	       ("Simen Heggestøyl" . "simenheg@gmail.com"))
 	      (:maintainer "Simen Heggestøyl" . "simenheg@gmail.com"))])
  (jsonrpc .
-	  [(1 0 16)
+	  [(1 0 17)
 	   ((emacs
 	     (25 2)))
 	   "JSON-RPC library" tar
@@ -1826,7 +1826,7 @@
 	    (:authors
 	     ("João Távora" . "joaotavora@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
-	    (:commit . "8bf4cdcf79bc3254a9169f28f68922ab83bd4e78"))])
+	    (:commit . "2d835d64ba339bb375f0d55c4679149d6da3f209"))])
  (jumpc .
 	[(3 0)
 	 nil "jump to previous insertion points" single
@@ -3960,12 +3960,12 @@
 	("Mattias Engdegård" . "mattiase@acm.org"))
        (:commit . "74906f6d104b7daae162dc32684e0443e80fdb03"))])
  (xref .
-       [(1 6 2)
+       [(1 6 3)
 	((emacs
 	  (26 1)))
 	"Cross-referencing commands" tar
 	((:url . "https://elpa.gnu.org/packages/xref.html")
-	 (:commit . "b5bea14ca178b9f0c3944a9a14363c9923853814"))])
+	 (:commit . "4b6f2a7028b91128934a19f83572f24106782225"))])
  (yasnippet .
 	    [(0 14 0)
 	     ((cl-lib

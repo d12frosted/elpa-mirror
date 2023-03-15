@@ -15,9 +15,10 @@ manual first.  Additionally, take the following in consideration:
   definition-chasing, Flymake for diagnostics, Eldoc for at-point
   documentation, etc.  Eglot's job is generally *not* to provide
   such a UI itself, though a small number of simple
-  counter-examples do exist, for example in the `eglot-rename'
-  command.  When a new UI is evidently needed, consider adding a
-  new package to Emacs, or extending an existing one.
+  counter-examples do exist, e.g. in the `eglot-rename' command or
+  the `eglot-inlay-hints-mode' minor mode.  When a new UI is
+  evidently needed, consider adding a new package to Emacs, or
+  extending an existing one.
 
 * Eglot was designed to function with just the UI facilities found
   in the latest Emacs core, as long as those facilities are also

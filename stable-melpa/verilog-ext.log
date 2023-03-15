@@ -3,75 +3,75 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/verilog-ext.git
 
 Updating /mnt/store/melpa/working/verilog-ext/
-Checking out 7f6e907c9691409070136e13ebd579392eed10c2
+Checking out a562168ec615e832fe2ce6110a2025ac377767f7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/verilog-ext/
-  to /tmp/verilog-extH5SD2L/verilog-ext-20230311.2156
+  to /tmp/verilog-extl8PDfL/verilog-ext-20230314.1826
     verilog-ext.el -> verilog-ext.el
     snippets => snippets
-Created verilog-ext-20230311.2156.tar containing:
-  verilog-ext-20230311.2156/
-  verilog-ext-20230311.2156/snippets/
-  verilog-ext-20230311.2156/snippets/makefile-mode/
-  verilog-ext-20230311.2156/snippets/makefile-mode/verilog-template
-  verilog-ext-20230311.2156/snippets/verilog-mode/
-  verilog-ext-20230311.2156/snippets/verilog-mode/always
-  verilog-ext-20230311.2156/snippets/verilog-mode/always_comb
-  verilog-ext-20230311.2156/snippets/verilog-mode/always_ff
-  verilog-ext-20230311.2156/snippets/verilog-mode/always_latch
-  verilog-ext-20230311.2156/snippets/verilog-mode/assert
-  verilog-ext-20230311.2156/snippets/verilog-mode/assert_prop
-  verilog-ext-20230311.2156/snippets/verilog-mode/assign
-  verilog-ext-20230311.2156/snippets/verilog-mode/begin
-  verilog-ext-20230311.2156/snippets/verilog-mode/class
-  verilog-ext-20230311.2156/snippets/verilog-mode/clk_event
-  verilog-ext-20230311.2156/snippets/verilog-mode/clocking
-  verilog-ext-20230311.2156/snippets/verilog-mode/constraint
-  verilog-ext-20230311.2156/snippets/verilog-mode/covergroup
-  verilog-ext-20230311.2156/snippets/verilog-mode/display
-  verilog-ext-20230311.2156/snippets/verilog-mode/do-while
-  verilog-ext-20230311.2156/snippets/verilog-mode/else
-  verilog-ext-20230311.2156/snippets/verilog-mode/else-if
-  verilog-ext-20230311.2156/snippets/verilog-mode/final
-  verilog-ext-20230311.2156/snippets/verilog-mode/for
-  verilog-ext-20230311.2156/snippets/verilog-mode/foreach
-  verilog-ext-20230311.2156/snippets/verilog-mode/forever
-  verilog-ext-20230311.2156/snippets/verilog-mode/fork
-  verilog-ext-20230311.2156/snippets/verilog-mode/fork_any
-  verilog-ext-20230311.2156/snippets/verilog-mode/fork_none
-  verilog-ext-20230311.2156/snippets/verilog-mode/function
-  verilog-ext-20230311.2156/snippets/verilog-mode/generate
-  verilog-ext-20230311.2156/snippets/verilog-mode/if
-  verilog-ext-20230311.2156/snippets/verilog-mode/initial
-  verilog-ext-20230311.2156/snippets/verilog-mode/interface
-  verilog-ext-20230311.2156/snippets/verilog-mode/localparam
-  verilog-ext-20230311.2156/snippets/verilog-mode/logic
-  verilog-ext-20230311.2156/snippets/verilog-mode/logic_vector
-  verilog-ext-20230311.2156/snippets/verilog-mode/modport
-  verilog-ext-20230311.2156/snippets/verilog-mode/module
-  verilog-ext-20230311.2156/snippets/verilog-mode/module_param
-  verilog-ext-20230311.2156/snippets/verilog-mode/once
-  verilog-ext-20230311.2156/snippets/verilog-mode/package
-  verilog-ext-20230311.2156/snippets/verilog-mode/parameter
-  verilog-ext-20230311.2156/snippets/verilog-mode/program
-  verilog-ext-20230311.2156/snippets/verilog-mode/property
-  verilog-ext-20230311.2156/snippets/verilog-mode/repeat
-  verilog-ext-20230311.2156/snippets/verilog-mode/sequence
-  verilog-ext-20230311.2156/snippets/verilog-mode/star_comment
-  verilog-ext-20230311.2156/snippets/verilog-mode/task
-  verilog-ext-20230311.2156/snippets/verilog-mode/typedef
-  verilog-ext-20230311.2156/snippets/verilog-mode/uvm_component
-  verilog-ext-20230311.2156/snippets/verilog-mode/uvm_error
-  verilog-ext-20230311.2156/snippets/verilog-mode/uvm_fatal
-  verilog-ext-20230311.2156/snippets/verilog-mode/uvm_info
-  verilog-ext-20230311.2156/snippets/verilog-mode/uvm_object
-  verilog-ext-20230311.2156/snippets/verilog-mode/uvm_report
-  verilog-ext-20230311.2156/snippets/verilog-mode/uvm_typeid_create
-  verilog-ext-20230311.2156/snippets/verilog-mode/uvm_warning
-  verilog-ext-20230311.2156/snippets/verilog-mode/while
-  verilog-ext-20230311.2156/verilog-ext-pkg.el
-  verilog-ext-20230311.2156/verilog-ext.el
-Built verilog-ext in 5.113s, finished at 2023-03-14T12:09:18+0000
+Created verilog-ext-20230314.1826.tar containing:
+  verilog-ext-20230314.1826/
+  verilog-ext-20230314.1826/snippets/
+  verilog-ext-20230314.1826/snippets/makefile-mode/
+  verilog-ext-20230314.1826/snippets/makefile-mode/verilog-template
+  verilog-ext-20230314.1826/snippets/verilog-mode/
+  verilog-ext-20230314.1826/snippets/verilog-mode/always
+  verilog-ext-20230314.1826/snippets/verilog-mode/always_comb
+  verilog-ext-20230314.1826/snippets/verilog-mode/always_ff
+  verilog-ext-20230314.1826/snippets/verilog-mode/always_latch
+  verilog-ext-20230314.1826/snippets/verilog-mode/assert
+  verilog-ext-20230314.1826/snippets/verilog-mode/assert_prop
+  verilog-ext-20230314.1826/snippets/verilog-mode/assign
+  verilog-ext-20230314.1826/snippets/verilog-mode/begin
+  verilog-ext-20230314.1826/snippets/verilog-mode/class
+  verilog-ext-20230314.1826/snippets/verilog-mode/clk_event
+  verilog-ext-20230314.1826/snippets/verilog-mode/clocking
+  verilog-ext-20230314.1826/snippets/verilog-mode/constraint
+  verilog-ext-20230314.1826/snippets/verilog-mode/covergroup
+  verilog-ext-20230314.1826/snippets/verilog-mode/display
+  verilog-ext-20230314.1826/snippets/verilog-mode/do-while
+  verilog-ext-20230314.1826/snippets/verilog-mode/else
+  verilog-ext-20230314.1826/snippets/verilog-mode/else-if
+  verilog-ext-20230314.1826/snippets/verilog-mode/final
+  verilog-ext-20230314.1826/snippets/verilog-mode/for
+  verilog-ext-20230314.1826/snippets/verilog-mode/foreach
+  verilog-ext-20230314.1826/snippets/verilog-mode/forever
+  verilog-ext-20230314.1826/snippets/verilog-mode/fork
+  verilog-ext-20230314.1826/snippets/verilog-mode/fork_any
+  verilog-ext-20230314.1826/snippets/verilog-mode/fork_none
+  verilog-ext-20230314.1826/snippets/verilog-mode/function
+  verilog-ext-20230314.1826/snippets/verilog-mode/generate
+  verilog-ext-20230314.1826/snippets/verilog-mode/if
+  verilog-ext-20230314.1826/snippets/verilog-mode/initial
+  verilog-ext-20230314.1826/snippets/verilog-mode/interface
+  verilog-ext-20230314.1826/snippets/verilog-mode/localparam
+  verilog-ext-20230314.1826/snippets/verilog-mode/logic
+  verilog-ext-20230314.1826/snippets/verilog-mode/logic_vector
+  verilog-ext-20230314.1826/snippets/verilog-mode/modport
+  verilog-ext-20230314.1826/snippets/verilog-mode/module
+  verilog-ext-20230314.1826/snippets/verilog-mode/module_param
+  verilog-ext-20230314.1826/snippets/verilog-mode/once
+  verilog-ext-20230314.1826/snippets/verilog-mode/package
+  verilog-ext-20230314.1826/snippets/verilog-mode/parameter
+  verilog-ext-20230314.1826/snippets/verilog-mode/program
+  verilog-ext-20230314.1826/snippets/verilog-mode/property
+  verilog-ext-20230314.1826/snippets/verilog-mode/repeat
+  verilog-ext-20230314.1826/snippets/verilog-mode/sequence
+  verilog-ext-20230314.1826/snippets/verilog-mode/star_comment
+  verilog-ext-20230314.1826/snippets/verilog-mode/task
+  verilog-ext-20230314.1826/snippets/verilog-mode/typedef
+  verilog-ext-20230314.1826/snippets/verilog-mode/uvm_component
+  verilog-ext-20230314.1826/snippets/verilog-mode/uvm_error
+  verilog-ext-20230314.1826/snippets/verilog-mode/uvm_fatal
+  verilog-ext-20230314.1826/snippets/verilog-mode/uvm_info
+  verilog-ext-20230314.1826/snippets/verilog-mode/uvm_object
+  verilog-ext-20230314.1826/snippets/verilog-mode/uvm_report
+  verilog-ext-20230314.1826/snippets/verilog-mode/uvm_typeid_create
+  verilog-ext-20230314.1826/snippets/verilog-mode/uvm_warning
+  verilog-ext-20230314.1826/snippets/verilog-mode/while
+  verilog-ext-20230314.1826/verilog-ext-pkg.el
+  verilog-ext-20230314.1826/verilog-ext.el
+Built verilog-ext in 5.445s, finished at 2023-03-15T00:03:49+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  792 Mar 14 12:09 packages/verilog-ext-20230311.2156.entry
-272K -rw-r--r-- 1 root root 270K Mar 14 12:09 packages/verilog-ext-20230311.2156.tar
+4.0K -rw-r--r-- 1 root root  792 Mar 15 00:03 packages/verilog-ext-20230314.1826.entry
+292K -rw-r--r-- 1 root root 290K Mar 15 00:03 packages/verilog-ext-20230314.1826.tar
