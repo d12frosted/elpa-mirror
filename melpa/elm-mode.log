@@ -3,10 +3,11 @@ Fetcher: github
 Source:  https://github.com/jcollard/elm-mode.git
 
 Updating /mnt/store/melpa/working/elm-mode/
-Checking out 79aef834b017fd9054507c3f21797d2ee3444e93
+Checking out 699841865e1bd5b7f2077baa7121510b6bcad3c7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elm-mode/
-  to /tmp/elm-mode1bYxkq/elm-mode-20230315.930
+  to /tmp/elm-modenpJ6nb/elm-mode-20230315.1122
+    elm-defuns.el -> elm-defuns.el
     elm-font-lock.el -> elm-font-lock.el
     elm-format.el -> elm-format.el
     elm-imenu.el -> elm-imenu.el
@@ -17,22 +18,23 @@ Copying files (->) and directories (=>)
     elm-tags.el -> elm-tags.el
     elm-util.el -> elm-util.el
     elm.tags -> elm.tags
-Created elm-mode-20230315.930.tar containing:
-  elm-mode-20230315.930/
-  elm-mode-20230315.930/elm-font-lock.el
-  elm-mode-20230315.930/elm-format.el
-  elm-mode-20230315.930/elm-imenu.el
-  elm-mode-20230315.930/elm-indent-simple.el
-  elm-mode-20230315.930/elm-indent.el
-  elm-mode-20230315.930/elm-interactive.el
-  elm-mode-20230315.930/elm-mode-pkg.el
-  elm-mode-20230315.930/elm-mode.el
-  elm-mode-20230315.930/elm-tags.el
-  elm-mode-20230315.930/elm-util.el
-  elm-mode-20230315.930/elm.tags
-Built elm-mode in 5.547s, finished at 2023-03-15T10:45:24+0000
+Created elm-mode-20230315.1122.tar containing:
+  elm-mode-20230315.1122/
+  elm-mode-20230315.1122/elm-defuns.el
+  elm-mode-20230315.1122/elm-font-lock.el
+  elm-mode-20230315.1122/elm-format.el
+  elm-mode-20230315.1122/elm-imenu.el
+  elm-mode-20230315.1122/elm-indent-simple.el
+  elm-mode-20230315.1122/elm-indent.el
+  elm-mode-20230315.1122/elm-interactive.el
+  elm-mode-20230315.1122/elm-mode-pkg.el
+  elm-mode-20230315.1122/elm-mode.el
+  elm-mode-20230315.1122/elm-tags.el
+  elm-mode-20230315.1122/elm-util.el
+  elm-mode-20230315.1122/elm.tags
+Built elm-mode in 5.146s, finished at 2023-03-15T14:43:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  381 Mar 15 06:49 packages/elm-mode-20230102.1737.entry
-132K -rw-r--r-- 1 root root 130K Mar 15 06:49 packages/elm-mode-20230102.1737.tar
+4.0K -rw-r--r-- 1 root root  381 Mar 15 14:43 packages/elm-mode-20230315.1122.entry
+132K -rw-r--r-- 1 root root 130K Mar 15 14:43 packages/elm-mode-20230315.1122.tar
 4.0K -rw-r--r-- 1 root root  380 Mar 15 10:45 packages/elm-mode-20230315.930.entry
 132K -rw-r--r-- 1 root root 130K Mar 15 10:45 packages/elm-mode-20230315.930.tar

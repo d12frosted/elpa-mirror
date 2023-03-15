@@ -1,0 +1,11 @@
+(adoc-mode .
+	   [(20230315 1147)
+	    ((emacs
+	      (26)))
+	    "a major-mode for editing AsciiDoc files" single
+	    ((:commit . "9e7af55e7eb8c1b19ac46139ce0f79110d1452d4")
+	     (:authors
+	      ("Florian Kaufmann" . "sensorflo@gmail.com"))
+	     (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+	     (:keywords "docs" "wp")
+	     (:url . "https://github.com/bbatsov/adoc-mode"))])

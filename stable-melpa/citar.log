@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-citar/citar.git
 
 Updating /mnt/store/melpa/working/citar/
-Checking out cb7d51115c38bfff676a091ac1287ae59a1ab733
+Checking out 14acd0c3928c705b06949f97cde5c4b98b0f671a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citar/
-  to /tmp/citarwDXgRc/citar-20230314.2057
+  to /tmp/citars3sF5a/citar-20230315.1335
     citar-cache.el -> citar-cache.el
     citar-capf.el -> citar-capf.el
     citar-citeproc.el -> citar-citeproc.el
@@ -16,19 +16,21 @@ Copying files (->) and directories (=>)
     citar-markdown.el -> citar-markdown.el
     citar-org.el -> citar-org.el
     citar.el -> citar.el
-Created citar-20230314.2057.tar containing:
-  citar-20230314.2057/
-  citar-20230314.2057/citar-cache.el
-  citar-20230314.2057/citar-capf.el
-  citar-20230314.2057/citar-citeproc.el
-  citar-20230314.2057/citar-file.el
-  citar-20230314.2057/citar-format.el
-  citar-20230314.2057/citar-latex.el
-  citar-20230314.2057/citar-markdown.el
-  citar-20230314.2057/citar-org.el
-  citar-20230314.2057/citar-pkg.el
-  citar-20230314.2057/citar.el
-Built citar in 5.045s, finished at 2023-03-15T10:32:57+0000
+Created citar-20230315.1335.tar containing:
+  citar-20230315.1335/
+  citar-20230315.1335/citar-cache.el
+  citar-20230315.1335/citar-capf.el
+  citar-20230315.1335/citar-citeproc.el
+  citar-20230315.1335/citar-file.el
+  citar-20230315.1335/citar-format.el
+  citar-20230315.1335/citar-latex.el
+  citar-20230315.1335/citar-markdown.el
+  citar-20230315.1335/citar-org.el
+  citar-20230315.1335/citar-pkg.el
+  citar-20230315.1335/citar.el
+Built citar in 4.540s, finished at 2023-03-15T14:30:35+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  407 Mar 15 10:32 packages/citar-20230314.2057.entry
 152K -rw-r--r-- 1 root root 150K Mar 15 10:32 packages/citar-20230314.2057.tar
+4.0K -rw-r--r-- 1 root root  407 Mar 15 14:30 packages/citar-20230315.1335.entry
+152K -rw-r--r-- 1 root root 150K Mar 15 14:30 packages/citar-20230315.1335.tar
