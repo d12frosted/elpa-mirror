@@ -6,8 +6,8 @@
 ;; Maintainer: Peter Prevos <peter@prevos.net>
 ;; Homepage: https://github.com/pprevos/citar-denote
 ;; Version: 1.6
-;; Package-Version: 20230312.944
-;; Package-Commit: d117bb778d03f49e0fd147f3a81ec1991566b1bb
+;; Package-Version: 20230313.1000
+;; Package-Commit: 2b5f6dc79fcccc422e4e3a86addd580d0f7e07bf
 ;; Package-Requires: ((emacs "28.1") (citar "1.1") (denote "1.2.0") (dash "2.19.1"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -78,12 +78,13 @@ can use Markdown or plain text for their bibliographic notes."
 
 (defcustom citar-denote-title-format "title"
   "Title for new bibliographic notes.
+
 - \"title\": Extract title (or short title) from entry
 - \"author-year\": Author-year citation style
 - \"full\": Full citation
 - nil: Citekey as-is
 
-When using \"author-year\", you can also configure `citar-denote-title-format-authors' and `citar-denote-title-format-andstr'."
+Also `citar-denote-title-format-authors' and `citar-denote-title-format-andstr'."
   :group 'citar-denote
   :type  '(choice
            (const :tag "Title" "title")
@@ -258,7 +259,8 @@ See documentation for `citar-has-notes'."
 
 (defun citar-denote-generate-title (citekey)
   "Generate title for new bibliographic note using CITEKEY.
-Either title, author/year, full reference or citation key, based on `citar-denote-title-format'."
+Either title, author/year, full reference or citation key.
+Based on `citar-denote-title-format'."
   ;; https://github.com/pprevos/citar-denote/issues/15
   (let ((title (citar-get-value "title" citekey))
         (author-names (or (citar-get-value "author" citekey)

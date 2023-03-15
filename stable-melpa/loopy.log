@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out 0cb8714f0a77b257039b5269eb257e83718d1ef0
+Checking out 58bf9ddb0e1354984ef15b67a37faf03baefe4e8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopy4nBYgX/loopy-20230314.136
+  to /tmp/loopyvIKGMl/loopy-20230315.132
     loopy-commands.el -> loopy-commands.el
     loopy-iter.el -> loopy-iter.el
     loopy-misc.el -> loopy-misc.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
     loopy-vars.el -> loopy-vars.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Generating /tmp/loopy4nBYgX/loopy-20230314.136/loopy.info
-Created loopy-20230314.136.tar containing:
-  loopy-20230314.136/
-  loopy-20230314.136/dir
-  loopy-20230314.136/loopy-commands.el
-  loopy-20230314.136/loopy-iter.el
-  loopy-20230314.136/loopy-misc.el
-  loopy-20230314.136/loopy-pcase.el
-  loopy-20230314.136/loopy-pkg.el
-  loopy-20230314.136/loopy-seq.el
-  loopy-20230314.136/loopy-vars.el
-  loopy-20230314.136/loopy.el
-  loopy-20230314.136/loopy.info
-Built loopy in 24.247s, finished at 2023-03-14T23:25:44+0000
+Generating /tmp/loopyvIKGMl/loopy-20230315.132/loopy.info
+Created loopy-20230315.132.tar containing:
+  loopy-20230315.132/
+  loopy-20230315.132/dir
+  loopy-20230315.132/loopy-commands.el
+  loopy-20230315.132/loopy-iter.el
+  loopy-20230315.132/loopy-misc.el
+  loopy-20230315.132/loopy-pcase.el
+  loopy-20230315.132/loopy-pkg.el
+  loopy-20230315.132/loopy-seq.el
+  loopy-20230315.132/loopy-vars.el
+  loopy-20230315.132/loopy.el
+  loopy-20230315.132/loopy.info
+Built loopy in 19.096s, finished at 2023-03-15T03:22:44+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  326 Mar 14 23:25 packages/loopy-20230314.136.entry
 500K -rw-r--r-- 1 root root 500K Mar 14 23:25 packages/loopy-20230314.136.tar
+4.0K -rw-r--r-- 1 root root  326 Mar 15 03:22 packages/loopy-20230315.132.entry
+500K -rw-r--r-- 1 root root 500K Mar 15 03:22 packages/loopy-20230315.132.tar
