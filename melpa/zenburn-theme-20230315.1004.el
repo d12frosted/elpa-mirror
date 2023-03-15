@@ -4,9 +4,9 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
-;; Package-Version: 20220927.631
-;; Package-Commit: 4788de0bcfecf8faec69251decb9924492d008f3
-;; Version: 2.8.0-snapshot
+;; Package-Version: 20230315.1004
+;; Package-Commit: 8a1f9d28f503615e5d9b3eac59a2f3c14e75fc20
+;; Version: 2.8.0
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@
 
 ;;; Code:
 
-(deftheme zenburn "The Zenburn color theme")
+(deftheme zenburn "The Zenburn color theme.")
 
 (defgroup zenburn-theme nil
   "Zenburn theme."
@@ -326,6 +326,24 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(aw-background-face
      ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg :inverse-video nil))))
    `(aw-leading-char-face ((t (:inherit aw-mode-line-face))))
+;;;;; adoc-mode
+   `(adoc-anchor-face ((t (:foreground ,zenburn-blue+1))))
+   `(adoc-code-face ((t (:inherit font-lock-constant-face))))
+   `(adoc-command-face ((t (:foreground ,zenburn-yellow))))
+   `(adoc-emphasis-face ((t (:inherit bold))))
+   `(adoc-internal-reference-face ((t (:foreground ,zenburn-yellow-2 :underline t))))
+   `(adoc-list-face ((t (:foreground ,zenburn-fg+1))))
+   `(adoc-meta-face ((t (:foreground ,zenburn-yellow))))
+   `(adoc-meta-hide-face ((t (:foreground ,zenburn-yellow))))
+   `(adoc-secondary-text-face ((t (:foreground ,zenburn-yellow-1))))
+   `(adoc-title-0-face ((t (:inherit font-lock-function-name-face :weight bold))))
+   `(adoc-title-1-face ((t (:inherit font-lock-function-name-face :weight bold))))
+   `(adoc-title-2-face ((t (:inherit font-lock-function-name-face :weight bold))))
+   `(adoc-title-3-face ((t (:inherit font-lock-function-name-face :weight bold))))
+   `(adoc-title-4-face ((t (:inherit font-lock-function-name-face :weight bold))))
+   `(adoc-typewriter-face ((t (:inherit font-lock-constant-face))))
+   `(adoc-verbatim-face ((t (:inherit font-lock-constant-face))))
+   `(adoc-value-face ((t (:foreground ,zenburn-yellow))))
 ;;;;; android mode
    `(android-mode-debug-face ((t (:foreground ,zenburn-green+1))))
    `(android-mode-error-face ((t (:foreground ,zenburn-orange :weight bold))))
