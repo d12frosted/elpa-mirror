@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "5.0.0"))
-;; Package-Version: 20230314.322
-;; Package-Commit: a26bcbbff41bccd68a819f6e9f109008a203338c
+;; Package-Version: 20230316.419
+;; Package-Commit: caa38e550e3c1e9f9a472cfcc94ea4db3775d9b4
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -139,6 +139,7 @@
                   ("heart" . ,(all-the-icons-faicon "heart-o" :face '(:foreground "red")))
                   ("heart_beat" . ,(all-the-icons-faicon "heartbeat" :face '(:foreground "red")))
                   ("brain" . ,(all-the-icons-fileicon "brain" :face '(:foreground "BlueViolet")))
+                  ("mind" . ,(all-the-icons-fileicon "brain" :face '(:foreground "pink")))
                   ("thought" . ,(all-the-icons-fileicon "brain" :face '(:foreground "gold")))
                   ("smile" . ,(all-the-icons-faicon "smile-o" :face '(:foreground "yellow")))
                   ("ticket" . ,(all-the-icons-faicon "ticket" :face '(:foreground "gold")))
@@ -490,6 +491,8 @@
 
                   ;; network
                   ("network" . ,(all-the-icons-faicon "connectdevelop" :face '(:foreground "LightSkyBlue")))
+                  ("online" . ,(all-the-icons-faicon "connectdevelop" :face '(:foreground "green")))
+                  ("offline" . ,(all-the-icons-faicon "connectdevelop" :face '(:foreground "gray")))
                   ("CMCC" . ,(all-the-icons-fileicon "ecere" :face '(:foreground "SkyBlue"))) ; CMCC 中国移动
 
                   ;; system

@@ -4,8 +4,8 @@
 
 ;; Author           : Wilhelm H Kirschbaum
 ;; Version          : 1.2
-;; Package-Version: 20230312.752
-;; Package-Commit: 2181b9250839273441ea106f03707e150cd6d0df
+;; Package-Version: 20230316.553
+;; Package-Commit: a61a4b6f158c19c1d583722bc35d95b09152551e
 ;; URL              : https://github.com/wkirschbaum/elixir-ts-mode
 ;; Package-Requires : ((emacs "29"))
 ;; Created          : November 2022
@@ -52,7 +52,7 @@
   :safe 'integerp
   :group 'heex-ts)
 
-(defconst heex-ts-sexp-regexp
+(defconst heex-ts--sexp-regexp
   (rx bol
       (or "directive" "tag" "component" "slot"
           "attribute" "attribute_value" "quoted_attribute_value")
@@ -73,8 +73,7 @@
             (save-excursion
               (goto-char (treesit-node-start parent))
               (back-to-indentation)
-              (point))
-            )) 0)
+              (point)))) 0)
        ((node-is "end_tag") parent-bol 0)
        ((node-is "end_component") parent-bol 0)
        ((node-is "end_slot") parent-bol 0)
@@ -138,7 +137,7 @@ With ARG, do it many times.  Negative ARG means move backward."
   (or arg (setq arg 1))
   (funcall
    (if (> arg 0) #'treesit-end-of-thing #'treesit-beginning-of-thing)
-   heex-ts-sexp-regexp
+   heex-ts--sexp-regexp
    (abs arg)))
 
 (defvar heex-ts-mode-default-grammar-sources
@@ -202,10 +201,7 @@ With ARG, do it many times.  Negative ARG means move backward."
     (treesit-major-mode-setup)))
 
 ;;;###autoload
-(if (treesit-ready-p 'heex)
-    ;; Both .heex and the deprecated .leex files should work
-    ;; with the tree-sitter-heex grammar.
-    (add-to-list 'auto-mode-alist '("\\.[hl]?eex\\'" . heex-ts-mode)))
+(add-to-list 'auto-mode-alist '("\\.[hl]?eex\\'" . heex-ts-mode))
 
 (provide 'heex-ts-mode)
 ;;; heex-ts-mode.el ends here

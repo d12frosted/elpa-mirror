@@ -4,8 +4,8 @@
 
 ;; Author           : Wilhelm H Kirschbaum
 ;; Version          : 1.2
-;; Package-Version: 20230313.2022
-;; Package-Commit: af3c24566d25c191ca08dd6c0e02180998ad6926
+;; Package-Version: 20230316.607
+;; Package-Commit: 0711ec6d2ab803cfe20433e850b7652004e0a34a
 ;; URL              : https://github.com/wkirschbaum/elixir-ts-mode
 ;; Package-Requires : ((emacs "29") (heex-ts-mode "1.2"))
 ;; Created          : November 2022
@@ -43,6 +43,7 @@
 ;;; Code:
 
 (require 'treesit)
+(require 'heex-ts-mode)
 (eval-when-compile (require 'rx))
 
 (declare-function treesit-parser-create "treesit.c")
@@ -86,7 +87,7 @@
 (defconst elixir-ts--sexp-regexp
   (rx bol
       (or "call" "stab_clause" "binary_operator" "list" "tuple" "map" "pair"
-          "sigil" "string" "atom" "pair" "alias" "arguments" "atom" "identifier"
+          "sigil" "string" "atom" "alias" "arguments" "identifier"
           "boolean" "quoted_content")
       eol))
 
@@ -488,10 +489,6 @@
      :host 'elixir
      '((sigil (sigil_name) @name (:match "^[HF]$" @name) (quoted_content) @heex)))))
 
-(defvar heex-ts--sexp-regexp)
-(defvar heex-ts--indent-rules)
-(defvar heex-ts--font-lock-settings)
-
 (defun elixir-ts--forward-sexp (&optional arg)
   "Move forward across one balanced expression (sexp).
 With ARG, do it many times.  Negative ARG means move backward."
@@ -610,7 +607,6 @@ Return nil if NODE is not a defun node or doesn't have a name."
       ;; Require heex-ts-mode only when we load elixir-ts-mode
       ;; so that we don't get a tree-sitter compilation warning for
       ;; elixir-ts-mode.
-      (require 'heex-ts-mode)
       (treesit-parser-create 'heex))
 
     (treesit-parser-create 'elixir)
@@ -667,12 +663,11 @@ Return nil if NODE is not a defun node or doesn't have a name."
     (treesit-major-mode-setup)))
 
 ;;;###autoload
-(if (treesit-ready-p 'elixir)
-    (progn
+(progn
       (add-to-list 'auto-mode-alist '("\\.elixir\\'" . elixir-ts-mode))
       (add-to-list 'auto-mode-alist '("\\.ex\\'" . elixir-ts-mode))
       (add-to-list 'auto-mode-alist '("\\.exs\\'" . elixir-ts-mode))
-      (add-to-list 'auto-mode-alist '("mix\\.lock" . elixir-ts-mode))))
+      (add-to-list 'auto-mode-alist '("mix\\.lock" . elixir-ts-mode)))
 
 (provide 'elixir-ts-mode)
 ;;; elixir-ts-mode.el ends here
