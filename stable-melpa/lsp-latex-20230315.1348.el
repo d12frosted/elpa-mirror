@@ -4,10 +4,10 @@
 
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: languages, tex
-;; Package-Version: 20230228.1711
-;; Package-Commit: 9200ad19c416b3945d62683dd606917d8a1b3fee
+;; Package-Version: 20230315.1348
+;; Package-Commit: 52cfd05256bba103028521fbbb937cf164a10387
 
-;; Version: 3.2.0
+;; Version: 3.3.0
 
 ;; Package-Requires: ((emacs "26.3") (lsp-mode "6.0"))
 ;; URL: https://github.com/ROCKTAKEY/lsp-latex
@@ -130,26 +130,29 @@
 
 ;;   These variables are connected to texlab configuration variables.  See
 ;;   also texlab [documentation].
-;;    Custom variable in Emacs                  Configuration provided by texlab
-;;   -------------------------------------------------------------------------------
-;;    lsp-latex-root-directory                  texlab.rootDirectory
-;;    lsp-latex-build-executable                texlab.build.executable
-;;    lsp-latex-build-args                      texlab.build.args
-;;    lsp-latex-build-aux-directory             texlab.build.outputDirectory
-;;    lsp-latex-build-forward-search-after      texlab.build.forwardSearchAfter
-;;    lsp-latex-build-on-save                   texlab.build.onSave
-;;    lsp-latex-forward-search-executable       texlab.forwardSearch.executable
-;;    lsp-latex-forward-search-args             texlab.forwardSearch.args
-;;    lsp-latex-chktex-on-edit                  texlab.chktex.onEdit
-;;    lsp-latex-chktex-on-open-and-save         texlab.chktex.onOpenAndSave
-;;    lsp-latex-diagnostics-delay               texlab.diagnosticsDelay
-;;    lsp-latex-diagnostics-allowed-patterns    texlab.diagnostics.allowedPatterns
-;;    lsp-latex-diagnostics-ignored-patterns    texlab.diagnostics.ignoredPatterns
-;;    lsp-latex-bibtex-formatter-line-length    texlab.formatterLineLength
-;;    lsp-latex-bibtex-formatter                texlab.bibtexFormatter
-;;    lsp-latex-latex-formatter                 texlab.latexFormatter
-;;    lsp-latex-latexindent-local               texlab.latexindent.local
-;;    lsp-latex-latexindent-modify-line-breaks  texlab.latexindent.modifyLineBreaks
+;;    Custom variable in Emacs                      Configuration provided by texlab
+;;   ----------------------------------------------------------------------------------------
+;;    lsp-latex-root-directory                      texlab.rootDirectory
+;;    lsp-latex-build-executable                    texlab.build.executable
+;;    lsp-latex-build-args                          texlab.build.args
+;;    lsp-latex-build-aux-directory                 texlab.build.outputDirectory
+;;    lsp-latex-build-forward-search-after          texlab.build.forwardSearchAfter
+;;    lsp-latex-build-on-save                       texlab.build.onSave
+;;    lsp-latex-forward-search-executable           texlab.forwardSearch.executable
+;;    lsp-latex-forward-search-args                 texlab.forwardSearch.args
+;;    lsp-latex-chktex-on-edit                      texlab.chktex.onEdit
+;;    lsp-latex-chktex-on-open-and-save             texlab.chktex.onOpenAndSave
+;;    lsp-latex-diagnostics-delay                   texlab.diagnosticsDelay
+;;    lsp-latex-diagnostics-allowed-patterns        texlab.diagnostics.allowedPatterns
+;;    lsp-latex-diagnostics-ignored-patterns        texlab.diagnostics.ignoredPatterns
+;;    lsp-latex-bibtex-formatter-line-length        texlab.formatterLineLength
+;;    lsp-latex-bibtex-formatter                    texlab.bibtexFormatter
+;;    lsp-latex-latex-formatter                     texlab.latexFormatter
+;;    lsp-latex-latexindent-local                   texlab.latexindent.local
+;;    lsp-latex-latexindent-modify-line-breaks      texlab.latexindent.modifyLineBreaks
+;;    lsp-latex-experimental-math-environments      texlab.experimental.mathEnvironments
+;;    lsp-latex-experimental-enum-environments      texlab.experimental.enumEnvironments
+;;    lsp-latex-experimental-verbatim-environments  texlab.experimental.verbatimEnvironments
 
 
 ;; [documentation]
@@ -707,6 +710,28 @@ The root directory is used by default."
   :type 'boolean
   :version "2.0.0")
 
+(defcustom lsp-latex-experimental-math-environments '()
+  "List of environment name regarded as math environment, such as \"align\"."
+  :group 'lsp-latex
+  :type '(repeat string)
+  :version "3.3.0")
+
+(defcustom lsp-latex-experimental-enum-environments '()
+  "List of environment name regarded as enumelation environment.
+For example, \"itemize\" or \"enumerate\" meet the condition."
+  :group 'lsp-latex
+  :type '(repeat string)
+  :version "3.3.0")
+
+(defcustom lsp-latex-experimental-verbatim-environments '()
+  "List of environment name regarded as verbatim environment.
+This suppresses warnings in the environment where the code is not
+written in LaTeX.
+For example, \"lstlisting\" is meet the condition."
+  :group 'lsp-latex
+  :type '(repeat string)
+  :version "3.3.0")
+
 (defun lsp-latex--getter-vectorize-list (symbol)
   "Make list in SYMBOL into vector.
 This function is thoughted to be used with `apply-partially'.
@@ -742,7 +767,10 @@ should be vector."
      ("texlab.bibtexFormatter" lsp-latex-bibtex-formatter)
      ("texlab.latexFormatter" lsp-latex-latex-formatter)
      ("texlab.latexindent.local" lsp-latex-latexindent-local)
-     ("texlab.latexindent.modifyLineBreaks" lsp-latex-latexindent-modify-line-breaks))))
+     ("texlab.latexindent.modifyLineBreaks" lsp-latex-latexindent-modify-line-breaks)
+     ("texlab.experimental.mathEnvironments" lsp-latex-experimental-math-environments)
+     ("texlab.experimental.enumEnvironments"lsp-latex-experimental-enum-environments)
+     ("texlab.experimental.verbatimEnvironments" lsp-latex-experimental-verbatim-environments))))
 
 (lsp-latex-setup-variables)
 

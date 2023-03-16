@@ -101,26 +101,29 @@ _________________
 
   These variables are connected to texlab configuration variables.  See
   also texlab [documentation].
-   Custom variable in Emacs                  Configuration provided by texlab
-  -------------------------------------------------------------------------------
-   lsp-latex-root-directory                  texlab.rootDirectory
-   lsp-latex-build-executable                texlab.build.executable
-   lsp-latex-build-args                      texlab.build.args
-   lsp-latex-build-aux-directory             texlab.build.outputDirectory
-   lsp-latex-build-forward-search-after      texlab.build.forwardSearchAfter
-   lsp-latex-build-on-save                   texlab.build.onSave
-   lsp-latex-forward-search-executable       texlab.forwardSearch.executable
-   lsp-latex-forward-search-args             texlab.forwardSearch.args
-   lsp-latex-chktex-on-edit                  texlab.chktex.onEdit
-   lsp-latex-chktex-on-open-and-save         texlab.chktex.onOpenAndSave
-   lsp-latex-diagnostics-delay               texlab.diagnosticsDelay
-   lsp-latex-diagnostics-allowed-patterns    texlab.diagnostics.allowedPatterns
-   lsp-latex-diagnostics-ignored-patterns    texlab.diagnostics.ignoredPatterns
-   lsp-latex-bibtex-formatter-line-length    texlab.formatterLineLength
-   lsp-latex-bibtex-formatter                texlab.bibtexFormatter
-   lsp-latex-latex-formatter                 texlab.latexFormatter
-   lsp-latex-latexindent-local               texlab.latexindent.local
-   lsp-latex-latexindent-modify-line-breaks  texlab.latexindent.modifyLineBreaks
+   Custom variable in Emacs                      Configuration provided by texlab
+  ----------------------------------------------------------------------------------------
+   lsp-latex-root-directory                      texlab.rootDirectory
+   lsp-latex-build-executable                    texlab.build.executable
+   lsp-latex-build-args                          texlab.build.args
+   lsp-latex-build-aux-directory                 texlab.build.outputDirectory
+   lsp-latex-build-forward-search-after          texlab.build.forwardSearchAfter
+   lsp-latex-build-on-save                       texlab.build.onSave
+   lsp-latex-forward-search-executable           texlab.forwardSearch.executable
+   lsp-latex-forward-search-args                 texlab.forwardSearch.args
+   lsp-latex-chktex-on-edit                      texlab.chktex.onEdit
+   lsp-latex-chktex-on-open-and-save             texlab.chktex.onOpenAndSave
+   lsp-latex-diagnostics-delay                   texlab.diagnosticsDelay
+   lsp-latex-diagnostics-allowed-patterns        texlab.diagnostics.allowedPatterns
+   lsp-latex-diagnostics-ignored-patterns        texlab.diagnostics.ignoredPatterns
+   lsp-latex-bibtex-formatter-line-length        texlab.formatterLineLength
+   lsp-latex-bibtex-formatter                    texlab.bibtexFormatter
+   lsp-latex-latex-formatter                     texlab.latexFormatter
+   lsp-latex-latexindent-local                   texlab.latexindent.local
+   lsp-latex-latexindent-modify-line-breaks      texlab.latexindent.modifyLineBreaks
+   lsp-latex-experimental-math-environments      texlab.experimental.mathEnvironments
+   lsp-latex-experimental-enum-environments      texlab.experimental.enumEnvironments
+   lsp-latex-experimental-verbatim-environments  texlab.experimental.verbatimEnvironments
 
 
 [documentation]

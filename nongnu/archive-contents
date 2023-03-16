@@ -1855,6 +1855,17 @@
 	     (:authors
 	      ("Campbell Barton" . "ideasman42@gmail.com"))
 	     (:commit . "ddad489f2c87467480520502a93e682f81bfac18"))])
+ (sqlite3 .
+	  [(0 17)
+	   ((emacs
+	     (25 1)))
+	   "Direct access to the core SQLite3 API" tar
+	   ((:url . "https://github.com/pekingduck/emacs-sqlite3-api")
+	    (:keywords "comm" "data" "sql")
+	    (:maintainer "Y. N. Lo" . "elisp@fastmail.com")
+	    (:authors
+	     ("Y. N. Lo" . "elisp@fastmail.com"))
+	    (:commit . "b513b71012f61895f771fc6948d6511ea8ded0a6"))])
  (stylus-mode .
 	      [(1 0 1)
 	       nil "Major mode for editing .styl files" tar
@@ -2254,12 +2265,13 @@
 			("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
 		       (:keywords "snippets"))])
  (zenburn-theme .
-		[(2 7 0)
+		[(2 8 0)
 		 nil "A low contrast color theme for Emacs." tar
 		 ((:url . "http://github.com/bbatsov/zenburn-emacs")
 		  (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
 		  (:authors
-		   ("Bozhidar Batsov" . "bozhidar@batsov.com")))])
+		   ("Bozhidar Batsov" . "bozhidar@batsov.com"))
+		  (:commit . "8a1f9d28f503615e5d9b3eac59a2f3c14e75fc20"))])
  (zig-mode .
 	   [(0 0 8)
 	    ((emacs

@@ -20,7 +20,7 @@ MELPA](http://melpa.org/#/pulseaudio-control), or put
 ## Usage
 
 Initially, the `pulseaudio-control' keymap is not bound to any
-prefix. You can call the command
+prefix.  You can call the command
 `pulseaudio-control-default-keybindings' to use the prefix `C-x /'
 to access the `pulseaudio-control' keymap globally; if you wish to
 use this prefix by default, add the line:
