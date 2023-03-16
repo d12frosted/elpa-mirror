@@ -7,7 +7,7 @@
 
 This is intended to allow for development and programming queries into the
 OpenAI API.  This allows for sending queries straight from Emacs directly into
-various models of OpenAI's platform. It is a barebones implementation of a
+various models of OpenAI's platform.  It is a barebones implementation of a
     wrapper around the API focused on achieving extensibility.
 
 Configurations that are required are listed as follows:

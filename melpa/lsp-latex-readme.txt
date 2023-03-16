@@ -9,7 +9,11 @@ _________________
 .. 3. Others, provided by texlab server
 4. Build
 .. 1. `lsp-latex-build'
-5. Forward/inverse search
+5. Workspace commands
+.. 1. `lsp-latex-clean-auxiliary'
+.. 2. `lsp-latex-clean-artifacts'
+.. 3. `lsp-latex-change-environment'
+6. Forward/inverse search
 .. 1. Forward search
 .. 2. Inverse search
 .. 3. Examples
@@ -20,7 +24,7 @@ _________________
 ..... 5. qpdfview
 ..... 6. Skim
 ..... 7. `pdf-tools' integration
-6. License
+7. License
 
 
 [https://img.shields.io/github/tag/ROCKTAKEY/lsp-latex.svg?style=flat-square]
@@ -145,7 +149,37 @@ _________________
   synchronously with prefix argument(C-u).
 
 
-5 Forward/inverse search
+5 Workspace commands
+====================
+
+  See also [texlab official wiki].
+
+
+[texlab official wiki]
+<https://github.com/latex-lsp/texlab/wiki/Workspace-commands>
+
+5.1 `lsp-latex-clean-auxiliary'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  This command removes LaTeX auxiliary files.  It will run \"latexmk
+  -c\" in the project.
+
+
+5.2 `lsp-latex-clean-artifacts'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  This command removes LaTeX auxiliary files and artifacts It will run
+  \"latexmk -C\" in the project..
+
+
+5.3 `lsp-latex-change-environment'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  This command replaces enviroment name to NEW-NAME in current position.
+  This edits most-inner environment containing the current position.
+
+
+6 Forward/inverse search
 ========================
 
   Forward search and inverse search are available.  See also [document of
@@ -155,7 +189,7 @@ _________________
 [document of texlab]
 <https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md>
 
-5.1 Forward search
+6.1 Forward search
 ~~~~~~~~~~~~~~~~~~
 
   You can move from Emacs to current position on pdf viewer by the
@@ -219,7 +253,7 @@ _________________
 <https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md#forward-search>
 
 
-5.2 Inverse search
+6.2 Inverse search
 ~~~~~~~~~~~~~~~~~~
 
   You can go to the current position on Emacs from pdf viewer.  Whatever
@@ -251,7 +285,7 @@ _________________
 <https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md#inverse-search>
 
 
-5.3 Examples
+6.3 Examples
 ~~~~~~~~~~~~
 
   These examples are according to [document of texlab].  Especially,
@@ -262,7 +296,7 @@ _________________
 [document of texlab]
 <https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md#inverse-search>
 
-5.3.1 SumatraPDF
+6.3.1 SumatraPDF
 ----------------
 
         We highly recommend SumatraPDF on Windows because Adobe
@@ -270,7 +304,7 @@ _________________
         prevent further builds.
 
 
-* 5.3.1.1 Forward search
+* 6.3.1.1 Forward search
 
   Write to init.el:
   ,----
@@ -279,7 +313,7 @@ _________________
   `----
 
 
-* 5.3.1.2 Inverse Search
+* 6.3.1.2 Inverse Search
 
         Add the following line to your [SumatraPDF] settings file
         (Menu -> Settings -> Advanced Options):
@@ -293,7 +327,7 @@ _________________
   [SumatraPDF] <https://www.sumatrapdfreader.org/>
 
 
-5.3.2 Evince
+6.3.2 Evince
 ------------
 
         The SyncTeX feature of [Evince] requires communication via
@@ -305,7 +339,7 @@ _________________
 
 [evince-synctex] <https://github.com/latex-lsp/evince-synctex>
 
-* 5.3.2.1 Forward search
+* 6.3.2.1 Forward search
 
   Write to init.el:
   ,----
@@ -314,17 +348,17 @@ _________________
   `----
 
 
-* 5.3.2.2 Inverse search
+* 6.3.2.2 Inverse search
 
         The inverse search feature is already configured if you
         use `evince-synctex'.  You can execute the search by
         pressing `Ctrl+Click' in the PDF document.
 
 
-5.3.3 Okular
+6.3.3 Okular
 ------------
 
-* 5.3.3.1 Forward search
+* 6.3.3.1 Forward search
 
   Write to init.el:
   ,----
@@ -333,7 +367,7 @@ _________________
   `----
 
 
-* 5.3.3.2 Inverse search
+* 6.3.3.2 Inverse search
 
         Change the editor of Okular (Settings -> Configure
         Okular... -> Editor) to "Custom Text Editor" and set the
@@ -345,10 +379,10 @@ _________________
   document.
 
 
-5.3.4 Zathura
+6.3.4 Zathura
 -------------
 
-* 5.3.4.1 Forward search
+* 6.3.4.1 Forward search
 
   Write to init.el:
   ,----
@@ -357,7 +391,7 @@ _________________
   `----
 
 
-* 5.3.4.2 Inverse search
+* 6.3.4.2 Inverse search
 
         Add the following lines to your
         `~/.config/zathura/zathurarc' file:
@@ -369,10 +403,10 @@ _________________
         PDF document.
 
 
-5.3.5 qpdfview
+6.3.5 qpdfview
 --------------
 
-* 5.3.5.1 Forward search
+* 6.3.5.1 Forward search
 
   Write to init.el:
   ,----
@@ -381,7 +415,7 @@ _________________
   `----
 
 
-* 5.3.5.2 Inverse search
+* 6.3.5.2 Inverse search
 
         Change the source editor setting (Edit -> Settings... ->
         Behavior -> Source editor) to:
@@ -394,7 +428,7 @@ _________________
         pressing Modifier+Click in the PDF document.
 
 
-5.3.6 Skim
+6.3.6 Skim
 ----------
 
         We recommend [Skim] on macOS since it is the only native
@@ -405,7 +439,7 @@ _________________
 
 [Skim] <https://skim-app.sourceforge.io/>
 
-* 5.3.6.1 Forward search
+* 6.3.6.1 Forward search
 
   Write to init.el:
   ,----
@@ -417,14 +451,14 @@ _________________
   `lsp-latex-forward-search-args'.
 
 
-* 5.3.6.2 Inverse search
+* 6.3.6.2 Inverse search
 
   Select Emacs preset "in the Skim preferences (Skim -> Preferences ->
   Sync -> PDF-TeX Sync support).  You can execute the search by pressing
   `Shift+⌘+Click' in the PDF document."
 
 
-5.3.7 `pdf-tools' integration
+6.3.7 `pdf-tools' integration
 -----------------------------
 
   If you want to use forward search with `pdf-tools', follow the
@@ -448,7 +482,7 @@ _________________
   `pdf-sync-backward-search-mouse'.
 
 
-6 License
+7 License
 =========
 
   This package is licensed by GPLv3. See [LICENSE].

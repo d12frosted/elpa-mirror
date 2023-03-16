@@ -2,14 +2,14 @@
 
 ;; Copyright (C) 2017-2022  Alexis <flexibeast@gmail.com>, Ellington Santos <ellingtonsantos@gmail.com>, Sergey Trofimov <sarg@sarg.org.ru>, efimerspan [https://github.com/efimerspan]
 
-;; Author: Alexis <flexibeast@gmail.com>, Ellington Santos <ellingtonsantos@gmail.com>, Sergey Trofimov <sarg@sarg.org.ru>, efimerspan [https://github.com/efimerspan]
+;; Author: Alexis <flexibeast@gmail.com>, Ellington Santos <ellingtonsantos@gmail.com>, Sergey Trofimov <sarg@sarg.org.ru>, conses <contact@conses.eu>
 ;; Maintainer: Alexis <flexibeast@gmail.com>
 ;; Created: 2017-08-23
-;; URL: https://github.com/flexibeast/pulseaudio-control
-;; Package-Commit: 814a01db2642a223a1b590c602001735d5bd9032
+;; URL: https://git.sr.ht/~flexibeast/pulseaudio-control
+;; Package-Commit: e917e84661b0e2496b295f1bbfba6ad32a656527
 ;; Keywords: multimedia, hardware, sound, PulseAudio
 ;; Version: 0.1
-;; Package-Version: 20230315.1538
+;; Package-Version: 20230316.1819
 ;; Package-X-Original-Version: 0.1
 
 ;;
@@ -31,9 +31,6 @@
 ;;
 
 ;;; Commentary:
-
-;; *This project needs a new maintainer. If you wish to take
-;; maintainership, please email Alexis.*
 
 ;; `pulseaudio-control' controls PulseAudio volumes from Emacs, via `pactl`.
 

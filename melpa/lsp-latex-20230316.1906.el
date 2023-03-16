@@ -1,13 +1,13 @@
 ;;; lsp-latex.el --- LSP-mode client for LaTeX, on texlab     -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2021  ROCKTAKEY
+;; Copyright (C) 2019-2023  ROCKTAKEY
 
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: languages, tex
-;; Package-Version: 20230315.1348
-;; Package-Commit: 52cfd05256bba103028521fbbb937cf164a10387
+;; Package-Version: 20230316.1906
+;; Package-Commit: 4f3d7166aeda16099d226066928d89bb44849624
 
-;; Version: 3.3.0
+;; Version: 3.4.1
 
 ;; Package-Requires: ((emacs "26.3") (lsp-mode "6.0"))
 ;; URL: https://github.com/ROCKTAKEY/lsp-latex
@@ -38,7 +38,11 @@
 ;; .. 3. Others, provided by texlab server
 ;; 4. Build
 ;; .. 1. `lsp-latex-build'
-;; 5. Forward/inverse search
+;; 5. Workspace commands
+;; .. 1. `lsp-latex-clean-auxiliary'
+;; .. 2. `lsp-latex-clean-artifacts'
+;; .. 3. `lsp-latex-change-environment'
+;; 6. Forward/inverse search
 ;; .. 1. Forward search
 ;; .. 2. Inverse search
 ;; .. 3. Examples
@@ -49,7 +53,7 @@
 ;; ..... 5. qpdfview
 ;; ..... 6. Skim
 ;; ..... 7. `pdf-tools' integration
-;; 6. License
+;; 7. License
 
 
 ;; [https://img.shields.io/github/tag/ROCKTAKEY/lsp-latex.svg?style=flat-square]
@@ -174,7 +178,37 @@
 ;;   synchronously with prefix argument(C-u).
 
 
-;; 5 Forward/inverse search
+;; 5 Workspace commands
+;; ====================
+
+;;   See also [texlab official wiki].
+
+
+;; [texlab official wiki]
+;; <https://github.com/latex-lsp/texlab/wiki/Workspace-commands>
+
+;; 5.1 `lsp-latex-clean-auxiliary'
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;   This command removes LaTeX auxiliary files.  It will run \"latexmk
+;;   -c\" in the project.
+
+
+;; 5.2 `lsp-latex-clean-artifacts'
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;   This command removes LaTeX auxiliary files and artifacts It will run
+;;   \"latexmk -C\" in the project..
+
+
+;; 5.3 `lsp-latex-change-environment'
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;   This command replaces enviroment name to NEW-NAME in current position.
+;;   This edits most-inner environment containing the current position.
+
+
+;; 6 Forward/inverse search
 ;; ========================
 
 ;;   Forward search and inverse search are available.  See also [document of
@@ -184,7 +218,7 @@
 ;; [document of texlab]
 ;; <https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md>
 
-;; 5.1 Forward search
+;; 6.1 Forward search
 ;; ~~~~~~~~~~~~~~~~~~
 
 ;;   You can move from Emacs to current position on pdf viewer by the
@@ -248,7 +282,7 @@
 ;; <https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md#forward-search>
 
 
-;; 5.2 Inverse search
+;; 6.2 Inverse search
 ;; ~~~~~~~~~~~~~~~~~~
 
 ;;   You can go to the current position on Emacs from pdf viewer.  Whatever
@@ -280,7 +314,7 @@
 ;; <https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md#inverse-search>
 
 
-;; 5.3 Examples
+;; 6.3 Examples
 ;; ~~~~~~~~~~~~
 
 ;;   These examples are according to [document of texlab].  Especially,
@@ -291,7 +325,7 @@
 ;; [document of texlab]
 ;; <https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md#inverse-search>
 
-;; 5.3.1 SumatraPDF
+;; 6.3.1 SumatraPDF
 ;; ----------------
 
 ;;         We highly recommend SumatraPDF on Windows because Adobe
@@ -299,7 +333,7 @@
 ;;         prevent further builds.
 
 
-;; * 5.3.1.1 Forward search
+;; * 6.3.1.1 Forward search
 
 ;;   Write to init.el:
 ;;   ,----
@@ -308,7 +342,7 @@
 ;;   `----
 
 
-;; * 5.3.1.2 Inverse Search
+;; * 6.3.1.2 Inverse Search
 
 ;;         Add the following line to your [SumatraPDF] settings file
 ;;         (Menu -> Settings -> Advanced Options):
@@ -322,7 +356,7 @@
 ;;   [SumatraPDF] <https://www.sumatrapdfreader.org/>
 
 
-;; 5.3.2 Evince
+;; 6.3.2 Evince
 ;; ------------
 
 ;;         The SyncTeX feature of [Evince] requires communication via
@@ -334,7 +368,7 @@
 
 ;; [evince-synctex] <https://github.com/latex-lsp/evince-synctex>
 
-;; * 5.3.2.1 Forward search
+;; * 6.3.2.1 Forward search
 
 ;;   Write to init.el:
 ;;   ,----
@@ -343,17 +377,17 @@
 ;;   `----
 
 
-;; * 5.3.2.2 Inverse search
+;; * 6.3.2.2 Inverse search
 
 ;;         The inverse search feature is already configured if you
 ;;         use `evince-synctex'.  You can execute the search by
 ;;         pressing `Ctrl+Click' in the PDF document.
 
 
-;; 5.3.3 Okular
+;; 6.3.3 Okular
 ;; ------------
 
-;; * 5.3.3.1 Forward search
+;; * 6.3.3.1 Forward search
 
 ;;   Write to init.el:
 ;;   ,----
@@ -362,7 +396,7 @@
 ;;   `----
 
 
-;; * 5.3.3.2 Inverse search
+;; * 6.3.3.2 Inverse search
 
 ;;         Change the editor of Okular (Settings -> Configure
 ;;         Okular... -> Editor) to "Custom Text Editor" and set the
@@ -374,10 +408,10 @@
 ;;   document.
 
 
-;; 5.3.4 Zathura
+;; 6.3.4 Zathura
 ;; -------------
 
-;; * 5.3.4.1 Forward search
+;; * 6.3.4.1 Forward search
 
 ;;   Write to init.el:
 ;;   ,----
@@ -386,7 +420,7 @@
 ;;   `----
 
 
-;; * 5.3.4.2 Inverse search
+;; * 6.3.4.2 Inverse search
 
 ;;         Add the following lines to your
 ;;         `~/.config/zathura/zathurarc' file:
@@ -398,10 +432,10 @@
 ;;         PDF document.
 
 
-;; 5.3.5 qpdfview
+;; 6.3.5 qpdfview
 ;; --------------
 
-;; * 5.3.5.1 Forward search
+;; * 6.3.5.1 Forward search
 
 ;;   Write to init.el:
 ;;   ,----
@@ -410,7 +444,7 @@
 ;;   `----
 
 
-;; * 5.3.5.2 Inverse search
+;; * 6.3.5.2 Inverse search
 
 ;;         Change the source editor setting (Edit -> Settings... ->
 ;;         Behavior -> Source editor) to:
@@ -423,7 +457,7 @@
 ;;         pressing Modifier+Click in the PDF document.
 
 
-;; 5.3.6 Skim
+;; 6.3.6 Skim
 ;; ----------
 
 ;;         We recommend [Skim] on macOS since it is the only native
@@ -434,7 +468,7 @@
 
 ;; [Skim] <https://skim-app.sourceforge.io/>
 
-;; * 5.3.6.1 Forward search
+;; * 6.3.6.1 Forward search
 
 ;;   Write to init.el:
 ;;   ,----
@@ -446,14 +480,14 @@
 ;;   `lsp-latex-forward-search-args'.
 
 
-;; * 5.3.6.2 Inverse search
+;; * 6.3.6.2 Inverse search
 
 ;;   Select Emacs preset "in the Skim preferences (Skim -> Preferences ->
 ;;   Sync -> PDF-TeX Sync support).  You can execute the search by pressing
 ;;   `Shift+⌘+Click' in the PDF document."
 
 
-;; 5.3.7 `pdf-tools' integration
+;; 6.3.7 `pdf-tools' integration
 ;; -----------------------------
 
 ;;   If you want to use forward search with `pdf-tools', follow the
@@ -477,7 +511,7 @@
 ;;   `pdf-sync-backward-search-mouse'.
 
 
-;; 6 License
+;; 7 License
 ;; =========
 
 ;;   This package is licensed by GPLv3. See [LICENSE].
@@ -824,9 +858,9 @@ PARAMS progress report notification data."
   (message
    (cl-case (gethash "status" result)
      ((0)                             ;Success
-      "Build was succeeded.")
+      "Build succeeded.")
      ((1)                             ;Error
-      "Build do not succeeded.")
+      "Build error.")
      ((2)                             ;Failure
       "Build failed.")
      ((3)                             ;Cancelled
@@ -915,6 +949,67 @@ This function is partially copied from
    "textDocument/forwardSearch"
    (lsp--text-document-position-params)
    #'lsp-latex--message-forward-search))
+
+
+;;; Workspace commands
+
+(defun lsp-latex-clean-auxiliary (text-document-identifier)
+  "Remove LaTeX auxiliary files.
+Auxiliary files in project specified by TEXT-DOCUMENT-IDENTIFIER is removed.
+It will run \"latexmk -c\" in the project.
+
+When called interactively, TEXT-DOCUMENT-IDENTIFIER is provided by
+`lsp-text-document-identifier'."
+  (interactive
+   (list (lsp-text-document-identifier)))
+  (lsp-workspace-command-execute "texlab.cleanAuxiliary"
+                                 (vector text-document-identifier)))
+
+(defun lsp-latex-clean-artifacts (text-document-identifier)
+  "Remove LaTeX auxiliary files and artifacts.
+Removed files are in project specified by TEXT-DOCUMENT-IDENTIFIER.
+It will run \"latexmk -C\" in the project.
+
+When called interactively, TEXT-DOCUMENT-IDENTIFIER is provided by
+`lsp-text-document-identifier'."
+  (interactive
+   (list (lsp-text-document-identifier)))
+  (lsp-workspace-command-execute "texlab.cleanArtifacts"
+                                 (vector text-document-identifier)))
+
+(defun lsp-latex-change-environment (text-document-identifier
+                                     point
+                                     new-name)
+  "Change environment name to NEW-NAME in current position.
+This will change most-inner environment containing the POINT position
+the file specified by TEXT-DOCUMENT-IDENTIFIER."
+  (interactive
+   (list
+    (lsp-text-document-identifier)
+    (point)
+    (read-string "New environment name: ")))
+  (lsp-workspace-command-execute "texlab.changeEnvironment"
+                                 (vector
+                                  (list :textDocument text-document-identifier
+                                        :position (lsp-point-to-position point)
+                                        :newName new-name))))
+
+(declare-function graphviz-dot-mode "ext:graphviz-dot-mode")
+(defun lsp-latex-show-dependency-graph ()
+  "Show dependency graph written by DOT format.
+`graphviz-dot-mode' is needed if you needs syntax highlights
+or a graphical image."
+  (interactive)
+  (let ((dot-language-text (lsp-workspace-command-execute "texlab.showDependencyGraph"))
+        (buffer (get-buffer-create "*lsp-latex: Dependency Graph*")))
+    (with-current-buffer buffer
+      (read-only-mode -1)
+      (erase-buffer)
+      (insert dot-language-text)
+      (when (require 'graphviz-dot-mode nil t)
+        (graphviz-dot-mode))
+      (read-only-mode +1))
+    (pop-to-buffer buffer)))
 
 (provide 'lsp-latex)
 ;;; lsp-latex.el ends here

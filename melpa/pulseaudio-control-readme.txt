@@ -1,6 +1,3 @@
-*This project needs a new maintainer. If you wish to take
-maintainership, please email Alexis.*
-
 `pulseaudio-control' controls PulseAudio volumes from Emacs, via `pactl`.
 
 ## Table of Contents
