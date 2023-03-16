@@ -7,8 +7,8 @@
 ;; Created: 30 August 2022
 
 ;; Version: 1.0.7
-;; Package-Version: 20230204.212
-;; Package-Commit: c29f9c70787f75749a8f5af4b1a650eec5bbf689
+;; Package-Version: 20230316.202
+;; Package-Commit: 4d4f85707e6ba6dd1a58a4e771a9698b3964ba56
 ;; SPDX-License-Identifier:  GPL-3.0
 ;; Package-requires: ((emacs "27.1"))
 
@@ -24,7 +24,7 @@
 ;;
 ;;    - Impact_Label (https://www.fontsquirrel.com/fonts/download/impact-label)
 ;;    - texlive-fonts-extra
-;;    - texlive-sourcecodepro.
+;;    - texlive-sourcecodepro
 ;;    - fonts-purisa || thai-scalable-purisa-fonts
 ;;    - fonts-dancingscript
 ;;
@@ -67,7 +67,7 @@
  ;; ========================================
 
     `(default ((t (
-                   :family ,font-default
+                   :family ,font-mono
                    :width normal
                    :weight regular
                    :slant normal

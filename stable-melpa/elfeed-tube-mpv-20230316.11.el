@@ -4,8 +4,8 @@
 
 ;; Author: Karthik Chikmagalur <karthikchikmagalur@gmail.com>
 ;; version: 0.10
-;; Package-Version: 20220816.2223
-;; Package-Commit: 7e1409e41628d61d8197ca248d910182ae4fc520
+;; Package-Version: 20230316.11
+;; Package-Commit: 4d98e62911fd3cdf623dd09443ef6802c59719de
 ;; Keywords: news, hypermedia
 ;; Package-Requires: ((emacs "27.1") (elfeed-tube "0.10") (mpv "0.2.0"))
 ;; URL: https://github.com/karthink/elfeed-tube
@@ -112,6 +112,7 @@ C-mouse-1: open at %s (mpv, new instance)
          (when (overlayp elfeed-tube-mpv--overlay)
            (delete-overlay elfeed-tube-mpv--overlay))))
 
+;;;###autoload
 (defun elfeed-tube-mpv (pos &optional arg)
   "Start or seek an mpv session connected to an Elfeed entry.
 
@@ -275,6 +276,7 @@ This function is intended to be run on a timer when
       (pulse-momentary-highlight-one-line)))
    (t (message "Transcript location not found in buffer."))))
 
+;;;###autoload
 (define-minor-mode elfeed-tube-mpv-follow-mode
   "Follow along with mpv in elfeed-show buffers.
 

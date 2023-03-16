@@ -4,8 +4,8 @@
 
 ;; Author: Manuel Uberti <manuel.uberti@inventati.org>
 ;; URL: https://github.com/manuel-uberti/goto-last-point
-;; Package-Version: 20220816.153
-;; Package-Commit: 0a006c70719f479bc4e3ae75dd2fc84cbb15f049
+;; Package-Version: 20230316.220
+;; Package-Commit: 5663311fee7f2c7aa07c46675a78960afe157b9a
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: convenience
@@ -37,7 +37,7 @@
 (require 'ring)
 
 (defcustom goto-last-point-max-length
-  5
+  10
   "Maximum length of the undo stack."
   :group 'goto-last-point
   :type 'integer)
