@@ -4,8 +4,8 @@
 
 ;; Author: Nacho Barrientos <nacho.barrientos@cern.ch>
 ;; Keywords: tools, convenience
-;; Package-Version: 20221014.1151
-;; Package-Commit: 0d188a997f24caaa3da748ad6ca16eb55cecff27
+;; Package-Version: 20230316.1010
+;; Package-Commit: 4add5e1b9a713bba351922780cad84ff64fef6a5
 ;; URL: https://git.sr.ht/~nbarrientos/cern-ldap.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.0.1
@@ -48,7 +48,7 @@ to change the value of this variable."
   :group 'cern-ldap
   :type 'string)
 
-(defcustom cern-ldap-buffer-name-format "*CERN LDAP %t %l*"
+(defcustom cern-ldap-buffer-name-format "*CERN LDAP %t (%l)*"
   "Format for the buffer names that display results.
 
 %t represents the type of lookup, namely \"user\" or \"group\"
@@ -60,6 +60,14 @@ and %l the corresponding search string."
   "Hook run after the results buffer is prepared."
   :group 'cern-ldap
   :type 'hook)
+
+(defcustom cern-ldap-user-lookup-location-key "physicalDeliveryOfficeName"
+  "Field to search in when looking up user accounts by location.
+
+The value of this variable will be used as search field at the
+time of querying LDAP when calling `cern-ldap-user-by-location'"
+  :group 'cern-ldap
+  :type 'string)
 
 (defcustom cern-ldap-user-lookup-login-key "sAMAccountName"
   "Field to search in when looking up user accounts by login.
@@ -167,6 +175,17 @@ how the results are displayed/filtered using ARG."
   (cern-ldap--display-user
    arg
    (concat cern-ldap-user-lookup-login-key "=" login)))
+
+(defun cern-ldap-user-by-location (arg building floor room)
+  "Look-up user accounts with physical location BUILDING/FLOOR-ROOM in LDAP.
+
+See `cern-ldap-user-by-login-dwim' for instructions on how to
+control how the results are displayed/filtered using ARG."
+  (interactive "P\nnBuilding: \nnFloor: \nnRoom: ")
+  (let ((location (format "%d %d-%03d" building floor room)))
+    (cern-ldap--display-user
+     arg
+     (concat cern-ldap-user-lookup-location-key "=" location))))
 
 ;;;###autoload
 (defun cern-ldap-user-by-full-name (arg full-name)
@@ -285,7 +304,7 @@ automatically lookup information about that username."
   (let* ((buffer-n (format-spec
                     cern-ldap-buffer-name-format
                     `((?t . "user")
-                      (?l . ,(car (last (split-string filter "=")))))))
+                      (?l . ,filter))))
          (attributes (unless arg
                        cern-ldap-user-displayed-attributes))
          (data (cern-ldap--lookup-user filter attributes)))

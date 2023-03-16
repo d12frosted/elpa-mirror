@@ -5,8 +5,8 @@
 ;; Author: Matúš Goljer <matus.goljer@gmail.com>
 ;; Maintainer: Matúš Goljer <matus.goljer@gmail.com>
 ;; Version: 0.0.1
-;; Package-Version: 20230306.1027
-;; Package-Commit: 0b2c7a1a232438267c908b60fabd85c3fa33dc8f
+;; Package-Version: 20230316.901
+;; Package-Commit: 10f636d45c94cdc0a724ebb9d5b62a16401c1a74
 ;; Created: 14th February 2014
 ;; URL: https://github.com/Fuco1/dired-hacks
 ;; Package-Requires: ((dash "2.10.0") (emacs "24.3") (dired-hacks-utils "0.0.1"))
@@ -262,10 +262,11 @@ Display results as a `dired' buffer."
 (defun dired-list-locate (needle)
   "Locate(1) all files matching NEEDLE and display results as a `dired' buffer."
   (interactive "sLocate: ")
-  (dired-list "/"
-              (concat "locate " needle)
-              (concat "locate " (shell-quote-argument needle) " -0 | xargs -I '{}' -0 ls -ld '{}' &")
-              `(lambda (ignore-auto noconfirm) (dired-list-locate ,needle))))
+  (let ((locate (or (bound-and-true-p locate-command) "locate")))
+    (dired-list "/"
+                (concat locate " "  needle)
+                (concat locate " " (shell-quote-argument needle) " -0 | xargs -I '{}' -0 ls -ld '{}' &")
+                `(lambda (ignore-auto noconfirm) (dired-list-locate ,needle)))))
 
 (defun dired-list-git-annex-find (dir query)
   "Return files from git annex at DIR matching QUERY.
@@ -337,8 +338,8 @@ and files matching `grep-find-ignored-files' are ignored.
 If called with raw prefix argument \\[universal-argument], no
 files will be ignored."
   (interactive (let ((base-cmd (concat "find . "
-                                  (if current-prefix-arg "" (dired-list--get-ignored-stuff dir))
-                                  " -ls &")))
+                                       (if current-prefix-arg "" (dired-list--get-ignored-stuff dir))
+                                       " -ls &")))
                  (list (read-directory-name "Directory: " nil nil t)
                        (read-from-minibuffer
                         "Find command: "

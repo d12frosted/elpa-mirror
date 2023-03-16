@@ -4,8 +4,8 @@
 
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
 ;; Version: 0.4.0
-;; Package-Version: 20221007.1727
-;; Package-Commit: a8a369f77d798bf65f65271256980a498fa43564
+;; Package-Version: 20230316.856
+;; Package-Commit: 59c26d965b689fdc4bd3c11eb5783d11efe370be
 ;; Package-Requires: ((emacs "26.1"))
 ;; Url: https://visl.sdu.dk/constraint_grammar.html
 ;; Keywords: languages
@@ -232,7 +232,7 @@ Don't change without re-evaluating the file.")
 (put 'cg-indentation 'safe-local-variable 'integerp)
 
 (defconst cg-font-lock-keywords-1
-  (let ((<word>? "\\(?:\"<[^>]+>\"\\)?"))
+  (let ((<word>? "\\(?:\"<[^>]+>\"[irv]*\\)?"))
     `((,(format "^[ \t]*\\(%s\\)[ \t]+\\(\\(\\sw\\|\\s_\\)+\\)" cg-kw-set-re)
        (1 font-lock-keyword-face)
        (2 font-lock-variable-name-face))
@@ -1201,8 +1201,14 @@ Similarly, `cg-post-pipe' is run on output."
        (post-pipe (if (and cg-post-pipe (not (equal "" cg-post-pipe)))
                       (concat " | " cg-post-pipe)
                     ""))
+       ;; cg-proc doesn't expect the --grammar argument (a bit hacky,
+       ;; better would be to make cg-extra-args a function taking
+       ;; grammar path as string):
+       (grammar-arg (if (string-match-p ".*cg-proc$" cg-command)
+                        ""
+                      "--grammar"))
        (cmd (concat
-             cg-command " " cg-extra-args " --grammar " tmp
+             cg-command " " cg-extra-args " " grammar-arg " " tmp " "
              post-pipe))
        (in (cg--get-input-buffer file))
        (out (progn (write-region (point-min) (point-max) tmp)
