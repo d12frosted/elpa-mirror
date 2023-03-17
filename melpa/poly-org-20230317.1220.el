@@ -4,8 +4,8 @@
 ;; Maintainer: Vitalie Spinu
 ;; Copyright (C) 2013-2020 Vitalie Spinu
 ;; Version: 0.2.2
-;; Package-Version: 20220201.1514
-;; Package-Commit: 01fd0f4b7eaeabf070af831f4825993210f64f2e
+;; Package-Version: 20230317.1220
+;; Package-Commit: 5ca02279a4e6f5025cd2c7b1196058d3e74dc5d5
 ;; Package-Requires: ((emacs "25") (polymode "0.2.2"))
 ;; URL: https://github.com/polymode/poly-org
 ;; Keywords: languages, multi-modes
@@ -97,7 +97,7 @@ Used in :switch-buffer-functions slot."
 (define-polymode poly-org-mode
   :hostmode 'poly-org-hostmode
   :innermodes '(poly-org-innermode poly-org-latex-innermode)
-  (setq-local org-src-fontify-natively nil)
+  (setq-local org-src-fontify-natively t)
   (setq-local polymode-move-these-minor-modes-from-old-buffer
               (append '(org-indent-mode)
                       polymode-move-these-minor-modes-from-old-buffer))

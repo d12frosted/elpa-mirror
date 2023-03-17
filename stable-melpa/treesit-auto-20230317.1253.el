@@ -4,10 +4,10 @@
 
 ;; Author: Robb Enzmann <robbenzmann@gmail.com>
 ;; Keywords: treesitter auto automatic major mode fallback convenience
-;; Package-Version: 20230316.1229
-;; Package-Commit: 5e6f348d0d2502ceb92ad0e03eefcba2e8c4115b
+;; Package-Version: 20230317.1253
+;; Package-Commit: 556b1aa3d8c1e67cae3e648c64023612e44a9901
 ;; URL: https://github.com/renzmann/treesit-auto.git
-;; Version: 0.6.0
+;; Version: 0.6.1
 ;; Package-Requires: ((emacs "29.0"))
 
 ;; This file is not part of GNU Emacs.
@@ -84,10 +84,32 @@ automatic installation (or prompting, based on the value of
   :type '(repeat symbol)
   :group 'treesit)
 
+;;;###autoload
+(defun make-treesit-auto-recipe ())
+;;;###autoload
+(defun treesit-auto-recipe-lang ())
+;;;###autoload
+(defun treesit-auto-recipe-ts-mode ())
+;;;###autoload
+(defun treesit-auto-recipe-remap ())
+;;;###autoload
+(defun treesit-auto-recipe-requires ())
+;;;###autoload
+(defun treesit-auto-recipe-url ())
+;;;###autoload
+(defun treesit-auto-recipe-revision ())
+;;;###autoload
+(defun treesit-auto-recipe-source-dir ())
+;;;###autoload
+(defun treesit-auto-recipe-cc ())
+;;;###autoload
+(defun treesit-auto-recipe-c++ ())
+
 (cl-defstruct treesit-auto-recipe
   "Emacs metadata for a tree-sitter language grammar."
   lang ts-mode remap requires url revision source-dir cc c++)
 
+;;;###autoload
 (defvar treesit-auto-recipe-list
   `(,(make-treesit-auto-recipe
       :lang 'bash
