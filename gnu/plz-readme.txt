@@ -156,11 +156,12 @@ be simple and well-organized.  Every feature is tested against
         request, in which case the result is returned directly.
 
         `ELSE' is an optional callback function called when the request
-        fails with one argument, a `plz-error' struct.  If `ELSE' is
-        nil, an error is signaled when the request fails, either
-        `plz-curl-error' or `plz-http-error' as appropriate, with a
-        `plz-error' struct as the error data.  For synchronous requests,
-        this argument is ignored.
+        fails (i.e. if curl fails, or if the HTTP response has a non-2xx
+        status code).  It is called with one argument, a `plz-error'
+        structure.  If `ELSE' is nil, an error is signaled when the
+        request fails, either `plz-curl-error' or `plz-http-error' as
+        appropriate, with a `plz-error' structure as the error data.
+        For synchronous requests, this argument is ignored.
 
         `FINALLY' is an optional function called without argument after
         `THEN' or `ELSE', as appropriate.  For synchronous requests,
@@ -223,7 +224,39 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.3
+3.1 0.4
+───────
+
+  *Additions*
+  ⁃ Support for HTTP `HEAD' requests.  (Thanks to [USHIN, Inc.] for
+    sponsoring.)
+
+  *Changes*
+  ⁃ Allow sending `POST' and `PUT' requests without bodies.  ([#16].
+    Thanks to [Joseph Turner] for reporting.  Thanks to [USHIN, Inc.]
+    for sponsoring.)
+
+  *Fixes*
+  ⁃ All 2xx HTTP status codes are considered successful.  ([#17].
+    Thanks to [Joseph Turner] for reporting.  Thanks to [USHIN, Inc.]
+    for sponsoring.)
+  ⁃ Errors are signaled with error data correctly.
+
+  *Internal*
+  ⁃ Test suite explicitly tests with both HTTP/1.1 and HTTP/2.
+  ⁃ Test suite also tests with Emacs versions 27.2, 28.1, and 28.2.
+
+
+[USHIN, Inc.] <https://ushin.org/>
+
+[#16] <https://github.com/alphapapa/plz.el/issues/16>
+
+[Joseph Turner] <https://github.com/josephmturner>
+
+[#17] <https://github.com/alphapapa/plz.el/issues/17>
+
+
+3.2 0.3
 ───────
 
   *Additions*
@@ -242,21 +275,21 @@ be simple and well-organized.  Every feature is tested against
 [Sawyer Zheng] <https://github.com/sawyerzheng>
 
 
-3.2 0.2.1
+3.3 0.2.1
 ─────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.3 0.2
+3.4 0.2
 ───────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.4 0.1
+3.5 0.1
 ───────
 
   Initial release.

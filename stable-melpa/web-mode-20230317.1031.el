@@ -2,9 +2,9 @@
 
 ;; Copyright 2011-2023 François-Xavier Bois
 
-;; Version: 17.3.8
-;; Package-Version: 20230206.1654
-;; Package-Commit: df97ab62c94826a84adbde060a4111ca91deda8e
+;; Version: 17.3.9
+;; Package-Version: 20230317.1031
+;; Package-Commit: ff394e83b48e9ae05cf3be854272c1e4550de61a
 ;; Author: François-Xavier Bois
 ;; Maintainer: François-Xavier Bois <fxbois@gmail.com>
 ;; Package-Requires: ((emacs "23.1"))
@@ -25,7 +25,7 @@
 
 ;;---- CONSTS ------------------------------------------------------------------
 
-(defconst web-mode-version "17.3.8"
+(defconst web-mode-version "17.3.9"
   "Web Mode version.")
 
 ;;---- GROUPS ------------------------------------------------------------------
@@ -9367,7 +9367,18 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
                 (setq offset (- offset (length (match-string-no-properties 0)))))
               )
              (t
-              (setq offset (+ (current-indentation) web-mode-code-indent-offset)))
+              (setq offset (current-column))
+              ;;(message "point=%S offset=%S" (point) offset)
+              (if (looking-back "[ ]+" (point-min))
+                  (progn
+                    (setq offset (current-indentation)))
+                (setq offset (+ (current-indentation) web-mode-code-indent-offset)))
+              ;;(when (eq curr-char ?\,)
+              ;;  (goto-char pos)
+              ;;  (looking-at ",[ \t\n]*")
+              ;;  (setq offset (- offset (length (match-string-no-properties 0)))))
+              ;;(setq offset (+ (current-indentation) web-mode-code-indent-offset))
+              ) ;t
              ))
 
 

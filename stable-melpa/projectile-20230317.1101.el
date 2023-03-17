@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20230316.1552
-;; Package-Commit: 30a340f22de227b973e2245002291595857d83ae
+;; Package-Version: 20230317.1101
+;; Package-Commit: 271007c6611fcb08ddd326d7de9727c2ad5ef265
 ;; Keywords: project, convenience
 ;; Version: 2.8.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
@@ -85,9 +85,11 @@
 (declare-function ggtags-update-tags "ext:ggtags")
 (declare-function ripgrep-regexp "ext:ripgrep")
 (declare-function rg-run "ext:rg")
+(declare-function vterm "ext:vterm")
 (declare-function vterm-other-window "ext:vterm")
 (declare-function vterm-send-return "ext:vterm")
 (declare-function vterm-send-string "ext:vterm")
+
 
 ;;; Customization
 (defgroup projectile nil
@@ -98,7 +100,8 @@
   :link '(url-link :tag "Online Manual" "https://docs.projectile.mx/")
   :link '(emacs-commentary-link :tag "Commentary" "projectile"))
 
-(defcustom projectile-indexing-method (if (eq system-type 'windows-nt) 'native 'alien)
+(defcustom projectile-indexing-method
+  (if (eq system-type 'windows-nt) 'native 'alien)
   "Specifies the indexing method used by Projectile.
 
 There are three indexing methods - native, hybrid and alien.
@@ -4518,6 +4521,25 @@ Use a prefix argument ARG to indicate creation of a new process instead."
           (term-char-mode))))
     (switch-to-buffer buffer-name)))
 
+(defun projectile--vterm (&optional new-process other-window)
+  "Invoke `vterm' in the project's root.
+
+Use argument NEW-PROCESS to indicate creation of a new process instead.
+Use argument OTHER-WINDOW to indentation whether the buffer should
+be displayed in a different window.
+
+Switch to the project specific term buffer if it already exists."
+  (let* ((project (projectile-acquire-root))
+         (buffer (projectile-generate-process-name "vterm" new-process project)))
+    (unless (buffer-live-p (get-buffer buffer))
+      (unless (require 'vterm nil 'noerror)
+        (error "Package 'vterm' is not available"))
+      (projectile-with-default-dir project
+        (if other-window
+            (vterm-other-window buffer)
+          (vterm buffer))))
+    (switch-to-buffer buffer)))
+
 ;;;###autoload
 (defun projectile-run-vterm (&optional arg)
   "Invoke `vterm' in the project's root.
@@ -4526,14 +4548,17 @@ Switch to the project specific term buffer if it already exists.
 
 Use a prefix argument ARG to indicate creation of a new process instead."
   (interactive "P")
-  (let* ((project (projectile-acquire-root))
-         (buffer (projectile-generate-process-name "vterm" arg project)))
-    (unless (buffer-live-p (get-buffer buffer))
-      (unless (require 'vterm nil 'noerror)
-        (error "Package 'vterm' is not available"))
-      (projectile-with-default-dir project
-        (vterm-other-window buffer)))
-    (switch-to-buffer buffer)))
+  (projectile--vterm arg))
+
+;;;###autoload
+(defun projectile-run-vterm-other-window (&optional arg)
+  "Invoke `vterm' in the project's root.
+
+Switch to the project specific term buffer if it already exists.
+
+Use a prefix argument ARG to indicate creation of a new process instead."
+  (interactive "P")
+  (projectile--vterm arg 'other-window))
 
 (defun projectile-files-in-project-directory (directory)
   "Return a list of files in DIRECTORY."
@@ -5986,6 +6011,7 @@ thing shown in the mode line otherwise."
     (define-key map (kbd "x s") #'projectile-run-shell)
     (define-key map (kbd "x g") #'projectile-run-gdb)
     (define-key map (kbd "x v") #'projectile-run-vterm)
+    (define-key map (kbd "x 4 v") #'projectile-run-vterm-other-window)
     ;; misc
     (define-key map (kbd "z") #'projectile-cache-current-file)
     (define-key map (kbd "<left>") #'projectile-previous-project-buffer)

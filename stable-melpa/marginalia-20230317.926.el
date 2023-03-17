@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.1
-;; Package-Version: 20230315.1458
-;; Package-Commit: f04a5b8693d7ec11ba62008cceeb5a62fab10f1f
+;; Package-Version: 20230317.926
+;; Package-Commit: 2633b2dee22261531f960e49106771e679102a98
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.4.0"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -453,7 +453,7 @@ FACE is the name of the face, with which the field should be propertized."
   "Return symbol class characters for symbol S.
 
 This function is an extension of `help--symbol-class'.  It returns
-more fine-grained and more detailled symbol information.
+more fine-grained and more detailed symbol information.
 
 Function:
 f function
