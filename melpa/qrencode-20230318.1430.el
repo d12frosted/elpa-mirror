@@ -4,9 +4,9 @@
 
 ;; Author: Rüdiger Sonderfeld <ruediger@c-plusplus.net>
 ;; Keywords: qrcode comm
-;; Package-Version: 20230129.1750
-;; Package-Commit: 449befdf160c62a40961cd97f02bada75ffda5d8
-;; Version: 1.1
+;; Package-Version: 20230318.1430
+;; Package-Commit: 8aaf7cc378dd60436ce07aa744f434d9ba6039a3
+;; Version: 1.2-beta1
 ;; Package-Requires: ((emacs "25.1"))
 ;; Package: qrencode
 ;; URL: https://github.com/ruediger/qrencode-el
@@ -1009,6 +1009,15 @@ Optionally specify PIXEL-SIZE (default is 3)."
   :type 'integer
   :group 'qrencode)
 
+(defcustom qrencode-post-export-functions nil
+  "Abnormal hook run after QRCode file export.
+FILENAME of the exported file is passed as parameter.  For
+example this can be used to convert the output to a different
+bitmap format."
+  :type 'hook
+  :package-version "1.2-beta1"
+  :group 'qrencode)
+
 (defface qrencode-face
   '((t :foreground "black" :background "white"))
   "Face used for writing QRCodes."
@@ -1025,6 +1034,7 @@ Optionally specify PIXEL-SIZE (default is 3)."
     (let ((qr qrencode--raw-qr))       ; save ref to buffer local var.
       (with-temp-file filename
         (insert (qrencode-format-as-netpbm qr qrencode-export-pixel-size)))
+      (run-hook-with-args 'qrencode-post-export-functions filename)
       (message "Wrote QRCode to file %s" filename))))
 
 (defvar qrencode-mode-map

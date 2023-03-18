@@ -3,8 +3,11 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-bookmark-in-project.git
 
 Updating /mnt/store/melpa/working/bookmark-in-project/
-Checking out a1630443887c7fa190411c45269bde575f0807c5
-Built bookmark-in-project in 5.246s, finished at 2023-03-18T09:59:24+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 39K Mar 18 09:59 packages/bookmark-in-project-20230116.1206.el
-4.0K -rw-r--r-- 1 root root 439 Mar 18 09:59 packages/bookmark-in-project-20230116.1206.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-bookmark-in-project.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
