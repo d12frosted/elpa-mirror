@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/bard/emacs-run-command.git
 
 Updating /mnt/store/melpa/working/run-command/
-Checking out e44bc5fb9712303150906f05ce7dd41c8c184aea
+Checking out 477c42acce9e36ec59d18deaa73992f94faf7b99
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/run-command/
-  to /tmp/run-commandtUhtKE/run-command-20230131.907
+  to /tmp/run-commandSzfWeM/run-command-20230317.2004
     run-command-core.el -> run-command-core.el
     run-command-runner-compile.el -> run-command-runner-compile.el
     run-command-runner-eat.el -> run-command-runner-eat.el
@@ -17,20 +17,22 @@ Copying files (->) and directories (=>)
     run-command-selector-ivy.el -> run-command-selector-ivy.el
     run-command-util.el -> run-command-util.el
     run-command.el -> run-command.el
-Created run-command-20230131.907.tar containing:
-  run-command-20230131.907/
-  run-command-20230131.907/run-command-core.el
-  run-command-20230131.907/run-command-pkg.el
-  run-command-20230131.907/run-command-runner-compile.el
-  run-command-20230131.907/run-command-runner-eat.el
-  run-command-20230131.907/run-command-runner-term.el
-  run-command-20230131.907/run-command-runner-vterm.el
-  run-command-20230131.907/run-command-selector-completing-read.el
-  run-command-20230131.907/run-command-selector-helm.el
-  run-command-20230131.907/run-command-selector-ivy.el
-  run-command-20230131.907/run-command-util.el
-  run-command-20230131.907/run-command.el
-Built run-command in 9.467s, finished at 2023-03-17T15:25:00+0000
+Created run-command-20230317.2004.tar containing:
+  run-command-20230317.2004/
+  run-command-20230317.2004/run-command-core.el
+  run-command-20230317.2004/run-command-pkg.el
+  run-command-20230317.2004/run-command-runner-compile.el
+  run-command-20230317.2004/run-command-runner-eat.el
+  run-command-20230317.2004/run-command-runner-term.el
+  run-command-20230317.2004/run-command-runner-vterm.el
+  run-command-20230317.2004/run-command-selector-completing-read.el
+  run-command-20230317.2004/run-command-selector-helm.el
+  run-command-20230317.2004/run-command-selector-ivy.el
+  run-command-20230317.2004/run-command-util.el
+  run-command-20230317.2004/run-command.el
+Built run-command in 4.854s, finished at 2023-03-17T23:22:29+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 428 Mar 17 15:24 packages/run-command-20230131.907.entry
- 52K -rw-r--r-- 1 root root 50K Mar 17 15:24 packages/run-command-20230131.907.tar
+4.0K -rw-r--r-- 1 root root 428 Mar 17 19:23 packages/run-command-20230131.907.entry
+ 52K -rw-r--r-- 1 root root 50K Mar 17 19:23 packages/run-command-20230131.907.tar
+4.0K -rw-r--r-- 1 root root 429 Mar 17 23:22 packages/run-command-20230317.2004.entry
+ 52K -rw-r--r-- 1 root root 50K Mar 17 23:22 packages/run-command-20230317.2004.tar
