@@ -4,9 +4,9 @@
 
 ;; Author: Johan Dykstrom
 ;; Created: Jan 2006
-;; Version: 1.6.1
-;; Package-Version: 20230219.1433
-;; Package-Commit: 5c31af49bfbb2f387fa505ba4aeb2004b249af2c
+;; Version: 1.7
+;; Package-Version: 20230318.1521
+;; Package-Commit: 98fbe4d3bc5d5034c3b9901bd43268a8f1501a07
 ;; Keywords: tools
 ;; URL: https://github.com/dykstrom/log4j-mode
 ;; Package-Requires: ((emacs "25.1"))
@@ -96,8 +96,8 @@
 ;; (add-hook
 ;;  'log4j-mode-hook
 ;;  (lambda ()
-;;    (define-key log4j-mode-local-map [(control down)] 'log4j-forward-record)
-;;    (define-key log4j-mode-local-map [(control up)] 'log4j-backward-record)))
+;;    (define-key log4j-mode-map [(control down)] 'log4j-forward-record)
+;;    (define-key log4j-mode-map [(control up)] 'log4j-backward-record)))
 
 ;; XEmacs:
 
@@ -114,6 +114,7 @@
 
 ;;; Change Log:
 
+;;  1.7    2023-03-18  Remove log4j-mode-local-map.
 ;;  1.6.1  2023-02-18  Enable jit-lock-mode for single-line log records.
 ;;  1.6    2022-11-12  Add option to highlight only matched keyword.
 ;;  1.5    2022-11-05  Make Log4j mode a derived mode.
@@ -292,7 +293,7 @@ The point is in the filter buffer when the hook is run."
 ;; Variables:
 ;; ----------------------------------------------------------------------------
 
-(defconst log4j-mode-version "1.6.1"
+(defconst log4j-mode-version "1.7"
   "The current version of Log4j mode.")
 
 (defvar log4j-include-regexp nil
@@ -419,6 +420,15 @@ This function also sets `match-data' to the entire match."
                 (set-match-data (list begin-pos (point)))
                 (point)))))))
 
+(defvar-local log4j-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map [(control c) (control b)] 'log4j-browse-source)
+    (define-key map [(control c) (control s)] 'log4j-start-filter)
+    (define-key map [(meta })] 'log4j-forward-record)
+    (define-key map [(meta {)] 'log4j-backward-record)
+    map)
+  "Keymap used in `log4j-mode'.")
+
 ;; ----------------------------------------------------------------------------
 ;; Filtering and reverting:
 ;; ----------------------------------------------------------------------------
@@ -530,7 +540,7 @@ which should be strings of filter keywords, separated by spaces."
   (setq log4j-exclude-regexp (log4j-make-regexp exclude-string))
 
   (setq log4j-filter-active-flag 't)
-  (define-key log4j-mode-local-map [(control c) (control s)] 'log4j-stop-filter)
+  (define-key log4j-mode-map [(control c) (control s)] 'log4j-stop-filter)
 
   (log4j-setup-buffers)
   (display-buffer (log4j-filter-buffer-name (buffer-name)))
@@ -541,7 +551,7 @@ which should be strings of filter keywords, separated by spaces."
   (interactive)
   (message "Filtering is OFF in buffer `%s'." (buffer-name))
   (setq log4j-filter-active-flag nil)
-  (define-key log4j-mode-local-map [(control c) (control s)] 'log4j-start-filter))
+  (define-key log4j-mode-map [(control c) (control s)] 'log4j-start-filter))
 
 ;; ----------------------------------------------------------------------------
 ;; Browsing source code:
@@ -669,24 +679,6 @@ first line of the declaration."
 ;; ----------------------------------------------------------------------------
 ;; Initialization:
 ;; ----------------------------------------------------------------------------
-
-(defvar log4j-mode-map nil
-  "Global keymap used while in Log4j mode.
-This keymap is copied to `log4j-mode-local-map' when a new log file buffer is
-created.")
-
-(unless log4j-mode-map
-  (let ((map (make-sparse-keymap)))
-    (define-key map [(control c) (control b)] 'log4j-browse-source)
-    (define-key map [(control c) (control s)] 'log4j-start-filter)
-    (define-key map [(meta })] 'log4j-forward-record)
-    (define-key map [(meta {)] 'log4j-backward-record)
-    (setq log4j-mode-map map)))
-
-(defvar log4j-mode-local-map nil
-  "Local keymap used while in Log4j mode.
-This is a buffer local variable, so any changes to the keymap become buffer
-local.")
 
 (defun log4j-after-revert-function ()
   "Update source and filter buffers after auto reverting the source buffer.
@@ -827,26 +819,26 @@ the beginning and end of multi-line log records. However, in many
 cases this will not be necessary.
 
 Commands:
-Use `\\<log4j-mode-map>\\[log4j-start-filter]' to start/stop log file filtering in the current buffer.
+Use `\\[log4j-start-filter]' to start/stop log file filtering in the current buffer.
 Enter any number of include and exclude keywords that will be used to
 filter the log records. Keywords are separated by spaces.
 
-Use `\\<log4j-mode-map>\\[log4j-browse-source]' to show the declaration of the Java identifier around or
+Use `\\[log4j-browse-source]' to show the declaration of the Java identifier around or
 before point. This command is only enabled if the optional package
 `jtags' is loaded. For more information about jtags, see
 http://jtags.sourceforge.net.
 
-Finally, the commands `\\<log4j-mode-map>\\[log4j-forward-record]' and `\\<log4j-mode-map>\\[log4j-backward-record]' move point forward and backward
+Finally, the commands `\\[log4j-forward-record]' and `\\[log4j-backward-record]' move point forward and backward
 across log records.
 
-\\{log4j-mode-local-map}"
+\\{log4j-mode-map}"
   :group 'log4j
   ;; Guess log file format based on patterns found in file
   (log4j-guess-file-format)
 
   ;; Use a buffer local copy of global Log4j keymap
-  (setq-local log4j-mode-local-map (copy-keymap log4j-mode-map))
-  (use-local-map log4j-mode-local-map)
+  (setq log4j-mode-map (copy-keymap log4j-mode-map))
+  (use-local-map log4j-mode-map)
 
   ;; Disable font-lock-support-mode for multi-line log records
   (unless (log4j-single-line-p)

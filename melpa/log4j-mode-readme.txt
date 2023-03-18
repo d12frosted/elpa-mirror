@@ -68,8 +68,8 @@ Add the following lines of code to your init file:
 (add-hook
  'log4j-mode-hook
  (lambda ()
-   (define-key log4j-mode-local-map [(control down)] 'log4j-forward-record)
-   (define-key log4j-mode-local-map [(control up)] 'log4j-backward-record)))
+   (define-key log4j-mode-map [(control down)] 'log4j-forward-record)
+   (define-key log4j-mode-map [(control up)] 'log4j-backward-record)))
 
 XEmacs:
 
