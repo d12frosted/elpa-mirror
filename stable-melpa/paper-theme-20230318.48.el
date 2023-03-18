@@ -1,11 +1,11 @@
 ;;; paper-theme.el --- A minimal Emacs colour theme. -*- lexical-binding: t; -*-
-;; Copyright (C) 2015, 2018, 2019, 2022 Göktuğ Kayaalp
+;; Copyright (C) 2015, 2018, 2019, 2022, 2023 Göktuğ Kayaalp
 ;;
 ;; Author: Göktuğ Kayaalp
 ;; Keywords: theme paper
-;; Package-Commit: c5c3761b1edbb8afe24425d8610aa368a762ff63
-;; Package-Version: 20230124.2301
-;; Package-X-Original-Version: 2.0
+;; Package-Commit: 8d337b85592ae44e1fa3ad03f0c65ca99036f9e2
+;; Package-Version: 20230318.48
+;; Package-X-Original-Version: 2.1
 ;; Package-Requires: ((emacs "24"))
 ;; URL: https://dev.gkayaalp.com/elisp/index.html#paper
 ;;
@@ -341,7 +341,12 @@ May be used to refresh after tweaking some variables."
 
        ;; === Line numbers ===
        (quote (line-number              ,paper-light-shadow-face))
-       (quote (line-number-current-line ((t (:inherit highlight)))))))))
+       (quote (line-number-current-line ((t (:inherit highlight)))))
+
+       ;; === Various faces ===
+       ;;
+       ;; Faces which do not sensibly inherit from font-lock.
+       (quote (sh-heredoc ((t (:inherit font-lock-string-face)))))))))
 
 (paper--set-faces)
 
