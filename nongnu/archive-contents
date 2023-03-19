@@ -1588,7 +1588,7 @@
 	       ("Andreas Politz" . "mail@andreas-politz.de"))
 	      (:commit . "96703b2bb5c937afd05778086c43280b0593fe99"))])
  (php-mode .
-	   [(1 24 2)
+	   [(1 24 3)
 	    ((emacs
 	      (25 2)))
 	    "Major mode for editing PHP code" tar
@@ -1597,7 +1597,7 @@
 	     (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
 	     (:authors
 	      ("Eric James Michael Ritz"))
-	     (:commit . "d63b8af8333b53ef05b1f9b9e066253497302a50"))])
+	     (:commit . "bed4d8ced39ecbfd6ac4961d88cb1ba9ddbaa939"))])
  (popon .
 	[(0 12)
 	 ((emacs
@@ -2215,7 +2215,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(23 0 20230310115257)
+	       [(23 1 20230318191051)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -2224,7 +2224,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "a590cf24998b44e0d1e3d5b8660fc6da8b51e1c0"))])
+		 (:commit . "7e0d33170c05ed3fe364430df7e8cdb4a36bfd70"))])
  (xkcd .
        [(1 1)
 	((json

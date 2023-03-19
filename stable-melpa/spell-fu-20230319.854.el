@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-spell-fu
-;; Package-Version: 20230205.309
-;; Package-Commit: d6c170fa971856f0755c1750e66deadd58a5465a
+;; Package-Version: 20230319.854
+;; Package-Commit: aed6e87aa31013534b7a6cbedb26e4f29ccea735
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -793,22 +793,25 @@ when checking the entire buffer for example."
   (when (and spell-fu--idle-overlay-last (not (overlay-buffer spell-fu--idle-overlay-last)))
     (setq spell-fu--idle-overlay-last nil))
 
-  (cond
-   ;; Extend forwards.
-   ((and spell-fu--idle-overlay-last (eq pos-beg (overlay-end spell-fu--idle-overlay-last)))
-    (move-overlay spell-fu--idle-overlay-last (overlay-start spell-fu--idle-overlay-last) pos-end))
-   ;; Extend backwards.
-   ((and spell-fu--idle-overlay-last (eq pos-end (overlay-start spell-fu--idle-overlay-last)))
-    (move-overlay spell-fu--idle-overlay-last pos-beg (overlay-end spell-fu--idle-overlay-last)))
-   (t
+  (unless (and spell-fu--idle-overlay-last
+               (let ((last-beg (overlay-start spell-fu--idle-overlay-last))
+                     (last-end (overlay-end spell-fu--idle-overlay-last)))
+                 (cond
+                  ((> last-beg pos-end)
+                   nil)
+                  ((< last-end pos-beg)
+                   nil)
+                  (t ; Extend when overlap.
+                   (move-overlay
+                    spell-fu--idle-overlay-last (min pos-beg last-beg) (max pos-end last-end))
+                   t))))
+
     (let ((item-ov (make-overlay pos-beg pos-end)))
       ;; Handy for debugging pending regions to be checked.
       ;; (overlay-put item-ov 'face '(:background "#000000" :extend t))
-
       (overlay-put item-ov 'spell-fu-pending t)
       (overlay-put item-ov 'evaporate 't)
-
-      (setq spell-fu--idle-overlay-last item-ov))))
+      (setq spell-fu--idle-overlay-last item-ov)))
 
   ;; Use `inhibit-quit' as a way to check if `jit-lock-stealth' is in use.
   (when inhibit-quit
