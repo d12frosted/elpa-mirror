@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/skk-dev/ddskk.git
 
 Updating /mnt/store/melpa/working/ddskk/
-Checking out 3820fa6bb0d53132aafb611a643c1e41e444052b
+Checking out e0259efcb4ed31640ec335628dec0c0a3cb0f509
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ddskk/
-  to /tmp/ddskk2oPYFg/ddskk-20230318.2152
+  to /tmp/ddskkmyt4ZS/ddskk-20230318.2309
     context-skk.el -> context-skk.el
     ddskk-pkg.el -> ddskk-pkg.el
     ddskk.el -> ddskk.el
@@ -51,57 +51,57 @@ Copying files (->) and directories (=>)
     tar-util.el -> tar-util.el
   ! doc/skk.texi -> skk.texi
   ! etc/skk.xpm -> skk.xpm
-Generating /tmp/ddskk2oPYFg/ddskk-20230318.2152/skk.info
-Created ddskk-20230318.2152.tar containing:
-  ddskk-20230318.2152/
-  ddskk-20230318.2152/context-skk.el
-  ddskk-20230318.2152/ddskk-pkg.el
-  ddskk-20230318.2152/ddskk.el
-  ddskk-20230318.2152/dir
-  ddskk-20230318.2152/skk-abbrev.el
-  ddskk-20230318.2152/skk-act.el
-  ddskk-20230318.2152/skk-annotation.el
-  ddskk-20230318.2152/skk-auto.el
-  ddskk-20230318.2152/skk-azik.el
-  ddskk-20230318.2152/skk-cdb.el
-  ddskk-20230318.2152/skk-comp.el
-  ddskk-20230318.2152/skk-cursor.el
-  ddskk-20230318.2152/skk-cus.el
-  ddskk-20230318.2152/skk-dcomp.el
-  ddskk-20230318.2152/skk-decor.el
-  ddskk-20230318.2152/skk-develop.el
-  ddskk-20230318.2152/skk-emacs.el
-  ddskk-20230318.2152/skk-gadget.el
-  ddskk-20230318.2152/skk-hint.el
-  ddskk-20230318.2152/skk-inline.el
-  ddskk-20230318.2152/skk-isearch.el
-  ddskk-20230318.2152/skk-jisx0201.el
-  ddskk-20230318.2152/skk-jisx0213.el
-  ddskk-20230318.2152/skk-jisyo-edit-mode.el
-  ddskk-20230318.2152/skk-kakasi.el
-  ddskk-20230318.2152/skk-kcode.el
-  ddskk-20230318.2152/skk-leim.el
-  ddskk-20230318.2152/skk-look.el
-  ddskk-20230318.2152/skk-macs.el
-  ddskk-20230318.2152/skk-num.el
-  ddskk-20230318.2152/skk-search-web.el
-  ddskk-20230318.2152/skk-server-completion.el
-  ddskk-20230318.2152/skk-server.el
-  ddskk-20230318.2152/skk-show-mode.el
-  ddskk-20230318.2152/skk-sticky.el
-  ddskk-20230318.2152/skk-study.el
-  ddskk-20230318.2152/skk-tankan.el
-  ddskk-20230318.2152/skk-tut.el
-  ddskk-20230318.2152/skk-vars.el
-  ddskk-20230318.2152/skk-version.el
-  ddskk-20230318.2152/skk-viper.el
-  ddskk-20230318.2152/skk.el
-  ddskk-20230318.2152/skk.info
-  ddskk-20230318.2152/skk.xpm
-  ddskk-20230318.2152/tar-util.el
-Built ddskk in 34.949s, finished at 2023-03-18T21:59:49+0000
+Generating /tmp/ddskkmyt4ZS/ddskk-20230318.2309/skk.info
+Created ddskk-20230318.2309.tar containing:
+  ddskk-20230318.2309/
+  ddskk-20230318.2309/context-skk.el
+  ddskk-20230318.2309/ddskk-pkg.el
+  ddskk-20230318.2309/ddskk.el
+  ddskk-20230318.2309/dir
+  ddskk-20230318.2309/skk-abbrev.el
+  ddskk-20230318.2309/skk-act.el
+  ddskk-20230318.2309/skk-annotation.el
+  ddskk-20230318.2309/skk-auto.el
+  ddskk-20230318.2309/skk-azik.el
+  ddskk-20230318.2309/skk-cdb.el
+  ddskk-20230318.2309/skk-comp.el
+  ddskk-20230318.2309/skk-cursor.el
+  ddskk-20230318.2309/skk-cus.el
+  ddskk-20230318.2309/skk-dcomp.el
+  ddskk-20230318.2309/skk-decor.el
+  ddskk-20230318.2309/skk-develop.el
+  ddskk-20230318.2309/skk-emacs.el
+  ddskk-20230318.2309/skk-gadget.el
+  ddskk-20230318.2309/skk-hint.el
+  ddskk-20230318.2309/skk-inline.el
+  ddskk-20230318.2309/skk-isearch.el
+  ddskk-20230318.2309/skk-jisx0201.el
+  ddskk-20230318.2309/skk-jisx0213.el
+  ddskk-20230318.2309/skk-jisyo-edit-mode.el
+  ddskk-20230318.2309/skk-kakasi.el
+  ddskk-20230318.2309/skk-kcode.el
+  ddskk-20230318.2309/skk-leim.el
+  ddskk-20230318.2309/skk-look.el
+  ddskk-20230318.2309/skk-macs.el
+  ddskk-20230318.2309/skk-num.el
+  ddskk-20230318.2309/skk-search-web.el
+  ddskk-20230318.2309/skk-server-completion.el
+  ddskk-20230318.2309/skk-server.el
+  ddskk-20230318.2309/skk-show-mode.el
+  ddskk-20230318.2309/skk-sticky.el
+  ddskk-20230318.2309/skk-study.el
+  ddskk-20230318.2309/skk-tankan.el
+  ddskk-20230318.2309/skk-tut.el
+  ddskk-20230318.2309/skk-vars.el
+  ddskk-20230318.2309/skk-version.el
+  ddskk-20230318.2309/skk-viper.el
+  ddskk-20230318.2309/skk.el
+  ddskk-20230318.2309/skk.info
+  ddskk-20230318.2309/skk.xpm
+  ddskk-20230318.2309/tar-util.el
+Built ddskk in 38.926s, finished at 2023-03-19T01:57:32+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  384 Mar 18 18:03 packages/ddskk-20221030.2049.entry
-1.8M -rw-r--r-- 1 root root 1.8M Mar 18 18:03 packages/ddskk-20221030.2049.tar
 4.0K -rw-r--r-- 1 root root  384 Mar 18 21:59 packages/ddskk-20230318.2152.entry
 1.8M -rw-r--r-- 1 root root 1.8M Mar 18 21:59 packages/ddskk-20230318.2152.tar
+4.0K -rw-r--r-- 1 root root  384 Mar 19 01:57 packages/ddskk-20230318.2309.entry
+1.8M -rw-r--r-- 1 root root 1.8M Mar 19 01:57 packages/ddskk-20230318.2309.tar
