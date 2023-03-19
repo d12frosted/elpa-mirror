@@ -1,0 +1,16 @@
+(org-noter .
+	   [(20230315 111)
+	    ((emacs
+	      (24 4))
+	     (cl-lib
+	      (0 6))
+	     (org
+	      (9 0)))
+	    "A synchronized, Org-mode, document annotator" tar
+	    ((:commit . "228a3c8f62d7c020770dfa5dbc4d7e4bfa84ea9d")
+	     (:authors
+	      ("Gonçalo Santos (github.com/weirdNox)" . "in@bsentia")
+	      ("   Maintainer Dmitry M" . "dmitrym@gmail.com"))
+	     (:maintainer "Peter Mao" . "peter.mao@gmail.com")
+	     (:keywords "lisp" "pdf" "interleave" "annotate" "external" "sync" "notes" "documents" "org-mode")
+	     (:url . "https://github.com/org-noter/org-noter"))])

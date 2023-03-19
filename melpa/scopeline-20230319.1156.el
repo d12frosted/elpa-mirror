@@ -1,8 +1,8 @@
 ;;; scopeline.el --- Show scope info of blocks in buffer at end of scope -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/meain/scopeline.el
-;; Package-Version: 20230314.412
-;; Package-Commit: eb6441667c12952d31a3c0f4e6b84fa408b97b90
+;; Package-Version: 20230319.1156
+;; Package-Commit: 83438c7f08a9142e7998b92d8fef74719353fcaa
 ;; Keywords: scope, context, tree-sitter, convenience
 ;; SPDX-License-Identifier: Apache-2.0
 ;; Package-Requires: ((emacs "26.1"))
@@ -106,7 +106,8 @@
   (let ((ov (make-overlay pos pos)))
     (overlay-put ov 'after-string
                  (propertize (format "%s%s" scopeline-overlay-prefix text)
-                             'face 'scopeline-face))
+                             'face 'scopeline-face
+                             'cursor t))
     ;; Mark this overlay as belonging to scopeline
     (overlay-put ov 'scopeline t)
     (add-to-list 'scopeline--overlays ov)))

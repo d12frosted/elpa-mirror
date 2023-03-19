@@ -7,8 +7,8 @@
 ;;         Juliusz Chroboczek <jch@pps.univ-paris-diderot.fr>
 ;; Maintainer: Libor Čapák <capak@inputwish.com>
 ;; Keywords: vc
-;; Package-Commit: 56426a235b742618b48fad8538777a9b3ffb7240
-;; Package-Version: 20220406.659
+;; Package-Commit: 097e03f119b4fedb0186fd45d730a1c5acac10dc
+;; Package-Version: 20230319.1149
 ;; Package-X-Original-Version: 20170409.1521
 ;; Package-X-Original-Version: 20141122.1326
 ;; Version: 1.19
@@ -352,7 +352,7 @@ list of arguments to pass."
   "Return non-nil if we feel responsible for FILE,
  which can also be a directory."
   (and (not (vc-darcs-special-file-p file))
-       (not (null (vc-darcs-root file)))))
+       (vc-darcs-root file)))
 
 (defun vc-darcs-could-register (file)
   "Return non-nil if FILE could be registered."

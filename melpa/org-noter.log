@@ -1,10 +1,27 @@
 Package: org-noter
 Fetcher: github
-Source:  https://github.com/weirdNox/org-noter.git
+Source:  https://github.com/org-noter/org-noter.git
 
-Updating /mnt/store/melpa/working/org-noter/
-Checking out d051a5909878e2214422fd275968ab4d7ef9bcab
-Built org-noter in 7.537s, finished at 2023-03-19T10:40:51+0000
+Cloning https://github.com/org-noter/org-noter.git to /mnt/store/melpa/working/org-noter/
+Checking out 228a3c8f62d7c020770dfa5dbc4d7e4bfa84ea9d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-noter/
+  to /tmp/org-noterdgJkMD/org-noter-20230315.111
+    org-noter-core.el -> org-noter-core.el
+    org-noter.el -> org-noter.el
+    modules => modules
+Created org-noter-20230315.111.tar containing:
+  org-noter-20230315.111/
+  org-noter-20230315.111/modules/
+  org-noter-20230315.111/modules/org-noter-djvu.el
+  org-noter-20230315.111/modules/org-noter-nov.el
+  org-noter-20230315.111/modules/org-noter-pdf.el
+  org-noter-20230315.111/org-noter-core.el
+  org-noter-20230315.111/org-noter-pkg.el
+  org-noter-20230315.111/org-noter.el
+Built org-noter in 6.595s, finished at 2023-03-19T14:37:35+0000
  ✓ Success:
 108K -rw-r--r-- 1 root root 106K Mar 19 10:40 packages/org-noter-20191020.1212.el
 4.0K -rw-r--r-- 1 root root  538 Mar 19 10:40 packages/org-noter-20191020.1212.entry
+4.0K -rw-r--r-- 1 root root  588 Mar 19 14:37 packages/org-noter-20230315.111.entry
+172K -rw-r--r-- 1 root root 170K Mar 19 14:37 packages/org-noter-20230315.111.tar

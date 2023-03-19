@@ -4,10 +4,10 @@
 
 ;; Author: Robb Enzmann <robbenzmann@gmail.com>
 ;; Keywords: treesitter auto automatic major mode fallback convenience
-;; Package-Version: 20230317.1253
-;; Package-Commit: 556b1aa3d8c1e67cae3e648c64023612e44a9901
+;; Package-Version: 20230319.1400
+;; Package-Commit: f2b94c1dec1802fc09678f65b8f90228e4aa2212
 ;; URL: https://github.com/renzmann/treesit-auto.git
-;; Version: 0.6.1
+;; Version: 0.6.2
 ;; Package-Requires: ((emacs "29.0"))
 
 ;; This file is not part of GNU Emacs.
@@ -362,10 +362,15 @@ This variable is ignored if `treesit-auto-langs' is non-nil.")
                      finally return remap-alist))))
 
 (defun treesit-auto--build-treesit-source-alist ()
+  "Construct the `treesit-language-source-alist' using all known recipes."
   (append treesit-language-source-alist
           (cl-loop for recipe in treesit-auto-recipe-list
                    collect (cons (treesit-auto-recipe-lang recipe)
-                                 `(,(treesit-auto-recipe-url recipe))))))
+                                 `(,(treesit-auto-recipe-url recipe)
+                                   ,(treesit-auto-recipe-revision recipe)
+                                   ,(treesit-auto-recipe-source-dir recipe)
+                                   ,(treesit-auto-recipe-cc recipe)
+                                   ,(treesit-auto-recipe-c++ recipe))))))
 
 ;;;###autoload
 (defun treesit-auto-install-all ()
@@ -374,7 +379,8 @@ This variable is ignored if `treesit-auto-langs' is non-nil.")
 See `treesit-auto-langs' and `treesit-auto-install' for
 how to modify the behavior of this function."
   (interactive)
-  (when-let* ((to-install (or treesit-auto-langs
+  (when-let* ((treesit-language-source-alist (treesit-auto--build-treesit-source-alist))
+              (to-install (or treesit-auto-langs
                               (seq-filter
                                (lambda (lang) (not (treesit-ready-p lang t)))
                                (cl-set-difference
