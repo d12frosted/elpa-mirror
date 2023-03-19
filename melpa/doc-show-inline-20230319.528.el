@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-doc-show-inline
-;; Package-Version: 20230116.2310
-;; Package-Commit: 641c2c8bf55ec4a0f9da8dd99b95cd1464997a66
+;; Package-Version: 20230319.528
+;; Package-Commit: 261554a788e9cc6c0ba538a732667e514fab70c6
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -163,6 +163,9 @@ When unset, the :filter property from `doc-show-inline-mode-defaults' is used.")
 (defvar-local doc-show-inline--lookup-cache nil)
 
 (defvar-local doc-show-inline--idle-timer nil)
+
+;; List of interactive commands.
+(defconst doc-show-inline--commands (list 'doc-show-inline-buffer 'doc-show-inline-mode))
 
 
 ;; ---------------------------------------------------------------------------
@@ -974,6 +977,17 @@ When IS-INTERACTIVE is true, use `doc-show-inline-idle-delay-init'."
       (doc-show-inline--mode-enable (called-interactively-p 'interactive))))
    (t
     (doc-show-inline--mode-disable))))
+
+;; Evil Mode (setup if in use).
+;;
+;; Don't let these commands repeat as they are for the UI, not editor.
+;;
+;; Notes:
+;; - Package lint complains about using this command,
+;;   however it's needed to avoid issues with `evil-mode'.
+(declare-function evil-declare-not-repeat "ext:evil-common")
+(with-eval-after-load 'evil
+  (mapc #'evil-declare-not-repeat doc-show-inline--commands))
 
 (provide 'doc-show-inline)
 ;; Local Variables:

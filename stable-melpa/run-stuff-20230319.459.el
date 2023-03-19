@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-run-stuff
-;; Package-Version: 20230115.633
-;; Package-Commit: 40ac5b62ee655dbba779488d96d844d929a1b6cd
+;; Package-Version: 20230319.459
+;; Package-Commit: cd4d250603f0df835dbaf91c45ea603ffd52c416
 ;; Version: 0.0.3
 ;; Keywords: files lisp files convenience hypermedia
 ;; Package-Requires: ((emacs "25.1"))
@@ -145,6 +145,21 @@ This can be made a buffer local variable to customize this for each mode."
 ;; ---------------------------------------------------------------------------
 ;; Internal Functions/Macros
 
+(defun run-stuff--pos-eol-non-ws ()
+  "Return the last non-white-space character of line."
+  (save-excursion
+    (goto-char (pos-eol))
+    (skip-chars-backward "[:blank:]")
+    (point)))
+
+(defun run-stuff--pos-eol-non-ws-prev-line ()
+  "Return the last non-white-space character of previous line."
+  (save-excursion
+    (forward-line -1)
+    (goto-char (pos-eol))
+    (skip-chars-backward "[:blank:]")
+    (point)))
+
 (defun run-stuff--extract-split-lines (line-terminate-char)
   "Extract line(s) at point.
 Multiple lines (below the current) are extracted
@@ -162,12 +177,7 @@ Returns the line(s) as a string with no properties."
       (setq end start)
       (while iterate
         (setq new-end (pos-eol))
-        ;; could be more efficient?
-        (setq new-end-ws
-              (save-excursion
-                (goto-char (pos-eol))
-                (skip-syntax-backward "-")
-                (point)))
+        (setq new-end-ws (run-stuff--pos-eol-non-ws))
         (cond
          ((> new-end end)
           (setq end new-end)
@@ -193,13 +203,7 @@ Argument LINE-TERMINATE-CHAR is used to wrap lines."
           (end-ws nil)
           (above-new-end-ws nil))
       (while iterate
-        ;; could be more efficient?
-        (setq above-new-end-ws
-              (save-excursion
-                (forward-line -1)
-                (goto-char (pos-eol))
-                (skip-syntax-backward "-")
-                (point)))
+        (setq above-new-end-ws (run-stuff--pos-eol-non-ws-prev-line))
         (cond
          ((< above-new-end-ws prev)
           (setq prev above-new-end-ws)

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/meow-edit/meow.git
 
 Updating /mnt/store/melpa/working/meow/
-Checking out 9860a7a218a2a6c2b773b041c2878d314d65a009
+Checking out fb61ce5943d7ad11f4a7350e4b561947bbbaea71
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/meow/
-  to /tmp/meowRRdY5I/meow-20230310.56
+  to /tmp/meowa1vwgk/meow-20230319.311
     meow-beacon.el -> meow-beacon.el
     meow-cheatsheet-layout.el -> meow-cheatsheet-layout.el
     meow-cheatsheet.el -> meow-cheatsheet.el
@@ -24,27 +24,29 @@ Copying files (->) and directories (=>)
     meow-var.el -> meow-var.el
     meow-visual.el -> meow-visual.el
     meow.el -> meow.el
-Created meow-20230310.56.tar containing:
-  meow-20230310.56/
-  meow-20230310.56/meow-beacon.el
-  meow-20230310.56/meow-cheatsheet-layout.el
-  meow-20230310.56/meow-cheatsheet.el
-  meow-20230310.56/meow-command.el
-  meow-20230310.56/meow-core.el
-  meow-20230310.56/meow-esc.el
-  meow-20230310.56/meow-face.el
-  meow-20230310.56/meow-helpers.el
-  meow-20230310.56/meow-keymap.el
-  meow-20230310.56/meow-keypad.el
-  meow-20230310.56/meow-pkg.el
-  meow-20230310.56/meow-shims.el
-  meow-20230310.56/meow-thing.el
-  meow-20230310.56/meow-tutor.el
-  meow-20230310.56/meow-util.el
-  meow-20230310.56/meow-var.el
-  meow-20230310.56/meow-visual.el
-  meow-20230310.56/meow.el
-Built meow in 7.227s, finished at 2023-03-19T02:37:42+0000
+Created meow-20230319.311.tar containing:
+  meow-20230319.311/
+  meow-20230319.311/meow-beacon.el
+  meow-20230319.311/meow-cheatsheet-layout.el
+  meow-20230319.311/meow-cheatsheet.el
+  meow-20230319.311/meow-command.el
+  meow-20230319.311/meow-core.el
+  meow-20230319.311/meow-esc.el
+  meow-20230319.311/meow-face.el
+  meow-20230319.311/meow-helpers.el
+  meow-20230319.311/meow-keymap.el
+  meow-20230319.311/meow-keypad.el
+  meow-20230319.311/meow-pkg.el
+  meow-20230319.311/meow-shims.el
+  meow-20230319.311/meow-thing.el
+  meow-20230319.311/meow-tutor.el
+  meow-20230319.311/meow-util.el
+  meow-20230319.311/meow-var.el
+  meow-20230319.311/meow-visual.el
+  meow-20230319.311/meow.el
+Built meow in 9.072s, finished at 2023-03-19T06:35:20+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  315 Mar 19 02:37 packages/meow-20230310.56.entry
 272K -rw-r--r-- 1 root root 270K Mar 19 02:37 packages/meow-20230310.56.tar
+4.0K -rw-r--r-- 1 root root  316 Mar 19 06:35 packages/meow-20230319.311.entry
+280K -rw-r--r-- 1 root root 280K Mar 19 06:35 packages/meow-20230319.311.tar
