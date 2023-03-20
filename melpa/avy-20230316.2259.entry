@@ -1,11 +1,11 @@
 (avy .
-     [(20220910 1936)
+     [(20230316 2259)
       ((emacs
 	(24 1))
        (cl-lib
 	(0 5)))
       "Jump to arbitrary positions in visible text and select text quickly." single
-      ((:commit . "955c8dedd68c74f3cf692c1249513f048518c4c9")
+      ((:commit . "d9634efe2631b608cb28c420f54d6e6689805cf7")
        (:authors
 	("Oleh Krehel" . "ohwoeowho@gmail.com"))
        (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")

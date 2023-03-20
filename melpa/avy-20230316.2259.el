@@ -4,8 +4,8 @@
 
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
 ;; URL: https://github.com/abo-abo/avy
-;; Package-Version: 20220910.1936
-;; Package-Commit: 955c8dedd68c74f3cf692c1249513f048518c4c9
+;; Package-Version: 20230316.2259
+;; Package-Commit: d9634efe2631b608cb28c420f54d6e6689805cf7
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.1") (cl-lib "0.5"))
 ;; Keywords: point, location
@@ -397,7 +397,7 @@ SEQ-LEN is how many elements of KEYS it takes to identify a match."
 
 (defvar avy-command nil
   "Store the current command symbol.
-E.g. 'avy-goto-line or 'avy-goto-char.")
+E.g. `avy-goto-line' or `avy-goto-char'.")
 
 (defun avy-tree (lst keys)
   "Coerce LST into a balanced tree.
@@ -935,14 +935,14 @@ multiple OVERLAY-FN invocations."
         (null (assoc invisible buffer-invisibility-spec)))))
 
 (defun avy--next-visible-point ()
-  "Return the next closest point without 'invisible property."
+  "Return the next closest point without `invisible' property."
   (let ((s (point)))
     (while (and (not (= (point-max) (setq s (next-char-property-change s))))
                 (not (avy--visible-p s))))
     s))
 
 (defun avy--next-invisible-point ()
-  "Return the next closest point with 'invisible property."
+  "Return the next closest point with `invisible' property."
   (let ((s (point)))
     (while (and (not (= (point-max) (setq s (next-char-property-change s))))
                 (avy--visible-p s)))
@@ -1666,6 +1666,7 @@ When BOTTOM-UP is non-nil, display avy candidates from top to bottom"
 (defvar linum-overlays)
 (defvar linum-format)
 (declare-function linum--face-width "linum")
+(declare-function linum-mode "linum")
 
 (define-minor-mode avy-linum-mode
   "Minor mode that uses avy hints for `linum-mode'."
