@@ -1,0 +1,14 @@
+(magit-annex .
+	     [(20230319 2103)
+	      ((cl-lib
+		(0 3))
+	       (magit
+		(3 0 0)))
+	      "Control git-annex from Magit" single
+	      ((:commit . "f1bf48d79e51805a017e9c1501f4fb3698c3f310")
+	       (:authors
+		("Kyle Meyer" . "kyle@kyleam.com")
+		("Rémi Vanicat" . "vanicat@debian.org"))
+	       (:maintainer "Kyle Meyer" . "kyle@kyleam.com")
+	       (:keywords "vc" "tools")
+	       (:url . "https://github.com/magit/magit-annex"))])

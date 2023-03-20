@@ -1,0 +1,26 @@
+Package: hyperdrive
+Fetcher: sourcehut
+Source:  https://git.sr.ht/~ushin/hyperdrive.el
+
+Cloning https://git.sr.ht/~ushin/hyperdrive.el to /mnt/store/melpa/working/hyperdrive/
+Checking out a360c04e1479aef1a1e05d048901c3a275e75697
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hyperdrive/
+  to /tmp/hyperdrivef7kiWu/hyperdrive-20230318.1142
+    hyperdrive-dir.el -> hyperdrive-dir.el
+    hyperdrive-handlers.el -> hyperdrive-handlers.el
+    hyperdrive-lib.el -> hyperdrive-lib.el
+    hyperdrive-org.el -> hyperdrive-org.el
+    hyperdrive.el -> hyperdrive.el
+Created hyperdrive-20230318.1142.tar containing:
+  hyperdrive-20230318.1142/
+  hyperdrive-20230318.1142/hyperdrive-dir.el
+  hyperdrive-20230318.1142/hyperdrive-handlers.el
+  hyperdrive-20230318.1142/hyperdrive-lib.el
+  hyperdrive-20230318.1142/hyperdrive-org.el
+  hyperdrive-20230318.1142/hyperdrive-pkg.el
+  hyperdrive-20230318.1142/hyperdrive.el
+Built hyperdrive in 3.753s, finished at 2023-03-19T22:09:33+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 462 Mar 19 22:09 packages/hyperdrive-20230318.1142.entry
+ 72K -rw-r--r-- 1 root root 70K Mar 19 22:09 packages/hyperdrive-20230318.1142.tar
