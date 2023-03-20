@@ -2881,6 +2881,20 @@
 		      (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
 		      (:authors
 		       ("Rocky Bernstein" . "rocky@gnu.org")))])
+ (realgud-trepan-xpy .
+		     [(1 0 0)
+		      ((realgud
+			(1 5 0))
+		       (load-relative
+			(1 3 1))
+		       (emacs
+			(25)))
+		      "Realgud front-end to trepan-xpy" tar
+		      ((:url . "http://github.com/rocky/realgud-trepan-xpy")
+		       (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
+		       (:authors
+			("Rocky Bernstein" . "rocky@gnu.org"))
+		       (:commit . "7b3e08006f6232e021a4894e13aada64c3715d78"))])
  (rec-mode .
 	   [(1 9 1)
 	    ((emacs
