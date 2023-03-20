@@ -1,5 +1,5 @@
 (forge .
-       [(20230312 1638)
+       [(20230319 2100)
 	((emacs
 	  (25 1))
 	 (compat
@@ -15,7 +15,7 @@
 	 (let-alist
 	     (1 0 6))
 	 (magit
-	  (20220621))
+	  (20230319))
 	 (markdown-mode
 	  (2 4))
 	 (transient
@@ -23,7 +23,7 @@
 	 (yaml
 	  (0 3 5)))
 	"Access Git forges from Magit." tar
-	((:commit . "ca3cb5226316b65a6ebd78f1ba5583b280dedf96")
+	((:commit . "e82b45fc426ac2542932c63e926f868e535a813f")
 	 (:authors
 	  ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	 (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
