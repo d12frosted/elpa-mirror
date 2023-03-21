@@ -6,8 +6,8 @@
 ;; Maintainer: Peter Prevos <peter@prevos.net>
 ;; Homepage: https://github.com/pprevos/citar-denote
 ;; Version: 1.6
-;; Package-Version: 20230317.939
-;; Package-Commit: 144c725dac814f723b572a1a7e014fbf3e293822
+;; Package-Version: 20230320.2155
+;; Package-Commit: 012048b0946e9a5ac3dcb42b482eb991161c9cca
 ;; Package-Requires: ((emacs "28.1") (citar "1.1") (denote "1.2.0") (dash "2.19.1"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -399,7 +399,7 @@ When `citar-denote-subdir' is non-nil, prompt for a subdirectory."
             (insert (concat ";" references))
             (save-buffer))
         ;; Add new citation keys
-        (progn (citar-denote-add-reference references file-type)
+        (progn (citar-denote-add-reference references)
                (denote-keywords-add (list citar-denote-keyword))
                (save-buffer)))
     (user-error "Buffer is not a Denote file")))
@@ -426,7 +426,7 @@ When `citar-denote-subdir' is non-nil, prompt for a subdirectory."
           ;; Add new line or remove file tags when applicable
           (if (> (length new-citekeys) 0)
               (citar-denote-add-reference
-               (mapconcat 'identity new-citekeys ";") file-type)
+               (mapconcat 'identity new-citekeys ";"))
             (citar-denote-remove-bibkey file))
           (save-buffer))
       (user-error "Buffer is not a Denote file"))))

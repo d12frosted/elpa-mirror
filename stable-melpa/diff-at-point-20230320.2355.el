@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-diff-at-point
-;; Package-Version: 20230319.759
-;; Package-Commit: 8b8c47c2b1946e8bb636f8c459e0cbfa31bd4d04
+;; Package-Version: 20230320.2355
+;; Package-Commit: 0a4815a364b636eadf2f9ca6f468fb5996ff8d6f
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -116,20 +116,29 @@ otherwise return a point in the closest hunk."
              (save-excursion
                (cond
                 ((re-search-forward (concat
-                                     "\\(^\\)"
-                                     ;; Optional, don't capture, ignore.
-                                     ;; Git uses: "diff ..." & "index ..."
-                                     ;; Subversion uses: "Index ..." & "===...".
-                                     ;;
-                                     ;; So use any non-blank line start except for '-' & '+'.
-                                     "\\(?:[^\\-\\+[:blank:]]+.*\n\\)+?"
+                                     "^"
                                      ;; Prefix.
-                                     "---[[:blank:]]+.*\n" ; '--- '
-                                     "\\+\\+\\+[[:blank:]]+.*\n" ; '+++ '
-                                     ;; May have trailing text which can be safely ignored.
-                                     "@@[[:blank:]]+.*[[:blank:]]@@")
+                                     "\\-\\-\\-[[:blank:]]+.*\n" ; '--- '
+                                     "\\+\\+\\+[[:blank:]]+.*\n") ; '+++ '
                                     nil t 1)
-                 (match-beginning 0))
+                 ;; Skip non-diff header.
+                 ;; Git uses: "diff ..." & "index ..."
+                 ;; Subversion uses: "Index ..." & "===...".
+                 ;;
+                 ;; So use any non-blank line start except for '-' & '+'.
+                 ;;
+                 ;; NOTE: this could be part of the REGEXP but in practice it's quite slow!
+                 ;; so search backwards instead.
+                 (let ((pos (match-beginning 0)))
+                   (goto-char pos)
+                   (forward-line -1)
+                   ;; Typically this only runs 1..2 times.
+                   (while (and (looking-at "[^\\-\\+[:blank:]]" t)
+                               (progn
+                                 (setq pos (point))
+                                 ;; Prevent a (highly unlikely) eternal loop.
+                                 (zerop (forward-line -1)))))
+                   pos))
                 (t
                  (point-max))))))
 
