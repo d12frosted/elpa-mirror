@@ -3,38 +3,14 @@ https://hypercore-protocol.org network.
 
 ;; Installation:
 
-;;; Dependencies
+`hyperdrive.el` is available on
+[MELPA](https://melpa.org/#/getting-started). Once you've set up
+MELPA, you can run `M-x package-install` then enter `hyperdrive`.
 
-;;;; hyper-gateway
-
-hyperdrive.el relies on
+`hyperdrive.el` relies on
 [hyper-gateway](https://github.com/RangerMauve/hyper-gateway/) for
 talking to the hypercore network.
-
-Download or compile the hyper-gateway
-(https://github.com/RangerMauve/hyper-gateway/releases) binary and
-ensure that it is executable and in your $PATH.
-
-Ensure that `hyperdrive-hyper-gateway-command' is set to the name
-you gave to the `hyper-gateway` binary.  One way to do this is by
-renaming the binary to `hyper-gateway`, the default value for
-`hyperdrive-hyper-gateway-command'.
-
-;;;; plz.el
-
-hyperdrive.el uses [plz.el](https://github.com/alphapapa/plz.el) for sending HTTP requests to hyper-gateway.
-
-;;;; compat.el
-
-hyperdrive.el relies on [compat.el](https://github.com/emacs-compat/compat) to support Emacs versions prior to Emacs 29.
-
-;;; Manual
-
-Clone this repository:
-
-git clone https://git.sr.ht/~ushin/hyperdrive.el/ ~/.local/src/hyperdrive.el/
-
-Add the following lines to your init.el file:
-
-(add-to-list 'load-path "~/.local/src/hyperdrive.el")
-(require 'hyperdrive)
+[Download](https://github.com/RangerMauve/hyper-gateway/releases)
+or compile the binary then either run it manually or [install it as
+a systemd
+service](https://todo.sr.ht/~ushin/ushin/13#event-229700).
