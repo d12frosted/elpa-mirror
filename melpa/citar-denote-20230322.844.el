@@ -6,8 +6,8 @@
 ;; Maintainer: Peter Prevos <peter@prevos.net>
 ;; Homepage: https://github.com/pprevos/citar-denote
 ;; Version: 1.6
-;; Package-Version: 20230322.738
-;; Package-Commit: 756682bcaeeb28bfcdfddbcfe91de8bc28147f73
+;; Package-Version: 20230322.844
+;; Package-Commit: 8b741f7b29d95cc98dcbec5afdcb88fd14a537fd
 ;; Package-Requires: ((emacs "28.1") (citar "1.1") (denote "1.2.0") (dash "2.19.1"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -260,9 +260,6 @@ See documentation for `citar-has-notes'."
      (delete citar-denote-keyword keywords)
      file-type)
     (denote-rename-file-using-front-matter file t)))
-
-(citar-denote-extract-citations)
-
 
 (defun citar-denote-extract-citations ()
   "Extract citations from all Denote files."

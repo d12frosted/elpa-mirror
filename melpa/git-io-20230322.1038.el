@@ -1,11 +1,11 @@
-;;; git-io.el --- git.io integration                     -*- lexical-binding: t; -*-
+;;; git-io.el --- Integration for git.io URL shortening in buffer  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018  Tejas Bubane
 
 ;; Author: Tejas Bubane <tejasbubane@gmail.com>
 ;; URL: https://github.com/tejasbubane/emacs-git-io
-;; Package-Version: 20180317.1752
-;; Package-Commit: 48753acba73b48b997bb678fb5e2a938ae63b5d6
+;; Package-Version: 20230322.1038
+;; Package-Commit: fb25f9432e6454edd621a7512ee7abc6220151a5
 ;; Keywords: convenience files
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24.4"))
@@ -53,7 +53,7 @@
   (string-trim (buffer-string)))
 
 (defun git-io-shorten-url (input-url)
-  "Make a form-post request to git.io with the given URL."
+  "Argument INPUT-URL URL to shorten."
   (let ((gitio-url "https://git.io")
         (url-request-method "POST")
         (url-request-extra-headers

@@ -6,8 +6,8 @@
 ;; Maintainer: Bruce D'Arcus <bdarcus@gmail.com>
 ;; Created: May 22, 2022
 ;; Version: 0.4.0
-;; Package-Version: 20230319.1845
-;; Package-Commit: 5dc976c113225254a2b4118d20b8a7d0e1ed9f48
+;; Package-Version: 20230322.1106
+;; Package-Commit: 1762245d1e18680b6c06786731e7abbdece0ed29
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; SPDX-FileCopyrightText: 2022 Bruce D'Arcus
 ;; Homepage: https://github.com/emacs-citar/citar-org-roam
@@ -35,13 +35,6 @@
   :group 'citar-org-roam
   :type 'string)
 
-(defcustom citar-org-roam-note-title-template
-  "${author editor} :: ${title}"
-  "The citar template to use for formatting new note titles."
-  :group 'citar
-  :group 'citar-org-roam
-  :type 'string)
-
 (defcustom citar-org-roam-capture-template-key
   nil
   "When non-nil, use capture template associated with the key.
@@ -50,8 +43,8 @@
 associated with the key in `org-roam-capture-templates'.
 
 When nil (the default), the template will create an org file in
-`citar-org-roam-subdir' named after the citekey with
-`citar-org-roam-note-title-template' as the format of its title."
+`citar-org-roam-subdir' named after the citekey with using the
+title of the entry as the org title."
   :group 'citar
   :group 'citar-org-roam
   :type 'string)
@@ -186,11 +179,17 @@ space."
 (defun citar-org-roam--create-capture-note (citekey entry)
   "Open or create org-roam node for CITEKEY and ENTRY."
   ;; adapted from https://jethrokuan.github.io/org-roam-guide/#orgc48eb0d
-  (let ((title (citar-format--entry
-                citar-org-roam-note-title-template entry))
-        (key citar-org-roam-capture-template-key))
+  (let ((title (citar-get-value "title" entry))
+        (key citar-org-roam-capture-template-key)
+        (author (or (citar-get-value "author" entry)
+                    (citar-get-value "editor" entry)))
+        (type (citar-get-value "=type=" entry))
+        (pages (citar-get-value "pages" entry))
+        (year (or (citar-get-value "year" entry)
+                  (citar-get-value "date" entry)
+                  (citar-get-value "issued" entry))))
     (apply 'org-roam-capture-
-           :info (list :citekey citekey)
+           :info (list :citekey citekey :author author :type type :pages pages :year year)
            :node (org-roam-node-create :title title)
            :props '(:finalize find-file)
            (if key
