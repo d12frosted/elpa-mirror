@@ -1650,7 +1650,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20230209 92406)
+	      [(1 0 20230321 113335)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
@@ -1885,7 +1885,7 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 2 0)
+	[(1 2 1)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
@@ -1894,7 +1894,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:authors
 	   ("Random User"))
-	  (:commit . "089d9f33db9e34512352b1344627cdb20b967409"))])
+	  (:commit . "0519eb16ad618880fbc9cfd272ebb13e2ceab619"))])
  (sweeprolog .
 	     [(0 17 0)
 	      ((emacs
