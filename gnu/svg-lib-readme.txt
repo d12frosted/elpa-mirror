@@ -1,11 +1,3 @@
-Table of Contents
-─────────────────
-
-1. SVG Library
-2. Installation
-3. Usage example
-
-
 1 SVG Library
 ═════════════
 

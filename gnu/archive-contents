@@ -2882,7 +2882,7 @@
 		      (:authors
 		       ("Rocky Bernstein" . "rocky@gnu.org")))])
  (realgud-trepan-xpy .
-		     [(1 0 0)
+		     [(1 0 1)
 		      ((realgud
 			(1 5 0))
 		       (load-relative
@@ -2890,11 +2890,11 @@
 		       (emacs
 			(25)))
 		      "Realgud front-end to trepan-xpy" tar
-		      ((:url . "http://github.com/rocky/realgud-trepan-xpy")
+		      ((:url . "https://github.com/realgud/realgud-trepan-xpy")
 		       (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
 		       (:authors
 			("Rocky Bernstein" . "rocky@gnu.org"))
-		       (:commit . "7b3e08006f6232e021a4894e13aada64c3715d78"))])
+		       (:commit . "f758f48266d90775643454e72214e40a4ed320b8"))])
  (rec-mode .
 	   [(1 9 1)
 	    ((emacs
@@ -3311,14 +3311,14 @@
 	       ("Ulf Jasper" . "ulf.jasper@web.de"))
 	      (:maintainer "Ulf Jasper" . "ulf.jasper@web.de"))])
  (svg-lib .
-	  [(0 2 5)
+	  [(0 2 6)
 	   ((emacs
 	     (27 1)))
 	   "SVG tags, progress bars & icons" tar
 	   ((:url . "https://github.com/rougier/svg-lib")
 	    (:keywords "svg" "icons" "tags" "convenience")
 	    (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-	    (:commit . "0486c9453449771bc3f5872f70bc5cb23580d0f4"))])
+	    (:commit . "5ba4e4ea2b5c66e8811beb53251dee13685b2cb2"))])
  (svg-tag-mode .
 	       [(0 3 2)
 		((emacs
