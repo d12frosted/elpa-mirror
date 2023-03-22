@@ -7,8 +7,8 @@
 ;; Created: 30 August 2022
 
 ;; Version: 1.0.7
-;; Package-Version: 20230316.202
-;; Package-Commit: 4d4f85707e6ba6dd1a58a4e771a9698b3964ba56
+;; Package-Version: 20230321.2150
+;; Package-Commit: 68381ff8c63fd838637e60e36973f021a11897c5
 ;; SPDX-License-Identifier:  GPL-3.0
 ;; Package-requires: ((emacs "27.1"))
 
@@ -24,7 +24,7 @@
 ;;
 ;;    - Impact_Label (https://www.fontsquirrel.com/fonts/download/impact-label)
 ;;    - texlive-fonts-extra
-;;    - texlive-sourcecodepro
+;;    - texlive-sourcecodepro.
 ;;    - fonts-purisa || thai-scalable-purisa-fonts
 ;;    - fonts-dancingscript
 ;;
@@ -58,13 +58,11 @@
      (my-white              "#FFFFFF" ))
 
 ;; Theme Faces
-;; ========================================
-
   (custom-theme-set-faces
     'melancholy
 
- ;; default
- ;; ========================================
+    ;; default
+    ;; ========================================
 
     `(default ((t (
                    :family ,font-mono
@@ -78,8 +76,7 @@
                    :strike-through nil
                    :box nil
                    :inverse-video nil
-                   :stipple nil
-                   :inherit nil ))))
+                   :stipple nil ))))
 
     ;; window and frame settings
     ;; ========================================
@@ -167,6 +164,16 @@
     `(dired-faces ((t (:family ,font-mono ))))
     `(dired-header ((t (:family ,font-mono :foreground ,my-pop ))))
     `(dired-directory-face ((t (:family ,font-mono ))))
+
+    ;; erc
+    ;; ========================================
+    `(erc-current-nick-face ((t (:foreground ,my-highlight ))))
+    `(erc-error-face ((t (:foreground ,my-warning ))))
+    `(erc-input-face ((t (:foreground ,my-visited ))))
+    `(erc-nick-default-face ((t (:family ,font-mono :foreground ,my-visited ))))
+    `(erc-nick-message-face ((t (:foreground ,my-pop ))))
+    `(erc-notice-face ((t (:foreground ,my-visited ))))
+    `(erc-timestamp-face ((t (:foreground ,my-highlight ))))
 
     ;; flycheck
     ;; ========================================

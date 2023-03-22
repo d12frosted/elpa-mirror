@@ -4,7 +4,7 @@ https://hypercore-protocol.org network.
 ;; Installation:
 
 `hyperdrive.el` is available on
-[MELPA](https://melpa.org/#/getting-started). Once you've set up
+[MELPA](https://melpa.org/#/getting-started).  Once you've set up
 MELPA, you can run `M-x package-install` then enter `hyperdrive`.
 
 `hyperdrive.el` relies on

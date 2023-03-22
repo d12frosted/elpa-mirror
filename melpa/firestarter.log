@@ -3,8 +3,11 @@ Fetcher: git
 Source:  https://depp.brause.cc/firestarter.git
 
 Updating /mnt/store/melpa/working/firestarter/
-Checking out 76070c9074aa363350abe6ad06143e90b3e12ab1
-Built firestarter in 5.115s, finished at 2023-03-21T21:08:05+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.3K Mar 21 21:08 packages/firestarter-20210508.1626.el
-4.0K -rw-r--r-- 1 root root  400 Mar 21 21:08 packages/firestarter-20210508.1626.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://depp.brause.cc/firestarter.git/': Failed to connect to depp.brause.cc port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

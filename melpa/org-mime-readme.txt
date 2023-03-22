@@ -13,7 +13,7 @@ encoding.
 
 `org-mime-org-subtree-htmlize' is similar to `org-mime-org-buffer-htmlize'
 but works on current subtree.  It can read following subtree properties:
-MAIL_SUBJECT, MAIL_TO, MAIL_FROM, MAIL_CC, and MAIL_BCC.
+MAIL_SUBJECT, MAIL_TO, MAIL_FROM, MAIL_CC, and MAIL_BCC. MAIL_IN_REPLY_TO
 
 Here is the sample of a subtree:
 * mail one
@@ -23,6 +23,7 @@ Here is the sample of a subtree:
   :MAIL_FROM: sender@gmail.com
   :MAIL_CC: person2@gmail.com
   :MAIL_BCC: person3@gmail.com
+  :MAIL_IN_REPLY_TO: <MESSAGE_ID>
   :END:
 
 To avoid exporting the table of contents, you can setup

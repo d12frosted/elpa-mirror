@@ -3,8 +3,11 @@ Fetcher: git
 Source:  https://depp.brause.cc/nov.el.git
 
 Updating /mnt/store/melpa/working/nov/
-Checking out cb5f45cbcfbcf263cdeb2d263eb15edefc8b07cb
-Built nov in 6.223s, finished at 2023-03-21T21:40:04+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 37K Mar 21 21:40 packages/nov-20220805.2031.el
-4.0K -rw-r--r-- 1 root root 415 Mar 21 21:40 packages/nov-20220805.2031.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://depp.brause.cc/nov.el.git/': Failed to connect to depp.brause.cc port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
