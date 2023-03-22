@@ -3,11 +3,8 @@ Fetcher: git
 Source:  https://depp.brause.cc/gotham-theme.git
 
 Updating /mnt/store/melpa/working/gotham-theme/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://depp.brause.cc/gotham-theme.git/': Failed to connect to depp.brause.cc port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 4b8214df0851bb69b44c3e864568b7e0030a95d2
+Built gotham-theme in 5.099s, finished at 2023-03-22T05:11:06+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 46K Mar 22 05:11 packages/gotham-theme-20220107.1730.el
+4.0K -rw-r--r-- 1 root root 353 Mar 22 05:11 packages/gotham-theme-20220107.1730.entry

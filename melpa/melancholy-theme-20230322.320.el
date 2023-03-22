@@ -7,8 +7,8 @@
 ;; Created: 30 August 2022
 
 ;; Version: 1.0.7
-;; Package-Version: 20230321.2150
-;; Package-Commit: 68381ff8c63fd838637e60e36973f021a11897c5
+;; Package-Version: 20230322.320
+;; Package-Commit: 380f7fb5a62781412b5808f3a15aeb3c88295b5f
 ;; SPDX-License-Identifier:  GPL-3.0
 ;; Package-requires: ((emacs "27.1"))
 
@@ -168,9 +168,10 @@
     ;; erc
     ;; ========================================
     `(erc-current-nick-face ((t (:foreground ,my-highlight ))))
+    `(erc-default-face ((t (:foreground ,my-white ))))
     `(erc-error-face ((t (:foreground ,my-warning ))))
-    `(erc-input-face ((t (:foreground ,my-visited ))))
-    `(erc-nick-default-face ((t (:family ,font-mono :foreground ,my-visited ))))
+    `(erc-input-face ((t (:foreground ,my-pop ))))
+    `(erc-nick-default-face ((t (:family ,font-mono :foreground ,my-info ))))
     `(erc-nick-message-face ((t (:foreground ,my-pop ))))
     `(erc-notice-face ((t (:foreground ,my-visited ))))
     `(erc-timestamp-face ((t (:foreground ,my-highlight ))))
