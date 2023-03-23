@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/md-arif-shaikh/soccer.git
 
 Updating /mnt/store/melpa/working/soccer/
-Checking out 49d0db4f6274f1bd39c58255be069f79e310f465
+Checking out aa7421aac10e528a904b29701be1bf26efae9d32
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/soccer/
-  to /tmp/soccer8UKVc6/soccer-20221127.1534
+  to /tmp/soccerMQBw2T/soccer-20230323.911
     soccer-leagues.el -> soccer-leagues.el
     soccer-time.el -> soccer-time.el
     soccer.el -> soccer.el
-Created soccer-20221127.1534.tar containing:
-  soccer-20221127.1534/
-  soccer-20221127.1534/soccer-leagues.el
-  soccer-20221127.1534/soccer-pkg.el
-  soccer-20221127.1534/soccer-time.el
-  soccer-20221127.1534/soccer.el
-Built soccer in 4.510s, finished at 2023-03-23T05:29:18+0000
+Created soccer-20230323.911.tar containing:
+  soccer-20230323.911/
+  soccer-20230323.911/soccer-leagues.el
+  soccer-20230323.911/soccer-pkg.el
+  soccer-20230323.911/soccer-time.el
+  soccer-20230323.911/soccer.el
+Built soccer in 5.020s, finished at 2023-03-23T09:24:27+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 414 Mar 23 05:29 packages/soccer-20221127.1534.entry
  52K -rw-r--r-- 1 root root 50K Mar 23 05:29 packages/soccer-20221127.1534.tar
+4.0K -rw-r--r-- 1 root root 413 Mar 23 09:24 packages/soccer-20230323.911.entry
+ 52K -rw-r--r-- 1 root root 50K Mar 23 09:24 packages/soccer-20230323.911.tar

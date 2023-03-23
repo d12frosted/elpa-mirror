@@ -11,7 +11,9 @@ Do something like the following to set this up:
 The default icons are:
 (defvar celestial-mode-line-phase-representation-alist '((0 . "○") (1 . "☽") (2 . "●") (3 . "☾")))
 (defvar celestial-mode-line-sunrise-sunset-alist '((sunrise . "☀↑") (sunset . "☀↓")))
+(defvar celestial-mode-line-polar-representation "θ∼")
 
 You can get text-only icons as follows:
 (defvar celestial-mode-line-phase-representation-alist '((0 . "( )") (1 . "|)") (2 . "(o)") (3 . "|)")))
 (defvar celestial-mode-line-sunrise-sunset-alist '((sunrise . "*^") (sunset . "*v")))
+(defvar celestial-mode-line-polar-representation "(-)∼")
