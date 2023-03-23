@@ -946,7 +946,7 @@
 	       ("Bozhidar Batsov"))
 	      (:keywords "convenience"))])
  (haml-mode .
-	    [(3 1 10)
+	    [(3 2 1)
 	     ((emacs
 	       (24))
 	      (cl-lib
@@ -956,7 +956,8 @@
 	      (:keywords "markup" "languages" "html")
 	      (:maintainer "Natalie Weizenbaum")
 	      (:authors
-	       ("Natalie Weizenbaum")))])
+	       ("Natalie Weizenbaum"))
+	      (:commit . "45a0b23db0b8f827c78f7749457f3427263e6ffd"))])
  (haskell-mode .
 	       [(17 2)
 		nil "A Haskell editing mode" tar
@@ -2215,7 +2216,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(23 3 20230321231338)
+	       [(23 4 20230322111913)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -2224,7 +2225,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "e5732568605adeabc7216811e59dfcfbd8e4134a"))])
+		 (:commit . "e7408e5b607d9214e83b2d408fe0833a01914ba2"))])
  (xkcd .
        [(1 1)
 	((json
