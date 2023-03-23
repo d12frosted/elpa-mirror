@@ -2,8 +2,8 @@
 
 ;; Author: ncaq <ncaq@ncaq.net>
 ;; Version: 1.1.0
-;; Package-Version: 20220421.1147
-;; Package-Commit: 39cb574a4b5ec74ad62857320bf5fec58abe876f
+;; Package-Version: 20230323.650
+;; Package-Commit: 7ee72f31e762e225595e330c6108f3a69dbb0187
 ;; Package-Requires: ((emacs "26.1")(f "0.19.0"))
 ;; URL: https://github.com/ncaq/auto-sudoedit
 
@@ -106,6 +106,7 @@ Reopen the buffer via tramp with sudo method."
            curr-path
            user
            tramp-path
+           (not (and (tramp-tramp-file-p curr-path) (tramp-sh-handle-file-writable-p curr-path)))
            (or
             (not auto-sudoedit-ask)
             (y-or-n-p (format "This buffer belongs to user %s.  Reopen this buffer as user %s? " user user))))

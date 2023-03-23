@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/helpful
-;; Package-Version: 20221209.1743
-;; Package-Commit: 94c25337b2de2f9da60914a7c0c6cca9584c0231
+;; Package-Version: 20230323.414
+;; Package-Commit: e9ec6fc2ae10db2b9b59ed656021845d11881a0a
 ;; Keywords: help, lisp
 ;; Version: 0.20
 ;; Package-Requires: ((emacs "25") (dash "2.18.0") (s "1.11.0") (f "0.20.0") (elisp-refs "1.2"))
@@ -2950,6 +2950,10 @@ See also `helpful-max-buffers'."
 (defvar helpful-mode-map
   (let* ((map (make-sparse-keymap)))
     (define-key map (kbd "g") #'helpful-update)
+    (define-key map [remap revert-buffer] #'helpful-update)
+    (when (fboundp 'revert-buffer-quick)
+      (define-key map [remap revert-buffer-quick] #'helpful-update))
+
     (define-key map (kbd "RET") #'helpful-visit-reference)
 
     (define-key map (kbd "TAB") #'forward-button)
