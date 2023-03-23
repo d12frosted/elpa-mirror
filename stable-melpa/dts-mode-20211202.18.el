@@ -3,8 +3,6 @@
 ;; Copyright (C) 2014  Ben Gamari
 
 ;; Version: 0.1.0
-;; Package-Version: 20211202.18
-;; Package-Commit: 32517e7eeeccc785b7c669fd5e93c5df45597ef1
 ;; Author: Ben Gamari <ben@smart-cactus.org>
 ;; Keywords: languages
 
