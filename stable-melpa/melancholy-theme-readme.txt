@@ -1,5 +1,5 @@
 ========================================
-A dark theme thats pretty sad really.  > Emacs 27.1
+A dark theme that's pretty sad really.  > Emacs 27.1
 
 Ensure the following fonts are installed before use:
 
