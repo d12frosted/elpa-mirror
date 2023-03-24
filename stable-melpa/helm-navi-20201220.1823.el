@@ -2,8 +2,6 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Url: http://github.com/emacs-helm/helm-navi
-;; Package-Version: 20201220.1823
-;; Package-Commit: c5666cc171288d1fa892900ee66fba2a1c892c81
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "24.4") (helm "1.9.4") (helm-org "1.0") (navi-mode "2.0") (s "1.10.0"))
 ;; Keywords: navigation, outlines
