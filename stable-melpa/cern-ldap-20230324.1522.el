@@ -4,8 +4,8 @@
 
 ;; Author: Nacho Barrientos <nacho.barrientos@cern.ch>
 ;; Keywords: tools, convenience
-;; Package-Version: 20230323.1244
-;; Package-Commit: a576f1042cc4fe708bd95314eae75c14531d3dd3
+;; Package-Version: 20230324.1522
+;; Package-Commit: c85a2e6735d030db978e0e1338ecf077873d1d9c
 ;; URL: https://git.sr.ht/~nbarrientos/cern-ldap.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.0.1
@@ -159,6 +159,33 @@ by the regular expression defined in
     (cern-ldap-user-by-login arg login)))
 
 ;;;###autoload
+(defun cern-ldap-user-by-location-dwim (arg)
+  "Look-up primary accounts by location in the active region and more.
+
+If the region is not active and point is at the beginning of a
+line starting with `cern-ldap-user-lookup-location-key' then extract the
+location from the value of the field.
+
+See `cern-ldap-user-by-login-dwim' for instructions on how to
+control how the results are displayed/filtered using ARG."
+  (interactive "P")
+  (and-let* ((location (cond ((use-region-p)
+                              (buffer-substring-no-properties
+                               (region-beginning) (region-end)))
+                             ((looking-at cern-ldap-user-lookup-location-key)
+                              (buffer-substring-no-properties
+                               (line-beginning-position) (line-end-position)))))
+             (match (string-match
+                     (format
+                      "^\\(?:%s:\\)?\\([0-9]+\\) \\([0-9]+\\)-\\([0-9]+\\)"
+                      cern-ldap-user-lookup-location-key)
+                     location))
+             (building (string-to-number (match-string 1 location)))
+             (floor (string-to-number (match-string 2 location)))
+             (room (string-to-number (match-string 3 location))))
+    (cern-ldap-user-by-location arg building floor room)))
+
+;;;###autoload
 (defun cern-ldap-user-by-full-name-dwim (arg)
   "Look-up account by full name in the active region.
 
@@ -181,6 +208,7 @@ how the results are displayed/filtered using ARG."
    arg
    (concat cern-ldap-user-lookup-login-key "=" login)))
 
+;;;###autoload
 (defun cern-ldap-user-by-location (arg building floor room)
   "Look-up primary user accounts in a given physical location in LDAP.
 

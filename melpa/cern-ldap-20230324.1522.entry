@@ -1,9 +1,9 @@
 (cern-ldap .
-	   [(20230323 1244)
+	   [(20230324 1522)
 	    ((emacs
 	      (27 1)))
 	    "Library to interact with CERN's LDAP servers" single
-	    ((:commit . "a576f1042cc4fe708bd95314eae75c14531d3dd3")
+	    ((:commit . "c85a2e6735d030db978e0e1338ecf077873d1d9c")
 	     (:authors
 	      ("Nacho Barrientos" . "nacho.barrientos@cern.ch"))
 	     (:maintainer "Nacho Barrientos" . "nacho.barrientos@cern.ch")
