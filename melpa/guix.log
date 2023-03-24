@@ -4,10 +4,8 @@ Source:  https://git.savannah.gnu.org/git/guix/emacs-guix.git
 
 Updating /mnt/store/melpa/working/guix/
 
-Command '' exited with non-zero exit-code: 1
+Command '' exited with non-zero exit-code: 128
 
-Fetching origin
-fatal: unable to access 'https://git.savannah.gnu.org/git/guix/emacs-guix.git/': Could not resolve host: git.savannah.gnu.org
-error: Could not fetch origin
+fatal: unable to access 'https://git.savannah.gnu.org/git/guix/emacs-guix.git/': Couldn't connect to server
 
-Command exited with non-zero exit-code: 1
+Command exited with non-zero exit-code: 128
