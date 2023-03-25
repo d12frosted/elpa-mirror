@@ -4,8 +4,8 @@
 
 ;; Author: Nacho Barrientos <nacho.barrientos@cern.ch>
 ;; Keywords: tools, convenience
-;; Package-Version: 20230324.1522
-;; Package-Commit: c85a2e6735d030db978e0e1338ecf077873d1d9c
+;; Package-Version: 20230325.843
+;; Package-Commit: ebb546221eed36616669ea4e42d35aa8b167202c
 ;; URL: https://git.sr.ht/~nbarrientos/cern-ldap.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.0.1
@@ -162,24 +162,24 @@ by the regular expression defined in
 (defun cern-ldap-user-by-location-dwim (arg)
   "Look-up primary accounts by location in the active region and more.
 
-If the region is not active and point is at the beginning of a
-line starting with `cern-ldap-user-lookup-location-key' then extract the
-location from the value of the field.
+If the region is not active and point is at any position of a
+line starting with `cern-ldap-user-lookup-location-key' then
+extract the location from the value of the field.
 
 See `cern-ldap-user-by-login-dwim' for instructions on how to
 control how the results are displayed/filtered using ARG."
   (interactive "P")
-  (and-let* ((location (cond ((use-region-p)
-                              (buffer-substring-no-properties
-                               (region-beginning) (region-end)))
-                             ((looking-at cern-ldap-user-lookup-location-key)
-                              (buffer-substring-no-properties
-                               (line-beginning-position) (line-end-position)))))
-             (match (string-match
-                     (format
-                      "^\\(?:%s:\\)?\\([0-9]+\\) \\([0-9]+\\)-\\([0-9]+\\)"
-                      cern-ldap-user-lookup-location-key)
-                     location))
+  (and-let* ((location
+              (cond ((use-region-p)
+                     (buffer-substring-no-properties
+                      (region-beginning) (region-end)))
+                    ((save-excursion
+                       (goto-char (line-beginning-position))
+                       (looking-at cern-ldap-user-lookup-location-key))
+                     (buffer-substring-no-properties
+                      (line-beginning-position) (line-end-position)))))
+             (match
+              (string-match "\\([0-9]+\\) \\([0-9]+\\)-\\([0-9]+\\)$" location))
              (building (string-to-number (match-string 1 location)))
              (floor (string-to-number (match-string 2 location)))
              (room (string-to-number (match-string 3 location))))

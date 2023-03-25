@@ -1,13 +1,13 @@
 ;;; flycheck-guile.el --- A Flycheck checker for GNU Guile -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2019  Ricardo Wurmus <rekado@elephly.net>
-;; Copyright (C) 2020  Free Software Foundation, Inc
+;; Copyright (C) 2020, 2022, 2023  Free Software Foundation, Inc
 
 ;; Author: Ricardo Wurmus <rekado@elephly.net>
-;; Maintainer: Andrew Whatson <whatson@gmail.com>
-;; Version: 0.1
-;; Package-Version: 20220831.453
-;; Package-Commit: e58ceb8b511cd395b9be69f4a1ff85305fbb51c3
+;; Maintainer: Andrew Whatson <whatson@tailcall.au>
+;; Version: 0.5
+;; Package-Version: 20230322.1348
+;; Package-Commit: 16c869ec2212dfaeb98f31710667199e4d702515
 ;; URL: https://github.com/flatwhatson/flycheck-guile
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.22") (geiser "0.20"))
 
@@ -45,10 +45,11 @@
   :link '(url-link :tag "Github" "https://github.com/flatwhatson/flycheck-guile"))
 
 (defconst flycheck-guile--warning-specs
-  ;; current warnings for GNU Guile 3.0.8
+  ;; current warnings for GNU Guile 3.0.9-16-ge334e5958
   '(("unsupported-warning"         nil  "warn about unknown warning types")
     ("unused-variable"             nil  "report unused variables")
     ("unused-toplevel"             nil  "report unused local top-level variables")
+    ("unused-module"               nil  "report unused modules")
     ("shadowed-toplevel"           nil  "report shadowed top-level variables")
     ("unbound-variable"            t    "report possibly unbound variables")
     ("macro-use-before-definition" t    "report possibly mis-use of macros before they are defined")
@@ -113,6 +114,22 @@ The list of supported warning types can be found by running
                      geiser-repl-add-project-paths)))
     nil))
 
+(defun flycheck-guile--filter-errors (errors)
+  "Fix up ERRORS before passing them to flycheck."
+  (seq-do (lambda (err)
+            ;; errors without a line are on line 0
+            ;; see `flycheck-fill-empty-line-numbers'
+            (unless (flycheck-error-line err)
+              (setf (flycheck-error-line err) 0))
+            ;; flycheck wants 1-based columns, guile gives 0-based
+            ;; see `flycheck-increment-error-columns'
+            (when (flycheck-error-column err)
+              (cl-incf (flycheck-error-column err) 1))
+            (when (flycheck-error-end-column err)
+              (cl-incf (flycheck-error-end-column err) 1)))
+          errors)
+  errors)
+
 (flycheck-define-checker guile
   "A GNU Guile syntax checker using `guild compile'."
   :command ("guild" "compile" "-O0"
@@ -122,11 +139,13 @@ The list of supported warning types can be found by running
             source)
   :predicate
   (lambda ()
-    (and (boundp 'geiser-impl--implementation)
-         (eq geiser-impl--implementation 'guile)))
+    (and (bound-and-true-p geiser-mode)
+         (eq (bound-and-true-p geiser-impl--implementation)
+             'guile)))
   :verify
   (lambda (_checker)
-    (let ((geiser-impl (bound-and-true-p geiser-impl--implementation)))
+    (let ((geiser-impl (and (bound-and-true-p geiser-mode)
+                            (bound-and-true-p geiser-impl--implementation))))
       (list
        (flycheck-verification-result-new
         :label "Geiser Implementation"
@@ -137,7 +156,7 @@ The list of supported warning types can be found by running
         :face (cond
                ((or (eq geiser-impl 'guile)) 'success)
                (t '(bold error)))))))
-  :error-filter flycheck-fill-empty-line-numbers
+  :error-filter flycheck-guile--filter-errors
   :error-patterns
   ((warning
     line-start
