@@ -2,8 +2,8 @@
 
 ;; Author: Doug MacEachern
 ;; URL: https://github.com/dougm/bats-mode
-;; Package-Version: 20160514.615
-;; Package-Commit: d519f7c89f5ae17dfc33400596df4564b478315f
+;; Package-Version: 20230325.7
+;; Package-Commit: fa88930b1baba101ae6474f289a239a236a7d19f
 ;; Version: 0.1.0
 ;; Keywords: bats, tests
 
@@ -81,9 +81,10 @@ See URL `https://github.com/sstephenson/bats'.
 (defun bats-run (file &optional name)
   "Run bats -t FILE.
 NAME if given is used as the bats test pattern."
-  (let ((cmd (concat bats-program " -t " file)))
-    (compile (if name (concat (format "BATS_TEST_PATTERN='^%s$' " name) cmd)
-               cmd))))
+  (let ((cmd (concat bats-program
+                     (when name (format " -f '^%s$'" name))
+                     " -t " file)))
+    (compile cmd)))
 
 (defun bats-run-current-test ()
   "Run bats with the current test at point."

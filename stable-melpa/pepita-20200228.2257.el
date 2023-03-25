@@ -4,6 +4,8 @@
 ;;
 ;; Author: Sebastian Monia <smonia@outlook.com>
 ;; URL: https://github.com/sebasmonia/pepita.git
+;; Package-Version: 20200228.2257
+;; Package-Commit: 263d6d940d7e4203bbecda46dbaa89b7af1db54f
 ;; Package-Requires: ((emacs "25") (csv "2.1"))
 ;; Version: 1.0
 ;; Keywords: tools convenience matching
