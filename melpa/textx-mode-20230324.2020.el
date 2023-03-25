@@ -4,8 +4,8 @@
 
 ;; Author: Novak Boškov <gnovak.boskov@gmail.com>
 ;; URL: https://github.com/novakboskov/textx-mode
-;; Package-Version: 20170516.911
-;; Package-Commit: 72f9f0c5855b382024f0da8f56833c22a70a5cb3
+;; Package-Version: 20230324.2020
+;; Package-Commit: ecf90abec508cfd82d5da68474e976be907d9a77
 ;; Keywords: textx
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.3"))
@@ -44,8 +44,13 @@
 (defconst textx-mode-syntax-table
   (let ((table (make-syntax-table)))
     (modify-syntax-entry ?_ "w" table)
-    (modify-syntax-entry ?/ ". 124" table)
+    (modify-syntax-entry ?/ "\" 124" table)
     (modify-syntax-entry ?* ". 23b" table)
+    (modify-syntax-entry ?| "." table)
+    (modify-syntax-entry ?: "." table)
+    (modify-syntax-entry ?= "." table)
+    (modify-syntax-entry ?? "." table)
+    (modify-syntax-entry ?+ "." table)
     (modify-syntax-entry ?\n ">" table)
     (modify-syntax-entry ?' "\"" table)
     (modify-syntax-entry ?\" "\"" table)

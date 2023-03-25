@@ -227,28 +227,6 @@ skip-syntax-forward and skip-syntax-backward.
     In general, A?, where A matches the empty string, can be
     simplified to just A.
 
-  - Ineffective string escape '\X'
-
-    A backslash precedes a character that does not need escaping in a
-    string literal (any string, not just regexps), like in "hot\-dog".
-
-    If the backslash should be part of the string then it probably
-    needs to be doubled; otherwise, it is pointless and should be
-    removed to avoid confusion.
-
-    In Emacs versions older than 27.1, a left round or square bracket,
-    '(' or '[', at the very start of a line in a multi-line string
-    could sometimes fool the Emacs-Lisp mode into believing it to be
-    the start of a function, thus people sometimes precede such
-    brackets with an otherwise unnecessary backslash. However, there
-    is usually no reason to put backslashes before brackets in strings
-    in general.
-
-  - Suspect range '+-X' or 'X-+'
-
-    A character range with '+' as one of its endpoints is more often an
-    incorrect attempt to include both '+' and '-' in the set.
-
   - Unnecessarily escaped 'X'
 
     A character is backslash-escaped in a skip set despite not being
@@ -323,6 +301,35 @@ skip-syntax-forward and skip-syntax-backward.
 
     A string argument to skip-syntax-forward or skip-syntax-backward
     is empty or "^", neither of which makes sense.
+
+  - Ineffective string escape '\X'
+
+    A backslash precedes a character that does not need escaping in a
+    string literal (any string, not just regexps), like in "hot\-dog".
+
+    If the backslash should be part of the string then it probably
+    needs to be doubled; otherwise, it is pointless and should be
+    removed to avoid confusion.
+
+    In Emacs versions older than 27.1, a left round or square bracket,
+    '(' or '[', at the very start of a line in a multi-line string
+    could sometimes fool the Emacs-Lisp mode into believing it to be
+    the start of a function, thus people sometimes precede such
+    brackets with an otherwise unnecessary backslash. However, there
+    is usually no reason to put backslashes before brackets in strings
+    in general.
+
+  - Character escape '\x' not followed by hex digit
+
+    In Emacs versions older than 30.1, a hex escape without any actual
+    hex digits, as in "\x", was silently accepted as a null byte which
+    is not what anyone would expect. If the backslash should be
+    included in the string, double it as usual.
+
+  - Suspect range '+-X' or 'X-+'
+
+    A character range with '+' as one of its endpoints is more often an
+    incorrect attempt to include both '+' and '-' in the set.
 
 
 * Suppressing diagnostics

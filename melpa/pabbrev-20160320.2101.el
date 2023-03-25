@@ -5,8 +5,6 @@
 ;; Author: Phillip Lord <phillip.lord@newcastle.ac.uk>
 ;; Maintainer: Phillip Lord <phillip.lord@newcastle.ac.uk>
 ;; Version: 4.2.1
-;; Package-Version: 20160320.2101
-;; Package-Commit: 56400d5d256b42ffe45c229ea9827f026b650cf5
 
 ;; The contents of this file are subject to the GPL License, Version 3.0.
 ;;
