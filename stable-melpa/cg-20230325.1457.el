@@ -4,8 +4,8 @@
 
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
 ;; Version: 0.4.0
-;; Package-Version: 20230316.856
-;; Package-Commit: 59c26d965b689fdc4bd3c11eb5783d11efe370be
+;; Package-Version: 20230325.1457
+;; Package-Commit: af16348a4428ef2ec3e403d198b5c8adcfdf876f
 ;; Package-Requires: ((emacs "26.1"))
 ;; Url: https://visl.sdu.dk/constraint_grammar.html
 ;; Keywords: languages
@@ -23,7 +23,7 @@
 ;; GNU General Public License for more details.
 ;;
 ;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 

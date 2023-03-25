@@ -3,12 +3,8 @@ Fetcher: github
 Source:  https://github.com/SidharthArya/modular-config.el.git
 
 Updating /mnt/store/melpa/working/modular-config/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 043907d96efff70dfaea1e721de90bd35970e8bd
+Built modular-config in 4.961s, finished at 2023-03-25T15:53:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Mar 25 15:53 packages/modular-config-20210726.1614.el
+4.0K -rw-r--r-- 1 root root  425 Mar 25 15:53 packages/modular-config-20210726.1614.entry

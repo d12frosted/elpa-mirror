@@ -1,20 +1,27 @@
 ;;; face-shift.el --- Shift the colour of certain faces -*- lexical-binding: t -*-
 
+;; Copyright (C) 2019, 2021, 2023  Free Software Foundation, Inc.
+
 ;; Author: Philip Kaludercic <philipk@posteo.net>
-;; Version: 0.2.0
-;; Package-Version: 20210725.2146
-;; Package-Commit: c214be3398a7671c6ea975f97740abdd38e910ea
+;; Version: 0.2.1
+;; Package-Version: 20230325.1353
+;; Package-Commit: 671e53fdef9ed3fdb9ee768216d05b90e3ce592a
 ;; Keywords: faces
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL: https://git.sr.ht/~pkal/face-shift
 
-;; This file is NOT part of Emacs.
-;;
-;; This file is in the public domain, to the extent possible under law,
-;; published under the CC0 1.0 Universal license.
-;;
-;; For a full copy of the CC0 license see
-;; https://creativecommons.org/publicdomain/zero/1.0/legalcode
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
