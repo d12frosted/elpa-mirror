@@ -5,8 +5,8 @@
 ;; Author: Jonathan Jin <me@jonathanj.in>
 
 ;; Version: 0.4.1
-;; Package-Version: 20230325.1759
-;; Package-Commit: 0535fef218ec4a1e25195493ba8201be5b8109f5
+;; Package-Version: 20230326.33
+;; Package-Commit: 15e841fb7bbc08545534e466ce831d6e80fd8901
 ;; Homepage: https://github.com/jinnovation/kele.el
 ;; Keywords: kubernetes tools
 ;; SPDX-License-Identifier: Apache-2.0
@@ -1578,7 +1578,9 @@ First checks if the kind is set in the current Transient prefix,
 if it's set.  Otherwise, prompts user for input."
   (or (and transient-current-prefix
            (alist-get 'kind (oref transient-current-prefix scope)))
-      (completing-read "Choose a kind to work with: "
+      (completing-read (format
+                        "Choose a kind to work with (context: `%s'): "
+                        (kele--get-context-arg))
                        (kele--get-resource-types-for-context
                         (kele--get-context-arg)))))
 
@@ -1631,7 +1633,7 @@ instead of \"pod.\""
 
   (interactive (let* ((context (kele-current-context-name))
                       (kind (completing-read
-                             "Choose a kind to work with: "
+                             (format "Choose a kind to work with (context: `%s'): " context)
                              (kele--get-resource-types-for-context
                               context)))
                       (gvs (kele--get-groupversions-for-type
