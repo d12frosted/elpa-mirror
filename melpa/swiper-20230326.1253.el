@@ -1,11 +1,11 @@
-;;; swiper.el --- Isearch with an overview. Oh, man! -*- lexical-binding: t -*-
+;;; swiper.el --- Isearch with an overview.  Oh, man! -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2015-2021 Free Software Foundation, Inc.
 
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
 ;; URL: https://github.com/abo-abo/swiper
-;; Package-Version: 20220430.2247
-;; Package-Commit: 8bf8027e4bd8c093bddb76a813952d2a0dcbf21d
+;; Package-Version: 20230326.1253
+;; Package-Commit: 24a8262767b7917a91ed7ffc11298f28569e3087
 ;; Version: 0.13.4
 ;; Package-Requires: ((emacs "24.5") (ivy "0.13.4"))
 ;; Keywords: matching
@@ -36,6 +36,7 @@
 
 ;;; Code:
 
+(require 'cl-lib)
 (require 'ivy)
 
 (defgroup swiper nil
@@ -575,8 +576,8 @@ numbers; replaces calculating the width from buffer line count."
             (cl-incf line-number))
           (nreverse candidates))))))
 
-(defvar swiper--opoint 1
-  "The point when `swiper' starts.")
+(defvar swiper--opoint nil
+  "Value of point when `swiper' or `swiper-isearch' starts.")
 
 ;;;###autoload
 (defun swiper-backward (&optional initial-input)
@@ -968,8 +969,9 @@ the face, window and priority of the overlay."
                       (line-move (1- num))
                     (forward-line (1- num))))
                 (if (and (equal ivy-text "")
-                         (>= swiper--opoint (line-beginning-position))
-                         (<= swiper--opoint (line-end-position)))
+                         (<= (line-beginning-position)
+                             swiper--opoint
+                             (line-end-position)))
                     (goto-char swiper--opoint)
                   (if (eq swiper--current-line num)
                       (when swiper--current-match-start
@@ -1128,7 +1130,8 @@ WND, when specified is the window."
                      #'line-move
                    #'forward-line)
                  ln)
-        (when (and (re-search-forward re (line-end-position) t) swiper-goto-start-of-match)
+        (when (and (re-search-forward re (line-end-position) t)
+                   swiper-goto-start-of-match)
           (goto-char (match-beginning 0)))
         (swiper--ensure-visible)
         (swiper--maybe-recenter)
@@ -1386,8 +1389,8 @@ See `ivy-format-functions-alist' for further information."
               (invisible-p (overlay-get ov 'invisible)))
             (overlays-at (point))))))
 
-(defvar swiper--isearch-backward nil)
-(defvar swiper--isearch-start-point nil)
+(defvar swiper--isearch-backward nil
+  "Non-nil when performing `swiper-isearch-backward'.")
 
 (defun swiper--isearch-function-1 (re backward)
   (unless (string= re ".")
@@ -1418,13 +1421,13 @@ See `ivy-format-functions-alist' for further information."
             (setq re (concat "\\=\\(?:" re "\\)"))
             (cl-position-if
              (lambda (x)
-               (when (< x swiper--isearch-start-point)
+               (when (< x swiper--opoint)
                  (goto-char x)
                  ;; Note: Not quite the same as `looking-at' + `match-end'.
-                 (re-search-forward re swiper--isearch-start-point t)))
+                 (re-search-forward re swiper--opoint t)))
              cands
              :from-end t))
-        (cl-position swiper--isearch-start-point cands :test #'<))
+        (cl-position swiper--opoint cands :test #'<))
       0))
 
 (defun swiper--isearch-filter-ignore-order (re-full cands)
@@ -1489,6 +1492,17 @@ that we search only for one character."
         ((and (stringp cand) (> (length cand) 0))
          (get-text-property 0 'point cand))))
 
+(defun swiper--isearch-candidate-string (cand)
+  "Return full match of `swiper-isearch' candidate CAND, or nil."
+  ;; FIXME: Better way of getting current candidate?
+  (and (setq cand (swiper--isearch-candidate-pos cand))
+       (goto-char cand)
+       (let ((re (ivy-re-to-str ivy-regex)))
+         (if (or swiper--isearch-backward swiper-goto-start-of-match)
+             (looking-at re)
+           (looking-back re (point-min))))
+       (match-string 0)))
+
 (defun swiper-isearch-action (x)
   "Move to X for `swiper-isearch'."
   (if (setq x (swiper--isearch-candidate-pos x))
@@ -1526,16 +1540,30 @@ that we search only for one character."
   "Save `swiper-isearch' candidate CAND to `kill-ring'.
 Return to original position."
   (unwind-protect
-      (progn
-        (unless (and (setq cand (swiper--isearch-candidate-pos cand))
-                     ;; FIXME: Better way of getting current candidate?
-                     (goto-char cand)
-                     (looking-back (ivy-re-to-str ivy-regex) (point-min)))
+      (let ((str (swiper--isearch-candidate-string cand)))
+        (unless str
           (error "Could not copy `swiper-isearch' candidate: %S" cand))
-        (kill-new (match-string 0)))
+        (kill-new str))
+    ;; In case of unexpected error.
+    (goto-char swiper--opoint)))
+
+(defun swiper-isearch-action-insert (cand)
+  "Insert `swiper-isearch' candidate CAND where invoked.
+This cannot currently be called repeatedly without exiting
+completion."
+  (unwind-protect
+      (let ((str (swiper--isearch-candidate-string cand)))
+        (unless str
+          (error "Could not insert `swiper-isearch' candidate: %S" cand))
+        (goto-char swiper--opoint)
+        ;; FIXME: This seems to invalidate many cached buffer positions, thus
+        ;; breaking `ivy-dispatching-call'.
+        (insert str))
+    ;; In case of unexpected error.
     (goto-char swiper--opoint)))
 
 (ivy-add-actions 'swiper-isearch '(("w" swiper-isearch-action-copy "copy")))
+(ivy-add-actions 'swiper-isearch '(("i" swiper-isearch-action-insert "insert")))
 (ivy-add-actions 'swiper '(("w" swiper-action-copy "copy")))
 
 (defun swiper-isearch-thing-at-point ()
@@ -1688,7 +1716,6 @@ When the input is empty, browse the search history instead."
 (defun swiper--isearch-init ()
   "Initialize `swiper-isearch'."
   (swiper--init)
-  (setq swiper--isearch-start-point (point))
   (swiper-font-lock-ensure))
 
 (defun swiper--isearch-unwind ()

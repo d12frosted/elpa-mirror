@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-spell-fu
-;; Package-Version: 20230319.854
-;; Package-Commit: aed6e87aa31013534b7a6cbedb26e4f29ccea735
+;; Package-Version: 20230326.736
+;; Package-Commit: 67a26b7a00449ee8ef3a80ab662c93a32adef679
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -88,6 +88,14 @@ Set to 0.0 to highlight immediately (as part of syntax highlighting)."
 (defcustom spell-fu-ignore-modes nil
   "List of major-modes to exclude when `spell-fu' has been enabled globally."
   :type '(repeat symbol))
+
+(defcustom spell-fu-word-delimit-camel-case nil
+  "Support camel-case for delimiting word boundaries.
+
+So `HelloWorld' would be checked a two words instead of one.
+This is performed as an additional check for words that would
+otherwise be marked as incorrect."
+  :type 'boolean)
 
 (defcustom spell-fu-debug nil
   "Enable debug messages, use for troubleshooting unexpected behavior."
@@ -221,9 +229,14 @@ Notes:
 ;; ---------------------------------------------------------------------------
 ;; Dictionary Utility Functions
 
+(defsubst spell-fu--canonicalize-word-downcase (word)
+  "Return lowercase UTF-8 encoded WORD (must already be `downcase')."
+  (encode-coding-string word 'utf-8))
+
 (defsubst spell-fu--canonicalize-word (word)
   "Return lowercase UTF-8 encoded WORD."
-  (encode-coding-string (downcase word) 'utf-8))
+  (spell-fu--canonicalize-word-downcase (downcase word)))
+
 
 (defun spell-fu--default-dictionaries ()
   "Construct the default value of `spell-fu-dictionaries'."
@@ -549,6 +562,68 @@ the caller will need to regenerate the cache."
 
 
 ;; ---------------------------------------------------------------------------
+;; Explode Words (Calculate Extra Delimiters)
+
+(defun spell-fu--maybe-explode-word-by-camel-case (word word-locase word-upcase)
+  "Explode WORD by camel-case.
+Arguments WORD-LOCASE & WORD-UPCASE are simply to avoid extra computation."
+  (let* ((was-caps t)
+         (was-ignore nil)
+         (word-length (length word))
+         (i-prev word-length)
+         (i word-length)
+         ;; Build list in reverse so it's ordered from first to last.
+         (result nil))
+    (while (not (zerop i))
+      (setq i (1- i))
+      (let* ((ch-nat (aref word i))
+             (ch-locase (aref word-locase i))
+             (ch-upcase (aref word-upcase i))
+             (is-caps (not (eq ch-nat ch-locase))))
+
+        (cond
+         ;; Ignore punctuation (typically apostrophe).
+         ;; Needed for "TODO's" not to be split into ("TOD" "O's").
+         ((eq ch-locase ch-upcase)
+          (setq was-caps is-caps)
+          (setq was-ignore t))
+         (t
+          (cond
+           (was-ignore
+            (setq was-ignore nil))
+           ((and is-caps (not was-caps))
+            (when (< i i-prev)
+              (push (cons i i-prev) result)
+              (setq i-prev i)))
+           ((and was-caps (not is-caps))
+            (let ((i-ofs (1+ i)))
+              (when (< i-ofs i-prev)
+                (push (cons i-ofs i-prev) result)
+                (setq i-prev i-ofs)))))))
+        (setq was-caps is-caps)))
+    (when result
+      (unless (zerop i-prev)
+        (push (cons 0 i-prev) result)))
+    result))
+
+(defsubst spell-fu--maybe-explode-word-ex (word word-locase word-upcase)
+  "Return a list of ranges or return nil when no delimiters found.
+Uses WORD, WORD-LOCASE & WORD-UPCASE to calculate delimiting."
+  (cond
+   ;; The option to delimit by camel-case isn't enabled, early exit.
+   ((null spell-fu-word-delimit-camel-case)
+    nil)
+   ;; Early exit common case Where only the first letter is capitalized.
+   ((string-equal (substring word 1) (substring word-locase 1))
+    nil)
+   (t
+    (spell-fu--maybe-explode-word-by-camel-case word word-locase word-upcase))))
+
+(defun spell-fu--maybe-explode-word (word)
+  "Explode WORD into components or return nil."
+  (spell-fu--maybe-explode-word-ex word (downcase word) (upcase word)))
+
+;; ---------------------------------------------------------------------------
 ;; Shared Functions
 
 (defun spell-fu--overlays-remove (&optional pos-beg pos-end)
@@ -580,6 +655,7 @@ Otherwise remove all overlays."
           (setq cache-table-list nil))))
     found))
 
+
 (defun spell-fu-check-word (pos-beg pos-end word)
   "Run the spell checker on a word.
 
@@ -587,11 +663,28 @@ Marking the spelling as incorrect using `spell-fu-incorrect-face' on failure.
 Argument POS-BEG the beginning position of WORD.
 Argument POS-END the end position of WORD."
   ;; Dictionary search.
-  (unless (spell-fu--check-word-in-dict-list (spell-fu--canonicalize-word word))
-    ;; Ignore all uppercase words.
-    (unless (equal word (upcase word))
-      ;; Mark as incorrect otherwise.
-      (spell-fu-mark-incorrect pos-beg pos-end))))
+  (let ((word-locase (downcase word)))
+    (unless (spell-fu--check-word-in-dict-list (spell-fu--canonicalize-word-downcase word-locase))
+      (let ((word-upcase (upcase word)))
+        ;; Ignore all uppercase words.
+        (unless (equal word word-upcase)
+          (let ((bounds (spell-fu--maybe-explode-word-ex word word-locase word-upcase)))
+            (cond
+             ;; Handle bounds.
+             (bounds
+              (pcase-dolist (`(,beg . ,end) bounds)
+                ;; Dictionary search.
+                (let ((subword-locase (substring word-locase beg end)))
+                  (unless (spell-fu--check-word-in-dict-list
+                           (spell-fu--canonicalize-word-downcase subword-locase))
+                    (let ((subword (substring word beg end))
+                          (subword-upcase (substring word-upcase beg end)))
+                      ;; Ignore all uppercase words.
+                      (unless (equal subword subword-upcase)
+                        (spell-fu-mark-incorrect (+ pos-beg beg) (+ pos-beg end))))))))
+             (t
+              ;; Mark as incorrect otherwise.
+              (spell-fu-mark-incorrect pos-beg pos-end)))))))))
 
 (defun spell-fu--word-at-point ()
   "Return the word at the current point or nil."
@@ -604,8 +697,16 @@ Argument POS-END the end position of WORD."
         (with-syntax-table spell-fu-syntax-table
           (save-match-data
             (while (re-search-forward spell-fu-word-regexp pos-end t)
-              (when (and (<= (match-beginning 0) point-init) (<= point-init (match-end 0)))
-                (throw 'result (match-string-no-properties 0))))))
+              (let* ((match-beg (match-beginning 0))
+                     (match-end (match-end 0))
+                     (word (buffer-substring-no-properties match-beg match-end)))
+                (when (and (<= match-beg point-init) (<= point-init match-end))
+                  (let ((bounds
+                         (or (spell-fu--maybe-explode-word word) (list (cons 0 (length word))))))
+                    (pcase-dolist (`(,beg . ,end) bounds)
+                      (when (and (<= (+ match-beg beg) point-init)
+                                 (<= point-init (+ match-beg end)))
+                        (throw 'result (substring word beg end))))))))))
         (throw 'result nil)))))
 
 

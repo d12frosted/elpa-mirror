@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
-Checking out a1ea1a3df7602ffab30c15348365d2e6a75063b7
+Checking out 3162ae8015ec37ae8560bedc7e0b28f0695dd4d3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevVHFLEt/eldev-20230121.1404
+  to /tmp/eldev9zihYl/eldev-20230326.1127
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-doctor.el -> eldev-doctor.el
@@ -19,23 +19,25 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20230121.1404.tar containing:
-  eldev-20230121.1404/
-  eldev-20230121.1404/bin/
-  eldev-20230121.1404/bin/eldev
-  eldev-20230121.1404/bin/eldev.bat
-  eldev-20230121.1404/bin/eldev.ps1
-  eldev-20230121.1404/eldev-build.el
-  eldev-20230121.1404/eldev-buttercup.el
-  eldev-20230121.1404/eldev-doctor.el
-  eldev-20230121.1404/eldev-ecukes.el
-  eldev-20230121.1404/eldev-ert.el
-  eldev-20230121.1404/eldev-pkg.el
-  eldev-20230121.1404/eldev-plugins.el
-  eldev-20230121.1404/eldev-util.el
-  eldev-20230121.1404/eldev-vc.el
-  eldev-20230121.1404/eldev.el
-Built eldev in 5.287s, finished at 2023-03-26T07:06:14+0000
+Created eldev-20230326.1127.tar containing:
+  eldev-20230326.1127/
+  eldev-20230326.1127/bin/
+  eldev-20230326.1127/bin/eldev
+  eldev-20230326.1127/bin/eldev.bat
+  eldev-20230326.1127/bin/eldev.ps1
+  eldev-20230326.1127/eldev-build.el
+  eldev-20230326.1127/eldev-buttercup.el
+  eldev-20230326.1127/eldev-doctor.el
+  eldev-20230326.1127/eldev-ecukes.el
+  eldev-20230326.1127/eldev-ert.el
+  eldev-20230326.1127/eldev-pkg.el
+  eldev-20230326.1127/eldev-plugins.el
+  eldev-20230326.1127/eldev-util.el
+  eldev-20230326.1127/eldev-vc.el
+  eldev-20230326.1127/eldev.el
+Built eldev in 5.746s, finished at 2023-03-26T14:56:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 Mar 26 07:06 packages/eldev-20230121.1404.entry
-600K -rw-r--r-- 1 root root 600K Mar 26 07:06 packages/eldev-20230121.1404.tar
+4.0K -rw-r--r-- 1 root root  340 Mar 26 11:01 packages/eldev-20230121.2020.entry
+600K -rw-r--r-- 1 root root 600K Mar 26 11:01 packages/eldev-20230121.2020.tar
+4.0K -rw-r--r-- 1 root root  340 Mar 26 14:56 packages/eldev-20230326.1127.entry
+600K -rw-r--r-- 1 root root 600K Mar 26 14:56 packages/eldev-20230326.1127.tar

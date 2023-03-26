@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.6-alpha
-;; Package-Version: 20230306.2344
-;; Package-Commit: ece1dd845904b08ab78598dc7e1a2eaf7875d1c4
+;; Package-Version: 20230326.954
+;; Package-Commit: 2d79c3b95c438fa07daef12673ff5111b7c0b640
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -862,6 +862,10 @@ Group 3 matches the text.")
 (defconst markdown-regex-line-break
   "[^ \n\t][ \t]*\\(  \\)\n"
   "Regular expression for matching line breaks.")
+
+(defconst markdown-regex-escape
+  "\\(\\\\\\)."
+  "Regular expression for matching escape sequences.")
 
 (defconst markdown-regex-wiki-link
   "\\(?:^\\|[^\\]\\)\\(?1:\\(?2:\\[\\[\\)\\(?3:[^]|]+\\)\\(?:\\(?4:|\\)\\(?5:[^]]+\\)\\)?\\(?6:\\]\\]\\)\\)"
@@ -2218,6 +2222,7 @@ Depending on your font, some reasonable choices are:
                                      (4 'markdown-highlighting-face)
                                      (5 markdown-markup-properties)))
     (,markdown-regex-line-break . (1 'markdown-line-break-face prepend))
+    (,markdown-regex-escape . ((1 markdown-markup-properties prepend)))
     (markdown-fontify-sub-superscripts)
     (markdown-match-inline-attributes . ((0 markdown-markup-properties prepend)))
     (markdown-match-leanpub-sections . ((0 markdown-markup-properties)))
