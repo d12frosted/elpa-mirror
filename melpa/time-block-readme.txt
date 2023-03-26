@@ -77,3 +77,17 @@ workday.
                (not (yes-or-no-p "You have decided not to edit your emacs configuration at this time.\nContinue?")))
     (funcall orig name)))
 (advice-add 'buffer-sets-load-set :around #'my/buffer-sets-around-advice)
+
+;; Confirmation Functions
+
+When an automatically-advised function or function defined with
+`define-time-block-command' provides an override prompt, the
+function `time-block-confirm-override' is used to confirm that the
+block should be overriden.  This is done following the logic of
+`time-block-override-confirmation-functions', an alist from block
+groups (or default t) to prompting functions. The prompting
+function should take one argument (a confirmation prompt) and
+return non-nil if the block should be overridden.  The default is
+`yes-or-no-p', but the functions
+`time-block-override-math-question' and
+`time-block-override-random-string' may be used as well.
