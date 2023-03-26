@@ -5,8 +5,8 @@
 ;; Author: Debanjum Singh Solanky <debanjum@gmail.com>
 ;; Description: Natural, Incremental Search for your Second Brain
 ;; Keywords: search, org-mode, outlines, markdown, beancount, ledger, image
-;; Package-Version: 20230324.2249
-;; Package-Commit: 0aebf624fc43b28e41653829540c287710ac7e82
+;; Package-Version: 20230325.2303
+;; Package-Commit: 4f655d20ae71440ae5a351356fbe19579ed2681d
 ;; Version: 0.4.1
 ;; Package-Requires: ((emacs "27.1") (transient "0.3.0") (dash "2.19.1"))
 ;; URL: https://github.com/debanjum/khoj/tree/master/src/interface/emacs
@@ -353,22 +353,34 @@ Render results in BUFFER-NAME using QUERY, CONTENT-TYPE."
   (let ((json-response (cdr (assoc 'response (khoj--query-chat-api "")))))
     (with-current-buffer (get-buffer-create buffer-name)
       (erase-buffer)
-      (insert "#+STARTUP: showall hidestars\n")
-      ;; allow sub, superscript text within {} for footnotes
-      (insert "#+OPTIONS: ^:{}\n")
+      (insert "* Khoj Chat\n")
       (thread-last
         json-response
         ;; generate chat messages from Khoj Chat API response
         (mapcar #'khoj--render-chat-response)
         ;; insert chat messages into Khoj Chat Buffer
         (mapc #'insert))
-      (progn (org-mode)
-             (visual-line-mode)
-             (khoj--add-hover-text-to-footnote-refs (point-min))
-             (use-local-map (copy-keymap org-mode-map))
-             (local-set-key (kbd "m") #'khoj--chat)
-             (local-set-key (kbd "C-x m") #'khoj--chat)
-             (read-only-mode t)))))
+      (progn
+        (org-mode)
+        (khoj--add-hover-text-to-footnote-refs (point-min))
+
+        ;; render reference footnotes as superscript
+        (setq-local
+         org-startup-folded "showall"
+         org-hide-leading-stars t
+         org-use-sub-superscripts '{}
+         org-pretty-entities-include-sub-superscripts t
+         org-pretty-entities t)
+        (org-set-startup-visibility)
+
+        ;; create khoj chat shortcut keybindings
+        (use-local-map (copy-keymap org-mode-map))
+        (local-set-key (kbd "m") #'khoj--chat)
+        (local-set-key (kbd "C-x m") #'khoj--chat)
+
+        ;; enable minor modes for khoj chat
+        (visual-line-mode)
+        (read-only-mode t)))))
 
 (defun khoj--add-hover-text-to-footnote-refs (start-pos)
   "Show footnote defs on mouse hover on footnote refs from START-POS."

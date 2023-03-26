@@ -1,9 +1,9 @@
-;;; tok-theme.el --- Minimal, calm and light theme for Emacs -*- lexical-binding: t; -*-
+;;; tok-theme.el --- Minimal light monochromatic theme for Emacs in the spirit of Zmacs -*- lexical-binding: t; -*-
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230303.1924
-;; Package-Commit: 5ceaecbaf359745d7bc6d407535895b7e84217c1
+;; Package-Version: 20230326.5
+;; Package-Commit: c1c72be026135544394dec75c485513d050d9326
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -36,12 +36,12 @@
 
 ;;; Commentary:
 
-;; Tok is a minimal, calm and light theme for Emacs.
+;; Tok is a minimal light monochromatic theme for Emacs in the spirit of Zmacs.
 
 ;;; Code:
 
 (deftheme tok
-  "Minimal, calm and light theme for Emacs")
+  "Minimal light monochromatic theme for Emacs in the spirit of Zmacs")
 
 (let ((class '((class color) (min-colors 89))))
   (custom-theme-set-faces
@@ -49,42 +49,44 @@
    ;; In case you're using this theme in terminal, let the terminal
    ;; emulator define these.
    (when (display-graphic-p)
-     `(cursor ((,class (:background "red")))))
+     `(cursor ((,class (:background "black")))))
    (when (display-graphic-p) ; Have to call `when' here due to reasons.
      `(default ((,class (:foreground "black" :background "white")))))
 
    ;; Basic faces
    `(highlight ((,class (:background "grey95"))))
    `(region ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
-                      :background "cyan3"))))
+                      :background "grey90"))))
    `(secondary-selection ((,class (:inherit region))))
    `(trailing-whitespace ((,class (:background "hotpink"))))
    `(error ((,class (:weight bold :foreground "red"))))
    `(warning ((,class (:weight bold :foreground "orange"))))
    `(success ((,class (:weight bold :foreground "green"))))
-   `(fringe ((,class (:background "grey95"))))
+   `(fringe ((t (nil))))
    `(button ((,class (:underline t))))
-   `(vertical-border ((,class (:foreground "grey80"))))
+   `(vertical-border ((,class (:foreground "black"))))
+   `(minibuffer-prompt ((t (nil))))
 
    ;; Line-numbes
-   `(line-number ((,class (:foreground "grey70" :background "grey95"))))
+   `(line-number ((,class (:foreground "grey75"))))
    `(line-number-current-line ((,class (:foreground "black" :background "grey95"))))
 
    ;; Mode-line
-   `(mode-line ((,class (:foreground "black" :background "grey95" :box (:line-width -1 :style released-button)))))
+   `(mode-line ((,class (:foreground "black" :background "white" :box 1))))
    (when (>= emacs-major-version 29)
      `(mode-line-active ((,class (:inherit mode-line)))))
    `(mode-line-inactive ((,class (:weight light
                                           :foreground "grey20"
-                                          :background "grey90"))))
+                                          :background "grey90"
+                                          :box 1))))
    `(mode-line-highlight ((t (nil))))
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-buffer-id ((,class (:weight bold))))
 
    ;; Font-lock
-   `(font-lock-comment-face ((,class (:weight bold :foreground "green4"))))
+   `(font-lock-comment-face ((,class (:weight bold))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-string-face ((t (nil))))
+   `(font-lock-string-face ((,class (:background "grey90"))))
    `(font-lock-doc-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-doc-markup-face ((t (nil))))
    `(font-lock-keyword-face ((t (nil))))
@@ -100,12 +102,11 @@
    `(font-lock-regexp-grouping-construct ((t (nil))))
 
    ;; Dired
-   `(dired-directory ((,class (:foreground "blue"))))
-   `(dired-symlink ((,class (:foreground "magenta"))))
-   `(dired-broken-symlink ((,class (:foreground "red"))))
+   `(dired-directory ((,class (:weight bold))))
+   `(dired-broken-symlink ((,class (:inherit error))))
 
    ;; ERC
-   `(erc-timestamp-face ((,class (:foreground nil))))
+   `(erc-timestamp-face ((t (nil))))
 
    ;; sh
    `(sh-heredoc ((t (nil))))
@@ -125,9 +126,9 @@
    `(outline-8 ((,class (:inherit outline-1))))
 
    ;; Show paren
-   `(show-paren-match ((,class (:background "green"))))
+   `(show-paren-match ((,class (:background "grey80"))))
    `(show-paren-match-expression ((,class (:inherit show-paren-match))))
-   `(show-paren-mismatch ((,class (:foreground "white" :background "purple"))))
+   `(show-paren-mismatch ((,class (:inherit error))))
 
    ;; Terraform
    `(terraform--resource-name-face ((t (nil))))
@@ -139,7 +140,19 @@
    `(markdown-metadata-key-face ((,class (:inherit font-lock-comment-face))))
    `(markdown-metadata-value-face ((,class (:inherit font-lock-comment-face))))
    `(markdown-blockquote-face ((t (nil))))
-   `(markdown-pre-face ((t (nil))))))
+   `(markdown-pre-face ((t (nil))))
+
+   ;; Magit
+   `(magit-diff-file-heading ((t (nil))))
+   `(magit-section-heading ((,class (:weight bold))))
+   `(magit-diff-added ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
+                                :background "#ddffdd"))))
+   `(magit-diff-added-highlight ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
+                                          :background "#cceecc"))))
+   `(magit-diff-removed ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
+                                  :background "#ffdddd"))))
+   `(magit-diff-removed-highlight ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
+                                          :background "#eecccc"))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)

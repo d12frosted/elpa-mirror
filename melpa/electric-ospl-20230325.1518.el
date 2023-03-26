@@ -1,9 +1,9 @@
 ;;; electric-ospl.el --- Electric OSPL Mode -*- lexical-binding: t -*-
 
 ;; Author: Samuel W. Flint <swflint@flintfam.org>
-;; Version: 2.0.0
-;; Package-Version: 20230320.2127
-;; Package-Commit: 61de9d25bea9eda67c693d8c2e098904075c3fd6
+;; Version: 2.1.0
+;; Package-Version: 20230325.1518
+;; Package-Commit: 55fa59592d0d3e929bd8646ea691a592965a167a
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience, text
 ;; URL: https://git.sr.ht/~swflint/electric-ospl-mode
@@ -58,12 +58,18 @@
 ;;   `electric-ospl-maximum-lookback-chars', which determines how far
 ;;   to look back to find the end of a sentence.
 ;;
+;;  - Additionally, the `electric-ospl-sentence-end-functions' hook
+;;    determines if point is currently at the end of a sentence.  It
+;;    defaults to using the regexp returned by `sentence-end' but may
+;;    be extended to use sentence-end determination logic provided by
+;;    other packages.
+;;
 ;;  - Finally, you can configure ignoring of OSPL in certain
-;;    circumstances using the `ospl-ignore-electric-functions` hook.
-;;    This variable defaults to ignoring when the last thing was in
-;;    the ignored abbreviations list.  It is used by checking,
-;;    one-by-one for a function which returns non-nil.  An example use
-;;    is below.
+;;    circumstances using the
+;;    `electric-ospl-ignore-electric-functions' hook.  This variable
+;;    defaults to ignoring when the last thing was in the ignored
+;;    abbreviations list.  It is used by checking, one-by-one for a
+;;    function which returns non-nil.  An example use is below.
 ;;
 ;; (add-hook 'LaTeX-mode-hook (defun my/latex-ospl-config ()
 ;;                              (add-hook 'electric-ospl-ignore-electric-functions
@@ -154,11 +160,33 @@ This should be calculated from the longest possible match to
 
 A function in this hook should return t if an electric space
 should not be inserted.  They are run one at a time, until one of
-these functions return non-nil.
+these functions return non-nil.  Additionally, these should not
+modify match data or point/mark.
 
 It may be useful to set this as a buffer-local hook in some
 modes (`LaTeX-mode' for instance, to not do OSPL in certain
-environments)."
+environments).
+
+For information about the defaults, see
+`electric-ospl-at-indentend-newline-p' and
+`electric-ospl-at-abbrev-p'."
+  :group 'electric-ospl
+  :type 'hook)
+
+(defcustom electric-ospl-sentence-end-functions
+  (list #'electric-ospl-at-sentence-end-p)
+  "Functions which decide if point is currently at sentence end.
+
+A function in this hook should return t if point is currently at
+the end of a sentence.  They are run one at a time, until one
+returns non-nil.  Additionally, these should not modify match
+data or point/mark.
+
+It may be useful to set this as a buffer-local hook in some modes
+where sentence end detection is not clear.
+
+See `electric-ospl-at-sentence-end-p' for information about
+defaults."
   :group 'electric-ospl
   :type 'hook)
 
@@ -258,17 +286,43 @@ directly.")
 ;;; At Abbreviation?
 
 (defun electric-ospl-at-abbrev-p ()
-  "Are we currently at an abbrev?"
-  (save-match-data
-    (looking-back (concat "\\<" electric-ospl--ignored-abbrevs-regexp "\s?")
-                  (- (point) electric-ospl--abbrev-lookback))))
+  "Are we currently at a non-sentence-ending abbreviation?
+
+This is configured using `electric-ospl-ignored-abbreviations', a
+list of abbreviations which end in a sentence-ending character."
+  (save-excursion
+    (save-match-data
+      (looking-back (concat "\\<" electric-ospl--ignored-abbrevs-regexp "\s?")
+                    (- (point) electric-ospl--abbrev-lookback)))))
 
 
 ;;; At indented newline?
 
 (defun electric-ospl-at-indented-newline-p ()
-  "Are we currently at an (indented) newline?"
-  (save-match-data (looking-back (rx bol (* blank)) nil)))
+  "Are we currently at an (indented) newline?
+
+While `bolp' exists to determine if point is currently at the
+beginning of a line, it does not consider if the line is
+indented (as may be seen in a number of markup languages).  This
+checks for both."
+  (save-excursion
+    (save-match-data
+      (looking-back (rx bol (* blank)) nil))))
+
+
+;;; At sentence end?
+
+(defun electric-ospl-at-sentence-end-p ()
+  "Are we currently at the end of a sentence?
+
+This is determined by checking if the point comes after a member
+of `electric-ospl-regexps' (when combined as
+`electric-ospl--single-sentence-end-regexp'), using the maximum
+lookback of `electric-ospl-maximum-lookback-chars'."
+  (save-excursion
+    (save-match-data
+      (looking-back electric-ospl--single-sentence-end-regexp
+                    electric-ospl-maximum-lookback-chars))))
 
 
 ;;; Electric Space
@@ -291,9 +345,7 @@ command is repeated, delete the line-break."
     (let* ((case-fold-search nil)
            (repeated-p (or (> arg 1)
                            (eq last-command 'electric-ospl-electric-space)))
-           (at-electric-p (save-match-data
-                            (looking-back electric-ospl--single-sentence-end-regexp
-                                          electric-ospl-maximum-lookback-chars))))
+           (at-electric-p (run-hook-with-args-until-success 'electric-ospl-sentence-end-functions)))
       (delete-char -1)                    ; Character is probably no longer needed
       (cond
        ((and repeated-p (bolp))

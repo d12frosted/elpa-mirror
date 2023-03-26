@@ -30,12 +30,18 @@ There are a couple of options which can be used to modify behavior
   `electric-ospl-maximum-lookback-chars', which determines how far
   to look back to find the end of a sentence.
 
+ - Additionally, the `electric-ospl-sentence-end-functions' hook
+   determines if point is currently at the end of a sentence.  It
+   defaults to using the regexp returned by `sentence-end' but may
+   be extended to use sentence-end determination logic provided by
+   other packages.
+
  - Finally, you can configure ignoring of OSPL in certain
-   circumstances using the `ospl-ignore-electric-functions` hook.
-   This variable defaults to ignoring when the last thing was in
-   the ignored abbreviations list.  It is used by checking,
-   one-by-one for a function which returns non-nil.  An example use
-   is below.
+   circumstances using the
+   `electric-ospl-ignore-electric-functions' hook.  This variable
+   defaults to ignoring when the last thing was in the ignored
+   abbreviations list.  It is used by checking, one-by-one for a
+   function which returns non-nil.  An example use is below.
 
 (add-hook 'LaTeX-mode-hook (defun my/latex-ospl-config ()
                              (add-hook 'electric-ospl-ignore-electric-functions
