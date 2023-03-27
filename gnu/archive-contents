@@ -1799,17 +1799,17 @@
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (jinx .
-       [(0 2)
+       [(0 3)
 	((emacs
 	  (27 1))
 	 (compat
 	  (29 1 4 0)))
-	"Enchanted just-in-time spell checker" tar
+	"Enchanted Just-in-time Spell Checker" tar
 	((:url . "https://github.com/minad/jinx")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "d4705491707b7bca493993b16aab89c8edbc0f06"))])
+	 (:commit . "1293ba8eda27b3c68e832d1681b4d12307b63df4"))])
  (jit-spell .
 	    [(0 2)
 	     ((emacs

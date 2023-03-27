@@ -1,6 +1,6 @@
-		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		  ENCHANTED JUST-IN-TIME SPELL CHECKER
-		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+	     JINX.EL - ENCHANTED JUST-IN-TIME SPELL CHECKER
+	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Jinx provides just-in-time spell-checking via [libenchant]. The package
@@ -8,8 +8,9 @@ aims to achieve high performance and low resource usage, without
 impacting your editing experience. Overall Jinx should just work out of
 the box without much intervention.
 
-Jinx highlights misspellings lazily only in the visible area of the
-window. Jinx binds directly to the native libenchant API, such that
+Jinx highlights misspellings lazily only in the visible part of the
+text. The window boundaries and text folding are taken into
+account. Jinx binds directly to the native libenchant API, such that
 process communication with a backend Aspell process can be
 avoided. Libenchant is widely used as spell-checking API by text editors
 and supports [Nuspell], [Hunspell], [Aspell] and a few lesser known
@@ -40,13 +41,13 @@ major modes.
   with `package-install'. Libenchant must be installed on your system
   for compilation. If `pkg-config' is available it will be used to
   locate libenchant. On Debian or Ubuntu, install the packages
-  `libenchant-2', `libenchant-2-dev' and `pkg-config'.
+  `libenchant-2-2', `libenchant-2-dev' and `pkg-config'.
 
 
 2 Usage
 ═══════
 
-  Jinx offers three autoloaded entry points , the modes
+  Jinx offers three auto-loaded entry points , the modes
   `global-jinx-mode', `jinx-mode' and the command `jinx-correct'. You
   can either enable `global-jinx-mode' or add `jinx-mode' to the hooks
   of the modes.
@@ -70,24 +71,40 @@ major modes.
   └────
 
 
-3 Alternatives
+3 Enchant backends and personal dictionaries
+════════════════════════════════════════════
+
+  Enchant uses different backends depending on the language. The
+  ordering of the backends is configured by the file
+  `enchant.ordering'. For most languages Hunspell is used by
+  default. Depending on the backend the personal dictionary will be
+  taken from different locations, e.g., `~/.aspell.LANG.pws' or
+  `~/.config/enchant/'.  It is possible to symlink different personal
+  dictionaries such that they are shared by different spell
+  checkers. See the [Enchant manual] for more details.
+
+
+[Enchant manual] <https://abiword.github.io/enchant/src/enchant.html>
+
+
+4 Alternatives
 ══════════════
 
   • [jit-spell]: Jinx offers a similar UI as Augusto Stoffel's jit-spell
     package and borrows ideas from it. Jit-spell uses Ispell process
     communication instead of a native API. It does not restrict the
-    highlighting to the visible area. In my setup I observed an increase
+    highlighting to the visible text. In my setup I observed an increase
     in load and latency as a consequence, in particular in combination
     with stealth locking and commands which trigger fontification
     eagerly like `consult-line' from my [Consult] package.
 
-  • [spell-fu]: The technique to spell-check only the visible region of
-    the window was inspired by Campbell Barton's spell-fu
-    package. Spell-fu maintains the dictionary itself via a hash table,
-    which results in high memory usage for languages with compound words
-    or inflected word forms. In Jinx we avoid the complexity of managing
-    the dictionary and access the advanced spell-checker algorithms
-    (affixation, compound words, etc.) directly via libenchant.
+  • [spell-fu]: The technique to spell-check only the visible text was
+    inspired by Campbell Barton's spell-fu package. Spell-fu maintains
+    the dictionary itself via a hash table, which results in high memory
+    usage for languages with compound words or inflected word forms. In
+    Jinx we avoid the complexity of managing the dictionary and access
+    the advanced spell-checker algorithms directly via libenchant
+    (affixation, compound words, etc.).
 
 
 [jit-spell] <https://github.com/astoff/jit-spell>
@@ -97,7 +114,7 @@ major modes.
 [spell-fu] <https://codeberg.org/ideasman42/emacs-spell-fu>
 
 
-4 Contributions
+5 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a

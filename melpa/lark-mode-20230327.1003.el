@@ -4,8 +4,8 @@
 
 ;; Author: Ta Quang Trung
 ;; Version: 0.0.1
-;; Package-Version: 20230313.1851
-;; Package-Commit: 8f5dcb26c38b5c6417001327189f0c71f8163afd
+;; Package-Version: 20230327.1003
+;; Package-Commit: 9e19b40df29d273cf3aec9ddd0e739d3b3d9b3a8
 ;; Created: 06 March 2023
 ;; Keywords: languages
 ;; Homepage: https://github.com/taquangtrung/lark-mode
@@ -190,6 +190,7 @@ Highlight the 1st result."
   (setq-local tab-width 4)
   (setq-local indent-tabs-mode nil)
   (setq-local indent-line-function #'lark-mode-indent-line)
+  (setq-local indent-region-function #'ignore)      ;; not supported yet
 
   ;; Set comment command
   (setq-local comment-start "//")

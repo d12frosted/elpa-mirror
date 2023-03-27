@@ -5,10 +5,10 @@
 ;; Author: Daniel Mendler <mail@daniel-mendler.de>
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.4.0"))
-;; Package-Version: 20230327.48
-;; Package-Commit: ba2ef74303ca50cdabac61d7f0a2283dd9e48a7e
+;; Package-Version: 20230327.933
+;; Package-Commit: f784c1a0d622eba39a0356d4a75fb91721b7edea
 ;; Created: 2023
-;; Version: 0.2
+;; Version: 0.3
 ;; Homepage: https://github.com/minad/jinx
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -119,7 +119,10 @@
   '((t :inherit font-lock-negation-char-face))
   "Face used for the accept action during correction.")
 
-(defcustom jinx-languages "en"
+(defcustom jinx-languages
+  (or (bound-and-true-p current-locale-environment)
+      (getenv "LANG")
+      "en_US")
   "List of languages."
   :type '(choice string (repeat string)))
 
@@ -437,17 +440,15 @@ Returns a pair of updated (START END) bounds."
       (error "Jinx: Native modules are not supported"))
     (let ((default-directory
            (file-name-directory (locate-library "jinx.el" t)))
-          (module (concat "jinx-mod" module-file-suffix)))
+          (module (file-name-with-extension "jinx-mod" module-file-suffix)))
       (unless (file-exists-p module)
         (let ((command
-               `("cc" "-O2" "-Wall" "-Wextra" "-fPIC" "-shared" "-Wl,--no-as-needed"
+               `("cc" "-I." "-O2" "-Wall" "-Wextra" "-fPIC" "-shared"
+                 "-o" ,module ,(file-name-with-extension module ".c")
                  ,@(split-string-and-unquote
                     (condition-case nil
                         (car (process-lines "pkg-config" "--cflags" "--libs" "enchant-2"))
-                      (error "-I/usr/include/enchant-2 -lenchant-2")))
-                 ,@(and source-directory
-                        (list (concat "-I" (file-name-concat source-directory "src/"))))
-                 "-o" ,module ,(file-name-with-extension module ".c"))))
+                      (error "-I/usr/include/enchant-2 -lenchant-2"))))))
           (with-current-buffer (get-buffer-create "*jinx module compilation*")
             (let ((inhibit-read-only t))
               (erase-buffer)
