@@ -188,6 +188,15 @@
 		 (:authors
 		  ("Ian Dunn" . "dunni@gnu.org"))
 		 (:maintainer "Ian Dunn" . "dunni@gnu.org"))])
+ (auto-header .
+	      [(0 1 1)
+	       nil "Automatically find the right headers" tar
+	       ((:url . "https://git.sr.ht/~pkal/auto-header")
+		(:keywords "c")
+		(:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
+		(:authors
+		 ("Philip Kaludercic" . "philipk@posteo.net"))
+		(:commit . "26818847669aedc0212d53dbd499b34e283c3862"))])
  (auto-overlays .
 		[(0 10 10)
 		 ((cl-lib
@@ -198,6 +207,17 @@
 		  (:authors
 		   ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 		  (:keywords "extensions"))])
+ (autocrypt .
+	    [(0 4 1)
+	     ((emacs
+	       (24 3)))
+	     "Autocrypt implementation" tar
+	     ((:url . "https://git.sr.ht/~pkal/autocrypt")
+	      (:keywords "comm")
+	      (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
+	      (:authors
+	       ("Philip Kaludercic" . "philipk@posteo.net"))
+	      (:commit . "a90aa6b644fe8cf72af9e1615a7c50b36b739e7c"))])
  (avy .
       [(0 5 0)
        ((emacs
@@ -520,7 +540,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(29 1 4 0)
+	 [(29 1 4 1)
 	  ((emacs
 	    (24 4))
 	   (seq
@@ -531,7 +551,7 @@
 	   (:maintainer "Daniel Mendler <mail@daniel-mendler.de>, Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "7a9c37f1b371b2c144b9d76e1f6333032d9f9179"))])
+	   (:commit . "cb09942868d50e654f159f9614fe3f22af96e547"))])
  (consult .
 	  [(0 33)
 	   ((emacs
@@ -1778,6 +1798,18 @@
 		(:authors
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
+ (jinx .
+       [(0 2)
+	((emacs
+	  (27 1))
+	 (compat
+	  (29 1 4 0)))
+	"Enchanted just-in-time spell checker" tar
+	((:url . "https://github.com/minad/jinx")
+	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	 (:authors
+	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	 (:commit . "d4705491707b7bca493993b16aab89c8edbc0f06"))])
  (jit-spell .
 	    [(0 2)
 	     ((emacs
@@ -2337,6 +2369,17 @@
 	       ("Michael Heerdegen" . "michael_heerdegen@web.de"))
 	      (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de")
 	      (:url . "https://github.com/michael-heerdegen/on-screen.el"))])
+ (openpgp .
+	  [(1 0 1)
+	   ((emacs
+	     (24 4)))
+	   "Client for keys.openpgp.org" tar
+	   ((:url . "https://git.sr.ht/~pkal/openpgp/")
+	    (:keywords "convenience")
+	    (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
+	    (:authors
+	     ("Philip Kaludercic" . "philipk@posteo.net"))
+	    (:commit . "25babb1060622c1560c8be64cdbb009af535959a"))])
  (orderless .
 	    [(1 0)
 	     ((emacs
@@ -3084,6 +3127,17 @@
 	       ("Ralph Amissah & Ambrose Kofi Laing"))
 	      (:maintainer "Ralph Amissah" . "ralph.amissah@gmail.com")
 	      (:url . "http://www.sisudoc.org/"))])
+ (site-lisp .
+	    [(0 1 1)
+	     ((emacs
+	       (25 1)))
+	     "Manage site-lisp directories" tar
+	     ((:url . "https://git.sr.ht/~pkal/site-lisp")
+	      (:keywords "lisp" "local")
+	      (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
+	      (:authors
+	       ("Philip Kaludercic" . "philipk@posteo.net"))
+	      (:commit . "f9898d50d956e86faf0eb27def8ccc7180efa928"))])
  (sketch-mode .
 	      [(1 0 4)
 	       nil "Quickly create svg sketches using keyboard and mouse" tar
@@ -3573,6 +3627,17 @@
 	    (:authors
 	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
 	    (:commit . "1626dc4c8ecf9b7492cf540495d2ffa1be2ecbba"))])
+ (typo .
+       [(1 0 1)
+	((emacs
+	  (27 1)))
+	"Completion style using typo analysis" tar
+	((:url . "https://git.sr.ht/~pkal/typo/")
+	 (:keywords "convenience")
+	 (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
+	 (:authors
+	  ("Philip Kaludercic" . "philipk@posteo.net"))
+	 (:commit . "281c9049c1d08cf11c8a1957ea99e5c58795ed3c"))])
  (undo-tree .
 	    [(0 8 2)
 	     ((queue
@@ -3980,6 +4045,16 @@
 	"Cross-referencing commands" tar
 	((:url . "https://elpa.gnu.org/packages/xref.html")
 	 (:commit . "4b6f2a7028b91128934a19f83572f24106782225"))])
+ (xref-union .
+	     [(0 1 1)
+	      ((emacs
+		(25 1)))
+	      "Combine multiple Xref backends" tar
+	      ((:url . "https://git.sr.ht/~pkal/xref-union/")
+	       (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
+	       (:authors
+		("Philip Kaludercic" . "philipk@posteo.net"))
+	       (:commit . "0f98bea5948cee35aa9070b631bc0188159d5b3d"))])
  (yasnippet .
 	    [(0 14 0)
 	     ((cl-lib

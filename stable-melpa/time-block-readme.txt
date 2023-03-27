@@ -35,13 +35,14 @@ match either representation will cause time blocking to be ignored.
 
 ;; Defining Time Blocked Commands
 
-Commands are only time-blocked if they're defined.  This is done using
-the `define-time-blocked-command` macro, which behaves similarly to
-`defun`.  After the lambda list, it has a list describing blocking and
-blocking messages.  This is composed of a symbol (a key in
-`time-block-groups') a block message, and an optional override prompt
-(if present, the command will ask if you'd like to override the block
-    using `yes-or-no-p').  An example is shown below.
+Commands are only time-blocked if they're defined.  This is done
+using the `define-time-blocked-command` macro, which behaves
+similarly to `defun`.  After the lambda list, it has a list
+describing blocking and blocking messages.  This is composed of a
+symbol (a key in `time-block-groups') a block message, and an
+optional override prompt (if present, the command will ask if you'd
+like to override the block using `time-block-confirm-override').
+An example is shown below.
 
 (define-time-blocked-command my/start-elfeed ()
                              (workday "You have decided not to check news currently."
@@ -63,6 +64,21 @@ following example.
 (time-block-advise my/elfeed-block-advice 'elfeed workday "You have decided not to check news currently."
                    "You have decided not to check news currently.\nStill start elfeed?")
 
+;; Focus Mode
+
+A "focus mode" may be enabled using the `time-block-focus-mode'
+command.  This global minor mode by default will block all
+block-groups, but this behavior may be changed using
+`time-block-block-checkers'.
+
+;; Checking if A Group Is Blocked
+
+You may check if a group is currently blocked using the
+`time-block-blocked-p' function, which uses the functions in
+`time-block-block-checkers' to determine if a group is presently
+blocked.  Functions in this hook must take one argument, a group
+name, and return non-nil if the group is to be blocked.
+
 ;; Manually advising commands to be time-blocked
 
 Commands can also be manually advised.  This can be done to prevent
@@ -73,8 +89,8 @@ workday.
 (defun my/buffer-sets-around-advice (orig name)
   "Check if NAME is 'emacs', if so, follow time blocking logic before calling ORIG (`buffer-sets-load-set')."
   (unless (and (string= name "emacs")
-               (time-block-group-blocked-p :workday)
-               (not (yes-or-no-p "You have decided not to edit your emacs configuration at this time.\nContinue?")))
+               (time-block-blocked-p :workday)
+               (not (time-block-confirm-override "You have decided not to edit your emacs configuration at this time.\nContinue?")))
     (funcall orig name)))
 (advice-add 'buffer-sets-load-set :around #'my/buffer-sets-around-advice)
 
