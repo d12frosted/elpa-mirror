@@ -1,9 +1,9 @@
-;;; tok-theme.el --- Minimal light monochromatic theme for Emacs in the spirit of Zmacs -*- lexical-binding: t; -*-
+;;; tok-theme.el --- Minimal light monochromatic theme for Emacs in the spirit of Zmacs and Smalltalk-80-*- lexical-binding: t; -*-
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230328.1049
-;; Package-Commit: 246d651da9f604fbc0a21c5105565b7aac8b11f4
+;; Package-Version: 20230328.1357
+;; Package-Commit: 72af5dc1e9244049ef60d8dbdc123752b64b257f
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -36,12 +36,12 @@
 
 ;;; Commentary:
 
-;; Tok is a minimal light monochromatic theme for Emacs in the spirit of Zmacs.
+;; Tok is a minimal light monochromatic theme for Emacs in the spirit of Zmacs and Smalltalk-80.
 
 ;;; Code:
 
 (deftheme tok
-  "Minimal light monochromatic theme for Emacs in the spirit of Zmacs")
+  "Minimal light monochromatic theme for Emacs in the spirit of Zmacs and Smalltalk-80")
 
 (let ((class '((class color) (min-colors 89))))
   (custom-theme-set-faces

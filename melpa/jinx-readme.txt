@@ -23,22 +23,23 @@ settings to ignore misspellings via faces (`jinx-exclude-faces' and
 and programmable predicates.  Jinx comes preconfigured for the most
 important major modes.
 
-Jinx offers three auto-loaded entry points , the modes
-`global-jinx-mode', `jinx-mode' and the command `jinx-correct'.
-You can either enable `global-jinx-mode' or add `jinx-mode' to the
-hooks of the modes.
+Jinx offers the auto-loaded modes `global-jinx-mode' and
+`jinx-mode'.  You can either enable `global-jinx-mode' or add
+`jinx-mode' to the hooks of the modes.
 
 (add-hook 'emacs-startup-hook #'global-jinx-mode)
 
 (dolist (hook '(text-mode-hook prog-mode-hook conf-mode-hook))
   (add-hook hook #'jinx-mode))
 
-In order to correct misspellings bind `jinx-correct' to a
-convenient key in your configuration.  Jinx is independent of the
-Ispell package, so you can reuse the binding M-$ which is bound to
-`ispell-word' by default.  When pressing M-$, Jinx offers
-correction suggestions for the misspelling next to point.  If the
-prefix key C-u is pressed, the entire buffer is spell-checked.
+Furthermore Jinx brings two auto-loaded commands `jinx-correct' and
+`jinx-languages'.  In order to correct misspellings bind
+`jinx-correct' to a convenient key in your configuration.  Jinx is
+independent of the Ispell package, so you can reuse the binding M-$
+which is bound to `ispell-word' by default.  When pressing M-$,
+Jinx offers correction suggestions for the misspelling next to
+point.  If the prefix key C-u is pressed, the entire buffer is
+spell-checked.
 
 (keymap-global-set "<remap> <ispell-word>" #'jinx-correct)
 
