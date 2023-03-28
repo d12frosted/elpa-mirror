@@ -76,10 +76,10 @@ major modes.
 
   Enchant uses different backends depending on the language. The
   ordering of the backends is configured by the file
-  `enchant.ordering'. For most languages Hunspell is used by
-  default. Depending on the backend the personal dictionary will be
-  taken from different locations, e.g., `~/.aspell.LANG.pws' or
-  `~/.config/enchant/'.  It is possible to symlink different personal
+  `~/.config/enchant/enchant.ordering'. For most languages Hunspell is
+  used by default. Depending on the backend the personal dictionary will
+  be taken from different locations, e.g., `~/.aspell.LANG.pws' or
+  `~/.config/enchant/'. It is possible to symlink different personal
   dictionaries such that they are shared by different spell
   checkers. See the [Enchant manual] for more details.
 
@@ -105,6 +105,11 @@ major modes.
     Jinx we avoid the complexity of managing the dictionary and access
     the advanced spell-checker algorithms directly via libenchant
     (affixation, compound words, etc.).
+
+  • flyspell: Flyspell is a builtin package which highlight misspellings
+    while typing and when you move the cursor to a word. Jinx uses a
+    different mode of operation, where the entire visible text of the
+    buffer is checked always.
 
 
 [jit-spell] <https://github.com/astoff/jit-spell>

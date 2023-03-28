@@ -1,4 +1,4 @@
-This script parses man-pages to guess what header files a function
+This script parses man-pages to guess what C header files a function
 might need.
 
 Bind `auto-header-at-point' to a convenient key if you want to

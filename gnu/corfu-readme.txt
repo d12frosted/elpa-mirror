@@ -119,7 +119,7 @@ Table of Contents
   │ 
   │   ;; Recommended: Enable Corfu globally.
   │   ;; This is recommended since Dabbrev can be used globally (M-/).
-  │   ;; See also `corfu-excluded-modes'.
+  │   ;; See also `corfu-exclude-modes'.
   │   :init
   │   (global-corfu-mode))
   │ 
@@ -649,20 +649,6 @@ Table of Contents
     support is more limited and the `completion-at-point' command and
     the `completion-in-region' function do not invoke Company.
 
-  • [Mct]: Protesilaos' Minibuffer Confines Transcended package supports
-    both minibuffer completion and completion in region. It reuses the
-    default completion UI for this purpose and installs a timer which
-    live updates the completion buffer. The main advantage of Mct is
-    that you work with a regular Emacs buffer instead of with a
-    popup. You can take advantage of the usual Emacs commands to
-    navigate in the completions buffer. On top, Mct enhances the
-    movement such that you can quickly switch between the completions
-    buffer and the minibuffer or the region which is being
-    completed. Mct does not support timer-based auto completion, but the
-    integration into Emacs is naturally tight. Note that Mct development
-    is currently [discontinued] due to recent changes of the default
-    completion UI on the Emacs master branch.
-
   • [consult-completion-in-region]: The Consult package provides the
     function `consult-completion-in-region' which can be set as
     `completion-in-region-function' such that it handles
@@ -674,11 +660,6 @@ Table of Contents
 
 
 [Company] <https://github.com/company-mode/company-mode>
-
-[Mct] <https://git.sr.ht/~protesilaos/mct>
-
-[discontinued]
-<https://protesilaos.com/codelog/2022-04-14-emacs-discontinue-mct/>
 
 [consult-completion-in-region] <https://github.com/minad/consult>
 
