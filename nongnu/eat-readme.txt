@@ -15,7 +15,7 @@ It has many features that other Emacs terminal emulator still don't
 have, for example complete mouse support, shell integration, etc.
 
 It flickers less than other Emacs terminal emulator, so you get more
-performance and a smooth experience.
+performance and a smoother experience.
 
 To get the most out of Eat, you should also setup shell integration.
 
