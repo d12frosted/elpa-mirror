@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/Asalle/flatbuffers-mode.git
 
 Updating /mnt/store/melpa/working/flatbuffers-mode/
-Checking out 8e7783db45a64c9456130fd0c108ac12d45a7789
-Built flatbuffers-mode in 4.929s, finished at 2023-03-29T06:18:28+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Mar 29 06:18 packages/flatbuffers-mode-20210710.1004.el
-4.0K -rw-r--r-- 1 root root  417 Mar 29 06:18 packages/flatbuffers-mode-20210710.1004.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/Asalle/flatbuffers-mode.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

@@ -10,11 +10,12 @@ account.  Jinx binds directly to the native libenchant API, such
 that process communication with a backend Aspell process can be
 avoided.  Libenchant is widely used as spell-checking API by text
 editors and supports Nuspell, Hunspell, Aspell and a few lesser
-known backends.  Jinx automatically compiles and loads the native
-module at startup.  Libenchant must be installed on your system for
-compilation.  If `pkg-config' is available it will be used to
-locate libenchant.  On Debian or Ubuntu, install the packages
-`libenchant-2-2', `libenchant-2-dev' and `pkg-config'.
+known backends.  Jinx automatically compiles `jinx-mod.c' and loads
+the dynamic module at startup.  Libenchant must be installed on
+your system for compilation.  If `pkg-config' is available it will
+be used to locate libenchant.  On Debian or Ubuntu, install the
+packages `libenchant-2-2', `libenchant-2-dev' and `pkg-config'.
+On Fedora or RHEL, install the package `enchant2-devel'.
 
 Jinx supports multiple languages in a buffer at the same time via
 the `jinx-languages' customization variable.  It offers flexible
