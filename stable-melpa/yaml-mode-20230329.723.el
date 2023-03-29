@@ -6,8 +6,8 @@
 ;;         Marshall T. Vandegrift <llasram@gmail.com>
 ;; Maintainer: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://github.com/yoshiki/yaml-mode
-;; Package-Version: 20221022.920
-;; Package-Commit: 141b85f9e01589e67955f3785a83b72b42109357
+;; Package-Version: 20230329.723
+;; Package-Commit: b153150e0e77b4ec462d741cdb16956c6ae270d6
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: data yaml
 ;; Version: 0.0.15
@@ -370,11 +370,9 @@ back-dent the line by `yaml-indent-offset' spaces.  On reaching column
   (let ((ci (current-indentation))
         (need (yaml-compute-indentation)))
     (save-excursion
-      (beginning-of-line)
-      (delete-horizontal-space)
       (if (and (equal last-command this-command) (/= ci 0))
-          (indent-to (* (/ (- ci 1) yaml-indent-offset) yaml-indent-offset))
-        (indent-to need)))
+          (indent-line-to (* (/ (- ci 1) yaml-indent-offset) yaml-indent-offset))
+        (indent-line-to need)))
     (if (< (current-column) (current-indentation))
         (forward-to-indentation 0))))
 

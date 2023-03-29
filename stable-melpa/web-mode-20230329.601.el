@@ -3,8 +3,8 @@
 ;; Copyright 2011-2023 François-Xavier Bois
 
 ;; Version: 17.3.9
-;; Package-Version: 20230317.1031
-;; Package-Commit: ff394e83b48e9ae05cf3be854272c1e4550de61a
+;; Package-Version: 20230329.601
+;; Package-Commit: 57856ba64b9382811b35df0d9ab0a24aede0c1f0
 ;; Author: François-Xavier Bois
 ;; Maintainer: François-Xavier Bois <fxbois@gmail.com>
 ;; Package-Requires: ((emacs "23.1"))
@@ -86,6 +86,13 @@
 (defcustom web-mode-markup-indent-offset
   (if (and (boundp 'standard-indent) standard-indent) standard-indent 2)
   "Html indentation level."
+  :type 'integer
+  :safe #'integerp
+  :group 'web-mode)
+
+(defcustom web-mode-markup-comment-indent-offset
+  5
+  "Html comment indentation level."
   :type 'integer
   :safe #'integerp
   :group 'web-mode)
@@ -8772,7 +8779,7 @@ Also return non-nil if it is the command `self-insert-command' is remapped to."
                 ((string-match-p "^-" curr-line)
                  (setq offset (+ offset 3)))
                 (t
-                 (setq offset (+ offset 5)))
+                 (setq offset (+ offset web-mode-markup-comment-indent-offset)))
                 ) ;cond
               )
              ((and (string= web-mode-engine "django") (looking-back "{% comment %}" (point-min)))
