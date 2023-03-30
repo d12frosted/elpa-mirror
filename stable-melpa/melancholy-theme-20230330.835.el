@@ -7,10 +7,10 @@
 ;; Created: 30 August 2022
 ;; Last Modified: 24 March 2023
 
-;; Version: 1.0.7
-;; Package-Version: 20230324.221
-;; Package-Commit: 550ca9e59b83e97ba1355b105547c2f7f3e175e1
-;; SPDX-License-Identifier:  GPL-3.0
+;; Version: 2.0
+;; Package-Version: 20230330.835
+;; Package-Commit: a5c4360f57793401b63b0df382e845b4845c8f97
+;;
 ;; Package-requires: ((emacs "27.1"))
 
 ;; Keywords: faces, frames
@@ -124,7 +124,7 @@
    `(font-lock-regexp-grouping-construct ((t ( :foreground ,my-pop  ))))
    `(font-lock-string-face ((t ( :family ,font-mono :foreground ,my-visited :height 1.25 :weight extra-light :slant italic ))))
    `(font-lock-type-face ((t ( :family ,font-mono :foreground ,my-highlight ))))
-   `(font-lock-variable-name-face ((t ( :family ,font-mono :foreground ,my-contrast ))))
+   `(font-lock-variable-name-face ((t ( :family ,font-mono :foreground ,my-highlight ))))
    `(font-lock-warning-face ((t ( :family ,font-mono :foreground ,my-warning ))))
    `(tooltip ((t (:foreground ,my-contrast :background ,my-info ))))
    `(trailing-whitespace ((t (:background ,my-warning ))))
