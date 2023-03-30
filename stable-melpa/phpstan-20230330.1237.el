@@ -5,8 +5,8 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 15 Mar 2018
 ;; Version: 0.6.0
-;; Package-Version: 20230330.114
-;; Package-Commit: e245f87e3ec4a1776037f3295d17be8a1c5abf9f
+;; Package-Version: 20230330.1237
+;; Package-Commit: 4645ff02afd184eda9e61616231e6aac4317b517
 ;; Keywords: tools, php
 ;; Homepage: https://github.com/emacs-php/phpstan.el
 ;; Package-Requires: ((emacs "24.3") (php-mode "1.22.3") (php-runtime "0.2"))
@@ -325,6 +325,19 @@ it returns the value of `SOURCE' as it is."
                       (phpstan-get-command-args :include-executable t :args (list file)) " ")))
 
 ;;;###autoload
+(defun phpstan-analyze-project ()
+  "Analyze a PHP project using PHPStan."
+  (interactive)
+  (compile (mapconcat #'shell-quote-argument (phpstan-get-command-args :include-executable t) " ")))
+
+;;;###autoload
+(defun phpstan-generate-baseline ()
+  "Generate PHPStan baseline file."
+  (interactive)
+  (compile (mapconcat #'shell-quote-argument
+                      (phpstan-get-command-args :include-executable t :options '("--generate-baseline")) " ")))
+
+;;;###autoload
 (defun phpstan-pro ()
   "Analyze current PHP project using PHPStan Pro."
   (interactive)
@@ -370,7 +383,7 @@ it returns the value of `SOURCE' as it is."
        ((executable-find "phpstan") (list (executable-find "phpstan")))
        (t (error "PHPStan executable not found")))))))
 
-(cl-defun phpstan-get-command-args (&key include-executable use-pro args format)
+(cl-defun phpstan-get-command-args (&key include-executable use-pro args format options)
   "Return command line argument for PHPStan."
   (let ((executable-and-args (phpstan-get-executable-and-args))
         (path (phpstan-normalize-path (phpstan-get-config-file)))
@@ -395,8 +408,8 @@ it returns the value of `SOURCE' as it is."
                            "--xdebug"))
              (list phpstan--use-xdebug-option))
             (phpstan-use-xdebug-option (list "--xdebug")))
-           (list "--")
-           args)))
+           options
+           (and args (cons "--" args)))))
 
 (provide 'phpstan)
 ;;; phpstan.el ends here

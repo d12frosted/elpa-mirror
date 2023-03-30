@@ -1,11 +1,9 @@
 (org-ai .
-	[(20230330 107)
+	[(20230330 1352)
 	 ((emacs
-	   (28 2))
-	  (greader
-	   (0 1)))
+	   (28 2)))
 	 "Emacs org-mode integration for the OpenAI API" tar
-	 ((:commit . "e7cb3fc8705b576c10ed2d97f1e9346eb2df4d8f")
+	 ((:commit . "8ea0a834bd9da160986d0c7a5803120a0b21c004")
 	  (:authors
 	   ("Robert Krahn" . "robert@kra.hn"))
 	  (:maintainer "Robert Krahn" . "robert@kra.hn")

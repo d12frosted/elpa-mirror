@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/minad/consult.git
 
 Updating /mnt/store/melpa/working/consult/
-Checking out 45b5e335e5d1a118e51f79c4ae6d8c4fbc94b506
+Checking out 16ec34dd12a734b231bcc0fa03a1ab40a86def93
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/consult/
-  to /tmp/consultppJoHH/consult-20230329.1244
+  to /tmp/consult2TU0zq/consult-20230330.1104
     consult-compile.el -> consult-compile.el
     consult-flymake.el -> consult-flymake.el
     consult-icomplete.el -> consult-icomplete.el
@@ -18,21 +18,23 @@ Copying files (->) and directories (=>)
     consult-vertico.el -> consult-vertico.el
     consult-xref.el -> consult-xref.el
     consult.el -> consult.el
-Created consult-20230329.1244.tar containing:
-  consult-20230329.1244/
-  consult-20230329.1244/consult-compile.el
-  consult-20230329.1244/consult-flymake.el
-  consult-20230329.1244/consult-icomplete.el
-  consult-20230329.1244/consult-imenu.el
-  consult-20230329.1244/consult-info.el
-  consult-20230329.1244/consult-kmacro.el
-  consult-20230329.1244/consult-org.el
-  consult-20230329.1244/consult-pkg.el
-  consult-20230329.1244/consult-register.el
-  consult-20230329.1244/consult-vertico.el
-  consult-20230329.1244/consult-xref.el
-  consult-20230329.1244/consult.el
-Built consult in 4.931s, finished at 2023-03-30T09:47:46+0000
+Created consult-20230330.1104.tar containing:
+  consult-20230330.1104/
+  consult-20230330.1104/consult-compile.el
+  consult-20230330.1104/consult-flymake.el
+  consult-20230330.1104/consult-icomplete.el
+  consult-20230330.1104/consult-imenu.el
+  consult-20230330.1104/consult-info.el
+  consult-20230330.1104/consult-kmacro.el
+  consult-20230330.1104/consult-org.el
+  consult-20230330.1104/consult-pkg.el
+  consult-20230330.1104/consult-register.el
+  consult-20230330.1104/consult-vertico.el
+  consult-20230330.1104/consult-xref.el
+  consult-20230330.1104/consult.el
+Built consult in 5.245s, finished at 2023-03-30T13:43:15+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  356 Mar 30 09:47 packages/consult-20230329.1244.entry
 292K -rw-r--r-- 1 root root 290K Mar 30 09:47 packages/consult-20230329.1244.tar
+4.0K -rw-r--r-- 1 root root  356 Mar 30 13:43 packages/consult-20230330.1104.entry
+292K -rw-r--r-- 1 root root 290K Mar 30 13:43 packages/consult-20230330.1104.tar
