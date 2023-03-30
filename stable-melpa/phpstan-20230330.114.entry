@@ -1,0 +1,15 @@
+(phpstan .
+	 [(20230330 114)
+	  ((emacs
+	    (24 3))
+	   (php-mode
+	    (1 22 3))
+	   (php-runtime
+	    (0 2)))
+	  "Interface to PHPStan" single
+	  ((:commit . "e245f87e3ec4a1776037f3295d17be8a1c5abf9f")
+	   (:authors
+	    ("USAMI Kenta" . "tadsan@zonu.me"))
+	   (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+	   (:keywords "tools" "php")
+	   (:url . "https://github.com/emacs-php/phpstan.el"))])

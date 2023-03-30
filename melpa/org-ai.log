@@ -3,22 +3,34 @@ Fetcher: github
 Source:  https://github.com/rksm/org-ai.git
 
 Updating /mnt/store/melpa/working/org-ai/
-Checking out 8748ac5687b22b7e637505871125554ec727189e
+Checking out e7cb3fc8705b576c10ed2d97f1e9346eb2df4d8f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-ai/
-  to /tmp/org-aiv01I0v/org-ai-20230317.2217
+  to /tmp/org-aiHRquBQ/org-ai-20230330.107
+    org-ai-block.el -> org-ai-block.el
+    org-ai-openai-image.el -> org-ai-openai-image.el
+    org-ai-openai.el -> org-ai-openai.el
+    org-ai-talk.el -> org-ai-talk.el
+    org-ai-useful.el -> org-ai-useful.el
     org-ai.el -> org-ai.el
     snippets => snippets
-Created org-ai-20230317.2217.tar containing:
-  org-ai-20230317.2217/
-  org-ai-20230317.2217/org-ai-pkg.el
-  org-ai-20230317.2217/org-ai.el
-  org-ai-20230317.2217/snippets/
-  org-ai-20230317.2217/snippets/org-mode/
-  org-ai-20230317.2217/snippets/org-mode/org-ai-block
-  org-ai-20230317.2217/snippets/org-mode/org-ai-image
-Built org-ai in 5.619s, finished at 2023-03-29T18:48:08+0000
+Created org-ai-20230330.107.tar containing:
+  org-ai-20230330.107/
+  org-ai-20230330.107/org-ai-block.el
+  org-ai-20230330.107/org-ai-openai-image.el
+  org-ai-20230330.107/org-ai-openai.el
+  org-ai-20230330.107/org-ai-pkg.el
+  org-ai-20230330.107/org-ai-talk.el
+  org-ai-20230330.107/org-ai-useful.el
+  org-ai-20230330.107/org-ai.el
+  org-ai-20230330.107/snippets/
+  org-ai-20230330.107/snippets/org-mode/
+  org-ai-20230330.107/snippets/org-mode/org-ai-block
+  org-ai-20230330.107/snippets/org-mode/org-ai-image
+Built org-ai in 4.923s, finished at 2023-03-30T02:43:58+0000
  ✓ Success:
  36K -rw-r--r-- 1 root root 36K Mar 26 19:34 packages/org-ai-20230317.2217.el
-4.0K -rw-r--r-- 1 root root 314 Mar 29 18:48 packages/org-ai-20230317.2217.entry
- 52K -rw-r--r-- 1 root root 50K Mar 29 18:48 packages/org-ai-20230317.2217.tar
+4.0K -rw-r--r-- 1 root root 314 Mar 29 22:46 packages/org-ai-20230317.2217.entry
+ 52K -rw-r--r-- 1 root root 50K Mar 29 22:46 packages/org-ai-20230317.2217.tar
+4.0K -rw-r--r-- 1 root root 336 Mar 30 02:43 packages/org-ai-20230330.107.entry
+ 92K -rw-r--r-- 1 root root 90K Mar 30 02:43 packages/org-ai-20230330.107.tar
