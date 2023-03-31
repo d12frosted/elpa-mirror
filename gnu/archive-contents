@@ -771,17 +771,17 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "7c425a2d0988f3fae603434c1f8044be8293d517"))])
  (denote-menu .
-	      [(1 0 0)
+	      [(1 1 1)
 	       ((emacs
 		 (28 1))
 		(denote
 		 (1 2 0)))
 	       "View denote files in a tabulated list." tar
-	       ((:maintainer "Mohamed Suliman" . "sulimanm@tcd.ie")
+	       ((:url . "https://github.com/namilus/denote-menu")
+		(:maintainer "Mohamed Suliman" . "sulimanm@tcd.ie")
 		(:authors
 		 ("Mohamed Suliman" . "sulimanm@tcd.ie"))
-		(:url . "https://elpa.gnu.org/packages/denote-menu.html")
-		(:commit . "3bd7cf7d126d4493df17715aec3e7a9046efdc8c"))])
+		(:commit . "8e67c1a326bda7b824252548a1e5e46c7f840c49"))])
  (detached .
 	   [(0 10 1)
 	    ((emacs
@@ -1811,7 +1811,7 @@
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:commit . "68b579d715c4be5a255852130b9009151fb0c41e"))])
  (jit-spell .
-	    [(0 2)
+	    [(0 3)
 	     ((emacs
 	       (27 1))
 	      (compat
@@ -1822,7 +1822,7 @@
 	      (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	      (:authors
 	       ("Augusto Stoffel" . "arstoffel@gmail.com"))
-	      (:commit . "c0340baa13ec381f88191bfa9f95d6f4199503fc"))])
+	      (:commit . "365003e6e3c25c5e6210a2a4ce0654fa28063a23"))])
  (js2-mode .
 	   [(20220710)
 	    ((emacs

@@ -1,0 +1,10 @@
+(org-ai .
+	[(20230330 1511)
+	 ((emacs
+	   (28 2)))
+	 "Emacs org-mode integration for the OpenAI API" tar
+	 ((:commit . "b094db2d1cfde1e4d303fd08a62ec761616b3f94")
+	  (:authors
+	   ("Robert Krahn" . "robert@kra.hn"))
+	  (:maintainer "Robert Krahn" . "robert@kra.hn")
+	  (:url . "https://github.com/rksm/org-ai"))])

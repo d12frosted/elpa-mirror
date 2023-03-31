@@ -1,0 +1,11 @@
+(nickel-mode .
+	     [(20230330 1206)
+	      ((emacs
+		(24 1)))
+	      "A major mode for editing Nickel source code" single
+	      ((:commit . "b909b815949516f806a56d59a14ee5e43be02952")
+	       (:authors
+		("The Nickel Team" . "nickel-lang@tweag.io"))
+	       (:maintainer "The Nickel Team" . "nickel-lang@tweag.io")
+	       (:keywords "languages" "configuration-language" "configuration" "nickel" "infrastructure")
+	       (:url . "https://github.com/nickel-lang/nickel-mode"))])
