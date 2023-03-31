@@ -6,13 +6,13 @@ Updating /mnt/store/melpa/working/clmemo/
 Checking out f695c38c551f72f6ac5e1a82badc540c80d3b33b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clmemo/
-  to /tmp/clmemoqR6Stb/clmemo-20220204.1345
+  to /tmp/clmemoPJ7bZC/clmemo-20220204.1345
     clmemo.el -> clmemo.el
   ! doc/clmemo.texi -> clmemo.texi
   ! doc/install.texi -> install.texi
   ! doc/news.texi -> news.texi
-Generating /tmp/clmemoqR6Stb/clmemo-20220204.1345/clmemo.info
-Generating /tmp/clmemoqR6Stb/clmemo-20220204.1345/install.info
+Generating /tmp/clmemoPJ7bZC/clmemo-20220204.1345/clmemo.info
+Generating /tmp/clmemoPJ7bZC/clmemo-20220204.1345/install.info
 
 Command '' exited with non-zero exit-code: 1
 
@@ -26,10 +26,10 @@ Error: (error "Command exited with non-zero exit-code: 1")
 
 Command '' exited with non-zero exit-code: 1
 
-install-info: No such file or directory for /tmp/clmemoqR6Stb/clmemo-20220204.1345/install.info
+install-info: No such file or directory for /tmp/clmemoPJ7bZC/clmemo-20220204.1345/install.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/clmemoqR6Stb/clmemo-20220204.1345/news.info
+Generating /tmp/clmemoPJ7bZC/clmemo-20220204.1345/news.info
 Created clmemo-20220204.1345.tar containing:
   clmemo-20220204.1345/
   clmemo-20220204.1345/clmemo-pkg.el
@@ -37,7 +37,7 @@ Created clmemo-20220204.1345.tar containing:
   clmemo-20220204.1345/clmemo.info
   clmemo-20220204.1345/dir
   clmemo-20220204.1345/news.info
-Built clmemo in 29.627s, finished at 2023-03-31T01:36:11+0000
+Built clmemo in 16.973s, finished at 2023-03-31T05:34:20+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  321 Mar 31 01:36 packages/clmemo-20220204.1345.entry
-132K -rw-r--r-- 1 root root 130K Mar 31 01:36 packages/clmemo-20220204.1345.tar
+4.0K -rw-r--r-- 1 root root  321 Mar 31 05:34 packages/clmemo-20220204.1345.entry
+132K -rw-r--r-- 1 root root 130K Mar 31 05:34 packages/clmemo-20220204.1345.tar

@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "5.0.0"))
-;; Package-Version: 20230316.419
-;; Package-Commit: caa38e550e3c1e9f9a472cfcc94ea4db3775d9b4
+;; Package-Version: 20230331.240
+;; Package-Commit: d6a9bb1431e848bcf8cb8f07c9290d29d039814d
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -240,6 +240,7 @@
                   ("jpy" . ,(all-the-icons-faicon "jpy" :face '(:foreground "GreenYellow")))
                   ("rmb" . ,(all-the-icons-faicon "jpy" :face '(:foreground "IndianRed1")))
                   ("payment" . ,(all-the-icons-faicon "credit-card" :face '(:foreground "CornflowerBlue")))
+                  ("donation" . ,(all-the-icons-faicon "money" :face '(:foreground "LightSeaGreen")))
                   ("CC" . ,(all-the-icons-faicon "cc" :face '(:foreground "gray")))
                   ("credit_card" . ,(all-the-icons-faicon "credit-card" :face '(:foreground "CornflowerBlue")))
                   ("credit_card_visa" . ,(all-the-icons-faicon "cc-visa" :face '(:foreground "CornflowerBlue")))
@@ -1033,8 +1034,7 @@
                       ("united_arab_emirates" . ,(create-image (concat dir "united-arab-emirates.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
                       ("united_kingdom" . ,(create-image (concat dir "united-kingdom.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
                       ("united_nations" . ,(create-image (concat dir "united-nations.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
-                      ("america" . ,(create-image (concat dir "united-states-of-america.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
-                      ("united_states" . ,(create-image (concat dir "united-states-of-america.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
+                      ("united_states_of_america" . ,(create-image (concat dir "united-states-of-america.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
                       ("uruguay" . ,(create-image (concat dir "uruguay.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
                       ("uzbekistan" . ,(create-image (concat dir "uzbekistn.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
                       ("vanuatu" . ,(create-image (concat dir "vanuatu.png") nil nil :ascent 'center :height org-tag-beautify-icon-height :width org-tag-beautify-icon-width))
