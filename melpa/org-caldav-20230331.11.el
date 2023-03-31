@@ -6,8 +6,8 @@
 ;; Author: David Engster <deng@randomsample.de>
 ;; Maintainer: Jack Kamm <jackkamm@tatersworld.org>
 ;; Keywords: calendar, caldav
-;; Package-Version: 20230205.2235
-;; Package-Commit: cc1b820773ccab9e3d8f584e96c14cdbb22cdb16
+;; Package-Version: 20230331.11
+;; Package-Commit: 618bf4cdc9be140ca1993901d017b7f18297f1b8
 ;; URL: https://github.com/dengste/org-caldav/
 ;; Package-Requires: ((emacs "26.3") (org "9.1"))
 ;;
@@ -1089,6 +1089,7 @@ ICSBUF is the buffer containing the exported iCalendar file."
           (unless (string-match (car cur) uid)
             (error "Could not find UID %s" (car cur)))
           (org-caldav-narrow-event-under-point)
+          (org-caldav-convert-buffer-to-crlf)
           (org-caldav-cleanup-ics-description)
           (org-caldav-maybe-fix-timezone)
           (org-caldav-set-sequence-number cur event-etag)
@@ -1096,7 +1097,6 @@ ICSBUF is the buffer containing the exported iCalendar file."
           (org-caldav-fix-todo-status-percent-state)
           (org-caldav-fix-categories)
           (org-caldav-fix-todo-dtstart)
-          (org-caldav-convert-buffer-to-crlf)
           (message "Putting event %d of %d Org --> Cal" counter (length events))
           (if (org-caldav-put-event icsbuf)
               (org-caldav-event-set-etag cur 'put)
@@ -1212,6 +1212,7 @@ This is a bug in older Org versions."
     (when (search-forward "BEGIN:VTODO" nil t)
       (search-forward "PRIORITY:")
       (unless (eq (thing-at-point 'number) 0)
+        ;; NOTE: Deletion up to eol-1 assumes the line ends with ^M
         (delete-region (point) (- (point-at-eol) 1))
         (insert (number-to-string
                   (save-excursion
