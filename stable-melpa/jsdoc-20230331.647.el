@@ -5,8 +5,8 @@
 
 ;; Author: Isa Mert Gurbuz <isamertgurbuz@gmail.com>
 ;; Version: 0.3
-;; Package-Version: 20230307.1806
-;; Package-Commit: 486b9d65d47ab2e840264ec2aa3da67fb6dbff75
+;; Package-Version: 20230331.647
+;; Package-Commit: 10606a37f70cbf419590bbbc292fe1e800435ed5
 ;; URL: https://github.com/isamert/jsdoc.el
 ;; Package-Requires: ((emacs "29.1") (dash "2.11.0") (s "1.12.0"))
 
@@ -41,7 +41,7 @@
   :group 'tools)
 
 (defcustom jsdoc-append-dash t
-  "Wheter to append \" - \" after @param, @returns etc. to enhance readability."
+  "Whether to append \" - \" after @param, @returns etc. to enhance readability."
   :type 'boolean
   :group 'jsdoc)
 

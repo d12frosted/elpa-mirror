@@ -3,21 +3,23 @@ Fetcher: git
 Source:  https://thelambdalab.xyz/git/elpher.git
 
 Updating /mnt/store/melpa/working/elpher/
-Checking out 31641d57f7bb95c8a8903a8d2c7ac8104603b7c4
+Checking out 593310c145f1836781b16abed4503969e642212e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elpher/
-  to /tmp/elpherUSiy5a/elpher-20230329.731
+  to /tmp/elphertUZBSj/elpher-20230331.749
     elpher-pkg.el -> elpher-pkg.el
     elpher.el -> elpher.el
     elpher.texi -> elpher.texi
-Generating /tmp/elpherUSiy5a/elpher-20230329.731/elpher.info
-Created elpher-20230329.731.tar containing:
-  elpher-20230329.731/
-  elpher-20230329.731/dir
-  elpher-20230329.731/elpher-pkg.el
-  elpher-20230329.731/elpher.el
-  elpher-20230329.731/elpher.info
-Built elpher in 9.132s, finished at 2023-03-31T05:46:23+0000
+Generating /tmp/elphertUZBSj/elpher-20230331.749/elpher.info
+Created elpher-20230331.749.tar containing:
+  elpher-20230331.749/
+  elpher-20230331.749/dir
+  elpher-20230331.749/elpher-pkg.el
+  elpher-20230331.749/elpher.el
+  elpher-20230331.749/elpher.info
+Built elpher in 10.163s, finished at 2023-03-31T09:44:36+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  351 Mar 31 05:46 packages/elpher-20230329.731.entry
 160K -rw-r--r-- 1 root root 160K Mar 31 05:46 packages/elpher-20230329.731.tar
+4.0K -rw-r--r-- 1 root root  351 Mar 31 09:44 packages/elpher-20230331.749.entry
+160K -rw-r--r-- 1 root root 160K Mar 31 09:44 packages/elpher-20230331.749.tar
