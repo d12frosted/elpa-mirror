@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/srdja/iodine-theme.git
 
 Updating /mnt/store/melpa/working/iodine-theme/
-Checking out 02fb780e1d8d8a6b9c709bfac399abe1665c6999
-Built iodine-theme in 5.512s, finished at 2023-03-31T10:07:52+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Mar 31 10:07 packages/iodine-theme-20151031.1639.el
-4.0K -rw-r--r-- 1 root root  368 Mar 31 10:07 packages/iodine-theme-20151031.1639.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/srdja/iodine-theme.git/': Failed to connect to github.com port 443: Connection refused
+
+Command exited with non-zero exit-code: 128

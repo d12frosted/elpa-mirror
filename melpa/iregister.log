@@ -3,18 +3,11 @@ Fetcher: github
 Source:  https://github.com/atykhonov/iregister.el.git
 
 Updating /mnt/store/melpa/working/iregister/
-Checking out 6a48c66187289de5f300492be11c83e98410c018
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/iregister/
-  to /tmp/iregisterXhNaYc/iregister-20150515.2107
-    .bump-version.el -> .bump-version.el
-    iregister.el -> iregister.el
-Created iregister-20150515.2107.tar containing:
-  iregister-20150515.2107/
-  iregister-20150515.2107/.bump-version.el
-  iregister-20150515.2107/iregister-pkg.el
-  iregister-20150515.2107/iregister.el
-Built iregister in 4.645s, finished at 2023-03-31T10:07:59+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 375 Mar 31 10:07 packages/iregister-20150515.2107.entry
- 40K -rw-r--r-- 1 root root 40K Mar 31 10:07 packages/iregister-20150515.2107.tar
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/atykhonov/iregister.el.git/': Failed to connect to github.com port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

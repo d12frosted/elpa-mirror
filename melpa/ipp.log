@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/emarsden/ipp-el.git
 
 Updating /mnt/store/melpa/working/ipp/
-Checking out 8011ef4f550ebfbeefcacc1196a103580c730cfe
-Built ipp in 5.291s, finished at 2023-03-31T10:07:56+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 20K Mar 31 10:07 packages/ipp-20230303.1138.el
-4.0K -rw-r--r-- 1 root root 447 Mar 31 10:07 packages/ipp-20230303.1138.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/emarsden/ipp-el.git/': Failed to connect to github.com port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

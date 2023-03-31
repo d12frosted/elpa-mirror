@@ -5,9 +5,9 @@
 ;; Author: Debanjum Singh Solanky <debanjum@gmail.com>
 ;; Description: A search assistant for your second brain
 ;; Keywords: search, chat, org-mode, outlines, markdown, beancount, image
-;; Package-Version: 20230327.2035
-;; Package-Commit: 64fff1d372b7ceccff7eea13bb574c6192c5acd5
-;; Version: 0.5.0
+;; Package-Version: 20230331.1113
+;; Package-Commit: 35aa06067fb2b35ac79344f1af407fcc6b34083d
+;; Version: 0.6.0
 ;; Package-Requires: ((emacs "27.1") (transient "0.3.0") (dash "2.19.1"))
 ;; URL: https://github.com/debanjum/khoj/tree/master/src/interface/emacs
 

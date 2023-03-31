@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/re5et/itail.git
 
 Updating /mnt/store/melpa/working/itail/
-Checking out 6e43c20da03be3b9c6ece93b7dc3495975ec1888
-Built itail in 4.657s, finished at 2023-03-31T10:08:12+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Mar 31 10:08 packages/itail-20171112.804.el
-4.0K -rw-r--r-- 1 root root 256 Mar 31 10:08 packages/itail-20171112.804.entry
+
+Command '' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/re5et/itail.git/': Failed to connect to github.com port 443: Connection refused
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

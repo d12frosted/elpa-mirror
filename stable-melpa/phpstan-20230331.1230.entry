@@ -1,5 +1,5 @@
 (phpstan .
-	 [(20230330 1702)
+	 [(20230331 1230)
 	  ((emacs
 	    (24 3))
 	   (compat
@@ -9,7 +9,7 @@
 	   (php-runtime
 	    (0 2)))
 	  "Interface to PHPStan" single
-	  ((:commit . "7ab85a495cd8f49c011d4a9c27b292dfaf473c95")
+	  ((:commit . "a4193de889c68d195a109fc239857f70728bce4e")
 	   (:authors
 	    ("USAMI Kenta" . "tadsan@zonu.me"))
 	   (:maintainer "USAMI Kenta" . "tadsan@zonu.me")

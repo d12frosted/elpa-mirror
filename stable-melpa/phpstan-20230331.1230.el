@@ -5,8 +5,8 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 15 Mar 2018
 ;; Version: 0.6.0
-;; Package-Version: 20230330.1702
-;; Package-Commit: 7ab85a495cd8f49c011d4a9c27b292dfaf473c95
+;; Package-Version: 20230331.1230
+;; Package-Commit: a4193de889c68d195a109fc239857f70728bce4e
 ;; Keywords: tools, php
 ;; Homepage: https://github.com/emacs-php/phpstan.el
 ;; Package-Requires: ((emacs "24.3") (compat "29") (php-mode "1.22.3") (php-runtime "0.2"))
@@ -112,6 +112,12 @@
 
 (defcustom phpstan-baseline-file "phpstan-baseline.neon"
   "File name of PHPStan baseline file."
+  :type 'string
+  :safe #'stringp
+  :group 'phpstan)
+
+(defcustom phpstan-tip-message-prefix "💡 "
+  "Prefix of PHPStan tip message."
   :type 'string
   :safe #'stringp
   :group 'phpstan)
