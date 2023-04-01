@@ -1123,11 +1123,13 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "127492fac048cecfdba145d496a902022a68d1d5"))])
  (ement .
-	[(0 7)
+	[(0 8 1)
 	 ((emacs
 	   (27 1))
 	  (map
 	   (2 1))
+	  (persist
+	   (0 5))
 	  (plz
 	   (0 2))
 	  (taxy
@@ -1144,7 +1146,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "5bb6c930ff29f22263018b5dff7b45669b8357f5"))])
+	  (:commit . "41a5a6b589b3016e2f9fbc9746a1bf482e69cfb5"))])
  (emms .
        [(14)
 	((cl-lib

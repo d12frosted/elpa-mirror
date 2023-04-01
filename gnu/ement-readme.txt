@@ -102,17 +102,19 @@ Feel free to join us in the chat room:
      account.
   2. Wait for initial sync to complete (which can take a few
      moments–initial sync JSON requests can be large).
-  3. Use these commands:
+  3. Use these commands (room-related commands may be called with
+     universal prefix to prompt for the room):
      • `ement-list-rooms' to view the list of joined rooms.
      • `ement-view-room' to view a room's buffer, selected with
        completion.
      • `ement-create-room' to create a new room.
+     • `ement-create-space' to create a space.
      • `ement-invite-user' to invite a user to a room.
      • `ement-join-room' to join a room.
      • `ement-leave-room' to leave a room.
      • `ement-forget-room' to forget a room.
-     • `ement-tag-room' to add (or with interactive prefix, remove) a
-       tag on a room (including favorite/low-priority status).
+     • `ement-tag-room' to toggle a tag on a room (including
+       favorite/low-priority status).
      • `ement-list-members' to list members in a room.
      • `ement-send-direct-message' to send a direct message to a user
        (in an existing direct room, or creating a new one
@@ -123,18 +125,20 @@ Feel free to join us in the chat room:
      • `ement-room-set-topic' to set a room's topic.
      • `ement-room-occur' to search in a room's known events.
      • `ement-room-override-name' to override a room's display name.
-     • `ement-ignore-user' to ignore a user (or with interactive
-       prefix, un-ignore).
+     • `ement-ignore-user' to ignore a user (or with interactive prefix,
+       un-ignore).
      • `ement-room-set-message-format' to set a room's message format
        buffer-locally.
+     • `ement-room-toggle-space' to toggle a room's membership in a
+       space (a way to group rooms in Matrix).
      • `ement-directory' to view a room directory.
      • `ement-directory-search' to search a room directory.
   4. Use these special buffers to see events from multiple rooms (you
      can also reply to messages from these buffers!):
      • See all new events that mention you in the `*Ement Mentions*'
        buffer.
-     • See all new events in rooms that have open buffers in the
-       `*Ement Notifications*' buffer.
+     • See all new events in rooms that have open buffers in the `*Ement
+       Notifications*' buffer.
 
 
 2.1 Bindings
@@ -220,6 +224,7 @@ Feel free to join us in the chat room:
   ⁃ Join room: `R j'
   ⁃ Leave room: `R l'
   ⁃ Forget room: `R F'
+  ⁃ Toggle room's spaces: `R s'
 
   *Other*
 
@@ -233,6 +238,9 @@ Feel free to join us in the chat room:
   ⁃ Show buffer of room at point: `RET'
   ⁃ Show buffer of next unread room: `SPC'
   ⁃ Move between room names: `TAB' / `<backtab>'
+
+  ⁃ Kill room's buffer: `k'
+  ⁃ Toggle room's membership in a space: `s'
 
 
 2.1.3 Directory buffers
@@ -254,13 +262,13 @@ Feel free to join us in the chat room:
 2.2 Tips
 ────────
 
-  ⁃ Desktop notifications are enabled by default for events that
-    mention the local user.  They can also be shown for all events in
-    rooms with open buffers.
+  ⁃ Desktop notifications are enabled by default for events that mention
+    the local user.  They can also be shown for all events in rooms with
+    open buffers.
   ⁃ Send messages in Org mode format by customizing the option
     `ement-room-send-message-filter' (which enables Org format by
-    default), or by calling `ement-room-compose-org' in a compose
-    buffer (which enables it for a single message).  Then Org-formatted
+    default), or by calling `ement-room-compose-org' in a compose buffer
+    (which enables it for a single message).  Then Org-formatted
     messages are automatically converted and sent as HTML-formatted
     messages (with the Org syntax as the plain-text fallback).  You can
     send syntax such as:
@@ -278,15 +286,13 @@ Feel free to join us in the chat room:
     can arrange an Emacs frame with several room buffers displayed at
     once, use `burly-bookmark-windows' to bookmark the layout, and then
     you can restore that layout and all of the room buffers by opening
-    the bookmark, rather than having to manually arrange them every
-    time you start Emacs or change the window configuration.
-  ⁃ Images and other files can be uploaded to rooms using
-    drag-and-drop.
+    the bookmark, rather than having to manually arrange them every time
+    you start Emacs or change the window configuration.
+  ⁃ Images and other files can be uploaded to rooms using drag-and-drop.
   ⁃ You can customize settings in the `ement' group.
-    • *Note:* `setq' should not be used for certain options, because
-       it will not call the associated setter function.  Users who
-       have an aversion to the customization system may experience
-       problems.
+    • *Note:* `setq' should not be used for certain options, because it
+       will not call the associated setter function.  Users who have an
+       aversion to the customization system may experience problems.
 
 
 [Burly] <https://github.com/alphapapa/burly.el>
@@ -345,24 +351,23 @@ Feel free to join us in the chat room:
     Ement.el uses lazy-loading, which significantly improves
     performance.
   • `matrix-client' automatically makes buffers for every room a user
-    has joined, even if the user doesn't currently want to watch a
-    room.  Ement.el opens room buffers on-demand, improving performance
-    by not having to insert events into buffers for rooms the user
-    isn't watching.
-  • `matrix-client' was developed without the intention of publishing
-    it to, e.g. MELPA or ELPA.  It has several dependencies, and its
-    code does not always install or compile cleanly due to
-    macro-expansion issues (apparently depending on the user's Emacs
-    config).  Ement.el is designed to have minimal dependencies outside
-    of Emacs (currently only one, `plz', which could be imported into
-    the project), and every file is linted and compiles cleanly using
-    [makem.sh].
+    has joined, even if the user doesn't currently want to watch a room.
+    Ement.el opens room buffers on-demand, improving performance by not
+    having to insert events into buffers for rooms the user isn't
+    watching.
+  • `matrix-client' was developed without the intention of publishing it
+    to, e.g. MELPA or ELPA.  It has several dependencies, and its code
+    does not always install or compile cleanly due to macro-expansion
+    issues (apparently depending on the user's Emacs config).  Ement.el
+    is designed to have minimal dependencies outside of Emacs (currently
+    only one, `plz', which could be imported into the project), and
+    every file is linted and compiles cleanly using [makem.sh].
   • `matrix-client' uses EIEIO, probably unnecessarily, since few, if
     any, of the benefits of EIEIO are realized in it.  Ement.el uses
     structs instead.
   • `matrix-client' uses bespoke code for inserting messages into
-    buffers, which works pretty well, but has a few minor bugs which
-    are difficult to track down.  Ement.el uses Emacs's built-in (and
+    buffers, which works pretty well, but has a few minor bugs which are
+    difficult to track down.  Ement.el uses Emacs's built-in (and
     perhaps little-known) `ewoc' library, which makes it much simpler
     and more reliable to insert and update messages in buffers, and
     enables the development of advanced UI features more easily.
@@ -371,13 +376,12 @@ Feel free to join us in the chat room:
     `matrix-client-frame' command, fairly pleasing to use, but isn't
     especially "Emacsy."  Ement.el is intended to better fit into
     Emacs's paradigms.
-  • `matrix-client''s long name makes for long symbol names, which
-    makes for tedious, verbose code.  `ement' is easy to type and makes
-    for concise, readable code.
+  • `matrix-client''s long name makes for long symbol names, which makes
+    for tedious, verbose code.  `ement' is easy to type and makes for
+    concise, readable code.
   • The author has learned much since writing `matrix-client' and hopes
-    to write simpler, more readable, more maintainable code in
-    Ement.el.  It's hoped that this will enable others to contribute
-    more easily.
+    to write simpler, more readable, more maintainable code in Ement.el.
+    It's hoped that this will enable others to contribute more easily.
 
   Note that, while `matrix-client' remains usable, and probably will for
   some time to come, Ement.el has now surpassed it in every way.  The
@@ -393,7 +397,56 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.7
+4.1 0.8.1
+─────────
+
+  Added missing changelog entry (of course).
+
+
+4.2 0.8
+───────
+
+  *Additions*
+  ⁃ Command `ement-create-space' creates a new space.
+  ⁃ Command `ement-room-toggle-space' toggles a room's membership in a
+    space (a way to group rooms in Matrix).
+  ⁃ Visibility of sections in the room list is saved across sessions.
+  ⁃ Command `ement-room-list-kill-buffer' kills a room's buffer from the
+    room list.
+  ⁃ Set `device_id' and `initial_device_display_name' upon login
+    (e.g. `Ement.el: username@hostname').  ([#134].  Thanks to [Arto
+    Jantunen] for reporting.)
+
+  *Changes*
+
+  ⁃ Room-related commands may be called interactively with a universal
+    prefix to prompt for the room/session (allowing to send events or
+    change settings in rooms other than the current one).
+  ⁃ Command `ement-room-list' reuses an existing window showing the room
+    list when possible.  ([#131].  Thanks to [Jeff Bowman] for
+    suggesting.)
+  ⁃ Command `ement-tag-room' toggles tags (rather than adding by default
+    and removing when called with a prefix).
+  ⁃ Default room grouping now groups "spaced" rooms separately.
+
+  *Fixes*
+
+  ⁃ Message format filter works properly when writing replies.
+  ⁃ Improve insertion of sender name headers when using the "Elemental"
+    message format.
+  ⁃ Prompts in commands `ement-leave-room' and `ement-forget-room'.
+
+
+[#134] <https://github.com/alphapapa/ement.el/issues/134>
+
+[Arto Jantunen] <https://github.com/viiru->
+
+[#131] <https://github.com/alphapapa/ement.el/issues/131>
+
+[Jeff Bowman] <https://github.com/jeffbowman>
+
+
+4.3 0.7
 ───────
 
   *Additions*
@@ -433,7 +486,7 @@ Feel free to join us in the chat room:
 [mekeor] <https://github.com/mekeor>
 
 
-4.2 0.6
+4.4 0.6
 ───────
 
   *Additions*
@@ -463,7 +516,7 @@ Feel free to join us in the chat room:
 [Visuwesh] <https://github.com/vizs>
 
 
-4.3 0.5.2
+4.5 0.5.2
 ─────────
 
   *Fixes*
@@ -471,7 +524,7 @@ Feel free to join us in the chat room:
     homeserver is slow to respond).
 
 
-4.4 0.5.1
+4.6 0.5.1
 ─────────
 
   *Fixes*
@@ -479,7 +532,7 @@ Feel free to join us in the chat room:
   ⁃ Faces in `ement-directory' listings.
 
 
-4.5 0.5
+4.7 0.5
 ───────
 
   *Additions*
@@ -504,7 +557,7 @@ Feel free to join us in the chat room:
 [taxy.el] <https://github.com/alphapapa/taxy.el>
 
 
-4.6 0.4.1
+4.8 0.4.1
 ─────────
 
   *Fixes*
@@ -512,7 +565,7 @@ Feel free to join us in the chat room:
     marker's position again.
 
 
-4.7 0.4
+4.9 0.4
 ───────
 
   *Additions*
@@ -543,16 +596,16 @@ Feel free to join us in the chat room:
   ⁃ Highlighting of `@room' mentions.
 
 
-4.8 0.3.1
-─────────
+4.10 0.3.1
+──────────
 
   *Fixes*
   ⁃ Room unread status (when the last event in a room is sent by the
     local user, the room is considered read).
 
 
-4.9 0.3
-───────
+4.11 0.3
+────────
 
   *Additions*
   ⁃ Command `ement-directory' shows a server's room directory.
@@ -579,14 +632,14 @@ Feel free to join us in the chat room:
   ⁃ Compatibility with Emacs 27.
 
 
-4.10 0.2.1
+4.12 0.2.1
 ──────────
 
   *Fixes*
   ⁃ Info manual export filename.
 
 
-4.11 0.2
+4.13 0.2
 ────────
 
   *Changes*
@@ -621,14 +674,14 @@ Feel free to join us in the chat room:
 [Julien Roy] <https://github.com/MrRoy>
 
 
-4.12 0.1.4
+4.14 0.1.4
 ──────────
 
   *Fixed*
   ⁃ Info manual directory headers.
 
 
-4.13 0.1.3
+4.15 0.1.3
 ──────────
 
   *Fixed*
@@ -638,7 +691,7 @@ Feel free to join us in the chat room:
     re-enabled in a future release.)
 
 
-4.14 0.1.2
+4.16 0.1.2
 ──────────
 
   *Fixed*
@@ -655,7 +708,7 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.15 0.1.1
+4.17 0.1.1
 ──────────
 
   *Fixed*
@@ -665,7 +718,7 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.16 0.1
+4.18 0.1
 ────────
 
   After almost two years of development, the first tagged release.
