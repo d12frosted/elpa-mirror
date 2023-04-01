@@ -4,8 +4,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "24.3") (cl-lib "0.6.1") (pyim "5.2.8"))
-;; Package-Commit: fadc1cb2a0562e4e453c8399a6842e516cacf3d9
-;; Package-Version: 20230331.1324
+;; Package-Commit: 36e1c893e9e4fb7bad13e7cbcd07b11a649fbc0d
+;; Package-Version: 20230401.320
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: wp
 ;; homepage: https://repo.or.cz/amread-mode.git
@@ -95,9 +95,9 @@
 (defvar amread--voice-reader-proc-finished nil
   "A process status variable indicate whether voice reader finished reading.
 It has three status values:
-- 'not-started :: process not started
-- 'running     :: process still running
-- 'finished    :: process finished")
+- \='not-started :: process not started
+- \='running     :: process still running
+- \='finished    :: process finished")
 
 (defmacro amread--voice-reader-status-wrapper (body)
   "A wrapper macro for detecting voice reader process status and execute BODY."
@@ -168,9 +168,9 @@ It has three status values:
 
 ;; invoke cross-platform TTS Speech API through Python library "pyttsx3".
 (defun amread--voice-reader-read-text-with-tts (text)
-  "Read TEXT with cross-platform TTS Speech API through Python library 'pyttsx3'."
+  "Read TEXT with cross-platform TTS Speech API through Python library \"pyttsx3\"."
   ;; keep instance of engine to avoid repeat creating performance issue.
-  (unless (eq amread--voice-reader-engine-initialized "True")
+  (unless (string-equal amread--voice-reader-engine-initialized "True")
     (setq amread--voice-reader-engine-initialized
           (amread--voice-reader-run-python-code-in-repl
            "import pyttsx3"
@@ -209,7 +209,7 @@ It has three status values:
   (make-process
    :name "amread-voice-reader"
    :command (list amread-voice-reader-command amread-voice-reader-command-options text)
-   :sentinel (lambda (proc event)
+   :sentinel (lambda (_proc event)
                (if (string= event "finished\n")
                    (setq amread--voice-reader-proc-finished 'finished)))
    :buffer " *amread-voice-reader*"
