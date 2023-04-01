@@ -3,10 +3,4 @@ Fetcher: hg
 Source:  https://hg.serna.eu/emacs/pmdm
 
 Updating /mnt/store/melpa/working/pmdm/
-
-Command '' exited with non-zero exit-code: 255
-
-pulling from https://hg.serna.eu/emacs/pmdm
-abort: HTTP Error 502: Bad Gateway
-
-Command exited with non-zero exit-code: 255
+Wrong type argument: stringp, nil
