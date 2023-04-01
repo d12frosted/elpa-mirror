@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/chmouel/isgd.el.git
 
 Updating /mnt/store/melpa/working/isgd/
-
-Command '' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/chmouel/isgd.el.git/': Failed to connect to github.com port 443: Connection refused
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out 764306dadd5a9213799081a48aba22f7c75cca9a
+Built isgd in 3.976s, finished at 2023-04-01T02:00:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Apr  1 02:00 packages/isgd-20150414.936.el
+4.0K -rw-r--r-- 1 root root  330 Apr  1 02:00 packages/isgd-20150414.936.entry

@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/karthink/gptel.git
 
 Updating /mnt/store/melpa/working/gptel/
-Checking out 1c07a94e18a914ae69ea0061f81fda4bba29afd5
+Checking out c2ad1c004d7f5406f5eb302c533e7c7c14ea2ce0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel/
-  to /tmp/gptelg8g0zJ/gptel-20230328.1924
+  to /tmp/gptelZT9KJ8/gptel-20230401.104
     gptel-curl.el -> gptel-curl.el
     gptel-transient.el -> gptel-transient.el
     gptel.el -> gptel.el
-Created gptel-20230328.1924.tar containing:
-  gptel-20230328.1924/
-  gptel-20230328.1924/gptel-curl.el
-  gptel-20230328.1924/gptel-pkg.el
-  gptel-20230328.1924/gptel-transient.el
-  gptel-20230328.1924/gptel.el
-Built gptel in 4.329s, finished at 2023-03-31T13:57:30+0000
+Created gptel-20230401.104.tar containing:
+  gptel-20230401.104/
+  gptel-20230401.104/gptel-curl.el
+  gptel-20230401.104/gptel-pkg.el
+  gptel-20230401.104/gptel-transient.el
+  gptel-20230401.104/gptel.el
+Built gptel in 4.529s, finished at 2023-04-01T01:51:38+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 323 Mar 31 13:57 packages/gptel-20230328.1924.entry
- 52K -rw-r--r-- 1 root root 50K Mar 31 13:57 packages/gptel-20230328.1924.tar
+4.0K -rw-r--r-- 1 root root 323 Mar 31 21:54 packages/gptel-20230328.1924.entry
+ 52K -rw-r--r-- 1 root root 50K Mar 31 21:54 packages/gptel-20230328.1924.tar
+4.0K -rw-r--r-- 1 root root 322 Apr  1 01:51 packages/gptel-20230401.104.entry
+ 52K -rw-r--r-- 1 root root 50K Apr  1 01:51 packages/gptel-20230401.104.tar
