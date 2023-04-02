@@ -138,10 +138,12 @@
 2.3.1 `C-c  C-a' (function annotate-annotate)
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Creates a new annotation for that region. With no active region, `C-c
-  C-a' will create an annotation for the word under point. If point is
-  on an annotated region, `C-c C-a' will edit that annotation instead of
-  creating a new one. Clearing the annotation deletes them.
+  Creates a new annotation for that region.
+
+  With no active region, `C-c C-a' will create an annotation for the
+  word under point. If point is on an annotated region, `C-c C-a' will
+  edit that annotation instead of creating a new one. Clearing the
+  annotation deletes them.
 
   If `annotate-annotation-confirm-deletion' is non nil (the default is
   *nil*) a confirmation action is asked, using `y-or-n-p', to the user
@@ -156,6 +158,14 @@
   `annotate-endline-annotate-whole-line' is nil annotating a newline
   will signal an error.
 
+  With a numeric prefix the annotations will be displayed with the faces
+  indicated in `annotate-endline-annotate-whole-line' and
+  `annotate-annotation-text-faces', respectively. The numeric prefix is
+  used as index in the lists bound to the aforementioned variables.
+
+  The first theme can be addressed by the prefix `1', the second by the
+  prefix `2' and so on.
+
 
 ◊ 2.3.1.1 related customizable variable
 
@@ -163,11 +173,8 @@
   • `annotate-annotation-confirm-deletion';
   • `annotate-annotation-max-size-not-place-new-line';
   • `annotate-annotation-position-policy';
-  • `annotate-annotation-secondary';
-  • `annotate-annotation';
   • `annotate-endline-annotate-whole-line';
-  • `annotate-highlight-secondary';
-  • `annotate-highlight'.
+  • `annotate-annotation-text-faces'.
 
 
 2.3.2 `C-c C-d'
