@@ -49,11 +49,12 @@ More complex use cases are described in the file sample.org
 
 TODO: kanban-todo sometimes inserts no tasks at all if there are multiple tasks in non-standard states.
 
-TODO: bold text in headlines breaks the parser (*bold*).
 
 ChangeLog:
 
  - tip:   cleanup of titles from remote files
+ - 0.2.4: fix bold and link handling in headlines
+ - 0.2.3: fix breakage when org returned :title as list (use :raw-value instead)
  - 0.2.2: actually (require 'org)
  - 0.2.1: document usage of "" to get all tags and 'file
  - 0.2.0: Finally merge the much faster kanban-fill from stackeffect.

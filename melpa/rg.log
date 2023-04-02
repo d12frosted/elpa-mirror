@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/dajva/rg.el.git
 
 Updating /mnt/store/melpa/working/rg/
-Checking out 9a6bcf7180108a58ed4612aa4e55af13410ac9d0
+Checking out e8397ea2f9cadda20bf87e3fae71540511b52d9c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rg/
-  to /tmp/rg4AIzNx/rg-20230325.1440
+  to /tmp/rgbzACHn/rg-20230401.1434
     rg-header.el -> rg-header.el
     rg-history.el -> rg-history.el
     rg-ibuffer.el -> rg-ibuffer.el
@@ -17,21 +17,21 @@ Copying files (->) and directories (=>)
     rg.el -> rg.el
     wgrep-rg.el -> wgrep-rg.el
     rgel.info -> rgel.info
-Created rg-20230325.1440.tar containing:
-  rg-20230325.1440/
-  rg-20230325.1440/dir
-  rg-20230325.1440/rg-header.el
-  rg-20230325.1440/rg-history.el
-  rg-20230325.1440/rg-ibuffer.el
-  rg-20230325.1440/rg-info-hack.el
-  rg-20230325.1440/rg-isearch.el
-  rg-20230325.1440/rg-menu.el
-  rg-20230325.1440/rg-pkg.el
-  rg-20230325.1440/rg-result.el
-  rg-20230325.1440/rg.el
-  rg-20230325.1440/rgel.info
-  rg-20230325.1440/wgrep-rg.el
-Built rg in 4.426s, finished at 2023-04-01T14:18:55+0000
+Created rg-20230401.1434.tar containing:
+  rg-20230401.1434/
+  rg-20230401.1434/dir
+  rg-20230401.1434/rg-header.el
+  rg-20230401.1434/rg-history.el
+  rg-20230401.1434/rg-ibuffer.el
+  rg-20230401.1434/rg-info-hack.el
+  rg-20230401.1434/rg-isearch.el
+  rg-20230401.1434/rg-menu.el
+  rg-20230401.1434/rg-pkg.el
+  rg-20230401.1434/rg-result.el
+  rg-20230401.1434/rg.el
+  rg-20230401.1434/rgel.info
+  rg-20230401.1434/wgrep-rg.el
+Built rg in 8.616s, finished at 2023-04-02T02:09:18+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  501 Apr  1 14:18 packages/rg-20230325.1440.entry
-212K -rw-r--r-- 1 root root 210K Apr  1 14:18 packages/rg-20230325.1440.tar
+4.0K -rw-r--r-- 1 root root  501 Apr  2 02:09 packages/rg-20230401.1434.entry
+212K -rw-r--r-- 1 root root 210K Apr  2 02:09 packages/rg-20230401.1434.tar

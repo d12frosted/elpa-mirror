@@ -3,48 +3,46 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-metals.git
 
 Updating /mnt/store/melpa/working/lsp-metals/
-Checking out ae3eede6869e604cbea316d1f2dd8a4d3b673ef5
+Checking out 6affc64252605f355d2bd16408a7e8436473a9f6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-metals/
-  to /tmp/lsp-metalsEfYfIp/lsp-metals-20230401.1350
+  to /tmp/lsp-metalsq5k5Bd/lsp-metals-20230401.1406
     lsp-metals-protocol.el -> lsp-metals-protocol.el
     lsp-metals-treeview.el -> lsp-metals-treeview.el
     lsp-metals.el -> lsp-metals.el
     icons => icons
-Created lsp-metals-20230401.1350.tar containing:
-  lsp-metals-20230401.1350/
-  lsp-metals-20230401.1350/icons/
-  lsp-metals-20230401.1350/icons/book-dark.png
-  lsp-metals-20230401.1350/icons/book-light.png
-  lsp-metals-20230401.1350/icons/bug-dark.png
-  lsp-metals-20230401.1350/icons/bug-light.png
-  lsp-metals-20230401.1350/icons/class.png
-  lsp-metals-20230401.1350/icons/discord-dark.png
-  lsp-metals-20230401.1350/icons/discord-light.png
-  lsp-metals-20230401.1350/icons/enum.png
-  lsp-metals-20230401.1350/icons/field.png
-  lsp-metals-20230401.1350/icons/github-dark.png
-  lsp-metals-20230401.1350/icons/github-light.png
-  lsp-metals-20230401.1350/icons/gitter-dark.png
-  lsp-metals-20230401.1350/icons/gitter-light.png
-  lsp-metals-20230401.1350/icons/interface.png
-  lsp-metals-20230401.1350/icons/issue-opened-dark.png
-  lsp-metals-20230401.1350/icons/issue-opened-light.png
-  lsp-metals-20230401.1350/icons/logo.png
-  lsp-metals-20230401.1350/icons/method.png
-  lsp-metals-20230401.1350/icons/object.png
-  lsp-metals-20230401.1350/icons/trait.png
-  lsp-metals-20230401.1350/icons/twitter-dark.png
-  lsp-metals-20230401.1350/icons/twitter-light.png
-  lsp-metals-20230401.1350/icons/val.png
-  lsp-metals-20230401.1350/icons/var.png
-  lsp-metals-20230401.1350/lsp-metals-pkg.el
-  lsp-metals-20230401.1350/lsp-metals-protocol.el
-  lsp-metals-20230401.1350/lsp-metals-treeview.el
-  lsp-metals-20230401.1350/lsp-metals.el
-Built lsp-metals in 7.400s, finished at 2023-04-01T13:55:03+0000
+Created lsp-metals-20230401.1406.tar containing:
+  lsp-metals-20230401.1406/
+  lsp-metals-20230401.1406/icons/
+  lsp-metals-20230401.1406/icons/book-dark.png
+  lsp-metals-20230401.1406/icons/book-light.png
+  lsp-metals-20230401.1406/icons/bug-dark.png
+  lsp-metals-20230401.1406/icons/bug-light.png
+  lsp-metals-20230401.1406/icons/class.png
+  lsp-metals-20230401.1406/icons/discord-dark.png
+  lsp-metals-20230401.1406/icons/discord-light.png
+  lsp-metals-20230401.1406/icons/enum.png
+  lsp-metals-20230401.1406/icons/field.png
+  lsp-metals-20230401.1406/icons/github-dark.png
+  lsp-metals-20230401.1406/icons/github-light.png
+  lsp-metals-20230401.1406/icons/gitter-dark.png
+  lsp-metals-20230401.1406/icons/gitter-light.png
+  lsp-metals-20230401.1406/icons/interface.png
+  lsp-metals-20230401.1406/icons/issue-opened-dark.png
+  lsp-metals-20230401.1406/icons/issue-opened-light.png
+  lsp-metals-20230401.1406/icons/logo.png
+  lsp-metals-20230401.1406/icons/method.png
+  lsp-metals-20230401.1406/icons/object.png
+  lsp-metals-20230401.1406/icons/trait.png
+  lsp-metals-20230401.1406/icons/twitter-dark.png
+  lsp-metals-20230401.1406/icons/twitter-light.png
+  lsp-metals-20230401.1406/icons/val.png
+  lsp-metals-20230401.1406/icons/var.png
+  lsp-metals-20230401.1406/lsp-metals-pkg.el
+  lsp-metals-20230401.1406/lsp-metals-protocol.el
+  lsp-metals-20230401.1406/lsp-metals-treeview.el
+  lsp-metals-20230401.1406/lsp-metals.el
+Built lsp-metals in 4.407s, finished at 2023-04-02T01:45:12+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  701 Apr  1 10:00 packages/lsp-metals-20221102.1628.entry
-120K -rw-r--r-- 1 root root 120K Apr  1 10:00 packages/lsp-metals-20221102.1628.tar
-4.0K -rw-r--r-- 1 root root  701 Apr  1 13:55 packages/lsp-metals-20230401.1350.entry
-120K -rw-r--r-- 1 root root 120K Apr  1 13:55 packages/lsp-metals-20230401.1350.tar
+4.0K -rw-r--r-- 1 root root  701 Apr  2 01:45 packages/lsp-metals-20230401.1406.entry
+120K -rw-r--r-- 1 root root 120K Apr  2 01:45 packages/lsp-metals-20230401.1406.tar
