@@ -4,8 +4,8 @@
 ;;
 ;; Author: David Thompson
 ;; Keywords: hypermedia
-;; Package-Version: 20230304.2348
-;; Package-Commit: 8dffb1e53ac850b3e3698d57b150ed0282a44a7c
+;; Package-Version: 20230402.411
+;; Package-Commit: 7a476a22be3fb5a7b61b2e7a123b3d3afc159400
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.6.1") (dash "2.12.0") (seq "1.9") (s "1.9"))
 ;; Version: 0.2
 ;; URL: https://github.com/dtk01/dtk.el
@@ -95,15 +95,6 @@ thing made that was made."
   ;; numeric input, so we skip them.
   )
 
-(defvar dtk-bible-book nil
-  "DTK-BIBLE-BOOK specifies the last book value passed to the
-  retriever for a module in the \"Biblical Texts\" category.")
-
-(defvar dtk-bible-chapter-verse nil
-  "DTK-BIBLE-CHAPTER-VERSE specifies the last chapter and verse values
-  passed to the retriever for a module in the \"Biblical Texts\"
-  category.")
-
 (defvar dtk-inserter 'dtk-insert-verses
   "A function which accepts a single argument, the parsed content. The
   current buffer is used. The inserter is only invoked if dtk-parser
@@ -118,6 +109,12 @@ thing made that was made."
   "A function which accepts a string, parses it, and returns a list of
   plists representing the parsed content.")
 
+(defvar dtk-to-retrieve
+  (list nil nil)
+  "A list with two members. Specifies content to be retrieved as
+  either a single citation or as a pair of citations defining a range
+  of content.")
+
 ;;;;; Constants
 (defconst dtk-books
   '("Genesis" "Exodus" "Leviticus" "Numbers" "Deuteronomy" "Joshua" "Judges" "Ruth" "I Samuel" "II Samuel" "I Kings" "II Kings" "I Chronicles" "II Chronicles" "Ezra" "Nehemiah" "Esther" "Job" "Psalms" "Proverbs" "Ecclesiastes" "Song of Solomon" "Isaiah" "Jeremiah" "Lamentations" "Ezekiel" "Daniel" "Hosea"  "Joel" "Amos" "Obadiah" "Jonah" "Micah" "Nahum" "Habakkuk" "Zephaniah" "Haggai" "Zechariah" "Malachi"
@@ -129,6 +126,14 @@ thing made that was made."
 (defconst dtk-books-regexp
   (regexp-opt dtk-books)
   "Regular expression aiming to match a member of DTK-BOOKS.")
+
+;;; Citations
+(cl-defstruct dtk-citation
+  "Specify book, chapter, or verse or some combination thereof."
+  bk                                    ; a string
+  ch                                    ; a whole number
+  vs                                    ; a whole number
+  )
 
 ;;; Functions
 ;;;###autoload
@@ -153,6 +158,11 @@ thing made that was made."
 	  (progn
 	    (message "Okay")
 	    nil)))))
+
+(defun dtk-citation-at-point ()
+  (make-dtk-citation :bk (get-text-property (point) 'book)
+                     :ch (get-text-property (point) 'chapter)
+                     :vs (get-text-property (point) 'verse)))
 
 (defun dtk-diatheke (query-key module destination &optional diatheke-output-format searchp)
   "Invoke diatheke using CALL-PROCESS. Return value undefined. QUERY-KEY is a string or a list (e.g., '(\"John\" \"1:1\")). See the docstring for CALL-PROCESS for a description of DESTINATION. DIATHEKE-OUTPUT-FORMAT is either NIL or a keyword specifying the diatheke output format. Supported keyword values are :osis or :plain."
@@ -180,6 +190,33 @@ thing made that was made."
 								     (list query-key))
 								    (t query-key))))
     (apply 'call-process call-process-args)))
+
+(defun dtk-diatheke-query-key (a &optional b)
+  "Return a string usable as a query key for diatheke (for Biblical
+book-chapter-verse citations). Two citations, A and B, can be used to
+specify a range."
+  (let ((query-key (dtk-citation-bk a)))
+    (when (dtk-citation-ch a)
+      (setq query-key
+            (cl-concatenate 'string query-key
+                            " "
+                            (number-to-string (dtk-citation-ch a)))))
+    (when (dtk-citation-vs a)
+      (setq query-key
+            (cl-concatenate 'string query-key
+                            ":"
+                            (number-to-string (dtk-citation-vs a)))))
+    (when b
+      (setq query-key
+            (cl-concatenate 'string query-key
+                            "-"
+                            (number-to-string (dtk-citation-ch b))))
+      (when (dtk-citation-vs b)
+        (setq query-key
+              (cl-concatenate 'string query-key
+                              ":"
+                              (number-to-string (dtk-citation-vs b))))))
+    query-key))
 
 (defun dtk-diatheke-string (query-key module &optional diatheke-output-format)
   "Return a string."
@@ -273,8 +310,14 @@ obtain book, chapter, and verse."
 	    (t
 	     (switch-to-buffer dtk-buffer-name))))
     ;; Expose these values to the retriever
-    (setq dtk-bible-book final-book)
-    (setq dtk-bible-chapter-verse chapter-verse)
+    (setf dtk-to-retrieve
+          (list
+           (make-dtk-citation :bk final-book
+                              :ch (when (> (length final-chapter) 0)
+                                    (string-to-number final-chapter))
+                              :vs (when (> (length final-verse) 0)
+                                    (string-to-number final-verse)))
+           nil))
     (with-dtk-module final-module
       (dtk-retrieve-parse-insert
        (current-buffer)))
@@ -312,12 +355,13 @@ obtain book, chapter, and verse."
   (with-current-buffer destination
     (insert
      (with-temp-buffer
-       (dtk-diatheke (list dtk-bible-book
-			   dtk-bible-chapter-verse)
-		     dtk-module
-		     t
-		     dtk-diatheke-output-format
-		     nil)
+       (dtk-diatheke
+        (dtk-diatheke-query-key (cl-first dtk-to-retrieve)
+                                (cl-second dtk-to-retrieve))
+	dtk-module
+	t
+	dtk-diatheke-output-format
+	nil)
        (if (dtk-check-for-text-obesity)
 	   (progn
 	     (unless dtk-preserve-diatheke-output-p
@@ -341,8 +385,7 @@ diatheke."
 (defun dtk-bible-retrieve-setup (&optional book chapter verse dtk-buffer-p)
   "BOOK is a string. CHAPTER is an integer. VERSE is an integer. If
 BOOK is not specified, rely on interacting via the minibuffer to
-obtain book, chapter, and verse. Set DTK-BIBLE-BOOK and
-DTK-BIBLE-CHAPTER-VERSE."
+obtain book, chapter, and verse. Set DTK-TO-RETRIEVE."
   (interactive)
   (let* ((completion-ignore-case t)
          (final-book    (or book
@@ -354,9 +397,14 @@ DTK-BIBLE-CHAPTER-VERSE."
                             (read-from-minibuffer "Verse: ")))
          (chapter-verse (concat final-chapter ":" final-verse)))
     ;; Expose these values to the retriever
-    (setq dtk-bible-book final-book)
-    (setq dtk-bible-chapter-verse chapter-verse)
-    ))
+    (setf dtk-to-retrieve
+          (list
+           (make-dtk-citation :bk final-book
+                              :ch (when (> (length final-chapter) 0)
+                                    (string-to-number final-chapter))
+                              :vs (when (> (length final-verse) 0)
+                                    (string-to-number final-verse)))
+           nil))))
 
 (defun dtk-retrieve-parse-insert (insert-into)
   "Invoke DTK-RETRIEVER, anticipating that the text of interest will
@@ -714,7 +762,7 @@ respectively."
     text-props))
 
 (defun dtk-insert-osis-string (string)
-  ;; Ensure some form of whitespace precedes a word. OSIS-ELT may be a word, a set of words (e.g., "And" or "the longsuffering"), or a bundle of punctuation and whitespace (e.g., "; ").
+  ;; Ensure some form of whitespace precedes a word. STRING may be a word, a set of words (e.g., "And" or "the longsuffering"), or a bundle of punctuation and whitespace (e.g., "; ").
   (when (string-match "^[a-zA-Z]" string)
     (when (not (member (char-before) '(32 9 10 11 12 13 8220)))
       (insert #x20)))
@@ -1660,12 +1708,9 @@ verse. If VERSE is NIL, attempt to insert the indicated chapter.
 Insert at the position AT."
   (goto-char at)
   ;; Expose these values to the retriever
-  (setq dtk-bible-book bk)
-  (setq dtk-bible-chapter-verse (concat (int-to-string ch)
-					":"
-					(if verse
-					    (int-to-string verse)
-					  "")))
+  (setf dtk-to-retrieve
+        (list (make-dtk-citation :bk bk :ch ch :vs verse)
+              nil))
   (dtk-retrieve-parse-insert (current-buffer)))
 
 (defun dtk-previous-verse ()
@@ -1716,10 +1761,14 @@ Return NIL if no such position exists."
 	     (not (get-text-property (point) 'verse)))
     (if (get-text-property (1- (point)) 'verse)
 	(goto-char (1- (point)))
-      (goto-char (1-
-		  (previous-single-property-change
-		   (point)
-		   'verse))))))
+      (let ((verse-changes-at
+             ;; This may be NIL (e.g., if @ book name at start of buffer)
+             (previous-single-property-change
+	      (point)
+	      'verse)))
+        (if verse-changes-at
+            (goto-char (1- verse-changes-at))
+          nil)))))
 
 (defun dtk-previous-chapter-change ()
   "Move to the point at which the 'chapter text property assumes a different value (relative to the 'chapter text property at the current point). Return the point at which the 'chapter text property changed or, if the property does not change prior to the current point, return NIL."
@@ -1820,6 +1869,21 @@ NIL if unable to move forward in the described manner."
 		;; Possibly at whitespace
 		(t (dtk-forward-until-defined-chapter-not-equal x changes-at-point))))
       nil)))
+
+(defun dtk-forward-until-verse-defined ()
+  "If the verse text property is defined at point, return a true
+value. If the verse text property is not defined at point, move
+forward until at a position where the verse text property is
+defined. Return NIL if a position does not exist forward of point
+where the verse text property changes."
+  (interactive)
+  (cond ((eobp)
+	 nil)
+	((not (get-text-property (point) 'verse))
+	 (let ((changes-at-point (next-single-property-change (point) 'verse)))
+	   (if changes-at-point
+	       (goto-char changes-at-point))))
+	(t t)))
 
 (defun dtk-forward-verse ()
   "Move to the numeric component of the verse citation for the next verse."
