@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "5.0.0"))
-;; Package-Version: 20230331.240
-;; Package-Commit: d6a9bb1431e848bcf8cb8f07c9290d29d039814d
+;; Package-Version: 20230402.554
+;; Package-Commit: a9ec18a5b8132178b1c9f5a9e00680f4af295ba3
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -1103,6 +1103,7 @@
 
 ;;========================================== org-tag-alist ==========================================
 
+;;;###autoload
 (defun org-tag-beautify-add-tags-to-list ()
   "Add org-tag-beautify tags to `org-tag-alist' for `org-set-tags-command' completion."
   (with-eval-after-load 'org
@@ -1114,7 +1115,7 @@
                    '((:endgrouptag)))))))
 
 ;;============================================ minor mode ===========================================
-
+;;;###autoload
 (defun org-tag-beautify-enable ()
   "Enable `org-tag-beautify'."
   (setq org-pretty-tags-surrogate-strings nil)
@@ -1126,6 +1127,7 @@
   (org-pretty-tags-global-mode 1)
   (org-tag-beautify-auto-smart-tag-enable))
 
+;;;###autoload
 (defun org-tag-beautify-disable ()
   "Disable `org-tag-beautify'."
   (setq org-pretty-tags-surrogate-strings org-tag-beautify--surrogate-strings-original)
