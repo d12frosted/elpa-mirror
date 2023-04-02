@@ -4,8 +4,8 @@
 
 ;; Author: Dan Dee <monkeyjunglejuice@pm.me>
 ;; URL: https://github.com/monkeyjunglejuice/matrix-emacs-theme
-;; Package-Version: 20230317.338
-;; Package-Commit: 6e53d899c132d8f083c45aff034e041d5eb4d220
+;; Package-Version: 20230402.1218
+;; Package-Commit: b339285651e088bc51fa2fb51aa319fb70cab9a4
 ;; Version: 1.1
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces, theme
@@ -73,9 +73,9 @@ You'll have to see it for yourself. --Morpheus")
    `(show-paren-match ((t (:foreground ,color-hl :weight bold))))
    `(show-paren-match-expression ((t (:underline (:color ,color-dark)))))
    `(show-paren-mismatch ((t (:inherit error))))
-   `(highlight ((t (:background ,color-darker :underline (:color ,color-hl)))))
+   `(highlight ((t (:background ,color-darkest :underline (:color ,color-hl)))))
    ;; `(highlight ((t (:inverse-video t))))
-   `(match ((t (:foreground ,color-bright))))
+   `(match ((t (:foreground ,color-bright :weight bold))))
    `(hl-line ((t (:underline (:color ,color-dark) :extend t))))
    `(separator-line ((t (:height 0.1 :background ,color-darker))))
    `(widget-field ((t (:foreground ,color-bright :background ,color-bg-alt))))
@@ -160,7 +160,7 @@ You'll have to see it for yourself. --Morpheus")
    `(comint-highlight-input ((t (:foreground ,color-fg))))
 
    ;; completions
-   `(completions-common-part ((t (:weight bold))))
+   `(completions-common-part ((t (:inherit match))))
    `(icomplete-first-match ((t (:foreground ,color-hl :weight bold :underline t))))
 
    ;; diff
@@ -482,6 +482,8 @@ You'll have to see it for yourself. --Morpheus")
    `(utop-frozen ((t (:foreground ,color-fg))))
    `(utop-prompt ((t (:inherit minibuffer-prompt))))
    `(utop-error  ((t (:inherit error))))
+   `(utop-stderr ((t (:inherit font-lock-warning-face))))
+   `(utop-stdout ((t (:inherit tuareg-font-lock-interactive-output-face))))
 
    ;; haskell-mode
    `(haskell-operator-face ((t (:foreground ,color-middle))))
@@ -626,10 +628,16 @@ You'll have to see it for yourself. --Morpheus")
    `(rg-line-number-face ((t (:inherit line-number))))
    `(rg-match-face ((t (:underline t :inherit match))))
 
-   ;;wgrep
+   ;; wgrep
    `(wgrep-face ((t (:foreground ,color-red :background ,color-bg-red))))
    `(wgrep-file-face ((t (:background ,color-bg-blue))))
    `(wgrep-done-face ((t (:inherit wgrep-file-face))))
+
+   ;; orderless
+   `(orderless-match-face-0 ((t (:inherit match))))
+   `(orderless-match-face-1 ((t (:inherit match :foreground ,color-middle))))
+   `(orderless-match-face-2 ((t (:inherit match :foreground ,color-middle))))
+   `(orderless-match-face-3 ((t (:inherit match :foreground ,color-middle))))
 
    ))
 

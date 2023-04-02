@@ -4,8 +4,8 @@
 
 ;; Author           : Wilhelm H Kirschbaum
 ;; Version          : 1.2
-;; Package-Version: 20230321.1458
-;; Package-Commit: 0d4ef4794655a2a3c5324e07eef46dc4766ad65d
+;; Package-Version: 20230402.916
+;; Package-Commit: 19755765991f133f463fa68945133ae855b86bd7
 ;; URL              : https://github.com/wkirschbaum/elixir-ts-mode
 ;; Package-Requires : ((emacs "29") (heex-ts-mode "1.2"))
 ;; Created          : November 2022
@@ -181,7 +181,13 @@
 
 (defun elixir-ts--argument-indent-offset (node _parent &rest _)
   "Return the argument offset position for NODE."
-  (if (treesit-node-prev-sibling node t) 0 elixir-ts-indent-offset))
+  (if (or (treesit-node-prev-sibling node t)
+          ;; Don't indent if this is the first node or
+          ;; if the line is empty.
+          (save-excursion
+            (beginning-of-line)
+            (looking-at-p "[[:blank:]]*$")))
+      0 elixir-ts-indent-offset))
 
 (defun elixir-ts--argument-indent-anchor (node parent &rest _)
   "Return the argument anchor position for NODE and PARENT."
@@ -276,7 +282,7 @@
        ;; Handle incomplete maps when parent is ERROR.
        ((n-p-gp "^binary_operator$" "ERROR" nil) parent-bol 0)
        ;; When there is an ERROR, just indent to prev-line.
-       ((parent-is "ERROR") prev-line 0)
+       ((parent-is "ERROR") prev-line 2)
        ((node-is "^binary_operator$")
         (lambda (node parent &rest _)
           (let ((top-level
@@ -596,6 +602,17 @@ Return nil if NODE is not a defun node or doesn't have a name."
          (put-text-property (1- (treesit-node-end node)) (treesit-node-end node)
                             'syntax-table (string-to-syntax "$")))))))
 
+(defun elixir-ts--electric-pair-string-delimiter ()
+  "Insert corresponding multi-line string for `electric-pair-mode'."
+  (when (and electric-pair-mode
+             (eq last-command-event ?\")
+             (let ((count 0))
+               (while (eq (char-before (- (point) count)) last-command-event)
+                 (cl-incf count))
+               (= count 3))
+             (eq (char-after) last-command-event))
+    (save-excursion
+      (insert (make-string 2 last-command-event)))))
 
 ;;;###autoload
 (define-derived-mode elixir-ts-mode prog-mode "Elixir"
@@ -603,7 +620,7 @@ Return nil if NODE is not a defun node or doesn't have a name."
   :group 'elixir-ts
   :syntax-table elixir-ts--syntax-table
 
-  ;; Comments
+  ;; Comments.
   (setq-local comment-start "# ")
   (setq-local comment-start-skip
               (rx "#" (* (syntax whitespace))))
@@ -613,8 +630,12 @@ Return nil if NODE is not a defun node or doesn't have a name."
               (rx (* (syntax whitespace))
                   (group (or (syntax comment-end) "\n"))))
 
-  ;; Compile
+  ;; Compile.
   (setq-local compile-command "mix")
+
+  ;; Electric pair.
+  (add-hook 'post-self-insert-hook
+            #'elixir-ts--electric-pair-string-delimiter 'append t)
 
   (when (treesit-ready-p 'elixir)
     ;; The HEEx parser has to be created first for elixir to ensure elixir
@@ -645,14 +666,14 @@ Return nil if NODE is not a defun node or doesn't have a name."
     ;; Indent.
     (setq-local treesit-simple-indent-rules elixir-ts--indent-rules)
 
-    ;; Navigation
+    ;; Navigation.
     (setq-local forward-sexp-function #'elixir-ts--forward-sexp)
     (setq-local treesit-defun-type-regexp
                 '("call" . elixir-ts--defun-p))
 
     (setq-local treesit-defun-name-function #'elixir-ts--defun-name)
 
-    ;; Embedded Heex
+    ;; Embedded Heex.
     (when (treesit-ready-p 'heex)
       (setq-local treesit-range-settings elixir-ts--treesit-range-rules)
 

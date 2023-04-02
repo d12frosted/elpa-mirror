@@ -4,8 +4,8 @@
 
 ;; Author: Isa Mert Gurbuz <isamertgurbuz@gmail.com>
 ;; Version: 3.0.0
-;; Package-Version: 20230330.1856
-;; Package-Commit: 530a37cc0eafe13053c7ba02c3b0c3fb6b3b5a1b
+;; Package-Version: 20230402.1203
+;; Package-Commit: 9b29457f05a16ce03f54b74444d91ac06599884a
 ;; Homepage: https://github.com/isamert/empv.el
 ;; License: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "28.1") (s "1.13.0"))
@@ -859,7 +859,10 @@ see `empv-base-directory'."
 (defun empv-volume-up ()
   "Up the volume to a max of 100%."
   (interactive)
-  (empv--transform-property 'volume (lambda (current) (min (floor (+ current empv-volume-step)) 100))))
+  (empv--cmd
+   'get_property 'volume-max
+   (empv--transform-property 'volume
+     (lambda (current) (min (floor (+ current empv-volume-step)) (or it 100))))))
 
 ;;;###autoload
 (defun empv-volume-down ()
