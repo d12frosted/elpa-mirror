@@ -1,10 +1,12 @@
 Package: stripes
-Fetcher: gitlab
-Source:  https://gitlab.com/stepnem/stripes-el.git
+Fetcher: git
+Source:  https://git.smrk.net/stripes.el
 
-Updating /mnt/store/melpa/working/stripes/
-Checking out 618e40e0a9cf80decea32c8daecb1c9f6eae2991
-Built stripes in 5.668s, finished at 2023-04-02T14:00:55+0000
+Cloning https://git.smrk.net/stripes.el to /mnt/store/melpa/working/stripes/
+Checking out 4683c9020da14bb1c1f74b90d27a4d9fdc7a9147
+Built stripes in 5.043s, finished at 2023-04-02T21:51:49+0000
  ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.3K Apr  2 14:00 packages/stripes-20220310.2237.el
-4.0K -rw-r--r-- 1 root root  434 Apr  2 14:00 packages/stripes-20220310.2237.entry
+8.0K -rw-r--r-- 1 root root 4.3K Apr  2 17:58 packages/stripes-20220310.2237.el
+4.0K -rw-r--r-- 1 root root  434 Apr  2 17:58 packages/stripes-20220310.2237.entry
+8.0K -rw-r--r-- 1 root root 4.4K Apr  2 21:51 packages/stripes-20230402.1228.el
+4.0K -rw-r--r-- 1 root root  425 Apr  2 21:51 packages/stripes-20230402.1228.entry

@@ -21,4 +21,5 @@ https://github.com/magit/magit/issues/2939
 https://github.com/magit/magit/issues/460
 https://github.com/vanicat/magit/blob/t/vcsh/magit-vcsh.el
 
-Corrections and constructive feedback appreciated.
+Corrections and productive feedback appreciated, publicly
+(<public@smrk.net>, inbox.smrk.net) or in private.

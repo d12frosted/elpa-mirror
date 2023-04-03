@@ -8,4 +8,5 @@ open Magit status buffer on the new repo upon creation.
 
 See also the commentary in vcsh.el for more information.
 
-Corrections and constructive feedback appreciated.
+Corrections and productive feedback appreciated, publicly
+(<public@smrk.net>, inbox.smrk.net) or in private.

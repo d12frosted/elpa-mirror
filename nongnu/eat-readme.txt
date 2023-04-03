@@ -3,9 +3,9 @@
 		       ━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Eat's name self-explainary, it stands for "Emulate A Terminal".  Eat is
-a terminal emulator.  It can run most (if not all) full-screen terminal
-programs, including Emacs.
+Eat's name self-explainatory, it stands for "Emulate A Terminal".  Eat
+is a terminal emulator.  It can run most (if not all) full-screen
+terminal programs, including Emacs.
 
 It is pretty fast, more than three times faster than Term, despite being
 implemented entirely in Emacs Lisp.  So fast that you can comfortably
@@ -28,8 +28,9 @@ To get the most out of Eat, you should also setup shell integration.
   • "semi-char" mode: This is the default keybinding mode.  Most keys
     are bound to send the key to the terminal, except the following
     keys: `C-\', `C-c', `C-x', `C-g', `C-h', `C-M-c', `C-u', `C-q',
-    `M-x', `M-:', `M-!', `M-&'.  The following special keybinding are
-    available:
+    `M-x', `M-:', `M-!', `M-&' and some other keys (see the user option
+    `eat-semi-char-non-bound-keys' for the complete list).  The
+    following special keybinding are available:
 
     • `C-q': Send next key to the terminal.
     • `C-y': Like `yank', but send the text to the terminal.
@@ -73,8 +74,13 @@ To get the most out of Eat, you should also setup shell integration.
   #+begin_src sh [ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \ source
   "$EAT_SHELL_INTEGRATION_DIR/bash" #+end_src sh
 
-  There's a Info manual available with more information, which can be
-  accessed with `C-h i m Eat', also available [here on the internet].
+  For Zsh, put the following in your `.zshrc':
+
+  #+begin_src sh [ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \ source
+  "$EAT_SHELL_INTEGRATION_DIR/zsh" #+end_src sh
+
+  There's a Info manual available with much more information, which can
+  be accessed with `C-h i m Eat', also available [here on the internet].
 
 
 [here on the internet]
