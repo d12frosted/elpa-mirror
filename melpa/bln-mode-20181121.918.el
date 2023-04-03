@@ -4,6 +4,8 @@
 
 ;;; Author: Maarten Grachten
 ;;; Keywords: motion, location, cursor, convenience
+;; Package-Version: 20181121.918
+;; Package-Commit: a601b0bf975dd1432f6552ab6afe3f4f71133b4a
 ;;; URL: https://github.com/mgrachten/bln-mode
 ;;; Version: 1.0.0
 

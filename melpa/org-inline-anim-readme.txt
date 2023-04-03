@@ -19,3 +19,6 @@ M-x org-inline-anim-animate (C-c C-x m) plays the animation once.
 With a single prefix (C-u), it plays the animation in loop mode.
 With a double prefix (C-u C-u), it shows the last frame and stops playback.
 With a numeric arg 0 (C-u 0 or C-0), it shows the first frame and stops playback.
+
+M-x org-inline-anim-animate-all (C-c C-x M) plays all animations
+in the buffer at once.  The same prefix arguments are effective.
