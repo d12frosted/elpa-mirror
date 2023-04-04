@@ -1021,7 +1021,7 @@
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	      (:commit . "1d7e6e78df914e8829e6511a935616b0895403ae"))])
  (eglot .
-	[(1 13)
+	[(1 14)
 	 ((emacs
 	   (26 3))
 	  (jsonrpc
@@ -1033,7 +1033,7 @@
 	  (xref
 	   (1 6 2))
 	  (eldoc
-	   (1 11 0))
+	   (1 14 0))
 	  (seq
 	   (2 23))
 	  (external-completion
@@ -1044,7 +1044,7 @@
 	  (:maintainer "João Távora" . "joaotavora@gmail.com")
 	  (:authors
 	   ("João Távora" . "joaotavora@gmail.com"))
-	  (:commit . "0fdc953edf7cfd0fe236b6b6e5726e4e58d9a94f"))])
+	  (:commit . "8125d4cfc5605ead9102b7d823c4241029eb76cc"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
