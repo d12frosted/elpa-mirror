@@ -5,8 +5,8 @@
 ;; Author: Bibek Panthi <bpanthi977@gmail.com>
 ;; Maintainer: Bibek Panthi <bpanthi977@gmail.com>
 ;; URL: https://github.com/bpanthi977/org-mpv-notes
-;; Package-Version: 20221202.1657
-;; Package-Commit: 8c123996044cfb87101da6c5f16634188f019cca
+;; Package-Version: 20230406.359
+;; Package-Commit: c437a51aef646839437d6eb699ba86bc530b52b7
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "27.1") (mpv "0.2.0"))
 ;; Kewords: mpv, org
@@ -41,7 +41,7 @@ ARG is passed to `org-link-complete-file'."
    "file:" "mpv:"
    (org-link-complete-file arg)
    t t))
-(org-link-set-parameters "mpv" :complete #'org-mpv-notes-complete-link :follow #'mpv-play)
+(org-link-set-parameters "mpv" :complete #'org-mpv-notes-complete-link :follow #'org-mpv-notes-play)
 (add-hook 'org-open-at-point-functions #'mpv-seek-to-position-at-point)
 
 (defun org-mpv-notes-save-as-attach (file)
@@ -146,6 +146,14 @@ the file to proper location and insert a link to that file."
   (setf mpv-seek-step (/ mpv-seek-step 2.0))
   (message "%f" mpv-seek-step))
 
+(defun org-mpv-speed-up ()
+  (interactive)
+  (mpv-set-property "speed" (* 1.1 (mpv-get-property "speed"))))
+
+(defun org-mpv-speed-down ()
+  (interactive)
+  (mpv-set-property "speed" (/ (mpv-get-property "speed") 1.1)))
+
 (defun org-mpv-notes-toggle-fullscreen ()
   "Ask mpv to toggle fullscreen."
   (interactive)
@@ -167,6 +175,26 @@ the file to proper location and insert a link to that file."
       (buffer-substring-no-properties begin end)
     ""))
 
+(defun org-mpv-notes-play (path &optional arg)
+  ;; see example
+  (let (search-option)
+    (when (string-match "::\\(.*\\)\\'" path)
+      (setq search-option (match-string 1 path))
+      (setq path (replace-match "" nil nil path)))
+    (cond ((not (mpv-live-p))
+           (mpv-start path))
+          ((not (string-equal (mpv-get-property "path") path))
+           (mpv-kill)
+           (sleep-for 0.05)
+           (mpv-start path)))
+    (cond ((string-match (concat "^" org-mpv-notes-timestamp-regex) search-option)
+           (let ((secs (org-timer-hms-to-secs search-option)))
+             (when (>= secs 0)
+               (mpv-seek secs))))
+          ((string-match "^\\([0-9]+\\)$" search-option)
+           (let ((secs (string-to-number search-option)))
+             (mpv-seek 0))))))
+
 (defun org-mpv-notes-open ()
   "Find and open mpv: link."
   (interactive)
@@ -180,19 +208,7 @@ the file to proper location and insert a link to that file."
       (when pos
         ;; when link is found play it
         (forward-char)
-        (let* ((element (org-element-context))
-               (path (org-element-property :path element))
-               (description (org-mpv-notes--org-link-description element)))
-          (cond ((not (mpv-live-p))
-                 (mpv-start path))
-                ((not (string-equal (mpv-get-property "path") path))
-                 (mpv-kill)
-                 (sleep-for 0.05)
-                 (mpv-start path)))
-          (when (string-match (concat "^" org-mpv-notes-timestamp-regex) description)
-            (with-temp-buffer
-              (insert description)
-              (mpv-seek-to-position-at-point))))))))
+        (org-mpv-notes-play (org-element-context))))))
 
 (defun org-mpv-notes-insert-note ()
   "Insert a heading with timestamp."
@@ -200,13 +216,35 @@ the file to proper location and insert a link to that file."
   (org-insert-heading)
   (save-excursion
     (org-insert-property-drawer)
-    (org-set-property "time" (org-timer-secs-to-hms (round (mpv-get-playback-position))))))
+    (org-set-property "time" (org-timer-secs-to-hms (round (mpv-get-playback-position))))
+    (org-set-property "mpv_path" (org-timer-secs-to-hms (round (mpv-get-property "path"))))))
+
+(defun org-mpv-notes-insert-link ()
+  (interactive)
+  (let* ((path (mpv-get-property "path"))
+         (time (mpv-get-playback-position))
+
+         (h (floor (/ time 3600)))
+         (m (floor (/ (mod time 3600) 60)))
+         (s (floor (mod time 60)))
+         (timestamp (format "%s:%s:%s" h m s)))
+    (insert "[[" path "::" timestamp "][" timestamp "]]")))
+
+(defun org-mpv-notes-replace-timestamp-with-link (link)
+  (interactive "sLink:")
+  (save-excursion
+    (while (re-search-forward org-mpv-notes-timestamp-regex nil t)
+      (skip-chars-backward ":[:digit:]" (point-at-bol))
+      (looking-at org-mpv-notes-timestamp-regex)
+      (let ((timestamp (match-string 0)))
+        (delete-region (match-beginning 0) (match-end 0))
+        (insert "[[" link "::" timestamp "][" timestamp "]]")))))
 
 ;;;###autoload
 (define-minor-mode org-mpv-notes
   "Org minor mode for Note taking alongside audio and video.
 Uses mpv.el to control mpv process"
-  :keymap `((,(kbd "M-n i") . mpv-insert-playback-position)
+  :keymap `((,(kbd "M-n i") . org-mpv-notes-insert-link)
             (,(kbd "M-n M-i") . org-mpv-notes-insert-note)
             (,(kbd "M-n u") . mpv-revert-seek)
             (,(kbd "M-n s") . org-mpv-notes-save-screenshot)

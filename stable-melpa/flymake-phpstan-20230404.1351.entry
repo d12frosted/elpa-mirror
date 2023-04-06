@@ -1,11 +1,11 @@
 (flymake-phpstan .
-		 [(20230404 1111)
+		 [(20230404 1351)
 		  ((emacs
 		    (26 1))
 		   (phpstan
 		    (0 5 0)))
 		  "Flymake backend for PHP using PHPStan" single
-		  ((:commit . "ee3f8fde8fc32c2ae3e28c53be3e1c93b04a3ea7")
+		  ((:commit . "6dc8f1df29f22f0b0ef839c66822d48e2c7b1848")
 		   (:authors
 		    ("USAMI Kenta" . "tadsan@zonu.me"))
 		   (:maintainer "USAMI Kenta" . "tadsan@zonu.me")

@@ -5,8 +5,8 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 31 Mar 2020
 ;; Version: 0.6.0
-;; Package-Version: 20230404.1111
-;; Package-Commit: ee3f8fde8fc32c2ae3e28c53be3e1c93b04a3ea7
+;; Package-Version: 20230404.1351
+;; Package-Commit: 6dc8f1df29f22f0b0ef839c66822d48e2c7b1848
 ;; Keywords: tools, php
 ;; Homepage: https://github.com/emacs-php/phpstan.el
 ;; Package-Requires: ((emacs "26.1") (phpstan "0.5.0"))
