@@ -1,0 +1,10 @@
+(org-ai .
+	[(20230407 950)
+	 ((emacs
+	   (28 2)))
+	 "Your AI assistant with ChatGPT, DALL-E, Whisper" tar
+	 ((:commit . "17fee8f50328692076e66570ffe5f749c0dc52e7")
+	  (:authors
+	   ("Robert Krahn" . "robert@kra.hn"))
+	  (:maintainer "Robert Krahn" . "robert@kra.hn")
+	  (:url . "https://github.com/rksm/org-ai"))])
