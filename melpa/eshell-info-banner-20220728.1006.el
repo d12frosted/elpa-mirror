@@ -3,6 +3,8 @@
 ;; Author: Lucien Cartier-Tilet <lucien@phundrak.com>
 ;; Maintainer: Lucien Cartier-Tilet <lucien@phundrak.com>
 ;; Version: 0.8.8
+;; Package-Version: 20220728.1006
+;; Package-Commit: 987e69a66276ca057798896c606e5c5d5fb9ee5c
 ;; Package-Requires: ((emacs "25.1") (s "1"))
 ;; Homepage: https://github.com/Phundrak/eshell-info-banner.el
 

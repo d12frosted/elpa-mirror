@@ -14,8 +14,6 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;; URL: https://godoc.org/golang.org/x/tools/cmd/vet
-;; Package-Version: 20170808.1724
-;; Package-Commit: 1b8c044aa856f4b62a682bc57494af19d22a6053
 
 ;;; Commentary:
 
