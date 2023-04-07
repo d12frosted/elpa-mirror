@@ -1,0 +1,22 @@
+Package: gptel
+Fetcher: github
+Source:  https://github.com/karthink/gptel.git
+
+Updating /mnt/store/melpa/working/gptel/
+Checking out 6c47c0a48306e127557caf54c5a03e162e2d2ed3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gptel/
+  to /tmp/gptelQhcfwg/gptel-20230407.32
+    gptel-curl.el -> gptel-curl.el
+    gptel-transient.el -> gptel-transient.el
+    gptel.el -> gptel.el
+Created gptel-20230407.32.tar containing:
+  gptel-20230407.32/
+  gptel-20230407.32/gptel-curl.el
+  gptel-20230407.32/gptel-pkg.el
+  gptel-20230407.32/gptel-transient.el
+  gptel-20230407.32/gptel.el
+Built gptel in 3.800s, finished at 2023-04-07T11:59:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 321 Apr  7 11:59 packages/gptel-20230407.32.entry
+ 52K -rw-r--r-- 1 root root 50K Apr  7 11:59 packages/gptel-20230407.32.tar
