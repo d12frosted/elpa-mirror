@@ -2,8 +2,8 @@
 
 ;; Author: Álvaro González Sotillo <alvarogonzalezsotillo@gmail.com>
 ;; URL: https://github.com/alvarogonzalezsotillo/region-occurrences-highlighter
-;; Package-Version: 20230221.1803
-;; Package-Commit: 9c2a3193ccf32f8fa48578a6b8826b2959dac120
+;; Package-Version: 20230408.1404
+;; Package-Commit: 3fbac20154035d75238facbc3b881ab3b47ab711
 ;; Package-Requires: ((emacs "24"))
 ;; Version: 1.5
 ;; Keywords: convenience
@@ -133,7 +133,7 @@
     (region-occurrences-highlighter--update-buffers
      region-occurrences-highlighter--previous-region
      nil)
-    
+
     (setq region-occurrences-highlighter--previous-region nil)
     (region-occurrences-highlighter-nav-mode -1))
 
@@ -150,7 +150,7 @@
             (region-occurrences-highlighter--update-buffers
              region-occurrences-highlighter--previous-region
              str)
-            
+
             (setq region-occurrences-highlighter--previous-region str)
             (region-occurrences-highlighter-nav-mode 1)))))))
 
@@ -167,7 +167,9 @@
                                 (push buffer buffers)))))))
         (select-frame current-frame)
         buffers)
-    (list (current-buffer))))
+    (list (with-selected-window (or (minibuffer-selected-window)
+                                    (selected-window))
+            (current-buffer)))))
 
 (defun region-occurrences-highlighter--update-buffers(previous-region current-region)
   "Update the highlightings in all buffers but the current buffer."
