@@ -4,8 +4,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "24.3") (cl-lib "0.6.1") (pyim "5.2.8"))
-;; Package-Commit: f5b46f83ce205b1f6c1cf54e99da3e46ad17dfad
-;; Package-Version: 20230406.1202
+;; Package-Commit: 65da842cae9878b0ed7ca518302df0dd4beaae49
+;; Package-Version: 20230408.334
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: wp
 ;; homepage: https://repo.or.cz/amread-mode.git
@@ -339,7 +339,7 @@ It has three status values:
              (run-with-timer 1 amread-line-speed #'amread--update)))
       (t (user-error "Seems amread-mode is not normally started because of not selecting scroll style OR just not running.")))
     ;; enable hydra
-    (hydra-amread/body)
+    (amread-hydra/body)
     (message "[amread] start reading...")))
 
 ;;;###autoload
@@ -452,11 +452,12 @@ It has three status values:
     (define-key map (kbd "-")             #'amread-speed-down)
     (define-key map (kbd "v")             #'amread-voice-reader-toggle)
     (define-key map (kbd "L")             #'amread-voice-reader-switch-language-voice)
-    (define-key map (kbd ".")             #'hydra-amread/body)
+    (define-key map (kbd ".")             #'amread-hydra/body)
     map)
   "Keymap for `amread-mode' buffers.")
 
-(defhydra hydra-amread (:color green :hint nil :exit nil)
+;;;###autoload
+(defhydra amread-hydra (:color green :hint nil :exit nil)
   "
 ^Control^                ^Adjust When Reading^
 ^------------------^     ^-------------------------^
@@ -476,7 +477,7 @@ _q_: quit                _-_: speed down
 (define-minor-mode amread-mode
   "I'm reading mode."
   :init nil
-  :lighter " amreading"
+  :lighter " amread"
   :keymap amread-mode-map
   (if amread-mode
       (amread-start)

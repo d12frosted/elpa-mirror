@@ -4,8 +4,6 @@
 
 ;; Author: Ajay Gopinathan <ajay@gopinathan.net>
 ;; Keywords: c, abbrev
-;; Package-Version: 20150822.1836
-;; Package-Commit: 4da8a14abcd0f4fa3235042ade2e12b5068c0601
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
