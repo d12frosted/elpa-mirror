@@ -1,0 +1,14 @@
+(package-build .
+	       [(20230407 2350)
+		((emacs
+		  (26 1)))
+		"Tools for assembling a package archive" tar
+		((:commit . "95b5cc2ae66f946577df8b639213d345c97b67db")
+		 (:authors
+		  ("Donald Ephraim Curtis" . "dcurtis@milkbox.net")
+		  ("Steve Purcell" . "steve@sanityinc.com")
+		  ("Jonas Bernoulli" . "jonas@bernoul.li")
+		  ("Phil Hagelberg" . "technomancy@gmail.com"))
+		 (:maintainer "Donald Ephraim Curtis" . "dcurtis@milkbox.net")
+		 (:keywords "maint" "tools")
+		 (:url . "https://github.com/melpa/package-build"))])

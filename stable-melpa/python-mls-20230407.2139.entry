@@ -1,0 +1,13 @@
+(python-mls .
+	    [(20230407 2139)
+	     ((emacs
+	       (27 1))
+	      (compat
+	       (29 1)))
+	     "Multi-line shell for (i)Python" single
+	     ((:commit . "0dd0bb1eb8e580093bc35ee5610f894d4464d386")
+	      (:authors
+	       ("J.D. Smith"))
+	      (:maintainer "J.D. Smith")
+	      (:keywords "languages" "processes")
+	      (:url . "https://github.com/jdtsmith/python-mls"))])

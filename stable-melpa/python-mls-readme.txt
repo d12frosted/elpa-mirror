@@ -7,12 +7,12 @@ Features:
 - Accepts arbitrary multi-line command lengths.
 - Auto-detects and handles native continuation prompts.
 - Auto-indents multi-line commands.
-- Replaces buffer-based fontifications with in-buffer python-mode
-  fontification for dramatic speedup.
-- Up/Down arrow history browsing with and without block movement
-  (try shift arrow).
+- Replaces buffer-based code fontifications with in-buffer
+  python-mode fontification for dramatic speedup.
+- Up/Down arrow history browsing with and without movement within
+  block (try shift arrow).
 - Saves and restore (multi-line) command history, separated per
-  buffer name.
+  shell buffer name.
 - Directly kill/yank multi-line code blocks to & from Python
   buffers.
 
