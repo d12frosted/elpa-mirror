@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/mooz/js2-mode.git
 
 Updating /mnt/store/melpa/working/js2-mode/
-Checking out a297ec2c2d9aa50ddc6c06959bb5a054e17b692a
+Checking out 7d928272bc311b1dd6f38d3f6365c18153e28636
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/js2-mode/
-  to /tmp/js2-modepJTLjT/js2-mode-20221028.1819
+  to /tmp/js2-modemVyblG/js2-mode-20230408.115
     js2-imenu-extras.el -> js2-imenu-extras.el
     js2-mode.el -> js2-mode.el
     js2-old-indent.el -> js2-old-indent.el
-Created js2-mode-20221028.1819.tar containing:
-  js2-mode-20221028.1819/
-  js2-mode-20221028.1819/js2-imenu-extras.el
-  js2-mode-20221028.1819/js2-mode-pkg.el
-  js2-mode-20221028.1819/js2-mode.el
-  js2-mode-20221028.1819/js2-old-indent.el
-Built js2-mode in 4.311s, finished at 2023-04-07T23:41:27+0000
+Created js2-mode-20230408.115.tar containing:
+  js2-mode-20230408.115/
+  js2-mode-20230408.115/js2-imenu-extras.el
+  js2-mode-20230408.115/js2-mode-pkg.el
+  js2-mode-20230408.115/js2-mode.el
+  js2-mode-20230408.115/js2-old-indent.el
+Built js2-mode in 6.886s, finished at 2023-04-08T03:32:42+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  491 Apr  7 23:41 packages/js2-mode-20221028.1819.entry
 560K -rw-r--r-- 1 root root 560K Apr  7 23:41 packages/js2-mode-20221028.1819.tar
+4.0K -rw-r--r-- 1 root root  490 Apr  8 03:32 packages/js2-mode-20230408.115.entry
+560K -rw-r--r-- 1 root root 560K Apr  8 03:32 packages/js2-mode-20230408.115.tar

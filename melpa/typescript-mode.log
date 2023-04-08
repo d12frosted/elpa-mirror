@@ -1,0 +1,20 @@
+Package: typescript-mode
+Fetcher: github
+Source:  https://github.com/emacs-typescript/typescript.el.git
+
+Updating /mnt/store/melpa/working/typescript-mode/
+Checking out 4fcb4594819caf472ae42ea068a1c7795cf07f46
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/typescript-mode/
+  to /tmp/typescript-mode3foKBr/typescript-mode-20230116.1533
+    typescript-mode-test-utilities.el -> typescript-mode-test-utilities.el
+    typescript-mode.el -> typescript-mode.el
+Created typescript-mode-20230116.1533.tar containing:
+  typescript-mode-20230116.1533/
+  typescript-mode-20230116.1533/typescript-mode-pkg.el
+  typescript-mode-20230116.1533/typescript-mode-test-utilities.el
+  typescript-mode-20230116.1533/typescript-mode.el
+Built typescript-mode in 5.326s, finished at 2023-04-08T00:21:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  278 Apr  8 00:21 packages/typescript-mode-20230116.1533.entry
+132K -rw-r--r-- 1 root root 130K Apr  8 00:21 packages/typescript-mode-20230116.1533.tar
