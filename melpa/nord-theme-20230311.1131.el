@@ -6,7 +6,7 @@
 ;; Project: nord-emacs
 ;; Version: 0.5.0
 ;; Package-Version: 20230311.1131
-;; Package-Commit: f9c6ee5928250bc87834bb85e7fabd47b882ca84
+;; Package-Commit: 81c38daca039fb2556f2ada627a88fc2742bbcb2
 ;; URL: https://github.com/nordtheme/emacs
 ;; Author: Sven Greb <development@svengreb.de>
 ;; Package-Requires: ((emacs "24"))
