@@ -1,0 +1,33 @@
+Package: nerd-icons
+Fetcher: github
+Source:  https://github.com/rainstormstudio/nerd-icons.el.git
+
+Cloning https://github.com/rainstormstudio/nerd-icons.el.git to /mnt/store/melpa/working/nerd-icons/
+Checking out 1589a878c203c1b6c44d5b071051be1e9e8d6103
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nerd-icons/
+  to /tmp/nerd-iconsJfRDTn/nerd-icons-20230408.2116
+    nerd-icons-faces.el -> nerd-icons-faces.el
+    nerd-icons.el -> nerd-icons.el
+    data => data
+Created nerd-icons-20230408.2116.tar containing:
+  nerd-icons-20230408.2116/
+  nerd-icons-20230408.2116/data/
+  nerd-icons-20230408.2116/data/nerd-icons-data-codicons.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-devicons.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-font-awesome.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-font-logos.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-iec-power-symbols.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-material-design.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-octicons.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-pomicons.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-powerline.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-seti-ui-custom.el
+  nerd-icons-20230408.2116/data/nerd-icons-data-weather-icons.el
+  nerd-icons-20230408.2116/nerd-icons-faces.el
+  nerd-icons-20230408.2116/nerd-icons-pkg.el
+  nerd-icons-20230408.2116/nerd-icons.el
+Built nerd-icons in 6.955s, finished at 2023-04-09T22:05:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  404 Apr  9 22:05 packages/nerd-icons-20230408.2116.entry
+552K -rw-r--r-- 1 root root 550K Apr  9 22:05 packages/nerd-icons-20230408.2116.tar

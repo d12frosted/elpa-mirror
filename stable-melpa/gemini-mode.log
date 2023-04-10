@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/gemini.el.git
 
 Updating /mnt/store/melpa/working/gemini-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.carcosa.net/jmcbray/gemini.el.git/': Failed to connect to git.carcosa.net port 443: No route to host
-
-Command exited with non-zero exit-code: 128
+Checking out a7dd7c6ea4e036d0d5ecc4a5d284874c400f10ba
+Built gemini-mode in 4.631s, finished at 2023-04-09T21:40:47+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Apr  9 21:40 packages/gemini-mode-20221127.1619.el
+4.0K -rw-r--r-- 1 root root  552 Apr  9 21:40 packages/gemini-mode-20221127.1619.entry
