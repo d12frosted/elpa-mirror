@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/dgutov/diff-hl.git
 
 Updating /mnt/store/melpa/working/diff-hl/
-Checking out 170320efda0db99dc234b7759cf41539f6b6d9a8
+Checking out ed34450246598af02299053feb9d85d6675114dd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/diff-hl/
-  to /tmp/diff-hl95aUuI/diff-hl-20230408.35
+  to /tmp/diff-hlFWP2Bk/diff-hl-20230409.2256
     diff-hl-amend.el -> diff-hl-amend.el
     diff-hl-dired.el -> diff-hl-dired.el
     diff-hl-flydiff.el -> diff-hl-flydiff.el
@@ -15,18 +15,20 @@ Copying files (->) and directories (=>)
     diff-hl-show-hunk-posframe.el -> diff-hl-show-hunk-posframe.el
     diff-hl-show-hunk.el -> diff-hl-show-hunk.el
     diff-hl.el -> diff-hl.el
-Created diff-hl-20230408.35.tar containing:
-  diff-hl-20230408.35/
-  diff-hl-20230408.35/diff-hl-amend.el
-  diff-hl-20230408.35/diff-hl-dired.el
-  diff-hl-20230408.35/diff-hl-flydiff.el
-  diff-hl-20230408.35/diff-hl-inline-popup.el
-  diff-hl-20230408.35/diff-hl-margin.el
-  diff-hl-20230408.35/diff-hl-pkg.el
-  diff-hl-20230408.35/diff-hl-show-hunk-posframe.el
-  diff-hl-20230408.35/diff-hl-show-hunk.el
-  diff-hl-20230408.35/diff-hl.el
-Built diff-hl in 6.930s, finished at 2023-04-09T21:24:08+0000
+Created diff-hl-20230409.2256.tar containing:
+  diff-hl-20230409.2256/
+  diff-hl-20230409.2256/diff-hl-amend.el
+  diff-hl-20230409.2256/diff-hl-dired.el
+  diff-hl-20230409.2256/diff-hl-flydiff.el
+  diff-hl-20230409.2256/diff-hl-inline-popup.el
+  diff-hl-20230409.2256/diff-hl-margin.el
+  diff-hl-20230409.2256/diff-hl-pkg.el
+  diff-hl-20230409.2256/diff-hl-show-hunk-posframe.el
+  diff-hl-20230409.2256/diff-hl-show-hunk.el
+  diff-hl-20230409.2256/diff-hl.el
+Built diff-hl in 4.744s, finished at 2023-04-10T01:15:12+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  376 Apr  9 21:24 packages/diff-hl-20230408.35.entry
 112K -rw-r--r-- 1 root root 110K Apr  9 21:24 packages/diff-hl-20230408.35.tar
+4.0K -rw-r--r-- 1 root root  378 Apr 10 01:15 packages/diff-hl-20230409.2256.entry
+112K -rw-r--r-- 1 root root 110K Apr 10 01:15 packages/diff-hl-20230409.2256.tar
