@@ -904,7 +904,7 @@
 	 (:url . "https://elpa.gnu.org/packages/djvu.html")
 	 (:commit . "071c8ab168588897475899c46eaa16e70141db8c"))])
  (doc-toc .
-	  [(1 1)
+	  [(1 2)
 	   ((emacs
 	     (26 1)))
 	   "Manage outlines/table of contents of pdf and djvu documents" tar
@@ -913,7 +913,7 @@
 	    (:maintainer "Daniel Laurens Nicolai" . "dalanicolai@gmail.com")
 	    (:authors
 	     ("Daniel Laurens Nicolai" . "dalanicolai@gmail.com"))
-	    (:commit . "5f7bd03152d2f20d2b1e1b3475b399a0afb04898"))])
+	    (:commit . "4a179fbacd7bc9efbd6cfcdc8772d42935e6de29"))])
  (docbook .
 	  [(0 1)
 	   nil "Info-like viewer for DocBook" single
@@ -2231,13 +2231,14 @@
 	   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	  (:keywords "extensions" "lisp"))])
  (nano-agenda .
-	      [(0 2 1)
+	      [(0 2 2)
 	       ((emacs
 		 (27 1)))
 	       "N Λ N O agenda" tar
 	       ((:url . "https://github.com/rougier/nano-agenda")
 		(:keywords "convenience" "org-mode" "org-agenda")
-		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
+		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
+		(:commit . "f0a536eea1c2dd90454b622d0930bc80757a95da"))])
  (nano-modeline .
 		[(0 7 2)
 		 ((emacs
@@ -2629,7 +2630,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "25d675307c03f720e592c3dc9a5a0ae8db0836eb"))])
  (phps-mode .
-	    [(0 4 44)
+	    [(0 4 45)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2638,7 +2639,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "4852849878d149fb07fbff83d0c60c0eb82a0188"))])
+	      (:commit . "afaf5336ec162374e8cd63bc33ee4f58d320a98e"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single

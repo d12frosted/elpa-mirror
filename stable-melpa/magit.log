@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/magit/
-Checking out beb3d6cae23e10a92797ac3c6d9f581d75e59cc3
+Checking out d62e8fb8c4d34ffdfc71fe9998b61cc0f8c0fa4a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magit/
-  to /tmp/magitb3Qrg6/magit-20230408.517
+  to /tmp/magitwKAGOC/magit-20230410.857
   ! lisp/magit-apply.el -> magit-apply.el
   ! lisp/magit-autorevert.el -> magit-autorevert.el
   ! lisp/magit-base.el -> magit-base.el
@@ -55,59 +55,61 @@ Copying files (->) and directories (=>)
   ! docs/magit.texi -> magit.texi
   ! docs/AUTHORS.md -> AUTHORS.md
     LICENSE -> LICENSE
-Generating /tmp/magitb3Qrg6/magit-20230408.517/magit.info
-Created magit-20230408.517.tar containing:
-  magit-20230408.517/
-  magit-20230408.517/AUTHORS.md
-  magit-20230408.517/LICENSE
-  magit-20230408.517/dir
-  magit-20230408.517/git-rebase.el
-  magit-20230408.517/magit-apply.el
-  magit-20230408.517/magit-autorevert.el
-  magit-20230408.517/magit-base.el
-  magit-20230408.517/magit-bisect.el
-  magit-20230408.517/magit-blame.el
-  magit-20230408.517/magit-bookmark.el
-  magit-20230408.517/magit-branch.el
-  magit-20230408.517/magit-bundle.el
-  magit-20230408.517/magit-clone.el
-  magit-20230408.517/magit-commit.el
-  magit-20230408.517/magit-core.el
-  magit-20230408.517/magit-diff.el
-  magit-20230408.517/magit-ediff.el
-  magit-20230408.517/magit-extras.el
-  magit-20230408.517/magit-fetch.el
-  magit-20230408.517/magit-files.el
-  magit-20230408.517/magit-git.el
-  magit-20230408.517/magit-gitignore.el
-  magit-20230408.517/magit-log.el
-  magit-20230408.517/magit-margin.el
-  magit-20230408.517/magit-merge.el
-  magit-20230408.517/magit-mode.el
-  magit-20230408.517/magit-notes.el
-  magit-20230408.517/magit-patch.el
-  magit-20230408.517/magit-pkg.el
-  magit-20230408.517/magit-process.el
-  magit-20230408.517/magit-pull.el
-  magit-20230408.517/magit-push.el
-  magit-20230408.517/magit-reflog.el
-  magit-20230408.517/magit-refs.el
-  magit-20230408.517/magit-remote.el
-  magit-20230408.517/magit-repos.el
-  magit-20230408.517/magit-reset.el
-  magit-20230408.517/magit-sequence.el
-  magit-20230408.517/magit-sparse-checkout.el
-  magit-20230408.517/magit-stash.el
-  magit-20230408.517/magit-status.el
-  magit-20230408.517/magit-submodule.el
-  magit-20230408.517/magit-subtree.el
-  magit-20230408.517/magit-tag.el
-  magit-20230408.517/magit-transient.el
-  magit-20230408.517/magit-wip.el
-  magit-20230408.517/magit-worktree.el
-  magit-20230408.517/magit.el
-  magit-20230408.517/magit.info
-Built magit in 38.895s, finished at 2023-04-10T05:45:12+0000
+Generating /tmp/magitwKAGOC/magit-20230410.857/magit.info
+Created magit-20230410.857.tar containing:
+  magit-20230410.857/
+  magit-20230410.857/AUTHORS.md
+  magit-20230410.857/LICENSE
+  magit-20230410.857/dir
+  magit-20230410.857/git-rebase.el
+  magit-20230410.857/magit-apply.el
+  magit-20230410.857/magit-autorevert.el
+  magit-20230410.857/magit-base.el
+  magit-20230410.857/magit-bisect.el
+  magit-20230410.857/magit-blame.el
+  magit-20230410.857/magit-bookmark.el
+  magit-20230410.857/magit-branch.el
+  magit-20230410.857/magit-bundle.el
+  magit-20230410.857/magit-clone.el
+  magit-20230410.857/magit-commit.el
+  magit-20230410.857/magit-core.el
+  magit-20230410.857/magit-diff.el
+  magit-20230410.857/magit-ediff.el
+  magit-20230410.857/magit-extras.el
+  magit-20230410.857/magit-fetch.el
+  magit-20230410.857/magit-files.el
+  magit-20230410.857/magit-git.el
+  magit-20230410.857/magit-gitignore.el
+  magit-20230410.857/magit-log.el
+  magit-20230410.857/magit-margin.el
+  magit-20230410.857/magit-merge.el
+  magit-20230410.857/magit-mode.el
+  magit-20230410.857/magit-notes.el
+  magit-20230410.857/magit-patch.el
+  magit-20230410.857/magit-pkg.el
+  magit-20230410.857/magit-process.el
+  magit-20230410.857/magit-pull.el
+  magit-20230410.857/magit-push.el
+  magit-20230410.857/magit-reflog.el
+  magit-20230410.857/magit-refs.el
+  magit-20230410.857/magit-remote.el
+  magit-20230410.857/magit-repos.el
+  magit-20230410.857/magit-reset.el
+  magit-20230410.857/magit-sequence.el
+  magit-20230410.857/magit-sparse-checkout.el
+  magit-20230410.857/magit-stash.el
+  magit-20230410.857/magit-status.el
+  magit-20230410.857/magit-submodule.el
+  magit-20230410.857/magit-subtree.el
+  magit-20230410.857/magit-tag.el
+  magit-20230410.857/magit-transient.el
+  magit-20230410.857/magit-wip.el
+  magit-20230410.857/magit-worktree.el
+  magit-20230410.857/magit.el
+  magit-20230410.857/magit.info
+Built magit in 36.333s, finished at 2023-04-10T09:36:31+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  557 Apr 10 05:45 packages/magit-20230408.517.entry
 1.8M -rw-r--r-- 1 root root 1.8M Apr 10 05:45 packages/magit-20230408.517.tar
+4.0K -rw-r--r-- 1 root root  557 Apr 10 09:36 packages/magit-20230410.857.entry
+1.8M -rw-r--r-- 1 root root 1.8M Apr 10 09:36 packages/magit-20230410.857.tar

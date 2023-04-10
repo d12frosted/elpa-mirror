@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/minad/cape.git
 
 Updating /mnt/store/melpa/working/cape/
-Checking out 41e05124edcdb2d97f9baf4005707121a37498e3
+Checking out 137763be8df35590f75d65f4a276bfeb4ca85c19
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cape/
-  to /tmp/capeG3yJlx/cape-20230409.1757
+  to /tmp/capeXSYHAx/cape-20230410.844
     cape-char.el -> cape-char.el
     cape-keyword.el -> cape-keyword.el
     cape.el -> cape.el
-Created cape-20230409.1757.tar containing:
-  cape-20230409.1757/
-  cape-20230409.1757/cape-char.el
-  cape-20230409.1757/cape-keyword.el
-  cape-20230409.1757/cape-pkg.el
-  cape-20230409.1757/cape.el
-Built cape in 5.025s, finished at 2023-04-10T04:59:52+0000
+Created cape-20230410.844.tar containing:
+  cape-20230410.844/
+  cape-20230410.844/cape-char.el
+  cape-20230410.844/cape-keyword.el
+  cape-20230410.844/cape-pkg.el
+  cape-20230410.844/cape.el
+Built cape in 7.589s, finished at 2023-04-10T08:51:41+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 351 Apr 10 04:59 packages/cape-20230409.1757.entry
  80K -rw-r--r-- 1 root root 80K Apr 10 04:59 packages/cape-20230409.1757.tar
+4.0K -rw-r--r-- 1 root root 350 Apr 10 08:51 packages/cape-20230410.844.entry
+ 80K -rw-r--r-- 1 root root 80K Apr 10 08:51 packages/cape-20230410.844.tar

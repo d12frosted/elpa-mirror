@@ -1,23 +1,3 @@
-Table of Contents
-─────────────────
-
-1. Doc Tools TOC
-2. Introduction
-.. 1. Features:
-3. Installation
-.. 1. Requirements
-4. Usage
-.. 1. pdf-tocgen (software generated PDF's)
-.. 2. toc-mode
-..... 1. 1. Extraction
-..... 2. 2. TOC-Cleanup
-..... 3. 3. TOC-tabular (adjust pagenumbers)
-..... 4. 4. TOC-mode (add outline to document)
-5. Key bindings
-6. Alternatives
-..... 1. Donate
-
-
 1 Doc Tools TOC
 ═══════════════
 
