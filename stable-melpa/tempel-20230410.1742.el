@@ -6,10 +6,11 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.7
-;; Package-Version: 20230305.739
-;; Package-Commit: 4ab5f3af92aab2a1aea1ec66d9086812fe310044
+;; Package-Version: 20230410.1742
+;; Package-Commit: 94afb9b916a711c56f23183da93a103338e9f84e
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.4.0"))
 ;; Homepage: https://github.com/minad/tempel
+;; Keywords: abbrev, languages, tools, wp
 
 ;; This file is part of GNU Emacs.
 

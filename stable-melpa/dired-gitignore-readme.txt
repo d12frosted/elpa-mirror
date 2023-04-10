@@ -6,8 +6,8 @@ deactivated, they are shown again.  The recommended use case is to bind the
 command to toggle the minor mode `(dired-gitignore-mode)' to some
 convenient key.
 
-In order to hide ignored files by default use `eval-after-load'
+In order to hide ignored files by default hook it into `dired-mode-hook'
 
-(eval-after-load 'dired #'dired-gitignore-mode)
+(add-hook 'dired-mode-hook 'dired-gitignore-mode)
 
 It needs the executables for `git' and `ls' in the `PATH'.

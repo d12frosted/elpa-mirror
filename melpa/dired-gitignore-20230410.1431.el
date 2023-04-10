@@ -4,8 +4,8 @@
 
 ;; Author: Johannes Mueller <github@johannes-mueller.org>
 ;; URL: https://github.com/johannes-mueller/dired-gitignore.el
-;; Package-Version: 20230409.2209
-;; Package-Commit: b72b65cba49d29586a67a620e533ea6572c667db
+;; Package-Version: 20230410.1431
+;; Package-Commit: daedf426161a329d606fb4d02fda90fd39ce8a70
 ;; Version: 0.1.0
 ;; Keywords: dired, convenience, git
 ;; Package-Requires: ((emacs "27.1"))
@@ -29,9 +29,9 @@
 ;; command to toggle the minor mode `(dired-gitignore-mode)' to some
 ;; convenient key.
 
-;; In order to hide ignored files by default use `eval-after-load'
+;; In order to hide ignored files by default hook it into `dired-mode-hook'
 ;;
-;; (eval-after-load 'dired #'dired-gitignore-mode)
+;; (add-hook 'dired-mode-hook 'dired-gitignore-mode)
 
 ;; It needs the executables for `git' and `ls' in the `PATH'.
 
@@ -46,11 +46,9 @@
   :lighter " !."
   :group 'dired
   (if dired-gitignore-mode
-      (progn
-        (add-hook 'dired-after-readin-hook #'dired-gitignore--hide)
-        (dired-gitignore--hide))
-    (remove-hook 'dired-after-readin-hook #'dired-gitignore--hide)
-    (revert-buffer)))
+      (add-hook 'dired-after-readin-hook #'dired-gitignore--hide)
+    (remove-hook 'dired-after-readin-hook #'dired-gitignore--hide))
+  (revert-buffer))
 
 
 (defun dired-gitignore--hide ()
