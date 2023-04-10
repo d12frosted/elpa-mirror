@@ -4,11 +4,11 @@
 
 ;; Author: Mario Rodas <marsam@users.noreply.github.com>
 ;; URL: https://github.com/emacs-pe/honcho.el
-;; Package-Version: 20190623.2120
-;; Package-Commit: d5e6206dd23ff9305d976c52845c750a064aca4b
+;; Package-Version: 20230224.420
+;; Package-Commit: 95846309c6a4ce45f29f215d43847beb510b6aca
 ;; Keywords: convenience
 ;; Version: 0.1
-;; Package-Requires: ((emacs "25.1") (sudo-edit "0.1"))
+;; Package-Requires: ((emacs "26.1"))
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -66,12 +66,6 @@
   (require 'cl-lib)
   (require 'subr-x))
 (require 'compile)
-(require 'sudo-edit nil 'noerror)
-
-(eval-and-compile
-  ;; Compatibility for Emacs < 26.1
-  (unless (fboundp 'if-let*)
-    (defalias 'if-let* 'if-let)))
 
 (declare-function sudo-edit-filename "sudo-edit")
 
@@ -184,21 +178,7 @@ with VALUE."
   env                                   ; environment variables
   sudo                                  ; whether to start project with sudo
   process                               ; process reference
-  (cwd honcho-working-directory)      ; working directory
-  )
-
-(defsubst honcho-as-string (value)
-  "If VALUE is already a string, return it.
-Otherwise convert it to a string and return that."
-  (cl-etypecase value
-    (stringp value)
-    (numberp (number-to-string value))
-    (symbolp (symbol-name value))))
-
-(defsubst honcho-as-symbol (string-or-symbol)
-  "If STRING-OR-SYMBOL is already a symbol, return it.
-Otherwise convert it to a symbol and return that."
-  (if (symbolp string-or-symbol) string-or-symbol (intern string-or-symbol)))
+  (cwd honcho-working-directory))       ; working directory
 
 (defun honcho-file-lines (file)
   "Return a list of strings containing one element per line in FILE."
@@ -256,8 +236,8 @@ Otherwise convert it to a symbol and return that."
   "Generate a tabulated list entry from a honcho SERVICE."
   (list (honcho-service-name service)
         (vector (honcho-process-status (honcho-service-process service))
-                (if-let* ((process (honcho-service-process service))
-                          (buffer (process-buffer process)))
+                (if-let ((process (honcho-service-process service))
+                         (buffer (process-buffer process)))
                     `(,(honcho-service-name service)
                       face link
                       help-echo ,(format-message "Visit buffer for service `%s'" (honcho-service-name service))
@@ -338,7 +318,7 @@ Otherwise convert it to a symbol and return that."
    An alist where each cons cell `(VAR . VALUE)' with the environment variables
    which will be used to start a service."
   (declare (indent defun) (doc-string 2))
-  (let ((name (honcho-as-string symbol))
+  (let ((name (if (stringp symbol) symbol (symbol-name symbol)))
         (sudo (plist-get properties :sudo))
         (cmd  (plist-get properties :command))
         (env  (plist-get properties :env))
@@ -394,7 +374,7 @@ Otherwise convert it to a symbol and return that."
   (let ((service (gethash name honcho-services)))
     (cl-assert (cl-typep service 'honcho-service) nil "Could not find service with name: %s" name)
     (with-demoted-errors "Error sending signal: %S"
-      (signal-process (honcho-service-process service) (honcho-as-symbol (honcho-read-signal "Signal: "))))
+      (signal-process (honcho-service-process service) (intern (honcho-read-signal "Signal: "))))
     (honcho-maybe-revert-menu)))
 
 ;;;###autoload

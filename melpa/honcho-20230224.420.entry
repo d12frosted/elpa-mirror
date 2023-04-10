@@ -1,11 +1,9 @@
 (honcho .
-	[(20190623 2120)
+	[(20230224 420)
 	 ((emacs
-	   (25 1))
-	  (sudo-edit
-	   (0 1)))
+	   (26 1)))
 	 "Run and manage long-running services" single
-	 ((:commit . "d5e6206dd23ff9305d976c52845c750a064aca4b")
+	 ((:commit . "95846309c6a4ce45f29f215d43847beb510b6aca")
 	  (:authors
 	   ("Mario Rodas" . "marsam@users.noreply.github.com"))
 	  (:maintainer "Mario Rodas" . "marsam@users.noreply.github.com")

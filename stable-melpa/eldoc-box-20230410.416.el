@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018 Yuan Fu
 
 ;; Version: 1.10.1
-;; Package-Version: 20230404.2324
-;; Package-Commit: 143d7c5eff5ded45d1e1b9462c93f2a4e603089e
+;; Package-Version: 20230410.416
+;; Package-Commit: 30901d08bc4ea81b0fbd624084be1ffb066a89fa
 
 ;; Author: Yuan Fu <casouri@gmail.com>
 ;; URL: https://github.com/casouri/eldoc-box
@@ -83,7 +83,7 @@
                             (((background light)) . (:background "black")))
   "The border color used in childframe.")
 
-(defface eldoc-box-body '((t . (:background unspecified)))
+(defface eldoc-box-body '((t . nil))
   "Body face used in documentation childframe.")
 
 (defcustom eldoc-box-only-multi-line nil
