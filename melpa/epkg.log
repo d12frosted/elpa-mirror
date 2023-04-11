@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out c1117eb93f65c15c81cb4822c5eec9a12fe268ed
+Checking out c5a29ca7cb816f94153efe3d9c48ab2b566f7506
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgkHY63s/epkg-20230407.2200
+  to /tmp/epkg87qRac/epkg-20230410.1928
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -15,20 +15,20 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkgkHY63s/epkg-20230407.2200/epkg.info
-Created epkg-20230407.2200.tar containing:
-  epkg-20230407.2200/
-  epkg-20230407.2200/dir
-  epkg-20230407.2200/epkg-desc.el
-  epkg-20230407.2200/epkg-elpa.el
-  epkg-20230407.2200/epkg-list.el
-  epkg-20230407.2200/epkg-org.el
-  epkg-20230407.2200/epkg-pkg.el
-  epkg-20230407.2200/epkg-schemata.el
-  epkg-20230407.2200/epkg-utils.el
-  epkg-20230407.2200/epkg.el
-  epkg-20230407.2200/epkg.info
-Built epkg in 8.837s, finished at 2023-04-10T16:52:15+0000
+Generating /tmp/epkg87qRac/epkg-20230410.1928/epkg.info
+Created epkg-20230410.1928.tar containing:
+  epkg-20230410.1928/
+  epkg-20230410.1928/dir
+  epkg-20230410.1928/epkg-desc.el
+  epkg-20230410.1928/epkg-elpa.el
+  epkg-20230410.1928/epkg-list.el
+  epkg-20230410.1928/epkg-org.el
+  epkg-20230410.1928/epkg-pkg.el
+  epkg-20230410.1928/epkg-schemata.el
+  epkg-20230410.1928/epkg-utils.el
+  epkg-20230410.1928/epkg.el
+  epkg-20230410.1928/epkg.info
+Built epkg in 11.982s, finished at 2023-04-11T00:40:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  447 Apr 10 16:52 packages/epkg-20230407.2200.entry
-112K -rw-r--r-- 1 root root 110K Apr 10 16:52 packages/epkg-20230407.2200.tar
+4.0K -rw-r--r-- 1 root root  447 Apr 11 00:40 packages/epkg-20230410.1928.entry
+112K -rw-r--r-- 1 root root 110K Apr 11 00:40 packages/epkg-20230410.1928.tar
