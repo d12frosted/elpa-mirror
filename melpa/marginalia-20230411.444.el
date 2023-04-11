@@ -6,11 +6,11 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.1
-;; Package-Version: 20230410.1743
-;; Package-Commit: fbab90ba2ed13ddaf5e1a938a8897d83695902cc
+;; Package-Version: 20230411.444
+;; Package-Commit: 3f1ab80fecc3aeb84248ab07c92edca4dce03f92
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.4.0"))
 ;; Homepage: https://github.com/minad/marginalia
-;; Keywords: docs, help, matching
+;; Keywords: docs, help, matching, completion
 
 ;; This file is part of GNU Emacs.
 

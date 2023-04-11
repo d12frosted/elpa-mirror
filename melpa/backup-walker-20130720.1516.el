@@ -9,8 +9,6 @@
 
 ;; Created: Wed Sep  7 19:38:05 2011 (+0800)
 ;; Version: 0.1
-;; Package-Version: 20130720.1516
-;; Package-Commit: 934a4128c122972ac32bb9952addf279a60a94da
 ;; Last-Updated: Mon Apr  1 16:59:52 2013 (+0800)
 ;;           By: Le Wang
 ;;     Update #: 135
