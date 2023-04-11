@@ -1708,29 +1708,31 @@
 	       ("Michael Heerdegen" . "michael_heerdegen@web.de"))
 	      (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de"))])
  (ivy .
-      [(0 13 4)
+      [(0 14 0)
        ((emacs
 	 (24 5)))
        "Incremental Vertical completYon" tar
        ((:url . "https://github.com/abo-abo/swiper")
+	(:keywords "matching")
 	(:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	(:authors
 	 ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	(:keywords "matching"))])
+	(:commit . "abc993c6d066a11f9ca6ec70d2c5c2e2b3e6b17a"))])
  (ivy-avy .
-	  [(0 13 4)
+	  [(0 14 0)
 	   ((emacs
 	     (24 5))
 	    (ivy
-	     (0 13 4))
+	     (0 14 0))
 	    (avy
 	     (0 5 0)))
 	   "Avy integration for Ivy" tar
 	   ((:url . "https://github.com/abo-abo/swiper")
+	    (:keywords "convenience")
 	    (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	    (:authors
 	     ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	    (:keywords "convenience"))])
+	    (:commit . "522c2ed7a62d3c7ff9e7ea455ad3c5d63b3c4b54"))])
  (ivy-explorer .
 	       [(0 3 2)
 		((emacs
@@ -1744,19 +1746,20 @@
 		 (:maintainer "Clemens Radermacher" . "clemera@posteo.net")
 		 (:url . "https://github.com/clemera/ivy-explorer"))])
  (ivy-hydra .
-	    [(0 13 5)
+	    [(0 14 0)
 	     ((emacs
 	       (24 5))
 	      (ivy
-	       (0 13 4))
+	       (0 14 0))
 	      (hydra
 	       (0 14 0)))
 	     "Additional key bindings for Ivy" tar
 	     ((:url . "https://github.com/abo-abo/swiper")
+	      (:keywords "convenience")
 	      (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	      (:authors
 	       ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	      (:keywords "convenience"))])
+	      (:commit . "1ee6eda9f632d66f5e6b582a0d565e52feb856ed"))])
  (ivy-posframe .
 	       [(0 6 3)
 		((emacs
@@ -2231,14 +2234,14 @@
 	   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	  (:keywords "extensions" "lisp"))])
  (nano-agenda .
-	      [(0 2 2)
+	      [(0 3)
 	       ((emacs
 		 (27 1)))
 	       "N Λ N O agenda" tar
 	       ((:url . "https://github.com/rougier/nano-agenda")
 		(:keywords "convenience" "org-mode" "org-agenda")
 		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-		(:commit . "f0a536eea1c2dd90454b622d0930bc80757a95da"))])
+		(:commit . "6c38e95b8e846aceb88398c682fd283052924556"))])
  (nano-modeline .
 		[(0 7 2)
 		 ((emacs
@@ -3389,17 +3392,31 @@
 		 (:authors
 		  ("Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")))])
  (swiper .
-	 [(0 13 4)
+	 [(0 14 0)
 	  ((emacs
 	    (24 5))
 	   (ivy
-	    (0 13 4)))
-	  "Isearch with an overview. Oh, man!" tar
+	    (0 14 0)))
+	  "Isearch with an overview.  Oh, man!" tar
 	  ((:url . "https://github.com/abo-abo/swiper")
+	   (:keywords "matching")
 	   (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	   (:authors
 	    ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	   (:keywords "matching"))])
+	   (:commit . "4129750ab368c8bfd1ef2ad3df6ea11d79ad06b4"))])
+ (switchy-window .
+		 [(1 1)
+		  ((emacs
+		    (25 1))
+		   (compat
+		    (29 1 4 1)))
+		  "A most-recently-used window switcher" tar
+		  ((:url . "https://sr.ht/~tsdh/switchy-window/")
+		   (:keywords "windows")
+		   (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
+		   (:authors
+		    ("Tassilo Horn" . "tsdh@gnu.org"))
+		   (:commit . "904045d161e4b3f37600d4189f78a3f5228a91de"))])
  (sxhkdrc-mode .
 	       [(1 0 0)
 		((emacs
