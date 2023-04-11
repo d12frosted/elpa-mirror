@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.3.0
-;; Package-Version: 20230403.819
-;; Package-Commit: 80d5b622dd0c51547235d1e206e7d98cedb5c291
+;; Package-Version: 20230411.1104
+;; Package-Commit: 671712784abb20e1962df86f59569cfe5c0cb4b8
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/mrcnski/nimbus-theme
 ;; Keywords:    faces
@@ -476,7 +476,7 @@
 
    ;; eglot
    `(eglot-highlight-symbol-face ((t (:inherit highlight))))
-   `(eglot-diagnostic-tag-unnecessary-face ((t (:underline (:color ,nimbus-warn :style wave)))))
+   `(eglot-diagnostic-tag-unnecessary-face ((t (:underline (:color ,blue-gray :style wave)))))
 
    ;; elfeed
    `(elfeed-log-debug-level-face ((t (:foreground ,blue))))
@@ -525,6 +525,8 @@
    `(eshell-ls-executable ((t (:foreground ,executable))))
    `(eshell-ls-product ((t (:foreground ,orange))))
    `(eshell-prompt ((t (:foreground ,heading))))
+
+   `(eshell-syntax-highlighting-option-face ((t (:foreground ,blue-purple))))
 
    ;; evil-search-highlight-persist
    `(evil-search-highlight-persist-highlight-face ((t (:inherit match))))

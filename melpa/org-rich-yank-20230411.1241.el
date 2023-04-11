@@ -4,8 +4,8 @@
 
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
 ;; Version: 0.2.1
-;; Package-Version: 20220227.2154
-;; Package-Commit: 4bcd030f0d736d77c647955739b61fae541417e9
+;; Package-Version: 20230411.1241
+;; Package-Commit: e1566b7d7dd46f04ce08f0f948d108d3d18f4494
 ;; URL: https://github.com/unhammer/org-rich-yank
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, hypermedia, org
@@ -66,6 +66,12 @@ If this variable is non-nil and point is indented before pasting,
 all lines below will also get that indentation."
   :group 'org-rich-yank
   :type 'boolean)
+
+(defcustom org-rich-yank-format-paste #'org-rich-yank--format-paste-default
+  "A function to format current paste as an org source block.
+See `org-rich-yank--format-paste-default' for example and expected arguments."
+  :group 'org-rich-yank
+  :type 'function)
 
 (defvar org-rich-yank--buffer nil)
 
@@ -138,19 +144,23 @@ ARGS ignored."
                               (concat "\n" indent)
                               paste)))
 
+(defun org-rich-yank--format-paste-default (language contents link)
+  "Format LANGUAGE, CONTENTS and LINK as an `org-mode' source block."
+  (format "#+BEGIN_SRC %s\n%s\n#+END_SRC\n%s"
+          language
+          (org-rich-yank--trim-nl contents)
+          link))
+
 ;;;###autoload
 (defun org-rich-yank ()
   "Yank, surrounded by #+BEGIN_SRC block with major mode of originating buffer."
   (interactive)
   (if org-rich-yank--buffer
       (let* ((source-mode (buffer-local-value 'major-mode org-rich-yank--buffer))
-             (paste
-              (concat
-               (format "#+BEGIN_SRC %s\n"
-                       (replace-regexp-in-string "-mode$" "" (symbol-name source-mode)))
-               (org-rich-yank--trim-nl (current-kill 0))
-               (format "\n#+END_SRC\n")
-               (org-rich-yank--link))))
+             (paste (funcall org-rich-yank-format-paste
+                             (replace-regexp-in-string "-mode$" "" (symbol-name source-mode))
+                             (current-kill 0)
+                             (org-rich-yank--link))))
         (insert
          (if org-rich-yank-add-target-indent
              (org-rich-yank-indent paste)

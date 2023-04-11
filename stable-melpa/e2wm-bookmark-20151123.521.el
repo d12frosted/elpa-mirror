@@ -4,9 +4,7 @@
 ;; Author: Yuhei Maeda <yuhei.maeda_at_gmail.com>
 ;; Maintainer: Yuhei Maeda <yuhei.maeda_at_gmail.com>
 ;; Version: 0.1
-;; Package-Commit: bad816b6d8049984d69bcd277b7d325fb84d55eb
-;; Package-Version: 20151123.521
-;; Package-X-Original-version: 0.1
+;; Package-version: 0.1
 ;; Package-Requires: ((e2wm "1.2"))
 ;; Created: 2011-07-05
 ;; Keywords: convenience
