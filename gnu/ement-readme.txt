@@ -397,7 +397,22 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.8.2
+4.1 0.8.3
+─────────
+
+  *Fixes*
+
+  ⁃ Avoid use of `pcase''s `(map :KEYWORD)' form.  (This can cause a
+    broken installation on older versions of Emacs that have an older
+    version of the `map' library loaded, such as Emacs 27.2 included in
+    Debian 11.  Since there's no way to force Emacs to actually load the
+    version of `map' required by this package before installing it
+    (which would naturally happen upon restarting Emacs), we can only
+    avoid using such forms while these versions of Emacs are widely
+    used.)
+
+
+4.2 0.8.2
 ─────────
 
   *Fixes*
@@ -405,13 +420,13 @@ Feel free to join us in the chat room:
   ⁃ Deduplicate grouped membership events.
 
 
-4.2 0.8.1
+4.3 0.8.1
 ─────────
 
   Added missing changelog entry (of course).
 
 
-4.3 0.8
+4.4 0.8
 ───────
 
   *Additions*
@@ -454,7 +469,7 @@ Feel free to join us in the chat room:
 [Jeff Bowman] <https://github.com/jeffbowman>
 
 
-4.4 0.7
+4.5 0.7
 ───────
 
   *Additions*
@@ -494,7 +509,7 @@ Feel free to join us in the chat room:
 [mekeor] <https://github.com/mekeor>
 
 
-4.5 0.6
+4.6 0.6
 ───────
 
   *Additions*
@@ -524,7 +539,7 @@ Feel free to join us in the chat room:
 [Visuwesh] <https://github.com/vizs>
 
 
-4.6 0.5.2
+4.7 0.5.2
 ─────────
 
   *Fixes*
@@ -532,7 +547,7 @@ Feel free to join us in the chat room:
     homeserver is slow to respond).
 
 
-4.7 0.5.1
+4.8 0.5.1
 ─────────
 
   *Fixes*
@@ -540,7 +555,7 @@ Feel free to join us in the chat room:
   ⁃ Faces in `ement-directory' listings.
 
 
-4.8 0.5
+4.9 0.5
 ───────
 
   *Additions*
@@ -565,15 +580,15 @@ Feel free to join us in the chat room:
 [taxy.el] <https://github.com/alphapapa/taxy.el>
 
 
-4.9 0.4.1
-─────────
+4.10 0.4.1
+──────────
 
   *Fixes*
   ⁃ Don't show "curl process interrupted" message when updating a read
     marker's position again.
 
 
-4.10 0.4
+4.11 0.4
 ────────
 
   *Additions*
@@ -604,7 +619,7 @@ Feel free to join us in the chat room:
   ⁃ Highlighting of `@room' mentions.
 
 
-4.11 0.3.1
+4.12 0.3.1
 ──────────
 
   *Fixes*
@@ -612,7 +627,7 @@ Feel free to join us in the chat room:
     local user, the room is considered read).
 
 
-4.12 0.3
+4.13 0.3
 ────────
 
   *Additions*
@@ -640,14 +655,14 @@ Feel free to join us in the chat room:
   ⁃ Compatibility with Emacs 27.
 
 
-4.13 0.2.1
+4.14 0.2.1
 ──────────
 
   *Fixes*
   ⁃ Info manual export filename.
 
 
-4.14 0.2
+4.15 0.2
 ────────
 
   *Changes*
@@ -682,14 +697,14 @@ Feel free to join us in the chat room:
 [Julien Roy] <https://github.com/MrRoy>
 
 
-4.15 0.1.4
+4.16 0.1.4
 ──────────
 
   *Fixed*
   ⁃ Info manual directory headers.
 
 
-4.16 0.1.3
+4.17 0.1.3
 ──────────
 
   *Fixed*
@@ -699,7 +714,7 @@ Feel free to join us in the chat room:
     re-enabled in a future release.)
 
 
-4.17 0.1.2
+4.18 0.1.2
 ──────────
 
   *Fixed*
@@ -716,7 +731,7 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.18 0.1.1
+4.19 0.1.1
 ──────────
 
   *Fixed*
@@ -726,7 +741,7 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.19 0.1
+4.20 0.1
 ────────
 
   After almost two years of development, the first tagged release.

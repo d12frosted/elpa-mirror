@@ -1124,7 +1124,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "127492fac048cecfdba145d496a902022a68d1d5"))])
  (ement .
-	[(0 8 2)
+	[(0 8 3)
 	 ((emacs
 	   (27 1))
 	  (map
@@ -1147,7 +1147,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "fc48543b5396a8d24850e104f62a50cb1008b4c7"))])
+	  (:commit . "b86a31700d1a382ad8da8cd2addd5dcad79d6dba"))])
  (emms .
        [(14)
 	((cl-lib
@@ -1296,11 +1296,11 @@
 	     ("Barry O'Reilly" . "gundaetiapo@gmail.com"))
 	    (:maintainer "Barry O'Reilly" . "gundaetiapo@gmail.com"))])
  (flymake .
-	  [(1 2 2)
+	  [(1 3 2)
 	   ((emacs
 	     (26 1))
 	    (eldoc
-	     (1 1 0))
+	     (1 14 0))
 	    (project
 	     (0 7 1)))
 	   "A universal on-the-fly syntax checker" tar
@@ -1309,7 +1309,7 @@
 	    (:authors
 	     ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
 	    (:url . "https://elpa.gnu.org/packages/flymake.html")
-	    (:commit . "31af9bca99fa88350271e1a905c9b435eaec28cf"))])
+	    (:commit . "560950468588117b264a9f916fb578e0eb2a124a"))])
  (flymake-proselint .
 		    [(0 3 0)
 		     ((emacs
@@ -3406,7 +3406,7 @@
 	    ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	   (:commit . "4129750ab368c8bfd1ef2ad3df6ea11d79ad06b4"))])
  (switchy-window .
-		 [(1 1)
+		 [(1 3)
 		  ((emacs
 		    (25 1))
 		   (compat
@@ -3417,7 +3417,7 @@
 		   (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
 		   (:authors
 		    ("Tassilo Horn" . "tsdh@gnu.org"))
-		   (:commit . "904045d161e4b3f37600d4189f78a3f5228a91de"))])
+		   (:commit . "c743c47b7b4326c411470ba98410b7bfe3685edc"))])
  (sxhkdrc-mode .
 	       [(1 0 0)
 		((emacs
