@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
-Checking out dac89a6acc1a93a615930ca18f1dbf4e9323b038
+Checking out 1f897adc9df5e0de5d5a85633a8629a7e45ddeab
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erlang/
-  to /tmp/erlangcmg9Z2/erlang-20230322.848
+  to /tmp/erlangTf5xTv/erlang-20230412.849
   ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
   ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
   ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
@@ -17,19 +17,21 @@ Copying files (->) and directories (=>)
   ! lib/tools/emacs/erlang-test.el -> erlang-test.el
   ! lib/tools/emacs/erlang.el -> erlang.el
   ! lib/tools/emacs/erldoc.el -> erldoc.el
-Created erlang-20230322.848.tar containing:
-  erlang-20230322.848/
-  erlang-20230322.848/erlang-edoc.el
-  erlang-20230322.848/erlang-eunit.el
-  erlang-20230322.848/erlang-flymake.el
-  erlang-20230322.848/erlang-pkg.el
-  erlang-20230322.848/erlang-skels-old.el
-  erlang-20230322.848/erlang-skels.el
-  erlang-20230322.848/erlang-start.el
-  erlang-20230322.848/erlang-test.el
-  erlang-20230322.848/erlang.el
-  erlang-20230322.848/erldoc.el
-Built erlang in 24.698s, finished at 2023-04-12T07:42:47+0000
+Created erlang-20230412.849.tar containing:
+  erlang-20230412.849/
+  erlang-20230412.849/erlang-edoc.el
+  erlang-20230412.849/erlang-eunit.el
+  erlang-20230412.849/erlang-flymake.el
+  erlang-20230412.849/erlang-pkg.el
+  erlang-20230412.849/erlang-skels-old.el
+  erlang-20230412.849/erlang-skels.el
+  erlang-20230412.849/erlang-start.el
+  erlang-20230412.849/erlang-test.el
+  erlang-20230412.849/erlang.el
+  erlang-20230412.849/erldoc.el
+Built erlang in 25.301s, finished at 2023-04-12T11:34:09+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  258 Apr 12 07:42 packages/erlang-20230322.848.entry
 432K -rw-r--r-- 1 root root 430K Apr 12 07:42 packages/erlang-20230322.848.tar
+4.0K -rw-r--r-- 1 root root  258 Apr 12 11:34 packages/erlang-20230412.849.entry
+432K -rw-r--r-- 1 root root 430K Apr 12 11:34 packages/erlang-20230412.849.tar
