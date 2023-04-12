@@ -3,27 +3,29 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out 722fc1e5c2c9afd30e39ddbbf8559486fdb76f5c
+Checking out 96003526c7997ac295ef0afaf4cfe224a054380c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgvCjVsi/ekg-20230410.338
+  to /tmp/ekgnqh1db/ekg-20230412.519
     ekg-embedding.el -> ekg-embedding.el
     ekg-org-roam.el -> ekg-org-roam.el
     ekg.el -> ekg.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
-Generating /tmp/ekgvCjVsi/ekg-20230410.338/doclicense.info
-Generating /tmp/ekgvCjVsi/ekg-20230410.338/ekg.info
-Created ekg-20230410.338.tar containing:
-  ekg-20230410.338/
-  ekg-20230410.338/dir
-  ekg-20230410.338/doclicense.info
-  ekg-20230410.338/ekg-embedding.el
-  ekg-20230410.338/ekg-org-roam.el
-  ekg-20230410.338/ekg-pkg.el
-  ekg-20230410.338/ekg.el
-  ekg-20230410.338/ekg.info
-Built ekg in 11.185s, finished at 2023-04-11T12:15:54+0000
+Generating /tmp/ekgnqh1db/ekg-20230412.519/doclicense.info
+Generating /tmp/ekgnqh1db/ekg-20230412.519/ekg.info
+Created ekg-20230412.519.tar containing:
+  ekg-20230412.519/
+  ekg-20230412.519/dir
+  ekg-20230412.519/doclicense.info
+  ekg-20230412.519/ekg-embedding.el
+  ekg-20230412.519/ekg-org-roam.el
+  ekg-20230412.519/ekg-pkg.el
+  ekg-20230412.519/ekg.el
+  ekg-20230412.519/ekg.info
+Built ekg in 11.285s, finished at 2023-04-12T07:39:23+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  407 Apr 11 12:15 packages/ekg-20230410.338.entry
-132K -rw-r--r-- 1 root root 130K Apr 11 12:15 packages/ekg-20230410.338.tar
+4.0K -rw-r--r-- 1 root root  407 Apr 12 03:48 packages/ekg-20230410.338.entry
+132K -rw-r--r-- 1 root root 130K Apr 12 03:48 packages/ekg-20230410.338.tar
+4.0K -rw-r--r-- 1 root root  407 Apr 12 07:39 packages/ekg-20230412.519.entry
+140K -rw-r--r-- 1 root root 140K Apr 12 07:39 packages/ekg-20230412.519.tar

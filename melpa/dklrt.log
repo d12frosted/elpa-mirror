@@ -3,3 +3,27 @@ Fetcher: github
 Source:  https://github.com/davidkeegan/dklrt.git
 
 Updating /mnt/store/melpa/working/dklrt/
+Checking out 4eceed270015b41d24a62a8b71bd239224a63063
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dklrt/
+  to /tmp/dklrtBlVvqJ/dklrt-20131110.1341
+    dklrt-pkg.el -> dklrt-pkg.el
+    dklrt.el -> dklrt.el
+    dklrt.texi -> dklrt.texi
+    Misc.py -> Misc.py
+    Recurring.py -> Recurring.py
+    Time.py -> Time.py
+Generating /tmp/dklrtBlVvqJ/dklrt-20131110.1341/dklrt.info
+Created dklrt-20131110.1341.tar containing:
+  dklrt-20131110.1341/
+  dklrt-20131110.1341/Misc.py
+  dklrt-20131110.1341/Recurring.py
+  dklrt-20131110.1341/Time.py
+  dklrt-20131110.1341/dir
+  dklrt-20131110.1341/dklrt-pkg.el
+  dklrt-20131110.1341/dklrt.el
+  dklrt-20131110.1341/dklrt.info
+Built dklrt in 7.547s, finished at 2023-04-12T07:37:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 433 Apr 12 07:37 packages/dklrt-20131110.1341.entry
+ 40K -rw-r--r-- 1 root root 40K Apr 12 07:37 packages/dklrt-20131110.1341.tar

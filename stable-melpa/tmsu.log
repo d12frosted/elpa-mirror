@@ -3,18 +3,22 @@ Fetcher: github
 Source:  https://github.com/vifon/tmsu.el.git
 
 Updating /mnt/store/melpa/working/tmsu/
-Checking out 256d1913ca900bb3c79af8d064bfa6675c14b8b7
+Checking out 27b017b143890deaa1349f545ee8c096799142ea
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tmsu/
-  to /tmp/tmsuWyi2fm/tmsu-20230410.1600
+  to /tmp/tmsukW5WPB/tmsu-20230412.100
+    tmsu-dired-overlay.el -> tmsu-dired-overlay.el
     tmsu-dired.el -> tmsu-dired.el
     tmsu.el -> tmsu.el
-Created tmsu-20230410.1600.tar containing:
-  tmsu-20230410.1600/
-  tmsu-20230410.1600/tmsu-dired.el
-  tmsu-20230410.1600/tmsu-pkg.el
-  tmsu-20230410.1600/tmsu.el
-Built tmsu in 5.797s, finished at 2023-04-11T13:20:48+0000
+Created tmsu-20230412.100.tar containing:
+  tmsu-20230412.100/
+  tmsu-20230412.100/tmsu-dired-overlay.el
+  tmsu-20230412.100/tmsu-dired.el
+  tmsu-20230412.100/tmsu-pkg.el
+  tmsu-20230412.100/tmsu.el
+Built tmsu in 5.957s, finished at 2023-04-12T04:53:02+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 300 Apr 11 13:20 packages/tmsu-20230410.1600.entry
- 32K -rw-r--r-- 1 root root 30K Apr 11 13:20 packages/tmsu-20230410.1600.tar
+4.0K -rw-r--r-- 1 root root 300 Apr 12 01:00 packages/tmsu-20230411.2137.entry
+ 40K -rw-r--r-- 1 root root 40K Apr 12 01:00 packages/tmsu-20230411.2137.tar
+4.0K -rw-r--r-- 1 root root 299 Apr 12 04:53 packages/tmsu-20230412.100.entry
+ 40K -rw-r--r-- 1 root root 40K Apr 12 04:53 packages/tmsu-20230412.100.tar

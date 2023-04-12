@@ -3,20 +3,22 @@ Fetcher: git
 Source:  https://repo.or.cz/org-link-beautify.git
 
 Updating /mnt/store/melpa/working/org-link-beautify/
-Checking out 3d36a4ae5ade049d03b88f635e4b7d1097dafc91
+Checking out 0ecb7b5915c376fe401a74493bc0950469b700ea
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-link-beautify/
-  to /tmp/org-link-beautifySeyXrg/org-link-beautify-20230407.916
+  to /tmp/org-link-beautify9bdqrd/org-link-beautify-20230412.258
     org-link-beautify.el -> org-link-beautify.el
     scripts => scripts
-Created org-link-beautify-20230407.916.tar containing:
-  org-link-beautify-20230407.916/
-  org-link-beautify-20230407.916/org-link-beautify-pkg.el
-  org-link-beautify-20230407.916/org-link-beautify.el
-  org-link-beautify-20230407.916/scripts/
-  org-link-beautify-20230407.916/scripts/epub-thumbnailer.py
-Built org-link-beautify in 4.954s, finished at 2023-04-11T12:58:08+0000
+Created org-link-beautify-20230412.258.tar containing:
+  org-link-beautify-20230412.258/
+  org-link-beautify-20230412.258/org-link-beautify-pkg.el
+  org-link-beautify-20230412.258/org-link-beautify.el
+  org-link-beautify-20230412.258/scripts/
+  org-link-beautify-20230412.258/scripts/epub-thumbnailer.py
+Built org-link-beautify in 6.535s, finished at 2023-04-12T04:30:23+0000
  ✓ Success:
  56K -rw-r--r-- 1 root root 53K Dec 12 05:28 packages/org-link-beautify-20221209.420.el
-4.0K -rw-r--r-- 1 root root 299 Apr 11 12:58 packages/org-link-beautify-20230407.916.entry
- 72K -rw-r--r-- 1 root root 70K Apr 11 12:58 packages/org-link-beautify-20230407.916.tar
+4.0K -rw-r--r-- 1 root root 299 Apr 12 00:37 packages/org-link-beautify-20230407.916.entry
+ 72K -rw-r--r-- 1 root root 70K Apr 12 00:37 packages/org-link-beautify-20230407.916.tar
+4.0K -rw-r--r-- 1 root root 299 Apr 12 04:30 packages/org-link-beautify-20230412.258.entry
+ 72K -rw-r--r-- 1 root root 70K Apr 12 04:30 packages/org-link-beautify-20230412.258.tar
