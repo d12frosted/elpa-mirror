@@ -3,3 +3,32 @@ Fetcher: github
 Source:  https://github.com/rksm/org-ai.git
 
 Updating /mnt/store/melpa/working/org-ai/
+Checking out 17fee8f50328692076e66570ffe5f749c0dc52e7
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-ai/
+  to /tmp/org-ai459ljd/org-ai-20230407.950
+    org-ai-block.el -> org-ai-block.el
+    org-ai-openai-image.el -> org-ai-openai-image.el
+    org-ai-openai.el -> org-ai-openai.el
+    org-ai-talk.el -> org-ai-talk.el
+    org-ai-useful.el -> org-ai-useful.el
+    org-ai.el -> org-ai.el
+    snippets => snippets
+Created org-ai-20230407.950.tar containing:
+  org-ai-20230407.950/
+  org-ai-20230407.950/org-ai-block.el
+  org-ai-20230407.950/org-ai-openai-image.el
+  org-ai-20230407.950/org-ai-openai.el
+  org-ai-20230407.950/org-ai-pkg.el
+  org-ai-20230407.950/org-ai-talk.el
+  org-ai-20230407.950/org-ai-useful.el
+  org-ai-20230407.950/org-ai.el
+  org-ai-20230407.950/snippets/
+  org-ai-20230407.950/snippets/org-mode/
+  org-ai-20230407.950/snippets/org-mode/org-ai-block
+  org-ai-20230407.950/snippets/org-mode/org-ai-image
+Built org-ai in 4.554s, finished at 2023-04-13T07:29:45+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 36K Mar 26 19:34 packages/org-ai-20230317.2217.el
+4.0K -rw-r--r-- 1 root root 315 Apr 13 07:29 packages/org-ai-20230407.950.entry
+ 92K -rw-r--r-- 1 root root 90K Apr 13 07:29 packages/org-ai-20230407.950.tar
