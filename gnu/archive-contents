@@ -382,17 +382,18 @@
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
  (cape .
-       [(0 13)
+       [(0 14)
 	((emacs
 	  (27 1))
 	 (compat
-	  (29 1 3 4)))
+	  (29 1 4 0)))
 	"Completion At Point Extensions" tar
 	((:url . "https://github.com/minad/cape")
+	 (:keywords "abbrev" "convenience" "matching" "completion" "wp")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "3e796a862d42743d33cd56fca041b6f2194db095"))])
+	 (:commit . "b000b6af018434b9088872568c5866db965a14f8"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs

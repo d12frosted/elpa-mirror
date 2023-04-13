@@ -4,10 +4,9 @@
 
 
 Cape provides Completion At Point Extensions which can be used in
-combination with the [Corfu] completion UI or the default completion
-UI. The completion backends used by `completion-at-point' are so called
-`completion-at-point-functions' (Capfs). In principle, the Capfs
-provided by Cape can also be used by [Company].
+combination with [Corfu], [Company] or the default completion UI. The
+completion backends used by `completion-at-point' are so called
+`completion-at-point-functions' (Capfs).
 
 You can register the `cape-*' functions in the
 `completion-at-point-functions' list.  This makes the backends available
@@ -16,9 +15,9 @@ for completion, which is usually invoked by pressing `TAB' or
 respective completion at point. You can bind them directly to a key in
 your user configuration. Notable commands/Capfs are `cape-line' for
 completion of a line from the current buffer and `cape-file' for
-completion of a file name.  The command `cape-symbol' is particularly
-useful for documentation of Elisp packages or configurations, since it
-completes Elisp symbols anywhere.
+completion of a file name.  The commands `cape-symbol' and
+`cape-elisp-block' are useful for documentation of Elisp packages or
+configurations, since they completes Elisp anywhere.
 
 Cape has the super power to transform Company backends into Capfs and
 merge multiple Capfs into a Super-Capf! These transformers allow you to
@@ -46,28 +45,28 @@ Table of Contents
 1 Available Capfs
 ═════════════════
 
-  ⁃ `cape-dabbrev': Complete word from current buffers (see also
-    `dabbrev-capf' on Emacs 29)
-  ⁃ `cape-file': Complete file name
-  ⁃ `cape-history': Complete from Eshell, Comint or minibuffer history
-  ⁃ `cape-keyword': Complete programming language keyword
-  ⁃ `cape-symbol': Complete Elisp symbol
+  ⁃ `cape-dabbrev': Complete word from current buffers. See also
+    `dabbrev-capf' on Emacs 29.
+  ⁃ `cape-elisp-block': Complete Elisp in Org or Markdown code block.
+  ⁃ `cape-file': Complete file name.
+  ⁃ `cape-history': Complete from Eshell, Comint or minibuffer history.
+  ⁃ `cape-keyword': Complete programming language keyword.
+  ⁃ `cape-symbol': Complete Elisp symbol.
   ⁃ `cape-abbrev': Complete abbreviation (`add-global-abbrev',
-    `add-mode-abbrev')
-  ⁃ `cape-ispell': Complete word from Ispell dictionary
-  ⁃ `cape-dict': Complete word from dictionary file
-  ⁃ `cape-line': Complete entire line from current buffer
-  ⁃ `cape-tex': Complete unicode char from TeX command, e.g. `\hbar'.
-  ⁃ `cape-sgml': Complete unicode char from Sgml entity, e.g., `&alpha'.
-  ⁃ `cape-rfc1345': Complete unicode char using RFC 1345 mnemonics.
+    `add-mode-abbrev').
+  ⁃ `cape-dict': Complete word from dictionary file.
+  ⁃ `cape-line': Complete entire line from current buffer.
+  ⁃ `cape-tex': Complete Unicode char from TeX command, e.g. `\hbar'.
+  ⁃ `cape-sgml': Complete Unicode char from SGML entity, e.g., `&alpha'.
+  ⁃ `cape-rfc1345': Complete Unicode char using RFC 1345 mnemonics.
 
 
 2 Configuration
 ═══════════════
 
   Cape is available on GNU ELPA and MELPA. You can install the package
-  with `package-install'. In the long term some of the Capfs provided by
-  this package could be upstreamed into Emacs itself.
+  with `package-install'. In the following we present a sample
+  configuration based on the popular `use-package' macro.
 
   ┌────
   │ ;; Enable Corfu completion UI
@@ -88,7 +87,6 @@ Table of Contents
   │ 	 ("C-c p k" . cape-keyword)
   │ 	 ("C-c p s" . cape-symbol)
   │ 	 ("C-c p a" . cape-abbrev)
-  │ 	 ("C-c p i" . cape-ispell)
   │ 	 ("C-c p l" . cape-line)
   │ 	 ("C-c p w" . cape-dict)
   │ 	 ("C-c p \\" . cape-tex)
@@ -98,15 +96,16 @@ Table of Contents
   │ 	 ("C-c p r" . cape-rfc1345))
   │   :init
   │   ;; Add `completion-at-point-functions', used by `completion-at-point'.
+  │   ;; NOTE: The order matters!
   │   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   │   (add-to-list 'completion-at-point-functions #'cape-file)
+  │   (add-to-list 'completion-at-point-functions #'cape-elisp-block)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-history)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-tex)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-sgml)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-ispell)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-dict)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-symbol)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-line)
@@ -212,8 +211,8 @@ Table of Contents
   `cape-super-capf' has the same restrictions as
   `completion-table-merge' and `completion-table-in-turn'. As a simple
   rule of thumb, `cape-super-capf' works only well for static completion
-  functions like `cape-dabbrev', `cape-keyword', `cape-ispell', etc.,
-  but not for complex multi-step completions like `cape-file'.
+  functions like `cape-dabbrev', `cape-keyword', `cape-dict', etc., but
+  not for complex multi-step completions like `cape-file'.
 
   ┌────
   │ ;; Merge the dabbrev, dict and keyword capfs, display candidates together.

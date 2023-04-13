@@ -5,8 +5,8 @@
 ;; Author: Bibek Panthi <bpanthi977@gmail.com>
 ;; Maintainer: Bibek Panthi <bpanthi977@gmail.com>
 ;; URL: https://github.com/bpanthi977/org-mpv-notes
-;; Package-Version: 20230406.359
-;; Package-Commit: c437a51aef646839437d6eb699ba86bc530b52b7
+;; Package-Version: 20230413.942
+;; Package-Commit: 7c504837c39a748e22a488e7381498b9e646855a
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "27.1") (mpv "0.2.0"))
 ;; Kewords: mpv, org
@@ -227,8 +227,10 @@ the file to proper location and insert a link to that file."
          (h (floor (/ time 3600)))
          (m (floor (/ (mod time 3600) 60)))
          (s (floor (mod time 60)))
-         (timestamp (format "%s:%s:%s" h m s)))
-    (insert "[[" path "::" timestamp "][" timestamp "]]")))
+         (timestamp (format "%02d:%02d:%02d" h m s))
+		 (name (read-string "Description: ")))
+    (insert "[[mpv:" path "::" timestamp "][" name "]]")))
+
 
 (defun org-mpv-notes-replace-timestamp-with-link (link)
   (interactive "sLink:")

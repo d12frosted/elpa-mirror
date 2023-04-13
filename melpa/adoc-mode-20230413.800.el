@@ -5,8 +5,8 @@
 ;;
 ;; Author: Florian Kaufmann <sensorflo@gmail.com>
 ;; URL: https://github.com/bbatsov/adoc-mode
-;; Package-Version: 20230315.1147
-;; Package-Commit: 9e7af55e7eb8c1b19ac46139ce0f79110d1452d4
+;; Package-Version: 20230413.800
+;; Package-Commit: a7691c8b9a738fd724007a2a283ed2c20684a7e5
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; Created: 2009
 ;; Version: 0.8.0-snapshot
@@ -613,7 +613,7 @@ customizable.")
   "Generic/base face for text with special formatting.
 
 Typically `adoc-title-0-face', `adoc-bold-face' etc.
-inherit from it. Also used for generic text thas hasn't got it's
+inherit from it.  Also used for generic text thas hasn't got its
 own dedicated face, e.g. if a markup command imposes arbitrary
 colors/sizes/fonts upon it."
   :group 'adoc-faces)
@@ -644,7 +644,7 @@ easier for major mode to write font lock regular expressions."
 
 (defface adoc-value-face
   '((t :inherit adoc-meta-face))
-  "For attribute values"
+  "For attribute values."
   :group 'adoc-faces)
 (defvar adoc-value-face 'adoc-value-face)
 
@@ -688,12 +688,12 @@ AsciiDoc: *bold emphasis text* or _emphasis text_
 
 (defface adoc-attribute-face
   '((t :inherit adoc-meta-face :slant italic))
-  "For attribute names"
+  "For attribute names."
   :group 'adoc-faces)
 (defvar adoc-attribute-face 'adoc-attribute-face)
 
 (defface adoc-anchor-face
-  '((t :inherid adoc-meta-face :overline t))
+  '((t :inherit adoc-meta-face :overline t))
   "For the name/id of an anchor."
   :group 'adoc-faces)
 (defvar adoc-anchor-face 'adoc-anchor-face)
@@ -916,11 +916,10 @@ or for footnotes, or for floating text."
 (defvar adoc-secondary-text-face 'adoc-secondary-text-face)
 
 (defface adoc-native-code-face
-  '((((background light))
-     (:background "cornsilk" :extend t))
-    (((background dark))
-     (:background "saddlebrown" :extend t)))
-  "For code blocks that are highlighted natively."
+  '((t (:inherit fixed-pitch)))
+  "For code blocks that are highlighted natively.
+
+Use it to change the background of the code blocks."
   :group 'adoc-faces)
 (defvar adoc-native-code-face 'adoc-native-code-face)
 
