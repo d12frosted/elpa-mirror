@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/topsy.el
-;; Package-Version: 20210831.133
-;; Package-Commit: 8ae0976dfdbe4461c33ed44cf1dedc2c903b0bb0
+;; Package-Version: 20230414.1738
+;; Package-Commit: 149ee929dad667fd7668728d9b59dedb0183dfe5
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: convenience
@@ -67,19 +67,7 @@ within.  Intended as a simple alternative to
 
 (defcustom topsy-mode-functions
   '((emacs-lisp-mode . topsy--beginning-of-defun)
-    (magit-section-mode . (lambda ()
-                            (save-excursion
-                              (goto-char (window-start))
-                              (when-let (strings
-					 (cl-loop while (/= (point) (progn
-                                                                      (magit-section-up)
-                                                                      (point)))
-						  for section = (magit-current-section)
-						  collect (string-trim
-							   (buffer-substring
-							    (oref section start)
-							    (oref section content)))))
-				(string-join strings " « ")))))
+    (magit-section-mode . topsy--magit-section)
     (org-mode . (lambda ()
                   "topsy: Please use package `org-sticky-header' for Org mode"))
     (nil . topsy--beginning-of-defun))
@@ -126,6 +114,34 @@ Return non-nil if the minor mode is enabled."
       (beginning-of-defun)
       (font-lock-ensure (point) (point-at-eol))
       (buffer-substring (point) (point-at-eol)))))
+
+(defun topsy--magit-section ()
+  "Return the header line in a `magit-section-mode' buffer."
+  (cl-labels ((level-of
+               (section) (length (magit-section-ident section)))
+              (parent-of
+               (section) (save-excursion
+                           (goto-char (oref section start))
+                           (let ((old-level (level-of section))
+                                 (old-pos (point)))
+                             (magit-section-up)
+                             (when (and (/= old-level (level-of (magit-current-section)))
+                                        (/= old-pos (point)))
+                               (magit-current-section))))))
+    (save-excursion
+      (goto-char (window-start))
+      (when-let (strings
+		 (cl-loop with current-section = (magit-current-section)
+                          when (and (oref current-section content)
+                                    (/= (window-start) (oref current-section start)))
+                          collect (string-trim
+				   (buffer-substring
+				    (oref current-section start)
+				    (oref current-section content)))
+                          for parent-section = (parent-of current-section)
+                          while parent-section
+                          do (setf current-section parent-section)))
+	(string-join strings " « ")))))
 
 ;;;; Footer
 

@@ -7,6 +7,8 @@ assist with theme building, here are a few highlights...
 - Generate specs for unthemed faces using the theme color palette.
   - `autothemer-generate-templates'
   - `autothemer-generate-templates-filtered' (filter by regexp)
+  - `autothemer-insert-missing-face'
+  - `autothemer-insert-missing-faces'
 - Generate a palette SVG image
   - `autothemer-generate-palette-svg'
 - Insert a color name or color from the active palette

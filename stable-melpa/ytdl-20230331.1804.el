@@ -5,8 +5,8 @@
 ;; Author: Arnaud Hoffmann <tuedachu@gmail.com>
 ;; Maintainer: Arnaud Hoffmann <tuedachu@gmail.com>
 ;; URL: https://gitlab.com/tuedachu/ytdl
-;; Package-Version: 20210506.914
-;; Package-Commit: 23da64f5c38b8cb83dbbadf704171b86cc0fa937
+;; Package-Version: 20230331.1804
+;; Package-Commit: 2ea3daf2f6aa9d18b71fe3e15f05c30a56fca228
 ;; Version: 1.3.6
 ;; Package-Requires: ((emacs "26.1") (async "1.9.4") (transient "0.2.0") (dash "2.17.0"))
 ;; Keywords: comm, multimedia
@@ -105,6 +105,16 @@ Values can be:
 Used by `ytdl-download-open'."
   :group 'ytdl
   :type '(string))
+
+(defcustom ytdl-format-entry-format "%q [%e]"
+  "The format of entries in format listings.
+The following %-escapes will be expanded using `format-spec':
+
+%q The entry's quality.
+%e The entry's extension.
+%b The entry's bitrate.
+%r The entry's resolution.
+%i The entry's ID.")
 
 (defcustom ytdl-mode-line
   t
@@ -510,30 +520,31 @@ DL-TYPE is the download type, see `ytdl-download-types'."
         (uuid (ytdl--uuid url)))
     (setq process-id
           (async-start
-           (lambda ()
-             (with-temp-buffer
-               (apply #'call-process "youtube-dl" nil t nil
-                      "-o" (concat filename
-                                   ".%(ext)s")
-                      (append extra-ytdl-args
-                              (list "--" url)))
-               (goto-char (point-min))
-               (if (search-forward-regexp "^ERROR:" nil t nil)
-                   (progn
-                     (beginning-of-line)
-                     (buffer-substring-no-properties (line-beginning-position)
-                                                     (line-end-position)))
-                 (let ((file-path nil)
-                       (ytdl-extensions
-                        '("3gp" "aac" "flv" "m4a" "mp3" "mp4" "ogg" "wav" "webm" "mkv")))
-                   (while (and (not (when file-path
-                                      (file-exists-p file-path)))
-                               ytdl-extensions)
-                     (setq file-path (concat filename
-                                             "."
-                                             (car ytdl-extensions))
-                           ytdl-extensions (cdr ytdl-extensions)))
-                   file-path))))
+           (let ((command ytdl-command))
+             (lambda ()
+               (with-temp-buffer
+                 (apply #'call-process command nil t nil
+                        "-o" (concat filename
+                                     ".%(ext)s")
+                        (append extra-ytdl-args
+                                (list "--" url)))
+                 (goto-char (point-min))
+                 (if (search-forward-regexp "^ERROR:" nil t nil)
+                     (progn
+                       (beginning-of-line)
+                       (buffer-substring-no-properties (line-beginning-position)
+                                                       (line-end-position)))
+                   (let ((file-path nil)
+                         (ytdl-extensions
+                          '("3gp" "aac" "flv" "m4a" "mp3" "mp4" "ogg" "wav" "webm" "mkv")))
+                     (while (and (not (when file-path
+                                        (file-exists-p file-path)))
+                                 ytdl-extensions)
+                       (setq file-path (concat filename
+                                               "."
+                                               (car ytdl-extensions))
+                             ytdl-extensions (cdr ytdl-extensions)))
+                     file-path)))))
 
            (lambda (response)
              (if (string-match "^ERROR" response)
@@ -609,6 +620,71 @@ filename."
                      "' does not exist.")))
     (list url filename extra-ytdl-args dl-type-name)))
 
+(defun ytdl--list-formats (url)
+  "List all available formats for the stream with URL."
+  (with-temp-buffer
+    (call-process ytdl-command nil t nil "--list-formats" url)
+    (goto-char (point-min))
+    (let ((formats
+           (cl-loop while (not (eobp))
+                    do (forward-line 1)
+                    when (re-search-forward
+                          (rx bol (group (+ digit)) (+ blank) (group (+ alphanumeric))
+                              (or (: (+ blank) (group-n 3 (+ alphanumeric) (? (: blank (+ alphanumeric))))
+                                     (+ blank) (group-n 5 (+ alphanumeric)) (+ blank)
+                                     (group-n 4 (>= 2 alphanumeric)))
+                                  (: (+ blank) (group-n 3 (+ alphanumeric) (? (: blank (+ alphanumeric))))
+                                     (+ any) blank (group-n 4 (+ alphanumeric)) blank "http" (+ any)
+                                     (+ blank) (group-n 5 (+ alphanumeric)) (or "," eol))))
+                          (pos-eol) t)
+                    collect (list :id (match-string 1)
+                                  :extension (match-string 2)
+                                  :resolution (match-string 3)
+                                  :bitrate (match-string 4)
+                                  :quality (match-string 5))))
+          result)
+      (dolist (fmt formats result)
+        (unless (member fmt result)
+          (push fmt result)))
+      result)))
+
+;;;###autoload
+(defun ytdl-select-format (url)
+  "Return a format for URL."
+  (when-let ((formats (ytdl--list-formats url))
+             (formatted-formats
+              (and formats
+                   (mapcar (lambda (format)
+                             (let* ((resolution (plist-get format :resolution))
+                                    (extension (plist-get format :extension))
+                                    (bitrate (plist-get format :bitrate))
+                                    (quality (plist-get format :quality))
+                                    (id (plist-get format :id))
+                                    (format-res
+                                     (string-match (rx (+ num) "x" (group (+ num))) resolution))
+                                    (res-height (and format-res (match-string 1 resolution)))
+                                    (format-bitrate (string-match (rx (group (+ num)) "k") bitrate))
+                                    (num-bitrate (and format-bitrate (match-string 1 bitrate))))
+                               (cons
+                                (format-spec
+                                 ytdl-format-entry-format
+                                 `((?e . ,extension)
+                                   (?r . ,resolution)
+                                   (?b . ,bitrate)
+                                   (?q . ,quality)
+                                   (?i . ,id)))
+                                (if res-height
+                                    (format "best[height<=%s]" res-height)
+                                  (format "worst[tbr>=?%s]" num-bitrate)))))
+                           formats))))
+    (alist-get
+     (completing-read "Select format: "
+                      (lambda (string pred action)
+                        (if (eq action 'metadata)
+                            `(metadata
+                              ,(cons 'display-sort-function 'identity))
+                          (complete-with-action action formatted-formats string pred))))
+     formatted-formats nil nil 'equal)))
 
 ;;;###autoload
 (defun ytdl-download-eshell ()
