@@ -5,8 +5,8 @@
 ;; Author: Bibek Panthi <bpanthi977@gmail.com>
 ;; Maintainer: Bibek Panthi <bpanthi977@gmail.com>
 ;; URL: https://github.com/bpanthi977/org-mpv-notes
-;; Package-Version: 20230413.942
-;; Package-Commit: 7c504837c39a748e22a488e7381498b9e646855a
+;; Package-Version: 20230414.500
+;; Package-Commit: 215bd0fdbb8593e555231309dd11a96af7e98a33
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "27.1") (mpv "0.2.0"))
 ;; Kewords: mpv, org
@@ -31,6 +31,9 @@
 (require 'org-attach)
 (require 'org-element)
 
+;;;;;
+;;; Opening Link & Interface with org link
+;;;;;
 
 ;; from https://github.com/kljohann/mpv.el/wiki
 ;;  To create a mpv: link type that is completely analogous to file: links but opens using mpv-play instead,
@@ -41,8 +44,42 @@ ARG is passed to `org-link-complete-file'."
    "file:" "mpv:"
    (org-link-complete-file arg)
    t t))
-(org-link-set-parameters "mpv" :complete #'org-mpv-notes-complete-link :follow #'org-mpv-notes-play)
-(add-hook 'org-open-at-point-functions #'mpv-seek-to-position-at-point)
+
+(org-link-set-parameters "mpv"
+                         :complete #'org-mpv-notes-complete-link
+                         :follow #'org-mpv-notes-open)
+
+(defvar org-mpv-notes-timestamp-regex "[0-9]+:[0-9]+:[0-9]+")
+
+(defun org-mpv-notes-open (path &optional arg)
+  "Open the mpv `PATH'.
+`ARG' is required by org-follow-link but is ignored here."
+  (let (search-option)
+    (when (string-match "::\\(.*\\)\\'" path)
+      (setq search-option (match-string 1 path))
+      (setq path (replace-match "" nil nil path)))
+    ;; Enable Minor mode
+    (org-mpv-notes t)
+    ;; Open mpv player
+    (cond ((not (mpv-live-p))
+           (mpv-start path))
+          ((not (string-equal (mpv-get-property "path") path))
+           (mpv-kill)
+           (sleep-for 0.05)
+           (mpv-start path)))
+    ;; Jump to link
+    (cond ((null search-option) nil)
+          ((string-match (concat "^" org-mpv-notes-timestamp-regex) search-option)
+           (let ((secs (org-timer-hms-to-secs search-option)))
+             (when (>= secs 0)
+               (mpv-seek secs))))
+          ((string-match "^\\([0-9]+\\)$" search-option)
+           (let ((secs (string-to-number search-option)))
+             (mpv-seek 0))))))
+
+;;;;;
+;;; Screenshot
+;;;;;
 
 (defun org-mpv-notes-save-as-attach (file)
   "Save image FILE to org file using `org-attach'."
@@ -54,10 +91,12 @@ ARG is passed to `org-link-complete-file'."
 
 (defcustom org-mpv-notes-save-image-function
   #'org-mpv-notes-save-as-attach
-  "Function to run to save image file to org buffer.
+  "Function that saves screenshot image file to org buffer.
 Filename is passed as first argument.  The function has to copy
 the file to proper location and insert a link to that file."
   :type '(function)
+  :options '(#'org-mpv-notes-save-as-attach
+             #'org-download-image)
   :group 'org-mpv-notes)
 
 ;; save screenshot as attachment
@@ -72,6 +111,10 @@ the file to proper location and insert a link to that file."
     (funcall org-mpv-notes-save-image-function filename)
     (org-display-inline-images)))
 
+;;;;;
+;;; OCR on screenshot
+;;;;;
+
 (defcustom org-mpv-notes-ocr-command "tesseract"
   "OCR program to extract text from mpv screenshot."
   :type '(string)
@@ -82,7 +125,7 @@ the file to proper location and insert a link to that file."
   :type '(string)
   :group 'org-mpv-notes)
 
-(defun org-mpv-notes-ocr-on-file (file)
+(defun org-mpv-notes--ocr-on-file (file)
   "Run tesseract OCR on the screenshot FILE."
   (unless (executable-find org-mpv-notes-ocr-command) ;; a defcustom
     (user-error "OCR program %S not found" org-mpv-notes-ocr-command))
@@ -100,39 +143,53 @@ the file to proper location and insert a link to that file."
     (mpv-run-command "screenshot-to-file"
                      filename
                      "video")
-    (let ((string (org-mpv-notes-ocr-on-file filename)))
+    (let ((string (org-mpv-notes--ocr-on-file filename)))
       (insert "\n"
               string
               "\n"))))
+;;;;;
+;;; Motion (jump to next, previous, ... link)
+;;;;;
 
-(defvar org-mpv-notes-timestamp-regex "[0-9]+:[0-9]+:[0-9]+")
+(defvar org-mpv-notes-link-regex "\\[\\[mpv:\\([^\\n\\]*?\\)\\]\\[\\([^\\n]*?\\)\\]\\]")
 
 (defun org-mpv-notes-next-timestamp ()
   "Seek to next timestamp in the notes file."
   (interactive)
-  (when (re-search-forward org-mpv-notes-timestamp-regex nil t)
-    (mpv-seek-to-position-at-point)
+  (when (re-search-forward org-mpv-notes-link-regex nil t)
+    (backward-char)
+    (org-open-at-point)
     (org-show-entry)
     (recenter)))
 
 (defun org-mpv-notes-previous-timestamp ()
   "Seek to previous timestamp in the notes file."
   (interactive)
-  (when (re-search-backward org-mpv-notes-timestamp-regex nil t)
-    (mpv-seek-to-position-at-point)
+  (when (re-search-backward org-mpv-notes-link-regex nil t)
+    (forward-char)
+    (org-open-at-point)
     (org-show-entry)
     (recenter)))
 
 (defun org-mpv-notes-this-timestamp ()
-  "Seeks to the timestamp stored in the property drawer of the heading."
+  "Seeks to the timestamp at point or stored in the property drawer of the heading."
   (interactive)
-  (let ((timestamp (org-entry-get (point) "time" t)))
-    (when timestamp
-      (let ((time (org-timer-hms-to-secs timestamp)))
-        (when (> time 0)
-          (mpv-seek time)
-          (org-show-entry)
-          (recenter))))))
+  (let* ((element (org-element-context))
+         (path (and element
+                    (eql (org-element-type element) 'link)
+                    (org-element-property :path element))))
+    (unless path
+      (let ((raw-link (org-entry-get (point) "mpv_link" t)))
+        (when (and raw-link (string-match org-mpv-notes-link-regex raw-link))
+          (setf path (match-string 1 raw-link)))))
+
+    (org-mpv-notes-open path)
+    (org-show-entry)
+    (recenter)))
+
+;;;;;
+;;; MPV Controls
+;;;;;
 
 (defun org-mpv-notes-seek-double-step ()
   "Increase seek step size."
@@ -147,10 +204,12 @@ the file to proper location and insert a link to that file."
   (message "%f" mpv-seek-step))
 
 (defun org-mpv-speed-up ()
+  "Increase playback speed by 1.1 factor."
   (interactive)
   (mpv-set-property "speed" (* 1.1 (mpv-get-property "speed"))))
 
 (defun org-mpv-speed-down ()
+  "Decrease playback speed by 1.1 factor."
   (interactive)
   (mpv-set-property "speed" (/ (mpv-get-property "speed") 1.1)))
 
@@ -161,66 +220,13 @@ the file to proper location and insert a link to that file."
   ;; https://github.com/mpv-player/mpv/blob/master/etc/input.conf
   (mpv--enqueue '("cycle" "fullscreen") #'ignore))
 
-(defun org-mpv-notes--video-arg (path)
-  "Video arg corresponding to PATH in [[mpv:...]] link."
-  (if (string-match-p "^https?:" path)
-      path
-    (expand-file-name path
-                      (file-name-directory (file-truename (buffer-file-name))))))
+;;;;;
+;;; Creating Links
+;;;;;
 
-(defun org-mpv-notes--org-link-description (element)
-  "Get description from a org link ELEMENT."
-  (if-let ((begin (org-element-property :contents-begin element))
-           (end (org-element-property :contents-end element)))
-      (buffer-substring-no-properties begin end)
-    ""))
-
-(defun org-mpv-notes-play (path &optional arg)
-  ;; see example
-  (let (search-option)
-    (when (string-match "::\\(.*\\)\\'" path)
-      (setq search-option (match-string 1 path))
-      (setq path (replace-match "" nil nil path)))
-    (cond ((not (mpv-live-p))
-           (mpv-start path))
-          ((not (string-equal (mpv-get-property "path") path))
-           (mpv-kill)
-           (sleep-for 0.05)
-           (mpv-start path)))
-    (cond ((string-match (concat "^" org-mpv-notes-timestamp-regex) search-option)
-           (let ((secs (org-timer-hms-to-secs search-option)))
-             (when (>= secs 0)
-               (mpv-seek secs))))
-          ((string-match "^\\([0-9]+\\)$" search-option)
-           (let ((secs (string-to-number search-option)))
-             (mpv-seek 0))))))
-
-(defun org-mpv-notes-open ()
-  "Find and open mpv: link."
-  (interactive)
-  (save-excursion
-    ;; move to next heading
-    (unless (re-search-forward "^\\*+" nil t)
-      ;; if no heading goto end
-      (goto-char (point-max)))
-    ;; then search backwards for links
-    (let ((pos (re-search-backward "\\[\\[mpv:[^\n]*\\]\\]")))
-      (when pos
-        ;; when link is found play it
-        (forward-char)
-        (org-mpv-notes-play (org-element-context))))))
-
-(defun org-mpv-notes-insert-note ()
-  "Insert a heading with timestamp."
-  (interactive)
-  (org-insert-heading)
-  (save-excursion
-    (org-insert-property-drawer)
-    (org-set-property "time" (org-timer-secs-to-hms (round (mpv-get-playback-position))))
-    (org-set-property "mpv_path" (org-timer-secs-to-hms (round (mpv-get-property "path"))))))
-
-(defun org-mpv-notes-insert-link ()
-  (interactive)
+(cl-defun org-mpv-notes--create-link (&optional (read-description t))
+  "Create a link with timestamp to insert in org file.
+If `READ-DESCRIPTION' is true, ask for a link description from user."
   (let* ((path (mpv-get-property "path"))
          (time (mpv-get-playback-position))
 
@@ -228,11 +234,29 @@ the file to proper location and insert a link to that file."
          (m (floor (/ (mod time 3600) 60)))
          (s (floor (mod time 60)))
          (timestamp (format "%02d:%02d:%02d" h m s))
-		 (name (read-string "Description: ")))
-    (insert "[[mpv:" path "::" timestamp "][" name "]]")))
+         (description (if read-description
+                          (read-string "Description: ")
+                        "")))
+    (when (string-equal description "")
+      (setf description timestamp))
+    (concat "[[mpv:" path "::" timestamp "][" description "]]")))
 
+(defun org-mpv-notes-insert-note ()
+  "Insert a heading with link & timestamp."
+  (interactive)
+  (org-insert-heading)
+  (save-excursion
+    (org-insert-property-drawer)
+    (org-set-property "mpv_link" (org-mpv-notes--create-link nil))))
+
+(defun org-mpv-notes-insert-link ()
+  "Insert link with timestamp."
+  (interactive)
+  (insert (org-mpv-notes--create-link t)))
 
 (defun org-mpv-notes-replace-timestamp-with-link (link)
+  "Convert from old format (timestamp only) to new format (link with timestamp).
+`LINK' is the video url/path."
   (interactive "sLink:")
   (save-excursion
     (while (re-search-forward org-mpv-notes-timestamp-regex nil t)
@@ -242,20 +266,23 @@ the file to proper location and insert a link to that file."
         (delete-region (match-beginning 0) (match-end 0))
         (insert "[[" link "::" timestamp "][" timestamp "]]")))))
 
+
+;;;;;
+;;; Minor Mode and Keymap
+;;;;;
+
 ;;;###autoload
 (define-minor-mode org-mpv-notes
   "Org minor mode for Note taking alongside audio and video.
 Uses mpv.el to control mpv process"
   :keymap `((,(kbd "M-n i") . org-mpv-notes-insert-link)
             (,(kbd "M-n M-i") . org-mpv-notes-insert-note)
+
             (,(kbd "M-n u") . mpv-revert-seek)
             (,(kbd "M-n s") . org-mpv-notes-save-screenshot)
-            (,(kbd "M-n o") . org-mpv-notes-open)
-            (,(kbd "M-n k") . mpv-kill)
-            (,(kbd "M-n M-s") . org-mpv-notes-screenshot-ocr))
-  (if org-mpv-notes
-      (org-mpv-notes-open)
-    (mpv-kill)))
+            (,(kbd "M-n M-s") . org-mpv-notes-screenshot-ocr)
+
+            (,(kbd "M-n k") . mpv-kill)))
 
 (provide 'org-mpv-notes)
 

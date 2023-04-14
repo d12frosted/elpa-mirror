@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://repo.or.cz/eldoc-overlay.git
 
 Updating /mnt/store/melpa/working/eldoc-overlay/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/eldoc-overlay.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 14a9e141918c2e18a107920e8631e622c580b3ef
+Built eldoc-overlay in 2.365s, finished at 2023-04-14T06:02:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Apr 14 06:02 packages/eldoc-overlay-20230406.959.el
+4.0K -rw-r--r-- 1 root root  447 Apr 14 06:02 packages/eldoc-overlay-20230406.959.entry
