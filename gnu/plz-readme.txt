@@ -224,7 +224,15 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.4
+3.1 0.5
+───────
+
+  *Additions*
+  ⁃ Struct `plz-queue''s `finally' slot, a function called when the
+    queue is finished.
+
+
+3.2 0.4
 ───────
 
   *Additions*
@@ -256,7 +264,7 @@ be simple and well-organized.  Every feature is tested against
 [#17] <https://github.com/alphapapa/plz.el/issues/17>
 
 
-3.2 0.3
+3.3 0.3
 ───────
 
   *Additions*
@@ -275,21 +283,21 @@ be simple and well-organized.  Every feature is tested against
 [Sawyer Zheng] <https://github.com/sawyerzheng>
 
 
-3.3 0.2.1
+3.4 0.2.1
 ─────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.4 0.2
+3.5 0.2
 ───────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.5 0.1
+3.6 0.1
 ───────
 
   Initial release.
