@@ -3,9 +3,9 @@
 		       ━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Eat's name self-explainatory, it stands for "Emulate A Terminal".  Eat
-is a terminal emulator.  It can run most (if not all) full-screen
-terminal programs, including Emacs.
+Eat's name self-explanatory, it stands for "Emulate A Terminal".  Eat is
+a terminal emulator.  It can run most (if not all) full-screen terminal
+programs, including Emacs.
 
 It is pretty fast, more than three times faster than Term, despite being
 implemented entirely in Emacs Lisp.  So fast that you can comfortably
@@ -169,7 +169,7 @@ To get the most out of Eat, you should also setup shell integration.
   (however you can make a char mode spending some effort).  And it too
   flickers like Term, so despite being much faster that Eat, it seems to
   be slow.  If you need your terminal to handle huge bursts (megabytes)
-  of data, you should Vterm.
+  of data, you should use Vterm.
 
 
 3.3 Coterm + Shell

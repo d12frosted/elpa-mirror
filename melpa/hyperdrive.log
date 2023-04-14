@@ -3,24 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-Checking out d790a72e563ba5e46a810769eb1c45a631333203
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hyperdrive/
-  to /tmp/hyperdriveN67bi3/hyperdrive-20230411.2226
-    hyperdrive-dir.el -> hyperdrive-dir.el
-    hyperdrive-handlers.el -> hyperdrive-handlers.el
-    hyperdrive-lib.el -> hyperdrive-lib.el
-    hyperdrive-org.el -> hyperdrive-org.el
-    hyperdrive.el -> hyperdrive.el
-Created hyperdrive-20230411.2226.tar containing:
-  hyperdrive-20230411.2226/
-  hyperdrive-20230411.2226/hyperdrive-dir.el
-  hyperdrive-20230411.2226/hyperdrive-handlers.el
-  hyperdrive-20230411.2226/hyperdrive-lib.el
-  hyperdrive-20230411.2226/hyperdrive-org.el
-  hyperdrive-20230411.2226/hyperdrive-pkg.el
-  hyperdrive-20230411.2226/hyperdrive.el
-Built hyperdrive in 6.564s, finished at 2023-04-13T14:54:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 447 Apr 13 14:54 packages/hyperdrive-20230411.2226.entry
- 80K -rw-r--r-- 1 root root 80K Apr 13 14:54 packages/hyperdrive-20230411.2226.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~ushin/hyperdrive.el/': Failed to connect to git.sr.ht port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

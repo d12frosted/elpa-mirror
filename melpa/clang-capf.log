@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~pkal/clang-capf
 
 Updating /mnt/store/melpa/working/clang-capf/
-Checking out 5e4dfba90ce86bbc7ee61805edfca04fff93c291
-Built clang-capf in 4.371s, finished at 2023-04-13T14:21:56+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Apr 13 14:21 packages/clang-capf-20221030.1830.el
-4.0K -rw-r--r-- 1 root root  433 Apr 13 14:21 packages/clang-capf-20221030.1830.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~pkal/clang-capf/': Failed to connect to git.sr.ht port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128
