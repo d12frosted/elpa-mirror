@@ -4,8 +4,8 @@
 ;; Maintainer: Emacs User Group Berlin <emacs-berlin@emacs-berlin.org>
 
 ;; Version: 0.1
-;; Package-Version: 20230326.1211
-;; Package-Commit: 5d97262a0210c5fb393a257e4a9f90e0f29bc8fd
+;; Package-Version: 20230414.1303
+;; Package-Commit: 377db02b46e2643e6e0018938ab64aac394d0e2a
 
 ;; URL: https://github.com/emacs-berlin/syntactic-close
 
@@ -893,16 +893,18 @@ Argument PPS is result of a call to function ‘parse-partial-sexp’"
      ((nth 8 pps)
       (syntactic-close-generic-forms pps))
      ((nth 1 pps)
-      (cond ((save-excursion (goto-char (nth 1 pps))(eq (char-after) 40))
-             ")")
-            ((save-excursion (syntactic-close-java-another-filter-clause pps))
-             (if (and (not (eq (char-before) ?\;))
-                      ;; (or
-                      ;; (eq (char-before) 41)
-                      ;; (looking-back syntactic-close-assignment-re (line-beginning-position)))
-                      )
-                 ";"))
-            (t (syntactic-close-pure-syntax pps))))
+      (goto-char (nth 1 pps))
+      (if (eq (char-after) 40)
+          ")"
+      (if (save-excursion (syntactic-close-java-another-filter-clause pps))
+          (if (and (not (eq (char-before) ?\;))
+                    ;; (or
+                    ;; (eq (char-before) 41)
+                    ;; (looking-back syntactic-close-assignment-re (line-beginning-position)))
+                   )
+              ";"
+            (syntactic-close-pure-syntax pps))
+        (syntactic-close-pure-syntax pps))))
      ((looking-back syntactic-close-assignment-re (line-beginning-position))
       (unless (eq (char-before) ?\;) ";"))
      ((and (looking-back syntactic-close-funcdef-re (line-beginning-position))
