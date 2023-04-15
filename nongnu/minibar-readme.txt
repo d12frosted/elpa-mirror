@@ -3,16 +3,6 @@
 	      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Installation
-.. 1. Quelpa
-.. 2. Straight.el
-.. 3. Manual
-2. Usage
-
-
 The echo area is unused most of the time.  Sometimes this empty area so
 annoying that some people want to get rid of it.  This package makes it
 useful by showing a status bar in it when it's unused.  This is

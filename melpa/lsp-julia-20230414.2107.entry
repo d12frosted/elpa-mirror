@@ -1,5 +1,5 @@
 (lsp-julia .
-	   [(20211229 1534)
+	   [(20230414 2107)
 	    ((emacs
 	      (25 1))
 	     (lsp-mode
@@ -7,7 +7,7 @@
 	     (julia-mode
 	      (0 3)))
 	    "Julia support for lsp-mode" tar
-	    ((:commit . "e6ff5c09eb73c9b376bfbbd94f47c0366a01cf44")
+	    ((:commit . "c584f79c7fee6176bbb6120f4cb0f1001bcf8113")
 	     (:authors
 	      ("Martin Wolke" . "vibhavp@gmail.com")
 	      ("Adam Beckmeyer" . "adam_git@thebeckmeyers.xyz")

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/bnbeckwith/wc-mode.git
 
 Updating /mnt/store/melpa/working/wc-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/bnbeckwith/wc-mode.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out 63be1433b8a63cdc3239cc751e36360429c42b51
+Built wc-mode in 5.515s, finished at 2023-04-14T22:43:25+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Apr 14 22:43 packages/wc-mode-20210418.47.el
+4.0K -rw-r--r-- 1 root root 303 Apr 14 22:43 packages/wc-mode-20210418.47.entry

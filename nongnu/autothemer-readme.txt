@@ -282,7 +282,9 @@ theme before use.
 
 ### Generate a SVG image of the palette
 
-Since version 0.2.8 you can generate a SVG image of a theme palette. (see this example for the [Sakura theme](https://raw.githubusercontent.com/emacsfodder/emacs-theme-sakura/master/sakura.svg))
+You can generate a SVG image of a theme palette:
+
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/soothe-palette-preview.png)
 
 Using `autothemer-generate-palette-svg` interactively, emacs will ask for the relevant parameters required.  You can use `options` (a `plist`) to provide some or all of the required options. 
 
@@ -582,6 +584,7 @@ Make sure you eval all the theme's elisp files before enabling the theme.)
 - [emacsfodder/Orangey Bits](https://github.com/emacsfodder/emacs-theme-orangey-bits)
 - [emacsfodder/Cyanometric](https://github.com/emacsfodder/emacs-theme-cyanometric)
 - [emacsfodder/Vegetative](https://github.com/emacsfodder/emacs-theme-vegetative)
+- [Patrick-Poitras/emacs-material-ocean](https://github.com/Patrick-Poitras/emacs-material-ocean)
 
 If you are creating themes with Autothemer, please let us know, you can add the
 theme info to README and open a pull request. If you haven't released it as a
