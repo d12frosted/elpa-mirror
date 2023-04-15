@@ -4,8 +4,8 @@
 ;; Maintainer: Emacs User Group Berlin <emacs-berlin@emacs-berlin.org>
 
 ;; Version: 0.1
-;; Package-Version: 20230414.1303
-;; Package-Commit: 377db02b46e2643e6e0018938ab64aac394d0e2a
+;; Package-Version: 20230415.634
+;; Package-Commit: 58fddd42ced485bb8ddc0eb579d0cf7c00f56c5e
 
 ;; URL: https://github.com/emacs-berlin/syntactic-close
 
@@ -876,41 +876,43 @@ Argument PPS is result of a call to function ‘parse-partial-sexp’"
 
 (defun syntactic-close-java-another-filter-clause (pps)
   ""
-  (let ((indent (current-indentation))
-        (pps pps))
-    (cond ((save-excursion (goto-char (nth 1 pps))
-                           (while (nth 1 (setq pps (parse-partial-sexp (point-min) (point))))
-                             (goto-char (nth 1 pps)))
-                           (progn (ignore-errors (forward-sexp)) (not (nth 1 (parse-partial-sexp (point-min) (point)))))
-           ))
+  (let ((pps pps))
+    (cond ((save-excursion
+             ;; (goto-char (nth 1 pps))
+             (while (nth 1 (setq pps (parse-partial-sexp (point-min) (point))))
+               (goto-char (nth 1 pps)))
+             (progn (ignore-errors (forward-sexp)) (and (not (nth 1 (parse-partial-sexp (point-min) (point))))(eq (char-after) ?{)))))
           ((looking-back syntactic-close-assignment-re (line-beginning-position))))))
 
 (defun syntactic-close-java (&optional pps)
   "Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
   (interactive "*")
-  (let* ((pps (or pps (parse-partial-sexp (point-min) (point)))))
+  (let* ((orig (point)) 
+         (pps (or pps (parse-partial-sexp (point-min) (point))))
+         )
     (cond
      ((nth 8 pps)
       (syntactic-close-generic-forms pps))
      ((nth 1 pps)
-      (goto-char (nth 1 pps))
-      (if (eq (char-after) 40)
-          ")"
-      (if (save-excursion (syntactic-close-java-another-filter-clause pps))
-          (if (and (not (eq (char-before) ?\;))
-                    ;; (or
-                    ;; (eq (char-before) 41)
-                    ;; (looking-back syntactic-close-assignment-re (line-beginning-position)))
-                   )
-              ";"
-            (syntactic-close-pure-syntax pps))
-        (syntactic-close-pure-syntax pps))))
+      (save-excursion (goto-char (nth 1 pps))
+                      (cond ((eq (char-after) 40)
+                             ")")
+                            ;; ((looking-back "^[ \t]*" (line-beginning-position))
+                             ;; "}")
+                            (t (goto-char orig) (unless (eq (char-before) ?\;) ";")))))
+     ;; ((syntactic-close-java-another-filter-clause pps)
+     ;;  (if (not (eq (char-before) ?\;))
+
+     ;;      ";")
+     ;;  (syntactic-close-pure-syntax pps))
+     ;; (t (syntactic-close-pure-syntax pps)))))
      ((looking-back syntactic-close-assignment-re (line-beginning-position))
       (unless (eq (char-before) ?\;) ";"))
      ((and (looking-back syntactic-close-funcdef-re (line-beginning-position))
            (eq (char-before) 41))
       ":")
-
+     ((looking-back "^[ \t]*" (line-beginning-position))
+      "}")
      (t
       ";"
       ;; (syntactic-close--generic nil nil pps)
