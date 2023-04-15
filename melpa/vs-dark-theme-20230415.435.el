@@ -4,8 +4,8 @@
 
 ;; Author: Jen-Chieh Shen
 ;; URL: https://github.com/emacs-vs/vs-dark-theme
-;; Package-Version: 20230310.914
-;; Package-Commit: 1bbf3d580856610a5fe600da9c28ed17e8b4691d
+;; Package-Version: 20230415.435
+;; Package-Commit: 8906a2a593888eafc61c5c202260edaddd3e6c75
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -197,7 +197,9 @@
  'vs-dark
  ;; coverlay overlays
  `(coverlay:tested-line-background-color   "#E1FFE1")
- `(coverlay:untested-line-background-color "LavenderBlush"))
+ `(coverlay:untested-line-background-color "LavenderBlush")
+ `(jcs-poptip-background-color "#2A2D38")
+ `(jcs-poptip-foreground-color "#F1F1F1"))
 
 ;;;###autoload
 (when load-file-name

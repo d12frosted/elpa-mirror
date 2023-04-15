@@ -4,8 +4,8 @@
 
 ;; Author: Jen-Chieh Shen
 ;; URL: https://github.com/emacs-vs/vs-light-theme
-;; Package-Version: 20230310.913
-;; Package-Commit: 5accd5c1e4581005a0859cf7d85b0191b6b7a30b
+;; Package-Version: 20230415.434
+;; Package-Commit: dc633afc975b1cfaa1b7435f7425f5548ff1c35a
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -197,7 +197,9 @@
  'vs-light
  ;; coverlay overlays
  `(coverlay:tested-line-background-color   "#E1FFE1")
- `(coverlay:untested-line-background-color "LavenderBlush"))
+ `(coverlay:untested-line-background-color "LavenderBlush")
+ `(jcs-poptip-background-color "#E9EAED")
+ `(jcs-poptip-foreground-color "#1E1E1E"))
 
 ;;;###autoload
 (when load-file-name

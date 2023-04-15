@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20230306.1
-;; Package-Commit: b1181a024a1c2295a42915c0110ac9816844aff6
+;; Package-Version: 20230415.551
+;; Package-Commit: f0b180eeb5ed19bacbce9d6a39e3123f4751f54b
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -269,6 +269,15 @@
    `(markdown-header-rule-face ((t (:foreground ,ob-butter3))))
 
    ;; Colors for popular plugins.
+
+   ;; vundo (elpa).
+   `(vundo-node ((t (:foreground ,ob-aluminium4))))
+   `(vundo-stem ((t (:foreground ,ob-aluminium4))))
+   `(vundo-saved ((t (:foreground ,ob-aluminium2))))
+   `(vundo-highlight ((t (:foreground ,ob-butter2))))
+
+   ;; anzu (melpa)
+   `(anzu-mode-line ((t (:foreground ,ob-skyblue1-2-blend))))
 
    ;; highlight-numbers (melpa).
    `(highlight-numbers-number ((t (:foreground ,ob-butter2))))
