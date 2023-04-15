@@ -9,8 +9,8 @@
 ;;               Jonas Bernoulli, Julian Squires, Mike Fisher,
 ;;               Sunn Yao
 ;; URL: https://github.com/hadronzoo/theme-changer
-;; Package-Version: 20230407.1357
-;; Package-Commit: 1d61ae0c2b44964718ec3832915735c8556083a6
+;; Package-Version: 20230414.2308
+;; Package-Commit: 030eadd1721a53f805bf5fcac798ef1184592b62
 ;; Created: 20 Jun 2011
 ;; Version: 2.2.0
 ;; Keywords: color-theme, deftheme, solar, sunrise, sunset
@@ -78,7 +78,7 @@
 ;;; Code:
 
 (eval-when-compile
-  (require 'cl))
+  (require 'cl-lib))
 (require 'solar)
 
 
