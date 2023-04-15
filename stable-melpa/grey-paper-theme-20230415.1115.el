@@ -2,8 +2,8 @@
 
 ;;; Author: Kang-min Liu <gugod@gugod.org>
 ;;; Version: 1.0.0
-;; Package-Version: 20220811.2301
-;; Package-Commit: 760e8d26f5b2aeaa56b91bf435e42b1e5d6f69d7
+;; Package-Version: 20230415.1115
+;; Package-Commit: 4e5b8a31f586e2aa5c5d9bd939f0f518d919522e
 ;;; Keywords: faces
 ;;; URL: https://github.com/gugod/grey-paper-theme
 ;;; Package-Requires: ((emacs "24.1"))
@@ -34,6 +34,7 @@
    `(region ((t (:background ,bg-dark :distant-foreground "ns_selection_,fg_color"))))
    `(link ((t (:foreground ,fg-alt :underline t))))
    `(error ((t (:foreground ,fg-dark :bold t))))
+   `(warning ((t (:foreground ,fg-dark :bold t))))
    `(highlight ((t (:foreground ,fg-alt))))
 
    `(message-header-name ((t (:foreground ,fg-alt))))
