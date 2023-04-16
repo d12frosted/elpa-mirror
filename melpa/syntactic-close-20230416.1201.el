@@ -4,8 +4,8 @@
 ;; Maintainer: Emacs User Group Berlin <emacs-berlin@emacs-berlin.org>
 
 ;; Version: 0.1
-;; Package-Version: 20230415.634
-;; Package-Commit: 58fddd42ced485bb8ddc0eb579d0cf7c00f56c5e
+;; Package-Version: 20230416.1201
+;; Package-Commit: 298376470548f211ed27caf753f550b064072bba
 
 ;; URL: https://github.com/emacs-berlin/syntactic-close
 
@@ -276,6 +276,9 @@ but have no specific treatment at the moment."
    "\\_>[ \t]*"))
 
 (defvar syntactic-close-import-re "^[ \t]*import[ \t]+.+"
+  "")
+
+(defvar syntactic-close-for-re "^[ \t]*for([^)]+"
   "")
 
 (defvar syntactic-close-verbose-p nil)
@@ -887,19 +890,21 @@ Argument PPS is result of a call to function ‘parse-partial-sexp’"
 (defun syntactic-close-java (&optional pps)
   "Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
   (interactive "*")
-  (let* ((orig (point)) 
-         (pps (or pps (parse-partial-sexp (point-min) (point))))
-         )
+  (let* ((orig (point))
+         (pps (or pps (parse-partial-sexp (point-min) (point)))))
     (cond
      ((nth 8 pps)
       (syntactic-close-generic-forms pps))
      ((nth 1 pps)
-      (save-excursion (goto-char (nth 1 pps))
-                      (cond ((eq (char-after) 40)
-                             ")")
-                            ;; ((looking-back "^[ \t]*" (line-beginning-position))
-                             ;; "}")
-                            (t (goto-char orig) (unless (eq (char-before) ?\;) ";")))))
+      (cond ((and (looking-back syntactic-close-for-re (line-beginning-position)) (not (eq (char-before) ?\;)) (not (string-match "\\+\\+" (buffer-substring-no-properties (line-beginning-position) (point)))))
+             "; ")
+            (t (save-excursion (goto-char (nth 1 pps))
+                               (if (eq (char-after) 40)
+                                   ")"
+                                 (goto-char orig)
+                                 (cond ((looking-back "^[ \t]*" (line-beginning-position))
+                                        "}")
+                                       (t (unless (eq (char-before) ?\;) ";"))))))))
      ;; ((syntactic-close-java-another-filter-clause pps)
      ;;  (if (not (eq (char-before) ?\;))
 
