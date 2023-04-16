@@ -2,8 +2,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Url: http://github.com/alphapapa/highlight-function-calls
-;; Package-Version: 20170908.500
-;; Package-Commit: f7a1eaf95fc64cc0db4d0567f9ff79ec4ae04787
+;; Package-Version: 20230416.445
+;; Package-Commit: e2ed2da188aea5879b59ffffefdc5eca10e7ba83
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: faces, highlighting
@@ -99,7 +99,7 @@
 
      ;; FIXME: It also doesn't avoid matching, e.g. the `map' in "(let
      ;; ((map".  I'm not sure why.
-     "\\(?:^\\|[[:space:]]+\\)("  ; (rx (or bol (1+ space)) "(")
+     "\\(?:^\\|[[:space:]]+\\|,\\)("  ; (rx (or bol (1+ space) ",") "(")
 
      ;; NOTE: The (0 nil) is required, although I don't understand
      ;; exactly why.  This was confusing enough, following the

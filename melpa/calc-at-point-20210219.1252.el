@@ -2,8 +2,6 @@
 
 ;; Author: Sebastian Wålinder <s.walinder@gmail.com>
 ;; URL: https://github.com/walseb/calc-at-point
-;; Package-Version: 20210219.1252
-;; Package-Commit: 0c1a9e94b519b0edb0abcbacdf6101eea2f2a524
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "26") (dash "2.18.0"))
 ;; Keywords: convenience
