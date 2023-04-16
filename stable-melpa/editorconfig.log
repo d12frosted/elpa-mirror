@@ -3,28 +3,30 @@ Fetcher: github
 Source:  https://github.com/editorconfig/editorconfig-emacs.git
 
 Updating /mnt/store/melpa/working/editorconfig/
-Checking out ad021949d9a45cd1f00f6c096f41ba15b911b402
+Checking out 541ae8f957a28507f43715a385cfc5e22f9a29f9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/editorconfig/
-  to /tmp/editorconfigtMovcf/editorconfig-20230409.2346
+  to /tmp/editorconfigoSEwPg/editorconfig-20230415.2312
     editorconfig-conf-mode.el -> editorconfig-conf-mode.el
     editorconfig-core-handle.el -> editorconfig-core-handle.el
     editorconfig-core.el -> editorconfig-core.el
     editorconfig-fnmatch.el -> editorconfig-fnmatch.el
     editorconfig.el -> editorconfig.el
   ! doc/editorconfig.texi -> editorconfig.texi
-Generating /tmp/editorconfigtMovcf/editorconfig-20230409.2346/editorconfig.info
-Created editorconfig-20230409.2346.tar containing:
-  editorconfig-20230409.2346/
-  editorconfig-20230409.2346/dir
-  editorconfig-20230409.2346/editorconfig-conf-mode.el
-  editorconfig-20230409.2346/editorconfig-core-handle.el
-  editorconfig-20230409.2346/editorconfig-core.el
-  editorconfig-20230409.2346/editorconfig-fnmatch.el
-  editorconfig-20230409.2346/editorconfig-pkg.el
-  editorconfig-20230409.2346/editorconfig.el
-  editorconfig-20230409.2346/editorconfig.info
-Built editorconfig in 7.431s, finished at 2023-04-15T12:58:26+0000
+Generating /tmp/editorconfigoSEwPg/editorconfig-20230415.2312/editorconfig.info
+Created editorconfig-20230415.2312.tar containing:
+  editorconfig-20230415.2312/
+  editorconfig-20230415.2312/dir
+  editorconfig-20230415.2312/editorconfig-conf-mode.el
+  editorconfig-20230415.2312/editorconfig-core-handle.el
+  editorconfig-20230415.2312/editorconfig-core.el
+  editorconfig-20230415.2312/editorconfig-fnmatch.el
+  editorconfig-20230415.2312/editorconfig-pkg.el
+  editorconfig-20230415.2312/editorconfig.el
+  editorconfig-20230415.2312/editorconfig.info
+Built editorconfig in 7.819s, finished at 2023-04-16T00:35:13+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  452 Apr 15 12:58 packages/editorconfig-20230409.2346.entry
-100K -rw-r--r-- 1 root root 100K Apr 15 12:58 packages/editorconfig-20230409.2346.tar
+4.0K -rw-r--r-- 1 root root  452 Apr 15 20:42 packages/editorconfig-20230409.2346.entry
+100K -rw-r--r-- 1 root root 100K Apr 15 20:42 packages/editorconfig-20230409.2346.tar
+4.0K -rw-r--r-- 1 root root  452 Apr 16 00:35 packages/editorconfig-20230415.2312.entry
+100K -rw-r--r-- 1 root root 100K Apr 16 00:35 packages/editorconfig-20230415.2312.tar
