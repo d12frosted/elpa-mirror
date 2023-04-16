@@ -2400,7 +2400,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "847694e78c12d903d5e3f6cb365a5d3b984db537"))])
  (org .
-      [(9 6 3)
+      [(9 6 4)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2409,7 +2409,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "f9bbc79d627299c627cbfdacb565afd05acb0af9"))])
+	(:commit . "f1fd1f22f42aece448dcf2d5e1037064a9ce2437"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -2654,7 +2654,7 @@
 	      ("Daiki Ueno" . "ueno@gnu.org"))
 	     (:maintainer "Daiki Ueno" . "ueno@gnu.org"))])
  (plz .
-      [(0 5)
+      [(0 5 4)
        ((emacs
 	 (26 3)))
        "HTTP library" tar
@@ -2663,7 +2663,7 @@
 	(:maintainer "Adam Porter" . "adam@alphapapa.net")
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
-	(:commit . "fc8159a6a9bf56d70614931bc50a7adf62707967"))])
+	(:commit . "367c6a5a9a4bf320dcccb54bdd80ac46aa8be06f"))])
  (poke .
        [(3 0)
 	((emacs
@@ -3637,7 +3637,7 @@
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
  (triples .
-	  [(0 2 6)
+	  [(0 2 7)
 	   ((seq
 	     (2 0))
 	    (emacs
@@ -3648,7 +3648,7 @@
 	    (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	    (:authors
 	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	    (:commit . "1626dc4c8ecf9b7492cf540495d2ffa1be2ecbba"))])
+	    (:commit . "e4caebe696695be94a7d2c36a610990d61fed3ba"))])
  (typo .
        [(1 0 1)
 	((emacs

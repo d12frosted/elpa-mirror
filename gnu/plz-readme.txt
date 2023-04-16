@@ -224,7 +224,43 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.5
+3.1 0.5.4
+─────────
+
+  *Fixes*
+  ⁃ Only run queue's `finally' function after queue is empty.  (New
+    features should not be designed and released on a Friday.)
+
+
+3.2 0.5.3
+─────────
+
+  *Fixes*
+  ⁃ Move new slot in `plz-queue' struct to end to prevent invalid
+    byte-compiler expansions for already-compiled applications (which
+    would require them to be recompiled after upgrading `plz').
+
+
+3.3 0.5.2
+─────────
+
+  *Fixes*
+  ⁃ When clearing a queue, only call `plz-queue''s `finally' function
+    when specified.
+
+
+3.4 0.5.1
+─────────
+
+  *Fixes*
+  ⁃ Only call `plz-queue''s `finally' function when specified.  (Thanks
+    to [Dan Oriani] for reporting.)
+
+
+[Dan Oriani] <https://github.com/redchops>
+
+
+3.5 0.5
 ───────
 
   *Additions*
@@ -232,7 +268,7 @@ be simple and well-organized.  Every feature is tested against
     queue is finished.
 
 
-3.2 0.4
+3.6 0.4
 ───────
 
   *Additions*
@@ -264,7 +300,7 @@ be simple and well-organized.  Every feature is tested against
 [#17] <https://github.com/alphapapa/plz.el/issues/17>
 
 
-3.3 0.3
+3.7 0.3
 ───────
 
   *Additions*
@@ -283,22 +319,22 @@ be simple and well-organized.  Every feature is tested against
 [Sawyer Zheng] <https://github.com/sawyerzheng>
 
 
-3.4 0.2.1
+3.8 0.2.1
 ─────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.5 0.2
+3.9 0.2
 ───────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.6 0.1
-───────
+3.10 0.1
+────────
 
   Initial release.
 

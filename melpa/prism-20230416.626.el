@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/prism.el
-;; Package-Version: 20220716.40
-;; Package-Commit: 9cf6b5e3bcb6044567f3911a4adb796e0c61f207
+;; Package-Version: 20230416.626
+;; Package-Commit: 2dc7c283455c8846dbf3c725fd7aacdec6c0ebcb
 ;; Version: 0.3-pre
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1"))
 ;; Keywords: faces lisp
@@ -229,7 +229,7 @@ modes."
 
 ;;;###autoload
 (define-minor-mode prism-mode
-  "Disperse lisp forms (and other non-whitespace-sensitive syntax) into a spectrum of colors according to depth.
+  "Disperse code into a spectrum of colors according to depth.
 Depth is determined by list nesting.  Suitable for Lisp, C-like
 languages, etc."
   :global nil
@@ -258,13 +258,15 @@ languages, etc."
         ;; Don't remove advice if `prism' is still active in any buffers.
         (advice-remove #'load-theme #'prism-after-theme)
         (advice-remove #'disable-theme #'prism-after-theme))
-      (remove-hook 'font-lock-extend-region-functions #'prism-extend-region 'local))))
+      (remove-hook 'font-lock-extend-region-functions #'prism-extend-region 'local)
+      (font-lock-flush))))
 
 ;;;###autoload
 (define-minor-mode prism-whitespace-mode
-  "Disperse whitespace-sensitive syntax into a spectrum of colors according to depth.
+  "Disperse code into a spectrum of colors according to depth.
 Depth is determined by indentation and list nesting.  Suitable
-for Python, Haskell, etc."
+for whitespace-sensitive languages like Python, Haskell, shell,
+etc."
   :global nil
   (let ((keywords '((prism-match-whitespace 0 prism-face prepend))))
     (if prism-whitespace-mode
@@ -296,7 +298,8 @@ for Python, Haskell, etc."
         ;; Don't remove advice if `prism' is still active in any buffers.
         (advice-remove #'load-theme #'prism-after-theme)
         (advice-remove #'disable-theme #'prism-after-theme))
-      (remove-hook 'font-lock-extend-region-functions #'prism-extend-region 'local))))
+      (remove-hook 'font-lock-extend-region-functions #'prism-extend-region 'local)
+      (font-lock-flush))))
 
 ;;;; Functions
 
@@ -359,7 +362,7 @@ For `font-lock-extend-region-functions'."
 Matches up to LIMIT."
   ;;  (prism-debug (current-buffer) (point) limit)
   (cl-macrolet ((parse-syntax ()
-                              `(-setq (depth _ _ in-string-p comment-level-p)
+                              `(-setq (depth _ _ in-string-p comment-level-p  _ _ _ comment-or-string-start)
                                  (syntax-ppss)))
                 (comment-p ()
                            ;; This macro should only be used after `parse-syntax'.
@@ -497,6 +500,9 @@ Matches up to LIMIT."
                 (setf prism-face nil)
               (setf prism-face (face-at)))
             (goto-char end)
+            (unless (> (point) start)
+              ;; Prevent end-of-buffer error in `font-lock-fontify-keywords-region'.
+              (cl-decf start))
             (set-match-data (list start end (current-buffer)))
             ;;  (prism-debug (current-buffer) "END" start end)
             ;; Be sure to return non-nil!
@@ -683,6 +689,9 @@ appropriately, e.g. to `python-indent-offset' for `python-mode'."
                 (setf prism-face nil)
               (setf prism-face (face-at)))
             (goto-char end)
+            (unless (> (point) start)
+              ;; Prevent end-of-buffer error in `font-lock-fontify-keywords-region'.
+              (cl-decf start))
             (set-match-data (list start end (current-buffer)))
             ;; Be sure to return non-nil!
             t))))))
