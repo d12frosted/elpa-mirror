@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/akermu/emacs-libvterm.git
 
 Updating /mnt/store/melpa/working/vterm/
-Checking out 3e5a9b754b8e61850bb7d1b63b090b9fbf6687f3
+Checking out 94e2b0b2b4a750e7907dacd5b4c0584900846dd1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vterm/
-  to /tmp/vtermL7BANb/vterm-20230217.228
+  to /tmp/vtermS1z0Ec/vterm-20230417.424
     CMakeLists.txt -> CMakeLists.txt
     elisp.c -> elisp.c
     elisp.h -> elisp.h
@@ -17,23 +17,25 @@ Copying files (->) and directories (=>)
     vterm.el -> vterm.el
     vterm-module.c -> vterm-module.c
     vterm-module.h -> vterm-module.h
-Created vterm-20230217.228.tar containing:
-  vterm-20230217.228/
-  vterm-20230217.228/CMakeLists.txt
-  vterm-20230217.228/elisp.c
-  vterm-20230217.228/elisp.h
-  vterm-20230217.228/emacs-module.h
-  vterm-20230217.228/etc/
-  vterm-20230217.228/etc/emacs-vterm-bash.sh
-  vterm-20230217.228/etc/emacs-vterm-zsh.sh
-  vterm-20230217.228/etc/emacs-vterm.fish
-  vterm-20230217.228/utf8.c
-  vterm-20230217.228/utf8.h
-  vterm-20230217.228/vterm-module.c
-  vterm-20230217.228/vterm-module.h
-  vterm-20230217.228/vterm-pkg.el
-  vterm-20230217.228/vterm.el
-Built vterm in 3.839s, finished at 2023-04-17T00:54:52+0000
+Created vterm-20230417.424.tar containing:
+  vterm-20230417.424/
+  vterm-20230417.424/CMakeLists.txt
+  vterm-20230417.424/elisp.c
+  vterm-20230417.424/elisp.h
+  vterm-20230417.424/emacs-module.h
+  vterm-20230417.424/etc/
+  vterm-20230417.424/etc/emacs-vterm-bash.sh
+  vterm-20230417.424/etc/emacs-vterm-zsh.sh
+  vterm-20230417.424/etc/emacs-vterm.fish
+  vterm-20230417.424/utf8.c
+  vterm-20230417.424/utf8.h
+  vterm-20230417.424/vterm-module.c
+  vterm-20230417.424/vterm-module.h
+  vterm-20230417.424/vterm-pkg.el
+  vterm-20230417.424/vterm.el
+Built vterm in 6.989s, finished at 2023-04-17T04:49:45+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  351 Apr 17 00:54 packages/vterm-20230217.228.entry
 172K -rw-r--r-- 1 root root 170K Apr 17 00:54 packages/vterm-20230217.228.tar
+4.0K -rw-r--r-- 1 root root  351 Apr 17 04:49 packages/vterm-20230417.424.entry
+172K -rw-r--r-- 1 root root 170K Apr 17 04:49 packages/vterm-20230417.424.tar
