@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~trevdev/tangonov-theme
 
 Updating /mnt/store/melpa/working/tangonov-theme/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~trevdev/tangonov-theme/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 084e3a7fe3c3af0aef75f2290b939185baa1f4a4
+Built tangonov-theme in 5.332s, finished at 2023-04-17T12:28:46+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 43K Apr 17 12:28 packages/tangonov-theme-20220923.1513.el
+4.0K -rw-r--r-- 1 root root 400 Apr 17 12:28 packages/tangonov-theme-20220923.1513.entry

@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~iank/visible-mark
 
 Updating /mnt/store/melpa/working/visible-mark/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~iank/visible-mark/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out c1852e13b6b61982738b56977a452ec9026faf1b
+Built visible-mark in 4.864s, finished at 2023-04-17T12:34:21+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.5K Apr 17 12:34 packages/visible-mark-20150624.450.el
+4.0K -rw-r--r-- 1 root root  351 Apr 17 12:34 packages/visible-mark-20150624.450.entry

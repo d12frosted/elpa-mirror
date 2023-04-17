@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~iank/spray
 
 Updating /mnt/store/melpa/working/spray/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~iank/spray/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 69fe48e7bb079e3011476b9f4eb6ac9ae94d6d9b
+Built spray in 10.056s, finished at 2023-04-17T12:26:37+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Apr 17 12:26 packages/spray-20160304.2220.el
+4.0K -rw-r--r-- 1 root root 314 Apr 17 12:26 packages/spray-20160304.2220.entry

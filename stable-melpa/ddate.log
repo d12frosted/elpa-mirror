@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~earneson/emacs-ddate
 
 Updating /mnt/store/melpa/working/ddate/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~earneson/emacs-ddate/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 31576a62792743c614e362688b3752b7a959814e
+Built ddate in 6.260s, finished at 2023-04-17T15:13:31+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.4K Apr 17 15:13 packages/ddate-20221031.1611.el
+4.0K -rw-r--r-- 1 root root  387 Apr 17 15:13 packages/ddate-20221031.1611.entry

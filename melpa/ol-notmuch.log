@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/ol-notmuch
 
 Updating /mnt/store/melpa/working/ol-notmuch/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~tarsius/ol-notmuch/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out ee3646627e47312a0c6ab0a5f6eba3baf8b20cb6
+Built ol-notmuch in 4.745s, finished at 2023-04-17T15:59:18+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Apr 17 15:59 packages/ol-notmuch-20230212.2013.el
+4.0K -rw-r--r-- 1 root root  489 Apr 17 15:59 packages/ol-notmuch-20230212.2013.entry

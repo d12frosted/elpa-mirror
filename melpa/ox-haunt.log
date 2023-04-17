@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jakob/ox-haunt
 
 Updating /mnt/store/melpa/working/ox-haunt/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~jakob/ox-haunt/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out d32c4b1ab258dc34ca7e713152a274eab35d2608
+Built ox-haunt in 4.039s, finished at 2023-04-17T16:04:23+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Apr 17 16:04 packages/ox-haunt-20220615.7.el
+4.0K -rw-r--r-- 1 root root 438 Apr 17 16:04 packages/ox-haunt-20220615.7.entry

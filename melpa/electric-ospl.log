@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/electric-ospl-mode
 
 Updating /mnt/store/melpa/working/electric-ospl/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~swflint/electric-ospl-mode/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 55fa59592d0d3e929bd8646ea691a592965a167a
+Built electric-ospl in 4.829s, finished at 2023-04-17T15:19:06+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Apr 17 15:19 packages/electric-ospl-20230325.1518.el
+4.0K -rw-r--r-- 1 root root 375 Apr 17 15:19 packages/electric-ospl-20230325.1518.entry

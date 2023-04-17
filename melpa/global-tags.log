@@ -3,8 +3,10 @@ Fetcher: git
 Source:  https://git.launchpad.net/global-tags.el
 
 Updating /mnt/store/melpa/working/global-tags/
-Checking out aaa37da4c538f35a90149ef4ad3d8b0922af54ab
-Built global-tags in 5.563s, finished at 2023-04-17T07:48:06+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 29K Apr 17 07:48 packages/global-tags-20211120.347.el
-4.0K -rw-r--r-- 1 root root 508 Apr 17 07:48 packages/global-tags-20211120.347.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Unexpected Zope exception: DisconnectionError: ERROR:  database does not allow connections: launchpad_prod_master
+fatal: unable to access 'https://git.launchpad.net/global-tags.el/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

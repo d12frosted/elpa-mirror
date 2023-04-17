@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/time-block-command
 
 Updating /mnt/store/melpa/working/time-block/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~swflint/time-block-command/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 02a7988f2a3d6124b48716fa341677f93da6eb30
+Built time-block in 5.840s, finished at 2023-04-17T12:29:54+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Apr 17 12:29 packages/time-block-20230410.2110.el
+4.0K -rw-r--r-- 1 root root 462 Apr 17 12:29 packages/time-block-20230410.2110.entry

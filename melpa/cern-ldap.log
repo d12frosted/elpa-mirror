@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~nbarrientos/cern-ldap.el
 
 Updating /mnt/store/melpa/working/cern-ldap/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~nbarrientos/cern-ldap.el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out ebb546221eed36616669ea4e42d35aa8b167202c
+Built cern-ldap in 5.905s, finished at 2023-04-17T15:06:27+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Apr 17 15:06 packages/cern-ldap-20230325.843.el
+4.0K -rw-r--r-- 1 root root 428 Apr 17 15:06 packages/cern-ldap-20230325.843.entry

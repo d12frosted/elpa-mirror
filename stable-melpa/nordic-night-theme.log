@@ -2,11 +2,11 @@ Package: nordic-night-theme
 Fetcher: git
 Source:  https://git.sr.ht/~ashton314/nordic-night
 
-Cloning https://git.sr.ht/~ashton314/nordic-night to /mnt/store/melpa/working/nordic-night-theme/
-
-Command '' exited with non-zero exit-code: 128
-
-Cloning into '/mnt/store/melpa/working/nordic-night-theme'...
-fatal: unable to access 'https://git.sr.ht/~ashton314/nordic-night/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Updating /mnt/store/melpa/working/nordic-night-theme/
+Checking out 689b124e60b56de7d3ad88d2b474c871bbadc6be
+Built nordic-night-theme in 4.615s, finished at 2023-04-17T15:57:17+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 46K Apr 17 12:04 packages/nordic-night-theme-20230410.1606.el
+4.0K -rw-r--r-- 1 root root 411 Apr 17 12:04 packages/nordic-night-theme-20230410.1606.entry
+ 48K -rw-r--r-- 1 root root 46K Apr 17 15:57 packages/nordic-night-theme-20230417.1414.el
+4.0K -rw-r--r-- 1 root root 411 Apr 17 15:57 packages/nordic-night-theme-20230417.1414.entry

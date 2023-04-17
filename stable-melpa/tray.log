@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/tray
 
 Updating /mnt/store/melpa/working/tray/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~tarsius/tray/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 15b0faa8fede31887598b8dd64b69362c10e8a8e
+Built tray in 10.114s, finished at 2023-04-17T12:31:29+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Apr 17 12:31 packages/tray-20230212.2011.el
+4.0K -rw-r--r-- 1 root root  389 Apr 17 12:31 packages/tray-20230212.2011.entry
