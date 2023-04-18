@@ -1,0 +1,11 @@
+(theme-changer .
+	       [(20230417 1502)
+		((cl-lib
+		  (0)))
+		"Sunrise/Sunset Theme Changer for Emacs" single
+		((:commit . "2ff40a1750323a3547ca7a71c319971c8e1147ca")
+		 (:authors
+		  ("Joshua B. Griffith" . "josh.griffith@gmail.com"))
+		 (:maintainer "Samuel W. Flint" . "swflint@flintfam.org")
+		 (:keywords "color-theme" "deftheme" "solar" "sunrise" "sunset")
+		 (:url . "https://github.com/hadronzoo/theme-changer"))])

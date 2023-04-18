@@ -6,7 +6,6 @@ Updating /mnt/store/melpa/working/global-tags/
 
 Command '' exited with non-zero exit-code: 128
 
-remote: Unexpected Zope exception: DisconnectionError: ERROR:  database does not allow connections: launchpad_prod_master
-fatal: unable to access 'https://git.launchpad.net/global-tags.el/': The requested URL returned error: 500
+fatal: unable to access 'https://git.launchpad.net/global-tags.el/': Failed to connect to git.launchpad.net port 443: Connection timed out
 
 Command exited with non-zero exit-code: 128
