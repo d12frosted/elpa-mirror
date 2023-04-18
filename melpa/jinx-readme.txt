@@ -3,9 +3,9 @@ highlights misspelled words in the text of the visible portion of
 the buffer.  For efficiency, Jinx highlights misspellings lazily,
 recognizes window boundaries and text folding, if any.  For
 example, when unfolding or scrolling, only the newly visible part
-of the text is checked, if it has not been checked before.  Each
-misspelling can then be corrected from a list of dictionary words
-presented as completion candidates in a list.
+of the text is checked if it has not been checked before.  Each
+misspelling can be corrected from a list of dictionary words
+presented as a completion menu.
 
 Installing Jinx is straight-forward and configuring takes not much
 intervention.  Jinx can safely co-exist with Emacs's built-in

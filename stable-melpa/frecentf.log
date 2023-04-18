@@ -3,10 +3,8 @@ Fetcher: git
 Source:  https://git.launchpad.net/frecentf.el
 
 Updating /mnt/store/melpa/working/frecentf/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Backend connection failed
-fatal: unable to access 'https://git.launchpad.net/frecentf.el/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 19e2c48a8b8c8ee8cae5c93b58b57a0aa81a8c46
+Built frecentf in 6.692s, finished at 2023-04-18T14:44:57+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.8K Apr 18 14:44 packages/frecentf-20210330.1521.el
+4.0K -rw-r--r-- 1 root root  459 Apr 18 14:44 packages/frecentf-20210330.1521.entry
