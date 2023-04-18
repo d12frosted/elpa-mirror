@@ -6,6 +6,7 @@ Updating /mnt/store/melpa/working/global-tags/
 
 Command '' exited with non-zero exit-code: 128
 
-fatal: unable to access 'https://git.launchpad.net/global-tags.el/': Failed to connect to git.launchpad.net port 443: Connection timed out
+remote: Backend connection failed
+fatal: unable to access 'https://git.launchpad.net/global-tags.el/': The requested URL returned error: 500
 
 Command exited with non-zero exit-code: 128
