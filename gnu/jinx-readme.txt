@@ -1,6 +1,6 @@
-	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	     JINX.EL - ENCHANTED JUST-IN-TIME SPELL CHECKER
-	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+		  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+		   JINX.EL - ENCHANTED SPELL CHECKER
+		  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Jinx is a fast just-in-time spell-checker for Emacs. Jinx highlights
@@ -53,9 +53,9 @@ words in camelCase and PascalCase are accepted.
   available when installing Jinx, Jinx will use `pkg-config' to locate
   `libenchant'.
 
-  On Debian or Ubuntu, install packages `libenchant-2-2',
-  `libenchant-2-dev' and `pkg-config'. On Fedora or RHEL, install the
-  package `enchant2-devel'. On Mac, install `enchant2' and `pkgconfig'.
+  On Debian or Ubuntu, install the packages `libenchant-2-dev' and
+  `pkg-config'. On Fedora or RHEL, install the package
+  `enchant2-devel'. On Mac, install `enchant2' and `pkgconfig'.
 
 
 2 Using Jinx
@@ -66,8 +66,10 @@ words in camelCase and PascalCase are accepted.
   modes.
 
   ┌────
+  │ ;; Alternative 1: Enable Jinx globally
   │ (add-hook 'emacs-startup-hook #'global-jinx-mode)
   │ 
+  │ ;; Alternative 2: Enable Jinx per mode
   │ (dolist (hook '(text-mode-hook prog-mode-hook conf-mode-hook))
   │   (add-hook hook #'jinx-mode))
   └────
@@ -118,34 +120,42 @@ words in camelCase and PascalCase are accepted.
 4 Alternative spell-checking packages
 ═════════════════════════════════════
 
+  There exist multiple alternative spell-checking packages for Emacs,
+  most famously the builtin ispell.el and flyspell.el packages. The
+  following three packages come closest to the behavior of Jinx.
+
   • [jit-spell]: Jinx UI borrows ideas from Augusto Stoffel's
     Jit-spell. Jit-spell uses the less efficient Ispell process
     communication instead Jinx's calling native API. Since Jit-spell
     highlights misspellings in the entire buffer and does not confine to
-    just the visible text, Jit-spell has load and latency consequences
-    especially in stealth locking and eager fontification.
+    just the visible text, Jit-spell affects the load and latency
+    negatively ([issue on github]).
 
   • [spell-fu]: The idea to highlight misspellings just in the visible
     text portion of the buffer came from Campbell Barton's spell-fu
-    package. Spell-fu however incurs high memory overhead on account of
-    its dictionary in a hash table. For languages with compound words
-    and inflected word forms, this memory overhead magnifies. By
-    accessing the Enchant API directly, Jinx avoids this overhead.  Jinx
-    also benefits from Enchant's advanced spell-checker algorithms
-    (affixation, compound words, etc.).
+    package. Spell-fu is fast but incurs high memory overhead on account
+    of its dictionary in a hash table.  For languages with compound
+    words and inflected word forms, this overhead magnifies ([issue on
+    codeberg]). By accessing the Enchant API directly, Jinx avoids such
+    an overhead. Jinx also benefits from the advanced spell-checker
+    algorithms of Enchant (affixation, compound words, etc.).
 
   • flyspell: Flyspell is Emacs's built-in package. Flyspell highlights
-    misspellings in real-time, while typing. Each word under the cursor
-    is spell-checked and underlined if mistyped. Jinx, on the other
-    hand, is more effective because it automatically checks for
-    misspellings in the entire visible text of the buffer at
-    once. Flyspell can check the entire buffer but must be instructed to
-    do so via the command `flyspell-buffer'.
+    misspellings while typing. Only the word under the cursor is
+    spell-checked.  Jinx, on the other hand, is more effective because
+    it automatically checks for misspellings in the entire visible text
+    of the buffer at once. Flyspell can check the entire buffer but must
+    be instructed to do so via the command `flyspell-buffer'.
 
 
 [jit-spell] <https://github.com/astoff/jit-spell>
 
+[issue on github] <https://github.com/astoff/jit-spell/issues/9>
+
 [spell-fu] <https://codeberg.org/ideasman42/emacs-spell-fu>
+
+[issue on codeberg]
+<https://codeberg.org/ideasman42/emacs-spell-fu/issues/40>
 
 
 5 Contributions

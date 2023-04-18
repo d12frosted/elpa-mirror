@@ -382,7 +382,7 @@
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
  (cape .
-       [(0 14)
+       [(0 15)
 	((emacs
 	  (27 1))
 	 (compat
@@ -393,7 +393,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "b000b6af018434b9088872568c5866db965a14f8"))])
+	 (:commit . "db3059af52718c7f55485ef183bdad3e40f58df9"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -1806,17 +1806,18 @@
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (jinx .
-       [(0 5)
+       [(0 6)
 	((emacs
 	  (27 1))
 	 (compat
 	  (29 1 4 0)))
-	"Enchanted Just-in-time Spell Checker" tar
+	"Enchanted Spell Checker" tar
 	((:url . "https://github.com/minad/jinx")
+	 (:keywords "convenience" "wp")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "3d4a633a1c9a91f7776f52db9494fc21e4728f67"))])
+	 (:commit . "00fee670ca86d95bea8a8925cccb3c77281d0b95"))])
  (jit-spell .
 	    [(0 3)
 	     ((emacs
@@ -2042,17 +2043,18 @@
 	(:url . "https://elpa.gnu.org/packages/map.html")
 	(:commit . "9da2efb670574b473ab864ae0456b4f1b38e680b"))])
  (marginalia .
-	     [(1 1)
+	     [(1 2)
 	      ((emacs
 		(27 1))
 	       (compat
-		(29 1 3 4)))
+		(29 1 4 0)))
 	      "Enrich existing commands with completion annotations" tar
 	      ((:url . "https://github.com/minad/marginalia")
+	       (:keywords "docs" "help" "matching" "completion")
 	       (:maintainer "Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "ccf573e2145d9deb9d734432351eefc87fc1bc16"))])
+	       (:commit . "4c7b852b183e10dc437c7e41a7ef37cf3ccd8db1"))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" single
@@ -2532,17 +2534,18 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(0 10)
+      [(0 11)
        ((emacs
 	 (27 1))
 	(compat
-	 (29 1 3 4)))
+	 (29 1 4 0)))
        "OpenStreetMap viewer" tar
        ((:url . "https://github.com/minad/osm")
+	(:keywords "network" "multimedia" "hypermedia" "mouse")
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "c3fbc813f2e76c71056bf6e28ae3a997f33718d1"))])
+	(:commit . "ce8512d793cbe99f2406551bc84ad534a7a37893"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs

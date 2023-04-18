@@ -75,7 +75,7 @@ Table of Contents
   follow up to the annotation function of the category you are
   interested in.
 
-  For example the annotations for elisp symbols include their symbol
+  For example the annotations for Elisp symbols include their symbol
   class - `v' for variable, `f' for function, `c' for command, etc. For
   more information on what the different classifications mean, see the
   docstring of `marginalia--symbol-class'.
@@ -112,7 +112,7 @@ Table of Contents
 
   Unfortunately, not all commands (including Emacs' builtin ones)
   specify the category of their candidates. To compensate for this
-  shortcoming, Marginalia hooks into the emacs completion framework and
+  shortcoming, Marginalia hooks into the Emacs completion framework and
   runs the *classifiers* listed in the variable
   `marginalia-classifiers', which use the command's prompt or other
   properties of the candidates to specify the completion category.
