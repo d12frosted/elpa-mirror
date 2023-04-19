@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/rnkn/side-notes.git
 
 Updating /mnt/store/melpa/working/side-notes/
-Checking out 41fe8544661a772f764a0924e04080f258053955
-Built side-notes in 4.378s, finished at 2023-04-18T15:31:09+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Apr 18 15:31 packages/side-notes-20210709.1403.el
-4.0K -rw-r--r-- 1 root root  396 Apr 18 15:31 packages/side-notes-20210709.1403.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/rnkn/side-notes.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128
