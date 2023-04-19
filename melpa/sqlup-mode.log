@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/Trevoke/sqlup-mode.el.git
 
 Updating /mnt/store/melpa/working/sqlup-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; curl 35 gnutls_handshake() failed: Error in the pull function.
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out 04970977b4abb4d44301651618bbf1cdb0b263dd
+Built sqlup-mode in 4.688s, finished at 2023-04-19T07:03:20+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.5K Apr 19 07:03 packages/sqlup-mode-20170610.1537.el
+4.0K -rw-r--r-- 1 root root  385 Apr 19 07:03 packages/sqlup-mode-20170610.1537.entry

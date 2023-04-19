@@ -3,9 +3,24 @@ Fetcher: github
 Source:  https://github.com/pekingduck/emacs-sqlite3-api.git
 
 Updating /mnt/store/melpa/working/sqlite3/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/pekingduck/emacs-sqlite3-api.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out b513b71012f61895f771fc6948d6511ea8ded0a6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sqlite3/
+  to /tmp/sqlite3Pa7LuF/sqlite3-20230315.1221
+    sqlite3.el -> sqlite3.el
+    Makefile -> Makefile
+    consts.c -> consts.c
+    emacs-module.h -> emacs-module.h
+    sqlite3-api.c -> sqlite3-api.c
+Created sqlite3-20230315.1221.tar containing:
+  sqlite3-20230315.1221/
+  sqlite3-20230315.1221/Makefile
+  sqlite3-20230315.1221/consts.c
+  sqlite3-20230315.1221/emacs-module.h
+  sqlite3-20230315.1221/sqlite3-api.c
+  sqlite3-20230315.1221/sqlite3-pkg.el
+  sqlite3-20230315.1221/sqlite3.el
+Built sqlite3 in 4.523s, finished at 2023-04-19T07:03:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  371 Apr 19 07:03 packages/sqlite3-20230315.1221.entry
+100K -rw-r--r-- 1 root root 100K Apr 19 07:03 packages/sqlite3-20230315.1221.tar

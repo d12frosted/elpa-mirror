@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; Version: 1.6
-;; Package-Version: 20230309.1638
-;; Package-Commit: 6973912994ade71a3e13a24425f1cc648d8b94bb
+;; Package-Version: 20230419.405
+;; Package-Commit: bf3cca8f74065b1b31036f461e3a093b162311bd
 ;; Keywords: lisp
 ;; Package-Requires: ((dash "2.12.0") (s "1.11.0"))
 
@@ -38,6 +38,10 @@
 (require 's)
 (require 'format)
 (eval-when-compile (require 'cl-lib))
+
+(defvar symbols-with-pos-enabled)
+(declare-function symbol-with-pos-p nil (object))
+(declare-function symbol-with-pos-pos nil (ls))
 
 ;;; Internal
 
@@ -178,7 +182,7 @@ START-POS and END-POS should be the position of FORM within BUFFER."
              ;; Calculate the positions after the opening paren.
              (elisp-refs--sexp-positions buffer (1+ start-pos) end-pos))))
       ;; For each subform, recurse if it's a list, or a matching symbol.
-      (--each (-zip form subforms-positions)
+      (--each (-zip-pair form subforms-positions)
         (-let [(subform subform-start subform-end) it]
           (when (or
                  (and (consp subform) (elisp-refs--proper-list-p subform))
