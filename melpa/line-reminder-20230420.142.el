@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-vs/line-reminder
-;; Package-Version: 20230413.2349
-;; Package-Commit: 1043cdca41dadd93c6a644f8e18318cbda9d2908
+;; Package-Version: 20230420.142
+;; Package-Commit: 583bff387b361e1fe442f57e9ad1f6f8e87dedf4
 ;; Version: 0.5.1
 ;; Package-Requires: ((emacs "25.1") (indicators "0.0.4") (fringe-helper "1.0.1") (ov "1.0.6") (ht "2.0"))
 ;; Keywords: convenience annotation
@@ -597,8 +597,9 @@ and END."
   "Post command for undo cancelling."
   (when (and line-reminder--undo-cancel-p (line-reminder--undo-root-p))
     (ht-clear line-reminder--line-status)
-    (ht-clear line-reminder--thumb-ovs)
-    (line-reminder--ind-clear-indicators-absolute)))
+    (line-reminder--ind-clear-indicators-absolute)
+    (line-reminder--thumb-delete-ovs)
+    (ht-clear line-reminder--thumb-ovs)))
 
 ;;
 ;; (@* "Thumbnail" )
@@ -677,8 +678,7 @@ and END."
                 #'line-reminder--thumb-create-tty-ov))
          (ov (funcall fnc face fringe priority))
          (key (selected-window)))
-    (ht-set line-reminder--thumb-ovs key
-            (push ov (ht-get line-reminder--thumb-ovs key)))))
+    (push ov (ht-get line-reminder--thumb-ovs key))))
 
 (defun line-reminder--thumb-show (window &rest _)
   "Show thumbnail using overlays inside WINDOW."

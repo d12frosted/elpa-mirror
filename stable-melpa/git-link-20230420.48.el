@@ -3,8 +3,8 @@
 ;; Copyright (C) 2013-2022 Skye Shaw and others
 ;; Author: Skye Shaw <skye.shaw@gmail.com>
 ;; Version: 0.9.0
-;; Package-Version: 20230216.300
-;; Package-Commit: d3ba912079e0ca5fd727b1f617791c6ae1e0da82
+;; Package-Version: 20230420.48
+;; Package-Commit: 1727e9b7ec41a234a2cc14151b9ffd9c1c4f4b14
 ;; Keywords: git, vc, github, bitbucket, gitlab, sourcehut, aws, azure, convenience
 ;; URL: http://github.com/sshaw/git-link
 ;; Package-Requires: ((emacs "24.3"))
@@ -328,7 +328,7 @@ we can prevent that behaviour."
       dir)))
 
 (defun git-link--remote-url (name)
-  (git-link--get-config (format "remote.%s.url" name)))
+  (car (git-link--exec "remote" "get-url" name)))
 
 (defun git-link--branch-remote (branch)
   (git-link--get-config (format "branch.%s.remote" branch)))
