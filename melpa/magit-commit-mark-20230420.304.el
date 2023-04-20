@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-magit-commit-mark
-;; Package-Version: 20230214.1821
-;; Package-Commit: 6ed61986ae28c01d0f8c4f2bcff8ab70707488df
+;; Package-Version: 20230420.304
+;; Package-Commit: 8c0ea6c2e25ae0d47f15ae9067874a0605c00704
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "28.1") (magit "3.3.0"))
 
@@ -605,6 +605,7 @@ ARG is the bit which is toggled, defaulting to 1 (read/unread)."
       t)
      (t
       (message "No unread commits in view (next)")
+      (ding t)
       nil))))
 
 ;;;###autoload
@@ -619,6 +620,7 @@ ARG is the bit which is toggled, defaulting to 1 (read/unread)."
       t)
      (t
       (message "No unread commits in view (previous)")
+      (ding t)
       nil))))
 
 ;;;###autoload
