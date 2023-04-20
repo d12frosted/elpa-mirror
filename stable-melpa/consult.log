@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/minad/consult.git
 
 Updating /mnt/store/melpa/working/consult/
-Checking out 41510b59f058d24708112acf4921f4cd61ca0ad9
+Checking out 89e068fd043c3f32f3b177bd77c0a9a08248c0b7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/consult/
-  to /tmp/consultSvV0Jg/consult-20230416.950
+  to /tmp/consultHAZRYX/consult-20230420.805
     consult-compile.el -> consult-compile.el
     consult-flymake.el -> consult-flymake.el
     consult-imenu.el -> consult-imenu.el
@@ -16,19 +16,21 @@ Copying files (->) and directories (=>)
     consult-register.el -> consult-register.el
     consult-xref.el -> consult-xref.el
     consult.el -> consult.el
-Created consult-20230416.950.tar containing:
-  consult-20230416.950/
-  consult-20230416.950/consult-compile.el
-  consult-20230416.950/consult-flymake.el
-  consult-20230416.950/consult-imenu.el
-  consult-20230416.950/consult-info.el
-  consult-20230416.950/consult-kmacro.el
-  consult-20230416.950/consult-org.el
-  consult-20230416.950/consult-pkg.el
-  consult-20230416.950/consult-register.el
-  consult-20230416.950/consult-xref.el
-  consult-20230416.950/consult.el
-Built consult in 5.505s, finished at 2023-04-20T05:09:16+0000
+Created consult-20230420.805.tar containing:
+  consult-20230420.805/
+  consult-20230420.805/consult-compile.el
+  consult-20230420.805/consult-flymake.el
+  consult-20230420.805/consult-imenu.el
+  consult-20230420.805/consult-info.el
+  consult-20230420.805/consult-kmacro.el
+  consult-20230420.805/consult-org.el
+  consult-20230420.805/consult-pkg.el
+  consult-20230420.805/consult-register.el
+  consult-20230420.805/consult-xref.el
+  consult-20230420.805/consult.el
+Built consult in 4.976s, finished at 2023-04-20T09:00:32+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  403 Apr 20 05:09 packages/consult-20230416.950.entry
 292K -rw-r--r-- 1 root root 290K Apr 20 05:09 packages/consult-20230416.950.tar
+4.0K -rw-r--r-- 1 root root  403 Apr 20 09:00 packages/consult-20230420.805.entry
+292K -rw-r--r-- 1 root root 290K Apr 20 09:00 packages/consult-20230420.805.tar
