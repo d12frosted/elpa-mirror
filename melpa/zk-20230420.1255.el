@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.5
-;; Package-Version: 20221121.1252
-;; Package-Commit: afddac4018c8cf8d8088b4ca128adb01a872e741
+;; Package-Version: 20230420.1255
+;; Package-Commit: cd3237f0c16b417a15649bd7679ef7762902a1bb
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -443,19 +443,22 @@ return list of files not matching the regexp."
          (list (split-string files "\n" t)))
     (delete-dups list)))
 
-(defun zk--select-file (&optional prompt list)
+(defun zk--select-file (&optional prompt list group sort)
   "Wrapper around `completing-read' to select zk-file.
 Offers candidates from `zk--directory-files', or from LIST when
 supplied. Can take a PROMPT argument."
   (let* ((files (or list
-                    (zk--directory-files t))))
+                    (zk--directory-files t)))
+         (group (or group 'zk--group-function))
+         (sort (or sort nil)))
     (completing-read
      (or prompt
          "Select File: ")
      (lambda (string predicate action)
        (if (eq action 'metadata)
            `(metadata
-             (group-function . zk--group-function)
+             (group-function . ,group)
+             (display-sort-function . ,sort)
              (category . zk-file))
          (complete-with-action action files string predicate)))
      nil t nil 'zk-file-history)))
@@ -723,7 +726,7 @@ title."
   (let ((files (zk--grep-file-list str)))
     (if files
         (find-file (funcall zk-select-file-function
-                    (format "Files containing \"%s\": " str) files))
+                            (format "Files containing \"%s\": " str) files))
       (user-error "No results for \"%s\"" str))))
 
 ;;;###autoload
@@ -736,8 +739,8 @@ Optionally call a custom function by setting the variable
       (funcall zk-current-notes-function)
     (find-file
      (funcall zk-select-file-function
-      "Current Notes:"
-      (zk--current-notes-list)))))
+              "Current Notes:"
+              (zk--current-notes-list)))))
 
 ;;; Follow Links
 
@@ -987,9 +990,9 @@ Select TAG, with completion, from list of all tags in zk notes."
   (let* ((dead-link-ids (zk--dead-link-id-list)))
     (if dead-link-ids
         (funcall zk-search-function (mapconcat
-                                   #'identity
-                                   dead-link-ids
-                                   "\\|"))
+                                     #'identity
+                                     dead-link-ids
+                                     "\\|"))
       (user-error "No dead links found"))))
 
 (defun zk--unlinked-notes-list ()
@@ -1032,16 +1035,11 @@ Backlinks and Links-in-Note are grouped separately."
           (dolist (file links-in-note)
             ;; abbreviate-file-name allows a file to be in both groups
             (push (propertize (abbreviate-file-name file) 'type 'link) resources))
-          (find-file
-           (completing-read
-            "Links: "
-            (lambda (string predicate action)
-              (if (eq action 'metadata)
-                  `(metadata
-                    (group-function . zk--network-group-function)
-                    (display-sort-function . zk--network-sort-function)
-                    (category . zk-file))
-                (complete-with-action action resources string predicate))))))
+          (find-file (funcall zk-select-file-function
+                              "Links: "
+                              resources
+                              'zk--network-group-function
+                              'zk--network-sort-function)))
       (user-error "No links found"))))
 
 (defun zk--network-group-function (file transform)

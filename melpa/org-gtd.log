@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/Trevoke/org-gtd.el.git
 
 Updating /mnt/store/melpa/working/org-gtd/
-Checking out fdc13dc8a5336d933a8a3e8c1c3c4ac6f7838dc2
+Checking out a6aca52a7dea498be515ec9fd9285a0dabe01ee5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-gtd/
-  to /tmp/org-gtdP3uzKE/org-gtd-20230308.1416
+  to /tmp/org-gtdpCuNKc/org-gtd-20230420.1244
     org-gtd-agenda.el -> org-gtd-agenda.el
     org-gtd-archive.el -> org-gtd-archive.el
     org-gtd-capture.el -> org-gtd-capture.el
@@ -23,24 +23,26 @@ Copying files (->) and directories (=>)
     dir -> dir
     org-gtd.info -> org-gtd.info
   ! doc/org-gtd.texi -> org-gtd.texi
-Created org-gtd-20230308.1416.tar containing:
-  org-gtd-20230308.1416/
-  org-gtd-20230308.1416/dir
-  org-gtd-20230308.1416/org-gtd-agenda.el
-  org-gtd-20230308.1416/org-gtd-archive.el
-  org-gtd-20230308.1416/org-gtd-capture.el
-  org-gtd-20230308.1416/org-gtd-core.el
-  org-gtd-20230308.1416/org-gtd-customize.el
-  org-gtd-20230308.1416/org-gtd-delegate.el
-  org-gtd-20230308.1416/org-gtd-files.el
-  org-gtd-20230308.1416/org-gtd-inbox-processing.el
-  org-gtd-20230308.1416/org-gtd-mode.el
-  org-gtd-20230308.1416/org-gtd-pkg.el
-  org-gtd-20230308.1416/org-gtd-projects.el
-  org-gtd-20230308.1416/org-gtd-refile.el
-  org-gtd-20230308.1416/org-gtd.el
-  org-gtd-20230308.1416/org-gtd.info
-Built org-gtd in 6.542s, finished at 2023-04-20T09:49:23+0000
+Created org-gtd-20230420.1244.tar containing:
+  org-gtd-20230420.1244/
+  org-gtd-20230420.1244/dir
+  org-gtd-20230420.1244/org-gtd-agenda.el
+  org-gtd-20230420.1244/org-gtd-archive.el
+  org-gtd-20230420.1244/org-gtd-capture.el
+  org-gtd-20230420.1244/org-gtd-core.el
+  org-gtd-20230420.1244/org-gtd-customize.el
+  org-gtd-20230420.1244/org-gtd-delegate.el
+  org-gtd-20230420.1244/org-gtd-files.el
+  org-gtd-20230420.1244/org-gtd-inbox-processing.el
+  org-gtd-20230420.1244/org-gtd-mode.el
+  org-gtd-20230420.1244/org-gtd-pkg.el
+  org-gtd-20230420.1244/org-gtd-projects.el
+  org-gtd-20230420.1244/org-gtd-refile.el
+  org-gtd-20230420.1244/org-gtd.el
+  org-gtd-20230420.1244/org-gtd.info
+Built org-gtd in 5.965s, finished at 2023-04-20T13:39:53+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  466 Apr 20 09:49 packages/org-gtd-20230308.1416.entry
 100K -rw-r--r-- 1 root root 100K Apr 20 09:49 packages/org-gtd-20230308.1416.tar
+4.0K -rw-r--r-- 1 root root  466 Apr 20 13:39 packages/org-gtd-20230420.1244.entry
+100K -rw-r--r-- 1 root root 100K Apr 20 13:39 packages/org-gtd-20230420.1244.tar

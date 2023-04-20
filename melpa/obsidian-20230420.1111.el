@@ -4,10 +4,10 @@
 
 ;; Author: Mykhaylo Bilyanskyy
 ;; URL: https://github.com./licht1stein/obsidian.el
-;; Package-Version: 20221228.1142
-;; Package-Commit: d9fdc5e2b7ee6602ac99511d670a382c5586f14c
+;; Package-Version: 20230420.1111
+;; Package-Commit: 1214758b99037884c4c062e6d298b417200444cd
 ;; Keywords: obsidian, pkm, convenience
-;; Version: 1.1.10
+;; Version: 1.1.11
 ;; Package-Requires: ((emacs "27.2") (s "1.12.0") (dash "2.13") (markdown-mode "2.5") (elgrep "1.0.0") (yaml "0.5.1"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -413,10 +413,12 @@ Argument S relative file name to clean and convert to absolute."
   "Take file F and either opens directly or offer choice if multiple match."
   (let* ((all-files (->> (obsidian-list-all-files) (-map #'obsidian--file-relative-name)))
          (matches (obsidian--match-files f all-files))
-         (file (if (> (length matches) 1)
-                   (let* ((choice (completing-read "Jump to: " matches)))
-                     choice)
-                 f)))
+         (file (cl-case (length matches)
+                 (0 f)
+                 (1 (car matches))
+                 (t
+                  (let* ((choice (completing-read "Jump to: " matches)))
+                    choice)))))
     (-> file obsidian--expand-file-name find-file)))
 
 (defun obsidian-wiki-link-p ()
