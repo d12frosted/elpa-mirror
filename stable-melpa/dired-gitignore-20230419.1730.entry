@@ -1,0 +1,11 @@
+(dired-gitignore .
+		 [(20230419 1730)
+		  ((emacs
+		    (27 1)))
+		  "A minor mode to hide gitignored files in a dired buffer" single
+		  ((:commit . "3069757356f1b18a4cdf0ea03cc8578731dd61c0")
+		   (:authors
+		    ("Johannes Mueller" . "github@johannes-mueller.org"))
+		   (:maintainer "Johannes Mueller" . "github@johannes-mueller.org")
+		   (:keywords "dired" "convenience" "git")
+		   (:url . "https://github.com/johannes-mueller/dired-gitignore.el"))])

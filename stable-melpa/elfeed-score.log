@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/sp1ff/elfeed-score.git
 
 Updating /mnt/store/melpa/working/elfeed-score/
-Checking out 4a04c574e2e62115ab70febd21a4cf0d5a112c4c
+Checking out 93c3b467859b57a353e84f0abd2607b64373eaa3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elfeed-score/
-  to /tmp/elfeed-scoreBhzoFa/elfeed-score-20230418.2330
+  to /tmp/elfeed-scoreYec1EE/elfeed-score-20230419.1416
     elfeed-score-log.el -> elfeed-score-log.el
     elfeed-score-maint.el -> elfeed-score-maint.el
     elfeed-score-pkg.el -> elfeed-score-pkg.el
@@ -17,22 +17,22 @@ Copying files (->) and directories (=>)
     elfeed-score.el -> elfeed-score.el
   ! doc/elfeed-score.texi -> elfeed-score.texi
   ! doc/version.texi -> version.texi
-Generating /tmp/elfeed-scoreBhzoFa/elfeed-score-20230418.2330/elfeed-score.info
-Generating /tmp/elfeed-scoreBhzoFa/elfeed-score-20230418.2330/version.info
-Created elfeed-score-20230418.2330.tar containing:
-  elfeed-score-20230418.2330/
-  elfeed-score-20230418.2330/dir
-  elfeed-score-20230418.2330/elfeed-score-log.el
-  elfeed-score-20230418.2330/elfeed-score-maint.el
-  elfeed-score-20230418.2330/elfeed-score-pkg.el
-  elfeed-score-20230418.2330/elfeed-score-rule-stats.el
-  elfeed-score-20230418.2330/elfeed-score-rules.el
-  elfeed-score-20230418.2330/elfeed-score-scoring.el
-  elfeed-score-20230418.2330/elfeed-score-serde.el
-  elfeed-score-20230418.2330/elfeed-score.el
-  elfeed-score-20230418.2330/elfeed-score.info
-  elfeed-score-20230418.2330/version.info
-Built elfeed-score in 11.090s, finished at 2023-04-19T13:47:01+0000
+Generating /tmp/elfeed-scoreYec1EE/elfeed-score-20230419.1416/elfeed-score.info
+Generating /tmp/elfeed-scoreYec1EE/elfeed-score-20230419.1416/version.info
+Created elfeed-score-20230419.1416.tar containing:
+  elfeed-score-20230419.1416/
+  elfeed-score-20230419.1416/dir
+  elfeed-score-20230419.1416/elfeed-score-log.el
+  elfeed-score-20230419.1416/elfeed-score-maint.el
+  elfeed-score-20230419.1416/elfeed-score-pkg.el
+  elfeed-score-20230419.1416/elfeed-score-rule-stats.el
+  elfeed-score-20230419.1416/elfeed-score-rules.el
+  elfeed-score-20230419.1416/elfeed-score-scoring.el
+  elfeed-score-20230419.1416/elfeed-score-serde.el
+  elfeed-score-20230419.1416/elfeed-score.el
+  elfeed-score-20230419.1416/elfeed-score.info
+  elfeed-score-20230419.1416/version.info
+Built elfeed-score in 12.263s, finished at 2023-04-19T21:33:24+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  385 Apr 19 13:47 packages/elfeed-score-20230418.2330.entry
-252K -rw-r--r-- 1 root root 250K Apr 19 13:47 packages/elfeed-score-20230418.2330.tar
+4.0K -rw-r--r-- 1 root root  385 Apr 19 21:33 packages/elfeed-score-20230419.1416.entry
+252K -rw-r--r-- 1 root root 250K Apr 19 21:33 packages/elfeed-score-20230419.1416.tar
