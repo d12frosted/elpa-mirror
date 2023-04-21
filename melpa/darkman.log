@@ -3,9 +3,20 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~grtcdr/darkman.el
 
 Updating /mnt/store/melpa/working/darkman/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~grtcdr/darkman.el/': Could not resolve host: git.sr.ht
-
-Command exited with non-zero exit-code: 128
+Checking out 3960a534781368c82737ee5d2c4c9e0cef22bf8f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/darkman/
+  to /tmp/darkman2tafAr/darkman-20230327.113
+    darkman.el -> darkman.el
+  ! doc/darkman.texi -> darkman.texi
+Generating /tmp/darkman2tafAr/darkman-20230327.113/darkman.info
+Created darkman-20230327.113.tar containing:
+  darkman-20230327.113/
+  darkman-20230327.113/darkman-pkg.el
+  darkman-20230327.113/darkman.el
+  darkman-20230327.113/darkman.info
+  darkman-20230327.113/dir
+Built darkman in 11.938s, finished at 2023-04-21T00:31:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 364 Apr 21 00:31 packages/darkman-20230327.113.entry
+ 20K -rw-r--r-- 1 root root 20K Apr 21 00:31 packages/darkman-20230327.113.tar

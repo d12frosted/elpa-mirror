@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tsdh/highlight-parentheses.el
 
 Updating /mnt/store/melpa/working/highlight-parentheses/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~tsdh/highlight-parentheses.el/': Could not resolve host: git.sr.ht
-
-Command exited with non-zero exit-code: 128
+Checking out 438a1cb2563e2a2496be4678cc0df8d5b22caf5d
+Built highlight-parentheses in 16.989s, finished at 2023-04-21T00:57:44+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Apr 21 00:57 packages/highlight-parentheses-20220408.845.el
+4.0K -rw-r--r-- 1 root root 391 Apr 21 00:57 packages/highlight-parentheses-20220408.845.entry

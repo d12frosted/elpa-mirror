@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
 ;; Keywords: convenience
-;; Package-Version: 20230410.852
-;; Package-Commit: a1ddca79250bd476bf265aabfedef546f56d0042
+;; Package-Version: 20230420.2222
+;; Package-Commit: 6db8c576bd5fe0516a5b91066a0f44cddce51eae
 
 ;; Package-Requires: ((emacs "25.1") (compat "29.1.3.4"))
 
@@ -217,7 +217,6 @@ This variable has to be set before `no-littering' is loaded.")
     (setq abbrev-file-name                 (etc "abbrev.el"))
     (setq auto-insert-directory            (etc "auto-insert/"))
     (setq auto-save-list-file-prefix       (var "auto-save/sessions/"))
-    (setq backup-directory-alist           (list (cons "." (var "backup/"))))
     (setq bookmark-default-file            (var "bookmark-default.el"))
     (setq calc-settings-file               (etc "calc-settings.el"))
     (eval-after-load 'desktop
