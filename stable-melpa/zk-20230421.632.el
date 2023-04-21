@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.5
-;; Package-Version: 20230420.1255
-;; Package-Commit: cd3237f0c16b417a15649bd7679ef7762902a1bb
+;; Package-Version: 20230421.632
+;; Package-Commit: c5a8339109de67799f10de9b3ad6ff9f8087c3b1
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -756,8 +756,9 @@ Optionally call a custom function by setting the variable
 
 (defun zk--links-in-note-list ()
   "Return list of zk files that are linked from the current buffer."
-  (let ((zk-ids (zk--id-list))
-        id-list)
+  (let* ((zk-alist (zk--alist))
+         (zk-ids (zk--id-list nil zk-alist))
+         id-list)
     (save-buffer)
     (save-excursion
       (goto-char (point-min))
@@ -765,9 +766,9 @@ Optionally call a custom function by setting the variable
         (if (member (match-string-no-properties 1) zk-ids)
             (push (match-string-no-properties 1) id-list))))
     (cond ((zk--singleton-p id-list)
-           (list (zk--parse-id 'file-path id-list)))
+           (list (zk--parse-id 'file-path id-list zk-alist)))
           (id-list
-           (zk--parse-id 'file-path (delete-dups id-list)))
+           (zk--parse-id 'file-path (delete-dups id-list) zk-alist))
           (t
            (error "No zk-links in note")))))
 
@@ -885,7 +886,8 @@ brackets \"[[\" initiates completion."
 (defun zk-copy-link-and-title (&optional arg)
   "Copy link and title for id or file ARG at point."
   (interactive (list (funcall zk-select-file-function "Copy link: ")))
-  (let* ((zk-id-list (zk--id-list))
+  (let* ((zk-alist (zk--alist))
+         (zk-id-list (zk--id-list nil zk-alist))
          (id (cond ((member arg zk-id-list)
                     arg)
                    ((member (car arg) zk-id-list)
@@ -893,7 +895,7 @@ brackets \"[[\" initiates completion."
                    ((zk-file-p arg)
                     (zk--parse-file 'id arg))
                    (t (zk--id-at-point))))
-         (title (zk--parse-id 'title id)))
+         (title (zk--parse-id 'title id zk-alist)))
     (if (null id)
         (error "No valid zk-id")
       (kill-new (zk--format zk-link-and-title-format id title))
@@ -995,10 +997,12 @@ Select TAG, with completion, from list of all tags in zk notes."
                                      "\\|"))
       (user-error "No dead links found"))))
 
-(defun zk--unlinked-notes-list ()
-  "Return list of IDs for notes that no notes link to."
-  (let* ((all-link-ids (zk--grep-link-id-list))
-         (all-ids (zk--id-list)))
+(defun zk--unlinked-notes-list (&optional zk-alist)
+  "Return list of IDs for notes that no notes link to.
+Takes an optional ZK-ALIST."
+  (let* ((zk-alist (or zk-alist (zk--alist)))
+         (all-link-ids (zk--grep-link-id-list))
+         (all-ids (zk--id-list nil zk-alist)))
     (remq nil (mapcar
                (lambda (x)
                  (when (not (member x all-link-ids))
@@ -1009,8 +1013,9 @@ Select TAG, with completion, from list of all tags in zk notes."
 (defun zk-unlinked-notes ()
   "Find unlinked notes."
   (interactive)
-  (let* ((ids (zk--unlinked-notes-list))
-         (notes (zk--parse-id 'file-path ids)))
+  (let* ((zk-alist (zk--alist))
+         (ids (zk--unlinked-notes-list zk-alist))
+         (notes (zk--parse-id 'file-path ids zk-alist)))
     (if notes
         (find-file (funcall zk-select-file-function "Unlinked notes: " notes))
       (user-error "No unlinked notes found"))))
@@ -1030,16 +1035,16 @@ Backlinks and Links-in-Note are grouped separately."
          (resources))
     (if (or backlinks links-in-note)
         (progn
-          (dolist (file backlinks)
-            (push (propertize file 'type 'backlink) resources))
           (dolist (file links-in-note)
             ;; abbreviate-file-name allows a file to be in both groups
             (push (propertize (abbreviate-file-name file) 'type 'link) resources))
+          (dolist (file backlinks)
+            (push (propertize file 'type 'backlink) resources))
           (find-file (funcall zk-select-file-function
                               "Links: "
                               resources
                               'zk--network-group-function
-                              'zk--network-sort-function)))
+                              'identity)))
       (user-error "No links found"))))
 
 (defun zk--network-group-function (file transform)
@@ -1052,12 +1057,12 @@ Backlinks and Links-in-Note are grouped separately."
      ((eq 'backlink (get-text-property 0 'type file)) "Backlinks")
      ((eq 'link (get-text-property 0 'type file)) "Links-in-Note"))))
 
-(defun zk--network-sort-function (list)
-  "Sort LIST of links so Backlinks group is first."
-  (sort list
-        (lambda (a _b)
-          (when (eq 'backlink (get-text-property 0 'type a))
-              t))))
+;; (defun zk--network-sort-function (list)
+;;   "Sort LIST of links so Backlinks group is first."
+;;   (sort list
+;;         (lambda (a _b)
+;;           (when (eq 'backlink (get-text-property 0 'type a))
+;;               t))))
 
 (provide 'zk)
 

@@ -3,16 +3,17 @@ Fetcher: github
 Source:  https://github.com/godotengine/emacs-gdscript-mode.git
 
 Updating /mnt/store/melpa/working/gdscript-mode/
-Checking out d392e8aa7e7c6dd79ce52fb55d78f7acfa443194
+Checking out 30c4d48f81d5e52e8667cc10780e4af743e27f96
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gdscript-mode/
-  to /tmp/gdscript-modeb9tnbG/gdscript-mode-20220721.547
+  to /tmp/gdscript-modeLtjhe4/gdscript-mode-20230421.620
     gdscript-comint-gdformat.el -> gdscript-comint-gdformat.el
     gdscript-comint.el -> gdscript-comint.el
     gdscript-completion.el -> gdscript-completion.el
     gdscript-customization.el -> gdscript-customization.el
     gdscript-debug.el -> gdscript-debug.el
     gdscript-docs.el -> gdscript-docs.el
+    gdscript-eglot.el -> gdscript-eglot.el
     gdscript-fill-paragraph.el -> gdscript-fill-paragraph.el
     gdscript-format.el -> gdscript-format.el
     gdscript-godot.el -> gdscript-godot.el
@@ -26,29 +27,32 @@ Copying files (->) and directories (=>)
     gdscript-rx.el -> gdscript-rx.el
     gdscript-syntax.el -> gdscript-syntax.el
     gdscript-utils.el -> gdscript-utils.el
-Created gdscript-mode-20220721.547.tar containing:
-  gdscript-mode-20220721.547/
-  gdscript-mode-20220721.547/gdscript-comint-gdformat.el
-  gdscript-mode-20220721.547/gdscript-comint.el
-  gdscript-mode-20220721.547/gdscript-completion.el
-  gdscript-mode-20220721.547/gdscript-customization.el
-  gdscript-mode-20220721.547/gdscript-debug.el
-  gdscript-mode-20220721.547/gdscript-docs.el
-  gdscript-mode-20220721.547/gdscript-fill-paragraph.el
-  gdscript-mode-20220721.547/gdscript-format.el
-  gdscript-mode-20220721.547/gdscript-godot.el
-  gdscript-mode-20220721.547/gdscript-history.el
-  gdscript-mode-20220721.547/gdscript-hydra.el
-  gdscript-mode-20220721.547/gdscript-imenu.el
-  gdscript-mode-20220721.547/gdscript-indent-and-nav.el
-  gdscript-mode-20220721.547/gdscript-keywords.el
-  gdscript-mode-20220721.547/gdscript-mode-pkg.el
-  gdscript-mode-20220721.547/gdscript-mode.el
-  gdscript-mode-20220721.547/gdscript-project.el
-  gdscript-mode-20220721.547/gdscript-rx.el
-  gdscript-mode-20220721.547/gdscript-syntax.el
-  gdscript-mode-20220721.547/gdscript-utils.el
-Built gdscript-mode in 4.557s, finished at 2023-04-21T04:43:35+0000
+Created gdscript-mode-20230421.620.tar containing:
+  gdscript-mode-20230421.620/
+  gdscript-mode-20230421.620/gdscript-comint-gdformat.el
+  gdscript-mode-20230421.620/gdscript-comint.el
+  gdscript-mode-20230421.620/gdscript-completion.el
+  gdscript-mode-20230421.620/gdscript-customization.el
+  gdscript-mode-20230421.620/gdscript-debug.el
+  gdscript-mode-20230421.620/gdscript-docs.el
+  gdscript-mode-20230421.620/gdscript-eglot.el
+  gdscript-mode-20230421.620/gdscript-fill-paragraph.el
+  gdscript-mode-20230421.620/gdscript-format.el
+  gdscript-mode-20230421.620/gdscript-godot.el
+  gdscript-mode-20230421.620/gdscript-history.el
+  gdscript-mode-20230421.620/gdscript-hydra.el
+  gdscript-mode-20230421.620/gdscript-imenu.el
+  gdscript-mode-20230421.620/gdscript-indent-and-nav.el
+  gdscript-mode-20230421.620/gdscript-keywords.el
+  gdscript-mode-20230421.620/gdscript-mode-pkg.el
+  gdscript-mode-20230421.620/gdscript-mode.el
+  gdscript-mode-20230421.620/gdscript-project.el
+  gdscript-mode-20230421.620/gdscript-rx.el
+  gdscript-mode-20230421.620/gdscript-syntax.el
+  gdscript-mode-20230421.620/gdscript-utils.el
+Built gdscript-mode in 5.036s, finished at 2023-04-21T08:36:23+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  409 Apr 21 04:43 packages/gdscript-mode-20220721.547.entry
 360K -rw-r--r-- 1 root root 360K Apr 21 04:43 packages/gdscript-mode-20220721.547.tar
+4.0K -rw-r--r-- 1 root root  409 Apr 21 08:36 packages/gdscript-mode-20230421.620.entry
+360K -rw-r--r-- 1 root root 360K Apr 21 08:36 packages/gdscript-mode-20230421.620.tar

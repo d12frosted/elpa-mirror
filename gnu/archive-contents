@@ -554,17 +554,18 @@
 	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "cb09942868d50e654f159f9614fe3f22af96e547"))])
  (consult .
-	  [(0 33)
+	  [(0 34)
 	   ((emacs
 	     (27 1))
 	    (compat
-	     (29 1 4 0)))
+	     (29 1 4 1)))
 	   "Consulting completing-read" tar
 	   ((:url . "https://github.com/minad/consult")
+	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "fd00979d2fbfad66960c621e9fc140eb8c6a06f3"))])
+	    (:commit . "38af775c837ab09d9d2a77059386eb09c4254a4e"))])
  (consult-recoll .
 		 [(0 8)
 		  ((emacs
@@ -1806,7 +1807,7 @@
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (jinx .
-       [(0 6)
+       [(0 7)
 	((emacs
 	  (27 1))
 	 (compat
@@ -1817,7 +1818,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "00fee670ca86d95bea8a8925cccb3c77281d0b95"))])
+	 (:commit . "25a39dfc57b5819d9e5317ac61ecbdcd112234f7"))])
  (jit-spell .
 	    [(0 3)
 	     ((emacs

@@ -286,7 +286,7 @@ Table of Contents
 
   • `consult-compile-error': Jump to a compilation error. Supports live
     preview narrowing and recursive editing.
-  • `consult-flymake': Jump to flymake diagnostic. Supports live preview
+  • `consult-flymake': Jump to Flymake diagnostic. Supports live preview
     and recursive editing. The command supports narrowing. Press `e
     SPC', `w SPC', `n SPC' to only show errors, warnings and notes
     respectively.
@@ -382,9 +382,7 @@ Table of Contents
   • `consult-completion-in-region': In case you don't use [Corfu] as
     your in-buffer completion UI, this function can be set as
     `completion-in-region-function'. Then your minibuffer completion UI
-    (e.g., Vertico or Icomplete) will be used for
-    `completion-at-point'. If you use Mct, you can give
-    `mct-region-mode' a try.
+    (e.g., Vertico or Icomplete) will be used for `completion-at-point'.
     ┌────
     │ ;; Use `consult-completion-in-region' if Vertico is enabled.
     │ ;; Otherwise use the default `completion--in-region' function.
@@ -829,14 +827,14 @@ Table of Contents
   │ ;; Example configuration for Consult
   │ (use-package consult
   │   ;; Replace bindings. Lazily loaded due by `use-package'.
-  │   :bind (;; C-c bindings (mode-specific-map)
+  │   :bind (;; C-c bindings in `mode-specific-map'
   │ 	 ("C-c M-x" . consult-mode-command)
   │ 	 ("C-c h" . consult-history)
   │ 	 ("C-c k" . consult-kmacro)
   │ 	 ("C-c m" . consult-man)
   │ 	 ("C-c i" . consult-info)
   │ 	 ([remap Info-search] . consult-info)
-  │ 	 ;; C-x bindings (ctl-x-map)
+  │ 	 ;; C-x bindings in `ctl-x-map'
   │ 	 ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complex-command
   │ 	 ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
   │ 	 ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
@@ -849,7 +847,7 @@ Table of Contents
   │ 	 ("C-M-#" . consult-register)
   │ 	 ;; Other custom bindings
   │ 	 ("M-y" . consult-yank-pop)                ;; orig. yank-pop
-  │ 	 ;; M-g bindings (goto-map)
+  │ 	 ;; M-g bindings in `goto-map'
   │ 	 ("M-g e" . consult-compile-error)
   │ 	 ("M-g f" . consult-flymake)               ;; Alternative: consult-flycheck
   │ 	 ("M-g g" . consult-goto-line)             ;; orig. goto-line
@@ -859,7 +857,7 @@ Table of Contents
   │ 	 ("M-g k" . consult-global-mark)
   │ 	 ("M-g i" . consult-imenu)
   │ 	 ("M-g I" . consult-imenu-multi)
-  │ 	 ;; M-s bindings (search-map)
+  │ 	 ;; M-s bindings in `search-map'
   │ 	 ("M-s d" . consult-find)
   │ 	 ("M-s D" . consult-locate)
   │ 	 ("M-s g" . consult-grep)
