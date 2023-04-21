@@ -1,11 +1,11 @@
 ;;; org-rich-yank.el --- Paste with org-mode markup and link to source -*- lexical-binding: t -*-
 
-;; Copyright (C) 2018-2020 Kevin Brubeck Unhammer
+;; Copyright (C) 2018-2023 Kevin Brubeck Unhammer
 
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
-;; Version: 0.2.1
-;; Package-Version: 20230411.1241
-;; Package-Commit: e1566b7d7dd46f04ce08f0f948d108d3d18f4494
+;; Version: 0.2.2
+;; Package-Version: 20230421.1106
+;; Package-Commit: 0a74fb742fcdf9560d954b40e2f49551476dee4f
 ;; URL: https://github.com/unhammer/org-rich-yank
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, hypermedia, org
@@ -55,8 +55,10 @@
 
 ;;; Code:
 
+(require 'org)
+
 (defgroup org-rich-yank nil
-  "Options for org-rich-yank"
+  "Options for org-rich-yank."
   :tag "org-rich-yank"
   :group 'org)
 
@@ -157,9 +159,10 @@ ARGS ignored."
   (interactive)
   (if org-rich-yank--buffer
       (let* ((source-mode (buffer-local-value 'major-mode org-rich-yank--buffer))
+             (escaped-kill (org-escape-code-in-string (current-kill 0)))
              (paste (funcall org-rich-yank-format-paste
                              (replace-regexp-in-string "-mode$" "" (symbol-name source-mode))
-                             (current-kill 0)
+                             escaped-kill
                              (org-rich-yank--link))))
         (insert
          (if org-rich-yank-add-target-indent

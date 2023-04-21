@@ -6,8 +6,8 @@
 ;; Maintainer: Peter Stuart <peter@peterstuart.org>
 ;; Created: 6 Jun 2022
 ;; URL: https://github.com/peterstuart/cargo-transient
-;; Package-Version: 20230120.1431
-;; Package-Commit: f0295aee41404ffb2e8532948becf78d405e4ee9
+;; Package-Version: 20230421.1252
+;; Package-Commit: 30ed1c8abcfd949cf2620c73061ef741ee0ada3d
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "28.1"))
 
@@ -115,6 +115,7 @@ It is equivalent to `project-compilation-buffer-name-function'."
   "Run `cargo build'."
   :man-page "cargo-build"
   [cargo-transient--group-target-selection
+   (cargo-transient--arg-all-targets)
    (cargo-transient--arg-bin)
    (cargo-transient--arg-bins)
    (cargo-transient--arg-example)
@@ -142,6 +143,7 @@ It is equivalent to `project-compilation-buffer-name-function'."
   "Run `cargo check'."
   :man-page "cargo-check"
   [cargo-transient--group-target-selection
+   (cargo-transient--arg-all-targets)
    (cargo-transient--arg-bin)
    (cargo-transient--arg-bins)
    (cargo-transient--arg-example)
@@ -196,6 +198,7 @@ It is equivalent to `project-compilation-buffer-name-function'."
    (cargo-transient--arg-all-features)
    (cargo-transient--arg-no-default-features)]
   [cargo-transient--group-target-selection
+   (cargo-transient--arg-all-targets)
    (cargo-transient--arg-bin)
    (cargo-transient--arg-bins)
    (cargo-transient--arg-example)
@@ -231,9 +234,6 @@ It is equivalent to `project-compilation-buffer-name-function'."
   "Run `cargo doc'."
   :man-page "cargo-doc"
   ["Documentation Options"
-   ("-o"
-    "Open the docs in a browser after builder them"
-    "--open")
    ("-n"
     "Do not build documentation for dependencies"
     "--no-deps")
@@ -255,12 +255,18 @@ It is equivalent to `project-compilation-buffer-name-function'."
   [cargo-transient--group-manifest-options
    (cargo-transient--arg-offline)]
   [cargo-transient--group-actions
-   ("d" "Doc" cargo-transient-doc)])
+   ("d" "Doc" cargo-transient-doc)
+   ("o" "Open" cargo-transient-doc-open)])
 
 (defun cargo-transient-doc (&rest args)
   "Run `cargo doc' with the provided ARGS."
   (interactive (cargo-transient--args))
   (cargo-transient--exec "doc" args))
+
+(defun cargo-transient-doc-open (&rest args)
+  "Open the docs in a browser after building them."
+  (interactive (cargo-transient--args))
+  (cargo-transient--exec "doc --open" args))
 
 (defun cargo-transient-fmt ()
   "Run `cargo fmt'."
@@ -338,6 +344,11 @@ It is equivalent to `project-compilation-buffer-name-function'."
   :argument "")
 
 ;; Target Selection
+
+(transient-define-argument cargo-transient--arg-all-targets ()
+  :description "All targets"
+  :key "-a"
+  :argument "--all-targets")
 
 (transient-define-argument cargo-transient--arg-bin ()
   :description "Only the specified binary"
