@@ -4,10 +4,10 @@
 
 ;; Author: Alvaro Ramirez
 ;; Package-Requires: ((emacs "25.1") (swift-mode "8.2.0") (org "9.2.0"))
-;; Package-Version: 20221231.1941
-;; Package-Commit: 0b453efeb8310311d7f722a0f2dce41c14d4090e
+;; Package-Version: 20230420.1737
+;; Package-Commit: 9225b313e3d1e200f35ab9428a58ff8172daa466
 ;; URL: https://github.com/xenodium/ob-swiftui
-;; Version: 0.02
+;; Version: 0.7
 
 ;;; License:
 
@@ -139,35 +139,77 @@ This function is called by `org-babel-execute-src-block'"
 (defun ob-swiftui--expand-body (body params)
   "Expand BODY according to PARAMS and PROCESSED-PARAMS, return the expanded body."
   (let ((write-to-file (member "file" (map-elt params :result-params)))
-        (root-view (when (and (map-elt params :view)
+        (root-view (if (and (map-elt params :view)
                               (not (string-equal (map-elt params :view) "none")))
-                     (map-elt params :view))))
-    (format
+                       (map-elt params :view)
+                     "ContentView")))
+    (if write-to-file
+        (ob-swiftui--expand-body-preview body root-view)
+      (message (ob-swiftui--expand-body-window body root-view))
+      (ob-swiftui--expand-body-window body root-view))))
+
+(defun ob-swiftui--expand-body-preview (body root-view)
+  (format
      "
-// Swift snippet heavily based on Chris Eidhof's code at:
+import SwiftUI
+
+let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
+  Task {
+    let data = await ImageRenderer(
+      content: %s()
+    ).cgImage?.pngData(compressionFactor: 1)
+    do {
+      let url = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+        .appendingPathComponent(ProcessInfo.processInfo.globallyUniqueString + \".png\")
+      try data?.write(to: url)
+      print(url.path, terminator: \"\")
+      exit(0)
+    } catch {
+      print(\"Error: \(error.localizedDescription)\")
+      exit(1)
+    }
+  }
+}
+
+RunLoop.current.run()
+
+extension CGImage {
+  func pngData(compressionFactor: Float) -> Data? {
+    NSBitmapImageRep(cgImage: self).representation(
+      using: .png, properties: [NSBitmapImageRep.PropertyKey.compressionFactor: compressionFactor])
+  }
+}
+
+// Additional view definitions.
+%s
+"
+     root-view
+     (if (string-match root-view body)
+         body
+       (format "
+struct ContentView: View {
+  var body: some View {
+    VStack{
+      %s
+    }
+    .frame(maxWidth:.infinity, maxHeight:.infinity)
+  }
+}
+" body))))
+
+(defun ob-swiftui--expand-body-window (body root-view)
+  (format
+   "
+// Swift snippet based on Chris Eidhof's code at:
 // https://gist.github.com/chriseidhof/26768f0b63fa3cdf8b46821e099df5ff
 
 import Cocoa
-import SwiftUI
 import Foundation
-
-let screenshotURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent(ProcessInfo.processInfo.globallyUniqueString + \".png\")
-let preview = %s
-
-// Body to run.
-%s
+import SwiftUI
 
 extension NSApplication {
-  public func run<V: View>(_ view: V) {
-    let appDelegate = AppDelegate(view)
-    NSApp.setActivationPolicy(.regular)
-    mainMenu = customMenu
-    delegate = appDelegate
-    run()
-  }
-
-  public func run<V: View>(@ViewBuilder view: () -> V) {
-    let appDelegate = AppDelegate(view())
+  public func start() {
+    let appDelegate = AppDelegate()
     NSApp.setActivationPolicy(.regular)
     mainMenu = customMenu
     delegate = appDelegate
@@ -192,57 +234,43 @@ extension NSApplication {
   }
 }
 
-class AppDelegate<V: View>: NSObject, NSApplicationDelegate, NSWindowDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
   var window = NSWindow(
     contentRect: NSRect(x: 0, y: 0, width: 414 * 0.2, height: 896 * 0.2),
     styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
     backing: .buffered, defer: false)
 
-  var contentView: V
-
-  init(_ contentView: V) {
-    self.contentView = contentView
-  }
+  var contentView = %s()
 
   func applicationDidFinishLaunching(_ notification: Notification) {
     window.delegate = self
     window.center()
     window.contentView = NSHostingView(rootView: contentView)
     window.makeKeyAndOrderFront(nil)
-
-    if preview {
-      screenshot(view: window.contentView!, saveTo: screenshotURL)
-      // Write path (without newline) so org babel can parse it.
-      print(screenshotURL.path, terminator: \"\")
-      NSApplication.shared.terminate(self)
-      return
-    }
-
-    window.title = \"press q to exit\"
+    window.title = \"press \\\"q\\\" to exit\"
     window.setFrameAutosaveName(\"Main Window\")
     NSApp.activate(ignoringOtherApps: true)
   }
 }
 
-func screenshot(view: NSView, saveTo fileURL: URL) {
-  let rep = view.bitmapImageRepForCachingDisplay(in: view.bounds)!
-  view.cacheDisplay(in: view.bounds, to: rep)
-  let pngData = rep.representation(using: .png, properties: [:])
-  try! pngData?.write(to: fileURL)
-}
+NSApplication.shared.start()
 
 // Additional view definitions.
 %s
 "
-     (if write-to-file
-         "true"
-       "false")
-     (if root-view
-         (format "NSApplication.shared.run(%s())" root-view)
-       (format "NSApplication.shared.run {%s}" body))
-     (if root-view
-         body
-       ""))))
+   root-view
+   (if (string-match root-view body)
+       body
+     (format "
+struct ContentView: View {
+  var body: some View {
+    VStack{
+      %s
+    }
+    .frame(maxWidth:.infinity, maxHeight:.infinity)
+  }
+}
+" body))))
 
 (provide 'ob-swiftui)
 ;;; ob-swiftui.el ends here

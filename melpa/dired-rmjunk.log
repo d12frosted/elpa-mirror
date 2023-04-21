@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jakob/dired-rmjunk
 
 Updating /mnt/store/melpa/working/dired-rmjunk/
-Checking out 0e890a41fa680a45b4b4aad2c28f9d6dca999cee
-Built dired-rmjunk in 7.933s, finished at 2023-04-20T12:55:01+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Apr 20 12:54 packages/dired-rmjunk-20191007.1232.el
-4.0K -rw-r--r-- 1 root root  400 Apr 20 12:54 packages/dired-rmjunk-20191007.1232.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~jakob/dired-rmjunk/': Could not resolve host: git.sr.ht
+
+Command exited with non-zero exit-code: 128

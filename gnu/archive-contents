@@ -1097,18 +1097,18 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (embark .
-	 [(0 21 1)
+	 [(0 22 1)
 	  ((emacs
 	    (27 1))
 	   (compat
-	    (29 1 3 0)))
+	    (29 1 4 0)))
 	  "Conveniently act on minibuffer completions" tar
 	  ((:url . "https://github.com/oantolin/embark")
 	   (:keywords "convenience")
 	   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 	   (:authors
 	    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-	   (:commit . "63013c2d3ef4dccc95167218ccbf4f401e489c3e"))])
+	   (:commit . "c914efe881df2bc6a2bd35cc7ee975d3e9d4a418"))])
  (embark-consult .
 		 [(0 7)
 		  ((emacs

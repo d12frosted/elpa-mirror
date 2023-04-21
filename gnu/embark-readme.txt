@@ -190,12 +190,15 @@
     leisure.  The candidates are displayed as a list showing additional
     annotations.
 
-    The Embark Collect buffer is "dired-like": you can mark and unmark
-    candidates with `m' and `u', you can unmark all marked candidates
-    with `U' or toggle the marks with `t'. In an Embark Collect buffer
-    `embark-act-all' is bound to `A' and will act on all currently
-    marked candidates if there any, and will act on all candidates if
-    none are marked.
+    The Embark Collect buffer is somewhat "dired-like": you can select
+    and deselect candidates through the `embark-select' action (bound to
+    `SPC'). In an Embark Collect buffer `embark-act' is bound to `a' and
+    `embark-act-all' is bound to `A'; `embark-act-all' will act on all
+    currently marked candidates if there any, and will act on all
+    candidates if none are marked. In particular, this means that `a
+    SPC' will toggle whether the candidate at point is selected, and `A
+    SPC' will select all candidates if none are selected, or deselect
+    all selected candidates if there are some.
 
   • The `embark-export' command tries to open a buffer in an appropriate
     major mode for the set of candidates. If the candidates are files
@@ -237,16 +240,67 @@
 
 [wgrep] <https://github.com/mhayashi1120/Emacs-wgrep>
 
-1.3.1 `embark-live' a live-updating variant of `embark-collect'
+1.3.1 Selecting some targets to make an ad hoc candidate set
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The commands for working with sets of candidates just described,
+  namely `embark-act-all', `embark-export' and `embark-collect' by
+  default work with all candidates defined in the current context. For
+  example, in the minibuffer they operate on all currently completion
+  candidates, or in a dired buffer they work on all marked files (or all
+  files if none are marked). Embark also has a notion of /selection/,
+  where you can accumulate an ad hoc list of targets for these commands
+  to work on.
+
+  The selection is controlled by using the `embark-select' action (which
+  must be run as an action through `embark-act'), bound to `SPC' in
+  `embark-general-map' so that it is always available. Calling this
+  action on a target toggles its membership in the current buffer's
+  Embark selection; that is, it adds it to selection if not selected and
+  removes it from the selection if it was selected. Whenever the
+  selection for a buffer is non-empty, the commands `embark-act-all',
+  `embark-export' and `embark-collect' will act on the selection.
+
+  To deselect all selected targets, you can use the `embark-select'
+  action through `embark-act-all', since this will run `embark-select'
+  on each member of the current selection. Similarly if no targets are
+  selected and you are in a minibuffer completion session, running
+  `embark-select' from `embark-act-all' will select all the current
+  completion candidates.
+
+  This functionality is supported everywhere:
+
+  • In the minibuffer this gives a convenient way to act on several
+    completion candidates that don't follow any simple pattern: just go
+    through the completions selecting the ones you want, then use
+    `embark-act-all'. For example, you could attach several files at
+    once to an email.
+  • For Embark Collect buffers this functionality enables a dired-like
+    workflow, in which you mark various candidates and apply an action
+    to all at once. (It supersedes a previous ad hoc dired-like
+    interface that was implemented only in Embark Collect buffers, with
+    a slightly different interface.)
+  • In a eww buffer you could use this to select various links you wish
+    to follow up on, and then collect them into a buffer. Similarly,
+    while reading Emacs's info manual you could select some symbols you
+    want to read more about and export them to an `apropos-mode' buffer.
+  • You can use selections in regular text or programming buffers to do
+    complex editing operations. For example, if you have three
+    paragraphs scattered over a file and you want to bring them
+    together, you can select each one, insert them all somewhere and
+    finally delete all of them (from their original locations).
+
+
+1.3.2 `embark-live' a live-updating variant of `embark-collect'
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Finally, there is also an `embark-live' variant of the
   `embark-collect' command which automatically updates the collection
   after each change in the source buffer. Users of a completion UI that
   automatically updates and displays the candidate list (such as
-  Vertico, Icomplete, Selectrum, Fido-mode, or MCT) will probably not
-  want to use `embark-live' from the minibuffer as they will then have
-  two live updating displays of the completion candidates!
+  Vertico, Icomplete, Fido-mode, or MCT) will probably not want to use
+  `embark-live' from the minibuffer as they will then have two live
+  updating displays of the completion candidates!
 
   A more likely use of `embark-live' is to be called from a regular
   buffer to display a sort of live updating "table of contents" for the
@@ -333,6 +387,11 @@
   │   ;; Optionally replace the key help with a completing-read interface
   │   (setq prefix-help-command #'embark-prefix-help-command)
   │ 
+  │   ;; Show the Embark target at point via Eldoc.  You may adjust the Eldoc
+  │   ;; strategy, if you want to see the documentation from multiple providers.
+  │   (add-hook 'eldoc-documentation-functions #'embark-eldoc-first-target)
+  │   ;; (setq eldoc-documentation-strategy #'eldoc-documentation-compose-eagerly)
+  │ 
   │   :config
   │ 
   │   ;; Hide the mode line of the Embark live/completions buffers
@@ -386,7 +445,7 @@
   to be the list of candidates and which one is the current candidate.
   Embark works out of the box if you use Emacs's default tab completion,
   the built-in `icomplete-mode' or `fido-mode', or the third-party
-  packages [Vertico], [Selectrum] or [Ivy].
+  packages [Vertico] or [Ivy].
 
   If you are a [Helm] or [Ivy] user you are unlikely to want Embark
   since those packages include comprehensive functionality for acting on
@@ -397,8 +456,6 @@
 [Marginalia] <https://github.com/minad/marginalia>
 
 [Vertico] <https://github.com/minad/vertico>
-
-[Selectrum] <https://github.com/raxod502/selectrum/>
 
 [Ivy] <https://github.com/abo-abo/swiper>
 
@@ -881,26 +938,28 @@
   You can be as fancy as you want with the recognized syntax. Here, to
   keep the example simple, I'll assume the link matches the regexp
   `wikipedia:[[:alnum:]_]+'. We will write a function that looks for a
-  match surrounding point, and returns an improper list of the form
-  `'(url actual-url-of-the-page beg . end)' where `beg' and `end' are
-  the buffer positions where the target starts and ends, and are used by
-  Embark to highlight the target (if you have
-  `embark-highlight-indicator' included in the list
-  `embark-indicators').
+  match surrounding point, and returns a dotted list of the form `'(url
+  URL-OF-THE-PAGE START . END)' where `START' and `END' are the buffer
+  positions bounding the target, and are used by Embark to highlight it
+  if you have `embark-highlight-indicator' included in the list
+  `embark-indicators'. (There are a couple of other options for the
+  return value of a target finder: the bounding positions are optional
+  and a single target finder is allowed to return multiple targets; see
+  the documentation for `embark-target-finders' for details.)
 
   ┌────
   │ (defun my-short-wikipedia-link ()
   │   "Target a link at point of the form wikipedia:Page_Name."
   │   (save-excursion
-  │     (let* ((beg (progn (skip-chars-backward "[:alnum:]_:") (point)))
+  │     (let* ((start (progn (skip-chars-backward "[:alnum:]_:") (point)))
   │ 	   (end (progn (skip-chars-forward "[:alnum:]_:") (point)))
-  │ 	   (str (buffer-substring-no-properties beg end)))
+  │ 	   (str (buffer-substring-no-properties start end)))
   │       (save-match-data
   │ 	(when (string-match "wikipedia:\\([[:alnum:]_]+\\)" str)
   │ 	  `(url
   │ 	    ,(format "https://en.wikipedia.org/wiki/%s"
   │ 		     (match-string 1 str))
-  │ 	    ,beg . ,end))))))
+  │ 	    ,start . ,end))))))
   │ 
   │ (add-to-list 'embark-target-finders 'my-short-wikipedia-link)
   └────
@@ -1130,13 +1189,7 @@
 
   Besides those exporters and candidate collectors, the `embark-consult'
   package provides many subtle tweaks and small integrations between
-  Embark and Consult. For example, if you run `embark-collect' from any
-  of the the `consult-yank' family of commands, you'll see the Embark
-  Collect buffers has full multi-line kill-ring entries with zebra
-  stripes, so you can easily tell where they start and end.
-
-  Some examples of little tweaks provided by `embark-consult' to the
-  behavior of Consult commands when used as Embark actions are:
+  Embark and Consult. Some examples are:
 
   • The asynchronous search commands will start in the directory
     associated to the Embark target if that target is a file, buffer,
