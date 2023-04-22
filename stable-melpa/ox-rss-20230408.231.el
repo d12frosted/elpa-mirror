@@ -5,8 +5,6 @@
 ;; Author: Bastien Guerry <bzg@gnu.org>
 ;; Maintainer: Benedict Wang <foss@bhw.name>
 ;; Version: 0.0.1
-;; Package-Version: 20230408.231
-;; Package-Commit: ee7347fca8f10a4b53075a8d1e3cac3aff6e6dac
 ;; Package-Requires: ((emacs "26.1") (org "9.3"))
 ;; Keywords: org, wp, blog, feed, rss
 ;; Homepage: https://github.com/benedicthw/ox-rss.git
