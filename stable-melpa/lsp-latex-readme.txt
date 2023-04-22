@@ -1,7 +1,7 @@
 Table of Contents
 _________________
 
-1. lsp-mode client for LaTeX.
+1. lsp-mode client for texlab.
 2. How to Use?
 3. Variables
 .. 1. `lsp-latex-texlab-executable'
@@ -46,8 +46,16 @@ _________________
 <https://melpa.org/#/lsp-latex>
 
 
-1 lsp-mode client for LaTeX.
-============================
+1 lsp-mode client for texlab.
+=============================
+
+  While `lsp-tex.el', included by [lsp-mode], provides minimal setting
+  for [texlab], `lsp-latex.el' provides full features of [texlab]!
+
+
+[lsp-mode] <https://github.com/emacs-lsp/lsp-mode>
+
+[texlab] <https://github.com/latex-lsp/texlab>
 
 
 2 How to Use?
@@ -104,34 +112,38 @@ _________________
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   These variables are connected to texlab configuration variables.  See
-  also texlab [documentation].
+  also [texlab official wiki].
    Custom variable in Emacs                      Configuration provided by texlab
   ----------------------------------------------------------------------------------------
    lsp-latex-root-directory                      texlab.rootDirectory
    lsp-latex-build-executable                    texlab.build.executable
    lsp-latex-build-args                          texlab.build.args
-   lsp-latex-build-aux-directory                 texlab.build.outputDirectory
    lsp-latex-build-forward-search-after          texlab.build.forwardSearchAfter
    lsp-latex-build-on-save                       texlab.build.onSave
+   lsp-latex-build-aux-directory                 texlab.auxDirectory
    lsp-latex-forward-search-executable           texlab.forwardSearch.executable
    lsp-latex-forward-search-args                 texlab.forwardSearch.args
-   lsp-latex-chktex-on-edit                      texlab.chktex.onEdit
    lsp-latex-chktex-on-open-and-save             texlab.chktex.onOpenAndSave
+   lsp-latex-chktex-on-edit                      texlab.chktex.onEdit
    lsp-latex-diagnostics-delay                   texlab.diagnosticsDelay
    lsp-latex-diagnostics-allowed-patterns        texlab.diagnostics.allowedPatterns
    lsp-latex-diagnostics-ignored-patterns        texlab.diagnostics.ignoredPatterns
+   lsp-latex-symbol-allowed-patterns             texlab.symbol.allowedPatterns
+   lsp-latex-symbol-ignored-patterns             texlab.symbol.ignoredPatterns
    lsp-latex-bibtex-formatter-line-length        texlab.formatterLineLength
    lsp-latex-bibtex-formatter                    texlab.bibtexFormatter
    lsp-latex-latex-formatter                     texlab.latexFormatter
    lsp-latex-latexindent-local                   texlab.latexindent.local
    lsp-latex-latexindent-modify-line-breaks      texlab.latexindent.modifyLineBreaks
+   lsp-latex-completion-matcher                  texlab.completion.matcher
    lsp-latex-experimental-math-environments      texlab.experimental.mathEnvironments
    lsp-latex-experimental-enum-environments      texlab.experimental.enumEnvironments
    lsp-latex-experimental-verbatim-environments  texlab.experimental.verbatimEnvironments
+   lsp-latex-experimental-citation-commands      texlab.experimental.citationCommands
 
 
-[documentation]
-<https://github.com/latex-lsp/texlab/blob/master/docs/options.md>
+[texlab official wiki]
+<https://github.com/latex-lsp/texlab/wiki/Configuration>
 
 
 4 Build
@@ -161,15 +173,15 @@ _________________
 5.1 `lsp-latex-clean-auxiliary'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  This command removes LaTeX auxiliary files.  It will run \"latexmk
-  -c\" in the project.
+  This command removes LaTeX auxiliary files.  It will run `latexmk -c'
+  in the project.
 
 
 5.2 `lsp-latex-clean-artifacts'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   This command removes LaTeX auxiliary files and artifacts It will run
-  \"latexmk -C\" in the project..
+  `latexmk -C' in the project.
 
 
 5.3 `lsp-latex-change-environment'
@@ -182,12 +194,12 @@ _________________
 6 Forward/inverse search
 ========================
 
-  Forward search and inverse search are available.  See also [document of
-  texlab].
+  Forward search and inverse search are available.  See also [texlab
+  official wiki].
 
 
-[document of texlab]
-<https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md>
+[texlab official wiki]
+<https://github.com/latex-lsp/texlab/wiki/Previewing>
 
 6.1 Forward search
 ~~~~~~~~~~~~~~~~~~
@@ -197,7 +209,7 @@ _________________
   `lsp-latex-forward-search-executable' and
   `lsp-latex-forward-search-args' according to your pdf viewer.
 
-  You can see [document of texlab], but you should replace some VSCode
+  You can see [texlab official wiki], but you should replace some VSCode
   words with Emacs words.  `latex.forwardSearch.executable' should be
   replaced with `lsp-latex-forward-search-executable', and
   `latex.forwardSearch.args' with `lsp-latex-forward-search-args'.  You
@@ -225,7 +237,7 @@ _________________
   | (setq lsp-latex-forward-search-executable "C:/Users/{User}/AppData/Local/SumatraPDF/SumatraPDF.exe")
   | (setq lsp-latex-forward-search-args '("-reuse-instance" "%p" "-forward-search" "%f" "%l"))
   `----
-  while VSCode config with json (see [document of texlab]) is:
+  while VSCode config with json (see [texlab official wiki]) is:
   ,----
   | {
   |   "texlab.forwardSearch.executable": "C:/Users/{User}/AppData/Local/SumatraPDF/SumatraPDF.exe",
@@ -243,14 +255,14 @@ _________________
   `lsp-latex-forward-search'.
 
 
-[document of texlab]
-<https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md>
+[texlab official wiki]
+<https://github.com/latex-lsp/texlab/wiki/Previewing>
 
 [here]
-<https://github.com/latex-lsp/texlab/blob/master/docs/options.md#texlabforwardsearchargs>
+<https://github.com/latex-lsp/texlab/wiki/Configuration#texlabforwardsearchargs>
 
-[document of texlab]
-<https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md#forward-search>
+[texlab official wiki]
+<https://github.com/latex-lsp/texlab/wiki/Previewing#forward-search>
 
 
 6.2 Inverse search
@@ -271,7 +283,7 @@ _________________
   and filename you want to jump to.  Each pdf viewer can provide some
   syntax to replace.
 
-  For example of SmatraPDF (see [document of texlab]), "Add the
+  For example of SmatraPDF (see [texlab official wiki]), "Add the
   following line to your SumatraPDF settings file (Menu -> Settings ->
   Advanced Options):"
   ,----
@@ -281,20 +293,20 @@ _________________
   PDF document".
 
 
-[document of texlab]
-<https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md#inverse-search>
+[texlab official wiki]
+<https://github.com/latex-lsp/texlab/wiki/Previewing#inverse-search>
 
 
 6.3 Examples
 ~~~~~~~~~~~~
 
-  These examples are according to [document of texlab].  Especially,
-  quoted or double-quoted sentences are citation from [document of
-  texlab].
+  These examples are according to [texlab official wiki].  Especially,
+  quoted or double-quoted sentences are citation from [texlab official
+  wiki].
 
 
-[document of texlab]
-<https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md#inverse-search>
+[texlab official wiki]
+<https://github.com/latex-lsp/texlab/wiki/Previewing>
 
 6.3.1 SumatraPDF
 ----------------

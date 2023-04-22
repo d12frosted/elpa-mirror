@@ -3,24 +3,24 @@ Fetcher: github
 Source:  https://github.com/museoa/bqn-mode.git
 
 Updating /mnt/store/melpa/working/bqn-mode/
-Checking out 54fa67ac172f220d61773b2d2257fadf098454d7
+Checking out 202e7e56f516d7e95775d0bc2222ad48f5beb4ff
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/bqn-mode/
-  to /tmp/bqn-modeMbznIm/bqn-mode-20230421.1553
+  to /tmp/bqn-modeZxOS9T/bqn-mode-20230422.211
     bqn-glyph-mode.el -> bqn-glyph-mode.el
     bqn-keymap-mode.el -> bqn-keymap-mode.el
     bqn-mode.el -> bqn-mode.el
-    bqn-symbols-doc.el -> bqn-symbols-doc.el
-Created bqn-mode-20230421.1553.tar containing:
-  bqn-mode-20230421.1553/
-  bqn-mode-20230421.1553/bqn-glyph-mode.el
-  bqn-mode-20230421.1553/bqn-keymap-mode.el
-  bqn-mode-20230421.1553/bqn-mode-pkg.el
-  bqn-mode-20230421.1553/bqn-mode.el
-  bqn-mode-20230421.1553/bqn-symbols-doc.el
-Built bqn-mode in 5.425s, finished at 2023-04-21T15:55:14+0000
+    bqn-symbols.el -> bqn-symbols.el
+Created bqn-mode-20230422.211.tar containing:
+  bqn-mode-20230422.211/
+  bqn-mode-20230422.211/bqn-glyph-mode.el
+  bqn-mode-20230422.211/bqn-keymap-mode.el
+  bqn-mode-20230422.211/bqn-mode-pkg.el
+  bqn-mode-20230422.211/bqn-mode.el
+  bqn-mode-20230422.211/bqn-symbols.el
+Built bqn-mode in 5.132s, finished at 2023-04-22T03:34:39+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 334 Apr 21 12:01 packages/bqn-mode-20230421.119.entry
- 80K -rw-r--r-- 1 root root 80K Apr 21 12:01 packages/bqn-mode-20230421.119.tar
-4.0K -rw-r--r-- 1 root root 335 Apr 21 15:55 packages/bqn-mode-20230421.1553.entry
- 80K -rw-r--r-- 1 root root 80K Apr 21 15:55 packages/bqn-mode-20230421.1553.tar
+4.0K -rw-r--r-- 1 root root 335 Apr 21 23:41 packages/bqn-mode-20230421.1553.entry
+ 80K -rw-r--r-- 1 root root 80K Apr 21 23:41 packages/bqn-mode-20230421.1553.tar
+4.0K -rw-r--r-- 1 root root 334 Apr 22 03:34 packages/bqn-mode-20230422.211.entry
+ 80K -rw-r--r-- 1 root root 80K Apr 22 03:34 packages/bqn-mode-20230422.211.tar
