@@ -3,15 +3,6 @@
 			    ━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Usage
-2. Extending
-3. Todos
-4. Contributing
-
-
 This Emacs package provides a mechanism for REPLs (or comint buffers, in
 Emacs parlance) to display graphics and other types of special content.
 
@@ -23,7 +14,7 @@ Python shell. However, it does more than that.
 First, it is not constrained to graphics, and can display other "MIME
 attachments" such as HTML and LaTeX content. In fact, the Python backend
 of the package implements IPython's [rich display interface]. A use-case
-beyond the displaying of graphics would be to render dataframes as HTML
+beyond the displaying of graphics is to render dataframes as HTML
 tables; this opens up the possibility of typographical improvements over
 the usual pure-text representation. You can also easily define rich
 representations for your own classes.
@@ -55,15 +46,19 @@ snippets, etc.
   │ (add-hook 'inferior-python-mode-hook 'comint-mime-setup)
   └────
 
-  Note that for Python it is important to use the IPython
-  interpreter. It can be configured to have the same look-and-feel as
-  the classic `python' program as follows.
+  For Python it is recommended to use the IPython interpreter.  It can
+  be configured to have the same look-and-feel as the classic `python'
+  program as follows.
 
   ┌────
   │ (when (executable-find "ipython3")
   │   (setq python-shell-interpreter "ipython3"
   │ 	python-shell-interpreter-args "--simple-prompt --classic"))
   └────
+
+  If using the regular `python' interpreter, only Matplotlib figures are
+  supported, and you need to call `plt.show()' and `plt.close()'
+  manually to display and create new figures.
 
 
 2 Extending
@@ -100,9 +95,7 @@ snippets, etc.
 3 Todos
 ═══════
 
-  • It should be possible to support at least Matplotlib in the standard
-    Python interpreter.
-  • Improve the HTML rendering for numeric tables
+  • Improve the HTML rendering of numeric tables
 
 
 4 Contributing

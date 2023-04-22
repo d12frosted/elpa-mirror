@@ -476,7 +476,7 @@
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
 	       (:commit . "fd68a33eb43b3cbd44fed767f48e230382903592"))])
  (comint-mime .
-	      [(0 2)
+	      [(0 3)
 	       ((emacs
 		 (28 1)))
 	       "Display content of various MIME types in comint buffers" tar
@@ -485,7 +485,7 @@
 		(:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 		(:authors
 		 ("Augusto Stoffel" . "arstoffel@gmail.com"))
-		(:commit . "9f480e76851d163e0aba0eaf0299d8d15bc0ee25"))])
+		(:commit . "91b2926d2bf40a31a55fdb80c7dc21652bcf9417"))])
  (compact-docstrings .
 		     [(0 2)
 		      nil "Shrink blank lines in docstrings and doc comments" single
