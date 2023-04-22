@@ -105,7 +105,7 @@ TODO
     could do -copy/-inplace variants for more functions, consider doing
     so for flatten
 
-    list* returns a non-list on single elt, our function throws an error
+    cl-list* returns a non-list on single elt, our function throws an error
 
 ; License
 

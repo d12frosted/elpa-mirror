@@ -5,8 +5,8 @@
 ;; Author: Roland Walker <walker@pobox.com>
 ;; Homepage: http://github.com/rolandwalker/list-utils
 ;; URL: http://raw.githubusercontent.com/rolandwalker/list-utils/master/list-utils.el
-;; Package-Version: 20210111.1522
-;; Package-Commit: ca9654cd1418e874c876c6b3b7d4cd8339bfde77
+;; Package-Version: 20230422.1740
+;; Package-Commit: f02dcef36330871855346f9eab97eef58d323d9a
 ;; Version: 0.4.6
 ;; Last-Updated:  2 May 2020
 ;; EmacsWiki: ListUtils
@@ -122,7 +122,7 @@
 ;;     could do -copy/-inplace variants for more functions, consider doing
 ;;     so for flatten
 ;;
-;;     list* returns a non-list on single elt, our function throws an error
+;;     cl-list* returns a non-list on single elt, our function throws an error
 ;;
 ;;; License
 ;;
@@ -258,7 +258,7 @@ A hash-table-test is defined with the same name."
 
 ;;;###autoload
 (progn
-  (require 'cl)
+  (require 'cl-macs)
   (cl-defstruct tconc head tail))
 
 ;;;###autoload
@@ -307,7 +307,7 @@ elements, eg
 
     '(1 2 3 4 . 5)
 
-Such improper lists are produced by `list*'."
+Such improper lists are produced by `cl-list*'."
   (let ((len (safe-length cell)))
     (when (and (consp cell)
                (> len 0)
@@ -324,7 +324,7 @@ copies of any improper lists contained within.
 Optional RECUR-INTERNAL is for internal use only.
 
 Improper lists consist of proper lists consed to a final
-element, and are produced by `list*'."
+element, and are produced by `cl-list*'."
   (cl-assert (or recur-internal (listp list)) nil "LIST is not a list")
   (cond
     ((not tree)
@@ -348,7 +348,7 @@ element, and are produced by `list*'."
   "Make a cons cell or improper LIST into a proper list.
 
 Improper lists consist of proper lists consed to a final
-element, and are produced by `list*'.
+element, and are produced by `cl-list*'.
 
 If optional TREE is non-nil, traverse LIST, making any
 improper lists contained within into proper lists.
@@ -375,7 +375,7 @@ Modifies LIST and returns the modified value."
   "Copy a proper LIST into an improper list.
 
 Improper lists consist of proper lists consed to a final
-element, and are produced by `list*'.
+element, and are produced by `cl-list*'.
 
 If optional TREE is non-nil, traverse LIST, making proper
 copies of any improper lists contained within.
@@ -405,7 +405,7 @@ Optional RECUR-INTERNAL is for internal use only."
   "Make proper LIST into an improper list.
 
 Improper lists consist of proper lists consed to a final
-element, and are produced by `list*'.
+element, and are produced by `cl-list*'.
 
 If optional TREE is non-nil, traverse LIST, making any
 proper lists contained within into improper lists.

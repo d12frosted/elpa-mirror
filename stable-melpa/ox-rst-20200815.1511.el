@@ -18,6 +18,8 @@
 
 ;; Author: Masanao Igarashi <syoux2@gmail.com>
 ;; Keywords: org, rst, reST, reStructuredText
+;; Package-Version: 20200815.1511
+;; Package-Commit: 99fa790da55b57a3f2e9aa187493ba434a64250e
 ;; Version: 0.3
 ;; URL: https://github.com/msnoigrs/ox-rst
 ;; Package-Requires: ((emacs "25.1") (org "8.3"))

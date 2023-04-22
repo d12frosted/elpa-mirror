@@ -2,8 +2,8 @@
 
 ;; Author: Nicolas Martyanoff <nicolas@n16f.net>
 ;; URL: https://github.com/galdor/chroma
-;; Package-Version: 20230417.1705
-;; Package-Commit: 6d5fb9f28cb171e083a3a529e26a3c1426accc74
+;; Package-Version: 20230422.1454
+;; Package-Commit: ea48af815988cbae65b8f48271bd98340ecc23e0
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -115,6 +115,12 @@ not represent a HSL color."
               (/ (round (* s 100.0)) 100.0)
               (/ (round (* l 100.0)) 100.0)))))))
 
+(defun chroma-rgb-string-to-hsl-string (string)
+  "Convert an HSL color string to an RGB color string."
+  (chroma-format-hsl
+   (chroma-rgb-to-hsl
+    (chroma-parse-rgb string))))
+
 (defun chroma-hsl-to-rgb (color)
   "Convert an RGB color to an HSL color."
   (let* ((h (nth 0 color))
@@ -138,9 +144,113 @@ not represent a HSL color."
                 (list c 0.0 x)))))
     (mapcar (lambda (v) (round (* (+ v m) 255.0))) rgb)))
 
+(defun chroma-hsl-string-to-rgb-string (string)
+  "Convert an RGB color string to an HSL color string."
+  (chroma-format-rgb
+   (chroma-hsl-to-rgb
+    (chroma-parse-hsl string))))
+
+(defun chroma--color-string-at-point-function (regexp)
+  (lambda (point)
+    (save-excursion
+      (goto-char point)
+      (let ((line-start (line-beginning-position))
+            (line-end (line-end-position)))
+        (goto-char line-start)
+        (catch 'color
+          (while (re-search-forward regexp line-end t)
+            (let ((match-start (match-beginning 0))
+                  (match-end (match-end 0)))
+              (when (<= match-start point match-end)
+                (let ((color-string (buffer-substring-no-properties
+                                     match-start match-end)))
+                  (throw 'color
+                         (list color-string match-start match-end)))))))))))
+
+(defun chroma--color-at-point-function (regexp parsing-fn)
+  (lambda (point)
+    (cl-multiple-value-bind (string start end)
+        (funcall (chroma--color-string-at-point-function regexp) point)
+      (list (funcall parsing-fn string) start end))))
+
+(defalias 'chroma-rgb-color-at-point
+  (chroma--color-at-point-function chroma-rgb-regexp 'chroma-parse-rgb)
+  "Return a list containing the value, start and end of the RGB
+color at POINT or NIL if POINT is not positioned on a RGB color.")
+
+(defalias 'chroma-rgb-color-string-at-point
+  (chroma--color-string-at-point-function chroma-rgb-regexp)
+  "Return a list containing the string, start and end of the RGB
+color at POINT or NIL if POINT is not positioned on a RGB color.")
+
+(defalias 'chroma-hsl-color-at-point
+  (chroma--color-at-point-function chroma-hsl-regexp 'chroma-parse-hsl)
+  "Return a list containing the value, start and end of the HSL
+color at POINT or NIL if POINT is not positioned on a HSL color.")
+
+(defalias 'chroma-hsl-color-string-at-point
+  (chroma--color-string-at-point-function chroma-hsl-regexp)
+  "Return a list containing the string, start and end of the HSL
+color at POINT or NIL if POINT is not positioned on a HSL color.")
+
+(defun chroma--color-conversion-dwim-function (regexp color-string-at-point-fn
+                                                      color-conversion-fn)
+  (lambda (start end)
+    (interactive "r")
+    (chroma--with-undo-amalgamate
+     (cond
+      ((use-region-p)
+       (save-restriction
+         (narrow-to-region start end)
+         (goto-char (point-min))
+         (while (re-search-forward regexp (point-max) t)
+           (let ((match-start (match-beginning 0))
+                 (match-end (match-end 0))
+                 (color-string (match-string-no-properties 0)))
+             (replace-region-contents (match-beginning 0) (match-end 0)
+                                      (lambda ()
+                                        (funcall color-conversion-fn
+                                                 color-string)))))))
+      (t
+       (cl-multiple-value-bind (color-string start end)
+           (funcall color-string-at-point-fn (point))
+         (replace-region-contents start end
+                                  (lambda ()
+                                    (funcall color-conversion-fn
+                                             color-string)))))))))
+
+(defalias 'chroma-hsl-to-rgb-dwim
+  (chroma--color-conversion-dwim-function chroma-hsl-regexp
+                                          'chroma-hsl-color-string-at-point
+                                          'chroma-hsl-string-to-rgb-string)
+  "Convert HSL colors to RGB colors either in the current region if
+it is active or undeer the point if it is not.")
+
+(defalias 'chroma-rgb-to-hsl-dwim
+  (chroma--color-conversion-dwim-function chroma-rgb-regexp
+                                          'chroma-rgb-color-string-at-point
+                                          'chroma-rgb-string-to-hsl-string)
+  "Convert RGB colors to HSL colors either in the current region if
+it is active or undeer the point if it is not.")
+
 (defun chroma--anchored-regexp (regexp)
   "Return a the fully anchored version of REGEXP."
   (concat "^" regexp "$"))
+
+(defmacro chroma--with-undo-amalgamate (&rest body)
+  "Evaluate BODY as a single undo group. To be replaced by
+`with-undo-amalgamate' once Emacs 29 is released."
+  (let ((handle (make-symbol "--handle--")))
+    `(let ((,handle (prepare-change-group))
+           (undo-outer-limit nil)
+           (undo-limit most-positive-fixnum)
+           (undo-strong-limit most-positive-fixnum))
+       (unwind-protect
+           (progn
+             (activate-change-group ,handle)
+             ,@body)
+         (accept-change-group ,handle)
+         (undo-amalgamate-change-group ,handle)))))
 
 (provide 'chroma)
 
