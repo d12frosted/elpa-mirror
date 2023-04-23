@@ -4,8 +4,8 @@
 ;; Maintainer: Emacs User Group Berlin <emacs-berlin@emacs-berlin.org>
 
 ;; Version: 0.1
-;; Package-Version: 20230416.1201
-;; Package-Commit: 298376470548f211ed27caf753f550b064072bba
+;; Package-Version: 20230423.707
+;; Package-Commit: c184ff7a3cbcd28439aba7c3531ffebf0cd30b3a
 
 ;; URL: https://github.com/emacs-berlin/syntactic-close
 
@@ -842,6 +842,10 @@ Optional argument PPS is result of a call to function ‘parse-partial-sexp’"
 	  (save-excursion (goto-char (nth 8 pps)) (looking-at "[\"']\\{1,3\\}") (match-string-no-properties 0))))
      ((nth 1 pps)
       (syntactic-close-pure-syntax pps))
+     ;; ((looking-back "^[ 	]+if[ 	]+.*" (line-beginning-position))
+     ;; py-block-or-clause-re
+     ((looking-back "[ 	]*\\_<\\(async \\(?:class\\|def\\|for\\|with\\)\\|c\\(?:ase\\|lass\\)\\|def\\|e\\(?:l\\(?:if\\|se\\)\\|xcept\\)\\|f\\(?:inally\\|or\\)\\|if\\|match\\|try\\|w\\(?:hile\\|ith\\)\\)\\_>[( 	]*.*" (line-beginning-position))
+      ":")
      (t (syntactic-close--generic (point) nil
 				  (if (functionp 'py--beginning-of-statement-position)
 				      (py--beginning-of-statement-position)

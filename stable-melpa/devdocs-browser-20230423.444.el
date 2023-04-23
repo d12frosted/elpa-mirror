@@ -4,8 +4,8 @@
 
 ;; Author: blahgeek <i@blahgeek.com>
 ;; URL: https://github.com/blahgeek/emacs-devdocs-browser
-;; Package-Version: 20230112.1554
-;; Package-Commit: c316c93306527fcb4069adde94402a48605d42d5
+;; Package-Version: 20230423.444
+;; Package-Commit: ef7686e4ff4ecab42e1b4a1a5d079bcf947a5b71
 ;; Version: 20210525
 ;; Keywords: docs, help, tools
 ;; Package-Requires: ((emacs "27.1"))
@@ -321,6 +321,8 @@ Can be used as `imenu-create-index-function'."
                         (h5 . devdocs-browser--eww-tag-h5))))
   (setq-local imenu-create-index-function
               #'devdocs-browser--imenu-create-index)
+  (when (boundp 'eww-auto-rename-buffer)
+    (setq-local eww-auto-rename-buffer nil))
   (advice-add 'shr-expand-url :filter-return #'devdocs-browser--eww-fix-url)
   (advice-add 'eww-display-html :filter-return #'devdocs-browser--eww-recenter-advice)
   (advice-add 'eww-browse-url :filter-args #'devdocs-browser--eww-browse-url-new-window-advice)
