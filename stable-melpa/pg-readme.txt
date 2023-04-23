@@ -7,9 +7,10 @@ capable of automatic type coercions from a range of SQL types to the
 equivalent Emacs Lisp type. This is a low level API, and won't be
 useful to end users.
 
-Authentication methods: SCRAM-SHA-256 (the default authentication
-method since PostgreSQL version 14) and MD5 authentication are
-implemented. Encrypted (TLS) connections are supported.
+Supported features:
+ - SCRAM-SHA-256 authentication (the default method since PostgreSQL version 14)
+ - MD5 authentication
+ - Encrypted (TLS) connections
 
 
 Entry points
