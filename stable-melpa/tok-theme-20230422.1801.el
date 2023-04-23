@@ -2,8 +2,8 @@
 
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
-;; Package-Version: 20230328.2146
-;; Package-Commit: c56aa7337bf71d4dac491aa2f9623365c078a604
+;; Package-Version: 20230422.1801
+;; Package-Commit: 2fcf494fe5f3f292bb5dab180fe2dbfdcc75249e
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -36,12 +36,16 @@
 
 ;;; Commentary:
 
-;; Tok is a minimal light monochromatic theme for Emacs in the spirit of Zmacs and Smalltalk-80.
+;; Tok is a minimal light monochromatic theme for Emacs in the spirit
+;; of Zmacs and Smalltalk-80.
 
 ;;; Code:
 
 (deftheme tok
-  "Minimal light monochromatic theme for Emacs in the spirit of Zmacs and Smalltalk-80")
+  "Minimal light monochromatic theme for Emacs in the spirit of
+Zmacs and Smalltalk-80"
+  :background-mode 'light
+  :kind 'color-scheme)
 
 (let ((class '((class color) (min-colors 89))))
   (custom-theme-set-faces
@@ -62,10 +66,10 @@
    `(error ((,class (:weight bold :foreground "red"))))
    `(warning ((,class (:weight bold :foreground "orange"))))
    `(success ((,class (:weight bold :foreground "green"))))
-   `(fringe ((t (nil))))
+   `(fringe ((,class (nil))))
    `(button ((,class (:underline t))))
    `(vertical-border ((,class (:foreground "black"))))
-   `(minibuffer-prompt ((t (nil))))
+   `(minibuffer-prompt ((,class (nil))))
 
    ;; Line-numbes
    `(line-number ((,class (:foreground "grey75"))))
@@ -88,32 +92,32 @@
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-string-face ((,class (:italic t :weight light))))
    `(font-lock-doc-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-doc-markup-face ((t (nil))))
-   `(font-lock-keyword-face ((t (nil))))
-   `(font-lock-builtin-face ((t (nil))))
-   `(font-lock-function-name-face ((t (nil))))
-   `(font-lock-variable-name-face ((t (nil))))
-   `(font-lock-type-face ((t (nil))))
-   `(font-lock-constant-face ((t (nil))))
-   `(font-lock-warning-face ((t (nil))))
-   `(font-lock-negation-char-face ((t (nil))))
+   `(font-lock-doc-markup-face ((,class (nil))))
+   `(font-lock-keyword-face ((,class (nil))))
+   `(font-lock-builtin-face ((,class (nil))))
+   `(font-lock-function-name-face ((,class (nil))))
+   `(font-lock-variable-name-face ((,class (nil))))
+   `(font-lock-type-face ((,class (nil))))
+   `(font-lock-constant-face ((,class (nil))))
+   `(font-lock-warning-face ((,class (nil))))
+   `(font-lock-negation-char-face ((,class (nil))))
    `(font-lock-preprocessor-face ((,class (:inherit font-lock-comment-face))))
-   `(font-lock-regexp-grouping-backslash ((t (nil))))
-   `(font-lock-regexp-grouping-construct ((t (nil))))
+   `(font-lock-regexp-grouping-backslash ((,class (nil))))
+   `(font-lock-regexp-grouping-construct ((,class (nil))))
 
    ;; Dired
    `(dired-directory ((,class (:weight bold))))
    `(dired-broken-symlink ((,class (:inherit error))))
 
    ;; ERC
-   `(erc-timestamp-face ((t (nil))))
+   `(erc-timestamp-face ((,class (nil))))
 
    ;; sh
-   `(sh-heredoc ((t (nil))))
-   `(sh-quoted-exec ((t (nil))))
+   `(sh-heredoc ((,class (nil))))
+   `(sh-quoted-exec ((,class (nil))))
 
    ;; Org
-   `(org-block ((t (nil))))
+   `(org-block ((,class (nil))))
 
    ;; Outline
    `(outline-1 ((,class (:weight bold))))
@@ -131,19 +135,19 @@
    `(show-paren-mismatch ((,class (:inherit error))))
 
    ;; Terraform
-   `(terraform--resource-name-face ((t (nil))))
-   `(terraform--resource-type-face ((t (nil))))
+   `(terraform--resource-name-face ((,class (nil))))
+   `(terraform--resource-type-face ((,class (nil))))
 
    ;; Markdown
    `(markdown-header-face ((,class (:inherit outline-1))))
-   `(markdown-header-delimiter-face ((t (nil))))
+   `(markdown-header-delimiter-face ((,class (nil))))
    `(markdown-metadata-key-face ((,class (:inherit font-lock-comment-face))))
    `(markdown-metadata-value-face ((,class (:inherit font-lock-comment-face))))
-   `(markdown-blockquote-face ((t (nil))))
-   `(markdown-pre-face ((t (nil))))
+   `(markdown-blockquote-face ((,class (nil))))
+   `(markdown-pre-face ((,class (nil))))
 
    ;; Magit
-   `(magit-diff-file-heading ((t (nil))))
+   `(magit-diff-file-heading ((,class (nil))))
    `(magit-section-heading ((,class (:weight bold))))
    `(magit-diff-added ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
                                 :background "#ddffdd"))))
@@ -156,7 +160,7 @@
 
    ;; Completions
    `(completions-common-part ((,class (:weight bold))))
-   `(completions-first-difference ((t (nil))))
+   `(completions-first-difference ((,class (nil))))
 
    ;; Corfu
    `(corfu-default ((,class (:background "white"))))
