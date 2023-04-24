@@ -4,8 +4,8 @@
 
 ;; Author: Alex Figl-Brick <alex@alexbrick.me>
 ;; Version: 0.1
-;; Package-Version: 20230119.1153
-;; Package-Commit: 28eb29a99a5f334e7e7c0e2f2ada23159f114bc5
+;; Package-Version: 20230424.916
+;; Package-Commit: c78b81573422435cfdb180dcbf42371c3f7de50d
 ;; Package-Requires: ((emacs "29"))
 ;; URL: https://gitlab.com/bricka/emacs-kotlin-ts-mode
 
@@ -91,6 +91,17 @@ This function is heavily inspired by `js--fontify-template-string'."
       (setq font-beg (treesit-node-end child)
             child (treesit-node-next-sibling child)))))
 
+(defun kotlin-ts-mode--fontify-not-is (node override start end &rest _)
+  "Fontify the '!is' string inside of type checks.
+
+See `treesit-font-lock-rules' for more details.  NODE is the string node.  START
+and END mark the region to be fontified.  OVERRIDE is the override flag."
+  (let ((start-pos (treesit-node-start node)))
+    (treesit-fontify-with-override
+     start-pos (1+ start-pos) 'font-lock-negation-char-face override start end)
+    (treesit-fontify-with-override
+     (1+ start-pos) (+ start-pos 3) 'font-lock-keyword-face override start end)))
+
 ;; Based on https://github.com/fwcd/tree-sitter-kotlin/pull/50
 (defvar kotlin-ts-mode--treesit-settings
   (when (treesit-available-p)
@@ -154,7 +165,8 @@ This function is heavily inspired by `js--fontify-template-string'."
        (catch_block "catch" @font-lock-keyword-face)
        (finally_block "finally" @font-lock-keyword-face)
 
-       (type_test "is" @font-lock-keyword-face)
+       "is" @font-lock-keyword-face
+       "!is" @kotlin-ts-mode--fontify-not-is
 
        (prefix_expression "!" @font-lock-negation-char-face))
 
@@ -318,6 +330,7 @@ This function is heavily inspired by `js--fontify-template-string'."
        ((parent-is "finally_block") parent-bol ,offset)
        ((parent-is "function_body") parent-bol ,offset)
        ((parent-is "lambda_literal") parent-bol ,offset)
+       ((parent-is "primary_constructor") parent-bol ,offset)
        ((parent-is "secondary_constructor") parent-bol ,offset)
        ((parent-is "try_expression") parent-bol ,offset)
        ((parent-is "value_arguments") parent-bol ,offset)
