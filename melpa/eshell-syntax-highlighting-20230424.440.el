@@ -4,8 +4,8 @@
 
 ;; Author: Alex Kreisher <akreisher18@gmail.com>
 ;; Version: 0.4
-;; Package-Version: 20230409.655
-;; Package-Commit: f38768bb3b557e884fdcc624daa3bce151279e0b
+;; Package-Version: 20230424.440
+;; Package-Commit: e468c9d74f28e8acbdf286c554b1f849ce98ab45
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: convenience
 ;; URL: https://github.com/akreisher/eshell-syntax-highlighting
@@ -133,13 +133,15 @@
       (executable-find command)
     (executable-find command t)))
 
-(defun eshell-syntax-highlighting--goto-string-end (delim)
-  "Find the end of a string delimited by DELIM."
-  (unless
-      (re-search-forward
-	   ;; Ignore escaped delimiters.
-       (concat "\\(\\`\\|[^\\\\]\\)" delim) nil t)
-          (goto-char (point-max))))
+(defun eshell-syntax-highlighting--find-unescaped (seq end)
+  (if (looking-at (rx (* "\\\\") (regexp seq)))
+      (when (<= (match-end 0) end)
+        (goto-char (match-end 0))
+        (point))
+    (re-search-forward (rx (| (: (not "\\") (+ "\\\\"))
+                              (not "\\"))
+                           (regexp seq))
+                       end end)))
 
 (defun eshell-syntax-highlighting--highlight (beg end type)
   "Highlight word from BEG to END based on TYPE."
@@ -161,12 +163,12 @@
            (t 'eshell-syntax-highlighting-default-face))))
     (add-face-text-property beg end face)))
 
-(defun eshell-syntax-highlighting--highlight-elisp (beg)
-  "Highlight Emacs Lisp starting at BEG natively through a temp buffer."
-  (let* ((end (condition-case
+(defun eshell-syntax-highlighting--highlight-elisp (beg end)
+  "Highlight Emacs Lisp in region (BEG, END) natively through a temp buffer."
+  (let* ((elisp-end (condition-case
                   nil (scan-sexps beg 1)
-                (scan-error (point-max))))
-         (str (buffer-substring-no-properties beg end)))
+                (scan-error end)))
+         (str (buffer-substring-no-properties beg elisp-end)))
     (if (not eshell-syntax-highlighting-highlight-elisp)
         (eshell-syntax-highlighting--highlight beg (point) 'default)
       (goto-char beg)
@@ -179,91 +181,129 @@
          (font-lock-default-fontify-region (point-min) (point-max) nil)
          (buffer-string)))
       (delete-region (point) (+ (point) (length str))))
-    (goto-char end)))
+    (goto-char elisp-end)))
 
-(defun eshell-syntax-highlighting--highlight-filename (beg)
-  "Highlight argument file starting at BEG."
-  (re-search-forward eshell-syntax-highlighting--word-boundary-regexp (line-end-position))
+(defun eshell-syntax-highlighting--highlight-substitutions (beg end)
+  "Find and highlight command substitutions in region (BEG, END)."
+  (let ((curr-point (point)))
+    (goto-char beg)
+    (while (and (eshell-syntax-highlighting--find-unescaped "\\$" end) (< (point) end))
+        (cond
+         ((looking-at "{\\|<")
+          ;; Command substitution
+          (pprint "here")
+          (let* ((match-symbol (if (string-equal (match-string-no-properties 0) "{") "}" ">"))
+                 (subs-start (+ (point) 1))
+                 (subs-end (progn (eshell-syntax-highlighting--find-unescaped match-symbol end)
+                                  (backward-char)
+                                  (when (not (looking-at match-symbol))
+                                    (forward-char))
+                                  (point))))
+            (goto-char subs-start)
+            (eshell-syntax-highlighting--highlight (- subs-start 2) (point) 'default)
+            (eshell-syntax-highlighting--parse-and-highlight 'command subs-end)
+            (when (looking-at match-symbol)
+              (forward-char)
+              (eshell-syntax-highlighting--highlight (- (point) 1) (point) 'default))))
+         ((looking-at "(")
+          ;; Elisp substitution
+          (eshell-syntax-highlighting--highlight-elisp (point) end))
+         (t
+          ;; Variable substitution
+          (let ((start (- (point) 1)))
+            (re-search-forward "[^[:space:]\\[&|;]*" end t)
+            ;; Handle variable indexing
+            (if (looking-at "\\[") (eshell-syntax-highlighting--find-unescaped "]" end))
+            (eshell-syntax-highlighting--highlight start (point) 'default)))))
+    (goto-char curr-point)))
+
+
+(defun eshell-syntax-highlighting--highlight-filename (beg end)
+  "Highlight argument file in region (BEG, END)."
+  (re-search-forward eshell-syntax-highlighting--word-boundary-regexp (min end (line-end-position)))
   (eshell-syntax-highlighting--highlight
    beg (point)
    (cond
     ((file-exists-p (match-string 0)) 'file-arg)
     (t 'default))))
 
-(defun eshell-syntax-highlighting--parse-command (beg command)
-  "Parse COMMAND starting at BEG and highlight."
-  (cond
+(defun eshell-syntax-highlighting--parse-command (beg end command)
+  "Parse COMMAND in region (BEG, END) and highlight."
+  (let ((next-expected
+         (cond
+          ;; Command wrappers (sudo, time)
+          ((string-match "^\\(\\*\\|eshell/\\)?\\(sudo\\|time\\)$" command)
+           (eshell-syntax-highlighting--highlight
+            beg (point)
+            (if (and (match-string 1 command)
+                     (string-equal (match-string 1 command) "eshell/"))
+                'lisp
+              'command))
+           'command)
 
-   ;; Command wrappers (sudo, time)
-   ((string-match "^\\(\\*\\|eshell/\\)?\\(sudo\\|time\\)$" command)
-    (eshell-syntax-highlighting--highlight
-     beg (point)
-     (if (and (match-string 1 command)
-              (string-equal (match-string 1 command) "eshell/"))
-         'lisp
-       'command))
-    (eshell-syntax-highlighting--parse-and-highlight 'command))
+          ;; Executable file
+          ((and (string-match-p ".*/.+" command)
+                (file-regular-p command)
+                (file-executable-p command))
+           (eshell-syntax-highlighting--highlight beg (point) 'command)
+           'argument)
 
-   ;; Executable file
-   ((and (string-match-p ".*/.+" command)
-         (file-regular-p command)
-         (file-executable-p command))
-        (eshell-syntax-highlighting--highlight beg (point) 'command)
-        (eshell-syntax-highlighting--parse-and-highlight 'argument))
+          ;; Explicit external command
+          ((and (char-equal eshell-explicit-command-char (aref command 0))
+                (eshell-syntax-highlighting--executable-find (substring command 1 nil)))
+           (eshell-syntax-highlighting--highlight beg (point) 'command)
+           'argument)
 
-   ;; Explicit external command
-   ((and (char-equal eshell-explicit-command-char (aref command 0))
-         (eshell-syntax-highlighting--executable-find (substring command 1 nil)))
-    (eshell-syntax-highlighting--highlight beg (point) 'command)
-    (eshell-syntax-highlighting--parse-and-highlight 'argument))
+          ;; Eshell alias
+          ((eshell-lookup-alias command)
+           (eshell-syntax-highlighting--highlight beg (point) 'alias)
+           'argument)
 
-   ;; Eshell alias
-   ((eshell-lookup-alias command)
-    (eshell-syntax-highlighting--highlight beg (point) 'alias)
-    (eshell-syntax-highlighting--parse-and-highlight 'argument))
+          ;; Built-in
+          ((functionp (intern (concat "eshell/" command)))
+           (eshell-syntax-highlighting--highlight beg (point) 'command)
+           'argument)
 
-   ;; Built-in
-   ((functionp (intern (concat "eshell/" command)))
-    (eshell-syntax-highlighting--highlight beg (point) 'command)
-    (eshell-syntax-highlighting--parse-and-highlight 'argument))
+          ;; Prioritized lisp function
+          ((and eshell-prefer-lisp-functions
+                (functionp (intern command)))
+           (eshell-syntax-highlighting--highlight beg (point) 'lisp)
+           'argument)
 
-   ;; Prioritized lisp function
-   ((and eshell-prefer-lisp-functions
-         (functionp (intern command)))
-    (eshell-syntax-highlighting--highlight beg (point) 'lisp)
-    (eshell-syntax-highlighting--parse-and-highlight 'argument))
+          ;; Executable
+          ((eshell-syntax-highlighting--executable-find command)
+           (eshell-syntax-highlighting--highlight beg (point) 'command)
+           'argument)
 
-   ;; Executable
-   ((eshell-syntax-highlighting--executable-find command)
-    (eshell-syntax-highlighting--highlight beg (point) 'command)
-    (eshell-syntax-highlighting--parse-and-highlight 'argument))
+          ;; Lisp
+          ((functionp (intern command))
+           (eshell-syntax-highlighting--highlight beg (point) 'lisp)
+           'argument)
 
-   ;; Lisp
-   ((functionp (intern command))
-    (eshell-syntax-highlighting--highlight beg (point) 'lisp)
-    (eshell-syntax-highlighting--parse-and-highlight 'argument))
+          ;; For loop
+          ;; Disable highlighting from here on out
+          ((string-equal "for" command)
+           (eshell-syntax-highlighting--highlight beg end 'default)
+           (goto-char end)
+           'argument)
 
-   ;; For loop
-   ;; Disable highlighting from here on out
-   ((string-equal "for" command)
-    (eshell-syntax-highlighting--highlight beg (point-max) 'default))
+          ;; Directory for cd
+          ((and eshell-cd-on-directory
+                (file-directory-p command))
+           (eshell-syntax-highlighting--highlight beg (point) 'directory)
+           'argument)
 
-   ;; Directory for cd
-   ((and eshell-cd-on-directory
-         (file-directory-p command))
-    (eshell-syntax-highlighting--highlight beg (point) 'directory)
-    (eshell-syntax-highlighting--parse-and-highlight 'argument))
+          ;; Invalid command
+          (t
+           (eshell-syntax-highlighting--highlight beg (point) 'invalid)
+           'argument))))
+    (eshell-syntax-highlighting--highlight-substitutions beg end)
+    (eshell-syntax-highlighting--parse-and-highlight next-expected end)))
 
-   ;; Invalid command
-   (t
-    (eshell-syntax-highlighting--highlight beg (point) 'invalid)
-    (eshell-syntax-highlighting--parse-and-highlight 'argument))))
-
-(defun eshell-syntax-highlighting--parse-and-highlight (expected)
-  "Parse and highlight from point, expecting token of type EXPECTED."
-
+(defun eshell-syntax-highlighting--parse-and-highlight (expected end)
+  "Parse and highlight from point until END, expecting token of type EXPECTED."
   ;; Whitespace
-  (when (re-search-forward "\\s-*" nil t)
+  (when (re-search-forward "\\s-*" end t)
     (eshell-syntax-highlighting--highlight
      (match-beginning 0) (match-end 0) 'default))
 
@@ -271,77 +311,82 @@
     (cond
      ;; Exit at eol
      ((eolp) nil)
+     ((>= beg end) nil)
 
      ;; Redirection
      ((and (looking-at ">") (eq expected 'argument))
-      (re-search-forward ">+\\s-*")
+      (re-search-forward ">+\\s-*" end t)
       (if (not (looking-at "#<"))
           ;; Redirect to normal file.
-          (eshell-syntax-highlighting--highlight-filename (point))
+          (eshell-syntax-highlighting--highlight-filename (point) end)
         ;; Redirection to buffer #<buffer-name>.
-        (eshell-syntax-highlighting--goto-string-end ">")
+        (eshell-syntax-highlighting--find-unescaped ">" end)
         (eshell-syntax-highlighting--highlight beg (point) 'default))
-      (eshell-syntax-highlighting--parse-and-highlight 'argument))
+      (eshell-syntax-highlighting--parse-and-highlight 'argument end))
 
      ;; Comments
      ((looking-at "#")
-      (eshell-syntax-highlighting--highlight beg (point-max) 'comment))
+      (eshell-syntax-highlighting--highlight beg end 'comment))
 
      ;; Options
      ((looking-at "-")
-      (re-search-forward eshell-syntax-highlighting--word-boundary-regexp (line-end-position))
+      (re-search-forward eshell-syntax-highlighting--word-boundary-regexp (min end (line-end-position)))
       (eshell-syntax-highlighting--highlight beg (point) 'option)
-      (eshell-syntax-highlighting--parse-and-highlight expected))
+      (eshell-syntax-highlighting--highlight-substitutions beg end)
+      (eshell-syntax-highlighting--parse-and-highlight expected end))
 
      ;; Line-wrapping backslash
      ((looking-at "\\\\\n")
-      (goto-char (match-end 0))
+      (goto-char (min end (match-end 0)))
       (eshell-syntax-highlighting--highlight beg (point) 'default)
-      (eshell-syntax-highlighting--parse-and-highlight expected))
+      (eshell-syntax-highlighting--parse-and-highlight expected end))
 
      ;; Delimiters
-     ((looking-at "|+\\|&+\\|;")
-      (goto-char (match-end 0))
+     ((looking-at "\\(\\(|\\|&\\|;\\)+\\s-*\\)+")
+      (goto-char (min end (match-end 0)))
       (if (eq expected 'command)
           (eshell-syntax-highlighting--highlight beg (point) 'invalid)
         (eshell-syntax-highlighting--highlight beg (point) 'delimiter))
-      (eshell-syntax-highlighting--parse-and-highlight 'command))
+      (eshell-syntax-highlighting--parse-and-highlight 'command end))
+
 
      ;; Commands
      ((eq expected 'command)
       (cond
        ;; Parenthesized Emacs Lisp
        ((looking-at-p "(")
-        (eshell-syntax-highlighting--highlight-elisp beg)
-        (eshell-syntax-highlighting--parse-and-highlight 'argument))
+        (eshell-syntax-highlighting--highlight-elisp beg end)
+        (eshell-syntax-highlighting--parse-and-highlight 'argument end))
 
 	   ;; Environment variable
-	   ((looking-at "[a-zA-Z0-9_]+=")
-		(goto-char (match-end 0))
+	   ((re-search-forward "[a-zA-Z0-9_]+=" end t)
 		(if (looking-at "[\"']")
-			(eshell-syntax-highlighting--goto-string-end (match-string 0))
-		  (re-search-forward eshell-syntax-highlighting--word-boundary-regexp (line-end-position)))
+            (when (<= (point) end) (forward-char))
+			(eshell-syntax-highlighting--find-unescaped (match-string 0) end)
+		  (re-search-forward eshell-syntax-highlighting--word-boundary-regexp (min end (line-end-position))))
 		(eshell-syntax-highlighting--highlight beg (point) 'envvar)
-		(eshell-syntax-highlighting--parse-and-highlight 'command))
+        (eshell-syntax-highlighting--highlight-substitutions beg end)
+		(eshell-syntax-highlighting--parse-and-highlight 'command end))
 
        ;; Command string
        (t
-        (re-search-forward eshell-syntax-highlighting--word-boundary-regexp (line-end-position))
-        (eshell-syntax-highlighting--parse-command beg (match-string-no-properties 0)))))
+        (re-search-forward eshell-syntax-highlighting--word-boundary-regexp (min end (line-end-position)))
+        (eshell-syntax-highlighting--parse-command beg end (match-string-no-properties 0)))))
 
      (t
       (cond
-
        ;; Quoted string
        ((looking-at "[\"']")
-		(eshell-syntax-highlighting--goto-string-end (match-string 0))
+        (when (<= (point) end) (forward-char))
+		(eshell-syntax-highlighting--find-unescaped (match-string 0) end)
         (eshell-syntax-highlighting--highlight beg (point) 'string)
-        (eshell-syntax-highlighting--parse-and-highlight 'argument))
+        (eshell-syntax-highlighting--highlight-substitutions beg end)
+        (eshell-syntax-highlighting--parse-and-highlight 'argument end))
 
        ;; Argument
        (t
-        (eshell-syntax-highlighting--highlight-filename beg)
-        (eshell-syntax-highlighting--parse-and-highlight 'argument)))))))
+        (eshell-syntax-highlighting--highlight-filename beg end)
+        (eshell-syntax-highlighting--parse-and-highlight 'argument end)))))))
 
 
 (defun eshell-syntax-highlighting--enable-highlighting ()
@@ -359,8 +404,7 @@
           (goto-char eshell-last-output-end)
           (forward-line 0)
           (when (re-search-forward eshell-prompt-regexp (line-end-position) t)
-            (ignore-errors
-              (eshell-syntax-highlighting--parse-and-highlight 'command)))))
+            (eshell-syntax-highlighting--parse-and-highlight 'command (point-max)))))
       ;; save-excursion marker is deleted when highlighting elisp,
       ;; so explicitly pop back to initial point.
       (goto-char beg))))
