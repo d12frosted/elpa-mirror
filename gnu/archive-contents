@@ -2695,7 +2695,7 @@
 	   ("Mario Lang" . "mlang@delysid.org"))
 	  (:maintainer "Mario Lang" . "mlang@delysid.org"))])
  (posframe .
-	   [(1 4 1)
+	   [(1 4 2)
 	    ((emacs
 	      (26 1)))
 	    "Pop a posframe (just a frame) at point" tar
@@ -2704,7 +2704,7 @@
 	     (:maintainer "Feng Shu" . "tumashu@163.com")
 	     (:authors
 	      ("Feng Shu" . "tumashu@163.com"))
-	     (:commit . "b00f1386ca4e251a5c3d8985d313217e56e42a7e"))])
+	     (:commit . "3b97dc180b03498103cfcc7f44e64150df440bf0"))])
  (project .
 	  [(0 9 8)
 	   ((emacs
