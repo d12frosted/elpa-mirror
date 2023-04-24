@@ -3,8 +3,8 @@
 ;; Author: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
 ;; Maintainer: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
 ;; Version: 1.1.0
-;; Package-Version: 20230301.111
-;; Package-Commit: 9d2d747b18c3f1d330bf9f09c9f64af9446c1268
+;; Package-Version: 20230423.2326
+;; Package-Commit: 2e5c777a835283ee4fe9eb20fd82114f348ba1f2
 ;; Package-Requires: ((emacs "26.1") (f "0.6.0"))
 ;; Homepage: https://github.com/wyuenho/emacs-pet/
 ;; Keywords: tools
@@ -523,10 +523,10 @@ use it."
         ((when-let* ((venv (pet-virtualenv-root))
                      (exec-path (list (concat (file-name-as-directory venv) (pet-system-bin-dir)))))
            (executable-find executable)))
-        ((executable-find "pyenv")
-         (condition-case err
-             (car (process-lines "pyenv" "which" executable))
-           (error (pet-report-error err))))
+        ((when (executable-find "pyenv")
+           (condition-case err
+               (car (process-lines "pyenv" "which" executable))
+             (error (pet-report-error err)))))
         (t (executable-find executable))))
 
 (defvar pet-project-virtualenv-cache nil)
@@ -683,7 +683,7 @@ checker executable variables buffer-locally.  Reset them to
 default otherwise."
   (if (bound-and-true-p flycheck-mode)
       (progn
-        (when (derived-mode-p 'python-mode)
+        (when (derived-mode-p (if (functionp 'python-base-mode) 'python-base-mode 'python-mode))
           (setq-local flycheck-python-mypy-config `("mypy.ini" ".mypy.ini" "pyproject.toml" "setup.cfg"
                                                     ,(expand-file-name
                                                       (concat
@@ -808,7 +808,7 @@ Print all of the buffer local variable values `pet-mode'
 has assigned to."
   (interactive)
 
-  (unless (derived-mode-p 'python-mode)
+  (unless (derived-mode-p 'python-base-mode 'python-mode)
     (user-error "You are not in python-mode!"))
 
   (let ((kvp (mapcar (lambda (sym)
@@ -872,7 +872,7 @@ has assigned to."
 Delete configuration file caches and watchers when all
 `python-mode' buffers of a project have been closed."
   (when (and (buffer-file-name)
-             (derived-mode-p 'python-mode))
+             (derived-mode-p 'python-base-mode 'python-mode))
     (when-let ((root (pet-project-root)))
       (when (null (cl-loop for buf in (buffer-list)
                            if (and (not (equal buf (current-buffer)))
