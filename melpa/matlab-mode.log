@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://git.code.sf.net/p/matlab-emacs/src
 
 Updating /mnt/store/melpa/working/matlab-mode/
-Checking out bda900fd75ee2e507f56e411f54dc1512675559f
+Checking out ba655a6e1375fb251796e2fe16d14d5228e6de35
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/matlab-mode/
-  to /tmp/matlab-modeY0XPZs/matlab-mode-20230408.1210
+  to /tmp/matlab-moder7Khtc/matlab-mode-20230424.1248
     cedet-matlab.el -> cedet-matlab.el
     company-matlab-shell.el -> company-matlab-shell.el
     linemark.el -> linemark.el
@@ -50,58 +50,60 @@ Copying files (->) and directories (=>)
     toolbox/+emacs/@EmacsServer/EmacsServer.m -> toolbox/+emacs/@EmacsServer/EmacsServer.m
     toolbox/+emacs/@Stack/Stack.m -> toolbox/+emacs/@Stack/Stack.m
     templates/srecode-matlab.srt -> templates/srecode-matlab.srt
-Created matlab-mode-20230408.1210.tar containing:
-  matlab-mode-20230408.1210/
-  matlab-mode-20230408.1210/cedet-matlab.el
-  matlab-mode-20230408.1210/company-matlab-shell.el
-  matlab-mode-20230408.1210/dl_emacs_support.m
-  matlab-mode-20230408.1210/linemark.el
-  matlab-mode-20230408.1210/matlab-cgen.el
-  matlab-mode-20230408.1210/matlab-compat.el
-  matlab-mode-20230408.1210/matlab-complete.el
-  matlab-mode-20230408.1210/matlab-load.el
-  matlab-mode-20230408.1210/matlab-maint.el
-  matlab-mode-20230408.1210/matlab-mode-pkg.el
-  matlab-mode-20230408.1210/matlab-netshell.el
-  matlab-mode-20230408.1210/matlab-publish.el
-  matlab-mode-20230408.1210/matlab-scan.el
-  matlab-mode-20230408.1210/matlab-shell-gud.el
-  matlab-mode-20230408.1210/matlab-shell.el
-  matlab-mode-20230408.1210/matlab-syntax.el
-  matlab-mode-20230408.1210/matlab-topic.el
-  matlab-mode-20230408.1210/matlab.el
-  matlab-mode-20230408.1210/mlgud.el
-  matlab-mode-20230408.1210/mlint.el
-  matlab-mode-20230408.1210/semantic-matlab.el
-  matlab-mode-20230408.1210/semanticdb-matlab.el
-  matlab-mode-20230408.1210/srecode-matlab.el
-  matlab-mode-20230408.1210/templates/
-  matlab-mode-20230408.1210/templates/srecode-matlab.srt
-  matlab-mode-20230408.1210/tlc.el
-  matlab-mode-20230408.1210/toolbox/
-  matlab-mode-20230408.1210/toolbox/+emacs/
-  matlab-mode-20230408.1210/toolbox/+emacs/@Breakpoints/
-  matlab-mode-20230408.1210/toolbox/+emacs/@Breakpoints/Breakpoints.m
-  matlab-mode-20230408.1210/toolbox/+emacs/@EmacsServer/
-  matlab-mode-20230408.1210/toolbox/+emacs/@EmacsServer/EmacsServer.m
-  matlab-mode-20230408.1210/toolbox/+emacs/@Stack/
-  matlab-mode-20230408.1210/toolbox/+emacs/@Stack/Stack.m
-  matlab-mode-20230408.1210/toolbox/+emacs/set.m
-  matlab-mode-20230408.1210/toolbox/dbhotlink.m
-  matlab-mode-20230408.1210/toolbox/ebclear.m
-  matlab-mode-20230408.1210/toolbox/ebstack.m
-  matlab-mode-20230408.1210/toolbox/ebstatus.m
-  matlab-mode-20230408.1210/toolbox/ebstop.m
-  matlab-mode-20230408.1210/toolbox/emacscd.m
-  matlab-mode-20230408.1210/toolbox/emacsdocomplete.m
-  matlab-mode-20230408.1210/toolbox/emacsinit.m
-  matlab-mode-20230408.1210/toolbox/emacsnetshell.m
-  matlab-mode-20230408.1210/toolbox/emacsrun.m
-  matlab-mode-20230408.1210/toolbox/emacsrunregion.m
-  matlab-mode-20230408.1210/toolbox/emacstipstring.m
-  matlab-mode-20230408.1210/toolbox/help.m
-  matlab-mode-20230408.1210/toolbox/opentoline.m
-Built matlab-mode in 6.457s, finished at 2023-04-24T10:24:48+0000
+Created matlab-mode-20230424.1248.tar containing:
+  matlab-mode-20230424.1248/
+  matlab-mode-20230424.1248/cedet-matlab.el
+  matlab-mode-20230424.1248/company-matlab-shell.el
+  matlab-mode-20230424.1248/dl_emacs_support.m
+  matlab-mode-20230424.1248/linemark.el
+  matlab-mode-20230424.1248/matlab-cgen.el
+  matlab-mode-20230424.1248/matlab-compat.el
+  matlab-mode-20230424.1248/matlab-complete.el
+  matlab-mode-20230424.1248/matlab-load.el
+  matlab-mode-20230424.1248/matlab-maint.el
+  matlab-mode-20230424.1248/matlab-mode-pkg.el
+  matlab-mode-20230424.1248/matlab-netshell.el
+  matlab-mode-20230424.1248/matlab-publish.el
+  matlab-mode-20230424.1248/matlab-scan.el
+  matlab-mode-20230424.1248/matlab-shell-gud.el
+  matlab-mode-20230424.1248/matlab-shell.el
+  matlab-mode-20230424.1248/matlab-syntax.el
+  matlab-mode-20230424.1248/matlab-topic.el
+  matlab-mode-20230424.1248/matlab.el
+  matlab-mode-20230424.1248/mlgud.el
+  matlab-mode-20230424.1248/mlint.el
+  matlab-mode-20230424.1248/semantic-matlab.el
+  matlab-mode-20230424.1248/semanticdb-matlab.el
+  matlab-mode-20230424.1248/srecode-matlab.el
+  matlab-mode-20230424.1248/templates/
+  matlab-mode-20230424.1248/templates/srecode-matlab.srt
+  matlab-mode-20230424.1248/tlc.el
+  matlab-mode-20230424.1248/toolbox/
+  matlab-mode-20230424.1248/toolbox/+emacs/
+  matlab-mode-20230424.1248/toolbox/+emacs/@Breakpoints/
+  matlab-mode-20230424.1248/toolbox/+emacs/@Breakpoints/Breakpoints.m
+  matlab-mode-20230424.1248/toolbox/+emacs/@EmacsServer/
+  matlab-mode-20230424.1248/toolbox/+emacs/@EmacsServer/EmacsServer.m
+  matlab-mode-20230424.1248/toolbox/+emacs/@Stack/
+  matlab-mode-20230424.1248/toolbox/+emacs/@Stack/Stack.m
+  matlab-mode-20230424.1248/toolbox/+emacs/set.m
+  matlab-mode-20230424.1248/toolbox/dbhotlink.m
+  matlab-mode-20230424.1248/toolbox/ebclear.m
+  matlab-mode-20230424.1248/toolbox/ebstack.m
+  matlab-mode-20230424.1248/toolbox/ebstatus.m
+  matlab-mode-20230424.1248/toolbox/ebstop.m
+  matlab-mode-20230424.1248/toolbox/emacscd.m
+  matlab-mode-20230424.1248/toolbox/emacsdocomplete.m
+  matlab-mode-20230424.1248/toolbox/emacsinit.m
+  matlab-mode-20230424.1248/toolbox/emacsnetshell.m
+  matlab-mode-20230424.1248/toolbox/emacsrun.m
+  matlab-mode-20230424.1248/toolbox/emacsrunregion.m
+  matlab-mode-20230424.1248/toolbox/emacstipstring.m
+  matlab-mode-20230424.1248/toolbox/help.m
+  matlab-mode-20230424.1248/toolbox/opentoline.m
+Built matlab-mode in 4.766s, finished at 2023-04-24T14:16:00+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  158 Apr 24 10:24 packages/matlab-mode-20230408.1210.entry
 672K -rw-r--r-- 1 root root 670K Apr 24 10:24 packages/matlab-mode-20230408.1210.tar
+4.0K -rw-r--r-- 1 root root  158 Apr 24 14:15 packages/matlab-mode-20230424.1248.entry
+680K -rw-r--r-- 1 root root 680K Apr 24 14:15 packages/matlab-mode-20230424.1248.tar

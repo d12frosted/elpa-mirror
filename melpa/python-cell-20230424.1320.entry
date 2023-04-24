@@ -1,0 +1,11 @@
+(python-cell .
+	     [(20230424 1320)
+	      ((emacs
+		(25 1)))
+	      "Support for MATLAB-like cells in python mode" single
+	      ((:commit . "0f96e6308c27344d3cea157c8128da7504e5e01e")
+	       (:authors
+		("Thomas Hisch" . "t.hisch@gmail.com"))
+	       (:maintainer "Thomas Hisch" . "t.hisch@gmail.com")
+	       (:keywords "extensions" "python" "matlab" "cell")
+	       (:url . "https://github.com/thisch/python-cell.el"))])
