@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/erjoalgo/emacs-buttons.git
 
 Updating /mnt/store/melpa/working/buttons/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/erjoalgo/emacs-buttons.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out de41b48244574a13000c4289fdb4216a2b0490ff
+Built buttons in 4.230s, finished at 2023-04-25T12:03:14+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Apr 25 12:03 packages/buttons-20201123.2333.el
+4.0K -rw-r--r-- 1 root root 388 Apr 25 12:03 packages/buttons-20201123.2333.entry

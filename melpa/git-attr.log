@@ -3,9 +3,18 @@ Fetcher: github
 Source:  https://github.com/arnested/emacs-git-attr.git
 
 Updating /mnt/store/melpa/working/git-attr/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/arnested/emacs-git-attr.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 3e43a0cf616b00a4bbd3c6b49fd2397f3103796f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-attr/
+  to /tmp/git-attrF46xga/git-attr-20180925.2003
+    git-attr-linguist.el -> git-attr-linguist.el
+    git-attr.el -> git-attr.el
+Created git-attr-20180925.2003.tar containing:
+  git-attr-20180925.2003/
+  git-attr-20180925.2003/git-attr-linguist.el
+  git-attr-20180925.2003/git-attr-pkg.el
+  git-attr-20180925.2003/git-attr.el
+Built git-attr in 5.009s, finished at 2023-04-25T08:38:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 364 Apr 25 08:38 packages/git-attr-20180925.2003.entry
+ 12K -rw-r--r-- 1 root root 10K Apr 25 08:38 packages/git-attr-20180925.2003.tar

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/hex2010/emacs-ivy-xcdoc.git
 
 Updating /mnt/store/melpa/working/ivy-xcdoc/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/hex2010/emacs-ivy-xcdoc.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out fbf264b0746182567b17fd7409fff8eed3658c71
+Built ivy-xcdoc in 5.381s, finished at 2023-04-25T08:50:06+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Apr 25 08:50 packages/ivy-xcdoc-20160917.1055.el
+4.0K -rw-r--r-- 1 root root  427 Apr 25 08:50 packages/ivy-xcdoc-20160917.1055.entry

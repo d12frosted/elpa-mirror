@@ -3,9 +3,33 @@ Fetcher: github
 Source:  https://github.com/laynor/enotify.git
 
 Updating /mnt/store/melpa/working/enotify/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/laynor/enotify.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 7fd2f48ef4ff32c8f013c634ea2dd6b1d1409f80
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/enotify/
+  to /tmp/enotifyYPLzSb/enotify-20130407.1348
+    enotify-group.el -> enotify-group.el
+    enotify-messages.el -> enotify-messages.el
+    enotify-mode-line.el -> enotify-mode-line.el
+    enotify-network.el -> enotify-network.el
+    enotify-pkg.el -> enotify-pkg.el
+    enotify-plugin-support.el -> enotify-plugin-support.el
+    enotify-tdd.el -> enotify-tdd.el
+    enotify.el -> enotify.el
+    footer.el -> footer.el
+    header.el -> header.el
+Created enotify-20130407.1348.tar containing:
+  enotify-20130407.1348/
+  enotify-20130407.1348/enotify-group.el
+  enotify-20130407.1348/enotify-messages.el
+  enotify-20130407.1348/enotify-mode-line.el
+  enotify-20130407.1348/enotify-network.el
+  enotify-20130407.1348/enotify-pkg.el
+  enotify-20130407.1348/enotify-plugin-support.el
+  enotify-20130407.1348/enotify-tdd.el
+  enotify-20130407.1348/enotify.el
+  enotify-20130407.1348/footer.el
+  enotify-20130407.1348/header.el
+Built enotify in 3.906s, finished at 2023-04-25T08:28:02+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 291 Apr 25 08:28 packages/enotify-20130407.1348.entry
+ 40K -rw-r--r-- 1 root root 40K Apr 25 08:28 packages/enotify-20130407.1348.tar

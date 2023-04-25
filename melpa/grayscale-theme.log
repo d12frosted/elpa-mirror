@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/belak/emacs-grayscale-theme.git
 
 Updating /mnt/store/melpa/working/grayscale-theme/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/belak/emacs-grayscale-theme.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 917d63c0effc8459502a41e0cad5822d2b200499
+Built grayscale-theme in 3.774s, finished at 2023-04-25T08:40:59+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Apr 25 08:40 packages/grayscale-theme-20171005.802.el
+4.0K -rw-r--r-- 1 root root 341 Apr 25 08:40 packages/grayscale-theme-20171005.802.entry

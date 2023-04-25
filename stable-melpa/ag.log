@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/Wilfred/ag.el.git
 
 Updating /mnt/store/melpa/working/ag/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/Wilfred/ag.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out ed7e32064f92f1315cecbfc43f120bbc7508672c
+Built ag in 3.991s, finished at 2023-04-25T11:57:12+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K Apr 25 11:57 packages/ag-20201031.2202.el
+4.0K -rw-r--r-- 1 root root 426 Apr 25 11:57 packages/ag-20201031.2202.entry

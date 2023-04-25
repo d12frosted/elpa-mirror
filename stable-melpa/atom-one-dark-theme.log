@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/jonathanchu/atom-one-dark-theme.git
 
 Updating /mnt/store/melpa/working/atom-one-dark-theme/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/jonathanchu/atom-one-dark-theme.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out b34b62e85593812b55ee552a1cb0eecfb04767bb
+Built atom-one-dark-theme in 6.767s, finished at 2023-04-25T11:59:02+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 45K Apr 25 11:59 packages/atom-one-dark-theme-20210128.1640.el
+4.0K -rw-r--r-- 1 root root 354 Apr 25 11:59 packages/atom-one-dark-theme-20210128.1640.entry

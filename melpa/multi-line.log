@@ -3,9 +3,32 @@ Fetcher: github
 Source:  https://github.com/IvanMalison/multi-line.git
 
 Updating /mnt/store/melpa/working/multi-line/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/IvanMalison/multi-line.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 625c608443f98bb34b4d5600d52c198509fb64d0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/multi-line/
+  to /tmp/multi-linewEBabi/multi-line-20220112.1744
+    multi-line-candidate.el -> multi-line-candidate.el
+    multi-line-cycle.el -> multi-line-cycle.el
+    multi-line-decorator.el -> multi-line-decorator.el
+    multi-line-enter.el -> multi-line-enter.el
+    multi-line-find.el -> multi-line-find.el
+    multi-line-highlight.el -> multi-line-highlight.el
+    multi-line-respace.el -> multi-line-respace.el
+    multi-line-shared.el -> multi-line-shared.el
+    multi-line.el -> multi-line.el
+Created multi-line-20220112.1744.tar containing:
+  multi-line-20220112.1744/
+  multi-line-20220112.1744/multi-line-candidate.el
+  multi-line-20220112.1744/multi-line-cycle.el
+  multi-line-20220112.1744/multi-line-decorator.el
+  multi-line-20220112.1744/multi-line-enter.el
+  multi-line-20220112.1744/multi-line-find.el
+  multi-line-20220112.1744/multi-line-highlight.el
+  multi-line-20220112.1744/multi-line-pkg.el
+  multi-line-20220112.1744/multi-line-respace.el
+  multi-line-20220112.1744/multi-line-shared.el
+  multi-line-20220112.1744/multi-line.el
+Built multi-line in 4.401s, finished at 2023-04-25T09:01:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 578 Apr 25 09:01 packages/multi-line-20220112.1744.entry
+ 52K -rw-r--r-- 1 root root 50K Apr 25 09:01 packages/multi-line-20220112.1744.tar

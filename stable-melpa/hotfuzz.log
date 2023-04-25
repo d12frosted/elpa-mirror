@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/axelf4/hotfuzz.git
 
 Updating /mnt/store/melpa/working/hotfuzz/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/axelf4/hotfuzz.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out f02edb699c5b9bb60a1372dde3f187dac7797c48
+Built hotfuzz in 5.216s, finished at 2023-04-25T08:46:45+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Apr 25 08:46 packages/hotfuzz-20230322.1318.el
+4.0K -rw-r--r-- 1 root root 344 Apr 25 08:46 packages/hotfuzz-20230322.1318.entry

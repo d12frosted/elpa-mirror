@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/danieroux/pinboard-api-el.git
 
 Updating /mnt/store/melpa/working/pinboard-api/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/danieroux/pinboard-api-el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out b7b5214d0c35178f8dca08cf22d6ef3c21f0fce4
+Built pinboard-api in 4.638s, finished at 2023-04-25T09:13:38+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Apr 25 09:13 packages/pinboard-api-20140324.1148.el
+4.0K -rw-r--r-- 1 root root  368 Apr 25 09:13 packages/pinboard-api-20140324.1148.entry

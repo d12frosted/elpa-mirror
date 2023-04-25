@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/oantolin/embark.git
 
 Updating /mnt/store/melpa/working/embark-consult/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/oantolin/embark.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 51b5a693b5fe3d573acac97cfd3ce75e0d41c187
+Built embark-consult in 6.222s, finished at 2023-04-25T08:27:30+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Apr 25 08:27 packages/embark-consult-20230327.1843.el
+4.0K -rw-r--r-- 1 root root 434 Apr 25 08:27 packages/embark-consult-20230327.1843.entry

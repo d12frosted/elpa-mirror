@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/tmalsburg/tango-plus-theme.git
 
 Updating /mnt/store/melpa/working/tango-plus-theme/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/tmalsburg/tango-plus-theme.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 30495d1ab1df6213ecac008c599b91e6f9244c12
+Built tango-plus-theme in 4.196s, finished at 2023-04-25T09:28:38+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 30K Apr 25 09:28 packages/tango-plus-theme-20221011.1012.el
+4.0K -rw-r--r-- 1 root root 369 Apr 25 09:28 packages/tango-plus-theme-20221011.1012.entry

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/laynor/dollaro.git
 
 Updating /mnt/store/melpa/working/dollaro/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/laynor/dollaro.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 500127f0172ac7a1eec627e026b59136580a74ac
+Built dollaro in 6.491s, finished at 2023-04-25T08:23:18+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Apr 25 08:23 packages/dollaro-20151123.1302.el
+4.0K -rw-r--r-- 1 root root  306 Apr 25 08:23 packages/dollaro-20151123.1302.entry

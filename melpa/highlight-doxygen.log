@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/Lindydancer/highlight-doxygen.git
 
 Updating /mnt/store/melpa/working/highlight-doxygen/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/Lindydancer/highlight-doxygen.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out eec4874e2e89d4eb39091aad89a67dff8f8ec84c
+Built highlight-doxygen in 6.737s, finished at 2023-04-25T08:46:00+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 56K Apr 25 08:45 packages/highlight-doxygen-20200520.1713.el
+4.0K -rw-r--r-- 1 root root 333 Apr 25 08:45 packages/highlight-doxygen-20200520.1713.entry

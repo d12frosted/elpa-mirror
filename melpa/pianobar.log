@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/agrif/pianobar.el.git
 
 Updating /mnt/store/melpa/working/pianobar/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/agrif/pianobar.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out d708417608df4f09ee565fddaad03dfe181829a8
+Built pianobar in 4.748s, finished at 2023-04-25T09:13:31+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Apr 25 09:13 packages/pianobar-20201002.1756.el
+4.0K -rw-r--r-- 1 root root 333 Apr 25 09:13 packages/pianobar-20201002.1756.entry

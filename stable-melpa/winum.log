@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/deb0ch/emacs-winum.git
 
 Updating /mnt/store/melpa/working/winum/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/deb0ch/emacs-winum.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 098249c65042ee0308b8236d1ee838c8da8fdf25
+Built winum in 5.044s, finished at 2023-04-25T09:36:02+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Apr 25 09:36 packages/winum-20190911.1607.el
+4.0K -rw-r--r-- 1 root root 445 Apr 25 09:36 packages/winum-20190911.1607.entry

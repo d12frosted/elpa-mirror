@@ -3,9 +3,18 @@ Fetcher: github
 Source:  https://github.com/laishulu/emacs-vterm-manager.git
 
 Updating /mnt/store/melpa/working/vtm/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/laishulu/emacs-vterm-manager.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out d770fd8cff7c24688199392ad93c01485c6a9569
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vtm/
+  to /tmp/vtmY2EHq2/vtm-20200921.338
+    example.el -> example.el
+    vtm.el -> vtm.el
+Created vtm-20200921.338.tar containing:
+  vtm-20200921.338/
+  vtm-20200921.338/example.el
+  vtm-20200921.338/vtm-pkg.el
+  vtm-20200921.338/vtm.el
+Built vtm in 3.247s, finished at 2023-04-25T09:34:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 255 Apr 25 09:34 packages/vtm-20200921.338.entry
+ 12K -rw-r--r-- 1 root root 10K Apr 25 09:34 packages/vtm-20200921.338.tar

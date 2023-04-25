@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/dochang/elpa-clone.git
 
 Updating /mnt/store/melpa/working/elpa-clone/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/dochang/elpa-clone.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 1d130c251690f24c23b77a4e4570157fca881d8f
+Built elpa-clone in 4.703s, finished at 2023-04-25T08:26:55+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Apr 25 08:26 packages/elpa-clone-20221201.1227.el
+4.0K -rw-r--r-- 1 root root 393 Apr 25 08:26 packages/elpa-clone-20221201.1227.entry

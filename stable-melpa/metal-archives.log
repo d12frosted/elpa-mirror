@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/seblemaguer/metal-archives.el.git
 
 Updating /mnt/store/melpa/working/metal-archives/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/seblemaguer/metal-archives.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out a218d63b990365edeef6a2394f72d1f2286aeeae
+Built metal-archives in 4.923s, finished at 2023-04-25T08:59:28+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Apr 25 08:59 packages/metal-archives-20210223.1638.el
+4.0K -rw-r--r-- 1 root root  476 Apr 25 08:59 packages/metal-archives-20210223.1638.entry

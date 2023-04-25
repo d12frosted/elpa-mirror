@@ -3,9 +3,20 @@ Fetcher: github
 Source:  https://github.com/purplg/hass.git
 
 Updating /mnt/store/melpa/working/hass/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/purplg/hass.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 033d11b07e0f8bb68b348a12d5ae13fabea56c73
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hass/
+  to /tmp/hass2V5OJQ/hass-20230116.2220
+    hass-dash.el -> hass-dash.el
+    hass-websocket.el -> hass-websocket.el
+    hass.el -> hass.el
+Created hass-20230116.2220.tar containing:
+  hass-20230116.2220/
+  hass-20230116.2220/hass-dash.el
+  hass-20230116.2220/hass-pkg.el
+  hass-20230116.2220/hass-websocket.el
+  hass-20230116.2220/hass.el
+Built hass in 4.233s, finished at 2023-04-25T08:41:56+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 310 Apr 25 08:41 packages/hass-20230116.2220.entry
+ 52K -rw-r--r-- 1 root root 50K Apr 25 08:41 packages/hass-20230116.2220.tar

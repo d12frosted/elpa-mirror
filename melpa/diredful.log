@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/thamer/diredful.git
 
 Updating /mnt/store/melpa/working/diredful/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/thamer/diredful.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out b17b3087e0084a5571a9ac4d47ccfc36d96b109e
+Built diredful in 4.668s, finished at 2023-04-25T08:22:11+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Apr 25 08:22 packages/diredful-20160529.2017.el
+4.0K -rw-r--r-- 1 root root 390 Apr 25 08:22 packages/diredful-20160529.2017.entry

@@ -1,3 +1,2 @@
-mastodon.el is an Emacs client for Mastodon <https://github.com/mastodon/mastodon>,
-the federated microblogging social network. It also works with Pleroma instances and other services that implement the Mastodon API.
+mastodon.el is a client for fediverse services that implement the Mastodon API. See <https://github.com/mastodon/mastodon>.
 See the readme file at https://codeberg.org/martianh/mastodon.el for set up and usage details.

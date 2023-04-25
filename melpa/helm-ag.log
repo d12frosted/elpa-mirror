@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/helm-ag.git
 
 Updating /mnt/store/melpa/working/helm-ag/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/emacsorphanage/helm-ag.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 2f5e41ae979394208989c25f4cdc73a0532fede9
+Built helm-ag in 4.958s, finished at 2023-04-25T08:42:12+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 54K Apr 25 08:42 packages/helm-ag-20221017.1528.el
+4.0K -rw-r--r-- 1 root root 362 Apr 25 08:42 packages/helm-ag-20221017.1528.entry

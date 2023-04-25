@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/jra3/lsp-pyre.git
 
 Updating /mnt/store/melpa/working/lsp-pyre/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/jra3/lsp-pyre.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out e177b8f5efd1a955b5753aeb5d1894e6d21be35a
+Built lsp-pyre in 4.246s, finished at 2023-04-25T08:56:32+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.9K Apr 25 08:56 packages/lsp-pyre-20190406.335.el
+4.0K -rw-r--r-- 1 root root  334 Apr 25 08:56 packages/lsp-pyre-20190406.335.entry

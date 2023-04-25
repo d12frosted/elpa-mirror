@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/nschum/highlight-symbol.el.git
 
 Updating /mnt/store/melpa/working/highlight-symbol/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/nschum/highlight-symbol.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 7a789c779648c55b16e43278e51be5898c121b3a
+Built highlight-symbol in 5.454s, finished at 2023-04-25T08:46:11+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Apr 25 08:46 packages/highlight-symbol-20160102.2009.el
+4.0K -rw-r--r-- 1 root root 389 Apr 25 08:46 packages/highlight-symbol-20160102.2009.entry

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/jpe90/emacs-clj-deps-new.git
 
 Updating /mnt/store/melpa/working/clj-deps-new/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/jpe90/emacs-clj-deps-new.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 72f25d86bbd9cd6cb4aa431e70bda38f35b19262
+Built clj-deps-new in 4.007s, finished at 2023-04-25T12:05:33+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Apr 25 12:05 packages/clj-deps-new-20230413.1833.el
+4.0K -rw-r--r-- 1 root root 363 Apr 25 12:05 packages/clj-deps-new-20230413.1833.entry

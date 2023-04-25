@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/gsingh93/ob-bitfield.git
 
 Updating /mnt/store/melpa/working/ob-bitfield/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/gsingh93/ob-bitfield.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out abe3d8fe49dc53c4663def689ceb5c0433638652
+Built ob-bitfield in 4.241s, finished at 2023-04-25T09:04:02+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Apr 25 09:04 packages/ob-bitfield-20220401.600.el
+4.0K -rw-r--r-- 1 root root  310 Apr 25 09:04 packages/ob-bitfield-20220401.600.entry

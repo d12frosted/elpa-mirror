@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-erefactor.git
 
 Updating /mnt/store/melpa/working/erefactor/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/mhayashi1120/Emacs-erefactor.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out bfe27a1b8c7cac0fe054e76113e941efa3775fe8
+Built erefactor in 4.584s, finished at 2023-04-25T08:28:33+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 45K Apr 25 08:28 packages/erefactor-20200513.1252.el
+4.0K -rw-r--r-- 1 root root 424 Apr 25 08:28 packages/erefactor-20200513.1252.entry

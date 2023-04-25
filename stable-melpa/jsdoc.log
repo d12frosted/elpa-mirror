@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/isamert/jsdoc.el.git
 
 Updating /mnt/store/melpa/working/jsdoc/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/isamert/jsdoc.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 10606a37f70cbf419590bbbc292fe1e800435ed5
+Built jsdoc in 7.022s, finished at 2023-04-25T08:51:43+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.0K Apr 25 08:51 packages/jsdoc-20230331.647.el
+4.0K -rw-r--r-- 1 root root  359 Apr 25 08:51 packages/jsdoc-20230331.647.entry

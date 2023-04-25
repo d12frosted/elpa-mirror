@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/jcs-elpa/license-templates.git
 
 Updating /mnt/store/melpa/working/license-templates/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/jcs-elpa/license-templates.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 09f1b017c93067c2970a0a63b69026bfc172d2b7
+Built license-templates in 4.841s, finished at 2023-04-25T08:54:54+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Apr 25 08:54 packages/license-templates-20230311.11.el
+4.0K -rw-r--r-- 1 root root  474 Apr 25 08:54 packages/license-templates-20230311.11.entry

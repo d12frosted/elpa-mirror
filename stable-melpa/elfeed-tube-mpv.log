@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/karthink/elfeed-tube.git
 
 Updating /mnt/store/melpa/working/elfeed-tube-mpv/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/karthink/elfeed-tube.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 4d98e62911fd3cdf623dd09443ef6802c59719de
+Built elfeed-tube-mpv in 5.669s, finished at 2023-04-25T08:26:27+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Apr 25 08:26 packages/elfeed-tube-mpv-20230316.11.el
+4.0K -rw-r--r-- 1 root root 467 Apr 25 08:26 packages/elfeed-tube-mpv-20230316.11.entry

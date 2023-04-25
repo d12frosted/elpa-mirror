@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/jcaw/json-rpc-server.el.git
 
 Updating /mnt/store/melpa/working/json-rpc-server/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/jcaw/json-rpc-server.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 349e1f4722474bf1f75dbc8eb9d9c59d790b8083
+Built json-rpc-server in 6.944s, finished at 2023-04-25T08:51:52+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 30K Apr 25 08:51 packages/json-rpc-server-20220205.1504.el
+4.0K -rw-r--r-- 1 root root 363 Apr 25 08:51 packages/json-rpc-server-20220205.1504.entry

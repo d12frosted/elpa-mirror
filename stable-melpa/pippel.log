@@ -3,9 +3,18 @@ Fetcher: github
 Source:  https://github.com/arifer612/pippel.git
 
 Updating /mnt/store/melpa/working/pippel/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/arifer612/pippel.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 19153aa8845aa95d080f224d4fcaf2d75224bd5a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pippel/
+  to /tmp/pippelRlsk1r/pippel-20220416.1743
+    pippel.el -> pippel.el
+    pippel.py -> pippel.py
+Created pippel-20220416.1743.tar containing:
+  pippel-20220416.1743/
+  pippel-20220416.1743/pippel-pkg.el
+  pippel-20220416.1743/pippel.el
+  pippel-20220416.1743/pippel.py
+Built pippel in 3.926s, finished at 2023-04-25T09:13:49+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 372 Apr 25 09:13 packages/pippel-20220416.1743.entry
+ 32K -rw-r--r-- 1 root root 30K Apr 25 09:13 packages/pippel-20220416.1743.tar

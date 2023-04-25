@@ -3,9 +3,30 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/emacs-ccls.git
 
 Updating /mnt/store/melpa/working/ccls/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/emacs-lsp/emacs-ccls.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 29d231590fad39b4d658d9262859e60669edb9b0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ccls/
+  to /tmp/cclsXRPWpz/ccls-20230111.1754
+    ccls-call-hierarchy.el -> ccls-call-hierarchy.el
+    ccls-code-lens.el -> ccls-code-lens.el
+    ccls-common.el -> ccls-common.el
+    ccls-inheritance-hierarchy.el -> ccls-inheritance-hierarchy.el
+    ccls-member-hierarchy.el -> ccls-member-hierarchy.el
+    ccls-semantic-highlight.el -> ccls-semantic-highlight.el
+    ccls-tree.el -> ccls-tree.el
+    ccls.el -> ccls.el
+Created ccls-20230111.1754.tar containing:
+  ccls-20230111.1754/
+  ccls-20230111.1754/ccls-call-hierarchy.el
+  ccls-20230111.1754/ccls-code-lens.el
+  ccls-20230111.1754/ccls-common.el
+  ccls-20230111.1754/ccls-inheritance-hierarchy.el
+  ccls-20230111.1754/ccls-member-hierarchy.el
+  ccls-20230111.1754/ccls-pkg.el
+  ccls-20230111.1754/ccls-semantic-highlight.el
+  ccls-20230111.1754/ccls-tree.el
+  ccls-20230111.1754/ccls.el
+Built ccls in 5.020s, finished at 2023-04-25T12:04:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 380 Apr 25 12:04 packages/ccls-20230111.1754.entry
+ 72K -rw-r--r-- 1 root root 70K Apr 25 12:04 packages/ccls-20230111.1754.tar

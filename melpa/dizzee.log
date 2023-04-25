@@ -3,9 +3,17 @@ Fetcher: github
 Source:  https://github.com/davidmiller/dizzee.git
 
 Updating /mnt/store/melpa/working/dizzee/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/davidmiller/dizzee.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out e3cf1c2ea5d0fc00747524b6f3c5b905d0a8c8e1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dizzee/
+  to /tmp/dizzeeOfEE5Z/dizzee-20171201.916
+    dizzee-pkg.el -> dizzee-pkg.el
+    dizzee.el -> dizzee.el
+Created dizzee-20171201.916.tar containing:
+  dizzee-20171201.916/
+  dizzee-20171201.916/dizzee-pkg.el
+  dizzee-20171201.916/dizzee.el
+Built dizzee in 6.479s, finished at 2023-04-25T08:22:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 384 Apr 25 08:22 packages/dizzee-20171201.916.entry
+ 20K -rw-r--r-- 1 root root 20K Apr 25 08:22 packages/dizzee-20171201.916.tar

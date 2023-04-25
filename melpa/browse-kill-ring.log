@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/browse-kill-ring/browse-kill-ring.git
 
 Updating /mnt/store/melpa/working/browse-kill-ring/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/browse-kill-ring/browse-kill-ring.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 6e06736a8245a8cdf436f6585c71439239219836
+Built browse-kill-ring in 5.217s, finished at 2023-04-25T12:02:39+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 48K Apr 25 12:02 packages/browse-kill-ring-20220410.1509.el
+4.0K -rw-r--r-- 1 root root 404 Apr 25 12:02 packages/browse-kill-ring-20220410.1509.entry

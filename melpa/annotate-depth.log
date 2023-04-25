@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/netromdk/annotate-depth.git
 
 Updating /mnt/store/melpa/working/annotate-depth/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/netromdk/annotate-depth.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out fcb24fa36287250e40d195590c4ca4a8a696277b
+Built annotate-depth in 4.953s, finished at 2023-04-25T11:58:06+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Apr 25 11:58 packages/annotate-depth-20160520.2040.el
+4.0K -rw-r--r-- 1 root root  407 Apr 25 11:58 packages/annotate-depth-20160520.2040.entry

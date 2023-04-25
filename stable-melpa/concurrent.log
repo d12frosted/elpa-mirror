@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/kiwanami/emacs-deferred.git
 
 Updating /mnt/store/melpa/working/concurrent/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/kiwanami/emacs-deferred.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out d012a1ab50edcc2c44e3e49006f054dbff47cb6c
+Built concurrent in 4.035s, finished at 2023-04-25T12:08:28+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Apr 25 12:08 packages/concurrent-20170601.435.el
+4.0K -rw-r--r-- 1 root root 510 Apr 25 12:08 packages/concurrent-20170601.435.entry

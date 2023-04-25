@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/zonuexe/init-open-recentf.el.git
 
 Updating /mnt/store/melpa/working/init-open-recentf/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/zonuexe/init-open-recentf.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 51463effe54ca9390ec339b9678968f35a40dbfd
+Built init-open-recentf in 4.532s, finished at 2023-04-25T08:48:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Apr 25 08:48 packages/init-open-recentf-20220220.2004.el
+4.0K -rw-r--r-- 1 root root  433 Apr 25 08:48 packages/init-open-recentf-20220220.2004.entry

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/KMahoney/kpm-list.git
 
 Updating /mnt/store/melpa/working/kpm-list/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/KMahoney/kpm-list.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out e0f5112e5ce8ec1b603f4428fa51681c68bb28f5
+Built kpm-list in 3.935s, finished at 2023-04-25T08:53:30+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Apr 25 08:53 packages/kpm-list-20170924.1352.el
+4.0K -rw-r--r-- 1 root root 314 Apr 25 08:53 packages/kpm-list-20170924.1352.entry

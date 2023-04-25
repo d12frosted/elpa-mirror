@@ -3,9 +3,26 @@ Fetcher: github
 Source:  https://github.com/baohaojun/bbyac.git
 
 Updating /mnt/store/melpa/working/bbyac/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/baohaojun/bbyac.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 9f0de9cad13801891ffb590dc09f51ff9a7cb225
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bbyac/
+  to /tmp/bbyacNQ7Nmz/bbyac-20180206.1441
+    bbyac.el -> bbyac.el
+    c++.bbyac -> c++.bbyac
+    java.bbyac -> java.bbyac
+    js2.bbyac -> js2.bbyac
+    lua.bbyac -> lua.bbyac
+    ruby.bbyac -> ruby.bbyac
+Created bbyac-20180206.1441.tar containing:
+  bbyac-20180206.1441/
+  bbyac-20180206.1441/bbyac-pkg.el
+  bbyac-20180206.1441/bbyac.el
+  bbyac-20180206.1441/c++.bbyac
+  bbyac-20180206.1441/java.bbyac
+  bbyac-20180206.1441/js2.bbyac
+  bbyac-20180206.1441/lua.bbyac
+  bbyac-20180206.1441/ruby.bbyac
+Built bbyac in 4.466s, finished at 2023-04-25T12:01:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 378 Apr 25 12:01 packages/bbyac-20180206.1441.entry
+ 40K -rw-r--r-- 1 root root 40K Apr 25 12:01 packages/bbyac-20180206.1441.tar

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/ocaml/merlin.git
 
 Updating /mnt/store/melpa/working/merlin-ac/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/ocaml/merlin.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 8bcab034a680f57ddf58092fda6288dc4caddd2a
+Built merlin-ac in 8.746s, finished at 2023-04-25T08:59:20+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Apr 25 08:59 packages/merlin-ac-20221123.1408.el
+4.0K -rw-r--r-- 1 root root  571 Apr 25 08:59 packages/merlin-ac-20221123.1408.entry

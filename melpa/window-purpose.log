@@ -3,9 +3,36 @@ Fetcher: github
 Source:  https://github.com/bmag/emacs-purpose.git
 
 Updating /mnt/store/melpa/working/window-purpose/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/bmag/emacs-purpose.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out bb462f12f836414425edac32ebd069b4fd5b98d4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/window-purpose/
+  to /tmp/window-purposeAZiWN4/window-purpose-20210628.715
+    window-purpose-configuration.el -> window-purpose-configuration.el
+    window-purpose-core.el -> window-purpose-core.el
+    window-purpose-fixes.el -> window-purpose-fixes.el
+    window-purpose-layout.el -> window-purpose-layout.el
+    window-purpose-prefix-overload.el -> window-purpose-prefix-overload.el
+    window-purpose-switch.el -> window-purpose-switch.el
+    window-purpose-utils.el -> window-purpose-utils.el
+    window-purpose-x.el -> window-purpose-x.el
+    window-purpose.el -> window-purpose.el
+    layouts => layouts
+Created window-purpose-20210628.715.tar containing:
+  window-purpose-20210628.715/
+  window-purpose-20210628.715/layouts/
+  window-purpose-20210628.715/layouts/edit-terminal-general.window-layout
+  window-purpose-20210628.715/layouts/edit-terminal.window-layout
+  window-purpose-20210628.715/window-purpose-configuration.el
+  window-purpose-20210628.715/window-purpose-core.el
+  window-purpose-20210628.715/window-purpose-fixes.el
+  window-purpose-20210628.715/window-purpose-layout.el
+  window-purpose-20210628.715/window-purpose-pkg.el
+  window-purpose-20210628.715/window-purpose-prefix-overload.el
+  window-purpose-20210628.715/window-purpose-switch.el
+  window-purpose-20210628.715/window-purpose-utils.el
+  window-purpose-20210628.715/window-purpose-x.el
+  window-purpose-20210628.715/window-purpose.el
+Built window-purpose in 4.261s, finished at 2023-04-25T09:35:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  376 Apr 25 09:35 packages/window-purpose-20210628.715.entry
+200K -rw-r--r-- 1 root root 200K Apr 25 09:35 packages/window-purpose-20210628.715.tar

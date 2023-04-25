@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/thierryvolpiatto/zop-to-char.git
 
 Updating /mnt/store/melpa/working/zop-to-char/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/thierryvolpiatto/zop-to-char.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 816ea90337db0545a2f0a5079f4d7b3a2822af7d
+Built zop-to-char in 4.472s, finished at 2023-04-25T09:38:23+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Apr 25 09:38 packages/zop-to-char-20160212.1554.el
+4.0K -rw-r--r-- 1 root root 392 Apr 25 09:38 packages/zop-to-char-20160212.1554.entry

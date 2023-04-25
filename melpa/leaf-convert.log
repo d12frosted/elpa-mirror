@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/conao3/leaf-convert.el.git
 
 Updating /mnt/store/melpa/working/leaf-convert/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/conao3/leaf-convert.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out da86654f1021445cc42c1a5a9195f15097352209
+Built leaf-convert in 4.678s, finished at 2023-04-25T08:54:21+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 40K Apr 25 08:54 packages/leaf-convert-20210816.1103.el
+4.0K -rw-r--r-- 1 root root 442 Apr 25 08:54 packages/leaf-convert-20210816.1103.entry

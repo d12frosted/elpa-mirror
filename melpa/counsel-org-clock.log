@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/akirak/counsel-org-clock.git
 
 Updating /mnt/store/melpa/working/counsel-org-clock/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/akirak/counsel-org-clock.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out a32bb85205e877cc57f62765c225e8b288536918
+Built counsel-org-clock in 4.819s, finished at 2023-04-25T08:18:30+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Apr 25 08:18 packages/counsel-org-clock-20200810.1109.el
+4.0K -rw-r--r-- 1 root root 446 Apr 25 08:18 packages/counsel-org-clock-20200810.1109.entry

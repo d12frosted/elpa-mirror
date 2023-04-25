@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/mattfidler/linum-off.git
 
 Updating /mnt/store/melpa/working/linum-off/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/mattfidler/linum-off.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 3e37baaad27d27e405f8dfe01d4ab9cd5b591353
+Built linum-off in 4.093s, finished at 2023-04-25T08:55:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.5K Apr 25 08:55 packages/linum-off-20160217.2137.el
+4.0K -rw-r--r-- 1 root root  389 Apr 25 08:55 packages/linum-off-20160217.2137.entry

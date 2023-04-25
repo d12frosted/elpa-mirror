@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/xendk/ede-php-autoload-composer-installers.git
 
 Updating /mnt/store/melpa/working/ede-php-autoload-composer-installers/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/xendk/ede-php-autoload-composer-installers.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 3e2fde975a06757b363e235c67e6341ebe668f60
+Built ede-php-autoload-composer-installers in 4.686s, finished at 2023-04-25T08:24:57+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Apr 25 08:24 packages/ede-php-autoload-composer-installers-20170221.2026.el
+4.0K -rw-r--r-- 1 root root  529 Apr 25 08:24 packages/ede-php-autoload-composer-installers-20170221.2026.entry

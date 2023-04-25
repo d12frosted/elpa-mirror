@@ -3,9 +3,18 @@ Fetcher: github
 Source:  https://github.com/kosh04/emacs-wandbox.git
 
 Updating /mnt/store/melpa/working/wandbox/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/kosh04/emacs-wandbox.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out e002fe41f2cd9b4ce2b1dc80b83301176e9117f1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/wandbox/
+  to /tmp/wandboxfoQoxE/wandbox-20170603.1231
+    tls-patch.el -> tls-patch.el
+    wandbox.el -> wandbox.el
+Created wandbox-20170603.1231.tar containing:
+  wandbox-20170603.1231/
+  wandbox-20170603.1231/tls-patch.el
+  wandbox-20170603.1231/wandbox-pkg.el
+  wandbox-20170603.1231/wandbox.el
+Built wandbox in 4.490s, finished at 2023-04-25T09:34:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 411 Apr 25 09:34 packages/wandbox-20170603.1231.entry
+ 40K -rw-r--r-- 1 root root 40K Apr 25 09:34 packages/wandbox-20170603.1231.tar

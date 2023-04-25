@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/lujun9972/el-typing-game.git
 
 Updating /mnt/store/melpa/working/typing-game/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/lujun9972/el-typing-game.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 616435a5270274f4c7b698697674dbb2039049a4
+Built typing-game in 4.727s, finished at 2023-04-25T09:31:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.5K Apr 25 09:31 packages/typing-game-20160426.1220.el
+4.0K -rw-r--r-- 1 root root  292 Apr 25 09:31 packages/typing-game-20160426.1220.entry

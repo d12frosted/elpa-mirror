@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/magit-gerrit.git
 
 Updating /mnt/store/melpa/working/magit-gerrit/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/emacsorphanage/magit-gerrit.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out a97521574c5b7d4b7ab89e25c358c87fd5b1887f
+Built magit-gerrit in 5.701s, finished at 2023-04-25T08:57:10+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Apr 25 08:57 packages/magit-gerrit-20230309.2251.el
+4.0K -rw-r--r-- 1 root root 413 Apr 25 08:57 packages/magit-gerrit-20230309.2251.entry

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/isamert/empv.el.git
 
 Updating /mnt/store/melpa/working/empv/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/isamert/empv.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out af7def9dbb0156b2ec4e75c71ca29792b112768f
+Built empv in 5.273s, finished at 2023-04-25T08:27:53+0000
+ ✓ Success:
+ 72K -rw-r--r-- 1 root root 70K Apr 25 08:27 packages/empv-20230409.2130.el
+4.0K -rw-r--r-- 1 root root 372 Apr 25 08:27 packages/empv-20230409.2130.entry

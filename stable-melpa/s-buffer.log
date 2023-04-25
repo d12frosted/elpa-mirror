@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/nicferrier/emacs-s-buffer.git
 
 Updating /mnt/store/melpa/working/s-buffer/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/nicferrier/emacs-s-buffer.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out f95d234282377f00a2c3a9846681080cb95bb1df
+Built s-buffer in 4.915s, finished at 2023-04-25T09:21:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.7K Apr 25 09:21 packages/s-buffer-20130605.2124.el
+4.0K -rw-r--r-- 1 root root  394 Apr 25 09:21 packages/s-buffer-20130605.2124.entry

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/zv/z3-mode.git
 
 Updating /mnt/store/melpa/working/z3-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/zv/z3-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 0356cbe1e1e2b780ba0ddb4aaa055fa246a67931
+Built z3-mode in 4.872s, finished at 2023-04-25T09:37:49+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Apr 25 09:37 packages/z3-mode-20211116.138.el
+4.0K -rw-r--r-- 1 root root  438 Apr 25 09:37 packages/z3-mode-20211116.138.entry

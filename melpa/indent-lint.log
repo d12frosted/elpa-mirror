@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/conao3/indent-lint.el.git
 
 Updating /mnt/store/melpa/working/indent-lint/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/conao3/indent-lint.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out c55f4ded11e8e50a96f43675a071354a8fb501c3
+Built indent-lint in 4.383s, finished at 2023-04-25T08:48:26+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Apr 25 08:48 packages/indent-lint-20200812.949.el
+4.0K -rw-r--r-- 1 root root 438 Apr 25 08:48 packages/indent-lint-20200812.949.entry

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/Andersbakken/rtags.git
 
 Updating /mnt/store/melpa/working/ac-rtags/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/Andersbakken/rtags.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 595055b5316a7c92ba1d638f324f98842a0f41a5
+Built ac-rtags in 5.642s, finished at 2023-04-25T11:56:43+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Apr 25 11:56 packages/ac-rtags-20191222.920.el
+4.0K -rw-r--r-- 1 root root  430 Apr 25 11:56 packages/ac-rtags-20191222.920.entry

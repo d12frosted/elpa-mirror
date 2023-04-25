@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/marsmining/ox-twbs.git
 
 Updating /mnt/store/melpa/working/ox-twbs/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/marsmining/ox-twbs.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out e8a27dc78b7be494d9918f26db7a3bbb6b45020b
+Built ox-twbs in 4.884s, finished at 2023-04-25T09:10:44+0000
+ ✓ Success:
+128K -rw-r--r-- 1 root root 127K Apr 25 09:10 packages/ox-twbs-20200628.1949.el
+4.0K -rw-r--r-- 1 root root  512 Apr 25 09:10 packages/ox-twbs-20200628.1949.entry

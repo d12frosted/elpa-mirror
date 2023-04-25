@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/krzysztof-magosa/flycheck-yamllint.git
 
 Updating /mnt/store/melpa/working/flycheck-yamllint/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/krzysztof-magosa/flycheck-yamllint.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out aa211b1243168a4f752888c0014c5b9d2da178b1
+Built flycheck-yamllint in 4.488s, finished at 2023-04-25T08:35:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Apr 25 08:35 packages/flycheck-yamllint-20170326.1309.el
+4.0K -rw-r--r-- 1 root root  449 Apr 25 08:35 packages/flycheck-yamllint-20170326.1309.entry

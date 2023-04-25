@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/danielma/rufo.el.git
 
 Updating /mnt/store/melpa/working/rufo/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/danielma/rufo.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 85a6d80fb05fef396a8029b8f944c92a53faf8fe
+Built rufo in 7.842s, finished at 2023-04-25T09:20:55+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.9K Apr 25 09:20 packages/rufo-20170718.1416.el
+4.0K -rw-r--r-- 1 root root  336 Apr 25 09:20 packages/rufo-20170718.1416.entry

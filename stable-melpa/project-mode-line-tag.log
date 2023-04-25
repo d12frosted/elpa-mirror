@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/fritzgrabo/project-mode-line-tag.git
 
 Updating /mnt/store/melpa/working/project-mode-line-tag/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/fritzgrabo/project-mode-line-tag.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 509ac9a01cd344ee9bfa1bfebed6565dd4cfedd7
+Built project-mode-line-tag in 4.606s, finished at 2023-04-25T09:15:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Apr 25 09:15 packages/project-mode-line-tag-20220720.2110.el
+4.0K -rw-r--r-- 1 root root  409 Apr 25 09:15 packages/project-mode-line-tag-20220720.2110.entry

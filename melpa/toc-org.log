@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/snosov1/toc-org.git
 
 Updating /mnt/store/melpa/working/toc-org/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/snosov1/toc-org.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out bf2e4b358efbd860ecafe6e74776de0885d9d100
+Built toc-org in 5.043s, finished at 2023-04-25T09:30:08+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Apr 25 09:30 packages/toc-org-20220110.1452.el
+4.0K -rw-r--r-- 1 root root 431 Apr 25 09:30 packages/toc-org-20220110.1452.entry

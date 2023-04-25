@@ -3,9 +3,20 @@ Fetcher: github
 Source:  https://github.com/karthink/elfeed-tube.git
 
 Updating /mnt/store/melpa/working/elfeed-tube/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/karthink/elfeed-tube.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 194215ae02f4f7bfc4b693317afd6338d30459d1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-tube/
+  to /tmp/elfeed-tubexbg4bO/elfeed-tube-20230316.313
+    elfeed-tube.el -> elfeed-tube.el
+    elfeed-tube-utils.el -> elfeed-tube-utils.el
+    elfeed-tube-fill.el -> elfeed-tube-fill.el
+Created elfeed-tube-20230316.313.tar containing:
+  elfeed-tube-20230316.313/
+  elfeed-tube-20230316.313/elfeed-tube-fill.el
+  elfeed-tube-20230316.313/elfeed-tube-pkg.el
+  elfeed-tube-20230316.313/elfeed-tube-utils.el
+  elfeed-tube-20230316.313/elfeed-tube.el
+Built elfeed-tube in 5.133s, finished at 2023-04-25T08:26:26+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  492 Apr 25 08:26 packages/elfeed-tube-20230316.313.entry
+100K -rw-r--r-- 1 root root 100K Apr 25 08:26 packages/elfeed-tube-20230316.313.tar

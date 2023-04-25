@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/john2x/jenkinsfile-mode.git
 
 Updating /mnt/store/melpa/working/jenkinsfile-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/john2x/jenkinsfile-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 1d90c1ff8edc7ea88844af92a206e7c5f083b568
+Built jenkinsfile-mode in 5.790s, finished at 2023-04-25T08:50:54+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Apr 25 08:50 packages/jenkinsfile-mode-20221124.30.el
+4.0K -rw-r--r-- 1 root root 296 Apr 25 08:50 packages/jenkinsfile-mode-20221124.30.entry

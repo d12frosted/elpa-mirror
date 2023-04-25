@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/ryanolsonx/xit-mode.git
 
 Updating /mnt/store/melpa/working/xit-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/ryanolsonx/xit-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out f9f8f07c54090f03107180b125c54e329493a1a7
+Built xit-mode in 4.766s, finished at 2023-04-25T09:36:47+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Apr 25 09:36 packages/xit-mode-20221006.717.el
+4.0K -rw-r--r-- 1 root root 271 Apr 25 09:36 packages/xit-mode-20221006.717.entry

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/lujun9972/html2org.el.git
 
 Updating /mnt/store/melpa/working/html2org/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/lujun9972/html2org.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 6904aed40259ad8afccff079ebd8a07bff319ebc
+Built html2org in 4.873s, finished at 2023-04-25T08:46:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Apr 25 08:46 packages/html2org-20170418.501.el
+4.0K -rw-r--r-- 1 root root  377 Apr 25 08:46 packages/html2org-20170418.501.entry

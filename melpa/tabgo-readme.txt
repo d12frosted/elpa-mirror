@@ -3,7 +3,7 @@ graphical and more intuitive way, like avy.
 
 Typically you'll want to bind `tabgo' function to a key.
 
-    (bind-key "M-t" #'tabgo)
+    (define-key global-map (kbd "M-t") #'tabgo)
 
 Once you have bound `tabgo', you can call it by pressing the key
 you bound it to.  You'll see that highlighted characters appear on

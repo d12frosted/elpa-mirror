@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/dykstrom/basic-mode.git
 
 Updating /mnt/store/melpa/working/basic-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/dykstrom/basic-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 2971591510f08ab1645ed8a238b6ad086750f994
+Built basic-mode in 6.463s, finished at 2023-04-25T12:01:01+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 53K Apr 25 12:01 packages/basic-mode-20230401.845.el
+4.0K -rw-r--r-- 1 root root 387 Apr 25 12:01 packages/basic-mode-20230401.845.entry

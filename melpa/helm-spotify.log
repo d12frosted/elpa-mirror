@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/krisajenkins/helm-spotify.git
 
 Updating /mnt/store/melpa/working/helm-spotify/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/krisajenkins/helm-spotify.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out f7a62d1ff88e3127de9be7cd3e818b0a92268ab3
+Built helm-spotify in 7.548s, finished at 2023-04-25T08:45:13+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Apr 25 08:45 packages/helm-spotify-20160905.2147.el
+4.0K -rw-r--r-- 1 root root  407 Apr 25 08:45 packages/helm-spotify-20160905.2147.entry

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/lujun9972/el-config-parser.git
 
 Updating /mnt/store/melpa/working/config-parser/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/lujun9972/el-config-parser.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 85d559e7889d8f5b98b8794b79426ae25ec3caa5
+Built config-parser in 4.225s, finished at 2023-04-25T12:08:33+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.5K Apr 25 12:08 packages/config-parser-20160426.1219.el
+4.0K -rw-r--r-- 1 root root  374 Apr 25 12:08 packages/config-parser-20160426.1219.entry

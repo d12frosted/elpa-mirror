@@ -3,9 +3,26 @@ Fetcher: github
 Source:  https://github.com/arbox/org-sync.git
 
 Updating /mnt/store/melpa/working/org-sync/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/arbox/org-sync.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out e34a385fa9e658c8341a0a6e6bc3472d4d536bb8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-sync/
+  to /tmp/org-synccJYDxu/org-sync-20181204.23
+    org-sync-bb.el -> org-sync-bb.el
+    org-sync-github.el -> org-sync-github.el
+    org-sync-gitlab.el -> org-sync-gitlab.el
+    org-sync-redmine.el -> org-sync-redmine.el
+    org-sync-rtm.el -> org-sync-rtm.el
+    org-sync.el -> org-sync.el
+Created org-sync-20181204.23.tar containing:
+  org-sync-20181204.23/
+  org-sync-20181204.23/org-sync-bb.el
+  org-sync-20181204.23/org-sync-github.el
+  org-sync-20181204.23/org-sync-gitlab.el
+  org-sync-20181204.23/org-sync-pkg.el
+  org-sync-20181204.23/org-sync-redmine.el
+  org-sync-20181204.23/org-sync-rtm.el
+  org-sync-20181204.23/org-sync.el
+Built org-sync in 4.330s, finished at 2023-04-25T09:08:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 496 Apr 25 09:08 packages/org-sync-20181204.23.entry
+ 80K -rw-r--r-- 1 root root 80K Apr 25 09:08 packages/org-sync-20181204.23.tar

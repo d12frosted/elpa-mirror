@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/david-christiansen/zombie-trellys-mode.git
 
 Updating /mnt/store/melpa/working/zombie-trellys-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/david-christiansen/zombie-trellys-mode.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 9e99d444a387dd1634cab62ef802683f5bf5d907
+Built zombie-trellys-mode in 4.762s, finished at 2023-04-25T09:38:18+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Apr 25 09:38 packages/zombie-trellys-mode-20150304.1702.el
+4.0K -rw-r--r-- 1 root root  467 Apr 25 09:38 packages/zombie-trellys-mode-20150304.1702.entry

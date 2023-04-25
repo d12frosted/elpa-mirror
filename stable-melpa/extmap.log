@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/doublep/extmap.git
 
 Updating /mnt/store/melpa/working/extmap/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/doublep/extmap.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 5875a4ab27831eb81af6246b12a174c765d52a78
+Built extmap in 4.458s, finished at 2023-04-25T08:31:52+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 31K Apr 25 08:31 packages/extmap-20211023.1904.el
+4.0K -rw-r--r-- 1 root root 361 Apr 25 08:31 packages/extmap-20211023.1904.entry

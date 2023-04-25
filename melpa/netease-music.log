@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/nicehiro/netease-music.git
 
 Updating /mnt/store/melpa/working/netease-music/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/nicehiro/netease-music.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out db7f1eef2d8544983509db679be1cbe6a5678071
+Built netease-music in 4.884s, finished at 2023-04-25T09:02:41+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 29K Apr 25 09:02 packages/netease-music-20210411.603.el
+4.0K -rw-r--r-- 1 root root 393 Apr 25 09:02 packages/netease-music-20210411.603.entry

@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/10sr/pack-el.git
 
 Updating /mnt/store/melpa/working/pack/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/10sr/pack-el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 85cd856fdc00a2365e88b50373b99f1b3d2227be
+Built pack in 4.711s, finished at 2023-04-25T09:10:51+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Apr 25 09:10 packages/pack-20191017.456.el
+4.0K -rw-r--r-- 1 root root 350 Apr 25 09:10 packages/pack-20191017.456.entry

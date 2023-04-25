@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/image-plus.git
 
 Updating /mnt/store/melpa/working/image+/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/emacsorphanage/image-plus.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 6834d0c09bb4df9ecc0d7a559bd7827fed48fffc
+Built image+ in 4.717s, finished at 2023-04-25T08:48:04+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Apr 25 08:48 packages/image+-20150707.1616.el
+4.0K -rw-r--r-- 1 root root 390 Apr 25 08:48 packages/image+-20150707.1616.entry

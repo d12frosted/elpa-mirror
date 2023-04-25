@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/dawidof/emacs-monokai-theme.git
 
 Updating /mnt/store/melpa/working/monokai-alt-theme/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/dawidof/emacs-monokai-theme.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out f342b6afc31f929be0626eca2d696ee9fab78011
+Built monokai-alt-theme in 4.856s, finished at 2023-04-25T09:00:40+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Apr 25 09:00 packages/monokai-alt-theme-20170630.2048.el
+4.0K -rw-r--r-- 1 root root 358 Apr 25 09:00 packages/monokai-alt-theme-20170630.2048.entry

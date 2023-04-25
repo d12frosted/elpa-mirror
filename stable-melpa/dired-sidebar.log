@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/jojojames/dired-sidebar.git
 
 Updating /mnt/store/melpa/working/dired-sidebar/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/jojojames/dired-sidebar.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 5569d3b53585f5413cf87a694650d0fd6e040803
+Built dired-sidebar in 5.053s, finished at 2023-04-25T08:22:03+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 47K Apr 25 08:22 packages/dired-sidebar-20230216.432.el
+4.0K -rw-r--r-- 1 root root 408 Apr 25 08:22 packages/dired-sidebar-20230216.432.entry

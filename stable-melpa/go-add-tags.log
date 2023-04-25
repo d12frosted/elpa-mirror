@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/go-add-tags.git
 
 Updating /mnt/store/melpa/working/go-add-tags/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/emacsorphanage/go-add-tags.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 54879945e46a0884c5f93d7fd6c866a9cdf401ac
+Built go-add-tags in 4.385s, finished at 2023-04-25T08:39:55+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Apr 25 08:39 packages/go-add-tags-20161123.1227.el
+4.0K -rw-r--r-- 1 root root  386 Apr 25 08:39 packages/go-add-tags-20161123.1227.entry

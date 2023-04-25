@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/seamacs/yabaki-theme.git
 
 Updating /mnt/store/melpa/working/yabaki-theme/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/seamacs/yabaki-theme.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 5face6a1194b039e09fe19238aa5db05450d7df1
+Built yabaki-theme in 5.673s, finished at 2023-04-25T09:37:09+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Apr 25 09:37 packages/yabaki-theme-20230327.630.el
+4.0K -rw-r--r-- 1 root root  346 Apr 25 09:37 packages/yabaki-theme-20230327.630.entry

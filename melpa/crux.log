@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/bbatsov/crux.git
 
 Updating /mnt/store/melpa/working/crux/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/bbatsov/crux.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out f8789f67a9d2e1eb31a0e4531aec9bb6d6ec1282
+Built crux in 5.611s, finished at 2023-04-25T08:19:00+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 30K Apr 25 08:18 packages/crux-20221121.859.el
+4.0K -rw-r--r-- 1 root root 369 Apr 25 08:18 packages/crux-20221121.859.entry

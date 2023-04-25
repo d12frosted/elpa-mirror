@@ -3,9 +3,18 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/clj-refactor.el.git
 
 Updating /mnt/store/melpa/working/clj-refactor/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/clojure-emacs/clj-refactor.el.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out ffc6be1ef170402d25b068fb98a5a934cc5a5c36
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/clj-refactor/
+  to /tmp/clj-refactor8yZw01/clj-refactor-20230423.2147
+    clj-refactor.el -> clj-refactor.el
+    CHANGELOG.md -> CHANGELOG.md
+Created clj-refactor-20230423.2147.tar containing:
+  clj-refactor-20230423.2147/
+  clj-refactor-20230423.2147/CHANGELOG.md
+  clj-refactor-20230423.2147/clj-refactor-pkg.el
+  clj-refactor-20230423.2147/clj-refactor.el
+Built clj-refactor in 4.228s, finished at 2023-04-25T12:05:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  712 Apr 25 12:05 packages/clj-refactor-20230423.2147.entry
+200K -rw-r--r-- 1 root root 200K Apr 25 12:05 packages/clj-refactor-20230423.2147.tar

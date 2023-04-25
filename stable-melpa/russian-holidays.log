@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/grafov/russian-holidays.git
 
 Updating /mnt/store/melpa/working/russian-holidays/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/grafov/russian-holidays.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out b285a30f29d85c48e3ea4eb93972d34a090c167b
+Built russian-holidays in 5.178s, finished at 2023-04-25T09:21:03+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Apr 25 09:21 packages/russian-holidays-20170109.2140.el
+4.0K -rw-r--r-- 1 root root  353 Apr 25 09:21 packages/russian-holidays-20170109.2140.entry
