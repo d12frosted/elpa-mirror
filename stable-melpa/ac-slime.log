@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/purcell/ac-slime.git
 
 Updating /mnt/store/melpa/working/ac-slime/
-Checking out a91f664510d3da24b02e87e4aa59d049483a6529
-Built ac-slime in 3.863s, finished at 2023-04-24T13:23:18+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Apr 24 13:23 packages/ac-slime-20171027.2100.el
-4.0K -rw-r--r-- 1 root root  416 Apr 24 13:23 packages/ac-slime-20171027.2100.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/purcell/ac-slime.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

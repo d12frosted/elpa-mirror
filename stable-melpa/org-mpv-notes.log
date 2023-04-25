@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/bpanthi977/org-mpv-notes.git
 
 Updating /mnt/store/melpa/working/org-mpv-notes/
-Checking out 215bd0fdbb8593e555231309dd11a96af7e98a33
-Built org-mpv-notes in 4.475s, finished at 2023-04-24T14:25:54+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Apr 24 14:25 packages/org-mpv-notes-20230414.500.el
-4.0K -rw-r--r-- 1 root root  384 Apr 24 14:25 packages/org-mpv-notes-20230414.500.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/bpanthi977/org-mpv-notes.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

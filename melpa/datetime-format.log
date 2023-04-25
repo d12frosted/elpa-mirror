@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-php/emacs-datetime.git
 
 Updating /mnt/store/melpa/working/datetime-format/
-Checking out e6427538b547cbe02e1bd6ed4b765c73620bdae8
-Built datetime-format in 4.067s, finished at 2023-04-24T13:37:41+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.6K Apr 24 13:37 packages/datetime-format-20160612.1715.el
-4.0K -rw-r--r-- 1 root root  344 Apr 24 13:37 packages/datetime-format-20160612.1715.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/emacs-php/emacs-datetime.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

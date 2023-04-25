@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/d12frosted/flyspell-correct.git
 
 Updating /mnt/store/melpa/working/flyspell-correct-avy-menu/
-Checking out 7d7b6b01188bd28e20a13736ac9f36c3367bd16e
-Built flyspell-correct-avy-menu in 4.679s, finished at 2023-04-24T13:53:41+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.8K Apr 24 13:53 packages/flyspell-correct-avy-menu-20220520.630.el
-4.0K -rw-r--r-- 1 root root  550 Apr 24 13:53 packages/flyspell-correct-avy-menu-20220520.630.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/d12frosted/flyspell-correct.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

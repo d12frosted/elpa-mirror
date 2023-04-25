@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/gergelypolonkai/alert-termux.git
 
 Updating /mnt/store/melpa/working/alert-termux/
-Checking out 8215cf1d86392738c35a90bbc0055359265dfc4d
-Built alert-termux in 3.947s, finished at 2023-04-24T13:24:03+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.3K Apr 24 13:24 packages/alert-termux-20181119.951.el
-4.0K -rw-r--r-- 1 root root  391 Apr 24 13:24 packages/alert-termux-20181119.951.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/gergelypolonkai/alert-termux.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

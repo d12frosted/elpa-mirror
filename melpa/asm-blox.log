@@ -3,21 +3,9 @@ Fetcher: github
 Source:  https://github.com/zkry/asm-blox.git
 
 Updating /mnt/store/melpa/working/asm-blox/
-Checking out 5517efb1e186139197a2d348b7339a72dd379af8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/asm-blox/
-  to /tmp/asm-bloxqc9zL9/asm-blox-20221220.1716
-    asm-blox-puzzles.el -> asm-blox-puzzles.el
-    asm-blox.el -> asm-blox.el
-    asm-blox.info -> asm-blox.info
-Created asm-blox-20221220.1716.tar containing:
-  asm-blox-20221220.1716/
-  asm-blox-20221220.1716/asm-blox-pkg.el
-  asm-blox-20221220.1716/asm-blox-puzzles.el
-  asm-blox-20221220.1716/asm-blox.el
-  asm-blox-20221220.1716/asm-blox.info
-  asm-blox-20221220.1716/dir
-Built asm-blox in 4.279s, finished at 2023-04-24T13:25:16+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 Apr 24 13:25 packages/asm-blox-20221220.1716.entry
-240K -rw-r--r-- 1 root root 240K Apr 24 13:25 packages/asm-blox-20221220.1716.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/zkry/asm-blox.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

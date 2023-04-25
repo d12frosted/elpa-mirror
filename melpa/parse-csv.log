@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/mrc/el-csv.git
 
 Updating /mnt/store/melpa/working/parse-csv/
-Checking out 96bef1ffbc89ea12d13311c9fa239c5c3e864890
-Built parse-csv in 3.546s, finished at 2023-04-24T14:29:28+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Apr 24 14:29 packages/parse-csv-20160512.1723.el
-4.0K -rw-r--r-- 1 root root  413 Apr 24 14:29 packages/parse-csv-20160512.1723.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/mrc/el-csv.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

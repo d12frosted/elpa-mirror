@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/franburstall/amsreftex.git
 
 Updating /mnt/store/melpa/working/amsreftex/
-Checking out facf47b82572e3f62bd8d9b8d4f4d5258f6c8a38
-Built amsreftex in 4.828s, finished at 2023-04-24T13:24:19+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 39K Apr 24 13:24 packages/amsreftex-20220115.1838.el
-4.0K -rw-r--r-- 1 root root 402 Apr 24 13:24 packages/amsreftex-20220115.1838.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/franburstall/amsreftex.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

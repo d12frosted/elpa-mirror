@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/yashi/org-pukiwiki.git
 
 Updating /mnt/store/melpa/working/ox-pukiwiki/
-Checking out b53920abf698fa6682623d671108393e92c68bd7
-Built ox-pukiwiki in 4.258s, finished at 2023-04-24T14:28:34+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Apr 24 14:28 packages/ox-pukiwiki-20150124.1716.el
-4.0K -rw-r--r-- 1 root root 410 Apr 24 14:28 packages/ox-pukiwiki-20150124.1716.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/yashi/org-pukiwiki.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/psibi/dhall-mode.git
 
 Updating /mnt/store/melpa/working/dhall-mode/
-Checking out 87ab69fe765d87b3bb1604a306a8c44d6887681d
-Built dhall-mode in 5.646s, finished at 2023-04-24T13:38:25+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Apr 24 13:38 packages/dhall-mode-20230228.1005.el
-4.0K -rw-r--r-- 1 root root 436 Apr 24 13:38 packages/dhall-mode-20230228.1005.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/psibi/dhall-mode.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

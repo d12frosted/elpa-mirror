@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/thanhvg/emacs-reddigg.git
 
 Updating /mnt/store/melpa/working/reddigg/
-Checking out 7b5445d3101bd8c9fa4a456ad37a19bba840a2cb
-Built reddigg in 4.160s, finished at 2023-04-24T14:36:47+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Apr 24 14:36 packages/reddigg-20220829.1449.el
-4.0K -rw-r--r-- 1 root root 411 Apr 24 14:36 packages/reddigg-20220829.1449.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/thanhvg/emacs-reddigg.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

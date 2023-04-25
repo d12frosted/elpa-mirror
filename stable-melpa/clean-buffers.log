@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/lujun9972/clean-buffers.git
 
 Updating /mnt/store/melpa/working/clean-buffers/
-Checking out 1be6c54e3095761b6b64bf749faae3dfce94e72a
-Built clean-buffers in 4.310s, finished at 2023-04-24T13:31:48+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.7K Apr 24 13:31 packages/clean-buffers-20160529.2259.el
-4.0K -rw-r--r-- 1 root root  315 Apr 24 13:31 packages/clean-buffers-20160529.2259.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/lujun9972/clean-buffers.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

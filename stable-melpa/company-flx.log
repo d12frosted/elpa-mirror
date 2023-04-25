@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/PythonNut/company-flx.git
 
 Updating /mnt/store/melpa/working/company-flx/
-Checking out 05efcafb488f587bb6e60923078d97227462eb68
-Built company-flx in 4.744s, finished at 2023-04-24T13:33:32+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 10K Apr 24 13:33 packages/company-flx-20180103.518.el
-4.0K -rw-r--r-- 1 root root 474 Apr 24 13:33 packages/company-flx-20180103.518.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/PythonNut/company-flx.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

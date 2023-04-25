@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/Dewdrops/evil-extra-operator.git
 
 Updating /mnt/store/melpa/working/evil-extra-operator/
-Checking out 49c2dae224705f05dcfa03868b9fbbb72f2b5a8d
-Built evil-extra-operator in 4.165s, finished at 2023-04-24T13:47:26+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Apr 24 13:47 packages/evil-extra-operator-20210225.1239.el
-4.0K -rw-r--r-- 1 root root 452 Apr 24 13:47 packages/evil-extra-operator-20210225.1239.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/Dewdrops/evil-extra-operator.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

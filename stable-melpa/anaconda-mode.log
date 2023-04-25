@@ -3,18 +3,9 @@ Fetcher: github
 Source:  https://github.com/pythonic-emacs/anaconda-mode.git
 
 Updating /mnt/store/melpa/working/anaconda-mode/
-Checking out e250596f5587129f55f446ef127d0dac5e9730a3
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/anaconda-mode/
-  to /tmp/anaconda-modeqFLUJV/anaconda-mode-20230306.2112
-    anaconda-mode.el -> anaconda-mode.el
-    anaconda-mode.py -> anaconda-mode.py
-Created anaconda-mode-20230306.2112.tar containing:
-  anaconda-mode-20230306.2112/
-  anaconda-mode-20230306.2112/anaconda-mode-pkg.el
-  anaconda-mode-20230306.2112/anaconda-mode.el
-  anaconda-mode-20230306.2112/anaconda-mode.py
-Built anaconda-mode in 4.123s, finished at 2023-04-24T13:24:24+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 462 Apr 24 13:24 packages/anaconda-mode-20230306.2112.entry
- 52K -rw-r--r-- 1 root root 50K Apr 24 13:24 packages/anaconda-mode-20230306.2112.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/pythonic-emacs/anaconda-mode.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

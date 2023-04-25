@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/davep/uptimes.el.git
 
 Updating /mnt/store/melpa/working/uptimes/
-Checking out 29ae6585eeed5a00719b2e52f5ae1082087c1778
-Built uptimes in 4.711s, finished at 2023-04-24T14:50:41+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.7K Apr 24 14:50 packages/uptimes-20191121.1030.el
-4.0K -rw-r--r-- 1 root root  390 Apr 24 14:50 packages/uptimes-20191121.1030.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/davep/uptimes.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

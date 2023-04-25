@@ -164,14 +164,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "53addd02fbad33765f508f8e6254ebd44e1f81e5"))])
  (auctex .
-	 [(13 1 10)
+	 [(13 2 0)
 	  ((emacs
 	    (25 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "658832b8a228f072e6a5a760e7d9fba1ae9808a6"))])
+	   (:commit . "9d47b0a1bdffb8e01a83bf507dac7677ecca92f7"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single

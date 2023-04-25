@@ -2,9 +2,10 @@ Package: opensub
 Fetcher: github
 Source:  https://github.com/danielfleischer/opensub.git
 
-Cloning https://github.com/danielfleischer/opensub.git to /mnt/store/melpa/working/opensub/
-Checking out 0faef3dad6fc9c0eda1db1b237e6f66a8f411b01
-Built opensub in 5.195s, finished at 2023-04-24T14:23:52+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.9K Apr 24 14:23 packages/opensub-20230417.1635.el
-4.0K -rw-r--r-- 1 root root  380 Apr 24 14:23 packages/opensub-20230417.1635.entry
+Updating /mnt/store/melpa/working/opensub/
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/danielfleischer/opensub.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

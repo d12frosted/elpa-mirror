@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/juan-leon/dired-efap.git
 
 Updating /mnt/store/melpa/working/dired-efap/
-Checking out 360b369cb19998c6730ee1debfbec3edb7f349a9
-Built dired-efap in 4.508s, finished at 2023-04-24T13:38:58+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Apr 24 13:38 packages/dired-efap-20220421.1535.el
-4.0K -rw-r--r-- 1 root root 412 Apr 24 13:38 packages/dired-efap-20220421.1535.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/juan-leon/dired-efap.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

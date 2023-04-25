@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/mastro35/sixcolors-mode.git
 
 Updating /mnt/store/melpa/working/sixcolors-mode/
-Checking out 4124a8cf664b04a4bf4c39f7c3b7da3e480b99c8
-Built sixcolors-mode in 4.645s, finished at 2023-04-24T14:41:53+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.6K Apr 24 14:41 packages/sixcolors-mode-20230406.1031.el
-4.0K -rw-r--r-- 1 root root  399 Apr 24 14:41 packages/sixcolors-mode-20230406.1031.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/mastro35/sixcolors-mode.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/helm-css-scss.git
 
 Updating /mnt/store/melpa/working/helm-css-scss/
-Checking out 48b996f73af1fef8d6e88a1c545d98f8c50b0cf3
-Built helm-css-scss in 4.539s, finished at 2023-04-24T14:00:24+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root 34K Apr 24 14:00 packages/helm-css-scss-20191230.1549.el
-4.0K -rw-r--r-- 1 root root 445 Apr 24 14:00 packages/helm-css-scss-20191230.1549.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/emacsorphanage/helm-css-scss.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/thierryvolpiatto/pcomplete-extension.git
 
 Updating /mnt/store/melpa/working/pcomplete-extension/
-Checking out bc5eb204fee659e0980056009409b44bc7655716
-Built pcomplete-extension in 3.934s, finished at 2023-04-24T14:29:57+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Apr 24 14:29 packages/pcomplete-extension-20190928.519.el
-4.0K -rw-r--r-- 1 root root 447 Apr 24 14:29 packages/pcomplete-extension-20190928.519.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/thierryvolpiatto/pcomplete-extension.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

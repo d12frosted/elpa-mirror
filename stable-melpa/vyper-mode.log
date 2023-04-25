@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/ralexstokes/vyper-mode.git
 
 Updating /mnt/store/melpa/working/vyper-mode/
-Checking out 323dfddfc38f0b11697e9ebaf04d1b53297e54e5
-Built vyper-mode in 6.121s, finished at 2023-04-24T14:52:40+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.2K Apr 24 14:52 packages/vyper-mode-20180707.1935.el
-4.0K -rw-r--r-- 1 root root  417 Apr 24 14:52 packages/vyper-mode-20180707.1935.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/ralexstokes/vyper-mode.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

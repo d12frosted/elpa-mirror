@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/accidentalrebel/emacs-dokuwiki.git
 
 Updating /mnt/store/melpa/working/dokuwiki/
-Checking out 594c4d4904dcc2796bbbd2c0845d9e7c09ccf6f7
-Built dokuwiki in 6.482s, finished at 2023-04-24T13:40:25+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.0K Apr 24 13:40 packages/dokuwiki-20180102.59.el
-4.0K -rw-r--r-- 1 root root  450 Apr 24 13:40 packages/dokuwiki-20180102.59.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/accidentalrebel/emacs-dokuwiki.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

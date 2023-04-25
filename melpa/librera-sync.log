@@ -3,22 +3,9 @@ Fetcher: github
 Source:  https://github.com/jumper047/librera-sync.git
 
 Updating /mnt/store/melpa/working/librera-sync/
-Checking out 29e158fc478d5817dffc4045b067feed4c3d0dbe
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/librera-sync/
-  to /tmp/librera-synceE9ZCx/librera-sync-20230306.17
-    librera-sync-doc-view.el -> librera-sync-doc-view.el
-    librera-sync-fb2-reader-mode.el -> librera-sync-fb2-reader-mode.el
-    librera-sync-pdf-view.el -> librera-sync-pdf-view.el
-    librera-sync.el -> librera-sync.el
-Created librera-sync-20230306.17.tar containing:
-  librera-sync-20230306.17/
-  librera-sync-20230306.17/librera-sync-doc-view.el
-  librera-sync-20230306.17/librera-sync-fb2-reader-mode.el
-  librera-sync-20230306.17/librera-sync-pdf-view.el
-  librera-sync-20230306.17/librera-sync-pkg.el
-  librera-sync-20230306.17/librera-sync.el
-Built librera-sync in 5.193s, finished at 2023-04-24T14:12:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 448 Apr 24 14:12 packages/librera-sync-20230306.17.entry
- 52K -rw-r--r-- 1 root root 50K Apr 24 14:12 packages/librera-sync-20230306.17.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/jumper047/librera-sync.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/emamux.git
 
 Updating /mnt/store/melpa/working/emamux/
-Checking out 6172131d78038f0b1490e24bac60534bf4ad3b30
-Built emamux in 4.995s, finished at 2023-04-24T13:44:50+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 21K Apr 24 13:44 packages/emamux-20200315.1220.el
-4.0K -rw-r--r-- 1 root root 308 Apr 24 13:44 packages/emamux-20200315.1220.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/emacsorphanage/emamux.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

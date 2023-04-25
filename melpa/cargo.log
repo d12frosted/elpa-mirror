@@ -3,18 +3,9 @@ Fetcher: github
 Source:  https://github.com/kwrooijen/cargo.el.git
 
 Updating /mnt/store/melpa/working/cargo/
-Checking out 225fdb846c702a193e58a98c1585bb3586a9aa86
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cargo/
-  to /tmp/cargopmiYeu/cargo-20230125.1253
-    cargo-process.el -> cargo-process.el
-    cargo.el -> cargo.el
-Created cargo-20230125.1253.tar containing:
-  cargo-20230125.1253/
-  cargo-20230125.1253/cargo-pkg.el
-  cargo-20230125.1253/cargo-process.el
-  cargo-20230125.1253/cargo.el
-Built cargo in 3.953s, finished at 2023-04-24T13:30:17+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 302 Apr 24 13:30 packages/cargo-20230125.1253.entry
- 52K -rw-r--r-- 1 root root 50K Apr 24 13:30 packages/cargo-20230125.1253.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/kwrooijen/cargo.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-php/emacs-auto-deployment.git
 
 Updating /mnt/store/melpa/working/copy-file-on-save/
-Checking out 370b1586feb2690d3c72185bd4f17c31ce03673a
-Built copy-file-on-save in 8.266s, finished at 2023-04-24T13:35:10+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Apr 24 13:35 packages/copy-file-on-save-20230402.1829.el
-4.0K -rw-r--r-- 1 root root  453 Apr 24 13:35 packages/copy-file-on-save-20230402.1829.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/emacs-php/emacs-auto-deployment.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/quelpa/quelpa-use-package.git
 
 Updating /mnt/store/melpa/working/quelpa-use-package/
-Checking out a97461008391d045aa2a506fc126280a12a060e4
-Built quelpa-use-package in 4.775s, finished at 2023-04-24T14:35:33+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 4.0K Apr 24 14:35 packages/quelpa-use-package-20201022.746.el
-4.0K -rw-r--r-- 1 root root  469 Apr 24 14:35 packages/quelpa-use-package-20201022.746.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/quelpa/quelpa-use-package.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

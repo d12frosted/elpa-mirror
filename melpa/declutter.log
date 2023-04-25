@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/sanel/declutter.git
 
 Updating /mnt/store/melpa/working/declutter/
-Checking out 0b2ca86fa716dfc2fb3bc3425019f049dd65eda2
-Built declutter in 4.669s, finished at 2023-04-24T13:37:56+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.0K Apr 24 13:37 packages/declutter-20220310.2101.el
-4.0K -rw-r--r-- 1 root root  421 Apr 24 13:37 packages/declutter-20220310.2101.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/sanel/declutter.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

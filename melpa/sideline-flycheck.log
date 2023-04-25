@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-sideline/sideline-flycheck.git
 
 Updating /mnt/store/melpa/working/sideline-flycheck/
-Checking out 3d74a008835eff71899b9455cd00f989378fe70e
-Built sideline-flycheck in 4.865s, finished at 2023-04-24T14:41:30+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Apr 24 14:41 packages/sideline-flycheck-20230402.1816.el
-4.0K -rw-r--r-- 1 root root  529 Apr 24 14:41 packages/sideline-flycheck-20230402.1816.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/emacs-sideline/sideline-flycheck.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

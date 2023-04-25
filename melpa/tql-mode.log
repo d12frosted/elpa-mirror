@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/tiros-dev/tql-mode.git
 
 Updating /mnt/store/melpa/working/tql-mode/
-Checking out 488add79eb3fc8ec02aedaa997fe1ed9e5c3e638
-Built tql-mode in 4.407s, finished at 2023-04-24T14:48:51+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Apr 24 14:48 packages/tql-mode-20170724.254.el
-4.0K -rw-r--r-- 1 root root  299 Apr 24 14:48 packages/tql-mode-20170724.254.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/tiros-dev/tql-mode.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

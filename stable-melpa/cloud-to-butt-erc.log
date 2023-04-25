@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/leathekd/cloud-to-butt-erc.git
 
 Updating /mnt/store/melpa/working/cloud-to-butt-erc/
-Checking out 6710c03d1bc91736435cbfe845924940cae34e5c
-Built cloud-to-butt-erc in 4.655s, finished at 2023-04-24T13:32:24+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.6K Apr 24 13:32 packages/cloud-to-butt-erc-20130627.2308.el
-4.0K -rw-r--r-- 1 root root  362 Apr 24 13:32 packages/cloud-to-butt-erc-20130627.2308.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/leathekd/cloud-to-butt-erc.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

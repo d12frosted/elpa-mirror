@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/gitignore-templates.el.git
 
 Updating /mnt/store/melpa/working/gitignore-templates/
-Checking out d28cd1cec00242b688861648d36d086818b06099
-Built gitignore-templates in 5.500s, finished at 2023-04-24T13:56:57+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Apr 24 13:56 packages/gitignore-templates-20210814.144.el
-4.0K -rw-r--r-- 1 root root  387 Apr 24 13:56 packages/gitignore-templates-20210814.144.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/xuchunyang/gitignore-templates.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

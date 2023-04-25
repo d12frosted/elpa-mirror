@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/jjuliano/eslint-rc-emacs.git
 
 Updating /mnt/store/melpa/working/eslint-rc/
-Checking out eb6f3e715792952bc957d5dc8ab1a607f3dbbd55
-Built eslint-rc in 4.295s, finished at 2023-04-24T13:46:36+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.6K Apr 24 13:46 packages/eslint-rc-20220328.800.el
-4.0K -rw-r--r-- 1 root root  535 Apr 24 13:46 packages/eslint-rc-20220328.800.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/jjuliano/eslint-rc-emacs.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

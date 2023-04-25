@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/radian-software/ctrlf.git
 
 Updating /mnt/store/melpa/working/ctrlf/
-Checking out 9b4cf6c79a961f2bfbb949805aa300fcf1eb40a6
-Built ctrlf in 4.440s, finished at 2023-04-24T13:36:43+0000
- ✓ Success:
- 64K -rw-r--r-- 1 root root 63K Apr 24 13:36 packages/ctrlf-20221112.340.el
-4.0K -rw-r--r-- 1 root root 361 Apr 24 13:36 packages/ctrlf-20221112.340.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/radian-software/ctrlf.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

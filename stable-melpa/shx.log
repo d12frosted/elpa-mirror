@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/riscy/shx-for-emacs.git
 
 Updating /mnt/store/melpa/working/shx/
-Checking out b99d16f36bc278d668d8428c4bc9af77064c336a
-Built shx in 5.123s, finished at 2023-04-24T14:41:22+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 46K Apr 24 14:41 packages/shx-20221224.2230.el
-4.0K -rw-r--r-- 1 root root 406 Apr 24 14:41 packages/shx-20221224.2230.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/riscy/shx-for-emacs.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/go-noisegate/go-noisegate.el.git
 
 Updating /mnt/store/melpa/working/go-noisegate/
-Checking out 825d1fb05ec329f938c4c5bed23592f54d326f80
-Built go-noisegate in 4.270s, finished at 2023-04-24T13:57:50+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Apr 24 13:57 packages/go-noisegate-20200502.703.el
-4.0K -rw-r--r-- 1 root root  367 Apr 24 13:57 packages/go-noisegate-20200502.703.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/go-noisegate/go-noisegate.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

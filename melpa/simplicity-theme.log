@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/smallwat3r/emacs-simplicity-theme.git
 
 Updating /mnt/store/melpa/working/simplicity-theme/
-Checking out f4aab6aa07b536688eb62355b83dde5fcd16e049
-Built simplicity-theme in 4.590s, finished at 2023-04-24T14:41:48+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Apr 24 14:41 packages/simplicity-theme-20221016.1444.el
-4.0K -rw-r--r-- 1 root root 427 Apr 24 14:41 packages/simplicity-theme-20221016.1444.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/smallwat3r/emacs-simplicity-theme.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

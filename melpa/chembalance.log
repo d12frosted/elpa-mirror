@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/sergiruiztrepat/chembalance.git
 
 Updating /mnt/store/melpa/working/chembalance/
-Checking out ae36c823ca151f1dc6144ec96b2f5e98181c0dbb
-Built chembalance in 5.011s, finished at 2023-04-24T13:31:08+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 20K Apr 24 13:31 packages/chembalance-20210601.1653.el
-4.0K -rw-r--r-- 1 root root 370 Apr 24 13:31 packages/chembalance-20210601.1653.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/sergiruiztrepat/chembalance.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

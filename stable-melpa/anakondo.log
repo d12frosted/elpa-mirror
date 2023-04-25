@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/didibus/anakondo.git
 
 Updating /mnt/store/melpa/working/anakondo/
-Checking out 16b0ba14d94a5d7e55655efc9e1d6d069a9306f2
-Built anakondo in 4.509s, finished at 2023-04-24T13:24:25+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 37K Apr 24 13:24 packages/anakondo-20210221.1727.el
-4.0K -rw-r--r-- 1 root root 479 Apr 24 13:24 packages/anakondo-20210221.1727.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/didibus/anakondo.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

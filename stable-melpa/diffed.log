@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/ber-ro/diffed.git
 
 Updating /mnt/store/melpa/working/diffed/
-Checking out f7dc37f13a4f1660212c41a6e9faba61eb8cc078
-Built diffed in 4.886s, finished at 2023-04-24T13:38:36+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Apr 24 13:38 packages/diffed-20230208.1546.el
-4.0K -rw-r--r-- 1 root root 366 Apr 24 13:38 packages/diffed-20230208.1546.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/ber-ro/diffed.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

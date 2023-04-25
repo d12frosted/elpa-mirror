@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/lordnik22/org-shoplist.git
 
 Updating /mnt/store/melpa/working/org-shoplist/
-Checking out 71ea7643e66c97d21df49fb8b600578ca0464f83
-Built org-shoplist in 4.579s, finished at 2023-04-24T14:26:44+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 31K Apr 24 14:26 packages/org-shoplist-20210629.2157.el
-4.0K -rw-r--r-- 1 root root 302 Apr 24 14:26 packages/org-shoplist-20210629.2157.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/lordnik22/org-shoplist.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

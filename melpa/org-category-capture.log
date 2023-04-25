@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/IvanMalison/org-projectile.git
 
 Updating /mnt/store/melpa/working/org-category-capture/
-Checking out bc5a2401b456c42c4346d59fa77d633770b6efea
-Built org-category-capture in 6.269s, finished at 2023-04-24T14:24:39+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Apr 24 14:24 packages/org-category-capture-20220114.730.el
-4.0K -rw-r--r-- 1 root root  453 Apr 24 14:24 packages/org-category-capture-20220114.730.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/IvanMalison/org-projectile.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

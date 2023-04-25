@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/ahmadnazir/exsqlaim-mode.git
 
 Updating /mnt/store/melpa/working/exsqlaim-mode/
-Checking out a2e0a62ec8b87193d8eaa695774bfd689324b06c
-Built exsqlaim-mode in 6.032s, finished at 2023-04-24T13:48:48+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 4.0K Apr 24 13:48 packages/exsqlaim-mode-20170607.1003.el
-4.0K -rw-r--r-- 1 root root  351 Apr 24 13:48 packages/exsqlaim-mode-20170607.1003.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/ahmadnazir/exsqlaim-mode.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/lujun9972/org2issue.git
 
 Updating /mnt/store/melpa/working/org2issue/
-Checking out 910b98c858762fd14b11d261626c5e979dde0833
-Built org2issue in 4.510s, finished at 2023-04-24T14:27:24+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Apr 24 14:27 packages/org2issue-20190531.941.el
-4.0K -rw-r--r-- 1 root root 493 Apr 24 14:27 packages/org2issue-20190531.941.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/lujun9972/org2issue.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

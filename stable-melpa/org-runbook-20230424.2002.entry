@@ -1,0 +1,25 @@
+(org-runbook .
+	     [(20230424 2002)
+	      ((emacs
+		(27 1))
+	       (seq
+		(2 3))
+	       (f
+		(0 20 0))
+	       (s
+		(1 12 0))
+	       (dash
+		(2 17 0))
+	       (mustache
+		(0 24))
+	       (ht
+		(0 9))
+	       (ivy
+		(0 8 0)))
+	      "Org mode for runbooks" tar
+	      ((:commit . "1817e58bb2b0db9b76d30f38870fb854dbe51cac")
+	       (:authors
+		("Tyler Dodge"))
+	       (:maintainer "Tyler Dodge")
+	       (:keywords "convenience" "processes" "terminals" "files")
+	       (:url . "https://github.com/tyler-dodge/org-runbook"))])

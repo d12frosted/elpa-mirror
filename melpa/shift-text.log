@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/sabof/shift-text.git
 
 Updating /mnt/store/melpa/working/shift-text/
-Checking out 1be9cbf994000022172ceb746fe1d597f57ea8ba
-Built shift-text in 4.697s, finished at 2023-04-24T14:41:07+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.0K Apr 24 14:41 packages/shift-text-20130831.1655.el
-4.0K -rw-r--r-- 1 root root  359 Apr 24 14:41 packages/shift-text-20130831.1655.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/sabof/shift-text.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

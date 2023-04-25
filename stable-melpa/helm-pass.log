@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-pass.git
 
 Updating /mnt/store/melpa/working/helm-pass/
-Checking out 4ce46f1801f2e76e53482c65aa0619d427a3fbf9
-Built helm-pass in 4.849s, finished at 2023-04-24T14:01:41+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.3K Apr 24 14:01 packages/helm-pass-20210221.1655.el
-4.0K -rw-r--r-- 1 root root  486 Apr 24 14:01 packages/helm-pass-20210221.1655.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/emacs-helm/helm-pass.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

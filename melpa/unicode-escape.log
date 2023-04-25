@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/kosh04/unicode-escape.el.git
 
 Updating /mnt/store/melpa/working/unicode-escape/
-Checking out afbb09c774571eefd4e639fc6163280476484363
-Built unicode-escape in 4.333s, finished at 2023-04-24T14:50:22+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Apr 24 14:50 packages/unicode-escape-20230109.1222.el
-4.0K -rw-r--r-- 1 root root  459 Apr 24 14:50 packages/unicode-escape-20230109.1222.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/kosh04/unicode-escape.el.git/': Failed to connect to github.com port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128
