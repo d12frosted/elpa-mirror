@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/closql
 ;; Keywords: extensions
-;; Package-Version: 20230407.2158
-;; Package-Commit: c3b34a6ec438d2e73309eed7bda26768b9a50335
+;; Package-Version: 20230425.1334
+;; Package-Commit: 618c94dba7666e8c55c0094ee21fa0381d3536df
 
 ;; Package-Requires: (
 ;;     (emacs "25.1")
@@ -215,7 +215,7 @@
                   (pop list1))
                  ((string= key1 key2)
                   (unless (equal elt1 elt2)
-                    (cl-mapcar
+                    (cl-mapc
                      (lambda (col val1 val2)
                        (unless (equal val1 val2)
                          (emacsql db [:update $i1 :set (= $i2 $s3)

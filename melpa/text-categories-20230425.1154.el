@@ -4,8 +4,8 @@
 
 ;; Author: Dionisios Spiliopoulos <dennisspiliopoylos@gmail.com>
 ;; Keywords: lisp
-;; Package-Version: 20220411.2150
-;; Package-Commit: 44cf654a4da7907fb53c8783f1eefa69fce00b43
+;; Package-Version: 20230425.1154
+;; Package-Commit: 7ae616e45005c469273dd4285cd0808885860984
 ;; Version: 0.0.1
 ;; URL: https://github.com/Dspil/text-categories
 ;; Package-Requires: ((emacs "26.2"))
@@ -34,6 +34,8 @@
 ;; libraries
 
 (require 'cl-lib)
+(require 'find-lisp)
+(require 'dash)
 
 ;; variables
 
@@ -41,7 +43,7 @@
 (defvar-local text-categories-category nil "Tracks the current text category number.\nCan be a single digit number.")
 (defvar-local text-categories-suppress-changes nil "Tracks whether we are deleting right now.")
 (defvar-local text-categories-default "0" "Holds the default text category string.")
-(defvar-local text-categories-file-suffix "~text_categories::" "The suffix of text categories files.")
+(defvar-local text-categories-file-suffix "~text_categories~" "The suffix of text categories files.")
 (defvar-local text-categories-viz-prefix "~text_categories_viz::" "The prefix of text categories vizualization buffer.")
 (defvar-local text-categories-stored '() "Assoc list holding all the stored categories.")
 (defvar-local text-categories-default-cycle '("0" "1") "Default categories to cycle them easily.")
@@ -418,6 +420,42 @@
 	          (message "Category of line changed to: %s" (car text-categories-default-cycle))))))
     (setq text-categories-suppress-changes nil)))
 
+(defun text-categories-delete-recursive (cat)
+  "Delete category CAT recursively in all files in the prompted directory."
+  (interactive "sEnter category: ")
+  (let* ((temp-dir (read-directory-name "Enter root directory: "))
+         (allfiles (find-lisp-find-files-internal
+                    temp-dir
+                    (lambda (fname dir)
+                      (file-exists-p
+                       (concat (file-name-as-directory dir)
+                               fname text-categories-file-suffix)))
+                    (lambda (dir _parent) (not (or (equal dir ".") (equal dir ".."))))))
+         (relevant-buffers (--filter
+                            (and
+                             (cdr it)
+                             (member (cdr it) allfiles))
+                            (--map (cons it (buffer-file-name it)) (buffer-list))))
+         (buffers-of-files (--map
+                            (car it)
+                            relevant-buffers))
+         (files-in-buffers (--map
+                            (cdr it)
+                            relevant-buffers))
+         (rest-files (--filter
+                      (not (member it files-in-buffers))
+                      allfiles)))
+    (--each buffers-of-files
+      (with-current-buffer it
+        (text-categories-delete cat)
+        (save-buffer it)))
+    (--each rest-files
+      (let ((fb (find-file-noselect it)))
+        (with-current-buffer fb
+          (text-categories-delete cat)
+          (save-buffer))
+        (kill-buffer fb)))))
+
 ;; hooks
 
 (defun text-categories-after-load-fun ()
@@ -574,17 +612,18 @@
 (defun text-categories-update-island-category (category)
   "Update the category of a marked region in the visualization buffer and at the original buffer to CATEGORY."
   (interactive (list (completing-read "Enter category: " (text-categories-list-original-buffer) nil t)))
-  (if (use-region-p)
-      (let ((regionstart (1+ (- (mark) text-categories-legend-size)))
-            (regionend (1+ (- (point) text-categories-legend-size))))
-        (when (and (> regionstart 0) (> regionend 0))
-          (with-current-buffer text-categories-buffer
-            (setq text-categories-suppress-changes t)
-            (put-text-property regionstart regionend 'text-categories-category category)
-            (setq text-categories-suppress-changes nil)
-            (text-categories-visualize))
-          (setq-local buffer-read-only t)))
-    (message "No active region.")))
+  (save-excursion
+    (if (use-region-p)
+        (let ((regionstart (1+ (- (mark) text-categories-legend-size)))
+              (regionend (1+ (- (point) text-categories-legend-size))))
+          (when (and (> regionstart 0) (> regionend 0))
+            (with-current-buffer text-categories-buffer
+              (setq text-categories-suppress-changes t)
+              (put-text-property regionstart regionend 'text-categories-category category)
+              (setq text-categories-suppress-changes nil)
+              (text-categories-visualize))
+            (setq-local buffer-read-only t)))
+      (message "No active region."))))
 
 (defvar text-categories-viz-mode-map nil "Keymap for text-categories-viz.")
 
