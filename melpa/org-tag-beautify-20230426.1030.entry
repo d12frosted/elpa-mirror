@@ -1,12 +1,12 @@
 (org-tag-beautify .
-		  [(20230402 554)
+		  [(20230426 1030)
 		   ((emacs
 		     (26 1))
 		    (org-pretty-tags
 		     (0 2 2))
-		    (all-the-icons
-		     (5 0 0)))
+		    (nerd-icons
+		     (0 0 1)))
 		   "Beautify Org mode tags" single
-		   ((:commit . "a9ec18a5b8132178b1c9f5a9e00680f4af295ba3")
+		   ((:commit . "defb704b4086a14a1ad530d2a7d67226744d771e")
 		    (:keywords "hypermedia")
 		    (:url . "https://repo.or.cz/org-tag-beautify.git"))])

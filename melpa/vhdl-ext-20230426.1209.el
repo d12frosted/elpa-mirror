@@ -4,8 +4,8 @@
 
 ;; Author: Gonzalo Larumbe <gonzalomlarumbe@gmail.com>
 ;; URL: https://github.com/gmlarumbe/vhdl-ext
-;; Package-Version: 20230221.1447
-;; Package-Commit: 6b9cbfeedc4914b08b65e498fb3213bba3221155
+;; Package-Version: 20230426.1209
+;; Package-Commit: 94e83894f172e227581078b1997aec2473896df8
 ;; Version: 0.1.0
 ;; Keywords: VHDL, IDE, Tools
 ;; Package-Requires: ((emacs "28.1") (eglot "1.9") (lsp-mode "8.0.1") (ag "0.48") (ripgrep "0.4.0") (hydra "0.15.0") (flycheck "33-cvs"))
@@ -526,6 +526,14 @@ portB => signalB
   "Face for instances lib prefix."
   :group 'vhdl-ext-font-lock-faces)
 
+(defvar vhdl-ext-font-lock-translate-off-face 'vhdl-ext-font-lock-translate-off-face)
+(defface vhdl-ext-font-lock-translate-off-face
+  '((t (:background "gray20" :slant italic)))
+  "Face for pragmas between comments, e.g:
+* translate_off / * translate_on"
+  :group 'vhdl-ext-font-lock-faces)
+
+
 ;;;; Regexps
 (defconst vhdl-ext-font-lock-punctuation-re "\\([!,;:?'=<>]\\|\\*\\)")
 (defconst vhdl-ext-font-lock-punctuation-bold-re "\\([&^~+-]\\||\\|\\.\\|\\/\\)")
@@ -832,6 +840,7 @@ Regex search bound to LIMIT."
    vhdl-ext-font-lock-keywords-5))
 
 ;;; Flycheck
+;;;; GHDL
 ;; Overriding of `vhdl-ghdl' syntax checker to add more options
 (flycheck-def-option-var vhdl-ext-flycheck-ghdl-include-path nil vhdl-ghdl
   "A list of include directories for GHDL.
@@ -866,6 +875,38 @@ See URL `https://github.com/ghdl/ghdl'."
   :modes (vhdl-mode vhdl-ts-mode))
 
 
+;;;; vhdl_lang
+(flycheck-def-config-file-var flycheck-vhdl-lang-config-file vhdl-lang "vhdl_lang.toml")
+
+(flycheck-define-checker vhdl-lang
+  "Rust_hdl VHDL Language Frontend.
+
+See URL `https://github.com/VHDL-LS/rust_hdl'."
+  :command ("vhdl_lang"
+            (config-file "--config" flycheck-vhdl-lang-config-file))
+  :standard-input t
+  :error-patterns
+  ((info    line-start "hint: "    (message) "\n" "   --> " (file-name) ":" line line-end)
+   (warning line-start "warning: " (message) "\n" "   --> " (file-name) ":" line line-end)
+   (error   line-start "error: "   (message) "\n" "   --> " (file-name) ":" line line-end))
+  :modes (vhdl-mode vhdl-ts-mode))
+
+
+;;;; vhdl-tool
+;; https://git.vhdltool.com/vhdl-tool/configs/src/master/emacs
+;; INFO: Requires running following command in the background:
+;;  $ vhdl-tool server
+(flycheck-define-checker vhdl-tool
+  "A VHDL syntax checker, type checker and linter using VHDL-Tool.
+
+See URL `http://vhdltool.com'."
+  :command ("vhdl-tool" "client" "lint" "--compact" "--stdin" "-f" source)
+  :standard-input t
+  :error-patterns
+  ((warning line-start (file-name) ":" line ":" column ":w:" (message) line-end)
+   (error   line-start (file-name) ":" line ":" column ":e:" (message) line-end))
+  :modes (vhdl-mode vhdl-ts-mode))
+
 ;;; LSP
 ;; Support for various VHDL language servers (already supported by `lsp-mode', adds support for `eglot'):
 ;;     - rust_hdl: https://github.com/VHDL-LS/rust_hdl.git
@@ -874,9 +915,9 @@ See URL `https://github.com/ghdl/ghdl'."
 ;;     - hdl_checker: https://github.com/suoto/hdl_checker
 (defcustom vhdl-ext-lsp-available-servers
   '((ve-hdl-checker . ("hdl_checker" "--lsp"))
-    (ve-vhdl-ls     . "vhdl_ls")
+    (ve-rust-hdl    . "vhdl_ls")
     (ve-ghdl-ls     . "ghdl-ls")
-    (ve-vhdl-tool   . "vhdl-tool"))
+    (ve-vhdl-tool   . ("vhdl-tool" "lsp")))
   "Vhdl-ext available LSP servers."
   :type '(alist :key-type (symbol)
                 :value-type (string))
@@ -886,7 +927,7 @@ See URL `https://github.com/ghdl/ghdl'."
   (mapcar #'car vhdl-ext-lsp-available-servers))
 
 ;;;; lsp-mode
-(defvar vhdl-ext-lsp-mode-default-server 've-vhdl-ls)
+(defvar vhdl-ext-lsp-mode-default-server 've-rust-hdl)
 
 (defun vhdl-ext-lsp-setup ()
   "Configure VHDL for `lsp-mode'.
@@ -925,7 +966,7 @@ Override any previous configuration for `vhdl-mode' and `vhdl-ts-mode'."
 
 
 ;;;; eglot
-(defvar vhdl-ext-eglot-default-server 've-vhdl-ls)
+(defvar vhdl-ext-eglot-default-server 've-rust-hdl)
 
 (defun vhdl-ext-eglot-set-server (server-id)
   "Configure VHDL for `eglot' for selected SERVER-ID.
