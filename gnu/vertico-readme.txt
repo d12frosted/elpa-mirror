@@ -32,7 +32,7 @@ Table of Contents
 10. Debugging Vertico
 11. Problematic completion commands
 .. 1. `org-refile'
-.. 2. `org-agenda-filter'
+.. 2. `org-agenda-filter' and `org-tags-view'
 .. 3. `tmm-menubar'
 .. 4. `ffap-menu'
 .. 5. `completion-table-dynamic'
@@ -258,9 +258,11 @@ Table of Contents
 3.2 Completion-at-point and completion-in-region
 ────────────────────────────────────────────────
 
-  The `completion-at-point' command is usually bound to `M-TAB' or
-  `TAB'. In case you want to use Vertico for
-  completion-at-point/completion-in-region, you can use the function
+  The tab completion command `completion-at-point' command is usually
+  bound to `M-TAB' or `TAB'. Tab completion is also used in the
+  minibuffer by `M-:' (`eval-expression').  In case you want to use
+  Vertico to show the completion candidates of `completion-at-point' and
+  `completion-in-region', you can use the function
   `consult-completion-in-region' provided by the Consult package.
 
   ┌────
@@ -274,13 +276,10 @@ Table of Contents
   │ 	       args)))
   └────
 
-  The `completion-in-region-function' setting also affects TAB
-  completion in the minibuffer when `M-:' (`eval-expression') is used.
-
   You may also want to look into my [Corfu] package, which provides a
   minimal completion system for `completion-in-region' in a child frame
-  popup. Corfu is also a narrowly focused package and developed in the
-  same spirit as Vertico.
+  popup. Corfu is a narrowly focused package and developed in the same
+  spirit as Vertico. You can even use Corfu in the minibuffer.
 
 
 [Corfu] <https://github.com/minad/corfu>
@@ -605,9 +604,7 @@ Table of Contents
     `*Completions*' buffer displays all matching candidates. This has
     the advantage that you can interact freely with the candidates and
     jump around with Isearch or Avy. On the other hand it necessarily
-    causes a slowdown. Mct supports completion in region via its
-    `mct-region-mode'. Note that Mct development has been [discontinued]
-    due to recent developments of the default completion UI in Emacs 29.
+    causes a slowdown.
   • [Selectrum]: Selectrum is the predecessor of Vertico has been
     deprecated in favor of Vertico. Read the [migration guide] when
     migrating from Selectrum.  Vertico was designed specifically to
@@ -621,9 +618,6 @@ Table of Contents
 
 
 [Mct] <https://git.sr.ht/~protesilaos/mct>
-
-[discontinued]
-<https://protesilaos.com/codelog/2022-04-14-emacs-discontinue-mct/>
 
 [Selectrum] <https://github.com/radian-software/selectrum>
 
@@ -743,11 +737,19 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   │ ;; Alternative 1: Use the basic completion style
   │ (setq org-refile-use-outline-path 'file
   │       org-outline-path-complete-in-steps t)
-  │ (advice-add #'org-olpath-completing-read :around
-  │ 	    (lambda (&rest args)
-  │ 	      (minibuffer-with-setup-hook
-  │ 		  (lambda () (setq-local completion-styles '(basic)))
-  │ 		(apply args))))
+  │ 
+  │ (advice-add #'org-olpath-completing-read :around #'org-enforce-basic-completion)
+  │ 
+  │ (defun org-enforce-basic-completion (&rest args)
+  │   (minibuffer-with-setup-hook
+  │       (:append
+  │        (lambda ()
+  │ 	 (let ((map (make-sparse-keymap (current-local-map))))
+  │ 	   (define-key map [tab] #'minibuffer-complete)
+  │ 	   (use-local-map map))
+  │ 	 (setq-local completion-styles (cons 'basic completion-styles)
+  │ 		     vertico-preselect 'prompt)))
+  │     (apply args)))
   └────
 
   Alternatively you may want to disable the outline path completion in
@@ -763,17 +765,26 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-11.2 `org-agenda-filter'
-────────────────────────
+11.2 `org-agenda-filter' and `org-tags-view'
+────────────────────────────────────────────
 
-  Similar to `org-refile', the `org-agenda-filter' completion function
-  (`org-agenda-filter-completion-function') does not make use of
-  completion boundaries. Unfortunately `TAB' completion
-  (`minibuffer-complete') does not work for this reason. This affects
-  Vertico and also the Emacs default completion system.  For example if
-  you enter `+tag<0 TAB' the input is replaced with `0:10' which is not
-  correct. With preserved completion boundaries, the expected result
-  would be `+tag<0:10'.
+  Similar to `org-refile', the commands `org-agenda-filter' and
+  `org-tags-view' do not make use of completion boundaries. The internal
+  completion tables are `org-agenda-filter-completion-function' and
+  `org-tags-completion-function'.  Unfortunately `TAB' completion
+  (`minibuffer-complete') does not work for this reason with arbitrary
+  completion styles like `substring', `flex' or `orderless'. This
+  affects Vertico and also the Emacs default completion system. For
+  example if you enter `+tag<0 TAB' the input is replaced with `0:10'
+  which is not correct. With preserved completion boundaries, the
+  expected result would be `+tag<0:10'. Completion boundaries are used
+  for example by file completion, where each part of the path can be
+  completed separately. Ideally this issue would be fixed in Org.
+
+  ┌────
+  │ (advice-add #'org-make-tags-matcher :around #'org-enforce-basic-completion)
+  │ (advice-add #'org-agenda-filter :around #'org-enforce-basic-completion)
+  └────
 
 
 11.3 `tmm-menubar'
@@ -863,11 +874,9 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 11.7 Tramp hostname and username completion
 ───────────────────────────────────────────
 
-  *NOTE:* On upcoming Emacs 30 and the upcoming Tramp 2.6.0.2 the
-  workarounds described in this section will likely become unnecessary,
-  since the Tramp maintainer improved the relevant completion
-  tables. Confirmation would be welcome if you already use a very recent
-  build of Emacs master.
+  *NOTE:* On upcoming Emacs 30 and Tramp 2.6.0.2 the workarounds
+  described in this section are not necessary anymore, since the
+  relevant completion tables have been improved.
 
   In combination with Orderless or other non-prefix completion styles
   like `substring' or `flex', host names and user names are not made
@@ -882,10 +891,11 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   │       completion-category-overrides '((file (styles basic partial-completion))))
   └────
 
-  For users who are familiar with the `completion-style' machinery and
-  who want to dig a bit deeper. You may also define a custom completion
-  style which sets in only for remote files. This way `orderless' will
-  stay the preferred style in most cases.
+  If you are familiar with the `completion-style' machinery and want to
+  dig a bit deeper, you may also define a custom completion style which
+  sets in only for remote files. The custom completion style ensures
+  that you can always match substrings within non-remote file names,
+  since `orderless' will stay the preferred style for non-remote files.
 
   ┌────
   │ (defun basic-remote-try-completion (string table pred point)

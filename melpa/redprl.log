@@ -3,9 +3,8 @@ Fetcher: github
 Source:  https://github.com/RedPRL/sml-redprl.git
 
 Updating /mnt/store/melpa/working/redprl/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/RedPRL/sml-redprl.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out 4abdbdeda4604ff30ce19c0df3f43e34faf60bd7
+Built redprl in 5.369s, finished at 2023-04-25T21:03:30+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Apr 25 21:03 packages/redprl-20180418.1434.el
+4.0K -rw-r--r-- 1 root root 342 Apr 25 21:03 packages/redprl-20180418.1434.entry

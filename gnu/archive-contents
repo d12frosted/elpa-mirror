@@ -3826,17 +3826,18 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "2c2ecb46b0ad3e841ac9551e3a80d02893cdf6ec"))])
  (vertico .
-	  [(1 2)
+	  [(1 3)
 	   ((emacs
 	     (27 1))
 	    (compat
 	     (29 1 4 0)))
 	   "VERTical Interactive COmpletion" tar
 	   ((:url . "https://github.com/minad/vertico")
+	    (:keywords "convenience" "files" "matching" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "3386763b717415840fd58929cc2ca056e0eb10d5"))])
+	    (:commit . "5aeff1e3464dbede5d3969fff088191c1a6d84a3"))])
  (vertico-posframe .
 		   [(0 7 2)
 		    ((emacs
