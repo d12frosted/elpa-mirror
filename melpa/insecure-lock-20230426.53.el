@@ -5,8 +5,8 @@
 ;; Author: Qiantan Hong <qhong@alum.mit.edu>
 ;; Maintainer: Qiantan Hong <qhong@alum.mit.edu>
 ;; URL: https://github.com/BlueFlo0d/insecure-lock
-;; Package-Version: 20221111.2002
-;; Package-Commit: 2750190c70ebf564fe142ab5ee7e44675609b06a
+;; Package-Version: 20230426.53
+;; Package-Commit: 33b2cf4ecf80d948cf0942aa8bc1787d44c99941
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: unix screensaver security
 ;; Version: 0.0.0
@@ -130,6 +130,7 @@ Return non-nil if PASSWORD is correct."
     (while (not retval) (accept-process-output proc))
     (equal retval "finished\n")))
 
+;;;###autoload
 (defun insecure-lock-enter ()
   "Toggle on screen lock."
   (interactive)
