@@ -3,8 +3,8 @@
 ;; Author: Alexandre Vassalotti <alexandre@peadrop.com>
 ;; Created: 23-Apr-2009
 ;; Version: 0.3
-;; Package-Version: 20230412.2243
-;; Package-Commit: 482156c0f96dd670b9f1ba4f946e66edeb04535f
+;; Package-Version: 20220303.1716
+;; Package-Commit: 5f632bef3827a1d95d95bce92c5a3a1f903b6679
 ;; Keywords: google protobuf languages
 
 ;; Redistribution and use in source and binary forms, with or without
