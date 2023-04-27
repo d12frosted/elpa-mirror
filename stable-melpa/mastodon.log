@@ -4,3 +4,48 @@ Source:  https://codeberg.org/martianh/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
 Checking out d2aea126a9d5a5873a835a8ed390956c481c587c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mastodon/
+  to /tmp/mastodonwwfmTV/mastodon-20230425.742
+  ! lisp/mastodon-async.el -> mastodon-async.el
+  ! lisp/mastodon-auth.el -> mastodon-auth.el
+  ! lisp/mastodon-client.el -> mastodon-client.el
+  ! lisp/mastodon-discover.el -> mastodon-discover.el
+  ! lisp/mastodon-http.el -> mastodon-http.el
+  ! lisp/mastodon-inspect.el -> mastodon-inspect.el
+  ! lisp/mastodon-iso.el -> mastodon-iso.el
+  ! lisp/mastodon-media.el -> mastodon-media.el
+  ! lisp/mastodon-notifications.el -> mastodon-notifications.el
+  ! lisp/mastodon-profile.el -> mastodon-profile.el
+  ! lisp/mastodon-search.el -> mastodon-search.el
+  ! lisp/mastodon-tl.el -> mastodon-tl.el
+  ! lisp/mastodon-toot.el -> mastodon-toot.el
+  ! lisp/mastodon-views.el -> mastodon-views.el
+  ! lisp/mastodon.el -> mastodon.el
+    dir -> dir
+    mastodon.info -> mastodon.info
+    mastodon.texi -> mastodon.texi
+Created mastodon-20230425.742.tar containing:
+  mastodon-20230425.742/
+  mastodon-20230425.742/dir
+  mastodon-20230425.742/mastodon-async.el
+  mastodon-20230425.742/mastodon-auth.el
+  mastodon-20230425.742/mastodon-client.el
+  mastodon-20230425.742/mastodon-discover.el
+  mastodon-20230425.742/mastodon-http.el
+  mastodon-20230425.742/mastodon-inspect.el
+  mastodon-20230425.742/mastodon-iso.el
+  mastodon-20230425.742/mastodon-media.el
+  mastodon-20230425.742/mastodon-notifications.el
+  mastodon-20230425.742/mastodon-pkg.el
+  mastodon-20230425.742/mastodon-profile.el
+  mastodon-20230425.742/mastodon-search.el
+  mastodon-20230425.742/mastodon-tl.el
+  mastodon-20230425.742/mastodon-toot.el
+  mastodon-20230425.742/mastodon-views.el
+  mastodon-20230425.742/mastodon.el
+  mastodon-20230425.742/mastodon.info
+Built mastodon in 7.658s, finished at 2023-04-26T23:56:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  510 Apr 26 23:56 packages/mastodon-20230425.742.entry
+440K -rw-r--r-- 1 root root 440K Apr 26 23:56 packages/mastodon-20230425.742.tar
