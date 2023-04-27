@@ -4,8 +4,8 @@
 
 ;; Author: Alex Kreisher <akreisher18@gmail.com>
 ;; Version: 0.5
-;; Package-Version: 20230424.1817
-;; Package-Commit: c134271b57f21910a6bdc5e395c7862791ed0a16
+;; Package-Version: 20230427.147
+;; Package-Commit: 6825a6ce3a5b5200f982ed390656cc0a622c0eba
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: convenience
 ;; URL: https://github.com/akreisher/eshell-syntax-highlighting
@@ -140,14 +140,13 @@
 
 (defun eshell-syntax-highlighting--find-unescaped (seq end)
   "Find first unescaped instance of SEQ before END."
-  (if (looking-at (rx (* "\\\\") (regexp seq)))
+  (if (looking-at (concat "\\(?:\\\\\\\\\\)*" seq))
       (when (<= (match-end 0) end)
         (goto-char (match-end 0))
         (point))
-    (re-search-forward (rx (| (: (not "\\") (+ "\\\\"))
-                              (not "\\"))
-                           (regexp seq))
-                       end end)))
+    (re-search-forward
+     (concat "\\(\\([^\\\\]\\(\\\\\\\\\\)+\\|[^\\\\]\\)\\)" seq)
+     end end)))
 
 (defun eshell-syntax-highlighting--highlight (beg end type)
   "Highlight word from BEG to END based on TYPE."

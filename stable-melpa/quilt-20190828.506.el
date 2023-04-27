@@ -9,6 +9,8 @@
 ;; Author:	Matt Mackall <mpm@selenic.com>
 ;; Maintainer:	Jan Stranik <jan@stranik.org>
 ;; Version:	0.6
+;; Package-Version: 20190828.506
+;; Package-Commit: b56a1f1acc46cdf8655710e4c8f24f5f31f22c6a
 ;; Keywords:	extensions
 ;; Package-Requires: ((emacs "26.0"))
 ;; URL: https://github.com/jstranik/emacs-quilt

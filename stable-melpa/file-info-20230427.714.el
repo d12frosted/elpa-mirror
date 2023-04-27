@@ -4,8 +4,8 @@
 
 ;; Author: Artur Yaroshenko <artawower@protonmail.com>
 ;; URL: https://github.com/artawower/file-info.el
-;; Package-Version: 20230330.1709
-;; Package-Commit: 0c9eb805f5600045cd0870747abc801e8a6e3ffa
+;; Package-Version: 20230427.714
+;; Package-Commit: cb06d793b7e1ba769189f2002236305eba002660
 ;; Package-Requires: ((emacs "28.1") (hydra "0.15.0") (browse-at-remote "0.15.0"))
 ;; Version: 0.6.0
 
@@ -204,7 +204,7 @@
      :handler (file-info--get-errors-count)
      :bind "e")
     (:name "Coding time"
-     :handler (when (boundp wakatime-ui-mode) wakatime-ui-current-session-text)
+     :handler (when (boundp 'wakatime-ui-mode) wakatime-ui-current-session-text)
      :face font-lock-escape-face
      :bind "T"))
   "List of handlers for file info."

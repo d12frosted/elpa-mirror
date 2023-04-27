@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018 Yuan Fu
 
 ;; Version: 1.10.1
-;; Package-Version: 20230417.2019
-;; Package-Commit: 6a0b1bd0ade038c5926ea97f966609cba9c852aa
+;; Package-Version: 20230427.648
+;; Package-Commit: 90deae21cc2e85b8ede65767ce55ddaa297928a9
 
 ;; Author: Yuan Fu <casouri@gmail.com>
 ;; URL: https://github.com/casouri/eldoc-box
@@ -289,6 +289,7 @@ STR has to be a proper documentation, not empty string, not nil, etc."
   (let ((doc-buffer (get-buffer-create eldoc-box--buffer)))
     (with-current-buffer doc-buffer
       (setq mode-line-format nil)
+      (setq header-line-format nil)
       ;; WORKAROUND: (issue#66) If cursor-type is ‘box’, sometimes the
       ;; cursor is still shown for some reason.
       (setq-local cursor-type t)
@@ -438,7 +439,7 @@ Checkout `lsp-ui-doc--make-frame', `lsp-ui-doc--move-frame'."
       ;; (set-frame-parameter frame 'left-fringe (alist-get 'left-fringe eldoc-box-frame-parameters))
       ;; (set-frame-parameter frame 'right-fringe (alist-get 'right-fringe eldoc-box-frame-parameters))
 
-      (set-face-attribute 'fringe frame :background nil :inherit 'eldoc-box-body)
+      (set-face-attribute 'fringe frame :background 'unspecified :inherit 'eldoc-box-body)
       (set-window-dedicated-p window t)
       (redirect-frame-focus frame (frame-parent frame))
       (set-face-attribute 'internal-border frame :inherit 'eldoc-box-border)
