@@ -5,8 +5,8 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20230327.1843
-;; Package-Commit: 51b5a693b5fe3d573acac97cfd3ce75e0d41c187
+;; Package-Version: 20230427.1446
+;; Package-Commit: 0cab30c2d3e46abfee3d342ab46cf6d1cd61a451
 ;; Version: 0.7
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "27.1") (embark "0.20") (consult "0.17"))
@@ -268,9 +268,9 @@ This function is meant to be added to `embark-collect-mode-hook'."
 (setf (alist-get '(file . consult-locate) embark-default-action-overrides)
       #'find-file)
 
-;;; Support for consult-isearch
+;;; Support for consult-isearch-history
 
-(setf (alist-get 'consult-isearch embark-transformer-alist)
+(setf (alist-get 'consult-isearch-history embark-transformer-alist)
       #'embark-consult--target-strip)
 
 ;;; Support for consult-man and consult-info
