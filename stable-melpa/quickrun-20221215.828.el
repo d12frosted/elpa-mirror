@@ -6,8 +6,6 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; Maintainer: Jen-Chieh Shen <jcs090218@gmail.com>
 ;; URL: https://github.com/emacsorphanage/quickrun
-;; Package-Version: 20221215.828
-;; Package-Commit: 7a89313c07a21eae9cd69a1a98e2a134d559e04f
 ;; Version: 2.3.1
 ;; Package-Requires: ((emacs "26.1") (ht "2.0"))
 ;; Keywords: tools
