@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018 Yuan Fu
 
 ;; Version: 1.10.1
-;; Package-Version: 20230427.648
-;; Package-Commit: 90deae21cc2e85b8ede65767ce55ddaa297928a9
+;; Package-Version: 20230427.804
+;; Package-Commit: 939724afef1ec18386b7e45e697a92b85c6d66de
 
 ;; Author: Yuan Fu <casouri@gmail.com>
 ;; URL: https://github.com/casouri/eldoc-box
@@ -378,6 +378,17 @@ base on WIDTH and HEIGHT of childframe text window."
 (defun eldoc-box--update-childframe-geometry (frame window)
   "Update the size and the position of childframe.
 FRAME is the childframe, WINDOW is the primary window."
+  ;; WORKAROUND: See issue#68. If there’s some text with a display
+  ;; property of (space :width text) -- which is what we apply onto
+  ;; markdown separators -- ‘window-text-pixel-size’ wouldn’t return
+  ;; the correct value. Instead, it returns the current window width.
+  ;; So now the childram only grows in size and never shrinks. For
+  ;; whatever reason, if we set the frame size very small before
+  ;; calculating window’s text size, it can return the right value.
+  ;; (My guess is that the function takes (space :width text) at face
+  ;; value, but that can’t be the whole picture because it works fine
+  ;; when I manually evaluate the function in the childframe...)
+  (set-frame-size frame 1 1 t)
   (let* ((size
           (window-text-pixel-size
            window nil nil
@@ -760,8 +771,11 @@ This allows any change in childframe parameter to take effect."
   (interactive)
   (setq eldoc-box--frame nil))
 
-(with-eval-after-load 'tab-bar-mode
+(with-eval-after-load 'tab-bar
   (add-hook 'tab-bar-mode-hook #'eldoc-box-reset-frame))
+
+(with-eval-after-load 'tab-line
+  (add-hook 'tab-line-mode-hook #'eldoc-box-reset-frame))
 
 (provide 'eldoc-box)
 

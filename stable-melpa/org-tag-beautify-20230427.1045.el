@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (nerd-icons "0.0.1"))
-;; Package-Version: 20230426.1525
-;; Package-Commit: 4f5b3b6b36c6acee4d27b7dc8f23641f21b51202
+;; Package-Version: 20230427.1045
+;; Package-Commit: 476c5c09e8027bd61cde4fdc7a5142c35c708f0d
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -89,6 +89,11 @@
            icon-name-glyph-set)
       (match-string 1 icon-name-glyph-set))))
 
+(defvar org-tag-beautify--nerd-icons-icon-names-list
+  (mapcar 'org-tag-beautify--nerd-icons-get-icon-name
+          org-tag-beautify--nerd-icons-icons-list)
+  "Store all icon names list into a variable to avoid repeatedly computing.")
+
 (defun org-tag-beautify--initialize-org-tags-alist ()
   "Append `nerd-icons' icon names into the `org-tags-alist'."
   (let ((icon-names (mapcar
@@ -112,12 +117,12 @@
                   (org-tag-beautify--nerd-icons-get-icon-name
                    (list selection) ; (#("<icon>" ...))
                    )))
+         ;; TODO: improve the tag name matching algorithm.
+         (tag-regexp-matching-f (apply-partially 'string-match-p
+                                                 (regexp-opt (list (substring-no-properties tag)))))
          (icon-name (seq-find
-                     ;; TODO: improve the tag name matching algorithm.
-                     (apply-partially 'string-match-p
-                                      (regexp-opt (list (substring-no-properties tag))))
-                     (mapcar 'org-tag-beautify--nerd-icons-get-icon-name
-                             org-tag-beautify--nerd-icons-icons-list)))
+                     tag-regexp-matching-f
+                     org-tag-beautify--nerd-icons-icon-names-list))
          (icon-f (cl-find-if
                   (lambda (f)
                     (ignore-errors (funcall f icon-name)))
