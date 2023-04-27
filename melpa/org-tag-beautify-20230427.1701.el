@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (nerd-icons "0.0.1"))
-;; Package-Version: 20230427.1045
-;; Package-Commit: 476c5c09e8027bd61cde4fdc7a5142c35c708f0d
+;; Package-Version: 20230427.1701
+;; Package-Commit: b36882ecfd10f8d31feeeaa8677b7f72cf9a5c44
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -109,26 +109,31 @@
 
 ;; (org-tag-beautify--initialize-org-tags-alist)
 
+(defvar org-tag-beautify--tag-icon-cache-alist nil
+  "A cache list to store already search found tag and icon pair.")
+
 (defun org-tag-beautify--find-tag-icon (&optional tag)
   "Fuzzy find TAG text in icon names then return icon."
   (interactive)
   (let* ((selection (unless tag (completing-read "Tag: " org-tag-beautify--nerd-icons-icons-list))) ; #("<icon>" ...)
          (tag (or tag
-                  (org-tag-beautify--nerd-icons-get-icon-name
-                   (list selection) ; (#("<icon>" ...))
-                   )))
-         ;; TODO: improve the tag name matching algorithm.
-         (tag-regexp-matching-f (apply-partially 'string-match-p
-                                                 (regexp-opt (list (substring-no-properties tag)))))
-         (icon-name (seq-find
-                     tag-regexp-matching-f
-                     org-tag-beautify--nerd-icons-icon-names-list))
-         (icon-f (cl-find-if
-                  (lambda (f)
-                    (ignore-errors (funcall f icon-name)))
-                  (mapcar 'nerd-icons--function-name nerd-icons-glyph-sets)))
-         (icon (list (ignore-errors (funcall icon-f icon-name)))))
-    icon))
+                  (org-tag-beautify--nerd-icons-get-icon-name (list selection))))) ; (#("<icon>" ...))
+    ;; try to get tag associated icon from cache list at first to improve performance.
+    (or (cdr (assoc tag org-tag-beautify--tag-icon-cache-alist))
+        (let* (;; TODO: improve the tag name matching algorithm.
+               (tag-regexp-matching-f (apply-partially 'string-match-p
+                                                       (regexp-opt (list (substring-no-properties tag)))))
+               (icon-name (seq-find
+                           tag-regexp-matching-f
+                           org-tag-beautify--nerd-icons-icon-names-list))
+               (icon-f (cl-find-if
+                        (lambda (f)
+                          (ignore-errors (funcall f icon-name)))
+                        (mapcar 'nerd-icons--function-name nerd-icons-glyph-sets)))
+               (icon (list (ignore-errors (funcall icon-f icon-name)))))
+          ;; cache already search found icon name.
+          (push `(,tag . ,icon) org-tag-beautify--tag-icon-cache-alist)
+          icon))))
 
 ;;; TEST:
 ;; (org-tag-beautify--find-tag-icon "archlinux")

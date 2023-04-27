@@ -4,8 +4,8 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230427.808
-;; Package-Commit: deda0a5c2a1c0c204ad867b54c7228d158e3eebc
+;; Package-Version: 20230427.1936
+;; Package-Commit: 20f9af1d6516d791467b5146ab542631f8fea152
 ;; Version: 0.17.1
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -191,7 +191,7 @@ Uses the interface provided by `comint-mode'"
   "Write REPLY to prompt.  Set FAILED to record failure."
   (let ((inhibit-read-only t))
     (goto-char (point-max))
-    (shell-maker--output-filter (shell-maker--process)
+    (comint-output-filter (shell-maker--process)
                           (concat reply
                                   (if failed
                                       (propertize "<shell-maker-failed-command>"
@@ -425,7 +425,7 @@ Otherwise save current output at location."
       (message "interrupted!"))
     (setq shell-maker--busy nil)))
 
-(defun shell-maker--eval-input (input-string &optional on-output)
+(defun shell-maker--eval-input (input-string &optional on-output no-announcement)
   "Evaluate the Lisp expression INPUT-STRING, and pretty-print the result.
 
 Use ON-OUTPUT function to handle outcome.
@@ -436,11 +436,14 @@ For example:
    (message \"Command: %s\" command)
    (message \"Output: %s\" output)
    (message \"Has error: %s\" output)
-   (message \"Is finished: %s\" finished))"
+   (message \"Is finished: %s\" finished))
+
+NO-ANNOUNCEMENT skips announcing response when in background."
   (let ((buffer (shell-maker-buffer shell-maker-config))
         (prefix-newline "")
         (suffix-newline "\n\n")
-        (response-count 0))
+        (response-count 0)
+        (errored))
     (unless shell-maker--busy
       (setq shell-maker--busy t)
       (cond
@@ -491,7 +494,8 @@ For example:
                                (funcall on-output
                                         input-string response nil partial)))
                          (shell-maker--write-reply (concat prefix-newline response suffix-newline))
-                         (shell-maker--announce-response buffer)
+                         (unless no-announcement
+                           (shell-maker--announce-response buffer))
                          (setq shell-maker--busy nil)
                          (shell-maker--write-input-ring-history)
                          (when (shell-maker-config-on-command-finished shell-maker-config)
@@ -504,22 +508,31 @@ For example:
                                     (shell-maker-last-output))))
                      (shell-maker--write-reply "Error: that's all is known" t) ;; comeback
                      (setq shell-maker--busy nil)
-                     (shell-maker--announce-response buffer)
+                     (unless no-announcement
+                      (shell-maker--announce-response buffer))
                      (when on-output
                        (funcall on-output
                                 input-string (shell-maker-last-output) t t))))
                  (lambda (error)
-                   (shell-maker--write-reply (concat (string-trim error) suffix-newline) t)
+                   (unless errored
+                     (shell-maker--write-reply (concat (string-trim error) suffix-newline) t)
+                     (setq errored t))
                    (setq shell-maker--busy nil)
-                   (shell-maker--announce-response buffer)
+                   (unless no-announcement
+                    (shell-maker--announce-response buffer))
                    (when on-output
                      (funcall on-output
-                              input-string (shell-maker-last-output) t t)))))))))
+                              input-string error t t)))))))))
 
 (defun shell-maker--announce-response (buffer)
   "Announce response if BUFFER is not active."
   (unless (eq buffer (window-buffer (selected-window)))
     (message "%s responded" (buffer-name buffer))))
+
+(defun shell-maker--curl-exit-status-from-error-string (string)
+  "Extract exit status from curl error STRING."
+  (when (string-match (rx "curl: (" (group (one-or-more digit)) ")") string)
+    (string-to-number (match-string 1 string))))
 
 (defun shell-maker-async-shell-command (command streaming response-extractor callback error-callback)
   "Run shell COMMAND asynchronously.
@@ -561,7 +574,13 @@ response and feeds it to CALLBACK or ERROR-CALLBACK accordingly."
                            (funcall callback (funcall response-extractor obj) t)))
                        (car preparsed))
                (with-current-buffer buffer
-                 (funcall callback (cdr preparsed) t)))
+                 (let ((curl-exit-code (shell-maker--curl-exit-status-from-error-string (cdr preparsed))))
+                   (cond ((eq 0 curl-exit-code)
+                          (funcall callback (cdr preparsed) t))
+                         ((numberp curl-exit-code)
+                          (funcall error-callback (string-trim (cdr preparsed))))
+                         (t
+                          (funcall callback (cdr preparsed) t))))))
              (setq remaining-text (cdr preparsed))))))
       (set-process-sentinel
        request-process
@@ -630,7 +649,7 @@ response and feeds it to CALLBACK or ERROR-CALLBACK accordingly."
 Used by `shell-maker--send-input's call."
   (setq shell-maker--input input))
 
-(defun shell-maker--send-input (&optional on-output)
+(defun shell-maker--send-input (&optional on-output no-announcement)
   "Send text after the prompt.
 
 Use ON-OUTPUT function to handle outcome.
@@ -641,10 +660,12 @@ For example:
    (message \"Command: %s\" command)
    (message \"Output: %s\" output)
    (message \"Has error: %s\" output)
-   (message \"Is finished: %s\" finished))"
+   (message \"Is finished: %s\" finished))
+
+NO-ANNOUNCEMENT skips announcing response when in background."
   (let (shell-maker--input)
     (comint-send-input)
-    (shell-maker--eval-input shell-maker--input on-output)))
+    (shell-maker--eval-input shell-maker--input on-output no-announcement)))
 
 (defun shell-maker--get-old-input nil
   "Return the previous input surrounding point."

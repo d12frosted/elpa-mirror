@@ -4,8 +4,8 @@
 
 ;; Author: Hongyu Ding <rainstormstudio@yahoo.com>
 ;; Keywords: lisp
-;; Package-Version: 20230427.157
-;; Package-Commit: 631d0ad6a9cdee43c837daac3759f115851ccc17
+;; Package-Version: 20230427.1637
+;; Package-Commit: c05ba4815d375d779644ca7ac215632fda75089c
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4") (nerd-icons "0.0.1"))
 ;; URL: https://github.com/rainstormstudio/nerd-icons-dired
@@ -56,33 +56,20 @@
 
 (defvar nerd-icons-dired-mode)
 
-(defun nerd-icons-dired--add-overlay (pos string)
-  "Add overlay to display STRING at POS."
-  (let ((ov (make-overlay (1- pos) pos)))
-    (overlay-put ov 'nerd-icons-dired-overlay t)
-    (overlay-put ov 'after-string string)))
-
-(defun nerd-icons-dired--overlays-in (beg end)
-  "Get all nerd-icons-dired overlays between BEG to END."
-  (cl-remove-if-not
-   (lambda (ov)
-     (overlay-get ov 'nerd-icons-dired-overlay))
-   (overlays-in beg end)))
-
-(defun nerd-icons-dired--overlays-at (pos)
-  "Get nerd-icons-dired overlays at POS."
-  (apply #'nerd-icons-dired--overlays-in `(,pos ,pos)))
-
-(defun nerd-icons-dired--remove-all-overlays ()
-  "Remove all `nerd-icons-dired' overlays."
+(defun nerd-icons-dired--remove-all-icons ()
+  "Remove all `nerd-icons-dired' icons."
   (save-restriction
     (widen)
-    (mapc #'delete-overlay
-          (nerd-icons-dired--overlays-in (point-min) (point-max)))))
+    (let ((inhibit-read-only t)
+          (pos nil))
+      (save-excursion
+        (while (setq pos (text-property-any (point-min) (point-max) 'category 'dired-icon))
+          (goto-char pos)
+          (delete-char 1))))))
 
 (defun nerd-icons-dired--refresh ()
   "Display the icons of files in a Dired buffer."
-  (nerd-icons-dired--remove-all-overlays)
+  (nerd-icons-dired--remove-all-icons)
   (save-excursion
     (goto-char (point-min))
     (while (not (eobp))
@@ -91,12 +78,13 @@
           (when file
             (let ((icon (if (file-directory-p file)
                             (nerd-icons-icon-for-dir file
-                                                        :face 'nerd-icons-dired-dir-face
-                                                        :v-adjust nerd-icons-dired-v-adjust)
-                          (nerd-icons-icon-for-file file :v-adjust nerd-icons-dired-v-adjust))))
+                                                     :face 'nerd-icons-dired-dir-face
+                                                     :v-adjust nerd-icons-dired-v-adjust)
+                          (nerd-icons-icon-for-file file :v-adjust nerd-icons-dired-v-adjust)))
+                  (inhibit-read-only t))
               (if (member file '("." ".."))
-                  (nerd-icons-dired--add-overlay (point) "  \t")
-                (nerd-icons-dired--add-overlay (point) (concat icon "\t")))))))
+                  (insert (propertize "  \t" 'category 'dired-icon))
+                (insert (propertize (concat icon "\t") 'category 'dired-icon)))))))
       (forward-line 1))))
 
 (defun nerd-icons-dired--refresh-advice (fn &rest args)
@@ -126,7 +114,7 @@
   (advice-remove 'dired-narrow--internal #'nerd-icons-dired--refresh-advice)
   (advice-remove 'dired-insert-subdir #'nerd-icons-dired--refresh-advice)
   (advice-remove 'dired-do-kill-lines #'nerd-icons-dired--refresh-advice)
-  (nerd-icons-dired--remove-all-overlays))
+  (nerd-icons-dired--remove-all-icons))
 
 ;;;###autoload
 (define-minor-mode nerd-icons-dired-mode
