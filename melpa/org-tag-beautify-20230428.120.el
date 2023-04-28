@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (nerd-icons "0.0.1"))
-;; Package-Version: 20230427.1701
-;; Package-Commit: b36882ecfd10f8d31feeeaa8677b7f72cf9a5c44
+;; Package-Version: 20230428.120
+;; Package-Commit: 04e9db695fb4c52d0a0474a0ab97f32c8628cd06
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -116,8 +116,9 @@
   "Fuzzy find TAG text in icon names then return icon."
   (interactive)
   (let* ((selection (unless tag (completing-read "Tag: " org-tag-beautify--nerd-icons-icons-list))) ; #("<icon>" ...)
-         (tag (or tag
-                  (org-tag-beautify--nerd-icons-get-icon-name (list selection))))) ; (#("<icon>" ...))
+         (tag (downcase
+               (or tag
+                   (org-tag-beautify--nerd-icons-get-icon-name (list selection)))))) ; (#("<icon>" ...))
     ;; try to get tag associated icon from cache list at first to improve performance.
     (or (cdr (assoc tag org-tag-beautify--tag-icon-cache-alist))
         (let* (;; TODO: improve the tag name matching algorithm.
@@ -140,6 +141,7 @@
 ;; (org-tag-beautify--find-tag-icon "steam")
 ;; (org-tag-beautify--find-tag-icon "heart")
 ;; (org-tag-beautify--find-tag-icon "wikipedia")
+;; (org-tag-beautify--find-tag-icon "LaTeX")
 
 (defvar org-tag-beautify-overlays nil
   "A list of overlays of org-tag-beautify.")

@@ -5,8 +5,8 @@
 ;; Author: Debanjum Singh Solanky <debanjum@gmail.com>
 ;; Description: A search assistant for your second brain
 ;; Keywords: search, chat, org-mode, outlines, markdown, beancount, image
-;; Package-Version: 20230427.1245
-;; Package-Commit: 76df393eb55a7e46de5a78c9dabe1fb268a6a8b3
+;; Package-Version: 20230428.315
+;; Package-Commit: f046523b3389343ed865f7b48bca44872e620d08
 ;; Version: 0.6.1
 ;; Package-Requires: ((emacs "27.1") (transient "0.3.0") (dash "2.19.1"))
 ;; URL: https://github.com/debanjum/khoj/tree/master/src/interface/emacs
@@ -306,7 +306,8 @@ Auto invokes setup steps on calling main entrypoint."
                                      (string-match "main.py" msg)
                                      (string-match "api.py" msg)))
                             (dolist (line (split-string msg "\n"))
-                              (message "khoj.el: %s" (nth 1 (split-string line "  " t " *"))))))
+                              (when (string-match "  " line)
+                                (message "khoj.el: %s" (nth 1 (split-string line "  " t " *")))))))
                      ;; call default process filter to write output to process buffer
                      (internal-default-process-filter process msg))))
     (set-process-query-on-exit-flag khoj--server-process nil)
@@ -483,7 +484,6 @@ CONFIG is json obtained from Khoj config API."
       ;; Wait until server is ready
       ;; As server can be started but not ready to use/configure
       (while (not khoj--server-ready?)
-        (message "Khoj: Waiting for server to start...")
         (sit-for 0.5))
 
       ;; Configure server once it's ready
@@ -850,7 +850,7 @@ RECEIVE-DATE is the message receive date."
       (progn
         (when rerank
           (setq khoj--rerank t)
-          (message "Khoj: Rerank Results"))
+          (message "khoj.el: Rerank Results"))
         (khoj--query-search-api-and-render-results
          query-url
          khoj--content-type
@@ -867,7 +867,7 @@ RECEIVE-DATE is the message receive date."
 
 (defun khoj--teardown-incremental-search ()
   "Teardown hooks used for incremental search."
-  (message "Khoj: Teardown Incremental Search")
+  (message "khoj.el: Teardown Incremental Search")
   ;; unset khoj minibuffer window
   (setq khoj--minibuffer-window nil)
   ;; delete open connections to khoj server
@@ -1003,7 +1003,7 @@ Paragraph only starts at first text after blank line."
          (url-request-method "GET"))
     (progn
       (setq khoj--content-type content-type)
-      (url-retrieve update-url (lambda (_) (message "Khoj %s index %supdated!" content-type (if (member "--force-update" args) "force " "")))))))
+      (url-retrieve update-url (lambda (_) (message "khoj.el: %s index %supdated!" content-type (if (member "--force-update" args) "force " "")))))))
 
 (transient-define-suffix khoj--chat-command (&optional _)
   "Command to Chat with Khoj."

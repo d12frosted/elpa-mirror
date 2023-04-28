@@ -6,8 +6,8 @@
 ;; Author: Ashton Wiersdorf <mail@wiersdorf.dev>
 ;; Created: 2023
 ;; Version: 1.0.0
-;; Package-Version: 20230424.2014
-;; Package-Commit: 8d74012f80d29f5044db5b08a4550332ec36e48f
+;; Package-Version: 20230428.319
+;; Package-Commit: b75801f1430c7f2abfa9ffc26aebf26d64c772fe
 ;; Package-Requires: ((emacs "24.1"))
 ;; SPDX-License-Identifier: MIT
 ;; Homepage: https://sr.ht/~ashton314/nordic-night/
@@ -225,7 +225,7 @@ The theme has to be reloaded after changing anything in this group."
    `(show-paren-match ((,class (:background ,nordic-night-dark0))))
    `(show-paren-mismatch ((,class (:background ,nordic-night-red11))))
    `(success ((,class (:foreground ,nordic-night-green14))))
-   `(tab-bar ((t (:background ,nordic-night-dark0 :foreground ,nordic-night-snowy4 :box nil))))
+   `(tab-bar ((t (:background ,nordic-night-dark0 :foreground ,nordic-night-snowy4 :box (:line-width (2 . 2) :color ,nordic-night-dark0)))))
    `(tab-bar-tab ((t (:inherit tab-bar :background ,nordic-night-dark3))))
    `(tab-bar-tab-inactive ((t (:foreground ,nordic-night-blue10))))
    `(term ((,class (:foreground ,nordic-night-snowy4 :background ,nordic-night-dark0))))
@@ -384,7 +384,7 @@ The theme has to be reloaded after changing anything in this group."
    `(proof-declaration-name-face ((,class (:foreground ,nordic-night-green14))))
 
    `(coq-solve-tactics-face ((,class (:foreground ,nordic-night-red11))))
-   `(coq-cheat-face ((,class (:background ,nordic-night-red11 :box (:line-width -1 :color ,nordic-night-red11, :style nil)))))
+   `(coq-cheat-face ((,class (:background ,nordic-night-red11 :box (:line-width -1 :color ,nordic-night-red11 :style nil)))))
 
 ;;; --- Rainbow Delimeters
    `(rainbow-delimiters-depth-1-face ((,class :foreground ,nordic-night-bluegreen7)))
