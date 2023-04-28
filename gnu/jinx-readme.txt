@@ -42,8 +42,8 @@ words in camelCase and PascalCase are accepted.
 [Aspell] <http://aspell.net/>
 
 
-1 Installing Jinx
-═════════════════
+1 Installation
+══════════════
 
   Jinx can be installed from GNU ELPA and MELPA directly or with
   `package-install'.
@@ -58,8 +58,8 @@ words in camelCase and PascalCase are accepted.
   `enchant2-devel'. On Mac, install `enchant2' and `pkgconfig'.
 
 
-2 Using Jinx
-════════════
+2 Configuration
+═══════════════
 
   Jinx has two modes: the command, `global-jinx-mode' activates
   globally; and the command, `jinx-mode', for activating for specific
@@ -84,16 +84,8 @@ words in camelCase and PascalCase are accepted.
   │ (keymap-global-set "<remap> <ispell-word>" #'jinx-correct)
   └────
 
-  • `M-$' triggers correction for the misspelled word next to point.
+  • `M-$' triggers correction for the misspelled word before point.
   • `C-u M-$' triggers correction for the entire buffer.
-
-  Suggested corrections are displayed via a completion menu. You can
-  press digit keys to quickly select a suggestion. Furthermore the menu
-  offers options to save the word temporarily for the current session,
-  in the personal dictionary or in the file-local variables. Note that
-  you can enter arbitrary input at the correction prompt in order to
-  make the correction. By pressing `M-n' (`M-p') again in the correction
-  menu, you can skip to the next (previous) misspelling.
 
   A sample configuration with the popular `use-package' macro is shown
   here:
@@ -105,13 +97,43 @@ words in camelCase and PascalCase are accepted.
   └────
 
 
-3 Enchant backends and personal dictionaries
+3 Correcting words
+══════════════════
+
+  Suggested corrections are displayed as a completion menu. You can
+  press digit keys to quickly select a suggestion. Furthermore the menu
+  offers options to save the word temporarily for the current session,
+  in the personal dictionary or in the file-local variables. Note that
+  you can enter arbitrary input at the correction prompt in order to
+  make the correction. By pressing `M-n' (`M-p') again in the correction
+  menu, you can skip to the next (previous) misspelling.
+
+  The completion menu is compatible with all popular completion UIs:
+  Vertico, Mct, Icomplete, Ivy, Helm and of course default
+  completion. In case you use Vertico I suggest that you tweak the
+  completion display via `vertico-multiform-mode' for the completion
+  category `jinx'. You can for example use the grid display such that
+  more suggestions fit on the screen.
+
+  ┌────
+  │ (add-to-list 'vertico-multiform-categories
+  │ 	     '(jinx grid (vertico-grid-annotate . 25)))
+  │ (vertico-multiform-mode 1)
+  └────
+
+
+4 Enchant backends and personal dictionaries
 ════════════════════════════════════════════
 
-  Enchant uses different backends for different languages (to be
-  spell-checked).  The backends are ordered as specified in the
-  configuration file `~/.config/enchant/enchant.ordering'. For most
-  languages, Enchant uses Hunspell by default.
+  Enchant uses different backends for different languages. The backends
+  are ordered as specified in the personal configuration file
+  `~/.config/enchant/enchant.ordering' and the system-wide configuration
+  file `/usr/share/enchant-2/enchant.ordering'. Enchant uses Hunspell as
+  default backend for most languages. There are a few exceptions. For
+  English Enchant prefers Aspell and for Finnish and Turkish special
+  backends called Voikko and Zemberek are used. On non-Linux operating
+  systems Enchant may also integrate with the spell-checker provided by
+  the operating system.
 
   Depending on the backend the personal dictionary will be taken from
   different locations, e.g., `~/.aspell.LANG.pws' or
@@ -123,7 +145,7 @@ words in camelCase and PascalCase are accepted.
 [Enchant manual] <https://abiword.github.io/enchant/src/enchant.html>
 
 
-4 Alternative spell-checking packages
+5 Alternative spell-checking packages
 ═════════════════════════════════════
 
   There exist multiple alternative spell-checking packages for Emacs,
@@ -167,7 +189,7 @@ words in camelCase and PascalCase are accepted.
 <https://codeberg.org/ideasman42/emacs-spell-fu/issues/40>
 
 
-5 Contributions
+6 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a
