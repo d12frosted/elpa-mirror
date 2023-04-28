@@ -4,5 +4,7 @@
 		  (25 2)))
 		"A generic Emacs interface for proof assistants" tar
 		((:commit . "dac9b5d32ec1404d35e3dd83070591806f8977b0")
+		 (:maintainers
+		  (nil . "proof-general-maintainers@groupes.renater.fr"))
 		 (:maintainer nil . "proof-general-maintainers@groupes.renater.fr")
 		 (:url . "https://proofgeneral.github.io/"))])

@@ -8,6 +8,8 @@
 		 (0 0 1)))
 	       "Phar file support for archive-mode" single
 	       ((:commit . "0bda3e338446d06dbe9d8c8837dee746de48632f")
+		(:maintainers
+		 ("USAMI Kenta" . "tadsan@zonu.me"))
 		(:maintainer "USAMI Kenta" . "tadsan@zonu.me")
 		(:keywords "files")
 		(:url . "https://github.com/emacs-php/archive-phar.el"))])

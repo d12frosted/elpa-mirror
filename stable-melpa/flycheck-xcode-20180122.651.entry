@@ -6,6 +6,8 @@
 		   (0 25)))
 		 "Flycheck extension for Apple's Xcode." single
 		 ((:commit . "6147ab777e2c08e4f5ffdbd85d3013ca700fa835")
+		  (:maintainers
+		   ("James Nguyen" . "james@jojojames.com"))
 		  (:maintainer "James Nguyen" . "james@jojojames.com")
 		  (:keywords "languages" "xcode")
 		  (:url . "https://github.com/jojojames/flycheck-xcode"))])

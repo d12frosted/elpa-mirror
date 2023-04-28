@@ -6,6 +6,8 @@
 	    (0 1 6)))
 	  "Evaluate lurk code blocks in org mode" single
 	  ((:commit . "bd7cf661ccb31bfbfab542018c361bd79064d4f4")
+	   (:maintainers
+	    ("Jeff Weiss" . "jweiss@protocol.ai"))
 	   (:maintainer "Jeff Weiss" . "jweiss@protocol.ai")
 	   (:keywords "languages" "lurk" "lisp")
 	   (:url . "http://github.com/lurk-lang/lurk-emacs"))])

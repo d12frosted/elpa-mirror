@@ -6,6 +6,8 @@
 		  (0 25)))
 		"Flycheck extension for Jest." single
 		((:commit . "8181c5d2e1318c6ddcff21c6f3f6d76413545645")
+		 (:maintainers
+		  ("James Nguyen" . "james@jojojames.com"))
 		 (:maintainer "James Nguyen" . "james@jojojames.com")
 		 (:keywords "languages" "jest")
 		 (:url . "https://github.com/jojojames/flycheck-jest"))])

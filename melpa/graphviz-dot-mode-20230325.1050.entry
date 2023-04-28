@@ -4,6 +4,8 @@
 		      (25 0)))
 		    "Mode for the dot-language used by graphviz (att)." single
 		    ((:commit . "8ff793b13707cb511875f56e167ff7f980a31136")
+		     (:maintainers
+		      ("Pieter Pareit" . "pieter.pareit@gmail.com"))
 		     (:maintainer "Pieter Pareit" . "pieter.pareit@gmail.com")
 		     (:keywords "mode" "dot" "dot-language" "dotlanguage" "graphviz" "graphs" "att")
 		     (:url . "https://ppareit.github.io/graphviz-dot-mode/"))])

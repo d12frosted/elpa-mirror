@@ -4,6 +4,8 @@
 	     (27 1)))
 	   "Major mode for editing ksp files" single
 	   ((:commit . "89b91b8ed6753867e30aa494e5d80325dfe25569")
+	    (:maintainers
+	     ("YoungJoo Lee" . "youngker@gmail.com"))
 	    (:maintainer "YoungJoo Lee" . "youngker@gmail.com")
 	    (:keywords "ksp" "languages")
 	    (:url . "https://github.com/youngker/ksp-mode.el"))])

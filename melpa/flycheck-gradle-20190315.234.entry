@@ -6,6 +6,8 @@
 		    (0 25)))
 		  "Flycheck extension for Gradle." single
 		  ((:commit . "1ca08bbc343362a923cbdc2010f66e41655e92ab")
+		   (:maintainers
+		    ("James Nguyen" . "james@jojojames.com"))
 		   (:maintainer "James Nguyen" . "james@jojojames.com")
 		   (:keywords "languages" "gradle")
 		   (:url . "https://github.com/jojojames/flycheck-gradle"))])

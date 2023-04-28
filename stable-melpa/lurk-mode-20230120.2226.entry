@@ -4,6 +4,8 @@
 	      (25 1)))
 	    "A major mode for editing lurk files" single
 	    ((:commit . "59a3f956944a5ddd43cfd57deeff6b647fc46554")
+	     (:maintainers
+	      ("Jeff Weiss" . "jweiss@protocol.ai"))
 	     (:maintainer "Jeff Weiss" . "jweiss@protocol.ai")
 	     (:keywords "languages" "lurk" "lisp")
 	     (:url . "http://github.com/lurk-lang/lurk-emacs"))])
