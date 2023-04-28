@@ -4,6 +4,8 @@
 
 ;; Author: ongaeshi
 ;; Keywords: shell, save, async, deferred, auto
+;; Package-Version: 20180817.1502
+;; Package-Commit: a8f9213e3c773b5687b81881240e6e648f2f56ba
 ;; Version: 1.0.2
 ;; Package-Requires: ((deferred "20130312") (popwin "20130329"))
 

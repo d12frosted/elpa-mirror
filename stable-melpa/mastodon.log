@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
-Checking out d2aea126a9d5a5873a835a8ed390956c481c587c
+Checking out d841c2522ea63e5a2e02811b20506185072740ca
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonpofWQw/mastodon-20230425.742
+  to /tmp/mastodonNIre4N/mastodon-20230428.1327
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -25,27 +25,29 @@ Copying files (->) and directories (=>)
     dir -> dir
     mastodon.info -> mastodon.info
     mastodon.texi -> mastodon.texi
-Created mastodon-20230425.742.tar containing:
-  mastodon-20230425.742/
-  mastodon-20230425.742/dir
-  mastodon-20230425.742/mastodon-async.el
-  mastodon-20230425.742/mastodon-auth.el
-  mastodon-20230425.742/mastodon-client.el
-  mastodon-20230425.742/mastodon-discover.el
-  mastodon-20230425.742/mastodon-http.el
-  mastodon-20230425.742/mastodon-inspect.el
-  mastodon-20230425.742/mastodon-iso.el
-  mastodon-20230425.742/mastodon-media.el
-  mastodon-20230425.742/mastodon-notifications.el
-  mastodon-20230425.742/mastodon-pkg.el
-  mastodon-20230425.742/mastodon-profile.el
-  mastodon-20230425.742/mastodon-search.el
-  mastodon-20230425.742/mastodon-tl.el
-  mastodon-20230425.742/mastodon-toot.el
-  mastodon-20230425.742/mastodon-views.el
-  mastodon-20230425.742/mastodon.el
-  mastodon-20230425.742/mastodon.info
-Built mastodon in 11.040s, finished at 2023-04-28T04:28:38+0000
+Created mastodon-20230428.1327.tar containing:
+  mastodon-20230428.1327/
+  mastodon-20230428.1327/dir
+  mastodon-20230428.1327/mastodon-async.el
+  mastodon-20230428.1327/mastodon-auth.el
+  mastodon-20230428.1327/mastodon-client.el
+  mastodon-20230428.1327/mastodon-discover.el
+  mastodon-20230428.1327/mastodon-http.el
+  mastodon-20230428.1327/mastodon-inspect.el
+  mastodon-20230428.1327/mastodon-iso.el
+  mastodon-20230428.1327/mastodon-media.el
+  mastodon-20230428.1327/mastodon-notifications.el
+  mastodon-20230428.1327/mastodon-pkg.el
+  mastodon-20230428.1327/mastodon-profile.el
+  mastodon-20230428.1327/mastodon-search.el
+  mastodon-20230428.1327/mastodon-tl.el
+  mastodon-20230428.1327/mastodon-toot.el
+  mastodon-20230428.1327/mastodon-views.el
+  mastodon-20230428.1327/mastodon.el
+  mastodon-20230428.1327/mastodon.info
+Built mastodon in 12.330s, finished at 2023-04-28T14:01:08+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  581 Apr 28 04:28 packages/mastodon-20230425.742.entry
-440K -rw-r--r-- 1 root root 440K Apr 28 04:28 packages/mastodon-20230425.742.tar
+4.0K -rw-r--r-- 1 root root  581 Apr 28 09:13 packages/mastodon-20230425.742.entry
+440K -rw-r--r-- 1 root root 440K Apr 28 09:13 packages/mastodon-20230425.742.tar
+4.0K -rw-r--r-- 1 root root  582 Apr 28 14:01 packages/mastodon-20230428.1327.entry
+440K -rw-r--r-- 1 root root 440K Apr 28 14:01 packages/mastodon-20230428.1327.tar

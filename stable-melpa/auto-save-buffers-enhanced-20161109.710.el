@@ -1,4 +1,6 @@
 ;;; auto-save-buffers-enhanced.el --- Automatically save buffers in a decent way
+;; Package-Version: 20161109.710
+;; Package-Commit: 461e8c816c1b7c650be5f209078b381fe55da8c6
 ;; -*- coding: utf-8; mode:emacs-lisp -*-
 
 ;; Copyright (C) 2007 Kentaro Kuribayashi

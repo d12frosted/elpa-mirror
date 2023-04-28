@@ -3,8 +3,10 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/emacs-fasd.git
 
 Updating /mnt/store/melpa/working/fasd/
-Checking out c1d92553f33ebb018135c698db1a6d7f86731a26
-Built fasd in 11.056s, finished at 2023-04-28T03:53:20+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.9K Apr 28 03:53 packages/fasd-20210104.738.el
-4.0K -rw-r--r-- 1 root root  383 Apr 28 03:53 packages/fasd-20210104.738.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: GitLab is not responding
+fatal: unable to access 'https://framagit.org/steckerhalter/emacs-fasd.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128
