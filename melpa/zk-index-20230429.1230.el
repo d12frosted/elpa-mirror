@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.8
-;; Package-Version: 20230429.622
-;; Package-Commit: 04865e16ac81903f86f6c614c8fc3d5ef2df59f3
+;; Package-Version: 20230429.1230
+;; Package-Commit: de7168e57afe6d699bef90935ccb4965ecfbec89
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "27.1")(zk "0.3"))
@@ -109,7 +109,6 @@ example."
 (define-derived-mode zk-index-mode nil "ZK-Index"
   "Mode for `zk-index'.
 \\{zk-index-mode-map}"
-  (setq mode-name "ZK-Index")
   (setq zk-index-mode-line-orig mode-line-misc-info)
   (read-only-mode)
   (hl-line-mode)
@@ -120,6 +119,7 @@ example."
 
 ;;; Declarations
 
+(defvar zk-desktop-directory)
 (defvar zk-index-last-sort-function nil)
 (defvar zk-index-last-format-function nil)
 (defvar zk-index-query-mode-line nil)
@@ -145,7 +145,8 @@ Adds zk-id as an Embark target, and adds `zk-id-map' and
     (add-to-list 'embark-multitarget-actions 'zk-copy-link-and-title)
     (add-to-list 'embark-multitarget-actions 'zk-follow-link-at-point)
     (add-to-list 'embark-target-finders 'zk-index-embark-target)
-    (add-to-list 'embark-exporters-alist '(zk-file . zk-index))
+    (add-to-list 'embark-exporters-alist '(zk-file . zk-index-embark-export))
+    (add-to-list 'embark-exporters-alist '(zk-id . zk-index-embark-export))
     (define-key zk-id-map (kbd "i") #'zk-index-insert-link)))
 
 (defun zk-index-embark-target ()
@@ -156,6 +157,12 @@ Adds zk-id as an Embark target, and adds `zk-id-map' and
       (re-search-forward zk-id-regexp (line-end-position)))
     (let ((zk-id (match-string-no-properties 1)))
       `(zk-id ,zk-id . ,(cons (line-beginning-position) (line-end-position))))))
+
+(defun zk-index-embark-export (arg)
+  "Embark exporter for `zk-id and `zk-file target types.
+For details of ARG see `zk--processor'."
+  (let ((files (zk--processor arg)))
+    (zk-index files)))
 
 ;;; Formatting
 
@@ -266,7 +273,7 @@ Optionally refresh with FILES, using FORMAT-FN, SORT-FN, BUF-NAME."
   (when (eq major-mode 'zk-index-mode)
     (garbage-collect)
     (dolist (file candidates)
-      (insert (concat zk-index-prefix file "\n")))
+      (insert zk-index-prefix file "\n"))
     (goto-char (point-min))
     (zk-index-make-buttons)
     (zk-index--set-mode-name (format " [%s]" (length candidates)))))
@@ -382,8 +389,8 @@ Optionally refresh with FILES, using FORMAT-FN, SORT-FN, BUF-NAME."
 
 (defvar zk-index-query-terms nil
   "Ordered list of current query terms.
-Takes form of (COMMAND . TERM), where COMMAND is 'ZK-INDEX-FOCUS
-or 'ZK-INDEX-SEARCH, and TERM is the query string. Recent
+Takes form of (COMMAND . TERM), where COMMAND is `ZK-INDEX-FOCUS
+or `ZK-INDEX-SEARCH, and TERM is the query string. Recent
 items listed first.")
 
 (defun zk-index-query-files ()
@@ -616,10 +623,10 @@ Takes an option POS position argument."
         (re-search-forward zk-id-regexp)
         (match-string-no-properties 1)))))
 
-(defun zk-index-insert-link (&optional arg)
+(defun zk-index-insert-link (&optional id)
   "Insert zk-link in `other-window' for button ID at point."
   (interactive)
-  (let ((id (or arg
+  (let ((id (or id
                 (zk-index--button-at-point-p))))
     (with-selected-window (other-window-for-scrolling)
       (zk-insert-link id)

@@ -4,8 +4,8 @@
 ;; Copyright (C) 2022 Marty Hiatt <martianhiatus AT riseup.net>
 ;;
 ;; Package-Requires: ((emacs "28.1"))
-;; Package-Version: 20230428.1520
-;; Package-Commit: bc037c56f64fbaa2d5f78526d979227344845af5
+;; Package-Version: 20230429.1420
+;; Package-Commit: ba58d7362bb9690d14d72468f8075d6c91fbcf29
 ;; Keywords: convenience, translate, wp, dictionary
 ;; URL: https://codeberg.org/martianh/wordreference.el
 ;; Version: 0.2
@@ -45,6 +45,7 @@
 (require 'thingatpt)
 (require 'text-property-search)
 (require 'cl-lib)
+(require 'transient)
 
 (when (require 'pdf-tools nil :no-error)
   (declare-function pdf-view-active-region-text "pdf-view"))
@@ -133,8 +134,8 @@
     (when (require 'helm-dictionary nil :no-error)
       (define-key map (kbd "d") #'wordreference-helm-dict-search))
     (define-key map (kbd "c") #'wordreference-browse-term-cntrl)
-    (when (require 'sdcv nil :no-error))
-    (define-key map (kbd "L") #'wordreference-browse-term-sdcv-littre)
+    (when (require 'sdcv nil :no-error)
+      (define-key map (kbd "L") #'wordreference-browse-term-sdcv-littre))
     (define-key map (kbd "l") #'wordreference-browse-term-linguee)
     (define-key map (kbd "N") #'wordreference-nearby-entries-search)
     (define-key map (kbd "n") #'wordreference-next-entry)
@@ -377,13 +378,12 @@ followed by a list of textual results returned by
          (tooltip-text (dom-texts tooltip))
          (term-text-list (wordreference--process-term-text-list td))
          (conj-list (or (dom-by-class td "conjugate")
-                        '(("dummy"))))
+                        (make-list (length term-text-list)
+                                   '("dummy"))))
          (conj-list-links (cl-loop for x in conj-list
                                    collect (or (dom-attr x 'href) "")))
-         (term-conj-list
-          (cl-mapcar
-           #'list
-           term-text-list conj-list-links))
+         (term-conj-list (cl-mapcar #'list
+                                    term-text-list conj-list-links))
          ;;TODO: this is EN hardcoded, are is there usage for other langs?
          (usage-list (dom-by-class td "engusg"))
          (usage-link (dom-attr (car (dom-by-tag usage-list 'a))
@@ -463,13 +463,10 @@ BUFFER is the buffer that was current when we invoked the wordreference command.
       ;; (setq wr-html html-parsed)
       ;; (setq wr-post-article post-article)
       ;; (setq wordreference-word-tables word-tables)
-      ;; (setq wr-comp-table comp-table)
-      ;; (setq wordreference-full-html html-parsed)
       ;; (setq wr-forum-links forum-links)
       ;; (setq wordreference-full-tables word-tables)
       ;; (setq wordreference-single-tr (caddr (wordreference--get-trs pr-table)))
       ;; (setq wordreference-full-pr-trs-list pr-trs-results-list)
-      ;; (setq wordreference-full-sup-trs-list sup-trs-results-list)
       (erase-buffer)
       (wordreference-mode)
       ;; print principle, supplementary, particule verbs, and compound tables:
@@ -1223,7 +1220,7 @@ With a PREFIX arg, prompt for source and target language pair."
     (wordreference--retrieve-parse-html word source target)))
 
 ;;;###autoload
-(defun wordrerence-search-go ()
+(defun wordreference-search-go ()
   "Seach wordreference for current region or word at point."
   (interactive)
   (let ((word (or (wordreference--get-region)

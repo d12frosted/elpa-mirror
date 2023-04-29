@@ -4,8 +4,8 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230429.938
-;; Package-Commit: 9ba04b76c782b00984568be31649b733972a05ef
+;; Package-Version: 20230429.1233
+;; Package-Commit: 6534bde24ebf279c3068dcbcfa84c7eef885a1f7
 ;; Version: 0.18.1
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -107,8 +107,8 @@ Enable it for troubleshooting issues."
   (let ((map (nconc (make-sparse-keymap) comint-mode-map)))
     (define-key map [remap comint-send-input] 'shell-maker-return)
     (define-key map [remap comint-interrupt-subjob] 'shell-maker-interrupt)
-    (define-key map "\C-x\C-s" 'shell-maker-save-session-transcript)
-    (define-key map "\C-\M-h" 'shell-maker-mark-output)
+    (define-key map (kbd "C-x C-s") 'shell-maker-save-session-transcript)
+    (define-key map (kbd "C-M-h") 'shell-maker-mark-output)
     (define-key map [remap comint-history-isearch-backward-regexp] 'shell-maker-search-history)
     map)
   "Keymap for `shell-maker' shells.")

@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.6
-;; Package-Version: 20230429.622
-;; Package-Commit: 4c3636300dade44abdece7b4e6a2fc441f36565a
+;; Package-Version: 20230429.1229
+;; Package-Commit: 7090437e23219e36876e599e9a858f477c3ac24e
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -555,8 +555,8 @@ file extension."
 
 ;;; Formatting
 
-(defun zk--formatter (arg format)
-  "Return formatted list from ARG, according to FORMAT.
+(defun zk--processor (arg)
+  "Return list of files.
 ARG can be zk-file or zk-id as string or list, or single or multiple."
   (let* ((zk-alist (zk--alist))
          (files (cond
@@ -571,8 +571,14 @@ ARG can be zk-file or zk-id as string or list, or single or multiple."
                  (t
                   (if (zk-file-p (car arg))
                       arg
-                    (zk--parse-id 'file-path arg zk-alist)))))
-         items)
+                    (zk--parse-id 'file-path arg zk-alist))))))
+    files))
+
+(defun zk--formatter (arg format)
+  "Return formatted list from FILES, according to FORMAT.
+ARG can be zk-file or zk-id as string or list, or single or multiple."
+  (let ((files (zk--processor arg))
+        items)
     (dolist (file files)
       (when (string-match (zk-file-name-regexp) file)
         (let ((id (match-string 1 file))
