@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (nerd-icons "0.0.1"))
-;; Package-Version: 20230428.120
-;; Package-Commit: 04e9db695fb4c52d0a0474a0ab97f32c8628cd06
+;; Package-Version: 20230429.350
+;; Package-Commit: 9efe9d04f801e71b19045398e1ab2827929072c0
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -71,7 +71,14 @@
 ;;; ----------------------------------------------------------------------------
 ;;; find the available suitable icon for tag.
 (defcustom org-tag-beautify-auto-icons t
-  "Auto search available icons for tags."
+  "Auto search available icons for tags.
+
+If t, use string-match regexp for tag to find first available
+icon then use text-property to replace tag with icon. This will
+reduce the hardcoded code of (tag . icon) pair bindings.
+
+If nil, use `org-pretty-tags' with package internal
+hardcoded (tag . icon) pair bindings to display icon."
   :type 'boolean
   :safe #'booleanp)
 
@@ -116,14 +123,13 @@
   "Fuzzy find TAG text in icon names then return icon."
   (interactive)
   (let* ((selection (unless tag (completing-read "Tag: " org-tag-beautify--nerd-icons-icons-list))) ; #("<icon>" ...)
-         (tag (downcase
-               (or tag
-                   (org-tag-beautify--nerd-icons-get-icon-name (list selection)))))) ; (#("<icon>" ...))
+         (tag (or tag
+                  (org-tag-beautify--nerd-icons-get-icon-name (list selection))))) ; (#("<icon>" ...))
     ;; try to get tag associated icon from cache list at first to improve performance.
     (or (cdr (assoc tag org-tag-beautify--tag-icon-cache-alist))
         (let* (;; TODO: improve the tag name matching algorithm.
                (tag-regexp-matching-f (apply-partially 'string-match-p
-                                                       (regexp-opt (list (substring-no-properties tag)))))
+                                                       (regexp-opt (list (substring-no-properties (downcase tag))))))
                (icon-name (seq-find
                            tag-regexp-matching-f
                            org-tag-beautify--nerd-icons-icon-names-list))
@@ -131,7 +137,9 @@
                         (lambda (f)
                           (ignore-errors (funcall f icon-name)))
                         (mapcar 'nerd-icons--function-name nerd-icons-glyph-sets)))
-               (icon (list (ignore-errors (funcall icon-f icon-name)))))
+               (icon (if-let ((found-icon (cdr (assoc tag org-pretty-tags-surrogate-strings))))
+                         found-icon
+                       (ignore-errors (funcall icon-f icon-name)))))
           ;; cache already search found icon name.
           (push `(,tag . ,icon) org-tag-beautify--tag-icon-cache-alist)
           icon))))
@@ -160,10 +168,10 @@
                 org-tag-beautify-overlays)
           ;; replace tag with icon
           (overlay-put (car org-tag-beautify-overlays)
-                       'display (org-tag-beautify--find-tag-icon
-                                 ;; the found tag
-                                 (buffer-substring-no-properties
-                                  (match-beginning 1) (match-end 1))))))))
+                       'display (list (org-tag-beautify--find-tag-icon
+                                       ;; the found tag
+                                       (buffer-substring-no-properties
+                                        (match-beginning 1) (match-end 1)))))))))
 
 (defun org-tag-beautify-display-icon-refresh-all ()
   "Prettify Org mode buffer tags with icons."
@@ -1183,13 +1191,21 @@
   "Enable `org-tag-beautify'."
   (if org-tag-beautify-auto-icons
       (progn
+        ;; add hardcoded (tag . icon) pair bindings to
+        ;; `org-pretty-tags-surrogate-strings' for
+        ;; `org-tag-beautify--find-tag-icon' query.
+        (org-tag-beautify-set-common-tag-icons)
+        (org-tag-beautify-set-programming-tag-icons)
+        (org-tag-beautify-set-internet-company-tag-icons)
+        (org-tag-beautify-set-countries-tag-icons)
+        (org-tag-beautify-set-unicode-tag-icons)
+        
         (org-tag-beautify-display-icon-refresh-all)
         (add-hook 'org-mode-hook #'org-tag-beautify-display-icon-refresh-all)
         (add-hook 'org-after-tags-change-hook #'org-tag-beautify-display-icon-refresh-headline)
         ;; (add-hook 'org-ctrl-c-ctrl-c-hook #'org-tag-beautify-display-icon-refresh-headline)
         )
     (progn
-      (setq org-pretty-tags-surrogate-strings nil)
       (org-tag-beautify-set-common-tag-icons)
       (org-tag-beautify-set-programming-tag-icons)
       (org-tag-beautify-set-internet-company-tag-icons)
