@@ -4,8 +4,6 @@
 
 ;; Author: Anton Hibl <antonhibl11@gmail.com>
 ;; URL: https://github.com/antonhibl/tardis-theme
-;; Package-Version: 20230212.2152
-;; Package-Commit: 352b1579d13e99cff9367b08208c1e241d76c89e
 ;; Keywords: convenience
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "25.1"))
