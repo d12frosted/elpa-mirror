@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.8
-;; Package-Version: 20221209.1331
-;; Package-Commit: 34fb7d2efffe3f0a9318da3fd3a055e805518b3d
+;; Package-Version: 20230429.622
+;; Package-Commit: 04865e16ac81903f86f6c614c8fc3d5ef2df59f3
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "27.1")(zk "0.3"))
@@ -616,10 +616,10 @@ Takes an option POS position argument."
         (re-search-forward zk-id-regexp)
         (match-string-no-properties 1)))))
 
-(defun zk-index-insert-link (&optional id)
+(defun zk-index-insert-link (&optional arg)
   "Insert zk-link in `other-window' for button ID at point."
   (interactive)
-  (let ((id (or id
+  (let ((id (or arg
                 (zk-index--button-at-point-p))))
     (with-selected-window (other-window-for-scrolling)
       (zk-insert-link id)

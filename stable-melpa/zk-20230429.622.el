@@ -5,9 +5,9 @@
 ;; Author: Grant Rosson <https://github.com/localauthor>
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
-;; Version: 0.5
-;; Package-Version: 20230428.2048
-;; Package-Commit: 5f40caea8cbe09d93c6f8f6eca33a0dbc241e5a2
+;; Version: 0.6
+;; Package-Version: 20230429.622
+;; Package-Commit: 4c3636300dade44abdece7b4e6a2fc441f36565a
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -68,6 +68,7 @@
 
 (defvar embark-keymap-alist)
 (defvar embark-target-finders)
+(defvar embark-multitarget-actions)
 (defvar embark-general-map)
 (defvar embark-file-map)
 
@@ -279,6 +280,8 @@ See `zk-new-note' for details."
 Adds zk-id as an Embark target, and adds `zk-id-map' and
 `zk-file-map' to `embark-keymap-alist'."
   (with-eval-after-load 'embark
+    (add-to-list 'embark-multitarget-actions 'zk-copy-link-and-title)
+    (add-to-list 'embark-multitarget-actions 'zk-insert-link)
     (add-to-list 'embark-target-finders 'zk-embark-target-zk-id-at-point)
     (add-to-list 'embark-keymap-alist '(zk-id . zk-id-map))
     (add-to-list 'embark-keymap-alist '(zk-file . zk-file-map))
@@ -336,7 +339,7 @@ otherwise just match against `zk-file-name-regexp'."
   "Generate and return a zk ID.
 The ID is created using `zk-id-time-string-format'."
   (let ((id (format-time-string zk-id-time-string-format)))
-    (while (zk--id-unavailable-p id)
+    (while (zk-id-p id)
       (setq id (1+ (string-to-number id)))
       (setq id (number-to-string id)))
     id))
@@ -358,10 +361,10 @@ an internal loop."
         ids)
     (zk--parse-file 'id (zk--directory-files t))))
 
-(defun zk--id-unavailable-p (str)
-  "Return t if provided string STR is already in use as an id."
-  (let ((all-ids (zk--id-list)))
-    (member str all-ids)))
+(defun zk-id-p (id)
+  "Return t if ID is already in use as a zk-id."
+  (when (member id (zk--id-list))
+    t))
 
 (defun zk--current-id ()
   "Return the ID of zk note in current buffer."
@@ -549,6 +552,53 @@ file extension."
     (if (zk--singleton-p result)
         (car result)
       result)))
+
+;;; Formatting
+
+(defun zk--formatter (arg format)
+  "Return formatted list from ARG, according to FORMAT.
+ARG can be zk-file or zk-id as string or list, or single or multiple."
+  (let* ((zk-alist (zk--alist))
+         (files (cond
+                 ((stringp arg)
+                  (if (zk-file-p arg)
+                      (list arg)
+                    (list (zk--parse-id 'file-path arg zk-alist))))
+                 ((zk--singleton-p arg)
+                  (if (zk-file-p (car arg))
+                      arg
+                    (list (zk--parse-id 'file-path (car arg) zk-alist))))
+                 (t
+                  (if (zk-file-p (car arg))
+                      arg
+                    (zk--parse-id 'file-path arg zk-alist)))))
+         items)
+    (dolist (file files)
+      (when (string-match (zk-file-name-regexp) file)
+        (let ((id (match-string 1 file))
+              (title (replace-regexp-in-string zk-file-name-separator " "
+                                               (match-string 2 file))))
+          (push (zk--format format id title) items))))
+    items))
+
+(defun zk--formatted-string (arg format)
+  "Format a multi-line string from items in ARG, following FORMAT."
+  (let ((items (zk--formatter arg format)))
+    (mapconcat #'identity items "\n")))
+
+(defun zk-format-id-and-title (format id title)
+  "Format ID and TITLE based on the `format-spec' FORMAT.
+This is the default function set in `zk-format-function' and used by
+`zk--format' therwise, replace the sequence `%t' with the TITLE and
+`%i' with the ID."
+  (format-spec format `((?i . ,id) (?t . ,title))))
+
+(defun zk--format (format id title)
+  "Format ID and TITLE based on the `format-spec' FORMAT."
+  (if (eq format zk-link-format)
+      (format zk-link-format id)
+    (funcall zk-format-function format id title)))
+
 
 ;;; Buttons
 
@@ -787,53 +837,41 @@ Optionally call a custom function by setting the variable
 
 ;;; Insert Link
 
-(defun zk-format-id-and-title (format id title)
-  "Format ID and TITLE based on the `format-spec' FORMAT.
-This is the default function set in `zk-format-function' and used by
-`zk--format' therwise, replace the sequence `%t' with the TITLE and
-`%i' with the ID."
-  (format-spec format `((?i . ,id) (?t . ,title))))
-
-(defmacro zk--format (format id title)
-  "Format ID and TITLE based on the `format-spec' FORMAT.
-This macro merely calls the function set in `zk-format-function',
-which defaults to `zk-format-id-and-title'."
-  `(funcall zk-format-function ,format ,id ,title))
-
 ;;;###autoload
-(defun zk-insert-link (id &optional title)
-  "Insert link to note with ID and optional TITLE.
+(defun zk-insert-link (arg &optional title)
+  "Insert link to note, from ARG.
 By default, only a link is inserted. With prefix-argument, both
 link and title are inserted. See variable `zk-link-and-title'
-for additional configurations."
+for additional configurations. Optional TITLE."
   (interactive
-   (list (zk--file-id (funcall zk-select-file-function "Insert link: "))))
-  (let* ((pref-arg current-prefix-arg)
-         (title (or title
-                    (zk--parse-id 'title id))))
+   (list (list (funcall zk-select-file-function "Insert link: "))))
+  (let* ((pref current-prefix-arg))
     (cond
-     ((or (and (not pref-arg) (eq 't zk-link-and-title))
-          (and pref-arg (not zk-link-and-title)))
-      (zk--insert-link-and-title id title))
-     ((and (not pref-arg) (eq 'ask zk-link-and-title))
+     ((or (and (not pref) (eq 't zk-link-and-title))
+          (and pref (not zk-link-and-title)))
+      (zk--insert-link-and-title arg title))
+     ((and (not pref) (eq 'ask zk-link-and-title))
       (if (y-or-n-p "Include title? ")
-          (zk--insert-link-and-title id title)
-        (zk--insert-link id)))
+          (zk--insert-link-and-title arg title)
+        (zk--insert-link arg)))
      ((or t
-          (and pref-arg (eq 't zk-link-and-title)))
-      (zk--insert-link id)))))
+          (and pref (eq 't zk-link-and-title)))
+      (zk--insert-link arg)))))
+
+(defun zk--insert-link-and-title (arg &optional title)
+  "Insert link from ARG according to `zk-link-and-title-format'.
+Optional TITLE."
+  (if title
+      (insert (zk--format zk-link-and-title-format arg title))
+    (insert (zk--formatted-string arg zk-link-and-title-format))
+    (when zk-enable-link-buttons
+      (zk-make-link-buttons))))
 
 (defun zk--insert-link (id)
   "Insert link to note with ID, with button optional."
-  (insert (format zk-link-format id))
+  (insert (zk--formatted-string id zk-link-format))
   (when zk-enable-link-buttons
-    (zk-make-button-before-point)))
-
-(defun zk--insert-link-and-title (id title)
-  "Insert zk ID and TITLE according to `zk-link-and-title-format'."
-  (insert (zk--format zk-link-and-title-format id title))
-  (when zk-enable-link-buttons
-    (zk-make-button-before-point)))
+    (zk-make-link-buttons)))
 
 ;;; Completion at Point
 
@@ -848,15 +886,8 @@ will be returned as formatted candidates."
   (let* ((format (or format
                      zk-completion-at-point-format))
          (list (or files
-                   (zk--directory-files)))
-         (output))
-    (dolist (file list)
-      (when (string-match (zk-file-name-regexp) file)
-        (let ((id (match-string 1 file))
-              (title (replace-regexp-in-string zk-file-name-separator " "
-                                               (match-string 2 file))))
-          (push (zk--format format id title) output))))
-    output))
+                   (zk--directory-files))))
+    (zk--formatter list format)))
 
 (defun zk-completion-at-point ()
   "Completion-at-point function for zk-links.
@@ -886,24 +917,12 @@ brackets \"[[\" initiates completion."
 ;;; Copy Link and Title
 
 ;;;###autoload
-(defun zk-copy-link-and-title (&optional arg)
-  "Copy link and title for id or file ARG at point."
+(defun zk-copy-link-and-title (arg)
+  "Copy link and title for id or file ARG."
   (interactive (list (funcall zk-select-file-function "Copy link: ")))
-  (let* ((zk-alist (zk--alist))
-         (zk-id-list (zk--id-list))
-         (id (cond ((member arg zk-id-list)
-                    arg)
-                   ((member (car arg) zk-id-list)
-                    (car arg))
-                   ((zk-file-p arg)
-                    (zk--parse-file 'id arg))
-                   (t (zk--id-at-point))))
-         (title (zk--parse-id 'title id zk-alist)))
-    (if (null id)
-        (error "No valid zk-id")
-      (kill-new (zk--format zk-link-and-title-format id title))
-      (message "Link and title copied: %s" title))))
-
+  (let ((links (zk--formatted-string arg zk-link-and-title-format)))
+    (kill-new links)
+    (message "Copied: %s" links)))
 
 
 ;;; List Backlinks

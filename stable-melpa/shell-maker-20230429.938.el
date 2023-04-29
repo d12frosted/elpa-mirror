@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230428.1943
-;; Package-Commit: 7661665d4e17c020e29fce513f85219255cf2046
-;; Version: 0.17.1
+;; Package-Version: 20230429.938
+;; Package-Commit: 9ba04b76c782b00984568be31649b733972a05ef
+;; Version: 0.18.1
 ;; Package-Requires: ((emacs "27.1"))
 
 ;; This package is free software; you can redistribute it and/or modify
