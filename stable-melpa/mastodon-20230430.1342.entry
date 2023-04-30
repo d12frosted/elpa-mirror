@@ -1,5 +1,5 @@
 (mastodon .
-	  [(20230429 1004)
+	  [(20230430 1342)
 	   ((emacs
 	     (27 1))
 	    (request
@@ -8,8 +8,8 @@
 	     (0 4))
 	    (ts
 	     (0 3)))
-	   "Client for fediverse services that implement the Mastodon API" tar
-	   ((:commit . "912f7609fba01baeda1601f52a68533398f5fd4d")
+	   "Client for fediverse services using Mastodon API" tar
+	   ((:commit . "5bb860d943cde9260ced8bc6eb9570d1dbb3273d")
 	    (:authors
 	     ("Johnson Denen" . "johnson.denen@gmail.com")
 	     ("Marty Hiatt" . "martianhiatus@riseup.net"))
