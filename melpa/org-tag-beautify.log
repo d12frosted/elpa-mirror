@@ -3,8 +3,9 @@ Fetcher: git
 Source:  https://repo.or.cz/org-tag-beautify.git
 
 Updating /mnt/store/melpa/working/org-tag-beautify/
-Checking out 9efe9d04f801e71b19045398e1ab2827929072c0
-Built org-tag-beautify in 7.188s, finished at 2023-04-30T04:55:03+0000
- ✓ Success:
-116K -rw-r--r-- 1 root root 116K Apr 30 04:55 packages/org-tag-beautify-20230429.350.el
-4.0K -rw-r--r-- 1 root root  331 Apr 30 04:55 packages/org-tag-beautify-20230429.350.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://repo.or.cz/org-tag-beautify.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

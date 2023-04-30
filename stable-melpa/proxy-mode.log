@@ -3,8 +3,9 @@ Fetcher: git
 Source:  https://repo.or.cz/proxy-mode.git
 
 Updating /mnt/store/melpa/working/proxy-mode/
-Checking out eca6f0b8a17fcf9eb961ed0426f57a5b7ca4e1f6
-Built proxy-mode in 66.805s, finished at 2023-04-30T05:05:46+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.0K Apr 30 05:05 packages/proxy-mode-20230303.706.el
-4.0K -rw-r--r-- 1 root root  260 Apr 30 05:05 packages/proxy-mode-20230303.706.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://repo.or.cz/proxy-mode.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128
