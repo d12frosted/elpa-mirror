@@ -4,8 +4,8 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230429.1443
-;; Package-Commit: 21fe2de1032d181d620a863402f68ba726caa244
+;; Package-Version: 20230429.2205
+;; Package-Commit: 65ea33ebed523b87c4bafd906ca2c58020ff2be5
 ;; Version: 0.20.1
 ;; Package-Requires: ((emacs "27.1") (shell-maker "0.17.1"))
 
@@ -53,7 +53,7 @@
   :type '(repeat (string :tag "String"))
   :group 'chatgpt-shell)
 
-(defcustom chatgpt-shell-request-timeout 60
+(defcustom chatgpt-shell-request-timeout 180
   "How long to wait for a request to time out."
   :type 'integer
   :group 'chatgpt-shell)
@@ -159,7 +159,13 @@ for details."
                  (const :tag "Nil" nil))
   :group 'chatgpt-shell)
 
-(defcustom chatgpt-shell-system-prompt "Always show code snippets in markdown blocks with language labels."
+(defcustom chatgpt-shell-system-prompts
+  '("Always show code snippets in markdown blocks with language labels.")
+  "List of default prompts to choose from."
+  :type '(repeat string)
+  :group 'chatgpt-shell)
+
+(defcustom chatgpt-shell-system-prompt (nth 0 chatgpt-shell-system-prompts)
   "The system message helps set the behavior of the assistant.
 
 For example: You are a helpful assistant that translates English to French.
@@ -167,6 +173,18 @@ For example: You are a helpful assistant that translates English to French.
 See https://platform.openai.com/docs/guides/chat/introduction"
   :type 'string
   :group 'chatgpt-shell)
+
+(defun chatgpt-shell-swap-system-prompt ()
+  "Swap system prompt from `chatgpt-shell-system-prompts'."
+  (interactive)
+  (let ((choice (completing-read "System prompt: "
+                                 (append
+                                  (list "None")
+                                  chatgpt-shell-system-prompts))))
+    (if (or (string-equal choice "None")
+            (string-empty-p (string-trim choice)))
+        (setq chatgpt-shell-system-prompt nil)
+      (setq chatgpt-shell-system-prompt choice))))
 
 (defcustom chatgpt-shell-streaming t
   "Whether or not to stream ChatGPT responses (show chunks as they arrive)."
@@ -522,20 +540,22 @@ With PREFIX, invert `chatgpt-shell-insert-queries-inline' choice."
 (defun chatgpt-shell-eshell-whats-wrong-with-last-command ()
   "Ask ChatGPT what's wrong with the last eshell command."
   (interactive)
-  (chatgpt-shell-send-to-buffer
-   (concat "What's wrong with this command?\n\n"
-           (buffer-substring-no-properties eshell-last-input-start eshell-last-input-end)
-           "\n\n"
-           (buffer-substring-no-properties (eshell-beginning-of-output) (eshell-end-of-output)))))
+  (let ((chatgpt-shell-insert-queries-inline nil))
+    (chatgpt-shell-send-to-buffer
+     (concat "What's wrong with this command?\n\n"
+             (buffer-substring-no-properties eshell-last-input-start eshell-last-input-end)
+             "\n\n"
+             (buffer-substring-no-properties (eshell-beginning-of-output) (eshell-end-of-output))))))
 
 (defun chatgpt-shell-eshell-summarize-last-command-output ()
   "Ask ChatGPT to summarize the last command output."
   (interactive)
-  (chatgpt-shell-send-to-buffer
-   (concat "Summarize the output of the following command: \n\n"
-           (buffer-substring-no-properties eshell-last-input-start eshell-last-input-end)
-           "\n\n"
-           (buffer-substring-no-properties (eshell-beginning-of-output) (eshell-end-of-output)))))
+  (let ((chatgpt-shell-insert-queries-inline nil))
+    (chatgpt-shell-send-to-buffer
+     (concat "Summarize the output of the following command: \n\n"
+             (buffer-substring-no-properties eshell-last-input-start eshell-last-input-end)
+             "\n\n"
+             (buffer-substring-no-properties (eshell-beginning-of-output) (eshell-end-of-output))))))
 
 (defun chatgpt-shell-send-region (review)
   "Send region to ChatGPT.
