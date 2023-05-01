@@ -4,8 +4,8 @@
 
 ;; Author: Isa Mert Gurbuz <isamertgurbuz@gmail.com>
 ;; Version: 3.1.0
-;; Package-Version: 20230409.2130
-;; Package-Commit: af7def9dbb0156b2ec4e75c71ca29792b112768f
+;; Package-Version: 20230501.1047
+;; Package-Commit: 4da1febbf792d0ff81e7c2f450bef4e2a239f0a4
 ;; Homepage: https://github.com/isamert/empv.el
 ;; License: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "28.1") (s "1.13.0"))
@@ -1184,7 +1184,9 @@ If ARG is non-nil, then also put the title to `kill-ring'."
    (empv--completing-read-object
     "Channel: "
     empv-radio-channels
-    :formatter #'car
+    :formatter (lambda (x) (if (equal x empv-current-radio-channel)
+                          (format "%s %s" (car x) empv--playlist-current-indicator)
+                        (car x)))
     :category 'empv-radio-item)
    t))
 

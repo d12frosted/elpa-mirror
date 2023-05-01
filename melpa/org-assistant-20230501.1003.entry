@@ -1,5 +1,5 @@
 (org-assistant .
-	       [(20230501 947)
+	       [(20230501 1003)
 		((emacs
 		  (27 1))
 		 (uuidgen
@@ -11,7 +11,7 @@
 		 (dash
 		  (2 19 1)))
 		"Org babel extension for Chat Assistant APIs" single
-		((:commit . "fb150c5d52e7e9087c71f9441df41179209f0b0f")
+		((:commit . "a54583a099a5535ade253feafd19b9ba44b25cf7")
 		 (:authors
 		  ("Tyler Dodge" . "tyler@tdodge.consulting"))
 		 (:maintainers
