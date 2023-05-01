@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
-;; Package-Version: 20230416.2129
-;; Package-Commit: 049ba8ff49a86f3657522801d8d142dda1626b19
+;; Package-Version: 20230501.656
+;; Package-Commit: 6f8941f97f050a844dc22d2b1e02f976b558a35c
 ;; Version: 1.4.0
 ;; Package-Requires: ((emacs "26.1") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; Keywords: matching auto-complete complete fuzzy
@@ -189,8 +189,8 @@
     (setq-local company-transformers (append company-transformers '(company-fuzzy--sort-candidates)))
     (advice-add 'company--insert-candidate :before #'company-fuzzy--insert-candidate)
     (advice-add 'company-yasnippet--completions-for-prefix :around #'company-fuzzy-yasnippet--completions-for-prefix))
-  (add-hook 'lsp-managed-mode-hook #'company-fuzzy--lsp-managed-mode nil t)
-  (add-hook 'eglot-managed-mode-hook #'company-fuzzy--lsp-managed-mode nil t))
+  (add-hook 'lsp-completion-mode-hook #'company-fuzzy--lsp-after-enabled nil t)
+  (add-hook 'eglot-managed-mode-hook #'company-fuzzy--lsp-after-enabled nil t))
 
 (defun company-fuzzy--disable ()
   "Revert all other backend back to `company-backends'."
@@ -201,8 +201,8 @@
           company-fuzzy--backends nil)
     (advice-remove 'company--insert-candidate #'company-fuzzy--insert-candidate)
     (advice-remove 'company-yasnippet--completions-for-prefix #'company-fuzzy-yasnippet--completions-for-prefix))
-  (remove-hook 'lsp-managed-mode-hook #'company-fuzzy--lsp-managed-mode t)
-  (remove-hook 'eglot-managed-mode-hook #'company-fuzzy--lsp-managed-mode t))
+  (remove-hook 'lsp-completion-mode-hook #'company-fuzzy--lsp-after-enabled t)
+  (remove-hook 'eglot-managed-mode-hook #'company-fuzzy--lsp-after-enabled t))
 
 ;;;###autoload
 (define-minor-mode company-fuzzy-mode
@@ -824,7 +824,7 @@ in-place, the old list reference does not remain valid."
   (or (bound-and-true-p lsp-managed-mode)
       (bound-and-true-p eglot--managed-mode)))
 
-(defun company-fuzzy--lsp-managed-mode (&rest _)
+(defun company-fuzzy--lsp-after-enabled (&rest _)
   "Hook run after LSP is enabled."
   (when (company-fuzzy--lsp-connected-p)
     ;; No need to check for `company-fuzzy-mode' is on or not since this

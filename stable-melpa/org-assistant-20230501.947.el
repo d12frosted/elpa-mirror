@@ -1,9 +1,9 @@
 ;;; org-assistant.el --- Org babel extension for Chat Assistant APIs -*- lexical-binding: t -*-
 
 ;; Author: Tyler Dodge (tyler@tdodge.consulting)
-;; Version: 0.1
-;; Package-Version: 20230501.144
-;; Package-Commit: ee564ef9710950898bc166150afb48a342a5939f
+;; Version: 0.7
+;; Package-Version: 20230501.947
+;; Package-Commit: fb150c5d52e7e9087c71f9441df41179209f0b0f
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "27.1") (uuidgen "1.2") (deferred "0.5.1") (s "1.12.0") (dash "2.19.1"))
 ;; URL: https://github.com/tyler-dodge/org-assistant
@@ -111,7 +111,31 @@ Set to nil to use `mode-line-format' instead."
   :group 'org-assistant
   :type '(string))
 
-(defcustom org-assistant-endpoint "https://api.openai.com/v1/chat/completions"
+(defcustom org-assistant-curl-command "curl"
+  "The path to the curl command used to run requests."
+  :group 'org-assistant
+  :type '(string))
+
+(defcustom org-assistant-endpoint "https://api.openai.com"
+  "The endpoint used for the assistant.
+`org-assistant-endpoint-path-chat' and `org-assistant-endpoint-path-image'
+contain the paths for the respective APIs."
+  :group 'org-assistant
+  :type '(string))
+
+(defcustom org-assistant-endpoint-path-chat "/v1/chat/completions"
+  "The path used for the chat API.
+See `org-assistant-endpoint' for the domain."
+  :group 'org-assistant
+  :type '(string))
+
+(defcustom org-assistant-endpoint-path-models "/v1/models"
+  "The path used for the list models API.
+See `org-assistant-endpoint' for the domain."
+  :group 'org-assistant
+  :type '(string))
+
+(defcustom org-assistant-endpoint-path-image "/v1/images/generations"
   "The endpoint used for the assistant."
   :group 'org-assistant
   :type '(string))
@@ -130,6 +154,7 @@ This should match `org-babel-default-header-args:?'")
   org-babel-default-header-args:assistant
   "Extra args so that org babel renders the results correctly.
 This should match `org-babel-default-header-args:assistant'")
+
 (defvar org-assistant-history nil
   "History variable for `org-assistant'.")
 
@@ -183,9 +208,6 @@ contained in MESSAGE."
 (defvar org-assistant--inflight-request nil
   "Tracks inflight requests for `org-assistant'.")
 
-(defvar org-assistant--active-request nil
-  "Tracks inflight requests that are active for `org-assistant'.")
-
 (defvar org-assistant--request-queue-active-p nil
   "Tracks when the request queue is active.
 
@@ -214,39 +236,29 @@ where openai-key is an application password with the name openai-key."
     (aref it 2)
     (aref it 0)))
 
-(defun org-assistant-execute (request-id blocks)
-  "Sends the list of BLOCKS t' the `org-assistant-endpoint' to get a response.
-
-REQUEST-ID is used to track the execution over time.
-BLOCKS is a list of cons cells: where the car of the cell
-is either `user' or `assistant'.  The cdr of the cell is the message
-corresponding to the sender.
-
-The list of BLOCKS should be in chronological order, with the first
-being the earliest message.  Returns a deferred object representing
-the json response from the endpoint."
+(defun org-assistant--deferred-decode-response (deferred)
+  "After DEFERRED completes, decode the http response in BUFFER."
   (deferred:$
-   (org-assistant--queue-request request-id blocks)
-   (deferred:nextc it (lambda (buffer)
-                        (with-current-buffer buffer
-                          (goto-char (point-min))
-                          (re-search-forward (rx line-start eol) nil t)
-                          (or
-                           (let ((text (decode-coding-string
-                                        (buffer-substring (point) (point-max))
-                                        'utf-8)))
-                             (condition-case _
-                                 (--doto (json-read-from-string text)
-                                   (-let [(&alist 'error (&alist 'message error-message 'type error-type)) it]
-                                     (when error-type
-                                       (error "%s: %s" error-type error-message))))
-                               (json-readtable-error (error "Unexpected output from server.
-%s" text))))
-                           (error "Response was unexpectedly nil %S" (buffer-string))))))))
+   deferred
+   (deferred:nextc
+    it
+    (lambda (text)
+      (or
+       (condition-case _
+           (--doto (org-assistant--json-decode text)
+             (-let [(&alist 'error (&alist 'message error-message 'type error-type)) it]
+               (when error-type
+                 (error "%s: %s" error-type error-message))))
+         (json-readtable-error (error "Unexpected output from server.
+%s" text)))
+         (error "Response was unexpectedly nil %S" (buffer-string)))))))
 
 (defvar org-assistant--request-id nil
   "Request ID for `org-assistant'.
 Set specially by the macro `org-assistant-org-babel-async-response'.")
+
+(defvar org-assistant--request-processes-ht (make-hash-table :test #'equal)
+  "Hash table mapping request id to active process.")
 
 ;;;###autoload
 (defmacro org-assistant-org-babel-async-response (&rest prog)
@@ -266,7 +278,7 @@ later substituted by `org-assistant'."
     `(let* ((,buffer-var (current-buffer))
             (,replacement-var (uuidgen-4))
             (org-assistant--request-id ,replacement-var))
-         (cl-flet ((babel-response (message)
+         (cl-flet ((babel-response (message &optional response-type)
                      (run-at-time
                       nil nil
                       (lambda ()
@@ -280,20 +292,36 @@ later substituted by `org-assistant'."
                                   (goto-char (point-min))
                                   (when (re-search-forward (rx (literal ,replacement-var))
                                                            nil t)
-                                    (let ((,insert-prompt-var
-                                           (and
-                                            (not org-assistant--request-queue-active-p)
-                                            (not
-                                             (save-match-data
-                                               (save-mark-and-excursion
-                                                 (re-search-forward org-assistant--begin-src-regexp nil t)))))))
-                                      (save-excursion
-                                        (replace-match (format "#+BEGIN_EXAMPLE
+                                    (pcase response-type
+                                      ('file-list
+                                       (replace-match
+                                        (string-join (--map (format "%s" it) message) "\n")
+                                        nil t)
+                                       (goto-char (match-end 0))
+                                       (forward-line 0)
+                                       (cl-loop with first = t
+                                                while (looking-at (rx (literal (car message)) line-end))
+                                                do
+                                                (if first
+                                                    (progn
+                                                      (forward-line 1)
+                                                      (setq first nil))
+                                                  (replace-match ""))))
+                                      (_
+                                       (let ((,insert-prompt-var
+                                              (and
+                                               (not org-assistant--request-queue-active-p)
+                                               (not
+                                                (save-match-data
+                                                  (save-mark-and-excursion
+                                                    (re-search-forward org-assistant--begin-src-regexp nil t)))))))
+                                         (save-excursion
+                                           (replace-match (format "#+BEGIN_EXAMPLE
 %s
 #+END_EXAMPLE%s" message (if ,insert-prompt-var "\n\n#+BEGIN_SRC ?\n\n#+END_SRC\n" "")) nil t))
-                                      (when ,insert-prompt-var (re-search-backward org-assistant--begin-src-regexp)
-                                            (forward-line 1)
-                                            (point)))))
+                                         (when ,insert-prompt-var (re-search-backward org-assistant--begin-src-regexp)
+                                               (forward-line 1)
+                                               (point)))))))
                               (progn
                                 (unless org-assistant--request-queue-active-p
                                   (goto-char it)
@@ -302,17 +330,107 @@ later substituted by `org-assistant'."
                         (unless (or org-assistant--request-queue
                                     org-assistant--inflight-request)
                           (setq org-assistant--request-queue-active-p nil))))))
-           ,@prog)
+           (deferred:$
+            (progn ,@prog)
+            (when (and it (or (deferred-p it)
+                              (error "Provided an unexpected type, expected deferred: %S" it)))
+              (deferred:error it (lambda (error) (format "%S" error))))
+            (when it
+              (deferred:nextc it (lambda (response)
+                                   (pcase (car-safe response)
+                                     ('file-list
+                                      (babel-response (cdr response) (car response)))
+                                     (_
+                                      (babel-response (org-escape-code-in-string
+                                                       (if (stringp response)
+                                                           response
+                                                         (if (not (consp (car-safe response)))
+                                                             (s-join "" response)
+                                                           (org-assistant--json-encode-pretty-print response))))))))))))
          (when (buffer-live-p ,buffer-var) (with-current-buffer ,buffer-var (force-mode-line-update)))
          (with-current-buffer ,buffer-var
            (push ,replacement-var org-assistant--inflight-request))
          ,replacement-var)))
 
+(defmacro org-assistant--request-lambda (&rest args)
+  "Macro for generating a queueable request lambda.
+
+Intended for use with `org-assistant--queue-request'.
+
+ARGS is expected to be a plist with the following keys:
+:url The endpoint
+:method The HTTP Method
+:headers Defaults to (org-assistant--default-headers) if not set
+:json See `org-assistant--json-encode'."
+  (-let [(&plist :url :method :headers :request-id :json) args]
+    (or url (error "Url must be set %S" args))
+    (or method (error "Method must be set %S" args))
+    (let ((request-id-var (make-symbol "request-id")))
+      `(lambda ()
+         (let* ((promise (deferred:new)) 
+                (,request-id-var ,request-id)
+                (shell-buffer (generate-new-buffer " *org-assistant-request*"))
+                (callback
+                 (lambda ()
+                   (let ((process
+                          (start-process-shell-command
+                           (concat "curl " ,request-id-var)
+                           shell-buffer
+                           (s-join " "
+                                   (->>
+                                    (append
+                                     (list org-assistant-curl-command (org-assistant-chat-endpoint))
+                                     (cl-loop for (header . value) in (or ,headers (org-assistant--default-headers))
+                                              append (list "-H" (concat "'" header ":" value "'")))
+                                     (list "-X" (shell-quote-argument ,method))
+                                     (-some--> ,json
+                                       (let ((file (make-temp-file "json")))
+                                         (with-temp-file file
+                                           (insert (org-assistant--json-encode it)))
+                                         (list "--json" (concat "@" file))))
+                                     nil))))))
+                     (puthash ,request-id-var process org-assistant--request-processes-ht)
+                     (set-process-sentinel
+                      process
+                      (lambda (process status)
+                        (run-at-time
+                         nil nil
+                         (lambda ()
+                           (cond
+                            ((not (string= (string-trim status) "finished"))
+                             (deferred:errorback-post promise status)
+                             t)
+                            ((not (buffer-live-p shell-buffer))
+                             (deferred:errorback-post promise (concat "Buffer not live" (buffer-name shell-buffer)))
+                             t)
+                            (t
+                             (with-current-buffer shell-buffer
+                               (deferred:callback-post promise
+                                                       (buffer-string)))))
+
+                           (remhash ,request-id-var org-assistant--request-processes-ht)
+                           (kill-buffer shell-buffer)))))))))
+           (run-at-time nil nil callback)
+           promise)))))
+
+(defmacro org-assistant--join-endpoint (domain path)
+  "Validate and return joined DOMAIN and PATH."
+  `(prog1 (concat ,domain ,path)
+     (when (string-suffix-p "/" ,domain)
+       (user-error "`%s' must not end with /.  Actual: %s" (quote ,domain) ,domain))
+     (unless (string-prefix-p "/" ,path)
+       (user-error "`%s' must start with with /.  Actual: %s" (quote ,path) ,path))))
+
 ;;;###autoload
-(defun org-babel-execute:assistant (_ params)
+(defun org-babel-execute:assistant (text params)
   "Execute an `org-assistant' in an org-babel context.
 
 PARAMS is used to enable noweb mode.
+If :list-models is set, the `org-assistant-models-endpoint'
+will be called instead.
+
+TEXT must be empty if :list-models is set.
+
 This is intended to be called via org babel in a src block with Ctrl-C
 Ctrl-C like:
 
@@ -401,25 +519,62 @@ User: Hi
 Assistant: Response
 User: Branch B
 Assistant: Branch B Response
+</example>
+
+`org-assistant' also supporst image generation.
+If the :file attribute is set, the image API will be used.
+
+The following is an example of using the image endpoint:
+
+<example>
+#+BEGIN_SRC assistant :file output.png
+An image of the GNU mascot
+#+END_SRC
 </example>"
+  (org-assistant-cancel-block-at-point)
   (unless (> org-assistant-parallelism 0)
     (user-error "`org-assistant-parallelism' set to an invalid value.  Must be greater than 0"))
-  (let ((blocks (org-assistant--org-blocks (org-babel-noweb-p params :eval))))
-        (org-assistant-org-babel-async-response
-         (deferred:$
-          (org-assistant-execute org-assistant--request-id blocks)
-          (deferred:nextc
-           it
-           (lambda (response)
-             (cl-loop for choice across (alist-get 'choices response)
-                      collect
-                      (-some-->
-                          (->> choice
-                               (alist-get 'message)
-                               (alist-get 'content))))))
-          (deferred:error it (lambda (error) (list (format "%S" error))))
-          (deferred:nextc it (lambda (response)
-                               (babel-response (org-escape-code-in-string (s-join "" response)))))))))
+  (cond
+   ((assoc :list-models params)
+    (unless (string-blank-p (string-trim text)) (user-error "Cannot use :list-models if body is not empty"))
+    (org-assistant-org-babel-async-response
+      (deferred:$
+       (org-assistant--queue-list-models-request org-assistant--request-id))))
+   (t
+    (let ((blocks (org-assistant--org-blocks (org-babel-noweb-p params :eval))))
+      (cond
+       ((assoc :file params)
+        (let ((files (--> (alist-get :file params) (if (listp it) it (list it)))))
+          (--each files (when (not (string-suffix-p ".png" it))
+                          (user-error "Only .png output files are supported %s" it)))
+          (org-assistant-org-babel-async-response
+            (deferred:$
+             (org-assistant--queue-image-request org-assistant--request-id blocks)
+             (deferred:nextc
+              it
+              (lambda (response)
+                (cons
+                 'file-list
+                 (cl-loop for data across (alist-get 'data response)
+                          collect
+                          (let ((file (or (pop files) (user-error "More files returned than expected"))))
+                            (prog1 (concat "file:" file)
+                              (with-temp-file file
+                                  (insert
+                                   (base64-decode-string (alist-get 'b64_json data))))))))))))))
+
+       (t (org-assistant-org-babel-async-response
+            (deferred:$
+             (org-assistant--queue-chat-request org-assistant--request-id blocks)
+             (deferred:nextc
+              it
+              (lambda (response)
+                (cl-loop for choice across (alist-get 'choices response)
+                         collect
+                         (-some-->
+                             (->> choice
+                                  (alist-get 'message)
+                                  (alist-get 'content))))))))))))))
 
 ;;;###autoload
 (defun org-babel-execute:? (&rest args)
@@ -507,6 +662,24 @@ conversation."
                  (setq has-prompt t))
              (cons 'system (cdr block))))))))
 
+
+
+
+(defun org-assistant-models-endpoint ()
+  "Return the full endpoint URL for the models API."
+  (org-assistant--join-endpoint org-assistant-endpoint
+                                org-assistant-endpoint-path-models))
+
+(defun org-assistant-chat-endpoint ()
+  "Return the full endpoint URL for the chat API."
+  (org-assistant--join-endpoint org-assistant-endpoint
+                                org-assistant-endpoint-path-chat))
+
+(defun org-assistant-image-endpoint ()
+  "Return the full endpoint URL for the image API."
+  (org-assistant--join-endpoint org-assistant-endpoint
+                                org-assistant-endpoint-path-image))
+
 ;;;###autoload
 (defun org-assistant-explain-function ()
   "Ask the assistant to explain the function at point."
@@ -519,47 +692,100 @@ conversation."
   (interactive)
   (org-assistant-with-initial-message (concat (thing-at-point 'defun t) "\nWrite a concise docstring for me")))
 
-(defun org-assistant--queue-request (request-id blocks)
-  "Execute or queue the `org-assistant' request for BLOCKS.
+
+(defun org-assistant--queue-request (request-id job)
+  "Execute or queue the `org-assistant' request for JOB.
 
 REQUEST-ID is used to keep track of the request for later.
 Return a deferred object representing the completion of the
 request."
   (let* ((promise (deferred:new))
-        (job (lambda ()
-           (let ((url-request-method "POST")
-                 (url-request-extra-headers
-                  `(("Authorization" . ,(concat "Bearer "
-                                                (if (stringp org-assistant-auth-function)
-                                                    org-assistant-auth-function
-                                                  (funcall org-assistant-auth-function))))
-                    ("Content-Type" . "application/json")))
-                 (url-request-data (let ((json-object-type 'alist)
-                                         (json-key-type 'string)
-                                         (json-array-type 'vector))
-                                     (json-encode
-                                      `(("model" . ,org-assistant-model)
-                                        ("messages" . ,(->> blocks
-                                                            (--map (list
-                                                                    (cons "content" (encode-coding-string (cdr it) 'utf-8))
-                                                                    (cons "role" (symbol-name (car it)))))
-                                                            (vconcat))))))))
-             (deferred:$
-              (deferred:url-retrieve org-assistant-endpoint)
-              (deferred:nextc it (lambda (result)
-                                   (deferred:callback-post promise result)
-                                   t)))))))
-    (if (>= (length org-assistant--active-request) org-assistant-parallelism)
-        (setq org-assistant--request-queue (append org-assistant--request-queue (list (cons request-id job)) nil))
-      (org-assistant--queue-request-execute job))
+         (job-with-promise
+          (lambda ()
+            (let ((promise promise))
+              (deferred:$
+               (funcall job)
+               (org-assistant--deferred-decode-response it)
+               (deferred:nextc it (lambda (result)
+                                    (prog1 t
+                                      (deferred:callback-post promise result))))
+               (deferred:error it (lambda (error)
+                                    (deferred:errorback-post promise error)
+                                    "SUPPRESSED")))))))
+    (if (>= (ht-size org-assistant--request-processes-ht) org-assistant-parallelism)
+        (setq org-assistant--request-queue
+              (append org-assistant--request-queue
+                      (list (cons request-id job-with-promise)) nil))
+      (org-assistant--queue-request-execute job-with-promise))
     promise))
+
+(defun org-assistant--queue-image-request (request-id blocks)
+  "Execute or queue the `org-assistant' request for BLOCKS.
+
+REQUEST-ID is used to keep track of the request for later.
+Return a deferred object representing the completion of the
+request."
+  (org-assistant--queue-request
+   request-id
+   (org-assistant--request-lambda
+    :request-id request-id
+    :url (org-assistant-image-endpoint)
+    :method "POST"
+    :json `(("response_format" . "b64_json")
+            ("prompt" . ,(cl-loop for (name . message) in blocks
+                                  concat
+                                  (concat (symbol-name name)
+                                          ": "
+                                          message)))))))
+
+(defun org-assistant--default-headers ()
+  "Return the headers used by the `org-assistant' endpoint."
+  `(("Authorization" . ,(concat "Bearer "
+                                (if (stringp org-assistant-auth-function)
+                                    org-assistant-auth-function
+                                  (funcall org-assistant-auth-function))))
+    ("Content-Type" . "application/json; charset=utf-8")))
+
+(defun org-assistant--queue-chat-request (request-id blocks)
+  "Execute or queue the `org-assistant' request for BLOCKS.
+
+REQUEST-ID is used to keep track of the request for later.
+Return a deferred object representing the completion of the
+request."
+  (org-assistant--queue-request
+   request-id
+   (org-assistant--request-lambda
+    :request-id request-id
+    :url (org-assistant-chat-endpoint)
+    :method "POST"
+    :json `(("model" . ,org-assistant-model)
+            ("messages" .
+             ,(->> blocks
+                   (--map `(("content" . ,(cdr it))
+                            ("role" . ,(symbol-name (car it)))))
+                   (vconcat)))))))
+
+
+
+(defun org-assistant--queue-list-models-request (request-id)
+  "Execute or queue the `org-assistant' list-models request.
+
+REQUEST-ID is used to keep track of the request for later.
+Return a deferred object representing the completion of the
+request."
+  (org-assistant--queue-request
+   request-id
+   (org-assistant--request-lambda
+    :request-id request-id
+    :url (org-assistant-models-endpoint)
+    :method "GET")))
 
 (defun org-assistant-clear-request-queue ()
   "Reset `org-assistant' request queue to orginal state."
   (interactive)
+  (setq org-assistant--request-processes-ht (make-hash-table :test #'equal))
   (setq org-assistant--inflight-request nil)
   (setq org-assistant--request-queue-active-p nil)
-  (setq org-assistant--active-request nil)
   (setq org-assistant--request-queue nil))
 
 (defun org-assistant--queue-request-execute (job)
@@ -571,15 +797,12 @@ Return nil."
   (prog1 nil
     (deferred:$
      (deferred:next (lambda (&rest _) (funcall job)))
-     (deferred:error it (lambda (&rest arg)
-                          (message "%S" arg)
-                          "Suppressed since logged elsewhere"))
+     (deferred:error it (lambda (error)
+                          "SUPPRESSED"))
      (deferred:nextc
       it
       (lambda (result)
         (prog1 result
-          org-assistant--inflight-request
-          org-assistant--request-queue-active-p
           (-some--> (pop org-assistant--request-queue)
             (org-assistant--queue-request-execute (cdr it))))))
      (deferred:nextc it (lambda (&rest arg) arg)))
@@ -587,6 +810,49 @@ Return nil."
                 org-assistant--request-queue)
         (setq org-assistant--request-queue-active-p t))))
 
+(defun org-assistant--json-encode (alist)
+  "Return ALIST encoded as json."
+  (let ((json-object-type 'alist)
+        (json-key-type 'string)
+        (json-array-type 'vector))
+    (json-encode alist)))
+
+(defun org-assistant--json-encode-pretty-print (alist)
+  "Return ALIST encoded as json pretty printed."
+  (org-assistant--json-encode alist))
+
+(defun org-assistant--json-decode (json)
+  "Return alist decoded from JSON."
+  (let ((json-object-type 'alist)
+        (json-key-type 'symbol)
+        (json-array-type 'vector))
+    (json-read-from-string json)))
+
+(defun org-assistant-cancel-block-at-point ()
+  (interactive)
+  (save-match-data
+    (save-excursion
+      (forward-line 0)
+      (re-search-forward (rx line-start "#+END_SRC") nil t)
+      (let ((end (save-excursion
+                   (forward-line 4)
+                   (point))))
+        (when (re-search-forward (rx line-start "#+RESULTS:") end t)
+          (goto-char (match-beginning 0))
+          (forward-line 1)
+          (cl-flet ((uuid-at-point ()
+                      (when (looking-at (rx line-start (* whitespace) (+ (any alphanumeric "-")) (* whitespace) line-end))
+                        (string-trim (match-string 0)))))
+            (while-let ((uuid (uuid-at-point)))
+              (-some-->
+                  (gethash uuid org-assistant--request-processes-ht)
+                (progn
+                  (replace-match "")
+                  (kill-process it)
+                  (remhash uuid org-assistant--request-processes-ht)
+                  (setq org-assistant--inflight-request
+                        (--filter (not (string= it uuid)) org-assistant--inflight-request))
+                  (forward-line 1))))))))))
 
 (provide 'org-assistant)
 ;;; org-assistant.el ends here
