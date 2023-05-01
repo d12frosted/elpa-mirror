@@ -7,8 +7,8 @@
 ;; Author: Puneeth Chaganti <punchagan+org2blog@gmail.com>
 ;; Maintainer: Grant Rettke <grant@wisdomandwonder.com>
 ;; Version: 1.1.16
-;; Package-Version: 20221118.536
-;; Package-Commit: 0d435af91c237351f0880536cb3cf21a91041ba4
+;; Package-Version: 20230501.234
+;; Package-Commit: 814f8a7098508286195e3053bf24f6af928c7f0b
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: comm
 ;; Homepage: https://github.com/org2blog/org2blog
@@ -448,13 +448,13 @@ BLOG-XMLRPC USER-NAME PASSWORD BLOG-ID"
                        user-name
                        password))
 
-(defun metaweblog-delete-post (blog-xmlrpc user-name password post-id)
+(defun metaweblog-delete-post (blog-xmlrpc app-key user-name password post-id)
   "Delete an existing Post POST-ID.
 
-BLOG-XMLRPC USER-NAME PASSWORD BLOG-ID"
+BLOG-XMLRPC APP-KEY USER-NAME PASSWORD BLOG-ID"
   (xml-rpc-method-call blog-xmlrpc
                        "metaWeblog.deletePost"
-                       nil
+                       app-key
                        post-id
                        user-name
                        password
@@ -543,6 +543,16 @@ BLOG-XMLRPC USER-NAME PASSWORD BLOG-ID"
                                     (member nil
                                             (name nil "overwrite")
                                             (value nil "t"))))))))))))
+
+(defun metaweblog-get-users-blogs (blog-xmlrpc app-key user-name password)
+  "Retrieve list of blogs to which USER-NAME can post.
+
+BLOG-XMLRPC APP-KEY USER-NAME PASSWORD"
+  (xml-rpc-method-call blog-xmlrpc
+                       "metaWeblog.getUsersBlogs"
+                       app-key
+                       user-name
+                       password))
 
 (provide 'metaweblog)
 

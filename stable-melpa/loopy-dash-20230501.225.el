@@ -5,10 +5,10 @@
 ;; Author: Earl Hyatt
 ;; Created: February 2021
 ;; URL: https://github.com/okamsn/loopy
-;; Package-Version: 20230314.136
-;; Package-Commit: 0cb8714f0a77b257039b5269eb257e83718d1ef0
-;; Version: 0.11.1
-;; Package-Requires: ((emacs "25.1") (loopy "0.11.1") (dash "2.19"))
+;; Package-Version: 20230501.225
+;; Package-Commit: d04f4b8a6918ffaf745b8ccdba5ff9fee66ea8bf
+;; Version: 0.11.2
+;; Package-Requires: ((emacs "25.1") (loopy "0.11.2") (dash "2.19"))
 ;; Keywords: extensions
 ;; LocalWords:  Loopy's emacs
 

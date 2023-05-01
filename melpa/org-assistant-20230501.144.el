@@ -2,8 +2,8 @@
 
 ;; Author: Tyler Dodge (tyler@tdodge.consulting)
 ;; Version: 0.1
-;; Package-Version: 20230430.2336
-;; Package-Commit: 99d5ba7dcb2892d222ea67baa9bf94bb4196db2e
+;; Package-Version: 20230501.144
+;; Package-Commit: ee564ef9710950898bc166150afb48a342a5939f
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "27.1") (uuidgen "1.2") (deferred "0.5.1") (s "1.12.0") (dash "2.19.1"))
 ;; URL: https://github.com/tyler-dodge/org-assistant
@@ -570,7 +570,7 @@ JOB may be delayed based on `org-assistant-parallelism'.
 Return nil."
   (prog1 nil
     (deferred:$
-     (deferred:next (lambda () (funcall job)))
+     (deferred:next (lambda (&rest _) (funcall job)))
      (deferred:error it (lambda (&rest arg)
                           (message "%S" arg)
                           "Suppressed since logged elsewhere"))

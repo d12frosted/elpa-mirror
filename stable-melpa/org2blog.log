@@ -3,23 +3,25 @@ Fetcher: github
 Source:  https://github.com/org2blog/org2blog.git
 
 Updating /mnt/store/melpa/working/org2blog/
-Checking out 1b2c10d1332390750e76a140b8c55f884ae1b3c4
+Checking out 81c75688d47fa9514b8c7a92160c01de6e5b128f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org2blog/
-  to /tmp/org2blogh9zMDb/org2blog-20230113.309
+  to /tmp/org2blogeVuOr6/org2blog-20230501.257
     org2blog-pkg.el -> org2blog-pkg.el
     org2blog-test-system.el -> org2blog-test-system.el
     org2blog.el -> org2blog.el
     ox-wp.el -> ox-wp.el
     README.org -> README.org
-Created org2blog-20230113.309.tar containing:
-  org2blog-20230113.309/
-  org2blog-20230113.309/README.org
-  org2blog-20230113.309/org2blog-pkg.el
-  org2blog-20230113.309/org2blog-test-system.el
-  org2blog-20230113.309/org2blog.el
-  org2blog-20230113.309/ox-wp.el
-Built org2blog in 4.844s, finished at 2023-05-01T00:12:50+0000
+Created org2blog-20230501.257.tar containing:
+  org2blog-20230501.257/
+  org2blog-20230501.257/README.org
+  org2blog-20230501.257/org2blog-pkg.el
+  org2blog-20230501.257/org2blog-test-system.el
+  org2blog-20230501.257/org2blog.el
+  org2blog-20230501.257/ox-wp.el
+Built org2blog in 5.994s, finished at 2023-05-01T05:05:17+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  539 May  1 00:12 packages/org2blog-20230113.309.entry
 232K -rw-r--r-- 1 root root 230K May  1 00:12 packages/org2blog-20230113.309.tar
+4.0K -rw-r--r-- 1 root root  539 May  1 05:05 packages/org2blog-20230501.257.entry
+232K -rw-r--r-- 1 root root 230K May  1 05:05 packages/org2blog-20230501.257.tar
