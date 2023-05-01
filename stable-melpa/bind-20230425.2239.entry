@@ -1,0 +1,12 @@
+(bind .
+      [(20230425 2239)
+       ((emacs
+	 (25 1)))
+       "Bind commands to keys" single
+       ((:commit . "cfb5f42090a15e34ded2a1b2ddc8709e7e317676")
+	(:authors
+	 ("repelliuss <https://github.com/repelliuss>"))
+	(:maintainers
+	 ("repelliuss" . "repelliuss@gmail.com"))
+	(:maintainer "repelliuss" . "repelliuss@gmail.com")
+	(:url . "https://github.com/repelliuss/bind"))])

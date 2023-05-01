@@ -3,38 +3,40 @@ Fetcher: github
 Source:  https://github.com/Crandel/tempel-collection.git
 
 Updating /mnt/store/melpa/working/tempel-collection/
-Checking out 5fa13a7aee2f8881ba0785dd755e0370727cd904
+Checking out ba2ae39e66804337f604de69df6ae9b34b821e85
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tempel-collection/
-  to /tmp/tempel-collectionrxBhvN/tempel-collection-20230426.909
+  to /tmp/tempel-collectionlr45oH/tempel-collection-20230430.1842
     tempel-collection.el -> tempel-collection.el
     templates => templates
-Created tempel-collection-20230426.909.tar containing:
-  tempel-collection-20230426.909/
-  tempel-collection-20230426.909/tempel-collection-pkg.el
-  tempel-collection-20230426.909/tempel-collection.el
-  tempel-collection-20230426.909/templates/
-  tempel-collection-20230426.909/templates/css-base.eld
-  tempel-collection-20230426.909/templates/emacs-lisp.eld
-  tempel-collection-20230426.909/templates/eshell.eld
-  tempel-collection-20230426.909/templates/fundamental.eld
-  tempel-collection-20230426.909/templates/go.eld
-  tempel-collection-20230426.909/templates/html.eld
-  tempel-collection-20230426.909/templates/java.eld
-  tempel-collection-20230426.909/templates/latex.eld
-  tempel-collection-20230426.909/templates/lisp.eld
-  tempel-collection-20230426.909/templates/markdown.eld
-  tempel-collection-20230426.909/templates/nix.eld
-  tempel-collection-20230426.909/templates/org.eld
-  tempel-collection-20230426.909/templates/prog.eld
-  tempel-collection-20230426.909/templates/python-base.eld
-  tempel-collection-20230426.909/templates/rst.eld
-  tempel-collection-20230426.909/templates/ruby-base.eld
-  tempel-collection-20230426.909/templates/rust.eld
-  tempel-collection-20230426.909/templates/sh-base.eld
-  tempel-collection-20230426.909/templates/texinfo.eld
-  tempel-collection-20230426.909/templates/text.eld
-Built tempel-collection in 6.079s, finished at 2023-04-30T14:58:52+0000
+Created tempel-collection-20230430.1842.tar containing:
+  tempel-collection-20230430.1842/
+  tempel-collection-20230430.1842/tempel-collection-pkg.el
+  tempel-collection-20230430.1842/tempel-collection.el
+  tempel-collection-20230430.1842/templates/
+  tempel-collection-20230430.1842/templates/css-base.eld
+  tempel-collection-20230430.1842/templates/emacs-lisp.eld
+  tempel-collection-20230430.1842/templates/eshell.eld
+  tempel-collection-20230430.1842/templates/fundamental.eld
+  tempel-collection-20230430.1842/templates/go.eld
+  tempel-collection-20230430.1842/templates/html.eld
+  tempel-collection-20230430.1842/templates/java.eld
+  tempel-collection-20230430.1842/templates/latex.eld
+  tempel-collection-20230430.1842/templates/lisp.eld
+  tempel-collection-20230430.1842/templates/markdown.eld
+  tempel-collection-20230430.1842/templates/nix.eld
+  tempel-collection-20230430.1842/templates/org.eld
+  tempel-collection-20230430.1842/templates/prog.eld
+  tempel-collection-20230430.1842/templates/python-base.eld
+  tempel-collection-20230430.1842/templates/rst.eld
+  tempel-collection-20230430.1842/templates/ruby-base.eld
+  tempel-collection-20230430.1842/templates/rust.eld
+  tempel-collection-20230430.1842/templates/sh-base.eld
+  tempel-collection-20230430.1842/templates/texinfo.eld
+  tempel-collection-20230430.1842/templates/text.eld
+Built tempel-collection in 7.004s, finished at 2023-04-30T19:47:39+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 622 Apr 30 14:58 packages/tempel-collection-20230426.909.entry
  40K -rw-r--r-- 1 root root 40K Apr 30 14:58 packages/tempel-collection-20230426.909.tar
+4.0K -rw-r--r-- 1 root root 623 Apr 30 19:47 packages/tempel-collection-20230430.1842.entry
+ 40K -rw-r--r-- 1 root root 40K Apr 30 19:47 packages/tempel-collection-20230430.1842.tar
