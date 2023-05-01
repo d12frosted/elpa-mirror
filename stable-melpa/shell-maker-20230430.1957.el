@@ -4,8 +4,8 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230429.1233
-;; Package-Commit: 6534bde24ebf279c3068dcbcfa84c7eef885a1f7
+;; Package-Version: 20230430.1957
+;; Package-Commit: 9d88c4c4cc81df7060ca746dfe97a999ba27cf2f
 ;; Version: 0.18.1
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -50,7 +50,7 @@
   :group 'shell-maker)
 
 (defcustom shell-maker-read-string-function (lambda (prompt history)
-                                           (read-string prompt nil history))
+                                              (read-string prompt nil history))
   "Function to read strings from user.
 
 To use `completing-read', it can be done with something like:
@@ -212,12 +212,12 @@ Uses the interface provided by `comint-mode'"
   (unless (eq major-mode 'shell-maker-mode)
     (user-error "Not in a shell"))
   (let ((candidate (completing-read
-               "History: "
-               (delete-dups
-                (seq-filter
-                 (lambda (item)
-                   (not (string-empty-p item)))
-                 (ring-elements comint-input-ring))) nil t)))
+                    "History: "
+                    (delete-dups
+                     (seq-filter
+                      (lambda (item)
+                        (not (string-empty-p item)))
+                      (ring-elements comint-input-ring))) nil t)))
     (delete-region (comint-line-beginning-position) (point-max))
     (insert candidate)))
 
@@ -226,8 +226,8 @@ Uses the interface provided by `comint-mode'"
   (let ((proc (get-buffer-process (current-buffer))))
     (save-excursion
       (let* ((pmark (progn (goto-char (process-mark proc))
-			   (forward-line 0)
-			   (point-marker)))
+                           (forward-line 0)
+                           (point-marker)))
              (output (buffer-substring comint-last-input-end pmark))
              (items (split-string output "<shell-maker-end-of-prompt>")))
         (if (> (length items) 1)
@@ -261,7 +261,7 @@ Uses the interface provided by `comint-mode'"
         (prompt-pos (save-excursion
                       (goto-char (process-mark
                                   (get-buffer-process (current-buffer))))
-		      (point))))
+                      (point))))
     (when (>= (point) prompt-pos)
       (goto-char prompt-pos)
       (forward-line 0))
@@ -328,7 +328,7 @@ Otherwise mark current output at location."
         (prompt-pos (save-excursion
                       (goto-char (process-mark
                                   (get-buffer-process (current-buffer))))
-		      (point))))
+                      (point))))
     (when (>= (point) prompt-pos)
       (goto-char prompt-pos)
       (forward-line -1)
@@ -415,10 +415,10 @@ Otherwise save current output at location."
     (comint-send-input)
     (goto-char (point-max))
     (shell-maker--output-filter (shell-maker--process)
-                          (concat (propertize "<shell-maker-failed-command>"
-                                              'invisible (not shell-maker--show-invisible-markers))
-                                  "\n"
-                                  shell-maker--prompt-internal))
+                                (concat (propertize "<shell-maker-failed-command>"
+                                                    'invisible (not shell-maker--show-invisible-markers))
+                                        "\n"
+                                        shell-maker--prompt-internal))
     (when (process-live-p shell-maker--request-process)
       (kill-process shell-maker--request-process))
     (when shell-maker--busy
@@ -509,7 +509,7 @@ NO-ANNOUNCEMENT skips announcing response when in background."
                      (shell-maker--write-reply "Error: that's all is known" t) ;; comeback
                      (setq shell-maker--busy nil)
                      (unless no-announcement
-                      (shell-maker--announce-response buffer))
+                       (shell-maker--announce-response buffer))
                      (when on-output
                        (funcall on-output
                                 input-string (shell-maker-last-output) t t))))
@@ -519,7 +519,7 @@ NO-ANNOUNCEMENT skips announcing response when in background."
                      (setq errored t))
                    (setq shell-maker--busy nil)
                    (unless no-announcement
-                    (shell-maker--announce-response buffer))
+                     (shell-maker--announce-response buffer))
                    (when on-output
                      (funcall on-output
                               input-string error t t)))))))))
@@ -811,48 +811,48 @@ Uses PROCESS and STRING same as `comint-output-filter'."
   (when-let ((oprocbuf (process-buffer process)))
     (with-current-buffer oprocbuf
       (let ((inhibit-read-only t))
-	(save-restriction
-	  (widen)
-	  (goto-char (process-mark process))
-	  (set-marker comint-last-output-start (point))
-	  (insert string)
-	  (set-marker (process-mark process) (point))
-	  (goto-char (process-mark process))
-	  (unless comint-use-prompt-regexp
+        (save-restriction
+          (widen)
+          (goto-char (process-mark process))
+          (set-marker comint-last-output-start (point))
+          (insert string)
+          (set-marker (process-mark process) (point))
+          (goto-char (process-mark process))
+          (unless comint-use-prompt-regexp
             (with-silent-modifications
               (add-text-properties comint-last-output-start (point)
                                    `(rear-nonsticky
-	        		     ,shell-maker--prompt-rear-nonsticky
-	        		     front-sticky
-	        		     (field inhibit-line-move-field-capture)
-	        		     field output
-	        		     inhibit-line-move-field-capture t))))
-	  (when-let* ((prompt-start (save-excursion (forward-line 0) (point)))
-		      (inhibit-read-only t)
+                                     ,shell-maker--prompt-rear-nonsticky
+                                     front-sticky
+                                     (field inhibit-line-move-field-capture)
+                                     field output
+                                     inhibit-line-move-field-capture t))))
+          (when-let* ((prompt-start (save-excursion (forward-line 0) (point)))
+                      (inhibit-read-only t)
                       (prompt (string-match
                                comint-prompt-regexp
                                (buffer-substring prompt-start (point)))))
-	    (with-silent-modifications
-	      (or (= (point-min) prompt-start)
-		  (get-text-property (1- prompt-start) 'read-only)
-		  (put-text-property (1- prompt-start)
-				     prompt-start 'read-only 'fence))
-	      (add-text-properties prompt-start (point)
-				   '(read-only t front-sticky (read-only))))
-	    (when comint-last-prompt
-	      (font-lock--remove-face-from-text-property
-	       (car comint-last-prompt)
-	       (cdr comint-last-prompt)
-	       'font-lock-face
-	       'comint-highlight-prompt))
-	    (setq comint-last-prompt
-		  (cons (copy-marker prompt-start) (point-marker)))
+            (with-silent-modifications
+              (or (= (point-min) prompt-start)
+                  (get-text-property (1- prompt-start) 'read-only)
+                  (put-text-property (1- prompt-start)
+                                     prompt-start 'read-only 'fence))
+              (add-text-properties prompt-start (point)
+                                   '(read-only t front-sticky (read-only))))
+            (when comint-last-prompt
+              (font-lock--remove-face-from-text-property
+               (car comint-last-prompt)
+               (cdr comint-last-prompt)
+               'font-lock-face
+               'comint-highlight-prompt))
+            (setq comint-last-prompt
+                  (cons (copy-marker prompt-start) (point-marker)))
             (font-lock-append-text-property prompt-start (point)
-	        			    'font-lock-face
-	        			    'comint-highlight-prompt)
-	    (add-text-properties prompt-start (point)
-	                         `(rear-nonsticky
-	                           ,shell-maker--prompt-rear-nonsticky))))))))
+                                            'font-lock-face
+                                            'comint-highlight-prompt)
+            (add-text-properties prompt-start (point)
+                                 `(rear-nonsticky
+                                   ,shell-maker--prompt-rear-nonsticky))))))))
 
 (defun shell-maker-buffer (config)
   "Get buffer from CONFIG."

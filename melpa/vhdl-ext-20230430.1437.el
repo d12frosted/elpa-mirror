@@ -4,8 +4,8 @@
 
 ;; Author: Gonzalo Larumbe <gonzalomlarumbe@gmail.com>
 ;; URL: https://github.com/gmlarumbe/vhdl-ext
-;; Package-Version: 20230426.1209
-;; Package-Commit: 94e83894f172e227581078b1997aec2473896df8
+;; Package-Version: 20230430.1437
+;; Package-Commit: 9627ff3d481950cbb3dde338deb4422c83933a2a
 ;; Version: 0.1.0
 ;; Keywords: VHDL, IDE, Tools
 ;; Package-Requires: ((emacs "28.1") (eglot "1.9") (lsp-mode "8.0.1") (ag "0.48") (ripgrep "0.4.0") (hydra "0.15.0") (flycheck "33-cvs"))

@@ -6,6 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-recomplete
+;; Package-Version: 20230109.536
+;; Package-Commit: 837965094aa55bbba9a62f9612e59c5440cbfc71
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "26.1"))
 
