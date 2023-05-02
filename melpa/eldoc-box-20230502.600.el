@@ -2,9 +2,9 @@
 
 ;; Copyright (C) 2018 Yuan Fu
 
-;; Version: 1.10.1
-;; Package-Version: 20230427.1854
-;; Package-Commit: d0dd4e9d4035f0f7e61f3e3bc269568316e6ba25
+;; Version: 1.11.1
+;; Package-Version: 20230502.600
+;; Package-Commit: 24c216ea3a2d369b814047271a8edf0c7c404b39
 
 ;; Author: Yuan Fu <casouri@gmail.com>
 ;; URL: https://github.com/casouri/eldoc-box
