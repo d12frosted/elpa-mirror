@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://repo.or.cz/external-dict.el.git
 
 Updating /mnt/store/melpa/working/external-dict/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/external-dict.el.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 7ef87709c09792dfa6332fb41a6ec1edd917120a
+Built external-dict in 5.133s, finished at 2023-05-02T10:15:24+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.9K May  2 10:15 packages/external-dict-20230313.118.el
+4.0K -rw-r--r-- 1 root root  277 May  2 10:15 packages/external-dict-20230313.118.entry

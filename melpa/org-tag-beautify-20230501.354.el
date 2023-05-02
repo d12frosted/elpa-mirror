@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (nerd-icons "0.0.1"))
-;; Package-Version: 20230429.350
-;; Package-Commit: 9efe9d04f801e71b19045398e1ab2827929072c0
+;; Package-Version: 20230501.354
+;; Package-Commit: 232a9ad76a55c40c6de58c7d266cc5e61a6b76a0
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -116,7 +116,7 @@ hardcoded (tag . icon) pair bindings to display icon."
 
 ;; (org-tag-beautify--initialize-org-tags-alist)
 
-(defvar org-tag-beautify--tag-icon-cache-alist nil
+(defcustom org-tag-beautify-tag-icon-cache-alist nil
   "A cache list to store already search found tag and icon pair.")
 
 (defun org-tag-beautify--find-tag-icon (&optional tag)
@@ -126,7 +126,7 @@ hardcoded (tag . icon) pair bindings to display icon."
          (tag (or tag
                   (org-tag-beautify--nerd-icons-get-icon-name (list selection))))) ; (#("<icon>" ...))
     ;; try to get tag associated icon from cache list at first to improve performance.
-    (or (cdr (assoc tag org-tag-beautify--tag-icon-cache-alist))
+    (or (cdr (assoc tag org-tag-beautify-tag-icon-cache-alist))
         (let* (;; TODO: improve the tag name matching algorithm.
                (tag-regexp-matching-f (apply-partially 'string-match-p
                                                        (regexp-opt (list (substring-no-properties (downcase tag))))))
@@ -141,7 +141,9 @@ hardcoded (tag . icon) pair bindings to display icon."
                          found-icon
                        (ignore-errors (funcall icon-f icon-name)))))
           ;; cache already search found icon name.
-          (push `(,tag . ,icon) org-tag-beautify--tag-icon-cache-alist)
+          (push `(,tag . ,icon) org-tag-beautify-tag-icon-cache-alist)
+          ;; TODO: save this `org-tag-beautify-tag-icon-cache-alist' into `custom.el' or elisp data file like `save-place-file'.
+          (setopt org-tag-beautify-tag-icon-cache-alist org-tag-beautify-tag-icon-cache-alist)
           icon))))
 
 ;;; TEST:

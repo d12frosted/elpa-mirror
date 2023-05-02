@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://repo.or.cz/ob-smiles.git
 
 Updating /mnt/store/melpa/working/ob-smiles/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/ob-smiles.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out d178f3d4a7e3c1ca9910f0a063d2a3cfd97d8609
+Built ob-smiles in 4.688s, finished at 2023-05-02T10:48:53+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.7K May  2 10:48 packages/ob-smiles-20220221.1255.el
+4.0K -rw-r--r-- 1 root root  504 May  2 10:48 packages/ob-smiles-20220221.1255.entry

@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://repo.or.cz/ob-redis.git
 
 Updating /mnt/store/melpa/working/ob-redis/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/ob-redis.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 44c83636ccbea0b3e9838b0180471905c30224c5
+Built ob-redis in 4.988s, finished at 2023-05-02T10:48:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.1K May  2 10:48 packages/ob-redis-20220221.1249.el
+4.0K -rw-r--r-- 1 root root  448 May  2 10:48 packages/ob-redis-20220221.1249.entry

@@ -4,8 +4,8 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230501.1618
-;; Package-Commit: 5fd3d107f21f51340c4580ff12a792fb3cdee2d6
+;; Package-Version: 20230502.731
+;; Package-Commit: 28ef2bf92dce047e0680a22c7e1d86b776f55425
 ;; Version: 0.23.1
 ;; Package-Requires: ((emacs "27.1") (shell-maker "0.17.1"))
 
@@ -91,6 +91,10 @@ For example:
 (defvaralias 'chatgpt-shell-display-function 'shell-maker-display-function)
 
 (defvaralias 'chatgpt-shell-read-string-function 'shell-maker-read-string-function)
+
+(defvaralias 'chatgpt-shell-logging 'shell-maker-logging)
+
+(defvaralias 'chatgpt-shell-history-path 'shell-maker-history-path)
 
 (defalias 'chatgpt-shell-save-session-transcript #'shell-maker-save-session-transcript)
 

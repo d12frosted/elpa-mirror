@@ -3,8 +3,8 @@
 ;; Copyright (c) Tweag I/O Limited.
 
 ;; Version: 0.1
-;; Package-Version: 20230406.910
-;; Package-Commit: fea2152d591e46e19e4be6a7aca7fb0b1de15dd0
+;; Package-Version: 20230502.841
+;; Package-Commit: 4b92668564025b18a3d4da47db51d6360cf9da44
 ;; Author: The Nickel Team (nickel-lang@tweag.io)
 ;; Url: https://github.com/nickel-lang/nickel-mode
 ;; Created: 7 March 2023
@@ -53,7 +53,7 @@
 
 
 (defconst nickel-mode-identifiers (rx symbol-start alpha (* (or alpha ?\_ ?\')) symbol-end))
-(defconst nickel-mode-enum-tags (rx symbol-start ?\` alpha (* (or alpha ?\_ ?\')) symbol-end))
+(defconst nickel-mode-enum-tags (rx symbol-start ?\' alpha (* (or alpha ?\_ ?\')) symbol-end))
 (defconst nickel-mode-numbers (rx symbol-start (optional ?\-) (+ digit) (optional ?\. (+ digit)) symbol-end))
 (defconst nickel-mode-operators
   (regexp-opt

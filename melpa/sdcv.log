@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://repo.or.cz/sdcv.el.git
 
 Updating /mnt/store/melpa/working/sdcv/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/sdcv.el.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 98e239c7380c63282845d5bc55ea6d605f5a33b8
+Built sdcv in 5.592s, finished at 2023-05-02T11:05:19+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K May  2 11:05 packages/sdcv-20220210.1412.el
+4.0K -rw-r--r-- 1 root root 525 May  2 11:05 packages/sdcv-20220210.1412.entry

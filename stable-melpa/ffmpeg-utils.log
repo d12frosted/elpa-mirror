@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://repo.or.cz/ffmpeg-utils.git
 
 Updating /mnt/store/melpa/working/ffmpeg-utils/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/ffmpeg-utils.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 064d61527bc6b6a1d0fb0065f8a7bae3bbd4cefc
+Built ffmpeg-utils in 5.117s, finished at 2023-05-02T10:16:11+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.1K May  2 10:16 packages/ffmpeg-utils-20230305.709.el
+4.0K -rw-r--r-- 1 root root  305 May  2 10:16 packages/ffmpeg-utils-20230305.709.entry

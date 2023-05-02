@@ -3,9 +3,22 @@ Fetcher: git
 Source:  https://repo.or.cz/org-link-beautify.git
 
 Updating /mnt/store/melpa/working/org-link-beautify/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/org-link-beautify.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 4cc99e8fdc08d25c944db950773987d14dbbfc96
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-link-beautify/
+  to /tmp/org-link-beautifyctBqYj/org-link-beautify-20230430.1237
+    org-link-beautify.el -> org-link-beautify.el
+    scripts => scripts
+Created org-link-beautify-20230430.1237.tar containing:
+  org-link-beautify-20230430.1237/
+  org-link-beautify-20230430.1237/org-link-beautify-pkg.el
+  org-link-beautify-20230430.1237/org-link-beautify.el
+  org-link-beautify-20230430.1237/scripts/
+  org-link-beautify-20230430.1237/scripts/epub-thumbnailer.py
+Built org-link-beautify in 4.950s, finished at 2023-05-02T10:51:08+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 53K Dec 12 05:28 packages/org-link-beautify-20221209.420.el
+4.0K -rw-r--r-- 1 root root 297 Apr 30 04:53 packages/org-link-beautify-20230426.1542.entry
+ 72K -rw-r--r-- 1 root root 70K Apr 30 04:53 packages/org-link-beautify-20230426.1542.tar
+4.0K -rw-r--r-- 1 root root 297 May  2 10:51 packages/org-link-beautify-20230430.1237.entry
+ 72K -rw-r--r-- 1 root root 70K May  2 10:51 packages/org-link-beautify-20230430.1237.tar

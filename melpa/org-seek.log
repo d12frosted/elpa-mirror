@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://repo.or.cz/org-seek.el.git
 
 Updating /mnt/store/melpa/working/org-seek/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/org-seek.el.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 1f51e6634e3b9a6a29d335d0d14370a6ffef2265
+Built org-seek in 6.445s, finished at 2023-05-02T10:52:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K May  2 10:52 packages/org-seek-20161217.502.el
+4.0K -rw-r--r-- 1 root root  487 May  2 10:52 packages/org-seek-20161217.502.entry

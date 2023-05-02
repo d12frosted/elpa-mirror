@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://repo.or.cz/org-contacts.git
 
 Updating /mnt/store/melpa/working/org-contacts/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/org-contacts.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out ae45b9413e24abdc431d12858dced54e0dee6e39
+Built org-contacts in 5.014s, finished at 2023-05-02T10:50:24+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 59K May  2 10:50 packages/org-contacts-20230227.1417.el
+4.0K -rw-r--r-- 1 root root 502 May  2 10:50 packages/org-contacts-20230227.1417.entry

@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://repo.or.cz/ob-php.git
 
 Updating /mnt/store/melpa/working/ob-php/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://repo.or.cz/ob-php.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 6ebf7799e9ded1d5114094f46785960a50000614
+Built ob-php in 4.723s, finished at 2023-05-02T10:48:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.6K May  2 10:48 packages/ob-php-20220221.1254.el
+4.0K -rw-r--r-- 1 root root  415 May  2 10:48 packages/ob-php-20220221.1254.entry
