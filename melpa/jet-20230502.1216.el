@@ -5,9 +5,9 @@
 ;; Author: Eric Dallo <ercdll1337@gmail.com>
 ;; Maintainer: Eric Dallo <ercdll1337@gmail.com>
 ;; Created: january 24, 2023
-;; Version: 1.0.0
-;; Package-Version: 20230213.1615
-;; Package-Commit: 90fcdec479d2b1755a1410ae65d53d421f7683c9
+;; Version: 1.1.0
+;; Package-Version: 20230502.1216
+;; Package-Commit: fd0544d641207e73e81f9989c155a18c1378a0cc
 ;; Keywords: tools
 ;; Homepage: https://github.com/ericdallo/jet.el
 ;; Package-Requires: ((emacs "27.1") (transient "0.3.7"))
@@ -46,7 +46,7 @@
   :group 'jet
   :type 'number)
 
-(defvar jet-version-string "1.0.0")
+(defvar jet-version-string "1.1.0")
 
 (defvar jet-output-buffer-name "*jet output*")
 (defvar jet-error-buffer-name "*jet error*")
@@ -202,6 +202,12 @@
   :description "Given separate values, collects them in a vector"
   :key "C")
 
+(transient-define-infix jet-menu--no-commas ()
+  :argument "--no-commas="
+  :class 'transient-switch
+  :description "Remove commas from EDN"
+  :key ",")
+
 ;; Public API
 
 ;;;###autoload
@@ -269,7 +275,8 @@
    (jet-menu--thread-last)
    (jet-menu--thread-first)
    (jet-menu--query)
-   (jet-menu--collect)]
+   (jet-menu--collect)
+   (jet-menu--no-commas)]
   ["Actions"
    ("x" "Execute and print" jet-print)
    ("p" "Execute and paste to cursor" jet-paste-cursor)

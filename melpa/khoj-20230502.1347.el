@@ -5,8 +5,8 @@
 ;; Author: Debanjum Singh Solanky <debanjum@gmail.com>
 ;; Description: A search assistant for your second brain
 ;; Keywords: search, chat, org-mode, outlines, markdown, beancount, image
-;; Package-Version: 20230428.315
-;; Package-Commit: f046523b3389343ed865f7b48bca44872e620d08
+;; Package-Version: 20230502.1347
+;; Package-Commit: 948a4274e4c92954d4e01beb6526db03f21cad7c
 ;; Version: 0.6.1
 ;; Package-Requires: ((emacs "27.1") (transient "0.3.0") (dash "2.19.1"))
 ;; URL: https://github.com/debanjum/khoj/tree/master/src/interface/emacs
@@ -228,7 +228,7 @@ for example), set this to the full interpreter path."
   :group 'khoj)
 
 (defcustom khoj-org-directories nil
-  "List of directories with org-mode files to index on khoj server."
+  "List of directories with `org-mode' files to index on khoj server."
   :type '(repeat string)
   :group 'khoj)
 
@@ -261,10 +261,10 @@ Auto invokes setup steps on calling main entrypoint."
   "Install or upgrade the khoj server."
   (with-temp-buffer
     (message "khoj.el: Installing server...")
-    (if (/= (apply 'call-process khoj-server-python-command
-                     nil t nil
-                     "-m" "pip" "install" "--upgrade"
-                     '("khoj-assistant"))
+    (if (/= (apply #'call-process khoj-server-python-command
+                   nil t nil
+                   "-m" "pip" "install" "--upgrade"
+                   '("khoj-assistant"))
             0)
         (message "khoj.el: Failed to install Khoj server. Please install it manually using pip install `khoj-assistant'.\n%s" (buffer-string))
       (message "khoj.el: Installed and upgraded Khoj server version: %s" (khoj--server-get-version)))))
@@ -318,11 +318,11 @@ Auto invokes setup steps on calling main entrypoint."
   "Check if the khoj server has been started."
   ;; check for when server process handled from within emacs
   (if (and khoj--server-process
-           (not (null (process-live-p khoj--server-process))))
+           (process-live-p khoj--server-process))
       t
     ;; else general check via ping to khoj-server-url
     (if (ignore-errors
-          (not (null (url-retrieve-synchronously (format "%s/api/config/data/default" khoj-server-url)))))
+          (url-retrieve-synchronously (format "%s/api/config/data/default" khoj-server-url)))
         ;; Successful ping to non-emacs khoj server indicates it is started and ready.
         ;; So update ready state tracker variable (and implicitly return true for started)
         (setq khoj--server-ready? t)
@@ -388,25 +388,26 @@ CONFIG is json obtained from Khoj config API."
      ((not current-config)
       (message "khoj.el: Server not configured yet.")
       (setq config (delq (assoc 'content-type config) config))
-      (add-to-list 'config
-                   `(content-type . ((org . ((input-files . ,khoj-org-files)
-                                             (input-filter . ,org-directory-regexes)
-                                             (compressed-jsonl . ,(format "%s/org.jsonl.gz" default-index-dir))
-                                             (embeddings-file . ,(format "%s/org.pt" default-index-dir))
-                                             (index-heading-entries . ,json-false)))))))
+      (cl-pushnew `(content-type . ((org . ((input-files . ,khoj-org-files)
+                                      (input-filter . ,org-directory-regexes)
+                                      (compressed-jsonl . ,(format "%s/org.jsonl.gz" default-index-dir))
+                                      (embeddings-file . ,(format "%s/org.pt" default-index-dir))
+                                      (index-heading-entries . ,json-false)))))
+            'config))
 
      ;; Else if khoj config has no org content config
      ((not (alist-get 'org (alist-get 'content-type config)))
       (message "khoj.el: Org-mode content on server not configured yet.")
      (let ((new-content-type (alist-get 'content-type config)))
         (setq new-content-type (delq (assoc 'org new-content-type) new-content-type))
-        (add-to-list 'new-content-type `(org . ((input-files . ,khoj-org-files)
-                                                (input-filter . ,org-directory-regexes)
-                                                (compressed-jsonl . ,(format "%s/org.jsonl.gz" default-index-dir))
-                                                (embeddings-file . ,(format "%s/org.pt" default-index-dir))
-                                                (index-heading-entries . ,json-false))))
+        (cl-pushnew `(org . ((input-files . ,khoj-org-files)
+                       (input-filter . ,org-directory-regexes)
+                       (compressed-jsonl . ,(format "%s/org.jsonl.gz" default-index-dir))
+                       (embeddings-file . ,(format "%s/org.pt" default-index-dir))
+                       (index-heading-entries . ,json-false)))
+              'new-content-type)
         (setq config (delq (assoc 'content-type config) config))
-        (add-to-list 'config `(content-type . ,new-content-type))))
+        (cl-pushnew `(content-type . ,new-content-type) 'config)))
 
      ;; Else if khoj is not configured to index specified org files
      ((not (and (equal (alist-get 'input-files (alist-get 'org (alist-get 'content-type config))) khoj-org-files)
@@ -415,13 +416,14 @@ CONFIG is json obtained from Khoj config API."
       (let* ((index-directory (khoj--get-directory-from-config config '(content-type org embeddings-file)))
              (new-content-type (alist-get 'content-type config)))
         (setq new-content-type (delq (assoc 'org new-content-type) new-content-type))
-        (add-to-list 'new-content-type `(org . ((input-files . ,khoj-org-files)
-                                                (input-filter . ,org-directory-regexes)
-                                                (compressed-jsonl . ,(format "%s/org.jsonl.gz" index-directory))
-                                                (embeddings-file . ,(format "%s/org.pt" index-directory))
-                                                (index-heading-entries . ,json-false))))
+        (cl-pushnew `(org . ((input-files . ,khoj-org-files)
+                       (input-filter . ,org-directory-regexes)
+                       (compressed-jsonl . ,(format "%s/org.jsonl.gz" index-directory))
+                       (embeddings-file . ,(format "%s/org.pt" index-directory))
+                       (index-heading-entries . ,json-false)))
+              'new-content-type)
         (setq config (delq (assoc 'content-type config) config))
-        (add-to-list 'config `(content-type . ,new-content-type)))))
+        (cl-pushnew `(content-type . ,new-content-type) 'config))))
 
     ;; Configure processors
     (cond
@@ -431,20 +433,21 @@ CONFIG is json obtained from Khoj config API."
      ((not current-config)
       (message "khoj.el: Chat not configured yet.")
       (setq config (delq (assoc 'processor config) config))
-      (add-to-list 'config
-                   `(processor . ((conversation . ((conversation-logfile . ,(format "%s/conversation.json" default-chat-dir))
-                                                   (model . ,default-model)
-                                                   (openai-api-key . ,khoj-openai-api-key)))))))
+      (cl-pushnew `(processor . ((conversation . ((conversation-logfile . ,(format "%s/conversation.json" default-chat-dir))
+                                            (model . ,default-model)
+                                            (openai-api-key . ,khoj-openai-api-key)))))
+            'config))
 
      ((not (alist-get 'conversation (alist-get 'processor config)))
       (message "khoj.el: Chat not configured yet.")
        (let ((new-processor-type (alist-get 'processor config)))
          (setq new-processor-type (delq (assoc 'conversation new-processor-type) new-processor-type))
-         (add-to-list 'new-processor-type `(conversation . ((conversation-logfile . ,(format "%s/conversation.json" default-chat-dir))
-                                                            (model . ,default-model)
-                                                            (openai-api-key . ,khoj-openai-api-key))))
+         (cl-pushnew `(conversation . ((conversation-logfile . ,(format "%s/conversation.json" default-chat-dir))
+                                 (model . ,default-model)
+                                 (openai-api-key . ,khoj-openai-api-key)))
+               'new-processor-type)
         (setq config (delq (assoc 'processor config) config))
-        (add-to-list 'config `(processor . ,new-processor-type))))
+        (cl-pushnew `(processor . ,new-processor-type) 'config)))
 
      ;; Else if khoj is not configured with specified openai api key
      ((not (equal (alist-get 'openai-api-key (alist-get 'conversation (alist-get 'processor config))) khoj-openai-api-key))
@@ -453,11 +456,12 @@ CONFIG is json obtained from Khoj config API."
              (model-name (khoj--get-directory-from-config config '(processor conversation model)))
              (new-processor-type (alist-get 'processor config)))
         (setq new-processor-type (delq (assoc 'conversation new-processor-type) new-processor-type))
-        (add-to-list 'new-processor-type `(conversation . ((conversation-logfile . ,(format "%s/conversation.json" chat-directory))
-                                                           (model . ,model-name)
-                                                           (openai-api-key . ,khoj-openai-api-key))))
+        (cl-pushnew `(conversation . ((conversation-logfile . ,(format "%s/conversation.json" chat-directory))
+                                (model . ,model-name)
+                                (openai-api-key . ,khoj-openai-api-key)))
+              'new-processor-type)
         (setq config (delq (assoc 'processor config) config))
-        (add-to-list 'config `(processor . ,new-processor-type)))))
+        (cl-pushnew `(processor . ,new-processor-type) 'config))))
 
       ;; Update server with latest configuration, if required
       (cond ((not current-config)
@@ -468,7 +472,7 @@ CONFIG is json obtained from Khoj config API."
             (message "khoj.el: ⚙️ Updated khoj server configuration.")))))
 
 (defun khoj-setup (&optional interact)
-  "Install, start and configure Khoj server."
+  "Install, start and configure Khoj server. Get permission if INTERACT is non-nil."
   (interactive "p")
   ;; Setup khoj server if not running
   (let* ((not-started (not (khoj--server-started?)))
