@@ -3,18 +3,20 @@ Fetcher: github
 Source:  https://github.com/srfi-explorations/emacs-srfi.git
 
 Updating /mnt/store/melpa/working/srfi/
-Checking out bec36ba78216a8787aba1d2e21727a25d180d070
+Checking out 34917fc6522aaa70d03025329b18ac0a2aebd46c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/srfi/
-  to /tmp/srfigBEMIx/srfi-20230425.2340
+  to /tmp/srfitFBthC/srfi-20230501.2324
     srfi-data.el -> srfi-data.el
     srfi.el -> srfi.el
-Created srfi-20230425.2340.tar containing:
-  srfi-20230425.2340/
-  srfi-20230425.2340/srfi-data.el
-  srfi-20230425.2340/srfi-pkg.el
-  srfi-20230425.2340/srfi.el
-Built srfi in 7.385s, finished at 2023-05-01T15:07:56+0000
+Created srfi-20230501.2324.tar containing:
+  srfi-20230501.2324/
+  srfi-20230501.2324/srfi-data.el
+  srfi-20230501.2324/srfi-pkg.el
+  srfi-20230501.2324/srfi.el
+Built srfi in 3.632s, finished at 2023-05-01T23:29:25+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 427 May  1 15:07 packages/srfi-20230425.2340.entry
- 40K -rw-r--r-- 1 root root 40K May  1 15:07 packages/srfi-20230425.2340.tar
+4.0K -rw-r--r-- 1 root root 427 May  1 19:33 packages/srfi-20230425.2340.entry
+ 40K -rw-r--r-- 1 root root 40K May  1 19:33 packages/srfi-20230425.2340.tar
+4.0K -rw-r--r-- 1 root root 427 May  1 23:29 packages/srfi-20230501.2324.entry
+ 40K -rw-r--r-- 1 root root 40K May  1 23:29 packages/srfi-20230501.2324.tar
