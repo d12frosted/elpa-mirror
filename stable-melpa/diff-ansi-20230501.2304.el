@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-diff-ansi
-;; Package-Version: 20230201.134
-;; Package-Commit: 84446e315a163cecb7259858c9b01d2e6726775e
+;; Package-Version: 20230501.2304
+;; Package-Commit: 9992b0be2eac8c1bd8051f2ca8de4dc593dc6ff8
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -645,7 +645,13 @@ Store the result in TARGET-BUF when non-nil."
 (defun diff-ansi-progressive-highlight-impl (buf beg range timer)
   "Callback to update colors for BUF in RANGE for TIMER.
 Argument BEG is only used to calculate the progress percentage."
-  (unless (input-pending-p)
+  (cond
+   ((not (buffer-live-p buf))
+    ;; The buffer was closed (most likely by the user) while the timer was running,  cancel it.
+    (cancel-timer timer))
+   ((input-pending-p)
+    nil)
+   (t
     (with-current-buffer buf
       (cond
        ((null diff-ansi--ansi-color-timer)
@@ -693,7 +699,7 @@ Argument BEG is only used to calculate the progress percentage."
 
           ;; Re-display outside the block that moves the cursor.
           (when do-redisplay
-            (redisplay))))))))
+            (redisplay)))))))))
 
 (defun diff-ansi--progressive-impl (beg end &optional target-buf)
   "Colorize the text between BEG and END using a timer.

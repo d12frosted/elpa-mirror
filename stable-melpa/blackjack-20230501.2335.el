@@ -4,8 +4,8 @@
 ;; SPDX-License-Identifier: GPL-3.0-only
 ;; Author: Greg Donald <gdonald@gmail.com>
 ;; Version: 1.0.1
-;; Package-Version: 20230430.2221
-;; Package-Commit: 4949a2339d2bcb8f70554925feae6eaef540883a
+;; Package-Version: 20230501.2335
+;; Package-Commit: 5edfce240999dafa745219f5fb0d9f106bf68057
 ;; Package-Requires: ((emacs "26.2"))
 ;; Keywords: games
 ;; URL: https://github.com/gdonald/blackjack-el
@@ -229,7 +229,7 @@
           (progn
             (setf (slot-value dealer-hand 'hide-down-card) nil)
             (blackjack--pay-hands)
-            (setf (slot-value blackjack--game 'current-menu) 'insurance)
+            (setf (slot-value blackjack--game 'current-menu) 'game)
             (blackjack--draw-hands))
         (setf (slot-value blackjack--game 'current-menu) 'hand)
         (blackjack--draw-hands)
