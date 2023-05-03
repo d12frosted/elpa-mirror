@@ -4,11 +4,11 @@
 
 ;; Author: Svend Sorensen <svend@svends.net>
 ;; Maintainer: Tino Calancha <tino.calancha@gmail.com>
-;; Version: 2.3.0
-;; Package-Version: 20221226.1528
-;; Package-Commit: 26d2dae04bb76a87be6960861c10432820cd5d55
+;; Version: 2.3.1
+;; Package-Version: 20230503.619
+;; Package-Commit: 28cec11f1dbe6c4273d30370af45b69c9f408386
 ;; URL: https://www.passwordstore.org/
-;; Package-Requires: ((emacs "26") (s "1.9.0") (with-editor "2.5.11"))
+;; Package-Requires: ((emacs "26") (with-editor "2.5.11"))
 ;; Keywords: tools pass password password-store
 
 ;; This file is not part of GNU Emacs.

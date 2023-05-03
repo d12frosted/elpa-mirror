@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/lorniu/go-translate.git
 
 Updating /mnt/store/melpa/working/go-translate/
-Checking out f10efc022bc8cc612828bcd1bf7b42d7bfbb8f4b
+Checking out 59506f69503cca65291fa5ccd0a326e716338c23
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/go-translate/
-  to /tmp/go-translateDgS5wk/go-translate-20230503.120
+  to /tmp/go-translatepVR0RO/go-translate-20230503.303
     go-translate.el -> go-translate.el
     gts-core.el -> gts-core.el
     gts-engine-bing.el -> gts-engine-bing.el
@@ -17,22 +17,22 @@ Copying files (->) and directories (=>)
     gts-engine-youdao.el -> gts-engine-youdao.el
     gts-faces.el -> gts-faces.el
     gts-implements.el -> gts-implements.el
-Created go-translate-20230503.120.tar containing:
-  go-translate-20230503.120/
-  go-translate-20230503.120/go-translate-pkg.el
-  go-translate-20230503.120/go-translate.el
-  go-translate-20230503.120/gts-core.el
-  go-translate-20230503.120/gts-engine-bing.el
-  go-translate-20230503.120/gts-engine-deepl.el
-  go-translate-20230503.120/gts-engine-google-rpc.el
-  go-translate-20230503.120/gts-engine-google.el
-  go-translate-20230503.120/gts-engine-stardict.el
-  go-translate-20230503.120/gts-engine-youdao.el
-  go-translate-20230503.120/gts-faces.el
-  go-translate-20230503.120/gts-implements.el
-Built go-translate in 4.916s, finished at 2023-05-03T01:59:43+0000
+Created go-translate-20230503.303.tar containing:
+  go-translate-20230503.303/
+  go-translate-20230503.303/go-translate-pkg.el
+  go-translate-20230503.303/go-translate.el
+  go-translate-20230503.303/gts-core.el
+  go-translate-20230503.303/gts-engine-bing.el
+  go-translate-20230503.303/gts-engine-deepl.el
+  go-translate-20230503.303/gts-engine-google-rpc.el
+  go-translate-20230503.303/gts-engine-google.el
+  go-translate-20230503.303/gts-engine-stardict.el
+  go-translate-20230503.303/gts-engine-youdao.el
+  go-translate-20230503.303/gts-faces.el
+  go-translate-20230503.303/gts-implements.el
+Built go-translate in 4.269s, finished at 2023-05-03T05:53:25+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  448 May  2 22:05 packages/go-translate-20230304.644.entry
-120K -rw-r--r-- 1 root root 120K May  2 22:05 packages/go-translate-20230304.644.tar
 4.0K -rw-r--r-- 1 root root  448 May  3 01:59 packages/go-translate-20230503.120.entry
 120K -rw-r--r-- 1 root root 120K May  3 01:59 packages/go-translate-20230503.120.tar
+4.0K -rw-r--r-- 1 root root  448 May  3 05:53 packages/go-translate-20230503.303.entry
+120K -rw-r--r-- 1 root root 120K May  3 05:53 packages/go-translate-20230503.303.tar
