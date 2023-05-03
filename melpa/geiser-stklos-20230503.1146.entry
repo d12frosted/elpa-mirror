@@ -1,0 +1,15 @@
+(geiser-stklos .
+	       [(20230503 1146)
+		((emacs
+		  (24 4))
+		 (geiser
+		  (0 16)))
+		"STklos Scheme implementation of the geiser protocols" single
+		((:commit . "e51a5f8b8dcc59db83a50e1b2f6aa52b21793369")
+		 (:authors
+		  ("Jeronimo Pellegrini" . "j_p@aleph0.info"))
+		 (:maintainers
+		  ("Jeronimo Pellegrini" . "j_p@aleph0.info"))
+		 (:maintainer "Jeronimo Pellegrini" . "j_p@aleph0.info")
+		 (:keywords "languages" "stklos" "scheme" "geiser")
+		 (:url . "https://gitlab.com/emacs-geiser/stklos"))])

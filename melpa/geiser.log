@@ -3,10 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/geiser.git
 
 Updating /mnt/store/melpa/working/geiser/
-Checking out dd81026d1c4bc40e03ced3a6ecc9025b14bdd93d
+Checking out 83305e6bb5f13d68f8e31d457605b02d2a10c014
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser/
-  to /tmp/geiserhQogJD/geiser-20230503.159
+  to /tmp/geiserKRXejF/geiser-20230503.1044
   ! elisp/geiser-autodoc.el -> geiser-autodoc.el
   ! elisp/geiser-base.el -> geiser-base.el
   ! elisp/geiser-capf.el -> geiser-capf.el
@@ -32,36 +32,38 @@ Copying files (->) and directories (=>)
   ! elisp/geiser.el -> geiser.el
   ! doc/dir -> dir
   ! doc/geiser.texi -> geiser.texi
-Generating /tmp/geiserhQogJD/geiser-20230503.159/geiser.info
-Created geiser-20230503.159.tar containing:
-  geiser-20230503.159/
-  geiser-20230503.159/dir
-  geiser-20230503.159/geiser-autodoc.el
-  geiser-20230503.159/geiser-base.el
-  geiser-20230503.159/geiser-capf.el
-  geiser-20230503.159/geiser-compile.el
-  geiser-20230503.159/geiser-completion.el
-  geiser-20230503.159/geiser-connection.el
-  geiser-20230503.159/geiser-custom.el
-  geiser-20230503.159/geiser-debug.el
-  geiser-20230503.159/geiser-doc.el
-  geiser-20230503.159/geiser-edit.el
-  geiser-20230503.159/geiser-eval.el
-  geiser-20230503.159/geiser-image.el
-  geiser-20230503.159/geiser-impl.el
-  geiser-20230503.159/geiser-log.el
-  geiser-20230503.159/geiser-menu.el
-  geiser-20230503.159/geiser-mode.el
-  geiser-20230503.159/geiser-pkg.el
-  geiser-20230503.159/geiser-popup.el
-  geiser-20230503.159/geiser-reload.el
-  geiser-20230503.159/geiser-repl.el
-  geiser-20230503.159/geiser-syntax.el
-  geiser-20230503.159/geiser-table.el
-  geiser-20230503.159/geiser-xref.el
-  geiser-20230503.159/geiser.el
-  geiser-20230503.159/geiser.info
-Built geiser in 11.258s, finished at 2023-05-03T09:42:45+0000
+Generating /tmp/geiserKRXejF/geiser-20230503.1044/geiser.info
+Created geiser-20230503.1044.tar containing:
+  geiser-20230503.1044/
+  geiser-20230503.1044/dir
+  geiser-20230503.1044/geiser-autodoc.el
+  geiser-20230503.1044/geiser-base.el
+  geiser-20230503.1044/geiser-capf.el
+  geiser-20230503.1044/geiser-compile.el
+  geiser-20230503.1044/geiser-completion.el
+  geiser-20230503.1044/geiser-connection.el
+  geiser-20230503.1044/geiser-custom.el
+  geiser-20230503.1044/geiser-debug.el
+  geiser-20230503.1044/geiser-doc.el
+  geiser-20230503.1044/geiser-edit.el
+  geiser-20230503.1044/geiser-eval.el
+  geiser-20230503.1044/geiser-image.el
+  geiser-20230503.1044/geiser-impl.el
+  geiser-20230503.1044/geiser-log.el
+  geiser-20230503.1044/geiser-menu.el
+  geiser-20230503.1044/geiser-mode.el
+  geiser-20230503.1044/geiser-pkg.el
+  geiser-20230503.1044/geiser-popup.el
+  geiser-20230503.1044/geiser-reload.el
+  geiser-20230503.1044/geiser-repl.el
+  geiser-20230503.1044/geiser-syntax.el
+  geiser-20230503.1044/geiser-table.el
+  geiser-20230503.1044/geiser-xref.el
+  geiser-20230503.1044/geiser.el
+  geiser-20230503.1044/geiser.info
+Built geiser in 12.441s, finished at 2023-05-03T13:34:18+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  467 May  3 13:34 packages/geiser-20230503.1044.entry
+320K -rw-r--r-- 1 root root 320K May  3 13:34 packages/geiser-20230503.1044.tar
 4.0K -rw-r--r-- 1 root root  466 May  3 09:42 packages/geiser-20230503.159.entry
 320K -rw-r--r-- 1 root root 320K May  3 09:42 packages/geiser-20230503.159.tar
