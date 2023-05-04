@@ -4,8 +4,8 @@
 
 ;; Author: Ivan Yonchovski <yyoncho@gmail.com>
 ;; URL: https://github.com/emacs-lsp/lsp-docker
-;; Package-Version: 20230428.1825
-;; Package-Commit: 1e25ba9cfd462d323865165b5f99880391abded2
+;; Package-Version: 20230504.1039
+;; Package-Commit: 124a2f0d623b29734dc172db8c4e7680522ced3a
 ;; Keywords: languages langserver
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1") (lsp-mode "6.2.1") (f "0.20.0") (s "1.13.0") (yaml "0.2.0") (ht "2.0"))
@@ -279,6 +279,10 @@ the docker container to run the language server."
       (push (f-join (lsp-workspace-root) ".lsp-docker.yaml") config-file-path-candidates)
       (push (f-join (f-join (lsp-workspace-root) ".lsp-docker") ".lsp-docker.yml") config-file-path-candidates)
       (push (f-join (f-join (lsp-workspace-root) ".lsp-docker") ".lsp-docker.yaml") config-file-path-candidates)
+      (push (f-join (f-join (lsp-workspace-root) ".lsp-docker") "lsp-docker.yml") config-file-path-candidates)
+      (push (f-join (f-join (lsp-workspace-root) ".lsp-docker") "lsp-docker.yaml") config-file-path-candidates)
+      (push (f-join (f-join (lsp-workspace-root) ".lsp-docker") "config.yml") config-file-path-candidates)
+      (push (f-join (f-join (lsp-workspace-root) ".lsp-docker") "config.yaml") config-file-path-candidates)
       (--first (f-exists? it) config-file-path-candidates))))
 
 (defun lsp-docker--find-project-dockerfile-from-lsp ()

@@ -5,8 +5,8 @@
 ;; Author: Ellef Gjelstad <ellefg+maude*ifi.uio.no>
 ;; Maintainer: Rudi Schlatte <rudi@constantly.at>
 ;; URL: https://github.com/rudi/abs-mode
-;; Package-Version: 20220419.1454
-;; Package-Commit: 68de3c11ae16c409afa74516aaf465996d1a9e59
+;; Package-Version: 20230504.937
+;; Package-Commit: 2e1f68a890493d964f933d6e40b0ede047f70ede
 ;; Package-Requires: ((emacs "25"))
 ;; Version: 0.3
 ;; Keywords: Languages maude
@@ -481,11 +481,11 @@ Use \\[describe-mode] in the process buffer for a list of commands."
    (list (concat (maude--flk-keyword "resume\\|abort\\|step\\|where") maude--flk-end-command)
          '(1 maude-start-face t t) '(2 maude-end-face t t))
 ;;; MODULE
-   (list "(?\\(fmod\\|mod\\|view\\|fth\\)\\s-+\\(.+\\)\\s-+\\(is\\)"
+   (list "(?\\(mod\\|fmod\\|omod\\|view\\|fth\\)\\s-+\\(.+\\)\\s-+\\(is\\)"
          '(1 maude-start-face prepend t)
          '(2 maude-module-name-face prepend t)
          '(3 maude-start-face prepend t))
-   (list  "\\(endm\\|endfm\\|endv\\|endfth\\)"
+   (list  "\\(endm\\|endfm\\|endom\\|endv\\|endfth\\)"
           '(1 maude-start-face prepend t))
    (list (concat "\\<\\(\\<protecting\\|extending\\|including\\|ex\\|pr\\|inc\\)\\>\\s-+" maude--flk-mod-exp maude--flk-end)
          '(1 font-lock-keyword-face append t) '(2 maude-module-name-face prepend t)'(3 maude-end-face))

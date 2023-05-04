@@ -7,8 +7,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.com/ideasman42/emacs-undo-fu-session
-;; Package-Version: 20230405.221
-;; Package-Commit: 6a306462ee1fa3a7c6303561f9ddf510e448b731
+;; Package-Version: 20230504.1326
+;; Package-Commit: aefda294efbfafb8b2cde3ec0d389eccc418d092
 ;; Keywords: convenience
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "28.1"))
@@ -442,13 +442,14 @@ Argument PENDING-LIST an `pending-undo-list' compatible list."
 (defun undo-fu-session--match-file-name (filename test-files)
   "Return t if FILENAME match any item in TEST-FILES."
   (catch 'found
-    (dolist (matcher test-files)
-      (when (cond
-             ((stringp matcher)
-              (string-match-p matcher filename))
-             (t
-              (funcall matcher filename)))
-        (throw 'found t)))))
+    (let ((case-fold-search (file-name-case-insensitive-p filename)))
+      (dolist (matcher test-files)
+        (when (cond
+               ((stringp matcher)
+                (string-match-p matcher filename))
+               (t
+                (funcall matcher filename)))
+          (throw 'found t))))))
 
 (defun undo-fu-session--directory-ensure ()
   "Ensure the undo directory has been created."

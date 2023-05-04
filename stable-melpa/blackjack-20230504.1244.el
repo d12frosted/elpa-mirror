@@ -4,8 +4,8 @@
 ;; SPDX-License-Identifier: GPL-3.0-only
 ;; Author: Greg Donald <gdonald@gmail.com>
 ;; Version: 1.0.3
-;; Package-Version: 20230503.1039
-;; Package-Commit: d8c8d81093254f977778c55f8dc281a96b77d05d
+;; Package-Version: 20230504.1244
+;; Package-Commit: ded5f5245b0992f2e53a7ae970219403aec7c709
 ;; Package-Requires: ((emacs "26.2"))
 ;; Keywords: card game games blackjack 21
 ;; URL: https://github.com/gdonald/blackjack-el
@@ -806,7 +806,7 @@
   (let (content parts)
     (ignore-errors
       (with-temp-buffer
-        (insert-file-contents "blackjack.txt")
+        (insert-file-contents-literally "blackjack.txt")
         (setq content (buffer-string))))
     (if content
         (setq parts (split-string content "|")))
@@ -1045,7 +1045,10 @@
   "Blackjack minor mode keymap.")
 
 (define-minor-mode blackjack-minor-mode
-  "Blackjack minor mode."
+  "Blackjack minor mode.
+
+\\{blackjack-mode-map}"
+  :group 'blackjack
   :lighter " blackjack")
 
 (define-derived-mode blackjack-mode fundamental-mode "Blackjack"

@@ -4,8 +4,6 @@
 ;;         Sid Kasivajhula <sid@countvajhula.com>
 ;; Maintainer: Sid Kasivajhula <sid@countvajhula.com>
 ;; URL: https://github.com/countvajhula/buffer-ring
-;; Package-Version: 20220120.124
-;; Package-Commit: 177d67238c4d126a0270585e21c0f03ae750ca2a
 ;; Created: 2009-4-16
 ;; Version: 0.3.4
 ;; Package-Requires: ((emacs "25.1") (dynaring "0.3") (s "1.12.0") (ht "2.0"))
