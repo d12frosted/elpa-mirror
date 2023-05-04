@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/UndeadKernel/pacfiles-mode.git
 
 Updating /mnt/store/melpa/working/pacfiles-mode/
-Checking out 8d06f64abc98c3f3338560c8d6eb47719e034069
+Checking out a613d1d88dba4cb293ecaf42a9aeff7d8a3ce8aa
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pacfiles-mode/
-  to /tmp/pacfiles-mode87s4bx/pacfiles-mode-20200915.1815
+  to /tmp/pacfiles-modeHfZJnR/pacfiles-mode-20230503.1523
+    pacfiles-automerge.el -> pacfiles-automerge.el
     pacfiles-buttons.el -> pacfiles-buttons.el
     pacfiles-mode.el -> pacfiles-mode.el
     pacfiles-utils.el -> pacfiles-utils.el
     pacfiles-win.el -> pacfiles-win.el
-Created pacfiles-mode-20200915.1815.tar containing:
-  pacfiles-mode-20200915.1815/
-  pacfiles-mode-20200915.1815/pacfiles-buttons.el
-  pacfiles-mode-20200915.1815/pacfiles-mode-pkg.el
-  pacfiles-mode-20200915.1815/pacfiles-mode.el
-  pacfiles-mode-20200915.1815/pacfiles-utils.el
-  pacfiles-mode-20200915.1815/pacfiles-win.el
-Built pacfiles-mode in 6.971s, finished at 2023-05-03T14:08:09+0000
+Created pacfiles-mode-20230503.1523.tar containing:
+  pacfiles-mode-20230503.1523/
+  pacfiles-mode-20230503.1523/pacfiles-automerge.el
+  pacfiles-mode-20230503.1523/pacfiles-buttons.el
+  pacfiles-mode-20230503.1523/pacfiles-mode-pkg.el
+  pacfiles-mode-20230503.1523/pacfiles-mode.el
+  pacfiles-mode-20230503.1523/pacfiles-utils.el
+  pacfiles-mode-20230503.1523/pacfiles-win.el
+Built pacfiles-mode in 5.802s, finished at 2023-05-03T21:56:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 531 May  3 14:08 packages/pacfiles-mode-20200915.1815.entry
- 40K -rw-r--r-- 1 root root 40K May  3 14:08 packages/pacfiles-mode-20200915.1815.tar
+4.0K -rw-r--r-- 1 root root 515 May  3 21:56 packages/pacfiles-mode-20230503.1523.entry
+ 52K -rw-r--r-- 1 root root 50K May  3 21:56 packages/pacfiles-mode-20230503.1523.tar
