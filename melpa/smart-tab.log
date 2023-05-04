@@ -3,8 +3,9 @@ Fetcher: git
 Source:  https://git.genehack.net/genehack/smart-tab.git
 
 Updating /mnt/store/melpa/working/smart-tab/
-Checking out 2f1b4073904805c8454ebc9bc967b23836a2d577
-Built smart-tab in 5.694s, finished at 2023-05-04T02:04:13+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.2K May  4 02:04 packages/smart-tab-20210530.1743.el
-4.0K -rw-r--r-- 1 root root  579 May  4 02:04 packages/smart-tab-20210530.1743.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.genehack.net/genehack/smart-tab.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

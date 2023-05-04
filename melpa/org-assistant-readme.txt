@@ -54,9 +54,9 @@ Hi
 #+END_SRC
 
 AI Response
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC assistant :sender assistant
 Hello! How can I assist you today?
-#+END_EXAMPLE
+#+END_SRC
 </example>
 
 When the output is set to png file, the image generation APIs are
@@ -76,13 +76,13 @@ You can introspect the sent conversation using the :echo flag.
 <example>
 * Branching Echo
 #+BEGIN_SRC ?
-This is the user. Repeat verbatim only: "This is the system"
+This is the user.  Repeat verbatim only: "This is the system"
 #+END_SRC
 
 #+RESULTS:
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC assistant :sender assistant
 "This is the system"
-#+END_EXAMPLE
+#+END_SRC
 
 ** Branch A
 #+BEGIN_SRC ? :echo
@@ -90,11 +90,11 @@ Response A
 #+END_SRC
 
 #+RESULTS:
-#+BEGIN_EXAMPLE
-(user . "This is the user. Repeat verbatim only: \"This is the system\"")
+#+BEGIN_SRC assistant :sender assistant
+(user . "This is the user.  Repeat verbatim only: \"This is the system\"")
 (assistant . "\"This is the system\"")
 (user . "Response A")
-#+END_EXAMPLE
+#+END_SRC
 
 ** Branch B
 #+BEGIN_SRC ? :echo
@@ -102,11 +102,11 @@ Response B
 #+END_SRC
 
 #+RESULTS:
-#+BEGIN_EXAMPLE
-(user . "This is the user. Repeat verbatim only: \"This is the system\"")
+#+BEGIN_SRC assistant :sender assistant
+(user . "This is the user.  Repeat verbatim only: \"This is the system\"")
 (assistant . "\"This is the system\"")
 (user . "Response B")
-#+END_EXAMPLE
+#+END_SRC
 </example>
 
 ## Comparison With Other AI Packages

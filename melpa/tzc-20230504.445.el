@@ -5,9 +5,9 @@
 ;; Author: Md Arif Shaikh <arifshaikh.astro@gmail.com>
 ;; Homepage: https://github.com/md-arif-shaikh/tzc
 ;; Version: 0.0.1
-;; Package-Version: 20230503.1458
-;; Package-Commit: f44d01326848baec324e2fa32fe96602d831b7e9
-;; Package-Requires: ((emacs "27.1"))
+;; Package-Version: 20230504.445
+;; Package-Commit: e815b43790d9a517f89a2bb592c665bd911a4477
+;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: convenience
 
 ;; This program is free software; you can redistribute it and/or modify

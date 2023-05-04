@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/discover-my-major.git
 
 Updating /mnt/store/melpa/working/discover-my-major/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://framagit.org/steckerhalter/discover-my-major.git/': Failed to connect to framagit.org port 443: Connection refused
-
-Command exited with non-zero exit-code: 128
+Checking out 66081546eac360c83a9c3270db92a2164288b0d0
+Built discover-my-major in 7.846s, finished at 2023-05-04T04:54:11+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.5K May  4 04:54 packages/discover-my-major-20180606.511.el
+4.0K -rw-r--r-- 1 root root  482 May  4 04:54 packages/discover-my-major-20180606.511.entry
