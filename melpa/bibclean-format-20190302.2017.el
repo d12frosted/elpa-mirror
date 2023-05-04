@@ -4,6 +4,8 @@
 ;; Author: Peter W. V. Tran-Jørgensen <peter.w.v.jorgensen@gmail.com>
 ;; Maintainer: Peter W. V. Tran-Jørgensen <peter.w.v.jorgensen@gmail.com>
 ;; URL: https://github.com/peterwvj/bibclean-format
+;; Package-Version: 20190302.2017
+;; Package-Commit: b4003950a925d1c659bc359ab5e88e4441775d77
 ;; Created: 21st February 2019
 ;; Version: 0.0.2
 ;; Keywords: languages
