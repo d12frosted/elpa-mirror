@@ -3,8 +3,8 @@
 ;; Copyright (C) 2023 Stefano Ghirlanda
 
 ;; Version: 0.1
-;; Package-Version: 20230504.1613
-;; Package-Commit: 5adb975e50b4c2598ae1e4ce31e72f9da79671c2
+;; Package-Version: 20230505.150
+;; Package-Commit: 45898a67701ade93f310db8e5820b8bfc4a28846
 ;; Package-Requires: ((emacs "26.1") (org "9.3"))
 ;; URL: https://github.com/drghirlanda/org-change
 ;; Keywords: wp, convenience
@@ -102,9 +102,9 @@ the active region."
 	      (end (cdr link-position)))
 	  (delete-region beg end)
 	  (if accept
-	      (if (equal new-text org-change--deleted-marker)
-		  (insert old-text)
-		(insert new-text))))
+	      (unless(equal new-text org-change--deleted-marker)
+		(insert new-text))
+	    (insert old-text)))
       (when (use-region-p)
 	(save-excursion
 	  (save-restriction
