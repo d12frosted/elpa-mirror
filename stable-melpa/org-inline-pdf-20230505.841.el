@@ -6,10 +6,10 @@
 ;; Maintainer: Shigeaki Nishina
 ;; Created: November 30, 2020
 ;; URL: https://github.com/shg/org-inline-pdf.el
-;; Package-Version: 20221029.751
-;; Package-Commit: 513c0badffcc65d618d43543abd72077e144fd22
+;; Package-Version: 20230505.841
+;; Package-Commit: 802b5316738dcfd7cca7a4b7c09dc4aa23cfe866
 ;; Package-Requires: ((emacs "25.1") (org "9.4"))
-;; Version: 0.3
+;; Version: 0.4
 ;; Keywords: org, outlines, hypermedia
 
 ;; This file is not part of GNU Emacs.
@@ -63,6 +63,9 @@
 
 (defvar org-inline-pdf-make-preview-program "pdf2svg")
 
+(defvar org-inline-pdf-cache-directory (org-babel-temp-directory)
+  "The directory that saves produced preview images.")
+
 (defconst org-inline-pdf--org-html-image-extensions-for-file
   ;; This list is taken from the definition of the variable
   ;; org-html-inline-image-rules defined in ox-html.el and needs to be
@@ -97,8 +100,17 @@ ORIGINAL-ORG--CREATE-INLINE-IMAGE and arguments in ARGUMENTS."
     (apply original-org--create-inline-image
 	   (cons
 	    (if (member (file-name-extension file) '("pdf" "PDF"))
-		(let ((svg (org-babel-temp-file "org-inline-pdf-")))
-		  (call-process org-inline-pdf-make-preview-program nil nil nil file svg page-num)
+		(let ((svg (expand-file-name
+                            (concat "org-inline-pdf-"
+                                    (md5 (format "%s:%s" file page-num)))
+                            org-inline-pdf-cache-directory)))
+                  (when (or (not (file-exists-p svg))
+                            (time-less-p (file-attribute-modification-time
+                                          (file-attributes svg))
+                                         (file-attribute-modification-time
+                                          (file-attributes file))))
+                    (call-process org-inline-pdf-make-preview-program
+                                  nil nil nil file svg page-num))
 		  svg)
 	      file)
 	    (cdr arguments)))))

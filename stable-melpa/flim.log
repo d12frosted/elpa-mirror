@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/flim/
 Checking out 2cf5a7891090faca8de725b1d3743dcedf233ea2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flim/
-  to /tmp/flimrX4fFl/flim-20230205.1423
+  to /tmp/flimxN8llN/flim-20230205.1423
     mime-en.texi -> mime-en.texi
     mime-ja.texi -> mime-ja.texi
     sasl.texi -> sasl.texi
@@ -37,6 +37,43 @@ Copying files (->) and directories (=>)
     sha1.el -> sha1.el
     smtp.el -> smtp.el
     std11.el -> std11.el
-Generating /tmp/flimrX4fFl/flim-20230205.1423/mime-en.info
-Generating /tmp/flimrX4fFl/flim-20230205.1423/mime-ja.info
-Generating /tmp/flimrX4fFl/flim-20230205.1423/sasl.info
+Generating /tmp/flimxN8llN/flim-20230205.1423/mime-en.info
+Generating /tmp/flimxN8llN/flim-20230205.1423/mime-ja.info
+Generating /tmp/flimxN8llN/flim-20230205.1423/sasl.info
+Created flim-20230205.1423.tar containing:
+  flim-20230205.1423/
+  flim-20230205.1423/dir
+  flim-20230205.1423/eword-decode.el
+  flim-20230205.1423/eword-encode.el
+  flim-20230205.1423/flim-pkg.el
+  flim-20230205.1423/hmac-sha1.el
+  flim-20230205.1423/luna.el
+  flim-20230205.1423/lunit.el
+  flim-20230205.1423/md5.el
+  flim-20230205.1423/mel-g.el
+  flim-20230205.1423/mel-q-ccl.el
+  flim-20230205.1423/mel-q.el
+  flim-20230205.1423/mel-u.el
+  flim-20230205.1423/mel.el
+  flim-20230205.1423/mime-conf.el
+  flim-20230205.1423/mime-def.el
+  flim-20230205.1423/mime-en.info
+  flim-20230205.1423/mime-ja.info
+  flim-20230205.1423/mime-parse.el
+  flim-20230205.1423/mime.el
+  flim-20230205.1423/mmbuffer.el
+  flim-20230205.1423/mmcooked.el
+  flim-20230205.1423/mmexternal.el
+  flim-20230205.1423/mmgeneric.el
+  flim-20230205.1423/qmtp.el
+  flim-20230205.1423/sasl-scram.el
+  flim-20230205.1423/sasl-xoauth2.el
+  flim-20230205.1423/sasl.el
+  flim-20230205.1423/sasl.info
+  flim-20230205.1423/sha1.el
+  flim-20230205.1423/smtp.el
+  flim-20230205.1423/std11.el
+Built flim in 20.561s, finished at 2023-05-05T11:59:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  250 May  5 11:59 packages/flim-20230205.1423.entry
+472K -rw-r--r-- 1 root root 470K May  5 11:59 packages/flim-20230205.1423.tar
