@@ -5,8 +5,6 @@
 ;; Author: Johannes Goslar
 ;; Created: 5 April 2016
 ;; Version: 1.1.0
-;; Package-Version: 20221208.1611
-;; Package-Commit: bd0de2fdcf285d981f32e3e5ebc56fe3c9b589a5
 ;; Keywords: theme, zenburn
 ;; URL: https://github.com/ksjogo/labburn-theme
 

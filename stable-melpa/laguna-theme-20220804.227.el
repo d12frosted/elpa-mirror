@@ -4,8 +4,6 @@
 ;; Description: An updated blue-green Laguna Theme.
 ;; Author: Henry Newcomer <a.cliche.email@gmail.com>
 ;; Version: 2.0
-;; Package-Version: 20220804.227
-;; Package-Commit: 680ab8c936cb1c249b5a6a07976bcc83ef217e25
 ;; URL: https://github.com/HenryNewcomer/laguna-theme
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

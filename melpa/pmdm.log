@@ -3,15 +3,10 @@ Fetcher: hg
 Source:  https://hg.serna.eu/emacs/pmdm
 
 Updating /mnt/store/melpa/working/pmdm/
-Checking out 6d2af9f9e88e6c91eb74dafaddb5f009e1de4907
 
 Command '' exited with non-zero exit-code: 255
 
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
+pulling from https://hg.serna.eu/emacs/pmdm
+abort: HTTP Error 502: Bad Gateway
 
 Command exited with non-zero exit-code: 255
