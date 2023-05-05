@@ -4,8 +4,8 @@
 ;; SPDX-License-Identifier: GPL-3.0-only
 ;; Author: Greg Donald <gdonald@gmail.com>
 ;; Version: 1.0.3
-;; Package-Version: 20230504.1244
-;; Package-Commit: ded5f5245b0992f2e53a7ae970219403aec7c709
+;; Package-Version: 20230504.1726
+;; Package-Commit: e9fce426e9acc7fc93573cd4437324c7ae35ec59
 ;; Package-Requires: ((emacs "26.2"))
 ;; Keywords: card game games blackjack 21
 ;; URL: https://github.com/gdonald/blackjack-el
@@ -103,6 +103,11 @@
 (defcustom blackjack-face-type-alternate-key "a"
   "Key to press to choose alternate face type."
   :type '(string) :group 'blackjack)
+
+(defcustom blackjack-persist-file
+  (file-name-concat user-emacs-directory "blackjack.txt")
+  "File to persist blackjack game state to."
+  :type '(file) :group 'blackjack)
 
 (defclass blackjack-card ()
   ((id :initarg :id :initform 0 :type integer)
@@ -801,12 +806,16 @@
         (setq current-bet money))
     (setf (slot-value blackjack--game 'current-bet) current-bet)))
 
+(defun blackjack--persist-file-name ()
+  "Resolve the persist file including all abbreviations and symlinks."
+  (file-truename (expand-file-name blackjack-persist-file)))
+
 (defun blackjack--load-saved-game ()
   "Load persisted state."
   (let (content parts)
     (ignore-errors
       (with-temp-buffer
-        (insert-file-contents-literally "blackjack.txt")
+        (insert-file-contents-literally (blackjack--persist-file-name))
         (setq content (buffer-string))))
     (if content
         (setq parts (split-string content "|")))
@@ -820,7 +829,7 @@
 (defun blackjack--save ()
   "Persist state."
   (ignore-errors
-    (with-temp-file "blackjack.txt"
+    (with-temp-file (blackjack--persist-file-name)
       (insert (format "%s|%s|%s|%s|%s"
                       (slot-value blackjack--game 'num-decks)
                       (slot-value blackjack--game 'deck-type)
@@ -839,7 +848,7 @@
   (let ((money (slot-value blackjack--game 'money))
         (menu (slot-value blackjack--game 'current-menu))
         (out ""))
-    (setq out (format "  Blackjack $%s  " (blackjack--format-money (truncate (/ money 100)))))
+    (setq out (format "  Blackjack $%s  " (blackjack--format-money (/ money 100.0))))
     (setq out (concat out
                       (pcase menu
                         ('game (blackjack--game-menu))

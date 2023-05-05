@@ -3,3 +3,26 @@ Fetcher: github
 Source:  https://github.com/baohaojun/bbyac.git
 
 Updating /mnt/store/melpa/working/bbyac/
+Checking out 9f0de9cad13801891ffb590dc09f51ff9a7cb225
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bbyac/
+  to /tmp/bbyacdbxri5/bbyac-20180206.1441
+    bbyac.el -> bbyac.el
+    c++.bbyac -> c++.bbyac
+    java.bbyac -> java.bbyac
+    js2.bbyac -> js2.bbyac
+    lua.bbyac -> lua.bbyac
+    ruby.bbyac -> ruby.bbyac
+Created bbyac-20180206.1441.tar containing:
+  bbyac-20180206.1441/
+  bbyac-20180206.1441/bbyac-pkg.el
+  bbyac-20180206.1441/bbyac.el
+  bbyac-20180206.1441/c++.bbyac
+  bbyac-20180206.1441/java.bbyac
+  bbyac-20180206.1441/js2.bbyac
+  bbyac-20180206.1441/lua.bbyac
+  bbyac-20180206.1441/ruby.bbyac
+Built bbyac in 4.411s, finished at 2023-05-05T03:52:59+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 437 May  5 03:52 packages/bbyac-20180206.1441.entry
+ 40K -rw-r--r-- 1 root root 40K May  5 03:52 packages/bbyac-20180206.1441.tar

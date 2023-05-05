@@ -1,13 +1,15 @@
 (doom-modeline .
-	       [(20230504 554)
+	       [(20230504 1755)
 		((emacs
 		  (25 1))
 		 (compat
 		  (28 1 1 1))
+		 (nerd-icons
+		  (0 0 1))
 		 (shrink-path
 		  (0 2 0)))
 		"A minimal and modern mode-line" tar
-		((:commit . "8d9815186009956cb04c045739d31625d8dac6d5")
+		((:commit . "ad7eb6bb02b122d5ed579898cba51be3555ce2e9")
 		 (:authors
 		  ("Vincent Zhang" . "seagle0128@gmail.com"))
 		 (:maintainers
