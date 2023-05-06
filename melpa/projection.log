@@ -3,48 +3,40 @@ Fetcher: github
 Source:  https://github.com/mohkale/projection.git
 
 Updating /mnt/store/melpa/working/projection/
-Checking out a543618a9d06ebe4a8a04f6e1067f3f4cbd49fbb
+Checking out a7e8edda22db5d8f24acfb35a864c83d1c2cb0d1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projection/
-  to /tmp/projectionw6awFc/projection-20230416.1842
+  to /tmp/projectionONOxIS/projection-20230506.1537
   ! src/projection-commands.el -> projection-commands.el
   ! src/projection-core-log.el -> projection-core-log.el
   ! src/projection-core.el -> projection-core.el
   ! src/projection-find.el -> projection-find.el
   ! src/projection-hook.el -> projection-hook.el
   ! src/projection-ibuffer.el -> projection-ibuffer.el
-  ! src/projection-multi-cmake.el -> projection-multi-cmake.el
-  ! src/projection-multi-ctest.el -> projection-multi-ctest.el
-  ! src/projection-multi-make.el -> projection-multi-make.el
-  ! src/projection-multi-poetry-poe.el -> projection-multi-poetry-poe.el
-  ! src/projection-multi-tox.el -> projection-multi-tox.el
-  ! src/projection-multi.el -> projection-multi.el
   ! src/projection-recentf.el -> projection-recentf.el
-  ! src/projection-types-cmake.el -> projection-types-cmake.el
   ! src/projection-types.el -> projection-types.el
+  ! src/projection-utils-cmake.el -> projection-utils-cmake.el
+  ! src/projection-utils-meson.el -> projection-utils-meson.el
   ! src/projection-utils.el -> projection-utils.el
   ! src/projection.el -> projection.el
-Created projection-20230416.1842.tar containing:
-  projection-20230416.1842/
-  projection-20230416.1842/projection-commands.el
-  projection-20230416.1842/projection-core-log.el
-  projection-20230416.1842/projection-core.el
-  projection-20230416.1842/projection-find.el
-  projection-20230416.1842/projection-hook.el
-  projection-20230416.1842/projection-ibuffer.el
-  projection-20230416.1842/projection-multi-cmake.el
-  projection-20230416.1842/projection-multi-ctest.el
-  projection-20230416.1842/projection-multi-make.el
-  projection-20230416.1842/projection-multi-poetry-poe.el
-  projection-20230416.1842/projection-multi-tox.el
-  projection-20230416.1842/projection-multi.el
-  projection-20230416.1842/projection-pkg.el
-  projection-20230416.1842/projection-recentf.el
-  projection-20230416.1842/projection-types-cmake.el
-  projection-20230416.1842/projection-types.el
-  projection-20230416.1842/projection-utils.el
-  projection-20230416.1842/projection.el
-Built projection in 7.018s, finished at 2023-05-06T04:18:40+0000
+Created projection-20230506.1537.tar containing:
+  projection-20230506.1537/
+  projection-20230506.1537/projection-commands.el
+  projection-20230506.1537/projection-core-log.el
+  projection-20230506.1537/projection-core.el
+  projection-20230506.1537/projection-find.el
+  projection-20230506.1537/projection-hook.el
+  projection-20230506.1537/projection-ibuffer.el
+  projection-20230506.1537/projection-pkg.el
+  projection-20230506.1537/projection-recentf.el
+  projection-20230506.1537/projection-types.el
+  projection-20230506.1537/projection-utils-cmake.el
+  projection-20230506.1537/projection-utils-meson.el
+  projection-20230506.1537/projection-utils.el
+  projection-20230506.1537/projection.el
+Built projection in 4.840s, finished at 2023-05-06T15:51:18+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  582 May  6 04:18 packages/projection-20230416.1842.entry
-120K -rw-r--r-- 1 root root 120K May  6 04:18 packages/projection-20230416.1842.tar
+4.0K -rw-r--r-- 1 root root  582 May  6 11:59 packages/projection-20230416.1842.entry
+120K -rw-r--r-- 1 root root 120K May  6 11:59 packages/projection-20230416.1842.tar
+4.0K -rw-r--r-- 1 root root  542 May  6 15:51 packages/projection-20230506.1537.entry
+112K -rw-r--r-- 1 root root 110K May  6 15:51 packages/projection-20230506.1537.tar
