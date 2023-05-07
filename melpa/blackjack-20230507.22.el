@@ -4,8 +4,8 @@
 ;; SPDX-License-Identifier: GPL-3.0-only
 ;; Author: Greg Donald <gdonald@gmail.com>
 ;; Version: 1.0.3
-;; Package-Version: 20230506.1330
-;; Package-Commit: 2b340ad93a733ec3b2c83af367434c740d62eecf
+;; Package-Version: 20230507.22
+;; Package-Commit: f17adacb386d83988b925f5d4cc61375df09443a
 ;; Package-Requires: ((emacs "26.2"))
 ;; Keywords: card game games blackjack 21
 ;; URL: https://github.com/gdonald/blackjack-el
@@ -108,6 +108,14 @@
   (file-name-concat user-emacs-directory "blackjack.txt")
   "File to persist blackjack game state to."
   :type '(file) :group 'blackjack)
+
+(defcustom blackjack-currency "$"
+  "Currency to display.
+
+Can be a single-character currency symbol such as \"$\", \"€\" or \"£\", or a
+3-character currency code as per ISO 4217."
+  :type '(string)
+  :group 'blackjack)
 
 (defclass blackjack-card ()
   ((id :initarg :id :initform 0 :type integer)
@@ -748,7 +756,8 @@
         (setq out (concat out "-")))
     (if (equal status 'won)
         (setq out (concat out "+")))
-    (setq out (concat out "$" (blackjack--format-money (/ bet 100.0))))
+    (setq out
+          (concat out blackjack-currency (blackjack--format-money (/ bet 100.0))))
     (if (and
          (not played)
          (= index current-hand))
@@ -847,7 +856,10 @@
   (let ((money (slot-value blackjack--game 'money))
         (menu (slot-value blackjack--game 'current-menu))
         (out ""))
-    (setq out (format "  Blackjack $%s  " (blackjack--format-money (/ money 100.0))))
+    (setq out
+          (format "  Blackjack %s%s  "
+                  blackjack-currency
+                  (blackjack--format-money (/ money 100.0))))
     (setq out (concat out
                       (pcase menu
                         ('game (blackjack--game-menu))

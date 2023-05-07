@@ -3,10 +3,15 @@ Fetcher: hg
 Source:  https://hg.serna.eu/emacs/lms
 
 Updating /mnt/store/melpa/working/lms/
+Checking out 29593b4c18a570dfb2e60b196f24d407a1277daa
 
 Command '' exited with non-zero exit-code: 255
 
-pulling from https://hg.serna.eu/emacs/lms
-abort: HTTP Error 502: Bad Gateway
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
 
 Command exited with non-zero exit-code: 255

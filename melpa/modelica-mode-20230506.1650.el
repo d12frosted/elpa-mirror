@@ -7,8 +7,8 @@
 
 ;; Original author:   Ruediger Franke <rfranke@users.sourceforge.net>
 ;; URL: https://github.com/modelica-tools/modelica-mode
-;; Package-Version: 20230109.1000
-;; Package-Commit: 291f1bb8147693e21054722757f1e2cef4b27d12
+;; Package-Version: 20230506.1650
+;; Package-Commit: 19579142d8f3312aa4188a5a6156bbe89388b32f
 ;; Version: 2.0.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: languages, continuous system modeling
@@ -574,27 +574,12 @@ Assumes point to be over the first non-blank of the line."
   "Return comment starter if point is within a comment, nil otherwise.
 Optionally move point to the beginning of the comment if
 MOVE-POINT is true."
-  (let ((starter nil) (save-point (point)))
-    ;; check single-line comment
-    (setq starter (modelica-within-single-line-comment move-point))
-    (if (not starter)
-	;; check multi-line comment
-	(condition-case nil
-	    (if (and (re-search-backward "/\\*\\|\\*/")
-		     (looking-at "/\\*"))
-		;; check if we arrived in a single-line comment
-		(if (progn (forward-char)
-			   (modelica-within-single-line-comment move-point))
-		    ;; then the original starting point is not a comment
-		    ()
-		  ;; else accept multi-line comment
-		  (backward-char)
-		  (setq starter "/*")))
-	  (error nil)))
-    (if (and starter move-point)
-	(setq save-point (point)))
-    (goto-char save-point)
-    starter))
+  (when-let* ((syn (syntax-ppss))
+	      ((nth 4 syn))
+	      (start (nth 8 syn)))
+    (when move-point
+      (goto-char start))
+    (buffer-substring-no-properties start (+ start 2))))
 
 (defun modelica-within-single-line-comment (&optional move-point)
   "Return comment starter if point is within a single-line comment.
