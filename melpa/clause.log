@@ -3,9 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/clause.el.git
 
 Updating /mnt/store/melpa/working/clause/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/martianh/clause.el.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out 0ea166fa218618c1b80b60c995f927310c25b02a
+Built clause in 5.446s, finished at 2023-05-07T10:13:03+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K May  7 10:13 packages/clause-20230405.1235.el
+4.0K -rw-r--r-- 1 root root  519 May  7 10:13 packages/clause-20230405.1235.entry

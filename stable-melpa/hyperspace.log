@@ -3,9 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware/hyperspace.git
 
 Updating /mnt/store/melpa/working/hyperspace/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/emacs-weirdware/hyperspace.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out c4c363c140250ba6b775516082063878975a6154
+Built hyperspace in 4.731s, finished at 2023-05-07T10:45:57+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K May  7 10:45 packages/hyperspace-20210603.1825.el
+4.0K -rw-r--r-- 1 root root  468 May  7 10:45 packages/hyperspace-20210603.1825.entry

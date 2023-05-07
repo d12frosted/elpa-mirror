@@ -3,9 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-counsel-at-point.git
 
 Updating /mnt/store/melpa/working/counsel-at-point/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-counsel-at-point.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out a84cc0e409325d051208c43dfcabcebaa0d98ba3
+Built counsel-at-point in 5.351s, finished at 2023-05-07T10:16:58+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K May  7 10:16 packages/counsel-at-point-20230116.951.el
+4.0K -rw-r--r-- 1 root root 521 May  7 10:16 packages/counsel-at-point-20230116.951.entry

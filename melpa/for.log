@@ -3,26 +3,28 @@ Fetcher: github
 Source:  https://github.com/usaoc/elisp-for.git
 
 Updating /mnt/store/melpa/working/for/
-Checking out 08f65ee62cc4d5fcf5c6eeed5971c43709ff9e00
+Checking out 81f97e3f10c3ea9eb29759c2442dcf919d95d842
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/for/
-  to /tmp/forzV8LsU/for-20230504.1607
+  to /tmp/fory8njoc/for-20230507.702
     for-helper.el -> for-helper.el
     for-iteration.el -> for-iteration.el
     for-sequence.el -> for-sequence.el
     for.el -> for.el
     for.texi -> for.texi
-Generating /tmp/forzV8LsU/for-20230504.1607/for.info
-Created for-20230504.1607.tar containing:
-  for-20230504.1607/
-  for-20230504.1607/dir
-  for-20230504.1607/for-helper.el
-  for-20230504.1607/for-iteration.el
-  for-20230504.1607/for-pkg.el
-  for-20230504.1607/for-sequence.el
-  for-20230504.1607/for.el
-  for-20230504.1607/for.info
-Built for in 10.861s, finished at 2023-05-07T06:42:54+0000
+Generating /tmp/fory8njoc/for-20230507.702/for.info
+Created for-20230507.702.tar containing:
+  for-20230507.702/
+  for-20230507.702/dir
+  for-20230507.702/for-helper.el
+  for-20230507.702/for-iteration.el
+  for-20230507.702/for-pkg.el
+  for-20230507.702/for-sequence.el
+  for-20230507.702/for.el
+  for-20230507.702/for.info
+Built for in 16.702s, finished at 2023-05-07T10:35:32+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  434 May  7 06:42 packages/for-20230504.1607.entry
 140K -rw-r--r-- 1 root root 140K May  7 06:42 packages/for-20230504.1607.tar
+4.0K -rw-r--r-- 1 root root  433 May  7 10:35 packages/for-20230507.702.entry
+140K -rw-r--r-- 1 root root 140K May  7 10:35 packages/for-20230507.702.tar

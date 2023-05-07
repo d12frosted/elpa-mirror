@@ -3,9 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/amano.kenji/dired-single.git
 
 Updating /mnt/store/melpa/working/dired-single/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/amano.kenji/dired-single.git/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
-
-Command exited with non-zero exit-code: 128
+Checking out c781b7dcff6e7f9a5060b067d2cdb0acbc840c49
+Built dired-single in 5.185s, finished at 2023-05-07T10:20:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.9K May  7 10:20 packages/dired-single-20230306.626.el
+4.0K -rw-r--r-- 1 root root  241 May  7 10:20 packages/dired-single-20230306.626.entry

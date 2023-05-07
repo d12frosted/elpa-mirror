@@ -3,9 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/contrapunctus/chronometrist-goal.git
 
 Updating /mnt/store/melpa/working/chronometrist-goal/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/contrapunctus/chronometrist-goal.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out 6cb939d160f5d5966d7853aa23f3ed7c7ef9df44
+Built chronometrist-goal in 4.515s, finished at 2023-05-07T10:12:36+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K May  7 10:12 packages/chronometrist-goal-20210510.1831.el
+4.0K -rw-r--r-- 1 root root 614 May  7 10:12 packages/chronometrist-goal-20210510.1831.entry

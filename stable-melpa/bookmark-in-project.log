@@ -3,9 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-bookmark-in-project.git
 
 Updating /mnt/store/melpa/working/bookmark-in-project/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-bookmark-in-project.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out a1630443887c7fa190411c45269bde575f0807c5
+Built bookmark-in-project in 5.016s, finished at 2023-05-07T10:10:12+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K May  7 10:10 packages/bookmark-in-project-20230116.1206.el
+4.0K -rw-r--r-- 1 root root 511 May  7 10:10 packages/bookmark-in-project-20230116.1206.entry
