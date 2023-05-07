@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/bbatsov/solarized-emacs.git
 
 Updating /mnt/store/melpa/working/solarized-theme/
-Checking out 3fc985e8b31a975ef9b983c53f691cf48e1e0899
+Checking out 0f0b1129cf51c85904f9e015da4fcca5f5f7a4ce
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/solarized-theme/
-  to /tmp/solarized-themeMfPpOB/solarized-theme-20230414.1130
+  to /tmp/solarized-themeoUPUhk/solarized-theme-20230507.1413
     solarized-dark-high-contrast-theme.el -> solarized-dark-high-contrast-theme.el
     solarized-dark-theme.el -> solarized-dark-theme.el
     solarized-faces.el -> solarized-faces.el
@@ -24,27 +24,29 @@ Copying files (->) and directories (=>)
     solarized-wombat-dark-theme.el -> solarized-wombat-dark-theme.el
     solarized-zenburn-theme.el -> solarized-zenburn-theme.el
     solarized.el -> solarized.el
-Created solarized-theme-20230414.1130.tar containing:
-  solarized-theme-20230414.1130/
-  solarized-theme-20230414.1130/solarized-dark-high-contrast-theme.el
-  solarized-theme-20230414.1130/solarized-dark-theme.el
-  solarized-theme-20230414.1130/solarized-faces.el
-  solarized-theme-20230414.1130/solarized-gruvbox-dark-theme.el
-  solarized-theme-20230414.1130/solarized-gruvbox-light-theme.el
-  solarized-theme-20230414.1130/solarized-light-high-contrast-theme.el
-  solarized-theme-20230414.1130/solarized-light-theme.el
-  solarized-theme-20230414.1130/solarized-palettes.el
-  solarized-theme-20230414.1130/solarized-selenized-black-theme.el
-  solarized-theme-20230414.1130/solarized-selenized-dark-theme.el
-  solarized-theme-20230414.1130/solarized-selenized-light-theme.el
-  solarized-theme-20230414.1130/solarized-selenized-white-theme.el
-  solarized-theme-20230414.1130/solarized-theme-pkg.el
-  solarized-theme-20230414.1130/solarized-theme-utils.el
-  solarized-theme-20230414.1130/solarized-theme.el
-  solarized-theme-20230414.1130/solarized-wombat-dark-theme.el
-  solarized-theme-20230414.1130/solarized-zenburn-theme.el
-  solarized-theme-20230414.1130/solarized.el
-Built solarized-theme in 4.340s, finished at 2023-05-07T11:23:35+0000
+Created solarized-theme-20230507.1413.tar containing:
+  solarized-theme-20230507.1413/
+  solarized-theme-20230507.1413/solarized-dark-high-contrast-theme.el
+  solarized-theme-20230507.1413/solarized-dark-theme.el
+  solarized-theme-20230507.1413/solarized-faces.el
+  solarized-theme-20230507.1413/solarized-gruvbox-dark-theme.el
+  solarized-theme-20230507.1413/solarized-gruvbox-light-theme.el
+  solarized-theme-20230507.1413/solarized-light-high-contrast-theme.el
+  solarized-theme-20230507.1413/solarized-light-theme.el
+  solarized-theme-20230507.1413/solarized-palettes.el
+  solarized-theme-20230507.1413/solarized-selenized-black-theme.el
+  solarized-theme-20230507.1413/solarized-selenized-dark-theme.el
+  solarized-theme-20230507.1413/solarized-selenized-light-theme.el
+  solarized-theme-20230507.1413/solarized-selenized-white-theme.el
+  solarized-theme-20230507.1413/solarized-theme-pkg.el
+  solarized-theme-20230507.1413/solarized-theme-utils.el
+  solarized-theme-20230507.1413/solarized-theme.el
+  solarized-theme-20230507.1413/solarized-wombat-dark-theme.el
+  solarized-theme-20230507.1413/solarized-zenburn-theme.el
+  solarized-theme-20230507.1413/solarized.el
+Built solarized-theme in 4.615s, finished at 2023-05-07T15:14:11+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  472 May  7 11:23 packages/solarized-theme-20230414.1130.entry
 212K -rw-r--r-- 1 root root 210K May  7 11:23 packages/solarized-theme-20230414.1130.tar
+4.0K -rw-r--r-- 1 root root  472 May  7 15:14 packages/solarized-theme-20230507.1413.entry
+212K -rw-r--r-- 1 root root 210K May  7 15:14 packages/solarized-theme-20230507.1413.tar

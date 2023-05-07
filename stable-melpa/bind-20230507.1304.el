@@ -7,8 +7,8 @@
 ;; Created: March 26, 2023
 ;; Modified: March 26, 2023
 ;; Version: 0.9.0
-;; Package-Version: 20230503.1914
-;; Package-Commit: 646d979e8834de513eb36adce165050088634100
+;; Package-Version: 20230507.1304
+;; Package-Commit: cfefa7577dbc6b28af5afa47c197293906916483
 ;; Package-Requires: ((emacs "25.1"))
 
 ;; Homepage: https://github.com/repelliuss/bind
@@ -392,20 +392,25 @@ configurator."
   bindings)
 (put :autoload 'lisp-indent-function 1)
 
-;; TODO: add target map support
 ;;;###autoload
-(defun bind-repeat (&rest bindings)
-  "Add repeating functionality to each DEF in BINDINGS for :main metadata.
+(defun bind-repeat (&optional target-map &rest bindings)
+  "Add repeat utility to each DEF in BINDINGS for TARGET-MAP or :main metadata.
 This requires `repeat-mode' to be active to take effect."
   (declare (indent 0))
-  (setq bindings (bind-flatten1-key-of-bindings bindings))
-  (let ((main (plist-get bind--metadata :main)))
-    (if (keymapp (symbol-value main))
-	(bind-foreach-key-def bindings
-	  (lambda (_key def)
-	    (put def 'repeat-map main)))
-      (display-warning 'bind-repeat
-		       (format "Couldn't repeat bindings: %s. No bind main given." bindings))))
+  (when-let ((main (or (if (keymapp target-map)
+			   target-map
+			 (setq bindings `(,target-map ,@bindings))
+			 nil)
+		       (if (keymapp (symbol-value (plist-get bind--metadata :main)))
+			   (plist-get bind--metadata :main)
+			 (display-warning 'bind-repeat
+					  (format "Couldn't repeat bindings: %s. No repeat map given."
+						  bindings))
+			 nil))))
+    (setq bindings (bind-flatten1-key-of-bindings bindings))
+    (bind-foreach-key-def bindings
+      (lambda (_key def)
+	(put def 'repeat-map main))))
   bindings)
 (put :repeat 'lisp-indent-function 0)
 

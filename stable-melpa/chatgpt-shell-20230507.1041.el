@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230506.2203
-;; Package-Commit: eed5b5aeaa96914e2f6d34fec06c5b71442e2d34
-;; Version: 0.25.1
+;; Package-Version: 20230507.1041
+;; Package-Commit: 020a0f046c333a3ba033a0509f3750c76de10b9d
+;; Version: 0.26.1
 ;; Package-Requires: ((emacs "27.1") (shell-maker "0.17.1"))
 
 ;; This package is free software; you can redistribute it and/or modify
@@ -549,7 +549,8 @@ With PREFIX, invert `chatgpt-shell-insert-queries-inline' choice."
                ""))
      nil prefix)
     (when overlay-blocks
-      (with-current-buffer (get-buffer-create "*chatgpt*")
+      (with-current-buffer
+          (shell-maker-buffer-name chatgpt-shell--config)
         (chatgpt-shell--put-source-block-overlays)))))
 
 (defun chatgpt-shell-send-region-with-header (header invert-insert-inline)
@@ -794,7 +795,7 @@ If passing HANDLER function, use it instead of inserting inline."
             (goto-char (point-max))
             (send))
         (with-selected-window
-            (get-buffer-window (get-buffer-create "*chatgpt*"))
+            (get-buffer-window (shell-maker-buffer-name chatgpt-shell--config))
           (send))))))
 
 (defun chatgpt-shell-send-to-ielm-buffer (text &optional execute save-excursion)
