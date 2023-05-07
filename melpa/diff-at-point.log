@@ -3,8 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-diff-at-point.git
 
 Updating /mnt/store/melpa/working/diff-at-point/
-Checking out 0a4815a364b636eadf2f9ca6f468fb5996ff8d6f
-Built diff-at-point in 5.262s, finished at 2023-05-07T02:34:12+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K May  7 02:34 packages/diff-at-point-20230320.2355.el
-4.0K -rw-r--r-- 1 root root 409 May  7 02:34 packages/diff-at-point-20230320.2355.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-diff-at-point.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

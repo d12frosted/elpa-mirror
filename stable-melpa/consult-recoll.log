@@ -3,8 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/consult-recoll.git
 
 Updating /mnt/store/melpa/working/consult-recoll/
-Checking out 8d506e2d01f46fc6b0a0825efb90b062ad6fe3d4
-Built consult-recoll in 5.410s, finished at 2023-05-07T02:30:28+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K May  7 02:30 packages/consult-recoll-20221014.2002.el
-4.0K -rw-r--r-- 1 root root 460 May  7 02:30 packages/consult-recoll-20221014.2002.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/jao/consult-recoll.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

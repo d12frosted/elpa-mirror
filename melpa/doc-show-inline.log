@@ -3,8 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-doc-show-inline.git
 
 Updating /mnt/store/melpa/working/doc-show-inline/
-Checking out 261554a788e9cc6c0ba538a732667e514fab70c6
-Built doc-show-inline in 5.188s, finished at 2023-05-07T02:35:48+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 39K May  7 02:35 packages/doc-show-inline-20230319.528.el
-4.0K -rw-r--r-- 1 root root 483 May  7 02:35 packages/doc-show-inline-20230319.528.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-doc-show-inline.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

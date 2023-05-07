@@ -3,8 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-default-font-presets.git
 
 Updating /mnt/store/melpa/working/default-font-presets/
-Checking out d52a31ba0860188ab27c58d1a3e2de62346700d5
-Built default-font-presets in 8.680s, finished at 2023-05-07T02:33:33+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K May  7 02:33 packages/default-font-presets-20230116.951.el
-4.0K -rw-r--r-- 1 root root 457 May  7 02:33 packages/default-font-presets-20230116.951.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-default-font-presets.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

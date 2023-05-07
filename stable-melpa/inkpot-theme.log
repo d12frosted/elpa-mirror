@@ -3,8 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-theme-inkpot.git
 
 Updating /mnt/store/melpa/working/inkpot-theme/
-Checking out 8f0c4c85f69aeab53901c235b9c588689dea8f6c
-Built inkpot-theme in 5.539s, finished at 2023-05-07T03:01:55+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 25K May  7 03:01 packages/inkpot-theme-20230418.127.el
-4.0K -rw-r--r-- 1 root root 465 May  7 03:01 packages/inkpot-theme-20230418.127.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-theme-inkpot.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

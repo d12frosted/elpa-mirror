@@ -3,8 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-diff-ansi.git
 
 Updating /mnt/store/melpa/working/diff-ansi/
-Checking out 9992b0be2eac8c1bd8051f2ca8de4dc593dc6ff8
-Built diff-ansi in 5.299s, finished at 2023-05-07T02:34:11+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root 34K May  7 02:34 packages/diff-ansi-20230501.2304.el
-4.0K -rw-r--r-- 1 root root 458 May  7 02:34 packages/diff-ansi-20230501.2304.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-diff-ansi.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

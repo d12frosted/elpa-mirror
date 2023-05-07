@@ -3,8 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/pidu/git-timemachine.git
 
 Updating /mnt/store/melpa/working/git-timemachine/
-Checking out 13769fb603ae88c64566529eae4525ce88026e86
-Built git-timemachine in 6.354s, finished at 2023-05-07T02:51:38+0000
- ✓ Success:
- 20K -rwxr-xr-x 1 root root 19K May  7 02:51 packages/git-timemachine-20230413.620.el
-4.0K -rw-r--r-- 1 root root 496 May  7 02:51 packages/git-timemachine-20230413.620.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/pidu/git-timemachine.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

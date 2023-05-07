@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/swift-emacs/swift-mode.git
 
 Updating /mnt/store/melpa/working/swift-mode/
-Checking out 778e9e6f35b41fd171bd9f42fd7b89c1001e2a82
+Checking out fc3d16ac9b8dbd8d818b807b7d44ca306a43cc6c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/swift-mode/
-  to /tmp/swift-modefYsZRw/swift-mode-20230117.1113
+  to /tmp/swift-modeaQDjeb/swift-mode-20230507.716
     swift-mode-beginning-of-defun.el -> swift-mode-beginning-of-defun.el
     swift-mode-fill.el -> swift-mode-fill.el
     swift-mode-font-lock.el -> swift-mode-font-lock.el
@@ -16,19 +16,21 @@ Copying files (->) and directories (=>)
     swift-mode-repl.el -> swift-mode-repl.el
     swift-mode-standard-types.el -> swift-mode-standard-types.el
     swift-mode.el -> swift-mode.el
-Created swift-mode-20230117.1113.tar containing:
-  swift-mode-20230117.1113/
-  swift-mode-20230117.1113/swift-mode-beginning-of-defun.el
-  swift-mode-20230117.1113/swift-mode-fill.el
-  swift-mode-20230117.1113/swift-mode-font-lock.el
-  swift-mode-20230117.1113/swift-mode-imenu.el
-  swift-mode-20230117.1113/swift-mode-indent.el
-  swift-mode-20230117.1113/swift-mode-lexer.el
-  swift-mode-20230117.1113/swift-mode-pkg.el
-  swift-mode-20230117.1113/swift-mode-repl.el
-  swift-mode-20230117.1113/swift-mode-standard-types.el
-  swift-mode-20230117.1113/swift-mode.el
-Built swift-mode in 5.048s, finished at 2023-05-07T03:40:35+0000
+Created swift-mode-20230507.716.tar containing:
+  swift-mode-20230507.716/
+  swift-mode-20230507.716/swift-mode-beginning-of-defun.el
+  swift-mode-20230507.716/swift-mode-fill.el
+  swift-mode-20230507.716/swift-mode-font-lock.el
+  swift-mode-20230507.716/swift-mode-imenu.el
+  swift-mode-20230507.716/swift-mode-indent.el
+  swift-mode-20230507.716/swift-mode-lexer.el
+  swift-mode-20230507.716/swift-mode-pkg.el
+  swift-mode-20230507.716/swift-mode-repl.el
+  swift-mode-20230507.716/swift-mode-standard-types.el
+  swift-mode-20230507.716/swift-mode.el
+Built swift-mode in 4.754s, finished at 2023-05-07T07:33:59+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  676 May  7 03:40 packages/swift-mode-20230117.1113.entry
 472K -rw-r--r-- 1 root root 470K May  7 03:40 packages/swift-mode-20230117.1113.tar
+4.0K -rw-r--r-- 1 root root  675 May  7 07:33 packages/swift-mode-20230507.716.entry
+472K -rw-r--r-- 1 root root 470K May  7 07:33 packages/swift-mode-20230507.716.tar

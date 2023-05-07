@@ -3,8 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/WammKD/emacs-klere-theme.git
 
 Updating /mnt/store/melpa/working/klere-theme/
-Checking out 61d2cd649a1cf57ce61063f76b395f21f358372e
-Built klere-theme in 5.651s, finished at 2023-05-07T03:05:42+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 23K May  7 03:05 packages/klere-theme-20230214.213.el
-4.0K -rw-r--r-- 1 root root 453 May  7 03:05 packages/klere-theme-20230214.213.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/WammKD/emacs-klere-theme.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128
