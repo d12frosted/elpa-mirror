@@ -7,6 +7,6 @@ interface, with dedicated windows (source files, menu, and ouput),
 convenient keyboard shortcuts, and project management.
 
 It is suitable for almost all languages (as long as they are supported by
-Ctags). Cscope provides additional browsing facility for C/C++ files.
+Ctags). Cscope provides additional browsing facility for C/C++/Java files.
 
 Homepage: https://software.hjuvi.fr.eu.org/eide/

@@ -1,0 +1,22 @@
+Package: mame
+Fetcher: github
+Source:  https://github.com/Iacob/elmame.git
+
+Updating /mnt/store/melpa/working/mame/
+Checking out fc11ae7b1abe7448dde92a39d2587e71dafe582b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mame/
+  to /tmp/mamehkjEJ3/mame-20230507.554
+    mame-config.el -> mame-config.el
+    mame-machine-info-loader.el -> mame-machine-info-loader.el
+    mame.el -> mame.el
+Created mame-20230507.554.tar containing:
+  mame-20230507.554/
+  mame-20230507.554/mame-config.el
+  mame-20230507.554/mame-machine-info-loader.el
+  mame-20230507.554/mame-pkg.el
+  mame-20230507.554/mame.el
+Built mame in 5.645s, finished at 2023-05-08T02:24:32+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  352 May  8 02:24 packages/mame-20230507.554.entry
+3.8M -rw-r--r-- 1 root root 3.8M May  8 02:24 packages/mame-20230507.554.tar

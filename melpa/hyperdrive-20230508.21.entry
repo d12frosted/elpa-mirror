@@ -1,0 +1,20 @@
+(hyperdrive .
+	    [(20230508 21)
+	     ((emacs
+	       (27 1))
+	      (map
+	       (3 0))
+	      (compat
+	       (29 1 3 2))
+	      (plz
+	       (0 5 4))
+	      (persist
+	       (0 5)))
+	     "P2P filesystem in Emacs" tar
+	     ((:commit . "4f148534799859a2200b964d85eac2a021bf7b23")
+	      (:authors
+	       ("Joseph Turner"))
+	      (:maintainers
+	       ("Joseph Turner" . "joseph@ushin.org"))
+	      (:maintainer "Joseph Turner" . "joseph@ushin.org")
+	      (:url . "https://git.sr.ht/~ushin/hyperdrive.el"))])
