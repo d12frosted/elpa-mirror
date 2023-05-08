@@ -26,7 +26,7 @@ point), but not C and D.
 
 By default, you need to press RET to “commit” your change and if you
 quit with q or C-g, the changes made by vundo are rolled back. You can
-set ‘vundo-roll-back-on-quit’ to nil to disable rolling back.
+set `vundo-roll-back-on-quit' to nil to disable rolling back.
 
 Note: vundo.el requires Emacs 28.
 
@@ -51,7 +51,7 @@ set vundo-glyph-alist by
 
 Your default font needs to contain these Unicode characters, otherwise
 they look terrible and don’t align. You can find a font that covers
-these characters (eg, Symbola, Unifont), and set ‘vundo-default’ face
+these characters (eg, Symbola, Unifont), and set `vundo-default' face
 to use that font:
 
     (set-face-attribute 'vundo-default nil :family "Symbola")
