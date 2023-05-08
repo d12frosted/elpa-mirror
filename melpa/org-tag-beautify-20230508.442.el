@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (nerd-icons "0.0.1"))
-;; Package-Version: 20230507.1551
-;; Package-Commit: b9a15c2971af8e9822092eaead52b20d9f8587e5
+;; Package-Version: 20230508.442
+;; Package-Commit: a33c231154c4375f0fd1d384b4b5760958c54bf4
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -1179,13 +1179,12 @@ hardcoded (tag . icon) pair bindings to display icon."
 ;;;###autoload
 (defun org-tag-beautify-add-tags-to-list ()
   "Add org-tag-beautify tags to `org-tag-alist' for `org-set-tags-command' completion."
-  (with-eval-after-load 'org
-    (setq org-tag-alist
-          (append org-tag-alist
-                  (append
-                   '((:startgrouptag)) '(("icons"))
-                   '((:grouptags)) (mapcar 'list (mapcar 'car org-pretty-tags-surrogate-strings))
-                   '((:endgrouptag)))))))
+  (setq org-tag-alist
+        (append org-tag-alist
+                (append
+                 '((:startgrouptag)) '(("icons"))
+                 '((:grouptags)) (mapcar 'list (mapcar 'car org-pretty-tags-surrogate-strings))
+                 '((:endgrouptag))))))
 
 ;;============================================ minor mode ===========================================
 ;;;###autoload
