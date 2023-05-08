@@ -1824,7 +1824,7 @@
 		 ("Matus Goljer" . "matus.goljer@gmail.com"))
 		(:commit . "4873352b5d0a1c5142658122de1b6950b8fe7e4d"))])
  (solarized-theme .
-		  [(1 3 0)
+		  [(2 0 1)
 		   ((emacs
 		     (24 1)))
 		   "The Solarized color theme" tar
@@ -1832,7 +1832,8 @@
 		    (:keywords "convenience" "themes" "solarized")
 		    (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 		    (:authors
-		     ("Bozhidar Batsov" . "bozhidar@batsov.dev")))])
+		     ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
+		    (:commit . "0f0b1129cf51c85904f9e015da4fcca5f5f7a4ce"))])
  (spacemacs-theme .
 		  [(0 2)
 		   ((emacs
