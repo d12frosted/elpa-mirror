@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230507.1041
-;; Package-Commit: 020a0f046c333a3ba033a0509f3750c76de10b9d
-;; Version: 0.26.1
+;; Package-Version: 20230508.2225
+;; Package-Commit: 296475c97763eb4b691b44878339a3db8c8d6d05
+;; Version: 0.27.1
 ;; Package-Requires: ((emacs "27.1") (shell-maker "0.17.1"))
 
 ;; This package is free software; you can redistribute it and/or modify
@@ -206,7 +206,9 @@ See https://platform.openai.com/docs/guides/chat/introduction"
   (interactive)
   (setq chatgpt-shell-model-version
         (completing-read "Model version: "
-                         chatgpt-shell-model-versions nil t)))
+                         chatgpt-shell-model-versions nil t))
+  (chatgpt-shell--update-prompt)
+  (chatgpt-shell-interrupt))
 
 (defcustom chatgpt-shell-streaming t
   "Whether or not to stream ChatGPT responses (show chunks as they arrive)."
@@ -304,7 +306,14 @@ or
 
 With NO-FOCUS, start the shell without focus."
   (interactive)
+  (setf (shell-maker-config-prompt chatgpt-shell--config)
+        (car (chatgpt-shell--prompt-pair)))
+  (setf (shell-maker-config-prompt-regexp chatgpt-shell--config)
+        (cdr (chatgpt-shell--prompt-pair)))
   (shell-maker-start chatgpt-shell--config no-focus)
+  (chatgpt-shell--update-prompt)
+  ;; Disabling advice for now. It gets in the way.
+  ;; (advice-add 'keyboard-quit :around #'chatgpt-shell--adviced:keyboard-quit)
   (define-key shell-maker-mode-map (kbd "C-M-h")
     #'chatgpt-shell-mark-at-point-dwim)
   (define-key shell-maker-mode-map (kbd "C-c C-c")
@@ -313,6 +322,37 @@ With NO-FOCUS, start the shell without focus."
     #'chatgpt-shell-previous-item)
   (define-key shell-maker-mode-map (kbd "C-c C-n")
     #'chatgpt-shell-next-item))
+
+(defun chatgpt-shell--prompt-pair ()
+  "Return a pair with prompt and prompt-regexp."
+  (cons
+   (format "ChatGPT(%s)> " chatgpt-shell-model-version)
+   (let ((elisp "(rx (or "))
+     (dolist (item chatgpt-shell-model-versions elisp)
+       (setq elisp (concat elisp (format "(seq bol \"ChatGPT(%s)> \") " item))))
+     (setq elisp (concat elisp "))"))
+     (eval (car (read-from-string elisp))))))
+
+(defun chatgpt-shell--update-prompt ()
+  "Update prompt and prompt regexp from `chatgpt-shell-model-versions'."
+  (with-current-buffer (shell-maker-buffer chatgpt-shell--config)
+    (shell-maker-set-prompt
+     (car (chatgpt-shell--prompt-pair))
+     (cdr (chatgpt-shell--prompt-pair)))))
+
+(defun chatgpt-shell--adviced:keyboard-quit (orig-fun &rest args)
+  "Advice around `keyboard-quit' interrupting active shell.
+
+Applies ORIG-FUN and ARGS."
+  (chatgpt-shell-interrupt)
+  (apply orig-fun args))
+
+(defun chatgpt-shell-interrupt ()
+  "Interrupt `chatgpt-shell' from any buffer."
+  (interactive)
+  (with-current-buffer
+      (shell-maker-buffer-name chatgpt-shell--config)
+    (shell-maker-interrupt)))
 
 (defun chatgpt-shell-ctrl-c-ctrl-c ()
   "Ctrl-C Ctrl-C DWIM binding.
@@ -756,7 +796,7 @@ If passing HANDLER function, use it instead of inserting inline."
     (when (region-active-p)
       (setq marker (copy-marker (max (region-beginning)
                                      (region-end)))))
-    (chatgpt-shell insert-inline)
+    (chatgpt-shell (or handler insert-inline))
     (cl-flet ((send ()
                     (when shell-maker--busy
                       (shell-maker-interrupt))
@@ -790,7 +830,7 @@ If passing HANDLER function, use it instead of inserting inline."
                                                            (marker-position marker))))))))
                          (or handler (lambda (_command _output _error _finished))))
                        t))))
-      (if insert-inline
+      (if (or handler insert-inline)
           (with-current-buffer (shell-maker-buffer chatgpt-shell--config)
             (goto-char (point-max))
             (send))
@@ -988,12 +1028,12 @@ Very much EXPERIMENTAL."
   (unless (eq major-mode 'shell-maker-mode)
     (user-error "Not in a shell"))
   (let* ((path (read-file-name "Restore from: " nil nil t))
-         (prompt (shell-maker-prompt shell-maker-config))
+         (prompt-regexp (shell-maker-prompt-regexp shell-maker-config))
          (history (with-temp-buffer
                     (insert-file-contents path)
                     (chatgpt-shell--extract-history
                      (buffer-string)
-                     prompt)))
+                     prompt-regexp)))
          (execute-command (shell-maker-config-execute-command
                            shell-maker-config))
          (validate-command (shell-maker-config-validate-command

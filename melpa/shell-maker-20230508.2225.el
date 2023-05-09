@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230430.1957
-;; Package-Commit: 9d88c4c4cc81df7060ca746dfe97a999ba27cf2f
-;; Version: 0.18.1
+;; Package-Version: 20230508.2225
+;; Package-Commit: 296475c97763eb4b691b44878339a3db8c8d6d05
+;; Version: 0.19.1
 ;; Package-Requires: ((emacs "27.1"))
 
 ;; This package is free software; you can redistribute it and/or modify
@@ -79,8 +79,6 @@ Enable it for troubleshooting issues."
 
 (defvar shell-maker--show-invisible-markers nil)
 
-(defvar shell-maker--prompt-internal nil)
-
 (defconst shell-maker--prompt-rear-nonsticky
   '(field inhibit-line-move-field-capture read-only font-lock-face)
   "Text properties set on the prompt and don't want to leak past it.")
@@ -88,6 +86,8 @@ Enable it for troubleshooting issues."
 (cl-defstruct
     shell-maker-config
   name
+  prompt
+  prompt-regexp
   validate-command
   execute-command
   on-command-finished
@@ -146,22 +146,18 @@ Uses the interface provided by `comint-mode'"
   (setq-local shell-maker-config config)
   (visual-line-mode +1)
   (goto-address-mode +1)
+  ;; Prevents fontifying streamed response as prompt.
   (setq comint-prompt-regexp
-        (concat "^" (regexp-quote
-                     (shell-maker-prompt shell-maker-config))))
+        (shell-maker-prompt-regexp config))
   (setq-local paragraph-separate "\\'")
   (setq-local paragraph-start comint-prompt-regexp)
   (setq comint-input-sender 'shell-maker--input-sender)
   (setq comint-process-echoes nil)
-  (setq-local shell-maker--prompt-internal
-              (shell-maker-prompt shell-maker-config))
   (setq-local comint-prompt-read-only t)
   (setq comint-get-old-input 'shell-maker--get-old-input)
   (setq-local comint-completion-addsuffix nil)
   (setq-local imenu-generic-expression
-              `(("Prompt" ,(concat "^" (regexp-quote
-                                        (shell-maker-prompt shell-maker-config))
-                                   "\\(.*\\)") 1)))
+              `(("Prompt" ,(concat (shell-maker-prompt-regexp shell-maker-config) "\\(.*\\)") 1)))
   (shell-maker--read-input-ring-history config)
   (unless (or (comint-check-proc (shell-maker-buffer shell-maker-config))
               (get-buffer-process (shell-maker-buffer shell-maker-config)))
@@ -181,7 +177,8 @@ Uses the interface provided by `comint-mode'"
         (add-text-properties
          (point-min) (point-max)
          '(rear-nonsticky t field output inhibit-line-move-field-capture t))))
-    (shell-maker--output-filter (shell-maker--process) shell-maker--prompt-internal)
+    (shell-maker--output-filter (shell-maker--process)
+                                (shell-maker-prompt shell-maker-config))
     (set-marker comint-last-input-start (shell-maker--pm))
     (set-process-filter (get-buffer-process
                          (shell-maker-buffer shell-maker-config))
@@ -197,7 +194,7 @@ Uses the interface provided by `comint-mode'"
                                       (propertize "<shell-maker-failed-command>"
                                                   'invisible (not shell-maker--show-invisible-markers))
                                     "")
-                                  shell-maker--prompt-internal))))
+                                  (shell-maker-prompt shell-maker-config)))))
 
 (defun shell-maker-return ()
   "RET binding."
@@ -272,8 +269,7 @@ Uses the interface provided by `comint-mode'"
             (forward-char (length "<shell-maker-end-of-prompt>"))
             t)
            ((re-search-backward
-             (concat "^"
-                     (shell-maker-prompt shell-maker-config)) nil t)
+             (shell-maker-prompt-regexp shell-maker-config) nil t)
             (if (re-search-forward "<shell-maker-end-of-prompt>" nil t)
                 t
               (end-of-line))
@@ -284,11 +280,10 @@ Uses the interface provided by `comint-mode'"
       (setq start (point)))
     (save-excursion
       (unless (re-search-forward
-               (concat "^"
-                       (shell-maker-prompt shell-maker-config)) nil t)
+               (shell-maker-prompt-regexp shell-maker-config)  nil t)
         (goto-char current-pos)
         (setq revert-pos t))
-      (backward-char (length (shell-maker-prompt shell-maker-config)))
+      (beginning-of-line)
       (setq end (point)))
     (when revert-pos
       (goto-char current-pos)
@@ -303,7 +298,7 @@ Uses the interface provided by `comint-mode'"
      begin
      (save-excursion
        (goto-char (shell-maker--prompt-end-position))
-       (re-search-forward (shell-maker-prompt shell-maker-config) nil t)
+       (re-search-forward (shell-maker-prompt-regexp shell-maker-config) nil t)
        (if (= begin (shell-maker--prompt-begin-position))
            (point-max)
          (shell-maker--prompt-begin-position))))))
@@ -342,8 +337,7 @@ Otherwise mark current output at location."
               (forward-char (length "<shell-maker-end-of-prompt>"))
               t)
              ((re-search-backward
-               (concat "^"
-                       (shell-maker-prompt shell-maker-config))nil t)
+               (shell-maker-prompt-regexp shell-maker-config) nil t)
               (if (re-search-forward "<shell-maker-end-of-prompt>" nil t)
                   t
                 (end-of-line))
@@ -418,7 +412,7 @@ Otherwise save current output at location."
                                 (concat (propertize "<shell-maker-failed-command>"
                                                     'invisible (not shell-maker--show-invisible-markers))
                                         "\n"
-                                        shell-maker--prompt-internal))
+                                        (shell-maker-prompt shell-maker-config)))
     (when (process-live-p shell-maker--request-process)
       (kill-process shell-maker--request-process))
     (when shell-maker--busy
@@ -449,7 +443,7 @@ NO-ANNOUNCEMENT skips announcing response when in background."
       (cond
        ((string-equal "clear" (string-trim input-string))
         (call-interactively #'comint-clear-buffer)
-        (shell-maker--output-filter (shell-maker--process) shell-maker--prompt-internal)
+        (shell-maker--output-filter (shell-maker--process) (shell-maker-prompt shell-maker-config))
         (setq shell-maker--busy nil))
        ((not (shell-maker--curl-version-supported))
         (shell-maker--write-reply "\nYou need curl version 7.76 or newer.\n\n")
@@ -466,7 +460,7 @@ NO-ANNOUNCEMENT skips announcing response when in background."
         (setq shell-maker--busy nil))
        ((string-empty-p (string-trim input-string))
         (shell-maker--output-filter (shell-maker--process)
-                                    (concat "\n" shell-maker--prompt-internal))
+                                    (concat "\n" (shell-maker-prompt shell-maker-config)))
         (setq shell-maker--busy nil))
        (t
         ;; For viewing prompt delimiter (used to handle multiline prompts).
@@ -479,7 +473,7 @@ NO-ANNOUNCEMENT skips announcing response when in background."
                  (shell-maker--extract-history
                   (with-current-buffer buffer
                     (buffer-string))
-                  (shell-maker-prompt shell-maker-config))
+                  (shell-maker-prompt-regexp shell-maker-config))
                  (lambda (response partial)
                    (setq response-count (1+ response-count))
                    (setq prefix-newline (if (> response-count 1)
@@ -876,8 +870,29 @@ Uses PROCESS and STRING same as `comint-output-filter'."
                      "history") shell-maker-history-path))
 
 (defun shell-maker-prompt (config)
-  "Get prompt name from CONFIG."
-  (concat (shell-maker-config-name config) "> "))
+  "Get prompt from CONFIG."
+  (if (shell-maker-config-prompt config)
+      (shell-maker-config-prompt config)
+    (concat (shell-maker-config-name config) "> ")))
+
+(defun shell-maker-set-prompt (prompt prompt-regexp)
+  "Set internal config's PROMPT and PROMPT-REGEXP."
+  (unless (eq major-mode 'shell-maker-mode)
+    (user-error "Not in a shell"))
+  (setf (shell-maker-config-prompt shell-maker-config)
+        prompt)
+  (setf (shell-maker-config-prompt-regexp shell-maker-config)
+        prompt-regexp)
+  ;; Prevents fontifying streamed response as prompt.
+  (setq comint-prompt-regexp prompt-regexp)
+  (setq-local imenu-generic-expression
+              `(("Prompt" ,(concat "\\(" prompt-regexp "\\)" "\\(.*\\)") 2))))
+
+(defun shell-maker-prompt-regexp (config)
+  "Get prompt regexp from CONFIG."
+  (if (shell-maker-config-prompt-regexp config)
+      (shell-maker-config-prompt-regexp config)
+    (concat "^" (shell-maker-prompt config))))
 
 (provide 'shell-maker)
 
