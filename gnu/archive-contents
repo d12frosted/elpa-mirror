@@ -3730,6 +3730,26 @@
 		   ("Tom Schutzer-Weissmann" . "tom.weissmann@gmail.com"))
 		  (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		  (:url . "https://code.google.com/p/url-http-ntlm/"))])
+ (url-http-oauth .
+		 [(0 8 1)
+		  nil "OAuth 2.0 for URL library" tar
+		  ((:keywords "comm" "data" "processes" "hypermedia")
+		   (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
+		   (:authors
+		    ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
+		   (:url . "https://elpa.gnu.org/packages/url-http-oauth.html")
+		   (:commit . "0c284dd7dae76265293b9b35a9bc7aff14a23ed0"))])
+ (url-http-oauth-demo .
+		      [(1 0 1)
+		       ((url-http-oauth
+			 (0 8 1)))
+		       "Demo url-http-oauth" tar
+		       ((:keywords "comm" "data" "processes" "hypermedia")
+			(:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
+			(:authors
+			 ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
+			(:url . "https://elpa.gnu.org/packages/url-http-oauth-demo.html")
+			(:commit . "17230fc6513df52f1417b335f64c9f405e5a9126"))])
  (url-scgi .
 	   [(0 9)
 	    ((emacs

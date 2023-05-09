@@ -2,8 +2,6 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-define-scratch
-;; Package-Version: 20221220.946
-;; Package-Commit: 26cf11f801c2b5df0fbd56d2c4f7ac41b3ccd1c6
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: languages util
