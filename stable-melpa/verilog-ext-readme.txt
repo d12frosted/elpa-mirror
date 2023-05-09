@@ -5,19 +5,20 @@ Extensions for Verilog Mode:
  - LSP configuration for `lsp-mode` and `eglot`
  - Support for many linters via `flycheck`
  - Beautify modules and instances
- - Improve `imenu` entries: detect instances, classes and methods
  - Code navigation functions for RTL and Verification environments
  - Extended collection of custom and `yasnippet` templates insertion via `hydra`
  - Code formatter via `apheleia`
- - Code folding via `hideshow`
- - Enhanced support for `which-func`
  - Compilation-based utilities
+ - Improve `imenu` entries: detect instances, classes and methods
+ - Enhanced support for `which-func`
+ - Code folding via `hideshow`
  - Time-stamp auto-configuration
  - Convert block end comments to names
  - Automatically add SystemVerilog keywords to `company-keywords` backend
  - Port connections utilities
+ - Workspace tags, typedef analysis and caching
 
  Experimental:
  - Tree-sitter powered `verilog-ts-mode` support
  - Builtin xref backend
- - Builtin capf
+ - Builtin capf function with dot and scope completion

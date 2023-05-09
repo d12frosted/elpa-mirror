@@ -4,8 +4,8 @@
 
 ;; Author: Gonzalo Larumbe <gonzalomlarumbe@gmail.com>
 ;; URL: https://github.com/gmlarumbe/vhdl-ext
-;; Package-Version: 20230430.1437
-;; Package-Commit: 9627ff3d481950cbb3dde338deb4422c83933a2a
+;; Package-Version: 20230509.1207
+;; Package-Commit: 0c1a1be2068564917dbc7811bbee4167c720c816
 ;; Version: 0.1.0
 ;; Keywords: VHDL, IDE, Tools
 ;; Package-Requires: ((emacs "28.1") (eglot "1.9") (lsp-mode "8.0.1") (ag "0.48") (ripgrep "0.4.0") (hydra "0.15.0") (flycheck "33-cvs"))
@@ -186,6 +186,15 @@ Return nil if no entity was found."
 (defun vhdl-ext-kill-buffer-hook ()
   "VHDL hook to run when killing a buffer."
   (setq vhdl-ext-buffer-list (remove (current-buffer) vhdl-ext-buffer-list)))
+
+(defun vhdl-ext-workdir ()
+  "Return the working library directory according to current project.
+Check `vhdl-project-alist'."
+  (let ((root (nth 1 (vhdl-aget vhdl-project-alist vhdl-project)))
+        (dir  (nth 7 (vhdl-aget vhdl-project-alist vhdl-project))))
+    (when (and root dir)
+      (vhdl-ext-path-join root dir))))
+
 
 ;;; Navigation
 ;;  - Find instances forward/backwards
@@ -839,8 +848,22 @@ Regex search bound to LIMIT."
    vhdl-ext-font-lock-keywords-2
    vhdl-ext-font-lock-keywords-5))
 
+;;;; Setup
+(defun vhdl-ext-font-lock-setup ()
+  "Setup syntax highlighting of VHDL buffers.
+Add `vhdl-ext-mode' font lock keywords before running
+`vhdl-mode' in order to populate `font-lock-keywords-alist'
+before `font-lock' is loaded."
+  (font-lock-add-keywords 'vhdl-mode vhdl-ext-font-lock-keywords 'set))
+
+
 ;;; Flycheck
 ;;;; GHDL
+(defcustom vhdl-ext-flycheck-extra-include nil
+  "Extra includes for GHDL flycheck."
+  :type '(repeat (directory))
+  :group 'vhdl-ext)
+
 ;; Overriding of `vhdl-ghdl' syntax checker to add more options
 (flycheck-def-option-var vhdl-ext-flycheck-ghdl-include-path nil vhdl-ghdl
   "A list of include directories for GHDL.
@@ -858,6 +881,9 @@ GHDL."
   :safe #'stringp
   :package-version '(flycheck . "32"))
 
+(flycheck-def-args-var vhdl-ext-flycheck-ghdl-extra-args vhdl-ghdl
+  :package-version '(flycheck . "32"))
+
 (flycheck-define-checker vhdl-ghdl
   "A VHDL syntax checker using GHDL.
 See URL `https://github.com/ghdl/ghdl'."
@@ -869,9 +895,13 @@ See URL `https://github.com/ghdl/ghdl'."
             ;; Additional options
             (option-list "-P" vhdl-ext-flycheck-ghdl-include-path concat)
             (option "--work=" vhdl-ext-flycheck-ghdl-work-lib concat)
+            ;; Extra args
+            (eval vhdl-ext-flycheck-ghdl-extra-args)
             source)
   :error-patterns
-  ((error line-start (file-name) ":" line ":" column ": " (message) line-end))
+  ((info    line-start (file-name) ":" line ":" column ":note: "    (message) line-end)
+   (warning line-start (file-name) ":" line ":" column ":warning: " (message) line-end)
+   (error   line-start (file-name) ":" line ":" column ": "         (message) line-end))
   :modes (vhdl-mode vhdl-ts-mode))
 
 
@@ -1008,6 +1038,8 @@ Override any previous configuration for `vhdl-mode' and `vhdl-ts-mode'."
   ;; Jump to parent module ag/ripgrep hooks
   (add-hook 'ag-search-finished-hook #'vhdl-ext-navigation-ag-rg-hook)
   (add-hook 'ripgrep-search-finished-hook #'vhdl-ext-navigation-ag-rg-hook)
+  ;; Font lock
+  (vhdl-ext-font-lock-setup)
   ;; Lsp
   (vhdl-ext-lsp-setup)
   (vhdl-ext-lsp-set-server vhdl-ext-lsp-mode-default-server)
@@ -1024,7 +1056,8 @@ Override any previous configuration for `vhdl-mode' and `vhdl-ts-mode'."
       (progn
         (vhdl-ext-update-buffer-and-dir-list)
         (setq flycheck-ghdl-language-standard (vhdl-ext-get-standard))
-        (setq vhdl-ext-flycheck-ghdl-include-path vhdl-ext-dir-list)
+        (setq flycheck-ghdl-workdir (vhdl-ext-workdir))
+        (setq vhdl-ext-flycheck-ghdl-include-path (append vhdl-ext-flycheck-extra-include vhdl-ext-dir-list))
         (setq vhdl-ext-flycheck-ghdl-work-lib (vhdl-work-library))
         (add-hook 'kill-buffer-hook #'vhdl-ext-kill-buffer-hook nil :local)
         ;; `vhdl-mode'-only customization (exclude `vhdl-ts-mode')
@@ -1036,7 +1069,6 @@ Override any previous configuration for `vhdl-mode' and `vhdl-ts-mode'."
           ;;   The workaround consists in add/remove keywords to the major mode when
           ;;   the minor mode is loaded/unloaded.
           ;;   https://emacs.stackexchange.com/questions/60198/font-lock-add-keywords-is-not-working
-          (font-lock-add-keywords 'vhdl-mode vhdl-ext-font-lock-keywords 'set)
           (font-lock-flush)
           (setq-local font-lock-multiline nil)))
     ;; Cleanup
