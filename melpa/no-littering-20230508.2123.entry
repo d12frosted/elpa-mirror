@@ -1,0 +1,15 @@
+(no-littering .
+	      [(20230508 2123)
+	       ((emacs
+		 (25 1))
+		(compat
+		 (29 1 3 4)))
+	       "Help keeping ~/.config/emacs clean" single
+	       ((:commit . "5a340ddf821b245ad7847b0739cc40a4e4fc833e")
+		(:authors
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainers
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:keywords "convenience")
+		(:url . "https://github.com/emacscollective/no-littering"))])
