@@ -5,8 +5,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-whois
-;; Package-Version: 20230201.1408
-;; Package-Commit: eae090d48f7942f58231be71683865ba3cd56c24
+;; Package-Version: 20230510.919
+;; Package-Commit: bf131b99bb3f5583d27d1c72ef0fbd829ef85664
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: network comm
@@ -87,7 +87,10 @@
      (1 font-lock-type-face)
      (2 font-lock-string-face))
 
-    ("REDACTED FOR PRIVACY"
+    ;; DATA REDACTED
+    ;; REDACTED FOR PRIVACY
+    ;; Redacted for Privacy
+    ("[A-Za-z ]*[Rr]\\(?:EDACTED\\|edacted\\)[A-Za-z ]*"
      (0 font-lock-comment-face t))
 
     ;; Email address (or other address using @ syntax)

@@ -3,18 +3,20 @@ Fetcher: github
 Source:  https://github.com/JuliaEditorSupport/julia-emacs.git
 
 Updating /mnt/store/melpa/working/julia-mode/
-Checking out 7e301f4414e25b4409859c3b8d371352807a3194
+Checking out b35e668d6bcf0fb7de4a9ee1a72ae13aa4fb6562
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/julia-mode/
-  to /tmp/julia-modeuA8440/julia-mode-20230504.1435
+  to /tmp/julia-modek3AJM4/julia-mode-20230510.745
     julia-mode-latexsubs.el -> julia-mode-latexsubs.el
     julia-mode.el -> julia-mode.el
-Created julia-mode-20230504.1435.tar containing:
-  julia-mode-20230504.1435/
-  julia-mode-20230504.1435/julia-mode-latexsubs.el
-  julia-mode-20230504.1435/julia-mode-pkg.el
-  julia-mode-20230504.1435/julia-mode.el
-Built julia-mode in 5.336s, finished at 2023-05-10T04:47:24+0000
+Created julia-mode-20230510.745.tar containing:
+  julia-mode-20230510.745/
+  julia-mode-20230510.745/julia-mode-latexsubs.el
+  julia-mode-20230510.745/julia-mode-pkg.el
+  julia-mode-20230510.745/julia-mode.el
+Built julia-mode in 6.187s, finished at 2023-05-10T08:39:41+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  284 May 10 04:47 packages/julia-mode-20230504.1435.entry
 492K -rw-r--r-- 1 root root 490K May 10 04:47 packages/julia-mode-20230504.1435.tar
+4.0K -rw-r--r-- 1 root root  283 May 10 08:39 packages/julia-mode-20230510.745.entry
+492K -rw-r--r-- 1 root root 490K May 10 08:39 packages/julia-mode-20230510.745.tar
