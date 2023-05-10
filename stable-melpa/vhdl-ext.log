@@ -3,9 +3,35 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/vhdl-ext.git
 
 Updating /mnt/store/melpa/working/vhdl-ext/
-Checking out 0c1a1be2068564917dbc7811bbee4167c720c816
+Checking out fef06c97bb1708ca91839a3e6bef8816c666f1b3
 Warning: vhdl-ext :files spec is equivalent to the default
-Built vhdl-ext in 4.873s, finished at 2023-05-09T21:42:01+0000
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vhdl-ext/
+  to /tmp/vhdl-extJXBeMm/vhdl-ext-20230509.2343
+    vhdl-ext-eglot.el -> vhdl-ext-eglot.el
+    vhdl-ext-flycheck.el -> vhdl-ext-flycheck.el
+    vhdl-ext-font-lock.el -> vhdl-ext-font-lock.el
+    vhdl-ext-imenu.el -> vhdl-ext-imenu.el
+    vhdl-ext-lsp.el -> vhdl-ext-lsp.el
+    vhdl-ext-nav.el -> vhdl-ext-nav.el
+    vhdl-ext-template.el -> vhdl-ext-template.el
+    vhdl-ext-utils.el -> vhdl-ext-utils.el
+    vhdl-ext.el -> vhdl-ext.el
+Created vhdl-ext-20230509.2343.tar containing:
+  vhdl-ext-20230509.2343/
+  vhdl-ext-20230509.2343/vhdl-ext-eglot.el
+  vhdl-ext-20230509.2343/vhdl-ext-flycheck.el
+  vhdl-ext-20230509.2343/vhdl-ext-font-lock.el
+  vhdl-ext-20230509.2343/vhdl-ext-imenu.el
+  vhdl-ext-20230509.2343/vhdl-ext-lsp.el
+  vhdl-ext-20230509.2343/vhdl-ext-nav.el
+  vhdl-ext-20230509.2343/vhdl-ext-pkg.el
+  vhdl-ext-20230509.2343/vhdl-ext-template.el
+  vhdl-ext-20230509.2343/vhdl-ext-utils.el
+  vhdl-ext-20230509.2343/vhdl-ext.el
+Built vhdl-ext in 4.790s, finished at 2023-05-10T01:36:02+0000
  ✓ Success:
  48K -rw-r--r-- 1 root root 45K May  9 21:42 packages/vhdl-ext-20230509.1207.el
 4.0K -rw-r--r-- 1 root root 623 May  9 21:42 packages/vhdl-ext-20230509.1207.entry
+4.0K -rw-r--r-- 1 root root 620 May 10 01:36 packages/vhdl-ext-20230509.2343.entry
+ 72K -rw-r--r-- 1 root root 70K May 10 01:36 packages/vhdl-ext-20230509.2343.tar

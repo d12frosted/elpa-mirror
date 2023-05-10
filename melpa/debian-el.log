@@ -1,0 +1,37 @@
+Package: debian-el
+Fetcher: git
+Source:  https://salsa.debian.org/emacsen-team/debian-el.git
+
+Updating /mnt/store/melpa/working/debian-el/
+Checking out a3ef20c269b9192710567571b20718f572942bc4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/debian-el/
+  to /tmp/debian-elSvfmEh/debian-el-20211006.1939
+    apt-sources.el -> apt-sources.el
+    apt-utils.el -> apt-utils.el
+    deb-view.el -> deb-view.el
+    debian-autoloads.el -> debian-autoloads.el
+    debian-bug.el -> debian-bug.el
+    debian-el-pkg.el -> debian-el-pkg.el
+    debian-el.el -> debian-el.el
+    gnus-BTS.el -> gnus-BTS.el
+    preseed.el -> preseed.el
+    debian-el.texi -> debian-el.texi
+Generating /tmp/debian-elSvfmEh/debian-el-20211006.1939/debian-el.info
+Created debian-el-20211006.1939.tar containing:
+  debian-el-20211006.1939/
+  debian-el-20211006.1939/apt-sources.el
+  debian-el-20211006.1939/apt-utils.el
+  debian-el-20211006.1939/deb-view.el
+  debian-el-20211006.1939/debian-autoloads.el
+  debian-el-20211006.1939/debian-bug.el
+  debian-el-20211006.1939/debian-el-pkg.el
+  debian-el-20211006.1939/debian-el.el
+  debian-el-20211006.1939/debian-el.info
+  debian-el-20211006.1939/dir
+  debian-el-20211006.1939/gnus-BTS.el
+  debian-el-20211006.1939/preseed.el
+Built debian-el in 10.736s, finished at 2023-05-10T00:22:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  152 May 10 00:22 packages/debian-el-20211006.1939.entry
+272K -rw-r--r-- 1 root root 270K May 10 00:22 packages/debian-el-20211006.1939.tar
