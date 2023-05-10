@@ -3,8 +3,20 @@ Fetcher: github
 Source:  https://github.com/gdonald/blackjack-el.git
 
 Updating /mnt/store/melpa/working/blackjack/
-Checking out 81fb684c10f614a0662a207edb845640bf5c0e7c
-Built blackjack in 5.389s, finished at 2023-05-09T12:31:28+0000
+Checking out 12ec927458d2d3f278e04d3ad40c1df75618e21f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/blackjack/
+  to /tmp/blackjackcywXIR/blackjack-20230509.2304
+    blackjack.el -> blackjack.el
+    packages.el -> packages.el
+Created blackjack-20230509.2304.tar containing:
+  blackjack-20230509.2304/
+  blackjack-20230509.2304/blackjack-pkg.el
+  blackjack-20230509.2304/blackjack.el
+  blackjack-20230509.2304/packages.el
+Built blackjack in 4.796s, finished at 2023-05-10T00:11:56+0000
  ✓ Success:
- 48K -rw-r--r-- 1 root root 46K May  9 12:31 packages/blackjack-20230507.2321.el
-4.0K -rw-r--r-- 1 root root 461 May  9 12:31 packages/blackjack-20230507.2321.entry
+ 48K -rw-r--r-- 1 root root 46K May  9 20:16 packages/blackjack-20230507.2321.el
+4.0K -rw-r--r-- 1 root root 461 May  9 20:16 packages/blackjack-20230507.2321.entry
+4.0K -rw-r--r-- 1 root root 458 May 10 00:11 packages/blackjack-20230509.2304.entry
+ 60K -rw-r--r-- 1 root root 60K May 10 00:11 packages/blackjack-20230509.2304.tar

@@ -1,0 +1,12 @@
+(shell-maker .
+	     [(20230509 1738)
+	      ((emacs
+		(27 1)))
+	      "Interaction mode for making comint shells" single
+	      ((:commit . "5de959210d8fc44830aa7719b3235db6cbd08750")
+	       (:authors
+		("Alvaro Ramirez https://xenodium.com"))
+	       (:maintainers
+		("Alvaro Ramirez https://xenodium.com"))
+	       (:maintainer "Alvaro Ramirez https://xenodium.com")
+	       (:url . "https://github.com/xenodium/chatgpt-shell"))])

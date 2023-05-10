@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-evil/evil.git
 
 Updating /mnt/store/melpa/working/evil/
-Checking out 23a20e364cb151d73373d886355508cb8a0d4539
+Checking out 1379ab42c4090b2c677381b3911fec7ede47a4ad
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil/
-  to /tmp/evil7JKAEw/evil-20230421.1417
+  to /tmp/evilEIIxgO/evil-20230509.1636
     evil-command-window.el -> evil-command-window.el
     evil-commands.el -> evil-commands.el
     evil-common.el -> evil-common.el
@@ -27,31 +27,31 @@ Copying files (->) and directories (=>)
     evil-vars.el -> evil-vars.el
     evil.el -> evil.el
   ! doc/build/texinfo/evil.texi -> evil.texi
-Generating /tmp/evil7JKAEw/evil-20230421.1417/evil.info
-Created evil-20230421.1417.tar containing:
-  evil-20230421.1417/
-  evil-20230421.1417/dir
-  evil-20230421.1417/evil-command-window.el
-  evil-20230421.1417/evil-commands.el
-  evil-20230421.1417/evil-common.el
-  evil-20230421.1417/evil-core.el
-  evil-20230421.1417/evil-development.el
-  evil-20230421.1417/evil-digraphs.el
-  evil-20230421.1417/evil-ex.el
-  evil-20230421.1417/evil-integration.el
-  evil-20230421.1417/evil-jumps.el
-  evil-20230421.1417/evil-keybindings.el
-  evil-20230421.1417/evil-macros.el
-  evil-20230421.1417/evil-maps.el
-  evil-20230421.1417/evil-pkg.el
-  evil-20230421.1417/evil-repeat.el
-  evil-20230421.1417/evil-search.el
-  evil-20230421.1417/evil-states.el
-  evil-20230421.1417/evil-types.el
-  evil-20230421.1417/evil-vars.el
-  evil-20230421.1417/evil.el
-  evil-20230421.1417/evil.info
-Built evil in 21.174s, finished at 2023-05-09T12:50:45+0000
+Generating /tmp/evilEIIxgO/evil-20230509.1636/evil.info
+Created evil-20230509.1636.tar containing:
+  evil-20230509.1636/
+  evil-20230509.1636/dir
+  evil-20230509.1636/evil-command-window.el
+  evil-20230509.1636/evil-commands.el
+  evil-20230509.1636/evil-common.el
+  evil-20230509.1636/evil-core.el
+  evil-20230509.1636/evil-development.el
+  evil-20230509.1636/evil-digraphs.el
+  evil-20230509.1636/evil-ex.el
+  evil-20230509.1636/evil-integration.el
+  evil-20230509.1636/evil-jumps.el
+  evil-20230509.1636/evil-keybindings.el
+  evil-20230509.1636/evil-macros.el
+  evil-20230509.1636/evil-maps.el
+  evil-20230509.1636/evil-pkg.el
+  evil-20230509.1636/evil-repeat.el
+  evil-20230509.1636/evil-search.el
+  evil-20230509.1636/evil-states.el
+  evil-20230509.1636/evil-types.el
+  evil-20230509.1636/evil-vars.el
+  evil-20230509.1636/evil.el
+  evil-20230509.1636/evil.info
+Built evil in 13.625s, finished at 2023-05-09T20:36:21+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  333 May  9 12:50 packages/evil-20230421.1417.entry
-912K -rw-r--r-- 1 root root 910K May  9 12:50 packages/evil-20230421.1417.tar
+4.0K -rw-r--r-- 1 root root  333 May  9 20:36 packages/evil-20230509.1636.entry
+912K -rw-r--r-- 1 root root 910K May  9 20:36 packages/evil-20230509.1636.tar

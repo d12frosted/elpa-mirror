@@ -8,7 +8,7 @@ Sourcehut has implemented OAuth 2.0 for its services.  Its
 implementation is unique in that it is released as Free Software,
 and does not require JavaScript for any of the OAuth 2.0 steps.
 
-Here is a diagram summarizing protocol, adapted from RFC 6749:
+Here is a diagram summarizing the protocol, adapted from RFC 6749:
 
           `url' and `url-http-oauth' implement
                  these middle steps

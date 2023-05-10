@@ -3731,25 +3731,27 @@
 		  (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		  (:url . "https://code.google.com/p/url-http-ntlm/"))])
  (url-http-oauth .
-		 [(0 8 1)
+		 [(0 8 2)
 		  nil "OAuth 2.0 for URL library" tar
 		  ((:keywords "comm" "data" "processes" "hypermedia")
 		   (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		   (:authors
 		    ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
 		   (:url . "https://elpa.gnu.org/packages/url-http-oauth.html")
-		   (:commit . "0c284dd7dae76265293b9b35a9bc7aff14a23ed0"))])
+		   (:commit . "b8393fe7ad2becc008975984e76bd485c9039dd7"))])
  (url-http-oauth-demo .
-		      [(1 0 1)
+		      [(1 0 2)
 		       ((url-http-oauth
-			 (0 8 1)))
+			 (0 8 1))
+			(emacs
+			 (27 1)))
 		       "Demo url-http-oauth" tar
 		       ((:keywords "comm" "data" "processes" "hypermedia")
 			(:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 			(:authors
 			 ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
 			(:url . "https://elpa.gnu.org/packages/url-http-oauth-demo.html")
-			(:commit . "17230fc6513df52f1417b335f64c9f405e5a9126"))])
+			(:commit . "25fba0ee02b0183fbcfd9d67fc4203c183bc9be2"))])
  (url-scgi .
 	   [(0 9)
 	    ((emacs
