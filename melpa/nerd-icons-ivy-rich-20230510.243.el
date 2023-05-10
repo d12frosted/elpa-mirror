@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/nerd-icons-ivy-rich
 ;; Version: 1.0.1
-;; Package-Version: 20230509.442
-;; Package-Commit: 892d49436b7d23edd6c4a7eb934f15308f331261
+;; Package-Version: 20230510.243
+;; Package-Commit: 664f4cd0bfd9845ef429cb341a713d1a9ded76d6
 ;; Package-Requires: ((emacs "26.1") (ivy-rich "0.1.0") (nerd-icons "0.0.1"))
 ;; Keywords: convenience, icons, ivy
 
@@ -296,12 +296,12 @@
   "Face used to highlight general symbols.")
 
 (defface nerd-icons-ivy-rich-imenu-type-face
-  '((t (:inherit nerd-icons-ivy-rich-type-face :height 0.9)))
+  '((t (:inherit nerd-icons-ivy-rich-type-face)))
   "Face used for imenu type."
   :group 'nerd-icons-ivy-rich)
 
 (defface nerd-icons-ivy-rich-imenu-doc-face
-  '((t (:inherit nerd-icons-ivy-rich-doc-face :height 0.9)))
+  '((t (:inherit nerd-icons-ivy-rich-doc-face)))
   "Face used for imenu documentation."
   :group 'nerd-icons-ivy-rich)
 

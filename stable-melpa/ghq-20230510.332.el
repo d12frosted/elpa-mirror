@@ -4,13 +4,14 @@
 ;; Copyright (C) 2021 Joseph LaFreniere
 
 ;; Author: Roman Coedo <romancoedo@gmail.com>
+;; Maintainer: Joseph LaFreniere <joseph@lafreniere.xyz>
+;; URL: https://github.com/lafrenierejm/emacs-ghq
+;; Package-Version: 20230510.332
+;; Package-Commit: eb197c14e53ac57a136ea8d34eec7528487c3301
 ;; Created 28 November 2015
-;; Version: 0.1.3
-;; Package-Version: 20230508.1649
-;; Package-Commit: a5de31e0e37a4a61bf5f425cece2a1e209498977
+;; Version: 0.2.0
+;; Keywords: convenience
 ;; Package-Requires: ((emacs "26.1") (dash "2.18.0") (s "1.7.0"))
-
-;; Keywords: ghq
 
 ;;; Commentary:
 
@@ -50,7 +51,9 @@
   (ghq--find-root))
 
 (defcustom ghq-after-clone-functions nil
-  "List of functions to be called on the path of a newly cloned repository.")
+  "List of functions to be called on the path of a newly cloned repository."
+  :group 'ghq
+  :type '(repeat symbol))
 
 (defun ghq--find-projects ()
   "Find the list of ghq projects relative to ghq root."
@@ -101,19 +104,6 @@
     ("Open Dired other window" . (lambda (dir) (dired-other-window (concat ghq--root "/" dir))))
     ("Open Dired other frame"  . (lambda (dir) (dired-other-frame  (concat ghq--root "/" dir))))))
 
-;(defun ghq--build-helm-source ()
-  ;"Build a helm source."
-  ;(when (fboundp 'helm-build-sync-source)
-  ;(helm-build-async-source "Search ghq projects with helm"
-    ;:candidates-process (lambda () (start-process "ghq-list-process" nil "ghq" "list" helm-pattern))
-    ;:action ghq--helm-action)))
-
-(defun ghq--build-helm-source ()
-  "Build a helm source."
-  (helm-make-source "Search ghq projects with helm" 'helm-source-sync
-    :candidates (ghq--find-projects)
-    :action ghq--helm-action))
-
 (defun ghq-list ()
   "Display the ghq project list in a message."
   (interactive)
@@ -127,8 +117,15 @@
 (defun helm-ghq-list ()
   "Opens a helm buffer with ghq projects as source."
   (interactive)
-  (when (and (fboundp 'ghq--build-helm-source) (fboundp 'helm))
-    (helm :sources (ghq--build-helm-source) :prompt "Select repository: " :buffer "*ghq-helm*")))
+  (when (and  (fboundp 'helm) (fboundp 'helm-make-source))
+    (helm
+     :sources (helm-make-source
+               "Search ghq projects with helm"
+               'helm-source-sync
+               :candidates (ghq--find-projects)
+               :action ghq--helm-action)
+     :prompt "Select repository: "
+     :buffer "*ghq-helm*")))
 
 (provide 'ghq)
 ;;; ghq.el ends here
