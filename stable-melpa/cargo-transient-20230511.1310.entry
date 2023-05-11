@@ -1,0 +1,12 @@
+(cargo-transient .
+		 [(20230511 1310)
+		  ((emacs
+		    (28 1)))
+		  "A transient UI for Cargo, Rust's package manager" single
+		  ((:commit . "3ca4f2109913b1e05136ab4497a9c095a9ee7a28")
+		   (:authors
+		    ("Peter Stuart" . "peter@peterstuart.org"))
+		   (:maintainers
+		    ("Peter Stuart" . "peter@peterstuart.org"))
+		   (:maintainer "Peter Stuart" . "peter@peterstuart.org")
+		   (:url . "https://github.com/peterstuart/cargo-transient"))])

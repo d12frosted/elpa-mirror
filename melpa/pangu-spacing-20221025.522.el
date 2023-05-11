@@ -5,6 +5,8 @@
 ;; Author: coldnew <coldnew.tw@gmail.com>
 ;; Kyewords: converience
 ;; Version: 0.4
+;; Package-Version: 20221025.522
+;; Package-Commit: 2303013e5cd7852136f1429162fea0e1c8cb0221
 ;; X-URL: http://github.com/coldnew/pangu-spacing
 ;; URL: http://github.com/coldnew/pangu-spacing
 

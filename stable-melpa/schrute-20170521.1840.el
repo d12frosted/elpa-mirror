@@ -4,10 +4,8 @@
 
 ;; Author: Jorge Araya Navarro <elcorreo@deshackra.com>
 ;; Keywords: convenience
-;; Package-Commit: 59faa6c4232ae183cea93237301acad8c0763997
 ;; Package-Requires: ((emacs "24.3"))
-;; Package-Version: 20170521.1840
-;; Package-X-Original-Version: 0.2.2
+;; Package-Version: 0.2.2
 ;; Homepage: https://bitbucket.org/shackra/dwight-k.-schrute
 
 ;; This file is not part of GNU Emacs.
@@ -151,6 +149,12 @@ same command and use the alternative command instead."
       (when (> schrute--times-last-command schrute-command-repetitions)
         (setf schrute--times-last-command 0)
         ;; Call the alternative command for `this-command'
+        (schrute--run-command)))))
+
+(provide 'schrute)
+
+;;; schrute.el ends here
+mand for `this-command'
         (schrute--run-command)))))
 
 (provide 'schrute)

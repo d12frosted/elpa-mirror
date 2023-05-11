@@ -3,3 +3,18 @@ Fetcher: github
 Source:  https://github.com/dimitri/pgdevenv-el.git
 
 Updating /mnt/store/melpa/working/pgdevenv/
+Checking out 7f1d5bc734750aca98cf67a9491cdbd5615fd132
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pgdevenv/
+  to /tmp/pgdevenvCfqxNu/pgdevenv-20150105.2236
+    pgdevenv.el -> pgdevenv.el
+    pgsql-minor-mode.el -> pgsql-minor-mode.el
+Created pgdevenv-20150105.2236.tar containing:
+  pgdevenv-20150105.2236/
+  pgdevenv-20150105.2236/pgdevenv-pkg.el
+  pgdevenv-20150105.2236/pgdevenv.el
+  pgdevenv-20150105.2236/pgsql-minor-mode.el
+Built pgdevenv in 4.081s, finished at 2023-05-11T16:01:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 425 May 11 16:01 packages/pgdevenv-20150105.2236.entry
+ 32K -rw-r--r-- 1 root root 30K May 11 16:01 packages/pgdevenv-20150105.2236.tar
