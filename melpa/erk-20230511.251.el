@@ -4,8 +4,8 @@
 
 ;; Author:  <author>
 ;; Keywords: convenience
-;; Package-Version: 20230120.622
-;; Package-Commit: 6ca1aabc6c60c8722bc5dca4aedbc033b1d9fff5
+;; Package-Version: 20230511.251
+;; Package-Commit: f6cca4647538c4dc659f07669938f7e795dba4ee
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "28.1") (auto-compile "1.2.0") (dash "2.18.0"))
 ;; Homepage: http://github.com/positron-solutions/elisp-repo-kit
@@ -13,7 +13,7 @@
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy of
 ;; this software and associated documentation files (the "Software"), to deal in
 ;; the Software without restriction, including without limitation the rights to
-;; use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+;; use, copy, modify, merge, publish, distribute, sub-license, and/or sell copies of
 ;; the Software, and to permit persons to whom the Software is furnished to do so,
 ;; subject to the following conditions:
 
@@ -29,7 +29,7 @@
 
 ;;; Commentary:
 
-;; Set up Emacs package with Gihub repository configuration, complete with
+;; Set up Emacs package with GitHub repository configuration, complete with
 ;; Actions CI, tests, lints, and a licensing scheme all ready to go.  Included
 ;; commands are focused on productivity, appropriate for professional
 ;; development in elisp.  The goal of the package is streamline authoring &
@@ -37,8 +37,8 @@
 ;; scheme, aka opinionated.
 ;;
 ;; The package also uses its own hosted source as a substrate for creating new
-;; packages.  It will clone its source respository and then perform renaming &
-;; relicensing.  Simply call `erk-new' to start a new package.  The
+;; packages.  It will clone its source repository and then perform renaming &
+;; re-licensing.  Simply call `erk-new' to start a new package.  The
 ;; README documents remaining setup steps on GitHub and in preparation for
 ;; publishing on MELPA.
 ;;
@@ -435,7 +435,7 @@ by the author of this repository."
 
 ;;;###autoload
 (defun erk-new (package-name package-prefix clone-root author user-org email &optional rev)
-  "Clone elisp-repo-kit, rename, and relicense in one step.
+  "Clone elisp-repo-kit, rename, and re-license in one step.
 CLONE-ROOT is where you want to clone your package to (including
 the clone dir).  PACKAGE-NAME should be the long name of the
 package, what will show up in melpa etc.  PACKAGE-PREFIX can be

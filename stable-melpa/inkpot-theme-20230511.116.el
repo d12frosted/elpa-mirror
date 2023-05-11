@@ -4,8 +4,8 @@
 ;; Author: Sarah Iovan <sarah@hwaetageek.com>
 ;;         Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://codeberg.org/ideasman42/emacs-inkpot-theme
-;; Package-Version: 20230418.127
-;; Package-Commit: 8f0c4c85f69aeab53901c235b9c588689dea8f6c
+;; Package-Version: 20230511.116
+;; Package-Commit: 43c008f05b982fa41fc477b2f487ce04023dd073
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -381,7 +381,9 @@
    ;; vundo (elpa).
    `(vundo-node ((t (:foreground ,ip-slate-dark+15.7))))
    `(vundo-stem ((t (:foreground ,ip-slate-dark+15.7))))
-   `(vundo-saved ((t (:foreground ,ip-cream-light))))
+   `(vundo-branch-stem ((t (:foreground ,ip-slate-light))))
+   `(vundo-saved ((t (:foreground ,ip-slate-light))))
+   `(vundo-last-saved ((t (:foreground ,ip-cream-light))))
    `(vundo-highlight ((t (:foreground ,ip-yellow-bright))))
 
    ;; anzu (melpa)
