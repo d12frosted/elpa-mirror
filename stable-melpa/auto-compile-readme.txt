@@ -73,14 +73,14 @@ source file use the command `toggle-auto-compile'.  Since the modes
 only ever _update_ byte code files, toggling automatic compilation
 is done simply by either creating the byte code file or by removing
 it.  `toggle-auto-compile' can also toggle automatic compilation of
-multiple files at once; see its doc-string for more information.
+multiple files at once; see its docstring for more information.
 
 Customization
 -------------
 
 Constantly having the *Compile-Log* buffer pop up when a file is
 being saved can quickly become annoying.  Obviously the first thing
-you should do to about that is to actually fix outstanding issues.
+you should do about that is to actually fix outstanding issues.
 
 Once you have done that you might also want to keep that buffer
 from being automatically displayed and instead only show the number

@@ -3619,15 +3619,18 @@
 		("David Gonzalez Gandara" . "dggandara@member.fsf.org"))
 	       (:maintainer "David Gonzalez Gandara" . "dggandara@member.fsf.org"))])
  (transient .
-	    [(0 3 7)
+	    [(0 4 0)
 	     ((emacs
-	       (25 1)))
+	       (25 1))
+	      (compat
+	       (29 1 4 1)))
 	     "Transient commands" tar
 	     ((:url . "https://github.com/magit/transient")
-	      (:keywords "bindings")
+	      (:keywords "extensions")
 	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 	      (:authors
-	       ("Jonas Bernoulli" . "jonas@bernoul.li")))])
+	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	      (:commit . "b4127842f200848817103e8d4c45c36bc8fdf3b8"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs

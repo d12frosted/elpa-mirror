@@ -1,0 +1,23 @@
+(lsp-mssql .
+	   [(20230510 1124)
+	    ((emacs
+	      (25 1))
+	     (lsp-mode
+	      (6 2))
+	     (dash
+	      (2 14 1))
+	     (f
+	      (0 20 0))
+	     (ht
+	      (2 0))
+	     (lsp-treemacs
+	      (0 1)))
+	    "MSSQL LSP bindings" tar
+	    ((:commit . "a0dba8f86a2ace7e800a9dc8f814767625a509af")
+	     (:authors
+	      ("Ivan Yonchovski" . "yyoncho@gmail.com"))
+	     (:maintainers
+	      ("Ivan Yonchovski" . "yyoncho@gmail.com"))
+	     (:maintainer "Ivan Yonchovski" . "yyoncho@gmail.com")
+	     (:keywords "data" "languages")
+	     (:url . "https://github.com/emacs-lsp/lsp-mssql"))])
