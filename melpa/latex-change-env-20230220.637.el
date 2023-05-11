@@ -4,6 +4,8 @@
 ;;
 ;; Author: Tony Zorman <soliditsallgood@mailbox.org>
 ;; Keywords: convenience, tex
+;; Package-Version: 20230220.637
+;; Package-Commit: 748cdbb4bbf29a2e5053cf3d965e95cc7db67fac
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "27.1") (auctex "13.1"))
 ;; Homepage: https://gitlab.com/slotThe/change-env
