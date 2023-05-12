@@ -835,9 +835,11 @@
 		("Florian Ragwitz" . "rafl@debian.org")
 		("Marius Vollmer" . "marius.vollmer@gmail.com")))])
  (git-modes .
-	    [(1 4 0)
+	    [(1 4 1)
 	     ((emacs
-	       (24 3)))
+	       (25 1))
+	      (compat
+	       (29 1 4 1)))
 	     "Major modes for editing Git configuration files" tar
 	     ((:url . "https://github.com/magit/git-modes")
 	      (:keywords "convenience" "vc" "git")
@@ -845,7 +847,8 @@
 	      (:authors
 	       ("Sebastian Wiesner" . "lunaryorn@gmail.com")
 	       ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
-	       ("Jonas Bernoulli" . "jonas@bernoul.li")))])
+	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	      (:commit . "44d536ba637235c9dd203410281397417a3e60b6"))])
  (gnu-apl-mode .
 	       [(1 5 1)
 		nil "Emacs mode for GNU APL" tar
@@ -1491,19 +1494,22 @@
 		    ("Takaaki ISHIKAWA <takaxp at ieee dot org>"))
 		   (:commit . "07906356f0b8d8ac51645b0994b8108deb53003d"))])
  (orgit .
-	[(1 8 0)
+	[(1 9 0)
 	 ((emacs
 	   (25 1))
+	  (compat
+	   (29 1 4 1))
 	  (magit
-	   (3 0))
+	   (3 3 0))
 	  (org
-	   (9 4)))
-	 "support for Org links to Magit buffers" tar
+	   (9 6 5)))
+	 "Support for Org links to Magit buffers" tar
 	 ((:url . "https://github.com/magit/orgit")
+	  (:keywords "hypermedia" "vc")
 	  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 	  (:authors
 	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
-	  (:commit . "0b49d7a869b8fef3537a75df4db693ca3e3935a3"))])
+	  (:commit . "4a585029875a1dbbe96d8ac157bd2fd02875f289"))])
  (pacmacs .
 	  [(0 1 1)
 	   ((emacs
@@ -2162,16 +2168,18 @@
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
 	     (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor .
-	      [(3 2 0)
+	      [(3 3 0)
 	       ((emacs
-		 (24 4)))
+		 (25 1))
+		(compat
+		 (29 1 4 1)))
 	       "Use the Emacsclient as $EDITOR" tar
 	       ((:url . "https://github.com/magit/with-editor")
-		(:keywords "tools")
+		(:keywords "processes" "terminals")
 		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 		(:authors
 		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
-		(:commit . "a762199d9bb8ee60311eaabf791b3dd64140effd"))])
+		(:commit . "bce8d1bf3faf5237332aada3bb0920bbbc037fe7"))])
  (with-simulated-input .
 		       [(3 0)
 			((emacs
