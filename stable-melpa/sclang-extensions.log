@@ -1,0 +1,26 @@
+Package: sclang-extensions
+Fetcher: github
+Source:  https://github.com/chrisbarrett/sclang-extensions.git
+
+Updating /mnt/store/melpa/working/sclang-extensions/
+Checking out e9cc79732f16fdb582129303110c163dcc0d6da0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sclang-extensions/
+  to /tmp/sclang-extensionsIY07Gb/sclang-extensions-20160509.338
+    sclang-ac-mode.el -> sclang-ac-mode.el
+    sclang-doc-mode.el -> sclang-doc-mode.el
+    sclang-extensions-utils.el -> sclang-extensions-utils.el
+    sclang-extensions.el -> sclang-extensions.el
+    sclang-post-mode.el -> sclang-post-mode.el
+Created sclang-extensions-20160509.338.tar containing:
+  sclang-extensions-20160509.338/
+  sclang-extensions-20160509.338/sclang-ac-mode.el
+  sclang-extensions-20160509.338/sclang-doc-mode.el
+  sclang-extensions-20160509.338/sclang-extensions-pkg.el
+  sclang-extensions-20160509.338/sclang-extensions-utils.el
+  sclang-extensions-20160509.338/sclang-extensions.el
+  sclang-extensions-20160509.338/sclang-post-mode.el
+Built sclang-extensions in 6.616s, finished at 2023-05-11T23:56:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 565 May 11 23:56 packages/sclang-extensions-20160509.338.entry
+ 52K -rw-r--r-- 1 root root 50K May 11 23:56 packages/sclang-extensions-20160509.338.tar

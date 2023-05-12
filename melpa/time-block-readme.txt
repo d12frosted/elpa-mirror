@@ -71,6 +71,13 @@ command.  This global minor mode by default will block all
 block-groups, but this behavior may be changed using
 `time-block-block-checkers'.
 
+;; Relaxed Mode
+
+A "relaxed mode" (disabling all blocking) may be enabled with the
+`time-block-relaxed-mode' command.  This global minor mode will
+disable all block groups (and ignore `time-block-focus-mode').  At
+present, this behavior is not configurable.
+
 ;; Checking if A Group Is Blocked
 
 You may check if a group is currently blocked using the

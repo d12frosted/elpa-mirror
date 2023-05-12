@@ -1224,7 +1224,7 @@
 		    ("Matthew L. Fidler" . "matthew.fidler@gmail.com"))
 		   (:keywords "convenience"))])
  (excorporate .
-	      [(1 0 0)
+	      [(1 1 0)
 	       ((emacs
 		 (24 1))
 		(cl-lib
@@ -1236,13 +1236,16 @@
 		(url-http-ntlm
 		 (2 0 4))
 		(nadvice
-		 (0 3)))
+		 (0 3))
+		(url-http-oauth
+		 (0 8 3)))
 	       "Exchange Web Services (EWS) integration" tar
 	       ((:url . "https://www.fitzsim.org/blog/")
+		(:keywords "calendar")
 		(:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		(:authors
 		 ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
-		(:keywords "calendar"))])
+		(:commit . "7df1891759e26541711ccbff739a39be6bca09ac"))])
  (expand-region .
 		[(0 11 0)
 		 nil "Increase selected region by semantic units." tar

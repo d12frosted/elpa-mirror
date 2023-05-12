@@ -1,0 +1,15 @@
+(morlock .
+	 [(20230511 2105)
+	  ((emacs
+	    (25 1))
+	   (compat
+	    (29 1 4 1)))
+	  "More font-lock keywords for elisp" single
+	  ((:commit . "b7e2066a69c059c5d4c72e829b615a6b15cef4dc")
+	   (:authors
+	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	   (:maintainers
+	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	   (:keywords "convenience")
+	   (:url . "https://github.com/tarsius/morlock"))])

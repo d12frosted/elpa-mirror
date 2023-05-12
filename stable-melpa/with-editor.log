@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/magit/with-editor.git
 
 Updating /mnt/store/melpa/working/with-editor/
-Checking out 59867aebe16454be4d8c0c858f3b00b8a34f3f61
+Checking out bce8d1bf3faf5237332aada3bb0920bbbc037fe7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/with-editor/
-  to /tmp/with-editork9HCoS/with-editor-20230212.2214
+  to /tmp/with-editor28YXwc/with-editor-20230511.2142
   ! lisp/with-editor.el -> with-editor.el
   ! docs/with-editor.texi -> with-editor.texi
-Generating /tmp/with-editork9HCoS/with-editor-20230212.2214/with-editor.info
-Created with-editor-20230212.2214.tar containing:
-  with-editor-20230212.2214/
-  with-editor-20230212.2214/dir
-  with-editor-20230212.2214/with-editor-pkg.el
-  with-editor-20230212.2214/with-editor.el
-  with-editor-20230212.2214/with-editor.info
-Built with-editor in 8.621s, finished at 2023-05-11T12:34:36+0000
+Generating /tmp/with-editor28YXwc/with-editor-20230511.2142/with-editor.info
+Created with-editor-20230511.2142.tar containing:
+  with-editor-20230511.2142/
+  with-editor-20230511.2142/dir
+  with-editor-20230511.2142/with-editor-pkg.el
+  with-editor-20230511.2142/with-editor.el
+  with-editor-20230511.2142/with-editor.info
+Built with-editor in 15.179s, finished at 2023-05-12T00:12:10+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 493 May 11 12:34 packages/with-editor-20230212.2214.entry
- 72K -rw-r--r-- 1 root root 70K May 11 12:34 packages/with-editor-20230212.2214.tar
+4.0K -rw-r--r-- 1 root root 493 May 11 20:17 packages/with-editor-20230212.2214.entry
+ 72K -rw-r--r-- 1 root root 70K May 11 20:17 packages/with-editor-20230212.2214.tar
+4.0K -rw-r--r-- 1 root root 493 May 12 00:12 packages/with-editor-20230511.2142.entry
+ 72K -rw-r--r-- 1 root root 70K May 12 00:12 packages/with-editor-20230511.2142.tar
