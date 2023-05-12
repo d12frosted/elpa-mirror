@@ -1,0 +1,21 @@
+(git-commit-insert-issue .
+			 [(20230512 1416)
+			  ((emacs
+			    (25))
+			   (projectile
+			    (0))
+			   (s
+			    (0))
+			   (ghub
+			    (0))
+			   (bitbucket
+			    (0)))
+			  "Get issues list when typing \"Fixes #\"" single
+			  ((:commit . "df7ce0549d1db7bab27d401a351ea0d187c4a673")
+			   (:authors
+			    ("Vindarel"))
+			   (:maintainers
+			    ("Vindarel"))
+			   (:maintainer "Vindarel")
+			   (:keywords "tools" "vc" "github" "gitlab" "bitbucket" "commit" "issues")
+			   (:url . "https://gitlab.com/emacs-stuff/git-commit-insert-issue/"))])

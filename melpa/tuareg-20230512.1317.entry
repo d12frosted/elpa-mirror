@@ -1,0 +1,20 @@
+(tuareg .
+	[(20230512 1317)
+	 ((emacs
+	   (26 3))
+	  (caml
+	   (4 8)))
+	 "OCaml mode" tar
+	 ((:commit . "34090741ee56809bc0a7937988521dcf7b7a94b2")
+	  (:authors
+	   ("Albert Cohen" . "Albert.Cohen@inria.fr")
+	   ("Sam Steingold" . "sds@gnu.org")
+	   ("Christophe Troestler" . "Christophe.Troestler@umons.ac.be")
+	   ("Till Varoquaux" . "till@pps.jussieu.fr")
+	   ("Sean McLaughlin" . "seanmcl@gmail.com")
+	   ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
+	  (:maintainers
+	   ("Christophe Troestler" . "Christophe.Troestler@umons.ac.be"))
+	  (:maintainer "Christophe Troestler" . "Christophe.Troestler@umons.ac.be")
+	  (:keywords "ocaml" "languages")
+	  (:url . "https://github.com/ocaml/tuareg"))])
