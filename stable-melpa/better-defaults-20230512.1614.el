@@ -4,8 +4,8 @@
 
 ;; Author: Phil Hagelberg
 ;; URL: https://github.com/technomancy/better-defaults
-;; Package-Version: 20221125.1725
-;; Package-Commit: a45aecec0cf223984bc8649cd1dc81a5004932b4
+;; Package-Version: 20230512.1614
+;; Package-Commit: 99e96ba100ab8d5424f36f9087ca26c2e8a981bd
 ;; Version: 0.1.4
 ;; Package-Requires: ((emacs "25.1"))
 ;; Created: 2013-04-16
@@ -45,7 +45,7 @@
 ;;; Code:
 
 (progn
-  (unless (or (fboundp 'helm-mode) (fboundp 'ivy-mode))
+  (unless (or (fboundp 'helm-mode) (fboundp 'ivy-mode) (fboundp 'fido-vertical-mode))
     (ido-mode t)
     (setq ido-enable-flex-matching t))
 

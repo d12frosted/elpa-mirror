@@ -5,10 +5,10 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
 ;; Keywords: convenience
-;; Package-Version: 20230508.2123
-;; Package-Commit: 5a340ddf821b245ad7847b0739cc40a4e4fc833e
+;; Package-Version: 20230512.1518
+;; Package-Commit: ef02b6fcedd97f3ab039b51411fdaab7336d819b
 
-;; Package-Requires: ((emacs "25.1") (compat "29.1.3.4"))
+;; Package-Requires: ((emacs "25.1") (compat "29.1.4.1"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -533,7 +533,7 @@ you must turn of these features completely."
         `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
           ("\\`/tmp/" . nil)
           ("\\`/dev/shm/" . nil)
-          ("." ,(no-littering-expand-var-file-name "undo-tree-hist/"))))
+          ("." . ,(no-littering-expand-var-file-name "undo-tree-hist/"))))
   )
 
 ;;; _

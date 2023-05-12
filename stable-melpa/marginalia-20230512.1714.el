@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.2
-;; Package-Version: 20230511.1531
-;; Package-Commit: b900ec5457068cd2b15b0e3600437f147c6bf636
+;; Package-Version: 20230512.1714
+;; Package-Commit: 2da34efdefc6ae1e0c8a5d52cba10b72945bdc8d
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.4.0"))
 ;; Homepage: https://github.com/minad/marginalia
 ;; Keywords: docs, help, matching, completion
@@ -465,7 +465,9 @@ f function
 c command
 C interactive-only command
 m macro
-M special-form
+F special-form
+M module function
+P primitive
 g cl-generic
 p pure
 s side-effect-free
@@ -498,7 +500,9 @@ t cl-type"
                  '("c" . "command")))
               ((cl-generic-p s) '("g" . "cl-generic"))
               ((macrop (symbol-function s)) '("m" . "macro"))
-              ((special-form-p (symbol-function s)) '("M" . "special-form"))
+              ((special-form-p (symbol-function s)) '("F" . "special-form"))
+              ((subr-primitive-p (symbol-function s)) '("P" . "primitive"))
+              ((module-function-p (symbol-function s)) '("M" . "module function"))
               (t '("f" . "function")))
              (and (autoloadp (symbol-function s)) '("@" . "autoload"))
              (and (marginalia--advised s) '("!" . "advised"))
