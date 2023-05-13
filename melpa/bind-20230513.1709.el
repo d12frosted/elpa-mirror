@@ -6,9 +6,9 @@
 ;; Maintainer: repelliuss <repelliuss@gmail.com>
 ;; Created: March 26, 2023
 ;; Modified: March 26, 2023
-;; Version: 0.9.0
-;; Package-Version: 20230507.1304
-;; Package-Commit: cfefa7577dbc6b28af5afa47c197293906916483
+;; Version: 0.9.1
+;; Package-Version: 20230513.1709
+;; Package-Commit: 2a9b8c4eb0b58c0058da1387811edc8436da49c4
 ;; Package-Requires: ((emacs "25.1"))
 
 ;; Homepage: https://github.com/repelliuss/bind
@@ -38,7 +38,7 @@
   "Bind many keys to many keymaps."
   :group 'emacs
   :prefix "bind-"
-  :package-version '(Bind . "0.9.0"))
+  :package-version '(Bind . "0.9.1"))
 
 (defvar bind--metadata nil
   "A plist that carries the info available to upper bind functions to lowers'.
@@ -328,7 +328,8 @@ FORM-OR-FORMS can be a single FORM or list of FORMs."
 (defmacro bind-undo (&rest form)
   "Undo (or unbind) `bind' FORM keys."
   `(let ((bind--definer #'bind--definer-unbind))
-     (bind ,@form)))
+     (bind-with-metadata (:engine 'bind-undo)
+       (bind ,@form))))
 
 ;;;###autoload
 (defmacro bind-save (&rest form)
@@ -342,13 +343,15 @@ This function still evaluates functions inside FORM like
 `bind-repeat', so it is not side effect free."
   `(let (bind--savings
 	 (bind--definer #'bind--definer-save))
-     (bind ,@form)
+     (bind-with-metadata (:engine 'bind-save)
+       (bind ,@form))
      bind--savings))
 
 ;;;###autoload
 (defmacro bind-restore (save)
   "Restore definitions in SAVE from `bind-save'."
-  `(bind ,@(eval save)))
+  `(bind-with-metadata (:engine 'bind-restore)
+     (bind ,@(eval save))))
 
 ;;;###autoload
 (defun bind-prefix (prefix &rest bindings)
@@ -356,20 +359,22 @@ This function still evaluates functions inside FORM like
 PREFIX can also be ending with a modifier, such as C-, S- C-S-
 etc."
   (declare (indent 1))
-  (setq bindings (bind-flatten1-key-of-bindings bindings))
-  (let (new-bindings
-	(prefix (concat prefix (if (string-match "\\([[:space:]]\\|^\\)\\(.-\\)+$"
-						 (car (last (split-string prefix))))
-				   ""
-				 " "))))
-    (bind-foreach-key-def bindings
-      (lambda (key def)
-	(push def new-bindings)
-	(push (if (stringp key)
-		  (concat prefix key)
-		key)
-	      new-bindings)))
-    new-bindings))
+  (if (plist-get bind--metadata :engine)
+      bindings
+    (setq bindings (bind-flatten1-key-of-bindings bindings))
+    (let (new-bindings
+	  (prefix (concat prefix (if (string-match "\\([[:space:]]\\|^\\)\\(.-\\)+$"
+						   (car (last (split-string prefix))))
+				     ""
+				   " "))))
+      (bind-foreach-key-def bindings
+	(lambda (key def)
+	  (push def new-bindings)
+	  (push (if (stringp key)
+		    (concat prefix key)
+		  key)
+		new-bindings)))
+      new-bindings)))
 (put :prefix 'lisp-indent-function 1)
 
 ;;;###autoload
@@ -379,23 +384,25 @@ Note that `bind' doesn't provide :main-file prop so user must
 provide it.  For example, one can utilize its package
 configurator."
   (declare (indent 1))
-  (let (file)
-    (if (symbolp file-as-symbol-or-key)
-	(setq file (symbol-name file-as-symbol-or-key))
-      (setq file (plist-get bind--metadata :main-file)
-	    bindings `(,file-as-symbol-or-key ,@bindings)))
-    (if (not file) (error "Bad FILE-AS-SYMBOL-OR-KEY argument to BIND-AUTOLOAD"))
-    (setq bindings (bind-flatten1-key-of-bindings bindings))
-    (bind-foreach-key-def bindings
-      (lambda (_key def)
-	(autoload def file nil t))))
+  (when (not (plist-get bind--metadata :engine))
+    (let (file)
+      (if (symbolp file-as-symbol-or-key)
+	  (setq file (symbol-name file-as-symbol-or-key))
+	(setq file (plist-get bind--metadata :main-file)
+	      bindings `(,file-as-symbol-or-key ,@bindings)))
+      (if (not file) (error "Bad FILE-AS-SYMBOL-OR-KEY argument to BIND-AUTOLOAD"))
+      (setq bindings (bind-flatten1-key-of-bindings bindings))
+      (bind-foreach-key-def bindings
+	(lambda (_key def)
+	  (autoload def file nil t)))))
   bindings)
 (put :autoload 'lisp-indent-function 1)
 
 ;;;###autoload
 (defun bind-repeat (&optional target-map &rest bindings)
-  "Add repeat utility to each DEF in BINDINGS for TARGET-MAP or :main metadata.
-This requires `repeat-mode' to be active to take effect."
+  "Add repeat prop to each DEF in BINDINGS for TARGET-MAP or :main metadata.
+This requires `repeat-mode' to be active to take effect.
+Note that definitions should also appear in TARGET-MAP."
   (declare (indent 0))
   (when-let ((main (or (if (keymapp target-map)
 			   target-map
@@ -409,11 +416,15 @@ This requires `repeat-mode' to be active to take effect."
 			 nil))))
     (setq bindings (bind-flatten1-key-of-bindings bindings))
     (bind-foreach-key-def bindings
-      (lambda (_key def)
-	(put def 'repeat-map main))))
+      (if (not (plist-get bind--metadata :engine))
+	  (lambda (_key def)
+	    (put def 'repeat-map main))
+	(lambda (_key def)
+	  (put def 'repeat-map nil)))))
   bindings)
 (put :repeat 'lisp-indent-function 0)
 
 (provide 'bind)
 
 ;;; bind.el ends here
+
