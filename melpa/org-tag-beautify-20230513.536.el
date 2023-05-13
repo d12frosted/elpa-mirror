@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (nerd-icons "0.0.1"))
-;; Package-Version: 20230508.442
-;; Package-Commit: a33c231154c4375f0fd1d384b4b5760958c54bf4
+;; Package-Version: 20230513.536
+;; Package-Commit: 1715ae397f5125aceb2ba61b2d3ce451aed22474
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -88,7 +88,7 @@ hardcoded (tag . icon) pair bindings to display icon."
 (defun org-tag-beautify--nerd-icons-get-icon-name (icon-plist) ; (#("<icon>" ...))
   "Extract only icon name string from icon plist structure."
   (let ((icon-name-glyph-set
-         ;; strip out text-property from icon name -> "nf-mdi-access_point	[mdicon]"
+         ;; strip out text-property from icon name -> "nf-md-access_point	[mdicon]"
          (substring-no-properties (car icon-plist))))
     ;; keep only icon name
     (when (string-match
@@ -100,21 +100,6 @@ hardcoded (tag . icon) pair bindings to display icon."
   (mapcar 'org-tag-beautify--nerd-icons-get-icon-name
           org-tag-beautify--nerd-icons-icons-list)
   "Store all icon names list into a variable to avoid repeatedly computing.")
-
-(defun org-tag-beautify--initialize-org-tags-alist ()
-  "Append `nerd-icons' icon names into the `org-tags-alist'."
-  (let ((icon-names (mapcar
-                     'org-tag-beautify--nerd-icons-get-icon-name
-                     org-tag-beautify--nerd-icons-icons-list)))
-    (setq org-tag-alist
-          (append org-tag-alist
-                  `((:startgrouptag)
-                    ("@nerd-icons")
-                    (:grouptags)
-                    ,@(mapcar 'list icon-names)
-                    (:endgrouptag))))))
-
-;; (org-tag-beautify--initialize-org-tags-alist)
 
 (defcustom org-tag-beautify-tag-icon-cache-alist nil
   "A cache list to store already search found tag and icon pair.")
@@ -177,12 +162,13 @@ hardcoded (tag . icon) pair bindings to display icon."
 
 (defun org-tag-beautify-display-icon-refresh-all ()
   "Prettify Org mode buffer tags with icons."
-  (org-with-point-at 1
-    (unless (org-at-heading-p)
-      (outline-next-heading))
-    (while (not (eobp))
-      (org-tag-beautify-display-icon-refresh-headline)
-      (outline-next-heading))))
+  (when (eq major-mode 'org-mode)
+    (org-with-point-at 1
+      (unless (org-at-heading-p)
+        (outline-next-heading))
+      (while (not (eobp))
+        (org-tag-beautify-display-icon-refresh-headline)
+        (outline-next-heading)))))
 
 (defun org-tag-beautify-delete-overlays ()
   "Delete all icon tags overlays created."
@@ -231,7 +217,8 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("notify" . ,(nerd-icons-mdicon "nf-md-bell_ring_outline" :face 'nerd-icons-yellow))
                   ("notification" . ,(nerd-icons-mdicon "nf-md-bell_circle_outline" :face 'nerd-icons-yellow))
                   ("alarm" . ,(nerd-icons-mdicon "nf-md-alarm_light_outline" :face 'nerd-icons-yellow))
-                  ("LOG" . ,(nerd-icons-mdicon "nf-md-note_text_outline" :face 'nerd-icons-yellow))
+                  ("LOG" . ,(nerd-icons-octicon "nf-oct-log" :face 'nerd-icons-yellow))
+		          ("log" . ,(nerd-icons-octicon "nf-oct-log" :face 'nerd-icons-yellow))
                   ("comment" . ,(nerd-icons-mdicon "nf-md-comment_text_outline" :face 'nerd-icons-orange))
                   ("today" . ,(nerd-icons-mdicon "nf-md-calendar_today_outline" :face 'nerd-icons-green))
                   ("event" . ,(nerd-icons-mdicon "nf-md-calendar_text_outline" :face 'nerd-icons-blue))
@@ -244,8 +231,8 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("flag" . ,(nerd-icons-mdicon "nf-md-flag_outline" :face 'nerd-icons-red))
                   ("label" . ,(nerd-icons-mdicon "nf-md-label_outline" :face 'nerd-icons-blue))
                   ("info" . ,(nerd-icons-faicon "nf-fa-info_circle" :face 'nerd-icons-blue))
-                  ("question" . ,(nerd-icons-mdicon "nf-mdi-comment_question_outline" :face 'nerd-icons-purple-alt))
-                  ("answer" . ,(nerd-icons-mdicon "nf-mdi-comment_text_outline" :face 'nerd-icons-blue-alt))
+                  ("question" . ,(nerd-icons-mdicon "nf-md-comment_question_outline" :face 'nerd-icons-purple-alt))
+                  ("answer" . ,(nerd-icons-mdicon "nf-md-comment_text_outline" :face 'nerd-icons-blue-alt))
                   ("example" . ,(nerd-icons-mdicon "nf-md-information_outline" :face 'nerd-icons-blue))
                   ("error" . ,(nerd-icons-codicon "nf-cod-error" :face 'nerd-icons-red-alt))
                   ("warning" . ,(nerd-icons-faicon "nf-fa-exclamation_triangle" :face 'nerd-icons-red-alt))
@@ -288,7 +275,7 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("forum" . ,(nerd-icons-mdicon "nf-md-forum_outline" :face 'nerd-icons-blue))
                   ("talk" . ,(nerd-icons-mdicon "nf-md-chat_processing_outline" :face 'nerd-icons-blue))
                   ("call" . ,(nerd-icons-mdicon "nf-md-phone_in_talk_outline" :face 'nerd-icons-green))
-                  ("voice_chat" . ,(nerd-icons-mdicon "nf-mdi-voice" :face 'nerd-icons-green))
+                  ("voice_chat" . ,(nerd-icons-mdicon "nf-md-account_voice" :face 'nerd-icons-green))
                   ("contact" . ,(nerd-icons-mdicon "nf-md-contacts_outline" :face 'nerd-icons-blue))
                   ("person" . ,(nerd-icons-codicon "nf-cod-person" :face 'nerd-icons-blue))
                   ("pin" . ,(nerd-icons-codicon "nf-cod-pinned" :face 'nerd-icons-cyan))
@@ -385,7 +372,7 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("library" . ,(nerd-icons-codicon "nf-cod-library" :face 'nerd-icons-orange))
                   ("bank" . ,(nerd-icons-mdicon "nf-md-bank_outline" :face 'nerd-icons-silver))
                   ("ATM" . ,(nerd-icons-mdicon "nf-md-atm" :face 'nerd-icons-green))
-                  ("hotel" . ,(nerd-icons-mdicon "nf-mdi-hotel" :face 'nerd-icons-green))
+                  ("hotel" . ,(nerd-icons-faicon "nf-fa-hotel" :face 'nerd-icons-green))
                   ("spa" . ,(nerd-icons-mdicon "nf-md-spa_outline" :face 'nerd-icons-green))
                   ("laundry" . ,(nerd-icons-mdicon "nf-md-washing_machine" :face 'nerd-icons-blue))
                   ("pets" . ,(nerd-icons-mdicon "nf-md-dog" :face 'nerd-icons-orange))
@@ -415,7 +402,7 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("drink" . ,(nerd-icons-mdicon "nf-md-beer_outline" :face 'nerd-icons-orange))
                   ("coffee" . ,(nerd-icons-mdicon "nf-md-coffee" :face 'nerd-icons-silver))
                   ("bicycle" . ,(nerd-icons-mdicon "nf-md-bicycle" :face 'nerd-icons-blue))
-                  ("motorcycle" . ,(nerd-icons-mdicon "nf-mdi-motorbike" :face 'nerd-icons-blue))
+                  ("motorcycle" . ,(nerd-icons-mdicon "nf-md-motorbike" :face 'nerd-icons-blue))
                   ("car" . ,(nerd-icons-mdicon "nf-md-car" :face 'nerd-icons-silver))
                   ("traffic" . ,(nerd-icons-mdicon "nf-md-traffic_light_outline" :face 'nerd-icons-blue))
                   ("road" . ,(nerd-icons-mdicon "nf-md-road_variant" :face 'nerd-icons-silver))
@@ -447,12 +434,12 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ;; computer
                   ("clone" . ,(nerd-icons-faicon "nf-fa-clone" :face 'nerd-icons-blue))
                   ("clipboard" . ,(nerd-icons-mdicon "nf-md-clipboard_file_outline" :face 'nerd-icons-silver))
-                  ("file" . ,(nerd-icons-octicon "nf-oct-file_text" :face 'nerd-icons-silver))
+                  ("file" . ,(nerd-icons-faicon "nf-fa-file_text" :face 'nerd-icons-silver))
                   ("archive_file" . ,(nerd-icons-codicon "nf-cod-archive" :face 'nerd-icons-orange))
                   ("document" . ,(nerd-icons-mdicon "nf-md-file_document_multiple_outline" :face 'nerd-icons-silver))
                   ("Markdown" . ,(nerd-icons-mdicon "nf-md-language_markdown_outline" :face 'nerd-icons-purple))
-                  ("AsciiDoc" . ,(nerd-icons-octicon "nf-oct-file_text" :face 'nerd-icons-blue))
-                  ("reStructure" . ,(nerd-icons-octicon "nf-oct-file_text" :face 'nerd-icons-orange))
+                  ("AsciiDoc" . ,(nerd-icons-faicon "nf-fa-file_text_o" :face 'nerd-icons-silver))
+                  ("reStructure" . ,(nerd-icons-faicon "nf-fa-file_text_o" :face 'nerd-icons-silver))
                   ("office" . ,(nerd-icons-mdicon "nf-md-microsoft_office" :face 'nerd-icons-red))
                   ("OneNote" . ,(nerd-icons-mdicon "nf-md-microsoft_onenote" :face 'nerd-icons-purple-alt))
                   ("slideshow" . ,(nerd-icons-faicon "nf-fa-slideshare" :face 'nerd-icons-blue))
@@ -481,7 +468,7 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("bar_chart" . ,(nerd-icons-mdicon "nf-md-chart_bar" :face 'nerd-icons-blue))
                   ("bar_stacked_chart" . ,(nerd-icons-mdicon "nf-md-chart_bar_stacked" :face 'nerd-icons-blue))
                   ("area_chart" . ,(nerd-icons-mdicon "nf-md-chart_areaspline" :face 'nerd-icons-blue))
-                  ("pie_chart" . ,(nerd-icons-mdicon "nf-mdi-chart_pie" :face 'nerd-icons-green))
+                  ("pie_chart" . ,(nerd-icons-mdicon "nf-md-chart_pie" :face 'nerd-icons-green))
                   ("bell_curve_chart" . ,(nerd-icons-mdicon "nf-md-chart_bell_curve" :face 'nerd-icons-blue))
                   ("gantt_chart" . ,(nerd-icons-mdicon "nf-md-chart_gantt" :face 'nerd-icons-blue))
                   ("histogram_chart" . ,(nerd-icons-mdicon "nf-md-chart_histogram" :face 'nerd-icons-blue))
@@ -542,8 +529,8 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ;; create
                   ("design" . ,(nerd-icons-mdicon "nf-md-palette" :face 'nerd-icons-blue))
                   ("paint" . ,(nerd-icons-faicon "nf-fa-paint_brush" :face 'nerd-icons-blue))
-                  ("edit" . ,(nerd-icons-mdicon "nf-md-pencil" :face 'nerd-icons-blue))
-                  ("write" . ,(nerd-icons-mdicon "nf-md-pencil" :face 'nerd-icons-blue))
+                  ("edit" . ,(nerd-icons-mdicon "nf-md-lead_pencil" :face 'nerd-icons-blue))
+                  ("write" . ,(nerd-icons-mdicon "nf-md-lead_pencil" :face 'nerd-icons-blue))
                   ("writer" . ,(nerd-icons-mdicon "nf-md-typewriter" :face 'nerd-icons-blue))
                   
                   ;; Family
@@ -569,7 +556,7 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("daoism" . ,(nerd-icons-mdicon "nf-md-yin_yang" :face 'nerd-icons-blue))
 
                   ;; Science
-                  ("chemistry" . ,(nerd-icons-mdicon "nf-mdi-chemical_weapon" :face 'nerd-icons-green))
+                  ("chemistry" . ,(nerd-icons-mdicon "nf-md-chemical_weapon" :face 'nerd-icons-green))
                   ("bacteria" . ,(nerd-icons-mdicon "nf-md-bacteria_outline" :face 'nerd-icons-green))
 
                   ;; Society
@@ -589,7 +576,7 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("vulnerability" . ,(nerd-icons-mdicon "nf-md-bug_check_outline" :face 'nerd-icons-red))
                   ("patch" . ,(nerd-icons-octicon "nf-oct-diff" :face 'nerd-icons-green))
                   ("diff" . ,(nerd-icons-codicon "nf-cod-diff" :face 'nerd-icons-red))
-                  ("coding" . ,(nerd-icons-octicon "nf-oct-keyboard" :face 'nerd-icons-cyan-alt))
+                  ("coding" . ,(nerd-icons-faicon "nf-fa-keyboard_o" :face 'nerd-icons-cyan-alt))
                   ("object_group" . ,(nerd-icons-faicon "nf-fa-object_group" :face 'nerd-icons-blue))
                   ("object_ungroup" . ,(nerd-icons-faicon "nf-fa-object_ungroup" :face 'nerd-icons-blue))
                   ("regex" . ,(nerd-icons-codicon "nf-cod-regex" :face 'nerd-icons-cyan-alt))
@@ -622,9 +609,9 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("laptop" . ,(nerd-icons-mdicon "nf-md-laptop" :face 'nerd-icons-blue))
                   ("tablet" . ,(nerd-icons-mdicon "nf-md-tablet" :face 'nerd-icons-blue))
                   ("mobile" . ,(nerd-icons-octicon "nf-oct-device_mobile" :face 'nerd-icons-blue))
-                  ("smartphone" . ,(nerd-icons-mdicon "nf-mdi-cellphone_iphone" :face 'nerd-icons-blue))
+                  ("smartphone" . ,(nerd-icons-mdicon "nf-md-cellphone" :face 'nerd-icons-blue))
                   ("phone" . ,(nerd-icons-mdicon "nf-md-phone" :face 'nerd-icons-blue))
-                  ("iPhone" . ,(nerd-icons-mdicon "nf-mdi-cellphone_iphone" :face 'nerd-icons-blue))
+                  ("iPhone" . ,(nerd-icons-mdicon "nf-md-cellphone" :face 'nerd-icons-blue))
                   ("keyboard" . ,(nerd-icons-mdicon "nf-md-keyboard" :face 'nerd-icons-blue))
                   ("mouse" . ,(nerd-icons-mdicon "nf-md-mouse" :face 'nerd-icons-blue))
                   ;; ("Arduino" . ,())
@@ -830,9 +817,9 @@ hardcoded (tag . icon) pair bindings to display icon."
                 `(("Internet" . ,(nerd-icons-codicon "nf-cod-globe" :face 'nerd-icons-blue))
                   ("Google" . ,(nerd-icons-mdicon "nf-md-google" :face 'nerd-icons-red))
                   ("Microsoft" . ,(nerd-icons-mdicon "nf-md-microsoft" :face 'nerd-icons-lblue))
-                  ("Facebook" . ,(nerd-icons-mdicon "nf-mdi-facebook_box" :face 'nerd-icons-dblue))
+                  ("Facebook" . ,(nerd-icons-faicon "nf-fa-facebook_official" :face 'nerd-icons-dblue))
                   ("Twitter" . ,(nerd-icons-mdicon "nf-md-twitter" :face 'nerd-icons-lblue))
-                  ("Amazon" . ,(nerd-icons-mdicon "nf-mdi-amazon" :face 'nerd-icons-orange))
+                  ("Amazon" . ,(nerd-icons-faicon "nf-fa-amazon" :face 'nerd-icons-orange))
                   ("Yahoo" . ,(nerd-icons-mdicon "nf-md-yahoo" :face 'nerd-icons-orange))
                   ("Reddit" . ,(nerd-icons-mdicon "nf-md-reddit" :face 'nerd-icons-red))
                   ("Mozilla" . ,(nerd-icons-devicon "nf-dev-mozilla" :face 'nerd-icons-red))
@@ -845,7 +832,7 @@ hardcoded (tag . icon) pair bindings to display icon."
                   ("YouTube" . ,(nerd-icons-mdicon "nf-md-youtube" :face 'nerd-icons-red-alt))
                   ("LinkedIn" . ,(nerd-icons-mdicon "nf-md-linkedin" :face 'nerd-icons-blue))
                   ("Instagram" . ,(nerd-icons-mdicon "nf-md-instagram" :face 'nerd-icons-orange))
-                  ("Dribbble" . ,(nerd-icons-mdicon "nf-mdi-dribbble" :face 'nerd-icons-dpink))
+                  ("Dribbble" . ,(nerd-icons-faicon "nf-fa-dribbble" :face 'nerd-icons-dpink))
                   ("Dropbox" . ,(nerd-icons-mdicon "nf-md-dropbox" :face 'nerd-icons-lblue))
                   ("Baidu" . ,(nerd-icons-mdicon "nf-md-paw" :face 'nerd-icons-blue))
                   ("Tencent" . ,(nerd-icons-mdicon "nf-md-qqchat" :face 'nerd-icons-blue))
@@ -1176,9 +1163,8 @@ hardcoded (tag . icon) pair bindings to display icon."
 
 ;;========================================== org-tag-alist ==========================================
 
-;;;###autoload
-(defun org-tag-beautify-add-tags-to-list ()
-  "Add org-tag-beautify tags to `org-tag-alist' for `org-set-tags-command' completion."
+(defun org-tag-beautify-append-org-tags-alist--with-org-pretty-tags ()
+  "Append `org-pretty-tags-surrogate-strings' tags to `org-tag-alist' for `org-set-tags-command' completion."
   (setq org-tag-alist
         (append org-tag-alist
                 (append
@@ -1186,11 +1172,27 @@ hardcoded (tag . icon) pair bindings to display icon."
                  '((:grouptags)) (mapcar 'list (mapcar 'car org-pretty-tags-surrogate-strings))
                  '((:endgrouptag))))))
 
+(org-tag-beautify-append-org-tags-alist--with-org-pretty-tags)
+
+(defun org-tag-beautify-append-org-tags-alist--with-nerd-icons ()
+  "Append `nerd-icons' icon names into the `org-tag-alist' for `org-set-tags-command' completion."
+  (let ((icon-names (mapcar
+                     'org-tag-beautify--nerd-icons-get-icon-name
+                     org-tag-beautify--nerd-icons-icons-list)))
+    (setq org-tag-alist
+          (append org-tag-alist
+                  `((:startgrouptag)
+                    ("@nerd-icons")
+                    (:grouptags)
+                    ,@(mapcar 'list icon-names)
+                    (:endgrouptag))))))
+
+(org-tag-beautify-append-org-tags-alist--with-nerd-icons)
+
 ;;============================================ minor mode ===========================================
 ;;;###autoload
 (defun org-tag-beautify-enable ()
   "Enable `org-tag-beautify'."
-  (org-tag-beautify-add-tags-to-list)
   (if org-tag-beautify-auto-icons
       (progn
         ;; add hardcoded (tag . icon) pair bindings to
