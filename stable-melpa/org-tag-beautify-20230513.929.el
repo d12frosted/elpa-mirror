@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (nerd-icons "0.0.1"))
-;; Package-Version: 20230513.536
-;; Package-Commit: 1715ae397f5125aceb2ba61b2d3ce451aed22474
+;; Package-Version: 20230513.929
+;; Package-Commit: 3517be502f3cf3d6e80a83c262b1c872362a1b7a
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -137,6 +137,7 @@ hardcoded (tag . icon) pair bindings to display icon."
 ;; (org-tag-beautify--find-tag-icon "heart")
 ;; (org-tag-beautify--find-tag-icon "wikipedia")
 ;; (org-tag-beautify--find-tag-icon "LaTeX")
+;; (org-tag-beautify--find-tag-icon "ATTACH")
 
 (defvar org-tag-beautify-overlays nil
   "A list of overlays of org-tag-beautify.")
@@ -1187,7 +1188,8 @@ hardcoded (tag . icon) pair bindings to display icon."
                     ,@(mapcar 'list icon-names)
                     (:endgrouptag))))))
 
-(org-tag-beautify-append-org-tags-alist--with-nerd-icons)
+;;; NOTE: Don't enable this because nerd-icons icon names are not valid Org tags.
+;; (org-tag-beautify-append-org-tags-alist--with-nerd-icons)
 
 ;;============================================ minor mode ===========================================
 ;;;###autoload

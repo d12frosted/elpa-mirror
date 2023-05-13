@@ -5,8 +5,8 @@
 ;; Author: Susam Pal <susam@susam.net>
 ;; Maintainer: Susam Pal <susam@susam.net>
 ;; Version: 0.3.0
-;; Package-Version: 20230511.1013
-;; Package-Commit: f6ddd7cac1efad6c23c9a6839996edf894f1a633
+;; Package-Version: 20230513.919
+;; Package-Commit: 1cee55eaa3aa2b5656f3d12b2dbcf2141c760dfa
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, abbrev
 ;; URL: https://github.com/susam/devil
@@ -87,7 +87,7 @@ be modified before loading Devil for it to take effect.")
   (devil-mode 1))
 
 (defcustom devil-logging nil
-  "Non-nil if and only if Devil should print log messages."
+  "Non-nil iff Devil should print log messages."
   :type 'boolean)
 
 (defvar devil-special-keys
@@ -136,8 +136,27 @@ to represent `devil-key' in the keys."
 The value of this variable is a list where each item represents a
 key sequence that may be repeated merely by typing the last
 character in the key sequence.  The format control specified `%k'
-may be used to represent `devil-key' in the keys."
+may be used to represent `devil-key' in the keys.  Only key
+sequences that translate to a complete Emacs key sequence
+according to `devil-translations' and execute an Emacs command
+are made repeatable.  Key sequences that belong to
+`devil-special-keys' are never made repeatable.  Note that this
+variable is ignored if `devil-all-keys-repeatable' is set to t."
   :type '(repeat string))
+
+(defcustom devil-all-keys-repeatable nil
+  "All successfully translated key sequences become repeatable iff t.
+
+When this variable is set to t all key sequences that translate
+to a complete and defined Emacs key sequence become a repeatable
+key sequence, i.e., it can be repeated merely by typing the last
+character in the key sequence.  Note that key sequences that
+belong to `devil-special-keys' are never made repeatable.  Also,
+note that when this variable is set to t, the variable
+`devil-repeatable-keys' is ignored.  However when this variable
+is set to nil, the variable `devil-repeatable-keys' is used to
+determine whether a key sequence is repeatable or not."
+  :type 'boolean)
 
 (defun devil-run-key (key)
   "Execute the given key sequence KEY.
@@ -155,8 +174,8 @@ occurrence `devil-key' is inserted into the buffer."
   "Add key bindings to keymaps for Isearch and universal argument."
   (devil--log "Adding extra key bindings")
   (setq devil--saved-keys (devil--original-keys-to-be-saved))
-  (define-key isearch-mode-map (kbd devil-key) 'devil)
-  (define-key universal-argument-map (kbd "u") 'universal-argument-more))
+  (define-key isearch-mode-map (kbd devil-key) #'devil)
+  (define-key universal-argument-map (kbd "u") #'universal-argument-more))
 
 (defun devil-remove-extra-keys ()
   "Remove Devil key bindings from Isearch and universal argument."
@@ -279,7 +298,8 @@ sequences should be read from the user."
            (devil--log "Executing key: %s => %s => %s"
                        described-key translated-key binding)
            (call-interactively binding)
-           (when (devil--repeatable-key-p described-key)
+           (when (or devil-all-keys-repeatable
+                     (devil--repeatable-key-p described-key))
              (devil--set-transient-map (substring described-key -1) binding))
            t)
           (t
