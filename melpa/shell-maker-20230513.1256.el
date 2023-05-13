@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230509.1738
-;; Package-Commit: 5de959210d8fc44830aa7719b3235db6cbd08750
-;; Version: 0.20.1
+;; Package-Version: 20230513.1256
+;; Package-Commit: 195cda9b06c2c9996c586cabdba9c79f23ab12e7
+;; Version: 0.21.1
 ;; Package-Requires: ((emacs "27.1"))
 
 ;; This package is free software; you can redistribute it and/or modify
@@ -535,6 +535,7 @@ response and feeds it to CALLBACK or ERROR-CALLBACK accordingly."
   (let* ((buffer (shell-maker-buffer shell-maker-config))
          (request-id (shell-maker--increment-request-id))
          (output-buffer (generate-new-buffer " *temp*"))
+         (config shell-maker-config)
          (request-process (condition-case err
                               (apply #'start-process (append (list
                                                               (shell-maker-buffer-name shell-maker-config)
@@ -549,9 +550,9 @@ response and feeds it to CALLBACK or ERROR-CALLBACK accordingly."
          (process-connection-type nil))
     (when request-process
       (setq shell-maker--request-process request-process)
-      (shell-maker--write-output-to-log-buffer "// Request\n\n")
-      (shell-maker--write-output-to-log-buffer (string-join command " "))
-      (shell-maker--write-output-to-log-buffer "\n\n")
+      (shell-maker--write-output-to-log-buffer "// Request\n\n" config)
+      (shell-maker--write-output-to-log-buffer (string-join command " ") config)
+      (shell-maker--write-output-to-log-buffer "\n\n" config)
       (when streaming
         (set-process-filter
          request-process
@@ -559,7 +560,7 @@ response and feeds it to CALLBACK or ERROR-CALLBACK accordingly."
            (when (and (eq request-id shell-maker--current-request-id)
                       (buffer-live-p buffer))
              (shell-maker--write-output-to-log-buffer
-              (format "// Filter output\n\n%s\n\n" output))
+              (format "// Filter output\n\n%s\n\n" output) config)
              (setq remaining-text (concat remaining-text output))
              (setq preparsed (shell-maker--preparse-json remaining-text))
              (if (car preparsed)
@@ -585,11 +586,11 @@ response and feeds it to CALLBACK or ERROR-CALLBACK accordingly."
                               (buffer-string)))
                     (exit-status (process-exit-status process)))
            (shell-maker--write-output-to-log-buffer
-            (format "// Response (%s)\n\n" (if active "active" "inactive")))
+            (format "// Response (%s)\n\n" (if active "active" "inactive")) config)
            (shell-maker--write-output-to-log-buffer
-            (format "Exit status: %d\n\n" exit-status))
-           (shell-maker--write-output-to-log-buffer output)
-           (shell-maker--write-output-to-log-buffer "\n\n")
+            (format "Exit status: %d\n\n" exit-status) config)
+           (shell-maker--write-output-to-log-buffer output config)
+           (shell-maker--write-output-to-log-buffer "\n\n" config)
            (with-current-buffer buffer
              (when active
                (if (= exit-status 0)
@@ -731,14 +732,14 @@ NO-ANNOUNCEMENT skips announcing response when in background."
                        (eq (length items) 1)))
         items))))
 
-(defun shell-maker--write-output-to-log-buffer (output)
-  "Write OUTPUT to log buffer."
-  (when shell-maker-logging
-    (when (shell-maker-config-redact-log-output shell-maker-config)
+(defun shell-maker--write-output-to-log-buffer (output config)
+  "Write OUTPUT to log buffer using CONFIG."
+  (when (and shell-maker-logging config)
+    (when (shell-maker-config-redact-log-output config)
       (setq output
-            (funcall (shell-maker-config-redact-log-output shell-maker-config) output)))
+            (funcall (shell-maker-config-redact-log-output config) output)))
     (with-current-buffer (get-buffer-create (format "*%s-log*"
-                                                    (shell-maker-process-name shell-maker-config)))
+                                                    (shell-maker-process-name config)))
       (let ((beginning-of-input (goto-char (point-max))))
         (insert output)
         (when (and (require 'json nil t)

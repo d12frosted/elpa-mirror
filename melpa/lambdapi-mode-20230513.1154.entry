@@ -1,5 +1,5 @@
 (lambdapi-mode .
-	       [(20221228 1622)
+	       [(20230513 1154)
 		((emacs
 		  (26 1))
 		 (eglot
@@ -9,7 +9,7 @@
 		 (highlight
 		  (20190710 1527)))
 		"A major mode for editing Lambdapi source code" tar
-		((:commit . "1f4e1a024bb0b0f3a0fdd8b5428e737adf1a68d7")
+		((:commit . "39fc3d46868866b69a4abb342805d8fa95c970cd")
 		 (:maintainers
 		  ("Deducteam" . "dedukti-dev@inria.fr"))
 		 (:maintainer "Deducteam" . "dedukti-dev@inria.fr")
