@@ -194,7 +194,9 @@ Feel free to join us in the chat room:
   ⁃ Send image: `s i'
   ⁃ View event source: `v'
   ⁃ Complete members and rooms at point: `C-M-i' (standard
-    `completion-at-point' command).
+    `completion-at-point' command).  (Type an `@' prefix for a member
+    mention, a `#' prefix for a room alias, or a `!' prefix for a room
+    ID.)
 
   *Images*
 
@@ -289,6 +291,9 @@ Feel free to join us in the chat room:
     the bookmark, rather than having to manually arrange them every time
     you start Emacs or change the window configuration.
   ⁃ Images and other files can be uploaded to rooms using drag-and-drop.
+  ⁃ Mention members by typing a `@' followed by their displayname or
+    Matrix ID.  (Members' names and rooms' aliases/IDs may be completed
+    with `completion-at-point' commands.)
   ⁃ You can customize settings in the `ement' group.
     • *Note:* `setq' should not be used for certain options, because it
        will not call the associated setter function.  Users who have an
@@ -397,7 +402,67 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.8.3
+4.1 0.9.1
+─────────
+
+  *Fixes*
+  ⁃ Error in `ement-room-list' command upon initial sync.
+
+
+4.2 0.9
+───────
+
+  *Additions*
+
+  ⁃ Option `ement-room-timestamp-header-align' controls how timestamp
+    headers are aligned in room buffers.
+  ⁃ Option `ement-room-view-hook' runs functions when `ement-room-view'
+    is called.  (By default, it refreshes the room list buffer.)
+  ⁃ In the room list, middle-clicking a room which has a buffer closes
+    its buffer.
+  ⁃ Basic support for video events.  (Thanks to [Arto Jantunen].)
+
+  *Changes*
+
+  ⁃ Using new option `ement-room-timestamp-header-align', timestamp
+    headers default to right-aligned.  (With default settings, this
+    keeps them near message timestamps and makes for a cleaner
+    appearance.)
+
+  *Fixes*
+
+  ⁃ Recognition of certain MXID or displayname forms in outgoing
+    messages when linkifying (aka "pilling") them.
+  ⁃ Unreadable room avatar images no longer cause errors.  (Fixes
+    [#147].  Thanks to [@jgarte] for reporting.)
+  ⁃ Don't error in `ement-room-list' when no rooms are joined.  (Fixes
+    [#123].  Thanks to [@Kabouik] and [Omar Antolín Camarena] for
+    reporting.)
+  ⁃ Enable member/room completion in compose buffers.  (Fixes [#115].
+    Thanks to Thanks to [Justus Piater] and [Caleb Chase] for
+    reporting.)
+
+
+[Arto Jantunen] <https://github.com/viiru->
+
+[#147] <https://github.com/alphapapa/ement.el/issues/147>
+
+[@jgarte] <https://github.com/jgarte>
+
+[#123] <https://github.com/alphapapa/ement.el/issues/123>
+
+[@Kabouik] <https://github.com/Kabouik>
+
+[Omar Antolín Camarena] <https://github.com/oantolin>
+
+[#115] <https://github.com/alphapapa/ement.el/issues/115>
+
+[Justus Piater] <https://github.com/piater>
+
+[Caleb Chase] <https://github.com/chasecaleb>
+
+
+4.3 0.8.3
 ─────────
 
   *Fixes*
@@ -412,7 +477,7 @@ Feel free to join us in the chat room:
     used.)
 
 
-4.2 0.8.2
+4.4 0.8.2
 ─────────
 
   *Fixes*
@@ -420,13 +485,13 @@ Feel free to join us in the chat room:
   ⁃ Deduplicate grouped membership events.
 
 
-4.3 0.8.1
+4.5 0.8.1
 ─────────
 
   Added missing changelog entry (of course).
 
 
-4.4 0.8
+4.6 0.8
 ───────
 
   *Additions*
@@ -469,7 +534,7 @@ Feel free to join us in the chat room:
 [Jeff Bowman] <https://github.com/jeffbowman>
 
 
-4.5 0.7
+4.7 0.7
 ───────
 
   *Additions*
@@ -509,7 +574,7 @@ Feel free to join us in the chat room:
 [mekeor] <https://github.com/mekeor>
 
 
-4.6 0.6
+4.8 0.6
 ───────
 
   *Additions*
@@ -539,7 +604,7 @@ Feel free to join us in the chat room:
 [Visuwesh] <https://github.com/vizs>
 
 
-4.7 0.5.2
+4.9 0.5.2
 ─────────
 
   *Fixes*
@@ -547,16 +612,16 @@ Feel free to join us in the chat room:
     homeserver is slow to respond).
 
 
-4.8 0.5.1
-─────────
+4.10 0.5.1
+──────────
 
   *Fixes*
   ⁃ Autoload `ement-directory' commands.
   ⁃ Faces in `ement-directory' listings.
 
 
-4.9 0.5
-───────
+4.11 0.5
+────────
 
   *Additions*
   ⁃ Present "joined-and-left" and "rejoined-and-left" membership event
@@ -580,7 +645,7 @@ Feel free to join us in the chat room:
 [taxy.el] <https://github.com/alphapapa/taxy.el>
 
 
-4.10 0.4.1
+4.12 0.4.1
 ──────────
 
   *Fixes*
@@ -588,7 +653,7 @@ Feel free to join us in the chat room:
     marker's position again.
 
 
-4.11 0.4
+4.13 0.4
 ────────
 
   *Additions*
@@ -619,7 +684,7 @@ Feel free to join us in the chat room:
   ⁃ Highlighting of `@room' mentions.
 
 
-4.12 0.3.1
+4.14 0.3.1
 ──────────
 
   *Fixes*
@@ -627,7 +692,7 @@ Feel free to join us in the chat room:
     local user, the room is considered read).
 
 
-4.13 0.3
+4.15 0.3
 ────────
 
   *Additions*
@@ -655,14 +720,14 @@ Feel free to join us in the chat room:
   ⁃ Compatibility with Emacs 27.
 
 
-4.14 0.2.1
+4.16 0.2.1
 ──────────
 
   *Fixes*
   ⁃ Info manual export filename.
 
 
-4.15 0.2
+4.17 0.2
 ────────
 
   *Changes*
@@ -697,14 +762,14 @@ Feel free to join us in the chat room:
 [Julien Roy] <https://github.com/MrRoy>
 
 
-4.16 0.1.4
+4.18 0.1.4
 ──────────
 
   *Fixed*
   ⁃ Info manual directory headers.
 
 
-4.17 0.1.3
+4.19 0.1.3
 ──────────
 
   *Fixed*
@@ -714,7 +779,7 @@ Feel free to join us in the chat room:
     re-enabled in a future release.)
 
 
-4.18 0.1.2
+4.20 0.1.2
 ──────────
 
   *Fixed*
@@ -731,7 +796,7 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.19 0.1.1
+4.21 0.1.1
 ──────────
 
   *Fixed*
@@ -741,7 +806,7 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.20 0.1
+4.22 0.1
 ────────
 
   After almost two years of development, the first tagged release.
