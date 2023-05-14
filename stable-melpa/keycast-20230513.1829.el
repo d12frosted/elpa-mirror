@@ -5,11 +5,11 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/keycast
 ;; Keywords: multimedia
-;; Package-Commit: cabb3fac1ccf2980ff3bcdbc1648d2a15ebe7cb1
+;; Package-Commit: cbdedd8a1ca15c43888e9dcf06e9f1f49c04727c
 
-;; Package-Requires: ((emacs "25.3") (compat "29.1.3.4"))
-;; Package-Version: 20230212.2016
-;; Package-X-Original-Version: 1.2.0.50-git
+;; Package-Requires: ((emacs "25.3") (compat "29.1.4.1"))
+;; Package-Version: 20230513.1829
+;; Package-X-Original-Version: 1.3.0
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 

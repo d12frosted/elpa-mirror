@@ -5,8 +5,8 @@
 ;; Author: Dean Lindqvist Todevski <https://github.com/r0bobo>
 ;; Maintainer: Dean Lindqvist Todevski
 ;; Keywords: docs help k8s kubernetes tools
-;; Package-Version: 20220401.1113
-;; Package-Commit: f8503f121e38f0ff9343544a5c912e50b25efd4c
+;; Package-Version: 20230513.2014
+;; Package-Commit: c07e356326b6f373694d43369c7110c2873e24cd
 ;; Version: 1.0
 ;; Homepage: https://github.com/r0bobo/kubedoc.el/
 ;; Package-Requires: ((emacs "27.1"))
@@ -44,13 +44,16 @@
 
 ;;;; Declarations
 
+(defconst kubedoc--explain-field-regex
+  "^\\([ \t]+\\)\\(\\w+\\)[ \t]+\\(<.*>+\\)[ \t]*\\(-required-\\)?$")
+
 (defconst kubedoc-imenu-generic-expression
-  '((nil "^   \\(\\w+\\)" 1 kubedoc--imenu-goto-field)))
+  `((nil ,kubedoc--explain-field-regex 2 kubedoc--imenu-goto-field)))
 
 (defconst kubedoc-font-lock-defaults
-  `(("^KIND\\|^VERSION\\|^RESOURCE\\|^DESCRIPTION\\|^FIELDS?" . font-lock-keyword-face)
-    ("-required-" . font-lock-function-name-face)
-    ("\\(<.+>\\)\\( -required-\\)?$" 1 font-lock-comment-face)))
+  `(("^GROUP\\|^KIND\\|^VERSION\\|^RESOURCE\\|^DESCRIPTION\\|^FIELDS?" . font-lock-keyword-face)
+   (,kubedoc--explain-field-regex 3 font-lock-comment-face)
+   ("-required-" . font-lock-function-name-face)))
 
 (defvar kubedoc-mode-map
   (let ((map (make-sparse-keymap)))
@@ -84,12 +87,12 @@ For example Aggregated APIs with no docs.")
 
 (defun kubedoc--highlight-field-links ()
   "Create field link buttons in current buffer."
-  (while (re-search-forward "^   \\(\\w+\\)" nil t)
+  (while (re-search-forward kubedoc--explain-field-regex nil t)
     (make-button
-     (match-beginning 1)
-     (match-end 1)
+     (match-beginning 2)
+     (match-end 2)
      'type 'kubedoc-field
-     'kubectl-section (match-string 1))))
+     'kubectl-section (match-string 2))))
 
 (defun kubedoc--kubectl-command (&rest args)
   "Run kubectl with ARGS and return output as string."
@@ -118,7 +121,8 @@ For example Aggregated APIs with no docs.")
      (kubedoc--kubectl-command "api-resources" "--output" "name") nil t))))
 
 (defun kubedoc--resource-completion-table-cached ()
-  "Cached completion candidate list for all known Kubernetes resources in the cluster."
+  "Cached completion candidate list for all known Kubernetes resources
+in the cluster."
   (when (null kubedoc--resource-completion-table-cache)
     (setq kubedoc--resource-completion-table-cache (kubedoc--resource-completion-table)))
   kubedoc--resource-completion-table-cache)
@@ -129,43 +133,45 @@ For example Aggregated APIs with no docs.")
 
 (defun kubedoc--field-completion-table (resource)
   "Completion candidate list for all fields of Kubernetes RESOURCE."
-  (let* ((res '())
-         (path '())
-         (prev-indent 0)
-         (explain-output-lines
-          (split-string
-           (funcall (or kubedoc--field-completion-source-function
-                        #'kubedoc--default-field-completion-source-function)
-                    resource)
-           "\\\n" t))
-         (explain-output-lines-trimmed
-          (seq-drop-while
-           (lambda (e) (not (string-match "^FIELDS" e)))
-           explain-output-lines)))
+  (let* ((explain-output
+          (funcall(or kubedoc--field-completion-source-function
+                      #'kubedoc--default-field-completion-source-function) resource))
+         (resources (kubedoc--parse-kubectl-explain-fields explain-output)))
+    (mapcar (lambda (e) (concat resource "/" e)) resources)))
 
-    (dolist (item explain-output-lines-trimmed)
-      (unless (string-match "^FIELDS" item)
-        (string-match "^\\( +\\)\\(\\w+\\) ?" item)
-
-        (let ((indent (/ (length (match-string 1 item)) 3))
-              (match (match-string 2 item)))
-
-          (unless (> indent prev-indent)
-            (push (string-join (reverse path) "/") res))
-
-          (cond
-           ((< indent prev-indent)
-            (setq path (nthcdr (+ 1 (- prev-indent indent)) path)))
-           ((= indent prev-indent)
-            (setq path (nthcdr 1 path))))
-
-          (push match path)
-
-          (when (string= item (car (reverse explain-output-lines)))
-            (push (string-join (reverse path) "/") res))
-
-          (setq prev-indent indent))))
-    (mapcar (lambda (e) (concat resource "/" e)) res)))
+(defun kubedoc--parse-kubectl-explain-fields (input)
+  "Parse INPUT (output from `kubectl explain --recursive') and return list of all
+field paths for given resource.
+Supports both OpenAPI v2 and v3 schema."
+  (let ((result '())
+        (path '())
+        (base -1)
+        (lines (split-string input "\\\n" t)))
+    (dolist (line lines)
+      (when (string-match kubedoc--explain-field-regex line)
+        (let* ((depth (length (match-string 1 line)))
+               (field (match-string 2 line)))
+          ;; Set base indention length from first iteration
+          (when (= base -1)
+            (setq base depth))
+          (let ((position (/ (- depth base) base)))
+            ;; Drop all previous path elements that are
+            ;; deeper than the current.
+            (setq path (reverse (seq-subseq (reverse path) 0 position)))
+            (push field path)
+            (push (string-join (reverse path) "/") result)))))
+    ;; Filter result so that every result
+    ;; ends with the leaft field of each hierarchy.
+    ;; If the result contains '("kind" "metadata" "metadata/labels")
+    ;; the result should be '("kind" "metadata/labels")
+    (reverse
+     (seq-filter
+      (lambda (e1)
+        (not (seq-some
+              (lambda (e2)
+                (string-prefix-p (concat e1 "/") e2))
+              result)))
+      result))))
 
 (defun kubedoc--field-completion-table-cached (resource)
   "Cached Completion candidate list for all fields of Kubernetes RESOURCE."
@@ -249,6 +255,7 @@ See argument STRING PRED ACTION descriptions in command `try-completion'."
           (insert-text-button "Navigate to top" 'action (lambda (_button) (kubedoc-top)))
           (goto-char (point-min)))
         (untabify (point-min) (point-max))
+        (set-buffer-modified-p nil)
         (kubedoc-mode)
         (setq-local kubedoc--buffer-path path)))
     (if (with-current-buffer prev-buffer (equal major-mode 'kubedoc-mode))

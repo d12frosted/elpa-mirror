@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230513.1256
-;; Package-Commit: 195cda9b06c2c9996c586cabdba9c79f23ab12e7
-;; Version: 0.28.1
+;; Package-Version: 20230514.13
+;; Package-Commit: d64aba761ef86f90a3c188153de6663e779e2368
+;; Version: 0.30.1
 ;; Package-Requires: ((emacs "27.1") (shell-maker "0.21.1"))
 
 ;; This package is free software; you can redistribute it and/or modify
@@ -422,8 +422,146 @@ Otherwise interrupt if busy."
                 (cons 'start start)
                 (cons 'end end)))))))
 
-(defun chatgpt-shell--inline-codes ()
-  "Get a list of all inline codess in buffer."
+(defun chatgpt-shell--markdown-headers (&optional avoid-ranges)
+  "Extract markdown headers with AVOID-RANGES."
+  (let ((headers '())
+        (case-fold-search nil))
+    (save-excursion
+      (goto-char (point-min))
+      (while (re-search-forward
+              (rx bol (group (one-or-more "#"))
+                  (one-or-more space)
+                  (group (one-or-more (not (any "\n")))) eol)
+              nil t)
+        (when-let ((begin (match-beginning 0))
+                   (end (match-end 0)))
+          (unless (seq-find (lambda (avoided)
+                              (and (>= begin (car avoided))
+                                   (<= end (cdr avoided))))
+                            avoid-ranges)
+            (push
+             (list
+              'start begin
+              'end end
+              'level (cons (match-beginning 1) (match-end 1))
+              'title (cons (match-beginning 2) (match-end 2)))
+             headers)))))
+    (nreverse headers)))
+
+(defun chatgpt-shell--markdown-links (&optional avoid-ranges)
+  "Extract markdown links with AVOID-RANGES."
+  (let ((links '())
+        (case-fold-search nil))
+    (save-excursion
+      (goto-char (point-min))
+      (while (re-search-forward
+              (rx (seq "["
+                       (group (one-or-more (not (any "]"))))
+                       "]"
+                       "("
+                       (group (one-or-more (not (any ")"))))
+                       ")"))
+              nil t)
+        (when-let ((begin (match-beginning 0))
+                   (end (match-end 0)))
+          (unless (seq-find (lambda (avoided)
+                              (and (>= begin (car avoided))
+                                   (<= end (cdr avoided))))
+                            avoid-ranges)
+            (push
+             (list
+              'start begin
+              'end end
+              'title (cons (match-beginning 1) (match-end 1))
+              'url (cons (match-beginning 2) (match-end 2)))
+             links)))))
+    (nreverse links)))
+
+(defun chatgpt-shell--markdown-bolds (&optional avoid-ranges)
+  "Extract markdown bolds with AVOID-RANGES."
+  (let ((bolds '())
+        (case-fold-search nil))
+    (save-excursion
+      (goto-char (point-min))
+      (while (re-search-forward
+              (rx (or (group "**" (group (one-or-more (not (any "\n*")))) "**")
+                      (group "__" (group (one-or-more (not (any "\n_")))) "__")))
+              nil t)
+        (when-let ((begin (match-beginning 0))
+                   (end (match-end 0)))
+          (unless (seq-find (lambda (avoided)
+                              (and (>= begin (car avoided))
+                                   (<= end (cdr avoided))))
+                            avoid-ranges)
+            (push
+             (list
+              'start begin
+              'end end
+              'text (cons (or (match-beginning 2)
+                              (match-beginning 4))
+                          (or (match-end 2)
+                              (match-end 4))))
+             bolds)))))
+    (nreverse bolds)))
+
+(defun chatgpt-shell--markdown-strikethroughs (&optional avoid-ranges)
+  "Extract markdown strikethroughs with AVOID-RANGES."
+  (let ((strikethroughs '())
+        (case-fold-search nil))
+    (save-excursion
+      (goto-char (point-min))
+      (while (re-search-forward
+              (rx "~~" (group (one-or-more (not (any "\n~")))) "~~")
+              nil t)
+        (when-let ((begin (match-beginning 0))
+                   (end (match-end 0)))
+          (unless (seq-find (lambda (avoided)
+                              (and (>= begin (car avoided))
+                                   (<= end (cdr avoided))))
+                            avoid-ranges)
+            (push
+             (list
+              'start begin
+              'end end
+              'text (cons (match-beginning 1)
+                          (match-end 1)))
+             strikethroughs)))))
+    (nreverse strikethroughs)))
+
+(defun chatgpt-shell--markdown-italics (&optional avoid-ranges)
+  "Extract markdown italics with AVOID-RANGES."
+  (let ((italics '())
+        (case-fold-search nil))
+    (save-excursion
+      (goto-char (point-min))
+      (while (re-search-forward
+              (rx (or (group (or (not "*") "\n")
+                             (group "*")
+                             (group (one-or-more (not (any "\n*")))) "*")
+                      (group (or (not "_") "\n")
+                             (group "_")
+                             (group (one-or-more (not (any "\n_")))) "_")))
+              nil t)
+        (when-let ((begin (match-beginning 0))
+                   (end (match-end 0)))
+          (unless (seq-find (lambda (avoided)
+                              (and (>= begin (car avoided))
+                                   (<= end (cdr avoided))))
+                            avoid-ranges)
+            (push
+             (list
+              'start (or (match-beginning 2)
+                         (match-beginning 5))
+              'end end
+              'text (cons (or (match-beginning 3)
+                              (match-beginning 6))
+                          (or (match-end 3)
+                              (match-end 6))))
+             italics)))))
+    (nreverse italics)))
+
+(defun chatgpt-shell--markdown-inline-codes (&optional avoid-ranges)
+  "Get a list of all inline markdown code in buffer with AVOID-RANGES."
   (let ((codes '())
         (case-fold-search nil))
     (save-excursion
@@ -433,9 +571,13 @@ Otherwise interrupt if busy."
               nil t)
         (when-let ((begin (match-beginning 0))
                    (end (match-end 0)))
-          (push
-           (list
-            'body (cons (match-beginning 1) (match-end 1))) codes))))
+          (unless (seq-find (lambda (avoided)
+                              (and (>= begin (car avoided))
+                                   (<= end (cdr avoided))))
+                            avoid-ranges)
+            (push
+             (list
+              'body (cons (match-beginning 1) (match-end 1))) codes)))))
     (nreverse codes)))
 
 (defvar chatgpt-shell--source-block-regexp
@@ -602,6 +744,8 @@ With PREFIX, invert `chatgpt-shell-insert-queries-inline' choice."
   "Send text with HEADER from region using ChatGPT.
 
 With INVERT-INSERT-INLINE, invert `chatgpt-shell-insert-queries-inline' choice."
+  (unless (region-active-p)
+    (user-error "No region active"))
   (chatgpt-shell-send-to-buffer
    (concat header
            "\n\n"
@@ -1139,6 +1283,80 @@ Use QUOTES1-START QUOTES1-END LANG LANG-START LANG-END BODY-START
       (overlay-put (make-overlay body-start body-end buf)
                    'face 'font-lock-doc-markup-face))))
 
+(defun chatgpt-shell--fontify-link (start end title-start title-end url-start url-end)
+  "Fontify a markdown link.
+Use START END TITLE-START TITLE-END URL-START URL-END."
+  ;; Hide markup before
+  (overlay-put (make-overlay start title-start) 'invisible 'chatgpt-shell)
+  ;; Show title as link
+  (overlay-put (make-overlay title-start title-end) 'face 'link)
+  ;; Make RET open the URL
+  (define-key (let ((map (make-sparse-keymap)))
+                (define-key map (kbd "RET")
+                  (lambda () (interactive)
+                    (browse-url (buffer-substring-no-properties url-start url-end))))
+                (overlay-put (make-overlay title-start title-end) 'keymap map)
+                map)
+    [remap self-insert-command] 'ignore)
+  ;; Hide markup after
+  (overlay-put (make-overlay title-end end) 'invisible 'chatgpt-shell))
+
+(defun chatgpt-shell--fontify-bold (start end text-start text-end)
+  "Fontify a markdown bold.
+Use START END TEXT-START TEXT-END."
+  ;; Hide markup before
+  (overlay-put (make-overlay start text-start) 'invisible 'chatgpt-shell)
+  ;; Show title as bold
+  (overlay-put (make-overlay text-start text-end) 'face 'bold)
+  ;; Hide markup after
+  (overlay-put (make-overlay text-end end) 'invisible 'chatgpt-shell))
+
+(defun chatgpt-shell--fontify-header (start end level-start level-end title-start title-end)
+  "Fontify a markdown header.
+Use START END LEVEL-START LEVEL-END TITLE-START TITLE-END."
+  ;; Hide markup before
+  (overlay-put (make-overlay start title-start) 'invisible 'chatgpt-shell)
+  ;; Show title as header
+  (overlay-put (make-overlay title-start title-end) 'face
+               (cond ((eq (- level-end level-start) 1)
+                      'org-level-1)
+                     ((eq (- level-end level-start) 2)
+                      'org-level-2)
+                     ((eq (- level-end level-start) 3)
+                      'org-level-3)
+                     ((eq (- level-end level-start) 4)
+                      'org-level-4)
+                     ((eq (- level-end level-start) 5)
+                      'org-level-5)
+                     ((eq (- level-end level-start) 6)
+                      'org-level-6)
+                     ((eq (- level-end level-start) 7)
+                      'org-level-7)
+                     ((eq (- level-end level-start) 8)
+                      'org-level-8)
+                     (t
+                      'org-level-1))))
+
+(defun chatgpt-shell--fontify-italic (start end text-start text-end)
+  "Fontify a markdown italic.
+Use START END TEXT-START TEXT-END."
+  ;; Hide markup before
+  (overlay-put (make-overlay start text-start) 'invisible 'chatgpt-shell)
+  ;; Show title as italic
+  (overlay-put (make-overlay text-start text-end) 'face 'italic)
+  ;; Hide markup after
+  (overlay-put (make-overlay text-end end) 'invisible 'chatgpt-shell))
+
+(defun chatgpt-shell--fontify-strikethrough (start end text-start text-end)
+  "Fontify a markdown strikethrough.
+Use START END TEXT-START TEXT-END."
+  ;; Hide markup before
+  (overlay-put (make-overlay start text-start) 'invisible 'chatgpt-shell)
+  ;; Show title as strikethrough
+  (overlay-put (make-overlay text-start text-end) 'face '(:strike-through t))
+  ;; Hide markup after
+  (overlay-put (make-overlay text-end end) 'invisible 'chatgpt-shell))
+
 (defun chatgpt-shell--fontify-inline-code (body-start body-end)
   "Fontify a source block.
 Use QUOTES1-START QUOTES1-END LANG LANG-START LANG-END BODY-START
@@ -1178,24 +1396,62 @@ Use QUOTES1-START QUOTES1-END LANG LANG-START LANG-END BODY-START
 
 (defun chatgpt-shell--put-source-block-overlays ()
   "Put overlays for all source blocks."
-  (dolist (overlay (overlays-in (point-min) (point-max)))
-    (delete-overlay overlay))
-  (dolist (block (chatgpt-shell--source-blocks))
-    (chatgpt-shell--fontify-source-block
-     (car (map-elt block 'start))
-     (cdr (map-elt block 'start))
-     (buffer-substring-no-properties (car (map-elt block 'language))
-                                     (cdr (map-elt block 'language)))
-     (car (map-elt block 'language))
-     (cdr (map-elt block 'language))
-     (car (map-elt block 'body))
-     (cdr (map-elt block 'body))
-     (car (map-elt block 'end))
-     (cdr (map-elt block 'end))))
-  (dolist (block (chatgpt-shell--inline-codes))
-    (chatgpt-shell--fontify-inline-code
-     (car (map-elt block 'body))
-     (cdr (map-elt block 'body)))))
+  (let* ((source-blocks (chatgpt-shell--source-blocks))
+         (avoid-ranges (seq-map (lambda (block)
+                                 (map-elt block 'body))
+                               source-blocks)))
+    (dolist (overlay (overlays-in (point-min) (point-max)))
+      (delete-overlay overlay))
+    (dolist (block source-blocks)
+      (chatgpt-shell--fontify-source-block
+       (car (map-elt block 'start))
+       (cdr (map-elt block 'start))
+       (buffer-substring-no-properties (car (map-elt block 'language))
+                                       (cdr (map-elt block 'language)))
+       (car (map-elt block 'language))
+       (cdr (map-elt block 'language))
+       (car (map-elt block 'body))
+       (cdr (map-elt block 'body))
+       (car (map-elt block 'end))
+       (cdr (map-elt block 'end))))
+    (dolist (link (chatgpt-shell--markdown-links avoid-ranges))
+      (chatgpt-shell--fontify-link
+       (map-elt link 'start)
+       (map-elt link 'end)
+       (car (map-elt link 'title))
+       (cdr (map-elt link 'title))
+       (car (map-elt link 'url))
+       (cdr (map-elt link 'url))))
+    (dolist (header (chatgpt-shell--markdown-headers avoid-ranges))
+      (chatgpt-shell--fontify-header
+       (map-elt header 'start)
+       (map-elt header 'end)
+       (car (map-elt header 'level))
+       (cdr (map-elt header 'level))
+       (car (map-elt header 'title))
+       (cdr (map-elt header 'title))))
+    (dolist (bold (chatgpt-shell--markdown-bolds avoid-ranges))
+      (chatgpt-shell--fontify-bold
+       (map-elt bold 'start)
+       (map-elt bold 'end)
+       (car (map-elt bold 'text))
+       (cdr (map-elt bold 'text))))
+    (dolist (italic (chatgpt-shell--markdown-italics avoid-ranges))
+      (chatgpt-shell--fontify-italic
+       (map-elt italic 'start)
+       (map-elt italic 'end)
+       (car (map-elt italic 'text))
+       (cdr (map-elt italic 'text))))
+    (dolist (strikethrough (chatgpt-shell--markdown-strikethroughs avoid-ranges))
+      (chatgpt-shell--fontify-strikethrough
+       (map-elt strikethrough 'start)
+       (map-elt strikethrough 'end)
+       (car (map-elt strikethrough 'text))
+       (cdr (map-elt strikethrough 'text))))
+    (dolist (inline-code (chatgpt-shell--markdown-inline-codes avoid-ranges))
+      (chatgpt-shell--fontify-inline-code
+       (car (map-elt inline-code 'body))
+       (cdr (map-elt inline-code 'body))))))
 
 (defun chatgpt-shell--unpaired-length (length)
   "Expand LENGTH to include paired responses.

@@ -1,11 +1,11 @@
 (keycast .
-	 [(20230212 2016)
+	 [(20230513 1829)
 	  ((emacs
 	    (25 3))
 	   (compat
-	    (29 1 3 4)))
+	    (29 1 4 1)))
 	  "Show current command and its binding" single
-	  ((:commit . "cabb3fac1ccf2980ff3bcdbc1648d2a15ebe7cb1")
+	  ((:commit . "cbdedd8a1ca15c43888e9dcf06e9f1f49c04727c")
 	   (:authors
 	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	   (:maintainers

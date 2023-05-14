@@ -4,8 +4,8 @@
 
 ;; Author: Steven Allen <steven@stebalien.com>
 ;; URL: https://github.com/Stebalien/i3bar.el
-;; Package-Version: 20220808.1551
-;; Package-Commit: 7c182fef33578ae32f945758123601396de227d0
+;; Package-Version: 20230514.8
+;; Package-Commit: 6bbad0891d330b119c77c036643bfb5f9d4d25e3
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: unix
@@ -103,6 +103,7 @@ expected to return the desired face, list of faces, or nil (for no face)."
   "The default i3bar face-function.
 This function applies the FOREGROUND and BACKGROUND colors as specified by the
 i3status program."
+  (declare (pure t))
   (let (face)
     (when foreground (setq face (plist-put face :foreground foreground)))
     (when background (setq face (plist-put face :background background)))
@@ -206,15 +207,16 @@ If the process has exited, this function stores the exit STATUS in
   "Start the i3bar."
   (i3bar--stop)
   (condition-case err
-    (setq i3bar--process (make-process
-                        :name "i3bar"
-                        :buffer " *i3status process*"
-                        :stderr " *i3status stderr*"
-                        :command (ensure-list i3bar-command)
-                        :connection-type 'pipe
-                        :noquery t
-                        :sentinel #'i3bar--process-sentinel
-                        :filter #'i3bar--process-filter))
+      (let ((default-directory user-emacs-directory))
+        (setq i3bar--process (make-process
+                              :name "i3bar"
+                              :buffer " *i3status process*"
+                              :stderr " *i3status stderr*"
+                              :command (ensure-list i3bar-command)
+                              :connection-type 'pipe
+                              :noquery t
+                              :sentinel #'i3bar--process-sentinel
+                              :filter #'i3bar--process-filter)))
     (error
      (setq i3bar-string (format "starting i3bar: %s" (error-message-string err))))))
 
