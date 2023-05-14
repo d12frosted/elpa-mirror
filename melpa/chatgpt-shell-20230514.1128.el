@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230514.13
-;; Package-Commit: d64aba761ef86f90a3c188153de6663e779e2368
-;; Version: 0.30.1
+;; Package-Version: 20230514.1128
+;; Package-Commit: d4e03ffbb96689c31ede5c0b3045a9b79c285b09
+;; Version: 0.31.1
 ;; Package-Requires: ((emacs "27.1") (shell-maker "0.21.1"))
 
 ;; This package is free software; you can redistribute it and/or modify
@@ -535,10 +535,10 @@ Otherwise interrupt if busy."
     (save-excursion
       (goto-char (point-min))
       (while (re-search-forward
-              (rx (or (group (or (not "*") "\n")
+              (rx (or (group (or bol (one-or-more (any "\n \t")))
                              (group "*")
                              (group (one-or-more (not (any "\n*")))) "*")
-                      (group (or (not "_") "\n")
+                      (group (or bol (one-or-more (any "\n \t")))
                              (group "_")
                              (group (one-or-more (not (any "\n_")))) "_")))
               nil t)

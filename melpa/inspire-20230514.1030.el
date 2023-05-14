@@ -4,8 +4,8 @@
 
 ;; Author: Simon Lin <n.sibetz@gmail.com>
 ;; URL: https://github.com/Simon-Lin/inspire.el
-;; Package-Version: 20230310.1557
-;; Package-Commit: 9d15ced8e852135764de3c434753dbcf485b6bc1
+;; Package-Version: 20230514.1030
+;; Package-Commit: 825bbd4e19046b0e61aa27a0f88b1daeaaebf1d0
 ;; Version: 0.0.1
 ;; Keywords: extensions, tex
 ;; Package-Requires: ((emacs "27.1"))
@@ -555,7 +555,8 @@ With ARG, move to the previous nth entry."
 			   inspire-query-string))))
     (save-excursion
       (goto-char (point-max))
-      (inspire--fill-page (1- lbound)))))
+      (let ((buffer-read-only nil))
+	(inspire--fill-page (1- lbound))))))
 
 (defun inspire-open-url (&optional field)
   "Open the corresponding inspire web page according to FIELD.
