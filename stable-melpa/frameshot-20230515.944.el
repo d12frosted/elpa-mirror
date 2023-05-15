@@ -5,10 +5,10 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/frameshot
 ;; Keywords: multimedia
-;; Package-Version: 20230212.2017
-;; Package-Commit: 96f2cc9a0cb672b1989022caa290218c8024a376
+;; Package-Version: 20230515.944
+;; Package-Commit: f74d99be64dc7afa4bdea106c0597c1fa59b9a3d
 
-;; Package-Requires: ((emacs "25.3") (compat "29.1.3.4"))
+;; Package-Requires: ((emacs "25.3") (compat "29.1.4.1"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 

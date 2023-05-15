@@ -5,10 +5,10 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/bicycle
 ;; Keywords: outlines
-;; Package-Version: 20230212.2019
-;; Package-Commit: 20f0637365a9bf0a899a7663b1f8caec609de19a
+;; Package-Version: 20230515.943
+;; Package-Commit: dfc0c874d66d671cbb15149db27134e4ff4f54b8
 
-;; Package-Requires: ((emacs "25.1") (compat "29.1.3.4"))
+;; Package-Requires: ((emacs "25.1") (compat "29.1.4.1"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
