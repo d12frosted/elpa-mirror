@@ -1932,6 +1932,21 @@
 	     (:authors
 	      ("Terrence Brannon" . "metaperl@gmail.com"))
 	     (:maintainer nil . "emacs-devel@gnu.org"))])
+ (latex-table-wizard .
+		     [(1 5 1)
+		      ((emacs
+			(27 1))
+		       (auctex
+			(12 1))
+		       (transient
+			(0 3 7)))
+		      "Magic editing of LaTeX tables" tar
+		      ((:url . "https://github.com/enricoflor/latex-table-wizard")
+		       (:keywords "convenience")
+		       (:maintainer "Enrico Flor" . "enrico@eflor.net")
+		       (:authors
+			("Enrico Flor" . "enrico@eflor.net"))
+		       (:commit . "76d307f27eab65470592400819afaba493c78ef4"))])
  (leaf .
        [(4 5 5)
 	((emacs
@@ -2417,7 +2432,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "847694e78c12d903d5e3f6cb365a5d3b984db537"))])
  (org .
-      [(9 6 5)
+      [(9 6 6)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2426,7 +2441,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "921e0e8bc1158736313db77c2ebc503b50211b89"))])
+	(:commit . "17608670a4f4e8edb91efe04d86fe80ff9d01b69"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
