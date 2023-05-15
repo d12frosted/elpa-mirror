@@ -1,0 +1,17 @@
+(projection-multi .
+		  [(20230506 1541)
+		   ((emacs
+		     (29))
+		    (projection
+		     (0 1))
+		    (compile-multi
+		     (0 1)))
+		   "Projection integration for `compile-multi'" tar
+		   ((:commit . "d3981b262884613100d9ca4fe8c980a288b56ab0")
+		    (:authors
+		     ("Mohsin Kaleem" . "mohkale@kisara.moe"))
+		    (:maintainers
+		     ("Mohsin Kaleem" . "mohkale@kisara.moe"))
+		    (:maintainer "Mohsin Kaleem" . "mohkale@kisara.moe")
+		    (:keywords "project" "convenience")
+		    (:url . "https://github.com/mohkale/projection"))])

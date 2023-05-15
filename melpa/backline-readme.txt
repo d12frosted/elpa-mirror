@@ -4,12 +4,11 @@ sets the background color or another property that is visible on
 whitespace.  This package adds overlays to extend the appearance of
 headings all the way to the right window edge.
 
-Unlike `outline-mode', `outline-minor-mode' by itself does not
-highlight headings.  The `outline-minor-faces' package implements
-that and is required by this package.
-
-Usage:
-
   (use-package backline
     :after outline
     :config (advice-add 'outline-flag-region :after 'backline-update))
+
+This package should be used together with the `outline-minor-faces'
+package.  Instead setting the built-in `outline-minor-mode-highlight' to
+`append' also works, but then top-level s-expressions are highlighted as
+if they were sections, which makes the overview less readable.
