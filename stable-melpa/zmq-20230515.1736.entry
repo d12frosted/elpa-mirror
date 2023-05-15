@@ -1,11 +1,11 @@
 (zmq .
-     [(20230214 36)
+     [(20230515 1736)
       ((cl-lib
 	(0 5))
        (emacs
 	(26)))
       "ZMQ bindings in elisp" tar
-      ((:commit . "4e1355a0fbaa4581c9c7822cee7c671b6bf15eab")
+      ((:commit . "4f31ffa3953db33c57b590c43013cd920c344142")
        (:authors
 	("Nathaniel Nicandro" . "nathanielnicandro@gmail.com"))
        (:maintainers

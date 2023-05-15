@@ -5,8 +5,8 @@
 ;; Author: David Kågedal <davidk@lysator.liu.se>
 ;; Homepage: http://stacked-git.github.io
 ;; Version: 0.17.1
-;; Package-Version: 20230427.25
-;; Package-Commit: d5d04c94b466036468ca2f268fcc22168d225eef
+;; Package-Version: 20230515.1410
+;; Package-Commit: 24f14bd255612d536aadae46ce7749615c4cf681
 ;;
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

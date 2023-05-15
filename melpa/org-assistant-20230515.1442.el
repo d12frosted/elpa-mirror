@@ -2,8 +2,8 @@
 
 ;; Author: Tyler Dodge (tyler@tdodge.consulting)
 ;; Version: 1.1
-;; Package-Version: 20230511.1440
-;; Package-Commit: 3a89386c507a335c0b65fe9018c14c11e864b37d
+;; Package-Version: 20230515.1442
+;; Package-Commit: 0c1d9916c5fc763b4dad2449c467bef0f4ead889
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "28.1") (uuidgen "1.2") (deferred "0.5.1") (s "1.12.0") (dash "2.19.1") (ht "0.9"))
 ;; URL: https://github.com/tyler-dodge/org-assistant
@@ -1222,7 +1222,11 @@ Return nil."
     (json-read-from-string json)))
 
 (defun org-assistant-cancel-block-at-point ()
-  "Cancel the `org-assistant' execution at point."
+  "Cancel the `org-assistant' execution at point.
+
+This refers to the streaming block before or after the current block.
+It will not cancel a block that is streaming at point.
+"
   (interactive)
   (save-match-data
     (save-excursion
@@ -1231,12 +1235,9 @@ Return nil."
       (cond
        ((save-excursion
           (-some-->
-              (or (save-excursion
-                    (when (re-search-backward org-assistant--begin-src-regexp nil t)
-                      (alist-get :stream-id (org-assistant--org-src-arguments))))
-                  (save-excursion
-                    (when (re-search-forward org-assistant--begin-src-regexp nil t)
-                      (alist-get :stream-id (org-assistant--org-src-arguments)))))
+              (save-excursion
+                (when (re-search-forward org-assistant--begin-src-regexp nil t)
+                  (alist-get :stream-id (org-assistant--org-src-arguments))))
             (let* ((uuid it)
                   (process (gethash uuid org-assistant--request-processes-ht)))
               (progn

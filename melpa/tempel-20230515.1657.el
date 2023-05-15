@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.7
-;; Package-Version: 20230510.1659
-;; Package-Commit: 5907674686661a141612d0b7b7de712fbe7f2176
+;; Package-Version: 20230515.1657
+;; Package-Commit: cb55ca7d44f23e48f9c90804804f6ebb43d195c4
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.4.0"))
 ;; Homepage: https://github.com/minad/tempel
 ;; Keywords: abbrev, languages, tools, wp
@@ -218,7 +218,8 @@ REGION are the current region bounds."
 (defun tempel--range-modified (ov &rest _)
   "Range overlay OV modified."
   (when (and (not tempel--inhibit-hooks) (= (overlay-start ov) (overlay-end ov)))
-    (let (inhibit-modification-hooks)
+    (let ((inhibit-modification-hooks nil)
+          (tempel--inhibit-hooks t))
       (tempel--disable (overlay-get ov 'tempel--range)))))
 
 (defun tempel--field-modified (ov after beg end &optional _len)
@@ -226,7 +227,8 @@ REGION are the current region bounds."
 AFTER is non-nil after the modification.
 BEG and END are the boundaries of the modification."
   (unless tempel--inhibit-hooks
-    (let (inhibit-modification-hooks)
+    (let ((inhibit-modification-hooks nil)
+          (tempel--inhibit-hooks t))
       (cond
        ;; Erase default before modification if at beginning or end
        ((and (not after) (overlay-get ov 'tempel--default)
@@ -255,22 +257,22 @@ BEG and END are the boundaries of the modification."
           (let (x)
             (setq x (or (and (setq x (overlay-get ov 'tempel--form)) (eval x (cdr st)))
                         (and (setq x (overlay-get ov 'tempel--name)) (alist-get x (cdr st)))))
-            (when x (tempel--replace (overlay-start ov) (overlay-end ov) ov x)))))
+            (when x (tempel--synchronize-replace (overlay-start ov) (overlay-end ov) ov x)))))
       ;; Move range overlay
       (move-overlay range (overlay-start range)
                     (max (overlay-end range) (overlay-end ov))))))
 
-(defun tempel--replace (beg end ov str)
+(defun tempel--synchronize-replace (beg end ov str)
   "Replace region between BEG and END with STR.
 If OV is alive, move it."
   (let ((old (buffer-substring-no-properties beg end)))
     (setq ov (and ov (overlay-buffer ov) ov))
     (unless (equal str old)
       (unless (eq buffer-undo-list t)
-        (push (list 'apply #'tempel--replace beg (+ beg (length str)) ov old)
+        (push (list 'apply #'tempel--synchronize-replace
+                    beg (+ beg (length str)) ov old)
               buffer-undo-list))
-      (let ((buffer-undo-list t)
-            (tempel--inhibit-hooks t))
+      (let ((buffer-undo-list t))
         (save-excursion
           (goto-char beg)
           (delete-char (- end beg))
@@ -294,7 +296,8 @@ If OV is alive, move it."
 NAME is the optional field name.
 INIT is the optional initial input.
 Return the added field."
-  (let ((ov (make-overlay (point) (point))))
+  (let ((ov (make-overlay (point) (point)))
+        (hooks (list #'tempel--field-modified)))
     (push ov (car st))
     (when name
       (overlay-put ov 'tempel--name name)
@@ -305,9 +308,9 @@ Return the added field."
       (move-overlay ov (overlay-start ov) (point)))
     (tempel--update-mark ov)
     (overlay-put ov 'tempel--field st)
-    (overlay-put ov 'modification-hooks (list #'tempel--field-modified))
-    (overlay-put ov 'insert-in-front-hooks (list #'tempel--field-modified))
-    (overlay-put ov 'insert-behind-hooks (list #'tempel--field-modified))
+    (overlay-put ov 'modification-hooks hooks)
+    (overlay-put ov 'insert-in-front-hooks hooks)
+    (overlay-put ov 'insert-behind-hooks hooks)
     (overlay-put ov 'face 'tempel-field)
     (when (and init (get-text-property 0 'tempel--default init))
       (overlay-put ov 'face 'tempel-default)
@@ -357,12 +360,12 @@ Return the added field."
      (if (not region)
          (when-let (ov (apply #'tempel--placeholder st rest))
            (unless rest
-             (overlay-put ov 'tempel--quit t)))
+             (overlay-put ov 'tempel--enter #'tempel--done)))
        (goto-char (cdr region))
        (when (eq (or (car-safe elt) elt) 'r>)
          (indent-region (car region) (cdr region) nil))))
     ;; TEMPEL EXTENSION: Quit template immediately
-    ('q (overlay-put (tempel--field st) 'tempel--quit t))
+    ('q (overlay-put (tempel--field st) 'tempel--enter #'tempel--done))
     (_ (if-let (ret (run-hook-with-args-until-success 'tempel-user-elements elt))
            (tempel--element st region ret)
          ;; TEMPEL EXTENSION: Evaluate forms
@@ -568,11 +571,10 @@ This is meant to be a source in `tempel-template-sources'."
            (if-let (next (tempel--find arg)) (goto-char next)
              (tempel-done)
              (cl-return)))
-  ;; If the current field is marked as "quitting", disable its
-  ;; containing template right away.
+  ;; Run the enter action of the field.
   (when-let ((ov (tempel--field-at-point))
-             ((overlay-get ov 'tempel--quit)))
-    (tempel--done (overlay-get ov 'tempel--field))))
+             (fun (overlay-get ov 'tempel--enter)))
+    (funcall fun ov)))
 
 (defun tempel-previous (arg)
   "Move ARG fields backward and quit at the beginning."
@@ -616,9 +618,9 @@ This is meant to be a source in `tempel-template-sources'."
   ;; TODO disable only the topmost template?
   (while tempel--active (tempel--done)))
 
-(defun tempel--done (&optional st)
-  "Finalize template ST, or last template."
-  (let ((st (or st (car tempel--active)))
+(defun tempel--done (&optional ov)
+  "Finalize template associated with field OV, or last template."
+  (let ((st (if ov (overlay-get ov 'tempel--field) (car tempel--active)))
         (buf (current-buffer)))
     ;; Ignore errors in post expansion to ensure that templates can be
     ;; terminated gracefully.
@@ -657,7 +659,7 @@ The completion table specifies the category `tempel'."
 (defun tempel-expand (&optional interactive)
   "Expand exactly matching template name at point.
 This completion-at-point-function (Capf) returns only the single
-exactly matching templaten ame.  As a consequence the completion
+exactly matching template name.  As a consequence the completion
 UI (e.g. Corfu) does not present the candidates for selection.
 If you want to select from a list of templates, use
 `tempel-complete' instead.  If INTERACTIVE is nil the function
