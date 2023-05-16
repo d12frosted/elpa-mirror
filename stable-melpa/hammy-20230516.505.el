@@ -4,9 +4,9 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/hammy.el
-;; Package-Version: 20221106.2041
-;; Package-Commit: 84c0f14e2fcbaa36dfbf2986d44e672d028fa2e6
-;; Version: 0.2.1
+;; Package-Version: 20230516.505
+;; Package-Commit: 5469d2d6f6f7ccb521ea0e3ada9b6531ac2e1a70
+;; Version: 0.3-pre
 ;; Package-Requires: ((emacs "28.1") (ts "0.2.2"))
 ;; Keywords: convenience
 
@@ -961,8 +961,9 @@ Summary includes elapsed times, etc."
              :duration "25 minutes"
              :before (do (announce "Starting work time.")
                          (notify "Starting work time."))
-             :advance (do (announce "Break time!")
-                          (notify "Break time!")))
+             :advance (remind "10 minutes"
+                              (do (announce "Break time!")
+                                  (notify "Break time!"))))
    (interval :name "Resting"
              :duration (do (if (and (not (zerop cycles))
                                     (zerop (mod cycles 3)))
@@ -973,8 +974,9 @@ Summary includes elapsed times, etc."
                              "5 minutes"))
              :before (do (announce "Starting break time.")
                          (notify "Starting break time."))
-             :advance (do (announce "Break time is over!")
-                          (notify "Break time is over!")))))
+             :advance (remind "10 minutes"
+                              (do (announce "Break time is over!")
+                                  (notify "Break time is over!"))))))
 
 (hammy-define "⅓-time"
   :documentation "Breaks that are ⅓ as long as the last work interval."

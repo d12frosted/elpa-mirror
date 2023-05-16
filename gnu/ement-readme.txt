@@ -402,14 +402,22 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.9.1
+4.1 0.9.2
+─────────
+
+  *Fixes*
+  ⁃ Restore position in room list when refreshing.
+  ⁃ Completion in minibuffer.
+
+
+4.2 0.9.1
 ─────────
 
   *Fixes*
   ⁃ Error in `ement-room-list' command upon initial sync.
 
 
-4.2 0.9
+4.3 0.9
 ───────
 
   *Additions*
@@ -462,7 +470,7 @@ Feel free to join us in the chat room:
 [Caleb Chase] <https://github.com/chasecaleb>
 
 
-4.3 0.8.3
+4.4 0.8.3
 ─────────
 
   *Fixes*
@@ -477,7 +485,7 @@ Feel free to join us in the chat room:
     used.)
 
 
-4.4 0.8.2
+4.5 0.8.2
 ─────────
 
   *Fixes*
@@ -485,13 +493,13 @@ Feel free to join us in the chat room:
   ⁃ Deduplicate grouped membership events.
 
 
-4.5 0.8.1
+4.6 0.8.1
 ─────────
 
   Added missing changelog entry (of course).
 
 
-4.6 0.8
+4.7 0.8
 ───────
 
   *Additions*
@@ -534,7 +542,7 @@ Feel free to join us in the chat room:
 [Jeff Bowman] <https://github.com/jeffbowman>
 
 
-4.7 0.7
+4.8 0.7
 ───────
 
   *Additions*
@@ -574,7 +582,7 @@ Feel free to join us in the chat room:
 [mekeor] <https://github.com/mekeor>
 
 
-4.8 0.6
+4.9 0.6
 ───────
 
   *Additions*
@@ -604,15 +612,15 @@ Feel free to join us in the chat room:
 [Visuwesh] <https://github.com/vizs>
 
 
-4.9 0.5.2
-─────────
+4.10 0.5.2
+──────────
 
   *Fixes*
   ⁃ Apply `ement-initial-sync-timeout' properly (important for when the
     homeserver is slow to respond).
 
 
-4.10 0.5.1
+4.11 0.5.1
 ──────────
 
   *Fixes*
@@ -620,7 +628,7 @@ Feel free to join us in the chat room:
   ⁃ Faces in `ement-directory' listings.
 
 
-4.11 0.5
+4.12 0.5
 ────────
 
   *Additions*
@@ -645,7 +653,7 @@ Feel free to join us in the chat room:
 [taxy.el] <https://github.com/alphapapa/taxy.el>
 
 
-4.12 0.4.1
+4.13 0.4.1
 ──────────
 
   *Fixes*
@@ -653,7 +661,7 @@ Feel free to join us in the chat room:
     marker's position again.
 
 
-4.13 0.4
+4.14 0.4
 ────────
 
   *Additions*
@@ -684,7 +692,7 @@ Feel free to join us in the chat room:
   ⁃ Highlighting of `@room' mentions.
 
 
-4.14 0.3.1
+4.15 0.3.1
 ──────────
 
   *Fixes*
@@ -692,7 +700,7 @@ Feel free to join us in the chat room:
     local user, the room is considered read).
 
 
-4.15 0.3
+4.16 0.3
 ────────
 
   *Additions*
@@ -720,14 +728,14 @@ Feel free to join us in the chat room:
   ⁃ Compatibility with Emacs 27.
 
 
-4.16 0.2.1
+4.17 0.2.1
 ──────────
 
   *Fixes*
   ⁃ Info manual export filename.
 
 
-4.17 0.2
+4.18 0.2
 ────────
 
   *Changes*
@@ -762,14 +770,14 @@ Feel free to join us in the chat room:
 [Julien Roy] <https://github.com/MrRoy>
 
 
-4.18 0.1.4
+4.19 0.1.4
 ──────────
 
   *Fixed*
   ⁃ Info manual directory headers.
 
 
-4.19 0.1.3
+4.20 0.1.3
 ──────────
 
   *Fixed*
@@ -779,7 +787,7 @@ Feel free to join us in the chat room:
     re-enabled in a future release.)
 
 
-4.20 0.1.2
+4.21 0.1.2
 ──────────
 
   *Fixed*
@@ -796,7 +804,7 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.21 0.1.1
+4.22 0.1.1
 ──────────
 
   *Fixed*
@@ -806,7 +814,7 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.22 0.1
+4.23 0.1
 ────────
 
   After almost two years of development, the first tagged release.

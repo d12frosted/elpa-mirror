@@ -4,8 +4,8 @@
 
 ;; Author: Alex Figl-Brick <alex@alexbrick.me>
 ;; Version: 0.1
-;; Package-Version: 20230505.1309
-;; Package-Commit: b5ebf49c7b29a49151ff000ba5d040ea0801a9c7
+;; Package-Version: 20230516.818
+;; Package-Commit: 838c7c14cbadf9f42dd3a2c9f187826a9332afd0
 ;; Package-Requires: ((emacs "29"))
 ;; URL: https://gitlab.com/bricka/emacs-kotlin-ts-mode
 
@@ -133,6 +133,7 @@ and END mark the region to be fontified.  OVERRIDE is the override flag."
        (primary_constructor "constructor" @font-lock-keyword-face)
        (constructor_delegation_call "this" @font-lock-keyword-face)
        (secondary_constructor "constructor" @font-lock-keyword-face)
+       "init" @font-lock-keyword-face
 
        (type_alias "typealias" @font-lock-keyword-face)
        [
@@ -325,6 +326,7 @@ and END mark the region to be fontified.  OVERRIDE is the override flag."
     `((kotlin
        ((node-is "}") parent-bol 0)
        ((node-is ")") parent-bol 0)
+       ((parent-is "anonymous_initializer") parent-bol ,offset)
        ((parent-is "statements") parent-bol 0)
        ((parent-is "catch_block") parent-bol ,offset)
        ((parent-is "class_body") parent-bol ,offset)
