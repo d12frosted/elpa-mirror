@@ -4,8 +4,8 @@
 ;;
 ;; Author: David Thompson
 ;; Keywords: hypermedia
-;; Package-Version: 20230406.1321
-;; Package-Commit: 3fc8f3bb8f39840cc5030aca3e3f5c74346d77f2
+;; Package-Version: 20230516.1552
+;; Package-Commit: bf10278b360f18989b5a813d665c853be08bac94
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.6.1") (dash "2.12.0") (seq "1.9") (s "1.9"))
 ;; Version: 0.2
 ;; URL: https://github.com/dtk01/dtk.el
@@ -1126,59 +1126,74 @@ OSIS XML document."
   (regexp-opt '("^Unprocessed Token:"))
   "Regular expression describing lines to be ignored in diatheke OSIS output.")
 
+(defun dtk--diatheke-build-xml-elements-string (lines n)
+  "Based on raw diatheke output as a series of lines, LINES, build the
+raw text, sans citation, for a single verse, removing ignored XML
+elements."
+  (multiple-value-bind (book chapter title-raw verse first-line-raw-text)
+      (dtk--diatheke-pull-citation-and-title lines n)
+    ;; Once initial line associated with verse has been dealt
+    ;; with, modify the initial line so that it, along with
+    ;; every subsequent line can be handled in a uniform manner.
+    (when book
+      (setf (elt lines n) first-line-raw-text))
+    ;; per-line processing
+    (let ((text-raw "")
+          (current-line-n n)
+          (last-line-n (1- (length lines))))
+      (unless first-line-raw-text
+        (setf (elt lines current-line-n) "[verse omitted]"))
+      (cl-do ((ignorep
+               ;; discard/ignore some classes of diatheke OSIS output
+               (string-match dtk-parse-osis-ignore-regexp (elt lines current-line-n))
+               (string-match dtk-parse-osis-ignore-regexp (elt lines current-line-n))))
+          (nil nil)
+        (unless ignorep
+          (setf text-raw
+                (cl-concatenate 'string text-raw (elt lines current-line-n))))
+        (when (or (>= current-line-n last-line-n)
+                  ;; check if next line corresponds to start of a new verse
+                  (string-match dtk-sto--diatheke-parse-line-regexp (elt lines (1+ current-line-n))))
+          (cl-return))
+        (cl-incf current-line-n))
+      (values text-raw title-raw book chapter verse current-line-n))))
+
 (defun dtk--diatheke-parse-osis-xml-for-verse (lines n)
-  "Consume lines associated with a single verse. Return multiple values where where the first value is the index of the last line consumed in parsing a single verse and the second value is a plist associated with a single verse. Use list of strings, LINES, starting at list element N. If an indication of the beginning of a verse is not encountered at element N, return nil."
-  ;; Anticipate LINES to correspond to what diatheke coughs up. For a single verse of a "Bible text", this is typically one or more lines of the form
-  ;; II Peter 3:15: <w lemma=\"strong:G3588 lemma.TR:την\" morph=\"robinson:T-ASF\" src=\"2\" wn=\"001\"/><w lemma=\"strong:G2532 lemma.TR:και\" morph=\"robinson:CONJ\" src=\"1\" wn=\"002\">And</w> <w lemma=\"strong:G2233 lemma.TR:ηγεισθε\" morph=\"robinson:V-PNM-2P\" src=\"8\" wn=\"003\">account</w> ...
-  ;;
-  ;; Note that diatheke may emit, for a single verse, a set of lines of the form
-  ;; II Peter 3:15: Unprocessed Token: <br /> in key II Peter 3:15
-  ;; Unprocessed Token: <br /> in key II Peter 3:15
-  ;; ...
-  (let ((line (elt lines n))
-	(current-line-n n)
-	(last-line-n (1- (length lines))))
+  "Consume lines associated with a single verse. Return multiple
+values where where the first value is the index of the last line
+consumed in parsing a single verse and the second value is a plist
+associated with a single verse. Use list of strings, LINES, starting
+at list element N. If an indication of the beginning of a verse is not
+encountered at element N, return NIL."
+  (multiple-value-bind (text-raw title-raw book chapter verse current-line-n)
+      (dtk--diatheke-build-xml-elements-string lines n)
+    ;; Add root element and parse text as a single piece of XML
+    (let ((text-structured (with-temp-buffer
+                             (insert "<r>" text-raw "</r>")
+                             (xml-parse-region)))
+          (title-structured (dtk-title-xml-to-plist title-raw)))
+      (cl-values current-line-n
+                 (list :title title-structured
+                       :book book :chapter chapter :verse verse
+                       :text (cl-subseq (car text-structured) 2))))))
+
+(defun dtk--diatheke-pull-citation-and-title (lines n)
+  "Anticipate that LINES corresponds to raw diatheke output. Match on
+citation and title content. Return verse content sans title content
+and citation content."
+  (let ((line (elt lines n)))
     (when (s-present? line)
       (when (string-match dtk-sto--diatheke-parse-line-regexp line)
-	(let ((book (match-string 1 line))
-	      (chapter (string-to-number (match-string 2 line)))
-	      (title (match-string 9 line))
-	      (verse (string-to-number (match-string 3 line)))
-	      ;; Ensure text is present, which may not be the case if
-	      ;; a verse starts with a newline.  See
-	      ;; <https://github.com/alphapapa/sword-to-org/issues/2>
-	      (first-line-raw-text (when (s-present? (match-string 4 line))
-				     (s-trim (match-string 4 line))))
-	      (text-raw ""))
-	  ;; Once initial line associated with verse has been dealt
-	  ;; with, modify the initial line so that it, along with
-	  ;; every subsequent line can be handled in the same manner.
-	  (when book
-	    (setf (elt lines n) first-line-raw-text))
-	  ;; per-line processing
-	  (cl-do ((ignorep
-		   ;; discard/ignore some classes of diatheke OSIS output
-		   (string-match dtk-parse-osis-ignore-regexp (elt lines current-line-n))
-		   (string-match dtk-parse-osis-ignore-regexp (elt lines current-line-n))))
-	      (nil nil)
-	    (unless ignorep
-	      (setf text-raw
-		    (cl-concatenate 'string text-raw (elt lines current-line-n))))
-	    (when (or (>= current-line-n last-line-n)
-		      ;; check if next line corresponds to start of a new verse
-		      (string-match dtk-sto--diatheke-parse-line-regexp (elt lines (1+ current-line-n))))
-	      (cl-return))
-	    (cl-incf current-line-n))
-	  ;; Add root element and parse text as a single piece of XML
-	  (let ((text-structured (with-temp-buffer
-				   (insert "<r>" text-raw "</r>")
-				   (xml-parse-region)))
-		(title-structured (dtk-title-xml-to-plist title)))
-            (cl-values current-line-n
-		       (list
-			:title title-structured
-			:book book :chapter chapter :verse verse
-			:text (cl-subseq (car text-structured) 2)))))))))
+        (let ((book (match-string 1 line))
+              (chapter (string-to-number (match-string 2 line)))
+              (title-raw (match-string 9 line))
+              (verse (string-to-number (match-string 3 line)))
+              ;; Ensure text is present, which may not be the case if
+              ;; a verse starts with a newline.  See
+              ;; <https://github.com/alphapapa/sword-to-org/issues/2>
+              (first-line-raw-text (when (s-present? (match-string 4 line))
+                                     (s-trim (match-string 4 line)))))
+          (values book chapter title-raw verse first-line-raw-text))))))
 
 ;;
 ;; handling title element
@@ -1880,7 +1895,7 @@ where the verse text property changes."
   (cond ((eobp)
 	 nil)
 	((not (get-text-property (point) 'verse))
-	 (let ((changes-at-point (next-single-property-change (point) 'verse)))
+	 (let ((changes-at-point (dtk-verse-changes-at)))
 	   (if changes-at-point
 	       (goto-char changes-at-point))))
 	(t t)))
@@ -1888,7 +1903,7 @@ where the verse text property changes."
 (defun dtk-forward-verse ()
   "Move to the numeric component of the verse citation for the next verse."
   (interactive)
-  (let ((next-verse-point (next-single-property-change (point) 'verse)))
+  (let ((next-verse-point (dtk-verse-changes-at)))
     (if next-verse-point
 	(progn
 	  (goto-char next-verse-point)
@@ -1896,7 +1911,7 @@ where the verse text property changes."
 	  ;; associated with a verse. In this case, move forward
 	  ;; until the 'verse property is defined.
 	  (if (not (get-text-property (point) 'text))
-	      (goto-char (next-single-property-change (point) 'verse))))
+	      (goto-char (dtk-verse-changes-at))))
       (progn
 	;; If NEXT-VERSE-POINT is nil,
 	;; - go to end of buffer
@@ -1933,6 +1948,10 @@ where the verse text property changes."
 	  ;; In less-than-ideal circumstances, VERSE-CHANGES-AT assumes a value of NIL when at the first verse. Ugly kludges include moving to start of buffer or searching back for the first numeric character encountered.
 	  (t
 	   (beginning-of-buffer)))))
+
+(defun dtk-verse-changes-at ()
+  "Return point at which verse text property changes."
+  (next-single-property-change (point) 'verse))
 
 ;;;
 ;;; miscellany

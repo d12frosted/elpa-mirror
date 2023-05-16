@@ -6,8 +6,6 @@
 ;; Author: Ian Kelling <ian@iankelling.org>
 ;; Created: 1 Apr 2014
 ;; Version: 1.1
-;; Package-Version: 20140802.1142
-;; Package-Commit: 7739d10ebe1787a72aa74085e9baedd0f4988b00
 ;; Package-Requires: ((pcsv "1.3.3") (dash "2.5.0") (bbdb "20140412.1949"))
 ;; Keywords: csv, util, bbdb
 ;; Homepage: https://gitlab.com/iankelling/bbdb-csv-import

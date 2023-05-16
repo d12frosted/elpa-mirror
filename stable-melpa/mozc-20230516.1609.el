@@ -3,8 +3,8 @@
 ;; Copyright 2010-2021, Google Inc. All rights reserved.
 
 ;; Keywords: mule, multilingual, input method
-;; Package-Version: 20221214.1435
-;; Package-Commit: cebb883f5d7d8d6dec05c6e2ed4096d0e8ff8c9f
+;; Package-Version: 20230516.1609
+;; Package-Commit: 381e5c33211de185d0c834acd61d184dde563227
 
 ;; Redistribution and use in source and binary forms, with or without
 ;; modification, are permitted provided that the following conditions are
@@ -663,7 +663,7 @@ This hack could be moved to mozc-posn-at-x-y in a future version."
   "Return the width of WINDOW in pixel.
 WINDOW defaults to the selected window."
   (let ((rect (window-inside-pixel-edges window)))
-    (- (third rect) (first rect))))
+    (- (nth 2 rect) (nth 0 rect))))
 
 (defun mozc-header-line-height ()
   "Return the height of the header line.
