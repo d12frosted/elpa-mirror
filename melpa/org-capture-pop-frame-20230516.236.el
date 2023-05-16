@@ -5,8 +5,8 @@
 
 ;; Author: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/org-capture-pop-frame.git
-;; Package-Version: 20160518.1008
-;; Package-Commit: b16fd712de62cf0d1f9befd03be6ab5983cb3301
+;; Package-Version: 20230516.236
+;; Package-Commit: d88b75cc02fc53716701051dbdd906db0515de8c
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -143,7 +143,13 @@ set by `ocpf---org-capture'."
                (select-frame frame)
                (setq word-wrap nil)
                (setq truncate-lines nil)
-               (funcall orig-fun goto keys)
+
+               ;; Close the popup frame after pressing "q" or "C-g".
+               ;; https://github.com/malb/emacs.d/blame/197be098ad50d8d7aca4513d63db8705b30017e4/malb.org#L3196-L3198.
+               (condition-case nil
+                   (funcall orig-fun goto keys)
+                 ((debug error) (ocpf--delete-frame)))
+
                (setq header-line-format
                      (list "Capture buffer. "
                            (propertize (substitute-command-keys "Finish \\[org-capture-finalize], ")
