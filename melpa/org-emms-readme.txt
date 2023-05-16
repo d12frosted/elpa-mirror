@@ -1,5 +1,5 @@
 This package provides a new org link type for playing back
-multimedia files from org-mode using EMMS, The Emacs Multimedia
+multimedia files in org-mode using EMMS, The Emacs Multimedia
 System. If the link contains a track position, playback will start
 at the specified position. For example:
 

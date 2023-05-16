@@ -3,24 +3,26 @@ Fetcher: github
 Source:  https://github.com/jscheid/prettier.el.git
 
 Updating /mnt/store/melpa/working/prettier/
-Checking out 3fcf3ba3507f47b8ac1392e7901aa2c418147758
+Checking out 1d9d789d91651a8773c7a3a688ec0cf3635fa94e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/prettier/
-  to /tmp/prettierP0OSUj/prettier-20220603.1338
+  to /tmp/prettierGCTECa/prettier-20230515.2017
     prettier.el -> prettier.el
     dir -> dir
     prettier.info -> prettier.info
     bootstrap-min.js -> bootstrap-min.js
     prettier-el.js.gz.base64 -> prettier-el.js.gz.base64
-Created prettier-20220603.1338.tar containing:
-  prettier-20220603.1338/
-  prettier-20220603.1338/bootstrap-min.js
-  prettier-20220603.1338/dir
-  prettier-20220603.1338/prettier-el.js.gz.base64
-  prettier-20220603.1338/prettier-pkg.el
-  prettier-20220603.1338/prettier.el
-  prettier-20220603.1338/prettier.info
-Built prettier in 3.912s, finished at 2023-05-15T17:39:31+0000
+Created prettier-20230515.2017.tar containing:
+  prettier-20230515.2017/
+  prettier-20230515.2017/bootstrap-min.js
+  prettier-20230515.2017/dir
+  prettier-20230515.2017/prettier-el.js.gz.base64
+  prettier-20230515.2017/prettier-pkg.el
+  prettier-20230515.2017/prettier.el
+  prettier-20230515.2017/prettier.info
+Built prettier in 5.102s, finished at 2023-05-15T21:35:18+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  539 May 15 17:39 packages/prettier-20220603.1338.entry
 100K -rw-r--r-- 1 root root 100K May 15 17:39 packages/prettier-20220603.1338.tar
+4.0K -rw-r--r-- 1 root root  539 May 15 21:35 packages/prettier-20230515.2017.entry
+100K -rw-r--r-- 1 root root 100K May 15 21:35 packages/prettier-20230515.2017.tar

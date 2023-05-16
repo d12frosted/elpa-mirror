@@ -336,6 +336,17 @@
 	    (:authors
 	     ("Akib Azmain Turja" . "akib@disroot.org"))
 	    (:commit . "bebdb6a165bdc3bb6b357706d0ce58f57271d137"))])
+ (devil .
+	[(0 3 0)
+	 ((emacs
+	   (24 4)))
+	 "Minor mode for Devil-like command entering" tar
+	 ((:url . "https://github.com/susam/devil")
+	  (:keywords "convenience" "abbrev")
+	  (:maintainer "Susam Pal" . "susam@susam.net")
+	  (:authors
+	   ("Susam Pal" . "susam@susam.net"))
+	  (:commit . "79fd50fe22ce45968779f0e176247ab7988f0905"))])
  (diff-ansi .
 	    [(0 2)
 	     ((emacs
