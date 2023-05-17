@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/ardumont/org2jekyll.git
 
 Updating /mnt/store/melpa/working/org2jekyll/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/ardumont/org2jekyll.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 4393402448da722667f6f5a4d742fa817dec0c0f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org2jekyll/
+  to /tmp/org2jekyllp4gge2/org2jekyll-20210829.1113
+    org2jekyll-utilities.el -> org2jekyll-utilities.el
+    org2jekyll.el -> org2jekyll.el
+Created org2jekyll-20210829.1113.tar containing:
+  org2jekyll-20210829.1113/
+  org2jekyll-20210829.1113/org2jekyll-pkg.el
+  org2jekyll-20210829.1113/org2jekyll-utilities.el
+  org2jekyll-20210829.1113/org2jekyll.el
+Built org2jekyll in 5.938s, finished at 2023-05-17T01:07:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 638 May 17 01:07 packages/org2jekyll-20210829.1113.entry
+ 40K -rw-r--r-- 1 root root 40K May 17 01:07 packages/org2jekyll-20210829.1113.tar

@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/cnngimenez/org-tree-slide-pauses.git
 
 Updating /mnt/store/melpa/working/org-tree-slide-pauses/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out f02af7102e9ecef7c3dac0d376d85bbb8c4de4cc
+Built org-tree-slide-pauses in 7.651s, finished at 2023-05-17T01:06:58+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K May 17 01:06 packages/org-tree-slide-pauses-20201215.146.el
+4.0K -rw-r--r-- 1 root root 465 May 17 01:06 packages/org-tree-slide-pauses-20201215.146.entry

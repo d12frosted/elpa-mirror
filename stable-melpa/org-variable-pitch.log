@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/cadadr/elisp.git
 
 Updating /mnt/store/melpa/working/org-variable-pitch/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/cadadr/elisp.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 350af0e5d53307c900e4f8b2617f3852f51a74d2
+Built org-variable-pitch in 7.443s, finished at 2023-05-17T01:07:05+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K May 17 01:07 packages/org-variable-pitch-20220220.1757.el
+4.0K -rw-r--r-- 1 root root 508 May 17 01:07 packages/org-variable-pitch-20220220.1757.entry

@@ -4,8 +4,8 @@
 
 ;; Author: Jerry Peng <pr2jerry@gmail.com>
 ;; URL: https://github.com/jerrypnz/major-mode-hydra.el
-;; Package-Version: 20210221.834
-;; Package-Commit: 84c1929a5153be169ca5c36737439d51dffde505
+;; Package-Version: 20230516.2122
+;; Package-Commit: 72bdce649245df276a3f49fb57f890c10fbf0a31
 ;; Version: 0.2.2
 ;; Package-Requires: ((hydra "0.15.0") (s "1.12.0") (dash "2.18.0") (emacs "24"))
 
@@ -38,8 +38,17 @@
 (require 'hydra)
 
 (defcustom pretty-hydra-enable-use-package t
-  "Enable use-package integration when set to t."
+  "Enable `use-package' integration when set to t."
   :type 'boolean
+  :group 'pretty-hydra)
+
+(defcustom pretty-hydra-default-title-body-format-spec "\n %s\n%s"
+  "Default specification to format the title and body into a hydra docstring.
+It should contain two `%s'. It can be used to customize the
+whitespace around and between the title and the body. It is only
+used if a title is provided. Can be overridden in the
+pretty-hydra body via `:title-body-format-spec'."
+  :type 'string
   :group 'pretty-hydra)
 
 (defun pretty-hydra--normalize-head! (head)
@@ -173,17 +182,23 @@ This is used to create the HEADS to be passed to `defhydra'."
        (-map (-lambda ((key cmd _ . opts))
                (-concat (list key cmd) (pretty-hydra--remove-custom-opts opts))))))
 
-(defun pretty-hydra--maybe-add-title (title docstring)
-  "Add TITLE to the DOCSTRING if it's not nil, other return DOCSTRING unchanged."
+(defun pretty-hydra--maybe-add-title (title title-body-format-spec docstring)
+  "Add TITLE to DOCSTRING according to TITLE-BODY-FORMAT-SPEC.
+
+If TITLE-BODY-FORMAT-SPEC is nil, the value of
+`pretty-hydra-default-title-body-format-spec' is used."
   (if (null title)
       docstring
-    (format "\n %s\n%s"
-            (cond
-             ((char-or-string-p title) title)
-             ((symbolp title)          (format "%%s`%s" title))
-             ((listp title)            (format "%%s%s" (prin1-to-string title)))
-             (t                        ""))
-            docstring)))
+    (let ((format-spec (if title-body-format-spec
+                           title-body-format-spec
+                         pretty-hydra-default-title-body-format-spec)))
+      (format format-spec
+              (cond
+               ((char-or-string-p title) title)
+               ((symbolp title)          (format "%%s`%s" title))
+               ((listp title)            (format "%%s%s" (prin1-to-string title)))
+               (t                        ""))
+              docstring))))
 
 (defconst pretty-hydra--opts '(:separator :formatter :title :quit-key :width :toggle))
 
@@ -220,10 +235,11 @@ See `pretty-hydra-define' and `pretty-hydra-define+'."
          (title     (plist-get body :title))
          (formatter (or (plist-get body :formatter)
                         #'identity))
+         (title-body-format-spec (plist-get body :title-body-format-spec))
          (quit-key  (plist-get body :quit-key))
          (docstring (->> heads-plist
                          (pretty-hydra--gen-body-docstring separator)
-                         (pretty-hydra--maybe-add-title title)
+                         (pretty-hydra--maybe-add-title title title-body-format-spec)
                          (funcall formatter)
                          (s-prepend "\n"))) ;; This is required, otherwise the docstring won't show up correctly
          (heads (pretty-hydra--get-heads heads-plist))
@@ -316,12 +332,12 @@ one if specified.  Arguments are the same as `pretty-hydra-define'."
 
 (defface pretty-hydra-toggle-on-face
   '((t (:inherit 'font-lock-keyword-face)))
-  "Face used to render titles for pretty hydra"
+  "Face used to render titles for pretty hydra."
   :group 'pretty-hydra)
 
 (defface pretty-hydra-toggle-off-face
   '((t (:inherit 'font-lock-comment-face)))
-  "Face used to render titles for pretty hydra"
+  "Face used to render titles for pretty hydra."
   :group 'pretty-hydra)
 
 ;;;###autoload

@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/cute-jumper/org2elcomment.git
 
 Updating /mnt/store/melpa/working/org2elcomment/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/cute-jumper/org2elcomment.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out c88a75d9587c484ead18f7adf08592b09c1cceb0
+Built org2elcomment in 5.979s, finished at 2023-05-17T01:07:20+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 10K May 17 01:07 packages/org2elcomment-20170324.945.el
+4.0K -rw-r--r-- 1 root root 373 May 17 01:07 packages/org2elcomment-20170324.945.entry

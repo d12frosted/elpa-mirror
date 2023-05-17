@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/tbanel/orgtbljoin.git
 
 Updating /mnt/store/melpa/working/orgtbl-join/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/tbanel/orgtbljoin.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 257bd101a142aaad2fc3993f7752fe839d1663e0
+Built orgtbl-join in 6.251s, finished at 2023-05-17T01:07:47+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K May 17 01:07 packages/orgtbl-join-20230127.2133.el
+4.0K -rw-r--r-- 1 root root 510 May 17 01:07 packages/orgtbl-join-20230127.2133.entry

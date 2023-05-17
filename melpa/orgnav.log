@@ -3,10 +3,30 @@ Fetcher: github
 Source:  https://github.com/facetframer/orgnav.git
 
 Updating /mnt/store/melpa/working/orgnav/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/facetframer/orgnav.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 9e2cac9c1a67af5f0080e60022e821bf7b70312d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/orgnav/
+  to /tmp/orgnavmyt8Ko/orgnav-20170608.1713
+    orgnav-capture.el -> orgnav-capture.el
+    orgnav-clock.el -> orgnav-clock.el
+    orgnav-hack.el -> orgnav-hack.el
+    orgnav-link.el -> orgnav-link.el
+    orgnav-log.el -> orgnav-log.el
+    orgnav-refile.el -> orgnav-refile.el
+    orgnav-tree.el -> orgnav-tree.el
+    orgnav.el -> orgnav.el
+Created orgnav-20170608.1713.tar containing:
+  orgnav-20170608.1713/
+  orgnav-20170608.1713/orgnav-capture.el
+  orgnav-20170608.1713/orgnav-clock.el
+  orgnav-20170608.1713/orgnav-hack.el
+  orgnav-20170608.1713/orgnav-link.el
+  orgnav-20170608.1713/orgnav-log.el
+  orgnav-20170608.1713/orgnav-pkg.el
+  orgnav-20170608.1713/orgnav-refile.el
+  orgnav-20170608.1713/orgnav-tree.el
+  orgnav-20170608.1713/orgnav.el
+Built orgnav in 8.220s, finished at 2023-05-17T01:07:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 489 May 17 01:07 packages/orgnav-20170608.1713.entry
+ 52K -rw-r--r-- 1 root root 50K May 17 01:07 packages/orgnav-20170608.1713.tar

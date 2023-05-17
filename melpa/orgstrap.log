@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/tgbugs/orgstrap.git
 
 Updating /mnt/store/melpa/working/orgstrap/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/tgbugs/orgstrap.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out f35bccde556b0f82515e79ee69f4379469276356
+Built orgstrap in 8.121s, finished at 2023-05-17T01:07:44+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root 63K May 17 01:07 packages/orgstrap-20230408.2232.el
+4.0K -rw-r--r-- 1 root root 407 May 17 01:07 packages/orgstrap-20230408.2232.entry

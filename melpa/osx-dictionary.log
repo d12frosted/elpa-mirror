@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/osx-dictionary.el.git
 
 Updating /mnt/store/melpa/working/osx-dictionary/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/xuchunyang/osx-dictionary.el.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 0715e5a3ac659df32a0f0fabfbbeef0228fbd9a9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/osx-dictionary/
+  to /tmp/osx-dictionaryBvUizk/osx-dictionary-20220801.1542
+    osx-dictionary.el -> osx-dictionary.el
+    osx-dictionary.m -> osx-dictionary.m
+Created osx-dictionary-20220801.1542.tar containing:
+  osx-dictionary-20220801.1542/
+  osx-dictionary-20220801.1542/osx-dictionary-pkg.el
+  osx-dictionary-20220801.1542/osx-dictionary.el
+  osx-dictionary-20220801.1542/osx-dictionary.m
+Built osx-dictionary in 5.441s, finished at 2023-05-17T01:08:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 441 May 17 01:07 packages/osx-dictionary-20220801.1542.entry
+ 32K -rw-r--r-- 1 root root 30K May 17 01:07 packages/osx-dictionary-20220801.1542.tar

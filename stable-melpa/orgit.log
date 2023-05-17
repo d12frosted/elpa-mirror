@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/magit/orgit.git
 
 Updating /mnt/store/melpa/working/orgit/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/magit/orgit.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 4a585029875a1dbbe96d8ac157bd2fd02875f289
+Built orgit in 8.341s, finished at 2023-05-17T01:07:32+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K May 17 01:07 packages/orgit-20230511.2135.el
+4.0K -rw-r--r-- 1 root root 477 May 17 01:07 packages/orgit-20230511.2135.entry

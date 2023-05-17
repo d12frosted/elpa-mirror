@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/tumashu/org2ctex.git
 
 Updating /mnt/store/melpa/working/org2ctex/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/tumashu/org2ctex.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 2e40aa5e78b0562516f46f689e7b74cdf451cc2a
+Built org2ctex in 6.612s, finished at 2023-05-17T01:07:20+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K May 17 01:07 packages/org2ctex-20200331.550.el
+4.0K -rw-r--r-- 1 root root 397 May 17 01:07 packages/org2ctex-20200331.550.entry

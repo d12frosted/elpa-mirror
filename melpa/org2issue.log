@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/lujun9972/org2issue.git
 
 Updating /mnt/store/melpa/working/org2issue/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/lujun9972/org2issue.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 910b98c858762fd14b11d261626c5e979dde0833
+Built org2issue in 6.299s, finished at 2023-05-17T01:07:22+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K May 17 01:07 packages/org2issue-20190531.941.el
+4.0K -rw-r--r-- 1 root root 557 May 17 01:07 packages/org2issue-20190531.941.entry

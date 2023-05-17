@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/nullman/emacs-org-visibility.git
 
 Updating /mnt/store/melpa/working/org-visibility/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/nullman/emacs-org-visibility.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out afa4b6f8ff274df87eb11f1afd0321084a45a2ab
+Built org-visibility in 7.246s, finished at 2023-05-17T01:07:10+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 25K May 17 01:07 packages/org-visibility-20220929.1415.el
+4.0K -rw-r--r-- 1 root root 475 May 17 01:07 packages/org-visibility-20220929.1415.entry

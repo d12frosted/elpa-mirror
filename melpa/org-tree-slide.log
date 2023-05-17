@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/takaxp/org-tree-slide.git
 
 Updating /mnt/store/melpa/working/org-tree-slide/
-
-Command '' exited with non-zero exit-code: 128
-
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/takaxp/org-tree-slide.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 07906356f0b8d8ac51645b0994b8108deb53003d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-tree-slide/
+  to /tmp/org-tree-slideDLouhS/org-tree-slide-20230305.441
+    org-tree-slide-compt.el -> org-tree-slide-compt.el
+    org-tree-slide.el -> org-tree-slide.el
+Created org-tree-slide-20230305.441.tar containing:
+  org-tree-slide-20230305.441/
+  org-tree-slide-20230305.441/org-tree-slide-compt.el
+  org-tree-slide-20230305.441/org-tree-slide-pkg.el
+  org-tree-slide-20230305.441/org-tree-slide.el
+Built org-tree-slide in 6.251s, finished at 2023-05-17T01:06:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 487 May 17 01:06 packages/org-tree-slide-20230305.441.entry
+ 52K -rw-r--r-- 1 root root 50K May 17 01:06 packages/org-tree-slide-20230305.441.tar
