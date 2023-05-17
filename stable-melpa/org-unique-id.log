@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/Phundrak/org-unique-id.git
 
 Updating /mnt/store/melpa/working/org-unique-id/
-Checking out c3a0908ff2123c8786735f3c6f35e905efea2ef6
-Built org-unique-id in 4.851s, finished at 2023-05-16T17:09:08+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K May 16 17:09 packages/org-unique-id-20220907.821.el
-4.0K -rw-r--r-- 1 root root  483 May 16 17:09 packages/org-unique-id-20220907.821.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/Phundrak/org-unique-id.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

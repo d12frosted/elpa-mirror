@@ -5,9 +5,7 @@ IMAGES HERE: <https://protesilaos.com/emacs/ef-themes-pictures>.
 The `ef-themes` are a collection of light and dark themes for GNU Emacs
 whose goal is to provide colorful ("pretty") yet legible options for
 users who want something with a bit more flair than the `modus-themes`
-(also designed by me).  Watch the presentation, which demonstrates each
-of the eight themes in the collection:
-<https://protesilaos.com/codelog/2022-08-18-ef-themes-demo/>.
+(also designed by me).
 
 + Package name (GNU ELPA): `ef-themes`
 + Official manual: <https://protesilaos.com/emacs/ef-themes>
@@ -18,3 +16,5 @@ of the eight themes in the collection:
     + GitHub: <https://github.com/protesilaos/ef-themes>
     + GitLab: <https://gitlab.com/protesilaos/ef-themes>
 + Mailing list: <https://lists.sr.ht/~protesilaos/ef-themes>
++ Backronym: Eclectic Fashion in Themes Hides Exaggerated Markings,
+  Embellishments, and Sparkles.

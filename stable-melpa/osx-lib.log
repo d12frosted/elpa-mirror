@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/raghavgautam/osx-lib.git
 
 Updating /mnt/store/melpa/working/osx-lib/
-Checking out 7afdb57edd5725e8a66f841a90fa571a4cbb81e7
-Built osx-lib in 5.184s, finished at 2023-05-16T17:09:49+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K May 16 17:09 packages/osx-lib-20211206.619.el
-4.0K -rw-r--r-- 1 root root 495 May 16 17:09 packages/osx-lib-20211206.619.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/raghavgautam/osx-lib.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

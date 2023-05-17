@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
-Checking out 20bacc2c0f0625115b9dc7d714855f5ae6462f9d
+Checking out a34a17bb257c845e5b6ebf64e5a5b28d61fb4ca2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevYzs79g/eldev-20230515.1856
+  to /tmp/eldevSmhP8h/eldev-20230516.1703
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-doctor.el -> eldev-doctor.el
@@ -19,23 +19,23 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20230515.1856.tar containing:
-  eldev-20230515.1856/
-  eldev-20230515.1856/bin/
-  eldev-20230515.1856/bin/eldev
-  eldev-20230515.1856/bin/eldev.bat
-  eldev-20230515.1856/bin/eldev.ps1
-  eldev-20230515.1856/eldev-build.el
-  eldev-20230515.1856/eldev-buttercup.el
-  eldev-20230515.1856/eldev-doctor.el
-  eldev-20230515.1856/eldev-ecukes.el
-  eldev-20230515.1856/eldev-ert.el
-  eldev-20230515.1856/eldev-pkg.el
-  eldev-20230515.1856/eldev-plugins.el
-  eldev-20230515.1856/eldev-util.el
-  eldev-20230515.1856/eldev-vc.el
-  eldev-20230515.1856/eldev.el
-Built eldev in 11.639s, finished at 2023-05-16T16:23:17+0000
+Created eldev-20230516.1703.tar containing:
+  eldev-20230516.1703/
+  eldev-20230516.1703/bin/
+  eldev-20230516.1703/bin/eldev
+  eldev-20230516.1703/bin/eldev.bat
+  eldev-20230516.1703/bin/eldev.ps1
+  eldev-20230516.1703/eldev-build.el
+  eldev-20230516.1703/eldev-buttercup.el
+  eldev-20230516.1703/eldev-doctor.el
+  eldev-20230516.1703/eldev-ecukes.el
+  eldev-20230516.1703/eldev-ert.el
+  eldev-20230516.1703/eldev-pkg.el
+  eldev-20230516.1703/eldev-plugins.el
+  eldev-20230516.1703/eldev-util.el
+  eldev-20230516.1703/eldev-vc.el
+  eldev-20230516.1703/eldev.el
+Built eldev in 6.027s, finished at 2023-05-17T00:21:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  405 May 16 16:23 packages/eldev-20230515.1856.entry
-612K -rw-r--r-- 1 root root 610K May 16 16:23 packages/eldev-20230515.1856.tar
+4.0K -rw-r--r-- 1 root root  405 May 17 00:21 packages/eldev-20230516.1703.entry
+612K -rw-r--r-- 1 root root 610K May 17 00:21 packages/eldev-20230516.1703.tar

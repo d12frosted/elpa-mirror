@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/tarsius/orglink.git
 
 Updating /mnt/store/melpa/working/orglink/
-Checking out dbc50854ed6d46e39a9477064239dcbd1af67c97
-Built orglink in 5.233s, finished at 2023-05-16T17:09:30+0000
- ✓ Success:
- 12K -rwxr-xr-x 1 root root 11K May 16 17:09 packages/orglink-20230511.2059.el
-4.0K -rw-r--r-- 1 root root 499 May 16 17:09 packages/orglink-20230511.2059.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/tarsius/orglink.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

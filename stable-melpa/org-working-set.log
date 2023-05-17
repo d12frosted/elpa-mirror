@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/marcIhm/org-working-set.git
 
 Updating /mnt/store/melpa/working/org-working-set/
-Checking out 6af54ed3a5d9bf90629223157803c42f5d3b152c
-Built org-working-set in 5.568s, finished at 2023-05-16T17:09:17+0000
- ✓ Success:
- 52K -rw-r--r-- 1 root root 52K May 16 17:09 packages/org-working-set-20220414.1402.el
-4.0K -rw-r--r-- 1 root root 460 May 16 17:09 packages/org-working-set-20220414.1402.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/marcIhm/org-working-set.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128

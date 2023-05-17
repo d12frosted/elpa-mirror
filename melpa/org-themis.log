@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/zellio/org-themis.git
 
 Updating /mnt/store/melpa/working/org-themis/
-Checking out 78aadbbe22b1993be5c4accd0d3f91a4e85c9a3c
-Built org-themis in 4.907s, finished at 2023-05-16T17:08:56+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K May 16 17:08 packages/org-themis-20160122.404.el
-4.0K -rw-r--r-- 1 root root 427 May 16 17:08 packages/org-themis-20160122.404.entry
+
+Command '' exited with non-zero exit-code: 128
+
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128
