@@ -2,8 +2,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Url: http://github.com/emacs-helm/helm-navi
-;; Package-Version: 20201220.1823
-;; Package-Commit: c5666cc171288d1fa892900ee66fba2a1c892c81
+;; Package-Version: 20230517.1143
+;; Package-Commit: cc3f9a0fad6301f7bb717a8dbde4087fd9a884f6
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "24.4") (helm "1.9.4") (helm-org "1.0") (navi-mode "2.0") (s "1.10.0"))
 ;; Keywords: navigation, outlines
@@ -132,7 +132,9 @@ function to return a regular expression, or
                              ((pred stringp) regexp)
                              ((pred null) (concat "^\\("
                                                   (mapconcat (lambda (s)
-                                                               (s-trim (car s)))
+                                                               (if (string= outshine-regexp-base-char "*")
+                                                                   (replace-regexp-in-string (regexp-quote "*") "\\*" (s-trim (car s)) nil 'literal)
+                                                                 (s-trim (car s))))
                                                              outshine-promotion-headings
                                                              "\\|")
                                                   "\\)"

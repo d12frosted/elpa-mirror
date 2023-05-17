@@ -1,9 +1,9 @@
 ;;; org-bookmark-heading.el --- Emacs bookmark support for Org mode  -*- lexical-binding: t; -*-
 
 ;; Author: Adam Porter <adam@alphapapa.net>
-;; Version: 1.3-pre
-;; Package-Version: 20230426.1417
-;; Package-Commit: 1135985bad6b8e736939128d4ad04941f6ed7130
+;; Version: 1.3
+;; Package-Version: 20230517.1141
+;; Package-Commit: 4e97fab8cf0307fc338df50efac103ed966c7914
 ;; Url: http://github.com/alphapapa/org-bookmark-heading
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: hypermedia, outlines
@@ -64,6 +64,10 @@
 (require 'mode-local)
 (require 'org)
 (require 'bookmark)
+
+(eval-when-compile
+  ;; Support map pattern in pcase
+  (require 'map))
 
 ;;;; Customization
 

@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 1.2
-;; Package-Version: 20230512.1714
-;; Package-Commit: 2da34efdefc6ae1e0c8a5d52cba10b72945bdc8d
+;; Package-Version: 20230517.1208
+;; Package-Commit: bf6eebc13f628eef73a4a0be1c9f9aecc2a8c6bc
 ;; Package-Requires: ((emacs "27.1") (compat "29.1.4.0"))
 ;; Homepage: https://github.com/minad/marginalia
 ;; Keywords: docs, help, matching, completion
@@ -1323,6 +1323,10 @@ Remember `this-command' for `marginalia-classify-by-command-name'."
             (setcdr ann (append (cddr ann) (list (cadr ann)))))
           (message "Marginalia: Use annotator `%s' for category `%s'" (cadr ann) (car ann))))
     (user-error "Marginalia: No active minibuffer")))
+
+;; Emacs 28: Only show `marginalia-cycle' in M-x in recursive minibuffers
+(put #'marginalia-cycle 'completion-predicate
+     (lambda (&rest _) (> (minibuffer-depth) 1)))
 
 (provide 'marginalia)
 ;;; marginalia.el ends here

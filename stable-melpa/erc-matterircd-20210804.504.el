@@ -5,6 +5,8 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/erc-matterircd
+;; Package-Version: 20210804.504
+;; Package-Commit: e3a59267c044474f9ca066d36517e9a3d872759c
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
 
