@@ -3,9 +3,22 @@ Fetcher: github
 Source:  https://github.com/reasonml-editor/reason-mode.git
 
 Updating /mnt/store/melpa/working/reason-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/reasonml-editor/reason-mode.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out d657ff75572a8ea7eda6fe22ada3a2ebf5bc6119
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/reason-mode/
+  to /tmp/reason-modeUuid4N/reason-mode-20230405.517
+    reason-indent.el -> reason-indent.el
+    reason-interaction.el -> reason-interaction.el
+    reason-mode.el -> reason-mode.el
+    refmt.el -> refmt.el
+Created reason-mode-20230405.517.tar containing:
+  reason-mode-20230405.517/
+  reason-mode-20230405.517/reason-indent.el
+  reason-mode-20230405.517/reason-interaction.el
+  reason-mode-20230405.517/reason-mode-pkg.el
+  reason-mode-20230405.517/reason-mode.el
+  reason-mode-20230405.517/refmt.el
+Built reason-mode in 5.802s, finished at 2023-05-17T09:07:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 384 May 17 09:07 packages/reason-mode-20230405.517.entry
+ 52K -rw-r--r-- 1 root root 50K May 17 09:07 packages/reason-mode-20230405.517.tar

@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.6-alpha
-;; Package-Version: 20230412.126
-;; Package-Commit: 5d98592fe516748034d8baf92d7c0ba045e1f87a
+;; Package-Version: 20230517.606
+;; Package-Commit: 1535b958a6f55a50a6991c700baa7ce44243c125
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -5736,7 +5736,7 @@ See also `markdown-mode-map'.")
 (defun markdown-imenu-create-nested-index ()
   "Create and return a nested imenu index alist for the current buffer.
 See `imenu-create-index-function' and `imenu--index-alist' for details."
-  (let* ((root '(nil . nil))
+  (let* ((root (list nil))
          (min-level 9999)
          hashes headers)
     (save-excursion
@@ -7800,19 +7800,19 @@ Value is a list of elements describing the link:
        ((thing-at-point-looking-at markdown-regex-link-inline)
         (setq bang (match-string-no-properties 1)
               begin (match-beginning 0)
-              end (match-end 0)
               text (match-string-no-properties 3)
               url (match-string-no-properties 6))
-        (if (match-end 7)
-            (setq title (substring (match-string-no-properties 7) 1 -1))
-          ;; #408 URL contains close parenthesis case
-          (goto-char (match-beginning 5))
-          (let ((paren-end (scan-sexps (point) 1)))
-            (when (and paren-end (< end paren-end))
-              (setq url (buffer-substring (match-beginning 6) (1- paren-end)))))))
+        ;; consider nested parentheses
+        ;; if link target contains parentheses, (match-end 0) isn't correct end position of the link
+        (let* ((close-pos (scan-sexps (match-beginning 5) 1))
+               (destination-part (string-trim (buffer-substring-no-properties (1+ (match-beginning 5)) (1- close-pos)))))
+          (setq end close-pos)
+          (if (string-match "\\([^ ]+\\)\\s-+\\(.+\\)" destination-part)
+              (setq url (match-string-no-properties 1 destination-part)
+                    title (substring (match-string-no-properties 2 destination-part) 1 -1))
+            (setq url destination-part))))
        ;; Reference link at point.
-       ((or (thing-at-point-looking-at markdown-regex-link-inline)
-            (thing-at-point-looking-at markdown-regex-link-reference))
+       ((thing-at-point-looking-at markdown-regex-link-reference)
         (setq bang (match-string-no-properties 1)
               begin (match-beginning 0)
               end (match-end 0)
