@@ -3,8 +3,6 @@
 ;; Copyright © 2018, Free Software Foundation, Inc.
 
 ;; Version: 0.1.0
-;; Package-Version: 20210723.549
-;; Package-Commit: 458464771bb220b6eb87ccfd4c985c436e57dc7e
 ;; URL: https://github.com/yqrashawn/fd-dired
 ;; Package-Requires: ((emacs "25"))
 ;; Author: Rashawn Zhang <namy.19@gmail.com>

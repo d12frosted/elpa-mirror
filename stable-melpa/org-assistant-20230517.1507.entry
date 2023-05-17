@@ -1,0 +1,23 @@
+(org-assistant .
+	       [(20230517 1507)
+		((emacs
+		  (28 1))
+		 (uuidgen
+		  (1 2))
+		 (deferred
+		   (0 5 1))
+		 (s
+		  (1 12 0))
+		 (dash
+		  (2 19 1))
+		 (ht
+		  (0 9)))
+		"Org babel extension for Chat Assistant APIs" single
+		((:commit . "219d8e38e8f80006f0065bbe1dd81c9d5078be33")
+		 (:authors
+		  ("Tyler Dodge" . "tyler@tdodge.consulting"))
+		 (:maintainers
+		  ("Tyler Dodge" . "tyler@tdodge.consulting"))
+		 (:maintainer "Tyler Dodge" . "tyler@tdodge.consulting")
+		 (:keywords "convenience")
+		 (:url . "https://github.com/tyler-dodge/org-assistant"))])

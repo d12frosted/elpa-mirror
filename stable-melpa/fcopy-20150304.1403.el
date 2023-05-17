@@ -5,8 +5,6 @@
 
 ;; Author: Masayuki Ataka <masayuki.ataka@gmail.com>
 ;; Version: 7.0
-;; Package-Version: 20150304.1403
-;; Package-Commit: e355f6ec889d8ecbdb096019c2dc660b1cec4941
 ;; URL: https://github.com/ataka/fcopy
 ;; Keywords: convenience
 
