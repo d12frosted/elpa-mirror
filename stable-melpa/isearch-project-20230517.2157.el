@@ -1,12 +1,12 @@
 ;;; isearch-project.el --- Incremental search through the whole project  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019  Shen, Jen-Chieh
+;; Copyright (C) 2019-2023  Shen, Jen-Chieh
 ;; Created date 2019-03-18 15:16:04
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/isearch-project
-;; Package-Version: 20221019.1956
-;; Package-Commit: 73cd2bdc5655a838f7c20b45fc922ab43209a172
+;; Package-Version: 20230517.2157
+;; Package-Commit: b341ae06f5895d0666ad361f287036b1dfd7b3b7
 ;; Version: 0.2.6
 ;; Package-Requires: ((emacs "27.1") (f "0.20.0"))
 ;; Keywords: convenience search
@@ -130,7 +130,8 @@ to research from the start.")
 (defun isearch-project--prepare ()
   "Incremental search preparation."
   (let (prepare-success)
-    (setq isearch-project--project-dir (cdr (project-current)))
+    (setq isearch-project--project-dir (car (cl-remove-if-not #'stringp
+                                                              (project-current))))
     (when isearch-project--project-dir
       ;; Get the current buffer name.
       (setq isearch-project--search-path (buffer-file-name))

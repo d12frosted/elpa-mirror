@@ -3,8 +3,8 @@
 ;; Copyright (C) 2013-2022 Skye Shaw and others
 ;; Author: Skye Shaw <skye.shaw@gmail.com>
 ;; Version: 0.9.0
-;; Package-Version: 20230420.48
-;; Package-Commit: 1727e9b7ec41a234a2cc14151b9ffd9c1c4f4b14
+;; Package-Version: 20230518.204
+;; Package-Commit: aded95807f277f30e1607313bdf9ac9a016a2305
 ;; Keywords: git, vc, github, bitbucket, gitlab, sourcehut, aws, azure, convenience
 ;; URL: http://github.com/sshaw/git-link
 ;; Package-Requires: ((emacs "24.3"))
@@ -244,7 +244,7 @@ As an example, \"gitlab\" will match with both \"gitlab.com\" and
     ("github" git-link-commit-github)
     ("bitbucket" git-link-commit-bitbucket)
     ("gitorious" git-link-commit-gitorious)
-    ("gitlab" git-link-commit-github)
+    ("gitlab" git-link-commit-gitlab)
     ("git\\.\\(sv\\|savannah\\)\\.gnu\\.org" git-link-commit-savannah)
     ("googlesource.com" git-link-commit-googlesource)
     ("visualstudio\\|azure" git-link-commit-azure)
@@ -541,7 +541,7 @@ return (FILENAME . REVISION) otherwise nil."
                                 (format "L%s" start)))))))
 
 (defun git-link-gitlab (hostname dirname filename branch commit start end)
-  (format "https://%s/%s/blob/%s/%s"
+  (format "https://%s/%s/-/blob/%s/%s"
 	  hostname
 	  dirname
 	  (or branch commit)
@@ -595,6 +595,11 @@ return (FILENAME . REVISION) otherwise nil."
                                 (format "L%s-%s" start end)
                               (format "L%s" start)))))))
 
+(defun git-link-commit-gitlab (hostname dirname commit)
+  (format "https://%s/%s/-/commit/%s"
+	  hostname
+	  dirname
+	  commit))
 
 (defun git-link-commit-github (hostname dirname commit)
   (format "https://%s/%s/commit/%s"

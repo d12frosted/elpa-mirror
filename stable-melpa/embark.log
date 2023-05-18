@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/oantolin/embark.git
 
 Updating /mnt/store/melpa/working/embark/
-Checking out ab920eaadf43bcb92832c980adbf2d8c9468ec98
+Checking out 7dbb9eb3025bec18ce7384b5e2f5ef9407d9f253
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/embark/
-  to /tmp/embarkKp7Zrf/embark-20230512.350
+  to /tmp/embarkNyVUYG/embark-20230518.433
     embark.el -> embark.el
     embark-org.el -> embark-org.el
     embark.texi -> embark.texi
-Generating /tmp/embarkKp7Zrf/embark-20230512.350/embark.info
-Created embark-20230512.350.tar containing:
-  embark-20230512.350/
-  embark-20230512.350/dir
-  embark-20230512.350/embark-org.el
-  embark-20230512.350/embark-pkg.el
-  embark-20230512.350/embark.el
-  embark-20230512.350/embark.info
-Built embark in 15.861s, finished at 2023-05-18T00:03:47+0000
+Generating /tmp/embarkNyVUYG/embark-20230518.433/embark.info
+Created embark-20230518.433.tar containing:
+  embark-20230518.433/
+  embark-20230518.433/dir
+  embark-20230518.433/embark-org.el
+  embark-20230518.433/embark-pkg.el
+  embark-20230518.433/embark.el
+  embark-20230518.433/embark.info
+Built embark in 10.858s, finished at 2023-05-18T07:55:03+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  472 May 18 00:03 packages/embark-20230512.350.entry
-280K -rw-r--r-- 1 root root 280K May 18 00:03 packages/embark-20230512.350.tar
+4.0K -rw-r--r-- 1 root root  472 May 18 04:02 packages/embark-20230518.243.entry
+280K -rw-r--r-- 1 root root 280K May 18 04:02 packages/embark-20230518.243.tar
+4.0K -rw-r--r-- 1 root root  472 May 18 07:55 packages/embark-20230518.433.entry
+280K -rw-r--r-- 1 root root 280K May 18 07:55 packages/embark-20230518.433.tar
