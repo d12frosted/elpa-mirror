@@ -1,11 +1,11 @@
 ;;; hyperspace.el --- Get there from here           -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2017-2019, 2021  Ian Eure
+;; Copyright (C) 2017-2019, 2021, 2023  Ian Eure
 
 ;; Author: Ian Eure <ian@retrospec.tv>
 ;; URL: https://github.com/ieure/hyperspace-el
-;; Package-Version: 20210603.1825
-;; Package-Commit: c4c363c140250ba6b775516082063878975a6154
+;; Package-Version: 20230518.442
+;; Package-Commit: f574d07fd8715e806ba4f0487b73c699963baed3
 ;; Version: 0.8.5
 ;; Package-Requires: ((emacs "25") (s "1.12.0"))
 ;; Keywords: tools, convenience
@@ -90,6 +90,7 @@
     ("gg"  . "https://www.google.com/search?q=%s")
     ("ggm" . "https://www.google.com/maps/search/%s")
     ("gis" . "https://www.google.com/search?tbm=isch&q=%s")
+    ("osm" . "https://www.openstreetmap.org/search?query=%s")
 
     ;; Shopping
     ("az". "https://www.amazon.com/s?k=%s")

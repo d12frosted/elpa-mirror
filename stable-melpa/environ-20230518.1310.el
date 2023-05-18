@@ -2,8 +2,8 @@
 
 ;; Author: Chris Clark <cfclrk@gmail.com>
 ;; Version: 0.0.1
-;; Package-Version: 20230409.2033
-;; Package-Commit: 8d48e206f72471c376bc874e1583661f651bccaa
+;; Package-Version: 20230518.1310
+;; Package-Commit: 9530e2f1ead5bd37aca4d298514800f73b3cc0a7
 ;; Package-Requires: ((emacs "24.1") (dash "2.17.0") (f "0.20.0") (s "1.12.0"))
 ;; URL: https://github.com/cfclrk/environ
 ;; Keywords: tools
@@ -63,14 +63,16 @@ when they are run interactively."
 
 (defcustom environ-pre-eval-functions nil
   "A list of functions to run before shell evaluation.
-Each function takes a list of pairs and returns an updated list of pairs."
+Each function must accept a list of pairs and return an updated list of
+pairs."
   :group 'env
   :type 'hook)
 
 (defcustom environ-post-eval-functions
   '(environ-ignore-bash-vars)
   "A list of functions to run after shell evaluation.
-Each function takes a list of pairs and returns an updated list of pairs."
+Each function must accept a list of pairs and return an updated list of
+pairs."
   :group 'env
   :type '(hook :options (environ-ignore-bash-vars)))
 

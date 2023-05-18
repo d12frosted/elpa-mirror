@@ -3,20 +3,20 @@ Fetcher: codeberg
 Source:  https://codeberg.org/rgherdt/emacs-lsp-scheme.git
 
 Updating /mnt/store/melpa/working/lsp-scheme/
-Checking out 2da775930450dd3d1038e62f1ebec0cdbc2f2e3c
+Checking out e0aa799a73cdbe03ec9c2abe59f2c24c6211f66d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-scheme/
-  to /tmp/lsp-schemeVovcZq/lsp-scheme-20230502.2251
+  to /tmp/lsp-schemeOjIGTv/lsp-scheme-20230518.806
     lsp-scheme.el -> lsp-scheme.el
     scripts => scripts
-Created lsp-scheme-20230502.2251.tar containing:
-  lsp-scheme-20230502.2251/
-  lsp-scheme-20230502.2251/lsp-scheme-pkg.el
-  lsp-scheme-20230502.2251/lsp-scheme.el
-  lsp-scheme-20230502.2251/scripts/
-  lsp-scheme-20230502.2251/scripts/install-gambit-lsp-server.sh
-  lsp-scheme-20230502.2251/scripts/lsp-server-connect.sh
-Built lsp-scheme in 6.925s, finished at 2023-05-18T04:31:41+0000
+Created lsp-scheme-20230518.806.tar containing:
+  lsp-scheme-20230518.806/
+  lsp-scheme-20230518.806/lsp-scheme-pkg.el
+  lsp-scheme-20230518.806/lsp-scheme.el
+  lsp-scheme-20230518.806/scripts/
+  lsp-scheme-20230518.806/scripts/install-gambit-lsp-server.sh
+  lsp-scheme-20230518.806/scripts/lsp-server-connect.sh
+Built lsp-scheme in 7.600s, finished at 2023-05-18T12:20:51+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 548 May 18 04:31 packages/lsp-scheme-20230502.2251.entry
- 32K -rw-r--r-- 1 root root 30K May 18 04:31 packages/lsp-scheme-20230502.2251.tar
+4.0K -rw-r--r-- 1 root root 547 May 18 12:20 packages/lsp-scheme-20230518.806.entry
+ 32K -rw-r--r-- 1 root root 30K May 18 12:20 packages/lsp-scheme-20230518.806.tar
