@@ -209,6 +209,10 @@ details.
 8 Changelog
 ===========
 
+  - v0.9.2, 2023-05-12:
+    - name the keymap macrostep-mode-map, fixing a regression in v0.9.1
+  - v0.9.1, 2023-03-12:
+    - bug fixes, cleanup and modernization
   - v0.9, 2015-10-01:
     - separate into Elisp-specific and generic components
     - highlight and expand compiler macros

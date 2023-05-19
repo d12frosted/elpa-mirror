@@ -3,8 +3,9 @@ Fetcher: git
 Source:  https://git.madhouse-project.org/algernon/kaleidoscope.el
 
 Updating /mnt/store/melpa/working/kaleidoscope-evil-state-flash/
-Checking out 5b88327350c3d6375ef1d43fb31342eaabd88fdc
-Built kaleidoscope-evil-state-flash in 5.411s, finished at 2023-05-18T12:16:07+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.2K May 18 12:16 packages/kaleidoscope-evil-state-flash-20170728.1020.el
-4.0K -rw-r--r-- 1 root root  443 May 18 12:16 packages/kaleidoscope-evil-state-flash-20170728.1020.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.madhouse-project.org/algernon/kaleidoscope.el/': Failed to connect to git.madhouse-project.org port 443: Connection refused
+
+Command exited with non-zero exit-code: 128

@@ -381,6 +381,18 @@
 	       (:authors
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
+ (calibre .
+	  [(1 3 0)
+	   ((emacs
+	     (27 1))
+	    (compat
+	     (29 1 4 1)))
+	   "Interact with Calibre libraries from Emacs" tar
+	   ((:url . "https://git.disroot.org/kjartanoli/calibre.el")
+	    (:maintainer "Kjartan Oli Agustsson" . "kjartanoli@disroot.org")
+	    (:authors
+	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
+	    (:commit . "ba5fa17e313cd977bb06923e4b16c1631c90f7c2"))])
  (cape .
        [(0 15)
 	((emacs

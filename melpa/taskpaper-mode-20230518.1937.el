@@ -5,8 +5,8 @@
 ;; Author: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; Maintainer: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; URL: <https://github.com/saf-dmitry/taskpaper-mode>
-;; Package-Version: 20230329.1135
-;; Package-Commit: c7fbde266e72378481e8f039347e2c50bafeb98f
+;; Package-Version: 20230518.1937
+;; Package-Commit: 3dc0a7176462964fa6a8485667a39fc726d74755
 ;; Keywords: outlines, notetaking, task management, productivity, taskpaper
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -1850,7 +1850,7 @@ end.")
 (defvar taskpaper-mark-ring nil
   "Mark ring for positions before jumps.")
 (defvar taskpaper-mark-ring-last-goto nil
-  "Last position in the mark ring used to go back.")
+  "Last position in the mark ring used to navigate back.")
 
 ;; In case file is reloaded
 (setq taskpaper-mark-ring nil taskpaper-mark-ring-last-goto nil)
@@ -1871,11 +1871,12 @@ end.")
     (message "Position saved to mark ring.")))
 
 (defun taskpaper-mark-ring-goto (&optional n)
-  "Jump to the previous position in the mark ring.
-With prefix argument N, jump back that many stored positions. When
-called several times in succession, walk through the entire ring.
-TaskPaper mode commands jumping to a different position in the
-current file automatically push the old position onto the ring."
+  "Navigate to the previous position in the mark ring.
+With prefix argument N, navigate back that many stored positions.
+When called several times in succession, walk through the entire
+ring. TaskPaper mode commands jumping to a different position in
+the current file automatically push the old position onto the
+ring."
   (interactive "p")
   (let (p m)
     (if (eq last-command this-command)
@@ -1883,7 +1884,7 @@ current file automatically push the old position onto the ring."
                               taskpaper-mark-ring)))
       (setq p taskpaper-mark-ring))
     (setq taskpaper-mark-ring-last-goto p) (setq m (car p))
-    (unless (marker-position m) (user-error "No saved position"))
+    (unless (marker-position m) (user-error "No previous position"))
     (pop-to-buffer-same-window (marker-buffer m)) (goto-char m)
     (when (outline-invisible-p) (taskpaper-outline-show-context))))
 
@@ -5048,6 +5049,7 @@ combination."
                       (setq value (taskpaper-escape-double-quotes value))
                       (format "@%s = \"%s\"" name value))
                      (t (format "@%s" name)))))
+        (taskpaper-mark-ring-push)
         (if taskpaper-iquery-default
             (taskpaper-iquery query) (taskpaper-query query)))
     (user-error "No tag at point")))
@@ -5244,7 +5246,7 @@ TaskPaper mode runs the normal hook `text-mode-hook', and then
 (define-key taskpaper-mode-map (kbd "C-c ?") 'taskpaper-query-read-select)
 (define-key taskpaper-mode-map (kbd "C-c !") 'taskpaper-query-fast-select)
 (define-key taskpaper-mode-map (kbd "C-c %") 'taskpaper-mark-ring-push)
-(define-key taskpaper-mode-map (kbd "C-c &") 'taskpaper-mark-ring-goto)
+(define-key taskpaper-mode-map (kbd "C-c [") 'taskpaper-mark-ring-goto)
 
 (define-key taskpaper-mode-map (kbd "C-c C-a") 'taskpaper-outline-show-all)
 (define-key taskpaper-mode-map (kbd "C-c C-z") 'taskpaper-outline-overview)
@@ -5287,91 +5289,64 @@ TaskPaper mode runs the normal hook `text-mode-hook', and then
   "Menu for TaskPaper mode."
   '("TaskPaper"
     ("Format"
-     ["Format Item as Project" taskpaper-item-format-as-project
-      :active (outline-on-heading-p)]
-     ["Format Item as Task" taskpaper-item-format-as-task
-      :active (outline-on-heading-p)]
-     ["Format Item as Note" taskpaper-item-format-as-note
-      :active (outline-on-heading-p)]
+     ["Format Item as Project" taskpaper-item-format-as-project]
+     ["Format Item as Task" taskpaper-item-format-as-task]
+     ["Format Item as Note" taskpaper-item-format-as-note]
      "--"
      ["Hide Inline Markup" taskpaper-toggle-markup-hiding
       :style toggle
       :selected taskpaper-hide-markup])
     ("Visibility"
-     ["Cycle Visibility" taskpaper-cycle
-      :active (outline-on-heading-p)]
+     ["Cycle Visibility" taskpaper-cycle]
      ["Cycle Visibility (Global)" (taskpaper-cycle t)]
-     ["Hide Other" taskpaper-outline-hide-other
-      :active (outline-on-heading-p)]
+     ["Hide Other" taskpaper-outline-hide-other]
      ["Overview" taskpaper-outline-overview]
      ["Show All" taskpaper-outline-show-all])
     ("Navigation"
-     ["Up Level" taskpaper-outline-up-level
-      :active (outline-on-heading-p)]
-     ["Forward Same Level" taskpaper-outline-forward-same-level
-      :active (outline-on-heading-p)]
-     ["Backward Same Level" taskpaper-outline-backward-same-level
-      :active (outline-on-heading-p)]
+     ["Up Level" taskpaper-outline-up-level]
+     ["Forward Same Level" taskpaper-outline-forward-same-level]
+     ["Backward Same Level" taskpaper-outline-backward-same-level]
      "--"
+     ["Navigate Back" taskpaper-mark-ring-goto]
      ["Go To..." taskpaper-goto])
     ("Structure Editing"
-     ["Promote Item" taskpaper-outline-promote
-      :active (outline-on-heading-p)]
-     ["Demote Item" taskpaper-outline-demote
-      :active (outline-on-heading-p)]
+     ["Promote Item" taskpaper-outline-promote]
+     ["Demote Item" taskpaper-outline-demote]
      "--"
-     ["Promote Subtree" taskpaper-outline-promote-subtree
-      :active (outline-on-heading-p)]
-     ["Demote Subtree" taskpaper-outline-demote-subtree
-      :active (outline-on-heading-p)]
+     ["Promote Subtree" taskpaper-outline-promote-subtree]
+     ["Demote Subtree" taskpaper-outline-demote-subtree]
      "--"
-     ["Move Subtree Up" taskpaper-outline-move-subtree-up
-      :active (outline-on-heading-p)]
-     ["Move Substree Down" taskpaper-outline-move-subtree-down
-      :active (outline-on-heading-p)]
+     ["Move Subtree Up" taskpaper-outline-move-subtree-up]
+     ["Move Substree Down" taskpaper-outline-move-subtree-down]
      "--"
-     ["Copy Subtree" taskpaper-copy-subtree
-      :active (outline-on-heading-p)]
-     ["Cut Subtree" taskpaper-cut-subtree
-      :active (outline-on-heading-p)]
+     ["Copy Subtree" taskpaper-copy-subtree]
+     ["Cut Subtree" taskpaper-cut-subtree]
      ["Paste Subtree" taskpaper-paste-subtree
       :active (and kill-ring (current-kill 0))]
-     ["Duplicate Subtree" taskpaper-clone-subtree
-      :active (outline-on-heading-p)]
+     ["Duplicate Subtree" taskpaper-clone-subtree]
      "--"
-     ["Mark Subtree" taskpaper-mark-subtree
-      :active (outline-on-heading-p)]
-     ["Narrow to Subtree" taskpaper-narrow-to-subtree
-      :active (outline-on-heading-p)]
+     ["Mark Subtree" taskpaper-mark-subtree]
+     ["Narrow to Subtree" taskpaper-narrow-to-subtree]
      "--"
-     ["Sort Children by Text" taskpaper-sort-by-text
-      :active (or (bobp) (outline-on-heading-p))]
-     ["Sort Children by Type" taskpaper-sort-by-type
-      :active (or (bobp) (outline-on-heading-p))]
+     ["Sort Children by Text" taskpaper-sort-by-text]
+     ["Sort Children by Type" taskpaper-sort-by-type]
      "--"
-     ["Refile Subtree..." taskpaper-refile-subtree
-      :active (outline-on-heading-p)]
-     ["Refile Subtree (Copy)..." taskpaper-refile-subtree-copy
-      :active (outline-on-heading-p)]
+     ["Refile Subtree..." taskpaper-refile-subtree]
+     ["Refile Subtree (Copy)..." taskpaper-refile-subtree-copy]
      "--"
-     ["Archive Subtree" taskpaper-archive-subtree
-      :active (outline-on-heading-p)]
+     ["Archive Subtree" taskpaper-archive-subtree]
      "--"
      ["Copy Visible Items" taskpaper-outline-copy-visible
       :active (region-active-p)])
     ("Tags"
      ["Complete Tag" taskpaper-complete-tag-at-point
-      :active (taskpaper-in-regexp (format "@%s*" taskpaper-tag-name-char-regexp))
       :keys "<M-tab>"]
      ["Select Tag..." taskpaper-item-set-tag-fast-select]
-     ["Remove Tag" taskpaper-remove-tag-at-point
-      :active (taskpaper-in-regexp taskpaper-tag-regexp)]
+     ["Remove Tag" taskpaper-remove-tag-at-point]
      "--"
-     ["Toggle Done" taskpaper-item-toggle-done
-      :active (outline-on-heading-p)])
+     ["Toggle Done" taskpaper-item-toggle-done])
     ("Date & Time"
-     ["Show Date in Calendar" taskpaper-show-in-calendar
-      :active (taskpaper-in-regexp taskpaper-tag-regexp)]
+     ["Show Date in Calendar" taskpaper-show-in-calendar]
      ["Access Calendar" taskpaper-goto-calendar]
      ["Insert Date from Calendar" taskpaper-date-from-calendar
       :active (get-buffer "*Calendar*")]
@@ -5393,12 +5368,9 @@ TaskPaper mode runs the normal hook `text-mode-hook', and then
      ["Select Custom Search Query..." taskpaper-query-fast-select]
      "--"
      ["Filter by Regexp..." taskpaper-occur]
-     ["Next Match" next-error
-      :active taskpaper-occur-highlights]
-     ["Previous Match" previous-error
-      :active taskpaper-occur-highlights]
-     ["Remove Highlights" taskpaper-occur-remove-highlights
-      :active taskpaper-occur-highlights])
+     ["Next Match" next-error]
+     ["Previous Match" previous-error]
+     ["Remove Highlights" taskpaper-occur-remove-highlights])
     ("Agenda View"
      ["Create Agenda View..." taskpaper-agenda-search]
      ["Select Agenda View..." taskpaper-agenda-select])

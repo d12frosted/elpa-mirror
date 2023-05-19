@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-sidecar-locals
-;; Package-Version: 20230109.536
-;; Package-Commit: 882923811e9de84c8ebc2f9fe65e9673d7d1f469
+;; Package-Version: 20230518.1422
+;; Package-Commit: b6b66b6d5a8963256d87d87d02f94ae36b39e6f6
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -106,8 +106,11 @@ check this buffer.")
   (when dir
     (let ((dir-orig dir))
       (when (and (setq dir (directory-file-name dir)) (setq dir (file-name-directory dir)))
+        ;; The input directory may or not have had a trailing slash, check both, see: #10.
         (unless (string-equal dir-orig dir)
-          (file-name-as-directory dir))))))
+          (setq dir (file-name-as-directory dir))
+          (unless (string-equal dir-orig dir)
+            dir))))))
 
 (defun sidecar-locals--path-explode (dir)
   "Explodes directory DIR.
