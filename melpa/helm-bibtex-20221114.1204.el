@@ -3,8 +3,6 @@
 ;; Author: Titus von der Malsburg <malsburg@posteo.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/tmalsburg/helm-bibtex
-;; Package-Version: 20221114.1204
-;; Package-Commit: 8ebf50d5bd368082d0b7ab79d26a52f372cdef98
 ;; Version: 2.0.1
 ;; Package-Requires: ((bibtex-completion "1.0.0") (helm "1.5.5") (cl-lib "0.5") (emacs "24.1"))
 
