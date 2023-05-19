@@ -1,4 +1,4 @@
-Copyright (C) 2023  Kjartan Óli Águstsson
+Copyright (C) 2023  Free Software Foundation, Inc.
 See the end of the file for license conditions.
 
 Calibre.el is a package for interacting with Calibre

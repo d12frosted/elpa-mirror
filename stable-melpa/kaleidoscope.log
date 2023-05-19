@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://git.madhouse-project.org/algernon/kaleidoscope.el
 
 Updating /mnt/store/melpa/working/kaleidoscope/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.madhouse-project.org/algernon/kaleidoscope.el/': Failed to connect to git.madhouse-project.org port 443: Connection refused
-
-Command exited with non-zero exit-code: 128
+Checking out b89a243f6024099192f1bc38d8a54e3e7a654090
+Built kaleidoscope in 4.944s, finished at 2023-05-19T08:12:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K May 19 08:12 packages/kaleidoscope-20170808.817.el
+4.0K -rw-r--r-- 1 root root  349 May 19 08:12 packages/kaleidoscope-20170808.817.entry

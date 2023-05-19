@@ -1,0 +1,17 @@
+(autobuild .
+	   [(20230518 438)
+	    ((cl-lib
+	      (0 3))
+	     (emacs
+	      (26 1))
+	     (selcand
+	      (0 0 1)))
+	    "Define and execute build rules and compilation pipelines" single
+	    ((:commit . "1cd2d923303392cb1bb93fa0398332c2fce8399c")
+	     (:authors
+	      ("Ernesto Alfonso"))
+	     (:maintainers
+	      (nil . "(concat \"erjoalgo\" \"@\" \"gmail\" \".com\")"))
+	     (:maintainer nil . "(concat \"erjoalgo\" \"@\" \"gmail\" \".com\")")
+	     (:keywords "compile" "build" "pipeline" "autobuild" "extensions" "processes" "tools")
+	     (:url . "https://github.com/erjoalgo/autobuild"))])

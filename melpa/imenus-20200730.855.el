@@ -5,8 +5,6 @@
 ;; Author: Alex Kost <alezost@gmail.com>
 ;; Created: 19 Dec 2014
 ;; Version: 0.2
-;; Package-Version: 20200730.855
-;; Package-Commit: 90200f5f22377903b405082eabe185447968f3e2
 ;; Package-Requires: ((cl-lib "0.5"))
 ;; URL: https://github.com/alezost/imenus.el
 ;; Keywords: tools convenience
