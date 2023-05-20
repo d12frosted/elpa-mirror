@@ -4,10 +4,10 @@
 
 ;; Author: Artur Yaroshenko <artawower@protonmail.com>
 ;; URL: https://github.com/artawower/blamer.el
-;; Package-Version: 20230509.2215
-;; Package-Commit: 24e03cb34c6f335c57c1e37c075335e86388576b
+;; Package-Version: 20230519.2152
+;; Package-Commit: ab00e6a3ea482c342d918add9c20bfd3fa740aaa
 ;; Package-Requires: ((emacs "27.1") (posframe "1.1.7"))
-;; Version: 0.7.1
+;; Version: 0.7.2
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -41,9 +41,9 @@
   (require 'subr-x))
 
 (defconst blamer--regexp-info
-  (concat "^(?\\(?1:[^ ]*\\).*[[:blank:]]?\(\\(?2:[^\n]+\\)"
-          "\s\\(?3:[0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}\\)"
-          "\s\\(?4:[0-9]\\{2\\}:[0-9]\\{2\\}:[0-9]\\{2\\}\\)")
+  (concat "^\\(?1:[^ ]*\\) \\(?5:[^ ]* \\)?(\\(?2:.*\\)"
+	        "\s\\(?3:[0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}\\)"
+	        "\s\\(?4:[0-9]\\{2\\}:[0-9]\\{2\\}:[0-9]\\{2\\}\\)")
 
   "Regexp for extract data from blame message.
 1 - commit hash
