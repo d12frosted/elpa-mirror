@@ -2520,18 +2520,18 @@
 	      ("Taylor Grinn" . "grinntaylor@gmail.com"))
 	     (:commit . "9ae5d4a2c576671e8f7ab20d202eefa65af51b25"))])
  (org-remark .
-	     [(1 0 5)
+	     [(1 1 0)
 	      ((emacs
 		(27 1))
 	       (org
 		(9 4)))
 	      "Highlight & annotate any text files" tar
 	      ((:url . "https://github.com/nobiot/org-remark")
-	       (:keywords "org-mode" "annotation" "writing" "note-taking" "marginal-notes")
+	       (:keywords "org-mode" "annotation" "note-taking" "marginal-notes" "wp")
 	       (:maintainer "Noboru Ota" . "me@nobiot.com")
 	       (:authors
 		("Noboru Ota" . "me@nobiot.com"))
-	       (:commit . "576e5680682bfb80a50b057b8752e0674d766f8d"))])
+	       (:commit . "41a615c9f865c4c192d074f95b88cf2290cbc971"))])
  (org-transclusion .
 		   [(1 3 2)
 		    ((emacs

@@ -7,9 +7,11 @@ Table of Contents
 ─────────────────
 
 1. Introduction
-2. Installation
-3. Contributing and Feedback
-4. License
+2. Features
+3. Installation
+4. Contributing and Feedback
+5. Contributors
+6. License
 
 
 
@@ -18,8 +20,8 @@ Table of Contents
 1 Introduction
 ══════════════
 
-  Org-remark lets you highlight and annotate any text file with using
-  Org mode.
+  Org-remark lets you highlight and annotate text files and websites
+  with using Org mode [1].
 
   A user manual is available [online] or Emacs in-system as an Info node
   `(org-remark)': (`C-h i' and find the `Org-remark' node).
@@ -39,7 +41,7 @@ Table of Contents
 
 [online] <https://nobiot.github.io/org-remark/>
 
-[Installation] See section 2
+[Installation] See section 3
 
 [online] <https://nobiot.github.io/org-remark/#Installation>
 
@@ -50,7 +52,28 @@ Table of Contents
 [introductory video] <https://youtu.be/c8DHrAsFiLc>
 
 
-2 Installation
+2 Features
+══════════
+
+  • Highlight and annotate any text file. The highlights and notes are
+    kepted in an Org file as the plain text database. This lets you
+    easily manage your marginal notes and use the built-in Org
+    fecilities on them – e.g. create a sparse tree based on the category
+    of the notes
+
+  • Have the same highlighting and annotating functionality for websites
+    when you use EWW to browse them (new in latest [GNU-devel ELPA] and
+    is planned to be part of v1.1.0.)
+
+  • Create your your own highlighter pens with different colors, type
+    (e.g. underline, squiggle, etc. optionally with Org's category for
+    search and filter on your highlights and notes)
+
+
+[GNU-devel ELPA] <https://elpa.gnu.org/devel/org-remark.html>
+
+
+3 Installation
 ══════════════
 
   This package is available on:
@@ -58,7 +81,6 @@ Table of Contents
   • [GNU-ELPA] (releases only; equivalent to MELPA-Stable)
   • [GNU-devel ELPA] (unreleased development branch; equivalent to
     MELPA)
-
 
   GNU ELPA should be already set up in your Emacs by default. If you
   wish to add GNU-devel ELPA, simply add its URL to `package-archives'
@@ -73,8 +95,11 @@ Table of Contents
   configuration.
 
   ┌────
-  │ (require 'org-remark-global-tracking)
   │ (org-remark-global-tracking-mode +1)
+  │ 
+  │ ;; Optional if you would like to highlight websites via eww-mode
+  │ (with-eval-after-load 'eww
+  │   (org-remark-eww-mode +1))
   └────
 
   Unless you explicitly load `org' during Emacs initialization, I
@@ -106,7 +131,7 @@ Table of Contents
 [GNU-devel ELPA] <https://elpa.gnu.org/devel/org-remark.html>
 
 
-3 Contributing and Feedback
+4 Contributing and Feedback
 ═══════════════════════════
 
   Create issues, discussion, and/or pull requests in the GitHub
@@ -126,7 +151,32 @@ Table of Contents
 [Org Mode website] <https://orgmode.org/contribute.html#copyright>
 
 
-4 License
+5 Contributors
+══════════════
+
+  New features
+
+
+        `echo-text' update from the marginal notes to the source buffer
+        by marty hiatt (@mooseyboots)
+
+        Support for websites with `eww-mode' by Vedang Manerikar
+        (@vedang)
+
+  Bug fixes
+  Nan Jun Jie (@nanjj), @sgati-bodhi
+
+  Documentation (including README, NEWS, CHANGELOG)
+  @randomwangran, marty hiatt (@mooseyboots)
+
+  All the comments, issues, and questions on GitHub
+  @randomwangran, @karthink, @holtzermann17, @shombando, @magthe,
+  @linwaytin, @rtrppl, @ryanprior, @ericsfraga, @darcamo, @zhewy,
+  @QMeqGR, @Vidianos-Giannitsis, @AtomicNess123, @mooseyboots, @ouboub,
+  @dian-yu-luo, @SylvianHemus, @basaran, @Ypot, @oatmealm, @sati-bodhi
+
+
+6 License
 ═════════
 
   This work is licensed under a GPLv3 license. For a full copy of the
@@ -134,3 +184,12 @@ Table of Contents
 
 
 [LICENSE] <./LICENSE>
+
+
+
+Footnotes
+─────────
+
+[1] : Feature to highlight and annotate websites is new in the latest
+[GNU-devel ELPA] (<https://elpa.gnu.org/devel/org-remark.html>) and is
+part of v1.1.0.
