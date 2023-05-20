@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.6-alpha
-;; Package-Version: 20230517.606
-;; Package-Commit: 1535b958a6f55a50a6991c700baa7ce44243c125
+;; Package-Version: 20230519.2242
+;; Package-Commit: af2c1a21569756e6bfa5a7dcdf5c3ef349aea923
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -8781,7 +8781,7 @@ mode to use is `tuareg-mode'."
   "Return major mode that should be used for LANG.
 LANG is a string, and the returned major mode is a symbol."
   (cl-find-if
-   'fboundp
+   #'markdown--lang-mode-predicate
    (nconc (list (cdr (assoc lang markdown-code-lang-modes))
                 (cdr (assoc (downcase lang) markdown-code-lang-modes)))
           (and (fboundp 'treesit-language-available-p)
@@ -8792,6 +8792,14 @@ LANG is a string, and the returned major mode is a symbol."
           (list
            (intern (concat lang "-mode"))
            (intern (concat (downcase lang) "-mode"))))))
+
+(defun markdown--lang-mode-predicate (mode)
+  (and mode
+       (fboundp mode)
+       ;; https://github.com/jrblevin/markdown-mode/issues/761
+       (cl-loop for pair in auto-mode-alist
+                for func = (cdr pair)
+                thereis (and (atom func) (eq mode func)))))
 
 (defun markdown-fontify-code-blocks-generic (matcher last)
   "Add text properties to next code block from point to LAST.
