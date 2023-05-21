@@ -1,8 +1,8 @@
 ;;; scopeline.el --- Show scope info of blocks in buffer at end of scope -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/meain/scopeline.el
-;; Package-Version: 20230327.331
-;; Package-Commit: 204d2c635e93e0702c15f6d4faf9bffb39ecff7e
+;; Package-Version: 20230521.614
+;; Package-Commit: 6733f0f7ca33aa5c8ad83099dcb7b7ff8bc46a68
 ;; Keywords: scope, context, tree-sitter, convenience
 ;; SPDX-License-Identifier: Apache-2.0
 ;; Package-Requires: ((emacs "26.1"))
@@ -21,8 +21,7 @@
 ;; Here is a sample `use-package' configuration
 ;;
 ;; (use-package scopeline
-;;   :after tree-sitter
-;;   :config (add-hook 'tree-sitter-mode-hook #'scopeline-mode))
+;;   :config (add-hook 'prog-mode-hook #'scopeline-mode))
 ;;
 ;; You can find more info in the README for the project at
 ;; https://github.com/meain/scopeline.el
@@ -118,6 +117,16 @@
   (dolist (ov scopeline--overlays)
     (delete-overlay ov))
   (setq scopeline--overlays '()))
+
+(defun scopeline-delete-all-overlays ()
+  "Delete all overlays created by scopeline.
+You should not ideally have to use it.  This is only in case something
+bad happens and scopeline leaves around unnecessary overlays."
+  (interactive)
+  (let ((overlays (overlays-in (point-min) (point-max))))
+    (dolist (ov overlays)
+      (when (overlay-get ov 'scopeline)
+        (delete-overlay ov)))))
 
 (defun scopeline--get-query-matches (query)
   "Return list of matches for `QUERY' based on the treesitter lib available."

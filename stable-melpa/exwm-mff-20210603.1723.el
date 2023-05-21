@@ -4,6 +4,8 @@
 
 ;; Author: Ian Eure <public@lowbar.fyi>
 ;; URL: https://github.com/ieure/exwm-mff
+;; Package-Version: 20210603.1723
+;; Package-Commit: 89206f2e3189f589c27c56bd2b6203e906ee7100
 ;; Version: 1.2.1
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: unix

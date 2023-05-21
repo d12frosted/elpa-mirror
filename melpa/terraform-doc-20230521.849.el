@@ -4,8 +4,8 @@
 
 ;; Author: Giap Tran <txgvnn@gmail.com>
 ;; URL: https://github.com/TxGVNN/terraform-doc
-;; Package-Version: 20211003.1333
-;; Package-Commit: 16179e57ce290190c222b27961900657a1981330
+;; Package-Version: 20230521.849
+;; Package-Commit: 8a6ffd5ac133ced5afd07b9d963272e4208f8b1e
 ;; Version: 1.2.0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: comm
@@ -45,6 +45,11 @@
 (defcustom terraform-doc-name "Terraform-Doc"
   "*Modeline of `terraform-doc'."
   :type 'string
+  :group 'terraform)
+
+(defcustom terraform-doc-markdown-mode-function 'markdown-mode
+  "*Function to use for markdown rendering in `terraform-doc', e.g. `markdown-mode' or `gfm-view-mode'."
+  :type 'function
   :group 'terraform)
 
 (defvar terraform-doc-mode-map
@@ -142,8 +147,8 @@
          (search-forward-regexp "\n\n" )
          (delete-region (point) (point-min))
          (rename-buffer buffer-name)
-         (if (fboundp 'markdown-mode)
-             (markdown-mode))
+         (if (fboundp terraform-doc-markdown-mode-function)
+             (funcall terraform-doc-markdown-mode-function))
          (setq buffer-read-only t)
          (switch-to-buffer (current-buffer))))))))
 

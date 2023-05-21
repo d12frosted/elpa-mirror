@@ -3,28 +3,30 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-Checking out bd6502c8872fcb8b5c71636da43474b7fc173482
+Checking out 5b329032ba6a4d8fc1f2738cccd7a334141c84b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperdrive/
-  to /tmp/hyperdrivebX4ksT/hyperdrive-20230520.755
+  to /tmp/hyperdriveGkzlv7/hyperdrive-20230521.724
     hyperdrive-dir.el -> hyperdrive-dir.el
     hyperdrive-handlers.el -> hyperdrive-handlers.el
     hyperdrive-lib.el -> hyperdrive-lib.el
     hyperdrive-org.el -> hyperdrive-org.el
     hyperdrive.el -> hyperdrive.el
   ! doc/hyperdrive-manual.texi -> hyperdrive-manual.texi
-Generating /tmp/hyperdrivebX4ksT/hyperdrive-20230520.755/hyperdrive-manual.info
-Created hyperdrive-20230520.755.tar containing:
-  hyperdrive-20230520.755/
-  hyperdrive-20230520.755/dir
-  hyperdrive-20230520.755/hyperdrive-dir.el
-  hyperdrive-20230520.755/hyperdrive-handlers.el
-  hyperdrive-20230520.755/hyperdrive-lib.el
-  hyperdrive-20230520.755/hyperdrive-manual.info
-  hyperdrive-20230520.755/hyperdrive-org.el
-  hyperdrive-20230520.755/hyperdrive-pkg.el
-  hyperdrive-20230520.755/hyperdrive.el
-Built hyperdrive in 8.699s, finished at 2023-05-21T04:25:16+0000
+Generating /tmp/hyperdriveGkzlv7/hyperdrive-20230521.724/hyperdrive-manual.info
+Created hyperdrive-20230521.724.tar containing:
+  hyperdrive-20230521.724/
+  hyperdrive-20230521.724/dir
+  hyperdrive-20230521.724/hyperdrive-dir.el
+  hyperdrive-20230521.724/hyperdrive-handlers.el
+  hyperdrive-20230521.724/hyperdrive-lib.el
+  hyperdrive-20230521.724/hyperdrive-manual.info
+  hyperdrive-20230521.724/hyperdrive-org.el
+  hyperdrive-20230521.724/hyperdrive-pkg.el
+  hyperdrive-20230521.724/hyperdrive.el
+Built hyperdrive in 9.229s, finished at 2023-05-21T08:25:56+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  518 May 21 04:25 packages/hyperdrive-20230520.755.entry
 140K -rw-r--r-- 1 root root 140K May 21 04:25 packages/hyperdrive-20230520.755.tar
+4.0K -rw-r--r-- 1 root root  518 May 21 08:25 packages/hyperdrive-20230521.724.entry
+140K -rw-r--r-- 1 root root 140K May 21 08:25 packages/hyperdrive-20230521.724.tar
