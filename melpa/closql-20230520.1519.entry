@@ -1,5 +1,5 @@
 (closql .
-	[(20230425 1334)
+	[(20230520 1519)
 	 ((emacs
 	   (25 1))
 	  (compat
@@ -7,7 +7,7 @@
 	  (emacsql
 	   (20230220)))
 	 "Store EIEIO objects using EmacSQL" single
-	 ((:commit . "618c94dba7666e8c55c0094ee21fa0381d3536df")
+	 ((:commit . "85ac7b8a894a4e259439d79eb6bd6f5129770905")
 	  (:authors
 	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	  (:maintainers

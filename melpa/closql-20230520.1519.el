@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/closql
 ;; Keywords: extensions
-;; Package-Version: 20230425.1334
-;; Package-Commit: 618c94dba7666e8c55c0094ee21fa0381d3536df
+;; Package-Version: 20230520.1519
+;; Package-Commit: 85ac7b8a894a4e259439d79eb6bd6f5129770905
 
 ;; Package-Requires: (
 ;;     (emacs "25.1")
@@ -314,7 +314,8 @@
                   (connection-class (or connection-class
                                         (emacsql-sqlite-default-connection)))
                   (conn (make-instance connection-class :file file))
-                  (db (make-instance class :connection conn)))
+                  (db (make-instance class))) ; ignores slot arguments
+             (oset db connection conn)
              (when (and (slot-boundp conn 'handle)
                         (processp (oref conn handle)))
                (set-process-query-on-exit-flag (oref conn handle) nil))

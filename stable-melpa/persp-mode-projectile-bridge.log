@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/Bad-ptr/persp-mode-projectile-bridge.el.git
 
 Updating /mnt/store/melpa/working/persp-mode-projectile-bridge/
-Checking out f6453cd7b8b4352c06e771706f2c5b7e2cdff1ce
-Built persp-mode-projectile-bridge in 4.439s, finished at 2023-05-20T08:47:36+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.2K May 20 08:47 packages/persp-mode-projectile-bridge-20170315.1120.el
-4.0K -rw-r--r-- 1 root root  621 May 20 08:47 packages/persp-mode-projectile-bridge-20170315.1120.entry
+
+Command '' exited with non-zero exit-code: 128
+
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/Bad-ptr/persp-mode-projectile-bridge.el.git/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128
