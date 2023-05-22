@@ -3,6 +3,8 @@
 ;; Copyright (C) 2002 D. Goel, 2012, 2013 Joel McCracken
 ;; Author: Joel McCracken <mccracken.joel@gmail.com>, D. Goel <deego@gnufans.org>
 ;; Version: 0.0.1
+;; Package-Version: 20131116.1842
+;; Package-Commit: ddd669266ca36d7e4ebba73eb1ab42523787e042
 ;; URL: https://github.com/joelmccracken/elisp-sandbox
 ;; Keywords: lisp
 

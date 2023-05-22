@@ -1,0 +1,17 @@
+(pdf-view-pagemark .
+		   [(20230522 321)
+		    ((pdf-tools
+		      (0 90))
+		     (posframe
+		      (1 4 2))
+		     (emacs
+		      (26 0)))
+		    "Add indicator in pdfview mode to show the page remaining" single
+		    ((:commit . "dd9c332d4429e64884ab0725137a6cbdc383befd")
+		     (:authors
+		      ("Kimi Ma" . "kimi.im@outlook.com"))
+		     (:maintainers
+		      ("Kimi Ma" . "kimi.im@outlook.com"))
+		     (:maintainer "Kimi Ma" . "kimi.im@outlook.com")
+		     (:keywords "multimedia" "convenience")
+		     (:url . "https://github.com/kimim/pdf-view-pagemark"))])

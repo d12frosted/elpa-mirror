@@ -1,13 +1,13 @@
 Package: howm
-Fetcher: git
-Source:  https://scm.osdn.net/gitroot/howm/howm.git
+Fetcher: github
+Source:  https://github.com/kaorahi/howm.git
 
 Updating /mnt/store/melpa/working/howm/
 Checking out ffc1e7da1f02f750094a9f0fe8a0aa837743193b
 Warning: howm :files spec is equivalent to the default
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/howm/
-  to /tmp/howmKFb4E1/howm-20230218.818
+  to /tmp/howm3TBcca/howm-20230218.818
     action-lock.el -> action-lock.el
     bcomp.el -> bcomp.el
     cheat-font-lock.el -> cheat-font-lock.el
@@ -61,7 +61,7 @@ Created howm-20230218.818.tar containing:
   howm-20230218.818/iigrep.el
   howm-20230218.818/illusion.el
   howm-20230218.818/riffle.el
-Built howm in 4.861s, finished at 2023-05-21T08:25:24+0000
+Built howm in 4.277s, finished at 2023-05-22T04:28:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  369 May 21 08:25 packages/howm-20230218.818.entry
-460K -rw-r--r-- 1 root root 460K May 21 08:25 packages/howm-20230218.818.tar
+4.0K -rw-r--r-- 1 root root  369 May 22 04:28 packages/howm-20230218.818.entry
+460K -rw-r--r-- 1 root root 460K May 22 04:28 packages/howm-20230218.818.tar

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/Trevoke/org-gtd.el.git
 
 Updating /mnt/store/melpa/working/org-gtd/
-Checking out 751a3ab5fd100c7539946db2168118642cf8d90f
+Checking out ef97879b72d278255024545f492a06d3d59d87e5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-gtd/
-  to /tmp/org-gtdpJSaOH/org-gtd-20230520.1351
+  to /tmp/org-gtdMHrD7T/org-gtd-20230522.53
     org-gtd-agenda.el -> org-gtd-agenda.el
     org-gtd-archive.el -> org-gtd-archive.el
     org-gtd-areas-of-focus.el -> org-gtd-areas-of-focus.el
@@ -40,41 +40,43 @@ Copying files (->) and directories (=>)
     dir -> dir
     org-gtd.info -> org-gtd.info
   ! doc/org-gtd.texi -> org-gtd.texi
-Created org-gtd-20230520.1351.tar containing:
-  org-gtd-20230520.1351/
-  org-gtd-20230520.1351/dir
-  org-gtd-20230520.1351/org-gtd-agenda.el
-  org-gtd-20230520.1351/org-gtd-archive.el
-  org-gtd-20230520.1351/org-gtd-areas-of-focus.el
-  org-gtd-20230520.1351/org-gtd-autoloads.el
-  org-gtd-20230520.1351/org-gtd-backward-compatibility.el
-  org-gtd-20230520.1351/org-gtd-calendar.el
-  org-gtd-20230520.1351/org-gtd-capture.el
-  org-gtd-20230520.1351/org-gtd-clarify.el
-  org-gtd-20230520.1351/org-gtd-core.el
-  org-gtd-20230520.1351/org-gtd-delegate.el
-  org-gtd-20230520.1351/org-gtd-files.el
-  org-gtd-20230520.1351/org-gtd-habit.el
-  org-gtd-20230520.1351/org-gtd-horizons.el
-  org-gtd-20230520.1351/org-gtd-id.el
-  org-gtd-20230520.1351/org-gtd-incubate.el
-  org-gtd-20230520.1351/org-gtd-knowledge.el
-  org-gtd-20230520.1351/org-gtd-mode.el
-  org-gtd-20230520.1351/org-gtd-oops.el
-  org-gtd-20230520.1351/org-gtd-organize.el
-  org-gtd-20230520.1351/org-gtd-pkg.el
-  org-gtd-20230520.1351/org-gtd-process.el
-  org-gtd-20230520.1351/org-gtd-projects.el
-  org-gtd-20230520.1351/org-gtd-quick-action.el
-  org-gtd-20230520.1351/org-gtd-refile.el
-  org-gtd-20230520.1351/org-gtd-review.el
-  org-gtd-20230520.1351/org-gtd-single-action.el
-  org-gtd-20230520.1351/org-gtd-skip.el
-  org-gtd-20230520.1351/org-gtd-trash.el
-  org-gtd-20230520.1351/org-gtd-upgrades.el
-  org-gtd-20230520.1351/org-gtd.el
-  org-gtd-20230520.1351/org-gtd.info
-Built org-gtd in 8.002s, finished at 2023-05-22T00:49:55+0000
+Created org-gtd-20230522.53.tar containing:
+  org-gtd-20230522.53/
+  org-gtd-20230522.53/dir
+  org-gtd-20230522.53/org-gtd-agenda.el
+  org-gtd-20230522.53/org-gtd-archive.el
+  org-gtd-20230522.53/org-gtd-areas-of-focus.el
+  org-gtd-20230522.53/org-gtd-autoloads.el
+  org-gtd-20230522.53/org-gtd-backward-compatibility.el
+  org-gtd-20230522.53/org-gtd-calendar.el
+  org-gtd-20230522.53/org-gtd-capture.el
+  org-gtd-20230522.53/org-gtd-clarify.el
+  org-gtd-20230522.53/org-gtd-core.el
+  org-gtd-20230522.53/org-gtd-delegate.el
+  org-gtd-20230522.53/org-gtd-files.el
+  org-gtd-20230522.53/org-gtd-habit.el
+  org-gtd-20230522.53/org-gtd-horizons.el
+  org-gtd-20230522.53/org-gtd-id.el
+  org-gtd-20230522.53/org-gtd-incubate.el
+  org-gtd-20230522.53/org-gtd-knowledge.el
+  org-gtd-20230522.53/org-gtd-mode.el
+  org-gtd-20230522.53/org-gtd-oops.el
+  org-gtd-20230522.53/org-gtd-organize.el
+  org-gtd-20230522.53/org-gtd-pkg.el
+  org-gtd-20230522.53/org-gtd-process.el
+  org-gtd-20230522.53/org-gtd-projects.el
+  org-gtd-20230522.53/org-gtd-quick-action.el
+  org-gtd-20230522.53/org-gtd-refile.el
+  org-gtd-20230522.53/org-gtd-review.el
+  org-gtd-20230522.53/org-gtd-single-action.el
+  org-gtd-20230522.53/org-gtd-skip.el
+  org-gtd-20230522.53/org-gtd-trash.el
+  org-gtd-20230522.53/org-gtd-upgrades.el
+  org-gtd-20230522.53/org-gtd.el
+  org-gtd-20230522.53/org-gtd.info
+Built org-gtd in 7.331s, finished at 2023-05-22T04:50:00+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  466 May 22 00:49 packages/org-gtd-20230520.1351.entry
 220K -rw-r--r-- 1 root root 220K May 22 00:49 packages/org-gtd-20230520.1351.tar
+4.0K -rw-r--r-- 1 root root  464 May 22 04:49 packages/org-gtd-20230522.53.entry
+220K -rw-r--r-- 1 root root 220K May 22 04:49 packages/org-gtd-20230522.53.tar
