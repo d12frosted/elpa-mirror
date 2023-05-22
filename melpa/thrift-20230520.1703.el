@@ -1,8 +1,8 @@
 ;;; thrift.el --- major mode for fbthrift and Apache Thrift files  -*- lexical-binding: t; -*-
 
 ;; Keywords: languages
-;; Package-Version: 20230514.812
-;; Package-Commit: 5447de259bc43e9647eccc84e8daa75019dd6a5d
+;; Package-Version: 20230520.1703
+;; Package-Commit: 5f8415018bf7f1a5396b8492c5dd11a447aac303
 ;; Package-Requires: ((emacs "24"))
 
 ;; Licensed to the Apache Software Foundation (ASF) under one
