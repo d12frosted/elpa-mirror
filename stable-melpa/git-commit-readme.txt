@@ -5,7 +5,7 @@ line, it is preferable to tell Git to create the commit without
 actually passing it a message.  Git then invokes the `$GIT_EDITOR'
 (or if that is undefined `$EDITOR') asking the user to provide the
 message by editing the file ".git/COMMIT_EDITMSG" (or another file
-in that directory, e.g. ".git/MERGE_MSG" for merge commits).
+in that directory, e.g., ".git/MERGE_MSG" for merge commits).
 
 When `global-git-commit-mode' is enabled, which it is by default,
 then opening such a file causes the features described below, to
@@ -36,7 +36,7 @@ is saved, but Emacseditor's exit code differs.
 Aborting the commit does not cause the message to be lost, but
 relying solely on the file not being tampered with is risky.  This
 package additionally stores all aborted messages for the duration
-of the current session (i.e. until you close Emacs).  To get back
+of the current session (i.e., until you close Emacs).  To get back
 an aborted message use M-p and M-n while editing a message.
 
   M-p      Replace the buffer contents with the previous message

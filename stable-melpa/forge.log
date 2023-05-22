@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/forge.git
 
 Updating /mnt/store/melpa/working/forge/
-Checking out a754c419f70e3638ff2a0ae6d0b05d7220afe7b8
+Checking out e165c2e4fbe4f04ce4801b0d3883d7a2c16661fb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forge/
-  to /tmp/forgejttMFY/forge-20230515.1003
+  to /tmp/forgewxSnRX/forge-20230521.2023
     forge-pkg.el -> forge-pkg.el
   ! lisp/forge-bitbucket.el -> forge-bitbucket.el
   ! lisp/forge-commands.el -> forge-commands.el
@@ -27,31 +27,33 @@ Copying files (->) and directories (=>)
   ! lisp/forge-topic.el -> forge-topic.el
   ! lisp/forge.el -> forge.el
   ! docs/forge.texi -> forge.texi
-Generating /tmp/forgejttMFY/forge-20230515.1003/forge.info
-Created forge-20230515.1003.tar containing:
-  forge-20230515.1003/
-  forge-20230515.1003/dir
-  forge-20230515.1003/forge-bitbucket.el
-  forge-20230515.1003/forge-commands.el
-  forge-20230515.1003/forge-core.el
-  forge-20230515.1003/forge-db.el
-  forge-20230515.1003/forge-gitea.el
-  forge-20230515.1003/forge-github.el
-  forge-20230515.1003/forge-gitlab.el
-  forge-20230515.1003/forge-gogs.el
-  forge-20230515.1003/forge-issue.el
-  forge-20230515.1003/forge-list.el
-  forge-20230515.1003/forge-notify.el
-  forge-20230515.1003/forge-pkg.el
-  forge-20230515.1003/forge-post.el
-  forge-20230515.1003/forge-pullreq.el
-  forge-20230515.1003/forge-repo.el
-  forge-20230515.1003/forge-revnote.el
-  forge-20230515.1003/forge-semi.el
-  forge-20230515.1003/forge-topic.el
-  forge-20230515.1003/forge.el
-  forge-20230515.1003/forge.info
-Built forge in 11.268s, finished at 2023-05-21T08:14:22+0000
+Generating /tmp/forgewxSnRX/forge-20230521.2023/forge.info
+Created forge-20230521.2023.tar containing:
+  forge-20230521.2023/
+  forge-20230521.2023/dir
+  forge-20230521.2023/forge-bitbucket.el
+  forge-20230521.2023/forge-commands.el
+  forge-20230521.2023/forge-core.el
+  forge-20230521.2023/forge-db.el
+  forge-20230521.2023/forge-gitea.el
+  forge-20230521.2023/forge-github.el
+  forge-20230521.2023/forge-gitlab.el
+  forge-20230521.2023/forge-gogs.el
+  forge-20230521.2023/forge-issue.el
+  forge-20230521.2023/forge-list.el
+  forge-20230521.2023/forge-notify.el
+  forge-20230521.2023/forge-pkg.el
+  forge-20230521.2023/forge-post.el
+  forge-20230521.2023/forge-pullreq.el
+  forge-20230521.2023/forge-repo.el
+  forge-20230521.2023/forge-revnote.el
+  forge-20230521.2023/forge-semi.el
+  forge-20230521.2023/forge-topic.el
+  forge-20230521.2023/forge.el
+  forge-20230521.2023/forge.info
+Built forge in 11.971s, finished at 2023-05-22T00:18:10+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  584 May 21 08:14 packages/forge-20230515.1003.entry
-352K -rw-r--r-- 1 root root 350K May 21 08:14 packages/forge-20230515.1003.tar
+4.0K -rw-r--r-- 1 root root  584 May 21 20:19 packages/forge-20230515.1003.entry
+352K -rw-r--r-- 1 root root 350K May 21 20:19 packages/forge-20230515.1003.tar
+4.0K -rw-r--r-- 1 root root  584 May 22 00:18 packages/forge-20230521.2023.entry
+352K -rw-r--r-- 1 root root 350K May 22 00:18 packages/forge-20230521.2023.tar

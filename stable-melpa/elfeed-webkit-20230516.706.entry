@@ -1,0 +1,15 @@
+(elfeed-webkit .
+	       [(20230516 706)
+		((emacs
+		  (26 1))
+		 (elfeed
+		  (3 4 1)))
+		"Render elfeed entries in embedded webkit widgets" single
+		((:commit . "f5c936ca33582366b9c2e88bcdd529f359b41173")
+		 (:authors
+		  ("Fritz Grabo" . "hello@fritzgrabo.com"))
+		 (:maintainers
+		  ("Fritz Grabo" . "hello@fritzgrabo.com"))
+		 (:maintainer "Fritz Grabo" . "hello@fritzgrabo.com")
+		 (:keywords "comm")
+		 (:url . "https://github.com/fritzgrabo/elfeed-webkit"))])
