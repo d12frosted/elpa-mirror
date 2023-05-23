@@ -4,8 +4,6 @@
 
 ;; Author: bkruczyk <bartlomiej.kruczyk@gmail.com>
 ;; Version: 1.2
-;; Package-Version: 20161004.715
-;; Package-Commit: ea01a3d9358e968f75e3ed15dec6a2a96ce3d9a1
 ;; Keywords: themes
 ;; Package-Requires: ((emacs "24"))
 ;; URL: https://github.com/bkruczyk/badwolf-emacs
