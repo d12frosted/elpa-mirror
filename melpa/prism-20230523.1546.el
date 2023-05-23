@@ -4,9 +4,9 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/prism.el
-;; Package-Version: 20230519.1009
-;; Package-Commit: 8d4b7726632eac8850b2509239ad0283a80afc93
-;; Version: 0.3
+;; Package-Version: 20230523.1546
+;; Package-Commit: 676be005284f2d9da7d507987c79a9b4b1049e9f
+;; Version: 0.3.1
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1"))
 ;; Keywords: faces lisp
 
@@ -390,6 +390,7 @@ Matches up to LIMIT."
     (with-syntax-table prism-syntax-table
       (catch 'eobp
         (let ((parse-sexp-ignore-comments t)
+              (starting-pos (point))
               depth in-string-p comment-level-p comment-or-string-start start end
               found-comment-p found-string-p)
           (while ;; Skip to start of where we should match.
@@ -448,7 +449,13 @@ Matches up to LIMIT."
                                      ;; At end of string: break out of it.
                                      (forward-char 1)
                                    ;; At beginning of string: skip it.
-                                   (forward-sexp 1))
+                                   (condition-case err
+                                       (forward-sexp 1)
+                                     (scan-error
+                                      ;; An unclosed string: move past it.
+                                      (goto-char (cadddr err)))))
+                                 ;; TODO: Is it right to set found-string-p in
+                                 ;; the case of finding an unclosed string?
                                  (setf found-string-p t)
                                  (point))
                                (ignore-errors
@@ -466,17 +473,19 @@ Matches up to LIMIT."
                                ;; I think the important thing is not to hang Emacs, to always
                                ;; either return nil or advance point to `limit'.
                                limit))
-                         (or (unless found-string-p
+                         (or (unless (or found-string-p found-comment-p)
                                ;; This additional form is regrettable, but it seems necessary
                                ;; to fix <https://github.com/alphapapa/prism.el/issues/18>.
                                ;; However, there might be a better way to refactor this whole
                                ;; calculation of the END position, so someday that should be
                                ;; tried.  (Or maybe just use tree-sitter in Emacs 29+.)
                                (save-excursion
-                                 (when (ignore-errors
-                                         (re-search-forward (rx (or (syntax string-quote)
-                                                                    (syntax comment-start)))
-                                                            (scan-lists (point) 1 1) t))
+                                 (when (re-search-forward (rx (or (syntax string-quote)
+                                                                  (syntax comment-start)))
+                                                          (or (ignore-errors
+                                                                (scan-lists (point) 1 1))
+                                                              limit)
+                                                          t)
                                    ;; Found string or comment in current list: stop at beginning of it.
                                    (pcase (syntax-after (match-beginning 0))
                                      ('(11)
@@ -526,6 +535,10 @@ Matches up to LIMIT."
             (set-match-data (list start end (current-buffer)))
             ;;  (prism-debug (current-buffer) "END" start end)
             ;; Be sure to return non-nil!
+            (unless (> (point) starting-pos)
+              (prism-mode -1)
+              (error "prism: Infinite loop detected in `prism-match' (buffer:%S point:%S).  Please report this bug"
+                     (current-buffer) (point)))
             t))))))
 
 (defun prism-match-whitespace (limit)
@@ -610,6 +623,7 @@ appropriately, e.g. to `python-indent-offset' for `python-mode'."
       (unless (eobp)
         ;; Not at end-of-buffer: start matching.
         (let ((parse-sexp-ignore-comments t)
+              (starting-pos (point))
               list-depth in-string-p comment-level-p comment-or-string-start start end
               found-comment-p found-string-p)
           (while ;; Skip to start of where we should match.
@@ -713,6 +727,10 @@ appropriately, e.g. to `python-indent-offset' for `python-mode'."
               ;; Prevent end-of-buffer error in `font-lock-fontify-keywords-region'.
               (cl-decf start))
             (set-match-data (list start end (current-buffer)))
+            (unless (> (point) starting-pos)
+              (prism-mode -1)
+              (error "prism: Infinite loop detected in `prism-match-whitespace' (buffer:%S point:%S).  Please report this bug"
+                     (current-buffer) (point)))
             ;; Be sure to return non-nil!
             t))))))
 
