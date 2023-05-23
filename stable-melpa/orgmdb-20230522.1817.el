@@ -4,8 +4,8 @@
 
 ;; Author: Isa Mert Gurbuz <isamert@protonmail.com>
 ;; Version: 0.5
-;; Package-Version: 20230312.2231
-;; Package-Commit: 385a747f41130b714207432045161915eb65b206
+;; Package-Version: 20230522.1817
+;; Package-Commit: 292a58b3bd19b61d24d897efefeee1a309a666fd
 ;; URL: https://github.com/isamert/orgmdb
 ;; Package-Requires: ((emacs "27.1") (dash "2.11.0") (s "1.12.0") (org "8.0.0"))
 
@@ -137,7 +137,7 @@ under the header."
 
 ;;;###autoload
 (defvar orgmdb-omdb-url
-  "http://www.omdbapi.com"
+  "https://www.omdbapi.com"
   "OMDb URL.")
 
 (defvar orgmdb-show-tag "series")

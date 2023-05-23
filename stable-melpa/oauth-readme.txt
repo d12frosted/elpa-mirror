@@ -41,8 +41,6 @@ will try to use the emacs internal http functions (url-request).
 Note: if you plan on doing https and have oauth-use-curl set to nil,
 make sure you have gnutls-bin installed.
 
-oauth.el uses hmac-sha1 library for generating signatures. An implementation
-by Derek Upham is included for convenience.
 
 This library assumes that you are using the oauth_verifier method
 described in the 1.0a spec.

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/dmatveev/shampoo-emacs.git
 
 Updating /mnt/store/melpa/working/shampoo/
-Checking out bc193c39636c30182159c5c91c37a9a4cb50fedf
+Checking out 4112f3b9282be0ce1f334e148f5c89b03a5df40c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/shampoo/
-  to /tmp/shampoom3nI9l/shampoo-20131230.1019
+  to /tmp/shampoomzSyDB/shampoo-20230522.1722
     shampoo-auth.el -> shampoo-auth.el
     shampoo-compile.el -> shampoo-compile.el
     shampoo-dialect.el -> shampoo-dialect.el
@@ -27,30 +27,32 @@ Copying files (->) and directories (=>)
     shampoo-utils.el -> shampoo-utils.el
     shampoo-xml.el -> shampoo-xml.el
     shampoo.el -> shampoo.el
-Created shampoo-20131230.1019.tar containing:
-  shampoo-20131230.1019/
-  shampoo-20131230.1019/shampoo-auth.el
-  shampoo-20131230.1019/shampoo-compile.el
-  shampoo-20131230.1019/shampoo-dialect.el
-  shampoo-20131230.1019/shampoo-dict.el
-  shampoo-20131230.1019/shampoo-faces.el
-  shampoo-20131230.1019/shampoo-fetcher.el
-  shampoo-20131230.1019/shampoo-fileout.el
-  shampoo-20131230.1019/shampoo-layout.el
-  shampoo-20131230.1019/shampoo-list-mode.el
-  shampoo-20131230.1019/shampoo-modes.el
-  shampoo-20131230.1019/shampoo-networking.el
-  shampoo-20131230.1019/shampoo-pkg.el
-  shampoo-20131230.1019/shampoo-regexp.el
-  shampoo-20131230.1019/shampoo-requests.el
-  shampoo-20131230.1019/shampoo-response.el
-  shampoo-20131230.1019/shampoo-state-format.el
-  shampoo-20131230.1019/shampoo-state.el
-  shampoo-20131230.1019/shampoo-tools.el
-  shampoo-20131230.1019/shampoo-utils.el
-  shampoo-20131230.1019/shampoo-xml.el
-  shampoo-20131230.1019/shampoo.el
-Built shampoo in 6.083s, finished at 2023-05-22T17:17:25+0000
+Created shampoo-20230522.1722.tar containing:
+  shampoo-20230522.1722/
+  shampoo-20230522.1722/shampoo-auth.el
+  shampoo-20230522.1722/shampoo-compile.el
+  shampoo-20230522.1722/shampoo-dialect.el
+  shampoo-20230522.1722/shampoo-dict.el
+  shampoo-20230522.1722/shampoo-faces.el
+  shampoo-20230522.1722/shampoo-fetcher.el
+  shampoo-20230522.1722/shampoo-fileout.el
+  shampoo-20230522.1722/shampoo-layout.el
+  shampoo-20230522.1722/shampoo-list-mode.el
+  shampoo-20230522.1722/shampoo-modes.el
+  shampoo-20230522.1722/shampoo-networking.el
+  shampoo-20230522.1722/shampoo-pkg.el
+  shampoo-20230522.1722/shampoo-regexp.el
+  shampoo-20230522.1722/shampoo-requests.el
+  shampoo-20230522.1722/shampoo-response.el
+  shampoo-20230522.1722/shampoo-state-format.el
+  shampoo-20230522.1722/shampoo-state.el
+  shampoo-20230522.1722/shampoo-tools.el
+  shampoo-20230522.1722/shampoo-utils.el
+  shampoo-20230522.1722/shampoo-xml.el
+  shampoo-20230522.1722/shampoo.el
+Built shampoo in 4.711s, finished at 2023-05-22T21:20:28+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  141 May 22 17:17 packages/shampoo-20131230.1019.entry
 100K -rw-r--r-- 1 root root 100K May 22 17:17 packages/shampoo-20131230.1019.tar
+4.0K -rw-r--r-- 1 root root  431 May 22 21:20 packages/shampoo-20230522.1722.entry
+100K -rw-r--r-- 1 root root 100K May 22 21:20 packages/shampoo-20230522.1722.tar
