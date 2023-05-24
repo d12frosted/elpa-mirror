@@ -4,8 +4,8 @@
 
 ;; Author: Roman Parykin <donderom@ymail.com>
 ;; URL: https://github.com/donderom/jazz-theme
-;; Package-Version: 20230523.1146
-;; Package-Commit: cfb610bc0d35c62e57c82432fdf95b15dc0763e4
+;; Package-Version: 20230523.1852
+;; Package-Commit: e9467f9555d2c1c3c07eb6f2f7cb1ce3a7722aef
 ;; Version: 1.0
 
 ;; Based on zenburn-theme.el
@@ -103,7 +103,10 @@
    `(link-visited ((,class (:foreground ,jazz-yellow-1 :underline t :weight normal))))
    `(default ((,class (:foreground ,jazz-fg :background ,jazz-bg))))
    `(cursor ((,class (:foreground ,jazz-fg :background ,jazz-fg))))
-   `(escape-glyph-face ((,class (:foreground ,jazz-red))))
+   `(escape-glyph ((,class (:foreground ,jazz-fg :background ,jazz-red))))
+   `(escape-glyph-face ((,class (:foreground ,jazz-fg :background ,jazz-red))))
+   `(homoglyph ((,class (:foreground ,jazz-fg :background ,jazz-red))))
+   `(nobreak-hyphen ((,class (:foreground ,jazz-fg :background ,jazz-red))))
    `(fringe ((,class (:foreground ,jazz-bg+2 :background ,jazz-bg))))
    `(header-line ((,class (:foreground ,jazz-yellow
                                        :background ,jazz-bg-1

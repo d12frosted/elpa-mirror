@@ -6,8 +6,6 @@
 ;; Maintainer: Marcelo Toledo <marcelo@marcelotoledo.com>
 ;; Created: 21 Jul 2004
 ;; Package-Requires: ((emacs "24"))
-;; Package-Version: 20190304.1528
-;; Package-Commit: 8457b296ef87be339cbe47730b922757d60bdcd5
 ;; Version: 2.0
 ;; Keywords: tools, convenience
 ;; URL: https://github.com/marcelotoledo/chronometer

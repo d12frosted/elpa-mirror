@@ -4,8 +4,8 @@
 
 ;; Author: Wei Jian Gan <weijiangan@outlook.com>
 ;; Keywords: convenience, tools, go
-;; Package-Version: 20190330.1412
-;; Package-Commit: 8e446c68311048f0b87febf8ef0379e29d358851
+;; Package-Version: 20230523.1855
+;; Package-Commit: 9def093e416e9a6ddd3cae8590dbb7ff6314925a
 ;; URL: https://github.com/weijiangan/flycheck-golangci-lint
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24") (flycheck "0.22"))
@@ -64,6 +64,16 @@
   :safe #'booleanp
   :type 'boolean)
 
+(flycheck-def-option-var flycheck-golangci-allow-parallel-runners nil golangci-lint
+  "Allow multiple parallel golangci-lint instances running"
+  :safe #'booleanp
+  :type 'boolean)
+
+(flycheck-def-option-var flycheck-golangci-allow-serial-runners nil golangci-lint
+  "Allow multiple golangci-lint instances running, but serialize them around a lock"
+  :safe #'booleanp
+  :type 'boolean)
+
 (flycheck-def-option-var flycheck-golangci-lint-enable-linters nil golangci-lint
   "Enable specific linters"
   :type '(repeat (string :tag "linter"))
@@ -78,16 +88,19 @@
   "A Go syntax checker using golangci-lint that's 5x faster than gometalinter
 
 See URL `https://github.com/golangci/golangci-lint'."
-  :command ("golangci-lint" "run" "--print-issued-lines=false" "--out-format=line-number"
+  :command ("golangci-lint" "run" "--out-format=checkstyle"
             (option "--config=" flycheck-golangci-lint-config concat)
             (option "--deadline=" flycheck-golangci-lint-deadline concat)
             (option-flag "--tests" flycheck-golangci-lint-tests)
             (option-flag "--fast" flycheck-golangci-lint-fast)
+            (option-flag "--allow-parallel-runners" flycheck-golangci-allow-parallel-runners)
+            (option-flag "--allow-serial-runners" flycheck-golangci-allow-serial-runners)
             (option-flag "--disable-all" flycheck-golangci-lint-disable-all)
             (option-flag "--enable-all" flycheck-golangci-lint-enable-all)
             (option-list "--disable=" flycheck-golangci-lint-disable-linters concat)
             (option-list "--enable=" flycheck-golangci-lint-enable-linters concat)
             ".")
+  :error-parser flycheck-parse-checkstyle
   :error-patterns
   ((error line-start (file-name) ":" line ":" column ": " (message) line-end)
    (error line-start (file-name) ":" line ":" (message) line-end))
