@@ -46,6 +46,6 @@ can use Emacs' built-in Scheme support instead (`run-scheme`).  You may customiz
 `scheme-program-name` to run the interpreter of your Scheme of choice.
 
 The LSP server works best if your code is packed inside a library definition
-(either R6RS, R7RS or implementation specific). Depending on the implementation,
+(either R6RS, R7RS or implementation specific).  Depending on the implementation,
 you can improve the experience by adding your library to a path where your
 implementation can find it (see note regarding Guile below).
