@@ -2,8 +2,8 @@
 
 ;; Author: Tyler Dodge (tyler@tdodge.consulting)
 ;; Version: 1.5
-;; Package-Version: 20230517.1908
-;; Package-Commit: 966bb44889f40fa80005f919cffc5f5cb43b731a
+;; Package-Version: 20230525.456
+;; Package-Commit: c572c1a2f63fc8e05b8ff8ef4bc8956ff89edff9
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "28.1") (uuidgen "1.2") (deferred "0.5.1") (s "1.12.0") (dash "2.19.1") (ht "0.9"))
 ;; URL: https://github.com/tyler-dodge/org-assistant
@@ -369,14 +369,18 @@ contained in MESSAGE."
   "Keymap for `org-assistant-mode' buffers.")
 
 (defconst org-assistant--begin-src-regexp
-  (rx line-start "#+BEGIN_SRC"
+  (rx line-start (* whitespace) "#+BEGIN_SRC"
       (+ whitespace)
       (or "assistant" "?"))
   "Regexp for finding #+BEGIN_SRC ? blocks.")
 
 (defconst org-assistant--end-src-regexp
-  (rx line-start "#+END_SRC")
+  (rx line-start (* whitespace) "#+END_SRC")
   "Regexp for finding #+END_SRC blocks.")
+
+(defconst org-assistant--results-regexp
+  (rx line-start (* whitespace) "#+RESULTS:")
+  "Regexp for finding #+RESULTS blocks.")
 
 (defconst org-assistant--begin-example-regexp
   (rx "#+BEGIN_EXAMPLE")
@@ -940,6 +944,30 @@ An image of the GNU mascot
                                         ((babel-output-empty-p) response)
                                         (t ""))))))))))))
 
+(defun org-assistant-yank-block ()
+  "Add the current block at point to the kill ring."
+  (interactive)
+  (let ((block (org-assistant--block-contents)))
+    (unless block (user-error "Not in block"))
+    (kill-new block)))
+
+(defun org-assistant--block-contents ()
+  "Return the contents of the src block at location"
+  (when (org-assistant--in-src-block-p)
+    (save-excursion
+      (end-of-line)
+      (unless (re-search-backward org-assistant--begin-src-regexp nil t)
+        (user-error "Not at src block"))
+      (forward-line 1)
+      (let ((start-pt (point)))
+        (or (-some--> (--first (overlay-get it 'stream-id) (overlays-in start-pt start-pt))
+              (overlay-get it 'before-string))
+            (progn
+              (when (re-search-forward org-assistant--end-src-regexp nil t)
+                (forward-line -1))
+              (end-of-line)
+              (buffer-substring-no-properties start-pt (point))))))))
+
 ;;;###autoload
 (defun org-babel-execute:? (&rest args)
   "See `org-babel-execute:assistant'.
@@ -1290,7 +1318,7 @@ It will not cancel a block that is streaming at point."
   (save-match-data
     (save-excursion
       (forward-line 0)
-      (re-search-forward (rx line-start "#+END_SRC") nil t)
+      (re-search-forward org-assistant--end-src-regexp nil t)
       (cond
        ((save-excursion
           (-some-->
@@ -1300,7 +1328,7 @@ It will not cancel a block that is streaming at point."
        (t (let ((end (save-excursion
                        (forward-line 4)
                        (point))))
-            (when (re-search-forward (rx line-start "#+RESULTS:") end t)
+            (when (re-search-forward org-assistant--results-regexp end t)
               (goto-char (match-beginning 0))
               (forward-line 1)
               (cl-flet ((uuid-at-point ()

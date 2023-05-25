@@ -4,8 +4,8 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230524.654
-;; Package-Commit: 0118df8b2017c620608eae5226b9212977266d91
+;; Package-Version: 20230524.2217
+;; Package-Commit: f565873184f55a835e7d8626b3842ecc4b9d4226
 ;; Version: 0.25.1
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -494,7 +494,7 @@ NO-ANNOUNCEMENT skips announcing response when in background."
                              (setq shell-maker--busy partial)
                              (when on-output
                                (funcall on-output
-                                        input-string response nil partial)))
+                                        input-string response nil nil)))
                          (shell-maker--write-reply (concat prefix-newline response suffix-newline))
                          (unless no-announcement
                            (shell-maker--announce-response buffer))
