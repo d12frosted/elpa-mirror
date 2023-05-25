@@ -5,8 +5,8 @@
 ;; Author: Susam Pal <susam@susam.net>
 ;; Maintainer: Susam Pal <susam@susam.net>
 ;; Version: 0.4.0.pre4
-;; Package-Version: 20230524.1705
-;; Package-Commit: 61d33d6e5a54064ba7c33c131c67edb625cd7e49
+;; Package-Version: 20230524.2244
+;; Package-Commit: 60f696842940ee7a57d003f7b740a88ed1dd5d14
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, abbrev
 ;; URL: https://github.com/susam/devil
@@ -213,7 +213,7 @@ or an undefined key sequence.  If the result is a valid key
 sequence for a special key command or an Emacs command, then the
 command is executed.  Otherwise, this function calls itself
 recursively to read yet another key from the user."
-  (setq key (vconcat key (vector (read-key (devil--make-prompt key)))))
+  (setq key (vconcat key (vector (read-event (devil--make-prompt key)))))
   (unless (devil--run-command key)
     (devil--read-key key)))
 

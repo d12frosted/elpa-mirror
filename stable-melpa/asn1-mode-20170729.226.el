@@ -2,6 +2,8 @@
 
 ;; Filename: asn1-mode.el
 ;; Package-Requires: ((emacs "24.3") (s "1.10.0"))
+;; Package-Version: 20170729.226
+;; Package-Commit: d5d4a8259daf708411699bcea85d322f18beb972
 ;; Description: ASN.1/GDMO Editing Mode
 ;; Author: Taichi Kawabata <kawabata.taichi_at_gmail.com>
 ;; Created: 2013-11-22
