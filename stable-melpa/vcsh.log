@@ -3,8 +3,9 @@ Fetcher: git
 Source:  https://git.smrk.net/vcsh.el
 
 Updating /mnt/store/melpa/working/vcsh/
-Checking out b9c0109a8c77446980de668785e6af1e46bdcdcd
-Built vcsh in 6.783s, finished at 2023-05-25T09:55:28+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.4K May 25 09:55 packages/vcsh-20230402.1229.el
-4.0K -rw-r--r-- 1 root root  393 May 25 09:55 packages/vcsh-20230402.1229.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.smrk.net/vcsh.el/': Failed to connect to git.smrk.net port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

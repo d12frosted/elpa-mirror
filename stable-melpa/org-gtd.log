@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/Trevoke/org-gtd.el.git
 
 Updating /mnt/store/melpa/working/org-gtd/
-Checking out d3f3ce10097edc610c258ce7ca44029c2d7a949d
+Checking out 59aa2203de052138f104e82f94f494e75ed40428
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-gtd/
-  to /tmp/org-gtd7GQ0vd/org-gtd-20230524.1758
+  to /tmp/org-gtdbGtn20/org-gtd-20230525.1335
     org-gtd-agenda.el -> org-gtd-agenda.el
     org-gtd-archive.el -> org-gtd-archive.el
     org-gtd-areas-of-focus.el -> org-gtd-areas-of-focus.el
@@ -39,40 +39,42 @@ Copying files (->) and directories (=>)
     dir -> dir
     org-gtd.info -> org-gtd.info
   ! doc/org-gtd.texi -> org-gtd.texi
-Created org-gtd-20230524.1758.tar containing:
-  org-gtd-20230524.1758/
-  org-gtd-20230524.1758/dir
-  org-gtd-20230524.1758/org-gtd-agenda.el
-  org-gtd-20230524.1758/org-gtd-archive.el
-  org-gtd-20230524.1758/org-gtd-areas-of-focus.el
-  org-gtd-20230524.1758/org-gtd-backward-compatibility.el
-  org-gtd-20230524.1758/org-gtd-calendar.el
-  org-gtd-20230524.1758/org-gtd-capture.el
-  org-gtd-20230524.1758/org-gtd-clarify.el
-  org-gtd-20230524.1758/org-gtd-core.el
-  org-gtd-20230524.1758/org-gtd-delegate.el
-  org-gtd-20230524.1758/org-gtd-files.el
-  org-gtd-20230524.1758/org-gtd-habit.el
-  org-gtd-20230524.1758/org-gtd-horizons.el
-  org-gtd-20230524.1758/org-gtd-id.el
-  org-gtd-20230524.1758/org-gtd-incubate.el
-  org-gtd-20230524.1758/org-gtd-knowledge.el
-  org-gtd-20230524.1758/org-gtd-mode.el
-  org-gtd-20230524.1758/org-gtd-oops.el
-  org-gtd-20230524.1758/org-gtd-organize.el
-  org-gtd-20230524.1758/org-gtd-pkg.el
-  org-gtd-20230524.1758/org-gtd-process.el
-  org-gtd-20230524.1758/org-gtd-projects.el
-  org-gtd-20230524.1758/org-gtd-quick-action.el
-  org-gtd-20230524.1758/org-gtd-refile.el
-  org-gtd-20230524.1758/org-gtd-review.el
-  org-gtd-20230524.1758/org-gtd-single-action.el
-  org-gtd-20230524.1758/org-gtd-skip.el
-  org-gtd-20230524.1758/org-gtd-trash.el
-  org-gtd-20230524.1758/org-gtd-upgrades.el
-  org-gtd-20230524.1758/org-gtd.el
-  org-gtd-20230524.1758/org-gtd.info
-Built org-gtd in 10.210s, finished at 2023-05-25T09:28:08+0000
+Created org-gtd-20230525.1335.tar containing:
+  org-gtd-20230525.1335/
+  org-gtd-20230525.1335/dir
+  org-gtd-20230525.1335/org-gtd-agenda.el
+  org-gtd-20230525.1335/org-gtd-archive.el
+  org-gtd-20230525.1335/org-gtd-areas-of-focus.el
+  org-gtd-20230525.1335/org-gtd-backward-compatibility.el
+  org-gtd-20230525.1335/org-gtd-calendar.el
+  org-gtd-20230525.1335/org-gtd-capture.el
+  org-gtd-20230525.1335/org-gtd-clarify.el
+  org-gtd-20230525.1335/org-gtd-core.el
+  org-gtd-20230525.1335/org-gtd-delegate.el
+  org-gtd-20230525.1335/org-gtd-files.el
+  org-gtd-20230525.1335/org-gtd-habit.el
+  org-gtd-20230525.1335/org-gtd-horizons.el
+  org-gtd-20230525.1335/org-gtd-id.el
+  org-gtd-20230525.1335/org-gtd-incubate.el
+  org-gtd-20230525.1335/org-gtd-knowledge.el
+  org-gtd-20230525.1335/org-gtd-mode.el
+  org-gtd-20230525.1335/org-gtd-oops.el
+  org-gtd-20230525.1335/org-gtd-organize.el
+  org-gtd-20230525.1335/org-gtd-pkg.el
+  org-gtd-20230525.1335/org-gtd-process.el
+  org-gtd-20230525.1335/org-gtd-projects.el
+  org-gtd-20230525.1335/org-gtd-quick-action.el
+  org-gtd-20230525.1335/org-gtd-refile.el
+  org-gtd-20230525.1335/org-gtd-review.el
+  org-gtd-20230525.1335/org-gtd-single-action.el
+  org-gtd-20230525.1335/org-gtd-skip.el
+  org-gtd-20230525.1335/org-gtd-trash.el
+  org-gtd-20230525.1335/org-gtd-upgrades.el
+  org-gtd-20230525.1335/org-gtd.el
+  org-gtd-20230525.1335/org-gtd.info
+Built org-gtd in 7.264s, finished at 2023-05-25T17:30:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  466 May 25 09:28 packages/org-gtd-20230524.1758.entry
-212K -rw-r--r-- 1 root root 210K May 25 09:28 packages/org-gtd-20230524.1758.tar
+4.0K -rw-r--r-- 1 root root  466 May 25 13:27 packages/org-gtd-20230524.1758.entry
+212K -rw-r--r-- 1 root root 210K May 25 13:27 packages/org-gtd-20230524.1758.tar
+4.0K -rw-r--r-- 1 root root  466 May 25 17:30 packages/org-gtd-20230525.1335.entry
+212K -rw-r--r-- 1 root root 210K May 25 17:30 packages/org-gtd-20230525.1335.tar
