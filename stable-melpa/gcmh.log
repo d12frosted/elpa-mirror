@@ -3,9 +3,8 @@ Fetcher: gitlab
 Source:  https://gitlab.com/koral/gcmh.git
 
 Updating /mnt/store/melpa/working/gcmh/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://gitlab.com/koral/gcmh.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out 0089f9c3a6d4e9a310d0791cf6fa8f35642ecfd9
+Built gcmh in 5.437s, finished at 2023-05-26T17:05:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K May 26 17:05 packages/gcmh-20201116.2251.el
+4.0K -rw-r--r-- 1 root root  363 May 26 17:05 packages/gcmh-20201116.2251.entry
