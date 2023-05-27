@@ -59,6 +59,7 @@ Editing Prolog Code
 .. Context Menu
 .. Renaming Variables
 .. Numbered Variables
+.. Macro Expansion
 Prolog Help
 The Prolog Top-Level
 .. Multiple Top-Levels
@@ -1996,6 +1997,37 @@ Numbered Variables
   After invoking either `C-c C--' or `C-c C-+', you can continue to
   decrement or increment the same set of numbered variables by repeating
   with `-' and `+'.
+
+
+[Context Menu] See section Context Menu
+
+
+Macro Expansion
+───────────────
+
+  Recent versions of SWI-Prolog include a pre-processing mechanism
+  called /Prolog macros/, implemented in `library(macros)'.  It provides
+  a convenient way for computing terms at compile time and using them in
+  code.
+
+  Macros are defined using special rules with `#define(Macro,
+  Replacement)' head terms.  Then, when SWI-Prolog reads a term of the
+  form `#(Macro)' during compilation, it invokes the macro replacement
+  rule and uses the expanded term instead.
+
+  Sweep can replace macro invocations with their expansions.  To expand
+  a macro in your source code, use the following command:
+
+  Command: sweeprolog-expand-macro-at-point
+        Replace the Prolog macro invocation starting at point with its
+        expansion.
+
+  You can call this command with point on the `#' macro indicator to
+  expand the macro inline.  To undo the expansion, use `C-/' (`undo').
+
+  With Context Menu mode enabled, you can also expand macros by
+  right-clicking on the `#' and selecting `Expand Macro' from the
+  context menu.  See also [Context Menu].
 
 
 [Context Menu] See section Context Menu
