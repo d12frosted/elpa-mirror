@@ -3,9 +3,30 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~ushin/hyperdrive.el/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out d9e60e51ea682f0dd7da358495b200c516dab4a0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hyperdrive/
+  to /tmp/hyperdrivesMsoHt/hyperdrive-20230526.750
+    build-readme.el -> build-readme.el
+    hyperdrive-dir.el -> hyperdrive-dir.el
+    hyperdrive-handlers.el -> hyperdrive-handlers.el
+    hyperdrive-lib.el -> hyperdrive-lib.el
+    hyperdrive-org.el -> hyperdrive-org.el
+    hyperdrive.el -> hyperdrive.el
+  ! doc/hyperdrive-manual.texi -> hyperdrive-manual.texi
+Generating /tmp/hyperdrivesMsoHt/hyperdrive-20230526.750/hyperdrive-manual.info
+Created hyperdrive-20230526.750.tar containing:
+  hyperdrive-20230526.750/
+  hyperdrive-20230526.750/build-readme.el
+  hyperdrive-20230526.750/dir
+  hyperdrive-20230526.750/hyperdrive-dir.el
+  hyperdrive-20230526.750/hyperdrive-handlers.el
+  hyperdrive-20230526.750/hyperdrive-lib.el
+  hyperdrive-20230526.750/hyperdrive-manual.info
+  hyperdrive-20230526.750/hyperdrive-org.el
+  hyperdrive-20230526.750/hyperdrive-pkg.el
+  hyperdrive-20230526.750/hyperdrive.el
+Built hyperdrive in 8.594s, finished at 2023-05-27T09:13:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  518 May 27 09:13 packages/hyperdrive-20230526.750.entry
+152K -rw-r--r-- 1 root root 150K May 27 09:13 packages/hyperdrive-20230526.750.tar

@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~pkal/clang-capf
 
 Updating /mnt/store/melpa/working/clang-capf/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~pkal/clang-capf/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out 5e4dfba90ce86bbc7ee61805edfca04fff93c291
+Built clang-capf in 5.605s, finished at 2023-05-27T08:39:39+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K May 27 08:39 packages/clang-capf-20221030.1830.el
+4.0K -rw-r--r-- 1 root root  509 May 27 08:39 packages/clang-capf-20221030.1830.entry

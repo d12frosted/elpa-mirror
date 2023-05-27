@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~gitmux/slow-keys
 
 Updating /mnt/store/melpa/working/slow-keys/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~gitmux/slow-keys/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out b951ae4bdcea56ced03f227b82b28c3d91d15e61
+Built slow-keys in 4.486s, finished at 2023-05-27T09:51:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K May 27 09:51 packages/slow-keys-20220807.1425.el
+4.0K -rw-r--r-- 1 root root  481 May 27 09:51 packages/slow-keys-20220807.1425.entry

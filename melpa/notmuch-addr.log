@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/notmuch-addr
 
 Updating /mnt/store/melpa/working/notmuch-addr/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~tarsius/notmuch-addr/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out 89ced49cf3fb4d62bd4fea8bf9bd53ec8e4c7176
+Built notmuch-addr in 4.708s, finished at 2023-05-27T09:30:46+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K May 27 09:30 packages/notmuch-addr-20230511.2057.el
+4.0K -rw-r--r-- 1 root root  483 May 27 09:30 packages/notmuch-addr-20230511.2057.entry

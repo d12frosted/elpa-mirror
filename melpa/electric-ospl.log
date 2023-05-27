@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/electric-ospl-mode
 
 Updating /mnt/store/melpa/working/electric-ospl/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~swflint/electric-ospl-mode/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out 55fa59592d0d3e929bd8646ea691a592965a167a
+Built electric-ospl in 4.710s, finished at 2023-05-27T08:51:44+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K May 27 08:51 packages/electric-ospl-20230325.1518.el
+4.0K -rw-r--r-- 1 root root 442 May 27 08:51 packages/electric-ospl-20230325.1518.entry

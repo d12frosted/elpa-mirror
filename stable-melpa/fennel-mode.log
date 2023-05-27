@@ -3,9 +3,24 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~technomancy/fennel-mode
 
 Updating /mnt/store/melpa/working/fennel-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~technomancy/fennel-mode/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out 94c1af291f44be00f08ff2cb0cc39e6f3edf8076
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fennel-mode/
+  to /tmp/fennel-modeGmdDoR/fennel-mode-20230423.1916
+    antifennel.el -> antifennel.el
+    fennel-mode.el -> fennel-mode.el
+    fennel-proto-repl.el -> fennel-proto-repl.el
+    fennel-scratch.el -> fennel-scratch.el
+    ob-fennel.el -> ob-fennel.el
+Created fennel-mode-20230423.1916.tar containing:
+  fennel-mode-20230423.1916/
+  fennel-mode-20230423.1916/antifennel.el
+  fennel-mode-20230423.1916/fennel-mode-pkg.el
+  fennel-mode-20230423.1916/fennel-mode.el
+  fennel-mode-20230423.1916/fennel-proto-repl.el
+  fennel-mode-20230423.1916/fennel-scratch.el
+  fennel-mode-20230423.1916/ob-fennel.el
+Built fennel-mode in 4.562s, finished at 2023-05-27T08:58:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  405 May 27 08:58 packages/fennel-mode-20230423.1916.entry
+132K -rw-r--r-- 1 root root 130K May 27 08:58 packages/fennel-mode-20230423.1916.tar

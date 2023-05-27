@@ -3,9 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/buffer-sets
 
 Updating /mnt/store/melpa/working/buffer-sets/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~swflint/buffer-sets/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out 951e894ef96d533324f7f24c2a0def45ae89d558
+Warning: buffer-sets :files spec is equivalent to the default
+Built buffer-sets in 5.340s, finished at 2023-05-27T08:37:15+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K May 27 08:37 packages/buffer-sets-20230319.1822.el
+4.0K -rw-r--r-- 1 root root 483 May 27 08:37 packages/buffer-sets-20230319.1822.entry

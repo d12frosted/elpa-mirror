@@ -9,8 +9,8 @@
 ;;         Alan Schmitt <alan.schmitt@polytechnique.org>
 ;;         Mike McLean <mike.mclean@pobox.com>
 ;; Version: 1.9
-;; Package-Version: 20230222.2228
-;; Package-Commit: 16734797b56b5bd1f49929b59f7cd8fcdcd268e0
+;; Package-Version: 20230228.1127
+;; Package-Commit: 3a30a937e135a6637a5126e2ac096b6c90584045
 ;; Keywords: files, wp, url, org
 ;; Package-Requires: ((emacs "27.1"))
 ;; Maintainer: Aimé Bertrand <aime.bertrand@macowners.club>
@@ -240,10 +240,14 @@ Do not escape spaces as the AppleScript call will quote this string."
       (concat "\"" (org-trim return) "\""))))
 
 ;;;###autoload
-(defun org-mac-link-get-link ()
+(defun org-mac-link-get-link (&optional beg end)
   "Prompt for an application to grab a link from.
-When done, go grab the link, and insert it at point."
-  (interactive)
+When done, go grab the link, and insert it at point. If a region
+is active, that will be the link's description."
+  (interactive
+   (if (use-region-p)
+       (list (region-beginning) (region-end))
+       '()))
   (let* ((descriptors
 	  `(("F" "inder" org-mac-link-finder-insert-selected ,org-mac-link-finder-app-p)
 	    ("m" "ail" org-mac-link-mail-insert-selected ,org-mac-link-mail-app-p)
@@ -281,7 +285,19 @@ When done, go grab the link, and insert it at point."
                   (active (elt descriptor 3))
                   (grab-function (elt descriptor 2)))
               (when (and active (eq input key))
-                (call-interactively grab-function))))
+                (if (and beg end)
+                    (let ((new-desc (buffer-substring beg end))
+                          end-desc)
+                      (delete-region beg end)
+                      (call-interactively grab-function)
+                      (save-excursion
+                        (backward-char 2)
+                        (setq end-desc (point))
+                        (search-backward "][")
+                        (forward-char 2)
+                        (delete-region (point) end-desc)
+                        (insert new-desc)))
+                (call-interactively grab-function)))))
           descriptors)))
 
 (defun org-mac-link-paste-applescript-links (as-link-list)

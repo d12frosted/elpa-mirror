@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tomterl/fullframe
 
 Updating /mnt/store/melpa/working/fullframe/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~tomterl/fullframe/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out 886b831c001b44ec95aec4ff36e8bc1b3003c786
+Built fullframe in 4.381s, finished at 2023-05-27T09:03:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K May 27 09:03 packages/fullframe-20210226.1057.el
+4.0K -rw-r--r-- 1 root root  397 May 27 09:03 packages/fullframe-20210226.1057.entry

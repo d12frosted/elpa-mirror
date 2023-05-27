@@ -3,9 +3,24 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ngraves/ibrowse.el
 
 Updating /mnt/store/melpa/working/ibrowse/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~ngraves/ibrowse.el/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out b42685528d7bb2ca968fbf536d8745838e633828
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ibrowse/
+  to /tmp/ibrowsekZiy9H/ibrowse-20230123.737
+    ibrowse-bookmark.el -> ibrowse-bookmark.el
+    ibrowse-core.el -> ibrowse-core.el
+    ibrowse-history.el -> ibrowse-history.el
+    ibrowse-tab.el -> ibrowse-tab.el
+    ibrowse.el -> ibrowse.el
+Created ibrowse-20230123.737.tar containing:
+  ibrowse-20230123.737/
+  ibrowse-20230123.737/ibrowse-bookmark.el
+  ibrowse-20230123.737/ibrowse-core.el
+  ibrowse-20230123.737/ibrowse-history.el
+  ibrowse-20230123.737/ibrowse-pkg.el
+  ibrowse-20230123.737/ibrowse-tab.el
+  ibrowse-20230123.737/ibrowse.el
+Built ibrowse in 3.554s, finished at 2023-05-27T09:13:32+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 437 May 27 09:13 packages/ibrowse-20230123.737.entry
+ 40K -rw-r--r-- 1 root root 40K May 27 09:13 packages/ibrowse-20230123.737.tar

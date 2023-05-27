@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~duncan-bayne/org-present-remote
 
 Updating /mnt/store/melpa/working/org-present-remote/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~duncan-bayne/org-present-remote/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out 95ea38b985b5aaa49b8039010bbe5fda5188a197
+Built org-present-remote in 6.357s, finished at 2023-05-27T09:35:04+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K May 27 09:35 packages/org-present-remote-20221107.1139.el
+4.0K -rw-r--r-- 1 root root  688 May 27 09:35 packages/org-present-remote-20221107.1139.entry

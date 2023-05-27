@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jakob/myrddin-mode
 
 Updating /mnt/store/melpa/working/myrddin-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~jakob/myrddin-mode/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out 51c0a2cb9dfc9526cd47e71313f5a745c99cadcc
+Built myrddin-mode in 9.337s, finished at 2023-05-27T09:28:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.2K May 27 09:28 packages/myrddin-mode-20191225.2120.el
+4.0K -rw-r--r-- 1 root root  494 May 27 09:28 packages/myrddin-mode-20191225.2120.entry

@@ -3,9 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~yoctocell/peertube
 
 Updating /mnt/store/melpa/working/peertube/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.sr.ht/~yoctocell/peertube/': server certificate verification failed. CAfile: none CRLfile: none
-
-Command exited with non-zero exit-code: 128
+Checking out bb529db154596e86327829edbd7144b67cf72255
+Built peertube in 4.784s, finished at 2023-05-27T09:39:41+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K May 27 09:39 packages/peertube-20210101.1007.el
+4.0K -rw-r--r-- 1 root root 482 May 27 09:39 packages/peertube-20210101.1007.entry
