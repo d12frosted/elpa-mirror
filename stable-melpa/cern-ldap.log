@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~nbarrientos/cern-ldap.el
 
 Updating /mnt/store/melpa/working/cern-ldap/
-Checking out 7a2dfa4c5ec9d05ec0c4e90caedae8508a96196c
-Built cern-ldap in 8.204s, finished at 2023-05-26T16:40:21+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K May 26 16:40 packages/cern-ldap-20230418.1249.el
-4.0K -rw-r--r-- 1 root root 507 May 26 16:40 packages/cern-ldap-20230418.1249.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~nbarrientos/cern-ldap.el/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

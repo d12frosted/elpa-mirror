@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~minshall/org-grep
 
 Updating /mnt/store/melpa/working/org-grep/
-Checking out 428cfc2e2c35867272d32f82cadaea46772e3609
-Built org-grep in 5.411s, finished at 2023-05-26T17:37:09+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 31K May 26 17:37 packages/org-grep-20230424.2005.el
-4.0K -rw-r--r-- 1 root root 420 May 26 17:37 packages/org-grep-20230424.2005.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~minshall/org-grep/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

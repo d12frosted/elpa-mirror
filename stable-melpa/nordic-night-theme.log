@@ -3,8 +3,9 @@ Fetcher: git
 Source:  https://git.sr.ht/~ashton314/nordic-night
 
 Updating /mnt/store/melpa/working/nordic-night-theme/
-Checking out 9d1c400434a20af0cfceee8b8e011a05483fdc24
-Built nordic-night-theme in 4.750s, finished at 2023-05-26T17:32:56+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 48K May 26 17:32 packages/nordic-night-theme-20230518.2259.el
-4.0K -rw-r--r-- 1 root root 487 May 26 17:32 packages/nordic-night-theme-20230518.2259.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~ashton314/nordic-night/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

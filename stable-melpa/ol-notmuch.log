@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/ol-notmuch
 
 Updating /mnt/store/melpa/working/ol-notmuch/
-Checking out 781c3518a537da2a8b5e8a4424f9441df463a147
-Built ol-notmuch in 5.029s, finished at 2023-05-26T17:35:35+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.9K May 26 17:35 packages/ol-notmuch-20230511.2048.el
-4.0K -rw-r--r-- 1 root root  560 May 26 17:35 packages/ol-notmuch-20230511.2048.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~tarsius/ol-notmuch/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

@@ -4,8 +4,8 @@
 
 ;; Author: Çağan Korkmaz <xcatalystt@gmail.com>
 ;; URL: https://github.com/xcatalyst/elune-theme
-;; Package-Version: 20230520.1525
-;; Package-Commit: 39f7763f062d1be1574f70bfda79c647f39bf74b
+;; Package-Version: 20230526.2238
+;; Package-Commit: e0f3f4def066e679cfdde3bbade4c83dcfc38cd8
 ;; Version: 0.01
 
 ;; This file is free software; you can redistribute it and/or modify
@@ -70,8 +70,8 @@
    `(font-lock-constant-face ((t (:foreground ,elune-fg ))))
    `(font-lock-variable-name-face ((t (:foreground ,elune-fg))))
    `(highlight ((t (:background ,elune-bg-3 :foreground nil))))
-   `(highlight-current-line-face ((t ,(list :background elune-bg-3
-					    :foreground nil))))
+   `(highlight-current-line-face ((t ,(list :background elune-bg-3 :foreground nil))))
+   `(font-lock-preprocessor-face ((t (:foreground ,elune-keyword :bold t))))
    `(minibuffer-prompt ((t (:foreground ,elune-fg-3))))
 
    `(show-paren-match ((t (:background ,elune-bg-3))))

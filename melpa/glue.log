@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~hajovonta/glue
 
 Updating /mnt/store/melpa/working/glue/
-Checking out dcdf8a69db87acea4fa61d4b4b9b1265c7e025db
-Built glue in 5.047s, finished at 2023-05-26T17:08:06+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K May 26 17:08 packages/glue-20230112.2159.el
-4.0K -rw-r--r-- 1 root root 456 May 26 17:08 packages/glue-20230112.2159.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~hajovonta/glue/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

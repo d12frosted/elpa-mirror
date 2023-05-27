@@ -3,28 +3,30 @@ Fetcher: github
 Source:  https://github.com/editorconfig/editorconfig-emacs.git
 
 Updating /mnt/store/melpa/working/editorconfig/
-Checking out 42613f4ee0726ee74b41f30a5998d44169907198
+Checking out d4111f65c68f18f0dfb3072ee0d9b1d4cee80b52
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/editorconfig/
-  to /tmp/editorconfigDFtKH5/editorconfig-20230520.53
+  to /tmp/editorconfigzWkNm2/editorconfig-20230526.2314
     editorconfig-conf-mode.el -> editorconfig-conf-mode.el
     editorconfig-core-handle.el -> editorconfig-core-handle.el
     editorconfig-core.el -> editorconfig-core.el
     editorconfig-fnmatch.el -> editorconfig-fnmatch.el
     editorconfig.el -> editorconfig.el
   ! doc/editorconfig.texi -> editorconfig.texi
-Generating /tmp/editorconfigDFtKH5/editorconfig-20230520.53/editorconfig.info
-Created editorconfig-20230520.53.tar containing:
-  editorconfig-20230520.53/
-  editorconfig-20230520.53/dir
-  editorconfig-20230520.53/editorconfig-conf-mode.el
-  editorconfig-20230520.53/editorconfig-core-handle.el
-  editorconfig-20230520.53/editorconfig-core.el
-  editorconfig-20230520.53/editorconfig-fnmatch.el
-  editorconfig-20230520.53/editorconfig-pkg.el
-  editorconfig-20230520.53/editorconfig.el
-  editorconfig-20230520.53/editorconfig.info
-Built editorconfig in 9.484s, finished at 2023-05-26T16:52:09+0000
+Generating /tmp/editorconfigzWkNm2/editorconfig-20230526.2314/editorconfig.info
+Created editorconfig-20230526.2314.tar containing:
+  editorconfig-20230526.2314/
+  editorconfig-20230526.2314/dir
+  editorconfig-20230526.2314/editorconfig-conf-mode.el
+  editorconfig-20230526.2314/editorconfig-core-handle.el
+  editorconfig-20230526.2314/editorconfig-core.el
+  editorconfig-20230526.2314/editorconfig-fnmatch.el
+  editorconfig-20230526.2314/editorconfig-pkg.el
+  editorconfig-20230526.2314/editorconfig.el
+  editorconfig-20230526.2314/editorconfig.info
+Built editorconfig in 8.360s, finished at 2023-05-27T00:53:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  526 May 26 16:52 packages/editorconfig-20230520.53.entry
-100K -rw-r--r-- 1 root root 100K May 26 16:52 packages/editorconfig-20230520.53.tar
+4.0K -rw-r--r-- 1 root root  526 May 26 20:53 packages/editorconfig-20230520.53.entry
+100K -rw-r--r-- 1 root root 100K May 26 20:53 packages/editorconfig-20230520.53.tar
+4.0K -rw-r--r-- 1 root root  528 May 27 00:53 packages/editorconfig-20230526.2314.entry
+100K -rw-r--r-- 1 root root 100K May 27 00:53 packages/editorconfig-20230526.2314.tar

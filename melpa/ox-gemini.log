@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~abrahms/ox-gemini
 
 Updating /mnt/store/melpa/working/ox-gemini/
-Checking out 799eb6aa0ee9ead7642836962d28e650eccd0ba3
-Built ox-gemini in 5.316s, finished at 2023-05-26T17:40:06+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K May 26 17:40 packages/ox-gemini-20230517.1559.el
-4.0K -rw-r--r-- 1 root root 464 May 26 17:40 packages/ox-gemini-20230517.1559.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~abrahms/ox-gemini/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

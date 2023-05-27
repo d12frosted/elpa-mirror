@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jagrg/org-emms
 
 Updating /mnt/store/melpa/working/org-emms/
-Checking out 3a4073565e88d6b17348a533a9ebd88941fb3da8
-Built org-emms in 4.740s, finished at 2023-05-26T17:37:01+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K May 26 17:37 packages/org-emms-20230515.1838.el
-4.0K -rw-r--r-- 1 root root  508 May 26 17:37 packages/org-emms-20230515.1838.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~jagrg/org-emms/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

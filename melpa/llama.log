@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/llama
 
 Updating /mnt/store/melpa/working/llama/
-Checking out f4a59f215438243fbbdc103a6db11fb2e99cff99
-Built llama in 5.094s, finished at 2023-05-26T17:24:45+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K May 26 17:24 packages/llama-20230425.1928.el
-4.0K -rw-r--r-- 1 root root  227 May 26 17:24 packages/llama-20230425.1928.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~tarsius/llama/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

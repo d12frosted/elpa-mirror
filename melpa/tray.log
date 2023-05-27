@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/tray
 
 Updating /mnt/store/melpa/working/tray/
-Checking out d620957377e451e8bf7c2eb7a2509a75f1ee160f
-Built tray in 8.766s, finished at 2023-05-26T18:02:07+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K May 26 18:02 packages/tray-20230511.2102.el
-4.0K -rw-r--r-- 1 root root  448 May 26 18:02 packages/tray-20230511.2102.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~tarsius/tray/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

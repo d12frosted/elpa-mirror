@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018 Yuan Fu
 
 ;; Version: 1.11.1
-;; Package-Version: 20230517.2121
-;; Package-Commit: ee7c9788879266979e9b9e4a039260ad06fa3ce9
+;; Package-Version: 20230526.2100
+;; Package-Commit: e58ecc46996a9c0271e2c3e68c921b6c7cb10026
 
 ;; Author: Yuan Fu <casouri@gmail.com>
 ;; URL: https://github.com/casouri/eldoc-box
@@ -322,9 +322,13 @@ STR has to be a proper documentation, not empty string, not nil, etc."
   "Return the side of the selected window.
 Symbol ‘left’ if the selected window is on the left, ‘right’ if
 on the right. Return ‘left’ if there is only one window."
-  (let ((left-window (if tab-bar-mode
-                         (window-at-x-y 5 (+ 5 (tab-bar-height nil t)))
-                       (window-at 0 0))))
+  ;; Get the window at point (x, y), where x = 0, y = the y coordinate
+  ;; of point. If this window is the selected window, the selected
+  ;; window is on the left, otherwise the selected window is on the
+  ;; right.
+  (let* ((y (cdr (posn-x-y (posn-at-point))))
+         (top (nth 1 (window-absolute-pixel-edges (selected-window))))
+         (left-window (window-at-x-y 0 (+ y top))))
     (if (eq left-window (selected-window))
         'left
       'right)))

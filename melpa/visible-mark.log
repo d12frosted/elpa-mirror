@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~iank/visible-mark
 
 Updating /mnt/store/melpa/working/visible-mark/
-Checking out c1852e13b6b61982738b56977a452ec9026faf1b
-Built visible-mark in 4.613s, finished at 2023-05-26T18:05:20+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.5K May 26 18:05 packages/visible-mark-20150624.450.el
-4.0K -rw-r--r-- 1 root root  410 May 26 18:05 packages/visible-mark-20150624.450.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~iank/visible-mark/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

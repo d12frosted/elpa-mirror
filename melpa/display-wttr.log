@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~josegpt/display-wttr
 
 Updating /mnt/store/melpa/working/display-wttr/
-Checking out 7062953d034e27c297d58748cf74dad552aa2873
-Built display-wttr in 5.225s, finished at 2023-05-26T16:49:54+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.5K May 26 16:49 packages/display-wttr-20221102.1426.el
-4.0K -rw-r--r-- 1 root root  441 May 26 16:49 packages/display-wttr-20221102.1426.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~josegpt/display-wttr/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128

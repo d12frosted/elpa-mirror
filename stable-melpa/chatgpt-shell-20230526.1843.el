@@ -4,8 +4,8 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230525.708
-;; Package-Commit: 2379512f4635587c35fdd7cd9bd766c4f41893cd
+;; Package-Version: 20230526.1843
+;; Package-Commit: 3e8aae39fee84b636233e4364c5609735dc43bd8
 ;; Version: 0.39.1
 ;; Package-Requires: ((emacs "27.1") (shell-maker "0.25.1"))
 
@@ -66,6 +66,45 @@
     "Explain what the following code does:")
   "List of default prompts to choose from."
   :type '(repeat string)
+  :group 'chatgpt-shell)
+
+(defcustom chatgpt-shell-prompt-header-describe-code
+  "What does the following code do?"
+  "Prompt header of `describe-code`"
+  :type 'string
+  :group 'chatgpt-shell)
+
+(defcustom chatgpt-shell-prompt-header-refactor-code
+  "Please help me refactor the following code.
+   Please reply with the refactoring explanation in English, refactored code, and diff between two versions.
+   Please ignore the comments and strings in the code during the refactoring.
+   If the code remains unchanged after refactoring, please say 'No need to refactor'."
+  "Prompt header of `refactor-code`"
+  :type 'string
+  :group 'chatgpt-shell)
+
+(defcustom chatgpt-shell-prompt-header-generate-unit-test
+  "Please help me generate unit-test following function:"
+  "Prompt header of `generate-unit-test`"
+  :type 'string
+  :group 'chatgpt-shell)
+
+(defcustom chatgpt-shell-prompt-header-proofread-region
+  "Please help me proofread the following text with English:"
+  "Promt header of `proofread-region`"
+  :type 'string
+  :group 'chatgpt-shell)
+
+(defcustom chatgpt-shell-prompt-header-whats-wrong-with-last-command
+  "What's wrong with this command?"
+  "Prompt header of `whats-wrong-with-last-command`"
+  :type 'string
+  :group 'chatgpt-shell)
+
+(defcustom chatgpt-shell-prompt-header-eshell-summarize-last-command-output
+  "Summarize the output of the following command:"
+  "Prompt header of `eshell-summarize-last-command-output`"
+  :type 'string
   :group 'chatgpt-shell)
 
 (defcustom chatgpt-shell-prompt-query-response-style 'other-buffer
@@ -871,7 +910,8 @@ If region is active, append to prompt."
     (user-error "No region active"))
   (let ((overlay-blocks (derived-mode-p 'prog-mode)))
     (chatgpt-shell-send-to-buffer
-     (concat "What does the following code do?\n\n"
+     (concat chatgpt-shell-prompt-header-describe-code
+             "\n\n"
              (if overlay-blocks
                  (format "``` %s\n"
                          (string-remove-suffix "-mode" (format "%s" major-mode)))
@@ -898,26 +938,25 @@ If region is active, append to prompt."
 (defun chatgpt-shell-refactor-code ()
   "Refactor code from region using ChatGPT."
   (interactive)
-  (chatgpt-shell-send-region-with-header "Please help me refactor the following code. Please reply with the refactoring explanation in English, refactored code, and diff between two versions. Please ignore the comments and strings in the code during the refactoring. If the code remains unchanged after refactoring, please say 'No need to refactor'."))
+  (chatgpt-shell-send-region-with-header chatgpt-shell-prompt-header-refactor-code))
 
 (defun chatgpt-shell-generate-unit-test ()
   "Generate unit-test for the code from region using ChatGPT."
   (interactive)
-  (chatgpt-shell-send-region-with-header
-   "Please help me generate unit-test following function:"))
+  (chatgpt-shell-send-region-with-header chatgpt-shell-prompt-header-generate-unit-test))
 
 (defun chatgpt-shell-proofread-region ()
   "Proofread English from region using ChatGPT."
   (interactive)
-  (chatgpt-shell-send-region-with-header
-   "Please help me proofread the following text with English:"))
+  (chatgpt-shell-send-region-with-header chatgpt-shell-prompt-header-proofread-region))
 
 (defun chatgpt-shell-eshell-whats-wrong-with-last-command ()
   "Ask ChatGPT what's wrong with the last eshell command."
   (interactive)
   (let ((chatgpt-shell-prompt-query-response-style 'other-buffer))
     (chatgpt-shell-send-to-buffer
-     (concat "What's wrong with this command?\n\n"
+     (concat chatgpt-shell-prompt-header-whats-wrong-with-last-command
+             "\n\n"
              (buffer-substring-no-properties eshell-last-input-start eshell-last-input-end)
              "\n\n"
              (buffer-substring-no-properties (eshell-beginning-of-output) (eshell-end-of-output))))))
@@ -927,7 +966,8 @@ If region is active, append to prompt."
   (interactive)
   (let ((chatgpt-shell-prompt-query-response-style 'other-buffer))
     (chatgpt-shell-send-to-buffer
-     (concat "Summarize the output of the following command: \n\n"
+     (concat chatgpt-shell-prompt-header-eshell-summarize-last-command-output
+             "\n\n"
              (buffer-substring-no-properties eshell-last-input-start eshell-last-input-end)
              "\n\n"
              (buffer-substring-no-properties (eshell-beginning-of-output) (eshell-end-of-output))))))

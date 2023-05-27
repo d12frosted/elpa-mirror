@@ -3,8 +3,9 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~trevdev/tangonov-theme
 
 Updating /mnt/store/melpa/working/tangonov-theme/
-Checking out bfeafe22d38877d4064670adec55ba1e8d09d830
-Built tangonov-theme in 4.590s, finished at 2023-05-26T17:59:34+0000
- ✓ Success:
- 44K -rw-r--r-- 1 root root 43K May 26 17:59 packages/tangonov-theme-20230425.1456.el
-4.0K -rw-r--r-- 1 root root 464 May 26 17:59 packages/tangonov-theme-20230425.1456.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.sr.ht/~trevdev/tangonov-theme/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command exited with non-zero exit-code: 128
