@@ -4,8 +4,8 @@
 
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/vscode-dark-plus-emacs-theme
-;; Package-Version: 20221121.1846
-;; Package-Commit: f33e1f92f6b34bbd7ecc81cb4c6d48f9cab393d9
+;; Package-Version: 20230527.2110
+;; Package-Commit: 0872229432258a94778c6d0dec11338b4cf2e9c7
 ;; Version: 0.0.0
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -152,7 +152,7 @@
                                                            `(:background ,bg1 :box (:color ,bg3 :line-width (0 . -1))))
                                                           ('none `(:background ,bg1))
                                                           ('default `(:background ,bg3))))))
-   `(fringe                                   ((,class (:background nil :foreground ,fg4))))
+   `(fringe                                   ((,class (:background unspecified :foreground ,fg4))))
    `(cursor                                   ((,class (:background ,fg1))))
    `(show-paren-match-face                    ((,class (:background ,warning))))
    `(show-paren-match                         ((t (:foreground ,fg3 :background ,bg4 :bold t))))
@@ -176,7 +176,7 @@
 
    `(mode-line                                ((,class (:bold nil :foreground ,fg4 :background ,mode-line-bg))))
    `(mode-line-inactive                       ((,class (:bold nil :foreground ,fg1 :background ,mode-line-bg-dark))))
-   `(mode-line-buffer-id                      ((,class (:bold nil :foreground ,accent :background nil))))
+   `(mode-line-buffer-id                      ((,class (:bold nil :foreground ,accent :background unspecified))))
    `(mode-line-highlight                      ((,class (:foreground ,keyword :box nil :weight normal))))
    `(mode-line-emphasis                       ((,class (:foreground ,fg1))))
 
@@ -280,7 +280,7 @@
    `(icompletep-determined                    ((,class :foreground ,builtin)))
 
    `(slime-repl-inputed-output-face           ((,class (:foreground ,type))))
-   `(trailing-whitespace                      ((,class :foreground nil :background ,warning)))
+   `(trailing-whitespace                      ((,class :foreground unspecified :background ,warning)))
    `(lazy-highlight                           ((,class (:background "#613214"))))
 
    `(undo-tree-visualizer-current-face        ((,class :foreground ,builtin)))
