@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230527.1145
-;; Package-Commit: 77bf9ba9b42ba70726be235af34b527e67a6be26
-;; Version: 0.39.1
+;; Package-Version: 20230528.1116
+;; Package-Commit: a06693e743297311c6c6ac81bb205560edb1bab7
+;; Version: 0.40.1
 ;; Package-Requires: ((emacs "27.1") (shell-maker "0.25.1"))
 
 ;; This package is free software; you can redistribute it and/or modify
@@ -335,7 +335,7 @@ Or nil if none."
                                 ;; Some items are of the form:
                                 ;;   Programing<<prompt>>The user is a programmer.
                                 (if-let ((parts (split-string choice "<<prompt>>"))
-                                         (prompt (when (length> parts 1)
+                                         (prompt (when (> (length parts) 1)
                                                    (cons (nth 0 parts)
                                                          (nth 1 parts)))))
                                     (equal item prompt)
@@ -351,7 +351,7 @@ Or nil if none."
   (interactive)
   (setq chatgpt-shell-model-version
         (completing-read "Model version: "
-                         (if (length> chatgpt-shell-model-versions 1)
+                         (if (> (length chatgpt-shell-model-versions) 1)
                              (seq-remove
                               (lambda (item)
                                 (string-equal item (chatgpt-shell-model-version)))
@@ -492,7 +492,7 @@ With NO-FOCUS, start the shell without focus."
             (shrink-system-prompt (prompt)
                                   (if (consp prompt)
                                       (car prompt)
-                                    (if (length> (string-trim prompt) 6)
+                                    (if (> (length (string-trim prompt)) 6)
                                         (format "%s..."
                                                 (substring (string-trim prompt) 0 15))
                                       (string-trim prompt)))))
