@@ -33,6 +33,9 @@ for flyspell is still valid.
 
 - Use `wucuo-current-font-face' to detect font face at point
 
+- Set `wucuo-font-faces-to-check' or `wucuo-personal-font-faces-to-check' to specify
+font faces to spell check
+
 - You can define a function in `wucuo-spell-check-buffer-predicate'.
   If the function returns t, the spell checking of current buffer will continue.
   If it returns nil, the spell checking is skipped.

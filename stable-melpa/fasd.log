@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/emacs-fasd.git
 
 Updating /mnt/store/melpa/working/fasd/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://framagit.org/steckerhalter/emacs-fasd.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out c1d92553f33ebb018135c698db1a6d7f86731a26
+Built fasd in 5.607s, finished at 2023-05-29T13:01:32+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K May 29 13:01 packages/fasd-20210104.738.el
+4.0K -rw-r--r-- 1 root root  383 May 29 13:01 packages/fasd-20210104.738.entry

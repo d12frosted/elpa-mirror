@@ -1,0 +1,15 @@
+(julia-repl .
+	    [(20230529 943)
+	     ((emacs
+	       (25 1))
+	      (s
+	       (1 12)))
+	     "A minor mode for a Julia REPL" single
+	     ((:commit . "9503ef7110732e444e686e815c5b2ae8228d274d")
+	      (:authors
+	       ("Tamas Papp" . "tkpapp@gmail.com"))
+	      (:maintainers
+	       ("Tamas Papp" . "tkpapp@gmail.com"))
+	      (:maintainer "Tamas Papp" . "tkpapp@gmail.com")
+	      (:keywords "languages")
+	      (:url . "https://github.com/tpapp/julia-repl"))])
