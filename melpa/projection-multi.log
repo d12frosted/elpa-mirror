@@ -3,26 +3,28 @@ Fetcher: github
 Source:  https://github.com/mohkale/projection.git
 
 Updating /mnt/store/melpa/working/projection-multi/
-Checking out 872e23bd1c117e0f273b54b9f276e5e281f293ba
+Checking out 917ac108a698056b819e31e7d06e8520150dac59
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projection-multi/
-  to /tmp/projection-multiQ38FJn/projection-multi-20230521.1111
+  to /tmp/projection-multiiK7Rir/projection-multi-20230529.1035
   ! src/projection-multi/projection-multi-cmake.el -> projection-multi-cmake.el
   ! src/projection-multi/projection-multi-ctest.el -> projection-multi-ctest.el
   ! src/projection-multi/projection-multi-make.el -> projection-multi-make.el
   ! src/projection-multi/projection-multi-poetry-poe.el -> projection-multi-poetry-poe.el
   ! src/projection-multi/projection-multi-tox.el -> projection-multi-tox.el
   ! src/projection-multi/projection-multi.el -> projection-multi.el
-Created projection-multi-20230521.1111.tar containing:
-  projection-multi-20230521.1111/
-  projection-multi-20230521.1111/projection-multi-cmake.el
-  projection-multi-20230521.1111/projection-multi-ctest.el
-  projection-multi-20230521.1111/projection-multi-make.el
-  projection-multi-20230521.1111/projection-multi-pkg.el
-  projection-multi-20230521.1111/projection-multi-poetry-poe.el
-  projection-multi-20230521.1111/projection-multi-tox.el
-  projection-multi-20230521.1111/projection-multi.el
-Built projection-multi in 4.418s, finished at 2023-05-29T13:48:35+0000
+Created projection-multi-20230529.1035.tar containing:
+  projection-multi-20230529.1035/
+  projection-multi-20230529.1035/projection-multi-cmake.el
+  projection-multi-20230529.1035/projection-multi-ctest.el
+  projection-multi-20230529.1035/projection-multi-make.el
+  projection-multi-20230529.1035/projection-multi-pkg.el
+  projection-multi-20230529.1035/projection-multi-poetry-poe.el
+  projection-multi-20230529.1035/projection-multi-tox.el
+  projection-multi-20230529.1035/projection-multi.el
+Built projection-multi in 4.546s, finished at 2023-05-29T17:51:59+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 543 May 29 13:48 packages/projection-multi-20230521.1111.entry
  40K -rw-r--r-- 1 root root 40K May 29 13:48 packages/projection-multi-20230521.1111.tar
+4.0K -rw-r--r-- 1 root root 543 May 29 17:51 packages/projection-multi-20230529.1035.entry
+ 40K -rw-r--r-- 1 root root 40K May 29 17:51 packages/projection-multi-20230529.1035.tar

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/mohkale/projection.git
 
 Updating /mnt/store/melpa/working/projection/
-Checking out 156edd6c95692d002d87cf3c3b9894e25073866b
+Checking out fb1de86f84bc0d46dbe6bbebf4bbf5880a56bdb9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projection/
-  to /tmp/projection7dQtln/projection-20230521.1155
+  to /tmp/projectionGZq3tN/projection-20230529.1441
   ! src/projection-commands.el -> projection-commands.el
   ! src/projection-core-log.el -> projection-core-log.el
   ! src/projection-core.el -> projection-core.el
@@ -19,22 +19,24 @@ Copying files (->) and directories (=>)
   ! src/projection-utils-meson.el -> projection-utils-meson.el
   ! src/projection-utils.el -> projection-utils.el
   ! src/projection.el -> projection.el
-Created projection-20230521.1155.tar containing:
-  projection-20230521.1155/
-  projection-20230521.1155/projection-commands.el
-  projection-20230521.1155/projection-core-log.el
-  projection-20230521.1155/projection-core.el
-  projection-20230521.1155/projection-find.el
-  projection-20230521.1155/projection-hook.el
-  projection-20230521.1155/projection-ibuffer.el
-  projection-20230521.1155/projection-pkg.el
-  projection-20230521.1155/projection-recentf.el
-  projection-20230521.1155/projection-types.el
-  projection-20230521.1155/projection-utils-cmake.el
-  projection-20230521.1155/projection-utils-meson.el
-  projection-20230521.1155/projection-utils.el
-  projection-20230521.1155/projection.el
-Built projection in 4.726s, finished at 2023-05-29T13:48:35+0000
+Created projection-20230529.1441.tar containing:
+  projection-20230529.1441/
+  projection-20230529.1441/projection-commands.el
+  projection-20230529.1441/projection-core-log.el
+  projection-20230529.1441/projection-core.el
+  projection-20230529.1441/projection-find.el
+  projection-20230529.1441/projection-hook.el
+  projection-20230529.1441/projection-ibuffer.el
+  projection-20230529.1441/projection-pkg.el
+  projection-20230529.1441/projection-recentf.el
+  projection-20230529.1441/projection-types.el
+  projection-20230529.1441/projection-utils-cmake.el
+  projection-20230529.1441/projection-utils-meson.el
+  projection-20230529.1441/projection-utils.el
+  projection-20230529.1441/projection.el
+Built projection in 4.252s, finished at 2023-05-29T17:51:58+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  542 May 29 13:48 packages/projection-20230521.1155.entry
 100K -rw-r--r-- 1 root root 100K May 29 13:48 packages/projection-20230521.1155.tar
+4.0K -rw-r--r-- 1 root root  542 May 29 17:51 packages/projection-20230529.1441.entry
+112K -rw-r--r-- 1 root root 110K May 29 17:51 packages/projection-20230529.1441.tar
