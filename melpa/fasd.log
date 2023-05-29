@@ -6,7 +6,6 @@ Updating /mnt/store/melpa/working/fasd/
 
 Command '' exited with non-zero exit-code: 128
 
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
+fatal: unable to access 'https://framagit.org/steckerhalter/emacs-fasd.git/': The requested URL returned error: 500
 
 Command exited with non-zero exit-code: 128

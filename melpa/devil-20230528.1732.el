@@ -5,8 +5,8 @@
 ;; Author: Susam Pal <susam@susam.net>
 ;; Maintainer: Susam Pal <susam@susam.net>
 ;; Version: 0.4.0
-;; Package-Version: 20230527.1156
-;; Package-Commit: c87075a0cd087165f8528de6952263b4ef26858b
+;; Package-Version: 20230528.1732
+;; Package-Commit: 30649e8f473ad352d296b05a569acfdc910d9ca5
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, abbrev
 ;; URL: https://github.com/susam/devil
@@ -46,25 +46,56 @@
   :prefix "devil-"
   :group 'editing)
 
-(defcustom devil-key ","
-  "The key sequence that begins Devil input."
-  :type 'key-sequence)
+(defvar devil-mode-map (make-sparse-keymap)
+  "Keymap for Devil mode.
+
+By default, only `devil-key' is added to this keymap so that
+Devil can be activated using it.  To support multiple activation
+keys, this keymap may be modified to add multiple keys to
+activate Devil.")
+
+(defcustom devil-logging nil
+  "Non-nil iff Devil should print log messages."
+  :type 'boolean)
+
+(defun devil--log (format-string &rest args)
+  "Write log message with the given FORMAT-STRING and ARGS."
+  (when devil-logging
+    (apply #'message (concat "Devil: " format-string) args)))
+
+(defun devil--custom-devil-key (symbol value)
+  "Set Devil key variable SYMBOL to the key sequence in given VALUE.
+
+After setting SYMBOL to VALUE, clear all key bindings in
+`devil-mode-map' and add a new key binding such that the key
+sequence given in VALUE activates Devil."
+  (set-default symbol value)
+  (setcdr devil-mode-map nil)
+  (define-key devil-mode-map value #'devil)
+  (devil--log "Keymap updated to %s" devil-mode-map))
 
 (defcustom devil-lighter " Devil"
   "String displayed on the mode line when Devil mode is enabled."
   :type 'string)
 
-(defvar devil-mode-map
-  (let ((map (make-sparse-keymap)))
-    (define-key map devil-key #'devil)
-    map)
-  "Keymap to wake up Devil when `devil-key' is typed.
+(defcustom devil-key ","
+  "The key sequence that begins Devil input.
 
-By default, only `devil-key' is added to this keymap so that
-Devil can be activated using it.  To support multiple activation
-keys, this variable may be modified to a new keymap that defines
-multiple different keys to activate Devil.  This variable should
-be modified before loading Devil for it to take effect.")
+Do not set this variable directly.  Either use the
+`devil-set-key' function to set this variable or customize this
+variable using Emacs customization features/functions.  Doing so
+ensures that the `devil-mode-map' is updated correctly to use the
+updated value of this variable."
+  :type 'key-sequence
+  :set #'devil--custom-devil-key)
+
+(defun devil-set-key (key-sequence)
+  "Set `devil-key' to the given KEY-SEQUENCE and update `devil-mode-map'.
+
+This function clears existing key bindings in `devil-mode-map'
+and sets a single key binding in this keymap so that Devil can be
+activated using the given KEY-SEQUENCE."
+  (devil--custom-devil-key 'devil-key key-sequence))
 
 ;;;###autoload
 (define-minor-mode devil-mode
@@ -80,10 +111,6 @@ be modified before loading Devil for it to take effect.")
 (defun devil--on ()
   "Turn Devil mode on."
   (devil-mode 1))
-
-(defcustom devil-logging nil
-  "Non-nil iff Devil should print log messages."
-  :type 'boolean)
 
 (defvar devil-special-keys
   (list (cons "%k %k" (lambda () (interactive) (devil-run-key "%k")))
@@ -183,7 +210,7 @@ buffer."
 
 (defun devil-remove-extra-keys ()
   "Remove Devil key bindings from Isearch and universal argument."
-  (devil--log "Removing extra keybindings")
+  (devil--log "Removing extra key bindings")
   (define-key isearch-mode-map (kbd ",")
     (cdr (assoc 'isearch-comma devil--saved-keys)))
   (define-key universal-argument-map (kbd "u")
@@ -433,11 +460,6 @@ this-command: %s; last-command: %s; last-repeatable-command: %s"
   "Replace REGEXP with REPLACEMENT in IN-STRING."
   (let ((case-fold-search nil))
     (replace-regexp-in-string regexp replacement in-string t)))
-
-(defun devil--log (format-string &rest args)
-  "Write log message with the given FORMAT-STRING and ARGS."
-  (when devil-logging
-    (apply #'message (concat "Devil: " format-string) args)))
 
 (provide 'devil)
 ;;; devil.el ends here

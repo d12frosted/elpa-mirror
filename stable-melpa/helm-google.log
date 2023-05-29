@@ -3,9 +3,8 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/helm-google.git
 
 Updating /mnt/store/melpa/working/helm-google/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://framagit.org/steckerhalter/helm-google.git/': The requested URL returned error: 500
-
-Command exited with non-zero exit-code: 128
+Checking out 27834161391c350ef790062391cb7eab1d59fb62
+Built helm-google in 5.700s, finished at 2023-05-28T21:11:33+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.7K May 28 21:11 packages/helm-google-20210527.900.el
+4.0K -rw-r--r-- 1 root root  436 May 28 21:11 packages/helm-google-20210527.900.entry
