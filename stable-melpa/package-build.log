@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
-Checking out 6d74bb953f1c64abb93f39a771e2df0338554b69
+Checking out 2f9fb0294e91e86a8973355425fee3091f5e94b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-build/
-  to /tmp/package-buildXrAnzC/package-build-20230524.854
+  to /tmp/package-build3Jc4Rr/package-build-20230530.1457
     package-build-badges.el -> package-build-badges.el
     package-build.el -> package-build.el
     package-recipe-mode.el -> package-recipe-mode.el
     package-recipe.el -> package-recipe.el
-Created package-build-20230524.854.tar containing:
-  package-build-20230524.854/
-  package-build-20230524.854/package-build-badges.el
-  package-build-20230524.854/package-build-pkg.el
-  package-build-20230524.854/package-build.el
-  package-build-20230524.854/package-recipe-mode.el
-  package-build-20230524.854/package-recipe.el
-Built package-build in 4.501s, finished at 2023-05-30T09:49:35+0000
+Created package-build-20230530.1457.tar containing:
+  package-build-20230530.1457/
+  package-build-20230530.1457/package-build-badges.el
+  package-build-20230530.1457/package-build-pkg.el
+  package-build-20230530.1457/package-build.el
+  package-build-20230530.1457/package-recipe-mode.el
+  package-build-20230530.1457/package-recipe.el
+Built package-build in 5.275s, finished at 2023-05-30T17:54:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 601 May 30 09:49 packages/package-build-20230524.854.entry
- 80K -rw-r--r-- 1 root root 80K May 30 09:49 packages/package-build-20230524.854.tar
+4.0K -rw-r--r-- 1 root root 601 May 30 13:51 packages/package-build-20230524.854.entry
+ 80K -rw-r--r-- 1 root root 80K May 30 13:51 packages/package-build-20230524.854.tar
+4.0K -rw-r--r-- 1 root root 602 May 30 17:54 packages/package-build-20230530.1457.entry
+ 80K -rw-r--r-- 1 root root 80K May 30 17:54 packages/package-build-20230530.1457.tar
