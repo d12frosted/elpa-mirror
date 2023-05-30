@@ -14,6 +14,7 @@ Supported languages:
 - ATS (atsfmt)
 - Awk (gawk)
 - Bazel Starlark (buildifier)
+- Beancount (bean-format)
 - BibTeX (Emacs)
 - C/C++/Objective-C (clang-format, astyle)
 - C# (clang-format, astyle, csharpier)

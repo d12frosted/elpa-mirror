@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/hlolli/csound-mode.git
 
 Updating /mnt/store/melpa/working/csound-mode/
-Checking out 38e814bd961a7d29b9a47a8e9dc069762e18eba4
+Checking out a40a225f5e1f807719c68f5a486998eb98a9ddeb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/csound-mode/
-  to /tmp/csound-modeHyrPFo/csound-mode-20230529.1449
+  to /tmp/csound-modenFKIig/csound-mode-20230529.1850
     csound-eldoc.el -> csound-eldoc.el
     csound-font-lock.el -> csound-font-lock.el
     csound-indentation.el -> csound-indentation.el
@@ -18,23 +18,21 @@ Copying files (->) and directories (=>)
     csound-score.el -> csound-score.el
     csound-skeleton.el -> csound-skeleton.el
     csound-util.el -> csound-util.el
-Created csound-mode-20230529.1449.tar containing:
-  csound-mode-20230529.1449/
-  csound-mode-20230529.1449/csound-eldoc.el
-  csound-mode-20230529.1449/csound-font-lock.el
-  csound-mode-20230529.1449/csound-indentation.el
-  csound-mode-20230529.1449/csound-manual-lookup.el
-  csound-mode-20230529.1449/csound-mode-pkg.el
-  csound-mode-20230529.1449/csound-mode.el
-  csound-mode-20230529.1449/csound-opcodes.el
-  csound-mode-20230529.1449/csound-repl-interaction.el
-  csound-mode-20230529.1449/csound-repl.el
-  csound-mode-20230529.1449/csound-score.el
-  csound-mode-20230529.1449/csound-skeleton.el
-  csound-mode-20230529.1449/csound-util.el
-Built csound-mode in 5.501s, finished at 2023-05-29T16:50:55+0000
+Created csound-mode-20230529.1850.tar containing:
+  csound-mode-20230529.1850/
+  csound-mode-20230529.1850/csound-eldoc.el
+  csound-mode-20230529.1850/csound-font-lock.el
+  csound-mode-20230529.1850/csound-indentation.el
+  csound-mode-20230529.1850/csound-manual-lookup.el
+  csound-mode-20230529.1850/csound-mode-pkg.el
+  csound-mode-20230529.1850/csound-mode.el
+  csound-mode-20230529.1850/csound-opcodes.el
+  csound-mode-20230529.1850/csound-repl-interaction.el
+  csound-mode-20230529.1850/csound-repl.el
+  csound-mode-20230529.1850/csound-score.el
+  csound-mode-20230529.1850/csound-skeleton.el
+  csound-mode-20230529.1850/csound-util.el
+Built csound-mode in 5.400s, finished at 2023-05-30T08:54:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  558 May 29 12:47 packages/csound-mode-20230525.1753.entry
-332K -rw-r--r-- 1 root root 330K May 29 12:47 packages/csound-mode-20230525.1753.tar
-4.0K -rw-r--r-- 1 root root  558 May 29 16:50 packages/csound-mode-20230529.1449.entry
-332K -rw-r--r-- 1 root root 330K May 29 16:50 packages/csound-mode-20230529.1449.tar
+4.0K -rw-r--r-- 1 root root  558 May 30 08:54 packages/csound-mode-20230529.1850.entry
+332K -rw-r--r-- 1 root root 330K May 30 08:54 packages/csound-mode-20230529.1850.tar

@@ -1236,7 +1236,7 @@
 		    ("Matthew L. Fidler" . "matthew.fidler@gmail.com"))
 		   (:keywords "convenience"))])
  (excorporate .
-	      [(1 1 0)
+	      [(1 1 1)
 	       ((emacs
 		 (24 1))
 		(cl-lib
@@ -1257,7 +1257,7 @@
 		(:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		(:authors
 		 ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
-		(:commit . "7df1891759e26541711ccbff739a39be6bca09ac"))])
+		(:commit . "a6617dea1f9c3af8a4d8a20a53f5b265455b8e96"))])
  (expand-region .
 		[(0 11 0)
 		 nil "Increase selected region by semantic units." tar
@@ -2200,7 +2200,7 @@
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
 	     (:commit . "d1c85e5e2cfc0cff3f63409b0ac15dd230568609"))])
  (modus-themes .
-	       [(4 1 1)
+	       [(4 2 0)
 		((emacs
 		  (27 1)))
 		"Elegant, highly legible and customizable themes" tar
@@ -2209,7 +2209,7 @@
 		 (:maintainer "Modus-Themes Development" . "~protesilaos/modus-themes@lists.sr.ht")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "2942c77e30d8b89b609ff639e527e67813b6b067"))])
+		 (:commit . "b4ef90bb950b820a3bf316d7b212320a5b2f84d7"))])
  (multi-mode .
 	     [(1 14)
 	      nil "support for multiple major modes" tar

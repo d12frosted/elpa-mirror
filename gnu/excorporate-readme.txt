@@ -3,6 +3,10 @@ Excorporate provides Exchange integration for Emacs.
 Most Recent Improvements
 ------------------------
 
+New in Excorporate 1.1.1, released 2023-05-29:
+
+** Update documentation
+
 New in Excorporate 1.1.0, released 2023-05-10:
 
 ** Experimental OAuth 2.0 support
