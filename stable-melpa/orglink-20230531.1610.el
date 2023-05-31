@@ -6,8 +6,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/orglink
 ;; Keywords: hypermedia
-;; Package-Version: 20230511.2059
-;; Package-Commit: dbc50854ed6d46e39a9477064239dcbd1af67c97
+;; Package-Version: 20230531.1610
+;; Package-Commit: afbeffdfa15a9fc532bba2e03626b9e82768ba2c
 
 ;; Package-Requires: (
 ;;     (emacs "25.1")
@@ -55,6 +55,7 @@
 
 (require 'org)
 (require 'org-element)
+(require 'org-lint)
 
 (defvar hl-todo-keyword-faces)
 (defvar outline-minor-mode)
@@ -266,6 +267,18 @@ On the links the following commands are available:
             nil t)
            (setq pos (match-beginning 0))
            (goto-char pos)))))
+
+;;;###autoload
+(defun orglink-lint ()
+  "Check current buffer for mistakes in links."
+  (interactive)
+  (message "Linting links...")
+  (org-lint--display-reports
+   (current-buffer)
+   (cl-remove-if-not (lambda (c)
+                       (assoc-string 'link (org-lint-checker-categories c)))
+                     org-lint--checkers))
+  (message "Linting links...done"))
 
 ;;; _
 (provide 'orglink)

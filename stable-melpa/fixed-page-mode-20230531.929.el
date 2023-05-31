@@ -4,8 +4,8 @@
 
 ;; Author: Igor Wojnicki <wojnicki@gmail.com>
 ;; URL: https://gitlab.com/igorwojnicki/fixed-page-mode
-;; Package-Version: 20230526.1157
-;; Package-Commit: f7f7925b59851419561be0784270b5d085359373
+;; Package-Version: 20230531.929
+;; Package-Commit: 608dd1120d35b02a02570f024c585f7569508586
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: wp
@@ -109,9 +109,9 @@ If not add newlines at the end."
   (let ((lines-to-add (- fixed-page-length (fixed-page-count-lines))))
     (when lines-to-add
       (save-excursion
-	(goto-char (point-max))
-	(newline lines-to-add)
-	lines-to-add))))
+        (goto-char (point-max))
+        (newline lines-to-add)
+        lines-to-add))))
 
 (defun fixed-page-mode-empty-lines-at-end ()
   "Count empty lines at the end of buffer."
@@ -125,14 +125,15 @@ If not add newlines at the end."
     (save-excursion
       (let ((fixed-page-number-value (fixed-page-number)))
       ;; Go to a begining of current page.
-	(goto-char (point-min))
-	(forward-line (* fixed-page-number-value fixed-page-length))
-	(setq fixed-page-number-mode-line (format " FP(%d)" fixed-page-number-value)))
+        (goto-char (point-min))
+        (forward-line (* fixed-page-number-value fixed-page-length))
+        (setq fixed-page-number-mode-line
+              (format " FP(%d)" fixed-page-number-value)))
       ;; Narrow
       (narrow-to-region (point)
-			(progn
-			  (forward-line fixed-page-length)
-			  (point))))
+                        (progn
+                          (forward-line fixed-page-length)
+                          (point))))
     (goto-char (point-min)))
 
 (defun fixed-page-mode-remove-lines-from-end (lines)
@@ -147,13 +148,13 @@ If not add newlines at the end."
 BEG, END and _LEN are begining, end and length of the change."
   (when (not undo-in-progress)
     (let* ((lines (fixed-page-count-lines))
-	   ;; number of lines that are not empty at the end
-	   (stuff-lines (- lines (1- (fixed-page-mode-empty-lines-at-end)))))
+           ;; number of lines that are not empty at the end
+           (stuff-lines (- lines (1- (fixed-page-mode-empty-lines-at-end)))))
       (if (<= lines fixed-page-length)
-	  (fixed-page--length-compensate)
-	(if (<= stuff-lines fixed-page-length)
-	    (fixed-page-mode-remove-lines-from-end (- lines fixed-page-length))
-	  (kill-region beg end))))))
+          (fixed-page--length-compensate)
+        (if (<= stuff-lines fixed-page-length)
+            (fixed-page-mode-remove-lines-from-end (- lines fixed-page-length))
+          (kill-region beg end))))))
 
 ;;;###autoload
 (define-minor-mode fixed-page-mode
@@ -169,10 +170,10 @@ Edit text page by page."
             map)
   (if fixed-page-mode
       (progn
-	(when (derived-mode-p 'org-mode)
-	  (setq org-element-use-cache nil)) ;; WORKAROUND with org mode cache, otherwise org mode reports warnings
-	(add-hook 'after-change-functions #'fixed-page--mode-prevent-too-long-page 0 1)
-	(fixed-page-narrow))
+        (when (derived-mode-p 'org-mode)
+          (setq org-element-use-cache nil)) ;; WORKAROUND with org mode cache, otherwise org mode reports warnings
+        (add-hook 'after-change-functions #'fixed-page--mode-prevent-too-long-page 0 1)
+        (fixed-page-narrow))
     (remove-hook 'after-change-functions #'fixed-page--mode-prevent-too-long-page 1)
     (widen)))
 
