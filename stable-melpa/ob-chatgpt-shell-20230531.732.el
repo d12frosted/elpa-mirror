@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230529.1516
-;; Package-Commit: 8a477bb1a6241b1747d7f09b554c4fbaa1d394b8
-;; Version: 0.19.1
+;; Package-Version: 20230531.732
+;; Package-Commit: 4e117234f07991a1f1d100be84fbf2f4689ae39d
+;; Version: 0.20.1
 ;; Package-Requires: ((emacs "27.1") (chatgpt-shell "0.39.1"))
 
 ;;; License:
@@ -44,10 +44,10 @@
 ;;; Requirements:
 
 ;;; Code:
-(require 'ob)
-(require 'org)
 (require 'chatgpt-shell)
 (require 'map)
+(require 'ob)
+(require 'org-element)
 
 (defvar org-babel-default-header-args:chatgpt-shell '((:results . "raw")
                                                       (:version . nil)

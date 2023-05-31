@@ -5,8 +5,8 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
-;; Package-Version: 20230501.656
-;; Package-Commit: 6f8941f97f050a844dc22d2b1e02f976b558a35c
+;; Package-Version: 20230531.743
+;; Package-Commit: 85dd0a7852db70673d70387a834af01ed705c3f7
 ;; Version: 1.4.0
 ;; Package-Requires: ((emacs "26.1") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; Keywords: matching auto-complete complete fuzzy
@@ -319,7 +319,12 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
 
 (defun company-fuzzy--get-backend-string (backend)
   "Get BACKEND's as a string."
-  (if backend (s-replace "company-" "" (symbol-name backend)) ""))
+  (if backend
+      (let ((name (symbol-name backend)))
+        (setq name (s-replace "company-" "" name)
+              name (s-replace "-company" "" name))
+        name)
+    ""))
 
 (defun company-fuzzy--backend-string (candidate backend)
   "Form the BACKEND string by CANDIDATE."

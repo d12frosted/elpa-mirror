@@ -4,8 +4,8 @@
 
 ;; Author: Alex Figl-Brick <alex@alexbrick.me>
 ;; Version: 0.1
-;; Package-Version: 20230529.1908
-;; Package-Commit: 1f930772b8598efae6579fcd0bbdd12de1e1753b
+;; Package-Version: 20230531.901
+;; Package-Commit: 422e294cb08356d61eef06424e85f400f395b1b9
 ;; Package-Requires: ((emacs "29"))
 ;; URL: https://gitlab.com/bricka/emacs-kotlin-ts-mode
 
@@ -419,20 +419,59 @@ in the individual names."
   "Return t if the current buffer is in a project with a local Gradle installation."
   (file-exists-p (string-join `(,(project-root (project-current)) "gradlew") "/")))
 
-(defun kotlin-ts-mode--run-gradle-command (task args)
-  "Run the given Gradle TASK with the given ARGS."
+(defun kotlin-ts-mode--compilation-buffer-name-function (_mode)
+  "The name of the buffer used for Gradle commands."
+  "*kotlin-ts-mode[gradle]*")
+
+(defun kotlin-ts-mode--run-gradle-command (project task args)
+  "Run the given Gradle TASK with the given ARGS in the given PROJECT.
+
+If PROJECT is nil, run in root project."
   (let ((default-directory default-directory)
         (exec-path exec-path)
         (command "gradle")
-        (buffer (get-buffer-create "*kotlin-ts-mode[gradle]*")))
+        (compilation-buffer-name-function #'kotlin-ts-mode--compilation-buffer-name-function)
+        (qualified-task (if project (concat ":" project ":" task) task)))
     (when (kotlin-ts-mode--in-gradle-project-p)
       (setq default-directory (project-root (project-current))
             command "./gradlew"
             exec-path (list nil)))
-    (with-current-buffer buffer
-      (erase-buffer))
-    (display-buffer buffer)
-    (apply #'call-process command nil buffer t task args)))
+    (compile
+     (concat
+      command
+      " "
+      qualified-task
+      " "
+      (string-join
+       (mapcar #'shell-quote-argument args)
+       " ")))))
+
+(defun kotlin-ts-mode--get-subproject-name ()
+  "Determine the name of the subproject of the current buffer.
+Return nil if root project.
+
+We use a very simple heuristic here and just look for the closest
+build.gradle.kts file and use its directory's name.  We do not
+support custom project names."
+  (let ((gradle-dir (locate-dominating-file (buffer-file-name) "build.gradle.kts")))
+    (when (and gradle-dir (not (string-equal gradle-dir (project-root (project-current)))))
+      (file-name-nondirectory (directory-file-name gradle-dir)))))
+
+(defun kotlin-ts-mode-run-current-test-class ()
+  "Run the current test class."
+  (interactive)
+  (let* ((package-name (kotlin-ts-mode--get-package-name))
+         (class-name (kotlin-ts-mode--get-class-name)))
+    (if (not (and package-name class-name))
+        (warn "Could not find the package and class name.")
+      (kotlin-ts-mode--run-gradle-command
+       (kotlin-ts-mode--get-subproject-name)
+       "test"
+       (list
+        "--tests"
+         (kotlin-ts-mode--qualify-name
+          package-name
+          class-name))))))
 
 (defun kotlin-ts-mode-run-current-test-function ()
   "Run the current test function."
@@ -443,14 +482,14 @@ in the individual names."
     (if (not (and package-name class-name function-name))
         (warn "Could not find the package, class, and function name.")
       (kotlin-ts-mode--run-gradle-command
+       (kotlin-ts-mode--get-subproject-name)
        "test"
        (list
-        (concat
-         "--tests="
+        "--tests"
          (kotlin-ts-mode--qualify-name
           package-name
           class-name
-          function-name)))))))
+          function-name))))))
 
 ;;;###autoload
 (define-derived-mode kotlin-ts-mode prog-mode "Kotlin"
