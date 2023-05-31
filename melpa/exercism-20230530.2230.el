@@ -7,8 +7,8 @@
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Created: September 15, 2022
 ;; Version: 0.0.0
-;; Package-Version: 20230313.2027
-;; Package-Commit: 1dfee3d12e4bf76647bcaed7ccf36fb0815f068f
+;; Package-Version: 20230530.2230
+;; Package-Commit: 807ad7c9889b5a774f34ad65c6de0d40d74f253f
 ;; Keywords: exercism, convenience
 ;; Homepage: https://github.com/anonimitoraf/exercism.el
 ;; Package-Requires: ((emacs "27.1") (dash "2.19.1") (a "1.0.0") (s "1.13.1") (request "0.3.2") (async "1.9.6") (async-await "1.1") (persist "0.5") (transient "0.3.7"))
@@ -36,6 +36,7 @@
 (defvar exercism--shell-cmd)
 
 (persist-defvar exercism--current-track nil "Current track.")
+(persist-defvar exercism--current-exercise nil "Current exercise.")
 
 (defcustom exercism-executable "exercism"
   "Executable name/location."
@@ -128,23 +129,47 @@ If ONLY-UNLOCKED? is non-nil, only lists unlocked lessons."
                                                             (a-get it 'is_unlocked)))))))
                      (funcall resolve exercise-slugs))))))))
 
+(defun exercism--file-to-string (file-path)
+  (with-temp-buffer
+    (insert-file-contents file-path)
+    (buffer-string)))
+
+(defun exercism--get-config (exercise-dir)
+  (let* ((config (exercism--file-to-string
+                  (expand-file-name "config.json" (concat exercise-dir "/" ".exercism")))))
+    (json-parse-string config
+                       :object-type 'alist
+                       :array-type 'list)))
+
+(defun exercism--get-solution-files (exercise-dir)
+  (let* ((config (exercism--get-config exercise-dir))
+         (solution-file-paths (a-get-in config '(files solution))))
+    solution-file-paths))
+
 (defun exercism--submit (&optional open-in-browser-after?)
   "Submits your solution in the current directory.
 If OPEN-IN-BROWSER-AFTER? is non-nil, the browser's opened for
 you to complete your solution."
-  (exercism--run-shell-command (format "%s submit" (shell-quote-argument exercism-executable))
-                               (lambda (result)
-                                 (message "[exercism] submit: %s" result)
-                                 ;; Result looks something like:
-                                 ;; Your solution has been submitted successfully.
-                                 ;; View it at:
-                                 ;;
-                                 ;;
-                                 ;; https://exercism.org/tracks/javascript/exercises/hello-world
-                                 (when open-in-browser-after?
-                                   (when (string-match "\\(https://exercism\\.org.*\\)" result)
-                                     (browse-url (match-string 1 result)))
-                                   (message "[exercism] submit: %s" result)))))
+  (let* ((track-dir (expand-file-name exercism--current-track exercism-directory))
+         (exercise-dir (expand-file-name exercism--current-exercise track-dir))
+         (solution-files (exercism--get-solution-files exercise-dir))
+         (default-directory exercise-dir)
+         (submit-command (s-join " " (list
+                                      (shell-quote-argument exercism-executable) "submit"
+                                      (s-join " " solution-files)))))
+    (exercism--run-shell-command submit-command
+                                 (lambda (result)
+                                   (message "[exercism] submit: %s" result)
+                                   ;; Result looks something like:
+                                   ;; Your solution has been submitted successfully.
+                                   ;; View it at:
+                                   ;;
+                                   ;;
+                                   ;; https://exercism.org/tracks/javascript/exercises/hello-world
+                                   (when open-in-browser-after?
+                                     (when (string-match "\\(https://exercism\\.org.*\\)" result)
+                                       (browse-url (match-string 1 result)))
+                                     (message "[exercism] submit: %s" result))))))
 
 (defun exercism-submit ()
   "Submit your implementation."
@@ -220,7 +245,8 @@ EXERCISE should be a list with the shape `(slug exercise-data)'."
                                      exercise-options (-const t) t)))
          (exercise-dir (expand-file-name exercise track-dir)))
     (if (file-exists-p exercise-dir)
-        (find-file exercise-dir)
+        (progn (find-file exercise-dir)
+               (setq exercism--current-exercise exercise))
       (message "[exercism] downloading %s exercise %s... (please wait)" exercism--current-track exercise)
       (let ((result (await (exercism--download-exercise exercise exercism--current-track))))
         (message "[exercism] download result: %s" result)
@@ -228,7 +254,8 @@ EXERCISE should be a list with the shape `(slug exercise-data)'."
         ;; will be the same. Instead retrieve it from the
         ;; download response?
         (when (file-exists-p exercise-dir)
-          (find-file exercise-dir))))))
+          (find-file exercise-dir))
+        (setq exercism--current-exercise exercise)))))
 
 (defun exercism--transient-name ()
   (format "Exercism actions (current track: %s)" (or exercism--current-track "N/A")))

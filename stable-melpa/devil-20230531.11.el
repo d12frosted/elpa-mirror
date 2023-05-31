@@ -4,9 +4,9 @@
 
 ;; Author: Susam Pal <susam@susam.net>
 ;; Maintainer: Susam Pal <susam@susam.net>
-;; Version: 0.4.0
-;; Package-Version: 20230528.1732
-;; Package-Commit: 30649e8f473ad352d296b05a569acfdc910d9ca5
+;; Version: 0.5.0.pre1
+;; Package-Version: 20230531.11
+;; Package-Commit: 2925d977feaaf5ae1520aeba70be1e4d34884c73
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, abbrev
 ;; URL: https://github.com/susam/devil
@@ -115,7 +115,7 @@ activated using the given KEY-SEQUENCE."
 (defvar devil-special-keys
   (list (cons "%k %k" (lambda () (interactive) (devil-run-key "%k")))
         (cons "%k SPC" (lambda () (interactive) (devil-run-key "%k SPC")))
-        (cons "%k RET" (lambda () (interactive) (devil-run-key "%k RET"))))
+        (cons "%k <return>" (lambda () (interactive) (devil-run-key "%k RET"))))
   "Special Devil keys that are executed as soon as they are typed.
 
 The value of this variable is an alist where each key represents
