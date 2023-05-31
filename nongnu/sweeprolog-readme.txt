@@ -48,6 +48,7 @@ Editing Prolog Code
 ..... Breakpoint Menu
 .. Creating New Modules
 .. Documenting Code
+.. Usage Comments
 .. Showing Prolog Docs
 .. Showing Errors
 .. Exporting Predicates
@@ -1531,6 +1532,44 @@ Documenting Predicates
 
 [the PlDoc manual]
 <https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/pldoc.html%27)>
+
+
+Example Usage Comments
+──────────────────────
+
+  Beyond documenting your code with `PlDoc' comments as described in
+  [Documenting Predicates], you might want to have comments in your
+  source code that shows example usage of some predicate.  Creating such
+  comments usually involves posting queries in a Prolog top-level,
+  copying the queries and their results into the relevant source code
+  buffer, and formatting them as comments.  Sweep provides the following
+  command to streamline this process:
+
+  Key: C-c C-% (sweeprolog-make-example-usage-comment)
+        Start a new top-level for recording example usage.  When you
+        finish interacting with the top-level its contents are formatted
+        as a comment in the buffer and position where you invoked this
+        command.
+
+  The command `sweeprolog-make-example-usage-comment', bound to `C-c
+  C-%' in `sweeprolog-mode' buffers, creates and switches to a new
+  top-level buffer for recording example usage that you want to
+  demonstrate.  The /example usage top-level/ is a regular top-level
+  buffer (see [The Prolog Top-Level]), except that it’s tied to the
+  specific position in the source buffer where you invoke this command.
+  You can post queries in the example usage top-level and edit it
+  freely, then type `C-c C-q' in to quit the top-level buffer and format
+  its contents as a comment in the source buffer.
+
+  You can have multiple example usage top-levels for different parts of
+  your code at the same time.  To display the source position where you
+  created a certain usage example top-level buffer by, type `C-c C-b' in
+  that buffer.
+
+
+[Documenting Predicates] See section Documenting Predicates
+
+[The Prolog Top-Level] See section The Prolog Top-Level
 
 
 Displaying Predicate Documentation

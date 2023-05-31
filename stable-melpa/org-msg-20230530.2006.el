@@ -5,9 +5,9 @@
 ;; Author: Jérémy Compostella <jeremy.compostella@gmail.com>
 ;; Created: January 2018
 ;; Keywords: extensions mail
-;; Package-Commit: 7b1dfb96d558f6e5626e96d4f4a5150d55cb7eb2
+;; Package-Commit: 055de4abf611c5d5e12c770fe149c1861b402817
 ;; Homepage: https://github.com/jeremy-compostella/org-msg
-;; Package-Version: 20230127.520
+;; Package-Version: 20230530.2006
 ;; Package-X-Original-Version: 4.0
 ;; Package-Requires: ((emacs "24.4") (htmlize "1.54"))
 
@@ -1393,8 +1393,11 @@ This function is used as an advice function of
 (defun org-msg-mode-mu4e ()
   "Setup the hook for mu4e mail user agent."
   (if org-msg-mode
-      (add-hook 'mu4e-compose-mode-hook 'org-msg-post-setup)
-    (remove-hook 'mu4e-compose-mode-hook 'org-msg-post-setup)))
+      (progn (add-hook 'mu4e-compose-mode-hook 'org-msg-post-setup)
+	     (advice-add 'mu4e-icalendar-reply
+			 :around #'org-msg-inhibited))
+    (remove-hook 'mu4e-compose-mode-hook 'org-msg-post-setup)
+    (advice-remove 'mu4e-icalendar-reply 'org-msg-inhibited)))
 
 (defun org-msg-mode-notmuch ()
   "Setup the hook for notmuch mail user agent."
