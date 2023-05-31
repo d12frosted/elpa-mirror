@@ -4,8 +4,8 @@
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Package-Version: 20220629.1216
-;; Package-Commit: 5d3c7e2f32f4dcdb22865c385ec48ababe5f293a
+;; Package-Version: 20230531.1154
+;; Package-Commit: ac2ad919f35d63134ffc9fb7fb2341e306be2991
 ;; Version: 2.6
 ;; Keywords: color theme
 
@@ -47,6 +47,17 @@
 (custom-theme-set-faces
  'faff
  '(default ((t (:foreground "black" :background "cornsilk3"))))
+ '(ansi-color-blue ((t (:background "blue4" :foreground "blue4"))))
+ '(ansi-color-bright-blue ((t (:background "blue2" :foreground "blue2"))))
+ '(ansi-color-bright-cyan ((t (:background "cyan1" :foreground "cyan1"))))
+ '(ansi-color-bright-green ((t (:background "green1" :foreground "green1"))))
+ '(ansi-color-bright-yellow ((t (:background "yellow1" :foreground "yellow1"))))
+ '(ansi-color-cyan ((t (:background "cyan4" :foreground "cyan4"))))
+ '(ansi-color-fast-blink ((t (:box (1 . -1)))))
+ '(ansi-color-green ((t (:background "green4" :foreground "green4"))))
+ '(ansi-color-magenta ((t (:background "magenta4" :foreground "magenta4"))))
+ '(ansi-color-slow-blink ((t (:box (1 . -1)))))
+ '(ansi-color-yellow ((t (:background "yellow4" :foreground "yellow4"))))
  '(bookmark-face ((t (:background "cornsilk3" :foreground "DarkOrange1"))))
  '(breakpoint-disabled ((t (:foreground "grey40"))))
  '(match ((t (:background "yellow2"))))
@@ -60,9 +71,10 @@
  '(shadow ((t (:foreground "cornsilk4"))))
  '(secondary-selection ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "SkyBlue4")) (((class color) (min-colors 16) (background light)) (:background "yellow")) (((class color) (min-colors 16) (background dark)) (:background "SkyBlue4")) (((class color) (min-colors 8)) (:foreground "black" :background "cyan")) (t (:inverse-video t))))
  '(trailing-whitespace ((t (:background "cornsilk2"))))
- '(corfu-border ((t (:background "gray20"))))
+ '(corfu-border ((t (:background "cornsilk4"))))
+ '(corfu-current ((t (:background "cornsilk2"))))
  '(corfu-default ((t (:background "cornsilk3"))))
- '(corfu-current ((t (:background "cornsilk2" :box (:line-width (1 . 1) :color "cornsilk4")))))
+ '(corfu-popupinfo ((t (:inherit corfu-default :height 0.9))))
  '(emms-playlist-selected-face ((t (:background "cornsilk2" :foreground "black"))))
  '(emms-playlist-track-face ((t (:foreground "red4"))))
  '(erc-notice-face ((t (:foreground "cornsilk4"))))
@@ -80,8 +92,7 @@
  '(font-lock-type-face ((t (:foreground "#004000" :weight bold))))
  '(font-lock-variable-name-face ((t (:foreground "#502010"))))
  '(button ((t (:inherit (link)))))
- '(link ((((class color) (min-colors 88) (background light)) (:underline (:color foreground-color :style line) :foreground "RoyalBlue3")) (((class color) (background light)) (:underline (:color foreground-color :style line) :foreground "blue")) (((class color) (min-colors 88) (background dark)) (:underline (:color foreground-color :style line) :foreground "cyan1")) (((class color) (background dark)) (:underline (:color foreground-color :style line) :foreground "cyan")) (t (:inherit (underline)))))
- '(link-visited ((default (:inherit (link))) (((class color) (background light)) (:foreground "magenta4")) (((class color) (background dark)) (:foreground "violet"))))
+ '(link ((t (:foreground "RoyalBlue4" :underline t))))
  '(ein:cell-input-area ((t (:background "cornsilk2"))) t)
  '(fill-column-indicator ((t (:inherit shadow :foreground "#d5d0b8"))))
  '(fringe ((t (:inherit default :background "cornsilk3"))))
@@ -92,7 +103,7 @@
  '(js2-jsdoc-value ((t (:inherit font-lock-variable-name-face)))) '(dired-subtree-depth-1-face ((t (:background "cornsilk2"))))
  '(js2-object-property ((t (:inherit font-lock-variable-name-face))))
  '(tooltip ((t (:inherit nil :background "lightyellow" :foreground "black"))))
- '(mode-line ((t (:box (:line-width (1 . 1) :color "black" :style flat-button)))))
+ '(mode-line ((t (:box nil :family "sans serif"))))
  '(mode-line-active ((t (:inherit mode-line :background "gold"))))
  '(mode-line-inactive ((t (:background "cornsilk4" :inherit mode-line))))
  '(mode-line-buffer-id ((t (:weight bold))))
@@ -103,8 +114,6 @@
  '(match ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "RoyalBlue3")) (((class color) (min-colors 8) (background light)) (:foreground "black" :background "yellow")) (((class color) (min-colors 8) (background dark)) (:foreground "white" :background "blue")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "gray"))))
  '(next-error ((t (:inherit (region)))))
  '(query-replace ((t (:inherit (isearch)))))
- '(aw-leading-char-face ((t (:foreground "red" :height 4.0))))
- '(aw-mode-line-face ((t (:background "green1" :inverse-video t))))
  '(calendar-today ((t (:background "yellow1" :underline t))))
  '(custom-button ((t (:background "cornsilk2" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
  '(custom-button-mouse ((t (:background "cornsilk1" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
@@ -130,6 +139,7 @@
  '(dired-subtree-depth-4-face ((t (:background "cornsilk2"))))
  '(dired-subtree-depth-5-face ((t (:background "cornsilk1"))))
  '(dired-subtree-depth-6-face ((t (:background "white")))) '(flymake-warnline ((t (:background "LightBlue3"))))
+ '(elisp-shorthand-font-lock-face ((t (:inherit font-lock-keyword-face :foreground "cyan4"))))
  '(error ((t (:foreground "red3" :weight bold))))
  '(hi-green-b ((t (:foreground "green4" :weight bold))))
  '(hl-line ((t (:extend t :background "#ddd8bd"))))
@@ -200,14 +210,15 @@
  '(rjsx-tag-bracket-face ((t (:inherit font-lock-keyword-face))))
  '(rst-level-1 ((t (:background "grey85" :weight bold))))
  '(rst-literal ((t (:inherit shadow :extend t :background "cornsilk2"))))
- '(scroll-bar ((t (:background "cornsilk3" :foreground "#ddd8bd"))))
- '(separator-line ((t (:background "#d5d0b8" :height 0.1))))
+ '(separator-line ((t (:background "cornsilk4" :height 0.1))))
+ '(scroll-bar ((t (:background "#aca895" :foreground "cornsilk3"))))
  '(sh-heredoc ((t (:foreground "tan4"))))
+ '(sh-quoted-exec ((t (:foreground "magenta4"))))
  '(shadow ((t (:foreground "cornsilk4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
  '(tab-bar ((t (:background "cornsilk4" :height 0.9))))
- '(tab-bar-tab ((t (:inherit (variable-pitch tab-bar) :background "cornsilk3"))))
- '(tab-bar-tab-inactive ((t nil)))
+ '(tab-bar-tab ((t (:inherit (variable-pitch tab-bar-tab) :background "cornsilk3"))))
+ '(tab-bar-tab-inactive ((t (:inherit (variable-pitch tab-tar-tab-inactive)))))
  '(term-color-green ((t (:background "green4" :foreground "green4"))))
  '(term-color-cyan ((t (:background "cyan4" :foreground "cyan4"))))
  '(term-color-magenta ((t (:background "magenta4" :foreground "magenta4"))))
@@ -236,9 +247,6 @@
 
 (custom-theme-set-variables
  'faff
- ;; ansi-color-names-vector: defaults such as yellow3 are nearly unreadable
- '(ansi-color-names-vector
-   ["black" "red3" "green4" "yellow4" "blue2" "magenta4" "cyan4" "white"])
  ;; lsp-diagnostics-attributes: the default for `unnecessary', is gray, which is
  ;; nearly invisible on cornsilk3.
  '(lsp-diagnostics-attributes

@@ -3,8 +3,9 @@ Fetcher: git
 Source:  https://opensource.chee.party/chee/feline-mode
 
 Updating /mnt/store/melpa/working/feline/
-Checking out 3f9247f48058285d3e03957680e011ecf58d6feb
-Built feline in 8.074s, finished at 2023-05-31T09:21:11+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.2K May 31 09:21 packages/feline-20230315.1821.el
-4.0K -rw-r--r-- 1 root root  357 May 31 09:21 packages/feline-20230315.1821.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://opensource.chee.party/chee/feline-mode/': Failed to connect to opensource.chee.party port 443: Connection refused
+
+Command exited with non-zero exit-code: 128
