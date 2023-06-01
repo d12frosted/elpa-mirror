@@ -4,8 +4,8 @@
 
 ;; Author: Alex Kreisher <akreisher18@gmail.com>
 ;; Version: 0.5
-;; Package-Version: 20230530.114
-;; Package-Commit: 463200e8a9b1cae2fedbf9f1b13b653a68e146fa
+;; Package-Version: 20230601.246
+;; Package-Commit: 8bf0494ca71944b9d4bfb8ec3c93ea29d46bc2f9
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: convenience
 ;; URL: https://github.com/akreisher/eshell-syntax-highlighting
@@ -333,7 +333,7 @@
       (eshell-syntax-highlighting--parse-and-highlight 'argument end))
 
      ;; Comments
-     ((looking-at "#")
+     ((looking-at "#\\(?:[^<]\\|\\'\\)")
       (eshell-syntax-highlighting--highlight beg end 'comment))
 
      ;; Options

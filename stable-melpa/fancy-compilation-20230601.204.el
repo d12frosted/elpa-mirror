@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-fancy-compilation
-;; Package-Version: 20230223.2309
-;; Package-Commit: d5d790dee6b07f866d203c5c174440ec8a2b2215
+;; Package-Version: 20230601.204
+;; Package-Commit: 5104912ed98f803f2504a8d5cacc341a76bc29cf
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -242,7 +242,7 @@ Use this to set or override defaults."
           (when fancy-compilation--window
             (cond
              ((window-live-p fancy-compilation--window)
-              (unless (zerop (window-hscroll))
+              (unless (zerop (window-hscroll fancy-compilation--window))
                 (set-window-hscroll fancy-compilation--window 0)))
              (t ; Don't further check this window.
               (setq fancy-compilation--window nil)))))))))
