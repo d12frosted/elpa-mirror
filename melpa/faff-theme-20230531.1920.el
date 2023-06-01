@@ -4,8 +4,8 @@
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Package-Version: 20230531.1154
-;; Package-Commit: ac2ad919f35d63134ffc9fb7fb2341e306be2991
+;; Package-Version: 20230531.1920
+;; Package-Commit: cba6906f6f4f33cbf229a300d83f0e0d925e8f42
 ;; Version: 2.6
 ;; Keywords: color theme
 
@@ -216,6 +216,11 @@
  '(sh-quoted-exec ((t (:foreground "magenta4"))))
  '(shadow ((t (:foreground "cornsilk4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
+ '(symbol-overlay-default-face ((t (:background "cornsilk1"))))
+ '(symbol-overlay-face-1 ((t (:background "yellow" :foreground "black"))))
+ '(symbol-overlay-face-3 ((t (:background "light blue" :foreground "black"))))
+ '(symbol-overlay-face-4 ((t (:background "orchid1" :foreground "black"))))
+ '(symbol-overlay-face-5 ((t (:background "red1" :foreground "black"))))
  '(tab-bar ((t (:background "cornsilk4" :height 0.9))))
  '(tab-bar-tab ((t (:inherit (variable-pitch tab-bar-tab) :background "cornsilk3"))))
  '(tab-bar-tab-inactive ((t (:inherit (variable-pitch tab-tar-tab-inactive)))))

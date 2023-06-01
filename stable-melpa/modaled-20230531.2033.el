@@ -4,8 +4,8 @@
 ;;
 ;; Author: DCsunset
 ;; URL: https://github.com/DCsunset/modaled
-;; Package-Version: 20230530.236
-;; Package-Commit: ff0eee4f8830ed022c8772e5910743e9c8b46768
+;; Package-Version: 20230531.2033
+;; Package-Commit: 8681e23216084ee2af1d2cd826115d0135543ebc
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: convenience, modal-editing
@@ -97,8 +97,8 @@ This function will generate the definitions for the following items:
 2. modaled-STATE-keymap: Keymap for the state.
 
 The following options are supported:
-:sparse   Use a sparse keymap instead of a full keymap
-:suppress Remapping `self-insert-command' to `undefined' in the keymap
+:sparse   Use a sparse keymap instead of a full keymap.
+:suppress Remapping `self-insert-command' to `undefined' in the keymap.
 :lighter  Text displayed in the mode line when the state is active.
 :cursor-type  Cursor type for the state."
   (let ((mode (modaled--get-state-mode state))
@@ -123,19 +123,27 @@ The following options are supported:
           (setq-local cursor-type ,cursor-type))))))
 
 ;;;###autoload
-(defmacro modaled-define-default-state (state)
-  "Define default STATE used in global minor mode."
-  (let ((mode (modaled--get-state-mode state)))
+(defmacro modaled-define-default-state (state &rest body)
+  "Define default STATE used in global minor mode with options in BODY.
+
+This function accept the following option:
+:predicate  Specify which major modes the default state should be enabled in.
+            It is directly passed to `define-globalized-minor-mode'."
+  (let ((mode (modaled--get-state-mode state))
+        (pred (if (plist-member body :predicate)
+                  `(:predicate ,(plist-get body :predicate))
+                '())))
     `(progn
-      (setq modaled-default-state ,state)
-      (define-globalized-minor-mode modaled-global-mode
-        ,mode
-        (lambda ()
-          (unless (minibufferp)
-            ; enable default modaled minor modes
-            (modaled-set-default-state)))
-        :require 'modaled
-        :group 'modaled))))
+       (setq modaled-default-state ,state)
+       (define-globalized-minor-mode modaled-global-mode
+         ,mode
+         (lambda ()
+           (unless (minibufferp)
+             ; enable default modaled minor modes
+             (modaled-set-default-state)))
+         :require 'modaled
+         :group 'modaled
+         ,@pred))))
 
 (provide 'modaled)
 
