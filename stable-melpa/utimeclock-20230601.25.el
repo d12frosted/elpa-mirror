@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-utimeclock
-;; Package-Version: 20230319.752
-;; Package-Commit: de8187371be34b2482730bd6eae1a3187e72fe13
+;; Package-Version: 20230601.25
+;; Package-Commit: 484d426a2ecc1ac7b922fd93c7d03da23510fb63
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -87,7 +87,7 @@ This controls the values entered as well as behavior wrapping time values."
 
 (defun utimeclock-as-sec-total (str)
   "Convert STR in the format '4:30:59' to the number of seconds as an int."
-  (let ((v (split-string str ":")))
+  (let ((v (save-match-data (split-string str ":"))))
     (+
      (* 3600 (string-to-number (pop v))) ; Hours.
      (cond
@@ -146,10 +146,11 @@ In this case the current time is used as the end time."
   (let ((time-pair-sep (regexp-quote utimeclock-time-pair))
         (time-was-incomplete nil)
         (time-as-seconds 0))
-    (dolist (time-pair (split-string line))
+    (dolist (time-pair (save-match-data (split-string line)))
       (when time-was-incomplete
         (message "Incomplete time string '%s'" line))
-      (pcase-let ((`(,time-start ,time-end) (split-string time-pair time-pair-sep)))
+      (pcase-let ((`(,time-start ,time-end)
+                   (save-match-data (split-string time-pair time-pair-sep))))
         (setq time-was-incomplete nil)
         ;; `time-end' will be null when there was no dash in the string.
         ;; allow this for the end-string.
@@ -294,7 +295,7 @@ Return the time immediately after clocking off for time starting at TIME-POS."
         (let* ((prefix (utimeclock-time-point-previous-prefix time-pos))
                (time-pos-next (+ time-pos (length utimeclock-time-prefix)))
                (line (utimeclock-extract-line-multi time-pos-next prefix))
-               (time-pair (car (last (split-string line)))))
+               (time-pair (car (last (save-match-data (split-string line))))))
           (utimeclock-from-sec-total (car (utimeclock-accumulate-line time-pair nil)))))
       "unknown"))
 
@@ -306,11 +307,12 @@ Return the time immediately after clocking on for time starting at TIME-POS."
         (let* ((prefix (utimeclock-time-point-previous-prefix time-pos))
                (time-pos-next (+ time-pos (length utimeclock-time-prefix)))
                (line (utimeclock-extract-line-multi time-pos-next prefix))
-               (last-pair (last (split-string line) 2)))
+               (last-pair (last (save-match-data (split-string line)) 2)))
           (cond
            ((eq (length last-pair) 2)
             (pcase-let ((`(,t1 ,t2) last-pair))
-              (let ((t1-half (car (last (split-string t1 utimeclock-time-pair)))))
+              (let ((t1-half
+                     (car (last (save-match-data (split-string t1 utimeclock-time-pair))))))
                 (let ((time-pair (concat t1-half utimeclock-time-pair t2)))
                   (utimeclock-from-sec-total (car (utimeclock-accumulate-line time-pair nil)))))))
            (t

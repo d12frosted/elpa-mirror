@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-run-stuff
-;; Package-Version: 20230319.459
-;; Package-Commit: cd4d250603f0df835dbaf91c45ea603ffd52c416
+;; Package-Version: 20230601.19
+;; Package-Commit: 65afd896896a68e6262187745f5e3ac5145ba1ed
 ;; Version: 0.0.3
 ;; Keywords: files lisp files convenience hypermedia
 ;; Package-Requires: ((emacs "25.1"))
@@ -226,7 +226,10 @@ Argument LINE-TERMINATE-CHAR is used to wrap lines."
     (mapconcat (function
                 (lambda (s)
                   (string-trim-right (string-remove-suffix line-terminate-str (string-trim s)))))
-               (split-string (run-stuff--extract-split-lines-search-up line-terminate-char) "\n")
+               ;; Split string modifies match data.
+               (save-match-data
+                 (split-string (run-stuff--extract-split-lines-search-up line-terminate-char)
+                               "\n"))
                " ")))
 
 

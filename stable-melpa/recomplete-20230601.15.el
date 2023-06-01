@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-recomplete
-;; Package-Version: 20230109.536
-;; Package-Commit: 837965094aa55bbba9a62f9612e59c5440cbfc71
+;; Package-Version: 20230601.15
+;; Package-Commit: 296ed0ecce65066f513182bbde2045fca9c1e035
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -244,12 +244,14 @@ Argument FN-CACHE stores the result for reuse."
              (word-split
               (mapcar
                #'downcase
-               (split-string (string-trim (replace-regexp-in-string
-                                           "\\([[:lower:]]\\)\\([[:upper:]]\\)"
-                                           "\\1_\\2"
-                                           word-init)
-                                          "_")
-                             "[_\\-]"))))
+               ;; `split-string' modified match-data.
+               (save-match-data
+                 (split-string (string-trim (replace-regexp-in-string
+                                             "\\([[:lower:]]\\)\\([[:upper:]]\\)"
+                                             "\\1_\\2"
+                                             word-init)
+                                            "_")
+                               "[_\\-]")))))
 
         (push (string-join (mapcar #'capitalize word-split) "") result-choices)
 

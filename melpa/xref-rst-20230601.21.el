@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://codeberg.org/ideasman42/emacs-xref-rst
-;; Package-Version: 20230116.1300
-;; Package-Commit: 0cc7fadd4698bd5b51ce2a52fcb4de41c7f030f2
+;; Package-Version: 20230601.21
+;; Package-Commit: 0811365a6ac240463aac9ddfcefb9ed8630e3da8
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "28.1"))
 
@@ -556,12 +556,14 @@ This is done relative to CURRENT-PROJECT-ROOT or CURRENT-DIR."
                 (pcase-let ((`(,beg . ,end)
                              (xref-rst--range-of-block-at-current-indent symbol-point)))
                   (setq rst-terms-data
-                        (mapcar
-                         (lambda (str)
-                           (string-trim
-                            ;; Ignore the "key".
-                            (car (split-string str ":"))))
-                         (split-string (buffer-substring-no-properties beg end) "\n")))))))))
+                        ;; Split string modifies match-data.
+                        (save-match-data
+                          (mapcar
+                           (lambda (str)
+                             (string-trim
+                              ;; Ignore the "key".
+                              (car (split-string str ":"))))
+                           (split-string (buffer-substring-no-properties beg end) "\n"))))))))))
 
       (when rst-terms-data
         (let ((rst-terms-data-regex
