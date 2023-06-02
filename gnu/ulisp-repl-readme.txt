@@ -1,5 +1,14 @@
-Interact with uLisp running on a target board over a serial connection.
+Interact with uLisp running on a target board, through a serial
+port.
 
 Usage:
 
 M-x ulisp-repl
+
+Uses Emacs's built-in serial-port support.  I you are running on a
+non-Linux kernel, you will need to adapt
+`ulisp--select-serial-device'.
+
+To browse uLisp reference documentation:
+
+M-x eww RET http://www.ulisp.com/show?3L RET

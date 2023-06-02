@@ -1313,7 +1313,7 @@
 	       ("Kyle E. Jones" . "kyle_jones@wonderworks.com"))
 	      (:maintainer nil . "emacs-devel@gnu.org"))])
  (firefox-javascript-repl .
-			  [(0 9 0)
+			  [(0 9 3)
 			   ((emacs
 			     (26 1)))
 			   "Jack into Firefox" tar
@@ -1321,7 +1321,7 @@
 			    (:authors
 			     ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
 			    (:url . "https://elpa.gnu.org/packages/firefox-javascript-repl.html")
-			    (:commit . "7b288e2dbaaba382577518e17a76fd7866ef693c"))])
+			    (:commit . "a531550c7b3a9e6c66758a3508afe40750ca689a"))])
  (flylisp .
 	  [(0 2)
 	   ((emacs
@@ -2299,14 +2299,14 @@
 		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
 		(:commit . "6c38e95b8e846aceb88398c682fd283052924556"))])
  (nano-modeline .
-		[(0 7 2)
+		[(1 0 0)
 		 ((emacs
 		   (27 1)))
 		 "N Λ N O modeline" tar
 		 ((:url . "https://github.com/rougier/nano-modeline")
 		  (:keywords "convenience" "mode-line" "header-line")
 		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-		  (:commit . "61f62aa4716eae4fa89961955323d146e9791fca"))])
+		  (:commit . "cba074e55c847f289085ec35c21fb2ad8df1b483"))])
  (nano-theme .
 	     [(0 3 4)
 	      ((emacs
@@ -3732,7 +3732,7 @@
 	  ("Philip Kaludercic" . "philipk@posteo.net"))
 	 (:commit . "281c9049c1d08cf11c8a1957ea99e5c58795ed3c"))])
  (ulisp-repl .
-	     [(1 0 0)
+	     [(1 0 1)
 	      ((emacs
 		(26 1))
 	       (paredit
@@ -3742,7 +3742,7 @@
 	       (:authors
 		("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
 	       (:url . "https://elpa.gnu.org/packages/ulisp-repl.html")
-	       (:commit . "1464faec29151e591ee171f7a7821bba5291595b"))])
+	       (:commit . "f4f30edf019de237729a6e599ced12699f125ff8"))])
  (undo-tree .
 	    [(0 8 2)
 	     ((queue
