@@ -1,10 +1,1 @@
-Package: project-shells
-Fetcher: github
-Source:  https://github.com/hying-caritas/project-shells.git
-
-Updating /mnt/store/melpa/working/project-shells/
-Checking out 900369828f1a213c60a2207a71d46bc43fd5405c
-Built project-shells in 4.713s, finished at 2023-06-01T10:44:39+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 10:44 packages/project-shells-20210625.647.el
-4.0K -rw-r--r-- 1 root root 520 Jun  1 10:44 packages/project-shells-20210625.647.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

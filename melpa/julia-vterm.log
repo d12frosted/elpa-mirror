@@ -1,10 +1,1 @@
-Package: julia-vterm
-Fetcher: github
-Source:  https://github.com/shg/julia-vterm.el.git
-
-Updating /mnt/store/melpa/working/julia-vterm/
-Checking out e4d1c28935c47429442ddfcd735cb8d8c2d8db66
-Built julia-vterm in 5.494s, finished at 2023-06-01T10:18:20+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 10:18 packages/julia-vterm-20220912.246.el
-4.0K -rw-r--r-- 1 root root 431 Jun  1 10:18 packages/julia-vterm-20220912.246.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

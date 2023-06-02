@@ -1,10 +1,1 @@
-Package: eyebrowse-restore
-Fetcher: github
-Source:  https://github.com/FrostyX/eyebrowse-restore.git
-
-Updating /mnt/store/melpa/working/eyebrowse-restore/
-Checking out 50e8a2cb3c4a64f7fadd0303d178de8a57bb37db
-Built eyebrowse-restore in 5.804s, finished at 2023-06-01T09:56:40+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.0K Jun  1 09:56 packages/eyebrowse-restore-20230312.1821.el
-4.0K -rw-r--r-- 1 root root  610 Jun  1 09:56 packages/eyebrowse-restore-20230312.1821.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

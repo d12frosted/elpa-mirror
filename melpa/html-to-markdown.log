@@ -1,10 +1,1 @@
-Package: html-to-markdown
-Fetcher: github
-Source:  https://github.com/Malabarba/html-to-markdown.git
-
-Updating /mnt/store/melpa/working/html-to-markdown/
-Checking out 60c5498c801be186478cf7c05be05b4430c4a144
-Built html-to-markdown in 6.317s, finished at 2023-06-01T10:12:50+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 10:12 packages/html-to-markdown-20151105.840.el
-4.0K -rw-r--r-- 1 root root 525 Jun  1 10:12 packages/html-to-markdown-20151105.840.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

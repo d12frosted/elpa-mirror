@@ -1,10 +1,1 @@
-Package: rcirc-groups
-Fetcher: github
-Source:  https://github.com/dimitri/rcirc-groups.git
-
-Updating /mnt/store/melpa/working/rcirc-groups/
-Checking out b68ece9d219b909244d4e3c0d8bf6a746d6fead7
-Built rcirc-groups in 4.608s, finished at 2023-06-01T10:47:15+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.6K Jun  1 10:47 packages/rcirc-groups-20170731.2101.el
-4.0K -rw-r--r-- 1 root root  435 Jun  1 10:47 packages/rcirc-groups-20170731.2101.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

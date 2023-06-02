@@ -1,10 +1,1 @@
-Package: latex-change-env
-Fetcher: gitlab
-Source:  https://gitlab.com/slotThe/change-env.git
-
-Updating /mnt/store/melpa/working/latex-change-env/
-Checking out 748cdbb4bbf29a2e5053cf3d965e95cc7db67fac
-Built latex-change-env in 7.784s, finished at 2023-06-01T10:20:44+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 21K Jun  1 10:20 packages/latex-change-env-20230220.637.el
-4.0K -rw-r--r-- 1 root root 523 Jun  1 10:20 packages/latex-change-env-20230220.637.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

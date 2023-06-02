@@ -1,10 +1,1 @@
-Package: porthole
-Fetcher: github
-Source:  https://github.com/jcaw/porthole.git
-
-Updating /mnt/store/melpa/working/porthole/
-Checking out 9e68b419acf9245208f8094e10041b7f04511473
-Built porthole in 4.866s, finished at 2023-06-01T10:43:48+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 31K Jun  1 10:43 packages/porthole-20200404.1454.el
-4.0K -rw-r--r-- 1 root root 480 Jun  1 10:43 packages/porthole-20200404.1454.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

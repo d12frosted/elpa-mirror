@@ -1,10 +1,1 @@
-Package: exwm-firefox-evil
-Fetcher: github
-Source:  https://github.com/walseb/exwm-firefox-evil.git
-
-Updating /mnt/store/melpa/working/exwm-firefox-evil/
-Checking out a377326e2e4ac386a0abb3fc9b1b356a0d955b61
-Built exwm-firefox-evil in 5.397s, finished at 2023-06-01T09:56:34+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  1 09:56 packages/exwm-firefox-evil-20220318.1958.el
-4.0K -rw-r--r-- 1 root root 616 Jun  1 09:56 packages/exwm-firefox-evil-20220318.1958.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: flymake-nasm
-Fetcher: github
-Source:  https://github.com/juergenhoetzel/flymake-nasm.git
-
-Updating /mnt/store/melpa/working/flymake-nasm/
-Checking out 27e58d7f3a48ca6fc12238fe6c888a3fdffc3f75
-Built flymake-nasm in 5.396s, finished at 2023-06-01T10:01:27+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Jun  1 10:01 packages/flymake-nasm-20210310.1540.el
-4.0K -rw-r--r-- 1 root root  460 Jun  1 10:01 packages/flymake-nasm-20210310.1540.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

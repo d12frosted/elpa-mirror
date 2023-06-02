@@ -1,10 +1,1 @@
-Package: session
-Fetcher: github
-Source:  https://github.com/emacsorphanage/session.git
-
-Updating /mnt/store/melpa/working/session/
-Checking out 3be207c50dfe964de3cbf5cd8fa9b07fc7d2e609
-Built session in 4.915s, finished at 2023-06-01T10:51:57+0000
- ✓ Success:
- 76K -rwxr-xr-x 1 root root 74K Jun  1 10:51 packages/session-20210422.53.el
-4.0K -rw-r--r-- 1 root root 512 Jun  1 10:51 packages/session-20210422.53.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: rimero-theme
-Fetcher: github
-Source:  https://github.com/yveszoundi/emacs-rimero-theme.git
-
-Updating /mnt/store/melpa/working/rimero-theme/
-Checking out a2e706c2b34f749019979a133f08a2d94a1104b3
-Built rimero-theme in 8.128s, finished at 2023-06-01T10:49:26+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Jun  1 10:49 packages/rimero-theme-20180901.1348.el
-4.0K -rw-r--r-- 1 root root 511 Jun  1 10:49 packages/rimero-theme-20180901.1348.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

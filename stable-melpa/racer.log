@@ -1,10 +1,1 @@
-Package: racer
-Fetcher: github
-Source:  https://github.com/racer-rust/emacs-racer.git
-
-Updating /mnt/store/melpa/working/racer/
-Checking out 1e63e98626737ea9b662d4a9b1ffd6842b1c648c
-Built racer in 4.376s, finished at 2023-06-01T10:46:46+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root 35K Jun  1 10:46 packages/racer-20210307.243.el
-4.0K -rw-r--r-- 1 root root 511 Jun  1 10:46 packages/racer-20210307.243.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

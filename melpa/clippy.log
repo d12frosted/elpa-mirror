@@ -1,10 +1,1 @@
-Package: clippy
-Fetcher: github
-Source:  https://github.com/Fuco1/clippy.el.git
-
-Updating /mnt/store/melpa/working/clippy/
-Checking out 85aec3129ff17f71ea4541cfadbb7b56b31a7474
-Built clippy in 8.161s, finished at 2023-06-01T09:38:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.2K Jun  1 09:38 packages/clippy-20230118.1924.el
-4.0K -rw-r--r-- 1 root root  432 Jun  1 09:38 packages/clippy-20230118.1924.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

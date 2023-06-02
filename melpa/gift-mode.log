@@ -1,10 +1,1 @@
-Package: gift-mode
-Fetcher: github
-Source:  https://github.com/csrhodes/gift-mode.git
-
-Updating /mnt/store/melpa/working/gift-mode/
-Checking out c93354e8fe1173b22f398f17b127875807f15b87
-Built gift-mode in 4.514s, finished at 2023-06-01T10:04:00+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Jun  1 10:03 packages/gift-mode-20210528.1459.el
-4.0K -rw-r--r-- 1 root root  425 Jun  1 10:03 packages/gift-mode-20210528.1459.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

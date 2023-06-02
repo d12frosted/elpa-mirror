@@ -1,10 +1,1 @@
-Package: textile-mode
-Fetcher: github
-Source:  https://github.com/juba/textile-mode.git
-
-Updating /mnt/store/melpa/working/textile-mode/
-Checking out 8f8c09ef097a95a713307fdb5c92b9778dfbc1fc
-Built textile-mode in 4.931s, finished at 2023-06-01T10:59:36+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 10:59 packages/textile-mode-20230112.1030.el
-4.0K -rw-r--r-- 1 root root 413 Jun  1 10:59 packages/textile-mode-20230112.1030.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

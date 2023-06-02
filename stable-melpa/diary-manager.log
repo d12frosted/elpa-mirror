@@ -1,10 +1,1 @@
-Package: diary-manager
-Fetcher: github
-Source:  https://github.com/radian-software/diary-manager.git
-
-Updating /mnt/store/melpa/working/diary-manager/
-Checking out 56c739224e5bb845d275bfe3f4e420285de3a929
-Built diary-manager in 6.388s, finished at 2023-06-01T09:45:24+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Jun  1 09:45 packages/diary-manager-20220929.2042.el
-4.0K -rw-r--r-- 1 root root 465 Jun  1 09:45 packages/diary-manager-20220929.2042.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

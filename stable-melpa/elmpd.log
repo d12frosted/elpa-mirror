@@ -1,10 +1,1 @@
-Package: elmpd
-Fetcher: github
-Source:  https://github.com/sp1ff/elmpd.git
-
-Updating /mnt/store/melpa/working/elmpd/
-Checking out 4b42a90610fdb05ac1a2811da5acd55493715795
-Built elmpd in 7.227s, finished at 2023-06-01T09:51:02+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 40K Jun  1 09:50 packages/elmpd-20210904.1340.el
-4.0K -rw-r--r-- 1 root root 411 Jun  1 09:50 packages/elmpd-20210904.1340.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

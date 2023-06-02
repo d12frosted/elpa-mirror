@@ -1,10 +1,1 @@
-Package: simple-rtm
-Fetcher: gitlab
-Source:  https://gitlab.com/mbunkus/simple-rtm.git
-
-Updating /mnt/store/melpa/working/simple-rtm/
-Checking out 37c5feffea7c9b571279b6f549d06cf9c0720273
-Built simple-rtm in 5.219s, finished at 2023-06-01T10:53:08+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 59K Jun  1 10:53 packages/simple-rtm-20160222.1534.el
-4.0K -rw-r--r-- 1 root root 476 Jun  1 10:53 packages/simple-rtm-20160222.1534.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

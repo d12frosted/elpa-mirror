@@ -1,10 +1,1 @@
-Package: all-the-icons-completion
-Fetcher: github
-Source:  https://github.com/iyefrat/all-the-icons-completion.git
-
-Updating /mnt/store/melpa/working/all-the-icons-completion/
-Checking out b08f053cee444546ab44a05fd541f59e8bc8983b
-Built all-the-icons-completion in 5.151s, finished at 2023-06-01T09:30:03+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Jun  1 09:30 packages/all-the-icons-completion-20230224.1610.el
-4.0K -rw-r--r-- 1 root root  546 Jun  1 09:30 packages/all-the-icons-completion-20230224.1610.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

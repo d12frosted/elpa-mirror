@@ -1,10 +1,1 @@
-Package: poly-noweb
-Fetcher: github
-Source:  https://github.com/polymode/poly-noweb.git
-
-Updating /mnt/store/melpa/working/poly-noweb/
-Checking out 3b0cd36ca9a707e8a09337a3468fa85d81fc461c
-Built poly-noweb in 4.891s, finished at 2023-06-01T10:43:22+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.3K Jun  1 10:43 packages/poly-noweb-20200316.1315.el
-4.0K -rw-r--r-- 1 root root  429 Jun  1 10:43 packages/poly-noweb-20200316.1315.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

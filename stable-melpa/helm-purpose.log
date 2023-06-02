@@ -1,10 +1,1 @@
-Package: helm-purpose
-Fetcher: github
-Source:  https://github.com/bmag/helm-purpose.git
-
-Updating /mnt/store/melpa/working/helm-purpose/
-Checking out 9ff4c21c1e9ebc7afb851b738f815df7343bb287
-Built helm-purpose in 4.622s, finished at 2023-06-01T10:10:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 4.0K Jun  1 10:10 packages/helm-purpose-20170114.1636.el
-4.0K -rw-r--r-- 1 root root  388 Jun  1 10:10 packages/helm-purpose-20170114.1636.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

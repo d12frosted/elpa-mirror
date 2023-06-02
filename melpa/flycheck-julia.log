@@ -1,10 +1,1 @@
-Package: flycheck-julia
-Fetcher: github
-Source:  https://github.com/gdkrmr/flycheck-julia.git
-
-Updating /mnt/store/melpa/working/flycheck-julia/
-Checking out 213b60a5a9a1cb7887260e1d159b5bb27167cbb6
-Built flycheck-julia in 10.143s, finished at 2023-06-01T09:59:46+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.4K Jun  1 09:59 packages/flycheck-julia-20170729.2141.el
-4.0K -rw-r--r-- 1 root root  483 Jun  1 09:59 packages/flycheck-julia-20170729.2141.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

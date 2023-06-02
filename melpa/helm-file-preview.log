@@ -1,10 +1,1 @@
-Package: helm-file-preview
-Fetcher: github
-Source:  https://github.com/jcs-legacy/helm-file-preview.git
-
-Updating /mnt/store/melpa/working/helm-file-preview/
-Checking out bebd4e9c42543c9003984442701db2c384c21f3e
-Built helm-file-preview in 5.048s, finished at 2023-06-01T10:09:22+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.6K Jun  1 10:09 packages/helm-file-preview-20220720.531.el
-4.0K -rw-r--r-- 1 root root  570 Jun  1 10:09 packages/helm-file-preview-20220720.531.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

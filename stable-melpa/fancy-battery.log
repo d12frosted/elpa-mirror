@@ -1,10 +1,1 @@
-Package: fancy-battery
-Fetcher: github
-Source:  https://github.com/emacsorphanage/fancy-battery.git
-
-Updating /mnt/store/melpa/working/fancy-battery/
-Checking out bcc2d7960ba207b5b4db96fe40f7d72670fdbb68
-Built fancy-battery in 4.836s, finished at 2023-06-01T09:56:51+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Jun  1 09:56 packages/fancy-battery-20150101.1204.el
-4.0K -rw-r--r-- 1 root root  469 Jun  1 09:56 packages/fancy-battery-20150101.1204.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

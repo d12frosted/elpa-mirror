@@ -1,10 +1,1 @@
-Package: yagist
-Fetcher: github
-Source:  https://github.com/mhayashi1120/yagist.el.git
-
-Updating /mnt/store/melpa/working/yagist/
-Checking out 10da4baa272ff0f7052f17debecc340764c7003f
-Built yagist in 4.541s, finished at 2023-06-01T11:07:57+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Jun  1 11:07 packages/yagist-20160418.508.el
-4.0K -rw-r--r-- 1 root root 384 Jun  1 11:07 packages/yagist-20160418.508.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

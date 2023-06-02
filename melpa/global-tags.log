@@ -1,10 +1,1 @@
-Package: global-tags
-Fetcher: git
-Source:  https://git.launchpad.net/global-tags.el
-
-Updating /mnt/store/melpa/working/global-tags/
-Checking out aaa37da4c538f35a90149ef4ad3d8b0922af54ab
-Built global-tags in 10.654s, finished at 2023-06-01T10:05:05+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 29K Jun  1 10:05 packages/global-tags-20211120.347.el
-4.0K -rw-r--r-- 1 root root 578 Jun  1 10:05 packages/global-tags-20211120.347.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

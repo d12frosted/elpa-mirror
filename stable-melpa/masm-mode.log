@@ -1,10 +1,1 @@
-Package: masm-mode
-Fetcher: github
-Source:  https://github.com/YiGeeker/masm-mode.git
-
-Updating /mnt/store/melpa/working/masm-mode/
-Checking out ab63524d195332ec9f703783704231606e69c292
-Built masm-mode in 5.078s, finished at 2023-06-01T10:25:28+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 29K Jun  1 10:25 packages/masm-mode-20200308.1450.el
-4.0K -rw-r--r-- 1 root root 444 Jun  1 10:25 packages/masm-mode-20200308.1450.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

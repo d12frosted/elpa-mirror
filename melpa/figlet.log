@@ -1,10 +1,1 @@
-Package: figlet
-Fetcher: github
-Source:  https://github.com/jpkotta/figlet.git
-
-Updating /mnt/store/melpa/working/figlet/
-Checking out 19a38783a90e151faf047ff233a21a729db0cea9
-Built figlet in 5.036s, finished at 2023-06-01T09:57:21+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Jun  1 09:57 packages/figlet-20160218.2237.el
-4.0K -rw-r--r-- 1 root root  338 Jun  1 09:57 packages/figlet-20160218.2237.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

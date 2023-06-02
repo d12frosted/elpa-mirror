@@ -1,10 +1,1 @@
-Package: color-theme-approximate
-Fetcher: github
-Source:  https://github.com/tungd/color-theme-approximate.git
-
-Updating /mnt/store/melpa/working/color-theme-approximate/
-Checking out f54301ca39bc5d2ffb000f233f8114184a3e7d71
-Built color-theme-approximate in 3.843s, finished at 2023-06-01T09:40:01+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Jun  1 09:40 packages/color-theme-approximate-20140228.436.el
-4.0K -rw-r--r-- 1 root root  345 Jun  1 09:40 packages/color-theme-approximate-20140228.436.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

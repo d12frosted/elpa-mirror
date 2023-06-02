@@ -1,10 +1,1 @@
-Package: git-timemachine
-Fetcher: codeberg
-Source:  https://codeberg.org/pidu/git-timemachine.git
-
-Updating /mnt/store/melpa/working/git-timemachine/
-Checking out 13769fb603ae88c64566529eae4525ce88026e86
-Built git-timemachine in 6.322s, finished at 2023-06-01T10:04:33+0000
- ✓ Success:
- 20K -rwxr-xr-x 1 root root 19K Jun  1 10:04 packages/git-timemachine-20230413.620.el
-4.0K -rw-r--r-- 1 root root 496 Jun  1 10:04 packages/git-timemachine-20230413.620.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

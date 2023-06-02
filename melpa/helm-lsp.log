@@ -1,10 +1,1 @@
-Package: helm-lsp
-Fetcher: github
-Source:  https://github.com/emacs-lsp/helm-lsp.git
-
-Updating /mnt/store/melpa/working/helm-lsp/
-Checking out c2c6974dadfac459b1a69a1217441283874cea92
-Built helm-lsp in 5.380s, finished at 2023-06-01T10:10:08+0000
- ✓ Success:
- 16K -rwxr-xr-x 1 root root 14K Jun  1 10:10 packages/helm-lsp-20210419.2014.el
-4.0K -rw-r--r-- 1 root root 515 Jun  1 10:10 packages/helm-lsp-20210419.2014.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

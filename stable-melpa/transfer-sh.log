@@ -1,10 +1,1 @@
-Package: transfer-sh
-Fetcher: gitlab
-Source:  https://gitlab.com/tuedachu/transfer-sh.el.git
-
-Updating /mnt/store/melpa/working/transfer-sh/
-Checking out 0621a66d00ec91a209a542c10b158095088bd44d
-Built transfer-sh in 4.883s, finished at 2023-06-01T11:00:56+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  1 11:00 packages/transfer-sh-20200601.1708.el
-4.0K -rw-r--r-- 1 root root 341 Jun  1 11:00 packages/transfer-sh-20200601.1708.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

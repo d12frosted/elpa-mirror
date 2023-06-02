@@ -1,10 +1,1 @@
-Package: esqlite-helm
-Fetcher: github
-Source:  https://github.com/mhayashi1120/Emacs-esqlite.git
-
-Updating /mnt/store/melpa/working/esqlite-helm/
-Checking out 84d5b16198f30949c544affba751ee0d58a000d9
-Built esqlite-helm in 4.165s, finished at 2023-06-01T09:54:25+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 09:54 packages/esqlite-helm-20151116.850.el
-4.0K -rw-r--r-- 1 root root 494 Jun  1 09:54 packages/esqlite-helm-20151116.850.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: fwb-cmds
-Fetcher: github
-Source:  https://github.com/tarsius/fwb-cmds.git
-
-Updating /mnt/store/melpa/working/fwb-cmds/
-Checking out 1b375c6890de61eaccc97c92f2b46de6f9205417
-Built fwb-cmds in 7.797s, finished at 2023-06-01T10:03:08+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Jun  1 10:03 packages/fwb-cmds-20230213.1143.el
-4.0K -rw-r--r-- 1 root root  476 Jun  1 10:03 packages/fwb-cmds-20230213.1143.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

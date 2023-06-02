@@ -1,10 +1,1 @@
-Package: creole
-Fetcher: github
-Source:  https://github.com/nicferrier/elwikicreole.git
-
-Updating /mnt/store/melpa/working/creole/
-Checking out 7d5cffe93857f6c75ca09ac79c0e47b8d4410e53
-Built creole in 4.530s, finished at 2023-06-01T09:43:00+0000
- ✓ Success:
- 68K -rw-r--r-- 1 root root 66K Jun  1 09:42 packages/creole-20140924.1500.el
-4.0K -rw-r--r-- 1 root root 406 Jun  1 09:42 packages/creole-20140924.1500.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

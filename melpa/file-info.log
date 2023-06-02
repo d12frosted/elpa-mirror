@@ -1,10 +1,1 @@
-Package: file-info
-Fetcher: github
-Source:  https://github.com/Artawower/file-info.el.git
-
-Updating /mnt/store/melpa/working/file-info/
-Checking out cb06d793b7e1ba769189f2002236305eba002660
-Built file-info in 5.317s, finished at 2023-06-01T09:57:21+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 20K Jun  1 09:57 packages/file-info-20230427.714.el
-4.0K -rw-r--r-- 1 root root 533 Jun  1 09:57 packages/file-info-20230427.714.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

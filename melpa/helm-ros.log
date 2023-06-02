@@ -1,10 +1,1 @@
-Package: helm-ros
-Fetcher: github
-Source:  https://github.com/davidlandry93/helm-ros.git
-
-Updating /mnt/store/melpa/working/helm-ros/
-Checking out 92b0b215f6a017f0f57f1af15466cc0b2a5a0135
-Built helm-ros in 4.289s, finished at 2023-06-01T10:10:46+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 10:10 packages/helm-ros-20160812.1752.el
-4.0K -rw-r--r-- 1 root root 509 Jun  1 10:10 packages/helm-ros-20160812.1752.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

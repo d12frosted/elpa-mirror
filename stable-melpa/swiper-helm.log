@@ -1,10 +1,1 @@
-Package: swiper-helm
-Fetcher: github
-Source:  https://github.com/abo-abo/swiper-helm.git
-
-Updating /mnt/store/melpa/working/swiper-helm/
-Checking out 93fb6db87bc6a5967898b5fd3286954cc72a0008
-Built swiper-helm in 4.691s, finished at 2023-06-01T10:57:58+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.5K Jun  1 10:57 packages/swiper-helm-20180131.1744.el
-4.0K -rw-r--r-- 1 root root  497 Jun  1 10:57 packages/swiper-helm-20180131.1744.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

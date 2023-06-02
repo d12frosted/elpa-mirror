@@ -1,10 +1,1 @@
-Package: lsp-ivy
-Fetcher: github
-Source:  https://github.com/emacs-lsp/lsp-ivy.git
-
-Updating /mnt/store/melpa/working/lsp-ivy/
-Checking out 9ecf4dd9b1207109802bd1882aa621eb1c385106
-Built lsp-ivy in 5.236s, finished at 2023-06-01T10:23:24+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.2K Jun  1 10:23 packages/lsp-ivy-20220831.1823.el
-4.0K -rw-r--r-- 1 root root  314 Jun  1 10:23 packages/lsp-ivy-20220831.1823.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

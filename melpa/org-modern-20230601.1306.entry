@@ -1,0 +1,15 @@
+(org-modern .
+	    [(20230601 1306)
+	     ((emacs
+	       (27 1))
+	      (compat
+	       (29 1 4 0)))
+	     "Modern looks for Org" single
+	     ((:commit . "1977053f105762b81228c4cf66b00957213f3681")
+	      (:authors
+	       ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	      (:maintainers
+	       ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	      (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	      (:keywords "outlines" "hypermedia" "wp")
+	      (:url . "https://github.com/minad/org-modern"))])

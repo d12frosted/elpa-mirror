@@ -1,10 +1,1 @@
-Package: helm-esa
-Fetcher: github
-Source:  https://github.com/masutaka/emacs-helm-esa.git
-
-Updating /mnt/store/melpa/working/helm-esa/
-Checking out d93b4af404346870cb2cf9c257d055332ef3f577
-Built helm-esa in 5.204s, finished at 2023-06-01T10:09:15+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Jun  1 10:09 packages/helm-esa-20190721.1429.el
-4.0K -rw-r--r-- 1 root root  474 Jun  1 10:09 packages/helm-esa-20190721.1429.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: eclipse-theme
-Fetcher: github
-Source:  https://github.com/abo-abo/eclipse-theme.git
-
-Updating /mnt/store/melpa/working/eclipse-theme/
-Checking out dcf97865512ed450f9d5137c1a05e12edb5b7f80
-Built eclipse-theme in 4.445s, finished at 2023-06-01T09:48:55+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.9K Jun  1 09:48 packages/eclipse-theme-20191113.1518.el
-4.0K -rw-r--r-- 1 root root  406 Jun  1 09:48 packages/eclipse-theme-20191113.1518.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

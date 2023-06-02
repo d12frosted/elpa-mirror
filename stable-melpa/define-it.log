@@ -1,10 +1,1 @@
-Package: define-it
-Fetcher: github
-Source:  https://github.com/jcs-elpa/define-it.git
-
-Updating /mnt/store/melpa/working/define-it/
-Checking out de026f399d5b7fa9286f7733b2e3416c6f234372
-Built define-it in 7.720s, finished at 2023-06-01T09:44:47+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 17K Jun  1 09:44 packages/define-it-20220713.750.el
-4.0K -rw-r--r-- 1 root root 683 Jun  1 09:44 packages/define-it-20220713.750.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

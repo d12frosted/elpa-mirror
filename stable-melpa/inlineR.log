@@ -1,10 +1,1 @@
-Package: inlineR
-Fetcher: github
-Source:  https://github.com/emacsattic/inlineR.git
-
-Updating /mnt/store/melpa/working/inlineR/
-Checking out bf6450a3540aa3538546d312324c41befd0a4e54
-Built inlineR in 4.375s, finished at 2023-06-01T10:15:37+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.7K Jun  1 10:15 packages/inlineR-20191017.1920.el
-4.0K -rw-r--r-- 1 root root  371 Jun  1 10:15 packages/inlineR-20191017.1920.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

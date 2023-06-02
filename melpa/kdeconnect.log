@@ -1,10 +1,1 @@
-Package: kdeconnect
-Fetcher: github
-Source:  https://github.com/carldotac/kdeconnect.el.git
-
-Updating /mnt/store/melpa/working/kdeconnect/
-Checking out 4977af8cb5fdc21da770f3ee43ad7823f2937da3
-Built kdeconnect in 3.555s, finished at 2023-06-01T10:18:48+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jun  1 10:18 packages/kdeconnect-20210519.2016.el
-4.0K -rw-r--r-- 1 root root  371 Jun  1 10:18 packages/kdeconnect-20210519.2016.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

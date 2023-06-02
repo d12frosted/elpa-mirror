@@ -1,10 +1,1 @@
-Package: reykjavik-theme
-Fetcher: github
-Source:  https://github.com/mswift42/reykjavik-theme.git
-
-Updating /mnt/store/melpa/working/reykjavik-theme/
-Checking out f6d8e83946633603234cd1dac725e17447f40bce
-Built reykjavik-theme in 6.637s, finished at 2023-06-01T10:48:58+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  1 10:48 packages/reykjavik-theme-20201219.947.el
-4.0K -rw-r--r-- 1 root root 291 Jun  1 10:48 packages/reykjavik-theme-20201219.947.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

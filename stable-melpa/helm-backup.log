@@ -1,10 +1,1 @@
-Package: helm-backup
-Fetcher: github
-Source:  https://github.com/antham/helm-backup.git
-
-Updating /mnt/store/melpa/working/helm-backup/
-Checking out 691fe542f38fc7c8cca409997f6a0ff5d76ad6c2
-Built helm-backup in 4.640s, finished at 2023-06-01T10:08:41+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 10:08 packages/helm-backup-20180911.614.el
-4.0K -rw-r--r-- 1 root root 539 Jun  1 10:08 packages/helm-backup-20180911.614.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

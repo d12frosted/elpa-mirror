@@ -1,10 +1,1 @@
-Package: helm-xref
-Fetcher: github
-Source:  https://github.com/brotzeit/helm-xref.git
-
-Updating /mnt/store/melpa/working/helm-xref/
-Checking out ea0e4ed8a9baf236e4085cbc7178241f109a53fa
-Built helm-xref in 4.644s, finished at 2023-06-01T10:11:21+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.7K Jun  1 10:11 packages/helm-xref-20211017.1334.el
-4.0K -rw-r--r-- 1 root root  467 Jun  1 10:11 packages/helm-xref-20211017.1334.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

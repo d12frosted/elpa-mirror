@@ -1,10 +1,1 @@
-Package: helm-gitlab
-Fetcher: github
-Source:  https://github.com/nlamirault/emacs-gitlab.git
-
-Updating /mnt/store/melpa/working/helm-gitlab/
-Checking out 68318aca3206d50701039c9aae39734ca29a49f9
-Built helm-gitlab in 4.096s, finished at 2023-06-01T10:09:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Jun  1 10:09 packages/helm-gitlab-20180312.1647.el
-4.0K -rw-r--r-- 1 root root  569 Jun  1 10:09 packages/helm-gitlab-20180312.1647.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

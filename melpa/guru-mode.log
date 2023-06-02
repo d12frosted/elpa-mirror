@@ -1,10 +1,1 @@
-Package: guru-mode
-Fetcher: github
-Source:  https://github.com/bbatsov/guru-mode.git
-
-Updating /mnt/store/melpa/working/guru-mode/
-Checking out a3370e547eab260d24774cd50ccbe865373c8631
-Built guru-mode in 4.387s, finished at 2023-06-01T10:07:49+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Jun  1 10:07 packages/guru-mode-20211025.1157.el
-4.0K -rw-r--r-- 1 root root  425 Jun  1 10:07 packages/guru-mode-20211025.1157.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: media-thumbnail
-Fetcher: github
-Source:  https://github.com/jojojames/media-thumbnail.git
-
-Updating /mnt/store/melpa/working/media-thumbnail/
-Checking out 14e626fe7ee714ab45c9e636d00a26e89aa2832a
-Built media-thumbnail in 4.563s, finished at 2023-06-01T10:25:51+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  1 10:25 packages/media-thumbnail-20220827.2325.el
-4.0K -rw-r--r-- 1 root root 463 Jun  1 10:25 packages/media-thumbnail-20220827.2325.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

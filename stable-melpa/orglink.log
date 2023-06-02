@@ -1,10 +1,1 @@
-Package: orglink
-Fetcher: github
-Source:  https://github.com/tarsius/orglink.git
-
-Updating /mnt/store/melpa/working/orglink/
-Checking out afbeffdfa15a9fc532bba2e03626b9e82768ba2c
-Built orglink in 5.217s, finished at 2023-06-01T10:38:05+0000
- ✓ Success:
- 12K -rwxr-xr-x 1 root root 12K Jun  1 10:38 packages/orglink-20230531.1610.el
-4.0K -rw-r--r-- 1 root root 499 Jun  1 10:38 packages/orglink-20230531.1610.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

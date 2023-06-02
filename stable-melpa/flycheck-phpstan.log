@@ -1,10 +1,1 @@
-Package: flycheck-phpstan
-Fetcher: github
-Source:  https://github.com/emacs-php/phpstan.el.git
-
-Updating /mnt/store/melpa/working/flycheck-phpstan/
-Checking out 2dc25cb2f3d83484ea0eb063c9ffca8148828a2b
-Built flycheck-phpstan in 8.455s, finished at 2023-06-01T10:00:11+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Jun  1 10:00 packages/flycheck-phpstan-20230417.1142.el
-4.0K -rw-r--r-- 1 root root  505 Jun  1 10:00 packages/flycheck-phpstan-20230417.1142.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: helm-gtags
-Fetcher: github
-Source:  https://github.com/emacsorphanage/helm-gtags.git
-
-Updating /mnt/store/melpa/working/helm-gtags/
-Checking out a15fe1dd272d252ad933d8129db1dce02fd41adb
-Built helm-gtags in 4.830s, finished at 2023-06-01T10:09:45+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 58K Jun  1 10:09 packages/helm-gtags-20200602.1610.el
-4.0K -rw-r--r-- 1 root root 457 Jun  1 10:09 packages/helm-gtags-20200602.1610.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: outrespace
-Fetcher: github
-Source:  https://github.com/articuluxe/outrespace.git
-
-Updating /mnt/store/melpa/working/outrespace/
-Checking out 3c8efa5e7903d88a2e81178a5def627f37379ee4
-Built outrespace in 4.871s, finished at 2023-06-01T10:38:41+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 10:38 packages/outrespace-20220218.1936.el
-4.0K -rw-r--r-- 1 root root 490 Jun  1 10:38 packages/outrespace-20220218.1936.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

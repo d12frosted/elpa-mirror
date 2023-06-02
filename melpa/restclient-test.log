@@ -1,10 +1,1 @@
-Package: restclient-test
-Fetcher: github
-Source:  https://github.com/simenheg/restclient-test.el.git
-
-Updating /mnt/store/melpa/working/restclient-test/
-Checking out 3c6661d087526510a04ea9de421c5869a1a1d061
-Built restclient-test in 7.383s, finished at 2023-06-01T10:48:46+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Jun  1 10:48 packages/restclient-test-20210422.1815.el
-4.0K -rw-r--r-- 1 root root  465 Jun  1 10:48 packages/restclient-test-20210422.1815.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

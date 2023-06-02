@@ -1,10 +1,1 @@
-Package: media-progress
-Fetcher: github
-Source:  https://github.com/jumper047/media-progress.git
-
-Updating /mnt/store/melpa/working/media-progress/
-Checking out 0b22f92cf4bd40df6057485f63079c779eda9696
-Built media-progress in 4.182s, finished at 2023-06-01T10:25:48+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jun  1 10:25 packages/media-progress-20230527.2209.el
-4.0K -rw-r--r-- 1 root root  487 Jun  1 10:25 packages/media-progress-20230527.2209.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: smartscan
-Fetcher: github
-Source:  https://github.com/mickeynp/smart-scan.git
-
-Updating /mnt/store/melpa/working/smartscan/
-Checking out 234e077145710a174c20742de792b97ed2f965f6
-Built smartscan in 5.238s, finished at 2023-06-01T10:54:14+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Jun  1 10:54 packages/smartscan-20170211.2033.el
-4.0K -rw-r--r-- 1 root root  410 Jun  1 10:54 packages/smartscan-20170211.2033.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: mqtt-mode
-Fetcher: github
-Source:  https://github.com/andrmuel/mqtt-mode.git
-
-Updating /mnt/store/melpa/working/mqtt-mode/
-Checking out 613e70e9b9940e635e779994b5c83f86eb62c8e6
-Built mqtt-mode in 5.422s, finished at 2023-06-01T10:28:54+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jun  1 10:28 packages/mqtt-mode-20180611.1735.el
-4.0K -rw-r--r-- 1 root root  468 Jun  1 10:28 packages/mqtt-mode-20180611.1735.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

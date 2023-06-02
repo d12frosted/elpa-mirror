@@ -1,10 +1,1 @@
-Package: shpec-mode
-Fetcher: github
-Source:  https://github.com/shpec/shpec-mode.git
-
-Updating /mnt/store/melpa/working/shpec-mode/
-Checking out 76bccd63e3b70233a6c9ca0798dd03550952cc76
-Built shpec-mode in 5.168s, finished at 2023-06-01T10:52:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.1K Jun  1 10:52 packages/shpec-mode-20150530.922.el
-4.0K -rw-r--r-- 1 root root  456 Jun  1 10:52 packages/shpec-mode-20150530.922.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

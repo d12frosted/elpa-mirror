@@ -1,10 +1,1 @@
-Package: browse-at-remote
-Fetcher: github
-Source:  https://github.com/rmuslimov/browse-at-remote.git
-
-Updating /mnt/store/melpa/working/browse-at-remote/
-Checking out 1c2a565bb7275bf78f23d471e32dd8c696523b8c
-Built browse-at-remote in 5.282s, finished at 2023-06-01T09:35:28+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 25K Jun  1 09:35 packages/browse-at-remote-20230223.554.el
-4.0K -rw-r--r-- 1 root root 635 Jun  1 09:35 packages/browse-at-remote-20230223.554.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

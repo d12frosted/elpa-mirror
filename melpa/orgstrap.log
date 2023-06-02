@@ -1,10 +1,1 @@
-Package: orgstrap
-Fetcher: github
-Source:  https://github.com/tgbugs/orgstrap.git
-
-Updating /mnt/store/melpa/working/orgstrap/
-Checking out f35bccde556b0f82515e79ee69f4379469276356
-Built orgstrap in 7.286s, finished at 2023-06-01T10:38:11+0000
- ✓ Success:
- 64K -rw-r--r-- 1 root root 63K Jun  1 10:38 packages/orgstrap-20230408.2232.el
-4.0K -rw-r--r-- 1 root root 407 Jun  1 10:38 packages/orgstrap-20230408.2232.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: helm-lean
-Fetcher: github
-Source:  https://github.com/leanprover/lean-mode.git
-
-Updating /mnt/store/melpa/working/helm-lean/
-Checking out 5c50338ac149ca5225fc737be291db1f63c45f1d
-Built helm-lean in 4.985s, finished at 2023-06-01T10:10:01+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.7K Jun  1 10:10 packages/helm-lean-20210305.1705.el
-4.0K -rw-r--r-- 1 root root  709 Jun  1 10:10 packages/helm-lean-20210305.1705.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

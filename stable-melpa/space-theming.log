@@ -1,10 +1,1 @@
-Package: space-theming
-Fetcher: github
-Source:  https://github.com/p3r7/space-theming.git
-
-Updating /mnt/store/melpa/working/space-theming/
-Checking out 31dca6954df643255175f7df68a86892aa3c71a7
-Built space-theming in 5.922s, finished at 2023-06-01T10:55:15+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jun  1 10:55 packages/space-theming-20200502.1032.el
-4.0K -rw-r--r-- 1 root root  239 Jun  1 10:55 packages/space-theming-20200502.1032.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

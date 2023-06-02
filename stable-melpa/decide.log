@@ -1,10 +1,1 @@
-Package: decide
-Fetcher: github
-Source:  https://github.com/lifelike/decide-mode.git
-
-Updating /mnt/store/melpa/working/decide/
-Checking out 9c0e4c4493f9af9a981627d0630ac6cb2d8c98f0
-Built decide in 4.906s, finished at 2023-06-01T09:44:35+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 25K Jun  1 09:44 packages/decide-20230424.1647.el
-4.0K -rw-r--r-- 1 root root 325 Jun  1 09:44 packages/decide-20230424.1647.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

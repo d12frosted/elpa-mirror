@@ -1,10 +1,1 @@
-Package: company-anaconda
-Fetcher: github
-Source:  https://github.com/pythonic-emacs/company-anaconda.git
-
-Updating /mnt/store/melpa/working/company-anaconda/
-Checking out da1566db41a68809ef7f91ebf2de28118067c89b
-Built company-anaconda in 4.531s, finished at 2023-06-01T09:40:26+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Jun  1 09:40 packages/company-anaconda-20200404.1859.el
-4.0K -rw-r--r-- 1 root root  566 Jun  1 09:40 packages/company-anaconda-20200404.1859.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

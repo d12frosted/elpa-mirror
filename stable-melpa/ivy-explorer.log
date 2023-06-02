@@ -1,10 +1,1 @@
-Package: ivy-explorer
-Fetcher: github
-Source:  https://github.com/clemera/ivy-explorer.git
-
-Updating /mnt/store/melpa/working/ivy-explorer/
-Checking out a413966cfbcecacc082d99297fa1abde0c10d3f3
-Built ivy-explorer in 4.399s, finished at 2023-06-01T10:16:31+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 30K Jun  1 10:16 packages/ivy-explorer-20190909.1921.el
-4.0K -rw-r--r-- 1 root root 498 Jun  1 10:16 packages/ivy-explorer-20190909.1921.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

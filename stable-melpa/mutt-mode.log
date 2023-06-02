@@ -1,10 +1,1 @@
-Package: mutt-mode
-Fetcher: gitlab
-Source:  https://gitlab.com/flexw/mutt-mode.git
-
-Updating /mnt/store/melpa/working/mutt-mode/
-Checking out 1d495de49e6f536459b00d5396a2f5ce5ad4757b
-Built mutt-mode in 5.269s, finished at 2023-06-01T10:29:44+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 10:29 packages/mutt-mode-20191102.2330.el
-4.0K -rw-r--r-- 1 root root 483 Jun  1 10:29 packages/mutt-mode-20191102.2330.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: stripes
-Fetcher: git
-Source:  https://git.smrk.net/stripes.el
-
-Updating /mnt/store/melpa/working/stripes/
-Checking out 4683c9020da14bb1c1f74b90d27a4d9fdc7a9147
-Built stripes in 10.445s, finished at 2023-06-01T10:57:18+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.4K Jun  1 10:57 packages/stripes-20230402.1228.el
-4.0K -rw-r--r-- 1 root root  491 Jun  1 10:57 packages/stripes-20230402.1228.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

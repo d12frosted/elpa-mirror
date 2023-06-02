@@ -1,10 +1,1 @@
-Package: use-package-el-get
-Fetcher: github
-Source:  https://github.com/edvorg/use-package-el-get.git
-
-Updating /mnt/store/melpa/working/use-package-el-get/
-Checking out f33c448ed43ecb003b60ff601ee7ef9b08cff947
-Built use-package-el-get in 9.383s, finished at 2023-06-01T11:03:11+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Jun  1 11:03 packages/use-package-el-get-20180131.505.el
-4.0K -rw-r--r-- 1 root root  535 Jun  1 11:03 packages/use-package-el-get-20180131.505.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

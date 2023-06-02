@@ -1,10 +1,1 @@
-Package: empos
-Fetcher: github
-Source:  https://github.com/dimalik/empos.git
-
-Updating /mnt/store/melpa/working/empos/
-Checking out 7b99ad30e56937adb7e6349777e5a2045597d564
-Built empos in 6.143s, finished at 2023-06-01T09:52:31+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.4K Jun  1 09:52 packages/empos-20151011.1916.el
-4.0K -rw-r--r-- 1 root root  445 Jun  1 09:52 packages/empos-20151011.1916.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

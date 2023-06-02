@@ -1,10 +1,1 @@
-Package: anybar
-Fetcher: github
-Source:  https://github.com/tie-rack/anybar-el.git
-
-Updating /mnt/store/melpa/working/anybar/
-Checking out 7a0743e0d31bcb36ab1bb2e351f3e7139c422ac5
-Built anybar in 5.451s, finished at 2023-06-01T09:30:49+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Jun  1 09:30 packages/anybar-20160816.1421.el
-4.0K -rw-r--r-- 1 root root  335 Jun  1 09:30 packages/anybar-20160816.1421.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

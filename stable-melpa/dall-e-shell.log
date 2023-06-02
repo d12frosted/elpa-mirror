@@ -1,10 +1,1 @@
-Package: dall-e-shell
-Fetcher: github
-Source:  https://github.com/xenodium/chatgpt-shell.git
-
-Updating /mnt/store/melpa/working/dall-e-shell/
-Checking out 0118df8b2017c620608eae5226b9212977266d91
-Built dall-e-shell in 4.777s, finished at 2023-06-01T09:43:54+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 09:43 packages/dall-e-shell-20230524.654.el
-4.0K -rw-r--r-- 1 root root 432 Jun  1 09:43 packages/dall-e-shell-20230524.654.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

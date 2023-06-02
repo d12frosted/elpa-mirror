@@ -1,10 +1,1 @@
-Package: bts
-Fetcher: github
-Source:  https://github.com/aki2o/emacs-bts.git
-
-Updating /mnt/store/melpa/working/bts/
-Checking out df42d58a36447697f93b56e69f5e700b2baef1f9
-Built bts in 5.377s, finished at 2023-06-01T09:35:33+0000
- ✓ Success:
-208K -rw-r--r-- 1 root root 206K Jun  1 09:35 packages/bts-20151109.1333.el
-4.0K -rw-r--r-- 1 root root  586 Jun  1 09:35 packages/bts-20151109.1333.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: mbo70s-theme
-Fetcher: github
-Source:  https://github.com/emacsfodder/emacs-mbo70s-theme.git
-
-Updating /mnt/store/melpa/working/mbo70s-theme/
-Checking out bed3db8965708ed4e9482b224a9b084765c052f2
-Built mbo70s-theme in 3.664s, finished at 2023-06-01T10:25:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.2K Jun  1 10:25 packages/mbo70s-theme-20170808.1315.el
-4.0K -rw-r--r-- 1 root root  370 Jun  1 10:25 packages/mbo70s-theme-20170808.1315.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: helm-ls-hg
-Fetcher: github
-Source:  https://github.com/emacs-helm/helm-ls-hg.git
-
-Updating /mnt/store/melpa/working/helm-ls-hg/
-Checking out 61b91a22fcfb62d0fc56e361ec01ce96973c7165
-Built helm-ls-hg in 5.087s, finished at 2023-06-01T10:10:08+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Jun  1 10:10 packages/helm-ls-hg-20150909.543.el
-4.0K -rw-r--r-- 1 root root  175 Jun  1 10:10 packages/helm-ls-hg-20150909.543.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

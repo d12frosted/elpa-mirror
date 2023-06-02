@@ -1,10 +1,1 @@
-Package: package-utils
-Fetcher: github
-Source:  https://github.com/Silex/package-utils.git
-
-Updating /mnt/store/melpa/working/package-utils/
-Checking out 0168172062467b1bff913ea955b2ef709b43ecfa
-Built package-utils in 4.838s, finished at 2023-06-01T10:39:46+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.2K Jun  1 10:39 packages/package-utils-20220630.2345.el
-4.0K -rw-r--r-- 1 root root  475 Jun  1 10:39 packages/package-utils-20220630.2345.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

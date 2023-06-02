@@ -1,10 +1,1 @@
-Package: org-ac
-Fetcher: github
-Source:  https://github.com/aki2o/org-ac.git
-
-Updating /mnt/store/melpa/working/org-ac/
-Checking out 41e3ef8e4039619d0370c23c66730b3b2e9e32ed
-Built org-ac in 5.209s, finished at 2023-06-01T10:34:07+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.0K Jun  1 10:34 packages/org-ac-20170401.1307.el
-4.0K -rw-r--r-- 1 root root  493 Jun  1 10:34 packages/org-ac-20170401.1307.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: kubernetes-tramp
-Fetcher: github
-Source:  https://github.com/gruggiero/kubernetes-tramp.git
-
-Updating /mnt/store/melpa/working/kubernetes-tramp/
-Checking out 8713571b66940f8f3f496b55baa23cdf1df7a869
-Built kubernetes-tramp in 7.395s, finished at 2023-06-01T10:20:08+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Jun  1 10:20 packages/kubernetes-tramp-20181228.922.el
-4.0K -rw-r--r-- 1 root root  578 Jun  1 10:20 packages/kubernetes-tramp-20181228.922.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

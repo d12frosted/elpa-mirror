@@ -1,10 +1,1 @@
-Package: ctags-update
-Fetcher: github
-Source:  https://github.com/jixiuf/ctags-update.git
-
-Updating /mnt/store/melpa/working/ctags-update/
-Checking out 67faf248b92388442958a069263c62a345425a1b
-Built ctags-update in 4.880s, finished at 2023-06-01T09:43:21+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 09:43 packages/ctags-update-20190609.613.el
-4.0K -rw-r--r-- 1 root root 468 Jun  1 09:43 packages/ctags-update-20190609.613.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

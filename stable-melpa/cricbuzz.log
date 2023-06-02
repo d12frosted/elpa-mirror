@@ -1,10 +1,1 @@
-Package: cricbuzz
-Fetcher: github
-Source:  https://github.com/lepisma/cricbuzz.el.git
-
-Updating /mnt/store/melpa/working/cricbuzz/
-Checking out 0b95d45991bbcd2fa58d96ce921f6a57ba42c153
-Built cricbuzz in 5.406s, finished at 2023-06-01T09:43:02+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 09:43 packages/cricbuzz-20180804.2254.el
-4.0K -rw-r--r-- 1 root root 558 Jun  1 09:43 packages/cricbuzz-20180804.2254.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

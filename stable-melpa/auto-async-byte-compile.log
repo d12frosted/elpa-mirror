@@ -1,10 +1,1 @@
-Package: auto-async-byte-compile
-Fetcher: github
-Source:  https://github.com/rubikitch/auto-async-byte-compile.git
-
-Updating /mnt/store/melpa/working/auto-async-byte-compile/
-Checking out 8681e74ddb8481789c5dbb3cafabb327db4c4484
-Built auto-async-byte-compile in 6.447s, finished at 2023-06-01T09:32:12+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.5K Jun  1 09:32 packages/auto-async-byte-compile-20160916.454.el
-4.0K -rw-r--r-- 1 root root  493 Jun  1 09:32 packages/auto-async-byte-compile-20160916.454.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

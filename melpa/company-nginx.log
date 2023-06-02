@@ -1,10 +1,1 @@
-Package: company-nginx
-Fetcher: git
-Source:  https://repo.or.cz/company-nginx.git
-
-Updating /mnt/store/melpa/working/company-nginx/
-Checking out 8a9f1a5653fe2d9a5042bfb9377d54f37fcc64c8
-Built company-nginx in 5.328s, finished at 2023-06-01T09:41:06+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Jun  1 09:41 packages/company-nginx-20220210.1411.el
-4.0K -rw-r--r-- 1 root root 305 Jun  1 09:41 packages/company-nginx-20220210.1411.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

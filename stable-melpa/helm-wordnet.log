@@ -1,10 +1,1 @@
-Package: helm-wordnet
-Fetcher: github
-Source:  https://github.com/raghavgautam/helm-wordnet.git
-
-Updating /mnt/store/melpa/working/helm-wordnet/
-Checking out a36dbc6fcb570b812870bc1e190f203e0a0042fc
-Built helm-wordnet in 4.523s, finished at 2023-06-01T10:11:18+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.7K Jun  1 10:11 packages/helm-wordnet-20160128.1507.el
-4.0K -rw-r--r-- 1 root root  542 Jun  1 10:11 packages/helm-wordnet-20160128.1507.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

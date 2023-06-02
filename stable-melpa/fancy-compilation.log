@@ -1,10 +1,1 @@
-Package: fancy-compilation
-Fetcher: codeberg
-Source:  https://codeberg.org/ideasman42/emacs-fancy-compilation.git
-
-Updating /mnt/store/melpa/working/fancy-compilation/
-Checking out 5104912ed98f803f2504a8d5cacc341a76bc29cf
-Built fancy-compilation in 5.705s, finished at 2023-06-01T09:56:53+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 09:56 packages/fancy-compilation-20230601.204.el
-4.0K -rw-r--r-- 1 root root 465 Jun  1 09:56 packages/fancy-compilation-20230601.204.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: helm-shell-history
-Fetcher: github
-Source:  https://github.com/anoopemacs/helm-shell-history.git
-
-Updating /mnt/store/melpa/working/helm-shell-history/
-Checking out dfa657ae76ef1ba768e970a557739efdf0436cb0
-Built helm-shell-history in 4.660s, finished at 2023-06-01T10:10:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Jun  1 10:10 packages/helm-shell-history-20210214.948.el
-4.0K -rw-r--r-- 1 root root  540 Jun  1 10:10 packages/helm-shell-history-20210214.948.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

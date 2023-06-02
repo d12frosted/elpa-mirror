@@ -1,10 +1,1 @@
-Package: bf-mode
-Fetcher: github
-Source:  https://github.com/emacs-jp/bf-mode.git
-
-Updating /mnt/store/melpa/working/bf-mode/
-Checking out 7cc4d09aed64d9db6be95646f5f5067de68f8895
-Built bf-mode in 5.620s, finished at 2023-06-01T09:34:13+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 23K Jun  1 09:34 packages/bf-mode-20130403.1442.el
-4.0K -rw-r--r-- 1 root root 368 Jun  1 09:34 packages/bf-mode-20130403.1442.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: seoul256-theme
-Fetcher: github
-Source:  https://github.com/anandpiyer/seoul256-emacs.git
-
-Updating /mnt/store/melpa/working/seoul256-theme/
-Checking out 8e76d0207489964ef780420723d49e409f68f7d1
-Built seoul256-theme in 4.684s, finished at 2023-06-01T10:51:47+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Jun  1 10:51 packages/seoul256-theme-20180505.757.el
-4.0K -rw-r--r-- 1 root root 444 Jun  1 10:51 packages/seoul256-theme-20180505.757.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: shenshou
-Fetcher: github
-Source:  https://github.com/redguardtoo/shenshou.git
-
-Updating /mnt/store/melpa/working/shenshou/
-Checking out 0a00b9f5a86a54324f88c7d27b603f136ee2fb0b
-Built shenshou in 4.922s, finished at 2023-06-01T10:52:27+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 25K Jun  1 10:52 packages/shenshou-20230226.320.el
-4.0K -rw-r--r-- 1 root root 484 Jun  1 10:52 packages/shenshou-20230226.320.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

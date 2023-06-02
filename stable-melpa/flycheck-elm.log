@@ -1,10 +1,1 @@
-Package: flycheck-elm
-Fetcher: github
-Source:  https://github.com/bsermons/flycheck-elm.git
-
-Updating /mnt/store/melpa/working/flycheck-elm/
-Checking out debd0af563cb6c2944367a691c7fa3021d9378c1
-Built flycheck-elm in 8.975s, finished at 2023-06-01T09:59:08+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.1K Jun  1 09:59 packages/flycheck-elm-20181107.146.el
-4.0K -rw-r--r-- 1 root root  419 Jun  1 09:59 packages/flycheck-elm-20181107.146.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: eslintd-fix
-Fetcher: github
-Source:  https://github.com/aaronjensen/eslintd-fix.git
-
-Updating /mnt/store/melpa/working/eslintd-fix/
-Checking out 3897d8a679a6e98e3f5054aaefe07f6b55f8f128
-Built eslintd-fix in 4.394s, finished at 2023-06-01T09:54:17+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  1 09:54 packages/eslintd-fix-20210731.1649.el
-4.0K -rw-r--r-- 1 root root 472 Jun  1 09:54 packages/eslintd-fix-20210731.1649.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

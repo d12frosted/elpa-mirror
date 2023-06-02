@@ -1,10 +1,1 @@
-Package: start-menu
-Fetcher: github
-Source:  https://github.com/lujun9972/el-start-menu.git
-
-Updating /mnt/store/melpa/working/start-menu/
-Checking out f7d33fed7ad2dc61156f1c1cff9e1805366fbd69
-Built start-menu in 5.388s, finished at 2023-06-01T10:56:42+0000
- ✓ Success:
- 20K -rwxr-xr-x 1 root root 18K Jun  1 10:56 packages/start-menu-20160426.1225.el
-4.0K -rw-r--r-- 1 root root 526 Jun  1 10:56 packages/start-menu-20160426.1225.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

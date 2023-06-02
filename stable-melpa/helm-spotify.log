@@ -1,10 +1,1 @@
-Package: helm-spotify
-Fetcher: github
-Source:  https://github.com/krisajenkins/helm-spotify.git
-
-Updating /mnt/store/melpa/working/helm-spotify/
-Checking out f7a62d1ff88e3127de9be7cd3e818b0a92268ab3
-Built helm-spotify in 21.166s, finished at 2023-06-01T10:11:16+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.4K Jun  1 10:10 packages/helm-spotify-20160905.2147.el
-4.0K -rw-r--r-- 1 root root  471 Jun  1 10:10 packages/helm-spotify-20160905.2147.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

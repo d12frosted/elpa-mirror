@@ -1,10 +1,1 @@
-Package: org-kindle
-Fetcher: git
-Source:  https://repo.or.cz/org-kindle.git
-
-Updating /mnt/store/melpa/working/org-kindle/
-Checking out fadcfd62e254d0c45e87d63128a82a08ae21869a
-Built org-kindle in 8.583s, finished at 2023-06-01T10:36:01+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jun  1 10:35 packages/org-kindle-20220210.1408.el
-4.0K -rw-r--r-- 1 root root  361 Jun  1 10:35 packages/org-kindle-20220210.1408.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

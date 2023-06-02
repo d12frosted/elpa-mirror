@@ -1,10 +1,1 @@
-Package: eta
-Fetcher: github
-Source:  https://github.com/zcaudate/eta.git
-
-Updating /mnt/store/melpa/working/eta/
-Checking out 651f96c46eeb7ff8a0f0efcfacad5b4d25bfaa4b
-Built eta in 4.706s, finished at 2023-06-01T09:54:34+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.1K Jun  1 09:54 packages/eta-20210115.1655.el
-4.0K -rw-r--r-- 1 root root  419 Jun  1 09:54 packages/eta-20210115.1655.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

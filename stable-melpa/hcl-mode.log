@@ -1,10 +1,1 @@
-Package: hcl-mode
-Fetcher: github
-Source:  https://github.com/purcell/emacs-hcl-mode.git
-
-Updating /mnt/store/melpa/working/hcl-mode/
-Checking out 35784854efd29fa8c9fe827654d747a2ace5cb19
-Built hcl-mode in 4.841s, finished at 2023-06-01T10:08:28+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.1K Jun  1 10:08 packages/hcl-mode-20230302.1029.el
-4.0K -rw-r--r-- 1 root root  407 Jun  1 10:08 packages/hcl-mode-20230302.1029.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

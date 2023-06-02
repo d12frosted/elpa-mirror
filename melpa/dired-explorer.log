@@ -1,10 +1,1 @@
-Package: dired-explorer
-Fetcher: github
-Source:  https://github.com/jidaikobo-shibata/dired-explorer.git
-
-Updating /mnt/store/melpa/working/dired-explorer/
-Checking out 3ade0a31b5340271d05e9bf443f2504960f6c6dd
-Built dired-explorer in 7.026s, finished at 2023-06-01T09:46:12+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.1K Jun  1 09:46 packages/dired-explorer-20180607.221.el
-4.0K -rw-r--r-- 1 root root  310 Jun  1 09:46 packages/dired-explorer-20180607.221.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

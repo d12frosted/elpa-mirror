@@ -1,10 +1,1 @@
-Package: dad-joke
-Fetcher: github
-Source:  https://github.com/davep/dad-joke.el.git
-
-Updating /mnt/store/melpa/working/dad-joke/
-Checking out bee47e7b746b403228fa7d7361cb095de19ac9ba
-Built dad-joke in 4.624s, finished at 2023-06-01T09:43:50+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.3K Jun  1 09:43 packages/dad-joke-20170928.658.el
-4.0K -rw-r--r-- 1 root root  408 Jun  1 09:43 packages/dad-joke-20170928.658.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: alert-termux
-Fetcher: github
-Source:  https://github.com/gergelypolonkai/alert-termux.git
-
-Updating /mnt/store/melpa/working/alert-termux/
-Checking out 8215cf1d86392738c35a90bbc0055359265dfc4d
-Built alert-termux in 4.114s, finished at 2023-06-01T09:30:01+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.3K Jun  1 09:29 packages/alert-termux-20181119.951.el
-4.0K -rw-r--r-- 1 root root  456 Jun  1 09:29 packages/alert-termux-20181119.951.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

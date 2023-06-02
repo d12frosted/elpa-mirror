@@ -1,10 +1,1 @@
-Package: helm-navi
-Fetcher: github
-Source:  https://github.com/emacs-helm/helm-navi.git
-
-Updating /mnt/store/melpa/working/helm-navi/
-Checking out cc3f9a0fad6301f7bb717a8dbde4087fd9a884f6
-Built helm-navi in 5.006s, finished at 2023-06-01T10:10:16+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Jun  1 10:10 packages/helm-navi-20230517.1143.el
-4.0K -rw-r--r-- 1 root root  560 Jun  1 10:10 packages/helm-navi-20230517.1143.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: dokuwiki
-Fetcher: github
-Source:  https://github.com/accidentalrebel/emacs-dokuwiki.git
-
-Updating /mnt/store/melpa/working/dokuwiki/
-Checking out 594c4d4904dcc2796bbbd2c0845d9e7c09ccf6f7
-Built dokuwiki in 3.996s, finished at 2023-06-01T09:47:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.0K Jun  1 09:47 packages/dokuwiki-20180102.59.el
-4.0K -rw-r--r-- 1 root root  530 Jun  1 09:47 packages/dokuwiki-20180102.59.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

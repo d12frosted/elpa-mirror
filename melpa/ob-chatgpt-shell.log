@@ -1,10 +1,1 @@
-Package: ob-chatgpt-shell
-Fetcher: github
-Source:  https://github.com/xenodium/chatgpt-shell.git
-
-Updating /mnt/store/melpa/working/ob-chatgpt-shell/
-Checking out 4e117234f07991a1f1d100be84fbf2f4689ae39d
-Built ob-chatgpt-shell in 4.770s, finished at 2023-06-01T10:32:14+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.9K Jun  1 10:32 packages/ob-chatgpt-shell-20230531.732.el
-4.0K -rw-r--r-- 1 root root  414 Jun  1 10:32 packages/ob-chatgpt-shell-20230531.732.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

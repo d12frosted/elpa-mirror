@@ -1,10 +1,1 @@
-Package: gxref
-Fetcher: github
-Source:  https://github.com/dedi/gxref.git
-
-Updating /mnt/store/melpa/working/gxref/
-Checking out 380b02c3c3c2586c828456716eef6a6392bb043b
-Built gxref in 4.815s, finished at 2023-06-01T10:07:50+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 10:07 packages/gxref-20170411.1753.el
-4.0K -rw-r--r-- 1 root root 344 Jun  1 10:07 packages/gxref-20170411.1753.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

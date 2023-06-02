@@ -1,10 +1,1 @@
-Package: git-time-metric
-Fetcher: github
-Source:  https://github.com/c301/gtm-emacs-plugin.git
-
-Updating /mnt/store/melpa/working/git-time-metric/
-Checking out 287108ed1d6885dc795eb3bad4476aa08c626186
-Built git-time-metric in 5.270s, finished at 2023-06-01T10:04:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.3K Jun  1 10:04 packages/git-time-metric-20181116.2011.el
-4.0K -rw-r--r-- 1 root root  505 Jun  1 10:04 packages/git-time-metric-20181116.2011.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

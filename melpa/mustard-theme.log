@@ -1,10 +1,1 @@
-Package: mustard-theme
-Fetcher: github
-Source:  https://github.com/emacsfodder/emacs-mustard-theme.git
-
-Updating /mnt/store/melpa/working/mustard-theme/
-Checking out 3b15d992c79590d7ea2503004e2a863b57e274b5
-Built mustard-theme in 4.584s, finished at 2023-06-01T10:29:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jun  1 10:29 packages/mustard-theme-20170808.1319.el
-4.0K -rw-r--r-- 1 root root  356 Jun  1 10:29 packages/mustard-theme-20170808.1319.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

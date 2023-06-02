@@ -1,10 +1,1 @@
-Package: ffmpeg-utils
-Fetcher: git
-Source:  https://repo.or.cz/ffmpeg-utils.git
-
-Updating /mnt/store/melpa/working/ffmpeg-utils/
-Checking out 064d61527bc6b6a1d0fb0065f8a7bae3bbd4cefc
-Built ffmpeg-utils in 4.866s, finished at 2023-06-01T09:57:18+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.1K Jun  1 09:57 packages/ffmpeg-utils-20230305.709.el
-4.0K -rw-r--r-- 1 root root  305 Jun  1 09:57 packages/ffmpeg-utils-20230305.709.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

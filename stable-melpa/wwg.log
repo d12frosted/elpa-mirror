@@ -1,10 +1,1 @@
-Package: wwg
-Fetcher: github
-Source:  https://github.com/ag91/writer-word-goals.git
-
-Updating /mnt/store/melpa/working/wwg/
-Checking out 46c8a7c71275ced2c662c1222d4b85319f80dd83
-Built wwg in 4.913s, finished at 2023-06-01T11:07:19+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Jun  1 11:07 packages/wwg-20210614.1527.el
-4.0K -rw-r--r-- 1 root root 419 Jun  1 11:07 packages/wwg-20210614.1527.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

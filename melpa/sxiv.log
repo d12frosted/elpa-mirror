@@ -1,10 +1,1 @@
-Package: sxiv
-Fetcher: codeberg
-Source:  https://codeberg.org/contrapunctus/sxiv.el.git
-
-Updating /mnt/store/melpa/working/sxiv/
-Checking out 47f5b2fbb94c569dc5e71cbe4de9c6eabbbc69e8
-Built sxiv in 8.364s, finished at 2023-06-01T10:58:07+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.7K Jun  1 10:58 packages/sxiv-20220530.14.el
-4.0K -rw-r--r-- 1 root root  486 Jun  1 10:58 packages/sxiv-20220530.14.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: org-board
-Fetcher: github
-Source:  https://github.com/charlesroelli/org-board.git
-
-Updating /mnt/store/melpa/working/org-board/
-Checking out 500fe02bc114e5b535a2eb2ab73954d79428168f
-Built org-board in 5.377s, finished at 2023-06-01T10:34:24+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 40K Jun  1 10:34 packages/org-board-20230408.1041.el
-4.0K -rw-r--r-- 1 root root 471 Jun  1 10:34 packages/org-board-20230408.1041.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

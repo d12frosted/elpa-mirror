@@ -1,10 +1,1 @@
-Package: uuid
-Fetcher: github
-Source:  https://github.com/nicferrier/emacs-uuid.git
-
-Updating /mnt/store/melpa/working/uuid/
-Checking out 1519bfeb0e31602b840bc8dd35d7c7e732c159fe
-Built uuid in 8.711s, finished at 2023-06-01T11:03:26+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.7K Jun  1 11:03 packages/uuid-20120910.851.el
-4.0K -rw-r--r-- 1 root root  306 Jun  1 11:03 packages/uuid-20120910.851.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

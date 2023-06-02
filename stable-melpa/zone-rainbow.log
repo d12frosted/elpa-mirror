@@ -1,10 +1,1 @@
-Package: zone-rainbow
-Fetcher: github
-Source:  https://github.com/kawabata/zone-rainbow.git
-
-Updating /mnt/store/melpa/working/zone-rainbow/
-Checking out 2ba4f1a87c69c4712124ebf12c1f3ea171e1af36
-Built zone-rainbow in 6.418s, finished at 2023-06-01T11:09:14+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.8K Jun  1 11:09 packages/zone-rainbow-20160120.1334.el
-4.0K -rw-r--r-- 1 root root  457 Jun  1 11:09 packages/zone-rainbow-20160120.1334.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: undercover
-Fetcher: github
-Source:  https://github.com/undercover-el/undercover.el.git
-
-Updating /mnt/store/melpa/working/undercover/
-Checking out 1d3587f1fad66a747688f36636b67b33b73447d3
-Built undercover in 5.075s, finished at 2023-06-01T11:02:15+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 57K Jun  1 11:02 packages/undercover-20210602.2119.el
-4.0K -rw-r--r-- 1 root root 583 Jun  1 11:02 packages/undercover-20210602.2119.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

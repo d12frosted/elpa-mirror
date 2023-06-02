@@ -1,10 +1,1 @@
-Package: ox-750words
-Fetcher: github
-Source:  https://github.com/zzamboni/750words-client.git
-
-Updating /mnt/store/melpa/working/ox-750words/
-Checking out 43eee19428fc8f5a133192398510d7313eb33d97
-Built ox-750words in 4.699s, finished at 2023-06-01T10:38:48+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.2K Jun  1 10:38 packages/ox-750words-20220625.1407.el
-4.0K -rw-r--r-- 1 root root  513 Jun  1 10:38 packages/ox-750words-20220625.1407.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: django-commands
-Fetcher: github
-Source:  https://github.com/muffinmad/emacs-django-commands.git
-
-Updating /mnt/store/melpa/working/django-commands/
-Checking out 7510c0f068bf214ad012c203d68e03ff4262efdf
-Built django-commands in 4.564s, finished at 2023-06-01T09:47:15+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  1 09:47 packages/django-commands-20220314.1545.el
-4.0K -rw-r--r-- 1 root root 463 Jun  1 09:47 packages/django-commands-20220314.1545.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

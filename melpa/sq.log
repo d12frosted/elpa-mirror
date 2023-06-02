@@ -1,10 +1,1 @@
-Package: sq
-Fetcher: gitlab
-Source:  https://gitlab.com/sequoia-pgp/sqel.git
-
-Updating /mnt/store/melpa/working/sq/
-Checking out bb0d1756bb9c62bb999fa21e15949e28650c663e
-Built sq in 8.572s, finished at 2023-06-01T10:55:58+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Jun  1 10:55 packages/sq-20220717.2039.el
-4.0K -rw-r--r-- 1 root root  463 Jun  1 10:55 packages/sq-20220717.2039.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

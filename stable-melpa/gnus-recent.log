@@ -1,10 +1,1 @@
-Package: gnus-recent
-Fetcher: github
-Source:  https://github.com/unhammer/gnus-recent.git
-
-Updating /mnt/store/melpa/working/gnus-recent/
-Checking out 5a4a28710dedef939dd8f1a743c5626e40271842
-Built gnus-recent in 4.729s, finished at 2023-06-01T10:05:22+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Jun  1 10:05 packages/gnus-recent-20230104.1924.el
-4.0K -rw-r--r-- 1 root root 490 Jun  1 10:05 packages/gnus-recent-20230104.1924.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

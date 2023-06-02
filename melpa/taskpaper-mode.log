@@ -1,10 +1,1 @@
-Package: taskpaper-mode
-Fetcher: github
-Source:  https://github.com/saf-dmitry/taskpaper-mode.git
-
-Updating /mnt/store/melpa/working/taskpaper-mode/
-Checking out 3dc0a7176462964fa6a8485667a39fc726d74755
-Built taskpaper-mode in 4.950s, finished at 2023-06-01T10:58:50+0000
- ✓ Success:
-224K -rw-r--r-- 1 root root 222K Jun  1 10:58 packages/taskpaper-mode-20230518.1937.el
-4.0K -rw-r--r-- 1 root root  520 Jun  1 10:58 packages/taskpaper-mode-20230518.1937.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: load-env-vars
-Fetcher: github
-Source:  https://github.com/diasjorge/emacs-load-env-vars.git
-
-Updating /mnt/store/melpa/working/load-env-vars/
-Checking out 5da97fabb4d36a00a29c40375fce9c16d8005ab3
-Built load-env-vars in 4.443s, finished at 2023-06-01T10:22:44+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.1K Jun  1 10:22 packages/load-env-vars-20180511.2210.el
-4.0K -rw-r--r-- 1 root root  421 Jun  1 10:22 packages/load-env-vars-20180511.2210.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

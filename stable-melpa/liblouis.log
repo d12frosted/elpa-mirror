@@ -1,10 +1,1 @@
-Package: liblouis
-Fetcher: github
-Source:  https://github.com/liblouis/liblouis-mode.git
-
-Updating /mnt/store/melpa/working/liblouis/
-Checking out a341a0c434cdbe7f46956c8db13203c3fc941a34
-Built liblouis in 4.940s, finished at 2023-06-01T10:21:48+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.7K Jun  1 10:21 packages/liblouis-20220426.657.el
-4.0K -rw-r--r-- 1 root root  474 Jun  1 10:21 packages/liblouis-20220426.657.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

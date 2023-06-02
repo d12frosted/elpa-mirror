@@ -1,10 +1,1 @@
-Package: company-ipa
-Fetcher: gitlab
-Source:  https://gitlab.com/mguzmann89/company-ipa.git
-
-Updating /mnt/store/melpa/working/company-ipa/
-Checking out 8634021cac885f53f3274ef6dcce7eab19321046
-Built company-ipa in 5.428s, finished at 2023-06-01T09:40:53+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  1 09:40 packages/company-ipa-20210307.1838.el
-4.0K -rw-r--r-- 1 root root 533 Jun  1 09:40 packages/company-ipa-20210307.1838.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

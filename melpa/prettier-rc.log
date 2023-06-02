@@ -1,10 +1,1 @@
-Package: prettier-rc
-Fetcher: github
-Source:  https://github.com/jjuliano/prettier-rc-emacs.git
-
-Updating /mnt/store/melpa/working/prettier-rc/
-Checking out 99e40a9783299e41911f6b37156626d53e43809e
-Built prettier-rc in 5.735s, finished at 2023-06-01T10:44:13+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Jun  1 10:44 packages/prettier-rc-20220330.145.el
-4.0K -rw-r--r-- 1 root root  641 Jun  1 10:44 packages/prettier-rc-20220330.145.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

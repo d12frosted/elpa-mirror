@@ -1,10 +1,1 @@
-Package: no-littering
-Fetcher: github
-Source:  https://github.com/emacscollective/no-littering.git
-
-Updating /mnt/store/melpa/working/no-littering/
-Checking out ef02b6fcedd97f3ab039b51411fdaab7336d819b
-Built no-littering in 5.634s, finished at 2023-06-01T10:31:17+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 29K Jun  1 10:31 packages/no-littering-20230512.1518.el
-4.0K -rw-r--r-- 1 root root 474 Jun  1 10:31 packages/no-littering-20230512.1518.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: cdnjs
-Fetcher: github
-Source:  https://github.com/yasuyk/cdnjs.el.git
-
-Updating /mnt/store/melpa/working/cdnjs/
-Checking out ce19880d3ec3d81e6c665d0b1dfea99cc7a3f908
-Built cdnjs in 4.671s, finished at 2023-06-01T09:36:58+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 09:36 packages/cdnjs-20161031.1522.el
-4.0K -rw-r--r-- 1 root root 455 Jun  1 09:36 packages/cdnjs-20161031.1522.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: helm-posframe
-Fetcher: github
-Source:  https://github.com/tumashu/helm-posframe.git
-
-Updating /mnt/store/melpa/working/helm-posframe/
-Checking out 87461b52b6f3f378c63642a33f584d4a4ba28351
-Built helm-posframe in 4.724s, finished at 2023-06-01T10:10:31+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Jun  1 10:10 packages/helm-posframe-20211103.236.el
-4.0K -rw-r--r-- 1 root root  462 Jun  1 10:10 packages/helm-posframe-20211103.236.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

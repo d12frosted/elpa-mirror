@@ -1,10 +1,1 @@
-Package: tab-bar-buffers
-Fetcher: github
-Source:  https://github.com/ajrosen/tab-bar-buffers.git
-
-Updating /mnt/store/melpa/working/tab-bar-buffers/
-Checking out 6d196d4b853c5355403da86607dfb31a038cc024
-Built tab-bar-buffers in 4.744s, finished at 2023-06-01T10:58:29+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.1K Jun  1 10:58 packages/tab-bar-buffers-20220722.1937.el
-4.0K -rw-r--r-- 1 root root  454 Jun  1 10:58 packages/tab-bar-buffers-20220722.1937.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

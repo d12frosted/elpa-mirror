@@ -1,10 +1,1 @@
-Package: pip-frame
-Fetcher: git
-Source:  https://git.zamazal.org/pdm/pip-frame
-
-Updating /mnt/store/melpa/working/pip-frame/
-Checking out 8c396a11f532a1beb594b65e99e594f1e9f1c2c8
-Built pip-frame in 7.660s, finished at 2023-06-01T10:42:14+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.9K Jun  1 10:42 packages/pip-frame-20220802.1914.el
-4.0K -rw-r--r-- 1 root root  438 Jun  1 10:42 packages/pip-frame-20220802.1914.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

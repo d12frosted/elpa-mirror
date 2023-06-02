@@ -1,10 +1,1 @@
-Package: litecoin-ticker
-Fetcher: github
-Source:  https://github.com/llcc/btcbox-ticker.git
-
-Updating /mnt/store/melpa/working/litecoin-ticker/
-Checking out 3d8047c736e4ee0b8638953f8cc63eaefad34106
-Built litecoin-ticker in 4.348s, finished at 2023-06-01T10:22:27+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.7K Jun  1 10:22 packages/litecoin-ticker-20160612.11.el
-4.0K -rw-r--r-- 1 root root  266 Jun  1 10:22 packages/litecoin-ticker-20160612.11.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

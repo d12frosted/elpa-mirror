@@ -1,10 +1,1 @@
-Package: mode-line-debug
-Fetcher: github
-Source:  https://github.com/tarsius/mode-line-debug.git
-
-Updating /mnt/store/melpa/working/mode-line-debug/
-Checking out 8e58bd51f1a8292c5df92e75a8c4a470e11a03e4
-Built mode-line-debug in 8.194s, finished at 2023-06-01T10:27:37+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Jun  1 10:27 packages/mode-line-debug-20230511.2106.el
-4.0K -rw-r--r-- 1 root root  501 Jun  1 10:27 packages/mode-line-debug-20230511.2106.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

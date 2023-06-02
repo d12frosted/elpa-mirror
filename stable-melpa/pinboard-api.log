@@ -1,10 +1,1 @@
-Package: pinboard-api
-Fetcher: github
-Source:  https://github.com/danieroux/pinboard-api-el.git
-
-Updating /mnt/store/melpa/working/pinboard-api/
-Checking out b7b5214d0c35178f8dca08cf22d6ef3c21f0fce4
-Built pinboard-api in 6.067s, finished at 2023-06-01T10:42:04+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Jun  1 10:42 packages/pinboard-api-20140324.1148.el
-4.0K -rw-r--r-- 1 root root  427 Jun  1 10:42 packages/pinboard-api-20140324.1148.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: ropgadget
-Fetcher: github
-Source:  https://github.com/Dragoncraft89/ropgadget-el.git
-
-Updating /mnt/store/melpa/working/ropgadget/
-Checking out 10e9d6f66de1ee805d871c59f4acc078b66747a3
-Built ropgadget in 9.659s, finished at 2023-06-01T10:49:51+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.0K Jun  1 10:49 packages/ropgadget-20230107.1225.el
-4.0K -rw-r--r-- 1 root root  324 Jun  1 10:49 packages/ropgadget-20230107.1225.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

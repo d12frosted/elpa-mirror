@@ -1,10 +1,1 @@
-Package: org-msg
-Fetcher: github
-Source:  https://github.com/jeremy-compostella/org-msg.git
-
-Updating /mnt/store/melpa/working/org-msg/
-Checking out 055de4abf611c5d5e12c770fe149c1861b402817
-Built org-msg in 5.380s, finished at 2023-06-01T10:36:24+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 60K Jun  1 10:36 packages/org-msg-20230530.2006.el
-4.0K -rw-r--r-- 1 root root 531 Jun  1 10:36 packages/org-msg-20230530.2006.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

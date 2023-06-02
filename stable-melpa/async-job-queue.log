@@ -1,10 +1,1 @@
-Package: async-job-queue
-Fetcher: github
-Source:  https://github.com/owinebar/emacs-async-job-queue.git
-
-Updating /mnt/store/melpa/working/async-job-queue/
-Checking out eeafcce7f960305666b2a51aec55cc6333f6af1b
-Built async-job-queue in 8.963s, finished at 2023-06-01T09:31:47+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Jun  1 09:31 packages/async-job-queue-20230427.2122.el
-4.0K -rw-r--r-- 1 root root 479 Jun  1 09:31 packages/async-job-queue-20230427.2122.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

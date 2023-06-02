@@ -1,10 +1,1 @@
-Package: copyit-pandoc
-Fetcher: github
-Source:  https://github.com/zonuexe/emacs-copyit.git
-
-Updating /mnt/store/melpa/working/copyit-pandoc/
-Checking out c4f2c28e5b6270e8e3364341619f1154bb4e682e
-Built copyit-pandoc in 4.819s, finished at 2023-06-01T09:42:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.0K Jun  1 09:42 packages/copyit-pandoc-20190919.1258.el
-4.0K -rw-r--r-- 1 root root  471 Jun  1 09:42 packages/copyit-pandoc-20190919.1258.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

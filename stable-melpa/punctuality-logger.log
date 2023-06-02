@@ -1,10 +1,1 @@
-Package: punctuality-logger
-Fetcher: gitlab
-Source:  https://gitlab.com/elzair/punctuality-logger.git
-
-Updating /mnt/store/melpa/working/punctuality-logger/
-Checking out d76c5d5589a4f8a94cc5537686d9a3b46ea7cc59
-Built punctuality-logger in 4.975s, finished at 2023-06-01T10:45:25+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Jun  1 10:45 packages/punctuality-logger-20141120.2031.el
-4.0K -rw-r--r-- 1 root root  493 Jun  1 10:45 packages/punctuality-logger-20141120.2031.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

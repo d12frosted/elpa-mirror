@@ -1,10 +1,1 @@
-Package: dw
-Fetcher: github
-Source:  https://github.com/integral-dw/dw-passphrase-generator.git
-
-Updating /mnt/store/melpa/working/dw/
-Checking out 61c5718ba64ace4c9e29de18aa2690ecc3f0f258
-Built dw in 4.887s, finished at 2023-06-01T09:48:21+0000
- ✓ Success:
-192K -rw-r--r-- 1 root root 191K Jun  1 09:48 packages/dw-20210331.2311.el
-4.0K -rw-r--r-- 1 root root  482 Jun  1 09:48 packages/dw-20210331.2311.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

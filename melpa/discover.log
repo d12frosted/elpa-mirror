@@ -1,10 +1,1 @@
-Package: discover
-Fetcher: github
-Source:  https://github.com/mickeynp/discover.el.git
-
-Updating /mnt/store/melpa/working/discover/
-Checking out bbfda2b4e429985a8fa7971d264c942767cfa816
-Built discover in 4.538s, finished at 2023-06-01T09:47:00+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 17K Jun  1 09:46 packages/discover-20140103.2139.el
-4.0K -rw-r--r-- 1 root root 345 Jun  1 09:46 packages/discover-20140103.2139.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

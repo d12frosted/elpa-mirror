@@ -1,10 +1,1 @@
-Package: launchctl
-Fetcher: github
-Source:  https://github.com/pekingduck/launchctl-el.git
-
-Updating /mnt/store/melpa/working/launchctl/
-Checking out c9b7e93f5ec6fa504dfb03d60571cf3e5dc38e12
-Built launchctl in 8.451s, finished at 2023-06-01T10:21:02+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 10:21 packages/launchctl-20210611.2243.el
-4.0K -rw-r--r-- 1 root root 466 Jun  1 10:21 packages/launchctl-20210611.2243.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

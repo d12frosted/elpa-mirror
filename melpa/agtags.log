@@ -1,10 +1,1 @@
-Package: agtags
-Fetcher: github
-Source:  https://github.com/vietor/agtags.git
-
-Updating /mnt/store/melpa/working/agtags/
-Checking out e8e04ece2f32d65b084974597bfe8077da3ddba0
-Built agtags in 4.496s, finished at 2023-06-01T09:29:46+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Jun  1 09:29 packages/agtags-20221026.904.el
-4.0K -rw-r--r-- 1 root root 404 Jun  1 09:29 packages/agtags-20221026.904.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

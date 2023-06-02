@@ -1,10 +1,1 @@
-Package: stock-ticker
-Fetcher: github
-Source:  https://github.com/hagleitn/stock-ticker.git
-
-Updating /mnt/store/melpa/working/stock-ticker/
-Checking out 74251cc810604af75f48333d51133326c053dd16
-Built stock-ticker in 6.635s, finished at 2023-06-01T10:57:02+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Jun  1 10:57 packages/stock-ticker-20150204.1052.el
-4.0K -rw-r--r-- 1 root root  398 Jun  1 10:57 packages/stock-ticker-20150204.1052.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

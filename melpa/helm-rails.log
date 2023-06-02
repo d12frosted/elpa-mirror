@@ -1,10 +1,1 @@
-Package: helm-rails
-Fetcher: github
-Source:  https://github.com/asok/helm-rails.git
-
-Updating /mnt/store/melpa/working/helm-rails/
-Checking out 723c2a27f3843570ec1039e3c526953e48b4ed40
-Built helm-rails in 4.149s, finished at 2023-06-01T10:10:38+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 10:10 packages/helm-rails-20130424.1519.el
-4.0K -rw-r--r-- 1 root root 535 Jun  1 10:10 packages/helm-rails-20130424.1519.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

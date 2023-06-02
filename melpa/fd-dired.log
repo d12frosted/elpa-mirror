@@ -1,10 +1,1 @@
-Package: fd-dired
-Fetcher: github
-Source:  https://github.com/yqrashawn/fd-dired.git
-
-Updating /mnt/store/melpa/working/fd-dired/
-Checking out 458464771bb220b6eb87ccfd4c985c436e57dc7e
-Built fd-dired in 5.441s, finished at 2023-06-01T09:57:10+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 09:57 packages/fd-dired-20210723.549.el
-4.0K -rw-r--r-- 1 root root 448 Jun  1 09:57 packages/fd-dired-20210723.549.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

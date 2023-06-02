@@ -1,10 +1,1 @@
-Package: ivy-spotify
-Fetcher: codeberg
-Source:  https://codeberg.org/jao/espotify.git
-
-Updating /mnt/store/melpa/working/ivy-spotify/
-Checking out eefcb49d740570f6c874302d87be33e5b0ec54ff
-Built ivy-spotify in 4.986s, finished at 2023-06-01T10:16:47+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Jun  1 10:16 packages/ivy-spotify-20210329.312.el
-4.0K -rw-r--r-- 1 root root  458 Jun  1 10:16 packages/ivy-spotify-20210329.312.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: openfoam
-Fetcher: github
-Source:  https://github.com/ralph-schleicher/emacs-openfoam.git
-
-Updating /mnt/store/melpa/working/openfoam/
-Checking out e2c899009a9df412bf9f360492b1072eb6f1513f
-Built openfoam in 5.510s, finished at 2023-06-01T10:33:59+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 57K Jun  1 10:33 packages/openfoam-20210516.1015.el
-4.0K -rw-r--r-- 1 root root 471 Jun  1 10:33 packages/openfoam-20210516.1015.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

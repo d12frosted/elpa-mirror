@@ -1,10 +1,1 @@
-Package: use-ttf
-Fetcher: github
-Source:  https://github.com/jcs-elpa/use-ttf.git
-
-Updating /mnt/store/melpa/working/use-ttf/
-Checking out a01d9aef26ffc45dbe8d57d7c061a3a80eb79a2b
-Built use-ttf in 9.570s, finished at 2023-06-01T11:03:26+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Jun  1 11:03 packages/use-ttf-20230503.1015.el
-4.0K -rw-r--r-- 1 root root  480 Jun  1 11:03 packages/use-ttf-20230503.1015.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

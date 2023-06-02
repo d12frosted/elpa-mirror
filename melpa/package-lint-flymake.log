@@ -1,10 +1,1 @@
-Package: package-lint-flymake
-Fetcher: github
-Source:  https://github.com/purcell/package-lint.git
-
-Updating /mnt/store/melpa/working/package-lint-flymake/
-Checking out 78ae823bd89d83299a0d7a52797d2593d03e9795
-Built package-lint-flymake in 4.708s, finished at 2023-06-01T10:39:43+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.9K Jun  1 10:39 packages/package-lint-flymake-20230315.1052.el
-4.0K -rw-r--r-- 1 root root  278 Jun  1 10:39 packages/package-lint-flymake-20230315.1052.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

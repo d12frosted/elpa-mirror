@@ -1,10 +1,1 @@
-Package: xref-rst
-Fetcher: codeberg
-Source:  https://codeberg.org/ideasman42/emacs-xref-rst.git
-
-Updating /mnt/store/melpa/working/xref-rst/
-Checking out 0811365a6ac240463aac9ddfcefb9ed8630e3da8
-Built xref-rst in 5.419s, finished at 2023-06-01T11:07:43+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Jun  1 11:07 packages/xref-rst-20230601.21.el
-4.0K -rw-r--r-- 1 root root 428 Jun  1 11:07 packages/xref-rst-20230601.21.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

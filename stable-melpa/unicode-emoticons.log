@@ -1,10 +1,1 @@
-Package: unicode-emoticons
-Fetcher: github
-Source:  https://github.com/hagleitn/unicode-emoticons.git
-
-Updating /mnt/store/melpa/working/unicode-emoticons/
-Checking out 52a09955c2afc1807c0f37f1467ccfc1e1da690a
-Built unicode-emoticons in 6.247s, finished at 2023-06-01T11:02:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.7K Jun  1 11:02 packages/unicode-emoticons-20150204.1108.el
-4.0K -rw-r--r-- 1 root root  425 Jun  1 11:02 packages/unicode-emoticons-20150204.1108.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

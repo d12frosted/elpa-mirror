@@ -1,10 +1,1 @@
-Package: exwm-firefox-core
-Fetcher: github
-Source:  https://github.com/walseb/exwm-firefox-core.git
-
-Updating /mnt/store/melpa/working/exwm-firefox-core/
-Checking out e2fe2a895e8f973307ef52f8c9976b26e701cbd0
-Built exwm-firefox-core in 5.268s, finished at 2023-06-01T09:56:32+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  1 09:56 packages/exwm-firefox-core-20190812.2110.el
-4.0K -rw-r--r-- 1 root root 528 Jun  1 09:56 packages/exwm-firefox-core-20190812.2110.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

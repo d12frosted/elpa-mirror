@@ -1,10 +1,1 @@
-Package: cdlatex
-Fetcher: github
-Source:  https://github.com/cdominik/cdlatex.git
-
-Updating /mnt/store/melpa/working/cdlatex/
-Checking out 692142603c6229e5aa5c8285eb797e401cef9ac3
-Built cdlatex in 4.997s, finished at 2023-06-01T09:36:57+0000
- ✓ Success:
- 84K -rw-r--r-- 1 root root 82K Jun  1 09:36 packages/cdlatex-20230411.748.el
-4.0K -rw-r--r-- 1 root root 390 Jun  1 09:36 packages/cdlatex-20230411.748.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

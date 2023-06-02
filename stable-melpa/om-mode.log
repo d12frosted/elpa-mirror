@@ -1,10 +1,1 @@
-Package: om-mode
-Fetcher: github
-Source:  https://github.com/danielsz/om-mode.git
-
-Updating /mnt/store/melpa/working/om-mode/
-Checking out 5a6b380f8d1293a865d8a37aa4816d7412c512ce
-Built om-mode in 4.295s, finished at 2023-06-01T10:33:37+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.3K Jun  1 10:33 packages/om-mode-20140915.2110.el
-4.0K -rw-r--r-- 1 root root  408 Jun  1 10:33 packages/om-mode-20140915.2110.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

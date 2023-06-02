@@ -1,10 +1,1 @@
-Package: modelica-mode
-Fetcher: github
-Source:  https://github.com/modelica-tools/modelica-mode.git
-
-Updating /mnt/store/melpa/working/modelica-mode/
-Checking out 7064a4abdae68fc074a85a2e7c159e067c44c0e1
-Built modelica-mode in 8.893s, finished at 2023-06-01T10:27:38+0000
- ✓ Success:
- 44K -rwxr-xr-x 1 root root 41K Jun  1 10:27 packages/modelica-mode-20230508.1020.el
-4.0K -rw-r--r-- 1 root root 293 Jun  1 10:27 packages/modelica-mode-20230508.1020.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

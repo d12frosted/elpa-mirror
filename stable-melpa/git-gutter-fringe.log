@@ -1,10 +1,1 @@
-Package: git-gutter-fringe
-Fetcher: github
-Source:  https://github.com/emacsorphanage/git-gutter-fringe.git
-
-Updating /mnt/store/melpa/working/git-gutter-fringe/
-Checking out 648cb5b57faec55711803cdc9434e55a733c3eba
-Built git-gutter-fringe in 4.876s, finished at 2023-06-01T10:04:21+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Jun  1 10:04 packages/git-gutter-fringe-20211003.2228.el
-4.0K -rw-r--r-- 1 root root  573 Jun  1 10:04 packages/git-gutter-fringe-20211003.2228.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

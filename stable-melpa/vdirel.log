@@ -1,10 +1,1 @@
-Package: vdirel
-Fetcher: github
-Source:  https://github.com/DamienCassou/vdirel.git
-
-Updating /mnt/store/melpa/working/vdirel/
-Checking out 4eebcf91bdb9ee10fbbba198c4995ae070442f26
-Built vdirel in 4.676s, finished at 2023-06-01T11:04:08+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.8K Jun  1 11:04 packages/vdirel-20220412.646.el
-4.0K -rw-r--r-- 1 root root  459 Jun  1 11:04 packages/vdirel-20220412.646.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: org-starter
-Fetcher: github
-Source:  https://github.com/akirak/org-starter.git
-
-Updating /mnt/store/melpa/working/org-starter/
-Checking out cd9c5c0402de941299d1c8901f26a8f24d755022
-Built org-starter in 5.225s, finished at 2023-06-01T10:37:16+0000
- ✓ Success:
- 76K -rw-r--r-- 1 root root 75K Jun  1 10:37 packages/org-starter-20220326.1106.el
-4.0K -rw-r--r-- 1 root root 482 Jun  1 10:37 packages/org-starter-20220326.1106.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

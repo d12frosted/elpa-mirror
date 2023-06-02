@@ -1,10 +1,1 @@
-Package: flycheck-nimsuggest
-Fetcher: github
-Source:  https://github.com/yuutayamada/flycheck-nimsuggest.git
-
-Updating /mnt/store/melpa/working/flycheck-nimsuggest/
-Checking out dc9a5de1cb3ee05db5794d824610959a1f603bc9
-Built flycheck-nimsuggest in 5.058s, finished at 2023-06-01T10:00:04+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.8K Jun  1 10:00 packages/flycheck-nimsuggest-20171027.2208.el
-4.0K -rw-r--r-- 1 root root  499 Jun  1 10:00 packages/flycheck-nimsuggest-20171027.2208.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

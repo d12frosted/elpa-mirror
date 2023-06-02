@@ -1,10 +1,1 @@
-Package: make-color
-Fetcher: github
-Source:  https://github.com/alezost/make-color.el.git
-
-Updating /mnt/store/melpa/working/make-color/
-Checking out a1b34e95ccd3ebee4fba1489ab613d0b3078026d
-Built make-color in 4.907s, finished at 2023-06-01T10:24:51+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 29K Jun  1 10:24 packages/make-color-20140625.1150.el
-4.0K -rw-r--r-- 1 root root 466 Jun  1 10:24 packages/make-color-20140625.1150.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

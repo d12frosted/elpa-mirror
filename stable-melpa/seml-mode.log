@@ -1,10 +1,1 @@
-Package: seml-mode
-Fetcher: github
-Source:  https://github.com/conao3/seml-mode.el.git
-
-Updating /mnt/store/melpa/working/seml-mode/
-Checking out 7a9a8305f7b54ee59e4c29b33ef5fd4058ba4219
-Built seml-mode in 4.970s, finished at 2023-06-01T10:51:41+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 10:51 packages/seml-mode-20200812.1027.el
-4.0K -rw-r--r-- 1 root root 574 Jun  1 10:51 packages/seml-mode-20200812.1027.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

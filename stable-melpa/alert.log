@@ -1,10 +1,1 @@
-Package: alert
-Fetcher: github
-Source:  https://github.com/jwiegley/alert.git
-
-Updating /mnt/store/melpa/working/alert/
-Checking out c762380ff71c429faf47552a83605b2578656380
-Built alert in 4.556s, finished at 2023-06-01T09:30:00+0000
- ✓ Success:
- 52K -rw-r--r-- 1 root root 49K Jun  1 09:29 packages/alert-20221213.1619.el
-4.0K -rw-r--r-- 1 root root 469 Jun  1 09:29 packages/alert-20221213.1619.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

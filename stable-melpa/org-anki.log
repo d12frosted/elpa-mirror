@@ -1,10 +1,1 @@
-Package: org-anki
-Fetcher: github
-Source:  https://github.com/eyeinsky/org-anki.git
-
-Updating /mnt/store/melpa/working/org-anki/
-Checking out f10feec7bd70916808a3cd8b4c3e3c7f65764acf
-Built org-anki in 6.337s, finished at 2023-06-01T10:34:13+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 27K Jun  1 10:34 packages/org-anki-20230117.727.el
-4.0K -rw-r--r-- 1 root root 549 Jun  1 10:34 packages/org-anki-20230117.727.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

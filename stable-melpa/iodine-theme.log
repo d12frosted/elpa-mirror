@@ -1,10 +1,1 @@
-Package: iodine-theme
-Fetcher: github
-Source:  https://github.com/srdja/iodine-theme.git
-
-Updating /mnt/store/melpa/working/iodine-theme/
-Checking out 02fb780e1d8d8a6b9c709bfac399abe1665c6999
-Built iodine-theme in 5.330s, finished at 2023-06-01T10:15:54+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Jun  1 10:15 packages/iodine-theme-20151031.1639.el
-4.0K -rw-r--r-- 1 root root  432 Jun  1 10:15 packages/iodine-theme-20151031.1639.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: sourcerer-theme
-Fetcher: github
-Source:  https://github.com/gilbertw1/sourcerer-emacs.git
-
-Updating /mnt/store/melpa/working/sourcerer-theme/
-Checking out c7f8e665d53bb48fb72f95f706710d53d24bd407
-Built sourcerer-theme in 5.424s, finished at 2023-06-01T10:55:13+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 39K Jun  1 10:55 packages/sourcerer-theme-20161014.1625.el
-4.0K -rw-r--r-- 1 root root 427 Jun  1 10:55 packages/sourcerer-theme-20161014.1625.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

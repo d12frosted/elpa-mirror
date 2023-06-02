@@ -1,10 +1,1 @@
-Package: sudo-edit
-Fetcher: github
-Source:  https://github.com/nflath/sudo-edit.git
-
-Updating /mnt/store/melpa/working/sudo-edit/
-Checking out 74eb1e6986461baed9a9269566ff838530b4379b
-Built sudo-edit in 4.726s, finished at 2023-06-01T10:57:30+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.3K Jun  1 10:57 packages/sudo-edit-20220801.1317.el
-4.0K -rw-r--r-- 1 root root  478 Jun  1 10:57 packages/sudo-edit-20220801.1317.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

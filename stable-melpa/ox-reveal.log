@@ -1,10 +1,1 @@
-Package: ox-reveal
-Fetcher: github
-Source:  https://github.com/yjwen/org-reveal.git
-
-Updating /mnt/store/melpa/working/ox-reveal/
-Checking out f55c851bf6aeb1bb2a7f6cf0f2b7bd0e79c4a5a0
-Built ox-reveal in 5.338s, finished at 2023-06-01T10:39:16+0000
- ✓ Success:
- 76K -rw-r--r-- 1 root root 74K Jun  1 10:39 packages/ox-reveal-20221127.814.el
-4.0K -rw-r--r-- 1 root root 456 Jun  1 10:39 packages/ox-reveal-20221127.814.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

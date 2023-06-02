@@ -1,10 +1,1 @@
-Package: ancient-one-dark-theme
-Fetcher: github
-Source:  https://github.com/sigvt/ancient-one-dark-emacs.git
-
-Updating /mnt/store/melpa/working/ancient-one-dark-theme/
-Checking out a0eaa8bce0ffc25d1469af48a74e80f820bab0ab
-Built ancient-one-dark-theme in 4.510s, finished at 2023-06-01T09:30:25+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 17K Jun  1 09:30 packages/ancient-one-dark-theme-20211030.1358.el
-4.0K -rw-r--r-- 1 root root 404 Jun  1 09:30 packages/ancient-one-dark-theme-20211030.1358.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

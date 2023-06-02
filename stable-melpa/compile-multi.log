@@ -1,10 +1,1 @@
-Package: compile-multi
-Fetcher: github
-Source:  https://github.com/mohkale/compile-multi.git
-
-Updating /mnt/store/melpa/working/compile-multi/
-Checking out fafadb6722299797a1de3de93cf7439d17b4d13b
-Built compile-multi in 4.886s, finished at 2023-06-01T09:41:36+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.7K Jun  1 09:41 packages/compile-multi-20230521.1115.el
-4.0K -rw-r--r-- 1 root root  447 Jun  1 09:41 packages/compile-multi-20230521.1115.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

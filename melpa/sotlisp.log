@@ -1,10 +1,1 @@
-Package: sotlisp
-Fetcher: github
-Source:  https://github.com/Malabarba/speed-of-thought-lisp.git
-
-Updating /mnt/store/melpa/working/sotlisp/
-Checking out 04186129f2dccf48e288639b78adeb9c0e94be54
-Built sotlisp in 6.378s, finished at 2023-06-01T10:55:07+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Jun  1 10:55 packages/sotlisp-20220909.803.el
-4.0K -rw-r--r-- 1 root root 486 Jun  1 10:55 packages/sotlisp-20220909.803.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: packed
-Fetcher: github
-Source:  https://github.com/emacsorphanage/packed.git
-
-Updating /mnt/store/melpa/working/packed/
-Checking out 169064f7acfe198cc7dd43d02518b773691e1314
-Built packed in 5.210s, finished at 2023-06-01T10:39:47+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 21K Jun  1 10:39 packages/packed-20221130.2228.el
-4.0K -rw-r--r-- 1 root root 473 Jun  1 10:39 packages/packed-20221130.2228.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: org-contacts
-Fetcher: git
-Source:  https://repo.or.cz/org-contacts.git
-
-Updating /mnt/store/melpa/working/org-contacts/
-Checking out ae45b9413e24abdc431d12858dced54e0dee6e39
-Built org-contacts in 7.288s, finished at 2023-06-01T10:34:47+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 59K Jun  1 10:34 packages/org-contacts-20230227.1417.el
-4.0K -rw-r--r-- 1 root root 502 Jun  1 10:34 packages/org-contacts-20230227.1417.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

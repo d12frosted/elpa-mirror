@@ -1,10 +1,1 @@
-Package: mood-one-theme
-Fetcher: gitlab
-Source:  https://gitlab.com/jessieh/mood-one-theme.git
-
-Updating /mnt/store/melpa/working/mood-one-theme/
-Checking out dfbc81900737d3382a340feeed24d2bcd9bdedb0
-Built mood-one-theme in 8.094s, finished at 2023-06-01T10:28:13+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 45K Jun  1 10:28 packages/mood-one-theme-20221222.1214.el
-4.0K -rw-r--r-- 1 root root 451 Jun  1 10:28 packages/mood-one-theme-20221222.1214.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

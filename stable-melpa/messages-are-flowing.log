@@ -1,10 +1,1 @@
-Package: messages-are-flowing
-Fetcher: github
-Source:  https://github.com/legoscia/messages-are-flowing.git
-
-Updating /mnt/store/melpa/working/messages-are-flowing/
-Checking out d582a564a63b7b90764ffc5c618bc5300225d0ab
-Built messages-are-flowing in 5.418s, finished at 2023-06-01T10:26:11+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Jun  1 10:26 packages/messages-are-flowing-20191029.954.el
-4.0K -rw-r--r-- 1 root root  405 Jun  1 10:26 packages/messages-are-flowing-20191029.954.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: format-all
-Fetcher: github
-Source:  https://github.com/lassik/emacs-format-all-the-code.git
-
-Updating /mnt/store/melpa/working/format-all/
-Checking out 4a5c64e44083de91c5b49cfea71872d503cae8fc
-Built format-all in 5.304s, finished at 2023-06-01T10:02:19+0000
- ✓ Success:
- 64K -rw-r--r-- 1 root root 61K Jun  1 10:02 packages/format-all-20230530.859.el
-4.0K -rw-r--r-- 1 root root 570 Jun  1 10:02 packages/format-all-20230530.859.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

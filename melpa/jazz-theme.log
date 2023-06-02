@@ -1,10 +1,1 @@
-Package: jazz-theme
-Fetcher: github
-Source:  https://github.com/donderom/jazz-theme.git
-
-Updating /mnt/store/melpa/working/jazz-theme/
-Checking out d67e09f320d03ace79a05bd28f967b1ac61f2348
-Built jazz-theme in 5.200s, finished at 2023-06-01T10:17:12+0000
- ✓ Success:
- 44K -rw-r--r-- 1 root root 42K Jun  1 10:17 packages/jazz-theme-20230524.1145.el
-4.0K -rw-r--r-- 1 root root 409 Jun  1 10:17 packages/jazz-theme-20230524.1145.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

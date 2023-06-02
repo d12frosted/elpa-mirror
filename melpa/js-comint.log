@@ -1,10 +1,1 @@
-Package: js-comint
-Fetcher: github
-Source:  https://github.com/redguardtoo/js-comint.git
-
-Updating /mnt/store/melpa/working/js-comint/
-Checking out b788bf5d57ad6b902c4096b666c6d78ceff7c116
-Built js-comint in 4.736s, finished at 2023-06-01T10:17:48+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Jun  1 10:17 packages/js-comint-20230311.230.el
-4.0K -rw-r--r-- 1 root root 494 Jun  1 10:17 packages/js-comint-20230311.230.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

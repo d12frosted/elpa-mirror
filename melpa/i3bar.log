@@ -1,10 +1,1 @@
-Package: i3bar
-Fetcher: github
-Source:  https://github.com/Stebalien/i3bar.el.git
-
-Updating /mnt/store/melpa/working/i3bar/
-Checking out 6bbad0891d330b119c77c036643bfb5f9d4d25e3
-Built i3bar in 7.040s, finished at 2023-06-01T10:13:27+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Jun  1 10:13 packages/i3bar-20230514.8.el
-4.0K -rw-r--r-- 1 root root  424 Jun  1 10:13 packages/i3bar-20230514.8.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

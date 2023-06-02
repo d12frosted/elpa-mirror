@@ -1,10 +1,1 @@
-Package: yascroll
-Fetcher: github
-Source:  https://github.com/emacsorphanage/yascroll.git
-
-Updating /mnt/store/melpa/working/yascroll/
-Checking out b4669a6604a3093d3960c494874a7affc6b9c184
-Built yascroll in 5.120s, finished at 2023-06-01T11:08:14+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  1 11:08 packages/yascroll-20220212.1742.el
-4.0K -rw-r--r-- 1 root root 452 Jun  1 11:08 packages/yascroll-20220212.1742.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: mc-calc
-Fetcher: github
-Source:  https://github.com/hatheroldev/mc-calc.git
-
-Updating /mnt/store/melpa/working/mc-calc/
-Checking out 74a046a5728919a4d1135ca62738326b0dde278c
-Built mc-calc in 4.409s, finished at 2023-06-01T10:25:44+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Jun  1 10:25 packages/mc-calc-20200420.1836.el
-4.0K -rw-r--r-- 1 root root  484 Jun  1 10:25 packages/mc-calc-20200420.1836.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

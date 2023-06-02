@@ -1,10 +1,1 @@
-Package: logalimacs
-Fetcher: github
-Source:  https://github.com/logaling/logalimacs.git
-
-Updating /mnt/store/melpa/working/logalimacs/
-Checking out 8286e39502250fc6c3c6656a7f46a8eee8e9a713
-Built logalimacs in 5.530s, finished at 2023-06-01T10:22:54+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root 34K Jun  1 10:22 packages/logalimacs-20131021.1829.el
-4.0K -rw-r--r-- 1 root root 567 Jun  1 10:22 packages/logalimacs-20131021.1829.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

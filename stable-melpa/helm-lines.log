@@ -1,10 +1,1 @@
-Package: helm-lines
-Fetcher: github
-Source:  https://github.com/torgeir/helm-lines.el.git
-
-Updating /mnt/store/melpa/working/helm-lines/
-Checking out f5ad178818d223f32a0bf60d370b50c01df5f3da
-Built helm-lines in 4.538s, finished at 2023-06-01T10:10:06+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Jun  1 10:10 packages/helm-lines-20220103.1909.el
-4.0K -rw-r--r-- 1 root root  491 Jun  1 10:10 packages/helm-lines-20220103.1909.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

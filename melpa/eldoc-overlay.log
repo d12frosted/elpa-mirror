@@ -1,10 +1,1 @@
-Package: eldoc-overlay
-Fetcher: git
-Source:  https://repo.or.cz/eldoc-overlay.git
-
-Updating /mnt/store/melpa/working/eldoc-overlay/
-Checking out 14a9e141918c2e18a107920e8631e622c580b3ef
-Built eldoc-overlay in 4.833s, finished at 2023-06-01T09:50:14+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Jun  1 09:50 packages/eldoc-overlay-20230406.959.el
-4.0K -rw-r--r-- 1 root root  509 Jun  1 09:50 packages/eldoc-overlay-20230406.959.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

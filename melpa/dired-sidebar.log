@@ -1,10 +1,1 @@
-Package: dired-sidebar
-Fetcher: github
-Source:  https://github.com/jojojames/dired-sidebar.git
-
-Updating /mnt/store/melpa/working/dired-sidebar/
-Checking out 5569d3b53585f5413cf87a694650d0fd6e040803
-Built dired-sidebar in 4.852s, finished at 2023-06-01T09:46:45+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 47K Jun  1 09:46 packages/dired-sidebar-20230216.432.el
-4.0K -rw-r--r-- 1 root root 471 Jun  1 09:46 packages/dired-sidebar-20230216.432.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

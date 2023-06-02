@@ -1,10 +1,1 @@
-Package: dedicated
-Fetcher: github
-Source:  https://github.com/emacsorphanage/dedicated.git
-
-Updating /mnt/store/melpa/working/dedicated/
-Checking out f47b504c0c56fa5ab9d1028417ca1f65a713a2f0
-Built dedicated in 4.826s, finished at 2023-06-01T09:44:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.1K Jun  1 09:44 packages/dedicated-20151202.110.el
-4.0K -rw-r--r-- 1 root root  385 Jun  1 09:44 packages/dedicated-20151202.110.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

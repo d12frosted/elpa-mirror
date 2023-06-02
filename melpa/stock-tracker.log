@@ -1,10 +1,1 @@
-Package: stock-tracker
-Fetcher: github
-Source:  https://github.com/beacoder/stock-tracker.git
-
-Updating /mnt/store/melpa/working/stock-tracker/
-Checking out 327488e0f1232616bf33ab1a69da1a53aca25371
-Built stock-tracker in 7.441s, finished at 2023-06-01T10:57:03+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 28K Jun  1 10:57 packages/stock-tracker-20230105.503.el
-4.0K -rw-r--r-- 1 root root 481 Jun  1 10:57 packages/stock-tracker-20230105.503.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

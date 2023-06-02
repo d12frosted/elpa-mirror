@@ -1,10 +1,1 @@
-Package: lispxmp
-Fetcher: github
-Source:  https://github.com/rubikitch/lispxmp.git
-
-Updating /mnt/store/melpa/working/lispxmp/
-Checking out 7ad077b4ee91ce8a42f84eeddb9fc7ea4eac7814
-Built lispxmp in 4.896s, finished at 2023-06-01T10:22:15+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Jun  1 10:22 packages/lispxmp-20170926.23.el
-4.0K -rw-r--r-- 1 root root 439 Jun  1 10:22 packages/lispxmp-20170926.23.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

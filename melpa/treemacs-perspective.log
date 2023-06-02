@@ -1,10 +1,1 @@
-Package: treemacs-perspective
-Fetcher: github
-Source:  https://github.com/Alexander-Miller/treemacs.git
-
-Updating /mnt/store/melpa/working/treemacs-perspective/
-Checking out 127485317a19254ca20ba1910d10edf7dbaa2d97
-Built treemacs-perspective in 5.297s, finished at 2023-06-01T11:01:28+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.8K Jun  1 11:01 packages/treemacs-perspective-20230408.1109.el
-4.0K -rw-r--r-- 1 root root  560 Jun  1 11:01 packages/treemacs-perspective-20230408.1109.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

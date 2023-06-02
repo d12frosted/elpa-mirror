@@ -1,10 +1,1 @@
-Package: inf-clojure
-Fetcher: github
-Source:  https://github.com/clojure-emacs/inf-clojure.git
-
-Updating /mnt/store/melpa/working/inf-clojure/
-Checking out b153e5126419910c38691088aab569b7c281068c
-Built inf-clojure in 6.688s, finished at 2023-06-01T10:15:11+0000
- ✓ Success:
- 72K -rw-r--r-- 1 root root 71K Jun  1 10:15 packages/inf-clojure-20230408.952.el
-4.0K -rw-r--r-- 1 root root 475 Jun  1 10:15 packages/inf-clojure-20230408.952.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

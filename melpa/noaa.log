@@ -1,10 +1,1 @@
-Package: noaa
-Fetcher: github
-Source:  https://github.com/thomp/noaa.git
-
-Updating /mnt/store/melpa/working/noaa/
-Checking out abb41c504479b293d3ed12379466d1c3b8a7ed2e
-Built noaa in 5.861s, finished at 2023-06-01T10:31:18+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 30K Jun  1 10:31 packages/noaa-20230523.606.el
-4.0K -rw-r--r-- 1 root root 382 Jun  1 10:31 packages/noaa-20230523.606.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: elfeed-webkit
-Fetcher: github
-Source:  https://github.com/fritzgrabo/elfeed-webkit.git
-
-Updating /mnt/store/melpa/working/elfeed-webkit/
-Checking out f5c936ca33582366b9c2e88bcdd529f359b41173
-Built elfeed-webkit in 4.770s, finished at 2023-06-01T09:50:36+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jun  1 09:50 packages/elfeed-webkit-20230516.706.el
-4.0K -rw-r--r-- 1 root root  467 Jun  1 09:50 packages/elfeed-webkit-20230516.706.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

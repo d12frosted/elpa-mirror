@@ -1,10 +1,1 @@
-Package: pastelmac-theme
-Fetcher: github
-Source:  https://github.com/bmastenbrook/pastelmac-theme-el.git
-
-Updating /mnt/store/melpa/working/pastelmac-theme/
-Checking out bead21741e3f46f6506e8aef4469d4240a819389
-Built pastelmac-theme in 4.832s, finished at 2023-06-01T10:40:29+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Jun  1 10:40 packages/pastelmac-theme-20151031.236.el
-4.0K -rw-r--r-- 1 root root  488 Jun  1 10:40 packages/pastelmac-theme-20151031.236.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

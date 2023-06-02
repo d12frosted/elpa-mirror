@@ -1,10 +1,1 @@
-Package: python-pytest
-Fetcher: github
-Source:  https://github.com/wbolster/emacs-python-pytest.git
-
-Updating /mnt/store/melpa/working/python-pytest/
-Checking out 33c921adaa6c9c8f7cceba2342114c6b406e0d7c
-Built python-pytest in 6.084s, finished at 2023-06-01T10:46:17+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 10:46 packages/python-pytest-20221021.1937.el
-4.0K -rw-r--r-- 1 root root 582 Jun  1 10:46 packages/python-pytest-20221021.1937.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

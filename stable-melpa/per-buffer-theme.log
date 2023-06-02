@@ -1,17 +1,1 @@
-Package: per-buffer-theme
-Fetcher: hg
-Source:  https://hg.serna.eu/emacs/per-buffer-theme
-
-Updating /mnt/store/melpa/working/per-buffer-theme/
-Checking out 2cbb15c05edff4ce23ce61858cf16e8953cd58b3
-
-Command '' exited with non-zero exit-code: 255
-
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command exited with non-zero exit-code: 255
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

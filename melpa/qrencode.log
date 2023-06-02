@@ -1,10 +1,1 @@
-Package: qrencode
-Fetcher: github
-Source:  https://github.com/ruediger/qrencode-el.git
-
-Updating /mnt/store/melpa/working/qrencode/
-Checking out d7896e9594d45d7b2622d4617ff9cb7037378167
-Built qrencode in 6.805s, finished at 2023-06-01T10:46:30+0000
- ✓ Success:
- 44K -rw-r--r-- 1 root root 44K Jun  1 10:46 packages/qrencode-20230324.2335.el
-4.0K -rw-r--r-- 1 root root 460 Jun  1 10:46 packages/qrencode-20230324.2335.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

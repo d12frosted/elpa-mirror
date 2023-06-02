@@ -1,10 +1,1 @@
-Package: sdcv
-Fetcher: git
-Source:  https://repo.or.cz/sdcv.el.git
-
-Updating /mnt/store/melpa/working/sdcv/
-Checking out 98e239c7380c63282845d5bc55ea6d605f5a33b8
-Built sdcv in 5.536s, finished at 2023-06-01T10:51:25+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Jun  1 10:51 packages/sdcv-20220210.1412.el
-4.0K -rw-r--r-- 1 root root 525 Jun  1 10:51 packages/sdcv-20220210.1412.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

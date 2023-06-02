@@ -1,10 +1,1 @@
-Package: disk
-Fetcher: github
-Source:  https://github.com/kensanata/disk.git
-
-Updating /mnt/store/melpa/working/disk/
-Checking out 283e54e3be7d08f959076240b2ab324e25632137
-Built disk in 3.850s, finished at 2023-06-01T09:47:06+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.2K Jun  1 09:47 packages/disk-20171116.731.el
-4.0K -rw-r--r-- 1 root root  457 Jun  1 09:47 packages/disk-20171116.731.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

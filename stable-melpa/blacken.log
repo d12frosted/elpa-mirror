@@ -1,10 +1,1 @@
-Package: blacken
-Fetcher: github
-Source:  https://github.com/pythonic-emacs/blacken.git
-
-Updating /mnt/store/melpa/working/blacken/
-Checking out 1e80b970b130d5c33031f2539c89eb2f13da2572
-Built blacken in 4.542s, finished at 2023-06-01T09:34:41+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Jun  1 09:34 packages/blacken-20230224.1336.el
-4.0K -rw-r--r-- 1 root root  428 Jun  1 09:34 packages/blacken-20230224.1336.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

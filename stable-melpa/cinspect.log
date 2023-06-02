@@ -1,10 +1,1 @@
-Package: cinspect
-Fetcher: github
-Source:  https://github.com/inlinestyle/cinspect-mode.git
-
-Updating /mnt/store/melpa/working/cinspect/
-Checking out 4e199a90f89b335cccda1518aa0963e0a1d4fbab
-Built cinspect in 6.080s, finished at 2023-06-01T09:38:00+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.1K Jun  1 09:37 packages/cinspect-20150716.233.el
-4.0K -rw-r--r-- 1 root root  577 Jun  1 09:37 packages/cinspect-20150716.233.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

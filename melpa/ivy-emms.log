@@ -1,10 +1,1 @@
-Package: ivy-emms
-Fetcher: github
-Source:  https://github.com/franburstall/ivy-emms.git
-
-Updating /mnt/store/melpa/working/ivy-emms/
-Checking out dfde98c3bdad8136709eac8382ba048fafdcc6ac
-Built ivy-emms in 4.680s, finished at 2023-06-01T10:16:24+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.3K Jun  1 10:16 packages/ivy-emms-20210817.1300.el
-4.0K -rw-r--r-- 1 root root  504 Jun  1 10:16 packages/ivy-emms-20210817.1300.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

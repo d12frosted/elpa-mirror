@@ -1,10 +1,1 @@
-Package: ob-dsq
-Fetcher: github
-Source:  https://github.com/fritzgrabo/ob-dsq.git
-
-Updating /mnt/store/melpa/working/ob-dsq/
-Checking out e001b263af87993755319caefaf5d19e196e4e1b
-Built ob-dsq in 5.016s, finished at 2023-06-01T10:32:26+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  1 10:32 packages/ob-dsq-20220915.1610.el
-4.0K -rw-r--r-- 1 root root 442 Jun  1 10:32 packages/ob-dsq-20220915.1610.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

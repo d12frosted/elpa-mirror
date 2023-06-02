@@ -1,10 +1,1 @@
-Package: snapshot-timemachine
-Fetcher: github
-Source:  https://github.com/mrBliss/snapshot-timemachine.git
-
-Updating /mnt/store/melpa/working/snapshot-timemachine/
-Checking out 99efcebab309b11ed512a8dc62555d3834df5efb
-Built snapshot-timemachine in 5.782s, finished at 2023-06-01T10:54:38+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 48K Jun  1 10:54 packages/snapshot-timemachine-20161221.929.el
-4.0K -rw-r--r-- 1 root root 454 Jun  1 10:54 packages/snapshot-timemachine-20161221.929.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

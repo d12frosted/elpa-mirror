@@ -1,10 +1,1 @@
-Package: avy-embark-collect
-Fetcher: github
-Source:  https://github.com/oantolin/embark.git
-
-Updating /mnt/store/melpa/working/avy-embark-collect/
-Checking out 784ce24a1ad37459041418182af49565cad4974b
-Built avy-embark-collect in 6.959s, finished at 2023-06-01T09:33:06+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Jun  1 09:33 packages/avy-embark-collect-20230130.1454.el
-4.0K -rw-r--r-- 1 root root  581 Jun  1 09:33 packages/avy-embark-collect-20230130.1454.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

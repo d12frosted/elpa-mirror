@@ -1,10 +1,1 @@
-Package: deadgrep
-Fetcher: github
-Source:  https://github.com/Wilfred/deadgrep.git
-
-Updating /mnt/store/melpa/working/deadgrep/
-Checking out 0313e17a4df7bc8a344b2bc23a319c45d14f9689
-Built deadgrep in 5.219s, finished at 2023-06-01T09:44:31+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 60K Jun  1 09:44 packages/deadgrep-20230429.429.el
-4.0K -rw-r--r-- 1 root root 514 Jun  1 09:44 packages/deadgrep-20230429.429.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: seti-theme
-Fetcher: github
-Source:  https://github.com/caisah/seti-theme.git
-
-Updating /mnt/store/melpa/working/seti-theme/
-Checking out 9d76db0b91d4f574dd96ac80fad41da35bffa109
-Built seti-theme in 4.469s, finished at 2023-06-01T10:51:58+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.9K Jun  1 10:51 packages/seti-theme-20190201.1848.el
-4.0K -rw-r--r-- 1 root root  460 Jun  1 10:51 packages/seti-theme-20190201.1848.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

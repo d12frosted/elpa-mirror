@@ -1,10 +1,1 @@
-Package: mixed-pitch
-Fetcher: gitlab
-Source:  https://gitlab.com/jabranham/mixed-pitch.git
-
-Updating /mnt/store/melpa/working/mixed-pitch/
-Checking out 519e05f74825abf04b7d2e0e38ec040d013a125a
-Built mixed-pitch in 7.170s, finished at 2023-06-01T10:27:11+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jun  1 10:27 packages/mixed-pitch-20210304.1900.el
-4.0K -rw-r--r-- 1 root root  478 Jun  1 10:27 packages/mixed-pitch-20210304.1900.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

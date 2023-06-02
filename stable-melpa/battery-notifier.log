@@ -1,10 +1,1 @@
-Package: battery-notifier
-Fetcher: github
-Source:  https://github.com/jasonmj/battery-notifier.git
-
-Updating /mnt/store/melpa/working/battery-notifier/
-Checking out b7301d3633afff78609afd45dcf78268f98d52d3
-Built battery-notifier in 4.790s, finished at 2023-06-01T09:33:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Jun  1 09:33 packages/battery-notifier-20220705.2030.el
-4.0K -rw-r--r-- 1 root root  491 Jun  1 09:33 packages/battery-notifier-20220705.2030.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

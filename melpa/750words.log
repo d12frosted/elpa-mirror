@@ -1,10 +1,1 @@
-Package: 750words
-Fetcher: github
-Source:  https://github.com/zzamboni/750words-client.git
-
-Updating /mnt/store/melpa/working/750words/
-Checking out 43eee19428fc8f5a133192398510d7313eb33d97
-Built 750words in 4.851s, finished at 2023-06-01T09:28:30+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K Jun  1 09:28 packages/750words-20220625.1407.el
-4.0K -rw-r--r-- 1 root root  483 Jun  1 09:28 packages/750words-20220625.1407.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

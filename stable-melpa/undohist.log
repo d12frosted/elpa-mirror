@@ -1,10 +1,1 @@
-Package: undohist
-Fetcher: github
-Source:  https://github.com/emacsorphanage/undohist.git
-
-Updating /mnt/store/melpa/working/undohist/
-Checking out 76338755b8aa710a07d6bc6faa4c03d792e90d82
-Built undohist in 7.109s, finished at 2023-06-01T11:02:24+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.3K Jun  1 11:02 packages/undohist-20230508.1226.el
-4.0K -rw-r--r-- 1 root root  407 Jun  1 11:02 packages/undohist-20230508.1226.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

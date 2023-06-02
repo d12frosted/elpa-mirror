@@ -1,10 +1,1 @@
-Package: nix-update
-Fetcher: github
-Source:  https://github.com/jwiegley/nix-update-el.git
-
-Updating /mnt/store/melpa/working/nix-update/
-Checking out aab70a38165575a9cb41726f1cc67df60fbf2832
-Built nix-update in 5.151s, finished at 2023-06-01T10:31:06+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  1 10:31 packages/nix-update-20220816.2212.el
-4.0K -rw-r--r-- 1 root root 478 Jun  1 10:31 packages/nix-update-20220816.2212.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

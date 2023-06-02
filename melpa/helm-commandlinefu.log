@@ -1,10 +1,1 @@
-Package: helm-commandlinefu
-Fetcher: github
-Source:  https://github.com/xuchunyang/helm-commandlinefu.git
-
-Updating /mnt/store/melpa/working/helm-commandlinefu/
-Checking out 9ee7e018c5db23ae9c8d1c8fa969876f15b7280d
-Built helm-commandlinefu in 4.534s, finished at 2023-06-01T10:08:58+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.3K Jun  1 10:08 packages/helm-commandlinefu-20150611.545.el
-4.0K -rw-r--r-- 1 root root  617 Jun  1 10:08 packages/helm-commandlinefu-20150611.545.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

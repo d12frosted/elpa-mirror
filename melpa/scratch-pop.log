@@ -1,10 +1,1 @@
-Package: scratch-pop
-Fetcher: github
-Source:  https://github.com/zk-phi/scratch-pop.git
-
-Updating /mnt/store/melpa/working/scratch-pop/
-Checking out 545badcd840dd50b39dd7dfa37459c6f71d02ea6
-Built scratch-pop in 4.434s, finished at 2023-06-01T10:51:15+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.6K Jun  1 10:51 packages/scratch-pop-20200910.226.el
-4.0K -rw-r--r-- 1 root root  325 Jun  1 10:51 packages/scratch-pop-20200910.226.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

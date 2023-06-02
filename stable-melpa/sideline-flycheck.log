@@ -1,10 +1,1 @@
-Package: sideline-flycheck
-Fetcher: github
-Source:  https://github.com/emacs-sideline/sideline-flycheck.git
-
-Updating /mnt/store/melpa/working/sideline-flycheck/
-Checking out 3d74a008835eff71899b9455cd00f989378fe70e
-Built sideline-flycheck in 5.233s, finished at 2023-06-01T10:52:55+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jun  1 10:52 packages/sideline-flycheck-20230402.1816.el
-4.0K -rw-r--r-- 1 root root  603 Jun  1 10:52 packages/sideline-flycheck-20230402.1816.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

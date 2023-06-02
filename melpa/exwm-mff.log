@@ -1,10 +1,1 @@
-Package: exwm-mff
-Fetcher: codeberg
-Source:  https://codeberg.org/emacs-weirdware/exwm-mff.git
-
-Updating /mnt/store/melpa/working/exwm-mff/
-Checking out 89206f2e3189f589c27c56bd2b6203e906ee7100
-Built exwm-mff in 5.854s, finished at 2023-06-01T09:56:34+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.3K Jun  1 09:56 packages/exwm-mff-20210603.1723.el
-4.0K -rw-r--r-- 1 root root  399 Jun  1 09:56 packages/exwm-mff-20210603.1723.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

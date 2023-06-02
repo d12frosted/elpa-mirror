@@ -1,10 +1,1 @@
-Package: github-linguist
-Fetcher: github
-Source:  https://github.com/akirak/github-linguist.el.git
-
-Updating /mnt/store/melpa/working/github-linguist/
-Checking out 73f9f52e1f626e866d8becc7a3671630449764c2
-Built github-linguist in 4.591s, finished at 2023-06-01T10:04:40+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  1 10:04 packages/github-linguist-20220928.2013.el
-4.0K -rw-r--r-- 1 root root 569 Jun  1 10:04 packages/github-linguist-20220928.2013.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

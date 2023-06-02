@@ -1,10 +1,1 @@
-Package: notmuch-addr
-Fetcher: sourcehut
-Source:  https://git.sr.ht/~tarsius/notmuch-addr
-
-Updating /mnt/store/melpa/working/notmuch-addr/
-Checking out 89ced49cf3fb4d62bd4fea8bf9bd53ec8e4c7176
-Built notmuch-addr in 5.107s, finished at 2023-06-01T10:31:37+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Jun  1 10:31 packages/notmuch-addr-20230511.2057.el
-4.0K -rw-r--r-- 1 root root  483 Jun  1 10:31 packages/notmuch-addr-20230511.2057.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

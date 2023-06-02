@@ -1,10 +1,1 @@
-Package: ac-emacs-eclim
-Fetcher: github
-Source:  https://github.com/emacs-eclim/emacs-eclim.git
-
-Updating /mnt/store/melpa/working/ac-emacs-eclim/
-Checking out edff7e0e30c87036710d88fb0b7a4644750858e8
-Built ac-emacs-eclim in 4.796s, finished at 2023-06-01T09:28:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Jun  1 09:28 packages/ac-emacs-eclim-20180911.1121.el
-4.0K -rw-r--r-- 1 root root  197 Jun  1 09:28 packages/ac-emacs-eclim-20180911.1121.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

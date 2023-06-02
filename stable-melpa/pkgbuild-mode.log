@@ -1,10 +1,1 @@
-Package: pkgbuild-mode
-Fetcher: github
-Source:  https://github.com/juergenhoetzel/pkgbuild-mode.git
-
-Updating /mnt/store/melpa/working/pkgbuild-mode/
-Checking out 9525be8ecbd3a0d0bc7cc27e6d0f403e111aa067
-Built pkgbuild-mode in 8.492s, finished at 2023-06-01T10:42:31+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 20K Jun  1 10:42 packages/pkgbuild-mode-20220802.1951.el
-4.0K -rw-r--r-- 1 root root 459 Jun  1 10:42 packages/pkgbuild-mode-20220802.1951.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: gitter
-Fetcher: github
-Source:  https://github.com/xuchunyang/gitter.el.git
-
-Updating /mnt/store/melpa/working/gitter/
-Checking out 49327c91eb50cfea633af8fd32b0643691d75cb7
-Built gitter in 4.866s, finished at 2023-06-01T10:04:58+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 10:04 packages/gitter-20220316.138.el
-4.0K -rw-r--r-- 1 root root 452 Jun  1 10:04 packages/gitter-20220316.138.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

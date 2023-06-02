@@ -1,10 +1,1 @@
-Package: firecode-theme
-Fetcher: github
-Source:  https://github.com/emacsfodder/emacs-firecode-theme.git
-
-Updating /mnt/store/melpa/working/firecode-theme/
-Checking out 8b7b03ecdd41e70dab145b98906017e1392eaef4
-Built firecode-theme in 4.767s, finished at 2023-06-01T09:57:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.3K Jun  1 09:57 packages/firecode-theme-20170808.1311.el
-4.0K -rw-r--r-- 1 root root  362 Jun  1 09:57 packages/firecode-theme-20170808.1311.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

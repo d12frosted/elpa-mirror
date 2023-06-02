@@ -1,10 +1,1 @@
-Package: pip-requirements
-Fetcher: github
-Source:  https://github.com/Wilfred/pip-requirements.el.git
-
-Updating /mnt/store/melpa/working/pip-requirements/
-Checking out 216cd1690f80cc965d4ae47b8753fc185f778ff6
-Built pip-requirements in 6.091s, finished at 2023-06-01T10:42:13+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.0K Jun  1 10:42 packages/pip-requirements-20181027.1629.el
-4.0K -rw-r--r-- 1 root root  387 Jun  1 10:42 packages/pip-requirements-20181027.1629.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

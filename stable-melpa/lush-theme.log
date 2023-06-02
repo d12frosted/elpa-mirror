@@ -1,10 +1,1 @@
-Package: lush-theme
-Fetcher: github
-Source:  https://github.com/andre-richter/emacs-lush-theme.git
-
-Updating /mnt/store/melpa/working/lush-theme/
-Checking out 7cfc993709d712f75c51b505078608c9e1c11466
-Built lush-theme in 5.060s, finished at 2023-06-01T10:23:52+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jun  1 10:23 packages/lush-theme-20180816.2200.el
-4.0K -rw-r--r-- 1 root root  512 Jun  1 10:23 packages/lush-theme-20180816.2200.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

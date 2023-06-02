@@ -1,10 +1,1 @@
-Package: phan
-Fetcher: github
-Source:  https://github.com/emacs-php/phan.el.git
-
-Updating /mnt/store/melpa/working/phan/
-Checking out b7d523630bb072c4dbcfa9995dc734b25b72a69f
-Built phan in 5.436s, finished at 2023-06-01T10:41:25+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 32K Jun  1 10:41 packages/phan-20200805.356.el
-4.0K -rw-r--r-- 1 root root 453 Jun  1 10:41 packages/phan-20200805.356.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

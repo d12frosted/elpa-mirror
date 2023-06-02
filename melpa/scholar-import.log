@@ -1,10 +1,1 @@
-Package: scholar-import
-Fetcher: github
-Source:  https://github.com/teeann/scholar-import.git
-
-Updating /mnt/store/melpa/working/scholar-import/
-Checking out 2456367578caa7fd768e30238ce080687faa0a25
-Built scholar-import in 4.990s, finished at 2023-06-01T10:51:01+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jun  1 10:51 packages/scholar-import-20230412.1413.el
-4.0K -rw-r--r-- 1 root root  523 Jun  1 10:51 packages/scholar-import-20230412.1413.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: github-review
-Fetcher: github
-Source:  https://github.com/charignon/github-review.git
-
-Updating /mnt/store/melpa/working/github-review/
-Checking out 725fbc7b385228f53a7ddc46a92c1276bab4aea8
-Built github-review in 4.961s, finished at 2023-06-01T10:04:44+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Jun  1 10:04 packages/github-review-20211029.243.el
-4.0K -rw-r--r-- 1 root root 569 Jun  1 10:04 packages/github-review-20211029.243.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

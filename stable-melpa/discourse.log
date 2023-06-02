@@ -1,10 +1,1 @@
-Package: discourse
-Fetcher: github
-Source:  https://github.com/lujun9972/discourse-api.git
-
-Updating /mnt/store/melpa/working/discourse/
-Checking out a86c7e608851e186fe12e892a573994f08c8e65e
-Built discourse in 3.989s, finished at 2023-06-01T09:46:59+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.2K Jun  1 09:46 packages/discourse-20160911.819.el
-4.0K -rw-r--r-- 1 root root  484 Jun  1 09:46 packages/discourse-20160911.819.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

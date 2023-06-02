@@ -1,10 +1,1 @@
-Package: org-appear
-Fetcher: github
-Source:  https://github.com/awth13/org-appear.git
-
-Updating /mnt/store/melpa/working/org-appear/
-Checking out 60ba267c5da336e75e603f8c7ab3f44e6f4e4dac
-Built org-appear in 5.609s, finished at 2023-06-01T10:34:16+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 17K Jun  1 10:34 packages/org-appear-20220617.2355.el
-4.0K -rw-r--r-- 1 root root 452 Jun  1 10:34 packages/org-appear-20220617.2355.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

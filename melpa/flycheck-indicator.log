@@ -1,10 +1,1 @@
-Package: flycheck-indicator
-Fetcher: github
-Source:  https://github.com/gexplorer/flycheck-indicator.git
-
-Updating /mnt/store/melpa/working/flycheck-indicator/
-Checking out e00d9a20cbc21d6814c27cc9206296da394478e8
-Built flycheck-indicator in 7.008s, finished at 2023-06-01T09:59:33+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.5K Jun  1 09:59 packages/flycheck-indicator-20200331.1142.el
-4.0K -rw-r--r-- 1 root root  543 Jun  1 09:59 packages/flycheck-indicator-20200331.1142.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

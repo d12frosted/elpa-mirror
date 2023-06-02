@@ -1,10 +1,1 @@
-Package: helm-itunes
-Fetcher: github
-Source:  https://github.com/anschwa/helm-itunes.git
-
-Updating /mnt/store/melpa/working/helm-itunes/
-Checking out 966de755a5aadbe02311a6cef77bd4790e84c263
-Built helm-itunes in 4.673s, finished at 2023-06-01T10:09:57+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.2K Jun  1 10:09 packages/helm-itunes-20151013.648.el
-4.0K -rw-r--r-- 1 root root  435 Jun  1 10:09 packages/helm-itunes-20151013.648.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: mozc-cand-posframe
-Fetcher: github
-Source:  https://github.com/akirak/mozc-posframe.git
-
-Updating /mnt/store/melpa/working/mozc-cand-posframe/
-Checking out 1d07d5055381008ccbb29b97315d140e09a7ee95
-Built mozc-cand-posframe in 4.709s, finished at 2023-06-01T10:28:43+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Jun  1 10:28 packages/mozc-cand-posframe-20200208.750.el
-4.0K -rw-r--r-- 1 root root  612 Jun  1 10:28 packages/mozc-cand-posframe-20200208.750.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

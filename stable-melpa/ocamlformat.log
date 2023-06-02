@@ -1,10 +1,1 @@
-Package: ocamlformat
-Fetcher: github
-Source:  https://github.com/ocaml-ppx/ocamlformat.git
-
-Updating /mnt/store/melpa/working/ocamlformat/
-Checking out ee9cdd7e19298dc025d77212cab11b3d97b9972f
-Built ocamlformat in 6.657s, finished at 2023-06-01T10:33:19+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  1 10:33 packages/ocamlformat-20230420.1458.el
-4.0K -rw-r--r-- 1 root root 285 Jun  1 10:33 packages/ocamlformat-20230420.1458.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

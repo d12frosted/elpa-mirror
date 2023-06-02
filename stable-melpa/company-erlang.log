@@ -1,11 +1,1 @@
-Package: company-erlang
-Fetcher: github
-Source:  https://github.com/s-kostyaev/company-erlang.git
-
-Updating /mnt/store/melpa/working/company-erlang/
-Checking out bc0524a16f17b66c7397690e4ca0e004f09ea6c5
-Warning: company-erlang :files spec is equivalent to the default
-Built company-erlang in 4.673s, finished at 2023-06-01T09:40:45+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jun  1 09:40 packages/company-erlang-20170123.538.el
-4.0K -rw-r--r-- 1 root root  439 Jun  1 09:40 packages/company-erlang-20170123.538.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

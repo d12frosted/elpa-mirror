@@ -1,10 +1,1 @@
-Package: pass
-Fetcher: github
-Source:  https://github.com/NicolasPetton/pass.git
-
-Updating /mnt/store/melpa/working/pass/
-Checking out 5651da53137db9adcb125b4897c2fe27eeb4368d
-Built pass in 4.633s, finished at 2023-06-01T10:40:20+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 25K Jun  1 10:40 packages/pass-20210203.810.el
-4.0K -rw-r--r-- 1 root root 525 Jun  1 10:40 packages/pass-20210203.810.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

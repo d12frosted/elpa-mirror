@@ -1,10 +1,1 @@
-Package: unobtrusive-magit-theme
-Fetcher: github
-Source:  https://github.com/tee3/unobtrusive-magit-theme.git
-
-Updating /mnt/store/melpa/working/unobtrusive-magit-theme/
-Checking out aede357009655d19d4468320b2b61b0f26a47593
-Built unobtrusive-magit-theme in 7.353s, finished at 2023-06-01T11:02:55+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.7K Jun  1 11:02 packages/unobtrusive-magit-theme-20200411.1349.el
-4.0K -rw-r--r-- 1 root root  524 Jun  1 11:02 packages/unobtrusive-magit-theme-20200411.1349.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

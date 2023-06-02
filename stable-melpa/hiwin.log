@@ -1,10 +1,1 @@
-Package: hiwin
-Fetcher: github
-Source:  https://github.com/yoshida-mediba/hiwin-mode.git
-
-Updating /mnt/store/melpa/working/hiwin/
-Checking out 6ee8ed051405653bd9b7332d7e9fbb591d954051
-Built hiwin in 5.505s, finished at 2023-06-01T10:12:12+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.1K Jun  1 10:12 packages/hiwin-20150825.827.el
-4.0K -rw-r--r-- 1 root root  267 Jun  1 10:12 packages/hiwin-20150825.827.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

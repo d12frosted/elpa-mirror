@@ -1,10 +1,1 @@
-Package: govet
-Fetcher: github
-Source:  https://github.com/meshelton/govet.git
-
-Updating /mnt/store/melpa/working/govet/
-Checking out 1b8c044aa856f4b62a682bc57494af19d22a6053
-Built govet in 7.180s, finished at 2023-06-01T10:06:44+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.3K Jun  1 10:06 packages/govet-20170808.1724.el
-4.0K -rw-r--r-- 1 root root  210 Jun  1 10:06 packages/govet-20170808.1724.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: playerctl
-Fetcher: github
-Source:  https://github.com/thomas-louvigne/playerctl.el.git
-
-Updating /mnt/store/melpa/working/playerctl/
-Checking out 0912ed5a5ab6d611b5f35db589f608f1fafdc81a
-Built playerctl in 5.578s, finished at 2023-06-01T10:42:42+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.8K Jun  1 10:42 packages/playerctl-20220714.1234.el
-4.0K -rw-r--r-- 1 root root  475 Jun  1 10:42 packages/playerctl-20220714.1234.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

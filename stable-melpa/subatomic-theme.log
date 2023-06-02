@@ -1,10 +1,1 @@
-Package: subatomic-theme
-Fetcher: github
-Source:  https://github.com/cryon/subatomic-theme.git
-
-Updating /mnt/store/melpa/working/subatomic-theme/
-Checking out 9d0ac6aa5272d0285965a48505eb35658c5472b0
-Built subatomic-theme in 4.880s, finished at 2023-06-01T10:57:26+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 30K Jun  1 10:57 packages/subatomic-theme-20220128.1615.el
-4.0K -rw-r--r-- 1 root root 422 Jun  1 10:57 packages/subatomic-theme-20220128.1615.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

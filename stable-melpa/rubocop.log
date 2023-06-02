@@ -1,10 +1,1 @@
-Package: rubocop
-Fetcher: github
-Source:  https://github.com/rubocop/rubocop-emacs.git
-
-Updating /mnt/store/melpa/working/rubocop/
-Checking out f5fd18aa810c3d3269188cbbd731ddc09006f8f5
-Built rubocop in 8.229s, finished at 2023-06-01T10:50:09+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 10K Jun  1 10:50 packages/rubocop-20210309.1241.el
-4.0K -rw-r--r-- 1 root root 374 Jun  1 10:50 packages/rubocop-20210309.1241.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

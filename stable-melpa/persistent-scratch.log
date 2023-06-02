@@ -1,10 +1,1 @@
-Package: persistent-scratch
-Fetcher: github
-Source:  https://github.com/Fanael/persistent-scratch.git
-
-Updating /mnt/store/melpa/working/persistent-scratch/
-Checking out 5ff41262f158d3eb966826314516f23e0cb86c04
-Built persistent-scratch in 4.732s, finished at 2023-06-01T10:41:03+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Jun  1 10:41 packages/persistent-scratch-20230225.1439.el
-4.0K -rw-r--r-- 1 root root 481 Jun  1 10:41 packages/persistent-scratch-20230225.1439.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

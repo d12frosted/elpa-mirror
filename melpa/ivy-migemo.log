@@ -1,10 +1,1 @@
-Package: ivy-migemo
-Fetcher: github
-Source:  https://github.com/ROCKTAKEY/ivy-migemo.git
-
-Updating /mnt/store/melpa/working/ivy-migemo/
-Checking out 6022b24e72f073a7b5599f2dea611da3a1282378
-Built ivy-migemo in 4.949s, finished at 2023-06-01T10:16:37+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 18K Jun  1 10:16 packages/ivy-migemo-20230121.1934.el
-4.0K -rw-r--r-- 1 root root 535 Jun  1 10:16 packages/ivy-migemo-20230121.1934.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

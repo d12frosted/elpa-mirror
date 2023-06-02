@@ -1,10 +1,1 @@
-Package: fish-completion
-Fetcher: gitlab
-Source:  https://gitlab.com/Ambrevar/emacs-fish-completion.git
-
-Updating /mnt/store/melpa/working/fish-completion/
-Checking out 10384881817b5ae38cf6197a077a663420090d2c
-Built fish-completion in 5.050s, finished at 2023-06-01T09:57:47+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.9K Jun  1 09:57 packages/fish-completion-20191103.1210.el
-4.0K -rw-r--r-- 1 root root  451 Jun  1 09:57 packages/fish-completion-20191103.1210.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

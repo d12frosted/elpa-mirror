@@ -1,10 +1,1 @@
-Package: vcomp
-Fetcher: github
-Source:  https://github.com/tarsius/vcomp.git
-
-Updating /mnt/store/melpa/working/vcomp/
-Checking out fdd010e9081d62aa6aaa1b25a2df925efd662d0c
-Built vcomp in 8.262s, finished at 2023-06-01T11:04:02+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.8K Jun  1 11:04 packages/vcomp-20230407.1426.el
-4.0K -rw-r--r-- 1 root root  392 Jun  1 11:04 packages/vcomp-20230407.1426.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

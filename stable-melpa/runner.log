@@ -1,10 +1,1 @@
-Package: runner
-Fetcher: github
-Source:  https://github.com/thamer/runner.git
-
-Updating /mnt/store/melpa/working/runner/
-Checking out a211d57ddc600410d07a8b534920ba905b093d87
-Built runner in 4.721s, finished at 2023-06-01T10:50:27+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 10:50 packages/runner-20160524.1048.el
-4.0K -rw-r--r-- 1 root root 463 Jun  1 10:50 packages/runner-20160524.1048.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: elcouch
-Fetcher: github
-Source:  https://github.com/DamienCassou/elcouch.git
-
-Updating /mnt/store/melpa/working/elcouch/
-Checking out 3d162dda14411349e12509029d2b621c5d1edea2
-Built elcouch in 4.792s, finished at 2023-06-01T09:50:09+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.0K Jun  1 09:50 packages/elcouch-20201108.955.el
-4.0K -rw-r--r-- 1 root root  522 Jun  1 09:50 packages/elcouch-20201108.955.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: erefactor
-Fetcher: github
-Source:  https://github.com/mhayashi1120/Emacs-erefactor.git
-
-Updating /mnt/store/melpa/working/erefactor/
-Checking out bfe27a1b8c7cac0fe054e76113e941efa3775fe8
-Built erefactor in 4.947s, finished at 2023-06-01T09:53:37+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 45K Jun  1 09:53 packages/erefactor-20200513.1252.el
-4.0K -rw-r--r-- 1 root root 500 Jun  1 09:53 packages/erefactor-20200513.1252.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

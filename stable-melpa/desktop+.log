@@ -1,10 +1,1 @@
-Package: desktop+
-Fetcher: github
-Source:  https://github.com/ffevotte/desktop-plus.git
-
-Updating /mnt/store/melpa/working/desktop+/
-Checking out d26f369bda96860eef18365cdb5c79f39a2c765c
-Built desktop+ in 6.624s, finished at 2023-06-01T09:45:04+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 09:45 packages/desktop+-20170107.2132.el
-4.0K -rw-r--r-- 1 root root 499 Jun  1 09:45 packages/desktop+-20170107.2132.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

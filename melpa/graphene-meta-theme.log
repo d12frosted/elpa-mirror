@@ -1,10 +1,1 @@
-Package: graphene-meta-theme
-Fetcher: github
-Source:  https://github.com/rdallasgray/graphene-meta-theme.git
-
-Updating /mnt/store/melpa/working/graphene-meta-theme/
-Checking out 62cc73fee31f1bd9474027b83a249feee050271e
-Built graphene-meta-theme in 6.250s, finished at 2023-06-01T10:06:58+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  1 10:06 packages/graphene-meta-theme-20161204.1607.el
-4.0K -rw-r--r-- 1 root root 496 Jun  1 10:06 packages/graphene-meta-theme-20161204.1607.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

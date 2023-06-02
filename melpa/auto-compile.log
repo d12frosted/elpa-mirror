@@ -1,10 +1,1 @@
-Package: auto-compile
-Fetcher: github
-Source:  https://github.com/emacscollective/auto-compile.git
-
-Updating /mnt/store/melpa/working/auto-compile/
-Checking out 36646df118dbea91e3d00d06ed712c5d05399404
-Built auto-compile in 7.153s, finished at 2023-06-01T09:32:14+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root 34K Jun  1 09:32 packages/auto-compile-20230511.2120.el
-4.0K -rw-r--r-- 1 root root 474 Jun  1 09:32 packages/auto-compile-20230511.2120.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

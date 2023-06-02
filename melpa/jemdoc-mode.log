@@ -1,10 +1,1 @@
-Package: jemdoc-mode
-Fetcher: github
-Source:  https://github.com/drdv/jemdoc-mode.git
-
-Updating /mnt/store/melpa/working/jemdoc-mode/
-Checking out 529b4d4681e1198b9892f340fdd6c3f1592a047a
-Built jemdoc-mode in 4.959s, finished at 2023-06-01T10:17:21+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root 33K Jun  1 10:17 packages/jemdoc-mode-20170704.2027.el
-4.0K -rw-r--r-- 1 root root 487 Jun  1 10:17 packages/jemdoc-mode-20170704.2027.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

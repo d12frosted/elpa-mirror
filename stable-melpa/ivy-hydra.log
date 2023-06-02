@@ -1,10 +1,1 @@
-Package: ivy-hydra
-Fetcher: github
-Source:  https://github.com/abo-abo/swiper.git
-
-Updating /mnt/store/melpa/working/ivy-hydra/
-Checking out d28225e86f8dfb3825809ad287f759f95ee9e479
-Built ivy-hydra in 5.437s, finished at 2023-06-01T10:16:34+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Jun  1 10:16 packages/ivy-hydra-20230410.1815.el
-4.0K -rw-r--r-- 1 root root  504 Jun  1 10:16 packages/ivy-hydra-20230410.1815.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

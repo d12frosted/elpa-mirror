@@ -1,10 +1,1 @@
-Package: tmux-pane
-Fetcher: github
-Source:  https://github.com/laishulu/emacs-tmux-pane.git
-
-Updating /mnt/store/melpa/working/tmux-pane/
-Checking out 923524efe8e6e5e0d269de6bb253b45e02d9a663
-Built tmux-pane in 4.731s, finished at 2023-06-01T11:00:24+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.0K Jun  1 11:00 packages/tmux-pane-20200730.520.el
-4.0K -rw-r--r-- 1 root root  396 Jun  1 11:00 packages/tmux-pane-20200730.520.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

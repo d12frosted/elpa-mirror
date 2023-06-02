@@ -1,10 +1,1 @@
-Package: helm-etags-plus
-Fetcher: github
-Source:  https://github.com/jixiuf/helm-etags-plus.git
-
-Updating /mnt/store/melpa/working/helm-etags-plus/
-Checking out 52598fe69636add4b62cd9873041de5c6db9b7ac
-Built helm-etags-plus in 4.109s, finished at 2023-06-01T10:09:20+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 29K Jun  1 10:09 packages/helm-etags-plus-20201003.1424.el
-4.0K -rw-r--r-- 1 root root 458 Jun  1 10:09 packages/helm-etags-plus-20201003.1424.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

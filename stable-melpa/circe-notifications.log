@@ -1,10 +1,1 @@
-Package: circe-notifications
-Fetcher: github
-Source:  https://github.com/eqyiel/circe-notifications.git
-
-Updating /mnt/store/melpa/working/circe-notifications/
-Checking out 291149ac12877bbd062da993479d3533a26862b0
-Built circe-notifications in 5.800s, finished at 2023-06-01T09:38:05+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.6K Jun  1 09:38 packages/circe-notifications-20180102.2318.el
-4.0K -rw-r--r-- 1 root root  480 Jun  1 09:38 packages/circe-notifications-20180102.2318.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: my-repo-pins
-Fetcher: github
-Source:  https://github.com/NinjaTrappeur/my-repo-pins.git
-
-Updating /mnt/store/melpa/working/my-repo-pins/
-Checking out e6fe3864e244e6db74b668d24857c04472b2d475
-Built my-repo-pins in 5.373s, finished at 2023-06-01T10:29:50+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 37K Jun  1 10:29 packages/my-repo-pins-20230120.1105.el
-4.0K -rw-r--r-- 1 root root 466 Jun  1 10:29 packages/my-repo-pins-20230120.1105.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

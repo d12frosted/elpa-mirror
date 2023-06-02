@@ -1,10 +1,1 @@
-Package: tfsmacs
-Fetcher: github
-Source:  https://github.com/sebasmonia/tfsmacs.git
-
-Updating /mnt/store/melpa/working/tfsmacs/
-Checking out 13ee3f528ff616880611f563a68d921250692ef8
-Built tfsmacs in 5.339s, finished at 2023-06-01T10:59:41+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 57K Jun  1 10:59 packages/tfsmacs-20180911.2114.el
-4.0K -rw-r--r-- 1 root root 565 Jun  1 10:59 packages/tfsmacs-20180911.2114.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

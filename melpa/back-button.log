@@ -1,10 +1,1 @@
-Package: back-button
-Fetcher: github
-Source:  https://github.com/rolandwalker/back-button.git
-
-Updating /mnt/store/melpa/working/back-button/
-Checking out f8783c98a7fefc1d0419959c1b462c7dcadce5a8
-Built back-button in 5.000s, finished at 2023-06-01T09:33:20+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 37K Jun  1 09:33 packages/back-button-20220827.1733.el
-4.0K -rw-r--r-- 1 root root 615 Jun  1 09:33 packages/back-button-20220827.1733.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

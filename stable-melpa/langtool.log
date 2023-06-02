@@ -1,11 +1,1 @@
-Package: langtool
-Fetcher: github
-Source:  https://github.com/mhayashi1120/Emacs-langtool.git
-
-Updating /mnt/store/melpa/working/langtool/
-Checking out 416abc7d1c1cbb31a9bddad458366215bad0089b
-Built langtool in 8.157s, finished at 2023-06-01T10:20:27+0000
- ✓ Success:
- 72K -rw-r--r-- 1 root root 70K Feb  5 19:51 packages/langtool-20230129.304.tar
- 60K -rw-r--r-- 1 root root 59K Jun  1 10:20 packages/langtool-20230222.326.el
-4.0K -rw-r--r-- 1 root root 471 Jun  1 10:20 packages/langtool-20230222.326.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

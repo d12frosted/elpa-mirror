@@ -1,10 +1,1 @@
-Package: helm-atoms
-Fetcher: github
-Source:  https://github.com/dantecatalfamo/helm-atoms.git
-
-Updating /mnt/store/melpa/working/helm-atoms/
-Checking out 7e6f91a16f556c96ae1b0d1f965ea56861bb6372
-Built helm-atoms in 4.307s, finished at 2023-06-01T10:08:35+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.4K Jun  1 10:08 packages/helm-atoms-20201013.1723.el
-4.0K -rw-r--r-- 1 root root  475 Jun  1 10:08 packages/helm-atoms-20201013.1723.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: tok-theme
-Fetcher: github
-Source:  https://github.com/topikettunen/tok-theme.git
-
-Updating /mnt/store/melpa/working/tok-theme/
-Checking out 2fcf494fe5f3f292bb5dab180fe2dbfdcc75249e
-Built tok-theme in 5.597s, finished at 2023-06-01T11:00:34+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.3K Jun  1 11:00 packages/tok-theme-20230422.1801.el
-4.0K -rw-r--r-- 1 root root  486 Jun  1 11:00 packages/tok-theme-20230422.1801.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

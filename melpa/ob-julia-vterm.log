@@ -1,10 +1,1 @@
-Package: ob-julia-vterm
-Fetcher: github
-Source:  https://github.com/shg/ob-julia-vterm.el.git
-
-Updating /mnt/store/melpa/working/ob-julia-vterm/
-Checking out e0069ff1d8ebf0be13cc24b980579577b5e343d8
-Built ob-julia-vterm in 5.080s, finished at 2023-06-01T10:32:40+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  1 10:32 packages/ob-julia-vterm-20221102.756.el
-4.0K -rw-r--r-- 1 root root 508 Jun  1 10:32 packages/ob-julia-vterm-20221102.756.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: media-progress-dirvish
-Fetcher: github
-Source:  https://github.com/jumper047/media-progress.git
-
-Updating /mnt/store/melpa/working/media-progress-dirvish/
-Checking out ec777d2d200ecb85795a225b482808f048c30a1c
-Built media-progress-dirvish in 4.249s, finished at 2023-06-01T10:25:49+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Jun  1 10:25 packages/media-progress-dirvish-20230520.1547.el
-4.0K -rw-r--r-- 1 root root  583 Jun  1 10:25 packages/media-progress-dirvish-20230520.1547.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

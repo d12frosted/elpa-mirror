@@ -1,10 +1,1 @@
-Package: ormolu
-Fetcher: github
-Source:  https://github.com/vyorkin/ormolu.el.git
-
-Updating /mnt/store/melpa/working/ormolu/
-Checking out a6b1d3f8838d067ac5352fb0673c3c3dae7abd73
-Built ormolu in 6.440s, finished at 2023-06-01T10:38:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Jun  1 10:38 packages/ormolu-20220530.921.el
-4.0K -rw-r--r-- 1 root root  426 Jun  1 10:38 packages/ormolu-20220530.921.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: simple-paren
-Fetcher: github
-Source:  https://github.com/andreas-roehler/simple-paren.git
-
-Updating /mnt/store/melpa/working/simple-paren/
-Checking out feac5e500f49e3825e2e3017d94459e663ebd5ff
-Built simple-paren in 5.643s, finished at 2023-06-01T10:53:06+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Jun  1 10:53 packages/simple-paren-20220713.902.el
-4.0K -rw-r--r-- 1 root root 458 Jun  1 10:53 packages/simple-paren-20220713.902.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

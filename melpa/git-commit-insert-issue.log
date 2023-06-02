@@ -1,10 +1,1 @@
-Package: git-commit-insert-issue
-Fetcher: gitlab
-Source:  https://gitlab.com/emacs-stuff/git-commit-insert-issue.git
-
-Updating /mnt/store/melpa/working/git-commit-insert-issue/
-Checking out df7ce0549d1db7bab27d401a351ea0d187c4a673
-Built git-commit-insert-issue in 5.663s, finished at 2023-06-01T10:04:17+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 10:04 packages/git-commit-insert-issue-20230512.1416.el
-4.0K -rw-r--r-- 1 root root 558 Jun  1 10:04 packages/git-commit-insert-issue-20230512.1416.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

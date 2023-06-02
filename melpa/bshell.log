@@ -1,10 +1,1 @@
-Package: bshell
-Fetcher: github
-Source:  https://github.com/plandes/bshell.git
-
-Updating /mnt/store/melpa/working/bshell/
-Checking out 469c841f19f28c271b4f172b40f3f9ca830254df
-Built bshell in 4.703s, finished at 2023-06-01T09:35:31+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Jun  1 09:35 packages/bshell-20201219.139.el
-4.0K -rw-r--r-- 1 root root  400 Jun  1 09:35 packages/bshell-20201219.139.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

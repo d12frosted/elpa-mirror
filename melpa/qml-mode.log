@@ -1,10 +1,1 @@
-Package: qml-mode
-Fetcher: github
-Source:  https://github.com/coldnew/qml-mode.git
-
-Updating /mnt/store/melpa/working/qml-mode/
-Checking out 6c5f33ba88ae010bf201a80ee8095e20a724558c
-Built qml-mode in 5.846s, finished at 2023-06-01T10:46:29+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.2K Jun  1 10:46 packages/qml-mode-20161016.31.el
-4.0K -rw-r--r-- 1 root root  448 Jun  1 10:46 packages/qml-mode-20161016.31.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: download-region
-Fetcher: github
-Source:  https://github.com/zk-phi/download-region.git
-
-Updating /mnt/store/melpa/working/download-region/
-Checking out e0a721858a22896fa1d7f1d5689dd0878dbc58fa
-Built download-region in 3.648s, finished at 2023-06-01T09:47:51+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.8K Jun  1 09:47 packages/download-region-20210306.415.el
-4.0K -rw-r--r-- 1 root root  314 Jun  1 09:47 packages/download-region-20210306.415.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

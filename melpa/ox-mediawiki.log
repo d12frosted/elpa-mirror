@@ -1,10 +1,1 @@
-Package: ox-mediawiki
-Fetcher: github
-Source:  https://github.com/tomalexander/orgmode-mediawiki.git
-
-Updating /mnt/store/melpa/working/ox-mediawiki/
-Checking out fa4954c12ab339ac8adf2830141390e71ee13067
-Built ox-mediawiki in 5.073s, finished at 2023-06-01T10:39:08+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 27K Jun  1 10:39 packages/ox-mediawiki-20230425.115.el
-4.0K -rw-r--r-- 1 root root 497 Jun  1 10:39 packages/ox-mediawiki-20230425.115.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: faceup
-Fetcher: github
-Source:  https://github.com/Lindydancer/faceup.git
-
-Updating /mnt/store/melpa/working/faceup/
-Checking out 6c92dad56a133e14e7b27831e1bcf9b3a71ff154
-Built faceup in 5.138s, finished at 2023-06-01T09:56:48+0000
- ✓ Success:
- 44K -rw-r--r-- 1 root root 44K Jun  1 09:56 packages/faceup-20170925.1946.el
-4.0K -rw-r--r-- 1 root root 365 Jun  1 09:56 packages/faceup-20170925.1946.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

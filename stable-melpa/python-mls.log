@@ -1,10 +1,1 @@
-Package: python-mls
-Fetcher: github
-Source:  https://github.com/jdtsmith/python-mls.git
-
-Updating /mnt/store/melpa/working/python-mls/
-Checking out 449122636573217fc8e45753f829a96d8b170f66
-Built python-mls in 5.285s, finished at 2023-06-01T10:46:14+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 25K Jun  1 10:46 packages/python-mls-20230522.2131.el
-4.0K -rw-r--r-- 1 root root 429 Jun  1 10:46 packages/python-mls-20230522.2131.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

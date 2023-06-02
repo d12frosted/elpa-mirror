@@ -1,17 +1,1 @@
-Package: wisp-mode
-Fetcher: hg
-Source:  https://hg.sr.ht/~arnebab/wisp
-
-Updating /mnt/store/melpa/working/wisp-mode/
-Checking out 1a01003d400db8a42838cabcb26c06d627246a17
-
-Command '' exited with non-zero exit-code: 255
-
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command exited with non-zero exit-code: 255
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

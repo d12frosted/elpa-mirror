@@ -1,10 +1,1 @@
-Package: flycheck-rust
-Fetcher: github
-Source:  https://github.com/flycheck/flycheck-rust.git
-
-Updating /mnt/store/melpa/working/flycheck-rust/
-Checking out a139cd53c5062697e9ed94ad80b803c37d999600
-Built flycheck-rust in 7.783s, finished at 2023-06-01T10:00:34+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Jun  1 10:00 packages/flycheck-rust-20190319.1546.el
-4.0K -rw-r--r-- 1 root root  570 Jun  1 10:00 packages/flycheck-rust-20190319.1546.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

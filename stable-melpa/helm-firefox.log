@@ -1,10 +1,1 @@
-Package: helm-firefox
-Fetcher: github
-Source:  https://github.com/emacs-helm/helm-firefox.git
-
-Updating /mnt/store/melpa/working/helm-firefox/
-Checking out 571cf8dfcbe43d91f9890eebefc88d7572c62e75
-Built helm-firefox in 5.243s, finished at 2023-06-01T10:09:23+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Jun  1 10:09 packages/helm-firefox-20220420.1346.el
-4.0K -rw-r--r-- 1 root root  264 Jun  1 10:09 packages/helm-firefox-20220420.1346.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

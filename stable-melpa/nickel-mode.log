@@ -1,10 +1,1 @@
-Package: nickel-mode
-Fetcher: github
-Source:  https://github.com/nickel-lang/nickel-mode.git
-
-Updating /mnt/store/melpa/working/nickel-mode/
-Checking out 4b92668564025b18a3d4da47db51d6360cf9da44
-Built nickel-mode in 4.463s, finished at 2023-06-01T10:30:52+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jun  1 10:30 packages/nickel-mode-20230502.841.el
-4.0K -rw-r--r-- 1 root root  551 Jun  1 10:30 packages/nickel-mode-20230502.841.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

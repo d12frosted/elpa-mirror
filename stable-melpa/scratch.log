@@ -1,10 +1,1 @@
-Package: scratch
-Fetcher: codeberg
-Source:  https://codeberg.org/emacs-weirdware/scratch.git
-
-Updating /mnt/store/melpa/working/scratch/
-Checking out f000648c9663833a76a8de9b1e78c99a9d698e48
-Built scratch in 6.327s, finished at 2023-06-01T10:51:10+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 8.0K Jun  1 10:51 packages/scratch-20220319.1705.el
-4.0K -rw-r--r-- 1 root root  424 Jun  1 10:51 packages/scratch-20220319.1705.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: vlc
-Fetcher: github
-Source:  https://github.com/xuchunyang/vlc.el.git
-
-Updating /mnt/store/melpa/working/vlc/
-Checking out 07c4a12904f2700fb8420c4e71395fd59a5e6faa
-Built vlc in 4.490s, finished at 2023-06-01T11:04:41+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Jun  1 11:04 packages/vlc-20200328.1143.el
-4.0K -rw-r--r-- 1 root root 358 Jun  1 11:04 packages/vlc-20200328.1143.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

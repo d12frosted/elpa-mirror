@@ -1,10 +1,1 @@
-Package: neuron-mode
-Fetcher: github
-Source:  https://github.com/felko/neuron-mode.git
-
-Updating /mnt/store/melpa/working/neuron-mode/
-Checking out 33bc73f9a2ef1c6855bb12fec08e15a8cf4a6c6e
-Built neuron-mode in 5.294s, finished at 2023-06-01T10:30:45+0000
- ✓ Success:
- 52K -rw-r--r-- 1 root root 51K Jun  1 10:30 packages/neuron-mode-20220718.827.el
-4.0K -rw-r--r-- 1 root root 556 Jun  1 10:30 packages/neuron-mode-20220718.827.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

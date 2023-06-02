@@ -1,17 +1,1 @@
-Package: enlightened-theme
-Fetcher: hg
-Source:  https://hg.sr.ht/~slondr/enlightened
-
-Updating /mnt/store/melpa/working/enlightened-theme/
-Checking out 1bfebd8f47e8a8357c9e557cf6e95d7027861e6d
-
-Command '' exited with non-zero exit-code: 255
-
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command exited with non-zero exit-code: 255
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

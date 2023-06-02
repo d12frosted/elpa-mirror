@@ -1,10 +1,1 @@
-Package: afternoon-theme
-Fetcher: github
-Source:  https://github.com/osener/emacs-afternoon-theme.git
-
-Updating /mnt/store/melpa/working/afternoon-theme/
-Checking out 89b1d778a1f8b385775c122f2bd1c62f0fbf931a
-Built afternoon-theme in 4.036s, finished at 2023-06-01T09:29:39+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root 33K Jun  1 09:29 packages/afternoon-theme-20140104.1859.el
-4.0K -rw-r--r-- 1 root root 455 Jun  1 09:29 packages/afternoon-theme-20140104.1859.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: greek-polytonic
-Fetcher: github
-Source:  https://github.com/jhanschoo/greek-polytonic.git
-
-Updating /mnt/store/melpa/working/greek-polytonic/
-Checking out 114cba0f57cc077871693c799b807df2292341ec
-Built greek-polytonic in 12.945s, finished at 2023-06-01T10:07:14+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Jun  1 10:07 packages/greek-polytonic-20190303.1358.el
-4.0K -rw-r--r-- 1 root root 498 Jun  1 10:07 packages/greek-polytonic-20190303.1358.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: timu-rouge-theme
-Fetcher: gitlab
-Source:  https://gitlab.com/aimebertrand/timu-rouge-theme.git
-
-Updating /mnt/store/melpa/working/timu-rouge-theme/
-Checking out 87117f15ea5fcfacbbad23ea6f345d18c2ff0009
-Built timu-rouge-theme in 6.937s, finished at 2023-06-01T11:00:13+0000
- ✓ Success:
-100K -rw-r--r-- 1 root root 98K Jun  1 11:00 packages/timu-rouge-theme-20230102.1925.el
-4.0K -rw-r--r-- 1 root root 526 Jun  1 11:00 packages/timu-rouge-theme-20230102.1925.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

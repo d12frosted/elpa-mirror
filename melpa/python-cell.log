@@ -1,10 +1,1 @@
-Package: python-cell
-Fetcher: github
-Source:  https://github.com/thisch/python-cell.el.git
-
-Updating /mnt/store/melpa/working/python-cell/
-Checking out 0428186af2fac1252ec62e9be4f7bf3664682e83
-Built python-cell in 14.981s, finished at 2023-06-01T10:46:14+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.5K Jun  1 10:46 packages/python-cell-20230426.1602.el
-4.0K -rw-r--r-- 1 root root  492 Jun  1 10:46 packages/python-cell-20230426.1602.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

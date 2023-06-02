@@ -1,10 +1,1 @@
-Package: journalctl-mode
-Fetcher: github
-Source:  https://github.com/SebastianMeisel/journalctl-mode.git
-
-Updating /mnt/store/melpa/working/journalctl-mode/
-Checking out baaffdfd22a19afb1997ec3715d063186b80d3f5
-Built journalctl-mode in 5.553s, finished at 2023-06-01T10:17:41+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Jun  1 10:17 packages/journalctl-mode-20221119.1653.el
-4.0K -rw-r--r-- 1 root root 503 Jun  1 10:17 packages/journalctl-mode-20221119.1653.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

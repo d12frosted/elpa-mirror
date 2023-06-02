@@ -1,10 +1,1 @@
-Package: ssh
-Fetcher: codeberg
-Source:  https://codeberg.org/emacs-weirdware-abandoned/ssh.git
-
-Updating /mnt/store/melpa/working/ssh/
-Checking out c17cf5b43df8ac4662a0580f85898e1f078df0d1
-Built ssh in 9.811s, finished at 2023-06-01T10:56:26+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 16K Jun  1 10:56 packages/ssh-20120904.2042.el
-4.0K -rw-r--r-- 1 root root 358 Jun  1 10:56 packages/ssh-20120904.2042.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

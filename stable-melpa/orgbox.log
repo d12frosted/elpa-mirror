@@ -1,10 +1,1 @@
-Package: orgbox
-Fetcher: github
-Source:  https://github.com/yasuhito/orgbox.git
-
-Updating /mnt/store/melpa/working/orgbox/
-Checking out 609e5e37348815ec3ba53ab6d643e38b0cc4fe17
-Built orgbox in 4.964s, finished at 2023-06-01T10:38:01+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  1 10:38 packages/orgbox-20180827.218.el
-4.0K -rw-r--r-- 1 root root 435 Jun  1 10:38 packages/orgbox-20180827.218.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

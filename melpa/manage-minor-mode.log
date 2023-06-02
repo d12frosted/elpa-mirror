@@ -1,10 +1,1 @@
-Package: manage-minor-mode
-Fetcher: github
-Source:  https://github.com/emacsorphanage/manage-minor-mode.git
-
-Updating /mnt/store/melpa/working/manage-minor-mode/
-Checking out f4b37fffec7b6608a597e6a3f6900634802807b4
-Built manage-minor-mode in 4.876s, finished at 2023-06-01T10:25:02+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 20K Jun  1 10:25 packages/manage-minor-mode-20210108.1832.el
-4.0K -rw-r--r-- 1 root root 514 Jun  1 10:25 packages/manage-minor-mode-20210108.1832.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: yarn-mode
-Fetcher: github
-Source:  https://github.com/anachronic/yarn-mode.git
-
-Updating /mnt/store/melpa/working/yarn-mode/
-Checking out 8239d4dc7d8a52fa1e3fa81bd32c904a359fcfc1
-Built yarn-mode in 4.601s, finished at 2023-06-01T11:08:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.4K Jun  1 11:08 packages/yarn-mode-20200208.2332.el
-4.0K -rw-r--r-- 1 root root  470 Jun  1 11:08 packages/yarn-mode-20200208.2332.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

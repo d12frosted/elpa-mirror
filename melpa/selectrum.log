@@ -1,10 +1,1 @@
-Package: selectrum
-Fetcher: github
-Source:  https://github.com/radian-software/selectrum.git
-
-Updating /mnt/store/melpa/working/selectrum/
-Checking out 810ea697bdd559d97b86b795e01769cddfa3daf2
-Built selectrum in 5.053s, finished at 2023-06-01T10:51:37+0000
- ✓ Success:
-152K -rw-r--r-- 1 root root 151K Jun  1 10:51 packages/selectrum-20220513.2106.el
-4.0K -rw-r--r-- 1 root root  483 Jun  1 10:51 packages/selectrum-20220513.2106.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

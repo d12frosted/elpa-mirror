@@ -1,10 +1,1 @@
-Package: syntactic-close
-Fetcher: github
-Source:  https://github.com/emacs-berlin/syntactic-close.git
-
-Updating /mnt/store/melpa/working/syntactic-close/
-Checking out c184ff7a3cbcd28439aba7c3531ffebf0cd30b3a
-Built syntactic-close in 5.153s, finished at 2023-06-01T10:58:19+0000
- ✓ Success:
- 44K -rw-r--r-- 1 root root 43K Jun  1 10:58 packages/syntactic-close-20230423.707.el
-4.0K -rw-r--r-- 1 root root 548 Jun  1 10:58 packages/syntactic-close-20230423.707.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: flycheck-checkbashisms
-Fetcher: github
-Source:  https://github.com/cuonglm/flycheck-checkbashisms.git
-
-Updating /mnt/store/melpa/working/flycheck-checkbashisms/
-Checking out ca8f11679c77d6702f34e773bdde185ceb47a05d
-Built flycheck-checkbashisms in 7.135s, finished at 2023-06-01T09:58:33+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Jun  1 09:58 packages/flycheck-checkbashisms-20230313.1418.el
-4.0K -rw-r--r-- 1 root root  522 Jun  1 09:58 packages/flycheck-checkbashisms-20230313.1418.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

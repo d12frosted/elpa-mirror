@@ -1,10 +1,1 @@
-Package: yoshi-theme
-Fetcher: github
-Source:  https://github.com/ryuslash/yoshi-theme.git
-
-Updating /mnt/store/melpa/working/yoshi-theme/
-Checking out ba9427329ac49fa2e060da2c16507feed62ad890
-Built yoshi-theme in 5.030s, finished at 2023-06-01T11:08:30+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 32K Jun  1 11:08 packages/yoshi-theme-20230225.740.el
-4.0K -rw-r--r-- 1 root root 417 Jun  1 11:08 packages/yoshi-theme-20230225.740.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

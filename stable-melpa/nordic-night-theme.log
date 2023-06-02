@@ -1,10 +1,1 @@
-Package: nordic-night-theme
-Fetcher: git
-Source:  https://git.sr.ht/~ashton314/nordic-night
-
-Updating /mnt/store/melpa/working/nordic-night-theme/
-Checking out 9d1c400434a20af0cfceee8b8e011a05483fdc24
-Built nordic-night-theme in 5.312s, finished at 2023-06-01T10:31:28+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 48K Jun  1 10:31 packages/nordic-night-theme-20230518.2259.el
-4.0K -rw-r--r-- 1 root root 487 Jun  1 10:31 packages/nordic-night-theme-20230518.2259.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

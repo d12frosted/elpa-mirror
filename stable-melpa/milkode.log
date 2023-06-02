@@ -1,10 +1,1 @@
-Package: milkode
-Fetcher: github
-Source:  https://github.com/ongaeshi/emacs-milkode.git
-
-Updating /mnt/store/melpa/working/milkode/
-Checking out ba97e2aeefa1d9d0b3835bf08edd0de248b0c513
-Built milkode in 6.409s, finished at 2023-06-01T10:26:37+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jun  1 10:26 packages/milkode-20140927.529.el
-4.0K -rw-r--r-- 1 root root  314 Jun  1 10:26 packages/milkode-20140927.529.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

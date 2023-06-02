@@ -1,10 +1,1 @@
-Package: graphql-mode
-Fetcher: github
-Source:  https://github.com/davazp/graphql-mode.git
-
-Updating /mnt/store/melpa/working/graphql-mode/
-Checking out 0ad4ae0160cabad46109dfbb394297a185eb2525
-Built graphql-mode in 12.181s, finished at 2023-06-01T10:07:11+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Jun  1 10:07 packages/graphql-mode-20230411.1943.el
-4.0K -rw-r--r-- 1 root root 448 Jun  1 10:07 packages/graphql-mode-20230411.1943.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

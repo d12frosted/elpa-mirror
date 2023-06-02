@@ -1,10 +1,1 @@
-Package: cycle-themes
-Fetcher: github
-Source:  https://github.com/toroidal-code/cycle-themes.el.git
-
-Updating /mnt/store/melpa/working/cycle-themes/
-Checking out 2660c3178be7b28c2cb5dde2dd70a4bd51dae3a2
-Built cycle-themes in 4.453s, finished at 2023-06-01T09:43:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Jun  1 09:43 packages/cycle-themes-20150403.309.el
-4.0K -rw-r--r-- 1 root root  317 Jun  1 09:43 packages/cycle-themes-20150403.309.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

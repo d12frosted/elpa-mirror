@@ -1,10 +1,1 @@
-Package: ruby-end
-Fetcher: github
-Source:  https://github.com/rejeep/ruby-end.el.git
-
-Updating /mnt/store/melpa/working/ruby-end/
-Checking out 1c87e214de6a75936b89ab50ee5fe522b87b009e
-Built ruby-end in 5.011s, finished at 2023-06-01T10:50:13+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Jun  1 10:50 packages/ruby-end-20230205.115.el
-4.0K -rw-r--r-- 1 root root  438 Jun  1 10:50 packages/ruby-end-20230205.115.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

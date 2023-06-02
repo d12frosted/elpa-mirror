@@ -1,10 +1,1 @@
-Package: shadowenv
-Fetcher: github
-Source:  https://github.com/Shopify/shadowenv.el.git
-
-Updating /mnt/store/melpa/working/shadowenv/
-Checking out dbcef650b906fec62608d5e4e3075bf251e675e1
-Built shadowenv in 5.392s, finished at 2023-06-01T10:52:08+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jun  1 10:52 packages/shadowenv-20210512.1625.el
-4.0K -rw-r--r-- 1 root root  485 Jun  1 10:52 packages/shadowenv-20210512.1625.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

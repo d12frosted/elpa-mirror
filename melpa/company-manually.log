@@ -1,10 +1,1 @@
-Package: company-manually
-Fetcher: github
-Source:  https://github.com/yanghaoxie/company-manually.git
-
-Updating /mnt/store/melpa/working/company-manually/
-Checking out b922318da821fc3cf1d3155f21d543ea8470c881
-Built company-manually in 4.606s, finished at 2023-06-01T09:41:00+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.5K Jun  1 09:40 packages/company-manually-20200721.1903.el
-4.0K -rw-r--r-- 1 root root  566 Jun  1 09:40 packages/company-manually-20200721.1903.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: extmap
-Fetcher: github
-Source:  https://github.com/doublep/extmap.git
-
-Updating /mnt/store/melpa/working/extmap/
-Checking out 5875a4ab27831eb81af6246b12a174c765d52a78
-Built extmap in 4.662s, finished at 2023-06-01T09:56:30+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 31K Jun  1 09:56 packages/extmap-20211023.1904.el
-4.0K -rw-r--r-- 1 root root 428 Jun  1 09:56 packages/extmap-20211023.1904.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: fira-code-mode
-Fetcher: github
-Source:  https://github.com/jming422/fira-code-mode.git
-
-Updating /mnt/store/melpa/working/fira-code-mode/
-Checking out 7b469ca0c22b7e6a907cd65eebdfa9723998a131
-Built fira-code-mode in 5.005s, finished at 2023-06-01T09:57:42+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.2K Jun  1 09:57 packages/fira-code-mode-20220531.1555.el
-4.0K -rw-r--r-- 1 root root  503 Jun  1 09:57 packages/fira-code-mode-20220531.1555.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

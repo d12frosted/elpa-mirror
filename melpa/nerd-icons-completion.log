@@ -1,10 +1,1 @@
-Package: nerd-icons-completion
-Fetcher: github
-Source:  https://github.com/rainstormstudio/nerd-icons-completion.git
-
-Updating /mnt/store/melpa/working/nerd-icons-completion/
-Checking out 5cfee6ff1b9647c783bae944402d60440ce04cbb
-Built nerd-icons-completion in 4.255s, finished at 2023-06-01T10:30:31+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.0K Jun  1 10:30 packages/nerd-icons-completion-20230430.1611.el
-4.0K -rw-r--r-- 1 root root  508 Jun  1 10:30 packages/nerd-icons-completion-20230430.1611.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

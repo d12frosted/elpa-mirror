@@ -1,10 +1,1 @@
-Package: uptimes
-Fetcher: github
-Source:  https://github.com/davep/uptimes.el.git
-
-Updating /mnt/store/melpa/working/uptimes/
-Checking out 29ae6585eeed5a00719b2e52f5ae1082087c1778
-Built uptimes in 8.098s, finished at 2023-06-01T11:02:57+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.7K Jun  1 11:02 packages/uptimes-20191121.1030.el
-4.0K -rw-r--r-- 1 root root  451 Jun  1 11:02 packages/uptimes-20191121.1030.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

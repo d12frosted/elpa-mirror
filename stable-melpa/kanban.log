@@ -1,17 +1,1 @@
-Package: kanban
-Fetcher: hg
-Source:  https://hg.sr.ht/~arnebab/kanban.el
-
-Updating /mnt/store/melpa/working/kanban/
-Checking out d70fa7acab2bfcbb7d3da43c1343073f7eff4998
-
-Command '' exited with non-zero exit-code: 255
-
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command exited with non-zero exit-code: 255
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

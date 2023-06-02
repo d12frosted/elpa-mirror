@@ -1,10 +1,1 @@
-Package: ox-tufte
-Fetcher: github
-Source:  https://github.com/dakrone/ox-tufte.git
-
-Updating /mnt/store/melpa/working/ox-tufte/
-Checking out ca1b16eb91b25bb4f05e58e9b6692e8486c8c619
-Built ox-tufte in 4.678s, finished at 2023-06-01T10:39:27+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Jun  1 10:39 packages/ox-tufte-20160926.1607.el
-4.0K -rw-r--r-- 1 root root  400 Jun  1 10:39 packages/ox-tufte-20160926.1607.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

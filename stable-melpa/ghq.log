@@ -1,10 +1,1 @@
-Package: ghq
-Fetcher: github
-Source:  https://github.com/lafrenierejm/emacs-ghq.git
-
-Updating /mnt/store/melpa/working/ghq/
-Checking out eb197c14e53ac57a136ea8d34eec7528487c3301
-Built ghq in 4.934s, finished at 2023-06-01T10:03:58+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Jun  1 10:03 packages/ghq-20230510.332.el
-4.0K -rw-r--r-- 1 root root  491 Jun  1 10:03 packages/ghq-20230510.332.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

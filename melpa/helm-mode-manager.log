@@ -1,10 +1,1 @@
-Package: helm-mode-manager
-Fetcher: github
-Source:  https://github.com/istib/helm-mode-manager.git
-
-Updating /mnt/store/melpa/working/helm-mode-manager/
-Checking out 7df8ed3ddd46a0402838b748d317c01454346164
-Built helm-mode-manager in 4.362s, finished at 2023-06-01T10:10:14+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.0K Jun  1 10:10 packages/helm-mode-manager-20210108.2330.el
-4.0K -rw-r--r-- 1 root root  370 Jun  1 10:10 packages/helm-mode-manager-20210108.2330.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

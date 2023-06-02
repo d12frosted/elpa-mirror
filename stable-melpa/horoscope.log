@@ -1,10 +1,1 @@
-Package: horoscope
-Fetcher: github
-Source:  https://github.com/mschuldt/horoscope.el.git
-
-Updating /mnt/store/melpa/working/horoscope/
-Checking out f4c683e991adce0a8f9023f15050f306f9b9a9ed
-Built horoscope in 5.946s, finished at 2023-06-01T10:12:35+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 17K Jun  1 10:12 packages/horoscope-20180409.641.el
-4.0K -rw-r--r-- 1 root root 457 Jun  1 10:12 packages/horoscope-20180409.641.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

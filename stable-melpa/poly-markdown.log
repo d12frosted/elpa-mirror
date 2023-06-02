@@ -1,10 +1,1 @@
-Package: poly-markdown
-Fetcher: github
-Source:  https://github.com/polymode/poly-markdown.git
-
-Updating /mnt/store/melpa/working/poly-markdown/
-Checking out 98695eb7ca4ca11dcec71a1cab64903bbf79b4d3
-Built poly-markdown in 5.066s, finished at 2023-06-01T10:43:22+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.1K Jun  1 10:43 packages/poly-markdown-20230202.1210.el
-4.0K -rw-r--r-- 1 root root  405 Jun  1 10:43 packages/poly-markdown-20230202.1210.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

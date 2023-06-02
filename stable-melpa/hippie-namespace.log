@@ -1,10 +1,1 @@
-Package: hippie-namespace
-Fetcher: github
-Source:  https://github.com/rolandwalker/hippie-namespace.git
-
-Updating /mnt/store/melpa/working/hippie-namespace/
-Checking out 107d927634032062483e83c6de9b7698b64809d1
-Built hippie-namespace in 4.645s, finished at 2023-06-01T10:12:05+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 31K Jun  1 10:12 packages/hippie-namespace-20140508.2041.el
-4.0K -rw-r--r-- 1 root root 493 Jun  1 10:12 packages/hippie-namespace-20140508.2041.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: evil-lion
-Fetcher: github
-Source:  https://github.com/edkolev/evil-lion.git
-
-Updating /mnt/store/melpa/working/evil-lion/
-Checking out 4da660e124731ed65e7aaa6c067c30e876619429
-Built evil-lion in 4.841s, finished at 2023-06-01T09:55:21+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jun  1 09:55 packages/evil-lion-20220317.1030.el
-4.0K -rw-r--r-- 1 root root  479 Jun  1 09:55 packages/evil-lion-20220317.1030.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

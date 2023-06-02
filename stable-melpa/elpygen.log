@@ -1,10 +1,1 @@
-Package: elpygen
-Fetcher: github
-Source:  https://github.com/vkazanov/elpygen.git
-
-Updating /mnt/store/melpa/working/elpygen/
-Checking out 21929c997a05968f9eefe52b85a76ceaab3b0d81
-Built elpygen in 5.555s, finished at 2023-06-01T09:51:17+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.2K Jun  1 09:51 packages/elpygen-20171225.1736.el
-4.0K -rw-r--r-- 1 root root  502 Jun  1 09:51 packages/elpygen-20171225.1736.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

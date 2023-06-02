@@ -1,10 +1,1 @@
-Package: outorg
-Fetcher: github
-Source:  https://github.com/alphapapa/outorg.git
-
-Updating /mnt/store/melpa/working/outorg/
-Checking out ef0f86f4b893b30be8bcf8b43a5ec357a6c70f07
-Built outorg in 5.209s, finished at 2023-06-01T10:38:39+0000
- ✓ Success:
- 72K -rw-r--r-- 1 root root 71K Jun  1 10:38 packages/outorg-20190720.2002.el
-4.0K -rw-r--r-- 1 root root 314 Jun  1 10:38 packages/outorg-20190720.2002.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: olivetti
-Fetcher: github
-Source:  https://github.com/rnkn/olivetti.git
-
-Updating /mnt/store/melpa/working/olivetti/
-Checking out fbac9e530967cddc7be846c849e2742a64f4f6d3
-Built olivetti in 4.646s, finished at 2023-06-01T10:33:37+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Jun  1 10:33 packages/olivetti-20230515.523.el
-4.0K -rw-r--r-- 1 root root 439 Jun  1 10:33 packages/olivetti-20230515.523.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

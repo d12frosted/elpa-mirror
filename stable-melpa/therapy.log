@@ -1,10 +1,1 @@
-Package: therapy
-Fetcher: github
-Source:  https://github.com/abingham/therapy.git
-
-Updating /mnt/store/melpa/working/therapy/
-Checking out 775a92bb7b6b0fcc5b38c0b5198a9d0a1bef788a
-Built therapy in 4.766s, finished at 2023-06-01T10:59:47+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Jun  1 10:59 packages/therapy-20151113.1953.el
-4.0K -rw-r--r-- 1 root root  432 Jun  1 10:59 packages/therapy-20151113.1953.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

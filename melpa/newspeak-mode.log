@@ -1,10 +1,1 @@
-Package: newspeak-mode
-Fetcher: github
-Source:  https://github.com/danielsz/newspeak-mode.git
-
-Updating /mnt/store/melpa/working/newspeak-mode/
-Checking out f76aee3a1f7ff032ed9ef2d3a092f84c8c985e19
-Built newspeak-mode in 5.266s, finished at 2023-06-01T10:30:46+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  1 10:30 packages/newspeak-mode-20211011.1425.el
-4.0K -rw-r--r-- 1 root root 427 Jun  1 10:30 packages/newspeak-mode-20211011.1425.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

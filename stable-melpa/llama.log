@@ -1,10 +1,1 @@
-Package: llama
-Fetcher: sourcehut
-Source:  https://git.sr.ht/~tarsius/llama
-
-Updating /mnt/store/melpa/working/llama/
-Checking out f4a59f215438243fbbdc103a6db11fb2e99cff99
-Built llama in 5.093s, finished at 2023-06-01T10:22:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K Jun  1 10:22 packages/llama-20230425.1928.el
-4.0K -rw-r--r-- 1 root root  227 Jun  1 10:22 packages/llama-20230425.1928.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

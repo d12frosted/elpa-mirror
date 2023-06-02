@@ -1,10 +1,1 @@
-Package: frecentf
-Fetcher: git
-Source:  https://git.launchpad.net/frecentf.el
-
-Updating /mnt/store/melpa/working/frecentf/
-Checking out 19e2c48a8b8c8ee8cae5c93b58b57a0aa81a8c46
-Built frecentf in 8.770s, finished at 2023-06-01T10:02:43+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.8K Jun  1 10:02 packages/frecentf-20210330.1521.el
-4.0K -rw-r--r-- 1 root root  527 Jun  1 10:02 packages/frecentf-20210330.1521.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

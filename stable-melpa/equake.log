@@ -1,10 +1,1 @@
-Package: equake
-Fetcher: gitlab
-Source:  https://gitlab.com/emacsomancer/equake.git
-
-Updating /mnt/store/melpa/working/equake/
-Checking out 7aa2e1715e6ea286b08bb446d2d9915afa0fdf03
-Built equake in 8.331s, finished at 2023-06-01T09:53:11+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 45K Jun  1 09:53 packages/equake-20220627.2248.el
-4.0K -rw-r--r-- 1 root root 506 Jun  1 09:53 packages/equake-20220627.2248.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

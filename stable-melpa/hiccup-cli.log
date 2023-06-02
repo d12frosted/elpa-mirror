@@ -1,10 +1,1 @@
-Package: hiccup-cli
-Fetcher: github
-Source:  https://github.com/kwrooijen/hiccup-cli.git
-
-Updating /mnt/store/melpa/working/hiccup-cli/
-Checking out cfbb957a1f86bc1d28e778bfdffdeaaa2ae79286
-Built hiccup-cli in 4.424s, finished at 2023-06-01T10:11:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.8K Jun  1 10:11 packages/hiccup-cli-20210211.2127.el
-4.0K -rw-r--r-- 1 root root  412 Jun  1 10:11 packages/hiccup-cli-20210211.2127.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

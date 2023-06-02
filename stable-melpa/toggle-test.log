@@ -1,10 +1,1 @@
-Package: toggle-test
-Fetcher: github
-Source:  https://github.com/rags/toggle-test.git
-
-Updating /mnt/store/melpa/working/toggle-test/
-Checking out a0b64834101c2b8b24da365baea1d36e57b069b5
-Built toggle-test in 4.449s, finished at 2023-06-01T11:00:31+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Jun  1 11:00 packages/toggle-test-20140723.537.el
-4.0K -rw-r--r-- 1 root root  515 Jun  1 11:00 packages/toggle-test-20140723.537.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

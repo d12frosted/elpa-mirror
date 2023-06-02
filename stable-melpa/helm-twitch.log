@@ -1,10 +1,1 @@
-Package: helm-twitch
-Fetcher: github
-Source:  https://github.com/BenediktBroich/helm-twitch.git
-
-Updating /mnt/store/melpa/working/helm-twitch/
-Checking out 27fbec24cc250d508cd2f4286da16262752908eb
-Built helm-twitch in 3.894s, finished at 2023-06-01T10:11:15+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  1 10:11 packages/helm-twitch-20220420.1625.el
-4.0K -rw-r--r-- 1 root root 596 Jun  1 10:11 packages/helm-twitch-20220420.1625.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

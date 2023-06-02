@@ -1,10 +1,1 @@
-Package: nix-buffer
-Fetcher: github
-Source:  https://github.com/shlevy/nix-buffer.git
-
-Updating /mnt/store/melpa/working/nix-buffer/
-Checking out db57cda36e7477bdc7ef5a136357b971b1d4d099
-Built nix-buffer in 4.862s, finished at 2023-06-01T10:31:00+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.8K Jun  1 10:30 packages/nix-buffer-20180212.1518.el
-4.0K -rw-r--r-- 1 root root  396 Jun  1 10:30 packages/nix-buffer-20180212.1518.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

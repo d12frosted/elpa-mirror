@@ -1,10 +1,1 @@
-Package: moonshot
-Fetcher: github
-Source:  https://github.com/ageldama/moonshot.git
-
-Updating /mnt/store/melpa/working/moonshot/
-Checking out ec37a12825888047a90d9ee8131aa4bea348edf7
-Built moonshot in 6.310s, finished at 2023-06-01T10:28:19+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  1 10:28 packages/moonshot-20210627.2244.el
-4.0K -rw-r--r-- 1 root root 720 Jun  1 10:28 packages/moonshot-20210627.2244.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

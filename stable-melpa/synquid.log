@@ -1,10 +1,1 @@
-Package: synquid
-Fetcher: github
-Source:  https://github.com/cpitclaudel/synquid-emacs.git
-
-Updating /mnt/store/melpa/working/synquid/
-Checking out 28701ce1a15437202f53ab93a14bcba1de83fd2c
-Built synquid in 5.174s, finished at 2023-06-01T10:58:19+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.7K Jun  1 10:58 packages/synquid-20160930.1550.el
-4.0K -rw-r--r-- 1 root root  509 Jun  1 10:58 packages/synquid-20160930.1550.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

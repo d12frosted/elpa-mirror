@@ -1,10 +1,1 @@
-Package: helm-swoop
-Fetcher: github
-Source:  https://github.com/emacsorphanage/helm-swoop.git
-
-Updating /mnt/store/melpa/working/helm-swoop/
-Checking out 1b3285791f1dc1fde548fe67aec07214d698fd57
-Built helm-swoop in 4.606s, finished at 2023-06-01T10:11:08+0000
- ✓ Success:
- 72K -rw-r--r-- 1 root root 69K Jun  1 10:11 packages/helm-swoop-20210426.547.el
-4.0K -rw-r--r-- 1 root root 570 Jun  1 10:11 packages/helm-swoop-20210426.547.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

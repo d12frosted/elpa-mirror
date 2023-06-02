@@ -1,10 +1,1 @@
-Package: shader-mode
-Fetcher: github
-Source:  https://github.com/midnightSuyama/shader-mode.git
-
-Updating /mnt/store/melpa/working/shader-mode/
-Checking out fe5a1982ba69e4a98b834141a46a1908f132df15
-Built shader-mode in 5.656s, finished at 2023-06-01T10:52:08+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jun  1 10:52 packages/shader-mode-20220930.1052.el
-4.0K -rw-r--r-- 1 root root  441 Jun  1 10:52 packages/shader-mode-20220930.1052.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

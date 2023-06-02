@@ -1,10 +1,1 @@
-Package: loopy-dash
-Fetcher: github
-Source:  https://github.com/okamsn/loopy.git
-
-Updating /mnt/store/melpa/working/loopy-dash/
-Checking out d04f4b8a6918ffaf745b8ccdba5ff9fee66ea8bf
-Built loopy-dash in 5.765s, finished at 2023-06-01T10:23:10+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Jun  1 10:23 packages/loopy-dash-20230501.225.el
-4.0K -rw-r--r-- 1 root root  440 Jun  1 10:23 packages/loopy-dash-20230501.225.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

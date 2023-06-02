@@ -1,10 +1,1 @@
-Package: flow-minor-mode
-Fetcher: github
-Source:  https://github.com/an-sh/flow-minor-mode.git
-
-Updating /mnt/store/melpa/working/flow-minor-mode/
-Checking out 804217a15a28f6918fba93c91d495ed7d50b0495
-Built flow-minor-mode in 5.065s, finished at 2023-06-01T09:58:13+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 09:58 packages/flow-minor-mode-20200905.1730.el
-4.0K -rw-r--r-- 1 root root 233 Jun  1 09:58 packages/flow-minor-mode-20200905.1730.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

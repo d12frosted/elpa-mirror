@@ -1,10 +1,1 @@
-Package: traad
-Fetcher: github
-Source:  https://github.com/abingham/emacs-traad.git
-
-Updating /mnt/store/melpa/working/traad/
-Checking out 98e23363b7e8a590a2f55976123a8c3da75c87a5
-Built traad in 4.902s, finished at 2023-06-01T11:00:52+0000
- ✓ Success:
- 72K -rw-r--r-- 1 root root 72K Jun  1 11:00 packages/traad-20180730.48.el
-4.0K -rw-r--r-- 1 root root 592 Jun  1 11:00 packages/traad-20180730.48.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

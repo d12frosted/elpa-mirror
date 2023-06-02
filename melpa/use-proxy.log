@@ -1,10 +1,1 @@
-Package: use-proxy
-Fetcher: github
-Source:  https://github.com/rayw000/use-proxy.git
-
-Updating /mnt/store/melpa/working/use-proxy/
-Checking out 43499194224483b27628fdf99f6f9ff6e731d844
-Built use-proxy in 9.450s, finished at 2023-06-01T11:03:22+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 11:03 packages/use-proxy-20201209.853.el
-4.0K -rw-r--r-- 1 root root 520 Jun  1 11:03 packages/use-proxy-20201209.853.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

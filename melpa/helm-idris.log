@@ -1,10 +1,1 @@
-Package: helm-idris
-Fetcher: github
-Source:  https://github.com/david-christiansen/helm-idris.git
-
-Updating /mnt/store/melpa/working/helm-idris/
-Checking out a2f45d6817974f318b55ad9b7fd19d5df132d47e
-Built helm-idris in 4.749s, finished at 2023-06-01T10:09:52+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Jun  1 10:09 packages/helm-idris-20141202.1757.el
-4.0K -rw-r--r-- 1 root root  552 Jun  1 10:09 packages/helm-idris-20141202.1757.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

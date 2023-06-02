@@ -1,10 +1,1 @@
-Package: docker-cli
-Fetcher: github
-Source:  https://github.com/bosko/docker-cli.git
-
-Updating /mnt/store/melpa/working/docker-cli/
-Checking out 328429219574555c5fb831a421b4b5d9a2338561
-Built docker-cli in 4.975s, finished at 2023-06-01T09:47:36+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Jun  1 09:47 packages/docker-cli-20190524.1624.el
-4.0K -rw-r--r-- 1 root root  491 Jun  1 09:47 packages/docker-cli-20190524.1624.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

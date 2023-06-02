@@ -1,10 +1,1 @@
-Package: quelpa-leaf
-Fetcher: github
-Source:  https://github.com/quelpa/quelpa-leaf.git
-
-Updating /mnt/store/melpa/working/quelpa-leaf/
-Checking out 296ef97c29d7540316441715b92f6d15430f3579
-Built quelpa-leaf in 4.141s, finished at 2023-06-01T10:46:37+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Jun  1 10:46 packages/quelpa-leaf-20221231.1618.el
-4.0K -rw-r--r-- 1 root root  545 Jun  1 10:46 packages/quelpa-leaf-20221231.1618.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

@@ -1,10 +1,1 @@
-Package: autobuild
-Fetcher: github
-Source:  https://github.com/erjoalgo/autobuild.git
-
-Updating /mnt/store/melpa/working/autobuild/
-Checking out 1cd2d923303392cb1bb93fa0398332c2fce8399c
-Built autobuild in 5.481s, finished at 2023-06-01T09:32:57+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 09:32 packages/autobuild-20230518.438.el
-4.0K -rw-r--r-- 1 root root 607 Jun  1 09:32 packages/autobuild-20230518.438.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

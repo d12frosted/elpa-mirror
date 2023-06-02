@@ -1,10 +1,1 @@
-Package: rgb
-Fetcher: gitlab
-Source:  https://gitlab.com/cwpitts/rgb.el.git
-
-Updating /mnt/store/melpa/working/rgb/
-Checking out 4aab5a5be16b69b47ef5e67d02782df5e41dbd7b
-Built rgb in 11.379s, finished at 2023-06-01T10:49:09+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.1K Jun  1 10:49 packages/rgb-20220717.1940.el
-4.0K -rw-r--r-- 1 root root  209 Jun  1 10:49 packages/rgb-20220717.1940.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

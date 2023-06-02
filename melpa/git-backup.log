@@ -1,10 +1,1 @@
-Package: git-backup
-Fetcher: github
-Source:  https://github.com/antham/git-backup.git
-
-Updating /mnt/store/melpa/working/git-backup/
-Checking out e28d7af2d1c58fa5b8068223eb83a73f044e6a6c
-Built git-backup in 5.406s, finished at 2023-06-01T10:04:12+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 10:04 packages/git-backup-20191209.2144.el
-4.0K -rw-r--r-- 1 root root 516 Jun  1 10:04 packages/git-backup-20191209.2144.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

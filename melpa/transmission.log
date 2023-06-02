@@ -1,10 +1,1 @@
-Package: transmission
-Fetcher: github
-Source:  https://github.com/holomorph/transmission.git
-
-Updating /mnt/store/melpa/working/transmission/
-Checking out 243d5dc15917df2611fd0c9f288faea17a00a396
-Built transmission in 5.495s, finished at 2023-06-01T11:01:05+0000
- ✓ Success:
-104K -rw-r--r-- 1 root root 103K Jun  1 11:01 packages/transmission-20221130.212.el
-4.0K -rw-r--r-- 1 root root  408 Jun  1 11:01 packages/transmission-20221130.212.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

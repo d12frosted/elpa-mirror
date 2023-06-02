@@ -1,10 +1,1 @@
-Package: pet
-Fetcher: github
-Source:  https://github.com/wyuenho/emacs-pet.git
-
-Updating /mnt/store/melpa/working/pet/
-Checking out 2e5c777a835283ee4fe9eb20fd82114f348ba1f2
-Built pet in 5.939s, finished at 2023-06-01T10:41:15+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 39K Jun  1 10:41 packages/pet-20230423.2326.el
-4.0K -rw-r--r-- 1 root root 482 Jun  1 10:41 packages/pet-20230423.2326.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

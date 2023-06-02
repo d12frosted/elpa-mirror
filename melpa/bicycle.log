@@ -1,10 +1,1 @@
-Package: bicycle
-Fetcher: github
-Source:  https://github.com/tarsius/bicycle.git
-
-Updating /mnt/store/melpa/working/bicycle/
-Checking out dfc0c874d66d671cbb15149db27134e4ff4f54b8
-Built bicycle in 4.787s, finished at 2023-06-01T09:34:25+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  1 09:34 packages/bicycle-20230515.943.el
-4.0K -rw-r--r-- 1 root root 451 Jun  1 09:34 packages/bicycle-20230515.943.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

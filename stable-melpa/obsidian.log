@@ -1,10 +1,1 @@
-Package: obsidian
-Fetcher: github
-Source:  https://github.com/licht1stein/obsidian.el.git
-
-Updating /mnt/store/melpa/working/obsidian/
-Checking out 1214758b99037884c4c062e6d298b417200444cd
-Built obsidian in 5.121s, finished at 2023-06-01T10:33:15+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 24K Jun  1 10:33 packages/obsidian-20230420.1111.el
-4.0K -rw-r--r-- 1 root root 541 Jun  1 10:33 packages/obsidian-20230420.1111.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

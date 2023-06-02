@@ -1,10 +1,1 @@
-Package: shakespeare-mode
-Fetcher: github
-Source:  https://github.com/CodyReichert/shakespeare-mode.git
-
-Updating /mnt/store/melpa/working/shakespeare-mode/
-Checking out c442eeea9d585e1b1fbb8813e33d47feec348a57
-Built shakespeare-mode in 5.567s, finished at 2023-06-01T10:52:12+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  1 10:52 packages/shakespeare-mode-20180704.2138.el
-4.0K -rw-r--r-- 1 root root 428 Jun  1 10:52 packages/shakespeare-mode-20180704.2138.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

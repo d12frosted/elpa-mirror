@@ -1,10 +1,1 @@
-Package: orgit-forge
-Fetcher: github
-Source:  https://github.com/magit/orgit-forge.git
-
-Updating /mnt/store/melpa/working/orgit-forge/
-Checking out 6f424ff3a2df7d9c00c217011949c1367cc15227
-Built orgit-forge in 4.930s, finished at 2023-06-01T10:38:04+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.9K Jun  1 10:38 packages/orgit-forge-20230212.2013.el
-4.0K -rw-r--r-- 1 root root  586 Jun  1 10:38 packages/orgit-forge-20230212.2013.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

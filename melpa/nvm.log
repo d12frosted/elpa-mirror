@@ -1,10 +1,1 @@
-Package: nvm
-Fetcher: github
-Source:  https://github.com/rejeep/nvm.el.git
-
-Updating /mnt/store/melpa/working/nvm/
-Checking out c214762fd6f539ec3e1fd8198cefbdb4b428b19c
-Built nvm in 4.776s, finished at 2023-06-01T10:31:59+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.3K Jun  1 10:31 packages/nvm-20210826.1000.el
-4.0K -rw-r--r-- 1 root root  493 Jun  1 10:31 packages/nvm-20210826.1000.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

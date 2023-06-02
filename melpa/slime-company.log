@@ -1,10 +1,1 @@
-Package: slime-company
-Fetcher: github
-Source:  https://github.com/anwyn/slime-company.git
-
-Updating /mnt/store/melpa/working/slime-company/
-Checking out f20ecc4104d4c35052696e7e760109fb02060e72
-Built slime-company in 5.082s, finished at 2023-06-01T10:53:31+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  1 10:53 packages/slime-company-20210124.1627.el
-4.0K -rw-r--r-- 1 root root 443 Jun  1 10:53 packages/slime-company-20210124.1627.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

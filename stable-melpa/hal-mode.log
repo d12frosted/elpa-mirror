@@ -1,10 +1,1 @@
-Package: hal-mode
-Fetcher: github
-Source:  https://github.com/machinekoder/hal-mode.git
-
-Updating /mnt/store/melpa/working/hal-mode/
-Checking out cd2f66f219ee520198d4586fb6b169cef7ad3f21
-Built hal-mode in 4.865s, finished at 2023-06-01T10:07:58+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.3K Jun  1 10:07 packages/hal-mode-20160704.1746.el
-4.0K -rw-r--r-- 1 root root  361 Jun  1 10:07 packages/hal-mode-20160704.1746.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

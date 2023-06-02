@@ -1,10 +1,1 @@
-Package: bibliothek
-Fetcher: github
-Source:  https://github.com/cadadr/elisp.git
-
-Updating /mnt/store/melpa/working/bibliothek/
-Checking out b19b37be332bada6b18d4d895edf6ce78ab420c4
-Built bibliothek in 5.270s, finished at 2023-06-01T09:34:19+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jun  1 09:34 packages/bibliothek-20190124.1828.el
-4.0K -rw-r--r-- 1 root root  553 Jun  1 09:34 packages/bibliothek-20190124.1828.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

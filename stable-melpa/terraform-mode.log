@@ -1,10 +1,1 @@
-Package: terraform-mode
-Fetcher: github
-Source:  https://github.com/emacsorphanage/terraform-mode.git
-
-Updating /mnt/store/melpa/working/terraform-mode/
-Checking out 56f19abae95afb7e13e48ec3e6aeba3820d31307
-Built terraform-mode in 5.090s, finished at 2023-06-01T10:59:25+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  1 10:59 packages/terraform-mode-20230502.2213.el
-4.0K -rw-r--r-- 1 root root 473 Jun  1 10:59 packages/terraform-mode-20230502.2213.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

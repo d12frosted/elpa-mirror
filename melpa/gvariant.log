@@ -1,10 +1,1 @@
-Package: gvariant
-Fetcher: github
-Source:  https://github.com/wbolster/emacs-gvariant.git
-
-Updating /mnt/store/melpa/working/gvariant/
-Checking out f2e87076845800cbaaeed67f175ad4e4a9c01e37
-Built gvariant in 4.941s, finished at 2023-06-01T10:07:50+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K Jun  1 10:07 packages/gvariant-20210507.1310.el
-4.0K -rw-r--r-- 1 root root  473 Jun  1 10:07 packages/gvariant-20210507.1310.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

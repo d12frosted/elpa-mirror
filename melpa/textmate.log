@@ -1,10 +1,1 @@
-Package: textmate
-Fetcher: github
-Source:  https://github.com/defunkt/textmate.el.git
-
-Updating /mnt/store/melpa/working/textmate/
-Checking out 350918b070148f0ace6d9d3cd4ebcaf15c1a8781
-Built textmate in 5.268s, finished at 2023-06-01T10:59:37+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 19K Jun  1 10:59 packages/textmate-20110816.2146.el
-4.0K -rw-r--r-- 1 root root 364 Jun  1 10:59 packages/textmate-20110816.2146.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

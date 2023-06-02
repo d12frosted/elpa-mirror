@@ -1,10 +1,1 @@
-Package: flycheck-status-emoji
-Fetcher: github
-Source:  https://github.com/liblit/flycheck-status-emoji.git
-
-Updating /mnt/store/melpa/working/flycheck-status-emoji/
-Checking out 4bd113ab42dec9544b66e0a27ed9008ce8148433
-Built flycheck-status-emoji in 6.808s, finished at 2023-06-01T10:00:41+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Jun  1 10:00 packages/flycheck-status-emoji-20180516.229.el
-4.0K -rw-r--r-- 1 root root  550 Jun  1 10:00 packages/flycheck-status-emoji-20180516.229.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

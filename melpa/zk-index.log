@@ -1,10 +1,1 @@
-Package: zk-index
-Fetcher: github
-Source:  https://github.com/localauthor/zk.git
-
-Updating /mnt/store/melpa/working/zk-index/
-Checking out b9f5433486e79a23e82035be3e10d8f5678b2880
-Built zk-index in 6.975s, finished at 2023-06-01T11:09:02+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 24K Jun  1 11:09 packages/zk-index-20230505.2118.el
-4.0K -rw-r--r-- 1 root root 435 Jun  1 11:09 packages/zk-index-20230505.2118.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

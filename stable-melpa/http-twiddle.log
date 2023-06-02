@@ -1,10 +1,1 @@
-Package: http-twiddle
-Fetcher: github
-Source:  https://github.com/hassy/http-twiddle.git
-
-Updating /mnt/store/melpa/working/http-twiddle/
-Checking out c07e8620183ec710623db35e26dd839b84c56007
-Built http-twiddle in 6.653s, finished at 2023-06-01T10:12:59+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  1 10:12 packages/http-twiddle-20221203.1351.el
-4.0K -rw-r--r-- 1 root root 442 Jun  1 10:12 packages/http-twiddle-20221203.1351.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

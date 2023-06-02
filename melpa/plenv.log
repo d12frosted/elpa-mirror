@@ -1,10 +1,1 @@
-Package: plenv
-Fetcher: github
-Source:  https://github.com/karupanerura/plenv.el.git
-
-Updating /mnt/store/melpa/working/plenv/
-Checking out ee937d0f3a1a7ba2d035f45be896d3ed8fefaee2
-Built plenv in 6.056s, finished at 2023-06-01T10:42:47+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K Jun  1 10:42 packages/plenv-20130707.616.el
-4.0K -rw-r--r-- 1 root root  316 Jun  1 10:42 packages/plenv-20130707.616.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

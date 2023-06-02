@@ -1,10 +1,1 @@
-Package: helm-frame
-Fetcher: github
-Source:  https://github.com/chee/helm-frame.git
-
-Updating /mnt/store/melpa/working/helm-frame/
-Checking out 1b5e895e9199deeea049010e5fe4de7a338f41f3
-Built helm-frame in 5.258s, finished at 2023-06-01T10:09:30+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 4.0K Jun  1 10:09 packages/helm-frame-20220803.1528.el
-4.0K -rw-r--r-- 1 root root  394 Jun  1 10:09 packages/helm-frame-20220803.1528.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

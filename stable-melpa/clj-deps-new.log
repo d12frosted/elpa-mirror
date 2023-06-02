@@ -1,10 +1,1 @@
-Package: clj-deps-new
-Fetcher: github
-Source:  https://github.com/jpe90/emacs-clj-deps-new.git
-
-Updating /mnt/store/melpa/working/clj-deps-new/
-Checking out 72f25d86bbd9cd6cb4aa431e70bda38f35b19262
-Built clj-deps-new in 8.665s, finished at 2023-06-01T09:38:46+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  1 09:38 packages/clj-deps-new-20230413.1833.el
-4.0K -rw-r--r-- 1 root root 415 Jun  1 09:38 packages/clj-deps-new-20230413.1833.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

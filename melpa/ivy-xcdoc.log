@@ -1,10 +1,1 @@
-Package: ivy-xcdoc
-Fetcher: github
-Source:  https://github.com/hex2010/emacs-ivy-xcdoc.git
-
-Updating /mnt/store/melpa/working/ivy-xcdoc/
-Checking out fbf264b0746182567b17fd7409fff8eed3658c71
-Built ivy-xcdoc in 4.567s, finished at 2023-06-01T10:16:47+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Jun  1 10:16 packages/ivy-xcdoc-20160917.1055.el
-4.0K -rw-r--r-- 1 root root  492 Jun  1 10:16 packages/ivy-xcdoc-20160917.1055.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images

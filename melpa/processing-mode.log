@@ -1,10 +1,1 @@
-Package: processing-mode
-Fetcher: github
-Source:  https://github.com/ptrv/processing2-emacs.git
-
-Updating /mnt/store/melpa/working/processing-mode/
-Checking out 448aba82970c98322629eaf2746e73be6c30c98e
-Built processing-mode in 4.749s, finished at 2023-06-01T10:44:25+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  1 10:44 packages/processing-mode-20171022.2302.el
-4.0K -rw-r--r-- 1 root root 432 Jun  1 10:44 packages/processing-mode-20171022.2302.entry
+Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
