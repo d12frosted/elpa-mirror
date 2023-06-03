@@ -4,8 +4,8 @@
 
 ;; Author: Fritz Grabo <hello@fritzgrabo.com>
 ;; URL: https://github.com/fritzgrabo/elfeed-webkit
-;; Package-Version: 20230516.706
-;; Package-Commit: f5c936ca33582366b9c2e88bcdd529f359b41173
+;; Package-Version: 20230603.716
+;; Package-Commit: 3c9e59ce2e50fa69132524a4aa5a6282cadce5ce
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1") (elfeed "3.4.1"))
 ;; Keywords: comm
