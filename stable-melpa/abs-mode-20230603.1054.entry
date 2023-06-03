@@ -1,0 +1,21 @@
+(abs-mode .
+	  [(20230603 1054)
+	   ((emacs
+	     (26 1))
+	    (erlang
+	     (2 8))
+	    (maude-mode
+	     (0 3))
+	    (flymake
+	     (1 0))
+	    (yasnippet
+	     (0 14 0)))
+	   "Major mode for the modeling language Abs" tar
+	   ((:commit . "cf3b8e1887adb2a9c0abd90d8b42af466d478608")
+	    (:authors
+	     ("Rudi Schlatte" . "rudi@constantly.at"))
+	    (:maintainers
+	     ("Rudi Schlatte" . "rudi@constantly.at"))
+	    (:maintainer "Rudi Schlatte" . "rudi@constantly.at")
+	    (:keywords "languages")
+	    (:url . "https://github.com/abstools/abs-mode"))])
