@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: github-browse-file
+Fetcher: github
+Source:  https://github.com/osener/github-browse-file.git
+
+Updating /mnt/store/melpa/working/github-browse-file/
+Checking out 177667b8dac640f3dabacc4395e09451c5e88c53
+Built github-browse-file in 4.719s, finished at 2023-06-02T21:57:26+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Jun  2 21:57 packages/github-browse-file-20160205.1427.el
+4.0K -rw-r--r-- 1 root root  511 Jun  2 21:57 packages/github-browse-file-20160205.1427.entry

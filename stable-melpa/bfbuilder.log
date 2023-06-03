@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: bfbuilder
+Fetcher: github
+Source:  https://github.com/zk-phi/bfbuilder.git
+
+Updating /mnt/store/melpa/working/bfbuilder/
+Checking out 689f320a9a1326cdeff43b8538e0d739f8519c4b
+Built bfbuilder in 4.732s, finished at 2023-06-02T21:24:54+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.6K Jun  2 21:24 packages/bfbuilder-20210228.1740.el
+4.0K -rw-r--r-- 1 root root  375 Jun  2 21:24 packages/bfbuilder-20210228.1740.entry

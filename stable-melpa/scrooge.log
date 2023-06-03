@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: scrooge
+Fetcher: github
+Source:  https://github.com/cosmicexplorer/emacs-scrooge.git
+
+Updating /mnt/store/melpa/working/scrooge/
+Checking out 0a8c58e9e6708abe4ef7e415bc1e0472318bb1b0
+Built scrooge in 5.969s, finished at 2023-06-02T22:44:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jun  2 22:43 packages/scrooge-20180630.1022.el
+4.0K -rw-r--r-- 1 root root  496 Jun  2 22:43 packages/scrooge-20180630.1022.entry

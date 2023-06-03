@@ -1,1 +1,38 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: weblorg
+Fetcher: github
+Source:  https://github.com/emacs-love/weblorg.git
+
+Updating /mnt/store/melpa/working/weblorg/
+Checking out 9daa6725919dfebaf6fbe19ed262231c2cbf9f89
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/weblorg/
+  to /tmp/weblorgEykswz/weblorg-20220312.2008
+    weblorg.el -> weblorg.el
+    themes => themes
+Created weblorg-20220312.2008.tar containing:
+  weblorg-20220312.2008/
+  weblorg-20220312.2008/themes/
+  weblorg-20220312.2008/themes/autodoc/
+  weblorg-20220312.2008/themes/autodoc/static/
+  weblorg-20220312.2008/themes/autodoc/static/emacs-bw.svg
+  weblorg-20220312.2008/themes/autodoc/static/style.css
+  weblorg-20220312.2008/themes/autodoc/templates/
+  weblorg-20220312.2008/themes/autodoc/templates/autodoc.html
+  weblorg-20220312.2008/themes/autodoc/templates/doc.html
+  weblorg-20220312.2008/themes/autodoc/templates/index.html
+  weblorg-20220312.2008/themes/autodoc/templates/layout.html
+  weblorg-20220312.2008/themes/default/
+  weblorg-20220312.2008/themes/default/static/
+  weblorg-20220312.2008/themes/default/static/style.css
+  weblorg-20220312.2008/themes/default/templates/
+  weblorg-20220312.2008/themes/default/templates/base.html
+  weblorg-20220312.2008/themes/default/templates/blog.html
+  weblorg-20220312.2008/themes/default/templates/feed.xml
+  weblorg-20220312.2008/themes/default/templates/page.html
+  weblorg-20220312.2008/themes/default/templates/post.html
+  weblorg-20220312.2008/weblorg-pkg.el
+  weblorg-20220312.2008/weblorg.el
+Built weblorg in 6.793s, finished at 2023-06-02T22:58:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  421 Jun  2 22:58 packages/weblorg-20220312.2008.entry
+100K -rw-r--r-- 1 root root 100K Jun  2 22:58 packages/weblorg-20220312.2008.tar

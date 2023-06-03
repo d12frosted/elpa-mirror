@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-chatgpt-shell
+Fetcher: github
+Source:  https://github.com/xenodium/chatgpt-shell.git
+
+Updating /mnt/store/melpa/working/ob-chatgpt-shell/
+Checking out 4e117234f07991a1f1d100be84fbf2f4689ae39d
+Built ob-chatgpt-shell in 5.095s, finished at 2023-06-02T22:25:09+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  2 22:25 packages/ob-chatgpt-shell-20230531.732.el
+4.0K -rw-r--r-- 1 root root  414 Jun  2 22:25 packages/ob-chatgpt-shell-20230531.732.entry

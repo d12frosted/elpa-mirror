@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: vunit-mode
+Fetcher: github
+Source:  https://github.com/embed-me/vunit-mode.git
+
+Updating /mnt/store/melpa/working/vunit-mode/
+Checking out 5643460a7011d6bc13c2d4762f329d19f6c7d46b
+Built vunit-mode in 4.709s, finished at 2023-06-02T22:57:23+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 10K Jun  2 22:57 packages/vunit-mode-20220316.1812.el
+4.0K -rw-r--r-- 1 root root 493 Jun  2 22:57 packages/vunit-mode-20220316.1812.entry

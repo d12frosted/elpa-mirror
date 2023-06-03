@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: auto-dark
+Fetcher: github
+Source:  https://github.com/LionyxML/auto-dark-emacs.git
+
+Updating /mnt/store/melpa/working/auto-dark/
+Checking out dcb5b4e6da8553c43b8ad7aff51de477980e23d8
+Built auto-dark in 5.088s, finished at 2023-06-02T21:23:18+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Jun  2 21:23 packages/auto-dark-20230307.17.el
+4.0K -rw-r--r-- 1 root root  641 Jun  2 21:23 packages/auto-dark-20230307.17.entry

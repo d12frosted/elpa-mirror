@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-cypher
+Fetcher: github
+Source:  https://github.com/zweifisch/ob-cypher.git
+
+Updating /mnt/store/melpa/working/ob-cypher/
+Checking out da9f97339474a48d759fc128cee610c0bc9ae6c0
+Built ob-cypher in 5.075s, finished at 2023-06-02T22:25:14+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jun  2 22:25 packages/ob-cypher-20200521.936.el
+4.0K -rw-r--r-- 1 root root  572 Jun  2 22:25 packages/ob-cypher-20200521.936.entry

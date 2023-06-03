@@ -1,1 +1,28 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: promise
+Fetcher: github
+Source:  https://github.com/chuntaro/emacs-promise.git
+
+Updating /mnt/store/melpa/working/promise/
+Checking out cec51feb5f957e8febe6325335cf57dc2db6be30
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/promise/
+  to /tmp/promiseFbee45/promise-20210307.727
+    promise-core.el -> promise-core.el
+    promise-done.el -> promise-done.el
+    promise-es6-extensions.el -> promise-es6-extensions.el
+    promise-finally.el -> promise-finally.el
+    promise-rejection-tracking.el -> promise-rejection-tracking.el
+    promise.el -> promise.el
+Created promise-20210307.727.tar containing:
+  promise-20210307.727/
+  promise-20210307.727/promise-core.el
+  promise-20210307.727/promise-done.el
+  promise-20210307.727/promise-es6-extensions.el
+  promise-20210307.727/promise-finally.el
+  promise-20210307.727/promise-pkg.el
+  promise-20210307.727/promise-rejection-tracking.el
+  promise-20210307.727/promise.el
+Built promise in 6.884s, finished at 2023-06-02T22:37:56+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 428 Jun  2 22:37 packages/promise-20210307.727.entry
+ 72K -rw-r--r-- 1 root root 70K Jun  2 22:37 packages/promise-20210307.727.tar

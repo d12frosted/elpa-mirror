@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: quilt
+Fetcher: github
+Source:  https://github.com/jstranik/emacs-quilt.git
+
+Updating /mnt/store/melpa/working/quilt/
+Checking out b56a1f1acc46cdf8655710e4c8f24f5f31f22c6a
+Built quilt in 4.482s, finished at 2023-06-02T22:39:54+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 22:39 packages/quilt-20190828.506.el
+4.0K -rw-r--r-- 1 root root 405 Jun  2 22:39 packages/quilt-20190828.506.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: balanced-windows
+Fetcher: github
+Source:  https://github.com/wbolster/emacs-balanced-windows.git
+
+Updating /mnt/store/melpa/working/balanced-windows/
+Checking out 1da5354ad8a9235d13928e2ee0863f3642ccdd13
+Built balanced-windows in 5.054s, finished at 2023-06-02T21:24:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.5K Jun  2 21:24 packages/balanced-windows-20190903.1120.el
+4.0K -rw-r--r-- 1 root root  473 Jun  2 21:24 packages/balanced-windows-20190903.1120.entry

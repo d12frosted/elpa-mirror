@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: egg-timer
+Fetcher: github
+Source:  https://github.com/wpcarro/egg-timer.el.git
+
+Updating /mnt/store/melpa/working/egg-timer/
+Checking out 53a9e9d20453ea4b0198ca413b8b5069a0b30b38
+Built egg-timer in 8.403s, finished at 2023-06-02T21:41:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.5K Jun  2 21:41 packages/egg-timer-20200217.1650.el
+4.0K -rw-r--r-- 1 root root  451 Jun  2 21:41 packages/egg-timer-20200217.1650.entry

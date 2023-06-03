@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: android-env
+Fetcher: github
+Source:  https://github.com/fernando-jascovich/android-env.el.git
+
+Updating /mnt/store/melpa/working/android-env/
+Checking out d2890f1156ed184314adbfcf01cdceb6ea79b10d
+Built android-env in 5.671s, finished at 2023-06-02T21:21:37+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  2 21:21 packages/android-env-20220810.1449.el
+4.0K -rw-r--r-- 1 root root 484 Jun  2 21:21 packages/android-env-20220810.1449.entry

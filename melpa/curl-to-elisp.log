@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: curl-to-elisp
+Fetcher: github
+Source:  https://github.com/xuchunyang/curl-to-elisp.git
+
+Updating /mnt/store/melpa/working/curl-to-elisp/
+Checking out 63d8d9c6d5efb8af8aa88042bfc0690ba699ef64
+Built curl-to-elisp in 10.126s, finished at 2023-06-02T21:35:18+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 21:35 packages/curl-to-elisp-20201124.1012.el
+4.0K -rw-r--r-- 1 root root 360 Jun  2 21:35 packages/curl-to-elisp-20201124.1012.entry

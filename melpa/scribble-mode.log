@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: scribble-mode
+Fetcher: github
+Source:  https://github.com/emacs-pe/scribble-mode.git
+
+Updating /mnt/store/melpa/working/scribble-mode/
+Checking out 5c3ea3cc9bbad585476eee41ea76dc056c2012bb
+Built scribble-mode in 5.706s, finished at 2023-06-02T22:43:52+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  2 22:43 packages/scribble-mode-20190912.200.el
+4.0K -rw-r--r-- 1 root root  472 Jun  2 22:43 packages/scribble-mode-20190912.200.entry

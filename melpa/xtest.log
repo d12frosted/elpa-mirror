@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: xtest
+Fetcher: github
+Source:  https://github.com/promethial/xtest.git
+
+Updating /mnt/store/melpa/working/xtest/
+Checking out 8099be9c2d856f98489834ddb20a01c6fd8922f1
+Built xtest in 7.387s, finished at 2023-06-02T23:00:54+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.1K Jun  2 23:00 packages/xtest-20141214.1706.el
+4.0K -rw-r--r-- 1 root root  345 Jun  2 23:00 packages/xtest-20141214.1706.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: chyla-theme
+Fetcher: github
+Source:  https://github.com/chyla/ChylaThemeForEmacs.git
+
+Updating /mnt/store/melpa/working/chyla-theme/
+Checking out b24d0379516857ccf75caff9ae1d00b820c9a6f6
+Built chyla-theme in 5.870s, finished at 2023-06-02T21:29:14+0000
+ ✓ Success:
+ 76K -rw-r--r-- 1 root root 74K Jun  2 21:29 packages/chyla-theme-20221213.1012.el
+4.0K -rw-r--r-- 1 root root 389 Jun  2 21:29 packages/chyla-theme-20221213.1012.entry

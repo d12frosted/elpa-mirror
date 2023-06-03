@@ -1,1 +1,34 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: elbank
+Fetcher: github
+Source:  https://github.com/NicolasPetton/elbank.git
+
+Updating /mnt/store/melpa/working/elbank/
+Checking out 6dbd21e31fdf7cf62491f6d24b8198d4f91a031b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elbank/
+  to /tmp/elbankQvsQKk/elbank-20180316.1343
+    elbank-boobank.el -> elbank-boobank.el
+    elbank-budget.el -> elbank-budget.el
+    elbank-common.el -> elbank-common.el
+    elbank-compat.el -> elbank-compat.el
+    elbank-overview.el -> elbank-overview.el
+    elbank-progressbar.el -> elbank-progressbar.el
+    elbank-report.el -> elbank-report.el
+    elbank-transaction.el -> elbank-transaction.el
+    elbank.el -> elbank.el
+Created elbank-20180316.1343.tar containing:
+  elbank-20180316.1343/
+  elbank-20180316.1343/elbank-boobank.el
+  elbank-20180316.1343/elbank-budget.el
+  elbank-20180316.1343/elbank-common.el
+  elbank-20180316.1343/elbank-compat.el
+  elbank-20180316.1343/elbank-overview.el
+  elbank-20180316.1343/elbank-pkg.el
+  elbank-20180316.1343/elbank-progressbar.el
+  elbank-20180316.1343/elbank-report.el
+  elbank-20180316.1343/elbank-transaction.el
+  elbank-20180316.1343/elbank.el
+Built elbank in 7.233s, finished at 2023-06-02T21:42:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 399 Jun  2 21:42 packages/elbank-20180316.1343.entry
+ 80K -rw-r--r-- 1 root root 80K Jun  2 21:42 packages/elbank-20180316.1343.tar

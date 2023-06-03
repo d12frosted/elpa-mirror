@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: prodigy
+Fetcher: github
+Source:  https://github.com/rejeep/prodigy.el.git
+
+Updating /mnt/store/melpa/working/prodigy/
+Checking out a3be00d3b90a77118c2d7d9f5a2f26151091fa07
+Built prodigy in 9.619s, finished at 2023-06-02T22:37:01+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 51K Jun  2 22:36 packages/prodigy-20220523.1728.el
+4.0K -rw-r--r-- 1 root root 473 Jun  2 22:36 packages/prodigy-20220523.1728.entry

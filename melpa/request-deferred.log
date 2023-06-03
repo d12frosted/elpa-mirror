@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: request-deferred
+Fetcher: github
+Source:  https://github.com/tkf/emacs-request.git
+
+Updating /mnt/store/melpa/working/request-deferred/
+Checking out 38ed1d2e64138eb16a9d8ed2987cff2e01b4a93b
+Built request-deferred in 5.414s, finished at 2023-06-02T22:41:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Jun  2 22:41 packages/request-deferred-20220614.1604.el
+4.0K -rw-r--r-- 1 root root  494 Jun  2 22:41 packages/request-deferred-20220614.1604.entry

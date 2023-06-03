@@ -1,1 +1,21 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: graphql
+Fetcher: github
+Source:  https://github.com/vermiculus/graphql.el.git
+
+Updating /mnt/store/melpa/working/graphql/
+Checking out b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/graphql/
+  to /tmp/graphqldyslQv/graphql-20221128.1106
+    graphql-examples.el -> graphql-examples.el
+    graphql.el -> graphql.el
+Created graphql-20221128.1106.tar containing:
+  graphql-20221128.1106/
+  graphql-20221128.1106/graphql-examples.el
+  graphql-20221128.1106/graphql-pkg.el
+  graphql-20221128.1106/graphql.el
+Built graphql in 4.383s, finished at 2023-06-02T21:59:23+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Aug 25  2022 packages/graphql-20180912.31.el
+4.0K -rw-r--r-- 1 root root  422 Jun  2 21:59 packages/graphql-20221128.1106.entry
+ 20K -rw-r--r-- 1 root root  20K Jun  2 21:59 packages/graphql-20221128.1106.tar

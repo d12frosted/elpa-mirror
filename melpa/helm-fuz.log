@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-fuz
+Fetcher: github
+Source:  https://github.com/rustify-emacs/fuz.el.git
+
+Updating /mnt/store/melpa/working/helm-fuz/
+Checking out fee874aa35d2ee6b12b836290b5c8eaa44175a28
+Built helm-fuz in 5.160s, finished at 2023-06-02T22:01:44+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 22:01 packages/helm-fuz-20200812.1222.el
+4.0K -rw-r--r-- 1 root root 468 Jun  2 22:01 packages/helm-fuz-20200812.1222.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fn
+Fetcher: github
+Source:  https://github.com/troyp/fn.el.git
+
+Updating /mnt/store/melpa/working/fn/
+Checking out 98e3fe1b4785e162d9aca978a2db106baa79260f
+Built fn in 6.770s, finished at 2023-06-02T21:53:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jun  2 21:53 packages/fn-20210304.1812.el
+4.0K -rw-r--r-- 1 root root  378 Jun  2 21:53 packages/fn-20210304.1812.entry

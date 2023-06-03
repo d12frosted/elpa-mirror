@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: verify-url
+Fetcher: github
+Source:  https://github.com/lujun9972/verify-url.git
+
+Updating /mnt/store/melpa/working/verify-url/
+Checking out d6f3623cda8cd526a2d198619b137059cb1ba1ab
+Built verify-url in 4.014s, finished at 2023-06-02T22:56:36+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jun  2 22:56 packages/verify-url-20160426.1228.el
+4.0K -rw-r--r-- 1 root root  485 Jun  2 22:56 packages/verify-url-20160426.1228.entry

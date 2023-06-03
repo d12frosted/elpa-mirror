@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: hemera-theme
+Fetcher: github
+Source:  https://github.com/guidoschmidt/emacs-hemera-theme.git
+
+Updating /mnt/store/melpa/working/hemera-theme/
+Checking out b67c902b210b37b00cac68726822404543147ba8
+Built hemera-theme in 4.269s, finished at 2023-06-02T22:04:21+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:04 packages/hemera-theme-20180916.924.el
+4.0K -rw-r--r-- 1 root root 432 Jun  2 22:04 packages/hemera-theme-20180916.924.entry

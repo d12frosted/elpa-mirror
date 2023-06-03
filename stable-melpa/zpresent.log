@@ -1,1 +1,17 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: zpresent
+Fetcher: hg
+Source:  https://hg.sr.ht/~zck/zpresent
+
+Updating /mnt/store/melpa/working/zpresent/
+Checking out 341d1a4a91a8acff5be6b81f95695e17c79c5309
+
+Command '' exited with non-zero exit-code: 255
+
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command exited with non-zero exit-code: 255

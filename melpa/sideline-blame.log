@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sideline-blame
+Fetcher: github
+Source:  https://github.com/emacs-sideline/sideline-blame.git
+
+Updating /mnt/store/melpa/working/sideline-blame/
+Checking out 4d3343795bc95662adb65c85bcbb41947862699f
+Built sideline-blame in 5.566s, finished at 2023-06-02T22:46:10+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Jun  2 22:46 packages/sideline-blame-20230406.2312.el
+4.0K -rw-r--r-- 1 root root  518 Jun  2 22:46 packages/sideline-blame-20230406.2312.entry

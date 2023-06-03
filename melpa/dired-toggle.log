@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dired-toggle
+Fetcher: github
+Source:  https://github.com/fasheng/dired-toggle.git
+
+Updating /mnt/store/melpa/working/dired-toggle/
+Checking out b694ba91a45d0762bd032ff1bb4109e4c62ca686
+Built dired-toggle in 4.948s, finished at 2023-06-02T21:38:06+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.4K Jun  2 21:38 packages/dired-toggle-20190616.303.el
+4.0K -rw-r--r-- 1 root root  405 Jun  2 21:38 packages/dired-toggle-20190616.303.entry

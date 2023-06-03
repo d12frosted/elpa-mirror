@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: deferred
+Fetcher: github
+Source:  https://github.com/kiwanami/emacs-deferred.git
+
+Updating /mnt/store/melpa/working/deferred/
+Checking out 2239671d94b38d92e9b28d4e12fd79814cfb9c16
+Built deferred in 4.554s, finished at 2023-06-02T21:36:35+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 35K Jun  2 21:36 packages/deferred-20170901.1330.el
+4.0K -rw-r--r-- 1 root root 472 Jun  2 21:36 packages/deferred-20170901.1330.entry

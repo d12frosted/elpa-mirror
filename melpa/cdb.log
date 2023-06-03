@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: cdb
+Fetcher: github
+Source:  https://github.com/skk-dev/ddskk.git
+
+Updating /mnt/store/melpa/working/cdb/
+Checking out 3820fa6bb0d53132aafb611a643c1e41e444052b
+Built cdb in 7.217s, finished at 2023-06-02T21:28:25+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jun  2 21:28 packages/cdb-20230318.2152.el
+4.0K -rw-r--r-- 1 root root  393 Jun  2 21:28 packages/cdb-20230318.2152.entry

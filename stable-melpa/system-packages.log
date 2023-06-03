@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: system-packages
+Fetcher: gitlab
+Source:  https://gitlab.com/jabranham/system-packages.git
+
+Updating /mnt/store/melpa/working/system-packages/
+Checking out c087d2c6e598f85fc2760324dce20104ea442fa3
+Built system-packages in 6.235s, finished at 2023-06-02T22:50:52+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  2 22:50 packages/system-packages-20220409.1023.el
+4.0K -rw-r--r-- 1 root root 460 Jun  2 22:50 packages/system-packages-20220409.1023.entry

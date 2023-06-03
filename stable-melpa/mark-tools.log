@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: mark-tools
+Fetcher: github
+Source:  https://github.com/stsquad/emacs-mark-tools.git
+
+Updating /mnt/store/melpa/working/mark-tools/
+Checking out a11b61effa90bd0abc876d12573674d36fc17f0c
+Built mark-tools in 5.166s, finished at 2023-06-02T22:18:26+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jun  2 22:18 packages/mark-tools-20130614.1025.el
+4.0K -rw-r--r-- 1 root root  419 Jun  2 22:18 packages/mark-tools-20130614.1025.entry

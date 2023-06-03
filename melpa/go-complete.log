@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: go-complete
+Fetcher: github
+Source:  https://github.com/vibhavp/go-complete.git
+
+Updating /mnt/store/melpa/working/go-complete/
+Checking out 056294014f37a1004958ec17ebd6748deed63502
+Built go-complete in 4.713s, finished at 2023-06-02T21:58:20+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jun  2 21:58 packages/go-complete-20190409.516.el
+4.0K -rw-r--r-- 1 root root  484 Jun  2 21:58 packages/go-complete-20190409.516.entry

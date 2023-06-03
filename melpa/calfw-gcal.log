@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: calfw-gcal
+Fetcher: github
+Source:  https://github.com/myuhe/calfw-gcal.el.git
+
+Updating /mnt/store/melpa/working/calfw-gcal/
+Checking out 14aab20687d6cc9e6c5ddb9e11984c4e14c3d870
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/calfw-gcal/
+  to /tmp/calfw-gcal3aUmTc/calfw-gcal-20120111.1000
+    calfw-gcal.el -> calfw-gcal.el
+    insertEvent.py -> insertEvent.py
+Created calfw-gcal-20120111.1000.tar containing:
+  calfw-gcal-20120111.1000/
+  calfw-gcal-20120111.1000/calfw-gcal-pkg.el
+  calfw-gcal-20120111.1000/calfw-gcal.el
+  calfw-gcal-20120111.1000/insertEvent.py
+Built calfw-gcal in 8.849s, finished at 2023-06-02T21:27:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 396 Jun  2 21:27 packages/calfw-gcal-20120111.1000.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 21:27 packages/calfw-gcal-20120111.1000.tar

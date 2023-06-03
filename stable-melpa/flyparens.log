@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: flyparens
+Fetcher: github
+Source:  https://github.com/jiyoo/flyparens.git
+
+Updating /mnt/store/melpa/working/flyparens/
+Checking out af9b8cfd647d0e5f97684d613dc2eea7cfc19398
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flyparens/
+  to /tmp/flyparensScn8vq/flyparens-20140723.1846
+    flyparens-config-example-1.el -> flyparens-config-example-1.el
+    flyparens.el -> flyparens.el
+Created flyparens-20140723.1846.tar containing:
+  flyparens-20140723.1846/
+  flyparens-20140723.1846/flyparens-config-example-1.el
+  flyparens-20140723.1846/flyparens-pkg.el
+  flyparens-20140723.1846/flyparens.el
+Built flyparens in 4.427s, finished at 2023-06-02T21:53:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 348 Jun  2 21:53 packages/flyparens-20140723.1846.entry
+ 12K -rw-r--r-- 1 root root 10K Jun  2 21:53 packages/flyparens-20140723.1846.tar

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: file-info
+Fetcher: github
+Source:  https://github.com/Artawower/file-info.el.git
+
+Updating /mnt/store/melpa/working/file-info/
+Checking out cb06d793b7e1ba769189f2002236305eba002660
+Built file-info in 5.234s, finished at 2023-06-02T21:50:04+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  2 21:50 packages/file-info-20230427.714.el
+4.0K -rw-r--r-- 1 root root 533 Jun  2 21:50 packages/file-info-20230427.714.entry

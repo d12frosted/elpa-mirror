@@ -1,1 +1,68 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-chef
+Fetcher: github
+Source:  https://github.com/Chobbes/org-chef.git
+
+Updating /mnt/store/melpa/working/org-chef/
+Checking out 6a786e77e67a715b3cd4f5128b59d501614928af
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-chef/
+  to /tmp/org-chefPGymFi/org-chef-20220422.300
+    org-chef-24kitchen.el -> org-chef-24kitchen.el
+    org-chef-basics-with-babish.el -> org-chef-basics-with-babish.el
+    org-chef-bbc-food.el -> org-chef-bbc-food.el
+    org-chef-bbc-good-food.el -> org-chef-bbc-good-food.el
+    org-chef-binging-with-babish.el -> org-chef-binging-with-babish.el
+    org-chef-chef-koch.el -> org-chef-chef-koch.el
+    org-chef-cultures-for-health.el -> org-chef-cultures-for-health.el
+    org-chef-edit.el -> org-chef-edit.el
+    org-chef-fine-cooking.el -> org-chef-fine-cooking.el
+    org-chef-genius-kitchen.el -> org-chef-genius-kitchen.el
+    org-chef-jamie-oliver.el -> org-chef-jamie-oliver.el
+    org-chef-json-ld.el -> org-chef-json-ld.el
+    org-chef-kotikokki.el -> org-chef-kotikokki.el
+    org-chef-marmiton.el -> org-chef-marmiton.el
+    org-chef-martha-stewart.el -> org-chef-martha-stewart.el
+    org-chef-nytimes.el -> org-chef-nytimes.el
+    org-chef-recipetin-eats.el -> org-chef-recipetin-eats.el
+    org-chef-reluctant-gourmet.el -> org-chef-reluctant-gourmet.el
+    org-chef-saveur.el -> org-chef-saveur.el
+    org-chef-serious-eats.el -> org-chef-serious-eats.el
+    org-chef-simply-recipes.el -> org-chef-simply-recipes.el
+    org-chef-taste.el -> org-chef-taste.el
+    org-chef-utils.el -> org-chef-utils.el
+    org-chef-wordpress.el -> org-chef-wordpress.el
+    org-chef-xiachufang.el -> org-chef-xiachufang.el
+    org-chef.el -> org-chef.el
+Created org-chef-20220422.300.tar containing:
+  org-chef-20220422.300/
+  org-chef-20220422.300/org-chef-24kitchen.el
+  org-chef-20220422.300/org-chef-basics-with-babish.el
+  org-chef-20220422.300/org-chef-bbc-food.el
+  org-chef-20220422.300/org-chef-bbc-good-food.el
+  org-chef-20220422.300/org-chef-binging-with-babish.el
+  org-chef-20220422.300/org-chef-chef-koch.el
+  org-chef-20220422.300/org-chef-cultures-for-health.el
+  org-chef-20220422.300/org-chef-edit.el
+  org-chef-20220422.300/org-chef-fine-cooking.el
+  org-chef-20220422.300/org-chef-genius-kitchen.el
+  org-chef-20220422.300/org-chef-jamie-oliver.el
+  org-chef-20220422.300/org-chef-json-ld.el
+  org-chef-20220422.300/org-chef-kotikokki.el
+  org-chef-20220422.300/org-chef-marmiton.el
+  org-chef-20220422.300/org-chef-martha-stewart.el
+  org-chef-20220422.300/org-chef-nytimes.el
+  org-chef-20220422.300/org-chef-pkg.el
+  org-chef-20220422.300/org-chef-recipetin-eats.el
+  org-chef-20220422.300/org-chef-reluctant-gourmet.el
+  org-chef-20220422.300/org-chef-saveur.el
+  org-chef-20220422.300/org-chef-serious-eats.el
+  org-chef-20220422.300/org-chef-simply-recipes.el
+  org-chef-20220422.300/org-chef-taste.el
+  org-chef-20220422.300/org-chef-utils.el
+  org-chef-20220422.300/org-chef-wordpress.el
+  org-chef-20220422.300/org-chef-xiachufang.el
+  org-chef-20220422.300/org-chef.el
+Built org-chef in 4.437s, finished at 2023-06-02T22:27:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  514 Jun  2 22:27 packages/org-chef-20220422.300.entry
+132K -rw-r--r-- 1 root root 130K Jun  2 22:27 packages/org-chef-20220422.300.tar

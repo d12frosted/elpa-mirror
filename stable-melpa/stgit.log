@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: stgit
+Fetcher: github
+Source:  https://github.com/stacked-git/stgit.git
+
+Updating /mnt/store/melpa/working/stgit/
+Checking out d34715b1f63643ed5f13516df614aa729bd65fd8
+Built stgit in 8.019s, finished at 2023-06-02T22:49:32+0000
+ ✓ Success:
+116K -rw-r--r-- 1 root root 116K Jun  2 22:49 packages/stgit-20230525.1553.el
+4.0K -rw-r--r-- 1 root root  367 Jun  2 22:49 packages/stgit-20230525.1553.entry

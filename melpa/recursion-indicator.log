@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: recursion-indicator
+Fetcher: github
+Source:  https://github.com/minad/recursion-indicator.git
+
+Updating /mnt/store/melpa/working/recursion-indicator/
+Checking out 95eb885d8719e5e31a42fc99a6a76812fd38df8d
+Built recursion-indicator in 5.490s, finished at 2023-06-02T22:41:03+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jun  2 22:41 packages/recursion-indicator-20230410.1753.el
+4.0K -rw-r--r-- 1 root root  520 Jun  2 22:41 packages/recursion-indicator-20230410.1753.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: quelpa-use-package
+Fetcher: github
+Source:  https://github.com/quelpa/quelpa-use-package.git
+
+Updating /mnt/store/melpa/working/quelpa-use-package/
+Checking out a97461008391d045aa2a506fc126280a12a060e4
+Built quelpa-use-package in 4.830s, finished at 2023-06-02T22:39:47+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jun  2 22:39 packages/quelpa-use-package-20201022.746.el
+4.0K -rw-r--r-- 1 root root  519 Jun  2 22:39 packages/quelpa-use-package-20201022.746.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pcache
+Fetcher: github
+Source:  https://github.com/sigma/pcache.git
+
+Updating /mnt/store/melpa/working/pcache/
+Checking out cae29ddbc3d12fac18ab5cfc26fa3ef13eb97dad
+Built pcache in 5.126s, finished at 2023-06-02T22:33:32+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Jun  2 22:33 packages/pcache-20220724.1841.el
+4.0K -rw-r--r-- 1 root root  368 Jun  2 22:33 packages/pcache-20220724.1841.entry

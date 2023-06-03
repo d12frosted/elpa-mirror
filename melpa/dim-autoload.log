@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dim-autoload
+Fetcher: github
+Source:  https://github.com/tarsius/dim-autoload.git
+
+Updating /mnt/store/melpa/working/dim-autoload/
+Checking out 9e7b4d47f2dc972ec16baa6bd56b016000790ff4
+Built dim-autoload in 4.928s, finished at 2023-06-02T21:37:22+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Jun  2 21:37 packages/dim-autoload-20230511.2114.el
+4.0K -rw-r--r-- 1 root root  465 Jun  2 21:37 packages/dim-autoload-20230511.2114.entry

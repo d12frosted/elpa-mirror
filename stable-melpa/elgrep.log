@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: elgrep
+Fetcher: github
+Source:  https://github.com/TobiasZawada/elgrep.git
+
+Updating /mnt/store/melpa/working/elgrep/
+Checking out f8124c699b6a4abfb471269bc26afbcc8136f476
+Built elgrep in 5.505s, finished at 2023-06-02T21:42:57+0000
+ ✓ Success:
+ 96K -rw-r--r-- 1 root root 96K Jun  2 21:42 packages/elgrep-20211221.852.el
+4.0K -rw-r--r-- 1 root root 445 Jun  2 21:42 packages/elgrep-20211221.852.entry

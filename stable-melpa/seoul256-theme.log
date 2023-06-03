@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: seoul256-theme
+Fetcher: github
+Source:  https://github.com/anandpiyer/seoul256-emacs.git
+
+Updating /mnt/store/melpa/working/seoul256-theme/
+Checking out 8e76d0207489964ef780420723d49e409f68f7d1
+Built seoul256-theme in 6.879s, finished at 2023-06-02T22:44:36+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  2 22:44 packages/seoul256-theme-20180505.757.el
+4.0K -rw-r--r-- 1 root root 444 Jun  2 22:44 packages/seoul256-theme-20180505.757.entry

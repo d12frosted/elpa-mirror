@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-crystal
+Fetcher: github
+Source:  https://github.com/brantou/ob-crystal.git
+
+Updating /mnt/store/melpa/working/ob-crystal/
+Checking out b3bb27a21a4cefef3f5aeef52718b694bd51245b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-crystal/
+  to /tmp/ob-crystal06N5LR/ob-crystal-20180126.718
+    ob-crystal.el -> ob-crystal.el
+    test-ob-crystal.el -> test-ob-crystal.el
+Created ob-crystal-20180126.718.tar containing:
+  ob-crystal-20180126.718/
+  ob-crystal-20180126.718/ob-crystal-pkg.el
+  ob-crystal-20180126.718/ob-crystal.el
+  ob-crystal-20180126.718/test-ob-crystal.el
+Built ob-crystal in 4.958s, finished at 2023-06-02T22:25:13+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 501 Jun  2 22:25 packages/ob-crystal-20180126.718.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:25 packages/ob-crystal-20180126.718.tar

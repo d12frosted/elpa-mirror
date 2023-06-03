@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: peek-mode
+Fetcher: github
+Source:  https://github.com/erikriverson/peek-mode.git
+
+Updating /mnt/store/melpa/working/peek-mode/
+Checking out 55a7dd011375330c7d57322257a5167516702c71
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/peek-mode/
+  to /tmp/peek-mode6BXtEA/peek-mode-20130620.1946
+    index.html -> index.html
+    peek-mode.el -> peek-mode.el
+Created peek-mode-20130620.1946.tar containing:
+  peek-mode-20130620.1946/
+  peek-mode-20130620.1946/index.html
+  peek-mode-20130620.1946/peek-mode-pkg.el
+  peek-mode-20130620.1946/peek-mode.el
+Built peek-mode in 4.117s, finished at 2023-06-02T22:33:47+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 443 Jun  2 22:33 packages/peek-mode-20130620.1946.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:33 packages/peek-mode-20130620.1946.tar

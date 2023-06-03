@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: quelpa
+Fetcher: github
+Source:  https://github.com/quelpa/quelpa.git
+
+Updating /mnt/store/melpa/working/quelpa/
+Checking out 79651cd0de497a8db18d79e7598eb01a4eec4f09
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/quelpa/
+  to /tmp/quelpaJJwIxh/quelpa-20221220.1136
+    bootstrap.el -> bootstrap.el
+    quelpa.el -> quelpa.el
+Created quelpa-20221220.1136.tar containing:
+  quelpa-20221220.1136/
+  quelpa-20221220.1136/bootstrap.el
+  quelpa-20221220.1136/quelpa-pkg.el
+  quelpa-20221220.1136/quelpa.el
+Built quelpa in 4.400s, finished at 2023-06-02T22:39:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 393 Jun  2 22:39 packages/quelpa-20221220.1136.entry
+ 92K -rw-r--r-- 1 root root 90K Jun  2 22:39 packages/quelpa-20221220.1136.tar

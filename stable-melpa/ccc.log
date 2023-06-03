@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ccc
+Fetcher: github
+Source:  https://github.com/skk-dev/ddskk.git
+
+Updating /mnt/store/melpa/working/ccc/
+Checking out 36fb9f7e527f975d333887fd0cca4d611ae1ab23
+Built ccc in 7.328s, finished at 2023-06-02T21:28:13+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  2 21:28 packages/ccc-20210501.820.el
+4.0K -rw-r--r-- 1 root root 396 Jun  2 21:28 packages/ccc-20210501.820.entry

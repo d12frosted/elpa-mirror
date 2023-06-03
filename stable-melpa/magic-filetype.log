@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: magic-filetype
+Fetcher: github
+Source:  https://github.com/emacs-php/magic-filetype.el.git
+
+Updating /mnt/store/melpa/working/magic-filetype/
+Checking out 019494add5ff02dd36cb3f500142fc51125522cc
+Built magic-filetype in 10.820s, finished at 2023-06-02T22:17:16+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.1K Jun  2 22:17 packages/magic-filetype-20180219.1552.el
+4.0K -rw-r--r-- 1 root root  468 Jun  2 22:17 packages/magic-filetype-20180219.1552.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: rectangle-utils
+Fetcher: github
+Source:  https://github.com/thierryvolpiatto/rectangle-utils.git
+
+Updating /mnt/store/melpa/working/rectangle-utils/
+Checking out 46f7e73340fee40c1ab9a4e766a08ae3fce83ebe
+Built rectangle-utils in 4.168s, finished at 2023-06-02T22:41:01+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Jun  2 22:41 packages/rectangle-utils-20190411.1757.el
+4.0K -rw-r--r-- 1 root root  494 Jun  2 22:41 packages/rectangle-utils-20190411.1757.entry

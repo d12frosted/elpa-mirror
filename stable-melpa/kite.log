@@ -1,1 +1,50 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: kite
+Fetcher: github
+Source:  https://github.com/jscheid/kite.git
+
+Updating /mnt/store/melpa/working/kite/
+Checking out 7ed74d1147a6ddd152d3da65dc30df3517d53144
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kite/
+  to /tmp/kitepz1GvV/kite-20130201.1938
+    kite-breakpoint.el -> kite-breakpoint.el
+    kite-color.el -> kite-color.el
+    kite-console.el -> kite-console.el
+    kite-debug.el -> kite-debug.el
+    kite-dom-css.el -> kite-dom-css.el
+    kite-dom.el -> kite-dom.el
+    kite-files.el -> kite-files.el
+    kite-global.el -> kite-global.el
+    kite-load-path.el -> kite-load-path.el
+    kite-memory.el -> kite-memory.el
+    kite-modeline.el -> kite-modeline.el
+    kite-net.el -> kite-net.el
+    kite-object.el -> kite-object.el
+    kite-scratch.el -> kite-scratch.el
+    kite-sourcemap.el -> kite-sourcemap.el
+    kite-util.el -> kite-util.el
+    kite.el -> kite.el
+Created kite-20130201.1938.tar containing:
+  kite-20130201.1938/
+  kite-20130201.1938/kite-breakpoint.el
+  kite-20130201.1938/kite-color.el
+  kite-20130201.1938/kite-console.el
+  kite-20130201.1938/kite-debug.el
+  kite-20130201.1938/kite-dom-css.el
+  kite-20130201.1938/kite-dom.el
+  kite-20130201.1938/kite-files.el
+  kite-20130201.1938/kite-global.el
+  kite-20130201.1938/kite-load-path.el
+  kite-20130201.1938/kite-memory.el
+  kite-20130201.1938/kite-modeline.el
+  kite-20130201.1938/kite-net.el
+  kite-20130201.1938/kite-object.el
+  kite-20130201.1938/kite-pkg.el
+  kite-20130201.1938/kite-scratch.el
+  kite-20130201.1938/kite-sourcemap.el
+  kite-20130201.1938/kite-util.el
+  kite-20130201.1938/kite.el
+Built kite in 3.990s, finished at 2023-06-02T22:12:33+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  377 Jun  2 22:12 packages/kite-20130201.1938.entry
+340K -rw-r--r-- 1 root root 340K Jun  2 22:12 packages/kite-20130201.1938.tar

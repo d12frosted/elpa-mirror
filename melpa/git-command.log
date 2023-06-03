@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: git-command
+Fetcher: github
+Source:  https://github.com/10sr/git-command-el.git
+
+Updating /mnt/store/melpa/working/git-command/
+Checking out a773d40da39dfb1c6ecf2b0758aa370ddea8f06d
+Built git-command in 4.628s, finished at 2023-06-02T21:57:03+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.5K Jun  2 21:57 packages/git-command-20191028.333.el
+4.0K -rw-r--r-- 1 root root  502 Jun  2 21:57 packages/git-command-20191028.333.entry

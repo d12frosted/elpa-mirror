@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: jbeans-theme
+Fetcher: github
+Source:  https://github.com/synic/jbeans-emacs.git
+
+Updating /mnt/store/melpa/working/jbeans-theme/
+Checking out a63916a928324c42bfbe3016972c2ecff598b1ae
+Built jbeans-theme in 6.259s, finished at 2023-06-02T22:10:04+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Jun  2 22:10 packages/jbeans-theme-20200924.1946.el
+4.0K -rw-r--r-- 1 root root 403 Jun  2 22:10 packages/jbeans-theme-20200924.1946.entry

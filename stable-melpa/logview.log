@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: logview
+Fetcher: github
+Source:  https://github.com/doublep/logview.git
+
+Updating /mnt/store/melpa/working/logview/
+Checking out 856ebf1aa9a8d0ebde3352ba14bad2fbb78c82a8
+Built logview in 5.535s, finished at 2023-06-02T22:15:32+0000
+ ✓ Success:
+212K -rw-r--r-- 1 root root 209K Jun  2 22:15 packages/logview-20230428.2158.el
+4.0K -rw-r--r-- 1 root root  491 Jun  2 22:15 packages/logview-20230428.2158.entry

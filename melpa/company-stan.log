@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: company-stan
+Fetcher: github
+Source:  https://github.com/stan-dev/stan-mode.git
+
+Updating /mnt/store/melpa/working/company-stan/
+Checking out 150bbbe5fd3ad2b5a3dbfba9d291e66eeea1a581
+Built company-stan in 5.288s, finished at 2023-06-02T21:32:18+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.3K Jun  2 21:32 packages/company-stan-20211129.2051.el
+4.0K -rw-r--r-- 1 root root  559 Jun  2 21:32 packages/company-stan-20211129.2051.entry

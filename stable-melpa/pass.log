@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pass
+Fetcher: github
+Source:  https://github.com/NicolasPetton/pass.git
+
+Updating /mnt/store/melpa/working/pass/
+Checking out 5651da53137db9adcb125b4897c2fe27eeb4368d
+Built pass in 5.098s, finished at 2023-06-02T22:33:15+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 25K Jun  2 22:33 packages/pass-20210203.810.el
+4.0K -rw-r--r-- 1 root root 525 Jun  2 22:33 packages/pass-20210203.810.entry

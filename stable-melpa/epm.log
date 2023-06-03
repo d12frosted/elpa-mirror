@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: epm
+Fetcher: github
+Source:  https://github.com/xuchunyang/epm.git
+
+Updating /mnt/store/melpa/working/epm/
+Checking out 6375ddbf93c5f25647f6ebb25b54045b3c93a5be
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/epm/
+  to /tmp/epmDbfN7j/epm-20190509.443
+    .epm.el -> .epm.el
+    epm.el -> epm.el
+    epm -> epm
+Created epm-20190509.443.tar containing:
+  epm-20190509.443/
+  epm-20190509.443/.epm.el
+  epm-20190509.443/epm
+  epm-20190509.443/epm-pkg.el
+  epm-20190509.443/epm.el
+Built epm in 4.724s, finished at 2023-06-02T21:44:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 416 Jun  2 21:44 packages/epm-20190509.443.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 21:44 packages/epm-20190509.443.tar

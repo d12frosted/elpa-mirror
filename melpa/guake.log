@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: guake
+Fetcher: github
+Source:  https://github.com/juergenhoetzel/emacs-guake.git
+
+Updating /mnt/store/melpa/working/guake/
+Checking out 2753ce833b95bd1f042ac0e4b7adfe34975a88ed
+Built guake in 5.073s, finished at 2023-06-02T21:59:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  2 21:59 packages/guake-20221029.1811.el
+4.0K -rw-r--r-- 1 root root  428 Jun  2 21:59 packages/guake-20221029.1811.entry

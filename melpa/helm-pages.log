@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-pages
+Fetcher: github
+Source:  https://github.com/david-christiansen/helm-pages.git
+
+Updating /mnt/store/melpa/working/helm-pages/
+Checking out 51dcb9374d1df9feaae85e60cfb39b970554ecba
+Built helm-pages in 9.550s, finished at 2023-06-02T22:03:06+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jun  2 22:03 packages/helm-pages-20161121.226.el
+4.0K -rw-r--r-- 1 root root  535 Jun  2 22:03 packages/helm-pages-20161121.226.entry

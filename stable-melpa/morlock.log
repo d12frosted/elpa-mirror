@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: morlock
+Fetcher: github
+Source:  https://github.com/tarsius/morlock.git
+
+Updating /mnt/store/melpa/working/morlock/
+Checking out b7e2066a69c059c5d4c72e829b615a6b15cef4dc
+Built morlock in 7.808s, finished at 2023-06-02T22:21:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jun  2 22:20 packages/morlock-20230511.2105.el
+4.0K -rw-r--r-- 1 root root  455 Jun  2 22:20 packages/morlock-20230511.2105.entry

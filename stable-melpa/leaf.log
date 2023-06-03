@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: leaf
+Fetcher: github
+Source:  https://github.com/conao3/leaf.el.git
+
+Updating /mnt/store/melpa/working/leaf/
+Checking out 9eb18e8c9c375aa0158fbd06ea906bfbf54408fe
+Built leaf in 5.289s, finished at 2023-06-02T22:13:44+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 55K Jun  2 22:13 packages/leaf-20211226.1633.el
+4.0K -rw-r--r-- 1 root root 442 Jun  2 22:13 packages/leaf-20211226.1633.entry

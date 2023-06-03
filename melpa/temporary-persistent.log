@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: temporary-persistent
+Fetcher: github
+Source:  https://github.com/kostafey/temporary-persistent.git
+
+Updating /mnt/store/melpa/working/temporary-persistent/
+Checking out edbde738769e79ac212ae84ae7898ffd5f19e0f1
+Built temporary-persistent in 8.611s, finished at 2023-06-02T22:52:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jun  2 22:51 packages/temporary-persistent-20230115.1425.el
+4.0K -rw-r--r-- 1 root root  537 Jun  2 22:51 packages/temporary-persistent-20230115.1425.entry

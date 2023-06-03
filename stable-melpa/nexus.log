@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: nexus
+Fetcher: github
+Source:  https://github.com/juergenhoetzel/emacs-nexus.git
+
+Updating /mnt/store/melpa/working/nexus/
+Checking out 9f0ddf7d6cb5f7df44f684f02e2bd8a96ecabbd6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nexus/
+  to /tmp/nexusZxtxNg/nexus-20220902.2009
+    ac-nexus.el -> ac-nexus.el
+    nexus-widget.el -> nexus-widget.el
+    nexus.el -> nexus.el
+Created nexus-20220902.2009.tar containing:
+  nexus-20220902.2009/
+  nexus-20220902.2009/ac-nexus.el
+  nexus-20220902.2009/nexus-pkg.el
+  nexus-20220902.2009/nexus-widget.el
+  nexus-20220902.2009/nexus.el
+Built nexus in 5.742s, finished at 2023-06-02T22:23:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 360 Jun  2 22:23 packages/nexus-20220902.2009.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:23 packages/nexus-20220902.2009.tar

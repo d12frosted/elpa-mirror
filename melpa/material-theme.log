@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: material-theme
+Fetcher: github
+Source:  https://github.com/cpaulik/emacs-material-theme.git
+
+Updating /mnt/store/melpa/working/material-theme/
+Checking out 6823009bc92f82aa3a90e27e1009f7da8e87b648
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/material-theme/
+  to /tmp/material-theme54O5aK/material-theme-20210904.1226
+    material-light-theme.el -> material-light-theme.el
+    material-theme.el -> material-theme.el
+Created material-theme-20210904.1226.tar containing:
+  material-theme-20210904.1226/
+  material-theme-20210904.1226/material-light-theme.el
+  material-theme-20210904.1226/material-theme-pkg.el
+  material-theme-20210904.1226/material-theme.el
+Built material-theme in 4.047s, finished at 2023-06-02T22:18:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  467 Jun  2 22:18 packages/material-theme-20210904.1226.entry
+112K -rw-r--r-- 1 root root 110K Jun  2 22:18 packages/material-theme-20210904.1226.tar

@@ -1,1 +1,24 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: git-modes
+Fetcher: github
+Source:  https://github.com/magit/git-modes.git
+
+Updating /mnt/store/melpa/working/git-modes/
+Checking out 44d536ba637235c9dd203410281397417a3e60b6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-modes/
+  to /tmp/git-modes8YJoFh/git-modes-20230511.2134
+    git-modes.el -> git-modes.el
+    gitattributes-mode.el -> gitattributes-mode.el
+    gitconfig-mode.el -> gitconfig-mode.el
+    gitignore-mode.el -> gitignore-mode.el
+Created git-modes-20230511.2134.tar containing:
+  git-modes-20230511.2134/
+  git-modes-20230511.2134/git-modes-pkg.el
+  git-modes-20230511.2134/git-modes.el
+  git-modes-20230511.2134/gitattributes-mode.el
+  git-modes-20230511.2134/gitconfig-mode.el
+  git-modes-20230511.2134/gitignore-mode.el
+Built git-modes in 5.088s, finished at 2023-06-02T21:57:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 619 Jun  2 21:57 packages/git-modes-20230511.2134.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 21:57 packages/git-modes-20230511.2134.tar

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: test-simple
+Fetcher: github
+Source:  https://github.com/rocky/emacs-test-simple.git
+
+Updating /mnt/store/melpa/working/test-simple/
+Checking out 29c2c1ca7c240c8dfdba93dba6201e542a5a3b43
+Built test-simple in 5.268s, finished at 2023-06-02T22:52:30+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  2 22:52 packages/test-simple-20200722.1121.el
+4.0K -rw-r--r-- 1 root root 460 Jun  2 22:52 packages/test-simple-20200722.1121.entry

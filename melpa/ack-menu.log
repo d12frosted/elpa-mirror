@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ack-menu
+Fetcher: github
+Source:  https://github.com/chumpage/ack-menu.git
+
+Updating /mnt/store/melpa/working/ack-menu/
+Checking out f77be93a4697926ecf3195a355eb69580f695f4d
+Built ack-menu in 9.034s, finished at 2023-06-02T21:20:05+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 33K Jun  2 21:20 packages/ack-menu-20150504.2022.el
+4.0K -rw-r--r-- 1 root root 421 Jun  2 21:20 packages/ack-menu-20150504.2022.entry

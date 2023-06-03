@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: yara-mode
+Fetcher: github
+Source:  https://github.com/binjo/yara-mode.git
+
+Updating /mnt/store/melpa/working/yara-mode/
+Checking out 4c959b300ce52665c92e04e524dda5ed051c34f3
+Built yara-mode in 5.274s, finished at 2023-06-02T23:01:12+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 23:01 packages/yara-mode-20220317.935.el
+4.0K -rw-r--r-- 1 root root 395 Jun  2 23:01 packages/yara-mode-20220317.935.entry

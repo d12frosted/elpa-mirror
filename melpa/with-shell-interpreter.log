@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: with-shell-interpreter
+Fetcher: github
+Source:  https://github.com/p3r7/with-shell-interpreter.git
+
+Updating /mnt/store/melpa/working/with-shell-interpreter/
+Checking out 45b7d6ad63165c82a95966b291abbfe305d3ada2
+Built with-shell-interpreter in 4.910s, finished at 2023-06-02T22:59:51+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:59 packages/with-shell-interpreter-20200828.1217.el
+4.0K -rw-r--r-- 1 root root 311 Jun  2 22:59 packages/with-shell-interpreter-20200828.1217.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: kuronami-theme
+Fetcher: github
+Source:  https://github.com/inj0h/kuronami.git
+
+Updating /mnt/store/melpa/working/kuronami-theme/
+Checking out a51d5ff3883bd94d0a181bb5d60f747190eda4f6
+Built kuronami-theme in 4.967s, finished at 2023-06-02T22:13:03+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Jun  2 22:13 packages/kuronami-theme-20220602.339.el
+4.0K -rw-r--r-- 1 root root  342 Jun  2 22:13 packages/kuronami-theme-20220602.339.entry

@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: leaf-defaults
+Fetcher: github
+Source:  https://github.com/conao3/leaf-defaults.el.git
+
+Updating /mnt/store/melpa/working/leaf-defaults/
+Checking out 96ce39d4f16736f1e654e24eac16a2603976c724
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leaf-defaults/
+  to /tmp/leaf-defaultsdrf6lJ/leaf-defaults-20210301.118
+    leaf-defaults-recipe.el -> leaf-defaults-recipe.el
+    leaf-defaults.el -> leaf-defaults.el
+Created leaf-defaults-20210301.118.tar containing:
+  leaf-defaults-20210301.118/
+  leaf-defaults-20210301.118/leaf-defaults-pkg.el
+  leaf-defaults-20210301.118/leaf-defaults-recipe.el
+  leaf-defaults-20210301.118/leaf-defaults.el
+Built leaf-defaults in 4.476s, finished at 2023-06-02T22:13:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 478 Jun  2 22:13 packages/leaf-defaults-20210301.118.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:13 packages/leaf-defaults-20210301.118.tar

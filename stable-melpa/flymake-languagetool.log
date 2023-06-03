@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: flymake-languagetool
+Fetcher: github
+Source:  https://github.com/emacs-languagetool/flymake-languagetool.git
+
+Updating /mnt/store/melpa/working/flymake-languagetool/
+Checking out ad8c724147d5a3a9f6ee59e0c7581e68fba4a2f8
+Built flymake-languagetool in 5.359s, finished at 2023-06-02T21:53:21+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  2 21:53 packages/flymake-languagetool-20230122.1609.el
+4.0K -rw-r--r-- 1 root root 318 Jun  2 21:53 packages/flymake-languagetool-20230122.1609.entry

@@ -1,1 +1,26 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: borg
+Fetcher: github
+Source:  https://github.com/emacscollective/borg.git
+
+Updating /mnt/store/melpa/working/borg/
+Checking out 723ffe760d535618794d9e90ff17c18f66120131
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/borg/
+  to /tmp/borgTZ2heb/borg-20230319.1956
+    borg-elpa.el -> borg-elpa.el
+    borg.el -> borg.el
+  ! docs/borg.texi -> borg.texi
+    borg.mk -> borg.mk
+Generating /tmp/borgTZ2heb/borg-20230319.1956/borg.info
+Created borg-20230319.1956.tar containing:
+  borg-20230319.1956/
+  borg-20230319.1956/borg-elpa.el
+  borg-20230319.1956/borg-pkg.el
+  borg-20230319.1956/borg.el
+  borg-20230319.1956/borg.info
+  borg-20230319.1956/borg.mk
+  borg-20230319.1956/dir
+Built borg in 12.374s, finished at 2023-06-02T21:25:59+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  458 Jun  2 21:25 packages/borg-20230319.1956.entry
+132K -rw-r--r-- 1 root root 130K Jun  2 21:25 packages/borg-20230319.1956.tar

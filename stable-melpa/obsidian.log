@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: obsidian
+Fetcher: github
+Source:  https://github.com/licht1stein/obsidian.el.git
+
+Updating /mnt/store/melpa/working/obsidian/
+Checking out 1214758b99037884c4c062e6d298b417200444cd
+Built obsidian in 5.102s, finished at 2023-06-02T22:26:14+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Jun  2 22:26 packages/obsidian-20230420.1111.el
+4.0K -rw-r--r-- 1 root root 541 Jun  2 22:26 packages/obsidian-20230420.1111.entry

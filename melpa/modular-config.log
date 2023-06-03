@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: modular-config
+Fetcher: github
+Source:  https://github.com/SidharthArya/modular-config.el.git
+
+Updating /mnt/store/melpa/working/modular-config/
+Checking out 043907d96efff70dfaea1e721de90bd35970e8bd
+Built modular-config in 4.116s, finished at 2023-06-02T22:20:32+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jun  2 22:20 packages/modular-config-20210726.1614.el
+4.0K -rw-r--r-- 1 root root  496 Jun  2 22:20 packages/modular-config-20210726.1614.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-julia-vterm
+Fetcher: github
+Source:  https://github.com/shg/ob-julia-vterm.el.git
+
+Updating /mnt/store/melpa/working/ob-julia-vterm/
+Checking out e0069ff1d8ebf0be13cc24b980579577b5e343d8
+Built ob-julia-vterm in 5.175s, finished at 2023-06-02T22:25:38+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  2 22:25 packages/ob-julia-vterm-20221102.756.el
+4.0K -rw-r--r-- 1 root root 508 Jun  2 22:25 packages/ob-julia-vterm-20221102.756.entry

@@ -1,1 +1,24 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: embark
+Fetcher: github
+Source:  https://github.com/oantolin/embark.git
+
+Updating /mnt/store/melpa/working/embark/
+Checking out 76f199644ae57960f2419c27a7e11ccd79706a03
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/embark/
+  to /tmp/embarkQz85we/embark-20230528.1725
+    embark.el -> embark.el
+    embark-org.el -> embark-org.el
+    embark.texi -> embark.texi
+Generating /tmp/embarkQz85we/embark-20230528.1725/embark.info
+Created embark-20230528.1725.tar containing:
+  embark-20230528.1725/
+  embark-20230528.1725/dir
+  embark-20230528.1725/embark-org.el
+  embark-20230528.1725/embark-pkg.el
+  embark-20230528.1725/embark.el
+  embark-20230528.1725/embark.info
+Built embark in 14.242s, finished at 2023-06-02T21:44:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  473 Jun  2 21:44 packages/embark-20230528.1725.entry
+280K -rw-r--r-- 1 root root 280K Jun  2 21:44 packages/embark-20230528.1725.tar

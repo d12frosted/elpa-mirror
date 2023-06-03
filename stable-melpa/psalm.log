@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: psalm
+Fetcher: github
+Source:  https://github.com/emacs-php/psalm.el.git
+
+Updating /mnt/store/melpa/working/psalm/
+Checking out 06434b938485e2540fc97ce6cb017a8a001c1f13
+Built psalm in 5.664s, finished at 2023-06-02T22:38:08+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.0K Jun  2 22:38 packages/psalm-20211002.1552.el
+4.0K -rw-r--r-- 1 root root  402 Jun  2 22:38 packages/psalm-20211002.1552.entry

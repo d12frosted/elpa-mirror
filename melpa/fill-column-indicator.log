@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fill-column-indicator
+Fetcher: github
+Source:  https://github.com/alpaker/fill-column-indicator.git
+
+Updating /mnt/store/melpa/working/fill-column-indicator/
+Checking out c35f9de072c241699b57bcb46da84bed5af29cfe
+Built fill-column-indicator in 5.927s, finished at 2023-06-02T21:50:06+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 37K Jun  2 21:50 packages/fill-column-indicator-20200806.2239.el
+4.0K -rw-r--r-- 1 root root 382 Jun  2 21:50 packages/fill-column-indicator-20200806.2239.entry

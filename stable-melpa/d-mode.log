@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: d-mode
+Fetcher: github
+Source:  https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode.git
+
+Updating /mnt/store/melpa/working/d-mode/
+Checking out 024aca97d07e72bf3500fb6bf0cdf50c4992a741
+Built d-mode in 4.997s, finished at 2023-06-02T21:35:38+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root 63K Jun  2 21:35 packages/d-mode-20220602.649.el
+4.0K -rw-r--r-- 1 root root 391 Jun  2 21:35 packages/d-mode-20220602.649.entry

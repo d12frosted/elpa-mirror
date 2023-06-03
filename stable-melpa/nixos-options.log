@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: nixos-options
+Fetcher: github
+Source:  https://github.com/travisbhartwell/nix-emacs.git
+
+Updating /mnt/store/melpa/working/nixos-options/
+Checking out 045825c2e1cf0a4fb0a472e72c1dae8f55202cef
+Built nixos-options in 8.600s, finished at 2023-06-02T22:23:47+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  2 22:23 packages/nixos-options-20160209.1841.el
+4.0K -rw-r--r-- 1 root root  513 Jun  2 22:23 packages/nixos-options-20160209.1841.entry

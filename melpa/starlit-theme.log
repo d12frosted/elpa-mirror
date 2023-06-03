@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: starlit-theme
+Fetcher: github
+Source:  https://github.com/SFTtech/starlit-emacs.git
+
+Updating /mnt/store/melpa/working/starlit-theme/
+Checking out d6f327fb09497be7bee64d5d204d27f655cc5b04
+Built starlit-theme in 4.269s, finished at 2023-06-02T22:49:19+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K Jun  2 22:49 packages/starlit-theme-20230324.1636.el
+4.0K -rw-r--r-- 1 root root 427 Jun  2 22:49 packages/starlit-theme-20230324.1636.entry

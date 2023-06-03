@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dracula-theme
+Fetcher: github
+Source:  https://github.com/dracula/emacs.git
+
+Updating /mnt/store/melpa/working/dracula-theme/
+Checking out 54c26402555ab5b8b7cfd8ee2488c57b2fa5d32a
+Built dracula-theme in 5.552s, finished at 2023-06-02T21:39:23+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 57K Jun  2 21:39 packages/dracula-theme-20230405.1844.el
+4.0K -rw-r--r-- 1 root root 348 Jun  2 21:39 packages/dracula-theme-20230405.1844.entry

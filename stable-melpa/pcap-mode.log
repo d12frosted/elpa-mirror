@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pcap-mode
+Fetcher: github
+Source:  https://github.com/orgcandman/pcap-mode.git
+
+Updating /mnt/store/melpa/working/pcap-mode/
+Checking out 52780669af0ade136f84d73f21b4dbb7ab655416
+Built pcap-mode in 4.958s, finished at 2023-06-02T22:33:33+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  2 22:33 packages/pcap-mode-20161025.1448.el
+4.0K -rw-r--r-- 1 root root 436 Jun  2 22:33 packages/pcap-mode-20161025.1448.entry

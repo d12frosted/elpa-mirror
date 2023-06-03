@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: orgtbl-aggregate
+Fetcher: github
+Source:  https://github.com/tbanel/orgaggregate.git
+
+Updating /mnt/store/melpa/working/orgtbl-aggregate/
+Checking out 4f9fcb4f7380b247d628b899135df23c8fc8b6f1
+Built orgtbl-aggregate in 7.049s, finished at 2023-06-02T22:30:36+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root 64K Jun  2 22:30 packages/orgtbl-aggregate-20230205.836.el
+4.0K -rw-r--r-- 1 root root 312 Jun  2 22:30 packages/orgtbl-aggregate-20230205.836.entry

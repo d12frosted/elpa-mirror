@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dilbert
+Fetcher: github
+Source:  https://github.com/DaniruKun/dilbert-el.git
+
+Updating /mnt/store/melpa/working/dilbert/
+Checking out d8c586f1bac58c334822b64bce671dde5e25a27f
+Built dilbert in 4.408s, finished at 2023-06-02T21:37:21+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun  2 21:37 packages/dilbert-20211118.1512.el
+4.0K -rw-r--r-- 1 root root  492 Jun  2 21:37 packages/dilbert-20211118.1512.entry

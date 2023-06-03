@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: nodejs-repl
+Fetcher: github
+Source:  https://github.com/abicky/nodejs-repl.el.git
+
+Updating /mnt/store/melpa/working/nodejs-repl/
+Checking out 3b841055cad00f442e4a9159b1056f59411b6646
+Built nodejs-repl in 7.099s, finished at 2023-06-02T22:24:11+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  2 22:24 packages/nodejs-repl-20200802.1310.el
+4.0K -rw-r--r-- 1 root root 267 Jun  2 22:24 packages/nodejs-repl-20200802.1310.entry

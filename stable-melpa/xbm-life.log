@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: xbm-life
+Fetcher: git
+Source:  https://depp.brause.cc/xbm-life.git
+
+Updating /mnt/store/melpa/working/xbm-life/
+Checking out ec6abb0182068294a379cb49ad5346b1d757457d
+Built xbm-life in 6.157s, finished at 2023-06-02T23:00:30+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Jun  2 23:00 packages/xbm-life-20210508.1640.el
+4.0K -rw-r--r-- 1 root root 450 Jun  2 23:00 packages/xbm-life-20210508.1640.entry

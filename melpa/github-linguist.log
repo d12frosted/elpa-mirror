@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: github-linguist
+Fetcher: github
+Source:  https://github.com/akirak/github-linguist.el.git
+
+Updating /mnt/store/melpa/working/github-linguist/
+Checking out 73f9f52e1f626e866d8becc7a3671630449764c2
+Built github-linguist in 4.524s, finished at 2023-06-02T21:57:32+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 21:57 packages/github-linguist-20220928.2013.el
+4.0K -rw-r--r-- 1 root root 569 Jun  2 21:57 packages/github-linguist-20220928.2013.entry

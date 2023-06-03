@@ -1,1 +1,24 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: nofrils-acme-theme
+Fetcher: gitlab
+Source:  https://gitlab.com/esessoms/nofrils-theme.git
+
+Updating /mnt/store/melpa/working/nofrils-acme-theme/
+Checking out 98ad7bfaff1d85b33dc162645670285b067c6f92
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nofrils-acme-theme/
+  to /tmp/nofrils-acme-themenUkkVr/nofrils-acme-theme-20180620.1248
+    nofrils-acme-theme.el -> nofrils-acme-theme.el
+    nofrils-dark-theme.el -> nofrils-dark-theme.el
+    nofrils-light-theme.el -> nofrils-light-theme.el
+    nofrils-sepia-theme.el -> nofrils-sepia-theme.el
+Created nofrils-acme-theme-20180620.1248.tar containing:
+  nofrils-acme-theme-20180620.1248/
+  nofrils-acme-theme-20180620.1248/nofrils-acme-theme-pkg.el
+  nofrils-acme-theme-20180620.1248/nofrils-acme-theme.el
+  nofrils-acme-theme-20180620.1248/nofrils-dark-theme.el
+  nofrils-acme-theme-20180620.1248/nofrils-light-theme.el
+  nofrils-acme-theme-20180620.1248/nofrils-sepia-theme.el
+Built nofrils-acme-theme in 7.089s, finished at 2023-06-02T22:24:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 468 Jun  2 22:24 packages/nofrils-acme-theme-20180620.1248.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:24 packages/nofrils-acme-theme-20180620.1248.tar

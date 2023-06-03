@@ -1,1 +1,28 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: status
+Fetcher: github
+Source:  https://github.com/tromey/emacs-status.git
+
+Updating /mnt/store/melpa/working/status/
+Checking out b62c74bf272566f82a68622f29fb9edafea0f241
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/status/
+  to /tmp/statusoORSeI/status-20151230.1408
+    emms-status.el -> emms-status.el
+    erc-status.el -> erc-status.el
+    status.el -> status.el
+    status.py -> status.py
+    player_pause.png -> player_pause.png
+    player_play.png -> player_play.png
+Created status-20151230.1408.tar containing:
+  status-20151230.1408/
+  status-20151230.1408/emms-status.el
+  status-20151230.1408/erc-status.el
+  status-20151230.1408/player_pause.png
+  status-20151230.1408/player_play.png
+  status-20151230.1408/status-pkg.el
+  status-20151230.1408/status.el
+  status-20151230.1408/status.py
+Built status in 4.510s, finished at 2023-06-02T22:49:23+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 292 Jun  2 22:49 packages/status-20151230.1408.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:49 packages/status-20151230.1408.tar

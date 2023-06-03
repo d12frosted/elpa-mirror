@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sotclojure
+Fetcher: github
+Source:  https://github.com/Malabarba/speed-of-thought-clojure.git
+
+Updating /mnt/store/melpa/working/sotclojure/
+Checking out ceac82aa691e8d98946471be6aaff9c9a4603c32
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sotclojure/
+  to /tmp/sotclojurec9C9nu/sotclojure-20170922.8
+    sotclojure-on.el -> sotclojure-on.el
+    sotclojure.el -> sotclojure.el
+Created sotclojure-20170922.8.tar containing:
+  sotclojure-20170922.8/
+  sotclojure-20170922.8/sotclojure-on.el
+  sotclojure-20170922.8/sotclojure-pkg.el
+  sotclojure-20170922.8/sotclojure.el
+Built sotclojure in 4.526s, finished at 2023-06-02T22:48:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 627 Jun  2 22:48 packages/sotclojure-20170922.8.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:48 packages/sotclojure-20170922.8.tar

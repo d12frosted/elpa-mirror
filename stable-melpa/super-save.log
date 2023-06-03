@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: super-save
+Fetcher: github
+Source:  https://github.com/bbatsov/super-save.git
+
+Updating /mnt/store/melpa/working/super-save/
+Checking out 6f6512bc44b09f7187e58772892fa330f4518c12
+Built super-save in 5.419s, finished at 2023-06-02T22:50:06+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.8K Jun  2 22:50 packages/super-save-20220531.1745.el
+4.0K -rw-r--r-- 1 root root  486 Jun  2 22:50 packages/super-save-20220531.1745.entry

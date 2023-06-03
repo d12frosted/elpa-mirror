@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: racer
+Fetcher: github
+Source:  https://github.com/racer-rust/emacs-racer.git
+
+Updating /mnt/store/melpa/working/racer/
+Checking out 1e63e98626737ea9b662d4a9b1ffd6842b1c648c
+Built racer in 4.688s, finished at 2023-06-02T22:39:56+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 35K Jun  2 22:39 packages/racer-20210307.243.el
+4.0K -rw-r--r-- 1 root root 511 Jun  2 22:39 packages/racer-20210307.243.entry

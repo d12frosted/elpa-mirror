@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-rubygems-local
+Fetcher: github
+Source:  https://github.com/hadashiA/helm-rubygems-local.git
+
+Updating /mnt/store/melpa/working/helm-rubygems-local/
+Checking out 289cb33d41c703af9791d6da46b55f070013c2e3
+Built helm-rubygems-local in 6.250s, finished at 2023-06-02T22:03:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.6K Jun  2 22:03 packages/helm-rubygems-local-20130712.111.el
+4.0K -rw-r--r-- 1 root root  450 Jun  2 22:03 packages/helm-rubygems-local-20130712.111.entry

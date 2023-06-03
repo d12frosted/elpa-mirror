@@ -1,1 +1,26 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: wsd-mode
+Fetcher: github
+Source:  https://github.com/josteink/wsd-mode.git
+
+Updating /mnt/store/melpa/working/wsd-mode/
+Checking out 44aac55afb57cb540559aa1015f9ad2d770dd5c8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/wsd-mode/
+  to /tmp/wsd-modeGpKlo7/wsd-mode-20191031.1211
+    company-wsdmode.el -> company-wsdmode.el
+    ob-wsdmode.el -> ob-wsdmode.el
+    wsd-core.el -> wsd-core.el
+    wsd-flycheck.el -> wsd-flycheck.el
+    wsd-mode.el -> wsd-mode.el
+Created wsd-mode-20191031.1211.tar containing:
+  wsd-mode-20191031.1211/
+  wsd-mode-20191031.1211/company-wsdmode.el
+  wsd-mode-20191031.1211/ob-wsdmode.el
+  wsd-mode-20191031.1211/wsd-core.el
+  wsd-mode-20191031.1211/wsd-flycheck.el
+  wsd-mode-20191031.1211/wsd-mode-pkg.el
+  wsd-mode-20191031.1211/wsd-mode.el
+Built wsd-mode in 5.411s, finished at 2023-06-02T23:00:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 482 Jun  2 23:00 packages/wsd-mode-20191031.1211.entry
+ 40K -rw-r--r-- 1 root root 40K Jun  2 23:00 packages/wsd-mode-20191031.1211.tar

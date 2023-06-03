@@ -1,1 +1,29 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dklrt
+Fetcher: github
+Source:  https://github.com/davidkeegan/dklrt.git
+
+Updating /mnt/store/melpa/working/dklrt/
+Checking out 4eceed270015b41d24a62a8b71bd239224a63063
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dklrt/
+  to /tmp/dklrtQhbrrh/dklrt-20131110.1341
+    dklrt-pkg.el -> dklrt-pkg.el
+    dklrt.el -> dklrt.el
+    dklrt.texi -> dklrt.texi
+    Misc.py -> Misc.py
+    Recurring.py -> Recurring.py
+    Time.py -> Time.py
+Generating /tmp/dklrtQhbrrh/dklrt-20131110.1341/dklrt.info
+Created dklrt-20131110.1341.tar containing:
+  dklrt-20131110.1341/
+  dklrt-20131110.1341/Misc.py
+  dklrt-20131110.1341/Recurring.py
+  dklrt-20131110.1341/Time.py
+  dklrt-20131110.1341/dir
+  dklrt-20131110.1341/dklrt-pkg.el
+  dklrt-20131110.1341/dklrt.el
+  dklrt-20131110.1341/dklrt.info
+Built dklrt in 8.577s, finished at 2023-06-02T21:38:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 433 Jun  2 21:38 packages/dklrt-20131110.1341.entry
+ 40K -rw-r--r-- 1 root root 40K Jun  2 21:38 packages/dklrt-20131110.1341.tar

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-posframe
+Fetcher: github
+Source:  https://github.com/tumashu/helm-posframe.git
+
+Updating /mnt/store/melpa/working/helm-posframe/
+Checking out 87461b52b6f3f378c63642a33f584d4a4ba28351
+Built helm-posframe in 6.568s, finished at 2023-06-02T22:03:15+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Jun  2 22:03 packages/helm-posframe-20211103.236.el
+4.0K -rw-r--r-- 1 root root  462 Jun  2 22:03 packages/helm-posframe-20211103.236.entry

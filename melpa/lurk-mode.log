@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: lurk-mode
+Fetcher: github
+Source:  https://github.com/lurk-lab/lurk-emacs.git
+
+Updating /mnt/store/melpa/working/lurk-mode/
+Checking out 59a3f956944a5ddd43cfd57deeff6b647fc46554
+Built lurk-mode in 9.787s, finished at 2023-06-02T22:16:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.6K Jun  2 22:16 packages/lurk-mode-20230120.2226.el
+4.0K -rw-r--r-- 1 root root  399 Jun  2 22:16 packages/lurk-mode-20230120.2226.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sq
+Fetcher: gitlab
+Source:  https://gitlab.com/sequoia-pgp/sqel.git
+
+Updating /mnt/store/melpa/working/sq/
+Checking out bb0d1756bb9c62bb999fa21e15949e28650c663e
+Built sq in 4.996s, finished at 2023-06-02T22:48:54+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jun  2 22:48 packages/sq-20220717.2039.el
+4.0K -rw-r--r-- 1 root root  463 Jun  2 22:48 packages/sq-20220717.2039.entry

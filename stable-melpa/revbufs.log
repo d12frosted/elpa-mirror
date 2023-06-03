@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: revbufs
+Fetcher: github
+Source:  https://github.com/tychoish/revbufs.git
+
+Updating /mnt/store/melpa/working/revbufs/
+Checking out df3c02d3063951582c693ae12547993cec8256e2
+Built revbufs in 4.727s, finished at 2023-06-02T22:41:51+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun  2 22:41 packages/revbufs-20200907.2223.el
+4.0K -rw-r--r-- 1 root root  417 Jun  2 22:41 packages/revbufs-20200907.2223.entry

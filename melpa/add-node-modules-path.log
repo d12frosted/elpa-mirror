@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: add-node-modules-path
+Fetcher: github
+Source:  https://github.com/codesuki/add-node-modules-path.git
+
+Updating /mnt/store/melpa/working/add-node-modules-path/
+Checking out 841e93dfed50448da66c89a977c9182bb18796a1
+Built add-node-modules-path in 10.203s, finished at 2023-06-02T21:20:10+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jun  2 21:20 packages/add-node-modules-path-20230307.655.el
+4.0K -rw-r--r-- 1 root root  526 Jun  2 21:20 packages/add-node-modules-path-20230307.655.entry

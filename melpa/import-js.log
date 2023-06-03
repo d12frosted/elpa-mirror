@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: import-js
+Fetcher: github
+Source:  https://github.com/Galooshi/emacs-import-js.git
+
+Updating /mnt/store/melpa/working/import-js/
+Checking out d2bbb53f96395415f9f01de4fa88d82c1f59ba63
+Built import-js in 4.648s, finished at 2023-06-02T22:07:09+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jun  2 22:07 packages/import-js-20220215.1948.el
+4.0K -rw-r--r-- 1 root root  482 Jun  2 22:07 packages/import-js-20220215.1948.entry

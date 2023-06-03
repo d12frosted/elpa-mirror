@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ctune
+Fetcher: github
+Source:  https://github.com/maurooaranda/ctune.git
+
+Updating /mnt/store/melpa/working/ctune/
+Checking out 3f7abc6e74d4e5954b476ba9a1dc652f96b10c05
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ctune/
+  to /tmp/ctuneJrb3uU/ctune-20210205.1428
+    ctune.el -> ctune.el
+    ctune.texi -> ctune.texi
+Generating /tmp/ctuneJrb3uU/ctune-20210205.1428/ctune.info
+Created ctune-20210205.1428.tar containing:
+  ctune-20210205.1428/
+  ctune-20210205.1428/ctune-pkg.el
+  ctune-20210205.1428/ctune.el
+  ctune-20210205.1428/ctune.info
+  ctune-20210205.1428/dir
+Built ctune in 16.985s, finished at 2023-06-02T21:35:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 416 Jun  2 21:35 packages/ctune-20210205.1428.entry
+ 60K -rw-r--r-- 1 root root 60K Jun  2 21:35 packages/ctune-20210205.1428.tar

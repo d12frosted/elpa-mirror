@@ -1,1 +1,12 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: addressbook-bookmark
+Fetcher: github
+Source:  https://github.com/thierryvolpiatto/addressbook-bookmark.git
+
+Updating /mnt/store/melpa/working/addressbook-bookmark/
+Checking out f4b839b20c16c53e609705506cad1ef68bff4378
+Built addressbook-bookmark in 10.144s, finished at 2023-06-02T21:20:10+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  1 17:44 packages/addressbook-bookmark-20190612.1638.el
+4.0K -rw-r--r-- 1 root root 502 Jun  1 17:44 packages/addressbook-bookmark-20190612.1638.entry
+ 24K -rw-r--r-- 1 root root 23K Jun  2 21:20 packages/addressbook-bookmark-20230602.1034.el
+4.0K -rw-r--r-- 1 root root 502 Jun  2 21:20 packages/addressbook-bookmark-20230602.1034.entry

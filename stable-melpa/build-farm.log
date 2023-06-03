@@ -1,1 +1,32 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: build-farm
+Fetcher: github
+Source:  https://github.com/alezost/build-farm.el.git
+
+Updating /mnt/store/melpa/working/build-farm/
+Checking out 5c268a3c235ace0d79ef1ec82c440120317e06f5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/build-farm/
+  to /tmp/build-farmovv5pl/build-farm-20181218.2002
+    build-farm-build.el -> build-farm-build.el
+    build-farm-evaluation.el -> build-farm-evaluation.el
+    build-farm-jobset.el -> build-farm-jobset.el
+    build-farm-popup.el -> build-farm-popup.el
+    build-farm-project.el -> build-farm-project.el
+    build-farm-url.el -> build-farm-url.el
+    build-farm-utils.el -> build-farm-utils.el
+    build-farm.el -> build-farm.el
+Created build-farm-20181218.2002.tar containing:
+  build-farm-20181218.2002/
+  build-farm-20181218.2002/build-farm-build.el
+  build-farm-20181218.2002/build-farm-evaluation.el
+  build-farm-20181218.2002/build-farm-jobset.el
+  build-farm-20181218.2002/build-farm-pkg.el
+  build-farm-20181218.2002/build-farm-popup.el
+  build-farm-20181218.2002/build-farm-project.el
+  build-farm-20181218.2002/build-farm-url.el
+  build-farm-20181218.2002/build-farm-utils.el
+  build-farm-20181218.2002/build-farm.el
+Built build-farm in 6.266s, finished at 2023-06-02T21:26:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  541 Jun  2 21:26 packages/build-farm-20181218.2002.entry
+100K -rw-r--r-- 1 root root 100K Jun  2 21:26 packages/build-farm-20181218.2002.tar

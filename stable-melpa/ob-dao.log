@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-dao
+Fetcher: github
+Source:  https://github.com/xuchunyang/ob-dao.git
+
+Updating /mnt/store/melpa/working/ob-dao/
+Checking out 8c62bd800b1f572860e30be4b72c71fa415a2e31
+Built ob-dao in 4.828s, finished at 2023-06-02T22:25:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.0K Jun  2 22:25 packages/ob-dao-20170816.1558.el
+4.0K -rw-r--r-- 1 root root  451 Jun  2 22:25 packages/ob-dao-20170816.1558.entry

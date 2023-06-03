@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: private-diary
+Fetcher: github
+Source:  https://github.com/cacology/private-diary.git
+
+Updating /mnt/store/melpa/working/private-diary/
+Checking out 5b1aeb22f22447fd35e1c107b6db44a7b27b8a42
+Built private-diary in 8.254s, finished at 2023-06-02T22:36:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Jun  2 22:36 packages/private-diary-20151216.1657.el
+4.0K -rw-r--r-- 1 root root  447 Jun  2 22:36 packages/private-diary-20151216.1657.entry

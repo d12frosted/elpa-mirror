@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: flame
+Fetcher: github
+Source:  https://github.com/mschuldt/flame.git
+
+Updating /mnt/store/melpa/working/flame/
+Checking out 2cfb860a483197e92a4c20d7b9b055d586e76fe0
+Built flame in 4.740s, finished at 2023-06-02T21:50:38+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  2 21:50 packages/flame-20180303.2016.el
+4.0K -rw-r--r-- 1 root root 473 Jun  2 21:50 packages/flame-20180303.2016.entry

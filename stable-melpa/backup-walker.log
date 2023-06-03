@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: backup-walker
+Fetcher: github
+Source:  https://github.com/lewang/backup-walker.git
+
+Updating /mnt/store/melpa/working/backup-walker/
+Checking out 934a4128c122972ac32bb9952addf279a60a94da
+Built backup-walker in 4.052s, finished at 2023-06-02T21:24:04+0000
+ ✓ Success:
+ 24K -rwxr-xr-x 1 root root 22K Jun  2 21:24 packages/backup-walker-20130720.1516.el
+4.0K -rw-r--r-- 1 root root 326 Jun  2 21:24 packages/backup-walker-20130720.1516.entry

@@ -1,1 +1,28 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dashboard
+Fetcher: github
+Source:  https://github.com/emacs-dashboard/emacs-dashboard.git
+
+Updating /mnt/store/melpa/working/dashboard/
+Checking out 34a0076f01a729b4aae16947fa0d0e130cafedfd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dashboard/
+  to /tmp/dashboardbaxjHj/dashboard-20230512.1839
+    dashboard-widgets.el -> dashboard-widgets.el
+    dashboard.el -> dashboard.el
+    banners => banners
+Created dashboard-20230512.1839.tar containing:
+  dashboard-20230512.1839/
+  dashboard-20230512.1839/banners/
+  dashboard-20230512.1839/banners/1.txt
+  dashboard-20230512.1839/banners/2.txt
+  dashboard-20230512.1839/banners/3.txt
+  dashboard-20230512.1839/banners/4.txt
+  dashboard-20230512.1839/banners/emacs.png
+  dashboard-20230512.1839/banners/logo.png
+  dashboard-20230512.1839/dashboard-pkg.el
+  dashboard-20230512.1839/dashboard-widgets.el
+  dashboard-20230512.1839/dashboard.el
+Built dashboard in 6.100s, finished at 2023-06-02T21:36:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  526 Jun  2 21:36 packages/dashboard-20230512.1839.entry
+172K -rw-r--r-- 1 root root 170K Jun  2 21:36 packages/dashboard-20230512.1839.tar

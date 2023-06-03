@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: tox
+Fetcher: github
+Source:  https://github.com/chmouel/tox.el.git
+
+Updating /mnt/store/melpa/working/tox/
+Checking out 7655eb254038d5e34433e8a9d66b3ffc9c72e40c
+Built tox in 4.560s, finished at 2023-06-02T22:53:46+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Jun  2 22:53 packages/tox-20170404.1059.el
+4.0K -rw-r--r-- 1 root root  453 Jun  2 22:53 packages/tox-20170404.1059.entry

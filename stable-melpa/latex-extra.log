@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: latex-extra
+Fetcher: github
+Source:  https://github.com/Malabarba/latex-extra.git
+
+Updating /mnt/store/melpa/working/latex-extra/
+Checking out a81e7588448f85c5fcc3f3fc71cf957d0928a656
+Built latex-extra in 4.787s, finished at 2023-06-02T22:13:29+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Jun  2 22:13 packages/latex-extra-20220817.5.el
+4.0K -rw-r--r-- 1 root root 533 Jun  2 22:13 packages/latex-extra-20220817.5.entry

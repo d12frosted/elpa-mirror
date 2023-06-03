@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: jade-mode
+Fetcher: github
+Source:  https://github.com/brianc/jade-mode.git
+
+Updating /mnt/store/melpa/working/jade-mode/
+Checking out 111460b056838854e470a6383041a99f843b93ee
+Built jade-mode in 7.467s, finished at 2023-06-02T22:09:36+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:09 packages/jade-mode-20210908.2121.el
+4.0K -rw-r--r-- 1 root root 436 Jun  2 22:09 packages/jade-mode-20210908.2121.entry

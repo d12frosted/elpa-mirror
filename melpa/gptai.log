@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: gptai
+Fetcher: github
+Source:  https://github.com/antonhibl/gptai.git
+
+Updating /mnt/store/melpa/working/gptai/
+Checking out e7b8b91b425986868e8bc0edcac384ba47d4d4b7
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gptai/
+  to /tmp/gptainMwNyn/gptai-20230530.1853
+    gptai-turbo.el -> gptai-turbo.el
+    gptai.el -> gptai.el
+Created gptai-20230530.1853.tar containing:
+  gptai-20230530.1853/
+  gptai-20230530.1853/gptai-pkg.el
+  gptai-20230530.1853/gptai-turbo.el
+  gptai-20230530.1853/gptai.el
+Built gptai in 4.792s, finished at 2023-06-02T21:59:12+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 407 Jun  2 21:59 packages/gptai-20230530.1853.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 21:59 packages/gptai-20230530.1853.tar

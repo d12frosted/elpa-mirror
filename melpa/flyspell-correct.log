@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: flyspell-correct
+Fetcher: github
+Source:  https://github.com/d12frosted/flyspell-correct.git
+
+Updating /mnt/store/melpa/working/flyspell-correct/
+Checking out 7d7b6b01188bd28e20a13736ac9f36c3367bd16e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flyspell-correct/
+  to /tmp/flyspell-correctXYivLa/flyspell-correct-20220520.630
+    flyspell-correct.el -> flyspell-correct.el
+    flyspell-correct-ido.el -> flyspell-correct-ido.el
+Created flyspell-correct-20220520.630.tar containing:
+  flyspell-correct-20220520.630/
+  flyspell-correct-20220520.630/flyspell-correct-ido.el
+  flyspell-correct-20220520.630/flyspell-correct-pkg.el
+  flyspell-correct-20220520.630/flyspell-correct.el
+Built flyspell-correct in 4.959s, finished at 2023-06-02T21:53:47+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 451 Jun  2 21:53 packages/flyspell-correct-20220520.630.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 21:53 packages/flyspell-correct-20220520.630.tar

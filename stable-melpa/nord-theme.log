@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: nord-theme
+Fetcher: github
+Source:  https://github.com/nordtheme/emacs.git
+
+Updating /mnt/store/melpa/working/nord-theme/
+Checking out 5335a7e782fd4ea5b33cd630feae37d902709024
+Built nord-theme in 7.895s, finished at 2023-06-02T22:24:19+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 41K Jun  2 22:24 packages/nord-theme-20230311.1131.el
+4.0K -rw-r--r-- 1 root root 447 Jun  2 22:24 packages/nord-theme-20230311.1131.entry

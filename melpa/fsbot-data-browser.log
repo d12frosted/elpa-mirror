@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fsbot-data-browser
+Fetcher: github
+Source:  https://github.com/Benaiah/fsbot-data-browser.git
+
+Updating /mnt/store/melpa/working/fsbot-data-browser/
+Checking out 27455860fec01ca47bf98b85f093cc24b9852bef
+Built fsbot-data-browser in 6.810s, finished at 2023-06-02T21:55:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Jun  2 21:54 packages/fsbot-data-browser-20220830.230.el
+4.0K -rw-r--r-- 1 root root  448 Jun  2 21:54 packages/fsbot-data-browser-20220830.230.entry

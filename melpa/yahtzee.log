@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: yahtzee
+Fetcher: github
+Source:  https://github.com/drdv/yahtzee.git
+
+Updating /mnt/store/melpa/working/yahtzee/
+Checking out 9b42ba4612d3043464414c08a3d60f6ad594566c
+Built yahtzee in 5.547s, finished at 2023-06-02T23:01:03+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  2 23:01 packages/yahtzee-20220221.803.el
+4.0K -rw-r--r-- 1 root root 414 Jun  2 23:01 packages/yahtzee-20220221.803.entry

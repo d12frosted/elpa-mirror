@@ -1,1 +1,26 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-cider
+Fetcher: github
+Source:  https://github.com/clojure-emacs/helm-cider.git
+
+Updating /mnt/store/melpa/working/helm-cider/
+Checking out fe7e48befdb0b20ea1b0fb3626a8a725e54ae626
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-cider/
+  to /tmp/helm-ciderdcWAY8/helm-cider-20220706.944
+    helm-cider-cheatsheet.el -> helm-cider-cheatsheet.el
+    helm-cider-repl.el -> helm-cider-repl.el
+    helm-cider-spec.el -> helm-cider-spec.el
+    helm-cider-util.el -> helm-cider-util.el
+    helm-cider.el -> helm-cider.el
+Created helm-cider-20220706.944.tar containing:
+  helm-cider-20220706.944/
+  helm-cider-20220706.944/helm-cider-cheatsheet.el
+  helm-cider-20220706.944/helm-cider-pkg.el
+  helm-cider-20220706.944/helm-cider-repl.el
+  helm-cider-20220706.944/helm-cider-spec.el
+  helm-cider-20220706.944/helm-cider-util.el
+  helm-cider-20220706.944/helm-cider.el
+Built helm-cider in 5.281s, finished at 2023-06-02T22:01:12+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 572 Jun  2 22:01 packages/helm-cider-20220706.944.entry
+ 60K -rw-r--r-- 1 root root 60K Jun  2 22:01 packages/helm-cider-20220706.944.tar

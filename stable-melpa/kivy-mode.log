@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: kivy-mode
+Fetcher: github
+Source:  https://github.com/kivy/kivy.git
+
+Updating /mnt/store/melpa/working/kivy-mode/
+Checking out bd041aea52d96161fb610a5f1485a7375a0531e1
+Built kivy-mode in 7.279s, finished at 2023-06-02T22:12:40+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Jun  2 22:12 packages/kivy-mode-20230520.746.el
+4.0K -rw-r--r-- 1 root root  345 Jun  2 22:12 packages/kivy-mode-20230520.746.entry

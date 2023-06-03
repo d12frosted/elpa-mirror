@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-index
+Fetcher: github
+Source:  https://github.com/marcIhm/org-index.git
+
+Updating /mnt/store/melpa/working/org-index/
+Checking out d919b9e2ef8c0f814455b82ffea080e872b89c72
+Built org-index in 5.471s, finished at 2023-06-02T22:28:07+0000
+ ✓ Success:
+128K -rw-r--r-- 1 root root 126K Jun  2 22:28 packages/org-index-20230103.1720.el
+4.0K -rw-r--r-- 1 root root  448 Jun  2 22:28 packages/org-index-20230103.1720.entry

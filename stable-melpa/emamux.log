@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: emamux
+Fetcher: github
+Source:  https://github.com/emacsorphanage/emamux.git
+
+Updating /mnt/store/melpa/working/emamux/
+Checking out 6172131d78038f0b1490e24bac60534bf4ad3b30
+Built emamux in 5.044s, finished at 2023-06-02T21:44:00+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  2 21:43 packages/emamux-20200315.1220.el
+4.0K -rw-r--r-- 1 root root 370 Jun  2 21:43 packages/emamux-20200315.1220.entry

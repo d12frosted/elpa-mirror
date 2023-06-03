@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ocp-indent
+Fetcher: github
+Source:  https://github.com/OCamlPro/ocp-indent.git
+
+Updating /mnt/store/melpa/working/ocp-indent/
+Checking out 7c4d434132cebc15a8213c8be9e7323692eb0a2b
+Built ocp-indent in 4.886s, finished at 2023-06-02T22:26:21+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Jun  2 22:26 packages/ocp-indent-20211019.907.el
+4.0K -rw-r--r-- 1 root root  253 Jun  2 22:26 packages/ocp-indent-20211019.907.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: async-backup
+Fetcher: codeberg
+Source:  https://codeberg.org/contrapunctus/async-backup.git
+
+Updating /mnt/store/melpa/working/async-backup/
+Checking out 6ddb39fe77d66cdef48b87cb0d0554ad7d132308
+Built async-backup in 5.302s, finished at 2023-06-02T21:22:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.3K Jun  2 21:22 packages/async-backup-20220131.1438.el
+4.0K -rw-r--r-- 1 root root  481 Jun  2 21:22 packages/async-backup-20220131.1438.entry

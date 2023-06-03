@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: calendar-norway
+Fetcher: github
+Source:  https://github.com/unhammer/calendar-norway.el.git
+
+Updating /mnt/store/melpa/working/calendar-norway/
+Checking out 0db0ea63365f4ff5f7d18fb8335fa88af194a2cc
+Built calendar-norway in 10.845s, finished at 2023-06-02T21:27:29+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.2K Jun  2 21:27 packages/calendar-norway-20220211.1129.el
+4.0K -rw-r--r-- 1 root root  405 Jun  2 21:27 packages/calendar-norway-20220211.1129.entry

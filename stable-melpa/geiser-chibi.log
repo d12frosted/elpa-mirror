@@ -1,1 +1,23 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: geiser-chibi
+Fetcher: gitlab
+Source:  https://gitlab.com/emacs-geiser/chibi.git
+
+Updating /mnt/store/melpa/working/geiser-chibi/
+Checking out 5a6a5a580ea45cd4974df21629a8d50cbe3d6e99
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-chibi/
+  to /tmp/geiser-chibimbWgyC/geiser-chibi-20211204.1938
+    geiser-chibi.el -> geiser-chibi.el
+    src/geiser => src/geiser
+Created geiser-chibi-20211204.1938.tar containing:
+  geiser-chibi-20211204.1938/
+  geiser-chibi-20211204.1938/geiser-chibi-pkg.el
+  geiser-chibi-20211204.1938/geiser-chibi.el
+  geiser-chibi-20211204.1938/src/
+  geiser-chibi-20211204.1938/src/geiser/
+  geiser-chibi-20211204.1938/src/geiser/geiser.scm
+  geiser-chibi-20211204.1938/src/geiser/geiser.sld
+Built geiser-chibi in 7.151s, finished at 2023-06-02T21:55:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 484 Jun  2 21:55 packages/geiser-chibi-20211204.1938.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 21:55 packages/geiser-chibi-20211204.1938.tar

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sudoku
+Fetcher: github
+Source:  https://github.com/zevlg/sudoku.el.git
+
+Updating /mnt/store/melpa/working/sudoku/
+Checking out b1924fd244a5fa284de9d67b66fbd69164b37318
+Built sudoku in 4.976s, finished at 2023-06-02T22:49:58+0000
+ ✓ Success:
+ 92K -rw-r--r-- 1 root root 91K Jun  2 22:49 packages/sudoku-20191015.1315.el
+4.0K -rw-r--r-- 1 root root 356 Jun  2 22:49 packages/sudoku-20191015.1315.entry

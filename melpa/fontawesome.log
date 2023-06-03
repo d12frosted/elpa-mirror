@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fontawesome
+Fetcher: github
+Source:  https://github.com/emacsorphanage/fontawesome.git
+
+Updating /mnt/store/melpa/working/fontawesome/
+Checking out a743f80bfd53767ca9ee32da34c5ca032172a480
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fontawesome/
+  to /tmp/fontawesomeGeB2Cz/fontawesome-20170305.1356
+    fontawesome-data.el -> fontawesome-data.el
+    fontawesome.el -> fontawesome.el
+Created fontawesome-20170305.1356.tar containing:
+  fontawesome-20170305.1356/
+  fontawesome-20170305.1356/fontawesome-data.el
+  fontawesome-20170305.1356/fontawesome-pkg.el
+  fontawesome-20170305.1356/fontawesome.el
+Built fontawesome in 4.962s, finished at 2023-06-02T21:54:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 412 Jun  2 21:54 packages/fontawesome-20170305.1356.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 21:54 packages/fontawesome-20170305.1356.tar

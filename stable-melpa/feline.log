@@ -1,1 +1,11 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: feline
+Fetcher: git
+Source:  https://opensource.chee.party/chee/feline-mode
+
+Updating /mnt/store/melpa/working/feline/
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://opensource.chee.party/chee/feline-mode/': Failed to connect to opensource.chee.party port 443: Connection refused
+
+Command exited with non-zero exit-code: 128

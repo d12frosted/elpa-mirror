@@ -1,1 +1,30 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: libbcel
+Fetcher: github
+Source:  https://github.com/DamienCassou/libbcel.git
+
+Updating /mnt/store/melpa/working/libbcel/
+Checking out 3d506a3fb5b377bf460e7b8096f7211949567f75
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/libbcel/
+  to /tmp/libbceljeE5si/libbcel-20221003.1827
+    libbcel-actions.el -> libbcel-actions.el
+    libbcel-client.el -> libbcel-client.el
+    libbcel-nav.el -> libbcel-nav.el
+    libbcel-oauth.el -> libbcel-oauth.el
+    libbcel-structs.el -> libbcel-structs.el
+    libbcel-util.el -> libbcel-util.el
+    libbcel.el -> libbcel.el
+Created libbcel-20221003.1827.tar containing:
+  libbcel-20221003.1827/
+  libbcel-20221003.1827/libbcel-actions.el
+  libbcel-20221003.1827/libbcel-client.el
+  libbcel-20221003.1827/libbcel-nav.el
+  libbcel-20221003.1827/libbcel-oauth.el
+  libbcel-20221003.1827/libbcel-pkg.el
+  libbcel-20221003.1827/libbcel-structs.el
+  libbcel-20221003.1827/libbcel-util.el
+  libbcel-20221003.1827/libbcel.el
+Built libbcel in 4.873s, finished at 2023-06-02T22:14:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 420 Jun  2 22:14 packages/libbcel-20221003.1827.entry
+ 52K -rw-r--r-- 1 root root 50K Jun  2 22:14 packages/libbcel-20221003.1827.tar

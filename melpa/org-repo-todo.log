@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-repo-todo
+Fetcher: github
+Source:  https://github.com/waymondo/org-repo-todo.git
+
+Updating /mnt/store/melpa/working/org-repo-todo/
+Checking out f73ebd91399c5760ad52c6ad9033de1066042003
+Built org-repo-todo in 4.992s, finished at 2023-06-02T22:29:09+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jun  2 22:29 packages/org-repo-todo-20171228.119.el
+4.0K -rw-r--r-- 1 root root  434 Jun  2 22:29 packages/org-repo-todo-20171228.119.entry

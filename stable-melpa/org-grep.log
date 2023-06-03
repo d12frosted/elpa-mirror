@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-grep
+Fetcher: sourcehut
+Source:  https://git.sr.ht/~minshall/org-grep
+
+Updating /mnt/store/melpa/working/org-grep/
+Checking out 428cfc2e2c35867272d32f82cadaea46772e3609
+Built org-grep in 5.235s, finished at 2023-06-02T22:28:00+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 31K Jun  2 22:27 packages/org-grep-20230424.2005.el
+4.0K -rw-r--r-- 1 root root 420 Jun  2 22:28 packages/org-grep-20230424.2005.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: jami-bot
+Fetcher: gitlab
+Source:  https://gitlab.com/hperrey/jami-bot.git
+
+Updating /mnt/store/melpa/working/jami-bot/
+Checking out 63d7df8c5b6397d86bef9c0b7b2557ae11a88335
+Built jami-bot in 8.650s, finished at 2023-06-02T22:09:40+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  2 22:09 packages/jami-bot-20230416.1931.el
+4.0K -rw-r--r-- 1 root root 486 Jun  2 22:09 packages/jami-bot-20230416.1931.entry

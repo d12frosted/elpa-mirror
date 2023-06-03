@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-js-codemod
+Fetcher: github
+Source:  https://github.com/torgeir/helm-js-codemod.el.git
+
+Updating /mnt/store/melpa/working/helm-js-codemod/
+Checking out 1df8583fafadf8c8c5ceb2aecaa815a2a4152686
+Built helm-js-codemod in 6.332s, finished at 2023-06-02T22:02:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jun  2 22:02 packages/helm-js-codemod-20190921.942.el
+4.0K -rw-r--r-- 1 root root  472 Jun  2 22:02 packages/helm-js-codemod-20190921.942.entry

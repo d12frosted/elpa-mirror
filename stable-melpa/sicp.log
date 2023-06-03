@@ -1,1 +1,23 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sicp
+Fetcher: github
+Source:  https://github.com/webframp/sicp-info.git
+
+Updating /mnt/store/melpa/working/sicp/
+Checking out 4002d83083d520c6b5ede2df36cc2cee885d450a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sicp/
+  to /tmp/sicpmcf9IC/sicp-20200512.1137
+    sicp.el -> sicp.el
+    dir -> dir
+    sicp.info -> sicp.info
+    sicp.texi -> sicp.texi
+Created sicp-20200512.1137.tar containing:
+  sicp-20200512.1137/
+  sicp-20200512.1137/dir
+  sicp-20200512.1137/sicp-pkg.el
+  sicp-20200512.1137/sicp.el
+  sicp-20200512.1137/sicp.info
+Built sicp in 4.607s, finished at 2023-06-02T22:46:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  354 Jun  2 22:46 packages/sicp-20200512.1137.entry
+1.5M -rw-r--r-- 1 root root 1.5M Jun  2 22:46 packages/sicp-20200512.1137.tar

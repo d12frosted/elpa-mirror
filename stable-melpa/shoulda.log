@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: shoulda
+Fetcher: github
+Source:  https://github.com/marcwebbie/shoulda.el.git
+
+Updating /mnt/store/melpa/working/shoulda/
+Checking out 24dc6b6138a06edde9c8d13a6aaa1654d1d7de54
+Built shoulda in 4.553s, finished at 2023-06-02T22:45:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.6K Jun  2 22:45 packages/shoulda-20140616.1833.el
+4.0K -rw-r--r-- 1 root root  380 Jun  2 22:45 packages/shoulda-20140616.1833.entry

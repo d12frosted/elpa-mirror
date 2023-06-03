@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: meyvn
+Fetcher: github
+Source:  https://github.com/danielsz/meyvn-el.git
+
+Updating /mnt/store/melpa/working/meyvn/
+Checking out 493e652b8fffcbed226f69a2ea82e6f9fc51ab08
+Built meyvn in 4.495s, finished at 2023-06-02T22:19:33+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 22:19 packages/meyvn-20221206.2219.el
+4.0K -rw-r--r-- 1 root root 547 Jun  2 22:19 packages/meyvn-20221206.2219.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: region-state
+Fetcher: github
+Source:  https://github.com/xuchunyang/region-state.el.git
+
+Updating /mnt/store/melpa/working/region-state/
+Checking out f9e3926036a7c261b20bad9bf46f68ead8c15024
+Built region-state in 4.958s, finished at 2023-06-02T22:41:21+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jun  2 22:41 packages/region-state-20181205.1746.el
+4.0K -rw-r--r-- 1 root root  443 Jun  2 22:41 packages/region-state-20181205.1746.entry

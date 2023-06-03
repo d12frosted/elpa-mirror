@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: nimbus-theme
+Fetcher: github
+Source:  https://github.com/mrcnski/nimbus-theme.git
+
+Updating /mnt/store/melpa/working/nimbus-theme/
+Checking out a5c66339676cb9008aeaf33f827161710e201d81
+Built nimbus-theme in 6.891s, finished at 2023-06-02T22:23:32+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 60K Jun  2 22:23 packages/nimbus-theme-20230525.1402.el
+4.0K -rw-r--r-- 1 root root 442 Jun  2 22:23 packages/nimbus-theme-20230525.1402.entry

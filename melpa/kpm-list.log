@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: kpm-list
+Fetcher: github
+Source:  https://github.com/KMahoney/kpm-list.git
+
+Updating /mnt/store/melpa/working/kpm-list/
+Checking out e0f5112e5ce8ec1b603f4428fa51681c68bb28f5
+Built kpm-list in 4.734s, finished at 2023-06-02T22:12:49+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  2 22:12 packages/kpm-list-20170924.1352.el
+4.0K -rw-r--r-- 1 root root 358 Jun  2 22:12 packages/kpm-list-20170924.1352.entry

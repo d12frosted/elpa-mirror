@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: jedi
+Fetcher: github
+Source:  https://github.com/tkf/emacs-jedi.git
+
+Updating /mnt/store/melpa/working/jedi/
+Checking out 9d5f29116c4d42cae561a9d69e6fba2b61e2cf43
+Built jedi in 7.952s, finished at 2023-06-02T22:10:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Jun  2 22:10 packages/jedi-20191011.1750.el
+4.0K -rw-r--r-- 1 root root  397 Jun  2 22:10 packages/jedi-20191011.1750.entry

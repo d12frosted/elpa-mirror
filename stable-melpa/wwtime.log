@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: wwtime
+Fetcher: github
+Source:  https://github.com/ndw/wwtime.git
+
+Updating /mnt/store/melpa/working/wwtime/
+Checking out d04d8fa814b5d3644efaeb28f25520ada69acbbd
+Built wwtime in 4.405s, finished at 2023-06-02T23:00:22+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  2 23:00 packages/wwtime-20151122.1610.el
+4.0K -rw-r--r-- 1 root root 351 Jun  2 23:00 packages/wwtime-20151122.1610.entry

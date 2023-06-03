@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pocket-reader
+Fetcher: github
+Source:  https://github.com/alphapapa/pocket-reader.el.git
+
+Updating /mnt/store/melpa/working/pocket-reader/
+Checking out 88d1e6019a3408835745e117cb5b83a8e31f11fe
+Built pocket-reader in 5.296s, finished at 2023-06-02T22:35:31+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 53K Jun  2 22:35 packages/pocket-reader-20220630.844.el
+4.0K -rw-r--r-- 1 root root 615 Jun  2 22:35 packages/pocket-reader-20220630.844.entry

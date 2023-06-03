@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: one-time-pad-encrypt
+Fetcher: github
+Source:  https://github.com/garvinguan/emacs-one-time-pad.git
+
+Updating /mnt/store/melpa/working/one-time-pad-encrypt/
+Checking out 87cc1f124024ce3d277299ca0ac703f182937d9f
+Built one-time-pad-encrypt in 4.648s, finished at 2023-06-02T22:26:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Jun  2 22:26 packages/one-time-pad-encrypt-20160329.1513.el
+4.0K -rw-r--r-- 1 root root  449 Jun  2 22:26 packages/one-time-pad-encrypt-20160329.1513.entry

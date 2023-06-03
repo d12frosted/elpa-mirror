@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: teletext
+Fetcher: github
+Source:  https://github.com/lassik/emacs-teletext.git
+
+Updating /mnt/store/melpa/working/teletext/
+Checking out 6b003e9dab9bd0c27d188a81f5fff740d66a2282
+Built teletext in 7.122s, finished at 2023-06-02T22:51:47+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  2 22:51 packages/teletext-20211203.1111.el
+4.0K -rw-r--r-- 1 root root 438 Jun  2 22:51 packages/teletext-20211203.1111.entry

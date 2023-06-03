@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: hotfuzz
+Fetcher: github
+Source:  https://github.com/axelf4/hotfuzz.git
+
+Updating /mnt/store/melpa/working/hotfuzz/
+Checking out 8bd60d49918995fb9640cfbc2dd149299e7756a8
+Built hotfuzz in 5.103s, finished at 2023-06-02T22:05:28+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  2 22:05 packages/hotfuzz-20230528.1112.el
+4.0K -rw-r--r-- 1 root root 408 Jun  2 22:05 packages/hotfuzz-20230528.1112.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: supergenpass
+Fetcher: github
+Source:  https://github.com/ober/sgpass.git
+
+Updating /mnt/store/melpa/working/supergenpass/
+Checking out 549072ef7b5b82913cadd4758e8a0a9926f0a04a
+Built supergenpass in 4.551s, finished at 2023-06-02T22:50:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.0K Jun  2 22:50 packages/supergenpass-20130329.548.el
+4.0K -rw-r--r-- 1 root root  352 Jun  2 22:50 packages/supergenpass-20130329.548.entry

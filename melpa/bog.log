@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: bog
+Fetcher: github
+Source:  https://github.com/kyleam/bog.git
+
+Updating /mnt/store/melpa/working/bog/
+Checking out 6bea27368b0010e04fb7c7894064251940eb21b0
+Built bog in 4.905s, finished at 2023-06-02T21:25:43+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 55K Jun  2 21:25 packages/bog-20230521.2122.el
+4.0K -rw-r--r-- 1 root root 425 Jun  2 21:25 packages/bog-20230521.2122.entry

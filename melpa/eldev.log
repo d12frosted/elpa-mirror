@@ -1,1 +1,43 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: eldev
+Fetcher: github
+Source:  https://github.com/doublep/eldev.git
+
+Updating /mnt/store/melpa/working/eldev/
+Checking out 1f7e31919ffa3daf2fb4b82a72213402ef99eb55
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eldev/
+  to /tmp/eldevJkVG0M/eldev-20230601.1900
+    eldev-build.el -> eldev-build.el
+    eldev-buttercup.el -> eldev-buttercup.el
+    eldev-doctor.el -> eldev-doctor.el
+    eldev-ecukes.el -> eldev-ecukes.el
+    eldev-ert.el -> eldev-ert.el
+    eldev-plugins.el -> eldev-plugins.el
+    eldev-util.el -> eldev-util.el
+    eldev-vc.el -> eldev-vc.el
+    eldev.el -> eldev.el
+    bin/eldev -> bin/eldev
+    bin/eldev.bat -> bin/eldev.bat
+    bin/eldev.ps1 -> bin/eldev.ps1
+Created eldev-20230601.1900.tar containing:
+  eldev-20230601.1900/
+  eldev-20230601.1900/bin/
+  eldev-20230601.1900/bin/eldev
+  eldev-20230601.1900/bin/eldev.bat
+  eldev-20230601.1900/bin/eldev.ps1
+  eldev-20230601.1900/eldev-build.el
+  eldev-20230601.1900/eldev-buttercup.el
+  eldev-20230601.1900/eldev-doctor.el
+  eldev-20230601.1900/eldev-ecukes.el
+  eldev-20230601.1900/eldev-ert.el
+  eldev-20230601.1900/eldev-pkg.el
+  eldev-20230601.1900/eldev-plugins.el
+  eldev-20230601.1900/eldev-util.el
+  eldev-20230601.1900/eldev-vc.el
+  eldev-20230601.1900/eldev.el
+Built eldev in 9.932s, finished at 2023-06-02T21:42:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  405 Jun  1 18:06 packages/eldev-20230601.1647.entry
+620K -rw-r--r-- 1 root root 620K Jun  1 18:06 packages/eldev-20230601.1647.tar
+4.0K -rw-r--r-- 1 root root  405 Jun  2 21:42 packages/eldev-20230601.1900.entry
+620K -rw-r--r-- 1 root root 620K Jun  2 21:42 packages/eldev-20230601.1900.tar

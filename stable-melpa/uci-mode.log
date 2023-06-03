@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: uci-mode
+Fetcher: github
+Source:  https://github.com/dwcoates/uci-mode.git
+
+Updating /mnt/store/melpa/working/uci-mode/
+Checking out 2cdf4de5af96d56108a0a5716416ef3c8ac7bb7c
+Built uci-mode in 5.343s, finished at 2023-06-02T22:55:05+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:55 packages/uci-mode-20210626.1956.el
+4.0K -rw-r--r-- 1 root root 438 Jun  2 22:55 packages/uci-mode-20210626.1956.entry

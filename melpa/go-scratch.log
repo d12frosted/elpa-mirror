@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: go-scratch
+Fetcher: github
+Source:  https://github.com/shosti/go-scratch.el.git
+
+Updating /mnt/store/melpa/working/go-scratch/
+Checking out 3f68cbcce04f59eb8e83af109164731ec0454be0
+Built go-scratch in 5.010s, finished at 2023-06-02T21:58:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Jun  2 21:58 packages/go-scratch-20150810.440.el
+4.0K -rw-r--r-- 1 root root  450 Jun  2 21:58 packages/go-scratch-20150810.440.entry

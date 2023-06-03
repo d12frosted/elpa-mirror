@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-octopress
+Fetcher: github
+Source:  https://github.com/yoshinari-nomura/org-octopress.git
+
+Updating /mnt/store/melpa/working/org-octopress/
+Checking out 38598ef98d04076a8eb78d549907ddfde8d3a652
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-octopress/
+  to /tmp/org-octopressHWOHYh/org-octopress-20170821.415
+    org-octopress.el -> org-octopress.el
+    ox-jekyll.el -> ox-jekyll.el
+    setupfile-sample.org -> setupfile-sample.org
+Created org-octopress-20170821.415.tar containing:
+  org-octopress-20170821.415/
+  org-octopress-20170821.415/org-octopress-pkg.el
+  org-octopress-20170821.415/org-octopress.el
+  org-octopress-20170821.415/ox-jekyll.el
+  org-octopress-20170821.415/setupfile-sample.org
+Built org-octopress in 4.171s, finished at 2023-06-02T22:28:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 452 Jun  2 22:28 packages/org-octopress-20170821.415.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:28 packages/org-octopress-20170821.415.tar

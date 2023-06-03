@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: evil-tutor-ja
+Fetcher: github
+Source:  https://github.com/kenjimyzk/evil-tutor-ja.git
+
+Updating /mnt/store/melpa/working/evil-tutor-ja/
+Checking out 06b9ad853a15ce6f2c53c2cf379b9ff358369f2d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-tutor-ja/
+  to /tmp/evil-tutor-jauGPVgZ/evil-tutor-ja-20160917.132
+    evil-tutor-ja.el -> evil-tutor-ja.el
+    tutor-ja.txt -> tutor-ja.txt
+Created evil-tutor-ja-20160917.132.tar containing:
+  evil-tutor-ja-20160917.132/
+  evil-tutor-ja-20160917.132/evil-tutor-ja-pkg.el
+  evil-tutor-ja-20160917.132/evil-tutor-ja.el
+  evil-tutor-ja-20160917.132/tutor-ja.txt
+Built evil-tutor-ja in 5.353s, finished at 2023-06-02T21:48:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 522 Jun  2 21:48 packages/evil-tutor-ja-20160917.132.entry
+ 52K -rw-r--r-- 1 root root 50K Jun  2 21:48 packages/evil-tutor-ja-20160917.132.tar

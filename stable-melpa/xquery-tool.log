@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: xquery-tool
+Fetcher: github
+Source:  https://github.com/paddymcall/xquery-tool.el.git
+
+Updating /mnt/store/melpa/working/xquery-tool/
+Checking out bd48e0f56b58e36309f7966dcf67db69d65100a4
+Built xquery-tool in 5.161s, finished at 2023-06-02T23:00:44+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 37K Jun  2 23:00 packages/xquery-tool-20200907.811.el
+4.0K -rw-r--r-- 1 root root 461 Jun  2 23:00 packages/xquery-tool-20200907.811.entry

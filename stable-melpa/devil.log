@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: devil
+Fetcher: github
+Source:  https://github.com/susam/devil.git
+
+Updating /mnt/store/melpa/working/devil/
+Checking out 2925d977feaaf5ae1520aeba70be1e4d34884c73
+Built devil in 5.098s, finished at 2023-06-02T21:37:00+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  2 21:36 packages/devil-20230531.11.el
+4.0K -rw-r--r-- 1 root root 396 Jun  2 21:36 packages/devil-20230531.11.entry

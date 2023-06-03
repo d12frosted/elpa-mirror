@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: eclipse-theme
+Fetcher: github
+Source:  https://github.com/abo-abo/eclipse-theme.git
+
+Updating /mnt/store/melpa/working/eclipse-theme/
+Checking out dcf97865512ed450f9d5137c1a05e12edb5b7f80
+Built eclipse-theme in 5.896s, finished at 2023-06-02T21:40:27+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Jun  2 21:40 packages/eclipse-theme-20191113.1518.el
+4.0K -rw-r--r-- 1 root root  406 Jun  2 21:40 packages/eclipse-theme-20191113.1518.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: lv
+Fetcher: github
+Source:  https://github.com/abo-abo/hydra.git
+
+Updating /mnt/store/melpa/working/lv/
+Checking out 87873d788891029d9e44fa5458321d6a05849b94
+Built lv in 10.985s, finished at 2023-06-02T22:16:53+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jun  2 22:16 packages/lv-20200507.1518.el
+4.0K -rw-r--r-- 1 root root  243 Jun  2 22:16 packages/lv-20200507.1518.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: kv
+Fetcher: github
+Source:  https://github.com/nicferrier/emacs-kv.git
+
+Updating /mnt/store/melpa/working/kv/
+Checking out 721148475bce38a70e0b678ba8aa923652e8900e
+Built kv in 4.681s, finished at 2023-06-02T22:13:03+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  2 22:13 packages/kv-20140108.1534.el
+4.0K -rw-r--r-- 1 root root 368 Jun  2 22:13 packages/kv-20140108.1534.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: inferior-islisp
+Fetcher: gitlab
+Source:  https://gitlab.com/sasanidas/islisp-mode.git
+
+Updating /mnt/store/melpa/working/inferior-islisp/
+Checking out 423b84fe4cc6944e36971225b3e19c888e7e4690
+Built inferior-islisp in 4.894s, finished at 2023-06-02T22:07:25+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Jun  2 22:07 packages/inferior-islisp-20220924.1040.el
+4.0K -rw-r--r-- 1 root root  463 Jun  2 22:07 packages/inferior-islisp-20220924.1040.entry

@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: osx-trash
+Fetcher: github
+Source:  https://github.com/emacsorphanage/osx-trash.git
+
+Updating /mnt/store/melpa/working/osx-trash/
+Checking out 90f0c99206022fec646206018fcd63d9d2e57325
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/osx-trash/
+  to /tmp/osx-trashxqt1sw/osx-trash-20220913.1736
+    osx-trash.el -> osx-trash.el
+    trashfile.AppleScript -> trashfile.AppleScript
+Created osx-trash-20220913.1736.tar containing:
+  osx-trash-20220913.1736/
+  osx-trash-20220913.1736/osx-trash-pkg.el
+  osx-trash-20220913.1736/osx-trash.el
+  osx-trash-20220913.1736/trashfile.AppleScript
+Built osx-trash in 6.646s, finished at 2023-06-02T22:31:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 491 Jun  2 22:31 packages/osx-trash-20220913.1736.entry
+ 12K -rw-r--r-- 1 root root 10K Jun  2 22:31 packages/osx-trash-20220913.1736.tar

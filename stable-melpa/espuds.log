@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: espuds
+Fetcher: github
+Source:  https://github.com/ecukes/espuds.git
+
+Updating /mnt/store/melpa/working/espuds/
+Checking out 57c18a48f1a01d8174298eaab4fcf3b2c6549291
+Built espuds in 5.540s, finished at 2023-06-02T21:46:08+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  2 21:46 packages/espuds-20230218.910.el
+4.0K -rw-r--r-- 1 root root 469 Jun  2 21:46 packages/espuds-20230218.910.entry

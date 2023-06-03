@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: git-attr
+Fetcher: github
+Source:  https://github.com/arnested/emacs-git-attr.git
+
+Updating /mnt/store/melpa/working/git-attr/
+Checking out 3e43a0cf616b00a4bbd3c6b49fd2397f3103796f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-attr/
+  to /tmp/git-attroDL5N4/git-attr-20180925.2003
+    git-attr-linguist.el -> git-attr-linguist.el
+    git-attr.el -> git-attr.el
+Created git-attr-20180925.2003.tar containing:
+  git-attr-20180925.2003/
+  git-attr-20180925.2003/git-attr-linguist.el
+  git-attr-20180925.2003/git-attr-pkg.el
+  git-attr-20180925.2003/git-attr.el
+Built git-attr in 4.322s, finished at 2023-06-02T21:57:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 431 Jun  2 21:57 packages/git-attr-20180925.2003.entry
+ 12K -rw-r--r-- 1 root root 10K Jun  2 21:57 packages/git-attr-20180925.2003.tar

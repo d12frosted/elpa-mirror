@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: paxedit
+Fetcher: github
+Source:  https://github.com/promethial/paxedit.git
+
+Updating /mnt/store/melpa/working/paxedit/
+Checking out 48df0a26285f68cd20ea64368e7bf2a5fbf13135
+Built paxedit in 5.142s, finished at 2023-06-02T22:33:30+0000
+ ✓ Success:
+ 80K -rw-r--r-- 1 root root 78K Jun  2 22:33 packages/paxedit-20160730.1727.el
+4.0K -rw-r--r-- 1 root root 429 Jun  2 22:33 packages/paxedit-20160730.1727.entry

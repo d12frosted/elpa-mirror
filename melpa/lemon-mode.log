@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: lemon-mode
+Fetcher: github
+Source:  https://github.com/mooz/lemon-mode.git
+
+Updating /mnt/store/melpa/working/lemon-mode/
+Checking out 155bfced6c9afc8072a0133d3d1baa54c6d67430
+Built lemon-mode in 4.707s, finished at 2023-06-02T22:13:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jun  2 22:13 packages/lemon-mode-20130216.1304.el
+4.0K -rw-r--r-- 1 root root  372 Jun  2 22:13 packages/lemon-mode-20130216.1304.entry

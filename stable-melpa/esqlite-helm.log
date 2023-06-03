@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: esqlite-helm
+Fetcher: github
+Source:  https://github.com/mhayashi1120/Emacs-esqlite.git
+
+Updating /mnt/store/melpa/working/esqlite-helm/
+Checking out 84d5b16198f30949c544affba751ee0d58a000d9
+Built esqlite-helm in 5.705s, finished at 2023-06-02T21:46:15+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  2 21:46 packages/esqlite-helm-20151116.850.el
+4.0K -rw-r--r-- 1 root root 494 Jun  2 21:46 packages/esqlite-helm-20151116.850.entry

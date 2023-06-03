@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: just-mode
+Fetcher: github
+Source:  https://github.com/leon-barrett/just-mode.el.git
+
+Updating /mnt/store/melpa/working/just-mode/
+Checking out d7f52eab8fa3828106f80acb1e2176e5877b7191
+Built just-mode in 5.103s, finished at 2023-06-02T22:11:32+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Jun  2 22:11 packages/just-mode-20230303.2255.el
+4.0K -rw-r--r-- 1 root root  470 Jun  2 22:11 packages/just-mode-20230303.2255.entry

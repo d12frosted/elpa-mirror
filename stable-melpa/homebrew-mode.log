@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: homebrew-mode
+Fetcher: github
+Source:  https://github.com/dunn/homebrew-mode.git
+
+Updating /mnt/store/melpa/working/homebrew-mode/
+Checking out e32da1397ce176766e39c286861ef4c40d64bbf5
+Built homebrew-mode in 5.130s, finished at 2023-06-02T22:05:22+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  2 22:05 packages/homebrew-mode-20220907.1656.el
+4.0K -rw-r--r-- 1 root root 499 Jun  2 22:05 packages/homebrew-mode-20220907.1656.entry

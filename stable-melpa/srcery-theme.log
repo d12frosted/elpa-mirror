@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: srcery-theme
+Fetcher: github
+Source:  https://github.com/srcery-colors/srcery-emacs.git
+
+Updating /mnt/store/melpa/working/srcery-theme/
+Checking out 58dd21cd63e4a2eed15e0082c2547069363f107b
+Built srcery-theme in 4.486s, finished at 2023-06-02T22:49:06+0000
+ ✓ Success:
+140K -rw-r--r-- 1 root root 137K Jun  2 22:49 packages/srcery-theme-20210601.1247.el
+4.0K -rw-r--r-- 1 root root  346 Jun  2 22:49 packages/srcery-theme-20210601.1247.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: weblogger
+Fetcher: github
+Source:  https://github.com/hexmode/weblogger-el.git
+
+Updating /mnt/store/melpa/working/weblogger/
+Checking out 40cfbfc69be6a619173804441db2f407e3fa1731
+Built weblogger in 6.605s, finished at 2023-06-02T22:58:16+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 59K Jun  2 22:58 packages/weblogger-20110926.1618.el
+4.0K -rw-r--r-- 1 root root 311 Jun  2 22:58 packages/weblogger-20110926.1618.entry

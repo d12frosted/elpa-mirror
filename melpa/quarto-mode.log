@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: quarto-mode
+Fetcher: github
+Source:  https://github.com/quarto-dev/quarto-emacs.git
+
+Updating /mnt/store/melpa/working/quarto-mode/
+Checking out b7dcba7050b2e1e65acdd5656d08a186bca2c922
+Built quarto-mode in 5.140s, finished at 2023-06-02T22:39:41+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  2 22:39 packages/quarto-mode-20221005.1632.el
+4.0K -rw-r--r-- 1 root root 548 Jun  2 22:39 packages/quarto-mode-20221005.1632.entry

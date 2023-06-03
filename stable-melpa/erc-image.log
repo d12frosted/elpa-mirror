@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: erc-image
+Fetcher: github
+Source:  https://github.com/kidd/erc-image.el.git
+
+Updating /mnt/store/melpa/working/erc-image/
+Checking out 883084f0801d46a5ccf183e51ae9a734755bbb97
+Built erc-image in 5.458s, finished at 2023-06-02T21:45:05+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Jun  2 21:45 packages/erc-image-20210604.753.el
+4.0K -rw-r--r-- 1 root root  470 Jun  2 21:45 packages/erc-image-20210604.753.entry

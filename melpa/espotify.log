@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: espotify
+Fetcher: codeberg
+Source:  https://codeberg.org/jao/espotify.git
+
+Updating /mnt/store/melpa/working/espotify/
+Checking out ea6d6021e5acc550560325db2f09198839ee702f
+Built espotify in 5.607s, finished at 2023-06-02T21:46:07+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  2 21:46 packages/espotify-20220121.2057.el
+4.0K -rw-r--r-- 1 root root 388 Jun  2 21:46 packages/espotify-20220121.2057.entry

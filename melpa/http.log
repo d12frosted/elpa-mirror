@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: http
+Fetcher: github
+Source:  https://github.com/emacs-pe/http.el.git
+
+Updating /mnt/store/melpa/working/http/
+Checking out 5fdceed1fbf36e274e578e349a53ce922c574774
+Built http in 5.422s, finished at 2023-06-02T22:05:40+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  2 22:05 packages/http-20201010.920.el
+4.0K -rw-r--r-- 1 root root 486 Jun  2 22:05 packages/http-20201010.920.entry

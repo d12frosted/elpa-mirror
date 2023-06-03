@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: todoist
+Fetcher: github
+Source:  https://github.com/abrochard/emacs-todoist.git
+
+Updating /mnt/store/melpa/working/todoist/
+Checking out d79b4ea4ea4891635966bfc2c769484d2916be80
+Built todoist in 4.298s, finished at 2023-06-02T22:53:30+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  2 22:53 packages/todoist-20230120.2208.el
+4.0K -rw-r--r-- 1 root root 484 Jun  2 22:53 packages/todoist-20230120.2208.entry

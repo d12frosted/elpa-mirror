@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: go-playground
+Fetcher: github
+Source:  https://github.com/grafov/go-playground.git
+
+Updating /mnt/store/melpa/working/go-playground/
+Checking out e70aeb111fbb4487b464a813feb8ecad1542dc1c
+Built go-playground in 4.911s, finished at 2023-06-02T21:58:33+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jun  2 21:58 packages/go-playground-20221127.1342.el
+4.0K -rw-r--r-- 1 root root  502 Jun  2 21:58 packages/go-playground-20221127.1342.entry

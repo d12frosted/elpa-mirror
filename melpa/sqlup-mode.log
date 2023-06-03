@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sqlup-mode
+Fetcher: github
+Source:  https://github.com/Trevoke/sqlup-mode.el.git
+
+Updating /mnt/store/melpa/working/sqlup-mode/
+Checking out 04970977b4abb4d44301651618bbf1cdb0b263dd
+Built sqlup-mode in 4.797s, finished at 2023-06-02T22:49:02+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.5K Jun  2 22:49 packages/sqlup-mode-20170610.1537.el
+4.0K -rw-r--r-- 1 root root  458 Jun  2 22:49 packages/sqlup-mode-20170610.1537.entry

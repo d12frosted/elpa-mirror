@@ -1,1 +1,24 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: netease-cloud-music
+Fetcher: github
+Source:  https://github.com/SpringHan/netease-cloud-music.el.git
+
+Updating /mnt/store/melpa/working/netease-cloud-music/
+Checking out f238d1d45bbeee32e0a8d169f39de4360be908f4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/netease-cloud-music/
+  to /tmp/netease-cloud-music6cvPQr/netease-cloud-music-20220305.1224
+    netease-cloud-music-comment.el -> netease-cloud-music-comment.el
+    netease-cloud-music-functions.el -> netease-cloud-music-functions.el
+    netease-cloud-music-ui.el -> netease-cloud-music-ui.el
+    netease-cloud-music.el -> netease-cloud-music.el
+Created netease-cloud-music-20220305.1224.tar containing:
+  netease-cloud-music-20220305.1224/
+  netease-cloud-music-20220305.1224/netease-cloud-music-comment.el
+  netease-cloud-music-20220305.1224/netease-cloud-music-functions.el
+  netease-cloud-music-20220305.1224/netease-cloud-music-pkg.el
+  netease-cloud-music-20220305.1224/netease-cloud-music-ui.el
+  netease-cloud-music-20220305.1224/netease-cloud-music.el
+Built netease-cloud-music in 7.040s, finished at 2023-06-02T22:23:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  433 Jun  2 22:23 packages/netease-cloud-music-20220305.1224.entry
+172K -rw-r--r-- 1 root root 170K Jun  2 22:23 packages/netease-cloud-music-20220305.1224.tar

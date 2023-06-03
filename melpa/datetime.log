@@ -1,1 +1,24 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: datetime
+Fetcher: github
+Source:  https://github.com/doublep/datetime.git
+
+Updating /mnt/store/melpa/working/datetime/
+Checking out 3505de8bd176056083a1da73226f9e77cc50c4b7
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/datetime/
+  to /tmp/datetimeoHlv3d/datetime-20220629.1806
+    datetime.el -> datetime.el
+    locale-data.extmap -> locale-data.extmap
+    timezone-data.extmap -> timezone-data.extmap
+    timezone-name-data.extmap -> timezone-name-data.extmap
+Created datetime-20220629.1806.tar containing:
+  datetime-20220629.1806/
+  datetime-20220629.1806/datetime-pkg.el
+  datetime-20220629.1806/datetime.el
+  datetime-20220629.1806/locale-data.extmap
+  datetime-20220629.1806/timezone-data.extmap
+  datetime-20220629.1806/timezone-name-data.extmap
+Built datetime in 5.114s, finished at 2023-06-02T21:36:12+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  487 Jun  2 21:36 packages/datetime-20220629.1806.entry
+3.9M -rw-r--r-- 1 root root 3.9M Jun  2 21:36 packages/datetime-20220629.1806.tar

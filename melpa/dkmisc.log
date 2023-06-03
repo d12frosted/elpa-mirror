@@ -1,1 +1,19 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dkmisc
+Fetcher: github
+Source:  https://github.com/davidkeegan/dkmisc.git
+
+Updating /mnt/store/melpa/working/dkmisc/
+Checking out fe3d49c6f8322b6f89466361acd97585bdfe0608
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dkmisc/
+  to /tmp/dkmiscASJFNg/dkmisc-20131110.1115
+    dkmisc-pkg.el -> dkmisc-pkg.el
+    dkmisc.el -> dkmisc.el
+Created dkmisc-20131110.1115.tar containing:
+  dkmisc-20131110.1115/
+  dkmisc-20131110.1115/dkmisc-pkg.el
+  dkmisc-20131110.1115/dkmisc.el
+Built dkmisc in 4.821s, finished at 2023-06-02T21:38:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 375 Jun  2 21:38 packages/dkmisc-20131110.1115.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 21:38 packages/dkmisc-20131110.1115.tar

@@ -1,1 +1,19 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: inform
+Fetcher: github
+Source:  https://github.com/dieter-wilhelm/inform.git
+
+Updating /mnt/store/melpa/working/inform/
+Checking out 8ff0a19a9f40cfa8283da8ed73de94c35a327423
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/inform/
+  to /tmp/informeF9ppz/inform-20200723.500
+    inform-pkg.el -> inform-pkg.el
+    inform.el -> inform.el
+Created inform-20200723.500.tar containing:
+  inform-20200723.500/
+  inform-20200723.500/inform-pkg.el
+  inform-20200723.500/inform.el
+Built inform in 4.519s, finished at 2023-06-02T22:07:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 384 Jun  2 22:07 packages/inform-20200723.500.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:07 packages/inform-20200723.500.tar

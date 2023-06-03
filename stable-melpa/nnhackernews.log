@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: nnhackernews
+Fetcher: github
+Source:  https://github.com/dickmao/nnhackernews.git
+
+Updating /mnt/store/melpa/working/nnhackernews/
+Checking out bf0ff5d4a079004f937e7440ba282c156f24dced
+Built nnhackernews in 8.259s, finished at 2023-06-02T22:23:56+0000
+ ✓ Success:
+ 88K -rw-r--r-- 1 root root 88K Jun  2 22:23 packages/nnhackernews-20230222.1441.el
+4.0K -rw-r--r-- 1 root root 323 Jun  2 22:23 packages/nnhackernews-20230222.1441.entry

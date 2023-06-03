@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ert-async
+Fetcher: github
+Source:  https://github.com/rejeep/ert-async.el.git
+
+Updating /mnt/store/melpa/working/ert-async/
+Checking out 948cf2faa10e085bda3739034ca5ea1912893433
+Built ert-async in 4.838s, finished at 2023-06-02T21:45:28+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  2 21:45 packages/ert-async-20200105.1031.el
+4.0K -rw-r--r-- 1 root root  461 Jun  2 21:45 packages/ert-async-20200105.1031.entry

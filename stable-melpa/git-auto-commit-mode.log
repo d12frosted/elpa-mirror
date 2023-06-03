@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: git-auto-commit-mode
+Fetcher: github
+Source:  https://github.com/ryuslash/git-auto-commit-mode.git
+
+Updating /mnt/store/melpa/working/git-auto-commit-mode/
+Checking out df07899acdb3f9c114b72fdab77107c924b3172c
+Built git-auto-commit-mode in 4.400s, finished at 2023-06-02T21:57:01+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.5K Jun  2 21:57 packages/git-auto-commit-mode-20200828.653.el
+4.0K -rw-r--r-- 1 root root  440 Jun  2 21:57 packages/git-auto-commit-mode-20200828.653.entry

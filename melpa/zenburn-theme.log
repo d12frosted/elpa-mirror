@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: zenburn-theme
+Fetcher: github
+Source:  https://github.com/bbatsov/zenburn-emacs.git
+
+Updating /mnt/store/melpa/working/zenburn-theme/
+Checking out 8a1f9d28f503615e5d9b3eac59a2f3c14e75fc20
+Built zenburn-theme in 4.480s, finished at 2023-06-02T23:01:47+0000
+ ✓ Success:
+104K -rw-r--r-- 1 root root 102K Jun  2 23:01 packages/zenburn-theme-20230315.1004.el
+4.0K -rw-r--r-- 1 root root  397 Jun  2 23:01 packages/zenburn-theme-20230315.1004.entry

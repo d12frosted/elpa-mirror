@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: netrunner
+Fetcher: github
+Source:  https://github.com/Kungsgeten/netrunner.git
+
+Updating /mnt/store/melpa/working/netrunner/
+Checking out c64672992175c8c1073c0f56c2e471839db71a0f
+Built netrunner in 7.341s, finished at 2023-06-02T22:23:09+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  2 22:23 packages/netrunner-20160910.2332.el
+4.0K -rw-r--r-- 1 root root 482 Jun  2 22:23 packages/netrunner-20160910.2332.entry

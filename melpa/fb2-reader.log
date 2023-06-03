@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fb2-reader
+Fetcher: github
+Source:  https://github.com/jumper047/fb2-reader.git
+
+Updating /mnt/store/melpa/working/fb2-reader/
+Checking out 9836db284749e0cef4c43c2cb5358c82ae9b8589
+Built fb2-reader in 5.518s, finished at 2023-06-02T21:49:45+0000
+ ✓ Success:
+ 72K -rw-r--r-- 1 root root 70K Jun  2 21:49 packages/fb2-reader-20230305.2309.el
+4.0K -rw-r--r-- 1 root root 647 Jun  2 21:49 packages/fb2-reader-20230305.2309.entry

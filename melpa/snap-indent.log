@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: snap-indent
+Fetcher: github
+Source:  https://github.com/jeffvalk/snap-indent.git
+
+Updating /mnt/store/melpa/working/snap-indent/
+Checking out 6020a1784015ba28f439f41d4d8c261c3481079f
+Built snap-indent in 4.886s, finished at 2023-06-02T22:47:49+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jun  2 22:47 packages/snap-indent-20221220.1908.el
+4.0K -rw-r--r-- 1 root root  453 Jun  2 22:47 packages/snap-indent-20221220.1908.entry

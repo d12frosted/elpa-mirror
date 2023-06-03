@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: company-ledger
+Fetcher: github
+Source:  https://github.com/debanjum/company-ledger.git
+
+Updating /mnt/store/melpa/working/company-ledger/
+Checking out 55fdddd6c5e9c061c685b474ef5e148a4ac9b576
+Built company-ledger in 4.668s, finished at 2023-06-02T21:31:47+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jun  2 21:31 packages/company-ledger-20210910.250.el
+4.0K -rw-r--r-- 1 root root  571 Jun  2 21:31 packages/company-ledger-20210910.250.entry

@@ -1,0 +1,17 @@
+(term-projectile .
+		 [(20230602 2050)
+		  ((emacs
+		    (24))
+		   (term-manager
+		    (0 1 0))
+		   (projectile
+		    (0 13 0)))
+		  "projectile terminal management" single
+		  ((:commit . "2f873bd7e9c0a275f84fc08dfdd9c0f2426e2b08")
+		   (:authors
+		    ("Ivan Malison" . "IvanMalison@gmail.com"))
+		   (:maintainers
+		    ("Ivan Malison" . "IvanMalison@gmail.com"))
+		   (:maintainer "Ivan Malison" . "IvanMalison@gmail.com")
+		   (:keywords "projectile" "tools" "terminals" "vc")
+		   (:url . "https://www.github.com/IvanMalison/term-manager"))])

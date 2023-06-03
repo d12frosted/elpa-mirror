@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: bar-cursor
+Fetcher: github
+Source:  https://github.com/ajsquared/bar-cursor.git
+
+Updating /mnt/store/melpa/working/bar-cursor/
+Checking out 78f195b6db63459033c4f1c7e7add5d82f3ce424
+Built bar-cursor in 5.506s, finished at 2023-06-02T21:24:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jun  2 21:24 packages/bar-cursor-20201204.2244.el
+4.0K -rw-r--r-- 1 root root  480 Jun  2 21:24 packages/bar-cursor-20201204.2244.entry

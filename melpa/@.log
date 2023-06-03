@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: @
+Fetcher: github
+Source:  https://github.com/skeeto/at-el.git
+
+Updating /mnt/store/melpa/working/@/
+Checking out 0a6189f8be42dbbc5d9358cbd447d471236135a2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/@/
+  to /tmp/@G8yyK9/@-20181225.1438
+    @-mixins.el -> @-mixins.el
+    @.el -> @.el
+Created @-20181225.1438.tar containing:
+  @-20181225.1438/
+  @-20181225.1438/@-mixins.el
+  @-20181225.1438/@-pkg.el
+  @-20181225.1438/@.el
+Built @ in 4.366s, finished at 2023-06-02T21:18:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 443 Jun  2 21:18 packages/@-20181225.1438.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 21:18 packages/@-20181225.1438.tar

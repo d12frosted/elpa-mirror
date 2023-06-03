@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: wallpreview
+Fetcher: github
+Source:  https://github.com/nryotaro/wallpreview.git
+
+Updating /mnt/store/melpa/working/wallpreview/
+Checking out 6eae0549afdfe725b453ca4fb0878c728735892d
+Built wallpreview in 4.757s, finished at 2023-06-02T22:57:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jun  2 22:57 packages/wallpreview-20220703.1108.el
+4.0K -rw-r--r-- 1 root root  237 Jun  2 22:57 packages/wallpreview-20220703.1108.entry

@@ -1,1 +1,32 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: chronometrist
+Fetcher: codeberg
+Source:  https://codeberg.org/contrapunctus/chronometrist.git
+
+Updating /mnt/store/melpa/working/chronometrist/
+Checking out 015524bbeb4a112db7bb2af813408cc3c5c93240
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chronometrist/
+  to /tmp/chronometristBVtUfE/chronometrist-20230302.700
+  ! elisp/chronometrist-spark.el -> chronometrist-spark.el
+  ! elisp/chronometrist-sqlite.el -> chronometrist-sqlite.el
+  ! elisp/chronometrist-third.el -> chronometrist-third.el
+  ! elisp/chronometrist.el -> chronometrist.el
+  ! elisp/chronometrist-spark.org -> chronometrist-spark.org
+  ! elisp/chronometrist-sqlite.org -> chronometrist-sqlite.org
+  ! elisp/chronometrist-third.org -> chronometrist-third.org
+  ! elisp/chronometrist.org -> chronometrist.org
+Created chronometrist-20230302.700.tar containing:
+  chronometrist-20230302.700/
+  chronometrist-20230302.700/chronometrist-pkg.el
+  chronometrist-20230302.700/chronometrist-spark.el
+  chronometrist-20230302.700/chronometrist-spark.org
+  chronometrist-20230302.700/chronometrist-sqlite.el
+  chronometrist-20230302.700/chronometrist-sqlite.org
+  chronometrist-20230302.700/chronometrist-third.el
+  chronometrist-20230302.700/chronometrist-third.org
+  chronometrist-20230302.700/chronometrist.el
+  chronometrist-20230302.700/chronometrist.org
+Built chronometrist in 6.884s, finished at 2023-06-02T21:29:12+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  548 Jun  2 21:29 packages/chronometrist-20230302.700.entry
+432K -rw-r--r-- 1 root root 430K Jun  2 21:29 packages/chronometrist-20230302.700.tar

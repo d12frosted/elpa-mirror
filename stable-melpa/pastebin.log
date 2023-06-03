@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pastebin
+Fetcher: github
+Source:  https://github.com/nicferrier/elpastebin.git
+
+Updating /mnt/store/melpa/working/pastebin/
+Checking out 8e9a829298ce0f747ab80758aa26caeb2af6cb30
+Built pastebin in 4.850s, finished at 2023-06-02T22:33:23+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jun  2 22:33 packages/pastebin-20101125.2002.el
+4.0K -rw-r--r-- 1 root root  166 Jun  2 22:33 packages/pastebin-20101125.2002.entry

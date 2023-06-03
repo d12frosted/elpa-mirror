@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: auto-shell-command
+Fetcher: github
+Source:  https://github.com/ongaeshi/auto-shell-command.git
+
+Updating /mnt/store/melpa/working/auto-shell-command/
+Checking out a8f9213e3c773b5687b81881240e6e648f2f56ba
+Built auto-shell-command in 4.388s, finished at 2023-06-02T21:23:32+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.6K Jun  2 21:23 packages/auto-shell-command-20180817.1502.el
+4.0K -rw-r--r-- 1 root root  458 Jun  2 21:23 packages/auto-shell-command-20180817.1502.entry

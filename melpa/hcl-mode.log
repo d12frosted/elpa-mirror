@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: hcl-mode
+Fetcher: github
+Source:  https://github.com/purcell/emacs-hcl-mode.git
+
+Updating /mnt/store/melpa/working/hcl-mode/
+Checking out 35784854efd29fa8c9fe827654d747a2ace5cb19
+Built hcl-mode in 5.271s, finished at 2023-06-02T22:00:42+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jun  2 22:00 packages/hcl-mode-20230302.1029.el
+4.0K -rw-r--r-- 1 root root  407 Jun  2 22:00 packages/hcl-mode-20230302.1029.entry

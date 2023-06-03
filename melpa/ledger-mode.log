@@ -1,1 +1,60 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ledger-mode
+Fetcher: github
+Source:  https://github.com/ledger/ledger-mode.git
+
+Updating /mnt/store/melpa/working/ledger-mode/
+Checking out b3c0b3a546e8b50aebd0e6ae946daaab999883f0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ledger-mode/
+  to /tmp/ledger-modepuAQ3N/ledger-mode-20230508.1002
+    ledger-check.el -> ledger-check.el
+    ledger-commodities.el -> ledger-commodities.el
+    ledger-complete.el -> ledger-complete.el
+    ledger-context.el -> ledger-context.el
+    ledger-exec.el -> ledger-exec.el
+    ledger-flymake.el -> ledger-flymake.el
+    ledger-fontify.el -> ledger-fontify.el
+    ledger-fonts.el -> ledger-fonts.el
+    ledger-init.el -> ledger-init.el
+    ledger-mode.el -> ledger-mode.el
+    ledger-navigate.el -> ledger-navigate.el
+    ledger-occur.el -> ledger-occur.el
+    ledger-post.el -> ledger-post.el
+    ledger-reconcile.el -> ledger-reconcile.el
+    ledger-regex.el -> ledger-regex.el
+    ledger-report.el -> ledger-report.el
+    ledger-schedule.el -> ledger-schedule.el
+    ledger-sort.el -> ledger-sort.el
+    ledger-state.el -> ledger-state.el
+    ledger-test.el -> ledger-test.el
+    ledger-texi.el -> ledger-texi.el
+    ledger-xact.el -> ledger-xact.el
+Created ledger-mode-20230508.1002.tar containing:
+  ledger-mode-20230508.1002/
+  ledger-mode-20230508.1002/ledger-check.el
+  ledger-mode-20230508.1002/ledger-commodities.el
+  ledger-mode-20230508.1002/ledger-complete.el
+  ledger-mode-20230508.1002/ledger-context.el
+  ledger-mode-20230508.1002/ledger-exec.el
+  ledger-mode-20230508.1002/ledger-flymake.el
+  ledger-mode-20230508.1002/ledger-fontify.el
+  ledger-mode-20230508.1002/ledger-fonts.el
+  ledger-mode-20230508.1002/ledger-init.el
+  ledger-mode-20230508.1002/ledger-mode-pkg.el
+  ledger-mode-20230508.1002/ledger-mode.el
+  ledger-mode-20230508.1002/ledger-navigate.el
+  ledger-mode-20230508.1002/ledger-occur.el
+  ledger-mode-20230508.1002/ledger-post.el
+  ledger-mode-20230508.1002/ledger-reconcile.el
+  ledger-mode-20230508.1002/ledger-regex.el
+  ledger-mode-20230508.1002/ledger-report.el
+  ledger-mode-20230508.1002/ledger-schedule.el
+  ledger-mode-20230508.1002/ledger-sort.el
+  ledger-mode-20230508.1002/ledger-state.el
+  ledger-mode-20230508.1002/ledger-test.el
+  ledger-mode-20230508.1002/ledger-texi.el
+  ledger-mode-20230508.1002/ledger-xact.el
+Built ledger-mode in 5.322s, finished at 2023-06-02T22:13:53+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  201 Jun  2 22:13 packages/ledger-mode-20230508.1002.entry
+252K -rw-r--r-- 1 root root 250K Jun  2 22:13 packages/ledger-mode-20230508.1002.tar

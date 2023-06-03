@@ -1,1 +1,21 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: nntwitter
+Fetcher: github
+Source:  https://github.com/dickmao/nntwitter.git
+
+Updating /mnt/store/melpa/working/nntwitter/
+Checking out 8189100aa071386665b8616c6b57067383abd47b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nntwitter/
+  to /tmp/nntwitterhX7b4Z/nntwitter-20230323.1458
+  ! lisp/nntwitter-api.el -> nntwitter-api.el
+  ! lisp/nntwitter-pkg.el -> nntwitter-pkg.el
+  ! lisp/nntwitter.el -> nntwitter.el
+Created nntwitter-20230323.1458.tar containing:
+  nntwitter-20230323.1458/
+  nntwitter-20230323.1458/nntwitter-api.el
+  nntwitter-20230323.1458/nntwitter-pkg.el
+  nntwitter-20230323.1458/nntwitter.el
+Built nntwitter in 5.841s, finished at 2023-06-02T22:24:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 342 Jun  2 22:23 packages/nntwitter-20230323.1458.entry
+ 80K -rw-r--r-- 1 root root 80K Jun  2 22:23 packages/nntwitter-20230323.1458.tar

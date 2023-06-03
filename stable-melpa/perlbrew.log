@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: perlbrew
+Fetcher: github
+Source:  https://github.com/kentaro/perlbrew.el.git
+
+Updating /mnt/store/melpa/working/perlbrew/
+Checking out 3a3406c3307c92aa30f9400d430925c434a3b6f0
+Built perlbrew in 4.527s, finished at 2023-06-02T22:33:55+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Jun  2 22:33 packages/perlbrew-20161109.709.el
+4.0K -rw-r--r-- 1 root root  378 Jun  2 22:33 packages/perlbrew-20161109.709.entry

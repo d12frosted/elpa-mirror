@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: seti-theme
+Fetcher: github
+Source:  https://github.com/caisah/seti-theme.git
+
+Updating /mnt/store/melpa/working/seti-theme/
+Checking out 9d76db0b91d4f574dd96ac80fad41da35bffa109
+Built seti-theme in 8.013s, finished at 2023-06-02T22:45:01+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.9K Jun  2 22:45 packages/seti-theme-20190201.1848.el
+4.0K -rw-r--r-- 1 root root  460 Jun  2 22:45 packages/seti-theme-20190201.1848.entry

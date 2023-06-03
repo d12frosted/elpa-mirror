@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: evil-numbers
+Fetcher: github
+Source:  https://github.com/juliapath/evil-numbers.git
+
+Updating /mnt/store/melpa/working/evil-numbers/
+Checking out 8724645c84dc310f6155eec452913bb79c0c44b3
+Built evil-numbers in 5.571s, finished at 2023-06-02T21:47:20+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K Jun  2 21:47 packages/evil-numbers-20230117.53.el
+4.0K -rw-r--r-- 1 root root 473 Jun  2 21:47 packages/evil-numbers-20230117.53.entry

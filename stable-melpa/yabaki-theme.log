@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: yabaki-theme
+Fetcher: github
+Source:  https://github.com/seamacs/yabaki-theme.git
+
+Updating /mnt/store/melpa/working/yabaki-theme/
+Checking out 5face6a1194b039e09fe19238aa5db05450d7df1
+Built yabaki-theme in 8.420s, finished at 2023-06-02T23:00:58+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jun  2 23:00 packages/yabaki-theme-20230327.630.el
+4.0K -rw-r--r-- 1 root root  410 Jun  2 23:00 packages/yabaki-theme-20230327.630.entry

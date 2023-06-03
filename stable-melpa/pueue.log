@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pueue
+Fetcher: github
+Source:  https://github.com/xFA25E/pueue.git
+
+Updating /mnt/store/melpa/working/pueue/
+Checking out 386e43d46cbf68470d040b422061ac2ba1629749
+Built pueue in 6.088s, finished at 2023-06-02T22:38:28+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 29K Jun  2 22:38 packages/pueue-20230219.1558.el
+4.0K -rw-r--r-- 1 root root 451 Jun  2 22:38 packages/pueue-20230219.1558.entry

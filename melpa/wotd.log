@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: wotd
+Fetcher: github
+Source:  https://github.com/cute-jumper/emacs-word-of-the-day.git
+
+Updating /mnt/store/melpa/working/wotd/
+Checking out d2937a3d91e014f8028a1f33d21c18cc0b065a64
+Built wotd in 4.756s, finished at 2023-06-02T23:00:07+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  2 23:00 packages/wotd-20170328.1948.el
+4.0K -rw-r--r-- 1 root root 399 Jun  2 23:00 packages/wotd-20170328.1948.entry

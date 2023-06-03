@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: json-rpc-server
+Fetcher: github
+Source:  https://github.com/jcaw/json-rpc-server.el.git
+
+Updating /mnt/store/melpa/working/json-rpc-server/
+Checking out 349e1f4722474bf1f75dbc8eb9d9c59d790b8083
+Built json-rpc-server in 5.608s, finished at 2023-06-02T22:11:12+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:11 packages/json-rpc-server-20220205.1504.el
+4.0K -rw-r--r-- 1 root root 414 Jun  2 22:11 packages/json-rpc-server-20220205.1504.entry

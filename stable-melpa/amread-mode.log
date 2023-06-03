@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: amread-mode
+Fetcher: git
+Source:  https://repo.or.cz/amread-mode.git
+
+Updating /mnt/store/melpa/working/amread-mode/
+Checking out b8622ae7b05f27d6f84c4e5d724bc79163ba9ce3
+Built amread-mode in 6.241s, finished at 2023-06-02T21:21:30+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  2 21:21 packages/amread-mode-20230409.1018.el
+4.0K -rw-r--r-- 1 root root 343 Jun  2 21:21 packages/amread-mode-20230409.1018.entry

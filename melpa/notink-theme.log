@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: notink-theme
+Fetcher: github
+Source:  https://github.com/MetroWind/notink-theme.git
+
+Updating /mnt/store/melpa/working/notink-theme/
+Checking out 6115857fe75c1adbbce4165a2b77a11a271aaf31
+Built notink-theme in 6.065s, finished at 2023-06-02T22:24:26+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  2 22:24 packages/notink-theme-20220114.1955.el
+4.0K -rw-r--r-- 1 root root 447 Jun  2 22:24 packages/notink-theme-20220114.1955.entry

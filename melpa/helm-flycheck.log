@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-flycheck
+Fetcher: github
+Source:  https://github.com/yasuyk/helm-flycheck.git
+
+Updating /mnt/store/melpa/working/helm-flycheck/
+Checking out a15e62a6432c165c4f2c17388686873383400d7d
+Built helm-flycheck in 4.802s, finished at 2023-06-02T22:01:43+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jun  2 22:01 packages/helm-flycheck-20160710.829.el
+4.0K -rw-r--r-- 1 root root  474 Jun  2 22:01 packages/helm-flycheck-20160710.829.entry

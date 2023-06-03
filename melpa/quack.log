@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: quack
+Fetcher: github
+Source:  https://github.com/emacsmirror/quack.git
+
+Updating /mnt/store/melpa/working/quack/
+Checking out 2146805ce2b5a9b155d73929986f11e713787e26
+Built quack in 5.745s, finished at 2023-06-02T22:39:41+0000
+ ✓ Success:
+196K -rw-r--r-- 1 root root 195K Jun  2 22:39 packages/quack-20181106.1301.el
+4.0K -rw-r--r-- 1 root root  160 Jun  2 22:39 packages/quack-20181106.1301.entry

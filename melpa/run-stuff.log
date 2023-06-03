@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: run-stuff
+Fetcher: codeberg
+Source:  https://codeberg.org/ideasman42/emacs-run-stuff.git
+
+Updating /mnt/store/melpa/working/run-stuff/
+Checking out 65afd896896a68e6262187745f5e3ac5145ba1ed
+Built run-stuff in 6.057s, finished at 2023-06-02T22:43:01+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 22:42 packages/run-stuff-20230601.19.el
+4.0K -rw-r--r-- 1 root root 509 Jun  2 22:42 packages/run-stuff-20230601.19.entry

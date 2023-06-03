@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-compile
+Fetcher: github
+Source:  https://github.com/TxGVNN/ob-compile.git
+
+Updating /mnt/store/melpa/working/ob-compile/
+Checking out 9a16b3dd0f467c091e91944b90a2ca3d646d6617
+Built ob-compile in 5.565s, finished at 2023-06-02T22:25:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  2 22:25 packages/ob-compile-20220830.315.el
+4.0K -rw-r--r-- 1 root root  475 Jun  2 22:25 packages/ob-compile-20220830.315.entry

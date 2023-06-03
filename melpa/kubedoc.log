@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: kubedoc
+Fetcher: github
+Source:  https://github.com/r0bobo/kubedoc.el.git
+
+Updating /mnt/store/melpa/working/kubedoc/
+Checking out c07e356326b6f373694d43369c7110c2873e24cd
+Built kubedoc in 4.575s, finished at 2023-06-02T22:12:55+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 22:12 packages/kubedoc-20230513.2014.el
+4.0K -rw-r--r-- 1 root root 440 Jun  2 22:12 packages/kubedoc-20230513.2014.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fasd
+Fetcher: git
+Source:  https://framagit.org/steckerhalter/emacs-fasd.git
+
+Updating /mnt/store/melpa/working/fasd/
+Checking out c1d92553f33ebb018135c698db1a6d7f86731a26
+Built fasd in 8.122s, finished at 2023-06-02T21:49:39+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  2 21:49 packages/fasd-20210104.738.el
+4.0K -rw-r--r-- 1 root root  383 Jun  2 21:49 packages/fasd-20210104.738.entry

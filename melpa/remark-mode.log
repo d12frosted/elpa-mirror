@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: remark-mode
+Fetcher: github
+Source:  https://github.com/torgeir/remark-mode.el.git
+
+Updating /mnt/store/melpa/working/remark-mode/
+Checking out 5a2a702d2af8fd007ae02237d5824356d0c1acc6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/remark-mode/
+  to /tmp/remark-modeabnNDP/remark-mode-20221123.2127
+    remark-mode.el -> remark-mode.el
+    remark.html -> remark.html
+    server.js -> server.js
+Created remark-mode-20221123.2127.tar containing:
+  remark-mode-20221123.2127/
+  remark-mode-20221123.2127/remark-mode-pkg.el
+  remark-mode-20221123.2127/remark-mode.el
+  remark-mode-20221123.2127/remark.html
+  remark-mode-20221123.2127/server.js
+Built remark-mode in 4.266s, finished at 2023-06-02T22:41:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 386 Jun  2 22:41 packages/remark-mode-20221123.2127.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:41 packages/remark-mode-20221123.2127.tar

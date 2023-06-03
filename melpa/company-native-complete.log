@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: company-native-complete
+Fetcher: github
+Source:  https://github.com/CeleritasCelery/emacs-native-shell-complete.git
+
+Updating /mnt/store/melpa/working/company-native-complete/
+Checking out 1bf5e24069e543953602a3aee67336d8e0e7d817
+Built company-native-complete in 6.902s, finished at 2023-06-02T21:31:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jun  2 21:31 packages/company-native-complete-20220103.1622.el
+4.0K -rw-r--r-- 1 root root  554 Jun  2 21:31 packages/company-native-complete-20220103.1622.entry

@@ -1,1 +1,45 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: license-snippets
+Fetcher: github
+Source:  https://github.com/sei40kr/license-snippets.git
+
+Updating /mnt/store/melpa/working/license-snippets/
+Checking out a89988b81604fd23c43746912215770a4b861989
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/license-snippets/
+  to /tmp/license-snippets3F7BHc/license-snippets-20201117.1619
+    license-snippets.el -> license-snippets.el
+    snippets => snippets
+Created license-snippets-20201117.1619.tar containing:
+  license-snippets-20201117.1619/
+  license-snippets-20201117.1619/license-snippets-pkg.el
+  license-snippets-20201117.1619/license-snippets.el
+  license-snippets-20201117.1619/snippets/
+  license-snippets-20201117.1619/snippets/text-mode/
+  license-snippets-20201117.1619/snippets/text-mode/agpl3
+  license-snippets-20201117.1619/snippets/text-mode/apache
+  license-snippets-20201117.1619/snippets/text-mode/bsd2
+  license-snippets-20201117.1619/snippets/text-mode/bsd3
+  license-snippets-20201117.1619/snippets/text-mode/cc0
+  license-snippets-20201117.1619/snippets/text-mode/ccby
+  license-snippets-20201117.1619/snippets/text-mode/ccbync
+  license-snippets-20201117.1619/snippets/text-mode/ccbyncnd
+  license-snippets-20201117.1619/snippets/text-mode/ccbyncsa
+  license-snippets-20201117.1619/snippets/text-mode/ccbynd
+  license-snippets-20201117.1619/snippets/text-mode/ccbysa
+  license-snippets-20201117.1619/snippets/text-mode/cddl
+  license-snippets-20201117.1619/snippets/text-mode/epl
+  license-snippets-20201117.1619/snippets/text-mode/gpl2
+  license-snippets-20201117.1619/snippets/text-mode/gpl3
+  license-snippets-20201117.1619/snippets/text-mode/isc
+  license-snippets-20201117.1619/snippets/text-mode/lgpl
+  license-snippets-20201117.1619/snippets/text-mode/mit
+  license-snippets-20201117.1619/snippets/text-mode/mpl
+  license-snippets-20201117.1619/snippets/text-mode/unlicense
+  license-snippets-20201117.1619/snippets/text-mode/wtfpl
+  license-snippets-20201117.1619/snippets/text-mode/wtfpl-header-warranty
+  license-snippets-20201117.1619/snippets/text-mode/x11
+  license-snippets-20201117.1619/snippets/text-mode/zlib
+Built license-snippets in 4.602s, finished at 2023-06-02T22:14:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  485 Jun  2 22:14 packages/license-snippets-20201117.1619.entry
+312K -rw-r--r-- 1 root root 310K Jun  2 22:14 packages/license-snippets-20201117.1619.tar

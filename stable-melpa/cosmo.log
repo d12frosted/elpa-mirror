@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: cosmo
+Fetcher: gitlab
+Source:  https://gitlab.com/montanari/cosmo-el.git
+
+Updating /mnt/store/melpa/working/cosmo/
+Checking out dd83b09a49a2843606b28279b674b2207040b36b
+Built cosmo in 5.071s, finished at 2023-06-02T21:33:16+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  2 21:33 packages/cosmo-20170922.744.el
+4.0K -rw-r--r-- 1 root root 399 Jun  2 21:33 packages/cosmo-20170922.744.entry

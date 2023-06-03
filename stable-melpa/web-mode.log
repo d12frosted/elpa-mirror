@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: web-mode
+Fetcher: github
+Source:  https://github.com/fxbois/web-mode.git
+
+Updating /mnt/store/melpa/working/web-mode/
+Checking out 57856ba64b9382811b35df0d9ab0a24aede0c1f0
+Built web-mode in 9.326s, finished at 2023-06-02T22:58:05+0000
+ ✓ Success:
+568K -rw-r--r-- 1 root root 566K Jun  2 22:58 packages/web-mode-20230329.601.el
+4.0K -rw-r--r-- 1 root root  422 Jun  2 22:58 packages/web-mode-20230329.601.entry

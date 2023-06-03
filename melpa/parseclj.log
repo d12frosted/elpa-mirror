@@ -1,1 +1,26 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: parseclj
+Fetcher: github
+Source:  https://github.com/clojure-emacs/parseclj.git
+
+Updating /mnt/store/melpa/working/parseclj/
+Checking out 4d0e780e00f1828b00c43099e6eebc6582998f72
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/parseclj/
+  to /tmp/parsecljGgZqSg/parseclj-20220422.936
+    parseclj-alist.el -> parseclj-alist.el
+    parseclj-ast.el -> parseclj-ast.el
+    parseclj-lex.el -> parseclj-lex.el
+    parseclj-parser.el -> parseclj-parser.el
+    parseclj.el -> parseclj.el
+Created parseclj-20220422.936.tar containing:
+  parseclj-20220422.936/
+  parseclj-20220422.936/parseclj-alist.el
+  parseclj-20220422.936/parseclj-ast.el
+  parseclj-20220422.936/parseclj-lex.el
+  parseclj-20220422.936/parseclj-parser.el
+  parseclj-20220422.936/parseclj-pkg.el
+  parseclj-20220422.936/parseclj.el
+Built parseclj in 4.662s, finished at 2023-06-02T22:33:13+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 394 Jun  2 22:33 packages/parseclj-20220422.936.entry
+ 60K -rw-r--r-- 1 root root 60K Jun  2 22:33 packages/parseclj-20220422.936.tar

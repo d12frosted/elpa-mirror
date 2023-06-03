@@ -1,1 +1,32 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: bui
+Fetcher: github
+Source:  https://github.com/alezost/bui.el.git
+
+Updating /mnt/store/melpa/working/bui/
+Checking out ab62fcefc3c7ddf5e5d64c18045148a3c297592d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bui/
+  to /tmp/buiYFeOXJ/bui-20210108.1141
+    bui-button.el -> bui-button.el
+    bui-core.el -> bui-core.el
+    bui-entry.el -> bui-entry.el
+    bui-history.el -> bui-history.el
+    bui-info.el -> bui-info.el
+    bui-list.el -> bui-list.el
+    bui-utils.el -> bui-utils.el
+    bui.el -> bui.el
+Created bui-20210108.1141.tar containing:
+  bui-20210108.1141/
+  bui-20210108.1141/bui-button.el
+  bui-20210108.1141/bui-core.el
+  bui-20210108.1141/bui-entry.el
+  bui-20210108.1141/bui-history.el
+  bui-20210108.1141/bui-info.el
+  bui-20210108.1141/bui-list.el
+  bui-20210108.1141/bui-pkg.el
+  bui-20210108.1141/bui-utils.el
+  bui-20210108.1141/bui.el
+Built bui in 5.967s, finished at 2023-06-02T21:26:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  427 Jun  2 21:26 packages/bui-20210108.1141.entry
+112K -rw-r--r-- 1 root root 110K Jun  2 21:26 packages/bui-20210108.1141.tar

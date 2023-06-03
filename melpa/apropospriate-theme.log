@@ -1,1 +1,23 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: apropospriate-theme
+Fetcher: github
+Source:  https://github.com/waymondo/apropospriate-theme.git
+
+Updating /mnt/store/melpa/working/apropospriate-theme/
+Checking out 9fd52d4b0dec6e805097e7f216db47dc37bc3abc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/apropospriate-theme/
+  to /tmp/apropospriate-themeePoq0L/apropospriate-theme-20230507.545
+    apropospriate-dark-theme.el -> apropospriate-dark-theme.el
+    apropospriate-light-theme.el -> apropospriate-light-theme.el
+    apropospriate-theme-pkg.el -> apropospriate-theme-pkg.el
+    apropospriate-theme.el -> apropospriate-theme.el
+Created apropospriate-theme-20230507.545.tar containing:
+  apropospriate-theme-20230507.545/
+  apropospriate-theme-20230507.545/apropospriate-dark-theme.el
+  apropospriate-theme-20230507.545/apropospriate-light-theme.el
+  apropospriate-theme-20230507.545/apropospriate-theme-pkg.el
+  apropospriate-theme-20230507.545/apropospriate-theme.el
+Built apropospriate-theme in 5.060s, finished at 2023-06-02T21:22:16+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 404 Jun  2 21:22 packages/apropospriate-theme-20230507.545.entry
+ 60K -rw-r--r-- 1 root root 60K Jun  2 21:22 packages/apropospriate-theme-20230507.545.tar

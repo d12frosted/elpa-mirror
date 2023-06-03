@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: flycheck-ameba
+Fetcher: github
+Source:  https://github.com/crystal-ameba/ameba.el.git
+
+Updating /mnt/store/melpa/working/flycheck-ameba/
+Checking out b129dbd8e4c43077521d1c77cc94bb3d52d5ee6d
+Built flycheck-ameba in 5.189s, finished at 2023-06-02T21:51:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.9K Jun  2 21:51 packages/flycheck-ameba-20191226.1011.el
+4.0K -rw-r--r-- 1 root root  294 Jun  2 21:51 packages/flycheck-ameba-20191226.1011.entry

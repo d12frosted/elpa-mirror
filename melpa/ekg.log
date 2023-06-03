@@ -1,1 +1,33 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ekg
+Fetcher: github
+Source:  https://github.com/ahyatt/ekg.git
+
+Updating /mnt/store/melpa/working/ekg/
+Checking out da6a3b3073374e868f157fe7dc24be7b889af8fd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ekg/
+  to /tmp/ekgpfN765/ekg-20230519.1717
+    ekg-embedding.el -> ekg-embedding.el
+    ekg-logseq.el -> ekg-logseq.el
+    ekg-org-roam.el -> ekg-org-roam.el
+    ekg-test-utils.el -> ekg-test-utils.el
+    ekg.el -> ekg.el
+  ! doc/doclicense.texi -> doclicense.texi
+  ! doc/ekg.texi -> ekg.texi
+Generating /tmp/ekgpfN765/ekg-20230519.1717/doclicense.info
+Generating /tmp/ekgpfN765/ekg-20230519.1717/ekg.info
+Created ekg-20230519.1717.tar containing:
+  ekg-20230519.1717/
+  ekg-20230519.1717/dir
+  ekg-20230519.1717/doclicense.info
+  ekg-20230519.1717/ekg-embedding.el
+  ekg-20230519.1717/ekg-logseq.el
+  ekg-20230519.1717/ekg-org-roam.el
+  ekg-20230519.1717/ekg-pkg.el
+  ekg-20230519.1717/ekg-test-utils.el
+  ekg-20230519.1717/ekg.el
+  ekg-20230519.1717/ekg.info
+Built ekg in 36.241s, finished at 2023-06-02T21:42:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  469 Jun  2 21:42 packages/ekg-20230519.1717.entry
+192K -rw-r--r-- 1 root root 190K Jun  2 21:42 packages/ekg-20230519.1717.tar

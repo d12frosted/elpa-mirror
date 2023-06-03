@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-nix
+Fetcher: codeberg
+Source:  https://codeberg.org/theesm/ob-nix.git
+
+Updating /mnt/store/melpa/working/ob-nix/
+Checking out 76d71b37fb031f25bd52ff9c98b29292ebe0424e
+Built ob-nix in 5.462s, finished at 2023-06-02T22:25:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jun  2 22:25 packages/ob-nix-20221224.334.el
+4.0K -rw-r--r-- 1 root root  403 Jun  2 22:25 packages/ob-nix-20221224.334.entry

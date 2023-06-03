@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: readline-complete
+Fetcher: github
+Source:  https://github.com/monsanto/readline-complete.el.git
+
+Updating /mnt/store/melpa/working/readline-complete/
+Checking out 30c020c37b2741160cc37e656e13c85d826a0ebf
+Built readline-complete in 4.433s, finished at 2023-06-02T22:40:36+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  2 22:40 packages/readline-complete-20150708.1437.el
+4.0K -rw-r--r-- 1 root root 370 Jun  2 22:40 packages/readline-complete-20150708.1437.entry

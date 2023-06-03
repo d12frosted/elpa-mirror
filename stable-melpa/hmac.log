@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: hmac
+Fetcher: github
+Source:  https://github.com/grimnebulin/emacs-hmac.git
+
+Updating /mnt/store/melpa/working/hmac/
+Checking out f2b99a9a10becfff207cf9418c6dce78364b1a4b
+Built hmac in 4.451s, finished at 2023-06-02T22:05:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  2 22:05 packages/hmac-20201004.1819.el
+4.0K -rw-r--r-- 1 root root  325 Jun  2 22:05 packages/hmac-20201004.1819.entry

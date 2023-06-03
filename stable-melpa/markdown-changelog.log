@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: markdown-changelog
+Fetcher: github
+Source:  https://github.com/plandes/markdown-changelog.git
+
+Updating /mnt/store/melpa/working/markdown-changelog/
+Checking out 1a2c3a4c3e4196f2b5dbb145b01b4bc435a93a96
+Built markdown-changelog in 5.065s, finished at 2023-06-02T22:18:27+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jun  2 22:18 packages/markdown-changelog-20200120.2253.el
+4.0K -rw-r--r-- 1 root root  462 Jun  2 22:18 packages/markdown-changelog-20200120.2253.entry

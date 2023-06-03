@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: mkdown
+Fetcher: github
+Source:  https://github.com/ajtulloch/mkdown.el.git
+
+Updating /mnt/store/melpa/working/mkdown/
+Checking out 8e23de82719af6c5b53b52b3308a02b3a1fb872e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mkdown/
+  to /tmp/mkdown0FGGtg/mkdown-20140517.1418
+    mkdown.el -> mkdown.el
+    mkdown.css -> mkdown.css
+Created mkdown-20140517.1418.tar containing:
+  mkdown-20140517.1418/
+  mkdown-20140517.1418/mkdown-pkg.el
+  mkdown-20140517.1418/mkdown.css
+  mkdown-20140517.1418/mkdown.el
+Built mkdown in 4.615s, finished at 2023-06-02T22:20:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  363 Jun  2 22:20 packages/mkdown-20140517.1418.entry
+140K -rw-r--r-- 1 root root 140K Jun  2 22:20 packages/mkdown-20140517.1418.tar

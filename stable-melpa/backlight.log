@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: backlight
+Fetcher: github
+Source:  https://github.com/mschuldt/backlight.el.git
+
+Updating /mnt/store/melpa/working/backlight/
+Checking out b6826a60440d8bf440618e3cdafb40158de920e6
+Built backlight in 4.368s, finished at 2023-06-02T21:24:00+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Jun  2 21:23 packages/backlight-20210513.129.el
+4.0K -rw-r--r-- 1 root root  474 Jun  2 21:23 packages/backlight-20210513.129.entry

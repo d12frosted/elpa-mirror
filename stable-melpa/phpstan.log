@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: phpstan
+Fetcher: github
+Source:  https://github.com/emacs-php/phpstan.el.git
+
+Updating /mnt/store/melpa/working/phpstan/
+Checking out 2dc25cb2f3d83484ea0eb063c9ffca8148828a2b
+Built phpstan in 5.414s, finished at 2023-06-02T22:34:35+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  2 22:34 packages/phpstan-20230417.1142.el
+4.0K -rw-r--r-- 1 root root 481 Jun  2 22:34 packages/phpstan-20230417.1142.entry

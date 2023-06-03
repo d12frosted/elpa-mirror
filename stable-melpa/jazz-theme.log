@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: jazz-theme
+Fetcher: github
+Source:  https://github.com/donderom/jazz-theme.git
+
+Updating /mnt/store/melpa/working/jazz-theme/
+Checking out d67e09f320d03ace79a05bd28f967b1ac61f2348
+Built jazz-theme in 6.000s, finished at 2023-06-02T22:10:01+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 42K Jun  2 22:09 packages/jazz-theme-20230524.1145.el
+4.0K -rw-r--r-- 1 root root 409 Jun  2 22:09 packages/jazz-theme-20230524.1145.entry

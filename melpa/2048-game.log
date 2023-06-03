@@ -1,1 +1,17 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: 2048-game
+Fetcher: hg
+Source:  https://hg.sr.ht/~zck/game-2048
+
+Updating /mnt/store/melpa/working/2048-game/
+Checking out aad4a590ea91f9a3256233b9b345e9159c6993f2
+
+Command '' exited with non-zero exit-code: 255
+
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command exited with non-zero exit-code: 255

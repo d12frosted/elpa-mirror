@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: lockfile-mode
+Fetcher: github
+Source:  https://github.com/preetpalS/emacs-lockfile-mode.git
+
+Updating /mnt/store/melpa/working/lockfile-mode/
+Checking out 496b6035716df0582f879f9488f296947cabead2
+Built lockfile-mode in 4.713s, finished at 2023-06-02T22:15:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.4K Jun  2 22:15 packages/lockfile-mode-20170625.507.el
+4.0K -rw-r--r-- 1 root root  328 Jun  2 22:15 packages/lockfile-mode-20170625.507.entry

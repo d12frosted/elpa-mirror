@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: wasp-mode
+Fetcher: github
+Source:  https://github.com/thechampagne/wasp-mode.git
+
+Updating /mnt/store/melpa/working/wasp-mode/
+Checking out 76198cdd5f0ece3770c3a586115caea3ea613169
+Built wasp-mode in 5.272s, finished at 2023-06-02T22:57:44+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Jun  2 22:57 packages/wasp-mode-20230424.1307.el
+4.0K -rw-r--r-- 1 root root  377 Jun  2 22:57 packages/wasp-mode-20230424.1307.entry

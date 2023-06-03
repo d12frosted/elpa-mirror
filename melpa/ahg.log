@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ahg
+Fetcher: git
+Source:  https://bitbucket.org/agriggio/ahg
+
+Updating /mnt/store/melpa/working/ahg/
+Checking out 8f0dc52dedcf20e1662c964c6577cfb737381505
+Built ahg in 5.031s, finished at 2023-06-02T21:20:32+0000
+ ✓ Success:
+212K -rw-r--r-- 1 root root 209K Jun  2 21:20 packages/ahg-20221013.916.el
+4.0K -rw-r--r-- 1 root root  436 Jun  2 21:20 packages/ahg-20221013.916.entry

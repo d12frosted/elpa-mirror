@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-css-scss
+Fetcher: github
+Source:  https://github.com/emacsorphanage/helm-css-scss.git
+
+Updating /mnt/store/melpa/working/helm-css-scss/
+Checking out 2169d83d8fdc661241df208cb3235112735d936e
+Built helm-css-scss in 4.719s, finished at 2023-06-02T22:01:20+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Jun  2 22:01 packages/helm-css-scss-20230522.1113.el
+4.0K -rw-r--r-- 1 root root 508 Jun  2 22:01 packages/helm-css-scss-20230522.1113.entry

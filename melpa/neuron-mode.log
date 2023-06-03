@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: neuron-mode
+Fetcher: github
+Source:  https://github.com/felko/neuron-mode.git
+
+Updating /mnt/store/melpa/working/neuron-mode/
+Checking out 33bc73f9a2ef1c6855bb12fec08e15a8cf4a6c6e
+Built neuron-mode in 9.870s, finished at 2023-06-02T22:23:15+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 51K Jun  2 22:23 packages/neuron-mode-20220718.827.el
+4.0K -rw-r--r-- 1 root root 556 Jun  2 22:23 packages/neuron-mode-20220718.827.entry

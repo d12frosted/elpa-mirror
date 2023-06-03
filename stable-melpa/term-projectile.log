@@ -1,1 +1,12 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: term-projectile
+Fetcher: github
+Source:  https://github.com/IvanMalison/term-manager.git
+
+Updating /mnt/store/melpa/working/term-projectile/
+Checking out 2f873bd7e9c0a275f84fc08dfdd9c0f2426e2b08
+Built term-projectile in 5.799s, finished at 2023-06-02T22:52:09+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Jun  1 19:19 packages/term-projectile-20190307.400.el
+4.0K -rw-r--r-- 1 root root  550 Jun  1 19:19 packages/term-projectile-20190307.400.entry
+8.0K -rw-r--r-- 1 root root 5.5K Jun  2 22:52 packages/term-projectile-20230602.2050.el
+4.0K -rw-r--r-- 1 root root  551 Jun  2 22:52 packages/term-projectile-20230602.2050.entry

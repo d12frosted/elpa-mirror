@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: rib-mode
+Fetcher: github
+Source:  https://github.com/blezek/rib-mode.git
+
+Updating /mnt/store/melpa/working/rib-mode/
+Checking out 97470158784c3c212e22e2c20b8471ee65ba59af
+Built rib-mode in 5.156s, finished at 2023-06-02T22:42:04+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Jun  2 22:42 packages/rib-mode-20170726.1448.el
+4.0K -rw-r--r-- 1 root root  500 Jun  2 22:42 packages/rib-mode-20170726.1448.entry

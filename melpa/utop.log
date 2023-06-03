@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: utop
+Fetcher: github
+Source:  https://github.com/diml/utop.git
+
+Updating /mnt/store/melpa/working/utop/
+Checking out ba0e2c7fffab33cf78e2f6e4c346f65e7c0949ae
+Built utop in 5.221s, finished at 2023-06-02T22:56:00+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 46K Jun  2 22:55 packages/utop-20230421.1019.el
+4.0K -rw-r--r-- 1 root root 442 Jun  2 22:55 packages/utop-20230421.1019.entry

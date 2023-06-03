@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: cuda-mode
+Fetcher: github
+Source:  https://github.com/chachi/cuda-mode.git
+
+Updating /mnt/store/melpa/working/cuda-mode/
+Checking out 7f593518fd135fc6af994024bcb47986dfa502d2
+Built cuda-mode in 10.459s, finished at 2023-06-02T21:35:13+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  2 21:35 packages/cuda-mode-20201013.2230.el
+4.0K -rw-r--r-- 1 root root 381 Jun  2 21:35 packages/cuda-mode-20201013.2230.entry

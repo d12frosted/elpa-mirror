@@ -1,1 +1,28 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: hl-indent-scope
+Fetcher: codeberg
+Source:  https://codeberg.org/ideasman42/emacs-hl-indent-scope.git
+
+Updating /mnt/store/melpa/working/hl-indent-scope/
+Checking out c71bc7ef421a25f27993d695d230b03e340d55f4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hl-indent-scope/
+  to /tmp/hl-indent-scopeSniQ0w/hl-indent-scope-20230521.1312
+    hl-indent-scope-preset-c++-mode.el -> hl-indent-scope-preset-c++-mode.el
+    hl-indent-scope-preset-c-mode.el -> hl-indent-scope-preset-c-mode.el
+    hl-indent-scope-preset-cmake-mode.el -> hl-indent-scope-preset-cmake-mode.el
+    hl-indent-scope-preset-glsl-mode.el -> hl-indent-scope-preset-glsl-mode.el
+    hl-indent-scope-preset-python-mode.el -> hl-indent-scope-preset-python-mode.el
+    hl-indent-scope.el -> hl-indent-scope.el
+Created hl-indent-scope-20230521.1312.tar containing:
+  hl-indent-scope-20230521.1312/
+  hl-indent-scope-20230521.1312/hl-indent-scope-pkg.el
+  hl-indent-scope-20230521.1312/hl-indent-scope-preset-c++-mode.el
+  hl-indent-scope-20230521.1312/hl-indent-scope-preset-c-mode.el
+  hl-indent-scope-20230521.1312/hl-indent-scope-preset-cmake-mode.el
+  hl-indent-scope-20230521.1312/hl-indent-scope-preset-glsl-mode.el
+  hl-indent-scope-20230521.1312/hl-indent-scope-preset-python-mode.el
+  hl-indent-scope-20230521.1312/hl-indent-scope.el
+Built hl-indent-scope in 5.586s, finished at 2023-06-02T22:05:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 440 Jun  2 22:05 packages/hl-indent-scope-20230521.1312.entry
+ 72K -rw-r--r-- 1 root root 70K Jun  2 22:05 packages/hl-indent-scope-20230521.1312.tar

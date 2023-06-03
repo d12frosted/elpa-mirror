@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: metrics-tracker
+Fetcher: github
+Source:  https://github.com/ianxm/emacs-tracker.git
+
+Updating /mnt/store/melpa/working/metrics-tracker/
+Checking out ace35dfb6d00749a24993f3fb8f838938826b45e
+Built metrics-tracker in 4.805s, finished at 2023-06-02T22:19:31+0000
+ ✓ Success:
+ 72K -rw-r--r-- 1 root root 72K Jun  2 22:19 packages/metrics-tracker-20221030.42.el
+4.0K -rw-r--r-- 1 root root 469 Jun  2 22:19 packages/metrics-tracker-20221030.42.entry

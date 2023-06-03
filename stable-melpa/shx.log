@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: shx
+Fetcher: github
+Source:  https://github.com/riscy/shx-for-emacs.git
+
+Updating /mnt/store/melpa/working/shx/
+Checking out b99d16f36bc278d668d8428c4bc9af77064c336a
+Built shx in 5.196s, finished at 2023-06-02T22:46:01+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 46K Jun  2 22:46 packages/shx-20221224.2230.el
+4.0K -rw-r--r-- 1 root root 473 Jun  2 22:46 packages/shx-20221224.2230.entry

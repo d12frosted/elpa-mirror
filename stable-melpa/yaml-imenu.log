@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: yaml-imenu
+Fetcher: github
+Source:  https://github.com/knu/yaml-imenu.el.git
+
+Updating /mnt/store/melpa/working/yaml-imenu/
+Checking out c1fbba8b03a7bef4fc2b87404914fa9c6eb67b55
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yaml-imenu/
+  to /tmp/yaml-imenu54lWfj/yaml-imenu-20220406.1703
+    yaml-imenu.el -> yaml-imenu.el
+    parse_yaml.rb -> parse_yaml.rb
+Created yaml-imenu-20220406.1703.tar containing:
+  yaml-imenu-20220406.1703/
+  yaml-imenu-20220406.1703/parse_yaml.rb
+  yaml-imenu-20220406.1703/yaml-imenu-pkg.el
+  yaml-imenu-20220406.1703/yaml-imenu.el
+Built yaml-imenu in 4.751s, finished at 2023-06-02T23:01:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 522 Jun  2 23:01 packages/yaml-imenu-20220406.1703.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 23:01 packages/yaml-imenu-20220406.1703.tar

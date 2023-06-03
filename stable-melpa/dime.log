@@ -1,1 +1,24 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dime
+Fetcher: github
+Source:  https://github.com/dylan-lang/dylan-emacs-support.git
+
+Updating /mnt/store/melpa/working/dime/
+Checking out d85409dc3cba57a390ca85da95822f8078ecbfa2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dime/
+  to /tmp/dimeptGNhB/dime-20210613.1431
+    dime-browse.el -> dime-browse.el
+    dime-note-tree.el -> dime-note-tree.el
+    dime-repl.el -> dime-repl.el
+    dime.el -> dime.el
+Created dime-20210613.1431.tar containing:
+  dime-20210613.1431/
+  dime-20210613.1431/dime-browse.el
+  dime-20210613.1431/dime-note-tree.el
+  dime-20210613.1431/dime-pkg.el
+  dime-20210613.1431/dime-repl.el
+  dime-20210613.1431/dime.el
+Built dime in 4.641s, finished at 2023-06-02T21:37:23+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  211 Jun  2 21:37 packages/dime-20210613.1431.entry
+352K -rw-r--r-- 1 root root 350K Jun  2 21:37 packages/dime-20210613.1431.tar

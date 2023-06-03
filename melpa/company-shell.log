@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: company-shell
+Fetcher: github
+Source:  https://github.com/Alexander-Miller/company-shell.git
+
+Updating /mnt/store/melpa/working/company-shell/
+Checking out 5f959a63a6e66eb0cbdac3168cad523a62cc2ccd
+Built company-shell in 5.707s, finished at 2023-06-02T21:32:13+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  2 21:32 packages/company-shell-20230106.1532.el
+4.0K -rw-r--r-- 1 root root 548 Jun  2 21:32 packages/company-shell-20230106.1532.entry

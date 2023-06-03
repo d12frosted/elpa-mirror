@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pushover
+Fetcher: git
+Source:  https://git.flintfam.org/swf-projects/emacs-pushover.git
+
+Updating /mnt/store/melpa/working/pushover/
+Checking out bbe3ac8df3c532a72da4552615af960b8a577588
+Built pushover in 4.232s, finished at 2023-06-02T22:38:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Jun  2 22:38 packages/pushover-20170818.2103.el
+4.0K -rw-r--r-- 1 root root  442 Jun  2 22:38 packages/pushover-20170818.2103.entry

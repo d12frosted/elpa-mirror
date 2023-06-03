@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: kwin
+Fetcher: github
+Source:  https://github.com/reactormonk/kwin-minor-mode.git
+
+Updating /mnt/store/melpa/working/kwin/
+Checking out 20fac6508e5535a26df783ba05f04d1800b7382c
+Built kwin in 5.215s, finished at 2023-06-02T22:13:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jun  2 22:13 packages/kwin-20220120.2125.el
+4.0K -rw-r--r-- 1 root root  311 Jun  2 22:13 packages/kwin-20220120.2125.entry

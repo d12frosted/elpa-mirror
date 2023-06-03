@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: picpocket
+Fetcher: github
+Source:  https://github.com/johanclaesson/picpocket.git
+
+Updating /mnt/store/melpa/working/picpocket/
+Checking out 30942846bd8cb95a938a534ed9ed9efeff813b7c
+Built picpocket in 5.062s, finished at 2023-06-02T22:34:41+0000
+ ✓ Success:
+228K -rw-r--r-- 1 root root 227K Jun  2 22:34 packages/picpocket-20221101.2104.el
+4.0K -rw-r--r-- 1 root root  459 Jun  2 22:34 packages/picpocket-20221101.2104.entry

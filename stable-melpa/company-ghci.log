@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: company-ghci
+Fetcher: github
+Source:  https://github.com/horellana/company-ghci.git
+
+Updating /mnt/store/melpa/working/company-ghci/
+Checking out a1d25652583ab4666c5a78cac18cd8039776b50d
+Built company-ghci in 4.699s, finished at 2023-06-02T21:31:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Jun  2 21:31 packages/company-ghci-20190707.311.el
+4.0K -rw-r--r-- 1 root root  406 Jun  2 21:31 packages/company-ghci-20190707.311.entry

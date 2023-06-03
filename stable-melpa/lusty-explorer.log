@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: lusty-explorer
+Fetcher: github
+Source:  https://github.com/sjbach/lusty-emacs.git
+
+Updating /mnt/store/melpa/working/lusty-explorer/
+Checking out 75233eff9c961b9e99db0e0c50b6720850b595ec
+Built lusty-explorer in 11.789s, finished at 2023-06-02T22:16:46+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 48K Jun  2 22:16 packages/lusty-explorer-20200602.228.el
+4.0K -rw-r--r-- 1 root root 293 Jun  2 22:16 packages/lusty-explorer-20200602.228.entry

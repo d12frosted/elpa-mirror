@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ido-springboard
+Fetcher: github
+Source:  https://github.com/jwiegley/springboard.git
+
+Updating /mnt/store/melpa/working/ido-springboard/
+Checking out 263a8cd4582c81bfc29d7db37d5267e2488b148c
+Built ido-springboard in 4.443s, finished at 2023-06-02T22:06:40+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jun  2 22:06 packages/ido-springboard-20170106.755.el
+4.0K -rw-r--r-- 1 root root  435 Jun  2 22:06 packages/ido-springboard-20170106.755.entry

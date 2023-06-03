@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: json-rpc
+Fetcher: github
+Source:  https://github.com/skeeto/elisp-json-rpc.git
+
+Updating /mnt/store/melpa/working/json-rpc/
+Checking out 81a5a520072e20d18aeab2aac4d66c046b031e56
+Built json-rpc in 5.003s, finished at 2023-06-02T22:11:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Jun  2 22:11 packages/json-rpc-20200417.1629.el
+4.0K -rw-r--r-- 1 root root  456 Jun  2 22:11 packages/json-rpc-20200417.1629.entry

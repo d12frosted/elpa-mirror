@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ac-cider
+Fetcher: github
+Source:  https://github.com/clojure-emacs/ac-cider.git
+
+Updating /mnt/store/melpa/working/ac-cider/
+Checking out d8670939bbf88079263d5ace2b8bc04cf325be36
+Built ac-cider in 4.933s, finished at 2023-06-02T21:18:59+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.3K Jun  2 21:18 packages/ac-cider-20161006.719.el
+4.0K -rw-r--r-- 1 root root  635 Jun  2 21:18 packages/ac-cider-20161006.719.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: cmd-to-echo
+Fetcher: github
+Source:  https://github.com/mallt/cmd-to-echo.git
+
+Updating /mnt/store/melpa/working/cmd-to-echo/
+Checking out e0e874fc0e1ad6d291e39ed76023445297ad438a
+Built cmd-to-echo in 4.825s, finished at 2023-06-02T21:30:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Jun  2 21:30 packages/cmd-to-echo-20161203.2133.el
+4.0K -rw-r--r-- 1 root root  483 Jun  2 21:30 packages/cmd-to-echo-20161203.2133.entry

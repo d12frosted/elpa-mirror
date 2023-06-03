@@ -1,1 +1,24 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: systemd
+Fetcher: github
+Source:  https://github.com/holomorph/systemd-mode.git
+
+Updating /mnt/store/melpa/working/systemd/
+Checking out 8742607120fbc440821acbc351fda1e8e68a8806
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/systemd/
+  to /tmp/systemdOtAcym/systemd-20230201.302
+    systemd.el -> systemd.el
+    network-directives.txt -> network-directives.txt
+    nspawn-directives.txt -> nspawn-directives.txt
+    unit-directives.txt -> unit-directives.txt
+Created systemd-20230201.302.tar containing:
+  systemd-20230201.302/
+  systemd-20230201.302/network-directives.txt
+  systemd-20230201.302/nspawn-directives.txt
+  systemd-20230201.302/systemd-pkg.el
+  systemd-20230201.302/systemd.el
+  systemd-20230201.302/unit-directives.txt
+Built systemd in 8.559s, finished at 2023-06-02T22:50:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 367 Jun  2 22:50 packages/systemd-20230201.302.entry
+ 40K -rw-r--r-- 1 root root 40K Jun  2 22:50 packages/systemd-20230201.302.tar

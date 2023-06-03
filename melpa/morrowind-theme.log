@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: morrowind-theme
+Fetcher: github
+Source:  https://github.com/SamuelBanya/morrowind-theme.git
+
+Updating /mnt/store/melpa/working/morrowind-theme/
+Checking out 5253d03e4aba8fe4f9d30c1483c2189616ce8990
+Built morrowind-theme in 7.637s, finished at 2023-06-02T22:21:02+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  2 22:20 packages/morrowind-theme-20230311.1919.el
+4.0K -rw-r--r-- 1 root root 327 Jun  2 22:21 packages/morrowind-theme-20230311.1919.entry

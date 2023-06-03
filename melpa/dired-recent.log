@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dired-recent
+Fetcher: github
+Source:  https://github.com/vifon/dired-recent.el.git
+
+Updating /mnt/store/melpa/working/dired-recent/
+Checking out a376f53e42fdca80c3286e8111578c65c64b0711
+Built dired-recent in 3.956s, finished at 2023-06-02T21:37:57+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.4K Jun  2 21:37 packages/dired-recent-20211004.1924.el
+4.0K -rw-r--r-- 1 root root  499 Jun  2 21:37 packages/dired-recent-20211004.1924.entry

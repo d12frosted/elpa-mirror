@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: spark
+Fetcher: github
+Source:  https://github.com/alvinfrancis/spark.git
+
+Updating /mnt/store/melpa/working/spark/
+Checking out 0e58e5122cbb46fb6d850e3b72487431a3696861
+Built spark in 5.144s, finished at 2023-06-02T22:48:28+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  2 22:48 packages/spark-20230406.2307.el
+4.0K -rw-r--r-- 1 root root 352 Jun  2 22:48 packages/spark-20230406.2307.entry

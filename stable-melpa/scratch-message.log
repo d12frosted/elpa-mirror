@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: scratch-message
+Fetcher: github
+Source:  https://github.com/thisirs/scratch-message.git
+
+Updating /mnt/store/melpa/working/scratch-message/
+Checking out 0d4198f6effd8f118bf03ee4979f566041ef6a9b
+Built scratch-message in 7.630s, finished at 2023-06-02T22:43:51+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  2 22:43 packages/scratch-message-20220209.2207.el
+4.0K -rw-r--r-- 1 root root 465 Jun  2 22:43 packages/scratch-message-20220209.2207.entry

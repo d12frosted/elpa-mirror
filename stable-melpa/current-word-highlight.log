@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: current-word-highlight
+Fetcher: github
+Source:  https://github.com/kijimaD/current-word-highlight.git
+
+Updating /mnt/store/melpa/working/current-word-highlight/
+Checking out d860f4e170ffa4cef840da93647f458cc409d554
+Built current-word-highlight in 4.722s, finished at 2023-06-02T21:35:23+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jun  2 21:35 packages/current-word-highlight-20210323.1401.el
+4.0K -rw-r--r-- 1 root root  487 Jun  2 21:35 packages/current-word-highlight-20210323.1401.entry

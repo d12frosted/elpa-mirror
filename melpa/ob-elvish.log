@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-elvish
+Fetcher: github
+Source:  https://github.com/zzamboni/ob-elvish.git
+
+Updating /mnt/store/melpa/working/ob-elvish/
+Checking out 369181ceae1190bf971c71aebf9fc6133bd98c39
+Built ob-elvish in 4.918s, finished at 2023-06-02T22:25:26+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jun  2 22:25 packages/ob-elvish-20180427.1900.el
+4.0K -rw-r--r-- 1 root root  491 Jun  2 22:25 packages/ob-elvish-20180427.1900.entry

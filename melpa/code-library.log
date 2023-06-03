@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: code-library
+Fetcher: github
+Source:  https://github.com/lujun9972/code-library.git
+
+Updating /mnt/store/melpa/working/code-library/
+Checking out 3c79338eae5c892bfb4e4882298422d9fd65d2d7
+Built code-library in 5.736s, finished at 2023-06-02T21:30:39+0000
+ ✓ Success:
+ 12K -rwxr-xr-x 1 root root 9.4K Jun  2 21:30 packages/code-library-20160426.1218.el
+4.0K -rw-r--r-- 1 root root  376 Jun  2 21:30 packages/code-library-20160426.1218.entry

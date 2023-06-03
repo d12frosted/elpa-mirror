@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: efar
+Fetcher: github
+Source:  https://github.com/suntsov/efar.git
+
+Updating /mnt/store/melpa/working/efar/
+Checking out 78618a6cd9fe7d46c3728db3589d1fe50f7c1c6b
+Built efar in 9.957s, finished at 2023-06-02T21:41:14+0000
+ ✓ Success:
+212K -rw-r--r-- 1 root root 211K Jun  2 21:41 packages/efar-20230216.1213.el
+4.0K -rw-r--r-- 1 root root  392 Jun  2 21:41 packages/efar-20230216.1213.entry

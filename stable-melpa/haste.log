@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: haste
+Fetcher: github
+Source:  https://github.com/rlister/emacs-haste-client.git
+
+Updating /mnt/store/melpa/working/haste/
+Checking out f1099c6296fc9575675e281402b89854739114bb
+Built haste in 4.181s, finished at 2023-06-02T22:00:33+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  2 22:00 packages/haste-20141030.2034.el
+4.0K -rw-r--r-- 1 root root  332 Jun  2 22:00 packages/haste-20141030.2034.entry

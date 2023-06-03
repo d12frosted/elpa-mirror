@@ -1,1 +1,55 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: auto-complete
+Fetcher: github
+Source:  https://github.com/auto-complete/auto-complete.git
+
+Updating /mnt/store/melpa/working/auto-complete/
+Checking out 59c11c453bfa0794302848a004d1be3b1684f17b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auto-complete/
+  to /tmp/auto-completeLKi4oH/auto-complete-20221231.1633
+    auto-complete-config.el -> auto-complete-config.el
+    auto-complete-pkg.el -> auto-complete-pkg.el
+    auto-complete.el -> auto-complete.el
+    dict => dict
+Created auto-complete-20221231.1633.tar containing:
+  auto-complete-20221231.1633/
+  auto-complete-20221231.1633/auto-complete-config.el
+  auto-complete-20221231.1633/auto-complete-pkg.el
+  auto-complete-20221231.1633/auto-complete.el
+  auto-complete-20221231.1633/dict/
+  auto-complete-20221231.1633/dict/ada-mode
+  auto-complete-20221231.1633/dict/c++-mode
+  auto-complete-20221231.1633/dict/c-mode
+  auto-complete-20221231.1633/dict/caml-mode
+  auto-complete-20221231.1633/dict/clojure-mode
+  auto-complete-20221231.1633/dict/clojurescript-mode
+  auto-complete-20221231.1633/dict/coq-mode
+  auto-complete-20221231.1633/dict/css-mode
+  auto-complete-20221231.1633/dict/erlang-mode
+  auto-complete-20221231.1633/dict/ess-julia-mode
+  auto-complete-20221231.1633/dict/go-mode
+  auto-complete-20221231.1633/dict/haskell-mode
+  auto-complete-20221231.1633/dict/java-mode
+  auto-complete-20221231.1633/dict/js-mode
+  auto-complete-20221231.1633/dict/julia-mode
+  auto-complete-20221231.1633/dict/lua-mode
+  auto-complete-20221231.1633/dict/nim-mode
+  auto-complete-20221231.1633/dict/objc-mode
+  auto-complete-20221231.1633/dict/octave-mode
+  auto-complete-20221231.1633/dict/php-mode
+  auto-complete-20221231.1633/dict/python-mode
+  auto-complete-20221231.1633/dict/qml-mode
+  auto-complete-20221231.1633/dict/ruby-mode
+  auto-complete-20221231.1633/dict/scala-mode
+  auto-complete-20221231.1633/dict/scheme-mode
+  auto-complete-20221231.1633/dict/sclang-mode
+  auto-complete-20221231.1633/dict/sh-mode
+  auto-complete-20221231.1633/dict/swift-mode
+  auto-complete-20221231.1633/dict/tcl-mode
+  auto-complete-20221231.1633/dict/ts-mode
+  auto-complete-20221231.1633/dict/tuareg-mode
+  auto-complete-20221231.1633/dict/verilog-mode
+Built auto-complete in 4.548s, finished at 2023-06-02T21:23:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  412 Jun  2 21:23 packages/auto-complete-20221231.1633.entry
+332K -rw-r--r-- 1 root root 330K Jun  2 21:23 packages/auto-complete-20221231.1633.tar

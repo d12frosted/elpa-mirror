@@ -1,1 +1,26 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-ml-marklogic
+Fetcher: github
+Source:  https://github.com/ndw/ob-ml-marklogic.git
+
+Updating /mnt/store/melpa/working/ob-ml-marklogic/
+Checking out d5660ad14f29e17cd26ae92eeb585b24030e9570
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-ml-marklogic/
+  to /tmp/ob-ml-marklogicKTStZh/ob-ml-marklogic-20190312.1314
+    ob-ml-common.el -> ob-ml-common.el
+    ob-ml-javascript.el -> ob-ml-javascript.el
+    ob-ml-marklogic.el -> ob-ml-marklogic.el
+    ob-ml-sparql.el -> ob-ml-sparql.el
+    ob-ml-xquery.el -> ob-ml-xquery.el
+Created ob-ml-marklogic-20190312.1314.tar containing:
+  ob-ml-marklogic-20190312.1314/
+  ob-ml-marklogic-20190312.1314/ob-ml-common.el
+  ob-ml-marklogic-20190312.1314/ob-ml-javascript.el
+  ob-ml-marklogic-20190312.1314/ob-ml-marklogic-pkg.el
+  ob-ml-marklogic-20190312.1314/ob-ml-marklogic.el
+  ob-ml-marklogic-20190312.1314/ob-ml-sparql.el
+  ob-ml-marklogic-20190312.1314/ob-ml-xquery.el
+Built ob-ml-marklogic in 4.211s, finished at 2023-06-02T22:25:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 448 Jun  2 22:25 packages/ob-ml-marklogic-20190312.1314.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:25 packages/ob-ml-marklogic-20190312.1314.tar

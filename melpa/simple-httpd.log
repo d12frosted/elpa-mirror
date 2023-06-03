@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: simple-httpd
+Fetcher: github
+Source:  https://github.com/skeeto/emacs-web-server.git
+
+Updating /mnt/store/melpa/working/simple-httpd/
+Checking out 22ce66ea43e0eadb9ec1d691a35d9695fc29cee6
+Built simple-httpd in 4.444s, finished at 2023-06-02T22:46:18+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 33K Jun  2 22:46 packages/simple-httpd-20191103.1446.el
+4.0K -rw-r--r-- 1 root root 438 Jun  2 22:46 packages/simple-httpd-20191103.1446.entry

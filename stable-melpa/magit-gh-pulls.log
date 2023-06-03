@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: magit-gh-pulls
+Fetcher: github
+Source:  https://github.com/sigma/magit-gh-pulls.git
+
+Updating /mnt/store/melpa/working/magit-gh-pulls/
+Checking out 57f3a5158bbc7bfd169ee136fde351cce999e0ca
+Built magit-gh-pulls in 5.452s, finished at 2023-06-02T22:17:35+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K Jun  2 22:17 packages/magit-gh-pulls-20191230.1944.el
+4.0K -rw-r--r-- 1 root root 549 Jun  2 22:17 packages/magit-gh-pulls-20191230.1944.entry

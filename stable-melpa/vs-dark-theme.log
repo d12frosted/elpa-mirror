@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: vs-dark-theme
+Fetcher: github
+Source:  https://github.com/emacs-vs/vs-dark-theme.git
+
+Updating /mnt/store/melpa/working/vs-dark-theme/
+Checking out 8906a2a593888eafc61c5c202260edaddd3e6c75
+Built vs-dark-theme in 5.467s, finished at 2023-06-02T22:57:10+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  2 22:57 packages/vs-dark-theme-20230415.435.el
+4.0K -rw-r--r-- 1 root root 333 Jun  2 22:57 packages/vs-dark-theme-20230415.435.entry

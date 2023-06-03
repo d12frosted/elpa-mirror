@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: hima-theme
+Fetcher: github
+Source:  https://github.com/meain/hima-theme.git
+
+Updating /mnt/store/melpa/working/hima-theme/
+Checking out 553541f1b66e0f00bada8273d1126d50de13bcd1
+Built hima-theme in 4.458s, finished at 2023-06-02T22:04:55+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.8K Jun  2 22:04 packages/hima-theme-20230421.314.el
+4.0K -rw-r--r-- 1 root root  262 Jun  2 22:04 packages/hima-theme-20230421.314.entry

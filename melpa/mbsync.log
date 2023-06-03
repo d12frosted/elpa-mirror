@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: mbsync
+Fetcher: github
+Source:  https://github.com/dimitri/mbsync-el.git
+
+Updating /mnt/store/melpa/working/mbsync/
+Checking out d3c81da81ce5b154c0d048047a47277338721a70
+Built mbsync in 5.041s, finished at 2023-06-02T22:18:55+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jun  2 22:18 packages/mbsync-20200128.1053.el
+4.0K -rw-r--r-- 1 root root  359 Jun  2 22:18 packages/mbsync-20200128.1053.entry

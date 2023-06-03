@@ -1,1 +1,21 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: package-lint
+Fetcher: github
+Source:  https://github.com/purcell/package-lint.git
+
+Updating /mnt/store/melpa/working/package-lint/
+Checking out 8261593e54a6386360f3a9b9ac8e513a46293eac
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/package-lint/
+  to /tmp/package-lintRmY2lv/package-lint-20230525.1346
+    package-lint.el -> package-lint.el
+    data => data
+Created package-lint-20230525.1346.tar containing:
+  package-lint-20230525.1346/
+  package-lint-20230525.1346/data/
+  package-lint-20230525.1346/data/stdlib-changes
+  package-lint-20230525.1346/package-lint-pkg.el
+  package-lint-20230525.1346/package-lint.el
+Built package-lint in 4.698s, finished at 2023-06-02T22:32:34+0000
+ ✓ Success:
+ 4.0K -rw-r--r-- 1 root root   537 Jun  2 22:32 packages/package-lint-20230525.1346.entry
+1012K -rw-r--r-- 1 root root 1010K Jun  2 22:32 packages/package-lint-20230525.1346.tar

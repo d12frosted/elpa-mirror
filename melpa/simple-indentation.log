@@ -1,1 +1,28 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: simple-indentation
+Fetcher: github
+Source:  https://github.com/semenInRussia/simple-indentation.el.git
+
+Updating /mnt/store/melpa/working/simple-indentation/
+Checking out 74efe02aa6c1612ae9b32b88f97b7d6d309726b2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/simple-indentation/
+  to /tmp/simple-indentationHQPMO9/simple-indentation-20221127.1232
+    simple-indentation-hooks.el -> simple-indentation-hooks.el
+    simple-indentation-lib.el -> simple-indentation-lib.el
+    simple-indentation-namespace.el -> simple-indentation-namespace.el
+    simple-indentation-rules.el -> simple-indentation-rules.el
+    simple-indentation-utils.el -> simple-indentation-utils.el
+    simple-indentation.el -> simple-indentation.el
+Created simple-indentation-20221127.1232.tar containing:
+  simple-indentation-20221127.1232/
+  simple-indentation-20221127.1232/simple-indentation-hooks.el
+  simple-indentation-20221127.1232/simple-indentation-lib.el
+  simple-indentation-20221127.1232/simple-indentation-namespace.el
+  simple-indentation-20221127.1232/simple-indentation-pkg.el
+  simple-indentation-20221127.1232/simple-indentation-rules.el
+  simple-indentation-20221127.1232/simple-indentation-utils.el
+  simple-indentation-20221127.1232/simple-indentation.el
+Built simple-indentation in 4.056s, finished at 2023-06-02T22:46:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 563 Jun  2 22:46 packages/simple-indentation-20221127.1232.entry
+ 80K -rw-r--r-- 1 root root 80K Jun  2 22:46 packages/simple-indentation-20221127.1232.tar

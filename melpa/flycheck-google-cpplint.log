@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: flycheck-google-cpplint
+Fetcher: github
+Source:  https://github.com/flycheck/flycheck-google-cpplint.git
+
+Updating /mnt/store/melpa/working/flycheck-google-cpplint/
+Checking out 93c5b26ec55d0df54bc230e2de0890fe074f35d3
+Built flycheck-google-cpplint in 5.198s, finished at 2023-06-02T21:51:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.1K Jun  2 21:51 packages/flycheck-google-cpplint-20220616.1802.el
+4.0K -rw-r--r-- 1 root root  517 Jun  2 21:51 packages/flycheck-google-cpplint-20220616.1802.entry

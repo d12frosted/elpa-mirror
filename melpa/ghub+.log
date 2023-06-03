@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ghub+
+Fetcher: github
+Source:  https://github.com/vermiculus/ghub-plus.git
+
+Updating /mnt/store/melpa/working/ghub+/
+Checking out b1adef2402d7599911d4dd447a987a0cea04e6fe
+Built ghub+ in 6.808s, finished at 2023-06-02T21:56:42+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  2 21:56 packages/ghub+-20191229.1748.el
+4.0K -rw-r--r-- 1 root root 472 Jun  2 21:56 packages/ghub+-20191229.1748.entry

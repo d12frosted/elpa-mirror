@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: magit-stgit
+Fetcher: github
+Source:  https://github.com/stacked-git/magit-stgit.git
+
+Updating /mnt/store/melpa/working/magit-stgit/
+Checking out bf96fa0f40c087329ad7e6a3b1946de7df03559c
+Built magit-stgit in 5.751s, finished at 2023-06-02T22:17:51+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Jun  2 22:17 packages/magit-stgit-20220914.1349.el
+4.0K -rw-r--r-- 1 root root 409 Jun  2 22:17 packages/magit-stgit-20220914.1349.entry

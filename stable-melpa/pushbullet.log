@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pushbullet
+Fetcher: github
+Source:  https://github.com/theanalyst/revolver.git
+
+Updating /mnt/store/melpa/working/pushbullet/
+Checking out 73c59a0f1dc04875b3e5a2c8afbc26c32128e445
+Built pushbullet in 6.148s, finished at 2023-06-02T22:38:44+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jun  2 22:38 packages/pushbullet-20140809.1232.el
+4.0K -rw-r--r-- 1 root root  537 Jun  2 22:38 packages/pushbullet-20140809.1232.entry

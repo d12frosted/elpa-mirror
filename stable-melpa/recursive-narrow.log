@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: recursive-narrow
+Fetcher: github
+Source:  https://github.com/nflath/recursive-narrow.git
+
+Updating /mnt/store/melpa/working/recursive-narrow/
+Checking out 5e3e2067d5a148d7e64e64e0355d3b6860e4c259
+Built recursive-narrow in 4.836s, finished at 2023-06-02T22:41:02+0000
+ ✓ Success:
+8.0K -rwxr-xr-x 1 root root 4.5K Jun  2 22:41 packages/recursive-narrow-20190306.1521.el
+4.0K -rw-r--r-- 1 root root  424 Jun  2 22:41 packages/recursive-narrow-20190306.1521.entry

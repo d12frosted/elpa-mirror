@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: icomplete-vertical
+Fetcher: github
+Source:  https://github.com/oantolin/icomplete-vertical.git
+
+Updating /mnt/store/melpa/working/icomplete-vertical/
+Checking out f5775d535630199703c936380d210d38249b342c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/icomplete-vertical/
+  to /tmp/icomplete-verticalFY8MuA/icomplete-vertical-20220418.2119
+    icomplete-vertical.el -> icomplete-vertical.el
+    icomplete-vertical.texi -> icomplete-vertical.texi
+Generating /tmp/icomplete-verticalFY8MuA/icomplete-vertical-20220418.2119/icomplete-vertical.info
+Created icomplete-vertical-20220418.2119.tar containing:
+  icomplete-vertical-20220418.2119/
+  icomplete-vertical-20220418.2119/dir
+  icomplete-vertical-20220418.2119/icomplete-vertical-pkg.el
+  icomplete-vertical-20220418.2119/icomplete-vertical.el
+  icomplete-vertical-20220418.2119/icomplete-vertical.info
+Built icomplete-vertical in 8.058s, finished at 2023-06-02T22:06:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 540 Jun  2 22:06 packages/icomplete-vertical-20220418.2119.entry
+ 40K -rw-r--r-- 1 root root 40K Jun  2 22:06 packages/icomplete-vertical-20220418.2119.tar

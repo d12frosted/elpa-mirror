@@ -1,1 +1,55 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: circe
+Fetcher: github
+Source:  https://github.com/emacs-circe/circe.git
+
+Updating /mnt/store/melpa/working/circe/
+Checking out 57fe189d7c0b98b9b1b5a59767cea1c7e2c22b13
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/circe/
+  to /tmp/circeccbeJo/circe-20221126.1508
+    circe-chanop.el -> circe-chanop.el
+    circe-color-nicks.el -> circe-color-nicks.el
+    circe-compat.el -> circe-compat.el
+    circe-display-images.el -> circe-display-images.el
+    circe-lagmon.el -> circe-lagmon.el
+    circe-new-day-notifier.el -> circe-new-day-notifier.el
+    circe-pkg.el -> circe-pkg.el
+    circe.el -> circe.el
+    irc.el -> irc.el
+    lcs.el -> lcs.el
+    lui-autopaste.el -> lui-autopaste.el
+    lui-format.el -> lui-format.el
+    lui-irc-colors.el -> lui-irc-colors.el
+    lui-logging.el -> lui-logging.el
+    lui-track-bar.el -> lui-track-bar.el
+    lui-track.el -> lui-track.el
+    lui.el -> lui.el
+    make-tls-process.el -> make-tls-process.el
+    shorten.el -> shorten.el
+    tracking.el -> tracking.el
+Created circe-20221126.1508.tar containing:
+  circe-20221126.1508/
+  circe-20221126.1508/circe-chanop.el
+  circe-20221126.1508/circe-color-nicks.el
+  circe-20221126.1508/circe-compat.el
+  circe-20221126.1508/circe-display-images.el
+  circe-20221126.1508/circe-lagmon.el
+  circe-20221126.1508/circe-new-day-notifier.el
+  circe-20221126.1508/circe-pkg.el
+  circe-20221126.1508/circe.el
+  circe-20221126.1508/irc.el
+  circe-20221126.1508/lcs.el
+  circe-20221126.1508/lui-autopaste.el
+  circe-20221126.1508/lui-format.el
+  circe-20221126.1508/lui-irc-colors.el
+  circe-20221126.1508/lui-logging.el
+  circe-20221126.1508/lui-track-bar.el
+  circe-20221126.1508/lui-track.el
+  circe-20221126.1508/lui.el
+  circe-20221126.1508/make-tls-process.el
+  circe-20221126.1508/shorten.el
+  circe-20221126.1508/tracking.el
+Built circe in 4.254s, finished at 2023-06-02T21:29:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  361 Jun  2 21:29 packages/circe-20221126.1508.entry
+372K -rw-r--r-- 1 root root 370K Jun  2 21:29 packages/circe-20221126.1508.tar

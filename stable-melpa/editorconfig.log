@@ -1,1 +1,30 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: editorconfig
+Fetcher: github
+Source:  https://github.com/editorconfig/editorconfig-emacs.git
+
+Updating /mnt/store/melpa/working/editorconfig/
+Checking out d4111f65c68f18f0dfb3072ee0d9b1d4cee80b52
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/editorconfig/
+  to /tmp/editorconfigZbGIL7/editorconfig-20230526.2314
+    editorconfig-conf-mode.el -> editorconfig-conf-mode.el
+    editorconfig-core-handle.el -> editorconfig-core-handle.el
+    editorconfig-core.el -> editorconfig-core.el
+    editorconfig-fnmatch.el -> editorconfig-fnmatch.el
+    editorconfig.el -> editorconfig.el
+  ! doc/editorconfig.texi -> editorconfig.texi
+Generating /tmp/editorconfigZbGIL7/editorconfig-20230526.2314/editorconfig.info
+Created editorconfig-20230526.2314.tar containing:
+  editorconfig-20230526.2314/
+  editorconfig-20230526.2314/dir
+  editorconfig-20230526.2314/editorconfig-conf-mode.el
+  editorconfig-20230526.2314/editorconfig-core-handle.el
+  editorconfig-20230526.2314/editorconfig-core.el
+  editorconfig-20230526.2314/editorconfig-fnmatch.el
+  editorconfig-20230526.2314/editorconfig-pkg.el
+  editorconfig-20230526.2314/editorconfig.el
+  editorconfig-20230526.2314/editorconfig.info
+Built editorconfig in 11.871s, finished at 2023-06-02T21:40:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  528 Jun  2 21:40 packages/editorconfig-20230526.2314.entry
+100K -rw-r--r-- 1 root root 100K Jun  2 21:40 packages/editorconfig-20230526.2314.tar

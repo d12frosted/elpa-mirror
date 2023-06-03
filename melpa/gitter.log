@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: gitter
+Fetcher: github
+Source:  https://github.com/xuchunyang/gitter.el.git
+
+Updating /mnt/store/melpa/working/gitter/
+Checking out 49327c91eb50cfea633af8fd32b0643691d75cb7
+Built gitter in 4.358s, finished at 2023-06-02T21:57:48+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  2 21:57 packages/gitter-20220316.138.el
+4.0K -rw-r--r-- 1 root root 452 Jun  2 21:57 packages/gitter-20220316.138.entry

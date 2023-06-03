@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: yaml-pro
+Fetcher: github
+Source:  https://github.com/zkry/yaml-pro.git
+
+Updating /mnt/store/melpa/working/yaml-pro/
+Checking out 50fc911b9015708b77872dc60c53f4a4740bef1b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yaml-pro/
+  to /tmp/yaml-progdgnJD/yaml-pro-20230315.320
+    yaml-pro-edit.el -> yaml-pro-edit.el
+    yaml-pro.el -> yaml-pro.el
+Created yaml-pro-20230315.320.tar containing:
+  yaml-pro-20230315.320/
+  yaml-pro-20230315.320/yaml-pro-edit.el
+  yaml-pro-20230315.320/yaml-pro-pkg.el
+  yaml-pro-20230315.320/yaml-pro.el
+Built yaml-pro in 4.896s, finished at 2023-06-02T23:01:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 388 Jun  2 23:01 packages/yaml-pro-20230315.320.entry
+ 72K -rw-r--r-- 1 root root 70K Jun  2 23:01 packages/yaml-pro-20230315.320.tar

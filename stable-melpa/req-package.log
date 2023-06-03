@@ -1,1 +1,24 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: req-package
+Fetcher: github
+Source:  https://github.com/edvorg/req-package.git
+
+Updating /mnt/store/melpa/working/req-package/
+Checking out a77da72931914ac5f3f64dc61fe9dc3522b2817e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/req-package/
+  to /tmp/req-packageebqKYM/req-package-20180605.1141
+    req-package-args.el -> req-package-args.el
+    req-package-cycles.el -> req-package-cycles.el
+    req-package-hooks.el -> req-package-hooks.el
+    req-package.el -> req-package.el
+Created req-package-20180605.1141.tar containing:
+  req-package-20180605.1141/
+  req-package-20180605.1141/req-package-args.el
+  req-package-20180605.1141/req-package-cycles.el
+  req-package-20180605.1141/req-package-hooks.el
+  req-package-20180605.1141/req-package-pkg.el
+  req-package-20180605.1141/req-package.el
+Built req-package in 3.965s, finished at 2023-06-02T22:41:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 595 Jun  2 22:41 packages/req-package-20180605.1141.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:41 packages/req-package-20180605.1141.tar

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: cargo-mode
+Fetcher: github
+Source:  https://github.com/ayrat555/cargo-mode.git
+
+Updating /mnt/store/melpa/working/cargo-mode/
+Checking out 6e128f08692aae5723122e039e8871a57141e868
+Built cargo-mode in 5.632s, finished at 2023-06-02T21:27:54+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 21:27 packages/cargo-mode-20230213.401.el
+4.0K -rw-r--r-- 1 root root 486 Jun  2 21:27 packages/cargo-mode-20230213.401.entry

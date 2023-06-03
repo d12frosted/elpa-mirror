@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: xterm-keybinder
+Fetcher: github
+Source:  https://github.com/yuutayamada/xterm-keybinder-el.git
+
+Updating /mnt/store/melpa/working/xterm-keybinder/
+Checking out b29c4f700b0fa0c9f627f6725b36462b8fab06d6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xterm-keybinder/
+  to /tmp/xterm-keybinderfn2Z8t/xterm-keybinder-20160523.56
+    xterm-keybinder.el -> xterm-keybinder.el
+    xterm-option -> xterm-option
+    emacs-urxvt-client -> emacs-urxvt-client
+Created xterm-keybinder-20160523.56.tar containing:
+  xterm-keybinder-20160523.56/
+  xterm-keybinder-20160523.56/emacs-urxvt-client
+  xterm-keybinder-20160523.56/xterm-keybinder-pkg.el
+  xterm-keybinder-20160523.56/xterm-keybinder.el
+  xterm-keybinder-20160523.56/xterm-option
+Built xterm-keybinder in 4.500s, finished at 2023-06-02T23:00:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 456 Jun  2 23:00 packages/xterm-keybinder-20160523.56.entry
+ 72K -rw-r--r-- 1 root root 70K Jun  2 23:00 packages/xterm-keybinder-20160523.56.tar

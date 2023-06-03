@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: lcr
+Fetcher: github
+Source:  https://github.com/jyp/lcr.git
+
+Updating /mnt/store/melpa/working/lcr/
+Checking out 6c345112ffb59f3e7babca6c83942f686b5f554b
+Built lcr in 5.326s, finished at 2023-06-02T22:13:41+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:13 packages/lcr-20221012.742.el
+4.0K -rw-r--r-- 1 root root 501 Jun  2 22:13 packages/lcr-20221012.742.entry

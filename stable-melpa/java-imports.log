@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: java-imports
+Fetcher: github
+Source:  https://github.com/dakrone/emacs-java-imports.git
+
+Updating /mnt/store/melpa/working/java-imports/
+Checking out bbb173c319a32b46680b5c0bffd72b607ed7b71a
+Built java-imports in 6.500s, finished at 2023-06-02T22:09:56+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  2 22:09 packages/java-imports-20220712.1653.el
+4.0K -rw-r--r-- 1 root root 480 Jun  2 22:09 packages/java-imports-20220712.1653.entry

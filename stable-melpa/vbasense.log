@@ -1,1 +1,30 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: vbasense
+Fetcher: github
+Source:  https://github.com/aki2o/emacs-vbasense.git
+
+Updating /mnt/store/melpa/working/vbasense/
+Checking out 8c61a492d7c15218ae1a96e2aebfe6f78bfff6db
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vbasense/
+  to /tmp/vbasenserInEqA/vbasense-20140221.2353
+    vbasense.el -> vbasense.el
+    chkTLI.vbs -> chkTLI.vbs
+    getProgIDAll.vbs -> getProgIDAll.vbs
+    getTLI.vbs -> getTLI.vbs
+    chkTLI.bat -> chkTLI.bat
+    getProgIDAll.bat -> getProgIDAll.bat
+    getTLI.bat -> getTLI.bat
+Created vbasense-20140221.2353.tar containing:
+  vbasense-20140221.2353/
+  vbasense-20140221.2353/chkTLI.bat
+  vbasense-20140221.2353/chkTLI.vbs
+  vbasense-20140221.2353/getProgIDAll.bat
+  vbasense-20140221.2353/getProgIDAll.vbs
+  vbasense-20140221.2353/getTLI.bat
+  vbasense-20140221.2353/getTLI.vbs
+  vbasense-20140221.2353/vbasense-pkg.el
+  vbasense-20140221.2353/vbasense.el
+Built vbasense in 4.814s, finished at 2023-06-02T22:56:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  535 Jun  2 22:56 packages/vbasense-20140221.2353.entry
+152K -rw-r--r-- 1 root root 150K Jun  2 22:56 packages/vbasense-20140221.2353.tar

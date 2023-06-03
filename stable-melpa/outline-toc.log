@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: outline-toc
+Fetcher: github
+Source:  https://github.com/abingham/outline-toc.el.git
+
+Updating /mnt/store/melpa/working/outline-toc/
+Checking out 81d373633b40628cc3a6b6fb534fd7730076bcdb
+Built outline-toc in 7.755s, finished at 2023-06-02T22:31:18+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 22:31 packages/outline-toc-20200401.1208.el
+4.0K -rw-r--r-- 1 root root 482 Jun  2 22:31 packages/outline-toc-20200401.1208.entry

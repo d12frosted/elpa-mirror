@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fussy
+Fetcher: github
+Source:  https://github.com/jojojames/fussy.git
+
+Updating /mnt/store/melpa/working/fussy/
+Checking out 0fbfcbace0729dba685da9b9a74566639b840ec3
+Built fussy in 6.365s, finished at 2023-06-02T21:55:13+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 47K Jun  2 21:55 packages/fussy-20221010.2026.el
+4.0K -rw-r--r-- 1 root root 422 Jun  2 21:55 packages/fussy-20221010.2026.entry

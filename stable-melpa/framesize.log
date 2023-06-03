@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: framesize
+Fetcher: github
+Source:  https://github.com/nicferrier/emacs-framesize.git
+
+Updating /mnt/store/melpa/working/framesize/
+Checking out f2dbf5d2513b2bc45f2085370a55c1754b6025da
+Built framesize in 7.312s, finished at 2023-06-02T21:54:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Jun  2 21:54 packages/framesize-20131017.2132.el
+4.0K -rw-r--r-- 1 root root  476 Jun  2 21:54 packages/framesize-20131017.2132.entry

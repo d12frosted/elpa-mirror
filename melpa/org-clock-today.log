@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-clock-today
+Fetcher: github
+Source:  https://github.com/mallt/org-clock-today-mode.git
+
+Updating /mnt/store/melpa/working/org-clock-today/
+Checking out b73cca120eb64538ab0666892a8b97b6d65b4d6b
+Built org-clock-today in 5.008s, finished at 2023-06-02T22:27:35+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jun  2 22:27 packages/org-clock-today-20220918.514.el
+4.0K -rw-r--r-- 1 root root  470 Jun  2 22:27 packages/org-clock-today-20220918.514.entry

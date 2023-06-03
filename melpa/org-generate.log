@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-generate
+Fetcher: github
+Source:  https://github.com/conao3/org-generate.el.git
+
+Updating /mnt/store/melpa/working/org-generate/
+Checking out 98825efb73c4537f05f653ce40e639a220d2ee5d
+Built org-generate in 4.360s, finished at 2023-06-02T22:27:58+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  2 22:27 packages/org-generate-20200815.736.el
+4.0K -rw-r--r-- 1 root root 497 Jun  2 22:27 packages/org-generate-20200815.736.entry

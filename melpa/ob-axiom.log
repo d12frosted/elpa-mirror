@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-axiom
+Fetcher: git
+Source:  https://bitbucket.org/pdo/axiom-environment
+
+Updating /mnt/store/melpa/working/ob-axiom/
+Checking out 01d88daa0c864af9918db5a147fbb5e435dec199
+Built ob-axiom in 5.786s, finished at 2023-06-02T22:25:06+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.5K Jun  2 22:25 packages/ob-axiom-20220612.1535.el
+4.0K -rw-r--r-- 1 root root  390 Jun  2 22:25 packages/ob-axiom-20220612.1535.entry

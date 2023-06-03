@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-mime
+Fetcher: github
+Source:  https://github.com/org-mime/org-mime.git
+
+Updating /mnt/store/melpa/working/org-mime/
+Checking out d368bd4119bfcf2997a6a23bbf5f41e043164d29
+Built org-mime in 4.993s, finished at 2023-06-02T22:28:24+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Jun  2 22:28 packages/org-mime-20230321.2341.el
+4.0K -rw-r--r-- 1 root root 433 Jun  2 22:28 packages/org-mime-20230321.2341.entry

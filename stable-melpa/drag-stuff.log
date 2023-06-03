@@ -1,1 +1,19 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: drag-stuff
+Fetcher: github
+Source:  https://github.com/rejeep/drag-stuff.el.git
+
+Updating /mnt/store/melpa/working/drag-stuff/
+Checking out d49fe376d24f0f8ac5ade67b6d7fccc2487c81db
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/drag-stuff/
+  to /tmp/drag-stuffnSAV9r/drag-stuff-20161108.749
+    drag-stuff-pkg.el -> drag-stuff-pkg.el
+    drag-stuff.el -> drag-stuff.el
+Created drag-stuff-20161108.749.tar containing:
+  drag-stuff-20161108.749/
+  drag-stuff-20161108.749/drag-stuff-pkg.el
+  drag-stuff-20161108.749/drag-stuff.el
+Built drag-stuff in 4.133s, finished at 2023-06-02T21:39:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 399 Jun  2 21:39 packages/drag-stuff-20161108.749.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 21:39 packages/drag-stuff-20161108.749.tar

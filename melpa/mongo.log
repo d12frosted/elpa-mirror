@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: mongo
+Fetcher: github
+Source:  https://github.com/emacsorphanage/mongo.git
+
+Updating /mnt/store/melpa/working/mongo/
+Checking out 595529ddd70ecb9fab8b11daad2c3929941099d6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mongo/
+  to /tmp/mongo9jys4c/mongo-20150315.1219
+    bson.el -> bson.el
+    mongo.el -> mongo.el
+Created mongo-20150315.1219.tar containing:
+  mongo-20150315.1219/
+  mongo-20150315.1219/bson.el
+  mongo-20150315.1219/mongo-pkg.el
+  mongo-20150315.1219/mongo.el
+Built mongo in 5.115s, finished at 2023-06-02T22:20:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 350 Jun  2 22:20 packages/mongo-20150315.1219.entry
+ 40K -rw-r--r-- 1 root root 40K Jun  2 22:20 packages/mongo-20150315.1219.tar

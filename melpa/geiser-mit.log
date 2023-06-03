@@ -1,1 +1,25 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: geiser-mit
+Fetcher: gitlab
+Source:  https://gitlab.com/emacs-geiser/mit.git
+
+Updating /mnt/store/melpa/working/geiser-mit/
+Checking out 4e90e9ae815e89f3540fb9644e6016c663ef5765
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-mit/
+  to /tmp/geiser-miti6QMMh/geiser-mit-20211204.1935
+    geiser-mit.el -> geiser-mit.el
+    src/geiser => src/geiser
+Created geiser-mit-20211204.1935.tar containing:
+  geiser-mit-20211204.1935/
+  geiser-mit-20211204.1935/geiser-mit-pkg.el
+  geiser-mit-20211204.1935/geiser-mit.el
+  geiser-mit-20211204.1935/src/
+  geiser-mit-20211204.1935/src/geiser/
+  geiser-mit-20211204.1935/src/geiser/compile.scm
+  geiser-mit-20211204.1935/src/geiser/emacs.scm
+  geiser-mit-20211204.1935/src/geiser/geiser.pkg
+  geiser-mit-20211204.1935/src/geiser/load.scm
+Built geiser-mit in 12.555s, finished at 2023-06-02T21:56:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 522 Jun  2 21:56 packages/geiser-mit-20211204.1935.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 21:56 packages/geiser-mit-20211204.1935.tar

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: wikinforg
+Fetcher: github
+Source:  https://github.com/progfolio/wikinforg.git
+
+Updating /mnt/store/melpa/working/wikinforg/
+Checking out fe16cbecc73a41110f2bad95c1f63a97a9da88ca
+Built wikinforg in 8.057s, finished at 2023-06-02T22:59:22+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jun  2 22:59 packages/wikinforg-20230317.2050.el
+4.0K -rw-r--r-- 1 root root  540 Jun  2 22:59 packages/wikinforg-20230317.2050.entry

@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dtrt-indent
+Fetcher: github
+Source:  https://github.com/jscheid/dtrt-indent.git
+
+Updating /mnt/store/melpa/working/dtrt-indent/
+Checking out 07364ae07301f6f0a1713a8dff520c813849ffb3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dtrt-indent/
+  to /tmp/dtrt-indentCqMoth/dtrt-indent-20230302.2151
+    dtrt-indent-diag.el -> dtrt-indent-diag.el
+    dtrt-indent.el -> dtrt-indent.el
+Created dtrt-indent-20230302.2151.tar containing:
+  dtrt-indent-20230302.2151/
+  dtrt-indent-20230302.2151/dtrt-indent-diag.el
+  dtrt-indent-20230302.2151/dtrt-indent-pkg.el
+  dtrt-indent-20230302.2151/dtrt-indent.el
+Built dtrt-indent in 4.802s, finished at 2023-06-02T21:39:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 399 Jun  2 21:39 packages/dtrt-indent-20230302.2151.entry
+ 60K -rw-r--r-- 1 root root 60K Jun  2 21:39 packages/dtrt-indent-20230302.2151.tar

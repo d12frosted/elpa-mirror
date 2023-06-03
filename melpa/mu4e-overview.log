@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: mu4e-overview
+Fetcher: github
+Source:  https://github.com/mkcms/mu4e-overview.git
+
+Updating /mnt/store/melpa/working/mu4e-overview/
+Checking out 21d4fbf44f67b786a61072afd20065a56b3952a1
+Built mu4e-overview in 5.569s, finished at 2023-06-02T22:21:37+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:21 packages/mu4e-overview-20221107.833.el
+4.0K -rw-r--r-- 1 root root 435 Jun  2 22:21 packages/mu4e-overview-20221107.833.entry

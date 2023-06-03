@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: emoji-fontset
+Fetcher: github
+Source:  https://github.com/zonuexe/emoji-fontset.el.git
+
+Updating /mnt/store/melpa/working/emoji-fontset/
+Checking out e460c9a08e48ec4103e38a7a04acae20880149a9
+Built emoji-fontset in 4.839s, finished at 2023-06-02T21:44:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jun  2 21:44 packages/emoji-fontset-20160726.1924.el
+4.0K -rw-r--r-- 1 root root  342 Jun  2 21:44 packages/emoji-fontset-20160726.1924.entry

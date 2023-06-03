@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sql-impala
+Fetcher: github
+Source:  https://github.com/jterk/sql-impala.git
+
+Updating /mnt/store/melpa/working/sql-impala/
+Checking out 466e7c0c789ec3e5e8a276c8f6754f91bb584c3e
+Built sql-impala in 4.944s, finished at 2023-06-02T22:48:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.8K Jun  2 22:48 packages/sql-impala-20181218.410.el
+4.0K -rw-r--r-- 1 root root  449 Jun  2 22:48 packages/sql-impala-20181218.410.entry

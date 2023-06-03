@@ -1,1 +1,29 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-commentary
+Fetcher: github
+Source:  https://github.com/smaximov/org-commentary.git
+
+Updating /mnt/store/melpa/working/org-commentary/
+Checking out 821ccb994811359c42f4e3d459e0e88849d42b75
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-commentary/
+  to /tmp/org-commentaryf9bR5A/org-commentary-20160802.637
+    org-commentary-cli.el -> org-commentary-cli.el
+    org-commentary-export.el -> org-commentary-export.el
+    org-commentary-headers.el -> org-commentary-headers.el
+    org-commentary-util.el -> org-commentary-util.el
+    org-commentary.el -> org-commentary.el
+    bin => bin
+Created org-commentary-20160802.637.tar containing:
+  org-commentary-20160802.637/
+  org-commentary-20160802.637/bin/
+  org-commentary-20160802.637/bin/org-doc
+  org-commentary-20160802.637/org-commentary-cli.el
+  org-commentary-20160802.637/org-commentary-export.el
+  org-commentary-20160802.637/org-commentary-headers.el
+  org-commentary-20160802.637/org-commentary-pkg.el
+  org-commentary-20160802.637/org-commentary-util.el
+  org-commentary-20160802.637/org-commentary.el
+Built org-commentary in 4.083s, finished at 2023-06-02T22:27:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 542 Jun  2 22:27 packages/org-commentary-20160802.637.entry
+ 52K -rw-r--r-- 1 root root 50K Jun  2 22:27 packages/org-commentary-20160802.637.tar

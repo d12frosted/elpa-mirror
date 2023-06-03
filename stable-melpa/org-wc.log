@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-wc
+Fetcher: github
+Source:  https://github.com/tesujimath/org-wc.git
+
+Updating /mnt/store/melpa/working/org-wc/
+Checking out dbbf794e4ec6c4080d945f43338185e34a4a582d
+Built org-wc in 6.268s, finished at 2023-06-02T22:30:03+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 22:30 packages/org-wc-20200731.2244.el
+4.0K -rw-r--r-- 1 root root 238 Jun  2 22:30 packages/org-wc-20200731.2244.entry

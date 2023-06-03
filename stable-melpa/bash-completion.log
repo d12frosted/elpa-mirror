@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: bash-completion
+Fetcher: github
+Source:  https://github.com/szermatt/emacs-bash-completion.git
+
+Updating /mnt/store/melpa/working/bash-completion/
+Checking out ae6560fe897ab6fcc0b1c4aac1ac084be5bc632e
+Built bash-completion in 5.783s, finished at 2023-06-02T21:24:16+0000
+ ✓ Success:
+ 72K -rw-r--r-- 1 root root 70K Jun  2 21:24 packages/bash-completion-20230315.1918.el
+4.0K -rw-r--r-- 1 root root 483 Jun  2 21:24 packages/bash-completion-20230315.1918.entry

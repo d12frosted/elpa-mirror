@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: kfg
+Fetcher: github
+Source:  https://github.com/czipperz/kfg.git
+
+Updating /mnt/store/melpa/working/kfg/
+Checking out ffc35b77f227d4c64a1271ec30d31333ffeb0013
+Built kfg in 6.512s, finished at 2023-06-02T22:12:26+0000
+ ✓ Success:
+8.0K -rwxr-xr-x 1 root root 4.9K Jun  2 22:12 packages/kfg-20140909.538.el
+4.0K -rw-r--r-- 1 root root  415 Jun  2 22:12 packages/kfg-20140909.538.entry

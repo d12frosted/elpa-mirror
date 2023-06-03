@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: redshank
+Fetcher: github
+Source:  https://github.com/emacsattic/redshank.git
+
+Updating /mnt/store/melpa/working/redshank/
+Checking out d059c5841044aa163664f8bf87c1d981bf0a04fe
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/redshank/
+  to /tmp/redshankbmwqtc/redshank-20180730.407
+    redshank-loader.el -> redshank-loader.el
+    redshank.el -> redshank.el
+Created redshank-20180730.407.tar containing:
+  redshank-20180730.407/
+  redshank-20180730.407/redshank-loader.el
+  redshank-20180730.407/redshank-pkg.el
+  redshank-20180730.407/redshank.el
+Built redshank in 4.437s, finished at 2023-06-02T22:41:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 386 Jun  2 22:41 packages/redshank-20180730.407.entry
+ 52K -rw-r--r-- 1 root root 50K Jun  2 22:41 packages/redshank-20180730.407.tar

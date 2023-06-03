@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: tinkerer
+Fetcher: github
+Source:  https://github.com/yyr/tinkerer.el.git
+
+Updating /mnt/store/melpa/working/tinkerer/
+Checking out 7cedeb264a44cd62bcd9c778dca52316d09e07e5
+Built tinkerer in 5.122s, finished at 2023-06-02T22:53:15+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  2 22:53 packages/tinkerer-20200914.1756.el
+4.0K -rw-r--r-- 1 root root  478 Jun  2 22:53 packages/tinkerer-20200914.1756.entry

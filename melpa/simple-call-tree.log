@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: simple-call-tree
+Fetcher: github
+Source:  https://github.com/vapniks/simple-call-tree.git
+
+Updating /mnt/store/melpa/working/simple-call-tree/
+Checking out 26de24bcde0eae911a0185bb5a6b74b9864fcfc3
+Built simple-call-tree in 4.631s, finished at 2023-06-02T22:46:18+0000
+ ✓ Success:
+140K -rw-r--r-- 1 root root 137K Jun  2 22:46 packages/simple-call-tree-20210625.2001.el
+4.0K -rw-r--r-- 1 root root  525 Jun  2 22:46 packages/simple-call-tree-20210625.2001.entry

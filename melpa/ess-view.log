@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ess-view
+Fetcher: github
+Source:  https://github.com/GioBo/ess-view.git
+
+Updating /mnt/store/melpa/working/ess-view/
+Checking out d4e5a340b7bcc58c434867b97923094bd0680283
+Built ess-view in 4.842s, finished at 2023-06-02T21:46:18+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 21:46 packages/ess-view-20181001.1730.el
+4.0K -rw-r--r-- 1 root root 508 Jun  2 21:46 packages/ess-view-20181001.1730.entry

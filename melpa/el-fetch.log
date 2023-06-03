@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: el-fetch
+Fetcher: gitlab
+Source:  https://gitlab.com/xgqt/emacs-el-fetch.git
+
+Updating /mnt/store/melpa/working/el-fetch/
+Checking out 0142f58f075ea39aa6cc7ed35dd599afc4b6b450
+Built el-fetch in 10.521s, finished at 2023-06-02T21:41:55+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  2 21:41 packages/el-fetch-20230210.1311.el
+4.0K -rw-r--r-- 1 root root 427 Jun  2 21:41 packages/el-fetch-20230210.1311.entry

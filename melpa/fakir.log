@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fakir
+Fetcher: github
+Source:  https://github.com/nicferrier/emacs-fakir.git
+
+Updating /mnt/store/melpa/working/fakir/
+Checking out 1fca406ad7de80fece6319ff75d4230b648534b0
+Built fakir in 8.845s, finished at 2023-06-02T21:49:23+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 26K Jun  2 21:49 packages/fakir-20140729.1652.el
+4.0K -rw-r--r-- 1 root root 449 Jun  2 21:49 packages/fakir-20140729.1652.entry

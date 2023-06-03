@@ -1,1 +1,21 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: danneskjold-theme
+Fetcher: github
+Source:  https://github.com/rails-to-cosmos/danneskjold-theme.git
+
+Updating /mnt/store/melpa/working/danneskjold-theme/
+Checking out 39ff00f8a40bcab96afd9450195124b57becd625
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/danneskjold-theme/
+  to /tmp/danneskjold-themegIsQCO/danneskjold-theme-20221121.634
+    danneskjold-light-theme.el -> danneskjold-light-theme.el
+    danneskjold-theme-pkg.el -> danneskjold-theme-pkg.el
+    danneskjold-theme.el -> danneskjold-theme.el
+Created danneskjold-theme-20221121.634.tar containing:
+  danneskjold-theme-20221121.634/
+  danneskjold-theme-20221121.634/danneskjold-light-theme.el
+  danneskjold-theme-20221121.634/danneskjold-theme-pkg.el
+  danneskjold-theme-20221121.634/danneskjold-theme.el
+Built danneskjold-theme in 3.572s, finished at 2023-06-02T21:35:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 343 Jun  2 21:35 packages/danneskjold-theme-20221121.634.entry
+ 40K -rw-r--r-- 1 root root 40K Jun  2 21:35 packages/danneskjold-theme-20221121.634.tar

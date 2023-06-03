@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: opensub
+Fetcher: github
+Source:  https://github.com/danielfleischer/opensub.git
+
+Updating /mnt/store/melpa/working/opensub/
+Checking out 0faef3dad6fc9c0eda1db1b237e6f66a8f411b01
+Built opensub in 4.670s, finished at 2023-06-02T22:26:55+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  2 22:26 packages/opensub-20230417.1635.el
+4.0K -rw-r--r-- 1 root root  448 Jun  2 22:26 packages/opensub-20230417.1635.entry

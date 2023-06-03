@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: flycheck-indent
+Fetcher: github
+Source:  https://github.com/conao3/indent-lint.el.git
+
+Updating /mnt/store/melpa/working/flycheck-indent/
+Checking out 23ef4bab5509e2e7fb1f4a194895a9510fa7c797
+Built flycheck-indent in 4.524s, finished at 2023-06-02T21:51:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  2 21:51 packages/flycheck-indent-20200129.2046.el
+4.0K -rw-r--r-- 1 root root  506 Jun  2 21:51 packages/flycheck-indent-20200129.2046.entry

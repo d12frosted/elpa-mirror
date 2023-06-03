@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-translate
+Fetcher: github
+Source:  https://github.com/krisajenkins/ob-translate.git
+
+Updating /mnt/store/melpa/working/ob-translate/
+Checking out 9d9054a51bafd5a29a8135964069b4fa3a80b169
+Built ob-translate in 5.120s, finished at 2023-06-02T22:26:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jun  2 22:26 packages/ob-translate-20170720.1919.el
+4.0K -rw-r--r-- 1 root root  512 Jun  2 22:26 packages/ob-translate-20170720.1919.entry

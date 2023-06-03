@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fish-mode
+Fetcher: github
+Source:  https://github.com/wwwjfy/emacs-fish.git
+
+Updating /mnt/store/melpa/working/fish-mode/
+Checking out 6869efbc05cdb628209338bf57fe52742e53d956
+Built fish-mode in 5.114s, finished at 2023-06-02T21:50:30+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  2 21:50 packages/fish-mode-20230326.1604.el
+4.0K -rw-r--r-- 1 root root 381 Jun  2 21:50 packages/fish-mode-20230326.1604.entry

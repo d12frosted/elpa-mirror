@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: himalaya
+Fetcher: github
+Source:  https://github.com/dantecatalfamo/himalaya-emacs.git
+
+Updating /mnt/store/melpa/working/himalaya/
+Checking out d1694b760508bc2c3c50945e837b92959c34df31
+Built himalaya in 4.703s, finished at 2023-06-02T22:04:57+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:04 packages/himalaya-20230531.1417.el
+4.0K -rw-r--r-- 1 root root 442 Jun  2 22:04 packages/himalaya-20230531.1417.entry

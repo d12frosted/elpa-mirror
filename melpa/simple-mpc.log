@@ -1,1 +1,28 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: simple-mpc
+Fetcher: github
+Source:  https://github.com/jorenvo/simple-mpc.git
+
+Updating /mnt/store/melpa/working/simple-mpc/
+Checking out 57ee14ada8aec477ddde5e4f632c8d3d99a66535
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/simple-mpc/
+  to /tmp/simple-mpcwAYqNj/simple-mpc-20220216.102
+    simple-mpc-current-playlist.el -> simple-mpc-current-playlist.el
+    simple-mpc-mode.el -> simple-mpc-mode.el
+    simple-mpc-query.el -> simple-mpc-query.el
+    simple-mpc-utils.el -> simple-mpc-utils.el
+    simple-mpc-vars.el -> simple-mpc-vars.el
+    simple-mpc.el -> simple-mpc.el
+Created simple-mpc-20220216.102.tar containing:
+  simple-mpc-20220216.102/
+  simple-mpc-20220216.102/simple-mpc-current-playlist.el
+  simple-mpc-20220216.102/simple-mpc-mode.el
+  simple-mpc-20220216.102/simple-mpc-pkg.el
+  simple-mpc-20220216.102/simple-mpc-query.el
+  simple-mpc-20220216.102/simple-mpc-utils.el
+  simple-mpc-20220216.102/simple-mpc-vars.el
+  simple-mpc-20220216.102/simple-mpc.el
+Built simple-mpc in 4.086s, finished at 2023-06-02T22:46:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 462 Jun  2 22:46 packages/simple-mpc-20220216.102.entry
+ 40K -rw-r--r-- 1 root root 40K Jun  2 22:46 packages/simple-mpc-20220216.102.tar

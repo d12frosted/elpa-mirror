@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-contacts
+Fetcher: git
+Source:  https://repo.or.cz/org-contacts.git
+
+Updating /mnt/store/melpa/working/org-contacts/
+Checking out ae45b9413e24abdc431d12858dced54e0dee6e39
+Built org-contacts in 5.238s, finished at 2023-06-02T22:27:35+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 59K Jun  2 22:27 packages/org-contacts-20230227.1417.el
+4.0K -rw-r--r-- 1 root root 502 Jun  2 22:27 packages/org-contacts-20230227.1417.entry

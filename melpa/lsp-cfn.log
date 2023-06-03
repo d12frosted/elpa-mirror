@@ -1,1 +1,26 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: lsp-cfn
+Fetcher: github
+Source:  https://github.com/LaurenceWarne/lsp-cfn.el.git
+
+Updating /mnt/store/melpa/working/lsp-cfn/
+Checking out 55203d41d767c091511599fca236c1f9c39cd58a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-cfn/
+  to /tmp/lsp-cfnn5SqAF/lsp-cfn-20220822.1545
+    lsp-cfn.el -> lsp-cfn.el
+    snippets => snippets
+Created lsp-cfn-20220822.1545.tar containing:
+  lsp-cfn-20220822.1545/
+  lsp-cfn-20220822.1545/lsp-cfn-pkg.el
+  lsp-cfn-20220822.1545/lsp-cfn.el
+  lsp-cfn-20220822.1545/snippets/
+  lsp-cfn-20220822.1545/snippets/js-mode/
+  lsp-cfn-20220822.1545/snippets/js-mode/aws
+  lsp-cfn-20220822.1545/snippets/js-mode/sam
+  lsp-cfn-20220822.1545/snippets/yaml-mode/
+  lsp-cfn-20220822.1545/snippets/yaml-mode/aws
+  lsp-cfn-20220822.1545/snippets/yaml-mode/sam
+Built lsp-cfn in 7.783s, finished at 2023-06-02T22:15:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 394 Jun  2 22:15 packages/lsp-cfn-20220822.1545.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:15 packages/lsp-cfn-20220822.1545.tar

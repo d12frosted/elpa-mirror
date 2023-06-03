@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: zen-mode
+Fetcher: github
+Source:  https://github.com/zenlang/zen-mode.git
+
+Updating /mnt/store/melpa/working/zen-mode/
+Checking out c1b1806358f3cce6c04b30699987d82dc7d42559
+Built zen-mode in 4.970s, finished at 2023-06-02T23:01:45+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  2 23:01 packages/zen-mode-20200609.822.el
+4.0K -rw-r--r-- 1 root root 842 Jun  2 23:01 packages/zen-mode-20200609.822.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: freeze-it
+Fetcher: github
+Source:  https://github.com/rnkn/freeze-it.git
+
+Updating /mnt/store/melpa/working/freeze-it/
+Checking out ad92e33a7ebd860905da60d194833516bf61cbf5
+Built freeze-it in 7.218s, finished at 2023-06-02T21:54:46+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Jun  2 21:54 packages/freeze-it-20220301.148.el
+4.0K -rw-r--r-- 1 root root  462 Jun  2 21:54 packages/freeze-it-20220301.148.entry

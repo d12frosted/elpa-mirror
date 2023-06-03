@@ -1,1 +1,67 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: geiser
+Fetcher: gitlab
+Source:  https://gitlab.com/emacs-geiser/geiser.git
+
+Updating /mnt/store/melpa/working/geiser/
+Checking out 83305e6bb5f13d68f8e31d457605b02d2a10c014
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser/
+  to /tmp/geiserzuF4yr/geiser-20230503.1044
+  ! elisp/geiser-autodoc.el -> geiser-autodoc.el
+  ! elisp/geiser-base.el -> geiser-base.el
+  ! elisp/geiser-capf.el -> geiser-capf.el
+  ! elisp/geiser-compile.el -> geiser-compile.el
+  ! elisp/geiser-completion.el -> geiser-completion.el
+  ! elisp/geiser-connection.el -> geiser-connection.el
+  ! elisp/geiser-custom.el -> geiser-custom.el
+  ! elisp/geiser-debug.el -> geiser-debug.el
+  ! elisp/geiser-doc.el -> geiser-doc.el
+  ! elisp/geiser-edit.el -> geiser-edit.el
+  ! elisp/geiser-eval.el -> geiser-eval.el
+  ! elisp/geiser-image.el -> geiser-image.el
+  ! elisp/geiser-impl.el -> geiser-impl.el
+  ! elisp/geiser-log.el -> geiser-log.el
+  ! elisp/geiser-menu.el -> geiser-menu.el
+  ! elisp/geiser-mode.el -> geiser-mode.el
+  ! elisp/geiser-popup.el -> geiser-popup.el
+  ! elisp/geiser-reload.el -> geiser-reload.el
+  ! elisp/geiser-repl.el -> geiser-repl.el
+  ! elisp/geiser-syntax.el -> geiser-syntax.el
+  ! elisp/geiser-table.el -> geiser-table.el
+  ! elisp/geiser-xref.el -> geiser-xref.el
+  ! elisp/geiser.el -> geiser.el
+  ! doc/dir -> dir
+  ! doc/geiser.texi -> geiser.texi
+Generating /tmp/geiserzuF4yr/geiser-20230503.1044/geiser.info
+Created geiser-20230503.1044.tar containing:
+  geiser-20230503.1044/
+  geiser-20230503.1044/dir
+  geiser-20230503.1044/geiser-autodoc.el
+  geiser-20230503.1044/geiser-base.el
+  geiser-20230503.1044/geiser-capf.el
+  geiser-20230503.1044/geiser-compile.el
+  geiser-20230503.1044/geiser-completion.el
+  geiser-20230503.1044/geiser-connection.el
+  geiser-20230503.1044/geiser-custom.el
+  geiser-20230503.1044/geiser-debug.el
+  geiser-20230503.1044/geiser-doc.el
+  geiser-20230503.1044/geiser-edit.el
+  geiser-20230503.1044/geiser-eval.el
+  geiser-20230503.1044/geiser-image.el
+  geiser-20230503.1044/geiser-impl.el
+  geiser-20230503.1044/geiser-log.el
+  geiser-20230503.1044/geiser-menu.el
+  geiser-20230503.1044/geiser-mode.el
+  geiser-20230503.1044/geiser-pkg.el
+  geiser-20230503.1044/geiser-popup.el
+  geiser-20230503.1044/geiser-reload.el
+  geiser-20230503.1044/geiser-repl.el
+  geiser-20230503.1044/geiser-syntax.el
+  geiser-20230503.1044/geiser-table.el
+  geiser-20230503.1044/geiser-xref.el
+  geiser-20230503.1044/geiser.el
+  geiser-20230503.1044/geiser.info
+Built geiser in 26.940s, finished at 2023-06-02T21:56:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  467 Jun  2 21:56 packages/geiser-20230503.1044.entry
+320K -rw-r--r-- 1 root root 320K Jun  2 21:56 packages/geiser-20230503.1044.tar

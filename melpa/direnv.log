@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: direnv
+Fetcher: github
+Source:  https://github.com/wbolster/emacs-direnv.git
+
+Updating /mnt/store/melpa/working/direnv/
+Checking out 268536f564b7eba99264a89a9149268eb4bc67ac
+Built direnv in 5.570s, finished at 2023-06-02T21:38:13+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 21:38 packages/direnv-20220812.956.el
+4.0K -rw-r--r-- 1 root root 474 Jun  2 21:38 packages/direnv-20220812.956.entry

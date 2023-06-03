@@ -1,1 +1,11 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: buffer-sets
+Fetcher: sourcehut
+Source:  https://git.sr.ht/~swflint/buffer-sets
+
+Updating /mnt/store/melpa/working/buffer-sets/
+Checking out 951e894ef96d533324f7f24c2a0def45ae89d558
+Warning: buffer-sets :files spec is equivalent to the default
+Built buffer-sets in 7.684s, finished at 2023-06-02T21:26:33+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  2 21:26 packages/buffer-sets-20230319.1822.el
+4.0K -rw-r--r-- 1 root root 483 Jun  2 21:26 packages/buffer-sets-20230319.1822.entry

@@ -1,1 +1,36 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: travis
+Fetcher: github
+Source:  https://github.com/nlamirault/emacs-travis.git
+
+Updating /mnt/store/melpa/working/travis/
+Checking out c8769d3db10ed4604969049e3bd276afa0a0138e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/travis/
+  to /tmp/travisbz1oG5/travis-20150825.1138
+    travis-api.el -> travis-api.el
+    travis-auth.el -> travis-auth.el
+    travis-builds.el -> travis-builds.el
+    travis-mode.el -> travis-mode.el
+    travis-repos.el -> travis-repos.el
+    travis-ui.el -> travis-ui.el
+    travis-users.el -> travis-users.el
+    travis-utils.el -> travis-utils.el
+    travis-version.el -> travis-version.el
+    travis.el -> travis.el
+Created travis-20150825.1138.tar containing:
+  travis-20150825.1138/
+  travis-20150825.1138/travis-api.el
+  travis-20150825.1138/travis-auth.el
+  travis-20150825.1138/travis-builds.el
+  travis-20150825.1138/travis-mode.el
+  travis-20150825.1138/travis-pkg.el
+  travis-20150825.1138/travis-repos.el
+  travis-20150825.1138/travis-ui.el
+  travis-20150825.1138/travis-users.el
+  travis-20150825.1138/travis-utils.el
+  travis-20150825.1138/travis-version.el
+  travis-20150825.1138/travis.el
+Built travis in 4.638s, finished at 2023-06-02T22:54:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 512 Jun  2 22:54 packages/travis-20150825.1138.entry
+ 40K -rw-r--r-- 1 root root 40K Jun  2 22:54 packages/travis-20150825.1138.tar

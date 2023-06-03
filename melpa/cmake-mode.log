@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: cmake-mode
+Fetcher: git
+Source:  https://gitlab.kitware.com/cmake/cmake.git
+
+Updating /mnt/store/melpa/working/cmake-mode/
+Checking out a2fc16510ce3f89e34bd802c808d10951cfc94f5
+Built cmake-mode in 25.846s, finished at 2023-06-02T21:30:47+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  2 21:30 packages/cmake-mode-20230422.828.el
+4.0K -rw-r--r-- 1 root root 183 Jun  2 21:30 packages/cmake-mode-20230422.828.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: clojars
+Fetcher: github
+Source:  https://github.com/joshuamiller/clojars.el.git
+
+Updating /mnt/store/melpa/working/clojars/
+Checking out c78e4d5ddacda064c253e2b38d1c35188aa1ad71
+Built clojars in 4.689s, finished at 2023-06-02T21:30:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.2K Jun  2 21:30 packages/clojars-20180825.1951.el
+4.0K -rw-r--r-- 1 root root  449 Jun  2 21:30 packages/clojars-20180825.1951.entry

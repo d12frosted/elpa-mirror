@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: basic-mode
+Fetcher: github
+Source:  https://github.com/dykstrom/basic-mode.git
+
+Updating /mnt/store/melpa/working/basic-mode/
+Checking out 2971591510f08ab1645ed8a238b6ad086750f994
+Built basic-mode in 5.608s, finished at 2023-06-02T21:24:21+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 53K Jun  2 21:24 packages/basic-mode-20230401.845.el
+4.0K -rw-r--r-- 1 root root 436 Jun  2 21:24 packages/basic-mode-20230401.845.entry

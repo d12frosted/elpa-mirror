@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-ipython
+Fetcher: github
+Source:  https://github.com/gregsexton/ob-ipython.git
+
+Updating /mnt/store/melpa/working/ob-ipython/
+Checking out 7147455230841744fb5b95dcbe03320313a77124
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-ipython/
+  to /tmp/ob-ipythonD1fkL1/ob-ipython-20180224.953
+    ob-ipython.el -> ob-ipython.el
+    client.py -> client.py
+Created ob-ipython-20180224.953.tar containing:
+  ob-ipython-20180224.953/
+  ob-ipython-20180224.953/client.py
+  ob-ipython-20180224.953/ob-ipython-pkg.el
+  ob-ipython-20180224.953/ob-ipython.el
+Built ob-ipython in 4.059s, finished at 2023-06-02T22:25:35+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 619 Jun  2 22:25 packages/ob-ipython-20180224.953.entry
+ 40K -rw-r--r-- 1 root root 40K Jun  2 22:25 packages/ob-ipython-20180224.953.tar

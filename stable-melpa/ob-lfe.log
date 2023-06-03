@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-lfe
+Fetcher: github
+Source:  https://github.com/zweifisch/ob-lfe.git
+
+Updating /mnt/store/melpa/working/ob-lfe/
+Checking out f7780f58e650b4d29dfd834c662b1d354b620a8e
+Built ob-lfe in 4.775s, finished at 2023-06-02T22:25:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  2 22:25 packages/ob-lfe-20170725.1420.el
+4.0K -rw-r--r-- 1 root root  426 Jun  2 22:25 packages/ob-lfe-20170725.1420.entry

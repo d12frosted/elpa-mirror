@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: terminal-toggle
+Fetcher: gitlab
+Source:  https://gitlab.com/mtekman/terminal-toggle.el.git
+
+Updating /mnt/store/melpa/working/terminal-toggle/
+Checking out f824d634aef3600cb7a8e2ddf9e8444c6607c160
+Built terminal-toggle in 7.663s, finished at 2023-06-02T22:52:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Jun  2 22:52 packages/terminal-toggle-20190226.1510.el
+4.0K -rw-r--r-- 1 root root  400 Jun  2 22:52 packages/terminal-toggle-20190226.1510.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: express
+Fetcher: github
+Source:  https://github.com/rolandwalker/express.git
+
+Updating /mnt/store/melpa/working/express/
+Checking out 6c301e8a4b6b58a5fe59ba607865238e38cee8fd
+Built express in 9.889s, finished at 2023-06-02T21:48:40+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 25K Jun  2 21:48 packages/express-20140508.2041.el
+4.0K -rw-r--r-- 1 root root 445 Jun  2 21:48 packages/express-20140508.2041.entry

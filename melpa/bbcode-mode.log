@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: bbcode-mode
+Fetcher: github
+Source:  https://github.com/lassik/emacs-bbcode-mode.git
+
+Updating /mnt/store/melpa/working/bbcode-mode/
+Checking out e16619c80ea21154b4a4ccc2e13d0077e97c9caf
+Built bbcode-mode in 4.827s, finished at 2023-06-02T21:24:25+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.9K Jun  2 21:24 packages/bbcode-mode-20190304.2122.el
+4.0K -rw-r--r-- 1 root root  509 Jun  2 21:24 packages/bbcode-mode-20190304.2122.entry

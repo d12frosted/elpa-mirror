@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ghc-imported-from
+Fetcher: github
+Source:  https://github.com/david-christiansen/ghc-imported-from-el.git
+
+Updating /mnt/store/melpa/working/ghc-imported-from/
+Checking out fcff08628a19f5d26151564659218cc677779b79
+Built ghc-imported-from in 7.867s, finished at 2023-06-02T21:56:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jun  2 21:56 packages/ghc-imported-from-20141124.1932.el
+4.0K -rw-r--r-- 1 root root  498 Jun  2 21:56 packages/ghc-imported-from-20141124.1932.entry

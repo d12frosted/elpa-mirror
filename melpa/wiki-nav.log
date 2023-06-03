@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: wiki-nav
+Fetcher: github
+Source:  https://github.com/rolandwalker/button-lock.git
+
+Updating /mnt/store/melpa/working/wiki-nav/
+Checking out 1f7a89ca05b6167af7d1337ad23a5d923486caac
+Built wiki-nav in 7.391s, finished at 2023-06-02T22:59:18+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 45K Jun  2 22:59 packages/wiki-nav-20230304.2212.el
+4.0K -rw-r--r-- 1 root root 519 Jun  2 22:59 packages/wiki-nav-20230304.2212.entry

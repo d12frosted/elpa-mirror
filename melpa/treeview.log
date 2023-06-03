@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: treeview
+Fetcher: github
+Source:  https://github.com/tilmanrassy/emacs-treeview.git
+
+Updating /mnt/store/melpa/working/treeview/
+Checking out d9c10feddf3b959e7b33ce83103e1f0a61162723
+Built treeview in 4.326s, finished at 2023-06-02T22:54:32+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 54K Jun  2 22:54 packages/treeview-20220928.43.el
+4.0K -rw-r--r-- 1 root root 498 Jun  2 22:54 packages/treeview-20220928.43.entry

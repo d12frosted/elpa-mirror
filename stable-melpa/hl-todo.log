@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: hl-todo
+Fetcher: github
+Source:  https://github.com/tarsius/hl-todo.git
+
+Updating /mnt/store/melpa/working/hl-todo/
+Checking out b27cddf7373408681cc949c8ef829f87a01ed3f3
+Built hl-todo in 5.091s, finished at 2023-06-02T22:05:13+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  2 22:05 packages/hl-todo-20230428.1332.el
+4.0K -rw-r--r-- 1 root root 457 Jun  2 22:05 packages/hl-todo-20230428.1332.entry

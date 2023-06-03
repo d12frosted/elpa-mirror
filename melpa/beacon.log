@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: beacon
+Fetcher: github
+Source:  https://github.com/Malabarba/beacon.git
+
+Updating /mnt/store/melpa/working/beacon/
+Checking out 85261a928ae0ec3b41e639f05291ffd6bf7c231c
+Built beacon in 5.293s, finished at 2023-06-02T21:24:38+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  2 21:24 packages/beacon-20220730.100.el
+4.0K -rw-r--r-- 1 root root 464 Jun  2 21:24 packages/beacon-20220730.100.entry

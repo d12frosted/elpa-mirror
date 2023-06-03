@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: vdiff
+Fetcher: github
+Source:  https://github.com/justbur/emacs-vdiff.git
+
+Updating /mnt/store/melpa/working/vdiff/
+Checking out d5df45f84395f507aba555a54407b60e284b23cd
+Built vdiff in 4.604s, finished at 2023-06-02T22:56:28+0000
+ ✓ Success:
+ 92K -rw-r--r-- 1 root root 92K Jun  2 22:56 packages/vdiff-20220830.1450.el
+4.0K -rw-r--r-- 1 root root 424 Jun  2 22:56 packages/vdiff-20220830.1450.entry

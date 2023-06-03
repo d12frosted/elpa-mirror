@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ivy-gitlab
+Fetcher: github
+Source:  https://github.com/nlamirault/emacs-gitlab.git
+
+Updating /mnt/store/melpa/working/ivy-gitlab/
+Checking out 8c2324c02119500f094c2f92dfaba4c9977ce1ba
+Built ivy-gitlab in 8.017s, finished at 2023-06-02T22:08:53+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jun  2 22:08 packages/ivy-gitlab-20181228.826.el
+4.0K -rw-r--r-- 1 root root  588 Jun  2 22:08 packages/ivy-gitlab-20181228.826.entry

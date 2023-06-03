@@ -1,1 +1,28 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: mic
+Fetcher: github
+Source:  https://github.com/ROCKTAKEY/mic.git
+
+Updating /mnt/store/melpa/working/mic/
+Checking out 7d0a31ace0b801cb8b58a7bb61a981b67508208d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mic/
+  to /tmp/micaMoxeb/mic-20230123.944
+    mic-adapter.el -> mic-adapter.el
+    mic-deffilter.el -> mic-deffilter.el
+    mic-definputter.el -> mic-definputter.el
+    mic-filter.el -> mic-filter.el
+    mic-utils.el -> mic-utils.el
+    mic.el -> mic.el
+Created mic-20230123.944.tar containing:
+  mic-20230123.944/
+  mic-20230123.944/mic-adapter.el
+  mic-20230123.944/mic-deffilter.el
+  mic-20230123.944/mic-definputter.el
+  mic-20230123.944/mic-filter.el
+  mic-20230123.944/mic-pkg.el
+  mic-20230123.944/mic-utils.el
+  mic-20230123.944/mic.el
+Built mic in 4.559s, finished at 2023-06-02T22:19:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  433 Jun  2 22:19 packages/mic-20230123.944.entry
+112K -rw-r--r-- 1 root root 110K Jun  2 22:19 packages/mic-20230123.944.tar

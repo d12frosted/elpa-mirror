@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: doct
+Fetcher: github
+Source:  https://github.com/progfolio/doct.git
+
+Updating /mnt/store/melpa/working/doct/
+Checking out 69bfe30317c7fa7a5a51f2763515dfe9c989ebf1
+Built doct in 4.854s, finished at 2023-06-02T21:39:06+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 49K Jun  2 21:39 packages/doct-20230108.1507.el
+4.0K -rw-r--r-- 1 root root 453 Jun  2 21:39 packages/doct-20230108.1507.entry

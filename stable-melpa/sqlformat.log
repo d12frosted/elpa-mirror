@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sqlformat
+Fetcher: github
+Source:  https://github.com/purcell/sqlformat.git
+
+Updating /mnt/store/melpa/working/sqlformat/
+Checking out aa6dc933efe2e7df77fa1259ec82d62ac1b1e81a
+Built sqlformat in 4.790s, finished at 2023-06-02T22:49:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Jun  2 22:48 packages/sqlformat-20230524.843.el
+4.0K -rw-r--r-- 1 root root  497 Jun  2 22:48 packages/sqlformat-20230524.843.entry

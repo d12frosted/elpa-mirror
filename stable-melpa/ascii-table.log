@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ascii-table
+Fetcher: github
+Source:  https://github.com/lassik/emacs-ascii-table.git
+
+Updating /mnt/store/melpa/working/ascii-table/
+Checking out c71f54b85edc6bd42abdc79dd82248958c8a24f9
+Built ascii-table in 4.955s, finished at 2023-06-02T21:22:36+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  2 21:22 packages/ascii-table-20221230.1244.el
+4.0K -rw-r--r-- 1 root root 445 Jun  2 21:22 packages/ascii-table-20221230.1244.entry

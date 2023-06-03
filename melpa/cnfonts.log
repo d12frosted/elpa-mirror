@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: cnfonts
+Fetcher: github
+Source:  https://github.com/tumashu/cnfonts.git
+
+Updating /mnt/store/melpa/working/cnfonts/
+Checking out 5115f53366bd6118dce3673ddec5ff428534ce67
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cnfonts/
+  to /tmp/cnfontslQLR0O/cnfonts-20230412.132
+    cnfonts-ui.el -> cnfonts-ui.el
+    cnfonts.el -> cnfonts.el
+Created cnfonts-20230412.132.tar containing:
+  cnfonts-20230412.132/
+  cnfonts-20230412.132/cnfonts-pkg.el
+  cnfonts-20230412.132/cnfonts-ui.el
+  cnfonts-20230412.132/cnfonts.el
+Built cnfonts in 4.640s, finished at 2023-06-02T21:30:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 414 Jun  2 21:30 packages/cnfonts-20230412.132.entry
+ 60K -rw-r--r-- 1 root root 60K Jun  2 21:30 packages/cnfonts-20230412.132.tar

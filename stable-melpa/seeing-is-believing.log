@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: seeing-is-believing
+Fetcher: github
+Source:  https://github.com/jcinnamond/seeing-is-believing.git
+
+Updating /mnt/store/melpa/working/seeing-is-believing/
+Checking out fbbe246c0fda87bb26227bb826eebadb418a220f
+Built seeing-is-believing in 6.679s, finished at 2023-06-02T22:44:12+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.7K Jun  2 22:44 packages/seeing-is-believing-20170214.1320.el
+4.0K -rw-r--r-- 1 root root  319 Jun  2 22:44 packages/seeing-is-believing-20170214.1320.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ligo-mode
+Fetcher: gitlab
+Source:  https://gitlab.com/ligolang/ligo.git
+
+Updating /mnt/store/melpa/working/ligo-mode/
+Checking out d1073474efc9e0a020a4bcdf5e0c12a217265a3a
+Built ligo-mode in 35.164s, finished at 2023-06-02T22:14:56+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 22:14 packages/ligo-mode-20230302.1616.el
+4.0K -rw-r--r-- 1 root root 410 Jun  2 22:14 packages/ligo-mode-20230302.1616.entry

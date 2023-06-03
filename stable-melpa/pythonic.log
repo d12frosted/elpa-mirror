@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pythonic
+Fetcher: github
+Source:  https://github.com/pythonic-emacs/pythonic.git
+
+Updating /mnt/store/melpa/working/pythonic/
+Checking out c18a5bd8cb2ba59014b6b29b5bf1903bd2476a07
+Built pythonic in 4.643s, finished at 2023-06-02T22:39:33+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 22:39 packages/pythonic-20220723.1741.el
+4.0K -rw-r--r-- 1 root root 486 Jun  2 22:39 packages/pythonic-20220723.1741.entry

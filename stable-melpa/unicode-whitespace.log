@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: unicode-whitespace
+Fetcher: github
+Source:  https://github.com/rolandwalker/unicode-whitespace.git
+
+Updating /mnt/store/melpa/working/unicode-whitespace/
+Checking out b0cbfe4f9998a2c1eb4cba031efcb785ef518916
+Built unicode-whitespace in 4.358s, finished at 2023-06-02T22:55:34+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 40K Jun  2 22:55 packages/unicode-whitespace-20140508.2041.el
+4.0K -rw-r--r-- 1 root root 636 Jun  2 22:55 packages/unicode-whitespace-20140508.2041.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: handoff
+Fetcher: github
+Source:  https://github.com/rejeep/handoff.el.git
+
+Updating /mnt/store/melpa/working/handoff/
+Checking out 75dc7a7e352f38679f65d0ca80ad158798e168bd
+Built handoff in 5.044s, finished at 2023-06-02T22:00:23+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jun  2 22:00 packages/handoff-20150917.600.el
+4.0K -rw-r--r-- 1 root root  398 Jun  2 22:00 packages/handoff-20150917.600.entry

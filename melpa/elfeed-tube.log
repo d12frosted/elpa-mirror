@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: elfeed-tube
+Fetcher: github
+Source:  https://github.com/karthink/elfeed-tube.git
+
+Updating /mnt/store/melpa/working/elfeed-tube/
+Checking out 3ac12d76402bf192de8ae3b18997f9a52726379f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-tube/
+  to /tmp/elfeed-tubeRuZEUX/elfeed-tube-20230430.546
+    elfeed-tube.el -> elfeed-tube.el
+    elfeed-tube-utils.el -> elfeed-tube-utils.el
+    elfeed-tube-fill.el -> elfeed-tube-fill.el
+Created elfeed-tube-20230430.546.tar containing:
+  elfeed-tube-20230430.546/
+  elfeed-tube-20230430.546/elfeed-tube-fill.el
+  elfeed-tube-20230430.546/elfeed-tube-pkg.el
+  elfeed-tube-20230430.546/elfeed-tube-utils.el
+  elfeed-tube-20230430.546/elfeed-tube.el
+Built elfeed-tube in 4.301s, finished at 2023-06-02T21:42:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  575 Jun  2 21:42 packages/elfeed-tube-20230430.546.entry
+100K -rw-r--r-- 1 root root 100K Jun  2 21:42 packages/elfeed-tube-20230430.546.tar

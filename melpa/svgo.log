@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: svgo
+Fetcher: github
+Source:  https://github.com/hupf/svgo.el.git
+
+Updating /mnt/store/melpa/working/svgo/
+Checking out 9b01cc9eb1fdf2731cd2b931a7dfe1f601b70786
+Built svgo in 5.810s, finished at 2023-06-02T22:50:12+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Jun  2 22:50 packages/svgo-20220525.2059.el
+4.0K -rw-r--r-- 1 root root  388 Jun  2 22:50 packages/svgo-20220525.2059.entry

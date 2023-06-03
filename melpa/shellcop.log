@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: shellcop
+Fetcher: github
+Source:  https://github.com/redguardtoo/shellcop.git
+
+Updating /mnt/store/melpa/working/shellcop/
+Checking out 3f051e42288ddfe4cd7cd0ee62efad90227de24b
+Built shellcop in 6.288s, finished at 2023-06-02T22:45:38+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  2 22:45 packages/shellcop-20220629.817.el
+4.0K -rw-r--r-- 1 root root 434 Jun  2 22:45 packages/shellcop-20220629.817.entry

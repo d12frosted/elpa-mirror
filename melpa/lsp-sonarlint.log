@@ -1,1 +1,42 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: lsp-sonarlint
+Fetcher: github
+Source:  https://github.com/emacs-lsp/lsp-sonarlint.git
+
+Updating /mnt/store/melpa/working/lsp-sonarlint/
+Checking out a429be2aea7797369a3c751ef54e3554733117be
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-sonarlint/
+  to /tmp/lsp-sonarlintscGbWF/lsp-sonarlint-20220510.1802
+    lsp-sonarlint.el -> lsp-sonarlint.el
+  ! languages/xml/lsp-sonarlint-xml.el -> languages/lsp-sonarlint-xml.el
+  ! languages/typescript/lsp-sonarlint-typescript.el -> languages/lsp-sonarlint-typescript.el
+  ! languages/scala/lsp-sonarlint-scala.el -> languages/lsp-sonarlint-scala.el
+  ! languages/ruby/lsp-sonarlint-ruby.el -> languages/lsp-sonarlint-ruby.el
+  ! languages/python/lsp-sonarlint-python.el -> languages/lsp-sonarlint-python.el
+  ! languages/php/lsp-sonarlint-php.el -> languages/lsp-sonarlint-php.el
+  ! languages/javascript/lsp-sonarlint-javascript.el -> languages/lsp-sonarlint-javascript.el
+  ! languages/java/lsp-sonarlint-java.el -> languages/lsp-sonarlint-java.el
+  ! languages/html/lsp-sonarlint-html.el -> languages/lsp-sonarlint-html.el
+    server/LICENSE -> server/LICENSE
+    server/sonarlint-language-server.jar -> server/sonarlint-language-server.jar
+Created lsp-sonarlint-20220510.1802.tar containing:
+  lsp-sonarlint-20220510.1802/
+  lsp-sonarlint-20220510.1802/languages/
+  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-html.el
+  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-java.el
+  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-javascript.el
+  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-php.el
+  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-python.el
+  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-ruby.el
+  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-scala.el
+  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-typescript.el
+  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-xml.el
+  lsp-sonarlint-20220510.1802/lsp-sonarlint-pkg.el
+  lsp-sonarlint-20220510.1802/lsp-sonarlint.el
+  lsp-sonarlint-20220510.1802/server/
+  lsp-sonarlint-20220510.1802/server/LICENSE
+  lsp-sonarlint-20220510.1802/server/sonarlint-language-server.jar
+Built lsp-sonarlint in 10.404s, finished at 2023-06-02T22:16:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 536 Jun  2 22:16 packages/lsp-sonarlint-20220510.1802.entry
+ 14M -rw-r--r-- 1 root root 14M Jun  2 22:16 packages/lsp-sonarlint-20220510.1802.tar

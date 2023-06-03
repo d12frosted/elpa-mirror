@@ -1,1 +1,43 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: liberime
+Fetcher: github
+Source:  https://github.com/merrickluo/liberime.git
+
+Updating /mnt/store/melpa/working/liberime/
+Checking out cc9eb9812fd6f68e78ed6a0c0a85da7a18765753
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/liberime/
+  to /tmp/liberime8U9kpo/liberime-20230113.556
+    liberime.el -> liberime.el
+    src => src
+    emacs-module => emacs-module
+    LICENSE -> LICENSE
+    Makefile -> Makefile
+    README.org -> README.org
+Created liberime-20230113.556.tar containing:
+  liberime-20230113.556/
+  liberime-20230113.556/LICENSE
+  liberime-20230113.556/Makefile
+  liberime-20230113.556/README.org
+  liberime-20230113.556/emacs-module/
+  liberime-20230113.556/emacs-module/26/
+  liberime-20230113.556/emacs-module/26/emacs-module.h
+  liberime-20230113.556/emacs-module/27/
+  liberime-20230113.556/emacs-module/27/emacs-module.h
+  liberime-20230113.556/emacs-module/28/
+  liberime-20230113.556/emacs-module/28/emacs-module.h
+  liberime-20230113.556/emacs-module/29/
+  liberime-20230113.556/emacs-module/29/emacs-module.h
+  liberime-20230113.556/emacs-module/30/
+  liberime-20230113.556/emacs-module/30/emacs-module.h
+  liberime-20230113.556/liberime-pkg.el
+  liberime-20230113.556/liberime.el
+  liberime-20230113.556/src/
+  liberime-20230113.556/src/init.c
+  liberime-20230113.556/src/interface.c
+  liberime-20230113.556/src/interface.h
+  liberime-20230113.556/src/liberime-core.c
+  liberime-20230113.556/src/liberime-core.h
+Built liberime in 5.439s, finished at 2023-06-02T22:14:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  360 Jun  2 22:14 packages/liberime-20230113.556.entry
+232K -rw-r--r-- 1 root root 230K Jun  2 22:14 packages/liberime-20230113.556.tar

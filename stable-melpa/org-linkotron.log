@@ -1,1 +1,21 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-linkotron
+Fetcher: gitlab
+Source:  https://gitlab.com/perweij/org-linkotron.git
+
+Updating /mnt/store/melpa/working/org-linkotron/
+Checking out d0adc5247b205bc73d2f1a83d4a512d2be541eb5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-linkotron/
+  to /tmp/org-linkotronoFd9jc/org-linkotron-20200112.2235
+    org-linkotron.el -> org-linkotron.el
+    org-linkotron.info -> org-linkotron.info
+Created org-linkotron-20200112.2235.tar containing:
+  org-linkotron-20200112.2235/
+  org-linkotron-20200112.2235/dir
+  org-linkotron-20200112.2235/org-linkotron-pkg.el
+  org-linkotron-20200112.2235/org-linkotron.el
+  org-linkotron-20200112.2235/org-linkotron.info
+Built org-linkotron in 4.512s, finished at 2023-06-02T22:28:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 452 Jun  2 22:28 packages/org-linkotron-20200112.2235.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:28 packages/org-linkotron-20200112.2235.tar

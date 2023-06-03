@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: flower
+Fetcher: github
+Source:  https://github.com/FlowerAutomation/flower.git
+
+Updating /mnt/store/melpa/working/flower/
+Checking out 047846409867b2dd0ba4e2047a414b498680cd9c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flower/
+  to /tmp/flowerL9qdXE/flower-20220416.1744
+    flower.el -> flower.el
+    project.clj -> project.clj
+Created flower-20220416.1744.tar containing:
+  flower-20220416.1744/
+  flower-20220416.1744/flower-pkg.el
+  flower-20220416.1744/flower.el
+  flower-20220416.1744/project.clj
+Built flower in 4.761s, finished at 2023-06-02T21:50:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 441 Jun  2 21:50 packages/flower-20220416.1744.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 21:50 packages/flower-20220416.1744.tar

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: stash
+Fetcher: github
+Source:  https://github.com/vermiculus/stash.el.git
+
+Updating /mnt/store/melpa/working/stash/
+Checking out c2e494d20c752b80ebbdffbf66687b3cdfc425ad
+Built stash in 4.706s, finished at 2023-06-02T22:49:21+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.5K Jun  2 22:49 packages/stash-20151117.1427.el
+4.0K -rw-r--r-- 1 root root  417 Jun  2 22:49 packages/stash-20151117.1427.entry

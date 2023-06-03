@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: yaml
+Fetcher: github
+Source:  https://github.com/zkry/yaml.el.git
+
+Updating /mnt/store/melpa/working/yaml/
+Checking out a19fbf948a945571300e5a20ff1dbfa6ecfa0d16
+Built yaml in 6.239s, finished at 2023-06-02T23:01:05+0000
+ ✓ Success:
+108K -rw-r--r-- 1 root root 106K Jun  2 23:01 packages/yaml-20230312.250.el
+4.0K -rw-r--r-- 1 root root  387 Jun  2 23:01 packages/yaml-20230312.250.entry

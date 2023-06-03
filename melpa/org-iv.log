@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-iv
+Fetcher: github
+Source:  https://github.com/kuangdash/org-iv.git
+
+Updating /mnt/store/melpa/working/org-iv/
+Checking out 7f2bb1b32647655fd9d6684f6f09dcc66b61b0cd
+Warning: org-iv :files spec is equivalent to the default
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-iv/
+  to /tmp/org-iv939CDC/org-iv-20171001.1022
+    org-iv-config.el -> org-iv-config.el
+    org-iv-pkg.el -> org-iv-pkg.el
+    org-iv.el -> org-iv.el
+Created org-iv-20171001.1022.tar containing:
+  org-iv-20171001.1022/
+  org-iv-20171001.1022/org-iv-config.el
+  org-iv-20171001.1022/org-iv-pkg.el
+  org-iv-20171001.1022/org-iv.el
+Built org-iv in 4.496s, finished at 2023-06-02T22:28:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 412 Jun  2 22:28 packages/org-iv-20171001.1022.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:28 packages/org-iv-20171001.1022.tar

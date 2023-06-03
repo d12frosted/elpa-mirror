@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-listcruncher
+Fetcher: github
+Source:  https://github.com/dfeich/org-listcruncher.git
+
+Updating /mnt/store/melpa/working/org-listcruncher/
+Checking out 075e0e6d36eb50406a608bc8a2f0dd359ec63938
+Built org-listcruncher in 4.513s, finished at 2023-06-02T22:28:21+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:28 packages/org-listcruncher-20210706.1741.el
+4.0K -rw-r--r-- 1 root root 512 Jun  2 22:28 packages/org-listcruncher-20210706.1741.entry

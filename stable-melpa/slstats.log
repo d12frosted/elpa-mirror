@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: slstats
+Fetcher: github
+Source:  https://github.com/davep/slstats.el.git
+
+Updating /mnt/store/melpa/working/slstats/
+Checking out e9696066abf3f2b7b818a57c062530dfd9377033
+Built slstats in 7.266s, finished at 2023-06-02T22:46:55+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:46 packages/slstats-20170823.849.el
+4.0K -rw-r--r-- 1 root root 440 Jun  2 22:46 packages/slstats-20170823.849.entry

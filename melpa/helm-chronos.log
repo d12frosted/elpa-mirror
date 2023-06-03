@@ -1,1 +1,21 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-chronos
+Fetcher: github
+Source:  https://github.com/dxknight/helm-chronos.git
+
+Updating /mnt/store/melpa/working/helm-chronos/
+Checking out a14fc3d65dd96ce6616234b3f7b8b08b4c1817ef
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-chronos/
+  to /tmp/helm-chronosxE2z1j/helm-chronos-20150528.2036
+    helm-chronos.el -> helm-chronos.el
+    helm-chronos.info -> helm-chronos.info
+Created helm-chronos-20150528.2036.tar containing:
+  helm-chronos-20150528.2036/
+  helm-chronos-20150528.2036/dir
+  helm-chronos-20150528.2036/helm-chronos-pkg.el
+  helm-chronos-20150528.2036/helm-chronos.el
+  helm-chronos-20150528.2036/helm-chronos.info
+Built helm-chronos in 4.730s, finished at 2023-06-02T22:01:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 452 Jun  2 22:01 packages/helm-chronos-20150528.2036.entry
+ 52K -rw-r--r-- 1 root root 50K Jun  2 22:01 packages/helm-chronos-20150528.2036.tar

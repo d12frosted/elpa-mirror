@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: minimal-theme
+Fetcher: github
+Source:  https://github.com/anler/minimal-theme.git
+
+Updating /mnt/store/melpa/working/minimal-theme/
+Checking out 063b4d8ca33d55d04c341f0b2b777ec241a3e201
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/minimal-theme/
+  to /tmp/minimal-themeGvzLkw/minimal-theme-20190113.2132
+    minimal-black-theme.el -> minimal-black-theme.el
+    minimal-light-theme.el -> minimal-light-theme.el
+    minimal-theme.el -> minimal-theme.el
+Created minimal-theme-20190113.2132.tar containing:
+  minimal-theme-20190113.2132/
+  minimal-theme-20190113.2132/minimal-black-theme.el
+  minimal-theme-20190113.2132/minimal-light-theme.el
+  minimal-theme-20190113.2132/minimal-theme-pkg.el
+  minimal-theme-20190113.2132/minimal-theme.el
+Built minimal-theme in 4.115s, finished at 2023-06-02T22:19:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 419 Jun  2 22:19 packages/minimal-theme-20190113.2132.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:19 packages/minimal-theme-20190113.2132.tar

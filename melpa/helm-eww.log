@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: helm-eww
+Fetcher: github
+Source:  https://github.com/emacs-helm/helm-eww.git
+
+Updating /mnt/store/melpa/working/helm-eww/
+Checking out 76ba59fda8dd6f32a1bc7c6df0b43c6f76169911
+Built helm-eww in 4.993s, finished at 2023-06-02T22:01:35+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:01 packages/helm-eww-20190315.907.el
+4.0K -rw-r--r-- 1 root root 492 Jun  2 22:01 packages/helm-eww-20190315.907.entry

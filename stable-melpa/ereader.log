@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ereader
+Fetcher: github
+Source:  https://github.com/bddean/emacs-ereader.git
+
+Updating /mnt/store/melpa/working/ereader/
+Checking out f3bbd3f13195f8fba3e3c880aab0e4c60430dcf3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ereader/
+  to /tmp/ereader3kUqOV/ereader-20170810.501
+    ereader.el -> ereader.el
+    org-ebook.el -> org-ebook.el
+Created ereader-20170810.501.tar containing:
+  ereader-20170810.501/
+  ereader-20170810.501/ereader-pkg.el
+  ereader-20170810.501/ereader.el
+  ereader-20170810.501/org-ebook.el
+Built ereader in 4.715s, finished at 2023-06-02T21:45:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 512 Jun  2 21:45 packages/ereader-20170810.501.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 21:45 packages/ereader-20170810.501.tar

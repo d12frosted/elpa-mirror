@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: snapshot-timemachine
+Fetcher: github
+Source:  https://github.com/mrBliss/snapshot-timemachine.git
+
+Updating /mnt/store/melpa/working/snapshot-timemachine/
+Checking out 99efcebab309b11ed512a8dc62555d3834df5efb
+Built snapshot-timemachine in 4.562s, finished at 2023-06-02T22:47:49+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 48K Jun  2 22:47 packages/snapshot-timemachine-20161221.929.el
+4.0K -rw-r--r-- 1 root root 454 Jun  2 22:47 packages/snapshot-timemachine-20161221.929.entry

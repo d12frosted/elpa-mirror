@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: eterm-256color
+Fetcher: github
+Source:  https://github.com/dieggsy/eterm-256color.git
+
+Updating /mnt/store/melpa/working/eterm-256color/
+Checking out 05fdbd336a888a0f4068578a6d385d8bf812a4e8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eterm-256color/
+  to /tmp/eterm-256colorjP9UIG/eterm-256color-20210224.2241
+    eterm-256color.el -> eterm-256color.el
+    eterm-256color.ti -> eterm-256color.ti
+Created eterm-256color-20210224.2241.tar containing:
+  eterm-256color-20210224.2241/
+  eterm-256color-20210224.2241/eterm-256color-pkg.el
+  eterm-256color-20210224.2241/eterm-256color.el
+  eterm-256color-20210224.2241/eterm-256color.ti
+Built eterm-256color in 4.315s, finished at 2023-06-02T21:46:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 469 Jun  2 21:46 packages/eterm-256color-20210224.2241.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 21:46 packages/eterm-256color-20210224.2241.tar

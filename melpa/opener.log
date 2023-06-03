@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: opener
+Fetcher: github
+Source:  https://github.com/0robustus1/opener.el.git
+
+Updating /mnt/store/melpa/working/opener/
+Checking out c384f67278046fdcd220275fdd212ab85672cbeb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/opener/
+  to /tmp/openertLsI4c/opener-20161207.1810
+    opener.el -> opener.el
+    opener.texi -> opener.texi
+Generating /tmp/openertLsI4c/opener-20161207.1810/opener.info
+Created opener-20161207.1810.tar containing:
+  opener-20161207.1810/
+  opener-20161207.1810/dir
+  opener-20161207.1810/opener-pkg.el
+  opener-20161207.1810/opener.el
+  opener-20161207.1810/opener.info
+Built opener in 7.353s, finished at 2023-06-02T22:26:53+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 472 Jun  2 22:26 packages/opener-20161207.1810.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:26 packages/opener-20161207.1810.tar

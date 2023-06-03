@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: tinypng
+Fetcher: github
+Source:  https://github.com/xuchunyang/tinypng.el.git
+
+Updating /mnt/store/melpa/working/tinypng/
+Checking out f7632e073ce13ef5ce30ae5584cb482a8bb9ffff
+Built tinypng in 5.183s, finished at 2023-06-02T22:53:18+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.1K Jun  2 22:53 packages/tinypng-20200306.911.el
+4.0K -rw-r--r-- 1 root root  433 Jun  2 22:53 packages/tinypng-20200306.911.entry

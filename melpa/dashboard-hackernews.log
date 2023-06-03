@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dashboard-hackernews
+Fetcher: github
+Source:  https://github.com/hyakt/emacs-dashboard-hackernews.git
+
+Updating /mnt/store/melpa/working/dashboard-hackernews/
+Checking out 34d86bffcde7e6d10ffa7c5080a71a144f01f3aa
+Built dashboard-hackernews in 4.904s, finished at 2023-06-02T21:36:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jun  2 21:36 packages/dashboard-hackernews-20220516.1809.el
+4.0K -rw-r--r-- 1 root root  498 Jun  2 21:36 packages/dashboard-hackernews-20220516.1809.entry

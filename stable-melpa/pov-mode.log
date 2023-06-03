@@ -1,1 +1,23 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pov-mode
+Fetcher: github
+Source:  https://github.com/melmothx/pov-mode.git
+
+Updating /mnt/store/melpa/working/pov-mode/
+Checking out 9fc1db3aab7c27155674dd1a87ec62606035d074
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pov-mode/
+  to /tmp/pov-mode34Uufu/pov-mode-20161115.743
+    pov-mode-pkg.el -> pov-mode-pkg.el
+    pov-mode.el -> pov-mode.el
+    dir -> dir
+    pov-mode.info -> pov-mode.info
+Created pov-mode-20161115.743.tar containing:
+  pov-mode-20161115.743/
+  pov-mode-20161115.743/dir
+  pov-mode-20161115.743/pov-mode-pkg.el
+  pov-mode-20161115.743/pov-mode.el
+  pov-mode-20161115.743/pov-mode.info
+Built pov-mode in 5.349s, finished at 2023-06-02T22:36:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  308 Jun  2 22:36 packages/pov-mode-20161115.743.entry
+132K -rw-r--r-- 1 root root 130K Jun  2 22:36 packages/pov-mode-20161115.743.tar

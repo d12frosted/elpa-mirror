@@ -1,1 +1,22 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: dircmp
+Fetcher: github
+Source:  https://github.com/matthewlmcclure/dircmp-mode.git
+
+Updating /mnt/store/melpa/working/dircmp/
+Checking out 558ee0b601c2de9d247612085aafe2926f56a09f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dircmp/
+  to /tmp/dircmpiy1w3C/dircmp-20141204.1756
+    dircmp.el -> dircmp.el
+    emacs-git-difftool.sh -> emacs-git-difftool.sh
+    emacs-git-mergetool.sh -> emacs-git-mergetool.sh
+Created dircmp-20141204.1756.tar containing:
+  dircmp-20141204.1756/
+  dircmp-20141204.1756/dircmp-pkg.el
+  dircmp-20141204.1756/dircmp.el
+  dircmp-20141204.1756/emacs-git-difftool.sh
+  dircmp-20141204.1756/emacs-git-mergetool.sh
+Built dircmp in 4.186s, finished at 2023-06-02T21:37:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 418 Jun  2 21:37 packages/dircmp-20141204.1756.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 21:37 packages/dircmp-20141204.1756.tar

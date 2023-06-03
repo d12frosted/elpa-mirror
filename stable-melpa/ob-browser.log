@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ob-browser
+Fetcher: github
+Source:  https://github.com/krisajenkins/ob-browser.git
+
+Updating /mnt/store/melpa/working/ob-browser/
+Checking out a347d9df1c87b7eb660be8723982c7ad2563631a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-browser/
+  to /tmp/ob-browsereXkjyj/ob-browser-20170720.1918
+    ob-browser.js -> ob-browser.js
+    ob-browser.el -> ob-browser.el
+Created ob-browser-20170720.1918.tar containing:
+  ob-browser-20170720.1918/
+  ob-browser-20170720.1918/ob-browser-pkg.el
+  ob-browser-20170720.1918/ob-browser.el
+  ob-browser-20170720.1918/ob-browser.js
+Built ob-browser in 4.190s, finished at 2023-06-02T22:25:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 494 Jun  2 22:25 packages/ob-browser-20170720.1918.entry
+ 12K -rw-r--r-- 1 root root 10K Jun  2 22:25 packages/ob-browser-20170720.1918.tar

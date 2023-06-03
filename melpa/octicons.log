@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: octicons
+Fetcher: github
+Source:  https://github.com/emacsorphanage/octicons.git
+
+Updating /mnt/store/melpa/working/octicons/
+Checking out 229286a6166dba8ddabc8c4d338798c6cd3cf67d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/octicons/
+  to /tmp/octiconsUy7NZz/octicons-20151101.340
+    octicons-data.el -> octicons-data.el
+    octicons.el -> octicons.el
+Created octicons-20151101.340.tar containing:
+  octicons-20151101.340/
+  octicons-20151101.340/octicons-data.el
+  octicons-20151101.340/octicons-pkg.el
+  octicons-20151101.340/octicons.el
+Built octicons in 4.194s, finished at 2023-06-02T22:26:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 390 Jun  2 22:26 packages/octicons-20151101.340.entry
+ 12K -rw-r--r-- 1 root root 10K Jun  2 22:26 packages/octicons-20151101.340.tar

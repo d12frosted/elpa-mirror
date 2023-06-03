@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sensei
+Fetcher: github
+Source:  https://github.com/abailly/sensei.git
+
+Updating /mnt/store/melpa/working/sensei/
+Checking out 3538990de9ab57154e3da08d10fbd2c6228d87b8
+Built sensei in 7.132s, finished at 2023-06-02T22:44:33+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 8.0K Jun  2 22:44 packages/sensei-20220530.1226.el
+4.0K -rw-r--r-- 1 root root  455 Jun  2 22:44 packages/sensei-20220530.1226.entry

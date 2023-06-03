@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: sweet-theme
+Fetcher: github
+Source:  https://github.com/2bruh4me/sweet-theme.git
+
+Updating /mnt/store/melpa/working/sweet-theme/
+Checking out ccbfdb6a17e25ab18a0b64101675bc1dfef44006
+Built sweet-theme in 4.560s, finished at 2023-06-02T22:50:18+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 48K Jun  2 22:50 packages/sweet-theme-20200708.1202.el
+4.0K -rw-r--r-- 1 root root 358 Jun  2 22:50 packages/sweet-theme-20200708.1202.entry

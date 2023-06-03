@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: metalheart-theme
+Fetcher: github
+Source:  https://github.com/mswift42/MetalHeart-Emacs.git
+
+Updating /mnt/store/melpa/working/metalheart-theme/
+Checking out ec98ea2c11dc1213dae8cbe1fe0cee73ca138bb2
+Built metalheart-theme in 4.793s, finished at 2023-06-02T22:19:26+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:19 packages/metalheart-theme-20160710.641.el
+4.0K -rw-r--r-- 1 root root 326 Jun  2 22:19 packages/metalheart-theme-20160710.641.entry

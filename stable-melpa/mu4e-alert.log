@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: mu4e-alert
+Fetcher: github
+Source:  https://github.com/xzz53/mu4e-alert.git
+
+Updating /mnt/store/melpa/working/mu4e-alert/
+Checking out 3c9af8c7994df0a1a4f0703552ea3beffb485ace
+Built mu4e-alert in 5.091s, finished at 2023-06-02T22:21:32+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 25K Jun  2 22:21 packages/mu4e-alert-20220615.1948.el
+4.0K -rw-r--r-- 1 root root 574 Jun  2 22:21 packages/mu4e-alert-20220615.1948.entry

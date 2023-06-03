@@ -1,1 +1,20 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: phpunit
+Fetcher: github
+Source:  https://github.com/nlamirault/phpunit.el.git
+
+Updating /mnt/store/melpa/working/phpunit/
+Checking out 4a36906344c0abc11f48cc08cd8d50a9f46963f8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/phpunit/
+  to /tmp/phpunit0sbXBT/phpunit-20230124.743
+    phpunit-mode.el -> phpunit-mode.el
+    phpunit.el -> phpunit.el
+Created phpunit-20230124.743.tar containing:
+  phpunit-20230124.743/
+  phpunit-20230124.743/phpunit-mode.el
+  phpunit-20230124.743/phpunit-pkg.el
+  phpunit-20230124.743/phpunit.el
+Built phpunit in 4.526s, finished at 2023-06-02T22:34:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 630 Jun  2 22:34 packages/phpunit-20230124.743.entry
+ 20K -rw-r--r-- 1 root root 20K Jun  2 22:34 packages/phpunit-20230124.743.tar

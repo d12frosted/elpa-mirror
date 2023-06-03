@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: exercism
+Fetcher: github
+Source:  https://github.com/anonimitoraf/exercism.el.git
+
+Updating /mnt/store/melpa/working/exercism/
+Checking out 807ad7c9889b5a774f34ad65c6de0d40d74f253f
+Built exercism in 9.092s, finished at 2023-06-02T21:48:27+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  2 21:48 packages/exercism-20230530.2230.el
+4.0K -rw-r--r-- 1 root root 698 Jun  2 21:48 packages/exercism-20230530.2230.entry

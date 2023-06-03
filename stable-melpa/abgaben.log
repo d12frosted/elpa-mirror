@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: abgaben
+Fetcher: gitlab
+Source:  https://gitlab.com/akoehn/abgaben.git
+
+Updating /mnt/store/melpa/working/abgaben/
+Checking out 966bfcfdd3b2e288576ffe363d676ad282902090
+Built abgaben in 5.641s, finished at 2023-06-02T21:18:51+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  2 21:18 packages/abgaben-20171119.646.el
+4.0K -rw-r--r-- 1 root root 468 Jun  2 21:18 packages/abgaben-20171119.646.entry

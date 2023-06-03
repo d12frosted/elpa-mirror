@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: quickrun
+Fetcher: github
+Source:  https://github.com/emacsorphanage/quickrun.git
+
+Updating /mnt/store/melpa/working/quickrun/
+Checking out 7a89313c07a21eae9cd69a1a98e2a134d559e04f
+Built quickrun in 5.721s, finished at 2023-06-02T22:39:54+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root 63K Jun  2 22:39 packages/quickrun-20221215.828.el
+4.0K -rw-r--r-- 1 root root 452 Jun  2 22:39 packages/quickrun-20221215.828.entry

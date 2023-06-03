@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-habit-stats
+Fetcher: github
+Source:  https://github.com/ml729/org-habit-stats.git
+
+Updating /mnt/store/melpa/working/org-habit-stats/
+Checking out 9cb389f1c409d1f7aaea28378b4d7c7e975aefd4
+Built org-habit-stats in 4.351s, finished at 2023-06-02T22:28:04+0000
+ ✓ Success:
+ 76K -rw-r--r-- 1 root root 76K Jun  2 22:28 packages/org-habit-stats-20230412.515.el
+4.0K -rw-r--r-- 1 root root 419 Jun  2 22:28 packages/org-habit-stats-20230412.515.entry

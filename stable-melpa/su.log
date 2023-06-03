@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: su
+Fetcher: github
+Source:  https://github.com/PythonNut/su.el.git
+
+Updating /mnt/store/melpa/working/su/
+Checking out 1ecf7a7bbf9d88708eb2215e940753f8d6bccc92
+Built su in 4.462s, finished at 2023-06-02T22:49:49+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:49 packages/su-20210721.1816.el
+4.0K -rw-r--r-- 1 root root 487 Jun  2 22:49 packages/su-20210721.1816.entry

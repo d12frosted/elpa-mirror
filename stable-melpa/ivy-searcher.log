@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ivy-searcher
+Fetcher: github
+Source:  https://github.com/jcs-legacy/ivy-searcher.git
+
+Updating /mnt/store/melpa/working/ivy-searcher/
+Checking out 5ed00a1e273cdb33ce356f373427b65fb131021a
+Built ivy-searcher in 6.371s, finished at 2023-06-02T22:09:18+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  2 22:09 packages/ivy-searcher-20220704.653.el
+4.0K -rw-r--r-- 1 root root 589 Jun  2 22:09 packages/ivy-searcher-20220704.653.entry

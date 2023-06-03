@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: texfrag
+Fetcher: github
+Source:  https://github.com/TobiasZawada/texfrag.git
+
+Updating /mnt/store/melpa/working/texfrag/
+Checking out 6df9044c3d6bbb2a104f2c9b78ad10aa3cdf9506
+Built texfrag in 6.827s, finished at 2023-06-02T22:52:32+0000
+ ✓ Success:
+ 76K -rw-r--r-- 1 root root 74K Jun  2 22:52 packages/texfrag-20230117.1746.el
+4.0K -rw-r--r-- 1 root root 459 Jun  2 22:52 packages/texfrag-20230117.1746.entry

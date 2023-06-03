@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: friendly-shell
+Fetcher: github
+Source:  https://github.com/p3r7/friendly-shell.git
+
+Updating /mnt/store/melpa/working/friendly-shell/
+Checking out e530e359848e8bdad09d26529f17eb25e5558b3e
+Built friendly-shell in 7.366s, finished at 2023-06-02T21:54:50+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.5K Jun  2 21:54 packages/friendly-shell-20220309.1711.el
+4.0K -rw-r--r-- 1 root root  345 Jun  2 21:54 packages/friendly-shell-20220309.1711.entry

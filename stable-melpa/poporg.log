@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: poporg
+Fetcher: github
+Source:  https://github.com/QBobWatson/poporg.git
+
+Updating /mnt/store/melpa/working/poporg/
+Checking out 2c58d68c81ecca4140bf179f19ed153ec804b65a
+Built poporg in 5.032s, finished at 2023-06-02T22:36:00+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 32K Jun  2 22:35 packages/poporg-20170403.751.el
+4.0K -rw-r--r-- 1 root root 506 Jun  2 22:35 packages/poporg-20170403.751.entry

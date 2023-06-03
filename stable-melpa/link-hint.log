@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: link-hint
+Fetcher: github
+Source:  https://github.com/noctuid/link-hint.el.git
+
+Updating /mnt/store/melpa/working/link-hint/
+Checking out 36ce929331f2838213bcaa1145ece4b73ce84afe
+Built link-hint in 4.519s, finished at 2023-06-02T22:14:36+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 55K Jun  2 22:14 packages/link-hint-20230405.1801.el
+4.0K -rw-r--r-- 1 root root 516 Jun  2 22:14 packages/link-hint-20230405.1801.entry

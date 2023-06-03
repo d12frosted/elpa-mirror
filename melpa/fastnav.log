@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: fastnav
+Fetcher: github
+Source:  https://github.com/gleber/fastnav.el.git
+
+Updating /mnt/store/melpa/working/fastnav/
+Checking out 1019ba2b61d1a070204099b23da347278a61bc89
+Built fastnav in 4.802s, finished at 2023-06-02T21:49:43+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  2 21:49 packages/fastnav-20120211.1457.el
+4.0K -rw-r--r-- 1 root root 369 Jun  2 21:49 packages/fastnav-20120211.1457.entry

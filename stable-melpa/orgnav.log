@@ -1,1 +1,32 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: orgnav
+Fetcher: github
+Source:  https://github.com/facetframer/orgnav.git
+
+Updating /mnt/store/melpa/working/orgnav/
+Checking out 9e2cac9c1a67af5f0080e60022e821bf7b70312d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/orgnav/
+  to /tmp/orgnavI6BUdJ/orgnav-20170608.1713
+    orgnav-capture.el -> orgnav-capture.el
+    orgnav-clock.el -> orgnav-clock.el
+    orgnav-hack.el -> orgnav-hack.el
+    orgnav-link.el -> orgnav-link.el
+    orgnav-log.el -> orgnav-log.el
+    orgnav-refile.el -> orgnav-refile.el
+    orgnav-tree.el -> orgnav-tree.el
+    orgnav.el -> orgnav.el
+Created orgnav-20170608.1713.tar containing:
+  orgnav-20170608.1713/
+  orgnav-20170608.1713/orgnav-capture.el
+  orgnav-20170608.1713/orgnav-clock.el
+  orgnav-20170608.1713/orgnav-hack.el
+  orgnav-20170608.1713/orgnav-link.el
+  orgnav-20170608.1713/orgnav-log.el
+  orgnav-20170608.1713/orgnav-pkg.el
+  orgnav-20170608.1713/orgnav-refile.el
+  orgnav-20170608.1713/orgnav-tree.el
+  orgnav-20170608.1713/orgnav.el
+Built orgnav in 5.664s, finished at 2023-06-02T22:30:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 489 Jun  2 22:30 packages/orgnav-20170608.1713.entry
+ 52K -rw-r--r-- 1 root root 50K Jun  2 22:30 packages/orgnav-20170608.1713.tar

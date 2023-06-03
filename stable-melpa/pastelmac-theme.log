@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: pastelmac-theme
+Fetcher: github
+Source:  https://github.com/bmastenbrook/pastelmac-theme-el.git
+
+Updating /mnt/store/melpa/working/pastelmac-theme/
+Checking out bead21741e3f46f6506e8aef4469d4240a819389
+Built pastelmac-theme in 4.831s, finished at 2023-06-02T22:33:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  2 22:33 packages/pastelmac-theme-20151031.236.el
+4.0K -rw-r--r-- 1 root root  488 Jun  2 22:33 packages/pastelmac-theme-20151031.236.entry

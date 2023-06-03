@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: bts
+Fetcher: github
+Source:  https://github.com/aki2o/emacs-bts.git
+
+Updating /mnt/store/melpa/working/bts/
+Checking out df42d58a36447697f93b56e69f5e700b2baef1f9
+Built bts in 7.627s, finished at 2023-06-02T21:26:19+0000
+ ✓ Success:
+208K -rw-r--r-- 1 root root 206K Jun  2 21:26 packages/bts-20151109.1333.el
+4.0K -rw-r--r-- 1 root root  586 Jun  2 21:26 packages/bts-20151109.1333.entry

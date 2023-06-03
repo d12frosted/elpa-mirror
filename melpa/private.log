@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: private
+Fetcher: github
+Source:  https://github.com/victorteokw/private.git
+
+Updating /mnt/store/melpa/working/private/
+Checking out f57f1c2f6bfe900bd40b252688df4c6ed6a5f44b
+Built private in 8.195s, finished at 2023-06-02T22:36:50+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  2 22:36 packages/private-20150122.157.el
+4.0K -rw-r--r-- 1 root root 473 Jun  2 22:36 packages/private-20150122.157.entry

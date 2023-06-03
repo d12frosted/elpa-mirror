@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-sql
+Fetcher: github
+Source:  https://github.com/ndwarshuis/org-sql.git
+
+Updating /mnt/store/melpa/working/org-sql/
+Checking out 43376abf46b897a9a862cfcc1c087f4b8688634c
+Built org-sql in 5.183s, finished at 2023-06-02T22:29:27+0000
+ ✓ Success:
+168K -rw-r--r-- 1 root root 166K Jun  2 22:29 packages/org-sql-20220621.2252.el
+4.0K -rw-r--r-- 1 root root  537 Jun  2 22:29 packages/org-sql-20220621.2252.entry

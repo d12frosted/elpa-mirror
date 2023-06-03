@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: xcscope
+Fetcher: github
+Source:  https://github.com/dkogan/xcscope.el.git
+
+Updating /mnt/store/melpa/working/xcscope/
+Checking out d228d7593d762e457340f678d14b663ef66d7cee
+Built xcscope in 4.771s, finished at 2023-06-02T23:00:30+0000
+ ✓ Success:
+120K -rw-r--r-- 1 root root 119K Jun  2 23:00 packages/xcscope-20210719.828.el
+4.0K -rw-r--r-- 1 root root  447 Jun  2 23:00 packages/xcscope-20210719.828.entry

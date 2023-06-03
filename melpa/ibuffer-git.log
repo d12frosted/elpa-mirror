@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ibuffer-git
+Fetcher: github
+Source:  https://github.com/jrockway/ibuffer-git.git
+
+Updating /mnt/store/melpa/working/ibuffer-git/
+Checking out d326319c05ddb8280885b31f9094040c1b365876
+Built ibuffer-git in 4.852s, finished at 2023-06-02T22:06:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jun  2 22:06 packages/ibuffer-git-20110508.731.el
+4.0K -rw-r--r-- 1 root root  371 Jun  2 22:06 packages/ibuffer-git-20110508.731.entry

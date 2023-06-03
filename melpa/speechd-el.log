@@ -1,1 +1,71 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: speechd-el
+Fetcher: github
+Source:  https://github.com/brailcom/speechd-el.git
+
+Updating /mnt/store/melpa/working/speechd-el/
+Checking out 7e30c439729d5635ddd341ad5ab16f832a4619ea
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/speechd-el/
+  to /tmp/speechd-elNHge3R/speechd-el-20220608.1422
+    braille.el -> braille.el
+    brltty.el -> brltty.el
+    mmanager.el -> mmanager.el
+    speechd-braille.el -> speechd-braille.el
+    speechd-brltty.el -> speechd-brltty.el
+    speechd-bug.el -> speechd-bug.el
+    speechd-common.el -> speechd-common.el
+    speechd-compile.el -> speechd-compile.el
+    speechd-el-pkg.el -> speechd-el-pkg.el
+    speechd-el.el -> speechd-el.el
+    speechd-out.el -> speechd-out.el
+    speechd-speak.el -> speechd-speak.el
+    speechd-ssip.el -> speechd-ssip.el
+    speechd-version.el -> speechd-version.el
+    speechd.el -> speechd.el
+    fdl.texi -> fdl.texi
+    gpl.texi -> gpl.texi
+    speechd-el.cs.texi -> speechd-el.cs.texi
+    speechd-el.texi -> speechd-el.texi
+Generating /tmp/speechd-elNHge3R/speechd-el-20220608.1422/fdl.info
+Generating /tmp/speechd-elNHge3R/speechd-el-20220608.1422/gpl.info
+Generating /tmp/speechd-elNHge3R/speechd-el-20220608.1422/speechd-el.cs.info
+
+Command '' exited with non-zero exit-code: 1
+
+/mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced {
+/mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced }
+./fdl.texi:404: raising the section level of @appendixsubsec which is too low
+
+Error: (error "Command exited with non-zero exit-code: 1")
+
+Command '' exited with non-zero exit-code: 1
+
+install-info: No such file or directory for /tmp/speechd-elNHge3R/speechd-el-20220608.1422/speechd-el.cs.info
+
+Error: (error "Command exited with non-zero exit-code: 1")
+Generating /tmp/speechd-elNHge3R/speechd-el-20220608.1422/speechd-el.info
+Created speechd-el-20220608.1422.tar containing:
+  speechd-el-20220608.1422/
+  speechd-el-20220608.1422/braille.el
+  speechd-el-20220608.1422/brltty.el
+  speechd-el-20220608.1422/dir
+  speechd-el-20220608.1422/fdl.info
+  speechd-el-20220608.1422/gpl.info
+  speechd-el-20220608.1422/mmanager.el
+  speechd-el-20220608.1422/speechd-braille.el
+  speechd-el-20220608.1422/speechd-brltty.el
+  speechd-el-20220608.1422/speechd-bug.el
+  speechd-el-20220608.1422/speechd-common.el
+  speechd-el-20220608.1422/speechd-compile.el
+  speechd-el-20220608.1422/speechd-el-pkg.el
+  speechd-el-20220608.1422/speechd-el.el
+  speechd-el-20220608.1422/speechd-el.info
+  speechd-el-20220608.1422/speechd-out.el
+  speechd-el-20220608.1422/speechd-speak.el
+  speechd-el-20220608.1422/speechd-ssip.el
+  speechd-el-20220608.1422/speechd-version.el
+  speechd-el-20220608.1422/speechd.el
+Built speechd-el in 26.147s, finished at 2023-06-02T22:48:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  290 Jun  2 22:48 packages/speechd-el-20220608.1422.entry
+452K -rw-r--r-- 1 root root 450K Jun  2 22:48 packages/speechd-el-20220608.1422.tar

@@ -1,1 +1,52 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: eproject
+Fetcher: github
+Source:  https://github.com/jrockway/eproject.git
+
+Updating /mnt/store/melpa/working/eproject/
+Checking out 068218d2cf2138cb2e8fc29b57e773a0097a7e8b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eproject/
+  to /tmp/eprojectsFvqEK/eproject-20180312.1642
+    eproject.el -> eproject.el
+    eproject-extras.el -> eproject-extras.el
+  ! lang/eproject-android.el -> eproject-android.el
+  ! lang/eproject-arduino.el -> eproject-arduino.el
+  ! lang/eproject-clojure-leiningen.el -> eproject-clojure-leiningen.el
+  ! lang/eproject-javascript-bower.el -> eproject-javascript-bower.el
+  ! lang/eproject-javascript-grunt.el -> eproject-javascript-grunt.el
+  ! lang/eproject-javascript-npm.el -> eproject-javascript-npm.el
+  ! lang/eproject-perl.el -> eproject-perl.el
+  ! lang/eproject-php-composer.el -> eproject-php-composer.el
+  ! lang/eproject-python.el -> eproject-python.el
+  ! lang/eproject-ruby-on-rails.el -> eproject-ruby-on-rails.el
+  ! lang/eproject-ruby.el -> eproject-ruby.el
+  ! contrib/eproject-anything.el -> eproject-anything.el
+  ! contrib/eproject-compile.el -> eproject-compile.el
+  ! contrib/eproject-tags.el -> eproject-tags.el
+  ! contrib/eproject-tasks.el -> eproject-tasks.el
+  ! contrib/helm-eproject.el -> helm-eproject.el
+Created eproject-20180312.1642.tar containing:
+  eproject-20180312.1642/
+  eproject-20180312.1642/eproject-android.el
+  eproject-20180312.1642/eproject-anything.el
+  eproject-20180312.1642/eproject-arduino.el
+  eproject-20180312.1642/eproject-clojure-leiningen.el
+  eproject-20180312.1642/eproject-compile.el
+  eproject-20180312.1642/eproject-extras.el
+  eproject-20180312.1642/eproject-javascript-bower.el
+  eproject-20180312.1642/eproject-javascript-grunt.el
+  eproject-20180312.1642/eproject-javascript-npm.el
+  eproject-20180312.1642/eproject-perl.el
+  eproject-20180312.1642/eproject-php-composer.el
+  eproject-20180312.1642/eproject-pkg.el
+  eproject-20180312.1642/eproject-python.el
+  eproject-20180312.1642/eproject-ruby-on-rails.el
+  eproject-20180312.1642/eproject-ruby.el
+  eproject-20180312.1642/eproject-tags.el
+  eproject-20180312.1642/eproject-tasks.el
+  eproject-20180312.1642/eproject.el
+  eproject-20180312.1642/helm-eproject.el
+Built eproject in 4.983s, finished at 2023-06-02T21:44:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 395 Jun  2 21:44 packages/eproject-20180312.1642.entry
+ 92K -rw-r--r-- 1 root root 90K Jun  2 21:44 packages/eproject-20180312.1642.tar

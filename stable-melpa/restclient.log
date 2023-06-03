@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: restclient
+Fetcher: github
+Source:  https://github.com/pashky/restclient.el.git
+
+Updating /mnt/store/melpa/working/restclient/
+Checking out 0ba72816f92f3d5906cdf76f418fd0a3ee72809b
+Built restclient in 4.448s, finished at 2023-06-02T22:41:46+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 33K Jun  2 22:41 packages/restclient-20221203.1808.el
+4.0K -rw-r--r-- 1 root root 378 Jun  2 22:41 packages/restclient-20221203.1808.entry

@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: ample-zen-theme
+Fetcher: github
+Source:  https://github.com/mjwall/ample-zen.git
+
+Updating /mnt/store/melpa/working/ample-zen-theme/
+Checking out b277bb7abd4b6624e8d59f02474b79af50a007bd
+Built ample-zen-theme in 7.310s, finished at 2023-06-02T21:21:28+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 38K Jun  2 21:21 packages/ample-zen-theme-20150119.2154.el
+4.0K -rw-r--r-- 1 root root 358 Jun  2 21:21 packages/ample-zen-theme-20150119.2154.entry

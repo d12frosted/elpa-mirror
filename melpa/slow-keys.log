@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: slow-keys
+Fetcher: sourcehut
+Source:  https://git.sr.ht/~gitmux/slow-keys
+
+Updating /mnt/store/melpa/working/slow-keys/
+Checking out b951ae4bdcea56ced03f227b82b28c3d91d15e61
+Built slow-keys in 7.333s, finished at 2023-06-02T22:46:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Jun  2 22:46 packages/slow-keys-20220807.1425.el
+4.0K -rw-r--r-- 1 root root  481 Jun  2 22:46 packages/slow-keys-20220807.1425.entry

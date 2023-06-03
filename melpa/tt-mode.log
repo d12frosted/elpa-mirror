@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: tt-mode
+Fetcher: github
+Source:  https://github.com/davorg/tt-mode.git
+
+Updating /mnt/store/melpa/working/tt-mode/
+Checking out 85ed3832e7eef391f7879d9990d59c7a3493c15e
+Built tt-mode in 4.394s, finished at 2023-06-02T22:54:41+0000
+ ✓ Success:
+4.0K -rwxr-xr-x 1 root root 3.2K Jun  2 22:54 packages/tt-mode-20130804.1110.el
+4.0K -rw-r--r-- 1 root root  329 Jun  2 22:54 packages/tt-mode-20130804.1110.entry

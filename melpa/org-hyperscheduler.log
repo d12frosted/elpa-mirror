@@ -1,1 +1,25 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-hyperscheduler
+Fetcher: github
+Source:  https://github.com/dmitrym0/org-hyperscheduler.git
+
+Updating /mnt/store/melpa/working/org-hyperscheduler/
+Checking out b7f33e7bf19b7ce7c81dbac4de765a854ee7f52f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-hyperscheduler/
+  to /tmp/org-hyperscheduler5kPyNq/org-hyperscheduler-20220704.2140
+    org-hyperscheduler.el -> org-hyperscheduler.el
+    calendar/index.html -> calendar/index.html
+    calendar/index.js -> calendar/index.js
+    calendar/org-hs.css -> calendar/org-hs.css
+Created org-hyperscheduler-20220704.2140.tar containing:
+  org-hyperscheduler-20220704.2140/
+  org-hyperscheduler-20220704.2140/calendar/
+  org-hyperscheduler-20220704.2140/calendar/index.html
+  org-hyperscheduler-20220704.2140/calendar/index.js
+  org-hyperscheduler-20220704.2140/calendar/org-hs.css
+  org-hyperscheduler-20220704.2140/org-hyperscheduler-pkg.el
+  org-hyperscheduler-20220704.2140/org-hyperscheduler.el
+Built org-hyperscheduler in 4.294s, finished at 2023-06-02T22:28:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 590 Jun  2 22:28 packages/org-hyperscheduler-20220704.2140.entry
+ 32K -rw-r--r-- 1 root root 30K Jun  2 22:28 packages/org-hyperscheduler-20220704.2140.tar

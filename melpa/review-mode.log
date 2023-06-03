@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: review-mode
+Fetcher: github
+Source:  https://github.com/kmuto/review-el.git
+
+Updating /mnt/store/melpa/working/review-mode/
+Checking out 2b24db8d85a1c40dbd67be195caa79c9df1e0f4b
+Built review-mode in 5.109s, finished at 2023-06-02T22:41:56+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  2 22:41 packages/review-mode-20220817.1010.el
+4.0K -rw-r--r-- 1 root root 371 Jun  2 22:41 packages/review-mode-20220817.1010.entry

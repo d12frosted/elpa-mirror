@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: key-quiz
+Fetcher: github
+Source:  https://github.com/federicotdn/key-quiz.git
+
+Updating /mnt/store/melpa/working/key-quiz/
+Checking out 1ee67f3f8977d95785e021f7896685de1979137e
+Built key-quiz in 4.177s, finished at 2023-06-02T22:12:05+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  2 22:12 packages/key-quiz-20200226.2129.el
+4.0K -rw-r--r-- 1 root root 436 Jun  2 22:12 packages/key-quiz-20200226.2129.entry

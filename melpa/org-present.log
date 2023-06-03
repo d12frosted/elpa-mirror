@@ -1,1 +1,10 @@
-Symbol's chain of variable indirections contains a loop: package-build-write-badge-images
+Package: org-present
+Fetcher: github
+Source:  https://github.com/rlister/org-present.git
+
+Updating /mnt/store/melpa/working/org-present/
+Checking out 4ec04e1b77dea76d7c30066ccf3200d2e0b7bee9
+Built org-present in 4.726s, finished at 2023-06-02T22:28:48+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  2 22:28 packages/org-present-20220806.1847.el
+4.0K -rw-r--r-- 1 root root 365 Jun  2 22:28 packages/org-present-20220806.1847.entry
