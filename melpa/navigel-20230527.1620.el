@@ -4,6 +4,8 @@
 
 ;; Author: Damien Cassou <damien@cassou.me>
 ;; Url: https://gitlab.petton.fr/DamienCassou/navigel
+;; Package-Version: 20230527.1620
+;; Package-Commit: 680b71f0f2017f9417504639d5c47366b102c2b7
 ;; Package-requires: ((emacs "25.1") (tablist "1.0"))
 ;; Version: 0.7.0
 
