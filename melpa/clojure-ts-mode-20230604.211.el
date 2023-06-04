@@ -5,10 +5,10 @@
 ;; Authors: Danny Freeman <danny@dfreeman.email>
 ;; Maintainer: Danny Freeman <danny@dfreeman.email>
 ;; URL: http://github.com/clojure-emacs/clojure-ts-mode
-;; Package-Version: 20230603.300
-;; Package-Commit: 19b8e4260bfd459ad5771e06afb22c9af0ebc370
+;; Package-Version: 20230604.211
+;; Package-Commit: 019298655e0f76e5fb24150149d647bfab546eb8
 ;; Keywords: languages clojure clojurescript lisp
-;; Version: 0.1.0
+;; Version: 0.1.1
 ;; Package-Requires: ((emacs "29"))
 
 ;; This file is not part of GNU Emacs.
