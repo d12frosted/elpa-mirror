@@ -1,0 +1,19 @@
+(sumibi .
+	[(20230531 1247)
+	 ((emacs
+	   (28 1))
+	  (popup
+	   (0 5 9))
+	  (unicode-escape
+	   (1 1))
+	  (deferred
+	    (0 5 1)))
+	 "Japanese input method powered by ChatGPT API" single
+	 ((:commit . "e23cef243d4b635a5e24e0b8684c256edf3d73c9")
+	  (:authors
+	   ("Kiyoka Nishiyama" . "kiyoka@sumibi.org"))
+	  (:maintainers
+	   ("Kiyoka Nishiyama" . "kiyoka@sumibi.org"))
+	  (:maintainer "Kiyoka Nishiyama" . "kiyoka@sumibi.org")
+	  (:keywords "lisp" "ime" "japanese")
+	  (:url . "https://github.com/kiyoka/Sumibi"))])

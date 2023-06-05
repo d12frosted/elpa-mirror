@@ -22,6 +22,7 @@ dired-fdclone.el provides the following interactive commands:
 * diredfd-history-forward
 * diredfd-follow-symlink
 * diredfd-do-pack
+* diredfd-do-rename
 * diredfd-do-unpack
 * diredfd-help
 * diredfd-nav-mode

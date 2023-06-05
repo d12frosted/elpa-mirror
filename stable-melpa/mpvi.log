@@ -1,0 +1,20 @@
+Package: mpvi
+Fetcher: github
+Source:  https://github.com/lorniu/mpvi.git
+
+Updating /mnt/store/melpa/working/mpvi/
+Checking out 3b338fd63d196898843558e1289dd942cb1abb1e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mpvi/
+  to /tmp/mpvikD4Tpf/mpvi-20230529.401
+    mpvi-ps.el -> mpvi-ps.el
+    mpvi.el -> mpvi.el
+Created mpvi-20230529.401.tar containing:
+  mpvi-20230529.401/
+  mpvi-20230529.401/mpvi-pkg.el
+  mpvi-20230529.401/mpvi-ps.el
+  mpvi-20230529.401/mpvi.el
+Built mpvi in 4.049s, finished at 2023-06-05T02:26:23+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 415 Jun  5 02:26 packages/mpvi-20230529.401.entry
+ 80K -rw-r--r-- 1 root root 80K Jun  5 02:26 packages/mpvi-20230529.401.tar
