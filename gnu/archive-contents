@@ -1313,7 +1313,7 @@
 	       ("Kyle E. Jones" . "kyle_jones@wonderworks.com"))
 	      (:maintainer nil . "emacs-devel@gnu.org"))])
  (firefox-javascript-repl .
-			  [(0 9 4)
+			  [(0 9 5)
 			   ((emacs
 			     (26 1)))
 			   "Jack into Firefox" tar
@@ -1321,7 +1321,7 @@
 			    (:authors
 			     ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
 			    (:url . "https://elpa.gnu.org/packages/firefox-javascript-repl.html")
-			    (:commit . "8611fa635b0336f9fae633a86dbac1dfa02db097"))])
+			    (:commit . "fee99c20f1f4684ed845eeac9eda46fcde6bf1e9"))])
  (flylisp .
 	  [(0 2)
 	   ((emacs
