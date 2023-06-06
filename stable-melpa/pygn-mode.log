@@ -3,41 +3,43 @@ Fetcher: github
 Source:  https://github.com/dwcoates/pygn-mode.git
 
 Updating /mnt/store/melpa/working/pygn-mode/
-Checking out 8d290f69ce64a5e6f310ffa42c44fd781c20bcfd
+Checking out 9957f3e70b48b6cde77e26253feddad2cd4ca0f0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pygn-mode/
-  to /tmp/pygn-modelUsJkk/pygn-mode-20230401.1858
+  to /tmp/pygn-model2Nx6f/pygn-mode-20230606.42
     pygn-mode.el -> pygn-mode.el
     pygn_server.py -> pygn_server.py
     lib => lib
-Created pygn-mode-20230401.1858.tar containing:
-  pygn-mode-20230401.1858/
-  pygn-mode-20230401.1858/lib/
-  pygn-mode-20230401.1858/lib/python/
-  pygn-mode-20230401.1858/lib/python/site-packages/
-  pygn-mode-20230401.1858/lib/python/site-packages/chess-1.9.4.dist-info/
-  pygn-mode-20230401.1858/lib/python/site-packages/chess-1.9.4.dist-info/INSTALLER
-  pygn-mode-20230401.1858/lib/python/site-packages/chess-1.9.4.dist-info/LICENSE.txt
-  pygn-mode-20230401.1858/lib/python/site-packages/chess-1.9.4.dist-info/METADATA
-  pygn-mode-20230401.1858/lib/python/site-packages/chess-1.9.4.dist-info/RECORD
-  pygn-mode-20230401.1858/lib/python/site-packages/chess-1.9.4.dist-info/REQUESTED
-  pygn-mode-20230401.1858/lib/python/site-packages/chess-1.9.4.dist-info/WHEEL
-  pygn-mode-20230401.1858/lib/python/site-packages/chess-1.9.4.dist-info/top_level.txt
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/__init__.py
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/_interactive.py
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/engine.py
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/gaviota.py
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/pgn.py
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/polyglot.py
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/py.typed
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/svg.py
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/syzygy.py
-  pygn-mode-20230401.1858/lib/python/site-packages/chess/variant.py
-  pygn-mode-20230401.1858/pygn-mode-pkg.el
-  pygn-mode-20230401.1858/pygn-mode.el
-  pygn-mode-20230401.1858/pygn_server.py
-Built pygn-mode in 4.742s, finished at 2023-06-05T10:23:19+0000
+Created pygn-mode-20230606.42.tar containing:
+  pygn-mode-20230606.42/
+  pygn-mode-20230606.42/lib/
+  pygn-mode-20230606.42/lib/python/
+  pygn-mode-20230606.42/lib/python/site-packages/
+  pygn-mode-20230606.42/lib/python/site-packages/chess-1.9.4.dist-info/
+  pygn-mode-20230606.42/lib/python/site-packages/chess-1.9.4.dist-info/INSTALLER
+  pygn-mode-20230606.42/lib/python/site-packages/chess-1.9.4.dist-info/LICENSE.txt
+  pygn-mode-20230606.42/lib/python/site-packages/chess-1.9.4.dist-info/METADATA
+  pygn-mode-20230606.42/lib/python/site-packages/chess-1.9.4.dist-info/RECORD
+  pygn-mode-20230606.42/lib/python/site-packages/chess-1.9.4.dist-info/REQUESTED
+  pygn-mode-20230606.42/lib/python/site-packages/chess-1.9.4.dist-info/WHEEL
+  pygn-mode-20230606.42/lib/python/site-packages/chess-1.9.4.dist-info/top_level.txt
+  pygn-mode-20230606.42/lib/python/site-packages/chess/
+  pygn-mode-20230606.42/lib/python/site-packages/chess/__init__.py
+  pygn-mode-20230606.42/lib/python/site-packages/chess/_interactive.py
+  pygn-mode-20230606.42/lib/python/site-packages/chess/engine.py
+  pygn-mode-20230606.42/lib/python/site-packages/chess/gaviota.py
+  pygn-mode-20230606.42/lib/python/site-packages/chess/pgn.py
+  pygn-mode-20230606.42/lib/python/site-packages/chess/polyglot.py
+  pygn-mode-20230606.42/lib/python/site-packages/chess/py.typed
+  pygn-mode-20230606.42/lib/python/site-packages/chess/svg.py
+  pygn-mode-20230606.42/lib/python/site-packages/chess/syzygy.py
+  pygn-mode-20230606.42/lib/python/site-packages/chess/variant.py
+  pygn-mode-20230606.42/pygn-mode-pkg.el
+  pygn-mode-20230606.42/pygn-mode.el
+  pygn-mode-20230606.42/pygn_server.py
+Built pygn-mode in 4.998s, finished at 2023-06-06T01:35:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  630 Jun  5 10:23 packages/pygn-mode-20230401.1858.entry
-740K -rw-r--r-- 1 root root 740K Jun  5 10:23 packages/pygn-mode-20230401.1858.tar
+4.0K -rw-r--r-- 1 root root  630 Jun  5 21:55 packages/pygn-mode-20230401.1858.entry
+740K -rw-r--r-- 1 root root 740K Jun  5 21:55 packages/pygn-mode-20230401.1858.tar
+4.0K -rw-r--r-- 1 root root  628 Jun  6 01:35 packages/pygn-mode-20230606.42.entry
+740K -rw-r--r-- 1 root root 740K Jun  6 01:35 packages/pygn-mode-20230606.42.tar
