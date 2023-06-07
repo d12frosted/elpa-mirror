@@ -5,8 +5,8 @@
 ;; Author: Stephane Zermatten <szermatt@gmx.net>
 ;; Maintainer: Stephane Zermatten <szermatt@gmail.com>
 ;; Version: 3.1.1
-;; Package-Version: 20230315.1918
-;; Package-Commit: ae6560fe897ab6fcc0b1c4aac1ac084be5bc632e
+;; Package-Version: 20230607.931
+;; Package-Commit: 6fca128da5e53d9d953052a6775525daa325367d
 ;; Keywords: convenience, unix
 ;; URL: http://github.com/szermatt/emacs-bash-completion
 ;; Package-Requires: ((emacs "25.3"))
@@ -392,7 +392,7 @@ returned."
            "    local fd p=$(mktemp -u);"
            "    mkfifo \"$p\";"
            "    exec {fd}<>\"$p\";"
-           "    rm \"$p\";"
+           "    rm -f \"$p\";"
            "    { __ebcfixdirs & } <&$fd 2>/dev/null;"
            "    local pid=$!;"
            "    compgen \"$@\" >&$fd 2>/dev/null; echo ==eof==>&$fd;"

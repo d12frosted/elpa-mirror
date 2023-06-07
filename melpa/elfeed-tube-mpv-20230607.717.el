@@ -4,8 +4,8 @@
 
 ;; Author: Karthik Chikmagalur <karthikchikmagalur@gmail.com>
 ;; version: 0.10
-;; Package-Version: 20230425.2330
-;; Package-Commit: 3842d564f8bf53ee1ee8906dc3fcf442de8aea0a
+;; Package-Version: 20230607.717
+;; Package-Commit: 6d5a24cfd0655068afd364cded5521a4550a8adb
 ;; Keywords: news, hypermedia
 ;; Package-Requires: ((emacs "27.1") (elfeed-tube "0.10") (mpv "0.2.0"))
 ;; URL: https://github.com/karthink/elfeed-tube
@@ -172,9 +172,13 @@ This function is intended to be run on a timer when
 `elfeed-tube-mpv-follow-mode' is active."
   (if (not (mpv-live-p))
       (elfeed-tube-mpv--overlay-clear)
-    (when-let ((entry-buf (get-buffer
-                           (elfeed-show--buffer-name
-                            entry-playing))))
+    (when-let ((entry-buf
+                (or (let ((elfeed-show-unique-buffers t))
+                      (get-buffer (elfeed-show--buffer-name
+                                   entry-playing)))
+                    (get-buffer
+                     (elfeed-show--buffer-name
+                      entry-playing)))))
       (when (and (or (derived-mode-p 'elfeed-show-mode)
 		     (window-live-p (get-buffer-window entry-buf)))
 		 (elfeed-tube--same-entry-p

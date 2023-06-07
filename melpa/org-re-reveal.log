@@ -3,18 +3,20 @@ Fetcher: gitlab
 Source:  https://gitlab.com/oer/org-re-reveal.git
 
 Updating /mnt/store/melpa/working/org-re-reveal/
-Checking out bf4e23e2ce9109d35957c9f42fafe9c9edb6bf4a
+Checking out 506eb6627333649db1af2ec5d539e4d5448abfe6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-re-reveal/
-  to /tmp/org-re-revealuMGr3b/org-re-reveal-20230228.1655
+  to /tmp/org-re-reveal3LIShY/org-re-reveal-20230607.1104
     org-re-reveal.el -> org-re-reveal.el
     ox-re-reveal.el -> ox-re-reveal.el
-Created org-re-reveal-20230228.1655.tar containing:
-  org-re-reveal-20230228.1655/
-  org-re-reveal-20230228.1655/org-re-reveal-pkg.el
-  org-re-reveal-20230228.1655/org-re-reveal.el
-  org-re-reveal-20230228.1655/ox-re-reveal.el
-Built org-re-reveal in 5.553s, finished at 2023-06-07T07:50:21+0000
+Created org-re-reveal-20230607.1104.tar containing:
+  org-re-reveal-20230607.1104/
+  org-re-reveal-20230607.1104/org-re-reveal-pkg.el
+  org-re-reveal-20230607.1104/org-re-reveal.el
+  org-re-reveal-20230607.1104/ox-re-reveal.el
+Built org-re-reveal in 5.137s, finished at 2023-06-07T11:24:51+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  346 Jun  7 07:50 packages/org-re-reveal-20230228.1655.entry
 132K -rw-r--r-- 1 root root 130K Jun  7 07:50 packages/org-re-reveal-20230228.1655.tar
+4.0K -rw-r--r-- 1 root root  346 Jun  7 11:24 packages/org-re-reveal-20230607.1104.entry
+132K -rw-r--r-- 1 root root 130K Jun  7 11:24 packages/org-re-reveal-20230607.1104.tar
