@@ -1,0 +1,17 @@
+(flymake-collection .
+		    [(20230606 2002)
+		     ((emacs
+		       (28 1))
+		      (let-alist
+			  (1 0))
+		      (flymake
+		       (1 2 1)))
+		     "Collection of checkers for flymake, bringing flymake to the level of flycheck" tar
+		     ((:commit . "845c52a1aead7485450c62b48a92096160d99a25")
+		      (:authors
+		       ("Mohsin Kaleem" . "mohkale@kisara.moe"))
+		      (:maintainers
+		       ("Mohsin Kaleem" . "mohkale@kisara.moe"))
+		      (:maintainer "Mohsin Kaleem" . "mohkale@kisara.moe")
+		      (:keywords "language" "tools")
+		      (:url . "https://github.com/mohkale/flymake-collection"))])

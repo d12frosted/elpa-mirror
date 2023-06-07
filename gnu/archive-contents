@@ -3310,7 +3310,7 @@
 	    (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	    (:url . "https://github.com/Malabarba/speed-of-thought-lisp"))])
  (spacious-padding .
-		   [(0 0 0)
+		   [(0 1 0)
 		    ((emacs
 		      (28 1)))
 		    "Increase the padding/spacing of frames and windows" tar
@@ -3319,7 +3319,7 @@
 		     (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
 		     (:authors
 		      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		     (:commit . "e0f580d17b7508cc2da866f6888f6be8ec42a0f7"))])
+		     (:commit . "8e4877c807b164d602a9482595b138aeebd94967"))])
  (spinner .
 	  [(1 7 4)
 	   ((emacs

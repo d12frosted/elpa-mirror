@@ -1,6 +1,8 @@
 Extensions for Verilog Mode:
 
  - Improved syntax highlighting
+ - Builtin xref backend
+ - Builtin capf function with dot and scope completion
  - Hierarchy extraction and navigation: builtin and vhier based
  - LSP configuration for `lsp-mode` and `eglot`
  - Support for many linters via `flycheck`
@@ -12,13 +14,11 @@ Extensions for Verilog Mode:
  - Improve `imenu` entries: detect instances, classes and methods
  - Enhanced support for `which-func`
  - Code folding via `hideshow`
+ - Workspace tags, typedef analysis and caching
  - Time-stamp auto-configuration
  - Convert block end comments to names
  - Automatically add SystemVerilog keywords to `company-keywords` backend
  - Port connections utilities
- - Workspace tags, typedef analysis and caching
 
  Experimental:
  - Tree-sitter powered `verilog-ts-mode` support
- - Builtin xref backend
- - Builtin capf function with dot and scope completion

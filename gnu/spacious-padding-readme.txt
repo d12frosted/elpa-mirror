@@ -1,11 +1,16 @@
 # spacious-padding for GNU Emacs
 
-This package provides a global minor mode for increasing the
+This package provides a global minor mode to increase the
 spacing/padding of Emacs windows and frames.  The idea is to make
-editing and reading feel more comfortable.
+editing and reading feel more comfortable.  Enable the mode with `M-x
+spacious-padding-mode`.  Adjust the exact spacing values by modifying
+the user option `spacious-padding-widths`.
 
-+ Package name (GNU ELPA): `spacious-padding` (⚠️ work-in-progress)
-+ Official manual: <https://protesilaos.com/emacs/spacious-padding>
+Inspiration for this package comes from [Nicolas Rougier's impressive
+designs](https://github.com/rougier) and [Daniel Mendler's
+`org-modern` package](https://github.com/minad/org-modern).
+
++ Package name (GNU ELPA): `spacious-padding`
 + Git repo on SourceHut: <https://git.sr.ht/~protesilaos/spacious-padding>
   - Mirrors:
     + GitHub: <https://github.com/protesilaos/spacious-padding>
