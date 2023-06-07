@@ -3,8 +3,9 @@ Fetcher: github
 Source:  https://github.com/rasmus-toftdahl-olesen/iss-mode.git
 
 Updating /mnt/store/melpa/working/iss-mode/
-Checking out 3b517aff31529bab33f8d7b562bd17aff0107fd1
-Built iss-mode in 4.827s, finished at 2023-06-06T23:58:08+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.7K Jun  6 23:58 packages/iss-mode-20141001.1913.el
-4.0K -rw-r--r-- 1 root root  338 Jun  6 23:58 packages/iss-mode-20141001.1913.entry
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/rasmus-toftdahl-olesen/iss-mode.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

@@ -3,20 +3,9 @@ Fetcher: github
 Source:  https://github.com/skeeto/emacs-aio.git
 
 Updating /mnt/store/melpa/working/aio/
-Checking out da93523e235529fa97d6f251319d9e1d6fc24a41
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/aio/
-  to /tmp/aiopNqD0Y/aio-20200610.1904
-    aio.el -> aio.el
-    README.md -> README.md
-    UNLICENSE -> UNLICENSE
-Created aio-20200610.1904.tar containing:
-  aio-20200610.1904/
-  aio-20200610.1904/README.md
-  aio-20200610.1904/UNLICENSE
-  aio-20200610.1904/aio-pkg.el
-  aio-20200610.1904/aio.el
-Built aio in 3.087s, finished at 2023-06-06T23:15:55+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 428 Jun  6 23:15 packages/aio-20200610.1904.entry
- 32K -rw-r--r-- 1 root root 30K Jun  6 23:15 packages/aio-20200610.1904.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/skeeto/emacs-aio.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+
+Command exited with non-zero exit-code: 128
