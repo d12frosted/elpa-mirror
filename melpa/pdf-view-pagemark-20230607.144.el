@@ -4,8 +4,8 @@
 
 ;; Author:  Kimi Ma <kimi.im@outlook.com>
 ;; URL: https://github.com/kimim/pdf-view-pagemark
-;; Package-Version: 20230530.231
-;; Package-Commit: 8d370979ffe4aeac6610f5d70c72a08a79dac79f
+;; Package-Version: 20230607.144
+;; Package-Commit: 90a2908795bd4bf1015ff18ab338b50a785a1843
 ;; Keywords: multimedia convenience
 ;; Version: 0.1
 ;; Package-Requires: ((pdf-tools "0.90") (posframe "1.4.2") (emacs "26.0"))
@@ -103,8 +103,7 @@
 (defun pdf-view-pagemark-position ()
   "Calculate indicator position."
   (- (pdf-view-pagemark-win-height)
-     (pdf-view-pagemark-rem-height)
-     10))
+     (pdf-view-pagemark-rem-height)))
 
 (defun pdf-view-pagemark-indicate (&optional _n)
   "Show indicator for remaining pdf page."
@@ -120,7 +119,6 @@
         (set-frame-parameter
          (posframe-show pdf-view-pagemark-buffer
                         :string (make-string len ?-)
-                        :poshandler 'posframe-poshandler-window-center
                         :foreground-color bg
                         :background-color bg
                         :position `(,left-indent . ,(pdf-view-pagemark-position))
