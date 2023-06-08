@@ -3,34 +3,32 @@ Fetcher: github
 Source:  https://github.com/emacs-jupyter/jupyter.git
 
 Updating /mnt/store/melpa/working/jupyter/
-Checking out 455166712e606c9c6a8de763ea0a77548cadcef2
+Checking out 1fb77da2d394b905f9dfa325a9d6ef9e2cf52541
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jupyter/
-  to /tmp/jupyterHmPMYQ/jupyter-20230510.1523
+  to /tmp/jupyterV7SWAN/jupyter-20230608.1504
     jupyter-R.el -> jupyter-R.el
     jupyter-base.el -> jupyter-base.el
     jupyter-c++.el -> jupyter-c++.el
-    jupyter-channel-ioloop-comm.el -> jupyter-channel-ioloop-comm.el
     jupyter-channel-ioloop.el -> jupyter-channel-ioloop.el
     jupyter-channel.el -> jupyter-channel.el
     jupyter-client.el -> jupyter-client.el
-    jupyter-comm-layer.el -> jupyter-comm-layer.el
     jupyter-env.el -> jupyter-env.el
-    jupyter-ioloop-comm.el -> jupyter-ioloop-comm.el
     jupyter-ioloop.el -> jupyter-ioloop.el
     jupyter-javascript.el -> jupyter-javascript.el
     jupyter-julia.el -> jupyter-julia.el
-    jupyter-kernel-manager.el -> jupyter-kernel-manager.el
-    jupyter-kernel-process-manager.el -> jupyter-kernel-process-manager.el
+    jupyter-kernel-process.el -> jupyter-kernel-process.el
+    jupyter-kernel.el -> jupyter-kernel.el
     jupyter-kernelspec.el -> jupyter-kernelspec.el
     jupyter-messages.el -> jupyter-messages.el
     jupyter-mime.el -> jupyter-mime.el
+    jupyter-monads.el -> jupyter-monads.el
     jupyter-org-client.el -> jupyter-org-client.el
     jupyter-org-extensions.el -> jupyter-org-extensions.el
     jupyter-python.el -> jupyter-python.el
     jupyter-repl.el -> jupyter-repl.el
     jupyter-rest-api.el -> jupyter-rest-api.el
-    jupyter-server-ioloop.el -> jupyter-server-ioloop.el
+    jupyter-server-kernel.el -> jupyter-server-kernel.el
     jupyter-server.el -> jupyter-server.el
     jupyter-tramp.el -> jupyter-tramp.el
     jupyter-widget-client.el -> jupyter-widget-client.el
@@ -41,50 +39,50 @@ Copying files (->) and directories (=>)
     Makefile -> Makefile
     widget.html -> widget.html
     js => js
-Created jupyter-20230510.1523.tar containing:
-  jupyter-20230510.1523/
-  jupyter-20230510.1523/Makefile
-  jupyter-20230510.1523/js/
-  jupyter-20230510.1523/js/Makefile
-  jupyter-20230510.1523/js/emacs-jupyter.js
-  jupyter-20230510.1523/js/index.js
-  jupyter-20230510.1523/js/manager.js
-  jupyter-20230510.1523/js/package.json
-  jupyter-20230510.1523/js/webpack.config.js
-  jupyter-20230510.1523/jupyter-R.el
-  jupyter-20230510.1523/jupyter-base.el
-  jupyter-20230510.1523/jupyter-c++.el
-  jupyter-20230510.1523/jupyter-channel-ioloop-comm.el
-  jupyter-20230510.1523/jupyter-channel-ioloop.el
-  jupyter-20230510.1523/jupyter-channel.el
-  jupyter-20230510.1523/jupyter-client.el
-  jupyter-20230510.1523/jupyter-comm-layer.el
-  jupyter-20230510.1523/jupyter-env.el
-  jupyter-20230510.1523/jupyter-ioloop-comm.el
-  jupyter-20230510.1523/jupyter-ioloop.el
-  jupyter-20230510.1523/jupyter-javascript.el
-  jupyter-20230510.1523/jupyter-julia.el
-  jupyter-20230510.1523/jupyter-kernel-manager.el
-  jupyter-20230510.1523/jupyter-kernel-process-manager.el
-  jupyter-20230510.1523/jupyter-kernelspec.el
-  jupyter-20230510.1523/jupyter-messages.el
-  jupyter-20230510.1523/jupyter-mime.el
-  jupyter-20230510.1523/jupyter-org-client.el
-  jupyter-20230510.1523/jupyter-org-extensions.el
-  jupyter-20230510.1523/jupyter-pkg.el
-  jupyter-20230510.1523/jupyter-python.el
-  jupyter-20230510.1523/jupyter-repl.el
-  jupyter-20230510.1523/jupyter-rest-api.el
-  jupyter-20230510.1523/jupyter-server-ioloop.el
-  jupyter-20230510.1523/jupyter-server.el
-  jupyter-20230510.1523/jupyter-tramp.el
-  jupyter-20230510.1523/jupyter-widget-client.el
-  jupyter-20230510.1523/jupyter-zmq-channel-ioloop.el
-  jupyter-20230510.1523/jupyter-zmq-channel.el
-  jupyter-20230510.1523/jupyter.el
-  jupyter-20230510.1523/ob-jupyter.el
-  jupyter-20230510.1523/widget.html
-Built jupyter in 7.236s, finished at 2023-06-08T01:50:12+0000
+Created jupyter-20230608.1504.tar containing:
+  jupyter-20230608.1504/
+  jupyter-20230608.1504/Makefile
+  jupyter-20230608.1504/js/
+  jupyter-20230608.1504/js/Makefile
+  jupyter-20230608.1504/js/emacs-jupyter.js
+  jupyter-20230608.1504/js/index.js
+  jupyter-20230608.1504/js/manager.js
+  jupyter-20230608.1504/js/package.json
+  jupyter-20230608.1504/js/webpack.config.js
+  jupyter-20230608.1504/jupyter-R.el
+  jupyter-20230608.1504/jupyter-base.el
+  jupyter-20230608.1504/jupyter-c++.el
+  jupyter-20230608.1504/jupyter-channel-ioloop.el
+  jupyter-20230608.1504/jupyter-channel.el
+  jupyter-20230608.1504/jupyter-client.el
+  jupyter-20230608.1504/jupyter-env.el
+  jupyter-20230608.1504/jupyter-ioloop.el
+  jupyter-20230608.1504/jupyter-javascript.el
+  jupyter-20230608.1504/jupyter-julia.el
+  jupyter-20230608.1504/jupyter-kernel-process.el
+  jupyter-20230608.1504/jupyter-kernel.el
+  jupyter-20230608.1504/jupyter-kernelspec.el
+  jupyter-20230608.1504/jupyter-messages.el
+  jupyter-20230608.1504/jupyter-mime.el
+  jupyter-20230608.1504/jupyter-monads.el
+  jupyter-20230608.1504/jupyter-org-client.el
+  jupyter-20230608.1504/jupyter-org-extensions.el
+  jupyter-20230608.1504/jupyter-pkg.el
+  jupyter-20230608.1504/jupyter-python.el
+  jupyter-20230608.1504/jupyter-repl.el
+  jupyter-20230608.1504/jupyter-rest-api.el
+  jupyter-20230608.1504/jupyter-server-kernel.el
+  jupyter-20230608.1504/jupyter-server.el
+  jupyter-20230608.1504/jupyter-tramp.el
+  jupyter-20230608.1504/jupyter-widget-client.el
+  jupyter-20230608.1504/jupyter-zmq-channel-ioloop.el
+  jupyter-20230608.1504/jupyter-zmq-channel.el
+  jupyter-20230608.1504/jupyter.el
+  jupyter-20230608.1504/ob-jupyter.el
+  jupyter-20230608.1504/widget.html
+Built jupyter in 9.784s, finished at 2023-06-08T16:58:44+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  517 Jun  8 01:50 packages/jupyter-20230510.1523.entry
-700K -rw-r--r-- 1 root root 700K Jun  8 01:50 packages/jupyter-20230510.1523.tar
+4.0K -rw-r--r-- 1 root root  517 Jun  8 13:04 packages/jupyter-20230510.1523.entry
+700K -rw-r--r-- 1 root root 700K Jun  8 13:04 packages/jupyter-20230510.1523.tar
+4.0K -rw-r--r-- 1 root root  523 Jun  8 16:58 packages/jupyter-20230608.1504.entry
+680K -rw-r--r-- 1 root root 680K Jun  8 16:58 packages/jupyter-20230608.1504.tar

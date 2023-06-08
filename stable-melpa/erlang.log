@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
-Checking out 8c0ea6bd3306cfd6ca19730d180a2a93a716e1ee
+Checking out b54b86ad4f1253f46fd4552a73923756660c1d53
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erlang/
-  to /tmp/erlangEJGvio/erlang-20230515.1036
+  to /tmp/erlangTVvhsN/erlang-20230608.533
   ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
   ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
   ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
@@ -17,19 +17,21 @@ Copying files (->) and directories (=>)
   ! lib/tools/emacs/erlang-test.el -> erlang-test.el
   ! lib/tools/emacs/erlang.el -> erlang.el
   ! lib/tools/emacs/erldoc.el -> erldoc.el
-Created erlang-20230515.1036.tar containing:
-  erlang-20230515.1036/
-  erlang-20230515.1036/erlang-edoc.el
-  erlang-20230515.1036/erlang-eunit.el
-  erlang-20230515.1036/erlang-flymake.el
-  erlang-20230515.1036/erlang-pkg.el
-  erlang-20230515.1036/erlang-skels-old.el
-  erlang-20230515.1036/erlang-skels.el
-  erlang-20230515.1036/erlang-start.el
-  erlang-20230515.1036/erlang-test.el
-  erlang-20230515.1036/erlang.el
-  erlang-20230515.1036/erldoc.el
-Built erlang in 18.643s, finished at 2023-06-08T01:27:33+0000
+Created erlang-20230608.533.tar containing:
+  erlang-20230608.533/
+  erlang-20230608.533/erlang-edoc.el
+  erlang-20230608.533/erlang-eunit.el
+  erlang-20230608.533/erlang-flymake.el
+  erlang-20230608.533/erlang-pkg.el
+  erlang-20230608.533/erlang-skels-old.el
+  erlang-20230608.533/erlang-skels.el
+  erlang-20230608.533/erlang-start.el
+  erlang-20230608.533/erlang-test.el
+  erlang-20230608.533/erlang.el
+  erlang-20230608.533/erldoc.el
+Built erlang in 20.619s, finished at 2023-06-08T16:35:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  259 Jun  8 01:27 packages/erlang-20230515.1036.entry
-432K -rw-r--r-- 1 root root 430K Jun  8 01:27 packages/erlang-20230515.1036.tar
+4.0K -rw-r--r-- 1 root root  259 Jun  8 12:42 packages/erlang-20230515.1036.entry
+432K -rw-r--r-- 1 root root 430K Jun  8 12:42 packages/erlang-20230515.1036.tar
+4.0K -rw-r--r-- 1 root root  258 Jun  8 16:35 packages/erlang-20230608.533.entry
+432K -rw-r--r-- 1 root root 430K Jun  8 16:35 packages/erlang-20230608.533.tar
