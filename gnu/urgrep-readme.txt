@@ -1,5 +1,7 @@
 # Urgrep - Universal Recursive Grep
 
+[![GNU ELPA version][elpa-image]][elpa-link]
+
 **Urgrep** is an Emacs package to provide a universal frontend for *any*
 grep-like tool, as an alternative to the built-in `M-x rgrep` (and other similar
 packages). Currently, [`ugrep`][ugrep], [`ripgrep`][ripgrep], [`ag`][ag],
@@ -115,6 +117,8 @@ arguments. For more information, consult the docstring for `urgrep-command`.
 Feedback is welcome, but it's a bit early for code contributions. Thanks for the
 thought, though! (Hopefully this will change after not too long.)
 
+[elpa-image]: https://elpa.gnu.org/packages/urgrep.svg
+[elpa-link]: https://elpa.gnu.org/packages/urgrep.html
 [ugrep]: https://github.com/Genivia/ugrep
 [ripgrep]: https://github.com/BurntSushi/ripgrep
 [ag]: https://github.com/ggreer/the_silver_searcher

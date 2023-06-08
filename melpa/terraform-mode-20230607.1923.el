@@ -4,8 +4,8 @@
 
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-terraform-mode
-;; Package-Version: 20230605.1220
-;; Package-Commit: f380892b7f939a9fc8d5ed677d77adfee0223426
+;; Package-Version: 20230607.1923
+;; Package-Commit: 25a22a66f81e35c75f2fdaaab89aad7f9940fe06
 ;; Version: 0.06
 ;; Package-Requires: ((emacs "24.3") (hcl-mode "0.03") (dash "2.17.0"))
 
@@ -288,6 +288,15 @@
     (kill-new url)
     (message "Copied URL: %s" url)))
 
+(defun terraform-insert-doc-in-comment ()
+  "Insert a comment containing an URL documenting the resource at point."
+  (interactive)
+  (let ((doc-url (terraform--resource-url-at-point)))
+    (save-excursion
+      (unless (looking-at-p "^resource\\|^data")
+        (re-search-backward "^resource\\|^data" nil t))
+      (insert (format "# %s\n" doc-url)))))
+
 (defun terraform--outline-level ()
   "Return the depth to which a statement is nested in the outline.
 
@@ -327,6 +336,7 @@ If the point is not at the heading, call
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "C-c C-d C-w") #'terraform-open-doc)
     (define-key map (kbd "C-c C-d C-c") #'terraform-kill-doc-url)
+    (define-key map (kbd "C-c C-d C-r") #'terraform-insert-doc-in-comment)
     (define-key map (kbd "C-c C-f") #'outline-toggle-children)
     map))
 

@@ -4,8 +4,8 @@
 
 ;; Author: John Buckley <nhoj.buckley@gmail.com>
 ;; URL: https://github.com/nhojb/raycast-mode
-;; Package-Version: 20230530.1132
-;; Package-Commit: 6700b625c9e7ded5201ea6ffeb598a80cb3d02c6
+;; Package-Version: 20230607.2107
+;; Package-Commit: f6401605cc9dfacdcaaf98d5844348b818cfc010
 ;; Version: 1.0
 ;; Keywords: convenience, languages, tools
 ;; Package-Requires: ((emacs "26.1"))
@@ -92,7 +92,7 @@
     ["Develop..." raycast-develop
      :help "Start the extension in development mode and watch for changes"]
     ["Stop..." raycast-stop
-     :visible (not (eq compilation-in-progress nil))
+     :visible compilation-in-progress
      :help "Stop the extension development mode"]
     ["Build..." raycast-build
      :help "Build the extension"]
@@ -109,47 +109,47 @@
      :help "Run npm update"]
     "----"))
 
-(defun raycast-build()
+(defun raycast-build ()
   "Build the extension."
   (interactive)
   (raycast--run "build"))
 
-(defun raycast-develop()
+(defun raycast-develop ()
   "Start the extension in development mode."
   (interactive)
   (raycast--run "dev" raycast-mode-target))
 
-(defun raycast-lint()
+(defun raycast-lint ()
   "Validate the extension manifest and metadata, and lint its source code."
   (interactive)
   (raycast--run "lint"))
 
-(defun raycast-fix-lint()
+(defun raycast-fix-lint ()
   "Attempt to fix any validation or linter errors."
   (interactive)
   (raycast--run "fix-lint"))
 
-(defun raycast-publish()
+(defun raycast-publish ()
   "Build and publish the extension for distribution - requires a Team account."
   (interactive)
   (raycast--run "publish"))
 
-(defun raycast-stop()
+(defun raycast-stop ()
   "Stop development."
   (interactive)
   (kill-compilation))
 
-(defun raycast-install()
+(defun raycast-install ()
   "Run npm install."
   (interactive)
   (raycast--npm "install"))
 
-(defun raycast-update()
+(defun raycast-update ()
   "Run npm update."
   (interactive)
   (raycast--npm "update"))
 
-(defun raycast--extension-directory()
+(defun raycast--extension-directory ()
   "Get the current extension's root directory."
   (or (locate-dominating-file default-directory "package.json")
       default-directory))
@@ -159,12 +159,18 @@
   (let ((default-directory (raycast--extension-directory))
         (run-command (cond
                       ((and raycast-mode-emoji target)
-                       (format "npm run %s -- --emoji --target %s" command target))
+                       (format "npm run %s -- --emoji --target %s"
+                               (shell-quote-argument command)
+                               (shell-quote-argument target)))
                       (raycast-mode-emoji
-                       (format "npm run %s -- --emoji" command))
+                       (format "npm run %s -- --emoji"
+                               (shell-quote-argument command)))
                       (target
-                       (format "npm run %s -- --target %s" command target))
-                      (t (format "npm run %s" command)))))
+                       (format "npm run %s -- --target %s"
+                               (shell-quote-argument command)
+                               (shell-quote-argument target)))
+                      (t (format "npm run %s"
+                                 (shell-quote-argument command))))))
     (compile run-command)))
 
 (defun raycast--npm (command)
