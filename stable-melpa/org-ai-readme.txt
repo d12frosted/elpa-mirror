@@ -1,5 +1,5 @@
 Provides a minor-mode for org-mode and a global minor-mode that allows you to
-interact with the OpenAI API. It allows you to:
+interact with the OpenAI API and with Stable Diffusion. It allows you to:
 - have a conversation with ChatGPT
 - generate images with DALL-E
 - supports speech input and output
