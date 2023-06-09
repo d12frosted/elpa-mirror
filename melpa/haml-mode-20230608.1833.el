@@ -4,9 +4,9 @@
 
 ;; Author: Natalie Weizenbaum
 ;; URL: https://github.com/nex3/haml-mode
-;; Package-Commit: 45a0b23db0b8f827c78f7749457f3427263e6ffd
-;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
-;; Package-Version: 20230322.1744
+;; Package-Commit: fe83c65c1f002f7c36480b758727c1afbad9a1b2
+;; Package-Requires: ((emacs "24.1") (cl-lib "0.5"))
+;; Package-Version: 20230608.1833
 ;; Package-X-Original-Version: 3.2.1
 ;; Created: 2007-03-08
 ;; By: Natalie Weizenbaum

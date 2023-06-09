@@ -4,9 +4,7 @@
 
 ;; Author: Peter <craven@gmx.net>
 ;; URL: https://github.com/ecraven/exwm-surf
-;; Package-Commit: 6c17e2c1597fe4b7b454a1dac23b9127ac951e94
-;; Package-Version: 20171204.1140
-;; Package-X-Original-Version: 20171130
+;; Package-Version: 20171130
 ;; Package-Requires: ((emacs "24.4") (exwm "0.16"))
 ;; Version: 0.1
 ;; Keywords: extensions

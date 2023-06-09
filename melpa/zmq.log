@@ -3,38 +3,40 @@ Fetcher: github
 Source:  https://github.com/nnicandro/emacs-zmq.git
 
 Updating /mnt/store/melpa/working/zmq/
-Checking out 4f31ffa3953db33c57b590c43013cd920c344142
+Checking out 9d5679c54f361f518a426586b51686674fd3b0fa
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/zmq/
-  to /tmp/zmqNHCNd5/zmq-20230515.1736
+  to /tmp/zmq7iI2Fe/zmq-20230608.1856
     zmq.el -> zmq.el
     Makefile -> Makefile
     src => src
-Created zmq-20230515.1736.tar containing:
-  zmq-20230515.1736/
-  zmq-20230515.1736/Makefile
-  zmq-20230515.1736/src/
-  zmq-20230515.1736/src/Makefile.am
-  zmq-20230515.1736/src/configure.ac
-  zmq-20230515.1736/src/constants.c
-  zmq-20230515.1736/src/context.c
-  zmq-20230515.1736/src/context.h
-  zmq-20230515.1736/src/core.c
-  zmq-20230515.1736/src/core.h
-  zmq-20230515.1736/src/emacs-module.h
-  zmq-20230515.1736/src/emacs-zmq.c
-  zmq-20230515.1736/src/emacs-zmq.h
-  zmq-20230515.1736/src/msg.c
-  zmq-20230515.1736/src/msg.h
-  zmq-20230515.1736/src/poll.c
-  zmq-20230515.1736/src/poll.h
-  zmq-20230515.1736/src/socket.c
-  zmq-20230515.1736/src/socket.h
-  zmq-20230515.1736/src/util.c
-  zmq-20230515.1736/src/util.h
-  zmq-20230515.1736/zmq-pkg.el
-  zmq-20230515.1736/zmq.el
-Built zmq in 10.394s, finished at 2023-06-08T17:49:13+0000
+Created zmq-20230608.1856.tar containing:
+  zmq-20230608.1856/
+  zmq-20230608.1856/Makefile
+  zmq-20230608.1856/src/
+  zmq-20230608.1856/src/Makefile.am
+  zmq-20230608.1856/src/configure.ac
+  zmq-20230608.1856/src/constants.c
+  zmq-20230608.1856/src/context.c
+  zmq-20230608.1856/src/context.h
+  zmq-20230608.1856/src/core.c
+  zmq-20230608.1856/src/core.h
+  zmq-20230608.1856/src/emacs-module.h
+  zmq-20230608.1856/src/emacs-zmq.c
+  zmq-20230608.1856/src/emacs-zmq.h
+  zmq-20230608.1856/src/msg.c
+  zmq-20230608.1856/src/msg.h
+  zmq-20230608.1856/src/poll.c
+  zmq-20230608.1856/src/poll.h
+  zmq-20230608.1856/src/socket.c
+  zmq-20230608.1856/src/socket.h
+  zmq-20230608.1856/src/util.c
+  zmq-20230608.1856/src/util.h
+  zmq-20230608.1856/zmq-pkg.el
+  zmq-20230608.1856/zmq.el
+Built zmq in 4.988s, finished at 2023-06-08T21:41:28+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  482 Jun  8 17:49 packages/zmq-20230515.1736.entry
 152K -rw-r--r-- 1 root root 150K Jun  8 17:49 packages/zmq-20230515.1736.tar
+4.0K -rw-r--r-- 1 root root  482 Jun  8 21:41 packages/zmq-20230608.1856.entry
+152K -rw-r--r-- 1 root root 150K Jun  8 21:41 packages/zmq-20230608.1856.tar

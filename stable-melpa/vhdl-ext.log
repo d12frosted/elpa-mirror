@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/vhdl-ext.git
 
 Updating /mnt/store/melpa/working/vhdl-ext/
-Checking out dd6f7629199cf7a072b308def45aa6e14e918409
+Checking out 7785be558c5128ec05bc4ebb6e81f27841aba237
 Warning: vhdl-ext :files spec is equivalent to the default
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vhdl-ext/
-  to /tmp/vhdl-extQw7WQe/vhdl-ext-20230525.1841
+  to /tmp/vhdl-extBOA3pW/vhdl-ext-20230608.1930
     vhdl-ext-eglot.el -> vhdl-ext-eglot.el
     vhdl-ext-flycheck.el -> vhdl-ext-flycheck.el
     vhdl-ext-font-lock.el -> vhdl-ext-font-lock.el
@@ -17,19 +17,21 @@ Copying files (->) and directories (=>)
     vhdl-ext-template.el -> vhdl-ext-template.el
     vhdl-ext-utils.el -> vhdl-ext-utils.el
     vhdl-ext.el -> vhdl-ext.el
-Created vhdl-ext-20230525.1841.tar containing:
-  vhdl-ext-20230525.1841/
-  vhdl-ext-20230525.1841/vhdl-ext-eglot.el
-  vhdl-ext-20230525.1841/vhdl-ext-flycheck.el
-  vhdl-ext-20230525.1841/vhdl-ext-font-lock.el
-  vhdl-ext-20230525.1841/vhdl-ext-imenu.el
-  vhdl-ext-20230525.1841/vhdl-ext-lsp.el
-  vhdl-ext-20230525.1841/vhdl-ext-nav.el
-  vhdl-ext-20230525.1841/vhdl-ext-pkg.el
-  vhdl-ext-20230525.1841/vhdl-ext-template.el
-  vhdl-ext-20230525.1841/vhdl-ext-utils.el
-  vhdl-ext-20230525.1841/vhdl-ext.el
-Built vhdl-ext in 3.985s, finished at 2023-06-08T17:44:37+0000
+Created vhdl-ext-20230608.1930.tar containing:
+  vhdl-ext-20230608.1930/
+  vhdl-ext-20230608.1930/vhdl-ext-eglot.el
+  vhdl-ext-20230608.1930/vhdl-ext-flycheck.el
+  vhdl-ext-20230608.1930/vhdl-ext-font-lock.el
+  vhdl-ext-20230608.1930/vhdl-ext-imenu.el
+  vhdl-ext-20230608.1930/vhdl-ext-lsp.el
+  vhdl-ext-20230608.1930/vhdl-ext-nav.el
+  vhdl-ext-20230608.1930/vhdl-ext-pkg.el
+  vhdl-ext-20230608.1930/vhdl-ext-template.el
+  vhdl-ext-20230608.1930/vhdl-ext-utils.el
+  vhdl-ext-20230608.1930/vhdl-ext.el
+Built vhdl-ext in 5.801s, finished at 2023-06-08T21:36:33+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 620 Jun  8 17:44 packages/vhdl-ext-20230525.1841.entry
  72K -rw-r--r-- 1 root root 70K Jun  8 17:44 packages/vhdl-ext-20230525.1841.tar
+4.0K -rw-r--r-- 1 root root 620 Jun  8 21:36 packages/vhdl-ext-20230608.1930.entry
+ 72K -rw-r--r-- 1 root root 70K Jun  8 21:36 packages/vhdl-ext-20230608.1930.tar
