@@ -4,17 +4,4 @@ Source:  https://github.com/kwrooijen/cargo.el.git
 
 Updating /mnt/store/melpa/working/cargo/
 Checking out 225fdb846c702a193e58a98c1585bb3586a9aa86
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cargo/
-  to /tmp/cargoknPGhS/cargo-20230125.1253
-    cargo-process.el -> cargo-process.el
-    cargo.el -> cargo.el
-Created cargo-20230125.1253.tar containing:
-  cargo-20230125.1253/
-  cargo-20230125.1253/cargo-pkg.el
-  cargo-20230125.1253/cargo-process.el
-  cargo-20230125.1253/cargo.el
-Built cargo in 5.148s, finished at 2023-06-09T15:34:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 347 Jun  9 15:34 packages/cargo-20230125.1253.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 15:34 packages/cargo-20230125.1253.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

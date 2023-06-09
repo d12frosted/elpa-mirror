@@ -4,7 +4,4 @@ Source:  https://github.com/caldwell/calmer-forest-theme.git
 
 Updating /mnt/store/melpa/working/calmer-forest-theme/
 Checking out 09fc50730ea386d3589863f8809e02e5bdd459cf
-Built calmer-forest-theme in 6.367s, finished at 2023-06-09T15:34:21+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  9 15:34 packages/calmer-forest-theme-20230302.2149.el
-4.0K -rw-r--r-- 1 root root 470 Jun  9 15:34 packages/calmer-forest-theme-20230302.2149.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

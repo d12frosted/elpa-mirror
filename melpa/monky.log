@@ -4,24 +4,4 @@ Source:  https://github.com/ananthakumaran/monky.git
 
 Updating /mnt/store/melpa/working/monky/
 Checking out 7046eee5fc9ac625924382cb4a82b0d8efcd9ff0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/monky/
-  to /tmp/monkyP7Tgmo/monky-20230222.2153
-    monky.el -> monky.el
-    monky.info -> monky.info
-    style => style
-Created monky-20230222.2153.tar containing:
-  monky-20230222.2153/
-  monky-20230222.2153/dir
-  monky-20230222.2153/monky-pkg.el
-  monky-20230222.2153/monky.el
-  monky-20230222.2153/monky.info
-  monky-20230222.2153/style/
-  monky-20230222.2153/style/files
-  monky-20230222.2153/style/files-status
-  monky-20230222.2153/style/log-graph
-  monky-20230222.2153/style/tags
-Built monky in 6.585s, finished at 2023-06-09T12:31:23+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  398 Jun  9 12:31 packages/monky-20230222.2153.entry
-132K -rw-r--r-- 1 root root 130K Jun  9 12:31 packages/monky-20230222.2153.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

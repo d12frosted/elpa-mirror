@@ -4,29 +4,4 @@ Source:  https://gitlab.com/emacs-geiser/guile.git
 
 Updating /mnt/store/melpa/working/geiser-guile/
 Checking out ee33af6b4ef8fdaccbdf93c62b50fe17c07a1ade
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/geiser-guile/
-  to /tmp/geiser-guileW6fIul/geiser-guile-20230425.1523
-    geiser-guile.el -> geiser-guile.el
-    geiser-guile.texi -> geiser-guile.texi
-    src/geiser => src/geiser
-Generating /tmp/geiser-guileW6fIul/geiser-guile-20230425.1523/geiser-guile.info
-Created geiser-guile-20230425.1523.tar containing:
-  geiser-guile-20230425.1523/
-  geiser-guile-20230425.1523/dir
-  geiser-guile-20230425.1523/geiser-guile-pkg.el
-  geiser-guile-20230425.1523/geiser-guile.el
-  geiser-guile-20230425.1523/geiser-guile.info
-  geiser-guile-20230425.1523/src/
-  geiser-guile-20230425.1523/src/geiser/
-  geiser-guile-20230425.1523/src/geiser/completion.scm
-  geiser-guile-20230425.1523/src/geiser/doc.scm
-  geiser-guile-20230425.1523/src/geiser/emacs.scm
-  geiser-guile-20230425.1523/src/geiser/evaluation.scm
-  geiser-guile-20230425.1523/src/geiser/modules.scm
-  geiser-guile-20230425.1523/src/geiser/utils.scm
-  geiser-guile-20230425.1523/src/geiser/xref.scm
-Built geiser-guile in 11.462s, finished at 2023-06-09T16:00:13+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 519 Jun  9 16:00 packages/geiser-guile-20230425.1523.entry
- 72K -rw-r--r-- 1 root root 70K Jun  9 16:00 packages/geiser-guile-20230425.1523.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

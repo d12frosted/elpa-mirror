@@ -4,19 +4,4 @@ Source:  https://github.com/Iacob/elmame.git
 
 Updating /mnt/store/melpa/working/mame/
 Checking out f91cab8d32ceffdff9817f7c2371d7c43cbdd1ec
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/mame/
-  to /tmp/mameearuOk/mame-20230526.1453
-    mame-config.el -> mame-config.el
-    mame-machine-info-loader.el -> mame-machine-info-loader.el
-    mame.el -> mame.el
-Created mame-20230526.1453.tar containing:
-  mame-20230526.1453/
-  mame-20230526.1453/mame-config.el
-  mame-20230526.1453/mame-machine-info-loader.el
-  mame-20230526.1453/mame-pkg.el
-  mame-20230526.1453/mame.el
-Built mame in 5.722s, finished at 2023-06-09T12:28:30+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  353 Jun  9 12:28 packages/mame-20230526.1453.entry
-4.6M -rw-r--r-- 1 root root 4.6M Jun  9 12:28 packages/mame-20230526.1453.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

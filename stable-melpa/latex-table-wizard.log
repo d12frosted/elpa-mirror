@@ -4,19 +4,4 @@ Source:  https://github.com/enricoflor/latex-table-wizard.git
 
 Updating /mnt/store/melpa/working/latex-table-wizard/
 Checking out 2998be936aa31415051ee2a8d2912424045d966c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/latex-table-wizard/
-  to /tmp/latex-table-wizard49JTnH/latex-table-wizard-20230516.1857
-    latex-table-wizard.el -> latex-table-wizard.el
-    latex-table-wizard.info -> latex-table-wizard.info
-    latex-table-wizard.texi -> latex-table-wizard.texi
-Created latex-table-wizard-20230516.1857.tar containing:
-  latex-table-wizard-20230516.1857/
-  latex-table-wizard-20230516.1857/dir
-  latex-table-wizard-20230516.1857/latex-table-wizard-pkg.el
-  latex-table-wizard-20230516.1857/latex-table-wizard.el
-  latex-table-wizard-20230516.1857/latex-table-wizard.info
-Built latex-table-wizard in 4.528s, finished at 2023-06-09T12:24:33+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  550 Jun  9 12:24 packages/latex-table-wizard-20230516.1857.entry
-120K -rw-r--r-- 1 root root 120K Jun  9 12:24 packages/latex-table-wizard-20230516.1857.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

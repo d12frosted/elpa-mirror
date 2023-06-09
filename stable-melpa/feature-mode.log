@@ -4,32 +4,4 @@ Source:  https://github.com/michaelklishin/cucumber.el.git
 
 Updating /mnt/store/melpa/working/feature-mode/
 Checking out e204d9e204b767cf95d6a051ff283f05dc51e9d3
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/feature-mode/
-  to /tmp/feature-modeNLfuLk/feature-mode-20220418.848
-    feature-mode-pkg.el -> feature-mode-pkg.el
-    feature-mode.el -> feature-mode.el
-    i18n.yml -> i18n.yml
-    snippets => snippets
-    support => support
-Created feature-mode-20220418.848.tar containing:
-  feature-mode-20220418.848/
-  feature-mode-20220418.848/feature-mode-pkg.el
-  feature-mode-20220418.848/feature-mode.el
-  feature-mode-20220418.848/i18n.yml
-  feature-mode-20220418.848/snippets/
-  feature-mode-20220418.848/snippets/feature-mode/
-  feature-mode-20220418.848/snippets/feature-mode/and
-  feature-mode-20220418.848/snippets/feature-mode/bac
-  feature-mode-20220418.848/snippets/feature-mode/exa
-  feature-mode-20220418.848/snippets/feature-mode/fea
-  feature-mode-20220418.848/snippets/feature-mode/giv
-  feature-mode-20220418.848/snippets/feature-mode/sce
-  feature-mode-20220418.848/snippets/feature-mode/the
-  feature-mode-20220418.848/snippets/feature-mode/whe
-  feature-mode-20220418.848/support/
-  feature-mode-20220418.848/support/find_step.rb
-Built feature-mode in 7.078s, finished at 2023-06-09T15:55:06+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 313 Jun  9 15:55 packages/feature-mode-20220418.848.entry
- 72K -rw-r--r-- 1 root root 70K Jun  9 15:55 packages/feature-mode-20220418.848.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

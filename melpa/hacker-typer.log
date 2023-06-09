@@ -4,17 +4,4 @@ Source:  https://github.com/dieggsy/emacs-hacker-typer.git
 
 Updating /mnt/store/melpa/working/hacker-typer/
 Checking out d5a23714a4ccc5071580622f278597d5973f40bd
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hacker-typer/
-  to /tmp/hacker-typer1gmCwT/hacker-typer-20170206.1520
-    hacker-typer.el -> hacker-typer.el
-    hackerman.png -> hackerman.png
-Created hacker-typer-20170206.1520.tar containing:
-  hacker-typer-20170206.1520/
-  hacker-typer-20170206.1520/hacker-typer-pkg.el
-  hacker-typer-20170206.1520/hacker-typer.el
-  hacker-typer-20170206.1520/hackerman.png
-Built hacker-typer in 5.174s, finished at 2023-06-09T16:04:44+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  486 Jun  9 16:04 packages/hacker-typer-20170206.1520.entry
-100K -rw-r--r-- 1 root root 100K Jun  9 16:04 packages/hacker-typer-20170206.1520.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

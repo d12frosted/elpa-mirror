@@ -4,17 +4,4 @@ Source:  https://github.com/purcell/osx-location.git
 
 Updating /mnt/store/melpa/working/osx-location/
 Checking out 733f116dbc56ac73bee3cebe4a489dc9eb37ab78
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/osx-location/
-  to /tmp/osx-locationd9WcA1/osx-location-20200304.2209
-    osx-location.el -> osx-location.el
-    EmacsLocationHelper -> EmacsLocationHelper
-Created osx-location-20200304.2209.tar containing:
-  osx-location-20200304.2209/
-  osx-location-20200304.2209/EmacsLocationHelper
-  osx-location-20200304.2209/osx-location-pkg.el
-  osx-location-20200304.2209/osx-location.el
-Built osx-location in 6.342s, finished at 2023-06-09T12:40:25+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 479 Jun  9 12:40 packages/osx-location-20200304.2209.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:40 packages/osx-location-20200304.2209.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/Lindydancer/highlight-doxygen.git
 
 Updating /mnt/store/melpa/working/highlight-doxygen/
 Checking out eec4874e2e89d4eb39091aad89a67dff8f8ec84c
-Built highlight-doxygen in 8.295s, finished at 2023-06-09T16:09:32+0000
- ✓ Success:
- 56K -rw-r--r-- 1 root root 56K Jun  9 16:09 packages/highlight-doxygen-20200520.1713.el
-4.0K -rw-r--r-- 1 root root 383 Jun  9 16:09 packages/highlight-doxygen-20200520.1713.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

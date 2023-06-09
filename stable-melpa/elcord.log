@@ -4,17 +4,4 @@ Source:  https://github.com/Mstrodl/elcord.git
 
 Updating /mnt/store/melpa/working/elcord/
 Checking out 05d41ea1f9d4219255fe64b9ab189fe25344d48b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elcord/
-  to /tmp/elcordlV8rlk/elcord-20230601.1545
-    elcord.el -> elcord.el
-    stdpipe.ps1 -> stdpipe.ps1
-Created elcord-20230601.1545.tar containing:
-  elcord-20230601.1545/
-  elcord-20230601.1545/elcord-pkg.el
-  elcord-20230601.1545/elcord.el
-  elcord-20230601.1545/stdpipe.ps1
-Built elcord in 4.589s, finished at 2023-06-09T15:48:56+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 415 Jun  9 15:48 packages/elcord-20230601.1545.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 15:48 packages/elcord-20230601.1545.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

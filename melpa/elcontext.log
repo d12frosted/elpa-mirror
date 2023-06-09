@@ -4,25 +4,4 @@ Source:  https://github.com/rollacaster/elcontext.git
 
 Updating /mnt/store/melpa/working/elcontext/
 Checking out 2efd3dd8c5176c4f071bb048be6cb069b05d6e9e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elcontext/
-  to /tmp/elcontext0xOywh/elcontext-20210109.1238
-    elcontext-action.el -> elcontext-action.el
-    elcontext-directory.el -> elcontext-directory.el
-    elcontext-location.el -> elcontext-location.el
-    elcontext-time.el -> elcontext-time.el
-    elcontext-utils.el -> elcontext-utils.el
-    elcontext.el -> elcontext.el
-Created elcontext-20210109.1238.tar containing:
-  elcontext-20210109.1238/
-  elcontext-20210109.1238/elcontext-action.el
-  elcontext-20210109.1238/elcontext-directory.el
-  elcontext-20210109.1238/elcontext-location.el
-  elcontext-20210109.1238/elcontext-pkg.el
-  elcontext-20210109.1238/elcontext-time.el
-  elcontext-20210109.1238/elcontext-utils.el
-  elcontext-20210109.1238/elcontext.el
-Built elcontext in 3.579s, finished at 2023-06-09T15:48:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 535 Jun  9 15:48 packages/elcontext-20210109.1238.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 15:48 packages/elcontext-20210109.1238.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

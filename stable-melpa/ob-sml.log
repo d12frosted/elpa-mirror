@@ -4,7 +4,4 @@ Source:  https://github.com/swannodette/ob-sml.git
 
 Updating /mnt/store/melpa/working/ob-sml/
 Checking out 958165c92b6cff6cada5c85c8ae5887806b8451b
-Built ob-sml in 3.390s, finished at 2023-06-09T12:35:41+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.1K Jun  9 12:35 packages/ob-sml-20130829.1843.el
-4.0K -rw-r--r-- 1 root root  367 Jun  9 12:35 packages/ob-sml-20130829.1843.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

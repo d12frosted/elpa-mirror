@@ -4,20 +4,4 @@ Source:  https://github.com/zkry/asm-blox.git
 
 Updating /mnt/store/melpa/working/asm-blox/
 Checking out 5517efb1e186139197a2d348b7339a72dd379af8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/asm-blox/
-  to /tmp/asm-bloxcEQmAa/asm-blox-20221220.1716
-    asm-blox-puzzles.el -> asm-blox-puzzles.el
-    asm-blox.el -> asm-blox.el
-    asm-blox.info -> asm-blox.info
-Created asm-blox-20221220.1716.tar containing:
-  asm-blox-20221220.1716/
-  asm-blox-20221220.1716/asm-blox-pkg.el
-  asm-blox-20221220.1716/asm-blox-puzzles.el
-  asm-blox-20221220.1716/asm-blox.el
-  asm-blox-20221220.1716/asm-blox.info
-  asm-blox-20221220.1716/dir
-Built asm-blox in 4.330s, finished at 2023-06-09T15:29:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  385 Jun  9 15:29 packages/asm-blox-20221220.1716.entry
-240K -rw-r--r-- 1 root root 240K Jun  9 15:29 packages/asm-blox-20221220.1716.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

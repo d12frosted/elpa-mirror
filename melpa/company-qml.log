@@ -4,19 +4,4 @@ Source:  https://github.com/cute-jumper/company-qml.git
 
 Updating /mnt/store/melpa/working/company-qml/
 Checking out 4af4f32a7ad86d86bb9293fb0b675aec513b5736
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/company-qml/
-  to /tmp/company-qmljcQonV/company-qml-20170428.1708
-    company-qml.el -> company-qml.el
-    qmltypes-parser.el -> qmltypes-parser.el
-    qmltypes-table.el -> qmltypes-table.el
-Created company-qml-20170428.1708.tar containing:
-  company-qml-20170428.1708/
-  company-qml-20170428.1708/company-qml-pkg.el
-  company-qml-20170428.1708/company-qml.el
-  company-qml-20170428.1708/qmltypes-parser.el
-  company-qml-20170428.1708/qmltypes-table.el
-Built company-qml in 5.359s, finished at 2023-06-09T15:38:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  423 Jun  9 15:38 packages/company-qml-20170428.1708.entry
-140K -rw-r--r-- 1 root root 140K Jun  9 15:38 packages/company-qml-20170428.1708.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/plandes/markdown-changelog.git
 
 Updating /mnt/store/melpa/working/markdown-changelog/
 Checking out 1a2c3a4c3e4196f2b5dbb145b01b4bc435a93a96
-Built markdown-changelog in 4.933s, finished at 2023-06-09T12:28:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.6K Jun  9 12:28 packages/markdown-changelog-20200120.2253.el
-4.0K -rw-r--r-- 1 root root  462 Jun  9 12:28 packages/markdown-changelog-20200120.2253.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,31 +4,4 @@ Source:  https://github.com/IvanMalison/multi-line.git
 
 Updating /mnt/store/melpa/working/multi-line/
 Checking out 625c608443f98bb34b4d5600d52c198509fb64d0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/multi-line/
-  to /tmp/multi-lineCzBAlY/multi-line-20220112.1744
-    multi-line-candidate.el -> multi-line-candidate.el
-    multi-line-cycle.el -> multi-line-cycle.el
-    multi-line-decorator.el -> multi-line-decorator.el
-    multi-line-enter.el -> multi-line-enter.el
-    multi-line-find.el -> multi-line-find.el
-    multi-line-highlight.el -> multi-line-highlight.el
-    multi-line-respace.el -> multi-line-respace.el
-    multi-line-shared.el -> multi-line-shared.el
-    multi-line.el -> multi-line.el
-Created multi-line-20220112.1744.tar containing:
-  multi-line-20220112.1744/
-  multi-line-20220112.1744/multi-line-candidate.el
-  multi-line-20220112.1744/multi-line-cycle.el
-  multi-line-20220112.1744/multi-line-decorator.el
-  multi-line-20220112.1744/multi-line-enter.el
-  multi-line-20220112.1744/multi-line-find.el
-  multi-line-20220112.1744/multi-line-highlight.el
-  multi-line-20220112.1744/multi-line-pkg.el
-  multi-line-20220112.1744/multi-line-respace.el
-  multi-line-20220112.1744/multi-line-shared.el
-  multi-line-20220112.1744/multi-line.el
-Built multi-line in 4.569s, finished at 2023-06-09T12:32:30+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 651 Jun  9 12:32 packages/multi-line-20220112.1744.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 12:32 packages/multi-line-20220112.1744.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

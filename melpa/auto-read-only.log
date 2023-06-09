@@ -4,7 +4,4 @@ Source:  https://github.com/zonuexe/auto-read-only.el.git
 
 Updating /mnt/store/melpa/working/auto-read-only/
 Checking out db209bf5b7f76f4c3dc4d0892fc6a24430779f29
-Built auto-read-only in 3.993s, finished at 2023-06-09T15:30:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Jun  9 15:30 packages/auto-read-only-20200827.1754.el
-4.0K -rw-r--r-- 1 root root  466 Jun  9 15:30 packages/auto-read-only-20200827.1754.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

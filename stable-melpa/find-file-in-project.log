@@ -4,7 +4,4 @@ Source:  https://github.com/redguardtoo/find-file-in-project.git
 
 Updating /mnt/store/melpa/working/find-file-in-project/
 Checking out 889466d047ee93ab33fa8eaa4e1ef279d884f1da
-Built find-file-in-project in 6.035s, finished at 2023-06-09T15:55:32+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 57K Jun  9 15:55 packages/find-file-in-project-20230506.544.el
-4.0K -rw-r--r-- 1 root root 514 Jun  9 15:55 packages/find-file-in-project-20230506.544.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

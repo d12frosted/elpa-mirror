@@ -4,7 +4,4 @@ Source:  https://github.com/conao3/leaf.el.git
 
 Updating /mnt/store/melpa/working/leaf/
 Checking out 9eb18e8c9c375aa0158fbd06ea906bfbf54408fe
-Built leaf in 4.592s, finished at 2023-06-09T12:24:44+0000
- ✓ Success:
- 56K -rw-r--r-- 1 root root 55K Jun  9 12:24 packages/leaf-20211226.1633.el
-4.0K -rw-r--r-- 1 root root 442 Jun  9 12:24 packages/leaf-20211226.1633.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

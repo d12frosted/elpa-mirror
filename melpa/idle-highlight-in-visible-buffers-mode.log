@@ -4,7 +4,4 @@ Source:  https://github.com/ignacy/idle-highlight-in-visible-buffers-mode.git
 
 Updating /mnt/store/melpa/working/idle-highlight-in-visible-buffers-mode/
 Checking out 8d8de309d5bd4b035c01bf7f0cfc6e079c79d898
-Built idle-highlight-in-visible-buffers-mode in 5.122s, finished at 2023-06-09T12:17:31+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.3K Jun  9 12:17 packages/idle-highlight-in-visible-buffers-mode-20181027.1531.el
-4.0K -rw-r--r-- 1 root root  420 Jun  9 12:17 packages/idle-highlight-in-visible-buffers-mode-20181027.1531.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

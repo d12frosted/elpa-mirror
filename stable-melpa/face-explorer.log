@@ -4,7 +4,4 @@ Source:  https://github.com/Lindydancer/face-explorer.git
 
 Updating /mnt/store/melpa/working/face-explorer/
 Checking out ad1300e13e5643e4c246cabfd91f833d39113052
-Built face-explorer in 9.967s, finished at 2023-06-09T15:54:35+0000
- ✓ Success:
-168K -rw-r--r-- 1 root root 165K Jun  9 15:54 packages/face-explorer-20190517.1857.el
-4.0K -rw-r--r-- 1 root root  363 Jun  9 15:54 packages/face-explorer-20190517.1857.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,25 +4,4 @@ Source:  https://github.com/Malabarba/paradox.git
 
 Updating /mnt/store/melpa/working/paradox/
 Checking out 96401577ed02f433debe7604e49afd478e9eda61
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/paradox/
-  to /tmp/paradoxTFkG4c/paradox-20191011.1119
-    paradox-commit-list.el -> paradox-commit-list.el
-    paradox-core.el -> paradox-core.el
-    paradox-execute.el -> paradox-execute.el
-    paradox-github.el -> paradox-github.el
-    paradox-menu.el -> paradox-menu.el
-    paradox.el -> paradox.el
-Created paradox-20191011.1119.tar containing:
-  paradox-20191011.1119/
-  paradox-20191011.1119/paradox-commit-list.el
-  paradox-20191011.1119/paradox-core.el
-  paradox-20191011.1119/paradox-execute.el
-  paradox-20191011.1119/paradox-github.el
-  paradox-20191011.1119/paradox-menu.el
-  paradox-20191011.1119/paradox-pkg.el
-  paradox-20191011.1119/paradox.el
-Built paradox in 4.126s, finished at 2023-06-09T12:41:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  613 Jun  9 12:41 packages/paradox-20191011.1119.entry
-100K -rw-r--r-- 1 root root 100K Jun  9 12:41 packages/paradox-20191011.1119.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,31 +4,4 @@ Source:  https://github.com/AdrieanKhisbe/cask-package-toolset.el.git
 
 Updating /mnt/store/melpa/working/cask-package-toolset/
 Checking out 2c74cd827e88c7f8360581a841e45f0b794510e7
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cask-package-toolset/
-  to /tmp/cask-package-toolsetNsvlg5/cask-package-toolset-20170921.2256
-    cask-package-toolset.el -> cask-package-toolset.el
-    bin => bin
-    templates => templates
-Created cask-package-toolset-20170921.2256.tar containing:
-  cask-package-toolset-20170921.2256/
-  cask-package-toolset-20170921.2256/bin/
-  cask-package-toolset-20170921.2256/bin/package-toolset
-  cask-package-toolset-20170921.2256/cask-package-toolset-pkg.el
-  cask-package-toolset-20170921.2256/cask-package-toolset.el
-  cask-package-toolset-20170921.2256/templates/
-  cask-package-toolset-20170921.2256/templates/.ert-runner
-  cask-package-toolset-20170921.2256/templates/.gitignore
-  cask-package-toolset-20170921.2256/templates/.nosearch
-  cask-package-toolset-20170921.2256/templates/.travis.yml
-  cask-package-toolset-20170921.2256/templates/Makefile
-  cask-package-toolset-20170921.2256/templates/test/
-  cask-package-toolset-20170921.2256/templates/test/package-test.el
-  cask-package-toolset-20170921.2256/templates/test/test-helper.el
-  cask-package-toolset-20170921.2256/templates/undercover.el
-  cask-package-toolset-20170921.2256/templates/void
-  cask-package-toolset-20170921.2256/templates/void-template
-Built cask-package-toolset in 3.887s, finished at 2023-06-09T15:34:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 642 Jun  9 15:34 packages/cask-package-toolset-20170921.2256.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 15:34 packages/cask-package-toolset-20170921.2256.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

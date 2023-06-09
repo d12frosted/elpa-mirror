@@ -4,33 +4,4 @@ Source:  https://github.com/arnested/drupal-mode.git
 
 Updating /mnt/store/melpa/working/drupal-mode/
 Checking out 17927723adc5921e8058f7c29e5e50e88b975639
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/drupal-mode/
-  to /tmp/drupal-mode6HYdDK/drupal-mode-20220125.1044
-    drupal-mode.el -> drupal-mode.el
-    drush-make-mode.el -> drush-make-mode.el
-    drupal => drupal
-Created drupal-mode-20220125.1044.tar containing:
-  drupal-mode-20220125.1044/
-  drupal-mode-20220125.1044/drupal-mode-pkg.el
-  drupal-mode-20220125.1044/drupal-mode.el
-  drupal-mode-20220125.1044/drupal/
-  drupal-mode-20220125.1044/drupal/autoinsert.el
-  drupal-mode-20220125.1044/drupal/eldoc.el
-  drupal-mode-20220125.1044/drupal/emacs-drush.el
-  drupal-mode-20220125.1044/drupal/etags.el
-  drupal-mode-20220125.1044/drupal/flycheck.el
-  drupal-mode-20220125.1044/drupal/flymake-phpcs.el
-  drupal-mode-20220125.1044/drupal/ggtags.el
-  drupal-mode-20220125.1044/drupal/gtags.el
-  drupal-mode-20220125.1044/drupal/gxref.el
-  drupal-mode-20220125.1044/drupal/helm-gtags.el
-  drupal-mode-20220125.1044/drupal/ispell.el
-  drupal-mode-20220125.1044/drupal/pcomplete.el
-  drupal-mode-20220125.1044/drupal/phpcs.el
-  drupal-mode-20220125.1044/drupal/webjump.el
-  drupal-mode-20220125.1044/drush-make-mode.el
-Built drupal-mode in 5.951s, finished at 2023-06-09T15:46:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  487 Jun  9 15:46 packages/drupal-mode-20220125.1044.entry
-100K -rw-r--r-- 1 root root 100K Jun  9 15:46 packages/drupal-mode-20220125.1044.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

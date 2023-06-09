@@ -4,7 +4,4 @@ Source:  https://github.com/purcell/default-text-scale.git
 
 Updating /mnt/store/melpa/working/default-text-scale/
 Checking out bfc0987c37e93742255d3b23d86c17096fda8e7e
-Built default-text-scale in 3.999s, finished at 2023-06-09T15:43:16+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.0K Jun  9 15:43 packages/default-text-scale-20191226.2234.el
-4.0K -rw-r--r-- 1 root root  460 Jun  9 15:43 packages/default-text-scale-20191226.2234.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

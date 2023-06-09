@@ -4,7 +4,4 @@ Source:  https://github.com/extemporelang/extempore-emacs-mode.git
 
 Updating /mnt/store/melpa/working/extempore-mode/
 Checking out 92e0fff482a0a4dc2971c39581c5ea9e84ae5e1c
-Built extempore-mode in 5.943s, finished at 2023-06-09T15:54:07+0000
- ✓ Success:
- 84K -rw-r--r-- 1 root root 81K Jun  9 15:54 packages/extempore-mode-20220704.2241.el
-4.0K -rw-r--r-- 1 root root 438 Jun  9 15:54 packages/extempore-mode-20220704.2241.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

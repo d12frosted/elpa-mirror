@@ -4,7 +4,4 @@ Source:  https://github.com/ergoemacs/ergoemacs-status.git
 
 Updating /mnt/store/melpa/working/ergoemacs-status/
 Checking out d952cc2361adf6eb4d6af60950ad4ab699c81320
-Built ergoemacs-status in 4.166s, finished at 2023-06-09T15:51:32+0000
- ✓ Success:
- 68K -rw-r--r-- 1 root root 67K Jun  9 15:51 packages/ergoemacs-status-20160318.538.el
-4.0K -rw-r--r-- 1 root root 343 Jun  9 15:51 packages/ergoemacs-status-20160318.538.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

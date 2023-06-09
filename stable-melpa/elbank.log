@@ -4,31 +4,4 @@ Source:  https://github.com/NicolasPetton/elbank.git
 
 Updating /mnt/store/melpa/working/elbank/
 Checking out 6dbd21e31fdf7cf62491f6d24b8198d4f91a031b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elbank/
-  to /tmp/elbankjtyNVN/elbank-20180316.1343
-    elbank-boobank.el -> elbank-boobank.el
-    elbank-budget.el -> elbank-budget.el
-    elbank-common.el -> elbank-common.el
-    elbank-compat.el -> elbank-compat.el
-    elbank-overview.el -> elbank-overview.el
-    elbank-progressbar.el -> elbank-progressbar.el
-    elbank-report.el -> elbank-report.el
-    elbank-transaction.el -> elbank-transaction.el
-    elbank.el -> elbank.el
-Created elbank-20180316.1343.tar containing:
-  elbank-20180316.1343/
-  elbank-20180316.1343/elbank-boobank.el
-  elbank-20180316.1343/elbank-budget.el
-  elbank-20180316.1343/elbank-common.el
-  elbank-20180316.1343/elbank-compat.el
-  elbank-20180316.1343/elbank-overview.el
-  elbank-20180316.1343/elbank-pkg.el
-  elbank-20180316.1343/elbank-progressbar.el
-  elbank-20180316.1343/elbank-report.el
-  elbank-20180316.1343/elbank-transaction.el
-  elbank-20180316.1343/elbank.el
-Built elbank in 3.546s, finished at 2023-06-09T15:48:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 399 Jun  9 15:48 packages/elbank-20180316.1343.entry
- 80K -rw-r--r-- 1 root root 80K Jun  9 15:48 packages/elbank-20180316.1343.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

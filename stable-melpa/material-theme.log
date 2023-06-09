@@ -4,17 +4,4 @@ Source:  https://github.com/cpaulik/emacs-material-theme.git
 
 Updating /mnt/store/melpa/working/material-theme/
 Checking out 6823009bc92f82aa3a90e27e1009f7da8e87b648
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/material-theme/
-  to /tmp/material-theme0ybx57/material-theme-20210904.1226
-    material-light-theme.el -> material-light-theme.el
-    material-theme.el -> material-theme.el
-Created material-theme-20210904.1226.tar containing:
-  material-theme-20210904.1226/
-  material-theme-20210904.1226/material-light-theme.el
-  material-theme-20210904.1226/material-theme-pkg.el
-  material-theme-20210904.1226/material-theme.el
-Built material-theme in 3.928s, finished at 2023-06-09T12:28:57+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  467 Jun  9 12:28 packages/material-theme-20210904.1226.entry
-112K -rw-r--r-- 1 root root 110K Jun  9 12:28 packages/material-theme-20210904.1226.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

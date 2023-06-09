@@ -4,7 +4,4 @@ Source:  https://github.com/Alexander-Miller/cfrs.git
 
 Updating /mnt/store/melpa/working/cfrs/
 Checking out f3a21f237b2a54e6b9f8a420a9da42b4f0a63121
-Built cfrs in 4.018s, finished at 2023-06-09T15:35:00+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K Jun  9 15:34 packages/cfrs-20220129.1149.el
-4.0K -rw-r--r-- 1 root root  453 Jun  9 15:34 packages/cfrs-20220129.1149.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

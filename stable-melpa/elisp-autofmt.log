@@ -4,19 +4,4 @@ Source:  https://codeberg.org/ideasman42/emacs-elisp-autofmt.git
 
 Updating /mnt/store/melpa/working/elisp-autofmt/
 Checking out 90b81d0b02e8fa7b2ff0cc84ef90f95d1d26a691
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elisp-autofmt/
-  to /tmp/elisp-autofmt3aRn8s/elisp-autofmt-20230521.2304
-    elisp-autofmt.el -> elisp-autofmt.el
-    elisp-autofmt.py -> elisp-autofmt.py
-    elisp-autofmt.overrides.json -> elisp-autofmt.overrides.json
-Created elisp-autofmt-20230521.2304.tar containing:
-  elisp-autofmt-20230521.2304/
-  elisp-autofmt-20230521.2304/elisp-autofmt-pkg.el
-  elisp-autofmt-20230521.2304/elisp-autofmt.el
-  elisp-autofmt-20230521.2304/elisp-autofmt.overrides.json
-  elisp-autofmt-20230521.2304/elisp-autofmt.py
-Built elisp-autofmt in 4.938s, finished at 2023-06-09T15:49:28+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  413 Jun  9 15:49 packages/elisp-autofmt-20230521.2304.entry
-180K -rw-r--r-- 1 root root 180K Jun  9 15:49 packages/elisp-autofmt-20230521.2304.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

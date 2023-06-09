@@ -4,7 +4,4 @@ Source:  https://github.com/pjones/passmm.git
 
 Updating /mnt/store/melpa/working/passmm/
 Checking out 66691e301dff476eaff7c6e817ed9df96d4404c8
-Built passmm in 5.087s, finished at 2023-06-09T12:42:03+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  9 12:42 packages/passmm-20221204.1927.el
-4.0K -rw-r--r-- 1 root root 411 Jun  9 12:42 packages/passmm-20221204.1927.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

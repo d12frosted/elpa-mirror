@@ -4,7 +4,4 @@ Source:  https://github.com/lewang/command-log-mode.git
 
 Updating /mnt/store/melpa/working/command-log-mode/
 Checking out af600e6b4129c8115f464af576505ea8e789db27
-Built command-log-mode in 5.394s, finished at 2023-06-09T15:37:24+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  9 15:37 packages/command-log-mode-20160413.447.el
-4.0K -rw-r--r-- 1 root root 432 Jun  9 15:37 packages/command-log-mode-20160413.447.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

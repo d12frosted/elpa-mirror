@@ -4,23 +4,4 @@ Source:  https://git.sr.ht/~ngraves/ibrowse.el
 
 Updating /mnt/store/melpa/working/ibrowse/
 Checking out b42685528d7bb2ca968fbf536d8745838e633828
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ibrowse/
-  to /tmp/ibrowseGqdBgZ/ibrowse-20230123.737
-    ibrowse-bookmark.el -> ibrowse-bookmark.el
-    ibrowse-core.el -> ibrowse-core.el
-    ibrowse-history.el -> ibrowse-history.el
-    ibrowse-tab.el -> ibrowse-tab.el
-    ibrowse.el -> ibrowse.el
-Created ibrowse-20230123.737.tar containing:
-  ibrowse-20230123.737/
-  ibrowse-20230123.737/ibrowse-bookmark.el
-  ibrowse-20230123.737/ibrowse-core.el
-  ibrowse-20230123.737/ibrowse-history.el
-  ibrowse-20230123.737/ibrowse-pkg.el
-  ibrowse-20230123.737/ibrowse-tab.el
-  ibrowse-20230123.737/ibrowse.el
-Built ibrowse in 4.083s, finished at 2023-06-09T12:17:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 437 Jun  9 12:17 packages/ibrowse-20230123.737.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 12:17 packages/ibrowse-20230123.737.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,19 +4,4 @@ Source:  https://github.com/keyword-search/keyword-search.git
 
 Updating /mnt/store/melpa/working/keyword-search/
 Checking out f8475ecaddb8804a9be6bee47678207c86ac8dee
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/keyword-search/
-  to /tmp/keyword-searchis1Bc2/keyword-search-20180424.1102
-    keyword-search-extra.el -> keyword-search-extra.el
-    keyword-search-mad.el -> keyword-search-mad.el
-    keyword-search.el -> keyword-search.el
-Created keyword-search-20180424.1102.tar containing:
-  keyword-search-20180424.1102/
-  keyword-search-20180424.1102/keyword-search-extra.el
-  keyword-search-20180424.1102/keyword-search-mad.el
-  keyword-search-20180424.1102/keyword-search-pkg.el
-  keyword-search-20180424.1102/keyword-search.el
-Built keyword-search in 7.789s, finished at 2023-06-09T12:22:57+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 317 Jun  9 12:22 packages/keyword-search-20180424.1102.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 12:22 packages/keyword-search-20180424.1102.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

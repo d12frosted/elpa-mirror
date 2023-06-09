@@ -4,7 +4,4 @@ Source:  https://github.com/clojure-emacs/cider-hydra.git
 
 Updating /mnt/store/melpa/working/cider-hydra/
 Checking out c3b8a15d72dddfbc390ab6a454bd7e4c765a2c95
-Built cider-hydra in 5.125s, finished at 2023-06-09T15:35:37+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.0K Jun  9 15:35 packages/cider-hydra-20190816.1121.el
-4.0K -rw-r--r-- 1 root root  515 Jun  9 15:35 packages/cider-hydra-20190816.1121.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

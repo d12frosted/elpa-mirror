@@ -4,17 +4,4 @@ Source:  https://gitlab.com/oer/org-re-reveal.git
 
 Updating /mnt/store/melpa/working/org-re-reveal/
 Checking out 592985019905447d5f1fd6e24d14bfa9f4adf2f3
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-re-reveal/
-  to /tmp/org-re-revealyp8kbY/org-re-reveal-20230607.1503
-    org-re-reveal.el -> org-re-reveal.el
-    ox-re-reveal.el -> ox-re-reveal.el
-Created org-re-reveal-20230607.1503.tar containing:
-  org-re-reveal-20230607.1503/
-  org-re-reveal-20230607.1503/org-re-reveal-pkg.el
-  org-re-reveal-20230607.1503/org-re-reveal.el
-  org-re-reveal-20230607.1503/ox-re-reveal.el
-Built org-re-reveal in 5.312s, finished at 2023-06-09T12:38:53+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  346 Jun  9 12:38 packages/org-re-reveal-20230607.1503.entry
-132K -rw-r--r-- 1 root root 130K Jun  9 12:38 packages/org-re-reveal-20230607.1503.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

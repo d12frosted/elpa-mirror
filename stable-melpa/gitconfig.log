@@ -4,7 +4,4 @@ Source:  https://github.com/tonini/gitconfig.el.git
 
 Updating /mnt/store/melpa/working/gitconfig/
 Checking out 6c313a39e20702ddcebc12d146f69db1ce668901
-Built gitconfig in 6.203s, finished at 2023-06-09T16:01:23+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Jun  9 16:01 packages/gitconfig-20130718.935.el
-4.0K -rw-r--r-- 1 root root  343 Jun  9 16:01 packages/gitconfig-20130718.935.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

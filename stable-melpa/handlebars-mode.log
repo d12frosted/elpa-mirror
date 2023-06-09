@@ -4,7 +4,4 @@ Source:  https://github.com/danielevans/handlebars-mode.git
 
 Updating /mnt/store/melpa/working/handlebars-mode/
 Checking out 81f6b73fea8f397807781a1b51568397af21a6ef
-Built handlebars-mode in 5.302s, finished at 2023-06-09T16:04:56+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  9 16:04 packages/handlebars-mode-20150211.1749.el
-4.0K -rw-r--r-- 1 root root 361 Jun  9 16:04 packages/handlebars-mode-20150211.1749.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

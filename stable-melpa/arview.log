@@ -4,7 +4,4 @@ Source:  https://github.com/afainer/arview.git
 
 Updating /mnt/store/melpa/working/arview/
 Checking out 5437b4221b64b238c273a651d4792c577dba6d45
-Built arview in 4.562s, finished at 2023-06-09T15:29:47+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  9 15:29 packages/arview-20160419.2109.el
-4.0K -rw-r--r-- 1 root root 397 Jun  9 15:29 packages/arview-20160419.2109.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

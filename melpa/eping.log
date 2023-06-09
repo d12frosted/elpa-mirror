@@ -4,19 +4,4 @@ Source:  https://github.com/sean-hut/eping.git
 
 Updating /mnt/store/melpa/working/eping/
 Checking out 004496ee06c0b8ead4a4f49e17109e8eb32eb49d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eping/
-  to /tmp/epingiseHWv/eping-20201027.2149
-    eping.el -> eping.el
-    eping.info -> eping.info
-    eping.texinfo -> eping.texinfo
-Created eping-20201027.2149.tar containing:
-  eping-20201027.2149/
-  eping-20201027.2149/dir
-  eping-20201027.2149/eping-pkg.el
-  eping-20201027.2149/eping.el
-  eping-20201027.2149/eping.info
-Built eping in 4.301s, finished at 2023-06-09T15:51:02+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 441 Jun  9 15:51 packages/eping-20201027.2149.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:51 packages/eping-20201027.2149.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

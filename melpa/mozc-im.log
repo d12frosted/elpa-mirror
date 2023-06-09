@@ -4,7 +4,4 @@ Source:  https://github.com/d5884/mozc-im.git
 
 Updating /mnt/store/melpa/working/mozc-im/
 Checking out df614a1076c28a11551fb3e822868bae47e855a5
-Built mozc-im in 4.129s, finished at 2023-06-09T12:31:54+0000
- ✓ Success:
-8.0K -rwxr-xr-x 1 root root 4.7K Jun  9 12:31 packages/mozc-im-20160412.22.el
-4.0K -rw-r--r-- 1 root root  394 Jun  9 12:31 packages/mozc-im-20160412.22.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

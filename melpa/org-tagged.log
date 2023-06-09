@@ -4,7 +4,4 @@ Source:  https://github.com/gizmomogwai/org-tagged.git
 
 Updating /mnt/store/melpa/working/org-tagged/
 Checking out 4b0174473772fca976426e982bb3f4a3037c1e37
-Built org-tagged in 5.021s, finished at 2023-06-09T12:39:30+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.5K Jun  9 12:39 packages/org-tagged-20220926.2048.el
-4.0K -rw-r--r-- 1 root root  627 Jun  9 12:39 packages/org-tagged-20220926.2048.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

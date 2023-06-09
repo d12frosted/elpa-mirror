@@ -4,17 +4,4 @@ Source:  https://github.com/xuchunyang/elisp-demos.git
 
 Updating /mnt/store/melpa/working/elisp-demos/
 Checking out 792be709c82101aea0585ece7429e2fdded74494
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elisp-demos/
-  to /tmp/elisp-demos9bF3qb/elisp-demos-20220903.1232
-    elisp-demos.el -> elisp-demos.el
-    elisp-demos.org -> elisp-demos.org
-Created elisp-demos-20220903.1232.tar containing:
-  elisp-demos-20220903.1232/
-  elisp-demos-20220903.1232/elisp-demos-pkg.el
-  elisp-demos-20220903.1232/elisp-demos.el
-  elisp-demos-20220903.1232/elisp-demos.org
-Built elisp-demos in 3.949s, finished at 2023-06-09T15:49:28+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  368 Jun  9 15:49 packages/elisp-demos-20220903.1232.entry
-292K -rw-r--r-- 1 root root 290K Jun  9 15:49 packages/elisp-demos-20220903.1232.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/mvarela/Curry-On-theme.git
 
 Updating /mnt/store/melpa/working/curry-on-theme/
 Checking out b53a61d443cc75906d9f97e19f19be71f1e19bc4
-Built curry-on-theme in 9.719s, finished at 2023-06-09T15:42:00+0000
- ✓ Success:
- 84K -rw-r--r-- 1 root root 83K Jun  9 15:41 packages/curry-on-theme-20210322.1717.el
-4.0K -rw-r--r-- 1 root root 400 Jun  9 15:41 packages/curry-on-theme-20210322.1717.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

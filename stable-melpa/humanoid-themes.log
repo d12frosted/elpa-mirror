@@ -4,19 +4,4 @@ Source:  https://github.com/humanoid-colors/emacs-humanoid-themes.git
 
 Updating /mnt/store/melpa/working/humanoid-themes/
 Checking out d6d41b365501650c18939c3394762bc163c87e40
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/humanoid-themes/
-  to /tmp/humanoid-themeso5tyPk/humanoid-themes-20230308.2129
-    humanoid-dark-theme.el -> humanoid-dark-theme.el
-    humanoid-light-theme.el -> humanoid-light-theme.el
-    humanoid-themes.el -> humanoid-themes.el
-Created humanoid-themes-20230308.2129.tar containing:
-  humanoid-themes-20230308.2129/
-  humanoid-themes-20230308.2129/humanoid-dark-theme.el
-  humanoid-themes-20230308.2129/humanoid-light-theme.el
-  humanoid-themes-20230308.2129/humanoid-themes-pkg.el
-  humanoid-themes-20230308.2129/humanoid-themes.el
-Built humanoid-themes in 6.234s, finished at 2023-06-09T16:10:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  415 Jun  9 16:10 packages/humanoid-themes-20230308.2129.entry
-112K -rw-r--r-- 1 root root 110K Jun  9 16:10 packages/humanoid-themes-20230308.2129.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

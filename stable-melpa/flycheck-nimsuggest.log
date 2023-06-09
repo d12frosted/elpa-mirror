@@ -4,7 +4,4 @@ Source:  https://github.com/yuutayamada/flycheck-nimsuggest.git
 
 Updating /mnt/store/melpa/working/flycheck-nimsuggest/
 Checking out dc9a5de1cb3ee05db5794d824610959a1f603bc9
-Built flycheck-nimsuggest in 4.068s, finished at 2023-06-09T15:57:24+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.8K Jun  9 15:57 packages/flycheck-nimsuggest-20171027.2208.el
-4.0K -rw-r--r-- 1 root root  499 Jun  9 15:57 packages/flycheck-nimsuggest-20171027.2208.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

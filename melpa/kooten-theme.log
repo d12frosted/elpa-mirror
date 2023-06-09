@@ -4,7 +4,4 @@ Source:  https://github.com/kootenpv/emacs-kooten-theme.git
 
 Updating /mnt/store/melpa/working/kooten-theme/
 Checking out d10197b4dd7af02cd14aeab2573c273a294798c3
-Built kooten-theme in 6.858s, finished at 2023-06-09T12:23:34+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root 36K Jun  9 12:23 packages/kooten-theme-20161023.905.el
-4.0K -rw-r--r-- 1 root root 435 Jun  9 12:23 packages/kooten-theme-20161023.905.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

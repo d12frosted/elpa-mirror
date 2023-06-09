@@ -4,7 +4,4 @@ Source:  https://github.com/emacsorphanage/4clojure.git
 
 Updating /mnt/store/melpa/working/4clojure/
 Checking out 6f494d3905284ccdd57aae3d8ac16fc7ab431596
-Built 4clojure in 7.532s, finished at 2023-06-09T15:27:02+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Jun  9 15:27 packages/4clojure-20210102.459.el
-4.0K -rw-r--r-- 1 root root  435 Jun  9 15:27 packages/4clojure-20210102.459.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

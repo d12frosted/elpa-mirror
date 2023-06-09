@@ -4,7 +4,4 @@ Source:  https://github.com/eric-hansen/helm-sql-connect.git
 
 Updating /mnt/store/melpa/working/helm-sql-connect/
 Checking out 5aead55b6f8636140945714d8c332b287ab9ef10
-Built helm-sql-connect in 6.356s, finished at 2023-06-09T12:14:29+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.3K Jun  9 12:14 packages/helm-sql-connect-20170319.1251.el
-4.0K -rw-r--r-- 1 root root  504 Jun  9 12:14 packages/helm-sql-connect-20170319.1251.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

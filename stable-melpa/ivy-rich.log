@@ -4,7 +4,4 @@ Source:  https://github.com/Yevgnen/ivy-rich.git
 
 Updating /mnt/store/melpa/working/ivy-rich/
 Checking out aff9b6bd53e0fdcf350ab83c90e64e651b47dba4
-Built ivy-rich in 5.152s, finished at 2023-06-09T12:20:02+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 27K Jun  9 12:20 packages/ivy-rich-20230425.1422.el
-4.0K -rw-r--r-- 1 root root 492 Jun  9 12:20 packages/ivy-rich-20230425.1422.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

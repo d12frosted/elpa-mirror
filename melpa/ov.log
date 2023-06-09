@@ -4,7 +4,4 @@ Source:  https://github.com/emacsorphanage/ov.git
 
 Updating /mnt/store/melpa/working/ov/
 Checking out e2971ad986b6ac441e9849031d34c56c980cf40b
-Built ov in 4.058s, finished at 2023-06-09T12:40:38+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 27K Jun  9 12:40 packages/ov-20230522.1117.el
-4.0K -rw-r--r-- 1 root root 457 Jun  9 12:40 packages/ov-20230522.1117.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

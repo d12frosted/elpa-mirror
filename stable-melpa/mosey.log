@@ -4,7 +4,4 @@ Source:  https://github.com/alphapapa/mosey.el.git
 
 Updating /mnt/store/melpa/working/mosey/
 Checking out 2e3ac9d334fa2937ed5267193dfd25d8e1f14dc2
-Built mosey in 5.076s, finished at 2023-06-09T12:31:46+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.7K Jun  9 12:31 packages/mosey-20180614.1649.el
-4.0K -rw-r--r-- 1 root root  395 Jun  9 12:31 packages/mosey-20180614.1649.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

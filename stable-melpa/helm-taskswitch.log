@@ -4,7 +4,4 @@ Source:  https://github.com/bdc34/helm-taskswitch.git
 
 Updating /mnt/store/melpa/working/helm-taskswitch/
 Checking out 6e8b62702376c1d30ab52a419dd72cb2a40fd76e
-Built helm-taskswitch in 7.618s, finished at 2023-06-09T16:08:30+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Jun  9 16:08 packages/helm-taskswitch-20221019.1542.el
-4.0K -rw-r--r-- 1 root root  480 Jun  9 16:08 packages/helm-taskswitch-20221019.1542.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

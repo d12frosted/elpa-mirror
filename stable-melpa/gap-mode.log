@@ -4,27 +4,4 @@ Source:  https://gitlab.com/gvol/gap-mode.git
 
 Updating /mnt/store/melpa/working/gap-mode/
 Checking out 4da309e209370d5bcbeadab79f509de50a5db240
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/gap-mode/
-  to /tmp/gap-modeKc3YGc/gap-mode-20230609.506
-    gap-company.el -> gap-company.el
-    gap-flycheck.el -> gap-flycheck.el
-    gap-flymake.el -> gap-flymake.el
-    gap-mode.el -> gap-mode.el
-    gap-process.el -> gap-process.el
-    gap-smie.el -> gap-smie.el
-    emacs.gaprc -> emacs.gaprc
-Created gap-mode-20230609.506.tar containing:
-  gap-mode-20230609.506/
-  gap-mode-20230609.506/emacs.gaprc
-  gap-mode-20230609.506/gap-company.el
-  gap-mode-20230609.506/gap-flycheck.el
-  gap-mode-20230609.506/gap-flymake.el
-  gap-mode-20230609.506/gap-mode-pkg.el
-  gap-mode-20230609.506/gap-mode.el
-  gap-mode-20230609.506/gap-process.el
-  gap-mode-20230609.506/gap-smie.el
-Built gap-mode in 4.267s, finished at 2023-06-09T15:59:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  533 Jun  9 15:59 packages/gap-mode-20230609.506.entry
-120K -rw-r--r-- 1 root root 120K Jun  9 15:59 packages/gap-mode-20230609.506.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

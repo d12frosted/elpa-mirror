@@ -4,7 +4,4 @@ Source:  https://github.com/dakra/info-beamer.el.git
 
 Updating /mnt/store/melpa/working/info-beamer/
 Checking out 6b4cc29f1aec72d8e23b2c25a99cdd84e6cdc92b
-Built info-beamer in 4.642s, finished at 2023-06-09T12:18:38+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.1K Jun  9 12:18 packages/info-beamer-20210427.1033.el
-4.0K -rw-r--r-- 1 root root  468 Jun  9 12:18 packages/info-beamer-20210427.1033.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

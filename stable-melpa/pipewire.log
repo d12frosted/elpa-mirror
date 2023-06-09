@@ -4,21 +4,4 @@ Source:  https://git.zamazal.org/pdm/pipewire-0
 
 Updating /mnt/store/melpa/working/pipewire/
 Checking out 115a8a89a3a0c6a89ebe22df0ef0928a701cb1f0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pipewire/
-  to /tmp/pipewireQrCSRQ/pipewire-20220725.1858
-    pipewire-access.el -> pipewire-access.el
-    pipewire-cli.el -> pipewire-cli.el
-    pipewire-lib.el -> pipewire-lib.el
-    pipewire.el -> pipewire.el
-Created pipewire-20220725.1858.tar containing:
-  pipewire-20220725.1858/
-  pipewire-20220725.1858/pipewire-access.el
-  pipewire-20220725.1858/pipewire-cli.el
-  pipewire-20220725.1858/pipewire-lib.el
-  pipewire-20220725.1858/pipewire-pkg.el
-  pipewire-20220725.1858/pipewire.el
-Built pipewire in 5.651s, finished at 2023-06-09T12:43:34+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 420 Jun  9 12:43 packages/pipewire-20220725.1858.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 12:43 packages/pipewire-20220725.1858.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

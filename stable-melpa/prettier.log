@@ -4,23 +4,4 @@ Source:  https://github.com/jscheid/prettier.el.git
 
 Updating /mnt/store/melpa/working/prettier/
 Checking out 1d9d789d91651a8773c7a3a688ec0cf3635fa94e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/prettier/
-  to /tmp/prettierB7QZ5E/prettier-20230515.2017
-    prettier.el -> prettier.el
-    dir -> dir
-    prettier.info -> prettier.info
-    bootstrap-min.js -> bootstrap-min.js
-    prettier-el.js.gz.base64 -> prettier-el.js.gz.base64
-Created prettier-20230515.2017.tar containing:
-  prettier-20230515.2017/
-  prettier-20230515.2017/bootstrap-min.js
-  prettier-20230515.2017/dir
-  prettier-20230515.2017/prettier-el.js.gz.base64
-  prettier-20230515.2017/prettier-pkg.el
-  prettier-20230515.2017/prettier.el
-  prettier-20230515.2017/prettier.info
-Built prettier in 4.410s, finished at 2023-06-09T12:45:35+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  539 Jun  9 12:45 packages/prettier-20230515.2017.entry
-100K -rw-r--r-- 1 root root 100K Jun  9 12:45 packages/prettier-20230515.2017.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

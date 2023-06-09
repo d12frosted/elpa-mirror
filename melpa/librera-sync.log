@@ -4,21 +4,4 @@ Source:  https://github.com/jumper047/librera-sync.git
 
 Updating /mnt/store/melpa/working/librera-sync/
 Checking out 29e158fc478d5817dffc4045b067feed4c3d0dbe
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/librera-sync/
-  to /tmp/librera-syncq8X7lk/librera-sync-20230306.17
-    librera-sync-doc-view.el -> librera-sync-doc-view.el
-    librera-sync-fb2-reader-mode.el -> librera-sync-fb2-reader-mode.el
-    librera-sync-pdf-view.el -> librera-sync-pdf-view.el
-    librera-sync.el -> librera-sync.el
-Created librera-sync-20230306.17.tar containing:
-  librera-sync-20230306.17/
-  librera-sync-20230306.17/librera-sync-doc-view.el
-  librera-sync-20230306.17/librera-sync-fb2-reader-mode.el
-  librera-sync-20230306.17/librera-sync-pdf-view.el
-  librera-sync-20230306.17/librera-sync-pkg.el
-  librera-sync-20230306.17/librera-sync.el
-Built librera-sync in 4.195s, finished at 2023-06-09T12:25:17+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 512 Jun  9 12:25 packages/librera-sync-20230306.17.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 12:25 packages/librera-sync-20230306.17.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

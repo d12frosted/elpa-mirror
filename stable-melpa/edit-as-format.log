@@ -4,18 +4,4 @@ Source:  https://github.com/etern/edit-as-format.git
 
 Updating /mnt/store/melpa/working/edit-as-format/
 Checking out 59c6f439683846d994a7a2110b9b00cc16c08c40
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/edit-as-format/
-  to /tmp/edit-as-formatdmqYcV/edit-as-format-20220221.1312
-    edit-as-format.el -> edit-as-format.el
-    filters => filters
-Created edit-as-format-20220221.1312.tar containing:
-  edit-as-format-20220221.1312/
-  edit-as-format-20220221.1312/edit-as-format-pkg.el
-  edit-as-format-20220221.1312/edit-as-format.el
-  edit-as-format-20220221.1312/filters/
-  edit-as-format-20220221.1312/filters/_simple-headers.lua
-Built edit-as-format in 6.028s, finished at 2023-06-09T15:47:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 495 Jun  9 15:47 packages/edit-as-format-20220221.1312.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:47 packages/edit-as-format-20220221.1312.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

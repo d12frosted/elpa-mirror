@@ -4,28 +4,4 @@ Source:  https://salsa.debian.org/emacsen-team/dpkg-dev-el.git
 
 Updating /mnt/store/melpa/working/dpkg-dev-el/
 Checking out af9aad721cb263e495e2f77df458e9496549c04b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dpkg-dev-el/
-  to /tmp/dpkg-dev-elU6Weji/dpkg-dev-el-20230220.1635
-    debian-autoloads.el -> debian-autoloads.el
-    debian-bts-control.el -> debian-bts-control.el
-    debian-changelog-mode.el -> debian-changelog-mode.el
-    debian-control-mode.el -> debian-control-mode.el
-    debian-copyright.el -> debian-copyright.el
-    dpkg-dev-el-pkg.el -> dpkg-dev-el-pkg.el
-    dpkg-dev-el.el -> dpkg-dev-el.el
-    readme-debian.el -> readme-debian.el
-Created dpkg-dev-el-20230220.1635.tar containing:
-  dpkg-dev-el-20230220.1635/
-  dpkg-dev-el-20230220.1635/debian-autoloads.el
-  dpkg-dev-el-20230220.1635/debian-bts-control.el
-  dpkg-dev-el-20230220.1635/debian-changelog-mode.el
-  dpkg-dev-el-20230220.1635/debian-control-mode.el
-  dpkg-dev-el-20230220.1635/debian-copyright.el
-  dpkg-dev-el-20230220.1635/dpkg-dev-el-pkg.el
-  dpkg-dev-el-20230220.1635/dpkg-dev-el.el
-  dpkg-dev-el-20230220.1635/readme-debian.el
-Built dpkg-dev-el in 5.482s, finished at 2023-06-09T15:46:04+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  301 Jun  9 15:46 packages/dpkg-dev-el-20230220.1635.entry
-172K -rw-r--r-- 1 root root 170K Jun  9 15:46 packages/dpkg-dev-el-20230220.1635.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

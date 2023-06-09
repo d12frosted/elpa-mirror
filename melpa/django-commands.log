@@ -4,7 +4,4 @@ Source:  https://github.com/muffinmad/emacs-django-commands.git
 
 Updating /mnt/store/melpa/working/django-commands/
 Checking out 7510c0f068bf214ad012c203d68e03ff4262efdf
-Built django-commands in 5.239s, finished at 2023-06-09T15:45:15+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  9 15:45 packages/django-commands-20220314.1545.el
-4.0K -rw-r--r-- 1 root root 463 Jun  9 15:45 packages/django-commands-20220314.1545.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

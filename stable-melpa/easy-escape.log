@@ -4,7 +4,4 @@ Source:  https://github.com/cpitclaudel/easy-escape.git
 
 Updating /mnt/store/melpa/working/easy-escape/
 Checking out 938497a21e65ba6b3ff8ec90e93a6d0ab18dc9b4
-Built easy-escape in 5.413s, finished at 2023-06-09T15:46:51+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.0K Jun  9 15:46 packages/easy-escape-20210917.1254.el
-4.0K -rw-r--r-- 1 root root  536 Jun  9 15:46 packages/easy-escape-20210917.1254.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

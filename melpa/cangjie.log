@@ -4,17 +4,4 @@ Source:  https://github.com/kisaragi-hiu/cangjie.el.git
 
 Updating /mnt/store/melpa/working/cangjie/
 Checking out d6882e15f47fdde37e9f739dde604d77d25f11db
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cangjie/
-  to /tmp/cangjieF6qSQK/cangjie-20230219.1150
-    cangjie-practice.el -> cangjie-practice.el
-    cangjie.el -> cangjie.el
-Created cangjie-20230219.1150.tar containing:
-  cangjie-20230219.1150/
-  cangjie-20230219.1150/cangjie-pkg.el
-  cangjie-20230219.1150/cangjie-practice.el
-  cangjie-20230219.1150/cangjie.el
-Built cangjie in 5.333s, finished at 2023-06-09T15:34:24+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 333 Jun  9 15:34 packages/cangjie-20230219.1150.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:34 packages/cangjie-20230219.1150.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/cuonglm/flycheck-checkbashisms.git
 
 Updating /mnt/store/melpa/working/flycheck-checkbashisms/
 Checking out ca8f11679c77d6702f34e773bdde185ceb47a05d
-Built flycheck-checkbashisms in 4.616s, finished at 2023-06-09T15:56:30+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Jun  9 15:56 packages/flycheck-checkbashisms-20230313.1418.el
-4.0K -rw-r--r-- 1 root root  522 Jun  9 15:56 packages/flycheck-checkbashisms-20230313.1418.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

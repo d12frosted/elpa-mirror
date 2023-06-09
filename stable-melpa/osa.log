@@ -4,24 +4,4 @@ Source:  https://github.com/atomontage/osa.git
 
 Updating /mnt/store/melpa/working/osa/
 Checking out 615ca9eef4131a23d9971691fa0d0f20fe59d01b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/osa/
-  to /tmp/osa2Zs23P/osa-20200522.2103
-    osa-examples.el -> osa-examples.el
-    osa.el -> osa.el
-    scripts/notify.js -> scripts/notify.js
-    scripts/show-finder.applescript -> scripts/show-finder.applescript
-    scripts/terminal.applescript -> scripts/terminal.applescript
-Created osa-20200522.2103.tar containing:
-  osa-20200522.2103/
-  osa-20200522.2103/osa-examples.el
-  osa-20200522.2103/osa-pkg.el
-  osa-20200522.2103/osa.el
-  osa-20200522.2103/scripts/
-  osa-20200522.2103/scripts/notify.js
-  osa-20200522.2103/scripts/show-finder.applescript
-  osa-20200522.2103/scripts/terminal.applescript
-Built osa in 6.642s, finished at 2023-06-09T12:40:17+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 409 Jun  9 12:40 packages/osa-20200522.2103.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:40 packages/osa-20200522.2103.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

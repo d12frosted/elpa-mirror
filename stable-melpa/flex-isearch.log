@@ -4,7 +4,4 @@ Source:  https://github.com/jpkotta/flex-isearch.git
 
 Updating /mnt/store/melpa/working/flex-isearch/
 Checking out b1f7e04de762282c276343cc2709af9ff4abc9d2
-Built flex-isearch in 5.186s, finished at 2023-06-09T15:56:08+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  9 15:56 packages/flex-isearch-20170308.2010.el
-4.0K -rw-r--r-- 1 root root 431 Jun  9 15:56 packages/flex-isearch-20170308.2010.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/uk-ar/el-spec.git
 
 Updating /mnt/store/melpa/working/el-spec/
 Checking out 1dbc465401d4aea5560318c4f13ff30920a0718d
-Built el-spec in 6.163s, finished at 2023-06-09T15:48:49+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:48 packages/el-spec-20121018.704.el
-4.0K -rw-r--r-- 1 root root 405 Jun  9 15:48 packages/el-spec-20121018.704.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

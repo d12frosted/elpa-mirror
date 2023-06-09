@@ -4,26 +4,4 @@ Source:  https://github.com/rejeep/ert-runner.el.git
 
 Updating /mnt/store/melpa/working/ert-runner/
 Checking out 69d66b934223d5f1801ba3a4c8dbfb3453f2a041
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ert-runner/
-  to /tmp/ert-runnerRHFmBE/ert-runner-20220513.1142
-    ert-compat.el -> ert-compat.el
-    ert-runner.el -> ert-runner.el
-    bin => bin
-    reporters => reporters
-Created ert-runner-20220513.1142.tar containing:
-  ert-runner-20220513.1142/
-  ert-runner-20220513.1142/bin/
-  ert-runner-20220513.1142/bin/ert-runner
-  ert-runner-20220513.1142/bin/ert-runner.bat
-  ert-runner-20220513.1142/ert-compat.el
-  ert-runner-20220513.1142/ert-runner-pkg.el
-  ert-runner-20220513.1142/ert-runner.el
-  ert-runner-20220513.1142/reporters/
-  ert-runner-20220513.1142/reporters/ert-runner-reporter-dot.el
-  ert-runner-20220513.1142/reporters/ert-runner-reporter-ert+duration.el
-  ert-runner-20220513.1142/reporters/ert-runner-reporter-ert.el
-Built ert-runner in 5.420s, finished at 2023-06-09T15:51:42+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  629 Jun  9 15:51 packages/ert-runner-20220513.1142.entry
-140K -rw-r--r-- 1 root root 140K Jun  9 15:51 packages/ert-runner-20220513.1142.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

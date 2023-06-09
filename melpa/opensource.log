@@ -4,25 +4,4 @@ Source:  https://github.com/OpenSourceOrg/el-opensourceorg.git
 
 Updating /mnt/store/melpa/working/opensource/
 Checking out 42742d5f1b9590acff7f05ee0094e3a80f4f7171
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/opensource/
-  to /tmp/opensourceYzv3ad/opensource-20160926.1616
-    opensource-api.el -> opensource-api.el
-    opensource-http.el -> opensource-http.el
-    opensource-licenses.el -> opensource-licenses.el
-    opensource-utils.el -> opensource-utils.el
-    opensource-version.el -> opensource-version.el
-    opensource.el -> opensource.el
-Created opensource-20160926.1616.tar containing:
-  opensource-20160926.1616/
-  opensource-20160926.1616/opensource-api.el
-  opensource-20160926.1616/opensource-http.el
-  opensource-20160926.1616/opensource-licenses.el
-  opensource-20160926.1616/opensource-pkg.el
-  opensource-20160926.1616/opensource-utils.el
-  opensource-20160926.1616/opensource-version.el
-  opensource-20160926.1616/opensource.el
-Built opensource in 3.761s, finished at 2023-06-09T12:36:26+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 603 Jun  9 12:36 packages/opensource-20160926.1616.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 12:36 packages/opensource-20160926.1616.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

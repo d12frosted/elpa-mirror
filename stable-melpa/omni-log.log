@@ -4,17 +4,4 @@ Source:  https://github.com/AdrieanKhisbe/omni-log.el.git
 
 Updating /mnt/store/melpa/working/omni-log/
 Checking out 0a240660ccdd0b6588b4e3c322743b5ab1161338
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/omni-log/
-  to /tmp/omni-logNMdvse/omni-log-20200304.2229
-    omni-log-logger.el -> omni-log-logger.el
-    omni-log.el -> omni-log.el
-Created omni-log-20200304.2229.tar containing:
-  omni-log-20200304.2229/
-  omni-log-20200304.2229/omni-log-logger.el
-  omni-log-20200304.2229/omni-log-pkg.el
-  omni-log-20200304.2229/omni-log.el
-Built omni-log in 4.013s, finished at 2023-06-09T12:36:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 535 Jun  9 12:36 packages/omni-log-20200304.2229.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 12:36 packages/omni-log-20200304.2229.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

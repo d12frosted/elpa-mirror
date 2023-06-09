@@ -3,22 +3,5 @@ Fetcher: github
 Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
-Checking out 27f6e016c60839f35375fb4bcc5b05dbadb4383b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/package-build/
-  to /tmp/package-buildWEqKMW/package-build-20230602.816
-    package-build-badges.el -> package-build-badges.el
-    package-build.el -> package-build.el
-    package-recipe-mode.el -> package-recipe-mode.el
-    package-recipe.el -> package-recipe.el
-Created package-build-20230602.816.tar containing:
-  package-build-20230602.816/
-  package-build-20230602.816/package-build-badges.el
-  package-build-20230602.816/package-build-pkg.el
-  package-build-20230602.816/package-build.el
-  package-build-20230602.816/package-recipe-mode.el
-  package-build-20230602.816/package-recipe.el
-Built package-build in 4.468s, finished at 2023-06-09T12:41:28+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 601 Jun  9 12:41 packages/package-build-20230602.816.entry
- 80K -rw-r--r-- 1 root root 80K Jun  9 12:41 packages/package-build-20230602.816.tar
+Checking out 1f396752ca35c4970318305b8bfeba2dc873edd3
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

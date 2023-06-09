@@ -4,7 +4,4 @@ Source:  https://github.com/mkcms/ivy-yasnippet.git
 
 Updating /mnt/store/melpa/working/ivy-yasnippet/
 Checking out 83402d91b4eba5307f71884a72df8e11cc6a994e
-Built ivy-yasnippet in 5.856s, finished at 2023-06-09T12:20:10+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.9K Jun  9 12:20 packages/ivy-yasnippet-20200704.700.el
-4.0K -rw-r--r-- 1 root root  534 Jun  9 12:20 packages/ivy-yasnippet-20200704.700.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

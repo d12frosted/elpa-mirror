@@ -4,7 +4,4 @@ Source:  https://github.com/ianyepan/jetbrains-darcula-emacs-theme.git
 
 Updating /mnt/store/melpa/working/jetbrains-darcula-theme/
 Checking out 46f153385e50998826ca13e18056c6a972768cfd
-Built jetbrains-darcula-theme in 5.810s, finished at 2023-06-09T12:20:49+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 31K Jun  9 12:20 packages/jetbrains-darcula-theme-20230223.1901.el
-4.0K -rw-r--r-- 1 root root 385 Jun  9 12:20 packages/jetbrains-darcula-theme-20230223.1901.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

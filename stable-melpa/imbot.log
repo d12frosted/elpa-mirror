@@ -4,19 +4,4 @@ Source:  https://github.com/QiangF/imbot.git
 
 Updating /mnt/store/melpa/working/imbot/
 Checking out 0e772b52f07e2a5a6601aff1ea2b9fe704696a62
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/imbot/
-  to /tmp/imboteKn9xM/imbot-20210423.731
-    imbot--fcitx5.el -> imbot--fcitx5.el
-    imbot--ibus.el -> imbot--ibus.el
-    imbot.el -> imbot.el
-Created imbot-20210423.731.tar containing:
-  imbot-20210423.731/
-  imbot-20210423.731/imbot--fcitx5.el
-  imbot-20210423.731/imbot--ibus.el
-  imbot-20210423.731/imbot-pkg.el
-  imbot-20210423.731/imbot.el
-Built imbot in 5.260s, finished at 2023-06-09T12:18:07+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 232 Jun  9 12:18 packages/imbot-20210423.731.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 12:18 packages/imbot-20210423.731.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/tarsius/keycast.git
 
 Updating /mnt/store/melpa/working/keycast/
 Checking out cbdedd8a1ca15c43888e9dcf06e9f1f49c04727c
-Built keycast in 5.917s, finished at 2023-06-09T12:22:40+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 28K Jun  9 12:22 packages/keycast-20230513.1829.el
-4.0K -rw-r--r-- 1 root root 457 Jun  9 12:22 packages/keycast-20230513.1829.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,31 +4,4 @@ Source:  https://github.com/emacs-citar/citar.git
 
 Updating /mnt/store/melpa/working/citar/
 Checking out 02034795f4c3bb46e782f8bd34dd486ce1fb9244
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/citar/
-  to /tmp/citar52Z14c/citar-20230325.136
-    citar-cache.el -> citar-cache.el
-    citar-capf.el -> citar-capf.el
-    citar-citeproc.el -> citar-citeproc.el
-    citar-file.el -> citar-file.el
-    citar-format.el -> citar-format.el
-    citar-latex.el -> citar-latex.el
-    citar-markdown.el -> citar-markdown.el
-    citar-org.el -> citar-org.el
-    citar.el -> citar.el
-Created citar-20230325.136.tar containing:
-  citar-20230325.136/
-  citar-20230325.136/citar-cache.el
-  citar-20230325.136/citar-capf.el
-  citar-20230325.136/citar-citeproc.el
-  citar-20230325.136/citar-file.el
-  citar-20230325.136/citar-format.el
-  citar-20230325.136/citar-latex.el
-  citar-20230325.136/citar-markdown.el
-  citar-20230325.136/citar-org.el
-  citar-20230325.136/citar-pkg.el
-  citar-20230325.136/citar.el
-Built citar in 6.448s, finished at 2023-06-09T15:35:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  473 Jun  9 15:35 packages/citar-20230325.136.entry
-160K -rw-r--r-- 1 root root 160K Jun  9 15:35 packages/citar-20230325.136.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,33 +4,4 @@ Source:  https://github.com/poppyschmo/pytest-pdb-break.git
 
 Updating /mnt/store/melpa/working/pytest-pdb-break/
 Checking out 05d227493b7b96f3556cba22f215cb85f9282020
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pytest-pdb-break/
-  to /tmp/pytest-pdb-breakKnBTke/pytest-pdb-break-20200804.848
-  ! emacs/pytest-pdb-break-extra.el -> pytest-pdb-break-extra.el
-  ! emacs/pytest-pdb-break.el -> pytest-pdb-break.el
-  ! pytest_pdb_break.py -> lib/pytest_pdb_break.py
-  ! setup.py -> lib/setup.py
-  ! helpers => lib/helpers
-  ! emacs/setup_code_wrapper.py -> lib/emacs/setup_code_wrapper.py
-Created pytest-pdb-break-20200804.848.tar containing:
-  pytest-pdb-break-20200804.848/
-  pytest-pdb-break-20200804.848/lib/
-  pytest-pdb-break-20200804.848/lib/emacs/
-  pytest-pdb-break-20200804.848/lib/emacs/setup_code_wrapper.py
-  pytest-pdb-break-20200804.848/lib/helpers/
-  pytest-pdb-break-20200804.848/lib/helpers/__init__.py
-  pytest-pdb-break-20200804.848/lib/helpers/common.py
-  pytest-pdb-break-20200804.848/lib/helpers/ensure_venv.py
-  pytest-pdb-break-20200804.848/lib/helpers/get_collected.py
-  pytest-pdb-break-20200804.848/lib/helpers/get_config_info.py
-  pytest-pdb-break-20200804.848/lib/helpers/main.py
-  pytest-pdb-break-20200804.848/lib/pytest_pdb_break.py
-  pytest-pdb-break-20200804.848/lib/setup.py
-  pytest-pdb-break-20200804.848/pytest-pdb-break-extra.el
-  pytest-pdb-break-20200804.848/pytest-pdb-break-pkg.el
-  pytest-pdb-break-20200804.848/pytest-pdb-break.el
-Built pytest-pdb-break in 4.077s, finished at 2023-06-09T12:47:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  468 Jun  9 12:47 packages/pytest-pdb-break-20200804.848.entry
-100K -rw-r--r-- 1 root root 100K Jun  9 12:47 packages/pytest-pdb-break-20200804.848.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

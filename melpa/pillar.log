@@ -4,17 +4,4 @@ Source:  https://github.com/pillar-markup/pillar-mode.git
 
 Updating /mnt/store/melpa/working/pillar/
 Checking out 13a7f676544cc66005ccd8e6fc1c25e4ccd6f909
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pillar/
-  to /tmp/pillarOsvbT1/pillar-20141112.1811
-    pillar-latex2pillar.el -> pillar-latex2pillar.el
-    pillar.el -> pillar.el
-Created pillar-20141112.1811.tar containing:
-  pillar-20141112.1811/
-  pillar-20141112.1811/pillar-latex2pillar.el
-  pillar-20141112.1811/pillar-pkg.el
-  pillar-20141112.1811/pillar.el
-Built pillar in 3.881s, finished at 2023-06-09T12:43:24+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 442 Jun  9 12:43 packages/pillar-20141112.1811.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:43 packages/pillar-20141112.1811.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

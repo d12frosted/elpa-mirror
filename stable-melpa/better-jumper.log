@@ -4,7 +4,4 @@ Source:  https://github.com/gilbertw1/better-jumper.git
 
 Updating /mnt/store/melpa/working/better-jumper/
 Checking out 205e7a539d1611dbe50f003ddf52890360f87597
-Built better-jumper in 3.827s, finished at 2023-06-09T15:31:48+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 23K Jun  9 15:31 packages/better-jumper-20220110.118.el
-4.0K -rw-r--r-- 1 root root 442 Jun  9 15:31 packages/better-jumper-20220110.118.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

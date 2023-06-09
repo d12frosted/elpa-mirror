@@ -4,19 +4,4 @@ Source:  https://github.com/radian-software/apheleia.git
 
 Updating /mnt/store/melpa/working/apheleia/
 Checking out f85b48e2eee0983acfe5b3a2684856358714ac6f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/apheleia/
-  to /tmp/apheleiakXg3vb/apheleia-20230527.1755
-    apheleia-core.el -> apheleia-core.el
-    apheleia-utils.el -> apheleia-utils.el
-    apheleia.el -> apheleia.el
-Created apheleia-20230527.1755.tar containing:
-  apheleia-20230527.1755/
-  apheleia-20230527.1755/apheleia-core.el
-  apheleia-20230527.1755/apheleia-pkg.el
-  apheleia-20230527.1755/apheleia-utils.el
-  apheleia-20230527.1755/apheleia.el
-Built apheleia in 5.017s, finished at 2023-06-09T15:29:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 443 Jun  9 15:29 packages/apheleia-20230527.1755.entry
- 80K -rw-r--r-- 1 root root 80K Jun  9 15:29 packages/apheleia-20230527.1755.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

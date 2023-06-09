@@ -4,7 +4,4 @@ Source:  https://github.com/SavchenkoValeriy/emacs-chocolate-theme.git
 
 Updating /mnt/store/melpa/working/chocolate-theme/
 Checking out ccc05f7ad96d3d1332727689bf6250443adc7ec0
-Built chocolate-theme in 4.170s, finished at 2023-06-09T15:35:25+0000
- ✓ Success:
- 60K -rw-r--r-- 1 root root 59K Jun  9 15:35 packages/chocolate-theme-20210128.1647.el
-4.0K -rw-r--r-- 1 root root 268 Jun  9 15:35 packages/chocolate-theme-20210128.1647.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/redguardtoo/fastdef.git
 
 Updating /mnt/store/melpa/working/fastdef/
 Checking out 0696f41dc150d35ce31fe8d2ea74f4173818bb55
-Built fastdef in 6.711s, finished at 2023-06-09T15:54:53+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.1K Jun  9 15:54 packages/fastdef-20160713.1329.el
-4.0K -rw-r--r-- 1 root root  502 Jun  9 15:54 packages/fastdef-20160713.1329.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

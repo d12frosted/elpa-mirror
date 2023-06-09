@@ -4,7 +4,4 @@ Source:  https://github.com/Fuco1/flash-region.git
 
 Updating /mnt/store/melpa/working/flash-region/
 Checking out 261b3597b23cdd40e5c14262a5687bcc6c1d0901
-Built flash-region in 4.793s, finished at 2023-06-09T15:55:57+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.2K Jun  9 15:55 packages/flash-region-20130923.1817.el
-4.0K -rw-r--r-- 1 root root  349 Jun  9 15:55 packages/flash-region-20130923.1817.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

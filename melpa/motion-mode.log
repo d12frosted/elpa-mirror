@@ -4,23 +4,4 @@ Source:  https://github.com/ainame/motion-mode.git
 
 Updating /mnt/store/melpa/working/motion-mode/
 Checking out 4c94180e3ecea611a61240a0c0cd48f1032c4a55
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/motion-mode/
-  to /tmp/motion-modehutRVj/motion-mode-20140920.156
-    motion-mode.el -> motion-mode.el
-    bin => bin
-    lib => lib
-Created motion-mode-20140920.156.tar containing:
-  motion-mode-20140920.156/
-  motion-mode-20140920.156/bin/
-  motion-mode-20140920.156/bin/code_converter.rb
-  motion-mode-20140920.156/bin/make_dict.rb
-  motion-mode-20140920.156/lib/
-  motion-mode-20140920.156/lib/motion/
-  motion-mode-20140920.156/lib/motion/code_converter.rb
-  motion-mode-20140920.156/motion-mode-pkg.el
-  motion-mode-20140920.156/motion-mode.el
-Built motion-mode in 4.659s, finished at 2023-06-09T12:31:48+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 397 Jun  9 12:31 packages/motion-mode-20140920.156.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:31 packages/motion-mode-20140920.156.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

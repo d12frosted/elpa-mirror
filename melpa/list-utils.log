@@ -4,7 +4,4 @@ Source:  https://github.com/rolandwalker/list-utils.git
 
 Updating /mnt/store/melpa/working/list-utils/
 Checking out f02dcef36330871855346f9eab97eef58d323d9a
-Built list-utils in 4.904s, finished at 2023-06-09T12:25:47+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 38K Jun  9 12:25 packages/list-utils-20230422.1740.el
-4.0K -rw-r--r-- 1 root root 440 Jun  9 12:25 packages/list-utils-20230422.1740.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

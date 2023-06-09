@@ -4,7 +4,4 @@ Source:  https://github.com/raghavgautam/helm-wordnet.git
 
 Updating /mnt/store/melpa/working/helm-wordnet/
 Checking out a36dbc6fcb570b812870bc1e190f203e0a0042fc
-Built helm-wordnet in 5.529s, finished at 2023-06-09T12:14:48+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.7K Jun  9 12:14 packages/helm-wordnet-20160128.1507.el
-4.0K -rw-r--r-- 1 root root  542 Jun  9 12:14 packages/helm-wordnet-20160128.1507.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

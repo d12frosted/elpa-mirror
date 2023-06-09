@@ -4,7 +4,4 @@ Source:  https://github.com/jxq0/org-bookmarks-extractor.git
 
 Updating /mnt/store/melpa/working/org-bookmarks-extractor/
 Checking out 26d810d4d58de1f64f0bbd649e13816f96663d73
-Built org-bookmarks-extractor in 5.094s, finished at 2023-06-09T12:36:49+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Jun  9 12:36 packages/org-bookmarks-extractor-20220829.146.el
-4.0K -rw-r--r-- 1 root root  449 Jun  9 12:36 packages/org-bookmarks-extractor-20220829.146.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

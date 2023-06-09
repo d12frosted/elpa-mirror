@@ -4,7 +4,4 @@ Source:  https://gitlab.com/ambrevar/mu4e-conversation.git
 
 Updating /mnt/store/melpa/working/mu4e-conversation/
 Checking out 98110bb9c300fc9866dee8e0023355f9f79c9b96
-Built mu4e-conversation in 4.965s, finished at 2023-06-09T12:32:22+0000
- ✓ Success:
- 72K -rw-r--r-- 1 root root 69K Jun  9 12:32 packages/mu4e-conversation-20190609.812.el
-4.0K -rw-r--r-- 1 root root 510 Jun  9 12:32 packages/mu4e-conversation-20190609.812.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

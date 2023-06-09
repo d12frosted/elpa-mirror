@@ -4,7 +4,4 @@ Source:  https://github.com/dgutov/espresso-theme.git
 
 Updating /mnt/store/melpa/working/espresso-theme/
 Checking out 580f673729f02aa07070c5300bedf24733d56e74
-Built espresso-theme in 5.504s, finished at 2023-06-09T15:52:11+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Jun  9 15:52 packages/espresso-theme-20210505.1957.el
-4.0K -rw-r--r-- 1 root root  379 Jun  9 15:52 packages/espresso-theme-20210505.1957.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

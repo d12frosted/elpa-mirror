@@ -4,18 +4,4 @@ Source:  https://github.com/skeeto/elisp-finalize.git
 
 Updating /mnt/store/melpa/working/finalize/
 Checking out 0f7d47c4d50f1c76fc3b43bfc2d4886dd3e8ca27
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/finalize/
-  to /tmp/finalizeH4J3Aw/finalize-20170418.1945
-    finalizable.el -> finalizable.el
-    finalize-pkg.el -> finalize-pkg.el
-    finalize.el -> finalize.el
-Created finalize-20170418.1945.tar containing:
-  finalize-20170418.1945/
-  finalize-20170418.1945/finalizable.el
-  finalize-20170418.1945/finalize-pkg.el
-  finalize-20170418.1945/finalize.el
-Built finalize in 5.086s, finished at 2023-06-09T15:55:28+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 439 Jun  9 15:55 packages/finalize-20170418.1945.entry
- 12K -rw-r--r-- 1 root root 10K Jun  9 15:55 packages/finalize-20170418.1945.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

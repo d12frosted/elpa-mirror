@@ -4,7 +4,4 @@ Source:  https://github.com/timmyjose-projects/lox-mode.git
 
 Updating /mnt/store/melpa/working/lox-mode/
 Checking out 083a2299e188a516d1e46ef2dd1cbb89db1aec49
-Built lox-mode in 4.969s, finished at 2023-06-09T12:26:42+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.9K Jun  9 12:26 packages/lox-mode-20200619.1700.el
-4.0K -rw-r--r-- 1 root root  465 Jun  9 12:26 packages/lox-mode-20200619.1700.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

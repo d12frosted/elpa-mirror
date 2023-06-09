@@ -4,42 +4,4 @@ Source:  https://gitlab.com/sasanidas/maxima.git
 
 Updating /mnt/store/melpa/working/maxima/
 Checking out 2de798f6644753772553cd0420d3c419ed50dd0b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/maxima/
-  to /tmp/maximab9funl/maxima-20230529.1658
-    maxima.el -> maxima.el
-    maxima-font-lock.el -> maxima-font-lock.el
-    keywords/constants -> keywords/constants
-    keywords/functions -> keywords/functions
-    keywords/global -> keywords/global
-    keywords/graphic -> keywords/graphic
-    keywords/object -> keywords/object
-    keywords/operators -> keywords/operators
-    keywords/options -> keywords/options
-    keywords/plot -> keywords/plot
-    keywords/properties -> keywords/properties
-    keywords/scene -> keywords/scene
-    keywords/special -> keywords/special
-    keywords/system_variables -> keywords/system_variables
-Created maxima-20230529.1658.tar containing:
-  maxima-20230529.1658/
-  maxima-20230529.1658/keywords/
-  maxima-20230529.1658/keywords/constants
-  maxima-20230529.1658/keywords/functions
-  maxima-20230529.1658/keywords/global
-  maxima-20230529.1658/keywords/graphic
-  maxima-20230529.1658/keywords/object
-  maxima-20230529.1658/keywords/operators
-  maxima-20230529.1658/keywords/options
-  maxima-20230529.1658/keywords/plot
-  maxima-20230529.1658/keywords/properties
-  maxima-20230529.1658/keywords/scene
-  maxima-20230529.1658/keywords/special
-  maxima-20230529.1658/keywords/system_variables
-  maxima-20230529.1658/maxima-font-lock.el
-  maxima-20230529.1658/maxima-pkg.el
-  maxima-20230529.1658/maxima.el
-Built maxima in 5.026s, finished at 2023-06-09T12:29:06+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  475 Jun  9 12:29 packages/maxima-20230529.1658.entry
-192K -rw-r--r-- 1 root root 190K Jun  9 12:29 packages/maxima-20230529.1658.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,41 +4,4 @@ Source:  https://github.com/phillord/lentic.git
 
 Updating /mnt/store/melpa/working/lentic/
 Checking out 6af878392e127e75409ae0f4bc08837a8f591d88
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lentic/
-  to /tmp/lentic9WKZUd/lentic-20221201.47
-    lentic-asciidoc.el -> lentic-asciidoc.el
-    lentic-chunk.el -> lentic-chunk.el
-    lentic-cookie.el -> lentic-cookie.el
-    lentic-dev.el -> lentic-dev.el
-    lentic-doc.el -> lentic-doc.el
-    lentic-latex-code.el -> lentic-latex-code.el
-    lentic-markdown.el -> lentic-markdown.el
-    lentic-mode.el -> lentic-mode.el
-    lentic-org.el -> lentic-org.el
-    lentic-ox.el -> lentic-ox.el
-    lentic-rot13.el -> lentic-rot13.el
-    lentic-script.el -> lentic-script.el
-    lentic.el -> lentic.el
-    lenticular.org -> lenticular.org
-Created lentic-20221201.47.tar containing:
-  lentic-20221201.47/
-  lentic-20221201.47/lentic-asciidoc.el
-  lentic-20221201.47/lentic-chunk.el
-  lentic-20221201.47/lentic-cookie.el
-  lentic-20221201.47/lentic-dev.el
-  lentic-20221201.47/lentic-doc.el
-  lentic-20221201.47/lentic-latex-code.el
-  lentic-20221201.47/lentic-markdown.el
-  lentic-20221201.47/lentic-mode.el
-  lentic-20221201.47/lentic-org.el
-  lentic-20221201.47/lentic-ox.el
-  lentic-20221201.47/lentic-pkg.el
-  lentic-20221201.47/lentic-rot13.el
-  lentic-20221201.47/lentic-script.el
-  lentic-20221201.47/lentic.el
-  lentic-20221201.47/lenticular.org
-Built lentic in 4.590s, finished at 2023-06-09T12:24:58+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  394 Jun  9 12:24 packages/lentic-20221201.47.entry
-160K -rw-r--r-- 1 root root 160K Jun  9 12:24 packages/lentic-20221201.47.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

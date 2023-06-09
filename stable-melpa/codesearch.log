@@ -4,17 +4,4 @@ Source:  https://github.com/abingham/emacs-codesearch.git
 
 Updating /mnt/store/melpa/working/codesearch/
 Checking out f6eb96f034a925444412cfa03e45e0ccbbafe3f2
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/codesearch/
-  to /tmp/codesearchZkgqsd/codesearch-20181006.1431
-    codesearch.el -> codesearch.el
-    listing-codesearch.el -> listing-codesearch.el
-Created codesearch-20181006.1431.tar containing:
-  codesearch-20181006.1431/
-  codesearch-20181006.1431/codesearch-pkg.el
-  codesearch-20181006.1431/codesearch.el
-  codesearch-20181006.1431/listing-codesearch.el
-Built codesearch in 4.881s, finished at 2023-06-09T15:36:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 568 Jun  9 15:36 packages/codesearch-20181006.1431.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:36 packages/codesearch-20181006.1431.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

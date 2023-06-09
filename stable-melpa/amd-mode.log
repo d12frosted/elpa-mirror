@@ -4,7 +4,4 @@ Source:  https://github.com/NicolasPetton/amd-mode.el.git
 
 Updating /mnt/store/melpa/working/amd-mode/
 Checking out 01fd19e0d635ccaf8e812364d8720733f2e84126
-Built amd-mode in 4.429s, finished at 2023-06-09T15:28:53+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 23K Jun  9 15:28 packages/amd-mode-20180111.1402.el
-4.0K -rw-r--r-- 1 root root 652 Jun  9 15:28 packages/amd-mode-20180111.1402.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

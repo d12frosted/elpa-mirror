@@ -4,7 +4,4 @@ Source:  https://github.com/muffinmad/emacs-mini-frame.git
 
 Updating /mnt/store/melpa/working/mini-frame/
 Checking out 60838f3cab438dcbda8eaa15ab3e5d1af88910e9
-Built mini-frame in 6.893s, finished at 2023-06-09T12:30:05+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 23K Jun  9 12:30 packages/mini-frame-20220627.2041.el
-4.0K -rw-r--r-- 1 root root 513 Jun  9 12:30 packages/mini-frame-20220627.2041.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

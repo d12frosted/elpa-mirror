@@ -4,17 +4,4 @@ Source:  https://github.com/kiwanami/emacs-window-manager.git
 
 Updating /mnt/store/melpa/working/e2wm/
 Checking out 4353d3394c77a49f8f0291c239858c8c5e877549
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/e2wm/
-  to /tmp/e2wmbqVEs0/e2wm-20170215.36
-    e2wm.el -> e2wm.el
-    e2wm-vcs.el -> e2wm-vcs.el
-Created e2wm-20170215.36.tar containing:
-  e2wm-20170215.36/
-  e2wm-20170215.36/e2wm-pkg.el
-  e2wm-20170215.36/e2wm-vcs.el
-  e2wm-20170215.36/e2wm.el
-Built e2wm in 4.386s, finished at 2023-06-09T15:46:42+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  412 Jun  9 15:46 packages/e2wm-20170215.36.entry
-172K -rw-r--r-- 1 root root 170K Jun  9 15:46 packages/e2wm-20170215.36.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

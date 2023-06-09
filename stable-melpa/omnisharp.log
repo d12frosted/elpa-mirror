@@ -4,43 +4,4 @@ Source:  https://github.com/OmniSharp/omnisharp-emacs.git
 
 Updating /mnt/store/melpa/working/omnisharp/
 Checking out c222e970998d796bdfd49e45ed789e2fd1a9da03
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/omnisharp/
-  to /tmp/omnisharpFEDoJg/omnisharp-20210725.1955
-    omnisharp-auto-complete-actions.el -> omnisharp-auto-complete-actions.el
-    omnisharp-code-structure.el -> omnisharp-code-structure.el
-    omnisharp-current-symbol-actions.el -> omnisharp-current-symbol-actions.el
-    omnisharp-format-actions.el -> omnisharp-format-actions.el
-    omnisharp-helm-integration.el -> omnisharp-helm-integration.el
-    omnisharp-http-utils.el -> omnisharp-http-utils.el
-    omnisharp-navigation-actions.el -> omnisharp-navigation-actions.el
-    omnisharp-server-actions.el -> omnisharp-server-actions.el
-    omnisharp-server-installation.el -> omnisharp-server-installation.el
-    omnisharp-server-management.el -> omnisharp-server-management.el
-    omnisharp-settings.el -> omnisharp-settings.el
-    omnisharp-solution-actions.el -> omnisharp-solution-actions.el
-    omnisharp-unit-test-actions.el -> omnisharp-unit-test-actions.el
-    omnisharp-utils.el -> omnisharp-utils.el
-    omnisharp.el -> omnisharp.el
-Created omnisharp-20210725.1955.tar containing:
-  omnisharp-20210725.1955/
-  omnisharp-20210725.1955/omnisharp-auto-complete-actions.el
-  omnisharp-20210725.1955/omnisharp-code-structure.el
-  omnisharp-20210725.1955/omnisharp-current-symbol-actions.el
-  omnisharp-20210725.1955/omnisharp-format-actions.el
-  omnisharp-20210725.1955/omnisharp-helm-integration.el
-  omnisharp-20210725.1955/omnisharp-http-utils.el
-  omnisharp-20210725.1955/omnisharp-navigation-actions.el
-  omnisharp-20210725.1955/omnisharp-pkg.el
-  omnisharp-20210725.1955/omnisharp-server-actions.el
-  omnisharp-20210725.1955/omnisharp-server-installation.el
-  omnisharp-20210725.1955/omnisharp-server-management.el
-  omnisharp-20210725.1955/omnisharp-settings.el
-  omnisharp-20210725.1955/omnisharp-solution-actions.el
-  omnisharp-20210725.1955/omnisharp-unit-test-actions.el
-  omnisharp-20210725.1955/omnisharp-utils.el
-  omnisharp-20210725.1955/omnisharp.el
-Built omnisharp in 3.856s, finished at 2023-06-09T12:36:16+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  715 Jun  9 12:36 packages/omnisharp-20210725.1955.entry
-160K -rw-r--r-- 1 root root 160K Jun  9 12:36 packages/omnisharp-20210725.1955.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

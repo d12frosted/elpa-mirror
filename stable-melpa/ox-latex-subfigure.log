@@ -4,7 +4,4 @@ Source:  https://github.com/linktohack/ox-latex-subfigure.git
 
 Updating /mnt/store/melpa/working/ox-latex-subfigure/
 Checking out be0a0dde62fde8cdf8d72b6968344906aa8c6f54
-Built ox-latex-subfigure in 4.358s, finished at 2023-06-09T12:40:57+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.7K Jun  9 12:40 packages/ox-latex-subfigure-20200326.919.el
-4.0K -rw-r--r-- 1 root root  567 Jun  9 12:40 packages/ox-latex-subfigure-20200326.919.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/alphapapa/org-recent-headings.git
 
 Updating /mnt/store/melpa/working/org-recent-headings/
 Checking out 97418d581ea030f0718794e50b005e9bae44582e
-Built org-recent-headings in 4.478s, finished at 2023-06-09T12:38:57+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 23K Jun  9 12:38 packages/org-recent-headings-20211011.1519.el
-4.0K -rw-r--r-- 1 root root 609 Jun  9 12:38 packages/org-recent-headings-20211011.1519.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

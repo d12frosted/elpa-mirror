@@ -4,21 +4,4 @@ Source:  https://github.com/oantolin/embark.git
 
 Updating /mnt/store/melpa/working/embark/
 Checking out de4b37cf2a4cfc4e755da3447ed6336798dfe6b7
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/embark/
-  to /tmp/embarkJrn1na/embark-20230605.550
-    embark.el -> embark.el
-    embark-org.el -> embark-org.el
-    embark.texi -> embark.texi
-Generating /tmp/embarkJrn1na/embark-20230605.550/embark.info
-Created embark-20230605.550.tar containing:
-  embark-20230605.550/
-  embark-20230605.550/dir
-  embark-20230605.550/embark-org.el
-  embark-20230605.550/embark-pkg.el
-  embark-20230605.550/embark.el
-  embark-20230605.550/embark.info
-Built embark in 11.007s, finished at 2023-06-09T15:50:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  472 Jun  9 15:50 packages/embark-20230605.550.entry
-280K -rw-r--r-- 1 root root 280K Jun  9 15:50 packages/embark-20230605.550.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

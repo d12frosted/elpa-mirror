@@ -4,21 +4,4 @@ Source:  https://github.com/mclear-tools/consult-notes.git
 
 Updating /mnt/store/melpa/working/consult-notes/
 Checking out 4fce058f668945a0a532c49d585be763fa29deda
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/consult-notes/
-  to /tmp/consult-notesRd0iXc/consult-notes-20230419.357
-    consult-notes-denote.el -> consult-notes-denote.el
-    consult-notes-org-headings.el -> consult-notes-org-headings.el
-    consult-notes-org-roam.el -> consult-notes-org-roam.el
-    consult-notes.el -> consult-notes.el
-Created consult-notes-20230419.357.tar containing:
-  consult-notes-20230419.357/
-  consult-notes-20230419.357/consult-notes-denote.el
-  consult-notes-20230419.357/consult-notes-org-headings.el
-  consult-notes-20230419.357/consult-notes-org-roam.el
-  consult-notes-20230419.357/consult-notes-pkg.el
-  consult-notes-20230419.357/consult-notes.el
-Built consult-notes in 5.427s, finished at 2023-06-09T15:39:26+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 443 Jun  9 15:39 packages/consult-notes-20230419.357.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 15:39 packages/consult-notes-20230419.357.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

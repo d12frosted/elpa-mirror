@@ -4,21 +4,4 @@ Source:  https://github.com/skeeto/impatient-mode.git
 
 Updating /mnt/store/melpa/working/impatient-mode/
 Checking out a4e4e12852840996b027cb8e9fb2b809c37a0ee3
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/impatient-mode/
-  to /tmp/impatient-modeiKk3Q0/impatient-mode-20230511.1746
-    index.html -> index.html
-    loading.html -> loading.html
-    jquery.js -> jquery.js
-    impatient-mode.el -> impatient-mode.el
-Created impatient-mode-20230511.1746.tar containing:
-  impatient-mode-20230511.1746/
-  impatient-mode-20230511.1746/impatient-mode-pkg.el
-  impatient-mode-20230511.1746/impatient-mode.el
-  impatient-mode-20230511.1746/index.html
-  impatient-mode-20230511.1746/jquery.js
-  impatient-mode-20230511.1746/loading.html
-Built impatient-mode in 5.286s, finished at 2023-06-09T12:18:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  448 Jun  9 12:18 packages/impatient-mode-20230511.1746.entry
-240K -rw-r--r-- 1 root root 240K Jun  9 12:18 packages/impatient-mode-20230511.1746.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

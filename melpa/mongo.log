@@ -4,17 +4,4 @@ Source:  https://github.com/emacsorphanage/mongo.git
 
 Updating /mnt/store/melpa/working/mongo/
 Checking out 595529ddd70ecb9fab8b11daad2c3929941099d6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/mongo/
-  to /tmp/mongo8woWfG/mongo-20150315.1219
-    bson.el -> bson.el
-    mongo.el -> mongo.el
-Created mongo-20150315.1219.tar containing:
-  mongo-20150315.1219/
-  mongo-20150315.1219/bson.el
-  mongo-20150315.1219/mongo-pkg.el
-  mongo-20150315.1219/mongo.el
-Built mongo in 9.253s, finished at 2023-06-09T12:31:17+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 350 Jun  9 12:31 packages/mongo-20150315.1219.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 12:31 packages/mongo-20150315.1219.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

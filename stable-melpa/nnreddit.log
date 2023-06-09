@@ -4,31 +4,4 @@ Source:  https://github.com/dickmao/nnreddit.git
 
 Updating /mnt/store/melpa/working/nnreddit/
 Checking out 8f247dce12bd10de37f0903f3027a1ddbc318eff
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nnreddit/
-  to /tmp/nnredditt0s68a/nnreddit-20220423.2302
-  ! lisp/nnreddit-pkg.el -> nnreddit-pkg.el
-  ! lisp/nnreddit.el -> nnreddit.el
-    setup.py -> setup.py
-    requirements.txt -> requirements.txt
-    nnreddit => nnreddit
-Created nnreddit-20220423.2302.tar containing:
-  nnreddit-20220423.2302/
-  nnreddit-20220423.2302/nnreddit-pkg.el
-  nnreddit-20220423.2302/nnreddit.el
-  nnreddit-20220423.2302/nnreddit/
-  nnreddit-20220423.2302/nnreddit/VERSION
-  nnreddit-20220423.2302/nnreddit/__init__.py
-  nnreddit-20220423.2302/nnreddit/__main__.py
-  nnreddit-20220423.2302/nnreddit/authenticated_reddit.py
-  nnreddit-20220423.2302/nnreddit/pylintrc
-  nnreddit-20220423.2302/nnreddit/templates/
-  nnreddit-20220423.2302/nnreddit/templates/index.html
-  nnreddit-20220423.2302/nnreddit/templates/mailcap
-  nnreddit-20220423.2302/nnreddit/templates/rtv.cfg
-  nnreddit-20220423.2302/requirements.txt
-  nnreddit-20220423.2302/setup.py
-Built nnreddit in 4.083s, finished at 2023-06-09T12:34:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  413 Jun  9 12:34 packages/nnreddit-20220423.2302.entry
-120K -rw-r--r-- 1 root root 120K Jun  9 12:34 packages/nnreddit-20220423.2302.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

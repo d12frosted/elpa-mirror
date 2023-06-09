@@ -4,21 +4,4 @@ Source:  https://github.com/nibrahim/Hyde.git
 
 Updating /mnt/store/melpa/working/hyde/
 Checking out a8cd6ed00ecd8d7de0ded2f4867015b412b15b76
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hyde/
-  to /tmp/hyde6iPhph/hyde-20160508.308
-    hyde-git.el -> hyde-git.el
-    hyde-md.el -> hyde-md.el
-    hyde.el -> hyde.el
-    sample-dot-hyde.el -> sample-dot-hyde.el
-Created hyde-20160508.308.tar containing:
-  hyde-20160508.308/
-  hyde-20160508.308/hyde-git.el
-  hyde-20160508.308/hyde-md.el
-  hyde-20160508.308/hyde-pkg.el
-  hyde-20160508.308/hyde.el
-  hyde-20160508.308/sample-dot-hyde.el
-Built hyde in 5.107s, finished at 2023-06-09T16:10:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 163 Jun  9 16:10 packages/hyde-20160508.308.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 16:10 packages/hyde-20160508.308.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

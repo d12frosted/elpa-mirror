@@ -4,17 +4,4 @@ Source:  https://github.com/nlamirault/phpunit.el.git
 
 Updating /mnt/store/melpa/working/phpunit/
 Checking out 4a36906344c0abc11f48cc08cd8d50a9f46963f8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/phpunit/
-  to /tmp/phpunitwRpRbR/phpunit-20230124.743
-    phpunit-mode.el -> phpunit-mode.el
-    phpunit.el -> phpunit.el
-Created phpunit-20230124.743.tar containing:
-  phpunit-20230124.743/
-  phpunit-20230124.743/phpunit-mode.el
-  phpunit-20230124.743/phpunit-pkg.el
-  phpunit-20230124.743/phpunit.el
-Built phpunit in 3.901s, finished at 2023-06-09T12:43:18+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 630 Jun  9 12:43 packages/phpunit-20230124.743.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 12:43 packages/phpunit-20230124.743.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

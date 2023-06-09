@@ -4,7 +4,4 @@ Source:  https://github.com/toroidal-code/cycle-themes.el.git
 
 Updating /mnt/store/melpa/working/cycle-themes/
 Checking out 2660c3178be7b28c2cb5dde2dd70a4bd51dae3a2
-Built cycle-themes in 6.309s, finished at 2023-06-09T15:42:11+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Jun  9 15:42 packages/cycle-themes-20150403.309.el
-4.0K -rw-r--r-- 1 root root  317 Jun  9 15:42 packages/cycle-themes-20150403.309.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

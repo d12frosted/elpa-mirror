@@ -4,7 +4,4 @@ Source:  https://github.com/andrzejsliwa/django-theme.el.git
 
 Updating /mnt/store/melpa/working/django-theme/
 Checking out 86c8142b3eb1addd94a43aa6f1d98dab06401af0
-Built django-theme in 4.634s, finished at 2023-06-09T15:45:22+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Jun  9 15:45 packages/django-theme-20131022.902.el
-4.0K -rw-r--r-- 1 root root  311 Jun  9 15:45 packages/django-theme-20131022.902.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

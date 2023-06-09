@@ -4,20 +4,4 @@ Source:  https://github.com/zenspider/enhanced-ruby-mode.git
 
 Updating /mnt/store/melpa/working/enh-ruby-mode/
 Checking out 7e76d754e1632b4fc9a024fa393c3fc837bcc86b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/enh-ruby-mode/
-  to /tmp/enh-ruby-modeJ05k0d/enh-ruby-mode-20221011.1957
-    enh-ruby-mode.el -> enh-ruby-mode.el
-    ruby/erm.rb -> ruby/erm.rb
-    ruby/erm_buffer.rb -> ruby/erm_buffer.rb
-Created enh-ruby-mode-20221011.1957.tar containing:
-  enh-ruby-mode-20221011.1957/
-  enh-ruby-mode-20221011.1957/enh-ruby-mode-pkg.el
-  enh-ruby-mode-20221011.1957/enh-ruby-mode.el
-  enh-ruby-mode-20221011.1957/ruby/
-  enh-ruby-mode-20221011.1957/ruby/erm.rb
-  enh-ruby-mode-20221011.1957/ruby/erm_buffer.rb
-Built enh-ruby-mode in 4.338s, finished at 2023-06-09T15:50:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 376 Jun  9 15:50 packages/enh-ruby-mode-20221011.1957.entry
- 92K -rw-r--r-- 1 root root 90K Jun  9 15:50 packages/enh-ruby-mode-20221011.1957.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

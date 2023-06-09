@@ -4,7 +4,4 @@ Source:  https://github.com/emarsden/pg-el.git
 
 Updating /mnt/store/melpa/working/pg/
 Checking out 5a7523fee364e8fabf24eeaac3dac2991ef64187
-Built pg in 5.200s, finished at 2023-06-09T12:42:55+0000
- ✓ Success:
- 80K -rw-r--r-- 1 root root 79K Jun  9 12:42 packages/pg-20230423.839.el
-4.0K -rw-r--r-- 1 root root 533 Jun  9 12:42 packages/pg-20230423.839.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

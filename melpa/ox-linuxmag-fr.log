@@ -4,19 +4,4 @@ Source:  https://github.com/DamienCassou/ox-linuxmag-fr.git
 
 Updating /mnt/store/melpa/working/ox-linuxmag-fr/
 Checking out 2e22e72cf886db104b6a31172736f073bf743eb4
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ox-linuxmag-fr/
-  to /tmp/ox-linuxmag-frukQUsD/ox-linuxmag-fr-20230505.644
-    ox-linuxmag-fr.el -> ox-linuxmag-fr.el
-    resources => resources
-Created ox-linuxmag-fr-20230505.644.tar containing:
-  ox-linuxmag-fr-20230505.644/
-  ox-linuxmag-fr-20230505.644/ox-linuxmag-fr-pkg.el
-  ox-linuxmag-fr-20230505.644/ox-linuxmag-fr.el
-  ox-linuxmag-fr-20230505.644/resources/
-  ox-linuxmag-fr-20230505.644/resources/styles.xml
-  ox-linuxmag-fr-20230505.644/resources/template.xml
-Built ox-linuxmag-fr in 5.155s, finished at 2023-06-09T12:40:58+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 246 Jun  9 12:40 packages/ox-linuxmag-fr-20230505.644.entry
- 72K -rw-r--r-- 1 root root 70K Jun  9 12:40 packages/ox-linuxmag-fr-20230505.644.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

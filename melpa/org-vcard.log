@@ -4,29 +4,4 @@ Source:  https://github.com/flexibeast/org-vcard.git
 
 Updating /mnt/store/melpa/working/org-vcard/
 Checking out 92345fa9f1e1f928278a654ac5ad57d22d74dbef
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-vcard/
-  to /tmp/org-vcard5osneD/org-vcard-20221111.328
-    org-vcard.el -> org-vcard.el
-    styles => styles
-Created org-vcard-20221111.328.tar containing:
-  org-vcard-20221111.328/
-  org-vcard-20221111.328/org-vcard-pkg.el
-  org-vcard-20221111.328/org-vcard.el
-  org-vcard-20221111.328/styles/
-  org-vcard-20221111.328/styles/flat/
-  org-vcard-20221111.328/styles/flat/functions.el
-  org-vcard-20221111.328/styles/flat/mappings/
-  org-vcard-20221111.328/styles/flat/mappings/en
-  org-vcard-20221111.328/styles/flat/mappings/en_AU
-  org-vcard-20221111.328/styles/flat/mappings/en_US
-  org-vcard-20221111.328/styles/tree/
-  org-vcard-20221111.328/styles/tree/functions.el
-  org-vcard-20221111.328/styles/tree/mappings/
-  org-vcard-20221111.328/styles/tree/mappings/en
-  org-vcard-20221111.328/styles/tree/mappings/en_AU
-  org-vcard-20221111.328/styles/tree/mappings/en_US
-Built org-vcard in 4.408s, finished at 2023-06-09T12:39:44+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  469 Jun  9 12:39 packages/org-vcard-20221111.328.entry
-112K -rw-r--r-- 1 root root 110K Jun  9 12:39 packages/org-vcard-20221111.328.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

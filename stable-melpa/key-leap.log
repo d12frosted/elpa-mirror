@@ -4,7 +4,4 @@ Source:  https://github.com/MartinRykfors/key-leap.git
 
 Updating /mnt/store/melpa/working/key-leap/
 Checking out b3f6ef15c8a13870475d5af159fa24b30f97dea0
-Built key-leap in 5.584s, finished at 2023-06-09T12:22:36+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  9 12:22 packages/key-leap-20160831.1447.el
-4.0K -rw-r--r-- 1 root root 476 Jun  9 12:22 packages/key-leap-20160831.1447.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

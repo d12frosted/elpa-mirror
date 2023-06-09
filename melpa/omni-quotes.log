@@ -4,21 +4,4 @@ Source:  https://github.com/AdrieanKhisbe/omni-quotes.el.git
 
 Updating /mnt/store/melpa/working/omni-quotes/
 Checking out cfc7b7f01628a5d57384820d1096de4541e67cdf
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/omni-quotes/
-  to /tmp/omni-quotesofUZQg/omni-quotes-20200304.2341
-    omni-quotes-reader.el -> omni-quotes-reader.el
-    omni-quotes-ring.el -> omni-quotes-ring.el
-    omni-quotes-timer.el -> omni-quotes-timer.el
-    omni-quotes.el -> omni-quotes.el
-Created omni-quotes-20200304.2341.tar containing:
-  omni-quotes-20200304.2341/
-  omni-quotes-20200304.2341/omni-quotes-pkg.el
-  omni-quotes-20200304.2341/omni-quotes-reader.el
-  omni-quotes-20200304.2341/omni-quotes-ring.el
-  omni-quotes-20200304.2341/omni-quotes-timer.el
-  omni-quotes-20200304.2341/omni-quotes.el
-Built omni-quotes in 4.500s, finished at 2023-06-09T12:36:13+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 566 Jun  9 12:36 packages/omni-quotes-20200304.2341.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:36 packages/omni-quotes-20200304.2341.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,20 +4,4 @@ Source:  https://github.com/jsinglet/latex-preview-pane.git
 
 Updating /mnt/store/melpa/working/latex-preview-pane/
 Checking out 5297668a89996b50b2b62f99cba01cc544dbed2e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/latex-preview-pane/
-  to /tmp/latex-preview-panehf2J0U/latex-preview-pane-20181008.1822
-    latex-preview-pane-pkg.el -> latex-preview-pane-pkg.el
-    latex-preview-pane.el -> latex-preview-pane.el
-    message-latex-preview-pane-welcome.txt -> message-latex-preview-pane-welcome.txt
-    message-no-preview-yet.txt -> message-no-preview-yet.txt
-Created latex-preview-pane-20181008.1822.tar containing:
-  latex-preview-pane-20181008.1822/
-  latex-preview-pane-20181008.1822/latex-preview-pane-pkg.el
-  latex-preview-pane-20181008.1822/latex-preview-pane.el
-  latex-preview-pane-20181008.1822/message-latex-preview-pane-welcome.txt
-  latex-preview-pane-20181008.1822/message-no-preview-yet.txt
-Built latex-preview-pane in 4.810s, finished at 2023-06-09T12:24:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 442 Jun  9 12:24 packages/latex-preview-pane-20181008.1822.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:24 packages/latex-preview-pane-20181008.1822.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

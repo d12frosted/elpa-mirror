@@ -4,7 +4,4 @@ Source:  https://github.com/borkdude/flycheck-clj-kondo.git
 
 Updating /mnt/store/melpa/working/flycheck-clj-kondo/
 Checking out d8a6ee9a16aa24b5be01f1edf9843d41bdc75555
-Built flycheck-clj-kondo in 4.543s, finished at 2023-06-09T15:56:34+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jun  9 15:56 packages/flycheck-clj-kondo-20211227.2226.el
-4.0K -rw-r--r-- 1 root root  521 Jun  9 15:56 packages/flycheck-clj-kondo-20211227.2226.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

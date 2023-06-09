@@ -4,7 +4,4 @@ Source:  https://github.com/chuntaro/emacs-keypression.git
 
 Updating /mnt/store/melpa/working/keypression/
 Checking out 9427241f3fa539e4b5ad7581a05eb7e49f2cf518
-Built keypression in 7.880s, finished at 2023-06-09T12:22:49+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 24K Jun  9 12:22 packages/keypression-20200819.534.el
-4.0K -rw-r--r-- 1 root root 470 Jun  9 12:22 packages/keypression-20200819.534.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,18 +4,4 @@ Source:  https://github.com/rksm/clj-org-analyzer.git
 
 Updating /mnt/store/melpa/working/org-analyzer/
 Checking out 19da62aa4dcf1090be8f574f6f2d4c7e116163a8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-analyzer/
-  to /tmp/org-analyzerDIp9xx/org-analyzer-20191001.1717
-  ! org-analyzer-el/org-analyzer.jar -> org-analyzer.jar
-  ! org-analyzer-el/org-analyzer-pkg.el -> org-analyzer-pkg.el
-  ! org-analyzer-el/org-analyzer.el -> org-analyzer.el
-Created org-analyzer-20191001.1717.tar containing:
-  org-analyzer-20191001.1717/
-  org-analyzer-20191001.1717/org-analyzer-pkg.el
-  org-analyzer-20191001.1717/org-analyzer.el
-  org-analyzer-20191001.1717/org-analyzer.jar
-Built org-analyzer in 4.483s, finished at 2023-06-09T12:36:36+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 376 Jun  9 12:36 packages/org-analyzer-20191001.1717.entry
- 14M -rw-r--r-- 1 root root 14M Jun  9 12:36 packages/org-analyzer-20191001.1717.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

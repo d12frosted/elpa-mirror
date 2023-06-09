@@ -4,27 +4,4 @@ Source:  https://github.com/editorconfig/editorconfig-emacs.git
 
 Updating /mnt/store/melpa/working/editorconfig/
 Checking out d4111f65c68f18f0dfb3072ee0d9b1d4cee80b52
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/editorconfig/
-  to /tmp/editorconfigqoOJSo/editorconfig-20230526.2314
-    editorconfig-conf-mode.el -> editorconfig-conf-mode.el
-    editorconfig-core-handle.el -> editorconfig-core-handle.el
-    editorconfig-core.el -> editorconfig-core.el
-    editorconfig-fnmatch.el -> editorconfig-fnmatch.el
-    editorconfig.el -> editorconfig.el
-  ! doc/editorconfig.texi -> editorconfig.texi
-Generating /tmp/editorconfigqoOJSo/editorconfig-20230526.2314/editorconfig.info
-Created editorconfig-20230526.2314.tar containing:
-  editorconfig-20230526.2314/
-  editorconfig-20230526.2314/dir
-  editorconfig-20230526.2314/editorconfig-conf-mode.el
-  editorconfig-20230526.2314/editorconfig-core-handle.el
-  editorconfig-20230526.2314/editorconfig-core.el
-  editorconfig-20230526.2314/editorconfig-fnmatch.el
-  editorconfig-20230526.2314/editorconfig-pkg.el
-  editorconfig-20230526.2314/editorconfig.el
-  editorconfig-20230526.2314/editorconfig.info
-Built editorconfig in 12.596s, finished at 2023-06-09T15:47:37+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  528 Jun  9 15:47 packages/editorconfig-20230526.2314.entry
-100K -rw-r--r-- 1 root root 100K Jun  9 15:47 packages/editorconfig-20230526.2314.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

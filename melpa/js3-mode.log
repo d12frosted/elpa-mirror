@@ -4,17 +4,4 @@ Source:  https://github.com/tamzinblake/js3-mode.git
 
 Updating /mnt/store/melpa/working/js3-mode/
 Checking out 7fceb21ec56aac7af4b189bb0c0d0cf620327f5a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/js3-mode/
-  to /tmp/js3-mode0J7qWo/js3-mode-20160515.1550
-    js3-mode.el -> js3-mode.el
-    js3.el -> js3.el
-Created js3-mode-20160515.1550.tar containing:
-  js3-mode-20160515.1550/
-  js3-mode-20160515.1550/js3-mode-pkg.el
-  js3-mode-20160515.1550/js3-mode.el
-  js3-mode-20160515.1550/js3.el
-Built js3-mode in 7.550s, finished at 2023-06-09T12:21:18+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  381 Jun  9 12:21 packages/js3-mode-20160515.1550.entry
-872K -rw-r--r-- 1 root root 870K Jun  9 12:21 packages/js3-mode-20160515.1550.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

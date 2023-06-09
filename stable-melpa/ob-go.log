@@ -4,17 +4,4 @@ Source:  https://github.com/pope/ob-go.git
 
 Updating /mnt/store/melpa/working/ob-go/
 Checking out 2067ed55f4c1d33a43cb3f6948609d240a8915f5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ob-go/
-  to /tmp/ob-goRn2HCd/ob-go-20190201.2040
-    ob-go.el -> ob-go.el
-    test-ob-go.el -> test-ob-go.el
-Created ob-go-20190201.2040.tar containing:
-  ob-go-20190201.2040/
-  ob-go-20190201.2040/ob-go-pkg.el
-  ob-go-20190201.2040/ob-go.el
-  ob-go-20190201.2040/test-ob-go.el
-Built ob-go in 3.545s, finished at 2023-06-09T12:35:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 371 Jun  9 12:35 packages/ob-go-20190201.2040.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 12:35 packages/ob-go-20190201.2040.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

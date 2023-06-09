@@ -4,26 +4,4 @@ Source:  https://github.com/davidkeegan/dklrt.git
 
 Updating /mnt/store/melpa/working/dklrt/
 Checking out 4eceed270015b41d24a62a8b71bd239224a63063
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dklrt/
-  to /tmp/dklrt2w5rxR/dklrt-20131110.1341
-    dklrt-pkg.el -> dklrt-pkg.el
-    dklrt.el -> dklrt.el
-    dklrt.texi -> dklrt.texi
-    Misc.py -> Misc.py
-    Recurring.py -> Recurring.py
-    Time.py -> Time.py
-Generating /tmp/dklrt2w5rxR/dklrt-20131110.1341/dklrt.info
-Created dklrt-20131110.1341.tar containing:
-  dklrt-20131110.1341/
-  dklrt-20131110.1341/Misc.py
-  dklrt-20131110.1341/Recurring.py
-  dklrt-20131110.1341/Time.py
-  dklrt-20131110.1341/dir
-  dklrt-20131110.1341/dklrt-pkg.el
-  dklrt-20131110.1341/dklrt.el
-  dklrt-20131110.1341/dklrt.info
-Built dklrt in 9.601s, finished at 2023-06-09T15:45:30+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 433 Jun  9 15:45 packages/dklrt-20131110.1341.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 15:45 packages/dklrt-20131110.1341.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

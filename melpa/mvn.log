@@ -4,7 +4,4 @@ Source:  https://github.com/apg/mvn-el.git
 
 Updating /mnt/store/melpa/working/mvn/
 Checking out ffa40235b7dabb6c6c165f64f32a963cde8031f0
-Built mvn in 3.557s, finished at 2023-06-09T12:32:51+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  9 12:32 packages/mvn-20181002.1617.el
-4.0K -rw-r--r-- 1 root root 435 Jun  9 12:32 packages/mvn-20181002.1617.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

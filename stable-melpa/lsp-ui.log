@@ -4,32 +4,4 @@ Source:  https://github.com/emacs-lsp/lsp-ui.git
 
 Updating /mnt/store/melpa/working/lsp-ui/
 Checking out 295d8984da06a745b0a36c56e28ce915bc389adb
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lsp-ui/
-  to /tmp/lsp-uiM5fhgT/lsp-ui-20230116.2024
-    lsp-ui-doc.el -> lsp-ui-doc.el
-    lsp-ui-flycheck.el -> lsp-ui-flycheck.el
-    lsp-ui-imenu.el -> lsp-ui-imenu.el
-    lsp-ui-peek.el -> lsp-ui-peek.el
-    lsp-ui-sideline.el -> lsp-ui-sideline.el
-    lsp-ui-util.el -> lsp-ui-util.el
-    lsp-ui.el -> lsp-ui.el
-    lsp-ui-doc.html -> lsp-ui-doc.html
-    resources => resources
-Created lsp-ui-20230116.2024.tar containing:
-  lsp-ui-20230116.2024/
-  lsp-ui-20230116.2024/lsp-ui-doc.el
-  lsp-ui-20230116.2024/lsp-ui-doc.html
-  lsp-ui-20230116.2024/lsp-ui-flycheck.el
-  lsp-ui-20230116.2024/lsp-ui-imenu.el
-  lsp-ui-20230116.2024/lsp-ui-peek.el
-  lsp-ui-20230116.2024/lsp-ui-pkg.el
-  lsp-ui-20230116.2024/lsp-ui-sideline.el
-  lsp-ui-20230116.2024/lsp-ui-util.el
-  lsp-ui-20230116.2024/lsp-ui.el
-  lsp-ui-20230116.2024/resources/
-  lsp-ui-20230116.2024/resources/lightbulb.png
-Built lsp-ui in 5.124s, finished at 2023-06-09T12:27:16+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  582 Jun  9 12:27 packages/lsp-ui-20230116.2024.entry
-160K -rw-r--r-- 1 root root 160K Jun  9 12:27 packages/lsp-ui-20230116.2024.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

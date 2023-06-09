@@ -4,8 +4,4 @@ Source:  https://github.com/twlz0ne/playonline.el.git
 
 Updating /mnt/store/melpa/working/playonline/
 Checking out 463a94fc01112817d1e6e0209ea85385efcb1329
-Built playonline in 5.984s, finished at 2023-06-09T12:43:59+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 28K Aug 25  2022 packages/playonline-20200317.642.el
- 28K -rw-r--r-- 1 root root 28K Jun  9 12:43 packages/playonline-20200318.758.el
-4.0K -rw-r--r-- 1 root root 523 Jun  9 12:43 packages/playonline-20200318.758.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,17 +4,4 @@ Source:  https://git.sr.ht/~pkal/insert-kaomoji
 
 Updating /mnt/store/melpa/working/insert-kaomoji/
 Checking out 974bb7dc02059253e032c501b2c3c0ece448d472
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/insert-kaomoji/
-  to /tmp/insert-kaomojilPoVg9/insert-kaomoji-20220215.1204
-    insert-kaomoji.el -> insert-kaomoji.el
-    KAOMOJIS -> KAOMOJIS
-Created insert-kaomoji-20220215.1204.tar containing:
-  insert-kaomoji-20220215.1204/
-  insert-kaomoji-20220215.1204/KAOMOJIS
-  insert-kaomoji-20220215.1204/insert-kaomoji-pkg.el
-  insert-kaomoji-20220215.1204/insert-kaomoji.el
-Built insert-kaomoji in 4.336s, finished at 2023-06-09T12:18:58+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 450 Jun  9 12:18 packages/insert-kaomoji-20220215.1204.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:18 packages/insert-kaomoji-20220215.1204.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

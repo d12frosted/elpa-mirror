@@ -4,19 +4,4 @@ Source:  https://github.com/emacs-evil/evil-cleverparens.git
 
 Updating /mnt/store/melpa/working/evil-cleverparens/
 Checking out 9ee249509281c387500e397df625ccb759804df4
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/evil-cleverparens/
-  to /tmp/evil-cleverparensM3DHNs/evil-cleverparens-20230529.2117
-    evil-cleverparens-text-objects.el -> evil-cleverparens-text-objects.el
-    evil-cleverparens-util.el -> evil-cleverparens-util.el
-    evil-cleverparens.el -> evil-cleverparens.el
-Created evil-cleverparens-20230529.2117.tar containing:
-  evil-cleverparens-20230529.2117/
-  evil-cleverparens-20230529.2117/evil-cleverparens-pkg.el
-  evil-cleverparens-20230529.2117/evil-cleverparens-text-objects.el
-  evil-cleverparens-20230529.2117/evil-cleverparens-util.el
-  evil-cleverparens-20230529.2117/evil-cleverparens.el
-Built evil-cleverparens in 4.274s, finished at 2023-06-09T15:52:40+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  629 Jun  9 15:52 packages/evil-cleverparens-20230529.2117.entry
-112K -rw-r--r-- 1 root root 110K Jun  9 15:52 packages/evil-cleverparens-20230529.2117.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

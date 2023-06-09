@@ -4,24 +4,4 @@ Source:  https://github.com/emacsorphanage/codic.git
 
 Updating /mnt/store/melpa/working/codic/
 Checking out 52bbb6997ef4ab9fb7fea43bbfff7f04671aa557
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/codic/
-  to /tmp/codic3vraBh/codic-20150926.1127
-    codic.el -> codic.el
-    dict/english-entry.csv -> dict/english-entry.csv
-    dict/english-translation.csv -> dict/english-translation.csv
-    dict/naming-entry.csv -> dict/naming-entry.csv
-    dict/naming-translation.csv -> dict/naming-translation.csv
-Created codic-20150926.1127.tar containing:
-  codic-20150926.1127/
-  codic-20150926.1127/codic-pkg.el
-  codic-20150926.1127/codic.el
-  codic-20150926.1127/dict/
-  codic-20150926.1127/dict/english-entry.csv
-  codic-20150926.1127/dict/english-translation.csv
-  codic-20150926.1127/dict/naming-entry.csv
-  codic-20150926.1127/dict/naming-translation.csv
-Built codic in 5.627s, finished at 2023-06-09T15:36:59+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  404 Jun  9 15:36 packages/codic-20150926.1127.entry
-1.2M -rw-r--r-- 1 root root 1.2M Jun  9 15:36 packages/codic-20150926.1127.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

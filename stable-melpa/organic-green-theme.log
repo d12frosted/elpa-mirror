@@ -4,7 +4,4 @@ Source:  https://github.com/kostafey/organic-green-theme.git
 
 Updating /mnt/store/melpa/working/organic-green-theme/
 Checking out 7ca93a1c42bba1bcced181bd8cc34cb57be39537
-Built organic-green-theme in 4.786s, finished at 2023-06-09T12:39:57+0000
- ✓ Success:
- 44K -rw-r--r-- 1 root root 42K Jun  9 12:39 packages/organic-green-theme-20230121.1815.el
-4.0K -rw-r--r-- 1 root root 167 Jun  9 12:39 packages/organic-green-theme-20230121.1815.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

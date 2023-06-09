@@ -4,17 +4,4 @@ Source:  https://github.com/iquiw/company-cabal.git
 
 Updating /mnt/store/melpa/working/company-cabal/
 Checking out 62112a7259e24bd6c08885629a185afe512b7d3d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/company-cabal/
-  to /tmp/company-cabalhVNVS2/company-cabal-20170917.1317
-    company-cabal-fields.el -> company-cabal-fields.el
-    company-cabal.el -> company-cabal.el
-Created company-cabal-20170917.1317.tar containing:
-  company-cabal-20170917.1317/
-  company-cabal-20170917.1317/company-cabal-fields.el
-  company-cabal-20170917.1317/company-cabal-pkg.el
-  company-cabal-20170917.1317/company-cabal.el
-Built company-cabal in 4.924s, finished at 2023-06-09T15:37:44+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 428 Jun  9 15:37 packages/company-cabal-20170917.1317.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 15:37 packages/company-cabal-20170917.1317.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

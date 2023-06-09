@@ -4,7 +4,4 @@ Source:  https://github.com/udyantw/most-used-words.git
 
 Updating /mnt/store/melpa/working/most-used-words/
 Checking out 90c09da92b30c6497e9141f0edfe7842440c4d53
-Built most-used-words in 5.277s, finished at 2023-06-09T12:31:47+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.3K Jun  9 12:31 packages/most-used-words-20200808.1353.el
-4.0K -rw-r--r-- 1 root root  456 Jun  9 12:31 packages/most-used-words-20200808.1353.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

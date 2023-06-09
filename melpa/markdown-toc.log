@@ -4,16 +4,4 @@ Source:  https://github.com/ardumont/markdown-toc.git
 
 Updating /mnt/store/melpa/working/markdown-toc/
 Checking out 4e8f97d7d94c53fd706da9e3d5006e1c9dff5ff8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/markdown-toc/
-  to /tmp/markdown-tocQ3RXTC/markdown-toc-20210905.738
-    markdown-toc-pkg.el -> markdown-toc-pkg.el
-    markdown-toc.el -> markdown-toc.el
-Created markdown-toc-20210905.738.tar containing:
-  markdown-toc-20210905.738/
-  markdown-toc-20210905.738/markdown-toc-pkg.el
-  markdown-toc-20210905.738/markdown-toc.el
-Built markdown-toc in 4.283s, finished at 2023-06-09T12:28:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 436 Jun  9 12:28 packages/markdown-toc-20210905.738.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 12:28 packages/markdown-toc-20210905.738.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

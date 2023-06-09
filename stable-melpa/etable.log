@@ -4,26 +4,4 @@ Source:  https://github.com/Fuco1/ETable.git
 
 Updating /mnt/store/melpa/working/etable/
 Checking out d502141f0c69bf95256ba5cb9cd15350c7e942d2
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/etable/
-  to /tmp/etableA60u1K/etable-20161028.2009
-    etable-cell-renderer.el -> etable-cell-renderer.el
-    etable-pkg.el -> etable-pkg.el
-    etable-selection-model.el -> etable-selection-model.el
-    etable-table-column-model.el -> etable-table-column-model.el
-    etable-table-column.el -> etable-table-column.el
-    etable-table-model.el -> etable-table-model.el
-    etable.el -> etable.el
-Created etable-20161028.2009.tar containing:
-  etable-20161028.2009/
-  etable-20161028.2009/etable-cell-renderer.el
-  etable-20161028.2009/etable-pkg.el
-  etable-20161028.2009/etable-selection-model.el
-  etable-20161028.2009/etable-table-column-model.el
-  etable-20161028.2009/etable-table-column.el
-  etable-20161028.2009/etable-table-model.el
-  etable-20161028.2009/etable.el
-Built etable in 3.757s, finished at 2023-06-09T15:52:23+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 415 Jun  9 15:52 packages/etable-20161028.2009.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 15:52 packages/etable-20161028.2009.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

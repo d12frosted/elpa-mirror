@@ -4,17 +4,4 @@ Source:  https://gitlab.com/emacs-stuff/indent-tools.git
 
 Updating /mnt/store/melpa/working/indent-tools/
 Checking out c731f05fa3950e2e8580ec61b88abbc705639830
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/indent-tools/
-  to /tmp/indent-tools0NAMhg/indent-tools-20210622.1207
-    indent-tools-indentation-of.el -> indent-tools-indentation-of.el
-    indent-tools.el -> indent-tools.el
-Created indent-tools-20210622.1207.tar containing:
-  indent-tools-20210622.1207/
-  indent-tools-20210622.1207/indent-tools-indentation-of.el
-  indent-tools-20210622.1207/indent-tools-pkg.el
-  indent-tools-20210622.1207/indent-tools.el
-Built indent-tools in 4.797s, finished at 2023-06-09T12:18:26+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 551 Jun  9 12:18 packages/indent-tools-20210622.1207.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:18 packages/indent-tools-20210622.1207.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

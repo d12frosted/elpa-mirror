@@ -4,7 +4,4 @@ Source:  https://github.com/Malabarba/comment-or-uncomment-sexp.git
 
 Updating /mnt/store/melpa/working/comment-or-uncomment-sexp/
 Checking out bec730d3fc1e6c17ff1339eb134af16c034a4d95
-Built comment-or-uncomment-sexp in 5.651s, finished at 2023-06-09T15:37:26+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Jun  9 15:37 packages/comment-or-uncomment-sexp-20190225.1122.el
-4.0K -rw-r--r-- 1 root root  557 Jun  9 15:37 packages/comment-or-uncomment-sexp-20190225.1122.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

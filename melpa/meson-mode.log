@@ -4,17 +4,4 @@ Source:  https://github.com/wentasah/meson-mode.git
 
 Updating /mnt/store/melpa/working/meson-mode/
 Checking out 1a2e2abb098c9288c2cdb3affbad76edd98abf59
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/meson-mode/
-  to /tmp/meson-mode3v6MTE/meson-mode-20210820.905
-    meson-mode.el -> meson-mode.el
-    utils.el -> utils.el
-Created meson-mode-20210820.905.tar containing:
-  meson-mode-20210820.905/
-  meson-mode-20210820.905/meson-mode-pkg.el
-  meson-mode-20210820.905/meson-mode.el
-  meson-mode-20210820.905/utils.el
-Built meson-mode in 7.436s, finished at 2023-06-09T12:29:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 481 Jun  9 12:29 packages/meson-mode-20210820.905.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 12:29 packages/meson-mode-20210820.905.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

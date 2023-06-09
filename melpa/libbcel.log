@@ -4,27 +4,4 @@ Source:  https://github.com/DamienCassou/libbcel.git
 
 Updating /mnt/store/melpa/working/libbcel/
 Checking out 3d506a3fb5b377bf460e7b8096f7211949567f75
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/libbcel/
-  to /tmp/libbcelXJ1qGo/libbcel-20221003.1827
-    libbcel-actions.el -> libbcel-actions.el
-    libbcel-client.el -> libbcel-client.el
-    libbcel-nav.el -> libbcel-nav.el
-    libbcel-oauth.el -> libbcel-oauth.el
-    libbcel-structs.el -> libbcel-structs.el
-    libbcel-util.el -> libbcel-util.el
-    libbcel.el -> libbcel.el
-Created libbcel-20221003.1827.tar containing:
-  libbcel-20221003.1827/
-  libbcel-20221003.1827/libbcel-actions.el
-  libbcel-20221003.1827/libbcel-client.el
-  libbcel-20221003.1827/libbcel-nav.el
-  libbcel-20221003.1827/libbcel-oauth.el
-  libbcel-20221003.1827/libbcel-pkg.el
-  libbcel-20221003.1827/libbcel-structs.el
-  libbcel-20221003.1827/libbcel-util.el
-  libbcel-20221003.1827/libbcel.el
-Built libbcel in 4.598s, finished at 2023-06-09T12:25:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 420 Jun  9 12:25 packages/libbcel-20221003.1827.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 12:25 packages/libbcel-20221003.1827.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

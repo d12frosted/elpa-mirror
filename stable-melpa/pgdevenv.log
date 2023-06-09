@@ -4,17 +4,4 @@ Source:  https://github.com/dimitri/pgdevenv-el.git
 
 Updating /mnt/store/melpa/working/pgdevenv/
 Checking out 7f1d5bc734750aca98cf67a9491cdbd5615fd132
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pgdevenv/
-  to /tmp/pgdevenvX66cYz/pgdevenv-20150105.2236
-    pgdevenv.el -> pgdevenv.el
-    pgsql-minor-mode.el -> pgsql-minor-mode.el
-Created pgdevenv-20150105.2236.tar containing:
-  pgdevenv-20150105.2236/
-  pgdevenv-20150105.2236/pgdevenv-pkg.el
-  pgdevenv-20150105.2236/pgdevenv.el
-  pgdevenv-20150105.2236/pgsql-minor-mode.el
-Built pgdevenv in 4.056s, finished at 2023-06-09T12:42:56+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 425 Jun  9 12:42 packages/pgdevenv-20150105.2236.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:42 packages/pgdevenv-20150105.2236.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

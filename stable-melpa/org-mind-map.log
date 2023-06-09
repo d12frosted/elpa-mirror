@@ -4,7 +4,4 @@ Source:  https://github.com/the-ted/org-mind-map.git
 
 Updating /mnt/store/melpa/working/org-mind-map/
 Checking out 41df4b2e30455494f1848b4e06cc9208aa9e902b
-Built org-mind-map in 8.014s, finished at 2023-06-09T12:38:16+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 37K Jun  9 12:38 packages/org-mind-map-20180826.2340.el
-4.0K -rw-r--r-- 1 root root 527 Jun  9 12:38 packages/org-mind-map-20180826.2340.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

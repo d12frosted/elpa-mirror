@@ -4,27 +4,4 @@ Source:  https://github.com/condy0919/fanyi.el.git
 
 Updating /mnt/store/melpa/working/fanyi/
 Checking out 7181af0d848226ecdb9f517d8e4cf219d00f9000
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fanyi/
-  to /tmp/fanyiA1f7O4/fanyi-20221117.1821
-    fanyi-base.el -> fanyi-base.el
-    fanyi-etymon.el -> fanyi-etymon.el
-    fanyi-haici.el -> fanyi-haici.el
-    fanyi-longman.el -> fanyi-longman.el
-    fanyi-youdao-thesaurus.el -> fanyi-youdao-thesaurus.el
-    fanyi.el -> fanyi.el
-    ol-fanyi.el -> ol-fanyi.el
-Created fanyi-20221117.1821.tar containing:
-  fanyi-20221117.1821/
-  fanyi-20221117.1821/fanyi-base.el
-  fanyi-20221117.1821/fanyi-etymon.el
-  fanyi-20221117.1821/fanyi-haici.el
-  fanyi-20221117.1821/fanyi-longman.el
-  fanyi-20221117.1821/fanyi-pkg.el
-  fanyi-20221117.1821/fanyi-youdao-thesaurus.el
-  fanyi-20221117.1821/fanyi.el
-  fanyi-20221117.1821/ol-fanyi.el
-Built fanyi in 6.003s, finished at 2023-06-09T15:54:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 432 Jun  9 15:54 packages/fanyi-20221117.1821.entry
- 92K -rw-r--r-- 1 root root 90K Jun  9 15:54 packages/fanyi-20221117.1821.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

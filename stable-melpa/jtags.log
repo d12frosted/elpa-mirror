@@ -4,17 +4,4 @@ Source:  https://git.code.sf.net/p/jtags/code
 
 Updating /mnt/store/melpa/working/jtags/
 Checking out f7d29e1635ef7ee4ee2cdb8f1f6ab83e1015c84a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/jtags/
-  to /tmp/jtagsrCU237/jtags-20160211.2029
-  ! src/lisp/jtags-extras.el -> jtags-extras.el
-  ! src/lisp/jtags.el -> jtags.el
-Created jtags-20160211.2029.tar containing:
-  jtags-20160211.2029/
-  jtags-20160211.2029/jtags-extras.el
-  jtags-20160211.2029/jtags-pkg.el
-  jtags-20160211.2029/jtags.el
-Built jtags in 5.620s, finished at 2023-06-09T12:21:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  466 Jun  9 12:21 packages/jtags-20160211.2029.entry
-100K -rw-r--r-- 1 root root 100K Jun  9 12:21 packages/jtags-20160211.2029.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

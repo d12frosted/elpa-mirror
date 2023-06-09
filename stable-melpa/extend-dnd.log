@@ -4,19 +4,4 @@ Source:  https://github.com/mattfidler/extend-dnd.git
 
 Updating /mnt/store/melpa/working/extend-dnd/
 Checking out 80c966c93b82c9bb5c6225a432557c39144fc602
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/extend-dnd/
-  to /tmp/extend-dndXEo2TW/extend-dnd-20151122.1850
-    extend-dnd.el -> extend-dnd.el
-    dir -> dir
-    extend-dnd.info -> extend-dnd.info
-Created extend-dnd-20151122.1850.tar containing:
-  extend-dnd-20151122.1850/
-  extend-dnd-20151122.1850/dir
-  extend-dnd-20151122.1850/extend-dnd-pkg.el
-  extend-dnd-20151122.1850/extend-dnd.el
-  extend-dnd-20151122.1850/extend-dnd.info
-Built extend-dnd in 5.191s, finished at 2023-06-09T15:54:07+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 375 Jun  9 15:54 packages/extend-dnd-20151122.1850.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 15:54 packages/extend-dnd-20151122.1850.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

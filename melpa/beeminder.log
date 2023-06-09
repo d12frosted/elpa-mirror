@@ -4,25 +4,4 @@ Source:  https://github.com/Sodaware/beeminder.el.git
 
 Updating /mnt/store/melpa/working/beeminder/
 Checking out 161d9c94c594614a01cb08219693d9e000af4f69
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/beeminder/
-  to /tmp/beeminder7yYabM/beeminder-20201227.2024
-    beeminder-api.el -> beeminder-api.el
-    beeminder-client-faces.el -> beeminder-client-faces.el
-    beeminder-client.el -> beeminder-client.el
-    beeminder-org.el -> beeminder-org.el
-    beeminder-settings.el -> beeminder-settings.el
-    beeminder.el -> beeminder.el
-Created beeminder-20201227.2024.tar containing:
-  beeminder-20201227.2024/
-  beeminder-20201227.2024/beeminder-api.el
-  beeminder-20201227.2024/beeminder-client-faces.el
-  beeminder-20201227.2024/beeminder-client.el
-  beeminder-20201227.2024/beeminder-org.el
-  beeminder-20201227.2024/beeminder-pkg.el
-  beeminder-20201227.2024/beeminder-settings.el
-  beeminder-20201227.2024/beeminder.el
-Built beeminder in 4.044s, finished at 2023-06-09T15:31:41+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 501 Jun  9 15:31 packages/beeminder-20201227.2024.entry
- 60K -rw-r--r-- 1 root root 60K Jun  9 15:31 packages/beeminder-20201227.2024.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

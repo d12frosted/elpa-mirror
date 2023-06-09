@@ -4,7 +4,4 @@ Source:  https://github.com/rkaercher/hugsql-ghosts.git
 
 Updating /mnt/store/melpa/working/hugsql-ghosts/
 Checking out f9ab314b6a10140041233e65a23e924dcab9a7a3
-Built hugsql-ghosts in 6.079s, finished at 2023-06-09T16:10:46+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Jun  9 16:10 packages/hugsql-ghosts-20211124.1646.el
-4.0K -rw-r--r-- 1 root root  499 Jun  9 16:10 packages/hugsql-ghosts-20211124.1646.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

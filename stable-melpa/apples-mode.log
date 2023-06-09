@@ -4,35 +4,4 @@ Source:  https://github.com/tequilasunset/apples-mode.git
 
 Updating /mnt/store/melpa/working/apples-mode/
 Checking out 83a9ab0d6ba82496e2f7df386909b1a55701fccb
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/apples-mode/
-  to /tmp/apples-modevi2eZj/apples-mode-20110121.418
-    apples-mode.el -> apples-mode.el
-    apples-mode => apples-mode
-Created apples-mode-20110121.418.tar containing:
-  apples-mode-20110121.418/
-  apples-mode-20110121.418/apples-mode-pkg.el
-  apples-mode-20110121.418/apples-mode.el
-  apples-mode-20110121.418/apples-mode/
-  apples-mode-20110121.418/apples-mode/comment
-  apples-mode-20110121.418/apples-mode/considering
-  apples-mode-20110121.418/apples-mode/considering-application-responses
-  apples-mode-20110121.418/apples-mode/display-dialog
-  apples-mode-20110121.418/apples-mode/if
-  apples-mode-20110121.418/apples-mode/ignoring
-  apples-mode-20110121.418/apples-mode/ignoring-application-responses
-  apples-mode-20110121.418/apples-mode/on
-  apples-mode-20110121.418/apples-mode/repeat
-  apples-mode-20110121.418/apples-mode/repeat-until
-  apples-mode-20110121.418/apples-mode/repeat-while
-  apples-mode-20110121.418/apples-mode/repeat-with
-  apples-mode-20110121.418/apples-mode/tell-application
-  apples-mode-20110121.418/apples-mode/tell-application-to-activate
-  apples-mode-20110121.418/apples-mode/try
-  apples-mode-20110121.418/apples-mode/using-terms-from-application
-  apples-mode-20110121.418/apples-mode/with-timeout-of-seconds
-  apples-mode-20110121.418/apples-mode/with-transaction
-Built apples-mode in 4.068s, finished at 2023-06-09T15:29:34+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 436 Jun  9 15:29 packages/apples-mode-20110121.418.entry
- 80K -rw-r--r-- 1 root root 80K Jun  9 15:29 packages/apples-mode-20110121.418.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/emacsorphanage/fancy-battery.git
 
 Updating /mnt/store/melpa/working/fancy-battery/
 Checking out bcc2d7960ba207b5b4db96fe40f7d72670fdbb68
-Built fancy-battery in 8.700s, finished at 2023-06-09T15:54:38+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Jun  9 15:54 packages/fancy-battery-20150101.1204.el
-4.0K -rw-r--r-- 1 root root  469 Jun  9 15:54 packages/fancy-battery-20150101.1204.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

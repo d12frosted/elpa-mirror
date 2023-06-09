@@ -4,21 +4,4 @@ Source:  https://github.com/magit/emacsql.git
 
 Updating /mnt/store/melpa/working/emacsql-sqlite/
 Checking out b436adf09ebe058c28e0f473bed90ccd7084f6aa
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/emacsql-sqlite/
-  to /tmp/emacsql-sqliteNilU84/emacsql-sqlite-20230225.2205
-    emacsql-sqlite.el -> emacsql-sqlite.el
-    sqlite => sqlite
-Created emacsql-sqlite-20230225.2205.tar containing:
-  emacsql-sqlite-20230225.2205/
-  emacsql-sqlite-20230225.2205/emacsql-sqlite-pkg.el
-  emacsql-sqlite-20230225.2205/emacsql-sqlite.el
-  emacsql-sqlite-20230225.2205/sqlite/
-  emacsql-sqlite-20230225.2205/sqlite/Makefile
-  emacsql-sqlite-20230225.2205/sqlite/emacsql.c
-  emacsql-sqlite-20230225.2205/sqlite/sqlite3.c
-  emacsql-sqlite-20230225.2205/sqlite/sqlite3.h
-Built emacsql-sqlite in 4.833s, finished at 2023-06-09T15:50:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  433 Jun  9 15:50 packages/emacsql-sqlite-20230225.2205.entry
-8.8M -rw-r--r-- 1 root root 8.8M Jun  9 15:50 packages/emacsql-sqlite-20230225.2205.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

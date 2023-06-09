@@ -4,20 +4,4 @@ Source:  https://depp.brause.cc/punpun-themes.git
 
 Updating /mnt/store/melpa/working/punpun-themes/
 Checking out 6a7e04de1ad9f7ba9074b7206bffc9241c33349c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/punpun-themes/
-  to /tmp/punpun-themes70Mk7j/punpun-themes-20221121.1018
-    punpun-dark-theme.el -> punpun-dark-theme.el
-    punpun-light-theme.el -> punpun-light-theme.el
-    punpun-themes-pkg.el -> punpun-themes-pkg.el
-    punpun-themes.el -> punpun-themes.el
-Created punpun-themes-20221121.1018.tar containing:
-  punpun-themes-20221121.1018/
-  punpun-themes-20221121.1018/punpun-dark-theme.el
-  punpun-themes-20221121.1018/punpun-light-theme.el
-  punpun-themes-20221121.1018/punpun-themes-pkg.el
-  punpun-themes-20221121.1018/punpun-themes.el
-Built punpun-themes in 5.373s, finished at 2023-06-09T12:46:46+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 332 Jun  9 12:46 packages/punpun-themes-20221121.1018.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 12:46 packages/punpun-themes-20221121.1018.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

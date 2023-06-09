@@ -4,26 +4,4 @@ Source:  https://github.com/smaximov/org-commentary.git
 
 Updating /mnt/store/melpa/working/org-commentary/
 Checking out 821ccb994811359c42f4e3d459e0e88849d42b75
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-commentary/
-  to /tmp/org-commentaryJwZsfG/org-commentary-20160802.637
-    org-commentary-cli.el -> org-commentary-cli.el
-    org-commentary-export.el -> org-commentary-export.el
-    org-commentary-headers.el -> org-commentary-headers.el
-    org-commentary-util.el -> org-commentary-util.el
-    org-commentary.el -> org-commentary.el
-    bin => bin
-Created org-commentary-20160802.637.tar containing:
-  org-commentary-20160802.637/
-  org-commentary-20160802.637/bin/
-  org-commentary-20160802.637/bin/org-doc
-  org-commentary-20160802.637/org-commentary-cli.el
-  org-commentary-20160802.637/org-commentary-export.el
-  org-commentary-20160802.637/org-commentary-headers.el
-  org-commentary-20160802.637/org-commentary-pkg.el
-  org-commentary-20160802.637/org-commentary-util.el
-  org-commentary-20160802.637/org-commentary.el
-Built org-commentary in 6.922s, finished at 2023-06-09T12:37:07+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 542 Jun  9 12:37 packages/org-commentary-20160802.637.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 12:37 packages/org-commentary-20160802.637.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

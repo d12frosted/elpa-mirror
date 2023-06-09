@@ -4,21 +4,4 @@ Source:  https://github.com/kunalb/poet.git
 
 Updating /mnt/store/melpa/working/poet-theme/
 Checking out 16eb694f0755c04c4db98614d0eca1199fddad70
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/poet-theme/
-  to /tmp/poet-themeHp5pFI/poet-theme-20200606.2343
-    poet-dark-monochrome-theme.el -> poet-dark-monochrome-theme.el
-    poet-dark-theme.el -> poet-dark-theme.el
-    poet-monochrome-theme.el -> poet-monochrome-theme.el
-    poet-theme.el -> poet-theme.el
-Created poet-theme-20200606.2343.tar containing:
-  poet-theme-20200606.2343/
-  poet-theme-20200606.2343/poet-dark-monochrome-theme.el
-  poet-theme-20200606.2343/poet-dark-theme.el
-  poet-theme-20200606.2343/poet-monochrome-theme.el
-  poet-theme-20200606.2343/poet-theme-pkg.el
-  poet-theme-20200606.2343/poet-theme.el
-Built poet-theme in 7.387s, finished at 2023-06-09T12:44:22+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 462 Jun  9 12:44 packages/poet-theme-20200606.2343.entry
- 72K -rw-r--r-- 1 root root 70K Jun  9 12:44 packages/poet-theme-20200606.2343.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,21 +4,4 @@ Source:  https://github.com/tjaartvdwalt/bitbucket.el.git
 
 Updating /mnt/store/melpa/working/bitbucket/
 Checking out db001a9d936e6b5c3cc5d5ec22794e234e0d162d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/bitbucket/
-  to /tmp/bitbucketuMbUnZ/bitbucket-20170405.446
-    bitbucket-api.el -> bitbucket-api.el
-    bitbucket-http.el -> bitbucket-http.el
-    bitbucket-issues.el -> bitbucket-issues.el
-    bitbucket.el -> bitbucket.el
-Created bitbucket-20170405.446.tar containing:
-  bitbucket-20170405.446/
-  bitbucket-20170405.446/bitbucket-api.el
-  bitbucket-20170405.446/bitbucket-http.el
-  bitbucket-20170405.446/bitbucket-issues.el
-  bitbucket-20170405.446/bitbucket-pkg.el
-  bitbucket-20170405.446/bitbucket.el
-Built bitbucket in 4.201s, finished at 2023-06-09T15:32:13+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 534 Jun  9 15:32 packages/bitbucket-20170405.446.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:32 packages/bitbucket-20170405.446.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

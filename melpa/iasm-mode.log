@@ -4,7 +4,4 @@ Source:  https://github.com/RAttab/iasm-mode.git
 
 Updating /mnt/store/melpa/working/iasm-mode/
 Checking out abbec7f308f9ce97beeb57e459fff35f559b4c18
-Built iasm-mode in 4.708s, finished at 2023-06-09T12:17:15+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 46K Jun  9 12:17 packages/iasm-mode-20171023.1422.el
-4.0K -rw-r--r-- 1 root root 425 Jun  9 12:17 packages/iasm-mode-20171023.1422.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

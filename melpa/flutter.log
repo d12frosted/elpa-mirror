@@ -4,19 +4,4 @@ Source:  https://github.com/amake/flutter.el.git
 
 Updating /mnt/store/melpa/working/flutter/
 Checking out 684f15ea19c4a7947eda945cb6e58a67baec8e90
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/flutter/
-  to /tmp/flutterDmxRBW/flutter-20221225.944
-    flutter.el -> flutter.el
-    flutter-project.el -> flutter-project.el
-    flutter-l10n.el -> flutter-l10n.el
-Created flutter-20221225.944.tar containing:
-  flutter-20221225.944/
-  flutter-20221225.944/flutter-l10n.el
-  flutter-20221225.944/flutter-pkg.el
-  flutter-20221225.944/flutter-project.el
-  flutter-20221225.944/flutter.el
-Built flutter in 4.186s, finished at 2023-06-09T15:56:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 362 Jun  9 15:56 packages/flutter-20221225.944.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 15:56 packages/flutter-20221225.944.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

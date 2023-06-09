@@ -4,7 +4,4 @@ Source:  https://github.com/emacsfodder/emacs-mustard-theme.git
 
 Updating /mnt/store/melpa/working/mustard-theme/
 Checking out 3b15d992c79590d7ea2503004e2a863b57e274b5
-Built mustard-theme in 4.834s, finished at 2023-06-09T12:32:45+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jun  9 12:32 packages/mustard-theme-20170808.1319.el
-4.0K -rw-r--r-- 1 root root  356 Jun  9 12:32 packages/mustard-theme-20170808.1319.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

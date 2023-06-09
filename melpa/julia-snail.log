@@ -4,33 +4,4 @@ Source:  https://github.com/gcv/julia-snail.git
 
 Updating /mnt/store/melpa/working/julia-snail/
 Checking out c33663abf081a06e0fdbf5818255f082070d2160
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/julia-snail/
-  to /tmp/julia-snaillfu1au/julia-snail-20230530.1319
-    julia-snail.el -> julia-snail.el
-    JuliaSnail.jl -> JuliaSnail.jl
-    Project.toml -> Project.toml
-    extensions => extensions
-Created julia-snail-20230530.1319.tar containing:
-  julia-snail-20230530.1319/
-  julia-snail-20230530.1319/JuliaSnail.jl
-  julia-snail-20230530.1319/Project.toml
-  julia-snail-20230530.1319/extensions/
-  julia-snail-20230530.1319/extensions/formatter/
-  julia-snail-20230530.1319/extensions/formatter/Formatter.jl
-  julia-snail-20230530.1319/extensions/formatter/Project.toml
-  julia-snail-20230530.1319/extensions/formatter/formatter.el
-  julia-snail-20230530.1319/extensions/ob-julia/
-  julia-snail-20230530.1319/extensions/ob-julia/Project.toml
-  julia-snail-20230530.1319/extensions/ob-julia/ob-julia.el
-  julia-snail-20230530.1319/extensions/ob-julia/src/
-  julia-snail-20230530.1319/extensions/ob-julia/src/ObJulia.jl
-  julia-snail-20230530.1319/extensions/repl-history/
-  julia-snail-20230530.1319/extensions/repl-history/REPLHistory.jl
-  julia-snail-20230530.1319/extensions/repl-history/repl-history.el
-  julia-snail-20230530.1319/julia-snail-pkg.el
-  julia-snail-20230530.1319/julia-snail.el
-Built julia-snail in 6.472s, finished at 2023-06-09T12:21:45+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  367 Jun  9 12:21 packages/julia-snail-20230530.1319.entry
-152K -rw-r--r-- 1 root root 150K Jun  9 12:21 packages/julia-snail-20230530.1319.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,25 +4,4 @@ Source:  https://github.com/Silex/docker-api.el.git
 
 Updating /mnt/store/melpa/working/docker-api/
 Checking out 206144346b7fa4165223349cfeb64a75d47ddd1b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/docker-api/
-  to /tmp/docker-apiHv6yuC/docker-api-20160525.720
-    docker-api-connection.el -> docker-api-connection.el
-    docker-api-containers.el -> docker-api-containers.el
-    docker-api-images.el -> docker-api-images.el
-    docker-api-networks.el -> docker-api-networks.el
-    docker-api-volumes.el -> docker-api-volumes.el
-    docker-api.el -> docker-api.el
-Created docker-api-20160525.720.tar containing:
-  docker-api-20160525.720/
-  docker-api-20160525.720/docker-api-connection.el
-  docker-api-20160525.720/docker-api-containers.el
-  docker-api-20160525.720/docker-api-images.el
-  docker-api-20160525.720/docker-api-networks.el
-  docker-api-20160525.720/docker-api-pkg.el
-  docker-api-20160525.720/docker-api-volumes.el
-  docker-api-20160525.720/docker-api.el
-Built docker-api in 4.374s, finished at 2023-06-09T15:45:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 527 Jun  9 15:45 packages/docker-api-20160525.720.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:45 packages/docker-api-20160525.720.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,22 +4,4 @@ Source:  https://github.com/demyanrogozhin/elhome.git
 
 Updating /mnt/store/melpa/working/elhome/
 Checking out e789e806469af3e9705f72298683c21f6c3a516d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elhome/
-  to /tmp/elhomeAk4IXS/elhome-20161025.2042
-    elhome.el -> elhome.el
-    startup => startup
-Created elhome-20161025.2042.tar containing:
-  elhome-20161025.2042/
-  elhome-20161025.2042/elhome-pkg.el
-  elhome-20161025.2042/elhome.el
-  elhome-20161025.2042/startup/
-  elhome-20161025.2042/startup/00-me-minor-mode.el
-  elhome-20161025.2042/startup/05-after-load.el
-  elhome-20161025.2042/startup/20-initsplit.el
-  elhome-20161025.2042/startup/30-elhome-settings.el
-  elhome-20161025.2042/startup/README
-Built elhome in 3.854s, finished at 2023-06-09T15:49:26+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 446 Jun  9 15:49 packages/elhome-20161025.2042.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 15:49 packages/elhome-20161025.2042.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

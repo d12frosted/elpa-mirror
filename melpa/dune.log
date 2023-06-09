@@ -4,19 +4,4 @@ Source:  https://github.com/ocaml/dune.git
 
 Updating /mnt/store/melpa/working/dune/
 Checking out e53368337be3c353fd654bdbead322605fc875c5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dune/
-  to /tmp/duneDHwDO9/dune-20230402.1815
-  ! editor-integration/emacs/dune-flymake.el -> dune-flymake.el
-  ! editor-integration/emacs/dune-watch.el -> dune-watch.el
-  ! editor-integration/emacs/dune.el -> dune.el
-Created dune-20230402.1815.tar containing:
-  dune-20230402.1815/
-  dune-20230402.1815/dune-flymake.el
-  dune-20230402.1815/dune-pkg.el
-  dune-20230402.1815/dune-watch.el
-  dune-20230402.1815/dune.el
-Built dune in 14.236s, finished at 2023-06-09T15:46:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 195 Jun  9 15:46 packages/dune-20230402.1815.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 15:46 packages/dune-20230402.1815.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

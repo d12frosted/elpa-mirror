@@ -4,17 +4,4 @@ Source:  https://github.com/it-is-wednesday/pyinspect.el.git
 
 Updating /mnt/store/melpa/working/pyinspect/
 Checking out 4437dc589d0c1eb0ca80bf0d005ee27d15cf69fc
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pyinspect/
-  to /tmp/pyinspectN9jm1p/pyinspect-20230216.1121
-    pyinspect.el -> pyinspect.el
-    pyinspect.py -> pyinspect.py
-Created pyinspect-20230216.1121.tar containing:
-  pyinspect-20230216.1121/
-  pyinspect-20230216.1121/pyinspect-pkg.el
-  pyinspect-20230216.1121/pyinspect.el
-  pyinspect-20230216.1121/pyinspect.py
-Built pyinspect in 4.665s, finished at 2023-06-09T12:47:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 437 Jun  9 12:47 packages/pyinspect-20230216.1121.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 12:47 packages/pyinspect-20230216.1121.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/karlotness/flymake-quickdef.git
 
 Updating /mnt/store/melpa/working/flymake-quickdef/
 Checking out 150c5839768a3d32f988f9dc08052978a68f2ad7
-Built flymake-quickdef in 4.440s, finished at 2023-06-09T15:58:25+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  9 15:58 packages/flymake-quickdef-20200308.2342.el
-4.0K -rw-r--r-- 1 root root 426 Jun  9 15:58 packages/flymake-quickdef-20200308.2342.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

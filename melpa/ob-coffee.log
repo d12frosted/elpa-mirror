@@ -4,17 +4,4 @@ Source:  https://github.com/zweifisch/ob-coffee.git
 
 Updating /mnt/store/melpa/working/ob-coffee/
 Checking out 7f0b330273e8af7777de87a75fe52a89798e4548
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ob-coffee/
-  to /tmp/ob-coffeeL7bYwL/ob-coffee-20170725.1424
-    ob-coffee.el -> ob-coffee.el
-    repl.js -> repl.js
-Created ob-coffee-20170725.1424.tar containing:
-  ob-coffee-20170725.1424/
-  ob-coffee-20170725.1424/ob-coffee-pkg.el
-  ob-coffee-20170725.1424/ob-coffee.el
-  ob-coffee-20170725.1424/repl.js
-Built ob-coffee in 4.152s, finished at 2023-06-09T12:35:02+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 469 Jun  9 12:35 packages/ob-coffee-20170725.1424.entry
- 12K -rw-r--r-- 1 root root 10K Jun  9 12:35 packages/ob-coffee-20170725.1424.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/hung-phan/babel-repl.git
 
 Updating /mnt/store/melpa/working/babel-repl/
 Checking out 0faa2f6518a2b46236f116ca1736a314f7d9c034
-Built babel-repl in 4.974s, finished at 2023-06-09T15:31:06+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.3K Jun  9 15:31 packages/babel-repl-20160504.2201.el
-4.0K -rw-r--r-- 1 root root  382 Jun  9 15:31 packages/babel-repl-20160504.2201.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

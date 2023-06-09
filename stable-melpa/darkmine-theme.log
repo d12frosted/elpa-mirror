@@ -4,7 +4,4 @@ Source:  https://github.com/pierre-lecocq/darkmine-theme.git
 
 Updating /mnt/store/melpa/working/darkmine-theme/
 Checking out 7f7e82ca03bcad52911fa41fb3e204e32d6ee63e
-Built darkmine-theme in 4.691s, finished at 2023-06-09T15:42:36+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.2K Jun  9 15:42 packages/darkmine-theme-20160406.624.el
-4.0K -rw-r--r-- 1 root root  411 Jun  9 15:42 packages/darkmine-theme-20160406.624.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

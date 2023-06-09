@@ -4,17 +4,4 @@ Source:  https://github.com/ifosch/keepass-mode.git
 
 Updating /mnt/store/melpa/working/keepass-mode/
 Checking out f432bb60f9f3bd027025140d723906dcabeefaef
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/keepass-mode/
-  to /tmp/keepass-modeC6rsMc/keepass-mode-20211030.958
-    keepass-mode-pkg.el -> keepass-mode-pkg.el
-    keepass-mode.el -> keepass-mode.el
-Created keepass-mode-20211030.958.tar containing:
-  keepass-mode-20211030.958/
-  keepass-mode-20211030.958/keepass-mode-pkg.el
-  keepass-mode-20211030.958/keepass-mode.el
-Built keepass-mode in 4.947s, finished at 2023-06-09T12:22:26+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Aug 25  2022 packages/keepass-mode-20211030.948.el
-4.0K -rw-r--r-- 1 root root  354 Jun  9 12:22 packages/keepass-mode-20211030.958.entry
- 12K -rw-r--r-- 1 root root  10K Jun  9 12:22 packages/keepass-mode-20211030.958.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

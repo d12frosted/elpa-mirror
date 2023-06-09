@@ -4,7 +4,4 @@ Source:  https://github.com/ml729/org-habit-stats.git
 
 Updating /mnt/store/melpa/working/org-habit-stats/
 Checking out 9cb389f1c409d1f7aaea28378b4d7c7e975aefd4
-Built org-habit-stats in 5.436s, finished at 2023-06-09T12:37:45+0000
- ✓ Success:
- 76K -rw-r--r-- 1 root root 76K Jun  9 12:37 packages/org-habit-stats-20230412.515.el
-4.0K -rw-r--r-- 1 root root 419 Jun  9 12:37 packages/org-habit-stats-20230412.515.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

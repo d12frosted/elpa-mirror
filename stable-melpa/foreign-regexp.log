@@ -4,24 +4,4 @@ Source:  https://github.com/k-talo/foreign-regexp.el.git
 
 Updating /mnt/store/melpa/working/foreign-regexp/
 Checking out e2dd47f2160cadc194eb156e7c76c3c869e6706e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/foreign-regexp/
-  to /tmp/foreign-regexp1fPt8G/foreign-regexp-20200325.50
-    foreign-regexp.el -> foreign-regexp.el
-    bin/foreign-regexp-quote-meta-aux.pl -> bin/foreign-regexp-quote-meta-aux.pl
-    bin/foreign-regexp-replace-aux.pl -> bin/foreign-regexp-replace-aux.pl
-    bin/foreign-regexp-quote-meta-aux.rb -> bin/foreign-regexp-quote-meta-aux.rb
-    bin/foreign-regexp-replace-aux.rb -> bin/foreign-regexp-replace-aux.rb
-Created foreign-regexp-20200325.50.tar containing:
-  foreign-regexp-20200325.50/
-  foreign-regexp-20200325.50/bin/
-  foreign-regexp-20200325.50/bin/foreign-regexp-quote-meta-aux.pl
-  foreign-regexp-20200325.50/bin/foreign-regexp-quote-meta-aux.rb
-  foreign-regexp-20200325.50/bin/foreign-regexp-replace-aux.pl
-  foreign-regexp-20200325.50/bin/foreign-regexp-replace-aux.rb
-  foreign-regexp-20200325.50/foreign-regexp-pkg.el
-  foreign-regexp-20200325.50/foreign-regexp.el
-Built foreign-regexp in 4.181s, finished at 2023-06-09T15:59:00+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  462 Jun  9 15:58 packages/foreign-regexp-20200325.50.entry
-260K -rw-r--r-- 1 root root 260K Jun  9 15:58 packages/foreign-regexp-20200325.50.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

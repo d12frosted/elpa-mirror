@@ -4,7 +4,4 @@ Source:  https://github.com/Benaiah/fsbot-data-browser.git
 
 Updating /mnt/store/melpa/working/fsbot-data-browser/
 Checking out 27455860fec01ca47bf98b85f093cc24b9852bef
-Built fsbot-data-browser in 4.397s, finished at 2023-06-09T15:59:31+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Jun  9 15:59 packages/fsbot-data-browser-20220830.230.el
-4.0K -rw-r--r-- 1 root root  448 Jun  9 15:59 packages/fsbot-data-browser-20220830.230.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

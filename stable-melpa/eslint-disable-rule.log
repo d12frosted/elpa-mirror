@@ -4,21 +4,4 @@ Source:  https://github.com/DamienCassou/eslint-disable-rule.git
 
 Updating /mnt/store/melpa/working/eslint-disable-rule/
 Checking out 642ead124172dd470e8ab59fd0645597dc9d8e66
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eslint-disable-rule/
-  to /tmp/eslint-disable-rulea8YBvg/eslint-disable-rule-20220811.1006
-    eslint-disable-rule-all.el -> eslint-disable-rule-all.el
-    eslint-disable-rule-flycheck.el -> eslint-disable-rule-flycheck.el
-    eslint-disable-rule-flymake.el -> eslint-disable-rule-flymake.el
-    eslint-disable-rule.el -> eslint-disable-rule.el
-Created eslint-disable-rule-20220811.1006.tar containing:
-  eslint-disable-rule-20220811.1006/
-  eslint-disable-rule-20220811.1006/eslint-disable-rule-all.el
-  eslint-disable-rule-20220811.1006/eslint-disable-rule-flycheck.el
-  eslint-disable-rule-20220811.1006/eslint-disable-rule-flymake.el
-  eslint-disable-rule-20220811.1006/eslint-disable-rule-pkg.el
-  eslint-disable-rule-20220811.1006/eslint-disable-rule.el
-Built eslint-disable-rule in 4.314s, finished at 2023-06-09T15:52:03+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 279 Jun  9 15:52 packages/eslint-disable-rule-20220811.1006.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 15:52 packages/eslint-disable-rule-20220811.1006.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

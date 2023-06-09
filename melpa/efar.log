@@ -4,7 +4,4 @@ Source:  https://github.com/suntsov/efar.git
 
 Updating /mnt/store/melpa/working/efar/
 Checking out 78618a6cd9fe7d46c3728db3589d1fe50f7c1c6b
-Built efar in 10.582s, finished at 2023-06-09T15:47:50+0000
- ✓ Success:
-212K -rw-r--r-- 1 root root 211K Jun  9 15:47 packages/efar-20230216.1213.el
-4.0K -rw-r--r-- 1 root root  392 Jun  9 15:47 packages/efar-20230216.1213.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

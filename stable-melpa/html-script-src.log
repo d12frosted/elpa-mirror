@@ -4,7 +4,4 @@ Source:  https://github.com/rejeep/html-script-src.el.git
 
 Updating /mnt/store/melpa/working/html-script-src/
 Checking out ed5e686ab604c81222c7e50b27c5d874c5687db7
-Built html-script-src in 6.346s, finished at 2023-06-09T16:10:36+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jun  9 16:10 packages/html-script-src-20130807.918.el
-4.0K -rw-r--r-- 1 root root  480 Jun  9 16:10 packages/html-script-src-20130807.918.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

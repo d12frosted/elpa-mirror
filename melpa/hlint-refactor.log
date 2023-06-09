@@ -4,7 +4,4 @@ Source:  https://github.com/mpickering/hlint-refactor-mode.git
 
 Updating /mnt/store/melpa/working/hlint-refactor/
 Checking out c4307f86aad6d02e32e9b30cb6edc115584c791c
-Built hlint-refactor in 4.684s, finished at 2023-06-09T12:16:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.9K Jun  9 12:16 packages/hlint-refactor-20190115.900.el
-4.0K -rw-r--r-- 1 root root  240 Jun  9 12:16 packages/hlint-refactor-20190115.900.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

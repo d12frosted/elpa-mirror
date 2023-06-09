@@ -4,7 +4,4 @@ Source:  https://github.com/montag451/helm-lxc.git
 
 Updating /mnt/store/melpa/working/helm-lxc/
 Checking out 37fe2d7ed97967edf59a3b68b1434910516ae24f
-Built helm-lxc in 5.742s, finished at 2023-06-09T16:07:10+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root 20K Jun  9 16:07 packages/helm-lxc-20200323.816.el
-4.0K -rw-r--r-- 1 root root 460 Jun  9 16:07 packages/helm-lxc-20200323.816.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

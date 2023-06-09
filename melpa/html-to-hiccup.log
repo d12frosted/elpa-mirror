@@ -4,7 +4,4 @@ Source:  https://github.com/plexus/html-to-hiccup.git
 
 Updating /mnt/store/melpa/working/html-to-hiccup/
 Checking out 12f12fe3165eebbcf17e6209693c8e7251ffa04c
-Built html-to-hiccup in 5.283s, finished at 2023-06-09T12:16:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Jun  9 12:16 packages/html-to-hiccup-20230120.1416.el
-4.0K -rw-r--r-- 1 root root  525 Jun  9 12:16 packages/html-to-hiccup-20230120.1416.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,17 +4,4 @@ Source:  https://github.com/nverno/cool-mode.git
 
 Updating /mnt/store/melpa/working/cool-mode/
 Checking out 961e66956412a1dd63f79473a8273da8853f7179
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cool-mode/
-  to /tmp/cool-modeV0mksk/cool-mode-20220612.1904
-    cool-completion.el -> cool-completion.el
-    cool-mode.el -> cool-mode.el
-Created cool-mode-20220612.1904.tar containing:
-  cool-mode-20220612.1904/
-  cool-mode-20220612.1904/cool-completion.el
-  cool-mode-20220612.1904/cool-mode-pkg.el
-  cool-mode-20220612.1904/cool-mode.el
-Built cool-mode in 5.443s, finished at 2023-06-09T15:39:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 423 Jun  9 15:39 packages/cool-mode-20220612.1904.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:39 packages/cool-mode-20220612.1904.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

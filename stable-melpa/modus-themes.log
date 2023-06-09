@@ -4,37 +4,4 @@ Source:  https://git.sr.ht/~protesilaos/modus-themes
 
 Updating /mnt/store/melpa/working/modus-themes/
 Checking out 0f3e96982cb2b9e78df0ee8c96f7a0de211e37e9
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/modus-themes/
-  to /tmp/modus-themes98vMWq/modus-themes-20230602.418
-    modus-operandi-deuteranopia-theme.el -> modus-operandi-deuteranopia-theme.el
-    modus-operandi-theme.el -> modus-operandi-theme.el
-    modus-operandi-tinted-theme.el -> modus-operandi-tinted-theme.el
-    modus-operandi-tritanopia-theme.el -> modus-operandi-tritanopia-theme.el
-    modus-themes.el -> modus-themes.el
-    modus-vivendi-deuteranopia-theme.el -> modus-vivendi-deuteranopia-theme.el
-    modus-vivendi-theme.el -> modus-vivendi-theme.el
-    modus-vivendi-tinted-theme.el -> modus-vivendi-tinted-theme.el
-    modus-vivendi-tritanopia-theme.el -> modus-vivendi-tritanopia-theme.el
-  ! doc/modus-themes.info -> modus-themes.info
-  ! doc/doclicense.texi -> doclicense.texi
-Generating /tmp/modus-themes98vMWq/modus-themes-20230602.418/doclicense.info
-Created modus-themes-20230602.418.tar containing:
-  modus-themes-20230602.418/
-  modus-themes-20230602.418/dir
-  modus-themes-20230602.418/doclicense.info
-  modus-themes-20230602.418/modus-operandi-deuteranopia-theme.el
-  modus-themes-20230602.418/modus-operandi-theme.el
-  modus-themes-20230602.418/modus-operandi-tinted-theme.el
-  modus-themes-20230602.418/modus-operandi-tritanopia-theme.el
-  modus-themes-20230602.418/modus-themes-pkg.el
-  modus-themes-20230602.418/modus-themes.el
-  modus-themes-20230602.418/modus-themes.info
-  modus-themes-20230602.418/modus-vivendi-deuteranopia-theme.el
-  modus-themes-20230602.418/modus-vivendi-theme.el
-  modus-themes-20230602.418/modus-vivendi-tinted-theme.el
-  modus-themes-20230602.418/modus-vivendi-tritanopia-theme.el
-Built modus-themes in 17.291s, finished at 2023-06-09T12:31:20+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  540 Jun  9 12:31 packages/modus-themes-20230602.418.entry
-612K -rw-r--r-- 1 root root 610K Jun  9 12:31 packages/modus-themes-20230602.418.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

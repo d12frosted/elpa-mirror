@@ -4,7 +4,4 @@ Source:  https://github.com/zwild/pcmpl-pip.git
 
 Updating /mnt/store/melpa/working/pcmpl-pip/
 Checking out ebb672d4494f876f611639e65df4e28e566c06b5
-Built pcmpl-pip in 4.061s, finished at 2023-06-09T12:42:23+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Jun  9 12:42 packages/pcmpl-pip-20181229.1420.el
-4.0K -rw-r--r-- 1 root root  437 Jun  9 12:42 packages/pcmpl-pip-20181229.1420.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

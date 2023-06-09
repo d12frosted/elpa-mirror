@@ -4,46 +4,4 @@ Source:  https://github.com/kawabata/emacs-ivariants.git
 
 Updating /mnt/store/melpa/working/ivariants/
 Checking out ca0b74d32b5d2d77a45cc6ad6edc00be0ee85284
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ivariants/
-  to /tmp/ivariantsVyuPXn/ivariants-20170823.224
-    ivariants-browse.el -> ivariants-browse.el
-    ivariants-table.el -> ivariants-table.el
-    ivariants-to.el -> ivariants-to.el
-    ivariants.el -> ivariants.el
-    tables => tables
-Created ivariants-20170823.224.tar containing:
-  ivariants-20170823.224/
-  ivariants-20170823.224/ivariants-browse.el
-  ivariants-20170823.224/ivariants-pkg.el
-  ivariants-20170823.224/ivariants-table.el
-  ivariants-20170823.224/ivariants-to.el
-  ivariants-20170823.224/ivariants.el
-  ivariants-20170823.224/tables/
-  ivariants-20170823.224/tables/DailyUse
-  ivariants-20170823.224/tables/StandardizedVariants.txt
-  ivariants-20170823.224/tables/cjkvi-simplified.txt
-  ivariants-20170823.224/tables/cjkvi-variants.txt
-  ivariants-20170823.224/tables/duplicate-chars.txt
-  ivariants-20170823.224/tables/dypytz-variants.txt
-  ivariants-20170823.224/tables/hydzd-borrowed.txt
-  ivariants-20170823.224/tables/hydzd-variants.txt
-  ivariants-20170823.224/tables/hyogai-variants.txt
-  ivariants-20170823.224/tables/jinmei-variants.txt
-  ivariants-20170823.224/tables/jisx0212-variants.txt
-  ivariants-20170823.224/tables/jisx0213-variants.txt
-  ivariants-20170823.224/tables/joyo-variants.txt
-  ivariants-20170823.224/tables/jp-borrowed.txt
-  ivariants-20170823.224/tables/koseki-variants.txt
-  ivariants-20170823.224/tables/non-cjk.txt
-  ivariants-20170823.224/tables/non-cognates.txt
-  ivariants-20170823.224/tables/numeric-variants.txt
-  ivariants-20170823.224/tables/radical-variants.txt
-  ivariants-20170823.224/tables/sawndip-variants.txt
-  ivariants-20170823.224/tables/twedu-variants.txt
-  ivariants-20170823.224/tables/ucs-scs.txt
-  ivariants-20170823.224/tables/x0212-x0213-variants.txt
-Built ivariants in 4.705s, finished at 2023-06-09T12:19:36+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  524 Jun  9 12:19 packages/ivariants-20170823.224.entry
-2.5M -rw-r--r-- 1 root root 2.5M Jun  9 12:19 packages/ivariants-20170823.224.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

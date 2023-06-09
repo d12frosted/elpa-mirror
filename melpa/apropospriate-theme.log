@@ -4,20 +4,4 @@ Source:  https://github.com/waymondo/apropospriate-theme.git
 
 Updating /mnt/store/melpa/working/apropospriate-theme/
 Checking out 9fd52d4b0dec6e805097e7f216db47dc37bc3abc
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/apropospriate-theme/
-  to /tmp/apropospriate-themeHzXcOF/apropospriate-theme-20230507.545
-    apropospriate-dark-theme.el -> apropospriate-dark-theme.el
-    apropospriate-light-theme.el -> apropospriate-light-theme.el
-    apropospriate-theme-pkg.el -> apropospriate-theme-pkg.el
-    apropospriate-theme.el -> apropospriate-theme.el
-Created apropospriate-theme-20230507.545.tar containing:
-  apropospriate-theme-20230507.545/
-  apropospriate-theme-20230507.545/apropospriate-dark-theme.el
-  apropospriate-theme-20230507.545/apropospriate-light-theme.el
-  apropospriate-theme-20230507.545/apropospriate-theme-pkg.el
-  apropospriate-theme-20230507.545/apropospriate-theme.el
-Built apropospriate-theme in 4.058s, finished at 2023-06-09T15:29:36+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 404 Jun  9 15:29 packages/apropospriate-theme-20230507.545.entry
- 60K -rw-r--r-- 1 root root 60K Jun  9 15:29 packages/apropospriate-theme-20230507.545.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

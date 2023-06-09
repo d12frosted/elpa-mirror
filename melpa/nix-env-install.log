@@ -4,7 +4,4 @@ Source:  https://github.com/akirak/nix-env-install.git
 
 Updating /mnt/store/melpa/working/nix-env-install/
 Checking out 79c34bc117ba1cebeb67fab32c364951d2ec37a0
-Built nix-env-install in 4.734s, finished at 2023-06-09T12:34:01+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  9 12:33 packages/nix-env-install-20200812.1305.el
-4.0K -rw-r--r-- 1 root root 477 Jun  9 12:33 packages/nix-env-install-20200812.1305.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

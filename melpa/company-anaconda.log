@@ -4,7 +4,4 @@ Source:  https://github.com/pythonic-emacs/company-anaconda.git
 
 Updating /mnt/store/melpa/working/company-anaconda/
 Checking out da1566db41a68809ef7f91ebf2de28118067c89b
-Built company-anaconda in 5.703s, finished at 2023-06-09T15:37:35+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Jun  9 15:37 packages/company-anaconda-20200404.1859.el
-4.0K -rw-r--r-- 1 root root  566 Jun  9 15:37 packages/company-anaconda-20200404.1859.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

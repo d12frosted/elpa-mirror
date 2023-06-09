@@ -4,17 +4,4 @@ Source:  https://github.com/unhammer/flycheck-apertium.git
 
 Updating /mnt/store/melpa/working/flycheck-apertium/
 Checking out 22b60a17836477ac1edd15dc85b14f88ca871ba9
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/flycheck-apertium/
-  to /tmp/flycheck-apertiumV3rcEW/flycheck-apertium-20181211.1038
-    flycheck-apertium.el -> flycheck-apertium.el
-    dix.xsd -> dix.xsd
-Created flycheck-apertium-20181211.1038.tar containing:
-  flycheck-apertium-20181211.1038/
-  flycheck-apertium-20181211.1038/dix.xsd
-  flycheck-apertium-20181211.1038/flycheck-apertium-pkg.el
-  flycheck-apertium-20181211.1038/flycheck-apertium.el
-Built flycheck-apertium in 4.260s, finished at 2023-06-09T15:56:23+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 525 Jun  9 15:56 packages/flycheck-apertium-20181211.1038.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:56 packages/flycheck-apertium-20181211.1038.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

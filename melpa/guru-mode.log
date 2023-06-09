@@ -4,7 +4,4 @@ Source:  https://github.com/bbatsov/guru-mode.git
 
 Updating /mnt/store/melpa/working/guru-mode/
 Checking out a3370e547eab260d24774cd50ccbe865373c8631
-Built guru-mode in 4.811s, finished at 2023-06-09T16:04:35+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Jun  9 16:04 packages/guru-mode-20211025.1157.el
-4.0K -rw-r--r-- 1 root root  425 Jun  9 16:04 packages/guru-mode-20211025.1157.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

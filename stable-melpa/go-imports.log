@@ -4,17 +4,4 @@ Source:  https://github.com/yasushi-saito/go-imports.git
 
 Updating /mnt/store/melpa/working/go-imports/
 Checking out 55681e815da93b6f927213c4aa352ae33db97c37
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/go-imports/
-  to /tmp/go-importsP4Cwj4/go-imports-20190715.1647
-    go-imports.el -> go-imports.el
-    find-packages.pl -> find-packages.pl
-Created go-imports-20190715.1647.tar containing:
-  go-imports-20190715.1647/
-  go-imports-20190715.1647/find-packages.pl
-  go-imports-20190715.1647/go-imports-pkg.el
-  go-imports-20190715.1647/go-imports.el
-Built go-imports in 4.504s, finished at 2023-06-09T16:02:58+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 383 Jun  9 16:02 packages/go-imports-20190715.1647.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 16:02 packages/go-imports-20190715.1647.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

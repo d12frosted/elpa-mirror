@@ -4,7 +4,4 @@ Source:  https://github.com/endofunky/inf-mongo.git
 
 Updating /mnt/store/melpa/working/inf-mongo/
 Checking out 2e498d1c88bd1904eeec18ed06b1a0cf8bdc2a92
-Built inf-mongo in 5.243s, finished at 2023-06-09T12:18:33+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Jun  9 12:18 packages/inf-mongo-20180408.1338.el
-4.0K -rw-r--r-- 1 root root  381 Jun  9 12:18 packages/inf-mongo-20180408.1338.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

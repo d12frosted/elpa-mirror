@@ -4,17 +4,4 @@ Source:  https://github.com/ananthakumaran/jquery-doc.el.git
 
 Updating /mnt/store/melpa/working/jquery-doc/
 Checking out 24032284919b942ec27707d929bdd8bf48420062
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/jquery-doc/
-  to /tmp/jquery-docgf2Now/jquery-doc-20150812.758
-    jquery-doc-data.el -> jquery-doc-data.el
-    jquery-doc.el -> jquery-doc.el
-Created jquery-doc-20150812.758.tar containing:
-  jquery-doc-20150812.758/
-  jquery-doc-20150812.758/jquery-doc-data.el
-  jquery-doc-20150812.758/jquery-doc-pkg.el
-  jquery-doc-20150812.758/jquery-doc.el
-Built jquery-doc in 5.259s, finished at 2023-06-09T12:21:04+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  418 Jun  9 12:21 packages/jquery-doc-20150812.758.entry
-740K -rw-r--r-- 1 root root 740K Jun  9 12:21 packages/jquery-doc-20150812.758.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

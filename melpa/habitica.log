@@ -4,7 +4,4 @@ Source:  https://github.com/abrochard/emacs-habitica.git
 
 Updating /mnt/store/melpa/working/habitica/
 Checking out 9e1fde7f359f7f6a6976b857fbbdbc8dd4fd3327
-Built habitica in 5.172s, finished at 2023-06-09T16:04:41+0000
- ✓ Success:
- 52K -rw-r--r-- 1 root root 49K Jun  9 16:04 packages/habitica-20220215.1758.el
-4.0K -rw-r--r-- 1 root root 407 Jun  9 16:04 packages/habitica-20220215.1758.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

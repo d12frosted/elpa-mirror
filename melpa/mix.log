@@ -4,7 +4,4 @@ Source:  https://github.com/ayrat555/mix.el.git
 
 Updating /mnt/store/melpa/working/mix/
 Checking out 3d5dbc0ef01c4f6b3732f067e9ebc2d7be74a49e
-Built mix in 5.529s, finished at 2023-06-09T12:30:36+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  9 12:30 packages/mix-20210605.1015.el
-4.0K -rw-r--r-- 1 root root 442 Jun  9 12:30 packages/mix-20210605.1015.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

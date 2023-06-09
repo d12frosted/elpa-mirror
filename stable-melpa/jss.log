@@ -4,45 +4,4 @@ Source:  https://github.com/segv/jss.git
 
 Updating /mnt/store/melpa/working/jss/
 Checking out 41749257aecf13c7bd6ed489b5ab3304d06e40bc
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/jss/
-  to /tmp/jss75d9i8/jss-20130508.1423
-    jss-browser-api.el -> jss-browser-api.el
-    jss-browser-firefox.el -> jss-browser-firefox.el
-    jss-browser-webkit.el -> jss-browser-webkit.el
-    jss-browser.el -> jss-browser.el
-    jss-console.el -> jss-console.el
-    jss-debugger.el -> jss-debugger.el
-    jss-deferred.el -> jss-deferred.el
-    jss-http-repl.el -> jss-http-repl.el
-    jss-io-pretty-printers.el -> jss-io-pretty-printers.el
-    jss-io.el -> jss-io.el
-    jss-prompt.el -> jss-prompt.el
-    jss-remote-value.el -> jss-remote-value.el
-    jss-script.el -> jss-script.el
-    jss-super-mode.el -> jss-super-mode.el
-    jss-utils.el -> jss-utils.el
-    jss.el -> jss.el
-Created jss-20130508.1423.tar containing:
-  jss-20130508.1423/
-  jss-20130508.1423/jss-browser-api.el
-  jss-20130508.1423/jss-browser-firefox.el
-  jss-20130508.1423/jss-browser-webkit.el
-  jss-20130508.1423/jss-browser.el
-  jss-20130508.1423/jss-console.el
-  jss-20130508.1423/jss-debugger.el
-  jss-20130508.1423/jss-deferred.el
-  jss-20130508.1423/jss-http-repl.el
-  jss-20130508.1423/jss-io-pretty-printers.el
-  jss-20130508.1423/jss-io.el
-  jss-20130508.1423/jss-pkg.el
-  jss-20130508.1423/jss-prompt.el
-  jss-20130508.1423/jss-remote-value.el
-  jss-20130508.1423/jss-script.el
-  jss-20130508.1423/jss-super-mode.el
-  jss-20130508.1423/jss-utils.el
-  jss-20130508.1423/jss.el
-Built jss in 6.733s, finished at 2023-06-09T12:21:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  422 Jun  9 12:21 packages/jss-20130508.1423.entry
-260K -rw-r--r-- 1 root root 260K Jun  9 12:21 packages/jss-20130508.1423.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

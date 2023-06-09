@@ -4,7 +4,4 @@ Source:  https://github.com/Simon-Lin/inspire.el.git
 
 Updating /mnt/store/melpa/working/inspire/
 Checking out 825bbd4e19046b0e61aa27a0f88b1daeaaebf1d0
-Built inspire in 5.895s, finished at 2023-06-09T12:19:03+0000
- ✓ Success:
- 52K -rwxr-xr-x 1 root root 49K Jun  9 12:19 packages/inspire-20230514.1030.el
-4.0K -rw-r--r-- 1 root root 422 Jun  9 12:19 packages/inspire-20230514.1030.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

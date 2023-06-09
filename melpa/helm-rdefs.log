@@ -4,7 +4,4 @@ Source:  https://github.com/saidie/emacs-helm-rdefs.git
 
 Updating /mnt/store/melpa/working/helm-rdefs/
 Checking out cd3a6b3af3015ee58ef30cb7c81c79ebe5fc867b
-Built helm-rdefs in 9.392s, finished at 2023-06-09T16:07:49+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.7K Jun  9 16:07 packages/helm-rdefs-20161130.536.el
-4.0K -rw-r--r-- 1 root root  488 Jun  9 16:07 packages/helm-rdefs-20161130.536.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

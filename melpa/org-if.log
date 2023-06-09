@@ -4,30 +4,4 @@ Source:  https://gitlab.com/elzair/org-if.git
 
 Updating /mnt/store/melpa/working/org-if/
 Checking out fab602cc1bbee7a4e99c0083e129219d3f9ed2e8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-if/
-  to /tmp/org-ifrhB6li/org-if-20150920.1513
-    ob-org-if.el -> ob-org-if.el
-    org-if-active.el -> org-if-active.el
-    org-if-interpreter.el -> org-if-interpreter.el
-    org-if-link.el -> org-if-link.el
-    org-if-misc.el -> org-if-misc.el
-    org-if-mode.el -> org-if-mode.el
-    org-if-pkg.el -> org-if-pkg.el
-    org-if-reader.el -> org-if-reader.el
-    org-if.el -> org-if.el
-Created org-if-20150920.1513.tar containing:
-  org-if-20150920.1513/
-  org-if-20150920.1513/ob-org-if.el
-  org-if-20150920.1513/org-if-active.el
-  org-if-20150920.1513/org-if-interpreter.el
-  org-if-20150920.1513/org-if-link.el
-  org-if-20150920.1513/org-if-misc.el
-  org-if-20150920.1513/org-if-mode.el
-  org-if-20150920.1513/org-if-pkg.el
-  org-if-20150920.1513/org-if-reader.el
-  org-if-20150920.1513/org-if.el
-Built org-if in 6.627s, finished at 2023-06-09T12:37:48+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 327 Jun  9 12:37 packages/org-if-20150920.1513.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 12:37 packages/org-if-20150920.1513.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

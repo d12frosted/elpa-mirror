@@ -4,7 +4,4 @@ Source:  https://github.com/ericdallo/jet.el.git
 
 Updating /mnt/store/melpa/working/jet/
 Checking out 7a3821c2f351a3770ae23e143f286e6c3a868d38
-Built jet in 5.551s, finished at 2023-06-09T12:20:46+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.8K Jun  9 12:20 packages/jet-20230525.1334.el
-4.0K -rw-r--r-- 1 root root  462 Jun  9 12:20 packages/jet-20230525.1334.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

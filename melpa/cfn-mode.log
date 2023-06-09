@@ -4,19 +4,4 @@ Source:  https://gitlab.com/worr/cfn-mode.git
 
 Updating /mnt/store/melpa/working/cfn-mode/
 Checking out 4cf56affe3035fda364109836e26499431095185
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cfn-mode/
-  to /tmp/cfn-modeQOoP5k/cfn-mode-20220221.1029
-  ! cfn-mode/cfn-mode.el -> cfn-mode.el
-  ! cfn-mode/cfn-properties.dat -> cfn-properties.dat
-  ! cfn-mode/cfn-resources.dat -> cfn-resources.dat
-Created cfn-mode-20220221.1029.tar containing:
-  cfn-mode-20220221.1029/
-  cfn-mode-20220221.1029/cfn-mode-pkg.el
-  cfn-mode-20220221.1029/cfn-mode.el
-  cfn-mode-20220221.1029/cfn-properties.dat
-  cfn-mode-20220221.1029/cfn-resources.dat
-Built cfn-mode in 4.483s, finished at 2023-06-09T15:35:00+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 515 Jun  9 15:34 packages/cfn-mode-20220221.1029.entry
- 60K -rw-r--r-- 1 root root 60K Jun  9 15:34 packages/cfn-mode-20220221.1029.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

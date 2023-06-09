@@ -4,17 +4,4 @@ Source:  https://github.com/aki-s/elscreen-tab.git
 
 Updating /mnt/store/melpa/working/elscreen-tab/
 Checking out 6ad77f972bde05e4e3d44f0d33b68ac41655e5f1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elscreen-tab/
-  to /tmp/elscreen-tabscIww1/elscreen-tab-20201229.1428
-    elscreen-tab--emacs27.el -> elscreen-tab--emacs27.el
-    elscreen-tab.el -> elscreen-tab.el
-Created elscreen-tab-20201229.1428.tar containing:
-  elscreen-tab-20201229.1428/
-  elscreen-tab-20201229.1428/elscreen-tab--emacs27.el
-  elscreen-tab-20201229.1428/elscreen-tab-pkg.el
-  elscreen-tab-20201229.1428/elscreen-tab.el
-Built elscreen-tab in 5.336s, finished at 2023-06-09T15:50:05+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 527 Jun  9 15:50 packages/elscreen-tab-20201229.1428.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 15:50 packages/elscreen-tab-20201229.1428.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

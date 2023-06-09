@@ -4,23 +4,4 @@ Source:  https://gitlab.com/mtekman/elisp-depmap.el.git
 
 Updating /mnt/store/melpa/working/elisp-depmap/
 Checking out 15909462e3f7daf445d3cecf402ee16c7e3263ed
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elisp-depmap/
-  to /tmp/elisp-depmap54d7MX/elisp-depmap-20220223.1131
-    elisp-depmap-exec.el -> elisp-depmap-exec.el
-    elisp-depmap-graph.el -> elisp-depmap-graph.el
-    elisp-depmap-parse.el -> elisp-depmap-parse.el
-    elisp-depmap-secondhelp.el -> elisp-depmap-secondhelp.el
-    elisp-depmap.el -> elisp-depmap.el
-Created elisp-depmap-20220223.1131.tar containing:
-  elisp-depmap-20220223.1131/
-  elisp-depmap-20220223.1131/elisp-depmap-exec.el
-  elisp-depmap-20220223.1131/elisp-depmap-graph.el
-  elisp-depmap-20220223.1131/elisp-depmap-parse.el
-  elisp-depmap-20220223.1131/elisp-depmap-pkg.el
-  elisp-depmap-20220223.1131/elisp-depmap-secondhelp.el
-  elisp-depmap-20220223.1131/elisp-depmap.el
-Built elisp-depmap in 4.812s, finished at 2023-06-09T15:49:29+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 400 Jun  9 15:49 packages/elisp-depmap-20220223.1131.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 15:49 packages/elisp-depmap-20220223.1131.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

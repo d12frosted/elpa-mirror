@@ -4,19 +4,4 @@ Source:  https://github.com/cute-jumper/helm-ext.git
 
 Updating /mnt/store/melpa/working/helm-ext/
 Checking out c30f7772ec577a5ce1de3215f0507826e0725a69
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-ext/
-  to /tmp/helm-extMkm77G/helm-ext-20200722.107
-    helm-ext-ff.el -> helm-ext-ff.el
-    helm-ext-minibuffer.el -> helm-ext-minibuffer.el
-    helm-ext.el -> helm-ext.el
-Created helm-ext-20200722.107.tar containing:
-  helm-ext-20200722.107/
-  helm-ext-20200722.107/helm-ext-ff.el
-  helm-ext-20200722.107/helm-ext-minibuffer.el
-  helm-ext-20200722.107/helm-ext-pkg.el
-  helm-ext-20200722.107/helm-ext.el
-Built helm-ext in 4.812s, finished at 2023-06-09T16:06:19+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 397 Jun  9 16:06 packages/helm-ext-20200722.107.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 16:06 packages/helm-ext-20200722.107.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

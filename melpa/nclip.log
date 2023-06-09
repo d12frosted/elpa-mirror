@@ -4,19 +4,4 @@ Source:  https://github.com/maio/nclip.el.git
 
 Updating /mnt/store/melpa/working/nclip/
 Checking out af88e38b1f04be02bf2e57affc662dbd0f828e67
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nclip/
-  to /tmp/nclipOx4Ihz/nclip-20130617.2015
-    nclip.el -> nclip.el
-    nclip.rb -> nclip.rb
-    nclip.py -> nclip.py
-Created nclip-20130617.2015.tar containing:
-  nclip-20130617.2015/
-  nclip-20130617.2015/nclip-pkg.el
-  nclip-20130617.2015/nclip.el
-  nclip-20130617.2015/nclip.py
-  nclip-20130617.2015/nclip.rb
-Built nclip in 4.038s, finished at 2023-06-09T12:33:29+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 422 Jun  9 12:33 packages/nclip-20130617.2015.entry
- 12K -rw-r--r-- 1 root root 10K Jun  9 12:33 packages/nclip-20130617.2015.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

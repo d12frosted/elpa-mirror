@@ -4,17 +4,4 @@ Source:  https://github.com/DamienCassou/khardel.git
 
 Updating /mnt/store/melpa/working/khardel/
 Checking out 1436ec5ef1b5b26104a4735ee64c0afe148700de
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/khardel/
-  to /tmp/khardeloL2PS6/khardel-20220223.934
-    khardel-org.el -> khardel-org.el
-    khardel.el -> khardel.el
-Created khardel-20220223.934.tar containing:
-  khardel-20220223.934/
-  khardel-20220223.934/khardel-org.el
-  khardel-20220223.934/khardel-pkg.el
-  khardel-20220223.934/khardel.el
-Built khardel in 6.105s, finished at 2023-06-09T12:23:01+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 408 Jun  9 12:23 packages/khardel-20220223.934.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 12:23 packages/khardel-20220223.934.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

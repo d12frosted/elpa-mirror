@@ -4,17 +4,4 @@ Source:  https://github.com/myuhe/calfw-gcal.el.git
 
 Updating /mnt/store/melpa/working/calfw-gcal/
 Checking out 14aab20687d6cc9e6c5ddb9e11984c4e14c3d870
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/calfw-gcal/
-  to /tmp/calfw-gcal6zuoCD/calfw-gcal-20120111.1000
-    calfw-gcal.el -> calfw-gcal.el
-    insertEvent.py -> insertEvent.py
-Created calfw-gcal-20120111.1000.tar containing:
-  calfw-gcal-20120111.1000/
-  calfw-gcal-20120111.1000/calfw-gcal-pkg.el
-  calfw-gcal-20120111.1000/calfw-gcal.el
-  calfw-gcal-20120111.1000/insertEvent.py
-Built calfw-gcal in 6.120s, finished at 2023-06-09T15:34:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 396 Jun  9 15:34 packages/calfw-gcal-20120111.1000.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:34 packages/calfw-gcal-20120111.1000.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

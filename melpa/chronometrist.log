@@ -4,29 +4,4 @@ Source:  https://codeberg.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist/
 Checking out 015524bbeb4a112db7bb2af813408cc3c5c93240
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/chronometrist/
-  to /tmp/chronometristpzHJrX/chronometrist-20230302.700
-  ! elisp/chronometrist-spark.el -> chronometrist-spark.el
-  ! elisp/chronometrist-sqlite.el -> chronometrist-sqlite.el
-  ! elisp/chronometrist-third.el -> chronometrist-third.el
-  ! elisp/chronometrist.el -> chronometrist.el
-  ! elisp/chronometrist-spark.org -> chronometrist-spark.org
-  ! elisp/chronometrist-sqlite.org -> chronometrist-sqlite.org
-  ! elisp/chronometrist-third.org -> chronometrist-third.org
-  ! elisp/chronometrist.org -> chronometrist.org
-Created chronometrist-20230302.700.tar containing:
-  chronometrist-20230302.700/
-  chronometrist-20230302.700/chronometrist-pkg.el
-  chronometrist-20230302.700/chronometrist-spark.el
-  chronometrist-20230302.700/chronometrist-spark.org
-  chronometrist-20230302.700/chronometrist-sqlite.el
-  chronometrist-20230302.700/chronometrist-sqlite.org
-  chronometrist-20230302.700/chronometrist-third.el
-  chronometrist-20230302.700/chronometrist-third.org
-  chronometrist-20230302.700/chronometrist.el
-  chronometrist-20230302.700/chronometrist.org
-Built chronometrist in 4.580s, finished at 2023-06-09T15:35:28+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  548 Jun  9 15:35 packages/chronometrist-20230302.700.entry
-432K -rw-r--r-- 1 root root 430K Jun  9 15:35 packages/chronometrist-20230302.700.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

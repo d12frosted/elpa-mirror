@@ -4,39 +4,4 @@ Source:  https://github.com/emacs-lsp/lsp-sonarlint.git
 
 Updating /mnt/store/melpa/working/lsp-sonarlint/
 Checking out a429be2aea7797369a3c751ef54e3554733117be
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lsp-sonarlint/
-  to /tmp/lsp-sonarlinteNcXA7/lsp-sonarlint-20220510.1802
-    lsp-sonarlint.el -> lsp-sonarlint.el
-  ! languages/xml/lsp-sonarlint-xml.el -> languages/lsp-sonarlint-xml.el
-  ! languages/typescript/lsp-sonarlint-typescript.el -> languages/lsp-sonarlint-typescript.el
-  ! languages/scala/lsp-sonarlint-scala.el -> languages/lsp-sonarlint-scala.el
-  ! languages/ruby/lsp-sonarlint-ruby.el -> languages/lsp-sonarlint-ruby.el
-  ! languages/python/lsp-sonarlint-python.el -> languages/lsp-sonarlint-python.el
-  ! languages/php/lsp-sonarlint-php.el -> languages/lsp-sonarlint-php.el
-  ! languages/javascript/lsp-sonarlint-javascript.el -> languages/lsp-sonarlint-javascript.el
-  ! languages/java/lsp-sonarlint-java.el -> languages/lsp-sonarlint-java.el
-  ! languages/html/lsp-sonarlint-html.el -> languages/lsp-sonarlint-html.el
-    server/LICENSE -> server/LICENSE
-    server/sonarlint-language-server.jar -> server/sonarlint-language-server.jar
-Created lsp-sonarlint-20220510.1802.tar containing:
-  lsp-sonarlint-20220510.1802/
-  lsp-sonarlint-20220510.1802/languages/
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-html.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-java.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-javascript.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-php.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-python.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-ruby.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-scala.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-typescript.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-xml.el
-  lsp-sonarlint-20220510.1802/lsp-sonarlint-pkg.el
-  lsp-sonarlint-20220510.1802/lsp-sonarlint.el
-  lsp-sonarlint-20220510.1802/server/
-  lsp-sonarlint-20220510.1802/server/LICENSE
-  lsp-sonarlint-20220510.1802/server/sonarlint-language-server.jar
-Built lsp-sonarlint in 5.841s, finished at 2023-06-09T12:27:13+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 536 Jun  9 12:27 packages/lsp-sonarlint-20220510.1802.entry
- 14M -rw-r--r-- 1 root root 14M Jun  9 12:27 packages/lsp-sonarlint-20220510.1802.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

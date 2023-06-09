@@ -4,7 +4,4 @@ Source:  https://github.com/damon-kwok/chapel-mode.git
 
 Updating /mnt/store/melpa/working/chapel-mode/
 Checking out 39fd24bb7cf44808200354ac0496be4fc4fddd9a
-Built chapel-mode in 5.299s, finished at 2023-06-09T15:35:07+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 23K Jun  9 15:35 packages/chapel-mode-20210513.457.el
-4.0K -rw-r--r-- 1 root root 344 Jun  9 15:35 packages/chapel-mode-20210513.457.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

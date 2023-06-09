@@ -4,7 +4,4 @@ Source:  https://github.com/correl/kerl.el.git
 
 Updating /mnt/store/melpa/working/kerl/
 Checking out 1732ee26213f021bf040919c45ad276aafcaae14
-Built kerl in 4.451s, finished at 2023-06-09T12:22:28+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.0K Jun  9 12:22 packages/kerl-20150424.2005.el
-4.0K -rw-r--r-- 1 root root  370 Jun  9 12:22 packages/kerl-20150424.2005.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

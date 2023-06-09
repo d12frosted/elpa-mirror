@@ -4,7 +4,4 @@ Source:  https://git.sr.ht/~tsdh/highlight-parentheses.el
 
 Updating /mnt/store/melpa/working/highlight-parentheses/
 Checking out 438a1cb2563e2a2496be4678cc0df8d5b22caf5d
-Built highlight-parentheses in 7.673s, finished at 2023-06-09T16:09:44+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  9 16:09 packages/highlight-parentheses-20220408.845.el
-4.0K -rw-r--r-- 1 root root 449 Jun  9 16:09 packages/highlight-parentheses-20220408.845.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

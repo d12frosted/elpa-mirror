@@ -4,20 +4,4 @@ Source:  https://github.com/oitofelix/eterm-fn.git
 
 Updating /mnt/store/melpa/working/eterm-fn/
 Checking out 66f3b2f6308fa2ac4d8a32be5a7e35a96e08a9ee
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eterm-fn/
-  to /tmp/eterm-fnBbvFgw/eterm-fn-20191010.2331
-    eterm-fn-pkg.el -> eterm-fn-pkg.el
-    eterm-fn.el -> eterm-fn.el
-    eterm-fn-256color.ti -> eterm-fn-256color.ti
-    eterm-fn-color.ti -> eterm-fn-color.ti
-Created eterm-fn-20191010.2331.tar containing:
-  eterm-fn-20191010.2331/
-  eterm-fn-20191010.2331/eterm-fn-256color.ti
-  eterm-fn-20191010.2331/eterm-fn-color.ti
-  eterm-fn-20191010.2331/eterm-fn-pkg.el
-  eterm-fn-20191010.2331/eterm-fn.el
-Built eterm-fn in 4.729s, finished at 2023-06-09T15:52:27+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 394 Jun  9 15:52 packages/eterm-fn-20191010.2331.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 15:52 packages/eterm-fn-20191010.2331.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

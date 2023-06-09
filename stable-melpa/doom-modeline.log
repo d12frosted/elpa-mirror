@@ -4,21 +4,4 @@ Source:  https://github.com/seagle0128/doom-modeline.git
 
 Updating /mnt/store/melpa/working/doom-modeline/
 Checking out a16be08123852767c2bdc27eee4b4761cca973aa
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/doom-modeline/
-  to /tmp/doom-modelineEFsURJ/doom-modeline-20230530.754
-    doom-modeline-core.el -> doom-modeline-core.el
-    doom-modeline-env.el -> doom-modeline-env.el
-    doom-modeline-segments.el -> doom-modeline-segments.el
-    doom-modeline.el -> doom-modeline.el
-Created doom-modeline-20230530.754.tar containing:
-  doom-modeline-20230530.754/
-  doom-modeline-20230530.754/doom-modeline-core.el
-  doom-modeline-20230530.754/doom-modeline-env.el
-  doom-modeline-20230530.754/doom-modeline-pkg.el
-  doom-modeline-20230530.754/doom-modeline-segments.el
-  doom-modeline-20230530.754/doom-modeline.el
-Built doom-modeline in 5.194s, finished at 2023-06-09T15:45:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  525 Jun  9 15:45 packages/doom-modeline-20230530.754.entry
-212K -rw-r--r-- 1 root root 210K Jun  9 15:45 packages/doom-modeline-20230530.754.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

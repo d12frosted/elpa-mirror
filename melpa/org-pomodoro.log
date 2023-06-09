@@ -4,22 +4,4 @@ Source:  https://github.com/marcinkoziej/org-pomodoro.git
 
 Updating /mnt/store/melpa/working/org-pomodoro/
 Checking out 3f5bcfb80d61556d35fc29e5ddb09750df962cc6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-pomodoro/
-  to /tmp/org-pomodoroOdkJWL/org-pomodoro-20220318.1618
-    org-pomodoro-pidgin.el -> org-pomodoro-pidgin.el
-    org-pomodoro.el -> org-pomodoro.el
-    resources => resources
-Created org-pomodoro-20220318.1618.tar containing:
-  org-pomodoro-20220318.1618/
-  org-pomodoro-20220318.1618/org-pomodoro-pidgin.el
-  org-pomodoro-20220318.1618/org-pomodoro-pkg.el
-  org-pomodoro-20220318.1618/org-pomodoro.el
-  org-pomodoro-20220318.1618/resources/
-  org-pomodoro-20220318.1618/resources/bell.wav
-  org-pomodoro-20220318.1618/resources/bell_multiple.wav
-  org-pomodoro-20220318.1618/resources/tick.wav
-Built org-pomodoro in 4.479s, finished at 2023-06-09T12:38:41+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  466 Jun  9 12:38 packages/org-pomodoro-20220318.1618.entry
-152K -rw-r--r-- 1 root root 150K Jun  9 12:38 packages/org-pomodoro-20220318.1618.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

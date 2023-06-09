@@ -4,21 +4,4 @@ Source:  https://github.com/ptrv/company-lua.git
 
 Updating /mnt/store/melpa/working/company-lua/
 Checking out 29f6819de4d691e5fd0b62893a9f4fbc1c6fcb52
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/company-lua/
-  to /tmp/company-luapO70Ow/company-lua-20171108.2306
-    company-lua.el -> company-lua.el
-    lua => lua
-Created company-lua-20171108.2306.tar containing:
-  company-lua-20171108.2306/
-  company-lua-20171108.2306/company-lua-pkg.el
-  company-lua-20171108.2306/company-lua.el
-  company-lua-20171108.2306/lua/
-  company-lua-20171108.2306/lua/api/
-  company-lua-20171108.2306/lua/api/baselib.lua
-  company-lua-20171108.2306/lua/api/love2d.lua
-  company-lua-20171108.2306/lua/complete.lua
-Built company-lua in 5.501s, finished at 2023-06-09T15:38:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  435 Jun  9 15:38 packages/company-lua-20171108.2306.entry
-332K -rw-r--r-- 1 root root 330K Jun  9 15:38 packages/company-lua-20171108.2306.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

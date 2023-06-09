@@ -4,7 +4,4 @@ Source:  https://github.com/tpapp/julia-repl.git
 
 Updating /mnt/store/melpa/working/julia-repl/
 Checking out 9503ef7110732e444e686e815c5b2ae8228d274d
-Built julia-repl in 7.248s, finished at 2023-06-09T12:21:44+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root 36K Jun  9 12:21 packages/julia-repl-20230529.943.el
-4.0K -rw-r--r-- 1 root root 470 Jun  9 12:21 packages/julia-repl-20230529.943.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

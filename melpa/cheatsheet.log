@@ -4,7 +4,4 @@ Source:  https://github.com/mykyta-shyrin/cheatsheet.git
 
 Updating /mnt/store/melpa/working/cheatsheet/
 Checking out e4f8e0110167ea16a17a74517d1f10cb7ff805b8
-Built cheatsheet in 5.008s, finished at 2023-06-09T15:35:13+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.1K Jun  9 15:35 packages/cheatsheet-20170126.2150.el
-4.0K -rw-r--r-- 1 root root  518 Jun  9 15:35 packages/cheatsheet-20170126.2150.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

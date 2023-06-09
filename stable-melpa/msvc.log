@@ -4,27 +4,4 @@ Source:  https://github.com/yaruopooner/msvc.git
 
 Updating /mnt/store/melpa/working/msvc/
 Checking out 1bf173b5da3fbf2bdb799116e2a1f31916c1e16e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/msvc/
-  to /tmp/msvca8K1EQ/msvc-20221015.1610
-    msvc-env.el -> msvc-env.el
-    msvc-flags.el -> msvc-flags.el
-    msvc.el -> msvc.el
-    empty.cpp -> empty.cpp
-    invoke-msbuild.bat -> invoke-msbuild.bat
-    msvc-extractor.cflags.vcxproj -> msvc-extractor.cflags.vcxproj
-    msvc-extractor.flymake.vcxproj -> msvc-extractor.flymake.vcxproj
-Created msvc-20221015.1610.tar containing:
-  msvc-20221015.1610/
-  msvc-20221015.1610/empty.cpp
-  msvc-20221015.1610/invoke-msbuild.bat
-  msvc-20221015.1610/msvc-env.el
-  msvc-20221015.1610/msvc-extractor.cflags.vcxproj
-  msvc-20221015.1610/msvc-extractor.flymake.vcxproj
-  msvc-20221015.1610/msvc-flags.el
-  msvc-20221015.1610/msvc-pkg.el
-  msvc-20221015.1610/msvc.el
-Built msvc in 6.447s, finished at 2023-06-09T12:32:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  534 Jun  9 12:32 packages/msvc-20221015.1610.entry
-152K -rw-r--r-- 1 root root 150K Jun  9 12:32 packages/msvc-20221015.1610.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

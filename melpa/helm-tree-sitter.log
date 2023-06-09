@@ -4,31 +4,4 @@ Source:  https://github.com/Giedriusj1/helm-tree-sitter.git
 
 Updating /mnt/store/melpa/working/helm-tree-sitter/
 Checking out ef5209bd1deb56d6cab7a26e6d55615161f2115a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-tree-sitter/
-  to /tmp/helm-tree-sitterdBcxbc/helm-tree-sitter-20220328.1345
-    helm-tree-sitter-c.el -> helm-tree-sitter-c.el
-    helm-tree-sitter-core.el -> helm-tree-sitter-core.el
-    helm-tree-sitter-cpp.el -> helm-tree-sitter-cpp.el
-    helm-tree-sitter-debug.el -> helm-tree-sitter-debug.el
-    helm-tree-sitter-default.el -> helm-tree-sitter-default.el
-    helm-tree-sitter-python.el -> helm-tree-sitter-python.el
-    helm-tree-sitter-rust.el -> helm-tree-sitter-rust.el
-    helm-tree-sitter-utils.el -> helm-tree-sitter-utils.el
-    helm-tree-sitter.el -> helm-tree-sitter.el
-Created helm-tree-sitter-20220328.1345.tar containing:
-  helm-tree-sitter-20220328.1345/
-  helm-tree-sitter-20220328.1345/helm-tree-sitter-c.el
-  helm-tree-sitter-20220328.1345/helm-tree-sitter-core.el
-  helm-tree-sitter-20220328.1345/helm-tree-sitter-cpp.el
-  helm-tree-sitter-20220328.1345/helm-tree-sitter-debug.el
-  helm-tree-sitter-20220328.1345/helm-tree-sitter-default.el
-  helm-tree-sitter-20220328.1345/helm-tree-sitter-pkg.el
-  helm-tree-sitter-20220328.1345/helm-tree-sitter-python.el
-  helm-tree-sitter-20220328.1345/helm-tree-sitter-rust.el
-  helm-tree-sitter-20220328.1345/helm-tree-sitter-utils.el
-  helm-tree-sitter-20220328.1345/helm-tree-sitter.el
-Built helm-tree-sitter in 5.379s, finished at 2023-06-09T12:14:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 512 Jun  9 12:14 packages/helm-tree-sitter-20220328.1345.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 12:14 packages/helm-tree-sitter-20220328.1345.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

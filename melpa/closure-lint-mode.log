@@ -4,7 +4,4 @@ Source:  https://github.com/r0man/closure-lint-mode.git
 
 Updating /mnt/store/melpa/working/closure-lint-mode/
 Checking out bc3d2fd5c35580bf1b8af43b12484c95a343b4b5
-Built closure-lint-mode in 4.157s, finished at 2023-06-09T15:36:29+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.3K Jun  9 15:36 packages/closure-lint-mode-20101118.2124.el
-4.0K -rw-r--r-- 1 root root  499 Jun  9 15:36 packages/closure-lint-mode-20101118.2124.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

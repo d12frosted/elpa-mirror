@@ -4,17 +4,4 @@ Source:  https://github.com/tyler-dodge/org-runbook.git
 
 Updating /mnt/store/melpa/working/org-runbook/
 Checking out 7ada3903a56266d60541d59ae92410e8ab6fe836
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-runbook/
-  to /tmp/org-runbookvveMxN/org-runbook-20230503.319
-    org-runbook-ivy.el -> org-runbook-ivy.el
-    org-runbook.el -> org-runbook.el
-Created org-runbook-20230503.319.tar containing:
-  org-runbook-20230503.319/
-  org-runbook-20230503.319/org-runbook-ivy.el
-  org-runbook-20230503.319/org-runbook-pkg.el
-  org-runbook-20230503.319/org-runbook.el
-Built org-runbook in 4.836s, finished at 2023-06-09T12:39:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 573 Jun  9 12:39 packages/org-runbook-20230503.319.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 12:39 packages/org-runbook-20230503.319.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

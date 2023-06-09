@@ -4,7 +4,4 @@ Source:  https://github.com/jeremy-compostella/pdfgrep.git
 
 Updating /mnt/store/melpa/working/pdfgrep/
 Checking out a4ca0a1e6521de93f28bb6736a5344b4974d144c
-Built pdfgrep in 4.979s, finished at 2023-06-09T12:42:32+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.4K Jun  9 12:42 packages/pdfgrep-20210203.1730.el
-4.0K -rw-r--r-- 1 root root  512 Jun  9 12:42 packages/pdfgrep-20210203.1730.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

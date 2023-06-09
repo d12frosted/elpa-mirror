@@ -4,19 +4,4 @@ Source:  https://github.com/ijt/emacs-nav.git
 
 Updating /mnt/store/melpa/working/nav/
 Checking out c5eb234c063f435dbdcd1f8bdc46cfc68c973ebe
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nav/
-  to /tmp/navV2EtpQ/nav-20120507.707
-    ack -> ack
-    ack.el -> ack.el
-    nav.el -> nav.el
-Created nav-20120507.707.tar containing:
-  nav-20120507.707/
-  nav-20120507.707/ack
-  nav-20120507.707/ack.el
-  nav-20120507.707/nav-pkg.el
-  nav-20120507.707/nav.el
-Built nav in 4.389s, finished at 2023-06-09T12:33:22+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  339 Jun  9 12:33 packages/nav-20120507.707.entry
-112K -rw-r--r-- 1 root root 110K Jun  9 12:33 packages/nav-20120507.707.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

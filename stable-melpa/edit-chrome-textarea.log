@@ -4,7 +4,4 @@ Source:  https://github.com/xuchunyang/edit-chrome-textarea.el.git
 
 Updating /mnt/store/melpa/working/edit-chrome-textarea/
 Checking out 302659e92b7ef88824691905df3f926766f64729
-Built edit-chrome-textarea in 6.616s, finished at 2023-06-09T15:47:22+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 12K Jun  9 15:47 packages/edit-chrome-textarea-20200324.1513.el
-4.0K -rw-r--r-- 1 root root 405 Jun  9 15:47 packages/edit-chrome-textarea-20200324.1513.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

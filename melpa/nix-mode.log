@@ -4,43 +4,4 @@ Source:  https://github.com/NixOS/nix-mode.git
 
 Updating /mnt/store/melpa/working/nix-mode/
 Checking out 719feb7868fb567ecfe5578f6119892c771ac5e5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-modeoiPqxk/nix-mode-20230421.2036
-    nix-build.el -> nix-build.el
-    nix-drv-mode.el -> nix-drv-mode.el
-    nix-edit.el -> nix-edit.el
-    nix-flake.el -> nix-flake.el
-    nix-format.el -> nix-format.el
-    nix-instantiate.el -> nix-instantiate.el
-    nix-log.el -> nix-log.el
-    nix-mode.el -> nix-mode.el
-    nix-prettify-mode.el -> nix-prettify-mode.el
-    nix-repl.el -> nix-repl.el
-    nix-search.el -> nix-search.el
-    nix-shebang.el -> nix-shebang.el
-    nix-shell.el -> nix-shell.el
-    nix-store.el -> nix-store.el
-    nix.el -> nix.el
-Created nix-mode-20230421.2036.tar containing:
-  nix-mode-20230421.2036/
-  nix-mode-20230421.2036/nix-build.el
-  nix-mode-20230421.2036/nix-drv-mode.el
-  nix-mode-20230421.2036/nix-edit.el
-  nix-mode-20230421.2036/nix-flake.el
-  nix-mode-20230421.2036/nix-format.el
-  nix-mode-20230421.2036/nix-instantiate.el
-  nix-mode-20230421.2036/nix-log.el
-  nix-mode-20230421.2036/nix-mode-pkg.el
-  nix-mode-20230421.2036/nix-mode.el
-  nix-mode-20230421.2036/nix-prettify-mode.el
-  nix-mode-20230421.2036/nix-repl.el
-  nix-mode-20230421.2036/nix-search.el
-  nix-mode-20230421.2036/nix-shebang.el
-  nix-mode-20230421.2036/nix-shell.el
-  nix-mode-20230421.2036/nix-store.el
-  nix-mode-20230421.2036/nix.el
-Built nix-mode in 5.890s, finished at 2023-06-09T12:34:05+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  453 Jun  9 12:34 packages/nix-mode-20230421.2036.entry
-140K -rw-r--r-- 1 root root 140K Jun  9 12:34 packages/nix-mode-20230421.2036.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

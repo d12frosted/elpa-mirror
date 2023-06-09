@@ -4,7 +4,4 @@ Source:  https://gitlab.com/jessieh/mood-one-theme.git
 
 Updating /mnt/store/melpa/working/mood-one-theme/
 Checking out dfbc81900737d3382a340feeed24d2bcd9bdedb0
-Built mood-one-theme in 7.691s, finished at 2023-06-09T12:31:36+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 45K Jun  9 12:31 packages/mood-one-theme-20221222.1214.el
-4.0K -rw-r--r-- 1 root root 451 Jun  9 12:31 packages/mood-one-theme-20221222.1214.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

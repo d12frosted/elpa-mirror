@@ -4,7 +4,4 @@ Source:  https://github.com/cofi/evil-indent-textobject.git
 
 Updating /mnt/store/melpa/working/evil-indent-textobject/
 Checking out 70a1154a531b7cfdbb9a31d6922482791e20a3a7
-Built evil-indent-textobject in 4.838s, finished at 2023-06-09T15:53:00+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Jun  9 15:52 packages/evil-indent-textobject-20130831.2219.el
-4.0K -rw-r--r-- 1 root root  498 Jun  9 15:52 packages/evil-indent-textobject-20130831.2219.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

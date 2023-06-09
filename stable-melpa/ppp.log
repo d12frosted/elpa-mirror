@@ -4,7 +4,4 @@ Source:  https://github.com/conao3/ppp.el.git
 
 Updating /mnt/store/melpa/working/ppp/
 Checking out d5d854c3006dfd268e62c7f91c2aad6f86a505b5
-Built ppp in 4.789s, finished at 2023-06-09T12:45:28+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 24K Jun  9 12:45 packages/ppp-20220211.1529.el
-4.0K -rw-r--r-- 1 root root 434 Jun  9 12:45 packages/ppp-20220211.1529.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
