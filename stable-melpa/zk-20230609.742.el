@@ -1,13 +1,13 @@
 ;;; zk.el --- Functions for working with Zettelkasten-style linked notes -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2022 Grant Rosson
+;; Copyright (C) 2022-2023 Grant Rosson
 
 ;; Author: Grant Rosson <https://github.com/localauthor>
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.6
-;; Package-Version: 20230505.1950
-;; Package-Commit: 73139efd3a6e92de139adec864d26130ee5a942d
+;; Package-Version: 20230609.742
+;; Package-Commit: 6ba90de2b33a8717fb1e263fe6df7b3831d3bd8e
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -425,7 +425,7 @@ return list of files not matching the regexp."
             (if invert " --files-without-match" " --files-with-matches")
             " --recursive"
             " --ignore-case"
-            " --include \\*." zk-file-extension
+            " --include=\\*." zk-file-extension
             " --regexp=" (shell-quote-argument str)
             " " zk-directory
             " 2>/dev/null"))
@@ -447,7 +447,7 @@ return list of files not matching the regexp."
                                            zk-tag-regexp)
                                           " "
                                           zk-directory " 2>/dev/null")))
-         (list (split-string files "\n" t)))
+         (list (split-string files "\n" t "\s")))
     (delete-dups list)))
 
 (defun zk--select-file (&optional prompt list group sort)
@@ -757,6 +757,8 @@ title."
                             (point)
                             (line-end-position)))))
          (new-title))
+    (unless id
+      (user-error "Not a zk file"))
     (if (not (string= file-title header-title))
         (if (y-or-n-p (format "Change from \"%s\" to \"%s\"? " file-title header-title))
             (setq new-title header-title)
@@ -987,14 +989,14 @@ Opens search results in a grep buffer."
   "Open grep buffer containing results of search for TAG.
 Select TAG, with completion, from list of all tags in zk notes.
 Defaults to `zk-grep'."
-  (interactive (list (completing-read "Tag: " (zk--grep-tag-list))))
+  (interactive (list (completing-read "Find tag: " (zk--grep-tag-list))))
   (funcall zk-tag-search-function tag))
 
 ;;;###autoload
 (defun zk-tag-insert (tag)
   "Insert TAG at point.
 Select TAG, with completion, from list of all tags in zk notes."
-  (interactive (list (completing-read "Tag: " (zk--grep-tag-list))))
+  (interactive (list (completing-read "Insert tag: " (zk--grep-tag-list))))
   (insert tag))
 
 ;;; Find Dead Links and Unlinked Notes

@@ -1,13 +1,13 @@
 ;;; zk-desktop.el --- Desktop environment for zk   -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2022  Grant Rosson
+;; Copyright (C) 2022-2023  Grant Rosson
 
 ;; Author: Grant Rosson <https://github.com/localauthor>
 ;; Created: November 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20230502.2202
-;; Package-Commit: 6140c8bcfc52b35e6f74f6c8a21ed5660a589b8e
+;; Package-Version: 20230609.742
+;; Package-Commit: 6ba90de2b33a8717fb1e263fe6df7b3831d3bd8e
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "27.1")(zk "0.6")(zk-index "0.9"))
 

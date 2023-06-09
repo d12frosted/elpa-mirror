@@ -10,11 +10,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `cursory' (or `cursory.el'), and provides every other piece
 of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.3.0,
-released on 2022-09-04.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.0.0,
+released on 2023-06-09.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.4.0-dev.
+Current development target is 1.1.0-dev.
 
 ⁃ Package name (GNU ELPA): `cursory'
 ⁃ Official manual: <https://protesilaos.com/emacs/cursory>
@@ -24,6 +24,7 @@ Current development target is 0.4.0-dev.
     ⁃ GitHub: <https://github.com/protesilaos/cursory>
     ⁃ GitLab: <https://gitlab.com/protesilaos/cursory>
 ⁃ Mailing list: <https://lists.sr.ht/~protesilaos/cursory>
+⁃ Backronym: Cursor Usability Requires Styles Objectively Rated Yearlong
 
 Table of Contents
 ─────────────────
@@ -46,7 +47,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022 Free Software Foundation, Inc.
+  Copyright (C) 2022-2023 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -68,20 +69,25 @@ Table of Contents
   the style of the Emacs cursor on graphical terminals.  The intent is
   to allow the user to define preset configurations such as “block with
   slow blinking” or “bar with fast blinking” and set them on demand.
+  The use-case for such presets is to adapt to evolving interface
+  requirements and concomitant levels of expected comfort, such as in
+  the difference between writing and reading.
 
   The user option `cursory-presets' holds the presets.  The command
-  `cursory-set-preset' is used to select one among them.  Selection
-  supports minibuffer completion when there are multiple presets, else
-  sets the single preset outright.
+  `cursory-set-preset' is applies one among them.  The command supports
+  minibuffer completion when there are multiple presets, else sets the
+  single preset outright.
 
-  Presets consist of a list of properties that govern the cursor type in
-  the active and inactive windows, as well as cursor blinking variables.
+  Presets consist of an arbitrary symbol broadly described the style set
+  followed by a list of properties that govern the cursor type in the
+  active and inactive windows, as well as cursor blinking variables.
   They look like this:
 
   ┌────
   │ (bar
   │  :cursor-type (bar . 2)
   │  :cursor-in-non-selected-windows hollow
+  │  :blink-cursor-mode 1
   │  :blink-cursor-blinks 10
   │  :blink-cursor-interval 0.5
   │  :blink-cursor-delay 0.2)
@@ -96,14 +102,46 @@ Table of Contents
 
   A property of `:blink-cursor-mode' is also available.  It is a numeric
   value of either `1' or `-1' and is given to the function
-  `blink-cursor-mode' (`1' is to enable, `-1' is to disable the mode).
+  `blink-cursor-mode': `1' is to enable, `-1' is to disable the mode.
+
+  Presets can inherit from each other.  Using the special `:inherit'
+  property, like this:
+
+  ┌────
+  │ (setq cursory-presets
+  │       '(
+  │ 	;; Sample code here ...
+  │ 	(bar
+  │ 	 :cursor-type (bar . 2)
+  │ 	 :cursor-in-non-selected-windows hollow
+  │ 	 :blink-cursor-mode 1
+  │ 	 :blink-cursor-blinks 10
+  │ 	 :blink-cursor-interval 0.5
+  │ 	 :blink-cursor-delay 0.2)
+  │ 
+  │ 	(bar-no-other-window
+  │ 	 :inherit bar
+  │ 	 :cursor-in-non-selected-windows nil)
+  │ 	;; More sample code here ...
+  │ 	))
+  └────
+
+  In the above example, the `bar-no-other-window' is the same as `bar'
+  except for the value of `:cursor-in-non-selected-windows'.
+
+  The value given to the `:inherit' property corresponds to the name of
+  another named preset (unquoted).  This tells the relevant Cursory
+  functions to get the properties of that given preset and blend them
+  with those of the current one.  The properties of the current preset
+  take precedence over those of the inherited one, thus overriding them.
 
   A preset whose car is `t' is treated as the default option.  This
   makes it possible to specify multiple presets without duplicating
-  their properties.  The other presets beside `t' act as overrides of
-  the defaults and, as such, need only consist of the properties that
-  change from the default.  See the original value of this variable for
-  how that is done:
+  their properties.  Presets beside `t' act as overrides of the defaults
+  and, as such, need only consist of the properties that change from the
+  default.  In the case of an `:inherit', properties are first taken
+  from the inherited preset and then the default one.  See the original
+  value of this variable for how that is done:
 
   ┌────
   │ (defcustom cursory-presets
@@ -114,9 +152,15 @@ Table of Contents
   │     (bar
   │      :cursor-type (bar . 2)
   │      :blink-cursor-interval 0.5)
+  │     (bar-no-other-window
+  │      :inherit bar
+  │      :cursor-in-non-selected-windows nil)
   │     (underscore
   │      :cursor-type (hbar . 3)
   │      :blink-cursor-blinks 50)
+  │     (underscore-thin-other-window
+  │      :inherit underscore
+  │      :cursor-in-non-selected-windows (hbar . 1))
   │     (t ; the default values
   │      :cursor-type box
   │      :cursor-in-non-selected-windows hollow
@@ -139,11 +183,20 @@ Table of Contents
   globally.  The user can, however, limit the effect to the current
   buffer.  With interactive use, this is done by invoking the command
   with a universal prefix argument (`C-u' by default).  When called from
-  Lisp, the LOCAL argument must be non-nil.
+  Lisp, the LOCAL argument must be non-nil, thus:
+
+  ┌────
+  │ (cursory-set-preset 'bar :local)
+  └────
 
   The function `cursory-store-latest-preset' is used to save the last
   selected style in the `cursory-latest-state-file'.  The value can then
   be restored with the `cursory-restore-latest-preset' function.
+
+  [Sample configuration].
+
+
+[Sample configuration] See section 4
 
 
 3 Installation

@@ -4,9 +4,9 @@
 
 ;; Author: Alvaro Ramirez https://xenodium.com
 ;; URL: https://github.com/xenodium/chatgpt-shell
-;; Package-Version: 20230604.845
-;; Package-Commit: 406e05cbbc854b5db4a832459e576d59ffe2fb26
-;; Version: 0.40.1
+;; Package-Version: 20230609.704
+;; Package-Commit: c91e111f94117dd574b5c3d0945c9c0d87c0d839
+;; Version: 0.42.1
 ;; Package-Requires: ((emacs "27.1") (shell-maker "0.25.1"))
 
 ;; This package is free software; you can redistribute it and/or modify
@@ -355,19 +355,30 @@ Or nil if none."
     ;; Based on Daniel Gomez's parsing code from
     ;; https://github.com/xenodium/chatgpt-shell/issues/104
     (setq chatgpt-shell-system-prompts
-          (with-temp-buffer
-            (insert-file-contents csv-path)
-            (cdr
-             (mapcar
-              (lambda (row) (cons (car row) (cadr row)))
-              (mapcar
-               (lambda (line)
-                 (mapcar
-                  (lambda (s)
-                    (replace-regexp-in-string "\"" "" s))
-                  (split-string line ",")))
-               (split-string (buffer-string) "\n"))))))
-    (message "Loaded awesome-chatgpt-prompts")))
+          (seq-sort (lambda (rhs lhs)
+                      (string-lessp (car rhs)
+                                    (car lhs)))
+                    (with-temp-buffer
+                      (insert-file-contents csv-path)
+                      (cdr
+                       (mapcar
+                        (lambda (row)
+                          (cons (car row)
+                                (cadr row)))
+                        (mapcar
+                         (lambda (line)
+                           (mapcar
+                            (lambda (s)
+                              (replace-regexp-in-string "\"" "" s))
+                            (split-string line ",")))
+                         (seq-filter
+                          (lambda (line)
+                            (not (string-empty-p line)))
+                          (split-string (buffer-string) "\n"))))))))
+    (message "Loaded awesome-chatgpt-prompts")
+    (setq chatgpt-shell-system-prompt nil)
+    (chatgpt-shell--update-prompt)
+    (chatgpt-shell-interrupt nil)))
 
 (defun chatgpt-shell-swap-model-version ()
   "Swap model version from `chatgpt-shell-model-versions'."
