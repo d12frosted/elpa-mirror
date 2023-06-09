@@ -6,6 +6,8 @@ Extensions for VHDL Mode:
  - Navigate through instances in a module
  - Templates insertion via `hydra'
  - Improve `imenu': detect instances
+ - Time-stamp auto-configuration
+ - Automatically add VHDL keywords to `company-keywords` backend
 
  Experimental:
  - Tree-sitter powered `verilog-ts-mode` support

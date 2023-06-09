@@ -1,5 +1,5 @@
 (vhdl-ext .
-	  [(20230608 1930)
+	  [(20230609 1245)
 	   ((emacs
 	     (28 1))
 	    (eglot
@@ -13,9 +13,11 @@
 	    (hydra
 	     (0 15 0))
 	    (flycheck
-	     (33 -4)))
+	     (33 -4))
+	    (company
+	     (0 9 13)))
 	   "VHDL Extensions" tar
-	   ((:commit . "7785be558c5128ec05bc4ebb6e81f27841aba237")
+	   ((:commit . "a9174cac40c0843259231ea0022f4e579f9f08a6")
 	    (:authors
 	     ("Gonzalo Larumbe" . "gonzalomlarumbe@gmail.com"))
 	    (:maintainers

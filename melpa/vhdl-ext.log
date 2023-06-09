@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/vhdl-ext.git
 
 Updating /mnt/store/melpa/working/vhdl-ext/
-Checking out 7785be558c5128ec05bc4ebb6e81f27841aba237
+Checking out a9174cac40c0843259231ea0022f4e579f9f08a6
 Warning: vhdl-ext :files spec is equivalent to the default
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vhdl-ext/
-  to /tmp/vhdl-extQtxFKZ/vhdl-ext-20230608.1930
+  to /tmp/vhdl-extf03iPI/vhdl-ext-20230609.1245
     vhdl-ext-eglot.el -> vhdl-ext-eglot.el
     vhdl-ext-flycheck.el -> vhdl-ext-flycheck.el
     vhdl-ext-font-lock.el -> vhdl-ext-font-lock.el
@@ -15,21 +15,25 @@ Copying files (->) and directories (=>)
     vhdl-ext-lsp.el -> vhdl-ext-lsp.el
     vhdl-ext-nav.el -> vhdl-ext-nav.el
     vhdl-ext-template.el -> vhdl-ext-template.el
+    vhdl-ext-time-stamp.el -> vhdl-ext-time-stamp.el
     vhdl-ext-utils.el -> vhdl-ext-utils.el
     vhdl-ext.el -> vhdl-ext.el
-Created vhdl-ext-20230608.1930.tar containing:
-  vhdl-ext-20230608.1930/
-  vhdl-ext-20230608.1930/vhdl-ext-eglot.el
-  vhdl-ext-20230608.1930/vhdl-ext-flycheck.el
-  vhdl-ext-20230608.1930/vhdl-ext-font-lock.el
-  vhdl-ext-20230608.1930/vhdl-ext-imenu.el
-  vhdl-ext-20230608.1930/vhdl-ext-lsp.el
-  vhdl-ext-20230608.1930/vhdl-ext-nav.el
-  vhdl-ext-20230608.1930/vhdl-ext-pkg.el
-  vhdl-ext-20230608.1930/vhdl-ext-template.el
-  vhdl-ext-20230608.1930/vhdl-ext-utils.el
-  vhdl-ext-20230608.1930/vhdl-ext.el
-Built vhdl-ext in 6.443s, finished at 2023-06-09T09:15:09+0000
+Created vhdl-ext-20230609.1245.tar containing:
+  vhdl-ext-20230609.1245/
+  vhdl-ext-20230609.1245/vhdl-ext-eglot.el
+  vhdl-ext-20230609.1245/vhdl-ext-flycheck.el
+  vhdl-ext-20230609.1245/vhdl-ext-font-lock.el
+  vhdl-ext-20230609.1245/vhdl-ext-imenu.el
+  vhdl-ext-20230609.1245/vhdl-ext-lsp.el
+  vhdl-ext-20230609.1245/vhdl-ext-nav.el
+  vhdl-ext-20230609.1245/vhdl-ext-pkg.el
+  vhdl-ext-20230609.1245/vhdl-ext-template.el
+  vhdl-ext-20230609.1245/vhdl-ext-time-stamp.el
+  vhdl-ext-20230609.1245/vhdl-ext-utils.el
+  vhdl-ext-20230609.1245/vhdl-ext.el
+Built vhdl-ext in 3.915s, finished at 2023-06-09T13:02:59+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 620 Jun  9 09:15 packages/vhdl-ext-20230608.1930.entry
  72K -rw-r--r-- 1 root root 70K Jun  9 09:15 packages/vhdl-ext-20230608.1930.tar
+4.0K -rw-r--r-- 1 root root 650 Jun  9 13:02 packages/vhdl-ext-20230609.1245.entry
+ 80K -rw-r--r-- 1 root root 80K Jun  9 13:02 packages/vhdl-ext-20230609.1245.tar

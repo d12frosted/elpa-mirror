@@ -3,3 +3,20 @@ Fetcher: github
 Source:  https://github.com/emacs-gnuplot/gnuplot.git
 
 Updating /mnt/store/melpa/working/gnuplot/
+Checking out f99effa21f85a4c0963fec6a38e9112a8157d27e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gnuplot/
+  to /tmp/gnuplotzZ0DCk/gnuplot-20230323.1400
+    gnuplot.el -> gnuplot.el
+    gnuplot-gui.el -> gnuplot-gui.el
+    gnuplot-context.el -> gnuplot-context.el
+Created gnuplot-20230323.1400.tar containing:
+  gnuplot-20230323.1400/
+  gnuplot-20230323.1400/gnuplot-context.el
+  gnuplot-20230323.1400/gnuplot-gui.el
+  gnuplot-20230323.1400/gnuplot-pkg.el
+  gnuplot-20230323.1400/gnuplot.el
+Built gnuplot in 10.731s, finished at 2023-06-09T16:02:32+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  532 Jun  9 16:02 packages/gnuplot-20230323.1400.entry
+252K -rw-r--r-- 1 root root 250K Jun  9 16:02 packages/gnuplot-20230323.1400.tar
