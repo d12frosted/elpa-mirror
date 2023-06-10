@@ -1,7 +1,0 @@
-Package: org-re-reveal-ref
-Fetcher: gitlab
-Source:  https://gitlab.com/oer/org-re-reveal-ref.git
-
-Updating /mnt/store/melpa/working/org-re-reveal-ref/
-Checking out ea9661864d5fbef87b12b78f516c13a40c683f24
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

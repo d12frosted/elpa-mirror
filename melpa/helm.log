@@ -3,5 +3,5 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm/
-Checking out eeab712b274362924520b110d46c826f22300947
+Checking out c04b867ab5d0bb6d0ad52e52c7a5319e25da6358
 Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
