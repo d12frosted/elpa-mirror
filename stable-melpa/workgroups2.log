@@ -4,19 +4,4 @@ Source:  https://github.com/pashinin/workgroups2.git
 
 Updating /mnt/store/melpa/working/workgroups2/
 Checking out aff9d76b7be5eed33f30be2fabf111818749cbd5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/workgroups2/
-  to /tmp/workgroups234epaU/workgroups2-20230328.1331
-  ! src/workgroups2-sdk.el -> workgroups2-sdk.el
-  ! src/workgroups2-support.el -> workgroups2-support.el
-  ! src/workgroups2.el -> workgroups2.el
-Created workgroups2-20230328.1331.tar containing:
-  workgroups2-20230328.1331/
-  workgroups2-20230328.1331/workgroups2-pkg.el
-  workgroups2-20230328.1331/workgroups2-sdk.el
-  workgroups2-20230328.1331/workgroups2-support.el
-  workgroups2-20230328.1331/workgroups2.el
-Built workgroups2 in 4.386s, finished at 2023-06-09T17:01:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  551 Jun  9 17:01 packages/workgroups2-20230328.1331.entry
-112K -rw-r--r-- 1 root root 110K Jun  9 17:01 packages/workgroups2-20230328.1331.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/2bruh4me/sweet-theme.git
 
 Updating /mnt/store/melpa/working/sweet-theme/
 Checking out ccbfdb6a17e25ab18a0b64101675bc1dfef44006
-Built sweet-theme in 4.215s, finished at 2023-06-09T16:52:46+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 48K Jun  9 16:52 packages/sweet-theme-20200708.1202.el
-4.0K -rw-r--r-- 1 root root 358 Jun  9 16:52 packages/sweet-theme-20200708.1202.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

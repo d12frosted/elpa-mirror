@@ -4,33 +4,4 @@ Source:  https://github.com/danielfm/smudge.git
 
 Updating /mnt/store/melpa/working/smudge/
 Checking out 808f0ef172a80cf4a8ae6d58dfe385d28ecde28e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/smudge/
-  to /tmp/smudgebHeerd/smudge-20210326.2222
-    smudge-api.el -> smudge-api.el
-    smudge-apple.el -> smudge-apple.el
-    smudge-connect.el -> smudge-connect.el
-    smudge-controller.el -> smudge-controller.el
-    smudge-dbus.el -> smudge-dbus.el
-    smudge-device-select.el -> smudge-device-select.el
-    smudge-playlist.el -> smudge-playlist.el
-    smudge-remote.el -> smudge-remote.el
-    smudge-track.el -> smudge-track.el
-    smudge.el -> smudge.el
-Created smudge-20210326.2222.tar containing:
-  smudge-20210326.2222/
-  smudge-20210326.2222/smudge-api.el
-  smudge-20210326.2222/smudge-apple.el
-  smudge-20210326.2222/smudge-connect.el
-  smudge-20210326.2222/smudge-controller.el
-  smudge-20210326.2222/smudge-dbus.el
-  smudge-20210326.2222/smudge-device-select.el
-  smudge-20210326.2222/smudge-pkg.el
-  smudge-20210326.2222/smudge-playlist.el
-  smudge-20210326.2222/smudge-remote.el
-  smudge-20210326.2222/smudge-track.el
-  smudge-20210326.2222/smudge.el
-Built smudge in 7.312s, finished at 2023-06-09T16:49:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  322 Jun  9 16:49 packages/smudge-20210326.2222.entry
-100K -rw-r--r-- 1 root root 100K Jun  9 16:49 packages/smudge-20210326.2222.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

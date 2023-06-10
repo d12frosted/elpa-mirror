@@ -4,7 +4,4 @@ Source:  https://github.com/clojure-emacs/sayid.git
 
 Updating /mnt/store/melpa/working/sayid/
 Checking out 879aff586336a0ec4d46c0ed4720fb1de22082bd
-Built sayid in 4.879s, finished at 2023-06-09T16:46:12+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 40K Jun  9 16:46 packages/sayid-20220101.1357.el
-4.0K -rw-r--r-- 1 root root 425 Jun  9 16:46 packages/sayid-20220101.1357.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,37 +4,4 @@ Source:  https://github.com/Crandel/tempel-collection.git
 
 Updating /mnt/store/melpa/working/tempel-collection/
 Checking out 8903f03227d3c3b83d31e6bb095743c350bcb578
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tempel-collection/
-  to /tmp/tempel-collectiongcnel8/tempel-collection-20230504.428
-    tempel-collection.el -> tempel-collection.el
-    templates => templates
-Created tempel-collection-20230504.428.tar containing:
-  tempel-collection-20230504.428/
-  tempel-collection-20230504.428/tempel-collection-pkg.el
-  tempel-collection-20230504.428/tempel-collection.el
-  tempel-collection-20230504.428/templates/
-  tempel-collection-20230504.428/templates/css-base.eld
-  tempel-collection-20230504.428/templates/emacs-lisp.eld
-  tempel-collection-20230504.428/templates/eshell.eld
-  tempel-collection-20230504.428/templates/fundamental.eld
-  tempel-collection-20230504.428/templates/go.eld
-  tempel-collection-20230504.428/templates/html.eld
-  tempel-collection-20230504.428/templates/java.eld
-  tempel-collection-20230504.428/templates/latex.eld
-  tempel-collection-20230504.428/templates/lisp.eld
-  tempel-collection-20230504.428/templates/markdown.eld
-  tempel-collection-20230504.428/templates/nix.eld
-  tempel-collection-20230504.428/templates/org.eld
-  tempel-collection-20230504.428/templates/prog.eld
-  tempel-collection-20230504.428/templates/python-base.eld
-  tempel-collection-20230504.428/templates/rst.eld
-  tempel-collection-20230504.428/templates/ruby-base.eld
-  tempel-collection-20230504.428/templates/rust.eld
-  tempel-collection-20230504.428/templates/sh-base.eld
-  tempel-collection-20230504.428/templates/texinfo.eld
-  tempel-collection-20230504.428/templates/text.eld
-Built tempel-collection in 4.078s, finished at 2023-06-09T16:53:50+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 622 Jun  9 16:53 packages/tempel-collection-20230504.428.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 16:53 packages/tempel-collection-20230504.428.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

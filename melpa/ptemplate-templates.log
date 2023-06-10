@@ -4,45 +4,4 @@ Source:  https://github.com/nbfalcon/ptemplate-templates.git
 
 Updating /mnt/store/melpa/working/ptemplate-templates/
 Checking out 3788387973dde3101f9a3f2064572be033c59ad6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ptemplate-templates/
-  to /tmp/ptemplate-templatesBP7UJO/ptemplate-templates-20210324.1443
-    ptemplate-templates.el -> ptemplate-templates.el
-    rsc => rsc
-Created ptemplate-templates-20210324.1443.tar containing:
-  ptemplate-templates-20210324.1443/
-  ptemplate-templates-20210324.1443/ptemplate-templates-pkg.el
-  ptemplate-templates-20210324.1443/ptemplate-templates.el
-  ptemplate-templates-20210324.1443/rsc/
-  ptemplate-templates-20210324.1443/rsc/project-templates/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/.ptemplate.el
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/CMakeLists.txt.autoyas
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/gui/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/gui/Application.cpp
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/gui/Application.hpp
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/main.cpp
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/.ptemplate.el
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/README.md
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/include/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/include/.gitkeep
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/meson.build.autoyas
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/src/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/src/main.c.yas
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/.ptemplate.el
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/Cask.autoyas
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/README.md
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/.ptemplate.el
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/COPYING.txt
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/README.md
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/src.el.yas
-Built ptemplate-templates in 4.658s, finished at 2023-06-09T16:41:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 496 Jun  9 16:41 packages/ptemplate-templates-20210324.1443.entry
- 72K -rw-r--r-- 1 root root 70K Jun  9 16:41 packages/ptemplate-templates-20210324.1443.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/jcs-elpa/reveal-in-folder.git
 
 Updating /mnt/store/melpa/working/reveal-in-folder/
 Checking out 7b2b02356b75e224a0414995af95d45786ee6f7d
-Built reveal-in-folder in 5.328s, finished at 2023-06-09T16:44:46+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.1K Jun  9 16:44 packages/reveal-in-folder-20220704.659.el
-4.0K -rw-r--r-- 1 root root  570 Jun  9 16:44 packages/reveal-in-folder-20220704.659.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

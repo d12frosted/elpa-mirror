@@ -4,7 +4,4 @@ Source:  https://github.com/jozefg/wiki-summary.el.git
 
 Updating /mnt/store/melpa/working/wiki-summary/
 Checking out fa41ab6e50b3b80e54148af9d4bac18fd0405000
-Built wiki-summary in 4.102s, finished at 2023-06-09T17:00:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.1K Jun  9 17:00 packages/wiki-summary-20181010.1824.el
-4.0K -rw-r--r-- 1 root root  387 Jun  9 17:00 packages/wiki-summary-20181010.1824.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

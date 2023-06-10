@@ -4,19 +4,4 @@ Source:  https://github.com/csantosb/rcirc-alert.git
 
 Updating /mnt/store/melpa/working/rcirc-alert/
 Checking out 0adf8ff9c47023fec578f678424be62b0f49057f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/rcirc-alert/
-  to /tmp/rcirc-alertWvD4xR/rcirc-alert-20141127.1047
-    rcirc-alert.el -> rcirc-alert.el
-    xfrp_find_replace_pairs.el -> xfrp_find_replace_pairs.el
-    rcirc-alert.sh -> rcirc-alert.sh
-Created rcirc-alert-20141127.1047.tar containing:
-  rcirc-alert-20141127.1047/
-  rcirc-alert-20141127.1047/rcirc-alert-pkg.el
-  rcirc-alert-20141127.1047/rcirc-alert.el
-  rcirc-alert-20141127.1047/rcirc-alert.sh
-  rcirc-alert-20141127.1047/xfrp_find_replace_pairs.el
-Built rcirc-alert in 5.698s, finished at 2023-06-09T16:43:09+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 309 Jun  9 16:43 packages/rcirc-alert-20141127.1047.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 16:43 packages/rcirc-alert-20141127.1047.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

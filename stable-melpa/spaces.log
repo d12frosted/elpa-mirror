@@ -4,7 +4,4 @@ Source:  https://github.com/chumpage/chumpy-windows.git
 
 Updating /mnt/store/melpa/working/spaces/
 Checking out 6bdb51e9a346907d60a9625f6180bddd06be6674
-Built spaces in 4.024s, finished at 2023-06-09T16:50:56+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.6K Jun  9 16:50 packages/spaces-20170809.2208.el
-4.0K -rw-r--r-- 1 root root  363 Jun  9 16:50 packages/spaces-20170809.2208.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

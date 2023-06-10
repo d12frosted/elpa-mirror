@@ -4,17 +4,4 @@ Source:  https://github.com/benma/visual-regexp-steroids.el.git
 
 Updating /mnt/store/melpa/working/visual-regexp-steroids/
 Checking out a6420b25ec0fbba43bf57875827092e1196d8a9e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/visual-regexp-steroids/
-  to /tmp/visual-regexp-steroidscZLqOr/visual-regexp-steroids-20170222.253
-    visual-regexp-steroids.el -> visual-regexp-steroids.el
-    regexp.py -> regexp.py
-Created visual-regexp-steroids-20170222.253.tar containing:
-  visual-regexp-steroids-20170222.253/
-  visual-regexp-steroids-20170222.253/regexp.py
-  visual-regexp-steroids-20170222.253/visual-regexp-steroids-pkg.el
-  visual-regexp-steroids-20170222.253/visual-regexp-steroids.el
-Built visual-regexp-steroids in 4.149s, finished at 2023-06-09T16:59:10+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 542 Jun  9 16:59 packages/visual-regexp-steroids-20170222.253.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 16:59 packages/visual-regexp-steroids-20170222.253.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

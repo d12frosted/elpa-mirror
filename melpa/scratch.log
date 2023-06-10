@@ -4,7 +4,4 @@ Source:  https://codeberg.org/emacs-weirdware/scratch.git
 
 Updating /mnt/store/melpa/working/scratch/
 Checking out f000648c9663833a76a8de9b1e78c99a9d698e48
-Built scratch in 5.580s, finished at 2023-06-09T16:46:28+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 8.0K Jun  9 16:46 packages/scratch-20220319.1705.el
-4.0K -rw-r--r-- 1 root root  424 Jun  9 16:46 packages/scratch-20220319.1705.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

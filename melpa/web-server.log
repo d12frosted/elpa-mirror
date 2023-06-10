@@ -4,27 +4,4 @@ Source:  https://github.com/eschulte/emacs-web-server.git
 
 Updating /mnt/store/melpa/working/web-server/
 Checking out 6357a1c2d1718778503f7ee0909585094117525b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/web-server/
-  to /tmp/web-serverZr794L/web-server-20210708.2242
-    web-server-status-codes.el -> web-server-status-codes.el
-    web-server.el -> web-server.el
-  ! doc/doclicense.texi -> doclicense.texi
-  ! doc/gpl.texi -> gpl.texi
-  ! doc/web-server.texi -> web-server.texi
-Generating /tmp/web-serverZr794L/web-server-20210708.2242/doclicense.info
-Generating /tmp/web-serverZr794L/web-server-20210708.2242/gpl.info
-Generating /tmp/web-serverZr794L/web-server-20210708.2242/web-server.info
-Created web-server-20210708.2242.tar containing:
-  web-server-20210708.2242/
-  web-server-20210708.2242/dir
-  web-server-20210708.2242/doclicense.info
-  web-server-20210708.2242/gpl.info
-  web-server-20210708.2242/web-server-pkg.el
-  web-server-20210708.2242/web-server-status-codes.el
-  web-server-20210708.2242/web-server.el
-  web-server-20210708.2242/web-server.info
-Built web-server in 22.029s, finished at 2023-06-09T17:00:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  506 Jun  9 17:00 packages/web-server-20210708.2242.entry
-212K -rw-r--r-- 1 root root 210K Jun  9 17:00 packages/web-server-20210708.2242.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

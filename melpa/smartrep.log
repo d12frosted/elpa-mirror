@@ -4,7 +4,4 @@ Source:  https://github.com/myuhe/smartrep.el.git
 
 Updating /mnt/store/melpa/working/smartrep/
 Checking out f0ff5a6d7b8603603598ae3045c98b011e58d86e
-Built smartrep in 5.637s, finished at 2023-06-09T16:49:24+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.6K Jun  9 16:49 packages/smartrep-20150509.230.el
-4.0K -rw-r--r-- 1 root root  373 Jun  9 16:49 packages/smartrep-20150509.230.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

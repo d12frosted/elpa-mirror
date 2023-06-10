@@ -4,21 +4,4 @@ Source:  https://github.com/zk-phi/sublimity.git
 
 Updating /mnt/store/melpa/working/sublimity/
 Checking out 8e2ffc4d62194106130014531e7b54fc9b4b9e6c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sublimity/
-  to /tmp/sublimityXC3tNU/sublimity-20200905.1730
-    sublimity-attractive.el -> sublimity-attractive.el
-    sublimity-map.el -> sublimity-map.el
-    sublimity-scroll.el -> sublimity-scroll.el
-    sublimity.el -> sublimity.el
-Created sublimity-20200905.1730.tar containing:
-  sublimity-20200905.1730/
-  sublimity-20200905.1730/sublimity-attractive.el
-  sublimity-20200905.1730/sublimity-map.el
-  sublimity-20200905.1730/sublimity-pkg.el
-  sublimity-20200905.1730/sublimity-scroll.el
-  sublimity-20200905.1730/sublimity.el
-Built sublimity in 4.203s, finished at 2023-06-09T16:52:23+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 346 Jun  9 16:52 packages/sublimity-20200905.1730.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 16:52 packages/sublimity-20200905.1730.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

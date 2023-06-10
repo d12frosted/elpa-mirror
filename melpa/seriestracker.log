@@ -4,7 +4,4 @@ Source:  https://github.com/MaximeWack/seriestracker.git
 
 Updating /mnt/store/melpa/working/seriestracker/
 Checking out 1b4fe12d2fff15e3646a2d7cbe528ad1f95c4f19
-Built seriestracker in 7.424s, finished at 2023-06-09T16:47:07+0000
- ✓ Success:
- 52K -rw-r--r-- 1 root root 50K Jun  9 16:47 packages/seriestracker-20220731.2330.el
-4.0K -rw-r--r-- 1 root root 491 Jun  9 16:47 packages/seriestracker-20220731.2330.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

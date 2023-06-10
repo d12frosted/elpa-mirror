@@ -4,7 +4,4 @@ Source:  https://github.com/rags/toggle-test.git
 
 Updating /mnt/store/melpa/working/toggle-test/
 Checking out a0b64834101c2b8b24da365baea1d36e57b069b5
-Built toggle-test in 7.277s, finished at 2023-06-09T16:55:09+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Jun  9 16:55 packages/toggle-test-20140723.537.el
-4.0K -rw-r--r-- 1 root root  515 Jun  9 16:55 packages/toggle-test-20140723.537.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

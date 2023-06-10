@@ -4,7 +4,4 @@ Source:  https://github.com/zonuexe/right-click-context.git
 
 Updating /mnt/store/melpa/working/right-click-context/
 Checking out c3c9d36ffbc9fb2bc7c2c4b75291dbcdb1c5f531
-Built right-click-context in 3.970s, finished at 2023-06-09T16:44:57+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.2K Jun  9 16:44 packages/right-click-context-20210519.1713.el
-4.0K -rw-r--r-- 1 root root  532 Jun  9 16:44 packages/right-click-context-20210519.1713.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,17 +4,4 @@ Source:  https://github.com/emacs-circe/circe.git
 
 Updating /mnt/store/melpa/working/tracking/
 Checking out 710f057fedae6e9b820cce9336fef24b7d057e4c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tracking/
-  to /tmp/trackingKfuuhe/tracking-20220421.1956
-    tracking.el -> tracking.el
-    shorten.el -> shorten.el
-Created tracking-20220421.1956.tar containing:
-  tracking-20220421.1956/
-  tracking-20220421.1956/shorten.el
-  tracking-20220421.1956/tracking-pkg.el
-  tracking-20220421.1956/tracking.el
-Built tracking in 4.274s, finished at 2023-06-09T16:55:33+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 393 Jun  9 16:55 packages/tracking-20220421.1956.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 16:55 packages/tracking-20220421.1956.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,19 +4,4 @@ Source:  https://github.com/xuchunyang/web-search.el.git
 
 Updating /mnt/store/melpa/working/web-search/
 Checking out a22cbdc663a1895d5a5b69de91e1e3b9eb64b92f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/web-search/
-  to /tmp/web-searchdYTCVb/web-search-20190620.602
-    web-search.el -> web-search.el
-    web-search -> web-search
-    web-search-completion.bash -> web-search-completion.bash
-Created web-search-20190620.602.tar containing:
-  web-search-20190620.602/
-  web-search-20190620.602/web-search
-  web-search-20190620.602/web-search-completion.bash
-  web-search-20190620.602/web-search-pkg.el
-  web-search-20190620.602/web-search.el
-Built web-search in 4.890s, finished at 2023-06-09T17:00:03+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 449 Jun  9 17:00 packages/web-search-20190620.602.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 17:00 packages/web-search-20190620.602.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

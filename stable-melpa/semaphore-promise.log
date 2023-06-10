@@ -4,7 +4,4 @@ Source:  https://github.com/webnf/semaphore.el.git
 
 Updating /mnt/store/melpa/working/semaphore-promise/
 Checking out 9cdfef91cc0293371af549ad41027aa5b73f30a4
-Built semaphore-promise in 3.422s, finished at 2023-06-09T16:46:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Jun  9 16:46 packages/semaphore-promise-20190607.2115.el
-4.0K -rw-r--r-- 1 root root  553 Jun  9 16:46 packages/semaphore-promise-20190607.2115.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

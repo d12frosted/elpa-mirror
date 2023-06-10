@@ -4,7 +4,4 @@ Source:  https://github.com/saf-dmitry/taskpaper-mode.git
 
 Updating /mnt/store/melpa/working/taskpaper-mode/
 Checking out 3dc0a7176462964fa6a8485667a39fc726d74755
-Built taskpaper-mode in 5.034s, finished at 2023-06-09T16:53:37+0000
- ✓ Success:
-224K -rw-r--r-- 1 root root 222K Jun  9 16:53 packages/taskpaper-mode-20230518.1937.el
-4.0K -rw-r--r-- 1 root root  520 Jun  9 16:53 packages/taskpaper-mode-20230518.1937.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

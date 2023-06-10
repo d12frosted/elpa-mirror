@@ -4,7 +4,4 @@ Source:  https://github.com/muffinmad/emacs-vc-hgcmd.git
 
 Updating /mnt/store/melpa/working/vc-hgcmd/
 Checking out d044448965d31ca8214f8bca48487e4d9b9d9a0f
-Built vc-hgcmd in 4.319s, finished at 2023-06-09T16:58:31+0000
- ✓ Success:
- 68K -rw-r--r-- 1 root root 65K Jun  9 16:58 packages/vc-hgcmd-20211021.1704.el
-4.0K -rw-r--r-- 1 root root 475 Jun  9 16:58 packages/vc-hgcmd-20211021.1704.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

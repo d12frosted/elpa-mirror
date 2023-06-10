@@ -4,17 +4,4 @@ Source:  https://github.com/emacsorphanage/pyimpsort.git
 
 Updating /mnt/store/melpa/working/pyimpsort/
 Checking out d5c61d70896b642646dfd3c809c06174ae086c1a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pyimpsort/
-  to /tmp/pyimpsortN7B8Fo/pyimpsort-20160130.453
-    pyimpsort.el -> pyimpsort.el
-    pyimpsort.py -> pyimpsort.py
-Created pyimpsort-20160130.453.tar containing:
-  pyimpsort-20160130.453/
-  pyimpsort-20160130.453/pyimpsort-pkg.el
-  pyimpsort-20160130.453/pyimpsort.el
-  pyimpsort-20160130.453/pyimpsort.py
-Built pyimpsort in 3.643s, finished at 2023-06-09T16:41:47+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 474 Jun  9 16:41 packages/pyimpsort-20160130.453.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 16:41 packages/pyimpsort-20160130.453.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

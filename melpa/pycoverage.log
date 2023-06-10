@@ -4,21 +4,4 @@ Source:  https://github.com/mattharrison/pycoverage.el.git
 
 Updating /mnt/store/melpa/working/pycoverage/
 Checking out 3c69ed312121368f1b24cc04d54a29ce4ed4f743
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pycoverage/
-  to /tmp/pycoverageI19fh2/pycoverage-20200513.2047
-    pycoverage.el -> pycoverage.el
-  ! cov2emacs/bin/cov2emacs -> cov2emacs
-  ! cov2emacs/cov2emacslib/__init__.py -> __init__.py
-  ! cov2emacs/cov2emacslib/meta.py -> meta.py
-Created pycoverage-20200513.2047.tar containing:
-  pycoverage-20200513.2047/
-  pycoverage-20200513.2047/__init__.py
-  pycoverage-20200513.2047/cov2emacs
-  pycoverage-20200513.2047/meta.py
-  pycoverage-20200513.2047/pycoverage-pkg.el
-  pycoverage-20200513.2047/pycoverage.el
-Built pycoverage in 3.098s, finished at 2023-06-09T16:41:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 427 Jun  9 16:41 packages/pycoverage-20200513.2047.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 16:41 packages/pycoverage-20200513.2047.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

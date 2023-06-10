@@ -4,21 +4,4 @@ Source:  https://github.com/zephir-lang/zephir-mode.git
 
 Updating /mnt/store/melpa/working/zephir-mode/
 Checking out 4e9618b77dff67c1c7b6fff78605a62311db88b8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/zephir-mode/
-  to /tmp/zephir-modeFNFn3g/zephir-mode-20200417.830
-    zephir-face.el -> zephir-face.el
-    zephir-indent.el -> zephir-indent.el
-    zephir-mode.el -> zephir-mode.el
-    zephir.el -> zephir.el
-Created zephir-mode-20200417.830.tar containing:
-  zephir-mode-20200417.830/
-  zephir-mode-20200417.830/zephir-face.el
-  zephir-mode-20200417.830/zephir-indent.el
-  zephir-mode-20200417.830/zephir-mode-pkg.el
-  zephir-mode-20200417.830/zephir-mode.el
-  zephir-mode-20200417.830/zephir.el
-Built zephir-mode in 5.232s, finished at 2023-06-09T17:02:57+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 524 Jun  9 17:02 packages/zephir-mode-20200417.830.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 17:02 packages/zephir-mode-20200417.830.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

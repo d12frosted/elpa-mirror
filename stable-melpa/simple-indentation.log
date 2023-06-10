@@ -4,25 +4,4 @@ Source:  https://github.com/semenInRussia/simple-indentation.el.git
 
 Updating /mnt/store/melpa/working/simple-indentation/
 Checking out 74efe02aa6c1612ae9b32b88f97b7d6d309726b2
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/simple-indentation/
-  to /tmp/simple-indentationWUG3OE/simple-indentation-20221127.1232
-    simple-indentation-hooks.el -> simple-indentation-hooks.el
-    simple-indentation-lib.el -> simple-indentation-lib.el
-    simple-indentation-namespace.el -> simple-indentation-namespace.el
-    simple-indentation-rules.el -> simple-indentation-rules.el
-    simple-indentation-utils.el -> simple-indentation-utils.el
-    simple-indentation.el -> simple-indentation.el
-Created simple-indentation-20221127.1232.tar containing:
-  simple-indentation-20221127.1232/
-  simple-indentation-20221127.1232/simple-indentation-hooks.el
-  simple-indentation-20221127.1232/simple-indentation-lib.el
-  simple-indentation-20221127.1232/simple-indentation-namespace.el
-  simple-indentation-20221127.1232/simple-indentation-pkg.el
-  simple-indentation-20221127.1232/simple-indentation-rules.el
-  simple-indentation-20221127.1232/simple-indentation-utils.el
-  simple-indentation-20221127.1232/simple-indentation.el
-Built simple-indentation in 4.144s, finished at 2023-06-09T16:48:17+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 563 Jun  9 16:48 packages/simple-indentation-20221127.1232.entry
- 80K -rw-r--r-- 1 root root 80K Jun  9 16:48 packages/simple-indentation-20221127.1232.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

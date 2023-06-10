@@ -4,7 +4,4 @@ Source:  https://gitlab.com/jabranham/system-packages.git
 
 Updating /mnt/store/melpa/working/system-packages/
 Checking out c087d2c6e598f85fc2760324dce20104ea442fa3
-Built system-packages in 5.478s, finished at 2023-06-09T16:53:15+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  9 16:53 packages/system-packages-20220409.1023.el
-4.0K -rw-r--r-- 1 root root 460 Jun  9 16:53 packages/system-packages-20220409.1023.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

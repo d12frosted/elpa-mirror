@@ -4,17 +4,4 @@ Source:  https://github.com/vspinu/sesman.git
 
 Updating /mnt/store/melpa/working/sesman/
 Checking out e0f555f963c9f02f8e4a50e06fc353eb4c15ee77
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sesman/
-  to /tmp/sesman6lglgz/sesman-20210901.1134
-    sesman-browser.el -> sesman-browser.el
-    sesman.el -> sesman.el
-Created sesman-20210901.1134.tar containing:
-  sesman-20210901.1134/
-  sesman-20210901.1134/sesman-browser.el
-  sesman-20210901.1134/sesman-pkg.el
-  sesman-20210901.1134/sesman.el
-Built sesman in 4.539s, finished at 2023-06-09T16:47:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 323 Jun  9 16:47 packages/sesman-20210901.1134.entry
- 72K -rw-r--r-- 1 root root 70K Jun  9 16:47 packages/sesman-20210901.1134.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,17 +4,4 @@ Source:  https://github.com/Wilfred/suggest.el.git
 
 Updating /mnt/store/melpa/working/suggest/
 Checking out 41782f0d36c346670011f927d8fcd93ec75ed783
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/suggest/
-  to /tmp/suggest7qlyzh/suggest-20190807.851
-    suggest-bench.el -> suggest-bench.el
-    suggest.el -> suggest.el
-Created suggest-20190807.851.tar containing:
-  suggest-20190807.851/
-  suggest-20190807.851/suggest-bench.el
-  suggest-20190807.851/suggest-pkg.el
-  suggest-20190807.851/suggest.el
-Built suggest in 4.145s, finished at 2023-06-09T16:52:29+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 561 Jun  9 16:52 packages/suggest-20190807.851.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 16:52 packages/suggest-20190807.851.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/twlz0ne/separedit.el.git
 
 Updating /mnt/store/melpa/working/separedit/
 Checking out 9f5027a9a9c2e67562bc39839415d7c7f318e9a8
-Built separedit in 6.618s, finished at 2023-06-09T16:47:05+0000
- ✓ Success:
- 92K -rw-r--r-- 1 root root 92K Jun  9 16:47 packages/separedit-20230513.306.el
-4.0K -rw-r--r-- 1 root root 559 Jun  9 16:47 packages/separedit-20230513.306.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

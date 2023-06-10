@@ -4,7 +4,4 @@ Source:  https://github.com/emacsorphanage/sound-wav.git
 
 Updating /mnt/store/melpa/working/sound-wav/
 Checking out 8a18f8a62f4fdde80dfa069986aa959091a42472
-Built sound-wav in 11.815s, finished at 2023-06-09T16:50:40+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Jun  9 16:50 packages/sound-wav-20200323.728.el
-4.0K -rw-r--r-- 1 root root  436 Jun  9 16:50 packages/sound-wav-20200323.728.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

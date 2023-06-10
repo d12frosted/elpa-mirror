@@ -4,17 +4,4 @@ Source:  https://github.com/emacs-elsa/trinary-logic.git
 
 Updating /mnt/store/melpa/working/trinary/
 Checking out d4869d260f22d13a9a71327a6d40edc6980d022e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/trinary/
-  to /tmp/trinaryPtXYzY/trinary-20230301.2044
-    Elsafile.el -> Elsafile.el
-    trinary.el -> trinary.el
-Created trinary-20230301.2044.tar containing:
-  trinary-20230301.2044/
-  trinary-20230301.2044/Elsafile.el
-  trinary-20230301.2044/trinary-pkg.el
-  trinary-20230301.2044/trinary.el
-Built trinary in 7.234s, finished at 2023-06-09T16:56:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 423 Jun  9 16:56 packages/trinary-20230301.2044.entry
- 12K -rw-r--r-- 1 root root 10K Jun  9 16:56 packages/trinary-20230301.2044.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

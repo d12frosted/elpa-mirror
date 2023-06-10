@@ -4,19 +4,4 @@ Source:  https://github.com/progfolio/wordel.git
 
 Updating /mnt/store/melpa/working/wordel/
 Checking out dd87d7c1b66eaceb6ebedbbff6ab6d8523004de2
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/wordel/
-  to /tmp/wordelHbKGvo/wordel-20230528.1902
-    wordel.el -> wordel.el
-    words => words
-Created wordel-20230528.1902.tar containing:
-  wordel-20230528.1902/
-  wordel-20230528.1902/wordel-pkg.el
-  wordel-20230528.1902/wordel.el
-  wordel-20230528.1902/words/
-  wordel-20230528.1902/words/scrabble
-  wordel-20230528.1902/words/wordle
-Built wordel in 3.624s, finished at 2023-06-09T17:01:15+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  470 Jun  9 17:01 packages/wordel-20230528.1902.entry
-680K -rw-r--r-- 1 root root 680K Jun  9 17:01 packages/wordel-20230528.1902.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

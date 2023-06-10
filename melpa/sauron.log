@@ -4,43 +4,4 @@ Source:  https://github.com/djcb/sauron.git
 
 Updating /mnt/store/melpa/working/sauron/
 Checking out 5daade4836da5b1b2ab26d84128d6c38328a5d52
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sauron/
-  to /tmp/sauron7Q9a9y/sauron-20201015.836
-    sauron-ams-org.el -> sauron-ams-org.el
-    sauron-appt.el -> sauron-appt.el
-    sauron-compilation.el -> sauron-compilation.el
-    sauron-dbus.el -> sauron-dbus.el
-    sauron-elfeed.el -> sauron-elfeed.el
-    sauron-erc.el -> sauron-erc.el
-    sauron-identica.el -> sauron-identica.el
-    sauron-jabber.el -> sauron-jabber.el
-    sauron-mu4e.el -> sauron-mu4e.el
-    sauron-notifications.el -> sauron-notifications.el
-    sauron-org.el -> sauron-org.el
-    sauron-tail.el -> sauron-tail.el
-    sauron-twittering.el -> sauron-twittering.el
-    sauron-zeroconf.el -> sauron-zeroconf.el
-    sauron.el -> sauron.el
-Created sauron-20201015.836.tar containing:
-  sauron-20201015.836/
-  sauron-20201015.836/sauron-ams-org.el
-  sauron-20201015.836/sauron-appt.el
-  sauron-20201015.836/sauron-compilation.el
-  sauron-20201015.836/sauron-dbus.el
-  sauron-20201015.836/sauron-elfeed.el
-  sauron-20201015.836/sauron-erc.el
-  sauron-20201015.836/sauron-identica.el
-  sauron-20201015.836/sauron-jabber.el
-  sauron-20201015.836/sauron-mu4e.el
-  sauron-20201015.836/sauron-notifications.el
-  sauron-20201015.836/sauron-org.el
-  sauron-20201015.836/sauron-pkg.el
-  sauron-20201015.836/sauron-tail.el
-  sauron-20201015.836/sauron-twittering.el
-  sauron-20201015.836/sauron-zeroconf.el
-  sauron-20201015.836/sauron.el
-Built sauron in 5.234s, finished at 2023-06-09T16:46:05+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  313 Jun  9 16:46 packages/sauron-20201015.836.entry
-112K -rw-r--r-- 1 root root 110K Jun  9 16:46 packages/sauron-20201015.836.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

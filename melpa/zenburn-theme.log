@@ -4,7 +4,4 @@ Source:  https://github.com/bbatsov/zenburn-emacs.git
 
 Updating /mnt/store/melpa/working/zenburn-theme/
 Checking out 8a1f9d28f503615e5d9b3eac59a2f3c14e75fc20
-Built zenburn-theme in 5.555s, finished at 2023-06-09T17:02:55+0000
- ✓ Success:
-104K -rw-r--r-- 1 root root 102K Jun  9 17:02 packages/zenburn-theme-20230315.1004.el
-4.0K -rw-r--r-- 1 root root  397 Jun  9 17:02 packages/zenburn-theme-20230315.1004.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

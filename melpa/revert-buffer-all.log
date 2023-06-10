@@ -4,7 +4,4 @@ Source:  https://codeberg.org/ideasman42/emacs-revert-buffer-all.git
 
 Updating /mnt/store/melpa/working/revert-buffer-all/
 Checking out 08e90d2d75f5d5900ca2a0d2670592bcf2b2d68f
-Built revert-buffer-all in 5.351s, finished at 2023-06-09T16:44:49+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.9K Jun  9 16:44 packages/revert-buffer-all-20230109.536.el
-4.0K -rw-r--r-- 1 root root  461 Jun  9 16:44 packages/revert-buffer-all-20230109.536.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

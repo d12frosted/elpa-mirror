@@ -4,21 +4,4 @@ Source:  https://github.com/jtkDvlp/web-mode-edit-element.git
 
 Updating /mnt/store/melpa/working/web-mode-edit-element/
 Checking out ad5d7e4dc2420bdd00ce65d9adffbd38a5904afa
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/web-mode-edit-element/
-  to /tmp/web-mode-edit-elementmdzC4b/web-mode-edit-element-20190531.852
-    web-mode-edit-element-attributes.el -> web-mode-edit-element-attributes.el
-    web-mode-edit-element-elements.el -> web-mode-edit-element-elements.el
-    web-mode-edit-element-utils.el -> web-mode-edit-element-utils.el
-    web-mode-edit-element.el -> web-mode-edit-element.el
-Created web-mode-edit-element-20190531.852.tar containing:
-  web-mode-edit-element-20190531.852/
-  web-mode-edit-element-20190531.852/web-mode-edit-element-attributes.el
-  web-mode-edit-element-20190531.852/web-mode-edit-element-elements.el
-  web-mode-edit-element-20190531.852/web-mode-edit-element-pkg.el
-  web-mode-edit-element-20190531.852/web-mode-edit-element-utils.el
-  web-mode-edit-element-20190531.852/web-mode-edit-element.el
-Built web-mode-edit-element in 4.514s, finished at 2023-06-09T17:00:02+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 558 Jun  9 17:00 packages/web-mode-edit-element-20190531.852.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 17:00 packages/web-mode-edit-element-20190531.852.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

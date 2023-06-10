@@ -4,7 +4,4 @@ Source:  https://github.com/Fanael/rainbow-delimiters.git
 
 Updating /mnt/store/melpa/working/rainbow-delimiters/
 Checking out 7919681b0d883502155d5b26e791fec15da6aeca
-Built rainbow-delimiters in 5.353s, finished at 2023-06-09T16:42:45+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  9 16:42 packages/rainbow-delimiters-20210515.1254.el
-4.0K -rw-r--r-- 1 root root 564 Jun  9 16:42 packages/rainbow-delimiters-20210515.1254.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

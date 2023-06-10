@@ -4,7 +4,4 @@ Source:  https://github.com/monsanto/readline-complete.el.git
 
 Updating /mnt/store/melpa/working/readline-complete/
 Checking out 30c020c37b2741160cc37e656e13c85d826a0ebf
-Built readline-complete in 6.783s, finished at 2023-06-09T16:43:22+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  9 16:43 packages/readline-complete-20150708.1437.el
-4.0K -rw-r--r-- 1 root root 370 Jun  9 16:43 packages/readline-complete-20150708.1437.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

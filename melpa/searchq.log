@@ -4,20 +4,4 @@ Source:  https://github.com/tcw165/searchq.git
 
 Updating /mnt/store/melpa/working/searchq/
 Checking out dd510d55ad66a82c6ef022cfe7c4a73ad5365f82
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/searchq/
-  to /tmp/searchqnbzOd9/searchq-20150829.1211
-    searchq.el -> searchq.el
-    images/searchq-search.xpm -> images/searchq-search.xpm
-    images/searchq-search.png -> images/searchq-search.png
-Created searchq-20150829.1211.tar containing:
-  searchq-20150829.1211/
-  searchq-20150829.1211/images/
-  searchq-20150829.1211/images/searchq-search.png
-  searchq-20150829.1211/images/searchq-search.xpm
-  searchq-20150829.1211/searchq-pkg.el
-  searchq-20150829.1211/searchq.el
-Built searchq in 3.665s, finished at 2023-06-09T16:46:41+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 285 Jun  9 16:46 packages/searchq-20150829.1211.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 16:46 packages/searchq-20150829.1211.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/ianyepan/tron-legacy-emacs-theme.git
 
 Updating /mnt/store/melpa/working/tron-legacy-theme/
 Checking out 44996469041a9b7f54c2a42ad2a3c16ac9579d77
-Built tron-legacy-theme in 5.379s, finished at 2023-06-09T16:56:19+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root 39K Jun  9 16:56 packages/tron-legacy-theme-20230506.1037.el
-4.0K -rw-r--r-- 1 root root 387 Jun  9 16:56 packages/tron-legacy-theme-20230506.1037.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

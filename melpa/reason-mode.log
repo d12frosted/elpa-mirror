@@ -4,21 +4,4 @@ Source:  https://github.com/reasonml-editor/reason-mode.git
 
 Updating /mnt/store/melpa/working/reason-mode/
 Checking out d657ff75572a8ea7eda6fe22ada3a2ebf5bc6119
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/reason-mode/
-  to /tmp/reason-modeDHGCzA/reason-mode-20230405.517
-    reason-indent.el -> reason-indent.el
-    reason-interaction.el -> reason-interaction.el
-    reason-mode.el -> reason-mode.el
-    refmt.el -> refmt.el
-Created reason-mode-20230405.517.tar containing:
-  reason-mode-20230405.517/
-  reason-mode-20230405.517/reason-indent.el
-  reason-mode-20230405.517/reason-interaction.el
-  reason-mode-20230405.517/reason-mode-pkg.el
-  reason-mode-20230405.517/reason-mode.el
-  reason-mode-20230405.517/refmt.el
-Built reason-mode in 6.523s, finished at 2023-06-09T16:43:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 384 Jun  9 16:43 packages/reason-mode-20230405.517.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 16:43 packages/reason-mode-20230405.517.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

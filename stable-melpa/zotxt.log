@@ -4,20 +4,4 @@ Source:  https://gitlab.com/egh/zotxt-emacs.git
 
 Updating /mnt/store/melpa/working/zotxt/
 Checking out d344e7ac281a083f4e39e95b5664633a015e2b3b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/zotxt/
-  to /tmp/zotxt64k0cS/zotxt-20210908.402
-    org-zotxt-noter.el -> org-zotxt-noter.el
-    org-zotxt.el -> org-zotxt.el
-    zotxt-pkg.el -> zotxt-pkg.el
-    zotxt.el -> zotxt.el
-Created zotxt-20210908.402.tar containing:
-  zotxt-20210908.402/
-  zotxt-20210908.402/org-zotxt-noter.el
-  zotxt-20210908.402/org-zotxt.el
-  zotxt-20210908.402/zotxt-pkg.el
-  zotxt-20210908.402/zotxt.el
-Built zotxt in 7.281s, finished at 2023-06-09T17:03:43+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 323 Jun  9 17:03 packages/zotxt-20210908.402.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 17:03 packages/zotxt-20210908.402.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

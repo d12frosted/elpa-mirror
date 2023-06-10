@@ -4,17 +4,4 @@ Source:  https://github.com/nhojb/xcode-project.git
 
 Updating /mnt/store/melpa/working/xcode-project/
 Checking out 90aef198df5b51dfdb9ad205aa5b412c471fd418
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/xcode-project/
-  to /tmp/xcode-projecty5c7wf/xcode-project-20200810.2010
-    xcode-parser.el -> xcode-parser.el
-    xcode-project.el -> xcode-project.el
-Created xcode-project-20200810.2010.tar containing:
-  xcode-project-20200810.2010/
-  xcode-project-20200810.2010/xcode-parser.el
-  xcode-project-20200810.2010/xcode-project-pkg.el
-  xcode-project-20200810.2010/xcode-project.el
-Built xcode-project in 4.163s, finished at 2023-06-09T17:01:40+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 445 Jun  9 17:01 packages/xcode-project-20200810.2010.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 17:01 packages/xcode-project-20200810.2010.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

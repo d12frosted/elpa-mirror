@@ -4,7 +4,4 @@ Source:  https://github.com/nlamirault/ripgrep.el.git
 
 Updating /mnt/store/melpa/working/projectile-ripgrep/
 Checking out b6bd5beb0c11348f1afd9486cbb451d0d2e3c45a
-Built projectile-ripgrep in 3.749s, finished at 2023-06-09T16:40:43+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.6K Jun  9 16:40 packages/projectile-ripgrep-20221013.541.el
-4.0K -rw-r--r-- 1 root root  574 Jun  9 16:40 packages/projectile-ripgrep-20221013.541.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

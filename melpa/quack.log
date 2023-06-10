@@ -4,7 +4,4 @@ Source:  https://github.com/emacsmirror/quack.git
 
 Updating /mnt/store/melpa/working/quack/
 Checking out 2146805ce2b5a9b155d73929986f11e713787e26
-Built quack in 7.220s, finished at 2023-06-09T16:42:20+0000
- ✓ Success:
-196K -rw-r--r-- 1 root root 195K Jun  9 16:42 packages/quack-20181106.1301.el
-4.0K -rw-r--r-- 1 root root  160 Jun  9 16:42 packages/quack-20181106.1301.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

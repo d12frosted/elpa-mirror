@@ -4,7 +4,4 @@ Source:  https://github.com/konr/rings.git
 
 Updating /mnt/store/melpa/working/rings/
 Checking out 3590b222eb80652cbd27866f066bd3571d86edfc
-Built rings in 4.797s, finished at 2023-06-09T16:45:03+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Jun  9 16:45 packages/rings-20160531.2027.el
-4.0K -rw-r--r-- 1 root root  346 Jun  9 16:45 packages/rings-20160531.2027.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

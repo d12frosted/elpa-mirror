@@ -4,47 +4,4 @@ Source:  https://github.com/bbatsov/solarized-emacs.git
 
 Updating /mnt/store/melpa/working/solarized-theme/
 Checking out 0f0b1129cf51c85904f9e015da4fcca5f5f7a4ce
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/solarized-theme/
-  to /tmp/solarized-themeHylxN5/solarized-theme-20230507.1413
-    solarized-dark-high-contrast-theme.el -> solarized-dark-high-contrast-theme.el
-    solarized-dark-theme.el -> solarized-dark-theme.el
-    solarized-faces.el -> solarized-faces.el
-    solarized-gruvbox-dark-theme.el -> solarized-gruvbox-dark-theme.el
-    solarized-gruvbox-light-theme.el -> solarized-gruvbox-light-theme.el
-    solarized-light-high-contrast-theme.el -> solarized-light-high-contrast-theme.el
-    solarized-light-theme.el -> solarized-light-theme.el
-    solarized-palettes.el -> solarized-palettes.el
-    solarized-selenized-black-theme.el -> solarized-selenized-black-theme.el
-    solarized-selenized-dark-theme.el -> solarized-selenized-dark-theme.el
-    solarized-selenized-light-theme.el -> solarized-selenized-light-theme.el
-    solarized-selenized-white-theme.el -> solarized-selenized-white-theme.el
-    solarized-theme-utils.el -> solarized-theme-utils.el
-    solarized-theme.el -> solarized-theme.el
-    solarized-wombat-dark-theme.el -> solarized-wombat-dark-theme.el
-    solarized-zenburn-theme.el -> solarized-zenburn-theme.el
-    solarized.el -> solarized.el
-Created solarized-theme-20230507.1413.tar containing:
-  solarized-theme-20230507.1413/
-  solarized-theme-20230507.1413/solarized-dark-high-contrast-theme.el
-  solarized-theme-20230507.1413/solarized-dark-theme.el
-  solarized-theme-20230507.1413/solarized-faces.el
-  solarized-theme-20230507.1413/solarized-gruvbox-dark-theme.el
-  solarized-theme-20230507.1413/solarized-gruvbox-light-theme.el
-  solarized-theme-20230507.1413/solarized-light-high-contrast-theme.el
-  solarized-theme-20230507.1413/solarized-light-theme.el
-  solarized-theme-20230507.1413/solarized-palettes.el
-  solarized-theme-20230507.1413/solarized-selenized-black-theme.el
-  solarized-theme-20230507.1413/solarized-selenized-dark-theme.el
-  solarized-theme-20230507.1413/solarized-selenized-light-theme.el
-  solarized-theme-20230507.1413/solarized-selenized-white-theme.el
-  solarized-theme-20230507.1413/solarized-theme-pkg.el
-  solarized-theme-20230507.1413/solarized-theme-utils.el
-  solarized-theme-20230507.1413/solarized-theme.el
-  solarized-theme-20230507.1413/solarized-wombat-dark-theme.el
-  solarized-theme-20230507.1413/solarized-zenburn-theme.el
-  solarized-theme-20230507.1413/solarized.el
-Built solarized-theme in 5.399s, finished at 2023-06-09T16:50:20+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  472 Jun  9 16:50 packages/solarized-theme-20230507.1413.entry
-212K -rw-r--r-- 1 root root 210K Jun  9 16:50 packages/solarized-theme-20230507.1413.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

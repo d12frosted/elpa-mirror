@@ -4,7 +4,4 @@ Source:  https://github.com/pd/yard-mode.el.git
 
 Updating /mnt/store/melpa/working/yard-mode/
 Checking out de1701753a64544c3376b015805f3661136d8038
-Built yard-mode in 4.817s, finished at 2023-06-09T17:02:21+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jun  9 17:02 packages/yard-mode-20230505.1950.el
-4.0K -rw-r--r-- 1 root root  329 Jun  9 17:02 packages/yard-mode-20230505.1950.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

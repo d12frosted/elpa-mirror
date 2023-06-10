@@ -4,7 +4,4 @@ Source:  https://github.com/tychoish/revbufs.git
 
 Updating /mnt/store/melpa/working/revbufs/
 Checking out df3c02d3063951582c693ae12547993cec8256e2
-Built revbufs in 4.423s, finished at 2023-06-09T16:44:44+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.8K Jun  9 16:44 packages/revbufs-20200907.2223.el
-4.0K -rw-r--r-- 1 root root  417 Jun  9 16:44 packages/revbufs-20200907.2223.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

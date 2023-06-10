@@ -4,25 +4,4 @@ Source:  https://github.com/tromey/emacs-status.git
 
 Updating /mnt/store/melpa/working/status/
 Checking out b62c74bf272566f82a68622f29fb9edafea0f241
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/status/
-  to /tmp/status64rxwP/status-20151230.1408
-    emms-status.el -> emms-status.el
-    erc-status.el -> erc-status.el
-    status.el -> status.el
-    status.py -> status.py
-    player_pause.png -> player_pause.png
-    player_play.png -> player_play.png
-Created status-20151230.1408.tar containing:
-  status-20151230.1408/
-  status-20151230.1408/emms-status.el
-  status-20151230.1408/erc-status.el
-  status-20151230.1408/player_pause.png
-  status-20151230.1408/player_play.png
-  status-20151230.1408/status-pkg.el
-  status-20151230.1408/status.el
-  status-20151230.1408/status.py
-Built status in 4.465s, finished at 2023-06-09T16:51:50+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 292 Jun  9 16:51 packages/status-20151230.1408.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 16:51 packages/status-20151230.1408.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

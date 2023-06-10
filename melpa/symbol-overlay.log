@@ -4,7 +4,4 @@ Source:  https://github.com/wolray/symbol-overlay.git
 
 Updating /mnt/store/melpa/working/symbol-overlay/
 Checking out 7c7d369bb749d96346b40cf714884a39aaa743f4
-Built symbol-overlay in 5.246s, finished at 2023-06-09T16:52:59+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root 32K Jun  9 16:52 packages/symbol-overlay-20230602.851.el
-4.0K -rw-r--r-- 1 root root 457 Jun  9 16:52 packages/symbol-overlay-20230602.851.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

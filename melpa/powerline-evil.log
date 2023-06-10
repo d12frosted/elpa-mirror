@@ -4,17 +4,4 @@ Source:  https://github.com/johnson-christopher/powerline-evil.git
 
 Updating /mnt/store/melpa/working/powerline-evil/
 Checking out b77e2cf571e9990734f2b30d826f3a362b559fd1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/powerline-evil/
-  to /tmp/powerline-evil6GGfPM/powerline-evil-20190603.340
-    powerline-evil-themes.el -> powerline-evil-themes.el
-    powerline-evil.el -> powerline-evil.el
-Created powerline-evil-20190603.340.tar containing:
-  powerline-evil-20190603.340/
-  powerline-evil-20190603.340/powerline-evil-pkg.el
-  powerline-evil-20190603.340/powerline-evil-themes.el
-  powerline-evil-20190603.340/powerline-evil.el
-Built powerline-evil in 3.830s, finished at 2023-06-09T16:39:57+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 539 Jun  9 16:39 packages/powerline-evil-20190603.340.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 16:39 packages/powerline-evil-20190603.340.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

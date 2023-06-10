@@ -4,7 +4,4 @@ Source:  https://github.com/simenheg/restclient-test.el.git
 
 Updating /mnt/store/melpa/working/restclient-test/
 Checking out 3c6661d087526510a04ea9de421c5869a1a1d061
-Built restclient-test in 5.464s, finished at 2023-06-09T16:44:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Jun  9 16:44 packages/restclient-test-20210422.1815.el
-4.0K -rw-r--r-- 1 root root  465 Jun  9 16:44 packages/restclient-test-20210422.1815.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

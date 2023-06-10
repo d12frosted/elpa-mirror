@@ -4,7 +4,4 @@ Source:  https://github.com/antonhibl/tardis-theme.git
 
 Updating /mnt/store/melpa/working/tardis-theme/
 Checking out 352b1579d13e99cff9367b08208c1e241d76c89e
-Built tardis-theme in 4.057s, finished at 2023-06-09T16:53:36+0000
- ✓ Success:
- 56K -rw-r--r-- 1 root root 55K Jun  9 16:53 packages/tardis-theme-20230212.2152.el
-4.0K -rw-r--r-- 1 root root 430 Jun  9 16:53 packages/tardis-theme-20230212.2152.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

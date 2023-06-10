@@ -4,23 +4,4 @@ Source:  https://github.com/chrisbarrett/sclang-extensions.git
 
 Updating /mnt/store/melpa/working/sclang-extensions/
 Checking out e9cc79732f16fdb582129303110c163dcc0d6da0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sclang-extensions/
-  to /tmp/sclang-extensionsSHW1O9/sclang-extensions-20160509.338
-    sclang-ac-mode.el -> sclang-ac-mode.el
-    sclang-doc-mode.el -> sclang-doc-mode.el
-    sclang-extensions-utils.el -> sclang-extensions-utils.el
-    sclang-extensions.el -> sclang-extensions.el
-    sclang-post-mode.el -> sclang-post-mode.el
-Created sclang-extensions-20160509.338.tar containing:
-  sclang-extensions-20160509.338/
-  sclang-extensions-20160509.338/sclang-ac-mode.el
-  sclang-extensions-20160509.338/sclang-doc-mode.el
-  sclang-extensions-20160509.338/sclang-extensions-pkg.el
-  sclang-extensions-20160509.338/sclang-extensions-utils.el
-  sclang-extensions-20160509.338/sclang-extensions.el
-  sclang-extensions-20160509.338/sclang-post-mode.el
-Built sclang-extensions in 4.687s, finished at 2023-06-09T16:46:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 565 Jun  9 16:46 packages/sclang-extensions-20160509.338.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 16:46 packages/sclang-extensions-20160509.338.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

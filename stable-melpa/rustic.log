@@ -4,47 +4,4 @@ Source:  https://github.com/brotzeit/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
 Checking out a5fc66c8167a827a57c4426e4b8dbe717b3be43c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/rustic/
-  to /tmp/rustic2YXJpC/rustic-20230130.912
-    rustic-babel.el -> rustic-babel.el
-    rustic-cargo.el -> rustic-cargo.el
-    rustic-clippy.el -> rustic-clippy.el
-    rustic-comint.el -> rustic-comint.el
-    rustic-compile.el -> rustic-compile.el
-    rustic-doc.el -> rustic-doc.el
-    rustic-expand.el -> rustic-expand.el
-    rustic-flycheck.el -> rustic-flycheck.el
-    rustic-interaction.el -> rustic-interaction.el
-    rustic-lsp.el -> rustic-lsp.el
-    rustic-playground.el -> rustic-playground.el
-    rustic-popup.el -> rustic-popup.el
-    rustic-racer.el -> rustic-racer.el
-    rustic-rustfix.el -> rustic-rustfix.el
-    rustic-rustfmt.el -> rustic-rustfmt.el
-    rustic-spellcheck.el -> rustic-spellcheck.el
-    rustic.el -> rustic.el
-Created rustic-20230130.912.tar containing:
-  rustic-20230130.912/
-  rustic-20230130.912/rustic-babel.el
-  rustic-20230130.912/rustic-cargo.el
-  rustic-20230130.912/rustic-clippy.el
-  rustic-20230130.912/rustic-comint.el
-  rustic-20230130.912/rustic-compile.el
-  rustic-20230130.912/rustic-doc.el
-  rustic-20230130.912/rustic-expand.el
-  rustic-20230130.912/rustic-flycheck.el
-  rustic-20230130.912/rustic-interaction.el
-  rustic-20230130.912/rustic-lsp.el
-  rustic-20230130.912/rustic-pkg.el
-  rustic-20230130.912/rustic-playground.el
-  rustic-20230130.912/rustic-popup.el
-  rustic-20230130.912/rustic-racer.el
-  rustic-20230130.912/rustic-rustfix.el
-  rustic-20230130.912/rustic-rustfmt.el
-  rustic-20230130.912/rustic-spellcheck.el
-  rustic-20230130.912/rustic.el
-Built rustic in 4.888s, finished at 2023-06-09T16:45:51+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  511 Jun  9 16:45 packages/rustic-20230130.912.entry
-212K -rw-r--r-- 1 root root 210K Jun  9 16:45 packages/rustic-20230130.912.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,25 +4,4 @@ Source:  https://github.com/redguardtoo/vc-msg.git
 
 Updating /mnt/store/melpa/working/vc-msg/
 Checking out 027fefad63868cd7695372510c27922656cf996a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/vc-msg/
-  to /tmp/vc-msgiluDDN/vc-msg-20221005.1228
-    vc-msg-git.el -> vc-msg-git.el
-    vc-msg-hg.el -> vc-msg-hg.el
-    vc-msg-p4.el -> vc-msg-p4.el
-    vc-msg-sdk.el -> vc-msg-sdk.el
-    vc-msg-svn.el -> vc-msg-svn.el
-    vc-msg.el -> vc-msg.el
-Created vc-msg-20221005.1228.tar containing:
-  vc-msg-20221005.1228/
-  vc-msg-20221005.1228/vc-msg-git.el
-  vc-msg-20221005.1228/vc-msg-hg.el
-  vc-msg-20221005.1228/vc-msg-p4.el
-  vc-msg-20221005.1228/vc-msg-pkg.el
-  vc-msg-20221005.1228/vc-msg-sdk.el
-  vc-msg-20221005.1228/vc-msg-svn.el
-  vc-msg-20221005.1228/vc-msg.el
-Built vc-msg in 4.032s, finished at 2023-06-09T16:58:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 479 Jun  9 16:58 packages/vc-msg-20221005.1228.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 16:58 packages/vc-msg-20221005.1228.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

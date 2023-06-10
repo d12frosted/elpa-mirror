@@ -4,7 +4,4 @@ Source:  https://github.com/stigbjorlykke/rpm-spec-mode.git
 
 Updating /mnt/store/melpa/working/rpm-spec-mode/
 Checking out c1c38050c48ea330c7cea632b8785d66daeefb2b
-Built rpm-spec-mode in 5.264s, finished at 2023-06-09T16:45:22+0000
- ✓ Success:
- 56K -rw-r--r-- 1 root root 53K Jun  9 16:45 packages/rpm-spec-mode-20160710.1136.el
-4.0K -rw-r--r-- 1 root root 387 Jun  9 16:45 packages/rpm-spec-mode-20160710.1136.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/mclear-tools/tabspaces.git
 
 Updating /mnt/store/melpa/working/tabspaces/
 Checking out 315a5b375f9276f9725991c42a7c8a63ff26d51f
-Built tabspaces in 4.377s, finished at 2023-06-09T16:53:28+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 25K Jun  9 16:53 packages/tabspaces-20230307.2235.el
-4.0K -rw-r--r-- 1 root root 477 Jun  9 16:53 packages/tabspaces-20230307.2235.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,24 +4,4 @@ Source:  https://github.com/realgud/realgud-node-inspect.git
 
 Updating /mnt/store/melpa/working/realgud-node-inspect/
 Checking out e0f18442d759b8ce4479c01e090975b62270257d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/realgud-node-inspect/
-  to /tmp/realgud-node-inspectSMo9i0/realgud-node-inspect-20190523.1251
-    realgud-node-inspect.el -> realgud-node-inspect.el
-    realgud-node-inspect/core.el -> realgud-node-inspect/core.el
-    realgud-node-inspect/init.el -> realgud-node-inspect/init.el
-    realgud-node-inspect/node-inspect.el -> realgud-node-inspect/node-inspect.el
-    realgud-node-inspect/track-mode.el -> realgud-node-inspect/track-mode.el
-Created realgud-node-inspect-20190523.1251.tar containing:
-  realgud-node-inspect-20190523.1251/
-  realgud-node-inspect-20190523.1251/realgud-node-inspect-pkg.el
-  realgud-node-inspect-20190523.1251/realgud-node-inspect.el
-  realgud-node-inspect-20190523.1251/realgud-node-inspect/
-  realgud-node-inspect-20190523.1251/realgud-node-inspect/core.el
-  realgud-node-inspect-20190523.1251/realgud-node-inspect/init.el
-  realgud-node-inspect-20190523.1251/realgud-node-inspect/node-inspect.el
-  realgud-node-inspect-20190523.1251/realgud-node-inspect/track-mode.el
-Built realgud-node-inspect in 5.099s, finished at 2023-06-09T16:43:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 510 Jun  9 16:43 packages/realgud-node-inspect-20190523.1251.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 16:43 packages/realgud-node-inspect-20190523.1251.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

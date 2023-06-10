@@ -4,7 +4,4 @@ Source:  https://github.com/dpsutton/resize-window.git
 
 Updating /mnt/store/melpa/working/resize-window/
 Checking out 09dc5968f1c988c51fcd6ea5d68bb38b7541eb66
-Built resize-window in 4.997s, finished at 2023-06-09T16:44:38+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  9 16:44 packages/resize-window-20180918.538.el
-4.0K -rw-r--r-- 1 root root 455 Jun  9 16:44 packages/resize-window-20180918.538.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

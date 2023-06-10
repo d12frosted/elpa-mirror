@@ -4,19 +4,4 @@ Source:  https://github.com/konr/tomatinho.git
 
 Updating /mnt/store/melpa/working/tomatinho/
 Checking out b53354b9b9f496c0388d6a573b06b7d6fc53d0bd
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tomatinho/
-  to /tmp/tomatinhox5AUVg/tomatinho-20180621.1748
-    tomatinho.el -> tomatinho.el
-    tick.wav -> tick.wav
-    tack.wav -> tack.wav
-Created tomatinho-20180621.1748.tar containing:
-  tomatinho-20180621.1748/
-  tomatinho-20180621.1748/tack.wav
-  tomatinho-20180621.1748/tick.wav
-  tomatinho-20180621.1748/tomatinho-pkg.el
-  tomatinho-20180621.1748/tomatinho.el
-Built tomatinho in 3.365s, finished at 2023-06-09T16:55:17+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 427 Jun  9 16:55 packages/tomatinho-20180621.1748.entry
- 40K -rw-r--r-- 1 root root 40K Jun  9 16:55 packages/tomatinho-20180621.1748.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

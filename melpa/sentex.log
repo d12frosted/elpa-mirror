@@ -4,21 +4,4 @@ Source:  https://codeberg.org/martianh/sentex.git
 
 Updating /mnt/store/melpa/working/sentex/
 Checking out ab96ee0e9856222aaad6b085cf4ca0c5dda73789
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sentex/
-  to /tmp/sentexfCIC0b/sentex-20230411.1650
-    sentex.el -> sentex.el
-    sentex-icu4j-rules-converted.eld -> sentex-icu4j-rules-converted.eld
-    sentex-okapi-alt-rules-converted.eld -> sentex-okapi-alt-rules-converted.eld
-    sentex-omegat-rules-converted.eld -> sentex-omegat-rules-converted.eld
-Created sentex-20230411.1650.tar containing:
-  sentex-20230411.1650/
-  sentex-20230411.1650/sentex-icu4j-rules-converted.eld
-  sentex-20230411.1650/sentex-okapi-alt-rules-converted.eld
-  sentex-20230411.1650/sentex-omegat-rules-converted.eld
-  sentex-20230411.1650/sentex-pkg.el
-  sentex-20230411.1650/sentex.el
-Built sentex in 4.557s, finished at 2023-06-09T16:47:01+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  481 Jun  9 16:47 packages/sentex-20230411.1650.entry
-352K -rw-r--r-- 1 root root 350K Jun  9 16:47 packages/sentex-20230411.1650.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

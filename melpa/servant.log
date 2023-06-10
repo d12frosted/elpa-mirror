@@ -4,20 +4,4 @@ Source:  https://github.com/cask/servant.git
 
 Updating /mnt/store/melpa/working/servant/
 Checking out 4d2aa8250b54b28e6e7ee4cd5ebd98a33db2c134
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/servant/
-  to /tmp/servantqmNVgo/servant-20140216.1219
-    servant-cli.el -> servant-cli.el
-    servant.el -> servant.el
-    bin => bin
-Created servant-20140216.1219.tar containing:
-  servant-20140216.1219/
-  servant-20140216.1219/bin/
-  servant-20140216.1219/bin/servant
-  servant-20140216.1219/servant-cli.el
-  servant-20140216.1219/servant-pkg.el
-  servant-20140216.1219/servant.el
-Built servant in 4.876s, finished at 2023-06-09T16:47:10+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 669 Jun  9 16:47 packages/servant-20140216.1219.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 16:47 packages/servant-20140216.1219.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

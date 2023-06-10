@@ -4,7 +4,4 @@ Source:  https://bitbucket.org/shackra/dwight-k.-schrute
 
 Updating /mnt/store/melpa/working/schrute/
 Checking out 59faa6c4232ae183cea93237301acad8c0763997
-Built schrute in 5.378s, finished at 2023-06-09T16:46:20+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.0K Jun  9 16:46 packages/schrute-20170521.1840.el
-4.0K -rw-r--r-- 1 root root  492 Jun  9 16:46 packages/schrute-20170521.1840.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

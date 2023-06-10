@@ -4,7 +4,4 @@ Source:  https://github.com/akirak/xmind-org-el.git
 
 Updating /mnt/store/melpa/working/xmind-org/
 Checking out 79f0b1d95af2a1b8436cee2d3d6c6115d9c6483d
-Built xmind-org in 4.825s, finished at 2023-06-09T17:01:46+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.2K Jun  9 17:01 packages/xmind-org-20220907.1310.el
-4.0K -rw-r--r-- 1 root root  539 Jun  9 17:01 packages/xmind-org-20220907.1310.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,17 +4,4 @@ Source:  https://github.com/purescript-emacs/emacs-psci.git
 
 Updating /mnt/store/melpa/working/psci/
 Checking out 9bb6a325325480be704130c9c69731631d2cf3a6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/psci/
-  to /tmp/psciXZtrsL/psci-20230313.1333
-    psci-dev.el -> psci-dev.el
-    psci.el -> psci.el
-Created psci-20230313.1333.tar containing:
-  psci-20230313.1333/
-  psci-20230313.1333/psci-dev.el
-  psci-20230313.1333/psci-pkg.el
-  psci-20230313.1333/psci.el
-Built psci in 4.853s, finished at 2023-06-09T16:41:04+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 516 Jun  9 16:41 packages/psci-20230313.1333.entry
- 20K -rw-r--r-- 1 root root 20K Jun  9 16:41 packages/psci-20230313.1333.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

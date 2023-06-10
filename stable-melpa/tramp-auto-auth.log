@@ -4,7 +4,4 @@ Source:  https://github.com/oitofelix/tramp-auto-auth.git
 
 Updating /mnt/store/melpa/working/tramp-auto-auth/
 Checking out f15a12dfab651aff60f4a9d70f868030a12344ac
-Built tramp-auto-auth in 4.798s, finished at 2023-06-09T16:55:33+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Jun  9 16:55 packages/tramp-auto-auth-20191027.1419.el
-4.0K -rw-r--r-- 1 root root  533 Jun  9 16:55 packages/tramp-auto-auth-20191027.1419.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

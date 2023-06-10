@@ -4,7 +4,4 @@ Source:  https://github.com/jmickelin/vim-empty-lines-mode.git
 
 Updating /mnt/store/melpa/working/vim-empty-lines-mode/
 Checking out 442a29b0ba1635a3b352c9dd1faf9ce99656d048
-Built vim-empty-lines-mode in 4.133s, finished at 2023-06-09T16:58:59+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jun  9 16:58 packages/vim-empty-lines-mode-20150111.426.el
-4.0K -rw-r--r-- 1 root root  473 Jun  9 16:58 packages/vim-empty-lines-mode-20150111.426.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

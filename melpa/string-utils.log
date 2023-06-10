@@ -4,7 +4,4 @@ Source:  https://github.com/rolandwalker/string-utils.git
 
 Updating /mnt/store/melpa/working/string-utils/
 Checking out 8b56e1f79d2de46d1e9b5e24d889e9f4c3cc85d4
-Built string-utils in 5.736s, finished at 2023-06-09T16:52:14+0000
- ✓ Success:
- 44K -rw-r--r-- 1 root root 41K Jun  9 16:52 packages/string-utils-20140508.2041.el
-4.0K -rw-r--r-- 1 root root 439 Jun  9 16:52 packages/string-utils-20140508.2041.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

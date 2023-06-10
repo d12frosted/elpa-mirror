@@ -4,7 +4,4 @@ Source:  https://github.com/magnars/string-edit.el.git
 
 Updating /mnt/store/melpa/working/string-edit-at-point/
 Checking out e285ada415b975a9eb70a7e065123923d9bf8798
-Built string-edit-at-point in 5.747s, finished at 2023-06-09T16:52:11+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.8K Jun  9 16:52 packages/string-edit-at-point-20220913.712.el
-4.0K -rw-r--r-- 1 root root  397 Jun  9 16:52 packages/string-edit-at-point-20220913.712.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,24 +4,4 @@ Source:  https://github.com/realgud/realgud-node-debug.git
 
 Updating /mnt/store/melpa/working/realgud-node-debug/
 Checking out 72e786359ce9dace1796b0d81a00e9340e9c90ad
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/realgud-node-debug/
-  to /tmp/realgud-node-debugjxSOwO/realgud-node-debug-20190525.1634
-    realgud-node-debug.el -> realgud-node-debug.el
-    realgud-node-debug/core.el -> realgud-node-debug/core.el
-    realgud-node-debug/init.el -> realgud-node-debug/init.el
-    realgud-node-debug/node-debug.el -> realgud-node-debug/node-debug.el
-    realgud-node-debug/track-mode.el -> realgud-node-debug/track-mode.el
-Created realgud-node-debug-20190525.1634.tar containing:
-  realgud-node-debug-20190525.1634/
-  realgud-node-debug-20190525.1634/realgud-node-debug-pkg.el
-  realgud-node-debug-20190525.1634/realgud-node-debug.el
-  realgud-node-debug-20190525.1634/realgud-node-debug/
-  realgud-node-debug-20190525.1634/realgud-node-debug/core.el
-  realgud-node-debug-20190525.1634/realgud-node-debug/init.el
-  realgud-node-debug-20190525.1634/realgud-node-debug/node-debug.el
-  realgud-node-debug-20190525.1634/realgud-node-debug/track-mode.el
-Built realgud-node-debug in 4.867s, finished at 2023-06-09T16:43:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 561 Jun  9 16:43 packages/realgud-node-debug-20190525.1634.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 16:43 packages/realgud-node-debug-20190525.1634.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

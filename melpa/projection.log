@@ -4,37 +4,4 @@ Source:  https://github.com/mohkale/projection.git
 
 Updating /mnt/store/melpa/working/projection/
 Checking out d2af6e04ba0369be55f66346523dcde1f4410bf0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/projection/
-  to /tmp/projectionmIEvKQ/projection-20230529.1839
-  ! src/projection-commands.el -> projection-commands.el
-  ! src/projection-core-log.el -> projection-core-log.el
-  ! src/projection-core.el -> projection-core.el
-  ! src/projection-find.el -> projection-find.el
-  ! src/projection-hook.el -> projection-hook.el
-  ! src/projection-ibuffer.el -> projection-ibuffer.el
-  ! src/projection-recentf.el -> projection-recentf.el
-  ! src/projection-types.el -> projection-types.el
-  ! src/projection-utils-cmake.el -> projection-utils-cmake.el
-  ! src/projection-utils-meson.el -> projection-utils-meson.el
-  ! src/projection-utils.el -> projection-utils.el
-  ! src/projection.el -> projection.el
-Created projection-20230529.1839.tar containing:
-  projection-20230529.1839/
-  projection-20230529.1839/projection-commands.el
-  projection-20230529.1839/projection-core-log.el
-  projection-20230529.1839/projection-core.el
-  projection-20230529.1839/projection-find.el
-  projection-20230529.1839/projection-hook.el
-  projection-20230529.1839/projection-ibuffer.el
-  projection-20230529.1839/projection-pkg.el
-  projection-20230529.1839/projection-recentf.el
-  projection-20230529.1839/projection-types.el
-  projection-20230529.1839/projection-utils-cmake.el
-  projection-20230529.1839/projection-utils-meson.el
-  projection-20230529.1839/projection-utils.el
-  projection-20230529.1839/projection.el
-Built projection in 3.825s, finished at 2023-06-09T16:40:45+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  542 Jun  9 16:40 packages/projection-20230529.1839.entry
-112K -rw-r--r-- 1 root root 110K Jun  9 16:40 packages/projection-20230529.1839.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

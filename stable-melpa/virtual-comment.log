@@ -4,7 +4,4 @@ Source:  https://github.com/thanhvg/emacs-virtual-comment.git
 
 Updating /mnt/store/melpa/working/virtual-comment/
 Checking out b0c2ac4a9d625b5f4f329bbab879ad86cd7056bd
-Built virtual-comment in 6.000s, finished at 2023-06-09T16:59:03+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root 47K Jun  9 16:59 packages/virtual-comment-20220921.221.el
-4.0K -rw-r--r-- 1 root root 402 Jun  9 16:59 packages/virtual-comment-20220921.221.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

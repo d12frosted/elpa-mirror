@@ -4,25 +4,4 @@ Source:  https://codeberg.org/akib/emacs-workroom.git
 
 Updating /mnt/store/melpa/working/workroom/
 Checking out 360420501a239f74bff60941d28052fc19a92bce
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/workroom/
-  to /tmp/workroom4xanvQ/workroom-20230123.1630
-    workroom.el -> workroom.el
-    fdl.texi -> fdl.texi
-    gpl.texi -> gpl.texi
-    workroom.texi -> workroom.texi
-Generating /tmp/workroom4xanvQ/workroom-20230123.1630/fdl.info
-Generating /tmp/workroom4xanvQ/workroom-20230123.1630/gpl.info
-Generating /tmp/workroom4xanvQ/workroom-20230123.1630/workroom.info
-Created workroom-20230123.1630.tar containing:
-  workroom-20230123.1630/
-  workroom-20230123.1630/dir
-  workroom-20230123.1630/fdl.info
-  workroom-20230123.1630/gpl.info
-  workroom-20230123.1630/workroom-pkg.el
-  workroom-20230123.1630/workroom.el
-  workroom-20230123.1630/workroom.info
-Built workroom in 16.367s, finished at 2023-06-09T17:01:34+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  542 Jun  9 17:01 packages/workroom-20230123.1630.entry
-240K -rw-r--r-- 1 root root 240K Jun  9 17:01 packages/workroom-20230123.1630.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

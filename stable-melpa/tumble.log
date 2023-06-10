@@ -4,7 +4,4 @@ Source:  https://github.com/febuiles/tumble.git
 
 Updating /mnt/store/melpa/working/tumble/
 Checking out e8fd7643cccf2b6ea4170f0c5f1f87d007e7fa00
-Built tumble in 7.462s, finished at 2023-06-09T16:56:39+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  9 16:56 packages/tumble-20160112.729.el
-4.0K -rw-r--r-- 1 root root 406 Jun  9 16:56 packages/tumble-20160112.729.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,17 +4,4 @@ Source:  https://github.com/lassik/emacs-sml-basis.git
 
 Updating /mnt/store/melpa/working/sml-basis/
 Checking out c048d575e30a20ec825fd0c5eb9c8a4428a43298
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sml-basis/
-  to /tmp/sml-basisCblYp6/sml-basis-20210518.2040
-    sml-basis-data.el -> sml-basis-data.el
-    sml-basis.el -> sml-basis.el
-Created sml-basis-20210518.2040.tar containing:
-  sml-basis-20210518.2040/
-  sml-basis-20210518.2040/sml-basis-data.el
-  sml-basis-20210518.2040/sml-basis-pkg.el
-  sml-basis-20210518.2040/sml-basis.el
-Built sml-basis in 5.235s, finished at 2023-06-09T16:49:37+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  448 Jun  9 16:49 packages/sml-basis-20210518.2040.entry
-152K -rw-r--r-- 1 root root 150K Jun  9 16:49 packages/sml-basis-20210518.2040.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

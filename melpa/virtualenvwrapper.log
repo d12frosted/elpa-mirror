@@ -4,7 +4,4 @@ Source:  https://github.com/porterjamesj/virtualenvwrapper.el.git
 
 Updating /mnt/store/melpa/working/virtualenvwrapper/
 Checking out f753e5ad91c2ff5d11bec424aa8cec141efa6925
-Built virtualenvwrapper in 6.042s, finished at 2023-06-09T16:59:08+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  9 16:59 packages/virtualenvwrapper-20190223.1919.el
-4.0K -rw-r--r-- 1 root root 564 Jun  9 16:59 packages/virtualenvwrapper-20190223.1919.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

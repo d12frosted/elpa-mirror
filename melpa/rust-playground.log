@@ -4,7 +4,4 @@ Source:  https://github.com/grafov/rust-playground.git
 
 Updating /mnt/store/melpa/working/rust-playground/
 Checking out 5a117781dcb66065bea7830dd73618008fc34949
-Built rust-playground in 4.398s, finished at 2023-06-09T16:45:50+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.5K Jun  9 16:45 packages/rust-playground-20200116.1043.el
-4.0K -rw-r--r-- 1 root root  476 Jun  9 16:45 packages/rust-playground-20200116.1043.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

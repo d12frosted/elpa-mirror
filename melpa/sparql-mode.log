@@ -4,19 +4,4 @@ Source:  https://github.com/ljos/sparql-mode.git
 
 Updating /mnt/store/melpa/working/sparql-mode/
 Checking out 1f6196094ec6626722c6e03a13f6844c68f62703
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sparql-mode/
-  to /tmp/sparql-modeosynJ1/sparql-mode-20230104.1113
-    company-sparql.el -> company-sparql.el
-    ob-sparql.el -> ob-sparql.el
-    sparql-mode.el -> sparql-mode.el
-Created sparql-mode-20230104.1113.tar containing:
-  sparql-mode-20230104.1113/
-  sparql-mode-20230104.1113/company-sparql.el
-  sparql-mode-20230104.1113/ob-sparql.el
-  sparql-mode-20230104.1113/sparql-mode-pkg.el
-  sparql-mode-20230104.1113/sparql-mode.el
-Built sparql-mode in 4.338s, finished at 2023-06-09T16:50:59+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 502 Jun  9 16:50 packages/sparql-mode-20230104.1113.entry
- 32K -rw-r--r-- 1 root root 30K Jun  9 16:50 packages/sparql-mode-20230104.1113.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

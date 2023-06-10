@@ -4,21 +4,4 @@ Source:  https://github.com/DamienCassou/related-files.git
 
 Updating /mnt/store/melpa/working/related-files/
 Checking out f3f841f625a51b964b88cfe08378311124cc5240
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/related-files/
-  to /tmp/related-filesZBzkff/related-files-20230324.934
-    related-files-buffer.el -> related-files-buffer.el
-    related-files-file.el -> related-files-file.el
-    related-files-recipe.el -> related-files-recipe.el
-    related-files.el -> related-files.el
-Created related-files-20230324.934.tar containing:
-  related-files-20230324.934/
-  related-files-20230324.934/related-files-buffer.el
-  related-files-20230324.934/related-files-file.el
-  related-files-20230324.934/related-files-pkg.el
-  related-files-20230324.934/related-files-recipe.el
-  related-files-20230324.934/related-files.el
-Built related-files in 4.387s, finished at 2023-06-09T16:44:18+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 423 Jun  9 16:44 packages/related-files-20230324.934.entry
- 52K -rw-r--r-- 1 root root 50K Jun  9 16:44 packages/related-files-20230324.934.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

@@ -4,7 +4,4 @@ Source:  https://github.com/emacsorphanage/which-key-posframe.git
 
 Updating /mnt/store/melpa/working/which-key-posframe/
 Checking out e4a9ce9a1b20de550fca51f14d055821980d534a
-Built which-key-posframe in 4.133s, finished at 2023-06-09T17:00:33+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.1K Jun  9 17:00 packages/which-key-posframe-20230313.1841.el
-4.0K -rw-r--r-- 1 root root  587 Jun  9 17:00 packages/which-key-posframe-20230313.1841.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

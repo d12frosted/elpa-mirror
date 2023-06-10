@@ -4,7 +4,4 @@ Source:  https://github.com/ShuguangSun/python-view-data.git
 
 Updating /mnt/store/melpa/working/python-view-data/
 Checking out 1dd5f99679db9767530cfc20642a40a48bd479be
-Built python-view-data in 6.046s, finished at 2023-06-09T16:42:08+0000
- ✓ Success:
- 52K -rw-r--r-- 1 root root 50K Jun  9 16:42 packages/python-view-data-20230508.543.el
-4.0K -rw-r--r-- 1 root root 504 Jun  9 16:42 packages/python-view-data-20230508.543.entry
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0

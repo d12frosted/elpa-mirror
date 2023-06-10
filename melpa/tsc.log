@@ -4,34 +4,4 @@ Source:  https://github.com/emacs-tree-sitter/elisp-tree-sitter.git
 
 Updating /mnt/store/melpa/working/tsc/
 Checking out 909717c685ff5a2327fa2ca8fb8a25216129361c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tsc/
-  to /tmp/tscZS7pgt/tsc-20220212.1632
-  ! core/tsc-dyn-get.el -> tsc-dyn-get.el
-  ! core/tsc-obsolete.el -> tsc-obsolete.el
-  ! core/tsc.el -> tsc.el
-  ! core/Cargo.toml -> Cargo.toml
-  ! core/Cargo.lock -> Cargo.lock
-  ! core/src => src
-Created tsc-20220212.1632.tar containing:
-  tsc-20220212.1632/
-  tsc-20220212.1632/Cargo.lock
-  tsc-20220212.1632/Cargo.toml
-  tsc-20220212.1632/src/
-  tsc-20220212.1632/src/cursor.rs
-  tsc-20220212.1632/src/error.rs
-  tsc-20220212.1632/src/lang.rs
-  tsc-20220212.1632/src/lib.rs
-  tsc-20220212.1632/src/node.rs
-  tsc-20220212.1632/src/parser.rs
-  tsc-20220212.1632/src/query.rs
-  tsc-20220212.1632/src/tree.rs
-  tsc-20220212.1632/src/types.rs
-  tsc-20220212.1632/tsc-dyn-get.el
-  tsc-20220212.1632/tsc-obsolete.el
-  tsc-20220212.1632/tsc-pkg.el
-  tsc-20220212.1632/tsc.el
-Built tsc in 7.832s, finished at 2023-06-09T16:56:31+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  574 Jun  9 16:56 packages/tsc-20220212.1632.entry
-132K -rw-r--r-- 1 root root 130K Jun  9 16:56 packages/tsc-20220212.1632.tar
+Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
